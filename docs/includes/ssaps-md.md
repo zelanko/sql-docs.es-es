@@ -1,0 +1,1 @@
+ Sistema de la plataforma de análisis 

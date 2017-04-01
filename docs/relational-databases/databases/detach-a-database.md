@@ -1,0 +1,114 @@
+---
+title: "Separar una base de datos | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "sql13.swb.detachdatabase.f1"
+helpviewer_keywords: 
+  - "separación de bases de datos [SQL Server]"
+  - "separar bases de datos [SQL Server]"
+ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
+caps.latest.revision: 36
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 36
+---
+# Separar una base de datos
+  En este tema se describe cómo separar una base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los archivos separados permanecen y se pueden volver a adjuntar utilizando CREATE DATABASE con la opción FOR ATTACH o FOR ATTACH_REBUILD_LOG. Los archivos se pueden mover a otro servidor y adjuntarse allí.  
+  
+ **En este tema**  
+  
+-   **Antes de empezar:**  
+  
+     [Limitaciones y restricciones](#Restrictions)  
+  
+     [Seguridad](#Security)  
+  
+-   **Para separar una base de datos, utilizando:**  
+  
+     [SQL Server Management Studio](#SSMSProcedure)  
+  
+     [Transact-SQL](#TsqlProcedure)  
+  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+  
+###  <a name="Restrictions"></a> Limitaciones y restricciones  
+ Para obtener una lista de las limitaciones y restricciones, vea [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
+  
+###  <a name="Security"></a> Seguridad  
+  
+####  <a name="Permissions"></a> Permisos  
+ Requiere pertenencia al rol fijo de base de datos db_owner.  
+  
+##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+  
+#### Para separar una base de datos  
+  
+1.  En el Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , conéctese a la instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y expándala.  
+  
+2.  Expanda **Bases de datos**y seleccione el nombre de la base de datos de usuarios que desee separar.  
+  
+3.  Haga clic con el botón derecho en el nombre de la base de datos, seleccione **Tareas** y haga clic en **Separar**. Aparecerá el cuadro de diálogo **Separar base de datos** .  
+  
+     **Bases de datos que se van a separar**  
+     Enumera las bases de datos que se van a separar.  
+  
+     **Nombre de la base de datos**  
+     Muestra el nombre de la base de datos que se va a separar.  
+  
+     **Quitar conexiones**  
+     Desconecta las conexiones a la base de datos especificada.  
+  
+    > [!NOTE]  
+    >  No puede separar una base de datos con conexiones activas.  
+  
+     **Actualizar estadísticas**  
+     De forma predeterminada, la operación de separación conserva las estadísticas de optimización obsoletas al separar la base de datos; para actualizar las estadísticas de optimización existentes, haga clic en esta casilla.  
+  
+     **Mantener catálogos de texto completo**  
+     De forma predeterminada, la operación de separación conserva los catálogos de texto completo asociados a la base de datos. Para quitarlos, desactive la casilla **Mantener catálogos de texto completo**. Esta opción solo aparece cuando se está actualizando una base de datos desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+  
+     **Estado**  
+     Se muestra uno de los siguientes estados: **Listo** o **No está listo**.  
+  
+     **de mensaje**  
+     En la columna **Mensaje** puede aparecer información sobre la base de datos, tal y como se indica aquí:  
+  
+    -   Cuando una base de datos está implicada en una replicación, el **Estado** es **No está listo** y la columna **Mensaje** muestra **Base de datos replicada**.  
+  
+    -   Cuando una base de datos tiene una o varias conexiones activas, el valor de **Estado** es **No está listo** y en la columna **Mensaje** se muestra *<número_de_conexiones_activas>***conexiones activas** (por ejemplo, **1 conexiones activas**). Antes de separar la base de datos, debe desconectar todas las conexiones activas seleccionando **Quitar conexiones**.  
+  
+     Para obtener más información acerca de un mensaje, haga clic en el texto con hipervínculo para abrir el Monitor de actividad.  
+  
+4.  Cuando esté listo para separar la base de datos, haga clic en **Aceptar**.  
+  
+> [!NOTE]  
+>  La base de datos recién separada permanecerá visible en el nodo **Bases de datos** del Explorador de objetos hasta que se actualice la vista. Puede actualizar la vista en cualquier momento haciendo clic en el panel del Explorador de objetos y seleccionando a continuación **Ver** y por último **Actualizar**de la barra de menús.  
+  
+##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+  
+#### Para separar una base de datos  
+  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+2.  En la barra Estándar, haga clic en **Nueva consulta**.  
+  
+3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En este ejemplo se separa la base de datos AdventureWorks2012 con el valor de skipchecks establecido en true.  
+  
+```  
+EXEC sp_detach_db 'AdventureWorks2012', 'true';  
+```  
+  
+## Vea también  
+ [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
+  
+  

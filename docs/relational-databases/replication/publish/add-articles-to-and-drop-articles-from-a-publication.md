@@ -1,0 +1,48 @@
+---
+title: "Agregar y quitar art&#237;culos de una publicaci&#243;n (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/07/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "replication"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "artículos [replicación de SQL Server], anular"
+  - "eliminar artículos"
+  - "quitar artículos"
+  - "agregar artículos"
+  - "artículos [replicación de SQL Server], agregar"
+ms.assetid: d5a3e536-62d2-4473-a178-877ba52f7d7f
+caps.latest.revision: 35
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 35
+---
+# Agregar y quitar art&#237;culos de una publicaci&#243;n (SQL Server Management Studio)
+  Agregue artículos a una publicación al principio, cuando la cree en el Asistente para nueva publicación. Para obtener más información acerca de cómo utilizar este asistente, consulte [crear una publicación](../../../relational-databases/replication/publish/create-a-publication.md).  
+  
+ Después de crea una publicación, agregar y eliminar artículos en la **artículos** página de la **Propiedades de la publicación - \< publicación>** cuadro de diálogo. Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Para obtener información acerca de las consideraciones para agregar y quitar artículos, vea [Agregar y quitar artículos de publicaciones existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
+  
+### Para agregar un artículo una vez creada la publicación  
+  
+1.  En el **artículos** página de la **Propiedades de la publicación - \< publicación>** cuadro de diálogo, desactive el **Mostrar sólo objetos seleccionados en la lista** casilla de verificación. De este modo podrá ver los objetos no publicados en la base de datos de publicaciones.  
+  
+2.  Active la casilla situada junto a cada artículo que desee agregar.  
+  
+3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+  
+### Para eliminar un artículo  
+  
+1.  En el **artículos** página de la **Propiedades de la publicación - \< publicación>** cuadro de diálogo, desactive la casilla situada junto a cada artículo que desea eliminar.  
+  
+2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+  
+## Vea también  
+ [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md)   
+ [Publicar datos y objetos de base de datos](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
+  
+  

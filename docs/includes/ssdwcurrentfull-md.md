@@ -1,0 +1,1 @@
+ Almacenamiento de datos paralelos de SQL Server 2016 

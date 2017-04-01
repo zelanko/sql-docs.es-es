@@ -1,0 +1,2 @@
+  Puede crear y modificar los archivos de definición de informes paginados (.rdl) en el Generador de informes y en el Diseñador de informes de SQL Server Data Tools. Cada entorno de creación proporciona varias maneras de crear, abrir y guardar informes y elementos relacionados.
+   

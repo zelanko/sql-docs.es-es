@@ -1,0 +1,166 @@
+---
+title: "Crear un conjunto de recopilaci&#243;n personalizado que utilice el tipo de recopilador de consultas T-SQL gen&#233;rico (Transact-SQL) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/04/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "tipo de recopilador de consultas T-SQL"
+  - "conjuntos de recopilación [SQL Server], crear personalizados"
+ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
+caps.latest.revision: 26
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+---
+# Crear un conjunto de recopilaci&#243;n personalizado que utilice el tipo de recopilador de consultas T-SQL gen&#233;rico (Transact-SQL)
+  Puede crear un conjunto de recopilación personalizado con elementos de recopilación que utilicen el tipo de recopilador de consultas T-SQL genérico mediante los procedimientos almacenados que se proporcionan con el recopilador de datos. Para realizar esta tarea debe usar el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para llevar a cabo los siguientes procedimientos:  
+  
+-   Configurar programaciones de carga.  
+  
+-   Definir y crear el conjunto de recopilación.  
+  
+-   Definir y crear un elemento de recopilación.  
+  
+-   Comprobar la existencia del conjunto de recopilación y de los elementos de recopilación.  
+  
+> [!NOTE]  
+>  Antes de crear un conjunto de recopilación personalizada, debe configurar los parámetros de recopilación de datos. Para obtener más información, vea [Configurar parámetros para la recopilación de datos &#40;Transact-SQL&#41;](../../relational-databases/data-collection/configure-data-collection-parameters-transact-sql.md).  
+  
+### Definir y crear el conjunto de recopilación  
+  
+1.  Defina un nuevo conjunto de recopilación mediante el procedimiento almacenado sp_syscollector_create_collection_set.  
+  
+    ```  
+    USE msdb;  
+    DECLARE @collection_set_id int;  
+    DECLARE @collection_set_uid uniqueidentifier;  
+    EXEC sp_syscollector_create_collection_set   
+        @name=N'DMV Test 1',   
+        @collection_mode=0,   
+        @description=N'This is a test collection set',   
+        @logging_level=1,   
+        @days_until_expiration=14,   
+        @schedule_name=N'CollectorSchedule_Every_15min',   
+        @collection_set_id=@collection_set_id OUTPUT,   
+        @collection_set_uid=@collection_set_uid OUTPUT;  
+    SELECT @collection_set_id, @collection_set_uid;  
+    ```  
+  
+     El modo de recopilación se puede establecer en 0 (almacenamiento en caché) o en 1 (sin almacenamiento en caché).  
+  
+     El nivel de registro se puede establecer en 0, 1 o 2.  
+  
+     Se proporcionan las siguientes programaciones preconfiguradas con el recopilador de datos:  
+  
+    -   CollectorSchedule_Every_5min  
+  
+    -   CollectorSchedule_Every_10min  
+  
+    -   CollectorSchedule_Every_15min  
+  
+    -   CollectorSchedule_Every_30min  
+  
+    -   CollectorSchedule_Every_60min  
+  
+    -   CollectorSchedule_Every_6h  
+  
+     Si no desea usar una de las programaciones que se proporcionan, puede crear una nueva programación y usarla para el conjunto de recopilación. Para obtener más información, vea [Crear y adjuntar programaciones a trabajos](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
+  
+### Definir y crear un elemento de recopilación  
+  
+1.  Dado que el nuevo elemento de recopilación está basado en un tipo de recopilador genérico que ya se ha instalado, puede ejecutar el siguiente código para establecer el GUID de forma que corresponda al tipo de recopilador de consultas T-SQL genérico.  
+  
+    ```tsql  
+    DECLARE @collector_type_uid uniqueidentifier;  
+    SELECT @collector_type_uid = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
+    WHERE name = N'Generic T-SQL Query Collector Type';  
+    DECLARE @collection_item_id int;  
+    ```  
+  
+2.  Use el procedimiento almacenado sp_syscollector_create_collection_item para crear el elemento de recopilación. Declare el esquema para el elemento de recopilación para que se asigne al esquema necesario para el tipo de recopilador de consultas T-SQL genérico.  
+  
+    ```tsql  
+    EXEC sp_syscollector_create_collection_item   
+        @name=N'Query Stats - Test 1',   
+        @parameters=N'  
+            <ns:TSQLQueryCollector xmlns:ns="DataCollectorType">  
+            <Query>  
+            <Value>SELECT * FROM sys.dm_exec_query_stats</Value>  
+            <OutputTable>dm_exec_query_stats</OutputTable>  
+            </Query>  
+            </ns:TSQLQueryCollector>',   
+        @collection_item_id=@collection_item_id OUTPUT,   
+        @frequency=5,   
+        @collection_set_id=@collection_set_id,   
+        @collector_type_uid=@collector_type_uid;  
+    SELECT @collection_item_id;  
+    ```  
+  
+### Compruebe que el nuevo conjunto de recopilación y el elemento de recopilación existan.  
+  
+1.  Antes de iniciar el nuevo conjunto de recopilación, ejecute la consulta siguiente para comprobar que se han creado el nuevo conjunto de recopilación y su elemento de recopilación.  
+  
+    ```tsql  
+    USE msdb;  
+    SELECT * FROM syscollector_collection_sets;  
+    SELECT * FROM syscollector_collection_items;  
+    GO  
+    ```  
+  
+     También puede hacer una comprobación visual en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. En el Explorador de objetos, expanda el nodo **Administración** y, a continuación, expanda **Recopilación de datos**. Se mostrará el nuevo conjunto de recopilación. El icono de círculo rojo para el conjunto de recopilación indica que se ha detenido el conjunto de recopilación.  
+  
+## Ejemplo  
+ El ejemplo de código siguiente combina los ejemplos documentados en los pasos anteriores. Tenga en cuenta que la frecuencia de recopilación establecida para el elemento de recopilación (5 segundos) se omite porque el modo recopilación del conjunto de recopilación se ha establecido en 0, que es el modo de almacenamiento en caché. Para obtener más información, consulte [Data Collection](../../relational-databases/data-collection/data-collection.md).  
+  
+```tsql  
+USE msdb;  
+  
+DECLARE @collection_set_id int;  
+DECLARE @collection_set_uid uniqueidentifier  
+  
+EXEC dbo.sp_syscollector_create_collection_set  
+    @name = N'DMV Stats Test 1',  
+    @collection_mode = 0,  
+    @description = N'This is a test collection set',  
+    @logging_level=1,  
+    @days_until_expiration = 14,  
+    @schedule_name=N'CollectorSchedule_Every_15min',  
+    @collection_set_id = @collection_set_id OUTPUT,  
+    @collection_set_uid = @collection_set_uid OUTPUT;  
+SELECT @collection_set_id,@collection_set_uid;  
+  
+DECLARE @collector_type_uid uniqueidentifier;  
+SELECT @collector_type_uid = collector_type_uid FROM syscollector_collector_types   
+WHERE name = N'Generic T-SQL Query Collector Type';  
+  
+DECLARE @collection_item_id int;  
+EXEC sp_syscollector_create_collection_item  
+@name= N'Query Stats - Test 1',  
+@parameters=N'  
+<ns:TSQLQueryCollector xmlns:ns="DataCollectorType">  
+<Query>  
+  <Value>select * from sys.dm_exec_query_stats</Value>  
+  <OutputTable>dm_exec_query_stats</OutputTable>  
+</Query>  
+ </ns:TSQLQueryCollector>',  
+    @collection_item_id = @collection_item_id OUTPUT,  
+    @frequency = 5, -- This parameter is ignored in cached mode  
+    @collection_set_id = @collection_set_id,  
+    @collector_type_uid = @collector_type_uid;  
+SELECT @collection_item_id;  
+  
+GO  
+```  
+  
+## Vea también  
+ [Procedimientos almacenados del recopilador de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Administrar programaciones](../../ssms/agent/manage-schedules.md)   
+ [Iniciar o detener un conjunto de recopilación](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
+  
+  

@@ -1,0 +1,87 @@
+---
+title: "Identificar filas de datos similares mediante la transformaci&#243;n Agrupaci&#243;n aproximada | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "integration-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Agrupación aproximada, transformación"
+  - "coincidir datos parecidos [Integration Services]"
+  - "filas de datos parecidos [Integration Services]"
+  - "coincidencia aproximada"
+ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
+caps.latest.revision: 23
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "jhubbard"
+caps.handback.revision: 23
+---
+# Identificar filas de datos similares mediante la transformaci&#243;n Agrupaci&#243;n aproximada
+  Para agregar y configurar una transformación Agrupación aproximada, el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen.  
+  
+### Para implementar la transformación Agrupación aproximada en un flujo de datos  
+  
+1.  En [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] que contiene el paquete que desea.  
+  
+2.  En el Explorador de soluciones, haga doble clic en el paquete para abrirlo.  
+  
+3.  Haga clic en la pestaña **Flujo de datos** y, a continuación, desde el **cuadro de herramientas**, arrastre la transformación Agrupación aproximada a la superficie de diseño.  
+  
+4.  Conecte la transformación Agrupación aproximada al flujo de datos arrastrando el conector desde el origen de datos o una transformación anterior a la transformación Agrupación aproximada.  
+  
+5.  Haga doble clic en la transformación Agrupación aproximada.  
+  
+6.  En el cuadro de diálogo **Editor de transformación Agrupación aproximada** , en la pestaña **Administrador de conexiones** , seleccione un administrador de conexiones OLE DB que se conecte con una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+  
+    > [!NOTE]  
+    >  La transformación requiere una conexión a una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para crear tablas e índices temporales.  
+  
+7.  Haga clic en la pestaña **Columnas** y en la lista **Columnas de entrada disponibles** , active la casilla de las columnas de entrada que se deben usar para identificar filas similares en el conjunto de datos.  
+  
+8.  Active la casilla de la columna **Paso a través** para identificar las columnas de entrada que pasan a través de la salida de transformación. Las columnas de paso a través no se incluyen en el proceso de identificación de filas duplicadas.  
+  
+    > [!NOTE]  
+    >  Las columnas de entrada que se usan para agrupar se seleccionan automáticamente como columnas de paso a través, y no se puede eliminar su selección mientras se usan para la agrupación.  
+  
+9. Opcionalmente, actualice los nombres de las columnas de salida en la columna **Alias de salida** .  
+  
+10. También puede actualizar los nombres de las columnas limpias en la columna **Alias de salida de grupo**.  
+  
+    > [!NOTE]  
+    >  Los nombres predeterminados de las columnas son los nombres de las columnas de entrada con el sufijo "_clean".  
+  
+11. Opcionalmente, actualice el tipo de coincidencia que se debe usar en la columna **Tipo de coincidencia** .  
+  
+    > [!NOTE]  
+    >  Al menos una columna debe usar coincidencia aproximada.  
+  
+12. Especifique las columnas de nivel de similitud mínima en la columna **Similitud mínima** . El valor debe estar entre 0 y 1. Cuanto más cercano sea el valor a 1, más similares deberán ser los valores en las columnas de entrada para formar un grupo. Una similitud mínima de 1 indica una coincidencia exacta.  
+  
+13. Opcionalmente, actualice los nombres de las columnas de similitud en la columna **Alias de salida de similitud** .  
+  
+14. Para especificar el manejo de números en valores de datos, actualice los valores en la columna **Números** .  
+  
+15. Para especificar la manera en que la transformación compara los datos de cadenas en una columna, modifique la selección predeterminada de las opciones de comparación en la columna **Marcas de comparación** .  
+  
+16. Haga clic en la pestaña **Avanzadas** para modificar los nombres de las columnas que la transformación agrega a la salida para el identificador de filas únicas (_key_in), el identificador de filas duplicadas (_key_out) y el valor de similitud (_score).  
+  
+17. Opcionalmente, ajuste el umbral de similitud moviendo la barra del control deslizante.  
+  
+18. También puede desactivar las casillas de delimitadores de token para omitir los delimitadores en los datos.  
+  
+19. Haga clic en **Aceptar**.  
+  
+20. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
+  
+## Vea también  
+ [Transformación Agrupación aproximada](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
+ [Rutas de Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
+ [Tarea Flujo de datos](../../../integration-services/control-flow/data-flow-task.md)  
+  
+  

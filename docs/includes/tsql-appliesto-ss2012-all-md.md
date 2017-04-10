@@ -1,0 +1,1 @@
+<Token>**ESTE TEMA SE APLICA A:** ![sí](../includes/media/yes.png)SQL Server (a partir de 2012)![sí](../includes/media/yes.png)Base de datos SQL de Azure![sí](../includes/media/yes.png)Almacenamiento de datos SQL de Azure ![sí](../includes/media/yes.png)Almacenamiento de datos paralelos </Token>

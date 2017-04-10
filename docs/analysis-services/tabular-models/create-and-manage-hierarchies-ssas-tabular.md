@@ -1,0 +1,102 @@
+---
+title: "Crear y administrar jerarqu&#237;as (SSAS tabular) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "analysis-services"
+  - "analysis-services/multidimensional-tabular"
+  - "analysis-services/data-mining"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
+caps.latest.revision: 10
+author: "Minewiskan"
+ms.author: "owend"
+manager: "erikre"
+caps.handback.revision: 10
+---
+# Crear y administrar jerarqu&#237;as (SSAS tabular)
+  Las jerarquías se pueden crear y administrar en la Vista de diagrama del diseñador de modelos. Para ver el diseñador de modelos en la Vista de diagrama, en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga clic en el menú **Modelo** , seleccione **Vista de modelo**y haga clic en **Vista de diagrama**.  
+  
+ En este tema se incluyen las tareas siguientes:  
+  
+-   [Crear una jerarquía](#bkmk_create)  
+  
+-   [Editar una jerarquía](#bkmk_edit)  
+  
+-   [Eliminar una jerarquía](#bkmk_delete)  
+  
+##  <a name="bkmk_create"></a> Crear una jerarquía  
+ Puede crear una jerarquía usando las columnas y el menú contextual de la tabla. Al crear una jerarquía, se muestra un nuevo nivel primario con las columnas seleccionadas como niveles secundarios.  
+  
+#### Para crear una jerarquía desde el menú contextual  
+  
+1.  En el diseñador de modelos (Vista de diagrama), en una ventana de tabla, haga clic con el botón derecho en una columna y, después, haga clic en **Crear jerarquía**.  
+  
+     Para seleccionar varias columnas, haga clic en cada columna, haga clic con el botón derecho para abrir el menú contextual y, después, haga clic en **Crear jerarquía**.  
+  
+     Se creará un nivel primario de la jerarquía en la parte inferior de la ventana de tabla y las columnas seleccionadas se copiarán debajo de la jerarquía como niveles secundarios.  
+  
+2.  Escriba el nombre de la jerarquía.  
+  
+ Puede arrastrar columnas adicionales al nivel primario de la jerarquía para copiarlas. Arrastre y coloque el nivel secundario para situarlo donde desea que aparezca en la jerarquía.  
+  
+> [!NOTE]  
+>  El comando Crear jerarquía está deshabilitado en el menú contextual si realiza una selección múltiple de una medida junto con una o varias columnas, o si selecciona columnas de varias tablas.  
+  
+##  <a name="bkmk_edit"></a> Editar una jerarquía  
+ Puede cambiar el nombre de una jerarquía, cambiar el nombre de un nivel secundario, cambiar el orden de los niveles secundarios, agregar columnas adicionales como niveles secundarios, quitar un nivel secundario de una jerarquía, mostrar el nombre del origen de un nivel secundario (el nombre de columna) y ocultar un nivel secundario si tiene el mismo nombre que el nivel primario de la jerarquía.  
+  
+#### Para cambiar el nombre de una jerarquía o de un nivel secundario  
+  
+1.  Haga clic con el botón derecho en el nivel primario de la jerarquía o en un nivel secundario y, después, haga clic en **Cambiar nombre**.  
+  
+2.  Escriba un nuevo nombre o edite el nombre existente.  
+  
+#### Para cambiar el orden de un nivel secundario de una jerarquía  
+  
+-   Haga clic en un nivel secundario y arrástrelo hasta una nueva posición en la jerarquía.  
+  
+-   O bien, haga clic con el botón secundario en un nivel secundario de la jerarquía y, a continuación, haga clic en Subir para mover el nivel hacia arriba en la lista o haga clic en Bajar para mover el nivel hacia abajo en la lista.  
+  
+-   O bien, haga clic en un nivel secundario para seleccionarlo y, a continuación, presione Alt + Flecha arriba para mover el nivel hacia arriba o Alt + Flecha abajo para mover el nivel hacia abajo en la lista.  
+  
+#### Para agregar otro nivel secundario a una jerarquía  
+  
+-   Haga clic en una columna y arrástrela al nivel primario o a una ubicación específica de la jerarquía. La columna se copiará como un nivel secundario de la jerarquía.  
+  
+-   O bien, haga clic con el botón derecho en una columna, seleccione **Agregar a jerarquía** y, después, haga clic en la jerarquía.  
+  
+> [!NOTE]  
+>  Puede agregar una columna oculta (una columna que no se muestra en los informes) como un nivel secundario de la jerarquía. El nivel secundario no está oculto.  
+  
+#### Para quitar un nivel secundario de una jerarquía  
+  
+-   Haga clic con el botón derecho en un nivel secundario y, después, haga clic en **Quitar de la jerarquía**.  
+  
+-   O bien, haga clic en un nivel secundario y, a continuación, presione **Supr**.  
+  
+> [!NOTE]  
+>  Si cambia el nombre de un nivel secundario de la jerarquía, dejará de tener el mismo nombre que la columna de la que se copió. Use el comando **Mostrar nombre del origen** para ver de qué columna se copió.  
+  
+#### Para mostrar un nombre de origen  
+  
+-   Haga clic con el botón derecho en un nivel secundario de la jerarquía y, después, haga clic en **Show Source Name** (Mostrar nombre del origen). Aparece el nombre de la columna de la que se copió la jerarquía.  
+  
+##  <a name="bkmk_delete"></a> Eliminar una jerarquía  
+  
+#### Para eliminar una jerarquía y quitar sus niveles secundarios  
+  
+-   Haga clic con el botón secundario en el nivel primario de la jerarquía y, a continuación, haga clic en Eliminar jerarquía.  
+  
+-   O bien, haga clic en el nivel primario de la jerarquía y, a continuación, presione Supr. Esto también quitará todos los niveles secundarios.  
+  
+## Vea también  
+ [Diseñador de modelos tabulares &#40;SSAS&#41;](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
+ [Jerarquías &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
+ [Medidas &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
+  
+  

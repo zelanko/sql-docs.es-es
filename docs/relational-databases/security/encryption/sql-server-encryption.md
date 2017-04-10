@@ -1,0 +1,85 @@
+---
+title: "Cifrado de SQL Server | Microsoft Docs"
+ms.custom: 
+  - "SQL2016_New_Updated"
+ms.date: "05/03/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "cifrado [SQL Server], acerca del cifrado"
+  - "seguridad [SQL Server], cifrado"
+  - "criptografía [SQL Server], acerca de la criptografía"
+ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
+caps.latest.revision: 21
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 21
+---
+# Cifrado de SQL Server
+  El cifrado es el proceso consistente en ofuscar los datos mediante el uso de una clave o contraseña. Esto puede hacer que los datos sean inútiles sin la clave o contraseña de descifrado correspondiente. El cifrado no resuelve los problemas de control de acceso. Sin embargo, mejora la seguridad debido a que limita la pérdida de datos, incluso si se superan los controles de acceso. Por ejemplo, si el equipo host de base de datos no está configurado correctamente y un usuario malintencionado obtiene datos confidenciales, esa información robada podría resultar inservible si está cifrada.  
+  
+ Puede utilizar el cifrado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para las conexiones, los datos y los procedimientos almacenados. La tabla siguiente contiene más información acerca del cifrado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  
+> [!IMPORTANT]  
+>  Aunque el cifrado es una valiosa herramienta para ayudar a garantizar la seguridad, no está indicado para todos los datos o conexiones. Cuando decida si debe implementar el cifrado, debe tener en cuenta el modo en que los usuarios obtendrán acceso a los datos. Si los usuarios tienen acceso a los datos a través de una red pública, podría ser necesario el cifrado de datos para aumentar la seguridad. Sin embargo, si todo el acceso se realiza dentro de una configuración de intranet segura, el cifrado podría no ser necesario. Cualquier uso del cifrado también debería incluir una estrategia de mantenimiento para las contraseñas, las claves y los certificados.  
+  
+> [!NOTE]  
+>  Encontrará la información más reciente sobre la seguridad de nivel de transporte (TSL1.2) en [Soporte de TLS 1.2 para Microsoft SQL Server](https://support.microsoft.com/kb/3135244).  
+  
+## En esta sección  
+ [Jerarquía de cifrado](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
+ Información acerca de la jerarquía de cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  
+ [Elegir un algoritmo de cifrado](../../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
+ Información acerca del modo de seleccionar un algoritmo de cifrado efectivo.  
+  
+ [Cifrado de datos transparente &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
+ Información general sobre cómo cifrar datos de forma transparente.  
+  
+ [SQL Server y claves de cifrado de base de datos &#40;motor de base de datos&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
+ En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], las claves de cifrado incluyen una combinación de claves públicas, privadas y simétricas que se utilizan para proteger la información confidencial. En esta sección se explica cómo implementar y administrar las claves de cifrado.  
+  
+ [Always Encrypted &#40;motor de base de datos&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
+ Asegurarse de que los administradores de base de datos local, los operadores de base de datos en la nube u otros usuarios con privilegios elevados, pero no autorizados, no puedan obtener acceso a los datos cifrados.  
+  
+ [Enmascaramiento de datos dinámicos](../../../relational-databases/security/dynamic-data-masking.md)  
+ Limitar la exposición de información confidencial ocultándola a los usuarios sin privilegios.  
+  
+ [Certificados y claves asimétricas de SQL Server](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)  
+ Información sobre el uso de criptografía de clave pública.  
+  
+## Contenido relacionado  
+ [Proteger SQL Server](../../../relational-databases/security/securing-sql-server.md)  
+ Información general sobre el modo de proteger la plataforma [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y cómo trabajar con los usuarios y los objetos protegibles.  
+  
+ [Funciones de cifrado &#40;Transact-SQL&#41;](../../../t-sql/functions/cryptographic-functions-transact-sql.md)  
+ Información sobre el modo de implementar las funciones criptográficas.  
+  
+ [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../../t-sql/functions/encryptbypassphrase-transact-sql.md)  
+ Información sobre cómo utilizar una contraseña para cifrar datos.  
+  
+ [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../../t-sql/functions/encryptbykey-transact-sql.md)  
+ Información sobre cómo utilizar una clave simétrica para cifrar datos.  
+  
+ [ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](../../../t-sql/functions/encryptbyasymkey-transact-sql.md)  
+ Información sobre cómo utilizar una clave asimétrica para cifrar datos.  
+  
+ [ENCRYPTBYCERT &#40;Transact-SQL&#41;](../../../t-sql/functions/encryptbycert-transact-sql.md)  
+ Información sobre cómo utilizar un certificado para cifrar datos.  
+  
+## Recursos externos  
+ [Microsoft TechNet: SQL Server TechCenter: Seguridad y protección de SQL Server 2005](https://msdn.microsoft.com/sqlserver/bb895847.aspx)  
+ Información actual sobre la seguridad en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  
+## Vea también  
+ [sys.key_encryptions &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)   
+ [SQL Server y claves de cifrado de base de datos &#40;motor de base de datos&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
+ [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md)  
+  
+  

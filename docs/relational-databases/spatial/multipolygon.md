@@ -1,0 +1,100 @@
+---
+title: "MultiPol&#237;gono | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/03/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dbe-spatial"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Subtipo de geometría multipolígono [SQL Server]"
+  - "subtipos de Geometry [SQL Server]"
+ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
+caps.latest.revision: 20
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 20
+---
+# MultiPol&#237;gono
+  Una instancia de **MultiPolygon** es una colección de cero o más instancias de **Polygon** .  
+  
+## Instancias Polygon  
+ En la ilustración siguiente se muestran ejemplos de instancias de **MultiPolygon** .  
+  
+ ![Ejemplos de instancias MultiPolygon de geometry](../../relational-databases/spatial/media/multipolygon.png "Ejemplos de instancias MultiPolygon de geometry")  
+  
+ Como se muestra en la ilustración:  
+  
+-   La Figura 1 es una instancia de **MultiPolygon** con dos elementos **Polygon** . El límite se define mediante los dos anillos exteriores y los tres interiores.  
+  
+-   La Figura 2 es una instancia de **MultiPolygon** con dos elementos **Polygon** . El límite se define mediante los dos anillos exteriores y los tres interiores. Los dos elementos **Polygon** forman una intersección en un punto tangente.  
+  
+### Instancias aceptadas  
+ Una instancia **MultiPolygon** es una instancia aceptada si se cumple una de las siguientes condiciones.  
+  
+-   Es una instancia **MultiPolygon** vacía.  
+  
+-   Todas las instancias que comprenden la instancia **MultiPolygon** son instancias **Polygon** aceptadas. Para obtener más información sobre instancias **Polygon** aceptadas, vea [Polygon](../../relational-databases/spatial/polygon.md).  
+  
+ Los ejemplos siguientes muestran instancias **MultiPolygon** aceptadas.  
+  
+```  
+DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';  
+DECLARE @g2 geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
+DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
+```  
+  
+ En el siguiente ejemplo se muestra una instancia MultiPolygon que producirá una excepción `System.FormatException`.  
+  
+```  
+DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3)))';  
+```  
+  
+ La segunda instancia en MultiPolygon es una instancia LineString y no una instancia Polygon aceptada.  
+  
+### Instancias válidas  
+ Una instancia **MultiPolygon** es válida si es una instancia **MultiPolygon** vacía o si cumple los siguientes criterios.  
+  
+1.  Todas las instancias que comprenden la instancia **MultiPolygon** son instancias **Polygon** válidas. Para las instancias **Polygon** válidas, vea [Polygon](../../relational-databases/spatial/polygon.md).  
+  
+2.  Ninguna de las instancias **Polygon** que comprenden la instancia **MultiPolygon** se superponen.  
+  
+ En el siguiente ejemplo se muestran dos instancias **MultiPolygon** válidas y una instancia **MultiPolygon** no válida.  
+  
+```  
+DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';  
+DECLARE @g2 geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
+DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
+SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
+```  
+  
+ `@g2` es válido porque las dos instancias de **Polygon** se tocan solo en un punto tangente. `@g3` no es válido porque los interiores de las dos instancias de **Polygon** se superponen.  
+  
+## Ejemplos  
+ El ejemplo siguiente muestra la creación de una instancia de `geometry``MultiPolygon` y devuelve el valor Well-Known Text (WKT) del segundo componente.  
+  
+```  
+DECLARE @g geometry;  
+SET @g = geometry::Parse('MULTIPOLYGON(((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1)), ((9 9, 9 10, 10 9, 9 9)))');  
+SELECT @g.STGeometryN(2).STAsText();  
+```  
+  
+ Este ejemplo crea instancias de una instancia de `MultiPolygon` vacía.  
+  
+```  
+DECLARE @g geometry;  
+SET @g = geometry::Parse('MULTIPOLYGON EMPTY');  
+```  
+  
+## Vea también  
+ [Polígono](../../relational-databases/spatial/polygon.md)   
+ [STArea &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
+ [STCentroid &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stcentroid-geometry-data-type.md)   
+ [STPointOnSurface &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)   
+ [Datos espaciales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
+  
+  

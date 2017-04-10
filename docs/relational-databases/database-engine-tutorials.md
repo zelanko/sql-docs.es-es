@@ -1,0 +1,57 @@
+---
+title: "Tutoriales del motor de base de datos | Microsoft Docs"
+ms.custom: ""
+ms.date: "08/02/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dbe-query-tuning"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
+caps.latest.revision: 14
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 14
+---
+# Tutoriales del motor de base de datos
+Esta sección contiene los tutoriales de [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
+  
+[Tutorial: Introducción al motor de base de datos](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
+En este tutorial se enseña cómo conectarse a una instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)].  
+  
+[Tutorial: SQL Server Management Studio](../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
+Este tutorial le muestra el entorno integrado para administrar la infraestructura de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] presenta una interfaz gráfica para configurar, supervisar y administrar instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. También permite implementar, supervisar y actualizar los componentes de capa de datos usados por las aplicaciones, como bases de datos y almacenamientos de datos. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] también proporciona editores de lenguaje de [!INCLUDE[tsql](../includes/tsql-md.md)], MDX, DMX y XML para editar y depurar scripts.  
+  
+[Tutorial: Escribir instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
+En este tutorial se enseñan los conocimientos fundamentales de la escritura de instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] para crear y administrar objetos en una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  
+[Tutorial: Asistente para la optimización de motor de base de datos](../tools/dta/tutorial-database-engine-tuning-advisor.md)  
+En este tutorial se muestra cómo usar el asesor para examinar cómo se procesan las consultas, y se examinan después algunas recomendaciones para mejorar el rendimiento de las consultas.  
+  
+[Tutorial: Uso del tipo de datos hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)  
+En este tutorial se enseña cómo convertir una tabla en una estructura jerárquica y cómo administrar los datos de la tabla.  
+  
+[Tutorial: Firmar procedimientos almacenados con un certificado](../relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md)  
+En este tutorial se describe cómo se firman los procedimientos almacenados con un certificado generado por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  
+[Tutorial: Ownership Chains and Context Switching](../relational-databases/tutorial-ownership-chains-and-context-switching.md)  
+En este tutorial se usa un escenario para ilustrar los conceptos de seguridad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relacionados con las cadenas de propiedad y el cambio de contexto de usuario.  
+  
+[Tutorial: Administrar servidores mediante administración basada en directivas](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
+En este tutorial se enseña a crear directivas que aplican las normas de administración del sitio.  
+  
+[Tutorial: copias de seguridad y restauración de SQL Server en el servicio de almacenamiento Blob de Windows Azure](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+Este tutorial ilustra el modo de hacer una copia de seguridad y una restauración de SQL Server para el servicio de almacenamiento Blob de Windows Azure.  
+  
+[Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases (Tutorial: Usar el servicio de almacenamiento de blobs de Microsoft Azure con bases de datos de SQL Server 2016) ](https://msdn.microsoft.com/library/dn466438.aspx)  
+Este tutorial le ayudará a saber cómo almacenar archivos de datos de SQL Server en el servicio de almacenamiento Blob de Windows Azure directamente.  
+  
+## Vea también  
+[Tutoriales de SQL Server 2016](../sql-server/tutorials-for-sql-server-2016.md)  
+[TechNet WIKI: Ejemplos de SQL Server 2012](http://go.microsoft.com/fwlink/?linkID=220734)  
+  
+  
+  

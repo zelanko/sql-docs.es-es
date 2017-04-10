@@ -1,0 +1,86 @@
+---
+title: "Usar un origen de datos externo para obtener informaci&#243;n de los suscriptores (suscripci&#243;n controlada por datos) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "reporting-services-sharepoint"
+  - "reporting-services-native"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "orígenes de datos del suscriptor [Reporting Services]"
+  - "suscripciones [Reporting Services], orígenes de datos externos"
+  - "suscripciones basadas en consultas [Reporting Services]"
+  - "orígenes de datos externos [Reporting Services]"
+  - "suscripciones controladas por datos"
+  - "orígenes de datos [Reporting Services], suscripciones"
+ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
+caps.latest.revision: 43
+author: "guyinacube"
+ms.author: "asaxton"
+manager: "erikre"
+caps.handback.revision: 43
+---
+# Usar un origen de datos externo para obtener informaci&#243;n de los suscriptores (suscripci&#243;n controlada por datos)
+  En una suscripción controlada por datos, los datos de suscripción dinámica se proporcionan mediante una consulta o un comando que recupera los datos desde un origen de datos externo. Los datos de suscripción se pueden recuperar desde cualquier origen de datos compatible que satisfaga los requisitos del procesamiento de suscripciones controladas por datos. La sintaxis de la consulta o el comando debe ser válida para una extensión de procesamiento de datos instalada en el servidor de informes.  
+  
+## Requisitos del procesamiento de datos  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa extensiones de procesamiento de datos para recuperar datos de suscripción. Entre los tipos de orígenes de datos recomendados, se incluyen los siguientes:  
+  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de datos relacionales  
+  
+-   bases de datos Oracle  
+  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] orígenes de datos multidimensionales y de minería de datos  
+  
+-   Orígenes de datos XML  
+  
+     Cuando se utilice la extensión de procesamiento de datos XML para datos de suscriptor, asegúrese de aumentar el valor del tiempo de espera de consulta en la suscripción. La extensión de procesamiento de datos XML utiliza milisegundos en lugar de segundos para los valores de tiempo de espera de consulta. Si no se aumenta el valor de tiempo de espera, es posible que se produzca un error en la suscripción debido a que el tiempo de procesamiento no es suficiente.  
+  
+     Evite utilizar la opción **No se necesitan credenciales** al configurar la conexión al origen de datos de suscriptor. Se recomienda el uso de credenciales almacenadas cuando se utilice la extensión de procesamiento de datos XML para recuperar datos de suscripción en tiempo de ejecución.  
+  
+ Quizás se puedan utilizar otros tipos de origen de datos admitidos, pero no se garantiza que todos ellos funcionen. Por ejemplo, los tipos de origen de datos siguientes no se pueden utilizar para datos de suscriptor:  
+  
+-   Bases de datos SAP Netweaver BI  
+  
+-   Modelos de informe  
+  
+ Si tiene una extensión de procesamiento de datos personalizada que quiere usar en las suscripciones controladas por datos, es necesario que implemente las interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> y <xref:Microsoft.ReportingServices.DataProcessing.IDataReader>. La extensión de procesamiento de datos debe admitir la ejecución de una consulta solo de esquema. Esta consulta se utiliza para recuperar metadatos de columna en tiempo de diseño, de manera que los usuarios puedan asignar columnas a opciones de entrega y parámetros de informe en la definición de la suscripción. La ejecución de la consulta solo de esquema se produce en una etapa inicial, cuando el usuario define la suscripción.  
+  
+## Requisitos de consulta  
+ Cuando se crea una consulta que recupera datos de suscripción, deben tenerse en cuenta los puntos siguientes:  
+  
+-   Solo se puede crear una consulta para la suscripción.  
+  
+-   La consulta debe devolver todos los valores que se desea utilizar para las opciones de entrega y para especificar parámetros de informe.  
+  
+-   El servidor de informes creará una entrega de informe para cada fila del conjunto de resultados. Si el conjunto de resultados está formado por trescientas filas, el servidor de informes intentará entregar trescientos informes.  
+  
+## Configurar las opciones de entrega con datos variables procedentes de una base de datos de suscriptor  
+ Se pueden utilizar los datos de la base de datos de suscriptor para personalizar las opciones de entrega de cada destinatario. La clase de extensión de entrega que se utilice determina las opciones disponibles. Si utiliza la extensión de entrega por correo electrónico del servidor de informes, la consulta debería contener un alias de correo electrónico para cada suscriptor. Si se está usando la entrega a recursos compartidos de archivos, los datos de suscriptor deberán incluir valores que puedan utilizarse para crear archivos de informe específicos del suscriptor o para proporcionar un destino para la entrega. Para más información, vea [Entrega por correo electrónico en Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+  
+## Pasar valores de parámetro desde la base de datos de suscriptores al informe  
+ Si se va a crear una suscripción controlada por datos para un informe con parámetros, se pueden utilizar valores de parámetro variables para personalizar los resultados de cada informe. Por ejemplo, la base de datos de suscriptores puede contener información sobre los números de identificación de los empleados, las fechas de contratación, los puestos de trabajo y la ubicación en la oficina que puede utilizarse para filtrar datos del informe. Si el informe acepta parámetros basados en estos u otros datos de columnas disponibles, puede asignar el parámetro a la columna adecuada.  
+  
+ Cuando asigne campos de suscriptor a parámetros de informe, asegúrese de que los tipos de datos sean compatibles con la longitud de las columnas. Si hay discrepancias, se producirán errores al procesar las suscripciones. Para más información sobre cómo usar los datos de suscriptor en un informe con parámetros, vea [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+  
+## Modificar el origen de datos de suscriptores  
+ Las siguientes modificaciones en el origen de datos de suscriptores pueden impedir que se ejecute la suscripción:  
+  
+-   Quitar columnas a las que se hace referencia en la suscripción.  
+  
+-   Modificar la estructura de tabla del origen de datos.  
+  
+-   Cambiar el tipo de datos y otras propiedades de columna.  
+  
+ Si realiza cualquiera de estos cambios, deberá actualizar la suscripción.  
+  
+## Vea también  
+ [Cómo crear, modificar y eliminar suscripciones controladas por datos](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
+ [Suscripciones controladas por datos](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+  
+  

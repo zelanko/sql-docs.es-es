@@ -1,0 +1,71 @@
+---
+title: "Contenedor de bucles For | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "integration-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "sql13.dts.designer.forloopcontainerdetails.f1"
+  - "sql13.dts.designer.forloopcontainer.f1"
+helpviewer_keywords: 
+  - "repetir flujo de control"
+  - "contenedores [Integration Services], de bucles For"
+  - "contenedores de bucles For"
+ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
+caps.latest.revision: 55
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "jhubbard"
+caps.handback.revision: 54
+---
+# Contenedor de bucles For
+  El contenedor de bucles For define un flujo de control que se repite en un paquete. La implementación del bucle es similar a la estructura de bucle **For** de los lenguajes de programación. En cada repetición del bucle, el contenedor de bucles For evalúa una expresión y repite el flujo de trabajo hasta que la expresión se evalúe como **False**.  
+  
+ El contenedor de bucles For usa los elementos siguientes para definir el bucle:  
+  
+-   Una expresión de inicialización opcional que asigna valores a los contadores de bucle.  
+  
+-   Una expresión de evaluación que contiene la expresión usada para comprobar si el bucle debe detenerse o continuar.  
+  
+-   Una expresión de iteración opcional que incrementa o disminuye el contador del bucle.  
+  
+ El siguiente diagrama muestra un contenedor de bucles For con una tarea Enviar correo. Si la expresión de inicialización es `@Counter = 0`, la expresión de evaluación es `@Counter < 4` y la expresión de iteración es `@Counter = @Counter + 1`, el bucle se repetirá cuatro veces y enviará cuatro mensajes de correo electrónico.  
+  
+ ![Un contenedor de bucles For repite una tarea cuatro veces](../../integration-services/control-flow/media/ssis-forloop.gif "Un contenedor de bucles For repite una tarea cuatro veces")  
+  
+ Las expresiones deben ser expresiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] válidas.  
+  
+ Para crear las expresiones de inicialización y asignación, puede utilizar el operador de asignación (=). La gramática de expresiones de Integration Services no admite este operador; solo se puede utilizar en las expresiones de inicialización y asignación del contenedor de bucles For. Cualquier expresión que use el operador de asignación necesita tener la sintaxis `@Var = <expression>`, donde **Var** es una variable de tiempo de ejecución y \<expression> es una expresión que sigue las reglas de sintaxis de la expresión [!INCLUDE[ssIS](../../includes/ssis-md.md)]. La expresión puede incluir variables, literales y cualquier operador o función compatible con la gramática de expresiones de SSIS. La evaluación de la expresión debe devolver un tipo de datos que se pueda convertir al tipo de datos de la variable.  
+  
+ Un contenedor de bucles For solo puede tener una expresión de evaluación. Esto significa que el contenedor de bucles For ejecutará todos los elementos de flujo de control el mismo número de veces. Como el contenedor de bucles For puede incluir otros contenedores de bucles For, es posible generar bucles anidados e implementar bucles complejos en paquetes.  
+  
+ Puede establecer una propiedad de transacción en el contenedor de bucles For para definir una transacción para un subconjunto del flujo de control del paquete. De esta manera, puede administrar las transacciones en mayor detalle. Por ejemplo, si un contenedor de bucles For repite un flujo de control que actualiza los datos de una tabla varias veces, puede configurar el bucle For y su flujo de control para que utilicen una transacción, a fin de asegurarse de que si no se actualizan todos los datos correctamente, no se actualice ningún dato. Para más información, vea [Transacciones de Integration Services](../../integration-services/integration-services-transactions.md).  
+  
+## Configuración del contenedor de bucles For  
+ Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
+  
+ Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
+  
+-   [Editor de bucles For](../Topic/For%20Loop%20Editor.md)  
+  
+-   [Página Expresiones](../../integration-services/expressions/expressions-page.md)  
+  
+ Para obtener más información sobre cómo establecer estas propiedades mediante programación, vea la documentación de la clase **T:Microsoft.SqlServer.Dts.Runtime.ForLoop** en la Guía del desarrollador.  
+  
+## Tareas relacionadas  
+ Para obtener información acerca de cómo configurar el contenedor de bucles For, vea los temas siguientes.  
+  
+-   [Configurar un contenedor de bucles For](../Topic/Configure%20a%20For%20Loop%20Container.md)  
+  
+-   [Establecer las propiedades de tareas o contenedores](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+  
+## Vea también  
+ [Flujo de control](../../integration-services/control-flow/control-flow.md)   
+ [Expresiones de Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)  
+  
+  

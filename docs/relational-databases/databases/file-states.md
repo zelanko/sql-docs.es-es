@@ -1,0 +1,65 @@
+---
+title: "Estados de los archivos | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "restaurar estado de archivo [SQL Server]"
+  - "comprobar estados de archivos"
+  - "estados actuales de archivos"
+  - "comprobar estados de grupos de archivos"
+  - "estados de archivos [SQL Server]"
+  - "estado de archivo en línea"
+  - "estado de archivo sin conexión [SQL Server]"
+  - "ver estados de grupos de archivos"
+  - "ver estados de archivos"
+  - "estado de archivo sospechoso"
+  - "recuperar estado de archivo [SQL Server]"
+  - "estado actual de grupo de archivos"
+  - "recuperación pendiente de estado de archivo [SQL Server]"
+  - "mostrar estados de archivos"
+  - "estados [SQL Server], archivos"
+  - "mostrar estados de grupos de archivos"
+  - "estado de archivo inactivo"
+ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
+caps.latest.revision: 26
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 26
+---
+# Estados de los archivos
+  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el estado de un archivo de bases de datos se mantiene independientemente del estado de la base de datos. Un archivo siempre está en un estado específico, como ONLINE o OFFLINE. Para ver el estado actual de un archivo, use la vista de catálogo [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) o [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md). Si la base de datos está sin conexión, el estado de los archivos se puede ver desde la vista de catálogo [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md).  
+  
+ El estado de los archivos en un grupo de archivos determina la disponibilidad de todo el grupo de archivos. Para que un grupo de archivos esté disponible, todos los archivos del grupo de archivos deben estar en línea. Para ver el estado actual de un grupo de archivos, utilice la vista de catálogo [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) . Si un grupo de archivos está sin conexión e intenta tener acceso al grupo de archivos mediante una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] , devolverá un error. Cuando el optimizador de consultas crea planes para instrucciones SELECT, evita índices no clúster y vistas indizadas que residen en grupos de archivos sin conexión, permitiendo que estas instrucciones tengan éxito. No obstante, si el grupo de archivos sin conexión contiene el montón o el índice clúster de la tabla de destino, las instrucciones SELECT no funcionarán. Adicionalmente, cualquier instrucción INSERT, UPDATE o DELETE que modifique una tabla con cualquier índice en un grupo de archivos sin conexión no funcionará.  
+  
+## Definiciones de estado de los archivos  
+ En la siguiente tabla se definen los estados de los archivos.  
+  
+|State|Definición|  
+|-----------|----------------|  
+|ONLINE|El archivo está disponible para todas las operaciones. Los archivos del grupo de archivos principal siempre están en línea si la base de datos lo está. Si un archivo del grupo de archivos principal no está en línea, la base de datos no está en línea y los estados de los archivos secundarios no están definidos.|  
+|OFFLINE|El archivo no está disponible para su acceso y puede no estar presente en el disco. Los archivos pasan a estar sin conexión por una acción explícita del usuario y permanecen sin conexión hasta que se produce una acción adicional del usuario.<br /><br /> **\*\* Precaución \*\*** Un archivo solo debe establecerse como sin conexión cuando está dañado pero se puede restaurar. Un archivo que está sin conexión solo se puede poner en línea restaurándolo de la copia de seguridad. Para obtener más información sobre cómo restaurar un único archivo, vea [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).|  
+|RESTORING|Se está restaurando el archivo. Los archivos entran en el estado de restauración a causa de un comando de restauración que afecta a todo el archivo y permanecen en ese estado hasta que se completa la restauración y se recupera el archivo.|  
+|RECOVERY PENDING|Se ha pospuesto la recuperación del archivo. Un archivo entra en este estado automáticamente a causa de un proceso de restauración por etapas en el que el archivo no se restaura ni recupera. Se necesita una acción adicional por parte del usuario para resolver el error y permitir que se complete el proceso de recuperación. Para obtener más información, vea [Restauraciones por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).|  
+|SUSPECT|La recuperación del archivo no ha sido correcta durante un proceso de restauración en línea. Si el archivo está en el grupo de archivos principal, la base de datos también se marca como sospechosa. De lo contrario, solo es sospechoso el archivo y la base de datos sigue estando en línea.<br /><br /> El archivo permanecerá en el estado sospechoso hasta que esté disponible mediante uno de los siguientes métodos:<br /><br /> Restauración y recuperación<br /><br /> DBCC CHECKDB con REPAIR_ALLOW_DATA_LOSS|  
+|DEFUNCT|El archivo se quitó cuando no estaba en línea. Todos los archivos de un grupo de archivos pasan a estar inactivos cuando se quita un grupo de archivos sin conexión.|  
+  
+## Contenido relacionado  
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
+  
+ [Estados de base de datos](../../relational-databases/databases/database-states.md)  
+  
+ [Estados de creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
+  
+ [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
+  
+ [Archivos y grupos de archivos de base de datos](../../relational-databases/databases/database-files-and-filegroups.md)  
+  
+  

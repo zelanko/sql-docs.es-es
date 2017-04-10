@@ -1,0 +1,7 @@
+# [Actualizar el esquema de las bases de datos DQS tras instalar la actualización de SQL Server](upgrade-dqs-databases-schema-after-installing-sql-server-update.md)
+# [Actualizar ensamblados de SQLCLR después de actualizar .NET Framework](upgrade-sqlclr-assemblies-after-net-framework-update.md)
+# [Conceder roles de DQS a los usuarios](grant-dqs-roles-to-users.md)
+# [Acceso a datos para las operaciones de DQS](access-data-for-the-dqs-operations.md)
+# [Exportar e importar bases de conocimiento de DQS mediante DQSInstaller.exe](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)
+# [Ejecutar DQSInstaller.exe para completar la instalación del servidor de calidad de datos](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)
+# [Instalar Data Quality Services](install-data-quality-services.md)

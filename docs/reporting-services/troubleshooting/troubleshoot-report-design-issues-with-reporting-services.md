@@ -1,0 +1,64 @@
+---
+title: "Soluci&#243;n de problemas de dise&#241;o de informes con Reporting Services | Microsoft Docs"
+ms.custom: ""
+ms.date: "02/27/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "reporting-services-native"
+  - "reporting-services-sharepoint"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
+caps.latest.revision: 5
+author: "guyinacube"
+ms.author: "asaxton"
+manager: "erikre"
+caps.handback.revision: 5
+---
+# Soluci&#243;n de problemas de dise&#241;o de informes con Reporting Services
+Los problemas de diseño se pueden producir al crear un diseño de un informe en la vista Diseño en una aplicación de creación de informes. Utilice este tema como ayuda para solucionar estos problemas.   
+  
+## ¿Por qué el cuadro de texto muestra solamente un valor y no se repite para cada fila?  
+Un cuadro de texto con una referencia del campo de conjunto de datos solamente se representa una vez y muestra el primer valor en el conjunto de datos.   
+  
+**El contenedor primario del cuadro de texto es el cuerpo del informe**  
+  
+  
+Un cuadro de texto agregado directamente a la superficie de diseño puede mostrar solamente un valor agregado para un conjunto de datos.  
+  
+Para comprobar el contenedor principal de un cuadro de texto, seleccione el cuadro de texto y en el panel Propiedades, desplácese a **Principal**.   
+  
+Si desea que los cuadros de texto muestren cada valor en un conjunto de datos, utilice una región de datos, como una tabla o matriz. De forma predeterminada, cada celda de una tabla o matriz contiene un cuadro de texto. Arrastre los campos del conjunto de datos hasta cada celda.   
+  
+## ¿Por qué no puedo agregar Total de páginas a mi informe?  
+Los campos integrados `[&PageNumber]` y `[&TotalPages]` no son válidos en el cuerpo del informe.   
+  
+PageNumber y TotalPages solo son válidos en el encabezado de página y en el pie de página.  
+  
+  
+Los campos integrados [&PageNumber] y [&TotalPages] solo son válidos en el encabezado de página y en el pie de página.   
+  
+Para agregar los campos [&PageNumber] o [&TotalPages] a un informe, primero debe agregar un encabezado de página o un pie de página. Para más información, consulte [Agregar o quitar un encabezado](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md).  
+  
+> [!NOTE]  
+> Incluir [&TotalPages] en el encabezado de página o el pie de página puede tener consecuencias para el procesamiento del informe. Para más información, consulte Solucionar problemas: informes exportados a un formato de archivo específico.  
+[Solución de problemas de procesamiento de informes de Reporting Services](../../reporting-services/troubleshooting/troubleshoot-processing-of-reporting-services-reports.md).  
+  
+## ¿Cómo diseño dos tablas o un gráfico y una tabla de forma que se muestren en paralelo?  
+Diseñar un informe no es una experiencia WYSISYG ("lo que se ve es lo que se obtiene"). El procesador del informe combina datos, elementos de informe e información de diseño del informe como el espacio en blanco, contenedores y expresiones para generar un informe compilado que se pasa a continuación a un representador de informes que "dispone" ese informe según la experiencia de visualización especificada: de forma interactiva para un explorador HTML o como formato de archivo. Los algoritmos de diseño automático pueden generar un diseño de informe que desee cambiar.   
+  
+### Representar el uso de reglas tamaño de página, contenedores, objetos del mismo nivel, posición relativa y espacio en blanco para determinar el diseño  
+En general, un informe crece para alojar sus datos e insertar otros elementos de informe al lado.   
+  
+Para agrupar varias regiones de datos o elementos de informe, colóquelos en el mismo contenedor primario. Por ejemplo, coloque un gráfico y una tabla en un contenedor de rectángulo y alinee sus bordes superiores para mostrarlos en paralelo. Para más información, consulte [Comportamientos de la representación (Generador de informes y SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
+  
+## Vea también  
+[Solución de problemas de recuperación de datos de informes de Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
+[Solución de problemas de suscripciones y entrega de Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
+  
+  
+  
+
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]

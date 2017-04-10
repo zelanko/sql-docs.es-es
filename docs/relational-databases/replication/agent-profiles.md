@@ -1,0 +1,56 @@
+---
+title: "Perfiles de agente | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "replication"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "sql13.rep.profiles.perfprofiles.f1"
+helpviewer_keywords: 
+  - "Perfiles de agente, cuadro de diálogo"
+ms.assetid: 0422e99c-e688-419b-bb4c-c7bebeef1d8d
+caps.latest.revision: 17
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 17
+---
+# Perfiles de agente
+  Utilice el cuadro de diálogo **Perfiles de agente** para administrar los perfiles de agente. Los perfiles de agente proporcionan una manera cómoda de administrar los parámetros en tiempo de ejecución para cada agente. Cada agente tiene un perfil predeterminado y algunos tienen perfiles adicionales predefinidos. Por ejemplo, el Agente de mezcla tiene un perfil de "vínculo lento" diseñado para conexiones de banda ancha lentas. Los perfiles predefinidos son suficientes para la mayoría de las aplicaciones, pero también pueden crearse perfiles definidos por el usuario, que permiten personalizar el comportamiento del agente.  
+  
+## Opciones  
+ **Seleccionar una página**  
+ Seleccione un agente en el panel izquierdo y los perfiles del agente se mostrarán en el panel derecho.  
+  
+ **Predeterminado para nuevos**  
+ Seleccione el perfil que se utilizará al crear los trabajos de un determinado tipo de agente. Por ejemplo, si crea varias suscripciones para una publicación de combinación, el trabajo del Agente de mezcla de cada suscripción utilizará el perfil seleccionado. Si desea cambiar el perfil de los trabajos existentes, seleccione un perfil y, a continuación, haga clic en **Cambiar agentes existentes**.  
+  
+ **Nombre**  
+ El nombre del perfil.  
+  
+ **Tipo**  
+ El tipo de perfil: **usuario** (definido por el usuario) o **System** (predefinido).  
+  
+ **Propiedades (...)**  
+ Haga clic para ver los valores utilizados por cada parámetro en el perfil del agente.  
+  
+ **Nuevo**  
+ Haga clic para crear un perfil nuevo.  
+  
+ **Delete**  
+ Seleccione un perfil definido por el usuario y, a continuación, haga clic en **Eliminar** para eliminar ese perfil. Los perfiles predefinidos no se pueden eliminar.  
+  
+ **Cambiar agentes existentes**  
+ Seleccione un perfil y, a continuación, haga clic en **Cambiar agentes existentes** para especificar que todos los trabajos existentes de un tipo determinado de agente deben usar el perfil seleccionado. Por ejemplo, si ha creado varias suscripciones para una publicación de combinación y desea cambiar el perfil para especificar que el trabajo del Agente de mezcla de cada una de esas suscripciones debe utilizar el **Perfil de agente de conexión lenta**, seleccione ese perfil y, a continuación, haga clic en **Cambiar agentes existentes**.  
+  
+## Vea también  
+ [Trabajar con perfiles del Agente de replicación](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
+ [Información general sobre los agentes de replicación](../../relational-databases/replication/agents/replication-agents-overview.md)   
+ [Perfiles del Agente de replicación](../../relational-databases/replication/agents/replication-agent-profiles.md)  
+  
+  

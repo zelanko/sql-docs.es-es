@@ -302,7 +302,7 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se a
     -   Usa los procedimientos auxiliares dbo.usp_GenerateCKCheck, dbo.usp_GenerateFKCheck y dbo.GenerateUQCheck para generar el código T-SQL necesario para realizar las comprobaciones de integridad.  
   
 ##  <a name="a-nameperformancemeasurementsusingthedemoworkloada-performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Medidas de rendimiento con la carga de trabajo de demostración  
- Ostress es una herramienta de línea de comandos desarrollada por el equipo de soporte técnico de [!INCLUDE[msCoName](../Token/msCoName_md.md)] CSS [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] . Esta herramienta se puede usar para ejecutar consultas o ejecutar procedimientos almacenados en paralelo. Puede configurar el número de subprocesos para ejecutar una instrucción T-SQL proporcionada en paralelo y puede especificar cuántas veces se debe ejecutar la instrucción en este subproceso; ostress recorrerá los subprocesos y ejecutará la instrucción en todos ellos en paralelo. Una vez que concluya la ejecución en todos los subprocesos, ostress notificará el tiempo empleado en finalizar la ejecución en todos los subprocesos.  
+ Ostress es una herramienta de línea de comandos desarrollada por el equipo de soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] CSS [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esta herramienta se puede usar para ejecutar consultas o ejecutar procedimientos almacenados en paralelo. Puede configurar el número de subprocesos para ejecutar una instrucción T-SQL proporcionada en paralelo y puede especificar cuántas veces se debe ejecutar la instrucción en este subproceso; ostress recorrerá los subprocesos y ejecutará la instrucción en todos ellos en paralelo. Una vez que concluya la ejecución en todos los subprocesos, ostress notificará el tiempo empleado en finalizar la ejecución en todos los subprocesos.  
   
 ### <a name="installing-ostress"></a>Instalar ostress  
  Ostress se instala como parte de las utilidades de RML; no hay ninguna instalación independiente para ostress.  
@@ -324,9 +324,9 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se a
   
  Las opciones de línea de comandos para ostress se pueden ver si se ejecuta ostress.exe sin ninguna opción de línea de comandos. Las opciones principales que hay que tener en cuenta para ejecutar ostress con este ejemplo son:  
   
--   -S nombre de la instancia de [!INCLUDE[msCoName](../Token/msCoName_md.md)][!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] con la que se va a conectar  
+-   -S nombre de la instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la que se va a conectar  
   
--   -E usar autenticación de Windows para conectarse (valor predeterminado); si usa la autenticación de [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] , emplee las opciones –U y –P para especificar el nombre de usuario y la contraseña, respectivamente  
+-   -E usar autenticación de Windows para conectarse (valor predeterminado); si usa la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , emplee las opciones –U y –P para especificar el nombre de usuario y la contraseña, respectivamente  
   
 -   -d nombre de la base de datos; para este ejemplo, AdventureWorks2014  
   
@@ -410,7 +410,7 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i in
   
  En un servidor de prueba con un número total de 8 núcleos físicos (16 lógicos), se tardaron 41 minutos y 25 segundos. En un segundo servidor de prueba con 24 núcleos físicos (48 lógicos), se tardaron 52 minutos y 16 segundos.  
   
- La causa principal de la diferencia de rendimiento entre las tablas con optimización para memoria y las tablas basadas en disco en esta prueba es el hecho de que cuando se usan tablas basadas en disco, [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] no puede utilizar totalmente la CPU. El motivo es la contención de bloqueos temporales: las transacciones simultáneas intentan escribir en la misma página de datos; los bloqueos temporales se usan para asegurarse de que solo una transacción puede escribir en una página a la vez. El motor de [!INCLUDE[hek_2](../Token/hek_2_md.md)] no tiene bloqueos temporales y las filas de datos no se organizan en páginas. Por tanto, las transacciones simultáneas no bloquean las inserciones de las demás, lo que permite a [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] utilizar totalmente la CPU.  
+ La causa principal de la diferencia de rendimiento entre las tablas con optimización para memoria y las tablas basadas en disco en esta prueba es el hecho de que cuando se usan tablas basadas en disco, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede utilizar totalmente la CPU. El motivo es la contención de bloqueos temporales: las transacciones simultáneas intentan escribir en la misma página de datos; los bloqueos temporales se usan para asegurarse de que solo una transacción puede escribir en una página a la vez. El motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] no tiene bloqueos temporales y las filas de datos no se organizan en páginas. Por tanto, las transacciones simultáneas no bloquean las inserciones de las demás, lo que permite a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizar totalmente la CPU.  
   
  Puede observar el uso de la CPU mientras se está ejecutando la carga de trabajo, por ejemplo con el Administrador de tareas. Con las tablas basadas en disco verá que el uso de la CPU está muy alejado del 100 %. En una configuración de prueba con 16 procesadores lógicos, el uso rondaría el 24 %.  
   
@@ -430,13 +430,13 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="a-nametroubleshootingslow-runningtestsa-troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a> Solucionar problemas de pruebas de ejecución lenta  
  Los resultados de prueba variarán normalmente según el hardware, y también el nivel de simultaneidad empleado en la serie de pruebas. He aquí varios aspectos que hay que examinar si los resultados no son los esperados:  
   
--   Número de transacciones simultáneas: cuando se ejecuta la carga de trabajo en un solo subproceso, el aumento del rendimiento con [!INCLUDE[hek_2](../Token/hek_2_md.md)] probablemente será menor del doble. La contención de bloqueos temporales solo supone un gran problema si hay un nivel elevado de simultaneidad.  
+-   Número de transacciones simultáneas: cuando se ejecuta la carga de trabajo en un solo subproceso, el aumento del rendimiento con [!INCLUDE[hek_2](../../includes/hek-2-md.md)] probablemente será menor del doble. La contención de bloqueos temporales solo supone un gran problema si hay un nivel elevado de simultaneidad.  
   
--   Pocos núcleos disponibles para [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]: esto significa que habrá un bajo nivel de simultaneidad en el sistema, ya que solo puede haber tantas transacciones que se ejecutan simultáneamente como núcleos disponibles haya en SQL.  
+-   Pocos núcleos disponibles para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: esto significa que habrá un bajo nivel de simultaneidad en el sistema, ya que solo puede haber tantas transacciones que se ejecutan simultáneamente como núcleos disponibles haya en SQL.  
   
     -   Síntoma: si la utilización de la CPU es alta cuando se ejecuta la carga de trabajo en tablas basadas en disco, significa que no hay mucha contención, lo que apunta a una falta de simultaneidad.  
   
--   Velocidad de la unidad de registro: si la unidad de registro no puede seguir el nivel de rendimiento de transacciones del sistema, la carga de trabajo se convierte en un cuello de botella para la E/S de registro. Aunque el registro es más eficaz con [!INCLUDE[hek_2](../Token/hek_2_md.md)], si la E/S de registro es un cuello de botella, se limita el aumento potencial de rendimiento.  
+-   Velocidad de la unidad de registro: si la unidad de registro no puede seguir el nivel de rendimiento de transacciones del sistema, la carga de trabajo se convierte en un cuello de botella para la E/S de registro. Aunque el registro es más eficaz con [!INCLUDE[hek_2](../../includes/hek-2-md.md)], si la E/S de registro es un cuello de botella, se limita el aumento potencial de rendimiento.  
   
     -   Síntoma: si la utilización de la CPU no está cercana al 100 % o tiene muchos picos cuando se ejecuta la carga de trabajo en tablas con optimización para memoria, es posible que haya un cuello de botella de la E/S de registro. Esto se puede confirmar abriendo el Monitor de recursos y examinando la longitud de la cola de la unidad de registro.  
   
@@ -446,7 +446,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="a-namememoryutilizationforthememory-optimizedtablesa-memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a> Uso de memoria para las tablas con optimización para memoria  
   
 #### <a name="overall-utilization-of-the-database"></a>Utilización global de la base de datos  
- Se puede usar la consulta siguiente para obtener la utilización de memoria total para [!INCLUDE[hek_2](../Token/hek_2_md.md)] en el sistema.  
+ Se puede usar la consulta siguiente para obtener la utilización de memoria total para [!INCLUDE[hek_2](../../includes/hek-2-md.md)] en el sistema.  
   
 ```  
 SELECT type  
@@ -514,7 +514,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 |MEMORYCLERK_XTP|Valor predeterminado|0|  
 |MEMORYCLERK_XTP|Valor predeterminado|0|  
   
- Como puede ver, [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] usa un bit por debajo de 8 GB para las tablas y los índices con optimización para memoria de la base de datos de ejemplo.  
+ Como puede ver, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa un bit por debajo de 8 GB para las tablas y los índices con optimización para memoria de la base de datos de ejemplo.  
   
  Examinando el uso detallado de memoria por tabla después de ejecutar un ejemplo:  
   
@@ -543,7 +543,7 @@ WHERE t.type='U'
 #### <a name="after-demo-reset"></a>Después de restablecer la demostración  
  Se puede usar el procedimiento almacenado Demo.usp_DemoReset para restablecer la demostración. Elimina los datos de las tablas SalesOrderHeader_inmem y SalesOrderDetail_inmem, y reinicializa los datos de las tablas originales SalesOrderHeader y SalesOrderDetail.  
   
- Ahora, aunque las filas de las tablas se han eliminado, esto no significa que la memoria se recupera inmediatamente. [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] recupera memoria de las filas eliminadas de las tablas con optimización para memoria en segundo plano, según sea necesario. Verá que inmediatamente después de restablecer la demostración, sin ninguna carga de trabajo transaccional en el sistema, la memoria de las filas eliminadas aún no se ha recuperado:  
+ Ahora, aunque las filas de las tablas se han eliminado, esto no significa que la memoria se recupera inmediatamente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recupera memoria de las filas eliminadas de las tablas con optimización para memoria en segundo plano, según sea necesario. Verá que inmediatamente después de restablecer la demostración, sin ninguna carga de trabajo transaccional en el sistema, la memoria de las filas eliminadas aún no se ha recuperado:  
   
 ```  
 SELECT type  
@@ -636,7 +636,7 @@ ORDER BY state, file_type
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
   
- Como puede ver, la mayor parte del espacio la usan archivos de datos y delta creados previamente. [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] ha creado previamente un par de archivos (datos, delta) por procesador lógico. Además, los archivos de datos tienen un tamaño previo de 128 MB, y los archivos delta de 8 MB, para que la inserción de datos en estos archivos sea más eficaz.  
+ Como puede ver, la mayor parte del espacio la usan archivos de datos y delta creados previamente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha creado previamente un par de archivos (datos, delta) por procesador lógico. Además, los archivos de datos tienen un tamaño previo de 128 MB, y los archivos delta de 8 MB, para que la inserción de datos en estos archivos sea más eficaz.  
   
  Los datos reales de las tablas con optimización para memoria están en el archivo de datos.  
   

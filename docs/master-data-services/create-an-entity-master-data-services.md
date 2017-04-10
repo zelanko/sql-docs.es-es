@@ -1,0 +1,97 @@
+---
+title: "Crear una entidad (Master Data Services) | Microsoft Docs"
+ms.custom: 
+  - "SQL2016_New_Updated"
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "master-data-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "entidades [Master Data Services], crear"
+  - "crear entidades [Master Data Services]"
+ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
+caps.latest.revision: 9
+author: "sabotta"
+ms.author: "carlasab"
+manager: "jhubbard"
+caps.handback.revision: 9
+---
+# Crear una entidad (Master Data Services)
+  En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree una entidad para contener los miembros y sus atributos.  
+  
+## Requisitos previos  
+ Para realizar este procedimiento:  
+  
+-   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
+  
+-   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+  
+-   Debe existir un modelo. Para obtener más información, consulte [Crear un modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md).  
+  
+### Crear una entidad  
+  
+1.  En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], haga clic en **Administración del sistema**.  
+  
+2.  En la página **Manage Model** (Administrar modelo), en la cuadrícula, seleccione el modelo para el que desea crear la entidad y luego haga clic en **Entidades**.  
+  
+3.  En el **Manage Entity** (Administrar entidad) haga clic en **Agregar**.  
+  
+4.  En el cuadro **Nombre** , escriba el nombre de la entidad.  
+  
+5.  Opcionalmente, en el campo **Descripción** , escriba la descripción de la entidad.  
+  
+6.  Opcionalmente, en el cuadro **Nombre de las tablas de ensayo** , escriba un nombre para la tabla de ensayo.  
+  
+     Si no completa este campo, se usa el nombre de la entidad.  
+  
+    > [!TIP]  
+    >  El nombre del modelo debe formar parte del nombre de la tabla de almacenamiento provisional, por ejemplo *Nombremodelo_Nombreentidad*. Esto hace que resulte más sencillo buscar tablas en la base de datos. Para obtener más información sobre las tablas de almacenamiento provisional, consulte [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+  
+7.  En el campo **Tipo de registro de transacciones**, elija el tipo de registro de transacciones de la lista desplegable.  
+  
+     Para obtener información, consulte [Cambio del tipo de registro de transacciones de entidad &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
+  
+8.  Opcional. Active la casilla **Crear automáticamente valores Code** . Para obtener más información, consulte [Creación automática de código &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md).  
+  
+9. Opcional. Active la casilla **Habilitar compresión de datos** . La compresión de fila está activada de forma predeterminada. Para obtener más información, consulte [Data Compression](../relational-databases/data-compression/data-compression.md).  
+  
+10. Haga clic en **Guardar**.  
+  
+## Columnas de la cuadrícula  
+ Por cada entidad creada, se agrega una fila con trece columnas a la cuadrícula. Las columnas son las siguientes.  
+  
+|Nombre|Description|  
+|----------|-----------------|  
+|Estado|El estado de la entidad. Al hacer clic en **Guardar** , aparece la imagen siguiente, que indica que la entidad se está actualizando.<br /><br /> ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")<br /><br /> Si se producen errores al crear o editar una entidad, se muestra la imagen siguiente.<br /><br /> ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status")<br /><br /> Si el estado es correcto, se muestra la siguiente imagen.<br /><br /> ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")|  
+|Nombre|El nombre de la entidad.|  
+|Description|La descripción de la entidad.|  
+|Tabla de ensayo|El nombre de prefijo de la tabla que se usa para almacenar datos.|  
+|Transaction Log Type|El tipo de registro de transacciones de la entidad.|  
+|Creación automática de código|Especifica si está habilitada la creación automática de código.|  
+|Comprimir datos|Especifica si está habilitada la compresión de datos para la entidad.|  
+|Es destino de sincronización|Especifica si la entidad es el destino de una relación de sincronización.|  
+|Está habilitada la jerarquía|Especifica si la entidad está habilitada para jerarquías explícitas. Esta columna muestra Sí si se ha creado al menos una jerarquía explícita para la entidad.|  
+|Creado por|Nombre del usuario que creó la entidad.|  
+|Creada el|Fecha y hora en que se creó la entidad.|  
+|Actualizada por|Nombre del usuario que actualizó la entidad por última vez.|  
+|Actualizada el|Fecha y hora en que se actualizó la entidad por última vez.|  
+  
+## Pasos siguientes  
+  
+-   [Crear un atributo de texto &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
+  
+-   [Crear un atributo basado en dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+  
+-   [Crear un atributo de archivo &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
+  
+## Vea también  
+ [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
+ [Jerarquías explícitas &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
+ [Edición de una entidad &#40;Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)   
+ [Eliminar una entidad &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)  
+  
+  

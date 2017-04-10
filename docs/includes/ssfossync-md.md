@@ -1,0 +1,1 @@
+ conjunto de confirmación sincrónica de conmutación por error 

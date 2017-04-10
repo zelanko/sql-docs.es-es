@@ -1,0 +1,95 @@
+---
+title: "Replicaci&#243;n en suscriptores de tablas con optimizaci&#243;n para memoria | Microsoft Docs"
+ms.custom: 
+  - "SQL2016_New_Updated"
+ms.date: "11/21/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "replication"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
+caps.latest.revision: 23
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 23
+---
+# Replicaci&#243;n en suscriptores de tablas con optimizaci&#243;n para memoria
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
+  Las tablas que actúan como instantáneas y suscriptores de replicación transaccional, excluida la replicación transaccional punto a punto, pueden configurarse como tablas con optimización para memoria. Otras configuraciones de replicación no son compatibles con las tablas con optimización para memoria. Esta característica está disponible a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+  
+## <a name="two-configurations-are-required"></a>Son necesarias dos configuraciones  
+  
+-   **Configurar la base de datos de suscriptor para admitir la replicación a tablas optimizadas en memoria**  
+  
+     Establecer el **@memory_optimized** propiedad **true**, mediante el uso de [sp_addsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) o [sp_changesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md).  
+  
+-   **Configurar el artículo para admitir la replicación a tablas optimizadas en memoria**  
+  
+     Establecer el `@schema_option = 0x40000000000` opción para el artículo mediante el uso de [sp_addarticle &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) o [sp_changearticle &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md).  
+  
+#### <a name="to-configure-a-memory-optimized-table-as-a-subscriber"></a>Para configurar una tabla con optimización para memoria como suscriptor  
+  
+1.  Cree una publicación transaccional. Para más información, consulte [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
+  
+2.  Agregue artículos a la publicación. Para más información, consulte [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
+  
+     Si la configuración mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] establecer el **@schema_option** parámetro de la **sp_addarticle** procedimiento almacenado   
+    **0x40000000000**.  
+  
+3.  En la ventana de propiedades del artículo, establezca **Habilitar optimización para memoria** en **true**.  
+  
+4.  Inicie el trabajo del Agente de instantáneas para generar la instantánea inicial de esta publicación. Para más información, consulte [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+  
+5.  Ahora cree una nueva suscripción. En el **Asistente para nueva suscripción** , establezca **Memory Optimized Subscription** (Suscripción optimizada para memoria) en **true**.  
+  
+ Las tablas con optimización para memoria deben empezar ahora a recibir actualizaciones del publicador.  
+  
+#### <a name="reconfigure-an-existing-transaction-replication"></a>Reconfiguración de una replicación de transacción existente  
+  
+1.  Vaya a las propiedades de suscripción de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y establezca **Memory Optimized Subscription** (Suscripción optimizada para memoria) en **true**. Los cambios no se aplican hasta que se reinicializa la suscripción.  
+  
+     Si la configuración mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] establecer la nueva **@memory_optimized** parámetro de la **sp_addsubscription** procedimiento almacenado a true.  
+  
+2.  Vaya a las propiedades del artículo de una publicación en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y establezca **Enable Memory Optimization** (Habilitar optimización para memoria) en true.  
+  
+     Si la configuración mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] establecer el **@schema_option** parámetro de la **sp_addarticle** procedimiento almacenado   
+    **0x40000000000**.  
+  
+3.  Las tablas con optimización para memoria no admiten índices agrupados. Para hacer posible esto, la replicación los convierte en índices no agrupados estableciendo **Convert clustered index to nonclustered for memory optimized article** (Convertir índice agrupado en no agrupado para un artículo optimizado para memoria) en true.  
+  
+     Si la configuración mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] establecer el **@schema_option** parámetro de la **sp_addarticle** procedimiento almacenado  **0x0000080000000000**.  
+  
+4.  Vuelva a generar la instantánea.  
+  
+5.  Reinicialice la suscripción.  
+  
+## <a name="remarks-and-restrictions"></a>Comentarios y restricciones  
+ Solo se admite la replicación transaccional unidireccional. No se admite la replicación transaccional punto a punto.  
+  
+ Las tablas con optimización para memoria no se pueden publicar.  
+  
+ Las tablas de replicación del distribuidor no se pueden configurar como tablas con optimización para memoria.  
+  
+ La replicación de mezcla no puede incluir tablas con optimización para memoria.  
+  
+ En el suscriptor, las tablas implicadas en la replicación transaccional se pueden configurar como tablas con optimización para memoria, pero las tablas del suscriptor deben cumplir los requisitos de las tablas con optimización para memoria. Esto requiere las restricciones siguientes.  
+ 
+-   Las tablas replicadas en tablas con optimización para memoria de un suscriptor están limitadas a los tipos de datos permitidos en las tablas con optimización para memoria. Para obtener más información, vea [Tipos de datos admitidos para OLTP en memoria](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).  
+  
+-   No todas las características de Transact-SQL son compatibles con tablas optimizadas en memoria. Vea [Transact-SQL construcciones no admitidas por OLTP en memoria](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) para obtener más información.  
+  
+##  <a name="a-nameschemaa-modifying-a-schema-file"></a><a name="Schema"></a> Modificar un archivo de esquema  
+  
+-   Si se usa la opción `DURABILITY = SCHEMA_AND_DATA` de tabla con optimización para memoria, la tabla debe tener un índice de clave principal no clúster.  
+  
+-   ANSI_PADDING debe ser ON.  
+  
+## <a name="see-also"></a>Vea también  
+ [Las tareas y características de replicación](../../relational-databases/replication/replication-features-and-tasks.md)  
+  
+  

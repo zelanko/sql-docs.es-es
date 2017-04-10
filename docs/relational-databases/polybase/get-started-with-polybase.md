@@ -1,0 +1,358 @@
+---
+title: "Introducci&#243;n a PolyBase | Microsoft Docs"
+ms.custom: 
+  - "SQL2016_New_Updated"
+ms.date: "10/25/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine-polybase"
+ms.tgt_pltfrm: ""
+ms.topic: "get-started-article"
+helpviewer_keywords: 
+  - "PolyBase"
+  - "PolyBase, introducción"
+  - "importación de Hadoop"
+  - "exportación de Hadoop"
+  - "importación de Almacenamiento de blobs de Azure"
+  - "exportación de Almacenamiento de blobs de Azure"
+  - "importación de Hadoop, introducción a PolyBase"
+  - "exportación de Hadoop, introducción a PolyBase"
+ms.assetid: c71ddc50-b4c7-416c-9789-264671bd9ecb
+caps.latest.revision: 78
+author: "barbkess"
+ms.author: "barbkess"
+manager: "jhubbard"
+caps.handback.revision: 73
+---
+# Introducci&#243;n a PolyBase
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
+  Este tema contiene los conceptos básicos sobre cómo ejecutar PolyBase. Para obtener más información, vea [Guía de PolyBase](../../relational-databases/polybase/polybase-guide.md).  
+  
+ Después de realizar los pasos siguientes:  
+  
+-   Instalará PolyBase y podrá ejecutarlo en el servidor.  
+  
+-   Contará con ejemplos de instrucciones que crean objetos PolyBase.  
+  
+-   Sabrá cómo administrar objetos PolyBase en SQL Server Management Studio (SSMS).  
+  
+-   Dispondrá de ejemplos de consultas que utilizan objetos PolyBase.  
+  
+## <a name="prerequisites"></a>Requisitos previos  
+ Una instancia de [SQL Server (64 bits)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016).  
+  
+-   Microsoft .NET Framework 4.5.  
+  
+-   La versión de Oracle Java SE RunTime Environment (JRE) 7.51 o una superior (64 bits). (Tanto [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) como [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) funcionarán). Vaya a la página de [descargas de Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html). El programa de instalación generará un error si JRE no está presente.   
+  
+-   Memoria mínima: 4 GB.  
+  
+-   Espacio disponible en disco duro mínimo: 2 GB.  
+  
+-   La conectividad TCP/IP debe estar habilitada. (Vea [Habilitar o deshabilitar un protocolo de red de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)).  
+  
+ Un origen de datos externo, como uno de los siguientes:  
+  
+-   Un clúster de Hadoop. Para saber qué versiones son compatibles, vea [Configurar PolyBase](#supported).  
+  
+-   Almacenamiento de blobs de Azure. 
+
+> [!NOTE]
+> Los clústeres de HDInsights usan el almacenamiento de blobs de Azure como el sistema de archivos para el almacenamiento permanente. Puede usar PolyBase para consultar los archivos que administra un clúster de HDInsight. Para ello, cree un origen de datos externo para hacer referencia al blob que está configurado como almacenamiento para el clúster de HDInsight. 
+  
+## <a name="install-polybase"></a>Instalación de PolyBase  
+ Instale PolyBase como parte de la instalación de SQL Server. Para obtener más información, vea [PolyBase installation](../../relational-databases/polybase/polybase-installation.md) (Instalación de PolyBase).  
+  
+### <a name="how-to-confirm-installation"></a>Cómo confirmar la instalación  
+ Después de la instalación, ejecute el siguiente comando para confirmar que se ha instalado correctamente PolyBase. Si PolyBase está instalado, devuelve 1; en caso contrario, 0.  
+  
+```tsql  
+SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
+```  
+  
+##  <a name="a-namesupporteda-configure-polybase"></a><a name="supported"></a> Configurar PolyBase  
+ Después de realizar la instalación, debe configurar SQL Server para usar la versión de Hadoop o Almacenamiento de blobs de Azure. PolyBase es compatible con dos proveedores de Hadoop: Hortonworks Data Platform (HDP) y Cloudera CDH. Puede ejecutar Hortonworks en cualquier máquina Windows o Linux; también forma parte de la configuración.  Los orígenes de datos externos admitidos son:  
+  
+-   Hortonworks HDP 1.3 en Linux y Windows Server  
+  
+-   Hortonworks HDP 2.1 – 2.5 en Linux
+
+-   Hortonworks HDP 2.1 - 2.3 en Windows Server  
+  
+-   Cloudera CDH 4.3 en Linux  
+  
+-   Cloudera CDH 5.1 – 5.5, 5.9 en Linux  
+  
+-   Almacenamiento de blobs de Azure  
+  
+### <a name="external-data-source-configuration"></a>Configuración del origen de datos externo  
+  
+1.  Ejecute la “conectividad de hadoop” [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) y establezca un valor adecuado.  Para hallar el valor, vea [Configuración de PolyBase &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
+  
+    ```tsql  
+    -- Values map to various external data sources.  
+    -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
+    sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
+    GO   
+  
+    RECONFIGURE   
+    GO   
+    ```  
+  
+2.  Debe reiniciar SQL Server con **services.msc**. Al reiniciar SQL Server, se reinician estos servicios:  
+  
+    -   Servicio de movimiento de datos de SQL Server PolyBase  
+  
+    -   Motor de SQL Server PolyBase  
+  
+ ![stop and start PolyBase services in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "stop and start PolyBase services in services.msc")  
+  
+### <a name="pushdown-configuration"></a>Aplicación de la configuración  
+ Para mejorar el rendimiento de las consultas, habilite el cálculo de la aplicación para un clúster de Hadoop:  
+  
+1.  Busque el archivo **yarn-site.xml** en la ruta de acceso de instalación de SQL Server. Normalmente, la ruta de acceso es:  
+  
+    ```  
+  
+    C:Program FilesMicrosoft SQL ServerMSSQL13.MSSQLSERVERMSSQLBinnPolybaseHadoopconf  
+  
+    ```  
+  
+2.  En el equipo de Hadoop, busque el archivo análogo en el directorio de configuración de Hadoop. En el archivo, busque y copie el valor de la clave de configuración yarn.application.classpath.  
+  
+3.  En el equipo de SQL Server, en el **archivo yarn.site.xml,** busque la propiedad **yarn.application.classpath** . Pegue el valor de la máquina de Hadoop en el elemento de valor.  
+  
+## <a name="scale-out-polybase"></a>Escalado horizontal de PolyBase  
+ La característica de grupos de PolyBase permite crear un clúster de instancias de SQL Server para procesar grandes conjuntos de datos a partir de orígenes de datos externos en un modo de escalado horizontal para mejorar el rendimiento de las consultas.  
+  
+1.  Instale SQL Server con PolyBase en varias máquinas.  
+  
+2.  Seleccione una instancia de SQL Server como nodo principal.  
+  
+3.  Ejecute [sp_polybase_join_group](../Topic/sp_polybase_join_group.md) para agregar otras instancias como nodos de ejecución.  
+  
+    ```  
+    -- Enter head node details:   
+    -- head node machine name, head node dms control channel port, head node sql server name  
+    EXEC sp_polybase_join_group 'PQTH4A-CMP01', 16450, 'MSSQLSERVER';  
+  
+    ```  
+  
+4.  Reinicie el servicio de movimiento de datos de PolyBase en los nodos de ejecución.  
+  
+ Para obtener más información, vea [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md) (Grupos de escalado horizontal de PolyBase).  
+  
+## <a name="create-t-sql-objects"></a>Creación de objetos de T-SQL  
+ Cree objetos a partir del origen de datos externo, sea este Hadoop o un almacenamiento de Azure.  
+  
+### <a name="hadoop"></a>Hadoop  
+  
+```sql  
+-- 1: Create a database scoped credential.  
+-- Create a master key on the database. This is required to encrypt the credential secret.  
+  
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
+  
+-- 2: Create a database scoped credential  for Kerberos-secured Hadoop clusters.  
+-- IDENTITY: the Kerberos user name.  
+-- SECRET: the Kerberos password  
+  
+CREATE DATABASE SCOPED CREDENTIAL HadoopUser1   
+WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
+  
+-- 3:  Create an external data source.  
+-- LOCATION (Required) : Hadoop Name Node IP address and port.  
+-- RESOURCE MANAGER LOCATION (Optional): Hadoop Resource Manager location to enable pushdown computation.  
+-- CREDENTIAL (Optional):  the database scoped credential, created above.  
+  
+CREATE EXTERNAL DATA SOURCE MyHadoopCluster WITH (  
+        TYPE = HADOOP,   
+        LOCATION ='hdfs://10.xxx.xx.xxx:xxxx',   
+        RESOURCE_MANAGER_LOCATION = '10.xxx.xx.xxx:xxxx',   
+        CREDENTIAL = HadoopUser1        
+);  
+  
+-- 4: Create an external file format.  
+-- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
+  
+CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
+        FORMAT_TYPE = DELIMITEDTEXT,   
+        FORMAT_OPTIONS (FIELD_TERMINATOR ='|',   
+                USE_TYPE_DEFAULT = TRUE)  
+  
+-- 5:  Create an external table pointing to data stored in Hadoop.  
+-- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
+  
+CREATE EXTERNAL TABLE [dbo].[CarSensor_Data] (  
+        [SensorKey] int NOT NULL,   
+        [CustomerKey] int NOT NULL,   
+        [GeographyKey] int NULL,   
+        [Speed] float NOT NULL,   
+        [YearMeasured] int NOT NULL  
+)  
+WITH (LOCATION='/Demo/',   
+        DATA_SOURCE = MyHadoopCluster,  
+        FILE_FORMAT = TextFileFormat  
+);  
+  
+-- 6:  Create statistics on an external table.   
+CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
+  
+```  
+  
+### <a name="azure-blob-storage"></a>Almacenamiento de blobs de Azure  
+  
+```sql  
+--1: Create a master key on the database.  
+-- Required to encrypt the credential secret.  
+  
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
+  
+-- Create a database scoped credential  for Azure blob storage.  
+-- IDENTITY: any string (this is not used for authentication to Azure storage).  
+-- SECRET: your Azure storage account key.  
+  
+CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential   
+WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';  
+  
+--2:  Create an external data source.  
+-- LOCATION:  Azure account storage account name and blob container name.  
+-- CREDENTIAL: The database scoped credential created above.  
+  
+CREATE EXTERNAL DATA SOURCE AzureStorage with (  
+        TYPE = HADOOP,   
+        LOCATION ='wasbs://<blob_container_name>@<azure_storage_account_name>.blob.core.windows.net',  
+        CREDENTIAL = AzureStorageCredential  
+);  
+  
+--3:  Create an external file format.  
+-- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
+  
+CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
+        FORMAT_TYPE = DELIMITEDTEXT,   
+        FORMAT_OPTIONS (FIELD_TERMINATOR ='|',   
+                USE_TYPE_DEFAULT = TRUE)  
+  
+--4: Create an external table.  
+-- The external table points to data stored in Azure storage.  
+-- LOCATION: path to a file or directory that contains the data (relative to the blob container).  
+-- To point to all files under the blob container, use LOCATION='/'   
+  
+CREATE EXTERNAL TABLE [dbo].[CarSensor_Data] (  
+        [SensorKey] int NOT NULL,   
+        [CustomerKey] int NOT NULL,   
+        [GeographyKey] int NULL,   
+        [Speed] float NOT NULL,   
+        [YearMeasured] int NOT NULL  
+)  
+WITH (LOCATION='/Demo/',   
+        DATA_SOURCE = AzureStorage,  
+        FILE_FORMAT = TextFileFormat  
+);  
+  
+--5: Create statistics on an external table.   
+CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
+  
+```  
+  
+## <a name="polybase-queries"></a>Consultas de PolyBase  
+ PolyBase es adecuado para realizar tres funciones:  
+  
+-   Realizar consultas ad hoc en tablas externas  
+  
+-   Importar datos  
+  
+-   Exportar datos  
+  
+### <a name="query-examples"></a>Ejemplos de consultas  
+  
+-   Consultas ad hoc  
+  
+    ```tsql  
+    -- PolyBase Scenario 1: Ad-Hoc Query joining relational with Hadoop data   
+    -- Select customers who drive faster than 35 mph: joining structured customer data stored   
+    -- in SQL Server with car sensor data stored in Hadoop.  
+    SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,   
+            Insured_Customers. YearlyIncome, CarSensor_Data.Speed  
+    FROM Insured_Customers, CarSensor_Data  
+    WHERE Insured_Customers.CustomerKey = CarSensor_Data.CustomerKey and CarSensor_Data.Speed > 35   
+    ORDER BY CarSensor_Data.Speed DESC  
+    OPTION (FORCE EXTERNALPUSHDOWN);    -- or OPTION (DISABLE EXTERNALPUSHDOWN)  
+    ```  
+  
+-   Importar datos  
+  
+    ```tsql  
+    -- PolyBase Scenario 2: Import external data into SQL Server.  
+    -- Import data for fast drivers into SQL Server to do more in-depth analysis and  
+    -- leverage Columnstore technology.  
+  
+    SELECT DISTINCT   
+            Insured_Customers.FirstName, Insured_Customers.LastName,   
+            Insured_Customers.YearlyIncome, Insured_Customers.MaritalStatus  
+    INTO Fast_Customers from Insured_Customers INNER JOIN   
+    (  
+            SELECT * FROM CarSensor_Data where Speed > 35   
+    ) AS SensorD  
+    ON Insured_Customers.CustomerKey = SensorD.CustomerKey  
+    ORDER BY YearlyIncome  
+  
+    CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;  
+    ```  
+  
+-   Exportación de datos  
+  
+    ```  
+    -- PolyBase Scenario 3: Export data from SQL Server to Hadoop.  
+  
+    -- Enable INSERT into external table  
+    sp_configure ‘allow polybase export’, 1;  
+    reconfigure  
+  
+    -- Create an external table.   
+    CREATE EXTERNAL TABLE [dbo].[FastCustomers2009] (  
+            [FirstName] char(25) NOT NULL,   
+            [LastName] char(25) NOT NULL,   
+            [YearlyIncome] float NULL,   
+            [MaritalStatus] char(1) NOT NULL  
+    )  
+    WITH (  
+            LOCATION='/old_data/2009/customerdata',  
+            DATA_SOURCE = HadoopHDP2,  
+            FILE_FORMAT = TextFileFormat,  
+            REJECT_TYPE = VALUE,  
+            REJECT_VALUE = 0  
+    );  
+  
+    -- Export data: Move old data to Hadoop while keeping it query-able via an external table.  
+    INSERT INTO dbo.FastCustomer2009  
+    SELECT T.* FROM Insured_Customers T1 JOIN CarSensor_Data T2  
+    ON (T1.CustomerKey = T2.CustomerKey)  
+    WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
+    ```  
+  
+## <a name="managing-polybase-objects-in-ssms"></a>Administración de objetos PolyBase en SSMS  
+ En SSMS, las tablas externas se muestran en una carpeta independiente llamada " **Tablas externas**". Los orígenes de datos y los formatos de archivo externos se encuentran en subcarpetas de **Recursos externos**.  
+  
+ ![PolyBase objects in SSMS](../../relational-databases/polybase/media/polybase-management.png "PolyBase objects in SSMS")  
+  
+## <a name="troubleshooting"></a>Solucionar problemas  
+ Use DMV para solucionar problemas de rendimiento y de consultas. Para obtener más información, vea [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md) (Solución de problemas de PolyBase).  
+  
+ Después de actualizar de SQL Server 2016 RC1 a RC2 o RC3, las consultas pueden producir errores. Para obtener más información y saber cómo solucionarlo, vea [Notas de la versión de SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md) y busque "PolyBase".  
+  
+## <a name="next-steps"></a>Pasos siguientes  
+ Para entender la característica de escalado horizontal, vea [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md) (Grupos de escalado horizontal de PolyBase).  Para supervisar PolyBase, consulte [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md) (Solución de problemas de PolyBase). Para solucionar problemas de rendimiento de PolyBase, consulte [PolyBase troubleshooting with dynamic management views](../Topic/PolyBase%20troubleshooting%20with%20dynamic%20management%20views.md).  
+  
+## <a name="see-also"></a>Vea también  
+ [Guía de PolyBase](../../relational-databases/polybase/polybase-guide.md)   
+ [Grupos de escalado horizontal de PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md)   
+ [Procedimientos almacenados de PolyBase](../Topic/PolyBase%20stored%20procedures.md)   
+ [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
+ [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
+ [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
+  
+  

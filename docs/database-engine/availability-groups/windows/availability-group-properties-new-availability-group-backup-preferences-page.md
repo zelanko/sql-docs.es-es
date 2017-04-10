@@ -1,0 +1,64 @@
+---
+title: "Propiedades de grupo de disponibilidad: Nuevo grupo de disponibilidad (p&#225;gina Preferencias de copia de seguridad) | Microsoft Docs"
+ms.custom: ""
+ms.date: "05/17/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dbe-high-availability"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "sql13.swb.availabilitygroupproperties.backuppreferences.f1"
+helpviewer_keywords: 
+  - "enrutamiento de solo lectura"
+ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
+caps.latest.revision: 7
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "jhubbard"
+caps.handback.revision: 7
+---
+# Propiedades de grupo de disponibilidad: Nuevo grupo de disponibilidad (p&#225;gina Preferencias de copia de seguridad)
+  Utilice este cuadro de diálogo para ver y cambiar las preferencias de copia de seguridad del grupo de disponibilidad seleccionado.  
+  
+ **Para ver las propiedades del grupo de disponibilidad**  
+  
+-   [Ver las propiedades del grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)  
+  
+-   [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](../Topic/Use%20the%20Always On%20Dashboard%20\(SQL%20Server%20Management%20Studio\).md)  
+  
+## ¿Dónde deben realizarse las copias de seguridad?  
+ **Preferir secundaria**  
+ Especifica que las copias de seguridad se deben realizar en una réplica secundaria a menos que la réplica principal sea la única réplica en línea. En ese caso, la copia de seguridad se debe realizar en la réplica principal. Esta es la opción predeterminada.  
+  
+ **Solo secundaria**  
+ Especifica que las copias de seguridad no deben realizarse nunca en la réplica principal. Si la réplica principal es la única réplica en línea, no se debe realizar la copia de seguridad.  
+  
+ **Principal**  
+ Especifica que las copias de seguridad deben realizarse siempre en la réplica principal. Esta opción es útil si necesita usar características de copia de seguridad, como crear copias de seguridad diferenciales, que no se admiten cuando la copia de seguridad se ejecuta en una réplica secundaria.  
+  
+ **Cualquier réplica**  
+ Especifica que, de acuerdo con sus preferencias, los trabajos de copia de seguridad omitan el rol de las réplicas de disponibilidad cuando la réplica realiza copias de seguridad. Tenga en cuenta que los trabajos de copia de seguridad pueden evaluar otros factores, como la prioridad de copia de seguridad de cada réplica de disponibilidad junto con su estado operativo y de conexión.  
+  
+> [!IMPORTANT]  
+>  No se aplica el valor de preferencia de copia de seguridad. La interpretación de esta preferencia depende de la lógica, si existe, del script con los trabajos de copia de seguridad ejecutado para las bases de datos de un grupo de disponibilidad dado. Para obtener más información, vea [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;grupos de disponibilidad AlwaysOn&#41;](../Topic/Active%20Secondaries:%20Backup%20on%20Secondary%20Replicas%20\(Always On%20Availability%20Groups\).md).  
+  
+## Prioridades de copia de seguridad de réplica  
+ Esta cuadrícula muestra la prioridad de copia de seguridad actual de cada instancia de servidor que hospeda una réplica para el grupo de disponibilidad. Utilice esta cuadrícula para cambiar la prioridad de copia de seguridad de una o varias réplicas de disponibilidad.  
+  
+ **Instancia del servidor**  
+ El nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica de disponibilidad.  
+  
+ **Prioridad de copia de seguridad (Mínima=1, Máxima=100)**  
+ Especifica la prioridad para realizar copias de seguridad en esta réplica en relación con las otras réplicas del mismo grupo de disponibilidad. El valor es un número entero en el intervalo de 0..100. 1 indica la prioridad mínima y 100 indica la prioridad máxima. Si **Prioridad de copia de seguridad** = 1, la réplica de disponibilidad se elegiría para realizar copias de seguridad solamente si no hay réplicas de disponibilidad con mayor prioridad disponibles actualmente.  
+  
+ **Excluir réplica**  
+ Seleccione esta opción si no desea que nunca se elija esta réplica de disponibilidad para realizar copias de seguridad. Esto es útil, por ejemplo, para una réplica de disponibilidad remota en la que no desee nunca realizar la conmutación por error para las copias de seguridad.  
+  
+## Vea también  
+ [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;grupos de disponibilidad AlwaysOn&#41;](../Topic/Active%20Secondaries:%20Backup%20on%20Secondary%20Replicas%20\(Always On%20Availability%20Groups\).md)   
+ [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
+  
+  

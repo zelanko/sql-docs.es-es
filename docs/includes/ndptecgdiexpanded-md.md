@@ -1,0 +1,1 @@
+ Interfaz de dispositivo gráfico 

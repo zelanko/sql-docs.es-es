@@ -1,0 +1,101 @@
+---
+title: "MultiLineString | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/03/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dbe-spatial"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Subtipo de Multilinestring de Geometry [SQL Server]"
+  - "subtipos de Geometry [SQL Server]"
+ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
+caps.latest.revision: 19
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 19
+---
+# MultiLineString
+  Un **MultiLineString** es una colección de cero o más instancias de **geometry** o **geographyLineString**.  
+  
+## Instancias de MultiLineString  
+ En la ilustración siguiente se muestran ejemplos de instancias de **MultiLineString** .  
+  
+ ![Ejemplos de instancias MultiLineString de geometry](../../relational-databases/spatial/media/multilinestring.png "Ejemplos de instancias MultiLineString de geometry")  
+  
+ Como se muestra en la ilustración:  
+  
+-   La figura 1 es una instancia sencilla de **MultiLineString** cuyo límite son los cuatro extremos de sus dos elementos **LineString** .  
+  
+-   La figura 2 es una instancia sencilla de **MultiLineString** porque solo forman una intersección los extremos de los elementos **LineString** . El límite lo constituyen los dos extremos que no se superponen.  
+  
+-   La figura 3 es una instancia no sencilla de **MultiLineString** porque el interior de uno de sus elementos **LineString** forma parte de una intersección. El límite de esta instancia de **MultiLineString** lo constituyen los cuatro extremos.  
+  
+-   La figura 4 es una instancia de **MultiLineString** no sencilla y sin cerrar.  
+  
+-   La figura 5 es una instancia de **MultiLineString**sencilla y sin cerrar. No está cerrada porque no lo están sus elementos **LineStrings** . Es sencilla porque ninguno de los interiores de ninguna de las instancias de **LineStrings** forma parte de una intersección.  
+  
+-   La figura 6 es una instancia de **MultiLineString** sencilla y cerrada. Está cerrada porque lo están todos sus elementos. Es sencilla porque ninguno de sus elementos forma parte de una intersección con los interiores.  
+  
+### Instancias aceptadas  
+ Para que se acepte una instancia de **MultiLineString** , debe estar vacío o estar formada solo por instancias de **LineString** aceptadas. Para obtener más información sobre instancias **LineString** aceptadas, vea [LineString](../../relational-databases/spatial/linestring.md). A continuación se enumeran ejemplos de instancias **MultiLineString** aceptadas.  
+  
+```  
+DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
+DECLARE @g2 geometry = 'MULTILINESTRING((1 1, 3 5), (-5 3, -8 -2))';  
+DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';  
+DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';  
+```  
+  
+ En el siguiente ejemplo se produce una excepción `System.FormatException` porque la segunda instancia de **LineString** no es válida.  
+  
+```  
+DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';  
+```  
+  
+### Instancias válidas  
+ Para que una instancia de **MultiLineString** sea válida debe cumplir los siguientes criterios:  
+  
+1.  Todas las instancias que forman la instancia de **MultiLineString** deben ser instancias válidas de **LineString** .  
+  
+2.  Dos de las instancias de **LineString** que forman la instancia de **MultiLineString** pueden superponerse durante un intervalo. Las instancias de **LineString** solo pueden formar una intersección o tocarse una a la otra o a otra instancia de **LineString** en un número finito de puntos.  
+  
+ En el ejemplo siguiente se muestran tres instancias válidas de **MultiLineString** y una instancia de **MultiLineString** que no es válida.  
+  
+```  
+DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
+DECLARE @g2 geometry = 'MULTILINESTRING((1 1, 3 5), (-5 3, -8 -2))';  
+DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';  
+DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';  
+SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
+```  
+  
+ `@g4` no es válido porque la segunda instancia de **LineString** se superpone a la primera instancia de **LineString** en un intervalo. Se tocan en un número infinito de puntos.  
+  
+## Ejemplos  
+ El ejemplo siguiente crea una instancia sencilla de `geometry``MultiLineString` que contiene dos elementos `LineString` con un SRID de 0.  
+  
+```  
+DECLARE @g geometry;  
+SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');  
+```  
+  
+ Para crear instancias de esta instancia con otro SRID, utilice `STGeomFromText()` o `STMLineStringFromText()`. También puede utilizar `Parse()` y, a continuación, modificar el SRID, como se muestra en el ejemplo siguiente.  
+  
+```  
+DECLARE @g geometry;  
+SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');  
+SET @g.STSrid = 13;  
+```  
+  
+## Vea también  
+ [STLength &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
+ [STIsClosed &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
+ [LineString](../../relational-databases/spatial/linestring.md)   
+ [Datos espaciales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
+  
+  

@@ -1,0 +1,1 @@
+ Georreplicación activa 

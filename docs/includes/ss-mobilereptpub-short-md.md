@@ -1,1 +1,1 @@
- Publicador de informes móviles 
+Publicador de informes móviles 

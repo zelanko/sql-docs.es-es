@@ -1,27 +1,31 @@
 ---
-title: "Estrategias para hacer copias de seguridad y restaurar la replicaci&#243;n de mezcla | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "recuperar [replicación de SQL Server], replicación de mezcla"
-  - "copias de seguridad [replicación de SQL Server], replicación de mezcla"
-  - "restaurar [replicación de SQL Server], replicación de mezcla"
-  - "replicación de mezcla [replicación de SQL Server], copia de seguridad y restauración"
+title: "Estrategias para hacer copias de seguridad y restaurar la replicación de mezcla | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recovery [SQL Server replication], merge replication
+- backups [SQL Server replication], merge replication
+- restoring [SQL Server replication], merge replication
+- merge replication [SQL Server replication], backup and restore
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b518488e5ac42e28487f984bfd65ca196dfbe723
+ms.lasthandoff: 04/11/2017
+
 ---
-# Estrategias para hacer copias de seguridad y restaurar la replicaci&#243;n de mezcla
+# <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Estrategias para hacer copias de seguridad y restaurar la replicación de mezcla
   Para la replicación de mezcla, cree periódicamente una copia de seguridad de las siguientes bases de datos:  
   
 -   Base de datos de publicaciones en el publicador  
@@ -36,7 +40,7 @@ caps.handback.revision: 48
   
  Elija uno de los siguientes métodos para crear copias de seguridad y restaurar la base de datos de publicaciones; después, siga las recomendaciones para la base de datos de distribución y las bases de datos de suscripciones.  
   
-## Realizar copias de seguridad y restaurar la base de datos de publicaciones  
+## <a name="backing-up-and-restoring-the-publication-database"></a>Realizar copias de seguridad y restaurar la base de datos de publicaciones  
  Hay dos métodos para restaurar una base de datos de publicaciones de combinación. Después de restaurar la base de datos de publicaciones a partir de una copia de seguridad, debe:  
   
 -   Sincronizar la base de datos de publicaciones con una base de datos de suscripciones.  
@@ -46,9 +50,9 @@ caps.handback.revision: 48
  Cualquiera de estos métodos garantiza la sincronización del publicador y de todos los suscriptores después de la restauración.  
   
 > [!NOTE]  
->  Si alguna tabla contiene columnas de identidad, debe asegurarse de asignar los intervalos de identidad correctos después de una restauración. Para obtener más información, consulte [replicar las columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
+>  Si alguna tabla contiene columnas de identidad, debe asegurarse de asignar los intervalos de identidad correctos después de una restauración. Para más información, vea [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
-### Sincronizar la base de datos de publicaciones  
+### <a name="synchronizing-the-publication-database"></a>Sincronizar la base de datos de publicaciones  
  La sincronización de una base de datos de publicaciones con una base de datos de suscripciones permite cargar desde una o más bases de datos de suscripciones los cambios realizados previamente en la base de datos de publicaciones que no están representados en la copia de seguridad restaurada. Los datos que se pueden cargar dependen de la forma en que se filtra una publicación:  
   
 -   Si la publicación no está filtrada, debe poder actualizar la base de datos de publicaciones sincronizándola con el suscriptor más actualizado.  
@@ -58,23 +62,23 @@ caps.handback.revision: 48
 > [!IMPORTANT]  
 >  La sincronización de una base de datos de publicaciones con una base de datos de suscripciones puede dar como resultado la restauración de las tablas publicadas hasta un momento más reciente que el de las otras tablas no publicadas restauradas de la copia de seguridad.  
   
- Si se sincroniza con un suscriptor que ejecuta una versión de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la suscripción no puede ser anónima; debe ser una suscripción de cliente o servidor (denominadas suscripciones locales y globales en versiones anteriores).  
+ Si se sincroniza con un suscriptor que esté ejecutando una versión de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la suscripción no podrá ser anónima; deberá ser una suscripción de cliente o de servidor (denominadas suscripciones locales y globales en versiones anteriores).  
   
  Para sincronizar una suscripción de inserción, vea [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) y [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
-### Reinicializar todas las suscripciones  
+### <a name="reinitializing-all-subscriptions"></a>Reinicializar todas las suscripciones  
  La reinicialización de todas las suscripciones garantiza que el estado de todos los suscriptores sea coherente con la base de datos de publicaciones restaurada. Este enfoque debe utilizarse si desea restaurar una topología completa a su estado anterior, representado por la copia de seguridad de una base de datos de publicaciones determinada. Por ejemplo, puede reinicializar todas las suscripciones si desea restaurar una base de datos a un momento anterior como un mecanismo para recuperarse de una operación por lotes realizada incorrectamente.  
   
  Si elige esta opción, genere una nueva instantánea para entregar a los suscriptores reinicializados inmediatamente después de restaurar la base de datos de publicaciones.  
   
  Para reinicializar una suscripción, vea [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md).  
   
- Para crear y aplicar una instantánea, vea [Create y Apply the Initial Snapshot](../Topic/Create%20y%20Apply%20the%20Initial%20Snapshot.md) y [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ Para crear y aplicar una instantánea, vea [Create y Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) y [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
-## Realizar copias de seguridad y restaurar la base de datos de distribución  
+## <a name="backing-up-and-restoring-the-distribution-database"></a>Realizar copias de seguridad y restaurar la base de datos de distribución  
  Con la replicación de mezcla, se deben crear periódicamente copias de seguridad de la base de datos de distribución, que se pueden restaurar sin ningún tipo de consideraciones especiales, siempre que la copia de seguridad utilizada no sea más antigua que el menor período de retención de todas las publicaciones que utilizan el distribuidor. Por ejemplo, si hay tres publicaciones con períodos de retención de 10, 20 y 30 días respectivamente, la copia de seguridad que deberá utilizarse para restaurar la base de datos no debe tener más de 10 días. La base de datos de distribución tiene un rol limitado en la replicación de mezcla: no almacena ningún dato utilizado en el seguimiento de cambios y no almacena temporalmente los cambios de la replicación de mezcla que se enviarán a las bases de datos de suscripciones (como ocurre con la replicación transaccional).  
   
-## Realizar copias de seguridad y restaurar la base de datos de suscripciones  
+## <a name="backing-up-and-restoring-a-subscription-database"></a>Realizar copias de seguridad y restaurar la base de datos de suscripciones  
  Para garantizar la recuperación correcta de una base de datos de suscripciones, los suscriptores deben sincronizarse con el publicador antes de crear la copia de seguridad de la base de datos de suscripciones y después de restaurar la base de datos de suscripciones:  
   
 -   La sincronización con el publicador antes de crear la copia de seguridad de la base de datos de suscripciones ayuda a garantizar que si se restaura un suscriptor a partir de la copia de seguridad, la suscripción seguirá estando dentro del período de retención de la publicación. Por ejemplo, imagine una publicación con un período de retención de 10 días. Suponga que la última sincronización se realizó hace 8 días y que ahora se efectúa la copia de seguridad. Si la copia de seguridad se restaura 4 días más tarde, ya habrán transcurrido 12 días desde la última sincronización, un período superior al de retención. En este caso, será necesario reinicializar el suscriptor. Si el suscriptor se hubiera sincronizado antes de realizar la copia de seguridad, la base de datos de suscripciones todavía estaría dentro del período de retención.  
@@ -83,14 +87,14 @@ caps.handback.revision: 48
   
 -   Sincronizar la base de datos de suscripciones con cada una de sus publicaciones después de una restauración garantiza que el suscriptor se actualice con todos los cambios presentes en el publicador.  
   
- Para establecer el período de retención, consulte [establecer el período de expiración para las suscripciones](../../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md).  
+ Para establecer el período de retención de publicación, vea [Set the Expiration Period for Subscriptions](../../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md) (Establecer el período de expiración para las suscripciones).  
   
  Para sincronizar una suscripción de inserción, vea [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) y [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
-## Realizar copias de seguridad y restaurar una base de datos de republicaciones  
+## <a name="backing-up-and-restoring-a-republishing-database"></a>Realizar copias de seguridad y restaurar una base de datos de republicaciones  
  Cuando una base de datos se suscribe a datos de un publicador y, a su vez, publica esos mismos datos en otras bases de datos de suscripciones se denomina base de datos de republicaciones. Al restaurar una base de datos de republicaciones, siga las directrices descritas en las secciones "Realizar copias de seguridad y restaurar la base de datos de publicaciones" y "Realizar copias de seguridad y restaurar la base de datos de suscripciones" de este tema.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Hacer copias de seguridad y restaurar bases de datos replicadas](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
   

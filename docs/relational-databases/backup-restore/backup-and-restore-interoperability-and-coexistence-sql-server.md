@@ -1,28 +1,32 @@
 ---
-title: "Copias de seguridad y restauraci&#243;n: interoperabilidad y coexistencia (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restauraciones de archivos [SQL Server], características relacionadas"
-  - "restaurar [SQL Server], archivos"
-  - "restaurar archivos [SQL Server], características relacionadas"
-  - "copias de seguridad [SQL Server], archivos o grupos de archivos"
-  - "copias de seguridad de archivos [SQL Server], características relacionadas"
+title: "Copias de seguridad y restauración: interoperabilidad y coexistencia (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- file restores [SQL Server], related features
+- restoring [SQL Server], files
+- restoring files [SQL Server], related features
+- backups [SQL Server], files or filegroups
+- file backups [SQL Server], related features
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aadb21aaaf4d71cd4a22c3642d2e9a02db7008b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Copias de seguridad y restauraci&#243;n: interoperabilidad y coexistencia (SQL Server)
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Copias de seguridad y restauración: interoperabilidad y coexistencia (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   En este tema se describen las consideraciones de copias de seguridad y restauración para varias características de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Entre estas características se incluyen restauración de archivos e inicio de bases de datos, restauración en línea e índices deshabilitados, creación de reflejo de la base de datos, y restauración por etapas e índices de texto completo.  
@@ -71,13 +75,13 @@ caps.handback.revision: 45
 > [!NOTE]  
 >  Para distribuir copias de un subconjunto de los grupos de archivos de una base de datos, utilice la replicación: replique solo los objetos de los grupos de archivos que desea copiar en otros servidores. Para obtener más información sobre la replicación, vea [Replicación de SQL Server](../../relational-databases/replication/sql-server-replication.md).  
   
-### Crear la base de datos reflejada  
+### <a name="creating-the-mirror-database"></a>Crear la base de datos reflejada  
  La base de datos reflejada se crea mediante la restauración, WITH NORECOVERY, de copias de seguridad de la base de datos principal en el servidor reflejado. La restauración debe mantener el mismo nombre de la base de datos. Para obtener más información, vea [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
  Puede crear la base de datos reflejada mediante una secuencia de restauración por etapas, si se admite. Sin embargo, no puede empezar la creación de reflejos hasta que haya restaurado todos los grupos de archivos y, normalmente, las copias de seguridad de registros para que la base de datos reflejada quede suficientemente sincronizada con la base de datos principal. Para obtener más información, vea [Restauraciones por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   
-### Restricciones de la copia de seguridad y restauración durante la creación de reflejos  
- Mientras está activa una sesión de creación de reflejo de la base de datos, se aplican las restricciones siguientes:   
+### <a name="restrictions-on-backup-and-restore-during-mirroring"></a>Restricciones de la copia de seguridad y restauración durante la creación de reflejos  
+ Mientras está activa una sesión de creación de reflejo de la base de datos, se aplican las restricciones siguientes:  
   
 -   No se admite la copia de seguridad ni la restauración de la base de datos reflejada.  
   
@@ -93,7 +97,7 @@ caps.handback.revision: 45
 > [!NOTE]  
 >  Para ver el identificador del grupo de archivos que contiene un índice de texto completo, seleccione la columna data_space_id de [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
-### Índices de texto completo y tablas en grupos de archivos independientes  
+### <a name="full-text-indexes-and-tables-in-separate-filegroups"></a>Índices de texto completo y tablas en grupos de archivos independientes  
  Si un índice de texto completo reside en un grupo de archivos independiente de todos los datos de tablas asociadas, el comportamiento de la restauración por etapas depende de cuál de los grupos de archivos se restaure y se ponga en línea en primer lugar:  
   
 -   Si el grupo de archivos que contiene el índice de texto completo se restaura y se pone en línea antes que los grupos de archivos que contienen los datos de la tabla asociada, la búsqueda de texto completo funciona según lo previsto en cuanto el índice de texto completo está en línea.  
@@ -106,7 +110,7 @@ caps.handback.revision: 45
   
     -   Independientemente del seguimiento de cambios, se produce un error en las consultas de texto completo porque el índice no está disponible. Si se intenta una consulta de texto completo cuando el grupo de archivos que contiene el índice de texto completo está sin conexión, se devuelve un error.  
   
-    -   Las funciones de estado (por ejemplo, FULLTEXTCATALOGPROPERTY) tienen éxito únicamente cuando no han de obtener acceso al índice de texto completo. Por ejemplo, el acceso a los metadatos de texto completo en línea se realizaría correctamente, pero no sería así en el caso de **uniquekeycount, itemcount**.  
+    -   Las funciones de estado (por ejemplo, FULLTEXTCATALOGPROPERTY) tienen éxito únicamente cuando no han de obtener acceso al índice de texto completo. Por ejemplo, el acceso a los metadatos de texto completo en línea se realizaría correctamente, pero no sería así en el caso de **uniquekeycount, itemcount** .  
   
      Después de restaurar y poner en línea el grupo de archivos de índice de texto completo, los datos del índice y de las tablas son coherentes.  
   
@@ -115,7 +119,7 @@ caps.handback.revision: 45
 ##  <a name="FileBnRandCompression"></a> Copias de seguridad y restauración, y compresión de archivos  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la compresión de datos del sistema de archivos NTFS de grupos de archivos y bases de datos de solo lectura.  
   
- Los archivos NTFS comprimidos admiten la restauración de archivos en un grupo de archivos de solo lectura. Las copias de seguridad y restauración de estos grupos de archivos funciona esencialmente de la misma manera que con cualquier grupo de archivos de solo lectura, con las siguientes excepciones:   
+ Los archivos NTFS comprimidos admiten la restauración de archivos en un grupo de archivos de solo lectura. Las copias de seguridad y restauración de estos grupos de archivos funciona esencialmente de la misma manera que con cualquier grupo de archivos de solo lectura, con las siguientes excepciones:  
   
 -   La restauración de un archivo de lectura y escritura (incluido el principal o los archivos de registro de una base de datos de lectura/escritura) en un volumen comprimido genera y muestra un error.  
   
@@ -130,9 +134,10 @@ caps.handback.revision: 45
   
 -   [Realizar copias de seguridad de los catálogos de texto completo y restaurarlos](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Hacer copias de seguridad y restaurar bases de datos replicadas](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
 [Secundarias activas: copia de seguridad en las réplicas secundarias \(Grupos de disponibilidad AlwaysOn\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   
+

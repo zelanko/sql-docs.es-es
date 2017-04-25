@@ -1,31 +1,35 @@
 ---
-title: "FOR XML (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Cláusula FOR XML, acerca de la cláusula FOR XML"
-  - "Modo PATH FOR XML, construcción"
-  - "EXPLICIT FOR XML, modo"
-  - "RAW FOR XML, modo"
-  - "recuperar datos XML"
-  - "XML [SQL Server], cláusula FOR XML"
-  - "AUTO FOR XML, modo"
-  - "XML [SQL Server], construcción"
+title: FOR XML (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, about FOR XML clause
+- PATH FOR XML mode, construction
+- EXPLICIT FOR XML mode
+- RAW FOR XML mode
+- retrieving XML data
+- XML [SQL Server], FOR XML clause
+- AUTO FOR XML mode
+- XML [SQL Server], construction
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f48dc6ebc5af10d1157978a65ceb224041229326
+ms.lasthandoff: 04/11/2017
+
 ---
-# FOR XML (SQL Server)
+# <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
   Una consulta SELECT devuelve los resultados como un conjunto de filas. Opcionalmente, se pueden recuperar resultados formales de una consulta SQL como XML especificando la cláusula FOR XML en la consulta. La cláusula FOR XML puede usarse en consultas de nivel superior y en subconsultas. La cláusula FOR XML de nivel superior solo puede usarse en la instrucción SELECT. En el caso de las subconsultas, FOR XML puede usarse en las instrucciones INSERT, UPDATE y DELETE. También puede usarse en instrucciones de asignación.  
   
  En una cláusula FOR XML se especifica uno de estos modos:  
@@ -52,7 +56,7 @@ caps.handback.revision: 44
   
  La cláusula FOR XML no es válida en una selección que se use junto con una cláusula FOR BROWSE.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  La siguiente instrucción `SELECT` recupera información de las tablas `Sales.Customer` y `Sales.SalesOrderHeader` de la base de datos `AdventureWorks2012` . Esta consulta especifica el modo `AUTO` en la cláusula `FOR XML` :  
   
 ```  
@@ -68,7 +72,7 @@ ON Cust.CustomerID = OrderHeader.CustomerID
 FOR XML AUTO  
 ```  
   
-## La cláusula FOR XML y nombres de servidor  
+## <a name="the-for-xml-clause-and-server-names"></a>La cláusula FOR XML y nombres de servidor  
  Cuando una instrucción SELECT con una cláusula FOR XML especifica un nombre de cuatro partes en la consulta, el nombre de servidor no se devuelve en el documento XML resultante cuando la consulta se ejecuta en el equipo local. Sin embargo, el nombre del servidor se devuelve como un nombre de cuatro partes cuando la consulta se ejecuta en un servidor de red.  
   
  Por ejemplo, considere esta consulta:  
@@ -105,7 +109,7 @@ FOR XML AUTO
 <x LastName="Achong"/>  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Sintaxis básica de la cláusula FOR XML](../../relational-databases/xml/basic-syntax-of-the-for-xml-clause.md)   
  [Usar el modo RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
  [Usar el modo AUTO con FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   

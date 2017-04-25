@@ -1,22 +1,26 @@
 ---
-title: "Tabla temporal y variable de tabla m&#225;s r&#225;pidas con optimizaci&#243;n para memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Tabla temporal y variable de tabla más rápidas con optimización para memoria | Microsoft Docs"
+ms.custom: 
+ms.date: 01/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 98f4cf9519987f458c1f053ffe9368776b28cda9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tabla temporal y variable de tabla m&#225;s r&#225;pidas con optimizaci&#243;n para memoria
+# <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Tabla temporal y variable de tabla más rápidas con optimización para memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
@@ -30,7 +34,7 @@ En este artículo se explica:
 - Un ejemplo de código que resalta las ventajas de rendimiento de la optimización de memoria.
   
   
-## A. Aspectos básicos de las variables de tabla con optimización para memoria  
+## <a name="a-basics-of-memory-optimized-table-variables"></a>A. Aspectos básicos de las variables de tabla con optimización para memoria  
   
 Una variable de tabla con optimización para memoria ofrece una gran eficacia al usar la mismas estructuras de algoritmos y datos con optimización para memoria que emplean las tablas con optimización para memoria. La eficacia se maximiza si se accede a la variable de tabla desde un módulo compilado de forma nativa.  
   
@@ -46,7 +50,7 @@ Una variable de tabla con optimización para memoria:
 
   
   
-#### Tipos de objetos  
+#### <a name="object-types"></a>Tipos de objetos  
   
 OLTP en memoria proporciona los siguientes objetos que se pueden usar para la optimización de memoria de las tablas temporales y las variables de tabla:  
   
@@ -58,7 +62,7 @@ OLTP en memoria proporciona los siguientes objetos que se pueden usar para la op
     - `DECLARE @mytablevariable my_type;`.  
   
   
-## B. Escenario: Reemplazar la tabla temporal global &#x23;&#x23;  
+## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. Escenario: Reemplazar la tabla temporal global &#x23;&#x23;  
   
 Imagine que tiene la siguiente tabla temporal global.  
   
@@ -91,7 +95,7 @@ Considere reemplazar la tabla temporal global por la siguiente tabla con optimiz
   
   
   
-#### B.1 Pasos  
+#### <a name="b1-steps"></a>B.1 Pasos  
   
 La conversión de temporal global en SCHEMA_ONLY tiene los siguientes pasos:  
   
@@ -101,7 +105,7 @@ La conversión de temporal global en SCHEMA_ONLY tiene los siguientes pasos:
 3. En T-SQL, reemplace todas las menciones a **&#x23;&#x23;tempGlobalB** por **dbo.soGlobalB**.  
   
   
-## C. Escenario: Reemplazar la tabla temporal de sesión &#x23;  
+## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. Escenario: Reemplazar la tabla temporal de sesión &#x23;  
   
 Los preparativos para reemplazar una tabla temporal de sesión implican más T-SQL que para el escenario anterior de tabla temporal global. Afortunadamente, el T-SQL adicional no significa ningún otro esfuerzo adicional para realizar la conversión.  
   
@@ -159,7 +163,7 @@ Observe que cada tabla con optimización para memoria debe tener al menos un ín
         CONSTRAINT CHK_soSessionC_SpidFilter  
             CHECK ( SpidFilter = @@spid ),  
     )  
-        WITH  
+        por  
             (MEMORY_OPTIMIZED = ON,  
              DURABILITY = SCHEMA_ONLY);  
     go  
@@ -176,14 +180,16 @@ Observe que cada tabla con optimización para memoria debe tener al menos un ín
   
 En tercer lugar, en el código T-SQL general:  
   
-1. Borre las instrucciones CREATE TABLE de la tabla temporal de sesión anterior.  
-2. Reemplace el nombre de la tabla anterior por el nuevo nombre:  
-  - _Antiguo:_ &#x23;tempSessionC  
-  - _Nuevo:_ dbo.soSessionC  
+1. Cambie todas las referencias a la tabla temporal en las instrucciones de Transact-SQL a la nueva tabla con optimización para memoria:
+    - _Antiguo:_ &#x23;tempSessionC  
+    - _Nuevo:_ dbo.soSessionC  
+2. Reemplace las instrucciones `CREATE TABLE #tempSessionC` en el código por `DELETE FROM dbo.soSessionC` para asegurarse de que una sesión no se expone al contenido de la tabla insertada por una sesión anterior con el mismo identificador de sesión.
+3. Quite las instrucciones `DROP TABLE #tempSessionC` del código (opcionalmente, puede insertar una instrucción `DELETE FROM dbo.soSessionC`, por si el tamaño de la memoria es un posible problema).
   
   
   
-## D. Escenario: Una variable de tabla puede ser MEMORY_OPTIMIZED=ON  
+  
+## <a name="d-scenario-table-variable-can-be-memoryoptimizedon"></a>D. Escenario: Una variable de tabla puede ser MEMORY_OPTIMIZED=ON  
   
   
 Una variable de tabla tradicional representa una tabla de la base de datos tempdb. Para un rendimiento mucho más rápido, puede optimizar la memoria de la variable de tabla.  
@@ -200,11 +206,11 @@ Este es el T-SQL de una variable de tabla tradicional. Su ámbito finaliza cuand
   
   
   
-#### D.1 Convertir en línea en explícito  
+#### <a name="d1-convert-inline-to-explicit"></a>D.1 Convertir en línea en explícito  
   
 Se dice que la sintaxis anterior crea la variable de tabla *en línea*. La sintaxis en línea no admite la optimización de memoria. Por eso se va convertir la sintaxis en línea en sintaxis explícita para TYPE.  
   
-*Ámbito:* la definición de TYPE creada por el primer lote delimitado por la instrucción GO persiste incluso después de que el servidor se apague y se reinicie. Pero después del primer delimitador GO, el valor @tvTableC declarado de la tabla persiste hasta que se alcanza la siguiente instrucción GO y finaliza el lote.  
+*Ámbito:* la definición de TYPE creada por el primer lote delimitado por la instrucción GO persiste incluso después de que el servidor se apague y se reinicie. Pero después del primer delimitador GO, la tabla declarada @tvTableC persiste hasta que se alcanza la siguiente instrucción GO y el lote finaliza.  
   
   
   
@@ -228,7 +234,7 @@ Se dice que la sintaxis anterior crea la variable de tabla *en línea*. La sinta
   
   
   
-#### D.2 Convertir explícito en disco en optimización para memoria  
+#### <a name="d2-convert-explicit-on-disk-to-memory-optimized"></a>D.2 Convertir explícito en disco en optimización para memoria  
   
 Una variable de tabla con optimización para memoria no reside en tempdb. La optimización de memoria produce aumentos de velocidad que suelen ser 10 veces más rápidos o más.  
   
@@ -246,7 +252,7 @@ La conversión a optimización para memoria se consigue en un solo paso. Mejore 
             Column1  INT   NOT NULL   INDEX ix1,  
             Column2  CHAR(10)  
         )  
-        WITH  
+        por  
             (MEMORY_OPTIMIZED = ON);  
   
   
@@ -255,7 +261,7 @@ La conversión a optimización para memoria se consigue en un solo paso. Mejore 
 Listo.  
   
   
-## E. FILEGROUP como requisito previo para SQL Server  
+## <a name="e-prerequisite-filegroup-for-sql-server"></a>E. FILEGROUP como requisito previo para SQL Server  
   
 En Microsoft SQL Server, para usar las características de optimización para memoria, la base de datos debe tener un FILEGROUP declarado con **MEMORY_OPTIMIZED_DATA**.  
   
@@ -294,11 +300,11 @@ El script siguiente crea el grupo de archivos y configura los valores recomendad
   
 Para obtener más información sobre `ALTER DATABASE ... ADD` para FILE y FILEGROUP, vea:  
   
-- [Opciones File y Filegroup de ALTER DATABASE (Transact-SQL)](ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20(Transact-SQL).xml)  
+- [Opciones File y Filegroup de ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
 - [El grupo de archivos con optimización para memoria](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)    
   
   
-## F. Prueba rápida para demostrar la mejora de velocidad  
+## <a name="f-quick-test-to-prove-speed-improvement"></a>F. Prueba rápida para demostrar la mejora de velocidad  
   
   
 En esta sección se proporciona código Transact-SQL que se puede ejecutar para probar y comparar el aumento de velocidad de INSERT-DELETE con el uso de una variable de tabla con optimización para memoria. El código se compone de dos mitades que son casi iguales, salvo que en la primera mitad, el tipo de la tabla es con optimización para memoria.  
@@ -407,54 +413,56 @@ Al ejecutar el script en una base de datos SQL de Azure, asegúrese de ejecutar 
   
   
   
-## G. Predecir el consumo de memoria activa  
+## <a name="g-predict-active-memory-consumption"></a>G. Predecir el consumo de memoria activa  
   
 Puede aprender a predecir las necesidades de memoria activa de las tablas con optimización para memoria con los siguientes recursos:  
   
 - [Estimar los requisitos de memoria para las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
 - [Tamaño de tabla y fila de las tablas con optimización para memoria: cálculo de ejemplo](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
-En variables de tabla más grandes, los índices no agrupados usan más memoria que con las *tablas* con optimización para memoria. Cuanto mayor sea el recuento de filas y la clave de índice, más aumentará la diferencia.  
+En variables de tabla más grandes, los índices no agrupados usan más memoria que con las *tablas*con optimización para memoria. Cuanto mayor sea el recuento de filas y la clave de índice, más aumentará la diferencia.  
   
 Si se accede a la variable de tabla con optimización para memoria solo con un valor de clave exacto por acceso, un índice de hash puede ser una opción mejor que un índice no agrupado. Pero si no puede calcular el valor BUCKET_COUNT adecuado, un índice NONCLUSTERED es una buena segunda opción.  
   
-## H. Vea también  
+## <a name="h-see-also"></a>H. Vea también  
   
-- [Tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+- [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 - [Definir la durabilidad de los objetos con optimización para memoria](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
   
   
   
   
 \<!--  
-CAPS Title: "Faster temp table and table variable by using memory optimization"  
+Título MAYÚS: “Tabla temporal y variable de tabla más rápidas con optimización para memoria”  
   
 https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/  
   
   
-[ALTER DATABASE File and Filegroup Options (Transact-SQL)](http://msdn.microsoft.com/library/bb522469.aspx)  
+[Opciones File y Filegroup de ALTER DATABASE (Transact-SQL)](http://msdn.microsoft.com/library/bb522469.aspx)  
   
-[The Memory Optimized Filegroup](http://msdn.microsoft.com/library/dn639109.aspx)  
+[El grupo de archivos con optimización para memoria](http://msdn.microsoft.com/library/dn639109.aspx)  
   
-[Resource Governor Resource Pool](http://msdn.microsoft.com/library/hh510189.aspx)  
-  
-  
-[Memory Optimization Advisor](http://msdn.microsoft.com/library/dn284308.aspx)  
-  
-[Estimate Memory Requirements for Memory-Optimized Tables](http://msdn.microsoft.com/library/dn282389.aspx)  
-  
-[Table and Row Size in Memory-Optimized Tables: Example Calculation](http://msdn.microsoft.com/library/dn205318.aspx)  
+[Grupo de recursos del regulador de recursos](http://msdn.microsoft.com/library/hh510189.aspx)  
   
   
-[Durability for Memory-Optimized Tables](http://msdn.microsoft.com/library/dn553125.aspx)  
+[Asesor de optimización de memoria](http://msdn.microsoft.com/library/dn284308.aspx)  
   
-[Defining Durability for Memory-Optimized Objects](http://msdn.microsoft.com/library/dn553122.aspx)  
+[Estimar los requisitos de memoria para las tablas con optimización para memoria](http://msdn.microsoft.com/library/dn282389.aspx)  
+  
+[Tamaño de tabla y fila de las tablas con optimización para memoria: cálculo de ejemplo](http://msdn.microsoft.com/library/dn205318.aspx)  
+  
+  
+[Durabilidad de las tablas con optimización para memoria](http://msdn.microsoft.com/library/dn553125.aspx)  
+  
+[Definir la durabilidad de los objetos con optimización para memoria](http://msdn.microsoft.com/library/dn553122.aspx)  
   
 [Memory-Optimized Table Variables](http://msdn.microsoft.com/library/dn535766.aspx)  
   
   
-GeneMi , 2016-05-02  Monday  18:40pm  
+GeneMi, 2016-05-02 lunes 18:40 p.m.  
 -->  
   
   
   
+
+

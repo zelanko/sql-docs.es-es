@@ -1,31 +1,35 @@
 ---
-title: "Quitar &#237;ndices XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "índices, quitar"
-  - "quitar índices"
-  - "índices XML [SQL Server], quitar"
+title: "Quitar índices XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing indexes
+- dropping indexes
+- XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1508a40b460939fc1aa4ddfa8271d28a10958bb9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Quitar &#237;ndices XML
+# <a name="drop-xml-indexes"></a>Quitar índices XML
   La instrucción [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] se puede usar para quitar índices XML y no XML principales y secundarios existentes. No obstante, ninguna opción de DROP INDEX se aplica a los índices XML. Si se quita el índice XML principal, también se eliminarán todos los índices secundarios existentes.  
   
  La sintaxis de DROP con *TableName.IndexName* está desapareciendo y no es compatible con los índices XML.  
   
-## Ejemplo: crear y quitar un índice XML principal  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Ejemplo: crear y quitar un índice XML principal  
  En el ejemplo siguiente se muestra cómo crear un índice XML en una columna de tipo **xml** .  
   
 ```  
@@ -67,8 +71,8 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## Ejemplo: crear un índice XML utilizando la opción de índice DROP_EXISTING  
- El ejemplo siguiente muestra cómo crear un índice XML en una columna (`XmlColx`). A continuación, se creará otro índice XML con el mismo nombre en una columna diferente (`XmlColy`). Dado que se ha especificado la opción `DROP_EXISTING`, el índice XML existente en (`XmlColx)` se quita y se crea un índice XML en (`XmlColy`).  
+## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>Ejemplo: crear un índice XML utilizando la opción de índice DROP_EXISTING  
+ El ejemplo siguiente muestra cómo crear un índice XML en una columna (`XmlColx`). A continuación, se creará otro índice XML con el mismo nombre en una columna diferente (`XmlColy`). Dado que se ha especificado la opción `DROP_EXISTING` , el índice XML existente en (`XmlColx)` se quita y se crea un índice XML en (`XmlColy`).  
   
 ```  
 DROP TABLE T  
@@ -95,7 +99,7 @@ AND    si.object_id=object_id('T')
   
  Esta consulta devuelve el nombre de la columna en la que el índice XML especificado se ha creado.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Índices XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   

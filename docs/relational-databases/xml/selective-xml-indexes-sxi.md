@@ -1,22 +1,26 @@
 ---
-title: "&#205;ndices XML selectivos (SXI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Índices XML selectivos (SXI) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9c9821e721ce4fdc9187bb69c75cf05c74ff3f40
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#205;ndices XML selectivos (SXI)
+# <a name="selective-xml-indexes-sxi"></a>Índices XML selectivos (SXI)
   Los índices XML selectivos son otro tipo de índice XML disponible además de los índices XML normales. Los objetivos de la característica de índice XML selectivo son los siguientes:  
   
 -   Mejorar el rendimiento de las consultas sobre datos XML almacenados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -42,7 +46,6 @@ caps.handback.revision: 8
   
 4.  No es necesario actualizar las aplicaciones para beneficiarse de los índices XML selectivos.  
   
- [En este tema](#top)  
   
 ##  <a name="compare"></a> Índices XML selectivos e índices XML principales  
   
@@ -55,7 +58,6 @@ caps.handback.revision: 8
   
 -   Admita consultas para elementos desconocidos o elementos de una ubicación desconocida en la estructura del documento.  
   
- [En este tema](#top)  
   
 ##  <a name="example"></a> Ejemplo simple de un índice XML selectivo  
  Considere el siguiente fragmento XML como un documento XML de una tabla de aproximadamente 500.000 filas:  
@@ -98,9 +100,8 @@ FOR
   
  Para obtener más información acerca de estos elementos, vea [Tareas relacionadas](#reltasks).  
   
- [En este tema](#top)  
   
-## Características admitidas, requisitos previos y limitaciones  
+## <a name="supported-features-prerequisites-and-limitations"></a>Características admitidas, requisitos previos y limitaciones  
   
 ###  <a name="features"></a> Características XML admitidas  
  Los índices XML selectivos admiten XQuery admitido por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de los métodos exist(), value() y nodes().  
@@ -113,7 +114,6 @@ FOR
   
 -   Para el método modify(), no se usan índices XML selectivos para actualizar documentos XML.  
   
- [En este tema](#top)  
   
 ###  <a name="unsupported"></a> Características XML no admitidas  
  Los índices XML selectivos no admiten las siguientes características compatibles con la implementación de XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -130,7 +130,6 @@ FOR
   
 -   Especificar y recuperar el identificador de un nodo mediante la función id().  
   
- [En este tema](#top)  
   
 ###  <a name="prereq"></a> Requisitos previos  
  Los siguientes requisitos previos deben existir antes de poder crear un índice XML selectivo en una columna XML en una tabla de usuario:  
@@ -141,7 +140,6 @@ FOR
   
 -   La clave de agrupación de la tabla de usuario está limitada a 15 columnas cuando se usa con índices XML selectivos.  
   
- [En este tema](#top)  
   
 ###  <a name="limits"></a> Limitaciones  
  **Requisitos generales y limitaciones**  
@@ -194,7 +192,6 @@ FOR
   
 -   Los índices XML selectivos y los índices XML selectivos secundarios no se admiten en el Asistente para la optimización de base de datos.  
   
- [En este tema](#top)  
   
 ##  <a name="reltasks"></a> Tareas relacionadas  
   
@@ -205,6 +202,5 @@ FOR
 |Crear, modificar o quitar un índice XML selectivo.|[Crear, modificar y quitar índices XML selectivos](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)|  
 |Crear, modificar o quitar un índice XML selectivo secundario.|[Crear, modificar y quitar índices XML selectivos secundarios](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)|  
   
- [En este tema](#top)  
   
   

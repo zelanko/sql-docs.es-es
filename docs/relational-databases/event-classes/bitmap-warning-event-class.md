@@ -1,27 +1,31 @@
 ---
-title: "Bitmap Warning (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Bitmap Warning, clase de eventos"
+title: Clase de eventos Bitmap Warning | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Bitmap Warning event class
 ms.assetid: 5bf9b4e3-0eba-4e67-8ba9-30ca4b48e1d4
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ac451108447cd57642deed94ea2f18bfbeaa293b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Bitmap Warning (clase de eventos)
+# <a name="bitmap-warning-event-class"></a>Bitmap Warning, clase de eventos
   La clase de eventos **Bitmap Warning** se puede utilizar para supervisar el uso de filtros de mapas de bits en consultas. La subclase de evento se puede utilizar para notificar cuándo los filtros de mapas de bits se han deshabilitado en una consulta.  
   
-## Columnas de datos de la clase de eventos Bitmap Warning  
+## <a name="bitmap-warning-event-class-data-columns"></a>Columnas de datos de la clase de eventos Bitmap Warning  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -35,7 +39,7 @@ caps.handback.revision: 15
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
 |**LoginName**|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o las credenciales de inicio de sesión de Windows con el formato *DOMAIN\username*).|11|Sí|  
-|**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals**. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
+|**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals** . Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |**ObjectID**|**int**|Identificador del nodo de la raíz del equipo de hash implicado en la nueva creación de particiones. Se corresponde con el id. de nodo en los eventos Showplan.|22|Sí|  

@@ -1,33 +1,37 @@
 ---
-title: "Avanzar paso a paso por el c&#243;digo Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "depurador de Transact-SQL, código de depuración"
-  - "depurador de Transact-SQL, paso a paso por procedimientos"
-  - "depurador de Transact-SQL, paso a paso para salir"
-  - "depurador de Transact-SQL, paso a paso por instrucciones"
+title: "Avanzar paso a paso por el código Transact-SQL | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, debugging code
+- Transact-SQL debugger, step over
+- Transact-SQL debugger, step out
+- Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 68bc53fbfbe4db76e44042936642ad8541784b36
+ms.lasthandoff: 04/11/2017
+
 ---
-# Avanzar paso a paso por el c&#243;digo Transact-SQL
+# <a name="step-through-transact-sql-code"></a>Avanzar paso a paso por el código Transact-SQL
   El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] permite controlar las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecutan en una ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Puede detener el depurador en instrucciones individuales y, a continuación, ver el estado de los elementos de código en ese punto.  
   
-## Puntos de interrupción  
- Un punto de interrupción indica al depurador que detenga la ejecución en una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] específica. Para obtener más información sobre los puntos de interrupción, vea Utilizar puntos de interrupción de Transact-SQL.  
+## <a name="breakpoints"></a>Puntos de interrupción  
+ Un punto de interrupción indica al depurador que detenga la ejecución en una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] específica. Para más información sobre los puntos de interrupción, vea [Transact-SQL Breakpoints](../../relational-databases/scripting/transact-sql-breakpoints.md) (Puntos de interrupción de Transact-SQL).  
   
-## Controlar la ejecución de instrucciones  
+## <a name="controlling-statement-execution"></a>Controlar la ejecución de instrucciones  
  En el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] , puede especificar las siguientes opciones para su ejecución desde la instrucción actual del código [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
 -   Ejecutar un proceso hasta el siguiente punto de interrupción.  
@@ -56,7 +60,7 @@ caps.handback.revision: 18
 |Salir de un módulo|Haga clic en **Paso a paso para salir** en el menú **Depurar** .<br /><br /> Haga clic en el botón **Paso a paso para salir** en la barra de herramientas **Depuración** .<br /><br /> Presione MAYÚS+F11.|  
 |Ejecutar un proceso hasta la ubicación del cursor actual|Haga clic con el botón derecho en la ventana del Editor de consultas y, después, haga clic en **Ejecutar hasta el cursor**.<br /><br /> Presione CTRL+F10.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Ver información del depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)  
   
   

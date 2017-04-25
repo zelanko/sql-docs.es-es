@@ -1,29 +1,33 @@
 ---
-title: "Servidor (categor&#237;a de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clases de eventos de SQL Server, categoría de eventos de servidor"
-  - "clases de eventos [SQL Server], categoría de eventos de servidor"
-  - "Servidor, categoría de eventos [SQL Server]"
+title: "Categoría de eventos Servidor | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server event classes, Server event category
+- event classes [SQL Server], Server event category
+- Server event category [SQL Server]
 ms.assetid: 335ea792-8f3a-45e6-bc63-eb2d7855878e
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3a0473368712c32e1da8bfa8d87005961a34efc0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Servidor (categor&#237;a de eventos)
+# <a name="server-event-category"></a>Servidor (categoría de eventos)
   La categoría de eventos **Servidor** contiene eventos de servidor generales.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
   
 |Tema|Descripción|  
 |-----------|-----------------|  

@@ -1,31 +1,35 @@
 ---
-title: "Showplan Statistics Profile (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Showplan Statistics Profile, clase de eventos"
+title: Clase de eventos Showplan Statistics Profile | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Showplan Statistics Profile event class
 ms.assetid: fa9e1330-a217-491c-ad7c-2c1c4015d1bb
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 09d6ae2c604e4b5a6a2632d8cd0cc8461fa3eac6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Showplan Statistics Profile (clase de eventos)
+# <a name="showplan-statistics-profile-event-class"></a>Showplan Statistics Profile, clase de eventos
   La clase de eventos Showplan Statistics Profile se produce cuando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta una instrucción SQL. La información contenida es un subconjunto de la disponible en la clase de eventos Showplan XML Statistics Profile.  
   
  La clase de eventos Showplan Statistics Profile muestra datos completos de tiempo de compilación, por lo que los seguimientos que contienen Showplan Statistics Profile pueden producir una importante sobrecarga en el rendimiento. Para minimizar este riesgo, limite el uso de esta clase de evento a los seguimientos que supervisan problemas específicos durante periodos breves.  
   
  Cuando la clase de eventos Showplan Statistics Profile se incluye en un seguimiento, debe seleccionarse la columna de datos BinaryData. Si no se incluye, la información de esta clase de eventos no se mostrará en el seguimiento.  
   
-## Columnas de datos de la clase de evento Showplan Statistics Profile  
+## <a name="showplan-statistics-profile-event-class-data-columns"></a>Columnas de datos de la clase de evento Showplan Statistics Profile  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -56,7 +60,7 @@ caps.handback.revision: 39
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que se utiliza para describir la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Referencia de operadores lógicos y físicos del plan de presentación](../../relational-databases/showplan-logical-and-physical-operators-reference.md)   

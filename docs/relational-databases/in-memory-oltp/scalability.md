@@ -1,22 +1,26 @@
 ---
-title: "Escalabilidad | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/27/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Escalabilidad | Microsoft Docs
+ms.custom: 
+ms.date: 08/27/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a4891c57-56bb-49f4-9bb5-f11b745279e5
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5ab43ba6b6a27fa46b5214a60063c5df3f5496f4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Escalabilidad
+# <a name="scalability"></a>Escalabilidad
   SQL Server 2016 contiene mejoras de escalabilidad en el almacenamiento en disco para las tablas con optimización para memoria.  
   
 -   **Varios subprocesos para conservar las tablas con optimización para memoria**  
@@ -42,3 +46,4 @@ caps.handback.revision: 6
  El motor OLTP en memoria continúa utilizando el grupo de archivos con optimización para memoria basado en el grupo de archivos FILESTREAM, pero los archivos individuales se desacoplan de FILESTREAM. Estos archivos están totalmente administrados (como para creación, anulación y recolección de elementos no utilizados) por el motor OLTP en memoria. [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) no se admite.  
   
   
+

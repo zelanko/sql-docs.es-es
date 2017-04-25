@@ -1,27 +1,31 @@
 ---
-title: "XTP Storage de SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Almacenamiento de XTP de SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4070580b-880d-4f4c-abcc-626a4fe0c9a2
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ca13381f6cc2d2b9af6286f28d25791522118a72
+ms.lasthandoff: 04/11/2017
+
 ---
-# XTP Storage de SQL Server
+# <a name="sql-server-xtp-storage"></a>XTP Storage de SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   El objeto de rendimiento Almacenamiento de XTP de SQL Server contiene contadores relacionados con el almacenamiento en disco para OLTP en memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- En esta tabla se describen los contadores de **Almacenamiento de XTP de SQL Server**.  
+ En esta tabla se describen los contadores de **Almacenamiento de XTP de SQL Server** .  
   
 |Contador|Descripción|  
 |-------------|-----------------|  
@@ -34,7 +38,7 @@ caps.handback.revision: 6
 |**Merges Installed**|Número de mezclas instaladas correctamente.|  
 |**Total Files Merged**|Número total de archivos de origen mezclados. Este número se puede usar para determinar el número promedio de archivos de origen de la mezcla.|  
   
-## Vea también  
- [Contadores de rendimiento de XTP &#40;OLTP en memoria&#41; de SQL Server](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
+## <a name="see-also"></a>Vea también  
+ [Contadores de rendimiento de XTP &#40;OLTP en memoria&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   

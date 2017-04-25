@@ -1,27 +1,31 @@
 ---
-title: "Databases (objeto de SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grupos de disponibilidad [SQL Server], supervisar"
-  - "Databases [objeto]"
-  - "SQLServer:Databases"
-  - "Grupos de disponibilidad [SQL Server], contadores de rendimiento"
+title: Databases (objeto de SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], monitoring
+- Databases object
+- SQLServer:Databases
+- Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1b2355b85d82050496d1df27480723a0831e3a60
+ms.lasthandoff: 04/11/2017
+
 ---
-# Databases (objeto de SQL Server)
+# <a name="sql-server-databases-object"></a>Databases (objeto de SQL Server)
   El objeto **SQLServer:Databases** de SQL Server proporciona contadores para supervisar las operaciones de copia masiva, el rendimiento de las copias de seguridad y restauración, y las actividades del registro de transacciones. La supervisión de las transacciones y del registro de transacciones determina el volumen de actividad de los usuarios en la base de datos y el espacio libre que queda en el registro de transacciones. El volumen de actividad de los usuarios puede determinar el rendimiento de la base de datos y puede afectar al tamaño del registro, los bloqueos y la replicación. La supervisión de la actividad de registro de bajo nivel para medir la actividad de los usuarios y el uso de los recursos puede ayudar a identificar cuellos de botella en el rendimiento.  
   
  Se pueden supervisar simultáneamente varias instancias del objeto **Databases** que representen una única base de datos cada una.  
@@ -35,7 +39,7 @@ caps.handback.revision: 40
 |**Rendimiento de copia de seguridad y restauración/seg.**|Rendimiento de lectura/escritura por segundo en copias de seguridad y restauración de bases de datos. Por ejemplo, puede medir la variación en el rendimiento de la operación de copia de seguridad de una base de datos cuando se utilizan en paralelo más dispositivos de copia de seguridad o cuando se utilizan dispositivos más rápidos. El rendimiento de la operación de copia de seguridad o restauración de una base de datos permite determinar el progreso y el rendimiento de estas operaciones.|  
 |**Copia masiva de filas/seg.**|Número de filas copiadas de forma masiva por segundo.|  
 |**Rendimiento de la copia masiva/seg.**|Cantidad de datos copiados de forma masiva (en kilobytes) por segundo.|  
-|**Entradas de la tabla de confirmación**|Tamaño de la parte de memoria de la tabla de confirmación para la base de datos. Para obtener más información, vea [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../Topic/sys.dm_tran_commit_table%20\(Transact-SQL\).md).|  
+|**Entradas de la tabla de confirmación**|Tamaño de la parte de memoria de la tabla de confirmación para la base de datos. Para obtener más información, vea [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  
 |**Tamaño de los archivos de datos (KB)**|Tamaño acumulado (en kilobytes) de todos los archivos de datos de la base de datos, incluido el crecimiento automático. La supervisión de este contador resulta útil, por ejemplo, para determinar el tamaño correcto de **tempdb**.|  
 |**Bytes de recorrido lógico DBCC/seg.**|Número de bytes del examen de lectura lógica por segundo para los comandos de la consola de base de datos (DBCC).|  
 |**Tiempo de confirmación de grupo/seg.**|Tiempo de obstrucción de grupo (microsegundos) por segundo.|
@@ -60,7 +64,7 @@ caps.handback.revision: 40
 |**Grupo libre vacío de inserción de grupo de registros/s**|Tasa de errores de inserción de bloques de registro debido a un grupo libre vacío.|
 |**Baja memoria de inserción de grupo de registros/s**|Tasa de errores de inserción de bloques de registro debido a una memoria baja.|
 |**Búfer no disponible de inserción de grupo de registros/s**|Tasa de errores de inserción de bloques de registro debido a un búfer no disponible.|
-|**Requisitos de grupo de registro Detrás de truncamiento por segundo**|Errores de caché de grupo de registros debidos a que el bloque solicitado se encuentra detrás del LSN de truncamiento.|
+|**Requisitos de grupo de registro detrás de truncamiento por segundo**|Errores de caché de grupo de registros debidos a que el bloque solicitado se encuentra detrás del LSN de truncamiento.|
 |**Base de solicitudes de grupo de registro**|Exclusivamente para uso interno.| 
 |**VLF antiguo de solicitudes de grupo de registros/seg**|Solicitudes del grupo de registros que no estaban en el último VLF del registro.|  
 |**Solicitudes de grupo de registros/s**|Número de solicitudes de bloque de registro procesadas por el grupo de registros.|  
@@ -69,8 +73,8 @@ caps.handback.revision: 40
 |**Reducciones del registro**|Número total de reducciones del registro para esta base de datos.|  
 |**Truncamientos de registro**|El número de veces que se ha reducido el registro de transacciones.|  
 |**Porcentaje utilizado del registro**|Porcentaje de espacio del registro que está en uso.|  
-|**Velocidad pendientes de réplica**|Número de transacciones del registro de transacciones de la base de datos de publicación que están marcadas para replicación, pero que no se han entregado todavía a la base de datos de distribución.|  
-|**Velocidad de transacciones Rate**|Número de transacciones leídas por segundo del registro de transacciones de la base de datos de publicación y entregadas a la base de datos de distribución.|  
+|**Transacciones pendientes de réplica**|Número de transacciones del registro de transacciones de la base de datos de publicación que están marcadas para replicación, pero que no se han entregado todavía a la base de datos de distribución.|  
+|**Transacciones de transacciones de replicación**|Número de transacciones leídas por segundo del registro de transacciones de la base de datos de publicación y entregadas a la base de datos de distribución.|  
 |**Bytes de movimiento de datos de reducción/seg.**|Cantidad de datos que se mueven por segundo en operaciones de reducción automática, o instrucciones DBCC SHRINKDATABASE o DBCC SHRINKFILE.|  
 |**Transacciones con seguimiento/s**|Número de transacciones confirmadas que se registraron en la tabla de confirmación para la base de datos.|  
 |**Transacciones/seg.**|Número de transacciones iniciadas para la base de datos por segundo.<br /><br /> **Transacciones/s** no cuenta las transacciones solo de XTP (las transacciones iniciadas por un procedimiento almacenado compilado de forma nativa).|  
@@ -81,7 +85,7 @@ caps.handback.revision: 40
 |**Procesados/seg por el registro del controlador de XTP**|La cantidad de bytes del registro procesada por el subproceso controlador del XTP, por segundo.|
 |**Memoria XTP usada (KB)**|Cantidad de memoria usada por XTP en la base de datos.| 
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, réplica de base de datos](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   

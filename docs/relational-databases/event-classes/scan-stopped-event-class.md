@@ -1,27 +1,31 @@
 ---
-title: "Scan:Stopped (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Scan:Stopped [clase de eventos]"
+title: Clase de eventos Scan:Stopped | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Scan:Stopped event class
 ms.assetid: b6b20ae9-aebb-454a-b639-6b7bb2f9339b
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f29f85dc8830b300944f8e0dc862d26c7f508fb2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Scan:Stopped (clase de eventos)
+# <a name="scanstopped-event-class"></a>Scan:Stopped [clase de eventos]
   La clase de eventos Scan:Stopped tiene lugar cuando se detiene el recorrido de una tabla o índice.  
   
-## Columnas de datos de la clase de eventos Scan:Stopped  
+## <a name="scanstopped-event-class-data-columns"></a>Columnas de datos de la clase de eventos Scan:Stopped  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -49,7 +53,7 @@ caps.handback.revision: 31
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

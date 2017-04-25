@@ -1,29 +1,33 @@
 ---
-title: "Guardar gr&#225;ficos de interbloqueo (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "interbloqueos [SQL Server], guardar gráficos de interbloqueo"
-  - "gráficos [SQL Server]"
-  - "guardar gráficos de interbloqueo"
+title: "Guardar gráficos de interbloqueo (SQL Server Profiler) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deadlocks [SQL Server], saving deadlock graphs
+- graphs [SQL Server]
+- saving deadlock graphs
 ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c89c0ed24b52d89c36fb1f1cce29717988a0d798
+ms.lasthandoff: 04/11/2017
+
 ---
-# Guardar gr&#225;ficos de interbloqueo (SQL Server Profiler)
+# <a name="save-deadlock-graphs-sql-server-profiler"></a>Guardar gráficos de interbloqueo (SQL Server Profiler)
   En este tema se explica cómo guardar un gráfico de interbloqueo mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Los gráficos de interbloqueo se guardan como archivos XML.  
   
-### Para guardar eventos deadlock graph por separado  
+### <a name="to-save-deadlock-graph-events-separately"></a>Para guardar eventos deadlock graph por separado  
   
 1.  En el menú **Archivo** , haga clic en **Nuevo seguimiento**y, a continuación, conéctese a una instancia de SQL Server.  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 26
   
 6.  Haga clic en la pestaña **Selección de eventos**.  
   
-7.  En el cuadro de diálogo **Eventos**, expanda la categoría de evento **Bloqueos** y, luego, active la casilla **Deadlock graph**. Si la categoría de eventos Bloqueos no está disponible, seleccione la opción **Mostrar todos los eventos** para mostrarla.  
+7.  En el cuadro de diálogo **Eventos**, expanda la categoría de evento **Bloqueos**y, luego, active la casilla **Deadlock graph**. Si la categoría de eventos Bloqueos no está disponible, seleccione la opción **Mostrar todos los eventos** para mostrarla.  
   
      Aparecerá el cuadro de diálogo **Configuración de extracción de eventos**se agrega al cuadro de diálogo **Propiedades de seguimiento**.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 26
   
  Una vez guardado el archivo de interbloqueo, puede abrir el archivo en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información, vea [Abrir, ver e imprimir un archivo de interbloqueo &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/open-view-and-print-a-deadlock-file-sql-server-management-studio.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Analizar interbloqueos con SQL Server Profiler](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)  
   
   

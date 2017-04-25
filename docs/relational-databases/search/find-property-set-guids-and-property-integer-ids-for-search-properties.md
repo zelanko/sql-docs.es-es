@@ -1,25 +1,29 @@
 ---
-title: "Buscar GUID del conjunto de propiedades e identificadores de enteros de propiedad para las propiedades de b&#250;squeda | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "búsqueda de texto completo [SQL Server], listas de propiedades de búsqueda"
-  - "listas de propiedades de búsqueda [SQL Server], configurar"
+title: "Buscar GUID del conjunto de propiedades e identificadores de enteros de propiedad para las propiedades de búsqueda | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text search [SQL Server], search property lists
+- search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d234dc5d1d44c11c50483505898586ab5e845a77
+ms.lasthandoff: 04/11/2017
+
 ---
-# Buscar GUID del conjunto de propiedades e identificadores de enteros de propiedad para las propiedades de b&#250;squeda
+# <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Buscar GUID del conjunto de propiedades e identificadores de enteros de propiedad para las propiedades de búsqueda
   En este tema se explica cómo obtener los valores necesarios para poder agregar una propiedad a una lista de propiedades de búsqueda y hacer que se pueda buscar en ella mediante la búsqueda de texto completo. Estos valores incluyen el GUID de conjunto de propiedades y el identificador entero de propiedad de una propiedad de documento.  
   
  Las propiedades de documento que se extraen mediante IFilters de datos binarios, es decir, de datos almacenados en una columna con el tipo de datos **varbinary**, **varbinary(max)** (incluido **FILESTREAM**) o **image** pueden estar disponibles para la búsqueda de texto completo. Para que se pueda buscar una propiedad extraída, la propiedad se debe agregar manualmente una lista de propiedades de búsqueda. La lista de propiedades de búsqueda también debe estar asociada a uno o más índices de texto completo. Para obtener más información, vea [Buscar propiedades de documento con listas de propiedades de búsqueda](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
@@ -68,7 +72,7 @@ caps.handback.revision: 32
 ##  <a name="propdesc"></a> Buscar valores de una propiedad de búsqueda a partir de una descripción de propiedad de Windows  
  En el caso de una propiedad de búsqueda de Windows conocida, puede obtener la información necesaria de los atributos **formatID** y **propID** de la descripción de propiedad (**propertyDescription**).  
   
- En el ejemplo siguiente se muestra la parte pertinente de una descripción de propiedad de Microsoft típica, en este caso de la propiedad `System.Author`. El atributo `formatID` especifica el GUID del conjunto de propiedades, `F29F85E0-4FF9-1068-AB91-08002B27B3D9`, y el atributo `propID` especifica el identificador entero de propiedad, `4.` Observe que el atributo `name` especifica el nombre de propiedad canónico de Windows, `System.Author`. (En este ejemplo se omiten las partes de la descripción de propiedad que no son pertinentes.)  
+ En el ejemplo siguiente se muestra la parte pertinente de una descripción de propiedad de Microsoft típica, en este caso de la propiedad `System.Author` . El atributo `formatID` especifica el GUID del conjunto de propiedades, `F29F85E0-4FF9-1068-AB91-08002B27B3D9`, y el atributo `propID` especifica el identificador entero de propiedad, `4.` Observe que el atributo `name` especifica el nombre de propiedad canónico de Windows, `System.Author`. (En este ejemplo se omiten las partes de la descripción de propiedad que no son pertinentes.)  
   
 ```  
 .  
@@ -100,7 +104,7 @@ GO
   
  Para obtener más información sobre cómo crear una lista de propiedades de búsqueda y asociarla a un índice de texto completo, vea [Buscar propiedades de documento con listas de propiedades de búsqueda](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Buscar propiedades de documento con listas de propiedades de búsqueda](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [Configurar y administrar filtros para búsquedas](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   

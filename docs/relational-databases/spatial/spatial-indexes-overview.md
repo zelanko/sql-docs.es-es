@@ -1,24 +1,28 @@
 ---
-title: "Informaci&#243;n general sobre los &#237;ndices espaciales | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "índices espaciales [SQL Server]"
+title: "Información general sobre los índices espaciales | Microsoft Docs"
+ms.custom: 
+ms.date: 09/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5bcfa4dfbf2af7d1cd124ed16fef13eeed89bfcb
+ms.lasthandoff: 04/11/2017
+
 ---
-# Informaci&#243;n general sobre los &#237;ndices espaciales
+# <a name="spatial-indexes-overview"></a>Información general sobre los índices espaciales
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite datos espaciales e índices espaciales. Un *índice espacial* es un tipo de índice extendido que permite indizar una columna espacial. Una columna espacial es una columna de tabla que contiene datos de un tipo espacial, como **geometría** o **geografía**.  
   
 > [!IMPORTANT]  
@@ -27,7 +31,7 @@ caps.handback.revision: 28
 ##  <a name="about"></a> Acerca de los índices espaciales  
   
 ###  <a name="decompose"></a> Descomponer espacio indizado en una jerarquía de cuadrículas  
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los índices espaciales se generan usando árboles B, es decir, los índices deben representar los datos espaciales bidimensionales en el orden lineal de los árboles B. Por consiguiente, antes de leer los datos en un índice espacial, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa una descomposición uniforme jerárquica de espacio. El proceso de creación de índices *descompone* el espacio en una *jerarquía de cuadrículas* de cuatro niveles. Estos niveles se conocen como *nivel 1* (el nivel superior), *nivel 2*, *nivel 3* y *nivel 4*.  
+ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los índices espaciales se generan usando árboles B, es decir, los índices deben representar los datos espaciales bidimensionales en el orden lineal de los árboles B. Por consiguiente, antes de leer los datos en un índice espacial, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa una descomposición uniforme jerárquica de espacio. El proceso de creación de índices *descompone* el espacio en una *jerarquía de cuadrículas*de cuatro niveles. Estos niveles se conocen como *nivel 1* (el nivel superior), *nivel 2*, *nivel 3*y *nivel 4*.  
   
  Cada nivel sucesivo descompone el nivel superior, de manera que cada celda de nivel superior contiene una cuadrícula completa en el nivel siguiente. En un nivel determinado, todas las cuadrículas tienen el mismo número de celdas a lo largo de ambos ejes (por ejemplo, 4x4 o 8x8) y las celdas son todas del mismo tamaño.  
   
@@ -40,9 +44,9 @@ caps.handback.revision: 28
   
  Las celdas de una jerarquía de cuadrícula se enumeran de un modo lineal usando una variación de la curva de rellenado de espacio Hilbert. Para esta ilustración, sin embargo, esta discusión usa una numeración de modo de fila simple, en lugar de la numeración realmente generada por la curva de Hilbert. En la ilustración siguiente, ya se han colocado varios polígonos que representan edificios y líneas que representan calles en una cuadrícula de nivel 1 4x4. Las celdas de nivel 1 se numeran del 1 al 16, comenzando por la celda superior izquierda.  
   
- ![Polígonos y líneas colocados en una cuadrícula de nivel 1 4x4](../../relational-databases/spatial/media/spndx-level-1-objects.png "Polígonos y líneas colocados en una cuadrícula de nivel 1 4x4")  
+ ![Polígonos y líneas colocados en una cuadrícula de nivel 1 4x4](../../relational-databases/spatial/media/spndx-level-1-objects.gif "Polígonos y líneas colocados en una cuadrícula de nivel 1 4x4")  
   
-#### Densidad de cuadrícula  
+#### <a name="grid-density"></a>Densidad de cuadrícula  
  El número de celdas a lo largo de los ejes de una cuadrícula determina su *densidad*: cuanto mayor sea el número, más densa será la cuadrícula. Por ejemplo, una cuadrícula 8x8 (que genera 64 celdas), es más densa que una cuadrícula 4x4 (que genera 16 celdas). La densidad de cuadrícula se define por nivel.  
   
  La instrucción [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] admite una cláusula GRIDS que le permite especificar las densidades de cuadrícula diferentes en niveles diferentes. La densidad de cuadrícula para un nivel determinado se especifica con una de las palabras clave siguientes.  
@@ -65,7 +69,7 @@ caps.handback.revision: 28
   
  El resultado del proceso de teselación es un conjunto de celdas modificadas que se graban en el índice espacial para el objeto. Haciendo referencia a estas celdas grabadas, el índice espacial puede buscar el objeto en el espacio relativo a otros objetos de la columna espacial también almacenados en el índice.  
   
-#### Reglas de teselación  
+#### <a name="tessellation-rules"></a>Reglas de teselación  
  Para limitar el número de celdas modificadas que se graban para un objeto, el proceso teselación aplica varias reglas de teselación. Estas reglas determinan la profundidad del proceso de teselación y cuáles de las celdas modificadas se graban en el índice.  
   
  Estas reglas son:  
@@ -84,26 +88,26 @@ caps.handback.revision: 28
   
  Estas reglas de teselación se aplican en cada nivel de cuadrícula de forma recursiva. El resto de esta sección describe las reglas de teselación con más detalle.  
   
-#### Regla de cobertura  
+#### <a name="covering-rule"></a>Regla de cobertura  
  Si un objeto cubre una celda por completo, se dice que dicha celda está *cubierta* por el objeto. Por ejemplo, en la ilustración siguiente, una de las celdas de segundo nivel, 15.11, está cubierta completamente por la parte media de un octágono.  
   
  ![Optimización de cobertura](../../relational-databases/spatial/media/spndx-opt-covering.gif "Optimización de cobertura")  
   
  Se cuenta una celda cubierta y se graba en el índice, y la celda no se divide más en mosaicos.  
   
-#### Regla de celdas por proyecto  
+#### <a name="cells-per-object-rule"></a>Regla de celdas por proyecto  
  El nivel de teselación de cada objeto depende principalmente del *límite de celdas por proyecto* del índice espacial. Este límite define el número máximo de celdas que la teselación puede contar por objeto. Sin embargo, tenga en cuenta que la regla de celdas por proyecto no se exige para el nivel 1, de modo que es posible superar este límite. Si el recuento del nivel 1 alcanza, o supera, el límite de celdas por objeto, no se produce más teselación en los niveles inferiores.  
   
  Siempre que el recuento sea menor que el límite de celdas por proyecto, el proceso de teselación continúa. Empezando por la celda modificada de número inferior (por ejemplo, la celda 15.6 de la ilustración anterior), el proceso prueba todas las celdas para evaluar si contarlas o dividirlas en mosaicos. Si con la teselación de una celda se superaría el límite de celdas por proyecto, se cuenta la celda y no se realiza su teselación. De lo contrario, la celda se divide en mosaicos y se cuentan las celdas de nivel inferior modificadas por el objeto. El proceso de teselación continúa de esta manera, en toda la amplitud, por el nivel. Este proceso se repite recursivamente para las cuadrículas de nivel inferior de las celdas divididas en mosaicos hasta que se alcanza el límite o no hay más celdas que contar.  
   
  Por ejemplo, piense en la ilustración anterior, que muestra un octágono que se ajusta por completo a la celda 15 de la cuadrícula de nivel 1. En la ilustración, se ha realizado la teselación en la celda 15, diseccionando el octágono en nueve celdas de nivel 2. Esta ilustración supone que el límite de celdas por proyecto es 9 o más. Sin embargo, si el límite de celdas por proyecto fuera 8 o menos, no se realizaría la teselación en la celda 15 y solo se contaría dicha celda 15 para el objeto.  
   
- De forma predeterminada, el límite de celdas por proyecto es de 16 celdas por objeto, lo que proporciona un equilibrio satisfactorio entre espacio y precisión para la mayoría de los índices espaciales. Pero la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md) admite una cláusula CELLS_PER_OBJECT**=***n* que le permite especificar un límite de celdas por proyecto entre 1 y 8192, ambos incluidos.  
+ De forma predeterminada, el límite de celdas por proyecto es de 16 celdas por objeto, lo que proporciona un equilibrio satisfactorio entre espacio y precisión para la mayoría de los índices espaciales. Sin embargo, la instrucción [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] admite una cláusula CELLS_PER_OBJECT**=***n* que le permite especificar un límite de celdas por proyecto entre 1 y 8192, incluidos.  
   
 > [!NOTE]  
->  El valor **cells_per_object** de un índice espacial es visible en la vista de catálogo [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md).  
+>  El valor **cells_per_object** de un índice espacial es visible en la vista de catálogo [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) .  
   
-#### Regla de celda más profunda  
+#### <a name="deepest-cell-rule"></a>Regla de celda más profunda  
  La regla de celda más profunda se aprovecha del hecho de que todas las celdas de nivel inferior pertenecen a la celda superior: una celda de nivel 4 pertenece a una celda de nivel 3, una celda de nivel 3 pertenece a una celda de nivel 2 y una celda de nivel 2 pertenece a una celda de nivel 1. Por ejemplo, un objeto que pertenezca a la celda 1.1.1.1, también pertenece a la celda 1.1.1, a la celda 1.1 y a la celda 1. El conocimiento de dichas relaciones de jerarquía de celdas está integrado en el procesador de consultas. Por consiguiente, solo las celdas de nivel más profundo se tienen que grabar en el índice, minimizando la información que el índice tiene que almacenar.  
   
  En la ilustración siguiente, un polígono en forma de rombo relativamente pequeño se divide en mosaicos. El índice usa el límite de celdas por proyecto predeterminado de 16, que no se alcanza para este objeto pequeño. Por lo tanto, la teselación continúa bajando hasta el nivel 4. El polígono reside en las siguientes celdas del nivel 1 hasta el nivel 3: 4, 4.4, 4.4.10 y 4.4.14. Sin embargo, si se usa la regla de celda más profunda, la teselación solo cuenta las doce celdas del nivel 4: 4.4.10.13-15 y 4.4.14.1-3, 4.4.14.5-7 y 4.4.14.9-11.  
@@ -118,15 +122,15 @@ caps.handback.revision: 28
 -   *Teselación de cuadrícula de geografía*, que se aplica a las columnas del tipo de datos **geography** .  
   
 > [!NOTE]  
->  El valor **tessellation_scheme** de un índice espacial es visible en la vista de catálogo [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md).  
+>  El valor **tessellation_scheme** de un índice espacial es visible en la vista de catálogo [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) .  
   
-#### Esquema de teselación de cuadrícula de geometría  
+#### <a name="geometry-grid-tessellation-scheme"></a>Esquema de teselación de cuadrícula de geometría  
  La teselación GEOMETRY_AUTO_GRID es el esquema de teselación predeterminado para el tipo de datos **geometry** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y versiones posteriores.  La teselación GEOMETRY_GRID es el único esquema de teselación disponible para los tipos de datos geometry de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En esta sección se tratan los aspectos de teselación de cuadrícula de geometría relacionados con trabajar con índices espaciales: métodos compatibles y cuadros de límite.  
   
 > [!NOTE]  
->  Puede especificar explícitamente este esquema de teselación con la cláusula USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md).  
+>  Puede especificar explícitamente este esquema de teselación con la cláusula USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) de la instrucción [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-##### El cuadro de límite  
+##### <a name="the-bounding-box"></a>El cuadro de límite  
  Los datos geométricos ocupan un plano que puede ser infinito. Sin embargo, en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un índice espacial requiere un espacio finito. Para establecer un espacio finito para descomposición, el esquema de teselación de cuadrícula de geometría exige un *cuadro de límite*rectangular. El cuadro de límite está definido por cuatro coordenadas, **(***x-min***,***y-min***)** y **(***x-max***,***y-max***)**, que se almacenan como propiedades del índice espacial. Estas coordenadas representan lo siguiente:  
   
 -   *x-min* es la coordenada x de la esquina inferior izquierda del cuadro de límite.  
@@ -138,7 +142,7 @@ caps.handback.revision: 28
 -   *y-max* es la coordenada y de la esquina superior derecha.  
   
 > [!NOTE]  
->  Estas coordenadas están especificadas por la cláusula BOUNDING_BOX de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md).  
+>  Estas coordenadas están especificadas por la cláusula BOUNDING_BOX de la instrucción [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  Las coordenadas **(***x-min***,***y-min***)** y **(***x-max***,***y-max***)** determinan la posición y las dimensiones del cuadro de límite. El espacio exterior del cuadro de límite se trata como una celda única con el número 0.  
   
@@ -148,18 +152,18 @@ caps.handback.revision: 28
   
  ![Cuadro de límite que muestra las coordenadas y la celda 0.](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "Cuadro de límite que muestra las coordenadas y la celda 0.")  
   
- Un cuadro de límite se corresponde a alguna parte de los datos espaciales de una aplicación. Depende de la aplicación si el cuadro de límite del índice contiene por completo los datos almacenados en la columna espacial, o solo contiene una parte. Solo las operaciones calculadas en los objetos que están completamente dentro del cuadro de límite se benefician del índice espacial. Por consiguiente, para aprovechar al máximo un índice espacial en una columna **geometry**, se debe especificar un cuadro de límite que contenga todos los objetos o la mayoría de ellos.  
+ Un cuadro de límite se corresponde a alguna parte de los datos espaciales de una aplicación. Depende de la aplicación si el cuadro de límite del índice contiene por completo los datos almacenados en la columna espacial, o solo contiene una parte. Solo las operaciones calculadas en los objetos que están completamente dentro del cuadro de límite se benefician del índice espacial. Por consiguiente, para aprovechar al máximo un índice espacial en una columna **geometry** , se debe especificar un cuadro de límite que contenga todos los objetos o la mayoría de ellos.  
   
 > [!NOTE]  
->  Las densidades de cuadrícula de un índice espacial están visibles en las columnas bounding_box_xmin, bounding_box_ymin, bounding_box_xmax y bounding_box_ymax de la vista de catálogo [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md).  
+>  Las densidades de cuadrícula de un índice espacial están visibles en las columnas bounding_box_xmin, bounding_box_ymin, bounding_box_xmax y bounding_box_ymax de la vista de catálogo [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) .  
   
-#### El esquema de teselación de cuadrícula de geografía  
+#### <a name="the-geography-grid-tessellation-scheme"></a>El esquema de teselación de cuadrícula de geografía  
  Este esquema de teselación solo se aplica a una columna **geography** . Esta sección resume los métodos admitidos por teselación de cuadrícula de geografía y trata cómo se proyecta el espacio geodésico en un plano, que se descompone a continuación en una jerarquía de cuadrículas.  
   
 > [!NOTE]  
->  Puede especificar explícitamente este esquema de teselación con la cláusula USING (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID) de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md).  
+>  Puede especificar explícitamente este esquema de teselación con la cláusula USING (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID) de la instrucción [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-##### Proyección del espacio geodésico en un plano  
+##### <a name="projection-of-the-geodetic-space-onto-a-plane"></a>Proyección del espacio geodésico en un plano  
  Los cálculos en instancias de **geography** (objetos) tratan el espacio que contiene los objetos como un elipsoide geodésico. Para descomponer este espacio, el esquema teselación de cuadrícula geography divide la superficie del elipsoide en sus hemisferios superior e inferior y, a continuación, realiza los pasos siguientes:  
   
 1.  Proyecta cada hemisferio en las caras de una pirámide cuadrangular.  
@@ -170,7 +174,7 @@ caps.handback.revision: 28
   
  La ilustración siguiente muestra una vista esquemática del proceso de descomposición de tres pasos. En las pirámides, las líneas de puntos representan los límites de las cuatro facetas de cada pirámide. Los pasos 1 y 2 muestran el elipsoide geodésico, usando una línea horizontal verde para representar la línea de longitud ecuatorial y una serie de líneas verticales verdes para representar varias líneas de latitud. El paso 1 muestra las pirámides proyectándose sobre los dos hemisferios. El paso 2 muestra las pirámides aplanándose. El paso 3 muestra las pirámides aplanadas, una vez que se han combinado para formar un plano, mostrando varias líneas de longitud proyectadas. Observe que estas líneas proyectadas se ponen rectas y varían en longitud, dependiendo de dónde se encuentra en las pirámides.  
   
- ![Proyección de la elipsoide en un plano](../../relational-databases/spatial/media/spndx-geodetic-projection.png "Proyección de la elipsoide en un plano")  
+ ![Proyección de la elipsoide en un plano](../../relational-databases/spatial/media/spndx-geodetic-projection.gif "Proyección de la elipsoide en un plano")  
   
  Una vez que se ha proyectado el espacio en el plano, éste se descompone en la jerarquía de cuadrículas de cuatro niveles. Diferentes niveles pueden usar distintas densidades de cuadrícula. La ilustración siguiente muestra el plano una vez se ha descompuesto en una cuadrícula de nivel 1 4x4. Para esta ilustración, se omiten los niveles inferiores de la jerarquía de cuadrículas. En realidad, el plano se descompone totalmente en una jerarquía de cuadrículas de cuatro niveles. Cuando termina el proceso de descomposición, se leen los datos geográficos, fila por fila, desde la columna geography y, a su vez, se lleva a cabo el proceso de teselación para cada objeto.  
   
@@ -220,14 +224,14 @@ caps.handback.revision: 28
   
 -   *geography1*.[STDistance](../../t-sql/spatial-geography/stdistance-geography-data-type.md)(*geography2*) <= *number*  
   
-### Consultas que usan índices espaciales  
+### <a name="queries-that-use-spatial-indexes"></a>Consultas que usan índices espaciales  
  Solo se admiten índices espaciales en las consultas que incluyen un operador espacial indizado en la cláusula **WHERE** . Por ejemplo, sintaxis como la siguiente:  
   
 ```  
 [spatial object].SpatialMethod([reference spatial object]) [ = | < ] [const literal or variable]  
 ```  
   
- El optimizador de consultas entiende la conmutatividad de las operaciones espaciales (`@a.STIntersects(@b) = @b.STInterestcs(@a)`). Sin embargo, el índice espacial no se usará si el principio de una comparación no contiene el operador espacial (por ejemplo, `WHERE 1 = spatial op` no usará el índice espacial). Para usar el índice espacial, vuelva a escribir la comparación (por ejemplo, `WHERE spatial op = 1`).  
+ El optimizador de consultas entiende la conmutatividad de las operaciones espaciales ( `@a.STIntersects(@b) = @b.STInterestcs(@a)` ). Sin embargo, el índice espacial no se usará si el principio de una comparación no contiene el operador espacial (por ejemplo, `WHERE 1 = spatial op` no usará el índice espacial). Para usar el índice espacial, vuelva a escribir la comparación (por ejemplo, `WHERE spatial op = 1`).  
   
  Como ocurre con cualquier otro índice, cuando se admite un índice espacial, el uso del índice espacial se elige en función del costo, de modo que el optimizador de consultas no elige usar el índice espacial aunque se cumplan todos los requisitos para usarlo. Use el plan de presentación para ver si se usó el índice espacial y, si es necesario, proporcione sugerencias de consulta para forzar un plan de consulta deseado.  
   
@@ -240,7 +244,8 @@ WHERE <SpatialColumn>.STDistance(@reference_object) IS NOT NULL
 ORDER BY <SpatialColumn>.STDistance(@reference_object) [;]  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Datos espaciales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   
+

@@ -1,25 +1,29 @@
 ---
-title: "Establecer o cambiar la intercalaci&#243;n de columnas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "base de datos tempdb [SQL Server], intercalaciones"
-  - "intercalaciones [SQL Server], columna"
+title: "Establecer o cambiar la intercalación de columnas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tempdb database [SQL Server], collations
+- collations [SQL Server], column
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2329cf91fb56aaefe0180d0862f8b4d127cd9489
+ms.lasthandoff: 04/11/2017
+
 ---
-# Establecer o cambiar la intercalaci&#243;n de columnas
+# <a name="set-or-change-the-column-collation"></a>Establecer o cambiar la intercalación de columnas
   Puede invalidar la intercalación de base de datos para los datos **char**, **varchar**, **text**, **nchar**, **nvarchar**y **ntext** especificando una intercalación diferente para una columna específica de una tabla y utilizando una de las siguientes cláusulas:  
   
 -   La cláusula COLLATE de [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) y [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md). Por ejemplo:  
@@ -51,12 +55,12 @@ caps.handback.revision: 29
   
 -   Una restricción FOREIGN KEY  
   
- Al trabajar con la base de datos **tempdb**, la cláusula [COLLATE](../Topic/COLLATE%20\(Transact-SQL\).md) incluye una opción *database_default* para especificar que una columna de una tabla temporal use el valor predeterminado de intercalación de la base de datos del usuario actual para la conexión en lugar de la intercalación de **tempdb**.  
+ Al trabajar con la base de datos **tempdb**, la cláusula [COLLATE](~/t-sql/statements/collations.md) incluye una opción *database_default* para especificar que una columna de una tabla temporal use el valor predeterminado de intercalación de la base de datos del usuario actual para la conexión en lugar de la intercalación de **tempdb**.  
   
-## Intercalaciones y columnas de texto  
+## <a name="collations-and-text-columns"></a>Intercalaciones y columnas de texto  
  Puede insertar o actualizar los valores de una columna **text** cuya intercalación sea diferente a la de la página de códigos de la intercalación predeterminada de la base de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte implícitamente los valores a la intercalación de la columna.  
   
-## Intercalación y tempdb  
+## <a name="collations-and-tempdb"></a>Intercalación y tempdb  
  La base de datos **tempdb** se crea cada vez que se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y tiene la misma intercalación predeterminada que la base de datos **model** . Suele ser la misma que la intercalación predeterminada de la instancia. Si crea una base de datos de usuario y especifica una intercalación predeterminada distinta de **model**, la base de datos de usuario tiene una intercalación predeterminada distinta de **tempdb**. Todos los procedimientos almacenados temporales o tablas temporales se crean y se almacenan en **tempdb**. Esto significa que todas las columnas implícitas de las tablas temporales y todas las constantes, variables y parámetros coaccionable-predeterminados en los procedimientos almacenados temporales tienen intercalaciones distintas de los objetos comparables creados en las tablas y procedimientos almacenados permanentes.  
   
  Esto puede causar problemas con una discrepancia en intercalaciones entre bases de datos definidas por el usuario y objetos de base de datos del sistema. Por ejemplo, una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza la intercalación Latin1_General_CS_AS y se ejecutan las siguientes instrucciones:  
@@ -80,7 +84,7 @@ INSERT INTO #TestTempTab
 GO  
 ```  
   
- Con el ejemplo anterior, la base de datos **tempdb** usa la intercalación Latin1_General_CS_AS collation, y `TestDB` y `TestTab.Col1` usan la intercalación `Estonian_CS_AS`. Por ejemplo:  
+ Con el ejemplo anterior, la base de datos **tempdb** usa la intercalación Latin1_General_CS_AS collation, y `TestDB` y `TestTab.Col1` usan la intercalación `Estonian_CS_AS` . Por ejemplo:  
   
 ```  
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
@@ -99,7 +103,7 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
        );  
     ```  
   
--   Especifique la intercalación correcta de la columna `#TestTempTab`:  
+-   Especifique la intercalación correcta de la columna `#TestTempTab` :  
   
     ```  
     CREATE TABLE #TestTempTab  
@@ -108,9 +112,10 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
        );  
     ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Configurar o cambiar la intercalación del servidor](../../relational-databases/collations/set-or-change-the-server-collation.md)   
  [Establecer o cambiar la intercalación de base de datos](../../relational-databases/collations/set-or-change-the-database-collation.md)   
- [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
+

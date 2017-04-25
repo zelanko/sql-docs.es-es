@@ -1,27 +1,31 @@
 ---
-title: "Configurar la seguridad de di&#225;logo para notificaciones de eventos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "notificaciones de eventos [SQL Server], seguridad"
+title: "Configurar la seguridad de diálogo para notificaciones de eventos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 473e5873e7a522c691f39c5fa8b68d5eb17ab2ce
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurar la seguridad de di&#225;logo para notificaciones de eventos
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] se debe configurar para las notificaciones de eventos que envíen mensajes a un Service Broker en un servidor remoto. La seguridad de diálogo se debe configurar manualmente según el modelo de seguridad de diálogo completa de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. El modelo de seguridad completa habilita el cifrado y el descifrado de los mensajes que se envían a servidores remotos o desde los mismos. Aunque las notificaciones de eventos se envían en una dirección, otros mensajes, como los errores, también se devuelven en la dirección opuesta.  
+# <a name="configure-dialog-security-for-event-notifications"></a>Configurar la seguridad de diálogo para notificaciones de eventos
+  [!INCLUDE[ssSB](../../includes/sssb-md.md)] se debe configurar para las notificaciones de eventos que envíen mensajes a un Service Broker en un servidor remoto. La seguridad de diálogo se debe configurar manualmente según el modelo de seguridad de diálogo completa de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . El modelo de seguridad completa habilita el cifrado y el descifrado de los mensajes que se envían a servidores remotos o desde los mismos. Aunque las notificaciones de eventos se envían en una dirección, otros mensajes, como los errores, también se devuelven en la dirección opuesta.  
   
-## Configurar la seguridad de diálogo para notificaciones de eventos  
+## <a name="configuring-dialog-security-for-event-notifications"></a>Configurar la seguridad de diálogo para notificaciones de eventos  
  El proceso necesario para implementar la seguridad de diálogo para notificaciones de eventos se describe en los siguientes pasos. Estos pasos incluyen acciones que se han de realizar tanto en el servidor de origen como en el servidor de destino. El servidor de origen es el servidor en el que se crea la notificación de eventos. El servidor de destino es el servidor que recibe el mensaje de notificación de eventos. Debe completar las acciones de cada paso tanto en el servidor de origen como en el de destino antes de poder continuar con el siguiente paso.  
   
 > [!IMPORTANT]  
@@ -51,12 +55,12 @@ caps.handback.revision: 23
 |Servidor de origen|Servidor de destino|  
 |-------------------|-------------------|  
 |[Cree un certificado](../../t-sql/statements/create-certificate-transact-sql.md) a partir de la copia de seguridad del certificado de destino, especificando que el usuario de la base de datos de destino es el propietario.|Cree un certificado a partir del archivo de copia de seguridad del certificado de origen, especificando que el usuario de la base de datos de origen es el propietario.|  
-|[Conceda permiso](../../t-sql/statements/grant-transact-sql.md) para crear la notificación de eventos al usuario de la base de datos de origen. Para obtener más información sobre este permiso, vea [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md).|Conceda el permiso REFERENCES al usuario de la base de datos de destino en un contrato de notificaciones de eventos existente de [!INCLUDE[ssSB](../../includes/sssb-md.md)]: `http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`.|  
+|[Conceda permiso](../../t-sql/statements/grant-transact-sql.md) para crear la notificación de eventos al usuario de la base de datos de origen. Para obtener más información sobre este permiso, vea [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md).|Conceda el permiso REFERENCES al usuario de la base de datos de destino en un contrato de notificaciones de eventos existente de [!INCLUDE[ssSB](../../includes/sssb-md.md)] : `http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`.|  
 |[Cree un enlace de servicio remoto](../../t-sql/statements/create-remote-service-binding-transact-sql.md) con el servicio de destino y especifique las credenciales del usuario de la base de datos de destino. El enlace de servicio remoto garantiza que la clave pública del certificado propiedad del usuario de la base de datos de origen autenticará los mensajes que se envíen al servidor de destino.|[Conceda](../../t-sql/statements/grant-transact-sql.md) permisos CREATE QUEUE, CREATE SERVICE y CREATE SCHEMA al usuario de la base de datos de destino.|  
 ||Si todavía no lo ha hecho, conéctese ahora con la base de datos como usuario de la base de datos de destino.|  
 ||[Cree una cola](../../t-sql/statements/create-queue-transact-sql.md) para recibir los mensajes de notificación de eventos y [cree un servicio](../../t-sql/statements/create-service-transact-sql.md) para entregar los mensajes.|  
 ||[Conceda el permiso SEND](../../t-sql/statements/grant-transact-sql.md) para el servicio de destino al usuario de la base de datos de origen.|  
-|Proporcione el identificador de Service Broker de la base de datos de origen al servidor de destino. Este identificador se puede obtener realizando una consulta en la columna **service_broker_guid** de la vista de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). En caso de una notificación de eventos en el servidor, use el identificador de Service Broker de **msdb**.|Proporcione el identificador de Service Broker de la base de datos de destino al servidor de origen.|  
+|Proporcione el identificador de Service Broker de la base de datos de origen al servidor de destino. Este identificador se puede obtener realizando una consulta en la columna **service_broker_guid** de la vista de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) . En caso de una notificación de eventos en el servidor, use el identificador de Service Broker de **msdb**.|Proporcione el identificador de Service Broker de la base de datos de destino al servidor de origen.|  
   
  **Paso 4: cree rutas y establezca la autenticación en el servidor.**  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 23
 |Si no existe una clave maestra para la base de datos **master** , [cree una clave maestra](../../t-sql/statements/create-master-key-transact-sql.md).|Si no existe una clave maestra para la base de datos **master** , cree una clave maestra.|  
 |[Cree un certificado](../../t-sql/statements/create-certificate-transact-sql.md) para autenticar la base de datos.|Cree un certificado para autenticar la base de datos.|  
 |[Realice una copia de seguridad del certificado](../../t-sql/statements/backup-certificate-transact-sql.md) en un archivo al que se pueda obtener acceso a través del servidor de destino.|Realice una copia de seguridad del certificado en un archivo al que se pueda obtener acceso a través del servidor de origen.|  
-|[Cree un punto de conexión](../../t-sql/statements/create-endpoint-transact-sql.md) y especifique el número de puerto TCP acordado, FOR SERVICE_BROKER (AUTHENTICATION = CERTIFICATE *nombre_de_certificado*) y el nombre del certificado que proporciona la autenticación.|Cree un punto de conexión y especifique el número de puerto TCP acordado, FOR SERVICE_BROKER (AUTHENTICATION = CERTIFICATE *nombre_de_certificado*) y el nombre del certificado que proporciona la autenticación.|  
+|[Cree un punto de conexión](../../t-sql/statements/create-endpoint-transact-sql.md)y especifique el número de puerto TCP acordado, FOR SERVICE_BROKER (AUTHENTICATION = CERTIFICATE *nombre_de_certificado*) y el nombre del certificado que proporciona la autenticación.|Cree un punto de conexión y especifique el número de puerto TCP acordado, FOR SERVICE_BROKER (AUTHENTICATION = CERTIFICATE *nombre_de_certificado*) y el nombre del certificado que proporciona la autenticación.|  
 |[Cree un inicio de sesión](../../t-sql/statements/create-login-transact-sql.md)y especifique el inicio de sesión del servidor de destino.|Cree un inicio de sesión y especifique el inicio de sesión del servidor de origen.|  
 |[Conceda el permiso CONNECT](../../t-sql/statements/grant-transact-sql.md) para el extremo al inicio de sesión del autenticador de destino.|Conceda el permiso CONNECT para el extremo al inicio de sesión del autenticador de origen.|  
 |[Cree un usuario](../../t-sql/statements/create-user-transact-sql.md)y especifique el inicio de sesión del autenticador de destino.|Cree un usuario y especifique el inicio de sesión del autenticador de origen.|  
@@ -84,7 +88,7 @@ caps.handback.revision: 23
 |Cambie a la base de datos de origen en la que va a crear la notificación de eventos y, si todavía no está conectado como usuario de la base de datos de origen, hágalo ahora.|Cambie a la base de datos de destino para recibir los mensajes de notificación de eventos.|  
 |[Cree la notificación de eventos](../../t-sql/statements/create-event-notification-transact-sql.md)y especifique el Service Broker y el identificador de la base de datos de origen.||  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

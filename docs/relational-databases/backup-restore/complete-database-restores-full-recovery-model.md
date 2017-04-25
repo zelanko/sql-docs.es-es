@@ -1,29 +1,33 @@
 ---
-title: "Restauraciones de base de datos completas (modelo de recuperaci&#243;n completa) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restauraciones completas de la base de datos"
-  - "restauraciones de bases de datos [SQL Server], base de datos completa"
-  - "restaurar bases de datos [SQL Server], base de datos completa"
-  - "restaurar [SQL Server], base de datos"
-  - "modelo de recuperación completa [SQL Server], realizar restauraciones"
-  - "copias de seguridad de registros [SQL Server ["
+title: "Restauraciones de base de datos completas (modelo de recuperación completa) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- complete database restores
+- database restores [SQL Server], complete database
+- restoring databases [SQL Server], complete database
+- restoring [SQL Server], database
+- full recovery model [SQL Server], performing restores
+- log backups [SQL Server[
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 caps.latest.revision: 77
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 77
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b2fe04099e9ec76ea157b1428fa0a4896ad8e78
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restauraciones de base de datos completas (modelo de recuperaci&#243;n completa)
+# <a name="complete-database-restores-full-recovery-model"></a>Restauraciones de base de datos completas (modelo de recuperación completa)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   El objetivo de una restauración completa de la base de datos es restaurar toda la base de datos. Durante el proceso de restauración, la base de datos completa se encuentra sin conexión. Antes de que ninguna parte de la base de datos esté en línea, se recuperan todos los datos a un punto coherente en el que todas las partes de la base de datos se encuentran en el mismo momento y en el que no existe ninguna transacción sin confirmar.  
@@ -44,7 +48,7 @@ caps.handback.revision: 77
 -   [Tareas relacionadas](#RelatedTasks)  
   
 > [!NOTE]  
->  Para obtener más información sobre la compatibilidad con las copias de seguridad de versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea la sección "Soporte de compatibilidad" de [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+>  Para obtener más información sobre la compatibilidad con las copias de seguridad de versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea la sección "Soporte de compatibilidad" de [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 ##  <a name="PointOfFailure"></a> Restaurar una base de datos hasta el momento del error  
  En general, la recuperación de una base de datos hasta el momento del error incluye los siguientes pasos básicos:  
@@ -74,7 +78,7 @@ caps.handback.revision: 77
 >  Cuando restaura una copia de seguridad de la base de datos en una instancia de servidor distinta, vea [Copiar bases de datos con Copias de seguridad y restauración](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
 ###  <a name="TsqlSyntax"></a> Sintaxis RESTORE de Transact-SQL básica  
- La sintaxis [de](../Topic/RESTORE%20\(Transact-SQL\).md)[!INCLUDE[tsql](../../includes/tsql-md.md)] básica para la secuencia de restauración en la ilustración anterior es la siguiente:  
+ La sintaxis [de](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] básica para la secuencia de restauración en la ilustración anterior es la siguiente:  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
   
@@ -125,7 +129,7 @@ GO
 ##  <a name="PointWithinBackup"></a> Restaurar bases de datos a un punto de una copia de seguridad de registros  
  En el modelo de recuperación completa, una restauración completa de la base de datos se puede recuperar normalmente hasta un momento en el tiempo, una transacción marcada o un LSN de la copia de seguridad de registros. Sin embargo, en el modelo de recuperación optimizado para cargas masivas de registros, si la copia de seguridad de registros contiene cambios de registros de operaciones masivas, no es posible la recuperación a un momento dado.  
   
-### Escenarios de ejemplo de restauración en un momento concreto  
+### <a name="sample-point-in-time-restore-scenarios"></a>Escenarios de ejemplo de restauración en un momento concreto  
  En este siguiente ejemplo se presupone que usa un sistema de base de datos de gran importancia para el que se crea una copia de seguridad completa diariamente cada medianoche, una copia de seguridad diferencial de la base de datos cada hora, de lunes a sábado, y copias de seguridad del registro de transacciones cada 10 minutos durante el día. Para restaurar la base de datos al estado en que estaba a las 5:19 a.m. del miércoles, debe hacer lo siguiente:  
   
 1.  Restaure la copia de seguridad de la base de datos completa creada la medianoche del martes.  
@@ -176,8 +180,8 @@ GO
   
 -   [Recuperar a un número de secuencia de registro &#40;SQL Server&#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md)  
   
-## Vea también  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Vea también  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   

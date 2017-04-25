@@ -1,28 +1,32 @@
 ---
-title: "Filtrar un seguimiento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "filtros [SQL Server], eventos"
-  - "eventos [SQL Server], filtros"
-  - "filtros [SQL Server]"
-  - "filtros [SQL Server], seguimientos"
-  - "seguimientos [SQL Server], filtros"
+title: Filtrar un seguimiento | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filters [SQL Server], events
+- events [SQL Server], filters
+- filters [SQL Server]
+- filters [SQL Server], traces
+- traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6315705010a41afb985682e63338cc95237b5e78
+ms.lasthandoff: 04/11/2017
+
 ---
-# Filtrar un seguimiento
+# <a name="filter-a-trace"></a>Filtrar un seguimiento
   Los filtros limitan los eventos que se recopilan en el seguimiento. Si no se establece un filtro, se devolverán todos los eventos de las clases de eventos seleccionadas en el resultado del seguimiento. Por ejemplo, si limita los nombres de usuarios de Windows de un seguimiento para usuarios específicos, los datos de la salida se limitarán solo a aquellos usuarios.  
   
  No es obligatorio establecer un filtro para un seguimiento. Sin embargo, un filtro minimiza la sobrecarga que comporta un seguimiento. Un filtro devuelve los datos relativos y, de este modo, facilita el análisis del rendimiento y las auditorías.  
@@ -34,7 +38,7 @@ caps.handback.revision: 28
   
  Como ejemplo adicional, si supervisa consultas para determinar los procesos por lotes que tardan más tiempo en ejecutarse, puede establecer los criterios de los eventos de seguimiento de modo que se supervisen solo los procesos por lotes que tarden más de 30 segundos en ejecutarse (un valor mínimo de CPU de 30.000 milisegundos).  
   
-## Directrices para la creación de filtros  
+## <a name="filter-creation-guidelines"></a>Directrices para la creación de filtros  
  En general, se deben seguir los pasos que se indican a continuación para filtrar un seguimiento.  
   
 1.  Identifique los eventos que desea incluir en el seguimiento.  
@@ -61,8 +65,8 @@ caps.handback.revision: 28
   
 |Operador relacional|Símbolo del operador|Descripción|  
 |-------------------------|---------------------|-----------------|  
-|Like|LIKE|Especifica que los datos del evento de seguimiento deben ser como el texto escrito. Acepta varios valores.|  
-|No es como|NOT LIKE|Especifica que los datos del evento de seguimiento no deben ser como el texto escrito. Acepta varios valores.|  
+|Like|Like|Especifica que los datos del evento de seguimiento deben ser como el texto escrito. Acepta varios valores.|  
+|No es como|No es como|Especifica que los datos del evento de seguimiento no deben ser como el texto escrito. Acepta varios valores.|  
 |Es igual a|=|Especifica que los datos del evento de seguimiento deben ser iguales al valor escrito. Acepta varios valores.|  
 |No es igual a|<>|Especifica que los datos del evento de seguimiento deben ser distintos del valor escrito. Acepta varios valores.|  
 |Mayor que|>|Especifica que los datos del evento de seguimiento deben ser mayores que el valor escrito.|  
@@ -113,7 +117,7 @@ caps.handback.revision: 28
 |**OwnerID**|=, <>, >=, <=|  
 |**OwnerName**|LIKE, NOT LIKE|  
 |**ParentName**|LIKE, NOT LIKE|  
-|**Permisos**|=, <>, >=, <=|  
+|**Permissions**|=, <>, >=, <=|  
 |**ProviderName**|LIKE, NOT LIKE|  
 |**Reads**|=, <>, >=, <=|  
 |**IdSolicitud**|=, <>, >=, <=|  
@@ -126,7 +130,7 @@ caps.handback.revision: 28
 |**SqlHandle**|Utilice el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para filtrar los eventos de esta columna de datos. Para obtener más información, vea [Filtrar seguimientos con SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**StartTime**|>=, <=|  
 |**State**|=, <>, >=, <=|  
-|**Success**|=, <>, >=, <=|  
+|**Correcto**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE, NOT LIKE|  
 |**TargetLoginSid**|Utilice el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para filtrar los eventos de esta columna de datos. Para obtener más información, vea [Filtrar seguimientos con SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**TargetUserName**|LIKE, NOT LIKE|  
@@ -136,11 +140,11 @@ caps.handback.revision: 28
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- \* Si se realiza un seguimiento de los eventos con la utilidad **osql** o **sqlcmd**, agregue siempre **%** a los filtros de la columna **TextData**.  
+ \* Si se realiza un seguimiento de los eventos con la utilidad **osql** o **sqlcmd** , agregue siempre **%** a los filtros de la columna **TextData** .  
   
  Como mecanismo de seguridad, Seguimiento de SQL omite automáticamente del seguimiento la información de los procedimientos almacenados relacionados con la seguridad que afecten a contraseñas. Este mecanismo de seguridad no es configurable y siempre está activo, lo que impide que los usuarios, que de otra manera tendrían los permisos para realizar el seguimiento de toda la actividad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], capturen contraseñas.  
   
- Se supervisan los siguientes procedimientos almacenados relativos a la seguridad, pero no se escribe ninguna salida en la columna de datos **TextData**:  
+ Se supervisan los siguientes procedimientos almacenados relativos a la seguridad, pero no se escribe ninguna salida en la columna de datos **TextData** :  
   
  [sp_addapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)  
   

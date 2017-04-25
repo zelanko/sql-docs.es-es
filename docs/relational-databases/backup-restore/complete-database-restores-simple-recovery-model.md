@@ -1,28 +1,32 @@
 ---
-title: "Restauraciones de base de datos completas (modelo de recuperaci&#243;n simple) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restauraciones completas de la base de datos"
-  - "restauraciones de bases de datos [SQL Server], base de datos completa"
-  - "restaurar bases de datos [SQL Server], base de datos completa"
-  - "modelo de recuperación simple [SQL Server]"
-  - "restaurar [SQL Server], base de datos"
+title: "Restauraciones de base de datos completas (modelo de recuperación simple) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- complete database restores
+- database restores [SQL Server], complete database
+- restoring databases [SQL Server], complete database
+- simple recovery model [SQL Server]
+- restoring [SQL Server], database
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 caps.latest.revision: 58
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d64038885f4344df3fc09c58038a724d5fd11aab
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restauraciones de base de datos completas (modelo de recuperaci&#243;n simple)
+# <a name="complete-database-restores-simple-recovery-model"></a>Restauraciones de base de datos completas (modelo de recuperación simple)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   El objetivo de una restauración completa de la base de datos es restaurar toda la base de datos. Durante el proceso de restauración, la base de datos completa se encuentra sin conexión. Antes de que ninguna parte de la base de datos esté en línea, se recuperan todos los datos a un punto coherente en el que todas las partes de la base de datos se encuentran en el mismo momento y en el que no existe ninguna transacción sin confirmar.  
@@ -39,10 +43,10 @@ caps.handback.revision: 58
 -   [Tareas relacionadas](#RelatedTasks)  
   
 > [!NOTE]  
->  Para obtener más información sobre la compatibilidad con las copias de seguridad de versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea la sección "Soporte de compatibilidad" de [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+>  Para obtener más información sobre la compatibilidad con las copias de seguridad de versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea la sección "Soporte de compatibilidad" de [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 ##  <a name="Overview"></a> Información general de la restauración de la base de datos en el modelo de recuperación simple  
- Una restauración completa de base de datos con el modelo de recuperación simple implica una o dos instrucciones [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) , en función de si desea restaurar una copia de seguridad diferencial de la base de datos. Si solo usa copias de seguridad completas de la base de datos, restaure solo la copia de seguridad más reciente, como se muestra en la siguiente ilustración.  
+ Una restauración completa de base de datos con el modelo de recuperación simple implica una o dos instrucciones [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) , en función de si desea restaurar una copia de seguridad diferencial de la base de datos. Si solo usa copias de seguridad completas de la base de datos, restaure solo la copia de seguridad más reciente, como se muestra en la siguiente ilustración.  
   
  ![Restaurar solamente una copia de seguridad completa de la base de datos](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "Restaurar solamente una copia de seguridad completa de la base de datos")  
   
@@ -54,14 +58,14 @@ caps.handback.revision: 58
 >  Si planea restaurar una copia de seguridad de la base de datos en una instancia de servidor distinta, vea [Copiar bases de datos con Copias de seguridad y restauración](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
 ###  <a name="TsqlSyntax"></a> Sintaxis RESTORE de Transact-SQL básica  
- La sintaxis [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) básica para restaurar una copia de seguridad de base de datos completa es:  
+ La sintaxis [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) básica para restaurar una copia de seguridad de base de datos completa es:  
   
  RESTORE DATABASE *database_name* FROM *backup_device* [ WITH NORECOVERY ]  
   
 > [!NOTE]  
 >  Use WITH NORECOVERY si también desea restaurar una copia de seguridad diferencial de la base de datos.  
   
- La sintaxis [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) básica para restaurar una copia de seguridad de la base de datos es:  
+ La sintaxis [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) básica para restaurar una copia de seguridad de la base de datos es:  
   
  RESTORE DATABASE *database_name* FROM *backup_device* WITH RECOVERY  
   
@@ -116,8 +120,8 @@ GO
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
-## Vea también  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Vea también  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [Copias de seguridad completas de bases de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)   

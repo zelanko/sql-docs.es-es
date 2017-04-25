@@ -1,32 +1,36 @@
 ---
-title: "Configurar las opciones avanzadas de copia de seguridad administrada de SQL Server en Microsoft Azure | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Configurar las opciones avanzadas de copia de seguridad administrada de SQL Server en Microsoft Azure | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 6c41a2a22b034f36ebe96508e978096b0ed29524
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurar las opciones avanzadas de copia de seguridad administrada de SQL Server en Microsoft Azure
+# <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurar las opciones avanzadas de copia de seguridad administrada de SQL Server en Microsoft Azure
   En el tutorial siguiente se describe cómo configurar las opciones avanzadas de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Estos procedimientos solo son necesarios si necesita las características que ofrecen. De lo contrario, puede habilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] y depender del comportamiento predeterminado.  
   
  En cada escenario, la copia de seguridad se especifica mediante el parámetro `database_name` . Cuando `database_name` es NULL o *, los cambios afectan a la configuración predeterminada en el nivel de instancia. La configuración del nivel de instancia afecta también a las nuevas bases de datos que se crean después del cambio.  
   
- Una vez especificada esta configuración, puede habilitar la copia de seguridad administrada para la base de datos o la instancia mediante el procedimiento almacenado del sistema [managed_backup.sp_backup_config_basic &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md). Para obtener más información, consulte [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
+ Una vez especificada esta configuración, puede habilitar la copia de seguridad administrada para la base de datos o la instancia mediante el procedimiento almacenado del sistema [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md). Para obtener más información, consulte [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
 > [!WARNING]  
->  Las opciones avanzadas y las opciones de programación personalizadas deben configurarse siempre antes de habilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con [managed_backup.sp_backup_config_basic &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md). De lo contrario, es posible que se produzcan operaciones de copia de seguridad no deseadas durante el período de tiempo comprendido entre la habilitación de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] y la configuración de estos parámetros.  
+>  Las opciones avanzadas y las opciones de programación personalizadas deben configurarse siempre antes de habilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md). De lo contrario, es posible que se produzcan operaciones de copia de seguridad no deseadas durante el período de tiempo comprendido entre la habilitación de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] y la configuración de estos parámetros.  
   
-## Configurar el cifrado  
+## <a name="configure-encryption"></a>Configurar el cifrado  
  En los pasos siguientes se describe cómo especificar la configuración de cifrado mediante el procedimiento almacenado [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md).  
   
 1.  **Determine el algoritmo de cifrado:** determine primero el nombre del algoritmo de cifrado que se usará. Seleccione uno de los algoritmos siguientes:  
@@ -78,8 +82,8 @@ caps.handback.revision: 7
     > [!WARNING]  
     >  Si `@database_name` es NULL en el ejemplo anterior, la configuración se aplica a la instancia de SQL Server.  
   
-## Configurar una programación de copia de seguridad personalizada  
- En los pasos siguientes se describe cómo establecer una programación personalizada con el procedimiento almacenado [managed_backup.sp_backup_config_schedule & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md).  
+## <a name="configure-a-custom-backup-schedule"></a>Configurar una programación de copia de seguridad personalizada  
+ En los pasos siguientes se describe cómo establecer una programación personalizada con el procedimiento almacenado [managed_backup.sp_backup_config_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md).  
   
 1.  **Determine la frecuencia de las copias de seguridad completas:** determine con qué frecuencia se realizarán copias de seguridad completas de la base de datos. Puede elegir entre copias de seguridad completas diarias y semanales.  
   
@@ -108,10 +112,10 @@ caps.handback.revision: 7
   
     ```  
   
-## Pasos siguientes  
+## <a name="next-steps"></a>Pasos siguientes  
  Después de configurar las opciones avanzadas y las programaciones personalizadas, debe habilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] en la base de datos de destino o en la instancia de SQL Server. Para obtener más información, consulte [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

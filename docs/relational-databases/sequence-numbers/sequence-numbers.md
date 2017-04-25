@@ -1,28 +1,32 @@
 ---
-title: "N&#250;meros de secuencia | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "objeto de número de secuencia, información general"
-  - "secuencia [Motor de base de datos]"
-  - "numeración automática, secuencias"
-  - "números de secuencia [SQL Server]"
-  - "objeto de número de secuencia"
+title: "Números de secuencia | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sequence number object, overview
+- sequence [Database Engine]
+- autonumbers, sequences
+- sequence numbers [SQL Server]
+- sequence number object
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be2100277326fafec2dd32609b977de0f72cb9b4
+ms.lasthandoff: 04/11/2017
+
 ---
-# N&#250;meros de secuencia
+# <a name="sequence-numbers"></a>Números de secuencia
   Una secuencia es un objeto enlazado a un esquema definido por el usuario que genera una secuencia de valores numéricos según la especificación con la que se creó la secuencia. La secuencia de valores numéricos se genera en orden ascendente o descendente en un intervalo definido y puede repetirse cuando se solicite. Las secuencias, a diferencia de las columnas de identidad, no se asocian a tablas. Una aplicación hace referencia a un objeto de secuencia para recibir su valor siguiente. La aplicación controla la relación entre las secuencias y tablas. Las aplicaciones de usuario pueden hacer referencia a un objeto de secuencia y coordinar las claves de valores entre varias filas y tablas.  
   
  Una secuencia se crea independientemente de las tablas utilizando la instrucción **CREATE SEQUENCE** . Las opciones permiten controlar el incremento, los valores máximo y mínimo, el punto de inicio, la capacidad de reinicio automático y el almacenamiento en caché para aumentar el rendimiento. Para obtener información acerca de las opciones, vea [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md).  
@@ -31,7 +35,7 @@ caps.handback.revision: 31
   
  Una secuencia se puede definir como cualquier tipo de datos enteros. Si no se especifica el tipo de datos, una secuencia tiene como valor predeterminado **bigint**.  
   
-## Utilizar secuencias  
+## <a name="using-sequences"></a>Utilizar secuencias  
  Utilice secuencias en lugar de columnas de identidad en los siguientes escenarios:  
   
 -   La aplicación requiere un número antes de realizar la inserción en la tabla.  
@@ -46,7 +50,7 @@ caps.handback.revision: 31
   
 -   Necesita cambiar la especificación de la secuencia, como, por ejemplo, el valor de incremento.  
   
-## Limitaciones  
+## <a name="limitations"></a>Limitaciones  
  A diferencia de las columnas de identidad, cuyos valores no se pueden cambiar, los valores de secuencia no se protegen automáticamente después de la inserción en la tabla. Para evitar que se cambien los valores de secuencia, utilice un desencadenador de actualización en la tabla para revertir los cambios.  
   
  La singularidad no se aplica automáticamente para los valores de la secuencia. La capacidad de reutilizar los valores de secuencia es por diseño. Si es necesario que los valores de secuencia de una tabla sean únicos, cree un índice único en la columna. Si se requiere que los valores de secuencia de una tabla sean únicos en todo un grupo de tablas, cree desencadenadores para evitar los duplicados debidos a las instrucciones de actualización o al ciclo del número de secuencia  
@@ -55,7 +59,7 @@ caps.handback.revision: 31
   
  Si hay varias instancias de la función **NEXT VALUE FOR** que especifica el mismo generador de secuencias dentro de una única instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] , todas esas instancias devuelven el mismo valor para una fila determinada procesada por esa instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] . Este comportamiento es coherente con el estándar ANSI.  
   
-## Uso típico  
+## <a name="typical-use"></a>Uso típico  
  Para crear un número de secuencia entero que se incremente en 1 de -2.147.483.648 a 2.147.483.647, utilice la siguiente instrucción.  
   
 ```  
@@ -74,13 +78,13 @@ CREATE SEQUENCE Schema.SequenceName
   
 ```  
   
-## Administrar secuencias  
+## <a name="managing-sequences"></a>Administrar secuencias  
  Para obtener información sobre las secuencias, consulte [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md).  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
  Encontrará más ejemplos en los temas [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md), [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md) y [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md).  
   
-### A. Usar un número de secuencia en una sola tabla  
+### <a name="a-using-a-sequence-number-in-a-single-table"></a>A. Usar un número de secuencia en una sola tabla  
  En el siguiente ejemplo se crea un esquema denominado Test, una tabla denominada Orders y una secuencia denominada CountBy1 y, después, se insertan filas en la tabla mediante la función NEXT VALUE FOR.  
   
 ```  
@@ -125,7 +129,7 @@ GO
   
  `3        Brake   1`  
   
-### B. Llamar a NEXT VALUE FOR antes de insertar una fila  
+### <a name="b-calling-next-value-for-before-inserting-a-row"></a>B. Llamar a NEXT VALUE FOR antes de insertar una fila  
  Utilizando la tabla `Orders` creada en el ejemplo A, el siguiente ejemplo declara una variable denominada `@nextID`y, a continuación, utiliza la función NEXT VALUE FOR para establecer la variable como el siguiente número de secuencia disponible. Se supone que la aplicación realiza cierto procesamiento del pedido, como, por ejemplo, proporcionar al cliente el número de `OrderID` de su pedido potencial y, a continuación, valida el pedido. Con independencia de cuánto tiempo pueda llevar este procesamiento y de cuántos pedidos se agreguen durante el proceso, el número original se conserva para que lo utilice esta conexión. Finalmente, la instrucción `INSERT` agrega el pedido a la tabla `Orders` .  
   
 ```  
@@ -138,7 +142,7 @@ GO
   
 ```  
   
-### C. Usar un número de secuencia en varias tablas  
+### <a name="c-using-a-sequence-number-in-multiple-tables"></a>C. Usar un número de secuencia en varias tablas  
  En este ejemplo se supone que un proceso de supervisión de la línea de producción recibe una notificación de los eventos que se producen en el taller. Cada evento recibe un número `EventID` único que se incrementa de forma continua. Todos los eventos utilizan el mismo número de secuencia `EventID` para que los informes que combinan todos los eventos puedan identificar cada evento de forma única. Sin embargo, los datos de evento se almacenan en tres tablas diferentes, dependiendo del tipo de evento. El ejemplo de código crea un esquema denominado `Audit`, una secuencia denominada `EventCounter`y tres tablas, cada una de las cuales utiliza la secuencia `EventCounter` como valor predeterminado. A continuación el ejemplo agrega las filas a las tres tablas y consulta los resultados.  
   
 ```  
@@ -228,7 +232,7 @@ GO
   
  `7        2009-11-02 15:00:51.180  Central feed in bypass mode.`  
   
-### D. Generar números de secuencia repetidos en un conjunto de resultados  
+### <a name="d-generating-repeating-sequence-numbers-in-a-result-set"></a>D. Generar números de secuencia repetidos en un conjunto de resultados  
  En el siguiente ejemplo se muestran dos características de los números de secuencia: recorrer y utilizar `NEXT VALUE FOR` en una instrucción SELECT.  
   
 ```  
@@ -245,7 +249,7 @@ SELECT NEXT VALUE FOR CountBy5 AS SurveyGroup, Name FROM sys.objects ;
 GO  
 ```  
   
-### E. Generar números de secuencia para un conjunto de resultados mediante la cláusula OVER  
+### <a name="e-generating-sequence-numbers-for-a-result-set-by-using-the-over-clause"></a>E. Generar números de secuencia para un conjunto de resultados mediante la cláusula OVER  
  En el ejemplo siguiente se utiliza la cláusula `OVER` para ordenar el conjunto de resultados por `Name` antes de agregar la columna de número de secuencia.  
   
 ```  
@@ -265,7 +269,7 @@ SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, 
 WHERE Name LIKE '%nut%' ;  
 ```  
   
-### F. Restablecer el número de secuencia  
+### <a name="f-resetting-the-sequence-number"></a>F. Restablecer el número de secuencia  
  El ejemplo E consumió los primeros 79 números de secuencia de `Samples.IDLabel`. (Su versión de `AdventureWorks2012` puede devolver un número de resultados diferente). Ejecute lo siguiente para consumir los 79 números de secuencia siguientes (del 80 al 158).  
   
 ```  
@@ -287,7 +291,7 @@ SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, 
 WHERE Name LIKE '%nut%' ;  
 ```  
   
-### G. Cambiar una tabla de identidad a secuencia  
+### <a name="g-changing-a-table-from-identity-to-sequence"></a>G. Cambiar una tabla de identidad a secuencia  
  En el siguiente ejemplo se crean un esquema y una tabla que contiene tres filas para el ejemplo. A continuación el ejemplo agrega una nueva columna y quita la columna anterior.  
   
 ```  
@@ -386,15 +390,15 @@ GO
   
 ```  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] que utilizan `SELECT *` recibirán la nueva columna como última columna, no como primera. Si esto no es aceptable, debe crear una tabla completamente nueva, mover los datos a ella y, a continuación, volver a crear los permisos en la nueva tabla.  
+ Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que utilizan `SELECT *` recibirán la nueva columna como última columna, no como primera. Si esto no es aceptable, debe crear una tabla completamente nueva, mover los datos a ella y, a continuación, volver a crear los permisos en la nueva tabla.  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)  
   
  [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)  
   
  [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)  
   
- [IDENTITY &#40;propiedad de Transact-SQL&#41;](../Topic/IDENTITY%20\(Property\)%20\(Transact-SQL\).md)  
+ [IDENTITY &#40;propiedad de Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
   
   

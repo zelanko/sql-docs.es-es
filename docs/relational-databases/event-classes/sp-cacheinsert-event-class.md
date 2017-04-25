@@ -1,27 +1,31 @@
 ---
-title: "SP:CacheInsert (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SP:CacheInsert, clase de eventos"
+title: Clase de eventos SP:CacheInsert | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SP:CacheInsert event class
 ms.assetid: 37fb9bec-b462-4563-8e50-ec84d5407e20
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8ea59a1fc03d3e6ecb9a6a4a4c2bb5246d36124f
+ms.lasthandoff: 04/11/2017
+
 ---
-# SP:CacheInsert (clase de eventos)
+# <a name="spcacheinsert-event-class"></a>SP:CacheInsert, clase de eventos
   La clase de eventos SP:CacheInsert indica que el procedimiento almacenado se ha insertado en la caché del procedimiento.  
   
-## Columnas de datos de la clase de eventos SP:CacheInsert  
+## <a name="spcacheinsert-event-class-data-columns"></a>Columnas de datos de la clase de eventos SP:CacheInsert  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -49,7 +53,7 @@ caps.handback.revision: 36
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [SP:CacheMiss (clase de eventos)](../../relational-databases/event-classes/sp-cachemiss-event-class.md)  
   

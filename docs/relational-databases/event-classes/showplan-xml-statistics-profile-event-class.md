@@ -1,31 +1,35 @@
 ---
-title: "Showplan XML Statistics Profile (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Showplan XML Statistics Profile, clase de eventos"
+title: Clase de eventos Showplan XML Statistics Profile | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Showplan XML Statistics Profile event class
 ms.assetid: 77e8ca69-d98a-4acd-9d6a-f825bf079d84
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 13644384329737d512198a6fd853daa4b4d18df0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Showplan XML Statistics Profile (clase de eventos)
+# <a name="showplan-xml-statistics-profile-event-class"></a>Showplan XML Statistics Profile, clase de eventos
   La clase de eventos Showplan XML Statistics Profile se produce cuando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta una instrucción SQL. Incluya la clase de eventos Showplan XML Statistics Profile para identificar los operadores de Showplan en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  La clase de eventos Showplan XML Statistics Profile muestra datos completos de tiempo de compilación, por lo que los seguimientos que contienen esta clase de eventos pueden producir una importante sobrecarga en el rendimiento. Para minimizar la sobrecarga, limite el uso de esta clase de evento a los seguimientos que supervisen problemas específicos durante periodos breves.  
   
  Los documentos de Showplan XML tienen un esquema asociado. Puede encontrar este esquema en el [sitio web de Microsoft](http://go.microsoft.com/fwlink/?LinkId=41740), o como parte de su instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Columnas de datos de la clase de evento Showplan XML Statistics Profile  
+## <a name="showplan-xml-statistics-profile-event-class-data-columns"></a>Columnas de datos de la clase de evento Showplan XML Statistics Profile  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -47,7 +51,7 @@ caps.handback.revision: 33
 |NTDomainName|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |ObjectID|**int**|Identificador del objeto asignado por el sistema.|22|Sí|  
 |ObjectName|**nvarchar**|Nombre del objeto al que se hace referencia.|34|Sí|  
-|ObjectType|**int**|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la vista de catálogo sys.objects. Para ver los valores, vea [Columna de evento de seguimiento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sí|  
+|ObjectType|**int**|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la vista de catálogo sys.objects. Para ver los valores, consulte [Columna de evento de seguimiento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sí|  
 |IdSolicitud|**int**|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
 |ServerName|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |SessionLoginName|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|64|Sí|  
@@ -57,7 +61,7 @@ caps.handback.revision: 33
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que se utiliza para describir la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Referencia de operadores lógicos y físicos del plan de presentación](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  

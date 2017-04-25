@@ -1,26 +1,30 @@
 ---
-title: "Resumen de las caracter&#237;sticas de los &#237;ndices de almac&#233;n de columnas para cada versi&#243;n | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Novedades de los índices de almacén de columnas | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
 caps.latest.revision: 28
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8dc55e28462cd04a90274ada860fd418bcc54775
+ms.lasthandoff: 04/11/2017
+
 ---
-# Resumen de las caracter&#237;sticas de los &#237;ndices de almac&#233;n de columnas para cada versi&#243;n
+# <a name="columnstore-indexes---what39s-new"></a>Novedades de los índices de almacén de columnas
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Resumen de las características de almacén de columnas disponibles en cada versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y las versiones más recientes de Azure SQL Database Premium Edition, Azure SQL Data Warehouse y Almacenamiento de datos paralelo.  
+  Resumen de las características de almacén de columnas disponibles en cada versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y las versiones más recientes de Azure SQL Database Premium Edition, Azure SQL Data Warehouse y Almacenamiento de datos paralelo.  
 
  >[!NOTE]
  > En el caso de Azure SQL Database, los índices de almacén de columnas solo están disponibles en Premium Edition.
@@ -161,11 +165,12 @@ caps.handback.revision: 27
 -   El procesamiento por lotes se traduce en que las consultas rinden el doble de bien o mejor, pero solo está disponible para la ejecución de consultas en paralelo.  
   
 ## <a name="see-also"></a>Vea también  
- [Guía de índices de almacén de columnas](../Topic/Columnstore%20Indexes%20Guide.md)   
- [Carga de datos de índices de almacén de columnas](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
+ Guía de índices de almacén de columnas   
+ Carga de datos de índices de almacén de columnas   
  [Rendimiento de las consultas de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Introducción al almacén de columnas para análisis operativos en tiempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [Índices de almacén de columnas para el almacenamiento de datos](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)   
+ Índices de almacén de columnas para el almacenamiento de datos   
  [Desfragmentación de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

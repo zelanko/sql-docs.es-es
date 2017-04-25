@@ -1,36 +1,40 @@
 ---
-title: "Configurar reglas de firewall antes de ejecutar al depurador de TSQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.error.sqlde_register_failed"
-  - "vs.debug.error.sqlde_accessdenied"
-  - "vs.debug.error.sqlde_firewall.remotemachines"
-helpviewer_keywords: 
-  - "depurador de Transact-SQL, conexiones remotas"
-  - "Firewall de Windows [motor de base de datos], depurador de Transact-SQL"
-  - "depurador de Transact-SQL, Firewall de Windows"
-  - "depurador de Transact-SQL, configurar"
-  - "puertos [SQL Server], depurador de Transact-SQL"
-  - "TCP/IP [SQL Server], números de puerto"
+title: Configurar reglas de firewall antes de ejecutar al depurador de TSQL | Microsoft Docs
+ms.custom: 
+ms.date: 10/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.error.sqlde_register_failed
+- vs.debug.error.sqlde_accessdenied
+- vs.debug.error.sqlde_firewall.remotemachines
+helpviewer_keywords:
+- Transact-SQL debugger, remote connections
+- Windows Firewall [Database Engine], Transact-SQL debugger
+- Transact-SQL debugger, Windows Firewall
+- Transact-SQL debugger, configuring
+- ports [SQL Server], Transact-SQL debugger
+- TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1aec49f13a7e4c37fd9d8212393c5bdc3a5694d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurar reglas de firewall antes de ejecutar al depurador de TSQL
+# <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Configurar reglas de firewall antes de ejecutar al depurador de TSQL
   Se deben configurar reglas del Firewall de Windows para habilitar la depuración en [!INCLUDE[tsql](../../includes/tsql-md.md)] cuando se establezca conexión con una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se esté ejecutando en un equipo distinto del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
-## Configurar el depurador de Transact-SQL  
+## <a name="configuring-the-transact-sql-debugger"></a>Configurar el depurador de Transact-SQL  
  El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] incluye los componentes tanto del lado servidor como del lado cliente. Los componentes del depurador del lado servidor se instalan con cada instancia del motor de base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) o versiones posteriores. Los componentes del depurador del lado cliente se incluyen:  
   
 -   Cuando instala las herramientas cliente de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o posterior.  
@@ -46,7 +50,7 @@ caps.handback.revision: 43
 > [!CAUTION]  
 >  Al habilitar reglas en Firewall de Windows, el equipo puede quedar expuesto a amenazas de seguridad que el firewall está diseñado para bloquear. Al habilitar reglas para la depuración remota se desbloquean los puertos y los programas mostrados en este tema.  
   
-## Reglas de firewall en el servidor  
+## <a name="firewall-rules-on-the-server"></a>Reglas de firewall en el servidor  
  En el equipo en el que se ejecuta la instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)], use la aplicación **Firewall de Windows con seguridad avanzada** para especificar la siguiente información:  
   
 -   Agregar una regla de programa de entrada para sqlservr.exe. Debe tener una regla para cada instancia que necesite admitir sesiones de depuración remota.  
@@ -91,7 +95,7 @@ caps.handback.revision: 43
   
 -   Si la directiva de dominio necesita que las comunicaciones de red se realicen a través de IPsec, también debe agregar reglas de entrada que abran los puertos UDP 4500 y 500.  
   
-## Reglas de firewall en el cliente  
+## <a name="firewall-rules-on-the-client"></a>Reglas de firewall en el cliente  
  En el equipo que ejecuta el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , el programa de instalación de SQL Server o de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] puede haber configurado Firewall de Windows para permitir la depuración remota.  
   
  Si obtiene errores al intentar abrir una sesión de depuración remota, puede configurar manualmente las excepciones de programas y de puertos mediante **Firewall de Windows con seguridad avanzada** para configurar reglas de firewall:  
@@ -146,7 +150,7 @@ caps.handback.revision: 43
   
     9. Seleccione **TCP** en el cuadro **Tipo de protocolo:** , seleccione **Puertos dinámicos RPC** en el cuadro **Puerto local:** , haga clic en **Aplicar**y, a continuación, haga clic en **Aceptar**.  
   
-## Requisitos para iniciar el depurador  
+## <a name="requirements-for-starting-the-debugger"></a>Requisitos para iniciar el depurador  
  Todos los intentos de iniciar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] deben cumplir también los requisitos siguientes:  
   
 * [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] se debe ejecutar bajo una cuenta de Windows que sea miembro del rol fijo de servidor sysadmin.  
@@ -157,7 +161,7 @@ caps.handback.revision: 43
 
 * El servidor necesita comunicarse de nuevo con el cliente a través de RPC. La cuenta bajo la que se ejecuta el servicio SQL Server tendrá que autenticar los permisos para el cliente.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Ejecutar el depurador de Transact-SQL](../../relational-databases/scripting/run-the-transact-sql-debugger.md)   
  [Avanzar paso a paso por el código Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)   
@@ -165,3 +169,4 @@ caps.handback.revision: 43
  [Editor de consultas del motor de base de datos &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)  
   
   
+

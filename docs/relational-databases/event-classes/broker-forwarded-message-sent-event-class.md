@@ -1,27 +1,31 @@
 ---
-title: "Broker:Forwarded Message Sent (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker:Forwarded Message Sent, clase de eventos"
+title: Clase de eventos Broker:Forwarded Message Sent | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Forwarded Message Sent event class
 ms.assetid: d0ef74d9-a4ef-4918-aa21-6b267e85569f
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d0462975232b9391c8cd57bc6811934f82ea5cdc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Broker:Forwarded Message Sent (clase de eventos)
+# <a name="brokerforwarded-message-sent-event-class"></a>Broker:Forwarded Message Sent, clase de eventos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento Broker:Forwarded Message Sent cuando Service Broker reenvía un mensaje.  
   
-## Columnas de datos de la clase de eventos Broker:Forwarded Message Sent  
+## <a name="brokerforwarded-message-sent-event-class-data-columns"></a>Columnas de datos de la clase de eventos Broker:Forwarded Message Sent  
   
 |Columna de datos|Tipo|Descripción|Número de columna|Filtrable|  
 |-----------------|----------|-----------------|-------------------|----------------|  

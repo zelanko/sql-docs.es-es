@@ -1,30 +1,34 @@
 ---
-title: "Buscar en documentos mediante las listas de resultados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "búsquedas [SQL Server Management Studio], listas de resultados"
-  - "búsquedas de listas de resultados [SQL Server Management Studio]"
-  - "búsquedas [SQL Server Management Studio], varios archivos"
-  - "Editor de consultas [SQL Server Management Studio], buscar en varios archivos"
+title: Buscar en documentos mediante las listas de resultados | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- searches [SQL Server Management Studio], result lists
+- result list searches [SQL Server Management Studio]
+- searches [SQL Server Management Studio], multiple files
+- Query Editor [SQL Server Management Studio], search multiple files
 ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a63ced363f4aee6ece4481f7b89b0ab195b82019
+ms.lasthandoff: 04/11/2017
+
 ---
-# Buscar en documentos mediante las listas de resultados
+# <a name="search-documents-using-results-lists"></a>Buscar en documentos mediante las listas de resultados
   Con el cuadro de diálogo **Buscar y reemplazar** es posible buscar y reemplazar texto en todos los archivos de un proyecto o una solución, o en una carpeta del sistema de archivos, aunque no estén abiertos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Las coincidencias de las búsquedas realizadas con el cuadro de diálogo **Buscar y reemplazar** aparecen en las ventanas Resultados de la búsqueda 1 y Resultados de la búsqueda 2, que permiten ver el texto exacto de la línea que contiene la coincidencia.  
   
-### Para buscar en varios archivos  
+### <a name="to-search-in-multiple-files"></a>Para buscar en varios archivos  
   
 1.  En el menú **Editar** , elija **Buscar y reemplazar** y, a continuación, haga clic en **Buscar en archivos**.  
   
@@ -32,7 +36,7 @@ caps.handback.revision: 22
   
 3.  En la lista **Buscar en** , haga clic en **Todos los documentos abiertos**, **Proyecto actual**, **Toda la solución**o especifique una ruta de acceso.  
   
-4.  En la lista **Tipos de archivo** , seleccione uno de los conjuntos enumerados de extensiones de archivo o especifique las extensiones de los tipos de archivo que desea buscar, separadas por signos de punto y coma. Utilice \*.\* para buscar todos los archivos del directorio que aparece en la lista desplegable **Buscar en**.  
+4.  En la lista **Tipos de archivo** , seleccione uno de los conjuntos enumerados de extensiones de archivo o especifique las extensiones de los tipos de archivo que desea buscar, separadas por signos de punto y coma. Utilice \*.\* para buscar todos los archivos del directorio que aparece en la lista desplegable **Buscar en** .  
   
 5.  Elija las opciones de búsqueda restantes para aumentar la precisión de la misma.  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 22
   
  Las coincidencias de la búsqueda aparecen, de forma predeterminada, en la ventana Resultados de la búsqueda 1. Puede examinar las coincidencias de la búsqueda si hace doble clic en cada entrada de la ventana Resultados de la búsqueda 1. Para ver los resultados de la búsqueda en una ventana nueva, seleccione **Mostrar resultados en otra ventana**.  
   
-#### Para reemplazar en varios archivos o carpetas  
+#### <a name="to-replace-across-multiple-files-or-folders"></a>Para reemplazar en varios archivos o carpetas  
   
 1.  En el menú **Editar** , elija **Buscar y reemplazar** y, a continuación, haga clic en **Reemplazar en archivos**.  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 22
   
  La información de reemplazo aparece de forma predeterminada en la ventana Resultados de la búsqueda 1. Puede examinar los reemplazos si hace doble clic en cada entrada de la ventana Resultados de la búsqueda 1.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Buscar y reemplazar](../../relational-databases/scripting/search-and-replace.md)   
  [Buscar documentos de forma interactiva](../../relational-databases/scripting/search-documents-interactively.md)   
  [Buscar texto con caracteres comodín](../../relational-databases/scripting/search-text-with-wildcards.md)   

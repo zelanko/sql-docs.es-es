@@ -1,24 +1,28 @@
 ---
-title: "Hacer una copia de seguridad de la clave maestra de servicio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clave maestra de servicio [SQL Server], exportar"
+title: Realizar una copia de seguridad de la clave maestra de servicio | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- service master key [SQL Server], exporting
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 630f9c3ecdf47e6cb7a5d9f2a7970bea99d330a9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Hacer una copia de seguridad de la clave maestra de servicio
+# <a name="back-up-the-service-master-key"></a>Hacer una copia de seguridad de la clave maestra de servicio
   En este tema se describe cómo realizar una copia de seguridad de la clave maestra de servicio en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La clave maestra de servicio es la raíz de la jerarquía de cifrado. Debe realizar una copia de seguridad de la clave maestra de servicio y almacenarla en una ubicación segura y fuera de las instalaciones. Crear esta copia de seguridad debe ser una de las primeras acciones de administración que se realicen en el servidor.  
   
  **En este tema**  
@@ -46,7 +50,7 @@ caps.handback.revision: 18
   
 ##  <a name="Procedure"></a> Usar Transact-SQL  
   
-#### Para realizar una copia de seguridad de la clave maestra de servicio  
+#### <a name="to-back-up-the-service-master-key"></a>Para realizar una copia de seguridad de la clave maestra de servicio  
   
 1.  En [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], conéctese a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que contenga la clave maestra de servicio de la que desea hacer una copia de seguridad.  
   

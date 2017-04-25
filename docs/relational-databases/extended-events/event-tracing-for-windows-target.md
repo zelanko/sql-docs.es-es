@@ -1,27 +1,31 @@
 ---
-title: "Seguimiento de eventos para Windows de destino | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "seguimiento de eventos para Windows de destino"
-  - "Destino ETW"
-  - "destinos [eventos extendidos de SQL Server], seguimiento de eventos para destino de Windows"
+title: Seguimiento de eventos para Windows como destino | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event tracing for windows target
+- ETW target
+- targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d69eb01f34774812aeaafbddcaa08b17f22ac097
+ms.lasthandoff: 04/11/2017
+
 ---
-# Seguimiento de eventos para Windows de destino
+# <a name="event-tracing-for-windows-target"></a>seguimiento de eventos para Windows de destino
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Antes de utilizar el Seguimiento de eventos para Windows (ETW) como destino, se recomienda tener conocimientos prácticos de ETW. El Seguimiento de eventos para Windows (ETW) se utiliza junto a Extended Events o como un consumidor de eventos de Extended Events. Los vínculos externos siguientes proporcionan un punto de inicio para obtener información general sobre ETW:  
@@ -54,7 +58,7 @@ caps.handback.revision: 13
 |------------|--------------------|-----------------|  
 |default_xe_session_name|Cualquier cadena de 256 caracteres, como máximo. Este valor es opcional.|El nombre de la sesión de Extended Events. De forma predeterminada, es XE_DEFAULT_ETW_SESSION.|  
 |default_etw_session_logfile_path|Cualquier cadena de 256 caracteres, como máximo. Este valor es opcional.|La ruta de acceso del archivo de registro para la sesión de Extended Events. De forma predeterminada, es %TEMP%\XEEtw.etl.|  
-|default_etw_session_logfile_size_mb|Un entero sin signo. Este valor es opcional.|El tamaño del archivo de registro, en megabytes (MB), para la sesión de Extended Events. El valor predeterminado es 20 MB.|  
+|default_etw_session_logfile_size_mb|Un entero sin signo. Este valor es opcional.|El tamaño del archivo de registro, en megabytes (MB), para la sesión de Extended Events. El valor predeterminado es 20 MB.|  
 |default_etw_session_buffer_size_kb|Un entero sin signo. Este valor es opcional.|El tamaño de búfer en memoria, en kilobytes (kB), para la sesión de Extended Events. El valor predeterminado es 128 kB.|  
 |retries|Un entero sin signo.|El número de veces que se debe reintentar publicar el evento al subsistema de ETW antes de quitar el evento. El valor predeterminado es 0.|  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 13
   
 -   Los archivos MOF (Managed Object Format) se encuentran en *\<su ruta de instalación>*\Microsoft SQL Server\Shared. Para obtener más información, vea [Formato de objetos administrados](http://go.microsoft.com/fwlink/?LinkId=92851) en MSDN.  
   
-## Agregar el destino a una sesión  
+## <a name="adding-the-target-to-a-session"></a>Agregar el destino a una sesión  
  Para agregar el destino ETW a una sesión de eventos extendidos, debe incluir la siguiente instrucción al crear o modificar una sesión de eventos:  
   
 ```  
@@ -88,8 +92,8 @@ ADD TARGET package0.etw_classic_sync_target
   
  Para obtener más información sobre un ejemplo completo que muestra cómo usar el destino ETW, incluida la forma de ver los datos, vea [Supervisar la actividad del sistema mediante eventos extendidos](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
   
-## Vea también  
- [Destinos de SQL Server Extended Events](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)   
+## <a name="see-also"></a>Vea también  
+ [Destinos de SQL Server Extended Events](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)  

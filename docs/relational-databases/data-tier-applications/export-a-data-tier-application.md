@@ -1,40 +1,44 @@
 ---
-title: "Exportar una aplicaci&#243;n de capa de datos | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.exportdac.progress.f1"
-  - "sql13.swb.exportdac.summary.f1"
-  - "sql13.swb.exportdac.results.f1"
-  - "sql13.swb. exportdac.results.f1"
-  - "sql13.swb. exportdac.summary.f1"
-  - "sql13.swb. exportdac.settings.f1"
-  - "sql13.swb.exportdac.welcome.f1"
-  - "sql13.swb.exportdac.settings.f1"
-helpviewer_keywords: 
-  - "Cómo [DAC], exportar"
-  - "asistente [DAC], exportar"
-  - "DAC, exportar"
-  - "aplicación de capa de datos [SQL Server], exportar"
+title: "Exportar una aplicación de capa de datos | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.exportdac.progress.f1
+- sql13.swb.exportdac.summary.f1
+- sql13.swb.exportdac.results.f1
+- sql13.swb. exportdac.results.f1
+- sql13.swb. exportdac.summary.f1
+- sql13.swb. exportdac.settings.f1
+- sql13.swb.exportdac.welcome.f1
+- sql13.swb.exportdac.settings.f1
+helpviewer_keywords:
+- How to [DAC], export
+- wizard [DAC], export
+- export DAC
+- data-tier application [SQL Server], export
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 6a68d0e0a9347331c31b6e4d09b1ec7e9856742a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exportar una aplicaci&#243;n de capa de datos
-  Al exportar una aplicación de capa de datos (DAC) o base de datos implementada se crea un archivo de exportación que incluye las definiciones de los objetos de la base de datos y todos los datos contenidos en las tablas. El archivo de exportación se podrá importar a otra instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o a [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Las operaciones de exportación-importación se pueden combinar para migrar una DAC de una instancia a otra, crear un archivo o crear una copia local de una base de datos implementada en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+# <a name="export-a-data-tier-application"></a>Exportar una aplicación de capa de datos
+  Al exportar una aplicación de capa de datos (DAC) o base de datos implementada se crea un archivo de exportación que incluye las definiciones de los objetos de la base de datos y todos los datos contenidos en las tablas. El archivo de exportación se podrá importar a otra instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]o a [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Las operaciones de exportación-importación se pueden combinar para migrar una DAC de una instancia a otra, crear un archivo o crear una copia local de una base de datos implementada en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-## Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de comenzar  
  El proceso de exportación compila un archivo de exportación DAC en dos fases.  
   
 1.  La exportación genera una definición de DAC en el archivo de exportación, archivo BACPAC, de la misma forma que un extracto de DAC genera una definición de DAC en un archivo de paquete DAC. La definición de DAC exportada incluye todos los objetos de la base de datos actual. Si el proceso de exportación se ejecuta en una base de datos que se implementó originalmente a partir de una DAC y se realizaron cambios directamente en la base de datos tras la implementación, la definición exportada coincide con el objeto establecido en la base de datos, no con lo definido en la DAC original.  
@@ -43,10 +47,9 @@ caps.handback.revision: 19
   
  El proceso de exportación establece la versión de DAC en 1.0.0.0 y la descripción de DAC en el archivo de exportación en una cadena vacía. Si la base de datos se implementó a partir de una DAC, la definición de DAC del archivo de exportación contiene el nombre asignado a DAC original; de lo contrario, el nombre de la DAC se establece el nombre de la base de datos.  
   
- Hay una aplicación de ejemplo en las prácticas de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] que se pueden usar para probar la exportación e importación de DAC y bases de datos. Para obtener instrucciones acerca de cómo descargar y usar el ejemplo, vea [Importación y exportación de bases de datos para base de datos de Windows Azure SQL](http://go.microsoft.com/fwlink/?LinkId=219404).  
-  
+
 ###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
- Una DAC o base de datos solo se puede extraer de una base de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o posterior.  
+ Una DAC o base de datos solo se puede extraer de una base de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o posterior.  
   
  No puede exportar una base de datos que tenga objetos que no se admiten en una DAC, o usuarios contenidos. Para obtener más información acerca de los objetos admitidos por una DAC, vea [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
@@ -85,16 +88,16 @@ caps.handback.revision: 19
   
  **No volver a mostrar esta página.** - Active la casilla para que la página Introducción deje de mostrarse en el futuro.  
   
- **Siguiente**: avanza a la página **Seleccionar paquete DAC**.  
+ **Siguiente** : avanza a la página **Seleccionar paquete DAC** .  
   
  **Cancelar** ; cancela la operación y cierra el asistente.  
   
 ##  <a name="Export_settings"></a> Página Exportar configuraciones  
  En esta página se puede especificar la ubicación donde se desea crear el archivo BACPAC.  
   
--   **Guardar en disco local**: crea un archivo BACPAC en un directorio del equipo local. Haga clic en **Examinar…** para navegar por el equipo local, o especifique la ruta de acceso en el espacio proporcionado. El nombre de ruta de acceso debe incluir un nombre de archivo y la extensión .bacpac.  
+-   **Guardar en disco local** : crea un archivo BACPAC en un directorio del equipo local. Haga clic en **Examinar…** para navegar por el equipo local, o especifique la ruta de acceso en el espacio proporcionado. El nombre de ruta de acceso debe incluir un nombre de archivo y la extensión .bacpac.  
   
--   **Guardar en Windows Azure**: crea un archivo BACPAC en un contenedor de Windows Azure. Debe conectarse a un contenedor de Windows Azure para validar esta opción. Observe que esta opción también requiere que se especifique un directorio local para el archivo temporal. Tenga en cuenta que el archivo temporal se creará en la ubicación especificada y permanecerá en ella una vez completada la operación.  
+-   **Guardar en Windows Azure** : crea un archivo BACPAC en un contenedor de Windows Azure. Debe conectarse a un contenedor de Windows Azure para validar esta opción. Observe que esta opción también requiere que se especifique un directorio local para el archivo temporal. Tenga en cuenta que el archivo temporal se creará en la ubicación especificada y permanecerá en ella una vez completada la operación.  
   
  Para especificar un subconjunto de tablas para exportar, utilice la opción **Avanzadas** .  
   
@@ -125,7 +128,7 @@ caps.handback.revision: 19
   
 3.  Use el método de **Export** de tipo **Microsoft.SqlServer.Management.Dac.DacStore** para exportar la DAC. Especifique el nombre de la DAC que se exportará y la ruta de acceso a la carpeta donde se va a guardar el archivo de exportación.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Extraer una DAC de una base de datos](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)  
   

@@ -1,31 +1,35 @@
 ---
-title: "Showplan All for Query Compile (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Showplan All for Query Compile [clase de eventos]"
+title: Clase de eventos Showplan All for Query Compile | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Showplan All for Query Compile event class
 ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14a4d2efcbb069e46c155e5beef01ce3b9ce5cce
+ms.lasthandoff: 04/11/2017
+
 ---
-# Showplan All for Query Compile (clase de eventos)
+# <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile [clase de eventos]
   La clase de eventos Showplan All for Query Compile se produce cuando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compila una instrucción SQL. Incluya esta clase de eventos para identificar los operadores Showplan. La información contenida es un subconjunto de la disponible en la clase de eventos Showplan XML For Query Compile.  
   
  La clase de eventos Showplan All for Query Compile muestra datos completos de tiempo de compilación, por lo que los seguimientos que incluyen Showplan All for Query Compile pueden afectar de forma considerable el rendimiento. Para minimizar este riesgo, limite el uso de esta clase de evento a los seguimientos que supervisan problemas específicos durante periodos breves.  
   
  Cuando se incluye la clase de eventos Showplan All for Query Compile en un seguimiento es preciso seleccionar la columna de datos BinaryData. Si no se incluye, la información de esta clase de eventos no se mostrará en el seguimiento.  
   
-## Columnas de datos de la clase de evento Showplan All For Query Compile  
+## <a name="showplan-all-for-query-compile-event-class-data-columns"></a>Columnas de datos de la clase de evento Showplan All For Query Compile  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -48,7 +52,7 @@ caps.handback.revision: 37
 |NTUserName|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |ObjectID|**int**|Identificador del objeto asignado por el sistema.|22|Sí|  
 |ObjectName|**nvarchar**|Nombre del objeto al que se hace referencia.|34|Sí|  
-|ObjectType|**int**|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la tabla sys.objects. Para ver los valores, consulte [Columna de evento de seguimiento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sí|  
+|ObjectType|**int**|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la tabla sys.objects. Para ver los valores, vea [Columna de evento de seguimiento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sí|  
 |IdSolicitud|**int**|Id. de la solicitud que contiene la instrucción.|49|Sí|  
 |ServerName|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |SessionLoginName|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
@@ -57,7 +61,7 @@ caps.handback.revision: 37
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que se utiliza para describir la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Referencia de operadores lógicos y físicos del plan de presentación](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  

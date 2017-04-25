@@ -1,28 +1,32 @@
 ---
-title: "Implementaci&#243;n segura (replicaci&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "seguridad [replicación de SQL Server], implementación"
-  - "seguridad de implementación [replicación de SQL Server]"
+title: "Implementación segura (replicación) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [SQL Server replication], deployment
+- deployment security [SQL Server replication]
 ms.assetid: 9c8c284a-e497-48b7-b2e2-c96a0e940e67
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8e255329a57a07eef46b9415a5fda63366f96298
+ms.lasthandoff: 04/11/2017
+
 ---
-# Implementaci&#243;n segura (replicaci&#243;n)
+# <a name="secure-deployment-replication"></a>Implementación segura (replicación)
   En esta sección se proporciona información para ayudarle a mejorar la replicación segura.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Proteger el distribuidor](../../../relational-databases/replication/security/secure-the-distributor.md)  
  Describe cómo proteger un distribuidor.  
   
@@ -35,14 +39,14 @@ caps.handback.revision: 13
  [Proteger la carpeta de instantáneas](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
  Describe los permisos requeridos para tener acceso a la carpeta de instantáneas, las prácticas recomendadas para definir la ubicación de carpetas y consideraciones que se deben tener en cuenta para entregar instantáneas a través de FTP.  
   
- [Proteger la replicación por Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
+ [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
  Incluye información sobre redes privadas virtuales y sincronización web.  
   
  [Consideraciones de seguridad para la replicación de SQL Server Compact](../../../relational-databases/replication/security/security-considerations-for-sql-server-compact-replication.md)  
- Describe la protección de la conectividad entre una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] y [!INCLUDE[ssEW](../../../includes/ssew-md.md)].  
+ Aborda la protección de la conectividad entre una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] y [!INCLUDE[ssEW](../../../includes/ssew-md.md)].  
   
-## Vea también  
- [Información general sobre seguridad & #40; Replicación y nº 41;](../../../relational-databases/replication/security/security-overview-replication.md)   
- [Secure Development & #40; Replicación y nº 41;](../../../relational-databases/replication/security/secure-development-replication.md)  
+## <a name="see-also"></a>Vea también  
+ [Información general sobre seguridad &#40;replicación&#41;](../../../relational-databases/replication/security/security-overview-replication.md)   
+ [Desarrollo seguro &#40;replicación&#41;](../../../relational-databases/replication/security/secure-development-replication.md)  
   
   

@@ -1,33 +1,37 @@
 ---
-title: "Ejemplo: restauraci&#243;n por etapas de la base de datos (modelo de recuperaci&#243;n completa) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modelo de recuperación completa [SQL Server], ejemplo de RESTORE"
-  - "restauraciones por etapas [SQL Server], modelo de recuperación completa"
-  - "secuencias de restauración [SQL Server], por etapas"
+title: "Ejemplo: restauración por etapas de la base de datos (modelo de recuperación completa) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full recovery model [SQL Server], RESTORE example
+- piecemeal restores [SQL Server], full recovery model
+- restore sequences [SQL Server], piecemeal
 ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a939ad4e9e5313961f681c06f896a9f53a906e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ejemplo: restauraci&#243;n por etapas de la base de datos (modelo de recuperaci&#243;n completa)
+# <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>Ejemplo: restauración por etapas de la base de datos (modelo de recuperación completa)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   En una secuencia de restauración por etapas se restaura y recupera una base de datos en fases en el nivel del grupo de archivos, empezando con los grupos de archivos principales, los de lectura y escritura, y los secundarios.  
   
- En este ejemplo, la base de datos `adb` se restaura en un nuevo equipo después de un desastre. La base de datos está utilizando el modelo de recuperación completa, por lo que, antes de iniciar la restauración, debe crearse una copia del final del registro de la base de datos. Antes del desastre, todos los grupos de archivos están en línea. El grupo de archivos `B` es de solo lectura. Se deben restaurar todos los grupos de archivos secundarios, pero por orden de importancia: `A` (el de mayor importancia), `C` y, por último, `B`. En este ejemplo, hay cuatro copias de seguridad de registros, incluida la copia del final del registro.  
+ En este ejemplo, la base de datos `adb` se restaura en un nuevo equipo después de un desastre. La base de datos está utilizando el modelo de recuperación completa, por lo que, antes de iniciar la restauración, debe crearse una copia del final del registro de la base de datos. Antes del desastre, todos los grupos de archivos están en línea. El grupo de archivos `B` es de solo lectura. Se deben restaurar todos los grupos de archivos secundarios, pero por orden de importancia: `A` (el de mayor importancia), `C`y, por último, `B`. En este ejemplo, hay cuatro copias de seguridad de registros, incluida la copia del final del registro.  
   
-## Copia del final del registro  
+## <a name="tail-log-backup"></a>Copia del final del registro  
  Antes de restaurar la base de datos, el administrador de la base de datos debe realizar una copia de seguridad de registros después del error. Puesto que la base de datos está dañada, es necesario usar la opción NO_TRUNCATE al realizar la copia del final del registro:  
   
 ```  
@@ -36,7 +40,7 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
  La copia del final del registro es la última copia de seguridad que se aplica en las secuencias de restauración siguientes.  
   
-## Secuencias de restauración  
+## <a name="restore-sequences"></a>Secuencias de restauración  
   
 > [!NOTE]  
 >  La sintaxis de un flujo de restauración en línea es la misma que la de un flujo de restauración sin conexión.  
@@ -82,7 +86,7 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
      Todos los grupos de archivos están ahora en línea.  
   
-## Otros ejemplos  
+## <a name="additional-examples"></a>Otros ejemplos  
   
 -   [Ejemplo: restauración por etapas de base de datos &#40;modelo de recuperación simple&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
@@ -92,15 +96,15 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
 -   [Ejemplo: restauración por etapas exclusiva para algunos grupos de archivos &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
--   [Ejemplo: restauración en línea de un archivo de lectura/escritura &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [Ejemplo: restauración con conexión de un archivo de lectura/escritura &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
--   [Ejemplo: restauración en línea de un archivo de solo lectura &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
+-   [Ejemplo: restauración con conexión de un archivo de solo lectura &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Restauración con conexión &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
- [Aplicar copias de seguridad de registros de transacción &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restauraciones por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   
   

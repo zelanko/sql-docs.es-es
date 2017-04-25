@@ -1,22 +1,26 @@
 ---
-title: "Llamar a procedimientos almacenados compilados de forma nativa desde aplicaciones de acceso a datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Llamar a procedimientos almacenados compilados de forma nativa desde aplicaciones de acceso a datos | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fce8ff8377ee7da4ff7c9d9e57ec01872702abc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Llamar a procedimientos almacenados compilados de forma nativa desde aplicaciones de acceso a datos
+# <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Llamar a procedimientos almacenados compilados de forma nativa desde aplicaciones de acceso a datos
   Este tema describe instrucciones para llamar a procedimientos almacenados compilados de forma nativa desde aplicaciones de acceso a datos.  
   
  Los cursores no pueden iterar sobre un procedimiento almacenado compilado de forma nativa.  
@@ -35,7 +39,7 @@ caps.handback.revision: 10
   
  Las siguientes recomendaciones se aplican a las llamadas a procedimientos almacenados compilados de forma nativa con el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- La forma más eficaz de llamar a un procedimiento almacenado es emitir una llamada RPC directa con **SQLExecDirect** y cláusulas ODBC CALL. No use la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]**EXECUTE**. Si un procedimiento almacenado se llama más de una vez, la ejecución preparada es más eficaz.  
+ La forma más eficaz de llamar a un procedimiento almacenado es emitir una llamada RPC directa con **SQLExecDirect** y cláusulas ODBC CALL. No use la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]**EXECUTE** . Si un procedimiento almacenado se llama más de una vez, la ejecución preparada es más eficaz.  
   
  La forma más eficaz de llamar a un procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] más de una vez es a través de llamadas a procedimientos RPC preparadas. Las llamadas a RPC preparadas se realizan como se indica a continuación con el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client:  
   
@@ -79,7 +83,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
 }  
 ```  
   
-## Usar ODBC para ejecutar un procedimiento almacenado compilado de forma nativa  
+## <a name="using-odbc-to-execute-a-natively-compiled-stored-procedure"></a>Usar ODBC para ejecutar un procedimiento almacenado compilado de forma nativa  
  En este ejemplo se muestra cómo enlazar parámetros y ejecutar procedimientos almacenados con el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  En el ejemplo se compila a una aplicación de consola que inserta un solo pedido mediante una ejecución directa, e inserta los detalles del pedido mediante una ejecución preparada.  
   
  Para ejecutar este ejemplo:  
@@ -391,7 +395,7 @@ int _tmain() {
 }  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

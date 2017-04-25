@@ -1,34 +1,38 @@
 ---
-title: "Sintaxis b&#225;sica de la cl&#225;usula FOR XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "BINARY BASE64, directiva"
-  - "ROOT, directiva"
-  - "cláusula FOR XML, directiva BINARY BASE64"
-  - "cláusula FOR XML, sintaxis"
-  - "cláusula FOR XML, directiva ROOT"
+title: "Sintaxis básica de la cláusula FOR XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- BINARY BASE64 directive
+- ROOT directive
+- FOR XML clause, BINARY BASE64 directive
+- FOR XML clause, syntax
+- FOR XML clause, ROOT directive
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55ad10ef334f0e5f754060c5abb619db6e837e97
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sintaxis b&#225;sica de la cl&#225;usula FOR XML
+# <a name="basic-syntax-of-the-for-xml-clause"></a>Sintaxis básica de la cláusula FOR XML
   El modo de FOR XML puede ser RAW, AUTO, EXPLICIT o PATH. Determina la forma del XML resultante.  
   
 > [!IMPORTANT]  
 >  La directiva XMLDATA para la opción FOR XML ha quedado desusada. Utilice la XSD generación en los modos RAW y AUTO. No hay sustitución para la directiva XMLDATA en modo EXPLICIT. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Aquí se muestra la sintaxis básica descrita en [FOR (Cláusula de Transact-SQL)](../Topic/FOR%20Clause%20\(Transact-SQL\).md):  
+ Aquí se muestra la sintaxis básica descrita en [FOR (Cláusula de Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md):  
   
 ```  
 [ FOR { BROWSE | <XML> } ]  
@@ -59,7 +63,7 @@ XML
    [ , ROOT [ ('RootName') ] ]  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  RAW[('*ElementName*')]  
  Obtiene el resultado de la consulta y transforma cada fila del conjunto de resultados en un elemento XML con un identificador genérico \<row /> como etiqueta del elemento. Opcionalmente, puede especificar un nombre para el elemento de fila cuando se utiliza esta directiva. El XML resultante utilizará el *ElementName* especificado como el elemento de fila generado para cada fila. Para obtener más información, vea [Usar el modo RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
   
@@ -75,7 +79,7 @@ XML
  XMLDATA  
  Especifica que se debe devolver un esquema XDR (XML-Data Reduced) insertado. El esquema se antepone al documento como un esquema insertado. Para obtener un ejemplo práctico, vea [Usar el modo RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
   
- XMLSCHEMA   
+ XMLSCHEMA  
  Devuelve un esquema XML W3C (XSD) insertado. Opcionalmente, puede especificar un URI de espacio de nombres de destino al especificar esta directiva. De este modo, se devuelve el espacio de nombres especificado en el esquema. Para obtener más información, vea [Generar un esquema XSD insertado](../../relational-databases/xml/generate-an-inline-xsd-schema.md). Para obtener un ejemplo práctico, vea [Usar el modo RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
   
  ELEMENTS  
@@ -85,12 +89,12 @@ XML
  Si se especifica la opción BINARY Base64, todos los datos binarios que devuelve la consulta se representan en formato codificado base64. Para recuperar datos binarios mediante el modo RAW y EXPLICIT, se debe especificar esta opción. En modo AUTO, de forma predeterminada, se devuelven datos binarios como una referencia. Para obtener un ejemplo práctico, vea [Usar el modo RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
   
  TYPE  
- Especifica que la consulta devuelve los resultados como el tipo **xml**. Para más información, consulte [TYPE Directive in FOR XML Queries](../../relational-databases/xml/type-directive-in-for-xml-queries.md).  
+ Especifica que la consulta devuelve los resultados como el tipo **xml** . Para más información, consulte [TYPE Directive in FOR XML Queries](../../relational-databases/xml/type-directive-in-for-xml-queries.md).  
   
  ROOT [('*RootName*')]  
  Especifica que se puede agregar un solo elemento de nivel superior al XML resultante. También se puede especificar el nombre del elemento raíz que se generará. El valor predeterminado es "root".  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Usar el modo RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
  [Usar el modo AUTO con FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
  [Usar el modo EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)   

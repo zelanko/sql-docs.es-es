@@ -1,29 +1,33 @@
 ---
-title: "Sort Warnings (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Sort Warnings, clase de eventos"
+title: Clase de eventos Sort Warnings | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Sort Warnings event class
 ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cf6c9f6f038f263ffe320dfee64f0fd09f9d3e76
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sort Warnings (clase de eventos)
+# <a name="sort-warnings-event-class"></a>Sort Warnings, clase de eventos
   La clase de eventos Sort Warnings indica que las operaciones de orden no caben en la memoria. Esto no incluye aquellas operaciones de orden que implican la creación de índices, solo las operaciones de orden dentro de una consulta (como las de una cláusula ORDER BY en una instrucción SELECT).  
   
  Si una consulta que incluye una operación de ordenación genera una clase de eventos Sort Warnings con el valor 2 para la columna de datos EventSubClass, podría verse afectado el rendimiento de la consulta, ya que es necesario pasar muchas veces por los datos para ordenarlos. Examine la consulta para determinar si se puede eliminar la operación de orden.  
   
-## Columnas de datos de la clase de evento Sort Warnings   
+## <a name="sort-warnings-event-class-data-columns"></a>Columnas de datos de la clase de evento Sort Warnings  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -49,7 +53,7 @@ caps.handback.revision: 31
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

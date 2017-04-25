@@ -1,32 +1,36 @@
 ---
-title: "Agregar un elemento de recopilaci&#243;n a un conjunto de recopilaci&#243;n (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "elementos de recopilación [SQL Server]"
-  - "conjuntos de recopilación [SQL Server], agregar elementos"
+title: "Agregar un elemento de recopilación a un conjunto de recopilación (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collection items [SQL Server]
+- collection sets [SQL Server], adding items
 ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 90261ca03da94b15b003da029f07d8804aaa1805
+ms.lasthandoff: 04/11/2017
+
 ---
-# Agregar un elemento de recopilaci&#243;n a un conjunto de recopilaci&#243;n (Transact-SQL)
+# <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>Agregar un elemento de recopilación a un conjunto de recopilación (Transact-SQL)
   Puede agregar un elemento de recopilación a una conjunto de recopilación existente mediante los procedimientos almacenados que se proporcionan con el recopilador de datos.  
   
  Lleve a cabo los pasos siguientes utilizando Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-### Agregar un elemento de recopilación a un conjunto de recopilación  
+### <a name="add-a-collection-item-to-a-collection-set"></a>Agregar un elemento de recopilación a un conjunto de recopilación  
   
-1.  Detenga el conjunto de recopilación al que quiere agregar el elemento; para ello, ejecute el procedimiento almacenado **sp_syscollector_stop_collection_set**. Por ejemplo, para detener un conjunto de recopilación denominado "Test Collection Set", ejecute las instrucciones siguientes:  
+1.  Detenga el conjunto de recopilación al que quiere agregar el elemento; para ello, ejecute el procedimiento almacenado **sp_syscollector_stop_collection_set** . Por ejemplo, para detener un conjunto de recopilación denominado "Test Collection Set", ejecute las instrucciones siguientes:  
   
     ```tsql  
     USE msdb  
@@ -96,8 +100,8 @@ caps.handback.revision: 21
   
      Los conjuntos de recopilación y sus elementos de recopilación se muestran en la pestaña **Resultados** .  
   
-## Vea también  
- [Crear un conjunto de recopilación personalizado que use el tipo de recopilador de consultas T-SQL genérico &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create custom collection set - generic t-sql query collector type.md)   
+## <a name="see-also"></a>Vea también  
+ [Crear un conjunto de recopilación personalizado que use el tipo de recopilador de consultas T-SQL genérico &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
  [Procedimientos almacenados del recopilador de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   
   

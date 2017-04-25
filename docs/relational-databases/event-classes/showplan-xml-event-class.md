@@ -1,38 +1,42 @@
 ---
-title: "Showplan XML (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Showplan XML [clase de eventos]"
+title: Clase de eventos Showplan XML | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Showplan XML event class
 ms.assetid: 8e22de84-8890-414a-93e4-aebfaa057d7f
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: da78c853075becf8d49fa00626b071bbbf5997c2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Showplan XML (clase de eventos)
+# <a name="showplan-xml-event-class"></a>Showplan XML [clase de eventos]
   La clase de eventos Showplan XML se produce cuando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta una instrucción SQL. Incluya la clase de eventos Showplan XML para identificar los operadores de plan de presentación. Esta clase de evento almacena cada evento como un documento XML bien definido.  
   
  Si se incluye la clase de eventos Showplan XML en un seguimiento, la carga hará disminuir significativamente el rendimiento. Showplan XML almacena un plan de consulta creado al optimizar la consulta. Para minimizar la carga, limite el uso de esta clase de evento a seguimientos que supervisan problemas específicos durante períodos de tiempo breves.  
   
  Los documentos de Showplan XML tienen un esquema asociado. Puede encontrar este esquema en el [sitio web de Microsoft](http://go.microsoft.com/fwlink/?LinkId=41740), o como parte de su instalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Columnas de datos de la clase de evento Showplan XML  
+## <a name="showplan-xml-event-class-data-columns"></a>Columnas de datos de la clase de evento Showplan XML  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
 |BinaryData|**imagen**|Costo estimado de la consulta.|2|No|  
 |ClientProcessID|**int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona su identificador de proceso.|9|Sí|  
-|DatabaseID|**int**|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
+|DatabaseID|**int**|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database*para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|**nvarchar**|Nombre de la base de datos.|35|No|  
 |Clase de eventos|**int**|Tipo de evento = 122.|27|No|  
 |EventSequence|**int**|Secuencia de un evento determinado dentro de la solicitud.|51|No|  
@@ -57,7 +61,7 @@ caps.handback.revision: 37
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que se utiliza para describir la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Referencia de operadores lógicos y físicos del plan de presentación](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  

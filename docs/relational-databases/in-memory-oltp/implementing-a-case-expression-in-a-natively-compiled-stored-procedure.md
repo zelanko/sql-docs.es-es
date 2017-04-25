@@ -1,23 +1,27 @@
 ---
-title: "Implementaci&#243;n de una expresi&#243;n CASE de un procedimiento almacenado compilado de forma nativa | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Implementación de una expresión CASE de un procedimiento almacenado compilado de forma nativa | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 89227fade8bab98e8c7de4f1119acf16bd28df76
+ms.lasthandoff: 04/11/2017
+
 ---
-# Implementaci&#243;n de una expresi&#243;n CASE de un procedimiento almacenado compilado de forma nativa
+# <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>Implementación de una expresión CASE de un procedimiento almacenado compilado de forma nativa
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Las expresiones CASE *no* se admiten en los procedimientos almacenados compilados de forma nativa. En el ejemplo siguiente se muestra una forma de implementar la funcionalidad de una expresión CASE en un procedimiento almacenado compilado de forma nativa.  
@@ -75,7 +79,7 @@ EXEC dbo.usp_SOHOnlineOrderResult
 GO  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Problemas de migración para los procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)   
  [Construcciones Transact-SQL no admitidas por OLTP en memoria](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   

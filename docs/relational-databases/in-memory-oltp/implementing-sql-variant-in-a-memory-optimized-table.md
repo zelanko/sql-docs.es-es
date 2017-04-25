@@ -1,25 +1,29 @@
 ---
-title: "Implementar SQL_VARIANT en una tabla con optimizaci&#243;n para memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Implementar SQL_VARIANT en una tabla con optimización para memoria | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
 caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3726302ad367aea494b75ec1562732d367800925
+ms.lasthandoff: 04/11/2017
+
 ---
-# Implementar SQL_VARIANT en una tabla con optimizaci&#243;n para memoria
+# <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>Implementar SQL_VARIANT en una tabla con optimización para memoria
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Considere una tabla de ejemplo con la columna **SQL_VARIANT**:  
+  Considere una tabla de ejemplo con la columna **SQL_VARIANT** :  
   
 ```tsql  
 CREATE TABLE [dbo].[T1]([Key] [sql_variant] NOT NULL)  
@@ -121,7 +125,7 @@ case [Key_enum] when 1 then convert(sql_variant, [Key_bi])
                        end  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

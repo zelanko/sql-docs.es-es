@@ -1,27 +1,31 @@
 ---
-title: "Objeto SQL Server, Caracter&#237;sticas en desuso | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Características en desuso"
-  - "contadores de rendimiento [SQL Server], características en desuso"
-  - "desuso [SQL Server], contadores de rendimiento"
-  - "Características en desuso, objeto"
+title: "Objeto SQL Server, Características en desuso | Microsoft Docs"
+ms.custom: 
+ms.date: 05/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Deprecated Features
+- performance counters [SQL Server], deprecated features
+- deprecation [SQL Server], performance counters
+- Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: 61
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1cbdf2dde41142d1b674e71df3a34756e8fcce99
+ms.lasthandoff: 04/11/2017
+
 ---
-# Objeto SQL Server, Caracter&#237;sticas en desuso
+# <a name="sql-server-deprecated-features-object"></a>Objeto SQL Server, Características en desuso
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   El objeto SQLServer:Características desusadas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un contador para supervisar las características designadas como desusadas. En cada caso, el contador proporciona un recuento de la utilización que muestra el número de veces que la característica desusada se encontró desde que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inició por última vez.  
@@ -41,10 +45,10 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
   
  En la tabla siguiente se describen las instancias del contador Características desusadas de SQL Server.  
   
-|Instancias del contador Características desusadas de SQL Server|Descripción|  
+|Instancias del contador Características desusadas de SQL Server|Description|  
 |------------------------------------------------------|-----------------|  
 |'#' y '##' como el nombre de tablas temporales y procedimientos almacenados|Se encontró un identificador que no contenía ningún carácter a parte de #. Utilice al menos un carácter adicional. Se produce una vez por cada compilación.|  
-|'::' function calling syntax|Se encontró la sintaxis de llamada a función :: para una función con valores de tabla. Reemplace por `SELECT column_list FROM` *\< nombre_función>*`()`. Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)` con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produce una vez por cada compilación.|  
+|'::' function calling syntax|Se encontró la sintaxis de llamada a función :: para una función con valores de tabla. Reemplace por `SELECT column_list FROM` *< nombre_función>*`()`. Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)` con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produce una vez por cada compilación.|  
 |'@' y nombres que comiencen por '@@' como identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]|Se encontró un identificador que comenzaba por @ o @@. No utilice @ o @@, o nombres que comiencen por @@ como identificadores. Se produce una vez por cada compilación.|  
 |ADDING TAPE DEVICE|Se encontró la característica en desuso sp_addumpdevice'**tape**'. Use sp_addumpdevice'**disk**' en su lugar. Se produce una vez en cada uso.|  
 |ALL Permission|Número total de veces que se encontró la sintaxis GRANT ALL, DENY ALL o REVOKE ALL. Modifique la sintaxis para denegar permisos concretos. Se produce una vez por cada consulta.|  
@@ -60,7 +64,7 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |CREATE TRIGGER WITH APPEND|Se encontró una instrucción CREATE TRIGGER con la cláusula WITH APPEND. Vuelva a crear el desencadenador entero en su lugar. Se produce una vez por cada uso en una instrucción DDL.|  
 |CREATE_DROP_DEFAULT|Se encontró la sintaxis CREATE DEFAULT o DROP DEFAULT. Vuelva a escribir el comando utilizando la opción DEFAULT de CREATE TABLE o ALTER TABLE. Se produce una vez por cada compilación.|  
 |CREATE_DROP_RULE|Se encontró la sintaxis CREATE RULE. Reescriba el comando utilizando las restricciones. Se produce una vez por cada compilación.|  
-|Data types: text ntext or image|Se encontraron los tipos de datos **text**, **ntext**o **image** . Reescriba las aplicaciones para usar el tipo de datos **varchar(max)** y quite la sintaxis de los tipos de datos **text**, **ntext** y **image**. Se produce una vez por cada consulta.|  
+|Data types: text ntext or image|Se encontraron los tipos de datos **text**, **ntext**o **image** . Reescriba las aplicaciones para usar el tipo de datos **varchar(max)** y quite la sintaxis de los tipos de datos **text**, **ntext**y **image** . Se produce una vez por cada consulta.|  
 ||Número total de veces que una base de datos se cambió al nivel de compatibilidad 80. Planee actualizar la base de datos y la aplicación antes de la versión siguiente. También se produce cuando se inicia una base de datos en el nivel de compatibilidad 80.|  
 |Niveles de compatibilidad de la base de datos 100, 110. 120|Número total de veces que el nivel de compatibilidad de una base de datos ha cambiado. Planee actualizar la base de datos y la aplicación en una versión futura. También se produce cuando se inicia una base de datos situada en un nivel de compatibilidad en desuso.|  
 |DATABASE_MIRRORING|Se encontraron referencias a la característica de creación de reflejo de la base de datos. Planee la actualización a Grupos de disponibilidad AlwaysOn, o si ejecuta una edición de SQL Server que no admite Grupos de disponibilidad AlwaysOn, planee la migración al trasvase de registros.|  
@@ -76,7 +80,7 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |Algoritmo hash en desuso|Use los algoritmos MD2, MD4, MD5, SHA, o SHA1.|  
 |Algoritmo DESX|Se encontró sintaxis que utiliza el algoritmo de cifrado DESX. Utilice otro algoritmo de cifrado. Se produce una vez por cada compilación.|  
 |dm_fts_active_catalogs|El contador dm_fts_active_catalogs siempre es 0 porque algunas columnas de la vista sys.dm_fts_active_catalogs no están desusadas. Para supervisar una columna desusada, use el contador específico de la columna; por ejemplo, dm_fts_active_catalogs.is_paused.|  
-|dm_fts_active_catalogs.is_paused|Se encontró la columna is_paused de la vista de administración dinámica [sys.dm_fts_active_catalogs](../../relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql.md). Procure no utilizar esta columna. Se produce cada vez que la instancia del servidor detecta una referencia a la columna.|  
+|dm_fts_active_catalogs.is_paused|Se encontró la columna is_paused de la vista de administración dinámica [sys.dm_fts_active_catalogs](../../relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql.md) . Procure no utilizar esta columna. Se produce cada vez que la instancia del servidor detecta una referencia a la columna.|  
 |dm_fts_active_catalogs.previous_status|Se encontró la columna previous_status de la vista de administración dinámica sys.dm_fts_active_catalogs. Procure no utilizar esta columna. Se produce cada vez que la instancia del servidor detecta una referencia a la columna.|  
 |dm_fts_active_catalogs.previous_status_description|Se encontró la columna previous_status_description de la vista de administración dinámica sys.dm_fts_active_catalogs. Procure no utilizar esta columna. Se produce cada vez que la instancia del servidor detecta una referencia a la columna.|  
 |dm_fts_active_catalogs.row_count_in_thousands|Se encontró la columna row_count_in_thousands de la vista de administración dinámica sys.dm_fts_active_catalogs. Procure no utilizar esta columna. Se produce cada vez que la instancia del servidor detecta una referencia a la columna.|  
@@ -84,7 +88,7 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |dm_fts_active_catalogs.status_description|Se encontró la columna status_description de la vista de administración dinámica sys.dm_fts_active_catalogs. Procure no utilizar esta columna. Se produce cada vez que la instancia del servidor detecta una referencia a la columna.|  
 |dm_fts_active_catalogs.worker_count|Se encontró la columna worker_count de la vista de administración dinámica sys.dm_fts_active_catalogs. Procure no utilizar esta columna. Se produce cada vez que la instancia del servidor detecta una referencia a la columna.|  
 |dm_fts_memory_buffers|El contador dm_fts_memory_buffers siempre es 0 porque la mayoría de las columnas de la vista sys.dm_fts_memory_buffers no están desusadas. Para supervisar la columna desusada, utilice el contador específico de la columna: dm_fts_memory_buffers.row_count.|  
-|dm_fts_memory_buffers.row_count|Se encontró la columna row_count de la vista de administración dinámica [sys.dm_fts_memory_buffers](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md). Procure no utilizar esta columna. Se produce cada vez que la instancia del servidor detecta una referencia a la columna.|  
+|dm_fts_memory_buffers.row_count|Se encontró la columna row_count de la vista de administración dinámica [sys.dm_fts_memory_buffers](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md) . Procure no utilizar esta columna. Se produce cada vez que la instancia del servidor detecta una referencia a la columna.|  
 |DROP INDEX con nombre de dos partes|La sintaxis de DROP INDEX contenía el formato de la sintaxis *table_name.index_name* en DROP INDEX. Reemplace por la sintaxis *index_name* ON *table_name* en la instrucción DROP INDEX. Se produce una vez por cada compilación.|  
 |EXT_CREATE_ALTER_SOAP_ENDPOINT|Se encontró la instrucción CREATE o ALTER ENDPOINT con la opción FOR SOAP. Servicios web XML nativos están desusados. Utilice Windows Communications Foundation (WCF) o ASP.NET en su lugar.|  
 |EXT_endpoint_webmethods|Se encontró sys.endpoint_webmethods. Servicios web XML nativos están desusados. Utilice Windows Communications Foundation (WCF) o ASP.NET en su lugar.|  
@@ -97,7 +101,7 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |fn_servershareddrives|Se compiló la función fn_servershareddrives. Utilice en su lugar sys.dm_io_cluster_shared_drives. Se produce una vez por cada compilación.|  
 |fn_virtualservernodes|Se compiló la función fn_virtualservernodes. Utilice en su lugar sys.dm_os_cluster_nodes. Se produce una vez por cada compilación.|  
 |fulltext_catalogs|El contador fulltext_catalogs siempre es 0 porque algunas columnas de la vista sys.fulltext_catalogs no están desusadas. Para supervisar una columna desusada, use su contador específico de la columna; por ejemplo, fulltext_catalogs.data_space_id. Se produce cada vez que la instancia del servidor detecta una referencia a la columna.|  
-|fulltext_catalogs.data_space_id|Se encontró la columna data_space_id de la vista de catálogo [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md). No utilice esta columna. Se produce cada vez que la instancia del servidor detecta una referencia a la columna.|  
+|fulltext_catalogs.data_space_id|Se encontró la columna data_space_id de la vista de catálogo [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) . No utilice esta columna. Se produce cada vez que la instancia del servidor detecta una referencia a la columna.|  
 |fulltext_catalogs.file_id|Se encontró la columna file_id de la vista de catálogo sys.fulltext_catalogs. No utilice esta columna. Se produce cada vez que la instancia del servidor detecta una referencia a la columna.|  
 |fulltext_catalogs.path|Se encontró la columna path de la vista de catálogo sys.fulltext_catalogs. No utilice esta columna. Se produce cada vez que la instancia del servidor detecta una referencia a la columna.|  
 |FULLTEXTCATALOGPROPERTY('LogSize')|Se encontró la propiedad LogSize de la función FULLTEXTCATALOGPROPERTY. Procure no utilizar esta propiedad.|  
@@ -123,7 +127,7 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |Nombre de columna de varias partes|Una consulta utilizó un nombre de 3 ó 4 partes en la lista de columnas. Cambie la consulta para que use nombres de 2 partes que cumplen el estándar. Se produce una vez por cada compilación.|  
 |Varias sugerencias de tabla sin coma|Se utilizó un espacio como separador entre las sugerencias de la tabla. Utilice en su lugar una coma. Se produce una vez por cada compilación.|  
 |NOLOCK or READUNCOMMITTED in UPDATE or DELETE|Se encontró NOLOCK o READUNCOMMITTED en la cláusula FROM de una instrucción UPDATE o DELETE. Quite las sugerencias de tabla NOLOCK o READUNCOMMITTED de la cláusula FROM.|  
-|Operadores de combinación externa no ANSI *= o =\*|Se encontró una instrucción que usa la sintaxis de combinación *= o =\*. Reescriba la instrucción para que use la sintaxis de unión de ANSI. Se produce una vez por cada compilación.|  
+|Operadores de combinación externa no ANSI *= o =\*|Se encontró una instrucción que usa la sintaxis de combinación *= o =\* . Reescriba la instrucción para que use la sintaxis de unión de ANSI. Se produce una vez por cada compilación.|  
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Hace referencia que se encontraron sys.numbered_procedure_parameters desusados. No debe usarse. Se produce una vez por cada compilación.|  
 |numbered_procedures|Hace referencia a que se encontraron sys.numbered_procedures desusados. No debe usarse. Se produce una vez por cada compilación.|  
@@ -131,7 +135,7 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |OLEDB para conexiones ad hoc|SQLOLEDB no es un proveedor admitido. Utilice [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para las conexiones ad hoc.|  
 |PERMISSIONS|Se encontraron referencias a la función intrínseca PERMISSIONS. Consulte en su lugar sys.fn_my_permissions. Se produce una vez por cada consulta.|  
 |ProcNums|Se encontró la sintaxis de ProcNums desusada. Reescriba las instrucciones para quitar las referencias. Se produce una vez por cada compilación.|  
-|READTEXT|Se encontró la sintaxis de READTEXT. Reescriba las aplicaciones para usar el tipo de datos **varchar(max)** y quite la sintaxis del tipo de datos **text**. Se produce una vez por cada consulta.|  
+|READTEXT|Se encontró la sintaxis de READTEXT. Reescriba las aplicaciones para usar el tipo de datos **varchar(max)** y quite la sintaxis del tipo de datos **text** . Se produce una vez por cada consulta.|  
 |RESTORE DATABASE o LOG WITH DBO_ONLY|Se encontró la sintaxis RESTORE … WITH DBO_ONLY. En su lugar, use RESTORE … RESTRICTED_USER.|  
 |RESTORE DATABASE or LOG WITH MEDIAPASSWORD|Se encontró la sintaxis RESTORE … WITH MEDIAPASSWORD. WITH MEDIAPASSWORD proporciona poca seguridad y se debería quitar.|  
 |RESTORE DATABASE or LOG WITH PASSWORD|Se encontró la sintaxis RESTORE … WITH PASSWORD. WITH PASSWORD proporciona poca seguridad y se debería quitar.|  
@@ -264,10 +268,10 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |sysusers|Se encontraron referencias a sysusers. Utilice en su lugar sys.database_principals. Se produce una vez por cada compilación.|  
 |Sugerencia de table sin WITH|Se encontró una instrucción que utilizaba sugerencias de tabla pero no usaba la palabra clave WITH. Modifique las instrucciones para incluir la palabra WITH. Se produce una vez por cada compilación.|  
 |Opción de tabla Text in row|Se encontraron referencias a la opción de tabla 'text in row'. Utilice sp_tableoption 'large value types out of row' en su lugar. Se produce una vez por cada consulta.|  
-|TEXTPTR|Se encontraron referencias a la función TEXTPTR. Reescriba las aplicaciones para usar el tipo de datos **varchar(max)** y quite la sintaxis de los tipos de datos **text**, **ntext** y **image**. Se produce una vez por cada consulta.|  
-|TEXTVALID|Se encontraron referencias a la función TEXTVALID. Reescriba las aplicaciones para usar el tipo de datos **varchar(max)** y quite la sintaxis de los tipos de datos **text**, **ntext** y **image**. Se produce una vez por cada consulta.|  
+|TEXTPTR|Se encontraron referencias a la función TEXTPTR. Reescriba las aplicaciones para usar el tipo de datos **varchar(max)** y quite la sintaxis de los tipos de datos **text**, **ntext**y **image** . Se produce una vez por cada consulta.|  
+|TEXTVALID|Se encontraron referencias a la función TEXTVALID. Reescriba las aplicaciones para usar el tipo de datos **varchar(max)** y quite la sintaxis de los tipos de datos **text**, **ntext**y **image** . Se produce una vez por cada consulta.|  
 |TIMESTAMP|Número total de veces que el tipo de datos **timestamp** obsoleto se encontró en una instrucción DDL. En su lugar, use el tipo de datos **rowversion** .|  
-|UPDATETEXT o WRITETEXT|Se encontró la instrucción WRITETEXT o UPDATETEXT. Reescriba las aplicaciones para usar el tipo de datos **varchar(max)** y quite la sintaxis de los tipos de datos **text**, **ntext** y **image**. Se produce una vez por cada consulta.|  
+|UPDATETEXT o WRITETEXT|Se encontró la instrucción WRITETEXT o UPDATETEXT. Reescriba las aplicaciones para usar el tipo de datos **varchar(max)** y quite la sintaxis de los tipos de datos **text**, **ntext**y **image** . Se produce una vez por cada consulta.|  
 |USER_ID|Se encontraron referencias a la función USER_ID. Utilice en su lugar la función DATABASE_PRINCIPAL_ID. Se produce una vez por cada compilación.|  
 |Uso de OLEDB para servidores vinculados||  
 |Formato de almacenamiento vardecimal|Se encontró que se usa el de formato de almacenamiento **vardecimal** . En su lugar, use la compresión de datos.|  
@@ -277,13 +281,14 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |xp_loginconfig|Se encontró el procedimiento xp_loginconfig. Utilice en su lugar el argumento IsIntegratedSecurityOnly de SERVERPROPERTY. Se produce una vez por cada consulta.|  
 |xp_revokelogin|Se encontró el procedimiento xp_revokelogin. Use ALTER LOGIN DISABLE o DROP LOGIN en su lugar. Se produce una vez por cada compilación.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Características desusadas del motor de base de datos de SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Características en desuso de búsqueda de texto completo en SQL Server 2016](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Deprecation Announcement (clase de eventos)](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Deprecation Final Support (clase de eventos)](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
  [Funcionalidad del motor de base de datos no incluida en SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Características descontinuadas de la búsqueda de texto completo incluidas en SQL Server 2016](../Topic/Discontinued%20Full-Text%20Search%20Features%20in%20SQL%20Server%202016.md)   
+ [Características descontinuadas de la búsqueda de texto completo incluidas en SQL Server 2016](http://msdn.microsoft.com/library/70587b3c-cc77-4681-924d-a1df7cdf1517)   
  [Usar objetos de SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   
+

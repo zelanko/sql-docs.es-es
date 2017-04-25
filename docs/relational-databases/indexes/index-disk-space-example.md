@@ -1,29 +1,33 @@
 ---
-title: "Ejemplo de espacio en disco del &#237;ndice | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "índice en línea, espacio de disco"
-  - "espacio de disco [SQL Server], índices"
-  - "índice, espacio de disco [SQL Server]"
-  - "espacio [SQL Server], índices"
-  - "índices [SQL Server], requisitos de espacio en disco"
-  - "índice sin conexión, espacio de disco [SQL Server]"
+title: "Ejemplo de espacio en disco del índice | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online index disk space
+- disk space [SQL Server], indexes
+- index disk space [SQL Server]
+- space [SQL Server], indexes
+- indexes [SQL Server], disk space requirements
+- offline index disk space [SQL Server]
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bbc1a254df5ff696cb99c9090aae37da70e8fbbf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ejemplo de espacio en disco del &#237;ndice
+# <a name="index-disk-space-example"></a>Ejemplo de espacio en disco del índice
   Cuando se crea, regenera o quita un índice, se necesita espacio en disco para las estructuras antiguas (origen) y nuevas (destino) en los archivos y grupos de archivos correspondientes. La asignación de la estructura antigua no se cancela hasta que no se confirma la transacción de creación del índice. También puede resultar necesario espacio en disco temporal adicional para operaciones de ordenación. Para más información, consulte [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
  En este ejemplo, se determinan las necesidades de espacio en disco para crear un índice clúster.  
@@ -43,7 +47,7 @@ caps.handback.revision: 30
     > [!NOTE]  
     >  Como resultado de la creación de un índice clúster, ambos índices no clúster deben regenerarse para reemplazar el indicador de filas con la clave del nuevo índice clúster.  
   
-## Cálculos de espacio en disco para una operación de índice sin conexión  
+## <a name="disk-space-calculations-for-an-offline-index-operation"></a>Cálculos de espacio en disco para una operación de índice sin conexión  
  En los pasos siguientes, se calcula el espacio en disco temporal que se utilizará en la operación del índice y el espacio en disco permanente necesario para almacenar los nuevos índices. Los cálculos que se muestran son aproximados; los resultados se redondean al número superior y solo se tiene en cuenta el tamaño del nivel hoja del índice. Para indicar cálculos aproximados, se utiliza la tilde (~).  
   
 1.  Determine el tamaño de las estructuras de origen.  
@@ -74,7 +78,7 @@ caps.handback.revision: 30
   
     1.  Si SORT_IN_TEMPDB se ha establecido en ON, **tempdb** debe disponer de espacio en disco suficiente para incluir el índice más grande (1 millón * 200 bytes ~ 200 MB). El factor de relleno no se tiene en cuenta en la operación de ordenación.  
   
-         El espacio en disco adicional (en la ubicación de **tempdb**) es igual al valor de [Establecer la opción de configuración del servidor Memoria para creación de índices](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) = 2 MB.  
+         El espacio en disco adicional (en la ubicación de **tempdb** ) es igual al valor de [Establecer la opción de configuración del servidor Memoria para creación de índices](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) = 2 MB.  
   
          Tamaño total de espacio en disco temporal con la opción SORT_IN_TEMPDB establecida en ON ~ 202 MB.  
   
@@ -88,7 +92,7 @@ caps.handback.revision: 30
   
  Si no se usa **tempdb**, se necesitan 818 MB (816 + 2) para crear los índices agrupados y no agrupados.  
   
-## Cálculos de espacio en disco para una operación de índice clúster en línea  
+## <a name="disk-space-calculations-for-an-online-clustered-index-operation"></a>Cálculos de espacio en disco para una operación de índice clúster en línea  
  Cuando se crea, quita o regenera un índice clúster en línea, se necesita espacio en disco adicional para generar y mantener un índice de asignación temporal. Este índice de asignación temporal contiene un registro por cada fila de la tabla y su contenido es la unión de las columnas de marcadores antiguas y nuevas.  
   
  Para calcular el espacio en disco necesario para una operación de índice clúster en línea, siga los pasos indicados para una operación de índice sin conexión y agregue el resultado al resultado del paso siguiente.  
@@ -103,7 +107,7 @@ caps.handback.revision: 30
   
  Para obtener más información sobre el índice de asignación temporal, vea [Requisitos de espacio en disco para operaciones DDL de índice](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
-## Resumen de espacio en disco  
+## <a name="disk-space-summary"></a>Resumen de espacio en disco  
  En la tabla siguiente se resumen los resultados de los cálculos del espacio en disco.  
   
 |Operación de índice|Requisitos de espacio en disco para las ubicaciones de las siguientes estructuras|  
@@ -117,8 +121,8 @@ caps.handback.revision: 30
   
  En este ejemplo no se tiene en cuenta el espacio en disco temporal adicional que se necesita en **tempdb** para los registros de versión creados por operaciones simultáneas de actualización y eliminación del usuario.  
   
-## Contenido relacionado  
- [Requisitos de espacio en disco para operaciones DDL de índice](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+## <a name="related-content"></a>Contenido relacionado  
+ [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
  [Espacio en disco del registro de transacciones para operaciones de índice](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   

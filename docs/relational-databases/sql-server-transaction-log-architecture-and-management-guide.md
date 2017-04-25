@@ -1,24 +1,29 @@
 ---
-title: "Arquitectura y administraci&#243;n de registros de transacciones de SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Arquitectura del registro de transacciones"
+title: "Guía de arquitectura y administración de registros de transacciones de SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 10/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transaction log architecture guide
+- guide, transaction log architecture
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 caps.latest.revision: 3
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5486c08226959ecb96431659ce2b865160d20680
+ms.lasthandoff: 04/11/2017
+
 ---
-# Arquitectura y administraci&#243;n de registros de transacciones de SQL Server
+# <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guía de arquitectura y administración de registros de transacciones de SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Todas las bases de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tienen un registro de transacciones que graba todas las transacciones y las modificaciones que cada transacción realiza en la base de datos. El registro de transacciones es un componente esencial de la base de datos y, si se produce un error del sistema, podría ser necesario para volver a poner la base de datos en un estado coherente. Esta guía proporciona información acerca de la arquitectura física y lógica del registro de transacciones. Comprender la arquitectura puede mejorar la eficacia en la administración de registros de transacciones.  
@@ -62,7 +67,7 @@ caps.handback.revision: 3
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] segmenta cada archivo de registro físico internamente en una serie de archivos de registro virtuales. Los archivos de registro virtuales no tienen un tamaño fijo y no hay un número fijo de archivos de registro virtuales para un archivo de registro físico. [!INCLUDE[ssDE](../includes/ssde-md.md)] elige dinámicamente el tamaño de los archivos de registro virtuales al crear o ampliar los archivos de registro. [!INCLUDE[ssDE](../includes/ssde-md.md)] intenta mantener un número reducido de archivos virtuales. El tamaño de los archivos virtuales después de ampliar un archivo de registro equivale a la suma del tamaño del registro existente y el tamaño del nuevo incremento del archivo. El tamaño o número de archivos de registro virtuales no lo pueden configurar ni establecer los administradores.  
   
- Los archivos de registro virtuales solo afectan al rendimiento del sistema si se definen archivos de registros físicos mediante valores pequeños para *size* y *growth_increment*. El valor *size* es el tamaño inicial del archivo de registro y el valor de *growth_increment* es la cantidad de espacio que se agrega al archivo cada vez que se necesita más espacio. Si los archivos de registro crecen hasta un tamaño grande debido a muchos incrementos pequeños, tendrán numerosos archivos de registro virtuales. Esto puede retrasar el inicio de la base de datos, así como las operaciones de copias de seguridad y restauración del registro. Se recomienda que los archivos de registro se definan con un valor *size* cercano al tamaño final necesario y que tengan también un valor de *growth_increment* relativamente alto. Para obtener más información sobre estos parámetros, consulte [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20(Transact-SQL).md).  
+ Los archivos de registro virtuales solo afectan al rendimiento del sistema si se definen archivos de registros físicos mediante valores pequeños para *size* y *growth_increment* . El valor *size* es el tamaño inicial del archivo de registro y el valor de *growth_increment* es la cantidad de espacio que se agrega al archivo cada vez que se necesita más espacio. Si los archivos de registro crecen hasta un tamaño grande debido a muchos incrementos pequeños, tendrán numerosos archivos de registro virtuales. Esto puede retrasar el inicio de la base de datos, así como las operaciones de copias de seguridad y restauración del registro. Se recomienda que los archivos de registro se definan con un valor *size* cercano al tamaño final necesario y que tengan también un valor de *growth_increment* relativamente alto. Para obtener más información sobre estos parámetros, consulte [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
  El registro de transacciones es un archivo de registro circular. Considere, por ejemplo, una base de datos con un archivo de registro físico dividido en cuatro archivos de registros virtuales. Cuando se crea la base de datos, el archivo de registro lógico empieza en el principio del archivo de registro físico. Las nuevas entradas del registro se agregan al final del registro lógico y se expanden hacia el final del archivo físico. El truncamiento del registro libera los registros virtuales cuyas entradas son anteriores al número de flujo de registro de recuperación mínimo (MinLSN). *MinLSN* es el número de flujo de registro de la entrada del registro más antigua necesaria para una reversión correcta de toda la base de datos. El registro de transacciones de ejemplo sería similar al de la siguiente ilustración.  
   
@@ -74,14 +79,14 @@ caps.handback.revision: 3
   
  El ciclo se repite indefinidamente, siempre que el final del registro lógico no alcance el inicio del registro lógico. Si las entradas antiguas se truncan con la frecuencia suficiente para disponer siempre de espacio para todas las nuevas entradas de registro que se van a crear hasta el próximo punto de comprobación, el registro no se llena nunca. Sin embargo, si el final del registro lógico llega al principio del registro lógico, se produce una de estas dos situaciones:  
   
--   Si el registro tiene habilitada la opción FILEGROWTH y hay espacio disponible en el disco, el archivo se amplía en la cantidad especificada en el parámetro *growth_increment* y las nuevas entradas del registro se escriben en la extensión. Para obtener más información sobre la opción FILEGROWTH, consulte [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20(Transact-SQL).md).  
+-   Si el registro tiene habilitada la opción FILEGROWTH y hay espacio disponible en el disco, el archivo se amplía en la cantidad especificada en el parámetro *growth_increment* y las nuevas entradas del registro se escriben en la extensión. Para obtener más información sobre la opción FILEGROWTH, consulte [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
 -   Si la opción FILEGROWTH no está habilitada o el disco que almacena el archivo de registro tiene menos espacio disponible que la cantidad especificada en *growth_increment*, se genera el error 9002.  
   
  Si el registro contiene varios archivos de registro físicos, el registro lógico pasará por todos los archivos de registro físicos antes de volver a empezar por el principio del primer archivo de registro físico.  
   
-### Truncamiento del registro  
- El truncamiento del registro es esencial para evitar que se llene. El truncamiento del registro elimina los archivos de registro virtuales inactivos del registro de transacciones lógico de una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], liberando espacio en el registro lógico para que lo reutilice el registro de transacciones físico. Si no se truncara nunca un registro de transacciones, acabaría ocupando todo el espacio de disco asignado a sus archivo de registro físicos. Sin embargo, para que se pueda truncar el registro, se debe realizar primero una operación de punto de comprobación. Un punto de comprobación escribe en el disco las páginas modificadas en memoria actuales (denominadas páginas desfasadas) y la información del registro de transacciones de la memoria. Cuando se lleva a cabo el punto de comprobación, la parte inactiva del registro de transacciones se marca como reutilizable. A partir de ese momento, se puede liberar la parte inactiva mediante el truncamiento del registro. Para obtener más información sobre los puntos de comprobación, consulte [Puntos de comprobación de base de datos &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
+### <a name="log-truncation"></a>Truncamiento del registro  
+ El truncamiento del registro es esencial para evitar que se llene. El truncamiento del registro elimina los archivos de registro virtuales inactivos del registro de transacciones lógico de una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , liberando espacio en el registro lógico para que lo reutilice el registro de transacciones físico. Si no se truncara nunca un registro de transacciones, acabaría ocupando todo el espacio de disco asignado a sus archivo de registro físicos. Sin embargo, para que se pueda truncar el registro, se debe realizar primero una operación de punto de comprobación. Un punto de comprobación escribe en el disco las páginas modificadas en memoria actuales (denominadas páginas desfasadas) y la información del registro de transacciones de la memoria. Cuando se lleva a cabo el punto de comprobación, la parte inactiva del registro de transacciones se marca como reutilizable. A partir de ese momento, se puede liberar la parte inactiva mediante el truncamiento del registro. Para obtener más información sobre los puntos de comprobación, consulte [Puntos de comprobación de base de datos &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
   
  En la siguiente ilustración se muestra un registro de transacciones antes y después del truncamiento. En la primera ilustración se muestra un registro de transacciones que no se ha truncado nunca. El registro lógico tiene actualmente cuatro archivos de registro virtuales en uso. El registro lógico comienza al principio del primer archivo de registro virtual y finaliza en el registro virtual 4. El registro de MinLSN está en el registro virtual 3. Los registros virtuales 1 y 2 solo contienen entradas de registro inactivas. Estas entradas pueden truncarse. El registro virtual 5 no se utiliza aún y no forma parte del registro lógico actual.  
   
@@ -115,22 +120,22 @@ caps.handback.revision: 3
   
  Para limitar el número de copias de seguridad del registro que necesita restaurar, es esencial que realice una copia de seguridad de sus datos periódicamente. Por ejemplo, podría programar una copia de seguridad completa de la base de datos cada semana y copias de seguridad diferenciales de la base de datos a diario.  
   
-### La cadena de registros  
+### <a name="the-log-chain"></a>La cadena de registros  
  Una secuencia continua de copias de seguridad de registros se denomina *cadena de registros*. Una cadena de registros empieza con una copia de seguridad completa de la base de datos. Normalmente, una cadena de registro nueva solo empieza cuando se realiza la primera copia de seguridad de la base de datos o después de que se cambie del modelo de recuperación simple al modelo de recuperación completa o al modelo de recuperación optimizado para cargas masivas de registros. A menos que se elija sobrescribir los conjuntos de copia de seguridad existentes al crear una copia de seguridad completa de la base de datos, la cadena de registros existente permanece intacta. Con la cadena de registros intacta, se puede restaurar la base de datos a partir de cualquier copia de seguridad completa de la base de datos del conjunto de medios, seguida de todas las copias de seguridad de los registros subsiguientes hasta el punto de recuperación. El punto de recuperación puede ser el final de la última copia de seguridad de registros o un punto de recuperación concreto de cualquiera de las copias de seguridad de registros. Para obtener más información, consulte [Copias de seguridad de registros de transacciones &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
  Para restaurar una base de datos al momento del error, es preciso que la cadena de registros esté intacta. De esta forma, es necesario que una secuencia ininterrumpida de las copias de seguridad del registro de transacciones se extienda hasta el momento del error. El lugar en el que esta secuencia de registros debe comenzar depende del tipo de copias de seguridad de datos que esté restaurando: de base de datos, parcial o de archivos. En las copias de seguridad de base de datos o parciales, la secuencia de copias de seguridad de registros debe extenderse desde el final de la copia de seguridad de base de datos o parcial. En un conjunto de copia de seguridad de archivos, la secuencia de copias de seguridad de registros debe comenzar desde el principio del conjunto completo de copias de seguridad de archivos. Para obtener más información, consulte [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-### Restaurar copias de seguridad de registros  
+### <a name="restore-log-backups"></a>Restaurar copias de seguridad de registros  
  Al restaurar una copia de seguridad de registros se ponen al día los cambios que se registraron en el registro de transacciones para volver a crear el estado exacto de la base de datos en el momento en que se inició la operación de copia de seguridad de registros. Al restaurar una base de datos, será necesario restaurar las copias de seguridad de registros creadas tras la copia de seguridad de la base de datos completa que esté restaurando o al principio de la primera copia de seguridad de archivos que esté restaurando. Normalmente, se debe restaurar una serie de copias de seguridad de registros hasta llegar al punto de recuperación después de haber restaurado la copia de seguridad de los datos o la copia de seguridad diferencial más recientes. A continuación, se realiza la recuperación de la base de datos. De esta manera, todas las transacciones que estaban incompletas cuando comenzó la recuperación se revertirán y la base de datos se conectará. Una vez recuperada la base de datos, ya no es posible restaurar más copias de seguridad. Para obtener más información, consulte [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
 
-## Puntos de comprobación y la parte activa del registro  
+## <a name="checkpoints-and-the-active-portion-of-the-log"></a>Puntos de comprobación y la parte activa del registro  
 
 Los puntos de comprobación vacían las páginas de datos desfasadas en la memoria caché del búfer de la base de datos actual en el disco. De este modo, se minimiza la parte activa del registro que se debe procesar durante una recuperación completa de una base de datos. Durante una recuperación completa, se llevan a cabo los siguientes tipos de acciones:
 
 * Se ponen al día los registros de modificaciones que no se vaciaron en el disco antes de detenerse el sistema.
 * Se revierten todas las modificaciones asociadas a transacciones incompletas, como las transacciones para las que no hay entradas COMMIT o ROLLBACK en el registro.
 
-### Funcionamiento de los puntos de comprobación
+### <a name="checkpoint-operation"></a>Funcionamiento de los puntos de comprobación
 
 Un punto de comprobación realiza los procesos siguientes en la base de datos:
 
@@ -150,9 +155,9 @@ Un punto de comprobación realiza los procesos siguientes en la base de datos:
 * Escribe en el archivo de registro un registro que marca el final del punto de comprobación.
 * Escribe el LSN del inicio de esta cadena en la página de arranque de la base de datos.
 
-#### Actividades que provocan un punto de comprobación
+#### <a name="activities-that-cause-a-checkpoint"></a>Actividades que provocan un punto de comprobación
 
-Los puntos de comprobación pueden darse en las situaciones siguientes:  
+Los puntos de comprobación pueden darse en las situaciones siguientes:
 
 * Se ejecuta explícitamente una instrucción CHECKPOINT. Se produce un punto de comprobación en la base de datos actual para la conexión.
 * Se realiza una operación registrada al mínimo en la base de datos; por ejemplo, se realiza una operación de copia masiva en una base de datos que utiliza el modelo de recuperación optimizado para cargas masivas de registros. 
@@ -162,16 +167,16 @@ Los puntos de comprobación pueden darse en las situaciones siguientes:
 * Se realiza una copia de seguridad de la base de datos.
 * Se realiza una actividad que requiere cerrar la base de datos. Por ejemplo, el valor de AUTO_CLOSE es ON y se ha cerrado la última conexión de usuario a la base de datos, o bien se realiza una modificación de una opción de la base de datos que requiere reiniciarla.
 
-### Puntos de comprobación automáticos
+### <a name="automatic-checkpoints"></a>Puntos de comprobación automáticos
 
 El motor de base de datos de SQL Server genera puntos de comprobación automáticos. El intervalo entre puntos de comprobación automáticos se basa en el espacio del registro utilizado y en el tiempo transcurrido desde el último punto de comprobación. El intervalo de tiempo entre los puntos de comprobación automáticos puede ser muy variable y largo si se realizan pocas modificaciones en la base de datos. Los puntos de comprobación automáticos también se pueden producir con frecuencia si se modifican muchos datos.
 
-El intervalo entre puntos de comprobación automáticos para todas las bases de datos de una instancia de servidor se calcula a partir de la opción de configuración del servidor **recovery interval**. Esta opción especifica el máximo de tiempo que el motor de base de datos debe usar para recuperar una base de datos al reiniciar el sistema. El motor de base de datos calcula cuántas entradas de registro puede procesar en el **intervalo de recuperación** durante una operación de recuperación. 
+El intervalo entre puntos de comprobación automáticos para todas las bases de datos de una instancia de servidor se calcula a partir de la opción de configuración del servidor **recovery interval** . Esta opción especifica el máximo de tiempo que el motor de base de datos debe usar para recuperar una base de datos al reiniciar el sistema. El motor de base de datos calcula cuántas entradas de registro puede procesar en el **intervalo de recuperación** durante una operación de recuperación. 
 
-El intervalo entre los puntos de comprobación automáticos depende también del modelo de recuperación:  
+El intervalo entre los puntos de comprobación automáticos depende también del modelo de recuperación:
 
 * Si la base de datos usa el modelo de recuperación completa o el modelo de recuperación optimizado para cargas masivas de registros, se generará un punto de comprobación automático cuando el número de entradas del registro alcance el número que el motor de base de datos estima que puede procesar durante el tiempo especificado en la opción de intervalo de recuperación.
-* Si la base de datos utiliza el modelo de recuperación simple, se generará un punto de comprobación automático cuando el número de registros alcance el menor de estos dos valores:  
+* Si la base de datos utiliza el modelo de recuperación simple, se generará un punto de comprobación automático cuando el número de registros alcance el menor de estos dos valores: 
 
     * El registro está ocupado en un 70 por ciento.
     * El número de entradas de registro alcanza el número que el motor de base de datos calcula que puede procesar en el periodo especificado en la opción de intervalo de recuperación.
@@ -186,7 +191,7 @@ Los puntos de comprobación automáticos truncan la parte no utilizada del regis
 Ahora la instrucción CHECKPOINT ofrece un argumento checkpoint_duration opcional que especifica en segundos el tiempo necesario para que finalicen los puntos de comprobación. Para obtener más información, consulte [CHECKPOINT](../t-sql/language-elements/checkpoint-transact-sql.md).
 
 
-### Registro activo
+### <a name="active-log"></a>registro activo
 
 La parte del archivo de registro desde el MinLSN hasta el último registro escrito se denomina parte activa del registro o registro activo. Se trata de la sección del registro necesaria para una recuperación completa de la base de datos. No se puede truncar ninguna parte del registro activo. Los truncamientos del registro se deben realizar en las partes del registro anteriores al MinLSN.
 
@@ -196,19 +201,19 @@ En la ilustración siguiente se muestra una versión simplificada del final de u
 
 LSN 148 es la última entrada del registro de transacciones. En el momento en que se procesó el registro del punto de comprobación en LSN 147, Tran 1 se había confirmado y Tran 2 era la única transacción activa. Esto hace que la primera entrada del registro para Tran 2 sea la entrada de transacción activa más antigua del registro en el momento del último punto de comprobación. Esto convierte al registro de inicio del registro de transacciones para Tran 2, LSN 142, en el MinLSN.
 
-### Transacciones de larga ejecución
+### <a name="long-running-transactions"></a>Transacciones de larga ejecución
 
 El registro activo debe incluir cada una de las partes de todas las transacciones no confirmadas. Una aplicación que inicia una transacción y no la confirma o la revierte impide que el motor de base de datos avance hacia el valor de MinLSN. Esto puede causar dos tipos de problemas:
 
-* Si se cierra el sistema después de que la transacción haya realizado un gran número de modificaciones no confirmadas, la fase de recuperación del siguiente reinicio puede durar bastante más que el tiempo especificado en la opción **recovery interval**.
+* Si se cierra el sistema después de que la transacción haya realizado un gran número de modificaciones no confirmadas, la fase de recuperación del siguiente reinicio puede durar bastante más que el tiempo especificado en la opción **recovery interval** .
 * Puede que el tamaño del registro aumente de forma considerable, porque no se puede truncar pasado el MinLSN. Esto ocurre incluso si la base de datos utiliza el modelo de recuperación simple, donde el registro de transacciones se suele truncar en cada punto de comprobación automático.
 
-### Transacciones de replicación
+### <a name="replication-transactions"></a>Transacciones de replicación
 
 El Agente de registro del LOG supervisa el registro de transacciones de cada base de datos configurada para la replicación transaccional y copia las transacciones marcadas para la replicación desde el registro de transacciones a la base de datos de distribución. El registro activo debe contener todas las transacciones marcadas para la replicación, pero que aún no se han entregado a la base de datos de distribución. Si estas transacciones no se replican puntualmente, pueden evitar el truncamiento del registro. Para obtener más información, consulte [Replicación transaccional](../relational-databases/replication/transactional/transactional-replication.md).
 
   
-## Lecturas adicionales  
+## <a name="additional-reading"></a>Lecturas adicionales  
  Se recomiendan los artículos y libros siguientes para obtener información adicional sobre el registro de transacciones.  
   
  [Descripción del registro y la recuperación en SQL Server por Paul Randall](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
@@ -216,3 +221,4 @@ El Agente de registro del LOG supervisa el registro de transacciones de cada bas
  [Administración de registros de transacciones de SQL Server por Tony Davis y Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   
+

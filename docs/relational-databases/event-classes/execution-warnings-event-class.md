@@ -1,27 +1,31 @@
 ---
-title: "Execution Warnings (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Execution Warnings, clase de eventos"
+title: Clase de eventos Execution Warnings | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Execution Warnings event class
 ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29117ed6015875dd09b515e78ac6cb23e5a4f22f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Execution Warnings (clase de eventos)
-  La clase de eventos Execution Warnings indica las advertencias de concesión de memoria que han tenido lugar durante la ejecución de una instrucción o procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta clase de evento puede supervisarse para determinar si las consultas han tenido que esperar uno o más segundos para obtener memoria antes de continuar, o si el intento inicial de obtener memoria no ha sido satisfactorio. La información sobre los períodos de espera de las consultas puede servir de ayuda para descubrir problemas de contención en el sistema que pueden afectar al rendimiento.  
+# <a name="execution-warnings-event-class"></a>Execution Warnings, clase de eventos
+  La clase de eventos Execution Warnings indica las advertencias de concesión de memoria que han tenido lugar durante la ejecución de una instrucción o procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esta clase de evento puede supervisarse para determinar si las consultas han tenido que esperar uno o más segundos para obtener memoria antes de continuar, o si el intento inicial de obtener memoria no ha sido satisfactorio. La información sobre los períodos de espera de las consultas puede servir de ayuda para descubrir problemas de contención en el sistema que pueden afectar al rendimiento.  
   
-## Columnas de datos de la clase de evento Execution Warnings   
+## <a name="execution-warnings-event-class-data-columns"></a>Columnas de datos de la clase de evento Execution Warnings  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -49,7 +53,7 @@ caps.handback.revision: 35
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

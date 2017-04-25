@@ -1,22 +1,26 @@
 ---
-title: "Configurar el cifrado de columna con PowerShell | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/10/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "powershell"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Configurar el cifrado de columna con PowerShell | Microsoft Docs
+ms.custom: 
+ms.date: 01/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- powershell
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 65fa326c931ed4a4bd534e7f70ca4e93811ee44d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurar el cifrado de columna con PowerShell
+# <a name="configure-column-encryption-using-powershell"></a>Configurar el cifrado de columna con PowerShell
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 En este artículo se proporcionan los pasos necesarios para establecer la configuración de destino de Always Encrypted para las columnas de base de datos mediante el cmdlet [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx) (en el módulo *SqlServer* de PowerShell). El cmdlet **Set-SqlColumnEncryption** modifica el esquema de la base de datos de destino y los datos almacenados en las columnas seleccionadas. Los datos almacenados en una columna se pueden cifrar, volver a cifrar o descifrar, en función de la configuración de cifrado de destino especificada para las columnas y la configuración de cifrado actual.
@@ -34,9 +38,9 @@ Para aplicar los valores de cifrado de destino especificad apara la base de dato
 
 El cmdlet **Set-SqlColumnEncryption** admite dos enfoques para configurar el cifrado de destino: en línea y sin conexión.
 
-Con el enfoque sin conexión, las tablas de destino (y cualquier tabla relacionada con las tablas de destino, es decir, cualquier tabla con la que una tabla de destino tenga relaciones de clave externa) no están disponibles para escribir transacciones durante todo el tiempo que demore la operación.
+Con el enfoque sin conexión, las tablas de destino (y cualquier tabla relacionada con las tablas de destino, es decir, cualquier tabla con la que una tabla de destino tenga relaciones de clave externa) no están disponibles para escribir transacciones durante todo el tiempo que demore la operación. La semántica de restricciones de clave externa (**CHECK** o **NOCHECK**) siempre se conserva cuando se utiliza el enfoque sin conexión.
 
-Con el enfoque en línea, la operación de copia y cifrado, descifrado o nuevo cifrado de los datos se realiza de manera incremental. Las aplicaciones pueden leer y escribir datos desde y hacia las tablas de destino a través de la operación de movimiento de datos, excepto en la última iteración, cuya duración está limitada por el parámetro MaxDownTimeInSeconds (que puede definir). Para detectar y procesar los cambios que las aplicaciones pueden hacer mientras se copian los datos, el cmdlet habilita el seguimiento de cambios en la base de datos de destino. Debido a esto, es probable que el enfoque en línea consuma más recursos en el lado servidor que el enfoque sin conexión. Es posible que la operación también demore mucho más con el enfoque en línea, especialmente si se ejecuta una carga de trabajo muy pesada en la base de datos. El enfoque en línea se puede usar para cifrar una tabla a la vez y la tabla debe tener una clave principal.
+Con el enfoque en línea (requiere el módulo SqlServer PowerShell de SSMS 17.0 o una versión posterior), la operación de copiar y cifrar, descifrar o volver a cifrar los datos se realiza de forma incremental. Las aplicaciones pueden leer y escribir datos desde y hacia las tablas de destino a través de la operación de movimiento de datos, excepto en la última iteración, cuya duración está limitada por el parámetro **MaxDownTimeInSeconds** (que puede definir). Para detectar y procesar los cambios que las aplicaciones pueden hacer mientras se copian los datos, el cmdlet habilita el [seguimiento de cambios](https://msdn.microsoft.com/library/bb964713.aspx) en la base de datos de destino. Debido a esto, es probable que el enfoque en línea consuma más recursos en el lado servidor que el enfoque sin conexión. Es posible que la operación también demore mucho más con el enfoque en línea, especialmente si se ejecuta una carga de trabajo muy pesada en la base de datos. El enfoque en línea se puede usar para cifrar una tabla a la vez y la tabla debe tener una clave principal. De forma predeterminada, se vuelven a crear restricciones de clave externa con la opción **NOCHECK** para minimizar el impacto en las aplicaciones. Puede exigir la conservación de la semántica de restricciones de clave externa mediante la especificación de la opción **KeepCheckForeignKeyConstraints**.
 
 A continuación, las directrices para elegir entre los enfoques sin conexión y en línea:
 
@@ -45,10 +49,10 @@ Use el enfoque sin conexión:
 - Para cifrar, descifrar y volver a cifrar columnas en varias tablas al mismo tiempo.
 - Si la tabla de destino no tiene una clave principal.
 
-Use el enfoque sin conexión:
-- Para minimizar el tiempo de inactividad y la no disponibilidad de las aplicaciones que usan la base de datos.
+Use el enfoque en línea:
+- Para minimizar el tiempo de inactividad y la no disponibilidad de la base de datos de para las aplicaciones.
 
-## <a name="security-considerations"></a>Consideraciones relativas a la seguridad
+## <a name="security-considerations"></a>Consideraciones de seguridad
 
 El cmdlet **Set-SqlColumnEncryption** , que se usa para configurar el cifrado de las columnas de la base de datos, administra las claves de Always Encrypted y los datos almacenados en las columnas de la base de datos. Por esta razón, es importante que ejecute el cmdlet en un equipo seguro. Si la base de datos está en SQL Server, ejecute el cmdlet en un equipo diferente del que hospeda la instancia de SQL Server. Dado que el objetivo principal de Always Encrypted es garantizar la seguridad de la información confidencial cifrada, incluso si el sistema de base de datos está en peligro, la ejecución de un script de PowerShell que procese las claves o la información confidencial en el equipo de SQL Server puede reducir o anular las ventajas de la característica.
 
@@ -58,7 +62,7 @@ Paso 1. Inicie un entorno de PowerShell e importe el módulo SqlServer. | [Impor
 Paso 2. Conecte con el servidor y la base de datos. | [Conectar a una base de datos](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Sí
 Paso 3. Autentíquese en Azure si la clave maestra de columna (que protege la clave de cifrado de columna que se va a rotar) se almacena en el Almacén de claves de Azure. | [Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx) | Sí | No
 Paso 4. Construya una matriz de objetos SqlColumnEncryptionSettings, una para cada columna de base de datos que quiera cifrar, volver a cifrar o descifrar. SqlColumnMasterKeySettings es un objeto que existe en memoria (en PowerShell). Especifica el esquema de cifrado de destino de una columna. | [New-SqlColumnEncryptionSettings](https://msdn.microsoft.com/library/mt759825.aspx) | No | No
-Paso 5. Establezca la configuración de cifrado que quiera, especificada en la matriz de objetos SqlColumnMasterKeySettings que creó en el paso anterior. Una columna se cifrará, se volverá a cifrar o se descifrará en función de la configuración de destino especificada y la configuración de cifrado actual de la columna.| [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx)<br><br>**Nota:** Este paso puede llevar mucho tiempo. Es posible que las aplicaciones no puedan tener acceso a las tablas durante toda la operación o parte de esta, dependiendo del enfoque (en línea o sin conexión) que seleccione. | Sí | Sí
+Paso 5. Establezca la configuración de cifrado que quiera, especificada en la matriz de objetos SqlColumnMasterKeySettings que creó en el paso anterior. Una columna se cifrará, se volverá a cifrar o se descifrará en función de la configuración de destino especificada y la configuración de cifrado actual de la columna.| [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx)<br><br>**Nota:** Este paso puede llevar mucho tiempo. Las aplicaciones no podrán tener acceso a las tablas durante toda la operación o parte de esta, dependiendo del enfoque (en línea o sin conexión) que seleccione. | Sí | Sí
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>Cifrar columnas con el enfoque sin conexión: ejemplo
 
@@ -150,5 +154,7 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
 ## <a name="additional-resources"></a>Recursos adicionales
 - [Configurar Always Encrypted con PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 - [Always Encrypted (motor de base de datos)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+
+
 
 

@@ -1,29 +1,33 @@
 ---
-title: "Acciones comunes que requieren una copia de seguridad actualizada | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "recuperar [replicación de SQL Server], acciones que requieren una copia de seguridad"
-  - "restaurar [replicación de SQL Server], acciones que requieren una copia de seguridad"
-  - "copias de seguridad [replicación de SQL Server], acciones que requieren una copia de seguridad"
+title: Acciones comunes que requieren una copia de seguridad actualizada | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recovery [SQL Server replication], actions requiring a backup
+- restoring [SQL Server replication], actions requiring a backup
+- backups [SQL Server replication], actions requiring a backup
 ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8784d006b175b3b6471464f401ad460080a273a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Acciones comunes que requieren una copia de seguridad actualizada
+# <a name="common-actions-requiring-an-updated-backup"></a>Acciones comunes que requieren una copia de seguridad actualizada
   Si realiza regularmente copias de seguridad de registros, éstas deben capturar todos los cambios relacionados con la replicación. Si no realiza copias de seguridad de registros, cree una copia de seguridad de las bases de datos de publicaciones, distribución, suscripciones, **msdb**y **maestra** después de realizar modificaciones en la topología o en el esquema de replicación.  
   
-## Base de datos de publicaciones  
+## <a name="publication-database"></a>Base de datos de publicaciones  
  Haga una copia de seguridad de la base de datos de publicaciones después de:  
   
 -   Crear nuevas publicaciones.  
@@ -36,7 +40,7 @@ caps.handback.revision: 32
   
 -   Realizar cambios de esquema en una tabla publicada.  
   
--   Realizando la ejecución del script a petición con [sp_addscriptexec & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md).  
+-   Realizar la ejecución de script a petición con [sp_addscriptexec &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md).  
   
 -   Cambiar cualquier propiedad de un artículo.  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 32
   
 -   Deshabilitar la replicación.  
   
-## Base de datos de distribución  
+## <a name="distribution-database"></a>Base de datos de distribución  
  Haga una copia de seguridad de la base de datos de distribución después de:  
   
 -   Crear o modificar perfiles de agente de replicación.  
@@ -57,7 +61,7 @@ caps.handback.revision: 32
   
 -   La función de administración automática de intervalos de identidades asigna un nuevo intervalo de identidades.  
   
-## Base de datos de suscripciones  
+## <a name="subscription-database"></a>Base de datos de suscripciones  
  Haga una copia de seguridad de la base de datos de suscripciones después de:  
   
 -   Cambiar una propiedad de suscripción.  
@@ -68,7 +72,7 @@ caps.handback.revision: 32
   
 -   Deshabilitar la replicación.  
   
-## Base de datos msdb  
+## <a name="msdb-database"></a>Base de datos msdb  
  Cree una copia de seguridad de la base de datos **msdb** del sistema en el nodo apropiado después de:  
   
 -   Habilitar o deshabilitar la replicación.  
@@ -89,7 +93,7 @@ caps.handback.revision: 32
   
 -   Agregar o quitar una suscripción transformable (en el distribuidor y en el suscriptor).  
   
-## Base de datos maestra  
+## <a name="master-database"></a>Base de datos maestra  
  Cree una copia de seguridad de la base de datos del sistema **mestra** en el nodo apropiado después de:  
   
 -   Habilitar o deshabilitar la replicación.  
@@ -104,7 +108,7 @@ caps.handback.revision: 32
   
 -   Habilitar o deshabilitar un publicador en un publicador de distribución (en el publicador y el distribuidor).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Hacer copias de seguridad y restaurar bases de datos replicadas](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
   

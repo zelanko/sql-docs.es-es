@@ -1,35 +1,39 @@
 ---
-title: "Datos espaciales (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tipo de datos geography [SQL Server], diseño de almacenamiento espacial"
-  - "datos espaciales planos [SQL Server], diseñar"
-  - "tipos de datos espaciales [SQL Server]"
-  - "datos espaciales geodésicos [SQL Server]"
-  - "tipo de datos geometry [SQL Server], diseño de almacenamiento espacial"
-  - "almacenamiento espacial [SQL Server]"
-  - "datos espaciales geodésicos [SQL Server], diseñar"
+title: Datos espaciales (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- geography data type [SQL Server], spatial storage design
+- planar spatial data [SQL Server], designing
+- spatial data types [SQL Server]
+- geodetic spatial data [SQL Server]
+- geometry data type [SQL Server], spatial storage design
+- spatial storage [SQL Server]
+- geodetic spatial data [SQL Server], designing
 ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a7ed039271847202c8c84a03ec56d55a96593089
+ms.lasthandoff: 04/11/2017
+
 ---
-# Datos espaciales (SQL Server)
+# <a name="spatial-data-sql-server"></a>Datos espaciales (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Los datos espaciales representan información sobre la ubicación física y la forma de objetos geométricos. Estos objetos pueden ser ubicaciones de punto u objetos más complejos como países, carreteras o lagos.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite dos tipos de datos espaciales: el tipo de datos **geometry** y el tipo de datos **geography**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite dos tipos de datos espaciales: el tipo de datos **geometry** y el tipo de datos **geography** .  
   
 -   El tipo **geometry** representa los datos en un sistema de coordenadas euclidiano (plano).  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 34
  [Crear, modificar y quitar índices espaciales](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md)  
  Proporciona información acerca de cómo crear, modificar y quitar un índice espacial.  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
  [Información general de los tipos de datos espaciales](../../relational-databases/spatial/spatial-data-types-overview.md)  
  Presenta los tipos de datos espaciales.  
   

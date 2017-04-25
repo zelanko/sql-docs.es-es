@@ -1,22 +1,26 @@
 ---
-title: "Estad&#237;sticas para las tablas con optimizaci&#243;n para memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Estadísticas para las tablas con optimización para memoria | Microsoft Docs"
+ms.custom: 
+ms.date: 10/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 caps.latest.revision: 18
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd78478647e468be36959aa201c94720be106d08
+ms.lasthandoff: 04/11/2017
+
 ---
-# Estad&#237;sticas para las tablas con optimizaci&#243;n para memoria
+# <a name="statistics-for-memory-optimized-tables"></a>Estadísticas para las tablas con optimización para memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   El optimizador de consultas utiliza las estadísticas de las columnas para crear planes de consulta que mejoren el rendimiento de las consultas. Las estadísticas se recopilan de las tablas de la base de datos y se almacenan en los metadatos de la base de datos.  
@@ -27,13 +31,13 @@ caps.handback.revision: 18
   
  Consideraciones sobre las estadísticas de tablas con optimización para memoria:  
   
--   A partir de SQL Server 2016 y de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], se admite la actualización automática de estadísticas de tablas con optimización para memoria, si se usa un nivel de compatibilidad de base de datos de al menos 130. Vea [Nivel de compatibilidad de ALTER DATABASE (Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20(Transact-SQL).md). Si una base de datos tiene tablas creadas anteriormente con un nivel de compatibilidad inferior, las estadísticas se tendrán que actualizar manualmente una vez para, así, poder actualizarlas automáticamente desde ese instante.
+-   A partir de SQL Server 2016 y de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], se admite la actualización automática de estadísticas de tablas con optimización para memoria, si se usa un nivel de compatibilidad de base de datos de al menos 130. Vea [Nivel de compatibilidad de ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Si una base de datos tiene tablas creadas anteriormente con un nivel de compatibilidad inferior, las estadísticas se tendrán que actualizar manualmente una vez para, así, poder actualizarlas automáticamente desde ese instante.
   
 -   En el caso de los procedimientos almacenados compilados de forma nativa, los planes de ejecución de las consultas del procedimiento se optimizan cuando se compila el procedimiento, algo que tiene lugar al crearlo. No se vuelven a compilar automáticamente cuando se actualizan las estadísticas. Por lo tanto, las tablas deben contener un conjunto de datos representativo para que los procedimientos puedan crearse.  
   
--   Los procedimientos almacenados compilados de forma nativa se pueden compilar manualmente con [sp_recompile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md) y se vuelven a compilar automáticamente si la base de datos se desconecta y se vuelve a conectar, o bien cuando hay un reinicio del servidor o una conmutación por error de la base de datos.  
+-   Los procedimientos almacenados compilados de forma nativa se pueden compilar manualmente con [sp_recompile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)y se vuelven a compilar automáticamente si la base de datos se desconecta y se vuelve a conectar, o bien cuando hay un reinicio del servidor o una conmutación por error de la base de datos.  
   
-## Habilitar la actualización automática de estadísticas de las tablas existentes
+## <a name="enabling-automatic-update-of-statistics-in-existing-tables"></a>Habilitar la actualización automática de estadísticas de las tablas existentes
 
 Cuando se crean tablas en una base de datos que tiene un nivel de compatibilidad de, como mínimo, 130, la actualización automática de estadísticas estará habilitada para todas las estadísticas de la tabla y no será necesario realizar ninguna acción.
 
@@ -83,10 +87,10 @@ FROM sys.stats s JOIN sys.tables o ON s.object_id=o.object_id
 WHERE o.is_memory_optimized=1
 ```
 
-## Directrices para implementar tablas y procedimientos  
+## <a name="guidelines-for-deploying-tables-and-procedures"></a>Directrices para implementar tablas y procedimientos  
  Para asegurarse de que el optimizador de consultas dispone de estadísticas actualizadas al crear los planes de consulta, haga lo siguiente para implementar tablas con optimización para memoria y procedimientos almacenados compilados de forma nativa con acceso a dichas tablas:  
   
-1.  Procure que el nivel de compatibilidad de la base de datos sea al menos 130. Vea [Nivel de compatibilidad de ALTER DATABASE (Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20(Transact-SQL).md).
+1.  Procure que el nivel de compatibilidad de la base de datos sea al menos 130. Vea [Nivel de compatibilidad de ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 2.  Cree tablas e índices. Los índices han de especificarse insertados en instrucciones **CREATE TABLE** .  
   
@@ -96,7 +100,8 @@ WHERE o.is_memory_optimized=1
   
  El hecho de crear procedimientos almacenados compilados de forma nativa después de cargar los datos garantiza que el optimizador va a disponer de estadísticas para las tablas con optimización para memoria. Esto garantizará planes de consulta eficaces cuando se compile el procedimiento.  
 
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
+

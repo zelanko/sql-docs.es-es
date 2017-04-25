@@ -1,27 +1,31 @@
 ---
-title: "DTCTransaction (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DTCTransaction [clase de eventos]"
+title: Clase de eventos DTCTransaction | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DTCTransaction event class
 ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a7832dce3ed058f5ddd599fd19abd9703b20ff06
+ms.lasthandoff: 04/11/2017
+
 ---
-# DTCTransaction (clase de eventos)
+# <a name="dtctransaction-event-class"></a>DTCTransaction [clase de eventos]
   Use la clase de eventos **DTCTransaction** para supervisar el estado de las transacciones del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] coordinadas por medio de [!INCLUDE[msCoName](../../includes/msconame-md.md)] DTC (Coordinador de transacciones distribuidas). Entre estas transacciones se incluyen las que implican dos o más bases de datos en la misma instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)], así como las transacciones distribuidas que implican dos o más instancias del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-## Columnas de datos de la clase de eventos DTCTransaction  
+## <a name="dtctransaction-event-class-data-columns"></a>Columnas de datos de la clase de eventos DTCTransaction  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -38,7 +42,7 @@ caps.handback.revision: 37
 |**IntegerData**|**int**|Nivel de aislamiento de la transacción.|25|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
 |**LoginName**|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con el formato DOMINIO\nombreDeUsuario).|11|Sí|  
-|**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals**. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
+|**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals** . Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |**IdSolicitud**|**int**|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
@@ -50,7 +54,7 @@ caps.handback.revision: 37
 |**TransactionID**|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |**XactSequence**|**bigint**|Token que se utiliza para describir la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

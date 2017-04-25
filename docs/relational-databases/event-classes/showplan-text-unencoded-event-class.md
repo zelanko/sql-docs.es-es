@@ -1,31 +1,35 @@
 ---
-title: "Showplan Text (Unencoded), clase de eventos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Showplan Text (Unencoded), clase de eventos"
+title: Clase de eventos Showplan Text (Unencoded) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Showplan Text (Unencoded) event class
 ms.assetid: 0aad4563-8caf-4971-92af-55992bc5ff2c
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 220e32e24330b8eeec2975b5b108c6f7d208cf76
+ms.lasthandoff: 04/11/2017
+
 ---
-# Showplan Text (Unencoded), clase de eventos
+# <a name="showplan-text-unencoded-event-class"></a>Showplan Text (Unencoded), clase de eventos
   La clase de eventos Showplan Text (Unencoded) se produce cuando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta una instrucción SQL. Esta clase de eventos es igual que la clase de eventos Showplan Text, pero la información de evento tiene formato de cadena en lugar de datos binarios.  
   
  La información contenida es un subconjunto de la información disponible en las clases de eventos Showplan All, Showplan XML o Showplan XML Statistics Profile.  
   
  Cuando se incluye la clase de eventos Showplan Text (Unencoded) en un seguimiento, la cantidad de sobrecarga puede reducir el rendimiento de forma significativa. Showplan Text (Unencoded) no provocará tanta sobrecarga como las demás clase de eventos Showplan. Para minimizar la sobrecarga provocada, limite la utilización de esta clase de eventos a los seguimientos que supervisan los problemas específicos durante períodos breves.  
   
-## Columnas de datos de la clase de eventos Showplan Text (Unencoded)  
+## <a name="showplan-text-unencoded-event-class-data-columns"></a>Columnas de datos de la clase de eventos Showplan Text (Unencoded)  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -48,7 +52,7 @@ caps.handback.revision: 28
 |NTUserName|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |ObjectID|**int**|Identificador del objeto asignado por el sistema.|22|Sí|  
 |ObjectName|**nvarchar**|Nombre del objeto al que se hace referencia.|34|Sí|  
-|ObjectType|**int**|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la vista de catálogo sys.objects. Para ver los valores, vea [Columna de evento de seguimiento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sí|  
+|ObjectType|**int**|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la vista de catálogo sys.objects. Para ver los valores, consulte [Columna de evento de seguimiento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sí|  
 |IdSolicitud|**int**|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
 |ServerName|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |SessionLoginName|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
@@ -58,7 +62,7 @@ caps.handback.revision: 28
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Referencia de operadores lógicos y físicos del plan de presentación](../../relational-databases/showplan-logical-and-physical-operators-reference.md)   
  [Showplan All (clase de eventos)](../../relational-databases/event-classes/showplan-all-event-class.md)   

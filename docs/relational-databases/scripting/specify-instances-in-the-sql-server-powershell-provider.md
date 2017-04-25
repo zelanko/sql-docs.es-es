@@ -1,29 +1,33 @@
 ---
-title: "Especificar instancias del proveedor de PowerShell de SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Especificar instancias del proveedor de PowerShell de SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9373de68-fd43-45f2-b9a6-149c96610aeb
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 514ea6e1125e1563f9afe16db4db87e5f17ee6c2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Especificar instancias del proveedor de PowerShell de SQL Server
+# <a name="specify-instances-in-the-sql-server-powershell-provider"></a>Especificar instancias del proveedor de PowerShell de SQL Server
   Las rutas de acceso especificadas para el proveedor de PowerShell de SQL Server deben identificar la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y el equipo en que se está ejecutando. La sintaxis para especificar el equipo y la instancia debe cumplir las reglas de los identificadores de SQL Server y las rutas de acceso de Windows PowerShell.  
   
-1.  **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions)  
+1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
   
-2.  **Para especificar una instancia:**  [Ejemplos](#Examples)  
+2.  **To specify an instance:**  [Examples](#Examples)  
   
-## Antes de empezar  
+## <a name="before-you-begin"></a>Antes de empezar  
  El primer nodo situado a continuación de SQLSERVER:\SQL en una ruta de acceso de proveedor de SQL Server es el nombre del equipo en el que se ejecuta la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)], por ejemplo:  
   
 ```  
@@ -74,7 +78,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT
     Set-Location SQLSERVER:\SQL\%28local%29\DEFAULT  
     ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Identificadores de SQL Server en PowerShell](../../relational-databases/scripting/sql-server-identifiers-in-powershell.md)   
  [Proveedor de PowerShell de SQL Server](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  

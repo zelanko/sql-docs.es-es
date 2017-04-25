@@ -1,23 +1,27 @@
 ---
-title: "Construcciones DDL admitidas para m&#243;dulos T-SQL compilados de forma nativa | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Construcciones DDL admitidas para módulos T-SQL compilados de forma nativa | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6b21f47e-bceb-4054-8b3c-9d39bb9583c0
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e6468568f12555425cb038ce6293f8777e0a3689
+ms.lasthandoff: 04/11/2017
+
 ---
-# Construcciones DDL admitidas para m&#243;dulos T-SQL compilados de forma nativa
+# <a name="supported-ddl-for-natively-compiled-t-sql-modules"></a>Construcciones DDL admitidas para módulos T-SQL compilados de forma nativa
   En este tema se enumeran las construcciones DDL admitidas para módulos T-SQL compilados de forma nativa, como procedimientos almacenados, UDF escalares, funciones TVF en línea y desencadenadores.  
   
  Para obtener información sobre las características y el área expuesta de T-SQL que se pueden usar como parte de los módulos T-SQL compilados de forma nativa, vea [Características admitidas en los módulos T-SQL compilados de forma nativa](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
@@ -54,7 +58,7 @@ caps.handback.revision: 12
   
      Para obtener más información, vea [GRANT &#40;permisos de objeto de Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md) y [DENY &#40;permisos de objeto de Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

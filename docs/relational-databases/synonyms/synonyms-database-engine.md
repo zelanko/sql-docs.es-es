@@ -1,26 +1,30 @@
 ---
-title: "Usar sin&#243;nimos (motor de base de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sinónimos [SQL Server], acerca de los sinónimos"
+title: "Usar sinónimos (motor de base de datos) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- synonyms [SQL Server], about synonyms
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 09336539a812ddf6c28e81344299750ba3177361
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar sin&#243;nimos (motor de base de datos)
+# <a name="synonyms-database-engine"></a>Usar sinónimos (motor de base de datos)
   Un sinónimo es un objeto de base de datos que sirve para los siguientes objetivos:  
   
 -   Proporciona un nombre alternativo para otro objeto de base de datos, denominado objeto base, que puede existir en un servidor local o remoto.  
@@ -29,7 +33,7 @@ caps.handback.revision: 31
   
  Por ejemplo, suponga la tabla **Employee** de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], situada en un servidor denominado **Server1**. Para hacer referencia a esta tabla desde otro servidor, **Server2**, una aplicación cliente tendría que usar el nombre de cuatro partes **Server1.AdventureWorks.Person.Employee**. Además, si la ubicación de la tabla cambiara, por ejemplo a otro servidor, la aplicación cliente debería modificarse para reflejar ese cambio.  
   
- Para solucionar ambas cosas, puede crear un sinónimo, **EmpTable**, en **Server2** para la tabla **Employee** en **Server1**. Ahora la aplicación cliente solo tiene que usar el nombre de una parte, **EmpTable**, para hacer referencia a la tabla **Employee**. Además, si la ubicación de la tabla **Employee** cambia, tendrá que modificar el sinónimo, **EmpTable**, para que apunte a la nueva ubicación de la tabla **Employee** . Puesto que no hay ninguna instrucción ALTER SYNONYM, primero tiene que quitar el sinónimo, **EmpTable** y, luego, volver a crearlo con el mismo nombre, pero apuntando a la nueva ubicación de **Employee**.  
+ Para solucionar ambas cosas, puede crear un sinónimo, **EmpTable**, en **Server2** para la tabla **Employee** en **Server1**. Ahora la aplicación cliente solo tiene que usar el nombre de una parte, **EmpTable**, para hacer referencia a la tabla **Employee** . Además, si la ubicación de la tabla **Employee** cambia, tendrá que modificar el sinónimo, **EmpTable**, para que apunte a la nueva ubicación de la tabla **Employee** . Puesto que no hay ninguna instrucción ALTER SYNONYM, primero tiene que quitar el sinónimo, **EmpTable**y, luego, volver a crearlo con el mismo nombre, pero apuntando a la nueva ubicación de **Employee**.  
   
  Un sinónimo pertenece a un esquema y, al igual que otros objetos de un esquema, el nombre de un sinónimo debe ser único. Puede crear sinónimos para los siguientes objetos de base de datos:  
   
@@ -53,11 +57,11 @@ caps.handback.revision: 31
   
  Las referencias a sinónimos no están enlazadas a esquema. Por tanto, un sinónimo puede quitarse en cualquier momento. Sin embargo, al quitar un sinónimo se corre el riesgo de dejar referencias pendientes al sinónimo quitado. Estas referencias solo se encontrarán en tiempo de ejecución.  
   
-## Sinónimos y esquemas  
+## <a name="synonyms-and-schemas"></a>Sinónimos y esquemas  
  Si tiene un esquema predeterminado que no posee y desea crear un sinónimo, debe calificar el nombre del sinónimo con el nombre de un esquema que posea. Por ejemplo, si posee un esquema **x**, pero **y** es su esquema predeterminado y usa la instrucción CREATE SYNONYM, debe poner un prefijo al nombre del sinónimo con el esquema **x**, en lugar de asignar un nombre al sinónimo mediante un nombre con una sola parte. Para obtener más información sobre cómo crear sinónimos, vea [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md).  
   
-## Conceder permisos para un sinónimo  
- Solo los propietarios de los sinónimos, miembros de **db_owner** o miembros de **db_ddladmin** pueden conceder permiso para un sinónimo.  
+## <a name="granting-permissions-on-a-synonym"></a>Conceder permisos para un sinónimo  
+ Solo los propietarios de los sinónimos, miembros de **db_owner**o miembros de **db_ddladmin** pueden conceder permiso para un sinónimo.  
   
  Puede conceder (GRANT), denegar (DENY) o revocar (REVOKE) todos o cualquiera de los siguientes permisos para un sinónimo:  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 31
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  
   
-## Usar sinónimos  
+## <a name="using-synonyms"></a>Usar sinónimos  
  Puede usar sinónimos en lugar de los objetos base a los que se hace referencia en varias instrucciones SQL y contextos de expresión. La siguiente tabla contiene una lista de estas instrucciones y contextos de expresiones:  
   
 |||  
@@ -110,14 +114,14 @@ EXEC ('ALTER TABLE dbo.MyProduct
   
  Para obtener más información sobre las funciones enlazadas a esquema, vea [Crear funciones definidas por el usuario &#40;motor de base de datos&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
-## Obtener información acerca de sinónimos  
+## <a name="getting-information-about-synonyms"></a>Obtener información acerca de sinónimos  
  La vista de catálogo sys.synonyms contiene una entrada para cada sinónimo de una base de datos determinada. Esta vista de catálogo expone metadatos de sinónimos, como el nombre del sinónimo y el nombre del objeto base. Para obtener más información sobre la vista de catálogo **sys.synonyms**, vea [sys.synonyms &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md).  
   
  Mediante las propiedades extendidas, puede agregar texto descriptivo o instrucciones, máscaras de entrada y reglas de formato como propiedades de un sinónimo. Puesto que la propiedad se almacena en la base de datos, todas las aplicaciones que leen la propiedad pueden evaluar el objeto de la misma manera. Para obtener más información, vea [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md).  
   
  Para buscar el tipo base del objeto base de un sinónimo, utilice la función OBJECTPROPERTYEX. Para obtener más información, vea [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md).  
   
-### Ejemplos  
+### <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se devuelve el tipo base del objeto base de un sinónimo; el objeto base es un objeto local.  
   
 ```  
@@ -141,7 +145,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID('MyRemoteEmployee'), 'BaseType') AS BaseType;
 GO  
 ```  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
  [Crear sinónimos](../../relational-databases/synonyms/create-synonyms.md)  
   
  [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)  

@@ -1,25 +1,29 @@
 ---
-title: "Tama&#241;o de tabla y fila de las tablas con optimizaci&#243;n para memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Tamaño de tabla y fila de las tablas con optimización para memoria | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 caps.latest.revision: 28
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57d2a22fc535f3613ce680156a0a6bb55ec62fa1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tama&#241;o de tabla y fila de las tablas con optimizaci&#243;n para memoria
+# <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamaño de tabla y fila de las tablas con optimización para memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Una tabla con optimización para memoria consta de una colección de filas e índices que contienen punteros a las filas. En una tabla con optimización para memoria, los datos consecutivos no pueden ser mayores de 8060 bytes. Pero, a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], se puede crear una tabla con varias columnas de gran tamaño (por ejemplo, varias columnas varbinary(8000)) y columnas LOB (por ejemplo, varbinary(max), varchar(max) y nvarchar(max)). Las columnas que superen el tamaño máximo de datos consecutivos se colocan de forma no consecutiva, en tablas internas especiales. Para obtener más información sobre estas tablas internas, vea [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
+  Una tabla con optimización para memoria consta de una colección de filas e índices que contienen punteros a las filas. En una tabla con optimización para memoria, los datos consecutivos no pueden ser mayores de 8060 bytes. Pero, a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , se puede crear una tabla con varias columnas de gran tamaño (por ejemplo, varias columnas varbinary(8000)) y columnas LOB (por ejemplo, varbinary(max), varchar(max) y nvarchar(max)). Las columnas que superen el tamaño máximo de datos consecutivos se colocan de forma no consecutiva, en tablas internas especiales. Para obtener más información sobre estas tablas internas, vea [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
   
  Hay dos motivos para calcular el tamaño de tabla y fila:  
   
@@ -37,7 +41,7 @@ Las columnas que no quepan en el límite de tamaño de fila de 8060 bytes se col
   
  La ilustración siguiente muestra una tabla con índices y filas, que a su vez tienen encabezados de fila y cuerpos:  
   
- ![Tabla con optimización para memoria.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Tabla con optimización para memoria.")  
+ ![Tabla con optimización para memoria.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
 La tabla con optimización para memoria, que consta de índices y filas.  
   
  El tamaño en memoria de una tabla, en bytes, se calcula de la forma siguiente:  
@@ -96,9 +100,9 @@ La tabla con optimización para memoria, que consta de índices y filas.
   
  La ilustración siguiente muestra la estructura de la fila de una tabla que tenga dos índices:  
   
- ![Estructura de fila para una tabla que tiene dos índices.](../../relational-databases/in-memory-oltp/media/hekaton-tables-4.gif "Estructura de fila para una tabla que tiene dos índices.")  
+ ![Estructura de fila para una tabla que tiene dos índices ](../../relational-databases/in-memory-oltp/media/hekaton-tables-4.gif "Estructura de fila para una tabla que tiene dos índices.")  
   
- Las marcas de tiempo de inicio y fin indican el periodo en el que una determinada versión de fila es válida. Las transacciones que se inician en este intervalo pueden ver esta versión de fila. Para obtener más detalles, vea [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md) (Transacciones con tablas con optimización para memoria).  
+ Las marcas de tiempo de inicio y fin indican el periodo en el que una determinada versión de fila es válida. Las transacciones que se inician en este intervalo pueden ver esta versión de fila. Para obtener más detalles, vea [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)(Transacciones con tablas con optimización para memoria).  
   
  Los punteros de índice señalan a la siguiente fila de la cadena que pertenece al cubo de hash. La ilustración siguiente muestra la estructura de una tabla con dos columnas (name, city) y dos índices, uno en el nombre de columna y en otro en la ciudad de la columna.  
   
@@ -227,7 +231,7 @@ select * from sys.dm_db_xtp_table_memory_stats
 where object_id = object_id('dbo.Orders')  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

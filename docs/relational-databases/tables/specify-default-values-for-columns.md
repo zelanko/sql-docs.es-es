@@ -1,25 +1,29 @@
 ---
-title: "Especificar valores predeterminados para las columnas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "columnas [SQL Server], valores predeterminados"
-  - "valores predeterminados"
+title: Especificar valores predeterminados para las columnas | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [SQL Server], defaults
+- default values
 ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 956e23e61cb97d5d1adecf4a06f40f734da42948
+ms.lasthandoff: 04/11/2017
+
 ---
-# Especificar valores predeterminados para las columnas
+# <a name="specify-default-values-for-columns"></a>Especificar valores predeterminados para las columnas
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Puede especificar un valor predeterminado que se escribirá en la columna de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si no asigna un valor predeterminado y el usuario deja la columna en blanco, entonces:  
@@ -61,7 +65,7 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para especificar un valor predeterminado para una columna  
+#### <a name="to-specify-a-default-value-for-a-column"></a>Para especificar un valor predeterminado para una columna  
   
 1.  En el **Explorador de objetos**, haga clic con el botón derecho en la tabla que contenga columnas cuya escala quiera cambiar y, después, haga clic en **Diseño**.  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para especificar un valor predeterminado para una columna  
+#### <a name="to-specify-a-default-value-for-a-column"></a>Para especificar un valor predeterminado para una columna  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

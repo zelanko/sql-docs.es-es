@@ -1,26 +1,30 @@
 ---
-title: "Ejemplo: Restauraci&#243;n en l&#237;nea de un archivo de lectura/escritura (modelo de recuperaci&#243;n completa) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modelo de recuperación completa [SQL Server], ejemplo de RESTORE"
-  - "restauraciones con conexión [SQL Server], modelo de recuperación completa"
-  - "secuencias de restauración [SQL Server], en línea"
+title: "Ejemplo: Restauración en línea de un archivo de lectura/escritura (modelo de recuperación completa) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full recovery model [SQL Server], RESTORE example
+- online restores [SQL Server], full recovery model
+- restore sequences [SQL Server], online
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4be86c808d1af35a04b10c88d5cecdd919416137
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ejemplo: Restauraci&#243;n en l&#237;nea de un archivo de lectura/escritura (modelo de recuperaci&#243;n completa)
+# <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>Ejemplo: Restauración en línea de un archivo de lectura/escritura (modelo de recuperación completa)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Este tema solo es de interés para las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contengan varios archivos o grupos de archivos con el modelo de recuperación completa.  
@@ -32,7 +36,7 @@ caps.handback.revision: 33
 > [!NOTE]  
 >  Con el modelo de recuperación simple no se puede realizar una restauración en línea de datos de lectura/escritura.  
   
-## Secuencias de restauración  
+## <a name="restore-sequences"></a>Secuencias de restauración  
   
 > [!NOTE]  
 >  La sintaxis de un flujo de restauración en línea es la misma que la de un flujo de restauración sin conexión.  
@@ -65,13 +69,13 @@ caps.handback.revision: 33
   
      Ahora el archivo `a1` está en línea.  
   
-## Otros ejemplos  
+## <a name="additional-examples"></a>Otros ejemplos  
   
 -   [Ejemplo: restauración por etapas de base de datos &#40;modelo de recuperación simple&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [Ejemplo: restauración por etapas exclusiva para algunos grupos de archivos &#40;modelo de recuperación simple&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
--   [Ejemplo: restauración en línea de un archivo de solo lectura &#40;modelo de recuperación simple&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [Ejemplo: restauración con conexión de un archivo de solo lectura &#40;modelo de recuperación simple&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
 -   [Ejemplo: restauración por etapas de base de datos &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   
@@ -79,12 +83,12 @@ caps.handback.revision: 33
   
 -   [Ejemplo: restauración en línea de un archivo de solo lectura &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Restauración con conexión &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [Restauraciones por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Información general sobre restauración y recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Aplicar copias de seguridad de registros de transacción &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

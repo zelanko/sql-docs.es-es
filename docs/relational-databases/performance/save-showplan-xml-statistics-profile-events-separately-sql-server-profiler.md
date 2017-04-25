@@ -1,29 +1,33 @@
 ---
-title: "Guardar de forma separada eventos Showplan XML Statistics Profile (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Showplan XML, eventos"
-  - "Showplan XML, guardar eventos"
-  - "eventos [SQL Server], Showplan XML"
+title: Guardar de forma separada eventos Showplan XML Statistics Profile (SQL Server Profiler) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Showplan XML events
+- saving Showplan XML events
+- events [SQL Server], Showplan XML
 ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1f079c68f7f54569dee1a6d9f2e9fa61f1893426
+ms.lasthandoff: 04/11/2017
+
 ---
-# Guardar de forma separada eventos Showplan XML Statistics Profile (SQL Server Profiler)
+# <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>Guardar de forma separada eventos Showplan XML Statistics Profile (SQL Server Profiler)
   En este tema se describe el modo de guardar eventos **Showplan XML Statistics Profile** capturados en seguimientos en archivos .SQLPlan diferentes mediante el uso del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Puede abrir los archivos de eventos **Showplan XML Statistics Profile** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], que le permite ver el plan de ejecución gráfico de cada evento.  
   
-### Para guardar eventos Showplan XML Statistics Profile por separado  
+### <a name="to-save-showplan-xml-statistics-events-separately"></a>Para guardar eventos Showplan XML Statistics Profile por separado  
   
 1.  En el menú **Archivo** , haga clic en **Nuevo seguimiento**y conéctese a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 20
   
 11. Para ver el archivo del evento **Showplan XML Statistics Profile** en SQL Server Management Studio, en el menú **Archivo** , seleccione **Abrir**y haga clic en **Archivo**. Diríjase al directorio en que guardó el archivo o archivos de eventos **Showplan XML Statistics Profile** para seleccionar un archivo y abrirlo. Los archivos de eventos**Showplan XML Statistics Profile** tienen una extensión de archivo .SQLPlan.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Analizar consultas con resultados de SHOWPLAN en SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

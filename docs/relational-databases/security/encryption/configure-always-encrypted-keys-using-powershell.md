@@ -1,22 +1,26 @@
 ---
-title: "Configurar claves de Always Encrypted con PowerShell | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Configurar claves Always Encrypted con PowerShell | Microsoft Docs
+ms.custom: 
+ms.date: 09/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-security
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3bdf8629-738c-489f-959b-2f5afdaf7d61
 caps.latest.revision: 27
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a66c8c05c1c56c11e1992b70f84a8a1878bc95d5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurar claves de Always Encrypted con PowerShell
+# <a name="configure-always-encrypted-keys-using-powershell"></a>Configure Always Encrypted Keys using PowerShell (Configurar claves Always Encrypted con PowerShell)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
     
@@ -44,7 +48,7 @@ Paso 6.  Autentíquese en Azure si la clave maestra de columna se almacena en el
 Paso 7.  Genere una nueva clave de cifrado de columna, cífrela con la clave maestra de columna y cree los metadatos de clave de cifrado de columna en la base de datos.     |    [New-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759808.aspx)<br><br>**Nota:** Use una variación del cmdlet que genera internamente y cifra una clave de cifrado de columna.<br><br>**Nota:** En segundo plano, este cmdlet emite la instrucción [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) para crear los metadatos de clave.  | Sí | Sí
   
 
-## Almacén de certificados de Windows sin separación de roles (ejemplo)
+## <a name="windows-certificate-store-without-role-separation-example"></a>Almacén de certificados de Windows sin separación de roles (ejemplo)
 
 Este script es un ejemplo completo para generar una clave maestra de columna que sea un certificado en el Almacén de certificados de Windows, generar y cifrar una clave de cifrado de columna y crear los metadatos de clave en una base de datos de SQL Server.
 
@@ -79,7 +83,7 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName  -InputObject $database -ColumnMasterKey $cmkName
 ```
 
-## Almacén de claves de Azure sin separación de roles (ejemplo)
+## <a name="azure-key-vault-without-role-separation-example"></a>Almacén de claves de Azure sin separación de roles (ejemplo)
 
 Este script es un ejemplo completo para aprovisionar y configurar un Almacén de claves de Azure, generar una clave maestra de columna en el almacén, generar y cifrar una clave de cifrado de columna y crear los metadatos de clave en una base de datos de Azure SQL.
 
@@ -126,7 +130,7 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName
 ```
 
-## CNG/KSP sin separación de roles (ejemplo)
+## <a name="cngksp-without-role-separation-example"></a>CNG/KSP sin separación de roles (ejemplo)
 
 El script siguiente es un ejemplo completo para generar una clave maestra de columna en un almacén de claves que implemente la API Cryptography Next Generation (CNG), generar y cifrar una clave de cifrado de columna y crear los metadatos de clave en una base de datos de SQL Server.
 
@@ -178,7 +182,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 En esta sección se proporcionan los pasos necesarios para configurar el cifrado cuando los administradores de seguridad no tienen acceso a la base de datos y los administradores de base de datos no tienen acceso al almacén de claves ni a las claves de texto no cifrado.
 
 
-### Administrador de seguridad
+### <a name="security-administrator"></a>Administrador de seguridad
 
 Antes de ejecutar cualquier paso que implique el acceso a las claves de texto no cifrado o al almacén de claves (identificado en la columna **Accede a claves de texto no cifrado o a almacén de claves** de la tabla siguiente), asegúrese de que:
 1.  El entorno de PowerShell se ejecuta en un equipo seguro distinto al equipo que hospeda la base de datos.
@@ -196,7 +200,7 @@ Paso 4.  Autentíquese en Azure si la clave maestra de columna se almacena en el
 Paso 5.  Genere una clave de cifrado de columna y cífrela con la clave maestra de columna para generar un valor cifrado de la clave de cifrado de columna.     |   [New-SqlColumnEncryptionKeyEncryptedValue](https://msdn.microsoft.com/library/mt759794.aspx)     |    Sí    | No        
 Paso 6.  Proporcione al DBA la ubicación de la clave maestra de columna (el nombre del proveedor y una ruta de acceso de la clave maestra de columna) y un valor cifrado de la clave de cifrado de columna.  | Vea los ejemplos siguientes.        |   No      | No         
 
-### DBA 
+### <a name="dba"></a>DBA 
 
 Los DBA usan la información que reciben del Administrador de seguridad (paso 6 anterior) para crear y administrar los metadatos de clave de Always Encrypted en la base de datos.
 
@@ -209,9 +213,9 @@ Paso 4.  Cree un objeto SqlColumnMasterKeySettings que contenga información sob
 Paso 5. Cree los metadatos sobre la clave maestra de columna en la base de datos. | [New-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759813.aspx)<br>**Nota:** En segundo plano, este cmdlet emite la instrucción [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) para crear metadatos de clave maestra de columna. | No | Sí
 Paso 6. Cree los metadatos de clave de cifrado de columna en la base de datos. | New-SqlColumnEncryptionKey<br>**Nota:** Los DBA usan una variación del cmdlet que solo crea los metadatos de clave de cifrado de columna.<br>En segundo plano, este cmdlet emite la instrucción [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) para crear los metadatos de clave de cifrado de columna. | No | Sí
   
-## Almacén de certificados de Windows con separación de roles (ejemplo)
+## <a name="windows-certificate-store-with-role-separation-example"></a>Almacén de certificados de Windows con separación de roles (ejemplo)
 
-### Administrador de seguridad
+### <a name="security-administrator"></a>Administrador de seguridad
 
 
 ```
@@ -241,7 +245,7 @@ $keyData.KeyPath
 $keyData.EncryptedValue 
 ```
 
-### DBA
+### <a name="dba"></a>DBA
 
 ```
 # Obtain the location of the column master key and the encrypted value of the column encryption key from your Security Administrator, via a CSV file on a share drive.
@@ -273,15 +277,17 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName -EncryptedValue $keyData.EncryptedValue
 ```  
  
-## Pasos siguientes    
+## <a name="next-steps"></a>Pasos siguientes    
 
 - [Configurar el cifrado de columna con PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md)    
 - [Rotar claves de Always Encrypted con PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
     
-## Recursos adicionales    
+## <a name="additional-resources"></a>Recursos adicionales    
     
-- [Overview of Key Management for Always Encrypted (Información general de administración de claves de Always Encrypted)](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [Configure Always Encrypted using PowerShell (Configurar Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
+- [Información general de administración de claves de Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
+- [Configurar Always Encrypted con PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 - [Always Encrypted (motor de base de datos)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted (desarrollo de clientes)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [Blog de Always Encrypted](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
+
+

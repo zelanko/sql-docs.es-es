@@ -1,36 +1,40 @@
 ---
-title: "Crear script para la replicaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "scripts [replicación de SQL Server], objetos de replicación"
-  - "crear script para la replicación de mezcla [replicación de SQL Server]"
-  - "replicación [SQL Server], scripts"
-  - "replicación de instantáneas [SQL Server], scripting"
-  - "scripts [replicación de SQL Server]"
-  - "replicación transaccional, scripting"
+title: "Crear script para la replicación | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- scripts [SQL Server replication], replication objects
+- merge replication scripting [SQL Server replication]
+- replication [SQL Server], scripting
+- snapshot replication [SQL Server], scripting
+- scripts [SQL Server replication]
+- transactional replication, scripting
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a9889d43aeed7cf80f5b28b427787519ab06bd84
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear script para la replicaci&#243;n
-  Todos los componentes de replicación de una topología deben convertirse en script como parte de un plan de recuperación de desastres y, además, los scripts también pueden utilizarse para automatizar tareas repetitivas. Un script  contiene los procedimientos almacenados del sistema Transact-SQL necesarios para implementar los componentes de replicación a los que se refieren los scripts, como una publicación o una suscripción. Se pueden crear secuencias de comandos en un asistente (por ejemplo, el Asistente para nueva publicación) o en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] después de crear un componente. Puede ver, modificar y ejecutar el script mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o **sqlcmd**. Los scripts se pueden almacenar con los archivos de copia de seguridad para utilizarlas en el caso de que se deba volver a configurar una topología de replicación.  
+# <a name="scripting-replication"></a>Crear script para la replicación
+  Todos los componentes de replicación de una topología deben convertirse en script como parte de un plan de recuperación de desastres y, además, los scripts también pueden utilizarse para automatizar tareas repetitivas. Un script  contiene los procedimientos almacenados del sistema Transact-SQL necesarios para implementar los componentes de replicación a los que se refieren los scripts, como una publicación o una suscripción. Los scripts se pueden crear en un asistente (como el Asistente para nueva publicación) o en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] después de crear un componente. Puede ver, modificar y ejecutar el script mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o **sqlcmd**. Los scripts se pueden almacenar con los archivos de copia de seguridad para utilizarlas en el caso de que se deba volver a configurar una topología de replicación.  
   
- Si se producen cambios en alguna propiedad, es necesario volver a generar el script de un componente. Si utiliza procedimientos almacenados personalizados con la replicación transaccional, debe guardar una copia de cada procedimiento con los scripts; la copia se debe actualizar si el procedimiento cambia (los procedimientos se actualizan normalmente como consecuencia de cambios de esquema o cambios en los requisitos de la aplicación. Para obtener más información acerca de los procedimientos personalizados, consulte [especificar cómo se propagan los cambios en los artículos transaccionales](../../relational-databases/replication/transactional/specify-how-changes-are-propagated-for-transactional-articles.md).  
+ Si se producen cambios en alguna propiedad, es necesario volver a generar el script de un componente. Si utiliza procedimientos almacenados personalizados con la replicación transaccional, debe guardar una copia de cada procedimiento con los scripts; la copia se debe actualizar si el procedimiento cambia (los procedimientos se actualizan normalmente como consecuencia de cambios de esquema o cambios en los requisitos de la aplicación. Para más información acerca de los procedimientos personalizados, vea [Specify How Changes Are Propagated for Transactional Articles](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md) (Especificar cómo se propagan los cambios para los artículos transaccionales).  
   
  Para las publicaciones de combinación que utilizan filtros con parámetros, los scripts de publicación contienen las llamadas al procedimiento almacenado para crear particiones de datos. El script proporciona una referencia para las particiones creadas y una forma de volver a crear una o más divisiones en caso necesario.  
   
-## Ejemplo de automatización de una tarea con scripts  
+## <a name="example-of-automating-a-task-with-scripts"></a>Ejemplo de automatización de una tarea con scripts  
  En el ejemplo [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]se implementa la replicación de mezcla para distribuir datos al personal de ventas que no trabaja en la oficina central. Un representante de ventas descarga todos los datos que pertenecen a los clientes de su zona utilizando suscripciones de extracción. Cuando trabaja sin conexión, el representante de ventas actualiza los datos e incluye clientes y pedidos nuevos. Como [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] dispone de más de 50 representantes de ventas en diferentes zonas, llevaría mucho tiempo crear las diferentes suscripciones necesarias en cada uno de los suscriptores con el Asistente para nuevas suscripciones. En su lugar, el administrador de la replicación puede seguir estos pasos:  
   
 1.  Establezca las publicaciones de combinación necesarias con particiones basadas en el representante de ventas o en su zona.  
@@ -43,7 +47,7 @@ caps.handback.revision: 36
   
 5.  Ejecute el script en varios suscriptores para generar las suscripciones de extracción requeridas.  
   
-## Generar script de objetos de replicación  
+## <a name="script-replication-objects"></a>Generar script de objetos de replicación  
  Genere script de objetos de replicación desde los asistentes de replicación o desde la carpeta **Replicación** de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Si genera script desde los asistentes, puede elegir crear objetos y generar script, o solo generar script.  
   
 > [!IMPORTANT]  
@@ -53,13 +57,13 @@ caps.handback.revision: 36
   
 -   [Configurar la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md)  
   
--   [Crear una publicación](../../relational-databases/replication/publish/create-a-publication.md)  
+-   [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)  
   
 -   [Crear una suscripción de inserción](../../relational-databases/replication/create-a-push-subscription.md)  
   
 -   [Crear una suscripción de extracción](../../relational-databases/replication/create-a-pull-subscription.md)  
   
-#### Para generar el script de un objeto desde un asistente de replicación  
+#### <a name="to-script-an-object-from-a-replication-wizard"></a>Para generar el script de un objeto desde un asistente de replicación  
   
 1.  En la página **Acciones del asistente** de un asistente, active la casilla adecuada para el asistente:  
   
@@ -73,15 +77,15 @@ caps.handback.revision: 36
   
 3.  Finalice el asistente.  
   
-#### Para generar script de un objeto en Management Studio  
+#### <a name="to-script-an-object-from-management-studio"></a>Para generar script de un objeto en Management Studio  
   
 1.  Conéctese al distribuidor, publicador o suscriptor en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]y, a continuación, expanda el nodo de servidor.  
   
 2.  Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Publicaciones locales** o **Suscripciones locales** .  
   
-3.  Haga clic en una publicación o suscripción y, a continuación, haga clic en **Generar secuencias de comandos**.  
+3.  Haga clic con el botón secundario en una publicación o suscripción y, a continuación, haga clic en **Generar scripts**.  
   
-4.  Especifique las opciones en el **Generar Script SQL: \< Objetoreplicación>** cuadro de diálogo.  
+4.  Especifique las opciones en el cuadro de diálogo **Generar script SQL - \<ReplicationObject>**.  
   
 5.  Haga clic en **Script a archivo**.  
   
@@ -89,11 +93,11 @@ caps.handback.revision: 36
   
 7.  Haga clic en **Aceptar**y, a continuación, en **Cerrar**.  
   
-#### Para generar script de varios objetos desde Management Studio  
+#### <a name="to-script-multiple-objects-from-management-studio"></a>Para generar script de varios objetos desde Management Studio  
   
 1.  Conéctese al distribuidor, publicador o suscriptor en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]y, a continuación, expanda el nodo de servidor.  
   
-2.  Haga clic en el **replicación** carpeta y, a continuación, haga clic en **Generar secuencias de comandos**.  
+2.  Haga clic con el botón secundario en la carpeta **Replicación** y, a continuación, en **Generar scripts**.  
   
 3.  Especifique las opciones en el cuadro de diálogo **Generar script SQL** .  
   

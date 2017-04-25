@@ -1,24 +1,28 @@
 ---
-title: "Filtrar filas de tabla | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.newpubwizard.filtertablerows.f1"
+title: Filtrar filas de tabla | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.newpubwizard.filtertablerows.f1
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 610fb6065c2261ae6f1e2c8627656b193cb5d456
+ms.lasthandoff: 04/11/2017
+
 ---
-# Filtrar filas de tabla
+# <a name="filter-table-rows"></a>Filtrar filas de tabla
   La página **Filtrar filas de tabla** permite:  
   
 -   Aplicar filtros de fila estática a artículos de la tabla en publicaciones de instantáneas, transaccionales y de mezcla.  
@@ -27,7 +31,7 @@ caps.handback.revision: 25
   
 -   Utilizar filtros de combinación para ampliar los filtros de los artículos de tablas de mezcla a artículos de tablas relacionadas.  
   
- Para obtener más información acerca de opciones de filtrado, consulte [filtrar datos publicados](../../relational-databases/replication/publish/filter-published-data.md). Los filtros se pueden cambiar en la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación** .  
+ Para más información sobre las opciones de filtrado, vea [Filtrar datos publicados](../../relational-databases/replication/publish/filter-published-data.md). Los filtros se pueden cambiar en la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación** .  
   
  Para obtener el máximo rendimiento de la aplicación y reducir la cantidad de almacenamiento remoto necesario, o para restringir la disponibilidad de ciertos datos a suscriptores específicos, debe publicar los datos necesarios. La publicación puede incluir tablas sin filtrar y tablas filtradas. Por ejemplo, podría incluir la tabla completa sin filtrar de los productos de la empresa y utilizar filtros de fila para proporcionar una tabla filtrada de clientes para un área específica. Si filtra los datos publicados, podrá:  
   
@@ -39,16 +43,16 @@ caps.handback.revision: 25
   
 -   Evitar o reducir los conflictos si los suscriptores actualizan datos, ya que pueden enviarse particiones de datos diferentes a varios suscriptores (dos suscriptores distintos no actualizarán los mismos valores de datos).  
   
--   Evitar la transmisión de datos reservados. Se pueden utilizar filtros de fila y filtros de columna para restringir el acceso de un suscriptor a los datos. Para la replicación de mezcla, existen consideraciones de seguridad que se deben tener en cuenta si utiliza un filtro con parámetros que incluya HOST_NAME(). Para obtener más información, vea la sección "Filtrar con HOST_NAME ()" en [filtros de fila parametrizados](../../relational-databases/replication/merge/parameterized-row-filters.md).  
+-   Evitar la transmisión de datos reservados. Se pueden utilizar filtros de fila y filtros de columna para restringir el acceso de un suscriptor a los datos. Para la replicación de mezcla, existen consideraciones de seguridad que se deben tener en cuenta si utiliza un filtro con parámetros que incluya HOST_NAME(). Para obtener más información, vea la sección sobre cómo filtrar con HOST_NAME() en el tema [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  Un filtro no debe incluir la columna **rowguidcol** que usa la replicación para identificar filas. De forma predeterminada, es la columna agregada al configurar la replicación de mezcla y se denomina **rowguid**.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Tablas filtradas**  
  Este panel se llena con filtros según se agregan a los artículos de la tabla en la publicación. Las tablas con filtros de fila se muestran como nodos de nivel superior en el panel. En las publicaciones de combinación, las tablas cuyo filtro se ha ampliado a filtro de combinación se muestran como nodos secundarios.  
   
  **Agregar**  
- Haga clic en **Agregar** para iniciar el cuadro de diálogo que le permite filtrar artículos de la tabla. Si hace clic en **Agregar** en una publicación de instantáneas o transaccional, se abre inmediatamente un cuadro de diálogo. Si hace clic en **Agregar** en una publicación de combinación, se muestran tres opciones: **Agregar filtro**, **Agregar combinación para ampliar el filtro seleccionado**y **Generar filtros automáticamente**.  
+ Haga clic en **Agregar** para abrir un cuadro de diálogo que permite filtrar artículos de la tabla. Si hace clic en **Agregar** en una publicación de instantáneas o transaccional, se abre inmediatamente un cuadro de diálogo. Si hace clic en **Agregar** en una publicación de combinación, se muestran tres opciones: **Agregar filtro**, **Agregar combinación para ampliar el filtro seleccionado**y **Generar filtros automáticamente**.  
   
 -   Seleccione **Agregar filtro** para abrir el cuadro de diálogo **Agregar filtro** . Este cuadro de diálogo permite aplicar filtros de fila a un artículo de la tabla. En el cuadro de diálogo **Agregar filtro** , por ejemplo, podría especificar que una tabla con datos de cliente solamente debe contener datos de los clientes franceses cuando se replique a los suscriptores.  
   
@@ -63,27 +67,27 @@ caps.handback.revision: 25
     >  Cuando la replicación genera filtros automáticamente, se eliminan los filtros existentes en la publicación. Para incluir los filtros generados automáticamente y los filtros especificados manualmente, primero genere los filtros. Solo puede especificar un conjunto de filtros generados automáticamente en cada publicación.  
   
  **Editar**  
- Seleccione un filtro de fila o un filtro de combinación en el panel de filtro y haga clic en **modificar** para iniciar el **Editar filtro** o **Editar combinación** cuadro de diálogo.  
+ Seleccione un filtro de filas o un filtro de combinación en el panel de filtros y haga clic en **Editar** para abrir el cuadro de diálogo **Editar filtro** o **Editar combinación** .  
   
  **Delete**  
- Seleccione un filtro de fila o un filtro de combinación en el panel de filtro y haga clic en **Eliminar** para eliminar el filtro.  
+ Seleccione un filtro de filas o un filtro de combinación en el panel de filtros y haga clic en **Eliminar** para eliminar el filtro.  
   
  **Buscar tabla**  
  Solo se aplica a publicaciones de combinación con filtros de combinación. Haga clic en **Buscar tabla** para buscar una tabla en un árbol de filtros complejo. En una base de datos con relaciones complejas, una tabla se puede combinar con varias tablas y, por tanto, puede aparecer en más de un sitio en el árbol de filtros.  
   
- La tabla real aparece solo en un lugar del árbol y, en otros sitios, la tabla se representa mediante un acceso directo. Un acceso directo a una tabla solo es una referencia a la misma; no muestra los nodos secundarios de la tabla. Un nodo de acceso directo se marca con una flecha de acceso directo y expandir ese nodo muestra el texto **haga clic en Buscar tabla para ver la tabla \< tablename>**.  
+ La tabla real aparece solo en un lugar del árbol y, en otros sitios, la tabla se representa mediante un acceso directo. Un acceso directo a una tabla solo es una referencia a la misma; no muestra los nodos secundarios de la tabla. Un nodo de acceso directo se marca con una flecha de acceso directo y, al expandir ese nodo, se muestra el texto **Haga clic en Buscar tabla para ver la tabla de \<nombre de tabla>**.  
   
  Seleccione el nodo del acceso directo en el panel y haga clic en **Buscar tabla**. El panel se expande y la tabla aparece resaltada. Si hace clic en **Buscar tabla** sin seleccionar un nodo de acceso directo, se abre un cuadro de diálogo **Buscar tabla** .  
   
  **Filtro**  
  Contiene la definición de [!INCLUDE[tsql](../../includes/tsql-md.md)] para el filtro seleccionado en el panel de filtros.  
   
-## Vea también  
- [Crear una publicación](../../relational-databases/replication/publish/create-a-publication.md)   
+## <a name="see-also"></a>Vea también  
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Ver y modificar propiedades de publicación](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filtrar datos publicados](../../relational-databases/replication/publish/filter-published-data.md)   
  [Filtros de combinación](../../relational-databases/replication/merge/join-filters.md)   
- [Filtros de fila con parámetros](../../relational-databases/replication/merge/parameterized-row-filters.md)   
+ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Publicar datos y objetos de base de datos](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

@@ -1,104 +1,118 @@
 ---
-title: "Mejorar el rendimiento de los &#237;ndices de texto completo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "rendimiento [SQL Server], búsqueda de texto completo"
-  - "consultas de texto completo [SQL Server], rendimiento"
-  - "rastreos [búsqueda de texto completo]"
-  - "índices de texto completo [SQL Server], rendimiento"
-  - "búsqueda de texto completo [SQL Server], rendimiento"
-  - "lotes [SQL Server], búsqueda de texto completo"
+title: "Mejorar el rendimiento de los índices de texto completo | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- performance [SQL Server], full-text search
+- full-text queries [SQL Server], performance
+- crawls [full-text search]
+- full-text indexes [SQL Server], performance
+- full-text search [SQL Server], performance
+- batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 caps.latest.revision: 68
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 43c8168aa5dc9cfb55c117f8a25ead5e8f2a9a4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Mejorar el rendimiento de los &#237;ndices de texto completo
-  El rendimiento de la indización y las búsquedas de texto completo se ve afectado por los recursos de hardware; por ejemplo, la memoria, la velocidad de disco y de CPU, y la arquitectura del equipo.  
+# <a name="improve-the-performance-of-full-text-indexes"></a>Mejorar el rendimiento de los índices de texto completo
+En este tema se describen algunas de las causas comunes de un rendimiento deficiente de las consultas y los índices de texto completo. También se proporcionan algunas sugerencias para mitigar estos problemas y mejorar el rendimiento.
   
-##  <a name="causes"></a> Causas comunes de los problemas de rendimiento  
- La causa principal de un rendimiento reducido de la indización de texto completo son los límites de los recursos de hardware:  
+##  <a name="causes"></a> Common causes of performance issues
+### <a name="hardware-resource-issues"></a>Problemas de los recursos de hardware
+El rendimiento de la indización y las búsquedas de texto completo se ve afectado por los recursos de hardware; por ejemplo, la memoria, la velocidad de disco y de CPU, y la arquitectura del equipo.  
+
+La causa principal de un rendimiento reducido de la indización de texto completo son los límites de los recursos de hardware.  
   
--   Si el uso de la CPU que hace el proceso de host de demonio de filtro (fdhost.exe) o el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sqlservr.exe) está cercano al 100 por cien, la CPU es el cuello de botella.  
+-   **CPU**. Si el uso de la CPU que hace el proceso de host de demonio de filtro (fdhost.exe) o el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sqlservr.exe) está cercano al 100 por cien, la CPU es el cuello de botella.  
   
--   Si la longitud promedio de la cola de espera del disco es superior al doble del número de cabezales de disco, el cuello de botella está en el disco. La solución principal consiste en crear catálogos de texto completo independientes de los registros y los archivos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Coloque los registros, los archivos de base de datos y los catálogos de texto completo en discos independientes. También puede ayudar a mejorar el rendimiento de la indización la adquisición de discos más rápidos y el uso de RAID.  
-  
--   Si hay escasez de memoria física, la memoria podría ser el cuello de botella.  
+-   **Memoria**. Si hay escasez de memoria física, la memoria podría ser el cuello de botella.  
+
+-   **Disco**. Si la longitud promedio de la cola de espera del disco es superior al doble del número de cabezales de disco, el cuello de botella está en el disco. La solución principal consiste en crear catálogos de texto completo independientes de los registros y los archivos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Coloque los registros, los archivos de base de datos y los catálogos de texto completo en discos independientes. También puede ayudar a mejorar el rendimiento de la indización la instalación de discos más rápidos y el uso de RAID.  
   
     > [!NOTE]  
-    >  A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], el motor de texto completo puede utilizar la memoria AWE porque forma parte de sqlservr.exe.  
-  
+    >  A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], el motor de texto completo puede utilizar la memoria AWE porque forma parte del proceso de sqlservr.exe.  
+
+### <a name="full-text-batching-issues"></a>Problemas de procesamiento por lotes de texto completo
  Si el sistema no tiene cuellos de botella de hardware, el rendimiento de la indización de la búsqueda de texto completo depende sobre todo de lo siguiente:  
   
 -   El tiempo que tarda [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en crear lotes de texto completo.  
   
 -   La rapidez con la que el denomino de filtro puede consumir dichos lotes.  
+
+### <a name="full-text-index-population-issues"></a>Problemas de rellenado de índices de texto completo
+-   **Tipo de rellenado**. A diferencia del rellenado completo, el rellenado incremental, manual y de seguimiento automático de cambios no se han diseñado para obtener los máximos recursos de hardware y así aumentar la velocidad. Por lo tanto, las sugerencias de optimización de este tema no pueden mejorar el rendimiento de indización de texto completo cuando se usa rellenado de seguimiento incremental, manual o de cambio automático.  
   
-> [!NOTE]  
->  A diferencia del rellenado completo, el rellenado incremental, manual y de seguimiento automático de cambios no se han diseñado para obtener los máximos recursos de hardware y así aumentar la velocidad. Por ello, estas sugerencias para el ajuste podrían no mejorar el rendimiento de la indización de texto completo.  
+-   **Combinación maestra**. Cuando se completa un rellenado, se desencadena un proceso de combinación final que combina los fragmentos de índice en un solo índice de texto completo maestro. Esto permite mejorar el rendimiento de las consultas, ya que únicamente es necesario realizar consultas en el índice maestro, en lugar de hacerlo en varios fragmentos de índice, y se pueden utilizar mejores estadísticas de puntuación para obtener la clasificación por relevancia. Sin embargo, la combinación maestra puede requerir un uso intensivo de E/S, ya que es necesario escribir y leer una gran cantidad de datos cuando se mezclan los fragmentos de índice; aunque esto no bloquea las consultas entrantes.  
   
- Cuando se completa un rellenado, se desencadena un proceso de combinación final que combina los fragmentos de índice en un solo índice de texto completo maestro. Esto permite mejorar el rendimiento de las consultas, ya que únicamente es necesario realizar consultas en el índice maestro, en lugar de hacerlo en varios fragmentos de índice, y se pueden utilizar mejores estadísticas de puntuación para obtener la clasificación por relevancia. Tenga en cuenta que la combinación maestra puede requerir un uso intensivo de E/S, ya que es necesario escribir y leer una gran cantidad de datos cuando se combinan los fragmentos de índice, aunque esto no bloquea las consultas entrantes.  
+    La combinación maestra de una cantidad grande de datos puede crear una transacción de larga duración, con lo que se retrasa el truncamiento del registro de transacciones durante el punto de comprobación. En este caso, bajo el modelo de recuperación completa, el registro de transacciones podría crecer significativamente. Como práctica recomendada, antes de reorganizar un índice de texto completo grande en una base de datos que use el modelo de recuperación completa, asegúrese de que el registro de transacciones contenga el espacio suficiente para una transacción de larga duración. Para obtener más información, vea [Administrar el tamaño del archivo de registro de transacciones](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
   
-> [!IMPORTANT]  
->  La combinación maestra de una cantidad grande de datos puede crear una transacción de larga duración, con lo que se retrasa el truncamiento del registro de transacciones durante el punto de comprobación. En este caso, bajo el modelo de recuperación completa, el registro de transacciones podría crecer significativamente. Como práctica recomendada, antes de reorganizar un índice de texto completo grande en una base de datos que use el modelo de recuperación completa, asegúrese de que el registro de transacciones contenga el espacio suficiente para una transacción de larga duración. Para obtener más información, vea [Administrar el tamaño del archivo de registro de transacciones](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
+##  <a name="tuning"></a> Optimizar el rendimiento de los índices de texto completo  
+Para obtener el máximo rendimiento de los índices de texto completo, implemente las prácticas recomendadas siguientes:  
   
-##  <a name="tuning"></a> Ajustar el rendimiento de los índices de texto completo  
- Para obtener el máximo rendimiento de los índices de texto completo, implemente las prácticas recomendadas siguientes:  
-  
--   Para obtener el máximo rendimiento de todos los procesadores o núcleos, establezca [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)‘**max full-text crawl ranges**’ en el número de CPU del sistema. Para obtener más información sobre esta opción de configuración, vea [max full-text crawl range (opción de configuración del servidor)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
+-   Para obtener el máximo rendimiento de todos los procesadores o núcleos de la CPU, establezca [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) “**max full-text crawl ranges**” en el número de CPU del sistema. Para obtener más información sobre esta opción de configuración, vea [max full-text crawl range (opción de configuración del servidor)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
   
 -   Asegúrese de que la tabla base tiene un índice clúster. Use un tipo de datos entero para la primera columna del índice clúster. No use GUID en la primera columna del índice clúster. Un rellenado de varios intervalos en un índice clúster puede conseguir que el rellenado se realice a la mayor velocidad. Recomendamos que la columna que actúa como clave de texto completo sea de un tipo de datos entero.  
   
 -   Actualice las estadísticas de la tabla base mediante la instrucción [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) . Es muy importante que actualice las estadísticas del índice clúster o la clave de texto completo para un rellenado completo. De este modo se ayuda a que un rellenado de varios intervalos genere bien las particiones de la tabla.  
   
--   Cree un índice secundario en una columna **timestamp** si desea mejorar el rendimiento del rellenado incremental.  
-  
--   Antes de realizar un rellenado completo en un equipo grande con varias CPU, es recomendable que limite temporalmente el tamaño del grupo de búferes estableciendo el valor **max server memory** a fin de dejar suficiente memoria para el uso del sistema operativo y el proceso fdhost.exe. Para obtener más información, vea "Estimar los requisitos de memoria del proceso de host de demonio de filtro (fdhost.exe)" más adelante en este tema.  
+-   Antes de realizar un rellenado completo en un equipo grande con varias CPU, es recomendable que limite temporalmente el tamaño del grupo de búferes estableciendo el valor **max server memory** a fin de dejar suficiente memoria para el uso del sistema operativo y el proceso fdhost.exe. Para obtener más información, vea "Estimar los requisitos de memoria del proceso de host de demonio de filtro (fdhost.exe)" más adelante en este tema.
+
+-   Si usa rellenado incremental basado en una columna de marca de tiempo, cree un índice secundario en una columna **timestamp** si desea mejorar el rendimiento del rellenado incremental.  
   
 ##  <a name="full"></a> Solucionar problemas de rendimiento de los rellenados completos  
- Para diagnosticar problemas de rendimiento, examine los registros de rastreo de texto completo. Para obtener más información sobre los registros de rastreo, vea [Rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).  
+### <a name="review-the-full-text-crawl-logs"></a>Revisar los registros de rastreo de texto completo
+ Para ayudar a diagnosticar problemas de rendimiento, examine los registros de rastreo de texto completo.
+ 
+Cuando se produce un error durante un rastreo, la función de registro de rastreo de la búsqueda de texto completo crea y mantiene un registro de rastreo, que es un archivo sin formato. Cada registro de rastreo se corresponde con un determinado catálogo de texto completo. De forma predeterminada, los registros de rastreo de una instancia determinada (en este ejemplo, la instancia predeterminada) se encuentran en la carpeta `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG`.
+ 
+El archivo de registro de rastreo sigue el siguiente esquema de nomenclatura:  
   
- Es recomendable que se siga el orden que se indica a continuación a la hora de solucionar los problemas si el rendimiento de los rellenados completos no es satisfactorio.  
+`SQLFT<DatabaseID\><FullTextCatalogID\>.LOG[<n\>]`
   
-### Uso de la memoria física  
- Durante un rellenado de texto completo, es posible que fdhost.exe o sqlservr.exe no dispongan de suficiente memoria o se queden sin memoria. Si el registro de rastreo de texto completo muestra que fdhost.exe se reinicia con frecuencia o que se devuelve el código de error 8007008, significa que uno de estos procesos se está quedando sin memoria. Si fdhost.exe produce volcados, especialmente en equipos grandes con varias CPU, es posible que se esté quedando sin memoria.  
+Las partes variables del nombre de archivo de registro de rastreo son las siguientes.
+-   <**DatabaseID**> - El identificador de una base de datos. <**dbid**> es un número de cinco dígitos con ceros a la izquierda.  
+-   <**FullTextCatalogID**> - Identificador de catálogo de texto completo. <**catid**> es un número de cinco dígitos con ceros a la izquierda.  
+-   <**n**> - Es un entero que indica la existencia de uno o varios registros de rastreo del mismo catálogo de texto completo.  
   
-> [!NOTE]  
->  Para obtener más información sobre los búferes de memoria empleados por un rastreo de texto completo, vea [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md).  
+ Por ejemplo, `SQLFT0000500008.2` es el archivo de registro de rastreo para un identificador de base de datos = 5 y un identificador de catálogo de texto completo = 8. El 2 al final del nombre de archivo indica que existen dos archivos de registro de rastreo para esta pareja de base de datos y catálogo.  
+
+### <a name="check-physical-memory-usage"></a>Comprobar el uso de la memoria física  
+ Durante un rellenado de texto completo, es posible que fdhost.exe o sqlservr.exe no dispongan de suficiente memoria o se queden sin memoria.
+-   Si el registro de rastreo de texto completo muestra que fdhost.exe se reinicia con frecuencia o que se devuelve el código de error 8007008, significa que uno de estos procesos se está quedando sin memoria.
+-   Si fdhost.exe produce volcados, especialmente en equipos grandes con varias CPU, es posible que se esté quedando sin memoria.  
+-   Para más información sobre los búferes de memoria empleados por un rastreo de texto completo, vea [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md).  
   
- Las causas posibles son las siguientes:  
+ Las posibles causas de poca memoria o problemas de memoria insuficiente son los siguientes:  
   
--   Si la cantidad de memoria física que está disponible durante un rellenado completo es cero, el grupo de búferes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría estar consumiendo la mayor parte de la memoria física del sistema.  
+-   **Memoria suficiente**. Si la cantidad de memoria física que está disponible durante un rellenado completo es cero, el grupo de búferes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría estar consumiendo la mayor parte de la memoria física del sistema.  
   
      El proceso sqlservr.exe intenta obtener toda la memoria disponible para el grupo de búferes hasta el valor máximo de memoria del servidor configurado. Si la asignación de **max server memory** es demasiado grande, pueden producirse condiciones de memoria insuficiente y errores para asignar memoria compartida al proceso fdhost.exe.  
   
-    > [!NOTE]  
-    >  Durante un rellenado de texto completo en un equipo con varias CPU, puede producirse una contención de la memoria del grupo de búferes entre fdhost.exe o sqlservr.exe. La falta de memoria compartida resultante produce reintentos de lotes, una paginación excesiva de la memoria y volcados por parte del proceso fdhost.exe.  
-  
      Puede resolver este problema si define apropiadamente el valor **max server memory** del grupo de búferes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea "Estimar los requisitos de memoria del proceso de host de demonio de filtro (fdhost.exe)" más adelante en este tema. Reducir el tamaño de lote utilizado para la indización de texto completo también puede ayudar.  
+
+-   **Contención de memoria**. Durante un rellenado de texto completo en un equipo con varias CPU, puede producirse una contención de la memoria del grupo de búferes entre fdhost.exe o sqlservr.exe. La falta de memoria compartida resultante produce reintentos de lotes, una paginación excesiva de la memoria y volcados por parte del proceso fdhost.exe.  
+
+-   **Problemas de paginación**. Un tamaño insuficiente del archivo de paginación, como ocurre en un sistema que tiene un archivo de paginación pequeño con un crecimiento restringido, también puede hacer que fdhost.exe o sqlservr.exe se queden sin memoria. Si los registros de rastreo no indican ningún error relacionado con la memoria, es probable que el rendimiento sea lento debido a una paginación excesiva.  
   
--   Un problema de paginación  
-  
-     Un tamaño insuficiente del archivo de paginación, como ocurre en un sistema que tiene un archivo de paginación pequeño con un crecimiento restringido, también puede hacer que fdhost.exe o sqlservr.exe se queden sin memoria.  
-  
-     Si los registros de rastreo no indican ningún error relacionado con la memoria, es probable que el rendimiento sea lento debido a una paginación excesiva.  
-  
-### Estimar los requisitos de memoria del proceso de host de demonio de filtro (fdhost.exe)  
+### <a name="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe"></a>Estimar los requisitos de memoria del proceso de host de demonio de filtro (fdhost.exe)  
  La cantidad de memoria requerida por el proceso fdhost.exe para un rellenado depende principalmente del número de intervalos de rastreo de texto completo que utiliza, del tamaño de la memoria compartida entrante (ISM) y del número máximo de instancias de ISM.  
   
  La cantidad de memoria (en bytes) consumida por el host de demonio de filtro puede calcularse de forma aproximada utilizando esta fórmula:  
   
- *number_of_crawl_ranges* \**ism_size***max_outstanding_isms*\* 2  
+`number_of_crawl_ranges * ism_size * max_outstanding_isms * 2`  
   
  Los valores predeterminados de las variables de la fórmula anterior son los siguientes:  
   
@@ -116,23 +130,21 @@ caps.handback.revision: 67
   
 -   *M*, que es la configuración óptima de **max server memory** .  
   
-> [!IMPORTANT]  
->  Para obtener información esencial sobre las fórmulas, consulte los puntos (1), (2) y (3) que aparecen a continuación.  
+Para información esencial sobre las fórmulas siguientes, vea las notas que siguen a la tabla.  
   
 |Plataforma|Evaluar los requisitos de memoria de fdhost.exe en MB:*F*^1|Fórmula para calcular el valor de max server memory:*M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* **=** *Número de rangos de rastreo* **\*** 50|*M* **=mínimo(** *T* **,** 2000**)–***F***–** 500|  
-|x64|*F* **=** *Número de rangos de rastreo* **\*** 10 **\*** 8|*M* **=** *T* **–** *F* **–** 500|  
+|x86|*F* = *Número de intervalos de rastreo* * 50|*M* =minimum(*T*, 2000) – F – 500|  
+|x64|*F* = *Número de intervalos de rastreo* * 10 * 8|*M* = *T* – *F* – 500|  
+
+**Notas sobre las fórmulas**
+1.  Si hay varios procesos de rellenado completos en curso, calcule los requisitos de memoria de fdhost.exe de cada uno por separado, como *F1*, *F2*, etc. Luego, calcule *M* como *T***–** sigma**(***F***)**.  
+2.  500 MB es un cálculo de la memoria requerida por otros procesos en el sistema. Si el sistema está realizando trabajo adicional, aumente este valor en consecuencia.  
+3.  .*ism_size* es 8 MB para plataformas x64.  
   
- (1) Si hay varios procesos de rellenado completos en curso, calcule los requisitos de memoria de fdhost.exe de cada uno por separado, como *F1*, *F2*, etc. Luego, calcule *M* como *T***–** sigma**(***F***)**.  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Ejemplo: evaluar los requisitos de memoria de fdhost.exe  
   
- (2) 500 MB es un cálculo de la memoria requerida por otros procesos en el sistema. Si el sistema está realizando trabajo adicional, aumente este valor en consecuencia.  
-  
- (3) Se da por hecho que .*ism_size* es 8 MB para plataformas x64.  
-  
- **Ejemplo: evaluar los requisitos de memoria de fdhost.exe**  
-  
- Este ejemplo corresponde a un equipo AMD64 que tiene 8 GB de RAM y 4 procesadores de doble núcleo. El primer cálculo evalúa la memoria que necesita fdhost.exe (*F*). El número de rangos de rastreo es `8`.  
+ Este ejemplo corresponde a un equipo de 64 bits que tiene 8 GB de RAM y 4 procesadores de doble núcleo. El primer cálculo evalúa la memoria que necesita fdhost.exe (*F*). El número de rangos de rastreo es `8`.  
   
  `F = 8*10*8=640`  
   
@@ -140,9 +152,9 @@ caps.handback.revision: 67
   
  `M = 8192-640-500=7052`  
   
- **Ejemplo: establecer max server memory**  
+ #### <a name="example-setting-max-server-memory"></a>Ejemplo: establecer max server memory  
   
- En este ejemplo, se usan las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) y [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) para definir **max server memory** en el valor que se calculó para *M* en el ejemplo siguiente, `7052`:  
+ En este ejemplo, se usan las instrucciones [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) y [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] para establecer **max server memory** en el valor que se calculó para *M* en el ejemplo precedente, `7052`:  
   
 ```  
 USE master;  
@@ -153,14 +165,12 @@ RECONFIGURE;
 GO  
 ```  
   
- **Para establecer la opción de configuración max server memory**  
+Para más información sobre las opciones de memoria de servidor, vea [Opciones de configuración de memoria del servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
   
--   [Opciones de configuración de memoria del servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
+### <a name="check-cpu-usage"></a>Comprobar el uso de CPU  
+El rendimiento de los rellenados completos no es el óptimo cuando el consumo de CPU medio es inferior a un 30 por ciento, aproximadamente. Aquí se discuten algunos factores que afectan al consumo de CPU.  
   
-### Factores que pueden reducir el consumo de CPU  
- Es de esperar que el rendimiento de los rellenados completos no sea el óptimo cuando el consumo de CPU medio sea inferior a un 30 por ciento, aproximadamente. En esta sección se discuten algunos factores que afectan al consumo de CPU.  
-  
--   Una espera alta de las páginas  
+-   Tiempo de espera alto para las páginas  
   
      Para averiguar si el tiempo de espera de una página es elevado, ejecute la instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] siguiente:  
   
@@ -175,26 +185,32 @@ GO
     |PAGEIO_LATCH_SH (_EX o _UP)|Esto podría indicar un cuello de botella de la E/S, en cuyo caso normalmente vería también una longitud promedio de la cola del disco alta.|Al mover el índice de texto completo a un grupo de archivos diferente de un disco diferente, podría ayudar a reducir el cuello de botella de la E/S.|  
     |PAGELATCH_EX (o _UP)|Podría indicar una gran contención entre los subprocesos que están intentando escribir en el mismo archivo de base de datos.|Al agregar los archivos al grupo de archivos en el que el índice de texto completo reside podría ayudar a aliviar tal contención.|  
   
-     Para obtener más información, vea [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  
+     Para más información, vea [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  
   
 -   Deficiencias en el recorrido de la tabla base  
   
      Un rellenado completo examina la tabla base para generar lotes. Este recorrido de la tabla podría ser ineficaz en los escenarios siguientes:  
   
-    -   Si la tabla base tiene un porcentaje alto de columnas sin filas que están siendo indizadas con índices de texto completo, el recorrido de la tabla base para generar los lotes podría constituir el cuello de botella. En este caso, podría ser de ayuda pasar los datos menores de la fila usando **varchar(max)** o **nvarchar(max)**.  
+    -   Si la tabla base tiene un porcentaje alto de columnas sin filas que están siendo indizadas con índices de texto completo, el recorrido de la tabla base para generar los lotes podría constituir el cuello de botella. En este caso, podría ser de ayuda pasar los datos menores de la fila usando **varchar(max)** o **nvarchar(max)** .  
   
-    -   Si la tabla base está muy fragmentada, el recorrido podría ser ineficaz. Para obtener más información sobre cómo calcular los datos de la fila y la fragmentación de índices, vea [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) y [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).  
+    -   Si la tabla base está muy fragmentada, el recorrido podría ser ineficaz. Para más información sobre cómo calcular los datos de la fila y la fragmentación de índices, vea [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) y [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).  
   
          Para reducir la fragmentación, puede reorganizar o volver a generar el índice clúster. Para obtener más información, vea [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
-##  <a name="filters"></a> Solucionar problemas de rendimiento de la indización ralentizado debido a los filtros  
- Al rellenar un índice de texto completo, el motor de texto completo utiliza dos tipos de filtros: multiproceso y de un solo subproceso. Algunos documentos, como los de Word [!INCLUDE[msCoName](../../includes/msconame-md.md)], se filtran utilizando un filtro multiproceso. Otros, como los documentos Portable Document Format (PDF) de Adobe Acrobat, se filtran por medio de filtros de un solo subproceso.  
+##  <a name="filters"></a> Solucionar problemas de indización de documentos lenta
+
+> [!NOTE]
+> En esta sección se describe un problema que solo afecta a los clientes que indizan documentos (como documentos de Microsoft Word) en los que están insertados otros tipos de documento.
+
+El motor de texto completo usa dos tipos de filtros cuando rellena un índice de texto completo: filtros multiproceso y filtros de un solo subproceso.
+-   Algunos documentos, como los de Word [!INCLUDE[msCoName](../../includes/msconame-md.md)] , se filtran utilizando un filtro multiproceso.
+-   Otros, como los documentos Portable Document Format (PDF) de Adobe Acrobat, se filtran por medio de filtros de un solo subproceso.  
   
- Por razones de seguridad, los procesos de host de demonio de filtro cargan los filtros. Una instancia del servidor utiliza un proceso multiproceso para todos los filtros multiproceso y un proceso de un solo subproceso para todos los filtros de un solo subproceso. Cuando un documento que utiliza un filtro multiproceso contiene un documento incrustado que utiliza un filtro de un solo subproceso, el motor de texto completo inicia un proceso de un solo subproceso para el documento incrustado. Por ejemplo, al encontrar un documento de Word que contiene un documento PDF, el motor de texto completo usa el proceso multiproceso para el contenido de Word e inicia un proceso de un solo subproceso para el contenido PDF. Sin embargo, un filtro de un solo subproceso podría no funcionar bien en este entorno y desestabilizar el proceso de filtrado. En ciertas circunstancias en las que tal incrustación es común, la desestabilización podría provocar el bloqueo del proceso de filtrado. Cuando esto ocurre, el motor de texto completo vuelve a enrutar cualquier documento con error (por ejemplo, un documento de Word que incluya contenido PDF incrustado) al proceso del filtrado de un solo subproceso. Si esto sucede con frecuencia, se produce una disminución del rendimiento del proceso de indización de texto completo.  
+ Por razones de seguridad, los procesos de host de demonio de filtro cargan los filtros. Una instancia del servidor utiliza un proceso multiproceso para todos los filtros multiproceso y un proceso de un solo subproceso para todos los filtros de un solo subproceso. Cuando un documento que utiliza un filtro multiproceso contiene un documento incrustado que utiliza un filtro de un solo subproceso, el motor de texto completo inicia un proceso de un solo subproceso para el documento incrustado. Por ejemplo, al encontrar un documento de Word que contiene un documento PDF, el motor de texto completo usa el proceso multiproceso para el contenido de Word e inicia un proceso de un solo subproceso para el contenido PDF. Sin embargo, un filtro de un solo subproceso podría no funcionar bien en este entorno y desestabilizar el proceso de filtrado. En ciertas circunstancias en las que tal inserción es común, la desestabilización podría provocar el bloqueo del proceso. Cuando esto ocurre, el motor de texto completo vuelve a enrutar cualquier documento con error (por ejemplo, un documento de Word que incluya contenido PDF incrustado) al proceso del filtrado de un solo subproceso. Si esto sucede con frecuencia, se produce una disminución del rendimiento del proceso de indización de texto completo.  
   
- Para solucionar este problema, marque el filtro para el documento contenedor (Word en este caso) como filtro de un solo subproceso. Puede cambiar el valor del Registro del filtro para marcar un determinado filtro como de un solo subproceso. Para marcar un filtro como de un solo subproceso, tiene que establecer el valor del Registro **ThreadingModel** del filtro en **Apartment Threaded**. Para obtener más información sobre los contenedores uniproceso, vea las notas del producto [Understanding and Using COM Threading Models](http://go.microsoft.com/fwlink/?LinkId=209159) (Descripción y uso de modelos de subprocesos COM).  
+Para solucionar este problema, marque el filtro para el documento contenedor (en este ejemplo, el documento de Word) como filtro de un solo subproceso. Para marcar un filtro como de un solo subproceso, establezca el valor del Registro **ThreadingModel** del filtro en **Apartment Threaded**. Para obtener más información sobre los contenedores uniproceso, vea las notas del producto [Understanding and Using COM Threading Models](http://go.microsoft.com/fwlink/?LinkId=209159)(Descripción y uso de modelos de subprocesos COM).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones de configuración de memoria del servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [max full-text crawl range (opción de configuración del servidor)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
  [Rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md)   

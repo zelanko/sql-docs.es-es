@@ -1,29 +1,33 @@
 ---
-title: "Configuraci&#243;n de base de datos secundaria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.settings.dest.f1"
+title: "Configuración de base de datos secundaria | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.logshipping.settings.dest.f1
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ec30a94c58a94d2afad050eab06ecc60432c7b1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configuraci&#243;n de base de datos secundaria
+# <a name="secondary-database-settings"></a>Configuración de base de datos secundaria
   Utilice este cuadro de diálogo para configurar y modificar las propiedades de una base de datos secundaria en la configuración del trasvase de registros.  
   
  Para obtener una explicación de los conceptos relacionados con el trasvase de registros, vea [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Instancia del servidor secundario**  
  Muestra el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurada actualmente como servidor secundario en la configuración del trasvase de registros.  
   
@@ -114,7 +118,7 @@ caps.handback.revision: 32
  **Deshabilitar este trabajo**  
  Suspende las operaciones de restauración en la base de datos secundaria.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

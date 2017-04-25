@@ -1,37 +1,41 @@
 ---
-title: "Buscar en archivos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.findreplace.findinfiles"
-  - "vs.findinfiles"
-helpviewer_keywords: 
-  - "Buscar en archivos, cuadro de diálogo"
+title: Buscar en archivos | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.findreplace.findinfiles
+- vs.findinfiles
+helpviewer_keywords:
+- Find in Files dialog box
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c244de67ea8d955987083fb6a06036958d341c93
+ms.lasthandoff: 04/11/2017
+
 ---
-# Buscar en archivos
+# <a name="find-in-files"></a>Buscar en archivos
   La pestaña **Buscar en archivos** de la ventana Buscar y reemplazar permite buscar en el código de un conjunto especificado de archivos una cadena o expresión. Las coincidencias que se encuentran y las acciones que se toman aparecen en la ventana Resultados de la búsqueda seleccionada en **Opciones de resultados**.  
   
  También hay botones de la barra de la herramientas y teclas de método abreviado disponibles para abrir el cuadro de diálogo **Buscar y reemplazar** .  
   
  Las secciones siguientes presentan los controles disponibles en la pestaña **Buscar en archivos** .  
   
-## Buscar  
+## <a name="find-what"></a>Buscar  
  Estos controles de la pestaña **Buscar en archivos** permiten especificar la cadena o expresión que se buscará.  
   
- **Buscar**  
+ **Find what**  
  Escriba el texto que desea buscar. El cuadro de diálogo intentará rellenar el texto de búsqueda probable utilizando el texto seleccionado con el cursor antes de abrir el cuadro de diálogo, o bien texto cercano o texto que se haya buscado con anterioridad. Podrá reutilizar una de las últimas 20 cadenas de búsqueda seleccionándola en esta lista desplegable.  
   
  **[cadena con caracteres comodín]**  
@@ -41,15 +45,15 @@ caps.handback.revision: 21
  Para que el motor de búsqueda interprete la cadena de búsqueda como una expresión regular, active la casilla **Usar** en **Opciones de búsqueda** y haga clic en **Expresiones regulares**.  
   
  **Generador de expresiones**  
- Este botón triangular, situado junto al cuadro **Buscar**, estará disponible cuando se active la casilla **Usar** en **Opciones de búsqueda**. Haga clic en este botón para mostrar una lista de caracteres comodín o expresiones regulares, en función de la opción **Usar** seleccionada. Si elige un elemento de esta lista, se agrega a la cadena de **Buscar** .  
+ Este botón triangular, situado junto al cuadro **Buscar** , estará disponible cuando se active la casilla **Usar** en **Opciones de búsqueda**. Haga clic en este botón para mostrar una lista de caracteres comodín o expresiones regulares, en función de la opción **Usar** seleccionada. Si elige un elemento de esta lista, se agrega a la cadena de **Buscar** .  
   
-## Buscar en  
+## <a name="look-in"></a>Buscar en  
  La opción elegida en **Buscar en** determina si **Buscar en archivos** busca únicamente en los archivos activos o en todos los archivos almacenados en determinadas carpetas. Seleccione un ámbito de búsqueda en la lista, escriba una ruta de acceso a una carpeta o haga clic en el botón **Examinar** para mostrar el cuadro de diálogo **Elegir carpetas de búsqueda** y elija un conjunto de carpetas para realizar la búsqueda.  
   
 > [!NOTE]  
 >  Si la opción **Buscar en** seleccionada hace que busque un archivo que ha desprotegido del control de código fuente, solo se buscará en la versión del archivo descargada en el equipo local.  
   
- **Buscar en**  
+ **Look in**  
  Seleccione un ámbito predefinido de búsqueda en esta lista, o use el cuadro de diálogo **Elegir carpetas de búsqueda** para escribir su propio grupo de directorios.  
   
  **Documento actual**  
@@ -65,12 +69,12 @@ caps.handback.revision: 21
  Busca en todos los archivos de la solución activa.  
   
  **Incluir subcarpetas**  
- Especifica que se buscarán las subcarpetas de la carpeta especificada en **Buscar en**. Requiere un grupo de directorios personalizados.  
+ Especifica que se buscarán las subcarpetas de la carpeta especificada en **Buscar en** . Requiere un grupo de directorios personalizados.  
   
  **Examinar**  
- Haga clic en este botón para que aparezca el cuadro de diálogo **Elegir carpetas de búsqueda**, donde puede reunir, editar, guardar y seleccionar los grupos de directorios con nombre que se van a usar en el cuadro **Buscar en**.  
+ Haga clic en este botón para que aparezca el cuadro de diálogo **Elegir carpetas de búsqueda** , donde puede reunir, editar, guardar y seleccionar los grupos de directorios con nombre que se van a usar en el cuadro **Buscar en** .  
   
-## Opciones de búsqueda  
+## <a name="find-options"></a>Opciones de búsqueda  
  Puede expandir y contraer la sección **Opciones de búsqueda** . Pueden activarse y desactivarse las siguientes opciones.  
   
  **Coincidir mayúsculas y minúsculas**  
@@ -79,10 +83,10 @@ caps.handback.revision: 21
  **Solo palabras completas**  
  Cuando esta casilla se activa, las ventanas Resultados de la búsqueda solo mostrarán las instancias de la cadena especificada en **Buscar** cuyas palabras completas coincidan. Por ejemplo, una búsqueda de **MyObject** devolverá "MyObject", pero no devolverá "CMyObject" ni "MyObjectC".  
   
- **Utilice**  
- Indica cómo se interpretan los caracteres especiales especificados en los cuadros de texto **Buscar** o **Reemplazar con**. Esta opción incluye **Caracteres comodín** y **Expresiones regulares**.  
+ **Usar**  
+ Indica cómo se interpretan los caracteres especiales especificados en los cuadros de texto **Buscar** o **Reemplazar con** . Esta opción incluye **Caracteres comodín** y **Expresiones regulares**.  
   
- **Expresiones regulares**  
+ **Regular Expressions**  
  Notaciones especiales que definen patrones de texto a partir de los cuales buscar coincidencias. Para obtener una lista, vea [Buscar texto mediante expresiones regulares](../../relational-databases/scripting/search-text-with-regular-expressions.md).  
   
  **Caracteres comodín**  
@@ -103,7 +107,7 @@ caps.handback.revision: 21
   
  Seleccione cualquier elemento de la lista para indicar una cadena de búsqueda preconfigurada que buscará archivos de tipos específicos.  
   
-## Opciones de resultados  
+## <a name="result-options"></a>Opciones de resultados  
  Determina la ubicación de los resultados cuando hace clic en **Buscar todos**. Puede expandir o contraer la sección **Opciones de resultados** . Pueden activarse y desactivarse las siguientes opciones.  
   
  **Ventana Resultados de la búsqueda 1**  
@@ -121,19 +125,19 @@ caps.handback.revision: 21
 > [!CAUTION]  
 >  Puede utilizar **Deshacer** solo en los archivos que permanecen abiertos para edición. Si no se selecciona esta opción, los archivos que no estén abiertos para edición permanecerán cerrados y no estará disponible la opción **Deshacer** para ellos.  
   
-## Vistas Buscar y reemplazar  
+## <a name="find-and-replace-views"></a>Vistas Buscar y reemplazar  
  Las pestañas de la parte superior de la ventana Buscar y reemplazar incluyen menús **Ver** . Estos menús le permiten elegir un conjunto de campos para que se muestren en el panel activo. Puede dejar la ventana Buscar y reemplazar acoplada en una ubicación adecuada y después cambiar de pestaña y de vista para realizar cualquier tipo de operación de búsqueda y reemplazo.  
   
  **Cambiar a Búsqueda rápida**  
- Esta pestaña de la barra de herramientas cambia el cuadro de diálogo a **Búsqueda rápida**.  
+ Esta pestaña de la barra de herramientas cambia el cuadro de diálogo a **Búsqueda rápida** .  
   
  **Cambiar a Buscar en archivos**  
- Esta pestaña de la barra de herramientas cambia el cuadro de diálogo a **Buscar en archivos**.  
+ Esta pestaña de la barra de herramientas cambia el cuadro de diálogo a **Buscar en archivos** .  
   
  **Cambiar a Buscar símbolo**  
- Esta pestaña de la barra de herramientas cambia el cuadro de diálogo a **Find in Symbols (Buscar en símbolos)**.  
+ Esta pestaña de la barra de herramientas cambia el cuadro de diálogo a **Find in Symbols (Buscar en símbolos)** .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Métodos abreviados de teclado de SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

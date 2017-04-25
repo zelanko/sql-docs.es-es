@@ -1,24 +1,28 @@
 ---
-title: "SQL Server XTP Databases | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server 2016 XTP Databases"
+title: Base de datos XTP de SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server 2016 XTP Databases
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 caps.latest.revision: 3
-author: "dagiro"
-ms.author: "v-dagir"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: dagiro
+ms.author: v-dagir
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e2839d276956db1b82bf6b1f236ceae74b973477
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server XTP Databases
+# <a name="sql-server-xtp-databases"></a>SQL Server XTP Databases
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 El objeto de rendimiento **SQL Server XTP Databases** contiene contadores relacionados con las bases de datos del motor OLTP en memoria.
@@ -26,7 +30,7 @@ El objeto de rendimiento **SQL Server XTP Databases** contiene contadores relaci
 > [!NOTE]
 >  Actualmente, los contadores de SQL Server XTP Databases no son visibles desde sys.dm_os_performance_counters.  Los contadores se pueden ver desde [Monitor del sistema](../../relational-databases/performance/start-system-monitor-windows.md).
 
-En esta tabla se describen los contadores de **SQL Server XTP Databases**.
+En esta tabla se describen los contadores de **SQL Server XTP Databases** .
 
 |Contador|Description| 
 |-------------|-----------------|  
@@ -64,5 +68,5 @@ En esta tabla se describen los contadores de **SQL Server XTP Databases**.
 |**Tail Cache Page Count Peak**|Número máximo de páginas asignadas en la caché de cola. Es un contador de nivel muy bajo, no está pensado para uso de los clientes.|
 
 
-## Vea también  
-[Contadores de rendimiento de XTP &#40;OLTP en memoria&#41; de SQL Server](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)
+## <a name="see-also"></a>Vea también  
+[Contadores de rendimiento de XTP &#40;OLTP en memoria&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)

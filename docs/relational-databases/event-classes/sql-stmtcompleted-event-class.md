@@ -1,27 +1,31 @@
 ---
-title: "SQL:StmtCompleted (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL:StmtCompleted [clase de eventos]"
+title: Clase de eventos SQL:StmtCompleted | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL:StmtCompleted event class
 ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 99a9d763386ecea12b12e9ddd6d597f00ff6b172
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL:StmtCompleted (clase de eventos)
-  La clase de eventos SQL:StmtCompleted indica que se ha completado una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+# <a name="sqlstmtcompleted-event-class"></a>SQL:StmtCompleted [clase de eventos]
+  La clase de eventos SQL:StmtCompleted indica que se ha completado una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-## Columnas de datos de la clase de eventos SQL:StmtCompleted  
+## <a name="sqlstmtcompleted-event-class-data-columns"></a>Columnas de datos de la clase de eventos SQL:StmtCompleted  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -58,7 +62,7 @@ caps.handback.revision: 32
 |Writes|**bigint**|Número de escrituras en páginas emitidas por la instrucción SQL.|17|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

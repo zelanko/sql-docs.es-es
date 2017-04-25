@@ -1,28 +1,32 @@
 ---
-title: "Configurar o cambiar la intercalaci&#243;n del servidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "intercalaciones de servidores [SQL Server]"
-  - "intercalaciones [SQL Server], servidor"
+title: "Configurar o cambiar la intercalación del servidor | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- server collations [SQL Server]
+- collations [SQL Server], server
 ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 860d753725449509686dff5b6002d6a286f220fe
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurar o cambiar la intercalaci&#243;n del servidor
+# <a name="set-or-change-the-server-collation"></a>Configurar o cambiar la intercalación del servidor
   La intercalación de servidor actúa como intercalación predeterminada para todas las bases de datos del sistema que se han instalado con la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], así como las bases de datos de usuario recién creadas. La intercalación de servidor se especifica durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para más información, consulte [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
-## Cambiar la intercalación de servidor  
+## <a name="changing-the-server-collation"></a>Cambiar la intercalación de servidor  
  El cambio de la intercalación predeterminada para una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ser una operación compleja que incluye los siguientes pasos:  
   
 -   Asegurarse de que se dispone de toda la información o scripts necesarios para volver a crear las bases de datos de usuario y todos los objetos contenidos en ellas.  
@@ -31,7 +35,7 @@ caps.handback.revision: 34
   
 -   Quitar todas las bases de datos de usuario.  
   
--   Vuelva a generar la base de datos maestra al especificar la nueva intercalación en la propiedad SQLCOLLATION del comando **setup**. Por ejemplo:  
+-   Vuelva a generar la base de datos maestra al especificar la nueva intercalación en la propiedad SQLCOLLATION del comando **setup** . Por ejemplo:  
   
     ```  
     Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName   
@@ -48,8 +52,8 @@ caps.handback.revision: 34
 > [!NOTE]  
 >  En lugar de cambiar la intercalación predeterminada de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede especificar una intercalación predeterminada para cada nueva base de datos que cree.  
   
-## Vea también  
- [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)   
+## <a name="see-also"></a>Vea también  
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)   
  [Establecer o cambiar la intercalación de base de datos](../../relational-databases/collations/set-or-change-the-database-collation.md)   
  [Establecer o cambiar la intercalación de columnas](../../relational-databases/collations/set-or-change-the-column-collation.md)   
  [Volver a generar bases de datos del sistema](../../relational-databases/databases/rebuild-system-databases.md)  

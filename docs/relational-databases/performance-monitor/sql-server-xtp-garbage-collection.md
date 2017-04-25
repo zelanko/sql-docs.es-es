@@ -1,27 +1,31 @@
 ---
-title: "Recolecci&#243;n de elementos no utilizados de XTP de SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Recolección de elementos no utilizados de XTP de SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 64ae91e5-b420-44b4-af1a-f8bca83d7f41
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 84e7b0df9fdd52f6f67113b9dc019fc905a9aaff
+ms.lasthandoff: 04/11/2017
+
 ---
-# Recolecci&#243;n de elementos no utilizados de XTP de SQL Server
+# <a name="sql-server-xtp-garbage-collection"></a>Recolección de elementos no utilizados de XTP de SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   El objeto de rendimiento Recolección de elementos no utilizados de XTP de SQL Server contiene contadores relacionados con el recolector de elementos no utilizados del motor OLTP en memoria.  
   
- En esta tabla se describen los contadores de **Recolección de elementos no utilizados de XTP de SQL Server**.  
+ En esta tabla se describen los contadores de **Recolección de elementos no utilizados de XTP de SQL Server** .  
   
 |Contador|Descripción|  
 |-------------|-----------------|  
@@ -39,7 +43,7 @@ caps.handback.revision: 8
 |**Rastreo de filas tocadas/s**|Número de filas tocadas durante los rastreos de esquinas sucias (en promedio), por segundo.|  
 |**Rastreo de recorridos iniciados/s**|Número de recorridos de rastreo de esquinas sucias iniciados (en promedio), por segundo.|  
   
-## Vea también  
- [Contadores de rendimiento de XTP &#40;OLTP en memoria&#41; de SQL Server](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
+## <a name="see-also"></a>Vea también  
+ [Contadores de rendimiento de XTP &#40;OLTP en memoria&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   

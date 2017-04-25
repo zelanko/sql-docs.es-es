@@ -1,27 +1,31 @@
 ---
-title: "Deshabilitar restricciones CHECK para la replicaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restricciones CHECK, deshabilitación"
-  - "restricciones [SQL Server], deshabilitar"
-  - "deshabilitar restricciones"
-  - "restricciones [SQL Server], check"
+title: "Deshabilitar restricciones CHECK para la replicación | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CHECK constraints, disabling
+- constraints [SQL Server], disabling
+- disabling constraints
+- constraints [SQL Server], check
 ms.assetid: af98fc70-24dd-4bd3-a0a3-f701dfa67b2c
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2f8ff552993defe940576ea5cf0a35943a417b1b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Deshabilitar restricciones CHECK para la replicaci&#243;n
+# <a name="disable-check-constraints-for-replication"></a>Deshabilitar restricciones CHECK para la replicación
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Puede deshabilitar las restricciones CHECK en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. También puede deshabilitar explícitamente las restricciones CHECK para la replicación, lo que puede resultar útil si se publican datos de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -38,7 +42,7 @@ caps.handback.revision: 19
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para deshabilitar una restricción CHECK para la replicación  
+#### <a name="to-disable-a-check-constraint-for-replication"></a>Para deshabilitar una restricción CHECK para la replicación  
   
 1.  En el **Explorador de objetos**, expanda la tabla con la restricción CHECK que desee modificar y, a continuación, expanda la carpeta **Restricciones** .  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para deshabilitar una restricción CHECK para la replicación  
+#### <a name="to-disable-a-check-constraint-for-replication"></a>Para deshabilitar una restricción CHECK para la replicación  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -74,7 +78,7 @@ caps.handback.revision: 19
  Para obtener más información, vea [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="TsqlExample"></a>   
-## Vea también  
- [Especificar las opciones del esquema](../../relational-databases/replication/publish/specify-schema-options.md)  
+## <a name="see-also"></a>Vea también  
+ [Especificar opciones de esquema](../../relational-databases/replication/publish/specify-schema-options.md)  
   
   

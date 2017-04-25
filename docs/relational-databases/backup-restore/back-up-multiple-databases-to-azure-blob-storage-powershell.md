@@ -1,31 +1,35 @@
 ---
-title: "Usar PowerShell para crear copias de seguridad de varias bases de datos en el servicio de Almacenamiento de blobs de Microsoft Azure | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Realizar copias de seguridad de varias bases de datos en Azure Blob Storage - PowerShell | Microsoft Docs
+ms.custom: 
+ms.date: 05/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: cda33e54db6382eaee5d4e5343fc2d1873600c8c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar PowerShell para crear copias de seguridad de varias bases de datos en el servicio de Almacenamiento de blobs de Microsoft Azure
+# <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Realizar copias de seguridad de varias bases de datos en Azure Blob Storage - PowerShell
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Este tema proporciona ejemplos de scripts que se pueden utilizar para automatizar las copias de seguridad del servicio de almacenamiento Blob de Windows Azure con los cmdlets de PowerShell.  
   
-## Información general de los cmdlets de PowerShell para las copias de seguridad y restauración  
+## <a name="overview-of-powershell-cmdlets-for-backup-and-restore"></a>Información general de los cmdlets de PowerShell para las copias de seguridad y restauración  
  El **Backup-SqlDatabase** y **Restore-SqlDatabase** son dos cmdlets principales disponibles para realizar operaciones de copia de seguridad y restauración. Además, hay otros cmdlets que pueden requerir automatizar las copias de seguridad para el almacenamiento Blob de Windows Azure como el conjunto de cmdlets de **SqlCredential** . La siguiente es una lista de los cmdlets de PowerShell disponibles en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que se utilizan en las operaciones de copia de seguridad y restauración:  
   
  Backup-SqlDatabase  
- Este cmdlet se utiliza para crear una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Este cmdlet se utiliza para crear una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Restore-SqlDatabase  
  Se usa para restaurar una base de datos.  
@@ -45,20 +49,20 @@ caps.handback.revision: 13
 > [!TIP]  
 >  Los cmdlets de credenciales se utilizan en las copias de seguridad y en la restauración en los escenarios de almacenamiento Blob de Windows Azure.  
   
-### PowerShell para operaciones de copia de seguridad de varias instancias y varias bases de datos  
+### <a name="powershell-for-multi-database-multi-instance-backup-operations"></a>PowerShell para operaciones de copia de seguridad de varias instancias y varias bases de datos  
  Las secciones siguientes contienen scripts para varias operaciones como crear una credencial SQL en varias instancias de SQL Server, hacer la copia de seguridad de todas las bases de datos de usuario en una instancia de SQL Server, etcétera. Puede utilizar estos scripts para automatizar o para programar las operaciones de copia de seguridad según los requisitos de su entorno. Los scripts que aquí se muestran son ejemplos y se pueden modificar o ampliar para su entorno.  
   
  A continuación se presentan las consideraciones para los scripts de ejemplo:  
   
 1.  **Navegar por las rutas de acceso de SQL Server PowerShell:** Windows PowerShell implementa cmdlets para navegar por la estructura de ruta de acceso que representa la jerarquía de objetos compatible con un proveedor de PowerShell. Cuando ha navegado a un nodo de la ruta de acceso, puede usar otros cmdlets para realizar operaciones básicas en el objeto actual.  
   
-2.  Cmdlet **Get-ChildItem**: la información devuelta por **Get-ChildItem** depende de la ubicación de una ruta de acceso de PowerShell de SQL Server. Por ejemplo, si la ubicación está en el equipo, este cmdlet devuelve todas las instancias del motor de base de datos de SQL Server instaladas en él. Como otro ejemplo, si la ubicación está en un objeto como son las bases de datos, este cmdlet devuelve una lista de objetos de base de datos.  De forma predeterminada, el cmdlet **Get-ChildItem** no devuelve los objetos del sistema.  Mediante el parámetro –Force, puede ver los objetos del sistema.  
+2.  Cmdlet**Get-ChildItem** : la información devuelta por **Get-ChildItem** depende de la ubicación de una ruta de acceso de PowerShell de SQL Server. Por ejemplo, si la ubicación está en el equipo, este cmdlet devuelve todas las instancias del motor de base de datos de SQL Server instaladas en él. Como otro ejemplo, si la ubicación está en un objeto como son las bases de datos, este cmdlet devuelve una lista de objetos de base de datos.  De forma predeterminada, el cmdlet **Get-ChildItem** no devuelve los objetos del sistema.  Mediante el parámetro –Force, puede ver los objetos del sistema.  
   
      Para obtener más información, consulte [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md).  
   
 3.  Aunque cada ejemplo de código se pueda probar de forma independiente cambiando los valores de las variables, crear una cuenta de Almacenamiento de Windows Azure y una credencial SQL son requisitos previos y es imprescindible para todas las operaciones de copia de seguridad y de restauración en el servicio de almacenamiento Blob de Windows Azure.  
   
-### Crear una credencial SQL en todas las instancias de SQL Server  
+### <a name="create-a-sql-credential-on-all-the-instances-of-sql-server"></a>Crear una credencial SQL en todas las instancias de SQL Server  
  Hay dos ejemplos de scripts y ambos crean una credencial SQL “mybackupToURL“ en todas las instancias de SQL Server de un equipo. El primer ejemplo es sencillo, crea la credencial y no intercepta las excepciones.  Por ejemplo, si hubiera ya una credencial existente con el mismo nombre en una de las instancias del equipo, el script produciría un error. El segundo ejemplo intercepta los errores y permite que el script continúe.  
   
 ```  
@@ -112,7 +116,7 @@ Catch [Exception]
   
 ```  
   
-### Quitar una credencial SQL de todas las instancias de SQL Server  
+### <a name="remove-a-sql-credential-from-all-the-instances-of-sql-server"></a>Quitar una credencial SQL de todas las instancias de SQL Server  
  Este script se puede utilizar para quitar una credencial específica de todas las instancias de SQL Server instaladas en el equipo. Si el objeto Credencial no existe en una instancia concreta, aparece un mensaje de error y el script continúa hasta que se comprueban todas las instancias.  
   
 ```  
@@ -140,7 +144,7 @@ foreach ($instance in $instances)
     }  
 ```  
   
-### Copia de seguridad completa de base de datos para todas las bases de datos (INCLUDING SYSTEM DATABASES)  
+### <a name="full-database-backup-for-all-databases-including-system-databases"></a>Copia de seguridad completa de base de datos para todas las bases de datos (INCLUDING SYSTEM DATABASES)  
  El siguiente script crea copias de seguridad de todas las bases de datos del equipo. Esto incluye tanto a las bases de datos de usuario como a la base de datos del sistema **msdb** . El script filtra las bases de datos del sistema **tempdb** y **model** .  
   
 ```  
@@ -168,7 +172,7 @@ $instances = Get-childitem
   
 ```  
   
-### Copia de seguridad completa de base de datos de todas las bases de datos de usuario  
+### <a name="full-database-backup-for-all-user-databases"></a>Copia de seguridad completa de base de datos de todas las bases de datos de usuario  
  El script siguiente se puede utilizar para realizar la copia de seguridad de todas las bases de datos de usuario en todas las instancias de SQL Server del equipo.  
   
 ```  
@@ -192,7 +196,7 @@ $instances = Get-childitem
  }  
 ```  
   
-### Copia de seguridad completa de la base de datos MAESTRA y MSDB (BASES DATABASE SYSTEM) en todas las instancias de SQL Server  
+### <a name="full-database-backup-for-master-and-msdb-system-databases-on-all-the-instances-of-sql-server"></a>Copia de seguridad completa de la base de datos MAESTRA y MSDB (BASES DATABASE SYSTEM) en todas las instancias de SQL Server  
  El script siguiente se puede usar para crear copias de seguridad de las bases de datos **master** y **msdb** en todas las instancias de SQL Server instaladas en el equipo.  
   
 ```  
@@ -218,7 +222,7 @@ Backup-SqlDatabase -Database $s -path "sqlserver:\sql\$($instance.name)" -Backup
   
 ```  
   
-### Copia de seguridad completa de todas las bases de datos de usuario en una instancia de SQL Server  
+### <a name="full-database-backup-for-all-user-databases-on-an-instance-of-sql-server"></a>Copia de seguridad completa de todas las bases de datos de usuario en una instancia de SQL Server  
  El siguiente script se utiliza para realizar la copia de seguridad solo de las bases de datos de usuario disponibles en una instancia con nombre de SQL Server. El mismo script se puede utilizar para la instancia predeterminada del equipo cambiando el valor del parámetro $srvPath.  
   
 ```  
@@ -241,8 +245,8 @@ $databases = dir $srvPath\databases
 $databases | Backup-SqlDatabase -BackupContainer $backupUrlContainer -SqlCredential $credentialName -Compression On  
 ```  
   
-### Copia de seguridad completa solo de las bases de datos del sistema (MAESTRA y MSDB) en una instancia de SQL Server  
- El script completo se puede usar para crear una copia de seguridad de las bases de datos **master** y **msdb** en una instancia con nombre de SQL Server. El mismo script se puede utilizar para la instancia predeterminada del equipo cambiando el valor del parámetro $srvpath.  
+### <a name="full-database-backup-for-only-system-databases-master-and-msdb-on-an-instance-of-sql-server"></a>Copia de seguridad completa solo de las bases de datos del sistema (MAESTRA y MSDB) en una instancia de SQL Server  
+ El script completo se puede usar para crear una copia de seguridad de las bases de datos **master** y **msdb** en una instancia con nombre de SQL Server. El mismo script se puede utilizar para la instancia predeterminada del equipo cambiando el valor del parámetro $srvPath.  
   
 ```  
   
@@ -265,8 +269,9 @@ Backup-SqlDatabase -Database $s -BackupContainer $backupUrlContainer -SqlCredent
   
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   
+

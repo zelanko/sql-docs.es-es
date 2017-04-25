@@ -1,27 +1,31 @@
 ---
-title: "SP:StmtStarting (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SP:StmtStarting, clase de eventos"
+title: Clase de eventos SP:StmtStarting |Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SP:StmtStarting event class
 ms.assetid: 73550597-a3f3-4454-8678-0bf39db80a7f
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 214ce5d5b71539655e07632068645b53a2b1a8a0
+ms.lasthandoff: 04/11/2017
+
 ---
-# SP:StmtStarting (clase de eventos)
+# <a name="spstmtstarting-event-class"></a>SP:StmtStarting, clase de eventos
   La clase de eventos SP:StmtStarting indica que se ha iniciado una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] dentro de un procedimiento almacenado.  
   
-## Columnas de datos de la clase de evento SP:StmtStarting  
+## <a name="spstmtstarting-event-class-data-columns"></a>Columnas de datos de la clase de evento SP:StmtStarting  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -43,7 +47,7 @@ caps.handback.revision: 36
 |NTUserName|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |ObjectID|**int**|Identificador del objeto asignado por el sistema.|22|Sí|  
 |ObjectName|**nvarchar**|Nombre del objeto al que se hace referencia.|34|Sí|  
-|ObjectType|**int**|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la vista de catálogo sys.objects. Para ver los valores, vea [Columna de evento de seguimiento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sí|  
+|ObjectType|**int**|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la vista de catálogo sys.objects. Para ver los valores, consulte [Columna de evento de seguimiento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sí|  
 |Offset|**int**|Desplazamiento inicial de la instrucción en el procedimiento almacenado o lote.|61|Sí|  
 |IdSolicitud|**int**|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
 |ServerName|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
@@ -56,7 +60,7 @@ caps.handback.revision: 36
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que se utiliza para describir la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

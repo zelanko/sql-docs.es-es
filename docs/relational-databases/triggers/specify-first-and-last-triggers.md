@@ -1,31 +1,35 @@
 ---
-title: "Especificar el primer y el &#250;ltimo desencadenador | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "primeros desencadenadores [SQL Server]"
-  - "últimos desencadenadores"
-  - "desencadenadores DML, primeros o últimos desencadenadores"
-  - "INSTEAD OF, desencadenadores"
-  - "AFTER, desencadenadores"
+title: "Especificar el primer y el último desencadenador | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- first triggers [SQL Server]
+- last triggers
+- DML triggers, first or last triggers
+- INSTEAD OF triggers
+- AFTER triggers
 ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 99935796043bf8ea14c32a2f98867ca2c7612a2d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Especificar el primer y el &#250;ltimo desencadenador
+# <a name="specify-first-and-last-triggers"></a>Especificar el primer y el último desencadenador
   Puede especificar que uno de los desencadenadores AFTER asociados a una tabla sea el primero o el último que se ejecute para cada una de las acciones desencadenadoras INSERT, DELETE y UPDATE. Los desencadenadores AFTER que se activan entre el primero y el último se ejecutan en un orden indefinido.  
   
- Para especificar el orden de un desencadenador AFTER, use el procedimiento almacenado **sp_settriggerorder**. **sp_settriggerorder** tiene las opciones siguientes.  
+ Para especificar el orden de un desencadenador AFTER, use el procedimiento almacenado **sp_settriggerorder** . **sp_settriggerorder** tiene las opciones siguientes.  
   
 |Opción|Descripción|  
 |------------|-----------------|  
@@ -54,7 +58,7 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  La replicación genera automáticamente un primer desencadenador para cualquier tabla incluida en una suscripción de actualización inmediata o en cola. La replicación requiere que su desencadenador sea el primero. Generará un error si se intenta incluir una tabla con un primer desencadenador en una suscripción de actualización inmediata o en cola. Si intenta convertir un desencadenador en el primero después de haber incluido una tabla en una suscripción, **sp_settriggerorder** devolverá un error. Tanto si usa ALTER en el desencadenador de replicación como si usa **sp_settriggerorder** para convertir el desencadenador de replicación en un desencadenador último o sin orden definido, la suscripción no funcionará correctamente.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_settriggerorder &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md)  
   

@@ -1,27 +1,31 @@
 ---
-title: "SP:Completed (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SP:Completed, clase de eventos"
+title: Clase de eventos SP:Completed |Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SP:Completed event class
 ms.assetid: 7636a433-5d32-4562-8f5a-694f8e2beeca
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8ed4a766035c7fffe237cf4cee20e8fea64ed001
+ms.lasthandoff: 04/11/2017
+
 ---
-# SP:Completed (clase de eventos)
+# <a name="spcompleted-event-class"></a>SP:Completed, clase de eventos
   La clase de eventos SP:Completed indica que el procedimiento almacenado ha terminado de ejecutarse.  
   
-## Columnas de datos de la clase de evento SP:Completed  
+## <a name="spcompleted-event-class-data-columns"></a>Columnas de datos de la clase de evento SP:Completed  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -44,7 +48,7 @@ caps.handback.revision: 34
 |NTUserName|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |ObjectID|**int**|Identificador asignado por el sistema al procedimiento almacenado.|22|Sí|  
 |ObjectName|**nvarchar**|Nombre del objeto al que se hace referencia.|34|Sí|  
-|ObjectType|**int**|Tipo de procedimiento almacenado al que se ha llamado. Este valor corresponde al de la columna Type de la vista de catálogo sys.objects. Para ver los valores, vea [Columna de evento de seguimiento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sí|  
+|ObjectType|**int**|Tipo de procedimiento almacenado al que se ha llamado. Este valor corresponde al de la columna Type de la vista de catálogo sys.objects. Para ver los valores, consulte [Columna de evento de seguimiento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sí|  
 |IdSolicitud|**int**|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
 |RowCounts|**bigint**|Número de filas de todas las instrucciones incluidas en este procedimiento almacenado.|48|Sí|  
 |ServerName|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
@@ -56,7 +60,7 @@ caps.handback.revision: 34
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

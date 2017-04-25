@@ -1,25 +1,29 @@
 ---
-title: "Objeto SQL Server: Estad&#237;sticas de grupo de recursos de servidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Estadísticas de grupo de recursos de servidor, objeto"
-  - "SQLServer: Estadísticas de grupo de recursos de servidor, objeto"
+title: "Objeto SQL Server: Estadísticas de grupo de recursos de servidor | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reosurce Pool Stats object
+- 'SQLServer: Resource Pool Stats object'
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1ccd649e92cd416ff086758005f3b5df728dfe1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Objeto SQL Server: Estad&#237;sticas de grupo de recursos de servidor
+# <a name="sql-server-resource-pool-stats-object"></a>Objeto SQL Server: Estadísticas de grupo de recursos de servidor
   El objeto SQLServer:Estadísticas de grupo de recursos de servidor contiene contadores de rendimiento que notifican información sobre las estadísticas del grupo de recursos de servidor del regulador de recursos.  
   
  Cada grupo de recursos de servidor activo crea una instancia del objeto de rendimiento SQLServer:Estadísticas de grupo de recursos de servidor que tiene el mismo nombre que el grupo de recursos de servidor del regulador de recursos. En la tabla siguiente se describen los contadores admitidos en esta instancia.  
@@ -58,7 +62,7 @@ caps.handback.revision: 14
 |**Memoria usada (KB)**|Cantidad de memoria utilizada, en kilobytes (KB), para el grupo de recursos de servidor.|  
 
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [Objeto SQL Server: Estadísticas de grupo de cargas de trabajo](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)   
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)  

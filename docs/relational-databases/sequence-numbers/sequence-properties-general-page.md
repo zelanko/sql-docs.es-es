@@ -1,24 +1,28 @@
 ---
-title: "Propiedades de secuencia (p&#225;gina General) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.sequence.general.f1"
+title: "Propiedades de secuencia (página General) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.sequence.general.f1
 ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 46ce2a01967b75aa0fec969d24cf6ad320932ace
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propiedades de secuencia (p&#225;gina General)
+# <a name="sequence-properties-general-page"></a>Propiedades de secuencia (página General)
   Crea un objeto de secuencia y especifica sus propiedades. Una secuencia es un objeto enlazado a un esquema definido por el usuario que genera una secuencia de valores numéricos según la especificación con la que se creó la secuencia. La secuencia de valores numéricos se genera en orden ascendente o descendente en un intervalo definido y se puede configurar para reiniciarse (en un ciclo) cuando se agota. Las secuencias, a diferencia de las columnas de identidad, no se asocian a tablas concretas. Las aplicaciones hacen referencia a un objeto de secuencia para recuperar su valor siguiente. La aplicación controla la relación entre las secuencias y tablas. Las aplicaciones de usuario pueden hacer referencia un objeto de secuencia y coordinar los valores a través de varias filas y tablas.  
   
  A diferencia de los valores de columnas de identidad que se generan en el momento en que se insertan filas, una aplicación puede obtener el número de secuencia siguiente sin insertar la fila llamando a la [función NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md). Use [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) para obtener varios números de secuencia a la vez.  
@@ -27,7 +31,7 @@ caps.handback.revision: 10
   
  Se puede obtener acceso a esta página de dos formas: haciendo clic con el botón derecho en **Secuencias** en el Explorador de objetos y haciendo clic en **Nueva secuencia**, o haciendo clic con el botón derecho en una secuencia existente y haciendo clic en **Propiedades**. Cuando se hace clic con el botón derecho en una secuencia existente y se hace clic en **Propiedades**, no se pueden editar las opciones. Para cambiar las opciones de secuencia use la instrucción [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md) o quite y vuelva a crear el objeto de secuencia.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Nombre de secuencia**  
  Escriba aquí el nombre de la secuencia.  
   
@@ -49,13 +53,13 @@ caps.handback.revision: 10
 -   Cualquier tipo de datos definido por el usuario (tipo de alias) que se base en estos tipos.  
   
  **Precisión**  
- En el caso de tipos de datos **decimales** o **numéricos**, especifique la precisión. (La escala siempre es 0).  
+ En el caso de tipos de datos **decimales** o **numéricos** , especifique la precisión. (La escala siempre es 0).  
   
  **Valor inicial**  
  El primer valor que el objeto de secuencia devolverá. El valor **START** debe ser menor o igual que el máximo, y mayor o igual que el valor mínimo del objeto de secuencia. El valor inicial predeterminado para un nuevo objeto de secuencia es el valor mínimo para un objeto de secuencia ascendente y el valor máximo para uno descendente.  
   
  **Incrementar en**  
- Valor que se usa para incrementar (o disminuir si es negativo) el valor del objeto de secuencia para cada llamada a la función **NEXT VALUE FOR**. Si el incremento es un valor negativo el objeto de secuencia es descendente, de lo contrario, es ascendente. El incremento no puede ser 0.  
+ Valor que se usa para incrementar (o disminuir si es negativo) el valor del objeto de secuencia para cada llamada a la función **NEXT VALUE FOR** . Si el incremento es un valor negativo el objeto de secuencia es descendente, de lo contrario, es ascendente. El incremento no puede ser 0.  
   
  **Valor mínimo**  
  Especifica los límites del objeto de secuencia. El valor mínimo predeterminado para un nuevo objeto de secuencia es el valor mínimo del tipo de datos del objeto de secuencia. Es cero para el tipo de datos **tinyint** y un número negativo para todos los demás.  
@@ -82,10 +86,10 @@ caps.handback.revision: 10
   
  Para obtener información adicional sobre las opciones de creación de secuencias, vea [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md).  
   
-## Permisos  
+## <a name="permissions"></a>Permissions  
  Requiere el permiso **CREATE SEQUENCE**, **ALTER**o **CONTROL** en el SCHEMA.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sys.sequences &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)  
   
   

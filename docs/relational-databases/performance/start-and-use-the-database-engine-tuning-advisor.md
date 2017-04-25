@@ -1,31 +1,35 @@
 ---
-title: "Iniciar y utilizar el Asistente para la optimizaci&#243;n de motor de base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dta.workload.f1"
-  - "sql13.dta.general.f1"
-  - "sql13.dta.advancedtuningoptions.f1"
-  - "sql13.dta.tuningoptions.f1"
-  - "sql13.dta.progress.f1"
-  - "sql13.dta.options.f1"
-helpviewer_keywords: 
-  - "Asistente para la optimización de motor de base de datos [SQL Server], iniciar"
+title: "Iniciar y utilizar el Asistente para la optimización del motor de base de datos | Microsoft Docs"
+ms.custom: 
+ms.date: 01/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dta.workload.f1
+- sql13.dta.general.f1
+- sql13.dta.advancedtuningoptions.f1
+- sql13.dta.tuningoptions.f1
+- sql13.dta.progress.f1
+- sql13.dta.options.f1
+helpviewer_keywords:
+- Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3bb44cd4e105c09fc84822cb75222a14ce39af5f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Iniciar y utilizar el Asistente para la optimizaci&#243;n de motor de base de datos
+# <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar y utilizar el Asistente para la optimización de motor de base de datos
   En este tema se describe cómo iniciar y usar el Asistente para la optimización de motor de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información sobre cómo ver y trabajar con los resultados después de optimizar una base de datos, vea [Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
   
 ##  <a name="Initialize"></a> Inicializar el Asistente para la optimización de motor de base de datos  
@@ -43,21 +47,21 @@ caps.handback.revision: 31
 > [!WARNING]  
 >  No inicie el Asistente para la optimización de motor de base de datos si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se está ejecutando en modo de usuario único. Si intenta iniciarlo mientras el servidor está en modo de usuario único, aparecerá un error y el Asistente para la optimización de motor de base de datos no se iniciará. Para obtener más información sobre el modo de usuario único, vea [Iniciar SQL Server en modo de usuario único](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md).  
   
-#### Para iniciar el Asistente para la optimización de motor de base de datos desde el menú Inicio de Windows  
+#### <a name="to-start-database-engine-tuning-advisor-from-the-windows-start-menu"></a>Para iniciar el Asistente para la optimización de motor de base de datos desde el menú Inicio de Windows  
   
 1.  En el menú **Inicio** , elija **Todos los programas**, **Microsoft SQL Server**, **Herramientas de rendimiento**y, a continuación, haga clic en **Asistente para la optimización de motor de base de datos**.  
   
-#### Para iniciar el Asistente para la optimización de motor de base de datos en SQL Server Management Studio  
+#### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>Para iniciar el Asistente para la optimización de motor de base de datos en SQL Server Management Studio  
   
 1.  En el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Herramientas** , haga clic en **Asistente para la optimización de motor de base de datos**.  
   
-#### Para iniciar el Asistente para la optimización de motor de base de datos desde el Editor de consultas de SQL Server Management Studio  
+#### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>Para iniciar el Asistente para la optimización de motor de base de datos desde el Editor de consultas de SQL Server Management Studio  
   
 1.  Abra un archivo de script [!INCLUDE[tsql](../../includes/tsql-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información, vea [Editores de consultas y texto &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md).  
   
 2.  Seleccione una consulta en el script [!INCLUDE[tsql](../../includes/tsql-md.md)] o seleccione el script completo, haga clic con el botón derecho en la selección y elija **Analizar la consulta en el Asistente para la optimización de motor de base de datos**. Se abre la GUI del Asistente para la optimización de motor de base de datos e importa el script como una carga de trabajo de archivo XML. Puede especificar un nombre de sesión y opciones de optimización para optimizar las consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] seleccionadas como carga de trabajo.  
   
-#### Para iniciar el Asistente para la optimización de motor de base de datos en SQL Server Profiler  
+#### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-profiler"></a>Para iniciar el Asistente para la optimización de motor de base de datos en SQL Server Profiler  
   
 1.  En el menú **Herramientas** de SQL Server Profiler, haga clic en **Asistente para la optimización de motor de base de datos**.  
   
@@ -65,6 +69,13 @@ caps.handback.revision: 31
  Una carga de trabajo es un conjunto de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecuta en una o varias bases de datos que se desean optimizar. El Asistente para la optimización de motor de base de datos analiza estas cargas de trabajo y recomienda estrategias de partición o indización que mejorarán el rendimiento de las consultas del servidor.  
   
  Puede crear una carga de trabajo mediante uno de los métodos siguientes.  
+  
+-   Utilice el [Almacén de consultas](../../relational-databases/performance/how-query-store-collects-data.md) como una carga de trabajo. De este modo, podrá evitar la necesidad de tener que crear manualmente una carga de trabajo. Para más información, vea [Tuning Database Using Workload From Query Store](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) (Optimización de la base de datos mediante carga de trabajo del Almacén de consultas).  
+
+      ||  
+      |-|  
+      |**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+
   
 -   Utilice la memoria caché del plan como carga de trabajo. De este modo, podrá evitar la necesidad de tener que crear manualmente una carga de trabajo. Para obtener más información, vea [Optimizar una base de datos](#Tune) más adelante en este tema.  
   
@@ -117,10 +128,10 @@ caps.handback.revision: 31
   
  También puede utilizar las versiones **Starting** (inicio) de estos eventos de seguimiento. Por ejemplo, **SQL:BatchStarting**. Sin embargo, las versiones **Completed** (completado) de estos eventos de seguimiento incluyen la columna **Duration** , que permite al Asistente para la optimización de motor de base de datos optimizar de forma más eficaz la carga de trabajo. El Asistente para la optimización de motor de base de datos no optimiza otros tipos de eventos de seguimiento. Para obtener más información acerca de estos eventos de seguimiento, vea [Stored Procedures Event Category](../../relational-databases/event-classes/stored-procedures-event-category.md) y [TSQL Event Category](../../relational-databases/event-classes/tsql-event-category.md). Para obtener más información sobre cómo usar procedimientos almacenados de Seguimiento de SQL para crear una carga de trabajo de archivo de seguimiento, vea [Crear un seguimiento &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   
-### Cargas de trabajo de archivos o tablas de seguimiento que contienen la columna de datos LoginName  
+### <a name="trace-file-or-trace-table-workloads-that-contain-the-loginname-data-column"></a>Cargas de trabajo de archivos o tablas de seguimiento que contienen la columna de datos LoginName  
  El Asistente para la optimización de motor de base de datos envía solicitudes de plan de presentación como parte del proceso de optimización. Cuando una tabla o un archivo de seguimiento que contiene la columna de datos **LoginName** se consume como una carga de trabajo, el Asistente para la optimización de motor de base de datos suplanta al usuario especificado en **LoginName**. Si este usuario no dispone del permiso SHOWPLAN, que le permite ejecutar y generar planes de presentación para las instrucciones incluidas en el seguimiento, el Asistente para la optimización de motor de base de datos no optimizará esas instrucciones.  
   
-##### Para evitar conceder el permiso SHOWPLAN a cada usuario especificado en la columna LoginName del seguimiento  
+##### <a name="to-avoid-granting-the-showplan-permission-to-each-user-specified-in-the-loginname-column-of-the-trace"></a>Para evitar conceder el permiso SHOWPLAN a cada usuario especificado en la columna LoginName del seguimiento  
   
 1.  Optimice la carga de trabajo del archivo o carga de seguimiento. Para obtener más información, vea [Optimizar una base de datos](#Tune) más adelante en este tema.  
   
@@ -130,7 +141,7 @@ caps.handback.revision: 31
   
 4.  Vuelva a enviar la nueva carga de trabajo sin la columna **LoginName** al Asistente para la optimización de motor de base de datos.  
   
- El Asistente para la optimización de motor de base de datos optimizará la nueva carga de trabajo debido a que no hay información de inicio de sesión especificada en el seguimiento. Si **LoginName** no existe en una instrucción, el Asistente para la optimización de motor de base de datos optimiza esa instrucción suplantando al usuario que inició la sesión de optimización (un miembro del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner**).  
+ El Asistente para la optimización de motor de base de datos optimizará la nueva carga de trabajo debido a que no hay información de inicio de sesión especificada en el seguimiento. Si **LoginName** no existe en una instrucción, el Asistente para la optimización de motor de base de datos optimiza esa instrucción suplantando al usuario que inició la sesión de optimización (un miembro del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** ).  
   
 ##  <a name="Tune"></a> Optimizar una base de datos  
  Para optimizar una base de datos, puede usar la GUI del Asistente para la optimización de motor de base de datos o la utilidad **dta** .  
@@ -138,8 +149,11 @@ caps.handback.revision: 31
 > [!NOTE]  
 >  Asegúrese de que el seguimiento se ha detenido antes de usar una tabla de seguimiento como carga de trabajo para el Asistente para la optimización de motor de base de datos. El Asistente para la optimización de motor de base de datos no permite el uso como carga de trabajo de una tabla de seguimiento en la que aún se están escribiendo eventos de seguimiento.  
   
-### Usar la interfaz gráfica de usuario del Asistente para la optimización de motor de base de datos  
+### <a name="use-the-database-engine-tuning-advisor-graphical-user-interface"></a>Usar la interfaz gráfica de usuario del Asistente para la optimización de motor de base de datos  
  En la GUI del Asistente para la optimización de motor de base de datos puede optimizar una base de datos utilizando la memoria caché del plan, los archivos de carga de trabajo o las tablas de carga de trabajo. Puede usar la GUI del Asistente para la optimización de motor de base de datos para ver fácilmente los resultados de la sesión de optimización actual y los resultados de sesiones anteriores. Para obtener información sobre las opciones de la interfaz de usuario, vea [Descripciones de la interfaz de usuario](#UI) más adelante en este tema. Para obtener más información sobre cómo trabajar con la salida después de optimizar una base de datos, vea [Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
+
+####  <a name="PlanCache"></a> Para optimizar una base de datos mediante el Almacén de consultas
+Para más información, vea [Optimización de la base de datos mediante carga de trabajo del Almacén de consultas](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) (Optimización de la base de datos mediante carga de trabajo del Almacén de consultas).
   
 ####  <a name="PlanCache"></a> Para optimizar una base de datos mediante caché de plan  
   
@@ -166,9 +180,9 @@ caps.handback.revision: 31
     -   **Detener análisis** detiene la sesión de optimización sin generar ninguna recomendación.  
   
 > [!NOTE]  
->  No se admite la detección del Asistente para la optimización de motor de base de datos. Si hace clic en el botón de la barra de herramientas **Iniciar análisis** después de hacer clic en el botón **Detener análisis** o **Detener análisis (con recomendaciones)**, el Asistente para la optimización de motor de base de datos inicia una sesión de optimización nueva.  
+>  No se admite la detección del Asistente para la optimización de motor de base de datos. Si hace clic en el botón de la barra de herramientas **Iniciar análisis** después de hacer clic en el botón **Detener análisis** o **Detener análisis (con recomendaciones)** , el Asistente para la optimización de motor de base de datos inicia una sesión de optimización nueva.  
   
-##### Para optimizar una base de datos mediante una tabla o archivo de carga de trabajo como entrada  
+##### <a name="to-tune-a-database-using-a-workload-file-or-table-as-input"></a>Para optimizar una base de datos mediante una tabla o archivo de carga de trabajo como entrada  
   
 1.  Determine las características de la base de datos (índices, vistas indizadas, creación de particiones) que desee que el Asistente para la optimización de motor de base de datos pueda agregar, quitar o retener durante el análisis.  
   
@@ -208,7 +222,7 @@ caps.handback.revision: 31
     -   **Detener análisis** detiene la sesión de optimización sin generar ninguna recomendación.  
   
 > [!NOTE]  
->  No se admite la detección del Asistente para la optimización de motor de base de datos. Si hace clic en el botón de la barra de herramientas **Iniciar análisis** después de hacer clic en el botón **Detener análisis** o **Detener análisis (con recomendaciones)**, el Asistente para la optimización de motor de base de datos inicia una sesión de optimización nueva.  
+>  No se admite la detección del Asistente para la optimización de motor de base de datos. Si hace clic en el botón de la barra de herramientas **Iniciar análisis** después de hacer clic en el botón **Detener análisis** o **Detener análisis (con recomendaciones)** , el Asistente para la optimización de motor de base de datos inicia una sesión de optimización nueva.  
   
 ###  <a name="dta"></a> Usar la utilidad dta  
  La [utilidad dta](../../tools/dta/dta-utility.md) proporciona un archivo ejecutable en el símbolo del sistema que puede usar para optimizar bases de datos. Esto permite usar la funcionalidad del Asistente para la optimización de motor de base de datos en archivos por lotes y scripts. La utilidad **dta** usa las entradas de caché del plan, los archivos de seguimiento, las tablas de seguimiento y los scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] como cargas de trabajo. También usa la entrada XML que se ajusta al esquema XML del Asistente para la optimización de motor de base de datos, que está disponible en este [sitio web de Microsoft](http://go.microsoft.com/fwlink/?linkid=43100).  
@@ -223,9 +237,9 @@ caps.handback.revision: 31
   
  Para más información sobre la sintaxis de la utilidad **dta** y ejemplos, vea [dta Utility](../../tools/dta/dta-utility.md).  
   
-##### Para optimizar una base de datos mediante caché de plan  
+##### <a name="to-tune-a-database-by-using-the-plan-cache"></a>Para optimizar una base de datos mediante caché de plan  
   
-1.  Especifique la opción **-ip**. Se analizan los primeros 1.000 eventos de caché del plan para las bases de datos seleccionadas.  
+1.  Especifique la opción **-ip** . Se analizan los primeros 1.000 eventos de caché del plan para las bases de datos seleccionadas.  
   
      En el símbolo del sistema, escriba lo siguiente:  
   
@@ -239,13 +253,13 @@ caps.handback.revision: 31
     dta -E -D DatabaseName -ip –n 2000-s SessionName1  
     ```  
   
-3.  Para analizar los eventos de todas las bases de datos de la instancia, especifique la opción **-ipf**.  
+3.  Para analizar los eventos de todas las bases de datos de la instancia, especifique la opción **-ipf** .  
   
     ```  
     dta -E -D DatabaseName -ip –ipf –n 2000 -s SessionName2  
     ```  
   
-##### Para optimizar una base de datos mediante una carga de trabajo y la configuración predeterminada de la utilidad dta  
+##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>Para optimizar una base de datos mediante una carga de trabajo y la configuración predeterminada de la utilidad dta  
   
 1.  Determine las características de la base de datos (índices, vistas indizadas, creación de particiones) que desee que el Asistente para la optimización de motor de base de datos pueda agregar, quitar o retener durante el análisis.  
   
@@ -261,7 +275,7 @@ caps.handback.revision: 31
   
      Las cuatro opciones mostradas aquí (nombre de la base de datos, carga de trabajo, tipo de conexión y nombre de la sesión) son obligatorias.  
   
-##### Para optimizar una base de datos remota o una instancia con nombre con una determinada duración  
+##### <a name="to-tune-a-remote-database-or-a-named-instance-for-a-specific-duration"></a>Para optimizar una base de datos remota o una instancia con nombre con una determinada duración  
   
 1.  Determine las características de la base de datos (índices, vistas indizadas, creación de particiones) que desee que el Asistente para la optimización de motor de base de datos pueda agregar, quitar o retener durante el análisis.  
   
@@ -274,9 +288,9 @@ caps.handback.revision: 31
     -U LoginID -P Password -s SessionName -A TuningTimeInMinutes  
     ```  
   
-     donde `-S` especifica el nombre de una instancia y un servidor remotos (o una instancia con nombre en el servidor local) y `-D` especifica el nombre de la base de datos que desea optimizar. La opción `-it` especifica el nombre de la tabla de carga de trabajo, `-U` y `-P` especifican el identificador de inicio de sesión y la contraseña de la base de datos remota, `-s` especifica el nombre de la sesión de optimización y `-A` especifica la duración de la sesión de optimización en minutos. La utilidad **dta** usa de forma predeterminada una duración de optimización de 8 horas. Si quiere que el Asistente para la optimización de motor de base de datos optimice una carga de trabajo durante un tiempo ilimitado, especifique **0** (cero) en la opción `-A`.  
+     donde `-S` especifica el nombre de una instancia y un servidor remotos (o una instancia con nombre en el servidor local) y `-D` especifica el nombre de la base de datos que desea optimizar. La opción `-it` especifica el nombre de la tabla de carga de trabajo, `-U` y `-P` especifican el identificador de inicio de sesión y la contraseña de la base de datos remota, `-s` especifica el nombre de la sesión de optimización y `-A` especifica la duración de la sesión de optimización en minutos. La utilidad **dta** usa de forma predeterminada una duración de optimización de 8 horas. Si quiere que el Asistente para la optimización de motor de base de datos optimice una carga de trabajo durante un tiempo ilimitado, especifique **0** (cero) en la opción `-A` .  
   
-##### Para optimizar una base de datos mediante un archivo de entrada XML  
+##### <a name="to-tune-a-database-using-an-xml-input-file"></a>Para optimizar una base de datos mediante un archivo de entrada XML  
   
 1.  Determine las características de la base de datos (índices, vistas indizadas, creación de particiones) que desee que el Asistente para la optimización de motor de base de datos pueda agregar, quitar o retener durante el análisis.  
   
@@ -292,10 +306,10 @@ caps.handback.revision: 31
   
      donde `-E` especifica una conexión de confianza, `-S` especifica una instancia y un servidor remotos o una instancia con nombre en el servidor local, `-s` especifica el nombre de la sesión de optimización e `-ix` especifica el archivo de entrada XML que se usará en la sesión de optimización.  
   
-5.  Cuando la utilidad termine de optimizar la carga de trabajo, puede ver los resultados de las sesiones de optimización mediante la GUI del Asistente para la optimización de motor de base de datos. Otra posibilidad es especificar que las recomendaciones de optimización se escriban en un archivo XML con la opción **-ox**. Para obtener más información, consulte [dta Utility](../../tools/dta/dta-utility.md).  
+5.  Cuando la utilidad termine de optimizar la carga de trabajo, puede ver los resultados de las sesiones de optimización mediante la GUI del Asistente para la optimización de motor de base de datos. Otra posibilidad es especificar que las recomendaciones de optimización se escriban en un archivo XML con la opción **-ox** . Para obtener más información, consulte [dta Utility](../../tools/dta/dta-utility.md).  
   
 ##  <a name="XMLInput"></a> Crear un archivo de entrada XML  
- Si el usuario es un desarrollador de XML experimentado, puede crear archivos con formato XML que el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] podrá utilizar para optimizar cargas de trabajo. Para crear estos archivos XML, utilice las herramientas XML para modificar un archivo de ejemplo o para generar una instancia del esquema XML del Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Si el usuario es un desarrollador de XML experimentado, puede crear archivos con formato XML que el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] podrá utilizar para optimizar cargas de trabajo. Para crear estos archivos XML, utilice las herramientas XML para modificar un archivo de ejemplo o para generar una instancia del esquema XML del Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
  El esquema XML del Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] está disponible en la instalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , en la ubicación siguiente:  
   
@@ -305,7 +319,7 @@ caps.handback.revision: 31
   
  Esta dirección URL le lleva a una página en la que encontrará muchos esquemas XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Desplácese por la página hasta que llegue a la fila del Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
-#### Para crear un archivo de entrada XML para optimizar cargas de trabajo  
+#### <a name="to-create-an-xml-input-file-to-tune-workloads"></a>Para crear un archivo de entrada XML para optimizar cargas de trabajo  
   
 1.  Cree una carga de trabajo. Puede utilizar una tabla o un archivo de seguimiento mediante la plantilla de optimización en el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], o bien crear un script [!INCLUDE[tsql](../../includes/tsql-md.md)] que reproduzca una carga de trabajo representativa para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Crear una carga de trabajo](#Create) , anteriormente en este tema.  
   
@@ -313,7 +327,7 @@ caps.handback.revision: 31
   
     -   Copie y pegue uno de los [ejemplos de archivos de entrada XML &#40;DTA&#41;](../../tools/dta/xml-input-file-samples-dta.md) en el editor XML que quiera. Cambie los valores de forma que se especifiquen los argumentos apropiados para su instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y guarde el archivo XML.  
   
-    -   Mediante la herramienta XML que prefiera, genere una instancia desde el esquema XML del Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+    -   Mediante la herramienta XML que prefiera, genere una instancia desde el esquema XML del Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 3.  Una vez creado el archivo de entrada XML, úselo como entrada de la utilidad de línea de comandos **dta** para optimizar la carga de trabajo. Para obtener información sobre cómo utilizar los archivos de entrada XML con esta utilidad, vea la sección [Usar la utilidad dta](#dta) anteriormente en este tema.  
   
@@ -322,17 +336,17 @@ caps.handback.revision: 31
   
 ##  <a name="UI"></a> Descripciones de la interfaz de usuario  
   
-### Menú Herramientas/Página Opciones  
+### <a name="tools-menuoptions-page"></a>Menú Herramientas/Página Opciones  
  Utilice este cuadro de diálogo para especificar parámetros de configuración generales para el Asistente para la optimización de motor de base de datos.  
   
  **Al iniciar**  
- Especifique qué acción debería llevar a cabo el Asistente para la optimización de motor de base de datos al iniciarse: abrirse sin una conexión a bases de datos, mostrar un cuadro de diálogo **Nueva conexión**, mostrar una nueva sesión o cargar la última sesión cargada.  
+ Especifique qué acción debería llevar a cabo el Asistente para la optimización de motor de base de datos al iniciarse: abrirse sin una conexión a bases de datos, mostrar un cuadro de diálogo **Nueva conexión** , mostrar una nueva sesión o cargar la última sesión cargada.  
   
  **Cambiar fuente**  
  Especifica la fuente que se muestra y que utilizan las tablas del Asistente para la optimización de motor de base de datos.  
   
  **Número de elementos en las listas usadas más recientemente**  
- Especifica el número de sesiones o archivos que se mostrarán en **Sesiones recientes** o **Archivos recientes** del menú **Archivo**.  
+ Especifica el número de sesiones o archivos que se mostrarán en **Sesiones recientes** o **Archivos recientes** del menú **Archivo** .  
   
  **Recordar mis últimas opciones de optimización**  
  Conserva las opciones de optimización entre sesiones. La opción está seleccionada de forma predeterminada. Desactive esta casilla para empezar siempre con los valores predeterminados del Asistente para la optimización de motor de base de datos.  
@@ -343,7 +357,7 @@ caps.handback.revision: 31
  **Preguntar antes de detener análisis de sesión**  
  Muestra un cuadro de diálogo de confirmación antes de detener el análisis de una carga de trabajo.  
   
-#### Opciones de la pestaña General  
+#### <a name="general-tab-options"></a>Opciones de la pestaña General  
  Deberá configurar los campos de la pestaña **General** antes de iniciar una sesión de optimización. No tiene que modificar las opciones de la pestaña **Opciones de optimización** antes de iniciar una sesión de optimización.  
   
  **Nombre de sesión**  
@@ -363,7 +377,7 @@ database_name.owner_name.table_name
   
 -   La tabla de seguimiento debe encontrarse en el mismo servidor que el Asistente para la optimización de motor de base de datos está optimizando. Si crea la tabla de seguimiento en otro servidor, muévala al servidor que el Asistente para la optimización de motor de base de datos está optimizando.  
   
- **Caché de plan**  
+ **Caché del plan**  
  Especifique la memoria caché de plan como una carga de trabajo. De este modo, podrá evitar la necesidad de tener que crear manualmente una carga de trabajo. El Asistente para la optimización de motor de base de datos selecciona los 1.000 eventos principales que se usarán en el análisis.  
   
  **Xml**  
@@ -387,7 +401,7 @@ database_name.owner_name.table_name
  **Seleccionar bases de datos y tablas para optimizar**  
  Especifica las bases de datos y tablas que se deben optimizar. Para especificar todas las bases de datos, seleccione la casilla del encabezado de columna **Nombre** . Para especificar bases de datos específicas, seleccione la casilla situada junto al nombre de la base de datos. De forma predeterminada, todas las tablas de las bases de datos seleccionadas se incluyen automáticamente en la sesión de optimización. Para excluir tablas, haga clic en la flecha de la columna **Tablas seleccionadas** y, a continuación, desactive las casillas situadas junto a las tablas que no desee optimizar.  
   
- Flecha abajo de **Tablas seleccionadas**  
+ Flecha abajo de**Tablas seleccionadas**   
  Expande la lista de tablas para poder seleccionar tablas individuales para su optimización.  
   
  **Guardar registro de optimización**  
@@ -396,7 +410,7 @@ database_name.owner_name.table_name
 > [!NOTE]  
 >  El Asistente para la optimización de motor de base de datos no actualiza de forma automática la información sobre las filas de las tablas que se muestran en la pestaña **General** . En lugar de ello, se basa en los metadatos de la base de datos. Si sospecha que la información sobre las filas está obsoleta, ejecute el comando DBCC UPDATEUSAGE para los objetos apropiados.  
   
-##### Pestaña Opciones de optimización  
+##### <a name="tuning-tab-options"></a>Pestaña Opciones de optimización  
  Utilice la pestaña **Opciones de optimización** para modificar la configuración predeterminada de las opciones generales de optimización. No tiene que modificar las opciones de la pestaña **Opciones de optimización** antes de iniciar una sesión de optimización.  
   
  **Limitar tiempo de optimización**  
@@ -417,7 +431,7 @@ database_name.owner_name.table_name
   
 -   El espacio disponible en todas las unidades de disco adjuntas más el tamaño de los datos sin procesar.  
   
- **Incluya eventos de caché del plan de todas las bases de datos**  
+ **Incluir eventos de caché del plan de todas las bases de datos**  
  Especifique que los eventos de caché del plan de todas las bases de datos están analizados.  
   
  **Máximo de columnas por índice**  
@@ -433,7 +447,7 @@ database_name.owner_name.table_name
  Solo se realizan recomendaciones que permiten que el servidor permanezca en línea.  
   
  **Detener el**  
- Indique la fecha y hora en que debe detenerse el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Indique la fecha y hora en que debe detenerse el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
  **Índices y vistas indizadas**  
  Si activa esta casilla, incluye recomendaciones para agregar clúster, índices no clúster y vistas indizadas.  
@@ -477,7 +491,7 @@ database_name.owner_name.table_name
  **Mantener particiones alineadas**  
  Mantiene las estructuras de particiones que están alineadas, pero recomienda la eliminación de vistas indizadas, índices y particiones no alineadas innecesarios. Las particiones adicionales recomendadas se alinearán con el esquema de particiones actual.  
   
-###### Opciones de la pestaña Progreso  
+###### <a name="progress-tab-options"></a>Opciones de la pestaña Progreso  
  La pestaña **Progreso** del Asistente para la optimización de motor de base de datos aparece una vez que este asistente comienza el análisis de la carga de trabajo.  
   
  Si desea detener la sesión de optimización una vez iniciada, en el menú **Acciones** elija una de las siguientes opciones:  
@@ -504,8 +518,9 @@ database_name.owner_name.table_name
  **Registro de optimización**  
  Contiene información sobre esta sesión de optimización. Para imprimir este registro, haga clic con el botón derecho en él y, después, haga clic en **Imprimir**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
- [dta (utilidad)](../../tools/dta/dta-utility.md)  
+ [dta Utility](../../tools/dta/dta-utility.md)  
   
   
+

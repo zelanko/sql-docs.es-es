@@ -1,41 +1,45 @@
 ---
-title: "Seleccionar origen (cuadro de di&#225;logo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.selectsource.f1"
+title: "Seleccionar origen (cuadro de diálogo) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.selectsource.f1
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8ffe2ca7e33b741309b594c0a351825fee59b07
+ms.lasthandoff: 04/11/2017
+
 ---
-# Seleccionar origen (cuadro de di&#225;logo)
+# <a name="select-source-dialog-box"></a>Seleccionar origen (cuadro de diálogo)
   Utilice este cuadro de diálogo para seleccionar el origen de las directivas que se van a ejecutar. Para seleccionar uno o más archivos XML que contienen directivas, seleccione **Archivos**. Para ejecutar las directivas que se buscan en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], seleccione **Servidor**.  
   
  Puede abrir este cuadro de diálogo de varias maneras.  
   
  **Para abrir este cuadro de diálogo**  
   
--   En Servidores registrados, haga clic con el botón derecho en **Grupos de servidores locales**, en cualquier servidor de **Grupos de servidores locales** o en cualquier servidor de **Servidores de administración central** y seleccione **Evaluar directivas**. En la página **Selección de directiva** del cuadro de diálogo **Evaluar directivas**, haga clic en el botón Examinar (**...**).  
+-   En Servidores registrados, haga clic con el botón derecho en **Grupos de servidores locales** , en cualquier servidor de **Grupos de servidores locales**o en cualquier servidor de **Servidores de administración central**y seleccione **Evaluar directivas**. En la página **Selección de directiva** del cuadro de diálogo **Evaluar directivas** , haga clic en el botón Examinar (**...**).  
   
--   En el Explorador de objetos, expanda **Administración**, expanda **Administración de directivas**, haga clic con el botón derecho en **Directivas** y, después, seleccione **Importar directiva**. En el cuadro de diálogo **Importar**, haga clic en el botón Examinar (**...**).  
+-   En el Explorador de objetos, expanda **Administración**, expanda **Administración de directivas**, haga clic con el botón derecho en **Directivas**y, después, seleccione **Importar directiva**. En el cuadro de diálogo **Importar** , haga clic en el botón Examinar (**...**).  
   
--   En el Explorador de objetos, haga clic con el botón derecho en un servidor, una base de datos o un objeto de base de datos, seleccione **Directivas** y, después, seleccione **Evaluar**. En la página **Selección de directiva** del cuadro de diálogo **Evaluar directivas**, haga clic en el botón Examinar (**...**).  
+-   En el Explorador de objetos, haga clic con el botón derecho en un servidor, una base de datos o un objeto de base de datos, seleccione **Directivas**y, después, seleccione **Evaluar**. En la página **Selección de directiva** del cuadro de diálogo **Evaluar directivas** , haga clic en el botón Examinar (**...**).  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Archivos**  
  Seleccione uno o más archivos XML que contienen directivas.  
   
- **Server**  
+ **Servidor**  
  Permite seleccionar un servidor que contiene las directivas que se desean ejecutar.  
   
  **Tipo de servidor**  
@@ -65,7 +69,7 @@ caps.handback.revision: 16
  **Contraseña**  
  Escriba la contraseña del inicio de sesión. Esta opción solo es editable si ha seleccionado la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectarse.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Nodo Administración de directivas &#40;Explorador de objetos&#41;](../../relational-databases/policy-based-management/policy-management-node-object-explorer.md)   
  [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   

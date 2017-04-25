@@ -1,27 +1,31 @@
 ---
-title: "SP:StmtCompleted (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SP:StmtCompleted [clase de eventos]"
+title: Clase de eventos SP:StmtCompleted |Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SP:StmtCompleted event class
 ms.assetid: 9e8147a4-aeeb-49a6-80f8-df753d0f34cc
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0ff9f91227c08c932e33afb97c47a2019e1cd0f0
+ms.lasthandoff: 04/11/2017
+
 ---
-# SP:StmtCompleted (clase de eventos)
+# <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted [clase de eventos]
   La clase de eventos SP:StmtCompleted indica que se ha completado una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] en un procedimiento almacenado.  
   
-## Columnas de datos de la clase de eventos SP:StmtCompleted  
+## <a name="spstmtcompleted-event-class-data-columns"></a>Columnas de datos de la clase de eventos SP:StmtCompleted  
   
 |Nombre de columna de datos|**Tipo de datos**|Descripción|Identificador de columna|Filtrable|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
@@ -47,7 +51,7 @@ caps.handback.revision: 34
 |NTUserName|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |ObjectID|**int**|Identificador del objeto asignado por el sistema.|22|Sí|  
 |ObjectName|**nvarchar**|Nombre del objeto al que se hace referencia.|34|Sí|  
-|ObjectType|**int**|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la vista de catálogo sys.objects. Para ver los valores, vea [Columna de evento de seguimiento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sí|  
+|ObjectType|**int**|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la vista de catálogo sys.objects. Para ver los valores, consulte [Columna de evento de seguimiento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sí|  
 |Offset|**int**|Desplazamiento inicial de la instrucción en el procedimiento almacenado o lote.|61|Sí|  
 |Reads|**bigint**|Número de lecturas lógicas de disco que realiza el servidor en nombre del evento.|16|Sí|  
 |IdSolicitud|**int**|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
@@ -62,7 +66,7 @@ caps.handback.revision: 34
 |Writes|**bigint**|Número de escrituras físicas de disco que realiza el servidor en nombre del evento.|17|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

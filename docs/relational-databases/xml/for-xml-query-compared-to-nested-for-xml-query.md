@@ -1,28 +1,32 @@
 ---
-title: "Comparaci&#243;n de la consulta FOR XML con la consulta FOR XML anidada | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Consulta FOR XML."
-  - "consultas [XML en SQL Server], comparar tipos de consulta"
+title: "Comparación de la consulta FOR XML con la consulta FOR XML anidada | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML query
+- queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2e83d836d3cf5e736847c5ebbb1934e8cde5374a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Comparaci&#243;n de la consulta FOR XML con la consulta FOR XML anidada
+# <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Comparación de la consulta FOR XML con la consulta FOR XML anidada
   En este tema se compara una consulta FOR XML de nivel único con una consulta FOR XML anidada. Una de las ventajas de usar consultas FOR XML anidadas es que puede especificar una combinación de XML centrado en atributos y un XML centrado en elementos para los resultados de la consulta. En este ejemplo se demuestra.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  La siguiente consulta `SELECT` recupera información de categoría y subcategoría de productos de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . No hay FOR XML anidado en la consulta.  
   
 ```  
@@ -117,9 +121,9 @@ FOR XML AUTO, TYPE
   
 -   La consulta `FOR XML` interna recupera información de subcategoría de productos. La directiva `ELEMENTS` se agrega a la consulta `FOR XML` interna para generar el XML centrado en elementos que se agrega al XML generado por la consulta externa. De manera predeterminada, la consulta externa genera XML centrado en atributos.  
   
--   En la consulta interna, se especifica la directiva `TYPE` para que el resultado sea de tipo **xml** . Si no se especifica `TYPE`, el resultado se devuelve como tipo **nvarchar(max)** y los datos XML se devuelven como entidades.  
+-   En la consulta interna, se especifica la directiva `TYPE` para que el resultado sea de tipo **xml** . Si no se especifica `TYPE` , el resultado se devuelve como tipo **nvarchar(max)** y los datos XML se devuelven como entidades.  
   
--   La consulta externa especifica también la directiva `TYPE`. Por tanto, el resultado de esta consulta se devuelve al cliente como tipo **xml** .  
+-   La consulta externa especifica también la directiva `TYPE` . Por tanto, el resultado de esta consulta se devuelve al cliente como tipo **xml** .  
   
  Éste es el resultado parcial:  
   
@@ -199,7 +203,7 @@ FOR XML AUTO, TYPE
   
  Si quita la directiva `ELEMENTS` de la consulta `FOR XML` anidada que genera subcategorías de productos, todo el resultado está centrado en atributos. Después puede escribir esta consulta sin anidar. La adición de `ELEMENTS` da lugar a un XML parcialmente centrado en atributos y parcialmente centrado en elementos. Este resultado no se puede generar en un solo nivel, consulta FOR XML.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Usar consultas FOR XML anidadas](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

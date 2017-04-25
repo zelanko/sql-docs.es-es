@@ -1,30 +1,34 @@
 ---
-title: "Propiedades del &#237;ndice (Ayuda F1) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.swb.indexproperties.filter.f1"
-  - "sql13.swb.indexproperties.partitions.f1"
-  - "sql13.swb.indexproperties.general.f1"
-  - "sql13.swb.indexproperties.storage.f1"
-  - "sql13.swb.indexproperties.columns.f1"
-  - "sql13.swb.indexproperties.options.f1"
-  - "sql13.swb.indexproperties.spatial.f1"
+title: "Propiedades del índice (Ayuda F1) | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.swb.indexproperties.filter.f1
+- sql13.swb.indexproperties.partitions.f1
+- sql13.swb.indexproperties.general.f1
+- sql13.swb.indexproperties.storage.f1
+- sql13.swb.indexproperties.columns.f1
+- sql13.swb.indexproperties.options.f1
+- sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d646d06bd41ce4db35011d65ecab45109326c15
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propiedades del &#237;ndice (Ayuda F1)
+# <a name="index-properties-f1-help"></a>Propiedades del índice (Ayuda F1)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Las secciones de este tema hacen referencia a las distintas propiedades de índice disponibles mediante cuadros de diálogo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
@@ -63,7 +67,7 @@ caps.handback.revision: 38
  Si selecciona **Espacial** en el campo **Tipo de índice** , la casilla **Único** aparece atenuada.  
   
  **Columnas de clave de índice**  
- Agregue las columnas deseadas a la cuadrícula **Columnas de clave de índice**. Cuando se agrega más de una columna, las columnas deben aparecer en una lista con el orden deseado. El orden de las columnas en un índice puede tener un gran impacto en el rendimiento del índice.  
+ Agregue las columnas deseadas a la cuadrícula **Columnas de clave de índice** . Cuando se agrega más de una columna, las columnas deben aparecer en una lista con el orden deseado. El orden de las columnas en un índice puede tener un gran impacto en el rendimiento del índice.  
   
  No pueden participar más de 16 columnas en un solo índice compuesto. Para más de 16 columnas, vea Columnas incluidas al final de este tema.  
   
@@ -129,7 +133,7 @@ caps.handback.revision: 38
  **Identidad**  
  Muestra **Sí** para columnas de identidad y **No** cuando la columna no es una columna de identidad.  
   
- **Permitir valores NULL**  
+ **Allow Nulls**  
  Muestra **Sí** cuando la definición de la tabla permite valores NULL para la columna. Muestra **No** cuando la definición de la tabla no permite valores NULL para la columna.  
   
 ##  <a name="Storage"></a> Opciones de la página Almacenamiento  
@@ -178,47 +182,47 @@ caps.handback.revision: 38
 ##  <a name="Spatial"></a> Opciones de índice de la página Espacial  
  Use la página **Espacial** para ver o especificar los valores de las propiedades espaciales. Para obtener más información, vea [Datos espaciales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
-### Cuadro de límite  
+### <a name="bounding-box"></a>Cuadro de límite  
  El *cuadro de límite* es el perímetro de la cuadrícula de nivel superior de un plano geométrico. Los parámetros de cuadro de límite solo existen en la teselación de cuadrícula de geometría. Estos parámetros no están disponibles si **Esquema de teselación** es **Cuadrícula de geografía**.  
   
  El panel muestra las coordenadas **(***X-min***,***Y-min***)** y **(***X-max***,***Y-max***)** del cuadro de límite. No hay valores predeterminados para las coordenadas. Por consiguiente, cuando cree un nuevo índice espacial en una columna de tipo **geometry** , deberá especificar los valores de las coordenadas.  
   
- **X mínima**  
+ **X-min**  
  La coordenada x de la esquina inferior izquierda del cuadro de límite.  
   
- **Y mínima**  
+ **Y-min**  
  La coordenada y de la esquina inferior izquierda del cuadro de límite.  
   
- **X máxima**  
+ **X-max**  
  La coordenada x de la esquina superior derecha del cuadro de límite.  
   
- **Y máxima**  
+ **Y-max**  
  La coordenada y de la esquina superior derecha del cuadro de límite.  
   
-### General  
+### <a name="general"></a>General  
  **Esquema de teselación**  
  Indica el esquema de teselación del índice. Los esquemas de teselación admitidos son los siguientes.  
   
  **Cuadrícula de geometría**  
- Especifica el esquema de teselación de cuadrícula de geometría que se aplica a una columna del tipo de datos **geometry**.  
+ Especifica el esquema de teselación de cuadrícula de geometría que se aplica a una columna del tipo de datos **geometry** .  
   
  **Cuadrícula automática de geometría**  
- Esta opción está habilitada para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]cuando el nivel de compatibilidad de base de datos se ha establecido en 110 o superior.  
+ Esta opción está habilitada para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando el nivel de compatibilidad de base de datos se ha establecido en 110 o superior.  
   
  **Cuadrícula de geografía**  
- Especifica el esquema de teselación de cuadrícula de geografía, que se aplica a una columna del tipo de datos **geography**.  
+ Especifica el esquema de teselación de cuadrícula de geografía, que se aplica a una columna del tipo de datos **geography** .  
   
  **Cuadrícula automática de geografía**  
- Esta opción está habilitada para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]cuando el nivel de compatibilidad de base de datos se ha establecido en 110 o superior.  
+ Esta opción está habilitada para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando el nivel de compatibilidad de base de datos se ha establecido en 110 o superior.  
   
  Para obtener información sobre el modo en que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa la teselación, vea [Datos espaciales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
  **Celdas por objeto**  
  Indica el número de celdas por objeto de teselación que se pueden usar para un único objeto espacial en el índice. Este número puede ser un entero comprendido entre 1 y 8192, ambos incluidos. El valor predeterminado es 16, y 8 para versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando el nivel de compatibilidad de base de datos se ha establecido en 110 o superior.  
   
- En el nivel superior, si un objeto abarca más celdas de las especificadas mediante *n*, la indexación usa tantas celdas como sean necesarias para proporcionar una teselación de nivel superior completa. En tales casos, un objeto podría recibir más celdas de las especificadas. En este caso, el número máximo es la cantidad de celdas generadas por la cuadrícula de nivel superior, que depende de la densidad de **Nivel 1**.  
+ En el nivel superior, si un objeto abarca más celdas de las especificadas mediante *n*, la indexación usa tantas celdas como sean necesarias para proporcionar una teselación de nivel superior completa. En tales casos, un objeto podría recibir más celdas de las especificadas. En este caso, el número máximo es la cantidad de celdas generadas por la cuadrícula de nivel superior, que depende de la densidad de **Nivel 1** .  
   
-### Cuadrículas  
+### <a name="grids"></a>Cuadrículas  
  Este panel muestra la densidad de la cuadrícula en cada nivel del esquema de la teselación. La densidad se especifica como **Baja**, **Media**o **Alta**. El valor predeterminado es **Media**. **Baja** representa una cuadrícula de 4 x 4 (16 celdas), **Media** representa una cuadrícula de 8 x 8 (64 celdas) y **Alta** representa una cuadrícula de 16 x 16 (256 celdas). Estas opciones no están disponibles cuando se eligen las opciones de teselación **Cuadrícula automática de geometría** o **Cuadrícula automática de geografía** .  
   
  **Nivel 1**  
@@ -239,9 +243,10 @@ caps.handback.revision: 38
  **Expresión de filtro**  
  Define qué filas de datos para incluir en el índice filtrado. Por ejemplo, `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Establecer opciones de índice](../../relational-databases/indexes/set-index-options.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   
+

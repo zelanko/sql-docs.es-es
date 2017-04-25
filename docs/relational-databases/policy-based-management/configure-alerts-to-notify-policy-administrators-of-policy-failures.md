@@ -1,24 +1,28 @@
 ---
-title: "Configurar alertas para notificar los errores de directiva a los administradores de directivas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "administración basada en directivas, configurar alertas"
+title: Configurar alertas para notificar los errores de directiva a los administradores de directivas | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, configure alerts
 ms.assetid: e8e60159-d5b0-49d5-91f3-af8e9cb994c1
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 44565d371ca75d4d707274b90d52794473f63a72
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurar alertas para notificar los errores de directiva a los administradores de directivas
+# <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>Configurar alertas para notificar los errores de directiva a los administradores de directivas
   Cuando las directivas de administración basada en directivas se ejecutan en uno de los tres modos de evaluación automatizados, si se produce la infracción de una directiva, se escribe un mensaje en el registro de eventos. Para que se le notifique cuando este mensaje se escribe en el registro de eventos, puede crear una alerta que se active al detectar el mensaje y permita realizar una acción. La alerta debería detectar los mensajes que se muestran en la tabla siguiente.  
   
 |Modo de ejecución|Número de mensaje|  
@@ -30,18 +34,18 @@ caps.handback.revision: 6
   
  Si desea configurar una alerta para responder a los mensajes de error de administración basada en directivas, vea los temas siguientes:  
   
--   [Crear un operador](../../ssms/agent/create-an-operator.md)  
+-   [Crear un operador](http://msdn.microsoft.com/library/1359d790-5905-4927-a208-e7155e7768a2)  
   
--   [Crear una alerta con un número de error](../../ssms/agent/create-an-alert-using-an-error-number.md)  
+-   [Crear una alerta con un número de error](http://msdn.microsoft.com/library/03dd7fac-5073-4f86-babd-37e45a86023c)  
   
--   [Asignar alertas a un operador](../../ssms/agent/assign-alerts-to-an-operator.md)  
+-   [Asignar alertas a un operador](http://msdn.microsoft.com/library/aa818155-6fa2-4565-a09f-5c7e31c89754)  
   
-## Permisos  
+## <a name="permissions"></a>Permisos  
  Cuando las directivas se evalúan a petición, se ejecutan en el contexto de seguridad del usuario. Para escribir en el registro de errores, el usuario debe tener los permisos ALTER TRACE o ser miembro del rol fijo de servidor sysadmin. Las directivas que evalúe un usuario que tenga menos privilegios no escribirán en el registro de eventos y no desencadenarán una alerta.  
   
  Los modos de ejecución automatizados se ejecutan como un miembro del rol sysadmin. Esto permite que la directiva se escriba en el registro de errores y se genere una alerta.  
   
-## Consideraciones adicionales sobre las alertas  
+## <a name="additional-considerations-about-alerts"></a>Consideraciones adicionales sobre las alertas  
  Tenga en cuenta las consideraciones adicionales siguientes acerca de las alertas:  
   
 -   Las alertas solo se generan para las directivas que están habilitadas. Dado que las directivas **A petición** no pueden estar habilitadas, no se generan alertas para las directivas que se ejecutan a petición.  

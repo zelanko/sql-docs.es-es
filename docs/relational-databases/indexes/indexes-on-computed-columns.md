@@ -1,28 +1,32 @@
 ---
-title: "&#205;ndices en columnas calculadas | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "columnas calculadas, creación de índices"
-  - "creación de índices [SQL Server], columnas calculadas"
-  - "columnas imprecisas"
-  - "columnas calculadas persistentes"
-  - "precisas [SQL Server]"
+title: "Índices en columnas calculadas | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- computed columns, index creation
+- index creation [SQL Server], computed columns
+- imprecise columns
+- persisted computed columns
+- precise [SQL Server]
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9d41339f5e014e4f957000734d8019b0703f8d42
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#205;ndices en columnas calculadas
+# <a name="indexes-on-computed-columns"></a>Índices en columnas calculadas
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Los índices se pueden definir en columnas calculadas si se cumplen estos requisitos:  
@@ -37,11 +41,11 @@ caps.handback.revision: 41
   
 -   Requisitos de la opción SET  
   
- **Requisitos de propiedad**  
+ **Ownership Requirements**  
   
  Todas las referencias a funciones de la columna calculada deben tener el mismo propietario que la tabla.  
   
- **Requisitos de determinismo**  
+ **Determinism Requirements**  
   
 > [!IMPORTANT]  
 >  Las expresiones son deterministas si siempre devuelven el mismo resultado para un conjunto de entradas específico. La propiedad **IsDeterministic** de la función [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) informa de si una expresión *computed_column_expression* es determinista.  
@@ -65,7 +69,7 @@ caps.handback.revision: 41
 >   
 >  Cuando el valor del nivel de compatibilidad de la base de datos es 90, no se pueden crear índices en columnas calculadas que incluyan estas expresiones. Sin embargo, se pueden mantener las columnas calculadas existentes que contengan estas expresiones procedentes de una base de datos actualizada. Si utiliza columnas calculadas indizadas que contienen conversiones implícitas de cadena a fecha, para evitar posibles daños en las vistas indizadas, asegúrese de que las opciones LANGUAGE y DATEFORMAT son coherentes en las bases de datos y las aplicaciones.  
   
- **Requisitos de precisión**  
+ **Precision Requirements**  
   
  La expresión *computed_column_expression* debe ser precisa. Una expresión *computed_column_expression* es precisa si se cumplen una o varias de las condiciones siguientes:  
   
@@ -83,19 +87,19 @@ caps.handback.revision: 41
     ```  
   
 > [!NOTE]  
->  Las expresiones **float** o **real** se consideran imprecisas y no pueden ser la clave de un índice; una expresión **float** o **real** puede utilizarse en una vista indizada, pero no como clave. Esto también se aplica a las columnas calculadas. Las funciones, expresiones o funciones definidas por el usuario se considerarán imprecisas si incluyen expresiones **float** o **real**. Esto incluye a las lógicas (comparaciones).  
+>  Las expresiones **float** o **real** se consideran imprecisas y no pueden ser la clave de un índice; una expresión **float** o **real** puede utilizarse en una vista indizada, pero no como clave. Esto también se aplica a las columnas calculadas. Las funciones, expresiones o funciones definidas por el usuario se considerarán imprecisas si incluyen expresiones **float** o **real** . Esto incluye a las lógicas (comparaciones).  
   
  La propiedad **IsPrecise** de la función COLUMNPROPERTY informa de si una expresión *computed_column_expression* es precisa.  
   
- **Requisitos de tipo de datos**  
+ **Data Type Requirements**  
   
--   La expresión *computed_column_expression* definida para la columna calculada no se puede evaluar para los tipos de datos **text**, **ntext** o **image**.  
+-   La expresión *computed_column_expression* definida para la columna calculada no se puede evaluar para los tipos de datos **text**, **ntext**o **image** .  
   
--   Las columnas calculadas derivadas de los tipos de datos **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** y **xml** se pueden indexar, siempre que el tipo de datos de la columna calculada esté disponible como una columna de clave de índice.  
+-   Las columnas calculadas derivadas de los tipos de datos **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**y **xml** se pueden indexar, siempre que el tipo de datos de la columna calculada esté disponible como una columna de clave de índice.  
   
--   Las columnas calculadas derivadas de los tipos de datos **image**, **ntext** y **text** pueden ser columnas sin clave (incluidas) en un índice no agrupado, siempre que el tipo de datos de la columna calculada esté disponible como una columna índice sin clave.  
+-   Las columnas calculadas derivadas de los tipos de datos **image**, **ntext**y **text** pueden ser columnas sin clave (incluidas) en un índice no agrupado, siempre que el tipo de datos de la columna calculada esté disponible como una columna índice sin clave.  
   
- **Requisitos de la opción SET**  
+ **SET Option Requirements**  
   
 -   La opción de nivel de conexión ANSI_NULLS debe estar establecida en ON si se ejecuta la instrucción CREATE TABLE o ALTER TABLE que define la columna calculada. La función [OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md) informa de si la opción está activada a través de la propiedad **IsAnsiNullsOn** .  
   
@@ -120,7 +124,8 @@ caps.handback.revision: 41
 ##  <a name="BKMK_persisted"></a> Crear índices en columnas calculadas persistentes  
  Puede crear un índice en una columna calculada definida con una expresión determinista pero imprecisa si se marca la columna como PERSISTED en la instrucción CREATE TABLE o ALTER TABLE. Esto significa que [!INCLUDE[ssDE](../../includes/ssde-md.md)] almacena los valores calculados en la tabla y los actualiza cuando se actualiza cualquier otra columna de la que depende la columna calculada. [!INCLUDE[ssDE](../../includes/ssde-md.md)] utiliza estos valores persistentes cuando crea un índice en la columna y cuando se hace referencia al índice en una consulta. Esta opción permite crear un índice en una columna calculada cuando el [!INCLUDE[ssDE](../../includes/ssde-md.md)] no puede demostrar con exactitud si una función que devuelve expresiones de columnas calculadas, en especial una función CLR creada en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], es determinista y precisa.  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)  
   
   
+

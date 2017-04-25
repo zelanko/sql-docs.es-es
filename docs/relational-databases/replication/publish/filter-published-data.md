@@ -1,32 +1,36 @@
 ---
-title: "Filtrar datos publicados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "filtros [replicación de SQL Server]"
-  - "filtros [replicación de SQL Server], acerca del filtrado"
-  - "filtrar [replicación de SQL Server]"
-  - "filtros de fila estáticos"
-  - "replicación transaccional, filtrar datos publicados"
-  - "replicación [SQL Server], filtrar datos publicados"
-  - "filtrar datos publicados [replicación de SQL Server]"
-  - "replicación de instantáneas [SQL Server], filtrar datos publicados"
-  - "filtros de columna [replicación de SQL Server]"
+title: Filtrar datos publicados | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filters [SQL Server replication]
+- filters [SQL Server replication], about filtering
+- filtering [SQL Server replication]
+- static row filters
+- transactional replication, filtering published data
+- replication [SQL Server], filtering published data
+- filtering published data [SQL Server replication]
+- snapshot replication [SQL Server], filtering published data
+- column filters [SQL Server replication]
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 caps.latest.revision: 50
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b789fc6033b70608ca30cfa3895442be44ce1e40
+ms.lasthandoff: 04/11/2017
+
 ---
-# Filtrar datos publicados
+# <a name="filter-published-data"></a>Filtrar datos publicados
   Filtrar artículos de tabla permite crear particiones de los datos que se van a publicar. Si filtra los datos publicados, podrá:  
   
 -   Minimizar la cantidad de datos que se envían a través de la red.  
@@ -37,7 +41,7 @@ caps.handback.revision: 50
   
 -   Evitar o reducir los conflictos si los suscriptores actualizan datos, ya que pueden enviarse particiones de datos diferentes a varios suscriptores (dos suscriptores distintos no actualizarán los mismos valores de datos).  
   
--   Evitar la transmisión de datos reservados. Se pueden utilizar filtros de fila y filtros de columna para restringir el acceso de un suscriptor a los datos. Para la replicación de mezcla, existen consideraciones de seguridad que se deben tener en cuenta si utiliza un filtro con parámetros que incluya HOST_NAME(). Para obtener más información, vea la sección "Filtrar con HOST_NAME ()" en [filtros de fila parametrizados](../../../relational-databases/replication/merge/parameterized-row-filters.md).  
+-   Evitar la transmisión de datos reservados. Se pueden utilizar filtros de fila y filtros de columna para restringir el acceso de un suscriptor a los datos. Para la replicación de mezcla, existen consideraciones de seguridad que se deben tener en cuenta si utiliza un filtro con parámetros que incluya HOST_NAME(). Para obtener más información, vea la sección sobre cómo filtrar con HOST_NAME() en el tema [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  La replicación ofrece cuatro tipos de filtros:  
   
@@ -51,16 +55,16 @@ caps.handback.revision: 50
   
 -   Filtros de fila con parámetros que están disponibles solamente con la replicación de mezcla.  
   
-     Al utilizar los filtros de fila con parámetros, puede elegir un subconjunto de filas para publicarlo. A diferencia de los filtros estáticos que envían el mismo subconjunto de filas a cada suscriptor, los filtros de fila con parámetros utilizan un valor de datos suministrado por el suscriptor para enviar a los suscriptores diferentes subconjuntos de filas. Para más información, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-row-filters.md).  
+     Al utilizar los filtros de fila con parámetros, puede elegir un subconjunto de filas para publicarlo. A diferencia de los filtros estáticos que envían el mismo subconjunto de filas a cada suscriptor, los filtros de fila con parámetros utilizan un valor de datos suministrado por el suscriptor para enviar a los suscriptores diferentes subconjuntos de filas. Para más información, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Filtros de combinación que están disponibles solamente con la replicación de mezcla.  
   
      Al utilizar los filtros de combinación, puede ampliar un filtro de fila de una tabla publicada a otra. Para más información, consulte [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
   
-## Filtros de fila estáticos  
+## <a name="static-row-filters"></a>filtros de fila estáticos  
  En la siguiente ilustración se muestra una tabla publicada que está filtrada para que solamente se incluyan las filas 2, 3 y 6 en la publicación.  
   
- ![Filtrar filas](../../../relational-databases/replication/publish/media/repl-16.gif "Filtrar filas")  
+ ![Filtrado de filas](../../../relational-databases/replication/publish/media/repl-16.gif "Filtrado de filas")  
   
  Un filtro de fila estático utiliza una sola cláusula WHERE para seleccionar los datos apropiados que se publicarán; se especifica la parte final de la cláusula WHERE. Considere la tabla **Product** en la base de datos de ejemplo AdventureWorks, que contiene la columna **ProductLine**. Para publicar solamente las filas con datos sobre los productos relacionados con las bicicletas de montaña, especifique `ProductLine = 'M'`.  
   
@@ -71,20 +75,20 @@ caps.handback.revision: 50
     > [!NOTE]  
     >  Los filtros de fila en las publicaciones transaccionales pueden producir una sobrecarga significativa porque la cláusula de filtro de artículos se evalúa para cada fila de registro escrita en una tabla publicada para determinar si la fila se debe replicar. Se deben evitar los filtros de fila en publicaciones transaccionales si cada nodo de replicación puede admitir la carga de datos completa y el conjunto de datos global es suficientemente pequeño.  
   
--   Con la replicación de mezcla, utilice filtros de fila con parámetros en vez de crear varias publicaciones con filtros de fila estáticos. Para más información, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-row-filters.md).  
+-   Con la replicación de mezcla, utilice filtros de fila con parámetros en vez de crear varias publicaciones con filtros de fila estáticos. Para más información, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  Para definir o modificar un filtro de fila estático, vea [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
-## Filtros de columnas  
+## <a name="column-filters"></a>Filtros de columnas  
  En la siguiente ilustración se muestra una publicación que filtra la columna C.  
   
- ![Filtros de columnas](../../../relational-databases/replication/publish/media/repl-17.gif "Filtros de columnas")  
+ ![Filtrado de columnas](../../../relational-databases/replication/publish/media/repl-17.gif "Filtrado de columnas")  
   
  También puede utilizar conjuntamente el filtrado de filas y columnas, como se ilustra a continuación.  
   
- ![Filtrar filas y columnas](../../../relational-databases/replication/publish/media/repl-18.gif "Filtrar filas y columnas")  
+ ![Filtrado de filas y columnas](../../../relational-databases/replication/publish/media/repl-18.gif "Filtrado de filas y columnas")  
   
- Tras crear una publicación, puede utilizar un filtro de columna para quitar una columna de una publicación existente, pero conservar la columna en la tabla en el publicador e incluir también una columna existente en la publicación. Para otros cambios, tales como agregar una columna nueva a una tabla y después agregarla al artículo publicado, utilice la replicación de cambios de esquema. Para obtener más información, consulte las secciones "Agregar columnas" y "quitar" en el tema [hacer cambios de esquema en bases de datos de publicación](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ Tras crear una publicación, puede utilizar un filtro de columna para quitar una columna de una publicación existente, pero conservar la columna en la tabla en el publicador e incluir también una columna existente en la publicación. Para otros cambios, tales como agregar una columna nueva a una tabla y después agregarla al artículo publicado, utilice la replicación de cambios de esquema. Para más información, vea las secciones “Agregar columnas” y “Quitar columnas” del tema [Realizar cambios de esquema en bases de datos de publicaciones](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
  Los tipos de columnas enumerados en la siguiente tabla no se pueden eliminar de ciertos tipos de publicaciones.  
   
@@ -93,17 +97,17 @@ caps.handback.revision: 50
 |Columna de clave principal|Las columnas de clave principal son necesarias para todas las tablas en las publicaciones transaccionales. Las claves principales no son necesarias para las tablas en publicaciones de combinación, pero si hay una columna de clave principal, ésta no se puede filtrar.|  
 |Columna de clave externa|Todas las publicaciones creadas mediante el Asistente para nueva aplicación. Puede filtrar columnas de clave externa mediante procedimientos almacenados de Transact-SQL. Para obtener más información, vea [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).|  
 |Columna **rowguid**|Publicaciones de combinación*|  
-|El **msrepl_tran_version** columna|Publicaciones de instantáneas o transaccionales que permiten suscripciones actualizables|  
+|Columna **msrepl_tran_version**|Publicaciones de instantáneas o transaccionales que permiten suscripciones actualizables|  
 |Columnas que no permiten valores NULL y no tienen valores predeterminados ni el conjunto de propiedades IDENTITY.|Publicaciones de instantáneas o transaccionales que permiten suscripciones actualizables|  
 |Columnas con restricciones UNIQUE o índices|Publicaciones de instantáneas o transaccionales que permiten suscripciones actualizables|  
 |Todas las columnas en una publicación de combinación de SQL Server 7.0|Las columnas no se pueden filtrar en las publicaciones de combinación de SQL Server 7.0.|  
 |Timestamp|Publicaciones de instantáneas o transaccionales de SQL Server 7.0 que permiten suscripciones actualizables|  
   
- \*Si va a publicar una tabla en una publicación de mezcla y que la tabla ya contiene una columna de tipo de datos **uniqueidentifier** con el **ROWGUIDCOL** conjunto de propiedades, la replicación puede utilizar esta columna en lugar de crear una columna adicional denominada **rowguid**. En este caso, se debe publicar la columna existente.  
+ \*Si va a publicar una tabla en una publicación de mezcla y dicha tabla ya contiene una columna del tipo de datos **uniqueidentifier** con el conjunto de propiedades **ROWGUIDCOL**, la replicación puede utilizar dicha columna, en vez de crear una columna adicional denominada **rowguid**. En este caso, se debe publicar la columna existente.  
   
- Para definir o modificar un filtro de columna, vea [definir y modificar un filtro de columna](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+ Para definir o modificar un filtro de columna, vea [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
-## Consideraciones de filtrado  
+## <a name="filtering-considerations"></a>Consideraciones de filtrado  
  Tenga en cuenta las siguientes consideraciones al filtrar datos:  
   
 -   Todas las columnas a las que se hace referencia en filtros de fila se deben incluir en la publicación. Es decir, no puede utilizar un filtro de columna para excluir una columna utilizada en un filtro de fila.  
@@ -118,7 +122,7 @@ caps.handback.revision: 50
   
     -   **varbinary(max)**  
   
-    -   **Text y ntext**  
+    -   **text y ntext**  
   
     -   **imagen**  
   
@@ -128,9 +132,9 @@ caps.handback.revision: 50
   
 -   La replicación transaccional le permite replicar una vista indizada como vista o como tabla. Si replica la vista como tabla, no podrá filtrar columnas de la tabla.  
   
- Los filtros de fila no están diseñados para funcionar entre bases de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limita intencionadamente la ejecución de **sp_replcmds** (que filtra la ejecución debajo) al propietario de la base de datos (**dbo**). El **dbo** no tiene privilegios entre bases de datos. Con la incorporación de CDC (captura de datos modificados) en [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] el **sp_replcmds** lógica rellena las tablas con la información que el usuario puede volver a y de consulta de seguimiento de cambios. Por motivos de seguridad, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limita la ejecución de esta lógica para que un malintencionado **dbo** no pueda asaltar esta ruta de acceso de ejecución. Por ejemplo, un malintencionado **dbo** podría agregar desencadenadores a tablas de CDC que se ejecutarían en el contexto de usuario, que llama a **sp_replcmds**, en este caso el agente de lector del registro.  Si la cuenta bajo la que se está ejecutando el agente tiene privilegios mayores, el **dbo** malintencionado podría escalar sus privilegios.  
+ Los filtros de fila no están diseñados para funcionar entre bases de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limita intencionadamente la ejecución de **sp_replcmds** (que filtra la ejecución debajo) al propietario de la base de datos (**dbo**). El **dbo** no tiene privilegios entre bases de datos. Con la incorporación de CDC (Captura de datos modificados) a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] the **sp_replcmds** rellena las tablas de seguimiento de cambios con información a la que el usuario puede volver y que puede consultar. Por razones de seguridad, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limita la ejecución de esta lógica de modo que un **dbo** malintencionado no pueda asaltar esta ruta de acceso de ejecución. Por ejemplo, un **dbo** malintencionado podría agregar desencadenadores a las tablas de CDC que se ejecutarían en el contexto del usuario que llama a **sp_replcmds**, en este caso el agente del lector de registros.  Si la cuenta bajo la que se está ejecutando el agente tiene privilegios mayores, el **dbo** malintencionado podría escalar sus privilegios.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Publicar datos y objetos de base de datos](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

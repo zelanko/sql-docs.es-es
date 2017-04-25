@@ -1,25 +1,29 @@
 ---
-title: "Procedimientos almacenados (motor de base de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "almacenar programas como procedimientos almacenados"
-  - "procedimientos almacenados [SQL Server], acerca de procedimientos almacenados"
+title: Procedimientos almacenados (motor de base de datos) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- storing programs as stored procedures
+- stored procedures [SQL Server], about stored procedures
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14cb04aa946bed3cace30379ca2d78b3cd045b4b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Procedimientos almacenados (motor de base de datos)
+# <a name="stored-procedures-database-engine"></a>Procedimientos almacenados (motor de base de datos)
   Un procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un grupo de una o varias instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] o una referencia a un método de Common Runtime Language (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Los procedimientos se asemejan a las construcciones de otros lenguajes de programación, porque pueden:  
   
 -   Aceptar parámetros de entrada y devolver varios valores en forma de parámetros de salida al programa que realiza la llamada.  
@@ -92,6 +96,6 @@ caps.handback.revision: 35
 |Describe cómo se usan los parámetros en un procedimiento almacenado.|[Parámetros](../../relational-databases/stored-procedures/parameters.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [Procedimientos almacenados de CLR](../Topic/CLR%20Stored%20Procedures.md)  
+ [Procedimientos almacenados de CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
   
   

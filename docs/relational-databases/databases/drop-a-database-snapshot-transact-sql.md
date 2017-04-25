@@ -1,29 +1,33 @@
 ---
-title: "Eliminar una instant&#225;nea de base de datos (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "quitar instantáneas de base de datos"
-  - "eliminar instantáneas de base de datos"
-  - "instantáneas de base de datos [SQL Server], eliminar"
+title: "Eliminar una instantánea de base de datos (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing database snapshots
+- deleting database snapshots
+- database snapshots [SQL Server], deleting
 ms.assetid: ad70ec97-d5fb-41aa-b72a-915e74b61b76
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9dc2993da01eb4c68f24c4077ea79ff045a8106a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eliminar una instant&#225;nea de base de datos (Transact-SQL)
+# <a name="drop-a-database-snapshot-transact-sql"></a>Eliminar una instantánea de base de datos (Transact-SQL)
   Al quitar una instantánea de base de datos, ésta se elimina de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se eliminan también los archivos dispersos que utiliza. Cuando se quita una instantánea de base de datos, se terminan también todas sus conexiones de usuario.  
   
-## Seguridad  
+## <a name="security"></a>Seguridad  
   
 ###  <a name="Permissions"></a> Permisos  
  Cualquier usuario con permisos DROP DATABASE puede quitar una instantánea de base de datos.  
@@ -59,9 +63,8 @@ DROP DATABASE SalesSnapshot0600 ;
   
 -   [Revertir una base de datos a una instantánea de base de datos](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [&#91;Principio&#93;](#Top)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
  [Instantáneas de base de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   

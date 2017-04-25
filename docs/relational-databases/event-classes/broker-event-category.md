@@ -1,29 +1,33 @@
 ---
-title: "Broker (categor&#237;a de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clases de eventos de SQL Server, categoría de eventos Broker"
-  - "Broker, categoría de eventos [SQL Server]"
-  - "clases de eventos [SQL Server], categoría de evento Broker"
+title: "Categoría de eventos Broker | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server event classes, Broker event category
+- Broker event category [SQL Server]
+- event classes [SQL Server], Broker event category
 ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1f0c5c0459128bde182665d39f6907bfe057db97
+ms.lasthandoff: 04/11/2017
+
 ---
-# Broker (categor&#237;a de eventos)
+# <a name="broker-event-category"></a>Broker (categoría de eventos)
   La categoría de eventos **Broker** contiene eventos generales de Service Broker.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
   
 |Tema|Descripción|  
 |-----------|-----------------|  
@@ -40,7 +44,7 @@ caps.handback.revision: 17
   
  También se proporcionan dos eventos de auditoría de seguridad para Service Broker. Para obtener más información sobre estos eventos, vea [Clase de eventos Audit Broker Login](../../relational-databases/event-classes/audit-broker-login-event-class.md) y [Audit Broker Conversation (clase de eventos)](../../relational-databases/event-classes/audit-broker-conversation-event-class.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Auditoría de seguridad (categoría de eventos)](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

@@ -1,27 +1,31 @@
 ---
-title: "Broker:Message Classify (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker:Message Classify, clase de eventos"
+title: Clase de eventos Broker:Message Classify | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Message Classify event class
 ms.assetid: e51f3351-1239-4c41-b87c-1dd86968e027
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2bf30690ffcd48df2aedf00bad6c1124c0a555f0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Broker:Message Classify (clase de eventos)
+# <a name="brokermessage-classify-event-class"></a>Broker:Message Classify, clase de eventos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Broker:Message Classify** cuando Service Broker determina el enrutamiento para un mensaje.  
   
-## Columnas de datos de la clase de evento Broker:Message Classify  
+## <a name="brokermessage-classify-event-class-data-columns"></a>Columnas de datos de la clase de evento Broker:Message Classify  
   
 |Columna de datos|Tipo de datos|Descripción|Número de columna|Filtrable|  
 |-----------------|---------------|-----------------|-------------------|----------------|  
@@ -46,7 +50,7 @@ caps.handback.revision: 25
 |**TargetUserName**|**nvarchar**|Dirección de red del siguiente agente de saltos.|39|No|  
 |**TransactionID**|**bigint**|Identificador de la transacción asignado por el sistema.|4|No|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

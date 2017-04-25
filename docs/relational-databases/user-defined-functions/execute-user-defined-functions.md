@@ -1,29 +1,33 @@
 ---
-title: "Ejecutar funciones definidas por el usuario | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "invocar a funciones definidas por el usuario"
-  - "user-defined functions [SQL Server], executing"
+title: Ejecutar funciones definidas por el usuario | Microsoft Docs
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- invoking user-defined functions
+- user-defined functions [SQL Server], executing
 ms.assetid: 0de7744d-9b73-463f-ae80-e31a020004b5
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08287922d15adabd1128da2edbb1caa65bc3f85f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ejecutar funciones definidas por el usuario
+# <a name="execute-user-defined-functions"></a>Ejecutar funciones definidas por el usuario
   Ejecutar una función definida por el usuario mediante Transact-SQL.
   
 
-> **Nota:** Visite [Funciones definidas por el usuario](https://msdn.microsoft.com/library/ms191007.aspx) y [Create Function (Transact SQL)](https://msdn.microsoft.com/library/ms186755.aspx) para obtener más información acerca de las funciones definidas por el usuario. 
+> **Nota:** Visite  [Funciones definidas por el usuario](https://msdn.microsoft.com/library/ms191007.aspx) y [Create Function (Transact SQL)](https://msdn.microsoft.com/library/ms186755.aspx) para obtener más información acerca de las funciones definidas por el usuario. 
   
  
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
@@ -33,13 +37,13 @@ caps.handback.revision: 35
   
 ###  <a name="Security"></a> Seguridad  
   
- No se requieren permisos para ejecutar la instrucción [EXECUTE](https://msdn.microsoft.com/library/ms188332.aspx), pero **se requieren** permisos para los elementos protegibles a los que se hace referencia en la cadena EXECUTE. Por ejemplo, si la cadena contiene una instrucción [INSERT](https://msdn.microsoft.com/library/ms174335.aspx), el autor de la llamada de la instrucción EXECUTE debe tener el permiso INSERT en la tabla de destino. Los permisos se comprueban cuando se encuentra la instrucción EXECUTE, incluso si la instrucción EXECUTE está incluida en un módulo. Para obtener más información, vea [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
+ No se requieren permisos para ejecutar la instrucción [EXECUTE](https://msdn.microsoft.com/library/ms188332.aspx) , pero **se requieren** permisos para los elementos protegibles a los que se hace referencia en la cadena EXECUTE. Por ejemplo, si la cadena contiene una instrucción [INSERT](https://msdn.microsoft.com/library/ms174335.aspx) , el autor de la llamada de la instrucción EXECUTE debe tener el permiso INSERT en la tabla de destino. Los permisos se comprueban cuando se encuentra la instrucción EXECUTE, incluso si la instrucción EXECUTE está incluida en un módulo. Para obtener más información, vea [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-### Ejemplo 
+### <a name="example"></a>Ejemplo 
   
-En este ejemplo se usa la función escalar `ufnGetSalesOrderStatusText` que está disponible en la mayoría de las ediciones de `AdventureWorks`.  El propósito de la función es devolver un valor de texto para el estado de las ventas de un entero dado.  Varíe el ejemplo pasando enteros del 1 al 7 para el parámetro **\@Status**.
+En este ejemplo se usa la función escalar `ufnGetSalesOrderStatusText` que está disponible en la mayoría de las ediciones de `AdventureWorks`.  El propósito de la función es devolver un valor de texto para el estado de las ventas de un entero dado.  Varíe el ejemplo pasando enteros del 1 al 7 para el parámetro **\@Status** .
   
 ~~~tsql
 USE [AdventureWorks2016CTP3]
@@ -61,3 +65,4 @@ SELECT N'Order Status: ' + @ret;
   
   
   
+

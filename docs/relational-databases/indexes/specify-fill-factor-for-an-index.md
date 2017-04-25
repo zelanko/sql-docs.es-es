@@ -1,25 +1,29 @@
 ---
-title: "Especificar el factor de relleno para un &#237;ndice | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "factor de relleno [SQL Server]"
-  - "divisiones de páginas [SQL Server]"
+title: "Especificar el factor de relleno para un índice | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- fill factor [SQL Server]
+- page splits [SQL Server]
 ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 60356d04463b7905e092ddb8ccc6374fe410719b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Especificar el factor de relleno para un &#237;ndice
+# <a name="specify-fill-factor-for-an-index"></a>Especificar el factor de relleno para un índice
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Este tema describe qué es el factor de relleno y cómo especificar un valor de factor de relleno en un índice de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -49,22 +53,22 @@ caps.handback.revision: 45
   
 ###  <a name="Performance"></a> Consideraciones de rendimiento  
   
-#### Divisiones de páginas  
+#### <a name="page-splits"></a>Divisiones de páginas  
  Si el valor de factor de relleno se elige correctamente, se pueden reducir las posibles divisiones de página al proporcionarse espacio suficiente para la expansión del índice a medida que se agregan datos a la tabla subyacente. Cuando se agrega una fila nueva a una página de índice llena, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] mueve aproximadamente la mitad de las filas a una página nueva con el fin de hacer espacio para la nueva fila. Esta reorganización se denomina división de página. Una división de página genera espacio para los nuevos registros, pero puede tardar en realizarse y es una operación que consume muchos recursos. Además, puede causar fragmentación que, a su vez, causa más operaciones de E/S. Cuando se llevan a cabo divisiones de páginas con frecuencia, el índice se puede volver a generar utilizando un valor de factor de relleno nuevo o existente para redistribuir los datos. Para obtener más información, vea [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
  Aunque si el valor del factor de relleno es bajo y distinto de cero, se puede reducir el requisito de dividir páginas a medida que crezca el índice, éste necesitará más espacio de almacenamiento y puede reducir el rendimiento de la lectura. Incluso en el caso de una aplicación pensada para realizar muchas operaciones de inserción y actualización, el número de lecturas de base de datos suele superar a las escrituras en un factor de 5 a 10. Por lo tanto, al especificar un factor de relleno distinto del predeterminado, se puede disminuir el rendimiento de las lecturas de base de datos en una cantidad inversamente proporcional al valor del factor de relleno. Por ejemplo, un valor de factor de relleno igual a 50 puede hacer que el rendimiento de las lecturas de base de datos se reduzca a la mitad. El rendimiento de las lecturas se reduce porque el índice contiene más páginas, con lo que se aumentan las operaciones de E/S de disco necesarias para recuperar los datos.  
   
-#### Agregar datos al final de la tabla  
+#### <a name="adding-data-to-the-end-of-the-table"></a>Agregar datos al final de la tabla  
  Un factor de relleno distinto de cero o de cien puede ser conveniente para el rendimiento si los datos nuevos se distribuyen uniformemente en toda la tabla. Sin embargo, si todos los datos se agregan al final de la tabla, el espacio vacío en las páginas de índice no se rellenará. Por ejemplo, si la columna de clave de índice es una columna IDENTITY, la clave de las nuevas filas siempre aumenta y las filas de índice se agregan lógicamente al final del índice. Si las filas existentes se van a actualizar con datos que hacen aumentar el tamaño de las filas, use un factor de relleno menor que 100. Los bytes adicionales en cada página ayudarán a reducir las divisiones de página ocasionadas por la longitud extra de las filas.  
   
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner**.  
+ Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para especificar un factor de relleno con el Diseñador de tablas  
+#### <a name="to-specify-a-fill-factor-by-using-table-designer"></a>Para especificar un factor de relleno con el Diseñador de tablas  
   
 1.  En el Explorador de objetos, haga clic en el signo más para expandir la base de datos que contiene la tabla en la que desea especificar el factor de relleno de un índice.  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 45
   
 3.  Haga clic con el botón derecho en la tabla en la que quiere especificar el factor de relleno de un índice y seleccione **Diseño**.  
   
-4.  En el menú **Diseñador de tablas**, haga clic en **Índices o claves**.  
+4.  En el menú **Diseñador de tablas** , haga clic en **Índices o claves**.  
   
 5.  Seleccione el índice con el factor de relleno que desea especificar.  
   
@@ -80,9 +84,9 @@ caps.handback.revision: 45
   
 7.  Haga clic en **Cerrar**.  
   
-8.  En el menú **Archivo**, seleccione **Guardar***nombre_tabla*.  
+8.  En el menú **Archivo** , seleccione **Guardar***nombre_tabla*.  
   
-#### Para especificar un factor de relleno en un índice mediante el Explorador de objetos  
+#### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>Para especificar un factor de relleno en un índice mediante el Explorador de objetos  
   
 1.  En el Explorador de objetos, haga clic en el signo más para expandir la base de datos que contiene la tabla en la que desea especificar el factor de relleno de un índice.  
   
@@ -102,7 +106,7 @@ caps.handback.revision: 45
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para especificar un factor de relleno en un índice existente  
+#### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>Para especificar un factor de relleno en un índice existente  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -121,7 +125,7 @@ caps.handback.revision: 45
     GO  
     ```  
   
-#### Otra manera de especificar un factor de relleno de un índice  
+#### <a name="another-way-to-specify-a-fill-factor-in-an-index"></a>Otra manera de especificar un factor de relleno de un índice  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -144,3 +148,4 @@ caps.handback.revision: 45
  Para obtener más información, vea [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
   
+

@@ -1,24 +1,28 @@
 ---
-title: "Dispositivo de copia de seguridad (p&#225;gina Contenido de los medios) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backupdevice.contents.f1"
+title: "Dispositivo de copia de seguridad (página Contenido de los medios) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backupdevice.contents.f1
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4bfa385cab6527c16e62e2e631b9ffa1b96e0d10
+ms.lasthandoff: 04/11/2017
+
 ---
-# Dispositivo de copia de seguridad (p&#225;gina Contenido de los medios)
+# <a name="backup-device-media-contents-page"></a>Dispositivo de copia de seguridad (página Contenido de los medios)
   Utilice el cuadro de diálogo **Dispositivo de copia de seguridad** para ver la información acerca de la copia de seguridad. Esta información describe el dispositivo, el medio, el conjunto de medios y los conjuntos de copias de seguridad.  
   
  **Para utilizar SQL Server Management Studio a fin de ver el contenido de un dispositivo de copia de seguridad**  
@@ -27,7 +31,7 @@ caps.handback.revision: 38
   
 -   [Ver las propiedades y el contenido de un dispositivo lógico de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  Vea la información acerca del medio individual, el conjunto de medios y los conjuntos de copias de seguridad.  
   
  **Multimedia**  
@@ -57,7 +61,7 @@ caps.handback.revision: 38
 |Encabezado|Valores|  
 |------------|------------|  
 |**Nombre**|Nombre del conjunto de copia de seguridad.|  
-|**Tipo**|Objeto del que se realizó una copia de seguridad: Base de datos, Archivo o *\<en blanco>* (para registros de transacciones).|  
+|**Tipo**|Objeto del que se realizó una copia de seguridad: Base de datos, Archivo o *en blanco>\<* (para registros de transacciones).|  
 |**Componente**|Tipo de copia de seguridad realizada: Completa, Diferencial o Registro de transacciones.|  
 |**Server**|Nombre de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizó la operación de copia de seguridad.|  
 |**Base de datos**|Nombre de la base de datos de la que se realizó la copia de seguridad.|  
@@ -87,7 +91,7 @@ caps.handback.revision: 38
   
 -   [Restaurar una copia de seguridad desde un dispositivo &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

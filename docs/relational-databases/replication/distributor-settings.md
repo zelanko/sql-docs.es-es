@@ -1,34 +1,38 @@
 ---
-title: "Configuraci&#243;n del distribuidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.DistributorSettings.f1"
-helpviewer_keywords: 
-  - "Configuración del distribuidor, cuadro de diálogo"
+title: "Configuración del distribuidor | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.DistributorSettings.f1
+helpviewer_keywords:
+- Distributor Settings dialog box
 ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f86500a4461bc2da64c7f3a3d8906bb919b28628
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configuraci&#243;n del distribuidor
+# <a name="distributor-settings"></a>Configuración del distribuidor
   El cuadro de diálogo **Configuración del distribuidor** le permite cambiar la configuración de los distribuidores que se han agregado al panel izquierdo del Monitor de replicación.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Conectar automáticamente cuando se inicia el Monitor de replicación**  
  Seleccione esta opción para permitir que el Monitor de replicación se conecte al distribuidor y recupere información de estado.  
   
  **Conexión**  
- Haga clic para mostrar el **Conectar con el servidor** cuadro de diálogo. Esto le permite ver y cambiar las propiedades de conexión y las credenciales que el Monitor de replicación utiliza para conectarse al distribuidor.  
+ Haga clic aquí para mostrar el cuadro de diálogo **Conectar con el servidor** . Esto le permite ver y cambiar las propiedades de conexión y las credenciales que el Monitor de replicación utiliza para conectarse al distribuidor.  
   
  **Actualizar automáticamente el estado de este distribuidor y sus publicaciones**  
  Seleccione esta opción para permitir que el Monitor de replicación actualice automáticamente el estado del distribuidor. Si esta opción está seleccionada, el Monitor de replicación sondea al distribuidor para obtener información de estado basada en el intervalo de sondeo establecido por la opción **Frecuencia de actualización** . Para obtener más información sobre la actualización en el Monitor de replicación, vea [Caching, Refresh, and Replication Monitor Performance](../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md).  
@@ -42,7 +46,7 @@ caps.handback.revision: 10
  **Nuevo grupo**  
  Haga clic aquí para crear un nuevo grupo de publicadores. Un grupo de publicadores proporciona una forma cómoda de organizar publicadores dentro del Monitor de replicación. Los grupos no afectan a la replicación de datos ni a la relación entre los servidores de una topología de replicación.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Supervisar la replicación](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   

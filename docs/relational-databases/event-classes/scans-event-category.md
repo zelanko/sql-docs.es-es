@@ -1,29 +1,33 @@
 ---
-title: "Recorridos (categor&#237;a de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clases de eventos de SQL Server, categoría de eventos Exámenes"
-  - "Recorridos, categoría de eventos"
-  - "clases de eventos [SQL Server], categoría de eventos Exámenes"
+title: "Categoría de eventos Recorridos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server event classes, Scans event category
+- Scans event category
+- event classes [SQL Server], Scans event category
 ms.assetid: 657aabe4-d3da-475e-87e5-cf9d33c976b1
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d03f4b35bfdd2b4fb2cc1fbf90400099142f1cc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Recorridos (categor&#237;a de eventos)
+# <a name="scans-event-category"></a>Recorridos, categoría de eventos
   La categoría de eventos **Recorridos** contiene eventos de recorrido.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
   
 |Tema|Descripción|  
 |-----------|-----------------|  

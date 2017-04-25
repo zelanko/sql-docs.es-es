@@ -1,24 +1,28 @@
 ---
-title: "Obtener acceso a FileTables con API de entrada-salida de archivo | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], acceder a archivos con las API de archivos"
+title: Obtener acceso a FileTables con API de entrada-salida de archivo | Microsoft Docs
+ms.custom: 
+ms.date: 08/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fee941d70d60091034abfd77998616508fedd611
+ms.lasthandoff: 04/11/2017
+
 ---
-# Obtener acceso a FileTables con API de entrada-salida de archivo
+# <a name="access-filetables-with-file-input-output-apis"></a>Obtener acceso a FileTables con API de entrada-salida de archivo
   Describe el funcionamiento de E/S del sistema de archivos en una FileTable.  
   
 ##  <a name="accessing"></a> Empezar a usar API de E/S con FileTables  
@@ -124,10 +128,11 @@ caps.handback.revision: 16
 |**Seguridad**|No|Se aplica la seguridad de nivel de recursos compartidos de Windows y la seguridad de nivel de tabla y columna de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**Diario USN**|No|Los cambios de metadatos en archivos y directorios de una FileTable son operaciones DML en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por consiguiente, se registran en el archivo de registro de la base de datos correspondiente. Sin embargo, no se registran en el diario de NTFS USN (salvo los cambios de tamaño).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden usar para capturar información similar.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Cargar archivos en FileTables](../../relational-databases/blob/load-files-into-filetables.md)   
- [Trabajar con directorios y rutas de acceso de FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Obtener acceso a FileTables con Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [DDL de FileTable, funciones, procedimientos almacenados y vistas](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
+

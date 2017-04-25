@@ -1,25 +1,29 @@
 ---
-title: "User Settable (objeto de SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "User Settable, objeto"
-  - "SQLServer:User Settable"
+title: User Settable (objeto de SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- User Settable object
+- SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0852dd58d7b89a9cf222c234a18bcecbad1cd943
+ms.lasthandoff: 04/11/2017
+
 ---
-# User Settable (objeto de SQL Server)
+# <a name="sql-server-user-settable-object"></a>User Settable (objeto de SQL Server)
   El objeto **User Settable** de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite crear instancias de contadores personalizadas. Utilice las instancias de contadores personalizadas para supervisar aspectos del servidor que los contadores existentes no supervisan, como los componentes únicos de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, para determinar el número de pedidos de clientes registrados o el inventario de productos).  
   
  El objeto **User Settable** contiene diez instancias del contador de consultas: **User counter 1** a **User counter 10**. Estos contadores tienen asignados los procedimientos almacenados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que van del **sp_user_counter1** al **sp_user_counter10**. A medida que las aplicaciones del usuario ejecutan estos procedimientos almacenados, los valores que establecen estos procedimientos almacenados se muestran en el Monitor de sistema. Un contador puede supervisar cualquier valor entero, por ejemplo, un procedimiento almacenado que cuente el número de pedidos de un producto específico que se han realizado en un día.  
@@ -43,7 +47,7 @@ caps.handback.revision: 22
 |…||  
 |**User counter 10**|Definido mediante **sp_user_counter10**.|  
   
- Para utilizar los procedimientos almacenados de contadores del usuario, ejecútelos desde su propia aplicación con un parámetro de número entero que represente el nuevo valor del contador. Por ejemplo, para establecer el valor 10 para **User counter 1**, ejecute esta instrucción Transact-SQL:  
+ Para utilizar los procedimientos almacenados de contadores del usuario, ejecútelos desde su propia aplicación con un parámetro de número entero que represente el nuevo valor del contador. Por ejemplo, para establecer el valor 10 para **User counter 1** , ejecute esta instrucción Transact-SQL:  
   
 ```  
 EXECUTE sp_user_counter1 10  
@@ -65,10 +69,10 @@ GO
 > [!IMPORTANT]  
 >  Las consultas definidas en los procedimientos almacenados de contadores de usuario deben ser lo más sencillas posible. Las consultas con un gran uso de memoria que realizan un número significativo de operaciones de ordenación o de hash, o las consultas que realizan un gran número de operaciones de E/S tienen un gran costo de ejecución y pueden afectar al rendimiento.  
   
-## Permisos  
+## <a name="permissions"></a>Permisos  
  **sp_user_counter** está disponible para todos los usuarios, pero puede estar restringido para cualquier contador de consultas.  
   
-## Vea también  
- [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+## <a name="see-also"></a>Vea también  
+ [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

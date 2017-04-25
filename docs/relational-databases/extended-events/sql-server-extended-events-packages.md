@@ -1,38 +1,42 @@
 ---
-title: "Paquetes de SQL Server Extended Events | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "eventos extendidos [SQL Server], paquetes"
-  - "xe"
+title: Paquetes de SQL Server Extended Events | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extended events [SQL Server], packages
+- xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 caps.latest.revision: 21
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: afb2140445252ca5b3a27f5ec9bf33219e3eef0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Paquetes de SQL Server Extended Events
+# <a name="sql-server-extended-events-packages"></a>Paquetes de SQL Server Extended Events
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Un paquete es un contenedor para objetos de eventos extendidos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Hay tres tipos de paquetes de eventos extendidos, que son los siguientes:  
   
 -   package0: objetos de sistema de Extended Events. Este es el paquete predeterminado.  
   
--   sqlserver: objetos relacionados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   sqlserver: objetos relacionados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   sqlos: objetos relacionados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Operating System (SQLOS).  
   
 > [!NOTE]  
->  El paquete de SecAudit es utilizado por la Auditoría de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ninguno de los objetos del paquete están disponibles con el lenguaje de definición de datos (DDL) de eventos extendidos.  
+>  El paquete de SecAudit es utilizado por la Auditoría de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ninguno de los objetos del paquete están disponibles con el lenguaje de definición de datos (DDL) de eventos extendidos.  
   
  Los paquetes se identifican por un nombre, un GUID y el módulo binario que contiene el paquete. Para obtener más información, vea [sys.dm_xe_packages &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql.md).  
   
@@ -52,12 +56,12 @@ caps.handback.revision: 21
   
  Se pueden mezclar objetos de distintos paquetes en una sesión de eventos. Para más información, consulte [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md).  
   
-## Contenido de los paquetes  
+## <a name="package-contents"></a>Contenido de los paquetes  
  La ilustración siguiente muestra los objetos que pueden existir en paquetes, que se encuentran en un módulo. Un módulo puede ser un archivo ejecutable o una biblioteca de vínculos dinámicos.  
   
  ![La relación de un módulo, paquetes y un objeto](../../relational-databases/extended-events/media/xepackagesobjects.gif "La relación de un módulo, paquetes y un objeto")  
   
-### Eventos  
+### <a name="events"></a>Eventos  
  Los eventos son puntos de supervisión de interés en la ruta de ejecución de un programa, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La activación de un evento conlleva el hecho de que se ha llegado al punto de interés, así como información de estado del momento en que se activó el evento.  
   
  Los eventos se pueden utilizar únicamente para realizar el seguimiento o para activar acciones. Estas acciones pueden ser sincrónicas o asincrónicas.  
@@ -69,7 +73,7 @@ caps.handback.revision: 21
   
  Todos los eventos tienen un esquema con versiones que define su contenido. Este esquema está formado por columnas de eventos con tipos bien definidos. Un evento de un tipo específico siempre debe proporcionar sus datos en exactamente el mismo orden que se especifica en el esquema. Sin embargo, un destino de evento no tiene que utilizar todos los datos que se proporcionan.  
   
-#### Clasificación de eventos  
+#### <a name="event-categorization"></a>Clasificación de eventos  
  Extended Events utiliza un modelo de clasificación de eventos parecido al Seguimiento de eventos para Windows (ETW). Para la clasificación se utilizan dos propiedades de eventos, canal y palabra clave. La utilización de estas propiedades es compatible con la integración de Extended Events en ETW y sus herramientas.  
   
  **Canal**  
@@ -95,10 +99,10 @@ where name = 'keyword_map'
 > [!NOTE]  
 >  Las palabras clave se asignan estrechamente a la agrupación actual de los eventos de Seguimiento de SQL.  
   
-### Destinos  
- Los destinos son los consumidores de evento. Los destinos procesan los eventos, ya sea de forma sincrónica en el subproceso que activa el evento o de forma asincrónica en un subproceso proporcionado por el sistema. Eventos extendidos proporciona varios destinos que se pueden utilizar según corresponda para dirigir el resultado de los eventos. Para más información, consulte [SQL Server Extended Events Targets](../Topic/SQL%20Server%20Extended%20Events%20Targets.md).  
+### <a name="targets"></a>Destinos  
+ Los destinos son los consumidores de evento. Los destinos procesan los eventos, ya sea de forma sincrónica en el subproceso que activa el evento o de forma asincrónica en un subproceso proporcionado por el sistema. Eventos extendidos proporciona varios destinos que se pueden utilizar según corresponda para dirigir el resultado de los eventos. Para más información, consulte [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
-### Acciones  
+### <a name="actions"></a>Acciones  
  Una acción es una respuesta o serie de respuestas de programación a un evento. Están enlazadas a un evento y cada evento puede tener un conjunto único de acciones.  
   
 > [!NOTE]  
@@ -118,15 +122,15 @@ where name = 'keyword_map'
   
 -   Volcado de la pila  
   
--   Detección del plan de ejecución (solamente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   Detección del plan de ejecución (solamente[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] recopilación de la pila (solamente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] recopilación de la pila (solamente[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )  
   
 -   Cálculo de estadísticas en tiempo de ejecución  
   
 -   Recopilación de datos proporcionados por el usuario si se produce una excepción  
   
-### Predicados  
+### <a name="predicates"></a>Predicados  
  Los predicados son un conjunto de reglas lógicas que se utilizan para evaluar los eventos cuando se procesan. Esto permite al usuario de Extended Events capturar selectivamente datos de eventos en función de criterios concretos.  
   
  Los predicados pueden almacenar datos en un contexto local que se puede utilizar para crear predicados que devuelven el valor verdadero cada *n* minutos o cada *n* veces que se activa un evento. Este almacenamiento en el contexto local también se puede utilizar para actualizar dinámicamente el predicado, suprimiendo así activaciones futuras del evento si los eventos contienen datos similares.  
@@ -136,7 +140,7 @@ where name = 'keyword_map'
 > [!NOTE]  
 >  No se pueden evaluar los predicados con efectos secundarios si se produce un error de comprobación de predicado con anterioridad.  
   
-### Tipos  
+### <a name="types"></a>Tipos  
  Puesto que los datos son una colección de bytes agrupados, la longitud y características de la colección de bytes son necesarias para interpretar los datos. Esta información se encapsula en el objeto Tipo. Los tipos siguientes se proporcionan para los objetos de paquete:  
   
 -   event  
@@ -153,7 +157,7 @@ where name = 'keyword_map'
   
  Para obtener más información, vea [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md).  
   
-### Mapas  
+### <a name="maps"></a>Mapas  
  Una tabla de asignación asigna un valor interno a una cadena, que permite a un usuario saber qué representa el valor. En lugar de poder obtener solo un valor numérico, un usuario puede obtener una descripción significativa del valor interno. La consulta siguiente muestra cómo obtener valores de asignaciones.  
   
 ```  
@@ -215,9 +219,9 @@ where name = 'lock_mode'
   
  Utilizando esta tabla como ejemplo, suponga que tiene una columna denominada modo, y su valor es 5. La tabla indica que 5 se asigna a X, lo que quiere decir el tipo de bloqueo es Exclusivo.  
   
-## Vea también  
- [Sesiones de SQL Server Extended Events](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
+## <a name="see-also"></a>Vea también  
+ [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Motor de SQL Server Extended Events](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [Destinos de SQL Server Extended Events](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)  
+ [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

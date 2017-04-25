@@ -1,30 +1,34 @@
 ---
-title: "Reducir una base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.shrinkdatabase.f1"
-helpviewer_keywords: 
-  - "reducir bases de datos"
-  - "bases de datos [SQL Server], reducir"
-  - "reducir tamaño de base de datos"
-  - "reducción de base de datos [SQL Server]"
-  - "reducir tamaño de base de datos"
+title: Reducir una base de datos | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.shrinkdatabase.f1
+helpviewer_keywords:
+- shrinking databases
+- databases [SQL Server], shrinking
+- decreasing database size
+- database shrinking [SQL Server]
+- reducing database size
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cdc33c918c6817d9c242b6e52617c00845195f7d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Reducir una base de datos
+# <a name="shrink-a-database"></a>Reducir una base de datos
   En este tema se describe cómo reducir una base de datos mediante objetos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  La reducción de los archivos de datos permite recuperar espacio moviendo páginas de datos del final del archivo a espacio desocupado próximo al principio del archivo. Cuando se crea suficiente espacio libre al final del archivo, las páginas de datos situadas al final del archivo pueden desasignarse y devolverse al sistema de archivos.  
@@ -45,7 +49,7 @@ caps.handback.revision: 42
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**  [Reduce una base de datos](#FollowUp)  
+-   **Follow Up:**  [You shrink a database](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -74,15 +78,15 @@ caps.handback.revision: 42
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- Debe pertenecer al rol fijo de servidor **sysadmin** o al rol fijo de base de datos **db_owner**.  
+ Debe pertenecer al rol fijo de servidor **sysadmin** o al rol fijo de base de datos **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para reducir una base de datos  
+#### <a name="to-shrink-a-database"></a>Para reducir una base de datos  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y, a continuación, expándala.  
   
-2.  Expanda **Bases de datos** y, después, haga clic con el botón derecho en la base de datos que quiera reducir.  
+2.  Expanda **Bases de datos**y, después, haga clic con el botón derecho en la base de datos que quiera reducir.  
   
 3.  Seleccione **Tareas**y **Reducir**, y haga clic en **Base de datos**.  
   
@@ -105,7 +109,7 @@ caps.handback.revision: 42
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para reducir una base de datos  
+#### <a name="to-shrink-a-database"></a>Para reducir una base de datos  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -118,7 +122,7 @@ caps.handback.revision: 42
 ##  <a name="FollowUp"></a> Seguimiento: Después de reducir una base de datos  
  Los datos que se mueven para reducir un archivo se pueden dispersar en cualquier ubicación disponible en el archivo. Esto produce la fragmentación de índices y puede reducir el rendimiento de las consultas que buscan un intervalo del índice. Para eliminar la fragmentación, considere la posibilidad de volver a generar los índices en el archivo después de la reducción.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Reducir un archivo](../../relational-databases/databases/shrink-a-file.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

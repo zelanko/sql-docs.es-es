@@ -1,26 +1,30 @@
 ---
-title: "CompoundCurve | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: CompoundCurve | Microsoft Docs
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ab465ac3e7c5fb74aade48aeca91379a86711522
+ms.lasthandoff: 04/11/2017
+
 ---
-# CompoundCurve
+# <a name="compoundcurve"></a>CompoundCurve
   Una **CompoundCurve** es una recopilación de cero o más instancias de **CircularString** o **LineString** de tipos de geometría o de geografía.  
   
 > [!IMPORTANT]  
->  Para obtener una descripción detallada y ejemplos de las nuevas características espaciales de esta versión, incluido el subtipo **CompoundCurve**, descargue las notas del producto [Nuevas características espaciales de SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Para obtener una descripción detallada y ejemplos de las nuevas características espaciales de esta versión, incluido el subtipo **CompoundCurve** , descargue las notas del producto [Nuevas características espaciales de SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
   
  Se puede crear una instancia vacía de **CompoundCurve** , pero para que una **CompoundCurve** sea válida debe cumplir los siguientes criterios:  
   
@@ -28,15 +32,15 @@ caps.handback.revision: 25
   
 2.  La secuencia de instancias de **CircularString** o **LineString** debe ser continua.  
   
- Si una **CompoundCurve** contiene una secuencia de varias instancias de **CircularString** y **LineString** , el extremo final de cada instancia, salvo la última, debe ser el extremo inicial de la siguiente instancia de la secuencia. Esto significa que si el punto final de una instancia anterior de la secuencia es (4 3 7 2), el punto inicial para la instancia siguiente de la secuencia debe ser (4 3 7 2). Observe que los valores M (medida) y Z (elevación) para el punto también deben ser iguales. Si hay diferencia entre ambos puntos, se produce una excepción `System.FormatException`. Los puntos de una **CircularString** no tienen que tener valor Z o M. Si no se proporcionan valores Z o M para el punto final de la instancia anterior, el punto inicial de la instancia siguiente no puede incluir valores Z o M. Si el punto final para la secuencia anterior es (4 3), el punto inicial para la secuencia siguiente debe ser (4 3); no puede ser (4 3 7 2). Todos los puntos de una instancia **CompoundCurve** deben tener el mismo valor Z, o bien, ningún valor Z.  
+ Si una **CompoundCurve** contiene una secuencia de varias instancias de **CircularString** y **LineString** , el extremo final de cada instancia, salvo la última, debe ser el extremo inicial de la siguiente instancia de la secuencia. Esto significa que si el punto final de una instancia anterior de la secuencia es (4 3 7 2), el punto inicial para la instancia siguiente de la secuencia debe ser (4 3 7 2). Observe que los valores M (medida) y Z (elevación) para el punto también deben ser iguales. Si hay diferencia entre ambos puntos, se produce una excepción `System.FormatException` . Los puntos de una **CircularString** no tienen que tener valor Z o M. Si no se proporcionan valores Z o M para el punto final de la instancia anterior, el punto inicial de la instancia siguiente no puede incluir valores Z o M. Si el punto final para la secuencia anterior es (4 3), el punto inicial para la secuencia siguiente debe ser (4 3); no puede ser (4 3 7 2). Todos los puntos de una instancia **CompoundCurve** deben tener el mismo valor Z, o bien, ningún valor Z.  
   
-## Instancias de CompoundCurve  
+## <a name="compoundcurve-instances"></a>Instancias de CompoundCurve  
  La siguiente ilustración muestra tipos válidos de **CompoundCurve** .  
   
 ![f278742e-b861-4555-8b51-3d972b7602bf](../../relational-databases/spatial/media/f278742e-b861-4555-8b51-3d972b7602bf.gif)  
  
   
-### Instancias aceptadas  
+### <a name="accepted-instances"></a>Instancias aceptadas  
  Se acepta la instancia**CompoundCurve** si es una instancia vacía o cumple los siguientes criterios.  
   
 1.  Todas las instancias contenidas en la instancia **CompoundCurve** son instancias de segmento de arco circular aceptadas. Para obtener más información sobre instancias de segmento de arco circular aceptadas, vea [LineString](../../relational-databases/spatial/linestring.md) y [CircularString](../../relational-databases/spatial/circularstring.md).  
@@ -62,7 +66,7 @@ DECLARE @g1 geometry = 'COMPOUNDCURVE(CIRCULARSTRING EMPTY)';
 DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (1 0, 2 0))';  
 ```  
   
-### Instancias válidas  
+### <a name="valid-instances"></a>Instancias válidas  
  Una instancia de **CompoundCurve** es válida si cumple los siguientes criterios.  
   
 1.  La instancia de **CompoundCurve** es aceptada.  
@@ -92,9 +96,9 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
   
  `@g1` no es válida porque la segunda instancia no es una instancia válida de LineString. `@g2` no es válido porque la instancia **LineString** no es válida. `@g3` no es válido porque la instancia **CircularString** no es válida. Para obtener más información sobre instancias validas de **CircularString** y **LineString** , vea [CircularString](../../relational-databases/spatial/circularstring.md) y [LineString](../../relational-databases/spatial/linestring.md).  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
   
-### A. Crear una instancia de geometry con una CompoundCurve vacía  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-compooundcurve"></a>A. Crear una instancia de geometry con una CompoundCurve vacía  
  En el ejemplo siguiente, se muestra cómo crear una instancia vacía de `CompoundCurve` :  
   
 ```tsql  
@@ -102,21 +106,21 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('COMPOUNDCURVE EMPTY');  
 ```  
   
-### B. Declarar y crear una instancia de geometry usando una CompoundCurve en la misma instrucción  
+### <a name="b-declaring-and-instantiating-a-geometry-instance-using-a-compoundcurve-in-the-same-statement"></a>B. Declarar y crear una instancia de geometry usando una CompoundCurve en la misma instrucción  
  En el siguiente ejemplo, se muestra cómo declarar e inicializar una instancia de `geometry` con una `CompoundCurve`en la misma instrucción:  
   
 ```tsql  
 DECLARE @g geometry = 'COMPOUNDCURVE ((2 2, 0 0),CIRCULARSTRING (0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0))';  
 ```  
   
-### C. Crear una instancia de geography con una CompoundCurve  
+### <a name="c-instantiating-a-geography-instance-with-a-compoundcurve"></a>C. Crear una instancia de geography con una CompoundCurve  
  En el siguiente ejemplo se muestra cómo declarar e inicializar una instancia **geography** con un elemento `CompoundCurve`:  
   
 ```tsql  
 DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
-### D. Almacenar un cuadrado en una instancia de CompoundCurve  
+### <a name="d-storing-a-square-in-a-compoundcurve-instance"></a>D. Almacenar un cuadrado en una instancia de CompoundCurve  
  En el siguiente ejemplo, se muestran dos maneras diferentes de utilizar una instancia `CompoundCurve` para almacenar un cuadrado.  
   
 ```tsql  
@@ -128,7 +132,7 @@ SELECT @g1.STLength(), @g2.STLength();
   
  Las longitudes de `@g1` y `@g2` son iguales. Observe en el ejemplo que una instancia de **CompoundCurve** puede almacenar una o más instancias de `LineString`.  
   
-### E. Crear una instancia de geometry usando una CompoundCurve con varias CircularStrings  
+### <a name="e-instantiating-a-geometry-instance-using-a-compoundcurve-with-multiple-circularstrings"></a>E. Crear una instancia de geometry usando una CompoundCurve con varias CircularStrings  
  En el siguiente ejemplo, se muestra cómo utilizar dos instancias `CircularString` diferentes para inicializar una `CompoundCurve`.  
   
 ```tsql  
@@ -139,7 +143,7 @@ SELECT @g.STLength();
   
  Produce el siguiente resultado: 12.566370… que es el equivalente de 4∏. La instancia de `CompoundCurve` del ejemplo almacena un círculo de radio 2. Ambos ejemplos de código anteriores no tuvieron que utilizar una `CompoundCurve`. Para el primer ejemplo, habría sido más fácil utilizar una instancia de `LineString` , mientras que para el segundo ejemplo habría sido más fácil una instancia de `CircularString` . Sin embargo, el ejemplo siguiente muestra un caso donde `CompoundCurve` proporciona una mejor alternativa.  
   
-### F. Usar una CompoundCurve para almacenar un semicírculo  
+### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>F. Usar una CompoundCurve para almacenar un semicírculo  
  En el siguiente ejemplo, se utiliza una instancia de `CompoundCurve` para almacenar un semicírculo.  
   
 ```tsql  
@@ -148,7 +152,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), (4 2, 0 2
 SELECT @g.STLength();  
 ```  
   
-### G. Almacenar varias instancias de CircularString y LineString en una CompoundCurve  
+### <a name="g-storing-multiple-circularstring-and-linestring-instances-in-a-compoundcurve"></a>G. Almacenar varias instancias de CircularString y LineString en una CompoundCurve  
  En el siguiente ejemplo, se muestra cómo se pueden almacenar varias instancias de `CircularString` y `LineString` mediante una `CompoundCurve`.  
   
 ```tsql  
@@ -157,14 +161,14 @@ SET @g = geometry::Parse('COMPOUNDCURVE((3 5, 3 3), CIRCULARSTRING(3 3, 5 1, 7 3
 SELECT @g.STLength();  
 ```  
   
-### H. Almacenar instancias con valores Z y M  
+### <a name="h-storing-instances-with-z-and-m-values"></a>H. Almacenar instancias con valores Z y M  
  En el siguiente ejemplo, se muestra cómo utilizar una instancia `CompoundCurve` para almacenar una secuencia de instancias `CircularString` y `LineString` con valores Z y M.  
   
 ```tsql  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(7 5 4 2, 5 7 4 2, 3 5 4 2), (3 5 4 2, 8 7 4 2))');  
 ```  
   
-### I. Obligación de declarar las instancias de CircularString explícitamente  
+### <a name="i-illustrating-why-circularstring-instances-must-be-explicitly-declared"></a>I. Obligación de declarar las instancias de CircularString explícitamente  
  En el siguiente ejemplo, se muestra por qué se deben declarar explícitamente las instancias de `CircularString` . El programador está intentando almacenar un círculo en una instancia de `CompoundCurve` .  
   
 ```tsql  
@@ -185,7 +189,7 @@ Circle Two12.566370…
   
  El perímetro para el círculo dos es aproximadamente 4∏, que es el valor real del perímetro. Sin embargo, el perímetro para el círculo uno es significativamente inexacto. La instancia `CompoundCurve` del círculo uno almacena un segmento de arco circular (ABC) y dos segmentos de línea (CD, DA). La instancia `CompoundCurve` tiene que almacenar dos segmentos de arco circular (ABC, CDA) para definir un círculo. Una instancia `LineString` define el segundo conjunto de puntos (4 2, 2 4, 0 2) en la instancia `CompoundCurve` del círculo uno. Es necesario declarar explícitamente una instancia `CircularString` dentro de una `CompoundCurve`.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [STIsValid &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
  [STLength &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STStartPoint &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/ststartpoint-geometry-data-type.md)   
@@ -195,3 +199,4 @@ Circle Two12.566370…
  [Información general de los tipos de datos espaciales](../../relational-databases/spatial/spatial-data-types-overview.md)   
  [Punto](../../relational-databases/spatial/point.md)  
   
+

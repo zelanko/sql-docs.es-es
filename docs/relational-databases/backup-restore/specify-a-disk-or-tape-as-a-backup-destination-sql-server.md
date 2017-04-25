@@ -1,32 +1,36 @@
 ---
-title: "Especificar un disco o una cinta como destino de copia de seguridad (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dispositivos de copia de seguridad [SQL Server], cintas"
-  - "hacer copias de seguridad de bases de datos [SQL Server], cintas"
-  - "copias de seguridad de bases de datos [SQL Server], cintas"
-  - "dispositivos de copia de seguridad [SQL Server], discos"
-  - "dispositivos de copia de seguridad en disco [SQL Server]"
-  - "copias de seguridad de base de datos [SQL Server], discos"
-  - "hacer copia de seguridad de bases de datos [SQL Server], discos"
-  - "copias de seguridad [SQL Server], crear"
-  - "dispositivos de copia de seguridad de cintas, hacer copia de seguridad"
+title: Especificar un disco o una cinta como destino de copia de seguridad (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup devices [SQL Server], tapes
+- backing up databases [SQL Server], tapes
+- database backups [SQL Server], tapes
+- backup devices [SQL Server], disks
+- disk backup devices [SQL Server]
+- database backups [SQL Server], disks
+- backing up databases [SQL Server], disks
+- backups [SQL Server], creating
+- tape backup devices, backing up
 ms.assetid: e391f452-ed8c-4b40-b846-ac3881271b94
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f82d446fbbe47be4698ae458704e28fa8ac95c15
+ms.lasthandoff: 04/11/2017
+
 ---
-# Especificar un disco o una cinta como destino de copia de seguridad (SQL Server)
+# <a name="specify-a-disk-or-tape-as-a-backup-destination-sql-server"></a>Especificar un disco o una cinta como destino de copia de seguridad (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   En este tema se describe cómo especificar un disco o una cinta como destino de la copia de seguridad en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -51,19 +55,19 @@ caps.handback.revision: 30
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- De forma predeterminada, los permisos BACKUP DATABASE y BACKUP LOG corresponden a los miembros del rol fijo de servidor **sysadmin** y de los roles fijos de base de datos **db_owner** y **db_backupoperator**.  
+ De forma predeterminada, los permisos BACKUP DATABASE y BACKUP LOG corresponden a los miembros del rol fijo de servidor **sysadmin** y de los roles fijos de base de datos **db_owner** y **db_backupoperator** .  
   
  Los problemas de propiedad y permisos del archivo físico del dispositivo de copia de seguridad pueden interferir con una operación de copia de seguridad. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe poder leer y escribir en el dispositivo y la cuenta en la que se ejecuta el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener permisos de escritura. Pero [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), que agrega una entrada para un dispositivo de copia de seguridad en las tablas del sistema, no comprueba los permisos de acceso a los archivos. Es posible que estos problemas con el archivo físico del dispositivo de copia de seguridad no aparezcan hasta que se tenga acceso al recurso físico, al intentar la copia de seguridad o la restauración.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para especificar un disco o una cinta como destino de copia de seguridad  
+#### <a name="to-specify-a-disk-or-tape-as-a-backup-destination"></a>Para especificar un disco o una cinta como destino de copia de seguridad  
   
 1.  Tras conectarse a la instancia apropiada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol correspondiente.  
   
 2.  Expanda **Bases de datos**y, en función de la base de datos, seleccione la base de datos de un usuario o expanda **Bases de datos del sistema** y seleccione una base de datos del sistema.  
   
-3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas** y haga clic en **Copia de seguridad**. Aparece el cuadro de diálogo **Copia de seguridad de base de datos** .  
+3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y haga clic en **Copia de seguridad**. Aparece el cuadro de diálogo **Copia de seguridad de base de datos** .  
   
 4.  En la sección **Destino** de la página **General** , haga clic en **Disco** o **Cinta**. Para seleccionar las rutas de acceso de hasta 64 unidades de disco o cinta que contienen un solo conjunto de medios, haga clic en **Agregar**.  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para especificar un disco o una cinta como destino de copia de seguridad  
+#### <a name="to-specify-a-disk-or-tape-as-a-backup-destination"></a>Para especificar un disco o una cinta como destino de copia de seguridad  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -87,7 +91,7 @@ TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.Bak'
 GO  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Realizar copias de seguridad de archivos y grupos de archivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [Definir un dispositivo lógico de copia de seguridad para un archivo de disco &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   

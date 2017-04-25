@@ -1,43 +1,47 @@
 ---
-title: "Obtener acceso a datos FILESTREAM con Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], Transact-SQL"
+title: Obtener acceso a datos FILESTREAM con Transact-SQL | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], Transact-SQL
 ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 55caf01faba0be9c5277cbea435b256910e3dfc5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Obtener acceso a datos FILESTREAM con Transact-SQL
+# <a name="access-filestream-data-with-transact-sql"></a>Obtener acceso a datos FILESTREAM con Transact-SQL
   En este tema se describe cómo utilizar las instrucciones INSERT, DELETE y UPDATE de [!INCLUDE[tsql](../../includes/tsql-md.md)] para administrar los datos de FILESTREAM.  
   
 > [!NOTE]  
 >  Los ejemplos de este tema requieren la tabla y la base de datos habilitada para FILESTREAM que se crean en [Crear una base de datos habilitada para FILESTREAM](../../relational-databases/blob/create-a-filestream-enabled-database.md) y [Crear una tabla para almacenar datos FILESTREAM](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md).  
   
 ##  <a name="ins"></a> Insertar una fila que contiene datos FILESTREAM  
- Para agregar una fila a una tabla que admite datos FILESTREAM, use la instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT. Al insertar datos en una columna FILESTREAM, se puede insertar NULL o un valor **varbinary(max)**.  
+ Para agregar una fila a una tabla que admite datos FILESTREAM, use la instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT. Al insertar datos en una columna FILESTREAM, se puede insertar NULL o un valor **varbinary(max)** .  
   
-### Insertar NULL  
+### <a name="inserting-null"></a>Insertar NULL  
  El ejemplo siguiente muestra la forma de utilizar el valor `NULL`. Cuando el valor FILESTREAM es `NULL`, [!INCLUDE[ssDE](../../includes/ssde-md.md)] no crea un archivo en el sistema de archivos.  
   
  [!code-sql[FILESTREAM#FS_InsertNULL](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_1.sql)]  
   
-### Insertar un registro de longitud cero  
+### <a name="inserting-a-zero-length-record"></a>Insertar un registro de longitud cero  
  En el siguiente ejemplo se muestra cómo utilizar `INSERT` para crear un registro de longitud cero. Esto es útil cuando se desea obtener un identificador de archivo, pero el archivo se va a tratar con las API de Win32.  
   
  [!code-sql[FILESTREAM#FS_InsertZero](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_2.sql)]  
   
-### Crear un archivo de datos  
+### <a name="creating-a-data-file"></a>Crear un archivo de datos  
  En el siguiente ejemplo se muestra cómo utilizar `INSERT` para crear un archivo que contiene datos. [!INCLUDE[ssDE](../../includes/ssde-md.md)] convierte la cadena `Seismic Data` en un valor `varbinary(max)` . FILESTREAM crea el archivo de Windows si aún no existe. A continuación, los datos se agregan al archivo de datos.  
   
  [!code-sql[FILESTREAM#FS_InsertData](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_3.sql)]  
@@ -50,7 +54,6 @@ caps.handback.revision: 15
 |`F8F5C314-0559-4927-8FA9-1535EE0BDF50`|`2`|`0x`|  
 |`7F680840-B7A4-45D4-8CD5-527C44D35B3F`|`3`|`0x536569736D69632044617461`|  
   
- [En este tema](#TOP)  
   
 ##  <a name="upd"></a> Actualizar datos FILESTREAM  
  Puede usar [!INCLUDE[tsql](../../includes/tsql-md.md)] para actualizar los datos del archivo del sistema de archivos; sin embargo, puede no ser conveniente si hay que transmitir grandes cantidades de datos a un archivo.  
@@ -59,7 +62,6 @@ caps.handback.revision: 15
   
  [!code-sql[FILESTREAM#FS_UpdateData](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_4.sql)]  
   
- [En este tema](#TOP)  
   
 ##  <a name="del"></a> Eliminar datos FILESTREAM  
  Al eliminar una fila que contiene un campo FILESTREAM, también elimina sus archivos de sistema de archivos subyacentes. La única manera de eliminar una fila y por consiguiente el archivo, es utilizar la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] DELETE.  
@@ -73,9 +75,8 @@ caps.handback.revision: 15
 > [!NOTE]  
 >  El recolector de elementos no utilizados de FILESTREAM quita los archivos subyacentes.  
   
- [En este tema](#TOP)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Habilitar y configurar FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)   
  [Evitar conflictos con operaciones de base de datos en aplicaciones FILESTREAM](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)  
   

@@ -1,35 +1,39 @@
 ---
-title: "Buscar texto mediante expresiones regulares | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vsregularexpressionhelp"
-  - "vs.regularexpressionhelp"
-  - "vs.regularexpressionbuilder"
-helpviewer_keywords: 
-  - "expresiones regulares [SQL Server Management Studio]"
-  - "Editor de consultas [SQL Server Management Studio], búsquedas de expresiones regulares"
-  - "búsquedas [SQL Server Management Studio], expresiones regulares"
+title: Buscar texto mediante expresiones regulares | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vsregularexpressionhelp
+- vs.regularexpressionhelp
+- vs.regularexpressionbuilder
+helpviewer_keywords:
+- regular expressions [SQL Server Management Studio]
+- Query Editor [SQL Server Management Studio], regular expression searches
+- searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 530e940d95c3375b58b494e165cf5a193fdec720
+ms.lasthandoff: 04/11/2017
+
 ---
-# Buscar texto mediante expresiones regulares
+# <a name="search-text-with-regular-expressions"></a>Buscar texto mediante expresiones regulares
   Las expresiones regulares son una notación concisa y flexible para buscar y reemplazar patrones de texto. Se puede utilizar un conjunto específico de expresiones regulares en el campo **Buscar** del cuadro de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** .  
   
-#### Para buscar mediante expresiones regulares  
+#### <a name="to-find-using-regular-expressions"></a>Para buscar mediante expresiones regulares  
   
-1.  Para permitir el uso de expresiones regulares en el campo **Buscar** en operaciones de **Búsqueda rápida**, **Buscar en archivos**, **Reemplazo rápido** o **Reemplazar en archivos**, active la opción **Usar** de **Opciones de búsqueda** y, luego, elija **Expresiones regulares**.  
+1.  Para permitir el uso de expresiones regulares en el campo **Buscar** en operaciones de **Búsqueda rápida**, **Buscar en archivos**, **Reemplazo rápido**o **Reemplazar en archivos** , active la opción **Usar** de **Opciones de búsqueda**y, luego, elija **Expresiones regulares**.  
   
 2.  El botón triangular de la **Lista de referencia** situado junto al campo **Buscar** se activa. Haga clic en este botón para obtener una lista de las expresiones regulares más utilizadas. Al elegir alguno de los elementos del Generador de expresiones, éste se inserta en la cadena **Buscar** .  
   
@@ -66,9 +70,9 @@ caps.handback.revision: 25
 |Uno o más como mínimo|#|Devuelve una o más repeticiones de la expresión anterior, devolviendo la menor cantidad de caracteres posible.|  
 |Repetir n veces|^n|Devuelve n repeticiones de la expresión anterior. Por ejemplo, [0-9]^4 devuelve cualquier secuencia de 4 dígitos.|  
 |Agrupar|()|Agrupa una subexpresión.|  
-|N-ésimo texto etiquetado|\n|En una expresión **Buscar y reemplazar** , indica el texto devuelto por la expresión con etiqueta enésima, donde n es un número de 1 a 9.<br /><br /> En una expresión de **Reemplazar**, \0 inserta todo el texto coincidente.|  
-|Campo justificado a la derecha|\\(w,n)|En una expresión de **Reemplazar**, justifica a la derecha la expresión etiquetada n-ésima de un campo con un ancho de al menos *w* caracteres.|  
-|Campo justificado a la izquierda|\\(-w,n)|En una expresión de **Reemplazar**, justifica a la izquierda la expresión etiquetada n-ésima de un campo con un ancho de al menos *w* caracteres.|  
+|N-ésimo texto etiquetado|\n|En una expresión **Buscar y reemplazar** , indica el texto devuelto por la expresión con etiqueta enésima, donde n es un número de 1 a 9.<br /><br /> En una expresión de **Reemplazar** , \0 inserta todo el texto coincidente.|  
+|Campo justificado a la derecha|\\(w,n)|En una expresión de **Reemplazar** , justifica a la derecha la expresión etiquetada n-ésima de un campo con un ancho de al menos *w* caracteres.|  
+|Campo justificado a la izquierda|\\(-w,n)|En una expresión de **Reemplazar** , justifica a la izquierda la expresión etiquetada n-ésima de un campo con un ancho de al menos *w* caracteres.|  
 |Evitar coincidencia|~(X)|Evita una coincidencia cuando aparece X en este punto de la expresión. Por ejemplo, real~(ity) devuelve "real" de "realty" y "really", pero no "real" de "reality".|  
 |Carácter alfanumérico|:a|Devuelve la expresión ([a-zA-Z0-9]).|  
 |Carácter alfabético|:c|Devuelve la expresión ([a-zA-Z]).|  
@@ -89,7 +93,7 @@ caps.handback.revision: 25
 |Letra en mayúscula|:Lu|Devuelve cualquier letra en mayúscula. Por ejemplo, :Luhe devuelve "The" pero no "the".|  
 |Letra en minúscula|:Ll|Devuelve cualquier letra en minúscula. Por ejemplo, :Llhe devuelve "the" pero no "The".|  
 |Letra tipo título|:Lt|Devuelve caracteres que combinan una letra en mayúscula con una en minúscula, como Nj y Dz.|  
-|Letra modificadora|:Lm|Devuelve letras o signos de puntuación, como comas, acentos y comillas dobles, utilizados para indicar modificaciones en la letra anterior. |  
+|Letra modificadora|:Lm|Devuelve letras o signos de puntuación, como comas, acentos y comillas dobles, utilizados para indicar modificaciones en la letra anterior.|  
 |Otra letra|:Lo|Devuelve otras letras, como letra gótica ahsa.|  
 |Dígito decimal|:Nd|Devuelve dígitos decimales, como 0-9 y sus equivalentes de ancho completo.|  
 |Dígito de letra|:Nl|Devuelve dígitos de letra, como numerales romanos y el número cero ideográfico.|  
@@ -131,7 +135,7 @@ caps.handback.revision: 25
 |Katakana|:Ka|Devuelve caracteres Katakana.|  
 |Ideográfico/Han/Kanji|:Id|Devuelve caracteres ideográficos, como Han y Kanji.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Buscar y reemplazar](../../relational-databases/scripting/search-and-replace.md)   
  [Buscar texto con caracteres comodín](../../relational-databases/scripting/search-text-with-wildcards.md)  
   

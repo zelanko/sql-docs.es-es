@@ -1,27 +1,31 @@
 ---
-title: "Suscripci&#243;n, Historial de Publicador a distribuidor (suscripci&#243;n transaccional) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.subscription.pubtodist.tran.f1"
+title: "Suscripción, Historial de Publicador a distribuidor (suscripción transaccional) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.subscription.pubtodist.tran.f1
 ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2d6d5ad351cd6e89952f70b37d1a62fd3250127e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Suscripci&#243;n, Historial de Publicador a distribuidor (suscripci&#243;n transaccional)
+# <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>Suscripción, Historial de Publicador a distribuidor (suscripción transaccional)
   La pestaña **Historial de Publicador a distribuidor** muestra información detallada en el Agente de registro del LOG, incluidos el estado, el historial y los mensajes informativos, así como cualquier mensaje de error.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  Seleccione las sesiones del Agente de registro del LOG que se van a ver en el menú **Ver** y, a continuación, seleccione una sesión específica en la cuadrícula con la etiqueta **Sesiones del Agente de registro del LOG**. En la cuadrícula con la etiqueta **Acciones en la sesión seleccionada**se muestra información detallada de la sesión. Si la sesión seleccionada finalizó con un error, también se muestra el área de texto con la etiqueta **Detalles del error o mensaje de la sesión seleccionada** .  
   
  **Ver**  
@@ -54,15 +58,15 @@ caps.handback.revision: 20
  Muestra todos los mensajes informativos y los mensajes de error que ha registrado el Agente de registro del LOG durante la sesión seleccionada.  
   
  **Hora de la acción**  
- La hora a la que la acción descrita en la **mensaje de acción** se realizó la columna.  
+ Muestra la hora de realización de la acción descrita en la columna **Mensaje de la acción** .  
   
  **Detalles del error o mensaje de la sesión seleccionada**  
- Muestra solo si la sesión seleccionada presenta un valor de **Error** en la **estado** columna. El área de texto muestra la información detallada del error y el comando que se intentaba ejecutar en el momento de producirse el error. También incluye vínculos a la información adicional relativa al error.  
+ Solo se muestra si la sesión seleccionada presenta un valor de **Error** en la columna **Estado** . El área de texto muestra la información detallada del error y el comando que se intentaba ejecutar en el momento de producirse el error. También incluye vínculos a la información adicional relativa al error.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Ver la información y realizar tareas de los agentes asociados con una suscripción & #40; Monitor de replicación & #41;](../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)   
+ [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
  [Supervisar la replicación](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Información general sobre los agentes de replicación](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

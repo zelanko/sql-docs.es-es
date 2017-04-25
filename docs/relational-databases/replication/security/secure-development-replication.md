@@ -1,39 +1,43 @@
 ---
-title: "Desarrollo seguro (replicaci&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "seguridad [replicación de SQL Server], desarrollo"
-  - "seguridad de desarrollo [replicación de SQL Server]"
+title: "Desarrollo seguro (replicación) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [SQL Server replication], development
+- development security [SQL Server replication]
 ms.assetid: 2322d39c-6689-4fb6-b23b-eae51cbb0222
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b53c9bad37621c059b70b33e388f259d37f0497c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Desarrollo seguro (replicaci&#243;n)
+# <a name="secure-development-replication"></a>Desarrollo seguro (replicación)
   En esta sección se proporciona información para ayudarle a planear una topología de replicación segura.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Modelo de seguridad del Agente de replicación](../../../relational-databases/replication/security/replication-agent-security-model.md)  
  Describe el modelo de seguridad para los agentes de replicación.  
   
- [Requisitos del rol de seguridad para la replicación](../../../relational-databases/replication/security/security-role-requirements-for-replication.md)  
+ [Security Role Requirements for Replication](../../../relational-databases/replication/security/security-role-requirements-for-replication.md)  
  Describe los roles y permisos de seguridad mínimos requeridos por una topología de replicación.  
   
- [Prácticas recomendadas de seguridad de replicación](../../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)  
  Proporciona información general que le permite planear una topología de replicación más segura.  
   
-## Vea también  
- [Información general sobre seguridad & #40; Replicación y nº 41;](../../../relational-databases/replication/security/security-overview-replication.md)   
- [Proteger la implementación y Nº 40; Replicación y nº 41;](../../../relational-databases/replication/security/secure-deployment-replication.md)  
+## <a name="see-also"></a>Vea también  
+ [Información general sobre seguridad &#40;replicación&#41;](../../../relational-databases/replication/security/security-overview-replication.md)   
+ [Implementación segura &#40;replicación&#41;](../../../relational-databases/replication/security/secure-deployment-replication.md)  
   
   

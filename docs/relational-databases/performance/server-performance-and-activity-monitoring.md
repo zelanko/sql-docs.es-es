@@ -1,42 +1,46 @@
 ---
-title: "Supervisi&#243;n de la actividad y rendimiento del servidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "supervisión de actividad [SQL Server]"
-  - "seguimientos [SQL Server], temas de procedimientos"
-  - "supervisar el rendimiento del servidor [SQL Server], supervisión de actividades"
-  - "procedimientos almacenados [SQL Server], seguimientos"
-  - "rendimiento [SQL Server], servidores"
-  - "servidores [SQL Server], rendimiento"
-  - "SQL Server Profiler, temas de procedimientos"
-  - "SQL Server Management Studio [SQL Server], supervisar sistema"
-  - "Profiler [SQL Server Profiler], temas de procedimientos"
+title: "Supervisión de la actividad y rendimiento del servidor | Microsoft Docs"
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- activity monitoring [SQL Server]
+- traces [SQL Server], how-to topics
+- monitoring server performance [SQL Server], activity monitoring
+- stored procedures [SQL Server], traces
+- performance [SQL Server], servers
+- servers [SQL Server], performance
+- SQL Server Profiler, how-to topics
+- SQL Server Management Studio [SQL Server], monitoring system
+- Profiler [SQL Server Profiler], how-to topics
 ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a3f71afe41528eca49f37d5f81e30d3defa0d21
+ms.lasthandoff: 04/11/2017
+
 ---
-# Supervisi&#243;n de la actividad y rendimiento del servidor
+# <a name="server-performance-and-activity-monitoring"></a>Supervisión de la actividad y rendimiento del servidor
   El objetivo de supervisar bases de datos es evaluar el rendimiento de un servidor. Una supervisión eficaz implica tomar instantáneas periódicas del rendimiento actual para aislar procesos que causan problemas y recopilar datos de forma continua a lo largo del tiempo para realizar el seguimiento de las tendencias de rendimiento. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el sistema operativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows proporcionan utilidades que permiten ver la condición actual de la base de datos y realizar un seguimiento del rendimiento a medida que las condiciones cambian.  
   
  La sección siguiente contiene temas que describen cómo utilizar las herramientas de supervisión de la actividad y el rendimiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Windows. Incluye los temas siguientes:  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  **Para realizar tareas de supervisión con herramientas de Windows**  
   
 -   [Iniciar el Monitor de sistema &#40;Windows&#41;](../../relational-databases/performance/start-system-monitor-windows.md)  
   
--   [Ver el registro de aplicación de Windows &#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows.md)  
+-   [Ver el registro de aplicación de Windows &#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows-10.md)  
   
  **Para crear alertas de bases de datos de SQL Server con herramientas de Windows**  
   
@@ -167,3 +171,4 @@ caps.handback.revision: 18
 -   [Establecer correlaciones de un seguimiento con datos del registro de rendimiento de Windows &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   
+

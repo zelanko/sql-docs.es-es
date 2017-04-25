@@ -1,27 +1,31 @@
 ---
-title: "Broker:Forwarded Message Dropped (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker:Forwarded Message Dropped, clase de eventos"
+title: Clase de eventos Broker:Forwarded Message Dropped | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Forwarded Message Dropped event class
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d63f05d5f476dcb03398872759b92e21d04c99c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Broker:Forwarded Message Dropped (clase de eventos)
+# <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped, clase de eventos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento Broker:Forwarded Message Dropped cuando Service Broker quita un mensaje que estaba destinado a reenviarse.  
   
-## Columnas de datos de la clase de eventos Broker:Forwarded Message Dropped  
+## <a name="brokerforwarded-message-dropped-event-class-data-columns"></a>Columnas de datos de la clase de eventos Broker:Forwarded Message Dropped  
   
 |Columna de datos|Tipo|Descripción|Número de columna|Filtrable|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -59,7 +63,7 @@ caps.handback.revision: 26
   
  La columna TextData de este evento contiene una descripción del motivo por el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quitó el mensaje.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

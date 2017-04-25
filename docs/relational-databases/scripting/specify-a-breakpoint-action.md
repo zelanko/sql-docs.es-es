@@ -1,27 +1,31 @@
 ---
-title: "Especificar una acci&#243;n del punto de interrupci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.breakpt.action"
-helpviewer_keywords: 
-  - "depurador de Transact-SQL, acción de puntos de interrupción"
-  - "depurador de Transact-SQL, punto de interrupción cuando se produce la acción"
+title: "Especificar una acción del punto de interrupción | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.breakpt.action
+helpviewer_keywords:
+- Transact-SQL debugger, breakpoint action
+- Transact-SQL debugger, breakpoint when hit action
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1594f724e5020c1678812ff74c55bb1fefe5bf5e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Especificar una acci&#243;n del punto de interrupci&#243;n
+# <a name="specify-a-breakpoint-action"></a>Especificar una acción del punto de interrupción
   Las acciones **Cuando se llama** de punto de interrupción especifican una tarea personalizada que el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] realiza en un punto de interrupción. Si se alcanza el número de llamadas especificado y se satisface la condición de punto de interrupción especificada, el depurador realiza la acción definida para el punto de interrupción.  
   
 ##  <a name="BKMK_ActionConsiderations"></a> Consideraciones sobre las acciones  
@@ -29,7 +33,7 @@ caps.handback.revision: 10
   
  Los mensajes de impresión se especifican en la opción **Imprimir un mensaje** como una cadena de texto que incluye expresiones con información de la instancia de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se está depurando. Estas expresiones pueden ser:  
   
--   Una expresión [!INCLUDE[tsql](../../includes/tsql-md.md)] escrita entre llaves ({}). Las expresiones pueden incluir variables, parámetros y funciones integradas de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Algunos ejemplos serían {@MyVariable}, {@NameParameter}, {@@SPID} o {SERVERPROPERTY(‘ProcessID’)}.  
+-   Una expresión [!INCLUDE[tsql](../../includes/tsql-md.md)] escrita entre llaves ({}). Las expresiones pueden incluir variables, parámetros y funciones integradas de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Algunos ejemplos son {@MyVariable}, {@NameParameter}, {@@SPID} o {SERVERPROPERTY(‘ProcessID’)}.  
   
 -   Una de las siguientes palabras clave:  
   
@@ -41,19 +45,19 @@ caps.handback.revision: 10
   
     4.  $FUNCTION devuelve el nombre del procedimiento almacenado o la función definida por el usuario donde se ha establecido el punto de interrupción. Si el punto de interrupción está establecido en la ventana del editor, $FUNCTION devuelve en nombre del archivo de script que se está editando.  
   
-    5.  $PID y $PNAME devuelven el identificador y el nombre del proceso del sistema operativo que está ejecutando la instancia del motor de base de datos en la que se está ejecutando [!INCLUDE[tsql](../../includes/tsql-md.md)]. $PID devuelve el mismo identificador que SERVERPROPERTY(‘ProcessID’), salvo porque $PID es un valor hexadecimal mientras que SERVERPROPERTY(‘ProcessID’) es un valor decimal.  
+    5.  $PID y $PNAME devuelven el identificador y el nombre del proceso del sistema operativo que está ejecutando la instancia del motor de base de datos en la que se está ejecutando [!INCLUDE[tsql](../../includes/tsql-md.md)] . $PID devuelve el mismo identificador que SERVERPROPERTY(‘ProcessID’), salvo porque $PID es un valor hexadecimal mientras que SERVERPROPERTY(‘ProcessID’) es un valor decimal.  
   
-    6.  $TID y $TNAME devuelven el identificador y el nombre del subproceso del sistema operativo en el que se está ejecutando el lote [!INCLUDE[tsql](../../includes/tsql-md.md)]. El subproceso está asociado al proceso que ejecuta la instancia del motor de base de datos. $TID devuelve el mismo amor que el kpid SELECT de sys.sysprocesses donde spid = @@SPID, salvo porque $TID en un valor hexadecimal mientras que kpid es un valor decimal.  
+    6.  $TID y $TNAME devuelven el identificador y el nombre del subproceso del sistema operativo en el que se está ejecutando el lote [!INCLUDE[tsql](../../includes/tsql-md.md)] . El subproceso está asociado al proceso que ejecuta la instancia del motor de base de datos. $TID devuelve el mismo valor que SELECT kpid FROM sys.sysprocesses WHERE spid = @@SPID, salvo que $TID es un valor hexadecimal y kpid es un valor decimal.  
   
 -   También puede usar el carácter de barra diagonal inversa (\\) como carácter de escape para permitir el uso de llaves y barras diagonales inversas en el mensaje: \\{, \\} y \\\\.  
   
-#### Para especificar una acción Cuando se llama  
+#### <a name="to-specify-a-when-hit-action"></a>Para especificar una acción Cuando se llama  
   
-1.  En la ventana del editor, haga clic con el botón derecho en el glifo de punto de interrupción y, en el menú contextual, haga clic en **Cuando se llama**.  
+1.  En la ventana del editor, haga clic con el botón derecho en el glifo de punto de interrupción y, en el menú contextual, haga clic en **Cuando se llama** .  
   
      - O bien -  
   
-     En la ventana **Puntos de interrupción**, haga clic con el botón derecho en el glifo de punto de interrupción y, en el menú contextual, haga clic en **Cuando se llama**.  
+     En la ventana **Puntos de interrupción** , haga clic con el botón derecho en el glifo de punto de interrupción y, en el menú contextual, haga clic en **Cuando se llama** .  
   
 2.  En el cuadro de diálogo **Cuando el punto de interrupción se visita** , seleccione el comportamiento que desee:  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 10
   
 3.  Haga clic en **Aceptar** para implementar los cambios o en **Cancelar** para salir sin aplicar los cambios.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Especificar una condición de punto de interrupción](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
  [Especificar un número de llamadas](../../relational-databases/scripting/specify-a-hit-count.md)  
   

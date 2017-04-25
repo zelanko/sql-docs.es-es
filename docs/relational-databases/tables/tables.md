@@ -1,25 +1,29 @@
 ---
-title: "Tablas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tablas [SQL Server]"
-  - "componentes de tablas [SQL Server]"
+title: Tablas | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tables [SQL Server]
+- table components [SQL Server]
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7111c0043ebecaa5ca55480eb530ffd665ef4243
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tablas
+# <a name="tables"></a>Tablas
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Las tablas son objetos de base de datos que contienen todos sus datos. En las tablas, los datos se organizan con arreglo a un formato de filas y columnas, similar al de una hoja de cálculo. Cada fila representa un registro único y cada columna un campo dentro del registro. Por ejemplo, en una tabla que contiene los datos de los empleados de una compañía puede haber una fila para cada empleado y distintas columnas en las que figuren detalles de los mismos, como el número de empleado, el nombre, la dirección, el puesto que ocupa y su número de teléfono particular.  
@@ -30,7 +34,7 @@ caps.handback.revision: 30
   
 -   Los datos de la tabla se pueden comprimir por filas o por página. La compresión de datos puede permitir que se almacenen más filas en una página. Para más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
-## Tipos de tablas  
+## <a name="types-of-tables"></a>Tipos de tablas  
  Además del rol estándar de las tablas básicas definidas por el usuario, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona los siguientes tipos de tabla que permiten llevar a cabo objetivos especiales en una base de datos:  
   
  Tablas con particiones  
@@ -40,7 +44,7 @@ caps.handback.revision: 30
  Las tablas temporales se almacenan en **tempdb**. Hay dos tipos de tablas temporales: locales y globales. Se diferencian entre sí por los nombres, la visibilidad y la disponibilidad. Las tablas temporales locales tienen como primer carácter de sus nombres un solo signo de número (#); solo son visibles para el usuario de la conexión actual y se eliminan cuando el usuario se desconecta de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las tablas temporales globales presentan dos signos de número (##) antes del nombre; son visibles para cualquier usuario después de su creación y se eliminan cuando todos los usuarios que hacen referencia a la tabla se desconectan de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Tablas del sistema  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacena los datos que definen la configuración del servidor y de todas sus tablas en un conjunto de tablas especial, conocido como tablas del sistema. Los usuarios no pueden consultar o actualizar directamente las tablas del sistema. La información de las tablas del sistema está disponible a través de las vistas del sistema. Para obtener más información, vea [Vistas del sistema &#40;Transact-SQL&#41;](../Topic/System%20Views%20\(Transact-SQL\).md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacena los datos que definen la configuración del servidor y de todas sus tablas en un conjunto de tablas especial, conocido como tablas del sistema. Los usuarios no pueden consultar o actualizar directamente las tablas del sistema. La información de las tablas del sistema está disponible a través de las vistas del sistema. Para obtener más información, vea [Vistas del sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
  Tablas anchas  
  Las tablas anchas usan las [columnas dispersas](../../relational-databases/tables/use-sparse-columns.md) para aumentar hasta 30 000 el número total de columnas permitidas. Las columnas dispersas son columnas normales que disponen de un almacenamiento optimizado para los valores NULL. Este tipo de columnas reducen los requisitos de espacio de los valores NULL a costa de una mayor sobrecarga a la hora de recuperar valores no NULL. Una tabla ancha ha definido un [conjunto de columnas](../../relational-databases/tables/use-column-sets.md), que es una representación XML sin tipo que combina todas las columnas dispersas de una tabla en una salida estructurada. El número de índices y estadísticas también se aumenta hasta 1.000 y 30.000, respectivamente. El tamaño máximo de una fila de una tabla ancha es de 8.019 bytes. Por consiguiente, la mayoría de los datos de cualquier fila deben ser NULL. El número máximo de columnas no dispersas más las columnas calculadas de una tabla ancha sigue siendo 1.024.  
@@ -59,7 +63,7 @@ caps.handback.revision: 30
   
 -   Los cursores de actualización que actualizan columnas concretas de una tabla ancha deben enumerar las columnas de manera explícita en la cláusula FOR UPDATE. Esto ayudará a optimizar el rendimiento mientras se usan cursores.  
   
-## Tareas de tabla comunes  
+## <a name="common-table-tasks"></a>Tareas de tabla comunes  
  En la tabla siguiente se proporcionan vínculos a las tareas comunes asociadas con la creación o modificación de una tabla.  
   
 |Tareas de tabla|Tema|  
@@ -68,7 +72,7 @@ caps.handback.revision: 30
 |Describe cómo eliminar una tabla.|[Eliminar tablas &#40;motor de base de datos&#41;](../../relational-databases/tables/delete-tables-database-engine.md)|  
 |Describe cómo crear una nueva tabla que contenga algunas o todas las columnas de una tabla existente.|[Tablas duplicadas](../../relational-databases/tables/duplicate-tables.md)|  
 |Describe cómo cambiar el nombre de una tabla.|[Cambiar el nombre a las tablas &#40;motor de base de datos&#41;](../../relational-databases/tables/rename-tables-database-engine.md)|  
-|Describe cómo ver las propiedades de la tabla.|[Vea la definición de tabla](../../relational-databases/tables/view-the-table-definition.md)|  
+|Describe cómo ver las propiedades de la tabla.|[Ver la definición de tabla](../../relational-databases/tables/view-the-table-definition.md)|  
 |Describe cómo determinar si otros objetos como una vista o un procedimiento almacenado dependen de una tabla.|[Ver las dependencias de una tabla](../../relational-databases/tables/view-the-dependencies-of-a-table.md)|  
   
  En la tabla siguiente se proporcionan vínculos a las tareas comunes asociadas con la creación o modificación de columnas en una tabla.  
@@ -84,7 +88,7 @@ caps.handback.revision: 30
 |Describe cómo crear una columna calculada en una tabla.|[Especificar columnas calculadas en una tabla](../../relational-databases/tables/specify-computed-columns-in-a-table.md)|  
 |Describe cómo especificar un valor predeterminado de una columna. Este valor se usa si no se proporciona otro.|[Especificar valores predeterminados para las columnas](../../relational-databases/tables/specify-default-values-for-columns.md)|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Restricciones entre claves principales y claves externas](../../relational-databases/tables/primary-and-foreign-key-constraints.md)   
  [Restricciones UNIQUE y restricciones CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
   

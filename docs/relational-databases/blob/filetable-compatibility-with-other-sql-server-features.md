@@ -1,24 +1,28 @@
 ---
-title: "Compatibilidad de FileTable con otras caracter&#237;sticas de SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], usar con otras características"
+title: "Compatibilidad de FileTable con otras características de SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f6dc92bd0a4af006b914a6f7af7e898c84c5957b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Compatibilidad de FileTable con otras caracter&#237;sticas de SQL Server
+# <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilidad de FileTable con otras características de SQL Server
   Describe el funcionamiento de FileTables con otras características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="alwayson"></a> Grupos de disponibilidad AlwaysOn y FileTables  
@@ -26,7 +30,7 @@ caps.handback.revision: 19
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]admite parcialmente la funcionalidad de FileTable. Después de una conmutación por error, es posible tener acceso a los datos de FileTable en la réplica principal, pero no en las réplicas secundarias legibles.  
   
-    > **NOTA:** Observe que, después de una conmutación por error, se admite toda la funcionalidad de FILESTREAM. Los datos de FILESTREAM son accesibles tanto en las réplicas secundarias legibles como en la nueva réplica principal.  
+    > **NOTA:**  Observe que, después de una conmutación por error, se admite toda la funcionalidad de FILESTREAM. Los datos de FILESTREAM son accesibles tanto en las réplicas secundarias legibles como en la nueva réplica principal.  
   
 -   Las funciones FILESTREAM y FileTable aceptan o devuelven nombres de red virtual (VNN) en lugar de nombres de equipo. Para obtener más información sobre estas funciones, vea [Funciones FILESTREAM y FileTable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md).  
   
@@ -117,7 +121,8 @@ caps.handback.revision: 19
   
  Puede establecer la contención de la base de datos en PARTIAL si desea utilizar algunas características de bases de datos contenidas, como usuarios contenidos. Sin embargo, en este caso, debe tener en cuenta que algunas de las opciones de base de datos no están contenidas en la base de datos y no se mueven automáticamente cuando lo hace la base de datos.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Administrar FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   
+

@@ -1,27 +1,31 @@
 ---
-title: "Informaci&#243;n de publicaci&#243;n, Todas las suscripciones (Publicaci&#243;n de combinaci&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.publicationinfo.allsubscriptions.merge.f1"
+title: "Información de publicación, Todas las suscripciones (Publicación de combinación) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.publicationinfo.allsubscriptions.merge.f1
 ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08f8762c93f26dc9159328f6aa58b73063234d30
+ms.lasthandoff: 04/11/2017
+
 ---
-# Informaci&#243;n de publicaci&#243;n, Todas las suscripciones (Publicaci&#243;n de combinaci&#243;n)
+# <a name="publication-information-all-subscriptions-merge-publication"></a>Información de publicación, Todas las suscripciones (Publicación de combinación)
   En la pestaña **Todas las suscripciones** se muestra información sobre todas las suscripciones de la publicación de combinación seleccionada.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  Para obtener información más detallada y las tareas de una suscripción, haga clic con el botón secundario en la fila de dicha suscripción y, a continuación, haga clic en una opción del menú contextual. Para cambiar la manera que la cuadrícula muestra los datos, haga clic con el botón secundario en la cuadrícula y, a continuación, haga clic en una de las opciones siguientes:  
   
 -   **Ordenar**: ordene en una o más columnas en el cuadro de diálogo **Ordenar columnas** .  
@@ -35,22 +39,22 @@ caps.handback.revision: 28
  La configuración del filtro es específica de cada cuadrícula. La selección y ordenación de las columnas se aplica a todas las cuadrículas del mismo tipo, como la cuadrícula de las publicaciones para cada Publicador.  
   
  **Mostrar**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Seleccione los estados de la suscripción que se mostrarán para el tipo de suscripción seleccionado. Por ejemplo, puede seleccionar mostrar solo aquellas suscripciones que tienen errores.  
+ Solo para[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Seleccione los estados de la suscripción que se mostrarán para el tipo de suscripción seleccionado. Por ejemplo, puede seleccionar mostrar solo aquellas suscripciones que tienen errores.  
   
  **Estado**  
  Estado de cada suscripción, que se determina mediante el estado del Agente de mezcla.  
   
- De forma predeterminada, la cuadrícula que contiene la información de suscripción se ordena por la **estado** columna (y, a continuación, ordenados por el **rendimiento** columna de las suscripciones con el mismo estado). La siguiente lista muestra los valores de estado posibles y el criterio de ordenación de los valores (por ejemplo, los errores se muestran siempre en la parte superior de la cuadrícula).  
+ De forma predeterminada, la cuadrícula que contiene la información de suscripción está ordenada por la columna **Estado** (y, a continuación, por la columna **Rendimiento** de las suscripciones con el mismo estado). La siguiente lista muestra los valores de estado posibles y el criterio de ordenación de los valores (por ejemplo, los errores se muestran siempre en la parte superior de la cuadrícula).  
   
 -   Error  
   
--   Rendimiento crítico (solo para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores)  
+-   Rendimiento crítico (solo para[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores)  
   
--   Mezcla de ejecución prolongada (solo en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores)  
+-   Mezcla de ejecución prolongada (solo en[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores)  
   
--   Con expiración en breve/Expirado (solo para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores)  
+-   Con expiración en breve/Expirado (solo para[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores)  
   
--   Suscripción no inicializada (solo para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores)  
+-   Suscripción no inicializada (solo para[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores)  
   
 -   Reintentando comando con errores  
   
@@ -60,21 +64,21 @@ caps.handback.revision: 28
   
  El criterio de clasificación también determina qué valor se muestra si una misma suscripción presenta varios estados. Por ejemplo, si una suscripción tiene un error y expirará en breve, la columna **Estado** muestra **Error**.  
   
- Los valores de estado **rendimiento crítico**, **mezcla de ejecución prolongada**, **expiración en breve/expirado**, y **suscripción no inicializada** son advertencias. Cuando se muestra una advertencia, también aparece la columna **Estado** si un agente está sincronizándose. Por ejemplo, el estado podría ser **Sincronizando, Rendimiento crítico**.  
+ Los valores de estado **Rendimiento crítico**, **Mezcla de ejecución prolongada**, **Con expiración en breve/Expirado**y **Suscripción no inicializada** son advertencias. Cuando se muestra una advertencia, también aparece la columna **Estado** si un agente está sincronizándose. Por ejemplo, el estado podría ser **Sincronizando, Rendimiento crítico**.  
   
- Los valores de estado **expiración en breve/expirado** y **mezcla de ejecución prolongada** se pueden mostrar sólo si se establecen umbrales. El valor de estado **rendimiento crítico** se pueden mostrar sólo después de cinco sincronizaciones de suscripciones con el mismo tipo de conexión (acceso telefónico o LAN). Para obtener información acerca de las medidas de rendimiento y configuración de umbrales, consulte [Monitor de rendimiento con el Monitor de replicación](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md) y [establecer umbrales y advertencias en el Monitor de replicación](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
+ Los valores de estado **Con expiración en breve/Expirado** y **Mezcla de ejecución prolongada** solo se pueden mostrar si se han establecido umbrales. El valor de estado **Rendimiento crítico** solamente se puede mostrar después de realizar cinco sincronizaciones de suscripciones con el mismo tipo de conexión (acceso telefónico o LAN). Para obtener información sobre la medición del rendimiento y el establecimiento de umbrales, vea [Supervisar el rendimiento con el Monitor de replicación](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md) y [Establecer umbrales y advertencias en el Monitor de replicación](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
  **Suscripción**  
- El nombre de cada suscripción, con el formato:*Nombredesuscriptor: Nombredebasededatosdesuscripción*.  
+ Muestra el nombre de cada suscripción, en el formato:*nombreDeSuscriptor: nombreDeBaseDeDatosDeSuscripción*.  
   
  **Nombre descriptivo**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Descripción de cada suscripción. La descripción se introduce en la **Propiedades de suscripción** cuadro de diálogo o se especifica con el **@description** parámetro de [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) o [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Los usuarios normalmente usan la descripción como un "nombre descriptivo" o alias de la suscripción.  
+ Solo para[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Descripción de cada suscripción. La descripción se escribe en el cuadro de diálogo **Propiedades de suscripción** o se especifica con el parámetro **@description** de [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) o [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Los usuarios normalmente usan la descripción como un "nombre descriptivo" o alias de la suscripción.  
   
  **Rendimiento**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Clasificación de rendimiento de cada suscripción, basada en las medidas más recientes de tasa de entrega obtenidas por el Monitor de replicación. La clasificación se determina comparando el rendimiento de una suscripción individual con el rendimiento medio histórico de las suscripciones a la publicación que tienen el mismo tipo de conexión (de acceso telefónico o LAN). El Monitor de replicación muestra un valor una vez que se han producido cinco sincronizaciones con al menos 50 cambios en cada una a través del mismo tipo de conexión. Si ha habido menos de cinco sincronizaciones con al menos 50 cambios, o la sincronización más reciente tiene menos de 50 cambios, está columna está en blanco.  
+ Solo para[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Clasificación de rendimiento de cada suscripción, basada en las medidas más recientes de tasa de entrega obtenidas por el Monitor de replicación. La clasificación se determina comparando el rendimiento de una suscripción individual con el rendimiento medio histórico de las suscripciones a la publicación que tienen el mismo tipo de conexión (de acceso telefónico o LAN). El Monitor de replicación muestra un valor una vez que se han producido cinco sincronizaciones con al menos 50 cambios en cada una a través del mismo tipo de conexión. Si ha habido menos de cinco sincronizaciones con al menos 50 cambios, o la sincronización más reciente tiene menos de 50 cambios, está columna está en blanco.  
   
 > [!NOTE]  
->  Rendimiento se basa en el tipo de conexión que se muestra en el **conexión** columna; por lo tanto, es posible que una suscripción con una tasa de entrega inferior para mostrar una mejor clasificación de rendimiento que otra suscripción si la primera suscripción se sincroniza mediante una conexión más lenta.  
+>  El rendimiento se basa en el tipo de conexión que se muestra en la columna **Conexión** ; por tanto, es posible que una suscripción con una tasa de entrega menor muestre una mejor clasificación de rendimiento que otra suscripción si la primera se ha sincronizado en una conexión más lenta.  
   
  La clasificación de rendimiento tiene uno de los valores siguientes:  
   
@@ -86,7 +90,7 @@ caps.handback.revision: 28
   
 -   Insuficiente  
   
- Para obtener más información sobre cómo se definen las evaluaciones de rendimiento y cómo se establecen los umbrales de rendimiento, consulte [Monitor de rendimiento con el Monitor de replicación](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md).  
+ Para obtener más información sobre cómo se definen las clasificaciones de rendimiento y cómo se establecen los umbrales de rendimiento, vea [Supervisar el rendimiento con el Monitor de replicación](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md).  
   
  **Tasa de entrega**  
  Número de filas por segundo procesadas por el Agente de mezcla.  
@@ -98,13 +102,13 @@ caps.handback.revision: 28
  Tiempo durante el que se ha estado ejecutando el Agente de mezcla en la última sincronización. El tiempo representa el tiempo transcurrido si el Agente de mezcla se está sincronizando actualmente y el tiempo total si el Agente de mezcla se ha sincronizado con anterioridad.  
   
  **Conexión**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Tipo de conexión entre el suscriptor y el publicador. Los valores posibles son **LAN**, **Acceso telefónico**e **Internet**. Si la suscripción utiliza sincronización web, se muestra el valor **Internet** .  
+ Solo para[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Tipo de conexión entre el suscriptor y el publicador. Los valores posibles son **LAN**, **Acceso telefónico**e **Internet**. Si la suscripción utiliza sincronización web, se muestra el valor **Internet** .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Ver la información y realizar tareas para una suscripción & #40; Monitor de replicación & #41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [Ver la información y realizar tareas de los agentes asociados con una suscripción & #40; Monitor de replicación & #41;](../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)   
+ [Ver información y realizar tareas para una suscripción &#40;Monitor de replicación&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
+ [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
  [Supervisar la replicación](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Sincronización web para la replicación de mezcla](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
+ [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

@@ -1,25 +1,29 @@
 ---
-title: "Propiedades de la base de datos (p&#225;gina Grupos de archivos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.filegroups.f1"
+title: "Propiedades de la base de datos (página Grupos de archivos) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.filegroups.f1
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 977464bddc01eaa5559962808e9cee4b39651b8f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propiedades de la base de datos (p&#225;gina Grupos de archivos)
-  Utilice esta página para ver los grupos de archivos o para agregar un nuevo grupo de archivos a la base de datos seleccionada. Los tipos de grupo de archivos se separan en grupos de archivos de *filas*, datos FILESTREAM y grupos de archivos con optimización para memoria.  
+# <a name="database-properties-filegroups-page"></a>Propiedades de la base de datos (página Grupos de archivos)
+  Utilice esta página para ver los grupos de archivos o para agregar un nuevo grupo de archivos a la base de datos seleccionada. Los tipos de grupo de archivos se separan en grupos de archivos de *filas* , datos FILESTREAM y grupos de archivos con optimización para memoria.  
   
  Los grupos de archivos de filas contienen archivos de registro y de datos normales. Los grupos de archivos de datos de FILESTREAM contienen archivos de datos de FILESTREAM. Estos archivos de datos almacenan información sobre cómo se almacenan los datos de objetos binarios grandes (BLOB) en el sistema de archivos, cuando se utiliza el almacenamiento de FILESTREAM. Las opciones son las mismas para ambos tipos de grupos de archivos.  
   
@@ -29,7 +33,7 @@ caps.handback.revision: 31
   
  Los grupos de archivos con optimización para memoria son necesarios para que una base de datos pueda contener una o más tablas con optimización para memoria.  
   
-## Opciones de grupo de archivos de filas y de datos FILESTREAM  
+## <a name="row-and-filestream-data-filegroup-options"></a>Opciones de grupo de archivos de filas y de datos FILESTREAM  
  **Nombre**  
  Escriba el nombre del grupo de archivos.  
   
@@ -48,7 +52,7 @@ caps.handback.revision: 31
  **Quitar**  
  Quita la fila del grupo de archivos seleccionado de la cuadrícula.  
   
-## Opciones de grupo de archivos de datos con optimización para memoria  
+## <a name="memory-optimized-data-filegroup-options"></a>Opciones de grupo de archivos de datos con optimización para memoria  
  **Nombre**  
  Escriba el nombre del grupo de archivos con optimización para memoria.  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 31
  **Quitar**  
  Quita la fila del grupo de archivos seleccionado de la cuadrícula.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

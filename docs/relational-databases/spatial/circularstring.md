@@ -1,33 +1,37 @@
 ---
-title: "CircularString | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: CircularString | Microsoft Docs
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb267b6567f73400cae4767d26ce5cef8804da3d
+ms.lasthandoff: 04/11/2017
+
 ---
-# CircularString
+# <a name="circularstring"></a>CircularString
   Una **CircularString** es una colección con cero o más segmentos de arco circular continuos. Un segmento de arco circular es un segmento curvado definido por tres puntos en un plano bidimensional; el primer punto no puede ser igual que el tercero. Si los tres puntos de un segmento de arco circular son colineales, el segmento de arco se trata como un segmento de línea.  
   
 > [!IMPORTANT]  
->  Para obtener una descripción detallada y ejemplos de las nuevas características espaciales de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluido el subtipo **CircularString**, descargue las notas del producto, [Nuevas características espaciales de SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Para obtener una descripción detallada y ejemplos de las nuevas características espaciales de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluido el subtipo **CircularString** , descargue las notas del producto, [Nuevas características espaciales de SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
   
-## Instancias de CircularString  
+## <a name="circularstring-instances"></a>Instancias de CircularString  
  En el dibujo siguiente se muestran instancias válidas de **CircularString** :  
   
  ![5ff17e34-b578-4873-9d33-79500940d0bc](../../relational-databases/spatial/media/5ff17e34-b578-4873-9d33-79500940d0bc.gif)
   
-### Instancias aceptadas  
+### <a name="accepted-instances"></a>Instancias aceptadas  
  La instancia **CircularString** se acepta si está vacía o contiene un número impar de puntos, n, donde n > 1. Se aceptan las siguientes instancias de **CircularString** .  
   
 ```  
@@ -42,7 +46,7 @@ DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';  
 ```  
   
-### Instancias válidas  
+### <a name="valid-instances"></a>Instancias válidas  
  Una instancia de **CircularString** válida debe estar vacía o tener los siguientes atributos:  
   
 -   Debe contener al menos un segmento de arco circular (es decir, con un mínimo de tres puntos).  
@@ -75,7 +79,7 @@ DECLARE @g2 geometry = 'CIRCULARSTRING(0 0, 0 0, 0 0)';
 SELECT @g1.STIsValid(), @g2.STIsValid();  
 ```  
   
-### Instancias con puntos colineales  
+### <a name="instances-with-collinear-points"></a>Instancias con puntos colineales  
  En los siguientes casos, un segmento de arco circular se tratará como un segmento de línea:  
   
 -   Cuando los tres puntos son colineales, por ejemplo (1 3, 4 4, 7 5).  
@@ -84,9 +88,9 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
   
 -   Cuando los puntos medio y último son el mismo, pero el primer punto es diferente, por ejemplo (1 3, 4 4, 4 4).  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
   
-### A. Crear instancias de una instancia de geometry con una CircularString vacía  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-circularstring"></a>A. Crear instancias de una instancia de geometry con una CircularString vacía  
  En este ejemplo se muestra cómo crear una instancia de **CircularString** vacía:  
   
 ```tsql  
@@ -94,7 +98,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING EMPTY');  
 ```  
   
-### B. Crear instancias de una instancia de geometry usando una CircularString con un segmento de arco circular  
+### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>B. Crear instancias de una instancia de geometry usando una CircularString con un segmento de arco circular  
  En el siguiente ejemplo se muestra cómo crear una instancia **CircularString** con un único segmento de arco de circular (medio círculo):  
   
 ```tsql  
@@ -103,7 +107,7 @@ SET @g = geometry:: STGeomFromText('CIRCULARSTRING(2 0, 1 1, 0 0)', 0);
 SELECT @g.ToString();  
 ```  
   
-### C. Crear instancias de una instancia de geometry usando una CircularString con varios segmentos de arco circular  
+### <a name="c-instantiating-a-geometry-instance-using-a-circularstring-with-multiple-circular-arc-segments"></a>C. Crear instancias de una instancia de geometry usando una CircularString con varios segmentos de arco circular  
  En el siguiente ejemplo se muestra cómo crear una instancia **CircularString** con más de un segmento de arco de circular (círculo completo):  
   
 ```tsql  
@@ -134,21 +138,21 @@ Perimeter = 5.65685
   
  Observe que el valor del ejemplo **CircularString** se acerca a 2∏, que es la circunferencia real del círculo.  
   
-### D. Declarar y crear instancias de una instancia de geometry con una CircularString en la misma instrucción  
+### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. Declarar y crear instancias de una instancia de geometry con una CircularString en la misma instrucción  
  Este fragmento de código muestra cómo declarar y crear instancias de una instancia de **geometry** con una **CircularString** en la misma instrucción:  
   
 ```tsql  
 DECLARE @g geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
 ```  
   
-### E. Crear instancias de una instancia de geography con una CircularString  
+### <a name="e-instantiating-a-geography-instance-with-a-circularstring"></a>E. Crear instancias de una instancia de geography con una CircularString  
  En el siguiente ejemplo, se muestra cómo declarar y crear una instancia de **geography** con una **CircularString**:  
   
 ```tsql  
 DECLARE @g geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
 ```  
   
-### F. Crear instancias de una instancia de geometry con una CircularString que es una línea recta  
+### <a name="f-instantiating-a-geometry-instance-with-a-circularstring-that-is-a-straight-line"></a>F. Crear instancias de una instancia de geometry con una CircularString que es una línea recta  
  En el siguiente ejemplo se muestra cómo crear una instancia de **CircularString** que es una línea recta:  
   
 ```tsql  
@@ -156,7 +160,7 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de los tipos de datos espaciales](../../relational-databases/spatial/spatial-data-types-overview.md)   
  [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)   
  [MakeValid &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/makevalid-geography-data-type.md)   
@@ -174,3 +178,4 @@ SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);
  [LineString](../../relational-databases/spatial/linestring.md)  
   
   
+

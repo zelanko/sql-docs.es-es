@@ -1,24 +1,28 @@
 ---
-title: "Migrar a una base de datos parcialmente independiente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "base de datos independiente, migrar a"
+title: "Migración a una base de datos parcialmente independiente | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- contained database, migrating to
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7d2228b3a1baf08376e1cb5ec862bf89f8a4e2d8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Migrar a una base de datos parcialmente independiente
+# <a name="migrate-to-a-partially-contained-database"></a>Migrar a una base de datos parcialmente independiente
   En este tema se describe cómo preparar el cambio al modelo de base de datos parcialmente independiente y, a continuación, se proporcionan los pasos de migración.  
   
  **En este tema:**  
@@ -47,9 +51,9 @@ caps.handback.revision: 17
 -   Supervise el XEvent **database_uncontained_usage** para ver cuándo se usan características sin contención.  
   
 ##  <a name="enable"></a> Habilitar bases de datos independientes  
- Las bases de datos independientes deben estar habilitadas en la instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para poder crear bases de datos independientes.  
+ Las bases de datos independientes deben estar habilitadas en la instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]para poder crear bases de datos independientes.  
   
-### Habilitar las bases de datos independientes mediante Transact-SQL  
+### <a name="enabling-contained-databases-using-transact-sql"></a>Habilitar las bases de datos independientes mediante Transact-SQL  
  En el siguiente ejemplo se habilitan las bases de datos independientes en la instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 ```tsql  
@@ -59,7 +63,7 @@ RECONFIGURE ;
 GO  
 ```  
   
-#### Habilitar las bases de datos independientes mediante Management Studio  
+#### <a name="enabling-contained-databases-using-management-studio"></a>Habilitar las bases de datos independientes mediante Management Studio  
  En el siguiente ejemplo se habilitan las bases de datos independientes en la instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 1.  En el Explorador de objetos, haga clic con el botón derecho en el nombre del servidor y, después, haga clic en **Propiedades**.  
@@ -71,8 +75,8 @@ GO
 ##  <a name="convert"></a> Convertir una base de datos en parcialmente independiente  
  Una base de datos se convierte en base de datos independiente cambiando la **CONTAINMENT** opción.  
   
-### Convertir una base de datos en parcialmente independiente mediante Transact-SQL  
- En el siguiente ejemplo se convierte en parcialmente independiente una base de datos denominada `Accounting`.  
+### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Convertir una base de datos en parcialmente independiente mediante Transact-SQL  
+ En el siguiente ejemplo se convierte en parcialmente independiente una base de datos denominada `Accounting` .  
   
 ```tsql  
 USE [master]  
@@ -81,7 +85,7 @@ ALTER DATABASE [Accounting] SET CONTAINMENT = PARTIAL
 GO  
 ```  
   
-### Convertir una base de datos en parcialmente independiente mediante Management Studio  
+### <a name="converting-a-database-to-partially-contained-using-management-studio"></a>Convertir una base de datos en parcialmente independiente mediante Management Studio  
  En el siguiente ejemplo se convierte una base de datos en una base de datos parcialmente independiente.  
   
 1.  En el Explorador de objetos, expanda **Bases de datos**, haga clic con el botón derecho en la base de datos que quiera convertir y, después, haga clic en **Propiedades**.  
@@ -116,8 +120,8 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## Vea también  
- [Bases de datos independientes](../../relational-databases/databases/contained-databases.md)   
+## <a name="see-also"></a>Vea también  
+ [Contained Databases](../../relational-databases/databases/contained-databases.md)   
  [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
  [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  
   

@@ -1,42 +1,37 @@
 ---
-title: "Correo electr&#243;nico de base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "arquitectura [SQL Server], Correo electrónico de base de datos"
-  - "Correo electrónico de base de datos [SQL Server], arquitectura"
-  - "Correo electrónico de base de datos [SQL Server], componentes"
+title: "Correo electrónico de base de datos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- architecture [SQL Server], Database Mail
+- Database Mail [SQL Server], architecture
+- Database Mail [SQL Server], components
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: a613827dda07aa9fee71813b045ffc2859cc7033
+ms.lasthandoff: 04/11/2017
+
 ---
-# Correo electr&#243;nico de base de datos
+# <a name="database-mail"></a>Correo electrónico de base de datos
   El Correo electrónico de base de datos es una solución empresarial para enviar mensajes de correo electrónico desde [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. El Correo electrónico de base de datos permite a las aplicaciones de base de datos enviar mensajes de correo electrónico a los usuarios. Los mensajes enviados pueden incluir resultados de consultas y archivos de cualquier recurso de la red.  
   
- **En este tema:**  
-  
--   [Ventajas de usar el Correo electrónico de base de datos](#Benefits)  
-  
--   [Arquitectura del Correo electrónico de base de datos](#VisualElement)  
-  
--   [Introducción a los componentes de Correo electrónico de base de datos](#ComponentsAndConcepts)  
-  
--   [Contenido relacionado](#RelatedContent)  
   
 ##  <a name="Benefits"></a> Ventajas de usar el Correo electrónico de base de datos  
  El Correo electrónico de base de datos está diseñado para proporcionar confiabilidad, escalabilidad, seguridad y compatibilidad.  
   
-### Confiabilidad  
+### <a name="reliability"></a>Confiabilidad  
   
 -   El Correo electrónico de base de datos usa el protocolo estándar SMTP (Protocolo simple de transferencia de correo) para enviar correo electrónico. Puede utilizar el Correo electrónico de base de datos sin necesidad de instalar un cliente con MAPI extendida en el equipo en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -46,17 +41,17 @@ caps.handback.revision: 45
   
 -   Compatibilidad con clústeres. El Correo electrónico de base de datos es una aplicación para clústeres y es totalmente compatible con estos.  
   
-### Escalabilidad  
+### <a name="scalability"></a>Escalabilidad  
   
--   Entrega en segundo plano: el Correo electrónico de base de datos permite realizar entregas en segundo plano o asincrónicas. Cuando se llama a **sp_send_dbmail** para enviar un mensaje, Correo electrónico de base de datos agrega una solicitud a una cola de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. El procedimiento almacenado se devuelve inmediatamente. El componente de correo electrónico externo recibe la solicitud y entrega el mensaje.  
+-   Entrega en segundo plano: el Correo electrónico de base de datos permite realizar entregas en segundo plano o asincrónicas. Cuando se llama a **sp_send_dbmail** para enviar un mensaje, Correo electrónico de base de datos agrega una solicitud a una cola de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . El procedimiento almacenado se devuelve inmediatamente. El componente de correo electrónico externo recibe la solicitud y entrega el mensaje.  
   
--   Varios perfiles: el Correo electrónico de base de datos permite crear varios perfiles en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También se puede elegir el perfil del Correo electrónico de base de datos para enviar el mensaje.  
+-   Varios perfiles: el Correo electrónico de base de datos permite crear varios perfiles en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . También se puede elegir el perfil del Correo electrónico de base de datos para enviar el mensaje.  
   
 -   Varias cuentas: cada perfil puede incluir varias cuentas de conmutación por error. Se pueden configurar varios perfiles con distintas cuentas para distribuir el correo electrónico entre varios servidores de correo.  
   
 -   Compatibilidad con 64 bits: el Correo electrónico de base de datos es totalmente compatible con las versiones de 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### Seguridad  
+### <a name="security"></a>Seguridad  
   
 -   Desactivado de forma predeterminada: para reducir el área expuesta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los procedimientos almacenados del Correo electrónico de base de datos están deshabilitados de forma predeterminada.  
   
@@ -64,30 +59,28 @@ caps.handback.revision: 45
   
 -   Seguridad de perfil: el Correo electrónico de base de datos aplica la seguridad para los perfiles de correo. El usuario elige cuáles son los usuarios o grupos de la base de datos **msdb** que tienen acceso a los perfiles del Correo electrónico de base de datos. Se puede conceder acceso a usuarios específicos o a todos los usuarios de **msdb**. Un perfil privado restringe el acceso a una lista especificada de usuarios. Un perfil público está disponible para todos los usuarios de la base de datos.  
   
--   Regulador del tamaño de los datos adjuntos: el Correo electrónico de base de datos aplica un límite configurable para el tamaño de los datos adjuntos. Puede cambiar este límite usando el procedimiento almacenado [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md).  
+-   Regulador del tamaño de los datos adjuntos: el Correo electrónico de base de datos aplica un límite configurable para el tamaño de los datos adjuntos. Puede cambiar este límite usando el procedimiento almacenado [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md) .  
   
 -   Extensiones de archivo prohibidas: el Correo electrónico de base de datos mantiene una lista de extensiones de archivo prohibidas. Los usuarios no pueden adjuntar archivos con las extensiones de la lista. Puede cambiar esta lista utilizando sysmail_configure_sp.  
   
--   Correo electrónico de base de datos se ejecuta bajo la cuenta de servicio de motor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para adjuntar un archivo de una carpeta a un mensaje de correo electrónico, la cuenta de motor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener permisos de acceso a la carpeta con el archivo.  
+-   Correo electrónico de base de datos se ejecuta bajo la cuenta de servicio de motor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para adjuntar un archivo de una carpeta a un mensaje de correo electrónico, la cuenta de motor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener permisos de acceso a la carpeta con el archivo.  
   
-### Compatibilidad  
+### <a name="supportability"></a>Compatibilidad  
   
 -   Configuración integrada: el Correo electrónico de base de datos mantiene la información de las cuentas de correo electrónico de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. No es necesario administrar un perfil de correo en una aplicación cliente externa. El Asistente para configuración del Correo electrónico de base de datos proporciona una interfaz adecuada para configurar el Correo electrónico de base de datos. También se pueden crear y mantener configuraciones del Correo electrónico de base de datos mediante [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   Registro. Correo electrónico de base de datos registra la actividad de correo electrónico en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en el registro de eventos de aplicación de Microsoft Windows y en las tablas de la base de datos **msdb**.  
+-   Registro. Correo electrónico de base de datos registra la actividad de correo electrónico en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en el registro de eventos de aplicación de Microsoft Windows y en las tablas de la base de datos **msdb** .  
   
 -   Auditar: El Correo electrónico de base de datos conserva copias de los mensajes y datos adjuntos enviados en la base de datos **msdb** . Puede auditar fácilmente el uso del Correo electrónico de base de datos y revisar los mensajes conservados.  
   
 -   Compatibilidad con HTML: el Correo electrónico de base de datos permite enviar mensajes de correo electrónico con el formato HTML.  
   
- [&#91;Principio&#93;](#Top)  
   
 ##  <a name="VisualElement"></a> Arquitectura del Correo electrónico de base de datos  
  El Correo electrónico de base de datos está diseñado en una arquitectura en cola que usa tecnologías de Service Broker. Cuando los usuarios ejecutan **sp_send_dbmail**, el procedimiento almacenado inserta un elemento en la cola de correo y crea un registro que contiene el mensaje de correo electrónico. La inserción de la nueva entrada en la cola de correo inicia el proceso externo de Correo electrónico de base de datos (DatabaseMail.exe). El proceso externo lee la información de correo electrónico y envía el mensaje de correo electrónico al servidor o servidores de correo electrónico adecuados. El proceso externo inserta un elemento en la cola Estado para el resultado de la operación de envío. La inserción de la nueva entrada en la cola de estado inicia el procedimiento almacenado interno que actualiza el estado del mensaje de correo electrónico. Además de almacenar el mensaje de correo electrónico enviado, o no enviado, el Correo electrónico de base de datos también registra cualquier dato adjunto del correo electrónico en las tablas del sistema. Las vistas del Correo electrónico de base de datos proporcionan el estado de los mensajes para solucionar problemas y los procedimientos almacenados permiten la administración de la cola del Correo electrónico de base de datos.  
   
  ![msdb envía mensajes a un servidor de correo SMTP](../../relational-databases/database-mail/media/databasemail.gif "msdb envía mensajes a un servidor de correo SMTP")  
   
- [&#91;Principio&#93;](#Top)  
   
 ##  <a name="ComponentsAndConcepts"></a> Introducción a los componentes de Correo electrónico de base de datos  
  El Correo electrónico de base de datos consta de los componentes principales siguientes:  
@@ -117,11 +110,10 @@ caps.handback.revision: 45
   
  Puede configurar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para enviar mensajes de correo electrónico a operadores predefinidos cuando:  
   
--   Se desencadene una alerta. Las alertas se pueden configurar para enviar una notificación por correo electrónico acerca de eventos específicos que se produzcan. Por ejemplo, es posible configurar alertas para que avisen a un operador acerca de un determinado evento de la base de datos o una situación del sistema operativo que precise una acción inmediata. Para obtener más información sobre cómo configurar alertas, vea [Alertas](../../ssms/agent/alerts.md).  
+-   Se desencadene una alerta. Las alertas se pueden configurar para enviar una notificación por correo electrónico acerca de eventos específicos que se produzcan. Por ejemplo, es posible configurar alertas para que avisen a un operador acerca de un determinado evento de la base de datos o una situación del sistema operativo que precise una acción inmediata. Para obtener más información sobre cómo configurar alertas, vea [Alertas](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef).  
   
 -   Se lleve a cabo o no se complete una tarea programada, como una copia de seguridad de la base de datos o un evento de replicación. Por ejemplo, puede usar el correo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para notificar a los operadores si se produce un error durante el procesamiento a fin de mes.  
   
- [&#91;Principio&#93;](#Top)  
   
 ##  <a name="RelatedContent"></a> Temas de componentes del Correo electrónico de base de datos  
   
@@ -135,6 +127,5 @@ caps.handback.revision: 45
   
 -   [Configurar el Agente SQL Server para que use el Correo electrónico de base de datos](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
   
- [&#91;Principio&#93;](#Top)  
   
   

@@ -1,23 +1,27 @@
 ---
-title: "Cambiar el separador de palabras usado para el ingl&#233;s de Estados Unidos y el del Reino Unido | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cambio del separador de palabras usado para el inglés de Estados Unidos y el del Reino Unido | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be3d7e956f6ed89f14fc63c36d97974cc9218933
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cambiar el separador de palabras usado para el ingl&#233;s de Estados Unidos y el del Reino Unido
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala una nueva versión (versión 14.0.4999.1038) del separador de palabras y del lematizador para el idioma inglés, reemplazando la versión anterior de estos componentes (versión 12.0.6828.0). Para obtener más información sobre el comportamiento modificado de los nuevos componentes, vea [Cambios de comportamiento en la búsqueda de texto completo](../Topic/Behavior%20Changes%20to%20Full-Text%20Search.md). En este tema se describe cómo pasar de la nueva versión de estos componentes a la versión previa o viceversa. Para las instalaciones de clúster, estos cambios deben realizarse en todos los nodos principales y pasivos.  
+# <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Cambiar el separador de palabras usado para el inglés de Estados Unidos y el del Reino Unido
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala una nueva versión (versión 14.0.4999.1038) del separador de palabras y del lematizador para el idioma inglés, reemplazando la versión anterior de estos componentes (versión 12.0.6828.0). Para obtener más información sobre el comportamiento modificado de los nuevos componentes, vea [Cambios de comportamiento en la búsqueda de texto completo](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f). En este tema se describe cómo pasar de la nueva versión de estos componentes a la versión previa o viceversa. Para las instalaciones de clúster, estos cambios deben realizarse en todos los nodos principales y pasivos.  
   
  Las versiones previas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizaban separadores de palabras distintos representados por CLSID diferentes para el inglés de Estados Unidos (LCID 1033) y el inglés del Reino Unido (LCID 2057). En esta versión, ambos LCID usan los mismos componentes con los mismos CLSID, como se muestra en la siguiente tabla:  
   
@@ -30,9 +34,9 @@ caps.handback.revision: 10
   
  Para obtener más información sobre los separadores de palabras y los lematizadores, vea [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
-## Pasar del separador de palabras de inglés actual a los separadores de palabras anteriores de inglés  
+## <a name="switching-from-the-current-english-word-breaker-to-the-previous-english-word-breakers"></a>Pasar del separador de palabras de inglés actual a los separadores de palabras anteriores de inglés  
   
-#### Para pasar de la versión actual del separador de palabras de inglés de Estados Unidos a la versión anterior  
+#### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>Para pasar de la versión actual del separador de palabras de inglés de Estados Unidos a la versión anterior  
   
 1.  En el Registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 10
   
 6.  Reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-#### Para pasar de la versión actual del separador de palabras de inglés del Reino Unido a la versión anterior  
+#### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>Para pasar de la versión actual del separador de palabras de inglés del Reino Unido a la versión anterior  
   
 1.  En el Registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
@@ -76,9 +80,9 @@ caps.handback.revision: 10
   
 6.  Reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## Pasar de los separadores de palabras de inglés anteriores al separador de palabras de inglés actual  
+## <a name="switching-back-from-the-previous-english-word-breakers-to-the-current-english-word-breaker"></a>Pasar de los separadores de palabras de inglés anteriores al separador de palabras de inglés actual  
   
-#### Para volver a la versión anterior del separador de palabras de inglés de Estados Unidos a la versión actual  
+#### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>Para volver a la versión anterior del separador de palabras de inglés de Estados Unidos a la versión actual  
   
 1.  En el Registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
@@ -100,7 +104,7 @@ caps.handback.revision: 10
   
 6.  Reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-#### Para volver a la versión anterior del separador de palabras de inglés del Reino Unido a la versión actual  
+#### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>Para volver a la versión anterior del separador de palabras de inglés del Reino Unido a la versión actual  
   
 1.  En el Registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
@@ -122,8 +126,8 @@ caps.handback.revision: 10
   
 6.  Reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Revertir los separadores de palabras usados por las búsquedas a la versión anterior](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
- [Cambios de comportamiento en la búsqueda de texto completo](../Topic/Behavior%20Changes%20to%20Full-Text%20Search.md)  
+ [Cambios de comportamiento en la búsqueda de texto completo](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
   

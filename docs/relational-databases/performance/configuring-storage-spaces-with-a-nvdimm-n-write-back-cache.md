@@ -1,27 +1,31 @@
 ---
-title: "Configuring Storage Spaces with a NVDIMM-N write-back cache (Configuraci&#243;n de espacios de almacenamiento con una cach&#233; con reescritura de NVDIMM-N) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Configuración de espacios de almacenamiento con una caché con reescritura de NVDIMM-N | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a0a115eba3fbd1afe52c211fe0f93362a989fc2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configuring Storage Spaces with a NVDIMM-N write-back cache (Configuraci&#243;n de espacios de almacenamiento con una cach&#233; con reescritura de NVDIMM-N)
+# <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>Configuring Storage Spaces with a NVDIMM-N write-back cache (Configuración de espacios de almacenamiento con una caché con reescritura de NVDIMM-N)
   Windows Server 2016 es compatible con dispositivos de NVDIMM-N que permiten operaciones de entrada y salida (E/S) extremadamente rápidas. Una manera atractiva de usar dichos dispositivos es usarlos como una memoria caché con reescritura para obtener latencias de escritura bajas. En este tema se describe cómo configurar un espacio de almacenamiento reflejado con una caché con reescritura reflejada de NVDIMM-N como una unidad virtual para almacenar el registro de transacciones de SQL Server. Si quiere usarlo también para almacenar tablas de datos u otros datos, puede incluir más discos en el grupo de almacenamiento o crear varios grupos si el aislamiento es importante.  
   
  Para ver un vídeo de Channel 9 con esta técnica, vea [Using Non-volatile Memory (NVDIMM-N) as Block Storage in Windows Server 2016 (Usar una memoria no volátil (NVDIMM-N) como almacenamiento en bloque en Windows Server 2016)](https://channel9.msdn.com/Events/Build/2016/P466).  
   
-## Identificación de los discos correctos  
+## <a name="identifying-the-right-disks"></a>Identificación de los discos correctos  
  La configuración de los espacios de almacenamiento en Windows Server 2016, especialmente con las características avanzadas como las memorias caché con reescritura, se consigue más fácilmente mediante PowerShell. El primer paso es identificar qué discos deben formar parte del grupo de espacios de almacenamiento del que se creará el disco virtual. Los NVDIMM-N tienen un tipo de medio y un tipo de bus de SCM (memoria de clase de almacenamiento), que puede consultarse mediante el cmdlet Get-PhysicalDisk de PowerShell.  
   
 ```  
@@ -47,7 +51,7 @@ $pd | Select FriendlyName, MediaType, BusType
   
  ![Select FriendlyName](../../relational-databases/performance/media/select-friendlyname.png "Select FriendlyName")  
   
-## Crear el grupo de almacenamiento  
+## <a name="creating-the-storage-pool"></a>Crear el grupo de almacenamiento  
  Al usar la variable $pd que contiene los discos físicos, es sencillo crear el grupo de almacenamiento mediante el cmdlet New-StoragePool de PowerShell.  
   
 ```  
@@ -56,7 +60,7 @@ New-StoragePool –StorageSubSystemFriendlyName “Windows Storage*” –Friend
   
  ![New-StoragePool](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
   
-## Crear el disco virtual y el volumen  
+## <a name="creating-the-virtual-disk-and-volume"></a>Crear el disco virtual y el volumen  
  Ahora que se ha creado un grupo, el siguiente paso es delimitar un disco virtual y aplicarle formato. En este caso, solo se creará un disco virtual y el cmdlet New-Volume de PowerShell puede usarse para simplificar este proceso:  
   
 ```  
@@ -73,10 +77,10 @@ New-Volume –StoragePool (Get-StoragePool –FriendlyName NVDIMM_Pool) –Frien
   
  ![Log_Space Drive](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Espacios de almacenamiento en Windows 10](http://windows.microsoft.com/en-us/windows-10/storage-spaces-windows-10)   
  [Introducción a los espacios de almacenamiento](https://technet.microsoft.com/en-us/library/hh831739.aspx)   
  [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
- [Ver o cambiar las ubicaciones predeterminadas de los archivos de datos y registro &#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view or change the default locations for data and log files.md)  
+ [Ver o cambiar las ubicaciones predeterminadas de los archivos de datos y registro &#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md)  
   
   

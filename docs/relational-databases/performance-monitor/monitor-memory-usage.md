@@ -1,35 +1,39 @@
 ---
-title: "Supervisar el uso de la memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "optimizar bases de datos [SQL Server], memoria"
-  - "supervisar el rendimiento del servidor [SQL Server], uso de memoria"
-  - "aislar la memoria [SQL Server]"
-  - "tasa de paginación [SQL Server]"
-  - "memoria [SQL Server], supervisar el uso"
-  - "supervisar [SQL Server], uso de memoria"
-  - "condiciones de memoria insuficiente"
-  - "supervisión de base de datos [SQL Server], uso de memoria"
-  - "memoria disponible [SQL Server]"
-  - "errores de página [SQL Server]"
-  - "supervisar el rendimiento [SQL Server], uso de memoria"
-  - "rendimiento del servidor [SQL Server], memoria"
+title: "Supervisión del uso de la memoria | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tuning databases [SQL Server], memory
+- monitoring server performance [SQL Server], memory usage
+- isolating memory [SQL Server]
+- paging rate [SQL Server]
+- memory [SQL Server], monitoring usage
+- monitoring [SQL Server], memory usage
+- low-memory conditions
+- database monitoring [SQL Server], memory usage
+- available memory [SQL Server]
+- page faults [SQL Server]
+- monitoring performance [SQL Server], memory usage
+- server performance [SQL Server], memory
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b69c5082567467771189cb7f9e781d850680bd34
+ms.lasthandoff: 04/11/2017
+
 ---
-# Supervisar el uso de la memoria
+# <a name="monitor-memory-usage"></a>Supervisar el uso de la memoria
   Supervise una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periódicamente para confirmar que la utilización de la memoria se encuentra dentro de los intervalos normales.  
   
  Para supervisar las condiciones de memoria insuficiente, utilice los contadores de objetos siguientes:  
@@ -42,12 +46,12 @@ caps.handback.revision: 26
   
  Un valor bajo en el contador **Bytes disponibles** puede indicar una escasez general de memoria en el equipo o que un programa no está liberando memoria. Un valor alto en el contador **Páginas/s** puede indicar una paginación excesiva. Supervise el contador **Memoria: Errores de página/s** para asegurarse de que la actividad del disco no está causada por la paginación.  
   
- Una tasa baja de paginación (y por tanto, de errores de página) es normal, incluso si el equipo tiene mucha memoria disponible. El Administrador de memoria virtual (VMM) de Microsoft Windows sustrae páginas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y otros procesos a medida que recorta los tamaños del espacio de trabajo para estos procesos, lo que suele provocar errores de página. Para determinar si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otro proceso causan una paginación excesiva, supervise el contador **Proceso: Errores de página/s** de la instancia del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Una tasa baja de paginación (y por tanto, de errores de página) es normal, incluso si el equipo tiene mucha memoria disponible. El Administrador de memoria virtual (VMM) de Microsoft Windows sustrae páginas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y otros procesos a medida que recorta los tamaños del espacio de trabajo para estos procesos, lo que suele provocar errores de página. Para determinar si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otro proceso causan una paginación excesiva, supervise el contador **Proceso: Errores de página/s** de la instancia del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Para obtener más información acerca de cómo solucionar la paginación excesiva, vea la documentación del sistema operativo Windows.  
   
-## Aislar la memoria que utiliza SQL Server  
- De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cambia dinámicamente sus necesidades de memoria según los recursos del sistema disponibles. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesita más memoria, consulta el sistema operativo para determinar si hay memoria física disponible y la utiliza. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no necesita la memoria que tiene asignada actualmente, la libera para el sistema operativo. En todo caso, el uso dinámico de la memoria puede anularse mediante las opciones de configuración de servidor **minservermemory** y **maxservermemory**. Para obtener más información, vea el documento sobre las [opciones de memoria del servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
+## <a name="isolating-memory-used-by-sql-server"></a>Aislar la memoria que utiliza SQL Server  
+ De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cambia dinámicamente sus necesidades de memoria según los recursos del sistema disponibles. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesita más memoria, consulta el sistema operativo para determinar si hay memoria física disponible y la utiliza. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no necesita la memoria que tiene asignada actualmente, la libera para el sistema operativo. En todo caso, el uso dinámico de la memoria puede anularse mediante las opciones de configuración de servidor **minservermemory**y **maxservermemory** . Para obtener más información, vea el documento sobre las [opciones de memoria del servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
  Para supervisar la cantidad de memoria que utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , examine los siguientes contadores de rendimiento:  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 26
   
  Si el valor del contador **Memoria total del servidor (KB)** siempre es alto en comparación con la cantidad de memoria física del equipo, puede que indique que se necesita más memoria.  
   
-## Determinar la asignación de memoria actual  
+## <a name="determining-current-memory-allocation"></a>Determinar la asignación de memoria actual  
  La consulta siguiente devuelve información acerca de la memoria asignada actual.  
   
 ```  

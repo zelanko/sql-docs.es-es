@@ -1,26 +1,30 @@
 ---
-title: "Base de datos model | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "plantilla de bases de datos [SQL Server]"
-  - "base de datos modelo [SQL Server], acerca de las bases de datos modelo"
-  - "modelos, base de datos [SQL Server]"
+title: Base de datos modelo | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- template databases [SQL Server]
+- model database [SQL Server], about model databases
+- model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 caps.latest.revision: 52
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a05d89ba953bf683a992a087be8e3c87777ae9c4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Base de datos model
+# <a name="model-database"></a>Base de datos model
   La base de datos **modelo** se utiliza como plantilla para todas las bases de datos creadas en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como **tempdb** se crea de nuevo cada vez que se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la base de datos **modelo** siempre tiene que existir en un sistema con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Todo el contenido de la base de datos **modelo** , incluidas las opciones de base de datos, se copia en la base de datos nueva. Algunos de los valores de configuración de la base de datos **model** también se usan para crear una base de datos **tempdb** nueva durante el inicio, de modo que la base de datos **model** siempre debe existir en un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Las bases de datos de usuario recién creadas usan el mismo [modelo de recuperación](../../relational-databases/backup-restore/recovery-models-sql-server.md) que la en. La opción predeterminada la puede configurar el usuario. Para obtener más información sobre el modelo de recuperación actual del modelo, consulte [Ver o cambiar el modelo de recuperación de una base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
@@ -28,12 +32,12 @@ caps.handback.revision: 52
 > [!IMPORTANT]  
 >  Si modifica la base de datos **model** con información de la plantilla específica del usuario, se recomienda realizar una copia de seguridad de **model**. Para obtener más información, vea [Realizar copias de seguridad y restaurar bases de datos del sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
-## Uso de modelo  
+## <a name="model-usage"></a>Uso de modelo  
  Cuando se emite una instrucción CREATE DATABASE, la primera parte de la base de datos se crea mediante la copia del contenido de la base de datos **modelo** . El resto de la nueva base de datos se llena a continuación con páginas vacías.  
   
  Si modifica la base de datos **model** , todas las bases de datos creadas posteriormente heredan los cambios. Por ejemplo, se podrían establecer permisos u opciones de base de datos o agregar objetos, como tablas, funciones o procedimientos almacenados. Las propiedades del archivo de la base de datos del **modelo** son una excepción y se ignoran, excepto el tamaño inicial del archivo de datos. El tamaño inicial predeterminado de los datos de base de datos modelo y del archivo de registro es de 8 MB.  
   
-## Propiedades físicas de model  
+## <a name="physical-properties-of-model"></a>Propiedades físicas de model  
  Las siguientes tablas muestran los valores de configuración iniciales de los archivos de datos y registro de **model** .  
   
 |Archivo|Nombre lógico|Nombre físico|Crecimiento del archivo|  
@@ -45,7 +49,7 @@ caps.handback.revision: 52
   
  Para mover la base de datos **model** o los archivos de registro, consulte [Mover bases de datos del sistema](../../relational-databases/databases/move-system-databases.md).  
   
-### Opciones de base de datos  
+### <a name="database-options"></a>Opciones de base de datos  
  La siguiente tabla muestra el valor predeterminado de cada opción de la base de datos **modelo** e indica si la opción puede modificarse. Para ver la configuración actual de estas opciones, utilice la vista de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
   
 |Opción de base de datos|Valor predeterminado|Se puede modificar|  
@@ -75,7 +79,7 @@ caps.handback.revision: 52
 |PARAMETERIZATION|SIMPLE|Sí|  
 |QUOTED_IDENTIFIER|OFF|Sí|  
 |READ_COMMITTED_SNAPSHOT|OFF|Sí|  
-|RECOVERY|Depende de la edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*|Sí|  
+|RECOVERY|Depende de la edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *|Sí|  
 |RECURSIVE_TRIGGERS|OFF|Sí|  
 |Opciones de Service Broker|DISABLE_BROKER|No|  
 |TRUSTWORTHY|OFF|No|  
@@ -84,7 +88,7 @@ caps.handback.revision: 52
   
  Para obtener una descripción de estas opciones de la base de datos, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## Restricciones  
+## <a name="restrictions"></a>Restricciones  
  Las siguientes operaciones no se pueden realizar en la base de datos **modelo** :  
   
 -   Agregar archivos o grupos de archivos.  
@@ -111,7 +115,7 @@ caps.handback.revision: 52
   
 -   Crear procedimientos, vistas, o desencadenadores utilizando la opción WITH ENCRYPTION. La clave de cifrado está asociada a la base de datos en la que se crea el objeto. Los objetos cifrados creados en la base de datos **modelo** solo se pueden usar en **modelo**.  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
  [Bases de datos del sistema](../../relational-databases/databases/system-databases.md)  
   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
@@ -121,3 +125,4 @@ caps.handback.revision: 52
  [Mover archivos de base de datos](../../relational-databases/databases/move-database-files.md)  
   
   
+

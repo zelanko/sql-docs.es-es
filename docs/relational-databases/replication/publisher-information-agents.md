@@ -1,24 +1,28 @@
 ---
-title: "Informaci&#243;n de publicador, Agentes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.publisherinfo.commonjobs.f1"
+title: "Información de publicador, Agentes | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.publisherinfo.commonjobs.f1
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 78e8493ca92ce2877d5fb6cb29fa46c6287dd56a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Informaci&#243;n de publicador, Agentes
+# <a name="publisher-information-agents"></a>Información de publicador, Agentes
   La pestaña **Agentes** muestra información sobre los agentes y trabajos de mantenimiento asociados con el publicador:  
   
 -   Agente de instantáneas, que se muestra en todas las publicaciones.  
@@ -41,10 +45,10 @@ caps.handback.revision: 26
   
     -   Limpieza de suscripciones expiradas  
   
- Para obtener más información acerca de estos trabajos, consulte [administración del agente de replicación](../../relational-databases/replication/agents/replication-agent-administration.md).  
+ Para obtener más información sobre estos trabajos, vea [Administración del Agente de replicación](../../relational-databases/replication/agents/replication-agent-administration.md).  
   
-## Opciones  
- Para mostrar información acerca de un trabajo o agente, seleccione en la **agente y tipos de trabajo** menú desplegable. Para obtener información más detallada y ver cuáles son las tareas relacionadas con un agente o un trabajo, haga clic con el botón secundario en la fila del agente o el trabajo correspondiente y después elija una opción del menú contextual. Para cambiar la manera que la cuadrícula muestra los datos, haga clic con el botón secundario en la cuadrícula y, a continuación, haga clic en una de las opciones siguientes:  
+## <a name="options"></a>Opciones  
+ Para mostrar información sobre un agente o trabajo, seleccione la opción correspondiente en el menú desplegable **Tipos de agente y trabajo** . Para obtener información más detallada y ver cuáles son las tareas relacionadas con un agente o un trabajo, haga clic con el botón secundario en la fila del agente o el trabajo correspondiente y después elija una opción del menú contextual. Para cambiar la manera que la cuadrícula muestra los datos, haga clic con el botón secundario en la cuadrícula y, a continuación, haga clic en una de las opciones siguientes:  
   
 -   **Ordenar**: ordene en una o más columnas en el cuadro de diálogo **Ordenar columnas** .  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 26
   
  En las secciones siguientes se describen los datos que se muestran en esta pestaña para cada agente o trabajo.  
   
-### Agente de instantáneas  
+### <a name="snapshot-agent"></a>Agente de instantáneas  
  **Estado**  
  Estado del agente. En la lista siguiente se muestran los valores de estado posibles:  
   
@@ -85,13 +89,13 @@ caps.handback.revision: 26
  **Tasa de entrega**  
  La tasa, en comandos por segundo, a la que se confirman los comandos de inicialización en la base de datos de distribución durante la última ejecución del agente.  
   
- **#Transacciones**  
+ **#Trans**  
  El número de transacciones confirmadas en la base de datos de distribución durante la última ejecución del agente.  
   
- **#Comandos entregados**  
+ **#Cmds**  
  El número de comandos confirmados en la base de datos de distribución durante la última ejecución del agente. Un comando equivale a un cambio en los datos, como una actualización.  
   
-### Agente de registro del LOG  
+### <a name="log-reader-agent"></a>Agente de registro del LOG  
  **Estado**  
  Estado del agente. En la lista siguiente se muestran los valores de estado posibles:  
   
@@ -121,16 +125,16 @@ caps.handback.revision: 26
  **Latencia**  
  El tiempo, en segundos, que ha transcurrido entre el último cambio confirmado en la base de datos de publicación y el comando correspondiente que se confirma en la base de datos de distribución.  
   
- **#Transacciones**  
+ **#Trans**  
  El número de transacciones confirmadas en la base de datos de distribución durante la última ejecución del agente.  
   
- **#Comandos entregados**  
+ **#Cmds**  
  El número de comandos confirmados en la base de datos de distribución durante la última ejecución del agente. Un comando equivale a un cambio en los datos, como una actualización.  
   
- **Promedio de #Comandos entregados**  
+ **Avg. #Cmds**  
  El promedio de comandos por transacción durante la última ejecución del agente.  
   
-### Agente de lectura de cola  
+### <a name="queue-reader-agent"></a>Agente de lectura de cola  
  **Estado**  
  Estado del agente. En la lista siguiente se muestran los valores de estado posibles:  
   
@@ -160,16 +164,16 @@ caps.handback.revision: 26
  **Latencia**  
  El tiempo, en segundos, que ha transcurrido entre el último cambio confirmado en una base de datos de suscripciones y el comando correspondiente que se confirma en la base de datos de publicación.  
   
- **#Transacciones**  
+ **#Trans**  
  El número de transacciones confirmadas en la base de datos de publicación durante la última ejecución del agente.  
   
- **#Comandos entregados**  
+ **#Cmds**  
  El número de comandos confirmados en la base de datos de publicación durante la última ejecución del agente. Un comando equivale a un cambio en los datos, como una actualización.  
   
- **Promedio de #Comandos entregados**  
+ **Avg. #Cmds**  
  El promedio de comandos por transacción durante la última ejecución del agente.  
   
-### Trabajos de mantenimiento  
+### <a name="maintenance-jobs"></a>Trabajos de mantenimiento  
  **Estado**  
  Indica el estado de cada trabajo. En la lista siguiente se muestran los valores de estado posibles:  
   
@@ -193,10 +197,10 @@ caps.handback.revision: 26
  **Última acción**  
  La última acción realizada durante la ejecución más reciente del trabajo.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Ver la información y realizar tareas para un publicador & #40; Monitor de replicación & #41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [Ver la información y realizar tareas de los agentes asociados con una publicación & #40; Monitor de replicación & #41;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
+ [Ver información y realizar tareas para un publicador &#40;Monitor de replicación&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [Ver información y realizar tareas para los agentes asociados a una publicación &#40;Monitor de replicación&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [Supervisar la replicación](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

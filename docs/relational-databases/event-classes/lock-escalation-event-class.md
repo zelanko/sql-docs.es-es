@@ -1,28 +1,32 @@
 ---
-title: "Lock:Escalation (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Escalation, clase de eventos"
-  - "extensión de bloqueo [SQL Server], clase de eventos"
+title: Clase de eventos Lock:Escalation | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Escalation event class
+- lock escalation [SQL Server], event class
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3210940a28a25e89e4e69dbcb044503be2ae20d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Lock:Escalation (clase de eventos)
+# <a name="lockescalation-event-class"></a>Lock:Escalation (clase de eventos)
   La clase de eventos **Lock:Escalation** indica que un bloqueo específico se ha convertido en un bloqueo general; por ejemplo, un bloqueo de fila se ha convertido en un bloqueo de objeto. La clase de eventos de ampliación tiene Id. de Evento 60.  
   
-## Columnas de datos de la clase de evento Lock:Escalation  
+## <a name="lockescalation-event-class-data-columns"></a>Columnas de datos de la clase de evento Lock:Escalation  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -38,15 +42,15 @@ caps.handback.revision: 47
 |**IntegerData**|**int**|Recuento de bloqueo de HoBT. El número de bloqueos para el HoBT en el momento de la ampliación del bloqueo.|25|Sí|  
 |**IntegerData2**|**int**|Recuento de la ampliación del bloqueo. El número total de bloqueos que se convirtieron. Se cancelan las asignaciones de estas estructuras de bloqueo porque ya están cubiertas por el bloqueo ampliado.|55|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
-|**LineNumber**|**int**|Número de línea de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)].|5|Sí|  
+|**LineNumber**|**int**|Número de línea de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] .|5|Sí|  
 |**LoginName**|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con el formato DOMINIO\nombreDeUsuario).|11|Sí|  
-|**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals**. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
+|**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals** . Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |**Modo**|**int**|Modo de bloqueo que resulta después de la ampliación:<br /><br /> 0=NULL: Compatible con los demás modos de bloqueo (LCK_M_NL)<br /><br /> 1=Bloqueo Estabilidad del esquema (LCK_M_SCH_S)<br /><br /> 2=Bloqueo Modificación del esquema (LCK_M_SCH_M)<br /><br /> 3=Bloqueo Compartido (LCK_M_S)<br /><br /> 4=Bloqueo Actualizar (LCK_M_U)<br /><br /> 5=Bloqueo Exclusivo (LCK_M_X)<br /><br /> 6=Bloqueo Intención compartida (LCK_M_IS)<br /><br /> 7=Bloqueo Actualizar intención (LCK_M_IU)<br /><br /> 8=Bloqueo Intención exclusiva (LCK_M_IX)<br /><br /> 9=Actualizar intención compartida (LCK_M_SIU)<br /><br /> 10=Intención compartida exclusiva (LCK_M_SIX)<br /><br /> 11=Actualizar intención exclusiva (LCK_M_UIX)<br /><br /> 12=Bloqueo Actualización masiva (LCK_M_BU)<br /><br /> 13=Intervalo de claves compartido/compartido (LCK_M_RS_S)<br /><br /> 14=Intervalo de claves compartido/actualización (LCK_M_RS_U)<br /><br /> 15=Intervalo de claves de inserción NULL (LCK_M_RI_NL)<br /><br /> 16=Intervalo de claves de inserción compartido (LCK_M_RI_S)<br /><br /> 17=Intervalo de claves de inserción de actualización (LCK_M_RI_U)<br /><br /> 18=Intervalo de claves de inserción exclusivo (LCK_M_RI_X)<br /><br /> 19=Intervalo de claves exclusivo compartido (LCK_M_RX_S)<br /><br /> 20=Intervalo de claves exclusivo de actualización (LCK_M_RX_U)<br /><br /> 21=Intervalo de claves exclusivo exclusivo (LCK_M_RX_X)|32|Sí|  
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |**ObjectID**|**int**|Id. asignado por sistema de la tabla para la que se inició la ampliación del bloqueo.|22|Sí|  
 |**ObjectID2**|**bigint**|Id. de la entidad u objeto relacionado. (Id. del HoBT para el que se inició la ampliación del bloqueo).|56|Sí|  
-|**Offset**|**int**|Desplazamiento inicial de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)].|61|Sí|  
+|**Offset**|**int**|Desplazamiento inicial de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] .|61|Sí|  
 |**OwnerID**|**int**|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE<br /><br /> 6=WAITFOR_QUERY|58|Sí|  
 |**IdSolicitud**|**int**|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
 |**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
@@ -57,7 +61,7 @@ caps.handback.revision: 47
 |**TransactionID**|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |**Tipo**|**int**|Granularidad de la ampliación del bloqueo:<br /><br /> 1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT (nivel de tabla)<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=HOBT<br /><br /> 13=ALLOCATION_UNIT|57|Sí|  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente utiliza el procedimiento `sp_trace_create` para crear un seguimiento, utiliza `sp_trace_setevent` para agregar las columnas de ampliación del bloqueo al seguimiento y, a continuación, utiliza `sp_trace_setstatus` para iniciar dicho seguimiento. En instrucciones como `EXEC sp_trace_setevent @TraceID, 60, 22, 1`, el número `60` indica la clase de eventos de ampliación, `22` indica la columna **ObjectID** y `1` establece el evento de seguimiento en ON.  
   
 ```  
@@ -77,7 +81,7 @@ EXEC sp_trace_setstatus @TraceID, 1;
 GO  
 ```  
   
- Ahora que el seguimiento se está ejecutando, ejecute las instrucciones que desea supervisar. Cuando finalicen, ejecute el código siguiente para detener y después cerrar el seguimiento. Este ejemplo utiliza la función `fn_trace_getinfo` para obtener el `traceid` que se utilizará en las instrucciones `sp_trace_setstatus`.  
+ Ahora que el seguimiento se está ejecutando, ejecute las instrucciones que desea supervisar. Cuando finalicen, ejecute el código siguiente para detener y después cerrar el seguimiento. Este ejemplo utiliza la función `fn_trace_getinfo` para obtener el `traceid` que se utilizará en las instrucciones `sp_trace_setstatus` .  
   
 ```  
 -- After the trace is complete.  
@@ -95,7 +99,7 @@ EXEC sp_trace_setstatus @TraceID, 2;
 GO  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  
   

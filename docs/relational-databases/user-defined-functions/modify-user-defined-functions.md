@@ -1,22 +1,26 @@
 ---
-title: "Modificar funciones definidas por el usuario | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Modificación de funciones definidas por el usuario | Microsoft Docs"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ab838367ccbe310bbb57220fdec695a46fd849c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modificar funciones definidas por el usuario
+# <a name="modify-user-defined-functions"></a>Modificar funciones definidas por el usuario
   Puede modificar funciones definidas por el usuario en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La modificación de las funciones definidas por el usuario como se describe a continuación no cambiará los permisos de las funciones ni afectará a las funciones, procedimientos almacenados, o desencadenadores dependientes.  
   
  **En este tema**  
@@ -51,7 +55,7 @@ caps.handback.revision: 7
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para modificar una función definida por el usuario  
+#### <a name="to-modify-a-user-defined-function"></a>Para modificar una función definida por el usuario  
   
 1.  Haga clic en el signo más junto a la base de datos que contenga la función que desea modificar.  
   
@@ -69,11 +73,11 @@ caps.handback.revision: 7
   
 5.  En la ventana de consulta, realice los cambios necesarios en la instrucción ALTER FUNCTION.  
   
-6.  En el menú **Archivo**, haga clic en **Guardar***nombre_de_función*.  
+6.  En el menú **Archivo** , haga clic en **Guardar***nombre_de_función*.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para modificar una función definida por el usuario  
+#### <a name="to-modify-a-user-defined-function"></a>Para modificar una función definida por el usuario  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

@@ -1,28 +1,32 @@
 ---
-title: "Elegir un algoritmo de cifrado | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "criptografía [SQL Server], algoritmos"
-  - "cifrado [SQL Server], algoritmos"
-  - "seguridad [SQL Server], cifrado"
-  - "algoritmos [SQL Server cifrado]"
+title: "Selección de un algoritmo de cifrado | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cryptography [SQL Server], algorithms
+- encryption [SQL Server], algorithms
+- security [SQL Server], encryption
+- algorithms [SQL Server encryption]
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3cb1a59db35025eda9cf6ea68f0897aaecc9caf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Elegir un algoritmo de cifrado
+# <a name="choose-an-encryption-algorithm"></a>Elegir un algoritmo de cifrado
   El cifrado es una de las medidas defensivas con que cuenta cualquier administrador que desee proteger una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Los algoritmos de cifrado definen transformaciones de datos que los usuarios no autorizados no pueden revertir con facilidad. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite a los administradores y los desarrolladores de software elegir entre varios algoritmos, incluidos DES, Triple DES, TRIPLE_DES_3KEY, RC2, RC4, RC4 de 128 bits, DESX, AES de 128 bits, AES de 192 bits y AES de 256 bits.  
@@ -30,7 +34,7 @@ caps.handback.revision: 36
 > [!NOTE]  
 >  A partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], todos los algoritmos, a excepción de AES_128, AES_192 y AES_256, están en desuso. Para usar algoritmos anteriores (no se recomienda), debe establecer la base de datos en el nivel de compatibilidad de base de datos 120 o inferior.  
   
- Ningún algoritmo único resulta idóneo para todas las situaciones. Además, ofrecer información detallada sobre las ventajas de cada uno queda fuera del ámbito de los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. No obstante, se aplican los siguientes principios generales:  
+ Ningún algoritmo único resulta idóneo para todas las situaciones. Además, ofrecer información detallada sobre las ventajas de cada uno queda fuera del ámbito de los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . No obstante, se aplican los siguientes principios generales:  
   
 -   El cifrado seguro suele consumir más recursos de la CPU que un cifrado menos seguro.  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 36
   
 -   Las claves simétricas creadas con ALGORITHM = TRIPLE_DES utilizan TRIPLE DES con una clave de 128 bits.  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
   
 |||  
 |-|-|  
@@ -71,8 +75,9 @@ caps.handback.revision: 36
 |Cifrar los archivos de base de datos mediante el cifrado de datos transparente.|[Cifrado de datos transparente &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)|  
 |Cómo cifrar una columna de una tabla.|[Cifrar una columna de datos](../../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Cifrado de SQL Server](../../../relational-databases/security/encryption/sql-server-encryption.md)   
  [Jerarquía de cifrado](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
+

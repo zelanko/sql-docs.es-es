@@ -1,29 +1,33 @@
 ---
-title: "Requisitos previos para el registro m&#237;nimo durante la importaci&#243;n masiva | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "registro mínimo [SQL Server]"
-  - "copia por medio de registros de operaciones masivas [SQL Server]"
-  - "registros [SQL Server], registro mínimo"
-  - "registro mínimo, operaciones"
-  - "importación en bloque [SQL Server], registro mínimo"
+title: "Requisitos previos para el registro mínimo durante la importación masiva | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- minimal logging [SQL Server]
+- logged bulk copy [SQL Server]
+- logs [SQL Server], minimal logging
+- minimally logged operations [SQL Server]
+- bulk importing [SQL Server], minimal logging
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 caps.latest.revision: 48
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1f64cc4fc8ab747d137777e7a14c17ac796eb9ee
+ms.lasthandoff: 04/11/2017
+
 ---
-# Requisitos previos para el registro m&#237;nimo durante la importaci&#243;n masiva
+# <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Requisitos previos para el registro mínimo durante la importación masiva
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   En el caso de las bases de datos que utilizan el modelo de recuperación completa, todas las operaciones de inserción de filas que se efectúan durante la importación masiva se registran por completo en el registro de transacciones. Las importaciones de datos de gran volumen pueden hacer que el registro de transacciones se llene rápidamente si se utiliza el modelo de recuperación completa. En cambio, bajo el modelo de recuperación simple o el modelo de recuperación optimizado para cargas masivas de registros, el registro mínimo de operaciones de importaciones masivas reduce la posibilidad de que una de estas operaciones acabe con el espacio del registro. Además, el registro mínimo es más eficaz que el completo.  
@@ -31,12 +35,12 @@ caps.handback.revision: 47
 > [!NOTE]  
 >  El modelo de recuperación optimizado para cargas masivas de registros está diseñado para reemplazar temporalmente al modelo de recuperación completa durante operaciones masivas de gran tamaño.  
   
-## Requisitos de las tablas para las operaciones de importación masiva de registro mínimo  
+## <a name="table-requirements-for-minimally-logging-bulk-import-operations"></a>Requisitos de las tablas para las operaciones de importación masiva de registro mínimo  
  El registro mínimo exige que la tabla de destino cumpla las condiciones siguientes:  
   
 -   La tabla no se está replicando.  
   
--   Se ha especificado el bloqueo de tabla (mediante TABLOCK). Para la tabla con índice de almacén de columnas en clúster, no necesita TABLOCK para el registro mínimo.  Además, solo se crean registros mínimos de los datos cargados en grupos de filas comprimidos, para lo que se requiere un tamaño de lote de 102 400 o más.  
+-   Se ha especificado el bloqueo de tabla (mediante TABLOCK). Para la tabla con índice de almacén de columnas en clúster, no necesita TABLOCK para el registro mínimo.  Además, solo se crean registros mínimos de los datos cargados en grupos de filas comprimidos, para lo que se requiere un tamaño de lote de 102 400 o más.  
   
     > [!NOTE]  
     >  Aunque no se registren las inserciones de datos en el registro de transacciones cuando se realiza una importación masiva de registro mínimo, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] seguirá registrando las asignaciones de extensiones cada vez que se asigne una nueva a la tabla.  
@@ -68,16 +72,15 @@ caps.handback.revision: 47
   
 -   [Ver o cambiar el modelo de recuperación de una base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [&#91;Principio&#93;](#Top)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Modelos de recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [bcp (utilidad)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Sugerencias de tabla &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md)   
+ [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)  
   
   

@@ -1,26 +1,30 @@
 ---
-title: "Modificar o cambiar el nombre de desencadenadores DML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "desencadenadores, cambiar el nombre"
-  - "modificar desencadenadores"
-  - "Desencadenadores DML, modificar"
+title: "Modificación o cambio de nombre de desencadenadores DML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- renaming triggers
+- modifying triggers
+- DML triggers, modifying
 ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ac7956829213d52669a3408a9a64c597cafa03d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modificar o cambiar el nombre de desencadenadores DML
+# <a name="modify-or-rename-dml-triggers"></a>Modificar o cambiar el nombre de desencadenadores DML
   En este tema se describe cómo modificar o cambiar el nombre de un desencadenador DML en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
@@ -47,7 +51,7 @@ caps.handback.revision: 29
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
--   Se recomienda no usar el procedimiento almacenado [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md) para cambiar el nombre de un desencadenador. Al cambiar cualquier parte del nombre de un objeto se pueden interrumpir scripts y procedimientos almacenados. Al cambiar el nombre de un desencadenador no se cambia el nombre del objeto correspondiente en la columna de definición de la vista de catálogo [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md). En su lugar, se recomienda quitar y volver a crear el desencadenador.  
+-   Se recomienda no usar el procedimiento almacenado [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md) para cambiar el nombre de un desencadenador. Al cambiar cualquier parte del nombre de un objeto se pueden interrumpir scripts y procedimientos almacenados. Al cambiar el nombre de un desencadenador no se cambia el nombre del objeto correspondiente en la columna de definición de la vista de catálogo [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) . En su lugar, se recomienda quitar y volver a crear el desencadenador.  
   
 -   Si cambia el nombre de un objeto al que hace referencia un desencadenador DML, deberá modificar este último para que el texto refleje el nuevo nombre. Por tanto, antes de cambiar el nombre de un objeto, vea primero las dependencias del mismo para determinar si algún desencadenador va a verse afectado por el cambio propuesto.  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 29
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para modificar un desencadenador DML  
+#### <a name="to-modify-a-dml-trigger"></a>Para modificar un desencadenador DML  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y expándala.  
   
@@ -78,7 +82,7 @@ caps.handback.revision: 29
   
 4.  Modifique el desencadenador y, a continuación, haga clic en **Ejecutar**.  
   
-#### Para cambiar el nombre de un desencadenador DML  
+#### <a name="to-rename-a-dml-trigger"></a>Para cambiar el nombre de un desencadenador DML  
   
 1.  [Elimine el desencadenador](../../relational-databases/triggers/delete-or-disable-dml-triggers.md) cuyo nombre desea cambiar.  
   
@@ -86,13 +90,13 @@ caps.handback.revision: 29
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para modificar un desencadenador mediante ALTER TRIGGER  
+#### <a name="to-modify-a-trigger-using-alter-trigger"></a>Para modificar un desencadenador mediante ALTER TRIGGER  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
-3.  Copie y pegue los ejemplos siguientes en la consulta. Ejecute el primer ejemplo para crear un desencadenador DML que muestre al cliente un mensaje definido por el usuario cuando un usuario intente agregar o cambiar los datos de la tabla `SalesPersonQuotaHistory`. Ejecute la instrucción [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) para modificar el desencadenador de manera que solo se active en las actividades `INSERT` . Este desencadenador es útil porque recuerda al usuario que actualiza o inserta filas en esta tabla que debe notificar también al departamento `Compensation` .  
+3.  Copie y pegue los ejemplos siguientes en la consulta. Ejecute el primer ejemplo para crear un desencadenador DML que muestre al cliente un mensaje definido por el usuario cuando un usuario intente agregar o cambiar los datos de la tabla `SalesPersonQuotaHistory` . Ejecute la instrucción [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) para modificar el desencadenador de manera que solo se active en las actividades `INSERT` . Este desencadenador es útil porque recuerda al usuario que actualiza o inserta filas en esta tabla que debe notificar también al departamento `Compensation` .  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -120,7 +124,7 @@ GO
   
 ```  
   
-#### Para cambiar el nombre de un desencadenador mediante DROP TRIGGER y ALTER TRIGGER  
+#### <a name="to-rename-a-trigger-using-drop-trigger-and-alter-trigger"></a>Para cambiar el nombre de un desencadenador mediante DROP TRIGGER y ALTER TRIGGER  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -143,7 +147,7 @@ GO
   
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

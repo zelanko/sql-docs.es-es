@@ -1,28 +1,32 @@
 ---
-title: "Restricciones entre claves principales y claves externas | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "claves externas [SQL Server], integridad referencial en cascada"
-  - "FOREIGN KEY (restricciones)"
-  - "claves externas [SQL Server]"
-  - "claves externas [SQL Server], acerca de las restricciones de clave externa"
+title: Restricciones entre claves principales y claves externas | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- foreign keys [SQL Server], cascading referential integrity
+- FOREIGN KEY constraints
+- foreign keys [SQL Server]
+- foreign keys [SQL Server], about foreign key constraints
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9d9a08e9dab4377688b994c024c67df607c14879
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restricciones entre claves principales y claves externas
+# <a name="primary-and-foreign-key-constraints"></a>Restricciones entre claves principales y claves externas
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Las claves principales y las claves externas son dos tipos de restricciones que se pueden usar para aplicar la integridad de datos en las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se trata de objetos de base de datos importantes.  
@@ -31,7 +35,7 @@ caps.handback.revision: 20
   
  [Restricciones de clave principal](../../relational-databases/tables/primary-and-foreign-key-constraints.md#PKeys)  
   
- [Restricciones de clave externa](../../relational-databases/tables/primary-and-foreign-key-constraints.md#FKeys)  
+ [Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md#FKeys)  
   
  [Tareas relacionadas](../../relational-databases/tables/primary-and-foreign-key-constraints.md#Tasks)  
   
@@ -56,12 +60,12 @@ caps.handback.revision: 20
   
 -   Si la clave principal se define en una columna de tipo definido por el usuario CLR, la implementación del tipo debe admitir el orden binario.  
   
-##  <a name="FKeys"></a> Restricciones de clave externa  
+##  <a name="FKeys"></a> Foreign Key Constraints  
  Una clave externa (FK) es una columna o combinación de columnas que se usa para establecer y aplicar un vínculo entre los datos de dos tablas a fin de controlar los datos que se pueden almacenar una tabla de clave externa. En una referencia de clave externa, se crea un vínculo entre dos tablas cuando las columnas de una de ellas hacen referencia a las columnas de la otra que contienen el valor de clave principal. Esta columna se convierte en una clave externa para la segunda tabla.  
   
  Por ejemplo, la tabla **Sales.SalesOrderHeader** tiene un vínculo de clave externa a la tabla **Sales.SalesPerson** porque existe una relación lógica entre pedidos de ventas y personal de ventas. La columna **SalesPersonID** de la tabla **SalesOrderHeader** coincide con la columna de clave principal de la tabla **SalesPerson** . La columna **SalesPersonID** de la tabla **SalesOrderHeader** es la clave externa para la tabla **SalesPerson** . Al crear esta relación de clave externa, no se puede insertar un valor para **SalesPersonID** en la tabla **SalesOrderHeader** si no existe en la tabla **SalesPerson** .  
   
- Una tabla puede hacer referencia a otras 253 tablas y columnas como claves externas (referencias de salida) como máximo. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] aumenta el límite para la cantidad de otras tablas y columnas que pueden hacer referencia a las columnas de una sola tabla (referencias de entrada) de 253 a 10 000. (Requiere al menos el nivel de compatibilidad 130). El aumento conlleva las siguientes restricciones:  
+ Una tabla puede hacer referencia a otras 253 tablas y columnas como claves externas (referencias de salida) como máximo. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] aumenta el límite para la cantidad de otras tablas y columnas que pueden hacer referencia a las columnas de una sola tabla (referencias de entrada) de 253 a 10 000. (Requiere al menos el nivel de compatibilidad 130). El aumento conlleva las siguientes restricciones:  
   
 -   Mayor que 253 referencias de clave externa solo se admite para operaciones DELETE DML. No se admiten operaciones UPDATE y MERGE.  
   
@@ -69,19 +73,19 @@ caps.handback.revision: 20
   
 -   Mayor que 253 referencias de clave externa no está actualmente disponible para índices de almacén de columnas, tablas con optimización para memoria, Stretch Database o tablas de clave externa particionadas.  
   
-### Índices de restricciones de clave externa  
+### <a name="indexes-on-foreign-key-constraints"></a>Índices de restricciones de clave externa  
  A diferencia de las restricciones de clave principal, la creación una restricción de clave externa no crea automáticamente el índice correspondiente. No obstante, la creación manual de un índice en una clave externa suele ser útil por los siguientes motivos:  
   
 -   Las columnas de clave externa suelen usarse en los criterios de combinación cuando los datos de las tablas relacionadas se combinan en consultas mediante la correspondencia de la columna o columnas de la restricción de clave externa de una tabla y la columna o columnas de la clave única o principal de la otra. Un índice permite al [!INCLUDE[ssDE](../../includes/ssde-md.md)] buscar con rapidez datos relacionados en la tabla de clave externa. No obstante, no es necesario crear este índice. Pueden combinarse los datos de dos tablas relacionadas aunque no se hayan definido restricciones de clave principal o de clave externa entre ellas, pero una relación de clave externa entre dos tablas indica que estas se han optimizado para su combinación en una consulta que use las claves como criterio.  
   
 -   Los cambios en las restricciones de clave principal se comprueban con restricciones de clave externa en las tablas relacionadas.  
   
-### Integridad referencial  
+### <a name="referential-integrity"></a>Integridad referencial  
  Aunque el fin principal de una restricción de clave externa es controlar los datos que pueden almacenarse en la tabla de la clave externa; también controla los cambios realizados en los datos de la tabla de la clave principal. Por ejemplo, si se elimina la fila de un vendedor de la tabla **Sales.SalesPerson** y el identificador del vendedor se usa para pedidos de ventas en la tabla **Sales.SalesOrderHeader** , se rompe la integridad relacional entre ambas tablas: los pedidos del vendedor eliminado quedarán sin correspondencia en la tabla **SalesOrderHeader** sin ningún vínculo con los datos de la tabla **SalesPerson** .  
   
  Con una restricción de clave externa se evita esta situación. Esta restricción exige la integridad referencial al garantizar que no se puedan realizar cambios en los datos de la tabla de la clave principal si esos cambios anulan el vínculo con los datos de la tabla de la clave externa. Si se intenta eliminar la fila de una tabla de la clave principal o cambiar un valor de clave principal, la acción no progresará si el valor de la clave principal cambiado o eliminado corresponde a un valor de la restricción de clave externa de otra tabla. Para cambiar o eliminar una fila de una restricción de clave externa, debe antes eliminar o cambiar los datos de clave externa de la tabla de clave externa, lo que vincula la clave externa con otros datos de clave principal.  
   
-#### Integridad referencial en cascada  
+#### <a name="cascading-referential-integrity"></a>Integridad referencial en cascada  
  Las restricciones de integridad referencial en cascada permiten definir las acciones que [!INCLUDE[ssDE](../../includes/ssde-md.md)] lleva a cabo cuando un usuario intenta eliminar o actualizar una clave a la que apuntan las claves externas existentes. Se pueden definir las acciones en cascada.  
   
  NO ACTION  
@@ -98,7 +102,7 @@ caps.handback.revision: 20
   
  CASCADE, SET NULL, SET DEFAULT y NO ACTION se pueden combinar en las tablas con relaciones referenciales entre sí. Si el [!INCLUDE[ssDE](../../includes/ssde-md.md)] detecta NO ACTION, detiene y revierte las acciones CASCADE, SET NULL y SET DEFAULT relacionadas. Cuando una instrucción DELETE hace que se combinen las acciones CASCADE, SET NULL, SET DEFAULT y NO ACTION, todas las acciones CASCADE, SET NULL y SET DEFAULT se aplican antes de que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] compruebe la existencia de NO ACTION.  
   
-### Desencadenadores y acciones referenciales en cascada  
+### <a name="triggers-and-cascading-referential-actions"></a>Desencadenadores y acciones referenciales en cascada  
  Las acciones referenciales en cascada activan los desencadenadores AFTER UPDATE o AFTER DELETE de la siguiente manera:  
   
 -   Primero se realizan todas las acciones referenciales en cascada generadas directamente por las instrucciones DELETE o UPDATE originales.  
@@ -125,7 +129,7 @@ caps.handback.revision: 20
 |Describe cómo crear una clave principal.|[Crear claves principales](../../relational-databases/tables/create-primary-keys.md)|  
 |Describe cómo eliminar una clave principal.|[Eliminar claves principales](../../relational-databases/tables/delete-primary-keys.md)|  
 |Describe cómo modificar una clave principal.|[Modificar claves principales](../../relational-databases/tables/modify-primary-keys.md)|  
-|Describe cómo crear relaciones de clave externa|[Crear relaciones de clave externa](../../relational-databases/tables/crear-relaciones-de-clave-externa.md)|  
+|Describe cómo crear relaciones de clave externa|[Crear relaciones de clave externa](../../relational-databases/tables/create-foreign-key-relationships.md)|  
 |Describe cómo modificar las relaciones de clave externa.|[Modificar relaciones de claves externas.](../../relational-databases/tables/modify-foreign-key-relationships.md)|  
 |Describe cómo eliminar relaciones de clave externa.|[Eliminar relaciones entre claves externas.](../../relational-databases/tables/delete-foreign-key-relationships.md)|  
 |Describe cómo ver las propiedades de clave externa.|[Ver las propiedades de clave externa](../../relational-databases/tables/view-foreign-key-properties.md)|  
@@ -133,3 +137,4 @@ caps.handback.revision: 20
 |Describe cómo deshabilitar las restricciones de clave externa durante una instrucción INSERT o UPDATE.|[Deshabilitar restricciones FOREIGN KEY con instrucciones INSERT y UPDATE](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  
   
   
+

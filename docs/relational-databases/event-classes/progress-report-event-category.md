@@ -1,33 +1,37 @@
 ---
-title: "Informe de progreso (categor&#237;a de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clases de eventos [SQL Server], categoría de eventos Informe de progreso"
-  - "Informe de progreso, categoría de eventos [SQL Server]"
-  - "clases de eventos de SQL Server, categoría de eventos Informe de progreso"
+title: "Categoría de eventos Informe de progreso | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event classes [SQL Server], Progress Report event category
+- Progress Report event category [SQL Server]
+- SQL Server event classes, Progress Report event category
 ms.assetid: 15eba54b-ad75-4eda-9fc3-429672da46f2
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8ef53b3844065d1ba1d2cbec0d11f69e5026b560
+ms.lasthandoff: 04/11/2017
+
 ---
-# Informe de progreso (categor&#237;a de eventos)
+# <a name="progress-report-event-category"></a>Informe de progreso (categoría de eventos)
   La categoría de eventos **Informe de progreso** contiene la clase de eventos **Progress Report: Online Index Operation** .  
   
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Progress Report: Online Index Operation (clase de eventos)](../../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)|Indica el progreso de una operación de generación de índices en línea.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

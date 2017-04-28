@@ -1,28 +1,32 @@
 ---
-title: "Reglas de escape y caracteres no v&#225;lidos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Cláusula FOR XML, caracteres no válidos"
-  - "Cláusula FOR XML, reglas de escape"
+title: "Reglas de escape y caracteres no válidos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, invalid characters
+- FOR XML clause, escape rules
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de1546c1f7adc1671cef873a594b9bc5444bc230
+ms.lasthandoff: 04/11/2017
+
 ---
-# Reglas de escape y caracteres no v&#225;lidos
+# <a name="invalid-characters-and-escape-rules"></a>Reglas de escape y caracteres no válidos
   En este tema se describe cómo la cláusula FOR XML controla los caracteres XML no válidos y se enumeran las reglas de escape para los caracteres que no son válidos en los nombres XML.  
   
-## FOR XML y los caracteres no válidos  
+## <a name="for-xml-and-invalid-characters"></a>FOR XML y los caracteres no válidos  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea entidades de caracteres XML no válidos cuando estos caracteres se devuelven dentro de consultas FOR XML que no usan la directiva TYPE.  
   
  Aunque los analizadores compatibles con XML 1.0 generan errores de análisis, independientemente de que se hayan creado o no entidades con estos caracteres, el uso de estos caracteres con entidades se ajusta mejor a XML 1.1. El uso de estos caracteres con entidades también se ajusta mejor a las futuras versiones del estándar XML. Además, simplifica la depuración, porque el punto de código del carácter no válido pasa a ser visible.  
@@ -37,7 +41,7 @@ caps.handback.revision: 17
   
  Estos caracteres se conservan en la salida y no se normalizarán con ningún analizador.  
   
-## Reglas de escape  
+## <a name="escape-rules"></a>Reglas de escape  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contienen caracteres que no son válidos en los nombres XML, como los espacios, se traducen a nombres XML, de forma que los caracteres no válidos se convierten en codificaciones de entidad numérica de escape.  
   
  Solo hay dos caracteres no alfabéticos que pueden incluirse en un nombre XML: los dos puntos (:) y el carácter de subrayado (_). Dado que el carácter de dos puntos está reservado para los espacios de nombres, se elige el subrayado como carácter de escape. A continuación se muestran las reglas de escape que se utilizan en la codificación:  
@@ -46,7 +50,7 @@ caps.handback.revision: 17
   
 -   Los caracteres que no se ajustan al dominio UCS-2 (como las adiciones UCS-4 del rango de U+00010000 a U+0010FFFF) se codifican como _xHHHHHHHH\_. HHHHHHHH hace referencia al código UCS-4 hexadecimal de ocho dígitos correspondiente al carácter, para el modo de compatibilidad con versiones anteriores de SQL Server 2000. De lo contrario, los caracteres se codifican como _xHHHHHH\_, para ajustarse a la norma ISO.  
   
--   No es necesario convertir en carácter de escape el carácter de subrayado, a menos que vaya seguido del carácter x. Por ejemplo, no es necesario codificar el nombre de tabla **Order_Details**.  
+-   No es necesario convertir en carácter de escape el carácter de subrayado, a menos que vaya seguido del carácter x. Por ejemplo, no es necesario codificar el nombre de tabla **Order_Details** .  
   
 -   Los dos puntos de los identificadores no se convierten en un carácter de escape, por lo que la consulta FOR XML puede generar nombres de elementos y atributos de espacio de nombres. Por ejemplo, la siguiente consulta genera un atributo de espacio de nombres con un carácter de dos puntos en el nombre:  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 17
   
      Tenga en cuenta que el uso de WITH XMLNAMESPACES es la forma recomendada de agregar espacios de nombres XML.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

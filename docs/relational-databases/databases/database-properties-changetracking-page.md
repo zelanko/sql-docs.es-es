@@ -1,27 +1,31 @@
 ---
-title: "Propiedades de la base de datos (p&#225;gina ChangeTracking) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/07/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.changetracking.f1"
+title: "Propiedades de la base de datos (página ChangeTracking) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/07/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.changetracking.f1
 ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aab898a267244d585d1d09bc66eaca4814895a1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propiedades de la base de datos (p&#225;gina ChangeTracking)
+# <a name="database-properties-changetracking-page"></a>Propiedades de la base de datos (página ChangeTracking)
   Utilice esta página para ver o modificar la configuración del seguimiento de cambios de la base de datos seleccionada. Para obtener más información sobre las opciones disponibles en esta página, vea [Habilitar y deshabilitar el seguimiento de cambios &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md).  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Seguimiento de los cambios**  
  Utilice esta opción para habilitar o deshabilitar el seguimiento de cambios de la base de datos.  
   
@@ -32,7 +36,7 @@ caps.handback.revision: 13
  También puede configurar el seguimiento de cambios utilizando [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
   
  **Período de retención**  
- Especifica el período mínimo para mantener la información de seguimiento de cambios en la base de datos. Los datos se quitarán solo si el valor **Limpieza automática** es **True**.  
+ Especifica el período mínimo para mantener la información de seguimiento de cambios en la base de datos. Los datos se quitarán solo si el valor **Limpieza automática**es **True**.  
   
  El valor predeterminado es 2.  
   
@@ -44,10 +48,11 @@ caps.handback.revision: 13
  **Limpieza automática**  
  Indica si los datos del seguimiento de cambios se quitan automáticamente después del período de retención especificado.  
   
- Al habilitar la opción **Limpieza automática**, se restablece cualquier período de retención anterior personalizado al valor predeterminado de 2 días.  
+ Al habilitar la opción **Limpieza automática** , se restablece cualquier período de retención anterior personalizado al valor predeterminado de 2 días.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
   
+

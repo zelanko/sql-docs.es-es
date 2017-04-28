@@ -1,27 +1,31 @@
 ---
-title: "Crear y probar una funci&#243;n clasificadora definida por el usuario | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Regulador de recursos, crear función clasificadora"
-  - "función clasificadora [SQL Server], probar"
-  - "función clasificadora [SQL Server], crear"
-  - "Regulador de recursos, probar función clasificadora"
+title: "Creación y prueba de una función clasificadora definida por el usuario | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, classifier function create
+- classifier function [SQL Server], test
+- classifier function [SQL Server], create
+- Resource Governor, classifier function test
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 097b7e93a82b8f1cc20767c57788eebe8162729a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear y probar una funci&#243;n clasificadora definida por el usuario
+# <a name="create-and-test-a-classifier-user-defined-function"></a>Crear y probar una función clasificadora definida por el usuario
   En este tema se muestra cómo crear y probar una función clasificadora definida por el usuario (UDF). Los pasos implican ejecutar instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
  El ejemplo mostrado en el procedimiento siguiente ilustra las posibilidades para crear una función clasificadora definida por el usuario bastante compleja.  
@@ -39,7 +43,7 @@ caps.handback.revision: 25
   
  La función clasificadora extiende el tiempo de inicio de sesión. Una función demasiado compleja puede hacer que los inicios de sesión agoten el tiempo de espera o ralenticen las conexiones rápidas.  
   
-### Para crear la función clasificadora definida por el usuario  
+### <a name="to-create-the-classifier-user-defined-function"></a>Para crear la función clasificadora definida por el usuario  
   
 1.  Cree y configure los grupos de recursos y grupos de cargas de trabajo nuevos. Asigne cada grupo de cargas de trabajo al grupo de recursos de servidor adecuado.  
   
@@ -150,7 +154,7 @@ caps.handback.revision: 25
     GO  
     ```  
   
-### Para comprobar los grupos de recursos, los grupos de cargas de trabajo y la función clasificadora definida por el usuario  
+### <a name="to-verify-the-resource-pools-workload-groups-and-the-classifier-user-defined-function"></a>Para comprobar los grupos de recursos, los grupos de cargas de trabajo y la función clasificadora definida por el usuario  
   
 1.  Obtenga la configuración del grupo de cargas de trabajo y del grupo de recursos de servidor con la consulta siguiente.  
   
@@ -228,7 +232,7 @@ caps.handback.revision: 25
     GO  
     ```  
   
-### Prácticas recomendadas para utilizar tablas de búsqueda en una función clasificadora  
+### <a name="best-practices-for-using-lookup-tables-in-a-classifier-function"></a>Prácticas recomendadas para utilizar tablas de búsqueda en una función clasificadora  
   
 1.  No utilice una tabla de búsqueda a menos que sea absolutamente necesario. Si necesita utilizar una tabla de búsqueda, puede estar codificada de forma rígida en la propia función; sin embargo, es necesario que esté en equilibrio con la complejidad y los cambios dinámicos de la función clasificadora.  
   
@@ -261,7 +265,7 @@ caps.handback.revision: 25
         > [!WARNING]  
         >  Se aconseja encarecidamente seguir estas prácticas recomendadas. Si hay problemas que impiden seguir las prácticas recomendadas, conviene ponerse en contacto con el servicio de soporte técnico de Microsoft para poder evitar de forma proactiva cualquier problema futuro.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Habilitar el regulador de recursos](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Grupo de recursos de servidor del regulador de recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

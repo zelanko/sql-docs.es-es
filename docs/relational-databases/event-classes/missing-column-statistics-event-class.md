@@ -1,29 +1,33 @@
 ---
-title: "Missing Column Statistics (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Missing Column Statistics [clase de eventos]"
+title: Clase de eventos Missing Column Statistics | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Missing Column Statistics event class
 ms.assetid: b9321143-3f29-4a19-8471-7085669282ef
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97da5fae65a4a81f3d5dc4ee2ba3c04e21918bf1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Missing Column Statistics (clase de eventos)
+# <a name="missing-column-statistics-event-class"></a>Missing Column Statistics [clase de eventos]
   La clase de eventos Missing Column Statistics indica que las estadísticas de la columna que podrían haber resultado útiles para el optimizador no están disponibles.  
   
  Mediante la supervisión de la clase de eventos Missing Column Statistics es posible determinar si faltan estadísticas de una columna que utiliza una consulta. Esto puede causar que el optimizador elija un plan de consulta menos eficaz que el esperado.  
   
-## Columnas de datos de la clase de eventos Missing Column Statistics  
+## <a name="missing-column-statistics-event-class-data-columns"></a>Columnas de datos de la clase de eventos Missing Column Statistics  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -49,9 +53,9 @@ caps.handback.revision: 29
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
- [Supervisar y responder a eventos](../../ssms/agent/monitor-and-respond-to-events.md)  
+ [Supervisar y responder a eventos](http://msdn.microsoft.com/library/f7fbe155-5b68-4777-bc71-a47637471f32)  
   
   

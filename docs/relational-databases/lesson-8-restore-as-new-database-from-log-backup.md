@@ -1,25 +1,29 @@
 ---
-title: "Lecci&#243;n 8: Restaurar como una base de datos nueva desde una copia de seguridad de registros | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lección 8: Restauración como una base de datos nueva desde una copia de seguridad de registros | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 281259fb737bbc41885a61e62a4fcc83b3001119
+ms.lasthandoff: 04/11/2017
+
 ---
-# Lecci&#243;n 8: Restaurar como una base de datos nueva desde una copia de seguridad de registros
+# <a name="lesson-8-restore-as-new-database-from-log-backup"></a>Lección 8: Restaurar como una base de datos nueva desde una copia de seguridad de registros
 En esta lección, restaurará la base de datos AdventureWorks2014 como una base de datos nueva desde una copia de seguridad del registro de transacciones de instantáneas de archivos.  
   
 En este escenario, realizará una restauración a una instancia de SQL Server en una máquina virtual diferente a efectos de análisis de negocio e informes. Al restaurar en una instancia diferente en una máquina virtual diferente, se descarga la carga de trabajo en una máquina virtual dedicada y con un tamaño para este propósito, quitando los requisitos del recurso del sistema transaccional.  
@@ -55,9 +59,10 @@ Para restaurar una base de datos a una base de datos nueva desde una copia de se
   
 6.  Expanda los contenedores, expanda el contenedor que ha creado en la lección 1 (actualícelo si es necesario) y compruebe que aparecen los nuevos archivos de datos y de registro en el contenedor, junto con los blobs de las lecciones anteriores.  
   
-    ![Azure container showing the data and log files for the new database](../relational-databases/media/e9705083-86bc-4309-a0bf-92c15f174c0a.JPG "Azure container showing the data and log files for the new database")  
+    ![Contenedor de Azure que muestra los datos y los archivos de registro para la nueva base de datos](../relational-databases/media/e9705083-86bc-4309-a0bf-92c15f174c0a.JPG "Contenedor de Azure que muestra los datos y los archivos de registro para la nueva base de datos")  
   
 [Lección 9: Administrar conjuntos de copia de seguridad y copias de seguridad de instantáneas de archivos](../relational-databases/lesson-9-manage-backup-sets-and-file-snapshot-backups.md)  
   
   
   
+

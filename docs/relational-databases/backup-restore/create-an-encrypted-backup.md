@@ -1,25 +1,29 @@
 ---
-title: "Crear una copia de seguridad cifrada | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Creación de una copia de seguridad cifrada | Microsoft Docs"
+ms.custom: 
+ms.date: 08/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 42b2038121e0bf9179fefafc89a7b17e3c1585c7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear una copia de seguridad cifrada
+# <a name="create-an-encrypted-backup"></a>Crear una copia de seguridad cifrada
   En este tema se describen los pasos necesarios para crear una copia de seguridad cifrada mediante Transact-SQL.  Para ver un ejemplo que usa [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consulte [Crear una copia de seguridad completa de base de datos (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md). 
   
-## Copia de seguridad en disco con cifrado  
+## <a name="backup-to-disk-with-encryption"></a>Copia de seguridad en disco con cifrado  
  **Requisitos previos:**  
   
 -   Acceso a un disco local o al almacenamiento con espacio suficiente para crear una copia de seguridad de la base de datos.  
@@ -70,12 +74,12 @@ caps.handback.revision: 17
   
  Para obtener un ejemplo sobre cómo cifrar una copia de seguridad protegida por EKM, vea [Administración extensible de claves con el Almacén de claves de Azure &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
-### Copia de seguridad en Almacenamiento de Windows Azure con cifrado  
+### <a name="backup-to-windows-azure-storage-with-encryption"></a>Copia de seguridad en Almacenamiento de Windows Azure con cifrado  
  Si crea una copia de seguridad en Almacenamiento de Windows Azure con la opción **Copia de seguridad en URL de SQL Server** , los pasos de cifrado son los mismos pero debe usar una dirección URL como destino y una credencial SQL para autenticarse en Almacenamiento de Windows Azure. Si quiere configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con opciones de cifrado, vea [Habilitar la copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
  **Requisitos previos:**  
   
--   Una cuenta de almacenamiento de Windows y un contenedor. Para obtener más información, vea: Columnas en la tabla de origen capturadas[Lesson 1: Create Windows Azure Storage Objects](../Topic/Lesson%201:%20Create%20Windows%20Azure%20Storage%20Objects.md)  
+-   Una cuenta de almacenamiento de Windows y un contenedor. Para obtener más información, vea: Columnas en la tabla de origen capturadas[Lesson 1: Create Windows Azure Storage Objects](http://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5)  
   
 -   Una clave maestra para la base de datos maestra y un certificado o una clave asimétrica en la instancia de SQL Server. Para conocer los requisitos de cifrado y los permisos, vea [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md).  
   
@@ -129,3 +133,4 @@ caps.handback.revision: 17
     ```  
   
   
+

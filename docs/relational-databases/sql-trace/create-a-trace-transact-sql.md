@@ -1,30 +1,34 @@
 ---
-title: "Crear un seguimiento (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "seguimientos [SQL Server], ejemplo"
-  - "seguimientos [SQL Server], crear"
+title: "Creación de un seguimiento guardado (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], example
+- traces [SQL Server], creating
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b765401c07820ed80a92a2393544253106abb512
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear un seguimiento (Transact-SQL)
+# <a name="create-a-trace-transact-sql"></a>Crear un seguimiento (Transact-SQL)
   En este tema se describe el modo de utilizar procedimientos almacenados para crear un seguimiento.  
   
-### Para crear un seguimiento  
+### <a name="to-create-a-trace"></a>Para crear un seguimiento  
   
-1.  Ejecute **sp_trace_create** con los parámetros necesarios para crear un seguimiento nuevo. El nuevo seguimiento estará en estado de detención (el *estado* es **0**).  
+1.  Ejecute **sp_trace_create** con los parámetros necesarios para crear un seguimiento nuevo. El nuevo seguimiento estará en estado de detención (el*estado* es **0**).  
   
 2.  Ejecute **sp_trace_setevent** con los parámetros necesarios para seleccionar los eventos y las columnas de las que va a realizar un seguimiento.  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 19
     > [!IMPORTANT]  
     >  A diferencia de los procedimientos almacenados normales, los parámetros de todos los procedimientos almacenados de SQL Server Profiler (**sp_trace_*xx***) deben escribirse de forma precisa y no admiten la conversión de tipos de datos automática. Si no se llama a estos parámetros con los tipos de datos de parámetros de entrada correctos, según se especifica en la descripción del argumento, el procedimiento almacenado devuelve un error.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo de código siguiente se muestra la forma de crear un seguimiento con [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se divide en tres secciones: crear el seguimiento, rellenar el archivo de seguimiento y detener el seguimiento. Personalice el seguimiento agregando los eventos que desee seguir. Para obtener la lista de eventos y columnas, vea [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
  En el código siguiente se crea un seguimiento, se agregan los eventos al seguimiento y, a continuación, se inicia el seguimiento:  
@@ -70,7 +74,7 @@ GO
   
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Ahora que se ha creado el seguimiento y se ha iniciado, ejecute el código siguiente para rellenarlo con actividad.  
   
 ```  
@@ -81,7 +85,7 @@ GO
   
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Se puede detener el seguimiento y reiniciar en cualquier momento. En este ejemplo, ejecute el código siguiente para detener el seguimiento, cerrarlo y eliminar su definición.  
   
 ```  
@@ -97,10 +101,10 @@ EXEC sp_trace_setstatus @TraceID, 2
   
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Para examinar el archivo de seguimiento, abra el archivo SampleTrace.trc mediante [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados de SQL Server Profiler &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

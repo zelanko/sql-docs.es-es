@@ -1,43 +1,47 @@
 ---
-title: "Esquematizaci&#243;n de c&#243;digo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Editor de consultas [SQL Server Management Studio], esquematizar código"
-  - "Editor de consultas [SQL Server Management Studio], ocultar código"
+title: "Esquematización de código | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Editor [SQL Server Management Studio], outlining code
+- Query Editor [SQL Server Management Studio], hiding code
 ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 65a303f3cc995daacc29260c6a7ab176414f773f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Esquematizaci&#243;n de c&#243;digo
+# <a name="code-outlining"></a>Esquematización de código
   Puede usar la característica de esquematización de los editores de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para ocultar selectivamente el código mientras modifica las consultas. Esto permite ver más fácilmente el código en el que se está trabajando, sobre todo en archivos de consulta de gran tamaño.  
   
-## Información general sobre la esquematización  
+## <a name="outlining-overview"></a>Información general sobre la esquematización  
  De forma predeterminada, todo el código está visible al abrir una ventana de un editor de consultas. Las regiones de código se pueden contraer para ocultarlas. En el borde izquierdo de la ventana del editor, se ve una línea vertical que muestra un cuadrado con un signo menos (-) para identificar el inicio de cada región de código contraíble. Al hacer clic en un signo menos, el texto de la región de código se reemplaza por un cuadro que contiene puntos suspensivos (...), y el signo menos cambia a un signo más (+). Al hacer clic en un signo más, aparece el código contraído y el signo más cambia a un signo menos. Al mover el puntero sobre un cuadro que tiene puntos suspensivos, aparece una información sobre herramientas que muestra el código de la sección contraída.  
   
-## Regiones de esquema del sistema  
+## <a name="system-outline-regions"></a>Regiones de esquema del sistema  
  Cada editor de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] genera un conjunto de regiones de esquema predeterminadas definidas por el sistema.  
   
  Los editores de código MDX y DMX crean regiones de esquema para cada instrucción de varias líneas. Este es el único nivel de esquematización que admiten estos editores.  
   
-### Regiones del Editor de consultas XMLA de Analysis Services  
+### <a name="analysis-services-xmla-query-editor-regions"></a>Regiones del Editor de consultas XMLA de Analysis Services  
  El Editor de consultas XMLA de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genera una región de esquema para cada atributo XML de varias líneas. El editor anida las regiones de esquema correspondientes a las etiquetas anidadas. Por ejemplo, el Editor de consultas XMLA crea tres regiones de esquema para el documento siguiente.  
   
  ![Código XML que muestra la esquematización](../../relational-databases/scripting/media/editoutlinexmlfull.gif "Código XML que muestra la esquematización")  
   
  Al hacer clic en el signo menos de la línea \<InnerTag>, solo se contrae InnerTag, como se muestra en la ilustración siguiente.  
   
- ![Código XML con el nodo interno oculto](../../relational-databases/scripting/media/editoutlinexmlinnercol.png "Código XML con el nodo interno oculto")  
+ ![Código XML con el nodo interno oculto](../../relational-databases/scripting/media/editoutlinexmlinnercol.gif "Código XML con el nodo interno oculto")  
   
  Al mover el puntero sobre el cuadro que tiene los puntos suspensivos (...), el código de la región contraída aparece en una información sobre herramientas, como se muestra en la ilustración siguiente.  
   
@@ -45,13 +49,13 @@ caps.handback.revision: 14
   
  Al hacer clic en el signo menos de la línea \<MiddleTag>, se contraen MiddleTag e InnerTag, como se muestra en la ilustración siguiente.  
   
- ![Código XML con las etiquetas internas y centrales ocultas](../../relational-databases/scripting/media/editoutlinexmlmiddlecol.png "Código XML con las etiquetas internas y centrales ocultas")  
+ ![Código XML con las etiquetas internas y centrales ocultas](../../relational-databases/scripting/media/editoutlinexmlmiddlecol.gif "Código XML con las etiquetas internas y centrales ocultas")  
   
  Al hacer clic en el signo menos de la línea \<OuterTag>, se contraen las tres líneas, como se muestra en la ilustración siguiente.  
   
- ![Código XML con todas las tres etiquetas ocultas](../../relational-databases/scripting/media/editoutlinexmloutercol.png "Código XML con todas las tres etiquetas ocultas")  
+ ![Código XML con todas las tres etiquetas ocultas](../../relational-databases/scripting/media/editoutlinexmloutercol.gif "Código XML con todas las tres etiquetas ocultas")  
   
-### Regiones del Editor de consultas de Database Engine  
+### <a name="database-engine-query-editor-regions"></a>Regiones del Editor de consultas de Database Engine  
  El Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera regiones de esquema para cada elemento de la jerarquía siguiente:  
   
 1.  Lotes. El primer lote es el código desde el principio del archivo hasta el primer comando GO o hasta el final del archivo si no hay ningún comando GO. Después del primer comando GO, hay un lote desde cada comando GO hasta el comando GO siguiente o hasta el final del archivo.  

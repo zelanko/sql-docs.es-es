@@ -1,47 +1,51 @@
 ---
-title: "Configurar el almac&#233;n de administraci&#243;n de datos (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dc.datacollection.wizard_completecfg.f1"
-  - "sql13.swb.dc.datacollection.wizard_config.f1"
-  - "sql13.swb.dc.datacollection.wizard_finish.f1"
-  - "sql13.swb.dc.datacollection.wizard_maploginuser.f1"
-  - "sql13.swb.dc.datacollection.wizard_choosemdw.f1"
-  - "sql13.swb.dc.datacollection.wizard_welcome.f1"
-  - "sql13.swb.dc.datacollection.wizard_createmdw.f1"
-helpviewer_keywords: 
-  - "almacenamiento de datos [SQL Server], varias instancias"
-  - "almacenamiento de datos [SQL Server], configurar"
-  - "Asistente para configurar el almacén de administración de datos"
-  - "almacén de administración de datos, configurar"
+title: "Configuración del almacén de administración de datos (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dc.datacollection.wizard_completecfg.f1
+- sql13.swb.dc.datacollection.wizard_config.f1
+- sql13.swb.dc.datacollection.wizard_finish.f1
+- sql13.swb.dc.datacollection.wizard_maploginuser.f1
+- sql13.swb.dc.datacollection.wizard_choosemdw.f1
+- sql13.swb.dc.datacollection.wizard_welcome.f1
+- sql13.swb.dc.datacollection.wizard_createmdw.f1
+helpviewer_keywords:
+- data warehouse [SQL Server], multiple instances
+- data warehouse [SQL Server], configuring
+- Configure Management Data Warehouse Wizard
+- management data warehouse, configuring
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0be7c28ff6d9359ae858902f7b2d07cee6f353f6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurar el almac&#233;n de administraci&#243;n de datos (SQL Server Management Studio)
+# <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurar el almacén de administración de datos (SQL Server Management Studio)
   En este tema se describe cómo configurar el almacén de administración de datos para admitir el almacenamiento de datos en una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que utilizan el recopilador de datos. Estas instancias pueden estar en el mismo servidor o en servidores diferentes. También se proporcionan descripciones de la interfaz de usuario del cuadro de diálogo [Asistente para configurar el almacén de administración de datos](#Wizard) . Para obtener información acerca de cómo configurar un recopilador de datos, vea [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md).  
   
 > [!NOTE]  
 >  Si se configura el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que se ejecute mediante una de las cuentas de servicio del sistema (sistema local, servicio de red o servicio local) y el almacén de administración de datos se crea en una instancia diferente del recopilador de datos, debe configurar los conjuntos de recopilación para que utilicen un proxy para cargar los datos en el almacén de administración de datos.  
   
-### Configurar el almacén de administración de datos en una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Configurar el almacén de administración de datos en una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Asegúrese de que el Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se esté ejecutando.  
   
 2.  En el Explorador de objetos, expanda el nodo **Administración** .  
   
-3.  Haga clic con el botón derecho en **Recopilación de datos**, expanda **Tareas** y haga clic en **Configurar almacén de administración de datos**.  
+3.  Haga clic con el botón derecho en **Recopilación de datos**, expanda **Tareas**y haga clic en **Configurar almacén de administración de datos**.  
   
 4.  Use el [Asistente para configurar el almacén de administración de datos](#Wizard) para crear un almacén de administración de datos, configurar inicios de sesión, habilitar la recopilación de datos e iniciar **Conjuntos de recopilación de datos del sistema**.  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 28
   
     -   Use el Asistente para configurar el almacén de administración de datos a fin de configurar la recopilación de datos para el almacén de administración de datos existente.  
   
-    -   Haga clic con el botón derecho en **Recopilación de datos** y luego haga clic en **Propiedades**. En la pestaña **General** , especifique el almacén de administración de datos existente y el servidor en que está instalado.  
+    -   Haga clic con el botón derecho en **Recopilación de datos**y luego haga clic en **Propiedades**. En la pestaña **General** , especifique el almacén de administración de datos existente y el servidor en que está instalado.  
   
 6.  Repita el paso 5 hasta que todas las instancias de base de datos que utilizan el recopilador de datos estén configuradas para cargar datos en el almacén de administración de datos compartido.  
   
@@ -113,7 +117,7 @@ caps.handback.revision: 28
  Utilice esta página para ver los resultados de cada paso de configuración.  
   
  **Detalles**  
- Muestra cada paso de configuración como una fila en la cuadrícula **Detalles**. Cada fila contiene una columna **Acción** que describe el paso y una columna **Estado** que indica si el paso se ha realizado correctamente o no. Si hay un error, aparece un mensaje en la columna **Mensaje** .  
+ Muestra cada paso de configuración como una fila en la cuadrícula **Detalles** . Cada fila contiene una columna **Acción** que describe el paso y una columna **Estado** que indica si el paso se ha realizado correctamente o no. Si hay un error, aparece un mensaje en la columna **Mensaje** .  
   
  **Detener**  
  Detiene el procesamiento del asistente.  
@@ -132,7 +136,7 @@ caps.handback.revision: 28
  **Cerrar**  
  Cierra el asistente.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
  [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)   

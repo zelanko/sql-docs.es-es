@@ -1,42 +1,46 @@
 ---
-title: "Limitar los resultados de la b&#250;squeda con RANK | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clasificación por fila [búsqueda de texto completo]"
-  - "valores de clasificación por relevancia [búsqueda de texto completo]"
-  - "búsqueda de texto completo [SQL Server], clasificaciones"
-  - "clasificaciones de índices [búsqueda de texto completo]"
-  - "resultados clasificados [búsqueda de texto completo]"
-  - "clasificaciones [búsqueda de texto completo]"
-  - "valores de clasificación por fila [búsqueda de texto completo]"
+title: "Limitación de los resultados de la búsqueda con RANK | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- row ranking [full-text search]
+- relevance ranking values [full-text search]
+- full-text search [SQL Server], rankings
+- index rankings [full-text search]
+- ranked results [full-text search]
+- rankings [full-text search]
+- per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3a33b63a182fe1c7f72e2251c3a835867ae8dcf4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Limitar los resultados de la b&#250;squeda con RANK
+# <a name="limit-search-results-with-rank"></a>Limitar los resultados de la búsqueda con RANK
   Las funciones [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) y [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) devuelven una columna denominada RANK que contiene valores ordinales de 0 a 1000 (valores de intervalo). Estos valores se utilizan para clasificar las filas devueltas en función del grado de coincidencia con los criterios de selección. Los valores de clasificación solo indican un orden relativo de relevancia de las filas en el conjunto de resultados, con un valor inferior que indica la relevancia menor. Los valores reales carecen de relevancia y normalmente difieren cada vez que se ejecuta la consulta.  
   
 > [!NOTE]  
 >  Los predicados CONTAINS y FREETEXT no devuelven ningún valor de clasificación.  
   
- El número de elementos que coincide con una condición de búsqueda suele ser muy grande. Para evitar que las consultas CONTAINSTABLE o FREETEXTTABLE devuelvan demasiadas coincidencias, use el parámetro opcional *top_n_by_rank*, que solo devuelve un subconjunto de filas. *top_n_by_rank* es un valor entero, donde *n* especifica que solo se devuelvan las *n* coincidencias con la clasificación más alta, en orden descendente. Si se combina *top_n_by_rank* con otros parámetros, es posible que la consulta devuelva menos filas de las que en realidad coinciden con todos los predicados.  
+ El número de elementos que coincide con una condición de búsqueda suele ser muy grande. Para evitar que las consultas CONTAINSTABLE o FREETEXTTABLE devuelvan demasiadas coincidencias, use el parámetro opcional *top_n_by_rank* , que solo devuelve un subconjunto de filas. *top_n_by_rank* es un valor entero, donde *n*especifica que solo se devuelvan las *n* coincidencias con la clasificación más alta, en orden descendente. Si se combina *top_n_by_rank* con otros parámetros, es posible que la consulta devuelva menos filas de las que en realidad coinciden con todos los predicados.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ordena las coincidencias por orden de clasificación y devuelve solo hasta el número especificado de filas. Esta opción puede aumentar significativamente el rendimiento. Por ejemplo, una consulta que por lo general devolvería 100.000 filas de una tabla de 1 millón se procesará de forma más rápida si solo se solicitan las 100 primeras filas.  
   
 ##  <a name="examples"></a> Ejemplos del uso de RANK para limitar los resultados de la búsqueda  
   
-### Ejemplo A: buscar solo las tres primeras coincidencias  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>Ejemplo A: buscar solo las tres primeras coincidencias  
  En el ejemplo siguiente se usa CONTAINSTABLE para devolver las tres primeras coincidencias.  
   
 ```  
@@ -66,9 +70,8 @@ RANK        Address                          City
 (3 row(s) affected)  
 ```  
   
- [En este tema](#top)  
   
-### Ejemplo B: buscar las diez primeras coincidencias  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>Ejemplo B: buscar las diez primeras coincidencias  
  En el ejemplo siguiente se usa CONTAINSTABLE para devolver la descripción de los 5 productos más destacados, donde la columna `Description` contiene la palabra “aluminum” cerca de la palabra “light” o de la palabra “lightweight”.  
   
 ```  
@@ -89,12 +92,11 @@ FROM Production.ProductDescription AS FT_TBL INNER JOIN
 GO  
 ```  
   
- [En este tema](#top)  
   
 ##  <a name="how"></a> Cómo se clasifican los resultados de la consulta de búsqueda  
  La búsqueda de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede generar una puntuación (o valor de rango) opcional que indica la relevancia de los datos devueltos por una consulta de texto completo. Este valor de rango se calcula en cada fila y se puede utilizar como criterio de ordenación para ordenar el conjunto de resultados de una consulta determinada por relevancia. Los valores de clasificación solo indican un orden de importancia relativa de las filas en el conjunto de resultados. Los valores reales carecen de relevancia y normalmente difieren cada vez que se ejecuta la consulta. El valor de rango no tiene importancia en las consultas.  
   
-### Estadísticas de clasificación  
+### <a name="statistics-for-ranking"></a>Estadísticas de clasificación  
  Cuando se compila un índice, se recopilan estadísticas para usarlas en la clasificación. El proceso de creación de un catálogo de texto completo no produce directamente una única estructura de índice. En su lugar, el motor de búsqueda de texto completo para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea índices intermedios a medida que se indizan los datos. El motor de búsqueda de texto completo combina después dichos índices en un índice mayor, según sea necesario. Este proceso puede repetirse muchas veces. A continuación, el motor de búsqueda de texto completo realiza una "mezcla maestra" que combina todos los índices intermedios en un gran índice maestro.  
   
  En cada índice intermedio se recopilan estadísticas, que se mezclan cuando se mezclan los índices. Algunos valores estadísticos solo pueden generarse durante el proceso de mezcla maestra.  
@@ -109,13 +111,13 @@ GO
  Una columna indizada de texto completo de la fila.  
   
  Documento  
- Entidad que se devuelve en las consultas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se corresponde con una fila. Un documento puede tener varias propiedades, de igual forma que una fila puede tener varias columnas indizadas de texto completo.  
+ Entidad que se devuelve en las consultas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se corresponde con una fila. Un documento puede tener varias propiedades, de igual forma que una fila puede tener varias columnas indizadas de texto completo.  
   
  Índice  
  Un único índice invertido de uno o varios documentos. Puede almacenarse completamente en la memoria o en disco. Muchas estadísticas de consultas son relativas al índice individual donde se produjo la coincidencia.  
   
  Catálogo de texto completo  
- Colección de índices intermedios que se considera como una sola entidad en las consultas. Los catálogos son la unidad de organización visible para el administrador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Colección de índices intermedios que se considera como una sola entidad en las consultas. Los catálogos son la unidad de organización visible para el administrador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Palabra, token o elemento  
  Unidad coincidente en el motor de texto completo. Los flujos de texto de los documentos se acortan formando palabras o tokens, gracias a los separadores de palabras específicos del idioma.  
@@ -138,9 +140,8 @@ GO
  MaxQueryRank  
  El rango máximo, 1000, devuelto por el motor de búsqueda de texto completo.  
   
- [En este tema](#top)  
   
-### Problemas de cálculo de rango  
+### <a name="rank-computation-issues"></a>Problemas de cálculo de rango  
  El proceso de cálculo de rango depende de varios factores.  Los separadores de palabras de cada uno de los idiomas acortan el texto de forma distinta. Por ejemplo, un separador de palabras podría separar la cadena "dog-house" en "dog" "house" y otro en "dog-house". Por este motivo, las coincidencias y las categorías variarán en función del idioma especificado, ya que no solo son distintas las palabras sino también la longitud del documento. La diferencia de longitud del documento puede afectar a las categorías de todas las consultas.  
   
  Las estadísticas como **IndexRowCount** pueden variar enormemente. Por ejemplo, si un catálogo tiene 2.000 millones de filas en el índice maestro, un nuevo documento se indizará en un índice intermedio de la memoria y los rangos de dicho documento basados en el número de documentos en el índice almacenado en la memoria podrían desviarse de los rangos de los documentos del índice maestro. Por este motivo, tras realizar un llenado que dé como resultado la indización o reindización de un gran número de filas, se recomienda mezclar los índices en un índice maestro mediante la instrucción ALTER FULLTEXT CATALOG ... REORGANIZE de [!INCLUDE[tsql](../../includes/tsql-md.md)]. El motor de búsqueda de texto completo también mezclará automáticamente los índices basándose en parámetros como el número y el tamaño de los índices intermedios.  
@@ -154,9 +155,8 @@ GO
   
 ```  
   
- [En este tema](#top)  
   
-### Categoría de CONTAINSTABLE  
+### <a name="ranking-of-containstable"></a>Categoría de CONTAINSTABLE  
  La clasificación de[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) usa el algoritmo siguiente:  
   
 ```  
@@ -185,9 +185,8 @@ Rank =  ( MaxQueryRank * WeightedSum ) / ( ( Σ[key=1 to n] ContainsRankKey^2 )
   
 ```  
   
- [En este tema](#top)  
   
-### Categoría de FREETEXTTABLE  
+### <a name="ranking-of-freetexttable"></a>Categoría de FREETEXTTABLE  
  La clasificación de[FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) se basa en la fórmula de clasificación OKAPI BM25. Las consultas FREETEXTTABLE agregarán palabras a la consulta a través de la generación de formas con inflexión de las palabras originales de la consulta; estas palabras se tratan como palabras independientes sin ninguna relación especial con las palabras a partir de las cuales se generan. Los sinónimos que se generan con la característica de diccionario de sinónimos se tratan como términos independientes del mismo peso. Cada palabra de la consulta contribuye al rango.  
   
 ```  
@@ -206,9 +205,8 @@ tf is the frequency of the word in the queried property in a specific row.
 qtf is the frequency of the term in the query.   
 ```  
   
- [En este tema](#top)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md)  
   
   

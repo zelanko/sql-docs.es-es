@@ -1,26 +1,30 @@
 ---
-title: "Crear, modificar y quitar FileTables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], modificar"
-  - "FileTables [SQL Server], eliminar"
-  - "FileTables [SQL Server], crear"
+title: "Creación, modificación y eliminación de FileTables | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], altering
+- FileTables [SQL Server], dropping
+- FileTables [SQL Server], creating
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0445d1e3f300031a0154e253009a516364cd4fc3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear, modificar y quitar FileTables
+# <a name="create-alter-and-drop-filetables"></a>Crear, modificar y quitar FileTables
   Describe cómo crear una nueva FileTable. O bien, modificar o quitar una FileTable existente.  
   
 ##  <a name="BasicsCreate"></a> Crear una FileTable  
@@ -52,7 +56,7 @@ caps.handback.revision: 25
   
     1.  La intercalación especificada **no debe distinguir mayúsculas de minúsculas** para cumplir la semántica de nomenclatura de archivo de Windows.  
   
-    2.  Si no proporciona un valor para **FILETABLE_COLLATE_FILENAME** o especifica **database_default**, la columna hereda la intercalación de la base de datos actual. Si la intercalación de la base de datos actual distingue mayúsculas de minúsculas, se produce un error en la operación **CREATE TABLE**.  
+    2.  Si no proporciona un valor para **FILETABLE_COLLATE_FILENAME**o especifica **database_default**, la columna hereda la intercalación de la base de datos actual. Si la intercalación de la base de datos actual distingue mayúsculas de minúsculas, se produce un error en la operación **CREATE TABLE** .  
   
 3.  También puede especificar los nombres que se van a utilizar para la clave principal 3 y las restricciones únicas que se crean automáticamente. Si no proporciona nombres, el sistema generará los nombres cómo se describe más adelante en este tema.  
   
@@ -119,7 +123,7 @@ GO
 ```  
   
  **Cambiar el directorio de un objeto FileTable mediante SQL Server Management Studio**  
- En el Explorador de objetos, haga clic con el botón derecho en el objeto FileTable y seleccione **Propiedades** para abrir el cuadro de diálogo **Propiedades de la tabla**. En la página **FileTable** , escriba un nuevo valor para **Nombre del directorio de FileTable**.  
+ En el Explorador de objetos, haga clic con el botón derecho en el objeto FileTable y seleccione **Propiedades** para abrir el cuadro de diálogo **Propiedades de la tabla** . En la página **FileTable** , escriba un nuevo valor para **Nombre del directorio de FileTable**.  
   
 ###  <a name="ReqAlter"></a> Requisitos y restricciones para modificar una FileTable  
   
@@ -180,7 +184,7 @@ GO
   
 -   *\<uniquifier>* es una cadena generada por el sistema para que el nombre sea único. Esta cadena puede contener el nombre de la FileTable y un identificador único.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Administrar FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   

@@ -1,33 +1,37 @@
 ---
-title: "Prepararse para importar datos de forma masiva (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "importación en bloque [SQL Server], acerca de la importación en bloque"
-  - "instrucción BULK INSERT, directrices"
-  - "instrucción BULK INSERT, restricciones"
-  - "utilidad bcp [SQL Server], directrices"
-  - "utilidad bcp [SQL Server], restricciones"
-  - "caracteres ocultos"
-  - "función OPENROWSET, directrices para BCP"
+title: "Preparación para importar datos de forma masiva (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bulk importing [SQL Server], about bulk importing
+- BULK INSERT statement, guidelines
+- BULK INSERT statement, restrictions
+- bcp utility [SQL Server], guidelines
+- bcp utility [SQL Server], restrictions
+- hidden characters
+- OPENROWSET function, BCP guidelines
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e797c303dff0eef613024752c2788a6480f047ac
+ms.lasthandoff: 04/11/2017
+
 ---
-# Prepararse para importar datos de forma masiva (SQL Server)
+# <a name="prepare-to-bulk-import-data-sql-server"></a>Prepararse para importar datos de forma masiva (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Puede usar el comando **bcp**, la instrucción BULK INSERT o la función OPENROWSET(BULK) para la importación masiva de datos solo desde un archivo de datos.  
+  Puede usar el comando **bcp** , la instrucción BULK INSERT o la función OPENROWSET(BULK) para la importación masiva de datos solo desde un archivo de datos.  
   
 > [!NOTE]  
 >  Es posible escribir una aplicación personalizada que importe de forma masiva datos desde objetos que no sean un archivo de texto. Para realizar la importación en bloque de datos desde búferes de memoria, use las extensiones de bcp a la interfaz de programación de aplicaciones (API) cliente nativa (ODBC) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o la interfaz **IRowsetFastLoad** de OLE DB.  Para realizar la importación en bloque de datos desde una tabla de datos de C#, use la API de copia masiva de ADO.NET, **SqlBulkCopy**.  
@@ -67,7 +71,7 @@ caps.handback.revision: 34
   
      Muchas herramientas y editores de texto muestran los caracteres ocultos que suelen encontrarse al final del archivo de datos. Durante una operación de importación masiva, los caracteres ocultos en un archivo de datos ASCII pueden producir  problemas que den como resultado un error de tipo "se encontró un valor nulo inesperado". La búsqueda y eliminación de todos los caracteres ocultos debería solucionar el problema.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Importar y exportar datos en bloque con la utilidad bcp &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
  [Importar datos en bloque mediante BULK INSERT u OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [bcp (utilidad)](../../tools/bcp-utility.md)   

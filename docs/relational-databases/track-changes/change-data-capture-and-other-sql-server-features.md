@@ -1,24 +1,28 @@
 ---
-title: "Captura de datos modificados y otras caracter&#237;sticas de SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "captura de datos modificados [SQL Server], otras características de SQL Server y"
+title: "Captura de datos modificados y otras características de SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 05/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 69a41e2138b3b2cc0768dacd0fca4e6363ee18e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Captura de datos modificados y otras caracter&#237;sticas de SQL Server
+# <a name="change-data-capture-and-other-sql-server-features"></a>Captura de datos modificados y otras características de SQL Server
   En este tema se describe cómo interactúan las características siguientes con la captura de datos modificados:  
   
 -   [Seguimiento de cambios](#ChangeTracking)  
@@ -29,7 +33,7 @@ caps.handback.revision: 14
   
 -   [Restaurar o asociar una base de datos habilitada para la captura de datos modificados](#RestoreOrAttach)  
   
-##  <a name="ChangeTracking"></a> Seguimiento de cambios  
+##  <a name="ChangeTracking"></a> Change Tracking  
  La captura de datos modificados y el [seguimiento de cambios](../../relational-databases/track-changes/about-change-tracking-sql-server.md) pueden habilitarse en la misma base de datos. No se requiere ninguna consideración especial. Para obtener más información, vea [Trabajar con el seguimiento de cambios &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md).  
   
 ##  <a name="DatabaseMirroring"></a> Creación de reflejo de base de datos  
@@ -37,7 +41,7 @@ caps.handback.revision: 14
   
 1.  Asegúrese de que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecute en la nueva instancia del servidor principal.  
   
-2.  Cree el trabajo de captura y el trabajo de limpieza en la nueva base de datos principal, la antigua base de datos de reflejo. Para crear los trabajos, use el procedimiento almacenado [sp_cdc_add_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
+2.  Cree el trabajo de captura y el trabajo de limpieza en la nueva base de datos principal, la antigua base de datos de reflejo. Para crear los trabajos, use el procedimiento almacenado [sp_cdc_add_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md) .  
   
  Para ver la configuración actual de un trabajo de captura o limpieza, use el procedimiento almacenado [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) en la nueva instancia de servidor principal. Para una base de datos concreta, el trabajo de captura se denomina cdc.*database_name*_capture y el trabajo de limpieza, cdc.*database_name*_cleanup, donde *database_name* es el nombre de la base de datos.  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 14
   
  Para obtener más información sobre la creación de reflejo de la base de datos, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
-##  <a name="TransReplication"></a> Replicación transaccional  
+##  <a name="TransReplication"></a> Transactional Replication  
  La captura de datos modificados y la replicación transaccional pueden coexistir en la misma base de datos, pero el rellenado de las tablas de cambios se trata de forma diferente cuando se habilitan ambas características. La captura de datos modificados y la replicación transaccional siempre usan el mismo procedimiento, [sp_replcmds](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md), para leer los cambios del registro de transacciones. Cuando la captura de datos modificados se habilita sola, un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] llama a **sp_replcmds**. Cuando ambas características están habilitadas en la misma base de datos, el Agente de registro del LOG llama a **sp_replcmds**. Este agente rellena las tablas de cambios y las tablas de base de datos de distribución. Para obtener más información, consulte [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md).  
   
  Considere un escenario en el que la captura de datos modificados está habilitada en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] y se habilitan dos tablas para la captura. Para rellenar las tablas de cambios, el trabajo de captura llama a **sp_replcmds**. La base de datos se habilita para la replicación transaccional y se crea una publicación. Ahora, se crea el Agente de registro del LOG para la base de datos y se elimina el trabajo de captura. El Agente de registro del LOG continúa examinando el registro desde el último número de secuencia de registro que se confirmó en la tabla de cambios. De esta forma se asegura de la coherencia de los datos en las tablas de cambios. Si la replicación transaccional está deshabilitada en esta base de datos, se quita el Agente de registro del LOG y vuelve a recrear el trabajo de captura.  
@@ -62,7 +66,7 @@ caps.handback.revision: 14
   
 -   Si una base de datos se restaura en otro servidor, de forma predeterminada la captura de datos modificados está deshabilitada y se eliminan todos los metadatos relacionados.  
   
-     Para conservar la captura de datos modificados, use la opción **KEEP_CDC** a la hora de restaurar la base de datos. Para obtener más información acerca de esta opción, vea [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md).  
+     Para conservar la captura de datos modificados, use la opción **KEEP_CDC** a la hora de restaurar la base de datos. Para obtener más información acerca de esta opción, vea [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 -   Si una base de datos se desasocia y asocia en el mismo servidor o en otro servidor, la captura de datos modificados sigue estando habilitada.  
   
@@ -72,10 +76,11 @@ caps.handback.revision: 14
   
  Puede usar [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) para quitar la captura de datos modificados desde una base de datos restaurada o asociada.  
   
-## Captura de datos modificados y AlwaysOn  
+## <a name="change-data-capture-and-always-on"></a>Captura de datos modificados y AlwaysOn  
  Cuando se usa AlwaysOn, la enumeración de cambios se debe realizar en la réplica secundaria con el fin de reducir la carga del disco en la réplica principal.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Administrar y supervisar la captura de datos modificados &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   
+

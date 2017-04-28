@@ -1,22 +1,26 @@
 ---
-title: "Modificar una funci&#243;n de partici&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Modificación de una función de partición | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b55aa8c92aaf469aa2ef7945a84068301124641
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modificar una funci&#243;n de partici&#243;n
+# <a name="modify-a-partition-function"></a>Modificar una función de partición
   Puede cambiar el modo en que se crean las particiones de una tabla o un índice en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] al sumar o restar el número de particiones especificadas, en aumentos de 1, en la función de partición de la tabla o el índice con particiones mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]. Lo que sucede al agregar una partición es que se "divide" una partición existente en dos particiones y se vuelven a definir los límites de las particiones nuevas. Al quitar una partición, se "mezclan" los límites de dos particiones en una sola. Lo que hace esta última acción es volver a llenar una partición y dejar la otra sin asignar.  
   
 > [!CAUTION]  
@@ -62,7 +66,7 @@ caps.handback.revision: 11
 ####  <a name="Permissions"></a> Permisos  
  Se pueden utilizar cualquiera de los siguientes permisos para ejecutar ALTER PARTITION FUNCTION:  
   
--   Permiso ALTER ANY DATASPACE. De forma predeterminada, este permiso corresponde a los miembros del rol fijo de servidor **sysadmin** y a los roles fijos de base de datos **db_owner** y **db_ddladmin**.  
+-   Permiso ALTER ANY DATASPACE. De forma predeterminada, este permiso corresponde a los miembros del rol fijo de servidor **sysadmin** y a los roles fijos de base de datos **db_owner** y **db_ddladmin** .  
   
 -   Permiso CONTROL o ALTER en la base de datos en la que se ha creado la función de partición.  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 11
   
  Esta acción específica no se puede realizar mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para modificar una función de partición, primero debe eliminar la función y después crear una nueva con las propiedades deseadas mediante el Asistente para la creación de particiones. Para obtener más información, vea  
   
-#### Para eliminar una función de partición  
+#### <a name="to-delete-a-partition-function"></a>Para eliminar una función de partición  
   
 1.  Expanda la base de datos donde desea eliminar la función de partición y después expanda la carpeta **Almacenamiento** .  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 11
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para dividir una única partición en dos particiones  
+#### <a name="to-split-a-single-partition-into-two-partitions"></a>Para dividir una única partición en dos particiones  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -110,7 +114,7 @@ caps.handback.revision: 11
     SPLIT RANGE (500);  
     ```  
   
-#### Para combinar dos particiones en una única partición  
+#### <a name="to-merge-two-partitions-into-one-partition"></a>Para combinar dos particiones en una única partición  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

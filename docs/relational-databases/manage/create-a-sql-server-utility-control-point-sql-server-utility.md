@@ -1,37 +1,41 @@
 ---
-title: "Crear un punto de control de la utilidad de SQL Server (utilidad de SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.SWB.create.ucp.validation.F1"
-  - "sql13.SWB.create.ucp.Summary.F1"
-  - "sql13.SWB.create.ucp.progress.F1"
-  - "sql13.SWB.create.ucp.agentconfiguration.F1"
-  - "sql13.SWB.create.ucp.welcome.F1"
-  - "sql13.SWB.create.ucp.instancename.F1"
-helpviewer_keywords: 
-  - "Crear UCP"
-  - "UCP"
+title: "Creación de un punto de control de la utilidad de SQL Server (utilidad de SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.SWB.create.ucp.validation.F1
+- sql13.SWB.create.ucp.Summary.F1
+- sql13.SWB.create.ucp.progress.F1
+- sql13.SWB.create.ucp.agentconfiguration.F1
+- sql13.SWB.create.ucp.welcome.F1
+- sql13.SWB.create.ucp.instancename.F1
+helpviewer_keywords:
+- Create UCP
+- UCP
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f06506dffa7c0d8497a6fc0986e8a29a701d0415
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear un punto de control de la utilidad de SQL Server (utilidad de SQL Server)
-  Una empresa puede tener varias utilidades de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y cada una de esas utilidades de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede administrar muchas instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y aplicaciones de capa de datos. Cada utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone de un único punto de control de la utilidad (UCP). Debe crear un UCP nuevo para cada utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y todos los componentes de la aplicación de capa de datos pertenecen únicamente a una utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los administra un solo UCP.  
+# <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Crear un punto de control de la utilidad de SQL Server (utilidad de SQL Server)
+  Una empresa puede tener varias utilidades de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y cada una de esas utilidades de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede administrar muchas instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y aplicaciones de capa de datos. Cada utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone de un único punto de control de la utilidad (UCP). Debe crear un UCP nuevo para cada utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y todos los componentes de la aplicación de capa de datos pertenecen únicamente a una utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los administra un solo UCP.  
   
  El UCP recopila información de configuración y rendimiento de las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cada 15 minutos. Esta información se almacena en el almacén de administración de datos de la utilidad (UMDW) en el UCP; el nombre del archivo UMDW es sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se comparan con directivas para ayudar a identificar cuellos de botella en el uso de recursos y oportunidades de consolidación.  
   
-## Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de comenzar  
  Antes de crear un UCP, revise los siguientes requisitos y recomendaciones.  
   
  En esta versión, el UCP y todas las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben satisfacer los requisitos siguientes:  
@@ -46,9 +50,9 @@ caps.handback.revision: 13
   
  En esta versión, el UCP debe satisfacer los siguientes requisitos:  
   
--   La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser una edición admitida. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser una edición admitida. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
--   Recomendamos que el UCP se hospede en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que distinga entre mayúsculas y minúsculas.  
+-   Recomendamos que el UCP se hospede en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]que distinga entre mayúsculas y minúsculas.  
   
  Considere las siguientes recomendaciones para programar la capacidad en el equipo del UCP:  
   
@@ -60,14 +64,14 @@ caps.handback.revision: 13
   
  En esta versión, todas las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben satisfacer los siguientes requisitos:  
   
--   Recomendamos que en caso de que el UCP se encuentre hospedado en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no distinga entre mayúsculas y minúsculas, las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tampoco distingan entre mayúsculas y minúsculas.  
+-   Recomendamos que en caso de que el UCP se encuentre hospedado en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]que no distinga entre mayúsculas y minúsculas, las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tampoco distingan entre mayúsculas y minúsculas.  
   
--   Los datos FILESTREAM no se admiten para la supervisión de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Los datos FILESTREAM no se admiten para la supervisión de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Para obtener más información, vea [Especificaciones de capacidad máxima para SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) y [Características compatibles con las ediciones de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ Para obtener más información, vea [Especificaciones de capacidad máxima para SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) y [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-### Quitar los puntos de control anteriores de la utilidad antes de instalar uno nuevo  
- Si trata de instalar un punto de control de utilidad (UCP) en una instancia de SQL Server que se configuró en algún momento como UCP, debe quitar todas las instancias administradas de SQL Server y el UCP antes de proceder a la instalación. Para ello, debe ejecutar el procedimiento almacenado **sp_sysutility_ucp_remove**.  
+### <a name="remove-previous-utility-control-points-before-installing-a-new-one"></a>Quitar los puntos de control anteriores de la utilidad antes de instalar uno nuevo  
+ Si trata de instalar un punto de control de utilidad (UCP) en una instancia de SQL Server que se configuró en algún momento como UCP, debe quitar todas las instancias administradas de SQL Server y el UCP antes de proceder a la instalación. Para ello, debe ejecutar el procedimiento almacenado **sp_sysutility_ucp_remove** .  
   
  Antes de ejecutar el procedimiento, tenga en cuenta los siguientes requisitos:  
   
@@ -88,16 +92,16 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > [!NOTE]  
 >  Si la instancia de SQL Server de la que se quitó el UCP tiene un conjunto de recopilación de datos que no es de utilidad, el procedimiento no quita la base de datos sysutility_mdw. En tal caso, la base de datos sysutility_mdw se debe quitar manualmente para poder volver a crear el UCP.  
   
- Cada instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y todos los componentes de la aplicación de capa de datos pertenecen únicamente a una utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los administra un solo UCP. Para obtener más información sobre conceptos de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+ Cada instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y todos los componentes de la aplicación de capa de datos pertenecen únicamente a una utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los administra un solo UCP. Para obtener más información sobre conceptos de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
- Un UCP es el punto de razonamiento central de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Con el UCP, puede ver la información de configuración y rendimiento que se ha recopilado en las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en las aplicaciones de capa de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], además de realizar actividades generales de diseño de la capacidad. El UCP es el punto de inicio para inscribirse y quitar instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Un UCP es el punto de razonamiento central de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Con el UCP, puede ver la información de configuración y rendimiento que se ha recopilado en las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en las aplicaciones de capa de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , además de realizar actividades generales de diseño de la capacidad. El UCP es el punto de inicio para inscribirse y quitar instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Después de inscribir instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede supervisar el estado de recursos para las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y aplicaciones de nivel de datos para identificar las oportunidades de consolidación y aislar los cuellos de botella de recursos. Para obtener más información, vea [Supervisar instancias de SQL Server en la utilidad de SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md).  
+ Después de inscribir instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede supervisar el estado de recursos para las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y aplicaciones de nivel de datos para identificar las oportunidades de consolidación y aislar los cuellos de botella de recursos. Para obtener más información, vea [Supervisar instancias de SQL Server en la utilidad de SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md).  
   
 > [!IMPORTANT]  
->  El conjunto de recopilación de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se admite en paralelo con conjuntos de recopilación que no sean de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es decir, otros conjuntos de recopilación pueden supervisar una instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mientras pertenezca a una utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sin embargo, debe tener en cuenta que todos los conjuntos de recopilación en la instancia administrada cargarán sus datos en el almacén de administración de datos de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Consideraciones para ejecutar conjuntos de recopilación de la utilidad y que no sean de la utilidad en la misma instancia de SQL Server](../../relational-databases/manage/run utility and non-utility collection sets on same sql instance.md) y [Configurar el almacenamiento de datos del punto de control de la utilidad &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md).  
+>  El conjunto de recopilación de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se admite en paralelo con conjuntos de recopilación que no sean de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Es decir, otros conjuntos de recopilación pueden supervisar una instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mientras pertenezca a una utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sin embargo, debe tener en cuenta que todos los conjuntos de recopilación en la instancia administrada cargarán sus datos en el almacén de administración de datos de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Consideraciones para ejecutar conjuntos de recopilación de la utilidad y que no sean de la utilidad en la misma instancia de SQL Server](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md) y [Configurar el almacenamiento de datos del punto de control de la utilidad &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md).  
   
-## Pasos del asistente  
+## <a name="wizard-steps"></a>Pasos del asistente  
  ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
   
  En las siguientes secciones se proporciona información sobre cada página del flujo de trabajo del asistente para crear un UCP nuevo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para iniciar el asistente para crear un nuevo UCP, abra el panel del explorador de la utilidad en el menú Vista en SSMS, luego haga clic en el botón ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **Crear UCP** en la parte superior del panel del explorador de la utilidad.  
@@ -125,7 +129,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  **Conectarse a un UCP existente** - Si ya existe un punto de control de la utilidad en su implementación, puede conectarse a él haciendo clic en el botón ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**Conectar con la utilidad** en la parte superior del panel Explorador de la utilidad. Para conectarse a un UCP existente, es preciso disponer de credenciales de administrador o ser un miembro del rol Lector de utilidad. Observe que puede haber solo un UCP por utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y solo se puede estar conectado a un UCP de una instancia de SSMS.  
   
- **Crear un nuevo UCP**- Para crear un punto de control de utilidad nuevo, haga clic en el botón ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")**Create UCP** (Crear UCP) en la parte superior del panel Explorador de la utilidad. Para crear un UCP nuevo, debe especificar el nombre de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y facilitar las credenciales de administrador en el cuadro de diálogo de conexión. Observe que solo puede haber un UCP por utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ **Crear un nuevo UCP** - Para crear un punto de control de utilidad nuevo, haga clic en el botón ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")**Create UCP** (Crear UCP) en la parte superior del panel Explorador de la utilidad. Para crear un UCP nuevo, debe especificar el nombre de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y facilitar las credenciales de administrador en el cuadro de diálogo de conexión. Observe que solo puede haber un UCP por utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="Instance_name"></a> Especificar la instancia  
  Especifique la siguiente información sobre el UCP que está creando:  
@@ -137,7 +141,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
  Para continuar, haga clic en **Siguiente**.  
   
 ##  <a name="Connection_dialog"></a> Cuadro de diálogo de conexión  
- En el cuadro de diálogo Conectar al servidor, compruebe la información sobre el tipo de servidor, el nombre del equipo y el nombre de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Conectar al servidor &#40;motor de base de datos&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
+ En el cuadro de diálogo Conectar al servidor, compruebe la información sobre el tipo de servidor, el nombre del equipo y el nombre de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Conectar al servidor &#40;motor de base de datos&#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
 > [!NOTE]  
 >  Si la conexión está cifrada, se utilizará la conexión cifrada. Si la conexión no está cifrada, la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] volverá a conectarse mediante una conexión cifrada.  
@@ -147,7 +151,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Agent_configuration"></a> Conjunto de recopilación de datos Información de la utilidad  
  Especifique una cuenta de dominio de Windows para ejecutar el conjunto de recopilación de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esta cuenta se utiliza como la cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el conjunto de recopilación de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . De forma alternativa, puede utilizar la cuenta del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente. Para pasar los requisitos de validación, utilice las siguientes instrucciones con el fin de especificar la cuenta.  
   
- Si especifica la opción de cuenta del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Si especifica la opción de cuenta del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   La cuenta del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser una cuenta de dominio de Windows que no sea una cuenta integrada como LocalSystem, NetworkService o LocalService.  
   
@@ -160,14 +164,14 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 |---------------------|-----------------------|  
 |Debe contar con privilegios de administrador en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde se creará el punto de control de utilidad.|Inicie sesión con una cuenta que disponga de privilegios de administrador en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |La versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser 10.50 o posterior.|Especifique una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferente para hospedar el UCP.|  
-|La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser una edición admitida. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).|Especifique una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferente para hospedar el UCP.|  
+|La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser una edición admitida. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|Especifique una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferente para hospedar el UCP.|  
 |La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no debe ser una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inscrita con cualquier otro UCP de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Especifique otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para hospedar el UCP o anule la inscripción de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del UCP en el que es actualmente una instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede estar ya hospeda en un punto de control de utilidad.|Especifique una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferente para hospedar el UCP.|  
 |La instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener TCP/IP habilitado.|Habilite TCP/IP para la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede tener una base de datos denominada "sysutility_mdw".|La operación para crear un UCP generará un almacén de administración de datos de la utilidad (UMDW) denominado "sysutility_mdw". En esta operación es preciso que el nombre no exista en el equipo en el momento de ejecutar las reglas de validación. Para continuar, debe quitar o cambiar el nombre de cualquier base de datos denominada "sysutility_mdw." Para obtener más información sobre estas operaciones para cambiar el nombre, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
-|Los conjuntos de recopilación de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada deben detenerse.|Detenga los conjuntos de recopilación que ya existen mientras el UCP se crea en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada. Si se deshabilita el recopilador de datos, habilítelo, detenga cualquier conjunto de recopilación en ejecución y, a continuación, vuelva a ejecutar las reglas de validación para la operación Crear UCP.<br /><br /> Para habilitar el recopilador de datos:<br /><br /> En el Explorador de objetos, expanda el nodo **Administración** .<br /><br /> Haga clic con el botón derecho en **Recopilación de datos** y, luego, haga clic en **Habilitar recopilación de datos**.<br /><br /> Para detener un conjunto de recopilación:<br /><br /> En el Explorador de objetos, expanda el nodo Administración, expanda **Recopilación de datos**y, después, **Conjuntos de recopilación de datos del sistema**.<br /><br /> Haga clic con el botón derecho en el conjunto de recopilación que quiere detener y, luego, haga clic en **Detener conjunto de recopilación de datos**.<br /><br /> Un cuadro de mensaje muestra los resultados de esta acción y un círculo rojo en el icono para el conjunto de recopilación indica que el conjunto de recopilación se ha detenido.|  
+|Los conjuntos de recopilación de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada deben detenerse.|Detenga los conjuntos de recopilación que ya existen mientras el UCP se crea en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]especificada. Si se deshabilita el recopilador de datos, habilítelo, detenga cualquier conjunto de recopilación en ejecución y, a continuación, vuelva a ejecutar las reglas de validación para la operación Crear UCP.<br /><br /> Para habilitar el recopilador de datos:<br /><br /> En el Explorador de objetos, expanda el nodo **Administración** .<br /><br /> Haga clic con el botón derecho en **Recopilación de datos**y, luego, haga clic en **Habilitar recopilación de datos**.<br /><br /> Para detener un conjunto de recopilación:<br /><br /> En el Explorador de objetos, expanda el nodo Administración, expanda **Recopilación de datos**y, después, **Conjuntos de recopilación de datos del sistema**.<br /><br /> Haga clic con el botón derecho en el conjunto de recopilación que quiere detener y, luego, haga clic en **Detener conjunto de recopilación de datos**.<br /><br /> Un cuadro de mensaje muestra los resultados de esta acción y un círculo rojo en el icono para el conjunto de recopilación indica que el conjunto de recopilación se ha detenido.|  
 |Se debe iniciar el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la instancia especificada. Si la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe estar configurado de forma que se inicie manualmente. En caso contrario, el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe estar configurado para iniciarse automáticamente.|Inicie el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configure el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma que se tenga que iniciar manualmente. En caso contrario, configure el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que se inicie automáticamente.|  
-|WMI debe estar configurado correctamente.|Para solucionar problemas de configuración de WMI, vea [Solucionar problemas de la Utilidad de SQL Server](../Topic/Troubleshoot%20the%20SQL%20Server%20Utility.md).|  
+|WMI debe estar configurado correctamente.|Para solucionar problemas de configuración de WMI, vea [Solucionar problemas de la Utilidad de SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
 |La cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede ser ninguna cuenta integrada, como Servicio de red.|Si la cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una cuenta integrada, como Servicio de red, vuelva a asignar la cuenta a una cuenta de dominio de Windows que sea sysadmin.|  
 |Si selecciona la opción de cuenta de proxy, la cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser una cuenta de dominio de Windows válida.|Especifique una cuenta de dominio de Windows válida. Para asegurarse de que la cuenta es válida, inicie sesión en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada mediante la cuenta de dominio de Windows.|  
 |Si selecciona la opción de cuenta del servicio, la cuenta del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no podrá ser una cuenta integrada.|Si la cuenta del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una cuenta integrada, como Servicio de red, vuelva a asignar la cuenta a una cuenta de dominio de Windows.|  
@@ -197,7 +201,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
 -   Creación del almacén de administración de datos de la utilidad (UMDW).  
   
--   Inicialización del almacén de administración de datos de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; el nombre del archivo de dicho almacén es sysutility_mdw.  
+-   Inicialización del almacén de administración de datos de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; el nombre del archivo de dicho almacén es sysutility_mdw.  
   
 -   Configuración del UCP.  
   
@@ -213,7 +217,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  Para mostrar el panel, haga clic en **Ver** y, a continuación, seleccione **Contenido del explorador de la utilidad** en el menú de SSMS. Para actualizar los datos, haga clic con el botón derecho en el nombre de la utilidad en el panel Explorador de la utilidad y luego seleccione **Actualizar**.  
   
- Para obtener más información sobre cómo inscribir instancias adicionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Inscribir una instancia de SQL Server &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md). Para quitar el UCP como instancia administrada de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], seleccione **Instancias administradas** en el panel **Explorador de la utilidad** con el fin de rellenar la vista de lista de instancias administradas, haga clic con el botón derecho del mouse en el nombre de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la vista de lista de **Contenido del explorador de la utilidad** y luego seleccione **Convertir instancia en no administrada**.  
+ Para obtener más información sobre cómo inscribir instancias adicionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Inscribir una instancia de SQL Server &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md). Para quitar el UCP como instancia administrada de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , seleccione **Instancias administradas** en el panel **Explorador de la utilidad** con el fin de rellenar la vista de lista de instancias administradas, haga clic con el botón derecho del mouse en el nombre de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la vista de lista de **Contenido del explorador de la utilidad** y luego seleccione **Convertir instancia en no administrada**.  
   
 ##  <a name="PowerShell_create_UCP"></a> Crear un punto de control de utilidad nuevo con PowerShell  
  Sírvase del siguiente ejemplo para crear un punto de control de utilidad nuevo:  
@@ -224,8 +228,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Solucionar problemas de la Utilidad de SQL Server](../Topic/Troubleshoot%20the%20SQL%20Server%20Utility.md)  
+ [Solucionar problemas de la Utilidad de SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   
+

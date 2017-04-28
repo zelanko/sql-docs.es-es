@@ -1,25 +1,29 @@
 ---
-title: "Lecci&#243;n 6: Generar el registro de actividades y copias de seguridad mediante la copia de seguridad de instant&#225;neas de archivos | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lección 6: Generación del registro de actividades y copias de seguridad mediante la copia de seguridad de instantáneas de archivos | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8f3ea59fb612ea692b52ab46bb342d8c4031fb71
+ms.lasthandoff: 04/11/2017
+
 ---
-# Lecci&#243;n 6: Generar el registro de actividades y copias de seguridad mediante la copia de seguridad de instant&#225;neas de archivos
+# <a name="lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup"></a>Lección 6: Generar el registro de actividades y copias de seguridad mediante la copia de seguridad de instantáneas de archivos
 En esta lección, va a generar actividad en la base de datos AdventureWorks2014 y, periódicamente, va a crear copias de seguridad del registro de transacciones mediante copias de seguridad de instantáneas de archivos. Para obtener más información sobre las copias de seguridad de instantáneas de archivos, vea [Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 Para generar actividad en la base de datos AdventureWorks2014 y crear periódicamente copias de seguridad del registro de transacciones mediante copias de seguridad de instantáneas de archivos, siga estos pasos:  
@@ -77,21 +81,21 @@ Para generar actividad en la base de datos AdventureWorks2014 y crear periódica
   
 5.  Revise el resultado del primer script y tenga en cuenta que el recuento final de filas ahora es de 29 939.  
   
-    ![Row count of 29,939 is displayed](../relational-databases/media/5e2f4229-1970-49c9-89b3-e96b6f7fde83.JPG "Row count of 29,939 is displayed")  
+    ![Se muestra un recuento de filas de 29 939.](../relational-databases/media/5e2f4229-1970-49c9-89b3-e96b6f7fde83.JPG "Se muestra un recuento de filas de 29 939.")  
   
 6.  Revise el resultado del segundo script y tenga en cuenta que cada vez que la instrucción BACKUP LOG se ejecuta, se crean dos nuevas instantáneas de archivos (una instantánea de archivo del archivo de registro y otra del archivo de datos) para un total de dos instantáneas de archivos para cada archivo de base de datos. Después de que se complete el segundo script, tenga en cuenta que ahora existen un total de 16 instantáneas de archivo, 8 para cada archivo de base de datos (uno de la instrucción BACKUP DATABASE y otro de cada ejecución de la instrucción BACKUP LOG).  
   
-    ![results pane showing file snapshots of both data and log file when log backup is taken](../relational-databases/media/acd213b8-895e-425c-bd72-2bf10e65a5ba.JPG "results pane showing file snapshots of both data and log file when log backup is taken")  
+    ![Panel de resultados que muestra instantáneas de los archivos de datos y de registro al realizar la copia de seguridad de registros](../relational-databases/media/acd213b8-895e-425c-bd72-2bf10e65a5ba.JPG "Panel de resultados que muestra instantáneas de los archivos de datos y de registro al realizar la copia de seguridad de registros")  
   
-    ![four file snapshots are displayed](../relational-databases/media/e7eff77d-85b9-4e52-abd8-e49952c8118a.JPG "four file snapshots are displayed")  
+    ![Se muestran cuatro instantáneas de archivos](../relational-databases/media/e7eff77d-85b9-4e52-abd8-e49952c8118a.JPG "Se muestran cuatro instantáneas de archivos")  
   
-    ![results pane showing a total of 16 file snapshots](../relational-databases/media/c3ddff17-a83c-4bf0-a670-a38834f9c922.JPG "results pane showing a total of 16 file snapshots")  
+    ![Panel de resultados que muestra un total de 16 instantáneas de archivos](../relational-databases/media/c3ddff17-a83c-4bf0-a670-a38834f9c922.JPG "Panel de resultados que muestra un total de 16 instantáneas de archivos")  
   
 7.  En el Explorador de objetos, conéctese a Azure Storage.  
   
 8.  Expanda los contenedores, expanda el contenedor que ha creado en la lección 1 y compruebe que aparecen 7 nuevos archivos de copia de seguridad junto con los blobs de las lecciones anteriores (actualice el nodo según sea necesario).  
   
-    ![Azure container showing 7 log backup blobs](../relational-databases/media/cfa5a326-87a2-4202-9a04-38bf577d2d0b.JPG "Azure container showing 7 log backup blobs")  
+    ![Contenedor de Azure que muestra 7 blobs de copia de seguridad de registros](../relational-databases/media/cfa5a326-87a2-4202-9a04-38bf577d2d0b.JPG "Contenedor de Azure que muestra 7 blobs de copia de seguridad de registros")  
   
 **Lección siguiente:**  
   
@@ -99,3 +103,4 @@ Para generar actividad en la base de datos AdventureWorks2014 y crear periódica
   
   
   
+

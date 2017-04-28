@@ -1,27 +1,31 @@
 ---
-title: "QN:Dynamics (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clases de eventos [SQL Server], QN:Dynamics"
+title: Clase de eventos QN:Dynamics | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event classes [SQL Server], QN:Dynamics
 ms.assetid: 3c1ffa0c-c9e5-40a6-a26b-28339f60ebc3
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6aa1712619484a49ca063a982cc49114d5d785d5
+ms.lasthandoff: 04/11/2017
+
 ---
-# QN:Dynamics (clase de eventos)
+# <a name="qndynamics-event-class"></a>QN:Dynamics (clase de eventos)
   La clase de eventos QN:Dynamics ofrece información acerca de la actividad en segundo plano que realiza [!INCLUDE[ssDE](../../includes/ssde-md.md)] para admitir las notificaciones de consulta. En el [!INCLUDE[ssDE](../../includes/ssde-md.md)], un subproceso en segundo plano supervisa los tiempos de espera de las suscripciones, las suscripciones pendientes que se deben activar y la destrucción de tablas de parámetros.  
   
-## Columnas de datos de la clase de eventosQN:Dynamics  
+## <a name="qndynamics-event-class-data-columns"></a>Columnas de datos de la clase de eventosQN:Dynamics  
   
 |Columna de datos|Tipo|Descripción|Número de columna|Filtrable|  
 |-----------------|----------|-----------------|-------------------|----------------|  

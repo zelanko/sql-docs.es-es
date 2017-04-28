@@ -1,36 +1,40 @@
 ---
-title: "Crear desencadenadores DML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cifrado [SQL Server], desencadenadores DML"
-  - "resolución diferida de nombres, desencadenadores DML"
-  - "WITH ENCRYPTION [cláusula]"
-  - "IF UPDATE"
-  - "instrucción SET, desencadenadores DML"
-  - "desencadenadores DML, programar"
-  - "probar cambios de columna"
-  - "resultados [SQL Server], desencadenadores DML"
+title: "Creación de desencadenadores DML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], DML triggers
+- deferred name resolution, DML triggers
+- WITH ENCRYPTION clause
+- IF UPDATE
+- SET statement, DML triggers
+- DML triggers, programming
+- testing column changes
+- results [SQL Server], DML triggers
 ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 21011d77337e517154b4732071253a934984363d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear desencadenadores DML
+# <a name="create-dml-triggers"></a>Crear desencadenadores DML
   En este tema se describe cómo crear un desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y usando la instrucción CREATE TRIGGER de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ##  <a name="Top"></a> Antes de comenzar  
   
-### Limitaciones y restricciones  
+### <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
  Para obtener una lista de las limitaciones y restricciones relacionadas con la creación de desencadenadores DML, vea [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 ###  <a name="Permissions"></a> Permisos  
@@ -49,9 +53,9 @@ caps.handback.revision: 31
   
 2.  Expanda **Databases**, expanda la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , expanda **Tablas** y a continuación expanda la tabla **Purchasing.PurchaseOrderHeader**.  
   
-3.  Haga clic con el botón derecho en **Desencadenadores** y, después, seleccione **Nuevo desencadenador**.  
+3.  Haga clic con el botón derecho en **Desencadenadores**y, después, seleccione **Nuevo desencadenador**.  
   
-4.  En el menú **Consulta** , haga clic en **Especificar valores para parámetros de plantilla**. También puede pulsar (Ctrl+Mayús+M) para abrir el cuadro de diálogo **Especificar valores para parámetros de plantilla**.  
+4.  En el menú **Consulta** , haga clic en **Especificar valores para parámetros de plantilla**. También puede pulsar (Ctrl+Mayús+M) para abrir el cuadro de diálogo **Especificar valores para parámetros de plantilla** .  
   
 5.  En el cuadro de diálogo **Especificar valores para parámetros de plantilla** , especifique los siguientes valores para los parámetros mostrados.  
   
@@ -97,7 +101,7 @@ caps.handback.revision: 31
   
 10. Para ver el desencadenador DML que aparece en el Explorador de objetos, haga clic con el botón derecho en **Desencadenadores** y seleccione **Actualizar**.  
   
- [Antes de empezar](#Top)  
+ [Antes de comenzar](#Top)  
   
 ###  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
@@ -136,6 +140,6 @@ caps.handback.revision: 31
     END;  
     ```  
   
-##  <a name="PowerShellProcedure"></a> [Antes de empezar](#Top)  
+##  <a name="PowerShellProcedure"></a> [Antes de comenzar](#Top)  
   
   

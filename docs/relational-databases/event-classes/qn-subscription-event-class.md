@@ -1,27 +1,31 @@
 ---
-title: "QN:Subscription (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clases de eventos [SQL Server], QN:Subscription"
+title: Clase de eventos QN:Subscription | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event classes [SQL Server], QN:Subscription
 ms.assetid: 4916167e-8541-43b4-900e-ec8e6adcbc34
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 974995d2e76e47234003981115e08d10428182dd
+ms.lasthandoff: 04/11/2017
+
 ---
-# QN:Subscription (clase de eventos)
+# <a name="qnsubscription-event-class"></a>QN:Subscription (clase de eventos)
   El evento QN:Subscription ofrece información acerca de las suscripciones a notificaciones.  
   
-## Columnas de datos de la clase de eventos QN:Subscription  
+## <a name="qnsubscription-event-class-data-columns"></a>Columnas de datos de la clase de eventos QN:Subscription  
   
 |Columna de datos|Tipo|Descripción|Número de columna|Filtrable|  
 |-----------------|----------|-----------------|-------------------|----------------|  

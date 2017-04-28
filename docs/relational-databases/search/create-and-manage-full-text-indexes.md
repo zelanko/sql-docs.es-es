@@ -1,131 +1,205 @@
 ---
-title: "Crear y administrar &#237;ndices de texto completo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "índices de texto completo [SQL Server], acerca de"
+title: "Creación y administración de índices de texto completo | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 33ac4c4c97735b494db016df17405eaff9b848c6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear y administrar &#237;ndices de texto completo
-  El motor de búsqueda de texto completo utiliza la información de los índices de texto completo para compilar las consultas de texto completo que pueden buscar rápidamente en una tabla palabras o combinaciones de palabras determinadas. Un índice de texto completo almacena información sobre las palabras relevantes y su ubicación en una o varias columnas de la tabla de una base de datos. Un índice de texto completo es un tipo especial de índice funcional basado en token que el motor de texto completo genera y mantiene para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El proceso de creación de un índice de texto completo difiere de la creación de otros tipos de índice. En lugar de crear una estructura de árbol B basada en un valor almacenado en una fila determinada, el motor de texto completo genera una estructura de índice invertida, apilada y comprimida que se basa en tokens individuales del texto que se indiza.  El tamaño de un índice de texto completo solo está limitado por los recursos de memoria disponibles del equipo en el que se ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="create-and-manage-full-text-indexes"></a>Crear y administrar índices de texto completo
+En este tema se describe cómo crear, rellenar y administrar índices de texto completo en SQL Server.
   
- A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], los índices de texto completo se integran con el motor de base de datos, en lugar de residir en el sistema de archivos como en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para una base de datos nueva, el catálogo de texto completo es ahora un objeto virtual que no pertenece a ningún grupo de archivos; es simplemente un concepto lógico que hace referencia al grupo de índices de texto completo. Debe tener en cuenta que, durante la actualización de una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], para cualquier catálogo de texto completo que contenga archivos de datos, se crea un nuevo grupo de archivos. Para obtener más información, vea [Actualizar la búsqueda de texto completo](../../relational-databases/search/upgrade-full-text-search.md).  
+## <a name="prerequisite---create-a-full-text-catalog"></a>Requisito previo: crear un catálogo de texto completo
+Antes de poder crear un índice de texto completo, necesita tener un catálogo de texto completo. El catálogo es un contenedor virtual de uno o más índices de texto completo. Para obtener más información, vea [Creación y administración de catálogos de texto completo](../../relational-databases/search/create-and-manage-full-text-catalogs.md).
   
-> [!NOTE]  
->  En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, el motor de texto completo reside en el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en lugar de en un servicio independiente. Al integrar el motor de texto completo en el motor de base de datos, se mejora la capacidad de administración de texto completo, la optimización de consultas mixtas y el rendimiento total.  
-  
- Solo se permite un índice de texto completo por cada tabla. Para crear un índice de texto completo en una tabla, ésta debe tener una única columna que no contenga valores NULL. Puede crear un índice de texto completo en columnas de tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** y **varbinary(max)**, que se pueden indexar para efectuar una búsqueda de texto completo. Si se crea un índice de texto completo en una columna cuyo tipo de datos es **varbinary**, **varbinary(max)**, **image** o **xml**, deberá especificar una columna de tipo. Una *columna de tipo* es una columna de tabla en la que se almacena la extensión de archivo (.doc, .pdf, .xls, etc.) del documento en cada fila.  
-  
- El proceso para crear y mantener un índice de texto completo se denomina *rellenado* (o *rastreo*). Hay tres tipos de rellenado del índice de texto completo: completo, basado en el seguimiento de cambios y basado en una marca de tiempo incremental. Para obtener más información, vea [Rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).  
-  
-##  <a name="tasks"></a> Tareas comunes  
- **Para crear un índice de texto completo**  
+##  <a name="tasks"></a> Crear, modificar o quitar un índice de texto completo  
+### <a name="create-a-full-text-index"></a>Crear un índice de texto completo  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)  
   
- **Para alterar un índice de texto completo**  
+### <a name="alter-a-full-text-index"></a>Alterar un índice de texto completo
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
- **Para quitar un índice de texto completo**  
+### <a name="drop-a-full-text-index"></a>Quitar un índice de texto completo 
   
--   [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)  
+-   [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)
+
+## <a name="populate-a-full-text-index"></a>Rellenar un índice de texto completo
+El proceso para crear y mantener un índice de texto completo se denomina *rellenado* (o *rastreo*). Hay tres tipos de rellenado de índice de texto completo:
+-   Rellenado completo
+-   Rellenado basado en el seguimiento de cambios
+-   Rellenado incremental basado en una marca de tiempo
+
+Para obtener más información, vea [Rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).
+
+##  <a name="view"></a> Ver las propiedades de un índice de texto completo
+### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Ver las propiedades de un índice de texto completo con Transact-SQL
+|Catálogo o vista de administración dinámica|Description|  
+|----------------------------------------|-----------------|  
+|[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|Devuelve una fila por cada referencia de catálogo de texto completo a índice de texto completo.|  
+|[sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)|Contiene una fila para cada columna que forma parte de un índice de texto completo.|  
+|[sys.fulltext_index_fragments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)|Un índice de texto completo utiliza tablas internas denominadas fragmentos de índice de texto completo para almacenar los datos de índice invertidos. Esta vista se puede utilizar para consultar los metadatos sobre estos fragmentos. Esta vista contiene una fila para cada fragmento de índice de texto completo en cada tabla que contiene un índice de texto completo.|  
+|[sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)|Contiene una fila por índice de texto completo de un objeto tabular.|  
+|[sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)|Devuelve información sobre el contenido de un índice de texto completo para la tabla especificada.|  
+|[sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)|Devuelve información sobre el contenido de nivel de documento de un índice de texto completo para la tabla especificada. Una palabra clave determinada puede aparecer en varios documentos.|  
+|[sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)|Devuelve información acerca de los rellenados de índices de texto completo actualmente en progreso.|  
+ 
+### <a name="view-the-properties-of-a-full-text-index-with-management-studio"></a>Ver las propiedades de un índice de texto completo con Management Studio 
+1.  En el Explorador de objetos de Management Studio, expanda el servidor.  
   
- [En este tema](#top)  
+2.  Expanda **Bases de datos**y, después, la base de datos que contiene el índice de texto completo.  
   
-##  <a name="structure"></a> Estructura de los índices de texto completo  
- Para comprender el funcionamiento del motor de texto completo, es necesario entender la estructura de un índice de texto completo. En este tema se utiliza el extracto siguiente de la tabla **Document** de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] como tabla de ejemplo. Este extracto muestra solo dos columnas, **DocumentID** y **Title** , y tres filas de la tabla.  
+3.  Expanda **Tablas**.  
   
- En este ejemplo se presupone que se ha creado un índice de texto completo en la columna **Title**.  
+4.  Haga clic con el botón derecho en la tabla en la que esté definido el índice de texto completo, seleccione **Índice de texto completo**y, en el menú contextual **Índice de texto completo** , haga clic en **Propiedades**. De esta forma se abre el cuadro de diálogo **Propiedades del índice de texto completo** .  
   
-|DocumentID|Title|  
-|----------------|-----------|  
-|1|Crank Arm and Tire Maintenance|  
-|2|Front Reflector Bracket and Reflector Assembly 3|  
-|3|Front Reflector Bracket Installation|  
+5.  En el panel **Seleccionar una página** , puede seleccionar cualquiera de las páginas siguientes:  
   
- Por ejemplo, en la tabla siguiente, en la que se muestra el fragmento 1, aparece el contenido del índice de texto completo creado en la columna **Title** de la tabla **Document**. Los índices de texto completo contienen más información que la que se presenta en esta tabla. La tabla es una representación lógica de un índice de texto completo y se proporciona solo como demostración. Las filas están almacenadas en un formato comprimido para optimizar el uso del disco.  
+    |Página|Description|  
+    |----------|-----------------|  
+    |**General**|Muestra las propiedades básicas de un índice de texto completo. Entre estas propiedades se incluyen varias propiedades modificables y varias propiedades invariables, como el nombre de base de datos, el nombre de tabla y el nombre de columna de clave de texto completo. Las propiedades modificables son:<br /><br /> **Lista de palabras irrelevantes de índice de texto completo**<br /><br /> **Indexación de texto completo habilitada**<br /><br /> **Seguimiento de los cambios**<br /><br /> **Lista de propiedades de búsqueda**<br /><br />Para obtener más información, vea [Propiedades del índice de texto completo &#40;página General&#41;](http://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f).|  
+    |**Columnas**|Muestra las columnas de tabla que están disponibles para la indización de texto completo. La columna o columnas seleccionadas son de índices de texto completo. Puede seleccionar tantas columnas disponibles como desee incluir en el índice de texto completo. Para obtener más información, vea [Propiedades del índice de texto completo &#40;página Columnas&#41;](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35).|  
+    |**Programaciones**|Utilice esta página para crear o administrar programaciones para un trabajo del Agente SQL Server que inicie un rellenado de tabla incremental para los rellenados del índice de texto completo. Para obtener más información, vea [Rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Nota: Después de salir del cuadro de diálogo **Propiedades del índice de texto completo** , cualquier programación que se cree se asociará a un trabajo del Agente SQL Server (Iniciar rellenado incremental de tablas en *nombre_basededatos*.*nombre_tabla*).|  
   
- Observe que los datos se han invertido en comparación con los documentos originales. La inversión se produce porque las palabras clave se asignan a los identificadores del documento. Por esta razón, se suele hacer referencia a un índice de texto completo como índice invertido.  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] para guardar cualquier cambio y salir del cuadro de diálogo **Propiedades del índice de texto completo**.  
   
- Observe también que la palabra clave "y" se ha quitado del índice de texto completo. Se hace esto porque "y" es una palabra irrelevante y quitar las palabras irrelevantes de un índice de texto completo puede conllevar un ahorro sustancial en el espacio en disco y mejorar por tanto el rendimiento de las consultas. Para obtener más información sobre las palabras irrelevantes, vea [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
+##  <a name="props"></a> Ver las propiedades de tablas y columnas indexadas  
+ Varias de las funciones de [!INCLUDE[tsql](../../includes/tsql-md.md)], como OBJECTPROPERTYEX, se pueden usar para obtener el valor de diversas propiedades de indización de texto completo. Esta información es útil para administrar y solucionar problemas de la búsqueda de texto completo.  
   
- **Fragmento 1**  
+ En la siguiente tabla se enumeran las propiedades de texto completo relacionadas con las tablas y columnas indexadas y sus funciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] relacionadas.  
   
-|Palabra clave|ColId|DocId|Repetición|  
-|-------------|-----------|-----------|----------------|  
-|Crank|1|1|1|  
-|Arm|1|1|2|  
-|Tire|1|1|4|  
-|Mantenimiento|1|1|5|  
-|Front|1|2|1|  
-|Front|1|3|1|  
-|Reflector|1|2|2|  
-|Reflector|1|2|5|  
-|Reflector|1|3|2|  
-|Bracket|1|2|3|  
-|Bracket|1|3|3|  
-|Ensamblado|1|2|6|  
-|3|1|2|7|  
-|Installation|1|3|4|  
+|Propiedad|Descripción|Función|  
+|--------------|-----------------|--------------|  
+|**FullTextTypeColumn**|TYPE COLUMN de la tabla que contiene la información del tipo de documento de la columna.|[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)|  
+|**IsFulltextIndexed**|Si una columna se ha habilitado para la indización de texto completo.|COLUMNPROPERTY|  
+|**IsFulltextKey**|Si el índice es la clave de texto completo de una tabla.|[INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md)|  
+|**TableFulltextBackgroundUpdateIndexOn**|Si una tabla tiene actualización de índices de texto completo en segundo plano.|[OBJECTPROPERTYEX](../../t-sql/functions/objectpropertyex-transact-sql.md)|  
+|**TableFulltextCatalogId**|Identificador del catálogo de texto completo en el que residen los datos de índice de texto completo para la tabla.|OBJECTPROPERTYEX|  
+|**TableFulltextChangeTrackingOn**|Si una tabla tiene habilitado el seguimiento de cambios de texto completo.|OBJECTPROPERTYEX|  
+|**TableFulltextDocsProcessed**|Número de filas procesadas desde el comienzo de la indización de texto completo.|OBJECTPROPERTYEX|  
+|**TableFulltextFailCount**|Número de filas no indizadas por Búsqueda de texto completo.|OBJECTPROPERTYEX|  
+|**TableFulltextItemCount**|Número de filas para las que se crearon índices de texto completo correctamente.|OBJECTPROPERTYEX|  
+|**TableFulltextKeyColumn**|Proporciona el identificador de la columna de clave única de texto completo.|OBJECTPROPERTYEX|  
+|**TableFullTextMergeStatus**|Si una tabla que tiene un índice de texto completo se está combinando actualmente.|OBJECTPROPERTYEX|  
+|**TableFulltextPendingChanges**|Número de entradas de seguimiento de cambios pendientes de procesamiento.|OBJECTPROPERTYEX|  
+|**TableFulltextPopulateStatus**|Estado del rellenado de una tabla de texto completo.|OBJECTPROPERTYEX|  
+|**TableHasActiveFulltextIndex**|Si la tabla tiene un índice de texto completo activo.|OBJECTPROPERTYEX|  
   
- La columna **Keyword** contiene una representación de un solo token extraído durante la indización. Los separadores de palabras determinan en qué consiste un token.  
+##  <a name="key"></a> Obtener información sobre la columna de clave de texto completo  
+ Normalmente, el resultado de las funciones de valores de conjunto de filas CONTAINSTABLE o FREETEXTTABLE tiene que combinarse con la tabla base. En esos casos, necesita conocer el nombre de la columna de clave única. Puede consultar si un índice único determinado se utiliza como clave de texto completo y obtener el identificador de la columna de clave de texto completo.  
   
- La columna **ColId** contiene un valor correspondiente a una determinada tabla y columna indexada de texto completo.  
+### <a name="determine-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>Determinar si un índice único determinado se utiliza como columna de clave de texto completo  
   
- La columna **DocId** contiene valores de un entero de ocho bytes que se asigna a un determinado valor de clave de texto completo en una tabla indexada de texto completo. Esta asignación es necesaria cuando la clave de texto completo no es de un tipo de datos enteros. En casos como este, las asignaciones entre los valores de clave de texto completo y los valores de **DocId** se mantienen en una tabla independiente denominada tabla de asignación de DocId. Para consultar estas asignaciones, use el procedimiento almacenado del sistema [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Para satisfacer una condición de búsqueda, los valores de DocId de la tabla anterior tienen que combinarse con la tabla de asignaciones de DocId para recuperar las filas de la tabla base que se consulta. Si el valor de la clave de texto completo de la tabla base es de un tipo entero, el valor actúa directamente como DocId y no se necesita ninguna asignación. Por consiguiente, utilizar valores de clave de texto completo enteros puede ayudar a optimizar las consultas de texto completo.  
+Utilice una instrucción [SELECT](../../t-sql/queries/select-transact-sql.md) para llamar a la función [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) . En la llamada a la función, use la función OBJECT_ID para convertir el nombre de la tabla (*nombre_tabla*) en el identificador de tabla, especifique el nombre de un índice único para la tabla y especifique la propiedad del índice **IsFulltextKey** como sigue:  
   
- La columna **Occurrence** contiene un valor entero. Para cada valor de DocId hay una lista de valores de repetición correspondientes a las posiciones relativas de una palabra clave determinada en DocId. Los valores de repetición son útiles para determinar las coincidencias de frases o de proximidad, por ejemplo, frases que tienen valores de repetición adyacentes. También son útiles para calcular las puntuaciones de importancia; por ejemplo, el número de repeticiones de una palabra clave en una columna DocId se puede utilizar para determinar la puntuación.  
+```  
+SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  
+```  
   
- [En este tema](#top)  
+ Esta instrucción devuelve el valor 1 si el índice se usa para exigir la exclusividad de la columna de clave de texto completo; de lo contrario, se devuelve 0.  
   
-##  <a name="fragments"></a> Fragmentos de índices de texto completo  
- El índice de texto completo lógico normalmente se divide entre varias tablas internas. Cada tabla interna se conoce como un fragmento del índice de texto completo. Algunos de estos fragmentos podrían contener datos más recientes que otros. Por ejemplo, si un usuario actualiza la fila siguiente cuyo DocId es 3 y la tabla se somete automáticamente a seguimiento de los cambios, se crea un fragmento nuevo.  
+ **Ejemplo**  
   
-|DocumentID|Title|  
-|----------------|-----------|  
-|3|Rear Reflector|  
+ El ejemplo siguiente consulta si el índice `PK_Document_DocumentID` se usa para exigir la exclusividad de la columna de clave de texto completo como sigue:  
   
- En el ejemplo siguiente, que muestra el fragmento 2, el fragmento contiene los datos más recientes sobre el DocId 3 comparados con el fragmento 1. Por consiguiente, cuando el usuario consulta "Rear Reflector", se usan los datos del fragmento 2 correspondientes a DocId 3. Cada fragmento se marca con una marca de tiempo de creación que se puede consultar usando la vista de catálogo [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md).  
+```  
+USE AdventureWorks  
+GO  
+SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID',  'IsFulltextKey' )  
+```  
   
- **Fragmento 2**  
+ Este ejemplo devuelve 1 si el índice `PK_Document_DocumentID` se utiliza para exigir la exclusividad de la columna de clave de texto completo. De lo contrario, devuelve 0 o NULL. NULL implica que está usando un nombre de índice no válido, el nombre de índice no corresponde a la tabla, la tabla no existe, etcétera.  
   
-|Palabra clave|ColId|DocId|Occ|  
-|-------------|-----------|-----------|---------|  
-|Rear|1|3|1|  
-|Reflector|1|3|2|  
+### <a name="find-the-identifier-of-the-full-text-key-column"></a>Buscar el identificador de la columna de clave de texto completo  
   
- Como se puede ver en el fragmento 2, las consultas de texto completo tienen que consultar cada fragmento internamente y descartar las entradas más antiguas. Por consiguiente, demasiados fragmentos del índice de texto completo pueden conducir a una degradación sustancial del rendimiento de las consultas. Para reducir el número de fragmentos, reorganice el catálogo de texto completo mediante la opción REORGANIZE de la instrucción [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] . Esta instrucción lleva a cabo una *combinación maestra*, que combina todos los fragmentos en un único fragmento mayor y quita todas las entradas obsoletas del índice de texto completo.  
+Todas las tablas habilitadas para texto completo tienen una columna que se usa para aplicar las filas únicas de la tabla (*columna de clave* *única*). La propiedad **TableFulltextKeyColumn** obtenida mediante la función OBJECTPROPERTY proporciona la identidad de esta columna de clave única.  
+ 
+Para obtener este identificador, puede utilizar una instrucción SELECT con el fin de llamar a la función OBJECTPROPERTYEX. Use la función OBJECT_ID para convertir el nombre de la tabla (*nombre_tabla*) en el identificador de tabla y especificar la propiedad **TableFulltextKeyColumn** como sigue:  
   
- Después de la reorganización, el índice del ejemplo contendría las filas siguientes:  
+```  
+SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 'Column Identifier';  
+```  
   
-|Palabra clave|ColId|DocId|Occ|  
-|-------------|-----------|-----------|---------|  
-|Crank|1|1|1|  
-|Arm|1|1|2|  
-|Tire|1|1|4|  
-|Mantenimiento|1|1|5|  
-|Front|1|2|1|  
-|Rear|1|3|1|  
-|Reflector|1|2|2|  
-|Reflector|1|2|5|  
-|Reflector|1|3|2|  
-|Bracket|1|2|3|  
-|Ensamblado|1|2|6|  
-|3|1|2|7|  
+ **Ejemplos**  
   
- [En este tema](#top)  
+ En el ejemplo siguiente se devuelve el identificador de la columna de clave de texto completo o NULL. NULL implica que está usando un nombre de índice no válido, el nombre de índice no corresponde a la tabla, la tabla no existe, etcétera.  
+  
+```  
+USE AdventureWorks;  
+GO  
+SELECT OBJECTPROPERTYEX(OBJECT_ID('Production.Document'), 'TableFulltextKeyColumn');  
+GO  
+```  
+  
+ En el ejemplo siguiente se muestra cómo usar el identificador de la columna de clave única para obtener el nombre de la columna.  
+  
+```  
+USE AdventureWorks;  
+GO  
+DECLARE @key_column sysname  
+SET @key_column = Col_Name(Object_Id('Production.Document'),  
+ObjectProperty(Object_id('Production.Document'),  
+'TableFulltextKeyColumn')   
+)  
+SELECT @key_column AS 'Unique Key Column';  
+GO  
+```  
+  
+ Este ejemplo devuelve una columna de conjunto de resultados denominada `Unique Key Column`, que muestra una única fila que contiene el nombre de la columna de clave única de la tabla Document, DocumentID. Tenga en cuenta que, si esta consulta contuviera un nombre de índice no válido, el nombre del índice no correspondiera a la tabla, la tabla no existiera, etc., devolvería NULL.  
+
+## <a name="index-varbinarymax-and-xml-columns"></a>Indexar columnas varbinary(max) y xml  
+ Si una columna **varbinary(max)**, **varbinary**o **xml** está indexada con texto completo, se puede consultar con los predicados de texto completo (CONTAINS y FREETEXT) y las funciones (CONTAINSTABLE y FREETEXTTABLE), igual que cualquier otra columna indexada de texto completo.
+   
+### <a name="index-varbinarymax-or-varbinary-data"></a>Indexar datos varbinary(máximo) o varbinary  
+ Una sola columna **varbinary(max)** o **varbinary** puede almacenar muchos tipos de documentos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite cualquier tipo de documento para el que tenga un filtro instalado que esté disponible en el sistema operativo. La extensión de archivo del documento identifica el tipo de cada documento. Por ejemplo, para la extensión de archivo .doc, la búsqueda de texto completo utiliza el filtro que admite los documentos de Microsoft Word. Para obtener una lista de los tipos de documentos disponibles, consulte la vista de catálogo [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  
+  
+Observe que el motor de búsqueda de texto completo puede aprovechar los filtros existentes que se instalan en el sistema operativo. Para poder utilizar los separadores de palabras, los lematizadores y los filtros del sistema operativo, debe cargarlos en la instancia del servidor, como sigue:  
+  
+```tsql  
+EXEC sp_fulltext_service @action='load_os_resources', @value=1  
+```  
+  
+Para crear un índice de texto completo en una columna **varbinary(max)** , el motor de búsqueda de texto completo necesita tener acceso a las extensiones de archivo de los documentos en la columna **varbinary(max)** . Esta información debe almacenarse en una columna de la tabla, denominada columna de tipo, que debe estar asociada a la columna **varbinary(max)** en el índice de texto completo. Al indizar un documento, el motor de búsqueda de texto completo usa la extensión de archivo de la columna de tipo para identificar qué filtro usar.  
+   
+### <a name="index-xml-data"></a>Indexar Datos xml  
+ Una columna del tipo de datos **xml** solo almacena los documentos y fragmentos XML, y solo se usa el filtro XML para los documentos. Por consiguiente, una columna de tipo es innecesaria. En las columnas **xml** , el índice de texto completo indexa el contenido de los elementos XML, pero omite el formato XML. Los valores de los atributos se incluyen en el índice de texto completo a menos que sean valores numéricos. Las etiquetas de elemento se utilizan como límites de token. Se admiten fragmentos y documentos con formato XML o HTML correcto que contengan varios idiomas.  
+  
+ Para obtener más información sobre cómo indexar y consultar en una columna **xml**, vea [Usar la búsqueda de texto completo con columnas XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
+  
+##  <a name="disable"></a> Deshabilitar o volver a habilitar tull indización de texto para una tabla   
+ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], todas las bases de datos creadas por el usuario están habilitadas para texto completo de forma predeterminada. Además, una tabla individual se habilitará automáticamente para la indización de texto completo en cuanto se cree un índice de texto completo en la misma y se agregue una columna al índice. Una tabla se deshabilitará automáticamente para la indización de texto completo cuando se quite la última columna de su índice de texto completo.  
+  
+ En una tabla que tiene un índice de texto completo, se puede deshabilitar o volver a habilitar manualmente una tabla para la indización de texto completo utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+
+1.  Expanda el grupo de servidores, expanda **Bases de datos**y luego expanda la base de datos que contenga la tabla que quiera habilitar para la indexación de texto completo.  
+  
+2.  Expanda **Tablas**y haga clic con el botón derecho en la tabla que quiere deshabilitar o volver a habilitar para la indexación de texto completo.  
+  
+3.  Seleccione **Índice de texto completo**y luego haga clic en **Deshabilitar índice de texto completo** o en **Habilitar índice de texto completo**.  
+  
+##  <a name="remove"></a> Quitar un índice de texto completo de una tabla  
+  
+1.  En el Explorador de objetos, haga clic con el botón secundario en la tabla que contiene el índice de texto completo que desea eliminar.  
+  
+2.  Seleccione **Eliminar índice de texto completo**.  
+  
+3.  Cuando se le pida, haga clic en **Aceptar** para confirmar que quiere eliminar el índice de texto completo.  
   
   

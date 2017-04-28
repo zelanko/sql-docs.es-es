@@ -1,36 +1,40 @@
 ---
-title: "Pol&#237;gono | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "subtipos de Geometry [SQL Server]"
-  - "Subtipo de geometría polígono [SQL Server]"
+title: Polygon | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- geometry subtypes [SQL Server]
+- Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08b68a58ad6d835349031de2dcf5c2dea215d188
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pol&#237;gono
+# <a name="polygon"></a>Polígono
   Un **Polygon** es una superficie bidimensional almacenada como una secuencia de puntos que definen un anillo delimitador exterior y cero o más anillos interiores.  
   
-## Instancias de Polygon  
+## <a name="polygon-instances"></a>Instancias de Polygon  
  Una instancia de **Polygon** se puede formar a partir de un anillo que tenga al menos tres puntos distintos. Una instancia de **Polygon** también puede estar vacía.  
   
  Los límites de una instancia de **Polygon** los define su anillo exterior junto con los anillos interiores que tenga. El espacio encerrado dentro de los anillos define el interior de la instancia de **Polygon**.  
   
  En la ilustración siguiente se muestran ejemplos de instancias de **Polygon** .  
   
- ![Ejemplos de instancias Polygon de geometry](../../relational-databases/spatial/media/polygon.png "Ejemplos de instancias Polygon de geometry")  
+ ![Ejemplos de instancias Polygon de geometry](../../relational-databases/spatial/media/polygon.gif "Ejemplos de instancias Polygon de geometry")  
   
  Como se muestra en la ilustración:  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 27
   
 3.  La figura 3 es una instancia de **Polygon** válida porque la intersección de sus anillos interiores se realiza en un solo punto tangente.  
   
-### Instancias aceptadas  
+### <a name="accepted-instances"></a>Instancias aceptadas  
  Las instancias aceptadas de **Polygon** son las instancias que pueden almacenarse en una variable de tipo **geometry** o **geography** sin generar una excepción. Se aceptan las siguientes instancias de **Polygon** :  
   
 -   Una instancia vacía de **Polygon** .  
@@ -65,9 +69,9 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';  
 ```  
   
- Como muestran `@g4` y `@g5`, una instancia aceptada de **Polygon** puede no ser una instancia de **Polygon** válida. `@g5` también muestra que una instancia de Polygon solo necesita contener un anillo con cuatro puntos cualquiera para que se acepte.  
+ Como muestran `@g4` y `@g5` , una instancia aceptada de **Polygon** puede no ser una instancia de **Polygon** válida. `@g5` también muestra que una instancia de Polygon solo necesita contener un anillo con cuatro puntos cualquiera para que se acepte.  
   
- Los ejemplos siguientes generan una excepción `System.FormatException`, porque las instancias de **Polygon** no se aceptan.  
+ Los ejemplos siguientes generan una excepción `System.FormatException` , porque las instancias de **Polygon** no se aceptan.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((1 1, 3 3, 1 1))';  
@@ -80,7 +84,7 @@ DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 5))';
 DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))';  
 ```  
   
-### Instancias válidas  
+### <a name="valid-instances"></a>Instancias válidas  
  Los anillos interiores de una instancia de **Polygon** pueden tocarse a sí mismos y unos con otros en puntos tangentes únicos, pero si dichos anillos se cruzan, la instancia de **Polygon** no es válida.  
   
  En el siguiente ejemplo se muestran instancias válidas de **Polygon** .  
@@ -106,7 +110,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.S
   
  `@g1` no es válido porque el anillo interior toca el anillo exterior en dos lugares. `@g2` no es válido porque el segundo anillo interior está dentro del interior del primer anillo interior. `@g3` no es válido porque los dos anillos interiores se tocan en varios puntos consecutivos. `@g4` no es válido porque los interiores de los dos anillos interiores se superponen. `@g5` no es válido porque el anillo exterior no es el primer anillo. `@g6` no es válido porque el anillo no tiene al menos tres puntos distintos.  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente crea una instancia sencilla de `geometry``Polygon` con un hueco y un SRID de 10.  
   
 ```  
@@ -143,9 +147,9 @@ SET @g = @g.MakeValid();
 SELECT @g.ToString()  
 ```  
   
- La instancia de geometry devuelta es `Point(1 3)`.  Si el objeto `Polygon` proporcionado es `POLYGON((1 3, 1 5, 1 3, 1 3))`, entonces `MakeValid()` devolverá `LINESTRING(1 3, 1 5)`.  
+ La instancia de geometry devuelta es `Point(1 3)`.  Si el objeto `Polygon` proporcionado es `POLYGON((1 3, 1 5, 1 3, 1 3))` , entonces `MakeValid()` devolverá `LINESTRING(1 3, 1 5)`.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [STArea &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
  [STExteriorRing &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stexteriorring-geometry-data-type.md)   
  [STNumInteriorRing &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stnuminteriorring-geometry-data-type.md)   

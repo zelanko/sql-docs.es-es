@@ -1,31 +1,35 @@
 ---
-title: "LineString | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Subtipo de Linestring de Geometry [SQL Server]"
-  - "subtipos de Geometry [SQL Server]"
+title: LineString | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- LineString geometry subtype [SQL Server]
+- geometry subtypes [SQL Server]
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9132c20fb46f36511a781c934026ebf01503375d
+ms.lasthandoff: 04/11/2017
+
 ---
-# LineString
+# <a name="linestring"></a>LineString
   **LineString** es un objeto unidimensional que representa una secuencia de puntos y los segmentos de línea que los conectan.  
   
-## Instancias de LineString  
+## <a name="linestring-instances"></a>Instancias de LineString  
  En la ilustración siguiente se muestran ejemplos de instancias de **LineString** .  
   
- ![Ejemplos de instancias LineString de geometry](../../relational-databases/spatial/media/linestring.png "Ejemplos de instancias LineString de geometry")  
+ ![Ejemplos de instancias LineString de geometry](../../relational-databases/spatial/media/linestring.gif "Ejemplos de instancias LineString de geometry")  
   
  Como se muestra en la ilustración:  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 24
   
 -   La figura 4 es una instancia de **LineString** cerrada y no sencilla; por ello, no es un anillo.  
   
-### Instancias aceptadas  
+### <a name="accepted-instances"></a>Instancias aceptadas  
  Las instancias de **LineString** aceptadas se pueden especificar en una variable geometry, pero puede que no sean instancias de **LineString** válidas. Los siguientes criterios se deben cumplir para que una instancia de **LineString** sea aceptada. La instancia de estar formada como mínimo por dos puntos o debe estar vacía. Se aceptan las siguientes instancias de LineString.  
   
 ```  
@@ -46,7 +50,7 @@ DECLARE @g2 geometry = 'LINESTRING(1 1,2 3,4 8, -6 3)';
 DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';  
 ```  
   
- `@g3` muestra que se puede aceptar una instancia de **LineString**, pero no es válida.  
+ `@g3` muestra que se puede aceptar una instancia de **LineString** , pero no es válida.  
   
  No se acepta la siguiente instancia de **LineString** . Producirá una `System.FormatException`.  
   
@@ -54,7 +58,7 @@ DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
-### Instancias válidas  
+### <a name="valid-instances"></a>Instancias válidas  
  Para que una instancia de **LineString** sea válida debe cumplir los siguientes criterios.  
   
 1.  La instancia de **LineString** debe ser aceptada.  
@@ -85,7 +89,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
 > [!WARNING]  
 >  La detección de superposiciones de **LineString** se basa en los cálculos de coma flotante, que no son exactos.  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se muestra cómo crear una instancia de `geometry``LineString` con tres puntos y un SRID de 0:  
   
 ```  
@@ -125,7 +129,7 @@ LINESTRING(1 3, 1 3) is not a valid LineString
 POINT(1 3) is a valid Point.  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [STLength &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STStartPoint &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/ststartpoint-geometry-data-type.md)   
  [STEndpoint &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stendpoint-geometry-data-type.md)   

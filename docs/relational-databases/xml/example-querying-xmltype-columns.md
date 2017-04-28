@@ -1,27 +1,31 @@
 ---
-title: "Ejemplo: Consultar columnas de tipo XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Modo RAW, consultar el ejemplo de XML"
+title: 'Ejemplo: consultar columnas de tipo XML | Microsoft Docs'
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RAW mode, querying XML example
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c4b6c214f3097fce58d3f2ac131642503c62641
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ejemplo: Consultar columnas de tipo XML
-  La consulta siguiente incluye columnas de tipo **xml** . La consulta recupera el identificador, el nombre y los pasos de fabricación del modelo de producto en la primera ubicación de la columna `Instructions` de tipo **xml**.  
+# <a name="example-querying-xmltype-columns"></a>Ejemplo: Consultar columnas de tipo XML
+  La consulta siguiente incluye columnas de tipo **xml** . La consulta recupera el identificador, el nombre y los pasos de fabricación del modelo de producto en la primera ubicación de la columna `Instructions` de tipo **xml** .  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 USE AdventureWorks2012;  
@@ -75,7 +79,7 @@ go
 </ProductModelData>  
 ```  
   
- En la consulta siguiente se especifica la directiva `ELEMENTS`. Por tanto, el resultado devuelto está centrado en elementos. La opción `XSINIL` especificada junto con la directiva `ELEMENTS` devuelve los elementos <`ManuSteps`>, aunque la columna correspondiente del conjunto de resultados sea NULL.  
+ En la consulta siguiente se especifica la directiva `ELEMENTS` . Por tanto, el resultado devuelto está centrado en elementos. La opción `XSINIL` especificada junto con la directiva `ELEMENTS` devuelve los elementos <`ManuSteps`>, aunque la columna correspondiente del conjunto de resultados sea NULL.  
   
 ```  
 USE AdventureWorks2012;  
@@ -112,7 +116,7 @@ go
 </MyRoot>  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Usar el modo RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

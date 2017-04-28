@@ -1,35 +1,39 @@
 ---
-title: "Referencia de errores y eventos del motor de base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "errores [motor de base de datos de SQL Server]"
-  - "Motor de base de datos [SQL Server], errores"
-  - "eventos [motor de base de datos de SQL Server]"
+title: Referencia de errores y eventos de (motor de base de datos) | Microsoft Docs
+ms.custom: 
+ms.date: 05/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- errors [SQL Server Database Engine]
+- Database Engine [SQL Server], errors
+- events [SQL Server Database Engine]
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 11bb38aa47c0892c6c39dfee35a5f81282aa8fd2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Referencia de errores y eventos del motor de base de datos
+# <a name="errors-and-events-reference-database-engine"></a>Referencia de errores y eventos del motor de base de datos
   Esta sección contiene una selección de mensajes de error del [!INCLUDE[ssDE](../../includes/ssde-md.md)] que necesitan explicarse más detenidamente.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Eventos y errores del motor de base de datos](../../relational-databases/errors-events/database-engine-events-and-errors.md)  
  Describe el formato de los mensajes de error del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y explica cómo visualizarlos y devolverlos a las aplicaciones.  
   
  Proporciona una explicación de los mensajes de error de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , las posibles causas y las medidas que se pueden tomar para corregir el problema.  
   
-## Recursos externos  
+## <a name="external-resources"></a>Recursos externos  
  Si no encuentra la información que está buscando en la documentación del producto ni en Internet, puede formular una pregunta en la comunidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o solicitar ayuda al servicio de soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  En la tabla siguiente se proporcionan vínculos y descripciones de estos recursos.  
@@ -41,3 +45,4 @@ caps.handback.revision: 15
 |[Ayuda y soporte técnico de Microsoft](http://go.microsoft.com/fwlink/?linkid=16419)|Puede utilizar este sitio web para abrir un caso con un profesional de soporte de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
   
   
+

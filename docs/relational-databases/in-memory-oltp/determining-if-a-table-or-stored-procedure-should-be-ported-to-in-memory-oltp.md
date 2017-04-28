@@ -1,29 +1,33 @@
 ---
-title: "Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Analizar, migrar, informes"
-  - "AMR"
+title: Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Analyze, Migrate, Report
+- AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 caps.latest.revision: 39
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a6f70a5be224219a572df858e37ecbfe5f9fde07
+ms.lasthandoff: 04/11/2017
+
 ---
-# Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria
+# <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  El informe de análisis del rendimiento de las transacciones de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] permite evaluar si OLTP en memoria mejorará el rendimiento de la aplicación de base de datos. En el informe también se indicará cuánto trabajo debe hacer para habilitar OLTP en memoria en la aplicación. Después de identificar una tabla basada en disco para convertirla a OLTP en memoria, puede usar el [Asistente de optimización de memoria](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) para que le ayude a migrar la tabla. De manera similar, el [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) le permitirá convertir un procedimiento almacenado en un procedimiento almacenado compilado de forma nativa. Para obtener más información sobre las metodologías de migración, vea [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones sobre la migración](https://msdn.microsoft.com/library/dn673538.aspx).  
+  El informe de análisis del rendimiento de las transacciones de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] permite evaluar si OLTP en memoria mejorará el rendimiento de la aplicación de base de datos. En el informe también se indicará cuánto trabajo debe hacer para habilitar OLTP en memoria en la aplicación. Después de identificar una tabla basada en disco para convertirla a OLTP en memoria, puede usar el [Asistente de optimización de memoria](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)para que le ayude a migrar la tabla. De manera similar, el [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) le permitirá convertir un procedimiento almacenado en un procedimiento almacenado compilado de forma nativa. Para obtener más información sobre las metodologías de migración, vea [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones sobre la migración](https://msdn.microsoft.com/library/dn673538.aspx).  
   
  El informe de análisis del rendimiento de las transacciones se ejecuta directamente en la base de datos de producción, o bien en una base de datos de prueba con una carga de trabajo activa similar a la carga de trabajo de producción.  
   
@@ -40,8 +44,8 @@ caps.handback.revision: 39
   
  El informe de análisis de rendimiento de transacción y los asesores de migración se instalan como parte de SQL Server Management Studio (SSMS) cuando se selecciona **Herramientas de administración - Básica** o **Herramientas de administración - Avanzada** al instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o bien al [descargar SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx).  
   
-## Informes de análisis del rendimiento de las transacciones  
- Puede generar informes de análisis del rendimiento de las transacciones en **Explorador de objetos** haciendo clic con el botón derecho en la base de datos, seleccionando **Informes** y, después, **Informes estándar** e **Información general de análisis del rendimiento de las transacciones**. La base de datos debe tener una carga de trabajo activa o haber ejecutado una recientemente para generar un informe de análisis significativo.  
+## <a name="transaction-performance-analysis-reports"></a>Informes de análisis del rendimiento de las transacciones  
+ Puede generar informes de análisis del rendimiento de las transacciones en **Explorador de objetos** haciendo clic con el botón derecho en la base de datos, seleccionando **Informes**y, después, **Informes estándar**e **Información general de análisis del rendimiento de las transacciones**. La base de datos debe tener una carga de trabajo activa o haber ejecutado una recientemente para generar un informe de análisis significativo.  
   
  El informe de detalles de una tabla consta de tres secciones:  
   
@@ -97,16 +101,16 @@ caps.handback.revision: 39
   
  Para ver información sobre cómo convertir un procedimiento almacenado en un procedimiento almacenado compilado de forma nativa, utilice el Asistente para compilación nativa.  
   
-## Generación de listas de comprobación de migración de OLTP en memoria  
+## <a name="generating-in-memory-oltp-migration-checklists"></a>Generación de listas de comprobación de migración de OLTP en memoria  
  Las listas de comprobación de migración identifican las características de procedimiento almacenado que no son compatibles con las tablas optimizadas en memoria o los procedimientos almacenados compilados de forma nativa o tabla. El Asesor de optimización de memoria y el Asistente para compilación nativa pueden generar una lista de comprobación de una sola tabla basada en disco o un procedimiento almacenado de T-SQL interpretado. También se pueden generar listas de comprobación de varias tablas de migración y procedimientos almacenados de una base de datos.  
   
  Puede generar una lista de comprobación de migración en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando el comando **Generar listas de comprobación de migración de OLTP en memoria** o a través de PowerShell.  
   
  **Pasos para generar una lista de comprobación de migración mediante el comando de la interfaz de usuario**  
   
-1.  En **Explorador de objetos**, haga clic con el botón derecho en una base de datos que no sea la del sistema, en **Tareas** y, después, en **Generar listas de comprobación de migración de OLTP en memoria**.  
+1.  En **Explorador de objetos**, haga clic con el botón derecho en una base de datos que no sea la del sistema, en **Tareas**y, después, en **Generar listas de comprobación de migración de OLTP en memoria**.  
   
-2.  En el cuadro de diálogo Generar listas de comprobación de migración de OLTP en memoria, haga clic en Siguiente para ir a la página **Configurar opciones de generación de lista de comprobación**. En esta página, realice lo siguiente:  
+2.  En el cuadro de diálogo Generar listas de comprobación de migración de OLTP en memoria, haga clic en Siguiente para ir a la página **Configurar opciones de generación de lista de comprobación** . En esta página, realice lo siguiente:  
   
     1.  Escriba una ruta de carpeta en el cuadro **Save checklist to** (Guardar lista de comprobación en).  
   
@@ -169,7 +173,7 @@ caps.handback.revision: 39
   
     -   Un informe de lista de comprobación de migración para <nombre_objeto> es el único informe que hay en la ubicación especificada por folder_path2.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

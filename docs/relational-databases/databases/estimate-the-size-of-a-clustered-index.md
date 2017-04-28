@@ -1,34 +1,38 @@
 ---
-title: "Estimar el tama&#241;o de un &#237;ndice cl&#250;ster | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "asignación de espacio [SQL Server], tamaño de índice"
-  - "tamaño [SQL Server], tablas"
-  - "espacio en disco [SQL Server], índices"
-  - "predecir tamaño de tabla [SQL Server]"
-  - "tamaño de índice [SQL Server]"
-  - "estimar tamaño de tabla"
-  - "espacio [SQL Server], índices"
-  - "índices agrupados, tamaño de tabla"
-  - "índices no agrupados [SQL Server], tamaño de tabla"
-  - "diseñar bases de datos [SQL Server], estimar tamaño"
-  - "calcular tamaño de tabla"
+title: "Estimar el tamaño de un índice agrupado | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- space allocation [SQL Server], index size
+- size [SQL Server], tables
+- disk space [SQL Server], indexes
+- predicting table size [SQL Server]
+- table size [SQL Server]
+- estimating table size
+- space [SQL Server], indexes
+- clustered indexes, table size
+- nonclustered indexes [SQL Server], table size
+- designing databases [SQL Server], estimating size
+- calculating table size
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 caps.latest.revision: 49
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ecae889b68740652ab237201bfad2cde58dd39b5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Estimar el tama&#241;o de un &#237;ndice cl&#250;ster
+# <a name="estimate-the-size-of-a-clustered-index"></a>Estimar el tamaño de un índice clúster
   Los siguientes pasos pueden utilizarse para calcular el espacio necesario para almacenar datos en un índice clúster:  
   
 1.  Calcule el espacio utilizado para almacenar datos en el nivel hoja del índice clúster.  
@@ -37,23 +41,23 @@ caps.handback.revision: 49
   
 3.  Sumar los valores calculados.  
   
-## Paso 1: Calcular el espacio utilizado para almacenar datos en el nivel hoja  
+## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>Paso 1: Calcular el espacio utilizado para almacenar datos en el nivel hoja  
   
 1.  Especifique el número de filas que habrá en la tabla:  
   
-     ***Num_Rows*** = número de filas de la tabla  
+     ***Num_Rows***  = número de filas de la tabla  
   
 2.  Especifique el número de columnas de longitud fija y de longitud variable, y calcule el espacio necesario para su almacenamiento:  
   
      Calcule el espacio que ocupa cada uno de estos grupos de columnas en la fila de datos. El tamaño de una columna depende del tipo y de la longitud especificados para los datos.  
   
-     ***Num_Cols*** = número total de columnas (de longitud fija y variable)  
+     ***Num_Cols***  = número total de columnas (de longitud fija y variable)  
   
-     ***Fixed_Data_Size*** = tamaño total en bytes de todas las columnas de longitud fija  
+     ***Fixed_Data_Size***  = tamaño total en bytes de todas las columnas de longitud fija  
   
-     ***Num_Variable_Cols*** = número de columnas de longitud variable  
+     ***Num_Variable_Cols***  = número de columnas de longitud variable  
   
-     ***Max_Var_Size*** = tamaño máximo en bytes de todas las columnas de longitud variable  
+     ***Max_Var_Size***  = tamaño máximo en bytes de todas las columnas de longitud variable  
   
 3.  Si el índice clúster no es único, tenga en cuenta la columna de *valor de unicidad* :  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 49
   
 4.  Una parte de la fila, conocida como el mapa de bits NULL, se reserva para administrar la nulabilidad en las columnas. Calcule el tamaño:  
   
-     ***Null_Bitmap*** = 2 + ((***Num_Cols*** + 7) / 8)  
+     ***Null_Bitmap***  = 2 + ((***Num_Cols*** + 7) / 8)  
   
      Solo debe utilizarse la parte entera de la expresión anterior; descarte el resto.  
   
@@ -77,12 +81,12 @@ caps.handback.revision: 49
   
      Si hay columnas de longitud variable en la tabla, determine cuánto espacio se utiliza para almacenar las columnas en la fila:  
   
-     ***Variable_Data_Size*** = 2 + (***Num_Variable_Cols*** x 2) + ***Max_Var_Size***  
+     ***Variable_Data_Size***  = 2 + (***Num_Variable_Cols*** x 2) + ***Max_Var_Size***  
   
      Los bytes agregados a ***Max_Var_Size*** son para el seguimiento de cada columna de longitud variable. En esta fórmula se supone que todas las columnas de longitud variable están llenas al 100%. Si prevé que se va a usar un porcentaje inferior del espacio de almacenamiento de columnas de longitud variable, puede ajustar el valor de ***Max_Var_Size*** en función de ese porcentaje para obtener una estimación más precisa del tamaño global de la tabla.  
   
     > [!NOTE]  
-    >  Puede combinar las columnas **varchar**, **nvarchar**, **varbinary** o **sql_variant** que hacen que el ancho total definido para la tabla sea superior a 8060 bytes. La longitud de cada una de estas columnas debe ajustarse al límite de 8000 bytes en columnas **varchar**, **varbinary** o **sql_variant** y de 4000 bytes en columnas **nvarchar**. Sin embargo, el ancho combinado puede superar el límite de 8.060 bytes de una tabla.  
+    >  Puede combinar las columnas **varchar**, **nvarchar**, **varbinary**o **sql_variant** que hacen que el ancho total definido para la tabla sea superior a 8060 bytes. La longitud de cada una de estas columnas debe ajustarse al límite de 8000 bytes en columnas **varchar**, **varbinary**o **sql_variant** y de 4000 bytes en columnas **nvarchar** . Sin embargo, el ancho combinado puede superar el límite de 8.060 bytes de una tabla.  
   
      Si no hay columnas de longitud variable, establezca ***Variable_Data_Size*** en 0.  
   
@@ -94,13 +98,13 @@ caps.handback.revision: 49
   
 7.  Calcule el número de filas por página (8096 bytes libres por página):  
   
-     ***Rows_Per_Page*** = 8096 / (***Row_Size*** + 2)  
+     ***Rows_Per_Page***  = 8096 / (***Row_Size*** + 2)  
   
      Dado que las filas no abarcan varias páginas, el número de filas por página debe redondearse hacia abajo a la fila completa más cercana. El valor 2 de la fórmula representa la entrada de la fila en la matriz de zonas de la página.  
   
 8.  Calcule el número de filas libres reservadas por página, basándose en el valor de [factor de relleno](../../relational-databases/indexes/specify-fill-factor-for-an-index.md) especificado:  
   
-     ***Free_Rows_Per_Page*** = 8096 x ((100 - ***Fill_Factor***) / 100) / (***Row_Size*** + 2)  
+     ***Free_Rows_Per_Page***  = 8096 x ((100 - ***Fill_Factor***) / 100) / (***Row_Size*** + 2)  
   
      El factor de relleno que se utiliza en el cálculo es un valor entero y no un porcentaje. Dado que las filas no abarcan varias páginas, el número de filas por página debe redondearse hacia abajo a la fila completa más cercana. A medida que aumenta el factor de relleno, más datos se almacenan en cada página y menos páginas habrá. El valor 2 de la fórmula representa la entrada de la fila en la matriz de zonas de la página.  
   
@@ -112,22 +116,22 @@ caps.handback.revision: 49
   
 10. Calcule la cantidad de espacio necesario para almacenar los datos en el nivel hoja (8.192 bytes por página):  
   
-     ***Leaf_space_used*** = 8192 x ***Num_Leaf_Pages***  
+     ***Leaf_space_used***  = 8192 x ***Num_Leaf_Pages***  
   
-## Paso 2. Calcular el espacio utilizado para almacenar información de índice  
+## <a name="step-2-calculate-the-space-used-to-store-index-information"></a>Paso 2. Calcular el espacio utilizado para almacenar información de índice  
  Los siguientes pasos pueden utilizarse para calcular el espacio necesario para almacenar los niveles superiores del índice:  
   
 1.  Especifique el número de columnas de longitud fija y variable de la clave de índice, y calcule el espacio necesario para su almacenamiento:  
   
      Las columnas de clave de un índice pueden incluir columnas de longitud fija y de longitud variable. Para estimar el tamaño de las filas de índice de nivel interior, calcule el espacio que ocupa cada uno de estos grupos de columnas en la fila de índice. El tamaño de una columna depende del tipo y de la longitud especificados para los datos.  
   
-     ***Num_Key_Cols*** = número total de columnas de clave (de longitud fija y variable)  
+     ***Num_Key_Cols***  = número total de columnas de clave (de longitud fija y variable)  
   
-     ***Fixed_Key_Size*** = tamaño total en bytes de todas las columnas de clave de longitud fija  
+     ***Fixed_Key_Size***  = tamaño total en bytes de todas las columnas de clave de longitud fija  
   
-     ***Num_Variable_Key_Cols*** = número de columnas de clave de longitud variable  
+     ***Num_Variable_Key_Cols***  = número de columnas de clave de longitud variable  
   
-     ***Max_Var_Key_Size*** = tamaño máximo en bytes de todas las columnas de clave de longitud variable  
+     ***Max_Var_Key_Size***  = tamaño máximo en bytes de todas las columnas de clave de longitud variable  
   
 2.  Tenga en cuenta cualquier columna de valor de unicidad si el índice no es único:  
   
@@ -145,7 +149,7 @@ caps.handback.revision: 49
   
      Si hay columnas que admiten valores NULL en la clave de índice, una parte de la fila de índice se reserva para el mapa de bits NULL. Calcule el tamaño:  
   
-     ***Index_Null_Bitmap*** = 2 + ((número de columnas de la fila de índice + 7) / 8)  
+     ***Index_Null_Bitmap***  = 2 + ((número de columnas de la fila de índice + 7) / 8)  
   
      Solamente debe utilizarse la parte entera de la expresión anterior. Descarte el resto.  
   
@@ -155,7 +159,7 @@ caps.handback.revision: 49
   
      Si hay columnas de longitud variable en el índice, determine cuánto espacio se utiliza para almacenar las columnas en la fila de índice:  
   
-     ***Variable_Key_Size*** = 2 + (***Num_Variable_Key_Cols*** x 2) + ***Max_Var_Key_Size***  
+     ***Variable_Key_Size***  = 2 + (***Num_Variable_Key_Cols*** x 2) + ***Max_Var_Key_Size***  
   
      Los bytes agregados a ***Max_Var_Key_Size*** son para el seguimiento de cada columna de longitud variable. En esta fórmula se supone que todas las columnas de longitud variable están llenas al 100%. Si prevé que se va a usar un porcentaje inferior del espacio de almacenamiento de columnas de longitud variable, puede ajustar el valor de ***Max_Var_Key_Size*** en función de ese porcentaje para obtener una estimación más precisa del tamaño global de la tabla.  
   
@@ -167,13 +171,13 @@ caps.handback.revision: 49
   
 6.  Calcule el número de filas de índice por página (8.096 bytes disponibles por página):  
   
-     ***Index_Rows_Per_Page*** = 8096 / (***Index_Row_Size*** + 2)  
+     ***Index_Rows_Per_Page***  = 8096 / (***Index_Row_Size*** + 2)  
   
      Dado que las filas de índice no abarcan varias páginas, el número de filas de índice por página debe redondearse hacia abajo a la fila completa más cercana. El valor 2 de la fórmula representa la entrada de la fila en la matriz de zonas de la página.  
   
 7.  Calcule el número de niveles del índice:  
   
-     ***Non-leaf_Levels*** = 1 + log (Index_Rows_Per_Page) (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***Non-leaf_Levels***  = 1 + log (Index_Rows_Per_Page) (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
   
      Redondee este valor al número entero más próximo. Este valor no incluye el nivel hoja del índice clúster.  
   
@@ -185,15 +189,15 @@ caps.handback.revision: 49
   
      Redondee cada sumando al número entero más próximo. Como ejemplo sencillo, considere un índice en el que ***Num_Leaf_Pages*** = 1000 e ***Index_Rows_Per_Page*** = 25. El primer nivel de índice por encima del nivel hoja almacena 1000 filas de índice, lo que equivale a una fila de índice por página hoja, y en cada página caben 25 filas de índice. Esto significa que se necesitan 40 páginas para almacenar las 1000 filas de índice. El siguiente nivel del índice debe almacenar 40 filas. Esto significa que necesita 2 páginas. El nivel final del índice debe almacenar 2 filas. Esto significa que necesita 1 página. Todo ello supone 43 páginas de índice no hoja. Si se utilizan estos números en las fórmulas anteriores, el resultado será el siguiente:  
   
-     ***Non-leaf_Levels*** = 1 + log(25) (1000 / 25) = 3  
+     ***Non-leaf_Levels***  = 1 + log(25) (1000 / 25) = 3  
   
      ***Num_Index_Pages*** = 1000/(25^3)+ 1000/(25^2) + 1000/(25^1) = 1 + 2 + 40 = 43, que es el número de páginas que se describe en el ejemplo.  
   
 9. Calcule el tamaño del índice (8.192 bytes por página):  
   
-     ***Index_Space_Used*** = 8192 x ***Num_Index_Pages***  
+     ***Index_Space_Used***  = 8192 x ***Num_Index_Pages***  
   
-## Paso 3. Sumar los valores calculados  
+## <a name="step-3-total-the-calculated-values"></a>Paso 3. Sumar los valores calculados  
  Sume los valores obtenidos en los dos pasos anteriores:  
   
  Tamaño del índice agrupado (bytes) = ***Leaf_Space_Used*** + ***Index_Space_used***  
@@ -210,7 +214,7 @@ caps.handback.revision: 49
   
 -   Valores de objetos grandes (LOB)  
   
-     El algoritmo para determinar exactamente la cantidad de espacio que se usará para almacenar los tipos de datos LOB y los valores **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntext**, **xml** e **image** es complejo. Basta con agregar el tamaño medio de los valores LOB que se esperan, multiplicarlo por ***Num_Rows*** y agregarlo al tamaño total del índice agrupado.  
+     El algoritmo para determinar exactamente la cantidad de espacio que se usará para almacenar los tipos de datos LOB y los valores **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntext**, **xml**e **image** es complejo. Basta con agregar el tamaño medio de los valores LOB que se esperan, multiplicarlo por ***Num_Rows***y agregarlo al tamaño total del índice agrupado.  
   
 -   Compresión  
   
@@ -220,7 +224,7 @@ caps.handback.revision: 49
   
      Para obtener información sobre los requisitos de espacio de las columnas dispersas, vea [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Índices agrupados y no agrupados descritos](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [Calcular el tamaño de una tabla](../../relational-databases/databases/estimate-the-size-of-a-table.md)   
  [Crear índices clúster](../../relational-databases/indexes/create-clustered-indexes.md)   

@@ -1,27 +1,31 @@
 ---
-title: "Clase de eventos Audit Broker Login | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Audit Broker Login, clase de eventos"
+title: Audit Broker Login (clase de eventos) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Audit Broker Login event class
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0b3ba2426634e4cd405d91318cd92de93bfa2c24
+ms.lasthandoff: 04/11/2017
+
 ---
-# Clase de eventos Audit Broker Login
+# <a name="audit-broker-login-event-class"></a>Audit Broker Login, clase de eventos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un evento **Audit Broker Login** para emitir mensajes de auditoría relacionados con la seguridad de transporte de Service Broker.  
   
-## Columnas de datos de la clase de evento Audit Broker Login  
+## <a name="audit-broker-login-event-class-data-columns"></a>Columnas de datos de la clase de evento Audit Broker Login  
   
 |Columna de datos|Tipo|Descripción|Número de columna|Filtrable|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -45,7 +49,7 @@ caps.handback.revision: 30
 |**SPID**|**int**|Identificador de proceso del servidor que SQL Server asigna al proceso relacionado con el cliente.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |**State**|**int**|Indica la ubicación en el código fuente de SQL Server que produjo el evento. Cada lugar en el que se puede producir este evento tiene un código de estado diferente. Un ingeniero de soporte técnico de Microsoft puede utilizar este código de estado para buscar el lugar en que se produjo el evento.|30|No|  
-|**TargetUserName**|**nvarchar**|Estado del inicio de sesión. Una de las siguientes opciones:<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> ERROR<br /><br /> <br /><br /> **Nota:** ISC = Iniciar contexto de seguridad. ASC = Aceptar contexto de seguridad|39|No|  
+|**TargetUserName**|**nvarchar**|Estado del inicio de sesión. Una de las siguientes opciones:<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> ERROR<br /><br /> <br /><br /> **Nota:**ISC = Iniciar contexto de seguridad. ASC = Aceptar contexto de seguridad|39|No|  
 |**TransactionID**|**bigint**|Identificador de la transacción asignado por el sistema.|4|No|  
   
  En la tabla siguiente se presentan los valores de subclase de esta clase de evento.  
@@ -59,7 +63,7 @@ caps.handback.revision: 30
 |5|Authentication Failure|Un evento Error de autenticación indica que Service Broker no puede realizar la autenticación para la conexión debido a un error. En el caso de Autenticación de Windows, este evento indica que Service Broker no puede usar Autenticación de Windows. En el caso de la autenticación basada en certificados, este evento indica que Service Broker no tiene acceso al certificado.|  
 |6|Authorization Failure|Un evento Error de autorización indica que Service Broker ha denegado la autorización para la conexión. Para la autenticación de Windows, este evento informa de que el identificador de seguridad de la conexión no coincide con uno de los usuarios de la base de datos. En el caso de la autenticación basada en certificados, este evento indica que la clave pública entregada en el mensaje no se corresponde con un certificado de la base de datos.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  

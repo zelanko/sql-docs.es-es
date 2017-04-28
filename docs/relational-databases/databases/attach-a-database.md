@@ -1,27 +1,31 @@
 ---
-title: "Adjuntar una base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.attachdatabase.f1"
-helpviewer_keywords: 
-  - "adjuntar bases de datos [SQL Server]"
-  - "adjuntar bases de datos [SQL Server]"
+title: Adjuntar una base de datos | Microsoft Docs
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.attachdatabase.f1
+helpviewer_keywords:
+- database attaching [SQL Server]
+- attaching databases [SQL Server]
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 50e55a131e303a5303059a51797730f8bfab2581
+ms.lasthandoff: 04/11/2017
+
 ---
-# Adjuntar una base de datos
+# <a name="attach-a-database"></a>Adjuntar una base de datos
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   En este tema se describe cómo adjuntar una base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Puede usar esta característica para copiar, mover o actualizar una base de datos de SQL Server.  
@@ -51,9 +55,9 @@ No se recomienda usar separar y adjuntar para el proceso de copia de seguridad y
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para adjuntar una base de datos  
+#### <a name="to-attach-a-database"></a>Para adjuntar una base de datos  
   
-1.  En el Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y, después, haga clic para expandir esa vista de instancia en SSMS.  
+1.  En el Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y, después, haga clic para expandir esa vista de instancia en SSMS.  
   
 2.  Haga clic con el botón derecho en **Bases de datos** y haga clic en **Adjuntar**.  
   
@@ -67,13 +71,13 @@ No se recomienda usar separar y adjuntar para el proceso de copia de seguridad y
      **Bases de datos que se van a adjuntar**  
      Muestra información sobre las bases de datos seleccionadas.  
   
-     \<no column header>  
+     \<ningún encabezado de columna>  
      Muestra un icono que indica el estado de la operación de adjuntar. Los iconos posibles se indican en la descripción de **Estado** , que encontrará más adelante.  
   
      **Ubicación del archivo MDF**  
      Muestra la ruta de acceso y el nombre del archivo MDF seleccionado.  
   
-     **Nombre de la base de datos**  
+     **Database Name**  
      Muestra el nombre de la base de datos.  
   
      **Adjuntar como**  
@@ -123,7 +127,7 @@ No se recomienda usar separar y adjuntar para el proceso de copia de seguridad y
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para adjuntar una base de datos  
+#### <a name="to-attach-a-database"></a>Para adjuntar una base de datos  
   
 1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -147,7 +151,7 @@ No se recomienda usar separar y adjuntar para el proceso de copia de seguridad y
 ##  <a name="FollowUp"></a> Seguimiento: Después de actualizar una base de datos de SQL Server  
  Después de actualizar una base de datos mediante el método de adjuntarla, la base de datos queda disponible inmediatamente y se actualiza automáticamente. Si la base de datos tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, en función del valor de la propiedad del servidor **Opción de actualización de texto completo** . Si la opción de actualización se establece en **Importar** o en **Volver a generar**, los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la importación puede requerir varias horas y volver a generar puede requerir hasta diez veces más. Tenga en cuenta también que si la opción de actualización se establece en **Importar**y no hay disponible ningún catálogo de texto completo, se vuelven a generar los índices de texto completo asociados.  
   
- Si el nivel de compatibilidad de una base de datos de usuario es 100 o superior antes de la actualización, permanece igual después de la misma. Si el nivel de compatibilidad es 90 antes de la actualización, en la base de datos actualizada, el nivel de compatibilidad se establece en 100, que es el nivel de compatibilidad mínimo admitido en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+ Si el nivel de compatibilidad de una base de datos de usuario es 100 o superior antes de la actualización, permanece igual después de la misma. Si el nivel de compatibilidad es 90 antes de la actualización, en la base de datos actualizada, el nivel de compatibilidad se establece en 100, que es el nivel de compatibilidad mínimo admitido en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
   > [!NOTE]
   > Si va a adjuntar una base de datos de una instancia que ejecuta SQL Server 2014 o versiones anteriores que tenían una captura de datos de cambios (CDC) habilitada, también necesitará ejecutar el comando siguiente para actualizar los metadatos de captura de datos de cambios (CDC).
@@ -156,8 +160,9 @@ No se recomienda usar separar y adjuntar para el proceso de copia de seguridad y
   EXEC sys.sp_cdc_vupgrade  
   ``` 
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Separar una base de datos](../../relational-databases/databases/detach-a-database.md)  
   
   
+

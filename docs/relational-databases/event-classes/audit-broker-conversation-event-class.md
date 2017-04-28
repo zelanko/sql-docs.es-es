@@ -1,27 +1,31 @@
 ---
-title: "Audit Broker Conversation (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Audit Broker Conversation, clase de eventos"
+title: Audit Broker Conversation (clase de eventos) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Audit Broker Conversation event class
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9839fc61788b3bbd3070455fac7ba8d3dcfb5e4a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Audit Broker Conversation (clase de eventos)
+# <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation, clase de eventos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un evento **Audit Broker Conversation** para emitir mensajes de auditoría relacionados con la seguridad de diálogo de Service Broker.  
   
-## Columnas de datos de la clase de evento Audit Broker Conversation  
+## <a name="audit-broker-conversation-event-class-data-columns"></a>Columnas de datos de la clase de evento Audit Broker Conversation  
   
 |Columna de datos|Tipo|Descripción|Número de columna|Filtrable|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -34,7 +38,7 @@ caps.handback.revision: 25
 |**EventSubClass**|**int**|Tipo de subclase de evento que proporciona más información acerca de cada clase de evento. En la tabla siguiente se enumeran los valores de subclase de este evento.|21|Sí|  
 |**FileName**|**nvarchar**|Motivo del error de inicio de sesión. Si el inicio de sesión se ha realizado correctamente, esta columna estará vacía.|36|No|  
 |**GUID**|**uniqueidentifier**|Id. de conversación del diálogo. Este identificador se transmite como parte del mensaje y lo comparten ambas partes de la conversación.|54|No|  
-|**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para averiguar el nombre de host, use la función **HOST_NAME**.|8|Sí|  
+|**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para averiguar el nombre de host, use la función **HOST_NAME** .|8|Sí|  
 |**IntegerData**|**int**|Número de fragmento del mensaje.|25|No|  
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario al que pertenece la conexión que generó este evento.|6|Sí|  
@@ -56,7 +60,7 @@ caps.handback.revision: 25
 |3|Firma incorrecta|Broker no pudo comprobar la firma del mensaje proporcionada por el remitente mediante la clave pública de su certificado. Esto puede indicar que el mensaje está dañado o se ha alterado, que los servicios remoto y local no están configurados con el mismo certificado de usuario o que el certificado ha caducado.|  
 |4|Error de ejecución como destino|El usuario de destino no tiene permisos RECEIVE en la cola de destino. Para impedir que los usuarios no autorizados reciban mensajes, Service Broker no pone en cola los mensajes con un usuario de destino que no puede recibir mensajes de la cola, independientemente de si el usuario que ha iniciado el mensaje tiene permiso para poner mensajes en cola o no.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

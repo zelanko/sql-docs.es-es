@@ -1,35 +1,39 @@
 ---
-title: "Deshabilitar &#237;ndices y restricciones | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.disableindexes.f1"
-helpviewer_keywords: 
-  - "índices deshabilitados [SQL Server], operaciones de índice"
-  - "índices no agrupados [SQL Server], deshabilitar"
-  - "índices deshabilitados [SQL Server], directrices"
-  - "índices agrupados, deshabilitar"
-  - "restricciones [SQL Server], deshabilitar"
-  - "índices deshabilitados [SQL Server], ver"
-  - "restricciones FOREIGN KEY, deshabilitar"
-  - "información estadística [SQL Server], índices"
-  - "deshabilitación de índices [SQL Server]"
-  - "vistas indexadas [SQL Server], índices deshabilitados"
+title: "Deshabilitar índices y restricciones | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.disableindexes.f1
+helpviewer_keywords:
+- disabled indexes [SQL Server], index operations
+- nonclustered indexes [SQL Server], disabling
+- disabled indexes [SQL Server], guidelines
+- clustered indexes, disabling
+- constraints [SQL Server], disabling
+- disabled indexes [SQL Server], viewing
+- FOREIGN KEY constraints, disabling
+- statistical information [SQL Server], indexes
+- index disabling [SQL Server]
+- indexed views [SQL Server], disabled indexes
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 02ec61b5f3342ba8c5abd6e5044cd9f6863f6145
+ms.lasthandoff: 04/11/2017
+
 ---
-# Deshabilitar &#237;ndices y restricciones
+# <a name="disable-indexes-and-constraints"></a>Deshabilitar índices y restricciones
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   En este tema se describe cómo deshabilitar un índice o restricciones en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Al deshabilitar un índice, se impide que el usuario pueda tener acceso al mismo y, en el caso de los índices clúster, a los datos de la tabla subyacente. La definición del índice se conserva en los metadatos y las estadísticas de índice se mantienen en índices no clúster. La deshabilitación de un índice clúster o no clúster en una vista elimina físicamente los datos del índice. Al deshabilitar un índice clúster en una tabla, se impide el acceso a los datos, que siguen en la tabla pero dejan de estar disponibles para las operaciones de lenguaje de manipulación de datos (DML) hasta que se quite o recompile el índice.  
@@ -93,7 +97,7 @@ caps.handback.revision: 28
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para deshabilitar un índice  
+#### <a name="to-disable-an-index"></a>Para deshabilitar un índice  
   
 1.  En el Explorador de objetos, haga clic en el signo más para expandir la base de datos que contiene la tabla en la que desea deshabilitar un índice.  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 28
   
 6.  En el cuadro de diálogo **Deshabilitar índices** , compruebe que el índice correcto se encuentra en la cuadrícula **Índices que va a deshabilitar** y haga clic en **Aceptar**.  
   
-#### Para deshabilitar todos los índices de una tabla  
+#### <a name="to-disable-all-indexes-on-a-table"></a>Para deshabilitar todos los índices de una tabla  
   
 1.  En el Explorador de objetos, haga clic en el signo más para expandir la base de datos que contiene la tabla en la que desea deshabilitar los índices.  
   
@@ -128,7 +132,7 @@ caps.handback.revision: 28
  Muestra el nombre de la tabla o vista en la que se ha creado el índice.  
   
  **Tipo de índice**  
- Muestra el tipo de índice: **Agrupado**, **No agrupado**, **Espacial** o **XML**.  
+ Muestra el tipo de índice: **Agrupado**, **No agrupado**, **Espacial**o **XML**.  
   
  **Estado**  
  Muestra el estado de la operación de deshabilitación. Los valores posibles tras la ejecución son:  
@@ -162,7 +166,7 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para deshabilitar un índice  
+#### <a name="to-disable-an-index"></a>Para deshabilitar un índice  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -179,7 +183,7 @@ caps.handback.revision: 28
     DISABLE;  
     ```  
   
-#### Para deshabilitar todos los índices de una tabla  
+#### <a name="to-disable-all-indexes-on-a-table"></a>Para deshabilitar todos los índices de una tabla  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -198,3 +202,4 @@ caps.handback.revision: 28
  Para obtener más información, vea [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
   
+

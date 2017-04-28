@@ -1,28 +1,32 @@
 ---
-title: "Deprecation Announcement (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "degradación [SQL Server], fase anunciada de eventos"
-  - "Deprecation Announcement, clase de eventos"
+title: Deprecation Announcement (clase de eventos) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deprecation [SQL Server], events announced stage
+- Deprecation Announcement event class
 ms.assetid: 46fc578f-3c97-477f-879c-8a1b2cfd9d58
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f937e252123265ac28d215a751fc6419b5fe8dcc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Deprecation Announcement (clase de eventos)
+# <a name="deprecation-announcement-event-class"></a>Deprecation Announcement, clase de eventos
   La clase de eventos **Deprecation Announcement** se produce cuando se usa una característica que se va a quitar de una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero no de la próxima versión principal. Para que sus aplicaciones duren el mayor tiempo posible, debe evitar el uso de características que provoquen la aparición de las clase de eventos **Deprecation Announcement** o **Deprecation Final Support** .  
   
-## Columnas de datos de la clase de eventos Deprecation Announcement  
+## <a name="deprecation-announcement-event-class-data-columns"></a>Columnas de datos de la clase de eventos Deprecation Announcement  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -52,7 +56,7 @@ caps.handback.revision: 27
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Deprecation Final Support (clase de eventos)](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
  [Características desusadas del motor de base de datos de SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  

@@ -1,27 +1,31 @@
 ---
-title: "TM: Commit Tran Completed (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TM: Commit Tran Completed, clase de eventos"
+title: 'TM: Commit Tran Completed, clase de eventos | Microsoft Docs'
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- 'TM: Commit Tran Completed event class'
 ms.assetid: c102de15-f312-42a7-b52a-fc4879cc43aa
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4fa4c1f343187f21169035d0209d2f42259c8812
+ms.lasthandoff: 04/11/2017
+
 ---
-# TM: Commit Tran Completed (clase de eventos)
+# <a name="tm-commit-tran-completed-event-class"></a>TM: Commit Tran Completed, clase de eventos
   La clase de eventos TM: Commit Tran Completed indica que se ha completado una solicitud COMMIT TRANSACTION. La solicitud fue enviada desde el cliente mediante la interfaz de administración de transacciones. La columna EventSubClass indica si se reiniciará una nueva transacción una vez se confirme la transacción actual.  
   
-## Columnas de datos de la clase de eventos TM: Commit Tran Completed  
+## <a name="tm-commit-tran-completed-event-class-data-columns"></a>Columnas de datos de la clase de eventos TM: Commit Tran Completed  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Sí|  
 |----------------------|---------------|-----------------|---------------|---------|  
@@ -50,7 +54,7 @@ caps.handback.revision: 24
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  

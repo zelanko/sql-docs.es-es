@@ -1,34 +1,38 @@
 ---
-title: "Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Seguimiento de SQL, equivalentes de eventos extendidos"
-  - "eventos extendidos [SQL Server], equivalentes de Seguimiento de SQL"
-  - "eventos extendidos [SQL Server], eventos configurables por el usuario"
+title: Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Trace, extended events equivalents
+- extended events [SQL Server], SQL Trace equivalents
+- extended events [SQL Server], user configurable events
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfa6eb722a8dcbd4c3a9e72d731fe8a59d436ba8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL Server
+# <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Si desea utilizar los eventos extendidos para recopilar datos de evento que son equivalentes a clases de eventos de Seguimiento de SQL y columnas, es útil saber cómo los eventos de Seguimiento de SQL se asignan a eventos y acciones de eventos extendidos.  
   
  Puede utilizar el procedimiento siguiente para ver los eventos y acciones de eventos extendidos que son equivalentes a cada evento de Seguimiento de SQL y sus columnas asociadas.  
   
-## Para ver los equivalentes de eventos extendidos a los eventos de Seguimiento de SQL mediante el Editor de consultas  
+## <a name="to-view-the-extended-events-equivalents-to-sql-trace-events-using-query-editor"></a>Para ver los equivalentes de eventos extendidos a los eventos de Seguimiento de SQL mediante el Editor de consultas  
   
 -   En el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ejecute la consulta siguiente:  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 13
   
 -   Para las clases de eventos de Seguimiento de SQL configurables por el usuario (de UserConfigurable:1 a UserConfigurable:9), los eventos extendidos usan un solo evento para reemplazarlos. El evento se denomina user_event. Este evento se produce al usar sp_trace_generateevent, que es el mismo procedimiento almacenado usado por el Seguimiento de SQL. El evento user_event se devuelve independientemente del identificador de evento que se pase al procedimiento almacenado. Pero un campo event_id se devuelve como parte de los datos de evento. Esto permite generar un predicado basado en el identificador de evento. Por ejemplo, si usa UserConfigurable:0 (event_id = 82) en el código, puede agregar el evento user_event a la sesión y especificar un predicado de "event_id = 82". Por tanto, no tiene que cambiar el código porque el procedimiento almacenado sp_trace_generateevent genera el evento user_event de eventos extendidos y la clase de eventos de Seguimiento de SQL equivalente.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)  
   
   

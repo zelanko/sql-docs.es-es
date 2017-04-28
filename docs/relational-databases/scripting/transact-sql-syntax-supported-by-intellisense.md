@@ -1,36 +1,40 @@
 ---
-title: "Sintaxis de Transact-SQL compatible con IntelliSense | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "Transact-SQL IntelliSense"
-  - "IntelliSense [SQL Server], sintaxis Transact-SQL"
+title: Sintaxis de Transact-SQL compatible con IntelliSense | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Transact-SQL IntelliSense
+- IntelliSense [SQL Server], Transact-SQL syntax
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 328ed60693a51b4bd081b1089e39e4805124f042
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sintaxis de Transact-SQL compatible con IntelliSense
+# <a name="transact-sql-syntax-supported-by-intellisense"></a>Sintaxis de Transact-SQL compatible con IntelliSense
   En este tema se describen las instrucciones y los elementos de sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)] que IntelliSense admite en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## Instrucciones admitidas por IntelliSense  
- En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], IntelliSense solamente admite las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de uso más frecuente. Algunas condiciones generales del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pueden impedir el funcionamiento de IntelliSense. Para obtener más información, vea [Solución de problemas IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/troubleshooting-intellisense-sql-server-management-studio.md).  
+## <a name="statements-supported-by-intellisense"></a>Instrucciones admitidas por IntelliSense  
+ En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], IntelliSense solamente admite las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de uso más frecuente. Algunas condiciones generales del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pueden impedir el funcionamiento de IntelliSense. Para obtener más información, vea [Solución de problemas IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/troubleshooting-intellisense.md).  
   
 > [!NOTE]  
 >  IntelliSense no está disponible para objetos de base de datos cifrados, como funciones definidas por el usuario o procedimientos almacenados cifrados. La ayuda sobre parámetros y la información rápida no están disponibles para los parámetros de los procedimientos almacenados extendidos y los tipos definidos por el usuario de la integración con CLR.  
   
-### Instrucción SELECT  
+### <a name="select-statement"></a>Instrucción SELECT  
  El Editor de consultas del [!INCLUDE[ssDE](../../includes/ssde-md.md)] proporciona compatibilidad con IntelliSense para los elementos de sintaxis siguientes de la instrucción SELECT:  
   
 |||  
@@ -41,12 +45,12 @@ caps.handback.revision: 28
 |FOR|GROUP BY|  
 |ARRIBA|OPTION (sugerencia)|  
   
-### Instrucciones Transact-SQL adicionales compatibles  
+### <a name="additional-transact-sql-statements-that-are-supported"></a>Instrucciones Transact-SQL adicionales compatibles  
  El Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] también proporciona compatibilidad con IntelliSense para las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se muestran en la tabla siguiente.  
   
 |Instrucción Transact-SQL|Sintaxis compatible|Excepciones|  
 |-----------------------------|----------------------|----------------|  
-|[INSERT](../../t-sql/statements/insert-transact-sql.md)|Toda la sintaxis, excepto la cláusula *execute_statement*.|Ninguno|  
+|[INSERT](../../t-sql/statements/insert-transact-sql.md)|Toda la sintaxis, excepto la cláusula *execute_statement* .|Ninguno|  
 |[UPDATE](../../t-sql/queries/update-transact-sql.md)|Toda la sintaxis.|Ninguno|  
 |[DELETE](../../t-sql/statements/delete-transact-sql.md)|Toda la sintaxis.|Ninguno|  
 |[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|Toda la sintaxis.|Ninguno|  
@@ -58,7 +62,7 @@ caps.handback.revision: 28
 |[ALTER PROCEDURE](../../t-sql/statements/alter-procedure-transact-sql.md)|Toda la sintaxis.|No hay compatibilidad con IntelliSense para la cláusula EXTERNAL NAME.<br /><br /> En la cláusula AS, IntelliSense solamente es compatible con las instrucciones y la sintaxis que se mencionan en este tema.|  
 |[USE](../../t-sql/language-elements/use-transact-sql.md)|Toda la sintaxis.|Ninguno|  
   
-## IntelliSense en las instrucciones compatibles  
+## <a name="intellisense-in-supported-statements"></a>IntelliSense en las instrucciones compatibles  
  La característica IntelliSense del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] es compatible con los elementos de sintaxis siguientes cuando se utilizan en una de las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] compatibles:  
   
 -   Todos los tipos de combinación, incluso APPLY  
@@ -92,7 +96,7 @@ caps.handback.revision: 28
   
  La característica IntelliSense no se proporciona para los elementos enumerados anteriormente cuando se utilizan en otras instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] . Por ejemplo, los nombres de columna que se utilizan en una instrucción SELECT son compatibles con IntelliSense, pero no los de columnas que se utilizan en la instrucción CREATE FUNCTION.  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
  Dentro de un script o un proceso por lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)] , la característica IntelliSense del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] solamente es compatible con las instrucciones y la sintaxis mencionadas en este tema. En los ejemplos de código de [!INCLUDE[tsql](../../includes/tsql-md.md)] siguientes se muestran las instrucciones y los elementos de sintaxis admitidos por IntelliSense. Por ejemplo, en el proceso por lotes siguiente, la característica IntelliSense está disponible para la instrucción `SELECT` cuando se codifica por sí misma, pero no cuando la instrucción `SELECT` está contenida en una instrucción `CREATE FUNCTION` .  
   
 ```  

@@ -1,27 +1,31 @@
 ---
-title: "TM: Rollback Tran Starting (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TM: Rollback Tran Starting, clase de eventos"
+title: 'TM: Rollback Tran Starting (clase de eventos) | Microsoft Docs'
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- 'TM: Rollback Tran Starting event class'
 ms.assetid: 3b4d0d56-c51f-4f07-a116-5d4bd6ec1a3c
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e521bff958548ec3991b7fc3000a4767a57748d3
+ms.lasthandoff: 04/11/2017
+
 ---
-# TM: Rollback Tran Starting (clase de eventos)
+# <a name="tm-rollback-tran-starting-event-class"></a>TM: Rollback Tran Starting, clase de eventos
   La clase de eventos TM: Rollback Tran Starting indica que se está iniciando una solicitud ROLLBACK TRANSACTION. El cliente envía la solicitud a través de la interfaz de administración de transacciones. En la columna EventSubClass se indica si se iniciará una nueva transacción tras revertir la transacción actual.  
   
-## Columnas de datos de la clase de eventos TM: Rollback Tran Starting  
+## <a name="tm-rollback-tran-starting-event-class-data-columns"></a>Columnas de datos de la clase de eventos TM: Rollback Tran Starting  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -48,7 +52,7 @@ caps.handback.revision: 24
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

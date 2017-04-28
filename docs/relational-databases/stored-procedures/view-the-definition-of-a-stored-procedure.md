@@ -1,33 +1,37 @@
 ---
-title: "Ver la definici&#243;n de un procedimiento almacenado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "procedimientos almacenados [SQL Server], visualización"
-  - "definición de procedimiento almacenado"
-  - "ver procedimientos almacenados"
-  - "mostrar procedimientos almacenados"
+title: "Ver la definición de un procedimiento almacenado | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stored procedures [SQL Server], viewing
+- definition of stored procedure
+- viewing stored procedures
+- displaying stored procedures
 ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c47576b90eb7b14738d8612b99f36ed8a5ccb12
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ver la definici&#243;n de un procedimiento almacenado
+# <a name="view-the-definition-of-a-stored-procedure"></a>Ver la definición de un procedimiento almacenado
     
 ##  <a name="Top"></a> Puede ver la definición de un procedimiento almacenado en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mediante las opciones de menú del Explorador de objetos o en el Editor de consultas mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]. En este tema se describe cómo ver la definición del procedimiento en el Explorador de objetos y utilizar un procedimiento almacenado del sistema, una función del sistema y una vista de catálogo de objetos en el Editor de consultas.  
   
--   **Antes de empezar:**  [Seguridad](#Security)  
+-   **Before you begin:**  [Security](#Security)  
   
--   **Para ver la definición de un procedimiento con: ** [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **To view the definition of a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 29
  Debe pertenecer al rol **public** . Las definiciones de los objetos del sistema están visibles públicamente. La definición de los objetos de usuario está visible para el propietario del objeto o los receptores de los permisos siguientes: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION.  
   
  Función del sistema: **OBJECT_DEFINITION**  
- Las definiciones de los objetos del sistema están visibles públicamente. La definición de los objetos de usuario está visible para el propietario del objeto o los receptores de los permisos siguientes: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION. Estos permisos corresponden implícitamente a los miembros de los roles fijos de base de datos **db_owner**, **db_ddladmin** y **db_securityadmin**.  
+ Las definiciones de los objetos del sistema están visibles públicamente. La definición de los objetos de usuario está visible para el propietario del objeto o los receptores de los permisos siguientes: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION. Estos permisos corresponden implícitamente a los miembros de los roles fijos de base de datos **db_owner**, **db_ddladmin**y **db_securityadmin** .  
   
  Vista de catálogo de objetos: **sys.sql_modules**  
  La visibilidad de los metadatos en las vistas de catálogo se limita a los elementos protegibles y que son propiedad de un usuario o sobre los que el usuario tiene algún permiso. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -57,7 +61,7 @@ caps.handback.revision: 29
   
 2.  Expanda **Bases de datos**, expanda la base de datos a la que pertenece el procedimiento y, a continuación, expanda **Programación**.  
   
-3.  Expanda **Procedimientos almacenados**, haga clic con el botón derecho en el procedimiento; luego, haga clic en **Incluir procedimiento almacenado como** y, por último, haga clic en una de las opciones siguientes: **Create To**, **Alter To** o **Drop and Create To**.  
+3.  Expanda **Procedimientos almacenados**, haga clic con el botón derecho en el procedimiento; luego, haga clic en **Incluir procedimiento almacenado como**y, por último, haga clic en una de las opciones siguientes: **Create To**, **Alter To**o **Drop and Create To**.  
   
 4.  Seleccione **Nueva ventana del Editor de consultas**. Se mostrará la definición del procedimiento.  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 29
   
 2.  En la barra de herramientas, haga clic en **Nueva consulta**.  
   
-3.  En la ventana de consulta, escriba la siguiente instrucción que usa el procedimiento almacenado del sistema **sp_helptext**. Cambie el nombre de la base de datos y el nombre del procedimiento almacenado de forma que hagan referencia a la base de datos y al procedimiento almacenado que desee.  
+3.  En la ventana de consulta, escriba la siguiente instrucción que usa el procedimiento almacenado del sistema **sp_helptext** . Cambie el nombre de la base de datos y el nombre del procedimiento almacenado de forma que hagan referencia a la base de datos y al procedimiento almacenado que desee.  
   
     ```  
     USE AdventureWorks2012;  
@@ -82,7 +86,7 @@ caps.handback.revision: 29
   
 2.  En la barra de herramientas, haga clic en **Nueva consulta**.  
   
-3.  En la ventana de consulta, escriba las siguientes instrucciones que usan la función del sistema **OBJECT_DEFINITION**. Cambie el nombre de la base de datos y el nombre del procedimiento almacenado de forma que hagan referencia a la base de datos y al procedimiento almacenado que desee.  
+3.  En la ventana de consulta, escriba las siguientes instrucciones que usan la función del sistema **OBJECT_DEFINITION** . Cambie el nombre de la base de datos y el nombre del procedimiento almacenado de forma que hagan referencia a la base de datos y al procedimiento almacenado que desee.  
   
     ```  
     USE AdventureWorks2012;  
@@ -95,7 +99,7 @@ caps.handback.revision: 29
   
 2.  En la barra de herramientas, haga clic en **Nueva consulta**.  
   
-3.  En la ventana de consulta, escriba las siguientes instrucciones que usan la vista de catálogo **sys.sql_modules**. Cambie el nombre de la base de datos y el nombre del procedimiento almacenado de forma que hagan referencia a la base de datos y al procedimiento almacenado que desee.  
+3.  En la ventana de consulta, escriba las siguientes instrucciones que usan la vista de catálogo **sys.sql_modules** . Cambie el nombre de la base de datos y el nombre del procedimiento almacenado de forma que hagan referencia a la base de datos y al procedimiento almacenado que desee.  
   
     ```  
     USE AdventureWorks2012;  
@@ -105,7 +109,7 @@ caps.handback.revision: 29
     WHERE object_id = (OBJECT_ID(N'AdventureWorks2012.dbo.uspLogError'));  
     ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Crear un procedimiento almacenado](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [Modificar un procedimiento almacenado](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [Eliminar un procedimiento almacenado](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)   

@@ -1,27 +1,31 @@
 ---
-title: "RPC:Starting (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RPC:Starting, clase de eventos"
+title: RPC:Starting (clase de eventos) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RPC:Starting event class
 ms.assetid: 1d5c3e53-0104-41f7-ab8b-732462d859f8
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 05ad7e8c303b602c2f2b6b34c79f889bfa9c3e08
+ms.lasthandoff: 04/11/2017
+
 ---
-# RPC:Starting (clase de eventos)
+# <a name="rpcstarting-event-class"></a>RPC:Starting, clase de eventos
   La clase de eventos RPC:Starting indica que se ha iniciado una llamada a procedimiento remoto.  
   
-## Columnas de datos de la clase de evento RPC:Starting  
+## <a name="rpcstarting-event-class-data-columns"></a>Columnas de datos de la clase de evento RPC:Starting  
   
 |Nombre de columna de datos|**Tipo de datos**|Descripción|Identificador de columna|Filtrable|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
@@ -49,7 +53,7 @@ caps.handback.revision: 32
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

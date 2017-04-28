@@ -1,34 +1,38 @@
 ---
-title: "Always Encrypted (motor de base de datos) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cifrado [SQL Server], Always Encrypted"
-  - "Always Encrypted"
-  - "TCE Always Encrypted"
-  - "Always Encrypted, acerca de"
-  - "SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1"
+title: Always Encrypted (motor de base de datos) | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], Always Encrypted
+- Always Encrypted
+- TCE Always Encrypted
+- Always Encrypted, about
+- SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 caps.latest.revision: 58
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f848c5ebf1233d6b34dcf00bb7084adcebc95ea1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Always Encrypted (motor de base de datos)
+# <a name="always-encrypted-database-engine"></a>Always Encrypted (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
- Always Encrypted es una característica diseñada para proteger la información confidencial, como números de tarjeta de crédito o números de identificación nacional (por ejemplo, los números del seguro social de los EE. UU.), almacenada en bases de datos [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Always Encrypted permite a los clientes cifrar información confidencial en aplicaciones cliente y nunca revelar las claves de cifrado en [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Como resultado, Always Encrypted proporciona una separación entre aquellos que poseen los datos (y pueden verlos) y aquellos que los administran (pero que no deberían tener acceso). Al asegurar que los administradores de base de datos local, los operadores de base de datos en la nube y otros con usuarios con privilegios elevados, pero no autorizados, no pueden obtener acceso a los datos cifrados, Always Encrypted permite a los clientes almacenar información confidencial tranquilamente fuera de su control directo. Esto permite a las organizaciones cifrar los datos en reposo y usarlos para su almacenamiento en Azure, para permitir la delegación de la administración de la base de datos local a terceros, o para reducir los requisitos de autorización de seguridad para su propio personal de DBA.  
+ Always Encrypted es una característica diseñada para proteger la información confidencial, como números de tarjeta de crédito o números de identificación nacional (por ejemplo, los números del seguro social de los EE. UU.), almacenada en bases de datos [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Always Encrypted permite a los clientes cifrar información confidencial en aplicaciones cliente y nunca revelar las claves de cifrado en [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Como resultado, Always Encrypted proporciona una separación entre aquellos que poseen los datos (y pueden verlos) y aquellos que los administran (pero que no deberían tener acceso). Al asegurar que los administradores de base de datos local, los operadores de base de datos en la nube y otros con usuarios con privilegios elevados, pero no autorizados, no pueden obtener acceso a los datos cifrados, Always Encrypted permite a los clientes almacenar información confidencial tranquilamente fuera de su control directo. Esto permite a las organizaciones cifrar los datos en reposo y usarlos para su almacenamiento en Azure, para permitir la delegación de la administración de la base de datos local a terceros, o para reducir los requisitos de autorización de seguridad para su propio personal de DBA.  
   
  Always Encrypted realiza cifrado transparente en las aplicaciones. Un controlador habilitado para Always Encrypted instalado en el equipo cliente consigue esto al cifrar y descifrar automáticamente la información confidencial en la aplicación cliente. El controlador cifra los datos en columnas confidenciales antes de pasar los datos a [!INCLUDE[ssDE](../../../includes/ssde-md.md)]y vuelve a escribir las consultas automáticamente para que se conserve la semántica de la aplicación. De forma similar, el controlador descifra de forma transparente los datos almacenados en columnas de base de datos cifradas contenidos en los resultados de la consulta.  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 57
 ## <a name="typical-scenarios"></a>Escenarios típicos  
   
 ### <a name="client-and-data-on-premises"></a>Cliente y datos locales  
- Un cliente tiene una aplicación cliente y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], que se ejecutan localmente, en su ubicación de la empresa. El cliente desea contratar a un proveedor externo para administrar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para proteger la información confidencial almacenada en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el cliente utiliza Always Encrypted para garantizar la separación de obligaciones entre los administradores de base de datos y los de aplicación. El cliente almacena valores de texto no cifrado de claves de Always Encrypted en un almacén de claves de confianza al que puede acceder la aplicación cliente. Los administradores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no tienen acceso a las claves y, por lo tanto, no pueden descifrar la información confidencial almacenada en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Un cliente tiene una aplicación cliente y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , que se ejecutan localmente, en su ubicación de la empresa. El cliente desea contratar a un proveedor externo para administrar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para proteger la información confidencial almacenada en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el cliente utiliza Always Encrypted para garantizar la separación de obligaciones entre los administradores de base de datos y los de aplicación. El cliente almacena valores de texto no cifrado de claves de Always Encrypted en un almacén de claves de confianza al que puede acceder la aplicación cliente. Los administradores de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no tienen acceso a las claves y, por lo tanto, no pueden descifrar la información confidencial almacenada en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ### <a name="client-on-premises-with-data-in-azure"></a>Cliente local con datos de Azure  
  Un cliente tiene una aplicación cliente local en su ubicación de la empresa. La aplicación trabaja sobre la información confidencial almacenada en una base de datos hospedada en Azure ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se ejecutan en una máquina virtual en Microsoft Azure). El cliente usa Always Encrypted y almacena las claves de Always Encrypted en un almacén de claves de confianza hospedado en local, para garantizar que los administradores de nube de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] no tengan acceso a la información confidencial.  
@@ -98,15 +102,15 @@ Use el [Asistente para Always Encrypted](../../../relational-databases/security/
 > [!NOTE]  
 >  Para ver un vídeo que incluye el uso del asistente, vea [Getting Started with Always Encrypted with SSMS (Introducción a Always Encrypted con SSMS)](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS).
 
-1.  Conéctese a una base de datos existente que contenga tablas con columnas que quiera cifrar mediante el **Explorador de objetos** de Management Studio, o cree una nueva base de datos, cree una o más tablas con columnas para cifrar y conéctese a ella.
-2.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas** y después haga clic en **Cifrar columnas** para abrir el **Asistente para Always Encrypted**.
-3.  Revise la página **Introduction** y haga clic en **Next**.
-4.  En la página **Column Selection** , expanda las tablas y seleccione las columnas que desea cifrar.
-5.  En cada columna seleccionada para cifrado, establezca **Tipo de cifrado** en *Determinista* o *Aleatorio*.
-6.  Para cada columna seleccionada para cifrado, seleccione una **clave de cifrado**. Si aún no ha creado claves de cifrado para esta base de datos, seleccione la opción predeterminada de una nueva clave generada automáticamente y después haga clic en **Siguiente**.
-7.  En la página **Configuración de la clave maestra**, seleccione una ubicación para almacenar la clave nueva y seleccione un origen de clave maestra. Después, haga clic en **Siguiente**.
-8.  En la página **Validation** , elija si desea ejecutar inmediatamente el script o crear un script de PowerShell y, después, haga clic en **Next**.
-9.  En la página **Summary** , revise las opciones que ha seleccionado y haga clic en **Finish**. Cierre al asistente cuando finalice.
+1.    Conéctese a una base de datos existente que contenga tablas con columnas que quiera cifrar mediante el **Explorador de objetos** de Management Studio, o cree una nueva base de datos, cree una o más tablas con columnas para cifrar y conéctese a ella.
+2.    Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y después haga clic en** Cifrar columnas** para abrir el **Asistente de Always Encrypted**.
+3.    Revise la página **Introduction** y haga clic en **Next**.
+4.    En la página **Column Selection** , expanda las tablas y seleccione las columnas que desea cifrar.
+5.    En cada columna seleccionada para cifrado, establezca **Tipo de cifrado** en *Determinista* o *Aleatorio*.
+6.    Para cada columna seleccionada para cifrado, seleccione una **clave de cifrado**. Si aún no ha creado claves de cifrado para esta base de datos, seleccione la opción predeterminada de una nueva clave generada automáticamente y después haga clic en **Siguiente**.
+7.    En la página **Configuración de la clave maestra** , seleccione una ubicación para almacenar la clave nueva y seleccione un origen de clave maestra. Después, haga clic en **Siguiente**.
+8.    En la página **Validation** , elija si desea ejecutar inmediatamente el script o crear un script de PowerShell y, después, haga clic en **Next**.
+9.    En la página **Summary** , revise las opciones que ha seleccionado y haga clic en **Finish**. Cierre al asistente cuando finalice.
 
   
 ## <a name="feature-details"></a>Detalles de las características  
@@ -118,6 +122,8 @@ Use el [Asistente para Always Encrypted](../../../relational-databases/security/
 -   Una clave de cifrado de columna puede tener hasta dos valores cifrados diferentes, cada uno de ellos cifrado con una clave maestra de columna diferente. Esto facilita la rotación de claves maestras de columna.  
   
 -   El cifrado determinista requiere que una columna tenga una de las [intercalaciones *binary2*](../../../relational-databases/collations/collation-and-unicode-support.md).  
+
+-   Después de cambiar la definición de un objeto cifrado, ejecute [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) para actualizar los metadatos de Always Encrypted para el objeto.
   
  No se admite Always Encrypted en las columnas con las características siguientes (por ejemplo, la cláusula *Encrypted WITH* no puede usarse en **CREATE TABLE/ALTER TABLE** para una columna si alguna de las condiciones siguientes se aplica a la columna):  
   
@@ -159,7 +165,7 @@ Las características siguientes no funcionan en las columnas cifradas:
 
 Requisitos de la herramienta
 
-- SQL Server Management Studio puede descifrar los resultados recuperados de columnas cifradas si se conecta con *column encryption setting=enabled* en la pestaña **Propiedades adicionales** del cuadro de diálogo **Conectar con el servidor**. Requiere al menos SQL Server Management Studio versión 17 para insertar, actualizar o filtrar columnas cifradas.
+- SQL Server Management Studio puede descifrar los resultados recuperados de columnas cifradas si se conecta con *column encryption setting=enabled* en la pestaña **Propiedades adicionales** del cuadro de diálogo **Conectar con el servidor** . Requiere al menos SQL Server Management Studio versión 17 para insertar, actualizar o filtrar columnas cifradas.
 
 - Las conexiones cifradas de `sqlcmd` requieren al menos la versión 13.1, que está disponible en el [Centro de descarga](http://go.microsoft.com/fwlink/?LinkID=825643).
 
@@ -188,9 +194,9 @@ Requisitos de la herramienta
   
 -   Los dos permisos *VIEW* son necesarios para seleccionar columnas cifradas, aunque el usuario no tenga permiso para descifrar las columnas.  
   
--   En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ambos permisos *VIEW* se conceden de manera predeterminada al rol fijo de base de datos `public`. Un administrador de base de datos puede optar por revocar (o denegar) los permisos *VIEW* al rol `public` y concederlos a roles o usuarios concretos para implementar un control más restringido.  
+-   En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ambos permisos *VIEW* se conceden de manera predeterminada al rol fijo de base de datos `public` . Un administrador de base de datos puede optar por revocar (o denegar) los permisos *VIEW* al rol `public` y concederlos a roles o usuarios concretos para implementar un control más restringido.  
   
--   En [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], los permisos *VIEW* no se conceden de manera predeterminada al rol fijo de base de datos `public`. Esto permite que determinadas herramientas existentes heredadas (con versiones anteriores de DacFx) funcionen correctamente. Por lo tanto, para trabajar con columnas cifradas (aunque no se descifren), un administrador de base de datos debe conceder explícitamente los dos permisos *VIEW*.  
+-   En [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], los permisos *VIEW* no se conceden de manera predeterminada al rol fijo de base de datos `public` . Esto permite que determinadas herramientas existentes heredadas (con versiones anteriores de DacFx) funcionen correctamente. Por lo tanto, para trabajar con columnas cifradas (aunque no se descifren), un administrador de base de datos debe conceder explícitamente los dos permisos *VIEW* .  
 
   
 ## <a name="example"></a>Ejemplo  
@@ -230,19 +236,21 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
-*  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
-*  [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
-*  [CREATE TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   
-*  [column_definition &#40;Transact-SQL&#41;](../Topic/column_definition%20\(Transact-SQL\).md)   
-*  [sys.column_encryption_keys &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
-*  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
-*  [sys.column_master_keys &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
-*  [sys.columns &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
-*  [Asistente para Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
-*  [Migración de datos confidenciales protegidos mediante Always Encrypted](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)   
-*  [Always Encrypted &#40;desarrollo de cliente&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)   
-*  [Criptografía de Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)   
-* [Configurar Always Encrypted con SSMS](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-* [Configurar Always Encrypted con PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
+[CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
+[CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
+[CREATE TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   
+[column_definition &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
+[sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
+[sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
+[sys.column_master_keys &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
+[sys.columns &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+[Asistente para Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
+[Migración de datos confidenciales protegidos mediante Always Encrypted](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)   
+[Always Encrypted &#40;desarrollo de cliente&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)   
+[Criptografía de Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)   
+[Configurar Always Encrypted con SSMS](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
+[Configurar Always Encrypted con PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   
+[sp_refresh_parameter_encryption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)   
   
   
+

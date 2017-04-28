@@ -1,27 +1,31 @@
 ---
-title: "RPC:Completed (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/04/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RPC:Completed, clase de eventos"
+title: RPC:Completed (clase de eventos) |Microsoft Docs
+ms.custom: 
+ms.date: 12/04/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RPC:Completed event class
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b7fe53e7186d8b3408c2ecf838d1e1c11c96097f
+ms.lasthandoff: 04/11/2017
+
 ---
-# RPC:Completed (clase de eventos)
+# <a name="rpccompleted-event-class"></a>RPC:Completed, clase de eventos
   La clase de eventos RPC:Completed indica que se ha completado una llamada a procedimiento remoto.  
   
-## Columnas de datos de la clase de eventos RPC:Completed  
+## <a name="rpccompleted-event-class-data-columns"></a>Columnas de datos de la clase de eventos RPC:Completed  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -56,7 +60,8 @@ caps.handback.revision: 34
 |Writes|**bigint**|Número de escrituras de páginas emitidas por la llamada a procedimiento remoto.|17|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
+

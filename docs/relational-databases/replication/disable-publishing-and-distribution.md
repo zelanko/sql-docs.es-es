@@ -1,31 +1,35 @@
 ---
-title: "Deshabilitar la publicaci&#243;n y la distribuci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "deshabilitar la publicación"
-  - "publicar [replicación de SQL Server], deshabilitar"
-  - "distribución, deshabilitar [replicación de SQL Server]"
-  - "quitar la replicación"
-  - "replicación [SQL Server], eliminar"
-  - "deshabilitar la replicación"
-  - "deshabilitar la distribución"
+title: "Deshabilitar la publicación y la distribución | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- disabling publishing
+- publishing [SQL Server replication], disabling
+- distribution disabling [SQL Server replication]
+- removing replication
+- replication [SQL Server], removing
+- disabling replication
+- disabling distribution
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80f107b2855a1e3f2ca4821354021e94c76269d7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Deshabilitar la publicaci&#243;n y la distribuci&#243;n
-  En este tema se describe cómo deshabilitar la publicación y la distribución en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] o Replication Management Objects (RMO).  
+# <a name="disable-publishing-and-distribution"></a>Deshabilitar la publicación y la distribución
+  En este tema se describe cómo deshabilitar la publicación y la distribución en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
   
  Puede hacer lo siguiente:  
   
@@ -53,40 +57,40 @@ caps.handback.revision: 41
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
   
--   Para deshabilitar la publicación y la distribución, todas las bases de datos de distribución y de publicaciones deben estar en línea. Si existe alguna *instantánea de base de datos* para las bases de datos de distribución o de publicaciones, deben quitarse antes de deshabilitar la publicación y distribución. Una instantánea de base de datos es una copia de solo lectura sin conexión de una base de datos y no está relacionada con una instantánea de replicación. Para obtener más información, consulte [instantáneas de base de datos & #40; SQL Server & #41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
+-   Para deshabilitar la publicación y la distribución, todas las bases de datos de distribución y de publicaciones deben estar en línea. Si existe alguna *instantánea de base de datos* para las bases de datos de distribución o de publicaciones, deben quitarse antes de deshabilitar la publicación y distribución. Una instantánea de base de datos es una copia de solo lectura sin conexión de una base de datos y no está relacionada con una instantánea de replicación. Para más información, vea [Instantáneas de base de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
  Deshabilite la publicación y la distribución con el Asistente para deshabilitar la publicación y distribución.  
   
-#### Para deshabilitar la publicación y la distribución  
+#### <a name="to-disable-publishing-and-distribution"></a>Para deshabilitar la publicación y la distribución  
   
 1.  Conéctese al publicador o el distribuidor que desea deshabilitar en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y, a continuación, expanda el nodo de servidor.  
   
-2.  Haga clic en el **replicación** carpeta y, a continuación, haga clic en **Deshabilitar la publicación y distribución**.  
+2.  Haga clic con el botón secundario en la carpeta **Replicación** y, a continuación, haga clic en **Deshabilitar publicación y distribución**.  
   
 3.  Siga todos los pasos del Asistente para deshabilitar la publicación y distribución.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  Puede deshabilitarse la publicación y la distribución mediante programación con los procedimientos almacenados de la replicación.  
   
-#### Para deshabilitar la publicación y la distribución  
+#### <a name="to-disable-publishing-and-distribution"></a>Para deshabilitar la publicación y la distribución  
   
 1.  Detenga todos los trabajos relacionados con replicación. Para obtener una lista de nombres de tarea, vea la sección "Seguridad de agentes con el Agente SQL Server" de [Modelo de seguridad del Agente de replicación](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-2.  En cada suscriptor en la base de datos de suscripción, ejecute [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) para quitar objetos de replicación de la base de datos. Este procedimiento almacenado no quitará los trabajos de replicación del distribuidor.  
+2.  En cada suscriptor de la base de datos de suscripciones, ejecute [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) para quitar los objetos de replicación de dicha base de datos. Este procedimiento almacenado no quitará los trabajos de replicación del distribuidor.  
   
-3.  En el publicador de la base de datos de publicación, ejecute [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) para quitar objetos de replicación de la base de datos.  
+3.  En la base de datos de publicación del publicador, ejecute [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) para quitar los objetos de replicación de dicha base de datos.  
   
-4.  Si el publicador utiliza un distribuidor remoto, ejecute [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md).  
+4.  Si el publicador usa un distribuidor remoto, ejecute [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md).  
   
 5.  En el distribuidor, ejecute [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md). Este procedimiento almacenado se debería ejecutar una vez para cada publicador registrado en el distribuidor.  
   
 6.  En el distribuidor, ejecute [sp_dropdistributiondb](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md) para eliminar la base de datos de distribución. Este procedimiento almacenado se debería ejecutar una vez para cada base de datos de distribución en el distribuidor. Esto también quita cualquier trabajo del Agente de lectura de cola asociado a la base de datos de distribución.  
   
-7.  En el distribuidor, ejecute [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) para quitar la designación del distribuidor del servidor.  
+7.  En el distribuidor, ejecute [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) para quitar la designación de distribuidor del servidor.  
   
     > [!NOTE]  
-    >  Si no se quitan todos los objetos de publicación y distribución de replicación antes de ejecutar [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) y [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md), estos procedimientos, se devolverá un error. Para quitar todos los relacionados con la replicación de objetos cuando se quita un publicador o distribuidor, el **@no_checks** parámetro debe establecerse en **1**. Si un publicador o distribuidor está sin conexión o no está disponible, el **@ignore_distributor** establecido en **1** para que puedan quitarse; sin embargo, cualquier publicación y distribución de objetos que se quedan atrás deben quitarse manualmente.  
+    >  Si no se quitan todos los objetos de distribución y publicación de replicación antes de ejecutar [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) y [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md), estos procedimientos devolverán un error. Para quitar todos los objetos relacionados con la replicación cuando se quita un publicador o un distribuidor, el parámetro **@no_checks** debe estar establecido en **1**. Si un publicador o un distribuidor no tienen conexión o están inaccesibles, el parámetro **@ignore_distributor** puede estar establecido en **1** para que se puedan quitar; sin embargo, todos los objetos de publicación y distribución omitidos deben quitarse manualmente.  
   
 ###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  Este script de ejemplo quita los objetos de replicación de la base de datos de suscripciones.  
@@ -99,39 +103,39 @@ caps.handback.revision: 41
   
 ##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
   
-#### Para deshabilitar la publicación y la distribución  
+#### <a name="to-disable-publishing-and-distribution"></a>Para deshabilitar la publicación y la distribución  
   
 1.  Quite todas las suscripciones a las publicaciones que usan el Distribuidor. Para obtener más información, consulte [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md) y [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md).  
   
 2.  Quite todas las publicaciones que usan el Distribuidor y deshabilite la publicación para todas las bases de datos si el Publicador y el Distribuidor están en el mismo servidor. Para más información, consulte [Delete a Publication](../../relational-databases/replication/publish/delete-a-publication.md).  
   
-3.  Crear una conexión al distribuidor mediante la <xref:Microsoft.SqlServer.Management.Common.ServerConnection> clase.  
+3.  Cree una conexión al distribuidor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-4.  Cree una instancia de la <xref:Microsoft.SqlServer.Replication.DistributionPublisher> clase. Especifique el <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> propiedad y pase el <xref:Microsoft.SqlServer.Management.Common.ServerConnection> objeto del paso 3.  
+4.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.DistributionPublisher>. Especifique la propiedad <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> y pase el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 3.  
   
-5.  (Opcional) Llame a la <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> método para obtener las propiedades del objeto y compruebe que existe el publicador. Si este método devuelve **false**, el nombre del Publicador establecido en el paso 4 era incorrecto o este Distribuidor no usa el Publicador.  
+5.  (Opcional) Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto y compruebe que el Publicador existe. Si este método devuelve **false**, el nombre del Publicador establecido en el paso 4 era incorrecto o este Distribuidor no usa el Publicador.  
   
-6.  Llame a la <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> método. Pase un valor de **true** para *force* si el Publicador y el Distribuidor están en servidores diferentes, y cuando el Publicador se debería desinstalar en el Distribuidor sin comprobar primero que las publicaciones ya no existen en el Publicador.  
+6.  Llame al método <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A>. Pase un valor de **true** para *force* si el Publicador y el Distribuidor están en servidores diferentes, y cuando el Publicador se debería desinstalar en el Distribuidor sin comprobar primero que las publicaciones ya no existen en el Publicador.  
   
-7.  Cree una instancia de la <xref:Microsoft.SqlServer.Replication.ReplicationServer> clase. Pasar el <xref:Microsoft.SqlServer.Management.Common.ServerConnection> objeto del paso 3.  
+7.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Pase el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 3.  
   
-8.  Llame a la <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> método. Pase un valor de **true** para que *force* quite todos los objetos de replicación en el Distribuidor sin comprobar primero que todas las bases de datos de publicación locales se han deshabilitado y se han desinstalado las bases de datos de distribución.  
+8.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> . Pase un valor de **true** para que *force* quite todos los objetos de replicación en el Distribuidor sin comprobar primero que todas las bases de datos de publicación locales se han deshabilitado y se han desinstalado las bases de datos de distribución.  
   
 ###  <a name="PShellExample"></a> Ejemplos (RMO)  
  Este ejemplo quita el registro del Publicador en el Distribuidor, coloca la base de datos de distribución y desinstala el Distribuidor.  
   
- [!code-csharp[HowTo#rmo_DropDistPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_dropdistpub)]  
+ [!code-cs[HowTo#rmo_DropDistPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_dropdistpub)]  
   
  [!code-vb[HowTo#rmo_vb_DropDistPub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_dropdistpub)]  
   
  Este ejemplo desinstala el Distribuidor sin deshabilitar primero las bases de datos de publicación locales o quitar la base de datos de distribución.  
   
- [!code-csharp[HowTo#rmo_DropDistPubForce](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_dropdistpubforce)]  
+ [!code-cs[HowTo#rmo_DropDistPubForce](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_dropdistpubforce)]  
   
  [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conceptos de los Replication Management Objects (RMO)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
- [Conceptos sobre los procedimientos almacenados del sistema de replicación](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
+ [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md) (Conceptos sobre los procedimientos almacenados del sistema de replicación)  
   
   

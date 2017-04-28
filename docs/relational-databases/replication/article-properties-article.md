@@ -1,30 +1,34 @@
 ---
-title: "Propiedades del art&#237;culo - &lt;Art&#237;culo&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.newpubwizard.articleproperties.f1"
-helpviewer_keywords: 
-  - "Propiedades del artículo, cuadro de diálogo"
+title: "Propiedades del artículo: &lt;Artículo&gt; | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.newpubwizard.articleproperties.f1
+helpviewer_keywords:
+- Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9d485cf7aface5f33fd4bd30f8c4a3d36707b2d2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propiedades del art&#237;culo - &lt;Art&#237;culo&gt;
+# <a name="article-properties---ltarticlegt"></a>Article Properties - &lt;Article&gt; (Propiedades del artículo: &lt;Artículo&gt;)
   El cuadro de diálogo **Propiedades del artículo** está disponible en el Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación** . Le permite ver y establecer propiedades para todos los tipos de artículo. Algunas propiedades solo se pueden establecer cuando se crea la publicación, mientras que otras se pueden establecer únicamente si la publicación no tiene suscripciones activas. Las propiedades que no se pueden establecer se muestran como de solo lectura.  
   
 > [!NOTE]  
->  Una vez creada una publicación, algunos cambios de las propiedades requieren una nueva instantánea. Si una publicación tiene suscripciones, algunos cambios también requieren reinicializar todas las suscripciones. Para obtener más información, consulte [Propiedades de artículo y publicación de cambio](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+>  Una vez creada una publicación, algunos cambios de las propiedades requieren una nueva instantánea. Si una publicación tiene suscripciones, algunos cambios también requieren reinicializar todas las suscripciones. Para más información, vea [Change Publication and Article Properties](../../relational-databases/replication/publish/change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
   
  Cada propiedad del cuadro de diálogo **Propiedades del artículo** incluye una descripción. Al hacer clic en una propiedad, se muestra su descripción en la parte inferior del cuadro de diálogo. Este tema ofrece información adicional acerca de varias propiedades. Las propiedades se agrupan en las siguientes categorías:  
   
@@ -36,15 +40,15 @@ caps.handback.revision: 38
   
 -   Propiedades que se aplican a las publicaciones transaccionales y de instantáneas de publicadores de Oracle.  
   
-## Opciones para todas las publicaciones  
+## <a name="options-for-all-publications"></a>Opciones para todas las publicaciones  
  **Copiar esquemas de particiones de tabla** y **Copiar esquemas de particiones de índice**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introdujo particiones de tabla y particiones de índice, que no están relacionadas con la replicación de particiones ofrece a través de fila y columna de filtros. Las opciones **Copiar esquemas de particiones de tabla** y **Copiar esquemas de particiones de índice** especifican si los esquemas de particiones se deben copiar en el suscriptor. Para obtener más información acerca de las particiones, vea [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introdujo particiones de tabla y particiones de índice, que no están relacionadas con las ofertas de replicación de particiones a través de los filtros de fila y de columna. Las opciones **Copiar esquemas de particiones de tabla** y **Copiar esquemas de particiones de índice** especifican si los esquemas de particiones se deben copiar en el suscriptor. Para obtener más información acerca de las particiones, vea [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  **Convertir tipos de datos**  
  Determina si se debe convertir desde tipos de datos definidos por el usuario a tipos de datos base cuando se crean objetos en el suscriptor. Los tipos de datos definidos por el usuario incluyen los tipos definidos por el usuario de CLR introducidos en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Especifique un valor **True** si se van a replicar estos tipos de datos con respecto a versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; de esta manera, se garantiza que se van a poder tratar correctamente en el suscriptor.  
   
  **Crear esquemas en el suscriptor**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introdujo esquemas que se definen mediante la instrucción CREATE SCHEMA. Un esquema es el propietario de un objeto; se utiliza en un nombre de varias partes, como \< base de datos>. \< esquema>. \< objeto>. Si la base de datos tiene objetos que son propiedad de esquemas que no son DBO, la replicación puede crear estos esquemas en el suscriptor, de manera que se puedan crear objetos publicados.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introdujo esquemas que se definen mediante la instrucción CREATE SCHEMA. Un esquema es el propietario de un objeto; se usa en un nombre de varias partes, como por ejemplo \<Base de datos>.\<Esquema>.\<Objeto>. Si la base de datos tiene objetos que son propiedad de esquemas que no son DBO, la replicación puede crear estos esquemas en el suscriptor, de manera que se puedan crear objetos publicados.  
   
  Si se van a replicar datos en versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
   
@@ -65,50 +69,50 @@ caps.handback.revision: 38
   
 -   Para artículos de publicaciones de Oracle: de forma predeterminada, el propietario se especifica como **dbo**.  
   
--   Para artículos de publicaciones que utilizan instantáneas en modo de carácter (que se utilizan para los que no son suscriptores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y para los suscriptores de [!INCLUDE[ssEW](../../includes/ssew-md.md)]): de manera predeterminada, el propietario se deja en blanco. Como valor predeterminado del propietario se utiliza el propietario asociado con la cuenta utilizada por el Agente de distribución o el Agente de mezcla para conectarse con el suscriptor.  
+-   Para artículos de publicaciones que utilizan instantáneas en modo de carácter (que se usan tanto para los que no son suscriptores de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como para los suscriptores de [!INCLUDE[ssEW](../../includes/ssew-md.md)] ): de manera predeterminada, el propietario se deja en blanco. Como valor predeterminado del propietario se utiliza el propietario asociado con la cuenta utilizada por el Agente de distribución o el Agente de mezcla para conectarse con el suscriptor.  
   
  Esta opción no se puede cambiar para artículos de publicaciones que están habilitadas para replicación transaccional punto a punto.  
   
  **Administrar intervalos de identidad automáticamente**  
- La replicación, de manera predeterminada, administra todas las columnas de identidad en el publicador y en cada suscriptor. Cada nodo de replicación tiene asignado un intervalo de valores de identidad (especificado con el **tamaño de intervalo del publicador** y **tamaño de intervalo del suscriptor** Opciones) para asegurarse de que se utiliza un valor determinado en un solo nodo. Para obtener más información, consulte [replicar las columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).  
+ La replicación, de manera predeterminada, administra todas las columnas de identidad en el publicador y en cada suscriptor. Cada nodo de replicación tiene asignado un intervalo de valores de identidad (que se especifica mediante las opciones **Tamaño de intervalo del publicador** y **Tamaño de intervalo del suscriptor** ) para garantizar que un valor dado se utilice únicamente en un nodo. Para más información, vea [Replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
-## Opciones para publicaciones transaccionales  
+## <a name="options-for-transactional-publications"></a>Opciones para publicaciones transaccionales  
  **Copiar los procedimientos almacenados INSERT, UPDATE y DELETE**  
- If, en la **entrega de instrucción** sección de este cuadro de diálogo, seleccione Usar procedimientos almacenados para propagar los cambios a los suscriptores (valor predeterminado), seleccione si desea copiar los procedimientos en cada suscriptor. Si selecciona **False**, deberá copiar los procedimientos manualmente; de lo contrario, el Agente de distribución producirá un error al intentar entregar los cambios.  
+ Si, en la sección **Entrega de instrucción** de este cuadro de diálogo, selecciona utilizar los procedimientos almacenados para propagar cambios a los suscriptores (valor predeterminado), seleccione si se van a copiar los procedimientos en cada suscriptor. Si selecciona **False**, deberá copiar los procedimientos manualmente; de lo contrario, el Agente de distribución producirá un error al intentar entregar los cambios.  
   
- **Entrega de instrucción**  
+ **Statement delivery**  
  Las opciones de esta sección se aplican a todas las tablas, incluidas las vistas indizadas que se replican como tablas. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda el uso de las opciones predeterminadas a menos que la aplicación requiera una funcionalidad diferente. De forma predeterminada, la replicación transaccional propaga los cambios a los suscriptores a través de una serie de procedimientos almacenados que se instalan en cada suscriptor. Cuando se produce una inserción, una actualización o una eliminación en una tabla del publicador, la operación se convierte en una llamada a un procedimiento almacenado en el suscriptor.  
   
  Las opciones de **Entrega de instrucción** especifican si se debe utilizar un procedimiento almacenado, y en ese caso, el formato que se debe utilizar para los parámetros que pasan al procedimiento. Las opciones de **Procedimiento almacenado** permiten utilizar los procedimientos que la replicación crea automáticamente o sustituir los procedimientos personalizados creados por el usuario.  
   
- Para obtener más información, consulte [especificar cómo se propagan los cambios en los artículos transaccionales](../../relational-databases/replication/transactional/specify-how-changes-are-propagated-for-transactional-articles.md).  
+ Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
  **Replicar**  
  Esta opción se aplica únicamente a los procedimientos de almacenamiento. Determina si se debe replicar la definición del procedimiento almacenado (instrucción CREATE PROCEDURE) o su ejecución. Si replica la ejecución del procedimiento, la definición del procedimiento se replica en el suscriptor cuando se inicializa la suscripción; cuando el procedimiento se ejecuta en el publicador, la replicación ejecuta el procedimiento correspondiente en el suscriptor. Esto puede mejorar notablemente el rendimiento para los casos en que se llevan a cabo grandes operaciones en lote. Para más información, consulte [Publishing Stored Procedure Execution in Transactional Replication](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
-## Opciones para publicaciones de combinación  
+## <a name="options-for-merge-publications"></a>Opciones para publicaciones de combinación  
  El cuadro de diálogo **Propiedades del artículo** para las publicaciones de combinación tiene dos pestañas: **Propiedades** y **Solucionador**.  
   
-### Pestaña Propiedades  
+### <a name="properties-tab"></a>Pestaña Propiedades  
  **Dirección de la sincronización**  
  Determina si los cambios se pueden cargar desde los suscriptores que utilizan el tipo de suscripción de cliente:  
   
--   **Bidireccional** (predeterminado): cambios se pueden descargar en suscriptor y cargados en el publicador.  
+-   **Bidireccional** (valor predeterminado): los cambios se pueden descargar en el suscriptor y cargar en el publicador.  
   
--   **Sólo descargar en suscriptor y prohibir cambios del suscriptor**: cambios pueden descargarse al suscriptor, pero no pueden cargarse en el publicador. Los desencadenadores impiden que se realicen cambios en el suscriptor.  
+-   **Solo descargar en suscriptor y prohibir cambios del suscriptor**: los cambios pueden descargarse en el suscriptor, pero no pueden cargarse en el publicador. Los desencadenadores impiden que se realicen cambios en el suscriptor.  
   
--   **Sólo descargar en suscriptor y permitir cambios del suscriptor**: cambios pueden descargarse al suscriptor, pero no pueden cargarse en el publicador.  
+-   **Solo descargar en suscriptor y permitir cambios del suscriptor**: los cambios pueden descargarse en el suscriptor, pero no pueden cargarse en el publicador.  
   
- Para obtener más información, consulte [optimizar el rendimiento de replicación de mezcla con artículos de la sección](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+ Para más información, vea [Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
  **Opciones de partición**  
- Especifica el tipo de particiones que crea un filtro con parámetros. Para obtener más información, vea la sección la sección sobre cómo establecer opciones de partición en el tema [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-row-filters.md).  
+ Especifica el tipo de particiones que crea un filtro con parámetros. Para obtener más información, vea la sección la sección sobre cómo establecer opciones de partición en el tema [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Nivel de seguimiento**  
  Determina si se deben tratar los cambios de la misma fila o columna como un conflicto.  
   
- **Comprobar permiso INSERT**, **Comprobar permiso UPDATE**, y **Comprobar permiso DELETE**  
- Determina si se debe comprobar durante la sincronización que el inicio de sesión del suscriptor tenga permisos INSERT, UPDATE o DELETE en las tablas publicadas en la base de datos de publicaciones. El valor predeterminado es **False** porque la replicación de mezcla no requiere estos permisos; acceso a las tablas publicadas se controla a través de la lista de acceso de publicación (PAL). Para obtener más información acerca de la PAL, consulte [proteger el publicador](../../relational-databases/replication/security/secure-the-publisher.md).  
+ **Comprobar permiso INSERT**, **Comprobar permiso UPDATE**y **Comprobar permiso DELETE**  
+ Determina si se debe comprobar durante la sincronización que el inicio de sesión del suscriptor tenga permisos INSERT, UPDATE o DELETE en las tablas publicadas en la base de datos de publicaciones. El valor predeterminado es **False** porque la replicación de mezcla no requiere que se otorguen estos permisos; el acceso a las tablas publicadas se controla a través de la lista de acceso a la publicación (PAL). Para más información sobre la PAL, vea [Proteger el publicador](../../relational-databases/replication/security/secure-the-publisher.md).  
   
  Puede solicitar la comprobación de los permisos si desea permitir que uno o varios suscriptores carguen algunos cambios en los datos publicados, pero no otros. Por ejemplo, podría agregar un suscriptor a la PAL, pero sin otorgarle al suscriptor ningún permiso en las tablas de la base de datos de publicaciones. Entonces podría establecer la opción Comprobar permiso DELETE en **True**: el suscriptor podría cargar inserciones y actualizaciones, pero no eliminaciones.  
   
@@ -118,46 +122,46 @@ caps.handback.revision: 38
 > [!IMPORTANT]  
 >  Esta opción ha quedado desusada y se retirará en versiones posteriores.  
   
-### Pestaña Solucionador  
+### <a name="resolver-tab"></a>Pestaña Solucionador  
  **Utilizar el solucionador predeterminado**  
- Si selecciona el solucionador predeterminado, los conflictos se resuelven sobre la base de la prioridad asignada a cada suscriptor o del primer cambio escrito en el publicador, en función del tipo de suscripciones utilizadas. Para más información, consulte [Detect and Resolve Merge Replication Conflicts](../../relational-databases/replication/merge/detect-and-resolve-merge-replication-conflicts.md).  
+ Si selecciona el solucionador predeterminado, los conflictos se resuelven sobre la base de la prioridad asignada a cada suscriptor o del primer cambio escrito en el publicador, en función del tipo de suscripciones utilizadas. Para más información, vea [Detectar y solucionar conflictos de replicación de mezcla](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
   
  **Usar un solucionador personalizado (registrada en el distribuidor)**  
- Si opta por utilizar un solucionador de artículos (puede ser una proporcionado por [!INCLUDE[msCoName](../../includes/msconame-md.md)] o un escrito por el usuario), debe seleccionar un solucionador del cuadro de lista. Para obtener más información, consulte [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+ Si opta por utilizar un solucionador de artículos (puede ser una proporcionado por [!INCLUDE[msCoName](../../includes/msconame-md.md)] o un escrito por el usuario), debe seleccionar un solucionador del cuadro de lista. Para más información, consulte [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
- Si el solucionador requiere una entrada, especifíquela en el cuadro de texto **Especifique la información necesaria para el solucionador** . Para obtener más información acerca de la entrada requerida por [!INCLUDE[msCoName](../../includes/msconame-md.md)] resoluciones personalizadas, consulte [solucionadores basados en COM de Microsoft](../../relational-databases/replication/merge/microsoft-com-based-resolvers.md).  
+ Si el solucionador requiere una entrada, especifíquela en el cuadro de texto **Especifique la información necesaria para el solucionador** . Para obtener más información acerca de la entrada requerida por los solucionadores personalizados de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , vea [Microsoft COM-Based Resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
  **Permitir que el suscriptor resuelva los conflictos de modo interactivo durante la sincronización a petición**  
- Seleccione esta opción si los suscriptores van a utilizar sincronización a petición (valor predeterminado para la replicación de mezcla) y desea solucionar conflictos de manera interactiva. Especificar la sincronización a petición en el **programación de sincronización** página del Asistente para nueva suscripción. Para solucionar conflictos de manera interactiva, utilice la interfaz del usuario Solucionador interactivo. Para obtener más información, consulte [Interactive Conflict Resolution](../../relational-databases/replication/merge/interactive-conflict-resolution.md).  
+ Seleccione esta opción si los suscriptores van a utilizar sincronización a petición (valor predeterminado para la replicación de mezcla) y desea solucionar conflictos de manera interactiva. Especifique la sincronización a petición en la página **Programación de sincronización** del Asistente para nueva suscripción. Para solucionar conflictos de manera interactiva, utilice la interfaz del usuario Solucionador interactivo. Para más información, consulte [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
  **Solicitar comprobación de una firma digital antes de la mezcla**  
  Todos los solucionadores basados en COM proporcionados por [!INCLUDE[msCoName](../../includes/msconame-md.md)] están firmados. Seleccione esta opción para comprobar que el solucionador sea válido al sincronizar.  
   
-## Opciones para las publicaciones de Oracle  
+## <a name="options-for-oracle-publications"></a>Opciones para las publicaciones de Oracle  
  El cuadro de diálogo **Propiedades del artículo** para las publicaciones de Oracle tiene dos pestañas: **Propiedades** y **Asignación de datos**. Las publicaciones de Oracle no admiten todas las propiedades admitidas por las publicaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para más información, consulte [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
-### Pestaña Propiedades  
+### <a name="properties-tab"></a>Pestaña Propiedades  
  **Copiar los procedimientos almacenados INSERT, UPDATE y DELETE**  
- Si el artículo está en una publicación transaccional y, en la **entrega de instrucción** sección de este cuadro de diálogo, seleccione Usar procedimientos almacenados para propagar los cambios a los suscriptores (valor predeterminado), seleccione si desea copiar los procedimientos en cada suscriptor. Si selecciona **False**, deberá copiar los procedimientos manualmente; de lo contrario, el Agente de distribución producirá un error al intentar entregar los cambios.  
+ Si el artículo se encuentra en una publicación transaccional y, en la sección **Entrega de instrucción** de este cuadro de diálogo, selecciona utilizar los procedimientos almacenados para propagar cambios a los suscriptores (valor predeterminado), seleccione si se van a copiar los procedimientos en cada suscriptor. Si selecciona **False**, deberá copiar los procedimientos manualmente; de lo contrario, el Agente de distribución producirá un error al intentar entregar los cambios.  
   
  **Propietario del objeto de destino**  
- Si especifica un valor distinto de **dbo**:  
+ Si escribe un valor distinto de **dbo**:  
   
--   Para los suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior, debe garantizar la creación de un esquema en el suscriptor que tenga el mismo nombre que el valor que ha especificado. Para obtener más información, consulte [CREATE SCHEMA & #40; Transact-SQL & #41;](../../t-sql/statements/create-schema-transact-sql.md).  
+-   Para los suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior, debe garantizar la creación de un esquema en el suscriptor que tenga el mismo nombre que el valor que ha especificado. Para obtener más información, vea [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md).  
   
 -   En el caso de los suscriptores que ejecutan versiones anteriores a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], para cada esquema, agregue un usuario a la base de datos de suscripciones con el mismo nombre que el esquema.  
   
  **Nombre de espacio de tablas**  
- Espacio de tablas en el cual se deben crear las tablas de seguimiento de cambios de replicación en la instancia del servidor de Oracle. Para obtener más información, consulte [Administrar tablas de Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).  
+ Espacio de tablas en el cual se deben crear las tablas de seguimiento de cambios de replicación en la instancia del servidor de Oracle. Para más información, vea [Manage Oracle Databases](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md) (Administrar bases de datos de Oracle).  
   
- **Entrega de instrucción**  
+ **Statement delivery**  
  Las opciones de esta sección se aplican a todas las tablas de publicaciones transaccionales. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda el uso de las opciones predeterminadas a menos que la aplicación requiera una funcionalidad diferente. De forma predeterminada, la replicación transaccional propaga los cambios a los suscriptores a través de una serie de procedimientos almacenados que se instalan en cada suscriptor. Cuando se produce una inserción, una actualización o una eliminación en una tabla del publicador, la operación se convierte en una llamada a un procedimiento almacenado en el suscriptor.  
   
  Las opciones de **Entrega de instrucción** especifican si se debe utilizar un procedimiento almacenado, y en ese caso, el formato que se debe utilizar para los parámetros que pasan al procedimiento. Las opciones de **Procedimiento almacenado** permiten utilizar los procedimientos que la replicación crea automáticamente o sustituir los procedimientos personalizados creados por el usuario.  
   
- Para obtener más información, consulte [especificar cómo se propagan los cambios en los artículos transaccionales](../../relational-databases/replication/transactional/specify-how-changes-are-propagated-for-transactional-articles.md).  
+ Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
-### Pestaña Asignación de datos  
+### <a name="data-mapping-tab"></a>Pestaña Asignación de datos  
  **Nombre de columna**  
  Nombre de la columna en el publicador (solo lectura).  
   
@@ -171,8 +175,8 @@ caps.handback.revision: 38
   
 -   Para algunos tipos, hay más de un tipo que puede seleccionar. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda el uso de la asignación predeterminada a menos que la aplicación requiera una asignación diferente. Para más información, consulte [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md).  
   
-## Vea también  
- [Crear una publicación](../../relational-databases/replication/publish/create-a-publication.md)   
+## <a name="see-also"></a>Vea también  
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Ver y modificar propiedades de publicación](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Crear y aplicar la instantánea inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [Reinicializar una suscripción](../../relational-databases/replication/reinitialize-a-subscription.md)   

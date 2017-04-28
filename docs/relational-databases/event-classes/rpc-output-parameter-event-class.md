@@ -1,29 +1,33 @@
 ---
-title: "RPC Output Parameter (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RPC Output Parameter [clase de eventos]"
+title: RPC Output Parameter (clase de eventos) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RPC Output Parameter event class
 ms.assetid: 8c830d11-7e88-4c3e-98e9-ba72c8c99b02
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c34b798d5912847a881de551ce064ab5a13ea8a
+ms.lasthandoff: 04/11/2017
+
 ---
-# RPC Output Parameter (clase de eventos)
+# <a name="rpc-output-parameter-event-class"></a>RPC Output Parameter [clase de eventos]
   La clase de eventos RPC Output Parameter realiza el seguimiento de los valores de los parámetros de salida de las llamadas a procedimiento remoto (RPC) después de su ejecución.  
   
  Utilice esta clase para examinar los valores de salida devueltos por procedimientos almacenados. Por ejemplo, si una aplicación no produce los valores de salida esperados después de ejecutar una llamada a procedimiento remoto, puede usar esta clase de evento para ayudar a aislar el problema entre el código del cliente y el código del servidor.  
   
-## Columnas de datos de la clase de evento RPC Output Parameter  
+## <a name="rpc-output-parameter-event-class-data-columns"></a>Columnas de datos de la clase de evento RPC Output Parameter  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -50,7 +54,7 @@ caps.handback.revision: 32
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

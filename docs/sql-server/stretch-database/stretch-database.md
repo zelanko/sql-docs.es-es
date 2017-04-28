@@ -1,33 +1,36 @@
 ---
-title: "Stretch Database | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "06/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Stretch Database"
+title: Stretch Database | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 06/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stretch
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Stretch Database
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3dab64f6d7c2067eea1c2e5249fc3a7089eda6bc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Stretch Database
+# <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Stretch Database migra los datos inactivos de forma clara y segura a la nube de Microsoft Azure.  
   
  Consulte [Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)si su intención es comenzar a usar inmediatamente Stretch Database.  
   
-## ¿Cuáles son las ventajas de Stretch Database?  
+## <a name="what-are-the-benefits-of-stretch-database"></a>¿Cuáles son las ventajas de Stretch Database?  
  Stretch Database reporta las siguientes ventajas:  
   
  **Permite disponer de los datos inactivos de forma provechosa**  
@@ -42,7 +45,7 @@ caps.handback.revision: 39
  **Los datos se mantienen seguros incluso durante la migración**  
  Relájese mientras extiende las aplicaciones más importantes a la nube sin correr ningún tipo de riesgo. Always Encrypted de SQL Server permite cifrar los datos en movimiento. La seguridad de nivel de fila y otras características de seguridad avanzadas de SQL Server funcionan también con Stretch Database para proteger los datos.  
   
-## ¿Qué hace Stretch Database?  
+## <a name="what-does-stretch-database-do"></a>¿Qué hace Stretch Database?  
  Después de habilitar Stretch Database en al menos una tabla, una base de datos y una instancia de SQL Server, comenzará a migrar silenciosamente los datos inactivos a Azure.  
   
 -   Si los datos inactivos están almacenados en otra tabla, puede migrarla entera.  
@@ -55,9 +58,9 @@ caps.handback.revision: 39
 
 **La migración de datos se puede pausar** para solucionar problemas en el servidor local o para maximizar el ancho de banda de red disponible.  
   
- ![Stretch database overview](../../sql-server/stretch-database/media/stretch-overview.png "Stretch database overview")  
+ ![Información general de la base de datos de Stretch](../../sql-server/stretch-database/media/stretch-overview.png "Información general de la base de datos de Stretch")  
   
-## ¿Cómo sé si Stretch Database se ajusta a mis necesidades?  
+## <a name="is-stretch-database-for-you"></a>¿Cómo sé si Stretch Database se ajusta a mis necesidades?  
  Si se siente identificado con alguna de las siguientes afirmaciones, Stretch Database puede ayudarle a satisfacer sus requisitos y a solucionar problemas.  
   
 |Soy un responsable de la toma de decisiones y...|Soy un administrador de base de datos y...|  
@@ -67,17 +70,18 @@ caps.handback.revision: 39
 |Tengo aplicaciones, incluidas aplicaciones antiguas, que no quiero actualizar.|Estoy constantemente adquiriendo y agregando más espacio de almacenamiento.|  
 |Quiero encontrar una manera de ahorrar dinero en almacenamiento.|No puedo restaurar unas tablas tan grandes ni hacerles copias de seguridad dentro de los términos del contrato de nivel de servicio.|  
   
-## ¿Qué tipos de tablas y bases de datos son aptos para Stretch Database?  
+## <a name="what-kind-of-databases-and-tables-are-candidates-for-stretch-database"></a>¿Qué tipos de tablas y bases de datos son aptos para Stretch Database?  
  Stretch Database está pensado para bases de datos transaccionales con grandes cantidades de datos inactivos que suelen almacenarse en un número reducido de tablas. Estas tablas pueden contener millones y millones de filas.  
   
  Si usa la característica de tabla temporal de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use Stretch Database para migrar total o parcialmente la tabla de historial asociada a un almacenamiento rentable en Azure. Para obtener más información, vea [Administración de la retención de datos históricos en las tablas temporales con versiones del sistema](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).  
   
- Use el Asesor de Stretch Database (una característica del Asesor de actualizaciones de SQL Server 2016) para saber qué bases de datos y tablas son adecuadas para Stretch Database. Para obtener más información, vea [Identificar bases de datos y tablas para Stretch Database al ejecutar el Asesor de Stretch Database](../../sql-server/stretch-database/stretch database databases and tables - stretch database advisor.md). Para obtener más información sobre los posibles problemas de bloqueo, vea [Limitaciones de Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
+ Use el Asesor de Stretch Database (una característica del Asesor de actualizaciones de SQL Server 2016) para saber qué bases de datos y tablas son adecuadas para Stretch Database. Para obtener más información, vea [Identificar bases de datos y tablas para Stretch Database al ejecutar el Asesor de Stretch Database](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md). Para obtener más información sobre los posibles problemas de bloqueo, vea [Limitaciones de Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
 
-## Versión de prueba de Stretch Database  
+## <a name="test-drive-stretch-database"></a>Versión de prueba de Stretch Database  
  **Use la versión de prueba de Stretch Database con la base de datos de ejemplo de AdventureWorks.** Para obtener la base de datos de ejemplo de AdventureWorks, descargue al menos el archivo de base de datos y el archivo de ejemplos y scripts [aquí](https://www.microsoft.com/en-us/download/details.aspx?id=49502). Después de restaurar la base de datos de ejemplo en una instancia de SQL Server 2016, descomprima el archivo de ejemplos y abra el archivo Stretch DB Samples de la carpeta Stretch DB. Ejecute los scripts de este archivo para comprobar el espacio que ocupan los datos antes y después de habilitar Stretch Database, para realizar un seguimiento del progreso de la migración de datos y para confirmar que puede seguir consultando los datos existentes e insertar otros nuevos durante y tras la migración de datos.  
   
-## Paso siguiente  
- **Identifique las bases de datos y tablas aptas para Stretch Database.** Descargue el Asesor de actualizaciones de SQL Server 2016 y ejecute el Asesor de Stretch Database para saber qué bases de datos y tablas son aptas para Stretch Database. El Asesor de Stretch Database también detecta problemas de bloqueo. Para obtener más información, vea [Identificar bases de datos y tablas para Stretch Database al ejecutar el Asesor de Stretch Database](../../sql-server/stretch-database/stretch database databases and tables - stretch database advisor.md).  
+## <a name="next-step"></a>Paso siguiente  
+ **Identifique las bases de datos y tablas aptas para Stretch Database.** Descargue el Asesor de actualizaciones de SQL Server 2016 y ejecute el Asesor de Stretch Database para saber qué bases de datos y tablas son aptas para Stretch Database. El Asesor de Stretch Database también detecta problemas de bloqueo. Para obtener más información, vea [Identificar bases de datos y tablas para Stretch Database al ejecutar el Asesor de Stretch Database](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md).  
   
   
+

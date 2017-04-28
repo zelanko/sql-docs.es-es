@@ -1,1 +1,2 @@
-<Token>**ESTE TEMA SE APLICA A:** ![no](../includes/media/no.png)SQL Server ![sí](../includes/media/yes.png)Base de datos SQL de Azure![sí](../includes/media/yes.png)Almacenamiento de datos SQL de Azure ![no](../includes/media/no.png)Almacenamiento de datos paralelos </Token>
+<Token>**ESTE TEMA SE APLICA A:** ![no](media/no.png)SQL Server ![sí](media/yes.png)Azure SQL Database![sí](media/yes.png)Azure SQL Data Warehouse ![no](media/no.png)Almacenamiento de datos paralelos </Token>
+

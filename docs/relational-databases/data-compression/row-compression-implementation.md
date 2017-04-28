@@ -1,25 +1,29 @@
 ---
-title: "Implementaci&#243;n de la compresi&#243;n de fila | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "compresión [SQL Server], fila"
-  - "compresión de fila [motor de base de datos]"
+title: "Implementación de la compresión de fila | Microsoft Docs"
+ms.custom: 
+ms.date: 06/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-compression
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- compression [SQL Server], row
+- row compression [Database Engine]
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad6f5f97c0bd57fa4b9dc97d204a87fb865d31eb
+ms.lasthandoff: 04/11/2017
+
 ---
-# Implementaci&#243;n de la compresi&#243;n de fila
+# <a name="row-compression-implementation"></a>Implementación de la compresión de fila
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   En este tema se resume cómo el [!INCLUDE[ssDE](../../includes/ssde-md.md)] implementa la compresión de fila. Este resumen proporciona la información básica para ayudarle a planear el espacio de almacenamiento que necesita para sus datos.  
@@ -28,14 +32,14 @@ caps.handback.revision: 19
   
 -   Reduce la sobrecarga de metadatos asociada al registro. Estos metadatos son información sobre las columnas, sus longitudes y desplazamientos. En algunos casos, la sobrecarga de los metadatos podría ser mayor que en el formato de almacenamiento anterior.  
   
--   Emplea el formato de almacenamiento de longitud variable para los tipos numéricos (por ejemplo, **integer**, **decimal** y **float**) y para los tipos que están basados en tipos numéricos (por ejemplo, **datetime** y **money**).  
+-   Emplea el formato de almacenamiento de longitud variable para los tipos numéricos (por ejemplo, **integer**, **decimal**y **float**) y para los tipos que están basados en tipos numéricos (por ejemplo, **datetime** y **money**).  
   
 -   Almacena las cadenas de caracteres fijas utilizando el formato de longitud variable sin almacenar los caracteres en blanco.  
   
 > [!NOTE]  
 >  Los valores NULL y 0 se optimizan para todos los tipos de datos y no utilizan ningún byte.  
   
-## Cómo afecta la compresión de fila al almacenamiento  
+## <a name="how-row-compression-affects-storage"></a>Cómo afecta la compresión de fila al almacenamiento  
  En la tabla siguiente se describe cómo afecta la compresión de fila a los tipos existentes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]. La tabla no incluye el ahorro que se puede obtener utilizando la compresión de página.  
   
 |Tipo de datos|Afecta al almacenamiento|Descripción|  
@@ -75,8 +79,9 @@ caps.handback.revision: 19
 |Tipos definidos por el usuario|No|Se representa internamente como **varbinary**.|  
 |FILESTREAM|No|Se representa internamente como **varbinary**.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Comprimir datos](../../relational-databases/data-compression/data-compression.md)   
  [Implementación de la compresión de página](../../relational-databases/data-compression/page-compression-implementation.md)  
   
   
+

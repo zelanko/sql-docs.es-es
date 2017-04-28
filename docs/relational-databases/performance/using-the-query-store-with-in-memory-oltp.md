@@ -1,30 +1,34 @@
 ---
-title: "Uso del almac&#233;n de consultas con OLTP en memoria | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "almacén de consultas, en memoria"
+title: "Uso del almacén de consultas con OLTP en memoria | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store, in-memory
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31483a4450089f194241f19df0bd0072b5026375
+ms.lasthandoff: 04/11/2017
+
 ---
-# Uso del almac&#233;n de consultas con OLTP en memoria
+# <a name="using-the-query-store-with-in-memory-oltp"></a>Uso del almacén de consultas con OLTP en memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El almacén de consultas permite supervisar el rendimiento del código compilado de forma nativa para cargas de trabajo que ejecuten OLTP en memoria.  
 Las estadísticas de compilación y de runtime se recopilan y exponen de la misma manera que en el caso de cargas de trabajo basadas en disco.   
-Al migrar a OLTP en memoria, podrá seguir usando las vistas del almacén de consultas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], así como los scripts personalizados que haya desarrollado para cargas de trabajo basadas en disco antes de la migración. De este modo, no habrá desperdiciado el tiempo invertido en familiarizarse con la tecnología del almacén de consultas y podrá usarlo de forma más generalizada para solucionar problemas de todos los tipos de cargas de trabajo.  
+Al migrar a OLTP en memoria, podrá seguir usando las vistas del almacén de consultas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , así como los scripts personalizados que haya desarrollado para cargas de trabajo basadas en disco antes de la migración. De este modo, no habrá desperdiciado el tiempo invertido en familiarizarse con la tecnología del almacén de consultas y podrá usarlo de forma más generalizada para solucionar problemas de todos los tipos de cargas de trabajo.  
 Para obtener información general sobre cómo utilizar el almacén de consultas, consulte [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   
  Para usar el almacén de consultas con OLTP en memoria, no hay que configurar ninguna característica adicional. Una vez que lo habilite en la base de datos, funcionará para todos los tipos de cargas de trabajo.   
@@ -32,7 +36,7 @@ Sin embargo, existen algunos aspectos específicos que los usuarios deben tener 
   
 -   Cuando se habilita el almacén de consultas, se recopilan de manera predeterminada las consultas, los planes y las estadísticas de tiempo de compilación. Pero no se activa la recopilación de estadísticas de runtime, a menos que la habilite explícitamente con [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  
   
--   Al establecer *@new_collection_value* en 0, el almacén de consultas dejará de recopilar estadísticas en tiempo de ejecución para el procedimiento afectado o para toda la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Al establecer *@new_collection_value* en 0, el almacén de consultas dejará de recopilar estadísticas en tiempo de ejecución para el procedimiento afectado o para toda la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   El valor configurado con [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) no se conserva. Asegúrese de comprobar y volver a configurar la recopilación de estadísticas después de reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -52,7 +56,7 @@ Sin embargo, existen algunos aspectos específicos que los usuarios deben tener 
   
 -   Las métricas de concesiones de memoria dentro de [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md) no se rellenan en las consultas compiladas de manera nativa; sus valores siempre son 0. Estas son las columnas de concesión de memoria: avg_query_max_used_memory, last_query_max_used_memory, min_query_max_used_memory, max_query_max_used_memory y stdev_query_max_used_memory.  
   
-## Habilitación y uso del almacén de consultas con OLTP en memoria  
+## <a name="enabling-and-using-query-store-with-in-memory-oltp"></a>Habilitación y uso del almacén de consultas con OLTP en memoria  
  En el ejemplo siguiente se demuestra el uso del almacén de consultas con OLTP en memoria en un escenario de usuario integral. En este ejemplo, se supone que una base de datos (`MemoryOLTP`) está habilitada para OLTP en memoria.  
     Para obtener más información sobre los requisitos previos de las tablas con optimización para memoria, vea [Crear una tabla con optimización para memoria y un procedimiento almacenado compilado de forma nativa](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
@@ -133,11 +137,12 @@ JOIN sys.query_store_runtime_stats_interval AS rsi
 WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');  
 ```  
   
-## Vea también  
- [Supervisar el rendimiento mediante el almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+## <a name="see-also"></a>Vea también  
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Crear una tabla con optimización para memoria y un procedimiento almacenado compilado de forma nativa](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
  [Procedimiento recomendado con el Almacén de consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Query Store Stored Procedures &#40;Transact-SQL&#41; (Procedimientos almacenados del almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
- [Query Store Catalog Views &#40;Transact-SQL&#41; [Vistas de catálogo del almacén de consultas &#40;Transact-SQL&#41;]](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
+ [Query Store Catalog Views &#40;Transact-SQL&#41; (Vistas de catálogo del almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
+

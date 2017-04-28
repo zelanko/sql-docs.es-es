@@ -1,25 +1,29 @@
 ---
-title: "Gu&#237;a de arquitectura de subprocesos y tareas | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/26/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "guía, arquitectura de subprocesos y tareas"
-  - "guía de arquitectura de subprocesos y tareas"
+title: "Guía de arquitectura de subprocesos y tareas | Microsoft Docs"
+ms.custom: 
+ms.date: 10/26/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- guide, thread and task architecture
+- thread and task architecture guide
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 caps.latest.revision: 3
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9b66cd3d05632792b851f039aa653c15de18c78b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gu&#237;a de arquitectura de subprocesos y tareas
+# <a name="thread-and-task-architecture-guide"></a>guía de arquitectura de subprocesos y tareas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Los subprocesos son una característica del sistema operativo que permite separar la lógica de aplicación en varias rutas de ejecución simultánea. Esta característica resulta útil cuando se trabaja con aplicaciones complejas que tienen muchas tareas que pueden ejecutarse a la vez. 
@@ -28,15 +32,15 @@ Cuando un sistema operativo ejecuta una instancia de una aplicación, crea una u
 
 Los subprocesos permiten a las aplicaciones complejas hacer más eficaz el uso de una CPU, incluso en los equipos con una única CPU. Con una CPU solo puede ejecutarse un subproceso cada vez. Si un subproceso ejecuta una operación de larga duración que no utilice la CPU, como la lectura o la escritura en disco, otro de los subprocesos puede ejecutarse mientras termina la primera operación. La capacidad de ejecutar unos subprocesos mientras otros esperan a que una operación finalice permite a las aplicaciones maximizar su uso de la CPU. Esto es especialmente cierto para las aplicaciones multiusuario y las que realizan numerosas E/S de disco, como un servidor de base de datos. Los equipos con varios multiprocesadores o CPU pueden ejecutar un subproceso en cada CPU al mismo tiempo. Por ejemplo, si un equipo dispone de ocho CPU, podrá ejecutar ocho subprocesos simultáneamente.
 
-## Programar tareas o lotes en SQL Server
+## <a name="sql-server-batch-or-task-scheduling"></a>Programar tareas o lotes en SQL Server
 
-### Asignar subprocesos a una CPU
+### <a name="allocating-threads-to-a-cpu"></a>Asignar subprocesos a una CPU
 
 De forma predeterminada, cada instancia de SQL Server inicia cada subproceso. Si se ha habilitado la afinidad, el sistema operativo asigna cada subproceso a una CPU concreta. El sistema operativo distribuye los subprocesos de las instancias de SQL Server entre los microprocesadores o las CPUs de un equipo según su carga. En ocasiones, también puede mover un subproceso de una CPU que se utiliza mucho a otra CPU. Por el contrario, el motor de base de datos de SQL Server asigna los subprocesos de trabajo a los programadores que distribuyen los subprocesos de manera uniforme entre las CPUs.
 
 La opción de máscara de afinidad se establece utilizando [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md). Cuando no se establece la máscara de afinidad, la instancia de SQL Server asigna los subprocesos de trabajo de forma uniforme entre los programadores que no se han enmascarado.
 
-### Usar la opción agrupación ligera
+### <a name="using-the-lightweight-pooling-option"></a>Usar la opción agrupación ligera
 
 La sobrecarga que supone el cambio de contexto de los subprocesos no es excesiva. La mayoría de las instancias de SQL Server no registrarán diferencias de rendimiento entre la activación o desactivación de la agrupación ligera en 0 o 1. Las únicas instancias de SQL Server que podrían beneficiarse de la [agrupación ligera](../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md) son las que se ejecutan en un equipo que tiene las características siguientes:    
 * Un servidor de gran tamaño con varias CPU.
@@ -48,7 +52,7 @@ Estos sistemas pueden notar un pequeño incremento en el rendimiento si el valor
 No se recomienda utilizar la programación en modo de fibra para un funcionamiento habitual. La razón es que puede reducir el rendimiento al eliminar las ventajas normales del cambio de contexto, y que algunos componentes de SQL Server no funcionan correctamente en modo de fibra. Para obtener más información, vea lightweight pooling (opción de configuración del servidor).
 
 
-## Ejecución de subprocesos y fibras
+## <a name="thread-and-fiber-execution"></a>Ejecución de subprocesos y fibras
 
 Microsoft Windows utiliza un sistema de prioridad numérica con intervalos de 1 a 31 para programar subprocesos para su ejecución. El cero está reservado para el uso del sistema operativo. Cuando varios subprocesos esperan su ejecución, Windows genera el que tiene mayor prioridad.
 
@@ -59,7 +63,7 @@ La opción de configuración [aumento de prioridad](../database-engine/configure
 Si está ejecutando varias instancias de SQL Server en un equipo y activa la opción aumento de prioridad solo para algunas instancias, se puede ver afectado el rendimiento de las instancias que se ejecutan con prioridad normal. También se puede ver afectado el rendimiento de otras aplicaciones y componentes del servidor si se activa aumento de prioridad. Por tanto, debe utilizarse bajo condiciones rigurosamente controladas.
 
 
-## CPU instalada en caliente
+## <a name="hot-add-cpu"></a>CPU instalada en caliente
 
 Agregar CPU sin interrupción es la capacidad para agregar CPU de forma dinámica a un sistema en funcionamiento. Las CPU se pueden agregar físicamente, mediante la instalación de nuevo hardware; lógicamente, haciendo particiones de hardware en línea, o bien virtualmente a través de un nivel de virtualización. A partir de SQL Server 2008, SQL Server admite la característica de agregar CPU sin interrupción.
 
@@ -69,23 +73,23 @@ Requisitos para agregar CPU sin interrupción:
 * Requiere SQL Server Enterprise.
 * SQL Server no puede configurarse para el uso de NUMA de software. Para obtener más información sobre NUMA de software, consulte [Soft-NUMA (SQL Server)](../database-engine/configure-windows/soft-numa-sql-server.md).
 
-SQL Server no empieza a utilizar automáticamente las CPUs una vez agregadas. Se evita así que SQL Server utilice CPUs que podrían haberse agregado con cualquier otro propósito. Una vez haya finalizado la agregación de CPUs, ejecute la instrucción [RECONFIGURE](../t-sql/language-elements/reconfigure-transact-sql.md), a fin de que SQL Server reconozca las nuevas CPUs como recursos disponibles.
+SQL Server no empieza a utilizar automáticamente las CPUs una vez agregadas. Se evita así que SQL Server utilice CPUs que podrían haberse agregado con cualquier otro propósito. Una vez haya finalizado la agregación de CPUs, ejecute la instrucción [RECONFIGURE](../t-sql/language-elements/reconfigure-transact-sql.md) , a fin de que SQL Server reconozca las nuevas CPUs como recursos disponibles.
 
 > [!NOTE]
 > Si la [máscara affinity64](../database-engine/configure-windows/affinity64-mask-server-configuration-option.md) estuviera configurada, es preciso modificarla para poder utilizar las nuevas CPUs.
  
 
-## Prácticas recomendadas para ejecutar SQL Server en equipos que tienen más de 64 CPU
+## <a name="best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus"></a>Prácticas recomendadas para ejecutar SQL Server en equipos que tienen más de 64 CPU
 
-### Asignar subprocesos de hardware a las CPU
+### <a name="assigning-hardware-threads-with-cpus"></a>Asignar subprocesos de hardware a las CPU
 
 No utilice las opciones de configuración del servidor Máscara de afinidad y Máscara de afinidad de 64 bits para enlazar procesadores a subprocesos específicos. Estas opciones están limitadas a 64 CPU. Utilice la opción SET PROCESS AFFINITY de [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) en su lugar.
 
-### Administración del tamaño del archivo del registro de transacciones
+### <a name="managing-the-transaction-log-file-size"></a>Administración del tamaño del archivo del registro de transacciones
 
 El crecimiento automático no es un método fidedigno para aumentar el tamaño del archivo de registro de transacciones. El aumento del registro de transacciones debe ser un proceso en serie. La ampliación del registro puede hacer que las operaciones de escritura de transacciones no continúen hasta que finalice esta ampliación. En su lugar, asigne espacio previamente para los archivos de registro estableciendo el tamaño de archivo en un valor lo suficientemente alto para admitir la carga de trabajo habitual del entorno.
 
-### Configurar el grado máximo de paralelismo para las operaciones de índice
+### <a name="setting-max-degree-of-parallelism-for-index-operations"></a>Configurar el grado máximo de paralelismo para las operaciones de índice
 
 El rendimiento de las operaciones de índice como crear o volver a generar índices puede mejorarse en los equipos con muchas CPU estableciendo temporalmente el modelo de recuperación de la base de datos en el modelo de recuperación optimizado para cargas masivas de registros o en el modelo de recuperación simple. Estas operaciones de índice pueden generar actividad de registro significativa, y la contención del registro puede afectar a la elección del mejor grado de paralelismo (DOP) realizada por SQL Server.
 
@@ -99,31 +103,33 @@ Además, considere la posibilidad de ajustar la configuración del grado máximo
 
 Para obtener más información acerca de la opción Grado máximo de paralelismo, consulte [Establecer la opción Grado máximo de paralelismo](../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).
 
-### Configurar el número máximo de subprocesos de trabajo
+### <a name="setting-the-maximum-number-of-worker-threads"></a>Configurar el número máximo de subprocesos de trabajo
 
 Establezca siempre el número máximo de subprocesos de trabajo en un valor superior al de la opción Grado máximo de paralelismo. El número de subprocesos de trabajo debe establecerse siempre en un valor de al menos siete veces el número de CPU del servidor. Para más información, consulte [Establecer la opción de configuración del servidor Máximo de subprocesos de trabajo](../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md).
 
-### Usar Seguimiento de SQL y SQL Server Profiler
+### <a name="using-sql-trace-and-sql-server-profiler"></a>Usar Seguimiento de SQL y SQL Server Profiler
 
  Se recomienda que no utilice Seguimiento de SQL y SQL Server Profiler en un entorno de producción. La sobrecarga para ejecutar estas herramientas también aumenta según lo hace el número de CPU. Si debe utilizar Seguimiento de SQL en un entorno de producción, reduzca al mínimo los eventos de seguimiento. Genere el perfil y pruebe de forma meticulosa cada evento de seguimiento sujeto a carga, y evite por otra parte utilizar combinaciones de eventos que afecten significativamente al rendimiento.
 
-### Establecer el número de archivos de datos tempdb
+### <a name="setting-the-number-of-tempdb-data-files"></a>Establecer el número de archivos de datos tempdb
 
 Normalmente, el número de archivos de datos tempdb debería coincidir con el número de CPUs. Sin embargo, si considera minuciosamente las necesidades de simultaneidad de tempdb, podrá simplificar la administración de la base de datos. Por ejemplo, si un sistema tiene 64 CPU y normalmente solo 32 consultas utilizan tempdb, al aumentar el número de archivos tempdb a 64 no se mejorará rendimiento.
 
-### Componentes de SQL Server que pueden utilizar más de 64 CPU
+### <a name="sql-server-components-that-can-use-more-than-64-cpus"></a>Componentes de SQL Server que pueden utilizar más de 64 CPU
 
-La tabla siguiente contiene una lista de los componentes de SQL Server e indica si pueden utilizar más de 64 CPUs.
+La tabla siguiente contiene una lista de los componentes de SQL Server e indica si pueden utilizar más de 64 CPUs.
 
-|Nombre del proceso   |Programa ejecutable |Utilizar más de 64 CPU |  
+|Nombre del proceso    |Programa ejecutable    |Utilizar más de 64 CPU |  
 |----------|----------|----------|  
-|Motor de base de datos de SQL Server |Sqlserver.exe  |Sí |  
-|Reporting Services |Rs.exe |No |  
-|Analysis Services  |As.exe |No |  
-|Integration Services   |Is.exe |No |  
-|Service Broker |Sb.exe |No |  
-|Búsqueda de texto completo   |Fts.exe    |No |  
-|Agente SQL Server   |Sqlagent.exe   |No |  
-|SQL Server Management Studio   |Ssms.exe   |No |  
-|programa de instalación de SQL Server   |Setup.exe  |No |  
+|Motor de base de datos de SQL Server    |Sqlserver.exe    |Sí |  
+|Reporting Services    |Rs.exe    |No |  
+|Analysis Services    |As.exe    |No |  
+|Integration Services    |Is.exe    |No |  
+|Service Broker    |Sb.exe    |No |  
+|Búsqueda de texto completo    |Fts.exe    |No |  
+|Agente SQL Server    |Sqlagent.exe    |No |  
+|SQL Server Management Studio    |Ssms.exe    |No |  
+|programa de instalación de SQL Server    |Setup.exe    |No |  
+
+
 

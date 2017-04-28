@@ -1,26 +1,30 @@
 ---
-title: "Solucionar problemas de indizaci&#243;n de texto completo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "índices [búsqueda de texto completo]"
-  - "solución de problemas [SQL Server], búsqueda de texto completo"
-  - "solución de problemas [búsqueda de texto completo]"
+title: "Solucionar problemas de indización de texto completo | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [full-text search]
+- troubleshooting [SQL Server], full-text search
+- troubleshooting [full-text search]
 ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
 caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5d3238bdf788f27c7e004139b66d0fcb501a57a7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Solucionar problemas de indizaci&#243;n de texto completo
+# <a name="troubleshoot-full-text-indexing"></a>Solucionar problemas de indización de texto completo
      
 ##  <a name="failure"></a> Solucionar errores de indización de texto completo  
  Al rellenar o mantener un índice de texto completo, es posible que el indizador de texto completo no pueda indizar una o varias filas por las razones que se explican a continuación. Estos errores de nivel de fila no impiden que se realice el llenado. El indizador omite estas filas, lo que significa que no se pueden realizar consultas del contenido de estas filas.  
@@ -45,20 +49,18 @@ caps.handback.revision: 43
   
  Debe consultar el registro de rastreo al final de cualquier operación de llenado de índice de texto completo importante o cuando el llenado no llega a completarse.  
   
-### Componentes sin firmar  
+### <a name="unsigned-components"></a>Componentes sin firmar  
  De forma predeterminada, el indizador de texto completo necesita los filtros y los separadores de palabras que carga para firmarse. Si no están firmados, lo cual puede ocurrir cuando se instalan componentes personalizados, debe configurar el indizador de texto completo para que omita la comprobación de firmas.  
   
 > [!IMPORTANT]  
 >  Si se omite la comprobación de firmas, la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es menos segura. Se recomienda que firme todo componente que implemente o que se asegure de que todo componente que adquiera esté firmado. Para obtener más información sobre cómo firmar componentes, vea [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
- [En este tema](#top)  
   
 ##  <a name="state"></a> Índice de texto completo en estado incoherente después de la restauración del registro de transacciones  
  Al restaurar el registro de transacciones de una base de datos, es posible que aparezca una advertencia que indica que el índice de texto completo no es coherente. El motivo es que se ha modificado el índice de texto completo en una tabla después de realizar la copia de seguridad de la base de datos. Si esto ocurre, deberá ejecutar un rellenado completo (rastreo) en la tabla para devolver la coherencia al índice de texto completo. Para obtener más información, vea [Rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).  
   
- [En este tema](#top)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [Rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md)  
   

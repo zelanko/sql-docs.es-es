@@ -1,30 +1,34 @@
 ---
-title: "Solucionar problemas de usuarios hu&#233;rfanos (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "usuarios, huérfanos [SQL Server]"
-  - "inicios de sesión [SQL Server], usuarios huérfanos"
-  - "solucionar problemas [SQL Server], cuentas de usuario"
-  - "cuentas de usuario [SQL Server], usuarios huérfanos"
-  - "conmutación por error [SQL Server], administrar metadatos"
-  - "creación de reflejo de la base de datos [SQL Server], metadatos"
-  - "usuarios [SQL Server], huérfanos"
+title: "Solucionar problemas de usuarios huérfanos (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 07/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- orphaned users [SQL Server]
+- logins [SQL Server], orphaned users
+- troubleshooting [SQL Server], user accounts
+- user accounts [SQL Server], orphaned users
+- failover [SQL Server], managing metadata
+- database mirroring [SQL Server], metadata
+- users [SQL Server], orphaned
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5f76cf5789d67f93443149074b0c4e8708f90000
+ms.lasthandoff: 04/11/2017
+
 ---
-# Solucionar problemas de usuarios hu&#233;rfanos (SQL Server)
+# <a name="troubleshoot-orphaned-users-sql-server"></a>Solucionar problemas de usuarios huérfanos (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Los usuarios huérfanos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se producen cuando un usuario de base de datos se basa en un inicio de sesión en la base de datos **maestra** , pero ese inicio de sesión ya no existe en **master**. Esto puede suceder cuando se elimina el inicio de sesión o cuando la base de datos se mueve a otro servidor donde el inicio de sesión no existe. En este tema se describe cómo buscar usuarios huérfanos para reasignarles inicios de sesión.  
@@ -32,8 +36,8 @@ caps.handback.revision: 41
 > [!NOTE]  
 >  Para reducir la posibilidad de que se produzcan usuarios huérfanos, use usuarios de bases de datos independientes para aquellas bases de datos susceptibles de moverse. Para obtener más información, vea [Usuarios de base de datos independiente: hacer que la base de datos sea portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
-## Información previa  
- Para conectarse a una base de datos en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una entidad de seguridad (identidad de usuario de base de datos) basada en un inicio de sesión, la entidad de seguridad debe tener un inicio de sesión válido en la base de datos **maestra**. Este inicio de sesión se usa en el proceso de autenticación, que comprueba la identidad de la entidad de seguridad y averigua si tiene permiso para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una instancia de servidor están visibles en la vista de catálogo **sys.server_principals** y en la vista de compatibilidad **sys.sql_logins**.  
+## <a name="background"></a>Información previa  
+ Para conectarse a una base de datos en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una entidad de seguridad (identidad de usuario de base de datos) basada en un inicio de sesión, la entidad de seguridad debe tener un inicio de sesión válido en la base de datos **maestra** . Este inicio de sesión se usa en el proceso de autenticación, que comprueba la identidad de la entidad de seguridad y averigua si tiene permiso para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una instancia de servidor están visibles en la vista de catálogo **sys.server_principals** y en la vista de compatibilidad **sys.sql_logins** .  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen acceso a las bases de datos individuales como un "usuario de base de datos" que está asignado al inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Existen tres excepciones a esta regla:  
   
@@ -53,11 +57,11 @@ caps.handback.revision: 41
   
  Un usuario de base de datos (basado en un inicio de sesión) cuyo inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondiente está sin definir o se ha definido de forma incorrecta en una instancia de servidor no podrá iniciar una sesión en la instancia. Es lo que se denomina un *usuario huérfano* de la base de datos en esa instancia de servidor. Otra manera de convertirse en huérfano es que el SID de inicio de sesión al que está asignado el usuario de la base de datos no esté presente en la instancia `master` . Un usuario de la base de datos puede convertirse en huérfano si una base de datos se restaura o se conecta a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde nunca se ha creado el inicio de sesión. También puede convertirse en huérfano si se quita el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondiente. Incluso si se vuelve a crear el inicio de sesión, tendrá un SID diferente, por lo que el usuario de la base de datos seguirá siendo huérfano.  
   
-## Para detectar usuarios huérfanos  
+## <a name="to-detect-orphaned-users"></a>Para detectar usuarios huérfanos  
 
 **Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y PDW**
 
-Para detectar usuarios huérfanos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por no tener inicios de sesión de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ejecute la siguiente instrucción en la base de datos de usuario:  
+Para detectar usuarios huérfanos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por no tener inicios de sesión de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ejecute la siguiente instrucción en la base de datos de usuario:  
   
 ```  
 SELECT dp.type_desc, dp.SID, dp.name AS user_name  
@@ -68,7 +72,7 @@ WHERE sp.SID IS NULL
     AND authentication_type_desc = 'INSTANCE';  
 ```  
   
- En la salida se enumeran los usuarios de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los identificadores de seguridad (SID) correspondientes en la base de datos actual que no están vinculados a ningún inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ En la salida se enumeran los usuarios de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los identificadores de seguridad (SID) correspondientes en la base de datos actual que no están vinculados a ningún inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
 **Para Base de datos SQL y Almacenamiento de datos SQL**
 
@@ -93,7 +97,7 @@ La tabla `sys.server_principals` no está disponible en Base de datos SQL ni en 
 
 3. Compare las dos listas para determinar si hay SID de usuario en la tabla `sys.database_principals` de la base de datos de usuario que no coinciden con los SID de inicio de sesión de la tabla `sql_logins` de la base de datos maestra. 
   
-## Para resolver un usuario huérfano  
+## <a name="to-resolve-an-orphaned-user"></a>Para resolver un usuario huérfano  
 En la base de datos maestra, use la instrucción [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) con la opción SID para volver a crear un inicio de sesión que falte. Para ello, proporcione el `SID` del usuario de base de datos obtenido en la sección anterior:  
   
 ```  
@@ -119,7 +123,7 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
   
  El procedimiento en desuso [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md) también funciona con usuarios huérfanos. `sp_change_users_login` no se puede usar con [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER USER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
@@ -134,3 +138,4 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
  [sys.syslogins &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
   
   
+

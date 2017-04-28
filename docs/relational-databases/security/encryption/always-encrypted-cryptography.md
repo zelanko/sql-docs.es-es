@@ -1,30 +1,34 @@
 ---
-title: "Criptograf&#237;a de Always Encrypted | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Always Encrypted, sistema de criptografía"
+title: "Criptografía de Always Encrypted | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 02/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Always Encrypted, cryptography system
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee5419dc374c545daa1249f2e6f76d8d13ac4695
+ms.lasthandoff: 04/11/2017
+
 ---
-# Criptograf&#237;a de Always Encrypted
+# <a name="always-encrypted-cryptography"></a>Criptografía de Always Encrypted
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   En este documento se describen los mecanismos y algoritmos de cifrado de los que extraer el material criptográfico que se usa en la característica [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)].  
   
-## Claves, almacenes de claves y algoritmos de cifrado de claves  
+## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Claves, almacenes de claves y algoritmos de cifrado de claves  
  Always Encrypted utiliza claves de dos tipos: claves maestras de columna y claves de cifrado de columna.  
   
  Una clave maestra de columna (CMK) es una clave de cifrado de claves (es decir, se utiliza para cifrar otras claves) que se encuentra siempre bajo el control del cliente y se almacena en un almacén de claves externo. Un controlador de cliente habilitado para Always Encrypted interactúa con el almacén de claves a través de un proveedor de almacén de CMK, que puede formar parte de la biblioteca de controladores (un proveedor del sistema o de [!INCLUDE[msCoName](../../../includes/msconame-md.md)]) o de la aplicación de cliente (un proveedor personalizado). Actualmente, las bibliotecas de controladores cliente incluyen proveedores de almacén de claves de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] para el [almacén de certificados de Windows Certificate Store](https://msdn.microsoft.com/library/windows/desktop/aa388160) y módulos de seguridad de hardware (HSM).  Para obtener la lista actual de proveedores, vea [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md). Un desarrollador de aplicaciones puede proporcionar un proveedor personalizado para un almacén arbitrario.  
@@ -33,7 +37,7 @@ caps.handback.revision: 11
   
  Todos los proveedores de almacenes CMK de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] cifran las CEK por medio de RSA con relleno óptimo de cifrado asimétrico (RSA OAEP) con los parámetros predeterminados especificados por RFC 3447 en la sección A.2.1. Estos parámetros predeterminados utilizan una función hash de SHA-1 y una función de generación de máscara de MGF1 con SHA-1.  
   
-## Algoritmo de cifrado de datos  
+## <a name="data-encryption-algorithm"></a>Algoritmo de cifrado de datos  
  Always Encrypted usa el algoritmo **AEAD_AES_256_CBC_HMAC_SHA_256** para cifrar los datos de la base de datos.  
   
  **AEAD_AES_256_CBC_HMAC_SHA_256** se obtiene a partir del borrador de especificación que se encuentra en [http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05). Utiliza un esquema de cifrado autenticado con asociados datos, con un enfoque conocido como "cifrar y, después, generar la MAC". Es decir, el texto no cifrado se cifra primero y se genera la MAC según el texto cifrado resultante.  
@@ -42,7 +46,7 @@ caps.handback.revision: 11
   
  **AEAD_AES_256_CBC_HMAC_SHA_256** calcula un valor de texto cifrado para un valor de texto no cifrado determinado siguiendo estos pasos.  
   
-### Paso 1: generación del vector de inicialización (IV)  
+### <a name="step-1-generating-the-initialization-vector-iv"></a>Paso 1: generación del vector de inicialización (IV)  
  Always Encrypted admite dos variantes de **AEAD_AES_256_CBC_HMAC_SHA_256**:  
   
 -   Aleatorio  
@@ -72,8 +76,8 @@ Como resultado, el cifrado determinista siempre genera el mismo texto cifrado pa
   
  El cifrado determinista resulta más eficaz para ocultar los patrones, en comparación con las alternativas (como el uso de un valor de IV predefinido).  
   
-### Paso 2: cálculo del texto cifrado AES_256_CBC  
- Tras calcular el IV, se genera el texto cifrado **AES_256_CBC**:  
+### <a name="step-2-computing-aes256cbc-ciphertext"></a>Paso 2: cálculo del texto cifrado AES_256_CBC  
+ Tras calcular el IV, se genera el texto cifrado **AES_256_CBC** :  
   
 ```  
 aes_256_cbc_ciphertext = AES-CBC-256(enc_key, IV, cell_data) with PKCS7 padding.  
@@ -85,7 +89,7 @@ aes_256_cbc_ciphertext = AES-CBC-256(enc_key, IV, cell_data) with PKCS7 padding.
 enc_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell encryption key" + algorithm + CEK_length )  
 ```  
   
-### Paso 3: cálculo de la MAC  
+### <a name="step-3-computing-mac"></a>Paso 3: cálculo de la MAC  
  Posteriormente, la dirección MAC se calcula mediante el siguiente algoritmo:  
   
 ```  
@@ -99,14 +103,14 @@ versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
-### Paso 4: concatenación  
+### <a name="step-4-concatenation"></a>Paso 4: concatenación  
  Por último, el valor cifrado se genera con solo concatenar el byte de la versión del algoritmo, la dirección MAC, el IV y el texto de cifrado AES_256_CBC:  
   
 ```  
 aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext  
 ```  
   
-## Longitud del texto cifrado  
+## <a name="ciphertext-length"></a>Longitud del texto cifrado  
  Las longitudes (en bytes) de los componentes concretos del texto cifrado **AEAD_AES_256_CBC_HMAC_SHA_256** son las siguientes:  
   
 -   versionbyte: 1.  
@@ -174,11 +178,12 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**varchar**|Varía. Utilice la fórmula anterior.|  
 |**xml**|N/D (no compatible).|  
   
-## Referencia de .NET  
+## <a name="net-reference"></a>Referencia de .NET  
  Para obtener más información sobre los algoritmos que se han visto en este documento, vea los archivos **SqlAeadAes256CbcHmac256Algorithm.cs** y **SqlColumnEncryptionCertificateStoreProvider.cs** en la [referencia de .NET](http://referencesource.microsoft.com/).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Always Encrypted &#40;motor de base de datos&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Always Encrypted &#40;desarrollo de cliente&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   
+

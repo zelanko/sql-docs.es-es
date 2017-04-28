@@ -1,29 +1,33 @@
 ---
-title: "Audit Database Mirroring Login (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "notificaciones de eventos [SQL Server], creación de reflejo de la base de datos"
-  - "Audit Database Mirroring Login, clase de eventos"
-  - "creación de reflejo de la base de datos [SQL Server], notificaciones de eventos"
+title: Audit Database Mirroring Login (clase de eventos) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications [SQL Server], database mirroring
+- Audit Database Mirroring Login event class
+- database mirroring [SQL Server], event notifications
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 68d56190a6435a36e8ca96e0228aae7f19f133d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Audit Database Mirroring Login (clase de eventos)
+# <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login, clase de eventos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un evento **Audit Database Mirroring Login** para informar de los mensajes de auditoría relacionados con la seguridad de transporte de la creación de reflejo de bases de datos.  
   
-## Columnas de datos de la clase de evento Audit Database Mirroring Login  
+## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Columnas de datos de la clase de evento Audit Database Mirroring Login  
   
 |Columna de datos|Tipo|Descripción|Número de columna|Filtrable|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -59,9 +63,9 @@ caps.handback.revision: 16
 |3|Message Format Error|Un evento Message Format Error informa de que el inicio de sesión de creación de reflejo de bases de datos recibe un mensaje que no coincide con el formato esperado. Es posible que el mensaje se haya dañado, o que un programa diferente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está enviando mensajes al puerto que utiliza la creación de reflejo de bases de datos.|  
 |4|Negotiate Failure|Un evento Negotiate Failure informa de que el extremo local y el extremo remoto de creación de reflejo de bases de datos son compatibles mutuamente con niveles exclusivos de autenticación.|  
 |5|Authentication Failure|Un evento Authentication Failure informa de que un extremo de creación de reflejo de bases de datos no puede realizar la autenticación para la conexión debido a un error. Para la autenticación de Windows, este evento informa de que el extremo de creación de reflejo de bases de datos no puede utilizar la autenticación de Windows. Para la autenticación basada en certificados, este evento informa de que el extremo de creación de reflejo de bases de datos no puede obtener acceso al certificado.|  
-|6|Authorization Failure|Un evento Authorization Failure informa de que un extremo de creación de reflejo de bases de datos denegó la autorización para la conexión. Para la autenticación de Windows, este evento informa de que el identificador de seguridad de la conexión no coincide con uno de los usuarios de la base de datos. Para la autenticación basada en certificados, este evento informa de que la clave pública entregada en el mensaje no se corresponde con ningún certificado de la base de datos **maestra**.|  
+|6|Authorization Failure|Un evento Authorization Failure informa de que un extremo de creación de reflejo de bases de datos denegó la autorización para la conexión. Para la autenticación de Windows, este evento informa de que el identificador de seguridad de la conexión no coincide con uno de los usuarios de la base de datos. Para la autenticación basada en certificados, este evento informa de que la clave pública entregada en el mensaje no se corresponde con ningún certificado de la base de datos **maestra** .|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

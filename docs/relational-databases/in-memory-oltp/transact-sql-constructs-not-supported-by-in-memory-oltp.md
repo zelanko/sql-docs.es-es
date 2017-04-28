@@ -1,22 +1,26 @@
 ---
-title: "Construcciones Transact-SQL no admitidas por OLTP en memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Construcciones Transact-SQL no admitidas por OLTP en memoria | Microsoft Docs
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 caps.latest.revision: 51
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3539b07a27be375ebfe58e16a4792d9095fce0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Construcciones Transact-SQL no admitidas por OLTP en memoria
+# <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construcciones Transact-SQL no admitidas por OLTP en memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Las tablas con optimización para memoria, los procedimientos almacenados compilados de forma nativa y las funciones definidas por el usuario no admiten el área expuesta completa de [!INCLUDE[tsql](../../includes/tsql-md.md)] , pero las tablas basadas en disco, los procedimientos almacenados interpretados de [!INCLUDE[tsql](../../includes/tsql-md.md)] y las funciones definidas por el usuario sí la admiten. Cuando se intenta usar una de las características no admitidas, el servidor devuelve un error.  
@@ -51,7 +55,7 @@ caps.handback.revision: 51
 |----------|----------|----------------|  
 |Característica|ON|Las tablas con optimización para memoria no se pueden colocar en un grupo de archivos ni en un esquema de partición. Quite la cláusula ON de la instrucción **CREATE TABLE** .<br /><br /> Todas las tablas con optimización para memoria se asignan al grupo de archivos con optimización para memoria.|  
 |Tipo de datos|*Nombre del tipo de datos*|No se admite el tipo de datos indicado. Reemplace el tipo por uno de los tipos de datos admitidos. Para obtener más información, vea [Tipos de datos admitidos para OLTP en memoria](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).|  
-|Característica|Columnas calculadas|Las tablas con optimización para memoria no admiten columnas calculadas. Quite las columnas calculadas de la instrucción **CREATE TABLE** .<br/><br/>**Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se admiten columnas calculadas en tablas e índices optimizados para memoria.|  
+|Característica|Columnas calculadas|Las tablas con optimización para memoria no admiten columnas calculadas. Quite las columnas calculadas de la instrucción **CREATE TABLE** .<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se admiten columnas calculadas en tablas e índices optimizados para memoria.|  
 |Característica|Replicación|La replicación no es compatible con las tablas con optimización para memoria.|  
 |Característica|FILESTREAM|Las columnas de las tablas con optimización para memoria no admiten el almacenamiento FILESTREAM. Quite la palabra clave **FILESTREAM** de la definición de columna.|  
 |Característica|SPARSE|Las columnas de las tablas con optimización para memoria no se pueden definir como columnas SPARSE. Quite la palabra clave **SPARSE** de la definición de columna.|  
@@ -136,7 +140,7 @@ caps.handback.revision: 51
 |Operador|OFFSET|No se admite este operador. Quite **OFFSET** del procedimiento almacenado compilado de forma nativa.|  
 |Operador|INTERSECT|No se admite este operador. Quite **INTERSECT** del procedimiento almacenado compilado de forma nativa. En algunos casos se puede usar INNER JOIN para obtener el mismo resultado.|  
 |Operador|EXCEPT|No se admite este operador. Quite **EXCEPT** del procedimiento almacenado compilado de forma nativa.|  
-|Operador|APPLY|No se admite este operador. Quite **APPLY** del procedimiento almacenado compilado de forma nativa.<br/><br/>**Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, el operador APPLY se admite en los módulos compilados de forma nativa.|  
+|Operador|APPLY|No se admite este operador. Quite **APPLY** del procedimiento almacenado compilado de forma nativa.<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, el operador APPLY se admite en los módulos compilados de forma nativa.|  
 |Operador|PIVOT|No se admite este operador. Quite **PIVOT** del procedimiento almacenado compilado de forma nativa.|  
 |Operador|UNPIVOT|No se admite este operador. Quite **UNPIVOT** del procedimiento almacenado compilado de forma nativa.|  
 |Operador|CONTAINS|No se admite este operador. Quite **CONTAINS** del procedimiento almacenado compilado de forma nativa.|  
@@ -152,7 +156,7 @@ caps.handback.revision: 51
 |Opción|FOR XML|Esta opción no se admite. Quite **FOR XML** del procedimiento almacenado compilado de forma nativa.|  
 |Opción|FOR BROWSE|Esta opción no se admite. Quite **FOR BROWSE** del procedimiento almacenado compilado de forma nativa.|  
 |Sugerencia de combinación|HASH, MERGE|Los procedimientos almacenados compilados de forma nativa solo admiten las combinaciones de bucles anidados. No se admiten las combinaciones de mezcla ni las combinaciones de hash. Quite la sugerencia de combinación.|  
-|Sugerencia de consulta|*Sugerencia de consulta*|Esta sugerencia de consulta no está en los procedimientos almacenados compilados de forma nativa. Para conocer las sugerencias de consulta compatibles, vea [Sugerencias de consulta &#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md).|  
+|Sugerencia de consulta|*Sugerencia de consulta*|Esta sugerencia de consulta no está en los procedimientos almacenados compilados de forma nativa. Para conocer las sugerencias de consulta compatibles, vea [Sugerencias de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).|  
 |Opción|PERCENT|Esta opción no se admite con cláusulas **TOP** . Quite **PERCENT** de la consulta del procedimiento almacenado compilado de forma nativa.|  
 |Opción|WITH TIES|Esta opción no se admite con cláusulas **TOP** . Quite **WITH TIES** de la consulta del procedimiento almacenado compilado de forma nativa.|  
 |Aggregate, función|*Función de agregado*|Esta la cláusula no se admite. Para obtener más información acerca de las funciones de agregado en los procedimientos almacenados compilados de forma nativa, vea [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
@@ -165,7 +169,7 @@ caps.handback.revision: 51
 |Característica|ROLLUP|En los procedimientos almacenados compilados de forma nativa,**ROLLUP** no se puede utilizar con cláusulas **GROUP BY** . Quite **ROLLUP** de la definición de procedimiento.|  
 |Característica|CUBE|En los procedimientos almacenados compilados de forma nativa,**CUBE** no se puede utilizar con cláusulas **GROUP BY** . Quite **CUBE** de la definición de procedimiento.|  
 |Característica|GROUPING SETS|En los procedimientos almacenados compilados de forma nativa,**GROUPING SETS** no se puede utilizar con cláusulas **GROUP BY** . Quite **GROUPING SETS** de la definición de procedimiento.|  
-|Característica|BEGIN TRANSACTION, COMMIT TRANSACTION y ROLLBACK TRANSACTION|Utilice bloques ATÓMICOS para controlar las transacciones y tratar los errores. Para obtener más información, consulte [Atomic Blocks](../../relational-databases/in-memory-oltp/bloques-atomic-en-procedimientos-nativos.md).|  
+|Característica|BEGIN TRANSACTION, COMMIT TRANSACTION y ROLLBACK TRANSACTION|Utilice bloques ATÓMICOS para controlar las transacciones y tratar los errores. Para obtener más información, consulte [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).|  
 |Característica|Declaraciones de variable de tabla alineada.|Las variables de tabla deben hacer referencia explícitamente a los tipos definidos de tabla con optimización para memoria. Debe crear un tipo de tabla con optimización para memoria y usar ese tipo para la declaración de la variable, en lugar de especificar el tipo insertado.|  
 |Característica|Tablas basadas en disco|No se puede tener acceso a las tablas basadas en disco desde procedimientos almacenados compilados de forma nativa. Quite las referencias a las tablas basadas en disco desde los procedimientos almacenados compilados de forma nativa. O bien, migre las tablas basadas en disco a la memoria optimizada.|  
 |Característica|Vistas|No se puede tener acceso a las vistas desde procedimientos almacenados compilados de forma nativa. En lugar de a las vistas, haga referencia a las tablas base subyacentes.|  
@@ -187,3 +191,4 @@ caps.handback.revision: 51
  [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+

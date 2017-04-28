@@ -1,32 +1,36 @@
 ---
-title: "Ver las dependencias de un procedimiento almacenado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "procedimientos almacenados [SQL Server], dependencias"
-  - "mostrar dependencias de procedimientos almacenados"
-  - "ver dependencias de procedimientos almacenados"
+title: Ver las dependencias de un procedimiento almacenado | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stored procedures [SQL Server], dependencies
+- displaying stored procedure dependencies
+- viewing stored procedure dependencies
 ms.assetid: 6ae0a369-1bc7-4ae4-be89-2b483697cd1f
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 43bd4ec5070a9174a0cfd488157dd043dc4084bf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ver las dependencias de un procedimiento almacenado
+# <a name="view-the-dependencies-of-a-stored-procedure"></a>Ver las dependencias de un procedimiento almacenado
   En este tema se describe cómo ver las dependencias de procedimiento almacenado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ##  <a name="Top"></a>   
--   **Antes de empezar:**  [Limitaciones y restricciones](#Restrictions), [Seguridad](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
--   **Para ver las dependencias de un procedimiento, mediante:** [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **To view the dependencies of a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 26
   
 2.  Expanda **Bases de datos**, expanda la base de datos a la que pertenece el procedimiento y, a continuación, expanda **Programación**.  
   
-3.  Expanda **Procedimientos almacenados**, haga clic con el botón derecho en el procedimiento y, luego, haga clic en **Ver dependencias**.  
+3.  Expanda **Procedimientos almacenados**, haga clic con el botón derecho en el procedimiento y, luego, haga clic en **Ver dependencias**.  
   
 4.  Examine la lista de objetos que dependen del procedimiento.  
   
@@ -102,7 +106,7 @@ caps.handback.revision: 26
     GO  
     ```  
   
-5.  Después de crear el procedimiento, el segundo ejemplo usa la función sys.dm_sql_referencing_entities para mostrar los objetos que dependen del procedimiento.  
+5.  Después de crear el procedimiento, el segundo ejemplo usa la función sys.dm_sql_referencing_entities para mostrar los objetos que dependen del procedimiento.  
   
     ```  
     USE AdventureWorks2012;  
@@ -146,7 +150,7 @@ caps.handback.revision: 26
     GO  
     ```  
   
-5.  Después de crear el procedimiento, el segundo ejemplo usa la función sys.dm_sql_referenced_entities para mostrar los objetos de los que depende el procedimiento.  
+5.  Después de crear el procedimiento, el segundo ejemplo usa la función sys.dm_sql_referenced_entities para mostrar los objetos de los que depende el procedimiento.  
   
     ```  
     USE AdventureWorks2012;  
@@ -192,7 +196,7 @@ caps.handback.revision: 26
     GO  
     ```  
   
-5.  Después de crear el procedimiento, el segundo ejemplo usa la vista sys.sql_expression_dependencies para mostrar los objetos que dependen del procedimiento.  
+5.  Después de crear el procedimiento, el segundo ejemplo usa la vista sys.sql_expression_dependencies para mostrar los objetos que dependen del procedimiento.  
   
     ```  
     USE AdventureWorks2012;  
@@ -243,7 +247,7 @@ caps.handback.revision: 26
     GO  
     ```  
   
-5.  Después de crear el procedimiento, el segundo ejemplo usa la vista sys.sql_expression_dependencies para mostrar los objetos de los que depende el procedimiento.  
+5.  Después de crear el procedimiento, el segundo ejemplo usa la vista sys.sql_expression_dependencies para mostrar los objetos de los que depende el procedimiento.  
   
     ```  
     USE AdventureWorks2012;  
@@ -262,7 +266,7 @@ caps.handback.revision: 26
     GO  
     ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Cambiar el nombre de un procedimiento almacenado](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)   
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   

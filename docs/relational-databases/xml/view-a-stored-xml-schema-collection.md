@@ -1,33 +1,37 @@
 ---
-title: "Ver una colecci&#243;n de esquemas XML almacenada | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colecciones de esquemas [SQL Server], ver"
-  - "esquemas XML [SQL Server], ver"
-  - "CREATE XML SCHEMA COLLECTION, instrucción"
-  - "xml_schema_namespace function"
-  - "colecciones de esquemas XML [SQL Server], ver"
-  - "colecciones de esquemas XML, mostrar"
-  - "ver colecciones de esquemas XML"
+title: "Ver una colección de esquemas XML almacenada | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- schema collections [SQL Server], viewing
+- XML schemas [SQL Server], viewing
+- CREATE XML SCHEMA COLLECTION statement
+- xml_schema_namespace function
+- XML schema collections [SQL Server], viewing
+- displaying XML schema collections
+- viewing XML schema collections
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2bacfd298e992c64739442605f986afffefdb443
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ver una colecci&#243;n de esquemas XML almacenada
-  Después de importar una colección de esquemas XML mediante [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md), los componentes del esquema se almacenan en los metadatos. Puede usar la función intrínseca [xml_schema_namespace](../Topic/xml_schema_namespace%20\(Transact-SQL\).md) para reconstruir la colección de esquemas XML. La función devuelve una instancia de tipo de datos **xml** .  
+# <a name="view-a-stored-xml-schema-collection"></a>Ver una colección de esquemas XML almacenada
+  Después de importar una colección de esquemas XML mediante [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md), los componentes del esquema se almacenan en los metadatos. Puede usar la función intrínseca [xml_schema_namespace](../../t-sql/xml/xml-schema-namespace.md)para reconstruir la colección de esquemas XML. La función devuelve una instancia de tipo de datos **xml** .  
   
- Por ejemplo, la siguiente consulta recupera una colección de esquemas XML (`ProductDescriptionSchemaCollection`) del esquema relacional de producción de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ Por ejemplo, la siguiente consulta recupera una colección de esquemas XML (`ProductDescriptionSchemaCollection`) del esquema relacional de producción de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  
 SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection')  
@@ -43,7 +47,7 @@ SELECT xml_schema_namespace(N'RelationalSchemaName',N'XmlSchemaCollectionName').
 GO  
 ```  
   
- La siguiente consulta, por ejemplo, recupera información de garantía del producto y de mantenimiento del esquema XML a partir de la colección de esquemas XML `ProductDescriptionSchemaCollection`.  
+ La siguiente consulta, por ejemplo, recupera información de garantía del producto y de mantenimiento del esquema XML a partir de la colección de esquemas XML `ProductDescriptionSchemaCollection` .  
   
 ```  
 SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection').query('  
@@ -65,7 +69,7 @@ GO
   
  La vista de catálogo [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) también devuelve información sobre las colecciones de esquemas XML. La información consiste en el nombre la colección, la fecha de creación y el nombre del propietario.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Colecciones de esquemas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

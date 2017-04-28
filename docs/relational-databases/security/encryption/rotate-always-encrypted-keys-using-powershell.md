@@ -1,22 +1,26 @@
 ---
-title: "Rotar claves de Always Encrypted con PowerShell | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Rotar claves Always Encrypted con PowerShell | Microsoft Docs
+ms.custom: 
+ms.date: 11/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-security
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5117b4fd-c8d3-48d5-87c9-756800769f31
 caps.latest.revision: 19
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ffa9047c43a263ceae52550b65d3d147a8c9928
+ms.lasthandoff: 04/11/2017
+
 ---
-# Rotar claves de Always Encrypted con PowerShell
+# <a name="rotate-always-encrypted-keys-using-powershell"></a>Rotate Always Encrypted Keys using PowerShell (Rotar claves Always Encrypted con PowerShell)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 En este artículo se proporcionan los pasos necesarios para rotar claves de Always Encrypted con el módulo SqlServer PowerShell. Para obtener información sobre el uso del módulo SqlServer PowerShell para Always Encrypted, vea [Configure Always Encrypted using PowerShell (Configurar Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
@@ -25,8 +29,8 @@ La rotación de claves de Always Encrypted es el proceso de sustitución de una 
 
 Always Encrypted emplea dos tipos de claves, por lo que hay dos flujos de trabajo de rotación de claves de alto nivel: rotación de claves maestras de columna y rotación de claves de cifrado de columna.
 
-* **Rotación de claves de cifrado de columna**: implica descifrar los datos cifrados con la clave actual y volver a cifrarlos con la nueva clave de cifrado de columna. Dado que la rotación de una clave de cifrado de columna exige el acceso a las claves y a la base de datos, la rotación de claves de cifrado de columna solo se puede realizar sin separación de roles.
-* **Rotación de claves maestras de columna**: implica descifrar las claves de cifrado de columna que están protegidas con la clave maestra de columna actual, volver a cifrarlas con la nueva clave maestra de columna y actualizar los metadatos de ambos tipos de claves. La rotación de claves maestras de columna se puede realizar con o sin separación de roles (cuando se usa el módulo SqlServer PowerShell).
+* **Rotación de claves de cifrado de columna** : implica descifrar los datos cifrados con la clave actual y volver a cifrarlos con la nueva clave de cifrado de columna. Dado que la rotación de una clave de cifrado de columna exige el acceso a las claves y a la base de datos, la rotación de claves de cifrado de columna solo se puede realizar sin separación de roles.
+* **Rotación de claves maestras de columna** : implica descifrar las claves de cifrado de columna que están protegidas con la clave maestra de columna actual, volver a cifrarlas con la nueva clave maestra de columna y actualizar los metadatos de ambos tipos de claves. La rotación de claves maestras de columna se puede realizar con o sin separación de roles (cuando se usa el módulo SqlServer PowerShell).
 
 
 ## <a name="column-master-key-rotation-without-role-separation"></a>Rotación de claves maestras de columna sin separación de roles
@@ -369,3 +373,5 @@ Remove-SqlColumnEncryptionKey -Name $oldCekName -InputObject $database
 - [Configurar Always Encrypted con PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)    
 - [Always Encrypted (motor de base de datos)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Blog de Always Encrypted](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
+
+

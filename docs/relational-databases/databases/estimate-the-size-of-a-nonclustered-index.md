@@ -1,31 +1,35 @@
 ---
-title: "Estimar el tama&#241;o de un &#237;ndice no cl&#250;ster | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "asignación de espacio [SQL Server], tamaño de índice"
-  - "tamaño [SQL Server], tablas"
-  - "predecir tamaño de tabla [SQL Server]"
-  - "tamaño de índice [SQL Server]"
-  - "estimar tamaño de tabla"
-  - "índices agrupados, tamaño de tabla"
-  - "diseñar bases de datos [SQL Server], estimar tamaño"
-  - "calcular tamaño de tabla"
+title: "Estimar el tamaño de un índice no agrupado | Microsoft Docs"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- space allocation [SQL Server], index size
+- size [SQL Server], tables
+- predicting table size [SQL Server]
+- table size [SQL Server]
+- estimating table size
+- clustered indexes, table size
+- designing databases [SQL Server], estimating size
+- calculating table size
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8302d2481e9fe2f6d47c87e2fbc9accd2e3c560d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Estimar el tama&#241;o de un &#237;ndice no cl&#250;ster
+# <a name="estimate-the-size-of-a-nonclustered-index"></a>Estimar el tamaño de un índice no clúster
   Siga estos pasos para estimar el espacio necesario para almacenar un índice no clúster:  
   
 1.  Calcular las variables que deben usarse en los pasos 2 y 3.  
@@ -36,24 +40,24 @@ caps.handback.revision: 40
   
 4.  Sumar los valores calculados.  
   
-## Paso 1. Calcularlas variables que deben usarse en los pasos 2 y 3  
+## <a name="step-1-calculate-variables-for-use-in-steps-2-and-3"></a>Paso 1. Calcularlas variables que deben usarse en los pasos 2 y 3  
  Los siguientes pasos pueden utilizarse para calcular las variables que se utilizan para estimar el espacio necesario para almacenar los niveles superiores del índice:  
   
 1.  Especifique el número de filas que habrá en la tabla:  
   
-     ***Num_Rows*** = número de filas de la tabla  
+     ***Num_Rows***  = número de filas de la tabla  
   
 2.  Especifique el número de columnas de longitud fija y variable de la clave de índice, y calcule el espacio necesario para su almacenamiento:  
   
      Las columnas de clave de un índice pueden incluir columnas de longitud fija y de longitud variable. Para estimar el tamaño de las filas de índice de nivel interior, calcule el espacio que ocupa cada uno de estos grupos de columnas en la fila de índice. El tamaño de una columna depende del tipo y de la longitud especificados para los datos.  
   
-     ***Num_Key_Cols*** = número total de columnas de clave (de longitud fija y variable)  
+     ***Num_Key_Cols***  = número total de columnas de clave (de longitud fija y variable)  
   
-     ***Fixed_Key_Size*** = tamaño total en bytes de todas las columnas de clave de longitud fija  
+     ***Fixed_Key_Size***  = tamaño total en bytes de todas las columnas de clave de longitud fija  
   
-     ***Num_Variable_Key_Cols*** = número de columnas de clave de longitud variable  
+     ***Num_Variable_Key_Cols***  = número de columnas de clave de longitud variable  
   
-     ***Max_Var_Key_Size*** = tamaño máximo en bytes de todas las columnas de clave de longitud variable  
+     ***Max_Var_Key_Size***  = tamaño máximo en bytes de todas las columnas de clave de longitud variable  
   
 3.  Tenga en cuenta el localizador de fila de datos necesario si el índice no es único:  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 40
   
      Si existen columnas que aceptan valores NULL en la clave del índice, incluidas las columnas de clave de agrupación en clústeres necesarias que se describen en el paso 1.3, se reserva parte de la fila de índice para el mapa de bits NULL.  
   
-     ***Index_Null_Bitmap*** = 2 + ((número de columnas de la fila de índice + 7) / 8)  
+     ***Index_Null_Bitmap***  = 2 + ((número de columnas de la fila de índice + 7) / 8)  
   
      Solamente debe utilizarse la parte entera de la expresión anterior. Descarte el resto.  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 40
   
      Dado que las filas de índice no abarcan varias páginas, el número de filas de índice por página debe redondearse hacia abajo a la fila completa más cercana. El valor 2 de la fórmula representa la entrada de la fila en la matriz de zonas de la página.  
   
-## Paso 2. Calcular el espacio utilizado para almacenar información del índice en el nivel hoja  
+## <a name="step-2-calculate-the-space-used-to-store-index-information-in-the-leaf-level"></a>Paso 2. Calcular el espacio utilizado para almacenar información del índice en el nivel hoja  
  Para estimar el espacio necesario para almacenar el nivel hoja del índice, puede utilizar los siguientes pasos. Para completar este paso, necesita los valores del Paso 1.  
   
 1.  Especifique el número de columnas de longitud fija y variable en el nivel hoja y calcule el espacio necesario para su almacenamiento:  
@@ -116,7 +120,7 @@ caps.handback.revision: 40
     >  Un índice no clúster se puede ampliar incluyendo columnas que no son de clave además de las columnas de clave de índice. Estas columnas adicionales solamente se almacenan en el nivel hoja del índice no clúster. Para más información, consulte [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
     > [!NOTE]  
-    >  Puede combinar las columnas **varchar**, **nvarchar**, **varbinary** o **sql_variant** que hacen que el ancho total definido para la tabla sea superior a 8060 bytes. La longitud de cada una de estas columnas debe ajustarse al límite de 8000 bytes en columnas **varchar**, **varbinary** o **sql_variant** y de 4000 bytes en columnas **nvarchar**. Sin embargo, el ancho combinado puede superar el límite de 8.060 bytes de una tabla. Esto también se aplica a filas de hoja de índice no clúster con columnas incluidas.  
+    >  Puede combinar las columnas **varchar**, **nvarchar**, **varbinary**o **sql_variant** que hacen que el ancho total definido para la tabla sea superior a 8060 bytes. La longitud de cada una de estas columnas debe ajustarse al límite de 8000 bytes en columnas **varchar**, **varbinary**o **sql_variant** y de 4000 bytes en columnas **nvarchar** . Sin embargo, el ancho combinado puede superar el límite de 8.060 bytes de una tabla. Esto también se aplica a filas de hoja de índice no clúster con columnas incluidas.  
   
      Si el índice no clúster no incluye columnas, utilice los valores del Paso 1, incluidas las modificaciones determinadas en el Paso 1.3:  
   
@@ -204,7 +208,7 @@ caps.handback.revision: 40
   
      ***Leaf_Space_Used***  = 8192 x ***Num_Leaf_Pages***  
   
-## Paso 3. Calcular el espacio utilizado para almacenar información del índice en los niveles no hoja  
+## <a name="step-3-calculate-the-space-used-to-store-index-information-in-the-non-leaf-levels"></a>Paso 3. Calcular el espacio utilizado para almacenar información del índice en los niveles no hoja  
  Siga estos pasos para estimar el espacio necesario para almacenar los niveles intermedio y raíz del índice. Para completar este paso, necesita los valores de los pasos 2 y 3.  
   
 1.  Calcule el número de niveles no hoja del índice:  
@@ -227,7 +231,7 @@ caps.handback.revision: 40
   
      ***Index_Space_Used***  = 8192 x ***Num_Index_Pages***  
   
-## Paso 4. Sumar los valores calculados  
+## <a name="step-4-total-the-calculated-values"></a>Paso 4. Sumar los valores calculados  
  Sume los valores obtenidos en los dos pasos anteriores:  
   
  Tamaño del índice no agrupado (bytes) = ***Leaf_Space_Used*** + ***Index_Space_used***  
@@ -244,7 +248,7 @@ caps.handback.revision: 40
   
 -   Valores de objetos grandes (LOB)  
   
-     El algoritmo para determinar exactamente la cantidad de espacio que se usará para almacenar los tipos de datos LOB y los valores **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntext**, **xml** e **image** es complejo. Basta con agregar el tamaño medio de los valores LOB esperados, multiplicarlo por ***Num_Rows*** y sumar el resultado al tamaño total del índice no agrupado.  
+     El algoritmo para determinar exactamente la cantidad de espacio que se usará para almacenar los tipos de datos LOB y los valores **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntext**, **xml**e **image** es complejo. Basta con agregar el tamaño medio de los valores LOB esperados, multiplicarlo por ***Num_Rows***y sumar el resultado al tamaño total del índice no agrupado.  
   
 -   Compresión  
   
@@ -254,7 +258,7 @@ caps.handback.revision: 40
   
      Para obtener información sobre los requisitos de espacio de las columnas dispersas, vea [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Índices agrupados y no agrupados descritos](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [Crear índices no clúster](../../relational-databases/indexes/create-nonclustered-indexes.md)   
  [Crear índices clúster](../../relational-databases/indexes/create-clustered-indexes.md)   

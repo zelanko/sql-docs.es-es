@@ -1,46 +1,50 @@
 ---
-title: "Ver o cambiar los filtros y separadores de palabras registrados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "búsqueda de texto completo [SQL Server], separadores de palabras"
-  - "búsqueda de texto completo [SQL Server], filtros"
-  - "filtros [búsqueda de texto completo]"
-  - "separadores de palabras [búsqueda de texto completo]"
+title: Ver o cambiar los filtros y separadores de palabras registrados | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text search [SQL Server], word breakers
+- full-text search [SQL Server], filters
+- filters [full-text search]
+- word breakers [full-text search]
 ms.assetid: f88c54df-b1aa-4701-807f-dc92c32363fd
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2032d8aaaa75352d64aa4ed19ec53670afe6d8a7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ver o cambiar los filtros y separadores de palabras registrados
+# <a name="view-or-change-registered-filters-and-word-breakers"></a>Ver o cambiar los filtros y separadores de palabras registrados
   Después de instalar o desinstalar filtros o separadores de palabras en un sistema, los cambios no se aplican automáticamente en las instancias de servidor. En este tema se describe cómo ver los filtros o separadores de palabras actualmente registrados y cómo registrar filtros y separadores de palabras recién instalados en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### Para ver una lista de idiomas con separadores de palabras actualmente registrados  
+### <a name="to-view-a-list-of-languages-whose-word-breakers-are-currently-registered"></a>Para ver una lista de idiomas con separadores de palabras actualmente registrados  
   
-1.  Use la vista de catálogo [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md), tal y como se muestra a continuación:  
+1.  Use la vista de catálogo [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) , tal y como se muestra a continuación:  
   
     ```  
     SELECT * FROM sys.fulltext_languages;   
     ```  
   
-### Para ver una lista de los filtros actualmente registrados  
+### <a name="to-view-a-list-of-the-filters-that-are-currently-registered"></a>Para ver una lista de los filtros actualmente registrados  
   
-1.  Use el procedimiento almacenado del sistema [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md), tal y como se muestra a continuación:  
+1.  Use el procedimiento almacenado del sistema [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) , tal y como se muestra a continuación:  
   
     ```  
     EXEC sp_help_fulltext_system_components 'filter';    
     ```  
   
-### Para registrar filtros y separadores de palabras recién instalados  
+### <a name="to-register-newly-installed-word-breakers-and-filters"></a>Para registrar filtros y separadores de palabras recién instalados  
   
 1.  Use el procedimiento almacenado del sistema [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md) para actualizar la lista de idiomas, tal y como se muestra a continuación:  
   
@@ -48,7 +52,7 @@ caps.handback.revision: 22
     exec sp_fulltext_service 'update_languages';   
     ```  
   
-### Para anular el registro de filtros y separadores de palabras instalados  
+### <a name="to-unregister-uninstalled-word-breakers-and-filters"></a>Para anular el registro de filtros y separadores de palabras instalados  
   
 1.  Use **sp_fulltext_service** para actualizar la lista de idiomas, tal y como se muestra a continuación:  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 22
     exec sp_fulltext_service 'restart_all_fdhosts';  
     ```  
   
-### Para reemplazar los filtros o separadores de palabras existentes al instalar filtros o separadores de palabras nuevos  
+### <a name="to-replace-existing-word-breakers-or-filters-when-installing-new-ones"></a>Para reemplazar los filtros o separadores de palabras existentes al instalar filtros o separadores de palabras nuevos  
   
 1.  Cuando se prepare para instalar un archivo DLL que contenga nuevos filtros o separadores de palabras, compruebe que tenga un nombre de archivo distinto de cualquiera de los archivos DLL existentes instalados en su instancia del servidor.  
   
@@ -91,13 +95,13 @@ caps.handback.revision: 22
     EXEC sp_fulltext_service 'update_languages';  
     ```  
   
-6.  Reinicie los procesos de host de demonio de filtro (fdhost.exe) mediante **sp_fulltext_service**, tal y como se muestra a continuación:  
+6.  Reinicie los procesos de host de demonio de filtro (fdhost.exe) mediante **sp_fulltext_service** , tal y como se muestra a continuación:  
   
     ```  
     EXEC sp_fulltext_service 'restart_all_fdhosts';   
     ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Establecer la cuenta del servicio para el selector del demonio de filtro completo](../../relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [Configurar y administrar filtros para búsquedas](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
  [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)  

@@ -1,56 +1,60 @@
 ---
-title: "Ver o cambiar las programaciones del conjunto de recopilaci&#243;n (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dc.collectionsetprop.uploads.f1"
-  - "sql13.swb.dc.collectionsetprop.description.f1"
-  - "sql13.swb.dc.collectionsetprop.general.f1"
-helpviewer_keywords: 
-  - "conjuntos de recopilación [SQL Server], cambiar programaciones"
-  - "programaciones [SQL Server], cambiar conjunto de recopilación"
-  - "conjuntos de recopilación [SQL Server], ver programaciones"
-  - "programaciones [SQL Server], ver conjunto de recopilación"
+title: "Ver o cambiar las programaciones del conjunto de recopilación (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dc.collectionsetprop.uploads.f1
+- sql13.swb.dc.collectionsetprop.description.f1
+- sql13.swb.dc.collectionsetprop.general.f1
+helpviewer_keywords:
+- collection sets [SQL Server], changing schedules
+- schedules [SQL Server], changing collection set
+- collection sets [SQL Server], viewing schedules
+- schedules [SQL Server], viewing collection set
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b882c8e5f82beb7d467d1063695fa032ed562ca0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ver o cambiar las programaciones del conjunto de recopilaci&#243;n (SQL Server Management Studio)
+# <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Ver o cambiar las programaciones del conjunto de recopilación (SQL Server Management Studio)
   Puede ver o cambiar las programaciones del conjunto de recopilación mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  El modo de recopilación, con almacenamiento en caché o sin almacenamiento en caché, determina cómo se puede hacer cambios en una programación. El modo de almacenamiento en caché utiliza programaciones independientes para la recopilación y para la carga. El modo sin almacenamiento en caché utiliza la misma programación para la recopilación y para la carga. El tipo de modo de recopilación para cada uno de los conjuntos de recopilación de datos del sistema es el siguiente:  
   
--   **Uso de disco**: usa el modo de recopilación de datos no almacenados en memoria caché.  
+-   **Uso de disco** : usa el modo de recopilación de datos no almacenados en memoria caché.  
   
 -   **Estadísticas de consultas** : utiliza el modo de recopilación de datos almacenados en caché.  
   
 -   **Actividad del servidor** : utiliza el modo de recopilación de datos almacenados en caché.  
   
-### Para ver las programaciones del conjunto de recopilación  
+### <a name="to-view-collection-set-schedules"></a>Para ver las programaciones del conjunto de recopilación  
   
 1.  En el Explorador de objetos, expanda el nodo **Administración** , expanda **Recopilación de datos**y, después, **Conjuntos de recopilación de datos del sistema**.  
   
-2.  Haga clic con el botón derecho en un nombre de conjunto de recopilación y haga clic en **Propiedades** para abrir el cuadro de diálogo [Propiedades del conjunto de recopilación de datos](#CollectionSet).  
+2.  Haga clic con el botón derecho en un nombre de conjunto de recopilación y haga clic en **Propiedades** para abrir el cuadro de diálogo [Propiedades del conjunto de recopilación de datos](#CollectionSet) .  
   
-### Para cambiar las programaciones de un conjunto de recopilación en modo de datos almacenados en caché  
+### <a name="to-change-the-schedules-for-a-cached-mode-collection-set"></a>Para cambiar las programaciones de un conjunto de recopilación en modo de datos almacenados en caché  
   
 1.  En el Explorador de objetos, expanda el nodo **Administración** , expanda **Recopilación de datos**y, después, **Conjuntos de recopilación de datos del sistema**.  
   
-2.  Haga clic con el botón derecho en un conjunto de recopilación que use el modo de almacenamiento en memoria caché, como **Estadísticas de consultas** y haga clic en **Propiedades** para abrir el cuadro de diálogo [Propiedades del conjunto de recopilación de datos](#CollectionSet).  
+2.  Haga clic con el botón derecho en un conjunto de recopilación que use el modo de almacenamiento en memoria caché, como **Estadísticas de consultas**y haga clic en **Propiedades** para abrir el cuadro de diálogo [Propiedades del conjunto de recopilación de datos](#CollectionSet) .  
   
 3.  Puede cambiar la frecuencia de recopilación en la página **General** . Para ello, siga estos pasos:  
   
-    1.  En el panel de detalles, haga doble clic en el número que se muestra para la columna **Frecuencia de recopilación (s)** en la tabla **Elementos de recopilación**.  
+    1.  En el panel de detalles, haga doble clic en el número que se muestra para la columna **Frecuencia de recopilación (s)** en la tabla **Elementos de recopilación** .  
   
     2.  Para aumentar o disminuir la frecuencia de recopilación, escriba un número menor o mayor, y presione ENTRAR para almacenar el nuevo valor.  
   
@@ -75,11 +79,11 @@ caps.handback.revision: 26
   
 5.  Haga clic en **Aceptar** para guardar los cambios de la frecuencia de recopilación y la programación de carga y para cerrar el cuadro de diálogo **Propiedades del conjunto de recopilación de datos** .  
   
-### Para cambiar la programación de un conjunto de recopilación en modo de datos no almacenados en caché  
+### <a name="to-change-the-schedule-for-a-non-cached-mode-collection-set"></a>Para cambiar la programación de un conjunto de recopilación en modo de datos no almacenados en caché  
   
 1.  En el Explorador de objetos, expanda el nodo **Administración** , expanda **Recopilación de datos**y, después, **Conjuntos de recopilación de datos del sistema**.  
   
-2.  Haga clic con el botón derecho en un conjunto de recopilación que use el modo sin almacenamiento en memoria caché, como **Uso de disco**, y haga clic en **Propiedades** para abrir el cuadro de diálogo [Propiedades del conjunto de recopilación de datos](#CollectionSet).  
+2.  Haga clic con el botón derecho en un conjunto de recopilación que use el modo sin almacenamiento en memoria caché, como **Uso de disco**, y haga clic en **Propiedades** para abrir el cuadro de diálogo [Propiedades del conjunto de recopilación de datos](#CollectionSet) .  
   
      El cuadro de diálogo **Propiedades del conjunto de recopilación de datos** muestra una vista paginada de las propiedades del conjunto de recopilación.  
   
@@ -127,7 +131,7 @@ caps.handback.revision: 26
  Muestra los parámetros de entrada utilizados para el conjunto de recopilación.  
   
  **Ejecutar como**  
- Especifica la cuenta utilizada para ejecutar el conjunto de recopilación. De forma predeterminada, ésta es la cuenta del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si se definen cuentas de proxy, esta lista incluye los nombres de las cuentas de proxy disponibles.  
+ Especifica la cuenta utilizada para ejecutar el conjunto de recopilación. De forma predeterminada, ésta es la cuenta del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si se definen cuentas de proxy, esta lista incluye los nombres de las cuentas de proxy disponibles.  
   
  **Establecer cuánto tiempo se retendrán los datos recopilados en el almacén de administración de datos.**  
  Especifica cuánto tiempo se retienen los datos recopilados. Elija una de las opciones siguientes.  
@@ -160,7 +164,7 @@ caps.handback.revision: 26
   
  Utilice esta página para ver una descripción del conjunto de recopilación al que hace referencia esta página de propiedades.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Administrar la recopilación de datos](../../relational-databases/data-collection/manage-data-collection.md)   
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)  
   

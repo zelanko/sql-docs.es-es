@@ -1,31 +1,35 @@
 ---
-title: "Copias de seguridad de archivos completas (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "copias de seguridad completas [SQL Server]"
-  - "realizar copia de seguridad [SQL Server], archivos o grupos de archivos"
-  - "copias de seguridad [SQL Server], archivos o grupos de archivos"
-  - "modelo de recuperación completa [SQL Server], copias de seguridad de archivos completas"
-  - "copias de seguridad [SQL Server], completas"
-  - "archivos [SQL Server], copias de seguridad"
-  - "grupos de archivos [SQL Server], realizar copia de seguridad"
-  - "archivos, copias de seguridad [SQL Server]"
+title: Copias de seguridad de archivos completas (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full backups [SQL Server]
+- backing up [SQL Server], files or filegroups
+- backups [SQL Server], files or filegroups
+- full recovery model [SQL Server], full file backups
+- file backups [SQL Server], full
+- files [SQL Server], backing up
+- filegroups [SQL Server], backing up
+- file backups [SQL Server]
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 caps.latest.revision: 62
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 62
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10cdcff6b30fc1c71943cca5c0675473ea81d0ae
+ms.lasthandoff: 04/11/2017
+
 ---
-# Copias de seguridad de archivos completas (SQL Server)
+# <a name="full-file-backups-sql-server"></a>Copias de seguridad de archivos completas (SQL Server)
   Este tema es pertinente para bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contienen varios archivos o grupos de archivos.  
   
  Es posible realizar una copia de seguridad y restaurar individualmente los archivos de una base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Además, puede especificar un grupo de archivos entero en lugar de especificar cada archivo constitutivo individualmente. Tenga en cuenta que si un archivo de un grupo de archivos se encuentra sin conexión (por ejemplo, porque se está restaurando), todo el grupo de archivos estará sin conexión y no se puede realizar una copia de seguridad.  
@@ -72,10 +76,10 @@ caps.handback.revision: 62
 > [!NOTE]  
 >  Los archivos individuales se pueden restaurar a partir de una copia de seguridad de la base de datos; sin embargo, la ubicación y restauración de un archivo requiere más tiempo si se realiza a través de una copia de seguridad de la base de datos que si se realiza a través de una copia de seguridad de archivos.  
   
-### Copias de seguridad de archivos y el modelo de recuperación simple  
+### <a name="file-backups-and-the-simple-recovery-model"></a>Copias de seguridad de archivos y el modelo de recuperación simple  
  En el modelo de recuperación simple, se debe hacer una copia de seguridad de todos los archivos de lectura/escritura juntos. Esto garantiza que la base de datos se pueda restaurar a un punto temporal coherente. En lugar de especificar de forma individual cada grupo de archivos o cada archivo de lectura/escritura utilice la opción READ_WRITE_FILEGROUPS. Esta opción realiza una copia de seguridad de todos los grupos de archivos de lectura/escritura de la base de datos. Una copia de seguridad que se crea al especificar READ_WRITE_FILEGROUPS se conoce como copia de seguridad parcial. Para obtener más información, vea [Copias de seguridad parciales &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
   
-### Copias de seguridad de archivos y el modelo de recuperación completa  
+### <a name="file-backups-and-the-full-recovery-model"></a>Copias de seguridad de archivos y el modelo de recuperación completa  
  En el modelo de recuperación completa, debe realizar una copia de seguridad del registro de transacciones, independientemente del resto de su estrategia de copia de seguridad. Un conjunto de copias de seguridad completas de archivos, junto con un número suficiente de copias de seguridad de registros que abarque todas las copias de seguridad de archivos desde el inicio de la primera copia de seguridad de archivos, equivale a una copia de seguridad completa de la base de datos.  
   
  La restauración de una base de datos usando solo copias de seguridad de archivos y de registros puede ser compleja. Por ello, si es posible, se recomienda realizar una copia de seguridad completa de la base de datos e iniciar las copias de seguridad de registros antes de la primera copia de seguridad de archivos. En la siguiente ilustración se muestra una estrategia en la que se realiza un copia de seguridad completa de la base de datos (a la hora t1) poco después de crear la base de datos (a la hora t0). Esta primera copia de seguridad de la base de datos permite que se inicien las copias de seguridad del registro de transacciones. Las copias de seguridad del registro de transacciones se programan para que se realicen a intervalos definidos. Las copias de seguridad de archivos se realizan con el intervalo que mejor se adapta a los requisitos empresariales de la base de datos. En esta ilustración se muestra cada uno de los cuatro grupos de archivos de los que se hace una copia de seguridad (de uno en uno). El orden en que se realiza una copia de seguridad de estos grupos (A, C, B, A) refleja los requisitos empresariales de la base de datos.  
@@ -95,7 +99,7 @@ caps.handback.revision: 62
 > [!NOTE]  
 >  Las copias de seguridad de archivos no son compatibles con el Asistente para planes de mantenimiento.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Información general de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Copias de seguridad y restauración: interoperabilidad y coexistencia &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   

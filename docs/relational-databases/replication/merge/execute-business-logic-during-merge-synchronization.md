@@ -1,36 +1,40 @@
 ---
-title: "Ejecutar l&#243;gica de negocios durante la sincronizaci&#243;n de mezcla | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "resolución personalizada de errores [replicación de SQL Server]"
-  - "control personalizado de cambios [replicación de SQL Server]"
-  - "errores [replicación de SQL Server], controladores de lógica de negocios"
-  - "controladores de lógica de negocios de replicación de mezcla [replicación de SQL Server]"
-  - "resolución de conflictos [replicación de SQL Server], replicación de mezcla"
-  - "controladores de lógica de negocios [replicación de SQL Server]"
+title: "Ejecutar lógica de negocios durante la sincronización de mezcla | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom error resolution [SQL Server replication]
+- custom change handling [SQL Server replication]
+- errors [SQL Server replication], business logic handlers
+- merge replication business logic handlers [SQL Server replication]
+- conflict resolution [SQL Server replication], merge replication
+- business logic handlers [SQL Server replication]
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a165253bc79d9fe6c958a9d0e8ec83e73cf58c7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ejecutar l&#243;gica de negocios durante la sincronizaci&#243;n de mezcla
+# <a name="execute-business-logic-during-merge-synchronization"></a>Ejecutar lógica de negocios durante la sincronización de mezcla
   El marco de trabajo de controladores de lógica de negocios permite escribir un ensamblado de código administrado al que se llama durante el proceso de sincronización de mezcla. El ensamblado incluye lógica de negocios que puede responder a varias condiciones durante la sincronización: cambios de datos, conflictos y errores. El marco de trabajo de controladores de lógica de negocios proporciona un modelo de programación simple y los datos que el proceso de mezcla suministra al ensamblado tienen el formato de un conjunto de datos ADO.NET, lo que permite aprovechar el conocimiento de ADO.NET en lugar de aprender el uso de una interfaz privada. Para obtener más información acerca de los controladores de lógica de negocios de programación, vea:  
   
--   La referencia de la interfaz (API) de programación de aplicaciones: <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
+-   La referencia de la interfaz de programación de aplicaciones (API): <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   Instrucciones sobre cómo implementar un controlador de lógica de negocios: [implementar un controlador de lógica de negocios para un artículo de mezcla](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+-   Instrucciones sobre cómo implementar un controlador de lógica de negocios: [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md) (Implementar un controlador de lógica de negocios para un artículo de mezcla)  
   
-## Usos de los controladores de lógica de negocios  
+## <a name="uses-for-business-logic-handlers"></a>Usos de los controladores de lógica de negocios  
  El proceso de sincronización de mezcla puede invocar controladores de lógica de negocios para que lleven a cabo las siguientes acciones:  
   
 -   Control personalizado de cambios  
@@ -42,7 +46,7 @@ caps.handback.revision: 31
 > [!NOTE]  
 >  El controlador de lógica de negocios especificado se ejecuta para cada fila que se sincroniza. La lógica compleja y las llamadas a otras aplicaciones o servicios de red pueden afectar al rendimiento.  
   
-### Control personalizado de cambios  
+### <a name="custom-change-handling"></a>Control personalizado de cambios  
  Se puede invocar el controlador de lógica de negocios durante el procesamiento de cambios de datos que no produzcan conflictos y realizar una de estas tres acciones:  
   
 -   Rechazar los datos  
@@ -57,8 +61,8 @@ caps.handback.revision: 31
   
      Esto es útil para aplicaciones que deben suplantar operaciones o valores de datos específicos. Por ejemplo, una aplicación podría transformar la eliminación de una fila en una actualización especial que establezca la columna **estado** de la fila en el valor "eliminado" y después realice un seguimiento de la identidad del cliente que lleva a cabo la eliminación. Esto podría ser útil con fines de auditoría o flujo de trabajo.  
   
-### Resolución personalizada de conflictos  
- La replicación de mezcla permite la detección y resolución de conflictos, y permite al usuario aceptar una estrategia de resolución predeterminada o elegir la resolución personalizada de los conflictos. Para obtener más información, consulte [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md). Se puede invocar el controlador de lógica de negocios durante el procesamiento de cambios de datos que produzcan conflictos y realizar una de estas dos acciones:  
+### <a name="custom-conflict-resolution"></a>Resolución personalizada de conflictos  
+ La replicación de mezcla permite la detección y resolución de conflictos, y permite al usuario aceptar una estrategia de resolución predeterminada o elegir la resolución personalizada de los conflictos. Para más información, consulte [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md). Se puede invocar el controlador de lógica de negocios durante el procesamiento de cambios de datos que produzcan conflictos y realizar una de estas dos acciones:  
   
 -   Aceptar la resolución predeterminada  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 31
   
      Esto es útil para aplicaciones que pueden necesitar seleccionar valores de datos específicos para su lógica de negocios y suministrar este conjunto de datos personalizado al proceso de sincronización. Por ejemplo, una aplicación podría proporcionar una nueva versión de la fila ganadora combinando valores de los conjuntos de datos del publicador y el suscriptor.  
   
-### Resolución personalizada de errores  
+### <a name="custom-error-resolution"></a>Resolución personalizada de errores  
  Se puede invocar la lógica personalizada durante la propagación de cambios que dan como resultado errores. La lógica puede realizar una de las dos acciones siguientes:  
   
 -   Aceptar la resolución predeterminada del error  
@@ -79,7 +83,7 @@ caps.handback.revision: 31
   
      Esto es útil para aplicaciones que pueden necesitar seleccionar valores de datos específicos para su lógica de negocios y suministrar este conjunto de datos personalizado al proceso de sincronización. Por ejemplo, si el proceso de replicación detecta una infracción de clave duplicada, el controlador de lógica de negocios podría proporcionar una nueva versión del cambio de datos en la que la clave ya no entre en conflicto. Después, los cambios realizados en el publicador y el suscriptor pueden persistir en la base de datos y el proceso de replicación no tiene que compensar el error de inserción con una eliminación.  
   
-## Escenarios de implementación de controladores de lógica de negocios  
+## <a name="deployment-scenarios-for-business-logic-handlers"></a>Escenarios de implementación de controladores de lógica de negocios  
  Los controladores de lógica de negocios se pueden implementar en:  
   
 -   El distribuidor. Utilice una suscripción de inserción para que la lógica de negocios se ejecute en el distribuidor.  
@@ -88,10 +92,10 @@ caps.handback.revision: 31
   
 -   Un servidor con Internet Information Services (IIS), si se utiliza la sincronización web. Utilice una suscripción de extracción sincronizada con la sincronización web y el controlador de lógica de negocios se ejecutará en el servidor IIS.  
   
-## Vea también  
- [Replicación de mezcla](../../../relational-databases/replication/merge/merge-replication.md)   
- [Suscribirse a publicaciones](../../../relational-databases/replication/subscribe-to-publications.md)   
- [Sincronizar datos](../../../relational-databases/replication/synchronize-data.md)   
- [Sincronización web para la replicación de mezcla](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
+## <a name="see-also"></a>Vea también  
+ [Merge Replication](../../../relational-databases/replication/merge/merge-replication.md)  (Replicación de mezcla)  
+ [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
+ [Synchronize Data](../../../relational-databases/replication/synchronize-data.md)  (Sincronizar datos)  
+ [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

@@ -1,25 +1,29 @@
 ---
-title: "Topolog&#237;as para sincronizaci&#243;n web | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sincronización web, topologías"
-  - "configuración del servidor IIS [replicación de SQL Server]"
+title: "Topologías para sincronización web | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Web synchronization, topologies
+- IIS server configuration [SQL Server replication]
 ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e2045d5c7485207c52d6cf45229c3d2bd6d7c94
+ms.lasthandoff: 04/11/2017
+
 ---
-# Topolog&#237;as para sincronizaci&#243;n web
+# <a name="topologies-for-web-synchronization"></a>Topologías para sincronización web
   Puede elegir entre una amplia variedad de topologías de replicación de sincronización web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Entre las maneras habituales de configurar una sincronización web se incluyen:  
   
 -   Servidor único  
@@ -28,9 +32,9 @@ caps.handback.revision: 31
   
 -   Varios sistemas con [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) y republicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- Para obtener información acerca de cómo configurar la sincronización Web, consulte [Configurar sincronización Web](../../relational-databases/replication/configure-web-synchronization.md).  
+ Para más información sobre cómo configurar la sincronización web, vea [Configurar la sincronización web](../../relational-databases/replication/configure-web-synchronization.md).  
   
-## Servidor único  
+## <a name="single-server"></a>Servidor único  
  En la topología más sencilla, IIS, el publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el distribuidor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] residen en un único servidor. Los suscriptores se sincronizan conectándose a IIS en el publicador. El publicador puede estar situado detrás de un firewall.  
   
 > [!NOTE]  
@@ -38,12 +42,12 @@ caps.handback.revision: 31
   
  ![Sincronización web con un solo servidor](../../relational-databases/replication/media/web-sync02.gif "Sincronización web con un solo servidor")  
   
-## Dos servidores  
+## <a name="two-servers"></a>Dos servidores  
  Se puede colocar IIS en un servidor y configurar el publicador y el distribuidor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en otro distinto. El servidor en el que se ejecuta IIS puede aislarse de Internet mediante un firewall. Los suscriptores se sincronizan conectándose a IIS.  
   
  ![Sincronización web con dos servidores](../../relational-databases/replication/media/web-sync03.gif "Sincronización web con dos servidores")  
   
-## Varios sistemas IIS y republicación de SQL Server  
+## <a name="multiple-iis-systems-and-sql-server-republishing"></a>Varios sistemas IIS y republicación de SQL Server  
  Si dispone de un gran número de suscriptores que se sincronizan al mismo tiempo, puede dividir el trabajo entre varios equipos que ejecuten IIS.  
   
  ![Sincronización web con varios servidores IIS](../../relational-databases/replication/media/web-sync04.gif "Sincronización web con varios servidores IIS")  
@@ -55,8 +59,8 @@ caps.handback.revision: 31
   
  ![Sincronización web con nueva publicación](../../relational-databases/replication/media/web-sync05.gif "Sincronización web con nueva publicación")  
   
-## Vea también  
- [Configurar sincronización web](../../relational-databases/replication/configure-web-synchronization.md)   
- [Sincronización web para la replicación de mezcla](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
+## <a name="see-also"></a>Vea también  
+ [Configurar la sincronización web](../../relational-databases/replication/configure-web-synchronization.md)   
+ [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

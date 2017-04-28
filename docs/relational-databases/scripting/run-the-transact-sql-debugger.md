@@ -1,37 +1,41 @@
 ---
-title: "Ejecutar el depurador de Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "depurador de Transact-SQL, requisito sysadmin"
-  - "depurador de Transact-SQL, versiones compatibles"
-  - "Editor de consultas [Motor de base de datos], menú contextual"
-  - "depurar [SQL Server], depurador de T-SQL"
-  - "depurador de Transact-SQL, menú de acceso directo del Editor de consultas"
-  - "depurador de Transact-SQL, detener"
-  - "depurador de Transact-SQL, menú Depurar"
-  - "depurar [SQL Server]"
-  - "depurador de Transact-SQL, barra de herramientas de depuración"
-  - "depurador de Transact-SQL, métodos abreviados de teclado"
-  - "depurador de Transact-SQL, iniciar"
+title: Ejecutar el depurador de Transact-SQL | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, sysadmin requirement
+- Transact-SQL debugger, supported versions
+- Query Editor [Database Engine], right-click menu
+- debugging [SQL Server], T-SQL debugger
+- Transact-SQL debugger, Query Editor shortcut menu
+- Transact-SQL debugger, stopping
+- Transact-SQL debugger, Debug menu
+- debugging [SQL Server]
+- Transact-SQL debugger, Debug toolbar
+- Transact-SQL debugger, keyboard shortcuts
+- Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2a9c2a6c57d74122ff0294bdf0bdccd2193447f8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ejecutar el depurador de Transact-SQL
+# <a name="run-the-transact-sql-debugger"></a>Ejecutar el depurador de Transact-SQL
   Puede iniciar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] después de abrir una ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . A continuación, puede ejecutar el código de [!INCLUDE[tsql](../../includes/tsql-md.md)] en modo de depuración hasta que se detenga el depurador. Puede establecer las opciones para personalizar cómo se ejecuta el depurador.  
   
-## Iniciar y detener el depurador  
+## <a name="starting-and-stopping-the-debugger"></a>Iniciar y detener el depurador  
  Los requisitos para iniciar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] son los siguientes:  
   
 -   Si el Editor de consultas del [!INCLUDE[ssDE](../../includes/ssde-md.md)] está conectado a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] en otro equipo, debe haber configurado el depurador para la depuración remota. Para obtener más información, vea [Configurar reglas de firewall antes de ejecutar al depurador de TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).  
@@ -46,7 +50,7 @@ caps.handback.revision: 8
   
 -   La depuración es una operación con muchos privilegios. Por consiguiente, solo los miembros del rol fijo de servidor sysadmin pueden depurar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Las sesiones de depuración se suelen ejecutar durante períodos de tiempo prolongados mientras se investiga el funcionamiento de varias instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los bloqueos, como los bloqueos de actualización, que adquiere la sesión se pueden mantener durante períodos prolongados, hasta que finalice la sesión o se confirme o revierta la transacción.  
+-   Las sesiones de depuración se suelen ejecutar durante períodos de tiempo prolongados mientras se investiga el funcionamiento de varias instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] . Los bloqueos, como los bloqueos de actualización, que adquiere la sesión se pueden mantener durante períodos prolongados, hasta que finalice la sesión o se confirme o revierta la transacción.  
   
  Al iniciarse el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] , la ventana del Editor de consultas se pone en el modo de depuración. Cuando la ventana del Editor de consultas entra en el modo de depuración, el depurador se detiene en la primera línea de código. Luego, puede recorrer el código, detener la ejecución en instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] específicas y usar las ventanas del depurador para ver el estado de ejecución actual. Puede iniciar el depurador haciendo clic en el botón **Depurador** de la barra de herramientas **Consulta** o en la opción **Iniciar depuración** del menú **Depurar** .  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 8
   
  También puede detener el modo de depuración y dejar que finalice la ejecución del resto de las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] haciendo clic en la opción **Desasociar todo** del menú **Depurar** .  
   
-## Controlar el depurador  
+## <a name="controlling-the-debugger"></a>Controlar el depurador  
  Puede controlar el funcionamiento del depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] usando los siguiente comandos de menú, barras de herramientas y accesos directos:  
   
 -   El menú **Depurar** y la barra de herramientas **Depurar** . Tanto el menú **Depurar** como la barra de herramientas **Depurar** están inactivos hasta que el foco se coloque en una ventana abierta del Editor de consultas. Permanecen activas hasta que se cierre el proyecto actual.  
@@ -103,7 +107,7 @@ caps.handback.revision: 8
 |**Deshabilitar todos los puntos de interrupción**|No disponible|No disponible|No disponible|Deshabilitar todos los puntos de interrupción.|  
 |No disponible|**Agregar inspección**|No disponible|No disponible|Agregar la expresión seleccionada a la ventana **Inspección** .|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Avanzar paso a paso por el código Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)   
  [Ver información del depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   

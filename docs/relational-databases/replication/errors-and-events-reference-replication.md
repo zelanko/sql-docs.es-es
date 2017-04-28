@@ -1,34 +1,38 @@
 ---
-title: "Referencia de errores y eventos (replicaci&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "errores [replicación de SQL Server], solucionar problemas"
-  - "solucionar problemas [replicación de SQL Server], errores"
-  - "replicación [SQL Server], solucionar problemas"
-  - "errores [replicación de SQL Server]"
-  - "referencia de errores y eventos [replicación de SQL Server]"
+title: "Referencia de errores y eventos (replicación) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- errors [SQL Server replication], troubleshooting
+- troubleshooting [SQL Server replication], errors
+- replication [SQL Server], troubleshooting
+- errors [SQL Server replication]
+- errors and events reference [SQL Server replication]
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29667a31a69460d6408a84d21035a1a16cf4dc31
+ms.lasthandoff: 04/11/2017
+
 ---
-# Referencia de errores y eventos (replicaci&#243;n)
+# <a name="errors-and-events-reference-replication"></a>Referencia de errores y eventos (replicación)
   Esta sección de la documentación contiene información sobre la causa y la resolución de una serie de errores relacionados con la replicación.  
   
 |Error|de mensaje|  
 |-----------|-------------|  
-|[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|No se puede insertar una fila de clave duplicada en el objeto ' %. * ls' con índice único ' %.\*ls'.|  
-|[MSSQL_ENG002627](../../relational-databases/replication/mssql-eng002627.md)|Infracción de la restricción '%.*ls'. No se puede insertar una clave duplicada en el objeto ' %.\*ls'.|  
+|[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|No se puede insertar una fila de claves duplicadas en el objeto "%.*ls" con índice único "%.\*ls".|  
+|[MSSQL_ENG002627](../../relational-databases/replication/mssql-eng002627.md)|Infracción de la restricción '%.*ls'. No se puede insertar una clave duplicada en el objeto "%.\*ls".|  
 |[MSSQL_ENG003165](../../relational-databases/replication/mssql-eng003165.md)|La base de datos '%ls' se restauró. Sin embargo, se encontró un error al restaurar o quitar la replicación. Se ha dejado la base de datos sin conexión. Vea el tema MSSQL_ENG003165 en los Libros en pantalla de SQL Server.|  
 |[MSSQL_ENG003724](../../relational-databases/replication/mssql-eng003724.md)|No se puede %1! %2! '%3!' porque se está utilizando para la replicación.|  
 |[MSSQL_ENG004929](../../relational-databases/replication/mssql-eng004929.md)|No se puede modificar el %1! '%2!' porque se está publicando para replicación.|  
@@ -50,7 +54,7 @@ caps.handback.revision: 25
 |[MSSQL_ENG014163](../../relational-databases/replication/mssql-eng014163.md)|Se ha establecido el umbral [%s:%s] para la publicación [%s]. Asegúrese de que el agente de mezcla se está ejecutando y cumple con el requisito esperado.|  
 |[MSSQL_ENG014164](../../relational-databases/replication/mssql-eng014164.md)|Se ha establecido el umbral [%s:%s] para la publicación [%s]. Asegúrese de que el agente de mezcla se está ejecutando y cumple con el requisito esperado.|  
 |[MSSQL_ENG014165](../../relational-databases/replication/mssql-eng014165.md)|Se ha establecido el umbral [%s:%s] para la publicación [%s]. Asegúrese de que el agente de mezcla se está ejecutando y cumple con el requisito esperado.|  
-|[MSSQL_ENG018456](../../relational-databases/replication/mssql-eng018456.md)|Error de inicio de sesión para el usuario ' %. * ls'.%.\*ls|  
+|[MSSQL_ENG018456](../../relational-databases/replication/mssql-eng018456.md)|Error de inicio de sesión del usuario "%.*ls".%.\*ls|  
 |[MSSQL_ENG018752](../../relational-databases/replication/mssql-eng018752.md)|El Agente de registro del LOG y los procedimientos relacionados con el registro (sp_repldone, sp_replcmds y sp_replshowcmds) solamente pueden conectarse a la base de datos de uno en uno. Si ejecutó un procedimiento relacionado con el registro, quite la conexión mediante la cual se ejecutó el procedimiento o ejecute sp_replflush en esa conexión antes de iniciar el Agente de registro del LOG o de ejecutar otro procedimiento relacionado con el registro.|  
 |[MSSQL_ENG020554](../../relational-databases/replication/mssql-eng020554.md)|El agente de replicación no ha registrado un mensaje de progreso en %ld minutos. Esto podría indicar que un agente no responde o una gran actividad en el sistema. Compruebe que se están replicando los registros en el destino y que las conexiones al suscriptor, publicador y distribuidor están activas.|  
 |[MSSQL_ENG020557](../../relational-databases/replication/mssql-eng020557.md)|Cierre del agente. Para obtener más información, vea el trabajo '%s' en el historial de trabajos del Agente SQL Server.|  

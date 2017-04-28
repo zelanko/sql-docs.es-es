@@ -1,27 +1,31 @@
 ---
-title: "Ejemplos: Usar el modo PATH | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modo PATH FOR XML, ejemplos"
+title: 'Ejemplos: Usar el modo PATH | Microsoft Docs'
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01caa2a86cde9fc2d8e857f1fd04486008d5886c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ejemplos: Usar el modo PATH
+# <a name="examples-using-path-mode"></a>Ejemplos: Usar el modo PATH
   El ejemplo siguiente ilustra el uso del modo PATH en la creación de XML a partir de una consulta SELECT. Muchas de estas consultas se especifican usando los documentos XML de instrucciones de fabricación de bicicletas almacenados en la columna Instructions de la tabla ProductModel.  
   
-## Especificar una consulta sencilla de modo PATH  
+## <a name="specifying-a-simple-path-mode-query"></a>Especificar una consulta sencilla de modo PATH  
  Esta consulta especifica un modo FOR XML PATH.  
   
 ```  
@@ -120,7 +124,7 @@ GO
   
  `<Name>Bike Wash</Name>`  
   
-## Especificar nombres de columna de tipo XPath  
+## <a name="specifying-xpath-like-column-names"></a>Especificar nombres de columna de tipo XPath  
  En la consulta siguiente, el nombre de columna `ProductModelID` especificado empieza con '@' y no incluye una marca de barra diagonal ('/'). Por tanto, se creará en el XML resultante un atributo del elemento <`row`> que tenga el valor de columna correspondiente.  
   
 ```  
@@ -185,7 +189,7 @@ GO
   
  `</Root>`  
   
- Además del identificador y el nombre del modelo de producto, la consulta siguiente recupera las ubicaciones con instrucciones de fabricación para el modelo de producto. Puesto que la columna Instructions es de tipo **xml**, se especifica el método **query()** del tipo de datos **xml** para recuperar la ubicación.  
+ Además del identificador y el nombre del modelo de producto, la consulta siguiente recupera las ubicaciones con instrucciones de fabricación para el modelo de producto. Puesto que la columna Instructions es de tipo **xml** , se especifica el método **query()** del tipo de datos **xml** para recuperar la ubicación.  
   
 ```  
 SELECT ProductModelID AS "@id",  
@@ -273,7 +277,7 @@ GO
   
  `</ns1:root>`  
   
-## Generar una lista de valores con el modo PATH  
+## <a name="generating-a-value-list-using-path-mode"></a>Generar una lista de valores con el modo PATH  
  Esta consulta crea una lista de valores de Id. de productos para cada modelo de producto. Además, crea elementos anidados <`ProductName`> para cada Id. de producto, tal y como se muestra en este fragmento de XML:  
   
  `<ProductModelData ProductModelID="7" ProductModelName="..."`  
@@ -380,7 +384,7 @@ WHERE ProductModelID= 7 OR ProductModelID=9
 FOR XML PATH('ProductModelData');  
 ```  
   
-## Agregar espacios de nombres en el XML resultante  
+## <a name="adding-namespaces-in-the-resulting-xml"></a>Agregar espacios de nombres en el XML resultante  
  Tal y como se describe en el tema [Agregar espacios de nombres mediante WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md), puede usar WITH XMLNAMESPACES para incluir espacios de nombres en las consultas de modo PATH. Por ejemplo, los nombres especificados en la cláusula SELECT incluyen prefijos de espacio de nombres. La siguiente consulta de modo `PATH` crea XML con espacios de nombres.  
   
 ```  
@@ -463,7 +467,7 @@ FOR XML PATH('ProductModelData'), root('root');
   
  `</root>`  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Usar el modo PATH con FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

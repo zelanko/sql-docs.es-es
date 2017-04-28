@@ -1,32 +1,36 @@
 ---
-title: "Seguridad de nivel de fila | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/29/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "predicados de control de acceso"
-  - "seguridad de nivel de fila"
-  - "seguridad [SQL Server], control de acceso basado en predicados"
-  - "seguridad de nivel de fila descrita"
-  - "seguridad basada en predicados"
+title: Seguridad de nivel de fila | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/29/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- access control predicates
+- row level security
+- security [SQL Server], predicate based access control
+- row level security described
+- predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0141c681779c12bf63162751f93dcd6495fb1a94
+ms.lasthandoff: 04/11/2017
+
 ---
-# Seguridad de nivel de fila
+# <a name="row-level-security"></a>Seguridad de nivel de fila
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  ![Row level security graphic](../../relational-databases/security/media/row-level-security-graphic.png "Row level security graphic")  
+  ![Gráfico de seguridad de nivel de fila](../../relational-databases/security/media/row-level-security-graphic.png "Gráfico de seguridad de nivel de fila")  
   
  La seguridad de nivel de fila permite a los clientes controlar el acceso a las filas de una tabla de base de datos según las características del usuario que ejecuta una consulta (por ejemplo, pertenencia a grupos o contexto de ejecución).  
   
@@ -36,30 +40,9 @@ caps.handback.revision: 47
   
  Implementar RLS con la instrucción de [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] y los predicados creados como [funciones Inline con valores de tabla](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
-||  
-|-|  
-|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obtenerla](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obtenerla](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
-##  <a name="Top"></a> En este tema  
-  
--   [Descripción](#Description)  
-  
--   [Casos de uso](#UseCases)  
-  
--   [Permisos](#Permissions)  
-  
--   [Procedimientos recomendados](#Best)  
-  
--   [Nota de seguridad: ataques del lado de canal](#SecNote)  
-  
--   [Compatibilidad entre características](#Limitations)  
-  
--   [Ejemplos de código](#CodeExamples)  
-  
-    -   [A. Escenario para los usuarios conectados directamente](#Typical)  
-  
-    -   [B. Escenario de aplicación de nivel medio](#MidTier)  
-  
+
 ##  <a name="Description"></a> Descripción  
  RLS admite dos tipos de predicados de seguridad.  
   
@@ -69,7 +52,7 @@ caps.handback.revision: 47
   
  El acceso a los datos de nivel de fila de una tabla está restringido por un predicado de seguridad que se define como una función con valores de tabla insertada. Luego, la función se invoca y una directiva de seguridad la aplica. En el caso de los predicados de filtro, no hay ninguna indicación para la aplicación de que se han filtrado filas del conjunto de resultados; si se filtran todas las filas, se devolverá un conjunto nulo. En el caso de los predicados de bloqueo, las operaciones que infrinjan el predicado generarán un error.  
   
- Los predicados de filtro se aplican al leer los datos desde la tabla base y afecta a todas las operaciones Get:**SELECT**, **DELETE** (es decir, los usuarios no pueden eliminar las filas filtradas) y **UPDATE** (es decir, los usuarios no pueden actualizar las filas filtradas aunque es posible actualizar las filas de modo que se filtren posteriormente). Los predicados de bloqueo afectan a todas las operaciones de escritura.  
+ Los predicados de filtro se aplican al leer los datos desde la tabla base y afecta a todas las operaciones Get: **SELECT**, **DELETE** (es decir, los usuarios no pueden eliminar las filas filtradas) y **UPDATE** (es decir, los usuarios no pueden actualizar las filas filtradas aunque es posible actualizar las filas de modo que se filtren posteriormente). Los predicados de bloqueo afectan a todas las operaciones de escritura.  
   
 -   Los predicados AFTER INSERT y AFTER UPDATE pueden impedir que los usuarios actualicen las filas con valores que infrinjan el predicado.  
   
@@ -107,7 +90,6 @@ caps.handback.revision: 47
   
 -   No se han realizado cambios en las API masivas, incluida BULK INSERT. Esto significa que los predicados de bloqueo AFTER INSERT se aplicarán a las operaciones de inserción masivas como si fueran operaciones de inserción normales.  
   
- [Superior](#Top)  
   
 ##  <a name="UseCases"></a> Casos de uso  
  Estos son ejemplos de diseño de cómo se puede usar RLS:  
@@ -122,7 +104,6 @@ caps.handback.revision: 47
   
  En términos más formales, RLS presenta control de acceso basado en predicado. Ofrece una evaluación flexible, centralizada y basada en predicados que puede tener en cuenta metadatos o cualquier otro criterio que el administrador determine como apropiado. El predicado se usa como un criterio para determinar si el usuario tiene o no el acceso adecuado a los datos según los atributos del usuario. El control de acceso basado en etiquetas se puede implementar con el control de acceso basado en predicados.  
   
- [Arriba](#Top)  
   
 ##  <a name="Permissions"></a> Permisos  
  Crear, modificar o quitar directivas de seguridad necesita el permiso **ALTER ANY SECURITY POLICY** . Crear o quitar una directiva de seguridad necesita el permiso **ALTER** en el esquema.  
@@ -137,9 +118,8 @@ caps.handback.revision: 47
   
  Las directivas de seguridad se aplican a todos los usuarios, incluidos los usuarios dbo de la base de datos. Los usuarios dbo pueden modificar o quitar directivas de seguridad, sin embargo, se pueden auditar los cambios en las directivas de seguridad. Si los usuarios con privilegios elevados (como sysadmin o db_owner) necesitan ver todas las filas para solucionar problemas o validar los datos, la directiva de seguridad debe estar escrita de modo que lo permita.  
   
- Si se crea una directiva de seguridad con `SCHEMABINDING = OFF`, los usuarios deben tener el permiso de **SELECT** o **EXECUTE** en la función de predicado y cualquier función, vista o tabla adicional que se use dentro de la función de predicado para consultar la tabla de destino. Si se crear una directiva de seguridad con `SCHEMABINDING = ON` (el valor predeterminado), entonces estas comprobaciones de permiso se omiten cuando los usuarios consultan la tabla de destino.  
+ Si se crea una directiva de seguridad con `SCHEMABINDING = OFF`, los usuarios deben tener el permiso de  **SELECT** o **EXECUTE** en la función de predicado y cualquier función, vista o tabla adicional que se use dentro de la función de predicado para consultar la tabla de destino. Si se crear una directiva de seguridad con `SCHEMABINDING = ON` (el valor predeterminado), entonces estas comprobaciones de permiso se omiten cuando los usuarios consultan la tabla de destino.  
   
- [Superior](#Top)  
   
 ##  <a name="Best"></a> Procedimientos recomendados  
   
@@ -153,7 +133,7 @@ caps.handback.revision: 47
   
 -   Evite el uso de combinaciones de tablas de forma excesiva en funciones de predicado para maximizar el rendimiento.  
   
- Evite la lógica del predicado que dependa de [opciones SET](../../t-sql/statements/set-statements-transact-sql.md) específicas de la sesión: aunque es improbable que se usen en aplicaciones prácticas, las funciones de predicado cuya lógica depende de determinadas opciones **SET** específicas de la sesión pueden perder información si los usuarios pueden ejecutar consultas arbitrarias. Por ejemplo, una función de predicado que convierte implícitamente una cadena en **datetime** podría filtrar filas diferentes según la opción **SET DATEFORMAT** de la sesión actual. En general, las funciones de predicado deben cumplir las reglas siguientes:  
+ Evite la lógica del predicado que dependa de [opciones SET](../../t-sql/statements/set-statements-transact-sql.md)específicas de la sesión: aunque es improbable que se usen en aplicaciones prácticas, las funciones de predicado cuya lógica depende de determinadas opciones **SET** específicas de la sesión pueden perder información si los usuarios pueden ejecutar consultas arbitrarias. Por ejemplo, una función de predicado que convierte implícitamente una cadena en **datetime** podría filtrar filas diferentes según la opción **SET DATEFORMAT** de la sesión actual. En general, las funciones de predicado deben cumplir las reglas siguientes:  
   
 -   Las funciones de predicado no deben convertir implícitamente cadenas de caracteres en **date**, **smalldatetime**, **datetime**, **datetime2** o **datetimeoffset** o viceversa, ya que estas conversiones se ven afectadas por las opciones [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md) y [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md). En su lugar, use la función **CONVERT** y especifique explícitamente el parámetro de estilo.  
   
@@ -162,15 +142,13 @@ caps.handback.revision: 47
 -   Las funciones de predicado no deben depender de expresiones aritméticas o de agregación que devuelvan **NULL** en caso de error (como desbordamiento o división por cero), ya que este comportamiento se ve afectado por las opciones [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md), [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md) y [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md).  
   
 -   Las funciones de predicado no deben comparar cadenas concatenadas con **NULL**, ya que este comportamiento se ve afectado por la opción [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
-  
- [Superior](#Top)  
+   
   
 ##  <a name="SecNote"></a> Nota de seguridad: ataques del lado de canal  
  **Administrador de directivas de seguridad malintencionado:** es importante observar que un administrador de directivas de seguridad malintencionado, con suficientes permisos para crear una directiva de seguridad en una columna confidencial, y con permisos para crear o modificar funciones con valores de tabla insertadas, puede conspirar con otro usuario que tenga permisos SELECT en una tabla para exfiltrar datos creando malintencionadamente funciones con valores de tabla insertadas diseñadas para usar ataques del lado de canal para inferir los datos. Estos ataques necesitarían una confabulación (o excesivos permisos concedidos a un usuario malintencionado) y es probable que necesiten varias iteraciones de modificación de la directiva (que necesite permisos para quitar el predicado para romper el enlace de esquema), modificación de las funciones con valores de tabla insertada y ejecución repetida de instrucciones SELECT en la tabla de destino. Se recomienda limitar los permisos según sea necesario y supervisar cualquier actividad sospechosa, como cambiar constantemente las directivas y las funciones con valores de tabla insertada relacionadas con la seguridad de nivel de fila.  
   
  **Consultas cuidadosamente diseñadas:** es posible perder información mediante el uso de consultas cuidadosamente diseñadas. Por ejemplo, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` permitiría que un usuario malintencionado sepa que el salario de Juan García es 100.000 $. Aunque hay un predicado de seguridad para impedir que un usuario malintencionado consulte directamente el salario de otras personas, el usuario puede determinar el momento en que la consulta devuelve una excepción de división por cero.  
-  
- [Superior](#Top)  
+   
   
 ##  <a name="Limitations"></a> Compatibilidad entre características  
  En general, la seguridad de nivel de fila funcionará como se espera en todas las características. Sin embargo, hay algunas excepciones. En esta sección se describen varias notas y advertencias sobre el uso de la seguridad de nivel de fila con otras características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -181,7 +159,7 @@ caps.handback.revision: 47
   
 -   **Polybase:** RLS no es compatible con Polybase.  
   
--   **Tablas con optimización para memoria** la función con valores de tabla insertados que se usa como predicado de seguridad en una tabla con optimización para memoria debe definirse mediante la opción `WITH NATIVE_COMPILATION`. Con esta opción, se prohibirán las características del lenguaje incompatibles con las tablas con optimización para memoria y se emitirá el error adecuado en tiempo de creación. Para obtener más información, vea la sección **Seguridad de nivel de fila en tablas con optimización para memoria** en [Introducción a las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
+-   **Tablas con optimización para memoria**la función con valores de tabla insertados que se usa como predicado de seguridad en una tabla con optimización para memoria debe definirse mediante la opción `WITH NATIVE_COMPILATION` . Con esta opción, se prohibirán las características del lenguaje incompatibles con las tablas con optimización para memoria y se emitirá el error adecuado en tiempo de creación. Para obtener más información, vea la sección **Seguridad de nivel de fila en tablas con optimización para memoria** en [Introducción a las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 -   **Vistas indizadas:** en general, se pueden crear directivas de seguridad sobre las vistas y se pueden crear vistas sobre las tablas que están enlazadas mediante directivas de seguridad. Sin embargo, no se pueden crear vistas indexadas sobre las tablas que tienen una directiva de seguridad, ya que las búsquedas de filas mediante el índice podrían omitir la directiva.  
   
@@ -197,7 +175,6 @@ caps.handback.revision: 47
   
 -   **Tablas temporales:** son compatibles con RLS. Sin embargo, los predicados de seguridad en la tabla actual no se replican automáticamente a la tabla del historial. Para aplicar una directiva de seguridad a las tablas actual y del historial, debe agregar individualmente un predicado de seguridad en cada tabla.  
   
- [Superior](#Top)  
   
 ##  <a name="CodeExamples"></a> Ejemplos  
   
@@ -206,7 +183,7 @@ caps.handback.revision: 47
   
  Cree tres cuentas de usuario que mostrarán las distintas capacidades de acceso.  
   
-```  
+```sql  
 CREATE USER Manager WITHOUT LOGIN;  
 CREATE USER Sales1 WITHOUT LOGIN;  
 CREATE USER Sales2 WITHOUT LOGIN;  
@@ -296,7 +273,6 @@ WITH (STATE = OFF);
   
  Ahora los usuarios Sales1 y Sales2 pueden ver las 6 filas.  
   
- [Superior](#Top)  
   
 ###  <a name="MidTier"></a> B. Escenario para los usuarios que se conectan a la base de datos a través de una aplicación de nivel intermedio  
  Este ejemplo muestra cómo una aplicación de nivel intermedio puede implementar el filtrado de conexiones, donde los usuarios de la aplicación (o inquilinos) comparten el mismo usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (la aplicación). La aplicación configura el identificador de usuario de la aplicación actual en [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) después de conectarse a la base de datos y, luego, las directivas de seguridad filtran de forma transparente las filas que no deberían ser visibles para este identificador e impiden también que el usuario inserte filas para el identificador de usuario incorrecto. No es necesario ningún otro cambio en la aplicación.  
@@ -385,7 +361,7 @@ REVERT;
 GO  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [ALTER SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   
@@ -397,3 +373,4 @@ GO
  [Crear funciones definidas por el usuario &#40;motor de base de datos&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)  
   
   
+

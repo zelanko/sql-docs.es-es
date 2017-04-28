@@ -1,31 +1,35 @@
 ---
-title: "Ejecutar un procedimiento almacenado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.executeprocedure.general.f1"
-  - "sql13.swb.executeprocedure.f1"
-helpviewer_keywords: 
-  - "procedimientos almacenados [SQL Server], parámetros"
-  - "procedimientos almacenados extendidos [SQL Server], ejecutar"
-  - "procedimientos almacenados del sistema [SQL Server], ejecutar"
-  - "procedimientos almacenados [SQL Server], ejecutar"
-  - "procedimientos almacenados definidos por el usuario [SQL Server]"
+title: Ejecutar un procedimiento almacenado | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.executeprocedure.general.f1
+- sql13.swb.executeprocedure.f1
+helpviewer_keywords:
+- stored procedures [SQL Server], parameters
+- extended stored procedures [SQL Server], executing
+- system stored procedures [SQL Server], executing
+- stored procedures [SQL Server], executing
+- user-defined stored procedures [SQL Server]
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1e76212425f01aba20c8a0d0fdb548415559be1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ejecutar un procedimiento almacenado
+# <a name="execute-a-stored-procedure"></a>Ejecutar un procedimiento almacenado
   En este tema se describe cómo ejecutar un procedimiento almacenado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Hay dos formas diferentes de ejecutar un procedimiento almacenado. El primer método y más común es que una aplicación o un usuario llame al procedimiento. El segundo método consiste en establecer el procedimiento para que se ejecute automáticamente cuando se inicie una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando una aplicación o un usuario llama a un procedimiento, la palabra clave EXECUTE o EXEC de [!INCLUDE[tsql](../../includes/tsql-md.md)] se indica explícitamente en la llamada. Como alternativa, se puede llamar al procedimiento y ejecutarlo sin la palabra clave si el procedimiento es la primera instrucción del lote de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -56,7 +60,7 @@ caps.handback.revision: 38
     EXEC SP_heLP; -- Will fail to resolve because SP_heLP does not equal sp_help  
     ```  
   
-     Para mostrar los nombres exactos de los procedimientos del sistema, consulte las vistas de catálogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) y [sys.system_parameters](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md).  
+     Para mostrar los nombres exactos de los procedimientos del sistema, consulte las vistas de catálogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) y [sys.system_parameters](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md) .  
   
 -   Si un procedimiento definido por el usuario tiene el mismo nombre que un procedimiento del sistema, puede que el procedimiento definido por el usuario no se ejecute nunca.  
   
@@ -99,7 +103,7 @@ caps.handback.revision: 38
   
 -   Ejecutar procedimientos almacenados automáticamente  
   
-     Los procedimientos marcados para su ejecución automática se ejecutan cada vez que se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la base de datos **maestra** se recupera durante ese proceso de inicio. Puede ser útil configurar procedimientos para que se ejecuten automáticamente a la hora de realizar operaciones de mantenimiento de bases de datos o para tener procedimientos que se ejecutan continuamente como procesos en segundo plano. Otra forma de usar la ejecución automática consiste en que el procedimiento realice tareas del sistema o de mantenimiento en **tempdb**, como crear una tabla temporal global. De este modo, se garantiza que esa tabla temporal existirá siempre cuando se vuelva a crear **tempdb** durante el inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Los procedimientos marcados para su ejecución automática se ejecutan cada vez que se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la base de datos **maestra** se recupera durante ese proceso de inicio. Puede ser útil configurar procedimientos para que se ejecuten automáticamente a la hora de realizar operaciones de mantenimiento de bases de datos o para tener procedimientos que se ejecutan continuamente como procesos en segundo plano. Otra forma de usar la ejecución automática consiste en que el procedimiento realice tareas del sistema o de mantenimiento en **tempdb**, como crear una tabla temporal global. De este modo, se garantiza que esa tabla temporal existirá siempre cuando se vuelva a crear **tempdb** durante el inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Un procedimiento que se ejecuta automáticamente funciona con los mismos permisos que los miembros del rol fijo de servidor **sysadmin** . Todos los mensajes de error generados por el procedimiento se escriben en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -126,7 +130,7 @@ caps.handback.revision: 38
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para ejecutar un procedimiento almacenado  
+#### <a name="to-execute-a-stored-procedure"></a>Para ejecutar un procedimiento almacenado  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expándala y, a continuación, expanda **Bases de datos**.  
   
@@ -155,7 +159,7 @@ caps.handback.revision: 38
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para ejecutar un procedimiento almacenado  
+#### <a name="to-execute-a-stored-procedure"></a>Para ejecutar un procedimiento almacenado  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -170,7 +174,7 @@ EXEC dbo.uspGetEmployeeManagers 6;
 GO  
 ```  
   
-#### Para establecer o borrar un procedimiento para que se ejecute automáticamente  
+#### <a name="to-set-or-clear-a-procedure-for-executing-automatically"></a>Para establecer o borrar un procedimiento para que se ejecute automáticamente  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -186,7 +190,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
     , @OptionValue = 'on';  
 ```  
   
-#### Para que un procedimiento deje de ejecutarse automáticamente  
+#### <a name="to-stop-a-procedure-from-executing-automatically"></a>Para que un procedimiento deje de ejecutarse automáticamente  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -203,7 +207,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 ###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Especificar parámetros](../../relational-databases/stored-procedures/specify-parameters.md)   
  [Establecer la opción de configuración del servidor Buscar procedimientos de inicio](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

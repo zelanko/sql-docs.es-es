@@ -1,26 +1,30 @@
 ---
-title: "Ver informaci&#243;n y realizar tareas para un publicador (Monitor de replicaci&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Publicadores [replicación de SQL Server], tareas del Monitor de replicación"
-  - "ver información de publicador"
-  - "Publicadores [replicación de SQL Server], ver información"
+title: "Ver información y realizar tareas para un publicador (Monitor de replicación) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Publishers [SQL Server replication], Replication Monitor tasks
+- viewing Publisher information
+- Publishers [SQL Server replication], viewing information
 ms.assetid: 1e777e95-377a-4de3-b965-867464aadaaf
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4d592cc39ec10a3f56275e177edd0b3e12b8b5d9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ver informaci&#243;n y realizar tareas para un publicador (Monitor de replicaci&#243;n)
+# <a name="view-information-and-perform-tasks-for-a-publisher-replication-monitor"></a>Ver información y realizar tareas para un publicador (Monitor de replicación)
   El Monitor de replicación proporciona las siguientes pestañas que muestran información sobre el publicador seleccionado:  
   
 -   **Publicaciones**  
@@ -35,9 +39,9 @@ caps.handback.revision: 37
   
      Esta pestaña muestra información detallada sobre los agentes y trabajos utilizados por todos los tipos de replicación. La pestaña también le permite iniciar y detener cada agente y trabajo.  
   
- Para obtener más información acerca de las opciones de esta pestaña, haga clic en el panel derecho y , a continuación, haga clic en **Ayuda** en la barra de menús. Para obtener información acerca de cómo iniciar el Monitor de replicación, consulte [iniciar el Monitor de replicación](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+ Para obtener más información acerca de las opciones de esta pestaña, haga clic en el panel derecho y , a continuación, haga clic en **Ayuda** en la barra de menús. Para obtener información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
-### Para ver información y realizar tareas en un publicador  
+### <a name="to-view-information-and-perform-tasks-for-a-publisher"></a>Para ver información y realizar tareas en un publicador  
   
 1.  Expanda un grupo de publicador en el panel izquierdo y, a continuación, haga clic en un publicador.  
   
@@ -45,27 +49,27 @@ caps.handback.revision: 37
   
 3.  Para ver información acerca de las suscripciones, haga clic en la pestaña **Lista de supervisión de suscripciones** . En esta pestaña, también puede realizar tareas y tener acceso a información más detallada:  
   
-    -   Para ver información detallada sobre el agente asociado a una suscripción, haga clic en la suscripción y, a continuación, haga clic en **Ver detalles**.  
+    -   Para ver información detallada sobre el agente asociado a una suscripción, haga clic con el botón secundario en la suscripción y, a continuación, haga clic en **Ver detalles**.  
   
-    -   Para ver las propiedades de una suscripción, haga clic en la suscripción y, a continuación, haga clic en **propiedades**.  
+    -   Para ver las propiedades de una suscripción, haga clic con el botón secundario en la suscripción y, a continuación, haga clic en **Propiedades**.  
   
-    -   Para sincronizar una suscripción de inserción, haga clic en la suscripción y, a continuación, haga clic en **Iniciar sincronización**.  
+    -   Para sincronizar una suscripción de inserción, haga clic con el botón secundario en la suscripción y, a continuación, haga clic en **Iniciar sincronización**.  
   
-    -   Para reinicializar una suscripción, haga clic en la suscripción y, a continuación, haga clic en **Reinicializar suscripción**.  
+    -   Para reinicializar una suscripción, haga clic con el botón secundario en la suscripción y, a continuación, haga clic en **Reinicializar suscripción**.  
   
 4.  Para ver información sobre los agentes, haga clic en la pestaña **Agentes** . En esta pestaña, también puede realizar tareas y tener acceso a información más detallada:  
   
-    -   Para ver información detallada sobre un agente (por ejemplo, mensajes informativos y mensajes de error), haga clic en el agente y, a continuación, haga clic en **Ver detalles**.  
+    -   Para ver información detallada sobre un agente (por ejemplo, mensajes informativos y mensajes de error), haga clic con el botón secundario en el agente y, a continuación, haga clic en **Ver detalles**.  
   
-    -   Para ver información detallada sobre el trabajo que se ejecuta el agente (por ejemplo, la programación, detalles del paso de trabajo etc.), haga clic en el agente y, a continuación, haga clic en **propiedades**.  
+    -   Para ver información detallada del trabajo que ejecuta el agente (como la programación, los detalles de los pasos del trabajo, etc.), haga clic con el botón secundario en el agente y, a continuación, haga clic en **Propiedades**.  
   
-    -   Para administrar perfiles para el agente, haga clic en el agente y, a continuación, haga clic en **perfil del agente**. Para obtener más información, consulte [trabajar con perfiles de agente de replicación](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md).  
+    -   Para administrar perfiles para el agente, haga clic con el botón secundario en el agente y, a continuación, haga clic en **Perfil del agente**. Para más información, vea [Trabajar con perfiles del Agente de replicación](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md).  
   
-    -   Para iniciar un agente que no se está ejecutando, haga clic en el agente y, a continuación, haga clic en **Iniciar agente**.  
+    -   Para iniciar un agente que no se está ejecutando, haga clic con el botón secundario en el agente y, a continuación, haga clic en **Iniciar agente**.  
   
-    -   Para detener un agente que se ejecuta, haga clic en el agente y, a continuación, haga clic en **Detener agente**.  
+    -   Para detener un agente que se está ejecutando, haga clic con el botón secundario en el agente y, a continuación, haga clic en **Detener agente**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Ver y modificar las propiedades del distribuidor y del publicador](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [Supervisar la replicación](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   

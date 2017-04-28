@@ -1,35 +1,39 @@
 ---
-title: "Solucionar problemas de un registro de transacciones lleno (Error 9002 de SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-transaction-log"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "registros [SQL Server], completos"
-  - "solución de problemas [SQL Server], registro de transacciones completo"
-  - "9002 (error del motor de base de datos)"
-  - "registros de transacciones [SQL Server], truncación"
-  - "copia de seguridad de registros de transacciones [SQL Server], registros completos"
-  - "registros de transacciones [SQL Server], registro completo"
-  - "registros de transacciones llenos [SQL Server]"
+title: Solucionar problemas de un registro de transacciones lleno (Error 9002 de SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-transaction-log
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [SQL Server], full
+- troubleshooting [SQL Server], full transaction log
+- 9002 (Database Engine error)
+- transaction logs [SQL Server], truncation
+- backing up transaction logs [SQL Server], full logs
+- transaction logs [SQL Server], full log
+- full transaction logs [SQL Server]
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 caps.latest.revision: 59
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 09bb30a44ef1675353fe8fa5bd9245c3f25c3894
+ms.lasthandoff: 04/11/2017
+
 ---
-# Solucionar problemas de un registro de transacciones lleno (Error 9002 de SQL Server)
+# <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Solucionar problemas de un registro de transacciones lleno (Error 9002 de SQL Server)
   En este tema se tratan las posibles respuestas a un registro de transacciones lleno y se sugiere cómo evitar esta situación en el futuro. 
   
   Cuando el registro de transacciones se llena, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] genera un **error 9002**. El registro se puede llenar cuando la base de datos está en línea o en recuperación. Si el registro se llena cuando la base de datos está en línea, la base de datos seguirá en conexión, pero solo se puede leer y no actualizar. Si el registro se llena durante la recuperación, [!INCLUDE[ssDE](../../includes/ssde-md.md)] marca la base de datos como RESOURCE PENDING. En ambos casos, es necesaria la intervención del usuario para proporcionar espacio de registro.  
   
-## Respuesta a un registro de transacciones lleno  
+## <a name="responding-to-a-full-transaction-log"></a>Respuesta a un registro de transacciones lleno  
  La respuesta apropiada a un registro de transacciones lleno depende en parte de la condición o condiciones que han causado que el registro se llene. 
  
  Para descubrir qué impide el truncamiento del registro en un caso determinado, use las columnas **log_reuse_wait** y **log_reuse_wait_desc** de la vista de catálogo **sys.database**. Para obtener más información, vea [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Para obtener la descripción de los factores que pueden retrasar el truncamiento del registro, vea [Registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
@@ -53,7 +57,7 @@ caps.handback.revision: 59
   
  Estas alternativas se describen en las secciones siguientes. Elija la respuesta más apropiada para la situación.  
   
-## Crear copia de seguridad del registro  
+## <a name="back-up-the-log"></a>Crear copia de seguridad del registro  
  En el modelo de recuperación completa o en el optimizado para cargas masivas de registros, si no se ha realizado recientemente ninguna copia de seguridad del registro de transacciones, puede que la copia de seguridad sea la que evita el truncamiento del registro. Si nunca realizó una copia de seguridad del registro, **debe crear dos copias de seguridad de registros** para que [!INCLUDE[ssDE](../../includes/ssde-md.md)] pueda truncar el registro en el punto de la última copia de seguridad. El truncamiento del registro libera espacio para nuevas entradas del registro. Para evitar que el registro se vuelva a llenar, realice copias de seguridad con frecuencia.  
   
  **Para crear una copia de seguridad del registro de transacciones**  
@@ -65,10 +69,10 @@ caps.handback.revision: 59
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A> (SMO)  
   
-### Liberar espacio en disco  
+### <a name="freeing-disk-space"></a>Liberar espacio en disco  
  Puede liberar espacio en la unidad de disco que contiene el archivo de registro de transacciones de la base de datos eliminando o desplazando otros archivos. La liberación de espacio de disco permite que el sistema de recuperación amplíe automáticamente el archivo de registro.  
   
-### Mover el archivo de registro a otro disco  
+### <a name="move-the-log-file-to-a-different-disk"></a>Mover el archivo de registro a otro disco  
  Si no puede liberar suficiente espacio en la unidad de disco que contiene el archivo de registro, considere la posibilidad de desplazarlo a otra unidad con suficiente espacio.  
   
 > **IMPORTANTE:** Los archivos de registro no se deben almacenar en sistemas de archivo comprimidos.  
@@ -77,7 +81,7 @@ caps.handback.revision: 59
   
 -   [Mover archivos de base de datos](../../relational-databases/databases/move-database-files.md)  
   
-### Aumentar el tamaño del archivo de registro  
+### <a name="increase-log-file-size"></a>Aumentar el tamaño del archivo de registro  
  Si hay espacio disponible en el disco del registro, puede aumentar el tamaño del archivo de registro. El tamaño máximo de los archivos de registro es de dos terabytes (TB) por cada archivo.  
   
  **Aumentar el tamaño del archivo**  
@@ -90,25 +94,25 @@ caps.handback.revision: 59
   
 > **NOTA** En cualquier caso, si se alcanzó el límite del tamaño actual, aumente el valor MAXSIZE.  
   
-### Agregar un archivo de registro en otro disco  
+### <a name="add-a-log-file-on-a-different-disk"></a>Agregar un archivo de registro en otro disco  
  Agregue un nuevo archivo de registro a la base de datos en otro disco que tenga suficiente espacio mediante ALTER DATABASE <nombreDeBaseDeDatos> ADD LOG FILE.  
   
  **Agregar un archivo de registro**  
   
 -   [Agregar archivos de datos o de registro a una base de datos](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
-## Completar o terminar una transacción de larga ejecución
-### Descubrir transacciones de ejecución prolongada
+## <a name="complete-or-kill-a-long-running-transaction"></a>Completar o terminar una transacción de larga ejecución
+### <a name="discovering-long-running-transactions"></a>Descubrir transacciones de ejecución prolongada
 Una transacción de ejecución muy prolongada puede hacer que el registro de transacciones se llene. Para buscar las transacciones de ejecución prolongada, use una de las opciones siguientes:
  - **[sys.dm_tran_database_transactions](https://msdn.microsoft.com/library/ms186957.aspx).**
-Esta vista de administración dinámica devuelve información sobre las transacciones en la base de datos. En una transacción de ejecución prolongada, las columnas de especial interés incluyen la hora de la primera entrada del registro [(database_transaction_begin_time)](https://msdn.microsoft.com/library/ms186957.aspx), el estado actual de la transacción [(database_transaction_state)](https://msdn.microsoft.com/library/ms186957.aspx) y el [número de flujo de registro (LSN)](https://msdn.microsoft.com/library/ms191459.aspx) del registro inicial del registro de transacciones [(database_transaction_begin_lsn)](https://msdn.microsoft.com/library/ms186957.aspx).
+Esta vista de administración dinámica devuelve información sobre las transacciones en la base de datos. En una transacción de ejecución prolongada, las columnas de especial interés incluyen la hora de la primera entrada del registro [(database_transaction_begin_time)](https://msdn.microsoft.com/library/ms186957.aspx), el estado actual de la transacción [(database_transaction_state)](https://msdn.microsoft.com/library/ms186957.aspx)y el [número de flujo de registro (LSN)](https://msdn.microsoft.com/library/ms191459.aspx) del registro inicial del registro de transacciones [(database_transaction_begin_lsn)](https://msdn.microsoft.com/library/ms186957.aspx).
 
  - **[DBCC OPENTRAN](https://msdn.microsoft.com/library/ms182792.aspx).**
 Esta instrucción permite identificar el Id. de usuario del propietario de la transacción, por lo que se puede realizar un seguimiento del origen de la misma para terminarla de forma más ordenada (confirmándola en lugar de revirtiéndola).
 
-### Terminar una transacción
-Hay veces en que simplemente tiene que finalizar el proceso; puede que tenga que usar la instrucción [KILL](https://msdn.microsoft.com/library/ms173730.aspx). Use esta instrucción con sumo cuidado, especialmente cuando se estén ejecutando procesos críticos que no desea terminar. Para más información, consulte [KILL (Transact-SQL)](https://msdn.microsoft.com/library/ms173730.aspx)
+### <a name="kill-a-transaction"></a>Terminar una transacción
+Hay veces en que simplemente tiene que finalizar el proceso; puede que tenga que usar la instrucción [KILL](https://msdn.microsoft.com/library/ms173730.aspx) . Use esta instrucción con sumo cuidado, especialmente cuando se estén ejecutando procesos críticos que no desea terminar. Para más información, consulte [KILL (Transact-SQL)](https://msdn.microsoft.com/library/ms173730.aspx)
 
-## Vea también  
+## <a name="see-also"></a>Vea también  
 [Artículo de soporte técnico de KB: Un registro de transacciones crece de manera inesperada o se llena en SQL Server](https://support.microsoft.com/en-us/kb/317375)
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Administrar el tamaño del archivo de registro de transacciones](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
@@ -116,3 +120,4 @@ Hay veces en que simplemente tiene que finalizar el proceso; puede que tenga que
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  
   
   
+

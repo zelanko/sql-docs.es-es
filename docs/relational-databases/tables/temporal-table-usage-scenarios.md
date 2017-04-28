@@ -1,23 +1,27 @@
 ---
-title: "Escenarios de uso de tablas temporales | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Escenarios de uso de tablas temporales | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 caps.latest.revision: 11
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: bb6a2865838df1d66119f68c6d8cd19809a8f86c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Escenarios de uso de tablas temporales
+# <a name="temporal-table-usage-scenarios"></a>Escenarios de uso de tablas temporales
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Las tablas temporales suelen ser útiles en escenarios que requieren historial de seguimiento de cambios de datos.    
@@ -33,16 +37,16 @@ Debido a las enormes ventajas de productividad, se recomienda tener en cuenta la
   
 -   [Reparación de daños en los datos de fila](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_4)  
   
-## Auditoría de datos  
- Utilice control de versiones del sistema temporal en tablas que almacenan información crítica para la que necesita realizar un seguimiento de qué ha cambiado, cuándo y por quién, y para realizar análisis forense de datos en cualquier momento dado.    
+## <a name="data-audit"></a>Auditoría de datos  
+ Use el control de versiones del sistema temporal en tablas que almacenan información crítica para la que necesita realizar un seguimiento de qué ha cambiado y cuándo, y para realizar análisis forense de datos en cualquier momento.    
 Las tablas temporales con versión del sistema permiten planear escenarios de auditoría de datos en las primeras fases del ciclo de desarrollo o agregar auditoría de datos a aplicaciones o soluciones existentes cuando se necesita.  
   
  El siguiente diagrama muestra a un escenario de una tabla Employee con una muestra de datos que incluye versiones de fila actuales (marcadas en color azul) e históricas (marcadas en color gris).   
 La parte derecha del diagrama visualiza las versiones de fila en el eje de tiempo y cuáles son las filas seleccionadas con diferentes tipos de consulta en una tabla temporal con o sin la cláusula SYSTEM_TIME.  
   
- ![TemporalUsageScenario1](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")  
+ ![EscenarioDeUsoTemporal1](../../relational-databases/tables/media/temporalusagescenario1.png "EscenarioDeUsoTemporal1")  
   
-### Habilitación del control de versiones del sistema en una nueva tabla para auditoría de datos  
+### <a name="enabling-system-versioning-on-a-new-table-for-data-audit"></a>Habilitación del control de versiones del sistema en una nueva tabla para auditoría de datos  
  Si ha identificado información que necesita datos de auditoría, cree tablas de base de datos como temporales con versión del sistema. En este sencillo ejemplo se ilustra un escenario con información sobre empleados en una hipotética base de datos de recursos humanos:  
   
 ```  
@@ -61,9 +65,9 @@ CREATE TABLE Employee
  WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));  
 ```  
   
- En [Creación de una tabla temporal con control de versiones del sistema](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md) se describen diversas opciones para crear una tabla temporal con versión del sistema.  
+ En [Creación de una tabla temporal con control de versiones del sistema](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)se describen diversas opciones para crear una tabla temporal con versión del sistema.  
   
-### Habilitación del control de versiones del sistema en una tabla existente para auditoría de datos  
+### <a name="enabling-system-versioning-on-an-existing-table-for-data-audit"></a>Habilitación del control de versiones del sistema en una tabla existente para auditoría de datos  
  Si necesita realizar auditoría de datos en bases de datos existentes, utilice ALTER TABLE para extender las tablas no temporales para convertirlas en tablas con versión del sistema. Para evitar cambios importantes en la aplicación, agregue las columnas de período como HIDDEN, como se explica en [Alter Non-Temporal Table to be System-Versioned Temporal Table (Modificación de una tabla no temporal para convertirla en tabla temporal con versión del sistema)](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3). En el ejemplo siguiente se muestra cómo habilitar el control de versiones del sistema en una tabla de Employee existente en una hipotética base de datos de recursos humanos:  
   
 ```  
@@ -87,7 +91,7 @@ ALTER TABLE Employee
  Después de ejecutar el script anterior, todos los cambios de datos se recopilarán de forma transparente en la tabla de historial.    
 En un escenario de auditoría de datos típico, consultaría todos los cambios que se aplicaron a una fila individual en un período de tiempo de interés. La tabla de historial predeterminada se crea con el árbol B de almacén de filas agrupado para tratar eficazmente este caso de uso.  
   
-### Realización de análisis de datos  
+### <a name="performing-data-analysis"></a>Realización de análisis de datos  
  Después de habilitar el control de versiones mediante cualquier de los enfoques anteriores, basta una consulta para realizar la auditoría de datos. La siguiente consulta busca versiones de fila para el registro Employee con EmployeeID = 1000 que estaban activas al menos durante una parte del período comprendido entre el 1 de enero de 2014 y el 1 de enero de 2015 (incluido el límite superior):  
   
 ```  
@@ -145,13 +149,13 @@ FROM Employee
   
 > [!TIP]  
 >  Las condiciones de filtrado especificadas en cláusulas temporales con FOR SYSTEM_TIME son SARGABLE (es decir, SQL Server puede usar un índice agrupado subyacente para llevar a cabo una búsqueda en lugar de una operación de análisis.   
-> Si consulta la tabla de historial directamente, asegúrese de que la condición de filtrado también sea SARGABLE especificando los filtros en forma de \<columna de período> {\< | > | =, …} condición_fecha AT TIME ZONE 'UTC'.  
+> Si consulta la tabla de historial directamente, asegúrese de que la condición de filtrado también sea SARGABLE especificando los filtros en forma de \<columna de período>  {< | > | =, …} condición_fecha AT TIME ZONE 'UTC'.  
 > Si aplica AT TIME ZONE a columnas de período, SQL Server realizará un examen de tabla o índice, lo cual puede resultar muy caro. Evite este tipo de condición en las consultas:  
-> \<period column>  AT TIME ZONE ‘\<la zona horaria>’  >  {\< | > | =, …} condición_fecha.  
+> \<columna de periodo>  AT TIME ZONE "\<su zona horaria>"  >  {< | > | =, …} condición_fecha.  
   
  Vea también: [Querying Data in a System-Versioned Temporal Table (Consulta de los datos de una tabla temporal con control de versiones del sistema)](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
   
-## Análisis a un momento dado (viaje en el tiempo)  
+## <a name="point-in-time-analysis-time-travel"></a>Análisis a un momento dado (viaje en el tiempo)  
  A diferencia de la auditoría de datos, donde el foco está normalmente en los cambios que se produjeron en registros individuales, en escenarios de viaje en el tiempo los usuarios desean ver cómo cambiaron los conjuntos de datos completos a lo largo del tiempo. A veces, el viaje en el tiempo incluye varias tablas temporales relacionadas, cada una de ellas cambiando a un ritmo independiente, para las que desea analizar:  
   
 -   Tendencias de los indicadores importantes en los datos históricos y actuales  
@@ -162,7 +166,7 @@ FROM Employee
   
  Hay muchos escenarios reales que requieren el análisis de viaje en el tiempo. Para ilustrar este escenario de uso, echemos un vistazo a OLTP con historial generado automáticamente.  
   
-### OLTP con historial de datos generado automáticamente  
+### <a name="oltp-with-auto-generated-data-history"></a>OLTP con historial de datos generado automáticamente  
  En sistemas de procesamiento de transacciones, no es inusual analizar cómo cambian las métricas importantes a lo largo del tiempo. Idealmente, analizar el historial no debería afectar al rendimiento de la aplicación OLTP donde el acceso al estado más reciente de los datos debe producirse con una latencia y bloqueo de datos mínimos.  Las tablas temporales con versión del sistema están diseñadas para permitir a los usuarios mantener de forma transparente el historial completo de cambios para su análisis posterior, independientemente de los datos actuales, con un impacto mínimo en la carga de trabajo OLTP principal.  
 Para cargas de trabajo con mucho procesamiento de transacciones, se recomienda usar [Tablas temporales con control de versiones del sistema con tablas con optimización para memoria](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md), que permiten almacenar datos actuales en memoria y el historial completo de cambios en disco de una manera eficiente.  
   
@@ -179,7 +183,7 @@ Ejemplos de escenarios reales que encajan bien en esta categoría son la adminis
   
  El diagrama siguiente muestra el modelo de datos simplificado utilizado para la administración de inventarios:  
   
- ![TemporalUsageInMemory](../../relational-databases/tables/media/temporalusageinmemory.png "TemporalUsageInMemory")  
+ ![UsoTemporalEnMemoria](../../relational-databases/tables/media/temporalusageinmemory.png "UsoTemporalEnMemoria")  
   
  En el ejemplo de código siguiente se crea ProductInventory como una tabla temporal con versión del sistema en memoria con un índice de almacén de columnas agrupado en la tabla de historial (que realmente reemplaza al índice de almacén de filas que se crea de forma predeterminada):  
   
@@ -265,7 +269,7 @@ END;
   
  El procedimiento almacenado spUpdateInventory inserta un nuevo producto en el inventario o actualiza la cantidad de productos para la ubicación específica. La lógica de negocios es muy sencilla y se centra en mantener la precisión del estado más reciente en todo momento incrementando o disminuyendo el campo Quantity a través de la actualización de la tabla, mientras que las tablas con versión del sistema agregan de forma transparente dimensión de historial a los datos, como se muestra en el diagrama siguiente.  
   
- ![TemporalUsageInMemory2b](../../relational-databases/tables/media/temporalusageinmemory2b.png "TemporalUsageInMemory2b")  
+ ![UsoTemporalEnMemoria2b](../../relational-databases/tables/media/temporalusageinmemory2b.png "UsoTemporalEnMemoria2b")  
   
  Ahora, la consulta del estado más reciente puede realizarse eficazmente desde el módulo compilado de forma nativa:  
   
@@ -299,7 +303,7 @@ SELECT * FROM vw_GetProductInventoryHistory
   
  El diagrama siguiente muestra el historial de datos de un producto que se puede representar fácilmente importando la vista anterior en Power Query, Power BI o una herramienta de inteligencia empresarial similar:  
   
- ![ProductHistoryOverTime](../../relational-databases/tables/media/producthistoryovertime.png "ProductHistoryOverTime")  
+ ![HistorialDeProductosEnElTiempo](../../relational-databases/tables/media/producthistoryovertime.png "HistorialDeProductosEnElTiempo")  
   
  Las tablas temporales se pueden utilizar en este escenario para realizar otros tipos de análisis de viaje en el tiempo, como reconstruir el estado de AS OF del inventario a cualquier momento dado del pasado o comparar instantáneas que pertenecen a diferentes momentos en el tiempo.  
   
@@ -352,7 +356,7 @@ SELECT * FROM vw_ProductInventoryDetails
   
  En la siguiente imagen se muestra el plan de ejecución generado para la consulta SELECT. Esto ilustra que el motor de SQL Server controla completamente toda la complejidad de trabajar con las relaciones temporales:  
   
- ![ASOFExecutionPlan](../../relational-databases/tables/media/asofexecutionplan.png "ASOFExecutionPlan")  
+ ![PlanDeEjecuciónASOF](../../relational-databases/tables/media/asofexecutionplan.png "PlanDeEjecuciónASOF")  
   
  Utilice el código siguiente para comparar el estado del inventario de productos entre dos momentos dados (hace un día y hace un mes):  
   
@@ -372,7 +376,7 @@ JOIN vw_ProductInventoryDetails FOR SYSTEM_TIME AS OF @monthAgo AS inventoryMont
     ON inventoryDayAgo.ProductId = inventoryMonthAgo.ProductId AND inventoryDayAgo.LocationId = inventoryMonthAgo.LocationID;  
 ```  
   
-## Detección de anomalías  
+## <a name="anomaly-detection"></a>Detección de anomalías  
  La detección de anomalías (o detección de valores atípicos) es la identificación de los elementos que no cumplen un patrón esperado u otros elementos en un conjunto de datos.   
 Puede utilizar tablas temporales con versión del sistema para detectar anomalías que se producen periódica o irregularmente como puede usar consultas temporales para encontrar rápidamente patrones específicos.  
 De qué anomalías se trata depende del tipo de datos que se recopilan y de la lógica de negocios.  
@@ -396,7 +400,7 @@ CREATE TABLE [dbo].[Product]
   
  El diagrama siguiente muestra las compras a lo largo del tiempo:  
   
- ![TemporalAnomalyDetection](../../relational-databases/tables/media/temporalanomalydetection.png "TemporalAnomalyDetection")  
+ ![DetecciónDeAnomalíaTemporal](../../relational-databases/tables/media/temporalanomalydetection.png "DetecciónDeAnomalíaTemporal")  
   
  Suponiendo que durante los días normales el número de productos comprados tiene una pequeña variación, la siguiente consulta identifica los valores atípicos de singleton. Se trata de ejemplos cuya diferencia en comparación con sus vecinos inmediatos es considerable (el doble), mientras que las muestras adyacentes no difieren significativamente (menos del 20 %):  
   
@@ -431,7 +435,7 @@ FROM CTE
 > [!NOTE]  
 >  Este ejemplo está simplificado deliberadamente. En los escenarios de producción, probablemente utilizaría avanzados métodos estadísticos para identificar las muestras que no siguen el patrón común.  
   
-## Dimensiones de variación lenta  
+## <a name="slowly-changing-dimensions"></a>Dimensiones de variación lenta  
  Las dimensiones de almacenamiento de datos normalmente contienen datos relativamente estáticos sobre entidades como ubicaciones geográficas, clientes o productos. Sin embargo, algunos escenarios también requieren realizar el seguimiento de cambios de datos en tablas de dimensiones. Dado que la modificación en las dimensiones ocurre con mucha menos frecuencia, de una forma impredecible y fuera de la programación de actualizaciones normal que se aplica a tablas de hechos, estos tipos de tablas de dimensiones se denominan dimensiones de variación lenta (DVL).  
   
  Existen varias categorías de dimensiones de variación lenta basadas en la forma de conservar el historial de cambios:  
@@ -475,7 +479,7 @@ ALTER TABLE DimLocation SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DimLoca
   
  La siguiente ilustración muestra cómo puede utilizar las tablas temporales en un escenario sencillo que implica 2 DVL (DimLocation y DimProduct) y una tabla de hechos.  
   
- ![TemporalSCD](../../relational-databases/tables/media/temporalscd.png "TemporalSCD")  
+ ![SCDTemporal](../../relational-databases/tables/media/temporalscd.png "SCDTemporal")  
   
  Para poder utilizar las DVL en los informes, debe ajustar eficazmente las consultas. Por ejemplo, puede que le interese calcular la cantidad total de ventas y el promedio de productos vendidos per cápita durante los últimos seis meses.  Observe que ambas métricas requieren la correlación de datos de la tabla de hechos y las dimensiones que podrían haber cambiado sus atributos importantes para el análisis (DimLocation.NumOfCustomers, DimProduct.UnitPrice).  La siguiente consulta calcula correctamente las métricas requeridas:  
   
@@ -511,7 +515,7 @@ GROUP BY DimProduct_History.ProductId, DimLocation_History.LocationId ;
   
 -   Si espera un número significativo de filas históricas en tablas de DVL, considere el uso de un índice de almacén de columnas agrupado como la opción de almacenamiento principal para la tabla de historial. Eso reducirá la superficie de la tabla de historial y acelerará las consultas analíticas.  
   
-## Reparación de daños en los datos de fila  
+## <a name="repairing-row-level-data-corruption"></a>Reparación de daños en los datos de fila  
  Puede basarse en los datos históricos de las tablas temporales con versión del sistema para reparar rápidamente filas individuales a cualquiera de los estados capturados anteriormente. Esta propiedad de tablas temporales es muy útil cuando es posible localizar filas afectadas y/o cuando conoce la hora del cambio de datos no deseado de forma que puede realizar la reparación de manera muy eficaz sin ocuparse de las copias de seguridad.  
   
  Este enfoque presenta una serie de ventajas:  
@@ -553,13 +557,13 @@ UPDATE Employee
   
  La siguiente imagen muestra el estado de la fila antes y después de la invocación del procedimiento. El rectángulo rojo marca la versión de fila actual que no es correcta, mientras que el rectángulo verde marca la versión correcta del historial.  
   
- ![TemporalUsageRepair1](../../relational-databases/tables/media/temporalusagerepair1.png "TemporalUsageRepair1")  
+ ![ReparaciónDeUsoTemporal1](../../relational-databases/tables/media/temporalusagerepair1.png "ReparaciónDeUsoTemporal1")  
   
 ```  
 EXEC sp_RepairEmployeeRecord @EmployeeID = 1, @versionNumber = 1  
 ```  
   
- ![TemporalUsageRepair2](../../relational-databases/tables/media/temporalusagerepair2.png "TemporalUsageRepair2")  
+ ![ReparaciónDeUsoTemporal2](../../relational-databases/tables/media/temporalusagerepair2.png "ReparaciónDeUsoTemporal2")  
   
  Este procedimiento almacenado de reparación puede definirse para aceptar una marca de tiempo exacta en lugar de la versión de fila. Restaurará la fila a cualquier versión que estuviera activa para el momento dado proporcionado (es decir, el momento dado AS OF).  
   
@@ -582,14 +586,14 @@ UPDATE Employee
   
  Para el mismo ejemplo de datos la siguiente imagen ilustra el escenario de reparación con la condición de tiempo. Se resaltan el parámetro @asOf, la fila seleccionada en el historial que era real en el momento dado proporcionado y la nueva versión de fila en la tabla actual después de la operación de reparación:  
   
- ![TemporalUsageRepair3](../../relational-databases/tables/media/temporalusagerepair3.png "TemporalUsageRepair3")  
+ ![ReparaciónDeUsoTemporal3](../../relational-databases/tables/media/temporalusagerepair3.png "ReparaciónDeUsoTemporal3")  
   
  La corrección de datos puede convertirse en parte de la carga de datos automatizada en el almacenamiento de datos y los sistemas de informes.  
 Si un valor recién actualizado no es correcto entonces, en muchos escenarios, la restauración de la versión anterior del historial es una mitigación suficientemente buena. En el siguiente diagrama se muestra cómo se puede automatizar este proceso:  
   
- ![TemporalUsageRepair4](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")  
+ ![ReparaciónDeUsoTemporal4](../../relational-databases/tables/media/temporalusagerepair4.png "ReparaciónDeUsoTemporal4")  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tablas temporales](../../relational-databases/tables/temporal-tables.md)   
  [Introducción a las tablas temporales con versión del sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Comprobaciones de coherencia del sistema de la tabla temporal](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
@@ -600,3 +604,4 @@ Si un valor recién actualizado no es correcto entonces, en muchos escenarios, l
  [Funciones y vistas de metadatos de la tabla temporal](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

@@ -1,28 +1,32 @@
 ---
-title: "Compatibilidad con FOR XML para varios tipos de datos de SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Cláusula FOR XML, compatibilidad de tipos de datos"
-  - "tipos de datos [SQL Server], cláusula FOR XML"
+title: Compatibilidad con FOR XML para varios tipos de datos de SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, data type support
+- data types [SQL Server], FOR XML clause
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ef7a1e703ffb9d874f81c5540e1da7810ea5e2e6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Compatibilidad con FOR XML para varios tipos de datos de SQL Server
+# <a name="for-xml-support-for-various-sql-server-data-types"></a>Compatibilidad con FOR XML para varios tipos de datos de SQL Server
   En los temas de esta sección se describe la compatibilidad de los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]con FOR XML.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
   
 |Tema|Descripción|  
 |-----------|-----------------|  

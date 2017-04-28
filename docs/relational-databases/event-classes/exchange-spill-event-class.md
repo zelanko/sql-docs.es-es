@@ -1,27 +1,31 @@
 ---
-title: "Exchange Spill (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Exchange Spill, clase de eventos"
+title: Exchange Spill (clase de eventos) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Exchange Spill event class
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5920469e3f0ff312ac155011300034b8d8f8de50
+ms.lasthandoff: 04/11/2017
+
 ---
-# Exchange Spill (clase de eventos)
+# <a name="exchange-spill-event-class"></a>Exchange Spill, clase de eventos
   La clase de evento **Exchange Spill** indica que los búferes de comunicación de un plan de consulta paralelo se han escrito de forma temporal en la base de datos **tempdb** . Esto sucede raramente y solo cuando un plan de consulta tiene múltiples recorridos de intervalo.  
   
- Normalmente, la consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] que genera tales recorridos de intervalo tiene muchos operadores BETWEEN, cada uno de los cuales selecciona un intervalo de filas de una tabla o un índice. Como alternativa, puede obtener múltiples intervalos mediante expresiones como (T.a > 10 AND T.a \< 20) OR (T.a > 100 AND T.a \< 120). Además, los planes de consulta deben requerir que estos intervalos se recorran en orden, bien porque hay una cláusula ORDER BY en T.a, o bien porque un iterador del plan requiere que éste consuma las tuplas en orden.  
+ Normalmente, la consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] que genera tales recorridos de intervalo tiene muchos operadores BETWEEN, cada uno de los cuales selecciona un intervalo de filas de una tabla o un índice. Como alternativa, puede obtener múltiples intervalos mediante expresiones como (T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120). Además, los planes de consulta deben requerir que estos intervalos se recorran en orden, bien porque hay una cláusula ORDER BY en T.a, o bien porque un iterador del plan requiere que éste consuma las tuplas en orden.  
   
  Cuando un plan de consulta para una consulta así tiene varios operadores **Parallelism** , los búferes de comunicación de memoria utilizados por los operadores **Parallelism** se llenan y puede originarse una situación en la que el progreso de ejecución de la consulta se detenga. En esta situación, uno de los operadores **Parallelism** escribe su búfer de salida en **tempdb** (operación llamada *volcado de intercambio*), por lo que puede consumir filas de algunos de sus búferes de entrada. Es posible que las filas volcadas se devuelvan al consumidor cuando éste esté preparado para consumirlas.  
   
@@ -42,9 +46,9 @@ caps.handback.revision: 30
 -   Fuerce la ejecución en serie de la consulta agregando la opción MAXDOP = 1 al final de la consulta o la operación de índice. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) y [Configurar operaciones de índice en paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!IMPORTANT]  
->  Para determinar si el evento **Exchange Spill** se está produciendo cuando el optimizador de consultas genera un plan de ejecución, deberá recopilar también una clase de evento Showplan en el seguimiento. Puede elegir cualquiera de las clases de eventos Showplan, excepto **Showplan Text** y **Showplan Text (Unencoded)**, que no devuelven ningún identificador de nodo. Los identificadores de nodo en las clases de evento Showplans identifican cada operación que realiza el optimizador de consultas cuando genera un plan de ejecución de consultas. Estas operaciones se denominan operadores y cada operador de Showplan tiene un identificador de nodo. La columna **ObjectID** de los eventos **Exchange Spill** se corresponden con el identificador de nodo de las clases de eventos Showplan para que pueda determinar qué operador u operación está provocando el error.  
+>  Para determinar si el evento **Exchange Spill** se está produciendo cuando el optimizador de consultas genera un plan de ejecución, deberá recopilar también una clase de evento Showplan en el seguimiento. Puede elegir cualquiera de las clases de eventos Showplan, excepto **Showplan Text** y **Showplan Text (Unencoded)** , que no devuelven ningún identificador de nodo. Los identificadores de nodo en las clases de evento Showplans identifican cada operación que realiza el optimizador de consultas cuando genera un plan de ejecución de consultas. Estas operaciones se denominan operadores y cada operador de Showplan tiene un identificador de nodo. La columna **ObjectID** de los eventos **Exchange Spill** se corresponden con el identificador de nodo de las clases de eventos Showplan para que pueda determinar qué operador u operación está provocando el error.  
   
-## Columnas de datos de la clase de evento Exchange Spill  
+## <a name="exchange-spill-event-class-data-columns"></a>Columnas de datos de la clase de evento Exchange Spill  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -58,7 +62,7 @@ caps.handback.revision: 30
 |**GroupID**|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
-|**LoginName**|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de Windows con el formato *\<DOMINIO>\\<NombreUsuario\>*).|11|Sí|  
+|**LoginName**|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de Windows con el formato *\<DOMINIO>\\<nombreDeUsuario\>*).|11|Sí|  
 |**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la tabla **syslogins** de la base de datos **maestra** . Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
@@ -71,9 +75,10 @@ caps.handback.revision: 30
 |**TransactionID**|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |**XactSequence**|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Establecer opciones de índice](../../relational-databases/indexes/set-index-options.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
   
+

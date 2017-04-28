@@ -1,25 +1,29 @@
 ---
-title: "Funciones definidas por el usuario | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "funciones definidas por el usuario [SQL Server], componentes"
-  - "user-defined functions [SQL Server], about user-defined functions"
+title: Funciones definidas por el usuario | Microsoft Docs
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-defined functions [SQL Server], components
+- user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f4c8c44b4c07b26676fd424acb36ea7ccce19df3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Funciones definidas por el usuario
+# <a name="user-defined-functions"></a>Funciones definidas por el usuario
   Al igual que las funciones de los lenguajes de programación, las funciones definidas por el usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son rutinas que aceptan parámetros, realizan una acción, como un cálculo complejo, y devuelven el resultado de esa acción como un valor. El valor devuelto puede ser un valor escalar único o un conjunto de resultados.  
    
 ##  <a name="Benefits"></a> Funciones definidas por el usuario  
@@ -47,13 +51,13 @@ caps.handback.revision: 23
  **[Ejemplos.](https://msdn.microsoft.com/library/bb386973(v=vs.110).aspx)**
   
 **Funciones con valores de tabla**  
- Las funciones con valores de tabla definidas por el usuario devuelven un tipo de datos **table**. Las funciones insertada con valores de tabla no tienen cuerpo; la tabla es el conjunto de resultados de una sola instrucción SELECT. **[Ejemplos.](https://msdn.microsoft.com/library/bb386954(v=vs.110).aspx)**
+ Las funciones con valores de tabla definidas por el usuario devuelven un tipo de datos **table** . Las funciones insertada con valores de tabla no tienen cuerpo; la tabla es el conjunto de resultados de una sola instrucción SELECT. **[Ejemplos.](https://msdn.microsoft.com/library/bb386954(v=vs.110).aspx)**
   
 **Funciones del sistema**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona numerosas funciones del sistema que se pueden usar para realizar diversas operaciones. No se pueden modificar. Para obtener más información, vea [Funciones integradas &#40;Transact-SQL&#41;](../Topic/Built-in%20Functions%20\(Transact-SQL\).md), [Funciones almacenadas del sistema &#40;Transact-SQL&#41;](../Topic/System%20Stored%20Functions%20\(Transact-SQL\).md) y [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](../Topic/Dynamic%20Management%20Views%20and%20Functions%20\(Transact-SQL\).md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona numerosas funciones del sistema que se pueden usar para realizar diversas operaciones. No se pueden modificar. Para obtener más información, vea [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md), [Funciones almacenadas del sistema &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md) y [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ##  <a name="Guidelines"></a> Instrucciones  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] errores que producen la cancelación de una instrucción y continúan con la siguiente instrucción del módulo, como desencadenadores o procedimientos almacenados, se tratan de forma distinta dentro de una función. En las funciones, estos errores hacen que se detenga la ejecución de la función. Esto hace que se cancele la función que invocó la instrucción.  
+ Los errores de [!INCLUDE[tsql](../../includes/tsql-md.md)] que producen la cancelación de una instrucción y continúan con la siguiente instrucción del módulo (como desencadenadores o procedimientos almacenados) se tratan de forma distinta dentro de una función. En las funciones, estos errores hacen que se detenga la ejecución de la función. Esto hace que se cancele la función que invocó la instrucción.  
   
  Las instrucciones de un bloque BEGIN...END no pueden producir efectos secundarios. Los efectos secundarios de una función son cambios definitivos del estado de un recurso que está fuera del ámbito de la función, como una modificación de una tabla de base de datos. Los únicos cambios que pueden realizar las instrucciones de la función son cambios en objetos locales de la función, como cursores o variables locales. En una función no se pueden llevar a cabo algunas acciones como, por ejemplo, modificar tablas de base de datos, realizar operaciones en cursores no locales de la función, enviar correo electrónico, intentar modificar un catálogo o generar un conjunto de resultados que se devuelve al usuario.  
   
@@ -78,7 +82,7 @@ caps.handback.revision: 23
   
 -   Instrucciones EXECUTE que llaman a un procedimiento almacenado extendido.  
   
-### Funciones del sistema integradas  
+### <a name="built-in-system-functions"></a>Funciones del sistema integradas  
  Las siguientes funciones integradas no deterministas se pueden usar en funciones Transact-SQL definidas por el usuario.  
   
 |||  
@@ -133,3 +137,7 @@ caps.handback.revision: 23
 |Describe cómo puede ver la definición de una función definida por el usuario.|[Ver funciones definidas por el usuario](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   
+
+
+
+

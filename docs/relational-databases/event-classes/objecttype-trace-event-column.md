@@ -1,35 +1,39 @@
 ---
-title: "Columna de evento de seguimiento ObjectType | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clases de eventos de SQL Server, valores de columna de Object Type"
-  - "eventos [SQL Server], valores de columna de Object Type"
-  - "clases de eventos [SQL Server], valores de columna de Object Type"
-  - "Object Type, valores de la columna [SQL Server]"
+title: Columna de evento de seguimiento ObjectType | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server event classes, Object Type column values
+- events [SQL Server], Object Type column values
+- event classes [SQL Server], Object Type column values
+- Object Type column values [SQL Server]
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f4870fdd355f03c7f1e5c4fee15cf410f5794411
+ms.lasthandoff: 04/11/2017
+
 ---
-# Columna de evento de seguimiento ObjectType
+# <a name="objecttype-trace-event-column"></a>Columna de evento de seguimiento ObjectType
   La columna de evento de seguimiento Object Type se utiliza en una variedad de eventos de seguimiento. En este tema se describen los valores posibles de esta columna y sus definiciones asociadas.  
   
-## Valores de la columna Object Type  
+## <a name="object-type-column-values"></a>Valores de la columna Object Type  
   
 |Valor|Definición|  
 |-----------|----------------|  
 |8259|Restricción CHECK|  
-|8260|Valor predeterminado (restricción o independiente) |  
+|8260|Valor predeterminado (restricción o independiente)|  
 |8262|Restricción FOREIGN KEY|  
 |8272|Procedimiento almacenado|  
 |8274|Regla|  
@@ -38,14 +42,14 @@ caps.handback.revision: 17
 |8277|Tabla (definida por el usuario)|  
 |8278|Ver|  
 |8280|Procedimiento almacenado extendido|  
-|16724|Desencadenador CLR |  
+|16724|Desencadenador CLR|  
 |16964|Base de datos|  
 |16975|Object|  
 |17222|Catálogo de texto|  
 |17232|Procedimiento almacenado de CLR|  
 |17235|Esquema|  
 |17475|Credencial|  
-|17491|Evento de DDL |  
+|17491|Evento de DDL|  
 |17741|Evento de administración|  
 |17747|Evento de seguridad|  
 |17749|Evento de usuario|  
@@ -57,18 +61,18 @@ caps.handback.revision: 17
 |18259|Rol del servidor|  
 |18263|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows|  
 |19265|Clave asimétrica|  
-|19277|Clave maestra |  
+|19277|Clave maestra|  
 |19280|Clave principal|  
-|19283|ObfusKey |  
-|19521|Inicio de sesión de clave asimétrica |  
+|19283|ObfusKey|  
+|19521|Inicio de sesión de clave asimétrica|  
 |19523|Inicio de sesión de certificado|  
 |19538|Rol|  
-|19539|Inicio de sesión de SQL |  
+|19539|Inicio de sesión de SQL|  
 |19543|Inicio de sesión de Windows|  
 |20034|Enlace de servicio remoto|  
 |20036|Notificación de evento en base de datos|  
 |20037|Notificación de evento|  
-|20038|Función SQL escalar |  
+|20038|Función SQL escalar|  
 |20047|Notificación de evento en objeto|  
 |20051|Synonym (Sinónimo)|  
 |20307|Secuencia|  
@@ -100,7 +104,7 @@ caps.handback.revision: 17
 |22611|XMLSchema|  
 |22868|Tipo|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

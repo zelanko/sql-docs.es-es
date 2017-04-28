@@ -1,29 +1,33 @@
 ---
-title: "OLEDB Errors (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "OLEDB Errors, clase de eventos"
+title: OLEDB Errors, clase de eventos | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLEDB Errors event class
 ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72ef942bc5dffeaf14275c6e36ce148571b1a576
+ms.lasthandoff: 04/11/2017
+
 ---
-# OLEDB Errors (clase de eventos)
+# <a name="oledb-errors-event-class"></a>OLEDB Errors, clase de eventos
   La clase de eventos OLEDB Errors se produce en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando una llamada a un proveedor OLE DB devuelve un error. Incluya esta clase de eventos en los seguimientos para ver un HRESULT con errores de un proveedor OLE DB.  
   
  Cuando se incluye la clase de eventos OLEDB Errors en un seguimiento, la cantidad de sobrecarga depende de la frecuencia con la que se producen errores del proveedor OLE DB en relación con la base de datos durante el seguimiento. Si se producen con frecuencia, puede que el seguimiento reduzca el rendimiento de forma significativa.  
   
-## Columnas de datos de la clase de eventos OLEDB Errors  
+## <a name="oledb-errors-event-class-data-columns"></a>Columnas de datos de la clase de eventos OLEDB Errors  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -51,7 +55,7 @@ caps.handback.revision: 33
 |TextData|**nvarchar**|Parámetros enviados y recibidos en la llamada OLE DB.|1|No|  
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Objetos de automatización OLE en Transact-SQL](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  
   

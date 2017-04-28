@@ -1,31 +1,35 @@
 ---
-title: "Implementar una base de datos mediante una DAC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbdeployment.settings.f1"
-  - "sql13.swb.dbdeployment.progress.f1"
-  - "sql13.swb.dbdeployment.summary.f1"
-  - "sql13.swb.dbdeployment.results.f1"
-  - "sql13.swb.dbdeployment.welcome.f1"
-helpviewer_keywords: 
-  - "implementar base de datos, asistente"
-  - "implementar base de datos [SQL Server]"
+title: Implementar una base de datos mediante una DAC | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbdeployment.settings.f1
+- sql13.swb.dbdeployment.progress.f1
+- sql13.swb.dbdeployment.summary.f1
+- sql13.swb.dbdeployment.results.f1
+- sql13.swb.dbdeployment.welcome.f1
+helpviewer_keywords:
+- deploy database wizard
+- database deploy [SQL Server]
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 57703923bd142330e2a46e72eb4faaee18fa7285
+ms.lasthandoff: 04/11/2017
+
 ---
-# Implementar una base de datos mediante una DAC
+# <a name="deploy-a-database-by-using-a-dac"></a>Implementar una base de datos mediante una DAC
   Use el asistente para **implementar una base de datos en SQL Azure** para implementar una base de datos entre una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y un servidor de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] o entre dos servidores de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
 ##  <a name="BeforeBegin"></a> Antes de empezar  
@@ -43,7 +47,7 @@ caps.handback.revision: 11
   
 -   Desde [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] en una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
--   Entre dos servidores de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+-   Entre dos servidores de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] .  
   
  El asistente no admite la implementación de bases de datos entre dos instancias del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 11
 ###  <a name="Security"></a> Seguridad  
  Para mejorar la seguridad, los inicios de sesión de Autenticación de SQL Server están almacenados en un archivo BACPAC de DAC sin contraseña. Cuando se importa el archivo BACPAC, el inicio de sesión se crea como un inicio de sesión deshabilitado con una contraseña generada. Para habilitar los inicios de sesión, use un inicio de sesión que disponga del permiso ALTER ANY LOGIN y emplee ALTER LOGIN para habilitar el inicio de sesión y asignar una nueva contraseña que pueda comunicar al usuario. Esto no se necesita para los inicios de sesión de Autenticación de Windows, porque SQL Server no administra sus contraseñas.  
   
-#### Permisos  
+#### <a name="permissions"></a>Permisos  
  El asistente necesita permisos de exportación de DAC en la base de datos de origen. El inicio de sesión necesita al menos permisos ALTER ANY LOGIN y VIEW DEFINITION en el ámbito de la base de datos, así como permisos SELECT en **sys.sql_expression_dependencies**. La exportación de una DAC la pueden realizar los miembros del rol fijo de servidor securityadmin que sean también miembros del rol fijo de base de datos database_owner en la base de datos de la que se exporta la DAC. Los miembros del rol fijo de servidor sysadmin o de la cuenta de administrador del sistema de SQL Server integrada denominada **sa** también pueden exportar una DAC.  
   
  El asistente necesita permisos de importación de DAC en la instancia o el servidor de destino. El inicio de sesión debe ser miembro de los roles fijos de servidor **sysadmin** o **serveradmin** , o del rol fijo de servidor **dbcreator** y disponer de permisos ALTER ANY LOGIN. La cuenta de administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrada denominada **sa** también puede importar una DAC. La importación de una DAC con inicios de sesión en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiere la pertenencia a los roles loginmanager o serveradmin. La importación de una DAC sin inicios de sesión en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiere la pertenencia a los roles dbmanager o serveradmin.  
@@ -60,7 +64,7 @@ caps.handback.revision: 11
 ##  <a name="UsingDeployDACWizard"></a> Usar el Asistente para implementar bases de datos  
  **Para migrar una base de datos mediante el Asistente para implementar bases de datos**  
   
-1.  Conéctese a la ubicación de la base de datos que desee implementar. Puede especificar una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o un servidor de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+1.  Conéctese a la ubicación de la base de datos que desee implementar. Puede especificar una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o un servidor de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] .  
   
 2.  En el **Explorador de objetos**, expanda el nodo de la instancia que contiene la base de datos.  
   
@@ -74,10 +78,10 @@ caps.handback.revision: 11
   
     -   [Configuración de implementación](#Deployment_settings)  
   
-    -   [Validación](#Validation)  
-  
     -   [Página Resumen](#Summary)  
   
+    -   [Progreso](#Progress)  
+    
     -   [Resultado](#Results)  
   
 ##  <a name="Introduction"></a> Página Introducción  
@@ -87,7 +91,7 @@ caps.handback.revision: 11
   
 -   **No volver a mostrar esta página.** - Active la casilla para que la página Introducción deje de mostrarse en el futuro.  
   
--   **Siguiente**: continúa a la página **Configuración de implementación**.  
+-   **Siguiente** : continúa a la página **Configuración de implementación** .  
   
 -   **Cancelar** ; cancela la operación y cierra el asistente.  
   
@@ -104,7 +108,7 @@ caps.handback.revision: 11
   
 -   **Edición de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**: seleccione la edición de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] en el menú desplegable.  
   
--   **Tamaño máximo de la base de datos**: seleccione el tamaño máximo de la base de datos en el menú desplegable.  
+-   **Tamaño máximo de la base de datos** : seleccione el tamaño máximo de la base de datos en el menú desplegable.  
   
  **Otros valores:**  
   
@@ -121,7 +125,7 @@ caps.handback.revision: 11
   
  Haga clic en **Finalizar** para cerrar el asistente.  
   
-## Mediante una aplicación de .Net Framework  
+## <a name="using-a-net-framework-application"></a>Mediante una aplicación de .Net Framework  
  **Para implementar una base de datos por medio de los métodos Export() e Import() de DacStore en una aplicación de .NET Framework.**  
   
  Para obtener un ejemplo de código, descargue la aplicación de ejemplo de DAC en [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575).  
@@ -138,7 +142,7 @@ caps.handback.revision: 11
   
 6.  Use el método de **Import** del tipo **Microsoft.SqlServer.Management.Dac.DacStore** para importar el archivo BACPAC. Especifique el archivo BACPAC creado por la exportación.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Exportar una aplicación de capa de datos](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [Importar un archivo de bacpac para crear una nueva base de datos de usuario](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)  

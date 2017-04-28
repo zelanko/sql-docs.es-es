@@ -1,27 +1,31 @@
 ---
-title: "Prepare SQL (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Prepare SQL, clase de eventos"
+title: Prepare SQL, clase de eventos | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Prepare SQL event class
 ms.assetid: 4ff3aa04-0f1a-49e2-a43d-7251bab4a458
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b0361c3e1d9ec928805a4de10ebac4c302a5843c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Prepare SQL (clase de eventos)
+# <a name="prepare-sql-event-class"></a>Prepare SQL, clase de eventos
   La clase de eventos Prepare SQL indica que SqlClient, ODBC, OLE DB o DB-Library tienen una instrucción o instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] listas para ser utilizadas.  
   
-## Columnas de datos de la clase de eventos Prepare SQL  
+## <a name="prepare-sql-event-class-data-columns"></a>Columnas de datos de la clase de eventos Prepare SQL  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -47,7 +51,7 @@ caps.handback.revision: 32
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que se utiliza para describir la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

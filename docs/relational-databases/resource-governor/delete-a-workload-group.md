@@ -1,30 +1,34 @@
 ---
-title: "Eliminar un grupo de cargas de trabajo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "grupos de cargas de trabajo [SQL Server], eliminar"
-  - "Regulador de recursos, eliminar grupo de cargas de trabajo"
+title: "Eliminación de un grupo de cargas de trabajo | Microsoft Docs"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- workload groups [SQL Server], delete
+- Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 498058e4186851b78bf67795828f1a7562794a72
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eliminar un grupo de cargas de trabajo
+# <a name="delete-a-workload-group"></a>Eliminar un grupo de cargas de trabajo
   Puede eliminar un grupo de cargas de trabajo o grupo de recursos de servidor mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o Transact-SQL.  
   
--   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [Permisos](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Para eliminar un grupo de cargas de trabajo con:** [Explorador de objetos](#DelWGObjEx), [Propiedades del regulador de recursos](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
+-   **To delete a workload group, using:**  [Object Explorer](#DelWGObjEx), [Resource Governor Properties](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
  No puede eliminar un grupo de cargas de trabajo si contiene sesiones activas.  
@@ -59,7 +63,7 @@ caps.handback.revision: 19
   
 2.  Haga clic con el botón derecho en el grupo de recursos de servidor que contiene el grupo de cargas de trabajo que va a eliminar y, después, haga clic en **Propiedades**. Se abre la página **Propiedades del regulador de recursos** .  
   
-3.  En la ventana **Grupos de cargas de trabajo para grupos de recursos**, haga clic en la línea del grupo de cargas de trabajo que va a eliminar, haga clic con el botón derecho en la flecha derecha situada en el lado izquierdo de la línea y, después, haga clic en **Eliminar**.  
+3.  En la ventana **Grupos de cargas de trabajo para grupos de recursos** , haga clic en la línea del grupo de cargas de trabajo que va a eliminar, haga clic con el botón derecho en la flecha derecha situada en el lado izquierdo de la línea y, después, haga clic en **Eliminar**.  
   
 4.  Para eliminar el grupo de cargas de trabajo, haga clic en **Aceptar**.  
   
@@ -76,11 +80,11 @@ caps.handback.revision: 19
   
     -   Reinicie el servidor. No se volverá a crear el grupo de cargas de trabajo.  
   
-    -   En un escenario en el que ha emitido la instrucción **DROP WORKLOAD GROUP**, pero no quiere detener explícitamente las sesiones para aplicar el cambio, puede recrear el grupo si usa el mismo nombre que tenía antes de emitir la instrucción DROP y, después, lo mueve al grupo de recursos de servidor original.  
+    -   En un escenario en el que ha emitido la instrucción **DROP WORKLOAD GROUP** , pero no quiere detener explícitamente las sesiones para aplicar el cambio, puede recrear el grupo si usa el mismo nombre que tenía antes de emitir la instrucción DROP y, después, lo mueve al grupo de recursos de servidor original.  
   
 3.  Ejecute la instrucción **ALTER RESOURCE GOVERNOR RECONFIGURE** .  
   
-### Ejemplo (Transact-SQL)  
+### <a name="example-transact-sql"></a>Ejemplo (Transact-SQL)  
  En el ejemplo siguiente se quita un grupo de cargas de trabajo denominado `groupAdhoc`.  
   
 ```  
@@ -90,7 +94,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Crear un grupo de recursos de servidor](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [Crear un grupo de cargas de trabajo](../../relational-databases/resource-governor/create-a-workload-group.md)   

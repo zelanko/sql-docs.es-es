@@ -1,26 +1,30 @@
 ---
-title: "Archivos de formato no XML [SQL Server] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "archivos de formato no XML"
-  - "archivos de formato [SQL Server], archivos de formato no XML"
-  - "importación masiva [SQL Server], archivos de formato"
+title: Archivos de otro formato distinto a XML (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- non-XML format files
+- format files [SQL Server], non-XML format files
+- bulk importing [SQL Server], format files
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
 caps.latest.revision: 63
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7593a0015328cba74de239f55575217687ff5193
+ms.lasthandoff: 04/11/2017
+
 ---
-# Archivos de formato no XML [SQL Server]
+# <a name="non-xml-format-files-sql-server"></a>Archivos de formato no XML [SQL Server]
   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], se admiten dos tipos de archivos de formato para la importación y exportación masivas: *archivos de formato no XML* y *archivos de formato XML*.  
   
  **En este tema:**  
@@ -35,7 +39,7 @@ caps.handback.revision: 63
   
 ##  <a name="Benefits"></a> Ventajas de los archivos de formato no XML  
   
--   Puede crear automáticamente un archivo de formato no XML si especifica la opción **format** en un comando **bcp**.  
+-   Puede crear automáticamente un archivo de formato no XML si especifica la opción **format** en un comando **bcp** .  
   
 -   Cuando especifica un archivo de formato existente en un comando **bcp** , el comando usa los valores registrados en el archivo de formato y no pregunta el tipo de almacenamiento de archivo, la longitud de prefijo, la longitud del campo o el terminador de campo.  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 63
 >  Puede modificar un archivo de formato de forma que le permita realizar una importación masiva desde un archivo de datos en el que el número o el orden de los campos difieran del número o el orden de las columnas de la tabla. Para obtener más información, vea la lista [Tareas relacionadas](#RelatedTasks) , más adelante en este tema.  
   
 ##  <a name="Examples"></a> Ejemplo de archivo de formato no XML  
- En el ejemplo siguiente se muestra un archivo de formato no XML creado anteriormente (`myDepartmentIdentical-f-c.fmt`). Este archivo describe un campo de datos de caracteres para cada columna en la tabla `HumanResources.Department` de la base de datos de ejemplo `AdventureWorks2012`.  
+ En el ejemplo siguiente se muestra un archivo de formato no XML creado anteriormente (`myDepartmentIdentical-f-c.fmt`). Este archivo describe un campo de datos de caracteres para cada columna en la tabla `HumanResources.Department` de la base de datos de ejemplo `AdventureWorks2012` .  
   
  El archivo de formato generado, `myDepartmentIdentical-f-c.fmt`, contiene la siguiente información:  
   
@@ -91,7 +95,7 @@ caps.handback.revision: 63
 ```  
   
 > [!NOTE]  
->  Para ver una ilustración en la que se muestran los campos del archivo de formato en relación con este archivo de formato no XML de ejemplo, vea [Estructura de los archivos de formato no XML](#Structure) anteriormente en este tema.  
+>  Para ver una ilustración en la que se muestran los campos del archivo de formato en relación con este archivo de formato no XML de ejemplo, vea [Estructura de los archivos de formato no XML](#Structure)anteriormente en este tema.  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   
@@ -105,7 +109,7 @@ caps.handback.revision: 63
   
 -   [Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [bcp (utilidad)](../../tools/bcp-utility.md)   
  [Crear un archivo de formato &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)   
  [XML, archivos de formato &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)   

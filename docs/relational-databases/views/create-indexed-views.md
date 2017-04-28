@@ -1,29 +1,33 @@
 ---
-title: "Crear vistas indizadas | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "vistas indexadas [SQL Server], creación"
-  - "índices agrupados, vistas"
-  - "CREATE INDEX, instrucción"
-  - "large_value_types_out_of_row, opción"
-  - "vistas indizadas [SQL Server]"
-  - "vistas [SQL Server], vistas indexadas"
+title: "Creación de vistas indexadas | Microsoft Docs"
+ms.custom: 
+ms.date: 05/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexed views [SQL Server], creating
+- clustered indexes, views
+- CREATE INDEX statement
+- large_value_types_out_of_row option
+- indexed views [SQL Server]
+- views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 caps.latest.revision: 79
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 79
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 24b4e22249ec7a175dc3ae239dea329c4d18208f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear vistas indizadas
+# <a name="create-indexed-views"></a>Crear vistas indizadas
   En este tema se describe cómo crear una vista indizada en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]. El primer índice creado en una vista debe ser un índice clúster único. Después de haber creado el índice clúster único, puede crear más índices no clúster. La creación de un índice clúster único en una vista mejora el rendimiento de la consulta porque la vista se almacena en la base de datos de la misma manera que se almacena una tabla con un índice clúster. El optimizador de consultas puede utilizar vistas indizadas para acelerar la ejecución de las consultas. No es necesario hacer referencia a la vista en la consulta para que el optimizador tenga en cuenta esa vista al hacer una sustitución.  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
@@ -69,7 +73,7 @@ caps.handback.revision: 79
 > [!IMPORTANT]  
 >  Se recomienda encarecidamente que establezca la opción de usuario ARITHABORT en ON en todo el servidor en cuanto se cree la primera vista indizada o el primer índice en una columna calculada en cualquier base de datos del servidor.  
   
-### Vistas deterministas  
+### <a name="deterministic-views"></a>Vistas deterministas  
  La definición de una vista indizada debe ser determinista. Una vista es determinista si todas las expresiones de la lista de selección y las cláusulas WHERE y GROUP BY son deterministas. Las expresiones deterministas siempre devuelven el mismo resultado cada vez que son evaluadas con un conjunto específico de valores de entrada. Solo las funciones deterministas pueden participar en expresiones deterministas. Por ejemplo, la función DATEADD es determinista porque siempre devuelve el mismo resultado para cualquier conjunto dado de valores de argumento para sus tres parámetros. GETDATE no es determinista porque siempre se invoca con el mismo argumento, pero el valor que devuelve varía cada vez que se ejecuta.  
   
  Para determinar si una columna de la vista es determinista, use la propiedad **IsDeterministic** de la función [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) . Para determinar si una columna determinista de una vista con enlaces de esquema es precisa, use la propiedad **IsPrecise** de la función COLUMNPROPERTY. COLUMNPROPERTY devuelve 1 si el valor es TRUE, 0 si es FALSE y NULL en entradas no válidas. Esto significa que la columna no es determinista ni precisa.  
@@ -77,16 +81,16 @@ caps.handback.revision: 79
  Aun cuando una expresión sea determinista, si contiene expresiones de tipo float, es posible que un resultado exacto dependa de la arquitectura de procesador o de la versión de microcódigo. Para asegurar la integridad de los datos, estas expresiones solo pueden participar como columnas que no son de clave de vistas indizadas. Las expresiones deterministas que no contienen expresiones flotantes se denominan expresiones precisas. Solo las expresiones deterministas precisas pueden participar en columnas de clave y en cláusulas WHERE o GROUP BY de vistas indizadas.  
   
 > [!NOTE]  
->  No se admiten vistas indexadas con consultas temporales (las consultas que usan la cláusula **FOR SYSTEM_TIME**).  
+>  No se admiten vistas indexadas con consultas temporales (las consultas que usan la cláusula **FOR SYSTEM_TIME** ).  
   
-### Requisitos adicionales  
+### <a name="additional-requirements"></a>Requisitos adicionales  
  Además de las opciones SET y los requisitos de funciones deterministas, se deben cumplir los requisitos siguientes:  
   
 -   El usuario que ejecuta CREATE INDEX debe ser el propietario de la vista.  
   
 -   Cuando crea el índice, la opción IGNORE_DUP_KEY debe establecerse en OFF (configuración predeterminada).  
   
--   En la definición de vista, se debe hacer referencia a las tablas mediante nombres de dos partes, *esquema***.***nombretabla*.  
+-   En la definición de vista, se debe hacer referencia a las tablas mediante nombres de dos partes, *esquema***.***nombretabla* .  
   
 -   Las funciones definidas por el usuario a las que se hace referencia en la vista se deben crear con la opción WITH SCHEMABINDING.  
   
@@ -116,7 +120,7 @@ caps.handback.revision: 79
     |COUNT|Funciones ROWSET (OPENDATASOURCE, OPENQUERY, OPENROWSET y OPENXML)|Combinaciones externas (LEFT, RIGHT o FULL)|  
     |Tabla derivada (definida mediante una instrucción SELECT en la cláusula FROM)|Autocombinaciones|Especificar columnas mediante SELECT \* o SELECT *nombre_tabla*.*|  
     |DISTINCT|STDEV, STDEVP, VAR, VARP o AVG|Expresión de tabla común (CTE)|  
-    |Columnas **float**\*, **text**, **ntext**, **image**, **XML** o **filestream**|Subconsulta|Cláusula OVER, que incluye funciones de categoría o de agregado|  
+    |**float**\*, **text**, **ntext**, **image**, **XML**o **filestream** |Subconsulta|Cláusula OVER, que incluye funciones de categoría o de agregado|  
     |Predicados de texto completo (CONTAIN, FREETEXT)|Función SUM que hace referencia a una expresión que acepta valores NULL|ORDER BY|  
     |Función de agregado definida por el usuario CLR|ARRIBA|Operadores CUBE, ROLLUP o GROUPING SETS|  
     |MIN, MAX|Operadores UNION, EXCEPT o INTERSECT|TABLESAMPLE|  
@@ -124,7 +128,7 @@ caps.handback.revision: 79
     |Conjuntos de columnas dispersas|Funciones insertadas o con valores de tabla de múltiples instrucciones|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*La vista indexada puede contener columnas **float**, aunque no se pueden incluir en la clave de índice agrupado.  
+     \*La vista indexada puede contener columnas **float** , aunque no se pueden incluir en la clave de índice agrupado.  
   
 -   Si GROUP BY está presente, la definición de VIEW debe contener COUNT_BIG(*) y no debe contener HAVING. Estas restricciones GROUP BY solo se pueden aplicar a la definición de vista indizada. Una consulta puede utilizar una vista indizada en su plan de ejecución aun cuando no satisfaga estas restricciones GROUP BY.  
   
@@ -153,7 +157,7 @@ caps.handback.revision: 79
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para crear una vista indizada  
+#### <a name="to-create-an-indexed-view"></a>Para crear una vista indizada  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -210,7 +214,7 @@ caps.handback.revision: 79
   
  Para obtener más información, vea [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
@@ -221,3 +225,4 @@ caps.handback.revision: 79
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
   
   
+

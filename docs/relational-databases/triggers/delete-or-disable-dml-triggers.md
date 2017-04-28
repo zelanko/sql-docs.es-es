@@ -1,29 +1,33 @@
 ---
-title: "Eliminar o deshabilitar desencadenadores DML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "desencadenadores DML, deshabilitar"
-  - "quitar desencadenadores DML"
-  - "deshabilitar desencadenadores DML"
-  - "quitar desencadenadores DML"
-  - "eliminar desencadenadores DML"
-  - "desencadenadores DML, quitar"
+title: "Eliminación o deshabilitación de desencadenadores DML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DML triggers, disabling
+- removing DML triggers
+- disabling DML triggers
+- dropping DML triggers
+- deleting DML triggers
+- DML triggers, removing
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fe807c194c057f2109bb40b13a8f8918c0cc75f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eliminar o deshabilitar desencadenadores DML
+# <a name="delete-or-disable-dml-triggers"></a>Eliminar o deshabilitar desencadenadores DML
   En este tema se describe cómo eliminar o deshabilitar un desencadenador DML en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
@@ -59,7 +63,7 @@ caps.handback.revision: 27
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para eliminar un desencadenador DML  
+#### <a name="to-delete-a-dml-trigger"></a>Para eliminar un desencadenador DML  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y expándala.  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 27
   
 4.  En el cuadro de diálogo **Eliminar objeto** , compruebe que se ha especificado el desencadenador deseado y haga clic en **Aceptar**.  
   
-#### Para deshabilitar y habilitar un desencadenador DML  
+#### <a name="to-disable-and-enable-a-dml-trigger"></a>Para deshabilitar y habilitar un desencadenador DML  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y expándala.  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para eliminar un desencadenador DML  
+#### <a name="to-delete-a-dml-trigger"></a>Para eliminar un desencadenador DML  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -115,7 +119,7 @@ GO
   
 ```  
   
-#### Para deshabilitar y habilitar un desencadenador DML  
+#### <a name="to-disable-and-enable-a-dml-trigger"></a>Para deshabilitar y habilitar un desencadenador DML  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -156,7 +160,7 @@ ENABLE TRIGGER Sales.bonus_reminder ON Sales.SalesPersonQuotaHistory;
 GO  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

@@ -1,25 +1,29 @@
 ---
-title: "Gu&#237;a de arquitectura de administraci&#243;n de memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "guía, arquitectura de administración de memoria"
-  - "guía de arquitectura de administración de memoria"
+title: "Guía de arquitectura de administración de memoria | Microsoft Docs"
+ms.custom: 
+ms.date: 10/21/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- guide, memory management architecture
+- memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d00e5c97e6c27f3fe40b2066b5e194b8011f6b1e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gu&#237;a de arquitectura de administraci&#243;n de memoria
+# <a name="memory-management-architecture-guide"></a>guía de arquitectura de administración de memoria
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 ## <a name="memory-architecture"></a>Arquitectura de la memoria
@@ -33,26 +37,26 @@ Uno de los principales objetivos de diseño de todo el software de base de datos
 
 
 > [!NOTE]
-> En un sistema con mucha carga, algunas consultas grandes que necesitan una gran cantidad de memoria para ejecutarse no pueden obtener la cantidad mínima de memoria solicitada y reciben un error de tiempo de espera agotado mientras esperan los recursos de memoria. Para solucionarlo, aumente la [opción Espera de consulta	](../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md). Para una consulta en paralelo, considere la posibilidad de reducir la [opción Grado máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+> En un sistema con mucha carga, algunas consultas grandes que necesitan una gran cantidad de memoria para ejecutarse no pueden obtener la cantidad mínima de memoria solicitada y reciben un error de tiempo de espera agotado mientras esperan los recursos de memoria. Para solucionarlo, aumente la [opción Espera de consulta](../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md). Para una consulta en paralelo, considere la posibilidad de reducir la [opción Grado máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
  
 > [!NOTE]
 > En un sistema con mucha carga y mucha presión de la memoria, las consultas con combinaciones de mezcla, orden y mapa de bits en el plan de consulta pueden quitar el mapa de bits si no obtienen la memoria mínima necesaria para dicho mapa de bits. Esto puede afectar al rendimiento de la consulta y, si el proceso de ordenación no cabe en la memoria, puede aumentar el uso de las tablas de trabajo en la base de datos tempdb, lo que hace que tempdb crezca. Para resolver este problema, agregue memoria física u optimice las consultas para que usen otro plan de consulta más rápido.
  
-### <a name="providing-the-maximum-amount-of-memory-to-includessnoversiontokenssnoversionmdmd"></a>Proporcionar la cantidad máxima de memoria a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+### <a name="providing-the-maximum-amount-of-memory-to-includessnoversionincludesssnoversion-mdmd"></a>Proporcionar la cantidad máxima de memoria a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
-Mediante AWE y el privilegio Bloquear páginas en memoria, puede proporcionar las siguientes cantidades de memoria al Motor de base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. (En la siguiente tabla se incluye una columna para las versiones de 32 bits que ya no están disponibles).
+Mediante AWE y el privilegio Bloquear páginas en memoria, puede proporcionar las siguientes cantidades de memoria al Motor de base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . (En la siguiente tabla se incluye una columna para las versiones de 32 bits que ya no están disponibles).
 
 | |32 bits <sup>1</sup> |64 bits
 |-------|-------|-------| 
-|Memoria convencional |Todas las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Hasta el límite de espacio de direcciones virtuales del proceso: <br>- 2 GB<br>- 3 GB con el parámetro de arranque /3gb <sup>2</sup> <br>- 4 GB en WOW64 <sup>3</sup> |Todas las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Hasta el límite de espacio de direcciones virtuales del proceso: <br>- 7 TB con la arquitectura IA64 (IA64 no se admite en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] y versiones superiores)<br>- Sistema operativo máximo con arquitectura x64 <sup>4</sup>
-|Mecanismo AWE (permite a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] superar el límite del espacio de direcciones virtuales del proceso en plataformas de 32 bits). |Ediciones Standard, Enterprise y Developer de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: el grupo de búferes puede tener acceso a un máximo de 64 GB de memoria.|No aplicable <sup>5</sup> |
-|Privilegio del sistema operativo (OS) Bloquear páginas en la memoria (permite bloquear memoria física e impedir la paginación en el sistema operativo de la memoria bloqueada). <sup>6</sup> |Ediciones Standard, Enterprise y Developer de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: requerido para que el proceso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilice el mecanismo AWE. La memoria asignada a través del mecanismo AWE no se puede paginar. <br> Si se concede este privilegio sin habilitar AWE, no tiene efecto en el servidor. |Ediciones Enterprise y Developer de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: recomendado para evitar la paginación del sistema operativo. Puede proporcionar una ventaja de rendimiento en función de la carga de trabajo. La cantidad de memoria a la que se puede tener acceso es similar al caso de memoria convencional. |
+|Memoria convencional |Todas las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Hasta el límite de espacio de direcciones virtuales del proceso: <br>- 2 GB<br>- 3 GB con el parámetro de arranque /3gb <sup>2</sup> <br>- 4 GB en WOW64 <sup>3</sup> |Todas las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Hasta el límite de espacio de direcciones virtuales del proceso: <br>- 7 TB con la arquitectura IA64 (IA64 no se admite en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] y versiones superiores)<br>- Sistema operativo máximo con arquitectura x64 <sup>4</sup>
+|Mecanismo AWE (permite a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] superar el límite del espacio de direcciones virtuales del proceso en plataformas de 32 bits). |Ediciones Standard, Enterprise y Developer de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] : el grupo de búferes puede tener acceso a un máximo de 64 GB de memoria.|No aplicable <sup>5</sup> |
+|Privilegio del sistema operativo (OS) Bloquear páginas en la memoria (permite bloquear memoria física e impedir la paginación en el sistema operativo de la memoria bloqueada). <sup>6</sup> |Ediciones Standard, Enterprise y Developer de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: requerido para que el proceso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilice el mecanismo AWE. La memoria asignada a través del mecanismo AWE no se puede paginar. <br> Si se concede este privilegio sin habilitar AWE, no tiene efecto en el servidor. |Ediciones Enterprise y Developer de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] : recomendado para evitar la paginación del sistema operativo. Puede proporcionar una ventaja de rendimiento en función de la carga de trabajo. La cantidad de memoria a la que se puede tener acceso es similar al caso de memoria convencional. |
 
 <sup>1</sup> Las versiones de 32 bits no están disponibles a partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
 <sup>2</sup> /3gb es un parámetro de arranque del sistema operativo. Para obtener más información, visite MSDN Library.  
 <sup>3</sup> WOW64 (Windows on Windows 64) es un modo en el que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de 32 bits se ejecuta en un sistema operativo de 64 bits.  
-<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition admite hasta 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition admite el máximo del sistema operativo máximo.  
-<sup>5</sup> Tenga en cuenta que la opción sp_configure awe enabled estaba presente en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de 64 bits, pero se omite.    
+<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition supports up to 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition admite el máximo del sistema operativo máximo.  
+<sup>5</sup> Tenga en cuenta que la opción sp_configure awe enabled estaba presente en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]de 64 bits, pero se omite.    
 <sup>6</sup> Si se concede el privilegio Bloquear páginas en la memoria (LPIM) (con compatibilidad de 32 bits para AWE o directamente en 64 bits), se recomienda establecer también la opción Memoria de servidor máxima.
 
 > [!NOTE]
@@ -65,41 +69,41 @@ El comportamiento predeterminado de administración de memoria del motor de base
 
 El espacio de dirección virtual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se puede dividir en dos regiones diferenciadas: espacio ocupado por el grupo de búferes y el resto. Si el mecanismo AWE está habilitado, el grupo de búferes puede residir en la memoria asignada de AWE, lo que proporciona espacio adicional para las páginas de base de datos. 
 
-El grupo de búferes se utiliza como origen principal de asignación de memoria de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Los componentes externos que residen dentro del proceso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], como los objetos COM, y que no reconocen los recursos de administración de memoria de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], usan la memoria situada fuera del espacio de direcciones virtuales ocupado por el grupo de búferes.
+El grupo de búferes se utiliza como origen principal de asignación de memoria de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Los componentes externos que residen dentro del proceso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , como los objetos COM, y que no reconocen los recursos de administración de memoria de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , usan la memoria situada fuera del espacio de direcciones virtuales ocupado por el grupo de búferes.
 
 Cuando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se inicia, calcula el tamaño del espacio de direcciones virtuales del grupo de búferes basándose en un número de parámetros, como  la cantidad de memoria física en el sistema, el número de subprocesos de servidor y varios parámetros de inicio. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserva la cantidad calculada de su espacio de direcciones virtuales del proceso para el grupo de búferes, pero solo adquiere (confirma) la cantidad necesaria de memoria física para la carga actual.
 
 A continuación, la instancia sigue adquiriendo la memoria que necesita para la carga de trabajo. A medida que se conectan más usuarios y se ejecutan consultas, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adquiere la memoria física adicional según la demanda. Una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sigue adquiriendo memoria física hasta que alcanza su asignación de max server memory o hasta que Windows indica que ya no existe más memoria libre; libera memoria cuando se supera el valor de min server memory y Windows indica que hay escasez de memoria libre.
 
-Cuando se inician otras aplicaciones en un equipo que ejecuta una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consumen memoria y la cantidad de memoria física disponible cae por debajo del destino de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ajusta su consumo de memoria. Si se detiene otra aplicación y aumenta la cantidad de memoria disponible, la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aumenta el tamaño de su asignación de memoria. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede liberar y adquirir varios megabytes de memoria cada segundo, lo que le permite ajustarse rápidamente a los cambios de asignación de memoria.
+Cuando se inician otras aplicaciones en un equipo que ejecuta una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consumen memoria y la cantidad de memoria física disponible cae por debajo del destino de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . La instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ajusta su consumo de memoria. Si se detiene otra aplicación y aumenta la cantidad de memoria disponible, la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aumenta el tamaño de su asignación de memoria. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede liberar y adquirir varios megabytes de memoria cada segundo, lo que le permite ajustarse rápidamente a los cambios de asignación de memoria.
 
 
 ## <a name="effects-of-min-and-max-server-memory"></a>Efectos de las opciones min y max server memory
 
-Las opciones de configuración Memoria de servidor mínima y Memoria de servidor máxima establecen los límites superior e inferior de la cantidad de memoria que utiliza el grupo de búferes del motor de base de datos de Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. El grupo de búferes no adquiere inmediatamente la cantidad de memoria especificada en Memoria de servidor mínima. El grupo de búferes comienza con la memoria precisa para el inicio. Según aumenta la carga de trabajo del motor de base de datos, se sigue adquiriendo la memoria necesaria para permitir la carga de trabajo. El grupo de búferes no libera nada de la memoria adquirida hasta que alcanza la cantidad especificada en Memoria de servidor mínima. Una vez alcanzado el valor de Memoria de servidor mínima, el grupo de búferes utiliza el algoritmo estándar para adquirir y liberar memoria según sea preciso. La única diferencia es que el grupo de búferes nunca deja que su asignación de memoria baje del nivel especificado en Memoria de servidor mínima y adquiera más memoria del nivel especificado en Memoria de servidor máxima.
+Las opciones de configuración Memoria de servidor mínima y Memoria de servidor máxima establecen los límites superior e inferior de la cantidad de memoria que utiliza el grupo de búferes del motor de base de datos de Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . El grupo de búferes no adquiere inmediatamente la cantidad de memoria especificada en Memoria de servidor mínima. El grupo de búferes comienza con la memoria precisa para el inicio. Según aumenta la carga de trabajo del motor de base de datos, se sigue adquiriendo la memoria necesaria para permitir la carga de trabajo. El grupo de búferes no libera nada de la memoria adquirida hasta que alcanza la cantidad especificada en Memoria de servidor mínima. Una vez alcanzado el valor de Memoria de servidor mínima, el grupo de búferes utiliza el algoritmo estándar para adquirir y liberar memoria según sea preciso. La única diferencia es que el grupo de búferes nunca deja que su asignación de memoria baje del nivel especificado en Memoria de servidor mínima y adquiera más memoria del nivel especificado en Memoria de servidor máxima.
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adquiere, como un proceso, más memoria de la especificada en la opción max server memory. Los componentes tanto internos como externos pueden asignar memoria fuera del grupo de búferes, lo cual consume memoria adicional, pero la memoria asignada en el grupo de búferes normalmente representa la cantidad más grande de memoria que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consume.
+> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adquiere, como un proceso, más memoria de la especificada en la opción max server memory. Los componentes tanto internos como externos pueden asignar memoria fuera del grupo de búferes, lo cual consume memoria adicional, pero la memoria asignada en el grupo de búferes normalmente representa la cantidad más grande de memoria que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]consume.
 
 
 La cantidad de memoria que adquiere el motor de base de datos es totalmente dependiente de la carga de trabajo colocada en la instancia. Una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que no procesa muchas solicitudes nunca podrá alcanzar el nivel de min server memory.
 
 Si se especifica el mismo valor para Memoria de servidor mínima y Memoria de servidor máxima, una vez que la memoria asignada al motor de base de datos alcanza ese valor, el motor de base de datos detiene dinámicamente la adquisición y liberación de la memoria para el grupo de búferes.
 
-Si una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se está ejecutando en un equipo donde se inician o detienen otras aplicaciones con frecuencia, la asignación y cancelación de asignación de memoria por parte de la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede ralentizar el inicio de otras aplicaciones. Además, si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es una de las diversas aplicaciones de servidor que se ejecutan en un único equipo, los administradores del sistema pueden necesitar controlar la cantidad de memoria asignada a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. En estos casos, puede utilizar las opciones Memoria de servidor mínima y Memoria de servidor máxima para controlar cuánta memoria puede usar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, vea [Opciones de configuración de memoria del servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md).
+Si una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se está ejecutando en un equipo donde se inician o detienen otras aplicaciones con frecuencia, la asignación y cancelación de asignación de memoria por parte de la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede ralentizar el inicio de otras aplicaciones. Además, si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es una de las diversas aplicaciones de servidor que se ejecutan en un único equipo, los administradores del sistema pueden necesitar controlar la cantidad de memoria asignada a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. En estos casos, puede utilizar las opciones Memoria de servidor mínima y Memoria de servidor máxima para controlar cuánta memoria puede usar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obtener más información, vea [Opciones de configuración de memoria del servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md).
 
 Las opciones Memoria de servidor mínima y Memoria de servidor máxima se expresan en megabytes.
 
-## <a name="memory-used-by-includessnoversiontokenssnoversionmdmd-objects-specifications"></a>Memoria que utilizan las especificaciones de objetos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+## <a name="memory-used-by-includessnoversionincludesssnoversion-mdmd-objects-specifications"></a>Memoria que utilizan las especificaciones de objetos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 La siguiente lista muestra la cantidad de memoria aproximada que usan diferentes objetos en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Las cantidades mostradas son estimaciones y pueden variar según el entorno y cómo se crean los objetos.
 
 * Bloquear: 64 bytes + 32 bytes por propietario   
-* Conexión de usuario: aproximadamente (3* *network_packet_size + 94 kb)    
+* Conexión de usuario: aproximadamente (3* *tamañoDePaqueteDeRed + 94 kb)    
 
-El tamaño del paquete de red es el tamaño de los paquetes del esquema de datos tabulares (TDS) que se utilizan para la comunicación entre las aplicaciones y el motor de base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. El tamaño del paquete predeterminado es 4 KB y se controla mediante la opción de configuración Tamaño de paquete de red.
+El tamaño del paquete de red es el tamaño de los paquetes del esquema de datos tabulares (TDS) que se utilizan para la comunicación entre las aplicaciones y el motor de base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . El tamaño del paquete predeterminado es 4 KB y se controla mediante la opción de configuración Tamaño de paquete de red.
 
-Cuando los conjuntos de resultados activos múltiples están habilitados, la conexión de usuario es aproximadamente (3 + 3 * num_logical_connections) * network_packet_size + 94 KB
+Cuando los conjuntos de resultados activos múltiples (MARS) están habilitados, la conexión de usuario es de aproximadamente (3 + 3 * númeroDeConexionesLógicas) * tamañoDePaqueteDeRed + 94 KB
 
 ## <a name="buffer-management"></a>Administración de búfer
 
@@ -113,7 +117,7 @@ Cuando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se inicia, calcula
 
 El intervalo entre el inicio de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y el momento en que la caché del búfer obtiene su memoria objetivo se llama arranque. Durante este período, las solicitudes de lectura llenan los búferes según sea necesario. Por ejemplo, una solicitud de lectura de una página llena una única página de búfer. Esto significa que el arranque depende del número y el tipo de solicitudes del cliente. El arranque se agiliza mediante la transformación de solicitudes de lectura de una página en solicitudes de ocho páginas alineadas. Esto permite que el arranque finalice mucho más rápido, especialmente en equipos con mucha memoria.
 
-Debido a que el administrador de búfer utiliza la mayor parte de la memoria en el proceso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], coopera con el administrador de memoria para permitir que otros componentes utilicen sus búferes. El administrador de búfer interactúa principalmente con los siguientes componentes:
+Debido a que el administrador de búfer utiliza la mayor parte de la memoria en el proceso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , coopera con el administrador de memoria para permitir que otros componentes utilicen sus búferes. El administrador de búfer interactúa principalmente con los siguientes componentes:
 
 * Administrador de recursos, para controlar la utilización de memoria general y, en plataformas de 32 bits, para controlar el uso del espacio de direcciones.  
 * Administrador de bases de datos y [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Operating System (SQLOS), para operaciones de E/S de archivos de bajo nivel.  
@@ -151,7 +155,7 @@ Un mensaje de E/S larga puede indicar que una E/S está permanente bloqueada y q
 
 Las E/S largas suelen indicar una carga de trabajo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] demasiado intensa para el subsistema de disco. Se puede indicar un subsistema de disco inadecuado cuando:
 
-* Aparecen múltiples mensajes de E/S largas en el registro de errores durante una carga de trabajo pesada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+* Aparecen múltiples mensajes de E/S largas en el registro de errores durante una carga de trabajo pesada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .
 * Los contadores de rendimiento muestran latencias de disco prolongadas, colas de disco largas o no muestran el tiempo de inactividad de disco.  
 
 Otra posible causa de las E/S largas es que un componente de la ruta de acceso de E/S (por ejemplo, un controlador o el firmware) posponga de forma continua el servicio para una solicitud de E/S antigua en favor de dar servicio a solicitudes nuevas que están más cerca de la posición actual del cabezal del disco. La técnica corriente de procesar solicitudes según su prioridad sobre la base de las que están más cerca de la posición actual del cabezal de lectura/escritura se conoce como "búsqueda de elevador". Esto puede resultar difícil de corroborar con la herramienta Monitor del sistema de Windows (PERFMON.EXE) porque a la mayor parte de las E/S se las da servicio inmediatamente. Las solicitudes de E/S largas pueden agravarse con cargas de trabajo que realicen un gran número de operaciones de E/S secuenciales, como copias de seguridad y restauración, recorridos de tabla, ordenaciones, creación de índices, cargas masivas y puestas a cero de archivos.
@@ -167,7 +171,7 @@ La protección contra página rasgada, que se introdujo en [!INCLUDE[ssNoVersion
 #### <a name="checksum-protection"></a>Protección de suma de comprobación  
 La protección de suma de comprobación, característica implementada en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2005, proporciona una comprobación de integridad de datos más sólida. Se calcula una suma de comprobación para los datos de cada página que se escribe y se almacena en el encabezado de la página. Cada vez que se lee desde disco una página con una suma de comprobación almacenada, el motor de base de datos vuelve a calcular la suma de comprobación para los datos de la página y muestra el error 824 cuando la nueva suma de comprobación no coincide con la suma almacenada. La protección de suma de comprobación puede detectar más errores que la protección contra página rasgada porque tiene en cuenta cada byte de la página; sin embargo, consume una cantidad de recursos considerable. Cuando la suma de comprobación está habilitada, pueden detectarse los errores debidos a cualquier problema con el suministro eléctrico o a hardware o firmware defectuosos cada vez que el administrador de búfer lea una página del disco.
 
-El tipo de protección de página que se utilice es un atributo de la base de datos que contiene la página. La protección de suma de comprobación es la protección predeterminada para bases de datos creadas en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2005 y en versiones posteriores. El mecanismo de protección de páginas se especifica al crear la base de datos y se puede modificar con ALTER DATABASE. La configuración de protección de página actual se puede determinar consultando la columna page_verify_option de la vista de catálogo [sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md) o la propiedad IsTornPageDetectionEnabled de la función [DATABASEPROPERTYEX](../t-sql/functions/databasepropertyex-transact-sql.md). Si se modifica la configuración de protección de página, la nueva configuración no afecta a toda la base de datos de forma inmediata. En cambio, las páginas adoptan el nivel de protección actual de la base de datos cuando se vuelven a escribir. Esto significa que la base de datos puede estar compuesta de páginas con distintos tipos de protección. 
+El tipo de protección de página que se utilice es un atributo de la base de datos que contiene la página. La protección de suma de comprobación es la protección predeterminada para bases de datos creadas en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2005 y en versiones posteriores. El mecanismo de protección de páginas se especifica al crear la base de datos y se puede modificar con ALTER DATABASE. La configuración de protección de página actual se puede determinar consultando la columna page_verify_option de la vista de catálogo [sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md) o la propiedad IsTornPageDetectionEnabled de la función [DATABASEPROPERTYEX](../t-sql/functions/databasepropertyex-transact-sql.md) . Si se modifica la configuración de protección de página, la nueva configuración no afecta a toda la base de datos de forma inmediata. En cambio, las páginas adoptan el nivel de protección actual de la base de datos cuando se vuelven a escribir. Esto significa que la base de datos puede estar compuesta de páginas con distintos tipos de protección. 
 
 ## <a name="understanding-non-uniform-memory-access"></a>Descripción del acceso no uniforme a memoria
 
@@ -176,3 +180,5 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está preparado
 ## <a name="see-also"></a>Vea también
 [Leer páginas](../relational-databases/reading-pages.md)   
  [Escribir páginas](../relational-databases/writing-pages.md)
+
+

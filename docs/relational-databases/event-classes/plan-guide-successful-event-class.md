@@ -1,24 +1,28 @@
 ---
-title: "Clase de evento Gu&#237;a de plan correcta | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Clase de evento Guía de plan correcta"
+title: "Clase de evento Guía de plan correcta | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Plan Guide Successful event class
 ms.assetid: fecfbb6c-56c9-4db4-84d3-00d6e338355a
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 510e15bdefcc4c2f9dc65a9bc2a868602f037bb8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Clase de evento Gu&#237;a de plan correcta
+# <a name="plan-guide-successful-event-class"></a>Clase de evento Guía de plan correcta
   La clase de eventos Guía de plan correcta indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pudo generar correctamente un plan de ejecución para una consulta o lote que contenía una guía de plan. El evento se disparará cuando se cumplan las siguientes condiciones:  
   
 -   El lote o módulo de la definición de la guía de plan coincide con el lote o módulo que se está ejecutando.  
@@ -27,7 +31,7 @@ caps.handback.revision: 12
   
 -   Las sugerencias en la definición de la guía de plan, incluyendo la sugerencia USE PLAN, se aplicaron correctamente a la consulta. Es decir, el plan de consulta compilado cumplió con las sugerencias especificadas.  
   
-## Columnas de datos de la clase de eventos Guía de plan correcta  
+## <a name="plan-guide-successful-event-class-data-columns"></a>Columnas de datos de la clase de eventos Guía de plan correcta  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -40,7 +44,7 @@ caps.handback.revision: 12
 |HostName|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IsSystem|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario1 = sistema, 0 = usuario.|60|Sí|  
 |LoginName|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con el formato DOMINIO\\*nombreDeUsuario*).|11|Sí|  
-|LoginSid|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Encontrará esta información en la vista [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) o en las vistas de catálogo [sys.sql_logins](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md). Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
+|LoginSid|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Encontrará esta información en la vista [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) o en las vistas de catálogo [sys.sql_logins](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md) . Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |NTDomainName|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |NTUserName|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |ObjectID|**int**|Id. de objeto del módulo que se estaba compilando cuando se aplicó la guía de plan. Si la guía de plan no se aplicó a un módulo, esta columna estará establecida en NULL.|22|Sí|  
@@ -53,7 +57,7 @@ caps.handback.revision: 12
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Clase de eventos Plan Guide Unsuccessful](../../relational-databases/event-classes/plan-guide-unsuccessful-event-class.md)   
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  

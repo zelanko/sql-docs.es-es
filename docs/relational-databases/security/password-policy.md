@@ -1,74 +1,78 @@
 ---
-title: "Directiva de contrase&#241;as | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/25/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ALTER LOGIN, instrucción"
-  - "contraseñas [SQL Server], aplicación de directivas"
-  - "inicios de sesión [SQL Server], contraseñas"
-  - "CHECK_EXPIRATION, opción"
-  - "contraseñas complejas [SQL Server]"
-  - "contraseñas complejas [SQL Server], expiración"
-  - "reinicio manual de recuentos de contraseñas erróneas"
-  - "MUST_CHANGE, opción"
-  - "expiración [SQL Server]"
-  - "contraseña expirada [SQL Server]"
-  - "símbolos [SQL Server]"
-  - "NetValidatePasswordPolicy(), API"
-  - "contraseñas [SQL Server]"
-  - "directiva de contraseñas [SQL Server]"
-  - "reiniciar recuentos de contraseñas erróneas"
-  - "seguridad [SQL Server], contraseñas"
-  - "CHECK_POLICY, opción"
-  - "contraseñas [SQL Server], símbolos"
-  - "recuentos de contraseñas erróneas"
-  - "contraseñas [SQL Server], complejidad"
-  - "caracteres [SQL Server], directivas de contraseñas"
+title: "Directiva de contraseñas | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 09/25/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ALTER LOGIN statement
+- passwords [SQL Server], policy enforcement
+- logins [SQL Server], passwords
+- CHECK_EXPIRATION option
+- complex passwords [SQL Server]
+- passwords [SQL Server], expiration
+- manual bad password count resets
+- MUST_CHANGE option
+- expiration [SQL Server]
+- expired password [SQL Server]
+- symbols [SQL Server]
+- NetValidatePasswordPolicy() API
+- passwords [SQL Server]
+- password policy [SQL Server]
+- resetting bad password counts
+- security [SQL Server], passwords
+- CHECK_POLICY option
+- passwords [SQL Server], symbols
+- bad password counts
+- passwords [SQL Server], complexity
+- characters [SQL Server], password policies
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1843956926a6eb59efbc4dc14dc50f1dd3403d07
+ms.lasthandoff: 04/11/2017
+
 ---
-# Directiva de contrase&#241;as
+# <a name="password-policy"></a>Directiva de contraseñas
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede usar los mecanismos de directiva de contraseñas de Windows. La directiva de contraseñas se aplica a un inicio de sesión que usa la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y a un usuario con contraseña de una base de datos independiente.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede aplicar las mismas directivas de complejidad y expiración que se usan en Windows a las contraseñas que se usan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta funcionalidad depende de la API `NetValidatePasswordPolicy` .  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] aplica la complejidad de las contraseñas. Las secciones de expiración de contraseñas y cumplimiento de directivas no se aplican a [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-## Complejidad de las contraseñas  
+## <a name="password-complexity"></a>Complejidad de las contraseñas  
  Las directivas de complejidad de contraseñas están diseñadas para impedir ataques por fuerza bruta mediante el aumento del número de contraseñas posibles. Cuando se aplica la directiva de complejidad de contraseñas, se exige que las nuevas contraseñas cumplan las siguientes directrices:  
   
 -   La contraseña no debe contener el nombre de la cuenta del usuario.  
   
 -   La contraseña debe tener una longitud de ocho caracteres como mínimo.  
   
--   La contraseña debe contener caracteres de tres de las siguientes categorías:   
+-   La contraseña debe contener caracteres de tres de las siguientes categorías:  
   
-    -   Letras en mayúsculas del alfabeto Latín (de la A a la Z)   
+    -   Letras en mayúsculas del alfabeto Latín (de la A a la Z)  
   
-    -   Letras en minúsculas del alfabeto Latín (de la "a" a la "z")   
+    -   Letras en minúsculas del alfabeto Latín (de la "a" a la "z")  
   
-    -   Dígitos en base 10 (del 0 al 9)   
+    -   Dígitos en base 10 (del 0 al 9)  
   
     -   Caracteres que no sean alfanuméricos, como signo de admiración (!), signo de moneda ($), signo de almohadilla (#) o porcentaje (%).  
   
  Las contraseñas pueden tener hasta 128 caracteres. Se recomienda utilizar contraseñas lo más largas y complejas posible.  
   
-## Expiración de las contraseñas  
+## <a name="password-expiration"></a>Expiración de las contraseñas  
  Las directivas de expiración de contraseñas se utilizan para administrar la duración de una contraseña. Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplica la directiva de expiración de contraseñas, se recuerda a los usuarios que cambien las contraseñas antiguas, y las cuentas con contraseñas que han expirado se deshabilitan.  
   
-## Aplicación de las directivas  
+## <a name="policy-enforcement"></a>Aplicación de las directivas  
  La aplicación de la directiva de contraseñas se puede configurar independientemente para cada inicio de sesión de SQL Server. Use [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md) para configurar las opciones de la directiva de contraseñas de un inicio de sesión de SQL Server. Se aplican las siguientes reglas a la configuración de la aplicación de directivas de contraseñas:  
   
 -   Cuando el valor de CHECK_POLICY se cambia a ON, ocurre lo siguiente:  
@@ -103,7 +107,7 @@ caps.handback.revision: 41
   
  La directiva de seguridad se podría establecer en Windows o se podría recibir del dominio. Para ver la directiva de contraseñas en el equipo, use el complemento de MMC Directiva de seguridad local (**secpol.msc**).  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)  
@@ -116,7 +120,8 @@ caps.handback.revision: 41
   
  [Crear un usuario de base de datos](../../relational-databases/security/authentication-access/create-a-database-user.md)  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
  [Contraseñas seguras](../../relational-databases/security/strong-passwords.md)  
   
   
+

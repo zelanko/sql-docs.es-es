@@ -1,38 +1,42 @@
 ---
-title: "Propiedades de la base de datos (p&#225;gina Opciones) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "04/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.options.f1"
+title: "Propiedades de la base de datos (página Opciones) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 04/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.options.f1
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 caps.latest.revision: 67
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 49b5572874fd642d738b8ffee362cc84540709ea
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propiedades de la base de datos (p&#225;gina Opciones)
+# <a name="database-properties-options-page"></a>Propiedades de la base de datos (página Opciones)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Utilice esta página para ver o modificar opciones de la base de datos seleccionada. Para obtener más información sobre las opciones disponibles en esta página, vea [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) y [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
+  Utilice esta página para ver o modificar opciones de la base de datos seleccionada. Para obtener más información sobre las opciones disponibles en esta página, vea [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) y [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
-## Encabezado de página  
+## <a name="page-header"></a>Encabezado de página  
  **Intercalación**  
  Especifique la intercalación de la base de datos seleccionándola en la lista. Para más información, vea [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md).  
   
  **Modelo de recuperación**  
- Especifique uno de los modelos siguientes para la recuperación de la base de datos: **Completa**, **Registro masivo** o **Simple**. Para obtener más información sobre los modelos de recuperación, vea [Modelos de recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+ Especifique uno de los modelos siguientes para la recuperación de la base de datos: **Completa**, **Registro masivo**o **Simple**. Para obtener más información sobre los modelos de recuperación, vea [Modelos de recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Nivel de compatibilidad**  
- Especifique la versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admitida por la base de datos. Los valores posibles son **SQL Server 2014 (120)**, **SQL Server 2012 (110)** y **SQL Server 2008 (100)**. Cuando una base de datos de SQL Server 2005 se actualiza a SQL Server 2014, el nivel de compatibilidad para la base de datos se cambia de 90 a 100.  El nivel de compatibilidad 90 no se admite en SQL Server 2014. Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+ Especifique la versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admitida por la base de datos. Los valores posibles son  **SQL Server 2014 (120)**,  **SQL Server 2012 (110)**y **SQL Server 2008 (100)**. Cuando una base de datos de SQL Server 2005 se actualiza a SQL Server 2014, el nivel de compatibilidad para la base de datos se cambia de 90 a 100.  El nivel de compatibilidad 90 no se admite en SQL Server 2014. Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
  **Tipo de contención**  
  Especifique ninguno o parcial para indicar que se trata de una base de datos independiente. Para obtener más información acerca de las bases de datos independientes, vea [Contained Databases](../../relational-databases/databases/contained-databases.md). La propiedad de servidor **Habilitar bases de datos independientes** debe establecerse en **TRUE** antes de configurar una base de datos como independiente.  
@@ -40,7 +44,7 @@ caps.handback.revision: 67
 > [!IMPORTANT]  
 >  La habilitación de bases de datos parcialmente independientes delega el control sobre el acceso a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en los propietarios de la base de datos. Para más información, vea [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
-## Automática  
+## <a name="automatic"></a>Automática  
  **Cerrar automáticamente**  
  Especifique si la base de datos se cierra sin problemas y libera los recursos cuando sale el último usuario. Los valores posibles son **True** o **False**. Con el valor **True**, la base de datos se cierra sin problemas y se liberan sus recursos después de que salga el último usuario.  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 67
   
  Establecer esta opción en **True** no tiene ningún efecto a menos que **Actualizar estadísticas automáticamente** también se establezca en **True**.  
   
-## Contenedores  
+## <a name="containment"></a>Contenedores  
  En las bases de datos independientes, algunos valores que se suelen configurar en el nivel de servidor se pueden configurar en el nivel de base de datos.  
   
  **LCID del idioma de texto completo predeterminado**  
@@ -83,14 +87,14 @@ caps.handback.revision: 67
   
  Por ejemplo, el valor predeterminado 2049 indica que la fecha escrita como "14/3/49" se interpretará como 14 de marzo de 2049 y la fecha escrita como "14/3/50", como 14 de marzo de 1950. Para más información, consulte [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
-## Cursor  
+## <a name="cursor"></a>Cursor  
  **Cierre de cursor al confirmar habilitado**  
  Especifique si los cursores se cierran tras confirmar la transacción que abre el cursor. Los valores posibles son **True** o **False**. Con el valor **True**, se cierran los cursores que están abiertos cuando se confirma o se revierte una transacción. Con el valor **False**, esos cursores se mantienen abiertos cuando se confirma una transacción. Con el valor **False**, si se revierte una transacción se cierran todos los cursores, excepto los definidos como INSENSITIVE o STATIC. Para obtener más información, vea [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md).  
   
  **Cursor predeterminado**  
  Especifica el comportamiento predeterminado del cursor. Cuando es **True**, el valor predeterminado de las declaraciones de cursor es LOCAL. Cuando es **False**, el valor predeterminado de los cursores de [!INCLUDE[tsql](../../includes/tsql-md.md)] es GLOBAL.  
   
-## Configuraciones con ámbito de base de datos  
+## <a name="database-scoped-configurations"></a>Configuraciones con ámbito de base de datos  
  En SQL Server 2016 y en Base de datos SQL de Azure, hay una serie de propiedades de configuración cuyo ámbito puede alcanzar el nivel de base de datos. Para obtener más información relativa a todas estas configuraciones, vea [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
  **Estimación de cardinalidad heredada**  
@@ -117,14 +121,14 @@ caps.handback.revision: 67
  **Correcciones del optimizador de consultas para secundaria**  
  Habilita o deshabilita las revisiones de optimización de consulta en los elementos secundarios, si procede, independientemente del nivel de compatibilidad de la base de datos. Es equivalente a la [Marca de seguimiento 4199](https://support.microsoft.com/en-us/kb/974006).  
   
-## FILESTREAM  
+## <a name="filestream"></a>FILESTREAM  
  **Nombre de directorio de FILESTREAM**  
  Especifique el nombre del directorio para los datos de FILESTREAM asociados a la base de datos seleccionada.  
   
  **Acceso sin transacciones de FILESTREAM**  
- Especifique una de las siguientes opciones para el acceso no transaccional a través del sistema de archivos a los datos de FILESTREAM almacenados en tablas FileTable: **OFF**, **READ_ONLY** o **FULL**. Si FILESTREAM no está habilitado en el servidor, este valor se establece en OFF y está deshabilitado. Para obtener más información, vea [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
+ Especifique una de las siguientes opciones para el acceso no transaccional a través del sistema de archivos a los datos de FILESTREAM almacenados en tablas FileTable: **OFF**, **READ_ONLY**o **FULL**. Si FILESTREAM no está habilitado en el servidor, este valor se establece en OFF y está deshabilitado. Para obtener más información, vea [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
-## Varios  
+## <a name="miscellaneous"></a>Varios  
  **Valor ANSI NULL predeterminado**  
  Permite valores NULL para todas las columnas o tipos de datos definidos por el usuario que no se definan explícitamente como **NOT NULL** durante una instrucción **CREATE TABLE** o **ALTER TABLE** (el estado predeterminado). Para obtener más información, vea [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md) y [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md).  
   
@@ -147,7 +151,7 @@ caps.handback.revision: 67
  Este valor de solo lectura indica si se ha habilitado el encadenamiento de propiedad entre bases de datos. Con el valor **True**, la base de datos puede ser el origen o el destino de una cadena de propiedad entre bases de datos. Utilice la instrucción ALTER DATABASE para establecer esta propiedad.  
   
  **Optimización de correlación de fechas habilitada**  
- Cuando es **True**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene estadísticas de correlación entre dos tablas cualesquiera de la base de datos que estén vinculadas mediante una restricción FOREIGN KEY y tengan columnas **datetime**.  
+ Cuando es **True**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene estadísticas de correlación entre dos tablas cualesquiera de la base de datos que estén vinculadas mediante una restricción FOREIGN KEY y tengan columnas **datetime** .  
   
  Cuando es **False**, no se mantienen estadísticas de correlación.  
   
@@ -170,7 +174,7 @@ caps.handback.revision: 67
   
  Esta propiedad también permite la creación y ejecución de ensamblados con acceso externo y no seguros dentro de la base de datos. Además de establecer esta propiedad en **True**, el propietario de la base de datos debe tener los permisos EXTERNAL ACCESS ASSEMBLY o UNSAFE ASSEMBLY en el nivel de servidor.  
   
- Todas las bases de datos de usuario y todas las bases de datos del sistema (a excepción de **MSDB**) tienen esta propiedad establecida en **False** de forma predeterminada. No es posible cambiar este valor para las bases de datos **model** y **tempdb** .  
+ Todas las bases de datos de usuario y todas las bases de datos del sistema (a excepción de **MSDB**) tienen esta propiedad establecida en **False**de forma predeterminada. No es posible cambiar este valor para las bases de datos **model** y **tempdb** .  
   
  TRUSTWORTHY se establece en **False** siempre que la base de datos se conecte al servidor.  
   
@@ -181,14 +185,14 @@ caps.handback.revision: 67
  **Formato de almacenamiento VarDecimal habilitado**  
  Esta opción es de solo lectura a partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Si el valor es **True**, la base de datos está habilitada para el formato de almacenamiento vardecimal. El formato de almacenamiento vardecimal no se puede deshabilitar mientras lo esté usando alguna tabla de la base de datos. En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, todas las bases de datos están habilitadas para el formato de almacenamiento vardecimal. Esta opción usa [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md).  
   
-## Recuperación  
+## <a name="recovery"></a>Recuperación  
  **Comprobación de páginas**  
  Especifique la opción utilizada para detectar y notificar las transacciones de E/S incompletas debido a errores de E/S de disco. Los valores posibles son **None**, **TornPageDetection**y **Checksum**. Para obtener más información, vea [Administrar la tabla suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md).  
   
  **Tiempo de recuperación de destino (segundos)**  
  Especifica el límite máximo de tiempo, expresado en segundos, para recuperar la base de datos especificada en caso de bloqueo. Para obtener más información, vea [Puntos de comprobación de base de datos &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
-## State  
+## <a name="state"></a>State  
  **Base de datos de solo lectura**  
  Especifica si la base de datos es de solo lectura. Los valores posibles son **True** o **False**. Con el valor **True**, los usuarios solo pueden leer los datos de la base de datos. Los usuarios no pueden modificar los objetos de datos ni de base de datos; sin embargo, la base de datos propiamente dicha se puede eliminar con la instrucción DROP DATABASE. La base de datos no puede estar en uso cuando se especifica un nuevo valor para la opción **Base de datos de solo lectura** . La base de datos maestra representa una excepción, y solo el administrador del sistema puede utilizar master mientras está habilitada la opción.  
   
@@ -213,8 +217,9 @@ caps.handback.revision: 67
  **Cifrado habilitado**  
  Cuando es **True**, el cifrado está habilitado para esta base de datos. Se requiere el uso de una Clave de cifrado de base de datos. Para obtener más información, vea [Cifrado de datos transparente &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
   
+

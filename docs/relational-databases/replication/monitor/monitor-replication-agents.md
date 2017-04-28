@@ -1,32 +1,36 @@
 ---
-title: "Supervisar agentes de replicaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "supervisar rendimiento [replicación de SQL Server], agentes"
-  - "Agente de registro del LOG, supervisar"
-  - "Monitor de replicación, agentes"
-  - "Agente de mezcla, supervisar"
-  - "Agente de lectura de cola, supervisar"
-  - "Agente de instantáneas, supervisar"
-  - "agentes [replicación de SQL Server], supervisar"
-  - "Agente de distribución, supervisar"
+title: "Supervisión de agentes de replicación | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring performance [SQL Server replication], agents
+- Log Reader Agent, monitoring
+- Replication Monitor, agents
+- Merge Agent, monitoring
+- Queue Reader Agent, monitoring
+- Snapshot Agent, monitoring
+- agents [SQL Server replication], monitoring
+- Distribution Agent, monitoring
 ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 90cb8e5af3fa8e3e86639e7cffa3f9fb97368c45
+ms.lasthandoff: 04/11/2017
+
 ---
-# Supervisar agentes de replicaci&#243;n
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona una vista sistémica de la actividad de replicación, aunque también facilita la búsqueda de información sobre un agente concreto. En la siguiente lista se incluye cada agente, las pestañas del Monitor de replicación en las que se puede encontrar y un vínculo a un tema en el que se explica el modo de obtener acceso a dichas pestañas:  
+# <a name="monitor-replication-agents"></a>Supervisar agentes de replicación
+  El Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona una vista sistémica de la actividad de replicación, aunque también facilita la búsqueda de información sobre un agente concreto. En la siguiente lista se incluye cada agente, las pestañas del Monitor de replicación en las que se puede encontrar y un vínculo a un tema en el que se explica el modo de obtener acceso a dichas pestañas:  
   
 -   Los siguientes agentes están asociados con publicaciones en el Monitor de replicación:  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 17
   
     -   Agente de lectura de cola  
   
-     Acceso a información y tareas asociadas a estos agentes a través de las siguientes fichas: **agentes** (disponible para todos los publicadores y publicaciones) y **advertencias** (disponible para cada publicación). Para obtener más información, consulte [Ver información y realizar tareas para los agentes asociados con una publicación & #40; Monitor de replicación & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md).  
+     Obtenga acceso a la información y a las tareas asociadas a cada uno de estos agentes a través de las siguientes pestañas: **Agentes** (disponible para todos los publicadores y las publicaciones) y **Advertencias** (disponible para todas las publicaciones). Para obtener más información, vea [Ver información y realizar tareas para los agentes asociados a una publicación &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
   
 -   Los siguientes agentes están asociados con suscripciones en el Monitor de replicación:  
   
@@ -44,26 +48,26 @@ caps.handback.revision: 17
   
     -   Agente de mezcla  
   
-     Acceso a información y tareas asociadas a estos agentes a través de las siguientes fichas: **lista de observación de suscripción** (disponible para cada publicador) o la **todas las suscripciones** (disponible para cada publicación). Para obtener más información, consulte [Ver información y realizar tareas para los agentes asociados a una suscripción & #40; Monitor de replicación & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md).  
+     Obtenga acceso a la información y a las tareas asociadas a cada uno de estos agentes a través de las siguientes pestañas: **Lista de supervisión de suscripciones** (disponible para todos los publicadores) o **Todas las suscripciones** (disponible para todas las publicaciones). Para obtener más información, vea [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
-## Usar SQL Server Management Studio para supervisar agentes de replicación  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] proporciona los siguientes cuadros de diálogo para supervisar agentes de replicación:  
+## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>Usar SQL Server Management Studio para supervisar agentes de replicación  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] provides the following dialog boxes for monitoring replication agents:  
   
--   **Ver estado del agente de instantáneas** (para todas las publicaciones)  
+-   **Ver estado del Agente de instantáneas** (para todas las publicaciones)  
   
--   **Ver estado del agente de lector de registro** (para todas las publicaciones transaccionales)  
+-   **Ver estado del Agente de registro del LOG** (para todas las publicaciones transaccionales)  
   
--   **Ver estado de sincronización** (para todas las suscripciones; este cuadro de diálogo permite el acceso para el agente de distribución y el agente de mezcla)  
+-   **Ver estado de sincronización** (para todas las suscripciones; este cuadro de diálogo permite el acceso al Agente de distribución y al Agente de mezcla)  
   
- El Monitor de replicación proporciona información adicional sobre cada agente y ofrece la posibilidad de supervisar al Agente de lectura de cola, si se utiliza. Para obtener más información, consulte [Ver información y realizar tareas para los agentes asociados con una publicación & #40; Monitor de replicación & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md), [Ver información y realizar tareas de los agentes asociados con una publicación & #40; Monitor de replicación & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md), y [Ver información y realizar tareas de los agentes asociados con una suscripción & #40; Monitor de replicación & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md).  
+ El Monitor de replicación proporciona información adicional sobre cada agente y ofrece la posibilidad de supervisar al Agente de lectura de cola, si se utiliza. Para obtener más información, see [Ver información y realizar tareas para los agentes asociados a una publicación &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md), [Ver información y realizar tareas para los agentes asociados a una publicación &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md) y [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
-#### Para supervisar el Agente de instantáneas y el Agente de registro del LOG  
+#### <a name="to-monitor-the-snapshot-agent-and-log-reader-agent"></a>Para supervisar el Agente de instantáneas y el Agente de registro del LOG  
   
 1.  Conéctese al publicador en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]y, a continuación, expanda el nodo del servidor.  
   
 2.  Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Publicaciones locales** .  
   
-3.  Haga clic en una publicación y, a continuación, haga clic en **Ver estado del agente de registro** o **Ver estado del agente de instantáneas**.  
+3.  Haga clic con el botón secundario en una publicación y, a continuación, en **Ver estado del Agente de registro del LOG** o en **Ver estado del Agente de instantáneas**.  
   
 4.  En el cuadro de diálogo **Ver estado del Agente de registro del LOG** o **Ver estado del Agente de instantáneas** :  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 17
   
 5.  Haga clic en **Cerrar**.  
   
-#### Para supervisar el Agente de distribución y el Agente de mezcla (en el publicador)  
+#### <a name="to-monitor-the-distribution-agent-and-merge-agent-from-the-publisher"></a>Para supervisar el Agente de distribución y el Agente de mezcla (en el publicador)  
   
 1.  Conéctese al publicador en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]y, a continuación, expanda el nodo del servidor.  
   
@@ -83,7 +87,7 @@ caps.handback.revision: 17
   
 3.  Expanda la publicación de la suscripción que desea supervisar.  
   
-4.  Haga clic en la suscripción y, a continuación, haga clic en **Ver estado de sincronización**.  
+4.  Haga clic con el botón secundario en la suscripción y, a continuación, haga clic en **Ver estado de sincronización**.  
   
 5.  En el cuadro de diálogo **Ver estado de sincronización** :  
   
@@ -97,13 +101,13 @@ caps.handback.revision: 17
   
 6.  Haga clic en **Cerrar**.  
   
-#### Para supervisar el Agente de distribución y el Agente de mezcla (en el suscriptor)  
+#### <a name="to-monitor-the-distribution-agent-and-merge-agent-from-the-subscriber"></a>Para supervisar el Agente de distribución y el Agente de mezcla (en el suscriptor)  
   
 1.  Conéctese al suscriptor en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]y expanda el nodo de servidor.  
   
 2.  Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Suscripciones locales** .  
   
-3.  Haga clic en la suscripción que desea supervisar y, a continuación, haga clic en **Ver estado de sincronización**.  
+3.  Haga clic con el botón secundario en la suscripción que desee supervisar y, a continuación, haga clic en **Ver estado de sincronización**.  
   
 4.  En el cuadro de diálogo **Ver estado de sincronización** :  
   
@@ -115,8 +119,8 @@ caps.handback.revision: 17
   
 5.  Haga clic en **Cerrar**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Supervisar la replicación](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Información general sobre los agentes de replicación](../../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

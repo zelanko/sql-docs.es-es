@@ -1,32 +1,36 @@
 ---
-title: "Mover un grupo de cargas de trabajo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.rg.properties_moveworkloadgroup.f1"
-helpviewer_keywords: 
-  - "grupos de cargas de trabajo [SQL Server], mover"
-  - "Regulador de recursos, mover grupos de cargas de trabajo"
+title: Movimiento de un grupo de cargas de trabajo | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.rg.properties_moveworkloadgroup.f1
+helpviewer_keywords:
+- workload groups [SQL Server], move
+- Resource Governor, workload group move
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2e74236a254493b554c34b5f7c729e8cb91868a0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Mover un grupo de cargas de trabajo
+# <a name="move-a-workload-group"></a>Mover un grupo de cargas de trabajo
   Puede mover un grupo de cargas de trabajo del regulador de recursos a un grupo de recursos de servidor diferente utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o Transact-SQL.  
   
--   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [Permisos](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Para mover un grupo de cargas de trabajo, use:** [SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
+-   **To move a workload group, using:**  [SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
  No puede mover un grupo de cargas de trabajo si hay una operación de configuración del regulador de recursos pendiente.  
@@ -42,11 +46,11 @@ caps.handback.revision: 12
   
 1.  En el Explorador de objetos, expanda de forma recursiva el nodo **Administración** hasta el nodo **Regulador de recursos**.  
   
-2.  Haga clic con el botón derecho en **Regulador de recursos** y, luego, haga clic en **Propiedades**. De este modo se abre la página **Propiedades del regulador de recursos**.  
+2.  Haga clic con el botón derecho en **Regulador de recursos** y, luego, haga clic en **Propiedades**. De este modo se abre la página **Propiedades del regulador de recursos** .  
   
 3.  En la ventana **Grupos de recursos** , haga clic en el grupo de recursos de servidor que contiene el grupo de cargas de trabajo que se va a mover. La ventana **Grupos de cargas de trabajo** enumera ahora los grupos de cargas de trabajo que contiene ese grupo de recursos de servidor.  
   
-4.  En la ventana **Grupos de cargas de trabajo**, haga clic con el botón derecho en la flecha derecha situada a la izquierda del grupo de cargas de trabajo que se va a mover y haga clic en **Mover a**. Esto muestra una ventana **Mover grupo de cargas de trabajo** .  
+4.  En la ventana **Grupos de cargas de trabajo** , haga clic con el botón derecho en la flecha derecha situada a la izquierda del grupo de cargas de trabajo que se va a mover y haga clic en **Mover a**. Esto muestra una ventana **Mover grupo de cargas de trabajo** .  
   
 5.  Los grupos de recursos de servidor disponibles se muestran en la ventana. Haga clic en el nombre del grupo de recursos de servidor al que desea mover el grupo de cargas de trabajo y, a continuación, haga clic en **Aceptar** para llevar a cabo esta acción.  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 12
   
 2.  Ejecute la instrucción **ALTER RESOURCE GOVERNOR RECONFIGURE** .  
   
-### Ejemplo (Transact-SQL)  
+### <a name="example-transact-sql"></a>Ejemplo (Transact-SQL)  
  El siguiente ejemplo mueve un grupo de cargas de trabajo denominado `groupAdhoc` al grupo de recursos de servidor predeterminado.  
   
 ```  
@@ -72,7 +76,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Habilitar el regulador de recursos](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Crear un grupo de recursos de servidor](../../relational-databases/resource-governor/create-a-resource-pool.md)   

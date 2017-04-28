@@ -1,25 +1,29 @@
 ---
-title: "Lecci&#243;n 2: Crear una credencial de SQL Server con una firma de acceso compartido | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lección 2: Creación de una credencial de SQL Server con una firma de acceso compartido | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 02/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 caps.latest.revision: 17
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f6e88b211fc2a053ffeadb038298a28179a94d88
+ms.lasthandoff: 04/11/2017
+
 ---
-# Lecci&#243;n 2: Crear una credencial de SQL Server con una firma de acceso compartido
+# <a name="lesson-2-create-a-sql-server-credential-using-a-shared-access-signature"></a>Lección 2: Crear una credencial de SQL Server con una firma de acceso compartido
 En esta lección, creará una credencial para almacenar la información de seguridad que SQL Server usará para escribir y leer desde el contenedor de Azure que ha creado en la [Lección 1: Crear una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
   
 Una credencial de SQL Server es un objeto que se usa para almacenar la información de autenticación necesaria para conectarse a un recurso fuera de SQL Server. La credencial almacena la ruta de acceso URI de la firma de acceso compartido y del contenedor de almacenamiento de este contenedor.  
@@ -27,7 +31,7 @@ Una credencial de SQL Server es un objeto que se usa para almacenar la informaci
 > [!NOTE]  
 > Si quiere realizar una copia de seguridad de una base de datos SQL Server 2012 SP1 CU2 o posterior o de una base de datos de SQL Server 2014 a este contenedor de Azure, puede usar la [sintaxis desusada](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) que aparece aquí para crear una credencial de SQL Server basada en la clave de la cuenta de almacenamiento.  
   
-## Crear una credencial de SQL Server  
+## <a name="create-sql-server-credential"></a>Crear una credencial de SQL Server  
 Para crear una credencial de SQL Server, siga estos pasos:  
   
 1.  Conéctese a SQL Server Management Studio.  
@@ -64,8 +68,10 @@ Para crear una credencial de SQL Server, siga estos pasos:
   
 [Lección 3: Copia de seguridad de base de datos en la dirección URL](../relational-databases/lesson-3-database-backup-to-url.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
 [Credenciales &#40;motor de base de datos&#41;](../relational-databases/security/authentication-access/credentials-database-engine.md)  
 [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../t-sql/statements/create-credential-transact-sql.md)  
 [sys.credentials &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   
+
+

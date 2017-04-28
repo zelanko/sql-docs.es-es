@@ -1,27 +1,31 @@
 ---
-title: "Combinar un rol | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1"
-helpviewer_keywords: 
-  - "agregar un miembro a un rol"
-  - "combinar un rol"
+title: "Combinación de un rol | Microsoft Docs"
+ms.custom: 
+ms.date: 07/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1
+helpviewer_keywords:
+- adding a member to a role
+- join a role
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 750dc366fde98b7d1c6514a2beeae4d7fd831c6f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Combinar un rol
+# <a name="join-a-role"></a>combinar un rol
   En este tema se describe cómo asignar roles a inicios de sesión y a usuarios de base de datos en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Use los roles de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para administrar eficazmente los permisos. Asigne permisos a roles y, a continuación, agregue o quite usuarios e inicios de sesión a los roles. Mediante el uso de roles, los permisos no se tienen que mantener individualmente para cada usuario.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite cuatro tipos de roles.  
@@ -65,7 +69,7 @@ caps.handback.revision: 13
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para agregar un miembro a un rol fijo de servidor  
+#### <a name="to-add-a-member-to-a-fixed-server-role"></a>Para agregar un miembro a un rol fijo de servidor  
   
 1.  En el Explorador de objetos, expanda el servidor en el que desea modificar un rol fijo de servidor.  
   
@@ -75,13 +79,13 @@ caps.handback.revision: 13
   
 4.  Haga clic con el botón derecho en el rol que quiere editar y seleccione **Propiedades**.  
   
-5.  En el cuadro de diálogo **Propiedades del rol de servidor –***nombre_del_rol_de_servidor*, en la página **Miembros**, haga clic en **Agregar**.  
+5.  En el cuadro de diálogo **Propiedades del rol de servidor –***nombre_del_rol_de_servidor* , en la página **Miembros** , haga clic en **Agregar**.  
   
-6.  En el cuadro de diálogo **Seleccionar inicio de sesión o rol de servidor**, en **Escribir los nombres de objeto para seleccionar (ejemplos)**, especifique el inicio de sesión o el rol de servidor que quiere agregar a este rol de servidor. O bien, haga clic en **Examinar…** y seleccione cualquier objeto disponible en el cuadro de diálogo **Buscar objetos** o todos ellos. Haga clic en **Aceptar** para volver al cuadro de diálogo **Propiedades del rol de servidor –***nombre_del_rol_de_servidor*.  
+6.  En el cuadro de diálogo **Seleccionar inicio de sesión o rol de servidor** , en **Escribir los nombres de objeto para seleccionar (ejemplos)**, especifique el inicio de sesión o el rol de servidor que quiere agregar a este rol de servidor. O bien, haga clic en **Examinar…** y seleccione cualquier objeto disponible en el cuadro de diálogo **Buscar objetos** o todos ellos. Haga clic en **Aceptar** para volver al cuadro de diálogo **Propiedades del rol de servidor –***nombre_del_rol_de_servidor* .  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-#### Para agregar un miembro a un rol de base de datos definido por el usuario  
+#### <a name="to-add-a-member-to-a-user-defined-database-role"></a>Para agregar un miembro a un rol de base de datos definido por el usuario  
   
 1.  En el Explorador de objetos, expanda el servidor en el que desea editar un rol de base de datos definido por el usuario.  
   
@@ -97,15 +101,15 @@ caps.handback.revision: 13
   
 7.  Haga clic con el botón derecho en el rol que quiere editar y seleccione **Propiedades**.  
   
-8.  En el cuadro de diálogo **Propiedades del rol de base de datos –***nombre_del_rol_de_la_base_de_datos*, en la página **General**, haga clic en **Agregar**.  
+8.  En el cuadro de diálogo **Propiedades del rol de base de datos –***nombre_del_rol_de_la_base_de_datos* , en la página **General** , haga clic en **Agregar**.  
   
-9. En el cuadro de diálogo **Seleccionar usuario o rol de base de datos**, en **Escribir los nombres de objeto para seleccionar (ejemplos)**, especifique el inicio de sesión o el rol de la base de datos que quiere agregar a este rol de base de datos. O bien, haga clic en **Examinar…** y seleccione cualquier objeto disponible en el cuadro de diálogo **Buscar objetos** o todos ellos. Haga clic en **Aceptar** para volver al cuadro de diálogo **Propiedades del rol de base de datos –***nombre_del_rol_de_la_base_de_datos*.  
+9. En el cuadro de diálogo **Seleccionar usuario o rol de base de datos** , en **Escribir los nombres de objeto para seleccionar (ejemplos)**, especifique el inicio de sesión o el rol de la base de datos que quiere agregar a este rol de base de datos. O bien, haga clic en **Examinar…** y seleccione cualquier objeto disponible en el cuadro de diálogo **Buscar objetos** o todos ellos. Haga clic en **Aceptar** para volver al cuadro de diálogo **Propiedades del rol de base de datos –***nombre_del_rol_de_la_base_de_datos* .  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para agregar un miembro a un rol fijo de servidor  
+#### <a name="to-add-a-member-to-a-fixed-server-role"></a>Para agregar un miembro a un rol fijo de servidor  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -120,7 +124,7 @@ caps.handback.revision: 13
   
  Para obtener más información, vea [ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md).  
   
-#### Para agregar un miembro a un rol de base de datos definido por el usuario  
+#### <a name="to-add-a-member-to-a-user-defined-database-role"></a>Para agregar un miembro a un rol de base de datos definido por el usuario  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -135,9 +139,10 @@ caps.handback.revision: 13
   
  Para obtener más información, vea [sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Roles de nivel de servidor](../../../relational-databases/security/authentication-access/server-level-roles.md)   
  [Roles de nivel de base de datos](../../../relational-databases/security/authentication-access/database-level-roles.md)   
  [Roles de aplicación](../../../relational-databases/security/authentication-access/application-roles.md)  
   
   
+

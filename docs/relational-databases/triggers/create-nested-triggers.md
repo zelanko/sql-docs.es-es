@@ -1,32 +1,36 @@
 ---
-title: "Crear desencadenadores anidados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "desencadenadores DML recursivos [SQL Server]"
-  - "desencadenadores DML anidados"
-  - "desencadenadores [SQL Server], anidados"
-  - "repetición directa [SQL Server]"
-  - "desencadenadores [SQL Server], recursivos"
-  - "desencadenadores DML, recursivos"
-  - "RECURSIVE_TRIGGERS [opción]"
-  - "repetición indirecta [SQL Server]"
-  - "desencadenadores DML anidados"
+title: "Creación de desencadenadores anidados | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recursive DML triggers [SQL Server]
+- DML triggers, nested
+- triggers [SQL Server], nested
+- direct recursion [SQL Server]
+- triggers [SQL Server], recursive
+- DML triggers, recursive
+- RECURSIVE_TRIGGERS option
+- indirect recursion [SQL Server]
+- nested DML triggers
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed1505ace274659400d797ae5ba8b27dcdf80557
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear desencadenadores anidados
+# <a name="create-nested-triggers"></a>Crear desencadenadores anidados
   Los desencadenadores DML y DDL están anidados cuando un desencadenador realiza una acción que inicia otro desencadenador. Estas acciones pueden iniciar otros desencadenadores y así sucesivamente. Los desencadenadores DML y DDL se pueden anidar hasta un máximo de 32 niveles. Puede controlar si los desencadenadores AFTER se pueden anidar en la opción de configuración del servidor **nested triggers** . Los desencadenadores INSTEAD OF (solo los desencadenadores DML pueden ser desencadenadores INSTEAD OF) se pueden anidar independientemente de esta configuración.  
   
 > [!NOTE]  
@@ -50,7 +54,7 @@ AS
 > [!NOTE]  
 >  Dado que los desencadenadores se ejecutan dentro de una transacción, un error en cualquier nivel de un conjunto de desencadenadores anidados anula toda la transacción y provoca que se reviertan todas las modificaciones de datos. Incluya instrucciones PRINT en los desencadenadores para poder determinar dónde se produjo el error.  
   
-## Desencadenadores recursivos  
+## <a name="recursive-triggers"></a>Desencadenadores recursivos  
  Un desencadenador AFTER no se llama a sí mismo de forma recursiva a menos que se active la opción RECURSIVE_TRIGGERS de la base de datos.  
   
  Hay dos tipos de recursividad:  
@@ -67,7 +71,7 @@ AS
   
  La repetición directa de los desencadenadores AFTER solo se impide si la opción RECURSIVE_TRIGGERS de la base de datos se establece en OFF. Para deshabilitar la repetición indirecta de los desencadenadores AFTER, también debe establecer la opción **nested triggers** del servidor en **0**.  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se muestra la utilización de desencadenadores recursivos para solucionar una relación con referencia a sí misma (también denominada clausura transitiva). Por ejemplo, la tabla `emp_mgr` define los elementos siguientes:  
   
 -   Un empleado (`emp`) de una empresa.  
@@ -181,9 +185,9 @@ Paul                           Alice                          0
   
  **Para establecer la opción de base de datos RECURSIVE_TRIGGERS**  
   
--   [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)  
+-   [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Establecer la opción de configuración del servidor Desencadenadores anidados](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)  
   

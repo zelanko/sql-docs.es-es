@@ -1,26 +1,30 @@
 ---
-title: "Cambiar el nombre a las columnas (motor de base de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "columnas [SQL Server], nombres"
-  - "cambiar el nombre de columnas"
-  - "nombres de columna [SQL Server]"
+title: Cambio de nombre de las columnas (motor de base de datos) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [SQL Server], names
+- renaming columns
+- column names [SQL Server]
 ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e02a5d26a0a04d5afa1c4ddfcc9c06c503b6bd2c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cambiar el nombre a las columnas (motor de base de datos)
+# <a name="rename-columns-database-engine"></a>Cambiar el nombre a las columnas (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Puede cambiar una columna de la tabla en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -51,7 +55,7 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para cambiar el nombre de una columna mediante el Explorador de objetos  
+#### <a name="to-rename-a-column-using-object-explorer"></a>Para cambiar el nombre de una columna mediante el Explorador de objetos  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 17
   
 3.  Escriba un nuevo nombre de columna.  
   
-#### Para cambiar el nombre de una columna mediante el Diseñador de tablas  
+#### <a name="to-rename-a-column-using-table-designer"></a>Para cambiar el nombre de una columna mediante el Diseñador de tablas  
   
 1.  En el **Explorador de objetos**, haga clic con el botón derecho en la tabla en la que quiere cambiar nombres de columnas y elija **Diseño**.  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 17
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para cambiar el nombre de una columna**  
   
-#### Para cambiar el nombre de una columna  
+#### <a name="to-rename-a-column"></a>Para cambiar el nombre de una columna  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

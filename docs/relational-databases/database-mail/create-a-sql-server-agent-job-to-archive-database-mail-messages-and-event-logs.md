@@ -1,32 +1,36 @@
 ---
-title: "Crear un trabajo del Agente SQL Server para archivar mensajes y registros de eventos del Correo electr&#243;nico de base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "archivar mensajes y datos adjuntos de correo electrónico [SQL Server]"
-  - "quitar mensajes y datos adjuntos de correo electrónico"
-  - "Correo electrónico de base de datos [SQL Server], archivar"
-  - "guardar mensajes y datos adjuntos de correo electrónico"
+title: "Creación de un trabajo del Agente SQL Server para archivar mensajes y registros de eventos del Correo electrónico de base de datos | Microsoft Docs"
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- archiving mail messages and attachments [SQL Server]
+- removing mail messages and attachements
+- Database Mail [SQL Server], archiving
+- saving mail messages and attachments
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfba800ce9266e7a27c6e27e8e3ea9dfc2f2b08e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear un trabajo del Agente SQL Server para archivar mensajes y registros de eventos del Correo electr&#243;nico de base de datos
+# <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Crear un trabajo del Agente SQL Server para archivar mensajes y registros de eventos del Correo electrónico de base de datos
   Las tablas **msdb** mantienen copias de los mensajes del Correo electrónico de base de datos y sus datos adjuntos, además del registro de eventos del Correo electrónico de base de datos. Puede reducir el tamaño de las tablas y eliminar los mensajes y eventos que ya no sean necesarios periódicamente. Los procedimientos siguientes permiten crear un trabajo del Agente SQL Server para automatizar el proceso.  
   
 -   **Antes de empezar:**  , [Requisitos previos](#Prerequisites), [Recomendaciones](#Recommendations), [Permisos](#Permissions)  
   
--   **Para almacenar mensajes y los registros de Correo electrónico de base de datos mediante:**  [Agente SQL Server](#Process_Overview)  
+-   **To Archive Database Mail messages and logs using :**  [SQL Server Agent](#Process_Overview)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 19
  En su entorno de producción, puede agregar otros procedimientos de comprobación de errores y enviar un mensaje de correo electrónico a los operadores si el trabajo provoca un error.  
   
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permisos  
  Debe ser miembro del rol fijo de servidor **sysadmin** para ejecutar los procedimientos almacenados que se describen en este tema.  
   
   
@@ -58,9 +62,9 @@ caps.handback.revision: 19
 -   Programar el trabajo para ejecutar periódicamente.  
   
   
-## Para crear un trabajo del Agente SQL Server  
+## <a name="to-create-a-sql-server-agent-job"></a>Para crear un trabajo del Agente SQL Server  
   
-1.  En el Explorador de objetos, expanda el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], haga clic con el botón derecho en**Trabajos** y, después, haga clic en **Nuevo trabajo**.  
+1.  En el Explorador de objetos, expanda el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic con el botón derecho en **Trabajos**y, después, haga clic en **Nuevo trabajo**.  
   
 2.  En el cuadro **Nombre** del cuadro de diálogo **Nuevo trabajo** , escriba **Archivar mensajes del Correo electrónico de base de datos**.  
   
@@ -72,13 +76,13 @@ caps.handback.revision: 19
   
  [Información general](#Process_Overview)  
   
-## Crear un paso para archivar los mensajes del Correo electrónico de base de datos  
+## <a name="to-create-a-step-to-archive-the-database-mail-messages"></a>Crear un paso para archivar los mensajes del Correo electrónico de base de datos  
   
 1.  En la página **Pasos** , haga clic en **Nuevo**.  
   
 2.  En el cuadro **Nombre del paso** , escriba **Copiar elementos del Correo electrónico de base de datos**.  
   
-3.  En el cuadro **Tipo**, seleccione **Script Transact-SQL (T-SQL)**.  
+3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)**.  
   
 4.  En el cuadro **Base de datos** , seleccione **msdb**.  
   
@@ -98,13 +102,13 @@ caps.handback.revision: 19
   
  [Información general](#Process_Overview)  
   
-## Crear un paso para archivar los datos adjuntos del Correo electrónico de base de datos  
+## <a name="to-create-a-step-to-archive-the-database-mail-attachments"></a>Crear un paso para archivar los datos adjuntos del Correo electrónico de base de datos  
   
 1.  En la página **Pasos** , haga clic en **Nuevo**.  
   
 2.  En el cuadro **Nombre del paso** , escriba **Copiar datos adjuntos del Correo electrónico de base de datos**.  
   
-3.  En el cuadro **Tipo**, seleccione **Script Transact-SQL (T-SQL)**.  
+3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)**.  
   
 4.  En el cuadro **Base de datos** , seleccione **msdb**.  
   
@@ -125,13 +129,13 @@ caps.handback.revision: 19
   
  [Información general](#Process_Overview)  
   
-## Crear un paso para archivar el registro del Correo electrónico de base de datos  
+## <a name="to-create-a-step-to-archive-the-database-mail-log"></a>Crear un paso para archivar el registro del Correo electrónico de base de datos  
   
 1.  En la página **Pasos** , haga clic en **Nuevo**.  
   
 2.  En el cuadro **Nombre del paso** , escriba **Copiar el registro del Correo electrónico de base de datos**.  
   
-3.  En el cuadro **Tipo**, seleccione **Script Transact-SQL (T-SQL)**.  
+3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)**.  
   
 4.  En el cuadro **Base de datos** , seleccione **msdb**.  
   
@@ -152,13 +156,13 @@ caps.handback.revision: 19
   
  [Información general](#Process_Overview)  
   
-## Crear un paso para quitar las filas archivadas del Correo electrónico de base de datos  
+## <a name="to-create-a-step-to-remove-the-archived-rows-from-database-mail"></a>Crear un paso para quitar las filas archivadas del Correo electrónico de base de datos  
   
 1.  En la página **Pasos** , haga clic en **Nuevo**.  
   
 2.  En el cuadro **Nombre del paso** , escriba **Eliminar filas del Correo electrónico de base de datos**.  
   
-3.  En el cuadro **Tipo**, seleccione **Script Transact-SQL (T-SQL)**.  
+3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)**.  
   
 4.  En el cuadro **Base de datos** , seleccione **msdb**.  
   
@@ -174,13 +178,13 @@ caps.handback.revision: 19
   
  [Información general](#Process_Overview)  
   
-## Crear un paso para quitar los elementos archivados del registro de eventos del Correo electrónico de base de datos  
+## <a name="to-create-a-step-to-remove-the-archived-items-from-database-mail-event-log"></a>Crear un paso para quitar los elementos archivados del registro de eventos del Correo electrónico de base de datos  
   
 1.  En la página **Pasos** , haga clic en **Nuevo**.  
   
 2.  En el cuadro **Nombre del paso** , escriba **Eliminar filas del registro de eventos del Correo electrónico de base de datos**.  
   
-3.  En el cuadro **Tipo**, seleccione **Script Transact-SQL (T-SQL)**.  
+3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)**.  
   
 4.  En el cuadro **Comando** , escriba la instrucción siguiente para quitar las filas anteriores al mes actual del registro de eventos del Correo electrónico de base de datos:  
   
@@ -194,7 +198,7 @@ caps.handback.revision: 19
   
  [Información general](#Process_Overview)  
   
-## Para programar el trabajo para ejecutar periódicamente  
+## <a name="to-schedule-the-job-to-run-periodically"></a>Para programar el trabajo para ejecutar periódicamente  
   
 1.  En el cuadro de diálogo **Nuevo trabajo** , haga clic en **Programaciones**.  
   
@@ -206,7 +210,7 @@ caps.handback.revision: 19
   
 5.  En el área **Frecuencia** , seleccione las opciones para ejecutar el trabajo periódicamente, por ejemplo una vez al mes.  
   
-6.  En el área **Frecuencia diaria**, seleccione **Sucede una vez a las <hora>\>**.  
+6.  En el área **Frecuencia diaria**, seleccione **Sucede una vez a las \<hora>**.  
   
 7.  Compruebe que las demás opciones están configuradas tal como desea y, a continuación, haga clic en **Aceptar** para guardar la programación.  
   
@@ -215,3 +219,4 @@ caps.handback.revision: 19
  [Información general](#Process_Overview)  
   
   
+

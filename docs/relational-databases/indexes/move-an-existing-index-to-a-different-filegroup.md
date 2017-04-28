@@ -1,28 +1,32 @@
 ---
-title: "Mover un &#237;ndice existente a un grupo de archivos diferente | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mover tablas"
-  - "cambiar grupos de archivos para índice"
-  - "mover índices"
-  - "índices [SQL Server], mover"
-  - "grupos de archivos [SQL Server], cambiar"
+title: "Movimiento de un índice existente a un grupo de archivos diferente | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- moving tables
+- switching filegroups for index
+- moving indexes
+- indexes [SQL Server], moving
+- filegroups [SQL Server], switching
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: cfc19f15cee7ca1185a2a9177474510c368b56bf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Mover un &#237;ndice existente a un grupo de archivos diferente
+# <a name="move-an-existing-index-to-a-different-filegroup"></a>Mover un índice existente a un grupo de archivos diferente
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   En este tema se describe cómo mover un índice existente de su grupo de archivos actual a otro distinto en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -52,11 +56,11 @@ caps.handback.revision: 44
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner**.  
+ Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para mover un índice existente a un grupo de archivos diferente usando el Diseñador de tablas  
+#### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>Para mover un índice existente a un grupo de archivos diferente usando el Diseñador de tablas  
   
 1.  En el Explorador de objetos, haga clic en el signo más para expandir la base de datos que contiene la tabla que contiene el índice que desea mover.  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 44
   
 3.  Haga clic con el botón derecho en la tabla que contiene el índice que quiere mover y seleccione **Diseño**.  
   
-4.  En el menú **Diseñador de tablas**, haga clic en **Índices o claves**.  
+4.  En el menú **Diseñador de tablas** , haga clic en **Índices o claves**.  
   
 5.  Seleccione el índice que desea mover.  
   
@@ -74,9 +78,9 @@ caps.handback.revision: 44
   
 8.  Haga clic en **Cerrar**.  
   
-9. En el menú **Archivo**, seleccione **Guardar***nombre_tabla*.  
+9. En el menú **Archivo** , seleccione **Guardar***nombre_tabla*.  
   
-#### Para mover un índice existente a un grupo de archivos distinto en el Explorador de objetos  
+#### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>Para mover un índice existente a un grupo de archivos distinto en el Explorador de objetos  
   
 1.  En el Explorador de objetos, haga clic en el signo más para expandir la base de datos que contiene la tabla que contiene el índice que desea mover.  
   
@@ -96,11 +100,11 @@ caps.handback.revision: 44
   
      Si lo que desea mover es un índice clúster, puede utilizar el procesamiento en línea. El procesamiento en línea permite que varios usuarios obtengan acceso al mismo tiempo a los datos subyacentes, así como a índices no clúster durante la operación de índice. Para más información, consulte [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
   
-     En equipos multiprocesador que usan [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede configurar el número de procesadores que desea usar para ejecutar la instrucción de índice; para ello, especifique un valor máximo de grado de paralelismo. La característica Operaciones indizadas en paralelo no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md). Para obtener más información sobre las operaciones indexadas en paralelo, vea [Configurar operaciones de índice en paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
+     En equipos multiprocesador que usan [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede configurar el número de procesadores que desea usar para ejecutar la instrucción de índice; para ello, especifique un valor máximo de grado de paralelismo. La característica Operaciones indizadas en paralelo no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea Características compatibles con las ediciones de SQL Server 2016. Para obtener más información sobre las operaciones indexadas en paralelo, vea [Configurar operaciones de índice en paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 8.  Haga clic en **Aceptar**.  
   
- La siguiente información está disponible en la página **Almacenamiento** del cuadro de diálogo **Propiedades del índice – ** *nombre_índice*:  
+ La siguiente información está disponible en la página **Almacenamiento** del cuadro de diálogo **Propiedades del índice –** *nombre_índice* :  
   
  **Grupo de archivos**  
  Almacena el índice en el grupo de archivos especificado. En la lista solo se muestran los grupos de archivos (fila) estándar. La selección de lista predeterminada es el grupo de archivos PRIMARY de la base de datos.  
@@ -144,7 +148,7 @@ caps.handback.revision: 44
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para mover un índice existente a un grupo de archivos diferente  
+#### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>Para mover un índice existente a un grupo de archivos diferente  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -185,3 +189,4 @@ caps.handback.revision: 44
  Para obtener más información, vea [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+

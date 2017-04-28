@@ -1,32 +1,36 @@
 ---
-title: "Tarea Limpieza de mantenimiento (Plan de mantenimiento) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.cleanup.f1"
-helpviewer_keywords: 
-  - "Tarea Limpieza de mantenimiento, cuadro de diálogo"
+title: Tarea Limpieza de mantenimiento (Plan de mantenimiento) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.cleanup.f1
+helpviewer_keywords:
+- Maintenance Cleanup Task dialog box
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47b569e7d8c486de044d9784af2cb6adbab50b4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tarea Limpieza de mantenimiento (Plan de mantenimiento)
+# <a name="maintenance-cleanup-task-maintenance-plan"></a>Tarea Limpieza de mantenimiento (Plan de mantenimiento)
   Utilice la **Tarea Limpieza de mantenimiento** para quitar archivos antiguos que estén relacionados con los planes de mantenimiento, incluidos los informes de texto creados por planes de mantenimiento y archivos de copia de seguridad de la base de datos.  
   
 > [!NOTE]  
 >  La tarea Limpieza de mantenimiento no elimina automáticamente archivos incluidos en las subcarpetas del directorio especificado. Esta característica reduce la posibilidad de un ataque malintencionado que utilice la tarea Limpieza de mantenimiento para eliminar archivos. Si quiere eliminar archivos en las subcarpetas de primer nivel, debe seleccionar **Incluir subcarpetas de primer nivel**.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Conexión**  
  Muestra la conexión actual.  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 26
  Elimina informes de texto de planes de mantenimientos ejecutados con anterioridad.  
   
  **Eliminar archivo específico**  
- Elimina el archivo específico que se indica en el cuadro **Nombre de archivo**.  
+ Elimina el archivo específico que se indica en el cuadro **Nombre de archivo** .  
   
  **Nombre de archivo**  
  Ruta de acceso y nombre del archivo que se va a eliminar.  
@@ -58,9 +62,9 @@ caps.handback.revision: 26
  Elimina archivos con la extensión especificada para **Extensión del archivo** en las subcarpetas de primer nivel, en **Carpeta**.  
   
  **Eliminar archivos en función de la antigüedad del archivo en el tiempo de ejecución de la tarea**  
- Especifique la antigüedad mínima que deben tener los archivos que quiere eliminar; para ello, especifique un número y una unidad de tiempo en el cuadro **Eliminar archivos anteriores a**.  
+ Especifique la antigüedad mínima que deben tener los archivos que quiere eliminar; para ello, especifique un número y una unidad de tiempo en el cuadro **Eliminar archivos anteriores a** .  
   
- **Eliminar archivos anteriores a:**  
+ **Eliminar archivos anteriores a**  
  Especifique la antigüedad mínima que deben tener los archivos que desea eliminar; para ello, especifique un número y una unidad de tiempo (Día, Semana, Mes o Año). Se eliminarán los archivos con una antigüedad mayor que el intervalo de tiempo especificado.  
   
  **Ver T-SQL**  
@@ -69,7 +73,7 @@ caps.handback.revision: 26
 > [!NOTE]  
 >  Si el número de objetos afectados es elevado, es posible que deba esperar un rato hasta que se muestren.  
   
-## Cuadro de diálogo Nueva conexión  
+## <a name="new-connection-dialog-box"></a>Cuadro de diálogo Nueva conexión  
  **Nombre de conexión**  
  Escriba un nombre para la nueva conexión.  
   
@@ -94,7 +98,7 @@ caps.handback.revision: 26
  **Contraseña**  
  Proporcione una contraseña para que se utilice en la autenticación. Esta opción no está disponible.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Planes de mantenimiento](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

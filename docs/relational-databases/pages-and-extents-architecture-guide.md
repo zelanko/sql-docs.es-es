@@ -1,36 +1,40 @@
 ---
-title: "Gu&#237;a de arquitectura de p&#225;ginas y extensiones | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "guía de arquitectura de páginas y extensiones"
-  - "guía, arquitectura de páginas y extensiones"
+title: "Guía de arquitectura de páginas y extensiones | Microsoft Docs"
+ms.custom: 
+ms.date: 10/21/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- page and extent architecture guide
+- guide, page and extent architecture
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 caps.latest.revision: 2
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 970981a0f8db1baa802a68ea1186211f031488e6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gu&#237;a de arquitectura de p&#225;ginas y extensiones
+# <a name="pages-and-extents-architecture-guide"></a>Guía de arquitectura de páginas y extensiones
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 La página es la unidad fundamental del almacenamiento de datos en SQL Server. Una extensión es una colección de ocho páginas físicamente contiguas. Las extensiones ayudan a administrar las páginas con eficacia. En esta guía se describen las estructuras de datos que se utilizan para administrar páginas y extensiones en todas las versiones de SQL Server. Comprender la arquitectura de las páginas y las extensiones es importante para diseñar y desarrollar bases de datos que funcionen eficazmente.
 
-## Páginas y extensiones
+## <a name="pages-and-extents"></a>Páginas y extensiones
 
 La unidad fundamental del almacenamiento de datos en SQL Server es la página. El espacio en disco asignado a un archivo de datos (.mdf o .ndf) en una base de datos se divide lógicamente en páginas numeradas de forma contigua de 0 a n. Las operaciones de E/S de disco se realizan en el nivel de página. Es decir, SQL Server lee o escribe páginas de datos enteras.
 
 Las extensiones son una colección de ocho páginas físicamente contiguas; se utilizan para administrar las páginas de forma eficaz. Todas las páginas se almacenen en extensiones.
 
-### Páginas
+### <a name="pages"></a>Páginas
 
 En SQL Server, el tamaño de página es de 8 KB. Esto significa que las bases de datos de SQL Server tienen 128 páginas por megabyte. Cada página empieza con un encabezado de 96 bytes, que se utiliza para almacenar la información del sistema acerca de la página. Esta información incluye el número de página, el tipo de página, el espacio disponible en la página y el Id. de unidad de asignación del objeto propietario de la página.
 
@@ -59,7 +63,7 @@ Las filas de datos se colocan en las páginas una a continuación de otra, empez
 Las filas no pueden abarcar páginas; no obstante, se pueden apartar de la página de la fila ciertas partes de la fila para que ésta pueda tener un tamaño mucho mayor. La cantidad máxima de datos y de sobrecarga que está contenida en una única fila de una página es de 8.060 bytes (8 KB). Sin embargo, esto no incluye los datos almacenados en el tipo de página Texto o imagen. Esta restricción es menos estricta para tablas que contienen columnas varchar, nvarchar, varbinary o sql_variant. Cuando el tamaño de fila total de todas las columnas variables y fijas de una tabla excede el límite de 8060 bytes, SQL Server mueve dinámicamente una o más columnas de longitud variable a páginas de la unidad de asignación ROW_OVERFLOW_DATA, empezando por la columna con el mayor ancho. Esto se realiza cuando una operación de inserción o actualización aumenta el tamaño total de la fila más allá del límite de 8060 bytes. Cuando una columna se mueve a una página de la unidad de asignación ROW_OVERFLOW_DATA, se mantiene un puntero de 24 bytes de la página original de la unidad de asignación IN_ROW_DATA. Si una operación posterior reduce el tamaño de la fila, SQL Server vuelve a mover las columnas dinámicamente a la página de datos original. 
 
 
-### Extents 
+### <a name="extents"></a>Extents 
 
 Las extensiones son la unidad básica en la que se administra el espacio. Una extensión consta de ocho páginas contiguas físicamente, es decir 64 KB. Esto significa que las bases de datos de SQL Server tienen 16 extensiones por megabyte.
 
@@ -71,9 +75,9 @@ Para hacer que la asignación de espacio sea eficaz, SQL Server no asigna extens
 
 A las tablas o índices nuevos se les suelen asignar páginas de extensiones mixtas. Cuando la tabla o el índice crecen hasta el punto de ocupar ocho páginas, se pasan a extensiones uniformes para las posteriores asignaciones. Si crea un índice de una tabla existente que dispone de filas suficientes para generar ocho páginas en el índice, todas las asignaciones del índice están en extensiones uniformes.
 
-![extensiones](../relational-databases/media/extents.gif)
+![Extents](../relational-databases/media/extents.gif)
 
-## Administrar las asignaciones de extensiones y el espacio disponible 
+## <a name="managing-extent-allocations-and-free-space"></a>Administrar las asignaciones de extensiones y el espacio disponible 
 
 Las estructuras de datos de SQL Server que administran asignaciones de extensiones y realizan un seguimiento del espacio disponible tienen una estructura relativamente sencilla. Esto tiene las siguientes ventajas: 
 
@@ -83,7 +87,7 @@ Las estructuras de datos de SQL Server que administran asignaciones de extension
 * La mayor parte de la información de asignación no está encadenada. Esto simplifica el mantenimiento de la información de asignación.    
   La asignación o cancelación de asignación de las páginas se puede hacer con más rapidez. Esto reduce el conflicto entre las tareas simultáneas que necesiten asignar o cancelar la asignación de páginas. 
 
-### Administrar las asignaciones de extensiones
+### <a name="managing-extent-allocations"></a>Administrar las asignaciones de extensiones
 
 SQL Server utiliza dos tipos de mapas de asignación para registrar la asignación de las extensiones: 
 
@@ -103,7 +107,7 @@ Todas las extensiones tienen establecidos los siguientes patrones de bits en las
  
 Esto hace que los algoritmos de administración de las extensiones sean sencillos. Para asignar una extensión uniforme, el motor de base de datos busca un bit 1 en la página GAM y lo establece en 0. Para buscar una extensión mixta con páginas disponibles, el motor de base de datos busca un bit 1 en la página SGAM. Para asignar una extensión mixta, el motor de base de datos busca 1 bit en la página GAM, lo establece en 0 y, a continuación, establece también en 1 el bit correspondiente de la página SGAM. Para desasignar una extensión, el motor de base de datos se asegura de que el bit de la página GAM esté establecido en 1 y el bit de la página SGAM en 0. Los algoritmos internos usados realmente por el motor de base de datos son más complejos que los mencionados aquí, puesto que el motor de base de datos distribuye los datos en la base de datos de manera uniforme. Sin embargo, incluso los algoritmos reales quedan simplificados al no tener que administrar cadenas de información de asignación de extensiones.
 
-### Realizar un seguimiento del espacio libre
+### <a name="tracking-free-space"></a>Realizar un seguimiento del espacio libre
 
 Las páginas Espacio disponible en páginas (PFS, Page Free Space) registran el estado de asignación de cada página, si una página concreta está asignada y la cantidad de espacio libre en cada página. La PFS tiene un byte por página, que registra si la página está asignada y, en tal caso, si está vacía, llena entre el 1 y el 50%, entre el 51 y el 80%, entre el 81 y el 95% o entre el 96 y el 100%.
 
@@ -113,7 +117,7 @@ La página PFS es la primera página que sigue a la página de encabezado de arc
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
-## Administrar el espacio utilizado por los objetos 
+## <a name="managing-space-used-by-objects"></a>Administrar el espacio utilizado por los objetos 
 
 Una página del Mapa de asignación de índices (IAM) asigna las extensiones en una parte de 4 GB de un archivo de base de datos utilizado por una unidad de asignación. Existen tres tipos de unidades de asignación:
 
@@ -146,7 +150,7 @@ Si el motor de base de datos de SQL Server necesita insertar una fila nueva y no
 El motor de base de datos solo asigna una nueva extensión a una unidad de asignación cuando no puede encontrar rápidamente una página en una extensión existente con espacio suficiente para almacenar la fila que se va a insertar. El motor de base de datos asigna las extensiones entre las que están disponibles en el grupo de archivos siguiendo un algoritmo de asignación proporcional. Si un grupo de archivos tiene dos archivos, uno de los cuales tiene el doble de espacio disponible que el otro, asignará dos páginas del archivo con más espacio disponible por cada página asignada del otro archivo. Esto significa que los archivos de un grupo de archivos tienen un porcentaje de espacio utilizado similar. 
 
  
-## Realizar un seguimiento de las extensiones modificadas 
+## <a name="tracking-modified-extents"></a>Realizar un seguimiento de las extensiones modificadas 
 
 SQL Server utiliza dos estructuras de datos internas para realizar un seguimiento de las extensiones modificadas mediante operaciones de copia masiva y de las extensiones modificadas desde la última copia de seguridad completa. Esas estructuras de datos aceleran en gran medida las copias de seguridad diferenciales. También aceleran el registro de las operaciones de copia masiva cuando una base de datos utiliza el modelo de recuperación optimizado para cargas masivas de registros. Al igual que las páginas del mapa de asignación global (GAM) y del mapa de asignación global compartido (SGAM), estas nuevas estructuras son mapas de bits en los que cada bit representa una única extensión. 
 
@@ -160,3 +164,4 @@ El intervalo entre las páginas DCM y BCM es el mismo que el intervalo entre las
 
 ![special_page_order](../relational-databases/media/special-page-order.gif)
  
+

@@ -1,25 +1,29 @@
 ---
-title: "Mover una base de datos protegida por TDE a otra instancia de SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Cifrado de datos transparente, movimiento"
-  - "TDE, movimiento de una base de datos"
+title: Movimiento de una base de datos protegida por TDE a otra instancia de SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transparent Data Encryption, moving
+- TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 61dab0bbd770679206c7eebee438f2fa22807ac2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Mover una base de datos protegida por TDE a otra instancia de SQL Server
+# <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover una base de datos protegida por TDE a otra instancia de SQL Server
   En este tema se describe cómo proteger una base de datos mediante el uso del cifrado de datos transparente (TDE) y, a continuación, mover la base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE realiza el cifrado y descifrado de E/S en tiempo real de los datos y los archivos de registro. El cifrado utiliza una clave de cifrado de la base de datos (DEK), que está almacenada en el registro de arranque de la base de datos para que esté disponible durante la recuperación. DEK es una clave simétrica protegida mediante un certificado almacenado en la base de datos maestra ( **master** ) del servidor o una clave asimétrica protegida por un módulo EKM.  
   
  **En este tema**  
@@ -50,7 +54,7 @@ caps.handback.revision: 18
   
 -   Debe conservar copias tanto del archivo de certificado como del archivo de clave privada para recuperar el certificado. No es necesario que la contraseña de la clave privada sea la misma que la contraseña de la clave maestra de la base de datos.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] almacena de forma predeterminada los archivos creados aquí en **C:\Archivos de programa\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA**. Los nombres de los archivos y las ubicaciones pueden ser distintos.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] almacena de forma predeterminada los archivos creados aquí en **C:\Archivos de programa\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** . Los nombres de los archivos y las ubicaciones pueden ser distintos.  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -74,11 +78,11 @@ caps.handback.revision: 18
   
 4.  En el cuadro de diálogo **Nueva base de datos** , en el cuadro **Nombre de la base de datos** , escriba el nombre de la nueva base de datos.  
   
-5.  En el cuadro **Propietario** , escriba el nombre del propietario de la nueva base de datos. Como alternativa, haga clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccionar propietario de base de datos**. Para obtener más información sobre la creación de una nueva base de datos, vea [Create a Database](../../../relational-databases/databases/create-a-database.md).  
+5.  En el cuadro **Propietario** , escriba el nombre del propietario de la nueva base de datos. Como alternativa, haga clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccionar propietario de base de datos** . Para obtener más información sobre la creación de una nueva base de datos, vea [Create a Database](../../../relational-databases/databases/create-a-database.md).  
   
 6.  En el Explorador de objetos, haga clic en el signo más para expandir la carpeta **Bases de datos** .  
   
-7.  Haga clic con el botón derecho en la base de datos que creó, seleccione **Tareas** y **Administrar cifrado de base de datos**.  
+7.  Haga clic con el botón derecho en la base de datos que creó, seleccione **Tareas**y **Administrar cifrado de base de datos**.  
   
      En el cuadro de diálogo **Administrar cifrado de base de datos** están disponibles las siguientes opciones.  
   
@@ -167,7 +171,7 @@ caps.handback.revision: 18
      **Bases de datos que se van a separar**  
      Enumera las bases de datos que se van a separar.  
   
-     **Nombre de la base de datos**  
+     **Database Name**  
      Muestra el nombre de la base de datos que se va a separar.  
   
      **Quitar conexiones**  
@@ -180,7 +184,7 @@ caps.handback.revision: 18
      De forma predeterminada, la operación de separación conserva las estadísticas de optimización obsoletas al separar la base de datos; para actualizar las estadísticas de optimización existentes, haga clic en esta casilla.  
   
      **Mantener catálogos de texto completo**  
-     De forma predeterminada, la operación de separación conserva los catálogos de texto completo asociados a la base de datos. Para quitarlos, desactive la casilla **Mantener catálogos de texto completo**. Esta opción solo aparece cuando se está actualizando una base de datos desde [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+     De forma predeterminada, la operación de separación conserva los catálogos de texto completo asociados a la base de datos. Para quitarlos, desactive la casilla **Mantener catálogos de texto completo** . Esta opción solo aparece cuando se está actualizando una base de datos desde [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
      **Estado**  
      Se muestra uno de los siguientes estados: **Listo** o **No está listo**.  
@@ -208,7 +212,7 @@ caps.handback.revision: 18
   
 8.  En el cuadro de diálogo **Adjuntar bases de datos** , en **Bases de datos que se van a adjuntar**, haga clic en **Agregar**.  
   
-9. En el cuadro de diálogo **Buscar archivos de base de datos: ***nombre_servidor*, seleccione el archivo de base de datos que quiera adjuntar al servidor nuevo y haga clic en **Aceptar**.  
+9. En el cuadro de diálogo **Buscar archivos de base de datos:***nombre_servidor* , seleccione el archivo de base de datos que quiera adjuntar al servidor nuevo y haga clic en **Aceptar**.  
   
      En el cuadro de diálogo **Adjuntar bases de datos** están disponibles las siguientes opciones.  
   
@@ -216,12 +220,12 @@ caps.handback.revision: 18
      Muestra información sobre las bases de datos seleccionadas.  
   
      \<no column header>  
-     Muestra un icono que indica el estado de la operación de adjuntar. Los iconos posibles se indican en la descripción de **Estado**, que encontrará más adelante.  
+     Muestra un icono que indica el estado de la operación de adjuntar. Los iconos posibles se indican en la descripción de **Estado** , que encontrará más adelante.  
   
      **Ubicación del archivo MDF**  
      Muestra la ruta de acceso y el nombre del archivo MDF seleccionado.  
   
-     **Nombre de la base de datos**  
+     **Database Name**  
      Muestra el nombre de la base de datos.  
   
      **Adjuntar como**  
@@ -249,9 +253,9 @@ caps.handback.revision: 18
      Busca los archivos de base de datos principales necesarios. Si el usuario selecciona un archivo .mdf, la información pertinente se llena automáticamente en los respectivos campos de la cuadrícula **Bases de datos que se van a adjuntar** .  
   
      **Quitar**  
-     Quita el archivo seleccionado de la cuadrícula **Bases de datos que se van a adjuntar**.  
+     Quita el archivo seleccionado de la cuadrícula **Bases de datos que se van a adjuntar** .  
   
-     **"** *<nombre_baseDeDatos>* **" detalles de la base de datos**  
+     **"** *<database_name>* **" detalles de la base de datos**  
      Muestra los nombres de los archivos que se van a adjuntar. Para comprobar o cambiar el nombre de la ruta de acceso de un archivo, haga clic en el botón **Examinar** (**…**).  
   
     > [!NOTE]  
@@ -320,7 +324,7 @@ caps.handback.revision: 18
   
 -   [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [Cifrado de datos transparente con Base de datos SQL de Azure](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md)  
   

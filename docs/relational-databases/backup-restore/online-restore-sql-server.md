@@ -1,25 +1,29 @@
 ---
-title: "Restauraci&#243;n en l&#237;nea (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restauraciones en línea [SQL Server]"
-  - "restauraciones en línea [SQL Server], acerca de las restauraciones en línea"
+title: "Restauración con conexión (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online restores [SQL Server]
+- online restores [SQL Server], about online restores
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66c1f5169f8978d05f34b19536af54964c3057d9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restauraci&#243;n en l&#237;nea (SQL Server)
+# <a name="online-restore-sql-server"></a>Restauración en línea (SQL Server)
   La restauración en línea solo se admite en la edición Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En esta versión, la restauración de un archivo, una página o por etapas es en línea de manera predeterminada. Este tema es pertinente para las bases de datos que incluyen varios archivos o grupos de archivos y, en el modelo de recuperación simple, solo para grupos de archivos de solo lectura.  
   
  La restauración de datos mientras la base de datos está en línea se denomina *restauración en línea*. Se considera que una base de datos está en línea siempre que el grupo de archivos principal esté en línea, aunque alguno de los grupos de archivos secundarios esté sin conexión. En todos los modelos de recuperación se puede restaurar un archivo sin conexión mientras la base de datos está en línea. En el modelo de recuperación completa, también se pueden restaurar páginas mientras la base de datos está en línea.  
@@ -46,7 +50,7 @@ caps.handback.revision: 45
 > [!CAUTION]  
 >  Al utilizar las copias de seguridad de instantánea, no se puede realizar un **Online Restore**. Para obtener más información sobre **Copias de seguridad de instantánea**, vea [Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
-## Copias de seguridad de registros para una restauración en línea  
+## <a name="log-backups-for-online-restore"></a>Copias de seguridad de registros para una restauración en línea  
  En el caso de una restauración en línea, el punto de recuperación es el punto donde se dejaron sin conexión los datos que se van a restaurar o se convirtieron en datos de solo lectura por última vez. Las copias de seguridad del registro de transacciones que llevan a este punto de recuperación y lo incluyen deben estar todas disponibles. Normalmente, es necesario hacer una copia de seguridad de registros después de ese punto para cubrir el punto de recuperación del archivo. La única excepción tiene lugar durante una restauración en línea de datos de solo lectura a partir de una copia de seguridad de datos que se realizó después de que los datos pasaran a ser de solo lectura. En ese caso, no es necesario disponer de una copia de seguridad de registros.  
   
  En general, puede realizar copias de seguridad del registro de transacciones mientras la base de datos esté en línea, incluso después de iniciar la secuencia de restauración. El momento oportuno para la realización de la última copia de seguridad de registros depende de las propiedades del archivo que se va a restaurar:  
@@ -74,7 +78,7 @@ caps.handback.revision: 45
   
  Siempre que la base de datos permanezca sin conexión, todas las restauraciones serán sin conexión.  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
   
 > [!NOTE]  
 >  La sintaxis de un flujo de restauración en línea es la misma que la de un flujo de restauración sin conexión.  
@@ -83,13 +87,13 @@ caps.handback.revision: 45
   
 -   [Ejemplo: restauración por etapas exclusiva para algunos grupos de archivos &#40;modelo de recuperación simple&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
--   [Ejemplo: restauración en línea de un archivo de solo lectura &#40;modelo de recuperación simple&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [Ejemplo: restauración con conexión de un archivo de solo lectura &#40;modelo de recuperación simple&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
 -   [Ejemplo: restauración por etapas de base de datos &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   
 -   [Ejemplo: restauración por etapas exclusiva para algunos grupos de archivos &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
--   [Ejemplo: restauración en línea de un archivo de lectura/escritura &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [Ejemplo: restauración con conexión de un archivo de lectura/escritura &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
 -   [Ejemplo: restauración en línea de un archivo de solo lectura &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
@@ -105,7 +109,7 @@ caps.handback.revision: 45
   
 -   [Quitar grupos de archivos inactivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Restauraciones de archivos &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [Restauraciones de archivos &#40;modelo de recuperación simple&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [Restaurar páginas &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   

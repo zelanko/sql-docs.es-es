@@ -1,26 +1,30 @@
 ---
-title: "Almac&#233;n de datos de administraci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "recopilador de datos [SQL Server], almacén de administración de datos"
-  - "almacenamiento de datos"
-  - "almacén de administración de datos"
+title: "Almacén de administración de datos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data collector [SQL Server], management data warehouse
+- data warehouse
+- management data warehouse
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0430b88308cb3ebc07b1addfb2e34575150fa41e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Almac&#233;n de datos de administraci&#243;n
+# <a name="management-data-warehouse"></a>almacén de administración de datos
   El almacén de administración de datos es una base de datos relacional que contiene los datos recopilados de un servidor que es el destino de la recopilación de datos. Estos datos se utilizan para generar informes para los conjuntos de recopilación de datos del sistema y también pueden utilizarse para crear informes personalizados.  
   
  La infraestructura del recopilador de datos define los trabajos y los planes de mantenimiento que se necesitan para implementar las directivas de retención definidas por el administrador de bases de datos.  
@@ -28,12 +32,12 @@ caps.handback.revision: 43
 > [!IMPORTANT]  
 >  Para esta versión del recopilador de datos, el almacén de datos de administración se crea utilizando el modelo de recuperación simple, para minimizar el registro. Debe implementar el modelo de recuperación adecuado para su organización.  
   
-## Implementar y usar el almacenamiento de datos  
+## <a name="deploying-and-using-the-data-warehouse"></a>Implementar y usar el almacenamiento de datos  
  Puede instalar el almacén de administración de datos en la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecuta el recopilador de datos. Sin embargo, si los recursos o el rendimiento del servidor suponen un problema en el servidor que se está supervisando, puede instalar el almacén de administración de datos en otro equipo.  
   
  Al crear el almacén de administración de datos, se crean los esquemas necesarios y sus objetos para los conjuntos de recopilación del sistema predefinidos. Se crean dos esquemas, el de núcleo y el de instantáneas. Se crea un tercer esquema, custom_snapshots, cuando se crean conjuntos de recopilación definidos por el usuario que incluyen elementos de recopilación que usan el tipo de recopilador de consultas T-SQL genérico.  
   
-###### Esquema de núcleo  
+###### <a name="core-schema"></a>Esquema de núcleo  
  El esquema de núcleo define las tablas, los procedimientos almacenados y las vistas que se usan para organizar e identificar los datos recopilados. Estas tablas se comparten entre todas las tablas de datos creadas para los tipos de recopilador individuales. Este esquema está bloqueado y solamente lo puede modificar el propietario de la base de datos del almacén de administración de datos. Los nombres de las tablas de este esquema llevan el prefijo "core".  
   
  En la tabla siguiente se describen las tablas de base de datos del esquema de núcleo. Estas tablas de base de datos permiten al recopilador de datos realizar el seguimiento de la procedencia de los datos y saber quién los insertó y cuándo se cargaron en el almacenamiento de datos.  
@@ -59,7 +63,7 @@ caps.handback.revision: 43
   
 -   snapshots.trace_data  
   
-###### Esquema de instantáneas  
+###### <a name="snapshots-schema"></a>Esquema de instantáneas  
  El esquema de instantáneas describe los objetos necesarios para almacenar y mantener los datos recopilados por los tipos de recopilador que se proporcionan. Las tablas de este esquema son fijas y no necesitan cambiarse durante la vigencia del tipo de recopilador. Si se necesitan cambios, solo los miembros del rol mdw_admin pueden cambiar el esquema. Estas tablas se crean para almacenar los datos recopilados por los conjuntos de recopilación de datos del sistema.  
   
  En las tablas siguientes se muestra una parte del esquema del almacén de administración de datos que se requiere para los conjuntos de recopilación de actividad del servidor y de estadísticas de consultas.  
@@ -108,7 +112,7 @@ caps.handback.revision: 43
   
  Para obtener información detallada sobre el tipo de datos y el contenido de las columnas de tabla de base de datos, lea la documentación del procedimiento almacenado del recopilador de datos correspondiente de cada una de las tablas.  
   
-### Procedimientos recomendados  
+### <a name="best-practices"></a>Procedimientos recomendados  
  Al trabajar con el almacén de datos de administración, recomendamos seguir estas prácticas recomendadas:  
   
 -   No modifique los metadatos de tablas de almacén de datos de administración a menos que esté agregando un nuevo tipo de recopilador.  
@@ -117,14 +121,14 @@ caps.handback.revision: 43
   
 -   En lugar de usar las tablas directamente, use los procedimientos almacenados y las funciones que se proporcionan con el recopilador de datos para obtener acceso a los datos de instancia y aplicación. Los nombres y las definiciones de las tablas se pueden cambiar, cambian al actualizar la aplicación y pueden cambiar en versiones futuras.  
   
-## Historial de cambios  
+## <a name="change-history"></a>Historial de cambios  
   
 |Contenido actualizado|  
 |---------------------|  
 |Se ha agregado la tabla core.performance_counter_report_group_items a la sección "Esquema de núcleo".|  
 |Se ha actualizado la lista de tablas de la sección "Esquema de instantáneas". Se ha agregado snapshots.os_memory_clerks, snapshots.sql_process_and_system_memory y snapshots.io_virtual_file_stats. Se ha quitado snapshots.os_process_memory y snapshots.distinct_query_stats.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados de almacén de administración de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados del recopilador de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)   

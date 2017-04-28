@@ -1,24 +1,28 @@
 ---
-title: "Lecci&#243;n 2: Conectarse desde otro equipo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lección 2: Conexión desde otro equipo | Microsoft Docs"
+ms.custom: 
+ms.date: 03/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1e72554b59c7ecf738235d4c5d74f35915116b4b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Lecci&#243;n 2: Conectarse desde otro equipo
+# <a name="lesson-2-connecting-from-another-computer"></a>Lección 2: Conectarse desde otro equipo
 Para mejorar la seguridad, no se puede obtener acceso a [!INCLUDE[ssDE](../includes/ssde-md.md)] de las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer, Express y Evaluation desde otro equipo cuando se instala inicialmente. En esta lección se muestra cómo habilitar los protocolos, configurar los puertos y configurar el Firewall de Windows para conectarse desde otros equipos.  
   
 Esta lección contiene las siguientes tareas:  
@@ -38,7 +42,7 @@ Para mejorar la seguridad, [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]Dev
   
 Si tiene previsto conectarse a [!INCLUDE[ssDE](../includes/ssde-md.md)] desde otro equipo, debe habilitar un protocolo, como TCP/IP.  
   
-#### Cómo habilitar conexiones TCP/IP desde otro equipo  
+#### <a name="how-to-enable-tcpip-connections-from-another-computer"></a>Cómo habilitar conexiones TCP/IP desde otro equipo  
   
 1.  En el menú **Inicio** , elija **Todos los programas**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **Herramientas de configuración**y, por último, **Administrador de configuración de SQL Server**.  
   
@@ -55,7 +59,7 @@ Si tiene previsto conectarse a [!INCLUDE[ssDE](../includes/ssde-md.md)] desde ot
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-2.  En **Administrador de configuración de SQL Server**, expanda **Configuración de red de SQL Server** y, después, haga clic en **Protocolos de ** *<InstanceName>*.  
+2.  En **Administrador de configuración de SQL Server**, expanda **Configuración de red de SQL Server**y, después, haga clic en **Protocolos de** *<InstanceName>*.  
   
     La instancia predeterminada (una instancia sin nombre) aparece como **MSSQLSERVER**. Si ha instalado una instancia con nombre, el nombre proporcionado aparece en la lista. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] se instala como **SQLEXPRESS**, a menos que se haya cambiado el nombre durante la instalación.  
   
@@ -70,13 +74,13 @@ Para mejorar la seguridad, Windows Server 2008, [!INCLUDE[wiprlhlong](../include
 > [!NOTE]  
 > Las asignaciones del número de puerto son administradas por la Agencia de asignación de números Internet y se muestran en [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844). Los números de puerto deben tener asignados números de 49152 a 65535.  
   
-#### Configurar SQL Server para escuchar en un puerto específico  
+#### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>Configurar SQL Server para escuchar en un puerto específico  
   
 1.  En el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , expanda **Configuración de red de SQL Server**y, a continuación, haga clic en la instancia de servidor que desee configurar.  
   
 2.  En el panel derecho, haga doble clic en **TCP/IP**.  
   
-3.  En el cuadro de diálogo **Propiedades de TCP/IP**, haga clic en la pestaña **Direcciones IP**.  
+3.  En el cuadro de diálogo **Propiedades de TCP/IP** , haga clic en la pestaña **Direcciones IP** .  
   
 4.  En el cuadro **Puerto TCP** de la sección **IPAll** , escriba un número de puerto disponible. Para este tutorial, se utilizará **49172**.  
   
@@ -84,7 +88,7 @@ Para mejorar la seguridad, Windows Server 2008, [!INCLUDE[wiprlhlong](../include
   
 6.  En el panel izquierdo, haga clic en **Servicios de SQL Server**.  
   
-7.  En el panel derecho, haga clic con el botón derecho en la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y, después, haga clic en **Reiniciar**. Cuando se reinicia [!INCLUDE[ssDE](../includes/ssde-md.md)] , escucha en el puerto **49172**.  
+7.  En el panel derecho, haga clic con el botón derecho en la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]y, después, haga clic en **Reiniciar**. Cuando se reinicia [!INCLUDE[ssDE](../includes/ssde-md.md)] , escucha en el puerto **49172**.  
   
 ## <a name="firewall"></a>Abrir puertos del firewall  
 Los sistemas de firewall ayudan a evitar el acceso no autorizado a los recursos de los equipos. Para conectarse a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde otro equipo cuando el firewall está activo, debe abrir un puerto en el firewall.  
@@ -94,11 +98,11 @@ Los sistemas de firewall ayudan a evitar el acceso no autorizado a los recursos 
   
 Después de configurar [!INCLUDE[ssDE](../includes/ssde-md.md)] para utilizar un puerto fijo, siga estas instrucciones para abrir ese puerto en el Firewall de Windows. (No es necesario configurar un puerto fijo para la instancia predeterminada, porque ya está fijada en el puerto TCP 1433).  
   
-#### Para abrir un puerto en el Firewall de Windows para el acceso TCP (Windows 7)  
+#### <a name="to-open-a-port-in-the-windows-firewall-for-tcp-access-windows-7"></a>Para abrir un puerto en el Firewall de Windows para el acceso TCP (Windows 7)  
   
 1.  En el menú **Inicio** , haga clic en **Ejecutar**, escriba **WF.msc**y, a continuación, haga clic en **Aceptar**.  
   
-2.  En la opción **Firewall de Windows con seguridad avanzada** del panel izquierdo, haga clic con el botón derecho en **Reglas de entrada** y luego haga clic en **Nueva regla** en el panel de acciones.  
+2.  En la opción **Firewall de Windows con seguridad avanzada**del panel izquierdo, haga clic con el botón derecho en **Reglas de entrada**y luego haga clic en **Nueva regla** en el panel de acciones.  
   
 3.  En el cuadro de diálogo **Tipo de regla** , seleccione **Puerto**y, a continuación, haga clic en **Siguiente**.  
   
@@ -117,7 +121,7 @@ Ahora que ha configurado [!INCLUDE[ssDE](../includes/ssde-md.md)] para escuchar 
   
 Cuando el servicio Explorador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se ejecute en el equipo servidor y el firewall haya abierto el puerto UDP 1434, la conexión se podrá realizar utilizando el nombre del equipo y el nombre de la instancia. Para mejorar la seguridad, el ejemplo no utiliza el servicio Explorador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-#### Para conectarse al motor de base de datos desde otro equipo  
+#### <a name="to-connect-to-the-database-engine-from-another-computer"></a>Para conectarse al motor de base de datos desde otro equipo  
   
 1.  En un segundo equipo que incluya las herramientas de cliente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , inicie una sesión con una cuenta autorizada para conectarse a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]y abra [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
@@ -128,7 +132,7 @@ Cuando el servicio Explorador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-
     > [!NOTE]  
     > Si omite **tcp:** en el cuadro **Nombre del servidor**, el cliente probará todos los protocolos habilitados en el orden especificado en la configuración del cliente.  
   
-4.  En el cuadro **Autenticación**, confirme **Autenticación de Windows** y luego haga clic en **Conectar**.  
+4.  En el cuadro **Autenticación** , confirme **Autenticación de Windows**y luego haga clic en **Conectar**.  
   
 ## <a name="browser"></a>Conectarse mediante el Servicio SQL Server Browser  
 El servicio Explorador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] escucha las solicitudes entrantes de recursos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y proporciona información acerca de las instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instaladas en el equipo. Cuando el servicio Explorador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se está ejecutando, los usuarios se pueden conectar a instancias con nombre si proporcionan el nombre del equipo y el de la instancia, en lugar del nombre del equipo y el número de puerto. Puesto que el Explorador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] recibe solicitudes UDP no autenticadas, no está activado siempre durante la instalación. Para obtener una descripción del servicio y una explicación de cuándo está activado, consulte [Servicio SQL Server Browser &#40;motor de base de datos y SSAS&#41;](../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).  
@@ -137,6 +141,8 @@ Para usar el Explorador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
   
 Con esto finaliza este breve tutorial sobre la conectividad básica.  
   
-## Volver al portal de tutoriales  
+## <a name="return-to-tutorials-portal"></a>Volver al portal de tutoriales  
 [Tutorial: Introducción al motor de base de datos](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
+
+

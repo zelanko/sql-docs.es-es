@@ -1,29 +1,33 @@
 ---
-title: "Crear una suscripci&#243;n de extracci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "suscripciones de extracción [replicación de SQL Server], crear"
-  - "suscribir replicación de mezcla [replicación de SQL Server], suscripciones de extracción"
-  - "suscripciones [replicación de SQL Server], extraer"
-  - "replicación de instantáneas [SQL Server], suscribir"
-  - "replicación transaccional, suscribir"
+title: "Creación de una suscripción de extracción | Microsoft Docs"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pull subscriptions [SQL Server replication], creating
+- merge replication subscribing [SQL Server replication], pull subscriptions
+- subscriptions [SQL Server replication], pull
+- snapshot replication [SQL Server], subscribing
+- transactional replication, subscribing
 ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f568f9e74e17bce1d2e5af044e8820e49203a210
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear una suscripci&#243;n de extracci&#243;n
-  Este tema se describe cómo crear una suscripción de extracción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], o Replication Management Objects (RMO).  
+# <a name="create-a-pull-subscription"></a>Crear una suscripción de extracción
+  En este tema se describe cómo crear una suscripción de extracción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
   
  Es posible configurar una suscripción de extracción para la replicación P2P mediante un script, pero no está disponible a través del asistente.  
  
@@ -32,7 +36,7 @@ caps.handback.revision: 44
   
 -   Especificar el publicador y la publicación.  
   
--   Seleccionar dónde se ejecutarán los agentes de replicación. Para una suscripción de extracción, seleccione **ejecutar cada agente en su suscriptor (suscripciones de extracción)** en la **ubicación del agente de distribución** página o **ubicación del agente de mezcla** página, dependiendo del tipo de publicación.  
+-   Seleccionar dónde se ejecutarán los agentes de replicación. En una suscripción de extracción, seleccione **Ejecutar cada agente en su suscriptor (suscripciones de extracción)** en la página **Ubicación del Agente de distribución** o en la página **Ubicación del Agente de mezcla** , dependiendo del tipo de publicación.  
   
 -   Especificar suscriptores y bases de datos de suscripciones.  
   
@@ -42,7 +46,7 @@ caps.handback.revision: 44
   
     -   Para las suscripciones a publicaciones de combinación, especifique las credenciales en la página **Seguridad del Agente de mezcla** .  
   
-     Para obtener información acerca de los permisos requeridos por cada agente, consulte [modelo de seguridad del agente de replicación](../../relational-databases/replication/security/replication-agent-security-model.md).  
+     Para obtener información acerca de los permisos que necesita cada agente, vea [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 -   Especifique una programación de sincronización y cuándo se debe inicializar el suscriptor.  
   
@@ -52,25 +56,25 @@ caps.handback.revision: 44
   
 -   Opcionalmente, puede crear un script para la suscripción.  
   
-#### Para crear una suscripción de extracción desde el publicador  
+#### <a name="to-create-a-pull-subscription-from-the-publisher"></a>Para crear una suscripción de extracción desde el publicador  
   
 1.  Conéctese al publicador en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y, a continuación, expanda el nodo del servidor.  
   
 2.  Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Publicaciones locales** .  
   
-3.  Haga clic en la publicación para el que desea crear una o varias suscripciones y, a continuación, haga clic en **nuevas suscripciones**.  
+3.  Haga clic con el botón secundario en la publicación en la que desea crear una o varias suscripciones y, a continuación, haga clic en **Nuevas suscripciones**.  
   
 4.  Complete las páginas del Asistente para nuevas suscripciones.  
   
-#### Para crear una suscripción de extracción desde el suscriptor  
+#### <a name="to-create-a-pull-subscription-from-the-subscriber"></a>Para crear una suscripción de extracción desde el suscriptor  
   
 1.  Conéctese al suscriptor en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y expanda el nodo de servidor.  
   
 2.  Expanda la carpeta **Replicación** .  
   
-3.  Haga clic en el **suscripciones locales** carpeta y, a continuación, haga clic en **nuevas suscripciones**.  
+3.  Haga clic con el botón secundario en la carpeta **Suscripciones locales** y, a continuación, haga clic en **Nuevas suscripciones**.  
   
-4.  En el **publicación** página del Asistente de suscripción nueva, seleccione **\< buscar publicador de SQL Server>** o **\< buscar publicador de Oracle>** desde el **Publisher** lista desplegable.  
+4.  En la página **Publicación** del Asistente para nuevas suscripciones, seleccione **\<Buscar publicador de SQL Server>** o **\<Buscar publicador de Oracle>** de la lista desplegable **Publicador**.  
   
 5.  Conéctese al publicador en el cuadro de diálogo **Conectar al servidor** .  
   
@@ -81,63 +85,63 @@ caps.handback.revision: 44
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  Las suscripciones de extracción pueden crearse mediante programación con procedimientos almacenados de replicación. Los procedimientos almacenados que se usen dependerán del tipo de publicación a la que corresponda la suscripción.  
   
-#### Para crear una suscripción de extracción para una publicación de instantáneas o transaccional  
+#### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Para crear una suscripción de extracción para una publicación de instantáneas o transaccional  
   
-1.  En el publicador, compruebe que la publicación admite suscripciones de extracción ejecutando [sp_helppublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md).  
+1.  En el publicador, ejecute [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) para comprobar que la publicación admite las suscripciones de extracción.  
   
-    -   Si el valor de **allow_pull** en el resultado es el conjunto **1**, la publicación admite suscripciones de extracción.  
+    -   Si el valor de **allow_pull** del conjunto de resultados es **1**, la publicación admite las suscripciones de extracción.  
   
-    -   Si el valor de **allow_pull** es **0**, ejecute [sp_changepublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), especificando **allow_pull** para **@property** y **true** para **@value**.  
+    -   Si el valor de **allow_pull** es **0**, ejecute [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) especificado **allow_pull** para **@property** y **true** para **@value**.  
   
-2.  En el suscriptor, ejecute [sp_addpullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Especifique **@publisher** y **@publication**. Para obtener información acerca de las suscripciones de actualización, vea [crear una suscripción actualizable a una publicación transaccional](https://msdn.microsoft.com/library/ms152769.aspx).  
+2.  En el suscriptor, ejecute [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Especifique **@publisher** y **@publication**. Para obtener información sobre cómo actualizar suscripciones, vea [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx).  
   
-3.  En el suscriptor, ejecute [sp_addpullsubscription_agent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Especifique lo siguiente:  
+3.  En el suscriptor, ejecute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Especifique lo siguiente:  
   
-    -   El **@publisher**, **@publisher_db**, y **@publication** parámetros.  
+    -   Los parámetros **@publisher**, **@publisher_db**y **@publication** .  
   
-    -   El [!INCLUDE[msCoName](../../includes/msconame-md.md)] las credenciales de Windows en la que se ejecuta el agente de distribución en el suscriptor para **@job_login** y **@job_password**.  
+    -   Los parámetros [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con las que se ejecuta el Agente de distribución en el suscriptor para **@job_login** y **@job_password**.  
   
         > [!NOTE]  
-        >  Las conexiones realizadas mediante la autenticación integrada de Windows siempre utilizan las credenciales de Windows especificadas por **@job_login** y **@job_password**. El Agente de distribución siempre realiza la conexión local con el suscriptor mediante la autenticación integrada de Windows. De forma predeterminada, el agente se conectará con el distribuidor mediante la autenticación de Windows integrada.  
+        >  Las conexiones que se realicen con la Autenticación integrada de Windows siempre usan las credenciales de Windows especificadas por **@job_login** y **@job_password**. El Agente de distribución siempre realiza la conexión local con el suscriptor mediante la autenticación integrada de Windows. De forma predeterminada, el agente se conectará con el distribuidor mediante la autenticación de Windows integrada.  
   
-    -   (Opcional) Un valor de **0** para **@distributor_security_mode** y la información de inicio de sesión de SQL Server para **@distributor_login** y **@distributor_password**, si necesita utilizar autenticación de SQL Server al conectarse al distribuidor.  
+    -   (Opcional) Un valor de **0** para **@distributor_security_mode** y la información de inicio de sesión de SQL Server para **@distributor_login** y **@distributor_password**, en caso de que necesite usar Autenticación de SQL Server cuando se conecte al distribuidor.  
   
     -   Una programación para el trabajo del Agente de distribución de esta suscripción. Para obtener más información, consulte [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
-4.  En el publicador, ejecute [sp_addsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) para registrar la suscripción de extracción. Especifique **@publication**, **@subscriber**, y **@destination_db**. Especifique un valor de **extracción** para **@subscription_type**.  
+4.  En la base de datos de publicación del publicador, ejecute [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) para registrar la suscripción de extracción. Especifique **@publication**, **@subscriber**y **@destination_db**. Especifique un valor **pull** para **@subscription_type**.  
   
-#### Para crear una suscripción de extracción para una publicación de combinación  
+#### <a name="to-create-a-pull-subscription-to-a-merge-publication"></a>Para crear una suscripción de extracción para una publicación de combinación  
   
-1.  En el publicador, compruebe que la publicación admite suscripciones de extracción ejecutando [sp_helpmergepublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md).  
+1.  En el publicador, ejecute [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) para comprobar que la publicación admite las suscripciones de extracción.  
   
-    -   Si el valor de **allow_pull** en el resultado es el conjunto **1**, la publicación admite suscripciones de extracción.  
+    -   Si el valor de **allow_pull** del conjunto de resultados es **1**, la publicación admite las suscripciones de extracción.  
   
-    -   Si el valor de **allow_pull** es **0**, ejecute [sp_changemergepublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), especificando **allow_pull** para **@property** y **true** para **@value**.  
+    -   Si el valor de **allow_pull** es **0**, ejecute [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) especificando **allow_pull** para **@property** y **true** para **@value**.  
   
-2.  En el suscriptor, ejecute [sp_addmergepullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Especifique **@publisher**, **@publisher_db**, **@publication**, y los parámetros siguientes:  
+2.  En el suscriptor, ejecute [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Especifique **@publisher**, **@publisher_db**, **@publication**y los parámetros siguientes:  
   
-    -   **@subscriber_type** – Especifique **local** para una suscripción de cliente y **global** para una suscripción de servidor.  
+    -   **@subscriber_type** – especifique **local** para una suscripción de cliente y **global** para una suscripción de servidor.  
   
-    -   **@subscription_priority** : especifique una prioridad para la suscripción (**0,00** a **99,99**). Solo es necesario para las suscripciones de servidor.  
+    -   **@subscription_priority** – Especifique una prioridad para la suscripción (**0,00** a **99,99**). Solo es necesario para las suscripciones de servidor.  
   
-         Para obtener más información, consulte [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+         Para más información, consulte [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
-3.  En el suscriptor, ejecute [sp_addmergepullsubscription_agent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Especifique los parámetros siguientes:  
+3.  En el suscriptor, ejecute [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Especifique los parámetros siguientes:  
   
-    -   **@publisher**, **@publisher_db**, y **@publication**.  
+    -   **@publisher**, **@publisher_db**y **@publication**.  
   
-    -   Las credenciales de Windows en la que se ejecuta el agente de mezcla en el suscriptor para **@job_login** y **@job_password**.  
+    -   Las credenciales de Windows con las que se ejecuta el Agente de mezcla en el suscriptor para **@job_login** y **@job_password**.  
   
         > [!NOTE]  
-        >  Las conexiones realizadas mediante la autenticación integrada de Windows siempre utilizan las credenciales de Windows especificadas por **@job_login** y **@job_password**. El Agente de mezcla siempre realiza la conexión local con el suscriptor mediante la autenticación de Windows integrada. De forma predeterminada, el agente se conectará con el distribuidor mediante la autenticación de Windows integrada.  
+        >  Las conexiones que se realicen con la Autenticación integrada de Windows siempre usan las credenciales de Windows especificadas por **@job_login** y **@job_password**. El Agente de mezcla siempre realiza la conexión local con el suscriptor mediante la autenticación de Windows integrada. De forma predeterminada, el agente se conectará con el distribuidor mediante la autenticación de Windows integrada.  
   
-    -   (Opcional) Un valor de **0** para **@distributor_security_mode** y la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] información de inicio de sesión de **@distributor_login** y **@distributor_password**, si necesita utilizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación al conectarse al distribuidor.  
+    -   (Opcional) El valor **0** para **@distributor_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@distributor_login** y **@distributor_password**, si necesita utilizar la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al conectarse al distribuidor.  
   
-    -   (Opcional) Un valor de **0** para **@publisher_security_mode** y la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] información de inicio de sesión de **@publisher_login** y **@publisher_password**, si necesita utilizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación al conectarse al publicador.  
+    -   (Opcional) El valor **0** para **@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@publisher_login** y **@publisher_password**, si necesita utilizar la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al conectarse al publicador.  
   
-    -   Una programación para el Agente de mezcla para la suscripción. Para obtener más información, consulte [crear una suscripción actualizable a una publicación transaccional](https://msdn.microsoft.com/library/ms152769.aspx).  
+    -   Una programación para el Agente de mezcla para la suscripción. Para más información, consulte [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx).  
   
-4.  En el publicador, ejecute [sp_addmergesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Especifique **@publication**, **@subscriber**, **@subscriber_db**, y un valor de **extracción** para **@subscription_type**. Esto registra la suscripción de extracción.  
+4.  En el publicador, ejecute [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Especifique **@publication**, **@subscriber**, **@subscriber_db**y un valor de **pull** para **@subscription_type**. Esto registra la suscripción de extracción.  
   
 ###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  El siguiente ejemplo crea una suscripción de extracción en una publicación transaccional. El primer lote se ejecuta en el suscriptor y el segundo lote se ejecuta en el publicador. Los valores de inicio de sesión y contraseña se proporcionan en tiempo de ejecución mediante variables de scripting de sqlcmd.  
@@ -262,88 +266,88 @@ GO
 ##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
  Las clases RMO que se utilizan para crear una suscripción de extracción dependen del tipo de publicación al que pertenece la suscripción.  
   
-#### Para crear una suscripción de extracción para una publicación de instantáneas o transaccional  
+#### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Para crear una suscripción de extracción para una publicación de instantáneas o transaccional  
   
-1.  Crear conexiones con el suscriptor y el publicador mediante la <xref:Microsoft.SqlServer.Management.Common.ServerConnection> clase.  
+1.  Cree una conexión al suscriptor y al publicador mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Cree una instancia de la <xref:Microsoft.SqlServer.Replication.TransPublication> clase mediante la conexión de publicador del paso 1. Especifique <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> y <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransPublication> con la conexión de publicador del paso 1. Especifique <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> y <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Llame a la <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> método. Si este método devuelve **false**, las propiedades especificadas en el paso 2 son incorrectas o la publicación no existe en el servidor.  
+3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Si este método devuelve **false**, las propiedades especificadas en el paso 2 son incorrectas o la publicación no existe en el servidor.  
   
-4.  Realizar una operación AND lógica bit a bit (**&** en Visual C# y **y** en Visual Basic) entre el <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> propiedad y <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Si el resultado es <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, establezca <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> al resultado de una operación lógica OR bit a bit (**|** en Visual C# y **o** en Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> y <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. A continuación, llame a <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para habilitar las suscripciones de extracción.  
+4.  Ejecute una operación lógica AND bit a bit (**&** en Visual C# y **And** en Visual Basic) entre la propiedad <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> y <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Si el resultado es <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, establezca <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> en el resultado de una operación lógica OR bit a bit (**|** en Visual C# y **Or** en Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> y <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. A continuación, llame a <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para habilitar las suscripciones de extracción.  
   
-5.  Si la base de datos de suscripción no existe, se crea mediante la <xref:Microsoft.SqlServer.Management.Smo.Database> clase. Para obtener más información, consulte [creación, modificación y eliminación de bases de datos](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
+5.  Si la base de datos de suscripciones no existe, créela con la clase <xref:Microsoft.SqlServer.Management.Smo.Database>. Para obtener más información, consulte [Crear, modificar y eliminar bases de datos](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
-6.  Cree una instancia de la <xref:Microsoft.SqlServer.Replication.TransPullSubscription> clase.  
-  
-7.  Establezca las siguientes propiedades de la suscripción:  
-  
-    -   El <xref:Microsoft.SqlServer.Management.Common.ServerConnection> en el suscriptor que creó en el paso 1 para <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
-  
-    -   Nombre de la base de datos de suscripción para <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>.  
-  
-    -   Nombre del publicador para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>.  
-  
-    -   Nombre de la base de datos de publicación para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>.  
-  
-    -   Nombre de la publicación de <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>.  
-  
-    -   La <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> y <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> o <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> campos de <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> para proporcionar las credenciales para la [!INCLUDE[msCoName](../../includes/msconame-md.md)] cuenta de Windows bajo la que se ejecuta el agente de distribución en el suscriptor. Esta cuenta se utiliza para realizar conexiones locales al suscriptor y conexiones remotas con la autenticación de Windows.  
-  
-        > [!NOTE]  
-        >  Configuración de <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> no es obligatorio cuando se crea la suscripción por un miembro de la **sysadmin** rol fijo de servidor, pero se recomienda. En este caso, el agente suplantará a la cuenta del Agente SQL Server. Para obtener más información, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
-  
-    -   (Opcional) Un valor de **true** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> para crear un trabajo de agente que se utiliza para sincronizar la suscripción. Si especifica **false** (valor predeterminado), la suscripción sólo se puede sincronizar mediante programación y debe especificar propiedades adicionales de <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> cuando tiene acceso a este objeto desde el <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> propiedad. Para más información, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
-  
-        > [!NOTE]  
-        >  Agente SQL Server no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md). Cuando se especifica el valor **true** para suscriptores de Express, no se crea el trabajo de agente. Sin embargo, los metadatos importantes relacionados con la suscripción se almacenan en el suscriptor.  
-  
-    -   (Opcional) Establecer el <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> campos de <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> cuando se utiliza autenticación de SQL Server para conectarse al distribuidor.  
-  
-8.  Llame a la <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A> método.  
-  
-9. La instancia de la <xref:Microsoft.SqlServer.Replication.TransPublication> clase desde el paso 2, llamada la <xref:Microsoft.SqlServer.Replication.TransPublication.MakePullSubscriptionWellKnown%2A> método para registrar la suscripción de extracción con el publicador. Si este registro ya existe, se produce una excepción.  
-  
-#### Para crear una suscripción de extracción para una publicación de combinación  
-  
-1.  Crear conexiones con el suscriptor y el publicador mediante la <xref:Microsoft.SqlServer.Management.Common.ServerConnection> clase.  
-  
-2.  Cree una instancia de la <xref:Microsoft.SqlServer.Replication.MergePublication> clase mediante la conexión de publicador del paso 1. Especifique <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>, y <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
-  
-3.  Llame a la <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> método. Si este método devuelve **false**, las propiedades especificadas en el paso 2 son incorrectas o la publicación no existe en el servidor.  
-  
-4.  Realizar una operación AND lógica bit a bit (**&** en Visual C# y **y** en Visual Basic) entre el <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> propiedad y <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Si el resultado es <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, establezca <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> al resultado de una operación lógica OR bit a bit (**|** en Visual C# y **o** en Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> y <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. A continuación, llame a <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para habilitar las suscripciones de extracción.  
-  
-5.  Si la base de datos de suscripción no existe, se crea mediante la <xref:Microsoft.SqlServer.Management.Smo.Database> clase. Para obtener más información, consulte [creación, modificación y eliminación de bases de datos](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
-  
-6.  Cree una instancia de la <xref:Microsoft.SqlServer.Replication.MergePullSubscription> clase.  
+6.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransPullSubscription>.  
   
 7.  Establezca las siguientes propiedades de la suscripción:  
   
-    -   El <xref:Microsoft.SqlServer.Management.Common.ServerConnection> en el suscriptor que creó en el paso 1 para <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+    -   Establezca la propiedad <xref:Microsoft.SqlServer.Management.Common.ServerConnection> en el suscriptor creado en el paso 1 para <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-    -   Nombre de la base de datos de suscripción para <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>.  
+    -   El nombre de la base de datos de suscripciones para <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>.  
   
-    -   Nombre del publicador para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>.  
+    -   El nombre del publicador para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>.  
   
-    -   Nombre de la base de datos de publicación para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>.  
+    -   El nombre de la base de datos de publicación para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>.  
   
-    -   Nombre de la publicación de <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>.  
+    -   El nombre de la publicación para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>.  
   
-    -   La <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> y <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> o <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> campos de <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> para proporcionar las credenciales para la [!INCLUDE[msCoName](../../includes/msconame-md.md)] cuenta de Windows bajo la que se ejecuta el agente de mezcla en el suscriptor. Esta cuenta se utiliza para realizar conexiones locales al suscriptor y conexiones remotas con la autenticación de Windows.  
+    -   Los campos <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> y <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> para proporcionar las credenciales de la cuenta de Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] en la que se ejecuta el Agente de distribución en el suscriptor. Esta cuenta se utiliza para realizar conexiones locales al suscriptor y conexiones remotas con la autenticación de Windows.  
   
         > [!NOTE]  
-        >  Configuración de <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> no es obligatorio cuando se crea la suscripción por un miembro de la **sysadmin** rol fijo de servidor, pero se recomienda. En este caso, el agente suplantará a la cuenta del Agente SQL Server. Para obtener más información, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+        >  No es necesario configurar <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> cuando un miembro del rol fijo de servidor **sysadmin** crea la suscripción, pero es recomendable. En este caso, el agente suplantará a la cuenta del Agente SQL Server. Para más información, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-    -   (Opcional) Un valor de **true** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> para crear un trabajo de agente que se utiliza para sincronizar la suscripción. Si especifica **false** (valor predeterminado), la suscripción sólo se puede sincronizar mediante programación y debe especificar propiedades adicionales de <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> cuando tiene acceso a este objeto desde el <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> propiedad. Para más información, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+    -   (Opcional) Un valor **True** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> a fin de crear un trabajo de agente que se utilice con el objetivo de sincronizar la suscripción. Si especifica **False** (el valor predeterminado), solo se puede sincronizar la suscripción mediante programación y deberá especificar las propiedades adicionales de <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> cuando acceda a este objeto desde la propiedad <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A>. Para obtener más información, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
-    -   (Opcional) Establecer el <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> campos de <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> cuando se utiliza autenticación de SQL Server para conectarse al distribuidor.  
+        > [!NOTE]  
+        >  SQL Server Agent is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Cuando se especifica el valor **true** para suscriptores de Express, no se crea el trabajo de agente. Sin embargo, los metadatos importantes relacionados con la suscripción se almacenan en el suscriptor.  
   
-    -   (Opcional) Establecer el <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> campos de <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> cuando se utiliza la autenticación de SQL Server para conectarse al publicador.  
+    -   (Opcional) Configure los campos <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> si utiliza la autenticación de SQL Server para conectarse al distribuidor.  
   
-8.  Llame a la <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A> método.  
+8.  Llame al método <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>.  
   
-9. La instancia de la <xref:Microsoft.SqlServer.Replication.MergePublication> clase desde el paso 2, llamada la <xref:Microsoft.SqlServer.Replication.MergePublication.MakePullSubscriptionWellKnown%2A> método para registrar la suscripción de extracción con el publicador. Si este registro ya existe, se produce una excepción.  
+9. Al usar la instancia de la clase <xref:Microsoft.SqlServer.Replication.TransPublication> del paso 2, llame al método <xref:Microsoft.SqlServer.Replication.TransPublication.MakePullSubscriptionWellKnown%2A> para registrar la suscripción de extracción con el publicador. Si este registro ya existe, se produce una excepción.  
+  
+#### <a name="to-create-a-pull-subscription-to-a-merge-publication"></a>Para crear una suscripción de extracción para una publicación de combinación  
+  
+1.  Cree una conexión al suscriptor y al publicador mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergePublication> con la conexión de publicador del paso 1. Especifique <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> y <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+  
+3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Si este método devuelve **false**, las propiedades especificadas en el paso 2 son incorrectas o la publicación no existe en el servidor.  
+  
+4.  Ejecute una operación lógica AND bit a bit (**&** en Visual C# y **And** en Visual Basic) entre la propiedad <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> y <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Si el resultado es <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, establezca <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> en el resultado de una operación lógica OR bit a bit (**|** en Visual C# y **Or** en Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> y <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. A continuación, llame a <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para habilitar las suscripciones de extracción.  
+  
+5.  Si la base de datos de suscripciones no existe, créela con la clase <xref:Microsoft.SqlServer.Management.Smo.Database>. Para obtener más información, consulte [Crear, modificar y eliminar bases de datos](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
+  
+6.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergePullSubscription>.  
+  
+7.  Establezca las siguientes propiedades de la suscripción:  
+  
+    -   Establezca la propiedad <xref:Microsoft.SqlServer.Management.Common.ServerConnection> en el suscriptor creado en el paso 1 para <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+  
+    -   El nombre de la base de datos de suscripciones para <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>.  
+  
+    -   El nombre del publicador para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>.  
+  
+    -   El nombre de la base de datos de publicación para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>.  
+  
+    -   El nombre de la publicación para <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>.  
+  
+    -   Los campos <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> y <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> para proporcionar las credenciales de la cuenta de Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] en la que se ejecuta el Agente de mezcla en el suscriptor. Esta cuenta se utiliza para realizar conexiones locales al suscriptor y conexiones remotas con la autenticación de Windows.  
+  
+        > [!NOTE]  
+        >  No es necesario configurar <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> cuando un miembro del rol fijo de servidor **sysadmin** crea la suscripción, pero es recomendable. En este caso, el agente suplantará a la cuenta del Agente SQL Server. Para más información, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+  
+    -   (Opcional) Un valor **True** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> a fin de crear un trabajo de agente que se utilice con el objetivo de sincronizar la suscripción. Si especifica **False** (el valor predeterminado), solo se puede sincronizar la suscripción mediante programación y deberá especificar las propiedades adicionales de <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> cuando acceda a este objeto desde la propiedad <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A>. Para obtener más información, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+  
+    -   (Opcional) Configure los campos <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> si utiliza la autenticación de SQL Server para conectarse al distribuidor.  
+  
+    -   (Opcional) configure los campos <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> si utiliza la autenticación de SQL Server para conectarse al publicador.  
+  
+8.  Llame al método <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>.  
+  
+9. Al usar la instancia de la clase <xref:Microsoft.SqlServer.Replication.MergePublication> del paso 2, llame al método <xref:Microsoft.SqlServer.Replication.MergePublication.MakePullSubscriptionWellKnown%2A> para registrar la suscripción de extracción con el publicador. Si este registro ya existe, se produce una excepción.  
   
 ###  <a name="PShellExample"></a> Ejemplo (RMO)  
  En este ejemplo se crea una suscripción de extracción para una publicación transaccional. Las credenciales de la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizada para crear el trabajo del Agente de distribución se pasan en tiempo de ejecución.  
@@ -726,7 +730,7 @@ Finally
 End Try  
 ```  
   
- En este ejemplo se crea una suscripción de extracción a una publicación de combinación sin crear un metadatos de suscripción y de trabajo de agente asociado en [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md). Las credenciales de la cuenta de Windows utilizada para crear el trabajo del Agente de mezcla se pasan en tiempo de ejecución.  
+ Este ejemplo crea una suscripción de extracción a una publicación de combinación sin crear un trabajo de agente asociado ni metadatos de la suscripción en [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md). Las credenciales de la cuenta de Windows utilizada para crear el trabajo del Agente de mezcla se pasan en tiempo de ejecución.  
   
 ```csharp  
 // Define the Publisher, publication, and databases.  
@@ -1118,11 +1122,11 @@ Finally
 End Try  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conceptos de los Replication Management Objects (RMO)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Ver y modificar las propiedades de una suscripción de extracción](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [Configurar sincronización web](../../relational-databases/replication/configure-web-synchronization.md)   
  [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)   
- [Prácticas recomendadas de seguridad de replicación](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

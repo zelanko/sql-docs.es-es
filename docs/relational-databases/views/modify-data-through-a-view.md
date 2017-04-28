@@ -1,26 +1,30 @@
 ---
-title: "Modificar datos mediante una vista | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modificaciones de datos [SQL Server], vistas"
-  - "vistas [SQL Server], modificar datos mediante"
-  - "modificar datos [SQL Server], vistas"
+title: "Modificación de datos mediante una vista | Microsoft Docs"
+ms.custom: 
+ms.date: 10/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data modifications [SQL Server], views
+- views [SQL Server], modifying data through
+- modifying data [SQL Server], views
 ms.assetid: 410e2812-4ebe-48b2-b95f-c7784f1c4336
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 360ab52b8f6f8889311ccbb0fd820493ca01b9a8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modificar datos mediante una vista
+# <a name="modify-data-through-a-view"></a>Modificar datos mediante una vista
   Puede modificar los datos de una tabla base subyacente en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
   
@@ -31,12 +35,12 @@ caps.handback.revision: 35
 -   Vea la sección ''Vistas actualizables'' de [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permisos  
  Requiere los permisos UPDATE, INSERT o DELETE en la tabla de destino, en función de la acción que se realizará.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para modificar los datos de la tabla mediante una vista  
+#### <a name="to-modify-table-data-through-a-view"></a>Para modificar los datos de la tabla mediante una vista  
   
 1.  En el **Explorador de objetos**, expanda la base de datos que contiene la vista y, a continuación, expanda **Vistas**.  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 35
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para actualizar los datos de la tabla mediante una vista  
+#### <a name="to-update-table-data-through-a-view"></a>Para actualizar los datos de la tabla mediante una vista  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 35
   
  Para obtener más información, vea [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md).  
   
-#### Para insertar datos de tabla mediante una vista  
+#### <a name="to-insert-table-data-through-a-view"></a>Para insertar datos de tabla mediante una vista  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -92,3 +96,4 @@ caps.handback.revision: 35
  Para obtener más información, vea [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
   
   
+

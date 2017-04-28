@@ -1,28 +1,32 @@
 ---
-title: "Desfragmentaci&#243;n de &#237;ndices de almac&#233;n de columnas | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Desfragmentación de índices de almacén de columnas | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/27/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d3efda1a-7bdb-47f5-80bf-f075329edee5
 caps.latest.revision: 17
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: eea1da9c6a3c9dd30b89c72488570ae98737eaa5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Desfragmentaci&#243;n de &#237;ndices de almac&#233;n de columnas
+# <a name="columnstore-indexes---defragmentation"></a>Desfragmentación de índices de almacén de columnas
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Tareas para desfragmentar índices de almacén de columnas.  
   
-## Usar ALTER INDEX REORGANIZE para desfragmentar un índice de almacén de columnas en línea  
+## <a name="use-alter-index-reorganize-to-defragment-a-columnstore-index-online"></a>Usar ALTER INDEX REORGANIZE para desfragmentar un índice de almacén de columnas en línea  
  SE APLICA A: SQL Server (a partir de 2016), Base de datos SQL de Azure  
   
   Después de realizar cargas de cualquier tipo, puede haber varios grupos de filas pequeños en el almacén delta. Puede usar ALTER INDEX REORGANIZE para forzar a todos los grupos de filas al almacén de columnas y luego combinar los grupos de filas en menos grupos de filas con más filas.  La operación de reorganización también quitará las filas que se hayan eliminado del almacén de columnas.  
@@ -33,12 +37,12 @@ caps.handback.revision: 15
   
 -   [Índices de almacén de columnas y directiva de combinación de grupos de filas](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
-### Recomendaciones para reorganizar  
+### <a name="recommendations-for-reorganizing"></a>Recomendaciones para reorganizar  
  Reorganice un índice de almacén de columnas después de una o varias cargas de datos para obtener mejoras en el rendimiento de las consultas lo más rápidamente posible. Inicialmente, el proceso de reorganización requerirá recursos de CPU adicionales para comprimir los datos, lo que podría reducir el rendimiento general del sistema. Sin embargo, tan pronto como los datos están comprimidos, el rendimiento de las consultas puede mejorar.  
   
  Use el ejemplo de [sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) para calcular la fragmentación. Esto le ayudará a determinar si merece la pena realizar una operación REORGANIZE.  
   
-### Ejemplo: funcionamiento de la reorganización  
+### <a name="example-how-reorganizing-works"></a>Ejemplo: funcionamiento de la reorganización  
  En este ejemplo se muestra cómo ALTER INDEX REORGANIZE puede forzar a todos los grupos de filas del almacén delta al almacén de columnas y luego combinar los grupos de filas.  
   
 1.  Ejecute este Transact-SQL para crear una tabla de almacenamiento provisional con 300.000 filas. Se usará para cargar filas de forma masiva en un índice de almacén de columnas.  
@@ -147,7 +151,7 @@ caps.handback.revision: 15
   
      En este ejemplo, los resultados muestran 8 grupos de filas OPEN con 37.500 filas cada uno. El número de grupos de filas OPEN depende de la configuración de max_degree_of_parallelism.  
   
-     ![OPEN rowgroups](../../relational-databases/indexes/media/cci-openrowgroups.png "OPEN rowgroups")  
+     ![Grupos de filas Open](../../relational-databases/indexes/media/cci-openrowgroups.png "Grupos de filas Open")  
   
 5.  Use ALTER INDEX REORGANIZE con la opción COMPRESS_ALL_ROW_GROUPS para forzar a todos los grupos de filas a comprimirse en el almacén de columnas.  
   
@@ -165,7 +169,7 @@ caps.handback.revision: 15
   
      Los resultados muestran 8 grupos de filas COMPRESSED y 8 grupos de filas TOMBSTONE. Cada grupo de filas se comprimió en el almacén de columnas independientemente de su tamaño. El sistema quitará los grupos de filas TOMBSTONE.  
   
-     ![TOMBSTONE and COMPRESSED rowgroups](../../relational-databases/indexes/media/cci-tombstone-compressed-rowgroups.png "TOMBSTONE and COMPRESSED rowgroups")  
+     ![Grupos de filas TOMBSTONE y COMPRESSED](../../relational-databases/indexes/media/cci-tombstone-compressed-rowgroups.png "Grupos de filas TOMBSTONE y COMPRESSED")  
   
 6.  Para el rendimiento de las consultas es mucho mejor combinar pequeños grupos de filas.  ALTER INDEX REORGANIZE combinará grupos de filas COMPRESSED. Ahora que los grupos de filas delta están comprimidos en el almacén de columnas, vuelva a ejecutar ALTER INDEX REORGANIZE para combinar los grupos de filas pequeños COMPRESSED. Esta vez no necesita la opción COMPRESS_ALL_ROW_GROUPS.  
   
@@ -182,21 +186,21 @@ caps.handback.revision: 15
   
      Los resultados muestran que ahora los 8 grupos de filas COMPRESSED están combinados en un grupo de filas COMPRESSED.  
   
-     ![Combined rowgroups](../../relational-databases/indexes/media/cci-compressed-rowgroups.png "Combined rowgroups")  
+     ![Grupos de filas combinados](../../relational-databases/indexes/media/cci-compressed-rowgroups.png "Grupos de filas combinados")  
   
 ##  <a name="rebuild"></a> Usar ALTER INDEX REBUILD para desfragmentar el índice de almacén de columnas sin conexión  
  En SQL Server 2016 y posterior, normalmente no es necesario volver a generar el índice de almacén de columnas, ya que REORGANIZE realiza las operaciones básicas de una recompilación en segundo plano como una operación en línea.  
   
  La recompilación de un índice de almacén de columnas quita la fragmentación y mueve todas las filas al almacén de columnas. Puede usar [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) o [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) para volver a generar completamente un índice agrupado de almacén de columnas existente. Además, puede usar ALTER INDEX... REBUILD para volver a crear una partición específica.  
   
-### Proceso de regeneración  
+### <a name="rebuild-process"></a>Proceso de regeneración  
  Para volver a generar un índice de almacén de columnas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 1.  Adquiere un bloqueo exclusivo en la tabla o la partición mientras se produce la regeneración.  Los datos están desconectados y no disponibles durante la recompilación, aunque se use NOLOCK, RCSI o SI.  
   
 2.  Vuelve a comprimir todos los datos del almacén de columnas. Hay dos copias del índice de almacén de columnas mientras se está produciendo la regeneración. Cuando se finaliza la recopilación, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elimina el índice original del almacén de columnas.  
   
-### Recomendaciones para volver a generar un índice de almacén de columnas  
+### <a name="recommendations-for-rebuilding-a-columnstore-index"></a>Recomendaciones para volver a generar un índice de almacén de columnas  
  Volver a generar un índice de almacén de columnas es útil para quitar la fragmentación y para mover todas las filas al almacén de columnas. Siga estas recomendaciones:  
   
 1.  Vuelva a generar una partición en lugar de la tabla completa.  
@@ -213,13 +217,13 @@ caps.handback.revision: 15
   
     -   Esto garantiza que todos los datos se almacenan en el almacén de columnas. Cuando cada proceso simultáneo carga al mismo tiempo menos de 100.000 filas en la misma partición, esta puede acabar con varios almacenes delta. La regeneración trasladará todas las filas del almacén delta al almacén de columnas.  
   
-## Vea también  
- [Guía de índices de almacén de columnas](../Topic/Columnstore%20Indexes%20Guide.md)   
- [Carga de datos de índices de almacén de columnas](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
- [Resumen de las características de los índices de almacén de columnas para cada versión](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)   
- [Rendimiento de las consultas de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
- [Introducción al almacén de columnas para análisis operativos en tiempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [Índices de almacén de columnas para el almacenamiento de datos](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)   
- [Tareas de mantenimiento de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
+## <a name="see-also"></a>Vea también        
+[Novedades de los índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)
+
+[Rendimiento de las consultas de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
+[Introducción al almacén de columnas para análisis operativos en tiempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
+ [Almacenamiento de datos de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
+   
   
   
+

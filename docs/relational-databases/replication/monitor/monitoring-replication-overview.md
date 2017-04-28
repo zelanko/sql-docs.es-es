@@ -1,26 +1,30 @@
 ---
-title: "Supervisar la replicaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "supervisar rendimiento [replicación de SQL Server], Monitor de replicación"
-  - "Monitor de replicación, acerca del Monitor de replicación"
+title: "Supervisión de la replicación | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring performance [SQL Server replication], Replication Monitor
+- Replication Monitor, about Replication Monitor
 ms.assetid: 81f596d2-27a5-489d-bf8d-0f4361decd02
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2dc65ac3d6356ff9c2a69d0a30a8c5a1ecc76782
+ms.lasthandoff: 04/11/2017
+
 ---
-# Supervisar la replicaci&#243;n
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es una herramienta gráfica que le permite supervisar el estado general de un topología de replicación. El Monitor de replicación proporciona información detallada sobre el estado y rendimiento de las publicaciones y suscripciones, y le permite responder a preguntas comunes, tales como:  
+# <a name="monitoring-replication-overview"></a>Información general sobre supervisión de la replicación
+  El Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es una herramienta gráfica que le permite supervisar el estado general de un topología de replicación. El Monitor de replicación proporciona información detallada sobre el estado y rendimiento de las publicaciones y suscripciones, y le permite responder a preguntas comunes, tales como:  
   
 -   ¿Es correcto el sistema de replicación?  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 37
   
  Para supervisar la replicación, un usuario debe ser miembro del rol fijo de servidor **sysadmin** en el distribuidor o miembro del rol fijo de base de datos **replmonitor** en la base de datos de distribución. Un administrador del sistema puede agregar cualquier usuario al rol **replmonitor** , que permite a un usuario ver la actividad de replicación en el Monitor de replicación; sin embargo, el usuario no puede administrar la replicación.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  En los siguientes temas se proporciona información sobre las características del Monitor de replicación.  
   
  [Información general de la interfaz del Monitor de replicación](../../../relational-databases/replication/monitor/overview-of-the-replication-monitor-interface.md)  
@@ -72,19 +76,19 @@ caps.handback.revision: 37
  [Ver el estado de la suscripción y la publicación en el Monitor de replicación](../../../relational-databases/replication/monitor/view-publication-and-subscription-status-in-replication-monitor.md)  
  Describe cómo ver información de estado de una publicación o suscripción mediante el Monitor de replicación.  
   
- [Ver la información y realizar tareas para un publicador & #40; Monitor de replicación & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
+ [Ver información y realizar tareas para un publicador &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
  Describe cómo ver información y realizar tareas para un publicador mediante el Monitor de replicación.  
   
- [Ver la información y realizar tareas para una publicación & #40; Monitor de replicación & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
+ [Ver información y realizar tareas para una publicación &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
  Describe cómo ver información y realizar tareas para una publicación mediante el Monitor de replicación.  
   
- [Ver la información y realizar tareas de los agentes asociados con una publicación & #40; Monitor de replicación & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)  
+ [Ver información y realizar tareas para los agentes asociados a una publicación &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)  
  Describe cómo ver información y realizar tareas para los agentes asociados con una publicación mediante el Monitor de replicación.  
   
- [Ver la información y realizar tareas para una suscripción & #40; Monitor de replicación & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+ [Ver información y realizar tareas para una suscripción &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
  Describe cómo ver información y realizar tareas para una suscripción mediante el Monitor de replicación.  
   
- [Ver la información y realizar tareas de los agentes asociados con una suscripción & #40; Monitor de replicación & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)  
+ [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)  
  Describe cómo ver información y realizar tareas para los agentes asociados con una suscripción mediante el Monitor de replicación.  
   
   

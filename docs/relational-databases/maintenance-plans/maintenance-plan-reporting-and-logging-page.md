@@ -1,35 +1,39 @@
 ---
-title: "Plan de mantenimiento (p&#225;gina de informes y registro) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.reportinglogging.f1"
+title: "Plan de mantenimiento (página de informes y registro) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.reportinglogging.f1
 ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc79574632edb6fa550c81d66c95616a452ddf38
+ms.lasthandoff: 04/11/2017
+
 ---
-# Plan de mantenimiento (p&#225;gina de informes y registro)
+# <a name="maintenance-plan-reporting-and-logging-page"></a>Plan de mantenimiento (página de informes y registro)
   Use el cuadro de diálogo **Informes y registro** para configurar los informes y registros que se generan al ejecutar los planes de mantenimiento.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Generar un informe de archivo de texto**  
  Especifique si quiere que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escriba un informe de archivo de texto.  
   
  **Crear un nuevo archivo**  
- Crea un nuevo archivo de informe para cada una de las ejecuciones del plan de mantenimiento. De forma predeterminada, los archivos de informe se escriben en el equipo que hospeda la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contiene este plan de mantenimiento, en la carpeta establecida como la carpeta de registro predeterminada durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para especificar una carpeta distinta, escriba la ruta de acceso completa de la carpeta en el cuadro de texto **Carpeta** o haga clic en el botón Examinar (**...**) y vaya a la carpeta deseada.  
+ Crea un nuevo archivo de informe para cada una de las ejecuciones del plan de mantenimiento. De forma predeterminada, los archivos de informe se escriben en el equipo que hospeda la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contiene este plan de mantenimiento, en la carpeta establecida como la carpeta de registro predeterminada durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para especificar una carpeta distinta, escriba la ruta de acceso completa de la carpeta en el cuadro de texto **Carpeta** o haga clic en el botón Examinar (**...**) y vaya a la carpeta deseada.  
   
  **Anexar a archivo**  
- Anexe el informe de cada ejecución de planes al archivo especificado en el cuadro de texto **Nombre de archivo**. También puede especificar un archivo si hace clic en el botón examinar (&lt;ui&gt;...&lt;/ui&gt;) y selecciona un archivo del cuadro de diálogo.  
+ Anexe el informe de cada ejecución de planes al archivo especificado en el cuadro de texto **Nombre de archivo** . También puede especificar un archivo si hace clic en el botón examinar (&lt;ui&gt;...&lt;/ui&gt;) y selecciona un archivo del cuadro de diálogo.  
   
  **Enviar informe a un destinatario de correo electrónico**  
  Transmite el resultado de la ejecución de un plan de mantenimiento a través de correo electrónico. Esta opción solo estará disponible si el correo electrónico de base de datos se ha habilitado y configurado correctamente.  
@@ -47,9 +51,9 @@ caps.handback.revision: 22
  Especifica la información de conexión que se va a usar al registrar en un servidor remoto.  
   
  **Nuevo**  
- Muestra el cuadro de diálogo **Propiedades de conexión**. Se usa para configurar información de conexión nueva para registrar en un servidor remoto.  
+ Muestra el cuadro de diálogo **Propiedades de conexión** . Se usa para configurar información de conexión nueva para registrar en un servidor remoto.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Planes de mantenimiento](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)  
   

@@ -1,23 +1,27 @@
 ---
-title: "Creaci&#243;n de una tabla temporal con control de versiones del sistema | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "05/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Creación de una tabla temporal con control de versiones del sistema | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 caps.latest.revision: 20
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a75bde97eddb1b99546ec4d5ff0dbb33340e19e4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creaci&#243;n de una tabla temporal con control de versiones del sistema
+# <a name="creating-a-system-versioned-temporal-table"></a>Creación de una tabla temporal con control de versiones del sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Existen tres maneras de crear una tabla temporal con control de versiones del sistema, según la forma en la que se especifica la tabla de historial:  
@@ -28,8 +32,8 @@ caps.handback.revision: 20
   
 -   Tabla temporal con una tabla de historial definida por el usuario y creada con antelación: cree una tabla de historial que se mejor adapte a sus necesidades y, después, haga referencia a ella durante la creación de la tabla temporal.  
   
-## Creación de una tabla temporal con una tabla de historial anónima  
- Esta opción resulta práctica para la generación rápida de objetos, especialmente en entornos de prueba y prototipos. También constituye la manera más sencilla de crear una tabla temporal, ya que no requiere ningún parámetro en la cláusula **SYSTEM_VERSIONING**. En el ejemplo siguiente, se crea una nueva tabla con el control de versiones del sistema habilitado sin definir el nombre de la tabla de historial.  
+## <a name="creating-a-temporal-table-with-an-anonymous-history-table"></a>Creación de una tabla temporal con una tabla de historial anónima  
+ Esta opción resulta práctica para la generación rápida de objetos, especialmente en entornos de prueba y prototipos. También constituye la manera más sencilla de crear una tabla temporal, ya que no requiere ningún parámetro en la cláusula **SYSTEM_VERSIONING** . En el ejemplo siguiente, se crea una nueva tabla con el control de versiones del sistema habilitado sin definir el nombre de la tabla de historial.  
   
 ```  
 CREATE TABLE Department   
@@ -46,11 +50,11 @@ WITH (SYSTEM_VERSIONING = ON)
 ;  
 ```  
   
-### Notas importantes  
+### <a name="important-remarks"></a>Notas importantes  
   
 -   Una tabla temporal con versiones del sistema debe tener definida una clave principal y tener especificado exactamente un parámetro **PERIOD FOR SYSTEM_TIME** con dos columnas datetime2, declaradas como **GENERATED ALWAYS AS ROW START / END**.  
   
--   Siempre se supone que las columnas **PERIOD** no aceptan valores NULL, aunque no se especifique la nulabilidad. Si se define explícitamente que las columnas **PERIOD** aceptan valores NULL, la instrucción **CREATE TABLE** generará un error.  
+-   Siempre se supone que las columnas **PERIOD** no aceptan valores NULL, aunque no se especifique la nulabilidad. Si se define explícitamente que las columnas  **PERIOD** aceptan valores NULL, la instrucción **CREATE TABLE** generará un error.  
   
 -   La tabla de historial siempre debe tener el mismo esquema que la tabla temporal o actual, en lo concerniente a número y nombres de columnas, orden, y tipos de datos.  
   
@@ -64,7 +68,7 @@ WITH (SYSTEM_VERSIONING = ON)
   
 -   Para crear la tabla actual como una tabla con optimización para memoria, vea [Tablas temporales con control de versiones del sistema con tablas con optimización para memoria](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md).  
   
-## Creación de una tabla temporal con una tabla de historial predeterminada  
+## <a name="creating-a-temporal-table-with-a-default-history-table"></a>Creación de una tabla temporal con una tabla de historial predeterminada  
  Esta opción es práctica en casos en los que quiera controlar la nomenclatura y, aun así, delegar en el sistema la generación de la tabla de historial con la configuración predeterminada. En el ejemplo siguiente, se crea una nueva tabla con el control de versiones del sistema habilitado y el nombre de la tabla de historial definido explícitamente.  
   
 ```  
@@ -85,16 +89,16 @@ WITH
 ;  
 ```  
   
-### Notas importantes  
+### <a name="important-remarks"></a>Notas importantes  
  La tabla de historial se crea con las mismas reglas que se aplican a la generación de una tabla de historial "anónima", pero con las siguientes variaciones específicas de esta modalidad.  
   
--   El nombre de esquema es obligatorio para el parámetro **HISTORY_TABLE**.  
+-   El nombre de esquema es obligatorio para el parámetro **HISTORY_TABLE** .  
   
 -   Si el esquema especificado no existe, la instrucción **CREATE TABLE** generará un error.  
   
 -   Si la tabla que especifica el parámetro **HISTORY_TABLE** ya existe, se validará con la tabla temporal recién creada en lo que respecta a la [coherencia del esquema y de los datos temporales](http://msdn.microsoft.com/library/dn935015.aspx). Si especifica una tabla de historial no válida, la instrucción **CREATE TABLE** generará un error.  
   
-## Creación de una tabla temporal con una tabla de historial definida por el usuario  
+## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>Creación de una tabla temporal con una tabla de historial definida por el usuario  
  Esta modalidad resulta práctica en casos en los que el usuario quiere especificar una tabla de historial con opciones de almacenamiento específicas e índices adicionales. En el ejemplo siguiente, se crea una tabla de historial definida por el usuario con un esquema acorde con el de la tabla temporal que va a generar. Para esta tabla de historial definida por el usuario, se crea un índice de almacén de columnas agrupado y un índice de almacén de filas (árbol B) no agrupado adicional orientados a las búsquedas puntuales. Después de crear esta tabla de historial definida por el usuario, se genera la tabla temporal con control de versiones del sistema, en la que se especifica la tabla de historial definida por el usuario como la predeterminada.  
   
 ```  
@@ -127,7 +131,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))
 ;  
 ```  
   
-### Notas importantes  
+### <a name="important-remarks"></a>Notas importantes  
   
 -   Si planea ejecutar consultas analíticas en datos históricos que emplean agregados o funciones basadas en ventanas, se recomienda encarecidamente crear un almacén de columnas agrupado como índice principal para la compresión y el rendimiento de las consultas.  
   
@@ -135,7 +139,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))
   
 -   La tabla de historial no puede tener una clave principal, claves externas, índices únicos, restricciones de tabla ni desencadenadores. No puede configurarse para la captura de datos de cambios, el seguimiento de cambios, transaccional, el seguimiento de cambios ni la replicación transaccional o de mezcla.  
   
-## Modificación de una tabla no temporal para convertirla en la tabla temporal con control de versiones del sistema  
+## <a name="alter-non-temporal-table-to-be-system-versioned-temporal-table"></a>Modificación de una tabla no temporal para convertirla en la tabla temporal con control de versiones del sistema  
  Si tiene que habilitar el control de versiones del sistema con una tabla existente, como cuando quiera migrar una solución temporal personalizada a la compatibilidad integrada.   
 Por ejemplo, es posible que cuente con un conjunto de tablas en las que el control de versiones está implementado con desencadenadores. El uso del control de versiones del sistema temporal es más simple y ofrece ventajas adicionales, como las siguientes:  
   
@@ -149,7 +153,7 @@ Por ejemplo, es posible que cuente con un conjunto de tablas en las que el contr
   
  A la hora de convertir una tabla existente, plantéese usar la cláusula **HIDDEN** para ocultar las nuevas columnas **PERIOD** y, así, evitar repercutir en las aplicaciones existentes que no estén diseñadas para procesarlas.  
   
-### Adición del control de versiones a tablas no temporales  
+### <a name="adding-versioning-to-non-temporal-tables"></a>Adición del control de versiones a tablas no temporales  
  Si quiere iniciar el seguimiento de cambios de una tabla no temporal que contenga datos, debe agregar la definición **PERIOD** y, opcionalmente, especificar un nombre para la tabla de historial vacía que SQL Server creará automáticamente:  
   
 ```  
@@ -168,7 +172,7 @@ ALTER TABLE InsurancePolicy
 ;  
 ```  
   
-#### Notas importantes  
+#### <a name="important-remarks"></a>Notas importantes  
   
 -   La acción de agregar columnas que no admiten valores NULL con valores predeterminados en una tabla existente con datos es una operación de tamaño de datos en todas las ediciones, excepto SQL Server Enterprise Edition (donde constituye una operación de metadatos). Si cuenta con una gran tabla de historial existente con datos en SQL Server Standard Edition, la adición de una columna que no acepte valores NULL puede constituir una operación costosa.  
   
@@ -182,7 +186,7 @@ ALTER TABLE InsurancePolicy
   
 -   Cuando se especifica una tabla de historial existente al habilitar **SYSTEM_VERSIONING**, se realizará una comprobación de coherencia de datos en la tabla actual y en la de historial. Puede omitirse si se especifica **DATA_CONISTENCY_CHECK = OFF** como parámetro adicional.  
   
-### Migración de tablas existentes a la compatibilidad integrada  
+### <a name="migrate-existing-tables-to-built-in-support"></a>Migración de tablas existentes a la compatibilidad integrada  
  En este ejemplo se muestra cómo migrar una solución existente basada en desencadenadores a una compatibilidad temporal integrada. En este ejemplo, se supone que la solución personalizada actual divide los datos actuales e históricos en dos tablas de usuario independientes (**ProjectTaskCurrent** y **ProjectTaskHistory**). Si su solución existente usa una sola tabla para almacenar las filas reales e históricas, debe dividir los datos en dos tablas antes de realizar los pasos de migración descritos en este ejemplo:  
   
 ```  
@@ -200,18 +204,18 @@ ALTER TABLE ProjectTaskCurrent
 ;  
 ```  
   
-#### Notas importantes  
+#### <a name="important-remarks"></a>Notas importantes  
   
--   Si se hace referencia a columnas existentes en la definición **PERIOD**, se cambiará de forma implícita generated_always_type a **AS_ROW_START** y **AS_ROW_END** para dichas columnas.  
+-   Si se hace referencia a columnas existentes en la definición **PERIOD** , se cambiará de forma implícita generated_always_type a **AS_ROW_START** y **AS_ROW_END** para dichas columnas.  
   
--   Al agregar **PERIOD**, se efectuará una comprobación de coherencia de datos en la tabla actual para garantizar la validez de los valores existentes en las columnas de período.  
+-   Al agregar **PERIOD** , se efectuará una comprobación de coherencia de datos en la tabla actual para garantizar la validez de los valores existentes en las columnas de período.  
   
 -   Se recomienda encarecidamente establecer **SYSTEM_VERSIONING** con **DATA_CONSISTENCY_CHECK = ON** para aplicar comprobaciones de coherencia de datos en los datos existentes.  
   
-## ¿Le ayudó este artículo? Le escuchamos  
- ¿Qué información está buscando? ¿La encontró? Escuchamos sus comentarios para mejorar el contenido. Envíe sus comentarios a [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Creating%20a%20System-Versioned%20Temporal%20Table%20page).  
+## <a name="did-this-article-help-you-were-listening"></a>¿Le ayudó este artículo? Le escuchamos  
+ ¿Qué información está buscando? ¿La encontró? Escuchamos sus comentarios para mejorar el contenido. Envíe sus comentarios a [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Creating%20a%20System-Versioned%20Temporal%20Table%20page)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tablas temporales](../../relational-databases/tables/temporal-tables.md)   
  [Introducción a las tablas temporales con versión del sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Administración de la retención de datos históricos en las tablas temporales con versiones del sistema](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)   
@@ -223,3 +227,4 @@ ALTER TABLE ProjectTaskCurrent
  [Detención del control de versiones en una tabla temporal con control de versiones](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
+

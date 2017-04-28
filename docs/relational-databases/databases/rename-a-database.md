@@ -1,25 +1,29 @@
 ---
-title: "Cambiar el nombre de una base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "bases de datos [SQL Server], cambiar nombre"
-  - "cambiar el nombre de bases de datos"
+title: Cambio de nombre de una base de datos | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- databases [SQL Server], renaming
+- renaming databases
 ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: edde7181074e6d5145cc957fa3ce10fa9b311887
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cambiar el nombre de una base de datos
+# <a name="rename-a-database"></a>Cambiar el nombre de una base de datos
   En este tema se describe cómo cambiar el nombre de una base de datos definida por el usuario en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. El nombre de la base de datos puede incluir cualquier carácter que se ajuste a las reglas para identificadores.  
   
  **En este tema**  
@@ -36,7 +40,7 @@ caps.handback.revision: 19
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**  [Después de cambiar el nombre de una base de datos](#FollowUp)  
+-   **Follow Up:**  [After renaming a database](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 19
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para cambiar el nombre de una base de datos  
+#### <a name="to-rename-a-database"></a>Para cambiar el nombre de una base de datos  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y, a continuación, expándala.  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para cambiar el nombre de una base de datos  
+#### <a name="to-rename-a-database"></a>Para cambiar el nombre de una base de datos  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -83,7 +87,7 @@ GO
 ##  <a name="FollowUp"></a> Seguimiento: Después de cambiar el nombre de una base de datos  
  Después de cambiar el nombre de cualquier base de datos, realice una copia de seguridad de la base de datos **maestra** .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Identificadores de base de datos](../../relational-databases/databases/database-identifiers.md)  
   

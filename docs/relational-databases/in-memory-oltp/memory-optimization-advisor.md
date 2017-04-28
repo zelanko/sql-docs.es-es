@@ -1,25 +1,29 @@
 ---
-title: "Asesor de optimizaci&#243;n de memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "swb.memoryoptimizationwizard.f1"
-  - "sql13.swb.memoryoptimizationwizard.f1"
+title: "Asesor de optimización de memoria | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- swb.memoryoptimizationwizard.f1
+- sql13.swb.memoryoptimizationwizard.f1
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 caps.latest.revision: 17
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04ee098de4740d0d4a3d3c195d24869ee41cea9a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Asesor de optimizaci&#243;n de memoria
+# <a name="memory-optimization-advisor"></a>Asesor de optimización de memoria
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Los informes de análisis de rendimiento de transacciones (vea [Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) le informan sobre qué tablas de la base de datos se beneficiarían de una conversión para usar OLTP en memoria. Después de identificar la tabla que quiere convertir para que use OLTP en memoria, puede usar el Asistente de optimización de memoria en SQL Server Management Studio para que le ayude a migrar la tabla basada en disco a una tabla con optimización para memoria.  
@@ -32,17 +36,17 @@ caps.handback.revision: 17
     
  Para obtener información sobre las metodologías de migración, vea [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones sobre la migración](http://msdn.microsoft.com/library/dn673538.aspx).  
   
-## Tutorial del uso del Asistente de optimización de memoria  
+## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Tutorial del uso del Asistente de optimización de memoria  
  En el **Explorador de objetos**, haga clic con el botón derecho en la tabla que quiere convertir y seleccione **Asistente de optimización de memoria**. Se mostrará la página de bienvenida del **Asistente de optimización de memoria de tablas**.  
   
-### Lista de comprobación de la optimización de memoria  
+### <a name="memory-optimization-checklist"></a>Lista de comprobación de la optimización de memoria  
  Al hacer clic en **Siguiente** en la página de bienvenida del **Asistente de optimización de memoria de tablas**, verá la lista de comprobación de la optimización de memoria. Las tablas con optimización para memoria no admiten todas las características de las tablas basadas en disco. La lista de comprobación de la optimización de memoria indica si la tabla basada en disco utiliza características incompatibles con una tabla con optimización para memoria. El **Asistente de optimización de memoria de tablas** no modifica la tabla basada en disco, lo que permite migrarla para que use OLTP en memoria. Debe realizar esos cambios antes de continuar con la migración. Para cada incompatibilidad que encuentra, el **Asistente de optimización de memoria de tablas** muestra un vínculo a información que puede ayudarle a modificar las tablas basadas en disco.  
   
  Si desea guardar una lista de dichas incompatibilidades para planear la migración, haga clic en **Generar informe** para generar una lista en HTML.  
   
  Si la tabla no tiene ninguna incompatibilidad y está conectado a una instancia de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] con OLTP en memoria, haga clic en **Siguiente**.  
   
-### Advertencias de la optimización de memoria  
+### <a name="memory-optimization-warnings"></a>Advertencias de la optimización de memoria  
  La siguiente página, Advertencias de la optimización de memoria, contiene una lista de problemas que no impiden que la tabla se migre para utilizar OLTP en memoria, pero que pueden hacer que el comportamiento de otros objetos (como los procedimientos almacenados o las funciones CLR) produzca errores o provoque un comportamiento inesperado.  
   
  Las primeras advertencias de la lista son informativas y pueden o no ser aplicables a la tabla. Los vínculos de la columna derecha de la tabla le permitirán obtener más información.  
@@ -53,7 +57,7 @@ caps.handback.revision: 17
   
  Haga clic en **Generar informe** para generar un informe HTML con dichas advertencias. Haga clic en **Siguiente** para continuar.  
   
-### Revisar opciones de optimización  
+### <a name="review-optimization-options"></a>Revisar opciones de optimización  
  La pantalla siguiente permite modificar las opciones para la migración a OLTP en memoria:  
   
  Grupo de archivos con optimización para memoria  
@@ -91,12 +95,12 @@ caps.handback.revision: 17
   
  Para continuar, haga clic en **Siguiente** .  
   
-### Revisar la conversión de la clave principal  
+### <a name="review-primary-key-conversion"></a>Revisar la conversión de la clave principal  
  La pantalla siguiente es **Revisar la conversión de la clave principal**. El Asistente de optimización de memoria detectará si hay una o varias claves principales en la tabla y rellenará la lista de columnas basándose en los metadatos de la clave principal. Si no la hay, debe crear una clave principal si desea migrar a una tabla con optimización para memoria perdurable.  
   
  Si no existe una clave principal y la tabla se está migrando a una tabla no perdurable, esta pantalla no aparecerá.  
   
- Para las columnas de texto (columnas de tipo **char**, **nchar**, **varchar** y **nvarchar**), debe seleccionar la intercalación adecuada. OLTP en memoria solo admite las intercalaciones BIN2 para las columnas de una tabla con optimización para memoria y no admite intercalaciones con caracteres adicionales. Vea [Collations and Code Pages](../Topic/Collations%20and%20Code%20Pages.md) para obtener información sobre las intercalaciones admitidas y el posible impacto de un cambio de la intercalación.  
+ Para las columnas de texto (columnas de tipo **char**, **nchar**, **varchar**y **nvarchar**), debe seleccionar la intercalación adecuada. OLTP en memoria solo admite las intercalaciones BIN2 para las columnas de una tabla con optimización para memoria y no admite intercalaciones con caracteres adicionales. Vea [Collations and Code Pages](http://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) para obtener información sobre las intercalaciones admitidas y el posible impacto de un cambio de la intercalación.  
   
  Puede configurar los parámetros siguientes para la clave principal:  
   
@@ -110,23 +114,23 @@ caps.handback.revision: 17
   
 -   Un índice NONCLUSTERED. Este tipo de índice es mejor para los índices con muchas consultas por rango. Puede configurar el criterio de ordenación para cada columna en la lista **Columna de ordenación y orden** .  
   
- Para conocer cuál es el tipo de índice más adecuado para cada clave principal, vea [Índices hash](../Topic/Hash%20Indexes.md).  
+ Para conocer cuál es el tipo de índice más adecuado para cada clave principal, vea [Índices hash](http://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
   
  Haga clic en **Siguiente** cuando seleccione las opciones de la clave principal.  
   
-### Revisar la conversión del índice  
+### <a name="review-index-conversion"></a>Revisar la conversión del índice  
  La página siguiente es **Revisar la conversión del índice**. El Asistente de optimización de memoria detectará si hay uno o varios índices en la tabla y rellenará la lista de columnas y el tipo de datos. Los parámetros que puede configurar en la página **Revisar la conversión del índice** son similares a los de la página anterior, **Revisar la conversión de la clave principal** .  
   
  Esta pantalla no aparecerá si la tabla tiene únicamente una clave principal y se está migrando a una tabla perdurable.  
   
  Cuando haya configurado todos los índices de la tabla, haga clic en **Siguiente**.  
   
-### Comprobar acciones de migración  
+### <a name="verify-migration-actions"></a>Comprobar acciones de migración  
  La página siguiente es **Comprobar acciones de migración**. Para crear un script para la operación de migración, haga clic en **Script** para generar un script de [!INCLUDE[tsql](../../includes/tsql-md.md)] . A continuación, puede modificar y ejecutar el script. Haga clic en **Migrar** para comenzar la migración de la tabla.  
   
  Después de que finalice el proceso, actualice el **Explorador de objetos** para ver la nueva tabla con optimización para memoria y la tabla basada en disco antigua. Puede conservar la tabla antigua o eliminarla según le convenga.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

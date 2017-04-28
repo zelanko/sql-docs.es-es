@@ -1,28 +1,32 @@
 ---
-title: "Crear funciones definidas por el usuario (motor de base de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SCHEMABINDING, cláusula"
-  - "funciones enlazadas a esquema [SQL Server]"
-  - "funciones definidas por el usuario [SQL Server], crear"
-  - "CREATE FUNCTION, instrucción"
-  - "instrucciones válidas [SQL Server]"
+title: "Creación de funciones definidas por el usuario (motor de base de datos) | Microsoft Docs"
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SCHEMABINDING clause
+- schema-bound functions [SQL Server]
+- user-defined functions [SQL Server], creating
+- CREATE FUNCTION statement
+- valid statements [SQL Server]
 ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d4ea2a247e4d8a55cd3467510f19115cc3163bc2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear funciones definidas por el usuario (motor de base de datos)
+# <a name="create-user-defined-functions-database-engine"></a>Crear funciones definidas por el usuario (motor de base de datos)
   En este tema se describe cómo crear una función definida por el usuario en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
   
@@ -177,7 +181,7 @@ FROM dbo.ufn_FindReports(1);
   
 ```  
   
-## Más ejemplos  
+## <a name="more-examples"></a>Más ejemplos  
  - [Funciones definidas por el usuario](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  - [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) 
   - [Alter Function (Transact SQL)](https://msdn.microsoft.com/library/ms173799.aspx) 
@@ -185,3 +189,4 @@ FROM dbo.ufn_FindReports(1);
  - [Drop Partition Function (Transact SQL)](https://msdn.microsoft.com/library/ms187759(SQL.130).aspx)
  - Obtenga más ejemplos en la [comunidad](https://www.bing.com/search?q=user%20defined%20function%20%22sql%20server%202016%22%20examples&qs=n&form=QBRE&pq=user%20defined%20function%20%22sql%20server%202016%22%20examples&sc=0-48&sp=-1&sk=&cvid=C3AD337125A840AD9EEFA3AAC36A3712)
   
+

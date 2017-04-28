@@ -1,31 +1,35 @@
 ---
-title: "Object:Altered (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Object:Altered, clase de eventos"
+title: Object:Altered, clase de eventos | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Object:Altered event class
 ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e2fbbd9cb3f63bd1b4c360a9081440990cc43ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# Object:Altered (clase de eventos)
+# <a name="objectaltered-event-class"></a>Object:Altered, clase de eventos
   La clase de eventos Object:Altered indica que se ha modificado un objeto; por ejemplo, mediante una instrucción ALTER INDEX, ALTER TABLE o ALTER DATABASE. Esta clase de evento se puede utilizar para determinar si están modificando objetos; por ejemplo, con aplicaciones ODBC, que, a menudo, crean procedimientos almacenados temporales.  
   
  La clase de eventos Object:Altered siempre tiene lugar como dos eventos. El primer evento indica la fase de Principio. El segundo evento indica la fase de reversión o de confirmación.  
   
  Si supervisa las columnas de datos LoginName y NTUserName, puede determinar el nombre del usuario que crea, elimina o modifica a objetos.  
   
-## Columnas de datos de la clase de evento Object:Altered  
+## <a name="objectaltered-event-class-data-columns"></a>Columnas de datos de la clase de evento Object:Altered  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -57,7 +61,7 @@ caps.handback.revision: 23
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

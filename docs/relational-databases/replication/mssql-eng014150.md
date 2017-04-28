@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG014150 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG014150, error"
+title: MSSQL_ENG014150 | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG014150 error
 ms.assetid: c3dd3109-abf3-4b38-a4e9-ef48d0235656
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 222ab67a59cad879dde9b6c823170ffed10a5338
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG014150
+# <a name="mssqleng014150"></a>MSSQL_ENG014150
     
-## Detalles del mensaje  
+## <a name="message-details"></a>Detalles del mensaje  
   
 |||  
 |-|-|  
@@ -31,7 +35,7 @@ caps.handback.revision: 11
 |Nombre simbólico||  
 |Texto del mensaje|Replicación-%s: el agente %s se ejecutó correctamente. %s|  
   
-## Explicación  
+## <a name="explanation"></a>Explicación  
  Este mensaje indica que un agente de replicación ha finalizado la ejecución correctamente. La replicación usa los siguientes agentes:  
   
 -   Agente de instantáneas. Todas las publicaciones usan este agente.  
@@ -46,16 +50,16 @@ caps.handback.revision: 11
   
 -   Trabajos de mantenimiento de la replicación.  
   
-## Acción del usuario  
+## <a name="user-action"></a>Acción del usuario  
  El Agente de registro del LOG, el Agente de lectura de cola y el Agente de distribución se ejecutan normalmente de forma continua, mientras que el resto de agentes se ejecutan normalmente a petición o en función de una programación. Si no espera que un agente haya completado una ejecución, compruebe el estado del agente. Para más información, consulte [Monitor Replication Agents](../../relational-databases/replication/monitor/monitor-replication-agents.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Administración del Agente de replicación](../../relational-databases/replication/agents/replication-agent-administration.md)   
- [Errores y eventos referencia & #40; Replicación y nº 41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
+ [Referencia de errores y eventos &#40;replicación&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [Agente de distribución de replicación](../../relational-databases/replication/agents/replication-distribution-agent.md)   
  [Agente de registro del LOG de replicación](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [Agente de mezcla de replicación](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [Agente de lectura de cola de replicación](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Agente de instantáneas de replicación](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   

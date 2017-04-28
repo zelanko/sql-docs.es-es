@@ -1,25 +1,29 @@
 ---
-title: "Configurar el Agente SQL Server para que use el Correo electr&#243;nico de base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Correo electrónico de base de datos [SQL Server], correo del Agente SQL Server"
-  - "Correo del Agente SQL Server"
+title: "Configuración del Agente SQL Server para que use el Correo electrónico de base de datos | Microsoft Docs"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Database Mail [SQL Server], SQL Server Agent Mail
+- SQL Server Agent Mail
 ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fd14545a30d307845af1ce55be28334d4d8a25cc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurar el Agente SQL Server para que use el Correo electr&#243;nico de base de datos
+# <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurar el Agente SQL Server para que use el Correo electrónico de base de datos
   En este tema se describe cómo configurar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usar Correo electrónico de base de datos a fin de enviar notificaciones y alertas en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  Para obtener información sobre cómo habilitar y configurar Correo electrónico de base de datos, vea [Configurar Correo electrónico de base de datos](../../relational-databases/database-mail/configure-database-mail.md).  Para un ejemplo de uso de [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [Crear un perfil de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-profile.md).
   
 -   **Antes de empezar:**  
@@ -40,7 +44,7 @@ caps.handback.revision: 31
   
 -    [Crear una cuenta de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md) para la cuenta de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que desea usar.  
   
--   [Crear un perfil de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-profile.md) para uso de la cuenta de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y agregar el usuario al rol**DatabaseMailUserRole** de la base de datos **msdb**.  
+-   [Crear un perfil de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-profile.md) para uso de la cuenta de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y agregar el usuario al rol **DatabaseMailUserRole** de la base de datos **msdb** .  
   
 -   Establecer el perfil como perfil predeterminado de la base de datos **msdb** .  
   
@@ -52,9 +56,9 @@ caps.handback.revision: 31
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
  **Para configurar el Agente SQL Server de modo que use el Correo electrónico de base de datos**  
   
--   En el Explorador de objetos, expanda una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   En el Explorador de objetos, expanda una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Haga clic con el botón derecho en **Agente SQL Server** y, luego, haga clic en **Propiedades**.  
+-   Haga clic con el botón derecho en **Agente SQL Server**y, luego, haga clic en **Propiedades**.  
   
 -   Haga clic en **Sistema de alerta**.  
   
@@ -69,12 +73,13 @@ caps.handback.revision: 31
 ##  <a name="Follow_Up"></a> Tareas de seguimiento  
  Las siguientes tareas son necesarias para completar la configuración del agente con el fin de que envíe alertas y notificaciones.  
   
--   [Alertas](../../ssms/agent/alerts.md)  
+-   [Alertas](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef)  
   
      Las alertas se pueden configurar para notificar a un operador de una determinada condición de evento o de sistema operativo de la base de datos.  
   
--   [Operadores](../../ssms/agent/operators.md)  
+-   [Operadores](http://msdn.microsoft.com/library/38e8488f-2669-4cea-b9c3-5f394a663678)  
   
      Los operadores son alias de personas o grupos que pueden recibir la notificación electrónica  
   
   
+

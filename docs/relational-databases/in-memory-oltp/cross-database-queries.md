@@ -1,34 +1,39 @@
 ---
-title: "Consultas entre bases de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Consultas entre bases de datos | Microsoft Docs
+ms.custom: 
+ms.date: 08/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 41b00b196f6cfad66ae0e26bbb1516da2641d9b7
+ms.openlocfilehash: 8289b02c3e15f1b299196c343503c9cb87387c6c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Consultas entre bases de datos
+# <a name="cross-database-queries"></a>Consultas entre bases de datos
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], las tablas con optimización para memoria no admiten las transacciones entre bases de datos. No puede tener acceso a otra base de datos desde la misma transacción o desde la misma consulta que tiene acceso también a una tabla con optimización para memoria. No puede copiar fácilmente los datos de una tabla de una base de datos en una tabla con optimización para memoria de otra base de datos.  
   
  Las variables de tabla no son transaccionales. Por tanto, se pueden utilizar las variables de tabla con optimización para memoria en consultas entre bases de datos y pueden así facilitar la migración de datos de una base de datos a tablas con optimización para memoria de otra. Puede utilizar dos transacciones. En la primera transacción, inserte los datos de la tabla remota en la variable. En la segunda transacción, inserte los datos en la tabla con optimización para memoria local desde la variable.  Para más información sobre las variables de tabla con optimización para memoria, consulte [Tabla temporal y variante de tabla más rápidas con optimización para memoria](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
   
-## Ejemplo
+## <a name="example"></a>Ejemplo
 En este ejemplo se muestra un método para transferir datos desde una base de datos a una tabla con optimización para memoria en una tabla de datos distinta.
 
 1. Cree objetos de prueba.  Ejecute la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 
     ```tsql
+
     USE master;
     GO
     
@@ -51,13 +56,12 @@ En este ejemplo se muestra un método para transferir datos desde una base de da
     VALUES (1, N'Bob'),
         (2, N'Susan');
     GO
-    ---------------------------------------------------------------
-
 
     -- Create a database with a MEMORY_OPTIMIZED_DATA filegroup
+
     CREATE DATABASE DestinationDatabase
      ON  PRIMARY 
-    ( NAME = N'DestinationDatabase_Data', FILENAME = N'D:\DATA\DestinationDatabase_Data.mdf',   SIZE = 8MB), 
+    ( NAME = N'DestinationDatabase_Data', FILENAME = N'D:\DATA\DestinationDatabase_Data.mdf',    SIZE = 8MB), 
      FILEGROUP [DestinationDatabase_mod] CONTAINS MEMORY_OPTIMIZED_DATA  DEFAULT
     ( NAME = N'DestinationDatabase_mod', FILENAME = N'D:\DATA\DestinationDatabase_mod', MAXSIZE = UNLIMITED)
      LOG ON 
@@ -119,7 +123,8 @@ En este ejemplo se muestra un método para transferir datos desde una base de da
     GO 
     ```
    
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+

@@ -1,28 +1,32 @@
 ---
-title: "Crear un rol de servidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQL13.SWB.SERVERROLE.GENERAL.F1"
-  - "sql13.swb.serverrole.memberships.f1"
-  - "sql13.swb.serverrole.members.f1"
-helpviewer_keywords: 
-  - "ROL del servidor, crear"
+title: "Creación de un rol de servidor | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SQL13.SWB.SERVERROLE.GENERAL.F1
+- sql13.swb.serverrole.memberships.f1
+- sql13.swb.serverrole.members.f1
+helpviewer_keywords:
+- SERVER ROLE, creating
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be798eb132d37378b94659eda0efc1b586e7110a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear un rol de servidor
+# <a name="create-a-server-role"></a>Crear un rol de servidor
   En este tema se describe cómo crear un nuevo rol de servidor en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **En este tema**  
@@ -50,7 +54,7 @@ caps.handback.revision: 13
   
 -   Se debe disponer del permiso CREATE SERVER CONTROL o pertenecer al rol fijo de servidor sysadmin.  
   
--   También se requiere el permiso IMPERSONATE en *server_principal* para los inicios de sesión, el permiso ALTER para los roles de servidor que se han usado como *server_principal* o la pertenencia a un grupo de Windows que se ha usado como server_principal.  
+-   También se requiere el permiso IMPERSONATE en *server_principal* para los inicios de sesión, el permiso ALTER para los roles de servidor que se han usado como *server_principal*o la pertenencia a un grupo de Windows que se ha usado como server_principal.  
   
 -   Cuando se utiliza la opción AUTHORIZATION para asignar la propiedad de roles de servidor, también se requieren los siguientes permisos:  
   
@@ -60,7 +64,7 @@ caps.handback.revision: 13
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para crear un nuevo rol de servidor  
+#### <a name="to-create-a-new-server-role"></a>Para crear un nuevo rol de servidor  
   
 1.  En el Explorador de objetos, expanda el servidor donde desea crear el nuevo rol de servidor.  
   
@@ -68,9 +72,9 @@ caps.handback.revision: 13
   
 3.  Haga clic con el botón derecho en la carpeta **Roles del servidor** y seleccione **Nuevo rol de servidor…**.  
   
-4.  En el cuadro de diálogo **Nuevo rol de servidor - ***server_role_name*, en la página **General**, escriba un nombre para el nuevo rol de servidor en el cuadro **Nombre del rol de servidor**.  
+4.  En el cuadro de diálogo **Nuevo rol de servidor -***server_role_name* , en la página **General** , escriba un nombre para el nuevo rol de servidor en el cuadro **Nombre del rol de servidor** .  
   
-5.  En el cuadro **Propietario** , escriba el nombre de la entidad de seguridad del servidor que poseerá el nuevo rol. Como alternativa, haga clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccionar inicio de sesión o rol de servidor**.  
+5.  En el cuadro **Propietario** , escriba el nombre de la entidad de seguridad del servidor que poseerá el nuevo rol. Como alternativa, haga clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccionar inicio de sesión o rol de servidor** .  
   
 6.  En **Elementos protegibles**, seleccione uno o más elementos protegibles de nivel de servidor. Cuando se selecciona un elemento protegible, se pueden permitir o denegar permisos a este rol de servidor en dicho elemento protegible.  
   
@@ -78,13 +82,13 @@ caps.handback.revision: 13
   
 8.  En la página **Miembros** , utilice el botón **Agregar** para agregar inicio de sesión que representan individuos o grupos al nuevo rol de servidor.  
   
-9. Un rol de servidor definido por el usuario puede ser miembro de otro rol de servidor. En la página **Pertenencias**, active una casilla para convertir el rol de servidor actual definido por el usuario en miembro de un rol de servidor seleccionado.  
+9. Un rol de servidor definido por el usuario puede ser miembro de otro rol de servidor. En la página **Pertenencias** , active una casilla para convertir el rol de servidor actual definido por el usuario en miembro de un rol de servidor seleccionado.  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para crear un nuevo rol de servidor  
+#### <a name="to-create-a-new-server-role"></a>Para crear un nuevo rol de servidor  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

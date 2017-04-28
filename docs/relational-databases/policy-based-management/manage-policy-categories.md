@@ -1,24 +1,28 @@
 ---
-title: "Administrar categor&#237;as de directiva | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.policycategories.f1"
+title: "Administración de categorías de directiva | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.policycategories.f1
 ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 952740a7191b43f61f9cff035b0ad944fe802084
+ms.lasthandoff: 04/11/2017
+
 ---
-# Administrar categor&#237;as de directiva
+# <a name="manage-policy-categories"></a>Administrar categorías de directiva
   En este tema se describe cómo se aplica una o todas las directivas disponibles en una categoría a toda la instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
@@ -50,7 +54,7 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para aplicar directivas de categoría a una instancia de SQL Server  
+#### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>Para aplicar directivas de categoría a una instancia de SQL Server  
   
 1.  En el **Explorador de objetos**, haga clic en el signo más para expandir el servidor en el que aplicará las directivas de categoría.  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para aplicar directivas de categoría a una instancia de SQL Server  
+#### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>Para aplicar directivas de categoría a una instancia de SQL Server  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

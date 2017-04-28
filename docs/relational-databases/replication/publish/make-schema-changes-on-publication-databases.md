@@ -1,29 +1,33 @@
 ---
-title: "Realizar cambios de esquema en bases de datos de publicaciones | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "replicación [SQL Server], cambiar esquema"
-  - "replicación de instantáneas [SQL Server], replicar cambios de esquema"
-  - "replicación de instantáneas [replicación de SQL Server], replicar cambios de esquema"
-  - "replicación transaccional, replicar cambios de esquema"
-  - "esquemas [replicación de SQL Server], replicar cambios"
-  - "publicar [replicación de SQL Server], cambios de esquema"
+title: "Realización de cambios de esquema en bases de datos de publicación | Microsoft Docs"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- replication [SQL Server], schema changes
+- snapshot replication [SQL Server], replicating schema changes
+- merge replication [SQL Server replication], replicating schema changes
+- transactional replication, replicating schema changes
+- schemas [SQL Server replication], replicating changes
+- publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 caps.latest.revision: 73
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 73
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aa8ea65ab7ef276791e721f6f1bb5e9da6c6a4ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# Realizar cambios de esquema en bases de datos de publicaciones
+# <a name="make-schema-changes-on-publication-databases"></a>Realizar cambios de esquema en bases de datos de publicaciones
   La replicación admite una gran variedad de cambios en el esquema de objetos publicados. Cuando se realiza cualquiera de los siguientes cambios de esquema en el objeto publicado apropiado en un publicador de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , dicho cambio se propaga de manera predeterminada a todos los suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   ALTER TABLE  
@@ -49,14 +53,14 @@ caps.handback.revision: 73
   
  Los cambios de esquema antes indicados se replican de manera predeterminada. Para obtener información acerca de cómo deshabilitar la replicación de los cambios de esquema, vea [Replicate Schema Changes](../../../relational-databases/replication/publish/replicate-schema-changes.md).  
   
-## Consideraciones para los cambios de esquema  
+## <a name="considerations-for-schema-changes"></a>Consideraciones para los cambios de esquema  
  Tenga en cuenta las consideraciones siguientes al replicar cambios de esquema.  
   
-### Consideraciones generales  
+### <a name="general-considerations"></a>Consideraciones generales  
   
 -   Los cambios de esquema están sujetos a las restricciones impuestas por [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Por ejemplo, ALTER TABLE no permite aplicar ALTER a las columnas de clave principal.  
   
--   La asignación de tipo de datos solo se realiza para la instantánea inicial. Los cambios de esquema no se asignan a versiones anteriores de tipos de datos. Por ejemplo, si la instrucción `ALTER TABLE ADD datetime2 column` se utiliza en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], el tipo de datos no se traduce a **nvarchar** para [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] los suscriptores. En algunos casos, los cambios de esquema se bloquean en el publicador.  
+-   La asignación de tipo de datos solo se realiza para la instantánea inicial. Los cambios de esquema no se asignan a versiones anteriores de tipos de datos. Por ejemplo, si la instrucción `ALTER TABLE ADD datetime2 column` se utiliza en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], el tipo de datos no se traduce a **nvarchar** para los suscriptores de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] . En algunos casos, los cambios de esquema se bloquean en el publicador.  
   
 -   Si una publicación está configurada para permitir la propagación de los cambios de esquema, éstos se propagarán independientemente de cómo esté establecida la opción de esquema relacionada para un artículo de la publicación. Por ejemplo, si elige no replicar las restricciones de clave externa para un artículo de la tabla y después emite un comando ALTER TABLE que agrega una clave externa a la tabla en el publicador, la clave externa se agregará a la tabla en el suscriptor. Para evitarlo, deshabilite la propagación de los cambios de esquema antes de emitir el comando ALTER TABLE.  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 73
   
 -   No se permite agregar, quitar ni alterar índices explícitamente. Se admiten los índices creados implícitamente para las restricciones (como la restricción de clave principal).  
   
--   No se permite alterar ni quitar columnas de identidad administradas por la replicación. Para obtener más información acerca de la administración automática de las columnas de identidad, consulte [replicar las columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
+-   No se permite alterar ni quitar columnas de identidad administradas por la replicación. Para obtener más información sobre la administración automática de las columnas de identidad, vea [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
 -   No se admiten los cambios de esquema que incluyen funciones no deterministas, ya que pueden producir datos distintos en el publicador y en el suscriptor (falta de convergencia). Por ejemplo, si emite en el publicador el comando `ALTER TABLE SalesOrderDetail ADD OrderDate DATETIME DEFAULT GETDATE()`, los valores serán distintos cuando el comando se replique en el suscriptor y se ejecute. Para obtener más información acerca de las funciones no deterministas, vea [Deterministic and Nondeterministic Functions](../../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
@@ -80,25 +84,25 @@ caps.handback.revision: 73
   
 -   La lectura no confirmada no es un nivel de aislamiento compatible al hacer DDL en una tabla publicada.  
   
--   **SET CONTEXT_INFO** no debe usarse para modificar el contexto de las transacciones que se realicen cambios de esquema en objetos publicados.  
+-   No se debe usar**SET CONTEXT_INFO** para modificar el contexto de las transacciones en las que se realizan cambios de esquema en objetos publicados.  
   
-#### Agregar columnas  
+#### <a name="adding-columns"></a>Agregar columnas  
   
--   Para agregar una nueva columna a una tabla e incluir esa columna en una publicación existente, ejecute ALTER TABLE \< tabla> ADD \< columna>. De manera predeterminada, la columna se replicará en todos los suscriptores. La columna debe admitir valores NULL o incluir una restricción predeterminada. Para obtener más información sobre la forma de agregar columnas, consulte la sección "Replicación de mezcla" de este tema.  
+-   Para agregar una columna nueva a una tabla e incluirla en una publicación existente, ejecute ALTER TABLE \<tabla> ADD \<columna>. De manera predeterminada, la columna se replicará en todos los suscriptores. La columna debe admitir valores NULL o incluir una restricción predeterminada. Para obtener más información sobre la forma de agregar columnas, consulte la sección "Replicación de mezcla" de este tema.  
   
--   Para agregar una nueva columna a una tabla y no incluya esa columna en una publicación existente, deshabilite la replicación de cambios de esquema y, a continuación, ejecute ALTER TABLE \< tabla> ADD \< columna>.  
+-   Para agregar una columna nueva a una tabla sin incluirla en una publicación existente, deshabilite la replicación de los cambios de esquema y después, ejecute ALTER TABLE \<tabla> ADD \<columna>.  
   
--   Para incluir una columna existente en una publicación existente, use [sp_articlecolumn & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md), o **Propiedades de la publicación - \< publicación>** cuadro de diálogo.  
+-   Para incluir una columna existente en una publicación existente, use [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) o el cuadro de diálogo **Propiedades de la publicación: \<publicación>**.  
   
      Para más información, consulte [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Será necesario reinicializar las suscripciones.  
   
 -   No se admite la posibilidad de agregar una columna de identidad a una tabla publicada porque puede dar como resultado la falta de convergencia cuando la columna se replica en el suscriptor. Los valores de la columna de identidad en el publicador dependen del orden en que se almacenen físicamente las filas de la tabla afectada. Las filas se pueden almacenar de forma diferente en el suscriptor; por tanto, el valor de la columna de identidad puede ser diferente para las mismas filas.  
   
-#### Quitar columnas  
+#### <a name="dropping-columns"></a>Quitar columnas  
   
--   Para quitar una columna de una publicación existente y quitar la columna de la tabla en el publicador, ejecute ALTER TABLE \< tabla> DROP \< columna>. De forma predeterminada, la columna se quitará de la tabla en todos los suscriptores.  
+-   Para quitar una columna de una publicación existente y de la tabla del publicador, ejecute ALTER TABLE \<tabla> DROP \<columna>. De forma predeterminada, la columna se quitará de la tabla en todos los suscriptores.  
   
--   Para quitar una columna de una publicación existente, pero conservar la columna en la tabla del publicador, utilice [sp_articlecolumn & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md), o **Propiedades de la publicación - \< publicación>** cuadro de diálogo.  
+-   Para quitar una columna de una publicación existente, pero conservarla en la tabla del publicador, use [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) o el cuadro de diálogo **Propiedades de la publicación: \<publicación>**.  
   
      Para más información, consulte [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Será necesario generar una instantánea nueva.  
   
@@ -114,29 +118,29 @@ caps.handback.revision: 73
   
     -   Las restricciones deben tener un nombre explícito para permitir la eliminación. Para obtener más información, vea la sección "Consideraciones generales" de este tema.  
   
-### Replicación transaccional  
+### <a name="transactional-replication"></a>Replicación transaccional  
   
 -   Los cambios de esquema se propagan a los suscriptores que ejecutan versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], pero la instrucción DDL solo debe incluir sintaxis compatible con la versión instalada en el suscriptor.  
   
-     Si el suscriptor vuelve a publicar los datos, los únicos cambios de esquema admitidos serán agregar y quitar una columna. Estos cambios deben realizarse en el publicador mediante [sp_repladdcolumn & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) y [sp_repldropcolumn & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md) en lugar de la sintaxis de ALTER TABLE DDL.  
+     Si el suscriptor vuelve a publicar los datos, los únicos cambios de esquema admitidos serán agregar y quitar una columna. Estos cambios deberían realizarse en el publicador mediante [sp_repladdcolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) y [sp_repldropcolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md) en lugar de mediante la sintaxis ALTER TABLE DDL.  
   
 -   Los cambios de esquema no se replican en los suscriptores que no sean de SQL Server.  
   
--   Los cambios de esquema no se propagan desde los publicadores que no sean de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Los cambios de esquema no se propagan desde los publicadores que no sean de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   No se pueden alterar las vistas indizadas que se replican como tablas. Se pueden alterar las vistas indizadas que se replican como tales, pero esto hará que se conviertan en vistas normales en lugar de vistas indizadas.  
   
 -   Si la publicación admite suscripciones de actualización inmediata o en cola, se debe poner el sistema en modo inactivo antes de realizar cambios de esquema: es necesario detener toda la actividad en la tabla publicada en el publicador y los suscriptores, y propagar los datos pendientes a todos los nodos. Una vez propagados los cambios de esquema a todos los nodos, se puede reiniciar la actividad en las tablas publicadas.  
   
--   Si la publicación está en una topología punto a punto, se debe poner el sistema en modo inactivo antes de realizar cambios de esquema. Para obtener más información, consulte [Detener una topología de replicación & #40; Programación de Transact-SQL de replicación & #41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
+-   Si la publicación está en una topología punto a punto, se debe poner el sistema en modo inactivo antes de realizar cambios de esquema. Para más información, vea [Poner en modo inactivo una topología de replicación &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
 -   La adición de una columna de marca de tiempo a una tabla y la asignación de la marca de tiempo a binary(8) hacen que se reinicialice el artículo para todas las suscripciones activas.  
   
-### Replicación de mezcla  
+### <a name="merge-replication"></a>Replicación de mezcla  
   
 -   El nivel de compatibilidad de las publicaciones determina la forma en que la replicación de mezcla controla los cambios de esquema y si la instantánea debe establecerse en modo nativo (valor predeterminado) o en modo de carácter:  
   
-    -   Para replicar cambios de esquema, el nivel de compatibilidad de la publicación debe ser de al menos 90RTM. Si los suscriptores que ejecutan versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o el nivel de compatibilidad es inferior a 90RTM, puede utilizar [sp_repladdcolumn & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) y [sp_repldropcolumn & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md) Para agregar y quitar columnas. No obstante, estos procedimientos están desusados.  
+    -   Para replicar cambios de esquema, el nivel de compatibilidad de la publicación debe ser de al menos 90RTM. Si los suscriptores ejecutan versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o el nivel de compatibilidad es inferior a 90RTM, puede usar [sp_repladdcolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) y [sp_repldropcolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md) para agregar y quitar columnas. No obstante, estos procedimientos están desusados.  
   
     -   Si intenta agregar a un artículo existente una columna con un tipo de datos introducido en [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se comportará de este modo:  
   
@@ -145,7 +149,7 @@ caps.handback.revision: 73
         |**hierarchyid**|Permitir cambio|Bloquear cambio|Bloquear cambio|  
         |**geography** y **geometry**|Permitir cambio|Permitir cambio*|Bloquear cambio|  
         |**secuencia de archivo**|Permitir cambio|Bloquear cambio|Bloquear cambio|  
-        |**fecha**, **tiempo**, **datetime2**, y **datetimeoffset**|Permitir cambio|Permitir cambio*|Bloquear cambio|  
+        |**date**, **time**, **datetime2**, and **datetimeoffset**|Permitir cambio|Permitir cambio*|Bloquear cambio|  
   
          *Los suscriptores de SQL Server Compact convierten estos tipos de datos en el suscriptor.  
   
@@ -153,15 +157,15 @@ caps.handback.revision: 73
   
 -   Si se realiza un cambio de esquema en una columna que forma parte de un filtro de combinación o con parámetros, es necesario reinicializar todas las suscripciones y volver a generar la instantánea.  
   
--   La replicación de mezcla proporciona procedimientos almacenados para omitir los cambios de esquema durante la solución de problemas. Para obtener más información, consulte [sp_markpendingschemachange & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md) y [sp_enumeratependingschemachanges & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md).  
+-   La replicación de mezcla proporciona procedimientos almacenados para omitir los cambios de esquema durante la solución de problemas. Para obtener más información, vea [sp_markpendingschemachange &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md) y [sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md).  
   
-## Vea también  
- [ALTER TABLE & #40; Transact-SQL & #41;](../../../t-sql/statements/alter-table-transact-sql.md)   
- [ALTER VIEW & #40; Transact-SQL & #41;](../../../t-sql/statements/alter-view-transact-sql.md)   
- [ALTER PROCEDURE & Nº 40; Transact-SQL & #41;](../../../t-sql/statements/alter-procedure-transact-sql.md)   
- [La función ALTER & #40; Transact-SQL & #41;](../../../t-sql/statements/alter-function-transact-sql.md)   
- [ALTER TRIGGER & #40; Transact-SQL & #41;](../../../t-sql/statements/alter-trigger-transact-sql.md)   
+## <a name="see-also"></a>Vea también  
+ [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)   
+ [ALTER VIEW &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-view-transact-sql.md)   
+ [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-procedure-transact-sql.md)   
+ [ALTER FUNCTION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-function-transact-sql.md)   
+ [ALTER TRIGGER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-trigger-transact-sql.md)   
  [Publicar datos y objetos de base de datos](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Volver a generar procedimientos transaccionales personalizados para reflejar cambios de esquema](../../../relational-databases/replication/transactional/regenerate-custom-transactional-procedures-to-reflect-schema-changes.md)  
+ [Volver a generar procedimientos transaccionales personalizados para reflejar cambios de esquema](../../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)  
   
   

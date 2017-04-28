@@ -1,33 +1,37 @@
 ---
-title: "Definir la serializaci&#243;n de datos XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "reglas de creación de entidades [XML en SQL Server]"
-  - "serialización"
-  - "volver a analizar estructuras XML serializadas"
-  - "codificación [XML en SQL Server]"
-  - "XML [SQL Server], serialización"
-  - "tipo de datos XML [SQL Server], serialización"
-  - "XML con tipo"
+title: "Definición de la serialización de datos XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- entitization rules [XML in SQL Server]
+- serialization
+- reparsing serialized XML structures
+- encoding [XML in SQL Server]
+- XML [SQL Server], serialization
+- xml data type [SQL Server], serialization
+- typed XML
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01e295b33ebd66543f2b431661799570bbe419b9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Definir la serializaci&#243;n de datos XML
+# <a name="define-the-serialization-of-xml-data"></a>Definir la serialización de datos XML
   Cuando el tipo de datos xml se convierte de manera explícita o implícita a un tipo SQL binario o de cadena, el contenido del tipo de datos xml se serializa de acuerdo con las reglas que se describen en este tema.  
   
-## Codificación de la serialización  
+## <a name="serialization-encoding"></a>Codificación de la serialización  
  Si el tipo SQL de destino es VARBINARY, el resultado se serializa en UTF-16 con una marca de orden de bytes UTF-16 delante, pero sin una declaración XML. Si el tipo de destino es demasiado pequeño, se genera un error.  
   
  Por ejemplo:  
@@ -68,10 +72,10 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
   
  Cuando se devuelven los resultados XML al cliente, los datos se envían codificados como UTF-16. Después, el proveedor del lado cliente expondrá los datos de acuerdo con sus reglas de API.  
   
-## Serialización de las estructuras XML  
+## <a name="serialization-of-the-xml-structures"></a>Serialización de las estructuras XML  
  El contenido de un tipo de datos **xml** se serializa de la forma habitual. Concretamente, los nodos de elementos se asignan a marcado de elemento y los nodos de texto se asignan a contenido de texto. No obstante, en las siguientes secciones se describen las circunstancias en las que se crean entidades para los caracteres y cómo se serializan los valores atómicos con tipo.  
   
-## Creación de entidades para caracteres XML durante la serialización  
+## <a name="entitization-of-xml-characters-during-serialization"></a>Creación de entidades para caracteres XML durante la serialización  
  Todas las estructuras XML serializadas deberían poder analizarse de nuevo. Por tanto, algunos caracteres deben serializarse como entidades para que conserven su funcionalidad de ida y vuelta durante la fase de normalización del analizador XML. Sin embargo, deben crearse entidades para algunos caracteres con el fin de que el formato del documento sea correcto, y, por tanto, se pueda analizar. A continuación se exponen las reglas de creación de entidades que se aplican durante la serialización:  
   
 -   Para los caracteres &, \< y > siempre se crean las entidades &amp;, &lt; y &gt;, respectivamente, si aparecen en valores de atributos o en el contenido de elementos.  
@@ -109,7 +113,7 @@ select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))
 select CONVERT(NVARCHAR(50), CONVERT(XML, '<a>   </a>', 1), 1)  
 ```  
   
- Tenga en cuenta que [query() (método de tipo de datos xml)](../../t-sql/xml/query-method-xml-data-type.md) genera una instancia de tipo de datos xml. Por tanto, se crearán entidades para cualquier resultado del método **query()** que se convierta en un tipo binario o de cadena de acuerdo con las reglas previamente descritas. Si se quieren obtener los valores de cadena sin creación de entidades, en su lugar debe usarse [value() (método del tipo de datos xml)](../../t-sql/xml/value-method-xml-data-type.md). A continuación se ofrece un ejemplo de uso del método **query()**:  
+ Tenga en cuenta que [query() (método de tipo de datos xml)](../../t-sql/xml/query-method-xml-data-type.md) genera una instancia de tipo de datos xml. Por tanto, se crearán entidades para cualquier resultado del método **query()** que se convierta en un tipo binario o de cadena de acuerdo con las reglas previamente descritas. Si se quieren obtener los valores de cadena sin creación de entidades, en su lugar debe usarse [value() (método del tipo de datos xml)](../../t-sql/xml/value-method-xml-data-type.md) . A continuación se ofrece un ejemplo de uso del método **query()** :  
   
 ```  
 declare @x xml  
@@ -123,7 +127,7 @@ select @x.query('/a/text()')
 This example contains an entitized char: <.  
 ```  
   
- A continuación se ofrece un ejemplo de uso del método **value()**:  
+ A continuación se ofrece un ejemplo de uso del método **value()** :  
   
 ```  
 select @x.value('(/a/text())[1]', 'nvarchar(100)')  
@@ -135,7 +139,7 @@ select @x.value('(/a/text())[1]', 'nvarchar(100)')
 This example contains an entitized char: <.  
 ```  
   
-## Serializar un tipo de datos xml con tipo  
+## <a name="serializing-a-typed-xml-data-type"></a>Serializar un tipo de datos xml con tipo  
  Una instancia de tipo de datos **xml** con tipo contiene valores cuyos tipos se corresponden con los tipos de su esquema XML. Estos valores se serializan según su tipo de esquema XML, en el mismo formato que genera la conversión XQuery a xs:string. Para obtener más información, vea [Reglas de conversión de tipos en XQuery](../../xquery/type-casting-rules-in-xquery.md).  
   
  Por ejemplo, el valor 1.34e1 de tipo xs:double se serializa como 13.4, como se observa en el ejemplo siguiente:  
@@ -148,7 +152,7 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
  Se obtiene el valor de cadena 13.4.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Reglas de conversión de tipos en XQuery](../../xquery/type-casting-rules-in-xquery.md)   
  [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   

@@ -1,29 +1,33 @@
 ---
-title: "Configuraci&#243;n de copias de seguridad de trasvase de registros de transacciones | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.settings.tlogback.f1"
+title: "Configuración de copias de seguridad de trasvase de registros de transacciones | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.logshipping.settings.tlogback.f1
 ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 50dfac45fd735de24fe432be2b5b833869c34b87
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configuraci&#243;n de copias de seguridad de trasvase de registros de transacciones
+# <a name="log-shipping-transaction-log-backup-settings"></a>Configuración de copias de seguridad de trasvase de registros de transacciones
   Utilice este cuadro de diálogo para configurar y modificar los parámetros de copia de seguridad de registros de transacciones para una configuración de trasvase de registros.  
   
  Para obtener una explicación de los conceptos relacionados con el trasvase de registros, vea [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Ruta de red a esta carpeta de copia de seguridad**  
  Escriba en este cuadro el recurso compartido de red para la carpeta de copia de seguridad. La carpeta local donde se guardan las copias de seguridad de registros de transacciones deben estar compartidas, de forma que los trabajos de copia del trasvase de registros puedan copiar estos archivos en el servidor secundario. Debe conceder permisos de lectura para este recurso compartido de red a la cuenta de proxy con la que se ejecuta el trabajo de copia en la instancia del servidor secundario. De forma predeterminada, ésta es la cuenta de servicio SQLServerAgent de la instancia del servidor secundario; el administrador puede elegir otra cuenta de proxy para el trabajo.  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 27
  **Programación**  
  Muestra la programación actual para hacer una copia de seguridad de los registros de transacciones de la base de datos principal. Antes de crear el trabajo de copia de seguridad, puede modificar esta programación si hace clic en el botón **Programar...**. Después de crear el trabajo, puede modificar esta programación si hace clic en el botón **Editar trabajo...**.  
   
-### Trabajo de copia de seguridad  
+### <a name="backup-job"></a>Trabajo de copia de seguridad  
  **Programar...**  
  Modifique la programación establecida durante la creación del trabajo del Agente SQL Server.  
   
@@ -57,7 +61,7 @@ caps.handback.revision: 27
  **Deshabilitar este trabajo**  
  Impide que el trabajo del Agente SQL Server cree copias de seguridad de registros de transacciones.  
   
-### Compresión  
+### <a name="compression"></a>Compresión  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (o las versiones posteriores) admiten la [compresión de copia de seguridad](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
  **Establecer la compresión de copia de seguridad**  
@@ -66,11 +70,11 @@ caps.handback.revision: 27
 |||  
 |-|-|  
 |**Usar la configuración de servidor predeterminada**|Haga clic para utilizar el valor predeterminado de nivel de servidor.<br /><br /> La opción de la configuración del servidor **Compresión de copia de seguridad predeterminada** establece este valor predeterminado. Para obtener más información sobre cómo ver la configuración actual de esta opción, vea [Ver o establecer la opción de configuración del servidor de compresión de copia de seguridad predeterminada](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
-|**Comprimir copia de seguridad**|Haga clic para comprimir la copia de seguridad, sin tener en cuenta el valor predeterminado de nivel de servidor.<br /><br /> **\*\* Importante \*\*** De forma predeterminada, la compresión aumenta significativamente el uso de CPU y la CPU adicional que consume el proceso de compresión puede afectar negativamente a las operaciones simultáneas. Por tanto, podría ser conveniente crear copias de seguridad comprimidas de prioridad baja en una sesión en la que el [regulador de recursos](../../relational-databases/resource-governor/resource-governor.md) limite el uso de CPU. Para obtener más información, vea [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
+|**Comprimir copia de seguridad**|Haga clic para comprimir la copia de seguridad, sin tener en cuenta el valor predeterminado de nivel de servidor.<br /><br /> **\*\* Importante \*\*** De forma predeterminada, la compresión aumenta significativamente el uso de CPU y la CPU adicional que consume el proceso de compresión puede afectar negativamente a las operaciones simultáneas. Por tanto, podría ser conveniente crear copias de seguridad comprimidas de prioridad baja en una sesión en la que el [regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)limite el uso de CPU. Para obtener más información, vea [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)limite el uso de CPU.|  
 |**No comprimir copia de seguridad**|Haga clic para crear una copia de seguridad sin comprimir, independientemente del valor predeterminado de nivel de servidor.|  
   
-## Vea también  
- [Configurar un usuario para crear y administrar trabajos del Agente SQL Server](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)   
+## <a name="see-also"></a>Vea también  
+ [Configurar un usuario para crear y administrar trabajos del Agente SQL Server](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)   
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
   

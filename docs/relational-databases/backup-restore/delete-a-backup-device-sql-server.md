@@ -1,28 +1,32 @@
 ---
-title: "Eliminar un dispositivo de copia de seguridad (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "copias de seguridad de bases de datos [SQL Server], eliminar dispositivos"
-  - "dispositivos de copia de seguridad [SQL Server], eliminar"
-  - "eliminar dispositivos de copia de seguridad"
-  - "quitar dispositivos de copia de seguridad"
-  - "realizar copias de seguridad de bases de datos [SQL Server], dispositivos de copia de seguridad"
+title: "Eliminación de copia de seguridad (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database backups [SQL Server], deleting devices
+- backup devices [SQL Server], deleting
+- deleting backup devices
+- removing backup devices
+- backing up databases [SQL Server], backup devices
 ms.assetid: 7be62480-ed6a-4262-a071-1feba73b1c02
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3d68cd7bdf48e838c060705166f3714eaa7db581
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eliminar un dispositivo de copia de seguridad (SQL Server)
+# <a name="delete-a-backup-device-sql-server"></a>Eliminar un dispositivo de copia de seguridad (SQL Server)
   En este tema se describe cómo eliminar un dispositivo de copia de seguridad en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
@@ -46,7 +50,7 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para eliminar un dispositivo de copia de seguridad  
+#### <a name="to-delete-a-backup-device"></a>Para eliminar un dispositivo de copia de seguridad  
   
 1.  Tras conectarse a la instancia adecuada de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol correspondiente.  
   
@@ -60,13 +64,13 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para eliminar un dispositivo de copia de seguridad  
+#### <a name="to-delete-a-backup-device"></a>Para eliminar un dispositivo de copia de seguridad  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
-3.  Copie y pegue el ejemplo siguiente en la consulta. En este ejemplo se muestra cómo usar [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) para eliminar un dispositivo de copia de seguridad. Ejecute el primer ejemplo para crear el dispositivo de copia de seguridad `mybackupdisk` y el nombre físico `c:\backup\backup1.bak`. Ejecute **sp_dropdevice** para eliminar el dispositivo de copia de seguridad `mybackupdisk`. El parámetro `delfile` elimina el nombre físico.  
+3.  Copie y pegue el ejemplo siguiente en la consulta. En este ejemplo se muestra cómo usar [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) para eliminar un dispositivo de copia de seguridad. Ejecute el primer ejemplo para crear el dispositivo de copia de seguridad `mybackupdisk` y el nombre físico `c:\backup\backup1.bak`. Ejecute **sp_dropdevice** para eliminar el dispositivo de copia de seguridad `mybackupdisk` . El parámetro `delfile` elimina el nombre físico.  
   
 ```tsql  
 --Define a backup device and physical name.   
@@ -82,7 +86,7 @@ GO
   
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Ver las propiedades y el contenido de un dispositivo lógico de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)   
  [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   

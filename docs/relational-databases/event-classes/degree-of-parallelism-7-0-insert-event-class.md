@@ -1,29 +1,33 @@
 ---
-title: "Degree of Parallelism (7.0 Insert), clase de eventos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Degree of Parallelism, clase de eventos"
+title: Degree of Parallelism (7.0 Insert), clase de eventos (7.0 Insert) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Degree of Parallelism event class
 ms.assetid: 6753ef30-890f-47a3-b0b6-8abb184e1d83
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58892a606e417bc95b2744fcd3abc1e58ee1ff84
+ms.lasthandoff: 04/11/2017
+
 ---
-# Degree of Parallelism (7.0 Insert), clase de eventos
+# <a name="degree-of-parallelism-70-insert-event-class"></a>Degree of Parallelism (7.0 Insert), clase de eventos
   La clase de eventos **Degree of Parallelism (7.0 Insert)** se produce cada vez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta una instrucción SELECT, INSERT, UPDATE o DELETE.  
   
  Cuando se incluye esta clase de eventos en un seguimiento, la sobrecarga que conlleva puede reducir mucho el rendimiento si estos eventos se producen frecuentemente. Para minimizar la sobrecarga provocada, limite el uso de esta clase de eventos a los seguimientos que supervisan brevemente problemas específicos.  
   
-## Columnas de datos de la clase de eventos Degree of Parallelism (7.0 Insert)  
+## <a name="degree-of-parallelism-70-insert-event-class-data-columns"></a>Columnas de datos de la clase de eventos Degree of Parallelism (7.0 Insert)  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -50,7 +54,7 @@ caps.handback.revision: 35
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |**TransactionID**|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)  
   

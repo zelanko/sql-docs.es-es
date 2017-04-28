@@ -1,29 +1,33 @@
 ---
-title: "Objetos (categor&#237;a de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clases de eventos de SQL Server, categoría de eventos Objetos"
-  - "Objetos, categoría de eventos [SQL Server]"
-  - "clases de eventos [SQL Server], categoría de eventos Objetos"
+title: "Objetos (categoría de eventos) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server event classes, Objects event category
+- Objects event category [SQL Server]
+- event classes [SQL Server], Objects event category
 ms.assetid: acc1c7b0-4abf-42f8-b9a9-c383b715a735
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 07e7fdcde7a417ef2e0e6c2d50002103d2f89338
+ms.lasthandoff: 04/11/2017
+
 ---
-# Objetos (categor&#237;a de eventos)
+# <a name="objects-event-category"></a>Objetos (categoría de eventos)
   La categoría de eventos **Objetos** contiene eventos de objetos generales.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
   
 |Tema|Descripción|  
 |-----------|-----------------|  
@@ -32,7 +36,7 @@ caps.handback.revision: 26
 |[Object:Created (clase de eventos)](../../relational-databases/event-classes/object-created-event-class.md)|Indica que se ha creado un objeto; por ejemplo, mediante las instrucciones CREATE INDEX, CREATE TABLE o CREATE DATABASE.|  
 |[Object:Deleted (clase de eventos)](../../relational-databases/event-classes/object-deleted-event-class.md)|Indica que se ha eliminado un objeto; por ejemplo, mediante las instrucciones DROP INDEX o DROP TABLE.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)  
   
   

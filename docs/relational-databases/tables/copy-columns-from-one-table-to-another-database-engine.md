@@ -1,25 +1,29 @@
 ---
-title: "Copiar columnas de una tabla a otra (motor de base de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "copiar columnas"
-  - "columnas [SQL Server], copiar"
+title: Copiar columnas de una tabla a otra (motor de base de datos) | Microsoft Docs
+ms.custom: 
+ms.date: 09/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- copying columns
+- columns [SQL Server], copying
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 27f2f6ae3af99a9c76934ab4c875d3c2c9746f40
+ms.lasthandoff: 04/11/2017
+
 ---
-# Copiar columnas de una tabla a otra (motor de base de datos)
+# <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copiar columnas de una tabla a otra (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   En este tema se describe cómo copiar columnas de una tabla a otra, copiar solo la definición de la columna o copiar la definición y los datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -50,7 +54,7 @@ caps.handback.revision: 23
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para copiar definiciones de columna de una tabla a otra  
+#### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Para copiar definiciones de columna de una tabla a otra  
   
 1.  Abra la tabla con columnas que quiere copiar y la tabla en la que la quiere copiar haciendo clic con el botón derecho en las tablas y, después, en **Diseño**.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 23
   
 5.  Seleccione la columna que desea que siga a las columnas insertadas y en el menú **Edición** , haga clic en **Pegar**.  
   
-#### Para copiar columnas de datos de una tabla a otra  
+#### <a name="to-copy-data-from-one-table-to-another"></a>Para copiar columnas de datos de una tabla a otra  
   
 1.  Siga las instrucciones para copiar las definiciones de columna mencionadas anteriormente.  
   
@@ -73,11 +77,11 @@ caps.handback.revision: 23
 
 3.  Haga clic con el botón derecho en el Editor de consultas y, luego, haga clic en **Diseñar consulta en el editor**. 
 
-4.  En el cuadro de diálogo **Agregar tabla**, seleccione la tabla de origen y destino, haga clic en **Agregar** y, luego, cierre el cuadro de diálogo **Agregar tabla**. 
+4.  En el cuadro de diálogo **Agregar tabla** , seleccione la tabla de origen y destino, haga clic en **Agregar**y, luego, cierre el cuadro de diálogo **Agregar tabla** . 
 
-5.  Haga clic con el botón derecho en un área abierta del Editor de consultas, seleccione **Cambiar tipo** y, luego, haga clic en **Insertar resultados**.  
+5.  Haga clic con el botón derecho en un área abierta del Editor de consultas, seleccione **Cambiar tipo**y, luego, haga clic en **Insertar resultados**.  
 
-6.  En el cuadro de diálogo **Elegir tabla de destino para insertar resultados**, seleccione la tabla de destino. 
+6.  En el cuadro de diálogo **Elegir tabla de destino para insertar resultados** , seleccione la tabla de destino. 
 
 7.  En la parte superior del Diseñador de consultas, haga clic en la columna de origen de la tabla de origen.
 
@@ -88,11 +92,11 @@ caps.handback.revision: 23
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para copiar definiciones de columna de una tabla a otra  
+#### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Para copiar definiciones de columna de una tabla a otra  
   
-1.  No puede copiar columnas individuales desde una tabla a otra tabla existente mediante instrucciones Transact-SQL. Sin embargo, puede crear una nueva tabla en el grupo de archivos predeterminado e insertar en ella las filas resultantes de la consulta mediante SELECT...INTO. Para obtener más información, vea [Cláusula INTO &#40;Transact-SQL&#41;](../Topic/INTO%20Clause%20\(Transact-SQL\).md).  
+1.  No puede copiar columnas individuales desde una tabla a otra tabla existente mediante instrucciones Transact-SQL. Sin embargo, puede crear una nueva tabla en el grupo de archivos predeterminado e insertar en ella las filas resultantes de la consulta mediante SELECT...INTO. Para obtener más información, vea [Cláusula INTO &#40;Transact-SQL&#41;](../../t-sql/queries/select-into-clause-transact-sql.md).  
   
-#### Para copiar columnas de datos de una tabla a otra  
+#### <a name="to-copy-data-from-one-table-to-another"></a>Para copiar columnas de datos de una tabla a otra  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -115,3 +119,4 @@ caps.handback.revision: 23
     ```  
   
   
+

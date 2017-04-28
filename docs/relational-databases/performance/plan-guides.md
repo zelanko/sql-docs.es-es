@@ -1,46 +1,50 @@
 ---
-title: "Gu&#237;as de plan | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TEMPLATE, guía de plan"
-  - "SQL [guías de plan]"
-  - "OPTIMIZE FOR, sugerencia de consulta"
-  - "RECOMPILE, sugerencia de consulta"
-  - "OBJECT [guía de plan]"
-  - "guías de plan [SQL Server], acerca de las guías de plan"
-  - "OPTION, cláusula"
-  - "guías de plan [SQL Server]"
-  - "USE PLAN [sugerencia de consulta]"
+title: "Guías de plan | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TEMPLATE plan guide
+- SQL plan guides
+- OPTIMIZE FOR query hint
+- RECOMPILE query hint
+- OBJECT plan guide
+- plan guides [SQL Server], about plan guides
+- OPTION clause
+- plan guides [SQL Server]
+- USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e3c1733219769d0a2d08996db9a25e3dd08a1e86
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gu&#237;as de plan
+# <a name="plan-guides"></a>Guías de plan
   Las guías de plan permiten optimizar el rendimiento de las consultas cuando no pueda o no desee cambiar directamente el texto de la consulta real en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Las guías de plan influyen en la optimización de las consultas adjuntando sugerencias de consulta o un plan de consulta fijo para ellas. Las guías de plan pueden ser de gran utilidad cuando el rendimiento de un pequeño subconjunto de consultas de una aplicación de base de datos proporcionado por otro proveedor no es el esperado. En la guía de plan, se especifica la instrucción Transact-SQL que se desea optimizar y además una cláusula OPTION que incluye las sugerencias de consulta que se desean usar o un plan de consulta específico con el que desea optimizar la consulta. Cuando la consulta se ejecuta, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hace coincidir la instrucción Transact-SQL con la guía de plan y además adjunta en tiempo de ejecución la cláusula OPTION a la consulta o usa el plan de consulta especificado.  
   
  El número total de guías de plan que se pueden crear solo está limitado por los recursos de los que disponga el sistema. No obstante, las guías de plan deberían limitarse a aquellas consultas de gran importancia cuyo rendimiento se desea mejorar o estabilizar. No se deben usar las guías de plan para influenciar la mayor parte de la carga de la consulta de una aplicación implementada.  
   
 > [!NOTE]  
->  Las guías de plan no se pueden usar en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md). Las guías de plan son visibles en todas las ediciones. También se pueden adjuntar bases de datos que incluyen guías de plan a cualquier versión. Las guías de plan permanecen intactas cuando se restaura o adjunta una base de datos a una versión actualizada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Las guías de plan no se pueden usar en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Las guías de plan son visibles en todas las ediciones. También se pueden adjuntar bases de datos que incluyen guías de plan a cualquier versión. Las guías de plan permanecen intactas cuando se restaura o adjunta una base de datos a una versión actualizada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## Tipos de guías de plan  
+## <a name="types-of-plan-guides"></a>Tipos de guías de plan  
  Se pueden crear los siguientes tipos de guías de plan.  
   
  OBJECT [guía de plan]  
- Una guía de plan OBJECT compara las consultas que se ejecutan en el contexto de procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)], funciones escalares definidas por el usuario, funciones definidas por el usuario con valores de tabla de múltiples instrucciones y desencadenadores DML.  
+ Una guía de plan OBJECT compara las consultas que se ejecutan en el contexto de procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)] , funciones escalares definidas por el usuario, funciones definidas por el usuario con valores de tabla de múltiples instrucciones y desencadenadores DML.  
   
- Suponga que el siguiente procedimiento almacenado, que usa el parámetro `@Country`_`region`, está en una aplicación de base de datos que se implementa con la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]:  
+ Suponga que el siguiente procedimiento almacenado, que usa el parámetro `@Country`_`region` , está en una aplicación de base de datos que se implementa con la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
   
 ```  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
@@ -74,16 +78,16 @@ sp_create_plan_guide
 @hints = N'OPTION (OPTIMIZE FOR (@Country_region = N''US''))';  
 ```  
   
- Cuando se ejecute la consulta especificada en la instrucción `sp_create_plan_guide`, se modificará la consulta antes de la optimización para incluir la cláusula `OPTIMIZE FOR (@Country = N''US'')`.  
+ Cuando se ejecute la consulta especificada en la instrucción `sp_create_plan_guide` , se modificará la consulta antes de la optimización para incluir la cláusula `OPTIMIZE FOR (@Country = N''US'')` .  
   
  Guía de plan SQL  
- Una guía de plan de SQL compara las consultas que se ejecutan en el contexto de instrucciones independientes de [!INCLUDE[tsql](../../includes/tsql-md.md)] y lotes que no forman parte de un objeto de base de datos. Las guías de plan basadas en SQL también se pueden usar para comparar consultas que se parametrizan en un formulario especificado. Las guías de plan de SQL se aplican a las instrucciones y lotes independientes de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con frecuencia, las aplicaciones envían esas instrucciones usando el procedimiento almacenado del sistema [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md). Considere, por ejemplo, el siguiente lote independiente:  
+ Una guía de plan de SQL compara las consultas que se ejecutan en el contexto de instrucciones independientes de [!INCLUDE[tsql](../../includes/tsql-md.md)] y lotes que no forman parte de un objeto de base de datos. Las guías de plan basadas en SQL también se pueden usar para comparar consultas que se parametrizan en un formulario especificado. Las guías de plan de SQL se aplican a las instrucciones y lotes independientes de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Con frecuencia, las aplicaciones envían esas instrucciones usando el procedimiento almacenado del sistema [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) . Considere, por ejemplo, el siguiente lote independiente:  
   
 ```  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
- Para evitar que se genere un plan de ejecución paralelo en esta consulta, cree la siguiente guía de plan y establezca la sugerencia de consulta `MAXDOP` en `1` en el parámetro `@hints`.  
+ Para evitar que se genere un plan de ejecución paralelo en esta consulta, cree la siguiente guía de plan y establezca la sugerencia de consulta `MAXDOP` en `1` en el parámetro `@hints` .  
   
 ```  
 sp_create_plan_guide   
@@ -109,7 +113,7 @@ sp_create_plan_guide
   
 -   Se ha establecido el valor de la opción PARAMETERIZATION de la base de datos en SIMPLE (el valor predeterminado), pero desea que intente la parametrización forzada en una clase de consultas.  
   
-## Requisitos de coincidencia de la guía de plan  
+## <a name="plan-guide-matching-requirements"></a>Requisitos de coincidencia de la guía de plan  
  Las guías de plan tienen como ámbito la base de datos en la que se crean. Por tanto, solo se pueden buscar las coincidencias con la consulta de las guías de plan que existen en la base de datos actual cuando se ejecuta una consulta. Por ejemplo, si [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] es la base de datos actual y se ejecuta la consulta siguiente:  
   
  `SELECT FirstName, LastName FROM Person.Person;`  
@@ -122,19 +126,19 @@ sp_create_plan_guide
   
  Solo las guías de plan de `DB1` serán aptas para buscar las coincidencias con la consulta, puesto que la consulta se ejecuta en el contexto de `DB1`.  
   
- En el caso de las guías de plan basadas en SQL o TEMPLATE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] examina los valores para los argumentos @ module_or_batch y @params con una consulta, comparando ambos valores carácter a carácter. Esto significa que se debe proporcionar el texto exactamente como lo recibe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el lote real.  
+ En el caso de las guías de plan basadas en SQL o TEMPLATE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] examina los valores para los argumentos @module_or_batch y @params con una consulta, comparando ambos valores carácter a carácter. Esto significa que se debe proporcionar el texto exactamente como lo recibe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el lote real.  
   
- Si se especifica @type = 'SQL' y @module_or_batch es NULL, se establecerá el valor de @module_or_batch en el valor de @stmt. Esto significa que el valor de *statement_text* debe proporcionarse en formato idéntico, carácter a carácter, en que se envía a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para facilitar esta concordancia no se realiza ninguna conversión interna.  
+ Cuando @type = 'SQL' y @module_or_batch se establece en NULL, el valor de @module_or_batch se establece en el valor de @stmt. Esto significa que el valor de *statement_text* debe proporcionarse en formato idéntico, carácter a carácter, en que se envía a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para facilitar esta concordancia no se realiza ninguna conversión interna.  
   
  Cuando una guía de plan normal (SQL u OBJECT) y una guía de plan TEMPLATE se pueden aplicar a una instrucción, solo se utilizará la guía de plan normal.  
   
 > [!NOTE]  
->  El lote que contiene la instrucción en la que quiere crear una guía de plan no puede contener una instrucción USE *database*.  
+>  El lote que contiene la instrucción en la que quiere crear una guía de plan no puede contener una instrucción USE *database* .  
   
-## Efecto de la guía de plan en la caché del plan  
+## <a name="plan-guide-effect-on-the-plan-cache"></a>Efecto de la guía de plan en la caché del plan  
  Al crear una guía de plan en un módulo, se quita el plan de consulta para dicho módulo de la caché del plan. Al crear una guía de plan de tipo OBJECT o SQL en un lote, se quita el plan de consulta para un lote que tiene el mismo valor hash. Al crear una guía de plan de tipo TEMPLATE, se quitan todos los lotes de instrucción única de la memoria caché del plan dentro de esa base de datos.  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
   
 |Tarea|Tema|  
 |----------|-----------|  
@@ -147,7 +151,7 @@ sp_create_plan_guide
 |Describe cómo usar SQL Server Profiler para crear y probar guías de plan.|[Usar SQL Server Profiler para crear y probar guías de plan](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)|  
 |Describe cómo validar las guías de plan.|[Validar guías de planes tras una actualización](../../relational-databases/performance/validate-plan-guides-after-upgrade.md)|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
@@ -155,3 +159,4 @@ sp_create_plan_guide
  [sys.fn_validate_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)  
   
   
+

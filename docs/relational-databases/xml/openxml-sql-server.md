@@ -1,36 +1,40 @@
 ---
-title: "OPENXML (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ColPattern [XML en SQL Server]"
-  - "Instrucción OPENXML, acerca de la instrucción OPENXML"
-  - "escribir XML, instrucción OPENXML"
-  - "Instrucción OPENXML, consultar XML"
-  - "asignación centrada en atributos"
-  - "Instrucción SELECT [SQL Server], palabra clave OPENXML"
-  - "patrones de columnas [XML en SQL Server]"
-  - "patrones de filas [XML en SQL Server]"
-  - "rowpattern [XML en SQL Server]"
-  - "consultas [XML en SQL Server], instrucción OPENXML"
-  - "XML [SQL Server], instrucción OPENXML"
-  - "asignación centrada en elementos [SQL Server]"
+title: OPENXML (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ColPattern [XML in SQL Server]
+- OPENXML statement, about OPENXML statement
+- writing XML, OPENXML statement
+- OPENXML statement, querying XML
+- attribute-centric mapping
+- SELECT statement [SQL Server], OPENXML keyword
+- column patterns [XML in SQL Server]
+- row patterns [XML in SQL Server]
+- rowpattern [XML in SQL Server]
+- queries [XML in SQL Server], OPENXML statement
+- XML [SQL Server], OPENXML statement
+- element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47cd6e281772125ee7d424425fb6185623c0afc8
+ms.lasthandoff: 04/11/2017
+
 ---
-# OPENXML (SQL Server)
-  OPENXML, palabra clave de [!INCLUDE[tsql](../../includes/tsql-md.md)], proporciona un conjunto de filas en documentos XML en memoria que es similar a una tabla o una vista. OPENXML permite el acceso a los datos XML a pesar de ser un conjunto de filas relacional. Para ello, proporciona una vista de conjunto de filas de la representación interna de un documento XML. Los registros del conjunto de filas pueden almacenarse en tablas de base de datos.  
+# <a name="openxml-sql-server"></a>OPENXML (SQL Server)
+  OPENXML, palabra clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] , proporciona un conjunto de filas en documentos XML en memoria que es similar a una tabla o una vista. OPENXML permite el acceso a los datos XML a pesar de ser un conjunto de filas relacional. Para ello, proporciona una vista de conjunto de filas de la representación interna de un documento XML. Los registros del conjunto de filas pueden almacenarse en tablas de base de datos.  
   
  OPENXML puede utilizarse en instrucciones SELECT y SELECT INTO donde puedan aparecer como origen proveedores de conjuntos de filas, una vista u OPENROWSET. Para obtener información sobre la sintaxis de OPENXML, vea [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
   
@@ -43,14 +47,14 @@ caps.handback.revision: 43
   
  La siguiente ilustración muestra el proceso.  
   
- ![Parsing XML with OPENXML](../../relational-databases/xml/media/xmlsp.gif "Parsing XML with OPENXML")  
+ ![Analizar XML mediante OPENXML](../../relational-databases/xml/media/xmlsp.gif "Analizar XML mediante OPENXML")  
   
  Tenga en cuenta que, para entender el funcionamiento de OPENXML, debe estar familiarizado con el uso de XML y las consultas Xpath. Para obtener más información sobre la compatibilidad de XPath en SQL Server, vea [Utilizar consultas XPath en SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md).  
   
 > [!NOTE]  
 >  OpenXML permite parametrizar como variables los patrones XPath de fila y columna. Esta parametrización podría provocar inyecciones de expresiones XPath si el programador expone los parámetros a usuarios externos (por ejemplo, si los parámetros se proporcionan a través de un procedimiento almacenado que se llama externamente). Para evitar estos posibles riesgos de seguridad, se recomienda no exponer los parámetros XPath a llamadores externos.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El siguiente ejemplo muestra el uso de `OPENXML` en las instrucciones `INSERT` y `SELECT` . El documento de ejemplo XML contiene los elementos `<Customers>` y `<Orders>` .  
   
  En primer lugar, el procedimiento almacenado `sp_xml_preparedocument` analiza el documento XML. Este documento analizado es una representación en árbol de varios nodos (elementos, atributos, texto y comentarios) en el documento XML. `OPENXML` a continuación, hace referencia a este documento XML analizado y proporciona una vista de conjunto de filas de todo o partes de este documento XML. De esta forma, una instrucción `INSERT` puede insertar datos de dicho conjunto de filas en una tabla de la base de datos mediante `OPENXML` . Se pueden utilizar varias llamadas `OPENXML` para proporcionar una vista del conjunto de filas de diferentes partes del documento XML y procesarlas; por ejemplo, insertándolas en tablas diferentes. Este proceso también se conoce como "descomponer XML en tablas".  
@@ -97,7 +101,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  ![Árbol XML analizado](../../relational-databases/xml/media/xmlparsedtree.gif "Árbol XML analizado")  
   
-## Parámetros OPENXML  
+## <a name="openxml-parameters"></a>Parámetros OPENXML  
  Los parámetros de OPENXML son los siguientes:  
   
 -   Un identificador de documento XML (*idoc*)  
@@ -108,18 +112,18 @@ EXEC sp_xml_removedocument @docHandle;
   
 -   La asignación entre las columnas del conjunto de filas y los nodos XML  
   
-### Identificador del documento XML (idoc)  
+### <a name="xml-document-handle-idoc"></a>Identificador del documento XML (idoc)  
  El procedimiento almacenado **sp_xml_preparedocument** devuelve el identificador del documento.  
   
-### Expresión XPath que identifica los nodos que se van a procesar (rowpattern)  
+### <a name="xpath-expression-to-identify-the-nodes-to-be-processed-rowpattern"></a>Expresión XPath que identifica los nodos que se van a procesar (rowpattern)  
  La expresión XPath especificada como *rowpattern* identifica un conjunto de nodos del documento XML. Cada nodo identificado por *rowpattern* se corresponde con una única fila del conjunto de filas generado por OPENXML.  
   
  Los nodos identificados por la expresión XPath pueden ser cualquier nodo XML del documento XML. Si *rowpattern* identifica un conjunto de elementos del documento XML, el conjunto de filas tiene una fila para cada nodo de elemento identificado. Por ejemplo, si *rowpattern* termina en un atributo, se crea una fila para cada nodo de atributo que *rowpattern*seleccione.  
   
-### Descripción del conjunto de filas que se va a generar  
+### <a name="description-of-the-rowset-to-be-generated"></a>Descripción del conjunto de filas que se va a generar  
  OPENXML utiliza un esquema de conjunto de filas para generar el conjunto de filas resultante. Para especificar un esquema de conjunto de filas, se pueden utilizar las opciones siguientes.  
   
-#### Utilizar el formato de tabla irregular  
+#### <a name="using-the-edge-table-format"></a>Utilizar el formato de tabla irregular  
  Se recomienda utilizar el formato de tabla irregular para especificar un esquema de conjunto de filas. No utilice la cláusula WITH.  
   
  OPENXML devuelve un conjunto de filas en formato de tabla irregular. Se denomina tabla irregular porque todos los bordes del árbol del documento XML analizado se asignan a una fila del conjunto de filas.  
@@ -148,17 +152,17 @@ EXEC sp_xml_removedocument @docHandle;
 |**prev**|**bigint**|Es el id. XML del anterior elemento del mismo nivel. Es NULL si no existe ningún elemento previo directo del mismo nivel.|  
 |**texto**|**ntext**|Contiene el valor del atributo o el contenido del elemento en formato de texto. Es NULL si la entrada de la tabla irregular no necesita ningún valor.|  
   
-#### Utilizar la cláusula WITH para especificar una tabla existente  
+#### <a name="using-the-with-clause-to-specify-an-existing-table"></a>Utilizar la cláusula WITH para especificar una tabla existente  
  Se puede utilizar la cláusula WITH para especificar el nombre de una tabla existente. Para ello, solo es necesario especificar un nombre de tabla existente cuyo esquema pueda ser utilizado por OPENXML para generar el conjunto de filas.  
   
-#### Utilizar la cláusula WITH para especificar un esquema  
+#### <a name="using-the-with-clause-to-specify-a-schema"></a>Utilizar la cláusula WITH para especificar un esquema  
  Se puede utilizar la cláusula WITH para especificar un esquema completo. Al especificar el esquema del conjunto de filas, se especifican los nombres de columna, sus tipos de datos y su asignación al documento XML.  
   
  Se puede especificar el patrón de columna mediante el parámetro ColPattern de SchemaDeclaration. El patrón de columna especificado se utiliza para asignar una columna del conjunto de filas al nodo XML identificado por rowpattern y también para determinar el tipo de asignación.  
   
  Si no se especifica ColPattern para una columna, la columna del conjunto de filas se asigna al nodo XML con el mismo nombre, según la asignación especificada en el parámetro *flags* . No obstante, si se especifica ColPattern como parte de la especificación del esquema en la cláusula WITH, se sobrescribe la asignación especificada en el parámetro *flags* .  
   
-### Asignación entre las columnas del conjunto de filas y los nodos XML  
+### <a name="mapping-between-the-rowset-columns-and-the-xml-nodes"></a>La asignación entre las columnas del conjunto de filas y los nodos XML  
  En la instrucción OPENXML, opcionalmente se puede especificar el tipo de asignación (centrada en atributos o centrada en elementos) que existe entre las columnas del conjunto de filas y los nodos XML identificados en *rowpattern*. Esta información se utiliza en la transformación entre los nodos XML y las columnas del conjunto de filas.  
   
  Las asignaciones se pueden especificar de las dos maneras siguientes:  
@@ -179,23 +183,23 @@ EXEC sp_xml_removedocument @docHandle;
   
     -   Se desea asignar un atributo de metapropiedad a la columna. En este caso, se utiliza *ColPattern* para identificar la metapropiedad a la que se asigna la columna del conjunto de filas. Para obtener más información sobre cómo usar las metapropiedades, vea [Especificar metapropiedades en OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
- Los parámetros *flags* y *ColPattern* son opcionales. Si no se especifica ninguna asignación, se asume la asignación centrada en atributos. La asignación centrada en atributos es el valor predeterminado del parámetro *flags*.  
+ Los parámetros *flags* y *ColPattern* son opcionales. Si no se especifica ninguna asignación, se asume la asignación centrada en atributos. La asignación centrada en atributos es el valor predeterminado del parámetro *flags* .  
   
-#### Asignación centrada en atributos  
- Al establecer el parámetro *flags* de OPENXML en 1 (XML_ATTRIBUTES), se especifica la asignación **centrada en atributos**. Si *flags* contiene XML_ ATTRIBUTES, el conjunto de filas expuesto proporciona o usa filas en las que cada elemento XML se representa como una fila. Los atributos XML se asignan a los atributos definidos en SchemaDeclaration o proporcionados por Tablename en la cláusula WITH, basándose en la correspondencia de nombres. La correspondencia de nombres significa que los atributos XML de un nombre determinado se almacenan en una columna del conjunto de filas con el mismo nombre.  
+#### <a name="attribute-centric-mapping"></a>asignación centrada en atributos  
+ Al establecer el parámetro *flags* de OPENXML en 1 (XML_ATTRIBUTES), se especifica la asignación **centrada en atributos** . Si *flags* contiene XML_ ATTRIBUTES, el conjunto de filas expuesto proporciona o usa filas en las que cada elemento XML se representa como una fila. Los atributos XML se asignan a los atributos definidos en SchemaDeclaration o proporcionados por Tablename en la cláusula WITH, basándose en la correspondencia de nombres. La correspondencia de nombres significa que los atributos XML de un nombre determinado se almacenan en una columna del conjunto de filas con el mismo nombre.  
   
  Si el nombre de columna es diferente del nombre de atributo al que se asigna, debe especificarse *ColPattern* .  
   
  Si el atributo XML tiene un calificador de espacio de nombres, el nombre de la columna del conjunto de filas también debe tenerlo.  
   
-#### Asignación centrada en elementos  
- Al establecer el parámetro *flags* de OPENXML en 2 (XML_ELEMENTS), se especifica la asignación **centrada en elementos**. Esta asignación es similar a la asignación **centrada en atributos**, con las siguientes diferencias:  
+#### <a name="element-centric-mapping"></a>Asignación centrada en elementos  
+ Al establecer el parámetro *flags* de OPENXML en 2 (XML_ELEMENTS), se especifica la asignación **centrada en elementos** . Esta asignación es similar a la asignación **centrada en atributos** , con las siguientes diferencias:  
   
 -   Si existe la correspondencia de nombres de la asignación de ejemplo (una asignación de columna a un elemento XML con el mismo nombre), se eligen los subelementos no complejos, a menos que se especifique un patrón de nivel de columna. En el proceso de recuperación, si el subelemento es complejo porque contiene más subelementos, la columna se establece en NULL. En ese caso, se descartan los valores de atributo de los subelementos.  
   
 -   Si varios subelementos tienen el mismo nombre, se devuelve el primer nodo.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
  [sp_xml_removedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   

@@ -1,40 +1,44 @@
 ---
-title: "Ayuda F1 del Asistente para la administraci&#243;n de particiones | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.swb.managepartition.createjob.f1"
-  - "sql13.swb.managepartition.progress.f1"
-  - "sql13.swb.managepartition.getstart.f1"
-  - "sql13.swb.managepartition.selectswitchtables.f1"
-  - "sql13.swb.managepartition.stagingtable.f1"
-  - "sql13.swb.managepartition.switchin.f1"
-  - "sql13.swb.managepartition.switchout.f1"
-  - "sql13.swb.managepartition.partitionaction.f1"
-  - "sql13.swb.managepartition.summary.f1"
-  - "sql13.swb.managepartition.selectoutput.f1"
-helpviewer_keywords: 
-  - "asistentes [SQL Server Management Studio], vea Asistente para administrar particiones"
+title: "Ayuda F1 del Asistente para la administración de particiones | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.swb.managepartition.createjob.f1
+- sql13.swb.managepartition.progress.f1
+- sql13.swb.managepartition.getstart.f1
+- sql13.swb.managepartition.selectswitchtables.f1
+- sql13.swb.managepartition.stagingtable.f1
+- sql13.swb.managepartition.switchin.f1
+- sql13.swb.managepartition.switchout.f1
+- sql13.swb.managepartition.partitionaction.f1
+- sql13.swb.managepartition.summary.f1
+- sql13.swb.managepartition.selectoutput.f1
+helpviewer_keywords:
+- wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b784bf0926f887baddf94594641ce0c1d35c69d3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ayuda F1 del Asistente para la administraci&#243;n de particiones
+# <a name="manage-partition-wizard-f1-help"></a>Ayuda F1 del Asistente para la administración de particiones
   Utilice el **Asistente para la administración de particiones** con el fin de administrar y modificar las tablas con particiones existentes a través de la activación de particiones o de la implementación de un escenario de ventanas deslizantes. Este asistente puede facilitar la administración de las particiones y simplificar la migración normal de los datos en las tablas.  
   
-### Para iniciar el Asistente para la administración de particiones  
+### <a name="to-start-the-manage-partition-wizard"></a>Para iniciar el Asistente para la administración de particiones  
   
--   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], seleccione la base de datos, haga clic con el botón derecho en la tabla en la que quiera crear las particiones, seleccione **Almacenamiento** y haga clic en **Administrar partición**.  
+-   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], seleccione la base de datos, haga clic con el botón derecho en la tabla en la que quiera crear las particiones, seleccione **Almacenamiento**y haga clic en **Administrar partición**.  
   
      **Note** Si la opción **Administrar partición** no está disponible, puede que haya seleccionado una tabla que no contenga particiones. Haga clic en **Crear partición** en el submenú **Almacenamiento** y utilice el **Asistente para la creación de particiones** con el fin de crear las particiones en la tabla.  
   
@@ -64,17 +68,17 @@ caps.handback.revision: 12
 ##  <a name="SelectPartitionAction"></a> Página Seleccionar acción de partición  
  Utilice la página **Seleccionar acción de partición** para elegir la acción que desee realizar en la partición.  
   
-### Crear una tabla de ensayo  
+### <a name="create-a-staging-table"></a>Crear una tabla de ensayo  
  La activación y desactivación de particiones es una tarea común de las particiones si tiene una tabla con particiones para la migración de datos de forma regular; por ejemplo, si tiene una tabla con particiones que almacena datos trimestrales actuales y le debe pasar datos nuevos y archivar datos antiguos al final de cada trimestre.  
   
  El asistente diseña la tabla de ensayo con la misma estructura de tablas, columnas y columnas de partición, e índices, y almacena la tabla nueva en el grupo de archivos en los que se encuentra la partición de origen.  
   
  Para crear una tabla de ensayo en la que activar o desactivar las particiones de los datos, seleccione **Crear una tabla de ensayo para la modificación de particiones**.  
   
-### Escenario de ventana deslizante  
+### <a name="sliding-window-scenario"></a>Escenario de ventana deslizante  
  Para administrar las particiones en un escenario de ventana deslizante, seleccione **Administrar datos particionados en un escenario de ventana deslizante**.  
   
-## Lista de UIElement  
+## <a name="uielement-list"></a>Lista de UIElement  
  **Crear una tabla de ensayo para la modificación de particiones**  
  Crea una tabla de ensayo para los datos cuya partición está activando o desactivando en la tabla con particiones existente.  
   
@@ -87,29 +91,29 @@ caps.handback.revision: 12
  **Administrar datos particionados en un escenario de ventana deslizante**  
  Anexa una partición vacía a la tabla existente que se puede utilizar para activar la partición de los datos. Actualmente, el asistente permite activar la última partición y desactivar la primera.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[En esta sección](#Top)  
   
 ##  <a name="SwitchIn"></a> Página Seleccionar las opciones de activación de la partición  
  Use la página **Seleccionar las opciones de activación de la partición** para seleccionar la tabla de ensayo que quiera activar en la tabla con particiones.  
   
-## Lista de UIElement  
+## <a name="uielement-list"></a>Lista de UIElement  
  **Mostrar todas las particiones**  
  Seleccione esta opción para mostrar todas las particiones, incluidas las particiones existentes actualmente en la tabla con particiones.  
   
  **Cuadrícula Partición**  
- Muestra el nombre de la partición, el **Límite izquierdo**, el **Límite derecho**, el **Grupo de archivos** y el **Recuento de filas** de las particiones seleccionadas.  
+ Muestra el nombre de la partición, el **Límite izquierdo**, el **Límite derecho**, el **Grupo de archivos**y el **Recuento de filas** de las particiones seleccionadas.  
   
  **Tabla de activación**  
  Seleccione la tabla de ensayo que contiene la partición que desea agregar a la tabla con particiones. Debe crear esta tabla de almacenamiento provisional antes de activar las particiones con el **Asistente para la administración de particiones**.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[En esta sección](#Top)  
   
 ##  <a name="SwitchOut"></a> Página Seleccionar las opciones de desactivación de la partición  
  Use la página **Seleccionar las opciones de desactivación de la partición** para seleccionar la partición y la tabla de ensayo donde se almacenarán los datos particionados que está desactivando en la tabla con particiones.  
   
-## Lista de UIElement  
+## <a name="uielement-list"></a>Lista de UIElement  
  **Cuadrícula Partición**  
- Muestra el nombre de la partición, el **Límite izquierdo**, el **Límite derecho**, el **Grupo de archivos** y el **Recuento de filas** de las particiones seleccionadas.  
+ Muestra el nombre de la partición, el **Límite izquierdo**, el **Límite derecho**, el **Grupo de archivos**y el **Recuento de filas** de las particiones seleccionadas.  
   
  **Tabla de desactivación**  
  Seleccione una tabla nueva o una tabla existente en la que desea desactivar los datos.  
@@ -120,7 +124,7 @@ caps.handback.revision: 12
  **Existente**  
  Seleccione el nombre de la tabla de ensayo existente que desee utilizar para desactivar la partición de la tabla de origen actual. Si la tabla existente contiene datos, estos se sobrescribirán con los datos cuya partición esté desactivando.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[En esta sección](#Top)  
   
 ##  <a name="StagingTableOptions"></a> Página Seleccionar las opciones de tabla de ensayo  
  Utilice la página **Seleccionar las opciones de tabla de ensayo** para crear la tabla de ensayo que desea utilizar para modificar los datos con particiones.  
@@ -129,7 +133,7 @@ caps.handback.revision: 12
   
  También puede crear en la tabla de ensayo los mismos índices que existan en la partición de origen. La tabla de ensayo contiene automáticamente una restricción basada en los elementos de la partición de origen. Esta restricción se suele generar a partir del valor de límite de la partición de origen.  
   
-## Lista de UIElement  
+## <a name="uielement-list"></a>Lista de UIElement  
  **Nombre de tabla de ensayo**  
  Cree un nombre para la tabla de ensayo o acepte el predeterminado que se muestra en el cuadro de edición.  
   
@@ -142,12 +146,12 @@ caps.handback.revision: 12
  **Grupo de archivos**  
  Seleccione un grupo de archivos para la nueva tabla.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[En esta sección](#Top)  
   
 ##  <a name="OutputOption"></a> Página Seleccionar la opción de salida  
  Utilice la página **Seleccionar la opción de salida** para especificar cómo desea completar las modificaciones de las particiones.  
   
-### Crear script  
+### <a name="create-script"></a>Crear script  
  Cuando el asistente finaliza, crea un script en el Editor de consultas para modificar las particiones en la tabla. Seleccione **Crear script** si desea revisar el script y, a continuación, ejecutarlo manualmente.  
   
  **Generar script en archivo**  
@@ -159,23 +163,23 @@ caps.handback.revision: 12
  **Generar script en la ventana Nueva consulta**  
  Genera el script en una ventana del Editor de consultas. Si no hay ninguna ventana del editor abierta, se abre una ventana nueva como destino del script.  
   
-### Ejecutar inmediatamente  
- **Ejecutar inmediatamente**  
+### <a name="run-immediately"></a>Ejecutar inmediatamente  
+ **Run immediately**  
  Hace que el asistente finalice las modificaciones en las particiones cuando se hace clic en **Siguiente** o **Finalizar**.  
   
-### Programación  
+### <a name="schedule"></a>Programación  
  Seleccione esta opción para modificar las particiones de la tabla en una fecha y hora programadas.  
   
  **Cambiar programación**  
- Abre el cuadro de diálogo **Nueva programación de trabajo**, donde puede seleccionar, cambiar o ver las propiedades del trabajo programado.  
+ Abre el cuadro de diálogo **Nueva programación de trabajo** , donde puede seleccionar, cambiar o ver las propiedades del trabajo programado.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[En esta sección](#Top)  
   
 ##  <a name="NewJob"></a> Página Nueva programación del trabajo  
  Utilice la página **Nueva programación del trabajo** para ver y cambiar las propiedades de la programación.  
   
-### Opciones  
- Seleccionar el tipo de programación que desea para el trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+### <a name="options"></a>Opciones  
+ Seleccionar el tipo de programación que desea para el trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Nombre**  
  Escriba un nuevo nombre de la programación.  
@@ -189,7 +193,7 @@ caps.handback.revision: 12
  **Habilitado**  
  Habilite o deshabilite la programación.  
   
-### Opciones de tipos de programación periódica  
+### <a name="recurring-schedule-types-options"></a>Opciones de tipos de programación periódica  
  Seleccione la frecuencia del trabajo programado.  
   
  **Sucede**  
@@ -243,7 +247,7 @@ caps.handback.revision: 12
  **Sin fecha de finalización**  
  Especifica que la programación será efectiva indefinidamente.  
   
-### Opciones de tipos de programación de una sola vez  
+### <a name="one-time-schedule-types-options"></a>Opciones de tipos de programación de una sola vez  
  Si programa un trabajo para ejecutarse una vez, debe seleccionar una fecha y hora futuras.  
   
  **Date**  
@@ -252,21 +256,21 @@ caps.handback.revision: 12
  **Time**  
  Seleccione la hora de ejecución del trabajo.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[En esta sección](#Top)  
   
 ##  <a name="Summary"></a> Página Resumen  
  Utilice la página **Resumen** para revisar las opciones que ha seleccionado en las páginas anteriores.  
   
-## Lista de UIElement  
+## <a name="uielement-list"></a>Lista de UIElement  
  **Revisar opciones seleccionadas**  
  Muestra las selecciones que ha realizado en cada página del asistente. Haga clic en un nodo para expandir y ver sus opciones seleccionadas previamente.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[En esta sección](#Top)  
   
 ##  <a name="Progress"></a> Página Progreso  
  Utilice la página **Progreso** para supervisar la información de estado sobre las acciones del **Asistente para la administración de particiones**. Según las opciones que se seleccionen en el asistente, la página **Progreso** puede contener una o varias acciones. El cuadro superior muestra el estado general del asistente y el número de mensajes de estado, error y advertencia que ha recibido.  
   
-### Opciones  
+### <a name="options"></a>Opciones  
  **Detalles**  
  Proporciona la acción, el estado y los mensajes devueltos por la acción llevada a cabo por el asistente.  
   
@@ -294,14 +298,14 @@ caps.handback.revision: 12
 -   **Enviar informe como correo electrónico**  
   
  **Ver informe**  
- Abre el cuadro de diálogo **Ver informe**. Este cuadro de diálogo contiene un informe de texto con el progreso del **Asistente para la administración de particiones**.  
+ Abre el cuadro de diálogo **Ver informe** . Este cuadro de diálogo contiene un informe de texto con el progreso del **Asistente para la administración de particiones**.  
   
  **Cerrar**  
  Cierra el asistente.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[En esta sección](#Top)  
   
-## Vea también  
- [Tablas e índices con particiones](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+## <a name="see-also"></a>Vea también  
+ [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

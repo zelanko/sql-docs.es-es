@@ -1,23 +1,27 @@
 ---
-title: "Supervisar los componentes de SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Supervisión de los componentes de SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c3d789288a8963a1f80bc560ab9e80fe5339d29b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Supervisar los componentes de SQL Server
-  La supervisión es importante, puesto que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece un servicio en un entorno dinámico. Los datos de la aplicación cambian. El tipo de acceso que requieren los usuarios cambia. La forma de conexión de los usuarios cambia. También pueden cambiar los tipos de aplicaciones que tienen acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administra automáticamente los recursos del sistema, como la memoria y el espacio en disco, para minimizar la necesidad de optimizar manualmente el sistema. La supervisión permite a los administradores identificar las tendencias de funcionamiento para determinar si es necesario realizar cambios.  
+# <a name="monitor-sql-server-components"></a>Supervisar los componentes de SQL Server
+  La supervisión es importante, puesto que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece un servicio en un entorno dinámico. Los datos de la aplicación cambian. El tipo de acceso que requieren los usuarios cambia. La forma de conexión de los usuarios cambia. También pueden cambiar los tipos de aplicaciones que tienen acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administra automáticamente los recursos del sistema, como la memoria y el espacio en disco, para minimizar la necesidad de optimizar manualmente el sistema. La supervisión permite a los administradores identificar las tendencias de funcionamiento para determinar si es necesario realizar cambios.  
   
  Para supervisar cualquier componente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eficazmente:  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 8
   
  Estos pasos se tratan más extensamente a continuación.  
   
-## Defina los objetivos de supervisión  
+## <a name="determine-your-monitoring-goals"></a>Defina los objetivos de supervisión  
  Para supervisar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma eficaz, debe identificar claramente los motivos de la supervisión. Entre los motivos se pueden incluir los siguientes:  
   
 -   Establecer una línea de base para el rendimiento.  
@@ -60,7 +64,7 @@ caps.handback.revision: 8
   
 -   Determinar cuándo se ha de modificar la configuración de hardware.  
   
-## Seleccione la herramienta apropiada  
+## <a name="select-the-appropriate-tool"></a>Seleccione la herramienta apropiada  
  Después de decidir los motivos de la supervisión, debe seleccionar las herramientas adecuadas para ese tipo de supervisión. El sistema operativo Windows y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrecen un conjunto completo de herramientas para supervisar servidores en entornos con muchas transacciones. Estas herramientas revelan claramente las condiciones de una instancia del motor de base de datos de SQL Server o de una instancia de SQL Server Analysis Services.  
   
  Windows ofrece las herramientas siguientes para supervisar aplicaciones que se ejecutan en un servidor:  
@@ -93,18 +97,18 @@ caps.handback.revision: 8
   
 -   Marcas de seguimiento  
   
- Para obtener más información sobre las herramientas de supervisión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Herramientas de supervisión y optimización del rendimiento](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md).  
+ Para obtener más información sobre las herramientas de supervisión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Herramientas de supervisión y optimización del rendimiento](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md).  
   
-## Identifique los componentes que desea supervisar  
+## <a name="identify-the-components-to-monitor"></a>Identifique los componentes que desea supervisar  
  El tercer paso para supervisar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es identificar los componentes que desea supervisar. Por ejemplo, si utiliza [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para realizar el seguimiento de un servidor, puede definir el seguimiento para que recopile datos de eventos concretos. También puede excluir eventos que no se apliquen a su situación.  
   
-## Seleccione métricas para los componentes supervisados  
+## <a name="select-metrics-for-monitored-components"></a>Seleccione métricas para los componentes supervisados  
  Después de identificar qué componentes va a supervisar, determine las métricas de estos componentes. Por ejemplo, después de elegir los eventos que se van a incluir en un seguimiento, puede decidir incluir solo datos concretos acerca de los eventos. Al limitar el seguimiento a los datos relevantes para el mismo, se minimizan los recursos del sistema necesarios para realizar el seguimiento.  
   
-## Supervise el servidor  
+## <a name="monitor-the-server"></a>Supervise el servidor  
  Para supervisar el servidor, ejecute la herramienta de supervisión que ha configurado para recopilar datos. Por ejemplo, después de definir un seguimiento, puede ejecutarlo para recopilar datos acerca de eventos que ocurran en el servidor.  
   
-## Analice los datos  
+## <a name="analyze-the-data"></a>Analice los datos  
  Una vez haya finalizado el seguimiento, analice los datos para ver si ha alcanzado su objetivo de supervisión. Si no lo ha alcanzado, modifique los componentes o las métricas utilizadas para supervisar el servidor.  
   
  A continuación se describe el proceso de captura y uso de datos de eventos.  
@@ -115,7 +119,7 @@ caps.handback.revision: 8
   
 2.  Supervise (capture) eventos.  
   
-     Una vez habilitada, la supervisión activa captura datos de la aplicación, la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el sistema operativo especificados. Por ejemplo, cuando se supervisa la actividad de disco mediante el Monitor de sistema, la supervisión captura datos de eventos, como las lecturas y escrituras de disco, y los muestra en pantalla. Para obtener más información, vea [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md).  
+     Una vez habilitada, la supervisión activa captura datos de la aplicación, la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o el sistema operativo especificados. Por ejemplo, cuando se supervisa la actividad de disco mediante el Monitor de sistema, la supervisión captura datos de eventos, como las lecturas y escrituras de disco, y los muestra en pantalla. Para obtener más información, vea [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md).  
   
 3.  Guarde los datos de eventos capturados.  
   

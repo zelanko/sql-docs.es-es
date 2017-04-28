@@ -1,30 +1,34 @@
 ---
-title: "Cursores | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "resultados [SQL Server], cursores"
-  - "cursores de Transact-SQL, acerca de los cursores"
-  - "cursores [SQL Server]"
-  - "acceso a datos [SQL Server], cursores"
-  - "conjuntos de resultados [SQL Server], cursores"
-  - "solicitar cursores"
-  - "cursores [SQL Server], acerca de los cursores"
+title: Cursores | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- results [SQL Server], cursors
+- Transact-SQL cursors, about cursors
+- cursors [SQL Server]
+- data access [SQL Server], cursors
+- result sets [SQL Server], cursors
+- requesting cursors
+- cursors [SQL Server], about cursors
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 305a84696e0677ef3058b89e83ba73e96188607a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cursores
+# <a name="cursors"></a>Cursores
   Las operaciones de una base de datos relacional actúan en un conjunto completo de filas. Por ejemplo, el conjunto de filas que devuelve una instrucción SELECT está compuesto por todas las filas que satisfacen las condiciones de la cláusula WHERE de la instrucción. Este conjunto completo de filas que devuelve la instrucción se conoce como conjunto de resultados. Las aplicaciones, especialmente las aplicaciones interactivas en línea, no siempre trabajan de forma eficaz con el conjunto de resultados completo si lo toman como una unidad. Estas aplicaciones necesitan un mecanismo que trabaje con una fila o un pequeño bloque de filas cada vez. Los cursores son una extensión de los conjuntos de resultados que proporcionan dicho mecanismo.  
   
  Los cursores amplían el procesamiento de los resultados porque:  
@@ -39,12 +43,12 @@ caps.handback.revision: 29
   
 -   Proporcionan instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] en scripts, procedimientos almacenados y acceso de desencadenadores a los datos de un conjunto de resultados.  
   
-## Conceptos  
+## <a name="concepts"></a>Conceptos  
  Implementaciones de cursores  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite tres implementaciones de cursores.  
   
  cursores de Transact-SQL  
- Se basan en la sintaxis de DECLARE CURSOR y se usan principal en scripts de [!INCLUDE[tsql](../includes/tsql-md.md)], procedimientos almacenados y desencadenadores. [!INCLUDE[tsql](../includes/tsql-md.md)] se implementan en el servidor y se administran mediante instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] enviadas del cliente al servidor. También se pueden encontrar en lotes, procedimientos almacenados o desencadenadores.  
+ Se basan en la sintaxis de DECLARE CURSOR y se usan principal en scripts de [!INCLUDE[tsql](../includes/tsql-md.md)] , procedimientos almacenados y desencadenadores. [!INCLUDE[tsql](../includes/tsql-md.md)] se implementan en el servidor y se administran mediante instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] enviadas del cliente al servidor. También se pueden encontrar en lotes, procedimientos almacenados o desencadenadores.  
   
  Cursores de servidor de la API (Interfaz de programación de aplicaciones)  
  Permiten las funciones de cursor de la API con OLE DB y ODBC. Los cursores de servidor de la API están implementados en el servidor. Cada vez que una aplicación cliente llama a una función de cursor de la API, el proveedor OLE DB de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client o el controlador de ODBC transmite la solicitud al servidor para que realice una acción con el cursor de servidor de la API.  
@@ -77,7 +81,7 @@ caps.handback.revision: 29
  Dinámica  
  Los cursores dinámicos son los opuestos a los cursores estáticos. Reflejan todas las modificaciones realizadas en las filas de su conjunto de resultados al desplazarse por el cursor. Los valores de datos, el orden y la pertenencia de las filas del conjunto de resultados pueden cambiar con cada captura. Todas las instrucciones UPDATE, INSERT y DELETE que realizan todos los usuarios son visibles a través del cursor. Las actualizaciones se muestran inmediatamente si se realizan a través del cursor mediante una función API, como **SQLSetPos** o la cláusula WHERE CURRENT OF de [!INCLUDE[tsql](../includes/tsql-md.md)] . Las actualizaciones realizadas fuera del cursor no son visibles hasta que se confirman, a menos que el nivel de aislamiento de transacción del cursor sea de lectura no confirmada. Los planes de cursor dinámico no utilizan nunca índices espaciales.  
   
-## Solicitar un cursor  
+## <a name="requesting-a-cursor"></a>Solicitar un cursor  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite dos métodos para solicitar un cursor:  
   
 -   [!INCLUDE[tsql](../includes/tsql-md.md)]  
@@ -98,7 +102,7 @@ caps.handback.revision: 29
   
  Si no se ha solicitado un cursor [!INCLUDE[tsql](../includes/tsql-md.md)] ni un cursor de la API, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] devuelve de forma predeterminada un conjunto de resultados completo, conocido como conjunto de resultados predeterminado, a la aplicación.  
   
-## Proceso de cursores  
+## <a name="cursor-process"></a>Proceso de cursores  
  [!INCLUDE[tsql](../includes/tsql-md.md)] y los cursores de la API poseen una sintaxis diferente, se utiliza el siguiente proceso general con todos los cursores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
   
 1.  Asigne un cursor al conjunto de resultados de una instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] y defina características del cursor como, por ejemplo, si sus filas se pueden actualizar.  
@@ -111,10 +115,10 @@ caps.handback.revision: 29
   
 5.  Cierre el cursor.  
   
-## Contenido relacionado  
- [Comportamientos de los cursores](../relational-databases/native-client-odbc-cursors/cursor-behaviors.md) [Cómo se implementan los cursores](../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
+## <a name="related-content"></a>Contenido relacionado  
+ [Cursor Behaviors](../relational-databases/native-client-odbc-cursors/cursor-behaviors.md) [How Cursors Are Implemented](../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [Cursores &#40;Transact-SQL&#41;](../t-sql/language-elements/cursors-transact-sql.md)   
  [Funciones del cursor &#40;Transact-SQL&#41;](../t-sql/functions/cursor-functions-transact-sql.md)   

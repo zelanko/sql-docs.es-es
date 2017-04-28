@@ -1,30 +1,34 @@
 ---
-title: "Instant&#225;neas de base de datos (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "vista estática de bases de datos"
-  - "instantáneas [instantáneas de base de datos de SQL Server]"
-  - "base de datos de origen [SQL Server]"
-  - "instantáneas [instantáneas de base de datos de SQL Server], acerca de las instantáneas de base de datos"
-  - "instantáneas de base de datos [SQL Server]"
-  - "vistas de bases de datos de solo lectura"
-  - "instantáneas de base de datos [SQL Server], acerca de las instantáneas de base de datos"
+title: "Instantáneas de base de datos (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- static database views
+- snapshots [SQL Server database snapshots]
+- source databases [SQL Server]
+- snapshots [SQL Server database snapshots], about database snapshots
+- database snapshots [SQL Server]
+- read-only database views
+- database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1087898fae9896722e795f2c6c68c5df20d0f3aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# Instant&#225;neas de base de datos (SQL Server)
+# <a name="database-snapshots-sql-server"></a>Instantáneas de base de datos (SQL Server)
   Una instantánea de base de datos es una vista estática de solo lectura de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada *base de datos de origen*. La instantánea de base de datos es coherente en cuanto a las transacciones con la base de datos de origen tal como existía en el momento de la creación de la instantánea. Una instantánea de base de datos siempre reside en la misma instancia de servidor que la base de datos de origen. A medida que se actualiza la base de datos de origen, se actualiza la instantánea de base de datos. Por consiguiente, durante cuanto más tiempo existe una instantánea de base de datos, más probable es que agote el espacio en disco disponible.  
   
  En una determinada base de datos de origen pueden existir varias instantáneas. Cada instantánea de base de datos se mantiene hasta que el propietario de la base de datos la quita explícitamente.  
@@ -118,7 +122,7 @@ caps.handback.revision: 54
 ###  <a name="Prerequisites"></a> Requisitos previos  
  La base de datos de origen, que puede usar cualquier modelo de recuperación, debe cumplir los siguientes requisitos previos:  
   
--   La instancia de servidor debe ejecutarse en una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admita instantáneas de base de datos. Para obtener más información, vea [Características compatibles con las ediciones de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   La instancia de servidor debe ejecutarse en una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admita instantáneas de base de datos. Para obtener más información, vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   La base de datos de origen debe estar en línea, a menos que sea una base de datos reflejada dentro de una sesión de creación de reflejo de la base de datos.  
   
@@ -234,7 +238,9 @@ caps.handback.revision: 54
   
 -   [Eliminar una instantánea de base de datos &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Creación de reflejo e instantáneas de base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   
+
+

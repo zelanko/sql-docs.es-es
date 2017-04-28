@@ -1,50 +1,51 @@
 ---
-title: "Permisos (motor de base de datos) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseuser.permissions.database.f1--May use common.permissions"
-  - "sql13.swb.databaseuser.permissions.object.f1--May use common.permissions"
-helpviewer_keywords: 
-  - "REFERENCES, permiso"
-  - "permisos [SQL Server]"
-  - "seguridad [SQL Server], permisos"
-  - "convenciones de nomenclatura [SQL Server]"
+title: Permisos (motor de base de datos) | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseuser.permissions.database.f1--May use common.permissions
+- sql13.swb.databaseuser.permissions.object.f1--May use common.permissions
+helpviewer_keywords:
+- REFERENCES permission
+- permissions [SQL Server]
+- security [SQL Server], permissions
+- naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 caps.latest.revision: 76
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 75
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e1c8c3f3c82e39da5e5f3b1cd018af8b3b2d26d7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Permisos (motor de base de datos)
+# <a name="permissions-database-engine"></a>Permisos (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Todos los elementos protegibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen permisos asociados que se pueden conceder a una entidad de seguridad. Los permisos de [!INCLUDE[ssDE](../../includes/ssde-md.md)] se administran en el nivel de servidor asignados a los inicios de sesión y roles de servidor, y en el nivel de base de datos asignados a usuarios de base de datos y roles base de datos. El modelo para [!INCLUDE[ssSDS](../../includes/sssds-md.md)] tiene el mismo sistema para los permisos de base de datos, pero los permisos de nivel de servidor no están disponibles. Este tema contiene una lista completa de los permisos. Para una implementación típica de los permisos, consulte [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
-El número total de permisos para [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] es 236. La mayoría de los permisos se aplica a todas las plataformas, pero otros no. Por ejemplo, no se puede conceder permisos de nivel de servidor en SQL Database, y algunos permisos solo tienen sentido en [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] expuso 230 permisos. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] expuso 219 permisos. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] expuso 214 permisos. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] expuso 195 permisos. El tema [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) especifica qué temas se encuentran en las versiones recientes. El gráfico siguiente muestra los permisos y las relaciones entre ellos. Algunos de los permisos de nivel superior (como `CONTROL SERVER`) se muestran varias veces.
+El número total de permisos para [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] es 237. La mayoría de los permisos se aplica a todas las plataformas, pero otros no. Por ejemplo, no se puede conceder permisos de nivel de servidor en SQL Database, y algunos permisos solo tienen sentido en [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] expuso 230 permisos. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] expuso 219 permisos. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] expuso 214 permisos. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] expuso 195 permisos. El tema [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) especifica qué temas se encuentran en las versiones recientes. El gráfico siguiente muestra los permisos y las relaciones entre ellos. Algunos de los permisos de nivel superior (como `CONTROL SERVER`) se muestran varias veces. Haga clic en la imagen para descargar el **póster de los permisos de los motores de bases de datos** en formato pdf.  
   
-![Permisos de motor de base de datos](../../relational-databases/security/media/database-engine-permissions.PNG) 
+[![Permisos de motor de base de datos](../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
 
->[!NOTE]
-> Como parte de este tema, el póster es demasiado pequeño para leerlo. Descargue el póster de permisos del motor de base de datos de [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
-
-Una vez que comprenda los permisos, aplique los permisos de nivel de servidor a los inicios de sesión y usuarios de permisos de nivel de base de datos con las instrucciones [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md) y [DENY](../../t-sql/statements/deny-transact-sql.md). Por ejemplo:   
+Una vez que comprenda los permisos, aplique los permisos de nivel de servidor a los inicios de sesión y usuarios de permisos de nivel de base de datos con las instrucciones [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)y [DENY](../../t-sql/statements/deny-transact-sql.md) . Por ejemplo:   
 ```tsql
 GRANT SELECT ON OBJECT::HumanResources.Employee TO Larry;
 REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
 Para obtener consejos acerca de cómo planificar un sistema de permisos, consulte [Introducción a los permisos de los motores de bases de datos](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
   
-##  <a name="a-nameconventionsa-permissions-naming-conventions"></a><a name="_conventions"></a> Convenciones de nomenclatura de permisos  
+##  <a name="_conventions"></a> Permissions Naming Conventions  
  A continuación se describen las convenciones generales que se siguen en la nomenclatura de permisos:  
   
 -   CONTROL  
@@ -100,7 +101,7 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 ## <a name="chart-of-sql-server-permissions"></a>Gráfico de los permisos de SQL Server  
  Para obtener un gráfico con tamaño cartel de todos los permisos del [!INCLUDE[ssDE](../../includes/ssde-md.md)] en formato PDF, vea [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
   
-##  <a name="a-namesecurablesa-permissions-applicable-to-specific-securables"></a><a name="_securables"></a> Permisos aplicables a elementos protegibles específicos  
+##  <a name="_securables"></a> Permissions Applicable to Specific Securables  
  En la siguiente tabla se enumeran los principales tipos de permisos y los tipos de elementos protegibles a los que se pueden aplicar.  
   
 |Permiso|Se aplica a|  
@@ -111,7 +112,7 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 |EXECUTE|Tipos de CLR, scripts externos, procedimientos ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR), funciones escalares y de agregado ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR) y sinónimos|  
 |IMPERSONATE|Inicios de sesión y usuarios|  
 |INSERT|Sinónimos, tablas y columnas, vistas y columnas. El permiso se puede conceder en el nivel de base de datos, en el de esquema o en el de objeto.|  
-|RECEIVE|Colas de [!INCLUDE[ssSB](../../includes/sssb-md.md)]|  
+|RECEIVE|Colas de[!INCLUDE[ssSB](../../includes/sssb-md.md)] |  
 |REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT, <br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br />VIEW y<br />XML SCHEMA COLLECTION|  
 |SELECT|Sinónimos, tablas y columnas, vistas y columnas. El permiso se puede conceder en el nivel de base de datos, en el de esquema o en el de objeto.|  
 |TAKE OWNERSHIP|Todas las clases de objetos excepto DATABASE SCOPED CONFIGURATION, LOGIN, SERVER y USER.|  
@@ -122,8 +123,8 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 > [!CAUTION]  
 >  Los permisos predeterminados que se conceden a objetos del sistema en el momento de la instalación se evalúan detenidamente frente a posibles amenazas y no necesitan modificarse como parte de la protección de la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los cambios a los permisos de los objetos del sistema podrían limitar o interrumpir la funcionalidad y dejar potencialmente a su instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un estado no admitido.  
   
-##  <a name="a-namepermissionsa-sql-server-permissions"></a><a name="_permissions"></a> Permisos de SQL Server  
- La tabla siguiente contiene una lista completa de los permisos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los permisos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] solo están disponibles para elementos protegibles de base que se admiten. No se pueden conceder permisos de nivel de servidor en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; sin embargo, en algunos casos los permisos de base de datos están disponibles en su lugar.  
+##  <a name="_permissions"></a> SQL Server Permissions  
+ La tabla siguiente contiene una lista completa de los permisos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los permisos de[!INCLUDE[ssSDS](../../includes/sssds-md.md)] solo están disponibles para elementos protegibles de base que se admiten. No se pueden conceder permisos de nivel de servidor en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; sin embargo, en algunos casos los permisos de base de datos están disponibles en su lugar.  
   
 |Elemento protegible base|Permisos granulares del elemento protegible base|Código del tipo de permiso|Elemento protegible que contiene un elemento protegible base|Permiso para el elemento protegible contenedor que implica permiso granular para el elemento protegible base|  
 |--------------------|--------------------------------------------|--------------------------|--------------------------------------------|------------------------------------------------------------------------------------------|  
@@ -250,10 +251,10 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 |FULLTEXT STOPLIST|REFERENCES|RF|DATABASE|REFERENCES|  
 |FULLTEXT STOPLIST|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |FULLTEXT STOPLIST|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
-|LOGIN|ALTER|AL|SERVER|ALTER ANY LOGIN|  
-|LOGIN|CONTROL|CL|SERVER|CONTROL SERVER|  
-|LOGIN|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
-|LOGIN|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
+|Login|ALTER|AL|SERVER|ALTER ANY LOGIN|  
+|Login|CONTROL|CL|SERVER|CONTROL SERVER|  
+|Login|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
+|Login|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |MESSAGE TYPE|ALTER|AL|DATABASE|ALTER ANY MESSAGE TYPE|  
 |MESSAGE TYPE|CONTROL|CL|DATABASE|CONTROL|  
 |MESSAGE TYPE|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -353,10 +354,10 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 |TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
 |TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
-|USER|ALTER|AL|DATABASE|ALTER ANY USER|  
-|USER|CONTROL|CL|DATABASE|CONTROL|  
-|USER|IMPERSONATE|IM|DATABASE|CONTROL|  
-|USER|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
+|User|ALTER|AL|DATABASE|ALTER ANY USER|  
+|User|CONTROL|CL|DATABASE|CONTROL|  
+|User|IMPERSONATE|IM|DATABASE|CONTROL|  
+|User|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|EXECUTE|EX|SCHEMA|EXECUTE|  
@@ -364,7 +365,7 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="a-namealgorithma-summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> Resumen del algoritmo de comprobación de permiso  
+##  <a name="_algorithm"></a> Summary of the Permission Check Algorithm  
  Comprobar los permisos puede ser complejo. El algoritmo de comprobación de permiso incluye la superposición de la pertenencia a grupos y el encadenamiento de propiedad, tanto el permiso explícito como el implícito, y puede ser afectado por los permisos en las clases protegibles y que contienen la entidad protegible. El proceso general del algoritmo es reunir todos los permisos pertinentes. Si no se encuentra ningún bloqueo DENY, el algoritmo busca un permiso GRANT que proporcione el acceso suficiente. El algoritmo contiene tres elementos esenciales, el **contexto de seguridad**, el **espacio del permiso**y el **permiso necesario**.  
   
 > [!NOTE]  
@@ -420,13 +421,13 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 
 ## <a name="secial-considerations-for-column-level-permissions"></a>Consideraciones especiales sobre los permisos de nivel de columna
 
-Los permisos de nivel de columna se conceden con la sintaxis *<nombre_tabla> (\<nombre_columna>)*. Por ejemplo:
+Los permisos de nivel de columna se conceden con la sintaxis *<nombre_tabla> (<nombre_columna\<)*. Por ejemplo:
 ```tsql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 Un permiso DENY en la tabla se reemplaza por un permiso GRANT en una columna. Pero un permiso DENY subsiguiente en la tabla quitará la columna GRANT. 
   
-##  <a name="a-nameexamplesa-examples"></a><a name="_examples"></a> Ejemplos  
+##  <a name="_examples"></a> Examples  
  En los ejemplos de esta sección se muestra cómo se recupera la información sobre permisos.  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. Devolver la lista completa de los permisos que pueden concederse.  
@@ -467,3 +468,4 @@ GO
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   
+

@@ -1,27 +1,31 @@
 ---
-title: "Eliminar vistas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "quitar vistas"
-  - "eliminar vistas"
-  - "vistas [SQL Server], eliminar"
-  - "quitar vistas"
+title: "Eliminación de vistas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dropping views
+- deleting views
+- views [SQL Server], deleting
+- removing views
 ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1c869b1e4ba7cc992687baa3236c96d25b0e63e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eliminar vistas
+# <a name="delete-views"></a>Eliminar vistas
   Puede eliminar (quitar) vistas de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **En este tema**  
@@ -53,7 +57,7 @@ caps.handback.revision: 15
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para eliminar una vista de una base de datos  
+#### <a name="to-delete-a-view-from-a-database"></a>Para eliminar una vista de una base de datos  
   
 1.  En el **Explorador de objetos**, expanda la base de datos que contiene la vista que desea eliminar y, a continuación, expanda la carpeta **Vistas** .  
   
@@ -66,7 +70,7 @@ caps.handback.revision: 15
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para eliminar una vista de una base de datos  
+#### <a name="to-delete-a-view-from-a-database"></a>Para eliminar una vista de una base de datos  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

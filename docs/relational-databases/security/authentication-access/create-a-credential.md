@@ -1,26 +1,30 @@
 ---
-title: "Crear una credential | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "credenciales [SQL Server], crear"
-  - "autenticación [SQL Server], credenciales"
-  - "inicios de sesión [SQL Server], credenciales"
+title: Crear una credencial | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- credentials [SQL Server], creating
+- authentication [SQL Server], credentials
+- logins [SQL Server], credentials
 ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80dba3f156735179c0fb016e39f3065acd6f5ac1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear una credential
+# <a name="create-a-credential"></a>Crear una credential
   En este tema se describe cómo crear una credencial en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Las credenciales proporcionan un método para permitir que los usuarios de la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dispongan de una identidad fuera de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se utilizan principalmente para ejecutar código en ensamblados con el conjunto de permisos EXTERNAL_ACCESS. También se pueden utilizar cuando un usuario de la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] necesita obtener acceso a un recurso de dominio, como una ubicación de archivo para almacenar una copia de seguridad.  
@@ -56,7 +60,7 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para crear una credencial  
+#### <a name="to-create-a-credential"></a>Para crear una credencial  
   
 1.  En el Explorador de objetos, expanda la carpeta **Seguridad** .  
   
@@ -64,9 +68,9 @@ caps.handback.revision: 17
   
 3.  En el cuadro de diálogo **Nueva credencial** , en el cuadro **Nombre de credencial** , escriba un nombre para la credencial.  
   
-4.  En el cuadro **Identidad**, escriba el nombre de la cuenta empleada en las conexiones salientes (cuando salga del contexto de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Normalmente, será una cuenta de usuario de Windows, pero la identidad puede ser una cuenta de otro tipo.  
+4.  En el cuadro **Identidad** , escriba el nombre de la cuenta empleada en las conexiones salientes (cuando salga del contexto de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Normalmente, será una cuenta de usuario de Windows, pero la identidad puede ser una cuenta de otro tipo.  
   
-     También puede hacer clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccionar usuarios o grupos**.  
+     También puede hacer clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccionar usuarios o grupos** .  
   
 5.  En los cuadros **Contraseña** y **Confirmar contraseña** , escriba la contraseña de la cuenta especificada en el cuadro **Identidad** . Si se ha especificado una cuenta de usuario de Windows en **Identidad** , ésta será la contraseña de Windows. Se puede dejar **Contraseña** en blanco si no se requiere ninguna.  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para crear una credencial  
+#### <a name="to-create-a-credential"></a>Para crear una credencial  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

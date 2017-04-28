@@ -1,24 +1,28 @@
 ---
-title: "Columnas con nombre | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "nombres [SQL Server], columnas con"
+title: Columnas con un nombre | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3cda571a6e30387ccf1764e94fe6e6a3f1625262
+ms.lasthandoff: 04/11/2017
+
 ---
-# Columnas con nombre
+# <a name="columns-with-a-name"></a>Columnas con nombre
   A continuación se exponen las condiciones específicas en las que se asignan al XML resultante las columnas con nombre de los conjuntos de filas, con distinción entre mayúsculas de minúsculas:  
   
 -   El nombre de la columna empieza por @.  
@@ -31,7 +35,7 @@ caps.handback.revision: 8
   
 -   Una columna tiene un nombre distinto.  
   
-## El nombre de la columna empieza por @  
+## <a name="column-name-starts-with-an-at-sign-"></a>El nombre de la columna empieza por @  
  Si el nombre de la columna empieza por @ (arroba) y no contiene una barra diagonal (/), se creará un atributo del elemento <`row`> con el valor de columna correspondiente. Por ejemplo, la consulta siguiente devuelve un conjunto de filas con dos columnas (@PmId y Name). En el XML resultante, se agrega un atributo **PmId** al elemento <`row`> correspondiente y se le asigna un valor de ProductModelID.  
   
 ```  
@@ -64,7 +68,7 @@ FOR XML PATH
 go  
 ```  
   
-## El nombre de la columna no empieza por @  
+## <a name="column-name-does-not-start-with-an-at-sign-"></a>El nombre de la columna no empieza por @  
  Si el nombre de la columna no empieza con un signo (@), no es una de las pruebas de nodo XPath y no incluye una marca de barra diagonal (/), se creará un elemento XML que es un subelemento del elemento de fila, <`row`> de forma predeterminada.  
   
  La consulta siguiente especifica el nombre de la columna, el resultado. Por tanto, se agrega un elemento secundario <`result`> al elemento <`row`>.  
@@ -111,8 +115,8 @@ go
 </row>  
 ```  
   
-## El nombre de la columna no empieza por @ y contiene una barra diagonal (/)  
- Si el nombre de la columna no empieza por @ pero incluye una barra diagonal (/), el nombre de la columna indica una jerarquía XML. Por ejemplo, si el nombre de la columna es "Name1/Name2/Name3.../Name***n***", cada Name***i*** representa un nombre de elemento que está anidado en el elemento de fila actual (para i=1) o que se encuentra debajo del elemento con el nombre Name***i-1***. Si Name***n*** empieza por @, se asignará a un atributo del elemento Name***n-1***.  
+## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>El nombre de la columna no empieza por @ y contiene una barra diagonal (/)  
+ Si el nombre de la columna no empieza por @ pero incluye una barra diagonal (/), el nombre de la columna indica una jerarquía XML. Por ejemplo, si el nombre de la columna es "Name1/Name2/Name3.../Name***n*** ", cada Name***i*** representa un nombre de elemento que está anidado en el elemento de fila actual (para i=1) o que se encuentra debajo del elemento con el nombre Name***i-1***. Si Name***n*** empieza por @, se asignará a un atributo del elemento Name***n-1*** .  
   
  Por ejemplo, la consulta siguiente devuelve un Id. y un nombre de empleado que están representados como un elemento EmpName complejo que incluye nombre, inicial y apellidos.  
   
@@ -198,10 +202,10 @@ FOR XML PATH
 </row>  
 ```  
   
-## Varias columnas comparten el mismo prefijo de ruta de acceso  
+## <a name="several-columns-share-the-same-path-prefix"></a>Varias columnas comparten el mismo prefijo de ruta de acceso  
  Si varias columnas consecutivas comparten el mismo prefijo de ruta de acceso, se agruparán con el mismo nombre. Si se utilizan distintos prefijos de espacio de nombres aunque estén enlazados al mismo espacio de nombres, una ruta de acceso se considerará diferente. En la consulta anterior, las columnas FirstName, MiddleName y LastName comparten el mismo prefijo EmpName. Por tanto, se agregarán como elementos secundarios del elemento <`EmpName`>. Lo mismo ocurrió al crear el elemento <`Address`> en el ejemplo anterior.  
   
-## Una columna tiene un nombre distinto  
+## <a name="one-column-has-a-different-name"></a>Una columna tiene un nombre distinto  
  Si aparece una columna con un nombre distinto, interrumpirá la agrupación, tal y como se muestra en la siguiente consulta modificada. La consulta interrumpe la agrupación de FirstName, MiddleName y LastName, tal y como se especificaba en la consulta anterior, al agregar columnas de dirección entre las columnas FirstName y MiddleName.  
   
 ```  
@@ -238,7 +242,7 @@ FOR XML PATH
 </row>  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Usar el modo PATH con FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

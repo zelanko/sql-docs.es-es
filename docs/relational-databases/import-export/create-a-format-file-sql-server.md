@@ -1,24 +1,28 @@
 ---
-title: "Crear un archivo de formato (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "archivos de formato [SQL Server], creación"
+title: "Creación de archivos de formato (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 02/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- format files [SQL Server], creating
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 caps.latest.revision: 57
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e2360e69486a82a375c038135616753bf0ed19c0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear un archivo de formato (SQL Server)
+# <a name="create-a-format-file-sql-server"></a>Crear un archivo de formato (SQL Server)
   Cuando se realiza una importación masiva de datos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o una exportación masiva de datos desde una tabla, se puede utilizar un archivo de formato para un sistema flexible de escribir archivos de datos que requiera poca o ninguna modificación para adaptarlos a otros formatos de datos o para leer archivos de datos de otros programas de software.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite dos tipos de archivos de formato: XML y no XML. El formato no XML es el formato original compatible con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -28,10 +32,10 @@ caps.handback.revision: 57
 > [!NOTE]  
 >  La versión de la utilidad **bcp** (Bcp.exe) que se emplee para leer un archivo de formato debe ser la misma versión, o una versión posterior, a la que se use para crear el archivo de formato. Por ejemplo, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** puede leer un formato de archivo de la versión 10.0, generado por [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**, pero [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** no puede leer un formato de archivo de la versión 11.0, generado por [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp**.  
   
- En este tema se describe cómo utilizar la [utilidad bcp](../../tools/bcp-utility.md) para crear un archivo de formato para una tabla determinada. El archivo de formato se basa en la opción de tipo de datos especificada (**-n**, **-c**, **-w** o **-N**) y en los delimitadores de la vista o de la tabla.  
+ En este tema se describe cómo utilizar la [utilidad bcp](../../tools/bcp-utility.md) para crear un archivo de formato para una tabla determinada. El archivo de formato se basa en la opción de tipo de datos especificada (**-n**, **-c**, **-w**o **-N**) y en los delimitadores de la vista o de la tabla.  
   
-## Crear un archivo de formato no XML  
- Si quiere usar un comando **bcp** para crear un archivo de formato, especifique el argumento **format** y use **nul** en lugar de una ruta de acceso de archivo de datos. La opción **format** también requiere la opción **-f**, como:  
+## <a name="creating-a-non-xml-format-file"></a>Crear un archivo de formato no XML  
+ Si quiere usar un comando **bcp** para crear un archivo de formato, especifique el argumento **format** y use **nul** en lugar de una ruta de acceso de archivo de datos. La opción **format** también requiere la opción **-f** , como:  
   
  **bcp** *table_or_view* **format** nul **-f***format_file_name*  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 57
   
  Para obtener más información sobre la estructura y los campos de los archivos de formato no XML, vea [Archivos de formato no XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
-### Ejemplos  
+### <a name="examples"></a>Ejemplos  
  Esta sección contiene los siguientes ejemplos que muestran cómo se usan los comandos de **bcp** para crear un archivo de formato no XML:  
   
 -   A. Crear un archivo de formato no XML para datos nativos  
@@ -55,8 +59,8 @@ caps.handback.revision: 57
   
  Los ejemplos utilizan la tabla `HumanResources.Department` de la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . La tabla `HumanResources.Department` tiene cuatro columnas: `DepartmentID`, `Name`, `GroupName`y `ModifiedDate`.  
   
-#### A. Crear un archivo de formato no XML para datos nativos  
- En el ejemplo siguiente se crea un archivo de formato XML, `Department-n.xml`, para la tabla [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department`. El archivo de formato utiliza tipos de datos nativos. El contenido del archivo de formato generado se presenta después del comando.  
+#### <a name="a-creating-a-non-xml-format-file-for-native-data"></a>A. Crear un archivo de formato no XML para datos nativos  
+ En el ejemplo siguiente se crea un archivo de formato XML, `Department-n.xml`, para la tabla [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` . El archivo de formato utiliza tipos de datos nativos. El contenido del archivo de formato generado se presenta después del comando.  
   
  El comando **bcp** contiene los calificadores siguientes.  
   
@@ -64,9 +68,9 @@ caps.handback.revision: 57
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|Especifica el archivo de formato no XML.|  
 |**-n**|Especifica tipos de datos nativos.|  
-|**-T**|Especifica que la utilidad **bcp** se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza utilizando la seguridad integrada. Si no se especifica **-T**, es necesario especificar **-U** y **-P** para poder iniciar sesión correctamente.|  
+|**-T**|Especifica que la utilidad **bcp** se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza utilizando la seguridad integrada. Si no se especifica **-T** , es necesario especificar **-U** y **-P** para poder iniciar sesión correctamente.|  
   
- En el símbolo del sistema de Windows, escriba el siguiente comando `bcp`:  
+ En el símbolo del sistema de Windows, escriba el siguiente comando `bcp` :  
   
 ```  
 bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-n.fmt  
@@ -85,8 +89,8 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  Para obtener más información, vea [Archivos de formato no XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
-#### B. Crear un archivo de formato no XML para datos de caracteres  
- En el ejemplo siguiente se crea un archivo de formato XML, `Department.fmt`, para la tabla [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department`. El archivo de formato usa formatos de datos de caracteres y un terminador de campo no predeterminado (`,`). El contenido del archivo de formato generado se presenta después del comando.  
+#### <a name="b-creating-a-non-xml-format-file-for-character-data"></a>B. Crear un archivo de formato no XML para datos de caracteres  
+ En el ejemplo siguiente se crea un archivo de formato XML, `Department.fmt`, para la tabla [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` . El archivo de formato usa formatos de datos de caracteres y un terminador de campo no predeterminado (`,`). El contenido del archivo de formato generado se presenta después del comando.  
   
  El comando **bcp** contiene los calificadores siguientes.  
   
@@ -94,9 +98,9 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|Especifica un archivo de formato no XML.|  
 |**-c**|Especifica los datos de caracteres.|  
-|**-T**|Especifica que la utilidad **bcp** se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza utilizando la seguridad integrada. Si no se especifica **-T**, es necesario especificar **-U** y **-P** para poder iniciar sesión correctamente.|  
+|**-T**|Especifica que la utilidad **bcp** se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza utilizando la seguridad integrada. Si no se especifica **-T** , es necesario especificar **-U** y **-P** para poder iniciar sesión correctamente.|  
   
- En el símbolo del sistema de Windows, escriba el siguiente comando `bcp`:  
+ En el símbolo del sistema de Windows, escriba el siguiente comando `bcp` :  
   
 ```  
 bcp AdventureWorks2012.HumanResources.Department format nul -c -f Department-c.fmt -T  
@@ -115,7 +119,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -f Department-c.f
   
  Para obtener más información, vea [Archivos de formato no XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
-#### C. Crear un archivo de formato no XML para datos nativos Unicode  
+#### <a name="c-creating-a-non-xml-format-file-for-unicode-native-data"></a>C. Crear un archivo de formato no XML para datos nativos Unicode  
  Para crear un archivo de formato no XML para datos nativos Unicode para la tabla `HumanResources.Department`, utilice el comando siguiente:   
   
 ```  
@@ -124,7 +128,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -N -f Department-
   
  Para obtener más información sobre cómo usar datos nativos Unicode, vea [Usar el formato nativo Unicode para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).  
   
-#### D. Crear un archivo de formato no XML para datos de caracteres Unicode  
+#### <a name="d-creating-a-non-xml-format-file-for-unicode-character-data"></a>D. Crear un archivo de formato no XML para datos de caracteres Unicode  
  Para crear un archivo de formato no XML para datos de caracteres Unicode para la tabla `HumanResources.Department` que usa terminadores predeterminados, use el comando siguiente:   
   
 ```  
@@ -133,7 +137,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
  Para obtener más información sobre cómo usar datos de caracteres Unicode, vea [Usar el formato de caracteres Unicode para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).  
   
-#### F. Usar un archivo de formato con la opción de página de códigos  
+#### <a name="f-using-a-format-file-with-the-code-page-option"></a>F. Usar un archivo de formato con la opción de página de códigos  
  Si crea un archivo de formato con el comando bcp (es decir, por medio de “`bcp forma`t …” ), la información sobre la intercalación o página de códigos se escribirá en el archivo de formato.   
 El siguiente archivo de formato de ejemplo para una tabla con 5 columnas incluye la intercalación.  
   
@@ -162,8 +166,8 @@ El siguiente es un ejemplo del archivo de formato sin la información de interca
 5  SQLCHAR         0       41      "!!!\r\r\n"      5     c_4              ""  
 ```  
   
-## Crear un archivo de formato XML  
- Si quiere usar un comando **bcp** para crear un archivo de formato, especifique el argumento **format** y use **nul** en lugar de una ruta de acceso de archivo de datos. La opción **format** siempre requiere la opción **-f** y, para crear un archivo de formato XML, también debe especificar la opción **-x**, como:  
+## <a name="creating-an-xml-format-file"></a>Crear un archivo de formato XML  
+ Si quiere usar un comando **bcp** para crear un archivo de formato, especifique el argumento **format** y use **nul** en lugar de una ruta de acceso de archivo de datos. La opción **format** siempre requiere la opción **-f** y, para crear un archivo de formato XML, también debe especificar la opción **-x** , como:  
   
  **bcp** *table_or_view* **format nul-f** *format_file_name* **-x**  
   
@@ -172,7 +176,7 @@ El siguiente es un ejemplo del archivo de formato sin la información de interca
   
  Para obtener más información sobre la estructura y los campos de los archivos de formato XML, vea [XML, archivos de formato &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
-### Ejemplos  
+### <a name="examples"></a>Ejemplos  
  Esta sección contiene los siguientes ejemplos, en los que se muestran cómo se usan los comandos **bcp** para crear un archivo de formato XML:  
   
 -   A. Crear un archivo de formato XML para datos de caracteres  
@@ -184,8 +188,8 @@ El siguiente es un ejemplo del archivo de formato sin la información de interca
 > [!NOTE]  
 >  [!INCLUDE[ssSampleDBdesc](../../includes/sssampledbdesc-md.md)]  
   
-#### A. Crear un archivo de formato XML para datos de caracteres  
- En el ejemplo siguiente se crea un archivo de formato XML, `Department.xml`, para la tabla [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department`. El archivo de formato usa formatos de datos de caracteres y un terminador de campo no predeterminado (`,`). El contenido del archivo de formato generado se presenta después del comando.  
+#### <a name="a-creating-an-xml-format-file-for-character-data"></a>A. Crear un archivo de formato XML para datos de caracteres  
+ En el ejemplo siguiente se crea un archivo de formato XML, `Department.xml`, para la tabla [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` . El archivo de formato usa formatos de datos de caracteres y un terminador de campo no predeterminado (`,`). El contenido del archivo de formato generado se presenta después del comando.  
   
  El comando **bcp** contiene los calificadores siguientes.  
   
@@ -193,10 +197,10 @@ El siguiente es un ejemplo del archivo de formato sin la información de interca
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|Especifica el archivo de formato XML.|  
 |**-c**|Especifica los datos de caracteres.|  
-|**-t** `,`|Especifica una coma (**,**) como terminador de campo.<br /><br /> Nota: Si el archivo de datos usa el terminador de campo predeterminado (`\t`), no es necesario el modificador **-t**.|  
-|**-T**|Especifica que la utilidad **bcp** se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza utilizando la seguridad integrada. Si no se especifica **-T**, es necesario especificar **-U** y **-P** para poder iniciar sesión correctamente.|  
+|**-t** `,`|Especifica una coma (**,**) como terminador de campo.<br /><br /> Nota: Si el archivo de datos usa el terminador de campo predeterminado (`\t`), no es necesario el modificador **-t** .|  
+|**-T**|Especifica que la utilidad **bcp** se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza utilizando la seguridad integrada. Si no se especifica **-T** , es necesario especificar **-U** y **-P** para poder iniciar sesión correctamente.|  
   
- En el símbolo del sistema de Windows, escriba el siguiente comando `bcp`:  
+ En el símbolo del sistema de Windows, escriba el siguiente comando `bcp` :  
   
 ```  
 bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
@@ -224,7 +228,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  Para obtener más información sobre la sintaxis de este archivo de formato, vea [XML, archivos de formato &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md). Para obtener más información sobre los datos de caracteres, vea [Usar el formato de caracteres para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md).  
   
-#### B. Crear un archivo de formato XML para datos nativos  
+#### <a name="b-creating-an-xml-format-file-for-native-data"></a>B. Crear un archivo de formato XML para datos nativos  
  En el ejemplo siguiente se crea un archivo de formato XML, `Department-n.xml`, para la tabla `HumanResources.Department` . El archivo de formato utiliza tipos de datos nativos. El contenido del archivo de formato generado se presenta después del comando.  
   
  El comando **bcp** contiene los calificadores siguientes.  
@@ -233,9 +237,9 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|Especifica el archivo de formato XML.|  
 |**-n**|Especifica tipos de datos nativos.|  
-|**-T**|Especifica que la utilidad **bcp** se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza utilizando la seguridad integrada. Si no se especifica **-T**, es necesario especificar **-U** y **-P** para poder iniciar sesión correctamente.|  
+|**-T**|Especifica que la utilidad **bcp** se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza utilizando la seguridad integrada. Si no se especifica **-T** , es necesario especificar **-U** y **-P** para poder iniciar sesión correctamente.|  
   
- En el símbolo del sistema de Windows, escriba el siguiente comando `bcp`:  
+ En el símbolo del sistema de Windows, escriba el siguiente comando `bcp` :  
   
 ```  
 bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..xml -n -T  
@@ -263,7 +267,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
   
  Para obtener más información sobre la sintaxis de este archivo de formato, vea [XML, archivos de formato &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md). Para obtener más información sobre cómo usar datos nativos, vea [Usar el formato nativo para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md).  
   
-## Asignar campos de datos a columnas de tabla  
+## <a name="mapping-data-fields-to-table-columns"></a>Asignar campos de datos a columnas de tabla  
  Al igual que cuando se crea mediante **bcp**, un archivo de formato describe todas las columnas de tabla en orden. Puede modificar un archivo de formato para reorganizar u omitir filas de la tabla. Esto permite personalizar un archivo de formato en un archivo de datos cuyos campos no se asignan directamente a las columnas de la tabla. Para obtener más información, consulte los temas siguientes:  
   
 -   [Usar un archivo de formato para omitir una columna de tabla &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
@@ -272,8 +276,8 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
   
 -   [Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## Vea también  
- [bcp (utilidad)](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Vea también  
+ [bcp Utility](../../tools/bcp-utility.md)   
  [Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
  [Usar un archivo de formato para omitir una columna de tabla &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Usar un archivo de formato para omitir un campo de datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)   
@@ -281,3 +285,4 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
  [XML, archivos de formato &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)  
   
   
+

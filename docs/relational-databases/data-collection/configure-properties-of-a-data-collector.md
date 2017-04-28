@@ -1,28 +1,32 @@
 ---
-title: "Configurar las propiedades de un recopilador de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dc.datacollectionprop.general.f1"
-  - "sql13.swb.dc.datacollectionprop.advanced.f1"
+title: "Configuración de las propiedades de un recopilador de datos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dc.datacollectionprop.general.f1
+- sql13.swb.dc.datacollectionprop.advanced.f1
 ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
 caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2a0aad98c302e55b3edc76b01fc0c5eae4e249ac
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurar las propiedades de un recopilador de datos
+# <a name="configure-properties-of-a-data-collector"></a>Configurar las propiedades de un recopilador de datos
   En este tema se describe cómo puede configurar las propiedades de un recopilador de datos.  
   
-## Propiedades de Recopilación de datos (pestaña General)  
+## <a name="data-collection-properties-general-tab"></a>Propiedades de Recopilación de datos (pestaña General)  
  Utilice esta página para configurar las opciones para el almacén de administración de datos y especificar dónde se deben almacenar los datos recopilados antes de cargarse en el almacenamiento de datos.  
   
  **Habilitar recopilación de datos**  
@@ -40,13 +44,13 @@ caps.handback.revision: 5
  **Directorio de caché**  
  Especifica el directorio del sistema en el que se almacenan los datos recopilados antes de cargarlos en el almacén de administración de datos. Si no se especifica **Directorio de caché** , el recopilador de datos intenta buscar las variables de entorno %TEMP% y %TMP% y utilizar una de estas ubicaciones como la ubicación predeterminada para el almacenamiento temporal. Si no se configuran estas variables de entorno, se produce un error y se le pedirá que cree un directorio de caché.  
   
-## Propiedades de Recopilación de datos (pestaña Avanzadas)  
+## <a name="data-collection-properties-advanced-tab"></a>Propiedades de Recopilación de datos (pestaña Avanzadas)  
  Utilice esta página para configurar las opciones de reintentos para la conexión con el almacén de administración de datos.  
   
  **Número de reintentos si no se puede realizar la carga**  
  Especifica el número de reintentos de carga en el almacén de administración de datos si no se puede realizar una carga. El valor predeterminado es 1.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Administrar la recopilación de datos](../../relational-databases/data-collection/manage-data-collection.md)   
  [Configurar el almacén de administración de datos &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)  
   

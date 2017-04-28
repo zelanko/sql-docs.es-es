@@ -1,27 +1,31 @@
 ---
-title: "Restauraciones por etapas (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "actualizaciones parciales [SQL Server]"
-  - "migración por fases [SQL Server]"
-  - "restauración por etapas [SQL Server]"
-  - "restaurar [SQL Server], escenario de restauración por etapas"
+title: Restauraciones por etapas (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partial updates [SQL Server]
+- staged restores [SQL Server]
+- piecemeal restores [SQL Server]
+- restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 caps.latest.revision: 74
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 74
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1c653a1facffa0c6f6422645f3336120e8864f1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restauraciones por etapas (SQL Server)
+# <a name="piecemeal-restores-sql-server"></a>Restauraciones por etapas (SQL Server)
   Este tema es pertinente solo para las bases de datos de la edición Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que incluyen varios archivos o grupos de archivos y, en el modelo simple, únicamente para grupos de archivos de solo lectura.  
   
  Para obtener información sobre la restauración por etapas y las tablas con optimización para memoria, vea [Restauración por etapas de bases de datos con tablas con optimización para memoria](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
@@ -38,7 +42,7 @@ caps.handback.revision: 74
   
  Los requisitos concretos para realizar una restauración por etapas dependen del modelo de recuperación de la base de datos. Para obtener información, vea "	Restauración por etapas con el modelo de recuperación simple" y "Restauración por etapas con el modelo de recuperación completa", más adelante en este tema.  
   
-## Escenarios de restauración por etapas  
+## <a name="piecemeal-restore-scenarios"></a>Escenarios de restauración por etapas  
  Todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admiten restauraciones por etapas sin conexión. En la edición Enterprise, una restauración por etapas puede realizarse en línea o sin conexión. Las implicaciones de las restauraciones por etapas en línea y sin conexión son las siguientes:  
   
 -   Escenario de restauración por etapas sin conexión  
@@ -55,10 +59,10 @@ caps.handback.revision: 74
   
      Para obtener información sobre las restauraciones por etapas de bases de datos de OLTP en memoria, vea [Copias de seguridad y restauración por etapas de bases de datos con tablas con optimización para memoria](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   
-## Restricciones  
- Si una secuencia de restauración parcial excluye cualquier grupo de archivos [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md), no se admite la restauración a un momento dado. Puede forzarse la continuación de la secuencia de restauración. Sin embargo, no se podrán restaurar los grupos de archivos FILESTREAM omitidos en la instrucción RESTORE. Para forzar una restauración a un momento específico, especifique la opción CONTINUE_AFTER_ERROR junto con la opción STOPAT, STOPATMARK o STOPBEFOREMARK, que debe especificar también en las instrucciones RESTORE LOG siguientes. Si se especifica CONTINUE_AFTER_ERROR, la secuencia de restauración parcial será correcta y el grupo de archivos FILESTREAM no será recuperable.  
+## <a name="restrictions"></a>Restricciones  
+ Si una secuencia de restauración parcial excluye cualquier grupo de archivos [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) , no se admite la restauración a un momento dado. Puede forzarse la continuación de la secuencia de restauración. Sin embargo, no se podrán restaurar los grupos de archivos FILESTREAM omitidos en la instrucción RESTORE. Para forzar una restauración a un momento específico, especifique la opción CONTINUE_AFTER_ERROR junto con la opción STOPAT, STOPATMARK o STOPBEFOREMARK, que debe especificar también en las instrucciones RESTORE LOG siguientes. Si se especifica CONTINUE_AFTER_ERROR, la secuencia de restauración parcial será correcta y el grupo de archivos FILESTREAM no será recuperable.  
   
-## Restauración por etapas con el modelo de recuperación simple  
+## <a name="piecemeal-restore-under-the-simple-recovery-model"></a>Restauración por etapas con el modelo de recuperación simple  
  Con el modelo de recuperación simple, la secuencia de restauración por etapas debe comenzar con una copia de seguridad completa o parcial de la base de datos. A continuación, si la copia de seguridad restaurada es una base diferencial, restaure la copia de seguridad diferencial más reciente.  
   
  Durante la primera secuencia de restauración parcial, si solo se restaura un subconjunto de grupos de archivos de lectura/escritura, todos los grupos de archivos no restaurados quedan inactivos al recuperar la base de datos restaurada parcialmente. La exclusión de un grupo de archivos de lectura/escritura de una secuencia de restauración parcial solo es apropiada en los siguientes casos:  
@@ -69,7 +73,7 @@ caps.handback.revision: 74
   
 -   La copia de seguridad completa se realizó mientras la base de datos utilizaba el modelo de recuperación simple, pero el punto de recuperación es de un momento cuando la base de datos utilizaba el modelo de recuperación completa. Para obtener información, vea "Realizar una restauración por etapas de una base de datos cuyo modelo de recuperación ha cambiado de simple a completo", más adelante en este tema.  
   
-### Requisitos de la restauración por etapas con el modelo de recuperación simple  
+### <a name="requirements-for-piecemeal-restore-under-the-simple-recovery-model"></a>Requisitos de la restauración por etapas con el modelo de recuperación simple  
  Con el modelo de recuperación simple, la fase inicial restaura y recupera el grupo de archivos principal y todos los grupos de archivos de lectura/escritura secundarios. Una vez terminada la fase inicial, los archivos recuperados (si son válidos y coherentes con la base de datos) pueden ponerse en línea directamente.  
   
  A partir de ese momento, se pueden restaurar los grupos de archivos de solo lectura en una o varias fases adicionales.  
@@ -90,7 +94,7 @@ caps.handback.revision: 74
   
 -   Para que la copia de seguridad de un archivo de solo lectura sea coherente con el grupo de archivos principal, el grupo de archivos secundario debe haber sido de solo lectura desde que se hizo la copia de seguridad hasta que se completó la copia de seguridad que incluye el grupo de archivos principal. Puede usar copias de seguridad diferenciales de archivos si se hicieron después de que el grupo de archivos pasara a ser de solo lectura.  
   
-### Fases de la restauración por etapas (modelo de recuperación simple)  
+### <a name="piecemeal-restore-stages-simple-recovery-model"></a>Fases de la restauración por etapas (modelo de recuperación simple)  
  El escenario de restauración por etapas implica las siguientes etapas:  
   
 -   Fase inicial (restauración y recuperación del grupo de archivos principal y de todos los grupos de archivos de lectura/escritura)  
@@ -116,16 +120,16 @@ caps.handback.revision: 74
   
     -   Los archivos dañados o incoherentes con la base de datos se deben restaurar antes de recuperarlos.  
   
-### Ejemplos  
+### <a name="examples"></a>Ejemplos  
   
 -   [Ejemplo: restauración por etapas de base de datos &#40;modelo de recuperación simple&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [Ejemplo: restauración por etapas exclusiva para algunos grupos de archivos &#40;modelo de recuperación simple&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
-## Restauración por etapas con el modelo de recuperación completa  
+## <a name="piecemeal-restore-under-the-full-recovery-model"></a>Restauración por etapas con el modelo de recuperación completa  
  Con el modelo de recuperación completa o el modelo de recuperación optimizado para cargas masivas de registros, se puede realizar una restauración por etapas de cualquier base de datos que incluya varios grupos de archivos y se puede restaurar una base de datos a cualquier momento dado en el tiempo. Las secuencias de la restauración por etapas son las siguientes:  
   
--   Secuencia de restauración parcial  
+-   secuencia de restauración parcial  
   
      La secuencia de restauración parcial restaura el grupo de archivos principal y, opcionalmente, algunos de los grupos de archivos secundarios.  
   
@@ -141,16 +145,16 @@ caps.handback.revision: 74
   
      En la edición Enterprise, se puede restaurar y recuperar cualquier grupo de archivos secundario sin conexión mientras la base de datos permanece en línea. Si un determinado archivo de solo lectura está dañado o no es coherente con la base de datos, no necesita restauración. Para obtener más información, vea [Recuperar una base de datos sin restaurar los datos &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
-### Aplicar copias de seguridad de registros  
+### <a name="applying-log-backups"></a>Aplicar copias de seguridad de registros  
  Si un grupo de archivos de solo lectura ha sido de solo lectura desde antes de la creación de la copia de seguridad de archivos, no es necesario aplicar las copias de seguridad de registros al grupo de archivos y éstas se omiten en la restauración de archivos. Si el grupo de archivos es de lectura/escritura, debe aplicarse una cadena ininterrumpida de copias de seguridad de registros a la última recuperación completa o diferencial para actualizar el grupo de archivos al archivo de registro actual.  
   
-### Ejemplos  
+### <a name="examples"></a>Ejemplos  
   
 -   [Ejemplo: restauración por etapas de base de datos &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   
 -   [Ejemplo: restauración por etapas exclusiva para algunos grupos de archivos &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
-## Realizar una restauración por etapas de una base de datos cuyo modelo de recuperación ha cambiado de simple a completo  
+## <a name="performing-a-piecemeal-restore-of-a-database-whose-recovery-model-has-been-switched-from-simple-to-full"></a>Realizar una restauración por etapas de una base de datos cuyo modelo de recuperación ha cambiado de simple a completo  
  Puede realizar una restauración por etapas de una base de datos cuyo modelo de recuperación haya cambiado de un modelo de recuperación simple a uno completo desde la creación de la copia de seguridad parcial, completa o de base de datos. Por ejemplo, supongamos que realiza los siguientes pasos para una base de datos:  
   
 1.  Crea una copia de seguridad parcial (copia_1) de una base de datos de modelo simple.  
@@ -171,9 +175,9 @@ caps.handback.revision: 74
   
 4.  Una copia de seguridad diferencial se realiza después de otras copias de seguridad restauradas en la secuencia de restauración por etapas original para restaurar los datos hasta el punto de recuperación original.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [Información general sobre restauración y recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Planear y realizar secuencias de restauración &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  

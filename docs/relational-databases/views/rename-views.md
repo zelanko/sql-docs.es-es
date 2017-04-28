@@ -1,25 +1,29 @@
 ---
-title: "Cambiar el nombre de las vistas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "vistas [SQL Server], cambio de nombre"
-  - "cambiar el nombre de vistas"
+title: Cambio de nombre de las vistas | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- views [SQL Server], renaming
+- renaming views
 ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9577d5597eff0cb2bd3e30771c4e2765eadb42b6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cambiar el nombre de las vistas
+# <a name="rename-views"></a>Cambiar el nombre de las vistas
   Puede cambiar el nombre de una vista en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!WARNING]  
@@ -39,7 +43,7 @@ caps.handback.revision: 17
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**  [Después de cambiar el nombre de una vista](#FollowUp)  
+-   **Follow Up:**  [After renaming a view](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para cambiar el nombre de una vista  
+#### <a name="to-rename-a-view"></a>Para cambiar el nombre de una vista  
   
 1.  En el **Explorador de objetos**, expanda la base de datos que contiene la vista cuyo nombre desea cambiar y, a continuación, expanda la carpeta **Vista** .  
   

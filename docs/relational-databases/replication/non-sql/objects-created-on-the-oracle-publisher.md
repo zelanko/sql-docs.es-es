@@ -1,30 +1,34 @@
 ---
-title: "Objetos creados en el publicador de Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "publicación de Oracle [replicación de SQL Server], objetos creados"
+title: Objetos creados en el publicador de Oracle | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], objects created
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97a45c8f524f81d01dceda7a616932b18e799d82
+ms.lasthandoff: 04/11/2017
+
 ---
-# Objetos creados en el publicador de Oracle
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replicación instala los objetos de base de datos en el publicador de Oracle para habilitar el seguimiento de cambios y reenvío ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no instala ningún archivo binario en el publicador de Oracle). En la siguiente tabla se muestran los objetos que se crean en el publicador de Oracle cuando se identifica como publicador en el distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Las descripciones de los objetos se proporcionan solo como información. Estos objetos no se deben modificar.  
+# <a name="objects-created-on-the-oracle-publisher"></a>Objetos creados en el publicador de Oracle
+  La replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala objetos de base de datos en el publicador de Oracle para habilitar el seguimiento y reenvío de los cambios ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no instala ningún archivo binario en el publicador de Oracle). En la siguiente tabla se muestran los objetos que se crean en el publicador de Oracle cuando se identifica como publicador en el distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Las descripciones de los objetos se proporcionan solo como información. Estos objetos no se deben modificar.  
   
 |Nombre de objeto|Tipo de objeto|Descripción|  
 |-----------------|-----------------|-----------------|  
 |HREPL_ArticleNlog_V|Tabla|Tabla de seguimiento de cambios que se utiliza para almacenar información cuando se realizan cambios en la tabla publicada. Se crea una tabla de seguimiento de cambios para cada tabla publicada.|  
-|HREPL_Changes|Tabla|Tabla utilizada internamente por el trabajo Xactset para determinar el número de cambios que esperan ser asignados a un conjunto de transacciones. Para obtener más información acerca de este trabajo, consulte [ajuste del rendimiento de los publicadores de Oracle](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).|  
+|HREPL_Changes|Tabla|Tabla utilizada internamente por el trabajo Xactset para determinar el número de cambios que esperan ser asignados a un conjunto de transacciones. Para obtener más información sobre este trabajo, consulte [Optimizar el rendimiento de publicadores de Oracle](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).|  
 |HREPL_Distributor|Tabla|Tabla de estado del distribuidor que se utiliza para mantener información acerca del distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] asociado con el publicador de Oracle.|  
 |HREPL_Event|Tabla|Tabla de eventos que se utiliza para sincronizar instantáneas y solicitudes de recuento de filas.|  
 |HREPL_Mutex|Tabla|Tabla que se utiliza para garantizar que el procedimiento de paquetes de Oracle PopulatePollTable no se ejecute simultáneamente por el Agente de registro del LOG y el trabajo de la base de datos.|  
@@ -47,9 +51,9 @@ caps.handback.revision: 33
 |HREPL_Article_I_J|Ver|Vista creada para cada tabla publicada, que se utiliza para realizar consultas en la tabla publicada.|  
 |HREPL_Log_I_J_K|Ver|Vista creada para cada tabla publicada, que se utiliza para realizar consultas en la tabla de seguimiento de cambios.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Glosario de términos de publicaciones de Oracle](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
- [Información general de la publicación de Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

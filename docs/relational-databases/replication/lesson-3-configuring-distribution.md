@@ -1,31 +1,35 @@
 ---
-title: "Lecci&#243;n 3: Configurar la distribuci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "replicación [SQL Server], tutoriales"
+title: "Lección 3: Configuración de la distribución | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e582c5fb7853c69a083755a944bd3922d0d4c5af
+ms.lasthandoff: 04/11/2017
+
 ---
-# Lecci&#243;n 3: Configurar la distribuci&#243;n
+# <a name="lesson-3-configuring-distribution"></a>Lección 3: Configurar la distribución
 En esta lección configurará la distribución en el publicador y establecerá los permisos requeridos en las bases de datos de publicación y distribución. Si ya ha configurado el distribuidor, debe deshabilitar la publicación y distribución antes de iniciar esta lección. No lo haga si debe mantener una topología de replicación existente.  
   
 En este tutorial no se contempla la configuración de un publicador con un distribuidor remoto.  
   
-### Configurar la distribución en el publicador  
+### <a name="configuring-distribution-at-the-publisher"></a>Configurar la distribución en el publicador  
   
 1.  Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y luego expanda el nodo del servidor.  
   
@@ -36,37 +40,38 @@ En este tutorial no se contempla la configuración de un publicador con un distr
   
     Se iniciará el Asistente para configurar la distribución.  
   
-3.  En la página **Distribuidor**, seleccione 'NombreServidor' actuará como su propio distribuidor; SQL Server creará una base de datos y un registro de distribución** y luego haga clic en **Siguiente**.  
+3.  En la página **Distribuidor**, seleccione 'nombreDeServidor' actuará como su propio distribuidor; SQL Server creará una base de datos y un registro de distribución** y, luego, haga clic en **Siguiente**.  
   
 4.  Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se está ejecutando, en la página [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Inicio del Agente** , seleccione **Sí**, configurar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del Agente para que se inicie automáticamente. Haga clic en **Siguiente**.  
   
-5.  Escriba **\\\\**\<*nombre_equipo>***\repldata** en el cuadro de texto **Carpeta de instantáneas**, donde \<*nombre_equipo>* es el nombre del publicador y luego haga clic en **Siguiente**.  
+5.  Introduzca **\\\\**\<*nombreDeEquipo>***\repldata** en el cuadro de texto **Carpeta de instantáneas**, donde\<*nombreDeEquipo>* es el nombre del publicador y luego haga clic en **Siguiente**.  
   
 6.  Acepte los valores predeterminados en las páginas restantes del asistente.  
   
 7.  Haga clic en **Finalizar** para habilitar la distribución.  
   
-### Establecer permisos de base de datos en el publicador  
+### <a name="setting-database-permissions-at-the-publisher"></a>Establecer permisos de base de datos en el publicador  
   
-1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Seguridad**, haga clic con el botón derecho en **Inicios de sesión** y, después, seleccione **Nuevo inicio de sesión**.  
+1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Seguridad**, haga clic con el botón derecho en **Inicios de sesión**y, después, seleccione **Nuevo inicio de sesión**.  
   
-2.  En la página **General**, haga clic en **Buscar**, escriba \<*nombre_equipo>***\repl_snapshot** en el cuadro **Escriba el nombre del objeto que desea seleccionar**, donde \<*nombre_equipo>* es el nombre del servidor local del publicador, haga clic en **Comprobar nombres** y, después, haga clic en **Aceptar**.  
+2.  En la página **General**, haga clic en **Buscar**, escriba \<*nombreDeEquipo>***\repl_snapshot** en el cuadro **Escriba el nombre del objeto que desea seleccionar**, donde \<*nombreDeEquipo>* es el nombre del servidor local del publicador, haga clic en **Comprobar nombres** y, después, haga clic en **Aceptar**.  
   
 3.  En la página **Asignación de usuarios** , en la lista **Usuarios asignados a este inicio de sesión** , seleccione las bases de datos de **distribución** y de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-    En la lista **Pertenencia al rol de la base de datos**, seleccione el rol **db_owner** para el inicio de sesión en ambas bases de datos.  
+    En la lista **Pertenencia al rol de la base de datos** , seleccione el rol **db_owner** para el inicio de sesión en ambas bases de datos.  
   
 4.  Haga clic en **Aceptar** para crear el inicio de sesión.  
   
-5.  Repita los pasos 1 a 4 para crear un inicio de sesión para la cuenta local de repl_logreader. El inicio de sesión también se debe asignar a usuarios que son miembros del rol fijo de base de datos **db_owner** en las bases de datos **distribution** y **AdventureWorks**.  
+5.  Repita los pasos 1 a 4 para crear un inicio de sesión para la cuenta local de repl_logreader. El inicio de sesión también se debe asignar a usuarios que son miembros del rol fijo de base de datos **db_owner** en las bases de datos **distribution** y **AdventureWorks** .  
   
-6.  Repita los pasos 1 a 4 para crear un inicio de sesión para la cuenta local de repl_distribution. El inicio de sesión se debe asignar a los usuarios que son miembros del rol fijo de base de datos **db_owner** en la base de datos **distribution**.  
+6.  Repita los pasos 1 a 4 para crear un inicio de sesión para la cuenta local de repl_distribution. El inicio de sesión se debe asignar a los usuarios que son miembros del rol fijo de base de datos **db_owner** en la base de datos **distribution** .  
   
 7.  Repita los pasos 1 a 4 para crear un inicio de sesión para la cuenta local de repl_merge. Este inicio de sesión debe contar con asignaciones de usuario en las bases de datos **distribution** y **AdventureWorks** .  
   
-## Vea también  
-[Configurar la distribución](../../relational-databases/replication/configure-distribution.md)  
+## <a name="see-also"></a>Vea también  
+[Configurar distribución](../../relational-databases/replication/configure-distribution.md)  
 [Modelo de seguridad del Agente de replicación](../../relational-databases/replication/security/replication-agent-security-model.md)  
   
   
   
+

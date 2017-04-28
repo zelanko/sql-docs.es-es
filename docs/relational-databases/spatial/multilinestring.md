@@ -1,31 +1,35 @@
 ---
-title: "MultiLineString | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Subtipo de Multilinestring de Geometry [SQL Server]"
-  - "subtipos de Geometry [SQL Server]"
+title: MultiLineString | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MultiLineString geometry subtype [SQL Server]
+- geometry subtypes [SQL Server]
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 398a68b50469ffb778434f59b6895435a8da62c6
+ms.lasthandoff: 04/11/2017
+
 ---
-# MultiLineString
-  Un **MultiLineString** es una colección de cero o más instancias de **geometry** o **geographyLineString**.  
+# <a name="multilinestring"></a>MultiLineString
+  Un **MultiLineString** es una colección de cero o más instancias de **geometry** o **geographyLineString** .  
   
-## Instancias de MultiLineString  
+## <a name="multilinestring-instances"></a>Instancias de MultiLineString  
  En la ilustración siguiente se muestran ejemplos de instancias de **MultiLineString** .  
   
- ![Ejemplos de instancias MultiLineString de geometry](../../relational-databases/spatial/media/multilinestring.png "Ejemplos de instancias MultiLineString de geometry")  
+ ![Ejemplos de instancias MultiLineString de geometry](../../relational-databases/spatial/media/multilinestring.gif "Ejemplos de instancias MultiLineString de geometry")  
   
  Como se muestra en la ilustración:  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 19
   
 -   La figura 6 es una instancia de **MultiLineString** sencilla y cerrada. Está cerrada porque lo están todos sus elementos. Es sencilla porque ninguno de sus elementos forma parte de una intersección con los interiores.  
   
-### Instancias aceptadas  
+### <a name="accepted-instances"></a>Instancias aceptadas  
  Para que se acepte una instancia de **MultiLineString** , debe estar vacío o estar formada solo por instancias de **LineString** aceptadas. Para obtener más información sobre instancias **LineString** aceptadas, vea [LineString](../../relational-databases/spatial/linestring.md). A continuación se enumeran ejemplos de instancias **MultiLineString** aceptadas.  
   
 ```  
@@ -57,7 +61,7 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';  
 ```  
   
-### Instancias válidas  
+### <a name="valid-instances"></a>Instancias válidas  
  Para que una instancia de **MultiLineString** sea válida debe cumplir los siguientes criterios:  
   
 1.  Todas las instancias que forman la instancia de **MultiLineString** deben ser instancias válidas de **LineString** .  
@@ -76,7 +80,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
   
  `@g4` no es válido porque la segunda instancia de **LineString** se superpone a la primera instancia de **LineString** en un intervalo. Se tocan en un número infinito de puntos.  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente crea una instancia sencilla de `geometry``MultiLineString` que contiene dos elementos `LineString` con un SRID de 0.  
   
 ```  
@@ -92,7 +96,7 @@ SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');
 SET @g.STSrid = 13;  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [STLength &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STIsClosed &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
  [LineString](../../relational-databases/spatial/linestring.md)   

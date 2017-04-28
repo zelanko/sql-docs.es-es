@@ -1,24 +1,28 @@
 ---
-title: "Crear tablas (motor de base de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "creación de tablas [SQL Server], Visual Database Tools"
+title: "Creación de tablas (motor de base de datos) | Microsoft Docs"
+ms.custom: 
+ms.date: 09/22/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table creation [SQL Server], Visual Database Tools
 ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57e54a247e190cdf6e52746ca591af5cc4de8507
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear tablas (motor de base de datos)
+# <a name="create-tables-database-engine"></a>Crear tablas (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Puede crear una nueva tabla, asignarle un nombre y agregarla a una base de datos existente en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -35,7 +39,7 @@ Esta tarea necesita el permiso CREATE TABLE en la base de datos y el permiso ALT
  Si las columnas de la instrucción CREATE TABLE tienen asociada una colección de esquemas XML, se necesita la propiedad de la colección de esquemas XML o el permiso REFERENCES.  
   
  
-## Usar el Diseñador de tablas  
+## <a name="using-table-designer"></a>Usar el Diseñador de tablas  
   
 1.  En SSMS, en el **Explorador de objetos**, conéctese a la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que contiene la base de datos que se va a modificar.  
   
@@ -55,9 +59,9 @@ Esta tarea necesita el permiso CREATE TABLE en la base de datos y el permiso ALT
   
      ![AddTableObjects](../../relational-databases/tables/media/addtableobjects.gif "AddTableObjects")  
   
-     Para obtener más información acerca de estos objetos, vea [Create Foreign Key Relationships](../../relational-databases/tables/crear-relaciones-de-clave-externa.md), [Create Check Constraints](../../relational-databases/tables/create-check-constraints.md) e [Indexes](../../relational-databases/indexes/indexes.md).  
+     Para obtener más información acerca de estos objetos, vea [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md), [Create Check Constraints](../../relational-databases/tables/create-check-constraints.md) e [Indexes](../../relational-databases/indexes/indexes.md).  
   
-8.  De forma predeterminada, la tabla está contenida en el esquema **dbo** . Para especificar un esquema diferente para la tabla, haga clic con el botón derecho en el panel Diseñador de tablas y seleccione **Propiedades** como se muestra en la ilustración siguiente. En la lista desplegable **Esquema**, seleccione el esquema adecuado.  
+8.  De forma predeterminada, la tabla está contenida en el esquema **dbo** . Para especificar un esquema diferente para la tabla, haga clic con el botón derecho en el panel Diseñador de tablas y seleccione **Propiedades** como se muestra en la ilustración siguiente. En la lista desplegable **Esquema** , seleccione el esquema adecuado.  
   
      ![Specifyatableschema](../../relational-databases/tables/media/specifyatableschema.gif "Specifyatableschema")  
   
@@ -71,7 +75,7 @@ Esta tarea necesita el permiso CREATE TABLE en la base de datos y el permiso ALT
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-## Usar el Editor de consultas  
+## <a name="using-query-editor"></a>Usar el Editor de consultas  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -96,3 +100,4 @@ Esta tarea necesita el permiso CREATE TABLE en la base de datos y el permiso ALT
  Para obtener más ejemplos, vea [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
   
+

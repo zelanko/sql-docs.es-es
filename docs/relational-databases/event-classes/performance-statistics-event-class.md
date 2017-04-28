@@ -1,30 +1,34 @@
 ---
-title: "Performance Statistics (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Performance Statistics, clase de eventos"
+title: Performance Statistics, clase de eventos | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Performance Statistics event class
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 94f6ab1826086a7c835b7a5a371f92b362727cff
+ms.lasthandoff: 04/11/2017
+
 ---
-# Performance Statistics (clase de eventos)
+# <a name="performance-statistics-event-class"></a>Performance Statistics, clase de eventos
   La clase de eventos Performance Statistics se puede utilizar para supervisar el rendimiento de las consultas, los procedimientos almacenados y los desencadenadores que se están ejecutando. Cada una de las seis subclases de evento indica un evento en la vigencia de las consultas, los procedimientos almacenados y los desencadenadores dentro del sistema. Si usa la combinación de estas subclases de evento y las vistas de administración dinámica asociadas sys.dm_exec_query_stats, sys.dm_exec_procedure_stats y sys.dm_exec_trigger_stats, puede reconstituir el historial de rendimiento de cualquier consulta, procedimiento almacenado o desencadenador dados.  
   
-## Columnas de datos de la clase de evento Performance Statistics  
+## <a name="performance-statistics-event-class-data-columns"></a>Columnas de datos de la clase de evento Performance Statistics  
  Las tablas siguientes describen las columnas de datos de clase de eventos con cada una de las siguientes subclases de evento: EventSubClass 0, EventSubClass 1, EventSubClass 2, EventSubClass 3, EventSubClass 4 y EventSubClass 5.  
   
-### EventSubClass 0  
+### <a name="eventsubclass-0"></a>EventSubClass 0  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -36,14 +40,14 @@ caps.handback.revision: 32
 |IntegerData2|**int**|NULL|55|Sí|  
 |ObjectID|**int**|NULL|22|Sí|  
 |Offset|**int**|NULL|61|Sí|  
-|PlanHandle|**Imagen**|NULL|65|Sí|  
+|PlanHandle|**Image**|NULL|65|Sí|  
 |SessionLoginName|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|**int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |SqlHandle|**imagen**|Identificador SQL que se puede utilizar para obtener el texto SQL del lote mediante la vista de administración dinámica sys.dm_exec_sql_text.|63|Sí|  
 |StartTime|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |TextData|**ntext**|Texto SQL del lote.|1|Sí|  
   
-### EventSubClass 1  
+### <a name="eventsubclass-1"></a>EventSubClass 1  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -67,7 +71,7 @@ caps.handback.revision: 32
 |Duración|**int**|Tiempo total transcurrido durante la compilación (en microsegundos).|13|Sí|  
 |IntegerData|**int**|Tamaño, en kilobytes, del plan compilado.|25|Sí|  
   
-### EventSubClass 2  
+### <a name="eventsubclass-2"></a>EventSubClass 2  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -90,7 +94,7 @@ caps.handback.revision: 32
 |Duración|**int**|Tiempo total transcurrido durante la compilación (en milisegundos).|13|Sí|  
 |IntegerData|**int**|Tamaño, en kilobytes, del plan compilado.|25|Sí|  
   
-### EventSubClass 3  
+### <a name="eventsubclass-3"></a>EventSubClass 3  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -110,7 +114,7 @@ caps.handback.revision: 32
 |PlanHandle|**imagen**|Identificador del plan compilado para el lote o procedimiento almacenado. Se puede usar para obtener el plan XML mediante la vista de administración dinámica dm_exec_query_plan.|65|Sí|  
 |GroupID|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
   
-### EventSubClass 4  
+### <a name="eventsubclass-4"></a>EventSubClass 4  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -130,7 +134,7 @@ caps.handback.revision: 32
 |PlanHandle|**imagen**|Identificador del plan compilado para el procedimiento almacenado. Se puede usar para obtener el plan XML mediante la vista de administración dinámica dm_exec_query_plan.|65|Sí|  
 |GroupID|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
   
-### EventSubClass 5  
+### <a name="eventsubclass-5"></a>EventSubClass 5  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -150,10 +154,11 @@ caps.handback.revision: 32
 |PlanHandle|**imagen**|Identificador del plan compilado para el desencadenador. Se puede usar para obtener el plan XML mediante la vista de administración dinámica dm_exec_query_plan.|65|Sí|  
 |GroupID|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Showplan XML For Query Compile (clase de eventos)](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md)   
- [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](../Topic/Dynamic%20Management%20Views%20and%20Functions%20\(Transact-SQL\).md)  
+ [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   
+

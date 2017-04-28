@@ -1,25 +1,29 @@
 ---
-title: "Replicaci&#243;n de mezcla | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "replicación de mezcla [replicación de SQL Server], acerca de la replicación de mezcla"
-  - "replicación de mezcla [replicación de SQL Server]"
+title: "Replicación de mezcla | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- merge replication [SQL Server replication], about merge replication
+- merge replication [SQL Server replication]
 ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5eaf827f2da31a125dbfad5831553c0f15894e21
+ms.lasthandoff: 04/11/2017
+
 ---
-# Replicaci&#243;n de mezcla
+# <a name="merge-replication"></a>Replicación de mezcla
   La replicación de mezcla, como la replicación transaccional, normalmente se inicia con una instantánea de los objetos y datos de una base de datos de publicaciones. Los cambios de datos y las modificaciones de esquema posteriores que se lleven a cabo en el publicador y en los suscriptores se controlan mediante desencadenadores. El suscriptor se sincroniza con el publicador cuando están conectados a la red e intercambian todas las filas que han cambiado entre el publicador y el suscriptor desde la última vez que se produjo la sincronización.  
   
  La replicación de mezcla se suele utilizar en entornos de servidor a cliente. La replicación de mezcla es adecuada en las siguientes situaciones:  
@@ -38,10 +42,10 @@ caps.handback.revision: 34
   
  El Agente de instantáneas y el Agente de mezcla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementan la replicación de mezcla. Si la publicación no se filtra o utiliza filtros estáticos, el Agente de instantáneas crea una sola instantánea. Si la publicación utiliza filtros con parámetros, el Agente de instantáneas crea una instantánea para cada partición de datos. El Agente de mezcla aplica las instantáneas iniciales a los suscriptores. También combina los cambios incrementales de los datos que tienen lugar en el publicador o en los suscriptores después de la creación de la instantánea inicial y detecta y resuelve los conflictos según las reglas que configure.  
   
- Para realizar un seguimiento de los cambios, la replicación de mezcla (y la replicación transaccional con suscripciones de actualización en cola) deben poder identificar de forma única cada fila de todas las tablas publicadas. Para conseguir esta combinación replicación agrega la columna **rowguid** a todas las tablas, a menos que la tabla ya tiene una columna de tipo de datos **uniqueidentifier** con el **ROWGUIDCOL** propiedad establecida (en cuyo caso se usa esta columna). Si la tabla se quita de la publicación, la columna **rowguid** se quita; si se ha usado una columna existente para realizar el seguimiento, la columna no se quita. Un filtro no debe incluir la columna **rowguidcol** que usa la replicación para identificar filas. El **newid()** se proporciona una función como valor predeterminado para el **rowguid** columna, no obstante los clientes pueden proporcionar un guid para cada fila si es necesario. Sin embargo, no proporciona valor 00000000-0000-0000-0000-000000000000.  
+ Para realizar un seguimiento de los cambios, la replicación de mezcla (y la replicación transaccional con suscripciones de actualización en cola) deben poder identificar de forma única cada fila de todas las tablas publicadas. Para conseguirlo, l.La replicación de mezcla agrega la columna **rowguid** a todas las tablas, a menos que la tabla ya tenga una columna del tipo de datos **uniqueidentifier** con la propiedad **ROWGUIDCOL** definida (en cuyo caso se usa dicha columna). Si la tabla se quita de la publicación, la columna **rowguid** se quita; si se ha usado una columna existente para realizar el seguimiento, la columna no se quita. Un filtro no debe incluir la columna **rowguidcol** que usa la replicación para identificar filas. La función **newid()** se proporciona como valor predeterminado para la columna de **rowguid** ; no obstante, los clientes pueden proporcionar un GUID para cada fila si es necesario. Sin embargo, no proporcione el valor 00000000-0000-0000-0000-000000000000.  
   
  En el siguiente diagrama se muestran los componentes que se utilizan en la replicación de mezcla.  
   
- ![Mezclar componentes de replicación y flujo de datos](../../../relational-databases/replication/merge/media/merge.gif "Mezclar componentes de replicación y flujo de datos")  
+ ![Mezcla de componentes de replicación y flujo de datos](../../../relational-databases/replication/merge/media/merge.gif "Mezcla de componentes de replicación y flujo de datos")  
   
   

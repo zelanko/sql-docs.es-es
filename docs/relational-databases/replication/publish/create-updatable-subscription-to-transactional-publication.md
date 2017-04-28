@@ -1,45 +1,49 @@
 ---
-title: "Crear una suscripci&#243;n actualizable en una publicaci&#243;n transaccional con Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "suscripciones transaccionales actualizables, T-SQL"
+title: "Creación de una suscripción actualizable en una publicación transaccional | Microsoft Docs"
+ms.custom: 
+ms.date: 07/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- updateable transactional subscriptions, T-SQL
 ms.assetid: a6e80857-0a69-4867-b6b7-f3629d00c312
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7e21ddca2057879f3f9cde2bf5decf3c97944269
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear una suscripci&#243;n actualizable en una publicaci&#243;n transaccional con Transact-SQL
+# <a name="create-updatable-subscription-to-transactional-publication"></a>Creación de una suscripción actualizable en una publicación transaccional
 
 > [!NOTE]  
 >  Esta característica sigue siendo compatible con las versiones de [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] entre 2012 y 2016.  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
  
 La replicación transaccional permite que los cambios realizados en un suscriptor puedan volver a propagarse al publicador utilizando suscripciones de actualización inmediatas o en cola. Puede crear las suscripciones de actualización mediante programación usando procedimientos almacenados de replicación. (Consulte también [Crear una suscripción actualizable a una publicación transaccional [Management Studio]](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)). 
 
-## Para crear una suscripción de extracción de actualización inmediata ##
+## <a name="to-create-an-immediate-updating-pull-subscription"></a>Para crear una suscripción de extracción de actualización inmediata ##
 
-1. En el publicado, ejecute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) para comprobar que la publicación admite las suscripciones de actualización inmediata. 
+1. En el publicado, ejecute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)para comprobar que la publicación admite las suscripciones de actualización inmediata. 
 
     * Si el valor de `allow_sync_tran` en el conjunto de resultados es `1`, la publicación admite las suscripciones de actualización inmediata.
 
     * Si el valor de `allow_sync_tran` en el conjunto de resultados es `0`, la publicación se debe volver a crear con suscripciones de actualización inmediata habilitadas.
 
-2. En el publicador, ejecute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) para comprobar que la publicación admite las suscripciones de extracción. 
+2. En el publicador, ejecute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)para comprobar que la publicación admite las suscripciones de extracción. 
 
     * Si el valor de `allow_pull` en el conjunto de resultados es `1`, la publicación admite las suscripciones de extracción.
 
-    * Si el valor de `allow_pull` es `0`, ejecute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) y especifique `allow_pull` para `@property` y `true` para `@value`. 
+    * Si el valor de `allow_pull` es `0`, ejecute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)y especifique `allow_pull` para `@property` y `true` para `@value`. 
 
-3. En el suscriptor, ejecute [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Especifique `@publisher`, `@publication` y uno de los valores siguientes para `@update_mode`:
+3. En el suscriptor, ejecute [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Especifique `@publisher` , `@publication`y uno de los valores siguientes para `@update_mode`:
 
     * `sync tran` : habilita la suscripción de actualización inmediata.
 
@@ -50,7 +54,7 @@ La replicación transaccional permite que los cambios realizados en un suscripto
  
 4. En el suscriptor, ejecute [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Especifique lo siguiente:
 
-    * Los parámetros `@publisher`, `@publisher_db` y `@publication`. 
+    * Los parámetros `@publisher`, `@publisher_db`y `@publication` . 
 
     * Las credenciales de Microsoft Windows con las que se ejecuta el Agente de distribución en el suscriptor para `@job_login` y `@job_password`. 
 
@@ -61,7 +65,7 @@ La replicación transaccional permite que los cambios realizados en un suscripto
 
     * Una programación para el trabajo del Agente de distribución de esta suscripción. 
 
-5. En el suscriptor de la base de datos de suscripción, ejecute [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Especifique `@publisher`, `@publication`, el nombre de la base de datos de publicación para `@publisher_db` y uno de los valores siguientes para `@security_mode`: 
+5. En el suscriptor de la base de datos de suscripción, ejecute [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Especifique `@publisher`, `@publication`, el nombre de la base de datos de publicación para `@publisher_db`y uno de los valores siguientes para `@security_mode`: 
 
     * `0` - Use Autenticación de SQL Server al realizar las actualizaciones en el publicador. Esta opción le exige que especifique un inicio de sesión válido en el publicador para `@login` y `@password`.
 
@@ -69,26 +73,26 @@ La replicación transaccional permite que los cambios realizados en un suscripto
 
     * `2` - Use un inicio de sesión vinculado definido por el usuario ya existente y creado con [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).
 
-6. En el publicador, ejecute [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) y especifique `@publication`, `@subscriber`, `@destination_db`, un valor de extracción para `@subscription_type` y el mismo valor que especificó en el paso 3 para `@update_mode`.
+6. En el publicador, ejecute [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) y especifique `@publication`, `@subscriber`, `@destination_db`, un valor de extracción para `@subscription_type`y el mismo valor que especificó en el paso 3 para `@update_mode`.
 
 Esto registra la suscripción de extracción en el publicador. 
 
 
-## Para crear una suscripción de inserción de actualización inmediata ##
+## <a name="to-create-an-immediate-updating-push-subscription"></a>Para crear una suscripción de inserción de actualización inmediata ##
 
-1. En el publicado, ejecute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) para comprobar que la publicación admite las suscripciones de actualización inmediata. 
+1. En el publicado, ejecute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)para comprobar que la publicación admite las suscripciones de actualización inmediata. 
 
     * Si el valor de `allow_sync_tran` en el conjunto de resultados es `1`, la publicación admite las suscripciones de actualización inmediata.
 
     * Si el valor de `allow_sync_tran` en el conjunto de resultados es `0`, la publicación se debe volver a crear con suscripciones de actualización inmediata habilitadas.
 
-2. En el publicador, ejecute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) para comprobar que la publicación admite suscripciones de inserción. 
+2. En el publicador, ejecute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)para comprobar que la publicación admite suscripciones de inserción. 
 
     * Si el valor de `allow_push` en el conjunto de resultados es `1`, la publicación admite las suscripciones de inserción.
 
-    * Si el valor de `allow_push` es `0`, ejecute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) y especifique `allow_push` para `@property` y `true` para `@value`. 
+    * Si el valor de `allow_push` es `0`, ejecute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)y especifique `allow_push` para `@property` y `true` para `@value`. 
 
-3. En el publicador, ejecute [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Especifique `@publication`, `@subscriber`, `@destination_db` y uno de los valores siguientes para `@update_mode`:
+3. En el publicador, ejecute [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Especifique `@publication`, `@subscriber`, `@destination_db`y uno de los valores siguientes para `@update_mode`:
 
     * `sync tran` : habilita la compatibilidad con la actualización inmediata.
 
@@ -99,7 +103,7 @@ Esto registra la suscripción de extracción en el publicador.
  
 4. En el publicador, ejecute [sp_addpushsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Especifique los parámetros siguientes:
 
-    * `@subscriber`, `@subscriber_db` y `@publication`. 
+    * `@subscriber`, `@subscriber_db`y `@publication`. 
 
     * Las credenciales de Windows con las que se ejecuta el Agente de distribución en el distribuidor para `@job_login` y `@job_password`. 
 
@@ -110,7 +114,7 @@ Esto registra la suscripción de extracción en el publicador.
 
     * Una programación para el trabajo del Agente de distribución de esta suscripción.
 
-5. En el suscriptor de la base de datos de suscripción, ejecute [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Especifique `@publisher`, `@publication`, el nombre de la base de datos de publicación para `@publisher_db` y uno de los valores siguientes para `@security_mode`: 
+5. En el suscriptor de la base de datos de suscripción, ejecute [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Especifique `@publisher`, `@publication`, el nombre de la base de datos de publicación para `@publisher_db`y uno de los valores siguientes para `@security_mode`: 
 
      * `0` - Use Autenticación de SQL Server al realizar las actualizaciones en el publicador. Esta opción le exige que especifique un inicio de sesión válido en el publicador para `@login` y `@password`.
 
@@ -119,21 +123,21 @@ Esto registra la suscripción de extracción en el publicador.
      * `2` - Use un inicio de sesión vinculado definido por el usuario ya existente y creado con [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).
 
 
-## Para crear una suscripción de extracción de la actualización en cola ##
+## <a name="to-create-a-queued-updating-pull-subscription"></a>Para crear una suscripción de extracción de la actualización en cola ##
 
-1. En el publicador, ejecute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) para comprobar que la publicación admite suscripciones de actualización en cola. 
+1. En el publicador, ejecute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)para comprobar que la publicación admite suscripciones de actualización en cola. 
 
     * Si el valor de `allow_queued_tran` en el conjunto de resultados es `1`, la publicación admite las suscripciones de actualización inmediata.
 
     * Si el valor de `allow_queued_tran` en el conjunto de resultados es `0`, la publicación se debe volver a crear con suscripciones de actualización en cola habilitadas.
 
-2. En el publicador, ejecute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) para comprobar que la publicación admite las suscripciones de extracción. 
+2. En el publicador, ejecute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)para comprobar que la publicación admite las suscripciones de extracción. 
 
     * Si el valor de `allow_pull` en el conjunto de resultados es `1`, la publicación admite las suscripciones de extracción.
 
-    * Si el valor de `allow_pull` es `0`, ejecute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) y especifique `allow_pull` para `@property` y `true` para `@value`. 
+    * Si el valor de `allow_pull` es `0`, ejecute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)y especifique `allow_pull` para `@property` y `true` para `@value`. 
 
-3. En el suscriptor, ejecute [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Especifique `@publisher`, `@publication` y uno de los valores siguientes para `@update_mode`:
+3. En el suscriptor, ejecute [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Especifique `@publisher` , `@publication`y uno de los valores siguientes para `@update_mode`:
 
     * `queued tran` : habilita la suscripción para actualización en cola.
 
@@ -144,7 +148,7 @@ Esto registra la suscripción de extracción en el publicador.
  
 4. En el suscriptor, ejecute [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Especifique los parámetros siguientes:
 
-    * @publisher, `@publisher_db` y `@publication`. 
+    * @publisher, `@publisher_db`y `@publication`. 
 
     * Las credenciales de Windows con las que se ejecuta el Agente de distribución en el suscriptor para `@job_login` y `@job_password`. 
 
@@ -155,26 +159,26 @@ Esto registra la suscripción de extracción en el publicador.
 
     * Una programación para el trabajo del Agente de distribución de esta suscripción.
 
-5. En el publicador, ejecute [sp_addsubscriber](../../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md) para registrar el suscriptor en el publicador y especifique `@publication`, `@subscriber`, `@destination_db`, un valor de extracción para `@subscription_type` y el mismo valor que especificó en el paso 3 para `@update_mode`.
+5. En el publicador, ejecute [sp_addsubscriber](../../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md) para registrar el suscriptor en el publicador y especifique `@publication`, `@subscriber`, `@destination_db`, un valor de extracción para `@subscription_type`y el mismo valor que especificó en el paso 3 para `@update_mode`.
 
 Esto registra la suscripción de extracción en el publicador. 
 
 
-## Para crear una suscripción de inserción de la actualización en cola ##
+## <a name="to-create-a-queued-updating-push-subscription"></a>Para crear una suscripción de inserción de la actualización en cola ##
 
-1. En el publicador, ejecute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) para comprobar que la publicación admite suscripciones de actualización en cola. 
+1. En el publicador, ejecute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)para comprobar que la publicación admite suscripciones de actualización en cola. 
 
     * Si el valor de allow_queued_tran en el conjunto de resultados es 1, la publicación admite suscripciones de actualización inmediata.
 
     * Si el valor de allow_queued_tran en el conjunto de resultados es 0, la publicación se debe volver a crear con suscripciones de actualización en cola habilitadas. Para más información, consulte Habilitar suscripciones actualizables para publicaciones transaccionales (programación de la replicación con Transact-SQL).
 
-2. En el publicador, ejecute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) para comprobar que la publicación admite suscripciones de inserción. 
+2. En el publicador, ejecute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)para comprobar que la publicación admite suscripciones de inserción. 
 
     * Si el valor de `allow_push` en el conjunto de resultados es `1`, la publicación admite las suscripciones de inserción.
 
-    * Si el valor de `allow_push` es `0`, ejecute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) y especifiqueallow_push para `@property` y `true` para `@value`. 
+    * Si el valor de `allow_push` es `0`, ejecute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)y especifiqueallow_push para `@property` y `true` para `@value`. 
 
-3. En el publicador, ejecute [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Especifique `@publication`, `@subscriber`, `@destination_db` y uno de los valores siguientes para `@update_mode`:
+3. En el publicador, ejecute [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Especifique `@publication`, `@subscriber`, `@destination_db`y uno de los valores siguientes para `@update_mode`:
 
     * `queued tran` : habilita la suscripción para actualización en cola.
 
@@ -185,7 +189,7 @@ Esto registra la suscripción de extracción en el publicador.
 
 4. En el publicador, ejecute [sp_addpushsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Especifique los parámetros siguientes:
 
-    * `@subscriber`, `@subscriber_db` y `@publication`. 
+    * `@subscriber`, `@subscriber_db`y `@publication`. 
 
     * Las credenciales de Windows con las que se ejecuta el Agente de distribución en el distribuidor para `@job_login` y `@job_password`. 
 
@@ -197,7 +201,7 @@ Esto registra la suscripción de extracción en el publicador.
     * Una programación para el trabajo del Agente de distribución de esta suscripción.
 
 
-## Ejemplo ##
+## <a name="example"></a>Ejemplo ##
 
 Este ejemplo crea una suscripción de extracción de actualización inmediata a una publicación que admite suscripciones de actualización inmediatas. Los valores de inicio de sesión y contraseña se proporcionan en tiempo de ejecución mediante variables de scripting de sqlcmd.
 
@@ -268,10 +272,12 @@ EXEC sp_addsubscription
 GO
 ```
 
-## Vea también ##
+## <a name="see-also"></a>Vea también ##
 
 [Suscripciones actualizables para replicación transaccional](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
 
-[Usar sqlcmd con variables de script](../../../relational-databases/scripting/use-sqlcmd-with-scripting-variables.md)
+[Usar sqlcmd con variables de script](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)
 
-[Crear una suscripción actualizable a una publicación transaccional (Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)
+[Crear una suscripción actualizable a una publicación transaccional [Management Studio]](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)
+
+

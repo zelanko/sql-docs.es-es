@@ -1,26 +1,30 @@
 ---
-title: "Convertir un script de seguimiento de SQL existente en una sesi&#243;n de eventos extendidos. | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Seguimiento de SQL, convertir script a eventos extendidos"
-  - "eventos extendidos [SQL Server], convertir el script de Seguimiento de SQL"
+title: "Conversión de un script de seguimiento de SQL existente en una sesión de eventos extendidos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Trace, convert script to extended events
+- extended events [SQL Server], convert SQL Trace script
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
 caps.latest.revision: 21
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3817f8c3c5b3aaa50770b3734974e457a4e802e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Convertir un script de seguimiento de SQL existente en una sesi&#243;n de eventos extendidos.
+# <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Convertir un script de seguimiento de SQL existente en una sesión de eventos extendidos.
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Si tiene un script existente de Seguimiento de SQL que desea convertir a una sesión de eventos extendidos, puede usar los procedimientos de este tema para crear una sesión de eventos extendidos equivalente. Con la información de las tablas del sistema trace_xe_action_map y trace_xe_event_map, puede recopilar la información que necesita para realizar la conversión.  
@@ -35,7 +39,7 @@ caps.handback.revision: 21
   
 4.  Cree manualmente una sesión de eventos extendidos utilizando los eventos, acciones, y predicados (filtros) equivalentes de eventos extendidos.  
   
-## Para obtener el identificador de seguimiento  
+## <a name="to-obtain-the-trace-id"></a>Para obtener el identificador de seguimiento  
   
 1.  Abra el script de Seguimiento de SQL en el Editor de consultas y, a continuación, ejecute el script para crear la sesión de seguimiento. Tenga en cuenta que no es necesario que la sesión de seguimiento esté ejecutándose para completar este procedimiento.  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 21
     > [!NOTE]  
     >  El identificador de seguimiento 1 indica normalmente el seguimiento predeterminado.  
   
-## Para determinar los equivalentes de eventos extendidos  
+## <a name="to-determine-the-extended-events-equivalents"></a>Para determinar los equivalentes de eventos extendidos  
   
 1.  Para determinar los eventos y acciones equivalentes de eventos extendidos, ejecute la consulta siguiente, donde *trace_id* se establece en el valor del identificador de seguimiento obtenido en el procedimiento anterior.  
   
@@ -99,10 +103,10 @@ caps.handback.revision: 21
   
          Por ejemplo, la clase de eventos SP:StmtCompleted se asigna al evento sp_statement_completed de eventos extendidos. Si especifica sp_statement_completed como nombre de evento en la consulta, la columna "event_field" muestra los campos que se incluyen de forma predeterminada con el evento. Examinando los campos, puede ver que hay un campo de "duración". Para crear el filtro en la sesión equivalente de eventos extendidos, agregaría un predicado como "WHERE duration > 0". Para obtener un ejemplo, vea el procedimiento "Para crear la sesión de eventos extendidos" en este tema.  
   
-## Para crear la sesión de eventos extendidos  
+## <a name="to-create-the-extended-events-session"></a>Para crear la sesión de eventos extendidos  
  Utilice el Editor de consultas para crear la sesión de eventos extendidos y para escribir la salida en un destino de archivo. Los siguientes pasos describen una consulta única con explicaciones que le muestran cómo se genera la consulta. Para obtener el ejemplo completo de la consulta, vea la sección "Ejemplo" de este tema.  
   
-1.  Agregue instrucciones para crear la sesión de eventos, reemplazando *nombre_de_sesión* por el nombre que quiere usar para la sesión de eventos extendidos.  
+1.  Agregue instrucciones para crear la sesión de eventos, reemplazando*nombre_de_sesión* por el nombre que quiere usar para la sesión de eventos extendidos.  
   
     ```  
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -164,7 +168,7 @@ caps.handback.revision: 21
        SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
   
-## Para ver los resultados  
+## <a name="to-view-the-results"></a>Para ver los resultados  
   
 1.  Puede usar la función sys.fn_xe_file_target_read_file para ver la salida. Para ello, ejecute la consulta siguiente, reemplazando las rutas de acceso de archivo por las rutas de acceso que haya especificado:  
   
@@ -213,7 +217,7 @@ caps.handback.revision: 21
        (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -249,7 +253,7 @@ ADD TARGET package0.asynchronous_file_target
    (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL Server](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   

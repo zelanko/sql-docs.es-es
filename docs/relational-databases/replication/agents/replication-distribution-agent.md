@@ -1,33 +1,37 @@
 ---
-title: "Agente de distribuci&#243;n de replicaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Agente de distribución, ejecutables"
-  - "agentes [replicación de SQL Server], Agente de distribución"
-  - "Agente de distribución, referencia de parámetro"
-  - "símbolo del sistema [replicación de SQL Server]"
+title: "Agente de distribución de replicación | Microsoft Docs"
+ms.custom: 
+ms.date: 02/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Distribution Agent, executables
+- agents [SQL Server replication], Distribution Agent
+- Distribution Agent, parameter reference
+- command prompt [SQL Server replication]
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 caps.latest.revision: 64
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed4deeaf1b608410977ba5d5bbe14a09d379020f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Agente de distribuci&#243;n de replicaci&#243;n
+# <a name="replication-distribution-agent"></a>Agente de distribución de replicación
   El Agente de distribución de replicación es un ejecutable que mueve la instantánea (para la replicación de instantáneas y la replicación transaccional) y las transacciones de las tablas de base de datos de la distribución (para la replicación transaccional) a las tablas de destino en los suscriptores.  
   
 > [!NOTE]  
 >  Los parámetros se pueden especificar en cualquier orden. Cuando no se especifican parámetros opcionales, se utilizan valores de la configuración del Registro predefinida en el equipo local.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -85,18 +89,18 @@ distrib [-?]
 [-UseOledbStreaming]  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  **-?**  
  Imprime todos los parámetros disponibles.  
   
- **-Publisher** *nombreDeServidor*[**\\*****nstance_name*]  
- Es el nombre del publicador. Especifique *nombreDeServidor* para la instancia predeterminada de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *nombreDeServidor***\\***instance_name* para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
+ **-Publisher** *server_name*[**\\***i**nstance_name*]  
+ Es el nombre del publicador. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
- **-PublisherDB** *basededatosdelpublicador*  
+ **-PublisherDB** *publisher_database*  
  Es el nombre de la base de datos del publicador.  
   
- **-Suscriptor** *nombreDeServidor*[**\\***instance_name*]  
- Es el nombre del suscriptor. Especifique *nombreDeServidor* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *nombreDeServidor***\\***instance_name* para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
+ **-Subscriber** *server_name*[**\\***instance_name*]  
+ Es el nombre del suscriptor. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
  **-SubscriberDB** *subscriber_database*  
  Es el nombre de la base de datos del suscriptor.  
@@ -119,7 +123,7 @@ distrib [-?]
  **-DefinitionFile** *def_path_and_file_name*  
  Es la ruta de acceso del archivo de definición de agente. Un archivo de definición de agente contiene los argumentos de símbolo del sistema para el agente. El contenido del archivo se analiza como un archivo ejecutable. Utilice las comillas tipográficas (") para especificar valores de argumento que contienen caracteres arbitrarios.  
   
- **-Distribuidor** *distribuidor*  
+ **-Distributor** *distributor*  
  Es el nombre del distribuidor. Para la distribución (inserción) del Distribuidor, el nombre tiene como valor predeterminado el nombre del Distribuidor local.  
   
  **-DistributorLogin** *distributor_login*  
@@ -140,7 +144,7 @@ distrib [-?]
 |**1**|Especifica que se utiliza SSL, pero el agente no comprueba que un emisor confiable haya firmado el certificado del servidor SSL.|  
 |**2**|Especifica que se usa SSL y que se ha comprobado el certificado.|  
   
- Para obtener más información, consulte [Security Overview & #40; Replicación y nº 41;](../../../relational-databases/replication/security/security-overview-replication.md).  
+ Para obtener más información, vea [Información general sobre seguridad &#40;replicación&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
   
  **-ErrorFile** *error_path_and_file_name*  
  Es la ruta y nombre del archivo de error generado por el Agente de distribución. Este archivo se genera en cualquier punto en el que se haya producido el error durante la aplicación de transacciones de replicación en el suscriptor; los errores que se producen en el publicador o el distribuidor no se registran en este archivo. Contiene las transacciones de replicación en las que se ha producido un error y los mensajes de error relacionados. Si no se especifica, el archivo de error se genera en el directorio actual del Agente de distribución. El nombre del archivo de error es el nombre del agente de distribución con la extensión .err. Si el nombre de archivo especificado existe, los mensajes de error se anexan al archivo. Este parámetro puede tener un máximo de 256 caracteres Unicode.  
@@ -149,7 +153,7 @@ distrib [-?]
  Especifica el nombre y la ruta del archivo para el archivo de configuración XML de eventos extendidos. El archivo de configuración de eventos extendidos le permite configurar sesiones y habilitar eventos para su seguimiento.  
   
  **-FileTransferType** [ **0**| **1**]  
- Especifica el tipo de transferencia de archivo. Un valor de **0** indica UNC (convención de nomenclatura universal) y un valor de **1** indica FTP (Protocolo de transferencia de archivos).  
+ Especifica el tipo de transferencia de archivo. Un valor de **0** indica UNC (convención de nomenclatura universal) y un valor de **1** indica FTP (protocolo de transferencia de archivos).  
   
  **-FtpAddress** *ftp_address*  
  Es la dirección de red del servicio FTP para el distribuidor. Cuando no se especifica, se utiliza **DistributorAddress** . Si no se especifica **DistributorAddress** , se utiliza **Distribuidor** .  
@@ -182,7 +186,7 @@ distrib [-?]
  **-LoginTimeOut** *login_time_out_seconds*  
  Es el número de segundos antes de que el inicio de sesión exceda el tiempo de espera. El valor predeterminado es de **15** segundos.  
   
- **-MaxBcpThreads** *númerodesubprocesos*  
+ **-MaxBcpThreads** *number_of_threads*  
  Especifica el número de operaciones de copia masiva que se pueden realizar en paralelo. El número máximo de subprocesos y conexiones ODBC que existen simultáneamente es el menor entre **MaxBcpThreads** y el número de solicitudes de copia masiva que aparecen en la transacción de sincronización en la base de datos de distribución. **MaxBcpThreads** debe tener un valor mayor que **0** y no tiene ningún límite superior codificado de forma rígida. El valor predeterminado es **2** veces el número de procesadores, hasta un valor máximo de **8**. Al aplicar una instantánea que se generó en el publicador utilizando la opción de instantánea simultánea, se utiliza un subproceso, sin tener en cuenta el número especificado para **MaxBcpThreads**.  
   
  **-MaxDeliveredTransactions** *number_of_transactions*  
@@ -207,7 +211,7 @@ distrib [-?]
  Es la ruta de acceso del archivo de salida del agente. Si no se proporciona un nombre de archivo, el resultado se envía a la consola. Si el nombre de archivo especificado existe, el resultado se anexa al archivo.  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
- Especifica si el resultado debería ser detallado. Si el nivel detallado es **0**, solo se imprimen los mensajes de error. Si el nivel detallado es **1**, se imprimen todos los mensajes del informe de progreso. Si el nivel de detalle es **2** (valor predeterminado), se imprimen todos los mensajes de error y mensajes de informe de progreso, lo que resulta útil para la depuración.  
+ Especifica si el resultado debería ser detallado. Si el nivel detallado es **0**, solo se imprimen los mensajes de error. Si el nivel detallado es **1**, se imprimen todos los mensajes del informe de progreso. Si el nivel detallado es **2** (valor predeterminado), se imprimen todos los mensajes de error y mensajes del informe de progreso, lo que es útil para la depuración.  
   
  **-PacketSize** *packet_size*  
  Es el tamaño del paquete, en bytes. El valor predeterminado es 4096 (bytes).  
@@ -215,10 +219,10 @@ distrib [-?]
  **-PollingInterval** *polling_interval*  
  Es la frecuencia, en segundos, con la que la base de datos de distribución recibe consultas de transacciones replicadas. El valor predeterminado es 5 segundos.  
   
- **-ProfileName** *nombre_perfil*  
- Especifica un perfil de agente para utilizar para los parámetros del agente. Si **ProfileName** es NULL, el perfil de agente se deshabilita. Si no se especifica **ProfileName** , se utiliza el perfil predeterminado para el tipo de agente. Para obtener información, consulte [perfiles de agente de replicación](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
+ **-ProfileName** *profile_name*  
+ Especifica un perfil de agente para utilizar para los parámetros del agente. Si **ProfileName** es NULL, el perfil de agente se deshabilita. Si no se especifica **ProfileName** , se utiliza el perfil predeterminado para el tipo de agente. Para obtener información, vea [Perfiles del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
- **-Publicación**  *publicación*  
+ **-Publication**  *publication*  
  Es el nombre de la publicación. Este parámetro solamente es válido si la publicación se define para tener siempre una instantánea disponible para las suscripciones nuevas o reinicializadas.  
   
  **-QueryTimeOut** *query_time_out_seconds*  
@@ -227,22 +231,22 @@ distrib [-?]
  **-QuotedIdentifier** *quoted_identifier*  
  Especifica el carácter del identificador entrecomillado que se utilizará. El primer carácter del valor indica el valor que utiliza el agente de distribución. Si **QuotedIdentifier** se utiliza sin ningún valor, el agente de distribución utiliza un espacio. Si no se utiliza **QuotedIdentifier** , el agente de distribución utiliza cualquier identificador entrecomillado que admita el suscriptor.  
   
- **-SkipErrors** *native_error_id* [**:***.. .n*]  
+ **-SkipErrors** *native_error_id* [**:***...n*]  
  Es una lista separada por dos puntos que especifica los números de error que este agente omitirá.  
   
  **-SubscriberDatabasePath** *subscriber_database_path*  
- Es la ruta de acceso a la base de datos de Jet (archivo .mdb) si **SubscriberType** es **2** (permite una conexión a una base de datos Jet sin un nombre de origen de datos ODBC (DSN)).  
+ Es la ruta de acceso a la base de datos Jet (archivo .mdb) si **SubscriberType** es **2** (permite una conexión a una base de datos Jet sin un nombre del origen de datos ODBC (DSN)).  
   
  **-SubscriberLogin** *subscriber_login*  
- Es el nombre de inicio de sesión del suscriptor. Si **SubscriberSecurityMode** es **0** (para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autenticación), se debe especificar este parámetro.  
+ Es el nombre de inicio de sesión del suscriptor. Si **SubscriberSecurityMode** es **0** (para autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), se debe especificar este parámetro.  
   
  **-SubscriberPassword** *subscriber_password*  
- Es la contraseña del suscriptor. Si **SubscriberSecurityMode** es **0** (para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autenticación), se debe especificar este parámetro.  
+ Es la contraseña del suscriptor. Si **SubscriberSecurityMode** es **0** (para autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), se debe especificar este parámetro.  
   
  **-SubscriberSecurityMode** [ **0**| **1**]  
- Especifica el modo de seguridad del suscriptor. Un valor de **0** indica [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autenticación y un valor de **1** indica el modo de autenticación de Windows (valor predeterminado).  
+ Especifica el modo de seguridad del suscriptor. Un valor de **0** hace referencia a la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y un valor de **1** hace referencia al modo de autenticación de Windows (valor predeterminado).  
   
- **SubscriberType -** [ **0**| **1**| **3**]  
+ **-SubscriberType** [ **0**| **1**| **3**]  
  Especifica el tipo de conexión de suscriptor utilizada por el agente de distribución.  
   
 |Valor SubscriberType|Descripción|  
@@ -252,49 +256,50 @@ distrib [-?]
 |**3**|Origen de datos OLE DB|  
   
  **-SubscriptionStreams** [**0**|**1**|**2**|...**64**]  
- Es el número de conexiones permitidas por el agente de distribución para aplicar lotes de cambios en paralelo a un suscriptor, aunque manteniendo muchas de las características transaccionales presentes al utilizar un único subproceso. Para un publicador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , se admite un intervalo de valores de 1 a 64. Este parámetro solo se admite cuando el publicador y el distribuidor se están ejecutando en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o en versiones posteriores. Este parámetro no se admite o debe ser 0 para suscriptores que no son de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o suscripciones punto a punto.  
+ Es el número de conexiones permitidas por el agente de distribución para aplicar lotes de cambios en paralelo a un suscriptor, aunque manteniendo muchas de las características transaccionales presentes al utilizar un único subproceso. Para un publicador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , se admite un intervalo de valores de 1 a 64. Este parámetro solo se admite cuando el publicador y el distribuidor se están ejecutando en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o en versiones posteriores. Este parámetro no se admite o debe ser 0 para suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o suscripciones punto a punto.  
   
 > [!NOTE]  
 >  Si una de las conexiones no se puede ejecutar o confirmar, todas las conexiones anularán el lote actual y el agente utilizará un solo flujo para volver a intentar los lotes con errores. Antes de que finalice esta fase de reintento, pueden aparecer incoherencias transaccionales temporales en el suscriptor. Una vez que se han confirmado correctamente los lotes con errores, el suscriptor vuelve al estado de coherencia transaccional.  
   
 > [!IMPORTANT]  
->  Cuando se especifica un valor de 2 o superior para **- SubscriptionStreams**, el orden en que se reciben las transacciones en el suscriptor puede diferir del orden en que se realizaron en el publicador. Si este comportamiento produce las infracciones de restricción durante la sincronización, debería utilizar la opción NOT FOR REPLICATION para deshabilitar el cumplimiento de restricciones durante la sincronización. Para obtener más información, consulte [controlar el comportamiento de desencadenadores y restricciones durante la sincronización y Nº 40; Programación de replicación Transact-SQL & #41;](../../../relational-databases/replication/control behavior of triggers and constraints in synchronization.md).  
+>  Al especificar un valor de 2 o mayor para **-SubscriptionStreams**, el orden en el que las transacciones se reciben en el suscriptor puede diferir del orden en el que se realizaron en el publicador. Si este comportamiento produce las infracciones de restricción durante la sincronización, debería utilizar la opción NOT FOR REPLICATION para deshabilitar el cumplimiento de restricciones durante la sincronización. Para obtener más información, vea [Controlar el comportamiento de desencadenadores y restricciones durante la sincronización &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md).  
   
 > [!NOTE]  
 >  Los flujos de suscripción no funcionan en los artículos configurados para entregar [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Para usar flujos de suscripción, configure en su lugar los artículos para que entreguen llamadas de procedimiento almacenado.  
   
  **-SubscriptionTableName** *subscription_table*  
- Es el nombre de la tabla de suscripción generada o usada en el Suscriptor determinado. Cuando no se especifica, el [MSreplication_subscriptions & #40; Transact-SQL & #41;](../../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) se utiliza la tabla. Utilice esta opción para los sistemas de administración de bases de datos (DBMS) que no admiten los nombres largos del archivo.  
+ Es el nombre de la tabla de suscripción generada o usada en el Suscriptor determinado. Si no se especifica, se usa la tabla [MSreplication_subscriptions &#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md). Utilice esta opción para los sistemas de administración de bases de datos (DBMS) que no admiten los nombres largos del archivo.  
   
  **-SubscriptionType** [ **0**| **1**| **2**]  
  Especifica el tipo de suscripción para la distribución. Un valor de **0** indica una suscripción de inserción, un valor de **1** indica una suscripción de extracción y un valor de **2** indica una suscripción anónima.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- Especifica el intervalo de la transacción para el registro del historial. Si el número de transacciones confirmadas después de la última instancia de registro del historial es mayor que esta opción, se registra un mensaje de historial. El valor predeterminado es 100. Un valor de **0** indica infinito **TransactionsPerHistory**. Vea el parámetro **–MessageInterval**anterior.  
+ Especifica el intervalo de la transacción para el registro del historial. Si el número de transacciones confirmadas después de la última instancia de registro del historial es mayor que esta opción, se registra un mensaje de historial. El valor predeterminado es 100. Un valor de **0** indica infinito **TransactionsPerHistory**. See the preceding **–MessageInterval**parameter.  
   
  **-UseDTS**  
  Se debe especificar como un parámetro para una publicación que permite la transformación de datos.  
   
  **-UseInprocLoader**  
- Mejora el rendimiento de la instantánea inicial haciendo que el agente de distribución utilice el comando BULK INSERT al aplicar los archivos de instantánea al Suscriptor. Este parámetro está obsoleto porque no es compatible con el tipo de datos XML. Si no replica datos XML, puede utilizar este parámetro. Este parámetro no se puede utilizar con instantáneas del modo de carácter o suscriptores que no son de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si utiliza este parámetro, la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del suscriptor debe tener permisos de lectura en el directorio donde se encuentran los archivos de datos .bcp de instantánea. Cuando no se utiliza este parámetro, el agente (para suscriptores que no son de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ) o el controlador ODBC cargado por el agente (para suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ) lee los archivos, por lo que no se utiliza el contexto de seguridad de la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Mejora el rendimiento de la instantánea inicial haciendo que el agente de distribución utilice el comando BULK INSERT al aplicar los archivos de instantánea al Suscriptor. Este parámetro está obsoleto porque no es compatible con el tipo de datos XML. Si no replica datos XML, puede utilizar este parámetro. Este parámetro no se puede utilizar con instantáneas del modo de carácter o suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si utiliza este parámetro, la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del suscriptor debe tener permisos de lectura en el directorio donde se encuentran los archivos de datos .bcp de instantánea. Cuando no se utiliza este parámetro, el agente (para suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ) o el controlador ODBC cargado por el agente (para suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ) lee los archivos, por lo que no se utiliza el contexto de seguridad de la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  **-UseOledbStreaming**  
- Cuando se especifica, habilita el enlace de datos del objeto binario como un flujo. Use **- OledbStreamThreshold** para especificar el tamaño, en bytes, por encima del cual se utilizará una secuencia. **UseOledbStreaming** se habilita de forma predeterminada. **UseOledbStreaming** escribe en el **C:\Program Files\Microsoft SQL Server\\< versión\>\COM** carpeta.  
+ Cuando se especifica, habilita el enlace de datos del objeto binario como un flujo. Utilice **-OledbStreamThreshold** para especificar el tamaño, en bytes, por encima del cual se utilizará un flujo. **UseOledbStreaming** se habilita de forma predeterminada. **UseOledbStreaming** escribe en la carpeta **C:\Archivos de programa\Microsoft SQL Server\\<versión\>\COM**.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
   
 > [!IMPORTANT]  
 >  Si ha instalado el agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para que se ejecute en una cuenta de sistema local en lugar de debajo de una cuenta de usuario de dominio (el valor predeterminado), el servicio puede tener acceso solo al equipo local. Si el agente de distribución que se ejecuta en el agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se configura para utilizar el modo de autenticación de Windows cuando inicia sesión en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el agente de distribución devuelve un error. La configuración predeterminada es la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener información acerca del cambio de cuentas de seguridad, vea [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
- Para iniciar el agente de distribución, ejecute **distrib.exe** desde el símbolo del sistema. Para obtener información, consulte [conceptos de los ejecutables del agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
+ Para iniciar el agente de distribución, ejecute **distrib.exe** desde el símbolo del sistema. Para obtener información, vea [Conceptos de los ejecutables del Agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-## Historial de cambios  
+## <a name="change-history"></a>Historial de cambios  
   
 |Contenido actualizado|  
 |---------------------|  
-|Agrega el **- ExtendedEventConfigFile** parámetro.|  
+|Se ha agregado el parámetro **-ExtendedEventConfigFile** .|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Administración del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   
+

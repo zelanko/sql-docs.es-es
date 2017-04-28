@@ -1,27 +1,31 @@
 ---
-title: "Mount Tape (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Mount Tape, clase de eventos"
+title: Clase de eventos Mount Tape | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Mount Tape event class
 ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5bdfe11491fd0850d1255b560cc394a8e82446ce
+ms.lasthandoff: 04/11/2017
+
 ---
-# Mount Tape (clase de eventos)
+# <a name="mount-tape-event-class"></a>Mount Tape, clase de eventos
   La clase de eventos Mount Tape se produce cuando se recibe una solicitud de montaje de cinta. Utilice esta clase de eventospara supervisar solicitudes de montaje de cintas y si se realiza correcta o incorrectamente.  
   
-## Columnas de datos de la clase de eventos Mount Tape  
+## <a name="mount-tape-event-class-data-columns"></a>Columnas de datos de la clase de eventos Mount Tape  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -46,7 +50,7 @@ caps.handback.revision: 35
 |StartTime|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |TextData|**ntext**|*nombre de dispositivo físico* [( *nombre del dispositivo lógico* )]. El nombre de dispositivo lógico se muestra solo si se ha definido en la vista de catálogo sys.backup_devices.|1|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   

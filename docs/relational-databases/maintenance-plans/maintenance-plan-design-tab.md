@@ -1,52 +1,56 @@
 ---
-title: "Plan de mantenimiento (pesta&#241;a Dise&#241;o) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.maintplanproperties.optimizations.f1"
-  - "sql13.swb.maint.planeditor.f1"
-  - "sql13.swb.maint.subplaneditor.f1"
+title: "Plan de mantenimiento (pestaña Diseño) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.maintplanproperties.optimizations.f1
+- sql13.swb.maint.planeditor.f1
+- sql13.swb.maint.subplaneditor.f1
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 18b12faae420e8294dc79c15e1e0f168faaa5395
+ms.lasthandoff: 04/11/2017
+
 ---
-# Plan de mantenimiento (pesta&#241;a Dise&#241;o)
-  Use el **Plan de mantenimiento (pestaña Diseño)** para especificar las propiedades de un plan de mantenimiento y sus subplanes. Arrastre las tareas del cuadro de herramientas al diseñador de planes. Haga clic con el botón secundario en grupos de tareas para crear rutas de ejecución bifurcadas. Los planes de mantenimiento se guardan como paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que se ejecutan mediante trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="maintenance-plan-design-tab"></a>Plan de mantenimiento (pestaña Diseño)
+  Use el **Plan de mantenimiento (pestaña Diseño)** para especificar las propiedades de un plan de mantenimiento y sus subplanes. Arrastre las tareas del cuadro de herramientas al diseñador de planes. Haga clic con el botón secundario en grupos de tareas para crear rutas de ejecución bifurcadas. Los planes de mantenimiento se guardan como paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que se ejecutan mediante trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Agregar subplán**  
  Agrega un subplán que puede configurar.  
   
  **Propiedades del subplán**  
- Muestra el cuadro de diálogo **Propiedades del subplan**. Seleccione un subplán en la cuadrícula y haga clic en este icono para escribir un nombre, descripción y programación para el subplán. También puede hacer doble clic en el subplan en la cuadrícula para mostrar el cuadro de diálogo **Propiedades del subplan**. Los nombres de subplán tienen un límite de 128 caracteres y las descripciones de 512 caracteres.  
+ Muestra el cuadro de diálogo **Propiedades del subplan** . Seleccione un subplán en la cuadrícula y haga clic en este icono para escribir un nombre, descripción y programación para el subplán. También puede hacer doble clic en el subplan en la cuadrícula para mostrar el cuadro de diálogo **Propiedades del subplan** . Los nombres de subplán tienen un límite de 128 caracteres y las descripciones de 512 caracteres.  
   
  **Eliminar subplán seleccionado**  
  Elimina el subplán seleccionado.  
   
  **Programación del subplán**  
- Muestra el cuadro de diálogo **Propiedades de programación del trabajo**. Seleccione un subplán en la cuadrícula y haga clic en este icono para configurar una programación para el subplán.  
+ Muestra el cuadro de diálogo **Propiedades de programación del trabajo** . Seleccione un subplán en la cuadrícula y haga clic en este icono para configurar una programación para el subplán.  
   
  **Quitar programación**  
  Quita una programación del subplán seleccionado.  
   
  **Administrar conexiones**  
- Muestra el cuadro de diálogo **Administrar conexiones**. Se utiliza para agregar conexiones adicionales de instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al plan de mantenimiento. Las tareas de mantenimiento del editor de subplanes pueden usar cualquiera de estas conexiones. Cuando se ejecuta, el plan de mantenimiento establece una conexión, desde el servidor del plan de mantenimiento, con los servidores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificados, mediante el uso de credenciales de conexión.  
+ Muestra el cuadro de diálogo **Administrar conexiones** . Se utiliza para agregar conexiones adicionales de instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al plan de mantenimiento. Las tareas de mantenimiento del editor de subplanes pueden usar cualquiera de estas conexiones. Cuando se ejecuta, el plan de mantenimiento establece una conexión, desde el servidor del plan de mantenimiento, con los servidores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificados, mediante el uso de credenciales de conexión.  
   
  **Informes y registro**  
- Muestra el cuadro de diálogo **Informes y registro**, que se usa para administrar informes relacionados con la actividad del plan de mantenimiento y para configurar el registro en el servidor local o remoto.  
+ Muestra el cuadro de diálogo **Informes y registro** , que se usa para administrar informes relacionados con la actividad del plan de mantenimiento y para configurar el registro en el servidor local o remoto.  
   
  **Servidores**  
- Muestra el cuadro de diálogo **Servidores**, que se usa para seleccionar los servidores en los que se ejecutarán las tareas del subplan. Esta opción está habilitada solo en servidores maestros en entornos multiservidor. Para obtener más información, vea [Crear un entorno multiservidor](../../ssms/agent/create-a-multiserver-environment.md).  
+ Muestra el cuadro de diálogo **Servidores** , que se usa para seleccionar los servidores en los que se ejecutarán las tareas del subplan. Esta opción está habilitada solo en servidores maestros en entornos multiservidor. Para obtener más información, vea [Crear un entorno multiservidor](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6).  
   
  **Nombre**  
  Muestra el nombre del plan de mantenimiento. En los nuevos planes de mantenimiento, el nombre se especifica en un cuadro de diálogo antes de que se abra el diseñador de planes de mantenimiento. Para cambiar el nombre de un plan de mantenimiento, haga clic con el botón derecho en el plan en el Explorador de objetos y, luego, haga clic en **Cambiar nombre**.  
@@ -73,13 +77,13 @@ caps.handback.revision: 27
   
  Para especificar los vínculos de precedencia entre dos tareas, arrastre primero las tareas a la superficie de diseño y, a continuación, haga clic en la tarea que tiene lugar en primer lugar (la tarea precedente) y arrastre la flecha a la tarea dependiente. Cuando se ha establecido un vínculo de precedencia, el diseñador muestra una flecha de vinculación entre las dos tareas; la tarea precedente apunta a la tarea dependiente. De forma predeterminada, cuando un vínculo se establece por primera vez, la restricción del vínculo se establece de modo que la tarea dependiente solo se ejecuta si el resultado de la ejecución de la tarea precedente es **Correcto**.  
   
- Para cambiar las propiedades de un vínculo de precedencia, haga doble clic en el vínculo para iniciar el **Editor de restricciones de precedencia**. Este editor ofrece muchas opciones para especificar las condiciones lógicas que determinan si la tarea dependiente se ejecuta. Por ejemplo, el **resultado de la ejecución** puede establecerse en **Error**, en cuyo caso la tarea dependiente solo se ejecuta si la tarea precedente genera un error. Para cambiar la propiedad del resultado de la ejecución de un vínculo a **Correcto**, **Error** o **Conclusión**, también puede hacer clic con el botón derecho en el vínculo y luego seleccionar la opción deseada en el menú contextual.  
+ Para cambiar las propiedades de un vínculo de precedencia, haga doble clic en el vínculo para iniciar el **Editor de restricciones de precedencia**. Este editor ofrece muchas opciones para especificar las condiciones lógicas que determinan si la tarea dependiente se ejecuta. Por ejemplo, el **resultado de la ejecución** puede establecerse en **Error**, en cuyo caso la tarea dependiente solo se ejecuta si la tarea precedente genera un error. Para cambiar la propiedad del resultado de la ejecución de un vínculo a **Correcto**, **Error**o **Conclusión**, también puede hacer clic con el botón derecho en el vínculo y luego seleccionar la opción deseada en el menú contextual.  
   
- Para especificar la bifurcación de tareas, cree primero los vínculos de precedencia entre dos tareas. Luego, coloque otra tarea dependiente en la superficie de diseño que se ejecute si se obtiene un resultado diferente a la primera tarea dependiente. Haga clic en la tarea predecesora y arrastre la segunda flecha de la tarea precedente a la tarea dependiente. Para cambiar el resultado de la ejecución (**Correcto**, **Error**, **Conclusión**) que hace que una tarea dependiente se ejecute, haga doble clic en la flecha de vínculo y modifique el campo **Resultado de ejecución**. Como alternativa, haga clic con el botón secundario en el vínculo y seleccione el valor deseado del resultado de la ejecución en el menú contextual.  
+ Para especificar la bifurcación de tareas, cree primero los vínculos de precedencia entre dos tareas. Luego, coloque otra tarea dependiente en la superficie de diseño que se ejecute si se obtiene un resultado diferente a la primera tarea dependiente. Haga clic en la tarea predecesora y arrastre la segunda flecha de la tarea precedente a la tarea dependiente. Para cambiar el resultado de la ejecución (**Correcto**, **Error**, **Conclusión**) que hace que una tarea dependiente se ejecute, haga doble clic en la flecha de vínculo y modifique el campo **Resultado de ejecución** . Como alternativa, haga clic con el botón secundario en el vínculo y seleccione el valor deseado del resultado de la ejecución en el menú contextual.  
   
  Para especificar el paralelismo de la tarea, vincule dos o más tareas dependientes a una sola tarea precedente. Modifique las propiedades de los vínculos de precedencia, de forma que los vínculos que apuntan a las tareas dependientes que se ejecutan en paralelo tengan el mismo valor en los campos del resultado de la ejecución.  
   
-## Características adicionales disponibles en el menú contextual  
+## <a name="additional-features-available-from-the-shortcut-menu"></a>Características adicionales disponibles en el menú contextual  
  Para ver las opciones adicionales, seleccione una o más tareas en la superficie de diseño y, a continuación, haga clic con el botón secundario para abrir el menú contextual. Además de las opciones típicas **Cortar**, **Copiar**, **Pegar**, **Eliminar**y **Seleccionar todo**, están disponibles las siguientes opciones especiales para algunas tareas.  
   
  **Agregar anotación**  
@@ -112,7 +116,7 @@ caps.handback.revision: 27
  **Zoom**  
  Cambia el tamaño de las tareas en el área de diseño.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Planes de mantenimiento](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Crear un plan de mantenimiento](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   

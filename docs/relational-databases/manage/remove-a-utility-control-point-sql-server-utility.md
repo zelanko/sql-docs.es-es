@@ -1,22 +1,26 @@
 ---
-title: "Quitar un punto de control de la utilidad de SQL Server (utilidad de SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Eliminación de un punto de control de la utilidad de SQL Server (utilidad de SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c048a416-900e-4c77-8243-e0f0d8b94068
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b38f97d5d0dacb8222faf67387c97b33d2dd5de6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Quitar un punto de control de la utilidad de SQL Server (utilidad de SQL Server)
+# <a name="remove-a-utility-control-point-sql-server-utility"></a>Quitar un punto de control de la utilidad de SQL Server (utilidad de SQL Server)
   En este tema se describe cómo quitar un punto de control de la utilidad (UCP) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
@@ -49,7 +53,7 @@ caps.handback.revision: 10
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para quitar un punto de control de la utilidad  
+#### <a name="to-remove-a-utility-control-point"></a>Para quitar un punto de control de la utilidad  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -61,9 +65,9 @@ caps.handback.revision: 10
 EXEC msdb.dbo.sp_sysutility_ucp_remove;  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Utilizar el explorador de Utilidad para administrar la utilidad de SQL Server](../../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
- [Solucionar problemas de la Utilidad de SQL Server](../Topic/Troubleshoot%20the%20SQL%20Server%20Utility.md)  
+ [Solucionar problemas de la Utilidad de SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   

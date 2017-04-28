@@ -1,29 +1,33 @@
 ---
-title: "OLEDB Call (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "OLEDB Call, clase de eventos"
+title: OLEDB Call, clase de eventos| Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLEDB Call event class
 ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0f8b5cb7e58f0005d66f9f1ed73991289de8f213
+ms.lasthandoff: 04/11/2017
+
 ---
-# OLEDB Call (clase de eventos)
+# <a name="oledb-call-event-class"></a>OLEDB Call, clase de eventos
   La clase de evento **OLEDB Call** tiene lugar cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] llama a un proveedor OLE DB para consultas distribuidas y procedimientos almacenados remotos.  
   
  Incluya la clase de evento **OLEDB Call** en seguimientos para supervisar solo aquellas llamadas que no solicitan datos o que no se realizan al método **QueryInterface** . Cuando se incluye la clase de evento **OLEDB Call** en un seguimiento, la cantidad de sobrecarga depende de la frecuencia con que se produzcan las llamadas OLE DB a la base de datos durante el seguimiento. Si se realizan llamadas con frecuencia, el seguimiento puede mermar notablemente el rendimiento.  
   
-## Columnas de datos de la clase de evento OLEDB Call  
+## <a name="oledb-call-event-class-data-columns"></a>Columnas de datos de la clase de evento OLEDB Call  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -54,7 +58,7 @@ caps.handback.revision: 37
 |TextData|**nvarchar**|Parámetros enviados y recibidos en la llamada OLE DB.|1|No|  
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Objetos de automatización OLE en Transact-SQL](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  

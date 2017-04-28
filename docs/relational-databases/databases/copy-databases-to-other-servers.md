@@ -1,30 +1,34 @@
 ---
-title: "Copiar bases de datos en otros servidores | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ediciones [SQL Server], copiar bases de datos entre"
-  - "exportación masiva [SQL Server], entre servidores"
-  - "copia de bases de datos [SQL Server]"
-  - "migrar bases de datos [SQL Server]"
-  - "mover bases de datos"
-  - "copiar bases de datos"
-  - "importación masiva [SQL Server], entre servidores"
+title: Copia de bases de datos en otros servidores | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- servers [SQL Server], copying databases between
+- bulk exporting [SQL Server], between servers
+- database copying [SQL Server]
+- migrating databases [SQL Server]
+- moving databases
+- copying databases
+- bulk importing [SQL Server], between servers
 ms.assetid: 978406d6-a3c8-4902-b1f4-4ced75234be5
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5079ed05c18a1a2647ea085e89f26ac7187101e3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Copiar bases de datos en otros servidores
+# <a name="copy-databases-to-other-servers"></a>Copiar bases de datos en otros servidores
   En ocasiones resulta útil copiar una base de datos de un equipo a otro para realizar pruebas, comprobar la coherencia, desarrollar software, ejecutar informes, crear una base de datos de reflejo o, quizás, poner la base de datos a disposición de las actividades de oficinas remotas.  
   
  Hay varias maneras de copiar una base de datos:  

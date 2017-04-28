@@ -1,28 +1,32 @@
 ---
-title: "Remote Blob Store (RBS) (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Remote Blob Store (RBS) [SQL Server]"
-  - "RBS (Remote Blob Store) [SQL Server]"
+title: "Almacén remoto de blobs (RBS) (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Remote Blob Store (RBS) [SQL Server]
+- RBS (Remote Blob Store) [SQL Server]
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5dd24af4232914ff6b86e036827364f1cb8c16a1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Remote Blob Store (RBS) (SQL Server)
+# <a name="remote-blob-store-rbs-sql-server"></a>Remote Blob Store (RBS) (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  El almacén remoto de blobs RBS de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un componente complementario opcional que permite a los administradores de bases de datos almacenar directamente objetos binarios grandes en soluciones de almacenamiento de artículos en lugar de en el servidor de base de datos principal.  
+  El almacén remoto de blobs RBS de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un componente complementario opcional que permite a los administradores de bases de datos almacenar directamente objetos binarios grandes en soluciones de almacenamiento de artículos en lugar de en el servidor de base de datos principal.  
   
  RBS se incluye en el disco de instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y pero no lo instala el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -61,18 +65,18 @@ caps.handback.revision: 19
 ### <a name="credential-store-symmetric-key"></a>Clave simétrica de almacén de credenciales  
  Si un proveedor requiere que se instale y use un secreto almacenado en el almacén de credenciales, RBS usa una clave simétrica para cifrar los secretos de proveedor que un cliente puede usar para obtener autorización en el almacén de blobs del proveedor.  
   
--   RBS 2016 usa una clave simétrica **AES_128**. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] no permite crear nuevas claves **TRIPLE_DE**S, salvo por motivos de compatibilidad con versiones anteriores. Para obtener más información, vea [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md).  
+-   RBS 2016 usa una clave simétrica **AES_128** . [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] no permite crear nuevas claves **TRIPLE_DE**S, salvo por motivos de compatibilidad con versiones anteriores. Para obtener más información, vea [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md).  
   
 -   RBS 2014 y las versiones anteriores usan un almacén de credenciales que contiene secretos cifrados con el algoritmo de clave simétrica **TRIPLE_DES**, actualmente obsoleto. Si a día de hoy usa **TRIPLE_DES**, [!INCLUDE[msCoName](../../includes/msconame-md.md)] le recomienda mejorar la seguridad con los pasos de este tema para rotar la clave a un método de cifrado más seguro.  
   
  Puede determinar las propiedades de la clave simétrica de almacén de credenciales si ejecuta la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] en la base de datos RBS:   
-`SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';`Si el resultado de esa instrucción muestra que **TRIPLE_DES** todavía se usa, debería rotar esta clave.  
+`SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';` Si el resultado de esa instrucción muestra que **TRIPLE_DES** todavía se usa, debería rotar esta clave.  
   
 ### <a name="rotating-the-symmetric-key"></a>Rotación de la clave simétrica  
  Si usa RBS, conviene rotar la clave simétrica del almacén de credenciales cada cierto tiempo. Se trata de un procedimiento de seguridad recomendado muy habitual para cumplir las directivas de seguridad de una organización.  Una manera de rotar la clave simétrica del almacén de credenciales de RBS consiste en usar [este script](#Key_rotation) en la base de datos de RBS.  Este script también sirve para migrar a propiedades de intensidad de cifrado más seguras, como la longitud de clave o algoritmo. Haga una copia de seguridad de la base de datos antes de realizar la rotación.  Cuando el script finalice, es necesario realizar algunos pasos de comprobación.  
 Si las directivas de seguridad requieren propiedades de clave (por ejemplo, longitud de clave o algoritmo) diferentes de las provistas, el script se puede usar como plantilla. Modifique las propiedades de clave en dos sitios: (1) en la creación de la clave temporal y (2) en la creación de la clave permanente.  
   
-##  <a name="a-namerbsresourcesa-rbs-resources"></a><a name="rbsresources"></a> Recursos de RBS  
+##  <a name="rbsresources"></a> RBS resources  
   
  **Ejemplos de RBS**  
  Los ejemplos de RBS disponibles en [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190) demuestran cómo desarrollar una aplicación de RBS y cómo desarrollar e instalar un proveedor de RBS personalizado.  
@@ -80,11 +84,11 @@ Si las directivas de seguridad requieren propiedades de clave (por ejemplo, long
  **Blog de RBS**  
  En el [blog de RBS](http://go.microsoft.com/fwlink/?LinkId=210315) se proporciona información adicional para ayudarle a entender, implementar y mantener RBS.  
   
-##  <a name="a-namekeyrotationa-key-rotation-script"></a><a name="Key_rotation"></a> Script de rotación de clave  
+##  <a name="Key_rotation"></a> Key rotation script  
  En este ejemplo se crea un procedimiento almacenado denominado `sp_rotate_rbs_symmetric_credential_key` para reemplazar la clave simétrica de almacén de credenciales de RBS usada actualmente  
 por una de su elección.  Es posible que quiera hacerlo si hay una directiva de seguridad que exige   
 la rotación de claves periódica o si hay requisitos de algoritmo concretos.  
- En este procedimiento almacenado se sustituirá la clave actual por una clave simétrica que usa **AES_256**.  Como resultado de  
+ En este procedimiento almacenado se sustituirá la clave actual por una clave simétrica que usa **AES_256** .  Como resultado de  
 la sustitución de la clave simétrica, es necesario volver a cifrar los secretos con la nueva clave.  Este procedimiento almacenado   
 también volverá a cifrar los secretos.  Antes de rotar la clave, haga una copia de seguridad de la base de datos.  
   
@@ -232,3 +236,4 @@ SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
   
   
+

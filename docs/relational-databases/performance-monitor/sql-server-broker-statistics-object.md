@@ -1,25 +1,29 @@
 ---
-title: "Broker Statistics (objeto de SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Broker Statistics"
-  - "Broker Statistics, objeto"
+title: Broker Statistics (objeto de SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Broker Statistics
+- Broker Statistics object
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6f2372e2cc641919957f14145a1e7ff0c96bb74a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Broker Statistics (objeto de SQL Server)
+# <a name="sql-server-broker-statistics-object"></a>Broker Statistics (objeto de SQL Server)
   El objeto de rendimiento SQLServer:Broker Statistics contiene contadores de rendimiento que notifican información general de [!INCLUDE[ssSB](../../includes/sssb-md.md)] para una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. En la tabla siguiente se muestran los contadores incluidos en este objeto:  
   
 |Contadores de Broker Statistics de SQL Server|Descripción|  
@@ -62,7 +66,7 @@ caps.handback.revision: 32
 |**Total de SQL SEND**|Número total de instrucciones SEND [!INCLUDE[tsql](../../includes/tsql-md.md)] ejecutadas.|  
 |**SQL SEND/seg.**|Número de instrucciones SEND [!INCLUDE[tsql](../../includes/tsql-md.md)] ejecutadas por segundo.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   

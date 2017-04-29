@@ -1,25 +1,29 @@
 ---
-title: "JobSteps (objeto del Agente SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "JobSteps, objeto"
-  - "SQLAgent:JobSteps"
+title: JobSteps (objeto del Agente SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- JobSteps object
+- SQLAgent:JobSteps
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 61884b4353e065c60f9489eca33a8979cf7d782f
+ms.lasthandoff: 04/11/2017
+
 ---
-# JobSteps (objeto del Agente SQL Server)
+# <a name="sql-server-agent-jobsteps-object"></a>JobSteps (objeto del Agente SQL Server)
   El objeto de rendimiento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JobSteps **del Agente** contiene contadores de rendimiento que informan sobre los pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En la siguiente tabla se enumeran los contadores incluidos en este objeto.  
   
  La siguiente tabla contiene los contadores de **SQLAgent:JobSteps** .  
@@ -48,9 +52,9 @@ caps.handback.revision: 23
 |**Snapshot**|Información de los pasos de trabajo que utilizan el subsistema **Snapshot** .|  
 |**TSQL**|Información de los pasos de trabajo que ejecutan [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
-## Vea también  
- [Administrar pasos de trabajo](../../ssms/agent/manage-job-steps.md)   
- [Usar objetos de rendimiento](../../ssms/agent/use-performance-objects.md)   
+## <a name="see-also"></a>Vea también  
+ [Administrar pasos de trabajo](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)   
+ [Usar objetos de rendimiento](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
  [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

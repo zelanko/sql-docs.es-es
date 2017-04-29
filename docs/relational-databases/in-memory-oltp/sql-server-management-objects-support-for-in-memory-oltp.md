@@ -1,22 +1,26 @@
 ---
-title: "Compatibilidad de Objetos de administraci&#243;n de SQL Server con OLTP en memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Compatibilidad de objetos de administración de SQL Server con OLTP en memoria | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8c0ed45fbf5da5c1c521ad52e25553a21c068a08
+ms.lasthandoff: 04/11/2017
+
 ---
-# Compatibilidad de Objetos de administraci&#243;n de SQL Server con OLTP en memoria
+# <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>Compatibilidad de Objetos de administración de SQL Server con OLTP en memoria
   En este tema se describen los cambios de los Objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO) para OLTP en memoria.  
   
  Los tipos y miembros siguientes admiten OLTP en memoria:  
@@ -47,7 +51,7 @@ caps.handback.revision: 28
   
 -   <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>  
   
-## Ejemplo de código  
+## <a name="code-sample"></a>Ejemplo de código  
  En el ejemplo se realizan las tareas siguientes:  
   
 -   Crear una base de datos con un grupo de archivos con optimización para memoria y un archivo con optimización para memoria.  
@@ -164,7 +168,7 @@ public class A {
 }  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad de SQL Server con OLTP en memoria](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   

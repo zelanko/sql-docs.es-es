@@ -1,25 +1,29 @@
 ---
-title: "Copia de seguridad y restauraci&#243;n de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure | Microsoft Docs"
+ms.custom: 
+ms.date: 07/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2ca66cdb80dd12a242b2c9e8130cf3236e47371c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Copia de seguridad y restauraci&#243;n de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure
+# <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  ![Backup to Azure blob graphic](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Backup to Azure blob graphic")  
+  ![Copia de seguridad en un gráfico de blobs de Azure](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Copia de seguridad en un gráfico de blobs de Azure")  
   
  En este tema se describen las copias de seguridad y la restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir del [servicio de Almacenamiento de blobs de Microsoft Azure](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). También se proporciona un resumen de las ventajas de usar el servicio BLOB de Microsoft Azure para almacenar copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -34,12 +38,12 @@ caps.handback.revision: 39
   
 -   **Permitir que SQL Server administre las copias de seguridad de Microsoft Azure:** configure SQL Server para administrar la estrategia de copia de seguridad y programar las copias de seguridad de una sola base de datos o de varias, o bien para establecer los valores predeterminados en el nivel de instancia. Esta característica se conoce como **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**. Para obtener más información, vea [Copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md). Esta característica está disponible en SQL Server 2014 o posterior.  
   
-## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversiontokenssnoversionmdmd-backups"></a>Ventajas de usar el servicio BLOB de Microsoft Azure para las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>Ventajas de usar el servicio BLOB de Microsoft Azure para las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Almacenamiento externo flexible, confiable e ilimitado: el almacenamiento de las copias de seguridad en el servicio BLOB de Microsoft Azure puede ser una opción externa cómoda, flexible y de fácil acceso. La creación de almacenamiento externo para las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ser tan sencillo como modificar los scripts y trabajos existentes. Normalmente, el almacenamiento externo debe estar suficientemente alejado de la ubicación de la base de datos de producción para impedir que un desastre afecte a las ubicaciones de las bases de datos externa y de producción. La elección de la replicación geográfica en el almacenamiento de blobs permite disponer de un nivel de protección adicional en caso de que se produzca un desastre que pueda afectar a toda la región. Además, las copias de seguridad están disponibles desde cualquier lugar y en cualquier momento y se puede tener acceso a ellas fácilmente para las restauraciones.  
   
     > [!IMPORTANT]  
-    >  Mediante el uso de blobs en bloques en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede crear bandas en su conjunto de copia de seguridad para admitir archivos de copia de seguridad de hasta 12,8 TB.  
+    >  Mediante el uso de blobs en bloques en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede crear bandas en su conjunto de copia de seguridad para admitir archivos de copia de seguridad de hasta 12,8 TB.  
   
 -   Archivado de copias de seguridad: el servicio de Almacenamiento de blobs de Microsoft Azure ofrece una alternativa mejor que la opción de cinta que se suele usar para archivar copias de seguridad. El almacenamiento en cinta puede requerir el transporte físico a una instalación externa y medidas para proteger los medios. El almacenamiento de las copias de seguridad en el servicio de Almacenamiento de blobs de Microsoft Azure proporciona una opción de archivado instantánea, de alta disponibilidad y duradera.  
   
@@ -51,19 +55,24 @@ caps.handback.revision: 39
   
 -   Ventajas de costo: solo se paga por el servicio que se emplea. Puede ser rentable como opción de archivado externo y de copia de seguridad. Vea la sección sobre [Consideraciones sobre la facturación de Microsoft Azure](#Billing) para obtener más información y vínculos.  
   
-##  <a name="a-namebillinga-microsoft-azure-billing-considerations"></a><a name="Billing"></a> Consideraciones sobre la facturación de Microsoft Azure:  
+##  <a name="Billing"></a> Microsoft Azure Billing Considerations:  
  Entender los costos de Almacenamiento de Microsoft Azure permite prever el costo de crear y almacenar copias de seguridad en Microsoft Azure.  
   
  La [calculadora de precios de Microsoft Azure](http://go.microsoft.com/fwlink/?LinkId=277060) puede ayudarle a calcular los costos.  
   
- **Almacenamiento** : los cargos se basan en el espacio usado y se calculan según una escala graduada y el nivel de redundancia. Para obtener más detalles e información actualizada, vea la sección **Administración de datos** del artículo [Detalles de precios](http://go.microsoft.com/fwlink/?LinkId=277059).  
+ **Almacenamiento** : los cargos se basan en el espacio usado y se calculan según una escala graduada y el nivel de redundancia. Para obtener más detalles e información actualizada, vea la sección **Administración de datos** del artículo [Detalles de precios](http://go.microsoft.com/fwlink/?LinkId=277059) .  
   
  **Transferencias de datos** : las transferencias de datos de entrada a Microsoft Azure son gratuitas. Las transferencias salientes se cobran por el uso de ancho de banda y se calculan según una escala graduada específica de la región. Para obtener más detalles, vea la sección [Transferencias de datos](http://go.microsoft.com/fwlink/?LinkId=277061) del artículo Detalles de precios.  
   
 ## <a name="see-also"></a>Vea también  
- [Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
- [Realizar copias de seguridad y restaurar bases de datos del sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
- [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases (Tutorial: Usar el servicio de almacenamiento de blobs de Microsoft Azure con bases de datos de SQL Server 2016)](Tutorial:%20Using%20the%20Microsoft%20Azure%20Blob%20storage%20service%20with%20SQL%20Server%202016%20databases.md)  
- [Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
+
+[Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
+
+[Realizar copias de seguridad y restaurar bases de datos del sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
+
+[Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases (Tutorial: Usar el servicio de almacenamiento de blobs de Microsoft Azure con bases de datos de SQL Server 2016)](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
+
+[Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   
   
+

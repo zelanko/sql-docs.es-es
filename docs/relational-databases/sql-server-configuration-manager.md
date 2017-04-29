@@ -1,34 +1,38 @@
 ---
-title: "Administrador de configuraci&#243;n de SQL Server | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "protocolos [SQL Server], administrar"
-  - "protocolos de red [SQL Server], administrar"
-  - "Herramienta de red de cliente"
-  - "cuentas [SQL Server]"
-  - "Administrador de configuración de SQL Server"
-  - "Herramienta de red de servidor"
-  - "cuentas [SQL Server], servicios"
-  - "servicios [SQL Server], administrar"
-  - "herramientas [SQL Server], Administrador de configuración de SQL Server"
-  - "administrador de configuración [SQL Server]"
+title: "Administrador de configuración de SQL Server | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 02/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- protocols [SQL Server], managing
+- network protocols [SQL Server], managing
+- Client Network Utility
+- accounts [SQL Server]
+- SQL Server Configuration Manager
+- Server Network Utility
+- accounts [SQL Server], services
+- services [SQL Server], managing
+- tools [SQL Server], SQL Server Configuration Manager
+- configuration manager [SQL Server]
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 caps.latest.revision: 58
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0710ebf98d2d0260208b594f3260266ddc0ca8c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Administrador de configuraci&#243;n de SQL Server
+# <a name="sql-server-configuration-manager"></a>Administrador de configuración de SQL Server
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es una herramienta para administrar los servicios asociados a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], para configurar los protocolos de red utilizados por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]y para administrar la configuración de conectividad de red de los equipos cliente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] El Administrador de configuración es un complemento de [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console que está disponible desde el menú Inicio o que se puede agregar a cualquier otra pantalla de [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (**mmc.exe**) usa el archivo **SQLServerManager\<versión>.msc** (como, por ejemplo, **SQLServerManager13.msc** para [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) para abrir el Administrador de configuración. Cuando instala Windows en la unidad C, estas son las rutas de acceso a las cuatro últimas versiones.  
   
 |||  
@@ -42,20 +46,20 @@ caps.handback.revision: 58
 >  Como el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es un complemento del programa [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console y no un programa independiente, el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no aparece como aplicación en las versiones más recientes de Windows.  
 >   
 >  -   **Windows 10**:  
->          Para abrir el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], escriba SQLServerManager13.msc (para [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) en la **página de inicio**. Para versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , reemplace el 13 por un número inferior. Al hacer clic en SQLServerManager13.msc, se abre el Administrador de configuración. Para anclar el Administrador de configuración a la página de inicio o a la barra de tareas, haga clic con el botón derecho en SQLServerManager13.msc y, después, haga clic en **Abrir ubicación del archivo**. En el Explorador de archivos de Windows, haga clic con el botón derecho en SQLServerManager13.msc y, después, haga clic en **Anclar a Inicio** o **Anclar a la barra de tareas**.  
+>          Para abrir el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , escriba SQLServerManager13.msc (para **) en la**página de inicio [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]. Para versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , reemplace el 13 por un número inferior. Al hacer clic en SQLServerManager13.msc, se abre el Administrador de configuración. Para anclar el Administrador de configuración a la página de inicio o a la barra de tareas, haga clic con el botón derecho en SQLServerManager13.msc y, después, haga clic en **Abrir ubicación del archivo**. En el Explorador de archivos de Windows, haga clic con el botón derecho en SQLServerManager13.msc y, después, haga clic en **Anclar a Inicio** o **Anclar a la barra de tareas**.  
 > -   **Windows 8**:  
->          Para abrir el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], escriba **SQLServerManager\<versión>.msc** por ejemplo, **SQLServerManager13.msc**, en el acceso a **Buscar** de **Aplicaciones** y, después, pulse **Entrar**.  
+>          Para abrir el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], escriba **SQLServerManager\<versión>.msc** (por ejemplo, **SQLServerManager13.msc**) en el acceso a **Buscar** de **Aplicaciones** y, después, pulse **Entrar**.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] El Administrador de configuración y SQL Server Management Studio usan el Instrumental de administración de Windows (WMI) para ver y cambiar algunas configuraciones del servidor. WMI proporciona una forma unificada de crear una interfaz con las llamadas a la API que administran las operaciones del Registro solicitadas por las herramientas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y de proporcionar un mejor control y manipulación de los servicios SQL seleccionados del complemento del Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información sobre cómo configurar permisos relacionados con WMI, vea [Configurar WMI para mostrar el estado del servidor en Herramientas de SQL Server](../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md).  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] El Administrador de configuración y SQL Server Management Studio usan el Instrumental de administración de Windows (WMI) para ver y cambiar algunas configuraciones del servidor. WMI proporciona una forma unificada de crear una interfaz con las llamadas a la API que administran las operaciones del Registro solicitadas por las herramientas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y de proporcionar un mejor control y manipulación de los servicios SQL seleccionados del complemento del Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obtener más información sobre cómo configurar permisos relacionados con WMI, vea [Configurar WMI para mostrar el estado del servidor en Herramientas de SQL Server](http://msdn.microsoft.com/library/7e97197b-ed4d-40d1-9a52-9ab1d92401d7).  
   
- Para iniciar, detener, pausar, reanudar o configurar los servicios en otro equipo por medio del Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vea [Conectarse a otro equipo &#40;Administrador de configuración de SQL Server&#41;](../database-engine/configure-windows/connect-to-another-computer-sql-server-configuration-manager.md).  
+ Para iniciar, detener, pausar, reanudar o configurar los servicios en otro equipo por medio del Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vea [Conectarse a otro equipo &#40;Administrador de configuración de SQL Server&#41;](../database-engine/configure-windows/scm-services-connect-to-another-computer.md).  
   
-## Administrar servicios  
+## <a name="managing-services"></a>Administrar servicios  
  Utilice el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para iniciar, pausar, continuar o detener los servicios, para ver las propiedades de estos o para cambiarlas.  
   
- Utilice el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para iniciar el [!INCLUDE[ssDE](../includes/ssde-md.md)] utilizando parámetros de inicio.  Para obtener más información, vea [Configurar opciones de inicio del servidor &#40;Administrador de configuración de SQL Server&#41;](../database-engine/configure-windows/configure-server-startup-options-sql-server-configuration-manager.md).  
+ Utilice el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para iniciar el [!INCLUDE[ssDE](../includes/ssde-md.md)] utilizando parámetros de inicio.  Para obtener más información, vea [Configurar opciones de inicio del servidor &#40;Administrador de configuración de SQL Server&#41;](../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
   
-## Cambiar las cuentas utilizadas por los servicios  
+## <a name="changing-the-accounts-used-by-the-services"></a>Cambiar las cuentas utilizadas por los servicios  
  Administre los servicios de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
@@ -63,7 +67,7 @@ caps.handback.revision: 58
   
  Como ventaja adicional, las contraseñas modificadas mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], SMO o WMI tienen efecto inmediatamente, sin necesidad de reiniciar el servicio.  
   
-## Administrar protocolos de red de servidor & cliente  
+## <a name="manage-server--client-network-protocols"></a>Administrar protocolos de red de servidor & cliente  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] permite configurar protocolos de red de servidor y cliente, así como opciones de conectividad. Una vez habilitados los protocolos correctos, no suele ser necesario cambiar las conexiones de red del servidor. Sin embargo, puede utilizar el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] si necesita volver a configurar las conexiones del servidor de modo que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] escuche en un protocolo de red, puerto o canalización concretos. Para obtener más información sobre cómo habilitar protocolos, vea [Habilitar o deshabilitar un protocolo de red de servidor](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md). Para obtener más información sobre cómo habilitar el acceso a los protocolos a través de un firewall, vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] El Administrador de configuración permite administrar protocolos de red de cliente y servidor, lo que incluye la posibilidad de exigir el cifrado del protocolo, ver las propiedades del alias o habilitar o deshabilitar un protocolo.  
@@ -78,18 +82,19 @@ caps.handback.revision: 58
   
  El Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] también permite ver información sobre las instancias del clúster de conmutación por error, aunque se debe utilizar el Administrador de clústeres para algunas acciones como el inicio y la detención de los servicios.  
   
-### Protocolos de red disponibles  
+### <a name="available-network-protocols"></a>Protocolos de red disponibles  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es compatible con los protocolos Memoria compartida, TCP/IP y Canalizaciones con nombre. Para obtener más información acerca de cómo elegir un protocolo de red, vea [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no es compatible con los protocolos de red VIA (Protocolo de paquetes secuenciados) de Banyan VINES, Multiprotocolo, AppleTalk o NWLink SPP/IPX. Los clientes anteriormente conectados con estos protocolos deben seleccionar uno distinto para conectarse a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No es posible utilizar el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para configurar el proxy WinSock. Para configurar el proxy WinSock, consulte la documentación de ISA Server.  
   
-## Tareas relacionadas  
- [Temas de procedimientos de administración de servicios &#40;Administrador de configuración de SQL Server&#41;](../Topic/Managing%20Services%20How-to%20Topics%20\(SQL%20Server%20Configuration%20Manager\).md)  
+## <a name="related-tasks"></a>Tareas relacionadas  
+ [Temas de procedimientos de administración de servicios &#40;Administrador de configuración de SQL Server&#41;](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
   
- [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md)  
+ [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
- [Iniciar, detener o pausar el servicio del Agente SQL Server](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
+ [Iniciar, detener o pausar el servicio del Agente SQL Server](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   
- [Configurar una instancia de SQL Server para que se inicie automáticamente &#40;Administrador de configuración de SQL Server&#41;](../database-engine/configure-windows/scm services - set an instance to start automatically.md)  
+ [Configurar una instancia de SQL Server para que se inicie automáticamente &#40;Administrador de configuración de SQL Server&#41;](../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
   
- [Evitar el inicio automático de una instancia de SQL Server &#40;Administrador de configuración de SQL Server&#41;](../database-engine/configure-windows/scm services - prevent automatic startup of an instance.md)  
+ [Evitar el inicio automático de una instancia de SQL Server &#40;Administrador de configuración de SQL Server&#41;](../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)  
   
   
+

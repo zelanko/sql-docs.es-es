@@ -1,24 +1,28 @@
 ---
-title: "Registros de auditor&#237;a de SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "registros de auditoría [SQL Server]"
+title: Registros de SQL Server Audit | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- audit records [SQL Server]
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 21e4ed91a72a564ec39632899f81131fa4e7caf5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Registros de auditor&#237;a de SQL Server
+# <a name="sql-server-audit-records"></a>Registros de auditoría de SQL Server
   La característica [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit le permite auditar grupos de eventos y eventos de nivel de servidor y de base de datos. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Las auditorías constan de cero o más elementos de acción de auditoría que se registran en un *destino*de auditoría. Este destino de auditoría puede ser un archivo binario, el registro de eventos de aplicación Windows o el registro de eventos de seguridad de Windows. Los registros que se envían al destino pueden contener los elementos descritos en la tabla siguiente.  
@@ -28,9 +32,9 @@ caps.handback.revision: 19
 |**event_time**|Fecha y hora en la que se desencadena la acción auditable.|**datetime2**|Sí|  
 |**sequence_no**|Realiza un seguimiento de la secuencia de registros de un único registro de auditoría que era demasiado grande para caber en el búfer de escritura destinado a las auditorías.|**int**|Sí|  
 |**action_id**|Id. de la acción<br /><br /> Sugerencia: Para usar **action_id** como un predicado, debe convertirse de una cadena de caracteres a un valor numérico. Para obtener más información, vea [Filtrar SQL Server Audit por el predicado action_id / class_type](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|**varchar(4)**|Sí|  
-|**succeeded**|Indica si la acción que desencadenó el evento se ha llevado a cabo correctamente|**bit**: 1 = Correcto, 0 = Error|Sí|  
+|**succeeded**|Indica si la acción que desencadenó el evento se ha llevado a cabo correctamente|**bit** : 1 = Correcto, 0 = Error|Sí|  
 |**permission_bitmask**|Si procede, muestra los permisos que se han concedido, denegado o revocado|**bigint**|No|  
-|**is_column_permission**|Marca que especifica un permiso de nivel de columna|**bit**: 1 = Verdadero, 0 = Falso|No|  
+|**is_column_permission**|Marca que especifica un permiso de nivel de columna|**bit** : 1 = Verdadero, 0 = Falso|No|  
 |**session_id**|Identificador de la sesión en la que se produjo el evento.|**int**|Sí|  
 |**server_principal_id**|Identificador del contexto de inicio de sesión en el que se realiza la acción.|**int**|Sí|  
 |**database_principal_id**|Identificador del contexto de usuario de la base de datos en el que se realiza la acción.|**int**|No|  
@@ -52,7 +56,7 @@ caps.handback.revision: 19
 |**instrucción**|Instrucción TSQL (si existe)|**nvarchar(4000)**|No|  
 |**additional_information**|Cualquier información adicional sobre el evento, almacenada como XML.|**nvarchar(4000)**|No|  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Algunas acciones no rellenan el valor de una columna porque es posible que no sea aplicable a la acción.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit almacena 4.000 caracteres de datos en los campos de carácter de un registro de auditoría. Si los valores **additional_information** y **statement** devueltos por una acción auditable contienen más de 4000 caracteres, la columna **sequence_no** se usa para escribir varios registros en el informe de auditoría para que una única acción de auditoría registre estos datos. El proceso es el siguiente:  
@@ -61,13 +65,13 @@ caps.handback.revision: 19
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit escribe como primera fila del registro de auditoría los datos parciales. Los demás campos se duplican en cada fila.  
   
--   Se incrementa el valor **sequence_no**.  
+-   Se incrementa el valor **sequence_no** .  
   
 -   Este proceso se repite hasta que se registran todos los datos.  
   
- Puede conectar los datos al leer las filas secuencialmente mediante el valor **sequence_no**, y las columnas **event_Time**, **action_id** y **session_id** para identificar la acción.  
+ Puede conectar los datos al leer las filas secuencialmente mediante el valor **sequence_no** , y las columnas **event_Time**, **action_id** y **session_id** para identificar la acción.  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-server-audit-transact-sql.md)  
   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-audit-transact-sql.md)  

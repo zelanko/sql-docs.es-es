@@ -1,24 +1,28 @@
 ---
-title: "SQL Server, objeto FileTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:FileTable"
+title: FileTable (objeto de SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:FileTable
 ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 caps.latest.revision: 3
-author: "dagiro"
-ms.author: "v-dagir"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: dagiro
+ms.author: v-dagir
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 321ed2db9195a957f10982fe07f1da7b8cb01c25
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, objeto FileTable
+# <a name="sql-server-filetable-object"></a>SQL Server, objeto FileTable
 El objeto de rendimiento **SQLServer:FileTable** proporciona contadores para las estadísticas asociadas a FileTable y acceso sin transacciones.
 
 En la siguiente tabla se describen los objetos de rendimiento **FileTable** de SQL Server.
@@ -55,5 +59,6 @@ En la siguiente tabla se describen los objetos de rendimiento **FileTable** de S
 |**BASE de tiempo para obtener elemento de FileTable**|Exclusivamente para uso interno.|
 |**BASE de tiempo de actualización de elemento de FileTable**|Exclusivamente para uso interno.| 
  
-## Vea también  
+## <a name="see-also"></a>Vea también  
 [Supervisar el uso de recursos (Monitor de sistema)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)
+

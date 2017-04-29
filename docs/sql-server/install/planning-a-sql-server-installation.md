@@ -1,30 +1,34 @@
 ---
-title: "Planear una instalaci&#243;n de SQL Server | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "instalar SQL Server, planear"
+title: "Planear una instalación de SQL Server | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- installing SQL Server, planning
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 72117bfd62b37633e2b815fb1c8014b48c63d2ab
+ms.lasthandoff: 04/11/2017
+
 ---
-# Planear una instalaci&#243;n de SQL Server
+# <a name="planning-a-sql-server-installation"></a>Planear una instalación de SQL Server
   Para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], siga estos pasos:  
   
 -   Revise los requisitos de instalación, las comprobaciones de la configuración del sistema y las consideraciones de seguridad para una instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Ejecute el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para instalar o actualizar a una versión posterior. Antes de actualizar, revise [Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-to-sql-server-2016.md).  
+-   Ejecute el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para instalar o actualizar a una versión posterior. Antes de actualizar, revise [Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md).  
   
 -   Utilice las utilidades de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -33,13 +37,13 @@ caps.handback.revision: 36
  Los términos de la licencia se muestran para revisarlos y aceptarlos en la interfaz de usuario del programa de instalación. Las instalaciones desatendidas (mediante los parámetros /Q o /QS) deben incluir el parámetro /IAcceptSQLServerLicenseTerms. Puede revisar separadamente los términos de licencia en [Términos de licencia de software de Microsoft](http://go.microsoft.com/fwlink/?LinkID=148209).  
   
 > [!NOTE]  
->  En función de cómo haya recibido el software (por ejemplo, a través de un contrato de licencias por volumen de [!INCLUDE[msCoName](../../includes/msconame-md.md)]), su uso del software puede estar sujeto a términos y condiciones adicionales.  
+>  En función de cómo haya recibido el software (por ejemplo, a través de un contrato de licencias por volumen de [!INCLUDE[msCoName](../../includes/msconame-md.md)] ), su uso del software puede estar sujeto a términos y condiciones adicionales.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Novedades de la instalación de SQL Server](../../sql-server/install/what-s-new-in-sql-server-installation.md)  
  En este tema se describen los detalles sobre las características nuevas o mejoradas de la instalación de esta versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)  
+ [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
  En este tema se enumeran los requisitos mínimos de hardware y software para instalar y ejecutar una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  [Consideraciones de seguridad para una instalación de SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
@@ -49,7 +53,7 @@ caps.handback.revision: 36
  En este tema se describe la configuración predeterminada de los servicios en esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], así como las opciones de configuración de los servicios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se pueden establecer durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y después.  
   
  [Protocolos de red y bibliotecas de red](../../sql-server/install/network-protocols-and-network-libraries.md)  
- En este tema se describe la configuración predeterminada de los protocolos de red en esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y las opciones de configuración disponibles.  
+ En este tema se describe la configuración predeterminada de los protocolos de red en esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y las opciones de configuración disponibles.  
   
  [Trabajar con varias versiones e instancias de SQL Server](../../sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
  En este tema se describen las consideraciones para instalar varias versiones e instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -57,26 +61,27 @@ caps.handback.revision: 36
  [Versiones en idioma local en SQL Server](../../sql-server/install/local-language-versions-in-sql-server.md)  
  En este tema se describen las versiones traducidas de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## Secciones relacionadas  
- [Instalar SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016.md)  
+## <a name="related-sections"></a>Secciones relacionadas  
+ [Instalar SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
  En esta sección se proporciona información general de las distintas opciones de instalación de que se dispone para instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- [Instalar las características de SQL Server 2016 Business Intelligence](../../sql-server/install/install-sql-server-2016-business-intelligence-features.md)  
+ [Instalar las características de SQL Server 2016 Business Intelligence](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
  Esta sección de la documentación de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explica cómo instalar las funciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que forman parte de la plataforma de BI de Microsoft.  
   
- [Actualizar a SQL Server 2016](../../database-engine/install-windows/upgrade-to-sql-server-2016.md)  
+ [Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)  
  En esta sección se proporciona información general sobre la actualización de las instancias de la versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- [Desinstalar SQL Server 2016](../../sql-server/install/uninstall-sql-server-2016.md)  
+ [Desinstalar SQL Server 2016](../../sql-server/install/uninstall-sql-server.md)  
  Consulte esta sección para desinstalar por completo una instancia existente de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y preparar el sistema para poder volver a instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Instalación de clúster de conmutación por error de SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
- Esta sección de la documentación del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explica cómo instalar y configurar el clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Esta sección de la documentación del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explica cómo instalar y configurar el clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Instalar SQL Server 2016 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Soluciones de alta disponibilidad &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
  [Antes de instalar los clústeres de conmutación por error](../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
- [Actualización a SQL Server 2016 mediante el Asistente para instalación &#40;programa de instalación&#41;](../../database-engine/install-windows/upgrade-to-sql-server-2016-using-the-installation-wizard-setup.md)  
+ [Actualización a SQL Server 2016 mediante el Asistente para instalación &#40;programa de instalación&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   
+

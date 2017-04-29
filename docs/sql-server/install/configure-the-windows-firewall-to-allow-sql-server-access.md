@@ -1,35 +1,39 @@
 ---
-title: "Configure the Windows Firewall to Allow SQL Server Access | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/13/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Firewall de Windows, puertos"
-  - "WMI, puertos de firewall"
-  - "Firewall de Windows [motor de base de datos]"
-  - "sistemas de firewall, configuración"
-  - "advfirewall"
-  - "sistemas de firewall"
-  - "reglas, firewall"
-  - "sistemas de firewall, información general y lista de puertos"
-  - "puerto TCP 1433"
-  - "portopening con netsh"
-  - "puertos [SQL Server], TCP"
-  - "netsh to open firewall ports"
+title: Configurar el Firewall de Windows para permitir el acceso a SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 05/13/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Firewall ports
+- WMI firewall ports
+- Windows Firewall [Database Engine]
+- firewall systems, configuring
+- advfirewall
+- firewall systems
+- rules firewall
+- firewall systems, overview and port list
+- 1433 TCP port
+- portopening using netsh
+- ports [SQL Server], TCP
+- netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 caps.latest.revision: 48
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: fb4cb189914d6636b76816490e9d38f9f4240101
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configure the Windows Firewall to Allow SQL Server Access
+# <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Los sistemas de firewall ayudan a evitar el acceso no autorizado a los recursos de los equipos. Si un firewall está activado pero no está configurado correctamente, es posible que se bloqueen los intentos de conexión a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -47,7 +51,7 @@ caps.handback.revision: 48
   
 -   [Configurar un firewall para el acceso al servidor de informes](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
-## En este tema  
+## <a name="in-this-topic"></a>En este tema  
  Este tema tiene las secciones siguientes:  
   
  [Información básica del firewall](#BKMK_basic)  
@@ -121,7 +125,7 @@ caps.handback.revision: 48
   
      El elemento **Firewall de Windows** del Panel de control es muy adecuado para los usuarios que tengan experiencia en la configuración de firewall y que estén configurando opciones de firewall básicas para equipos que no sean móviles. También puede abrir el elemento **Firewall de Windows** del Panel de control con el comando **run** utilizando el procedimiento siguiente:  
   
-    #### Para abrir el elemento Firewall de Windows  
+    #### <a name="to-open-the-windows-firewall-item"></a>Para abrir el elemento Firewall de Windows  
   
     1.  En el menú **Inicio** , haga clic en **Ejecutar**y, a continuación, escriba `firewall.cpl`.  
   
@@ -129,7 +133,7 @@ caps.handback.revision: 48
   
 -   **Microsoft Management Console (MMC)**  
   
-     El complemento MMC del Firewall de Windows con seguridad avanzada permite establecer opciones de configuración de firewall más avanzadas. Este complemento presenta la mayoría de las opciones de firewall de una manera fácil de usar y presenta todos los perfiles de firewall. Para obtener más información, vea [Utilizar el complemento Firewall de Windows con seguridad avanzada](#BKMK_WF_msc), más adelante en este tema.  
+     El complemento MMC del Firewall de Windows con seguridad avanzada permite establecer opciones de configuración de firewall más avanzadas. Este complemento presenta la mayoría de las opciones de firewall de una manera fácil de usar y presenta todos los perfiles de firewall. Para obtener más información, vea [Utilizar el complemento Firewall de Windows con seguridad avanzada](#BKMK_WF_msc) , más adelante en este tema.  
   
 -   **netsh**  
   
@@ -153,15 +157,15 @@ caps.handback.revision: 48
   
     -   [El comando "netsh firewall" junto con el parámetro "profile=all" no configura el perfil público en un equipo basado en Windows Vista](http://support.microsoft.com/kb/947213)  
   
-## Puertos utilizados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Puertos utilizados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Las tablas siguientes pueden ayudarle a identificar los puertos que utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="BKMK_ssde"></a> Puertos utilizados por el motor de base de datos  
+###  <a name="BKMK_ssde"></a> Ports Used By the Database Engine  
  La tabla siguiente muestra los puertos de uso frecuente por parte de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 |Escenario|Puerto|Comentarios|  
 |--------------|----------|--------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecutándose sobre TCP|Puerto TCP 1433|Éste es el puerto más común que permite el firewall. Se aplica a las conexiones rutinarias a la instalación predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o a una instancia con nombre que sea la única instancia que se ejecuta en el equipo. (Las instancias con nombre tienen consideraciones especiales. Vea [Puertos dinámicos](#BKMK_dynamic_ports) más adelante en este tema.)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecutándose sobre TCP|Puerto TCP 1433|Éste es el puerto más común que permite el firewall. Se aplica a las conexiones rutinarias a la instalación predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)]o a una instancia con nombre que sea la única instancia que se ejecuta en el equipo. (Las instancias con nombre tienen consideraciones especiales. Vea [Puertos dinámicos](#BKMK_dynamic_ports) más adelante en este tema.)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la configuración predeterminada|El puerto TCP es un puerto dinámico determinado en el momento en el que se inicia [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|Vea la explicación siguiente en la sección [Puertos dinámicos](#BKMK_dynamic_ports). El puerto UDP 1434 puede ser necesario para el servicio Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se utilizan instancias con nombre.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando están configuradas para utilizar un puerto fijo|El número de puerto configurado por el administrador.|Vea la explicación siguiente en la sección [Puertos dinámicos](#BKMK_dynamic_ports).|  
 |Conexión de administrador dedicada|Puerto TCP 1434 para la instancia predeterminada. Otros puertos se utilizan para las instancias con nombre. Compruebe en el registro de errores el número de puerto.|De forma predeterminada, las conexiones remotas a DAC (Conexión de administrador dedicada) no están habilitadas. Para habilitar la DAC remota, utilice la faceta Configuración de área expuesta. Para obtener más información, vea [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).|  
@@ -170,20 +174,20 @@ caps.handback.revision: 48
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecutándose en un extremo HTTPS.|Puerto TCP 443|Se utiliza para una conexión HTTPS a través de una dirección URL. HTTPS es una conexión HTTP que utiliza SSL (Capa de sockets seguros).|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|Puerto 4022 TCP. Para comprobar el puerto que se usa, ejecute la siguiente consulta:<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|No hay ningún puerto predeterminado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)], pero esta es la configuración convencional que se usa en los ejemplos de Libros en pantalla.|  
 |Creación de reflejo de base de datos|Puerto elegido por el administrador. Para determinar el puerto, ejecute la siguiente consulta:<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|No hay ningún puerto predeterminado para la creación de reflejo de la base de datos, sin embargo, en los ejemplos de los Libros en pantalla se usa el puerto TCP 7022. Es muy importante evitar interrumpir un extremo de creación de reflejo que se esté usando, sobre todo en el modo de alta seguridad con conmutación automática por error. La configuración del firewall debe evitar el romper el quórum. Para obtener más información, vea [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).|  
-|Replicación|Las conexiones de replicación a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan los puertos de [!INCLUDE[ssDE](../../includes/ssde-md.md)] normales (puerto TCP 1433, para la instancia predeterminada, etc.) habituales.<br /><br /> La sincronización web y el acceso de tipo FTP/UNC para la instantánea de replicación requieren que se abran puertos adicionales en el firewall. Para transferir los datos iniciales y los esquemas de una ubicación a otra, la replicación puede utilizar FTP (puerto TCP 21) o sincronizar sobre HTTP (puerto TCP 80) o Uso compartido de archivos. El uso compartido de archivos utiliza los puertos UDP 137 y 138, y el puerto TCP 139 si usa NetBIOS. El uso compartido de archivos usa el puerto TCP 445.|Para la sincronización sobre HTTP, la replicación utiliza el extremo IIS (para el que se pueden configurar los puertos, pero cuyo puerto predeterminado es el 80), pero el proceso IIS se conecta al servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de los puertos estándar (1433 para la instancia predeterminada).<br /><br /> Durante la sincronización web mediante FTP, la transferencia FTP tiene lugar entre IIS y el publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no entre el suscriptor e IIS.|  
+|Replicación|Las conexiones de replicación a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan los puertos de [!INCLUDE[ssDE](../../includes/ssde-md.md)] normales (puerto TCP 1433, para la instancia predeterminada, etc.) habituales.<br /><br /> La sincronización web y el acceso de tipo FTP/UNC para la instantánea de replicación requieren que se abran puertos adicionales en el firewall. Para transferir los datos iniciales y los esquemas de una ubicación a otra, la replicación puede utilizar FTP (puerto TCP 21) o sincronizar sobre HTTP (puerto TCP 80) o Uso compartido de archivos. El uso compartido de archivos utiliza los puertos UDP 137 y 138, y el puerto TCP 139 si usa NetBIOS. El uso compartido de archivos usa el puerto TCP 445.|Para la sincronización sobre HTTP, la replicación utiliza el extremo IIS (para el que se pueden configurar los puertos, pero cuyo puerto predeterminado es el 80), pero el proceso IIS se conecta al servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de los puertos estándar (1433 para la instancia predeterminada).<br /><br /> Durante la sincronización web mediante FTP, la transferencia FTP tiene lugar entre IIS y el publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , no entre el suscriptor e IIS.|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] depurador|Puerto TCP 135<br /><br /> Vea [Consideraciones especiales para el puerto 135](#BKMK_port_135)<br /><br /> Quizá sea necesaria también la excepción [IPsec](#BKMK_IPsec) .|Si utiliza [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], en el equipo host [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] debe agregar también **Devenv.exe** a la lista Excepciones y abrir el puerto TCP 135.<br /><br /> Si utiliza [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], en el equipo host [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] debe agregar también **ssms.exe** a la lista Excepciones y abrir el puerto TCP 135. Para obtener más información, vea [Configurar reglas de firewall antes de ejecutar al depurador de TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).|  
   
  Para obtener instrucciones detalladas sobre cómo configurar Firewall de Windows para el [!INCLUDE[ssDE](../../includes/ssde-md.md)], vea [Configurar Firewall de Windows para el acceso al motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 ####  <a name="BKMK_dynamic_ports"></a> Puertos dinámicos  
- De forma predeterminada, las instancias con nombre (incluido [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) utilizan puertos dinámicos. Eso significa que cada vez que se inicia [!INCLUDE[ssDE](../../includes/ssde-md.md)] , identifica un puerto disponible y utiliza ese número de puerto. Si la instancia con nombre es la única instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] instalada, probablemente utilizará el puerto TCP 1433. Si se instalan otras instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , probablemente utilizará un puerto TCP diferente. Dado que el puerto seleccionado puede cambiar cada vez que se inicia [!INCLUDE[ssDE](../../includes/ssde-md.md)] , es difícil configurar el firewall para permitir el acceso al número de puerto correcto. Por consiguiente, si se usa un firewall, recomendamos reconfigurar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] para que utilice siempre el mismo número de puerto. Esto se denomina un puerto fijo o un puerto estático. Para obtener más información, vea [Configurar un servidor para que escuche en un puerto TCP específico &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/configure a server to listen on a specific tcp port.md).  
+ De forma predeterminada, las instancias con nombre (incluido [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) utilizan puertos dinámicos. Eso significa que cada vez que se inicia [!INCLUDE[ssDE](../../includes/ssde-md.md)] , identifica un puerto disponible y utiliza ese número de puerto. Si la instancia con nombre es la única instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] instalada, probablemente utilizará el puerto TCP 1433. Si se instalan otras instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , probablemente utilizará un puerto TCP diferente. Dado que el puerto seleccionado puede cambiar cada vez que se inicia [!INCLUDE[ssDE](../../includes/ssde-md.md)] , es difícil configurar el firewall para permitir el acceso al número de puerto correcto. Por consiguiente, si se usa un firewall, recomendamos reconfigurar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] para que utilice siempre el mismo número de puerto. Esto se denomina un puerto fijo o un puerto estático. Para obtener más información, vea [Configurar un servidor para que escuche en un puerto TCP específico &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
  Una alternativa a configurar una instancia con nombre para escuchar en un puerto fijo es crear una excepción en el firewall para un programa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como **sqlservr.exe** (para el [!INCLUDE[ssDE](../../includes/ssde-md.md)]). Esto puede ser cómodo, pero el número de puerto no aparecerá en la columna **Puerto local** de la página **Reglas de entrada** cuando esté usando el complemento MMC de Firewall de Windows con seguridad avanzada. Esto puede hacer más difícil la tarea de auditar qué puertos están abiertos. Otra consideración es que un Service Pack o una actualización acumulativa puede cambiar la ruta de acceso a la aplicación ejecutable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , lo que invalidará la regla de firewall.  
   
 > [!NOTE]  
 >  El procedimiento siguiente utiliza el elemento **Firewall de Windows** en el Panel de control. El complemento MMC del Firewall de Windows con seguridad avanzada puede configurar una regla más compleja. Esto incluye la configuración de una excepción de servicio que puede ser útil para proporcionar defensa en profundidad. Vea [Utilizar el complemento Firewall de Windows con seguridad avanzada](#BKMK_WF_msc) más adelante.  
   
-###### Para agregar una excepción de programa al firewall utilizando el elemento Firewall de Windows del Panel de control.  
+###### <a name="to-add-a-program-exception-to-the-firewall-using-the-windows-firewall-item-in-control-panel"></a>Para agregar una excepción de programa al firewall utilizando el elemento Firewall de Windows del Panel de control.  
   
 1.  En la pestaña **Excepciones** del elemento **Firewall de Windows** del Panel de control, haga clic en **Agregar un programa**.  
   
@@ -224,14 +228,14 @@ caps.handback.revision: 48
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] llamadas a procedimiento remoto (MS RPC)<br /><br /> Utilizado por el motor de tiempo de ejecución [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|Puerto TCP 135<br /><br /> Vea [Consideraciones especiales para el puerto 135](#BKMK_port_135)|El servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utiliza DCOM en el puerto 135. El Administrador de control de servicios usa el puerto 135 para realizar tareas tales como iniciar y detener el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , y transmitir solicitudes de control al servicio en funcionamiento. No se puede cambiar el número de puerto.<br /><br /> Solamente es necesario que este puerto esté abierto si se está conectando a una instancia remota del servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] desde [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o desde una aplicación personalizada.|  
   
- Para obtener instrucciones detalladas sobre cómo configurar Firewall de Windows para [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vea [Configurar Firewall de Windows para el acceso al servicio SSIS](../../integration-services/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md).  
+ Para ver instrucciones paso a paso para configurar el Firewall de Windows para [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vea [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md) (Servicio de Integration Services &#40;Servicio SSIS&#41;).  
   
 ###  <a name="BKMK_additional_ports"></a> Puertos y servicios adicionales  
  La tabla siguiente muestra los puertos y servicios de los que puede depender [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Escenario|Puerto|Comentarios|  
 |--------------|----------|--------------|  
-|Instrumental de administración de Windows<br /><br /> Para obtener más información acerca de WMI, vea [WMI Provider for Configuration Management Concepts](../Topic/WMI%20Provider%20for%20Configuration%20Management%20Concepts.md).|WMI se ejecuta como parte de un host de servicio compartido con puertos asignados a través de DCOM. WMI podría estar utilizando el puerto TCP 135.<br /><br /> Vea [Consideraciones especiales para el puerto 135](#BKMK_port_135)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza WMI para enumerar y administrar servicios. Recomendamos usar el grupo de reglas preconfigurado **Instrumental de administración de Windows (WMI)**. Para obtener más información, vea la sección [Interacción con otras reglas de firewall](#BKMK_other_rules) más adelante|  
+|Instrumental de administración de Windows<br /><br /> Para obtener más información acerca de WMI, vea [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md).|WMI se ejecuta como parte de un host de servicio compartido con puertos asignados a través de DCOM. WMI podría estar utilizando el puerto TCP 135.<br /><br /> Vea [Consideraciones especiales para el puerto 135](#BKMK_port_135)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza WMI para enumerar y administrar servicios. Recomendamos usar el grupo de reglas preconfigurado **Instrumental de administración de Windows (WMI)**. Para obtener más información, vea la sección [Interacción con otras reglas de firewall](#BKMK_other_rules) más adelante|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Coordinador de transacciones distribuidas de (MS DTC)|Puerto TCP 135<br /><br /> Vea [Consideraciones especiales para el puerto 135](#BKMK_port_135)|Si la aplicación utiliza transacciones distribuidas, quizá deba configurar el firewall para permitir que el tráfico del Coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MS DTC) fluya entre instancias independientes de MS DTC y entre MS DTC y administradores de recursos como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se recomienda usar el grupo de reglas preconfigurado **Coordinador de transacciones distribuidas** .<br /><br /> Cuando se configura un único MS DTC compartido para todo el clúster en un grupo de recursos independiente, se debería agregar sqlservr.exe como excepción al firewall.|  
 |El botón Examinar en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] utiliza UDP para establecer conexión con el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser. Para obtener más información, vea [Servicio SQL Server Browser &#40;motor de base de datos y SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).|Puerto UDP 1434|UDP es un protocolo sin conexión.<br /><br /> El firewall tiene una configuración, que se denomina [Propiedad UnicastResponsesToMulticastBroadcastDisabled de la interfaz INetFwProfile](http://go.microsoft.com/fwlink/?LinkId=118371) y controla el comportamiento del firewall respecto a las respuestas de unidifusión a una solicitud UDP de difusión (o multidifusión).  Tiene dos comportamientos.<br /><br /> Si el valor es TRUE, no se permite en absoluto ninguna respuesta de unidifusión a una difusión. La enumeración de servicios producirá un error.<br /><br /> Si la configuración es FALSE (valor predeterminado), las respuestas de unidifusión se permiten durante 3 segundos. La longitud de tiempo no es configurable. En una red congestionada o de latencia alta, o en servidores muy cargados, los intentos de enumerar instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden devolver una lista parcial, que puede desorientar a los usuarios.|  
 |<a name="BKMK_IPsec"></a> Tráfico IPSec|Puerto UDP 500 y puerto UDP 4500|Si la directiva de dominio requiere que las comunicaciones se realicen a través de IPSec, también debe agregar los puertos UDP 4500 y 500 a la lista de excepciones. IPSec es una opción que usa el **Asistente para nueva regla de entrada** en el complemento de Firewall de Windows. Para obtener más información, vea [Utilizar el complemento Firewall de Windows con seguridad avanzada](#BKMK_WF_msc) más adelante.|  
@@ -258,7 +262,7 @@ caps.handback.revision: 48
  El complemento MMC del Firewall de Windows con seguridad avanzada permite cualquier tráfico que coincida con cualquier regla de permiso aplicable. Por lo tanto, si hay dos reglas que se apliquen al puerto 80 (con parámetros diferentes), se permitirá el tráfico que coincida con cualquiera de ellas. Así si una regla permite el tráfico sobre el puerto 80 de la subred local y otra permite el tráfico procedente de cualquier dirección, el efecto de la red será que se permita todo el tráfico dirigido al puerto 80, sin tener en cuenta su origen. Para administrar eficazmente el acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los administradores deben revisar periódicamente las reglas de firewall habilitadas en el servidor.  
   
 ##  <a name="BKMK_profiles"></a> Introducción a los perfiles de firewall  
- Los perfiles de firewall se explican en [Guía de introducción del Firewall de Windows con seguridad avanzada](http://go.microsoft.com/fwlink/?LinkId=116080), en la sección **Firewall de host con reconocimiento de ubicación de red**. En resumen, los sistemas operativos identifican y recuerdan cada una de las redes a las que se conectan con respecto a la conectividad, las conexiones y la categoría.  
+ Los perfiles de firewall se explican en [Guía de introducción del Firewall de Windows con seguridad avanzada](http://go.microsoft.com/fwlink/?LinkId=116080) , en la sección **Firewall de host con reconocimiento de ubicación de red**. En resumen, los sistemas operativos identifican y recuerdan cada una de las redes a las que se conectan con respecto a la conectividad, las conexiones y la categoría.  
   
  Hay tres tipos de ubicación de red en Firewall de Windows con seguridad avanzada:  
   
@@ -284,7 +288,7 @@ caps.handback.revision: 48
 > [!NOTE]  
 >  El uso del elemento **Firewall de Windows** del Panel de control solamente configura el perfil del firewall actual.  
   
-#### Para cambiar el ámbito de una excepción de firewall utilizando el elemento Firewall de Windows del Panel de control  
+#### <a name="to-change-the-scope-of-a-firewall-exception-using-the-windows-firewall-item-in-control-panel"></a>Para cambiar el ámbito de una excepción de firewall utilizando el elemento Firewall de Windows del Panel de control  
   
 1.  En el elemento **Firewall de Windows** de Panel de control, seleccione un programa o puerto en la pestaña **Excepciones** y, a continuación, haga clic en **Propiedades** o **Editar**.  
   
@@ -323,11 +327,11 @@ caps.handback.revision: 48
   
 -   Requerir IPSec para conexiones entrantes  
   
-#### Para crear una nueva regla de firewall mediante el asistente de Nueva regla  
+#### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>Para crear una nueva regla de firewall mediante el asistente de Nueva regla  
   
 1.  En el menú Inicio, haga clic en **Ejecutar**, escriba **WF.msc**y, a continuación, haga clic en **Aceptar**.  
   
-2.  En **Firewall de Windows con seguridad avanzada**, en el panel izquierdo, haga clic con el botón derecho en **Reglas de entrada** y, después, haga clic en **Nueva regla**.  
+2.  En **Firewall de Windows con seguridad avanzada**, en el panel izquierdo, haga clic con el botón derecho en **Reglas de entrada**y, después, haga clic en **Nueva regla**.  
   
 3.  Complete el **Asistente para nueva regla de entrada** usando la configuración que desee.  
   
@@ -336,11 +340,11 @@ caps.handback.revision: 48
   
 -   El estado efectivo del puerto es la unión de todas las reglas relacionadas con el puerto. Cuando intente bloquear el acceso a través de un puerto, puede ser útil para revisar todas las reglas que citan el número de puerto. Para ello, utilice el complemento MMC del Firewall de Windows con seguridad avanzada y ordene las reglas entrantes y salientes por número de puerto.  
   
--   Revise los puertos activos en el equipo en el que se esté ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este proceso de revisión incluye la comprobación de qué puertos TCP/IP están escuchando y también la comprobación del estado de los puertos.  
+-   Revise los puertos activos en el equipo en el que se esté ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este proceso de revisión incluye la comprobación de qué puertos TCP/IP están escuchando y también la comprobación del estado de los puertos.  
   
-     Para comprobar qué puertos están escuchando, use la utilidad de línea de comandos **netstat**. Además de mostrar las conexiones TCP activas, la utilidad **netstat** también muestra diversa información y estadísticas de IP.  
+     Para comprobar qué puertos están escuchando, use la utilidad de línea de comandos **netstat** . Además de mostrar las conexiones TCP activas, la utilidad **netstat** también muestra diversa información y estadísticas de IP.  
   
-    #### Para mostrar qué puertos TCP/IP están escuchando  
+    #### <a name="to-list-which-tcpip-ports-are-listening"></a>Para mostrar qué puertos TCP/IP están escuchando  
   
     1.  Abra la ventana de símbolo del sistema.  
   
@@ -350,8 +354,9 @@ caps.handback.revision: 48
   
 -   La utilidad **PortQry** se puede usar para notificar el estado de los puertos TCP/IP para indicar que están escuchando, no escuchando o filtrados. (Con un estado de filtrado, el puerto puede o no estar escuchando; este estado indica que la utilidad no ha recibido una respuesta del puerto.) La utilidad **PortQry** se puede descargar desde el [Centro de descargas de Microsoft](http://go.microsoft.com/fwlink/?LinkId=28590).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Introducción al servicio y requisitos del puerto de red para el sistema Windows Server](http://support.microsoft.com/kb/832017)   
  [Configurar los valores de firewall (Base de datos SQL de Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   
+

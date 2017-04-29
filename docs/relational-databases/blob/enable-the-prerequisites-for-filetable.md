@@ -1,24 +1,28 @@
 ---
-title: "Habilitar los requisitos previos de FileTables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], requisitos previos"
+title: Habilitar los requisitos previos de FileTables | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], prerequisites
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed35c6e65d3c9670ddb59f352451adfde6c37e07
+ms.lasthandoff: 04/11/2017
+
 ---
-# Habilitar los requisitos previos de FileTables
+# <a name="enable-the-prerequisites-for-filetable"></a>Habilitar los requisitos previos de FileTables
   Describe cómo habilitar los requisitos previos para crear y usar FileTables.  
   
 ##  <a name="EnablePrereq"></a> Habilitar los requisitos previos para FileTable  
@@ -81,10 +85,10 @@ GO
     ```  
   
  **Especificar el nivel de acceso no transaccional mediante SQL Server Management Studio**  
- Puede especificar el nivel de acceso no transaccional en el campo **Acceso sin transacciones de FILESTREAM** de la página **Opciones** del cuadro de diálogo **Propiedades de la base de datos**. Para obtener más información sobre este cuadro de diálogo, vea [Propiedades de la base de datos &#40;página Opciones&#41;](../../relational-databases/databases/database-properties-options-page.md).  
+ Puede especificar el nivel de acceso no transaccional en el campo **Acceso sin transacciones de FILESTREAM** de la página **Opciones** del cuadro de diálogo **Propiedades de la base de datos** . Para obtener más información sobre este cuadro de diálogo, vea [Propiedades de la base de datos &#40;página Opciones&#41;](../../relational-databases/databases/database-properties-options-page.md).  
   
 ##  <a name="BasicsDirectory"></a> Especificar un directorio para FileTables en el nivel de base de datos  
- Cuando habilite el acceso no transaccional a archivos en el nivel de base de datos, puede indicar el nombre de un directorio opcionalmente al mismo tiempo mediante la opción **DIRECTORY_NAME**. Si no proporciona ningún directorio cuando habilite el acceso no transaccional, debe proporcionarlo posteriormente antes de que pueda crear FileTables en la base de datos.  
+ Cuando habilite el acceso no transaccional a archivos en el nivel de base de datos, puede indicar el nombre de un directorio opcionalmente al mismo tiempo mediante la opción **DIRECTORY_NAME** . Si no proporciona ningún directorio cuando habilite el acceso no transaccional, debe proporcionarlo posteriormente antes de que pueda crear FileTables en la base de datos.  
   
  En la jerarquía de carpetas de FileTable, este directorio de nivel de base de datos se convierte en el secundario del nombre del recurso compartido especificado para FILESTREAM en el nivel de instancia y en el primario de las FileTables creadas en la base de datos. Para más información, consulte [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
@@ -116,7 +120,7 @@ GO
     GO  
     ```  
   
--   Cuando **restaure una base de datos**, llame a la instrucción [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) con la opción de FILESTREAM **DIRECTORY_NAME**.  
+-   Cuando **restaure una base de datos**, llame a la instrucción [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) con la opción de FILESTREAM **DIRECTORY_NAME**.  
   
     ```tsql  
     RESTORE DATABASE database_name  
@@ -125,7 +129,7 @@ GO
     ```  
   
  **Especificar un directorio para las FileTables mediante SQL Server Management Studio**  
- Puede especificar el nombre de un directorio en el campo **Nombre de directorio de FILESTREAM** de la página **Opciones** del cuadro de diálogo **Propiedades de la base de datos**. Para obtener más información sobre este cuadro de diálogo, vea [Propiedades de la base de datos &#40;página Opciones&#41;](../../relational-databases/databases/database-properties-options-page.md).  
+ Puede especificar el nombre de un directorio en el campo **Nombre de directorio de FILESTREAM** de la página **Opciones** del cuadro de diálogo **Propiedades de la base de datos** . Para obtener más información sobre este cuadro de diálogo, vea [Propiedades de la base de datos &#40;página Opciones&#41;](../../relational-databases/databases/database-properties-options-page.md).  
   
 ###  <a name="viewnames"></a> Cómo: ver los nombres de directorio existentes para la instancia  
  Para ver la lista de nombres de directorio existentes de la instancia, consulte la vista de catálogo [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) y compruebe la columna **filestream_database_directory_name**.  

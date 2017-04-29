@@ -1,36 +1,40 @@
 ---
-title: "SQL Server Audit (motor de base de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "audit"
-helpviewer_keywords: 
-  - "SQL Server Audit"
-  - "auditorías [SQL Server], SQL Server Audit"
+title: SQL Server Audit (motor de base de datos) | Microsoft Docs
+ms.custom: 
+ms.date: 11/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- audit
+helpviewer_keywords:
+- SQL Server Audit
+- audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 caps.latest.revision: 58
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
+ms.openlocfilehash: 7852b00948b193a07e4ac38d1ace6135a63bc599
+ms.lasthandoff: 04/29/2017
+
 ---
-# SQL Server Audit (motor de base de datos)
+# <a name="sql-server-audit-database-engine"></a>SQL Server Audit (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  La*auditoría* de una instancia de [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] o de una base de datos individual implica el seguimiento y registro de los eventos que se producen en [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. La auditoría de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite crear auditorías de servidor, que pueden contener especificaciones de auditoría de servidor para los eventos de servidor, y especificaciones de auditoría de base de datos para los eventos de base de datos. Los eventos auditados se pueden escribir en los registros de eventos o en los archivos de auditoría.  
+  La*auditoría* de una instancia de [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] o de una base de datos individual implica el seguimiento y registro de los eventos que se producen en [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. La auditoría de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite crear auditorías de servidor, que pueden contener especificaciones de auditoría de servidor para los eventos de servidor, y especificaciones de auditoría de base de datos para los eventos de base de datos. Los eventos auditados se pueden escribir en los registros de eventos o en los archivos de auditoría.  
   
  Hay varios niveles de auditoría disponibles para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], dependiendo de los requisitos gubernamentales o normativos de cada instalación. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit proporciona las herramientas y los procesos necesarios para habilitar, almacenar y ver auditorías en varios objetos de servidor y de base de datos.  
   
  Puede registrar grupos de acciones de auditoría en el servidor por instancia, así como grupos de acciones o acciones de auditoría en la base de datos por base de datos. El evento de auditoría se producirá cada vez que se encuentre la acción auditable.  
   
- Todas las ediciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admiten auditorías en el nivel de servidor. Todas las ediciones admiten auditorías de nivel de base de datos a partir de [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1. Antes de eso, las auditorías de nivel de base de datos se limitaban a las ediciones Enterprise, Developer y Evaluation. Para obtener más información, vea [Características compatibles con las ediciones de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ Todas las ediciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admiten auditorías en el nivel de servidor. Todas las ediciones admiten auditorías de nivel de base de datos a partir de [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1. Antes de eso, las auditorías de nivel de base de datos se limitaban a las ediciones Enterprise, Developer y Evaluation. Para obtener más información, vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!NOTE]  
 >  Este tema se aplica a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  Para [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], consulte [Introducción a la auditoría de base de datos SQL](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/).  
@@ -213,3 +217,5 @@ caps.handback.revision: 58
  [Registros de SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   
   
+
+

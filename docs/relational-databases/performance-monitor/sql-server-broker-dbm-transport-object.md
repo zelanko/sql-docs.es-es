@@ -1,25 +1,29 @@
 ---
-title: "SQL Server, Broker - DBM Transport Object | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker / DBM Transport, objeto"
-  - "SQLServer:Broker / DBM Transport"
+title: Broker - DBM Transport (objeto de SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker / DBM Transport object
+- SQLServer:Broker/DBM Transport
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0bad82d13370dfba9e1067986d1f1789ecf006ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, Broker - DBM Transport Object
+# <a name="sql-server-broker---dbm-transport-object"></a>Broker - DBM Transport (objeto de SQL Server)
   El objeto de rendimiento **Broker / DBM Transport** contiene contadores de rendimiento que proporcionan información de red sobre Service Broker y sobre la creación de reflejo de la base de datos. En la siguiente tabla se enumeran los contadores incluidos en este objeto.  
   
 |Contador de Broker / DBM Transport de SQL Server|Descripción|  
@@ -61,7 +65,7 @@ caps.handback.revision: 34
 |**Base de longitud promedio de E/S de envío**|Exclusivamente para uso interno.|
 |**E/S de envío/seg.**|Este contador informa del número de operaciones de E/S de envío de transporte por segundo que han finalizado. Tenga en cuenta que una operación de envío de transporte puede incluir varios fragmentos de mensajes.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sys.dm_broker_forwarded_messages &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

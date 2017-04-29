@@ -1,27 +1,31 @@
 ---
-title: "SQL:BatchCompleted (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL:BatchCompleted, clase de eventos"
+title: Clase de eventos SQL:BatchCompleted | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL:BatchCompleted event class
 ms.assetid: 1be023e8-7a98-4400-b9e7-b24f6a3fc5ca
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fb81aebd6d95f3b79aa5ebce4187014d29a99434
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL:BatchCompleted (clase de eventos)
-  La clase de eventos SQL:BatchCompleted indica que se ha completado el lote [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+# <a name="sqlbatchcompleted-event-class"></a>SQL:BatchCompleted, clase de eventos
+  La clase de eventos SQL:BatchCompleted indica que se ha completado el lote [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-## Columnas de datos de la clase de evento SQL:BatchCompleted  
+## <a name="sqlbatchcompleted-event-class-data-columns"></a>Columnas de datos de la clase de evento SQL:BatchCompleted  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -54,7 +58,7 @@ caps.handback.revision: 31
 |Writes|**bigint**|Número de operaciones de E/S de escritura de páginas causadas por el proceso por lotes.|17|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

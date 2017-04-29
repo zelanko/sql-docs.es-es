@@ -1,36 +1,40 @@
 ---
-title: "Establecer umbrales y advertencias en el Monitor de replicaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "alertas [replicación de SQL Server]"
-  - "Agente de mezcla, umbrales y advertencias"
-  - "Agente de distribución, umbrales y advertencias"
-  - "umbrales [replicación de SQL Server]"
-  - "Monitor de replicación, umbrales y advertencias"
-  - "supervisar rendimiento [replicación de SQL Server], umbrales y advertencias"
+title: "Establecer umbrales y advertencias en el Monitor de replicación | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- alerts [SQL Server replication]
+- Merge Agent, thresholds and warnings
+- Distribution Agent, thresholds and warnings
+- thresholds [SQL Server replication]
+- Replication Monitor, thresholds and warnings
+- monitoring performance [SQL Server replication], thresholds and warnings
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b47d0b4565cc187ae0746fa7a6c9b5b1f864c3e7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Establecer umbrales y advertencias en el Monitor de replicaci&#243;n
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se muestra información de estado de las publicaciones y suscripciones. De forma predeterminada, en el Monitor de replicación solamente se muestran advertencias de suscripciones no inicializadas, pero puede habilitar advertencias para otras condiciones. Se recomienda habilitar las advertencias para la topología, con el fin de estar puntualmente informado sobre el estado y rendimiento.  
+# <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Establecer umbrales y advertencias en el Monitor de replicación
+  En el Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se muestra información de estado de las publicaciones y suscripciones. De forma predeterminada, en el Monitor de replicación solamente se muestran advertencias de suscripciones no inicializadas, pero puede habilitar advertencias para otras condiciones. Se recomienda habilitar las advertencias para la topología, con el fin de estar puntualmente informado sobre el estado y rendimiento.  
   
  Al habilitar una advertencia, debe especificar un umbral. Cuando se alcanza o se supera ese umbral, aparece la advertencia (a menos que haya un problema de mayor prioridad). Además de mostrar una advertencia en el Monitor de replicación, llegar a un umbral también puede desencadenar una alerta. Se pueden habilitar advertencias para las siguientes condiciones:  
   
 -   Expiración inminente de la suscripción  
   
-     Se aplica a todos los tipos de replicación. Si se alcance o supere el umbral especificado, se muestra el estado de la suscripción como **expiración en breve/expirado**.  
+     Se aplica a todos los tipos de replicación. Si se alcanza o se supera el umbral especificado, el estado de la suscripción se muestra como **Con expiración en breve/Expirada**.  
   
 -   Si se supera la latencia especificada (el intervalo de tiempo que transcurre entre la confirmación de una transacción en el publicador y confirmación de la transacción correspondiente en el suscriptor).  
   
@@ -38,13 +42,13 @@ caps.handback.revision: 33
   
 -   Si se supera el tiempo de sincronización especificado.  
   
-     Esto se aplica a la replicación de mezcla. Si se alcance o supere el umbral especificado, el estado se muestra como **mezcla de ejecución prolongada**. Puede especificar diferentes umbrales para las conexiones de acceso telefónico y de red de área local (LAN).  
+     Esto se aplica a la replicación de mezcla. Si se alcanza o sobrepasa el umbral especificado, el estado se mostrará como **Mezcla de ejecución prolongada**. Puede especificar diferentes umbrales para las conexiones de acceso telefónico y de red de área local (LAN).  
   
 -   Si se produce un error en el procesamiento del número de filas especificado en un período de tiempo determinado.  
   
      Esto se aplica a la replicación de mezcla. Si se alcanza o sobrepasa el umbral especificado, el estado se mostrará como **Rendimiento crítico**. Puede especificar diferentes umbrales para las conexiones de acceso telefónico y de LAN.  
   
- Para obtener más información sobre las advertencias **rendimiento crítico** y **mezcla de ejecución prolongada**, consulte [Monitor de rendimiento con el Monitor de replicación](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md).  
+ Para obtener más información sobre las advertencias **Rendimiento crítico** y **Mezcla de ejecución prolongada**, vea [Monitor Performance with Replication Monitor](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md) (Rendimiento del Monitor con el Monitor de replicación).  
   
  **En este tema**  
   
@@ -66,19 +70,19 @@ caps.handback.revision: 33
   
 5.  Haga clic en **Guardar cambios**.  
   
-#### Para configurar una alerta para un umbral  
+#### <a name="to-configure-an-alert-for-a-threshold"></a>Para configurar una alerta para un umbral  
   
 1.  Haga clic en **Configurar alertas**.  
   
 2.  En el cuadro de diálogo **Configurar alertas de replicación** , seleccione una alerta y haga clic en **Configurar**.  
   
-     Este cuadro de diálogo muestra alertas para todos los tipos de publicaciones, incluidas las alertas que no están relacionadas con los umbrales de supervisión. Para obtener más información, consulte [usar alertas para eventos del agente de replicación](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
+     Este cuadro de diálogo muestra alertas para todos los tipos de publicaciones, incluidas las alertas que no están relacionadas con los umbrales de supervisión. Para obtener más información, vea [Usar alertas para eventos del Agente de replicación](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Establecer opciones en el **\< NombreAlerta> Propiedades de alerta** cuadro de diálogo:  
+3.  Establezca opciones en el cuadro de diálogo **Propiedades de la alerta \<nombreDeAlerta>**:  
   
     -   En la página **General** , haga clic en **Habilitar**; especifique a qué base de datos desea que se aplique la alerta.  
   
-    -   En el **respuesta** página, especifique si se debe enviar un correo electrónico o se debe ejecutar un trabajo.  
+    -   En la página **Respuesta** , especifique si desea que se envíe un mensaje de correo electrónico o que se ejecute un trabajo.  
   
     -   En la página **Opciones** , personalice el texto de la respuesta.  
   
@@ -108,7 +112,7 @@ caps.handback.revision: 33
   
 5.  Haga clic en **Guardar cambios**.  
   
-#### Para configurar una alerta para un umbral  
+#### <a name="to-configure-an-alert-for-a-threshold"></a>Para configurar una alerta para un umbral  
   
 1.  Haga clic en **Configurar alertas**.  
   
@@ -116,11 +120,11 @@ caps.handback.revision: 33
   
      Este cuadro de diálogo muestra alertas para todos los tipos de publicaciones, incluidas las alertas que no están relacionadas con los umbrales de supervisión.  
   
-3.  Establecer opciones en el **\< NombreAlerta> Propiedades de alerta** cuadro de diálogo:  
+3.  Establezca opciones en el cuadro de diálogo **Propiedades de la alerta \<nombreDeAlerta>**:  
   
     -   En la página **General** , haga clic en **Habilitar**; especifique a qué base de datos desea que se aplique la alerta.  
   
-    -   En el **respuesta** página, especifique si se debe enviar un correo electrónico o se debe ejecutar un trabajo.  
+    -   En la página **Respuesta** , especifique si desea que se envíe un mensaje de correo electrónico o que se ejecute un trabajo.  
   
     -   En la página **Opciones** , personalice el texto de la respuesta.  
   
@@ -140,19 +144,19 @@ caps.handback.revision: 33
   
 5.  Haga clic en **Guardar cambios**.  
   
-#### Para configurar una alerta para un umbral  
+#### <a name="to-configure-an-alert-for-a-threshold"></a>Para configurar una alerta para un umbral  
   
 1.  Haga clic en **Configurar alertas**.  
   
 2.  En el cuadro de diálogo **Configurar alertas de replicación** , seleccione una alerta y haga clic en **Configurar**.  
   
-     Este cuadro de diálogo muestra alertas para todos los tipos de publicaciones, incluidas las alertas que no están relacionadas con los umbrales de supervisión. Para obtener más información, consulte [usar alertas para eventos del agente de replicación](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
+     Este cuadro de diálogo muestra alertas para todos los tipos de publicaciones, incluidas las alertas que no están relacionadas con los umbrales de supervisión. Para obtener más información, vea [Usar alertas para eventos del Agente de replicación](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Establecer opciones en el **\< NombreAlerta> Propiedades de alerta** cuadro de diálogo:  
+3.  Establezca opciones en el cuadro de diálogo **Propiedades de la alerta \<nombreDeAlerta>**:  
   
     -   En la página **General** , haga clic en **Habilitar**; especifique a qué base de datos desea que se aplique la alerta.  
   
-    -   En el **respuesta** página, especifique si se debe enviar un correo electrónico o se debe ejecutar un trabajo.  
+    -   En la página **Respuesta** , especifique si desea que se envíe un mensaje de correo electrónico o que se ejecute un trabajo.  
   
     -   En la página **Opciones** , personalice el texto de la respuesta.  
   
@@ -160,7 +164,7 @@ caps.handback.revision: 33
   
 5.  Haga clic en **Cerrar**.  
   
-## Vea también  
- [Supervisar la replicación](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+## <a name="see-also"></a>Vea también  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md) (Supervisar la replicación)  
   
   

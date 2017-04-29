@@ -1,25 +1,29 @@
 ---
-title: "Cursor Manager by Type (objeto de SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Cursor Manager by Type, objeto"
-  - "SQLServer:Cursor Manager by Type"
+title: Cursor Manager by Type (objeto de SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Cursor Manager by Type object
+- SQLServer:Cursor Manager by Type
 ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 800c82cf495aa64371b2ca15bcc2e8833b5fd87d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cursor Manager by Type (objeto de SQL Server)
+# <a name="sql-server-cursor-manager-by-type-object"></a>Cursor Manager by Type (objeto de SQL Server)
   El objeto **SQLServer:Cursor Manager by Type** proporciona contadores para supervisar cursores agrupados por tipo.  
   
  En la siguiente tabla se describen los contadores de **Cursor Manager by Type** de SQL Server.  
@@ -43,9 +47,9 @@ caps.handback.revision: 15
 |**_Total**|Información sobre todos los cursores.|  
 |**API Cursor**|Solo información del cursor de API.|  
 |**TSQL Global Cursor**|Solo información del cursor global de [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
-|**TSQL Local Cursor**|Solo información del cursor local de [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
+|**TSQL Local Cursor**|Solo información del cursor local de [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
   
-## Vea también  
- [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+## <a name="see-also"></a>Vea también  
+ [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

@@ -1,27 +1,31 @@
 ---
-title: "SQL:BatchStarting (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL:BatchStarting [clase de eventos]"
+title: Clase de eventos SQL:BatchStarting | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL:BatchStarting event class
 ms.assetid: b99c2b73-5f77-45c1-a0f4-cfef7921dc84
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a0e72f4c9e0bbb1acf6d0a06a617341bb728716
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL:BatchStarting (clase de eventos)
-  La clase de eventos SQL:BatchStarting indica que se está iniciando un lote [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+# <a name="sqlbatchstarting-event-class"></a>SQL:BatchStarting [clase de eventos]
+  La clase de eventos SQL:BatchStarting indica que se está iniciando un lote [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-## Columnas de datos de la clase de eventos SQL:BatchStarting  
+## <a name="sqlbatchstarting-event-class-data-columns"></a>Columnas de datos de la clase de eventos SQL:BatchStarting  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -47,7 +51,7 @@ caps.handback.revision: 32
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

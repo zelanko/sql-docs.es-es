@@ -1,22 +1,26 @@
 ---
-title: "Cuadros de di&#225;logo de replicaci&#243;n de SQL Server Management Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cuadros de diálogo de replicación de SQL Server Management Studio | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7426b605-7749-4134-a7e4-990d0d845694
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 22d90850650f386147ccc9b88b00f06cbd6813ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cuadros de di&#225;logo de replicaci&#243;n de SQL Server Management Studio
+# <a name="sql-server-management-studio-replication-dialog-boxes"></a>Cuadros de diálogo de replicación de SQL Server Management Studio
   Esta sección incluye información acerca de diversos cuadros de diálogo de replicación disponibles en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 -   [Seguridad del Agente de instantáneas](../../relational-databases/replication/snapshot-agent-security.md)  
@@ -29,11 +33,11 @@ caps.handback.revision: 22
   
 -   [Seguridad del Agente de lectura de cola](../../relational-databases/replication/queue-reader-agent-security.md)  
   
--   [Perfiles de agente & #40; solo agente & #41;](../../relational-databases/replication/agent-profiles-single-agent.md)  
+-   [Perfiles de agente &#40;un solo agente&#41;](../../relational-databases/replication/agent-profiles-single-agent.md)  
   
 -   [Perfiles de agente](../../relational-databases/replication/agent-profiles.md)  
   
--   [& 60; Nombredeperfildeagente & #62; Propiedades](../../relational-databases/replication/agentprofilename-properties.md)  
+-   [&#60;AgentProfileName&#62; Properties](../../relational-databases/replication/agentprofilename-properties.md) (Propiedades de &#60;NombrePerfilAgente&#62;)  
   
 -   [Nuevo perfil de agente](../../relational-databases/replication/new-agent-profile.md)  
   
@@ -43,18 +47,18 @@ caps.handback.revision: 22
   
 -   [Validar suscripción](../../relational-databases/replication/validate-subscription.md)  
   
--   [Opciones de validación de suscripción & #40; Suscripciones transaccionales & #41;](../../relational-databases/replication/subscription-validation-options-transactional-subscriptions.md)  
+-   [Opciones de validación de suscripciones &#40;suscripciones transaccionales&#41;](../../relational-databases/replication/subscription-validation-options-transactional-subscriptions.md)  
   
--   [Opciones de validación de suscripción & #40; Las suscripciones de mezcla & #41;](../../relational-databases/replication/subscription-validation-options-merge-subscriptions.md)  
+-   [Opciones de validación de suscripciones &#40;Suscripciones de mezcla&#41;](../../relational-databases/replication/subscription-validation-options-merge-subscriptions.md)  
   
--   [Reinicializar suscripción & #40; s & #41; -Todas las suscripciones](../../relational-databases/replication/reinitialize-subscription-s-all-subscriptions.md)  
+-   [Reinicializar suscripciones&#40;s&#41; Todas las suscripciones](../../relational-databases/replication/reinitialize-subscription-s-all-subscriptions.md)  
   
--   [Reinicializar suscripción & #40; s & #41; -Una suscripción](../../relational-databases/replication/reinitialize-subscription-s-one-subscription.md)  
+-   [Reinicializar suscripciones&#40;s&#41; Una suscripción](../../relational-databases/replication/reinitialize-subscription-s-one-subscription.md)  
   
--   [Generar Script SQL & #40; Nº 41; y objetos de replicación](../../relational-databases/replication/generate-sql-script-replication-objects.md)  
+-   [Generar script SQL &#40;Objetos de replicación&#41;](../../relational-databases/replication/generate-sql-script-replication-objects.md)  
   
--   [Conectarse al servidor de & #40; Oracle & #41; inicio de sesión](../../relational-databases/replication/connect-to-server-oracle-login.md)  
+-   [Conectarse al servidor &#40;Oracle&#41;, inicio de sesión](../../relational-databases/replication/connect-to-server-oracle-login.md)  
   
--   [Conectarse al servidor de & #40; Oracle & #41; propiedades de conexión](../../relational-databases/replication/connect-to-server-oracle-connection-properties.md)  
+-   [Conectarse al servidor &#40;Oracle&#41;, propiedades de conexión](../../relational-databases/replication/connect-to-server-oracle-connection-properties.md)  
   
   

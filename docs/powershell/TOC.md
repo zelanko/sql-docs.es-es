@@ -1,4 +1,4 @@
-# [Expresiones de consulta y nombres de recursos uniformes](query-expressions-and-uniform-resource-names.md)
-# [cmdlet Invoke-PolicyEvaluation](invoke-policyevaluation-cmdlet.md)
-# [Referencia del motor de base de datos de PowerShell](database-engine-powershell-reference.md)
-# [cmdlet Invoke-Sqlcmd](invoke-sqlcmd-cmdlet.md)
+# [Información general](database-engine-powershell-reference.md)  
+# [Invoke-PolicyEvaluation cmdlet](invoke-policyevaluation-cmdlet.md) (Cmdlet Invoke-PolicyEvaluation)  
+# [Cmdlet Invoke-Sqlcmd](invoke-sqlcmd-cmdlet.md)  
+# [Expresiones de consulta y nombres de recursos uniformes](query-expressions-and-uniform-resource-names.md)  

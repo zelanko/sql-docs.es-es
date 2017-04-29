@@ -1,22 +1,29 @@
 ---
-title: "Gu&#237;a de dise&#241;o de &#237;ndices de SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/06/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Guía de diseño de índices de SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 10/06/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index design guide
+- guide, index design
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 caps.latest.revision: 3
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b56ebb9f804f575c6f1f83cb4e9e192bd4f10e15
+ms.lasthandoff: 04/11/2017
+
 ---
-# Gu&#237;a de dise&#241;o de &#237;ndices de SQL Server
+# <a name="sql-server-index-design-guide"></a>Guía de diseño de índices de SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Los índices mal diseñados y la falta de índices constituyen las principales fuentes de atascos en aplicaciones de base de datos. El diseño eficaz de los índices tiene gran importancia para conseguir un buen rendimiento de una base de datos y una aplicación. Esta guía de diseño de índices de SQL Server contiene información y prácticas recomendadas que le ayudarán a diseñar índices eficaces que resuelvan las necesidades de la aplicación.  
@@ -33,10 +40,10 @@ caps.handback.revision: 3
   
  No equipare siempre la utilización de índices con un buen rendimiento ni el buen rendimiento al uso eficaz del índice. Si la utilización de un índice contribuyera siempre a producir el mejor rendimiento, el trabajo del optimizador de consultas sería muy sencillo. En realidad, una elección incorrecta de índice puede provocar un rendimiento bajo. Por tanto, la tarea del optimizador de consultas consiste en seleccionar un índice o una combinación de índices solo si mejora el rendimiento, y evitar la recuperación indizada cuando afecte al mismo.  
   
-### Tareas del diseño de índices  
+### <a name="index-design-tasks"></a>Tareas del diseño de índices  
  Las siguientes tareas componen la estrategia recomendada para el diseño de índices:  
   
-1.  Comprender las características de la propia base de datos. Por ejemplo, se trata de una base de datos de procesamiento de transacciones en línea (OLTP) con modificaciones frecuentes de datos, o de una base de datos de sistema de ayuda a la toma de decisiones (DSS) o de almacenamiento de datos (OLAP) que contiene principalmente datos de solo lectura y debe procesar rápidamente conjuntos de datos muy grandes. En [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], el índice de *almacén de columnas optimizado para memoria xVelocity* resulta especialmente indicado para los conjuntos de datos típicos de almacenamiento de datos. Los índices de almacén de columnas pueden transformar la experiencia de almacenamiento de datos de los usuarios, ya que permite un rendimiento más rápido en las consultas habituales de almacenamiento de datos, como el filtrado, la agregación, la agrupación y la combinación en estrella de consultas. Para obtener más información, consulte [Guía de índices de almacén de columnas](Columnstore%20Indexes%20Guide.md).  
+1.  Comprender las características de la propia base de datos. Por ejemplo, se trata de una base de datos de procesamiento de transacciones en línea (OLTP) con modificaciones frecuentes de datos, o de una base de datos de sistema de ayuda a la toma de decisiones (DSS) o de almacenamiento de datos (OLAP) que contiene principalmente datos de solo lectura y debe procesar rápidamente conjuntos de datos muy grandes. En [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], el índice de *almacén de columnas optimizado para memoria xVelocity* resulta especialmente indicado para los conjuntos de datos típicos de almacenamiento de datos. Los índices de almacén de columnas pueden transformar la experiencia de almacenamiento de datos de los usuarios, ya que permite un rendimiento más rápido en las consultas habituales de almacenamiento de datos, como el filtrado, la agregación, la agrupación y la combinación en estrella de consultas. Para obtener más información, consulte [Guía de índices de almacén de columnas](~/relational-databases/indexes/columnstore-indexes-overview.md).  
   
 2.  Comprender las características de las consultas utilizadas con frecuencia. Por ejemplo, saber que una consulta utilizada con frecuencia une dos o más tablas facilitará la determinación del mejor tipo de índices que se puede utilizar.  
   
@@ -51,7 +58,7 @@ caps.handback.revision: 3
 ##  <a name="General_Design"></a> Directrices generales para diseñar índices  
  Los administradores de bases de datos más experimentados pueden diseñar un buen conjunto de índices, pero esta tarea es muy compleja, consume mucho tiempo y está sujeta a errores, incluso con cargas de trabajo y bases de datos con un grado de complejidad no excesivo. La comprensión de las características de la base de datos, las consultas y las columnas de datos facilita el diseño de los índices.  
   
-### Consideraciones acerca de la base de datos  
+### <a name="database-considerations"></a>Consideraciones acerca de la base de datos  
  Cuando diseñe un índice, tenga en cuenta las siguientes directrices acerca de la base de datos:  
   
 -   Si se usa un gran número de índices en una tabla, el rendimiento de las instrucciones INSERT, UPDATE, DELETE y MERGE se verá afectado, ya que todos los índices deben ajustarse adecuadamente a medida que cambian los datos de la tabla. Por ejemplo, si una columna se usa en varios índices y ejecuta una instrucción UPDATE que modifica datos de esa columna, se deben actualizar todos los índices que contengan esa columna, así como la columna de la tabla base subyacente (índice de montón o clúster).  
@@ -66,7 +73,7 @@ caps.handback.revision: 3
   
 -   Utilice el Asistente para la optimización de motor de base de datos para analizar las bases de datos y crear recomendaciones de índices. Para obtener más información, vea [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md).  
   
-### Consideraciones sobre consultas  
+### <a name="query-considerations"></a>Consideraciones sobre consultas  
  Cuando diseñe un índice, tenga en cuenta las siguientes directrices acerca de las consultas:  
   
 -   Cree índices no clúster en las columnas que se usan con frecuencia en predicados y condiciones de combinación de las consultas. Sin embargo, debe evitar agregar columnas innecesarias. Si agrega demasiadas columnas de índice, puede reducir el espacio en disco y el rendimiento del mantenimiento del índice.  
@@ -77,12 +84,12 @@ caps.handback.revision: 3
   
 -   Analice el tipo de la consulta y cómo se utilizan las columnas en ella. Por ejemplo, una columna utilizada en una consulta de coincidencia exacta sería una buena candidata para un índice no clúster o clúster.  
   
-### Consideraciones sobre columnas  
+### <a name="column-considerations"></a>Consideraciones sobre columnas  
  Cuando diseñe un índice, tenga en cuenta las siguientes directrices acerca de las columnas:  
   
 -   Utilice una longitud corta en la clave de los índices clúster. Los índices clúster también mejoran si se crean en columnas únicas o que no admitan valores NULL.  
   
--   Las columnas de los tipos de datos **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)** y **varbinary(max)** no pueden especificarse como columnas de clave de índice. En cambio, los tipos de datos **varchar(max)**, **nvarchar(max)**, **varbinary(max)** y **xml** pueden participar en un índice no agrupado como columnas de índice sin clave. Para obtener más información, vea la sección ['Índice con columnas incluidas](#Included_Columns)' en esta guía.  
+-   Las columnas de los tipos de datos **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)**y **varbinary(max)** no pueden especificarse como columnas de clave de índice. En cambio, los tipos de datos **varchar(max)**, **nvarchar(max)**, **varbinary(max)**y **xml** pueden participar en un índice no agrupado como columnas de índice sin clave. Para obtener más información, vea la sección ['Índice con columnas incluidas](#Included_Columns)' en esta guía.  
   
 -   El tipo de datos **xml** solo puede ser una columna de clave en un índice XML. Para obtener más información, consulte [Índices XML &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md). SQL Server 2012 SP1 presenta un nuevo tipo de índice XML denominado índice XML selectivo. Este nuevo índice puede mejorar el rendimiento de las consultas en datos almacenados como XML en SQL Server, lo que permitirá indizar mucho más rápidamente grandes cargas de trabajo de datos XML y mejorar la escalabilidad reduciendo los costos de almacenamiento del propio índice. Para obtener más información, consulte [Índices XML selectivos &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -98,7 +105,7 @@ caps.handback.revision: 3
   
 -   Tenga en cuenta la indización de columnas calculadas. Para obtener más información, vea [Indexes on Computed Columns](../relational-databases/indexes/indexes-on-computed-columns.md).  
   
-### Características de los índices  
+### <a name="index-characteristics"></a>Características de los índices  
  Después de determinar que un índice resulta adecuado para una consulta, puede seleccionar el tipo de índice que mejor se ajusta a la situación. Entre las características de los índices se incluyen:  
   
 -   Índices agrupados y no agrupados  
@@ -128,7 +135,7 @@ caps.handback.revision: 3
   
  Como no se puede predecir qué tipo de acceso tendrá lugar ni cuándo, la mejor decisión consiste en repartir las tablas e índices en todos los grupos de archivos. De este modo se garantiza el acceso a todos los discos, ya que todos los datos e índices están repartidos por igual entre todos los discos independientemente de la forma de acceso a los datos. También se trata de un método más sencillo para los administradores de sistemas.  
   
-#### Particiones entre varios grupos de archivos  
+#### <a name="partitions-across-multiple-filegroups"></a>Particiones entre varios grupos de archivos  
  También puede considerar la opción de crear particiones de clúster y no clúster en varios grupos de archivos. Los índices con particiones se dividen horizontalmente o por filas, basándose en una función de partición. La función de partición define cómo se asigna cada fila a un conjunto de particiones en los valores de ciertas columnas, denominadas columnas de partición. Un esquema de partición especifica la asignación de las particiones a un conjunto de grupos de archivos.  
   
  La creación de particiones de un índice puede proporcionar las siguientes ventajas:  
@@ -137,7 +144,7 @@ caps.handback.revision: 3
   
 -   Realizar consultas de forma más rápida y eficiente. Cuando las consultas tienen acceso a varias particiones de un índice, el optimizador de consultas puede procesar particiones individuales simultáneamente y excluir particiones que no están afectadas por la consulta.  
   
- Para obtener más información, vea [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Para obtener más información, consulte [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
 ###  <a name="Sort_Order"></a> Directrices para diseñar el criterio de ordenación de los índices  
  Al definir índices, debe tenerse en cuenta si los datos de la columna de clave de índice se almacenan en orden ascendente o descendente. El orden ascendente es el predeterminado y mantiene la compatibilidad con las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La sintaxis de las instrucciones CREATE INDEX, CREATE TABLE y ALTER TABLE admite las palabras clave ASC (ascendente) y DESC (descendente) en columnas individuales de índices y restricciones.  
@@ -188,7 +195,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Si el índice clúster no se crea con la propiedad UNIQUE, el [!INCLUDE[ssDE](../includes/ssde-md.md)] agrega automáticamente una columna de valor de unicidad de 4 bytes a la tabla. Cuando es necesario, el [!INCLUDE[ssDE](../includes/ssde-md.md)] agrega automáticamente un valor de unicidad a una fila para hacer que cada clave sea única. Esta columna y sus valores se utilizan de forma interna; los usuarios no pueden verlos ni tener acceso a ellos.  
   
-### Arquitectura de los índices clúster  
+### <a name="clustered-index-architecture"></a>Arquitectura de los índices clúster  
  En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], los índices se organizan como árboles b. Las páginas de un árbol b de índice se llaman nodos del índice. El nodo superior del árbol b se llama nodo raíz. Los nodos inferiores del índice se denominan nodos hoja. Los niveles del índice entre el nodo raíz y los nodos hoja se conocen en conjunto como niveles intermedios. En un índice clúster, los nodos hoja contienen las páginas de datos de la tabla subyacente. El nodo raíz y los nodos intermedios incluyen páginas de índice que contienen filas de índice. Cada fila de índice contiene un valor clave y un puntero a una página de nivel intermedio en el árbol b, o bien a una fila de datos del nivel hoja del índice. Las páginas de cada nivel del índice se vinculan en una lista con vínculos dobles.  
   
  Los índices clúster tienen una fila en [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md), con **index_id** = 1 para cada partición usada por el índice. De forma predeterminada, un índice clúster tiene una sola partición. Cuando un índice clúster tiene múltiples particiones, cada partición tiene una estructura de árbol b que contiene los datos de esa partición específica. Por ejemplo, si un índice clúster tiene cuatro particiones, hay cuatro estructuras de árbol b, una en cada partición.  
@@ -201,7 +208,7 @@ ON Purchasing.PurchaseOrderDetail
  
  ![bokind2](../relational-databases/media/bokind2.gif)  
   
-### Consideraciones sobre consultas  
+### <a name="query-considerations"></a>Consideraciones sobre consultas  
  Antes de crear índices clúster, debe conocer cómo se tiene acceso a los datos. Considere que utiliza un índice clúster en consultas que realizan lo siguiente:  
   
 -   Devuelven un intervalo de valores mediante la utilización de operadores como BETWEEN, >, >=, < y <=.  
@@ -216,7 +223,7 @@ ON Purchasing.PurchaseOrderDetail
   
      Un índice en las columnas especificadas en la cláusula ORDER BY o GROUP BY puede eliminar la necesidad de que [!INCLUDE[ssDE](../includes/ssde-md.md)] ordene los datos, puesto que las filas ya están ordenadas. De ese modo, el rendimiento de las consultas aumenta.  
   
-### Consideraciones sobre columnas  
+### <a name="column-considerations"></a>Consideraciones sobre columnas  
  Por regla genera, debe definir la clave de índice clúster con el menor número de columnas posible. Considere columnas que cuentan con uno o varios de los siguientes atributos:  
   
 -   Son únicas o contienen muchos valores distintos  
@@ -249,7 +256,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Al igual que cuando se utiliza un índice de un libro, el optimizador de consultas busca valores de datos en el índice no clúster para encontrar la ubicación del valor de datos en la tabla y, a continuación, recupera los datos directamente de esa ubicación. Este sistema convierte a los índices no clúster en la opción más apropiada para las consultas de coincidencia exacta, dado que el índice contiene entradas que describen la ubicación exacta en la tabla de los valores de datos que se buscan en las consultas. Por ejemplo, para consultar la tabla `HumanResources. Employee` con el fin de ver todos los subordinados de un jefe determinado, el optimizador de consultas podría usar el índice no clúster `IX_Employee_ManagerID`, que tiene `ManagerID` como columna de clave. El optimizador de consultas puede buscar rápidamente todas las entradas del índice que coinciden con el `ManagerID`especificado. Cada entrada de índice apunta a la página y fila exactas de la tabla, o índice clúster, en que se pueden encontrar los datos correspondientes. Una vez que el optimizador de consultas busca todas las entradas del índice, puede ir directamente a la página y fila exactas para recuperar los datos.  
   
-### Arquitectura de los índices no clúster  
+### <a name="nonclustered-index-architecture"></a>Arquitectura de los índices no clúster  
  Los índices no clúster tienen la misma estructura de árbol b que los índices clúster, excepto por las siguientes diferencias importantes:  
   
 -   Las filas de datos de la tabla subyacente no están ordenadas ni almacenadas basándose en sus claves no agrupadas.  
@@ -271,7 +278,7 @@ ON Purchasing.PurchaseOrderDetail
 ![bokind1a](../relational-databases/media/bokind1a.gif)  
   
   
-### Consideraciones acerca de la base de datos  
+### <a name="database-considerations"></a>Consideraciones acerca de la base de datos  
  Tenga en cuenta las características de la base de datos al diseñar índices no clúster.  
   
 -   Las bases de datos o tablas que exigen pocos requisitos para la actualización, pero suelen contener un gran volumen de datos, se pueden beneficiar de muchos índices no clúster para mejorar el optimizador de consultas. Considere la creación de índices filtrados para subconjuntos bien definidos de datos con el fin de mejorar el rendimiento de las consultas, reducir los costos de almacenamiento del índice y reducir los costos de mantenimiento del índice en comparación con índices no clúster de la tabla completa.  
@@ -282,7 +289,7 @@ ON Purchasing.PurchaseOrderDetail
   
      Si se utiliza un gran número de índices en una tabla, el rendimiento de las instrucciones INSERT, UPDATE, DELETE y MERGE se verá afectado, ya que todos los índices deben ajustarse adecuadamente a medida que cambian los datos de la tabla.  
   
-### Consideraciones sobre consultas  
+### <a name="query-considerations"></a>Consideraciones sobre consultas  
  Antes de crear índices no clúster, debe conocer cómo se tiene acceso a los datos. Considere la posibilidad de utilizar un índice no clúster para consultas que cuentan con los siguientes atributos:  
   
 -   Utilizan cláusulas JOIN o GROUP BY.  
@@ -295,7 +302,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Contienen columnas que suelen incluirse en las condiciones de búsqueda de una consulta, como la cláusula WHERE, que devuelven coincidencias exactas.  
   
-### Consideraciones sobre columnas  
+### <a name="column-considerations"></a>Consideraciones sobre columnas  
  Tenga en cuenta las columnas que tengan uno o varios de estos atributos:  
   
 -   Cubren la consulta.  
@@ -322,7 +329,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Las columnas de clave se almacenan en todos los niveles del índice, mientras que las columnas sin clave solo se almacenan en el nivel hoja.  
   
-##### Usar columnas incluidas para evitar límites de tamaño  
+##### <a name="using-included-columns-to-avoid-size-limits"></a>Usar columnas incluidas para evitar límites de tamaño  
  Puede incluir columnas sin clave en un índice no clúster para evitar que supere las limitaciones actuales de tamaño del índice de un máximo de 16 columnas de clave y un tamaño máximo de las claves de índice de 900 bytes. El [!INCLUDE[ssDE](../includes/ssde-md.md)] no tiene en cuenta las columnas sin clave al calcular el número de columnas de clave de índice o el tamaño de clave de índice.  
   
  Por ejemplo, suponga que desea indizar las siguientes columnas de la tabla `Document` :  
@@ -333,7 +340,7 @@ ON Purchasing.PurchaseOrderDetail
   
  `FileName nvarchar(400)`  
   
- Puesto que los tipos de datos **nchar** y **nvarchar** necesitan 2 bytes para cada carácter, un índice que contenga estas tres columnas superaría la limitación de tamaño de 900 bytes en 10 bytes (455 * 2). Al utilizar la cláusula `INCLUDE` de la instrucción `CREATE INDEX`, la clave de índice se puede definir como (`Title, Revision`) y `FileName` como columna sin clave. De esta forma, el tamaño de las claves de índice sería de 110 bytes (55 \* 2) y el índice seguiría conteniendo todas las columnas necesarias. La siguiente instrucción crea ese índice.  
+ Puesto que los tipos de datos **nchar** y **nvarchar** necesitan 2 bytes para cada carácter, un índice que contenga estas tres columnas superaría la limitación de tamaño de 900 bytes en 10 bytes (455 * 2). Al utilizar la cláusula `INCLUDE` de la instrucción `CREATE INDEX` , la clave de índice se puede definir como (`Title, Revision`) y `FileName` como columna sin clave. De esta forma, el tamaño de las claves de índice sería de 110 bytes (55 \* 2) y el índice seguiría conteniendo todas las columnas necesarias. La siguiente instrucción crea ese índice.  
   
 ```  
 CREATE INDEX IX_Document_Title   
@@ -341,7 +348,7 @@ ON Production.Document (Title, Revision)
 INCLUDE (FileName);   
 ```  
   
-##### Directrices del índice con columnas incluidas  
+##### <a name="index-with-included-columns-guidelines"></a>Directrices del índice con columnas incluidas  
  Cuando diseñe índices no clúster con columnas incluidas tenga en cuenta las siguientes directrices:  
   
 -   Las columnas sin clave se definen en la cláusula INCLUDE de la instrucción CREATE INDEX.  
@@ -352,13 +359,13 @@ INCLUDE (FileName);
   
 -   Las columnas calculadas que son deterministas, y precisas o imprecisas, pueden ser columnas incluidas. Para obtener más información, vea [Indexes on Computed Columns](../relational-databases/indexes/indexes-on-computed-columns.md).  
   
--   Al igual que con las columnas de clave, las columnas calculadas derivadas de los tipos de datos **image**, **ntext** y **text** pueden ser columnas sin clave (incluidas) siempre que se permita el tipo de datos de la columna calculada como columna de índice sin clave.  
+-   Al igual que con las columnas de clave, las columnas calculadas derivadas de los tipos de datos **image**, **ntext**y **text** pueden ser columnas sin clave (incluidas) siempre que se permita el tipo de datos de la columna calculada como columna de índice sin clave.  
   
 -   Los nombres de columna no se pueden especificar en la lista INCLUDE y en la lista de columnas de clave.  
   
 -   Los nombres de columna no se pueden repetir en la lista INCLUDE.  
   
-##### Directrices del tamaño de columnas  
+##### <a name="column-size-guidelines"></a>Directrices del tamaño de columnas  
   
 -   Es necesario definir como mínimo una columna de clave. El número máximo de columnas sin clave es de 1023 columnas. Éste es el número máximo de columnas de la tabla menos 1.  
   
@@ -366,7 +373,7 @@ INCLUDE (FileName);
   
 -   El tamaño total de todas las columnas sin clave solo está limitado por el tamaño de las columnas especificadas en la cláusula INCLUDE; por ejemplo, las columnas **varchar(max)** están limitadas a 2 GB.  
   
-##### Directrices para modificar columnas  
+##### <a name="column-modification-guidelines"></a>Directrices para modificar columnas  
  Cuando se modifica una columna de tabla que se ha definido como una columna incluida, se aplican las siguientes restricciones:  
   
 -   Las columnas sin clave no se pueden quitar de la tabla, a menos que antes se quite el índice.  
@@ -380,7 +387,7 @@ INCLUDE (FileName);
         > [!NOTE]  
         >  También se aplican restricciones de modificación a las columnas de clave de índice.  
   
-##### Recomendaciones de diseño  
+##### <a name="design-recommendations"></a>Recomendaciones de diseño  
  Rediseñe índices no clúster con un tamaño de las claves de índice grande para que solo las columnas utilizadas para búsquedas sean columnas de clave. Haga que todas las demás columnas que abarcan la consulta sean columnas sin clave incluidas. De esta forma, tendrá todas las columnas necesarias para abarcar la consulta pero la clave de índice en sí será pequeña y eficaz.  
   
  Por ejemplo, suponga que desea diseñar un índice para abarcar la siguiente consulta.  
@@ -401,12 +408,12 @@ ON Person.Address (PostalCode)
 INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
 ```  
   
-##### Consideraciones de rendimiento  
+##### <a name="performance-considerations"></a>Consideraciones de rendimiento  
  Evite agregar columnas que no sean necesarias. El hecho de agregar demasiadas columnas de índice, con o sin clave, puede tener las siguientes consecuencias en el rendimiento:  
   
 -   Cabrán menos filas de índice en una página. Esto puede crear incrementos de E/S y una reducción de la eficacia de la caché.  
   
--   Se necesitará más espacio en disco para almacenar el índice. En concreto, al agregar los tipos de datos **varchar(max)**, **nvarchar(max)**, **varbinary(max)** o **xml** como columnas de índice sin clave, se pueden aumentar significativamente los requisitos de espacio en disco. Esto se debe a que los valores de columnas se copian en el nivel hoja del índice. Por lo tanto, residen en el índice y en la tabla base.  
+-   Se necesitará más espacio en disco para almacenar el índice. En concreto, al agregar los tipos de datos **varchar(max)**, **nvarchar(max)**, **varbinary(max)**o **xml** como columnas de índice sin clave, se pueden aumentar significativamente los requisitos de espacio en disco. Esto se debe a que los valores de columnas se copian en el nivel hoja del índice. Por lo tanto, residen en el índice y en la tabla base.  
   
 -   Puede que el mantenimiento del índice haga aumentar el tiempo necesario para realizar operaciones de modificación, inserción, actualización o eliminación en la tabla subyacente o la vista indizada.  
   
@@ -428,7 +435,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Si se crea una restricción PRIMARY KEY o UNIQUE, se creará automáticamente un índice único en las columnas especificadas. No existen diferencias significativas entre la creación de una restricción UNIQUE y la creación de un índice único independiente de una restricción. La validación de los datos tiene lugar de la misma manera y el optimizador de consultas no establece diferencias entre un índice único creado por una restricción y uno creado manualmente. Sin embargo, deberá crear una restricción UNIQUE o PRIMARY KEY en la columna cuando el objetivo sea la integridad de los datos. Al hacer esto, el objetivo del índice quedará claro.  
   
-### Consideraciones  
+### <a name="considerations"></a>Consideraciones  
   
 -   Un índice único, una restricción UNIQUE o una restricción PRIMARY KEY no se pueden crear si existen valores de clave duplicados en los datos.  
   
@@ -472,10 +479,10 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Los índices filtrados se definen en una tabla y solamente admiten operadores de comparación simples. Cuando necesite una expresión de filtro que haga referencia a varias tablas o que tenga lógica compleja, deberá crear una vista.  
   
-### Consideraciones de diseño  
+### <a name="design-considerations"></a>Consideraciones de diseño  
  Para diseñar índices filtrados efectivos, es importante entender qué consultas utiliza la aplicación y cómo se relacionan con los subconjuntos de datos. Algunos ejemplos de datos que tienen subconjuntos bien definidos son las columnas con una mayoría de valores NULL, las columnas con categorías de valores heterogéneas y las columnas con intervalos de valores diferenciados. Las siguientes consideraciones del diseño proporcionan una variedad de escenarios en los que un índice filtrado puede ofrecer ventajas sobre los índices de tabla completa.  
   
-#### Índices filtrados para subconjuntos de datos  
+#### <a name="filtered-indexes-for-subsets-of-data"></a>Índices filtrados para subconjuntos de datos  
  Cuando una columna solamente tiene un número pequeño de valores pertinentes para las consultas, puede crear un índice filtrado en el subconjunto de valores. Por ejemplo, cuando los valores en una columna son principalmente NULL y la consulta solamente selecciona entre valores distintos de NULL, puede crear un índice filtrado para las filas de datos distintos de NULL. El índice resultante será menor y tendrá costos de mantenimiento más reducidos que los de un índice no clúster de tabla completa definido en las mismas columnas de clave.  
   
  Por ejemplo, la base de datos `AdventureWorks2012` tiene una tabla `Production.BillOfMaterials` con 2679 filas. La columna `EndDate` solo tiene 199 filas que contienen un valor distinto de NULL y las otras 2.480 filas contienen valores NULL. El siguiente índice filtrado atenderá consultas que devuelven las columnas definidas en el índice y que seleccionan únicamente filas con un valor distinto de NULL para `EndDate`.  
@@ -499,7 +506,7 @@ WHERE EndDate IS NOT NULL
   
  Para obtener más información sobre cómo crear índices filtrados y cómo definir la expresión de predicado del índice filtrado, vea [Create Filtered Indexes](../relational-databases/indexes/create-filtered-indexes.md).  
   
-#### Índices filtrados para datos heterogéneos  
+#### <a name="filtered-indexes-for-heterogeneous-data"></a>Índices filtrados para datos heterogéneos  
  Cuando una tabla tiene filas de datos heterogéneos, se puede crear un índice filtrado para una o varias categorías de datos.  
   
  Por ejemplo, cada uno de los productos de la tabla `Production.Product` está asignado a un `ProductSubcategoryID`que, a su vez, está asociado a las categorías de producto Bikes, Components, Clothing o Accessories. Estas categorías son heterogéneas porque sus valores de columna en la tabla `Production.Product` no están suficientemente correlacionados. Por ejemplo, las columnas `Color`, `ReorderPoint`, `ListPrice`, `Weight`, `Class`y `Style` tienen características únicas para cada categoría de producto. Suponga que se realizan consultas frecuentes de accesorios cuyas subcategorías están comprendidas entre 27 y 36 inclusive. Puede mejorar el rendimiento de las consultas de accesorios si crea un índice filtrado en las subcategorías de accesorios como se muestra en el ejemplo siguiente.  
@@ -523,7 +530,7 @@ WHERE ProductSubcategoryID = 33 AND ListPrice > 25.00 ;
   
 ```  
   
-#### Columnas de clave  
+#### <a name="key-columns"></a>Columnas de clave  
  Se recomienda insertar un número pequeño de columnas incluidas o de clave en la definición de un índice filtrado e incorporar solamente las columnas necesarias para que el optimizador de consultas elija el índice filtrado para el plan de ejecución de consultas. El optimizador de consultas puede elegir un índice filtrado para la consulta, independientemente de que cubra la consulta o no. Sin embargo, es más probable que el optimizador de consultas elija un índice filtrado si cubre la consulta.  
   
  En algunos casos, un índice filtrado cubre la consulta sin incluir las columnas en la expresión del índice filtrado como columnas incluidas o de clave en la definición del índice filtrado. Las instrucciones siguientes explican los casos en que una columna de la expresión del índice filtrado debe ser una columna incluida o de clave en la definición del índice filtrado. Los ejemplos hacen referencia al índice filtrado `FIBillOfMaterialsWithEndDate` que se creó previamente.  
@@ -551,7 +558,7 @@ WHERE EndDate IS NOT NULL;
   
  La clave de índice clúster de la tabla no tiene por qué ser una columna incluida o de clave de la definición del índice filtrado. La clave de índice cluster se incluye de forma automática en todos los índices no clúster, incluidos los índices filtrados.  
   
-#### Operadores de conversión de datos en el predicado de filtro  
+#### <a name="data-conversion-operators-in-the-filter-predicate"></a>Operadores de conversión de datos en el predicado de filtro  
  Si el operador de comparación especificado en la expresión del índice filtrado del índice filtrado produce una conversión de datos implícita o explícita, se producirá un error cuando la conversión se realice en el lado izquierdo de un operador de comparación. Una posible solución es escribir la expresión del índice filtrado con el operador de conversión de datos (CAST o CONVERT) en el lado derecho del operador de comparación.  
   
  En el ejemplo siguiente se crea una tabla con varios tipos de datos.  
@@ -583,6 +590,8 @@ WHERE b = CONVERT(Varbinary(4), 1);
 ##  <a name="Additional_Reading"></a> Lecturas adicionales  
  [Mejorar el rendimiento con vistas indizadas de SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   
- [Tablas e índices con particiones](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+ [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   
+
+

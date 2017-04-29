@@ -1,35 +1,39 @@
 ---
-title: "SQL:FullTextQuery (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL:FullTextQuery, clase de eventos"
+title: Clase de eventos SQL:FullTextQuery | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL:FullTextQuery event class
 ms.assetid: 654fb295-f0a5-4d66-93e0-5d43e4d7d535
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a925dc8cd1bb1ce3f91fd306b46d874712c55fae
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL:FullTextQuery (clase de eventos)
+# <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery, clase de eventos
   La clase de eventos SQL:FullTextQuery se produce cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta una consulta de texto completo. Incluya esta clase de eventosen los seguimientos que supervisan los problemas asociados a catálogos de texto completo.  
   
  Al incluir la clase de eventos SQL:FullTextQuery, habrá una gran sobrecarga. Si estos eventos se producen frecuentemente, el seguimiento puede reducir mucho el rendimiento. Para minimizar este riesgo, limite el uso de esta clase de eventos a los seguimientos que supervisen problemas específicos durante periodos breves.  
   
-## Columnas de datos de la clase de eventos SQL:FullTextQuery  
+## <a name="sqlfulltextquery-event-class-data-columns"></a>Columnas de datos de la clase de eventos SQL:FullTextQuery  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
 |ClientProcessID|**int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
-|DatabaseID|**int**|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
+|DatabaseID|**int**|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database*para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
 |Duración|**bigint**|Tiempo necesario para finalizar la consulta de texto completo.|13|No|  
 |EndTime|**datetime**|Tiempo del evento terminado|15|Sí|  
@@ -53,7 +57,7 @@ caps.handback.revision: 31
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

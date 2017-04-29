@@ -1,22 +1,26 @@
 ---
-title: "Copia de seguridad administrada de SQL Server en Microsoft Azure | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Copia de seguridad administrada de SQL Server en Microsoft Azure | Microsoft Docs
+ms.custom: 
+ms.date: 10/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 caps.latest.revision: 44
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 529ae718a28d99104d8835ecaf2cdc4eb5fcc63f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Copia de seguridad administrada de SQL Server en Microsoft Azure
+# <a name="sql-server-managed-backup-to-microsoft-azure"></a>Copia de seguridad administrada de SQL Server en Microsoft Azure
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] administra y automatiza las copias de seguridad de SQL Server en el servicio Almacenamiento de blobs de Microsoft Azure. Puede dejar que SQL Server determine la programación copia de seguridad según la carga de trabajo de transacciones de la base de datos. Como alternativa, puede usar las opciones avanzadas para definir una programación. La configuración de retención determina durante cuánto tiempo se almacenan las copias de seguridad en Almacenamiento de blobs de Azure. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] admite la restauración a un momento dado para el período de retención especificado.  
@@ -26,7 +30,7 @@ caps.handback.revision: 42
 > [!TIP]  
 >  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] se recomienda para las instancias de SQL Server que se ejecutan en máquinas virtuales de Microsoft Azure.  
   
-## Ventajas  
+## <a name="benefits"></a>Ventajas  
  Actualmente, para automatizar las copias de seguridad de varias bases de datos, se requiere desarrollar una estrategia de copia de seguridad, escribir código personalizado y programar copias de seguridad. Con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], puede crear un plan de copia de seguridad especificando solo el periodo de retención y la ubicación de almacenamiento. Aunque la configuración avanzada está disponible, no es necesaria. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] programa, realiza y mantiene las copias de seguridad.  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] puede configurarse en el nivel de base de datos o de la instancia de SQL Server. Al ajustar la configuración en el nivel de instancia, también se realiza automáticamente una copia de seguridad de todas las bases de datos nuevas. La configuración en el nivel de base de datos puede utilizarse para reemplazar los valores predeterminados de nivel de instancia en un caso individual.  
@@ -44,7 +48,7 @@ caps.handback.revision: 42
 |**Firma de acceso compartido (SAS)**|El acceso al contenedor de destino se controla mediante una firma de acceso compartido (SAS). Para obtener más información, consulte [Firmas de acceso compartido, Parte 1: Descripción del modelo SAS](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Puede crear un token SAS en el código o con el comando de PowerShell **New-AzureStorageContainerSASToken** . Para ver un script de PowerShell que simplifica este proceso, vea [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)(Simplificación de la creación de credenciales de SQL con tokens de firmas de acceso compartido (SAS) en Almacenamiento de Azure con PowerShell). El token SAS se puede almacenar en una **credencial SQL** para emplearla con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |**Agente SQL Server**|El Agente SQL Server debe estar en ejecución para que [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] funcione. Considere la posibilidad de establecer la opción de inicio automático.|  
   
-## Components  
+## <a name="components"></a>Components  
  Transact-SQL es la interfaz principal para interactuar con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Los procedimientos almacenados del sistema se utilizan para habilitar, configurar y supervisar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Las funciones del sistema se utilizan para recuperar la configuración, los valores de parámetros y la información del archivo de copia de seguridad existentes. Los eventos extendidos se utilizan para exponer los errores y advertencias. Los mecanismos de alerta se habilitan mediante los trabajos del Agente SQL y la administración basada en directivas de SQL Server. La siguiente es una lista de los objetos y una descripción de su funcionalidad en relación con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  Los cmdlets de PowerShell también están disponibles para configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. SQL Server Management Studio permite restaurar las copias de seguridad creadas por [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] mediante la tarea **Restaurar base de datos**  
@@ -53,7 +57,7 @@ caps.handback.revision: 42
 |-|-|  
 |Objeto del sistema|Descripción|  
 |**MSDB**|Almacena los metadatos y el historial de copias de seguridad de todas las copias de seguridad creadas por [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
-|[managed_backup.sp_backup_config_basic &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|Habilita [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|[managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|Habilita [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|Configura las opciones de configuración avanzada de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], como el cifrado.|  
 |[managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)|Crea una programación personalizada de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_ backup_master_switch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql.md)|Pone en pausa y reanuda [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
@@ -67,15 +71,15 @@ caps.handback.revision: 42
 |[managed_backup.fn_get_current_xevent_settings &#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-get-current-xevent-settings-transact-sql.md)|Devuelve la configuración actual de los eventos extendidos.|  
 |[managed_backup.fn_get_health_status &#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-get-health-status-transact-sql.md)|Devuelve los recuentos agregados de los errores registrados mediante los eventos extendidos durante un periodo específico.|  
   
-## Estrategia de copia de seguridad  
+## <a name="backup-strategy"></a>Estrategia de copia de seguridad  
   
-### Programación de copias de seguridad  
+### <a name="backup-scheduling"></a>Programación de copias de seguridad  
  Puede especificar una programación de copia de seguridad personalizada con el procedimiento almacenado del sistema [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md). Si no especifica una programación personalizada, el tipo de copias de seguridad programadas y la frecuencia de copia de seguridad se determinarán en función de la carga de trabajo de la base de datos. La configuración del período de retención se utiliza para determinar el tiempo que un archivo de copia de seguridad debe conservarse en el almacenamiento y la capacidad de recuperar la base de datos hasta un momento dado dentro del período de retención.  
   
-### Convenciones de nomenclatura de los archivos de copia de seguridad  
+### <a name="backup-file-naming-conventions"></a>Convenciones de nomenclatura de los archivos de copia de seguridad  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] usa el contenedor que especifique, por lo que es el usuario quien se encarga de controlar el nombre del contenedor. Para los archivos de copia de seguridad, las bases de datos que no son de disponibilidad se denominan con la siguiente convención: el nombre se crea con los primeros 40 caracteres del nombre de la base de datos, el GUID de la base de datos sin "-" y, finalmente, la marca de tiempo. El carácter de subrayado se inserta entre los segmentos como separadores. La extensión de archivo **.bak** se usa en el caso de que la copia de seguridad sea completa y **.log** se usa para las copias de seguridad de registros. En las bases de datos del grupo de disponibilidad, además de la convención de nomenclatura de archivos descrita anteriormente, se agrega el GUID de la base de datos del grupo de disponibilidad después de los 40 caracteres del nombre de la base de datos. El GUID de la base de datos del grupo de disponibilidad es el valor de group_database_id de sys.databases.  
   
-### Copia de seguridad completa de base de datos  
+### <a name="full-database-backup"></a>Copia de seguridad completa de base de datos  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] programa una copia de seguridad completa de la base de datos si se cumple alguna de las siguientes condiciones.  
   
 -   Una base de datos se habilita para [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] por primera vez o cuando [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] se habilita con la configuración predeterminada en el nivel de instancia.  
@@ -86,7 +90,7 @@ caps.handback.revision: 42
   
 -   La cadena de registros se interrumpe. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] comprueba periódicamente si la cadena de registros está intacta comparando el primer y el último LSN de los archivos de copia de seguridad. Si se interrumpe la cadena de registros por cualquier motivo, [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] programa una copia de seguridad completa de la base de datos. La razón más común para la interrupción de la cadena de registros es, probablemente, un comando de copia de seguridad emitido con Transact-SQL o con la tarea de copia de seguridad en SQL Server Management Studio.  Otros escenarios comunes incluyen la eliminación accidental de los archivos de registro de copia de seguridad o la sobrescritura accidental de las copias de seguridad.  
   
-### Copia de seguridad de registros de transacciones  
+### <a name="transaction-log-backup"></a>Copia de seguridad de registros de transacciones  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] programa una copia de seguridad de registro si se cumple una de las siguientes condiciones:  
   
 -   No se encuentra el historial de copias de seguridad de registros. Normalmente esto es así cuando [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] se habilita por primera vez.  
@@ -97,12 +101,12 @@ caps.handback.revision: 42
   
 -   En cualquier momento, la copia de seguridad del registro de transacciones se retrasa después de una copia de seguridad completa de la base de datos. El objetivo es mantener la cadena de registros por delante de la copia de seguridad completa.  
   
-## Configuración del período de retención  
+## <a name="retention-period-settings"></a>Configuración del período de retención  
  Al habilitar la copia de seguridad, debe establecer el período de retención en días: el mínimo es 1 día y el máximo es 30 días.  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] según la configuración del período de retención evalúa la capacidad de recuperar a un momento dado en el tiempo especificado para determinar qué archivos de copia de seguridad mantener e identificar los que hay que eliminar. El backup_finish_date de la copia de seguridad se utiliza para determinar y hacer coincidir el tiempo especificado por la configuración del período de retención.  
   
-## Consideraciones importantes  
+## <a name="important-considerations"></a>Consideraciones importantes  
  Para las bases de datos, si hay un trabajo de copia de seguridad completa de la base de datos en ejecución, [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] espera a que el trabajo actual se complete antes de hacer otra copia de seguridad completa de la misma base de datos. Asimismo, solo una copia de seguridad del registro de transacciones se puede ejecutar en un momento dado. Sin embargo, una copia de seguridad completa y una copia de seguridad del registro de transacciones pueden ejecutarse simultáneamente. Los errores se registran como Eventos extendidos.  
   
  Si se programan más de 10 copias de seguridad completas simultáneas de la base de datos, se emitirá una advertencia a través del canal de depuración de Eventos extendidos. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] mantiene entonces una cola de prioridad para las bases de datos restantes que requieren una copia de seguridad hasta que se programen y completen todas.  
@@ -110,7 +114,7 @@ caps.handback.revision: 42
 ##  <a name="support_limits"></a> Compatibilidad  
  Las siguientes consideraciones y limitaciones de compatibilidad son específicas de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
   
--   Se admite la copia de seguridad de bases de datos del sistema de tipo **master**, **model** y **msdb**. No se admite la copia de seguridad de **tempdb**. 
+-   Se admite la copia de seguridad de bases de datos del sistema de tipo **master**, **model**y **msdb** . No se admite la copia de seguridad de **tempdb** . 
   
 -   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], se admiten todos los modelos de recuperación (Completa, Registro masivo y Simple).  
   
@@ -122,7 +126,7 @@ caps.handback.revision: 42
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] puede tener algunas limitaciones cuando se configura con otras tecnologías que admiten la copia de seguridad, la alta disponibilidad o la recuperación de desastres.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
 - [Habilitar la copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
 - [Configurar las opciones avanzadas de copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)   
 - [Deshabilitar la copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)
@@ -130,3 +134,4 @@ caps.handback.revision: 42
 - [Copias de seguridad y restauración de bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
   
   
+

@@ -1,32 +1,36 @@
 ---
-title: "Memory Manager (objeto de SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Memory Manager"
-  - "Memory Manager, objeto"
+title: Memory Manager (objeto de SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Memory Manager
+- Memory Manager object
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 884e6d05db70f9978b84a3423bdfad748f50b29c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Memory Manager (objeto de SQL Server)
+# <a name="sql-server-memory-manager-object"></a>Memory Manager (objeto de SQL Server)
   El objeto **Memory Manager** de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona contadores para supervisar el uso de memoria en el servidor. La supervisión de la utilización total de la memoria en el servidor para medir la actividad de los usuarios y el uso de los recursos puede ayudar a identificar cuellos de botella en el rendimiento. Supervisar la memoria que utiliza una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ayuda a determinar:  
   
 -   Si existen cuellos de botella debidos a la falta de memoria física disponible para almacenar en caché datos a los que se tiene acceso con frecuencia. En este caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe recuperar los datos del disco.  
   
 -   Si se puede mejorar el rendimiento de las consultas agregando memoria o aumentando la memoria disponible para la memoria caché de datos o las estructuras internas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Contadores de Memory Manager  
+## <a name="memory-manager-counters"></a>Contadores de Memory Manager  
  En esta tabla se describen los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Manager** .  
   
 |Contadores de Memory Manager de SQL Server|Descripción|  
@@ -52,7 +56,7 @@ caps.handback.revision: 29
 |**Memoria del servidor de destino (KB)**|Indica la cantidad ideal de memoria dinámica que el servidor puede usar.|  
 |**Memoria total del servidor (KB)**|Especifica la cantidad de memoria que el servidor ha confirmado con el administrador de memoria.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [Buffer Manager (objeto de SQL Server)](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)   
 [sys.dm_os_performance_counters (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  

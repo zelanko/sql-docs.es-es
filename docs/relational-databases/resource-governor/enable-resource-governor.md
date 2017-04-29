@@ -1,29 +1,33 @@
 ---
-title: "Habilitar el regulador de recursos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Regulador de recursos, habilitar"
+title: Habilitar el regulador de recursos | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, enabling
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d4bcec1331a7878bf261aea8923fa8f8e66e7299
+ms.lasthandoff: 04/11/2017
+
 ---
-# Habilitar el regulador de recursos
+# <a name="enable-resource-governor"></a>Habilitar el regulador de recursos
   El regulador de recursos está desactivado de forma predeterminada. Puede habilitar el regulador de recursos utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o Transact-SQL.  
   
--   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [Permisos](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Para habilitar el regulador de recursos, use:** [Explorador de objetos](#RGOnObjEx), [Propiedades del regulador de recursos](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
+-   **To enable Resource Governorn, using:**  [Object Explorer](#RGOnObjEx), [Resource Governor Properties](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
  Habilitar el regulador de recursos tiene como consecuencia lo siguiente:  
@@ -45,14 +49,14 @@ caps.handback.revision: 12
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra el Explorador de objetos y expanda de forma recursiva el nodo **Administración** hasta el nodo **Regulador de recursos**.  
   
-2.  Haga clic con el botón derecho en **Regulador de recursos** y luego haga clic en **Habilitar**.  
+2.  Haga clic con el botón derecho en **Regulador de recursos**y luego haga clic en **Habilitar**.  
   
 ##  <a name="RGOnProp"></a> Habilitar el regulador de recursos mediante Propiedades del regulador de recursos  
  **Para habilitar el regulador de recursos mediante la página Propiedades del regulador de recursos**  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra el Explorador de objetos y expanda de forma recursiva el nodo **Administración** hasta el nodo **Regulador de recursos**.  
   
-2.  Haga clic con el botón derecho en **Regulador de recursos** y luego haga clic en **Propiedades**. De este modo se abre la página **Propiedades del regulador de recursos**.  
+2.  Haga clic con el botón derecho en **Regulador de recursos** y luego haga clic en **Propiedades**. De este modo se abre la página **Propiedades del regulador de recursos** .  
   
 3.  Haga clic en la casilla **Habilitar regulador de recursos** y, a continuación, haga clic en **Aceptar**.  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 12
   
 1.  Ejecute la instrucción **ALTER RESOURCE GOVERNOR RECONFIGURE** .  
   
-### Ejemplo (Transact-SQL)  
+### <a name="example-transact-sql"></a>Ejemplo (Transact-SQL)  
  En el ejemplo siguiente se habilita el regulador de recursos.  
   
 ```  
@@ -69,7 +73,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Deshabilitar el regulador de recursos](../../relational-databases/resource-governor/disable-resource-governor.md)   
  [Grupo de recursos de servidor del regulador de recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

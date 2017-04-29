@@ -1,27 +1,31 @@
 ---
-title: "Database Mirroring (objeto de SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Database Mirroring"
-  - "creación de reflejo de la base de datos [SQL Server], contadores de rendimiento"
-  - "contadores de rendimiento [SQL Server], creación de reflejo de la base de datos"
-  - "Database Mirroring [objeto]"
+title: Database Mirroring (objeto de SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Database Mirroring
+- database mirroring [SQL Server], performance counters
+- performance counters [SQL Server], database mirroring
+- Database Mirroring object
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41cc798b19f243d91b9693ca63c70d1de6661d0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Database Mirroring (objeto de SQL Server)
+# <a name="sql-server-database-mirroring-object"></a>Database Mirroring (objeto de SQL Server)
   El objeto de rendimiento **SQLServer:Creación de reflejo de la base de datos** contiene contadores de rendimiento que proporcionan información acerca de la creación de reflejo de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En la siguiente tabla se enumeran los contadores incluidos en este objeto.  
   
 |Nombre|Descripción|  
@@ -51,10 +55,10 @@ caps.handback.revision: 26
 > [!NOTE]  
 >  En cada asociado, algunos contadores muestran el valor cero según el rol que realice el asociado en ese momento.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Los contadores de rendimiento le permiten supervisar el rendimiento de la creación de reflejo de la base de datos. Por ejemplo, puede examinar el contador **Retraso de transacción** para ver si la creación de reflejo de la base de datos está afectando al rendimiento del servidor principal; puede examinar los contadores **Cola rehecha** y **Envío de registro en cola** para ver el comportamiento de la base de datos reflejada con respecto a la base de datos principal. Puede examinar el contador **Bytes de registro enviados/s** para supervisar la parte del registro enviada por segundo.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

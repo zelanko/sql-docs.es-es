@@ -1,22 +1,26 @@
 ---
-title: "Pr&#225;cticas recomendadas y soluci&#243;n de problemas de Copia de seguridad en URL de SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 06e3118f67db6f01dad0344b42024534081433fb
+ms.lasthandoff: 04/11/2017
+
 ---
-# Pr&#225;cticas recomendadas y soluci&#243;n de problemas de Copia de seguridad en URL de SQL Server
+# <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Este tema incluye prácticas recomendadas y sugerencias para la solución de problemas de copias de seguridad y restauraciones de SQL Server en el servicio Blob de Windows Azure.  
@@ -25,9 +29,9 @@ caps.handback.revision: 26
   
 -   [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Tutorial: copias de seguridad y restauración de SQL Server en el servicio de almacenamiento Blob de Windows Azure](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+-   [Tutorial: copias de seguridad y restauración de SQL Server en el servicio de almacenamiento Blob de Windows Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## Administrar copias de seguridad  
+## <a name="managing-backups"></a>Administrar copias de seguridad  
  La lista siguiente incluye recomendaciones generales para administrar copias de seguridad:  
   
 -   Se recomienda usar un nombre de archivo único para cada copia de seguridad con el fin de evitar que se sobrescriban accidentalmente los blobs.  
@@ -40,16 +44,16 @@ caps.handback.revision: 26
   
 -   El uso de la opción **WITH COMPRESSION** durante la copia de seguridad puede reducir al mínimo los costos de almacenamiento y los costos de transacciones de almacenamiento. También puede reducir el tiempo necesario para completar el proceso de copia de seguridad.  
   
-## Controlar archivos grandes  
+## <a name="handling-large-files"></a>Controlar archivos grandes  
   
 -   La operación de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emplea varios subprocesos para optimizar la transferencia de datos a los servicios de almacenamiento Blob de Windows Azure.  Sin embargo, el rendimiento depende en varios factores, como el ancho de banda del ISV y el tamaño de la base de datos. Si piensa hacer copia de seguridad de bases de datos o grupos de archivos grandes desde una base de datos de SQL Server local, se recomienda que realice primero algunas pruebas de rendimiento. El [SLA de Almacenamiento](http://azure.microsoft.com/support/legal/sla/storage/v1_0/) de Azure tiene unos tiempos máximos de procesamiento para los blobs que puede tener en cuenta.  
   
 -   Usar la opción **WITH COMPRESSION** como se recomienda en la sección **Administrar la copia de seguridad** es muy importante al realizar la copia de seguridad de archivos grandes.  
   
-## Resolución de problemas para realizar la copia de seguridad de una dirección URL o una restauración a partir de esta  
+## <a name="troubleshooting-backup-to-or-restore-from-url"></a>Resolución de problemas para realizar la copia de seguridad de una dirección URL o una restauración a partir de esta  
  A continuación se indican algunas formas rápidas de solucionar errores al hacer copia de seguridad o restaurar desde el servicio de almacenamiento Blob de Windows Azure.  
   
- Para evitar errores debidos a opciones no admitidas o a limitaciones, consulte la lista de limitaciones y la información de compatibilidad con los comandos BACKUP y RESTORE del artículo [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Para evitar errores debidos a opciones no admitidas o a limitaciones, consulte la lista de limitaciones y la información de compatibilidad con los comandos BACKUP y RESTORE del artículo [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) .  
   
  **Errores de autenticación:**  
   
@@ -66,7 +70,7 @@ caps.handback.revision: 26
   
     ```  
   
--   La credencial existe pero la cuenta de inicio de sesión usada para ejecutar el comando de copia de seguridad no tiene permisos de acceso a las credenciales. Use una cuenta de inicio de sesión en el rol **db_backupoperator** con permisos para **Modificar cualquier credencial**.  
+-   La credencial existe pero la cuenta de inicio de sesión usada para ejecutar el comando de copia de seguridad no tiene permisos de acceso a las credenciales. Use una cuenta de inicio de sesión en el rol **db_backupoperator** con permisos para **Modificar cualquier credencial** .  
   
 -   Compruebe los valores de clave y nombre de la cuenta de almacenamiento. La información almacenada en la credencial debe coincidir con los valores de propiedad de la cuenta de almacenamiento de Windows Azure que se usa en las operaciones de copia de seguridad y restauración.  
   
@@ -97,7 +101,7 @@ caps.handback.revision: 26
     -   **SqlException 3284. Gravedad: 16 Estado: 5**  
         **Mensaje: La marca de archivo del dispositivo “https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak” no está alineada. Emita de nuevo la instrucción Restore con el mismo tamaño de bloque usado para crear el conjunto de copia de seguridad: '65536' parece un valor posible.**  
   
-         Para resolver este error, vuelva a emitir la instrucción **BACKUP** especificando **BLOCKSIZE = 65536**.  
+         Para resolver este error, vuelva a emitir la instrucción **BACKUP** especificando **BLOCKSIZE = 65536** .  
   
 -   Error durante la copia de seguridad porque los blobs tienen una concesión activa: una actividad de copia de seguridad con errores puede dar como resultado blobs con concesiones activas.  
   
@@ -111,7 +115,7 @@ caps.handback.revision: 26
   
      Cuando se produce ese error, es necesario eliminar los archivos de blob. Para obtener más información sobre este escenario y cómo corregir este problema, vea [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md).  
   
-## Errores de proxy  
+## <a name="proxy-errors"></a>Errores de proxy  
  Si usa servidores proxy para tener acceso a Internet, pueden producirse los problemas siguientes:  
   
  **Limitación de la conexión por parte de los servidores proxy:**  
@@ -141,21 +145,22 @@ caps.handback.revision: 26
 1.  Cree un archivo de configuración denominado BackuptoURL.exe.config con el código XML siguiente:  
   
     ```  
-    <?xml version ="1.0"?>  
+    \<?xml version ="1.0"?>  
     <configuration>   
-                    <system.net>   
+                    \<system.net>   
                                     <defaultProxy enabled="true" useDefaultCredentials="true">   
                                                     <proxy usesystemdefault="true" />   
                                     </defaultProxy>   
-                    </system.net>  
+                    \</system.net>  
     </configuration>  
   
     ```  
   
 2.  Coloque el archivo de configuración en la carpeta Binn de la instancia de SQL Server. Por ejemplo, si SQL Server está instalado en la unidad C de la máquina, coloque el archivo de configuración aquí: *C:\Archivos de programa\Microsoft SQL Server\MSSQL13.\<nombreDeInstancia>\MSSQL\Binn*.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Restaurar a partir de copias de seguridad archivadas en Microsoft Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
-[RESTORE (Transact-SQL)](RESTORE%20\(Transact-SQL\).md)
+[RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
   
+

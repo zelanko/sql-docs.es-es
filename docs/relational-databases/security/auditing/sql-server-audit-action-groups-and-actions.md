@@ -1,33 +1,37 @@
 ---
-title: "Grupos de acciones y acciones de SQL Server Audit | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "audit"
-helpviewer_keywords: 
-  - "acciones de auditoría [SQL Server]"
-  - "auditorías [SQL Server], grupos"
-  - "acciones de auditoría de nivel de servidor [SQL Server]"
-  - "SQL Server Audit"
-  - "acciones de auditoría de nivel de auditoría [SQL Server]"
-  - "acciones de auditoría de nivel de base de datos [SQL Server]"
-  - "grupos de acciones de auditoría [SQL Server]"
-  - "auditorías [SQL Server], acciones"
+title: Grupos de acciones y acciones de SQL Server Audit | Microsoft Docs
+ms.custom: 
+ms.date: 10/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- audit
+helpviewer_keywords:
+- audit actions [SQL Server]
+- audits [SQL Server], groups
+- server-level audit actions [SQL Server]
+- SQL Server Audit
+- audit-level audit actions [SQL Server]
+- database-level audit actions [SQL Server]
+- audit action groups [SQL Server]
+- audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3eb276c9571a168a746e0e422adf426292cfad2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Grupos de acciones y acciones de SQL Server Audit
+# <a name="sql-server-audit-action-groups-and-actions"></a>Grupos de acciones y acciones de SQL Server Audit
   La característica [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit permite auditar grupos de eventos y eventos individuales de nivel de servidor y de base de datos. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] constan de cero o más elementos de acción de auditoría. Estos elementos pueden ser grupos de acciones, como Server_Object_Change_Group, o acciones individuales tales como las operaciones SELECT en una tabla.  
@@ -65,7 +69,7 @@ caps.handback.revision: 46
   
  Todas las auditorías están deshabilitadas cuando se crean por primera vez.  
   
-## Grupos de acciones de auditoría de nivel de servidor  
+## <a name="server-level-audit-action-groups"></a>Grupos de acciones de auditoría de nivel de servidor  
  Los grupos de acciones de auditoría de nivel de servidor son acciones similares a las clases de eventos de Auditoría de seguridad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información, consulte [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  En la tabla siguiente se describen los grupos de acciones de auditoría de nivel de servidor y se proporciona la clase de eventos de SQL Server equivalente cuando corresponda.  
@@ -115,12 +119,12 @@ caps.handback.revision: 46
 |USER_CHANGE_PASSWORD_GROUP|Este evento se desencadena cuando la contraseña del usuario de una base de datos independiente se cambia utilizando la instrucción ALTER USER.|  
 |USER_DEFINED_AUDIT_GROUP|Este grupo supervisa los eventos producidos por medio de [sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). Normalmente, los desencadenadores o los procedimientos almacenados incluyen llamadas a **sp_audit_write** para habilitar la auditoría de eventos importantes.|  
   
-### Consideraciones  
+### <a name="considerations"></a>Consideraciones  
  Los grupos de acciones de nivel de servidor cubren las acciones de una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Por ejemplo, se registrará cualquier comprobación de acceso a un objeto de esquema en cualquier base de datos si se agrega el grupo de acciones apropiado a una especificación de auditoría de servidor. En una especificación de auditoría de base de datos, solo se registran los accesos al objeto de esquema en la base de datos en cuestión.  
   
  Las acciones de nivel de servidor no permiten un filtrado detallado sobre las acciones de nivel de base de datos. Es necesario realizar una auditoría de base de datos, como la de las acciones SELECT en la tabla Customers para los inicios de sesión en el grupo Employee, para implementar un filtrado detallado sobre las acciones. No incluya objetos con ámbito en el servidor, como las vistas del sistema, en una especificación de auditoría de base de datos.  
   
-## Grupos de acciones de auditoría en el nivel de base de datos  
+## <a name="database-level-audit-action-groups"></a>Grupos de acciones de auditoría en el nivel de base de datos  
  Los grupos de acciones de auditoría en el nivel de base de datos son acciones similares a las clases de evento de auditoría de seguridad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información sobre las clases de eventos, vea [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  En la tabla siguiente se describen los grupos de acciones de auditoría de nivel de base de datos y se proporciona la clase de eventos de SQL Server equivalente cuando corresponda.  
@@ -152,7 +156,7 @@ caps.handback.revision: 46
 |USER_CHANGE_PASSWORD_GROUP|Este evento se desencadena cuando la contraseña del usuario de una base de datos independiente se cambia utilizando la instrucción ALTER USER.|  
 |USER_DEFINED_AUDIT_GROUP|Este grupo supervisa los eventos producidos por medio de [sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
   
-## Acciones de auditoría de nivel de base de datos  
+## <a name="database-level-audit-actions"></a>Acciones de auditoría de nivel de base de datos  
  Las acciones de nivel de base de datos admiten la auditoría de acciones específicas directamente en objetos de esquema y de esquema de la base de datos, como por ejemplo tablas, vistas, procedimientos almacenados, funciones, procedimientos almacenados extendidos, colas o sinónimos. No se auditan los tipos, colección de esquemas XML, base de datos y esquema. La auditoría de objetos de esquema se puede configurar en esquema y base de datos, que indica que se auditarán los eventos en todos los objetos de esquema que contiene el esquema especificado o la base de datos. En la tabla siguiente se describen las acciones de auditoría de nivel de base de datos.  
   
 |Acción|Descripción|  
@@ -165,21 +169,21 @@ caps.handback.revision: 46
 |RECEIVE|Este evento se desencadena al emitir una instrucción RECEIVE.|  
 |REFERENCES|Este evento se desencadena al comprobar un permiso REFERENCES.|  
   
-### Consideraciones  
+### <a name="considerations"></a>Consideraciones  
 *  Las acciones de auditoría de nivel de base de datos no se aplican a las columnas.  
   
 *  Cuando el procesador de consultas parametriza la consulta, el parámetro puede aparecer en el registro de eventos de auditoría en lugar de los valores de columna de la consulta. 
  
 *  No se registran las instrucciones RPC. 
   
-## Grupos de acciones de auditoría de nivel de auditoría  
+## <a name="audit-level-audit-action-groups"></a>Grupos de acciones de auditoría de nivel de auditoría  
  También es posible auditar las acciones del proceso de auditoría. Esto puede realizarse en el ámbito del servidor o en el ámbito de la base de datos. En el ámbito de la base de datos, solo se produce para las especificaciones de auditoría de base de datos. En la tabla siguiente se describen los grupos de acciones de auditoría de nivel de auditoría.  
   
 |Nombre del grupo de acciones|Descripción|  
 |-----------------------|-----------------|  
 |AUDIT_ CHANGE_GROUP|Este evento se desencadena al emitir uno de los comandos siguientes:<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
  [Crear una auditoría de servidor y una especificación de auditoría de servidor](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
  [Crear una especificación de auditoría de servidor y de auditoría de base de datos](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
@@ -225,3 +229,4 @@ caps.handback.revision: 46
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
   
   
+

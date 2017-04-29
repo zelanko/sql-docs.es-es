@@ -1,30 +1,34 @@
 ---
-title: "SQL Server y claves de cifrado de base de datos (motor de base de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "claves [SQL Server], cifrado de base de datos"
+title: SQL Server y claves de cifrado de base de datos (motor de base de datos) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 909656391a0c51345860aece6f41f02de1dc360f
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server y claves de cifrado de base de datos (motor de base de datos)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa claves de cifrado para proteger los datos, las credenciales y la información de conexión que se almacena en una base de datos servidor. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tiene dos tipos de claves: *simétricas* y *asimétricas*. Las claves simétricas utilizan la misma contraseña para cifrar y descifrar los datos. Las claves asimétricas usan una contraseña para cifrar los datos (denominada clave *pública*) y otra para descifrar los datos (denominada clave *privada*).  
+# <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server y claves de cifrado de base de datos (motor de base de datos)
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa claves de cifrado para proteger los datos, las credenciales y la información de conexión que se almacena en una base de datos servidor. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tiene dos tipos de claves: *simétricas* y *asimétricas*. Las claves simétricas utilizan la misma contraseña para cifrar y descifrar los datos. Las claves asimétricas usan una contraseña para cifrar los datos (denominada clave *pública* ) y otra para descifrar los datos (denominada clave *privada* ).  
   
  En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], las claves de cifrado incluyen una combinación de claves públicas, privadas y simétricas que se utilizan para proteger la información confidencial. La clave simétrica se crea durante la inicialización de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] al iniciar por primera vez la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utiliza la clave para cifrar los datos confidenciales que se almacenan en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El sistema operativo crea las claves públicas y privadas, y éstas se utilizan para proteger la clave simétrica. Para cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que almacena datos confidenciales en una base de datos se crea un par de claves pública y privada.  
   
-## Aplicaciones para las claves de SQL Server y las claves de las bases de datos  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tiene dos aplicaciones principales para las claves: una *clave maestra de servicio* (SMK) generada en y para una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], y una *clave maestra de base de datos* (DMK) usada para una base de datos.  
+## <a name="applications-for-sql-server-and-database-keys"></a>Aplicaciones para las claves de SQL Server y las claves de las bases de datos  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tiene dos aplicaciones principales para las claves: una *clave maestra de servicio* (SMK) generada en y para una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , y una *clave maestra de base de datos* (DMK) usada para una base de datos.  
   
  La clave maestra de servicio se genera automáticamente la primera vez que se inicia la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y se utiliza para cifrar una contraseña de servidor vinculado, las credenciales y la clave maestra de base de datos. La SMK se cifra mediante la clave del equipo local y la API de protección de datos de Windows (DPAPI). La DPAPI utiliza una clave derivada de las credenciales de Windows de la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y de las credenciales del equipo. La clave maestra de servicio solo puede descifrarse con la cuenta de servicio en la que se creó o con una entidad de seguridad que tenga acceso a las credenciales del equipo.  
   
@@ -34,7 +38,7 @@ caps.handback.revision: 18
   
  La copia de la DMK almacenada en la base de datos del sistema **master** se actualiza automáticamente siempre que se modifica la DMK. Sin embargo, este comportamiento predeterminado se puede cambiar con la opción **DROP ENCRYPTION BY SERVICE MASTER KEY** de la instrucción **ALTER MASTER KEY** . Para abrir una DMK que no se haya cifrado con la clave maestra de servicio, debe utilizarse la instrucción **OPEN MASTER KEY** y una contraseña.  
   
-## Administrar las claves de SQL Server y las claves de las bases de datos  
+## <a name="managing-sql-server-and-database-keys"></a>Administrar las claves de SQL Server y las claves de las bases de datos  
  La administración de las claves de cifrado consiste en crear nuevas claves de base de datos, crear una copia de seguridad de las claves del servidor y de las bases de datos, y saber cuándo y cómo se deben restaurar, eliminar o cambiar dichas claves.  
   
  Para administrar las claves simétricas, puede utilizar las herramientas incluidas en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para hacer lo siguiente:  
@@ -49,7 +53,7 @@ caps.handback.revision: 18
   
 -   Agregar o quitar una instancia del servidor de una implementación escalada de este servidor en la que varios servidores comparten una sola base de datos y la clave que proporciona el cifrado reversible para dicha base de datos.  
   
-## Información de seguridad importante  
+## <a name="important-security-information"></a>Información de seguridad importante  
  Para tener acceso a los objetos protegidos por la clave maestra de servicio, es necesaria la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se utilizó para crear la clave o la cuenta del equipo. Es decir, el equipo vinculado al sistema donde se creó la clave. Puede cambiar la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *o* la cuenta del equipo sin perder el acceso a la clave. Sin embargo, si cambia ambas, perderá el acceso a la clave maestra de servicio. Si pierde el acceso a la clave maestra de servicio sin uno de estos dos elementos, no podrá descifrar los datos y los objetos cifrados mediante la clave original.  
   
  Las conexiones protegidas con la clave maestra de servicio no se pueden restaurar sin dicha clave.  
@@ -59,14 +63,14 @@ caps.handback.revision: 18
 > [!CAUTION]  
 >  Si pierde todo tipo de acceso a las claves descritas anteriormente, también perderá el acceso a los objetos, las conexiones y los datos protegidos mediante esas claves. Puede restaurar la clave maestra de servicio, tal y como se describe en los vínculos que se muestran a continuación, o puede regresar al sistema de cifrado original para recuperar el acceso. No hay ninguna "puerta trasera" para recuperar el acceso.  
   
-## En esta sección  
- [Clave maestra de servicio](../../../relational-databases/security/encryption/service-master-key.md)  
+## <a name="in-this-section"></a>En esta sección  
+ [Service Master Key](../../../relational-databases/security/encryption/service-master-key.md)  
  Proporciona una breve explicación de la clave maestra de servicio y las prácticas recomendadas.  
   
  [Administración extensible de claves &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
  Explica cómo usar los sistemas de administración de claves de terceros con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
  [Hacer una copia de seguridad de la clave maestra de servicio](../../../relational-databases/security/encryption/back-up-the-service-master-key.md)  
   
  [Restaurar la clave maestra de servicio](../../../relational-databases/security/encryption/restore-the-service-master-key.md)  
@@ -85,16 +89,16 @@ caps.handback.revision: 18
   
  [Cifrar una columna de datos](../../../relational-databases/security/encryption/encrypt-a-column-of-data.md)  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)  
   
  [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-service-master-key-transact-sql.md)  
   
  [Restaurar una clave maestra de base de datos](../../../relational-databases/security/encryption/restore-a-database-master-key.md)  
   
-## Vea también  
- [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md)   
- [Eliminar y volver a crear claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../../reporting-services/install-windows/delete-and-re-create-encryption-keys-ssrs-configuration-manager.md)   
+## <a name="see-also"></a>Vea también  
+ [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Eliminar y volver a crear claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [Agregar y quitar claves de cifrado para implementaciones escaladas &#40;Administrador de configuración de SSRS&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Cifrado de datos transparente &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
   

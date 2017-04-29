@@ -1,27 +1,31 @@
 ---
-title: "Recuperarse de un error en una instancia de cl&#250;ster de conmutaci&#243;n por error | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clústeres [SQL Server], recuperación de un error"
-  - "clústeres de conmutación por error [SQL Server], recuperación de un error"
-  - "errores de hardware [SQL Server]"
-  - "recuperarse errores de clúster de conmutación por error [SQL Server]"
+title: "Recuperarse de un error en una instancia de clúster de conmutación por error | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clusters [SQL Server], recovery from failure
+- failover clustering [SQL Server], recovery from failure
+- hardware failures [SQL Server]
+- recovering failover cluster failures [SQL Server]
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b0e95b00a334c4c0391d800f7846e2f431107892
+ms.lasthandoff: 04/11/2017
+
 ---
-# Recuperarse de un error en una instancia de cl&#250;ster de conmutaci&#243;n por error
+# <a name="recover-from-failover-cluster-instance-failure"></a>Recuperarse de un error en una instancia de clúster de conmutación por error
   En este tema se describe cómo puede recuperarse de los errores de clúster usando el complemento Administrador de clústeres de conmutación por error después de que se produzca una conmutación por error en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. El complemento Administrador de clústeres de conmutación por error es la aplicación de administración de clústeres del servicio de clústeres de conmutación por error de Windows Server (WSFC).  
   
 -   [Recuperarse de un error irreparable](#Scenario1)  
@@ -33,7 +37,7 @@ caps.handback.revision: 31
   
 1.  Cuando se produce un error en el nodo 1, la FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conmuta al nodo 2.  
   
-2.  Desaloje el nodo 1 de la FCI. Para ello, en el nodo 2, abra el complemento Administrador de clústeres de conmutación por error, haga clic con el botón derecho en Node1, haga clic en **Acciones de desplazamiento** y luego en **Expulsar el nodo**.  
+2.  Desaloje el nodo 1 de la FCI. Para ello, en el nodo 2, abra el complemento Administrador de clústeres de conmutación por error, haga clic con el botón derecho en Node1, haga clic en **Acciones de desplazamiento**y luego en **Expulsar el nodo**.  
   
 3.  Compruebe que el nodo 1 se ha desalojado de la definición del clúster.  
   

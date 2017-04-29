@@ -1,28 +1,32 @@
 ---
-title: "Agrupaci&#243;n en cl&#250;steres de varias subredes de SQL Server (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clúster elástico"
-  - "Grupos de disponibilidad [SQL Server], clústeres de WSFC"
-  - "agrupación en clústeres de conmutación por error [SQL Server], grupos de disponibilidad AlwaysOn"
-  - "clúster de conmutación por error de varios sitios"
-  - "clústeres de conmutación por error [SQL Server]"
+title: "Agrupación en clústeres de varias subredes de SQL Server (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 09/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stretch cluster
+- Availability Groups [SQL Server], WSFC clusters
+- failover clustering [SQL Server], AlwaysOn Availability Groups
+- multi-site failover cluster
+- failover clustering [SQL Server]
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 caps.latest.revision: 52
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 615d94c4058e25a12ebcd21619928507b928c2d8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Agrupaci&#243;n en cl&#250;steres de varias subredes de SQL Server (SQL Server)
+# <a name="sql-server-multi-subnet-clustering-sql-server"></a>Agrupación en clústeres de varias subredes de SQL Server (SQL Server)
   Un clúster de conmutación por error de múltiples subredes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es una configuración donde cada nodo clúster se conecta a una subred diferente o un conjunto de subredes diferente. Estas subredes pueden estar en la misma ubicación o en sitios geográficamente dispersos. A veces se hace referencia a la agrupación en clústeres en sitios geográficamente dispersos como clústeres elásticos. Como no existe ningún almacenamiento compartido al que todos los nodos puedan tener acceso, los datos se deben replicar entre el almacenamiento de datos en las diversas subredes. Con la replicación de datos, hay más de una copia de los datos disponible. Por consiguiente, un clúster de conmutación por error de múltiples subredes proporciona una solución de recuperación ante desastres además de alta disponibilidad.  
   
    
@@ -46,11 +50,11 @@ caps.handback.revision: 51
     > **NOTA:** Esta configuración no se considera una configuración de clúster de conmutación por error de múltiples subredes porque los nodos clúster están en el mismo conjunto de subredes.  
   
 ##  <a name="ComponentsAndConcepts"></a> Consideraciones de recursos de dirección IP  
- En una configuración de clúster de conmutación por error de múltiples subredes, no todos los nodos clúster de conmutación por error poseen las direcciones IP y puede que no todos estén con conexión durante el inicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], se puede establecer la dependencia de recurso de dirección IP en **OR**. Esto permite que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esté con conexión cuando hay al menos una dirección IP válida a la que se puede enlazar.  
+ En una configuración de clúster de conmutación por error de múltiples subredes, no todos los nodos clúster de conmutación por error poseen las direcciones IP y puede que no todos estén con conexión durante el inicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . A partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], se puede establecer la dependencia de recurso de dirección IP en **OR**. Esto permite que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esté con conexión cuando hay al menos una dirección IP válida a la que se puede enlazar.  
   
 > **NOTA:** En las versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], se usaba una tecnología de V-LAN elástica en las configuraciones de clúster de varios sitios para exponer una sola dirección IP para la conmutación por error entre sitios. Con la nueva capacidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para agrupar los nodos de clúster entre diferentes subredes, ahora se pueden configurar los clústeres de conmutación por error [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entre varios sitios sin necesidad de implementar la tecnología de V-LAN elástica.  
   
-### Consideraciones acerca de la dependencia OR del recurso de dirección IP  
+### <a name="ip-address-resource-or-dependency-considerations"></a>Consideraciones acerca de la dependencia OR del recurso de dirección IP  
  Es conveniente considerar el siguiente comportamiento de la conmutación por error si se establece en **OR**la dependencia de recurso de dirección IP:  
   
 -   Cuando se produce un error de una de las direcciones IP en el nodo que actualmente posee el grupo de recursos del clúster [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , no se activa automáticamente una conmutación por error hasta que produzcan un error todas las direcciones IP válidas en ese nodo.  
@@ -75,10 +79,10 @@ caps.handback.revision: 51
 |Instalar un clúster de conmutación por error de SQL Server|[Crear un nuevo clúster de conmutación por error de SQL Server (programa de instalación)](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Actualización en contexto del clúster de conmutación por error existente de SQL Server|[Actualizar una instancia de clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |Mantener el clúster de conmutación por error existente de SQL Server|[Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
-|Clústeres de conmutación por error de Windows|[Agrupación en clústeres multisitio de conmutación por error de Windows 2008 R2](http://www.microsoft.com/windowsserver2008/en/us/failover-clustering-multisite.aspx)|  
 |Usar el complemento Administración del clúster de conmutación por error para ver eventos y registros de WSFC|[View Events and Logs for a Failover Cluster](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
 |Usar Windows PowerShell para crear un archivo de registro para todos los nodos (o un determinado nodo) en un clúster de conmutación por error de WSFC|[Cmdlet de clúster de conmutación por error Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx)|  
   
 
   
   
+

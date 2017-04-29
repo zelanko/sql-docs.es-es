@@ -1,24 +1,28 @@
 ---
-title: "Trabajar con directorios y rutas de acceso de FileTables | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], directorios"
+title: Trabajar con directorios y rutas de acceso de FileTables | Microsoft Docs
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d41410b3da1f823a29da0c5b7bd706dff4ce4584
+ms.lasthandoff: 04/11/2017
+
 ---
-# Trabajar con directorios y rutas de acceso de FileTables
+# <a name="work-with-directories-and-paths-in-filetables"></a>Trabajar con directorios y rutas de acceso de FileTables
   Describe la estructura de directorios en la que los archivos se almacenan en FileTables.  
   
 ##  <a name="HowToDirectories"></a> Trabajar con directorios y rutas de acceso de FileTables  
@@ -60,7 +64,7 @@ GO
 ##  <a name="fullpath"></a> Ruta de acceso completa a un elemento almacenado en una FileTable  
  La ruta de acceso completa a un archivo o directorio almacenado en una FileTable comienza con los elementos siguientes:  
   
-1.  El recurso compartido habilitado para el acceso de E/S de archivos de FILESTREAM en el nivel de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  El recurso compartido habilitado para el acceso de E/S de archivos de FILESTREAM en el nivel de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 2.  El valor de **DIRECTORY_NAME** especificado en el nivel de la base de datos.  
   
@@ -77,7 +81,7 @@ GO
 ##  <a name="roots"></a> Semántica de los directorios raíz en los niveles de instancia, base de datos y FileTable  
  Esta jerarquía de directorios se ajusta a la semántica siguiente:  
   
--   El recurso compartido de FILESTREAM en el nivel de instancia lo configura un administrador y se almacena como una propiedad del servidor. Puede cambiar el nombre de este recurso compartido a través del Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Una operación de cambio de nombre no surtirá efecto hasta que se reinicie el servidor.  
+-   El recurso compartido de FILESTREAM en el nivel de instancia lo configura un administrador y se almacena como una propiedad del servidor. Puede cambiar el nombre de este recurso compartido a través del Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Una operación de cambio de nombre no surtirá efecto hasta que se reinicie el servidor.  
   
 -   El valor de **DIRECTORY_NAME** en el nivel de base de datos es NULL de manera predeterminada cuando se crea una nueva base de datos. Un administrador puede establecer o cambiar este nombre mediante la instrucción **ALTER DATABASE** . El nombre debe ser único (en una comparación sin distinción entre mayúsculas y minúsculas) en esa instancia.  
   
@@ -92,7 +96,7 @@ GO
   
 ||||  
 |-|-|-|  
-|**valor** de *is_directory*|**valor** de *file_stream*|**Comportamiento**|  
+|*is_directory* **value**|*file_stream* **value**|**Comportamiento**|  
 |FALSE|NULL|Esta combinación no es válida y la detectará una restricción definida por el sistema.|  
 |FALSE|\<valor>|El elemento representa un archivo.|  
 |TRUE|NULL|El elemento representa un directorio.|  
@@ -105,10 +109,11 @@ GO
   
 -   Todo acceso a los datos de FILESTREAM o FileTable a través de las API del sistema de archivos debe utilizar VNN en lugar de nombres de equipo. Para obtener más información, vea [FILESTREAM y FileTable con grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Habilitar los requisitos previos de FileTables](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)   
  [Crear, modificar y quitar FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
  [Obtener acceso a FileTables con Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [Obtener acceso a FileTables con API de entrada-salida de archivo](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   
   
+

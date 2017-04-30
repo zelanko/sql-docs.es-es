@@ -1,0 +1,116 @@
+---
+title: Notificar a un operador el estado de un trabajo | Microsoft Docs
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- status information [SQL Server], jobs
+- jobs [SQL Server Agent], notification options
+- SQL Server Agent jobs, status
+- jobs [SQL Server Agent], status
+- SQL Server Agent jobs, notification options
+- notifications [SQL Server], job status
+ms.assetid: e7399505-27ac-48d9-a637-73bf92b9df49
+caps.latest.revision: 5
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e16ffa25dd18b3dd32b9c8aa3f36ceeb50af1817
+ms.lasthandoff: 04/11/2017
+
+---
+# <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
+En este tema se describe cómo establecer opciones de notificación en [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)]u Objetos de administración de SQL Server de modo que el Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] pueda enviar a los operadores notificaciones acerca de los trabajos.  
+  
+**En este tema**  
+  
+-   **Antes de empezar:**  
+  
+    [Seguridad](#Security)  
+  
+-   **Para notificar a un operador el estado de un trabajo, utilizando:**  
+  
+    [SQL Server Management Studio](#SSMS)  
+  
+    [Transact-SQL](#TSQL)  
+  
+    [objetos de administración de SQL Server](#SMO)  
+  
+## <a name="BeforeYouBegin"></a>Antes de comenzar  
+  
+### <a name="Security"></a>Seguridad  
+Para obtener información detallada, vea [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+  
+## <a name="SSMS"></a>Usar SQL Server Management Studio  
+  
+#### <a name="to-notify-an-operator-of-job-status"></a>Para notificar a un operador el estado de un trabajo  
+  
+1.  En el **Explorador de objetos** , conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]y, después, expándala.  
+  
+2.  Expanda **Agente SQL Server**, **Trabajos**, haga clic con el botón derecho en el trabajo que desea editar y seleccione **Propiedades**.  
+  
+3.  En el cuadro de diálogo **Propiedades del trabajo** , seleccione la página **Notificaciones** .  
+  
+4.  Si desea enviar una notificación a un operador por **correo electrónico**, seleccione un operador en la lista y elija alguna de las siguientes opciones:  
+  
+    -   **Si el trabajo tiene éxito** para notificar al operador cuando el trabajo concluye correctamente.  
+  
+    -   **Si el trabajo no tiene éxito** para notificar al operador cuando el trabajo se completa de manera incorrecta.  
+  
+    -   **Si el trabajo termina** para notificar al operador independientemente del estado de la finalización.  
+  
+5.  Si desea enviar una notificación a un operador por buscapersonas, active la opción **Buscapersonas**, seleccione un operador en la lista y elija alguna de las siguientes opciones:  
+  
+    -   **Si el trabajo tiene éxito** para notificar al operador cuando el trabajo concluye correctamente.  
+  
+    -   **Si el trabajo no tiene éxito** para notificar al operador cuando el trabajo se completa de manera incorrecta.  
+  
+    -   **Si el trabajo termina** para notificar al operador independientemente del estado de la finalización.  
+  
+6.  Si desea enviar una notificación a un operador por envío de red, active la opción **Envío de red**, seleccione un operador en la lista y elija alguna de las siguientes opciones:  
+  
+    -   **Si el trabajo tiene éxito** para notificar al operador cuando el trabajo concluye correctamente.  
+  
+    -   **Si el trabajo no tiene éxito** para notificar al operador cuando el trabajo se completa de manera incorrecta.  
+  
+    -   **Si el trabajo termina** para notificar al operador independientemente del estado de la finalización.  
+  
+## <a name="TSQL"></a>Usar Transact-SQL  
+  
+#### <a name="to-notify-an-operator-of-job-status"></a>Para notificar a un operador el estado de un trabajo  
+  
+1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+  
+2.  En la barra de Estándar, haga clic en **Nueva consulta**.  
+  
+3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
+  
+    ```  
+    -- adds an e-mail notification for the specified alert (Test Alert).  
+    -- This example assumes that Test Alert already exists
+    --  and that François Ajenstat is a valid operator name.  
+    USE msdb ;  
+    GO  
+    EXEC dbo.sp_add_notification   
+    @alert_name = N'Test Alert',   
+    @operator_name = N'François Ajenstat',   
+    @notification_method = 1 ;  
+    GO  
+    ```  
+  
+Para más información, consulte [sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/en-us/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd).  
+  
+## <a name="SMO"></a>Usar Objetos de administración de SQL Server  
+**Para notificar a un operador el estado de un trabajo**  
+  
+Use la clase **Job** mediante el lenguaje de programación de su elección, como Visual Basic, Visual C# o PowerShell. Para más información, consulte [Objetos de administración de SQL Server (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+  
+

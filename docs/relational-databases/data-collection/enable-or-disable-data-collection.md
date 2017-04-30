@@ -1,25 +1,29 @@
 ---
-title: "Habilitar o deshabilitar la recopilaci&#243;n de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "recopilador de datos [SQL Server], deshabilitar"
-  - "recopilador de datos [SQL Server], habilitar"
+title: "Habilitar o deshabilitar la recopilación de datos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data collector [SQL Server], disabling
+- data collector [SQL Server], enabling
 ms.assetid: 0137971b-fb48-4a3e-822a-3df2b9bb09d7
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a69e9cee1b62ec953b3be3c984cc712a3f0e55d2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Habilitar o deshabilitar la recopilaci&#243;n de datos
+# <a name="enable-or-disable-data-collection"></a>Habilitar o deshabilitar la recopilación de datos
   En este tema se describe cómo habilitar o deshabilitar una recopilación de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
@@ -43,21 +47,21 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para habilitar el recopilador de datos  
+#### <a name="to-enable-the-data-collector"></a>Para habilitar el recopilador de datos  
   
 1.  En el Explorador de objetos, expanda el nodo **Administración** .  
   
-2.  Haga clic con el botón derecho en **Recopilación de datos** y luego haga clic en **Habilitar recopilación de datos**.  
+2.  Haga clic con el botón derecho en **Recopilación de datos**y luego haga clic en **Habilitar recopilación de datos**.  
   
-#### Para deshabilitar el recopilador de datos  
+#### <a name="to-disable-the-data-collector"></a>Para deshabilitar el recopilador de datos  
   
 1.  En el Explorador de objetos, expanda el nodo **Administración** .  
   
-2.  Haga clic con el botón derecho en **Recopilación de datos** y luego haga clic en **Deshabilitar recopilación de datos**.  
+2.  Haga clic con el botón derecho en **Recopilación de datos**y luego haga clic en **Deshabilitar recopilación de datos**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para habilitar el recopilador de datos  
+#### <a name="to-enable-the-data-collector"></a>Para habilitar el recopilador de datos  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -71,7 +75,7 @@ GO
 EXEC dbo.sp_syscollector_enable_collector ;  
 ```  
   
-#### Para deshabilitar el recopilador de datos  
+#### <a name="to-disable-the-data-collector"></a>Para deshabilitar el recopilador de datos  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -85,7 +89,7 @@ GO
 EXEC dbo.sp_syscollector_disable_collector;  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

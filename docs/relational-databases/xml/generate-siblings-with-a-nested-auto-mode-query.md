@@ -1,28 +1,32 @@
 ---
-title: "Generar elementos del mismo nivel con una consulta de modo AUTO anidada | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "consultas [XML en SQL Server], modo AUTO anidadas"
-  - "consultas modo AUTO anidadas en"
+title: Generar elementos del mismo nivel con una consulta de modo AUTO anidada | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [XML in SQL Server], nested AUTO mode
+- nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d85a1b59656222cf07338d2eb98925e30a5c658
+ms.lasthandoff: 04/11/2017
+
 ---
-# Generar elementos del mismo nivel con una consulta de modo AUTO anidada
+# <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Generar elementos del mismo nivel con una consulta de modo AUTO anidada
   En el siguiente ejemplo se muestra cómo generar elementos del mismo nivel utilizando una consulta en modo AUTO anidada. Solo hay otra forma de generar este XML, que es utilizar el modo EXPLICIT. Sin embargo, esto puede ser tedioso.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Esta consulta genera XML que proporciona información de pedidos de ventas. Incluye lo siguiente:  
   
 -   Información de encabezado de pedidos de ventas, `SalesOrderID`, `SalesPersonID`y `OrderDate`. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] almacena esta información en la tabla `SalesOrderHeader` .  
@@ -65,13 +69,13 @@ FOR XML AUTO, TYPE
   
 -   Consulta el conjunto de filas, `SalesOrder`, especificado en la cláusula `FROM`. El resultado es un XML con uno o varios elementos <`SalesOrder`>.  
   
--   Especifica el modo `AUTO` y la directiva `TYPE`. `AUTO` transforma el resultado de la consulta en XML y la directiva `TYPE` devuelve el resultado como tipo **xml** .  
+-   Especifica el modo `AUTO` y la directiva `TYPE` . `AUTO` transforma el resultado de la consulta en XML y la directiva `TYPE` devuelve el resultado como tipo **xml** .  
   
 -   Incluye dos instrucciones `SELECT` anidadas separadas por una coma. La primera instrucción `SELECT` anidada recupera información de pedidos de ventas, encabezado y detalles, y la segunda instrucción `SELECT` anidada recupera información del vendedor.  
   
-    -   La instrucción `SELECT` que recupera `SalesOrderID`, `SalesPersonID` y `CustomerID` incluye otra instrucción `SELECT ... FOR XML` anidada (con el modo `AUTO` y la directiva `TYPE`) que devuelve información de detalles de pedidos de venta.  
+    -   La instrucción `SELECT` que recupera `SalesOrderID`, `SalesPersonID`y `CustomerID` incluye otra instrucción `SELECT ... FOR XML` anidada (con el modo `AUTO` y la directiva `TYPE` ) que devuelve información de detalles de pedidos de venta.  
   
- La instrucción `SELECT` que recupera información del vendedor consulta un conjunto de filas, `SalesPerson`, creado en la cláusula `FROM`. Para que las consultas `FOR XML` funcionen, debe proporcionar un nombre para el conjunto de filas anónimo generado en la cláusula `FROM` . En este caso, el nombre proporcionado es `SalesPerson`.  
+ La instrucción `SELECT` que recupera información del vendedor consulta un conjunto de filas, `SalesPerson`, creado en la cláusula `FROM` . Para que las consultas `FOR XML` funcionen, debe proporcionar un nombre para el conjunto de filas anónimo generado en la cláusula `FROM` . En este caso, el nombre proporcionado es `SalesPerson`.  
   
  Éste es el resultado parcial:  
   
@@ -143,7 +147,7 @@ FOR XML AUTO, TYPE
   
 -   La consulta anterior se agrega a la cláusula `FROM` . El resultado de la consulta se devuelve como una tabla. Observe el alias `XmlCol` agregado.  
   
--   La cláusula `SELECT` especifica una consulta XQuery en el `XmlCol` devuelto en la cláusula `FROM`. Se usa el método **query()** del tipo de datos **xml** al especificar la consulta XQuery. Para obtener más información, vea [query&#40;&#41; &#40;método de tipo de datos xml&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
+-   La cláusula `SELECT` especifica una consulta XQuery en el `XmlCol` devuelto en la cláusula `FROM` . Se usa el método **query()** del tipo de datos **xml** al especificar la consulta XQuery. Para obtener más información, vea [query&#40;&#41; &#40;método de tipo de datos xml&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  
@@ -164,7 +168,7 @@ FOR XML AUTO, TYPE
     FOR XML AUTO, TYPE ) as T(XmlCol)  
     ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Usar consultas FOR XML anidadas](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

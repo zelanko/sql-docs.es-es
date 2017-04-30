@@ -1,32 +1,36 @@
 ---
-title: "Informaci&#243;n general sobre restauraci&#243;n y recuperaci&#243;n (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restaurar tablas [SQL Server]"
-  - "copias de seguridad [SQL Server], escenarios de restauración"
-  - "copias de seguridad de bases de datos [SQL Server], escenarios de restauración"
-  - "restauración de base de datos [SQL Server]"
-  - "restaurar [SQL Server]"
-  - "restauraciones [SQL Server]"
-  - "restauraciones de tablas [SQL Server]"
-  - "restaurar bases de datos [SQL Server], acerca de cómo restaurar las bases de datos"
-  - "restauraciones de bases de datos [SQL Server], escenarios"
+title: "Información general sobre restauración y recuperación (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring tables [SQL Server]
+- backups [SQL Server], restore scenarios
+- database backups [SQL Server], restore scenarios
+- database restores [SQL Server]
+- restoring [SQL Server]
+- restores [SQL Server]
+- table restores [SQL Server]
+- restoring databases [SQL Server], about restoring databases
+- database restores [SQL Server], scenarios
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e04261e1d43b3ca49c1c3d005d7c3ef683964ce
+ms.lasthandoff: 04/11/2017
+
 ---
-# Informaci&#243;n general sobre restauraci&#243;n y recuperaci&#243;n (SQL Server)
+# <a name="restore-and-recovery-overview-sql-server"></a>Información general sobre restauración y recuperación (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Para recuperar de un error una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un administrador de bases de datos tiene que restaurar un conjunto de copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una secuencia de restauración correcta y significativa de forma lógica. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite restaurar los datos de las copias de seguridad de toda una base de datos, un archivo de datos o una página de datos, tal y como se describe a continuación:  
@@ -43,7 +47,7 @@ caps.handback.revision: 46
   
      Con el modelo de recuperación completa o el modelo de recuperación optimizado para cargas masivas de registros, puede restaurar bases de datos individuales. Las restauraciones de páginas pueden utilizarse con cualquier base de datos, independientemente del número de grupos de archivos.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funcionan en todos los sistemas operativos admitidos. Para obtener más información sobre los sistemas operativos admitidos, vea [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md). Para obtener más información sobre la compatibilidad con las copias de seguridad de versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea la sección "Soporte de compatibilidad" de [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funcionan en todos los sistemas operativos admitidos. Para obtener más información sobre los sistemas operativos admitidos, vea [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Para obtener más información sobre la compatibilidad con las copias de seguridad de versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea la sección "Soporte de compatibilidad" de [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
  **En este tema:**  
   
@@ -64,18 +68,18 @@ caps.handback.revision: 46
   
  La siguiente tabla presenta los posibles escenarios de restauración compatibles para diferentes modelos de recuperación.  
   
-|Escenario de restauración|Modelo de recuperación simple|Modelo de recuperación completa o modelo de recuperación optimizado para cargas masivas de registros|  
+|escenario de restauración|Modelo de recuperación simple|Modelo de recuperación completa o modelo de recuperación optimizado para cargas masivas de registros|  
 |----------------------|---------------------------------|----------------------------------------------|  
-|Restauración completa de la base de datos|Es la estrategia de restauración básica. Una restauración de base de datos completa puede implicar simplemente la restauración y recuperación de una copia de seguridad completa de base de datos. Por otra parte, una restauración de base de datos completa puede consistir en restaurar una copia de seguridad completa de base de datos y, luego, restaurar y recuperar una copia de seguridad diferencial.<br /><br /> Para obtener más información, vea [Restauraciones de base de datos completas &#40;modelo de recuperación simple&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md).|Es la estrategia de restauración básica. Una restauración completa de una base de datos supone restaurar una copia de seguridad completa de base de datos y, opcionalmente, una copia de seguridad diferencial (si existe), además de restaurar todas las copias de seguridad de registros posteriores (en orden secuencial). La restauración completa de base de datos finaliza al recuperar la última copia de seguridad de registros y restaurarla (RESTORE WITH RECOVERY).<br /><br /> Para obtener más información, vea [Restauraciones de base de datos completas &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).|  
+|restauración de la base de datos completa|Es la estrategia de restauración básica. Una restauración de base de datos completa puede implicar simplemente la restauración y recuperación de una copia de seguridad completa de base de datos. Por otra parte, una restauración de base de datos completa puede consistir en restaurar una copia de seguridad completa de base de datos y, luego, restaurar y recuperar una copia de seguridad diferencial.<br /><br /> Para obtener más información, vea [Restauraciones de base de datos completas &#40;modelo de recuperación simple&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md).|Es la estrategia de restauración básica. Una restauración completa de una base de datos supone restaurar una copia de seguridad completa de base de datos y, opcionalmente, una copia de seguridad diferencial (si existe), además de restaurar todas las copias de seguridad de registros posteriores (en orden secuencial). La restauración completa de base de datos finaliza al recuperar la última copia de seguridad de registros y restaurarla (RESTORE WITH RECOVERY).<br /><br /> Para obtener más información, vea [Restauraciones de base de datos completas &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).|  
 |File restore **\***|Restauración de uno o más archivos de solo lectura dañados, sin restaurar la base de datos completa. La restauración de archivos está disponible solo si la base de datos tiene como mínimo un grupo de archivos de solo lectura.|Restaura uno o más archivos, sin restaurar la base de datos completa. La restauración de archivos puede realizarse mientras la base de datos está sin conexión o, en algunas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cuando está en línea. Durante la restauración de archivos, los grupos de archivos en los que se incluyen los archivos en cuestión permanecen siempre sin conexión.|  
-|Restauración de página|No aplicable|Restaura una o más páginas dañadas. La restauración de páginas puede realizarse mientras la base de datos está sin conexión o, en algunas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cuando está en línea. Durante la restauración de páginas, las páginas que se están restaurando permanecen siempre sin conexión.<br /><br /> Es preciso que haya disponible una cadena intacta de copias de seguridad de registros, hasta el archivo de registro actual, y deben aplicarse todas a fin de actualizar la página según el archivo de registro actual.<br /><br /> Para obtener más información, vea [Restaurar páginas &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md).|  
+|restauración de páginas|No aplicable|Restaura una o más páginas dañadas. La restauración de páginas puede realizarse mientras la base de datos está sin conexión o, en algunas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cuando está en línea. Durante la restauración de páginas, las páginas que se están restaurando permanecen siempre sin conexión.<br /><br /> Es preciso que haya disponible una cadena intacta de copias de seguridad de registros, hasta el archivo de registro actual, y deben aplicarse todas a fin de actualizar la página según el archivo de registro actual.<br /><br /> Para obtener más información, vea [Restaurar páginas &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md).|  
 |Restauración por etapas **\***|Restauración y recuperación de la base de datos por etapas a nivel de grupo de archivos, empezando por el grupo de archivos principal y todos los grupos de archivos secundarios de lectura/escritura.|Restauración y recuperación de la base de datos por etapas a nivel del grupo de archivos, empezando por el grupo de archivos principal.|  
   
  **\*** La restauración en línea solo se admite en la edición Enterprise.  
   
  Independientemente de la forma de restauración de datos, antes de que una base de datos se pueda recuperar, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] garantiza la coherencia lógica de toda la base de datos. Por ejemplo, si restaura un archivo, no puede recuperarlo y conectarlo hasta que se haya puesto al día hasta un punto lo bastante avanzado de forma que sea coherente con la base de datos.  
   
-### Ventajas de la restauración de archivos o páginas  
+### <a name="advantages-of-a-file-or-page-restore"></a>Ventajas de la restauración de archivos o páginas  
  La restauración y recuperación de archivos o páginas, en lugar de toda la base de datos, ofrece las siguientes ventajas:  
   
 -   La restauración de menos datos reduce el tiempo necesario para copiarlos y recuperarlos.  
@@ -122,10 +126,10 @@ caps.handback.revision: 46
   
  En general, el modelo de recuperación optimizado para cargas masivas de registros es parecido al modelo de recuperación completa y la información descrita para el modelo de recuperación completa también se aplica al otro modelo. Sin embargo, la recuperación a un momento dado y la restauración en línea se ven afectadas por el modelo de recuperación optimizado para cargas masivas de registros.  
   
-### Restricciones de la recuperación a un momento dado  
+### <a name="restrictions-for-point-in-time-recovery"></a>Restricciones de la recuperación a un momento dado  
  Si una copia de seguridad de registros en el modelo de recuperación optimizado para cargas masivas de registros contiene cambios registrados de forma masiva, no se admite la recuperación a un momento dado. Si se intenta realizar una recuperación a un momento dado en una copia de seguridad de registros que contiene cambios masivos, se producirán errores en la operación de restauración.  
   
-### Restricciones de la restauración en línea  
+### <a name="restrictions-for-online-restore"></a>Restricciones de la restauración en línea  
  Una secuencia de restauración en línea solo funciona si se cumplen las condiciones siguientes:  
   
 -   Se han realizado todas las copias de seguridad de registros necesarias antes de iniciar la secuencia de restauración.  
@@ -144,11 +148,11 @@ caps.handback.revision: 46
 ##  <a name="DRA"></a> Asesor para recuperación de base de datos (SQL Server Management Studio)  
  El Asistente para recuperación de base de datos facilita la creación de planes de restauración que implementan secuencias de restauración correctas óptimas. Se ha dado respuesta a muchos problemas conocidos de restauración de base de datos y mejoras solicitados por los clientes. Entre las principales mejoras que ofrece el Asistente para recuperación de base de datos se incluyen las siguientes:  
   
--   **Algoritmo del plan de restauraciones:** el algoritmo usado para crear planes de restauraciones se ha mejorado considerablemente, especialmente en escenarios de restauraciones complejas. Muchos casos extremos, incluidos los escenarios de bifurcación en restauraciones a un momento dado, se tratan de manera más eficaz que en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   **Algoritmo del plan de restauraciones:**  el algoritmo usado para crear planes de restauraciones se ha mejorado considerablemente, especialmente en escenarios de restauraciones complejas. Muchos casos extremos, incluidos los escenarios de bifurcación en restauraciones a un momento dado, se tratan de manera más eficaz que en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Restauración a un momento dado:** el Asistente para recuperación de base de datos simplifica considerablemente la restauración de una base de datos a un momento dado en el tiempo. Una escala de tiempo visual de copia de seguridad mejora significativamente la compatibilidad con restauraciones a un momento dado. Esta escala de tiempo visual permite identificar un punto posible en el tiempo como punto de recuperación de destino para restaurar una base de datos. La escala de tiempo facilita el recorrido de una ruta de recuperación bifurcada (una que abarque varias bifurcaciones de recuperación). Un plan determinado de restauración a un momento dado incluye automáticamente las copias de seguridad que son pertinentes para la restauración a un momento dado de destino (fecha y hora). Para obtener más información, vea [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+-   **Restauración a un momento dado:**  el Asistente para recuperación de base de datos simplifica considerablemente la restauración de una base de datos a un momento dado en el tiempo. Una escala de tiempo visual de copia de seguridad mejora significativamente la compatibilidad con restauraciones a un momento dado. Esta escala de tiempo visual permite identificar un punto posible en el tiempo como punto de recuperación de destino para restaurar una base de datos. La escala de tiempo facilita el recorrido de una ruta de recuperación bifurcada (una que abarque varias bifurcaciones de recuperación). Un plan determinado de restauración a un momento dado incluye automáticamente las copias de seguridad que son pertinentes para la restauración a un momento dado de destino (fecha y hora). Para obtener más información, vea [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
- Para obtener más información sobre el Asistente para recuperación de base de datos, vea los siguientes blogs de Facilidad de uso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Para obtener más información sobre el Asistente para recuperación de base de datos, vea los siguientes blogs de Facilidad de uso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   [Asistente para recuperación: introducción](http://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
@@ -157,7 +161,7 @@ caps.handback.revision: 46
 ##  <a name="RelatedContent"></a> Contenido relacionado  
  Ninguno.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)  
   
   

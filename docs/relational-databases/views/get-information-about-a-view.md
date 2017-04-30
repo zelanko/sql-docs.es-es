@@ -1,33 +1,37 @@
 ---
-title: "Obtener informaci&#243;n acerca de una vista | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.viewproperties.general.f1"
-helpviewer_keywords: 
-  - "vistas [SQL Server], información de estado"
-  - "metadatos [SQL Server], vistas"
-  - "dependencias [SQL Server], vistas"
-  - "mostrar información acerca de las vistas"
-  - "vistas [SQL Server], metadatos"
-  - "ver información acerca de las vistas"
-  - "información de estado [SQL Server], vistas"
-  - "ver dependencias"
+title: "Obtener información sobre una vista | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.viewproperties.general.f1
+helpviewer_keywords:
+- views [SQL Server], status information
+- metadata [SQL Server], views
+- dependencies [SQL Server], views
+- displaying view information
+- views [SQL Server], metadata
+- viewing view information
+- status information [SQL Server], views
+- view dependencies
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f2a981d28720713387dd5b593f037662b9b6b654
+ms.lasthandoff: 04/11/2017
+
 ---
-# Obtener informaci&#243;n acerca de una vista
+# <a name="get-information-about-a-view"></a>Obtener información acerca de una vista
   Puede obtener información acerca de la definición o propiedades de una vista de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Es posible que necesite ver la definición de la vista para entender cómo derivan sus datos de las tablas de origen o para ver los datos que ella misma define.  
   
 > [!IMPORTANT]  
@@ -54,7 +58,7 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Obtener las propiedades de la vista mediante el Explorador de objetos  
+#### <a name="get-view-properties-by-using-object-explorer"></a>Obtener las propiedades de la vista mediante el Explorador de objetos  
   
 1.  En el **Explorador de objetos**, haga clic en el signo más situado junto a la base de datos que contiene la vista cuyas propiedades desea ver y haga clic en el signo más para expandir la carpeta **Vistas** .  
   
@@ -95,7 +99,7 @@ caps.handback.revision: 30
      **Enlazada a un esquema**  
      Indica si la vista está enlazada a un esquema. Los valores son True y False. Para obtener más información sobre las vistas enlazadas a esquemas, vea la sección SCHEMABINDING de [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
-#### Obtener propiedades de la vista con la herramienta Diseñador de vistas  
+#### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>Obtener propiedades de la vista con la herramienta Diseñador de vistas  
   
 1.  En el **Explorador de objetos**, expanda la base de datos que contiene la vista cuyas propiedades desea ver y, a continuación, expanda la carpeta **Vistas** .  
   
@@ -139,7 +143,7 @@ caps.handback.revision: 30
      Muestra una descripción de las instrucciones SQL. Para ver o editar la descripción completa, haga clic en la descripción y después en el botón de puntos suspensivos **(…)** situado a la derecha de la propiedad. Los comentarios pueden incluir información, como quién usa la vista y cuándo.  
   
      **Especificación superior**  
-     Se expande para mostrar las propiedades **Superior**, **Expresión**, **Porcentaje** y **Con valores equivalentes**.  
+     Se expande para mostrar las propiedades **Superior**, **Expresión**, **Porcentaje**y **Con valores equivalentes** .  
   
      **(Superior)**  
      Especifica que la vista incluirá una cláusula TOP, que solo devuelve las primeras n filas o el primer n por cierto de filas en el conjunto de resultados. De forma predeterminada, la vista devolverá las diez primeras filas en el conjunto de resultados. Use esto para cambiar el número de filas que se van a devolver o para especificar un porcentaje diferente.  
@@ -147,14 +151,14 @@ caps.handback.revision: 30
      **Expresión**  
      Muestra qué porcentaje (si **Porcentaje** está establecido en **Sí**) o registros (si **Porcentaje** está establecido en **No**) devolverá la vista.  
   
-     **Por ciento**  
+     **Porcentaje**  
      Especifica que la consulta incluirá una cláusula **TOP** y solo devolverá el primer n por ciento de filas en el conjunto de resultados.  
   
      **Con valores equivalentes**  
-     Especifica que la vista incluirá una cláusula **WITH TIES**. **WITH TIES** resulta útil si una vista incluye una cláusula **ORDER BY** y una cláusula **TOP** basadas en un porcentaje. Si se establece esta opción y el límite del porcentaje queda dentro de un conjunto de filas con valores idénticos en la cláusula **ORDER BY** , se ampliará la vista hasta que incluya todas esas filas.  
+     Especifica que la vista incluirá una cláusula **WITH TIES** . **WITH TIES** resulta útil si una vista incluye una cláusula **ORDER BY** y una cláusula **TOP** basadas en un porcentaje. Si se establece esta opción y el límite del porcentaje queda dentro de un conjunto de filas con valores idénticos en la cláusula **ORDER BY** , se ampliará la vista hasta que incluya todas esas filas.  
   
      **Especificación de actualización**  
-     Se expande para mostrar las propiedades de **Actualizar con reglas de vista** y de **Opción CHECK**.  
+     Se expande para mostrar las propiedades de **Actualizar con reglas de vista** y de **Opción CHECK** .  
   
      **(Actualizar con reglas de vista)**  
      Indica que Microsoft Data Access Components (MDAC) traducirá todas las actualizaciones e inserciones de la vista a instrucciones SQL que hacen referencia a la vista, en lugar de a las instrucciones SQL que hacen referencia directamente a las tablas base de la vista.  
@@ -162,9 +166,9 @@ caps.handback.revision: 30
      En algunos casos, MDAC indica las operaciones de inserción y actualización de la vista como actualizaciones y las inserta en las tablas base subyacentes de la vista. Si selecciona **Actualizar con reglas de vista**, puede asegurarse de que MDAC generará las operaciones de inserción y actualización en la propia vista.  
   
      **Opción CHECK**  
-     Indica que al abrir esta vista y modificar el panel **Resultados**, el origen de datos comprueba si los datos agregados o modificados cumplen la cláusula **WHERE** de la definición de la vista. Si la edición no cumple la cláusula **WHERE** , aparecerá un error con más información.  
+     Indica que al abrir esta vista y modificar el panel **Resultados** , el origen de datos comprueba si los datos agregados o modificados cumplen la cláusula **WHERE** de la definición de la vista. Si la edición no cumple la cláusula **WHERE** , aparecerá un error con más información.  
   
-#### Para obtener las dependencias de la vista  
+#### <a name="to-get-dependencies-on-the-view"></a>Para obtener las dependencias de la vista  
   
 1.  En el **Explorador de objetos**, expanda la base de datos que contiene la vista cuyas propiedades desea ver y, a continuación, expanda la carpeta **Vistas** .  
   
@@ -176,7 +180,7 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para obtener la definición y propiedades de una vista  
+#### <a name="to-get-the-definition-and-properties-of-a-view"></a>Para obtener la definición y propiedades de una vista  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -206,7 +210,7 @@ caps.handback.revision: 30
   
  Para obtener más información, vea [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md), [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md) y [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md).  
   
-#### Para obtener las dependencias de una vista  
+#### <a name="to-get-the-dependencies-of-a-view"></a>Para obtener las dependencias de una vista  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

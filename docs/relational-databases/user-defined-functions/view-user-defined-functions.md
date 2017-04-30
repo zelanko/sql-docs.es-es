@@ -1,30 +1,34 @@
 ---
-title: "Ver funciones definidas por el usuario | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.udfproperties.general.f1"
-  - "sql13.swb.functionproperties.general.f1"
-helpviewer_keywords: 
-  - "mostrar funciones definidas por el usuario"
-  - "ver funciones definidas por el usuario"
-  - "funciones definidas por el usuario [SQL Server], ver"
-  - "información de estado [SQL Server], funciones definidas por el usuario"
+title: Ver funciones definidas por el usuario | Microsoft Docs
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.udfproperties.general.f1
+- sql13.swb.functionproperties.general.f1
+helpviewer_keywords:
+- displaying user-defined functions
+- viewing user-defined functions
+- user-defined functions [SQL Server], viewing
+- status information [SQL Server], user-defined functions
 ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16f1c2ed871db93259f87bc2e26dba634a0602d6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ver funciones definidas por el usuario
+# <a name="view-user-defined-functions"></a>Ver funciones definidas por el usuario
   Puede obtener información sobre la definición o las propiedades de una función definida por el usuario en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Es posible que necesite ver la definición de la función para entender cómo se derivan sus datos de las tablas de origen o para ver los datos que ella misma define.  
   
 > [!IMPORTANT]  
@@ -51,7 +55,7 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para mostrar las propiedades de una función definida por el usuario  
+#### <a name="to-show-a-user-defined-functions-properties"></a>Para mostrar las propiedades de una función definida por el usuario  
   
 1.  En el **Explorador de objetos**, haga clic en el signo más situado junto a la base de datos que contiene la función cuyas propiedades desea ver y haga clic en el signo más para expandir la carpeta **Programación** .  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 30
   
 4.  Haga clic con el botón derecho en la función cuyas propiedades quiere ver y seleccione **Propiedades**.  
   
-     Las siguientes propiedades aparecen en el cuadro de diálogo **Propiedades de la función:** *nombre_función*.  
+     Las siguientes propiedades aparecen en el cuadro de diálogo **Propiedades de la función:** *nombre_función* .  
   
      **Base de datos**  
      Nombre de la base de datos que contiene esta función.  
@@ -110,7 +114,7 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para obtener la definición y propiedades de una función  
+#### <a name="to-get-the-definition-and-properties-of-a-function"></a>Para obtener la definición y propiedades de una función  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -151,7 +155,7 @@ caps.handback.revision: 30
   
  Para obtener más información, vea [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) y [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md).  
   
-#### Para obtener las dependencias de una función  
+#### <a name="to-get-the-dependencies-of-a-function"></a>Para obtener las dependencias de una función  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

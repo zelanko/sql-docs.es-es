@@ -1,27 +1,31 @@
 ---
-title: "Auto Stats (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Auto Stats [clase de eventos]"
+title: Clase de eventos Auto Stats | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Auto Stats event class
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c9cce1c5b1d74e1a952402fd83082fa051292d78
+ms.lasthandoff: 04/11/2017
+
 ---
-# Auto Stats (clase de eventos)
+# <a name="auto-stats-event-class"></a>Auto Stats [clase de eventos]
   La clase de evento **Auto Stats** indica que se ha producido una actualización automática del índice y de las estadísticas de las columnas.  
   
-## Columnas de datos de la clase de evento Auto Stats  
+## <a name="auto-stats-event-class-data-columns"></a>Columnas de datos de la clase de evento Auto Stats  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -37,12 +41,12 @@ caps.handback.revision: 34
 |**EventSubClass**|**int**|Tipo de subclase de evento:<br /><br /> 1: Estadísticas creadas o actualizadas de forma sincrónica; la columna **TextData** indica qué estadísticas y si se han creado o actualizado.<br /><br /> 2: Actualización de estadísticas asincrónica; trabajo en cola.<br /><br /> 3: Actualización de estadísticas asincrónica; trabajo en inicio.<br /><br /> 4: Actualización de estadísticas asincrónica; trabajo finalizado.|21|Sí|  
 |**GroupID**|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
-|**IndexID**|**int**|Id. de la entrada del índice/estadísticas del objeto afectada por el evento. Para averiguar el identificador de índice de un objeto, use la columna **index_id** de la vista de catálogo **sys.indexes**.|24|Sí|  
+|**IndexID**|**int**|Id. de la entrada del índice/estadísticas del objeto afectada por el evento. Para averiguar el identificador de índice de un objeto, use la columna **index_id** de la vista de catálogo **sys.indexes** .|24|Sí|  
 |**IntegerData**|**int**|Número de colecciones de estadísticas que se actualizaron satisfactoriamente.|25|Sí|  
 |**IntegerData2**|**int**|Número de secuencia de trabajo.|55|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
 |**LoginName**|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de Windows en formato DOMINIO\nombreDeUsuario).|11|Sí|  
-|**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals**. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
+|**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals** . Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |**ObjectID**|**int**|Identificador del objeto asignado por el sistema.|22|Sí|  
@@ -56,7 +60,7 @@ caps.handback.revision: 34
 |**TransactionID**|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |**Tipo**|**int**|Tipo de trabajo.|57|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

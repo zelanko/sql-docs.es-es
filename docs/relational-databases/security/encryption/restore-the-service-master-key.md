@@ -1,25 +1,29 @@
 ---
-title: "Restaurar la clave maestra de servicio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clave maestra de servicio [SQL Server], importar"
-  - "clave maestra de servicio [SQL Server], restaurar"
+title: Restaurar la clave maestra de servicio | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- service master key [SQL Server], importing
+- service master key [SQL Server], restoring
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 341662ff65d44b63738b869999ab78191f991a6f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurar la clave maestra de servicio
+# <a name="restore-the-service-master-key"></a>Restaurar la clave maestra de servicio
   En este tema se describe cómo restaurar la clave maestra de servicio en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 > [!WARNING]  
@@ -55,7 +59,7 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> Usar Transact-SQL  
   
-#### Para restaurar la clave maestra de servicio  
+#### <a name="to-restore-the-service-master-key"></a>Para restaurar la clave maestra de servicio  
   
 1.  Recupere una copia de seguridad de la clave maestra de servicio, ya sea desde un medio físico de copia de seguridad o desde un directorio del sistema de archivos local.  
   

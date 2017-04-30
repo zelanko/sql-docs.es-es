@@ -1,28 +1,32 @@
 ---
-title: "Conceder permisos para una colecci&#243;n de esquemas XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "conceder permisos [SQL Server], colecciones de esquemas XML"
-  - "ALTER, permiso"
+title: "Conceder permisos para una colección de esquemas XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- granting permissions [SQL Server], XML schema collections
+- ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c89c6a8322e8922a7d0a2d59ea686a2d703947a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Conceder permisos para una colecci&#243;n de esquemas XML
+# <a name="grant-permissions-on-an-xml-schema-collection"></a>Conceder permisos para una colección de esquemas XML
   Puede conceder permisos para crear una colección de esquemas XML y también puede concederlos para un objeto de colección de esquemas XML.  
   
-## Conceder permisos para crear una colección de esquemas XML  
+## <a name="granting-permission-to-create-an-xml-schema-collection"></a>Conceder permisos para crear una colección de esquemas XML  
  Para crear una colección de esquemas XML, son necesarios los siguientes permisos:  
   
 -   La entidad de seguridad requiere el permiso CREATE XML SCHEMA COLLECTION en la base de datos.  
@@ -47,7 +51,7 @@ caps.handback.revision: 32
   
  El propietario del esquema relacional se convierte en el propietario de la colección de esquemas XML creada en dicho esquema. Este propietario tendrá control total sobre la colección de esquemas XML. Por tanto, el propietario puede modificar la colección de esquemas XML, escribir una columna xml o quitar la colección de esquemas XML.  
   
-## Conceder permisos para un objeto de colección de esquemas XML  
+## <a name="granting-permissions-on-an-xml-schema-collection-object"></a>Conceder permisos para un objeto de colección de esquemas XML  
  Los permisos siguientes se admiten en la colección de esquemas XML:  
   
 -   El permiso ALTER es necesario para modificar el contenido de una colección de esquemas XML utilizando la instrucción ALTER XML SCHEMA COLLECTION.  
@@ -62,10 +66,10 @@ caps.handback.revision: 32
   
 -   El permiso EXECUTE es necesario para validar valores insertados o actualizados por la entidad de seguridad según la colección de esquemas XML que está escribiendo o restringiendo los parámetros, variables y columnas de tipo **xml** . También necesita este permiso para consultar el XML almacenado en estas columnas y variables.  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
  Los escenarios de los ejemplos siguientes ilustran el funcionamiento de los permisos de los esquemas XML. En cada ejemplo se crea la base de datos de prueba, los esquemas relacionales y los inicios de sesión necesarios. A estos inicios de sesión se les conceden los permisos necesarios para la colección de esquemas XML. Al final, cada ejemplo realiza las operaciones de limpieza necesarias.  
   
-### A. Conceder permisos para crear una colección de esquemas XML  
+### <a name="a-granting-permissions-to-create-an-xml-schema-collection"></a>A. Conceder permisos para crear una colección de esquemas XML  
  El ejemplo siguiente muestra cómo conceder los permisos de tal forma que una entidad de seguridad pueda crear una colección de esquemas XML. En el ejemplo, se crea una base de datos de ejemplo y un usuario de prueba, `TestLogin1`. `TestLogin1` el permiso `ALTER` para el esquema relacional y el permiso `CREATE XML SCHEMA COLLECTION` para la base de datos. Con estos permisos, `TestLogin1` crea correctamente una colección de esquemas XML de ejemplo.  
   
 ```  
@@ -119,7 +123,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### B. Conceder permisos para utilizar una colección de esquemas XML existente  
+### <a name="b-granting-permission-to-use-an-existing-xml-schema-collection"></a>B. Conceder permisos para utilizar una colección de esquemas XML existente  
  El ejemplo siguiente muestra el modelo de permisos para la colección de esquemas XML. Ilustra los diferentes permisos que se necesitan para crear y utilizar la colección de esquemas XML.  
   
  En el ejemplo, se crea una base de datos de prueba y un inicio de sesión, `TestLogin1`. `TestLogin1` crea una colección de esquemas XML en la base de datos. El inicio de sesión crea una tabla y utiliza la colección de esquemas XML para crear una columna xml con tipo. A continuación, el usuario inserta los datos y los consulta. Todos estos pasos requieren los permisos de esquema necesarios que muestra el código.  
@@ -236,7 +240,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### C. Conceder el permiso ALTER para una colección de esquemas XML  
+### <a name="c-granting-alter-permission-on-an-xml-schema-collection"></a>C. Conceder el permiso ALTER para una colección de esquemas XML  
  Un usuario debe tener el permiso ALTER para modificar una colección de esquemas XML en la base de datos. En el siguiente ejemplo se muestra cómo conceder el permiso `ALTER` .  
   
 ```  
@@ -311,7 +315,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### D. Conceder el permiso TAKE OWNERSHIP en una colección de esquemas XML  
+### <a name="d-granting-take-ownership-permission-on-an-xml-schema-collection"></a>D. Conceder el permiso TAKE OWNERSHIP en una colección de esquemas XML  
  Este ejemplo muestra cómo se transfiere la propiedad del esquema XML de un usuario a otro. Para hacer más interesante el ejemplo, los usuarios de este ejemplo trabajarán con diferentes esquemas relacionales predeterminados.  
   
  En el ejemplo, se realizan las tareas siguientes:  
@@ -429,7 +433,7 @@ DROP LOGIN TestLogin2
 go   
 ```  
   
-### E. Conceder el permiso VIEW DEFINITION para una colección de esquemas XML  
+### <a name="e-granting-view-definition-permission-on-an-xml-schema-collection"></a>E. Conceder el permiso VIEW DEFINITION para una colección de esquemas XML  
  En el ejemplo siguiente se muestra cómo conceder permisos VIEW DEFINITION para una colección de esquemas XML.  
   
 ```  
@@ -501,7 +505,7 @@ SELECT XML_SCHEMA_NAMESPACE(N'dbo',N'MySC')
 GO  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Datos XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Comparar XML con tipo y XML sin tipo](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Colecciones de esquemas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   

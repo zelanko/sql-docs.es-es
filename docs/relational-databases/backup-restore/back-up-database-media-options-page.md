@@ -1,25 +1,29 @@
 ---
-title: "Copia de seguridad de la base de datos (p&#225;gina Opciones multimedia) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "swb.backupdatabase.mediaoptions.f1"
-  - "sql13.swb.backupdatabase.mediaoptions.f1"
+title: "Copia de seguridad de la base de datos (página Opciones multimedia) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- swb.backupdatabase.mediaoptions.f1
+- sql13.swb.backupdatabase.mediaoptions.f1
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e1fd480768d75f33793f7260eb2652a25c1cc77
+ms.lasthandoff: 04/11/2017
+
 ---
-# Copia de seguridad de la base de datos (p&#225;gina Opciones multimedia)
+# <a name="back-up-database-media-options-page"></a>Copia de seguridad de la base de datos (página Opciones multimedia)
   Utilice la página  **Opciones multimedia** del cuadro de diálogo **Copia de seguridad de base de datos** para ver o modificar las opciones multimedia de la base de datos.  
   
  **Para crear una copia de seguridad mediante SQL Server Management Studio**  
@@ -34,10 +38,10 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  Cuando especifica una tarea de copia de seguridad con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [BACKUP](../../t-sql/statements/backup-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente si hace clic en el botón **Script** y, después, selecciona un destino para el script.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
   
-### Sobrescribir medios  
- Las opciones del panel **Sobrescribir medios** controlan la forma en que las copias de seguridad se escriben en los medios. Si seleccionó la dirección URL (Almacenamiento de Windows Azure) como el destino de la copia de seguridad en la página General del cuadro de diálogo Copia de seguridad de base de datos, las opciones de la sección Sobrescribir medios estarán deshabilitadas. Puede sobrescribir una copia de seguridad con la instrucción Transact-SQL **BACKUP TO URL.. WITH FORMAT**. Para más información, consulte [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+### <a name="overwrite-media"></a>Sobrescribir medios  
+ Las opciones del panel **Sobrescribir medios** controlan la forma en que las copias de seguridad se escriben en los medios. Si seleccionó la dirección URL (Almacenamiento de Windows Azure) como el destino de la copia de seguridad en la página General del cuadro de diálogo Copia de seguridad de base de datos, las opciones de la sección Sobrescribir medios estarán deshabilitadas. Puede sobrescribir una copia de seguridad con la instrucción Transact-SQL **BACKUP TO URL. WITH FORMAT**. Para más información, consulte [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
  Solo la opción **Hacer copia de seguridad en un nuevo medio y borrar todos los conjuntos de copia de seguridad existentes** se admite con las opciones de cifrado. Si selecciona las opciones de la sección **Hacer copia de seguridad en un medio existente** , las opciones de cifrado en la página **Opciones de copia de seguridad** se deshabilitarán.  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 7
  **Nueva descripción del conjunto de medios**  
  Opcionalmente, escriba una descripción significativa del conjunto de medios nuevo. Esta descripción debe ser muy específica para poder comunicar el contenido con precisión.  
   
-### Confiabilidad  
+### <a name="reliability"></a>Confiabilidad  
  Las opciones del panel **Registro de transacciones** controlan la administración de errores mediante la operación de copia de seguridad.  
   
  **Comprobar copia de seguridad al finalizar**  
@@ -84,7 +88,7 @@ caps.handback.revision: 7
  **Continuar después de un error**  
  La operación de copia de seguridad debe continuar, aunque se detecten uno o varios errores.  
   
-### Registro de transacciones  
+### <a name="transaction-log"></a>Registro de transacciones  
  Las opciones del panel **Registro de transacciones** controlan el comportamiento de una copia de seguridad del registro de transacciones. Estas opciones solo son relevantes en el modelo de recuperación completa o en el modelo de recuperación optimizado para cargas masivas de registros. Se activan solo si se seleccionó **Registro de transacciones** en el campo **Tipo de copia de seguridad** de la página [General](../../relational-databases/backup-restore/back-up-database-general-page.md) del cuadro de diálogo **Copia de seguridad de base de datos** .  
   
 > [!NOTE]  
@@ -98,7 +102,7 @@ caps.handback.revision: 7
   
  Seleccionar esta opción es equivalente a especificar WITH NO_TRUNCATE, NORECOVERY en una instrucción [BACKUP](../../t-sql/statements/backup-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]). Para obtener más información, vea [Copias del final del registro &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
-### Unidad de cinta  
+### <a name="tape-drive"></a>Unidad de cinta  
  Las opciones del panel **Unidad de cinta** controlan la administración de cintas durante la operación de copia de seguridad. Se activan solo si se seleccionó **Cinta** en el panel **Destino** de la página [General](../../relational-databases/backup-restore/back-up-database-general-page.md) del cuadro de diálogo **Copia de seguridad de base de datos** .  
   
 > [!NOTE]  
@@ -110,7 +114,7 @@ caps.handback.revision: 7
  **Rebobinar la cinta antes de descargar**  
  Antes de descargar la cinta, se libera y rebobina. Solo se habilitará si está seleccionada la opción **Descargar la cinta después de realizar la copia de seguridad** .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Realizar copias de seguridad de archivos y grupos de archivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

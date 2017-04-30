@@ -1,25 +1,29 @@
 ---
-title: "Usar conjuntos de columnas | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/30/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "columnas dispersas, conjuntos de columnas"
-  - "conjuntos de columnas"
+title: Usar conjuntos de columnas | Microsoft Docs
+ms.custom: 
+ms.date: 07/30/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sparse columns, column sets
+- column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ae01121fcb9c3cfaf67297fee281979a7ee8627
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar conjuntos de columnas
+# <a name="use-column-sets"></a>Usar conjuntos de columnas
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Las tablas que utilizan columnas dispersas pueden designar un conjunto de columnas que devuelva todas las columnas dispersas de la tabla. Un conjunto de columnas es una representación XML sin tipo que combina todas las columnas dispersas de una tabla en una salida estructurada. Un conjunto de columnas se asemeja a una columna calculada en que el conjunto no se almacena físicamente en la tabla. Un conjunto de columnas difiere de una columna calculada en que el conjunto de columnas se puede actualizar directamente.  
@@ -28,7 +32,7 @@ caps.handback.revision: 28
   
  Para definir un conjunto de columnas, use las palabras clave *<nombreDeConjuntoDeColumnas>* FOR ALL_SPARSE_COLUMN de las instrucciones [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) o [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
-## Directrices para usar conjuntos de columnas  
+## <a name="guidelines-for-using-column-sets"></a>Directrices para usar conjuntos de columnas  
  Cuando use conjuntos de columnas, tenga en cuenta las directrices siguientes:  
   
 -   Se pueden agregar columnas dispersas y un conjunto de columnas como parte de la misma instrucción.  
@@ -69,7 +73,7 @@ caps.handback.revision: 28
   
 -   Para obtener más información sobre los datos devueltos por la función COLUMNS_UPDATED, vea [Usar columnas dispersas](../../relational-databases/tables/use-sparse-columns.md).  
   
-## Directrices para seleccionar datos de un conjunto de columnas  
+## <a name="guidelines-for-selecting-data-from-a-column-set"></a>Directrices para seleccionar datos de un conjunto de columnas  
  Tenga en cuenta las directrices siguientes a la hora de seleccionar datos de un conjunto de columnas:  
   
 -   Conceptualmente, un conjunto de columnas es un tipo de columna XML calculada y actualizable que agrega un conjunto de columnas relacionales subyacentes en una única representación XML. El conjunto de columnas solo admite la propiedad ALL_SPARSE_COLUMNS. Esta propiedad se usa para agregar todos los valores distintos de NULL de todas las columnas dispersas para una fila determinada.  
@@ -91,7 +95,7 @@ caps.handback.revision: 28
 > [!WARNING]  
 >  Al agregar un conjunto de columnas, cambia el comportamiento de las consultas SELECT *. La consulta devolverá el conjunto de columnas como una columna XML, pero no devolverá las columnas dispersas individuales. Los diseñadores de esquemas y los desarrolladores deben tener cuidado de no alterar el comportamiento de las aplicaciones existentes.  
   
-## Insertar o modificar datos en un conjunto de columnas  
+## <a name="inserting-or-modifying-data-in-a-column-set"></a>Insertar o modificar datos en un conjunto de columnas  
  La manipulación de los datos de una columna dispersa se puede llevar a cabo usando el nombre de las columnas individuales, o bien haciendo referencia al nombre del conjunto de columnas y especificando sus valores usando el formato XML de dicho conjunto. Las columnas dispersas pueden aparecer en cualquier orden en la columna XML.  
   
  Cuando se insertan o actualizan valores de columnas dispersas usando el conjunto de columnas XML, los valores que se insertan en las columnas dispersas subyacentes se convierten de manera implícita desde el tipo de datos **xml** . En el caso de columnas numéricas, un valor en blanco en el XML para la columna numérica se convierte en una cadena vacía. Esto hace que se inserte un cero en la columna numérica, tal y como se muestra en el ejemplo siguiente.  
@@ -105,10 +109,10 @@ SELECT i FROM t;
 GO  
 ```  
   
- En este ejemplo, no se ha especificado ningún valor para la columna `i`, pero se ha insertado el valor `0`.  
+ En este ejemplo, no se ha especificado ningún valor para la columna `i`, pero se ha insertado el valor `0` .  
   
-## Usar el tipo de datos sql_variant  
- El tipo de datos **sql_variant** puede almacenar varios tipos de datos distintos, como **int**, **char** y **date**. Los conjuntos de columnas generan la información sobre el tipo de datos, como la escala, la precisión y la información de configuración regional que se asocia a un valor **sql_variant**, como atributos en la columna XML generada. Si intenta proporcionar estos atributos en una instrucción XML generada de forma personalizada como una entrada para una operación de inserción o de actualización en un conjunto de columnas, algunos de dichos atributos son obligatorios y a otros se les asigna un valor predeterminado. En la tabla siguiente se enumeran los tipos de datos y los valores predeterminados que genera el servidor cuando no se proporciona el valor.  
+## <a name="using-the-sqlvariant-data-type"></a>Usar el tipo de datos sql_variant  
+ El tipo de datos **sql_variant** puede almacenar varios tipos de datos distintos, como **int**, **char**y **date**. Los conjuntos de columnas generan la información sobre el tipo de datos, como la escala, la precisión y la información de configuración regional que se asocia a un valor **sql_variant** , como atributos en la columna XML generada. Si intenta proporcionar estos atributos en una instrucción XML generada de forma personalizada como una entrada para una operación de inserción o de actualización en un conjunto de columnas, algunos de dichos atributos son obligatorios y a otros se les asigna un valor predeterminado. En la tabla siguiente se enumeran los tipos de datos y los valores predeterminados que genera el servidor cuando no se proporciona el valor.  
   
 |Tipo de datos|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Longitud máxima|Precisión|Escala|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
@@ -126,7 +130,7 @@ GO
   
  No aplicable = No se genera ningún valor para estos atributos durante una operación de selección en el conjunto de columnas. Genera un error cuando el autor de la llamada especifica un valor para este atributo en la representación XML proporcionada para un conjunto de columnas durante una operación de inserción o actualización.  
   
-## Seguridad  
+## <a name="security"></a>Seguridad  
  El modelo de seguridad para un conjunto de columnas funciona de forma similar al modelo de seguridad existente entre la tabla y columnas. Los conjuntos de columnas se pueden visualizar en forma de minitabla, en la que una operación de selección funciona como una operación SELECT *. Pero la relación entre el conjunto de columnas y las columnas dispersas es una relación de agrupación en lugar de ser estrictamente un contenedor. El modelo de seguridad comprueba la seguridad en la columna del conjunto de columnas y respeta las operaciones DENY en las columnas dispersas subyacentes. Las características adicionales del modelo de seguridad son las siguientes:  
   
 -   Los permisos de seguridad se pueden otorgar y revocar desde la columna del conjunto de columnas, de forma similar a como se haría en cualquier otra columna de la tabla.  
@@ -137,10 +141,10 @@ GO
   
 -   La ejecución de una instrucción REVOKE en una columna dispersa o en un conjunto de columnas hace que éstas adopten la configuración de seguridad de su objeto primario.  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
  En los ejemplos siguientes, una tabla de documentos contiene el conjunto de columnas común `DocID` y `Title`. El grupo de producción desea tener una columna `ProductionSpecification` y una columna `ProductionLocation` para todos los documentos de producción. El grupo de marketing desea tener una columna `MarketingSurveyGroup` para los documentos de marketing.  
   
-### A. Crear una tabla que tenga un conjunto de columnas  
+### <a name="a-creating-a-table-that-has-a-column-set"></a>A. Crear una tabla que tenga un conjunto de columnas  
  En el ejemplo siguiente se crea la tabla que utiliza columnas dispersas y se incluye el conjunto de columnas `SpecialPurposeColumns`. El ejemplo inserta dos filas en la tabla y, a continuación, selecciona datos de dicha tabla.  
   
 > [!NOTE]  
@@ -161,7 +165,7 @@ CREATE TABLE DocumentStoreWithColumnSet
 GO  
 ```  
   
-### B. Insertar datos en una tabla usando los nombres de las columnas dispersas  
+### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>B. Insertar datos en una tabla usando los nombres de las columnas dispersas  
  En los ejemplos siguientes se insertan dos filas en la tabla creada en el ejemplo A. Estos ejemplos utilizan los nombres de las columnas dispersas y no hacen referencia al conjunto de columnas.  
   
 ```  
@@ -174,7 +178,7 @@ VALUES (2, 'Survey 2142', 'Men 25 - 35');
 GO  
 ```  
   
-### C. Insertar datos en una tabla usando el nombre del conjunto de columnas  
+### <a name="c-inserting-data-to-a-table-by-using-the-name-of-the-column-set"></a>C. Insertar datos en una tabla usando el nombre del conjunto de columnas  
  En el ejemplo siguiente se inserta una tercera fila en la tabla creada en el ejemplo A. Esta vez no se utilizan los nombres de las columnas dispersas. En su lugar, se utiliza el nombre del conjunto de columnas y la operación de inserción proporciona los valores para dos de las cuatro columnas dispersas en formato XML.  
   
 ```  
@@ -183,7 +187,7 @@ VALUES (3, 'Tire Spec 2', '<ProductionSpecification>AXW9R411</ProductionSpecific
 GO  
 ```  
   
-### D. Observar los resultados de un conjunto de columnas al usar SELECT *  
+### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>D. Observar los resultados de un conjunto de columnas al usar SELECT *  
  En el ejemplo siguiente se seleccionan todas las columnas de la tabla que contiene un conjunto de columnas. Devuelve una columna XML con los valores combinados de las columnas dispersas. No devuelve las columnas dispersas de forma individual.  
   
 ```  
@@ -200,7 +204,7 @@ SELECT DocID, Title, SpecialPurposeColumns FROM DocumentStoreWithColumnSet ;
   
  `3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
   
-### E. Observar los resultados de seleccionar el conjunto de columnas por nombre  
+### <a name="e-observing-the-results-of-selecting-the-column-set-by-name"></a>E. Observar los resultados de seleccionar el conjunto de columnas por nombre  
  Dado que el departamento de producción no está interesado en los datos de marketing, en este ejemplo se agrega una cláusula `WHERE` para restringir la salida. El ejemplo usa el nombre del conjunto de columnas.  
   
 ```  
@@ -217,7 +221,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `3     Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
   
-### F. Observar los resultados de seleccionar columnas dispersas por nombre  
+### <a name="f-observing-the-results-of-selecting-sparse-columns-by-name"></a>F. Observar los resultados de seleccionar columnas dispersas por nombre  
  Si una tabla contiene un conjunto de columnas, también se puede consultar dicha tabla usando los nombres de columna individuales, tal y como se muestra en el ejemplo siguiente.  
   
 ```  
@@ -234,7 +238,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `3     Tire Spec 2  AXW9R411                38`  
   
-### G. Actualizar una tabla usando un conjunto de columnas  
+### <a name="g-updating-a-table-by-using-a-column-set"></a>G. Actualizar una tabla usando un conjunto de columnas  
  En el ejemplo siguiente se actualiza el tercer registro con nuevos valores para las dos columnas dispersas que usa la fila.  
   
 ```  
@@ -247,7 +251,7 @@ GO
 > [!IMPORTANT]  
 >  Una instrucción UPDATE que usa un conjunto de columnas actualiza todas las columnas dispersas de la tabla. Los valores de las columnas dispersas a las que no se hace referencia se actualizan a NULL.  
   
- En el ejemplo siguiente se actualiza el tercer registro, pero solo se especifica el valor de una de las dos columnas rellenadas. La segunda columna, `ProductionLocation`, no está incluida en la instrucción `UPDATE` y se actualiza a NULL.  
+ En el ejemplo siguiente se actualiza el tercer registro, pero solo se especifica el valor de una de las dos columnas rellenadas. La segunda columna, `ProductionLocation` , no está incluida en la instrucción `UPDATE` y se actualiza a NULL.  
   
 ```  
 UPDATE DocumentStoreWithColumnSet  
@@ -256,7 +260,8 @@ WHERE DocID = 3 ;
 GO  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Usar columnas dispersas](../../relational-databases/tables/use-sparse-columns.md)  
   
   
+

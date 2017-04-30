@@ -1,27 +1,31 @@
 ---
-title: "Unprepare SQL (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Unprepare SQL [clase de eventos]"
+title: Clase de eventos Unprepare SQL | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Unprepare SQL event class
 ms.assetid: cfcbdd9d-d83b-46ae-9caa-d1833b5913f4
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1624f66ac4b4910dda2f4c3122b3130d91a44c12
+ms.lasthandoff: 04/11/2017
+
 ---
-# Unprepare SQL (clase de eventos)
+# <a name="unprepare-sql-event-class"></a>Unprepare SQL [clase de eventos]
   La clase de eventos Unprepare SQL indica que SqlClient, ODBC, OLE DB o DB-Library ha cancelado (eliminado) la preparación de una o varias instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] preparadas.  
   
-## Columnas de datos de la clase de eventos Unprepare SQL  
+## <a name="unprepare-sql-event-class-data-columns"></a>Columnas de datos de la clase de eventos Unprepare SQL  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -47,7 +51,7 @@ caps.handback.revision: 31
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token utilizado para describir la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

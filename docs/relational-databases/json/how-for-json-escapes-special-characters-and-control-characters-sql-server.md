@@ -1,33 +1,40 @@
 ---
-title: "C&#243;mo FOR JSON inserta caracteres de escape en los caracteres especiales y caracteres de control (SQL Server) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-json"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR JSON, caracteres especiales"
+title: "Cómo inserta FOR JSON caracteres de escape en caracteres especiales y caracteres de control (SQL Server) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-json
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR JSON, special characters
 ms.assetid: 4ba90025-5a09-4f0a-836a-54c886324530
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1b2a6a10c3aa3ec3caa432a208be4b3023072046
+ms.lasthandoff: 04/11/2017
+
 ---
-# C&#243;mo FOR JSON inserta caracteres de escape en los caracteres especiales y caracteres de control (SQL Server)
+# <a name="how-for-json-escapes-special-characters-and-control-characters-sql-server"></a>Cómo FOR JSON inserta caracteres de escape en los caracteres especiales y caracteres de control (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  En este tema se describe cómo la cláusula **FOR JSON** inserta caracteres de escape en los caracteres especiales y representa caracteres de control en la salida JSON.  
+  En este tema se describe cómo la cláusula **FOR JSON** de una instrucción **SELECT** de SQL Server inserta caracteres de escape en caracteres especiales y representa caracteres de control en la salida JSON.  
+
+> [!IMPORTANT]
+> En esta página se describe la compatibilidad integrada con JSON en Microsoft SQL Server. Para obtener información general sobre la inserción de caracteres de escape y la codificación en JSON, vea la sección 2.5 de JSON RFC: [http://www.ietf.org/rfc/rfc4627.txt](http://www.ietf.org/rfc/rfc4627.txt).
+
+## <a name="escaping-of-special-characters"></a>Secuencia de caracteres de escape en los caracteres especiales  
+Si los datos de origen contienen caracteres especiales, la cláusula **FOR JSON** inserta caracteres de escape en ellos en la salida de JSON con `\`, tal y como se muestra en la tabla siguiente. Esta secuencia de escape se produce tanto en los nombres de propiedades como en sus valores.  
   
-## Secuencia de caracteres de escape en los caracteres especiales  
- La cláusula **FOR JSON** inserta caracteres de escape en los caracteres especiales del resultado JSON con `\`, como se muestra en la tabla siguiente. Esta secuencia de escape se produce tanto en los nombres de propiedades como en sus valores.  
-  
-|**Carácter especial**|**Secuencia codificada**|  
+|**Carácter especial**|**Salida con escape**|  
 |---------------------------|--------------------------|  
 |Comillas (")|\\"|  
 |Barra diagonal inversa (\\)|\\\|  
@@ -38,18 +45,18 @@ caps.handback.revision: 10
 |Retorno de carro|\r|  
 |Tabulación horizontal|\t|  
   
-## Caracteres de control  
- La cláusula **FOR JSON** representa los caracteres de control de la salida JSON en formato `\u<code>`, como se muestra en la tabla siguiente.  
+## <a name="control-characters"></a>Caracteres de control  
+Si los datos de origen contienen caracteres de control, la cláusula **FOR JSON** los codifica en la salida de JSON en formato `\u<code>`, tal y como se muestra en la tabla siguiente.  
   
-|**Carácter de control**|**Secuencia codificada**|  
+|**Carácter de control**|**Salida codificada**|  
 |---------------------------|--------------------------|  
 |CHAR(0)|\u0000|  
 |CHAR(1)|\u0001|  
 |…|…|  
 |CHAR(31)|\u001f|  
   
-## Ejemplo  
- Este es un ejemplo de una cláusula **FOR JSON** que incluye caracteres de escape y de control.  
+## <a name="example"></a>Ejemplo  
+ Se trata de un ejemplo de la salida de **FOR JSON** en datos de origen que incluye caracteres especiales y caracteres de control.  
   
  Consulta:  
   
@@ -66,15 +73,15 @@ FOR JSON PATH
  Resultado:  
   
 ```json  
-{  
-   "KEY\\\t\/\"":"VALUE\\\t\/\r\n\"",  
-   "0":"\u0000",  
-   "1":"\u0001",  
-  "31":"\u001f“  
-}  
+{
+    "KEY\\\t\/\"": "VALUE\\\t\/\r\n\"",
+    "0": "\u0000",
+    "1": "\u0001",
+    "31": "\u001f"
+}
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Format Query Results as JSON with FOR JSON &#40;SQL Server&#41; (Dar formato JSON a los resultados de consulta con FOR JSON &#40;SQL Server&#41;)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  
-  
-  
+[Cláusula FOR](../../t-sql/queries/select-for-clause-transact-sql.md)
+

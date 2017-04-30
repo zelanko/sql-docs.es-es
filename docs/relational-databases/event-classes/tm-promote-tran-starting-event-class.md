@@ -1,27 +1,31 @@
 ---
-title: "TM: Promote Tran Starting (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TM: Promote Tran Starting, clase de eventos"
+title: 'TM: Promote Tran Starting, clase de eventos | Microsoft Docs'
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- 'TM: Promote Tran Starting event class'
 ms.assetid: 32da85bb-d980-4044-8572-31372867649b
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0bebd866f0d4837dbebd146a5f0d00d4bd4f2c49
+ms.lasthandoff: 04/11/2017
+
 ---
-# TM: Promote Tran Starting (clase de eventos)
+# <a name="tm-promote-tran-starting-event-class"></a>TM: Promote Tran Starting, clase de eventos
   La clase de eventos TM: Promote Tran Starting indica que se está iniciando una solicitud PROMOTE TRANSACTION. La solicitud se envía desde el cliente a través de la interfaz de administración de transacciones.  
   
-## Columnas de datos de la clase de evento TM: Promote Tran Starting  
+## <a name="tm-promote-tran-starting-event-class-data-columns"></a>Columnas de datos de la clase de evento TM: Promote Tran Starting  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -46,7 +50,7 @@ caps.handback.revision: 24
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

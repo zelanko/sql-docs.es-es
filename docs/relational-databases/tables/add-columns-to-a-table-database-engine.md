@@ -1,26 +1,30 @@
 ---
-title: "Agregar columnas a una tabla (motor de base de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "insertar columnas"
-  - "columnas [SQL Server], agregar"
-  - "agregar columnas"
+title: Agregar columnas a una tabla (motor de base de datos) | Microsoft Docs
+ms.custom: 
+ms.date: 10/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- inserting columns
+- columns [SQL Server], adding
+- adding columns
 ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d1bdb75de2db0eba015500fa9a80ef44937727c7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Agregar columnas a una tabla (motor de base de datos)
+# <a name="add-columns-to-a-table-database-engine"></a>Agregar columnas a una tabla (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   En este tema se describe cómo agregar nuevas columnas a una tabla en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -37,7 +41,7 @@ caps.handback.revision: 20
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para insertar columnas en una tabla con el Diseñador de tablas  
+#### <a name="to-insert-columns-into-a-table-with-table-designer"></a>Para insertar columnas en una tabla con el Diseñador de tablas  
   
 1.  En el **Explorador de objetos**, haga clic con el botón derecho en la tabla a la que quiera agregar columnas y elija **Diseño**.  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 20
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para insertar columnas en una tabla  
+#### <a name="to-insert-columns-into-a-table"></a>Para insertar columnas en una tabla  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -71,6 +75,7 @@ caps.handback.revision: 20
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL, column_c INT NULL ;  
 ```  
   
-####  <a name="FollowUp"></a> Para obtener más información, vea [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
+####  <a name="FollowUp"></a> Para obtener más información, consulte [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
+

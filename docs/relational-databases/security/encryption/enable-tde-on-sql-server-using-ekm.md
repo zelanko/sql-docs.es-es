@@ -1,27 +1,31 @@
 ---
-title: "Habilitar TDE en SQL Server con EKM | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cifrado [SQL Server], TDE con una EKM"
-  - "EKM, procedimientos"
-  - "EKM, procedimientos TDE"
-  - "Cifrado de datos transparente, usar EKM"
+title: Habilitar TDE en SQL Server con EKM | Microsoft Docs
+ms.custom: 
+ms.date: 04/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], TDE using an EKM
+- TDE, EKM how to
+- EKM, TDE how to
+- Transparent Data Encryption, using EKM
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8c98c5335ab148d1d36f56c1375ec1f89219908
+ms.lasthandoff: 04/11/2017
+
 ---
-# Habilitar TDE en SQL Server con EKM
+# <a name="enable-tde-on-sql-server-using-ekm"></a>Habilitar TDE en SQL Server con EKM
   En este tema se describe cómo habilitar el cifrado de datos transparente (TDE) en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] para proteger una clave de cifrado de base de datos mediante una clave asimétrica almacenada en un módulo EKM (Administración extensible de claves) con [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  TDE cifra el almacenamiento de una base de datos completa utilizando una clave simétrica denominada clave de cifrado de base de datos. La clave de cifrado de base de datos también se puede proteger utilizando un certificado que se protege mediante la clave maestra de base de datos de la base de datos maestra. Para obtener más información sobre cómo proteger la clave de cifrado de base de datos usando la clave maestra de base de datos, vea [Cifrado de datos transparente &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md). Para obtener más información sobre cómo configurar TDE cuando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se está ejecutando en una máquina virtual de Azure, vea [Administración extensible de claves con el Almacén de claves de Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md). Para obtener más información sobre cómo configurar TDE con una clave del Almacén de claves de Azure, vea [Usar el Conector de SQL Server con características de cifrado de SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md). 
@@ -56,9 +60,9 @@ caps.handback.revision: 26
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para habilitar TDE usando EKM  
+#### <a name="to-enable-tde-using-ekm"></a>Para habilitar TDE usando EKM  
   
-1.  Copie los archivos proporcionados por el proveedor EKM a una ubicación adecuada en el equipo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. En este ejemplo, usamos la carpeta **C:\EKM**.  
+1.  Copie los archivos proporcionados por el proveedor EKM a una ubicación adecuada en el equipo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . En este ejemplo, usamos la carpeta **C:\EKM** .  
   
 2.  Instale los certificados en el equipo tal y como requiera el proveedor EKM.  
   
@@ -155,7 +159,8 @@ caps.handback.revision: 26
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Cifrado de datos transparente con Base de datos SQL de Azure](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md)  
   
   
+

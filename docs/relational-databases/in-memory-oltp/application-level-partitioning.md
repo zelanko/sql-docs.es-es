@@ -1,29 +1,33 @@
 ---
-title: "Creaci&#243;n de particiones en el nivel de aplicaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Creación de particiones en el nivel de aplicación | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f5e08e0a4d222cf98a7eb997019734d386f79fd4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Creaci&#243;n de particiones en el nivel de aplicaci&#243;n
+# <a name="application-level-partitioning"></a>Creación de particiones en el nivel de aplicación
   Esta aplicación procesa pedidos. Hay mucho trabajo de procesamiento para los pedidos recientes. Sin embargo, hay poco para los pedidos antiguos. Los pedidos recientes están en una tabla con optimización para memoria. Los pedidos antiguos están en una tabla basada en disco. Todos los pedidos posteriores a *hotDate* están en la tabla con optimización para memoria. Todos los pedidos anteriores a *hotDate* están en la tabla basada en disco. Suponga que hay un carga de trabajo de OLTP extrema con muchas transacciones simultáneas. Esta regla de negocios (pedidos recientes en una tabla con optimización para memoria) se debe aplicar incluso si varias transacciones simultáneas intentan cambiar *hotDate*.  
   
  En este ejemplo no se usa una tabla con particiones para la tabla basada en disco, pero se hace un seguimiento de un punto de división explícito entre las dos tablas, mediante una tercera tabla. El punto de división se puede usar para asegurarse de que los datos recién insertados se insertan siempre en la tabla adecuada según la fecha. También se puede usar para determinar dónde buscar datos. Los últimos datos en llegar siguen estando en la tabla adecuada.  
   
  Para obtener un ejemplo relacionado, vea [Patrón de aplicación para crear particiones de tablas con optimización para memoria](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md).  
   
-## Listado de código  
+## <a name="code-listing"></a>Listado de código  
   
 ```tsql  
 USE MASTER  
@@ -213,7 +217,7 @@ select * from hot order by orderDate desc
 select * from cold order by orderDate desc  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Ejemplos de código de OLTP en memoria](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   

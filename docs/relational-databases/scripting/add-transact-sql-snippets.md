@@ -1,35 +1,39 @@
 ---
-title: "Agregar fragmentos de c&#243;digo de Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Agregar fragmentos de código de Transact-SQL| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2498e15c9927adde026e426ead756be389ce08d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Agregar fragmentos de c&#243;digo de Transact-SQL
+# <a name="add-transact-sql-snippets"></a>Agregar fragmentos de código de Transact-SQL
   Puede agregar sus propios fragmentos de código de Transact-SQL al conjunto de fragmentos de código predefinidos que se incluyen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## Crear un archivo de fragmento de código de Transact-SQL  
+## <a name="creating-a-transact-sql-snippet-file"></a>Crear un archivo de fragmento de código de Transact-SQL  
  La primera parte de la creación de un fragmento de código de [!INCLUDE[tsql](../../includes/tsql-md.md)] consiste en crear un archivo XML con el texto del fragmento de código. El archivo debe tener una extensión de archivo .snippet y cumplir los requisitos del tema sobre [referencia de esquemas de fragmento de código](http://go.microsoft.com/fwlink/?LinkId=207504). El lenguaje del fragmento de código se establece en SQL.  
   
  Puede utilizar los fragmentos de código predefinidos que se proporcionan con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como ejemplos. Para buscar los fragmentos de código predefinidos, abra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], seleccione el menú **Herramientas** y haga clic en **Administrador de fragmentos de código**. Seleccione **SQL** en el cuadro de lista **Lenguaje** ; la ruta de acceso a los fragmentos de código de [!INCLUDE[tsql](../../includes/tsql-md.md)] se muestra en el cuadro **Ubicación** .  
   
-## Registrar el fragmento de código  
+## <a name="registering-the-code-snippet"></a>Registrar el fragmento de código  
  Después de crear el archivo de fragmento de código, utilice el Administrador de fragmentos de código para registrar el fragmento de código con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Puede agregar una carpeta que contiene varios fragmentos de código o importar fragmentos de código individuales a la carpeta **Mis fragmentos de código** .  
   
-## Procedimientos  
+## <a name="procedures"></a>Procedimientos  
   
-#### Agregar una carpeta de fragmentos de código  
+#### <a name="adding-a-snippet-folder"></a>Agregar una carpeta de fragmentos de código  
   
 1.  Abra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 9
   
 4.  Navegue a la carpeta que contiene los fragmentos de código y haga clic en el botón **Seleccionar carpeta** .  
   
-#### Importar un fragmento de código  
+#### <a name="importing-a-snippet"></a>Importar un fragmento de código  
   
 1.  Abra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 9
   
 4.  Navegue a la carpeta que contiene el fragmento de código, haga clic en el archivo .snippet y haga clic en el botón **Abrir** .  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea un fragmento de código rodear con **TRY-CATCH** y se importa a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 1.  Pegue el código siguiente en el Bloc de notas y, a continuación, guárdelo como un archivo denominado TryCatch.snippet.  
@@ -109,7 +113,7 @@ caps.handback.revision: 9
   
 5.  Navegue a la carpeta que contiene el archivo TryCatch.snippet, haga clic en el citado archivo y haga clic en el botón **Abrir** . No debe haber un fragmento de código TryCatch en la carpeta **Mis fragmentos de código** .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Insertar fragmentos de código de Transact-SQL para rodear](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
   
   

@@ -1,34 +1,38 @@
 ---
-title: "Restaurar p&#225;ginas (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restorepage.general.f1"
-helpviewer_keywords: 
-  - "restaurar páginas [SQL Server]"
-  - "páginas [SQL Server], restaurar"
-  - "bases de datos [SQL Server], dañadas"
-  - "restauraciones de páginas [SQL Server]"
-  - "páginas [SQL Server], dañadas"
-  - "restaurar [SQL Server], páginas"
+title: "Restaurar páginas (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restorepage.general.f1
+helpviewer_keywords:
+- restoring pages [SQL Server]
+- pages [SQL Server], restoring
+- databases [SQL Server], damaged
+- page restores [SQL Server]
+- pages [SQL Server], damaged
+- restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 caps.latest.revision: 67
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1cdf13c937ecdaa54c31831625dc6fc41b35be70
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurar p&#225;ginas (SQL Server)
+# <a name="restore-pages-sql-server"></a>Restaurar páginas (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  En este tema se describe cómo restaurar páginas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. El objetivo de una restauración de páginas es restaurar una o varias páginas dañadas sin restaurar la base de datos completa. Normalmente, las páginas candidatas para la restauración se han marcado como "sospechosas" debido a un error al tener acceso a la página. Las páginas sospechosas se identifican en la tabla [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) de la base de datos **msdb**.  
+  En este tema se describe cómo restaurar páginas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. El objetivo de una restauración de páginas es restaurar una o varias páginas dañadas sin restaurar la base de datos completa. Normalmente, las páginas candidatas para la restauración se han marcado como "sospechosas" debido a un error al tener acceso a la página. Las páginas sospechosas se identifican en la tabla [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) de la base de datos **msdb** .  
   
  **En este tema**  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 67
 ###  <a name="WhenUseful"></a> ¿Cuándo es útil la restauración de páginas?  
  La restauración de páginas se ha diseñado para reparar páginas aisladas que se han dañado. La restauración y recuperación de una pequeña cantidad de páginas es más rápida que la restauración de un archivo, ya que reduce la cantidad de datos sin conexión durante la operación de restauración. Sin embargo, si debe restaurar una cantidad mayor de páginas de un archivo, la restauración del archivo completo suele ser más efectiva. Por ejemplo, la presencia de un gran número de páginas dañadas en un dispositivo puede indicar un error de dispositivo pendiente. Pruebe a restaurar el archivo, posiblemente en otra ubicación, y repare el dispositivo.  
   
- Además, no todos los errores de página requieren una restauración. Puede producirse un problema en los datos en caché, como por ejemplo un índice secundario, que se puede resolver recalculando los datos. Por ejemplo, si el administrador de base de datos quita un índice secundario y lo vuelve a generar, los datos dañados, aunque se corrijan, no se indican como tales en la tabla [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md).  
+ Además, no todos los errores de página requieren una restauración. Puede producirse un problema en los datos en caché, como por ejemplo un índice secundario, que se puede resolver recalculando los datos. Por ejemplo, si el administrador de base de datos quita un índice secundario y lo vuelve a generar, los datos dañados, aunque se corrijan, no se indican como tales en la tabla [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) .  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -94,39 +98,39 @@ caps.handback.revision: 67
     > [!WARNING]  
     >  Si las páginas dañadas almacenan metadatos críticos de la base de datos, las actualizaciones necesarias de los metadatos podrían producir un error durante el intento de restauración en línea de las páginas. En este caso, se puede realizar una restauración de páginas sin conexión, pero primero se debe crear una [copia del final del registro](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) (realizando una copia de seguridad del registro de transacciones mediante RESTORE WITH NORECOVERY).  
   
--   La restauración de páginas utiliza el mecanismo mejorado de creación de informes y seguimiento de errores de página (incluidas las sumas de comprobación de página). Las páginas que las sumas de comprobación o las escrituras incompletas detectan como dañadas (*páginas dañadas*) se pueden restaurar mediante una operación de restauración de páginas. Solo se restauran las páginas que se especifican de forma explícita. Cada página especificada se sustituye por la copia de esa página en la copia de seguridad de datos especificada.  
+-   La restauración de páginas utiliza el mecanismo mejorado de creación de informes y seguimiento de errores de página (incluidas las sumas de comprobación de página). Las páginas que las sumas de comprobación o las escrituras incompletas detectan como dañadas ( *páginas dañadas*) se pueden restaurar mediante una operación de restauración de páginas. Solo se restauran las páginas que se especifican de forma explícita. Cada página especificada se sustituye por la copia de esa página en la copia de seguridad de datos especificada.  
   
      Cuando se restauran las copias de seguridad de registros posteriores, estas se aplican solo a los archivos de base de datos que contienen al menos una página se está recuperando. Debe aplicarse una cadena ininterrumpida de copias de seguridad de registros a la última recuperación completa o diferencial para actualizar el grupo de archivos que incluye la página al archivo de registro actual. Al igual que en una restauración de archivo, el conjunto de puestas al día se avanza con un solo pase de puesta al día de registro. Para que una restauración de páginas se lleve a cabo correctamente, las páginas restauradas deben recuperarse a un estado coherente con la base de datos.  
   
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- Si la base de datos que se va a restaurar no existe, el usuario debe tener permisos CREATE DATABASE para poder ejecutar RESTORE. Si la base de datos existe, los permisos RESTORE corresponden de forma predeterminada a los miembros de los roles fijos de servidor **sysadmin** y **dbcreator**, y al propietario (**dbo**) de la base de datos (para la opción FROM DATABASE_SNAPSHOT, la base de datos siempre existe).  
+ Si la base de datos que se va a restaurar no existe, el usuario debe tener permisos CREATE DATABASE para poder ejecutar RESTORE. Si la base de datos existe, los permisos RESTORE corresponden de forma predeterminada a los miembros de los roles fijos de servidor **sysadmin** y **dbcreator** , y al propietario (**dbo**) de la base de datos (para la opción FROM DATABASE_SNAPSHOT, la base de datos siempre existe).  
   
  Los permisos RESTORE se conceden a los roles en los que la información acerca de la pertenencia está siempre disponible para el servidor. Debido a que la pertenencia a un rol fijo de base de datos solo se puede comprobar cuando la base de datos es accesible y no está dañada, lo que no siempre ocurre cuando se ejecuta RESTORE, los miembros del rol fijo de base de datos **db_owner** no tienen permisos RESTORE.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
  A partir de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] admite las restauraciones de páginas.  
   
-#### Para restaurar páginas  
+#### <a name="to-restore-pages"></a>Para restaurar páginas  
   
 1.  Conéctese a la instancia adecuada del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y, en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol.  
   
 2.  Expanda **Bases de datos**. En función de la base de datos, seleccione una base de datos de usuario o expanda **Bases de datos del sistema**y, a continuación, seleccione una base de datos del sistema.  
   
-3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**, seleccione **Restaurar** y haga clic en **Página**, con lo que se abre el cuadro de diálogo **Restaurar página**.  
+3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**, seleccione **Restaurar**y haga clic en **Página**, con lo que se abre el cuadro de diálogo **Restaurar página** .  
   
-     **Restore**  
+     **Restaurar**  
      En esta sección se realiza la misma función que la de **Restaurar en** en [Restaurar base de datos (página General)](../../relational-databases/backup-restore/restore-database-general-page.md).  
   
      **Base de datos**  
      Especifica la base de datos que se va a restaurar. Puede especificar una base de datos nueva o seleccionar una base de datos existente de la lista desplegable. La lista incluye todas las bases de datos del servidor, excepto las bases de datos del sistema **maestra** y **tempdb**.  
   
     > [!WARNING]  
-    >  Para restaurar una copia de seguridad protegida con contraseña, use la instrucción [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md).  
+    >  Para restaurar una copia de seguridad protegida con contraseña, use la instrucción [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) .  
   
      **Copia del final del registro**  
-     Escriba o seleccione un nombre de archivo en **Dispositivo de copia de seguridad**, en el que la copia del final del registro se almacenará en la base de datos.  
+     Escriba o seleccione un nombre de archivo en **Dispositivo de copia de seguridad** , en el que la copia del final del registro se almacenará en la base de datos.  
   
      **Conjuntos de copia de seguridad**  
      Esta sección muestra los conjuntos de copia de seguridad implicados en la restauración.  
@@ -134,7 +138,7 @@ caps.handback.revision: 67
     |Encabezado|Valores|  
     |------------|------------|  
     |**Nombre**|Nombre del conjunto de copia de seguridad.|  
-    |**Componente**|Componente del que se realizó una copia de seguridad: **Base de datos**, **Archivo** o **\<en blanco>** (para registros de transacciones).|  
+    |**Componente**|Componente del que se ha realizado una copia de seguridad: **Base de datos**, **Archivo** o **\<en blanco>** (para registros de transacciones).|  
     |**Tipo**|Tipo de copia de seguridad realizada: **Completa**, **Diferencial**o **Registro de transacciones**.|  
     |**Server**|Nombre de la instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizó la operación de copia de seguridad.|  
     |**Base de datos**|Nombre de la base de datos para la operación de copia de seguridad.|  
@@ -156,9 +160,9 @@ caps.handback.revision: 67
     > [!WARNING]  
     >  Para restaurar páginas específicas que no están dañadas, haga clic en **Agregar** y escriba el **Id. de archivo** y el **Id. de página** de las páginas que se van a restaurar.  
   
-5.  La cuadrícula de páginas se utiliza para identificar las páginas que se van a restaurar. Inicialmente, esta cuadrícula se rellena desde la tabla del sistema [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md). Para agregar o quitar páginas en la cuadrícula, haga clic en **Agregar** o en **Quitar**. Para obtener más información, vea [Administrar la tabla suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md).  
+5.  La cuadrícula de páginas se utiliza para identificar las páginas que se van a restaurar. Inicialmente, esta cuadrícula se rellena desde la tabla del sistema [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) . Para agregar o quitar páginas en la cuadrícula, haga clic en **Agregar** o en **Quitar**. Para obtener más información, vea [Administrar la tabla suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md).  
   
-6.  La cuadrícula **Conjuntos de copia de seguridad** muestra una lista de los conjuntos de copia de seguridad en el plan de restauración predeterminado. Opcionalmente, haga clic en **Comprobar** para comprobar que las copias de seguridad son legibles y que los conjuntos de copia de seguridad están completos, sin restaurarlos. Para obtener más información, vea [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md).  
+6.  La cuadrícula **Conjuntos de copia de seguridad** muestra una lista de los conjuntos de copia de seguridad en el plan de restauración predeterminado. Opcionalmente, haga clic en **Comprobar** para comprobar que las copias de seguridad son legibles y que los conjuntos de copia de seguridad están completos, sin restaurarlos. Para obtener más información, vea [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
      **Páginas**  
   
@@ -175,9 +179,9 @@ caps.handback.revision: 67
   
  `WITH NORECOVERY`  
   
- Para obtener más información sobre los parámetros de la opción PAGE, vea [Argumentos RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md). Para obtener más información sobre la sintaxis de RESTORE DATABASE, vea [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+ Para obtener más información sobre los parámetros de la opción PAGE, vea [Argumentos RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md). Para obtener más información sobre la sintaxis de RESTORE DATABASE, vea [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
-#### Para restaurar páginas  
+#### <a name="to-restore-pages"></a>Para restaurar páginas  
   
 1.  Obtener los Id. de las páginas dañadas que se deben restaurar. Un error de suma de comprobación o escritura incompleta devuelve el Id. de página con la información necesaria para especificar las páginas. Para buscar el identificador de una página dañada, use cualquiera de los siguientes orígenes.  
   
@@ -185,7 +189,7 @@ caps.handback.revision: 67
     |-----------------------|-----------|  
     |**msdb..suspect_pages**|[Administrar la tabla suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)|  
     |Registro de errores|[Ver el registro de errores de SQL Server &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)|  
-    |Seguimientos de eventos|[Supervisar y responder a eventos](../../ssms/agent/monitor-and-respond-to-events.md)|  
+    |Seguimientos de eventos|[Supervisar y responder a eventos](http://msdn.microsoft.com/library/f7fbe155-5b68-4777-bc71-a47637471f32)|  
     |DBCC|[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|  
     |Proveedor WMI|[Conceptos del proveedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)|  
   
@@ -203,7 +207,7 @@ caps.handback.revision: 67
     >  Esta secuencia es análoga a una secuencia de restauración de archivos. De hecho, tanto la restauración de páginas como la de archivos puede realizarse como parte de la misma secuencia.  
   
 ###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
- En el siguiente ejemplo se restauran cuatro páginas dañadas del archivo `B` con `NORECOVERY`. A continuación, se aplican dos copias de seguridad de registros con `NORECOVERY` y, después, la copia del final del registro, restaurada con `RECOVERY`. En este ejemplo se realiza una restauración en línea. En el ejemplo, el identificador del archivo `B` es `1` y los identificadores de las páginas dañadas son `57`, `202`, `916` y `1016`.  
+ En el siguiente ejemplo se restauran cuatro páginas dañadas del archivo `B` con `NORECOVERY`. A continuación, se aplican dos copias de seguridad de registros con `NORECOVERY`y, después, la copia del final del registro, restaurada con `RECOVERY`. En este ejemplo se realiza una restauración en línea. En el ejemplo, el identificador del archivo `B` es `1`y los identificadores de las páginas dañadas son `57`, `202`, `916`y `1016`.  
   
 ```tsql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
@@ -218,8 +222,8 @@ RESTORE LOG <database> FROM <new_log_backup> WITH RECOVERY;
 GO  
 ```  
   
-## Vea también  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Vea también  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Aplicar copias de seguridad de registros de transacción &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Administrar la tabla suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  

@@ -1,30 +1,34 @@
 ---
-title: "Restaurar base de datos (p&#225;gina Archivos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restoredb.files.f1"
-  - "sql13.swb.restoredb.files.f1 in the code"
+title: "Restaurar base de datos (página Archivos) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restoredb.files.f1
+- sql13.swb.restoredb.files.f1 in the code
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 840b9d449ad320dc104960c322590e96082f0cdb
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurar base de datos (p&#225;gina Archivos)
+# <a name="restore-database-files-page"></a>Restaurar base de datos (página Archivos)
   Use la página **Archivos** del cuadro de diálogo **Restaurar base de datos** para administrar los archivos concretos que ha elegido restaurar dentro de la base de datos.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
   
-### Restaurar archivos de base de datos como  
+### <a name="restore-database-files-as"></a>Restaurar archivos de base de datos como  
  Se usa para asignar y administrar la nueva ruta de acceso de archivo a los archivos restaurados.  
   
  **Reubicar todos los archivos a la carpeta**  
@@ -47,11 +51,11 @@ caps.handback.revision: 16
  **Restaurar como**  
  Enumera los nombres de archivo como los que se guardarán los archivos restaurados. Escriba o busque el nombre de archivo adecuado.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Restaurar la base de datos &#40;página General&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)   
  [Restaurar base de datos &#40;página Opciones&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)   
- [Argumentos RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)   
+ [Argumentos RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)   
  [Definir un dispositivo lógico de copia de seguridad en una unidad de cinta &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

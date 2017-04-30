@@ -1,28 +1,32 @@
 ---
-title: "Introducci&#243;n al almac&#233;n de columnas para an&#225;lisis operativos en tiempo real | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "Introducción al almacén de columnas para análisis operativos en tiempo real | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 caps.latest.revision: 40
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e032da9604178eb356de35448eb5d53a9d663214
+ms.lasthandoff: 04/11/2017
+
 ---
-# Introducci&#243;n al almac&#233;n de columnas para an&#225;lisis operativos en tiempo real
+# <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introducción al almacén de columnas para análisis operativos en tiempo real
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   SQL Server 2016 incorpora análisis operativos en tiempo real, esto es, la posibilidad de ejecutar simultáneamente análisis y cargas de trabajo OLTP en las mismas tablas de base de datos. Aparte de poder ejecutar análisis en tiempo real, también puede prescindir del uso de ETL y de un almacén de datos.  
   
-## Explicación de los análisis operativos en tiempo real  
+## <a name="real-time-operational-analytics-explained"></a>Explicación de los análisis operativos en tiempo real  
  Tradicionalmente, las empresas siempre han tenido sistemas independientes para las cargas de trabajo operativas (es decir, OLTP) y de análisis. En estos sistemas, los trabajos de extracción, transformación y carga de datos (ETL) mueven periódicamente los datos desde el almacén operativo a un almacenamiento de análisis. Los datos de análisis suelen residir en un almacén de datos o data mart dedicado a ejecutar consultas de análisis. Si bien esto ha venido siendo lo habitual, plantea tres retos importantes:  
   
 -   **Complejidad.** La implementación de ETL puede conllevar una tarea de codificación considerable, especialmente para cargar solamente las filas modificadas. Saber qué filas se han modificado puede ser bastante complicado.  
@@ -31,7 +35,7 @@ caps.handback.revision: 39
   
 -   **Latencia de datos.** La implementación de ETL conlleva un retraso de tiempo a la hora de ejecutar los análisis. Por ejemplo, si el trabajo de ETL tiene lugar al final de cada día laborable, las consultas de análisis se ejecutarán en datos que llevan como mínimo un día de desfase. Para muchas empresas, este retraso es inaceptable porque el negocio depende de poder analizar los datos en tiempo real. Por ejemplo, para poder detectar fraudes, es preciso analizar los datos operativos en tiempo real.  
   
- ![real-time operational analytics overview](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "real-time operational analytics overview")  
+ ![información general del análisis operativo en tiempo real](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "información general del análisis operativo en tiempo real")  
   
  Los análisis operativos en tiempo real ofrecen una solución a estos retos.   
         No comportan ningún retraso cuando las cargas de trabajo OLTP y de análisis se ejecutan en la misma tabla subyacente.   En las situaciones en las que se pueden usar análisis en tiempo real, los costos y la complejidad se reducen enormemente, ya que se pone fin a la necesidad de realizar trabajos ETL o de adquirir y mantener un almacén de datos independiente.  
@@ -41,7 +45,7 @@ caps.handback.revision: 39
   
  Los análisis en tiempo real usan un índice de almacén de columnas actualizable en una tabla de almacén de filas.  El índice de almacén de columnas mantiene una copia de los datos, por lo que las cargas de trabajo OLTP y de análisis ejecutarán copias de los datos distintas. Esto reduce el impacto en el rendimiento que supone ejecutar ambas cargas de trabajo al mismo tiempo.  SQL Server mantiene automáticamente los cambios en el índice para que los cambios de OLTP siempre estén actualizados para los análisis. Con este diseño, es posible (y útil) ejecutar análisis en tiempo real en los datos actualizados. Esto es válido tanto para las tablas basadas en disco como para las tablas con optimización de memoria.  
   
-## Ejemplo introductorio  
+## <a name="get-started-example"></a>Ejemplo introductorio  
  Para empezar a usar análisis en tiempo real:  
   
 1.  Identifique las tablas del esquema operativo que contienen los datos necesarios para el análisis.  
@@ -85,7 +89,7 @@ caps.handback.revision: 39
   
  Ya está listo para ejecutar análisis operativos en tiempo real, sin haber realizado ningún cambio en la aplicación.  Las consultas de análisis se ejecutarán en el índice de almacén de columnas y las operaciones OLTP seguirán ejecutándose en los índices de árbol b de OLTP. Las cargas de trabajo OLTP seguirán produciéndose, si bien con una ligera sobrecarga adicional para mantener el índice de almacén de columnas. Vea las optimizaciones de rendimiento en la siguiente sección.  
   
-## Entradas de blog  
+## <a name="blog-posts"></a>Entradas de blog  
  Lea las entradas de blog de Sunil Agarwal para obtener más información sobre los análisis operativos en tiempo real.  Si lee estas entradas de blog primero, probablemente le será más fácil entender las secciones de consejos de rendimiento.  
   
 -   [Business case for real-time operational analytics (Caso empresarial de análisis operativo en tiempo real)](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)  
@@ -108,7 +112,7 @@ caps.handback.revision: 39
   
 -   [Columnstore index and the merge policy for rowgroups (Índice de almacén de columnas y directiva de combinación de grupos de filas)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
-## Consejo de rendimiento n.º 1: usar índices filtrados para mejorar el rendimiento de las consultas  
+## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>Consejo de rendimiento n.º 1: usar índices filtrados para mejorar el rendimiento de las consultas  
  Los análisis operativos en tiempo real pueden tener un impacto negativo en el rendimiento de la carga de trabajo OLTP.  Este impacto debería ser mínimo. En el siguiente ejemplo se muestra cómo usar índices filtrados para minimizar el impacto del índice de almacén de columnas no agrupado en la carga de trabajo transaccional, mientras se siguen realizando análisis en tiempo real.  
   
  Para reducir la sobrecarga derivada de mantener un índice de almacén de columnas no agrupado en una carga de trabajo operativa, puede usar una condición de filtrado para crear un índice de almacén de columnas no agrupado únicamente de los datos *semiactivos* o de variación lenta. Por ejemplo, en una aplicación de administración de pedidos, puede crear un índice de almacén de columnas no agrupado de los pedidos que ya se hayan enviado. Una vez que un pedido se envía, este apenas si cambia y, por tanto, se puede considerar como un dato semiactivo. Con el índice filtrado, los datos del índice de almacén de columnas no agrupado requieren menos actualizaciones, lo que reduce el impacto en la carga de trabajo transaccional.  
@@ -118,10 +122,10 @@ caps.handback.revision: 39
 > [!NOTE]  
 >  Un índice de almacén de columnas no agrupado filtrado solo se puede usar en tablas basadas en disco. No se admite en tablas con optimización de memoria.  
   
-### Ejemplo A: acceso a datos activos del índice de árbol b y a datos semiactivos del índice de almacén de columnas  
+### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>Ejemplo A: acceso a datos activos del índice de árbol b y a datos semiactivos del índice de almacén de columnas  
  En este ejemplo se usa una condición filtrada (accountkey > 0) para establecer qué filas se van a incluir en el índice de almacén de columnas. El objetivo es diseñar la condición de filtrado y las consultas posteriores para tener acceso a los datos “activos” del índice de árbol b que cambian con frecuencia, así como para tener acceso a los datos “semiactivos” del índice de almacén de columnas, que son más estables.  
   
- ![Combined indexes for warm and hot data](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Combined indexes for warm and hot data")  
+ ![Índices combinados para datos activos y semiactivos](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Índices combinados para datos activos y semiactivos")  
   
 > [!NOTE]  
 >  El optimizador de consultas tendrá en cuenta (pero no siempre elegirá) el índice de almacén de columnas para el plan de consulta. Cuando el optimizador de consultas elige el índice de almacén de columnas filtrado, combina de forma transparente tanto las filas del índice de almacén de columnas como las filas que no cumplen con la condición de filtrado para permitir los análisis en tiempo real. Esto difiere de un índice filtrado no agrupado regular, que solo se puede usar en las consultas limitadas a las filas existentes en el índice.  
@@ -164,14 +168,14 @@ Group By customername
   
  La consulta de análisis se ejecutará con el siguiente plan de consulta. Aquí se aprecia que el acceso a las filas que no cumplen con la condición de filtro se efectúa a través del índice de árbol b agrupado.  
   
- ![Query plan](../../relational-databases/indexes/media/query-plan-columnstore.png "Query plan")  
+ ![Plan de consulta](../../relational-databases/indexes/media/query-plan-columnstore.png "Plan de consulta")  
   
- Consulte el blog para obtener información detallada sobre los [índices de almacén de columnas no agrupado filtrado.](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/).  
+ Consulte el blog para obtener información detallada sobre los [índices de almacén de columnas no agrupado filtrado](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/).  
   
-## Consejo de rendimiento n.º 2: descargar el análisis en una secundaria legible de AlwaysOn  
+## <a name="performance-tip-2-offload-analytics-to-always-on-readable-secondary"></a>Consejo de rendimiento n.º 2: descargar el análisis en una secundaria legible de AlwaysOn  
  Aunque puede usar un índice de almacén de columnas filtrado para minimizar el mantenimiento de los índices de almacén de columnas, las consultas de análisis seguirán necesitando importantes cantidades de recursos informáticos (CPU, E/S, memoria) que afectan al rendimiento de las cargas de trabajo operativas. Nuestra recomendación para la mayor parte de las cargas de trabajo críticas es usar la configuración de AlwaysOn. En esta configuración, puede eliminar el impacto de los análisis descargándolos en una secundaria legible.  
   
-## Consejo de rendimiento n.º 3: reducir la fragmentación de índice conservando los datos activos en grupos de filas delta  
+## <a name="performance-tip-3-reducing-index-fragmentation-by-keeping-hot-data-in-delta-rowgroups"></a>Consejo de rendimiento n.º 3: reducir la fragmentación de índice conservando los datos activos en grupos de filas delta  
  Las tablas con índices de almacén de columnas pueden llegar a fragmentarse (se eliminan filas) de forma muy acusada si la carga de trabajo actualiza o elimina filas que se han comprimido. Un índice de almacén de columnas fragmentado conduce a un uso ineficaz de la memoria y el almacenamiento. Pero, aparte del uso ineficaz de los recursos, también repercute negativamente en el rendimiento de las consultas de análisis, dada la E/S adicional y la necesidad de filtrar las filas eliminadas del conjunto de resultados.  
   
  Las filas eliminadas no se quitarán físicamente hasta que se lleve a cabo una desfragmentación del índice con el comando REORGANIZE o hasta que se vuelva a generar el índice de almacén de columnas en toda la tabla o en las particiones afectadas. Ambos comandos, REORGANIZE y REBUILD, son operaciones costosas que consumen recursos que, de otro modo, se podrían usar para la carga de trabajo. Además, si las filas se comprimen demasiado pronto, puede que haya que volver a comprimirlas varias veces debido a las actualizaciones, lo que daría lugar a una sobrecarga de compresión innecesaria.  
@@ -198,7 +202,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
   
  A continuación encontrará algunos procedimientos recomendados.  
   
--   **Carga de trabajo de inserción/consulta:** si la carga de trabajo consiste principalmente en insertar datos y realizar consultas sobre estos, la opción recomendada para COMPRESSION_DELAY es 0. Las filas recién insertadas se comprimirán cuando se haya insertado 1 millón de filas en un solo grupo de filas delta.  
+-   **Carga de trabajo de inserción/consulta:**si la carga de trabajo consiste principalmente en insertar datos y realizar consultas sobre estos, la opción recomendada para COMPRESSION_DELAY es 0. Las filas recién insertadas se comprimirán cuando se haya insertado 1 millón de filas en un solo grupo de filas delta.  
     Algunos ejemplos de este tipo de carga de trabajo son: (a) carga de trabajo de DW tradicional o (b) análisis de secuencia de clics cuando hay que analizar el patrón de clics en una aplicación web.  
   
 -   **Carga de trabajo OLTP:** si la carga de trabajo hace un uso profuso de DML (es decir, un uso combinado intensivo de actualizaciones, eliminaciones e inserciones), puede ver la fragmentación de índices de almacén de columnas examinando el sys de DMV. dm_db_column_store_row_group_physical_stats. Si ve que más de un 10 % de las filas se marcan como eliminadas en los grupos de filas comprimidos recientemente, puede usar la opción COMPRESSION_DELAY para agregar un retraso cuando las filas sean aptas para la compresión. Por ejemplo, si en la carga de trabajo las filas recién insertadas se mantienen como ‘activas’ (es decir, se actualizan varias veces) durante, digamos, 60 minutos, conviene establecer la opción COMPRESSION_DELAY en 60.  
@@ -218,12 +222,12 @@ ORDER BY created_time DESC
   
  Si el número de filas eliminadas en los grupos de filas comprimidas es mayor del 20 %, teniendo un nivel predefinido de los grupos de filas más antiguos con una variación de menos del 5 % (denominados grupos de filas inactivos), establezca COMPRESSION_DELAY = (youngest_rowgroup_created_time – current_time). Tenga en cuenta que este método funciona mejor en cargas de trabajo estables y relativamente homogéneas.  
   
-## Vea también  
- [Guía de índices de almacén de columnas](../Topic/Columnstore%20Indexes%20Guide.md)   
- [Carga de datos de índices de almacén de columnas](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
- [Resumen de las características de los índices de almacén de columnas para cada versión](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)   
+## <a name="see-also"></a>Vea también  
+ [Guía de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-overview.md)   
+ [Carga de datos de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Rendimiento de las consultas de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
- [Índices de almacén de columnas para el almacenamiento de datos](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)   
+ [Índices de almacén de columnas para el almacenamiento de datos](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
  [Desfragmentación de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

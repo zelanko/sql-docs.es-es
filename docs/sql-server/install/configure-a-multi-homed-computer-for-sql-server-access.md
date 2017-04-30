@@ -1,26 +1,30 @@
 ---
-title: "Configurar un equipo de host m&#250;ltiple para el acceso a SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "puertos [SQL Server], equipo de hosts múltiples"
-  - "equipo de host múltiple [SQL Server], configurar puertos"
-  - "sistemas de firewall [Motor de base de datos], equipo de hosts múltiples"
+title: "Configurar un equipo de hosts múltiples para el acceso a SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ports [SQL Server], multi-homed computer
+- multi-homed computer [SQL Server] configuring ports
+- firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 61df6c613fec3d5a549f5dc1468b44affa37f047
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurar un equipo de host m&#250;ltiple para el acceso a SQL Server
+# <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurar un equipo de host múltiple para el acceso a SQL Server
   Cuando un servidor debe proporcionar una conexión a dos o más redes o subredes de la red, un escenario típico utiliza un equipo de host múltiple. Con frecuencia, este equipo se encuentra en una red perimetral (también conocida como DMZ, zona desmilitarizada o subred filtrada). En este tema se describe cómo configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Firewall de Windows con seguridad avanzada para proporcionar las conexiones de red a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un entorno de host múltiple.  
   
 > [!NOTE]  
@@ -49,12 +53,12 @@ caps.handback.revision: 23
   
 -   Configure Firewall de Windows con seguridad avanzada.  
   
-## Procedimientos opcionales  
+## <a name="optional-procedures"></a>Procedimientos opcionales  
  Si ya sabe qué direcciones IP están disponibles en el equipo y que se usan para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede omitir estos procedimientos.  
   
-#### Para determinar las direcciones IP disponibles en el equipo  
+#### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>Para determinar las direcciones IP disponibles en el equipo  
   
-1.  En el equipo en el que está instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], haga clic en **Inicio** y en **Ejecutar**, escriba **cmd** y, después, [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
+1.  En el equipo en el que está instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en **Inicio**y en **Ejecutar**, escriba **cmd** y, después, [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
 2.  En la ventana del símbolo del sistema, escriba **ipconfig,** y presione ENTRAR para mostrar las direcciones IP disponibles en este equipo.  
   
@@ -63,13 +67,13 @@ caps.handback.revision: 23
   
 3.  Observe las direcciones IPv4 y las direcciones IPv6 que se están usando. La otra información de la lista, como las direcciones temporales, máscaras de subred y puerta de enlace predeterminada, es importante para configurar una red TCP/IP. Pero esta información no se usa en este ejemplo.  
   
-#### Para determinar las direcciones IP y los puertos que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="to-determine-the-ip-addresses-and-ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Para determinar las direcciones IP y los puertos que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Haga clic en **Inicio**, elija **Todos los programas**, seleccione [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], seleccione **Herramientas de configuración** y, después, haga clic en **Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**.  
   
 2.  En el panel de la consola del **Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**, expanda **Configuración de red de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** y **Protocolos de \<nombre de instancia>**. Después, haga doble clic en **TCP/IP**.  
   
-3.  En el cuadro de diálogo **Propiedades de TCP/IP**, en la pestaña **Direcciones IP**, aparecen varias direcciones IP con el formato **IP1**, **IP2**, hasta **IPAll**. Una de estas direcciones IP, 127.0.0.1, se utiliza para el adaptador de bucle invertido. Aparecen direcciones IP adicionales para cada dirección IP configurada en el equipo.  
+3.  En el cuadro de diálogo **Propiedades de TCP/IP** , en la pestaña **Direcciones IP** , aparecen varias direcciones IP con el formato **IP1**, **IP2**, hasta **IPAll**. Una de estas direcciones IP, 127.0.0.1, se utiliza para el adaptador de bucle invertido. Aparecen direcciones IP adicionales para cada dirección IP configurada en el equipo.  
   
 4.  Para cualquier dirección IP, si el cuadro de diálogo **Puertos dinámicos TCP** contiene **0**, indica que [!INCLUDE[ssDE](../../includes/ssde-md.md)] escucha en los puertos dinámicos. Este ejemplo usa puertos fijos en lugar de puertos dinámicos que podrían cambiarse después de reiniciar. Por lo tanto, si el cuadro de diálogo **Puertos dinámicos TCP** contiene **0**, elimine el 0.  
   
@@ -77,24 +81,24 @@ caps.handback.revision: 23
   
 6.  Si no desea que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use algunos de los puertos disponibles, en la pestaña **Protocolo** , cambie el valor de **Escuchar todo** por **No**; y en la pestaña **Direcciones IP** , cambie el valor de **Activo** por **No** para las direcciones IP que no desee usar.  
   
-## Configurar Firewall de Windows con seguridad avanzada  
+## <a name="configuring-windows-firewall-with-advanced-security"></a>Configurar Firewall de Windows con seguridad avanzada  
  Cuando conozca las direcciones IP que usa el equipo y los portales que utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , podrá crear reglas de firewall y configurarlas después para direcciones IP concretas.  
   
-#### Para crear una regla de firewall  
+#### <a name="to-create-a-firewall-rule"></a>Para crear una regla de firewall  
   
 1.  En el equipo en el que está instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , inicie sesión como administrador.  
   
 2.  Haga clic en **Inicio**, en **Ejecutar**, escriba **wf.msc**y luego haga clic en **Aceptar**.  
   
-3.  En el cuadro de diálogo **Control de cuentas de usuario**, haga clic en **Continuar** para usar las credenciales de administrador para abrir Firewall de windows con el complemento Seguridad avanzada.  
+3.  En el cuadro de diálogo **Control de cuentas de usuario** , haga clic en **Continuar** para usar las credenciales de administrador para abrir Firewall de windows con el complemento Seguridad avanzada.  
   
 4.  En la página **Información general** , confirme que Firewall de Windows esté habilitado.  
   
 5.  En el panel izquierdo, haga clic en **Reglas de entrada**.  
   
-6.  Haga clic con el botón derecho en **Reglas de entrada** y, después, haga clic en **Nueva regla** para abrir el **Asistente para nueva regla de entrada**.  
+6.  Haga clic con el botón derecho en **Reglas de entrada**y, después, haga clic en **Nueva regla** para abrir el **Asistente para nueva regla de entrada**.  
   
-7.  Podría crear una regla para el programa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sin embargo, dado que este ejemplo usa un puerto fijo, seleccione **Puerto**y haga clic en **Siguiente**.  
+7.  Podría crear una regla para el programa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sin embargo, dado que este ejemplo usa un puerto fijo, seleccione **Puerto**y haga clic en **Siguiente**.  
   
 8.  En la página **Protocolos y puertos** , seleccione **TCP**.  
   
@@ -103,7 +107,7 @@ caps.handback.revision: 23
 10. En la página **Acción** , revise las opciones. En este ejemplo no se usa el firewall para aplicar conexiones seguras. Por lo tanto, haga clic en **Permitir la conexión**y, a continuación, haga clic en **Siguiente**.  
   
     > [!NOTE]  
-    >  El entorno podría requerir conexiones seguras. Si selecciona una de las opciones de conexiones seguras, podría tener que configurar un certificado y la opción **Forzar cifrado** . Para obtener más información sobre las conexiones seguras, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;.](../../database-engine/configure-windows/enable encrypted connections to the database engine.md)[](../../database-engine/configure-windows/enable encrypted connections to the database engine.md "Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)")  
+    >  El entorno podría requerir conexiones seguras. Si selecciona una de las opciones de conexiones seguras, podría tener que configurar un certificado y la opción **Forzar cifrado** . Para obtener más información sobre las conexiones seguras, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;.](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)[](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)  
   
 11. En la página **Perfil** , seleccione uno o varios perfiles para la regla. Si no conoce los perfiles de firewall, haga clic en el vínculo **Más información acerca de los perfiles** del programa de firewall.  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 23
   
  Después de crear una o varias reglas, realice los pasos siguientes para configurar cada dirección IP del equipo de modo que use una regla.  
   
-#### Para configurar la regla de firewall de una dirección IP concreta  
+#### <a name="to-configure-the-firewall-rule-for-a-specific-ip-addresses"></a>Para configurar la regla de firewall de una dirección IP concreta  
   
 1.  En la página **Reglas de entrada** del **Firewall de Windows con seguridad avanzada**, haga clic con el botón derecho en la regla recién creada y, después, haga clic en **Propiedades**.  
   
@@ -137,7 +141,7 @@ caps.handback.revision: 23
   
 9. Para configurar las otras direcciones IP en un equipo de host múltiple, repita este procedimiento con otra dirección IP y otra regla.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Servicio SQL Server Browser &#40;motor de base de datos y SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [Conectarse a SQL Server a través de un servidor proxy &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md)  
   

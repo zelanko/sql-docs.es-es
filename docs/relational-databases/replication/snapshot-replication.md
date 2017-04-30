@@ -1,25 +1,29 @@
 ---
-title: "Replicaci&#243;n de instant&#225;neas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "replicación de instantáneas [SQL Server], acerca de la replicación de instantáneas"
-  - "replicación de instantáneas [SQL Server]"
+title: "Replicación de instantáneas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snapshot replication [SQL Server], about snapshot replication
+- snapshot replication [SQL Server]
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6c99d91ab0209eb08c04488ce27043b2ad714781
+ms.lasthandoff: 04/11/2017
+
 ---
-# Replicaci&#243;n de instant&#225;neas
+# <a name="snapshot-replication"></a>Replicación de instantáneas
   La replicación de instantáneas distribuye los datos exactamente como aparecen en un momento específico en el tiempo y no supervisa las actualizaciones de los datos. Cuando se produce la sincronización, se genera la instantánea completa y se envía a los suscriptores.  
   
 > [!NOTE]  
@@ -59,7 +63,7 @@ caps.handback.revision: 34
  ![Componentes de replicación de instantáneas y flujo de datos](../../relational-databases/replication/media/snapshot.gif "Componentes de replicación de instantáneas y flujo de datos")  
   
 ##  <a name="SnapshotAgent"></a> Agente de instantáneas  
- Para la replicación de mezcla se genera una instantánea cada vez que se ejecuta el Agente de instantáneas. Para la duplicación transaccional, la generación de instantáneas depende de la configuración de la propiedad de publicación **immediate_sync**. Si la propiedad se define como TRUE (la opción predeterminada cuando se utiliza el Asistente para nueva publicación), se genera una instantánea cada vez que se ejecuta el Agente de instantáneas, y puede aplicarse a un suscriptor en cualquier momento. Si la propiedad se establece en FALSE (el valor predeterminado al usar **sp_addpublication**), se genera la instantánea sólo si se ha agregado una nueva suscripción desde el último agente de instantáneas se ejecuta; Deben esperar el agente de instantáneas completar antes de que se puedan sincronizar los suscriptores.  
+ Para la replicación de mezcla se genera una instantánea cada vez que se ejecuta el Agente de instantáneas. Para la replicación transaccional, la generación de instantáneas depende de la configuración de la propiedad de publicación **immediate_sync**. Si la propiedad se define como TRUE (la opción predeterminada cuando se utiliza el Asistente para nueva publicación), se genera una instantánea cada vez que se ejecuta el Agente de instantáneas, y puede aplicarse a un suscriptor en cualquier momento. Si la propiedad se define como FALSE (la opción predeterminada cuando se utiliza **sp_addpublication**), la instantánea se genera solo si se ha agregado una nueva suscripción desde la última ejecución del Agente de instantáneas; los suscriptores deberán esperar a que el Agente de instantáneas finalice para poder sincronizarse.  
   
  El Agente de instantáneas ejecuta los pasos siguientes:  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 34
   
 3.  Copia los datos de la tabla publicada en el publicador y escribe los datos en la carpeta de instantáneas. La instantánea se genera como un conjunto de archivos de programa de copia masiva (BCP).  
   
-4.  Para publicaciones transaccionales y de instantáneas, el agente de instantáneas anexa filas a la **MSrepl_commands** y **MSrepl_transactions** tablas en la base de datos de distribución. Las entradas de la **MSrepl_commands** tabla son comandos que indican la ubicación de archivos, los otros archivos de instantáneas y las referencias a los scripts anteriores o posteriores a la instantáneas. Las entradas de la **MSrepl_transactions** tabla son comandos importantes para sincronizar el suscriptor.  
+4.  En las publicaciones de instantáneas y transaccionales, el Agente de instantáneas anexa filas a las tablas **MSrepl_commands** y **MSrepl_transactions** de la base de datos de distribución. Las entradas de la tabla **MSrepl_commands** son comandos que indican la ubicación de los archivos .sch y .bcp, de cualquier otro archivo de instantáneas y de las referencias a cualquier script anterior o posterior a la instantánea. Las entradas de la tabla **MSrepl_transactions** son comandos importantes para sincronizar el suscriptor.  
   
      En las publicaciones de combinación, el Agente de instantáneas realiza pasos adicionales.  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 34
   
 1.  Establece una conexión con el distribuidor.  
   
-2.  Examina la **MSrepl_commands** y **MSrepl_transactions** tablas en la base de datos de distribución en el distribuidor. El agente lee la ubicación de los archivos de instantáneas de la primera tabla y los comandos de sincronización del suscriptor de ambas tablas.  
+2.  Examina las tablas **MSrepl_commands** y **MSrepl_transactions** de la base de datos de distribución del distribuidor. El agente lee la ubicación de los archivos de instantáneas de la primera tabla y los comandos de sincronización del suscriptor de ambas tablas.  
   
 3.  Aplica el esquema y los comandos a la base de datos de suscripciones.  
   

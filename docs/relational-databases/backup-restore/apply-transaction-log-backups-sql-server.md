@@ -1,28 +1,32 @@
 ---
-title: "Aplicar copias de seguridad de registros de transacci&#243;n (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/13/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restaurar [SQL Server], copias de seguridad de registros"
-  - "copias de seguridad del registro de transacciones [SQL Server], aplicar copias de seguridad"
-  - "restauraciones en línea [SQL Server], copias de seguridad de registros"
-  - "copias de seguridad de registro de transacciones [SQL Server], cantidad necesaria para la secuencia de restauración"
-  - "copias de seguridad [SQL Server], copias de seguridad de registros"
+title: "Aplicar copias de seguridad de registros de transacción (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 08/13/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring [SQL Server], log backups
+- transaction log backups [SQL Server], applying backups
+- online restores [SQL Server], log backups
+- transaction log backups [SQL Server], quantity needed for restore sequence
+- backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 60f9ef5bcf12be3b4a16f6ed56a21da2a2b54501
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aplicar copias de seguridad de registros de transacci&#243;n (SQL Server)
+# <a name="apply-transaction-log-backups-sql-server"></a>Aplicar copias de seguridad de registros de transacción (SQL Server)
   Este tema solo es relevante para el modelo de recuperación completa o para el modelo de recuperación optimizado para cargas masivas de registros.  
   
  En este tema se describe la aplicación de copias de seguridad del registro de transacciones como parte de la restauración de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -53,10 +57,10 @@ caps.handback.revision: 38
 |----------|-----------|  
 |8:00 a. m.|Copia de seguridad de la base de datos para crear una copia de seguridad completa de la base de datos.|  
 |Mediodía|Copia de seguridad del registro de transacciones.|  
-|4:00 p. m.|Copia de seguridad del registro de transacciones.|  
-|6:00 p. m.|Copia de seguridad de la base de datos para crear una copia de seguridad completa de la base de datos.|  
+|4:00 p. m.|Copia de seguridad del registro de transacciones.|  
+|6:00 p. m.|Copia de seguridad de la base de datos para crear una copia de seguridad completa de la base de datos.|  
 |8:00 p. m.|Copia de seguridad del registro de transacciones.|  
-|9:45 p. m.|Se produce el error.|  
+|9:45 p. m.|Se produce el error.|  
   
 > **NOTA:** Para obtener una explicación de este ejemplo de secuencia de copias de seguridad, vea [Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 38
   
  **Para restaurar hasta su punto de recuperación**  
   
--   [Restaurar una base de datos según el punto de error en el modelo de recuperación completa &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [Restaurar una base de datos según el punto de error en el modelo de recuperación completa &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
@@ -101,7 +105,8 @@ caps.handback.revision: 38
   
 -   [Recuperar una base de datos sin restaurar los datos &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   
+

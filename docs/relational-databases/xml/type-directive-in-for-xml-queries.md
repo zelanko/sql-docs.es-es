@@ -1,35 +1,39 @@
 ---
-title: "Directiva TYPE en consultas FOR XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Cláusula FOR XML, directiva TYPE"
-  - "TYPE [directiva]"
+title: Directiva TYPE en consultas FOR XML | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, TYPE directive
+- TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1e060f93c4aa26d86fbd6683099a66821c38e9b2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Directiva TYPE en consultas FOR XML
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatibilidad con [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) ofrece la posibilidad de solicitar la devolución del resultado de una consulta FOR XML como tipo de datos **xml** por medio de la directiva TYPE. Esto permite procesar el resultado de una consulta FOR XML en el servidor. Por ejemplo, puede especificar una XQuery en el mismo, asignar el resultado a una variable de tipo **xml** o escribir consultas [FOR XML anidadas](../../relational-databases/xml/use-nested-for-xml-queries.md).  
+# <a name="type-directive-in-for-xml-queries"></a>Directiva TYPE en consultas FOR XML
+  La compatibilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) ofrece la posibilidad de solicitar la devolución del resultado de una consulta FOR XML como tipo de datos **xml** mediante la especificación de la directiva TYPE. Esto permite procesar el resultado de una consulta FOR XML en el servidor. Por ejemplo, puede especificar una XQuery en el mismo, asignar el resultado a una variable de tipo **xml** o escribir consultas [FOR XML anidadas](../../relational-databases/xml/use-nested-for-xml-queries.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve al cliente datos de instancia de tipo XML como resultado de distintas construcciones de servidor, como por ejemplo consultas FOR XML que usan la directiva TYPE o en las que se usa el tipo de datos **xml** para devolver valores de datos de instancia XML procedentes de columnas de tablas SQL y parámetros de salida. En el código de las aplicaciones cliente, el proveedor ADO.NET solicita que se envíe esta información de tipo de datos XML con una codificación binaria desde el servidor. Sin embargo, si utiliza FOR XML sin la directiva TYPE, se devolverán los datos XML en forma de cadena. En cualquier caso, el proveedor del cliente siempre podrá controlar cualquier formato de tipo XML. Tenga en cuenta que la cláusula FOR XML de nivel superior sin la directiva TYPE no puede utilizarse con cursores.  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
  En los ejemplos siguientes se muestra el uso de la directiva TYPE con consultas FOR XML.  
   
-### Recuperar resultados de consultas FOR XML en forma de xml  
- En la consulta siguiente se recupera información de contacto de clientes de la tabla `Contacts`. Puesto que se especifica la directiva `TYPE` en `FOR XML`, el resultado se devuelve como de tipo **xml**.  
+### <a name="retrieving-for-xml-query-results-as-xml-type"></a>Recuperar resultados de consultas FOR XML en forma de xml  
+ En la consulta siguiente se recupera información de contacto de clientes de la tabla `Contacts` . Puesto que se especifica la directiva `TYPE` en `FOR XML`, el resultado se devuelve como de tipo **xml** .  
   
 ```  
 USE AdventureWorks2012;  
@@ -48,7 +52,7 @@ FOR XML AUTO, TYPE;
   
  `...`  
   
-### Asignar resultados de consultas FOR XML a una variable de tipo xml  
+### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>Asignar resultados de consultas FOR XML a una variable de tipo xml  
  En el ejemplo siguiente, se asigna un resultado de FOR XML a una variable de tipo **xml**, `@x`. La consulta recupera información de contacto, como `BusinessEntityID`, `FirstName` o `LastName`, y números de teléfono adicionales, de la columna `AdditionalContactInfo` de **xml** `TYPE`. Puesto que la cláusula `FOR XML` especifica la directiva `TYPE`, se devuelve XML en forma de tipo **xml** y se asigna a una variable.  
   
 ```  
@@ -69,8 +73,8 @@ SELECT @x;
 GO  
 ```  
   
-### Consultar los resultados de una consulta FOR XML  
- Las consultas FOR XML devuelven XML. Por tanto, puede aplicar métodos del tipo **xml**, como **query()** y **value()**, al resultado XML devuelto por las consultas FOR XML.  
+### <a name="querying-results-of-a-for-xml-query"></a>Consultar los resultados de una consulta FOR XML  
+ Las consultas FOR XML devuelven XML. Por tanto, puede aplicar métodos del tipo **xml** , como **query()** y **value()**, al resultado XML devuelto por las consultas FOR XML.  
   
  En la consulta siguiente, se usa el método `query()` del tipo de datos **xml** para consultar el resultado de la consulta `FOR XML`. Para obtener más información, vea [query&#40;&#41; &#40;método de tipo de datos xml&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
   
@@ -127,8 +131,8 @@ SELECT @FirstPhoneFromAdditionalContactInfo;
 > [!NOTE]  
 >  Si no se especifica la directiva TYPE, se devolverá el resultado de la consulta FOR XML con el tipo **nvarchar(max)**.  
   
-### Utilizar resultados de consultas FOR XML en INSERT, UPDATE y DELETE (DML de Transact-SQL)  
- En el ejemplo siguiente se muestra el modo en el que se pueden utilizar las consultas FOR XML en instrucciones del lenguaje de manipulación de datos (DML). En este ejemplo, `FOR XML` devuelve una instancia del tipo **xml**. La instrucción `INSERT` inserta esta instancia de tipo XML en una tabla.  
+### <a name="using-for-xml-query-results-in-insert-update-and-delete-transact-sql-dml"></a>Utilizar resultados de consultas FOR XML en INSERT, UPDATE y DELETE (DML de Transact-SQL)  
+ En el ejemplo siguiente se muestra el modo en el que se pueden utilizar las consultas FOR XML en instrucciones del lenguaje de manipulación de datos (DML). En este ejemplo, `FOR XML` devuelve una instancia del tipo **xml** . La instrucción `INSERT` inserta esta instancia de tipo XML en una tabla.  
   
 ```  
 CREATE TABLE T1(intCol int, XmlCol xml);  
@@ -146,7 +150,7 @@ SELECT (SELECT XmlCol.query('/Root')
 GO  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

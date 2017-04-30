@@ -1,29 +1,33 @@
 ---
-title: "Audit Statement Permission (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Audit Statement Permission [clase de eventos]"
+title: Clase de eventos Audit Statement Permission | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Audit Statement Permission event class
 ms.assetid: 84ababe0-166e-4b1e-903b-bee6c1f005e7
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3d56e8d3bac8ca36333b3fe68f7bb80a94c19578
+ms.lasthandoff: 04/11/2017
+
 ---
-# Audit Statement Permission (clase de eventos)
+# <a name="audit-statement-permission-event-class"></a>Audit Statement Permission [clase de eventos]
   La clase de eventos **Audit Statement Permission** se produce cuando se usa un permiso de instrucción (como CREATE TABLE).  
   
  Es posible que en una versión futura de **se quite la clase de eventos** Audit Statement Permission [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se recomienda utilizar la clase de eventos **Audit Schema Object Management** en su lugar.  
   
-## Columnas de datos de la clase de eventos Audit Statement Permission  
+## <a name="audit-statement-permission-event-class-data-columns"></a>Columnas de datos de la clase de eventos Audit Statement Permission  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -37,7 +41,7 @@ caps.handback.revision: 31
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
 |**LoginName**|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con el formato DOMINIO\nombreDeUsuario).|11|Sí|  
-|**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals**. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
+|**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals** . Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |**Permisos**|**bigint**|Valor entero que representa el tipo de permisos comprobado.<br /><br /> 1=CREATE DATABASE (solo base de datos maestra)<br /><br /> 2=CREATE TABLE<br /><br /> 4=CREATE PROCEDURE<br /><br /> 8=CREATE VIEW<br /><br /> 16=CREATE RULE<br /><br /> 32=CREATE DEFAULT<br /><br /> 64=BACKUP DATABASE<br /><br /> 128=BACKUP LOG<br /><br /> 256=BACKUP TABLE<br /><br /> 512=CREATE FUNCTION|19|Sí|  
@@ -51,7 +55,7 @@ caps.handback.revision: 31
 |**TransactionID**|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |**XactSequence**|**bigint**|Token que se utiliza para describir la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Audit Schema Object Management (clase de eventos)](../../relational-databases/event-classes/audit-schema-object-management-event-class.md)  

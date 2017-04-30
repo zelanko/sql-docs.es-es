@@ -1,27 +1,31 @@
 ---
-title: "Caracter&#237;sticas de SQL Server no admitidas para OLTP en memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Características de SQL Server no admitidas para OLTP en memoria | Microsoft Docs"
+ms.custom: 
+ms.date: 10/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 caps.latest.revision: 55
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1b1d4a26616fe83a241267bc87b9e799d883e26
+ms.lasthandoff: 04/11/2017
+
 ---
-# Caracter&#237;sticas de SQL Server no admitidas para OLTP en memoria
+# <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Características de SQL Server no admitidas para OLTP en memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   En este tema se describen las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuyo uso no se admite con objetos con optimización para memoria.  
   
-## [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Características no admitidas para OLTP en memoria  
+## <a name="includessnoversionincludesssnoversion-mdmd-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Características no admitidas para OLTP en memoria  
  Las características siguientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se admiten en una base de datos que tiene objetos con optimización para memoria (incluido el grupo de archivos de datos con optimización para memoria).  
   
 |Característica no admitida|Descripción de la característica|  
@@ -49,7 +53,7 @@ caps.handback.revision: 55
 |Base de datos de recursos, tempdb|Sí|No hay restricciones en las transacciones entre bases de datos que, además de una base de datos de usuario único, usan solo la base de datos de recursos y tempdb.|  
 |maestra|solo lectura|Las transacciones entre bases de datos que tocan OLTP en memoria y la base de datos maestra no pueden confirmarse si incluyen operaciones de escritura en la base de datos maestra. Se permiten las transacciones entre bases de datos que solo leen de la base de datos maestra y usan una base de datos de un solo usuario.|  
   
-## Escenarios no admitidos  
+## <a name="scenarios-not-supported"></a>Escenarios no admitidos  
   
 -   La contención de base de datos ([Bases de datos contenidas](../../relational-databases/databases/contained-databases.md)) no es compatible con OLTP en memoria. Se admite la autenticación de la base de datos independiente. Sin embargo, todos los objetos de OLTP en memoria se marcan como 'breaking containment' en la DMV dm_db_uncontained_entities.  
   
@@ -71,7 +75,8 @@ caps.handback.revision: 55
   
 -   Administración basada en directivas (PBM). No se admiten los modos de impedir y solo registrar de PBM. La existencia de estas directivas en el servidor puede impedir la correcta ejecución de DDL de OLTP en memoria. Se admiten los modos a petición y programado.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad de SQL Server con OLTP en memoria](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   
+

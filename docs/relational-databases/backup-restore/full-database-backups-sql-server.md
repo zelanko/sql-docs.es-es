@@ -1,38 +1,42 @@
 ---
-title: "Copias de seguridad completas de bases de datos (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "copias de seguridad completas [SQL Server]"
-  - "copias de seguridad [SQL Server], base de datos"
-  - "hacer copia de seguridad de bases de datos [SQL Server], copias de seguridad completas"
-  - "estimar el tamaño de la copia de seguridad de la base de datos"
-  - "hacer copia de seguridad [SQL Server], tamaño de la copia de seguridad"
-  - "copias de seguridad de bases de datos [SQL Server], copias de seguridad completas"
-  - "tamaño [SQL Server], copias de seguridad"
-  - "copias de seguridad de base de datos [SQL Server], acerca de crear copias de seguridad de bases de datos"
+title: Copias de seguridad completas de bases de datos (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full backups [SQL Server]
+- backups [SQL Server], database
+- backing up databases [SQL Server], full backups
+- estimating database backup size
+- backing up [SQL Server], size of backup
+- database backups [SQL Server], full backups
+- size [SQL Server], backups
+- database backups [SQL Server], about backing up databases
 ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f5d2d58da7040d54d49ae9f6b3daae5c31024f65
+ms.lasthandoff: 04/11/2017
+
 ---
-# Copias de seguridad completas de bases de datos (SQL Server)
+# <a name="full-database-backups-sql-server"></a>Copias de seguridad completas de bases de datos (SQL Server)
   Una copia de seguridad completa de la base de datos crea una copia de seguridad de toda la base de datos, Esto incluye la parte del registro de transacciones para poder recuperar la base de datos completa después de restaurar una copia de seguridad completa de la base de datos. Las copias de seguridad completas representan la base de datos en el momento en que finalizó la copia de seguridad.  
   
 > [!TIP]  
 >  A medida que la base de datos aumenta de tamaño, las copias de seguridad completas requieren una mayor cantidad de tiempo para finalizar y espacio de almacenamiento. Por ello, para una base de datos grande, puede que desee complementar una copia de seguridad completa con una serie de *copias de seguridad diferenciales*. Para obtener más información, vea [Copias de seguridad diferenciales &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
   
 > [!IMPORTANT]  
->  TRUSTWORTHY se establece en OFF en una copia de seguridad de base de datos. Para obtener información sobre cómo establecer TRUSTWORTHY en ON, vea [Opciones ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+>  TRUSTWORTHY se establece en OFF en una copia de seguridad de base de datos. Para obtener información sobre cómo establecer TRUSTWORTHY en ON, vea [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  **En este tema:**  
   
@@ -47,9 +51,9 @@ caps.handback.revision: 64
 ##  <a name="DbBuRMs"></a> Copias de seguridad de la base de datos en el modelo de recuperación simple  
  Con el modelo de recuperación simple, después de cada copia de seguridad, la base de datos queda expuesta a la pérdida potencial del trabajo en caso de desastre. El riesgo de pérdida del trabajo se incrementa con cada actualización hasta la siguiente copia de seguridad, cuando el riesgo de pérdida vuelve a cero y empieza un nuevo ciclo de riesgo. El riesgo de pérdida de trabajo aumenta con el tiempo entre una copia de seguridad y otra. La siguiente ilustración muestra el riesgo de pérdida del trabajo en una estrategia de copia de seguridad que solo usa copias de seguridad completas de la base de datos.  
   
- ![Muestra el riesgo de pérdida de trabajo entre copias de seguridad de la base de datos](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "Muestra el riesgo de pérdida de trabajo entre copias de seguridad de la base de datos")  
+ ![Muestra el riesgo de pérdida de trabajo entre copias de seguridad de bases de datos](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "Muestra el riesgo de pérdida de trabajo entre copias de seguridad de bases de datos")  
   
-### Ejemplo ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example-includetsqlincludestsql-mdmd"></a>Ejemplo ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  El siguiente ejemplo muestra cómo crear una copia de seguridad completa de la base de datos mediante WITH FORMAT para sobrescribir cualquier copia de seguridad existente y crear un nuevo conjunto de medios.  
   
 ```  
@@ -63,11 +67,11 @@ GO
 ##  <a name="DbBuRMf"></a> Copias de seguridad de la base de datos en el modelo de recuperación completa  
  En las bases de datos que usan la recuperación completa y optimizada para cargas masivas de registros, las copias de seguridad de base de datos son necesarias pero no suficientes. También se requieren copias de seguridad de registros de transacciones. La siguiente ilustración muestra la estrategia de copia de seguridad menos compleja en un modelo de recuperación completa.  
   
- ![Serie de copias de seguridad completas de la base de datos y del registro](../../relational-databases/backup-restore/media/bnr-rmfull-1-fulldb-log-backups.gif "Serie de copias de seguridad completas de la base de datos y del registro")  
+ ![Serie de copias de seguridad completas de bases de datos y copias de seguridad de registros](../../relational-databases/backup-restore/media/bnr-rmfull-1-fulldb-log-backups.gif "Serie de copias de seguridad completas de bases de datos y copias de seguridad de registros")  
   
  Para obtener información sobre cómo crear copias de seguridad de registros, vea [Copias de seguridad de registros de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
-### Ejemplo ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example-includetsqlincludestsql-mdmd"></a>Ejemplo ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  El siguiente ejemplo muestra cómo crear una copia de seguridad completa de la base de datos mediante WITH FORMAT para sobrescribir cualquier copia de seguridad existente y crear un nuevo conjunto de medios. A continuación, en el ejemplo se realiza una copia de seguridad del registro de transacciones. En una situación real, deberá realizar una serie de copias de seguridad de registros periódicas. Para este ejemplo, la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] se configura para usar el modelo de recuperación completa.  
   
 ```  
@@ -100,7 +104,7 @@ GO
   
  [Usar el Asistente para planes de mantenimiento](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Información general de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  

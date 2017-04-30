@@ -1,31 +1,35 @@
 ---
-title: "Tipos de replicaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "replicación [SQL Server], tipos"
+title: "Tipos de replicación | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- replication [SQL Server], types
 ms.assetid: c1655e8d-d14c-455a-a7f9-9d2f43e88ab4
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e73bdd657a12e4eda65ce7cc16f2e9d139ce9913
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tipos de replicaci&#243;n
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona los siguientes tipos de replicación para usarlos en las aplicaciones distribuidas:  
+# <a name="types-of-replication"></a>Tipos de replicación
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following types of replication for use in distributed applications:  
   
--   Replicación transaccional. Para obtener más información, consulte [la replicación transaccional](../../relational-databases/replication/transactional/transactional-replication.md).  
+-   Replicación transaccional. Para obtener más información, consulte [Replicación transaccional](../../relational-databases/replication/transactional/transactional-replication.md).  
   
--   Replicación de mezcla. Para obtener más información, consulte [la replicación de mezcla](../../relational-databases/replication/merge/merge-replication.md).  
+-   Replicación de mezcla. Para obtener más información, consulte [Replicación de mezcla](../../relational-databases/replication/merge/merge-replication.md).  
   
--   Replicación de instantáneas. Para obtener más información, consulte [la replicación de instantáneas](../../relational-databases/replication/snapshot-replication.md).  
+-   Replicación de instantáneas. Para obtener más información, consulte [Replicación de instantáneas](../../relational-databases/replication/snapshot-replication.md).  
   
  El tipo de replicación que se elige para una aplicación depende de muchos factores, como el entorno físico de la replicación, el tipo y la cantidad de datos que se desean replicar y si los datos se actualizan en el suscriptor. El entorno físico incluye el número y la ubicación de los equipos que participan en la replicación, y si estos equipos son clientes (estaciones de trabajo, equipos portátiles o dispositivos de mano) o servidores.  
   
@@ -33,7 +37,7 @@ caps.handback.revision: 38
   
  En la replicación de instantáneas, no se realiza un seguimiento de los cambios de datos; cada vez que se aplica una instantánea, ésta sobrescribe completamente los datos existentes. La replicación transaccional realiza un seguimiento de los cambios a través del registro de transacciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la replicación de mezcla realiza un seguimiento de los cambios a través de desencadenadores y tablas de metadatos.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general sobre los agentes de replicación](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

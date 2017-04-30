@@ -1,28 +1,32 @@
 ---
-title: "Requisitos para utilizar las tablas con optimizaci&#243;n para memoria | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Requisitos para usar las tablas con optimización para memoria | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 caps.latest.revision: 65
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d30c5b808c13258e784187182eab23b0a50c76e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Requisitos para utilizar las tablas con optimizaci&#243;n para memoria
+# <a name="requirements-for-using-memory-optimized-tables"></a>Requisitos para utilizar las tablas con optimización para memoria
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Para usar OLTP en memoria en la base de datos de Azure, vea [Introducción a In-Memory (vista previa) en Base de datos SQL](http://azure.microsoft.com/documentation/articles/sql-database-in-memory/).  
   
- Además de [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md), estos son los requisitos para usar OLTP en memoria:  
+ Además de [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), estos son los requisitos para usar OLTP en memoria:  
   
 -   SQL Server 2016 SP1 (o posterior), cualquier edición. Para SQL Server 2014 y SQL Server 2016 RTM (pre-SP1) necesita la edición Evaluation, Developer o Enterprise.
     - Nota: OLTP en memoria necesita la versión de 64 bits de SQL Server.  
@@ -41,7 +45,7 @@ caps.handback.revision: 65
   
      Para instalar la generación de informes ([Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) y [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (para administrar OLTP en memoria mediante el Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ), [Descarga de SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).  
   
-## <a name="important-notes-on-using-includehek2tokenhek2mdmd"></a>Información importante sobre el uso de [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
+## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>Información importante sobre el uso de [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
   
 -   A partir de SQL Server 2016 no hay límite para el tamaño de las tablas con optimización para memoria más que la memoria disponible. En SQL Server 2014, el tamaño total en memoria de todas las tablas durables de una base de datos no debería superar los 250 GB para las bases de datos de SQL Server 2014. Para obtener más información, vea [Estimar los requisitos de memoria para las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md).  
     - Nota: A partir de SQL Server 2016 SP1, las ediciones Standard y Express admiten OLTP en memoria, pero imponen cuotas con respecto a la cantidad de memoria que se puede usar para las tablas con optimización para memoria en una base de datos determinada. En la edición Standard es de 32 GB por base de datos; en la edición Express es de 352 MB por base de datos. 
@@ -52,3 +56,4 @@ caps.handback.revision: 65
  [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

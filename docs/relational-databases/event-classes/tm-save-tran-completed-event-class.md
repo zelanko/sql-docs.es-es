@@ -1,27 +1,31 @@
 ---
-title: "TM: Save Tran Completed (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TM: Save Tran Completed, clase de eventos"
+title: 'TM: Save Tran Completed, clase de eventos | Microsoft Docs'
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- 'TM: Save Tran Completed event class'
 ms.assetid: e6b37780-5ad8-4d50-89a3-d8a22496faac
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 64bcd735d0f0d78aa7883c3a79e3de6d4c498326
+ms.lasthandoff: 04/11/2017
+
 ---
-# TM: Save Tran Completed (clase de eventos)
+# <a name="tm-save-tran-completed-event-class"></a>TM: Save Tran Completed, clase de eventos
   La clase de eventos TM: Save Tran Completed indica que ha finalizado una solicitud SAVE TRANSACTION. La solicitud fue enviada desde el cliente mediante la interfaz de administración de transacciones.  
   
-## Columnas de datos de la clase de evento TM: Save Tran Completed  
+## <a name="tm-save-tran-completed-event-class-data-columns"></a>Columnas de datos de la clase de evento TM: Save Tran Completed  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -49,7 +53,7 @@ caps.handback.revision: 21
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [SAVE TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)  

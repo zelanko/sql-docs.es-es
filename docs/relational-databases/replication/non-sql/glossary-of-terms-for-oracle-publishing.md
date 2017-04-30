@@ -1,28 +1,32 @@
 ---
-title: "Glosario de t&#233;rminos de publicaciones de Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "publicación de Oracle [replicación de SQL Server], glosario"
+title: "Glosario de términos de publicaciones de Oracle | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], glossary
 ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b6050bf02c897e14ba643bb170423b1614cf0207
+ms.lasthandoff: 04/11/2017
+
 ---
-# Glosario de t&#233;rminos de publicaciones de Oracle
+# <a name="glossary-of-terms-for-oracle-publishing"></a>Glosario de términos de publicaciones de Oracle
   Debe estar familiarizado con los siguientes términos de Oracle a la hora de configurar y administrar publicaciones de Oracle. Para obtener una lista completa de términos de Oracle, vea la documentación en pantalla de Oracle.  
   
  Index Organized Tables (IOT) (Tablas organizadas de índice)  
- Una tabla cuyos datos están ordenados físicamente en disco en el orden de índice. es similar a un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabla con un índice agrupado. Una tabla IOT se replica en un suscriptor como una tabla con un índice clúster.  
+ Tabla cuyos datos están ordenados físicamente en el disco por orden de índice; es similar a una tabla de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con un índice clúster. Una tabla IOT se replica en un suscriptor como una tabla con un índice clúster.  
   
  Instancia  
  Una base de datos Oracle está asociada con una instancia. La instancia se compone de la memoria y los procesos en segundo plano que respaldan la base de datos. Una instancia de Oracle se asigna siempre a una única base de datos, mientras que una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede contener varias bases de datos. Existen ocasiones en las que una base de datos Oracle puede tener varias instancias.  
@@ -37,10 +41,10 @@ caps.handback.revision: 32
  Objeto de base de datos que se utiliza para generar números exclusivos. La replicación utiliza secuencias para ordenar los cambios efectuados en las tablas publicadas.  
   
  SQL\*Plus  
- Aplicación que se utiliza para obtener acceso y realizar consultas en bases de datos Oracle. Es similar a la utilidad [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **de**.  
+ Aplicación que se utiliza para obtener acceso y realizar consultas en bases de datos Oracle. Es similar a la utilidad [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sqlcmd**.  
   
  Synonym (Sinónimo)  
- Alias de un objeto. El sinónimo público especial **MSSQLSERVERDISTRIBUTOR** se crea automáticamente cuando se configura un publicador de Oracle. El sinónimo hace referencia el **HREPL_Distributor** de tabla y proporciona un puntero lógico a los [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] distribuidor que atiende el publicador.  
+ Alias de un objeto. El sinónimo público especial **MSSQLSERVERDISTRIBUTOR** se crea automáticamente cuando se configura un publicador de Oracle. El sinónimo hace referencia a la tabla **HREPL_Distributor** y proporciona un puntero lógico al distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que da servicio al publicador.  
   
  Una vez publicada una base de datos Oracle, los intentos posteriores de configurar este publicador para usar un distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diferente producirán un error porque este sinónimo público identifica al distribuidor concreto que ya se ha configurado para dar servicio al publicador.  
   
@@ -53,10 +57,10 @@ caps.handback.revision: 32
  User schema (Esquema de usuario)  
  Un esquema de usuario puede considerarse como un usuario de base de datos que es propietario de un conjunto de objetos de base de datos concreto. El esquema del usuario administrativo de la replicación es propietario de todos los objetos que se crean en el proceso de replicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la base de datos Oracle, con la excepción del sinónimo público **MSSQLSERVERDISTRIBUTOR** .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Objetos creados en el publicador de Oracle](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)   
- [Publicadores que no son de SQL Server](../../../relational-databases/replication/non-sql/non-sql-server-publishers.md)   
- [Información general de la publicación de Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Objects Created on the Oracle Publisher](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)  (Objetos creados en el publicador de Oracle)  
+ [Non-SQL Server Publishers](../../../relational-databases/replication/non-sql/non-sql-server-publishers.md)  (Publicadores que no son de SQL Server)  
+ [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

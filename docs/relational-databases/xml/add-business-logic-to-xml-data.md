@@ -1,24 +1,28 @@
 ---
-title: "Agregar l&#243;gica comercial a los datos XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "lógica comercial [XML]"
+title: "Agregar lógica comercial a los datos XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fcb398dc1cd451f55446efee763d7d33891b7ca4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Agregar l&#243;gica comercial a los datos XML
+# <a name="add-business-logic-to-xml-data"></a>Agregar lógica comercial a los datos XML
   La lógica de negocios se puede agregar a los datos XML de varias formas:  
   
 -   Se pueden escribir restricciones de filas o columnas para forzar restricciones específicas de un dominio durante la inserción y modificación de datos XML.  
@@ -29,7 +33,7 @@ caps.handback.revision: 18
   
 -   Se pueden escribir procedimientos almacenados de Transact-SQL y funciones que inicien el procesamiento en la columna XML de acuerdo con las necesidades de la empresa.  
   
-## Ejemplo: Aplicar transformación XSL  
+## <a name="example-applying-xsl-transformation"></a>Ejemplo: Aplicar transformación XSL  
  Considere una función CLR **TransformXml()** que acepta una instancia de tipo de datos **xml** y una transformación XSL almacenada en un archivo, aplica la transformación a los datos XML y, después, devuelve el XML transformado en el resultado. A continuación, se muestra una función esquemática escrita en C#:  
   
 ```  

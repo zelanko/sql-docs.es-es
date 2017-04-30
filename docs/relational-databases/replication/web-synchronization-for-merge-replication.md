@@ -1,29 +1,33 @@
 ---
-title: "Sincronizaci&#243;n web para la replicaci&#243;n de mezcla | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sincronización de replicación de mezcla [replicación de SQL Server]"
-  - "Internet [replicación de SQL Server], sincronización"
-  - "sincronización [replicación de SQL Server], sincronización web"
-  - "publicación Web [replicación de SQL Server], sincronización"
-  - "sincronización web, acerca de"
-  - "sincronización web"
+title: "Sincronización web para la replicación de mezcla | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- merge replication synchronization [SQL Server replication]
+- Internet [SQL Server replication], synchronization
+- synchronization [SQL Server replication], Web Synchronization
+- Web publishing [SQL Server replication], synchronization
+- Web synchronization, about
+- Web synchronization
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6cc2d5200c154a9857f2e634dcf91aef57c278c2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Sincronizaci&#243;n web para la replicaci&#243;n de mezcla
+# <a name="web-synchronization-for-merge-replication"></a>Sincronización web para la replicación de mezcla
   La sincronización web para la replicación de mezcla permite replicar datos utilizando el protocolo HTTPS y es útil en los siguientes escenarios:  
   
 -   Sincronizar datos de usuarios móviles a través de Internet  
@@ -34,25 +38,25 @@ caps.handback.revision: 45
   
  El departamento de TI de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] ha configurado cada equipo portátil con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y ha habilitado la replicación de mezcla para que utilice la sincronización web. El Agente de mezcla de cada equipo portátil tiene una dirección URL de Internet que apunta a los componentes de replicación instalados en un equipo en el que se ejecuta [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS). Estos componentes sincronizan el suscriptor con el publicador. Ahora cada representante se puede conectar a través de cualquier conexión de Internet disponible sin utilizar una conexión remota de acceso telefónico y puede cargar y descargar los datos que desee. La conexión de Internet utiliza SSL (Capa de sockets seguros), por lo que no es necesaria una red privada virtual (VPN).  
   
- Para obtener información acerca de cómo configurar los componentes que son necesarios para la sincronización Web, consulte [Configurar sincronización Web](../../relational-databases/replication/configure-web-synchronization.md), [configurar IIS para la sincronización Web](../../relational-databases/replication/configure-iis-for-web-synchronization.md), y [configurar IIS 7 para la sincronización Web](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md).  
+ Para obtener información sobre cómo configurar los componentes necesarios para la sincronización web, consulte [Configurar sincronización web](../../relational-databases/replication/configure-web-synchronization.md), [Configurar IIS para la sincronización web](../../relational-databases/replication/configure-iis-for-web-synchronization.md) y [Configurar IIS 7 para la sincronización web](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md).  
   
 > [!NOTE]  
 >  La sincronización web está diseñada para sincronizar datos con equipos portátiles, dispositivos de mano y otros clientes. La sincronización web no está concebida para aplicaciones de servidor a servidor con grandes volúmenes de datos.  
   
-## Información general sobre el funcionamiento de la sincronización web  
+## <a name="overview-of-how-web-synchronization-works"></a>Información general sobre el funcionamiento de la sincronización web  
  Cuando se utiliza la sincronización web, las actualizaciones en el suscriptor se empaquetan y envían como un mensaje XML al equipo en el que se ejecuta IIS mediante el protocolo HTTPS. El equipo en el que se ejecuta IIS envía los comandos al publicador en formato binario (normalmente mediante TCP/IP). Las actualizaciones en el publicador se envían al equipo en el que se ejecuta IIS y después se empaquetan como un mensaje XML para su envío al suscriptor.  
   
  En la siguiente ilustración se muestran algunos de los componentes que participan en la sincronización web para la replicación de mezcla.  
   
- ![Componentes y flujo de datos de sincronización web](../../relational-databases/replication/media/web-sync01.gif "Componentes y flujo de datos de sincronización web")  
+ ![Flujo de datos y componentes de la sincronización web](../../relational-databases/replication/media/web-sync01.gif "Flujo de datos y componentes de la sincronización web")  
   
  La sincronización web es una opción exclusiva de las suscripciones de extracción, por lo que un Agente de mezcla se ejecutará siempre en el suscriptor. Este Agente de mezcla puede ser el Agente de mezcla estándar, el control ActiveX del Agente de mezcla o de una aplicación que proporcione sincronización a través de Replication Management Objects (RMO). Para especificar la ubicación del equipo en el que se ejecuta IIS, utilice el parámetro **–InternetUrl** del Agente de mezcla.  
   
  La Escucha de replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Replisapi.dll) se configura en el equipo en el que se ejecuta IIS y es responsable de controlar los mensajes que se envían al servidor desde el publicador y los suscriptores. Cada nodo de la topología controla el flujo de datos XML con el Reconciliador de replicación de mezcla (Replrec.dll).  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versión posterior para todos los equipos que participen en la sincronización web.  
+ Se requiere[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versión posterior para todos los equipos que participen en la sincronización web.  
   
-### Proceso de sincronización  
+### <a name="synchronization-process"></a>Proceso de sincronización  
  Durante la sincronización se llevan a cabo los siguientes pasos:  
   
 1.  El Agente de mezcla se inicia en el suscriptor. El agente realiza las tareas siguientes:  
@@ -79,8 +83,8 @@ caps.handback.revision: 45
   
 3.  A continuación, el Agente de mezcla en el suscriptor acepta la respuesta HTTPS y aplica los cambios de descarga a la base de datos de suscripciones.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Configurar sincronización web](../../relational-databases/replication/configure-web-synchronization.md)   
- [Topologías para sincronización web](../../relational-databases/replication/topologies-for-web-synchronization.md)  
+ [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
   
   

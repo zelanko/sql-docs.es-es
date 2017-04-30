@@ -1,30 +1,34 @@
 ---
-title: "Copia de seguridad de base de datos (p&#225;gina General) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backupdatabase.general.f1"
+title: "Copia de seguridad de base de datos (página General) | Microsoft Docs"
+ms.custom: 
+ms.date: 07/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 038fa003ad819d89d8739f8cfaac53582f93932a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Copia de seguridad de base de datos (p&#225;gina General)
+# <a name="back-up-database-general-page"></a>Copia de seguridad de base de datos (página General)
   Utilice la página **General** del cuadro de diálogo **Copia de seguridad de base de datos** para ver o modificar la configuración de una operación de copia de seguridad de la base de datos.  
   
  Para obtener más información sobre los conceptos básicos de copias de seguridad, vea [Información general de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
 > [!NOTE]  
->  Cuando especifica una tarea de copia de seguridad con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [BACKUP](../../t-sql/statements/backup-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente si hace clic en el botón **Script** y después selecciona un destino para el script.  
+>  Cuando especifica una tarea de copia de seguridad con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) script by clicking the **Script** button and then selecting a destination for the script.  
   
  **Para utilizar SQL Server Management Studio a fin de crear una copia de seguridad**  
   
@@ -39,9 +43,9 @@ caps.handback.revision: 64
   
 -   Para crear una copia de seguridad parcial, debe usar la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) de con la opción PARTIAL.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
   
-### Origen  
+### <a name="source"></a>Origen  
  Las opciones del panel **Origen** identifican la base de datos y especifican el tipo de copia de seguridad y el componente para la operación de copia de seguridad.  
   
  **Base de datos**  
@@ -59,7 +63,7 @@ caps.handback.revision: 64
 |Diferencial|Bases de datos, archivos y grupos de archivos|En el modelo de recuperación simple, las copias de seguridad de archivos y grupos de archivos solo están disponibles para los grupos de archivos de solo lectura.|  
 |Registro de transacciones|Registros de transacciones|Las copias de seguridad de registros de transacciones no están disponibles para el modelo de recuperación simple.|  
   
- **Copia de seguridad de solo copia **  
+ **Copia de seguridad de solo copia**  
  Seleccione esta opción para crear una copia de seguridad de solo copia. Una *copia de seguridad de solo copia* es una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] independiente de la secuencia de copias de seguridad convencionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Copias de seguridad de solo copia &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
   
 > [!NOTE]  
@@ -75,7 +79,7 @@ caps.handback.revision: 64
 |**Base de datos**|Especifica que se realizará una copia de seguridad de toda la base de datos.|  
 |**Archivos y grupos de archivos**|Especifica que se realizará una copia de seguridad de los archivos y grupos de archivos indicados.<br /><br /> Al seleccionar esta opción, se abre el cuadro de diálogo **Seleccionar archivos y grupos de archivos** . Después de seleccionar los grupos de archivos o los archivos que quiere incluir en la copia de seguridad y hacer clic en **Aceptar**, las selecciones aparecen en el cuadro **Archivos y grupos de archivos** .|  
   
-### Destino  
+### <a name="destination"></a>Destino  
  Las opciones del panel **Destino** permiten especificar el tipo de dispositivo de copia de seguridad para la operación de copia de seguridad y buscar un dispositivo de copia de seguridad lógico o físico existente.  
   
 > [!NOTE]  
@@ -93,17 +97,17 @@ caps.handback.revision: 64
  El siguiente conjunto de las opciones que aparecen depende del tipo de destino seleccionado. Si selecciona Disco o Cinta, se muestran las siguientes opciones.  
   
  **Agregar**  
- Agrega un archivo o un dispositivo a la lista **Copia de seguridad en**. Puede hacer copias de seguridad de hasta 64 dispositivos simultáneamente en un disco remoto o local. Para especificar un archivo en un disco remoto, utilice el nombre UNC (convención de nomenclatura universal) completo. Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+ Agrega un archivo o un dispositivo a la lista **Copia de seguridad en** . Puede hacer copias de seguridad de hasta 64 dispositivos simultáneamente en un disco remoto o local. Para especificar un archivo en un disco remoto, utilice el nombre UNC (convención de nomenclatura universal) completo. Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
  
  
   
  **Quitar**  
- Quita uno o más dispositivos seleccionados actualmente de la lista **Copia de seguridad en**.  
+ Quita uno o más dispositivos seleccionados actualmente de la lista **Copia de seguridad en** .  
   
  **Contenido**  
-Muestra el contenido del medio del dispositivo seleccionado, si existe.  El botón no realiza una función cuando se especifica una dirección **URL**. 
+Muestra el contenido del medio del dispositivo seleccionado, si existe.  El botón no realiza una función cuando se especifica una dirección **URL** . 
    
-Cuadro de diálogo **Seleccionar destino de la copia de seguridad**. El cuadro de diálogo **Seleccionar destino de la copia de seguridad** aparece después de seleccionar **Agregar**.   El conjunto de las opciones que aparecen depende del tipo de destino seleccionado. 
+Cuadro de diálogo**Seleccionar destino de la copia de seguridad** . El cuadro de diálogo **Seleccionar destino de la copia de seguridad** aparece después de seleccionar **Agregar**.   El conjunto de las opciones que aparecen depende del tipo de destino seleccionado. 
 
 Si ha seleccionado **Disco** o **Cinta** como el destino de la copia de seguridad, se muestra la siguiente opción.  
 
@@ -128,7 +132,7 @@ Si ha seleccionado la dirección **URL** como el destino de la copia de segurida
   **Nuevo contenedor:**  
 Se usa para registrar un contenedor existente para el que no tiene una firma de acceso compartido.  Vea [Connect to a Microsoft Azure Subscription (Conectarse a una suscripción de Microsoft Azure)](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Realizar copias de seguridad de archivos y grupos de archivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [Definir un dispositivo lógico de copia de seguridad para un archivo de disco &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
@@ -136,3 +140,4 @@ Se usa para registrar un contenedor existente para el que no tiene una firma de 
  [Modelos de recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
+

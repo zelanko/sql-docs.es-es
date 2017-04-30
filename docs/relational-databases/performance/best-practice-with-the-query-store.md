@@ -1,43 +1,47 @@
 ---
-title: "Procedimiento recomendado con el Almac&#233;n de consultas | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Almacén de consultas, procedimientos recomendados"
+title: "Procedimiento recomendado con el Almacén de consultas | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
+ms.openlocfilehash: 9cd813b72eda096f780ed7140b6691f528251a30
+ms.lasthandoff: 04/29/2017
+
 ---
-# Procedimiento recomendado con el Almac&#233;n de consultas
+# <a name="best-practice-with-the-query-store"></a>Procedimiento recomendado con el Almacén de consultas
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   En este tema se describen los procedimientos recomendados para usar el Almacén de consultas con la carga de trabajo.  
   
-##  <a name="a-namessmsa-use-the-latest-sql-server-management-studio"></a><a name="SSMS"></a> Usar la versión más reciente de SQL Server Management Studio  
+##  <a name="SSMS"></a> Use the Latest SQL Server Management Studio  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tiene un conjunto de interfaces de usuario diseñadas para configurar el Almacén de consultas, así como para consumir datos recopilados sobre la carga de trabajo.  
 Descargue la versión más reciente de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] desde: [https://msdn.microsoft.com/library/mt238290.aspx](https://msdn.microsoft.com/library/mt238290.aspx)  
   
  Para obtener una descripción rápida sobre cómo usar el Almacén de consultas en escenarios de solución de problemas, vea los [blogs de @Azure del Almacén de consultas](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
-##  <a name="a-nameinsighta-use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> Uso de Información de rendimiento de consultas en Azure SQL Database  
+##  <a name="Insight"></a> Uso de Información de rendimiento de consultas en Azure SQL Database  
  Si ejecuta el Almacén de consultas en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] puede usar **Información de rendimiento de consultas** para analizar el consumo de DTU a lo largo del tiempo.  
 Aunque puede usar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para obtener el consumo de recursos detallado para todas las consultas (CPU, memoria, E/S, etc.), Información de rendimiento de consultas ofrece una forma rápida y eficaz de determinar su impacto en el consumo global de DTU correspondiente a la base de datos.  
 Para obtener más información, vea [Información de rendimiento de consultas de Base de datos SQL de Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).    
 
 ##  <a name="using-query-store-with-elastic-pool-databases"></a>Uso del Almacén de consultas con bases de datos del grupo elástico
 Puede usar el Almacén de consultas en todas las bases de datos sin problemas, incluso en grupos densamente empaquetados. Se solucionaron todos los problemas relacionados con el uso excesivo de los recursos que pudieron haber surgido cuando el Almacén de consultas estaba habilitado para el gran número de bases de datos en los grupos elásticos.
-##  <a name="a-nameconfigurea-keep-query-store-adjusted-to-your-workload"></a><a name="Configure"></a> Mantener el Almacén de consultas ajustado a la carga de trabajo  
+##  <a name="Configure"></a> Keep Query Store Adjusted to your Workload  
  Configure el Almacén de consultas en función de la carga de trabajo y los requisitos de solución de problemas de rendimiento.   
 Los parámetros predeterminados son buenos para un inicio rápido pero debe supervisar el comportamiento del Almacén de consultas a lo largo del tiempo y ajustar su configuración en consecuencia:  
   
@@ -120,7 +124,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
  Almacén de consultas tardará algún tiempo en recopilar el conjunto de datos que representa con precisión la carga de trabajo. Normalmente, un día es suficiente incluso para cargas de trabajo muy complejas. Sin embargo, puede empezar a explorar los datos e identificar las consultas que requieran su atención inmediatamente después de haber habilitado la característica.   
 Vaya a la subcarpeta Almacén de consultas del nodo de la base de datos en el Explorador de objetos de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para abrir las vistas de solución de problemas de escenarios concretos.   
-El Almacén de consultas de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] funciona con el conjunto de métricas de ejecución, cada una expresada como cualquiera de las siguientes funciones estadísticas:  
+El Almacén de consultas de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] funciona con el conjunto de métricas de ejecución, cada una expresada como cualquiera de las siguientes funciones estadísticas:  
   
 |Métrica de ejecución|Función estadística|  
 |----------------------|------------------------|  
@@ -158,7 +162,7 @@ El Almacén de consultas de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md
   
 -   Vuelva a escribir las consultas problemáticas. Por ejemplo, para aprovechar las ventajas de la parametrización de la consulta o para implementar la lógica más óptima.  
   
-##  <a name="a-nameverifya-verify-query-store-is-collecting-query-data-continuously"></a><a name="Verify"></a> Comprobación de que el Almacén de consultas está recopilando datos de consulta continuamente  
+##  <a name="Verify"></a> Verify Query Store is Collecting Query Data Continuously  
  El Almacén de consultas puede cambiar el modo de operación automáticamente. Debe supervisar periódicamente el estado del Almacén de consulta para asegurarse de que está funcionando y tomar medidas para evitar errores debido a causas evitables. Ejecute la siguiente consulta para determinar el modo de operación y ver los parámetros más importantes:  
   
 ```  
@@ -239,9 +243,9 @@ FROM sys.database_query_store_options;
   
 |Modo de captura de consultas|Escenario|  
 |------------------------|--------------|  
-|Todos|Analice la carga de trabajo exhaustivamente en cuanto a todas las formas de las consultas y sus frecuencias de ejecución, y otras estadísticas.<br /><br /> Identifique nuevas consultas en la carga de trabajo.<br /><br /> Detecte si las consultas ad hoc se usan para identificar oportunidades de parametrización automática o de usuario.|  
-|Automático|Céntrese en las consultas pertinentes y accionables; en las consultas que se ejecutan con regularidad o en las que tienen un consumo significativo de recursos.|  
-|Ninguno|Ya ha capturado el conjunto de consultas que desea supervisar en tiempo de ejecución y desea eliminar los objetos innecesarios que pueden introducir otras consultas.<br /><br /> El modo Ninguno es adecuado para entornos de pruebas y evaluación comparativa.<br /><br /> El modo Ninguno también es adecuado para los proveedores de software que incluyen la configuración del Almacén de consultas definida para supervisar la carga de trabajo de la aplicación.<br /><br /> El modo Ninguno debe utilizarse con precaución, ya que podría perder la oportunidad de realizar un seguimiento de consultas nuevas importantes y de optimizarlas. Evite el uso del modo Ninguno a menos que tenga un escenario específico que lo requiera.|  
+|All|Analice la carga de trabajo exhaustivamente en cuanto a todas las formas de las consultas y sus frecuencias de ejecución, y otras estadísticas.<br /><br /> Identifique nuevas consultas en la carga de trabajo.<br /><br /> Detecte si las consultas ad hoc se usan para identificar oportunidades de parametrización automática o de usuario.|  
+|Auto|Céntrese en las consultas pertinentes y accionables; en las consultas que se ejecutan con regularidad o en las que tienen un consumo significativo de recursos.|  
+|None|Ya ha capturado el conjunto de consultas que desea supervisar en tiempo de ejecución y desea eliminar los objetos innecesarios que pueden introducir otras consultas.<br /><br /> El modo Ninguno es adecuado para entornos de pruebas y evaluación comparativa.<br /><br /> El modo Ninguno también es adecuado para los proveedores de software que incluyen la configuración del Almacén de consultas definida para supervisar la carga de trabajo de la aplicación.<br /><br /> El modo Ninguno debe utilizarse con precaución, ya que podría perder la oportunidad de realizar un seguimiento de consultas nuevas importantes y de optimizarlas. Evite el uso del modo Ninguno a menos que tenga un escenario específico que lo requiera.|  
   
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>Conservación de los datos más relevantes en el Almacén de consultas  
  Configure el Almacén de consultas para que contenga solo los datos pertinentes y para que se ejecute continuamente proporcionando una magnífica experiencia de solución de problemas con un impacto mínimo en la carga de trabajo normal.  
@@ -253,7 +257,7 @@ La tabla siguiente proporciona prácticas recomendadas:
 |Filtrar las consultas no relevantes.|Configurar Modo de captura de consultas en Automático.|  
 |Eliminar consultas menos relevantes cuando se alcanza el tamaño máximo.|Activar la directiva de limpieza basada en el tamaño.|  
   
-##  <a name="a-nameparameterizea-avoid-using-non-parameterized-queries"></a><a name="Parameterize"></a> Evitar el uso de consultas sin parámetros  
+##  <a name="Parameterize"></a> Avoid Using Non-Parameterized Queries  
  El uso de consultas sin parámetros cuando no es absolutamente necesario (por ejemplo, en caso de análisis ad hoc) no es una práctica recomendada.  Los planes almacenados no se puede reutilizar, lo que obliga al optimizador de consultas a compilar consultas para cada texto de consulta única.  
   Además, el Almacén de consultas puede superar rápidamente la cuota de tamaño debido a la posibilidad de un gran número de textos de consulta diferentes y, por consiguiente, un gran número de planes de ejecución distintos con forma similar.  
 Por tanto, el rendimiento de la carga de trabajo será deficiente y el Almacén de consultas podría cambiar al modo de solo lectura o podría estar eliminando los datos constantemente intentando mantenerse al día con las consultas entrantes.  
@@ -274,10 +278,10 @@ Por tanto, el rendimiento de la carga de trabajo será deficiente y el Almacén 
   
 -   Establezca **Modo de captura de consulta** en AUTOMÁTICO para filtrar las consultas ad hoc con consumo pequeño de recursos automáticamente.  
   
-##  <a name="a-namedropa-avoid-a-drop-and-create-pattern-when-maintaining-containing-objects-for-the-queries"></a><a name="Drop"></a> Evitar un patrón DROP y CREATE al mantener de objetos contenedores para las consultas  
+##  <a name="Drop"></a> Avoid a DROP and CREATE Pattern When Maintaining Containing Objects for the Queries  
  El Almacén de consultas asocia la entrada de consulta a un objeto contenedor (procedimiento almacenado, función y desencadenador).  Cuando se vuelve a crear un objeto contenedor, se genera una nueva entrada de consulta para el mismo texto de consulta. Esto impide realizar un seguimiento de las estadísticas de rendimiento para esa consulta a lo largo del tiempo y usar un mecanismo para forzar el plan. Para evitar esto, utilice el proceso `ALTER <object>` para cambiar una definición de objeto contenedor siempre que sea posible.  
   
-##  <a name="a-namecheckforceda-check-the-status-of-forced-plans-regularly"></a><a name="CheckForced"></a> Comprobación periódica del estado de los planes forzados  
+##  <a name="CheckForced"></a> Check the Status of Forced Plans Regularly  
  Forzar el plan es un mecanismo conveniente para corregir el rendimiento de las consultas críticas y hacer que sean más predecibles. Sin embargo, al igual que con las sugerencias de plan y las guías de plan, forzar un plan no es una garantía de que se utilizará en ejecuciones futuras. Normalmente, cuando se cambia el esquema de base de datos de forma que se modifican o se quitan objetos a los que hace referencia el plan de ejecución, al forzar el plan se empiezan a generar errores. En ese caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuelve a la recompilación de consultas mientras el motivo real del error de la operación de forzado aparece en [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). La siguiente consulta devuelve información sobre planes forzados.  
   
 ```  
@@ -293,7 +297,7 @@ WHERE is_forced_plan = 1;
   
  Para ver una lista completa de motivos, vea [sys.query_store_plan &#40;Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). También puede usar el XEvent **query_store_plan_forcing_failed** para realizar un seguimiento de los errores forzados del plan de solución de problemas.  
   
-##  <a name="a-namerenaminga-avoid-renaming-databases-if-you-have-queries-with-forced-plans"></a><a name="Renaming"></a> Evitar el cambio de nombre de las bases de datos si hay consultas con planes de forzados  
+##  <a name="Renaming"></a> Avoid Renaming Databases if you have Queries with Forced Plans  
  Los planes de ejecución hacen referencia a objetos que usan nombres de tres partes (`database.schema.object`).   
 Si cambia el nombre de una base de datos, al forzar el plan se producirá un error que provocará la recompilación en todas las ejecuciones de consulta subsiguientes.  
   
@@ -304,3 +308,4 @@ Si cambia el nombre de una base de datos, al forzar el plan se producirá un err
  [Supervisar el rendimiento mediante el almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   
   
+

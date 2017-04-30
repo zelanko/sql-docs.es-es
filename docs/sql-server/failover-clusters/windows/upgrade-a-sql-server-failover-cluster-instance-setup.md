@@ -1,28 +1,32 @@
 ---
-title: "Actualizar una instancia de cl&#250;ster de conmutaci&#243;n por error de SQL Server (programa de instalaci&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "actualizar clústeres"
-  - "clústeres [SQL Server], actualizar"
-  - "clústeres de conmutación por error [SQL Server], crear clústeres"
-  - "clústeres [SQL Server], crear"
-  - "clústeres de conmutación por error [SQL Server], actualizar"
+title: "Actualizar una instancia de clúster de conmutación por error de SQL Server (programa de instalación) | Microsoft Docs"
+ms.custom: 
+ms.date: 01/22/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- upgrading clusters
+- clusters [SQL Server], upgrading
+- failover clustering [SQL Server], creating clusters
+- clusters [SQL Server], creating
+- failover clustering [SQL Server], upgrading
 ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 caps.latest.revision: 63
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 50db49a567f4247b1014fba9114aa168b90709f5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Actualizar una instancia de cl&#250;ster de conmutaci&#243;n por error de SQL Server (programa de instalaci&#243;n)
+# <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Actualizar una instancia de clúster de conmutación por error de SQL Server (programa de instalación)
   Puede actualizar un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a un clúster de conmutación por error de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] con la interfaz de usuario de configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o desde un símbolo del sistema.  
   
  En las instalaciones locales debe ejecutar el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como administrador. Si instala [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] desde un recurso compartido remoto, deberá usar una cuenta de dominio que tenga permisos de lectura para dicho recurso.  
@@ -31,7 +35,7 @@ caps.handback.revision: 63
   
 ##  <a name="UpgradeSteps"></a> Para actualizar un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
-#### Para actualizar un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+#### <a name="to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>Para actualizar un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
 1.  Desde el medio de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para la edición que coincide con la edición que actualiza, haga doble clic en setup.exe en la carpeta raíz. Puede que se le solicite que instale los requisitos previos si no se han instalado previamente.  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 63
   
 10. La página Requisitos de espacio en disco calcula el espacio en disco necesario para las características especificadas y compara los requisitos con el espacio en disco disponible en el equipo donde se ejecuta el programa de instalación.  
   
-11. En la página Actualización de la búsqueda de texto completo, especifique las opciones de actualización para las bases de datos que van a actualizarse. Para obtener más información, vea [Opciones de actualización de búsqueda de texto completo](../Topic/Full-Text%20Search%20Upgrade%20Options.md).  
+11. En la página Actualización de la búsqueda de texto completo, especifique las opciones de actualización para las bases de datos que van a actualizarse. Para obtener más información, vea [Opciones de actualización de búsqueda de texto completo](http://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
   
 12. En la página **Informes de errores** , especifique la información que desee enviar a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] y que ayudará a mejorar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. De forma predeterminada, se habilitan las opciones de informes de errores.  
   
@@ -79,15 +83,15 @@ caps.handback.revision: 63
   
 20. Para completar el proceso de actualización, repita estos pasos en todos los demás nodos del clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## Para actualizar un clústeres de conmutación por error de varias subredes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+## <a name="to-upgrade-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>Para actualizar un clústeres de conmutación por error de varias subredes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
-#### Para actualizar a un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (el clúster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existente es un clúster no de varias subredes).  
+#### <a name="to-upgrade-to-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster-existing-includessnoversionincludesssnoversion-mdmd-cluster-is-a-non-multi-subnet-cluster"></a>Para actualizar a un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (el clúster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existente es un clúster no de varias subredes).  
   
 1.  Siga los pasos anteriores para actualizar el clúster a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 2.  Agregue un nodo en otra subred utilizando la acción AddNode Setup y confirme la dependencia de recurso de dirección IP a OR en la página **Configuración de red en clúster** . Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
-#### Para actualizar un clúster de varias subredes que actualmente usa la tecnología de V-Lan elástica.  
+#### <a name="to-upgrade-a-multi-subnet-cluster-currently-using-stretch-v-lan"></a>Para actualizar un clúster de varias subredes que actualmente usa la tecnología de V-Lan elástica.  
   
 1.  Siga los pasos anteriores para actualizar el clúster a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
@@ -95,18 +99,19 @@ caps.handback.revision: 63
   
 3.  Con la herramienta de administración de clústeres de conmutación por error de Windows, agregue una nueva dirección IP para la nueva subred, establezca la dependencia de recurso de dirección IP en OR.  
   
-## Pasos siguientes  
+## <a name="next-steps"></a>Pasos siguientes  
  Después de actualizar a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], complete las tareas siguientes:  
   
 -   [Completar la actualización motor de base de datos](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
   
 -   [Cambiar el modo de compatibilidad de la base de datos y usar el almacén de consultas](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)  
   
--   [Aprovechamiento de las nuevas características de SQL Server 2016](../Topic/Take%20Advantage%20of%20New%20SQL%20Server%202016%20Features.md)  
+-   [Aprovechamiento de las nuevas características de SQL Server 2016](http://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)  
   
-## Vea también  
- [Actualización de una instancia de clúster de conmutación por error de SQL Server](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)   
+## <a name="see-also"></a>Vea también  
+ [Actualizar una instancia del clúster de conmutación por error de SQL Server](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)   
  [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Agregar características a una instancia de SQL Server 2016 &#40;programa de instalación&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  
   
   
+

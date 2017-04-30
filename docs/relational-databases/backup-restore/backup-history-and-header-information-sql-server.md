@@ -1,45 +1,49 @@
 ---
-title: "Historial de copias de seguridad e informaci&#243;n de encabezados (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "encabezados de copia de seguridad (SQL Server)"
-  - "tablas de historial [SQL Server]"
-  - "restauraciones de archivos [SQL Server], información de estado"
-  - "conjuntos de copia de seguridad [SQL Server], información de estado"
-  - "enumerar bases de datos con copia de seguridad"
-  - "información de estado [SQL Server], copias de seguridad"
-  - "realizar copias de seguridad [SQL Server], ver conjuntos de copia de seguridad"
-  - "restaurar [SQL Server], tablas de historial"
-  - "restaurar bases de datos [SQL Server], información de estado"
-  - "copias de seguridad [SQL Server], información de estado"
-  - "encabezados [SQL Server]"
-  - "encabezados de medios [SQL Server]"
-  - "tablas de historial de copia de seguridad [SQL Server]"
-  - "ver información de la copia de seguridad"
-  - "restaurar archivos [SQL Server], ver información de la copia de seguridad"
-  - "restaurar bases de datos [SQL Server], tablas de historial"
-  - "mostrar información de copia de seguridad"
-  - "restaurar archivos [SQL Server], información de estado"
-  - "información histórica [SQL Server], copias de seguridad"
-  - "restauraciones de bases de datos [SQL Server], tablas de historial"
-  - "tablas de historial, restaurar [SQL Server]"
-  - "enumerar archivos con copia de seguridad"
+title: "Historial de copias de seguridad e información de encabezados (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup headers [SQL Server]
+- history tables [SQL Server]
+- file restores [SQL Server], status information
+- backup sets [SQL Server], status information
+- listing backed up databases
+- status information [SQL Server], backups
+- backing up [SQL Server], viewing backup sets
+- restoring [SQL Server], history tables
+- restoring databases [SQL Server], status information
+- backups [SQL Server], status information
+- headers [SQL Server]
+- media headers [SQL Server]
+- backup history tables [SQL Server]
+- viewing backup information
+- restoring files [SQL Server], viewing backup information
+- restoring databases [SQL Server], history tables
+- displaying backup information
+- restoring files [SQL Server], status information
+- historical information [SQL Server], backups
+- database restores [SQL Server], history tables
+- restore history tables [SQL Server]
+- listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff9f48347c218dba37363dd1a983a66abbdc6372
+ms.lasthandoff: 04/11/2017
+
 ---
-# Historial de copias de seguridad e informaci&#243;n de encabezados (SQL Server)
+# <a name="backup-history-and-header-information-sql-server"></a>Historial de copias de seguridad e información de encabezados (SQL Server)
   En la base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **se almacena un historial completo de todas las operaciones de copia de seguridad y restauración de** de una instancia de servidor. En este tema se describen las tablas del historial de copias de seguridad y restauración, así como las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se usan para tener acceso al historial de copias de seguridad. En el tema también se explica cuándo resulta útil la lista de archivos de base de datos y de registro de transacciones, y cuándo se debe usar la información de encabezado de medios con respecto a cuándo se debe usar la información de encabezado de copia de seguridad.  
   
 > [!IMPORTANT]  
@@ -88,9 +92,9 @@ caps.handback.revision: 54
   
 |Instrucción de información|Tabla del historial de copias de seguridad|Descripción|  
 |---------------------------|--------------------------|-----------------|  
-|[RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Devuelve un conjunto de resultados que contiene la lista de los archivos de base de datos y de registro del conjunto de copia de seguridad especificado.<br /><br /> Para obtener más información, vea "Enumerar los archivos de base de datos y del registro de transacciones" más adelante en este tema.|  
-|[RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|Obtiene la información del encabezado sobre todos los conjuntos de copias de seguridad de un dispositivo determinado. El resultado de la ejecución de RESTORE HEADERONLY es un conjunto de resultados.<br /><br /> Para obtener más información, vea "Ver la información de encabezado de copia de seguridad" más adelante en este tema.|  
-|[RESTORE LABELONLY](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)|[backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)|Devuelve un conjunto de resultados que contiene información acerca del medio de copia de seguridad de un dispositivo de copia de seguridad especificado.<br /><br /> Para obtener más información, vea "Ver la información de encabezado de medios" más adelante en este tema.|  
+|[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Devuelve un conjunto de resultados que contiene la lista de los archivos de base de datos y de registro del conjunto de copia de seguridad especificado.<br /><br /> Para obtener más información, vea "Enumerar los archivos de base de datos y del registro de transacciones" más adelante en este tema.|  
+|[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|Obtiene la información del encabezado sobre todos los conjuntos de copias de seguridad de un dispositivo determinado. El resultado de la ejecución de RESTORE HEADERONLY es un conjunto de resultados.<br /><br /> Para obtener más información, vea "Ver la información de encabezado de copia de seguridad" más adelante en este tema.|  
+|[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|[backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)|Devuelve un conjunto de resultados que contiene información acerca del medio de copia de seguridad de un dispositivo de copia de seguridad especificado.<br /><br /> Para obtener más información, vea "Ver la información de encabezado de medios" más adelante en este tema.|  
   
 ##  <a name="ListDbTlogFiles"></a> Archivos de base de datos y de registro de transacciones  
  La información que se muestra al enumerar los archivos de base de datos y del registro de transacciones de una copia de seguridad incluye el nombre lógico, nombre físico, tipo de archivo (base de datos o registro), pertenencia a grupos de archivos, tamaño del archivo (en bytes), máximo tamaño de archivo permitido y tamaño de crecimiento de archivos predefinido (en bytes). Esta información es útil, en las situaciones siguientes, para determinar los nombres de los archivos de una copia de seguridad de base de datos antes de restaurarla cuando:  
@@ -112,14 +116,14 @@ caps.handback.revision: 54
  Para obtener más información, vea [Comparación de la información del encabezado de medios y del encabezado de copias de seguridad](#CompareMediaHeaderBackupHeader), más adelante en este tema.  
   
 ##  <a name="BackupHeader"></a> Información de encabezado de copia de seguridad  
- La información del encabezado de copia de seguridad muestra información acerca de todos los conjuntos de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el medio. La información mostrada incluye los tipos de dispositivos de copia de seguridad utilizados, los tipos de copia de seguridad (por ejemplo, base de datos, transacción, archivo o diferencial de la base de datos) así como información acerca de la fecha y hora inicial y final de la copia de seguridad. Esta información es útil cuando se necesita determinar el conjunto de copia de seguridad que se va a restaurar en la cinta o las copias de seguridad que contiene el medio.  
+ La información del encabezado de copia de seguridad muestra información acerca de todos los conjuntos de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el medio. La información mostrada incluye los tipos de dispositivos de copia de seguridad utilizados, los tipos de copia de seguridad (por ejemplo, base de datos, transacción, archivo o diferencial de la base de datos) así como información acerca de la fecha y hora inicial y final de la copia de seguridad. Esta información es útil cuando se necesita determinar el conjunto de copia de seguridad que se va a restaurar en la cinta o las copias de seguridad que contiene el medio.  
   
 > [!NOTE]  
 >  Se puede tardar mucho en ver la información de encabezado de la copia de seguridad de las cintas de alta capacidad debido a que se debe examinar el medio completo para mostrar información acerca de cada copia de seguridad del mismo.  
   
  Para obtener más información, vea [Comparación de la información del encabezado de medios y del encabezado de copias de seguridad](#CompareMediaHeaderBackupHeader), más adelante en este tema.  
   
-### Qué conjunto de copia de seguridad se debe restaurar  
+### <a name="which-backup-set-to-restore"></a>Qué conjunto de copia de seguridad se debe restaurar  
  Puede usar información en el encabezado de copia de seguridad para identificar qué conjunto de copia de seguridad se va a restaurar. El Motor de base de datos numera cada conjunto de copia de seguridad en los medios de copia de seguridad. Esto permite identificar el conjunto de copia de seguridad que desea restaurar mediante su posición en los medios. Por ejemplo, el siguiente medio contiene tres conjuntos de copia de seguridad.  
   
  ![Medio de copia de seguridad que contiene conjuntos de copia de seguridad de SQL Server](../../relational-databases/backup-restore/media/bnr-media-backup-sets.gif "Medio de copia de seguridad que contiene conjuntos de copia de seguridad de SQL Server")  
@@ -152,13 +156,13 @@ caps.handback.revision: 54
   
  **Para ver los archivos de datos y de registro en un conjunto de copia de seguridad**  
   
--   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)  
+-   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList%2A> (SMO)  
   
  **Para ver la información de encabezado de medios**  
   
--   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)  
+-   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
 -   [Ver las propiedades y el contenido de un dispositivo lógico de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -168,7 +172,7 @@ caps.handback.revision: 54
   
  **Para ver la información de encabezado de la copia de seguridad**  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
 -   [Ver el contenido de una cinta o un archivo de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
@@ -186,7 +190,7 @@ caps.handback.revision: 54
   
  **Para ver la información de encabezado de medios**  
   
--   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)  
+-   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
 -   [Ver las propiedades y el contenido de un dispositivo lógico de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -196,7 +200,7 @@ caps.handback.revision: 54
   
  **Para ver la información de encabezado de la copia de seguridad**  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
 -   [Ver el contenido de una cinta o un archivo de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
@@ -208,15 +212,15 @@ caps.handback.revision: 54
   
 -   [Ver los archivos de datos y de registro en un conjunto de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
  **Para comprobar una copia de seguridad**  
   
--   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)  
+-   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> (SMO)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   

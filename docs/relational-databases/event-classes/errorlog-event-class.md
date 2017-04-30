@@ -1,27 +1,31 @@
 ---
-title: "ErrorLog (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ErrorLog [clase de eventos]"
+title: ErrorLog (clase de eventos) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ErrorLog event class
 ms.assetid: b0153a31-5794-410b-8816-d9f1290a5b36
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f54f2076d535594d15571aaecdcadf04b2125951
+ms.lasthandoff: 04/11/2017
+
 ---
-# ErrorLog (clase de eventos)
-  La clase de eventos ErrorLog indica que el mensaje se ha registrado en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="errorlog-event-class"></a>ErrorLog [clase de eventos]
+  La clase de eventos ErrorLog indica que el mensaje se ha registrado en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Columnas de datos de la clase de eventos ErrorLog  
+## <a name="errorlog-event-class-data-columns"></a>Columnas de datos de la clase de eventos ErrorLog  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -47,7 +51,7 @@ caps.handback.revision: 27
 |TextData|**ntext**|Texto del mensaje de error.|1|Sí|  
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

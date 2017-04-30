@@ -1,30 +1,34 @@
 ---
-title: "Funci&#243;n clasificadora del regulador de recursos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "regulador de recursos, función clasificadora"
-  - "funciones definidas por el usuario [SQL Server], función clasificadora"
-  - "función clasificadora [SQL Server]"
-  - "función clasificadora [SQL Server], información general"
+title: "Función clasificadora del regulador de recursos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, classifier function
+- user-defined functions [SQL Server], classifier function
+- classifier function [SQL Server]
+- classifier function [SQL Server], overview
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 284ee7a05af7ab73e78dd827269db49c7d3f1e00
+ms.lasthandoff: 04/11/2017
+
 ---
-# Funci&#243;n clasificadora del regulador de recursos
+# <a name="resource-governor-classifier-function"></a>Función clasificadora del regulador de recursos
   El proceso de clasificación del regulador de recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna las sesiones de entrada a un grupo de carga de trabajo según las características de la sesión. Puede adaptar la lógica de clasificación escribiendo una función definida por el usuario, denominada función clasificadora.  
   
-## Clasificación  
+## <a name="classification"></a>Clasificación  
  El regulador de recursos admite la clasificación de sesiones de entrada. La clasificación se basa en un conjunto de criterios escritos por el usuario contenidos en una función. Los resultados de la lógica de la función permiten al regulador de recursos clasificar las sesiones en los grupos de cargas de trabajo existentes.  
   
 > [!NOTE]  
@@ -64,7 +68,7 @@ caps.handback.revision: 7
 > [!IMPORTANT]  
 >  Se recomienda habilitar la conexión de administrador dedicada (DAC) en el servidor. La conexión de administrador dedicada no está sujeta a la clasificación del regulador de recursos y se puede utilizar para supervisar y solucionar problemas de una función clasificadora. Para obtener más información, vea [Conexión de diagnóstico para administradores de bases de datos](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). Si no hay disponible una conexión de administrador dedicada para solucionar los problemas, la otra opción es reiniciar el sistema en modo de usuario único. Aunque el modo de usuario único no está sujeto a clasificación, no ofrece la capacidad de diagnosticar la clasificación del regulador de recursos mientras se ejecuta.  
   
-### Proceso de clasificación  
+### <a name="classification-process"></a>Proceso de clasificación  
  En el contexto del regulador de recursos, el proceso de inicio de sesión para una sesión consta de los pasos siguientes:  
   
 1.  Autenticación del inicio de sesión  
@@ -78,13 +82,13 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  La información sobre la ejecución de la función clasificadora y sobre los desencadenadores LOGON se expone en [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) y [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).  
   
-## Tareas de función de clasificación  
+## <a name="classification-function-tasks"></a>Tareas de función de clasificación  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
 |Describe cómo crear y probar una función clasificadora definida por el usuario.|[Crear y probar una función clasificadora definida por el usuario](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Habilitar el regulador de recursos](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Grupo de recursos de servidor del regulador de recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

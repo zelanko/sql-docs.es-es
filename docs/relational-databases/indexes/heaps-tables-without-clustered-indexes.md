@@ -1,24 +1,28 @@
 ---
-title: "Montones (tablas sin &#237;ndices cl&#250;ster) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "montones"
+title: "Montones (tablas sin índices agrupados) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- heaps
 ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cae45be3e215c24dd437502f81a870f14d453f3d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Montones (tablas sin &#237;ndices cl&#250;ster)
+# <a name="heaps-tables-without-clustered-indexes"></a>Montones (tablas sin índices clúster)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Un montón es una tabla que no tiene un índice clúster. En las tablas almacenadas, se pueden crear uno o varios índices no clúster como un montón. Los datos se almacenan en el montón sin especificar un orden. Normalmente, en un principio los datos se almacenan en el orden en el que las filas se insertan en la tabla, pero [!INCLUDE[ssDE](../../includes/ssde-md.md)] puede mover los datos en el montón para almacenar las filas de forma eficaz, de modo que no se puede predecir el orden de los datos. Para garantizar el orden de las filas que se devuelven de un montón, debe usar la cláusula **ORDER BY** . Para especificar el orden de almacenamiento de las filas, cree un índice clúster en la tabla, de modo que la tabla no sea un montón.  
@@ -26,12 +30,12 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  A veces, hay buenos motivos para dejar una tabla como montón en lugar de crear un índice clúster, pero para usar los montones de forma eficaz se requieren conocimientos avanzados. La mayoría de las tablas deben tener un índice clúster cuidadosamente elegido a menos que exista un buen motivo para dejar la tabla como un montón.  
   
-## Cuándo se usa un montón  
+## <a name="when-to-use-a-heap"></a>Cuándo se usa un montón  
  Si una tabla es un montón y no tiene ningún índice no clúster, debe examinarse la tabla completa (recorrido de tabla) cuando se busca una fila. Esto puede resultar aceptable si la tabla es pequeña, como una lista con las 12 oficinas regionales de una empresa.  
   
  Cuando una tabla se almacena como un montón, las filas individuales se identifican mediante una referencia a un identificador de fila (RID) que se compone del número de archivo, el número de páginas de datos y el espacio de la página. El identificador de fila es una estructura pequeña y eficaz. A veces, los arquitectos de datos usan montones cuando el acceso a los datos se realiza siempre a través de índices no clúster y el RID es menor que la clave de índice clúster.  
   
-## Cuándo no se usa un montón  
+## <a name="when-not-to-use-a-heap"></a>Cuándo no se usa un montón  
  No use un montón cuando los datos se devuelvan con frecuencia ordenados. Un índice clúster en la columna de ordenación podría impedir la operación de ordenación.  
   
  No use un montón cuando los datos se agrupan juntos a menudo. Los datos deben estar ordenados antes de que se agrupen y un índice clúster en la columna de ordenación podría impedir la operación de ordenación.  
@@ -40,7 +44,7 @@ caps.handback.revision: 8
   
  No use un montón cuando no haya índices no clúster y la tabla sea grande. En un montón, deben leerse todas las filas del montón para buscar una fila.  
   
-## Administrar montones  
+## <a name="managing-heaps"></a>Administrar montones  
  Para crear un montón, cree una tabla sin un índice clúster. Si la tabla ya tiene un índice clúster, quite el índice clúster para convertir de nuevo la tabla en un montón.  
   
  Para quitar un montón, cree un índice clúster en el montón.  
@@ -50,7 +54,7 @@ caps.handback.revision: 8
 > [!WARNING]  
 >  Para crear o quitar índices clúster, es necesario volver a escribir toda la tabla. Si la tabla tiene índices no clúster, todos los índices no clúster deberán volver a crearse cada vez que cambie el índice clúster. Por tanto, al convertir un montón en una estructura de índice agrupado o viceversa, puede necesitarse mucho tiempo y gran cantidad de espacio para reordenar los datos en tempdb.  
 
-## Estructuras de montón
+## <a name="heap-structures"></a>Estructuras de montón
 
 
 Un montón es una tabla que no tiene un índice clúster. Los montones tienen una fila en [sys.partitions](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md), con `index_id = 0` para cada partición que usa el montón. De forma predeterminada, un montón contiene una sola partición. Cuando un montón tiene varias particiones, cada partición incluye una estructure de montón que contiene los datos de esa partición específica. Por ejemplo, si un montón tiene cuatro particiones, existirán cuatro estructuras de montón, una en cada partición.
@@ -69,7 +73,7 @@ La siguiente ilustración muestra cómo el motor de la base de datos de SQL Serv
 ![iam_heap](../../relational-databases/indexes/media/iam-heap.gif)
 
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
  [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)  
@@ -77,3 +81,4 @@ La siguiente ilustración muestra cómo el motor de la base de datos de SQL Serv
  [Índices agrupados y no agrupados descritos](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)  
   
   
+

@@ -1,26 +1,30 @@
 ---
-title: "Usar columnas dispersas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "columnas dispersas, descritas"
-  - "columnas NULL"
-  - "columnas dispersas"
+title: Usar columnas dispersas | Microsoft Docs
+ms.custom: 
+ms.date: 03/22/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sparse columns, described
+- null columns
+- sparse columns
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73aa2beab814a8cc36400ddd384bb7f5de3b9d5d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar columnas dispersas
+# <a name="use-sparse-columns"></a>Usar columnas dispersas
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Las columnas dispersas son columnas normales que disponen de un almacenamiento optimizado para los valores NULL. Este tipo de columnas reducen los requisitos de espacio de los valores NULL a costa de una mayor sobrecarga a la hora de recuperar valores no NULL. Considere la posibilidad de utilizar columnas dispersas si el ahorro de espacio se sitúa entre el 20 y el 40 por ciento. Las columnas dispersas y los conjuntos de columnas se definen mediante las instrucciones [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) o [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) .  
@@ -37,7 +41,7 @@ caps.handback.revision: 47
   
  Las columnas dispersas y los índices filtrados permiten a las aplicaciones, como [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], almacenar y tener acceso de una forma más eficiente a un gran número de propiedades definidas por el usuario usando [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## Propiedades de las columnas dispersas  
+## <a name="properties-of-sparse-columns"></a>Propiedades de las columnas dispersas  
  Las columnas dispersas tienen las características siguientes:  
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utiliza la palabra clave SPARSE en una definición de columna para optimizar el almacenamiento de valores en dicha columna. Por consiguiente, cuando el valor de la columna es NULL para cualquier fila de la tabla, los valores no requieren ningún almacenamiento.  
@@ -65,7 +69,7 @@ caps.handback.revision: 47
 |**imagen**|**tipos de datos definidos por el usuario**|  
 |**ntext**||  
   
-## Ahorro de espacio calculado para cada tipo de datos  
+## <a name="estimated-space-savings-by-data-type"></a>Ahorro de espacio calculado para cada tipo de datos  
  Las columnas dispersas requieren más espacio de almacenamiento para los valores distintos de NULL que el requerido para datos idénticos no marcados como SPARSE. Las tablas siguientes muestran el uso de espacio para cada tipo de datos. La columna **Porcentaje de NULL** indica qué porcentaje de los datos deben ser NULL para un ahorro de espacio neto de un 40 por ciento.  
   
  **Tipos de datos de longitud fija**  
@@ -113,15 +117,15 @@ caps.handback.revision: 47
   
  *La longitud es igual a la media de los datos incluidos en el tipo, más 2 o 4 bytes.  
   
-## Sobrecarga en memoria necesaria para las actualizaciones de columnas dispersas  
+## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>Sobrecarga en memoria necesaria para las actualizaciones de columnas dispersas  
  A la hora de diseñar tablas con columnas dispersas, tenga en cuenta que se necesita una sobrecarga adicional de 2 bytes para cada columna dispersa que no sea NULL de la tabla cuando se está actualizando una fila. Debido a este requisito de memoria adicional, se puede producir inesperadamente un error 576 en las actualizaciones cuando el tamaño total de fila (incluida esta sobrecarga de memoria) es superior a 8019 y no se puede insertar ninguna columna de manera no consecutiva.  
   
- Considere el ejemplo de una tabla que tiene 600 columnas dispersas de tipo bigint. Si hay 571 columnas no NULL, el tamaño total en disco es de 571 * 12 = 6852 bytes. Después de incluir la sobrecarga de fila adicional y el encabezado de columna dispersa, asciende a unos 6895 bytes. La página todavía tiene 1124 bytes disponibles en disco. Esto puede dar la impresión de que se pueden actualizar correctamente columnas adicionales. Pero durante la actualización hay una sobrecarga adicional en memoria de 2\* (número de columnas dispersas no NULL). En este ejemplo, incluida la sobrecarga adicional – 2 \* 571 = 1142 bytes – el tamaño de fila en disco aumenta hasta 8037 bytes. Este tamaño supera el tamaño máximo permitido de 8019 bytes. Puesto que todas las columnas tienen tipos de datos de longitud fija, no se pueden insertar de manera no consecutiva. Por tanto, se producirá el error 576 en la actualización.  
+ Considere el ejemplo de una tabla que tiene 600 columnas dispersas de tipo bigint. Si hay 571 columnas no NULL, el tamaño total en disco es de 571 * 12 = 6852 bytes. Después de incluir la sobrecarga de fila adicional y el encabezado de columna dispersa, asciende a unos 6895 bytes. La página todavía tiene 1124 bytes disponibles en disco. Esto puede dar la impresión de que se pueden actualizar correctamente columnas adicionales. Pero durante la actualización hay una sobrecarga adicional en memoria de 2\*(número de columnas dispersas no NULL). En este ejemplo, incluida la sobrecarga adicional – 2 \* 571 = 1142 bytes – el tamaño de fila en disco aumenta hasta 8037 bytes. Este tamaño supera el tamaño máximo permitido de 8019 bytes. Puesto que todas las columnas tienen tipos de datos de longitud fija, no se pueden insertar de manera no consecutiva. Por tanto, se producirá el error 576 en la actualización.  
   
-## Restricciones de uso de las columnas dispersas  
+## <a name="restrictions-for-using-sparse-columns"></a>Restricciones de uso de las columnas dispersas  
  Las columnas dispersas pueden adoptar cualquier tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y comportarse como cualquier otra columna, con las restricciones siguientes:  
   
--   Deben aceptar valores NULL y no pueden tener las propiedades ROWGUIDCOL ni IDENTITY. No pueden adoptar los tipos de datos siguientes: **text**, **ntext**, **image**, **timestamp**, tipo de datos definido por el usuario, **geometry** ni **geography**; ni tener el atributo FILESTREAM.  
+-   Deben aceptar valores NULL y no pueden tener las propiedades ROWGUIDCOL ni IDENTITY. No pueden adoptar los tipos de datos siguientes: **text**, **ntext**, **image**, **timestamp**, tipo de datos definido por el usuario, **geometry**ni **geography**; ni tener el atributo FILESTREAM.  
   
 -   No pueden tener un valor predeterminado.  
   
@@ -154,7 +158,7 @@ caps.handback.revision: 47
   
 -   Cuando convierta una columna no dispersa en una columna dispersa, esta consumirá más espacio para los valores distintos de NULL. Cuando una fila está cerca del límite de tamaño máximo, se puede producir un error en la operación.  
   
-## Tecnologías de SQL Server que admiten columnas dispersas  
+## <a name="sql-server-technologies-that-support-sparse-columns"></a>Tecnologías de SQL Server que admiten columnas dispersas  
  En esta sección se describe la compatibilidad de las columnas dispersas en las siguientes tecnologías de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   Replicación transaccional  
@@ -179,7 +183,7 @@ caps.handback.revision: 47
   
 -   La propiedad sparse de una columna no se conserva al copiar la tabla.  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
  En este ejemplo, una tabla de documentos contiene un conjunto común que tiene las columnas `DocID` y `Title`. El grupo de producción desea tener una columna `ProductionSpecification` y una columna `ProductionLocation` para todos los documentos de producción. El grupo de marketing desea tener una columna `MarketingSurveyGroup` para los documentos de marketing. El código de este ejemplo crea una tabla que usa columnas dispersas, inserta dos filas en dicha tabla y, a continuación, selecciona datos en ella.  
   
 > [!NOTE]  
@@ -234,10 +238,11 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Usar conjuntos de columnas](../../relational-databases/tables/use-column-sets.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   
   
+

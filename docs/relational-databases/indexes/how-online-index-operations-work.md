@@ -1,34 +1,38 @@
 ---
-title: "C&#243;mo funcionan las operaciones de &#237;ndice en l&#237;nea | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "índices en línea, operaciones"
-  - "índices de origen [SQL Server]"
-  - "índices preexistentes [SQL Server]"
-  - "índices de destino [SQL Server]"
-  - "índice temporal, asignación [SQL Server]"
-  - "asignaciones de índice temporal [SQL Server]"
+title: "Cómo funcionan las operaciones de índice en línea | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online index operations
+- source indexes [SQL Server]
+- preexisting indexes [SQL Server]
+- target indexes [SQL Server]
+- temporary mapping index [SQL Server]
+- index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 838a02643b47162d767e8f3b4191e5e3796adf57
+ms.lasthandoff: 04/11/2017
+
 ---
-# C&#243;mo funcionan las operaciones de &#237;ndice en l&#237;nea
+# <a name="how-online-index-operations-work"></a>Cómo funcionan las operaciones de índice en línea
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   En este tema se definen las estructuras que existen durante una operación de índice en línea y se muestran las actividades asociadas a ellas.  
   
-## Estructuras de índice en línea  
+## <a name="online-index-structures"></a>Estructuras de índice en línea  
  Para que se puedan llevar a cabo actividades de usuario simultáneas durante una operación de lenguaje de definición de datos (DDL) de índice, se usan las siguientes estructuras en la operación de índice en línea: índices preexistentes y de origen, destino y, para volver a compilar un montón o quitar un índice en línea clúster, un índice de asignación temporal.  
   
 -   **Origen e índices preexistentes**  
@@ -47,14 +51,14 @@ caps.handback.revision: 28
   
      Las operaciones de índice en línea que crean, quitan o regeneran un índice clúster también precisan un índice de asignación temporal. Las transacciones simultáneas utilizan este índice temporal para determinar qué registros se deben eliminar en los nuevos índices que se regeneran cuando se actualizan o eliminan filas de la tabla subyacente. Este índice no clúster se crea en el mismo paso que el nuevo índice clúster (o montón) y no requiere una operación de ordenación separada. Las transacciones simultáneas también mantienen el índice de asignación temporal en sus operaciones de inserción, actualización y eliminación.  
   
-## Actividades del índice en línea  
+## <a name="online-index-activities"></a>Actividades del índice en línea  
  Durante una operación de índice en línea sencilla, como la creación de un índice clúster en una tabla no indizada (montón), el origen y el destino pasan por tres fases: preparación, generación y final.  
   
  En la ilustración siguiente se muestra el proceso para crear un índice clúster inicial en línea. El objeto de origen (el montón) no dispone de otros índices. Se muestran las actividades de las estructuras de origen y destino en cada fase; también se muestran las operaciones de usuario simultáneas de selección, inserción, actualización y eliminación. Las fases de preparación, generación y final se indican con los modos de bloqueo empleados en cada una de ellas.  
   
  ![Actividades realizadas durante la operación de índice en línea](../../relational-databases/indexes/media/online-index.gif "Actividades realizadas durante la operación de índice en línea")  
   
-## Actividades de la estructura de origen  
+## <a name="source-structure-activities"></a>Actividades de la estructura de origen  
  En la tabla siguiente se muestran las actividades relacionadas con las estructuras de origen durante cada fase de la operación de índice y la estrategia de bloqueo correspondiente.  
   
 |Fase|Actividad de origen|Bloqueos de origen|  
@@ -69,7 +73,7 @@ caps.handback.revision: 28
   
  En la tabla anterior se muestra un solo bloqueo compartido (S) adquirido en la fase de generación de una operación de índice en línea que únicamente utiliza un índice. Cuando se generan o se vuelven a generar índices clúster y no clúster en una sola operación de índice en línea (por ejemplo, durante la creación del índice clúster inicial en una tabla que contiene uno o varios índices no clúster) se aplican dos bloqueos S a corto plazo durante la fase de generación, seguidos de bloqueos de intención compartida (IS) a largo plazo. En primer lugar, se aplica un bloqueo S para la creación del índice clúster; cuando esta operación finaliza, se aplica un segundo bloqueo S breve para crear los índices no clúster. Después de crear los índices no clúster, el bloqueo S se reduce a un bloqueo IS hasta la fase final de la operación de índice en línea.  
   
-### Actividades de la estructura de destino  
+### <a name="target-structure-activities"></a>Actividades de la estructura de destino  
  En la tabla siguiente se muestran las actividades relacionadas con la estructura de destino durante cada fase de la operación de índice y la estrategia de bloqueo correspondiente.  
   
 |Fase|Actividad de destino|Bloqueos de destino|  
@@ -84,9 +88,10 @@ caps.handback.revision: 28
   
  La duración de un cursor declarado en una tabla implicada en una operación de índice en línea está limitada por las fases de dicho índice. Los cursores de actualización dejan de ser válidos en cada fase. Los cursores de solo lectura dejan de ser válidos después de la fase final.  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
  [Realizar operaciones de índice en línea](../../relational-databases/indexes/perform-index-operations-online.md)  
   
  [Directrices para operaciones de índices en línea](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
   
+

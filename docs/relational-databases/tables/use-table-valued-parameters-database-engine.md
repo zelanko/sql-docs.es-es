@@ -1,34 +1,38 @@
 ---
-title: "Usar par&#225;metros con valores de tabla (motor de base de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "parámetros con valores de tabla"
-  - "parámetros con valores de tabla, acerca de los parámetros con valores de tabla"
-  - "parámetros [SQL Server], valores de tabla"
-  - "TVP, vea parámetros de valores de tabla"
+title: "Usar parámetros con valores de tabla (motor de base de datos) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table-valued parameters
+- table-valued parameters, about table-valued parameters
+- parameters [SQL Server], table-valued
+- TVP See table-valued parameters
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 021177aa350c47474e48453f7d9a5735e1083b04
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar par&#225;metros con valores de tabla (motor de base de datos)
+# <a name="use-table-valued-parameters-database-engine"></a>Usar parámetros con valores de tabla (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  Los parámetros con valores de tabla se declaran utilizando tipos de tabla definidos por el usuario. Puede utilizar parámetros con valores de tabla para enviar varias filas de datos a una rutina o una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)], como un procedimiento almacenado o una función, sin crear una tabla temporal o muchos parámetros.  
+  Los parámetros con valores de tabla se declaran utilizando tipos de tabla definidos por el usuario. Puede utilizar parámetros con valores de tabla para enviar varias filas de datos a una rutina o una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] , como un procedimiento almacenado o una función, sin crear una tabla temporal o muchos parámetros.  
   
  Los parámetros con valores de tabla son como las matrices de parámetros en OLE DB y ODBC, pero proporcionan más flexibilidad y una integración más estrecha con [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los parámetros con valores de tabla también tienen la ventaja de poder participar en operaciones basadas en conjuntos.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] pasa parámetros con valores de tabla a rutinas por referencia para evitar la realización de una copia de los datos de entrada. Puede crear y ejecutar rutinas [!INCLUDE[tsql](../../includes/tsql-md.md)] con parámetros con valores de tabla y llamarlas desde código de [!INCLUDE[tsql](../../includes/tsql-md.md)], clientes nativos y administrados en cualquier lenguaje administrado.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] pasa parámetros con valores de tabla a rutinas por referencia para evitar la realización de una copia de los datos de entrada. Puede crear y ejecutar rutinas [!INCLUDE[tsql](../../includes/tsql-md.md)] con parámetros con valores de tabla y llamarlas desde código de [!INCLUDE[tsql](../../includes/tsql-md.md)] , clientes nativos y administrados en cualquier lenguaje administrado.  
   
  **En este tema:**  
   
@@ -66,7 +70,7 @@ caps.handback.revision: 31
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no mantiene estadísticas en las columnas de parámetros con valores de tabla.  
   
--   Los parámetros con valores de tabla se deben pasar como parámetros READONLY de entrada a rutinas [!INCLUDE[tsql](../../includes/tsql-md.md)]. No se pueden realizar operaciones de DML como UPDATE, DELETE o INSERT en un parámetro con valores de tabla en el cuerpo de una rutina.  
+-   Los parámetros con valores de tabla se deben pasar como parámetros READONLY de entrada a rutinas [!INCLUDE[tsql](../../includes/tsql-md.md)] . No se pueden realizar operaciones de DML como UPDATE, DELETE o INSERT en un parámetro con valores de tabla en el cuerpo de una rutina.  
   
 -   No se puede utilizar un parámetro con valores de tabla como destino de una instrucción SELECT INTO o INSERT EXEC. Un parámetro con valores de tabla puede estar en la cláusula FROM de SELECT INTO o en el procedimiento almacenado o la cadena INSERT EXEC.  
   
@@ -117,7 +121,7 @@ EXEC usp_InsertProductionLocation @LocationTVP;
 GO  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   

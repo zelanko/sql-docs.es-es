@@ -1,28 +1,32 @@
 ---
-title: "Modificar una sesi&#243;n de eventos extendidos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Modificar una sesión de eventos extendidos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
 caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9330ef01cb491fef9307149e0cc774fa2b042c52
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modificar una sesi&#243;n de eventos extendidos
+# <a name="alter-an-extended-events-session"></a>Modificar una sesión de eventos extendidos
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Después de crear una sesión de eventos extendidos, puede modificarla según sus necesidades con el **Asistente para eventos extendidos de SQL Server**.  
   
-## Antes de empezar  
+## <a name="before-you-begin"></a>Antes de empezar  
  No puede modificar un destino para las sesiones activas e inactivas, y no puede cambiar las configuraciones de propiedades avanzadas de una sesión activa.  
   
  Puede realizar las siguientes modificaciones en las sesiones de eventos activas e inactivas:  
@@ -42,7 +46,7 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  El **Asistente para eventos extendidos de SQL Server** no admite la modificación de la sesión de eventos.  
   
-## Cómo modificar una sesión de eventos extendidos con el Asistente para eventos extendidos de SQL Server  
+## <a name="how-to-alter-an-extended-events-session-using-the-sql-server-extended-events-wizard"></a>Cómo modificar una sesión de eventos extendidos con el Asistente para eventos extendidos de SQL Server  
   
 -   En el Explorador de objetos, expanda **Administración**, expanda **Eventos extendidos**y, a continuación, expanda **Sesiones**.  
   
@@ -50,8 +54,8 @@ caps.handback.revision: 9
   
 -   En el cuadro de diálogo **Propiedades** , realice los cambios adecuados y, a continuación, haga clic en **Aceptar**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
- [Crear una sesión de eventos extendidos mediante el Editor de consultas](../Topic/Create%20an%20Extended%20Events%20Session%20Using%20Query%20Editor.md)  
+ [Crear una sesión de eventos extendidos mediante el Editor de consultas](http://msdn.microsoft.com/library/cba0e02b-b201-4863-bf1b-9164e68e5fa8)  
   
   

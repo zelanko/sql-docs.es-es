@@ -1,34 +1,38 @@
 ---
-title: "Agregar filtro o Editar filtro | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.newpubwizard.addeditfilter.f1"
+title: Agregar o editar filtro | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.newpubwizard.addeditfilter.f1
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7647baaaf9e567ada31eb468b6c48844676659f2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Agregar filtro o Editar filtro
+# <a name="add-or-edit-filter"></a>Agregar filtro o Editar filtro
   Los cuadros de diálogo **Agregar filtro** y **Editar filtro** le permiten agregar y editar filtros de filas estáticos y filtros de filas con parámetros.  
   
 > [!NOTE]  
->  La edición de un filtro en una publicación existente requiere una nueva instantánea para la publicación. Si una publicación tiene suscripciones, es necesario reinicializar las suscripciones. Para obtener más información acerca de los cambios de propiedad, vea [Propiedades de artículo y publicación de cambio](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+>  La edición de un filtro en una publicación existente requiere una nueva instantánea para la publicación. Si una publicación tiene suscripciones, es necesario reinicializar las suscripciones. Para obtener más información sobre los cambios de propiedad, consulte [Cambiar las propiedades de la publicación y de los artículos](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
- Todos los tipos de publicaciones pueden incluir filtros estáticos; las publicaciones de combinación también pueden incluir filtros con parámetros. Se evalúa un filtro estático cuando se crea la publicación: todos los Suscriptores a la publicación reciben los mismos datos. Un filtro parametrizado se evalúa durante la sincronización de la replicación: Suscriptores diferentes pueden recibir particiones distintas de datos según el inicio de sesión o nombre de equipo de cada Suscriptor. Haga clic en el vínculo **Instrucciones de ejemplo** del cuadro de diálogo para ver ejemplos de cada tipo de filtro. Para obtener más información acerca de opciones de filtrado, consulte [filtrar datos publicados](../../relational-databases/replication/publish/filter-published-data.md).  
+ Todos los tipos de publicaciones pueden incluir filtros estáticos; las publicaciones de combinación también pueden incluir filtros con parámetros. Se evalúa un filtro estático cuando se crea la publicación: todos los Suscriptores a la publicación reciben los mismos datos. Un filtro parametrizado se evalúa durante la sincronización de la replicación: Suscriptores diferentes pueden recibir particiones distintas de datos según el inicio de sesión o nombre de equipo de cada Suscriptor. Haga clic en el vínculo **Instrucciones de ejemplo** del cuadro de diálogo para ver ejemplos de cada tipo de filtro. Para obtener más información sobre las opciones de filtrado, consulte [Filtrar datos publicados](../../relational-databases/replication/publish/filter-published-data.md).  
   
  Mediante los filtros de fila, puede especificar un subconjunto de filas de la tabla que desea publicar. Puede utilizar filtros de filas para eliminar filas que no necesitan ver los usuarios (como las filas que contienen información importante o confidencial) o crear distintas particiones de datos que se enviarán a distintos suscriptores. La publicación de distintas particiones de datos para distintos suscriptores también puede ayudar a evitar conflictos que podrían causar la actualización simultánea de los mismos datos realizada por varios suscriptores.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  Este cuadro de diálogo incluye un proceso de dos pasos para las publicaciones transaccionales y de instantáneas y un proceso de tres pasos para las publicaciones de combinación. Todos los tipos de publicaciones requieren que seleccione la tabla que desea filtrar y una o más columnas que se incluirán en el filtro, en donde el filtro se define como una cláusula WHERE estándar.  
   
 1.  **Seleccione la tabla que desea filtrar**  
@@ -50,20 +54,20 @@ caps.handback.revision: 27
      No se puede cambiar este texto; escriba la cláusula de filtro después de la palabra clave WHERE utilizando sintaxis estándar [!INCLUDE[tsql](../../includes/tsql-md.md)] . Si el publicador es un publicador de Oracle, la cláusula WHERE debe seguir la sintaxis de consultas de Oracle. Evite utilizar filtros complejos en la medida de lo posible. Tanto los filtros estáticos como los que utilizan parámetros aumentan el tiempo de procesamiento de las publicaciones, por lo que deberá escribir las instrucciones de filtro de la forma más sencilla posible.  
   
     > [!IMPORTANT]  
-    >  Por motivos de rendimiento, se recomienda no aplicar funciones a los nombres de columna en las cláusulas de los filtros de fila con parámetros, como `LEFT([MyColumn]) = SUSER_SNAME()`. Si utiliza HOST_NAME en una cláusula de filtro y reemplaza el valor HOST_NAME, puede que sea necesario convertir los tipos de datos utilizando CONVERT. Para obtener más información acerca de las prácticas recomendadas para este caso, consulte la sección "Reemplazar el valor de HOST_NAME ()" en el tema [filtros de fila parametrizados](../../relational-databases/replication/merge/parameterized-row-filters.md).  
+    >  Por motivos de rendimiento, se recomienda no aplicar funciones a los nombres de columna en las cláusulas de los filtros de fila con parámetros, como `LEFT([MyColumn]) = SUSER_SNAME()`. Si utiliza HOST_NAME en una cláusula de filtro y reemplaza el valor HOST_NAME, puede que sea necesario convertir los tipos de datos utilizando CONVERT. Para obtener más información acerca de las prácticas recomendadas para este caso, vea la sección "Reemplazar el valor de HOST_NAME()" del tema [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 3.  **Especifique cuántas suscripciones recibirán datos de esta tabla**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores únicamente; solo para la replicación de mezcla. La replicación de mezcla le permite especificar el tipo de partición más adecuado para sus datos y aplicación. Si selecciona **Una fila de esta tabla irá a una sola suscripción**, la replicación de mezcla establece la opción de particiones no superpuestas. Las particiones no superpuestas funcionan junto con las particiones precalculadas para aumentar el rendimiento: la finalidad de las particiones no superpuestas es minimizar el costo de carga asociado a las particiones precalculadas. La ventaja en el rendimiento de las particiones no superpuestas es más evidente cuando los filtros con parámetros y de combinación utilizados son más complejos. Si selecciona esta opción, debe asegurarse de que los datos se dividen en particiones de forma que una fila no se pueda replicar en más de un suscriptor. Para obtener más información, vea la sección sobre cómo configurar opciones de partición en el tema [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-row-filters.md).  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only; merge replication only. La replicación de mezcla le permite especificar el tipo de partición más adecuado para sus datos y aplicación. Si selecciona **Una fila de esta tabla irá a una sola suscripción**, la replicación de mezcla establece la opción de particiones no superpuestas. Las particiones no superpuestas funcionan junto con las particiones precalculadas para aumentar el rendimiento: la finalidad de las particiones no superpuestas es minimizar el costo de carga asociado a las particiones precalculadas. La ventaja en el rendimiento de las particiones no superpuestas es más evidente cuando los filtros con parámetros y de combinación utilizados son más complejos. Si selecciona esta opción, debe asegurarse de que los datos se dividen en particiones de forma que una fila no se pueda replicar en más de un suscriptor. Para obtener más información, vea la sección sobre cómo configurar opciones de partición en el tema [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  Una vez agregado o editado un filtro, haga clic en **Aceptar** para guardar los cambios y cerrar el cuadro de diálogo. El filtro que ha especificado se analiza y se ejecuta según la tabla de la cláusula SELECT. Si la instrucción de filtro contiene errores de sintaxis u otros problemas, se le notificará para que pueda editar la instrucción de filtro.  
   
-## Vea también  
- [Crear una publicación](../../relational-databases/replication/publish/create-a-publication.md)   
+## <a name="see-also"></a>Vea también  
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Ver y modificar propiedades de publicación](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filtrar datos publicados](../../relational-databases/replication/publish/filter-published-data.md)   
  [Filtros de combinación](../../relational-databases/replication/merge/join-filters.md)   
- [Filtros de fila con parámetros](../../relational-databases/replication/merge/parameterized-row-filters.md)   
+ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Publicar datos y objetos de base de datos](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

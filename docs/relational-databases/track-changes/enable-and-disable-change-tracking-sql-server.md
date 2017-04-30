@@ -1,35 +1,39 @@
 ---
-title: "Habilitar y deshabilitar el seguimiento de cambios (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "seguimiento de cambios [SQL Server], deshabilitar"
-  - "cambios de datos [SQL Server]"
-  - "seguimiento de cambios [SQL Server], habilitar"
-  - "seguimiento de cambios de datos [SQL Server]"
-  - "seguimiento de cambios [SQL Server], configurar"
-  - "datos [SQL Server], cambiar"
+title: Habilitar y deshabilitar el seguimiento de cambios (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- change tracking [SQL Server], disabling
+- data changes [SQL Server]
+- change tracking [SQL Server], enabling
+- tracking data changes [SQL Server]
+- change tracking [SQL Server], configuring
+- data [SQL Server], changing
 ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 156e5514169d9b4ca9f8cca9e5f06a46187211aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# Habilitar y deshabilitar el seguimiento de cambios (SQL Server)
+# <a name="enable-and-disable-change-tracking-sql-server"></a>Habilitar y deshabilitar el seguimiento de cambios (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   En este tema se describe cómo habilitar y deshabilitar el seguimiento de cambios para una tabla y una base de datos.  
   
-## Habilitar el seguimiento de cambios para una base de datos  
- Para poder utilizarlo, el seguimiento de cambios se debe habilitar previamente en el nivel de la base de datos. En el ejemplo siguiente se muestra cómo habilitar el seguimiento de cambios mediante [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+## <a name="enable-change-tracking-for-a-database"></a>Habilitar el seguimiento de cambios para una base de datos  
+ Para poder utilizarlo, el seguimiento de cambios se debe habilitar previamente en el nivel de la base de datos. En el ejemplo siguiente se muestra cómo habilitar el seguimiento de cambios mediante [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 ```tsql  
 ALTER DATABASE AdventureWorks2012  
@@ -37,7 +41,7 @@ SET CHANGE_TRACKING = ON
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
 ```  
   
- También puede habilitar el seguimiento de cambios en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mediante el cuadro de diálogo [Propiedades de la base de datos &#40;página ChangeTracking&#41;](../../relational-databases/databases/database-properties-changetracking-page.md).  
+ También puede habilitar el seguimiento de cambios en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mediante el cuadro de diálogo [Propiedades de la base de datos &#40;página ChangeTracking&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) .  
   
  Puede especificar las opciones CHANGE_RETENTION y AUTO_CLEANUP al habilitar el seguimiento de cambios, y puede cambiar los valores en cualquier momento una vez que esté habilitado.  
   
@@ -51,7 +55,7 @@ SET CHANGE_TRACKING = ON
   
 -   El uso del aislamiento de instantánea es la manera más fácil de ayudarle a asegurarse de que toda la información del seguimiento de cambios es coherente. Por esta razón, recomendamos encarecidamente activar el aislamiento de instantánea para la base de datos. Para obtener más información, vea [Trabajar con el seguimiento de cambios &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md).  
   
-## Habilitar el seguimiento de cambios para una tabla  
+## <a name="enable-change-tracking-for-a-table"></a>Habilitar el seguimiento de cambios para una tabla  
  El seguimiento de cambios debe estar habilitado para cada tabla en la que desea realizar el seguimiento. Cuando el seguimiento de cambios se habilita, su información correspondiente se mantiene para todas las filas de la tabla a las que afecta una operación DML.  
   
  En el ejemplo siguiente se muestra cómo habilitar el seguimiento de cambios para una tabla utilizando [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
@@ -62,14 +66,14 @@ ENABLE CHANGE_TRACKING
 WITH (TRACK_COLUMNS_UPDATED = ON)  
 ```  
   
- También puede habilitar el seguimiento de cambios para una tabla en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mediante el cuadro de diálogo [Propiedades de la base de datos &#40;página ChangeTracking&#41;](../../relational-databases/databases/database-properties-changetracking-page.md).  
+ También puede habilitar el seguimiento de cambios para una tabla en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mediante el cuadro de diálogo [Propiedades de la base de datos &#40;página ChangeTracking&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) .  
   
  Cuando la opción TRACK_COLUMNS_UPDATED se activa, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] almacena información adicional sobre las columnas que se actualizaron en la tabla de seguimiento de cambios interna. El seguimiento de columnas puede permitir a una aplicación sincronizar solo las columnas que fueron actualizadas, lo cual puede mejorar la eficacia y el rendimiento. Sin embargo, dado que el mantenimiento de la información de seguimiento de las columnas agrega una sobrecarga adicional de almacenamiento, esta opción está desactivada de forma predeterminada.  
   
-## Deshabilitar el seguimiento de cambios para una base de datos o una tabla  
- El seguimiento de cambios para todas las tablas sometidas al seguimiento de cambios debe deshabilitarse antes de poder deshabilitar el seguimiento de cambios para toda la base de datos. Para determinar qué tablas de una base de datos tienen habilitado el seguimiento de cambios, use la vista de catálogo [sys.change_tracking_tables](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md).  
+## <a name="disable-change-tracking-for-a-database-or-table"></a>Deshabilitar el seguimiento de cambios para una base de datos o una tabla  
+ El seguimiento de cambios para todas las tablas sometidas al seguimiento de cambios debe deshabilitarse antes de poder deshabilitar el seguimiento de cambios para toda la base de datos. Para determinar qué tablas de una base de datos tienen habilitado el seguimiento de cambios, use la vista de catálogo [sys.change_tracking_tables](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md) .  
   
- Cuando ninguna de las tablas de una base de datos está sometida a seguimiento de cambios, es posible deshabilitar el seguimiento de cambios para la base de datos. En el ejemplo siguiente se muestra cómo deshabilitar el seguimiento de cambios para una base de datos mediante [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+ Cuando ninguna de las tablas de una base de datos está sometida a seguimiento de cambios, es posible deshabilitar el seguimiento de cambios para la base de datos. En el ejemplo siguiente se muestra cómo deshabilitar el seguimiento de cambios para una base de datos mediante [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 ```tsql  
 ALTER DATABASE AdventureWorks2012  
@@ -83,14 +87,15 @@ ALTER TABLE Person.Contact
 DISABLE CHANGE_TRACKING;  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Propiedades de la base de datos &#40;página ChangeTracking&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   
- [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)   
- [sys.change_tracking_databases &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)   
- [sys.change_tracking_tables &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)   
+ [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [sys.change_tracking_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   
+ [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)   
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Acerca del seguimiento de cambios &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Trabajar con datos modificados &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   
  [Administrar el seguimiento de cambios &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)  
   
   
+

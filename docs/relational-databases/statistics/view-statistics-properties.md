@@ -1,27 +1,31 @@
 ---
-title: "Ver propiedades de estad&#237;sticas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.statistics.details.f1"
-helpviewer_keywords: 
-  - "ver propiedades de estadísticas"
-  - "estadísticas [SQL Server], ver propiedades"
+title: "Ver propiedades de estadísticas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.statistics.details.f1
+helpviewer_keywords:
+- viewing statistics properties
+- statistics [SQL Server], viewing properties
 ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0418da029159564c125fb89eaed39fdb1d673c65
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ver propiedades de estad&#237;sticas
+# <a name="view-statistics-properties"></a>Ver propiedades de estadísticas
   Puede mostrar las estadísticas de optimización de consultas actuales para una tabla o vista indizada en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los objetos de estadísticas incluyen un encabezado con metadatos sobre las estadísticas, un histograma con la distribución de valores de la primera columna de clave del objeto de estadísticas y un vector de la densidad para medir la correlación entre las columnas. Para obtener más información sobre histogramas y vectores de densidad, vea [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
   
  **En este tema**  
@@ -41,11 +45,11 @@ caps.handback.revision: 10
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- Para ver el objeto de estadísticas, el usuario debe ser propietario de la tabla o miembro del rol fijo de servidor **sysadmin**, del rol fijo de base de datos **db_owner** o del rol fijo de base de datos **db_ddladmin**.  
+ Para ver el objeto de estadísticas, el usuario debe ser propietario de la tabla o miembro del rol fijo de servidor **sysadmin** , del rol fijo de base de datos **db_owner** o del rol fijo de base de datos **db_ddladmin** .  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para ver las propiedades de estadísticas  
+#### <a name="to-view-statistics-properties"></a>Para ver las propiedades de estadísticas  
   
 1.  En el **Explorador de objetos**, haga clic en el signo más para expandir la base de datos en la que desea crear una nueva estadística.  
   
@@ -57,9 +61,9 @@ caps.handback.revision: 10
   
 5.  Haga clic con el botón derecho en el objeto Estadísticas cuyas propiedades quiere ver y seleccione **Propiedades**.  
   
-6.  En el cuadro de diálogo **Propiedades de estadísticas -** *nombre_de_estadísticas*, en el panel **Seleccionar una página**, seleccione **Detalles**.  
+6.  En el cuadro de diálogo **Propiedades de estadísticas -** *nombre_de_estadísticas* , en el panel **Seleccionar una página** , seleccione **Detalles**.  
   
-     Las propiedades siguientes se muestran en la página **Detalles** en el cuadro de diálogo **Propiedades de estadísticas -** *nombre_de_estadísticas*.  
+     Las propiedades siguientes se muestran en la página **Detalles** en el cuadro de diálogo **Propiedades de estadísticas -** *nombre_de_estadísticas* .  
   
      **Nombre de tabla**  
      Muestra el nombre de la tabla descrita por las estadísticas.  
@@ -94,7 +98,7 @@ caps.handback.revision: 10
      Número promedio de bytes por cada uno de los valores de las columnas de clave del objeto de estadísticas.  
   
      **String Index**  
-     Sí indica que el objeto de estadísticas contiene estadísticas de resumen de las cadenas para mejorar los cálculos de cardinalidad de los predicados de consulta que utilizan el operador LIKE; por ejemplo, `WHERE ProductName LIKE '%Bike'`. Las estadísticas de resumen de cadenas se almacenan de forma independiente del histograma y se crean en la primera columna de clave del objeto de estadísticas cuando es de tipo **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text** o **ntext**.  
+     Sí indica que el objeto de estadísticas contiene estadísticas de resumen de las cadenas para mejorar los cálculos de cardinalidad de los predicados de consulta que utilizan el operador LIKE; por ejemplo, `WHERE ProductName LIKE '%Bike'`. Las estadísticas de resumen de cadenas se almacenan de forma independiente del histograma y se crean en la primera columna de clave del objeto de estadísticas cuando es de tipo **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text**o **ntext**.  
   
      **Expresión de filtro**  
      Predicado del subconjunto de filas de la tabla incluido en el objeto de estadísticas. NULL = Estadísticas no filtradas.  
@@ -134,7 +138,7 @@ caps.handback.revision: 10
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para ver las propiedades de estadísticas  
+#### <a name="to-view-statistics-properties"></a>Para ver las propiedades de estadísticas  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -152,7 +156,7 @@ caps.handback.revision: 10
   
  Para obtener más información, vea [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
   
-#### Para buscar todas las estadísticas de una tabla o vista  
+#### <a name="to-find-all-of-the-statistics-on-a-table-or-view"></a>Para buscar todas las estadísticas de una tabla o vista  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

@@ -1,44 +1,31 @@
 ---
-title: "Cifrado de copia de seguridad | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Cifrado de copia de seguridad | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 30654c4f7950f188cf08608cf946f4fe42e6d3e4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cifrado de copia de seguridad
+# <a name="backup-encryption"></a>Cifrado de copia de seguridad
   Este tema proporciona información general sobre las opciones de cifrado para las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Incluye detalles del uso, los beneficios y las prácticas recomendadas para el cifrado durante la copia de seguridad.  
   
- **En este tema:**  
-  
--   [Información general](../../relational-databases/backup-restore/backup-encryption.md#Overview)  
-  
--   [Ventajas](#Benefits)  
-  
--   [Requisitos previos](../../relational-databases/backup-restore/backup-encryption.md#Prerequisites)  
-  
--   [Restricciones](#Restrictions)  
-  
--   [Permisos](../../relational-databases/backup-restore/backup-encryption.md#Permissions)  
-  
--   [Métodos de cifrado de copia de seguridad](../../relational-databases/backup-restore/backup-encryption.md#Methods)  
-  
--   [Prácticas recomendadas](../../relational-databases/backup-restore/backup-encryption.md#RecommendedPractices)  
-  
--   [Tareas relacionadas](#RelatedTasks)  
   
 ##  <a name="Overview"></a> Información general  
- A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SQL Server tiene la capacidad de cifrar los datos mientras crea una copia de seguridad. Al especificar el algoritmo y el sistema de cifrado (un certificado o una clave asimétrica) al crear una copia de seguridad, puede crear un archivo de copia de seguridad cifrado. Todos los destinos de almacenamiento: se admite el almacenamiento de Windows Azure y local. Además, las opciones de cifrado se pueden configurar para las operaciones de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], una característica nueva presentada en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+ A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SQL Server tiene la capacidad de cifrar los datos mientras crea una copia de seguridad. Al especificar el algoritmo y el sistema de cifrado (un certificado o una clave asimétrica) al crear una copia de seguridad, puede crear un archivo de copia de seguridad cifrado. Todos los destinos de almacenamiento: se admite el almacenamiento de Windows Azure y local. Además, las opciones de cifrado se pueden configurar para las operaciones de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] , una característica nueva presentada en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
  Para cifrar durante la copia de seguridad, debe especificar un algoritmo y un sistema cifrado para proteger la clave de cifrado. A continuación se exponen las opciones admitidas de cifrado:  
   
@@ -65,7 +52,6 @@ caps.handback.revision: 16
   
 5.  Puede integrar las claves de cifrado con los proveedores de Administración extensible de claves (EKM).  
   
- [&#91;Principio&#93;](#Top)  
   
 ##  <a name="Prerequisites"></a> Requisitos previos  
  Estos son los requisitos previos para cifrar una copia de seguridad:  
@@ -88,7 +74,6 @@ caps.handback.revision: 16
   
 -   La opción de anexar a un conjunto de copia de seguridad existente no se admite para las copias de seguridad cifradas.  
   
- [&#91;Principio&#93;](#Top)  
   
 ##  <a name="Permissions"></a> Permisos  
  **Para cifrar una copia de seguridad o restaurarla desde una copia de seguridad cifrada:**  
@@ -101,14 +86,14 @@ caps.handback.revision: 16
 ##  <a name="Methods"></a> Métodos de cifrado de copia de seguridad  
  Las secciones siguientes proporcionan una introducción breve a los pasos para cifrar los datos durante la copia de seguridad. Para ver un tutorial completo de los diferentes pasos para cifrar la copia de seguridad mediante Transact-SQL, vea [Crear una copia de seguridad cifrada](../../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
-### Usar SQL Server Management Studio  
+### <a name="using-sql-server-management-studio"></a>Usar SQL Server Management Studio  
  Puede cifrar una copia de seguridad al crear la copia de seguridad de una base de datos en alguno de los siguientes cuadros de diálogo:  
   
 1.  [Copia de seguridad de la base de datos &#40;página Opciones de copia de seguridad&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md) En la página **Opciones de copia de seguridad**, puede seleccionar **Cifrado** y especificar el algoritmo de cifrado y el certificado o la clave asimétrica que va a usar para el cifrado.  
   
 2.  [Usar el Asistente para planes de mantenimiento](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) Al seleccionar una tarea de copia de seguridad, en la pestaña **Opciones** de la página **Definir la tarea de copia de seguridad**, puede seleccionar **Cifrado de copia de seguridad** y especificar el algoritmo de cifrado y el certificado o la clave que se usarán para el cifrado.  
   
-### Usar Transact SQL:  
+### <a name="using-transact-sql"></a>Usar Transact SQL:  
  La siguiente es una instrucción Transact-SQL de ejemplo para cifrar el archivo de copia de seguridad:  
   
 ```  
@@ -128,7 +113,7 @@ GO
   
  Para obtener la sintaxis completa de la instrucción Transact-SQL, vea [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   
-### Usar PowerShell  
+### <a name="using-powershell"></a>Usar PowerShell  
  En este ejemplo se crean las opciones de cifrado y se usan como valor de parámetro en el cmdlet **Backup-SqlDatabase** para crear una copia de seguridad cifrada.  
   
 ```  
@@ -155,7 +140,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
 |[Crear una copia de seguridad cifrada](../../relational-databases/backup-restore/create-an-encrypted-backup.md)|Describe los pasos básicos necesarios para crear una copia de seguridad cifrada|  
 |[Administración extensible de claves con el Almacén de claves de Azure &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Proporciona un ejemplo de creación de una copia de seguridad cifrada protegida por claves en el almacén de claves de Azure.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)  
   
   

@@ -1,33 +1,37 @@
 ---
-title: "Trabajar con el seguimiento de cambios (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "seguimiento de cambios [SQL Server], realizar cambios"
-  - "seguimiento de cambios [SQL Server], solución de problemas"
-  - "actualizar datos [SQL Server]"
-  - "solucionar problemas [SQL Server], seguimiento de cambios"
-  - "cambios de datos [SQL Server]"
-  - "seguimiento de cambios de datos [SQL Server]"
-  - "datos [SQL Server], cambiar"
-  - "seguimiento de cambios [SQL Server], restauración de cambios"
-  - "cambio de seguimiento [SQL Server], garantizar resultados coherentes"
-  - "seguimiento de cambios [SQL Server], controlar cambios"
+title: Trabajar con el seguimiento de cambios (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- change tracking [SQL Server], making changes
+- change tracking [SQL Server], troubleshooting
+- updating data [SQL Server]
+- troubleshooting [SQL Server], change tracking
+- data changes [SQL Server]
+- tracking data changes [SQL Server]
+- data [SQL Server], changing
+- change tracking [SQL Server], data restore
+- change tracking [SQL Server], ensuring consistent results
+- change tracking [SQL Server], handling changes
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f7440e5f259c45a782066ac311a2f9f42c134c25
+ms.lasthandoff: 04/11/2017
+
 ---
-# Trabajar con el seguimiento de cambios (SQL Server)
+# <a name="work-with-change-tracking-sql-server"></a>Trabajar con el seguimiento de cambios (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Las aplicaciones que utilizan el seguimiento de cambios deben poder obtener los cambios que se han sometido a seguimiento, aplicarlos a otro almacén de datos y actualizar la base de datos de origen. En este tema se describe cómo realizar estas tareas y también el rol que desempeña el seguimiento de cambios cuando se produce una conmutación por error y una base de datos se debe restaurar a partir de una copia de seguridad.  
@@ -35,13 +39,13 @@ caps.handback.revision: 26
 ##  <a name="Obtain"></a> Obtener cambios mediante las funciones de seguimiento de cambios  
  Describe cómo utilizar las funciones de seguimiento de cambios para obtener las modificaciones y la información sobre los cambios que se realizaron en una base de datos.  
   
-### Acerca de las funciones de seguimiento de cambios  
+### <a name="about-the-change-tracking-functions"></a>Acerca de las funciones de seguimiento de cambios  
  Las aplicaciones pueden utilizar las funciones siguientes para obtener los cambios que se realizan en una base de datos e información sobre ellos:  
   
  Función CHANGETABLE(CHANGES…)  
  Esta función de conjunto de filas se utiliza para consultar la información sobre los cambios. La función consulta los datos almacenados en las tablas internas de seguimiento de cambios. La función devuelve un conjunto de resultados que contiene las claves principales de las filas que han cambiado, junto con información adicional sobre los cambios, como la operación, las columnas actualizadas y la versión de la fila.  
   
- CHANGETABLE(CHANGES …) toma como argumento el número de la última versión de sincronización. La última versión de sincronización se obtiene mediante la variable `@last_synchronization_version`. La semántica de la última versión de sincronización es la siguiente:  
+ CHANGETABLE(CHANGES …) toma como argumento el número de la última versión de sincronización. La última versión de sincronización se obtiene mediante la variable `@last_synchronization_version` . La semántica de la última versión de sincronización es la siguiente:  
   
 -   El cliente que realiza la llamada ha obtenido los cambios y sabe todos los que se han realizado hasta la última versión de sincronización, inclusive.  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 26
   
      La ilustración siguiente muestra cómo se usa CHANGETABLE(CHANGES...) para obtener los cambios.  
   
-     ![Ejemplo de resultado de una consulta de seguimiento de cambios](../../relational-databases/track-changes/media/queryoutput.gif "Ejemplo de resultado de una consulta de seguimiento de cambios")  
+     ![Ejemplo de resultado de la consulta de seguimiento de cambios](../../relational-databases/track-changes/media/queryoutput.gif "Ejemplo de resultado de la consulta de seguimiento de cambios")  
   
  Función CHANGE_TRACKING_CURRENT_VERSION()  
  Se utiliza para obtener la versión actual que se utilizará la próxima vez que se consulten los cambios. Esta versión representa la versión de la última transacción confirmada.  
@@ -57,7 +61,7 @@ caps.handback.revision: 26
  Función CHANGE_TRACKING_MIN_VALID_VERSION()  
  Se utiliza para obtener el número de versión mínimo válido que un cliente puede tener y seguir obteniendo resultados válidos de CHANGETABLE(). El cliente debe comparar la última versión de sincronización con el valor devuelto por esta función. Si el último número de versión de sincronización es menor que el de la versión devuelta por esta función, el cliente no podrá obtener resultados válidos de CHANGETABLE() y tendrá que reinicializar.  
   
-### Obtener los datos iniciales  
+### <a name="obtaining-initial-data"></a>Obtener los datos iniciales  
  Para que una aplicación pueda obtener los cambios por primera vez, debe enviar una consulta que obtenga los datos iniciales y la versión de sincronización. La aplicación debe obtener directamente los datos adecuados en la tabla y, a continuación, usar CHANGE_TRACKING_CURRENT_VERSION() para obtener la versión inicial. Esta versión se pasará a CHANGETABLE(CHANGES…) la primera vez que se obtengan los cambios.  
   
  En el ejemplo siguiente se muestra cómo se obtienen los datos de la versión de sincronización inicial y el conjunto de datos inicial.  
@@ -73,8 +77,8 @@ caps.handback.revision: 26
         SalesLT.Product AS P  
 ```  
   
-### Usar las funciones de seguimiento de cambios para obtener los cambios  
- Para obtener las filas cambiadas de una tabla e información sobre los cambios, utilice CHANGETABLE(CHANGES...). Por ejemplo, la consulta siguiente obtiene los cambios de la tabla `SalesLT.Product`.  
+### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>Usar las funciones de seguimiento de cambios para obtener los cambios  
+ Para obtener las filas cambiadas de una tabla e información sobre los cambios, utilice CHANGETABLE(CHANGES...). Por ejemplo, la consulta siguiente obtiene los cambios de la tabla `SalesLT.Product` .  
   
 ```tsql  
 SELECT  
@@ -85,7 +89,7 @@ FROM
   
 ```  
   
- Normalmente, un cliente deseará obtener los últimos datos de una fila y no solo las claves principales de la fila. Por consiguiente, una aplicación combinaría los resultados de CHANGETABLE(CHANGES...) con los datos de la tabla de usuario. Por ejemplo, la siguiente consulta se combina con la tabla `SalesLT.Product` para obtener los valores de las columnas `Name` y `ListPrice`. Observe el uso de la propiedad `OUTER JOIN`. Esto es necesario para asegurarse de que la información sobre los cambios se devuelve para las filas que han sido eliminadas de la tabla de usuario.  
+ Normalmente, un cliente deseará obtener los últimos datos de una fila y no solo las claves principales de la fila. Por consiguiente, una aplicación combinaría los resultados de CHANGETABLE(CHANGES...) con los datos de la tabla de usuario. Por ejemplo, la siguiente consulta se combina con la tabla `SalesLT.Product` para obtener los valores de las columnas `Name` y `ListPrice` . Observe el uso de la propiedad `OUTER JOIN`. Esto es necesario para asegurarse de que la información sobre los cambios se devuelve para las filas que han sido eliminadas de la tabla de usuario.  
   
 ```tsql  
 SELECT  
@@ -125,10 +129,10 @@ ON
     P.ProductID = CT.ProductID  
 ```  
   
-### Números de versión  
+### <a name="version-numbers"></a>Números de versión  
  Una base de datos con el seguimiento de cambios habilitado tiene un contador de versión que se incrementa cuando se realizan cambios en las tablas sometidas a seguimiento. Cada fila modificada tiene un número de versión asociado a ella. Cuando una solicitud se envía a una aplicación para consultar los cambios, se llama a una función que proporciona un número de versión. La función devuelve información sobre todos los cambios realizados desde esa versión. En cierto modo, la versión del seguimiento de cambios es similar en su concepto al tipo de datos **rowversion** .  
   
-### Validar la última versión sincronizada  
+### <a name="validating-the-last-synchronized-version"></a>Validar la última versión sincronizada  
  La información sobre los cambios se mantiene durante un tiempo limitado. El parámetro CHANGE_RETENTION, que se puede especificar como parte de la instrucción ALTER DATABASE, controla el intervalo de tiempo.  
   
  Tenga en cuenta que el tiempo especificado para CHANGE_RETENTION determina la frecuencia con que todas las aplicaciones deben solicitar los cambios de la base de datos. Si una aplicación tiene un valor para *last_synchronization_version* que es anterior a la versión de sincronización válida mínima para una tabla, esa aplicación no puede realizar una enumeración válida de los cambios. Esto se debe a que podría haberse limpiado parte de la información de los cambios. Antes de que una aplicación obtenga los cambios mediante CHANGETABLE(CHANGES…), debe validar el valor de *last_synchronization_version* que planea pasar a CHANGETABLE(CHANGES…). Si el valor de *last_synchronization_version* no es válido, esa aplicación debe reinicializar todos los datos.  
@@ -158,14 +162,14 @@ BEGIN
 END  
 ```  
   
-### Usar el seguimiento de columnas  
+### <a name="using-column-tracking"></a>Usar el seguimiento de columnas  
  El seguimiento de columnas permite a las aplicaciones obtener solo los datos de las columnas que han cambiado en lugar de la fila entera. Por ejemplo, considere el escenario en el que una tabla tiene una o varias columnas que son grandes, pero que raramente cambian. Además, hay otras columnas que cambian con frecuencia. Sin el seguimiento de columnas, una aplicación solo puede determinar que una fila ha cambiado y tendría que sincronizar todos los datos, incluidos los de las columnas grandes. Sin embargo, mediante el seguimiento de columnas, una aplicación puede determinar si los datos de las columnas grandes cambiaron y solo puede sincronizar los cambios en caso afirmativo.  
   
  La información de seguimiento de columnas aparece en la columna SYS_CHANGE_COLUMNS devuelta por la función CHANGETABLE(CHANGES…).  
   
  Se puede usar el seguimiento de columnas para que se devuelva NULL cuando una columna no haya cambiado. Si la columna se puede cambiar a NULL, se debe devolver una columna independiente para indicar si la columna cambió.  
   
- En el ejemplo siguiente, la columna `CT_ThumbnailPhoto` será `NULL` si esa columna no cambió. Esta columna también podría ser `NULL` si cambió a `NULL`; la aplicación puede usar la columna `CT_ThumbNailPhoto_Changed` para determinar si la columna cambió.  
+ En el ejemplo siguiente, la columna `CT_ThumbnailPhoto` será `NULL` si esa columna no cambió. Esta columna también podría ser `NULL` si cambió a `NULL` ; la aplicación puede usar la columna `CT_ThumbNailPhoto_Changed` para determinar si la columna cambió.  
   
 ```tsql  
 DECLARE @PhotoColumnId int = COLUMNPROPERTY(  
@@ -193,7 +197,7 @@ ON
      CT.SYS_CHANGE_OPERATION = 'U'  
 ```  
   
-### Obtener resultados coherentes y correctos  
+### <a name="obtaining-consistent-and-correct-results"></a>Obtener resultados coherentes y correctos  
  Para obtener los datos que han cambiado de una tabla, se requieren varios pasos. Tenga en cuenta que se pueden devolver resultados incoherentes o incorrectos si no se consideran y se tratan ciertos problemas.  
   
  Por ejemplo, para obtener los cambios que se realizaron en las tablas Sales y SalesOrders, una aplicación realizaría los pasos siguientes:  
@@ -220,7 +224,7 @@ ON
   
  Para superar los desafíos enumerados anteriormente, se recomienda utilizar el aislamiento de instantánea. Esto ayudará a garantizar la coherencia de la información de los cambios y a evitar las condiciones de anticipación relacionadas con la tarea de limpieza en segundo plano. Si no utiliza transacciones de instantáneas, el desarrollo de una aplicación que use el seguimiento de cambios puede requerir mucho más esfuerzo.  
   
-#### Usar el aislamiento de instantánea  
+#### <a name="using-snapshot-isolation"></a>Usar el aislamiento de instantánea  
  El seguimiento de cambios se ha diseñado para que funcione bien con el aislamiento de instantánea. El aislamiento de instantánea se debe habilitar para la base de datos. Todos los pasos necesarios para obtener los cambios deben estar incluidos dentro de una transacción de instantánea. De este modo se garantizará que todos los cambios que se realicen en los datos mientras se obtienen los cambios no serán visibles para las consultas dentro de la transacción de instantánea.  
   
  Para obtener los datos dentro de una transacción de instantánea, realice los pasos siguientes:  
@@ -264,7 +268,7 @@ COMMIT TRAN
   
  Para obtener más información sobre las transacciones de instantáneas, vea [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
-#### Alternativas al uso del aislamiento de instantánea  
+#### <a name="alternatives-to-using-snapshot-isolation"></a>Alternativas al uso del aislamiento de instantánea  
  Hay alternativas al uso del aislamiento de instantánea, pero exigen más trabajo para garantizar que se cumplan todos los requisitos de la aplicación. Para garantizar que el valor de *last_synchronization_version* sea válido y que el proceso de limpieza no quite los datos antes de que se obtengan los cambios, haga lo siguiente:  
   
 1.  Compruebe *last_synchronization_version* después de las llamadas a CHANGETABLE().  
@@ -287,7 +291,7 @@ COMMIT TRAN
 >  La elección del enfoque que va a funcionar para la aplicación cuando se usa el seguimiento de cambios (o cualquier mecanismo de seguimiento personalizado), requiere un análisis significativo. Por consiguiente, es mucho más fácil utilizar el aislamiento de instantánea.  
   
 ##  <a name="Handles"></a> Cómo el seguimiento de cambios controla los cambios en una base de datos  
- Algunas aplicaciones que utilizan el seguimiento de cambios realizan una sincronización bidireccional con otro almacén de datos. Es decir, los cambios que se realizan en la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se actualizan en el otro almacén de datos y los que se realizan en este se actualizan en la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Algunas aplicaciones que utilizan el seguimiento de cambios realizan una sincronización bidireccional con otro almacén de datos. Es decir, los cambios que se realizan en la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se actualizan en el otro almacén de datos y los que se realizan en este se actualizan en la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Cuando una aplicación actualiza la base de datos local con los cambios de otro almacén de datos, debe realizar las operaciones siguientes:  
   
@@ -309,7 +313,7 @@ COMMIT TRAN
   
      Una aplicación puede utilizar esta cláusula para almacenar los datos de contexto.  
   
-### Comprobar si hay conflictos  
+### <a name="checking-for-conflicts"></a>Comprobar si hay conflictos  
  En un escenario de sincronización bidireccional, la aplicación cliente debe determinar si una fila no ha sido actualizada desde que la aplicación obtuvo los cambios por última vez.  
   
  En el ejemplo siguiente se muestra cómo utilizar la función CHANGETABLE(VERSION …) para comprobar si hay conflictos de la manera más eficaz, sin una consulta independiente. En el ejemplo, `CHANGETABLE(VERSION …)` determina `SYS_CHANGE_VERSION` para la fila especificada por `@product id`. `CHANGETABLE(CHANGES …)` puede obtener la misma información, pero ese procedimiento sería menos eficiente. Si el valor de `SYS_CHANGE_VERSION` para la fila es mayor que el valor de `@last_sync_version`, hay un conflicto. Si hay un conflicto, la fila no se actualizará. La comprobación `ISNULL()` se requiere porque podría no haber ninguna información de cambios disponible para la fila. No existiría ninguna información de cambios si la fila no se hubiera actualizado desde que se habilitó el seguimiento de cambios o desde que se limpió la información de los cambios.  
@@ -355,7 +359,7 @@ BEGIN
 END  
 ```  
   
-### Establecer información de contexto  
+### <a name="setting-context-information"></a>Establecer información de contexto  
  Mediante la cláusula WITH CHANGE_TRACKING_CONTEXT, una aplicación puede almacenar la información de contexto junto con la información de cambios. Esta información se puede obtener a continuación en la columna SYS_CHANGE_CONTEXT que CHANGETABLE (CHANGES …) devuelve.  
   
  La información de contexto se suele utilizar para identificar el origen de los cambios. Si el origen del cambio se puede identificar, un almacén de datos puede utilizar esa información para evitar obtener los cambios cuando se sincronice de nuevo.  
@@ -377,7 +381,7 @@ END
          0)  
 ```  
   
-### Asegurarse de que los resultados son coherentes y correctos  
+### <a name="ensuring-consistent-and-correct-results"></a>Asegurarse de que los resultados son coherentes y correctos  
  Una aplicación debe considerar el proceso de limpieza cuando valida el valor de @last_sync_version. Esto se debe a que los datos se podrían haber quitado después de llamar a CHANGE_TRACKING_MIN_VALID_VERSION(), pero antes de que se realizara la actualización.  
   
 > [!IMPORTANT]  
@@ -432,7 +436,7 @@ COMMIT TRAN
   
 -   Cuando un cliente consulte cambios, registre el último número de versión de sincronización para cada cliente en el servidor. Si hay un problema con los datos, los números de última versión sincronizada no coincidirán. Esto indica que se requiere una reinicialización.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Acerca del seguimiento de cambios &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Administrar el seguimiento de cambios &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)   
@@ -443,3 +447,4 @@ COMMIT TRAN
  [WITH CHANGE_TRACKING_CONTEXT &#40;Transact-SQL&#41;](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md)  
   
   
+

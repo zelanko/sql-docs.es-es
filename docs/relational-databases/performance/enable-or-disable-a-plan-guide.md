@@ -1,27 +1,31 @@
 ---
-title: "Habilitar o deshabilitar una gu&#237;a de plan | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "guías de plan [SQL Server], deshabilitar"
-  - "habilitar guías de plan"
-  - "guías de plan [SQL Server], habilitar"
-  - "deshabilitar guías de plan"
+title: "Habilitar o deshabilitar una guía de plan | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- plan guides [SQL Server], disabling
+- enabling plan guides
+- plan guides [SQL Server], enabling
+- disabling plan guides
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1d76a7087ce1225c2ae3f4f685cb234b53dbf0b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Habilitar o deshabilitar una gu&#237;a de plan
+# <a name="enable-or-disable-a-plan-guide"></a>Habilitar o deshabilitar una guía de plan
   Puede deshabilitar y habilitar las guías de plan de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se puede habilitar o deshabilitar una única guía de plan o todas las guías de plan de una base de datos.  
   
  **En este tema**  
@@ -53,7 +57,7 @@ caps.handback.revision: 6
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para deshabilitar o habilitar una guía de plan  
+#### <a name="to-disable-or-enable-a-plan-guide"></a>Para deshabilitar o habilitar una guía de plan  
   
 1.  Haga clic en el signo más para expandir la base de datos en que desea deshabilitar o habilitar una guía de plan y, a continuación, haga clic en el signo más para expandir la carpeta **Programación** .  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 6
   
 4.  En el cuadro de diálogo **Deshabilitar guía de plan** o **Habilitar guía de plan** , compruebe que la acción elegida se ha realizado correctamente y haga clic en **Cerrar**.  
   
-#### Para habilitar o deshabilitar todas las guías de plan de una base de datos  
+#### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>Para habilitar o deshabilitar todas las guías de plan de una base de datos  
   
 1.  Haga clic en el signo más para expandir la base de datos en que desea deshabilitar o habilitar una guía de plan y, a continuación, haga clic en el signo más para expandir la carpeta **Programación** .  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 6
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para deshabilitar o habilitar una guía de plan  
+#### <a name="to-disable-or-enable-a-plan-guide"></a>Para deshabilitar o habilitar una guía de plan  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 6
   
     ```  
   
-#### Para habilitar o deshabilitar todas las guías de plan de una base de datos  
+#### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>Para habilitar o deshabilitar todas las guías de plan de una base de datos  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

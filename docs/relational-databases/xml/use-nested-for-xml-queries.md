@@ -1,29 +1,33 @@
 ---
-title: "Usar consultas FOR XML anidadas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cláusula FOR XML, consultas FOR XML anidadas"
-  - "consultas [XML en SQL Server], FOR XML anidadas"
-  - "consultas FOR XML anidadas"
+title: Usar consultas FOR XML anidadas | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, nested FOR XML queries
+- queries [XML in SQL Server], nested FOR XML
+- nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: af44fc3250f620dcaad219e67b0e414cd76974a7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar consultas FOR XML anidadas
+# <a name="use-nested-for-xml-queries"></a>Usar consultas FOR XML anidadas
   El tipo de datos **xml** y la [directiva TYPE en consultas FOR XML](../../relational-databases/xml/type-directive-in-for-xml-queries.md) permiten que el XML que devuelven las consultas FOR XML se pueda procesar en el servidor y también en el cliente.  
   
-## Procesar con variables de tipo xml  
+## <a name="processing-with-xml-type-variables"></a>Procesar con variables de tipo xml  
  Puede asignar el resultado de la consulta FOR XML a una variable de tipo **xml** , o utilizar XQuery para consultar el resultado y asignar ese resultado a una variable de tipo **xml** para procesarlo más.  
   
 ```  
@@ -81,7 +85,7 @@ SELECT  (SELECT ProductModelID, Name
 <row ProductModelID="122" Name="All-Purpose Bike Stand" />  
 ```  
   
-## Devolver resultados de consultas FOR XML internas a consultas externas como instancias de tipo xml  
+## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>Devolver resultados de consultas FOR XML internas a consultas externas como instancias de tipo xml  
  Puede escribir consultas `FOR XML` anidadas en las que el resultado de la consulta interna se devuelve como un tipo **xml** a la consulta externa. Por ejemplo:  
   
 ```  
@@ -103,7 +107,7 @@ FOR XML AUTO, TYPE;
   
 -   En la siguiente consulta interna se especifica la directiva `TYPE` . Por lo tanto, los datos XML devueltos por la consulta interna son de tipo **xml** . Si no se especifica la directiva TYPE, el resultado de la consulta `FOR XML` interna se devuelve como **nvarchar(max)** y se crean entidades de los datos XML.  
   
-## Controlar la forma de los datos XML resultantes  
+## <a name="controlling-the-shape-of-resulting-xml-data"></a>Controlar la forma de los datos XML resultantes  
  Las consultas FOR XML anidadas ofrecen mayor control en la definición de la forma de los datos XML resultantes. Es posible utilizar consultas FOR XML anidadas para construir XML parcialmente centrado en atributos y parcialmente centrado en elementos.  
   
  Para obtener más información sobre cómo especificar XML centrado en atributos y XML centrado en elementos para las consultas FOR XML anidadas, vea [Comparación de la consulta FOR XML con la consulta FOR XML anidada](../../relational-databases/xml/for-xml-query-compared-to-nested-for-xml-query.md) y [Dar forma a XML con consultas FOR XML anidadas](../../relational-databases/xml/shape-xml-with-nested-for-xml-queries.md).  
@@ -112,7 +116,7 @@ FOR XML AUTO, TYPE;
   
  Con independencia del modo que se utilice, las consultas FOR XML anidadas proporcionan mayor control en la descripción de la forma del XML resultante. Se pueden usar en lugar de las consultas en modo EXPLICIT.  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
  Los temas siguientes proporcionan ejemplos de consultas FOR XML anidadas.  
   
  [Comparación de la consulta FOR XML con la consulta FOR XML anidada](../../relational-databases/xml/for-xml-query-compared-to-nested-for-xml-query.md)  

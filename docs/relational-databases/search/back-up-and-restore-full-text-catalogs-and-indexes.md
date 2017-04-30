@@ -1,40 +1,44 @@
 ---
-title: "Realizar copias de seguridad de los cat&#225;logos de texto completo y restaurarlos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "índices de texto completo [SQL Server], hacer copias de seguridad"
-  - "búsqueda de texto completo [SQL Server], copia de seguridad y restauración"
-  - "recuperación [búsqueda de texto completo]"
-  - "copias de seguridad [SQL Server], índices de texto completo"
-  - "índices de texto completo [SQL Server], restaurar"
-  - "restauración, operaciones [búsqueda de texto completo]"
+title: "Realizar copias de seguridad y restaurar los índices y catálogos de texto completo | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text indexes [SQL Server], backing up
+- full-text search [SQL Server], back up and restore
+- recovery [full-text search]
+- backups [SQL Server], full-text indexes
+- full-text indexes [SQL Server], restoring
+- restore operations [full-text search]
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 caps.latest.revision: 62
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 36c621b35e944fe536e3a2983113ba7586e6e461
+ms.lasthandoff: 04/11/2017
+
 ---
-# Realizar copias de seguridad de los cat&#225;logos de texto completo y restaurarlos
+# <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Realizar copias de seguridad de los catálogos de texto completo y restaurarlos
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   En este tema se explica cómo hacer una copia de seguridad y restaurar los índices de texto completo creados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el catálogo de texto completo es un concepto lógico y no reside en un grupo de archivos. Por consiguiente, para hacer una copia de seguridad de un catálogo de texto completo en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe identificar cada grupo de archivos que contenga un índice de texto completo que pertenezca al catálogo. A continuación, debe hacer copia de seguridad de cada uno de estos grupos de archivos, uno por uno.  
   
 > [!IMPORTANT]  
->  Se pueden importar los catálogos de texto completo al actualizar una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Cada catálogo de texto completo importado es un archivo de base de datos en su propio grupo de archivos. Para hacer una copia de seguridad de un catálogo importado, basta con hacer una copia de seguridad de su grupo de archivos. Para obtener más información, vea [Realizar copias de seguridad y restaurar catálogos de texto completo](http://go.microsoft.com/fwlink/?LinkID=121052), en los Libros en pantalla de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+>  Se pueden importar los catálogos de texto completo al actualizar una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Cada catálogo de texto completo importado es un archivo de base de datos en su propio grupo de archivos. Para hacer una copia de seguridad de un catálogo importado, basta con hacer una copia de seguridad de su grupo de archivos. Para obtener más información, vea [Realizar copias de seguridad y restaurar catálogos de texto completo](http://go.microsoft.com/fwlink/?LinkID=121052), en los Libros en pantalla de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
 ##  <a name="backingup"></a> Hacer la copia de seguridad de los índices de texto completo de un catálogo de texto completo  
   
 ###  <a name="Find_FTIs_of_a_Catalog"></a> Encontrar los índices de texto completo de un catálogo de texto completo  
- Puede recuperar las propiedades de los índices de texto completo mediante la instrucción [SELECT](../../t-sql/queries/select-transact-sql.md) siguiente, que selecciona las columnas de las vistas de catálogo [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) y [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md).  
+ Puede recuperar las propiedades de los índices de texto completo mediante la instrucción [SELECT](../../t-sql/queries/select-transact-sql.md) siguiente, que selecciona las columnas de las vistas de catálogo [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) y [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) .  
   
 ```  
 USE AdventureWorks2012;  
@@ -48,7 +52,6 @@ SELECT object_name(@TableID), i.is_enabled, i.change_tracking_state,
 GO  
 ```  
   
- [En este tema](#top)  
   
 ###  <a name="Find_FG_of_FTI"></a> Buscar el grupo de archivos o archivo que contiene un índice de texto completo  
  Cuando se crea un índice de texto completo, se coloca en una de las ubicaciones siguientes:  
@@ -72,7 +75,6 @@ GO
   
 ```  
   
- [En este tema](#top)  
   
 ###  <a name="Back_up_FTIs_of_FTC"></a> Realizar la copia de seguridad de los grupos de archivos que contienen índices de texto completo  
  Después de buscar los grupos de archivos que contienen los índices de un catálogo de texto completo, necesita hacer una copia de seguridad de cada uno de los grupos de archivos. Durante el proceso de copia de seguridad, es posible que no se quiten ni agreguen catálogos de texto completo.  
@@ -85,7 +87,6 @@ GO
   
 -   [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
   
- [En este tema](#top)  
   
 ##  <a name="Restore_FTI"></a> Restaurar un índice de texto completo  
  Al restaurar un grupo de archivos que se ha incluido en una copia de seguridad, se restauran los archivos de índice de texto completo, así como los demás archivos del grupo de archivos. De forma predeterminada, el grupo de archivos se restaura en la ubicación del disco en la que se creó la copia de seguridad del grupo de archivos.  
@@ -100,11 +101,10 @@ GO
   
 -   [Restaurar archivos en una nueva ubicación &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
--   [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- [En este tema](#top)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)   
  [Actualizar la búsqueda de texto completo](../../relational-databases/search/upgrade-full-text-search.md)  
   

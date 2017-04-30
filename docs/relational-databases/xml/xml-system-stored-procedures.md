@@ -1,28 +1,32 @@
 ---
-title: "Procedimientos almacenados del sistema XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "procedimientos almacenados del sistema [SQL Server], XML"
-  - "sp_xml_removedocument"
-  - "Instrucción OPENXML, procedimientos almacenados del sistema"
-  - "sp_xml_preparedocument"
-  - "XML [SQL Server], procedimientos almacenados del sistema"
+title: Procedimientos almacenados del sistema XML | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- system stored procedures [SQL Server], XML
+- sp_xml_removedocument
+- OPENXML statement, system stored procedures
+- sp_xml_preparedocument
+- XML [SQL Server], system stored procedures
 ms.assetid: e60c7f85-6823-4d28-93d6-b053d08cc830
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c76485cd0e24578930b81c7ec537463f16351196
+ms.lasthandoff: 04/11/2017
+
 ---
-# Procedimientos almacenados del sistema XML
+# <a name="xml-system-stored-procedures"></a>Procedimientos almacenados del sistema XML
   SQL Server proporciona los siguientes procedimientos almacenados que se utilizan junto con OPENXML:  
   
 -   [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)  
@@ -34,9 +38,9 @@ caps.handback.revision: 27
 > [!NOTE]  
 >  El identificador de documentos devuelto por **sp_xml_preparedocument** es válido mientras dure la sesión.  
   
- La representación interna de un documento XML se puede quitar de la memoria llamando al procedimiento almacenado del sistema **sp_xml_removedocument**.  
+ La representación interna de un documento XML se puede quitar de la memoria llamando al procedimiento almacenado del sistema **sp_xml_removedocument** .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   
  [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)  
   

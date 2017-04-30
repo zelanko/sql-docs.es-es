@@ -1,22 +1,26 @@
 ---
-title: "Advanced Viewing of Target Data from Extended Events in SQL Server (Visualizaci&#243;n avanzada de datos de destino de eventos extendidos en SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/04/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Visualización avanzada de datos de destino de eventos extendidos en SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 10/04/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 caps.latest.revision: 4
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 4
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9d7fcf086b0eb18db72c2d710c061ccee9c01aaf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Advanced Viewing of Target Data from Extended Events in SQL Server (Visualizaci&#243;n avanzada de datos de destino de eventos extendidos en SQL Server)
+# <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Advanced Viewing of Target Data from Extended Events in SQL Server (Visualización avanzada de datos de destino de eventos extendidos en SQL Server)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -29,7 +33,7 @@ En este artículo se explica cómo usar las características avanzadas de SQL Se
 
 
 
-### Requisitos previos
+### <a name="prerequisites"></a>Requisitos previos
 
 En este artículo se da por hecho que ya sabe cómo crear e iniciar una sesión de eventos. En este artículo encontrará instrucciones sobre cómo crear una sesión de eventos:
 
@@ -42,7 +46,7 @@ En este artículo también se da por hecho que ha instalado una versión mensual
 
 
 
-### Diferencias con Base de datos SQL de Azure
+### <a name="differences-with-azure-sql-database"></a>Diferencias con Base de datos SQL de Azure
 
 
 Existe un grado de similitud muy elevado en la implementación y las capacidades de los eventos extendidos entre los productos Microsoft SQL Server y Base de datos SQL de Azure. Aun así, hay algunas diferencias que afectan a la interfaz de usuario de SSMS.
@@ -54,7 +58,7 @@ Existe un grado de similitud muy elevado en la implementación y las capacidades
 - En la interfaz de usuario de SSMS, si ve que la casilla **Observar datos en directo** está atenuada y deshabilitada, es porque esa característica no está disponible en Base de datos SQL.
 
 
-- Algunos eventos extendidos se instalan con SQL Server. En el nodo **Sesiones**, podemos ver **AlwaysOn_health** y algunos más. Estos eventos no están visibles cuando se conecta a Base de datos SQL, porque no existen para Bases de datos SQL.
+- Algunos eventos extendidos se instalan con SQL Server. En el nodo **Sesiones** , podemos ver **AlwaysOn_health** y algunos más. Estos eventos no están visibles cuando se conecta a Base de datos SQL, porque no existen para Bases de datos SQL.
 
 
 Este artículo está redactado desde la perspectiva de SQL Server. En él se usa el archivo de destino event_file, que es un área donde existen diferencias. Las menciones a otras diferencias se reducen a diferencias que son importantes o que no son evidentes.
@@ -66,20 +70,20 @@ Para obtener documentación sobre los eventos extendidos específicos de Base de
 
 
 
-## A. Opciones generales
+## <a name="a-general-options"></a>A. Opciones generales
 
 
 Por lo general, el acceso a las opciones avanzadas se logra por medio de uno de los siguientes métodos:
 
 
 - El menú habitual de **Archivo** > **Abrir** > **Archivo**.
-- Haciendo clic con el botón derecho en **Administración** > **Eventos extendidos** en el **Explorador de objetos**.
-- El menú especial **Eventos extendidos** y la barra de herramientas especial para eventos extendidos.
+- Haciendo clic con el botón derecho en **Administración** Eventos extendidos **en el** > **Explorador de objetos**.
+- El menú especial **Eventos extendidos**y la barra de herramientas especial para eventos extendidos.
 - Haciendo clic con el botón derecho en el panel con pestañas que muestra los datos de destino.
 
 
 
-## B. Recuperar datos de destino para mostrarlos en SSMS
+## <a name="b-bring-target-data-into-ssms-for-display"></a>B. Recuperar datos de destino para mostrarlos en SSMS
 
 
 Existen varias maneras de incorporar datos de destino del archivo event_file a la interfaz de usuario de SSMS. Al especificar un archivo de destino event_file, hay que definir un nombre y una ruta de acceso:
@@ -112,7 +116,7 @@ SSMS puede mostrar datos procedentes de cualquier destino. Pero la forma en que 
 
 
 
-### B.1 Abrir el archivo .XEL con el menú Archivo > Abrir > archivo
+### <a name="b1-open-xel-with-menu-file--open--file"></a>B.1 Abrir el archivo .XEL con el menú Archivo > Abrir > archivo
 
 
 Puede abrir un archivo .XEL concreto con el menú estándar **Archivo** > **Abrir** > **Archivo**.
@@ -121,7 +125,7 @@ También puede arrastrarlo y colocarlo en la barra de pestañas de la interfaz d
 
 
 
-### B.2 Ver datos de destino
+### <a name="b2-view-target-data"></a>B.2 Ver datos de destino
 
 
 La opción **Ver datos de destino** muestra los datos que se han capturado hasta ahora.
@@ -138,11 +142,12 @@ Los datos de destino se muestran en un panel con pestañas en SSMS. Esto se refl
 ![su destino > Ver datos de destino](../../relational-databases/extended-events/media/xevents-ssms-ui20-viewtargetdata.png)
 
 
-> [AZURE.NOTE] **Ver datos de destino** muestra los *datos acumulados procedentes de varios archivos .XEL* de la sesión de eventos en cuestión. Con cada ciclo **Iniciar**-**Detener** se crea un archivo con un entero derivado con una hora posterior insertado en el nombre, si bien cada archivo comparte el mismo nombre raíz.
+> [!NOTE] 
+> **Ver datos de destino** muestra los *datos acumulados procedentes de varios archivos .XEL* de la sesión de eventos en cuestión. Con cada ciclo **Iniciar**-**Detener** se crea un archivo con un entero derivado con una hora posterior insertado en el nombre, si bien cada archivo comparte el mismo nombre raíz.
 
 
 
-#### B.3 Observar datos en directo
+#### <a name="b3-watch-live-data"></a>B.3 Observar datos en directo
 
 
 Cuando la sesión de eventos está activa, puede que quiera ver los datos de eventos en tiempo real, a medida que el destino los vaya recibiendo.
@@ -160,7 +165,7 @@ La presentación de datos se actualiza en un intervalo que se puede especificar.
 
 
 
-### B.4 Ver .XEL con la función sys.fn_xe_file_target_read_file
+### <a name="b4-view-xel-with-sysfnxefiletargetreadfile-function"></a>B.4 Ver .XEL con la función sys.fn_xe_file_target_read_file
 
 
 En un procesamiento por lotes, la siguiente función de sistema puede generar XML para los registros de un archivo .XEL:
@@ -169,7 +174,7 @@ En un procesamiento por lotes, la siguiente función de sistema puede generar XM
 
 
 
-## C. Exportar los datos de destino
+## <a name="c-export-the-target-data"></a>C. Exportar los datos de destino
 
 
 Una vez que tenemos los datos de destino en SSMS, se pueden exportar a diversos formatos haciendo lo siguiente:
@@ -181,25 +186,25 @@ Una vez que tenemos los datos de destino en SSMS, se pueden exportar a diversos 
     ![Exportación de datos en pantalla: Eventos extendidos > Exportar a > (.csv, .xel o a una tabla)](../../relational-databases/extended-events/media/xevents-ssms-ui75-menuextevent-exportto-xel.png)
 
 2. Haga clic en el nuevo elemento de menú **Eventos extendidos**.
-3. Haga clic en **Exportar a** y, después, elija un formato.
+3. Haga clic en **Exportar a**y, después, elija un formato.
 
 
 
-## D. Manipular los datos en pantalla
+## <a name="d-manipulate-data-in-the-display"></a>D. Manipular los datos en pantalla
 
 
 La interfaz de usuario de SSMS no solo muestra los datos para verlos tal cual, sino que ofrece varias maneras de manipularlos.
 
 
 
-### D.1 Menús contextuales en la presentación de datos
+### <a name="d1-context-menus-in-the-data-display"></a>D.1 Menús contextuales en la presentación de datos
 
 
 En varios sitios de la presentación de datos se puede tener acceso a menús contextuales haciendo clic con el botón derecho.
 
 
 
-#### D.1.1 Hacer clic con el botón derecho en una celda de datos
+#### <a name="d11-right-click-a-data-cell"></a>D.1.1 Hacer clic con el botón derecho en una celda de datos
 
 
 En la siguiente captura de pantalla se muestra el menú contextual que aparece cuando se hace clic con el botón derecho en una celda en la presentación de datos. La captura de pantalla refleja también el elemento de menú **Copia** extendido.
@@ -209,10 +214,10 @@ En la siguiente captura de pantalla se muestra el menú contextual que aparece c
 
 
 
-#### D.1.2 Hacer clic con el botón derecho en un encabezado de columna
+#### <a name="d12-right-click-a-column-header"></a>D.1.2 Hacer clic con el botón derecho en un encabezado de columna
 
 
-En la siguiente captura de pantalla se muestra el menú contextual que aparece cuando se hace clic con el botón derecho en el encabezado **timestamp**.
+En la siguiente captura de pantalla se muestra el menú contextual que aparece cuando se hace clic con el botón derecho en el encabezado **timestamp** .
 
 
 ![Hacer clic con el botón derecho en un encabezado de columna en la presentación de datos. También, la cuadrícula Detalles.](../../relational-databases/extended-events/media/xevents-ssms-ui40-toolbar.png)
@@ -222,12 +227,12 @@ La captura de pantalla anterior muestra también la barra de herramientas especi
 
 
 
-### D.2 Elegir columnas, Combinar columnas
+### <a name="d2-choose-columns-merge-columns"></a>D.2 Elegir columnas, Combinar columnas
 
 
 La opción **Elegir columnas** permite controlar qué columnas de datos se muestran y cuáles no. El elemento de menú **Elegir columnas** se encuentra en varios sitios:
 
-- En el menú **Eventos extendidos**.
+- En el menú **Eventos extendidos** .
 - En la barra de herramientas de eventos extendidos.
 - En el menú contextual de un encabezado en la presentación de datos.
 
@@ -239,7 +244,7 @@ Al hacer clic en **Elegir columnas**, se abre un cuadro de diálogo con el mismo
 
 
 
-#### D.2.1 Combinar columnas
+#### <a name="d21-merge-columns"></a>D.2.1 Combinar columnas
 
 
 El cuadro de diálogo **Elegir columnas** tiene una sección dedicada a la combinación de varias columnas en una para uno de dos fines:
@@ -249,7 +254,7 @@ El cuadro de diálogo **Elegir columnas** tiene una sección dedicada a la combi
 
 
 
-### D.3 Filtros
+### <a name="d3-filters"></a>D.3 Filtros
 
 
 En el área de eventos extendidos, hay dos tipos principales de filtros que se pueden especificar:
@@ -261,8 +266,8 @@ En el área de eventos extendidos, hay dos tipos principales de filtros que se p
 
 Los filtros de visualización de SSMS son los siguientes:
 
-- Un filtro de *rango de tiempo*, que examina la columna **timestamp**.
-- Un filtro de *valores de columna*.
+- Un filtro de *rango de tiempo* , que examina la columna **timestamp** .
+- Un filtro de *valores de columna* .
 
 
 La relación entre el filtro de tiempo y el filtro de columnas es un valor booleano '*AND*'.
@@ -272,14 +277,14 @@ La relación entre el filtro de tiempo y el filtro de columnas es un valor boole
 
 
 
-### D.4 Agrupación y agregación
+### <a name="d4-grouping-and-aggregation"></a>D.4 Agrupación y agregación
 
 
 Agrupar filas con valores coincidentes en una misma columna es el primer paso para la agregación de datos.
 
 
 
-#### D.4.1 Agrupación
+#### <a name="d41-grouping"></a>D.4.1 Agrupación
 
 
 En la barra de herramientas de eventos extendidos, el botón **Agrupación** abre un cuadro de diálogo que sirve para agrupar los datos recogidos en una columna determinada. En la siguiente captura de pantalla se muestra un cuadro de diálogo en el que los datos se agrupan por la columna *name*.
@@ -292,7 +297,7 @@ Tras realizar la agrupación, la presentación de datos adquiere un nuevo aspect
 
 
 
-#### D.4.2 Agregación
+#### <a name="d42-aggregation"></a>D.4.2 Agregación
 
 
 Una vez agrupados los datos mostrados, puede pasar a agregar datos en otras columnas.  En la siguiente captura de pantalla se muestran los datos agrupados agregados por *count*.
@@ -305,11 +310,13 @@ Tras realizar la agregación, la presentación de datos adquiere un nuevo aspect
 
 
 
-### D.5 Ver el plan de consulta en tiempo de ejecución
+### <a name="d5-view-run-time-query-plan"></a>D.5 Ver el plan de consulta en tiempo de ejecución
 
 
-El evento **query_post_execution_showplan** permite ver el plan de consulta real en la interfaz de usuario de SSMS. Cuando el panel **Detalles** está visible, se puede ver un gráfico del plan de consulta en la pestaña **Plan de consulta**. Si se mantiene el puntero sobre un nodo del plan de consulta, verá una lista de nombres de propiedad y sus valores para el nodo.
+El evento **query_post_execution_showplan** permite ver el plan de consulta real en la interfaz de usuario de SSMS. Cuando el panel **Detalles** está visible, se puede ver un gráfico del plan de consulta en la pestaña **Plan de consulta** . Si se mantiene el puntero sobre un nodo del plan de consulta, verá una lista de nombres de propiedad y sus valores para el nodo.
 
 
 ![Plan de consulta con la lista de propiedades de un nodo](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
+
+
 

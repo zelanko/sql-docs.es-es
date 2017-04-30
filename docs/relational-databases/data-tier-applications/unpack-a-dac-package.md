@@ -1,32 +1,36 @@
 ---
-title: "Desempaquetar un paquete de DAC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "asistente [DAC], desempaquetar"
-  - "aplicación de capa de datos [SQL Server], desempaquetar"
-  - "procedimientos [DAC], desempaquetar"
-  - "DAC, desempaquetar"
+title: Desempaquetar un paquete DAC | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- wizard [DAC], unpack
+- data-tier application [SQL Server], unpack
+- How to [DAC], unpack
+- unpack DAC
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 417a725dfab59a77714f44bee0be19c544a6e284
+ms.lasthandoff: 04/11/2017
+
 ---
-# Desempaquetar un paquete de DAC
+# <a name="unpack-a-dac-package"></a>Desempaquetar un paquete de DAC
   Utilice el diálogo Unpack Data-tier Application para descomprimir los scripts y archivos de un paquete de la aplicación de capa de datos (DAC). Los scripts y archivos se colocan en una carpeta donde se pueden revisar antes de usar el paquete para implementar la DAC en un sistema de producción. El contenido de una DAC también se puede comparar con el contenido de otro paquete desempaquetado en otra carpeta.  
   
-1.  **Antes de empezar:**  [Seguridad](#Security)  
+1.  **Before you begin:**  [Security](#Security)  
   
-2.  **Para desempaquetar una DAC, mediante:** [Cuadro de diálogo Desempaquetar aplicación de capa de datos](#UnpackDACDial), [Examinar el contenido de un paquete DAC](#ExamDACPack)  
+2.  **To unpack a DAC, using:**  [Unpack Data-tier Application Dialog](#UnpackDACDial), [Examine the Contents of a DAC Package](#ExamDACPack)  
   
 ##  <a name="Security"></a> Seguridad  
  Se recomienda no implementar un paquete DAC desde orígenes desconocidos o que no sean de confianza. Es posible que estas DAC contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema. Antes de usar una DAC de un origen desconocido o que no es de confianza, impleméntela en una instancia de prueba aislada de [!INCLUDE[ssDE](../../includes/ssde-md.md)], desempaquete la DAC y examine el código, como los procedimientos almacenados o el código definido por el usuario.  
@@ -71,7 +75,7 @@ caps.handback.revision: 11
  **Cancelar** Cierra el cuadro de diálogo sin seleccionar una carpeta.  
   
 ##  <a name="ExamDACPack"></a> Examinar el contenido de un paquete DAC  
- Después de desempaquetar el paquete, puede examinar los archivos generados por el cuadro de diálogo **Desempaquetar aplicación de capa de datos**. El cuadro de diálogo compila los siguientes archivos en la carpeta de destino seleccionada:  
+ Después de desempaquetar el paquete, puede examinar los archivos generados por el cuadro de diálogo **Desempaquetar aplicación de capa de datos** . El cuadro de diálogo compila los siguientes archivos en la carpeta de destino seleccionada:  
   
 1.  Un script Transact-SQL que contiene las instrucciones para crear los objetos definidos en la DAC. El nombre de archivo es *NombreDAC*.sql, donde *NombreDAC* es el nombre de la DAC.  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 11
   
  Para obtener más información, consulte [Validate a DAC Package](../../relational-databases/data-tier-applications/validate-a-dac-package.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Implementar una aplicación de capa de datos](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [Actualizar una aplicación de capa de datos](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  

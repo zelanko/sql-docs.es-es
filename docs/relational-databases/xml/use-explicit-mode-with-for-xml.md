@@ -1,33 +1,37 @@
 ---
-title: "Usar el modo EXPLICIT con FOR XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "EXPLICIT FOR XML, modo"
-  - "Cláusula FOR XML, modo EXPLICIT"
-  - "FOR XML EXPLICIT [modo]"
+title: Usar el modo EXPLICIT con FOR XML | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- EXPLICIT FOR XML mode
+- FOR XML clause, EXPLICIT mode
+- FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4195550f1810bd344c85f2be7110b039ab3f09b2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar el modo EXPLICIT con FOR XML
+# <a name="use-explicit-mode-with-for-xml"></a>Usar el modo EXPLICIT con FOR XML
   Como se describe en el tema [Generar XML mediante FOR XML](../../relational-databases/xml/for-xml-sql-server.md), los modos RAW y AUTO no proporcionan demasiado control sobre la forma del XML generado a partir del resultado de una consulta. Sin embargo, el modo EXPLICIT ofrece la máxima flexibilidad para generar el XML que se desee a partir del resultado de una consulta.  
   
  La consulta en modo EXPLICIT debe escribirse de una determinada manera para poder especificar explícitamente la información adicional sobre el XML requerido, como el anidamiento esperado en el XML, como parte de la propia consulta. Dependiendo del XML que se solicite, la escritura de consultas en modo EXPLICIT puede resultar complicada. Tal vez, una alternativa más sencilla que escribir consultas en modo EXPLICIT sea [usar el modo PATH](../../relational-databases/xml/use-path-mode-with-for-xml.md) con anidamiento.  
   
  En modo EXPLICIT, el XML que se desea se describe como parte de la consulta, por lo que es necesario asegurarse de que el XML generado sea correcto y válido.  
   
-## Procesar conjuntos de filas en modo EXPLICIT  
+## <a name="rowset-processing-in-explicit-mode"></a>Procesar conjuntos de filas en modo EXPLICIT  
  El modo EXPLICIT transforma en un documento XML el conjunto de filas resultante de la ejecución de la consulta. Para que el modo EXPLICIT pueda generar el documento XML, el conjunto de filas debe ajustarse a un determinado formato. Por ello, es necesario escribir la consulta SELECT para generar el conjunto de filas, la **tabla universal**, con un formato específico que permita a la lógica del procesamiento generar el XML deseado.  
   
  En primer lugar, la consulta debe crear las dos columnas de metadatos siguientes:  
@@ -94,10 +98,10 @@ caps.handback.revision: 33
   
  En resumen, los valores de las columnas de metadatos **Tag** y **Parent** , la información proporcionada en los nombres de columna y el orden correcto de las filas generan el XML deseado al utilizar el modo EXPLICIT.  
   
-### Ordenación de las filas en la tabla universal  
+### <a name="universal-table-row-ordering"></a>Ordenación de las filas en la tabla universal  
  Al generar el XML, las filas de la tabla universal se procesan por orden. Por tanto, para recuperar las instancias secundarias correctas asociadas a su instancia primaria, las filas del conjunto de filas deben estar ordenadas de modo que a cada nodo principal le sigan directamente sus nodos secundarios.  
   
-## Especificar nombres de columna en una tabla universal  
+## <a name="specifying-column-names-in-a-universal-table"></a>Especificar nombres de columna en una tabla universal  
  Al escribir consultas en modo EXPLICIT, los nombres de columna del conjunto de filas resultante se deben especificar con este formato. Ofrecen información de transformación, incluidos nombres de elementos y atributos y otros datos, especificada mediante el uso de directivas.  
   
  Éste es el formato general:  
@@ -116,7 +120,7 @@ ElementName!TagNumber!AttributeName!Directive
  Es un valor de etiqueta único asignado a un elemento. Este valor, junto con las dos columnas de metadatos **Tag** y **Parent**, determina el anidamiento de los elementos en el XML resultante.  
   
  *AttributeName*  
- Proporciona el nombre del atributo que se va a crear en el identificador *ElementName* especificado. Éste es el comportamiento si no se especifica *Directive* .  
+ Proporciona el nombre del atributo que se va a crear en el identificador *ElementName*especificado. Éste es el comportamiento si no se especifica *Directive* .  
   
  Si se especifica *Directive* y es **xml**, **cdata**o **element**, este valor se utiliza para crear un elemento secundario de *ElementName*, y se le agrega el valor de la columna.  
   
@@ -143,7 +147,7 @@ ElementName!TagNumber!AttributeName!Directive
   
  Si se especifica *AttributeName* , el nombre de etiqueta se sustituye por el nombre especificado. En caso contrario, el atributo se agrega a la lista actual de atributos de los elementos que los incluyen colocando el contenido al principio del contenido sin codificación de entidades. La columna con esta directiva debe ser de tipo texto, como **varchar**, **nvarchar**, **char**, **nchar**, **text**o **ntext**. Esta directiva solo puede utilizarse con **hide**. Esta directiva es útil para capturar los datos de desbordamiento almacenados en una columna. Si el contexto no es un XML bien estructurado, el comportamiento no está definido.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  Los siguientes ejemplos ilustran el uso del modo EXPLICIT.  
   
 -   [Ejemplo: Recuperar información de los empleados](../../relational-databases/xml/example-retrieving-employee-information.md)  
@@ -166,7 +170,7 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [Ejemplo: Especificar la directiva XMLTEXT](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Usar el modo RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
  [Usar el modo AUTO con FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
  [Usar el modo PATH con FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)   

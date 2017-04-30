@@ -1,31 +1,35 @@
 ---
-title: "Grupo de recursos de servidor del regulador de recursos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Regulador de recursos, grupo de recursos"
-  - "grupo de recursos [SQL Server], información general"
-  - "grupo de recursos de servidor [SQL Server]"
+title: Grupo de recursos del regulador de recursos | Microsoft Docs
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, resource pool
+- resource pool [SQL Server], overview
+- resource pool [SQL Server]
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10b74a185e59a6b2973ea17fb4c68b61e781953f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Grupo de recursos de servidor del regulador de recursos
+# <a name="resource-governor-resource-pool"></a>Grupo de recursos de servidor del regulador de recursos
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   En el regulador de recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un grupo de recursos de servidor representa un subconjunto de los recursos físicos de una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. El regulador de recursos permite especificar los límites en cuanto a la cantidad de CPU, E/S física y memoria del grupo de recursos de servidor que pueden usar las solicitudes entrantes procedentes de las aplicaciones. Cada grupo de recursos de servidor puede contener uno o más grupos de cargas de trabajo. Cuando se inicia una sesión, el clasificador del regulador de recursos asigna la sesión a un grupo de cargas de trabajo concreto y la sesión se debe ejecutar utilizando los recursos asignados al grupo de cargas de trabajo.  
   
-## Conceptos de los grupos de recursos de servidor  
+## <a name="resource-pool-concepts"></a>Conceptos de los grupos de recursos de servidor  
  Un grupo de recursos de servidor, o grupo, representa los recursos físicos del servidor. Puede pensar en un grupo como en una instancia virtual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un grupo tiene dos partes. Una parte no se superpone con otros grupos, lo que permite una reserva mínima de recursos. La otra parte se comparte con otros grupos, lo que permite consumir el número máximo de recursos. Los recursos del grupo se definen especificando uno o varios de los siguientes valores para cada recurso (CPU, memoria y E/S física):  
   
 -   **MIN_CPU_PERCENT y MAX_CPU_PERCENT**  
@@ -113,7 +117,7 @@ caps.handback.revision: 17
   
  Los grupos de recursos de servidor definidos por el usuario son los que se crean para las cargas de trabajo concretas de un entorno. El regulador de recursos proporciona instrucciones DDL para crear, modificar y quitar grupos de recursos de servidor.  
   
-## Tareas de los grupos de recursos de servidor  
+## <a name="resource-pool-tasks"></a>Tareas de los grupos de recursos de servidor  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
@@ -121,7 +125,7 @@ caps.handback.revision: 17
 |Describe cómo cambiar la configuración del grupo de recursos de servidor.|[Cambiar la configuración del grupo de recursos de servidor](../../relational-databases/resource-governor/change-resource-pool-settings.md)|  
 |Describe cómo eliminar un grupo de recursos de servidor.|[Eliminar un grupo de recursos de servidor](../../relational-databases/resource-governor/delete-a-resource-pool.md)|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Grupos de cargas de trabajo del regulador de recursos](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
  [Función clasificadora del regulador de recursos](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   
@@ -129,3 +133,4 @@ caps.handback.revision: 17
  [Ver las propiedades del regulador de recursos](../../relational-databases/resource-governor/view-resource-governor-properties.md)  
   
   
+

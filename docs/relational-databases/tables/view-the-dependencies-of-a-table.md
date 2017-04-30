@@ -1,27 +1,31 @@
 ---
-title: "Ver las dependencias de una tabla | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dependencias de tabla [SQL Server]"
-  - "dependencias [SQL Server], tablas"
-  - "mostrar dependencias"
-  - "ver dependencias"
+title: Ver las dependencias de una tabla | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table dependencies [SQL Server]
+- dependencies [SQL Server], tables
+- displaying dependences
+- viewing dependencies
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8359eccee9aeda470c962793d13c85819ef9fe49
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ver las dependencias de una tabla
+# <a name="view-the-dependencies-of-a-table"></a>Ver las dependencias de una tabla
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Puede ver las dependencias de una tabla en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -47,7 +51,7 @@ caps.handback.revision: 24
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para ver las dependencias de una tabla  
+#### <a name="to-view-the-dependencies-of-a-table"></a>Para ver las dependencias de una tabla  
   
 1.  En el **Explorador de objetos**, expanda **Bases de datos**, expanda una base de datos y, a continuación, **Tablas**.  
   
@@ -55,11 +59,11 @@ caps.handback.revision: 24
   
 3.  En el cuadro de diálogo **Dependencias del objeto***\<nombre del objeto>*, seleccione **Objetos que dependen de** *\<nombre del objeto>* u **Objetos de los que depende***\<nombre del objeto>*****.  
   
-4.  Seleccione un objeto en la cuadrícula **Dependencias** . El tipo de objeto (por ejemplo, "Desencadenador" o "Procedimiento almacenado"), aparece en el cuadro **Tipo**.  
+4.  Seleccione un objeto en la cuadrícula **Dependencias** . El tipo de objeto (por ejemplo, "Desencadenador" o "Procedimiento almacenado"), aparece en el cuadro **Tipo** .  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para ver los objetos que dependen de una tabla  
+#### <a name="to-view-the-objects-that-depend-on-a-table"></a>Para ver los objetos que dependen de una tabla  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 24
   
     ```  
   
-#### Para ver los objetos de los que depende una tabla  
+#### <a name="to-view-the-objects-on-which-a-table-depends"></a>Para ver los objetos de los que depende una tabla  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

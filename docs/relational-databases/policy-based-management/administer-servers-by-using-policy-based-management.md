@@ -1,32 +1,36 @@
 ---
-title: "Administrar servidores mediante administraci&#243;n basada en directivas | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "faceta, vea facetas"
-  - "Declarative Management Framework, vea Administración basada en directivas"
-  - "configuración del área expuesta [SQL Server], administración basada en directivas."
-  - "administración basada en directivas"
-  - "facetas [administración basada en directivas]"
-  - "administración basada en directivas, administrar"
-  - "condiciones [administración basada en directivas]"
-  - "facetas [administración basada en directivas], acerca de las facetas"
-  - "rol PolicyAdministratorRole"
+title: "Administrar servidores mediante administración basada en directivas | Microsoft Docs"
+ms.custom: 
+ms.date: 08/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- facet See facets
+- Declarative Management Framework See Policy-Based Management
+- surface area configuration [SQL Server], Policy-Based Management
+- Policy-Based Management
+- facets [Policy-Based Management]
+- Policy-Based Management, administering
+- conditions [Policy-Based Management]
+- facets [Policy-Based Management], about facets
+- PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 caps.latest.revision: 76
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 76
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc3d3e94cd6d5993b9647a394338649fe357f021
+ms.lasthandoff: 04/11/2017
+
 ---
-# Administrar servidores mediante administraci&#243;n basada en directivas
+# <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores mediante administración basada en directivas
    La administración basada en directivas es un sistema basado en directivas para administrar una o más instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se usa para crear condiciones que contengan expresiones de condición. A continuación, cree directivas que apliquen las condiciones a los objetos de destino de la base de datos.  
 
 Por ejemplo, como el administrador de la base de datos, puede que desee asegurarse de que ciertos servidores no tienen habilitada la opción Correo electrónico de base de datos, por lo que crea una condición y una directiva que establece esa opción de servidor. 
@@ -47,7 +51,7 @@ Por ejemplo, como el administrador de la base de datos, puede que desee asegurar
   
 > **NOTA:** Cuando el sistema calcula el conjunto de objetos para una directiva, los objetos del sistema se excluyen de forma predeterminada.  Por ejemplo, si el conjunto de objetos de la directiva hace referencia a todas las tablas, la directiva no se aplicará a las tablas del sistema. Si los usuarios desean evaluar una directiva con los objetos del sistema, pueden agregar explícitamente objetos del sistema al conjunto de objetos. Sin embargo, aunque se admiten todas las directivas para el modo de evaluación **Comprobar en la programación** , por razones de rendimiento, no todas las directivas con conjuntos de objetos arbitrarios se admiten para el modo de evaluación **Comprobar en los cambios** . Para obtener más información, vea [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx).  
   
-## Tres componentes de la administración basada en directivas  
+## <a name="three-policy-based-management-components"></a>Tres componentes de la administración basada en directivas  
  La administración basada en directivas tiene tres componentes:  
   
 -   Administración de directivas. Los administradores de directivas crean las directivas.  
@@ -68,7 +72,7 @@ Por ejemplo, como el administrador de la base de datos, puede que desee asegurar
   
      Cuando las directivas automatizadas no estén habilitadas, la administración basada en directivas no afectará al rendimiento del sistema.  
   
-## Términos  
+## <a name="terms"></a>Términos  
  **Destino administrado por la administración basada en directivas** 
 Entidades que se administran con la administración basada en directivas, como una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], una base de datos, una tabla o un índice. Todos los destinos de una instancia de servidor forman una jerarquía de destino. Un conjunto de destinos es el resultado de aplicar un conjunto de filtros de destino a la jerarquía de destino, por ejemplo, todas las tablas de la base de datos que es propiedad del esquema HumanResources.  
   
@@ -101,7 +105,7 @@ Conjunto de propiedades lógicas que modelan el comportamiento o las caracterís
   
 -   El destino o uno de los antecesores de los destinos se suscribe al grupo de directivas que contiene esta directiva.  
   
-## Vínculos a tareas específicas 
+## <a name="links-to-specific-tasks"></a>Vínculos a tareas específicas 
 
  - [Almacenar directivas de administración basada en directivas.](https://msdn.microsoft.com/library/hh213476.aspx)|  
  - [Configurar alertas para notificar los errores de directiva a los administradores de directivas](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
@@ -115,10 +119,11 @@ Conjunto de propiedades lógicas que modelan el comportamiento o las caracterís
  - [Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
 
   
- ## Ejemplos
+ ## <a name="examples"></a>Ejemplos
  - [Crear la directiva Desactivado de forma predeterminada](https://msdn.microsoft.com/library/bb500172.aspx)
   - [Configurar un servidor para ejecutar la directiva Desactivado de forma predeterminada](https://msdn.microsoft.com/library/bb522470.aspx)
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Vistas de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   
+

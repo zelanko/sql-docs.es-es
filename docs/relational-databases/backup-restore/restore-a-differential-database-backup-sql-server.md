@@ -1,28 +1,32 @@
 ---
-title: "Restaurar una copia de seguridad diferencial de la base de datos (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "copias de seguridad diferenciales completas [SQL Server]"
-  - "restaurar bases de datos [SQL Server], copias de seguridad diferenciales completas"
-  - "copias de seguridad de base de datos [SQL Server], copias de seguridad diferenciales completas"
-  - "restauraciones de bases de datos [SQL Server], copias de seguridad diferenciales completas"
-  - "hacer copias de seguridad de bases de datos [SQL Server], copias de seguridad diferenciales completas"
+title: Restaurar una copia de seguridad diferencial de la base de datos (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full differential backups [SQL Server]
+- restoring databases [SQL Server], full differential backups
+- database backups [SQL Server], full differential backups
+- database restores [SQL Server], full differential backups
+- backing up databases [SQL Server], full differential backups
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c0a58f510ec12f0fbf8f635f9700275ce94b24b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurar una copia de seguridad diferencial de la base de datos (SQL Server)
+# <a name="restore-a-differential-database-backup-sql-server"></a>Restaurar una copia de seguridad diferencial de la base de datos (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   En este tema se describe cómo restaurar una copia de seguridad diferencial de la base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -57,24 +61,24 @@ caps.handback.revision: 46
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
   
--   En el modelo de recuperación optimizado para cargas masivas de registros o completa, para poder restaurar una base de datos, se debe realizar una copia de seguridad del registro de transacciones activo (conocido como final del registro). Para obtener más información, vea [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
+-   En el modelo de recuperación optimizado para cargas masivas de registros o completa, para poder restaurar una base de datos, se debe realizar una copia de seguridad del registro de transacciones activo (conocido como final del registro). Para más información, consulte [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- Si la base de datos que se va a restaurar no existe, el usuario debe tener permisos CREATE DATABASE para poder ejecutar RESTORE. Si la base de datos existe, los permisos RESTORE corresponden de forma predeterminada a los miembros de los roles fijos de servidor **sysadmin** y **dbcreator**, y al propietario (**dbo**) de la base de datos (para la opción FROM DATABASE_SNAPSHOT, la base de datos siempre existe).  
+ Si la base de datos que se va a restaurar no existe, el usuario debe tener permisos CREATE DATABASE para poder ejecutar RESTORE. Si la base de datos existe, los permisos RESTORE corresponden de forma predeterminada a los miembros de los roles fijos de servidor **sysadmin** y **dbcreator** , y al propietario (**dbo**) de la base de datos (para la opción FROM DATABASE_SNAPSHOT, la base de datos siempre existe).  
   
  Los permisos RESTORE se conceden a los roles en los que la información acerca de la pertenencia está siempre disponible para el servidor. Debido a que la pertenencia a un rol fijo de base de datos solo se puede comprobar cuando la base de datos es accesible y no está dañada, lo que no siempre ocurre cuando se ejecuta RESTORE, los miembros del rol fijo de base de datos **db_owner** no tienen permisos RESTORE.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para restaurar una copia de seguridad diferencial de la base de datos  
+#### <a name="to-restore-a-differential-database-backup"></a>Para restaurar una copia de seguridad diferencial de la base de datos  
   
 1.  Después de conectarse a la instancia adecuada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol de servidores.  
   
 2.  Expanda **Bases de datos**. En función de la base de datos, seleccione una base de datos de usuario o expanda **Bases de datos del sistema**y, a continuación, seleccione una base de datos del sistema.  
   
-3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**, **Restaurar** y luego haga clic en **Base de datos**.  
+3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**, **Restaurar**y luego haga clic en **Base de datos**.  
   
 4.  En la página **General** , use la sección **Origen** para especificar el origen y la ubicación de los conjuntos de copias de seguridad que se deben restaurar. Seleccione una de las siguientes opciones:  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 46
   
     -   **Dispositivo**  
   
-         Haga clic en el botón de exploración (**...**) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad**. En el cuadro **Tipo de medio de copia de seguridad** , seleccione uno de los tipos de dispositivo. Para seleccionar uno o varios dispositivos del cuadro **Medio de copia de seguridad** , haga clic en **Agregar**.  
+         Haga clic en el botón Examinar**...**para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . En el cuadro **Tipo de medio de copia de seguridad** , seleccione uno de los tipos de dispositivo. Para seleccionar uno o varios dispositivos del cuadro **Medio de copia de seguridad** , haga clic en **Agregar**.  
   
          Después de agregar los dispositivos que desee al cuadro de lista **Medio de copia de seguridad** , haga clic en **Aceptar** para volver a la página **General** .  
   
@@ -136,7 +140,7 @@ caps.handback.revision: 46
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para restaurar una copia de seguridad diferencial de la base de datos  
+#### <a name="to-restore-a-differential-database-backup"></a>Para restaurar una copia de seguridad diferencial de la base de datos  
   
 1.  Ejecute la instrucción RESTORE DATABASE con la cláusula NORECOVERY para restaurar la copia de seguridad de base de datos completa anterior a la copia de seguridad diferencial de la base de datos. Para obtener más información, vea [Cómo restaurar una copia de seguridad completa](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md).  
   
@@ -152,7 +156,7 @@ caps.handback.revision: 46
   
 ###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
   
-#### A. Restaurar una copia de seguridad diferencial de la base de datos  
+#### <a name="a-restoring-a-differential-database-backup"></a>A. Restaurar una copia de seguridad diferencial de la base de datos  
  En este ejemplo se restaura una copia de seguridad completa y una copia de seguridad diferencial de la base de datos `MyAdvWorks` .  
   
 ```tsql  
@@ -172,7 +176,7 @@ RESTORE DATABASE MyAdvWorks
 GO  
 ```  
   
-#### B. Restaurar una base de datos, una base de datos diferencial y una copia de seguridad del registro de transacciones  
+#### <a name="b-restoring-a-database-differential-database-and-transaction-log-backup"></a>B. Restaurar una base de datos, una base de datos diferencial y una copia de seguridad del registro de transacciones  
  En este ejemplo se restaura una copia de seguridad completa, una copia de seguridad diferencial y una copia de seguridad del registro de transacciones de la base de datos `MyAdvWorks` .  
   
 ```tsql  
@@ -208,8 +212,8 @@ GO
   
 -   [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Copias de seguridad diferenciales &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

@@ -1,29 +1,33 @@
 ---
-title: "Generar scripts (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Generar scripts (SQL Server Management Studio) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1bf73031c7e2e302d6174e6f21a005c3106f4cb2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Generar scripts (SQL Server Management Studio)
+# <a name="generate-scripts-sql-server-management-studio"></a>Generar scripts (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona dos mecanismos para generar scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Puede crear scripts para varios objetos con el **Asistente Generar y publicar scripts**. También puede generar un script para objetos individuales o varios objetos con el menú **Incluir como** del **Explorador de objetos**.  
   
-1.  **Elegir un método:**  [Asistente generar y publicar scripts](#GenPubScriptWiz), [Menú Incluir como del Explorador de objetos](#OEScriptAsMenu)  
+1.  **Choose a method:**  [Generate and Publish Scripts Wizard](#GenPubScriptWiz), [Object Explorer Script As Menu](#OEScriptAsMenu)  
   
-2.  **Para usar el script como menú:**  [Generar un script de un solo objeto](#ScriptSingleObject), [Generar un script de dos objetos mediante el Explorador de objetos](#ScriptTwoObjectsOE), [Generar un script de dos objetos usando los detalles del Explorador de objetos](#ScriptTwoObjectsOED)  
+2.  **To use the Script As menu:**  [Script a Single Object](#ScriptSingleObject), [Script Two Objects Using Object Explorer](#ScriptTwoObjectsOE), [Script Two Objects Using Object Explorer Details](#ScriptTwoObjectsOED)  
   
-## Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de comenzar  
  Elija el mecanismo que mejor cumpla sus requisitos.  
   
 ###  <a name="GenPubScriptWiz"></a> Asistente generar y publicar scripts  

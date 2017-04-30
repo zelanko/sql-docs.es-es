@@ -1,25 +1,29 @@
 ---
-title: "Usar el formato de caracteres Unicode para importar o exportar datos (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "formatos de datos [SQL Server], carácter Unicode"
-  - "Unicode [SQL Server], importación y exportación masivas"
+title: Usar el formato de caracteres Unicode para importar o exportar datos (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 09/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data formats [SQL Server], Unicode character
+- Unicode [SQL Server], bulk importing and exporting
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 63fb68860ade1e0bd64ce87ca98ec4439bf238fa
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar el formato de caracteres Unicode para importar o exportar datos (SQL Server)
+# <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Usar el formato de caracteres Unicode para importar o exportar datos (SQL Server)
 El formato de caracteres Unicode se recomienda para las transferencias masivas de datos entre varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un archivo de datos que contenga caracteres DBCS o extendidos. El formato de datos de caracteres Unicode permite exportar datos desde un servidor mediante una página de códigos utilizada por el cliente que está realizando la operación. En esos casos, el uso del formato de caracteres Unicode tiene las siguientes ventajas:  
   
 * Si los datos de origen y destino son de tipo Unicode, el uso del formato de caracteres Unicode mantiene todos los datos de los caracteres.  
@@ -32,7 +36,7 @@ El formato de caracteres Unicode se recomienda para las transferencias masivas d
 |[Consideraciones especiales sobre el uso del formato de caracteres Unicode, bcp y un archivo de formato](#special_considerations)|
 |[Opciones de comando para el formato de caracteres Unicode](#command_options)|
 |[Condiciones de prueba de ejemplo](#etc)<br />&emsp;&#9679;&emsp;[Tabla de ejemplo](#sample_table)<br />&emsp;&#9679;&emsp;[Archivo de formato no XML de ejemplo](#nonxml_format_file)|
-|[Ejemplos](#examples)<br />&emsp;&#9679;&emsp;[Usar bcp y el formato de caracteres para exportar datos](#bcp_widechar_export)<br />&emsp;&#9679;&emsp;[Usar bcp y el formato de caracteres Unicode para importar datos sin un archivo de formato](#bcp_widechar_import)<br />&emsp;&#9679;&emsp;[Usar bcp y el formato de caracteres Unicode para importar datos con un archivo de formato no XML](#bcp_widechar_import_fmt)<br />&emsp;&#9679;&emsp;[Usar BULK INSERT y el formato de caracteres Unicode sin un archivo de formato](#bulk_widechar)<br />&emsp;&#9679;&emsp;[Usar BULK INSERT y el formato de caracteres Unicode con un archivo de formato no XML](#bulk_widechar_fmt)<br />&emsp;&#9679;&emsp;[Usar OPENROWSET y el formato de caracteres Unicode con un archivo de formato no XML](#openrowset_widechar_fmt)|
+|[Ejemplos](#examples)<br />&emsp;&#9679;&emsp;[Usar bcp y el formato de caracteres Unicode para exportar datos](#bcp_widechar_export)<br />&emsp;&#9679;&emsp;[Usar bcp y el formato de caracteres Unicode para importar datos sin un archivo de formato](#bcp_widechar_import)<br />&emsp;&#9679;&emsp;[Usar bcp y el formato de caracteres Unicode para importar datos con un archivo de formato no XML](#bcp_widechar_import_fmt)<br />&emsp;&#9679;&emsp;[Usar BULK INSERT y el formato de caracteres Unicode sin un archivo de formato](#bulk_widechar)<br />&emsp;&#9679;&emsp;[Usar BULK INSERT y el formato de caracteres Unicode con un archivo de formato no XML](#bulk_widechar_fmt)<br />&emsp;&#9679;&emsp;[Usar OPENROWSET y el formato de caracteres Unicode con un archivo de formato no XML](#openrowset_widechar_fmt)|
 |[Tareas relacionadas](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
  
 ## Consideraciones sobre el uso del formato de caracteres Unicode<a name="considerations"></a>
@@ -57,7 +61,7 @@ La marca de orden de bytes podría malinterpretarse en las siguientes condicione
 
 * El primer campo del archivo de datos es un campo sin caracteres.
 
-Averigüe si alguna de las siguientes soluciones alternativas está disponible para su situación *concreta*:
+Averigüe si alguna de las siguientes soluciones alternativas está disponible para su situación *concreta* :
 * No use ningún archivo de formato.  A continuación se muestra un ejemplo de esta solución alternativa. Consulte [Usar bcp y el formato de caracteres Unicode para importar datos sin un archivo de formato](#bcp_widechar_import).
 
 * Use el modificador **-c** en vez de **-w**.
@@ -92,7 +96,7 @@ El formato de caracteres Unicode se puede usar con las siguientes opciones de co
 Los ejemplos de este tema se basan en la tabla y en el archivo de formato definidos a continuación.
 
 ### **Tabla de ejemplo**<a name="sample_table"></a>
-El siguiente script crea una base de datos de prueba, una tabla denominada `myWidechar`, y la rellena con algunos valores iniciales.  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+El siguiente script crea una base de datos de prueba, una tabla denominada `myWidechar` , y la rellena con algunos valores iniciales.  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 CREATE DATABASE TestDatabase;
 GO
@@ -118,7 +122,7 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
 ```
 
 ### **Archivo de formato no XML de ejemplo**<a name="nonxml_format_file"></a>
-SQL Server admite dos tipos de archivos de formato: XML y no XML.  El formato no XML es el formato original compatible con versiones anteriores de SQL Server.  Revise [Archivos de formato no XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) para obtener información detallada.  El siguiente comando hará uso de la [utilidad BCP](../../tools/bcp-utility.md) para generar un archivo de formato no XML, `myWidechar.fmt`, basado en el esquema de `myWidechar`.  Si quiere usar un comando [BCP](../../tools/bcp-utility.md) para crear un archivo de formato, especifique el argumento **format** y use **null** en lugar de una ruta de acceso de archivo de datos.  La opción format también requiere la opción **-f**.  Además, en este ejemplo, el calificador **c** se usa para especificar los datos de caracteres, mientras que **T** se usa para especificar una conexión de confianza que usa la seguridad integrada.  En un símbolo del sistema, escriba los comandos siguientes:
+SQL Server admite dos tipos de archivos de formato: XML y no XML.  El formato no XML es el formato original compatible con versiones anteriores de SQL Server.  Revise [Archivos de formato no XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) para obtener información detallada.  El siguiente comando hará uso de la [utilidad BCP](../../tools/bcp-utility.md) para generar un archivo de formato no XML, `myWidechar.fmt`, basado en el esquema de `myWidechar`.  Si quiere usar un comando [BCP](../../tools/bcp-utility.md) para crear un archivo de formato, especifique el argumento **format** y use **null** en lugar de una ruta de acceso de archivo de datos.  La opción format también requiere la opción **-f** .  Además, en este ejemplo, el calificador **c** se usa para especificar los datos de caracteres, mientras que **T** se usa para especificar una conexión de confianza que usa la seguridad integrada.  En un símbolo del sistema, escriba los comandos siguientes:
 
 ```
 bcp TestDatabase.dbo.myWidechar format nul -f D:\BCP\myWidechar.fmt -T -w
@@ -137,8 +141,8 @@ Notepad D:\BCP\myWidechar.fmt
 ## Ejemplos<a name="examples"></a>
 En los siguientes ejemplos se usan la base de datos y los archivos de formato creados anteriormente.
 
-### **Usar bcp y el formato de caracteres Unicode para exportar datos**<a name="bcp_widechar_export"></a>
-Modificador **-w** y comando **OUT**.  Nota: el archivo de datos creado en este ejemplo se usará en todos los ejemplos siguientes.  En un símbolo del sistema, escriba los comandos siguientes:
+### **Usar bcp y el formato de caracteres para exportar datos**<a name="bcp_widechar_export"></a>
+Modificador**-w** y comando **OUT** .  Nota: el archivo de datos creado en este ejemplo se usará en todos los ejemplos siguientes.  En un símbolo del sistema, escriba los comandos siguientes:
 ```
 bcp TestDatabase.dbo.myWidechar OUT D:\BCP\myWidechar.bcp -T -w
 
@@ -147,7 +151,7 @@ NOTEPAD D:\BCP\myWidechar.bcp
 ```
 
 ### **Usar bcp y el formato de caracteres Unicode para importar datos sin un archivo de formato**<a name="bcp_widechar_import"></a>
-Modificador **-w** y comando **IN**.  En un símbolo del sistema, escriba los comandos siguientes:
+Modificador**-w** y comando **IN** .  En un símbolo del sistema, escriba los comandos siguientes:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myWidechar;"
@@ -159,7 +163,7 @@ REM Review results is SSMS
 ```
 
 ### **Usar bcp y el formato de caracteres Unicode para importar datos con un archivo de formato no XML**<a name="bcp_widechar_import_fmt"></a>
-Modificadores **-w** y **-f** y comando **IN**.  Se deberá aplicar una solución alternativa, puesto que este ejemplo implica bcp, un archivo de formato, un carácter Unicode y el primer campo de datos del archivo de datos es un campo sin caracteres.  Consulte la sección [Consideraciones especiales sobre el uso del formato de caracteres Unicode, bcp y un archivo de formato](#special_considerations), que aparece más arriba.  El archivo de datos `myWidechar.bcp` se alterará mediante la adición de un registro adicional como registro "ficticio", que se omitirá con el modificador `-F 2`.
+Modificadores**-w** y **-f** switches y **IN** commy.  Se deberá aplicar una solución alternativa, puesto que este ejemplo implica bcp, un archivo de formato, un carácter Unicode y el primer campo de datos del archivo de datos es un campo sin caracteres.  Consulte la sección [Consideraciones especiales sobre el uso del formato de caracteres Unicode, bcp y un archivo de formato](#special_considerations), que aparece más arriba.  El archivo de datos `myWidechar.bcp` se alterará mediante la adición de un registro adicional como registro "ficticio", que se omitirá con el modificador `-F 2` .
 
 En un símbolo del sistema, escriba los siguientes comandos y siga los pasos de modificación:
 ```
@@ -181,7 +185,7 @@ bcp TestDatabase.dbo.myWidechar OUT D:\BCP\myWidechar.bcp -T -w
 ```
   
 ### **Usar BULK INSERT y el formato de caracteres Unicode sin un archivo de formato**<a name="bulk_widechar"></a>
-Argumento **DATAFILETYPE**.  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argumento**DATAFILETYPE** .  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar; -- for testing
 BULK INSERT TestDatabase.dbo.myWidechar
@@ -195,7 +199,7 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
 ```
   
 ### **Usar BULK INSERT y el formato de caracteres Unicode con un archivo de formato no XML**<a name="bulk_widechar_fmt"></a>
-Argumento **FORMATFILE**.  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argumento**FORMATFILE** .  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar; -- for testing
 BULK INSERT TestDatabase.dbo.myWidechar
@@ -209,7 +213,7 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
 ```
   
 ### **Usar OPENROWSET y el formato de caracteres Unicode con un archivo de formato no XML**<a name="openrowset_widechar_fmt"></a>
-Argumento **FORMATFILE**.  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argumento**FORMATFILE** .  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar;  -- for testing
 INSERT INTO TestDatabase.dbo.myWidechar
@@ -234,11 +238,12 @@ Para usar formatos de datos para la importación o exportación masivas
   
 -   [Usar el formato nativo Unicode para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## Vea también  
- [bcp (utilidad)](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Vea también  
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
+

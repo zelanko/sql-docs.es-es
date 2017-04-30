@@ -1,40 +1,44 @@
 ---
-title: "Agregar espacios de nombres a consultas con WITH XMLNAMESPACES | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ELEMENTS XSINIL, directiva"
-  - "agregar espacios de nombres"
-  - "XSINIL, directiva"
-  - "espacios de nombres predeterminados"
-  - "consultas [XML en SQL Server], cláusula WITH XMLNAMESPACES"
-  - "espacios de nombres predefinidos [XML en SQL Server]"
-  - "cláusula FOR XML, cláusula WITH XMLNAMESPACES."
-  - "espacios de nombres [XML en SQL Server]"
-  - "tipo de datos xml [SQL Server], cláusula WITH XMLNAMESPACES"
-  - "WITH XMLNAMESPACES, cláusula"
+title: Agregar espacios de nombres a consultas con WITH XMLNAMESPACES | Microsoft Docs
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ELEMENTS XSINIL directive
+- adding namespaces
+- XSINIL directive
+- default namespaces
+- queries [XML in SQL Server], WITH XMLNAMESPACES clause
+- predefined namespaces [XML in SQL Server]
+- FOR XML clause, WITH XMLNAMESPACES clause
+- namespaces [XML in SQL Server]
+- xml data type [SQL Server], WITH XMLNAMESPACES clause
+- WITH XMLNAMESPACES clause
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 63cc371d0a4b1c19971fe7f9e614f10d5c04765f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Agregar espacios de nombres a consultas con WITH XMLNAMESPACES
-  [WITH XMLNAMESPACES (Transact-SQL)](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md) proporciona compatibilidad con los URI de espacio de nombres de la siguiente manera:  
+# <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Agregar espacios de nombres a consultas con WITH XMLNAMESPACES
+  [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md) proporciona compatibilidad con los URI de espacio de nombres de la siguiente manera:  
   
 -   Hace que las asignaciones de prefijos de espacio de nombres a los URI estén disponibles al [generar XML mediante FOR XML](../../relational-databases/xml/for-xml-sql-server.md) .  
   
 -   Hace que las asignaciones de espacios de nombres a los URI estén disponibles para el contexto de espacio de nombres estático de los [métodos del tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md).  
   
-## Utilizar WITH XMLNAMESPACES en las consultas FOR XML  
+## <a name="using-with-xmlnamespaces-in-the-for-xml-queries"></a>Utilizar WITH XMLNAMESPACES en las consultas FOR XML  
  WITH XMLNAMESPACES permite incluir espacios de nombres XML en las consultas FOR XML. Por ejemplo, considere la siguiente consulta FOR XML:  
   
 ```  
@@ -95,7 +99,7 @@ FOR XML RAW ('ns1:Prod'), ELEMENTS
     INSERT INTO T VALUES('<myNS:root/>')  
     ```  
   
-## Utilizar la directiva XSINIL  
+## <a name="using-the-xsinil-directive"></a>Utilizar la directiva XSINIL  
  No se puede definir el prefijo xsi en la cláusula WITH XMLNAMESPACES si se utiliza la directiva ELEMENTS XSINIL. En su lugar, se agrega automáticamente cuando se utiliza ELEMENTS XSINIL. La consulta siguiente usa ELEMENTS XSINIL, que genera XML centrado en elementos donde los valores NULL se asignan a elementos que tienen el atributo **xsi:nil** establecido en True.  
   
 ```  
@@ -118,7 +122,7 @@ FOR XML RAW, ELEMENTS XSINIL
 </row>  
 ```  
   
-## Especificar espacios de nombres predeterminados  
+## <a name="specifying-default-namespaces"></a>Especificar espacios de nombres predeterminados  
  En lugar de declarar un prefijo de espacio de nombres, se puede declarar un espacio de nombres predeterminado mediante la palabra clave DEFAULT. En la consulta FOR XML, enlazará el espacio de nombres predeterminado con los nodos XML del XML resultante. En el ejemplo siguiente, WITH XMLNAMESPACES especifica dos prefijos de espacio de nombres definidos con un espacio de nombres predeterminado.  
   
 ```  
@@ -161,7 +165,7 @@ WHERE ProductID=316 or ProductID=317
 FOR XML AUTO, ROOT('ns2:root'), ELEMENTS  
 ```  
   
-## Utilizar espacios de nombres predefinidos  
+## <a name="using-predefined-namespaces"></a>Utilizar espacios de nombres predefinidos  
  Si se utilizan espacios de nombres predefinidos, excepto los espacios de nombres xml y xsi cuando se utiliza ELEMENTS XSINIL, es necesario especificar explícitamente el enlace con el espacio de nombres por medio de WITH XMLNAMESPACES. En la consulta siguiente se define explícitamente el enlace entre el prefijo de espacio de nombres y el URI para el espacio de nombres predefinido (`urn:schemas-microsoft-com:xml-sql`).  
   
 ```  
@@ -189,7 +193,7 @@ FOR XML PATH ('Translation')
 go  
 ```  
   
- Los atributos @xml:lang utilizan el espacio de nombres xml predefinido. Debido a que la versión 1.0 de XML no requiere la declaración explícita del enlace del espacio de nombres xml, el resultado no incluirá una declaración explícita del enlace de espacio de nombres.  
+ Los atributos @xml:lang usan el espacio de nombres xml predefinido. Debido a que la versión 1.0 de XML no requiere la declaración explícita del enlace del espacio de nombres xml, el resultado no incluirá una declaración explícita del enlace de espacio de nombres.  
   
  El resultado es el siguiente:  
   
@@ -200,8 +204,8 @@ go
 </Translation>  
 ```  
   
-## Utilizar WITH XMLNAMESPACES con los métodos del tipo de datos xml  
- Los [métodos del tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md) especificados en una consulta SELECT, o en UPDATE en el caso del método **modify()**, deben repetir la declaración del espacio de nombres en el prólogo. Esto puede resultar lento. Por ejemplo, la consulta siguiente recupera los identificadores de modelo de producto cuyas descripciones de catálogo no incluyen la especificación. Es decir, el elemento <`Specifications`> existe.  
+## <a name="using-with-xmlnamespaces-with-the-xml-data-type-methods"></a>Utilizar WITH XMLNAMESPACES con los métodos del tipo de datos xml  
+ Los [métodos del tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md) especificados en una consulta SELECT, o en UPDATE en el caso del método **modify()** , deben repetir la declaración del espacio de nombres en el prólogo. Esto puede resultar lento. Por ejemplo, la consulta siguiente recupera los identificadores de modelo de producto cuyas descripciones de catálogo no incluyen la especificación. Es decir, el elemento <`Specifications`> existe.  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -241,10 +245,10 @@ Go
   
  Debe tenerse en cuenta que una declaración explícita en el prólogo de una consulta XQuery reemplazará el prefijo de espacio de nombres y el espacio de nombres predeterminado del elemento definidos en la cláusula WITH.  
   
-## Vea también  
- [Métodos de tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)   
+## <a name="see-also"></a>Vea también  
+ [métodos del tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Referencia del lenguaje XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)   
- [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md)   
+ [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)   
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

@@ -1,29 +1,33 @@
 ---
-title: "Directrices para operaciones de &#237;ndices en l&#237;nea | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clústeres agrupados, operaciones en línea"
-  - "índices en línea, operaciones"
-  - "índices [SQL Server], operaciones en línea"
-  - "espacio de disco [SQL Server], índices"
-  - "índices no agrupados [SQL Server], operaciones en línea"
-  - "registros de transacciones [SQL Server], índices"
+title: "Directrices para operaciones de índices en línea | Microsoft Docs"
+ms.custom: 
+ms.date: 04/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clustered indexes, online operations
+- online index operations
+- indexes [SQL Server], online operations
+- disk space [SQL Server], indexes
+- nonclustered indexes [SQL Server], online operations
+- transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 caps.latest.revision: 64
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 44ef45ea5831186a3b6b7218111444d79ceef128
+ms.lasthandoff: 04/11/2017
+
 ---
-# Directrices para operaciones de &#237;ndices en l&#237;nea
+# <a name="guidelines-for-online-index-operations"></a>Directrices para operaciones de índices en línea
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Al realizar operaciones de índice en línea se aplican las siguientes directrices:  
@@ -32,14 +36,14 @@ caps.handback.revision: 60
   
 -   Los índices no clúster que no son únicos se pueden crear en línea cuando la tabla contiene tipos de datos LOB, pero ninguna de estas columnas se utiliza en la definición del índice como columna de clave o sin clave (incluida).  
   
--   Los índices de tablas temporales locales no se pueden crear, reconstruir o quitar en línea. Esta restricción no se aplica a los índices de tablas temporales globales.  
-  
+-   Los índices de tablas temporales locales no se pueden crear, reconstruir o quitar en línea. Esta restricción no se aplica a los índices de tablas temporales globales.
+
 > [!NOTE]  
->  Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+>  Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Features supported by editions](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) (Características compatibles con las ediciones de SQL Server 2016).  
   
- En la siguiente tabla se muestran operaciones de índice que se pueden llevar a cabo estando en línea y los índices que se excluyen de esas operaciones en línea. También se incluyen restricciones adicionales.  
+ En la siguiente tabla se muestran operaciones de índice que se pueden llevar a cabo estando en línea, los índices que se excluyen de esas operaciones en línea y restricciones de índice reanudables. También se incluyen restricciones adicionales.  
   
-|Operación de índice en línea|Índices excluidos|Otras restricciones|  
+| Operación de índice en línea | Índices excluidos | Otras restricciones |  
 |----------------------------|----------------------|------------------------|  
 |ALTER INDEX REBUILD|Índice clúster deshabilitado o vista indizada deshabilitada<br /><br /> Índice XML<br /><br />Índice de almacén de columnas <br /><br /> Índice de una tabla temporal local|Si se especifica la palabra clave ALL la operación puede ser errónea si la tabla contiene un índice excluido.<br /><br /> Se aplican restricciones adicionales para reconstruir índices deshabilitados. Para obtener más información, vea [Deshabilitar índices y restricciones](../../relational-databases/indexes/disable-indexes-and-constraints.md).|  
 |CREATE INDEX|Índice XML<br /><br /> Índice clúster único inicial en una vista<br /><br /> Índice de una tabla temporal local||  
@@ -61,7 +65,12 @@ caps.handback.revision: 60
  No se puede realizar una operación en línea cuando un índice contiene una columna del tipo de objetos grandes y en la misma transacción hay operaciones de actualización delante de esta operación en línea. Para solucionar temporalmente este problema, ponga la operación en línea fuera de la transacción o colóquela antes que cualquier actualización en la transacción.  
   
 ## <a name="disk-space-considerations"></a>Consideraciones acerca del espacio en disco  
- Normalmente, los requisitos de espacio en disco son los mismos para operaciones de índice en línea y sin conexión. Una excepción es el espacio en disco adicional que necesita el índice de asignación temporal. Este índice temporal se utiliza en operaciones de índice en línea que crean, reconstruyen o quitan un índice clúster. Para quitar un índice clúster en línea se requiere tanto espacio como para crearlo. Para más información, consulte [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
+ Las operaciones de índice en línea requieren más espacio en disco necesario que las operaciones de índice sin conexión. 
+ - Durante las operaciones de creación y regeneración de índices, se requiere espacio adicional para el índice que se crea o regenera. 
+ - Además, se requiere espacio en disco para el índice de asignación temporal. Este índice temporal se utiliza en operaciones de índice en línea que crean, reconstruyen o quitan un índice clúster.
+- Para quitar un índice agrupado en línea se requiere tanto espacio como para crearlo o regenerarlo. 
+
+Para más información, consulte [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
 ## <a name="performance-considerations"></a>Consideraciones de rendimiento  
  Aunque las operaciones de índice en línea permiten actividades de actualización de usuario simultáneas, las operaciones de índice tardan más si la actividad de actualización es muy grande. Normalmente, las operaciones de índice en línea son más lentas que las operaciones de índice sin conexión equivalentes, independientemente del nivel de actividad de actualización simultánea.  
@@ -70,7 +79,7 @@ caps.handback.revision: 60
   
  Aunque se recomiendan las operaciones en línea, se debe evaluar el entorno y los requisitos específicos. Puede ser mejor ejecutar operaciones de índice sin conexión. Al hacerlo así, los usuarios tienen acceso restringido a los datos durante la operación, pero la operación acaba más rápido y utiliza menos recursos.  
   
- En los equipos con varios procesadores que ejecutan [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], las instrucciones sobre índices pueden usar más procesadores para realizar las operaciones de examen y ordenación asociadas a dicha instrucción, al igual que hacen otras consultas. Puede utilizar la opción de índice MAXDOP para controlar el número de procesadores dedicados a la operación de índice en línea. De este modo, puede equilibrar los recursos utilizados por la operación de índice con los de los usuarios simultáneos. Para obtener más información, vea [Configurar operaciones de índice en paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md). Para obtener más información sobre las ediciones de SQL que admiten operaciones indexadas en paralelo, vea [Características compatibles con las ediciones de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ En los equipos con varios procesadores que ejecutan SQL Server 2016, puede que las instrucciones de índice usen más procesadores para realizar las operaciones de examen y ordenación asociadas a la instrucción, al igual que hacen otras consultas. Puede utilizar la opción de índice MAXDOP para controlar el número de procesadores dedicados a la operación de índice en línea. De este modo, puede equilibrar los recursos utilizados por la operación de índice con los de los usuarios simultáneos. Para obtener más información, vea [Configurar operaciones de índice en paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md). Para obtener más información sobre las ediciones de SQL que admiten operaciones indexadas en paralelo, vea [Features Supported by edition](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) (Características compatibles con las ediciones de SQL Server 2016).  
   
  Debido a que un bloqueo S o un bloqueo Sch-M se conservan en la fase final de la operación de índice, debe tener cuidado cuando ejecute una operación de índice en línea dentro de una transacción de usuario explícita, como el bloque BEGIN TRANSACTION...COMMIT. De esta manera el bloqueo se conserva hasta el final de la transacción y se impide la simultaneidad de usuarios.  
   
@@ -78,7 +87,7 @@ caps.handback.revision: 60
   
 ## <a name="transaction-log-considerations"></a>Consideraciones del registro de transacciones  
  Las operaciones de índice a gran escala, realizadas sin conexión o en línea, pueden generar grandes cargas de datos que pueden hacer que el registro de transacciones se llene rápidamente. Para estar seguros de que la operación de índice se pueda revertir, el registro de transacciones no se puede truncar hasta que se haya completado la operación de índice; no obstante, se puede realizar una copia de seguridad del registro durante la operación de índice. Por lo tanto, el registro de transacciones debe tener suficiente espacio para almacenar las transacciones de la operación de índice y cualquier transacción de usuario simultánea durante la operación de índice. Para más información, consulte [Transaction Log Disk Space for Index Operations](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md).  
-  
+
 ## <a name="related-content"></a>Contenido relacionado  
  [Cómo funcionan las operaciones de índice en línea](../../relational-databases/indexes/how-online-index-operations-work.md)  
   
@@ -89,3 +98,4 @@ caps.handback.revision: 60
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   
+

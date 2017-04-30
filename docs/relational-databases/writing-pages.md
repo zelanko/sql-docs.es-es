@@ -1,24 +1,28 @@
 ---
-title: "Escribir p&#225;ginas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "server-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "páginas"
+title: "Escribir páginas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pages
 ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
 caps.latest.revision: 2
-author: "pmasl"
-ms.author: "pelopes"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: pmasl
+ms.author: pelopes
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8f8e6bff396499886a23182787d84a84e6ceaf17
+ms.lasthandoff: 04/11/2017
+
 ---
-# Escribir p&#225;ginas
+# <a name="writing-pages"></a>Escribir páginas
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 La E/S de una instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)] incluye escrituras lógicas y físicas. Se produce una escritura lógica cuando se modifican los datos en una página de la caché del búfer. Una escritura física se produce cuando la página se escribe de la [caché del búfer](../relational-databases/memory-management-architecture-guide.md) al disco.

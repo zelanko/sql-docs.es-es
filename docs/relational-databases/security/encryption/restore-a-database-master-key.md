@@ -1,24 +1,28 @@
 ---
-title: "Restaurar una clave maestra de base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clave maestra de base de datos [SQL Server], importar"
+title: Restaurar una clave maestra de base de datos | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database master key [SQL Server], importing
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c2833a4b91d4465e126c0a393e756ab09106d1c8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurar una clave maestra de base de datos
+# <a name="restore-a-database-master-key"></a>Restaurar una clave maestra de base de datos
   En este tema se describe cómo restaurar la clave maestra de una base de datos en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **En este tema**  
@@ -50,7 +54,7 @@ caps.handback.revision: 16
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio con Transact-SQL  
   
-#### Para restaurar la clave maestra de una base de datos  
+#### <a name="to-restore-the-database-master-key"></a>Para restaurar la clave maestra de una base de datos  
   
 1.  Recupere una copia de seguridad de la clave maestra de la base de datos, ya sea desde un medio físico de copia de seguridad o desde un directorio del sistema de archivos local.  
   

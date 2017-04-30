@@ -1,25 +1,29 @@
 ---
-title: "Use SQL Server Connector with SQL Encryption Features (Usar el conector de SQL Server con caracter&#237;sticas de cifrado de SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Conector de SQL Server, uso"
-  - "EKM, con el conector de SQL Server"
+title: "Usar el Conector de SQL Server con características de cifrado de SQL | Microsoft Docs"
+ms.custom: 
+ms.date: 04/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Connector, using
+- EKM, with SQL Server Connector
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e24c6b23aeafcbeebf5cf5515803c7eb909a65db
+ms.lasthandoff: 04/11/2017
+
 ---
-# Use SQL Server Connector with SQL Encryption Features (Usar el conector de SQL Server con caracter&#237;sticas de cifrado de SQL)
+# <a name="use-sql-server-connector-with-sql-encryption-features"></a>Use SQL Server Connector with SQL Encryption Features (Usar el conector de SQL Server con características de cifrado de SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Las actividades de cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comunes con una clave asimétrica protegida por el Almacén de claves de Azure incluyen las siguientes tres áreas:  
@@ -30,20 +34,20 @@ caps.handback.revision: 13
   
 -   Cifrado de nivel de columna con una clave asimétrica desde el Almacén de claves  
   
- Complete las partes de I a IV del tema [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) (Pasos de instalación de Administración extensible de claves con el Almacén de claves de Azure) antes de seguir los pasos de este tema.  
+ Complete las partes de I a IV del tema [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)(Pasos de instalación de Administración extensible de claves con el Almacén de claves de Azure) antes de seguir los pasos de este tema.  
  
 > [!NOTE]  
->  Las versiones 1.0.0.440 y anteriores se han reemplazado y ya no se admiten en entornos de producción. Actualice a la versión 1.0.1.0 o posterior visitando el [Centro de descargas de Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) y con las instrucciones de la sección "Actualización del conector de SQL Server" de la página [Conector de SQL Server, apéndice](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
+>  Las versiones 1.0.0.440 y anteriores se han reemplazado y ya no se admiten en entornos de producción. Actualice a la versión 1.0.1.0 o posterior visitando el [Centro de descargas de Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) y con las instrucciones de la sección "Actualización del conector de SQL Server" de la página [Conector de SQL Server, apéndice](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) .  
   
-## Cifrado de datos transparente con una clave asimétrica desde el Almacén de claves de Azure  
+## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Cifrado de datos transparente con una clave asimétrica desde el Almacén de claves de Azure  
  Después de completar las partes I a IV del tema Setup Steps for Extensible Key Management Using the Azure Key Vault (Pasos de instalación de Administración extensible de claves con el Almacén de claves de Azure), use la clave del Almacén de claves de Azure para cifrar la clave de cifrado de la base de datos con TDE.  
 Necesitará crear una credencial y un inicio de sesión, además de una clave de cifrado de base de datos, que cifrará los datos y registros de la base de datos. Para cifrar una base de datos, es necesario tener el permiso **CONTROL** en la base de datos. En el siguiente gráfico se muestra la jerarquía de la clave de cifrado al usar el Almacén de claves de Azure.  
   
- ![Jerarquía&#45;de&#45;claves&#45;de&#45;EKM&#45;con&#45;AKV](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
+ ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
   
 1.  **Crear una credencial de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para el motor de base de datos que se usará para TDE**  
   
-     El motor de base de datos usa la credencial para acceder al Almacén de claves durante la carga de la base de datos. Se recomienda crear otro **id. de cliente** y **secreto** de Azure Active Directory en la parte I para [!INCLUDE[ssDE](../../../includes/ssde-md.md)] con el fin de limitar los permisos del Almacén de claves que se conceden.  
+     El motor de base de datos usa la credencial para acceder al Almacén de claves durante la carga de la base de datos. Se recomienda crear otro **id. de cliente** y **secreto** de Azure Active Directory en la parte I para [!INCLUDE[ssDE](../../../includes/ssde-md.md)]con el fin de limitar los permisos del Almacén de claves que se conceden.  
   
      Modifique el script de [!INCLUDE[tsql](../../../includes/tsql-md.md)] siguiente como se indica a continuación:  
   
@@ -79,7 +83,7 @@ Necesitará crear una credencial y un inicio de sesión, además de una clave de
     -- for the Database engine to use when it loads a database   
     -- encrypted by TDE.  
     CREATE LOGIN TDE_Login   
-    FROM ASYMMETRIC KEY ContosoRSAKey0;  
+    FROM ASYMMETRIC KEY CONTOSO_KEY;  
     GO   
   
     -- Alter the TDE Login to add the credential for use by the   
@@ -99,7 +103,7 @@ Necesitará crear una credencial y un inicio de sesión, además de una clave de
   
     CREATE DATABASE ENCRYPTION KEY   
     WITH ALGORITHM = AES_256   
-    ENCRYPTION BY SERVER ASYMMETRIC KEY ContosoRSAKey0;  
+    ENCRYPTION BY SERVER ASYMMETRIC KEY CONTOSO_KEY;  
     GO  
     ```  
   
@@ -112,15 +116,15 @@ Necesitará crear una credencial y un inicio de sesión, además de una clave de
     GO  
     ```  
   
-     Con [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], compruebe que se ha activado TDE conectándose a la base de datos con el Explorador de objetos. Haga clic con el botón derecho en la base de datos, seleccione **Tareas** y haga clic en **Administrar cifrado de base de datos**.  
+     Con [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], compruebe que se ha activado TDE conectándose a la base de datos con el Explorador de objetos. Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y haga clic en **Administrar cifrado de base de datos**.  
   
-     ![Explorador&#45;de&#45;objetos&#45;TDE&#45;de&#45;EKM](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
+     ![ekm&#45;tde&#45;object&#45;explorer](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
   
-     En el cuadro de diálogo **Administrar cifrado de base de datos**, confirme que TDE está activado y qué clave asimétrica está cifrando la DEK.  
+     En el cuadro de diálogo **Administrar cifrado de base de datos** , confirme que TDE está activado y qué clave asimétrica está cifrando la DEK.  
   
-     ![Cuadro&#45;de&#45;diálogo&#45;de&#45;TDE&#45;de&#45;EKM](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
+     ![ekm&#45;tde&#45;dialog&#45;box](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
   
-     También puede ejecutar el siguiente script de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un estado de cifrado de 3 indica que la base de datos está cifrada.  
+     También puede ejecutar el siguiente script de [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Un estado de cifrado de 3 indica que la base de datos está cifrada.  
   
     ```tsql  
     USE MASTER  
@@ -136,7 +140,7 @@ Necesitará crear una credencial y un inicio de sesión, además de una clave de
     > [!NOTE]  
     >  La base de datos de `tempdb` se cifra automáticamente cuando cualquier base de datos habilita TDE.  
   
-## Cifrado de copias de seguridad con una clave asimétrica desde el Almacén de claves  
+## <a name="encrypting-backups-by-using-an-asymmetric-key-from-the-key-vault"></a>Cifrado de copias de seguridad con una clave asimétrica desde el Almacén de claves  
  Las copias de seguridad cifradas se admiten a partir de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. En el ejemplo siguiente, se crea y se restaura una copia de seguridad cifrada con una clave de cifrado de datos protegida por la clave asimétrica en el Almacén de claves.  
 El [!INCLUDE[ssDE](../../../includes/ssde-md.md)] necesita las credenciales al acceder al Almacén de claves durante la carga de la base de datos. Se recomienda crear otro id. de cliente y secreto de Azure Active Directory en la parte I para el motor de base de datos con el fin de limitar los permisos que se conceden al Almacén de claves.  
   
@@ -169,7 +173,7 @@ El [!INCLUDE[ssDE](../../../includes/ssde-md.md)] necesita las credenciales al a
   
 2.  **Cree un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para el [!INCLUDE[ssDE](../../../includes/ssde-md.md)] para el cifrado de copia de seguridad**  
   
-     Cree un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que vaya a usar [!INCLUDE[ssDE](../../../includes/ssde-md.md)] para las copias de seguridad de cifrado y agréguele la credencial del Paso 1. En este ejemplo de [!INCLUDE[tsql](../../../includes/tsql-md.md)] se usa la misma clave que se importó anteriormente.  
+     Cree un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que vaya a usar [!INCLUDE[ssDE](../../../includes/ssde-md.md)]para las copias de seguridad de cifrado y agréguele la credencial del Paso 1. En este ejemplo de [!INCLUDE[tsql](../../../includes/tsql-md.md)] se usa la misma clave que se importó anteriormente.  
   
     > [!IMPORTANT]  
     >  No puede usar la misma clave asimétrica para el cifrado de copias de seguridad si ya ha usado esa clave para TDE (ejemplo anterior) o el cifrado de columna (ejemplo siguiente).  
@@ -194,7 +198,9 @@ El [!INCLUDE[ssDE](../../../includes/ssde-md.md)] necesita las credenciales al a
   
 3.  **Copia de seguridad de la base de datos**  
   
-     Haga una copia de seguridad de la base de datos especificando el cifrado con la clave simétrica almacenada en el Almacén de claves.  
+     Haga una copia de seguridad de la base de datos especificando el cifrado con la clave asimétrica almacenada en Key Vault.
+     
+     En el ejemplo siguiente, tenga en cuenta que si la base de datos ya se ha cifrado con TDE y la clave asimétrica `CONTOSO_KEY_BACKUP` es diferente de la clave asimétrica de TDE, la copia de seguridad se cifrará tanto por la clave asimétrica TDE como por `CONTOSO_KEY_BACKUP`. La instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de destino necesitará ambas claves para descifrar la copia de seguridad.
   
     ```tsql  
     USE master;  
@@ -207,6 +213,16 @@ El [!INCLUDE[ssDE](../../../includes/ssde-md.md)] necesita las credenciales al a
     GO  
     ```  
   
+4.  **Restaurar la base de datos**  
+    
+    Para restaurar una copia de seguridad de la base de datos cifrada con TDE, la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de destino debe disponer primero de una copia de la clave asimétrica de Key Vault usada para el cifrado. Así es como se lograría:  
+    
+    - Si la clave asimétrica original que se usa para TDE ya no está en Key Vault, restaure la copia de seguridad de la clave de Key Vault o vuelva a importar la clave desde un HSM local. **Importante:** Para que la huella digital de la clave coincida con la huella digital registrada en la copia de seguridad de la base de datos, la clave debe tener el **mismo nombre de clave de Key Vault** que tenía originalmente.
+    
+    - Aplique los pasos 1 y 2 a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de destino.
+    
+    - Una vez que la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de destino tenga acceso a las claves asimétricas usadas para cifrar la copia de seguridad, restaure la base de datos en el servidor.
+    
      Código de muestra de la restauración:  
   
     ```tsql  
@@ -218,13 +234,13 @@ El [!INCLUDE[ssDE](../../../includes/ssde-md.md)] necesita las credenciales al a
   
      Para obtener más información sobre las opciones de copias de seguridad, vea [BACKUP (Transact-SQL)](../../../t-sql/statements/backup-transact-sql.md).  
   
-## Cifrado de nivel de columna con una clave asimétrica desde el Almacén de claves  
+## <a name="column-level-encryption-by-using-an-asymmetric-key-from-the-key-vault"></a>Cifrado de nivel de columna con una clave asimétrica desde el Almacén de claves  
  En el ejemplo siguiente, se crea una clave simétrica protegida por la clave asimétrica en el Almacén de claves. Luego, se usa la clave simétrica para cifrar los datos de la base de datos.  
   
 > [!IMPORTANT]  
 >  No puede usar la misma clave asimétrica para el cifrado de copias de seguridad si ya ha usado esa clave para TDE o cifrado de copia de seguridad (ejemplos anteriores).  
   
- En este ejemplo se usa la clave asimétrica `CONTOSO_KEY_COLUMNS` almacenada en el Almacén de claves, que se puede importar o crear anteriormente, como se describe en el Paso 3, sección 3 de [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) (Pasos de instalación de Administración extensible de claves con el Almacén de claves de Azure). Para usar esta clave asimétrica en la base de datos de `ContosoDatabase`, debe ejecutar de nuevo la instrucción `CREATE ASYMMETRIC KEY` para proporcionar a la base de datos de `ContosoDatabase` una referencia a la clave.  
+ En este ejemplo se usa la clave asimétrica `CONTOSO_KEY_COLUMNS` almacenada en el Almacén de claves, que se puede importar o crear anteriormente, como se describe en el Paso 3, sección 3 de [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)(Pasos de instalación de Administración extensible de claves con el Almacén de claves de Azure). Para usar esta clave asimétrica en la base de datos de `ContosoDatabase` , debe ejecutar de nuevo la instrucción `CREATE ASYMMETRIC KEY` para proporcionar a la base de datos de `ContosoDatabase` una referencia a la clave.  
   
 ```tsql  
 USE [ContosoDatabase];  
@@ -265,10 +281,11 @@ SELECT CONVERT(VARCHAR, DECRYPTBYKEY(@DATA));
 CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;  
 ```  
   
-## Vea también  
- [Setup Steps for Extensible Key Management Using the Azure Key Vault (Pasos de instalación de Administración extensible de claves con el Almacén de claves de Azure)](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)   
+## <a name="see-also"></a>Vea también  
+ [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)   
  [Administración extensible de claves con el Almacén de claves de Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
  [EKM provider enabled (opción de configuración del servidor)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Conector de SQL Server, apéndice](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   
+

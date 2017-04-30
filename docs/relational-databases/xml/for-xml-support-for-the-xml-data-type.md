@@ -1,28 +1,32 @@
 ---
-title: "Compatibilidad de FOR XML con el tipo de datos xml | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "funciones definidas por el usuario [SQL Server], XML"
-  - "tipo de datos XML [SQL Server], cláusula FOR XML"
+title: Compatibilidad de FOR XML con el tipo de datos xml | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-defined functions [SQL Server], XML
+- xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9fcd42a40be7da666ed66dc7eb05600b081457ea
+ms.lasthandoff: 04/11/2017
+
 ---
-# Compatibilidad de FOR XML con el tipo de datos xml
+# <a name="for-xml-support-for-the-xml-data-type"></a>Compatibilidad de FOR XML con el tipo de datos xml
   Si una consulta FOR XML especifica una columna de tipo **xml** en la cláusula SELECT, los valores de columna se asignan como elementos en el XML devuelto, aunque no se especifique la directiva ELEMENTS. Las declaraciones XML en la columna de tipo **xml** no se serializan.  
   
- Por ejemplo, la consulta siguiente recupera información de contacto de clientes, como las columnas `BusinessEntityID`, `FirstName` y `LastName`, y los números de teléfono de la columna `AdditionalContactInfo` de tipo **xml**.  
+ Por ejemplo, la consulta siguiente recupera información de contacto de clientes, como las columnas `BusinessEntityID`, `FirstName`y `LastName` , y los números de teléfono de la columna `AdditionalContactInfo` de tipo **xml** .  
   
 ```  
 USE AdventureWorks2012;  
@@ -140,7 +144,7 @@ for xml auto;
 </root>  
 ```  
   
-## Devolver XML con una función definida por el usuario  
+## <a name="returning-xml-from-a-user-defined-function"></a>Devolver XML con una función definida por el usuario  
  Se pueden utilizar consultas FOR XML para obtener XML utilizando una función definida por el usuario que devuelva alguno de los siguientes resultados:  
   
 -   Una tabla con una sola columna de tipo **xml**  
@@ -177,7 +181,7 @@ set @x = (SELECT * FROM MyUDF(19));
 select @x;  
 ```  
   
- Este es otro ejemplo de función definida por el usuario. Esta función definida por el usuario devuelve una instancia de tipo **xml**. En este ejemplo, la función definida por el usuario devuelve una instancia XML con tipo, porque se especifica el espacio de nombres del esquema.  
+ Este es otro ejemplo de función definida por el usuario. Esta función definida por el usuario devuelve una instancia de tipo **xml** . En este ejemplo, la función definida por el usuario devuelve una instancia XML con tipo, porque se especifica el espacio de nombres del esquema.  
   
 ```  
 DROP FUNCTION dbo.MyUDF;  
@@ -194,7 +198,7 @@ BEGIN
 END;  
 ```  
   
- El XML devuelto por la función definida por el usuario se puede asignar a una variable de tipo **xml**, como se indica a continuación:  
+ El XML devuelto por la función definida por el usuario se puede asignar a una variable de tipo **xml** , como se indica a continuación:  
   
 ```  
 declare @x xml;  
@@ -202,7 +206,7 @@ SELECT @x= dbo.MyUDF4 (19) ;
 select @x;  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad con FOR XML para varios tipos de datos de SQL Server](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   

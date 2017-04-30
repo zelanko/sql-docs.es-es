@@ -1,25 +1,29 @@
 ---
-title: "Componentes comod&#237;n y validaci&#243;n del contenido | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Componentes comodín [XML]"
-  - "Contenidos de validación"
+title: "Componentes comodín y validación del contenido | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- wildcard components [XML]
+- content validation [XML]
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3eac26ac7add89b64c19672ae9fd34e224c6e7e1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Componentes comod&#237;n y validaci&#243;n del contenido
+# <a name="wildcard-components-and-content-validation"></a>Componentes comodín y validación del contenido
   Los componentes comodín se utilizan para aumentar la flexibilidad en cuanto a lo que se permite que aparezca en un modelo de contenido. El lenguaje XSD admite estos componentes de las formas siguientes:  
   
 -   Componentes de carácter comodín de elementos. Se representan mediante el elemento **\<xsd:any>**.  
@@ -34,7 +38,7 @@ caps.handback.revision: 13
   
 -   El valor **lax** especifica que solo se validan los elementos y atributos para los que hay disponibles definiciones de esquema.  
   
-## La validación lax y los elementos xs:anyType  
+## <a name="lax-validation-and-xsanytype-elements"></a>La validación lax y los elementos xs:anyType  
  La especificación de esquemas XML utiliza la validación **lax** para los elementos del tipo **anyType** . Puesto que [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] no admitía la validación lax, se aplicaba la validación estricta a los elementos **anyType**. A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], se admite la validación lax. El contenido de los elementos de tipo **anyType** se validará utilizando la validación lax.  
   
  En el ejemplo siguiente se ilustra la validación lax: el elemento de esquema `e` es de tipo **anyType** . El ejemplo crea variables **xml** con tipo e ilustra la validación lax del elemento de tipo **anyType** .  
@@ -75,7 +79,7 @@ SELECT @var
 GO  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Requisitos y limitaciones de las colecciones de esquemas XML en el servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

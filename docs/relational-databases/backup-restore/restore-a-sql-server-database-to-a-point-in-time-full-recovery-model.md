@@ -1,26 +1,30 @@
 ---
-title: "Restaurar una base de datos de SQL Server a un momento dado (modelo de recuperaci&#243;n completa) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cláusula STOPAT [instrucción RESTORE LOG]"
-  - "recuperación a un momento dado [SQL Server]"
-  - "restaurar bases de datos [SQL Server], momento dado"
+title: "Restaurar una base de datos de SQL Server a un momento dado (modelo de recuperación completa) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- STOPAT clause [RESTORE LOG statement]
+- point in time recovery [SQL Server]
+- restoring databases [SQL Server], point in time
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 caps.latest.revision: 50
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d20f1dbfd5cb21920ff323f8a09f33a9650c16a4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurar una base de datos de SQL Server a un momento dado (modelo de recuperaci&#243;n completa)
+# <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurar una base de datos de SQL Server a un momento dado (modelo de recuperación completa)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   En este tema se describe cómo restaurar una base de datos a un momento dado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Este tema solo es pertinente para las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usan los modelos de recuperación optimizados para cargas masivas de registros.  
@@ -51,7 +55,7 @@ caps.handback.revision: 50
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- Si la base de datos que se va a restaurar no existe, el usuario debe tener permisos CREATE DATABASE para poder ejecutar RESTORE. Si la base de datos existe, los permisos RESTORE corresponden de forma predeterminada a los miembros de los roles fijos de servidor **sysadmin** y **dbcreator** y al propietario (**dbo**) de la base de datos (para la opción FROM DATABASE_SNAPSHOT, la base de datos siempre existe).  
+ Si la base de datos que se va a restaurar no existe, el usuario debe tener permisos CREATE DATABASE para poder ejecutar RESTORE. Si la base de datos existe, los permisos RESTORE corresponden de forma predeterminada a los miembros de los roles fijos de servidor **sysadmin** y **dbcreator** , y al propietario (**dbo**) de la base de datos (para la opción FROM DATABASE_SNAPSHOT, la base de datos siempre existe).  
   
  Los permisos RESTORE se conceden a los roles en los que la información acerca de la pertenencia está siempre disponible para el servidor. Debido a que la pertenencia a un rol fijo de base de datos solo se puede comprobar cuando la base de datos es accesible y no está dañada, lo que no siempre ocurre cuando se ejecuta RESTORE, los miembros del rol fijo de base de datos **db_owner** no tienen permisos RESTORE.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 50
   
 2.  Expanda **Bases de datos**. En función de la base de datos, seleccione una base de datos de usuario o expanda **Bases de datos del sistema**y, a continuación, seleccione una base de datos del sistema.  
   
-3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**, **Restaurar** y luego haga clic en **Base de datos**.  
+3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**, **Restaurar**y luego haga clic en **Base de datos**.  
   
 4.  En la página **General** , use la sección **Origen** para especificar el origen y la ubicación de los conjuntos de copias de seguridad que se deben restaurar. Seleccione una de las siguientes opciones:  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 50
   
     -   **Dispositivo**  
   
-         Haga clic en el botón Examinar **...** para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad**. En el cuadro **Tipo de medio de copia de seguridad** , seleccione uno de los tipos de dispositivo. Para seleccionar uno o varios dispositivos del cuadro **Medio de copia de seguridad** , haga clic en **Agregar**.  
+         Haga clic en el botón Examinar**...**para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . En el cuadro **Tipo de medio de copia de seguridad** , seleccione uno de los tipos de dispositivo. Para seleccionar uno o varios dispositivos del cuadro **Medio de copia de seguridad** , haga clic en **Agregar**.  
   
          Después de agregar los dispositivos que desee al cuadro de lista **Medio de copia de seguridad** , haga clic en **Aceptar** para volver a la página **General** .  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 50
 14. Seleccione **Preguntar antes de restaurar cada copia de seguridad** si desea que se le pregunte en cada operación de restauración. No suele ser necesario a menos que la base de datos sea grande y desee supervisar el estado de la operación de restauración.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
- **Antes de empezar**  
+ **Before you begin**  
   
  La restauración a un momento específico siempre se realiza a partir de una copia de seguridad de registros. En cada instrucción RESTORE LOG de la secuencia de restauración, debe especificar el momento de destino o transacción en una cláusula STOPAT idéntica. Como requisito previo para la restauración a un momento específico, debe restaurar primero una copia de seguridad completa de la base de datos cuyo punto final sea anterior al momento de restauración de destino. La copia de seguridad completa de la base de datos puede ser anterior a la copia de seguridad completa de la base de datos más reciente siempre y cuando restaure cada copia de seguridad del registro siguiente, hasta la copia de seguridad del registro que contiene el momento específico de destino, inclusive.  
   
@@ -142,14 +146,14 @@ caps.handback.revision: 50
  **Para restaurar una base de datos a un momento dado**  
   
 > [!NOTE]  
->  Para ver un ejemplo de este procedimiento, vea [Ejemplo (Transact-SQL)](#TsqlExample) más adelante en esta sección.  
+>  Para ver un ejemplo de este procedimiento, vea [Ejemplo (Transact-SQL)](#TsqlExample)más adelante en esta sección.  
   
 1.  Conéctese a la instancia de servidor en la que desea restaurar la base de datos.  
   
 2.  Ejecute la instrucción RESTORE DATABASE con la opción NORECOVERY.  
   
     > [!NOTE]  
-    >  Si una secuencia de restauración parcial excluye cualquier grupo de archivos [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md), no se admite la restauración a un momento dado. Puede forzarse la continuación de la secuencia de restauración. Sin embargo, no se podrán restaurar los grupos de archivos FILESTREAM omitidos en la instrucción RESTORE. Para forzar una restauración a un momento específico, especifique la opción CONTINUE_AFTER_ERROR junto con la opción STOPAT, STOPATMARK o STOPBEFOREMARK, que debe especificar también en las instrucciones RESTORE LOG siguientes. Si se especifica CONTINUE_AFTER_ERROR, la secuencia de restauración parcial será correcta y el grupo de archivos FILESTREAM no será recuperable.  
+    >  Si una secuencia de restauración parcial excluye cualquier grupo de archivos [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) , no se admite la restauración a un momento dado. Puede forzarse la continuación de la secuencia de restauración. Sin embargo, no se podrán restaurar los grupos de archivos FILESTREAM omitidos en la instrucción RESTORE. Para forzar una restauración a un momento específico, especifique la opción CONTINUE_AFTER_ERROR junto con la opción STOPAT, STOPATMARK o STOPBEFOREMARK, que debe especificar también en las instrucciones RESTORE LOG siguientes. Si se especifica CONTINUE_AFTER_ERROR, la secuencia de restauración parcial será correcta y el grupo de archivos FILESTREAM no será recuperable.  
   
 3.  Restaure la última copia de seguridad de base de datos diferencial, si la hubiera, sin recuperar la base de datos (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
@@ -187,7 +191,7 @@ GO
   
 -   [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
--   [Restaurar una base de datos según el punto de error en el modelo de recuperación completa &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [Restaurar una base de datos según el punto de error en el modelo de recuperación completa &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [Restaurar una base de datos en una transacción marcada &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
@@ -195,9 +199,9 @@ GO
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> (SMO)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
   

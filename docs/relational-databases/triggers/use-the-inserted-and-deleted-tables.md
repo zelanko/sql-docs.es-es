@@ -1,30 +1,34 @@
 ---
-title: "Usar las tablas insertadas y eliminadas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "inserted, tablas"
-  - "UPDATE, instrucción [SQL Server], desencadenadores DML"
-  - "DELETE, instrucción [SQL Server], desencadenadores DML"
-  - "INSTEAD OF, desencadenadores"
-  - "deleted, tablas"
-  - "INSERT, instrucción [SQL Server], desencadenadores DML"
-  - "desencadenadores DML, tablas eliminadas o insertadas"
+title: Usar las tablas insertadas y eliminadas | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- inserted tables
+- UPDATE statement [SQL Server], DML triggers
+- DELETE statement [SQL Server], DML triggers
+- INSTEAD OF triggers
+- deleted tables
+- INSERT statement [SQL Server], DML triggers
+- DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f7b04d0977ceaa1bde5eddf5246be56822517e84
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar las tablas insertadas y eliminadas
+# <a name="use-the-inserted-and-deleted-tables"></a>Usar las tablas insertadas y eliminadas
   En las instrucciones de desencadenadores DML se usan dos tablas especiales: la tabla inserted y la tabla deleted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea y administra automáticamente ambas tablas. Puede utilizar estas tablas temporales residentes en memoria para probar los efectos de determinadas modificaciones de datos y para establecer condiciones para las acciones de los desencadenadores DML. No puede modificar directamente los datos de estas tablas ni realizar en ellas operaciones de lenguaje de definición de datos (DDL), como CREATE INDEX.  
   
  En los desencadenadores DML, las tablas inserted y deleted se utilizan principalmente para realizar las siguientes tareas:  
@@ -46,19 +50,19 @@ caps.handback.revision: 35
  Cuando establezca condiciones para el desencadenador, utilice las tablas inserted y deleted correspondientes a la acción que lo activó. Aunque no se produce ningún error al hacer referencia a la tabla deleted cuando se prueba una instrucción INSERT, o bien al hacer referencia a la tabla inserted cuando se prueba una instrucción DELETE, estas tablas de prueba del desencadenador no contendrán filas en estos casos.  
   
 > [!NOTE]  
->  Si las acciones del desencadenador dependen del número de filas afectadas por una modificación de datos, utilice pruebas (como, por ejemplo, un examen de @@ROWCOUNT) para las modificaciones de datos que afecten a varias filas (instrucciones INSERT, DELETE o UPDATE basadas en una instrucción SELECT) y tome las medidas oportunas.  
+>  Si las acciones del desencadenador dependen del número de filas afectadas por una modificación de datos, use pruebas (como, por ejemplo, un examen de @@ROWCOUNT) para las modificaciones de datos que afecten a varias filas (instrucciones INSERT, DELETE o UPDATE basadas en una instrucción SELECT) y tome las medidas oportunas.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no permite referencias a las columnas **text**, **ntext** o **image** en las tablas insertadas y eliminadas por los desencadenadores AFTER. Sin embargo, estos tipos de datos se incluyen únicamente por motivos de compatibilidad con versiones anteriores. El método preferido para almacenar datos grandes es usar los tipos de datos **varchar(max)**, **nvarchar(max)** y **varbinary(max)**. Tanto los desencadenadores AFTER como INSTEAD OF admiten los datos **varchar(max)**, **nvarchar(max)** y **varbinary(max)** en las tablas insertadas y eliminadas. Para obtener más información, vea [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no permite referencias a las columnas **text**, **ntext**o **image** en las tablas insertadas y eliminadas por los desencadenadores AFTER. Sin embargo, estos tipos de datos se incluyen únicamente por motivos de compatibilidad con versiones anteriores. El método preferido para almacenar datos grandes es usar los tipos de datos **varchar(max)**, **nvarchar(max)**y **varbinary(max)** . Tanto los desencadenadores AFTER como INSTEAD OF admiten los datos **varchar(max)**, **nvarchar(max)** y **varbinary(max)** en las tablas insertadas y eliminadas. Para obtener más información, vea [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  **Ejemplo del uso de la tabla inserted en un desencadenador para exigir reglas de negocios**  
   
  Debido a que las restricciones CHECK solo pueden hacer referencia a las columnas en las que se han definido las restricciones de columna o de tabla, cualquier restricción entre tablas, en este caso, reglas de negocios, debe definirse como desencadenadores.  
   
- En este ejemplo se crea un desencadenador DML. El desencadenador comprueba que la solvencia del proveedor es satisfactoria cuando se intenta insertar un nuevo pedido de compra en la tabla `PurchaseOrderHeader`. Para obtener la solvencia de crédito del proveedor correspondiente al pedido de compra recién insertado, la tabla `Vendor` debe hacer referencia a la tabla insertada y estar combinada con ella. Si la solvencia no es satisfactoria, se obtiene un mensaje y no se ejecuta la inserción. Tenga en cuenta que en este ejemplo no se permiten las modificaciones de datos en varias filas. Para más información, consulte [Create DML Triggers to Handle Multiple Rows of Data](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
+ En este ejemplo se crea un desencadenador DML. El desencadenador comprueba que la solvencia del proveedor es satisfactoria cuando se intenta insertar un nuevo pedido de compra en la tabla `PurchaseOrderHeader` . Para obtener la solvencia de crédito del proveedor correspondiente al pedido de compra recién insertado, la tabla `Vendor` debe hacer referencia a la tabla insertada y estar combinada con ella. Si la solvencia no es satisfactoria, se obtiene un mensaje y no se ejecuta la inserción. Tenga en cuenta que en este ejemplo no se permiten las modificaciones de datos en varias filas. Para más información, consulte [Create DML Triggers to Handle Multiple Rows of Data](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
   
-## Utilizar las tablas inserted y deleted en desencadenadores INSTEAD OF  
+## <a name="using-the-inserted-and-deleted-tables-in-instead-of-triggers"></a>Utilizar las tablas inserted y deleted en desencadenadores INSTEAD OF  
  Las tablas inserted y deleted pasadas a desencadenadores INSTEAD OF definidos en tablas siguen las mismas reglas que las tablas inserted y deleted pasadas a desencadenadores AFTER. El formato de las tablas inserted y deleted es el mismo que el de una tabla que tiene definido un desencadenador INSTEAD OF. Cada columna de las tablas inserted y deleted se asigna directamente a una columna de la tabla base.  
   
  Las siguientes reglas aplicables cuando una instrucción INSERT o UPDATE que hace referencia a una tabla con un desencadenador INSTEAD OF debe suministrar valores para las columnas, son las mismas que se utilizan cuando la tabla no tiene un desencadenador INSTEAD OF:  
@@ -86,7 +90,7 @@ JOIN Person.Person AS p
 ON e.BusinessEntityID = p.BusinessEntityID;  
 ```  
   
- El conjunto de resultados de esta vista tiene tres columnas: una columna de tipo **int** y dos columnas de tipo **nvarchar** . Las tablas insertadas y eliminadas a un desencadenador INSTEAD OF también tiene una columna **int** llamada `BusinessEntityID`, una columna **nvarchar** llamada `LName` y una columna **nvarchar** llamada `FName`.  
+ El conjunto de resultados de esta vista tiene tres columnas: una columna de tipo **int** y dos columnas de tipo **nvarchar** . Las tablas insertadas y eliminadas a un desencadenador INSTEAD OF también tiene una columna **int** llamada `BusinessEntityID`, una columna **nvarchar** llamada `LName`y una columna **nvarchar** llamada `FName`.  
   
  La lista de selección de una vista también puede contener expresiones que no se asignen directamente a una sola columna de tabla base. Es posible que algunas expresiones de las vistas, como las llamadas a constantes o funciones, no hagan referencia a ninguna columna y puedan omitirse. Las expresiones complejas pueden hacer referencia a varias columnas, aunque las tablas inserted y deleted solo tienen un valor para cada fila insertada. Esto mismo se aplica a las expresiones sencillas de una vista si hacen referencia a columnas calculadas que contienen expresiones complejas. Los desencadenadores INSTEAD OF de las vistas pueden tratar estos tipos de expresiones.  
   

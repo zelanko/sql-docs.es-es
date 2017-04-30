@@ -1,25 +1,29 @@
 ---
-title: "&#205;ndices de hash de tablas con optimizaci&#243;n para memoria | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
-ms.date: "08/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Índices de hash de tablas con optimización para memoria | Microsoft Docs"
+ms.custom:
+- MSDN content
+- MSDN - SQL DB
+ms.date: 08/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.service: sql-database
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de23d5625c883792f5c99de75dc90ccd1cabe326
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#205;ndices de hash de tablas con optimizaci&#243;n para memoria
+# <a name="hash-indexes-for-memory-optimized-tables"></a>Índices de hash de tablas con optimización para memoria
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   
@@ -31,7 +35,7 @@ En este artículo se describen los tipos de índice de *hash* disponibles para u
 - Describe cómo diseñar y administrar los índices de hash.  
   
   
-#### Requisito previo  
+#### <a name="prerequisite"></a>Requisito previo  
   
 Encontrará información de contexto importante para comprender este artículo en:  
   
@@ -39,15 +43,15 @@ Encontrará información de contexto importante para comprender este artículo e
   
   
   
-## A. Sintaxis de índices con optimización para memoria  
+## <a name="a-syntax-for-memory-optimized-indexes"></a>A. Sintaxis de índices con optimización para memoria  
   
   
-### A.1 Ejemplo de código para sintaxis  
+### <a name="a1-code-sample-for-syntax"></a>A.1 Ejemplo de código para sintaxis  
   
 En este apartado se incluye un bloque de código de Transact-SQL que muestra las sintaxis disponibles para crear varios índices de hash en una tabla con optimización para memoria:  
   
 - En el ejemplo se muestra que el índice de hash se declara dentro de la instrucción CREATE TABLE.  
-  - En su lugar, puede declararlo en otra instrucción [ALTER TABLE...ADD INDEX](#h3-b2-declaration-limitations).  
+  - En su lugar, puede declararlo en otra instrucción [ALTER TABLE...ADD INDEX](#h3-b2-declaration-limitations) .  
   
   
   
@@ -75,10 +79,10 @@ En este apartado se incluye un bloque de código de Transact-SQL que muestra las
 
 Para determinar el `BUCKET_COUNT` correcto para los datos, consulte [Configuración del número de depósitos de índice de hash](#configuring_bucket_count). 
   
-## B. Índices de hash  
+## <a name="b-hash-indexes"></a>B. Índices de hash  
   
   
-### B.1 Conceptos básicos de rendimiento  
+### <a name="b1-performance-basics"></a>B.1 Conceptos básicos de rendimiento  
   
 El rendimiento de un índice de hash es:  
   
@@ -89,7 +93,7 @@ El rendimiento de un índice de hash es:
   
 <a name="h3-b2-declaration-limitations"></a>  
   
-### B.2 Limitaciones de declaración  
+### <a name="b2-declaration-limitations"></a>B.2 Limitaciones de declaración  
   
 Solo puede existir un índice de hash en una tabla con optimización para memoria. No puede existir en una tabla basada en disco.  
   
@@ -108,9 +112,9 @@ Aquí se muestra una sintaxis de ejemplo para crear un índice de hash fuera de 
   
   
   
-### B.3 Depósitos y función hash  
+### <a name="b3-buckets-and-hash-function"></a>B.3 Depósitos y función hash  
   
-Un índice de hash delimita sus valores de clave en lo que llamamos una matriz de *depósitos*:  
+Un índice de hash delimita sus valores de clave en lo que llamamos una matriz de *depósitos* :  
   
 - Cada depósito tiene 8 bytes, que se usan para almacenar la dirección de memoria de una lista de vínculos de entradas de índice.  
 - Cada entrada es un valor correspondiente a una clave de índice, además de la dirección de su fila correspondiente en la tabla subyacente con optimización para memoria.  
@@ -120,7 +124,7 @@ Un índice de hash delimita sus valores de clave en lo que llamamos una matriz d
 El algoritmo hash intenta distribuir todos los valores de clave únicos o distintos uniformemente entre los depósitos, pero la uniformidad total es imposible de lograr. Todas las instancias de un valor de clave determinado están encadenadas al mismo depósito. El depósito puede tener también una mezcla de todas las instancias de otro valor de clave.  
   
 - Esta mezcla se conoce como *colisión de hash*. Las colisiones son frecuentes, pero no ideales.  
-- Un objetivo realista es que el 30 % de los cubos contengan dos valores de clave diferentes.  
+- Un objetivo realista es que el 30 % de los cubos contengan dos valores de clave diferentes.  
   
   
 Hay que declarar cuántos depósitos debe tener el índice de hash.  
@@ -138,11 +142,11 @@ SQL Server tiene una función hash que usa para todos los índices de hash:
 La interacción del índice de hash y los cubos se resume en la siguiente imagen.  
   
   
-![hekaton_tables_23d](../../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "Index keys, input into hash function, output is address of a hash bucket, which points to head of chain.")  
+![hekaton_tables_23d](../../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "Claves de índice, entrada en una función hash, el resultado es la dirección de un depósito de hash, que señala al principio de la cadena.")  
   
   
   
-### B.4 Versiones de fila y recolección de elementos no utilizados  
+### <a name="b4-row-versions-and-garbage-collection"></a>B.4 Versiones de fila y recolección de elementos no utilizados  
   
   
 En una tabla con optimización para memoria, cuando una fila se ve afectada por una instrucción UPDATE de SQL, la tabla crea una versión actualizada de la fila. Durante la transacción de actualización, es posible que otras sesiones puedan leer la versión anterior de la fila y, por tanto, evitar la degradación del rendimiento asociada a un bloqueo de fila.  
@@ -153,7 +157,7 @@ Más adelante cuando las versiones anteriores ya no se necesiten, un subproceso 
   
 <a name="configuring_bucket_count"></a>
   
-## C. Configuración del número de depósitos de índice de hash  
+## <a name="c-configuring-the-hash-index-bucket-count"></a>C. Configuración del número de depósitos de índice de hash  
   
 El número de depósitos de índice de hash se especifica al crear el índice y se puede modificar con la sintaxis ALTER TABLE...ALTER INDEX REBUILD.  
   
@@ -171,33 +175,34 @@ Un número muy *alto* de cubos tiene las siguientes desventajas::
   
 - Un número excesivo de depósitos puede generar más depósitos vacíos.  
   - Los depósitos vacíos repercuten en el rendimiento de los exámenes de índice completos. Si se realizan con frecuencia, inclínese por un número de depósitos cercano al número de valores de clave de índice distintos.  
-  - Los depósitos vacíos usan la memoria, aunque cada depósito emplea únicamente 8 bytes.  
+  - Los depósitos vacíos usan la memoria, aunque cada depósito emplea únicamente 8 bytes.  
     
   
-> [AZURE.NOTE] Agregar más depósitos no hace nada para reducir el encadenamiento de entradas que comparten un valor duplicado. La tasa de duplicación de valores sirve para decidir si un tipo de índice de hash es el adecuado, no para calcular el número de depósitos.  
+> [!NOTE]
+> Agregar más depósitos no hace nada para reducir el encadenamiento de entradas que comparten un valor duplicado. La tasa de duplicación de valores sirve para decidir si un tipo de índice de hash es el adecuado, no para calcular el número de depósitos.  
   
   
   
-### C.1 Números prácticos  
+### <a name="c1-practical-numbers"></a>C.1 Números prácticos  
   
 Aunque el **BUCKET_COUNT** esté moderadamente por debajo o por encima del rango preferido, es probable que el rendimiento del índice de hash sea tolerable o aceptable. No se crea ninguna crisis.  
   
 Asigne al índice de hash un **BUCKET_COUNT** aproximadamente igual al número de filas que prevé que terminará teniendo la tabla con optimización para memoria.  
   
-Suponga que la tabla en aumento tiene 2 000 000 filas, pero prevé que dicha cantidad crecerá 10 veces hasta 20 000 000 filas. Comience por un número de depósitos que sea 10 veces el número de filas de la tabla. Esto deja espacio para una mayor cantidad de filas.  
+Suponga que la tabla en aumento tiene 2 000 000 filas, pero prevé que dicha cantidad crecerá 10 veces hasta 20 000 000 filas. Comience por un número de depósitos que sea 10 veces el número de filas de la tabla. Esto deja espacio para una mayor cantidad de filas.  
   
 - Lo ideal es aumentar el número de depósitos cuando la cantidad de filas alcanza el número de depósitos inicial.  
 - Aunque la cantidad de filas aumente hasta 5 veces más que el número de depósitos, el rendimiento seguirá siendo bueno casi siempre.  
   
-Suponga que un índice de hash tiene 10 000 000 valores de claves distintos.  
+Suponga que un índice de hash tiene 10 000 000 valores de claves distintos.  
   
-- Un número de depósitos de 2 000 000 sería la menor cantidad que podría aceptar. El grado de degradación del rendimiento puede ser tolerable.  
+- Un número de depósitos de 2 000 000 sería la menor cantidad que podría aceptar. El grado de degradación del rendimiento puede ser tolerable.  
   
-### C.2 ¿Demasiados valores duplicados en el índice?  
+### <a name="c2-too-many-duplicate-values-in-the-index"></a>C.2 ¿Demasiados valores duplicados en el índice?  
   
 Si los valores de hash indizados tienen una alta tasa de duplicados, los depósitos de hash toleran cadenas más largas.  
   
-Suponga que tiene la misma tabla SupportEvent del bloque de código anterior de la sintaxis de T-SQL. El código de T-SQL siguiente muestra cómo buscar y mostrar la proporción de *todos* los valores con respecto a los valores *únicos*:  
+Suponga que tiene la misma tabla SupportEvent del bloque de código anterior de la sintaxis de T-SQL. El código de T-SQL siguiente muestra cómo buscar y mostrar la proporción de *todos* los valores con respecto a los valores *únicos* :  
   
         -- Calculate ratio of:  Rows / Unique_Values.  
     DECLARE @allValues float(8) = 0.0, @uniqueVals float(8) = 0.0;  
@@ -214,11 +219,11 @@ Suponga que tiene la misma tabla SupportEvent del bloque de código anterior de 
   
 - Una proporción de 10,0 o superior significa que un tipo de índice de hash sería deficiente. Sopese la posibilidad de usar un índice no agrupado en su lugar.   
   
-## D. Solución de problemas de número de depósitos de índice de hash  
+## <a name="d-troubleshooting-hash-index-bucket-count"></a>D. Solución de problemas de número de depósitos de índice de hash  
   
 En esta sección se explica cómo resolver problemas relativos al número de depósitos del índice de hash.  
   
-### D.1 Supervisión de estadísticas de cadenas y depósitos vacíos  
+### <a name="d1-monitor-statistics-for-chains-and-empty-buckets"></a>D.1 Supervisión de estadísticas de cadenas y depósitos vacíos  
   
 Puede supervisar el mantenimiento estadístico de los índices de hash ejecutando la siguiente instrucción SELECT de T-SQL. SELECT usa la vista de administración de datos (DMV) denominada **sys.dm_db_xtp_hash_index_stats**.  
   
@@ -252,15 +257,15 @@ Compare los resultados de SELECT con las siguientes directrices estadísticas:
   
 - Depósitos vacíos:  
   - 33 % es un buen valor de destino, pero un porcentaje mayor (incluso el 90 %) suele funcionar correctamente.  
-  - Cuando el número de depósitos es igual al número de valores de clave distintos, aproximadamente un 33 % de los cubos están vacíos.  
-  - Un valor inferior al 10 % es demasiado bajo.  
+  - Cuando el número de depósitos es igual al número de valores de clave distintos, aproximadamente un 33 % de los cubos están vacíos.  
+  - Un valor inferior al 10 % es demasiado bajo.  
 - Cadenas dentro de cubos:  
   - Una longitud media de cadena de 1 es ideal en caso de que no haya valores de clave de índice duplicados. Las longitudes de cadena de hasta 10 suelen ser aceptables.  
-  - Si la longitud promedio de la cadena es superior a 10 y el porcentaje de depósitos vacíos es superior al 10 %, los datos tienen tantos duplicados que es posible que un índice de hash no sea el tipo más adecuado.  
+  - Si la longitud promedio de la cadena es superior a 10 y el porcentaje de depósitos vacíos es superior al 10 %, los datos tienen tantos duplicados que es posible que un índice de hash no sea el tipo más adecuado.  
   
 
   
-### D.2 Demostración de cadenas y depósitos vacíos  
+### <a name="d2-demonstration-of-chains-and-empty-buckets"></a>D.2 Demostración de cadenas y depósitos vacíos  
   
   
 El siguiente bloque de código de T-SQL constituye un sencillo método de comprobar una instrucción `SELECT * FROM sys.dm_db_xtp_hash_index_stats;`. El bloque de código se completa en 1 minuto. Estas son las fases del código de bloque en cuestión:  
@@ -268,8 +273,8 @@ El siguiente bloque de código de T-SQL constituye un sencillo método de compro
   
 1. Crea una tabla con optimización para memoria que tiene algunos índices hash.  
 2. Rellena la tabla con miles de filas.  
-    a. Se usa un operador de módulo para configurar la tasa de valores duplicados en la columna StatusCode.  
-    b. Con INSERT el bucle inserta 262 144 filas en aproximadamente 1 minuto.  
+    A. Se usa un operador de módulo para configurar la tasa de valores duplicados en la columna StatusCode.  
+    B. Con INSERT el bucle inserta 262 144 filas en aproximadamente 1 minuto.  
 3. PRINT imprime un mensaje pidiéndole que ejecute la instrucción SELECT anterior en **sys.dm_db_xtp_hash_index_stats**.  
   
   
@@ -362,26 +367,26 @@ Vamos a interpretar la tabla de resultados anterior para los tres índices de ha
   
 *ix_StatusCode:*  
   
-- El 50 % de los depósitos están vacíos, lo que es adecuado.  
-- Sin embargo, el promedio de longitud de cadena es muy elevado (65 536).  
+- El 50 % de los depósitos están vacíos, lo que es adecuado.  
+- Sin embargo, el promedio de longitud de cadena es muy elevado (65 536).  
   - Esto indica una alta tasa de valores duplicados.  
   - Por consiguiente, el uso de un índice de hash no es adecuado en este caso. Se debe usar un índice no clúster en su lugar.  
   
 *ix_OrderSequence:*  
   
-- El 0 % de los depósitos están vacíos, lo que es demasiado bajo.  
+- El 0 % de los depósitos están vacíos, lo que es demasiado bajo.  
 - La longitud promedio de la cadena es 8, aunque todos los valores de este índice sean únicos.  
   - Por lo tanto, el número de depósitos debe aumentarse para reducir el promedio de longitud de cadena a un valor más cercano a 2 o 3.  
-- Como la clave de índice tiene 262 144 valores únicos, el número de depósitos debe ser al menos 262 144.  
+- Como la clave de índice tiene 262 144 valores únicos, el número de depósitos debe ser al menos 262 144.  
   - Si se espera un aumento futuro, el número de depósitos debe ser superior.  
   
 *Índice de clave principal (PK_SalesOrd_...):*  
   
-- El 36 % de los depósitos están vacíos, lo que es adecuado.  
+- El 36 % de los depósitos están vacíos, lo que es adecuado.  
 - El promedio de longitud de cadena es 1, lo que también es adecuado. No se requieren cambios.  
   
   
-### D.3 Equilibrio de ventajas y desventajas  
+### <a name="d3-balancing-the-trade-off"></a>D.3 Equilibrio de ventajas y desventajas  
   
 Las cargas de trabajo de OLTP se centran en filas individuales. Los recorridos de tabla completos no suelen estar en la ruta crítica de rendimiento para cargas de trabajo de OLTP. Por lo tanto, las ventajas y desventajas que debe equilibrar son entre:  
   
@@ -405,7 +410,7 @@ Las cargas de trabajo de OLTP se centran en filas individuales. Los recorridos d
   
   
   
-## E. Puntos fuertes de los índices de hash  
+## <a name="e-strengths-of-hash-indexes"></a>E. Puntos fuertes de los índices de hash  
   
   
 Un índice de hash es preferible a un índice de hash cuando:  
@@ -419,7 +424,7 @@ Un índice de hash es preferible a un índice de hash cuando:
   
   
   
-### E.1 Claves de índice de hash con varias columnas  
+### <a name="e1-multi-column-hash-index-keys"></a>E.1 Claves de índice de hash con varias columnas  
   
   
 Nuestro índice de dos columnas puede ser un índice no agrupado o un índice de hash. Supongamos que las columnas de índice son col1 y col2. Si tenemos la siguiente instrucción SQL SELECT, solo el índice no agrupado sería útil para el optimizador de consultas:  
@@ -437,9 +442,9 @@ Ningún tipo de índice resultará útil si solo se especifica la segunda column
   
   
 \<!--   
-Hash_Indexes_for_Memory-Optimized_Tables.md , which is....  
-CAPS guid: {e922cc3a-3d6e-453b-8d32-f4b176e98488}  
-CAPS guid of parent is: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
+Hash_Indexes_for_Memory-Optimized_Tables.md , que es....  
+guid MAYÚS: {e922cc3a-3d6e-453b-8d32-f4b176e98488}  
+guid MAYÚS del elemento primario: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
   
   
   
@@ -458,3 +463,5 @@ GeneMi  ,  2016-05-05  Thursday  15:01pm
   
   
   
+
+

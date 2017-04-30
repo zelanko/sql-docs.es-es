@@ -1,30 +1,34 @@
 ---
-title: "Usar los resultados de FOR XML en el c&#243;digo de aplicaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cláusula FOR XML, uso de código de aplicación"
-  - "XML [SQL Server], cláusula FOR XML"
-  - "ASP.NET [SQL Server]"
-  - ".NET Framework [SQL Server], datos FOR XML"
-  - "ADO [SQL Server]"
-  - "XML, islas de datos [SQL Server]"
-  - "islas de datos [SQL Server]"
+title: "Usar los resultados de FOR XML en el código de aplicación | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, application code usage
+- XML [SQL Server], FOR XML clause
+- ASP.NET [SQL Server]
+- .NET Framework [SQL Server], FOR XML data
+- ADO [SQL Server]
+- XML data islands [SQL Server]
+- data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f687e8b100ea8810bf92b21b0467932c72d21237
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar los resultados de FOR XML en el c&#243;digo de aplicaci&#243;n
+# <a name="use-for-xml-results-in-application-code"></a>Usar los resultados de FOR XML en el código de aplicación
   Al utilizar cláusulas FOR XML con consultas SQL, se pueden recuperar e incluso convertir los resultados de la consulta como datos XML. Esta funcionalidad permite realizar las siguientes operaciones cuando los resultados de las consultas FOR XML se pueden utilizar en el código de aplicación XML:  
   
 -   Consultar tablas SQL de instancias de valores de [Datos XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
@@ -33,8 +37,8 @@ caps.handback.revision: 23
   
  Este tema proporciona ejemplos que muestran estos planteamientos.  
   
-## Recuperar datos FOR XML con islas de datos ADO y XML  
- El objeto ADO **Stream** u otros objetos que admiten la interfaz COM **IStream**, como los objetos **Request** y **Response** de las páginas Active Server (ASP), se pueden usar para guardar los resultados cuando se trabaja con consultas FOR XML.  
+## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>Recuperar datos FOR XML con islas de datos ADO y XML  
+ El objeto ADO **Stream** u otros objetos que admiten la interfaz COM **IStream** , como los objetos **Request** y **Response** de las páginas Active Server (ASP), se pueden usar para guardar los resultados cuando se trabaja con consultas FOR XML.  
   
  Por ejemplo, el siguiente código ASP muestra los resultados que se obtienen al consultar una columna de tipo de datos **xml** , Demographics, en la tabla Sales.Store de la base de datos de ejemplo AdventureWorks. Concretamente, la consulta busca el valor de instancia de esta columna para la fila en la que CustomerID es igual a 3.  
   
@@ -121,7 +125,7 @@ caps.handback.revision: 23
   
  Esta página ASP de ejemplo contiene código VBScript de servidor que utiliza ADO para ejecutar la consulta FOR XML y devolver los resultados XML en una isla de datos XML, MyDataIsle. Después, la isla de datos XML se devuelve en el explorador para su posterior procesamiento del lado cliente. Después, para procesar el contenido de la isla de datos XML se utiliza código VBScript del lado cliente adicional. Este proceso se lleva a cabo antes de mostrar el contenido como parte del DHTML resultante y abrir un cuadro de mensaje con el contenido de la isla de datos XML previamente procesado.  
   
-#### Para probar este ejemplo  
+#### <a name="to-test-this-example"></a>Para probar este ejemplo  
   
 1.  Compruebe que se ha instalado IIS y la base de datos de ejemplo AdventureWorks de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -137,7 +141,7 @@ caps.handback.revision: 23
   
  Los resultados de la página HTML generada que aparecen serán similares a la siguiente salida de ejemplo:  
   
-##### Procesamiento en el servidor  
+##### <a name="server-side-processing"></a>Procesamiento en el servidor  
  Page Generated @ 3/11/2006 3:36:02 PM  
   
  Connect String = Provider=SQLOLEDB;Data Source=MyServer;Initial Catalog=AdventureWorks;Integrated Security=SSPI;  
@@ -148,9 +152,9 @@ caps.handback.revision: 23
   
  Query String = SELECT Demographics from Sales.Store WHERE CustomerID = 3 FOR XML AUTO  
   
- Pushing XML to client for processing   
+ Pushing XML to client for processing  
   
-##### Procesamiento del documento XML MyDataIsle en el cliente  
+##### <a name="client-side-processing-of-xml-document-mydataisle"></a>Procesamiento del documento XML MyDataIsle en el cliente  
   
 -   **AnnualSales:** 1500000  
   
@@ -195,7 +199,7 @@ caps.handback.revision: 23
 </ROOT>  
 ```  
   
-## Recuperar datos FOR XML con ASP.NET y .NET Framework  
+## <a name="retrieving-for-xml-data-with-aspnet-and-the-net-framework"></a>Recuperar datos FOR XML con ASP.NET y .NET Framework  
  Como en el ejemplo anterior, el siguiente código ASP.NET muestra los resultados que se obtienen al consultar una columna de tipo de datos **xml** , Demographics, en la tabla Sales.Store de la base de datos de ejemplo AdventureWorks. Como en el ejemplo anterior, la consulta busca el valor de instancia de esta columna para la fila en la que CustomerID es igual a 3.  
   
  En este ejemplo, se utilizan las siguientes API administradas de Microsoft .NET Framework para devolver y representar los resultados de la consulta FOR XML:  
@@ -260,7 +264,7 @@ caps.handback.revision: 23
     </HTML>  
     ```  
   
-#### Para probar este ejemplo  
+#### <a name="to-test-this-example"></a>Para probar este ejemplo  
   
 1.  Compruebe que se ha instalado IIS y la base de datos de ejemplo AdventureWorks de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -276,7 +280,7 @@ caps.handback.revision: 23
   
  Los resultados de la página HTML generada que aparecen serán similares a la siguiente salida de ejemplo:  
   
-##### Procesamiento en el servidor  
+##### <a name="server-side-processing"></a>Procesamiento en el servidor  
   
 ```  
 Page Generated @ 3/11/2006 3:36:02 PM  
@@ -291,7 +295,7 @@ SqlConnection closed.
 > [!NOTE]  
 >  La compatibilidad con el tipo de datos **xml** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite solicitar que el resultado de una consulta FOR XML se devuelva como un tipo de datos **xml** en lugar de datos con tipo cadena o imagen, especificando la [directiva TYPE](../../relational-databases/xml/type-directive-in-for-xml-queries.md). Cuando se usa la directiva TYPE en las consultas FOR XML, el tipo de acceso que se proporciona mediante programación a los resultados de FOR XML es similar al que se muestra en [Usar datos XML en las aplicaciones](../../relational-databases/xml/use-xml-data-in-applications.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

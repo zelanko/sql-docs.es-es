@@ -1,65 +1,69 @@
 ---
-title: "Restaurar base de datos (p&#225;gina Opciones) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restoredb.options.f1"
+title: "Restaurar base de datos (página Opciones) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 caps.latest.revision: 68
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 68
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 698c8658d2a3d6779a8800c23e5c508351a05d12
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurar base de datos (p&#225;gina Opciones)
+# <a name="restore-database-options-page"></a>Restaurar base de datos (página Opciones)
   Utilice la página **Opciones** del cuadro de diálogo **Restaurar base de datos** para modificar el comportamiento y el resultado de la operación de restauración.  
   
  **Para utilizar SQL Server Management Studio a fin de restaurar una copia de seguridad de base de datos**  
   
--   [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
 -   [Definir un dispositivo lógico de copia de seguridad en una unidad de cinta &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 > [!NOTE]  
->  Cuando se especifica una tarea de restauración mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script de [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente que contenga las instrucciones RESTORE para esta operación de restauración. Para generar el script, haga clic en **Script** y seleccione un destino para este. Para obtener más información sobre la sintaxis de RESTORE, vea [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+>  Cuando se especifica una tarea de restauración mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script de [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente que contenga las instrucciones RESTORE para esta operación de restauración. Para generar el script, haga clic en **Script** y seleccione un destino para este. Para obtener más información sobre la sintaxis de RESTORE, vea [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
-## Opciones  
+## <a name="options"></a>Opciones  
   
-### Opciones de restauración  
+### <a name="restore-options"></a>Opciones de restauración  
  Para modificar aspectos del comportamiento de la operación de restauración, utilice las opciones del panel **Opciones de restauración** .  
   
  **Sobrescribir la base de datos existente [WITH REPLACE]**  
- La operación de restauración sobrescribirá los archivos de cualquier base de datos que use en ese momento el nombre de base de datos especificado en el campo **Restaurar en** en la página [General](../../relational-databases/backup-restore/restore-database-general-page.md) del cuadro de diálogo **Restaurar base de datos**. Los archivos de la base de datos existente se sobrescribirán aunque restaure copias de seguridad de una base de datos diferente al nombre de base de datos existente. La elección de esta opción equivale a usar la opción REPLACE en una instrucción [RESTORE](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ La operación de restauración sobrescribirá los archivos de cualquier base de datos que use en ese momento el nombre de base de datos especificado en el campo **Restaurar en**en la página [General](../../relational-databases/backup-restore/restore-database-general-page.md) del cuadro de diálogo **Restaurar base de datos** . Los archivos de la base de datos existente se sobrescribirán aunque restaure copias de seguridad de una base de datos diferente al nombre de base de datos existente. La elección de esta opción equivale a usar la opción REPLACE en una instrucción [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!CAUTION]  
->  Utilice esta opción después de haberlo pensado detenidamente. Para obtener más información, vea [RESTORE &#40;argumentos, Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md).  
+>  Utilice esta opción después de haberlo pensado detenidamente. Para obtener más información, vea [RESTORE &#40;argumentos, Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
  **Conservar la configuración de replicación [WITH KEEP_REPLICATION]**  
  Conserva la configuración de replicación cuando se restaura una base de datos publicada en un servidor distinto de aquel en que se creó. Esta opción solo es pertinente si la base de datos se replicó cuando se creó la copia de seguridad.  
   
  Esta opción solo está disponible con la opción **Dejar la base de datos lista para su uso revirtiendo las transacciones no confirmadas** (descrita más adelante en esta tabla), que equivale a restaurar una copia de seguridad con la opción RECOVERY.  
   
- La elección de esta opción equivale a usar la opción KEEP_REPLICATION en una instrucción [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md).  
+ La elección de esta opción equivale a usar la opción KEEP_REPLICATION en una instrucción [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) .  
   
  Para obtener más información, vea [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
  **Restringir el acceso a la base de datos restaurada [WITH RESTRICTED_USER]**  
- Hace que la base de datos restaurada esté disponible solo para los miembros de **db_owner**, **dbcreator** o **sysadmin**.  
+ Hace que la base de datos restaurada esté disponible solo para los miembros de **db_owner**, **dbcreator**o **sysadmin**.  
   
  La selección de esta opción equivale al uso de la opción RESTRICTED_USER en una instrucción RESTORE.  
   
-### Estado de recuperación  
+### <a name="recovery-state"></a>Estado de recuperación  
  Para determinar el estado de la base de datos después de la operación de restauración, debe seleccionar una de las opciones del panel **Estado de recuperación** .  
   
  **RESTORE WITH RECOVERY**  
- Recupera la base de datos después de restaurar la copia de seguridad final seleccionada en la cuadrícula **Conjuntos de copia de seguridad para restaurar** de la [página General](../../relational-databases/backup-restore/restore-database-general-page.md). Esta es la opción predeterminada y es equivalente a especificar WITH RECOVERY en una instrucción [RESTORE](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ Recupera la base de datos después de restaurar la copia de seguridad final seleccionada en la cuadrícula **Conjuntos de copia de seguridad para restaurar**de la [página General](../../relational-databases/backup-restore/restore-database-general-page.md). Esta es la opción predeterminada y es equivalente a especificar WITH RECOVERY en una instrucción [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!NOTE]  
 >  En el modelo de recuperación completa o en el modelo de recuperación optimizado para cargas masivas de registros, elija esta opción solo si va a restaurar todos los archivos de registro ahora.  
@@ -79,7 +83,7 @@ caps.handback.revision: 68
  **Archivo en espera**  
  Especifica un archivo en espera. Puede buscar el archivo en espera o escribir su ruta de acceso directamente en el cuadro de texto.  
   
-### Copia del final del registro  
+### <a name="tail-log-backup"></a>Copia del final del registro  
  Permite indicar que se realice una copia del final del registro junto con la restauración de la base de datos.  
   
  **Realizar copia del final del registro antes de restaurar**  
@@ -91,13 +95,13 @@ caps.handback.revision: 68
  **Archivo de copia de seguridad**  
  Especifica un archivo de copia de seguridad del final del registro. Puede buscar el archivo de copia de seguridad o escribir su nombre directamente en el cuadro de texto.  
   
-### Conexiones al servidor  
+### <a name="server-connections"></a>Conexiones al servidor  
  Permite cerrar las conexiones de base de datos existentes.  
   
  **Cerrar conexiones existentes**  
  Puede haber errores en las operaciones de restauración si hay conexiones activas con la base de datos. Active la opción **Cerrar conexiones existentes** para asegurarse de que se cierren todas las conexiones activas entre [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y la base de datos. Esta casilla establece la base de datos en modo de usuario único antes de realizar las operaciones de restauración, y establece la base de datos en modo multiusuario una vez completadas.  
   
-### Pedir datos  
+### <a name="prompt"></a>Pedir datos  
  **Preguntar antes de restaurar cada copia de seguridad**  
  Especifica que, después de que se restaure cada copia de seguridad, se mostrará el cuadro de diálogo **Continuar con la restauración** para preguntar si quiere continuar con la secuencia de restauración. En este cuadro de diálogo se muestra el nombre del siguiente conjunto de medios (si se conoce) junto con el nombre y la descripción del siguiente conjunto de copia de seguridad.  
   
@@ -111,8 +115,8 @@ caps.handback.revision: 68
   
 -   Si la siguiente copia de seguridad es una copia de seguridad de registros, utilice la tarea **Restaurar registro de transacciones** . Para obtener más información sobre cómo reanudar una secuencia de restauración por medio de la restauración de un registro de transacciones, vea [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
   
-## Vea también  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Vea también  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurar una copia de seguridad desde un dispositivo &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)   
  [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)   
  [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   

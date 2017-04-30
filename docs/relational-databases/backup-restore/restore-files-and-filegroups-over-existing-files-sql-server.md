@@ -1,30 +1,34 @@
 ---
-title: "Restaurar archivos y grupos de archivos en archivos existentes (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restaurar archivos [SQL Server], temas de procedimientos"
-  - "restaurar archivos [SQL Server], pasos"
-  - "restauración de archivos [SQL Server], temas de procedimientos"
-  - "grupos de archivos [SQL Server], restaurar"
-  - "restaurar grupos de archivos [SQL Server]"
-  - "sobrescribir grupos de archivos"
-  - "sobrescribir archivos"
+title: Restaurar archivos y grupos de archivos en archivos existentes (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring files [SQL Server], how-to topics
+- restoring files [SQL Server], steps
+- file restores [SQL Server], how-to topics
+- filegroups [SQL Server], restoring
+- restoring filegroups [SQL Server]
+- overwriting filegroups
+- overwriting files
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97826d94662c704199c48929d0be00a09e478b09
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurar archivos y grupos de archivos en archivos existentes (SQL Server)
+# <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>Restaurar archivos y grupos de archivos en archivos existentes (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   En este tema se describe cómo restaurar archivos y grupos de archivos sobre archivos existentes en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -51,24 +55,24 @@ caps.handback.revision: 29
   
 -   RESTORE no se permite en una transacción explícita o implícita.  
   
--   En el modelo de recuperación completa o el modelo de recuperación optimizado para cargas masivas de registros, para poder restaurar archivos, debe realizar una copia de seguridad del registro de transacciones activo (conocido como el final del registro). Para obtener más información, vea [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
+-   En el modelo de recuperación completa o el modelo de recuperación optimizado para cargas masivas de registros, para poder restaurar archivos, debe realizar una copia de seguridad del registro de transacciones activo (conocido como el final del registro). Para obtener más información, vea [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
 -   Para restaurar una base de datos cifrada, debe tener acceso al certificado o la clave asimétrica que se usó para cifrarla. La base de datos no se puede restaurar sin el certificado o la clave asimétrica. Como resultado, se debe conservar el certificado que se usa para cifrar la clave de cifrado de base de datos mientras se necesite la copia de seguridad. Para obtener más información, consulte [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- Si la base de datos que se va a restaurar no existe, el usuario debe tener permisos CREATE DATABASE para poder ejecutar RESTORE. Si la base de datos existe, los permisos RESTORE corresponden de forma predeterminada a los miembros de los roles fijos de servidor **sysadmin** y **dbcreator**, y al propietario (**dbo**) de la base de datos (para la opción FROM DATABASE_SNAPSHOT, la base de datos siempre existe).  
+ Si la base de datos que se va a restaurar no existe, el usuario debe tener permisos CREATE DATABASE para poder ejecutar RESTORE. Si la base de datos existe, los permisos RESTORE corresponden de forma predeterminada a los miembros de los roles fijos de servidor **sysadmin** y **dbcreator** , y al propietario (**dbo**) de la base de datos (para la opción FROM DATABASE_SNAPSHOT, la base de datos siempre existe).  
   
  Los permisos RESTORE se conceden a los roles en los que la información acerca de la pertenencia está siempre disponible para el servidor. Debido a que la pertenencia a un rol fijo de base de datos solo se puede comprobar cuando la base de datos es accesible y no está dañada, lo que no siempre ocurre cuando se ejecuta RESTORE, los miembros del rol fijo de base de datos **db_owner** no tienen permisos RESTORE.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para restaurar archivos y grupos de archivos sobre archivos existentes  
+#### <a name="to-restore-files-and-filegroups-over-existing-files"></a>Para restaurar archivos y grupos de archivos sobre archivos existentes  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expándala y, a continuación, expanda **Bases de datos**.  
   
-2.  Haga clic con el botón derecho en la base de datos que quiera, seleccione **Tareas**, **Restaurar** y, luego, haga clic en **Archivos y grupos de archivos**.  
+2.  Haga clic con el botón derecho en la base de datos que quiera, seleccione **Tareas**, **Restaurar**y, luego, haga clic en **Archivos y grupos de archivos**.  
   
 3.  En la página **General** , en el cuadro de lista **A una base de datos** , especifique la base de datos que desea restaurar. Puede especificar una nueva base de datos o elegir una base de datos existente de la lista desplegable. La lista incluye todas las bases de datos del servidor, y excluye las bases de datos del sistema **master** y **tempdb**.  
   
@@ -88,9 +92,9 @@ caps.handback.revision: 29
   
     |Encabezado de columna|Valores|  
     |-----------------|------------|  
-    |**Restore**|Las casillas activadas indican los conjuntos de copias de seguridad que se restaurarán.|  
+    |**Restaurar**|Las casillas activadas indican los conjuntos de copias de seguridad que se restaurarán.|  
     |**Nombre**|Nombre del conjunto de copia de seguridad.|  
-    |**Tipo de archivo**|Especifica el tipo de datos en la copia de seguridad: **datos**, **registro**o **datos de FILESTREAM**. Los datos contenidos en tablas están en archivos de **datos** . Los datos del registro de transacciones están en archivos de **registro** . Los datos de objetos binarios grandes (BLOB) que están almacenados en el sistema de archivos se encuentran en archivos de **datos de FILESTREAM**.|  
+    |**Tipo de archivo**|Especifica el tipo de datos en la copia de seguridad: **datos**, **registro**o **datos de FILESTREAM**. Los datos contenidos en tablas están en archivos de **datos** . Los datos del registro de transacciones están en archivos de **registro** . Los datos de objetos binarios grandes (BLOB) que están almacenados en el sistema de archivos se encuentran en archivos de **datos de FILESTREAM** .|  
     |**Tipo**|Tipo de copia de seguridad realizada: **Completa**, **Diferencial**o **Registro de transacciones**.|  
     |**Server**|Nombre de la instancia del motor de base de datos que ha realizado la operación de copia de seguridad.|  
     |**Nombre lógico de archivo**|Nombre lógico del archivo.|  
@@ -102,13 +106,13 @@ caps.handback.revision: 29
   
 6.  En el panel **Seleccionar una página** , haga clic en la página **Opciones** .  
   
-7.  En el panel **Opciones de restauración**, seleccione **Sobrescribir la base de datos existente (WITH REPLACE)**. La operación de restauración sobrescribe las bases de datos especificadas y sus archivos relacionados, aunque ya exista otra base de datos u otro archivo con el mismo nombre.  
+7.  En el panel **Opciones de restauración** , seleccione **Sobrescribir la base de datos existente (WITH REPLACE)**. La operación de restauración sobrescribe las bases de datos especificadas y sus archivos relacionados, aunque ya exista otra base de datos u otro archivo con el mismo nombre.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para restaurar archivos y grupos de archivos sobre archivos existentes  
+#### <a name="to-restore-files-and-filegroups-over-existing-files"></a>Para restaurar archivos y grupos de archivos sobre archivos existentes  
   
 1.  Ejecute la instrucción RESTORE DATABASE para restaurar la copia de seguridad de archivos y grupos de archivos; para ello, especifique lo siguiente:  
   
@@ -165,9 +169,9 @@ RESTORE LOG MyNwind
 GO  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurar archivos y grupos de archivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)   
  [Copiar bases de datos con Copias de seguridad y restauración](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)  
   

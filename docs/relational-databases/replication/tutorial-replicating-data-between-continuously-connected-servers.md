@@ -1,34 +1,38 @@
 ---
-title: "Tutorial: Replicar datos entre servidores conectados de forma continua | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "tutoriales [replicación de SQL Server]"
-  - "replicación [SQL Server], tutoriales"
-  - "asistentes [replicación de SQL Server]"
+title: 'Tutorial: Replicar datos entre servidores conectados de forma continua | Microsoft Docs'
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- tutorials [SQL Server replication]
+- replication [SQL Server], tutorials
+- wizards [SQL Server replication]
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6090a59e8f831d5d05def6f6ff65ee99a09aea84
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tutorial: Replicar datos entre servidores conectados de forma continua
+# <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>Tutorial: Replicar datos entre servidores conectados de forma continua
 La replicación es una buena solución para el problema de mover datos entre servidores conectados de forma continua. La utilización de asistentes para replicación le facilitará la configuración y administración de una topología de replicación. Este tutorial le mostrará cómo configurar una topología de replicación para servidores conectados de forma continua.  
   
-## Aprendizaje  
+## <a name="what-you-will-learn"></a>Aprendizaje  
 Este tutorial le mostrará cómo publicar datos de una base de datos a otra con la replicación transaccional. En la primera lección se muestra cómo utilizar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para crear una publicación. En las siguientes lecciones se explica cómo crear y validar una suscripción y cómo medir la latencia.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
 Este tutorial está destinado a usuarios que están familiarizados con las operaciones básicas de las bases de datos, pero que tienen una experiencia limitada en operaciones de replicación. Para realizar este tutorial, es preciso que haya finalizado el anterior, [Preparar el servidor para replicación](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 Para utilizar este tutorial, el sistema debe contar con los siguientes componentes:  
@@ -44,14 +48,14 @@ Para utilizar este tutorial, el sistema debe contar con los siguientes component
     -   Cualquier edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], excepto [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] no puede ser un suscriptor de replicación transaccional.  
   
     > [!NOTE]  
-    > La replicación no se instala de forma predeterminada en [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
+    > La replicación no se instala de forma predeterminada en [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] .  
   
 > [!NOTE]  
-> En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], debe conectarse al publicador y al suscriptor con un inicio de sesión que sea miembro del rol fijo de servidor **sysadmin**.  
+> En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], debe conectarse al publicador y al suscriptor con un inicio de sesión que sea miembro del rol fijo de servidor **sysadmin** .  
   
 **Tiempo estimado para completar este tutorial: 30 minutos.**  
   
-## Lecciones de este tutorial  
+## <a name="lessons-in-this-tutorial"></a>Lecciones de este tutorial  
   
 -   [Lección 1: Publicar datos con la replicación transaccional](../../relational-databases/replication/lesson-1-publishing-data-using-transactional-replication.md)  
   
@@ -61,8 +65,9 @@ Para utilizar este tutorial, el sistema debe contar con los siguientes component
   
 [Iniciar el tutorial](../../relational-databases/replication/lesson-1-publishing-data-using-transactional-replication.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
 [Conceptos de la programación de replicación](../../relational-databases/replication/concepts/replication-programming-concepts.md)  
   
   
   
+

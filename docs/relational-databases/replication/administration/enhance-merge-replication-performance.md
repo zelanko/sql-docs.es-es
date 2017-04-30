@@ -1,34 +1,38 @@
 ---
-title: "Aumentar el rendimiento de la replicaci&#243;n de mezcla | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "publicaciones [replicación de SQL Server], diseño y rendimiento"
-  - "diseño de bases de datos [SQL Server], rendimiento de la replicación"
-  - "Agente de mezcla, rendimiento"
-  - "instantáneas [replicación de SQL Server], consideraciones de rendimiento"
-  - "rendimiento de la replicación de mezcla [replicación de SQL Server]"
-  - "suscripciones [replicación de SQL Server], consideraciones de rendimiento"
-  - "rendimiento [replicación de SQL Server], replicación de mezcla"
-  - "agentes [replicación de SQL Server], rendimiento"
+title: "Aumentar el rendimiento de la replicación de mezcla | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publications [SQL Server replication], design and performance
+- designing databases [SQL Server], replication performance
+- Merge Agent, performance
+- snapshots [SQL Server replication], performance considerations
+- merge replication performance [SQL Server replication]
+- subscriptions [SQL Server replication], performance considerations
+- performance [SQL Server replication], merge replication
+- agents [SQL Server replication], performance
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fd62d43d9f77f0baf63487c15381e07814eea63d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aumentar el rendimiento de la replicaci&#243;n de mezcla
+# <a name="enhance-merge-replication-performance"></a>Aumentar el rendimiento de la replicación de mezcla
   Tras considerar las sugerencias generales de rendimiento que se describen en [Aumentar el rendimiento general de la replicación](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), tenga en cuenta estas otras áreas específicas de la replicación de mezcla.  
   
-## Diseño de la base de datos  
+## <a name="database-design"></a>Diseño de la base de datos  
   
 -   Indice las columnas utilizadas en filtros de fila y de combinación.  
   
@@ -36,13 +40,13 @@ caps.handback.revision: 47
   
      La indización de todas las columnas utilizadas en los filtros de combinación también es importante. Cada vez que se ejecuta el Agente de mezcla, busca la tabla base para determinar qué filas de la tabla principal y qué filas de las tablas relacionadas están incluidas en la partición. La creación de un índice en las columnas de combinación evita que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lea todas las filas de la tabla cada vez que se ejecute el Agente de mezcla.  
   
-     Para obtener más información sobre los filtros, consulte [filtrar datos publicados para replicación de mezcla](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md).  
+     Para obtener más información sobre el filtrado, consulte [Filtrar datos publicados para la replicación de mezcla](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md).  
   
 -   Considere la posibilidad de aplicar una normalización excesiva a las tablas que incluyan tipos de datos de objetos grandes (LOB).  
   
-     Cuando se produce la sincronización, el Agente de mezcla puede tener que leer y transferir todas las filas de datos de un publicador o un suscriptor. Si la fila contiene columnas que utilizan LOB, este proceso puede requerir una asignación de memoria adicional y causar un impacto negativo en el rendimiento aunque no se hayan actualizado estas columnas. Para reducir la probabilidad de que se produzca este impacto en el rendimiento, considere colocar las columnas LOB en una tabla independiente con una relación de uno a uno al resto de datos de las filas. Los tipos de datos **text**, **ntext**y **image** han quedado desusados. Si incluye LOB, se recomienda que utilice los tipos de datos **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, respectivamente.  
+     Cuando se produce la sincronización, el Agente de mezcla puede tener que leer y transferir todas las filas de datos de un publicador o un suscriptor. Si la fila contiene columnas que utilizan LOB, este proceso puede requerir una asignación de memoria adicional y causar un impacto negativo en el rendimiento aunque no se hayan actualizado estas columnas. Para reducir la probabilidad de que se produzca este impacto en el rendimiento, considere colocar las columnas LOB en una tabla independiente con una relación de uno a uno al resto de datos de las filas. Los tipos de datos **text**, **ntext**y **image** han quedado desusados. Si incluye LOB, se recomienda que utilice los tipos de datos **varchar(max)**, **nvarchar(max)**y **varbinary(max)**, respectivamente.  
   
-## Diseño de la publicación  
+## <a name="publication-design"></a>Diseño de la publicación  
   
 -   Use un nivel de compatibilidad de la publicación de 90RTM ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o una versión posterior).  
   
@@ -52,21 +56,21 @@ caps.handback.revision: 47
   
      El período de retención de la publicación, que es la cantidad máxima de tiempo que debe transcurrir antes de que una suscripción se deba sincronizar, determina el tiempo de almacenamiento del seguimiento de metadatos. Un valor alto puede afectar el rendimiento de almacenamiento y procesamiento. Para obtener más información acerca de cómo configurar el período de retención de la publicación, vea [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
--   Utilice los artículos de solo descarga en las tablas que únicamente se cambian en el publicador. Para obtener más información, consulte [optimizar el rendimiento de replicación de mezcla con artículos de la sección](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+-   Utilice los artículos de solo descarga en las tablas que únicamente se cambian en el publicador. Para obtener más información, consulte [Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
-### Diseño y uso de filtros  
+### <a name="filter-design-and-use"></a>Diseño y uso de filtros  
   
 -   Limite la complejidad de las cláusulas de filtros de fila.  
   
-     Limitar la complejidad del criterio de filtro ayuda a mejorar el rendimiento cuando el Agente de mezcla calcula los cambios de filas que se van a enviar a los suscriptores. Evite el uso de subselecciones dentro de las cláusulas de filtros de fila de mezcla. En su lugar, considere el uso de filtros de combinación, que normalmente son más eficaces cuando se utilizan para crear particiones de datos de una tabla en función de la cláusula de filtro de fila de otra tabla. Para obtener más información acerca del filtrado, consulte [filtrar datos publicados para replicación de mezcla](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md).  
+     Limitar la complejidad del criterio de filtro ayuda a mejorar el rendimiento cuando el Agente de mezcla calcula los cambios de filas que se van a enviar a los suscriptores. Evite el uso de subselecciones dentro de las cláusulas de filtros de fila de mezcla. En su lugar, considere el uso de filtros de combinación, que normalmente son más eficaces cuando se utilizan para crear particiones de datos de una tabla en función de la cláusula de filtro de fila de otra tabla. Para obtener más información sobre el filtrado, consulte [Filtrar datos publicados para la replicación de mezcla](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md).  
   
--   Utilice particiones precalculadas con filtros con parámetros (esta característica se usa de manera predeterminada). Para obtener más información, consulte [optimizar el rendimiento de filtro con parámetros con particiones precalculadas](../../../relational-databases/replication/merge/optimize-parameterized-filter-performance-with-precomputed-partitions.md).  
+-   Utilice particiones precalculadas con filtros con parámetros (esta característica se usa de manera predeterminada). Para obtener más información, vea [Optimización del rendimiento de los filtros con parámetros con particiones calculadas previamente](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
-     Las particiones precalculadas imponen una serie de limitaciones en el comportamiento de los filtros. Si la aplicación no se puede respetar estas limitaciones, establezca el **keep_partition_changes** opción **True**, lo que mejora el rendimiento. Para más información, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-row-filters.md).  
+     Las particiones precalculadas imponen una serie de limitaciones en el comportamiento de los filtros. Si la aplicación no puede respetar estas limitaciones, establezca la opción **keep_partition_changes** en **True**, y así obtendrá ventajas de rendimiento. Para obtener más información, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Utilice particiones que no se superpongan si los datos se filtran pero no se comparten entre usuarios.  
   
-     La replicación puede optimizar el rendimiento de los datos que no se comparten entre particiones o suscripciones. Para obtener más información, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-row-filters.md).  
+     La replicación puede optimizar el rendimiento de los datos que no se comparten entre particiones o suscripciones. Para obtener más información, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   No cree jerarquías complejas de filtros de combinación.  
   
@@ -78,21 +82,21 @@ caps.handback.revision: 47
   
     -   Para aumentar el rendimiento de las particiones precalculadas cuando los lotes incluyen numerosos cambios de datos, diseñe su aplicación con cuidado. Asegúrese de que los cambios en los datos de la tabla primaria de un filtro de combinación se realicen antes que los cambios correspondientes de las tablas secundarias.  
   
--   Establecer el **join_unique_key** opción **1** Si permite la lógica.  
+-   Establezca la opción **join_unique_key** en **1** si lo permite la lógica.  
   
-     Al establecer este parámetro en **1** , se indica que la relación entre la tabla principal y la secundaria de un filtro de combinación es de uno a uno o de uno a varios. Configure este parámetro en **1** únicamente si tiene una restricción en la columna de combinación de la tabla secundaria que garantiza la exclusividad. Si el parámetro se establece en **1** incorrectamente, puede producirse la no convergencia de los datos. Para obtener más información, consulte [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
+     Al establecer este parámetro en **1** , se indica que la relación entre la tabla principal y la secundaria de un filtro de combinación es de uno a uno o de uno a varios. Configure este parámetro en **1** únicamente si tiene una restricción en la columna de combinación de la tabla secundaria que garantiza la exclusividad. Si el parámetro se establece en **1** de forma incorrecta, se podría producir la no convergencia de los datos. Para obtener más información, consulte [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
   
 -   Evite la ejecución de lotes con muchos cambios cuando use particiones precalculadas.  
   
-     Cuando el Agente de mezcla se ejecute tras la ejecución de un lote que contenga numerosos cambios de datos, el agente intentará dividir este lote de gran tamaño en lotes más pequeños. Durante este tiempo, pueden bloquearse otros procesos del Agente de mezcla. Considere la posibilidad de reducir el número de cambios de un lote y ejecutar el Agente de mezcla entre los distintos lotes. Si esto no es posible, aumente el valor de **generation_leveling_threshold** para la publicación.  
+     Cuando el Agente de mezcla se ejecute tras la ejecución de un lote que contenga numerosos cambios de datos, el agente intentará dividir este lote de gran tamaño en lotes más pequeños. Durante este tiempo, pueden bloquearse otros procesos del Agente de mezcla. Considere la posibilidad de reducir el número de cambios de un lote y ejecutar el Agente de mezcla entre los distintos lotes. Si esto último no es posible, aumente el valor de **generation_leveling_threshold** para la publicación.  
   
-## Consideraciones acerca de las suscripciones  
+## <a name="subscription-considerations"></a>Consideraciones acerca de las suscripciones  
   
 -   Establezca programaciones para sincronizar las suscripciones.  
   
-     Si un gran número de suscriptores se sincronizan con un publicador, considere la posibilidad de escalonar las programaciones con el fin de que el Agente de mezcla se ejecute en distintos momentos. Para obtener más información, consulte [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md).  
+     Si un gran número de suscriptores se sincronizan con un publicador, considere la posibilidad de escalonar las programaciones con el fin de que el Agente de mezcla se ejecute en distintos momentos. Para más información, consulte [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md).  
   
-## Parámetros del Agente de mezcla  
+## <a name="merge-agent-parameters"></a>Parámetros del Agente de mezcla  
  Para obtener información sobre el Agente de mezcla y sus parámetros, vea [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md).  
   
 -   Actualice todos los suscriptores de suscripciones de extracción a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o una versión posterior.  
@@ -105,23 +109,23 @@ caps.handback.revision: 47
   
     -   [Trabajar con perfiles del Agente de replicación](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
-    -   [Ver y modificar los parámetros de línea de comandos del agente de replicación & #40; SQL Server Management Studio & #41;](../../../relational-databases/replication/agents/view and modify replication agent command prompt parameters.md)  
+    -   [Ver y modificar parámetros del símbolo del sistema de los agentes de replicación &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [Conceptos de los ejecutables del Agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
--   Considere aumentar el valor de la **- MakeGenerationInterval** parámetro, especialmente si la sincronización implica más cargas de suscriptores que descargas para suscriptores.  
+-   Considere aumentar el valor del parámetro **-MakeGenerationInterval** , especialmente si la sincronización implica más cargas de suscriptores que descargas a suscriptores.  
   
 -   Cuando se sincronizan filas de datos con una gran cantidad de datos, como las filas que contienen columnas LOB, la sincronización web puede requerir la asignación de memoria adicional y afectar al rendimiento. Esto sucede cuando el Agente de mezcla genera un mensaje XML que contiene demasiadas filas de datos con grandes cantidades de datos. Si el Agente de mezcla consume demasiados recursos durante la sincronización web, se recomienda reducir el número de filas que se envían en un mismo mensaje mediante alguno de los siguientes procedimientos:  
   
     -   Usar el perfil de agente de conexión lenta para el Agente de mezcla. Para obtener más información, consulte [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
-    -   Disminuir la **- DownloadGenerationsPerBatch** y **- UploadGenerationsPerBatch** parámetros para el agente de mezcla con un valor de 10 o menos. El valor predeterminado de esos parámetros es 50.  
+    -   Reduzca los parámetros **-DownloadGenerationsPerBatch** y **-UploadGenerationsPerBatch** del Agente de mezcla a un valor de 10 o menos. El valor predeterminado de esos parámetros es 50.  
   
-## Consideraciones acerca de las instantáneas  
+## <a name="snapshot-considerations"></a>Consideraciones acerca de las instantáneas  
   
 -   Cree una columna ROWGUIDCOL en tablas grandes antes de generar la instantánea inicial.  
   
-     La replicación de mezcla requiere que todas las tablas publicadas tengan una columna ROWGUIDCOL. Si no existe una columna ROWGUIDCOL en la tabla antes de que el Agente de instantáneas cree los archivos de instantánea iniciales, el agente debe agregar y llenar primero la columna ROWGUIDCOL. Para mejorar el rendimiento cuando se generan instantáneas durante la replicación de mezcla, puede crear una columna ROWGUIDCOL en cada una de las tablas antes de publicar. La columna puede tener cualquier nombre (**rowguid** el agente de instantáneas se usa de forma predeterminada), pero debe tener los siguientes datos de características de tipo:  
+     La replicación de mezcla requiere que todas las tablas publicadas tengan una columna ROWGUIDCOL. Si no existe una columna ROWGUIDCOL en la tabla antes de que el Agente de instantáneas cree los archivos de instantánea iniciales, el agente debe agregar y llenar primero la columna ROWGUIDCOL. Para mejorar el rendimiento cuando se generan instantáneas durante la replicación de mezcla, puede crear una columna ROWGUIDCOL en cada una de las tablas antes de publicar. La columna puede tener cualquier nombre (de forma predeterminada, el Agente de instantáneas utiliza**rowguid** ), pero debe tener las siguientes características de tipo de datos:  
   
     -   Un tipo de datos de UNIQUEIDENTIFIER.  
   
@@ -135,14 +139,14 @@ caps.handback.revision: 47
   
      Utilice una de estas opciones o las dos para proporcionar instantáneas para publicaciones que utilicen filtros con parámetros. Si no especifica una de estas opciones, las suscripciones se inicializan utilizando una serie de instrucciones SELECT e INSERT, en lugar de la utilidad **bcp** ; este proceso es mucho más lento. Para obtener más información, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
   
-## Consideraciones acerca del mantenimiento y la supervisión  
+## <a name="maintenance-and-monitoring-considerations"></a>Consideraciones acerca del mantenimiento y la supervisión  
   
 -   De vez en cuando, vuelva a crear los índices de tablas del sistema de la replicación de mezcla.  
   
-     Como parte del mantenimiento de la replicación de mezcla, compruebe ocasionalmente el crecimiento de las tablas del sistema asociadas con la duplicación de mezcla: **MSmerge_contents**, **MSmerge_genhistory**, y **MSmerge_tombstone**, **MSmerge_current_partition_mappings**, y **MSmerge_past_partition_mappings**. Vuelva a indizar estas tablas periódicamente. Para obtener más información, consulte [reorganizar y volver a generar índices](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
+     Como parte del mantenimiento de la replicación de mezcla, compruebe ocasionalmente el crecimiento de las tablas del sistema asociadas con la replicación de mezcla: **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings**y **MSmerge_past_partition_mappings**. Vuelva a indizar estas tablas periódicamente. Para obtener más información, vea [Reorganizar y volver a generar índices](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Supervise el rendimiento de la sincronización utilizando la pestaña **Historial de sincronizaciones** del Monitor de replicación.  
   
-     Replicación de mezcla, el Monitor de replicación muestra estadísticas detalladas en el **historial de sincronizaciones** ficha para cada artículo procesado durante la sincronización, incluida la cantidad de tiempo empleado en cada fase del proceso (carga de cambios, descarga los cambios y así sucesivamente). Esto puede ayudar a identificar las tablas específicas que están causando una reducción de la velocidad y es el mejor lugar para solucionar problemas de rendimiento con las suscripciones de mezcla. Para obtener más información acerca de cómo ver estadísticas detalladas, consulte [Ver información y realizar tareas para los agentes asociados a una suscripción & #40; Monitor de replicación & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md).  
+     En la replicación de mezcla, el Monitor de replicación muestra en la pestaña **Historial de sincronizaciones** estadísticas detalladas de cada artículo que se procesa durante la sincronización, incluida la cantidad de tiempo de cada fase del proceso (carga de cambios, descarga de cambios, etc.). Esto puede ayudar a identificar las tablas específicas que están causando una reducción de la velocidad y es el mejor lugar para solucionar problemas de rendimiento con las suscripciones de mezcla. Para obtener más información sobre cómo ver estadísticas detalladas, consulte [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
   

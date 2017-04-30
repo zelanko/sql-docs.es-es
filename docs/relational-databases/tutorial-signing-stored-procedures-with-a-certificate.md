@@ -1,26 +1,30 @@
 ---
-title: "Tutorial: Firmar procedimientos almacenados con un certificado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "firmar tutorial de procedimientos almacenados [SQL Server]"
+title: 'Tutorial: Firmar procedimientos almacenados con un certificado | Microsoft Docs'
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- signing stored procedures tutorial [SQL Server]
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0ccfcccf5fbed9a2b0e4f09fdd80e7f3e5dcda9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tutorial: Firmar procedimientos almacenados con un certificado
+# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Tutorial: Firmar procedimientos almacenados con un certificado
 En este tutorial se describe cómo se firman los procedimientos almacenados con un certificado generado por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
@@ -48,7 +52,7 @@ En este escenario, en primer lugar creará un certificado de base de datos, un p
   
 Cada bloque de código incluido en este ejemplo se describe en línea. Para copiar el ejemplo completo, vea [Ejemplo completo](#CompleteExample) al final de este tutorial.  
   
-## 1. Configurar el entorno  
+## <a name="1-configure-the-environment"></a>1. Configurar el entorno  
 Para establecer el contexto inicial del ejemplo, en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] abra una consulta nueva y ejecute el código siguiente para abrir la base de datos [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. Este código cambia el contexto de la base de datos a `AdventureWorks2012` y crea un inicio de sesión de servidor y una cuenta de usuario de base de datos nuevos (`TestCreditRatingUser`) mediante una contraseña.  
   
 ```  
@@ -65,7 +69,7 @@ GO
   
 Para obtener más información sobre la instrucción CREATE USER, consulte [CREATE USER &#40;Transact-SQL&#41;](../t-sql/statements/create-user-transact-sql.md). Para obtener más información sobre la instrucción CREATE LOGIN, consulte [CREATE LOGIN &#40;Transact-SQL&#41;](../t-sql/statements/create-login-transact-sql.md).  
   
-## 2. Crear un certificado  
+## <a name="2-create-a-certificate"></a>2. Crear un certificado  
 Puede crear certificados en los servidores mediante la base de datos maestra como contexto y mediante una base de datos de usuario, o ambas. Existen varias opciones para proteger el certificado. Para obtener más información sobre los certificados, consulte [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../t-sql/statements/create-certificate-transact-sql.md).  
   
 Ejecute este código para crear un certificado de base de datos y protéjalo mediante una contraseña.  
@@ -78,7 +82,7 @@ CREATE CERTIFICATE TestCreditRatingCer
 GO  
 ```  
   
-## 3. Crear y firmar un procedimiento almacenado mediante el certificado  
+## <a name="3-create-and-sign-a-stored-procedure-using-the-certificate"></a>3. Crear y firmar un procedimiento almacenado mediante el certificado  
 Utilice el siguiente código para crear un procedimiento almacenado que seleccione los datos de la tabla `Vendor` en el esquema de la base de datos `Purchasing` y restrinja el acceso únicamente a las compañías con una solvencia de 1. Tenga en cuenta que la primera sección del procedimiento almacenado muestra el contexto de la cuenta de usuario que ejecuta el procedimiento almacenado, que solo se usa para demostrar los conceptos. No es necesario cumplir los requisitos.  
   
 ```  
@@ -114,7 +118,7 @@ Para obtener más información sobre los procedimientos almacenados, consulte [P
   
 Para obtener más información sobre cómo firmar los procedimientos almacenados, consulte [ADD SIGNATURE &#40;Transact-SQL&#41;](../t-sql/statements/add-signature-transact-sql.md).  
   
-## 4. Crear una cuenta de certificado mediante el certificado  
+## <a name="4-create-a-certificate-account-using-the-certificate"></a>4. Crear una cuenta de certificado mediante el certificado  
 Ejecute este código para crear un usuario de base de datos (`TestCreditRatingcertificateAccount`) a partir del certificado. Esta cuenta no tiene inicio de sesión en el servidor y en última instancia controlará el acceso a las tablas subyacentes.  
   
 ```  
@@ -125,7 +129,7 @@ CREATE USER TestCreditRatingcertificateAccount
 GO  
 ```  
   
-## 5. Conceder al certificado derechos de base de datos de cuentas  
+## <a name="5-grant-the-certificate-account-database-rights"></a>5. Conceder al certificado derechos de base de datos de cuentas  
 Ejecute este código para conceder derechos `TestCreditRatingcertificateAccount` a la tabla base y al procedimiento almacenado.  
   
 ```  
@@ -142,7 +146,7 @@ GO
   
 Para obtener más información sobre cómo conceder permisos a los objetos, consulte [GRANT &#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md).  
   
-## 6. Mostrar el contexto de acceso  
+## <a name="6-display-the-access-context"></a>6. Mostrar el contexto de acceso  
 Para mostrar los derechos asociados al acceso al procedimiento almacenado, ejecute el siguiente código para conceder al usuario de `TestCreditRatingUser` los derechos para ejecutar el procedimiento almacenado.  
   
 ```  
@@ -173,7 +177,7 @@ Se muestra la auditoría disponible porque ha firmado el procedimiento almacenad
 > [!NOTE]  
 > Use EXECUTE AS para cambiar contextos dentro de una base de datos.  
   
-## 7. Restablecer el entorno  
+## <a name="7-reset-the-environment"></a>7. Restablecer el entorno  
 El código siguiente usa la instrucción `REVERT` para devolver el contexto de la cuenta actual a dbo y, a continuación, restablece el entorno.  
   
 ```  
@@ -289,8 +293,9 @@ DROP CERTIFICATE TestCreditRatingCer;
 GO  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
 [Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   
+

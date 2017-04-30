@@ -1,40 +1,44 @@
 ---
-title: "Aumentar el rendimiento de la replicaci&#243;n general | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "publicaciones [replicación de SQL Server], diseño y rendimiento"
-  - "diseño de bases de datos [SQL Server], rendimiento de la replicación"
-  - "Agente de instantáneas, rendimiento"
-  - "instantáneas [replicación de SQL Server], consideraciones de rendimiento"
-  - "rendimiento de la replicación de mezcla [replicación de SQL Server]"
-  - "replicación de instantáneas [SQL Server], rendimiento"
-  - "suscripciones [replicación de SQL Server], consideraciones de rendimiento"
-  - "agentes [replicación de SQL Server], rendimiento"
-  - "rendimiento [replicación de SQL Server], consideraciones de rendimiento"
-  - "replicación transaccional, rendimiento"
+title: "Aumentar el rendimiento de la replicación general | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publications [SQL Server replication], design and performance
+- designing databases [SQL Server], replication performance
+- Snapshot Agent, performance
+- snapshots [SQL Server replication], performance considerations
+- merge replication performance [SQL Server replication]
+- snapshot replication [SQL Server], performance
+- subscriptions [SQL Server replication], performance considerations
+- agents [SQL Server replication], performance
+- performance [SQL Server replication], general considerations
+- transactional replication, performance
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 02f3e2ad2af0d11f5842bacc01ecb8cdf771bd56
+ms.lasthandoff: 04/11/2017
+
 ---
-# Aumentar el rendimiento de la replicaci&#243;n general
+# <a name="enhance-general-replication-performance"></a>Aumentar el rendimiento de la replicación general
   Puede aumentar el rendimiento general de todos los tipos de replicación en su aplicación y en la red siguiendo las directrices descritas en este tema.  
   
-## Servidor y red  
+## <a name="server-and-network"></a>Servidor y red  
   
 -   Defina la cantidad mínima y máxima de memoria asignada al [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].  
   
-     De forma predeterminada, el [!INCLUDE[ssDE](../../../includes/ssde-md.md)] cambia dinámicamente sus necesidades de memoria según los recursos del sistema disponibles. Para evitar la disponibilidad insuficiente de memoria durante las actividades de replicación, utilice la opción **min server memory** para establecer la memoria mínima disponible. Para evitar que el sistema operativo tenga que paginar en el disco para disponer de memoria, puede definir también una cantidad máxima de memoria con la opción **max server memory** . Para obtener más información, consulte [Opciones de configuración de servidor de memoria de servidor](../../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
+     De forma predeterminada, el [!INCLUDE[ssDE](../../../includes/ssde-md.md)] cambia dinámicamente sus necesidades de memoria según los recursos del sistema disponibles. Para evitar la disponibilidad insuficiente de memoria durante las actividades de replicación, utilice la opción **min server memory** para establecer la memoria mínima disponible. Para evitar que el sistema operativo tenga que paginar en el disco para disponer de memoria, puede definir también una cantidad máxima de memoria con la opción **max server memory** . Para obtener más información, consulte [Opciones de configuración del servidor de memoria del servidor](../../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
 -   Garantice una asignación adecuada de los archivos de datos y los archivos de registro de la base de datos. Utilice una unidad de disco independiente para el registro de transacciones de todas las bases de datos implicadas en la replicación.  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 45
   
      La red puede suponer un cuello de botella importante para el rendimiento, en especial para la replicación transaccional. La propagación de cambios a los suscriptores puede mejorarse significativamente utilizando una red rápida de 100 Mbps o superior. Si la red es lenta, especifique una configuración de red y parámetros de agente apropiados.  
   
-## Diseño de la base de datos  
+## <a name="database-design"></a>Diseño de la base de datos  
   
 -   Siga las prácticas recomendadas para el diseño de la base de datos.  
   
@@ -65,25 +69,25 @@ caps.handback.revision: 45
     SET READ_COMMITTED_SNAPSHOT ON  
     ```  
   
-     Para obtener más información, consulte [ALTER DATABASE & #40; Transact-SQL & #41;](../../../t-sql/statements/alter-database-transact-sql.md).  
+     Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md).  
   
 -   Tenga cuidado con la lógica de negocios de los desencadenadores.  
   
      La lógica de negocios de los desencadenadores definidos por el usuario en el Suscriptor puede ralentizar la replicación de los cambios en el suscriptor.  
   
-    -   En la replicación transaccional, puede ser más eficaz incluir esta lógica en procedimientos almacenados personalizados que se utilizan para aplicar los comandos replicados. Para obtener más información, consulte [especificar cómo se propagan los cambios en los artículos transaccionales](../../../relational-databases/replication/transactional/specify-how-changes-are-propagated-for-transactional-articles.md).  
+    -   En la replicación transaccional, puede ser más eficaz incluir esta lógica en procedimientos almacenados personalizados que se utilizan para aplicar los comandos replicados. Para obtener más información, consulte [Especificar cómo se propagan los cambios para los artículos transaccionales](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
-    -   En la replicación de mezcla, puede ser más eficaz utilizar controladores de lógica de negocios. Para obtener más información, consulte [ejecutar lógica de negocios durante la sincronización mezcla](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
+    -   En la replicación de mezcla, puede ser más eficaz utilizar controladores de lógica de negocios. Para obtener más información, consulte [Ejecutar lógica de negocios durante la sincronización de mezcla](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
-     Si utiliza desencadenadores para mantener la integridad referencial en las tablas publicadas para la replicación de mezcla, especifique el orden de procesamiento de las tablas para reducir el número de reintentos requeridos por el Agente de mezcla. Para obtener más información, consulte [especificar el procesamiento de orden de combinar artículos](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
+     Si utiliza desencadenadores para mantener la integridad referencial en las tablas publicadas para la replicación de mezcla, especifique el orden de procesamiento de las tablas para reducir el número de reintentos requeridos por el Agente de mezcla. Para obtener más información, consulte [Especificar el orden de procesamiento de los artículos de mezcla](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
   
 -   Limite el uso de tipos de datos de objetos grandes (LOB).  
   
-     Los LOB requieren más espacio de almacenamiento y procesamiento que otros tipos de datos de columna. No incluya estas columnas en los artículos a menos que sea necesario para la aplicación. Los tipos de datos **text**, **ntext**y **image** han quedado desusados. Si incluye LOB, se recomienda que utilice los tipos de datos **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, respectivamente.  
+     Los LOB requieren más espacio de almacenamiento y procesamiento que otros tipos de datos de columna. No incluya estas columnas en los artículos a menos que sea necesario para la aplicación. Los tipos de datos **text**, **ntext**y **image** han quedado desusados. Si incluye LOB, se recomienda que utilice los tipos de datos **varchar(max)**, **nvarchar(max)**y **varbinary(max)**, respectivamente.  
   
      Para la replicación transaccional, considere la posibilidad de utilizar el perfil de Agente de distribución denominado **Perfil de distribución para secuencias OLEDB**. Para más información, vea [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
-## Diseño de la publicación  
+## <a name="publication-design"></a>Diseño de la publicación  
   
 -   Publique solamente los datos necesarios.  
   
@@ -95,29 +99,29 @@ caps.handback.revision: 45
   
      Para realizar particiones de cambios se pueden publicar subconjuntos de datos en cada suscriptor o hacer que una aplicación dirija los cambios de una fila determinada a un nodo en concreto:  
   
-    -   La replicación de mezcla admite la publicación de subconjuntos de datos utilizando filtros con parámetros con una sola publicación. Para más información, vea [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-row-filters.md).  
+    -   La replicación de mezcla admite la publicación de subconjuntos de datos utilizando filtros con parámetros con una sola publicación. Para más información, vea [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-    -   La replicación transaccional admite la publicación de subconjuntos de datos utilizando filtros estáticos con varias publicaciones. Para obtener más información, consulte [filtrar datos publicados](../../../relational-databases/replication/publish/filter-published-data.md).  
+    -   La replicación transaccional admite la publicación de subconjuntos de datos utilizando filtros estáticos con varias publicaciones. Para obtener más información, consulte [Filtrar datos publicados](../../../relational-databases/replication/publish/filter-published-data.md).  
   
 -   Utilice los filtros de fila con prudencia.  
   
      Cuando una publicación transaccional incluye uno o varios artículos que utilizan filtros de fila, el Agente de registro del LOG tiene que aplicar el filtro a cada fila afectada por una actualización de la tabla conforme examina el registro de transacciones. Por tanto, el rendimiento del Agente de registro del LOG se verá afectado.  
   
-     De igual modo, la replicación de mezcla debe evaluar las filas cambiadas o eliminadas para determinar qué suscriptores deben recibir esas filas. Cuando se emplean filtros de fila para reducir los datos requeridos en el suscriptor, este procesamiento es más complejo y puede ser más lento que cuando publica todas las filas en una tabla. Considere cuidadosamente el compromiso entre la reducción de los requisitos de almacenamiento en cada suscriptor y la necesidad de conseguir el máximo rendimiento. Para obtener más información sobre los filtros, consulte [filtrar datos publicados](../../../relational-databases/replication/publish/filter-published-data.md).  
+     De igual modo, la replicación de mezcla debe evaluar las filas cambiadas o eliminadas para determinar qué suscriptores deben recibir esas filas. Cuando se emplean filtros de fila para reducir los datos requeridos en el suscriptor, este procesamiento es más complejo y puede ser más lento que cuando publica todas las filas en una tabla. Considere cuidadosamente el compromiso entre la reducción de los requisitos de almacenamiento en cada suscriptor y la necesidad de conseguir el máximo rendimiento. Para obtener más información sobre el filtrado, consulte [Filtrar datos publicados](../../../relational-databases/replication/publish/filter-published-data.md).  
   
-## Consideraciones acerca de las suscripciones  
+## <a name="subscription-considerations"></a>Consideraciones acerca de las suscripciones  
   
 -   Utilice suscripciones de extracción cuando haya un gran número de suscriptores.  
   
-     El Agente de distribución y el Agente de mezcla se ejecutan en el distribuidor para las suscripciones de inserción, y en los suscriptores para las suscripciones de extracción. El uso de las suscripciones de extracción puede mejorar el rendimiento desplazando el procesamiento de agentes del distribuidor a los suscriptores. Para obtener más información, consulte [suscribirse a publicaciones](../../../relational-databases/replication/subscribe-to-publications.md).  
+     El Agente de distribución y el Agente de mezcla se ejecutan en el distribuidor para las suscripciones de inserción, y en los suscriptores para las suscripciones de extracción. El uso de las suscripciones de extracción puede mejorar el rendimiento desplazando el procesamiento de agentes del distribuidor a los suscriptores. Para obtener más información, consulte [Suscribirse a publicaciones](../../../relational-databases/replication/subscribe-to-publications.md).  
   
 -   Considere la posibilidad de reinicializar la suscripción si los suscriptores están muy retrasados.  
   
-     Cuando sea necesario enviar grandes cantidades de cambios a los suscriptores, reinicializarlos con una nueva instantánea puede ser más rápido que utilizar la replicación para mover los cambios individuales. Para obtener más información, consulte [reinicializar suscripciones](../../../relational-databases/replication/reinitialize-subscriptions.md).  
+     Cuando sea necesario enviar grandes cantidades de cambios a los suscriptores, reinicializarlos con una nueva instantánea puede ser más rápido que utilizar la replicación para mover los cambios individuales. Para obtener más información, vea [Reinicializar suscripciones](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
-     En la replicación transaccional, el Monitor de replicación muestra, en la pestaña **Comandos sin distribuir** , información acerca del número de transacciones de la base de datos de distribución que aún no se han distribuido a un suscriptor, así como el tiempo estimado para la distribución de dichas transacciones. Para obtener más información, consulte [Ver información y realizar tareas para los agentes asociados a una suscripción & #40; Monitor de replicación & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md).  
+     En la replicación transaccional, el Monitor de replicación muestra, en la pestaña **Comandos sin distribuir** , información acerca del número de transacciones de la base de datos de distribución que aún no se han distribuido a un suscriptor, así como el tiempo estimado para la distribución de dichas transacciones. Para obtener más información, consulte [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
-## Consideraciones acerca de las instantáneas  
+## <a name="snapshot-considerations"></a>Consideraciones acerca de las instantáneas  
   
 -   Ejecute el Agente de instantáneas solamente cuando sea necesario y en horas de poca actividad.  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 45
   
 -   Utilice una instantánea en modo nativo a menos que sea necesaria una instantánea en modo de carácter.  
   
-     Utilice la instantánea en modo nativo predeterminada para todos los suscriptores excepto los suscriptores que no sean de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y los que ejecuten [!INCLUDE[ssEW](../../../includes/ssew-md.md)], que requieren una instantánea en modo de carácter.  
+     Utilice la instantánea en modo nativo predeterminada para todos los suscriptores excepto los suscriptores que no sean de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y los que ejecuten [!INCLUDE[ssEW](../../../includes/ssew-md.md)], que requieren una instantánea en modo de carácter.  
   
 -   Utilice una única carpeta de instantáneas para una publicación.  
   
@@ -135,7 +139,7 @@ caps.handback.revision: 45
   
      El Agente de instantáneas realiza una escritura secuencial de los datos en la carpeta de instantáneas. Colocar la carpeta de instantáneas en una unidad independiente de cualquier base de datos o archivo de registro reduce la contención entre los discos y ayuda a que el proceso de las instantáneas se complete más deprisa.  
   
--   Cuando cree la base de datos de suscripciones en el suscriptor, considere la posibilidad de especificar un modelo de recuperación simple o por medio de registros de operaciones masivas. Esto permite un registro mínimo de las inserciones masivas realizadas durante la aplicación de la instantánea en el suscriptor. Una vez que se ha aplicado la instantánea a la base de datos de suscripciones, puede cambiar a otro modelo de recuperación diferente si es necesario (las bases de datos replicadas pueden utilizar cualquiera de los modelos de recuperación). Para obtener más información acerca de cómo seleccionar un modelo de recuperación, consulte [restauración y recuperación de información general sobre & Nº 40; SQL Server & #41;](../../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
+-   Cuando cree la base de datos de suscripciones en el suscriptor, considere la posibilidad de especificar un modelo de recuperación simple o por medio de registros de operaciones masivas. Esto permite un registro mínimo de las inserciones masivas realizadas durante la aplicación de la instantánea en el suscriptor. Una vez que se ha aplicado la instantánea a la base de datos de suscripciones, puede cambiar a otro modelo de recuperación diferente si es necesario (las bases de datos replicadas pueden utilizar cualquiera de los modelos de recuperación). Para obtener más información sobre cómo seleccionar un modelo de recuperación, consulte [Información general sobre restauración y recuperación &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
   
 -   Considere la posibilidad de utilizar la carpeta de instantáneas alternativa y las instantáneas comprimidas en medios extraíbles para las redes de ancho de banda reducido.  
   
@@ -145,24 +149,24 @@ caps.handback.revision: 45
   
 -   Considere la posibilidad de inicializar una suscripción manualmente.  
   
-     En algunos casos, como aquellos en los que intervienen grandes conjuntos de datos iniciales, es preferible inicializar una suscripción mediante otro método distinto a una instantánea. Para obtener más información, consulte [inicializar una suscripción transaccional sin una instantánea](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+     En algunos casos, como aquellos en los que intervienen grandes conjuntos de datos iniciales, es preferible inicializar una suscripción mediante otro método distinto a una instantánea. Para obtener más información, consulte [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
-## Parámetros de los agentes  
+## <a name="agent-parameters"></a>Parámetros de los agentes  
   
 -   Reduzca el nivel de detalle de los agentes de replicación, excepto durante la prueba inicial, la supervisión o la depuración.  
   
      Reduzca los parámetros **–HistoryVerboseLevel** y **–OutputVerboseLevel** de los agente de distribución o agentes de mezcla. Esto reducirá número de nuevas filas insertadas para realizar el seguimiento de la salida y el historial del agente. En su lugar, los mensajes anteriores del historial con el mismo estado se actualizarán a la nueva información del historial. Aumente los niveles de detalle de la prueba, la supervisión y la depuración para tener toda la información que sea posible sobre la actividad del agente.  
   
--   Utilice la **– MaxBCPThreads** parámetro del agente de instantáneas, agente de mezcla y agente de distribución (el número de subprocesos especificado no debe superar el número de procesadores del equipo). Este parámetro especifica el número de operaciones de copia masiva que se pueden realizar en paralelo cuando se crea y aplica la instantánea.  
+-   Use el parámetro **–MaxBCPThreads** del Agente de instantáneas, del Agente de mezcla y del Agente de distribución (el número de subprocesos especificados no debe superar el número de procesadores del equipo). Este parámetro especifica el número de operaciones de copia masiva que se pueden realizar en paralelo cuando se crea y aplica la instantánea.  
   
--   Utilice la **– UseInprocLoader** parámetro del agente de distribución y el agente de mezcla (este parámetro no se puede utilizar si las tablas publicadas incluyen columnas XML). Con este parámetro, el agente utiliza el comando BULK INSERT cuando se aplica la instantánea.  
+-   Utilice el parámetro **–UseInprocLoader** del Agente de distribución y del Agente de mezcla (este parámetro no se puede utilizar si las tablas publicadas incluyen columnas XML). Con este parámetro, el agente utiliza el comando BULK INSERT cuando se aplica la instantánea.  
   
  Los parámetros del agente se pueden especificar en los perfiles del agente y en la línea de comandos. Para obtener más información, vea:  
   
 -   [Trabajar con perfiles del Agente de replicación](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
--   [Ver y modificar los parámetros de línea de comandos del agente de replicación & #40; SQL Server Management Studio & #41;](../../../relational-databases/replication/agents/view and modify replication agent command prompt parameters.md)  
+-   [Ver y modificar parámetros del símbolo del sistema de los agentes de replicación &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [Conceptos de los ejecutables del agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
+-   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
   

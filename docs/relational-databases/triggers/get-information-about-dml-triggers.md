@@ -1,29 +1,33 @@
 ---
-title: "Obtener informaci&#243;n acerca de los desencadenadores DML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "metadatos [SQL Server], desencadenadores"
-  - "ver desencadenadores DML"
-  - "desencadenadores DML, metadatos"
-  - "mostrar desencadenadores DML"
-  - "información de estado [SQL Server], desencadenadores"
-  - "desencadenadores DML, ver"
+title: "Obtener información sobre los desencadenadores DML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- metadata [SQL Server], triggers
+- viewing DML triggers
+- DML triggers, metadata
+- displaying DML triggers
+- status information [SQL Server], triggers
+- DML triggers, viewing
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8583bd2597f5107398a65df65dbe7f7eef53f4d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Obtener informaci&#243;n acerca de los desencadenadores DML
+# <a name="get-information-about-dml-triggers"></a>Obtener información acerca de los desencadenadores DML
   En este tema se describe cómo obtener información acerca de los desencadenadores DML en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Esta información puede incluir los tipos de desencadenadores de una tabla, el nombre de un desencadenador, su propietario y la fecha en que se creó o modificó. Si el desencadenador no se cifró cuando se creó, se obtiene la definición del desencadenador. Puede usar la definición para entender cómo un desencadenador afecta a la tabla en la que se define. También puede averiguar los objetos que usa un desencadenador específico. Con esta información, puede identificar los objetos que afectan al desencadenador, en el caso de que se modifiquen o se eliminen de la base de datos.  
   
  **En este tema**  
@@ -47,14 +51,14 @@ caps.handback.revision: 31
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- Debe pertenecer al rol **public** . La definición de los objetos de usuario está visible para el propietario del objeto o los receptores de los permisos siguientes: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION. Estos permisos corresponden implícitamente a los miembros de los roles fijos de base de datos **db_owner**, **db_ddladmin** y **db_securityadmin**.  
+ Debe pertenecer al rol **public** . La definición de los objetos de usuario está visible para el propietario del objeto o los receptores de los permisos siguientes: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION. Estos permisos corresponden implícitamente a los miembros de los roles fijos de base de datos **db_owner**, **db_ddladmin**y **db_securityadmin** .  
   
  **sys.sql_expression_dependencies**  
- Necesita el permiso VIEW DEFINITION en la base de datos y el permiso SELECT en **sys.sql_expression_dependencies** para la base de datos. De forma predeterminada, solo se concede el permiso SELECT a los miembros del rol fijo de base de datos **db_owner**. Si se conceden los permisos SELECT y VIEW DEFINITION a otro usuario, el receptor puede ver todas las dependencias de la base de datos.  
+ Necesita el permiso VIEW DEFINITION en la base de datos y el permiso SELECT en **sys.sql_expression_dependencies** para la base de datos. De forma predeterminada, solo se concede el permiso SELECT a los miembros del rol fijo de base de datos **db_owner** . Si se conceden los permisos SELECT y VIEW DEFINITION a otro usuario, el receptor puede ver todas las dependencias de la base de datos.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para ver la definición de un desencadenador DML  
+#### <a name="to-view-the-definition-of-a-dml-trigger"></a>Para ver la definición de un desencadenador DML  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y expándala.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 31
   
 3.  Expanda **Desencadenadores**, haga clic con el botón derecho en el desencadenador que quiera y, luego, haga clic en **Modificar**. La definición del desencadenador DML aparecerá en la ventana de consulta.  
   
-#### Para ver las dependencias de un desencadenador DML  
+#### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>Para ver las dependencias de un desencadenador DML  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y expándala.  
   
@@ -80,7 +84,7 @@ caps.handback.revision: 31
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para ver la definición de un desencadenador DML  
+#### <a name="to-view-the-definition-of-a-dml-trigger"></a>Para ver la definición de un desencadenador DML  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -113,7 +117,7 @@ GO
   
 ```  
   
-#### Para ver las dependencias de un desencadenador DML  
+#### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>Para ver las dependencias de un desencadenador DML  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -139,7 +143,7 @@ GO
   
 ```  
   
-#### Para ver información acerca de los desencadenadores DML de la base de datos  
+#### <a name="to-view-information-about-dml-triggers-in-the-database"></a>Para ver información acerca de los desencadenadores DML de la base de datos  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -175,13 +179,13 @@ GO
   
 ```  
   
-#### Para ver información acerca de los eventos que activan un desencadenador DML  
+#### <a name="to-view-information-about-events-that-fire-a-dml-trigger"></a>Para ver información acerca de los eventos que activan un desencadenador DML  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
-3.  Copie y pegue uno de los ejemplos siguientes en la ventana de consulta y haga clic en **Ejecutar**. En cada ejemplo se muestra cómo puede ver los eventos que activan el desencadenador `iuPerson`.  
+3.  Copie y pegue uno de los ejemplos siguientes en la ventana de consulta y haga clic en **Ejecutar**. En cada ejemplo se muestra cómo puede ver los eventos que activan el desencadenador `iuPerson` .  
   
 ```tsql  
 USE AdventureWorks2012;   
@@ -201,7 +205,7 @@ WHERE object_id = OBJECT_ID('Person.iuPerson');
 GO  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

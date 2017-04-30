@@ -1,28 +1,32 @@
 ---
-title: "Jerarqu&#237;a de cifrado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cifrado [SQL Server], jerarquías"
-  - "criptografía [SQL Server], jerarquías"
-  - "claves de cifrado [SQL Server]"
-  - "seguridad [SQL Server], cifrado"
-  - "jerarquías [SQL Server], cifrado"
+title: "Jerarquía de cifrado | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], hierarchies
+- cryptography [SQL Server], hierarchies
+- encryption keys [SQL Server]
+- security [SQL Server], encryption
+- hierarchies [SQL Server], encryption
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 93c2bdc00890de016ad26a45786e2d3a9fef9c33
+ms.lasthandoff: 04/11/2017
+
 ---
-# Jerarqu&#237;a de cifrado
+# <a name="encryption-hierarchy"></a>Jerarquía de cifrado
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cifra los datos con una infraestructura de cifrado jerárquico y administración de claves. Cada capa cifra la capa inferior utilizando una combinación de certificados, claves asimétricas y claves simétricas. Las claves asimétricas y las claves simétricas pueden estar almacenadas fuera de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un módulo de Administración extensible de claves (EKM).  
   
  La siguiente ilustración muestra que cada nivel de la jerarquía de cifrado cifra el nivel que tiene por debajo y muestra las configuraciones de cifrado más comunes. El acceso al principio de la jerarquía se suele proteger mediante una contraseña.  
@@ -53,7 +57,7 @@ caps.handback.revision: 41
   
 -   Las claves simétricas y asimétricas de EKM pueden proteger el acceso a las claves simétricas y asimétricas almacenadas en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La línea de puntos asociada a la EKM indica que las claves de la EKM podrían reemplazar a las claves simétricas y asimétricas que se almacenan en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## Mecanismos de cifrado  
+## <a name="encryption-mechanisms"></a>Mecanismos de cifrado  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ofrece los mecanismos siguientes para el cifrado:  
   
 -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] funciones  
@@ -66,10 +70,10 @@ caps.handback.revision: 41
   
 -   Cifrado de datos transparente  
   
-### Funciones de Transact-SQL  
+### <a name="transact-sql-functions"></a>Funciones de Transact-SQL  
  Los elementos individuales se pueden cifrar a medida que se insertan o actualizan utilizando las funciones de [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Para obtener más información, vea [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../../t-sql/functions/encryptbypassphrase-transact-sql.md) y [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../../t-sql/functions/decryptbypassphrase-transact-sql.md).  
   
-### Certificados  
+### <a name="certificates"></a>Certificados  
  Un certificado de clave pública, normalmente denominado solo certificado, es una instrucción firmada digitalmente que enlaza el valor de una clave pública con la identidad de la persona, dispositivo o servicio que tiene la clave privada correspondiente. Las entidades certificadoras son las encargadas de emitir y firmar los certificados. La entidad que recibe un certificado de una CA es el sujeto de ese certificado. Por lo general, los certificados contienen la siguiente información.  
   
 -   La clave pública del sujeto.  
@@ -94,21 +98,21 @@ caps.handback.revision: 41
   
  Los certificados autofirmados que se crean con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cumplen el estándar X.509 y son compatibles con los campos de X.509 v1.  
   
-### Claves asimétricas  
+### <a name="asymmetric-keys"></a>Claves asimétricas  
  Una clave asimétrica se compone de una clave privada y su correspondiente clave pública. Cada clave puede descifrar los datos que cifra la otra. El cifrado y descifrado asimétricos consumen una cantidad de recursos relativamente elevada, pero proporcionan un nivel de seguridad superior al del cifrado simétrico. Una clave asimétrica se puede utilizar para cifrar una clave simétrica para almacenar en una base de datos.  
   
-### Claves simétricas  
+### <a name="symmetric-keys"></a>Claves simétricas  
  Una clave simétrica es una clave que se utiliza para el cifrado y el descifrado. El cifrado y el descifrado con una clave simétrica son más rápidos y adecuados para usarlos de forma rutinaria con datos confidenciales de una base de datos.  
   
-### Cifrado de datos transparente  
+### <a name="transparent-data-encryption"></a>Cifrado de datos transparente  
  El Cifrado de datos transparente (TDE) es un caso especial de cifrado que usa una clave simétrica. TDE cifra una base de datos completa utilizando la clave simétrica denominada clave de cifrado de base de datos. Otras claves o certificados que se protegen bien mediante la clave maestra de base de datos o bien mediante una clave asimétrica almacenadas en un módulo EKM protegen la clave de cifrado de base de datos. Para obtener más información, vea [Cifrado de datos transparente &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
  [Proteger SQL Server](../../../relational-databases/security/securing-sql-server.md)  
   
  [Funciones de seguridad &#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Jerarquía de permisos &#40;motor de base de datos&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [Elementos protegibles](../../../relational-databases/security/securables.md)  
   

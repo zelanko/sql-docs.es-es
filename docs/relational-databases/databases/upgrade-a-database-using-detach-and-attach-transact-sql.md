@@ -1,29 +1,33 @@
 ---
-title: "Actualizar una base de datos mediante Separar y Adjuntar (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "adjuntar bases de datos [SQL Server]"
-  - "actualizar bases de datos"
-  - "actualizaciones de bases de datos [SQL Server]"
-  - "separación de bases de datos [SQL Server]"
-  - "separar bases de datos [SQL Server]"
-  - "adjuntar bases de datos [SQL Server]"
+title: Actualizar una base de datos mediante Separar y Adjuntar (Transact-SQL) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database attaching [SQL Server]
+- upgrading databases
+- database upgrades [SQL Server]
+- database detaching [SQL Server]
+- detaching databases [SQL Server]
+- attaching databases [SQL Server]
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 caps.latest.revision: 73
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 73
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d99342c070c23962b70592f3607bc17832815cdc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Actualizar una base de datos mediante Separar y Adjuntar (Transact-SQL)
+# <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Actualizar una base de datos mediante Separar y Adjuntar (Transact-SQL)
   En este tema se describe cómo usar las operaciones de separar y adjuntar para actualizar una base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Después de asociarla a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de datos está disponible de inmediato y se actualiza automáticamente.  
   
  **En este tema**  
@@ -38,7 +42,7 @@ caps.handback.revision: 73
   
      [Usando operaciones de separar y adjuntar](#SSMSProcedure)  
   
--   **Seguimiento:**  [Después de actualizar una base de datos de SQL Server](#FollowUp)  
+-   **Follow Up:**  [After Upgrading a SQL Server Database](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 73
   
 3.  Adjunte los archivos copiados a la instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información, consulte [Attach a Database](../../relational-databases/databases/attach-a-database.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El ejemplo siguiente actualiza una copia de una base de datos de una versión anterior de SQL Server. Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] se ejecutan en una ventana del Editor de consultas que esté conectada a la instancia del servidor a la que se ha adjuntado.  
   
 1.  Separe la base de datos ejecutando las siguientes instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
@@ -104,15 +108,15 @@ caps.handback.revision: 73
      En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], una base de datos recién adjuntada no es inmediatamente visible en el Explorador de objetos. Para ver la base de datos, en el Explorador de objetos, haga clic en **Ver** y, a continuación, en **Actualizar**. Cuando se expande el nodo **Bases de datos** en el Explorador de objetos, la base de datos recién adjuntada aparecerá en la lista de bases de datos.  
   
 ##  <a name="FollowUp"></a> Seguimiento: Después de actualizar una base de datos de SQL Server  
- Si la base de datos tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, en función del valor de la propiedad del servidor **upgrade_option**. Si la opción de actualización se establece en importar (**upgrade_option** = 2) o en volver a generar (**upgrade_option** = 0), los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la importación puede requerir varias horas y volver a generar puede requerir hasta diez veces más. Observe también que cuando la opción de actualización se establece en importar, se vuelven a generar los índices de texto completo asociados si no se dispone de un catálogo de texto completo. Para cambiar el valor de la propiedad de servidor **upgrade_option**, use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
+ Si la base de datos tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, en función del valor de la propiedad del servidor **upgrade_option** . Si la opción de actualización se establece en importar (**upgrade_option** = 2) o en volver a generar (**upgrade_option** = 0), los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la importación puede requerir varias horas y volver a generar puede requerir hasta diez veces más. Observe también que cuando la opción de actualización se establece en importar, se vuelven a generar los índices de texto completo asociados si no se dispone de un catálogo de texto completo. Para cambiar el valor de la propiedad de servidor **upgrade_option** , use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
-### Nivel de compatibilidad de la base de datos después de la actualización  
- Si el nivel de compatibilidad de una base de datos de usuario es 100 o superior antes de la actualización, permanece igual después de la misma. Si el nivel de compatibilidad es 90 antes de la actualización en la base de datos actualizada, el nivel de compatibilidad se establece en 100, que es el nivel de compatibilidad mínimo admitido en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+### <a name="database-compatibility-level-after-upgrade"></a>Nivel de compatibilidad de la base de datos después de la actualización  
+ Si el nivel de compatibilidad de una base de datos de usuario es 100 o superior antes de la actualización, permanece igual después de la misma. Si el nivel de compatibilidad es 90 antes de la actualización en la base de datos actualizada, el nivel de compatibilidad se establece en 100, que es el nivel de compatibilidad mínimo admitido en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
-### Administrar metadatos en la instancia de servidor actualizada  
- Al adjuntar una base de datos a otra instancia de servidor, para que los usuarios y las aplicaciones puedan utilizarla de igual manera, puede que tenga que volver a crear algunos o todos los metadatos de la base de datos, como los inicios de sesión, los trabajos y los permisos, en la otra instancia de servidor. Para obtener más información, vea [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md).  
+### <a name="managing-metadata-on-the-upgraded-server-instance"></a>Administrar metadatos en la instancia de servidor actualizada  
+ Al adjuntar una base de datos a otra instancia de servidor, para que los usuarios y las aplicaciones puedan utilizarla de igual manera, puede que tenga que volver a crear algunos o todos los metadatos de la base de datos, como los inicios de sesión, los trabajos y los permisos, en la otra instancia de servidor. Para obtener más información, vea [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-### La clave maestra de servicio y el cifrado de la clave maestra de la base de datos cambia de 3DES a AES  
+### <a name="service-master-key-and-database-master-key-encryption-changes-from-3des-to-aes"></a>La clave maestra de servicio y el cifrado de la clave maestra de la base de datos cambia de 3DES a AES  
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores usan el algoritmo de cifrado AES para proteger la clave maestra de servicio (SMK) y la clave maestra de la base de datos (DMK). AES es un algoritmo de cifrado más reciente que el algoritmo 3DES empleado en versiones anteriores. La primera vez que se adjunta una base de datos o se restaura en una instancia nueva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aún no se ha almacenado una copia de la clave maestra de la base de datos (cifrada por la clave maestra de servicio) en el servidor. Debe usar la instrucción **OPEN MASTER KEY** para descifrar la clave maestra de la base de datos (DMK). Una vez que se ha descifrado la clave maestra de la base de datos, tiene la posibilidad de habilitar el descifrado automático en el futuro usando la instrucción **ALTER MASTER KEY REGENERATE** para proporcionar al servidor una copia de la clave maestra de la base de datos cifrada con la clave maestra de servicio (SMK). Cuando una base de datos se haya actualizado desde una versión anterior, se debe volver a generar la DMK para usar el algoritmo AES más reciente. Para obtener más información sobre cómo volver a generar la DMK, vea [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md). El tiempo necesario para volver a generar la DMK con el fin de actualizarse a AES depende del número de objetos protegidos por la DMK. Solo es necesario volver a generar la DMK una vez y no tiene ningún efecto sobre las nuevas generaciones futuras como parte de una estrategia de rotación de claves.  
   
   

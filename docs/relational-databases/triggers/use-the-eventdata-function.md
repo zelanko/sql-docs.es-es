@@ -1,25 +1,29 @@
 ---
-title: "Usar la funci&#243;n EVENTDATA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "EVENTDATA, función"
-  - "desencadenadores DDL, función EVENTDATA"
+title: "Usar la función EVENTDATA | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- EVENTDATA function
+- DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5cb1a29cd7638f5ec9a4248f615381fe6da721b9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar la funci&#243;n EVENTDATA
+# <a name="use-the-eventdata-function"></a>Usar la función EVENTDATA
   La información acerca de un evento que activa un desencadenador DDL se captura mediante la función EVENTDATA. Esta función devuelve un valor **xml** . El esquema XML incluye información acerca de lo siguiente:  
   
 -   La hora del evento.  
@@ -59,7 +63,7 @@ AS
 >   
 >  Si la aplicación recupera los datos de `TSQLCommand` del evento CREATE_TABLE, tenga en cuenta que estos datos pueden aparecer dos veces: una vez cuando tiene lugar el evento CREATE_SCHEMA, y otra cuando tiene lugar el evento CREATE_TABLE. Evite crear desencadenadores DDL en los eventos CREATE_SCHEMA y en los textos <schema_element> de cualquier definición CREATE SCHEMA correspondiente, o cree la lógica en su aplicación para que el mismo evento no se procese dos veces.  
   
-## Eventos ALTER TABLE y ALTER DATABASE  
+## <a name="alter-table-and-alter-database-events"></a>Eventos ALTER TABLE y ALTER DATABASE  
  Los datos de evento para los eventos ALTER_TABLE y ALTER_DATABASE también incluyen los nombres y los tipos de otros objetos afectados por la instrucción DDL y la acción realizada en estos objetos. Los datos del evento ALTER_TABLE incluyen los nombres de las columnas, restricciones o desencadenadores afectados por la instrucción ALTER TABLE y la acción (crear, modificar, quitar, habilitar o deshabilitar) realizada en los objetos afectados. Los datos del evento ALTER_DATABASE incluyen los nombres de los archivos o grupos de archivos afectados por la instrucción ALTER DATABASE y la acción (crear, modificar o quitar) realizada en los objetos afectados.  
   
  Por ejemplo, cree el siguiente desencadenador DDL en la base de datos de ejemplo AdventureWorks:  
@@ -83,7 +87,7 @@ ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;
   
  La instrucción EVENTDATA() del desencadenador DDL captura el texto de la instrucción `ALTER TABLE` que no se permite.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Puede utilizar la función EVENTDATA para crear un registro de eventos. En el siguiente ejemplo, una tabla se crea para almacenar la información del evento. A continuación, se crea un desencadenador DDL en la base de datos actual que rellena la tabla con la siguiente información siempre que tiene lugar un evento DDL en la base de datos:  
   
 -   La hora del evento (mediante la función GETDATE).  
@@ -124,11 +128,11 @@ GO
 ```  
   
 > [!NOTE]  
->  Cuando quiera devolver datos de evento, se recomienda usar el método XQuery **value()** en vez del método **query()**. El método **query()** devuelve XML e instancias de retorno de carro y avance de línea (CRLF) con el carácter de escape Y comercial en el resultado, mientras que el método **value()** representa instancias de CRLF invisibles en el resultado.  
+>  Cuando quiera devolver datos de evento, se recomienda usar el método XQuery **value()** en vez del método **query()** . El método **query()** devuelve XML e instancias de retorno de carro y avance de línea (CRLF) con el carácter de escape Y comercial en el resultado, mientras que el método **value()** representa instancias de CRLF invisibles en el resultado.  
   
- Un ejemplo de desencadenador DDL parecido se proporciona con la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Para obtener el ejemplo, localice la carpeta Database Triggers mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta carpeta se encuentra en la carpeta **Programación** de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Haga clic con el botón derecho en **ddlDatabseTriggerLog** y seleccione **Incluir desencadenador de base de datos como**. De forma predeterminada, el desencadenador DDL **ddlDatabseTriggerLog** está deshabilitado.  
+ Un ejemplo de desencadenador DDL parecido se proporciona con la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para obtener el ejemplo, localice la carpeta Database Triggers mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta carpeta se encuentra en la carpeta **Programación** de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Haga clic con el botón derecho en **ddlDatabseTriggerLog** y seleccione **Incluir desencadenador de base de datos como**. De forma predeterminada, el desencadenador DDL **ddlDatabseTriggerLog** está deshabilitado.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos DDL](../../relational-databases/triggers/ddl-events.md)   
  [Grupos de eventos DDL](../../relational-databases/triggers/ddl-event-groups.md)  
   

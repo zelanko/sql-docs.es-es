@@ -1,32 +1,36 @@
 ---
-title: "Agregar dependencias a un recurso de SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dependencias de recursos [SQL Server]"
-  - "clústeres de conmutación por error [SQL Server], dependencias"
-  - "clústeres [SQL Server], dependencias"
-  - "dependencias [SQL Server], agrupación en clústeres"
+title: Agregar dependencias a un recurso de SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resource dependencies [SQL Server]
+- failover clustering [SQL Server], dependencies
+- clusters [SQL Server], dependencies
+- dependencies [SQL Server], clustering
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 caps.latest.revision: 33
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: bffe545296432d465fd744092519c9882ccc04c1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Agregar dependencias a un recurso de SQL Server
+# <a name="add-dependencies-to-a-sql-server-resource"></a>Agregar dependencias a un recurso de SQL Server
   En este tema se describe cómo se agregan dependencias a un recurso de instancia de clúster de conmutación por error (FCI) AlwaysOn con el complemento Administrador de clústeres de conmutación por error. El complemento Administrador de clústeres de conmutación por error es la aplicación de administración de clústeres del servicio de clústeres de conmutación por error de Windows Server (WSFC).  
   
--   **Antes de empezar:**  [Limitaciones y restricciones](#Restrictions), [Requisitos previos](#Prerequisites)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Prerequisites](#Prerequisites)  
   
--   **Para agregar una dependencia a un recurso de SQL Server con:** [Administrador de clústeres de conmutación por error de Windows](#WinClusManager)  
+-   **To add a dependency to a SQL Server resource, using:** [Windows Failover Cluster Manager](#WinClusManager)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 33
   
 -   Recursos compartidos de archivos e impresoras: cuando instale recursos de archivo o recursos de clústeres de impresora, no los coloque en los mismos recursos de disco físico que el equipo en el que se ejecuta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si los coloca en los mismos recursos de disco físico, puede experimentar una degradación del rendimiento y la pérdida de servicio en el equipo donde se ejecuta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Consideraciones sobre MS DTC: Después de instalar el sistema operativo y configurar la FCI, debe configurar el coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (MS DTC) para que funcione en un clúster mediante el complemento Administrador de clústeres de conmutación por error. Si no logra crear el clúster de MS DTC, no se bloqueará el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], pero la funcionalidad de la aplicación [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede verse afectada si MS DTC no se configura correctamente.  
+-   Consideraciones sobre MS DTC: Después de instalar el sistema operativo y configurar la FCI, debe configurar el coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (MS DTC) para que funcione en un clúster mediante el complemento Administrador de clústeres de conmutación por error. Si no logra crear el clúster de MS DTC, no se bloqueará el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , pero la funcionalidad de la aplicación [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede verse afectada si MS DTC no se configura correctamente.  
   
      Si instala MS DTC en el grupo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y tiene otros recursos que dependen de MS DTC, MS DTC no estará disponible si este grupo se encuentra en modo sin conexión ni durante una conmutación por error. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomienda que, si es posible, sitúe MS DTC en su propio grupo con su propio recurso de disco físico.  
   

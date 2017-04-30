@@ -1,22 +1,26 @@
 ---
-title: "Habilitar la copia de seguridad administrada de SQL Server en Microsoft Azure | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Habilitar la copia de seguridad administrada de SQL Server en Microsoft Azure | Microsoft Docs
+ms.custom: 
+ms.date: 10/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 caps.latest.revision: 25
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de5d4d788520c9fd8addc98c19be11cf2361456d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Habilitar la copia de seguridad administrada de SQL Server en Microsoft Azure
+# <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Habilitar la copia de seguridad administrada de SQL Server en Microsoft Azure
   En este tema se describe cómo habilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con la configuración predeterminada en el nivel de la base de datos y de la instancia. También se describe cómo habilitar las notificaciones de correo electrónico y cómo supervisar la actividad de copia de seguridad.  
   
  En este tutorial se usa Azure PowerShell. Antes de iniciar el tutorial, [descargue e instale Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/).  
@@ -24,9 +28,9 @@ caps.handback.revision: 25
 > [!IMPORTANT]  
 >  Si también desea habilitar opciones avanzadas o usar una programación personalizada, configure las opciones antes de habilitar por primera vez [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Para obtener más información, consulte [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
   
-## Habilitar y configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con valores predeterminados  
+## <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-with-default-settings"></a>Habilitar y configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con valores predeterminados  
   
-#### Crear el Contenedor de blobs de Azure  
+#### <a name="create-the-azure-blob-container"></a>Crear el Contenedor de blobs de Azure  
   
 1.  **Suscríbase a Azure:** si ya tiene una suscripción de Azure, vaya al paso siguiente. En caso contrario, puede comenzar a trabajar con una [evaluación gratuita](http://azure.microsoft.com/pricing/free-trial/) o explorar las [opciones de compra](http://azure.microsoft.com/pricing/purchase-options/).  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 25
   
      Anote la dirección URL del contenedor y la SAS para usarlos al crear una credencial de SQL. Para obtener más información sobre SAS, consulte [Firmas de acceso compartido, Parte 1: Descripción del modelo SAS](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
   
-#### Habilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+#### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>Habilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
 1.  **Cree una credencial de SQL para la URL de SAS:** use el token de SAS para crear una credencial de SQL para la dirección URL del contenedor de blobs. En SQL Server Management Studio, use la siguiente consulta de Transact-SQL para crear la credencial para la dirección URL del contenedor de blobs según el ejemplo siguiente:  
   
@@ -84,7 +88,7 @@ caps.handback.revision: 25
 4.  **Enable and configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** inicie SQL Server Management Studio y conéctese a la instancia de SQL Server de destino. En la ventana de consulta, ejecute la siguiente instrucción después de modificar los valores correspondientes al nombre de la base de datos, la dirección URL del contenedor y el período de retención según sus requisitos:  
   
     > [!IMPORTANT]  
-    >  Para habilitar la copia de seguridad administrada en el nivel de instancia, especifique `NULL` para el parámetro `database_name`.  
+    >  Para habilitar la copia de seguridad administrada en el nivel de instancia, especifique `NULL` para el parámetro `database_name` .  
   
     ```tsql  
     Use msdb;  
@@ -107,7 +111,7 @@ caps.handback.revision: 25
   
      Debe ver que los eventos de canal Administración, Operativo y Analítico están habilitados de forma predeterminada y no se pueden deshabilitar. Debe ser suficiente supervisar los eventos que requieren intervención manual.  Puede habilitar los eventos de depuración, pero los canales de depuración incluyen eventos informativos y de depuración que [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] usa para detectar problemas y solucionarlos.  
   
-6.  **Habilite y configure la notificación del estado de mantenimiento:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] tiene un procedimiento almacenado que crea un trabajo del agente para enviar notificaciones por correo electrónico de los errores o las advertencias que puedan requerir atención. En los pasos siguientes se describe el proceso para habilitar y configurar las notificaciones por correo electrónico:  
+6.  **Enable and Configure Notification for Health Status:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] has a stored procedure that creates an agent job to send out e-mail notifications of errors or warnings that may require attention. En los pasos siguientes se describe el proceso para habilitar y configurar las notificaciones por correo electrónico:  
   
     1.  Configure Correo electrónico de base de datos si aún no está habilitado en la instancia. Para obtener más información, vea [Configure Database Mail](../../relational-databases/database-mail/configure-database-mail.md).  
   
@@ -124,7 +128,7 @@ caps.handback.revision: 25
   
 7.  **Consulte los archivos de copia de seguridad en la cuenta de Almacenamiento de Microsoft Azure:** conéctese a la cuenta de almacenamiento desde SQL Server Management Studio o desde el Portal de administración de Azure. Verá los archivos de copia de seguridad del contenedor especificado. Tenga en cuenta que podría ver una base de datos y una copia de seguridad de registros antes de que transcurran 5 minutos desde la habilitación de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para la base de datos.  
   
-8.  **Supervise el estado de mantenimiento:** puede supervisar a través de notificaciones por correo electrónico que configuró previamente o supervisar los eventos registrados de forma activa. Las siguientes son algunas instrucciones de Transact-SQL de ejemplo que se utilizan para ver los eventos:  
+8.  **Supervise el estado de mantenimiento:**  puede supervisar a través de notificaciones por correo electrónico que configuró previamente o supervisar los eventos registrados de forma activa. Las siguientes son algunas instrucciones de Transact-SQL de ejemplo que se utilizan para ver los eventos:  
   
     ```  
     --  view all admin events  
@@ -173,7 +177,8 @@ caps.handback.revision: 25
   
  Los pasos descritos en esta sección son específicos para configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] por primera vez en la base de datos. Puede modificar las configuraciones existentes usando los mismos procedimientos almacenados del sistema y proporcionar los nuevos valores.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   
+

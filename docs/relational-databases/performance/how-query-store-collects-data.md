@@ -1,30 +1,34 @@
 ---
-title: "Introducci&#243;n a la recopilaci&#243;n de datos del almac&#233;n de consultas | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/13/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "almacén de consultas, recopilación de datos"
+title: "Cómo recopila datos el almacén de consultas | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 09/13/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store, data collection
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58db786512aa1ed167df55831c6a7cc3c53224bd
+ms.lasthandoff: 04/11/2017
+
 ---
-# Introducci&#243;n a la recopilaci&#243;n de datos del almac&#233;n de consultas
+# <a name="how-query-store-collects-data"></a>Introducción a la recopilación de datos del almacén de consultas
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   El almacén de consultas funciona como una **caja negra de datos** que recopila en todo momento información de compilación y runtime relacionada con las consultas y los planes. Los datos relacionados con las consultas se guardan en las tablas internas y se presentan a los usuarios a través de un conjunto de vistas.  
   
-## Vistas  
+## <a name="views"></a>Vistas  
  En el diagrama siguiente se muestran las vistas del almacén de consultas y sus relaciones lógicas (la información de tiempo de compilación se presenta como entidades de color azul):  
   
  ![query-store-process-1views](../../relational-databases/performance/media/query-store-process-1views.png "query-store-process-1views")  
@@ -37,12 +41,12 @@ caps.handback.revision: 10
 |**sys.query_context_settings**|Presenta las combinaciones únicas de configuraciones que afectan al plan con las que se ejecutan las consultas. El mismo texto de consulta ejecutado con distintas configuraciones que afecten al plan genera una entrada de consulta distinta en el almacén de consultas. Esto se debe a que `context_settings_id` forma parte de la clave de consulta.|  
 |**sys.query_store_query**|Entradas de consulta a las que se realiza un seguimiento y que se aplican por separado en el almacén de consultas. Un texto de consulta solo puede generar varias entradas de consulta si se ejecuta con opciones de contexto distintas, o bien si se ejecuta fuera, en lugar de dentro de distintos módulos de [!INCLUDE[tsql](../../includes/tsql-md.md)] (procedimientos almacenados, desencadenadores, etc.).|  
 |**sys.query_store_plan**|Presenta el plan estimado para la consulta con las estadísticas de tiempo de compilación. El plan almacenado equivale a uno que se obtendría utilizando `SET SHOWPLAN_XML ON`.|  
-|**sys.query_store_runtime_stats_interval**|El almacén de consultas divide el tiempo en periodos (intervalos) generados de forma automática y almacena estadísticas agregadas en ese intervalo para cada plan ejecutado. El tamaño del intervalo se controla mediante la opción de configuración Intervalo de recopilación de estadísticas (en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) o `INTERVAL_LENGTH_MINUTES` con [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).|  
+|**sys.query_store_runtime_stats_interval**|El almacén de consultas divide el tiempo en periodos (intervalos) generados de forma automática y almacena estadísticas agregadas en ese intervalo para cada plan ejecutado. El tamaño del intervalo se controla mediante la opción de configuración Intervalo de recopilación de estadísticas (en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) o `INTERVAL_LENGTH_MINUTES` con [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 |**sys.query_store_runtime_stats**|Estadísticas agregadas del runtime para los planes ejecutados. Todas las métricas capturadas se expresan como cuatro funciones estadísticas: Promedio, Mínimo, Máximo y Desviación estándar.|  
   
  Para obtener más detalles sobre las vistas del almacén de consultas, consulte la sección **Related Views, Functions, and Procedures** (Vistas relacionadas, funciones y procedimientos) de [Monitoring Performance By Using the Query Store](https://msdn.microsoft.com/library/dn817826.aspx)(Supervisión del rendimiento mediante el almacén de consultas).  
   
-## Procesamiento de consultas  
+## <a name="query-processing"></a>Procesamiento de consultas  
  El almacén de consultas interactúa con la canalización de procesamiento de consultas en los siguientes puntos clave:  
   
 1.  Cuando se compila la consulta por primera vez, el texto de consulta y el plan inicial se envían al almacén de consultas.  
@@ -57,7 +61,7 @@ caps.handback.revision: 10
   
  ![query-store-process-2processor](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor")  
   
- Para minimizar la sobrecarga de E/S, los nuevos datos se capturan en memoria. Las operaciones de escritura se ponen en cola y se vacían posteriormente en el disco. La información de consulta y plan (planear el almacén en el diagrama siguiente) se vacían con una latencia mínima. Las estadísticas en tiempo de ejecución (Estadísticas en tiempo de ejecución) se mantienen en memoria durante un período de tiempo definido con la opción `DATA_FLUSH_INTERVAL_SECONDS` de la instrucción `SET QUERY_STORE`. El cuadro de diálogo Almacén de consultas de SSMS permite especificar la opción **Intervalo de vaciado de datos (minutos)**, que se convierte a segundos.  
+ Para minimizar la sobrecarga de E/S, los nuevos datos se capturan en memoria. Las operaciones de escritura se ponen en cola y se vacían posteriormente en el disco. La información de consulta y plan (planear el almacén en el diagrama siguiente) se vacían con una latencia mínima. Las estadísticas en tiempo de ejecución (Estadísticas en tiempo de ejecución) se mantienen en memoria durante un período de tiempo definido con la opción `DATA_FLUSH_INTERVAL_SECONDS` de la instrucción `SET QUERY_STORE` . El cuadro de diálogo Almacén de consultas de SSMS permite especificar la opción **Intervalo de vaciado de datos (minutos)**, que se convierte a segundos.  
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   
@@ -68,9 +72,10 @@ Durante la lectura del almacén de consultas, los datos en memoria y en disco se
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
   
-## Vea también  
- [Supervisar el rendimiento mediante el almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+## <a name="see-also"></a>Vea también  
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Procedimiento recomendado con el Almacén de consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Query Store Catalog Views (Vistas de catálogo del almacén de consultas) &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
+

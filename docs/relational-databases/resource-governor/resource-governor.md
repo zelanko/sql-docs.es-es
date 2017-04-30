@@ -1,28 +1,32 @@
 ---
-title: "Regulador de recursos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Regulador de recursos, información general"
-  - "Regulador de recursos"
+title: Regulador de recursos | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, overview
+- Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c7bbd2ba4ed132f3e1a795f72667c34f764c0d30
+ms.lasthandoff: 04/11/2017
+
 ---
-# Regulador de recursos
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una característica que puede utilizarse para administrar la carga de trabajo y el consumo de recursos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El regulador de recursos permite especificar los límites en cuanto a la cantidad de CPU, E/S física y memoria que pueden usar las solicitudes entrantes procedentes de las aplicaciones.  
+# <a name="resource-governor"></a>Regulador de recursos
+  El regulador de recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una característica que puede usarse para administrar la carga de trabajo y el consumo de recursos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El regulador de recursos permite especificar los límites en cuanto a la cantidad de CPU, E/S física y memoria que pueden usar las solicitudes entrantes procedentes de las aplicaciones.  
   
-## Ventajas del regulador de recursos  
+## <a name="benefits-of-resource-governor"></a>Ventajas del regulador de recursos  
  El regulador de recursos que permite administrar las cargas de trabajo y los recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la especificación de los límites del consumo de recursos por solicitudes entrantes. En el contexto del Regulador de recursos, la carga de trabajo es un conjunto de consultas o solicitudes de dimensiones similares que pueden (y deberían) tratarse como una entidad única. No se trata de un requisito, pero cuanto más uniforme es el modelo del uso de recursos de una carga de trabajo, mayores son las ventajas que pueden obtenerse del Regulador de recursos. Los límites sobre los recursos pueden reconfigurarse en tiempo real con un impacto mínimo sobre las cargas de trabajo que se están ejecutando.  
   
  En un entorno donde varias cargas de trabajo distintas están presentes en el mismo servidor, el Regulador de recursos permite diferenciar estas cargas de trabajo y asignar los recursos compartidos a medida que se soliciten, en función de los límites que se especifiquen. Estos recursos son CPU, E/S física y memoria.  
@@ -37,7 +41,7 @@ caps.handback.revision: 41
   
 -   Agregar un seguimiento detallado de recursos para los reembolsos por uso de recursos y proporcionar una facturación predecible a los clientes de los recursos de servidor.  
   
-## Restricciones del Regulador de recursos  
+## <a name="resource-governor-constraints"></a>Restricciones del Regulador de recursos  
  Esta versión del Regulador de recursos tiene las restricciones siguientes:  
   
 -   La administración de recursos se limita a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. L Regulador de recursos no se puede utilizar para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -50,12 +54,12 @@ caps.handback.revision: 41
   
 -   No puede establecer umbrales de E/S en el grupo de recursos de servidor interno.  
   
-## Conceptos de recursos  
+## <a name="resource-concepts"></a>Conceptos de recursos  
  Los tres conceptos siguientes son fundamentales para comprender y usar el regulador de recursos:  
   
--   **Grupo de recursos de servidor.** Un grupo de recursos de servidor representa los recursos físicos del servidor. Puede pensar en un grupo como en una instancia virtual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando se instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se crean dos grupos de recursos de servidor (interno y predeterminado). El regulador de recursos también admite grupos de recursos de servidor definidos por el usuario. Para más información, consulte [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md).  
+-   **Grupos de recursos de servidor.** Un grupo de recursos de servidor representa los recursos físicos del servidor. Puede pensar en un grupo como en una instancia virtual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando se instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se crean dos grupos de recursos de servidor (interno y predeterminado). El regulador de recursos también admite grupos de recursos de servidor definidos por el usuario. Para más información, consulte [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md).  
   
--   **Grupos de carga de trabajo.** Un grupo de cargas de trabajo actúa como un contenedor de las solicitudes de sesión que tienen criterios de clasificación similares. Una carga de trabajo permite la supervisión agregada de las sesiones y define directivas para estas. Cada grupo de cargas de trabajo pertenece a un grupo de recursos de servidor. Cuando se instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se crean dos grupos de cargas de trabajo (interno y predeterminado) y se asignan a sus grupos de recursos de servidor correspondientes. El regulador de recursos también admite grupos de cargas de trabajo definidos por el usuario. Para obtener más información, consulte [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md).  
+-   **Grupos de carga de trabajo.** Un grupo de cargas de trabajo actúa como un contenedor de las solicitudes de sesión que tienen criterios de clasificación similares. Una carga de trabajo permite la supervisión agregada de las sesiones y define directivas para estas. Cada grupo de cargas de trabajo pertenece a un grupo de recursos de servidor. Cuando se instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se crean dos grupos de cargas de trabajo (interno y predeterminado) y se asignan a sus grupos de recursos de servidor correspondientes. El regulador de recursos también admite grupos de cargas de trabajo definidos por el usuario. Para obtener más información, consulte [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md).  
   
 -   **Clasificación.** El proceso de clasificación asigna las sesiones de entrada a cada grupo de cargas de trabajo según las características de la sesión. Puede adaptar la lógica de clasificación escribiendo una función definida por el usuario, denominada función clasificadora. El regulador de recursos también admite una función clasificadora definida por el usuario para implementar las reglas de la clasificación. Para más información, consulte [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md).  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 41
   
  ![Componentes funcionales del regulador de recursos](../../relational-databases/resource-governor/media/rg-basic-funct-components.gif "Componentes funcionales del regulador de recursos")  
   
-## Tareas del regulador de recursos  
+## <a name="resource-governor-tasks"></a>Tareas del regulador de recursos  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
@@ -88,7 +92,7 @@ caps.handback.revision: 41
 |Describe cómo configurar el regulador de recursos mediante una plantilla.|[Configurar el regulador de recursos utilizando una plantilla](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)|  
 |Describe cómo ver las propiedades del regulador de recursos.|[Ver las propiedades del regulador de recursos](../../relational-databases/resource-governor/view-resource-governor-properties.md)|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Instancias del motor de base de datos &#40;SQL Server&#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
   
   

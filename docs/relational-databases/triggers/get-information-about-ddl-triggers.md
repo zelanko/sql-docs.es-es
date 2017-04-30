@@ -1,26 +1,30 @@
 ---
-title: "Obtener informaci&#243;n acerca de los desencadenadores DDL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "metadatos [SQL Server], desencadenadores"
-  - "información de estado [SQL Server], desencadenadores DDL"
-  - "desencadenadores DDL, metadatos"
+title: "Obtener información sobre los desencadenadores DDL | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- metadata [SQL Server], triggers
+- status information [SQL Server], DDL triggers
+- DDL triggers, metadata
 ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a0ce4e36a1b396311938b8d57c6d44bf922ca56
+ms.lasthandoff: 04/11/2017
+
 ---
-# Obtener informaci&#243;n acerca de los desencadenadores DDL
+# <a name="get-information-about-ddl-triggers"></a>Obtener información acerca de los desencadenadores DDL
   Las vistas de catálogo que se enumeran en esta sección pueden utilizarse para obtener información sobre los desencadenadores DDL.  
   
  **Para obtener información sobre los eventos o grupos de eventos en que un desencadenador DDL puede activar**  
@@ -35,7 +39,7 @@ caps.handback.revision: 31
   
 -   [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
-## Desencadenadores DDL con ámbito de base de datos  
+## <a name="database-scoped-ddl-triggers"></a>Desencadenadores DDL con ámbito de base de datos  
  **Para obtener información acerca de los desencadenadores con ámbito de base de datos**  
   
 -   [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)  
@@ -52,7 +56,7 @@ caps.handback.revision: 31
   
 -   [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)  
   
-## Desencadenadores DDL con ámbito de servidor  
+## <a name="server-scoped-ddl-triggers"></a>Desencadenadores DDL con ámbito de servidor  
  **Para obtener información acerca de los desencadenadores con ámbito de servidor**  
   
 -   [sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)  
@@ -69,7 +73,7 @@ caps.handback.revision: 31
   
 -   [sys.server_assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md)  
   
   

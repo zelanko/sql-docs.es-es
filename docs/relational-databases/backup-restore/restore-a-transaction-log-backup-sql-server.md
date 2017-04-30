@@ -1,31 +1,35 @@
 ---
-title: "Restaurar una copia de seguridad de registros de transacciones (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restoretlog.general.f1"
-  - "sql13.swb.restoretlog.options.f1"
-helpviewer_keywords: 
-  - "restaurar registro"
-  - "copia de seguridad de registros de transacciones [SQL Server], restaurar"
-  - "copias de seguridad de registro de transacciones [SQL Server], restaurar"
-  - "restaurar registros de transacciones [SQL Server], restaurar copias de seguridad"
-  - "restauraciones de registros de transacciones [SQL Server], SQL Server Management Studio"
+title: Restaurar una copia de seguridad de registros de transacciones (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restoretlog.general.f1
+- sql13.swb.restoretlog.options.f1
+helpviewer_keywords:
+- restore log
+- backing up transaction logs [SQL Server], restoring
+- transaction log backups [SQL Server], restoring
+- restoring transaction logs [SQL Server], restoring backups
+- transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58f0b1ab65e812e778d630a2a95db8539e1b47eb
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurar una copia de seguridad de registros de transacciones (SQL Server)
+# <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurar una copia de seguridad de registros de transacciones (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   En este tema se describe cómo restaurar una copia de seguridad del registro de transacciones en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -68,13 +72,13 @@ caps.handback.revision: 36
 > [!WARNING]  
 >  El proceso normal de una restauración consiste en seleccionar las copias de seguridad de registros en el cuadro de diálogo **Restaurar base de datos** junto con las copias de seguridad de datos y diferenciales.  
   
-#### Para restaurar una copia de seguridad del registro de transacciones  
+#### <a name="to-restore-a-transaction-log-backup"></a>Para restaurar una copia de seguridad del registro de transacciones  
   
 1.  Tras conectarse a la instancia apropiada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol correspondiente.  
   
 2.  Expanda **Bases de datos**y, en función de la base de datos, seleccione la base de datos de un usuario o expanda **Bases de datos del sistema** y seleccione una base de datos del sistema.  
   
-3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**, **Restaurar** y, después, haga clic en **Registro de transacciones**, con lo que se abre el cuadro de diálogo **Restaurar registro de transacciones**.  
+3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**, **Restaurar**y, después, haga clic en **Registro de transacciones**, con lo que se abre el cuadro de diálogo **Restaurar registro de transacciones** .  
   
     > [!NOTE]  
     >  Si la opción **Registro de transacciones** está atenuada, es posible que primero deba restaurar una copia de seguridad completa o diferencial. Use el cuadro de diálogo de copia de seguridad **Base de datos** .  
@@ -89,7 +93,7 @@ caps.handback.revision: 36
   
     -   **Desde archivo o cinta**  
   
-         Haga clic en el botón Examinar **...** para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad**. En el cuadro **Tipo de medio de copia de seguridad** , seleccione uno de los tipos de dispositivo. Para seleccionar uno o varios dispositivos del cuadro **Medio de copia de seguridad** , haga clic en **Agregar**.  
+         Haga clic en el botón Examinar**...**para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . En el cuadro **Tipo de medio de copia de seguridad** , seleccione uno de los tipos de dispositivo. Para seleccionar uno o varios dispositivos del cuadro **Medio de copia de seguridad** , haga clic en **Agregar**.  
   
          Después de agregar los dispositivos que desee al cuadro de lista **Medio de copia de seguridad** , haga clic en **Aceptar** para volver a la página **General** .  
   
@@ -99,7 +103,7 @@ caps.handback.revision: 36
   
     |Encabezado|Valor|  
     |------------|-----------|  
-    |**Restore**|Las casillas seleccionadas indican los conjuntos de copias de seguridad que se restaurarán.|  
+    |**Restaurar**|Las casillas seleccionadas indican los conjuntos de copias de seguridad que se restaurarán.|  
     |**Nombre**|Nombre del conjunto de copia de seguridad.|  
     |**Componente**|Componente del que se ha realizado una copia de seguridad: **Base de datos**, **Archivo** o \<en blanco> (para registros de transacciones).|  
     |**Base de datos**|Nombre de la base de datos que forma parte de la operación de copia de seguridad.|  
@@ -119,7 +123,7 @@ caps.handback.revision: 36
   
     -   **A un momento dado**  
   
-         Puede conservar el valor predeterminado (**Lo más reciente posible**) o seleccionar una fecha y hora determinadas haciendo clic en el botón Examinar, que abre el cuadro de diálogo **Restauración a un momento dado**.  
+         Puede conservar el valor predeterminado (**Lo más reciente posible**) o seleccionar una fecha y hora determinadas haciendo clic en el botón Examinar, que abre el cuadro de diálogo **Restauración a un momento dado** .  
   
     -   **Transacción marcada**  
   
@@ -131,9 +135,9 @@ caps.handback.revision: 36
   
         |Encabezado|Valor|  
         |------------|-----------|  
-        |\<en blanco>|Muestra una casilla para seleccionar la marca.|  
+        |\<blank>|Muestra una casilla para seleccionar la marca.|  
         |**Marca de transacción**|Nombre de la transacción marcada especificada por el usuario cuando se confirmó la transacción.|  
-        |**Date**|Fecha y hora de confirmación de la transacción. La fecha y hora de la transacción se muestran tal como están registradas en la tabla **msdbgmarkhistory**, no en la fecha y hora del equipo cliente.|  
+        |**Date**|Fecha y hora de confirmación de la transacción. La fecha y hora de la transacción se muestran tal como están registradas en la tabla **msdbgmarkhistory** , no en la fecha y hora del equipo cliente.|  
         |**Descripción**|Descripción de la transacción marcada especificada por el usuario al confirmar la transacción (si la hay).|  
         |**LSN**|Número de flujo de registro de la transacción marcada.|  
         |**Base de datos**|Nombre de la base de datos en la que se confirmó la transacción marcada.|  
@@ -153,7 +157,7 @@ caps.handback.revision: 36
   
     -   **Preguntar antes de restaurar cada copia de seguridad**  
   
-         Antes de restaurar cada conjunto de copia de seguridad (después del primero), esta opción abre el cuadro de diálogo **Continuar con la restauración**, en el que se solicita si quiere continuar con la secuencia de restauración. En este cuadro de diálogo se muestra el nombre del siguiente conjunto de medios (si lo hay), el nombre del conjunto de copias de seguridad y la descripción del conjunto de copias de seguridad.  
+         Antes de restaurar cada conjunto de copia de seguridad (después del primero), esta opción abre el cuadro de diálogo **Continuar con la restauración** , en el que se solicita si quiere continuar con la secuencia de restauración. En este cuadro de diálogo se muestra el nombre del siguiente conjunto de medios (si lo hay), el nombre del conjunto de copias de seguridad y la descripción del conjunto de copias de seguridad.  
   
          Esta opción resulta especialmente útil cuando se deben intercambiar cintas de distintos conjuntos de medios. Por ejemplo, se puede utilizar cuando el servidor solo dispone de un dispositivo de cinta. Espere hasta que esté listo para continuar antes de hacer clic en **Aceptar**.  
   
@@ -161,19 +165,19 @@ caps.handback.revision: 36
   
     -   **Restringir el acceso a la base de datos restaurada (WITH RESTRICTED_USER)**  
   
-         Hace que la base de datos restaurada esté disponible solo para los miembros de **db_owner**, **dbcreator** o **sysadmin**.  
+         Hace que la base de datos restaurada esté disponible solo para los miembros de **db_owner**, **dbcreator**o **sysadmin**.  
   
          Activar esta opción equivale al uso de la opción **RESTRICTED_USER** en una instrucción **RESTORE** de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 10. Para las opciones **Estado de recuperación** , especifique el estado de la base de datos después de la operación de restauración.  
   
-    -   **Dejar la base de datos lista para su uso revirtiendo las transacciones no confirmadas. No pueden restaurarse registros de transacciones adicionales. (RESTORE WITH RECOVERY)**  
+    -   **Revertir las transacciones no confirmadas para dejar la base de datos lista para su uso. No pueden restaurarse registros de transacciones adicionales. (RESTORE WITH RECOVERY)**  
   
          Recupera la base de datos. Esta opción es equivalente a la opción **RECOVERY** en una instrucción **RESTORE** de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
          Elíjala solo si no desea restaurar ningún archivo de registro.  
   
-    -   **Dejar la base de datos no operativa y no revertir transacciones no confirmadas. Pueden restaurarse registros de transacciones adicionales. (RESTORE WITH NORECOVERY)**  
+    -   **Dejar la base de datos no operativa y no revertir las transacciones no confirmadas. Pueden restaurarse registros de transacciones adicionales. (RESTORE WITH NORECOVERY)**  
   
          Deja la base de datos sin recuperar, en el estado **RESTORING** . Esta opción es equivalente a la opción **NORECOVERY** en una instrucción **RESTORE** de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -195,7 +199,7 @@ caps.handback.revision: 36
 > [!IMPORTANT]  
 >  Se recomienda que especifique siempre WITH NORECOVERY o WITH RECOVERY en todas las instrucciones RESTORE para evitar ambigüedades. Esto es especialmente importante cuando se escriben scripts.  
   
-#### Para restaurar una copia de seguridad del registro de transacciones  
+#### <a name="to-restore-a-transaction-log-backup"></a>Para restaurar una copia de seguridad del registro de transacciones  
   
 1.  Ejecute la instrucción RESTORE LOG para aplicar la copia de seguridad del registro de transacciones especificando:  
   
@@ -242,7 +246,7 @@ caps.handback.revision: 36
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
-#### A. Aplicar una sola copia de seguridad del registro de transacciones  
+#### <a name="a-applying-a-single-transaction-log-backup"></a>A. Aplicar una sola copia de seguridad del registro de transacciones  
  En el siguiente ejemplo se empieza con la restauración de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] utilizando una copia de seguridad completa de la base de datos que se encuentra en un dispositivo de copia de seguridad denominado `AdventureWorks2012_1`. A continuación, se aplica la primera copia de seguridad del registro de transacciones, que se encuentra en un dispositivo de copia de seguridad denominado `AdventureWorks2012_log`. Finalmente, el ejemplo recupera la base de datos.  
   
 ```tsql  
@@ -260,7 +264,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### B. Aplicar varias copias de seguridad del registro de transacciones  
+#### <a name="b-applying-multiple-transaction-log-backups"></a>B. Aplicar varias copias de seguridad del registro de transacciones  
  En el siguiente ejemplo se empieza con la restauración de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] utilizando una copia de seguridad completa de la base de datos que se encuentra en un dispositivo de copia de seguridad denominado `AdventureWorks2012_1`. A continuación, se aplican, una por una, las tres primeras copias de seguridad del registro de transacciones, que se encuentran en un dispositivo de copia de seguridad denominado `AdventureWorks2012_log`. Finalmente, el ejemplo recupera la base de datos.  
   
 ```tsql  
@@ -294,14 +298,14 @@ GO
   
 -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
--   [Restaurar una base de datos según el punto de error en el modelo de recuperación completa &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [Restaurar una base de datos según el punto de error en el modelo de recuperación completa &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 -   [Restaurar una base de datos en una transacción marcada &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
-## Vea también  
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Vea también  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Aplicar copias de seguridad de registros de transacción &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
   
   

@@ -1,24 +1,28 @@
 ---
-title: "Dispositivo de copia de seguridad (p&#225;gina General) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backupdevice.general.f1"
+title: "Dispositivo de copia de seguridad (página General) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backupdevice.general.f1
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4cca5d50abc9aad1babf20cdbb8566e437aa9236
+ms.lasthandoff: 04/11/2017
+
 ---
-# Dispositivo de copia de seguridad (p&#225;gina General)
+# <a name="backup-device-general-page"></a>Dispositivo de copia de seguridad (página General)
   Utilice la página **General** para especificar o ver las propiedades generales de un dispositivo lógico de copia de seguridad.  
   
  **Para utilizar SQL Server Management Studio a fin de ver el contenido de un dispositivo de copia de seguridad**  
@@ -27,12 +31,12 @@ caps.handback.revision: 34
   
 -   [Ver las propiedades y el contenido de un dispositivo lógico de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Nombre de dispositivo**  
  Muestra el nombre de un dispositivo lógico de copia de seguridad existente o especifica el nombre de un dispositivo lógico de copia de seguridad nuevo.  
   
  **Cinta**  
- Muestra o selecciona el dispositivo de cinta de destino en la lista **Cinta**. Esta opción solo está disponible si hay una unidad de cinta conectada al equipo que ejecuta la instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+ Muestra o selecciona el dispositivo de cinta de destino en la lista **Cinta** . Esta opción solo está disponible si hay una unidad de cinta conectada al equipo que ejecuta la instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 > [!NOTE]  
 >  Los dispositivos de copia de seguridad en cinta de equipos remotos no son destinos de copia de seguridad válidos.  
@@ -49,9 +53,9 @@ caps.handback.revision: 34
      Asimismo, puede editar el campo **Archivo** manualmente para reemplazar la ruta de acceso, el nombre de archivo y la extensión predeterminados. Para especificar un archivo remoto como destino de copia de seguridad, escriba su nombre UNC (convención de nomenclatura universal) completo. Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
     > [!IMPORTANT]  
-    >  La realización de copias de seguridad de datos a través de una red está expuesta a errores; una vez completada, es recomendable comprobar la operación de copia de seguridad. Para obtener más información, vea [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md).  
+    >  La realización de copias de seguridad de datos a través de una red está expuesta a errores; una vez completada, es recomendable comprobar la operación de copia de seguridad. Para obtener más información, vea [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Las copias de seguridad de uno o varios dispositivos de copia de seguridad constituyen un solo conjunto de medios. Un *conjunto de medios* es una colección ordenada de medios de copia de seguridad, cintas o archivos de disco en la que se han escrito una o más operaciones de copia de seguridad mediante un tipo y un número fijos de dispositivos de copia de seguridad. Para obtener más información sobre los conjuntos de medios, vea [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
  El dispositivo físico de copia de seguridad correspondiente a un dispositivo lógico de copia de seguridad se inicializa cuando la primera copia de seguridad del conjunto de medios se escribe en el dispositivo lógico. Si el dispositivo físico de copia de seguridad es un archivo que aún no existe, se crea en ese momento.  
@@ -76,7 +80,7 @@ caps.handback.revision: 34
   
 -   [Restaurar una copia de seguridad desde un dispositivo &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

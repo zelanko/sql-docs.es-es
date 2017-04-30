@@ -1,26 +1,30 @@
 ---
-title: "Ver las propiedades del regulador de recursos | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.rg.properties.f1"
-helpviewer_keywords: 
-  - "Regulador de recursos, propiedades"
+title: Ver las propiedades del regulador de recursos | Microsoft Docs
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.rg.properties.f1
+helpviewer_keywords:
+- Resource Governor, properties
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e856286b6048e320481b5983685fbfcd4e838c1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ver las propiedades del regulador de recursos
+# <a name="view-resource-governor-properties"></a>Ver las propiedades del regulador de recursos
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Puede crear o configurar entidades del regulador de recursos, por ejemplo grupos de recursos de servidor y grupos de cargas de trabajo, utilizando la página Propiedades del regulador de recursos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -56,13 +60,13 @@ caps.handback.revision: 28
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra el Explorador de objetos y expanda de forma recursiva el nodo **Administración** hasta el nodo **Regulador de recursos**.  
   
-2.  Haga clic con el botón derecho en **Regulador de recursos** y, luego, haga clic en **Propiedades**. De este modo se abre la página **Propiedades del regulador de recursos**.  
+2.  Haga clic con el botón derecho en **Regulador de recursos** y, luego, haga clic en **Propiedades**. De este modo se abre la página **Propiedades del regulador de recursos** .  
   
 3.  Para las obtener descripciones de los campos de la página, vea [Propiedades del regulador de recursos](#RGProp).  
   
 4.  Para guardar los cambios, haga clic en **Aceptar**.  
   
-##  <a name="RGProp"></a> Propiedades del regulador de recursos  
+##  <a name="RGProp"></a> Resource Governor properties  
  **Nombre de la función de clasificador**  
  Especifique la función clasificadora seleccionándola en la lista.  
   
@@ -115,14 +119,14 @@ caps.handback.revision: 28
   
  Para obtener más información, vea [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md).  
   
-## Ver las propiedades del regulador de recursos con Transact-SQL  
+## <a name="view-resource-governor-properties-using-transact-sql"></a>Ver las propiedades del regulador de recursos con Transact-SQL  
  **Ver las propiedades del regulador de recursos mediante Transact-SQL**  
   
 1.  Para ver las definiciones de las entidades del regulador de recursos, use las [Vistas de catálogo del regulador de recursos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md).  
   
 2.  Para ver la configuración actual de las entidades del regulador de recursos, use las [Vistas de administración dinámica relacionadas con el regulador de recursos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).  
   
-## Más información
+## <a name="more-information"></a>Más información
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Habilitar el regulador de recursos](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Grupo de recursos de servidor del regulador de recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
@@ -130,3 +134,4 @@ caps.handback.revision: 28
  [Función clasificadora del regulador de recursos](../../relational-databases/resource-governor/resource-governor-classifier-function.md)  
   
   
+

@@ -1,31 +1,35 @@
 ---
-title: "Caracter&#237;sticas en desuso de b&#250;squeda de texto completo en SQL Server 2016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "características desusadas [búsqueda de texto completo]"
-  - "búsqueda de texto completo [SQL Server], características en desuso"
-  - "consultas de texto [SQL Server], proximidad"
+title: "Características en desuso de búsqueda de texto completo en SQL Server 2016 | Microsoft Docs"
+ms.custom: 
+ms.date: 08/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deprecated features [full-text search]
+- full-text search [SQL Server], deprecated features
+- full-text queries [SQL Server], proximity
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5d927fde6997929f3f92870ea55100f64d4b7395
+ms.lasthandoff: 04/11/2017
+
 ---
-# Caracter&#237;sticas en desuso de b&#250;squeda de texto completo en SQL Server 2016
-  En este tema se describen las características de búsqueda de texto completo en desuso que todavía están disponibles en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Está previsto quitar estas características en una futura versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No use características en desuso en aplicaciones nuevas.  
+# <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>Características en desuso de búsqueda de texto completo en SQL Server 2016
+  En este tema se describen las características de búsqueda de texto completo en desuso que todavía están disponibles en SQL Server. Está previsto quitar estas características en una versión futura. No use características en desuso en aplicaciones nuevas.  
   
- Puede supervisar el uso de características en desuso utilizando el contador de rendimiento del objeto **SQL Server:Deprecated Features** (SQL Server:Características en desuso) y eventos de seguimiento. Para obtener más información, vea [Usar objetos de SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
+Puede supervisar el uso de características en desuso mediante el contador de rendimiento del objeto **SQL Server:Deprecated Features** (SQL Server: características en desuso) y los eventos de seguimiento. Para obtener más información, vea [Usar objetos de SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
-## Características no admitidas en la siguiente versión de SQL Server  
+## <a name="features-no-longer-supported"></a>Características que ya no se admiten  
 
   
 |Característica desusada|Sustituta|Nombre de característica|Id. de característica|  
@@ -40,19 +44,20 @@ caps.handback.revision: 32
 |Columna sys.dm_fts_memory_buffers:<br /><br /> row_count|Ninguno.|dm_fts_memory_buffers.row_count|225|  
 |Columnas sys.fulltext_catalogs:<br /><br /> ruta de acceso<br /><br /> data_space_id<br /><br /> Columnas file_id|Ninguno.|fulltext_catalogs.path<br /><br /> fulltext_catalogs.data_space_id<br /><br /> fulltext_catalogs.file_id|215<br /><br /> 216<br /><br /> 217|  
   
-## Características no admitidas en una versión futura de SQL Server  
- Las características de búsqueda de texto completo se admiten en la siguiente versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero se quitarán en una versión posterior. No se ha determinado la versión específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>Características no admitidas en una versión futura de SQL Server  
+ Las características de búsqueda de texto completo se admiten en la siguiente versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero se quitarán en una versión posterior. No se ha determinado la versión específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  El valor en **Nombre de característica** aparece en los eventos de seguimiento como el nombre de objeto (ObjectName) y, en los contadores de rendimiento y en sys.dm_os_performance_counters, como el nombre de instancia. El valor de **Id. de la característica** aparece en los eventos de seguimiento como el identificador de objeto (ObjectId).  
   
 |Característica desusada|Sustituta|Nombre de característica|Id. de característica|  
 |------------------------|-----------------|------------------|----------------|  
-|Operador NEAR genérico de CONTAINS y CONTAINSTABLE:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|El operador NEAR personalizado:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,…*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,…*n*] )<br /><br /> [,\<distance> [,\<order>] ]<br /><br /> }<br /><br /> )<br /><br /> \<distance> ::= {*integer* &#124; **MAX**}<br /><br /> \<order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|Operador NEAR genérico de CONTAINS y CONTAINSTABLE:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|El operador NEAR personalizado:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,…*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,…*n*] )<br /><br /> [,<distance> [,<order>] ]<br /><br /> }<br /><br /> )<br /><br /> <distance> ::= {*integer* &#124; **MAX**}<br /><br /> <order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |Opción CREATE FULLTEXT CATALOG:<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|Ninguno.|CREATE FULLTEXT CATLOG IN PATH<br /><br /> Ninguno.<sup>*</sup>|237<br /><br /> Ninguno.*|  
 |Propiedad DATABASEPROPERTYEX: IsFullTextEnabled|Ninguno.|DATABASEPROPERTYEX**('IsFullTextEnabled')**|202|  
 |sp_detach_db option:<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|Ninguno.|sp_detach_db @keepfulltextindexfile|226|  
 |Valores de acción sp_fulltext_service: resource_usage no tiene ninguna función.|Ninguno|sp_fulltext_service @action=resource_usage|200|  
   
- \*El objeto **SQL Server:Deprecated Features** no supervisa las apariciones de CREATE FULLTEXT CATLOG ON FILEGROUP *filegroup*.  
+ *El objeto **SQL Server:Deprecated Features** no supervisa las apariciones del *filegroup* CREATE FULLTEXT CATLOG ON FILEGROUP.  
   
   
+

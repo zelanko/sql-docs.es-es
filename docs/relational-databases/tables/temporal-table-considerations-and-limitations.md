@@ -1,23 +1,27 @@
 ---
-title: "Limitaciones y consideraciones de las tablas temporales | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/24/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Limitaciones y consideraciones de las tablas temporales | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 caps.latest.revision: 18
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 22bab0bc2c039e68a336ac827a3e2d028ca77c78
+ms.lasthandoff: 04/11/2017
+
 ---
-# Limitaciones y consideraciones de las tablas temporales
+# <a name="temporal-table-considerations-and-limitations"></a>Limitaciones y consideraciones de las tablas temporales
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Hay algunas consideraciones y limitaciones que deben tenerse en cuenta al trabajar con tablas temporales debido a la naturaleza de las versiones del sistema.  
@@ -34,25 +38,25 @@ caps.handback.revision: 17
   
 -   Si la tabla actual tiene particiones, la tabla de historial se crea en el grupo de archivos predeterminado, ya que la configuración de particiones no se replica automáticamente desde la tabla actual a la de historial.  
   
--   Las tablas temporales y de historial no pueden ser **FILETABLE** y pueden contener columnas de cualquier tipo de datos compatible que no sea **FILESTREAM**, ya que **FILETABLE** y **FILESTREAM** permiten que se puedan manipular datos fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; por tanto, no se puede garantizar el control de versiones del sistema.  
+-   Las tablas temporales y de historial no pueden ser **FILETABLE** y pueden contener columnas de cualquier tipo de datos compatible que no sea **FILESTREAM** , ya que **FILETABLE** y **FILESTREAM** permiten que se puedan manipular datos fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; por tanto, no se puede garantizar el control de versiones del sistema.  
   
--   Aunque las tablas temporales son compatibles con los tipos de datos BLOB, como **(n)varchar(max)**, **varbinary(max)**, **(n)text** y **image**, acarrearán importantes costos de almacenamiento y afectarán al rendimiento debido a su tamaño. Por lo tanto, al diseñar el sistema, debe tener cuidado al usar estos tipos de datos.  
+-   Aunque las tablas temporales son compatibles con los tipos de datos BLOB, como **(n)varchar(max)**, **varbinary(max)**, **(n)text** e **image**, acarrearán importantes costos de almacenamiento y afectarán al rendimiento debido a su tamaño. Por lo tanto, al diseñar el sistema, debe tener cuidado al usar estos tipos de datos.  
   
 -   La tabla de historial debe crearse en la misma base de datos que donde reside la actual. No se admiten las consultas temporales en **Linked Server** .  
   
 -   La tabla de historial no puede tener restricciones (de clave principal, clave externa, tabla o columna).  
   
--   No se admiten vistas indexadas con consultas temporales (las consultas que usan la cláusula **FOR SYSTEM_TIME**).  
+-   No se admiten vistas indexadas con consultas temporales (las consultas que usan la cláusula **FOR SYSTEM_TIME** ).  
   
 -   La opción en línea (**WITH (ONLINE = ON**) no tiene ningún efecto sobre **ALTER TABLE ALTER COLUMN** en las tablas temporales con versiones del sistema. La columna ALTER no se realiza como en línea, independientemente del valor que se especificó para la opción ONLINE.  
   
--   Las instrucciones **INSERT** y **UPDATE** no pueden hacer referencia a las columnas de periodo SYSTEM_TIME. Se bloquearán los intentos de insertar valores directamente en estas columnas.  
+-   Las instrucciones**INSERT** y **UPDATE** no pueden hacer referencia a las columnas de periodo SYSTEM_TIME. Se bloquearán los intentos de insertar valores directamente en estas columnas.  
   
--   **TRUNCATE TABLE** no se admite mientras **SYSTEM_VERSIONING** esté configurado como **ON**.  
+-   **TRUNCATE TABLE** is not supported while **SYSTEM_VERSIONING** is **ON**  
   
 -   No se permite la modificación directa de los datos en una tabla de historial.  
   
--   **ON DELETE CASCADE** y **ON UPDATE CASCADE** no se permiten en la tabla actual. Es decir, cuando la tabla temporal hace referencia a la tabla de la relación de clave externa (correspondiente a *parent_object_id* en sys.foreign_keys), no se permiten las opciones CASCADE. Para abordar esta limitación, use la lógica de aplicación o los desencadenadores AFTER para mantener la coherencia de eliminación en la tabla de clave principal (correspondiente a *referenced_object_id* en sys.foreign_keys). Si la tabla de clave principal es temporal y de referencia no lo es, significa que no hay ninguna limitación de este tipo.  
+-   **ON DELETE CASCADE** y **ON UPDATE CASCADE** no se permiten en la tabla actual. Es decir, cuando la tabla temporal hace referencia a la tabla de la relación de clave externa (correspondiente a *parent_object_id* en sys.foreign_keys), no se permiten las opciones CASCADE. Para abordar esta limitación, use la lógica de aplicación o los desencadenadores AFTER para mantener la coherencia de eliminación en la tabla de clave principal (correspondiente a  *referenced_object_id* en sys.foreign_keys). Si la tabla de clave principal es temporal y de referencia no lo es, significa que no hay ninguna limitación de este tipo.  
   
 -   Los desencadenadores**INSTEAD OF** no se permiten en la tabla actual o de historial para evitar que se invalide la lógica DML. Los desencadenadores**AFTER** solo se permiten en la tabla actual. Se bloquean en la tabla de historial para evitar que se invalide la lógica DML.  
   
@@ -93,10 +97,10 @@ caps.handback.revision: 17
   
 -   Una tabla de historial no puede configurarse como actual en una cadena de tablas de historial.  
   
-## ¿Le ayudó este artículo? Le escuchamos  
- ¿Qué información está buscando? ¿La encontró? Escuchamos sus comentarios para mejorar el contenido. Envíe sus comentarios a [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20Considerations%20and%20Limitations%20page).  
+## <a name="did-this-article-help-you-were-listening"></a>¿Le ayudó este artículo? Le escuchamos  
+ ¿Qué información está buscando? ¿La encontró? Escuchamos sus comentarios para mejorar el contenido. Envíe sus comentarios a [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20Considerations%20and%20Limitations%20page)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tablas temporales](../../relational-databases/tables/temporal-tables.md)   
  [Introducción a las tablas temporales con versión del sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Comprobaciones de coherencia del sistema de la tabla temporal](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
@@ -107,3 +111,4 @@ caps.handback.revision: 17
  [Funciones y vistas de metadatos de la tabla temporal](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

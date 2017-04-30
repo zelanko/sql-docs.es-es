@@ -1,41 +1,45 @@
 ---
-title: "Habilitar y configurar FILESTREAM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], habilitar"
+title: Habilitar y configurar FILESTREAM | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7bee35abc8b2c450a9bd1badb89b18eb31128be8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Habilitar y configurar FILESTREAM
+# <a name="enable-and-configure-filestream"></a>Habilitar y configurar FILESTREAM
   Para empezar a utilizar FILESTREAM, debe habilitarlo en la instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. En este tema se describe cómo habilitar FILESTREAM con el Administrador de configuración de SQL Server.  
   
 ##  <a name="enabling"></a> Habilitar FILESTREAM  
   
-#### Para habilitar y cambiar la configuración de FILESTREAM  
+#### <a name="to-enable-and-change-filestream-settings"></a>Para habilitar y cambiar la configuración de FILESTREAM  
   
 1.  En el menú **Inicio** , elija **Todos los programas**, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **Herramientas de configuración**y, por último, **Administrador de configuración de SQL Server**.  
   
-2.  En la lista de servicios, haga clic con el botón derecho en **Servicios de SQL Server** y, después, haga clic en **Abrir**.  
+2.  En la lista de servicios, haga clic con el botón derecho en **Servicios de SQL Server**y, después, haga clic en **Abrir**.  
   
-3.  En el complemento **Administrador de configuración de SQL Server**, busque la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que quiera habilitar FILESTREAM.  
+3.  En el complemento **Administrador de configuración de SQL Server** , busque la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que quiera habilitar FILESTREAM.  
   
 4.  Haga clic con el botón derecho en la instancia y, después, haga clic en **Propiedades**.  
   
 5.  En el cuadro de diálogo **Propiedades de SQL Server** , haga clic en la pestaña **FILESTREAM** .  
   
-6.  Seleccione la casilla **Habilitar FILESTREAM para acceso Transact-SQL**.  
+6.  Seleccione la casilla **Habilitar FILESTREAM para acceso Transact-SQL** .  
   
 7.  Si quiere leer y escribir datos FILESTREAM de Windows, haga clic en **Habilitar FILESTREAM para el acceso de transmisión por secuencias de E/S de archivos**. Escriba el nombre del recurso compartido de Windows en el cuadro **Nombre de recurso compartido de Windows** .  
   
@@ -54,9 +58,8 @@ caps.handback.revision: 24
   
 12. Haga clic en **Ejecutar**.  
   
-13. Reinicie el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+13. Reinicie el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- [En este tema](#TOP)  
   
 ##  <a name="best"></a> Procedimientos recomendados  
   
@@ -82,14 +85,13 @@ caps.handback.revision: 24
 |RAID 0|Excelente|Excelente|Ninguno||  
 |RAID 5 con creación de bandas|Excelente|Excelente|Excelente|Opción más cara.|  
   
- [En este tema](#TOP)  
   
 ###  <a name="database"></a> Diseño físico de base de datos  
  Cuando diseñe una base de datos de FILESTREAM, tenga en cuenta las directrices siguientes:  
   
 -   Las columnas FILESTREAM deben ir acompañadas de una columna **uniqueidentifier**ROWGUID correspondiente. Estos tipos de tablas también deben ir acompañados de un índice único. Normalmente, este índice no es un índice clúster. Si la lógica de negocios de bases de datos requiere un índice clúster, debe asegurarse de que los valores almacenados en el índice no sean aleatorios. Los valores aleatorios harán que el índice se vuelva a ordenar cada vez que se agregue o se quite una fila en la tabla.  
   
--   Por razones de rendimiento, los contenedores y grupos de archivos FILESTREAM deben residir en volúmenes distintos del sistema operativo, base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tempdb o archivo de paginación.  
+-   Por razones de rendimiento, los contenedores y grupos de archivos FILESTREAM deben residir en volúmenes distintos del sistema operativo, base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tempdb o archivo de paginación.  
   
 -   FILESTREAM no admite directamente la aplicación de directivas ni la administración del espacio. Sin embargo, es posible administrar el espacio y aplicar directivas indirectamente mediante la asignación de cada grupo de archivos FILESTREAM a un volumen independiente y usando las características de administración del volumen.  
   

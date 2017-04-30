@@ -1,27 +1,31 @@
 ---
-title: "Ver propiedades de la gu&#237;a de plan | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.planguideprop.general.f1"
-helpviewer_keywords: 
-  - "guías de plan [SQL Server], ver propiedades de guía de plan"
-  - "visualización de propiedades de la guía de plan"
+title: "Ver propiedades de la guía de plan | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.planguideprop.general.f1
+helpviewer_keywords:
+- plan guides [SQL Server], view plan guide properties
+- viewing plan guide properties
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a68f0e1e0c15000f40de408f41ce4c40f281900e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ver propiedades de la gu&#237;a de plan
+# <a name="view-plan-guide-properties"></a>Ver propiedades de la guía de plan
   Puede ver las propiedades de las guías de plan en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **En este tema**  
@@ -45,7 +49,7 @@ caps.handback.revision: 19
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para ver las propiedades de una guía de plan  
+#### <a name="to-view-the-properties-of-a-plan-guide"></a>Para ver las propiedades de una guía de plan  
   
 1.  Haga clic en el signo más para expandir la base de datos en la que desea ver las propiedades de una guía de plan y haga clic en el signo más para expandir la carpeta **Programación** .  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 19
      Las propiedades siguientes se muestran en el cuadro de diálogo **Propiedades de la guía de plan** .  
   
      **Sugerencias**  
-     Muestra las sugerencias de consulta o el plan de consulta que se va a aplicar a la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cuando un plan de consulta se especifica como una sugerencia, se mostrará la salida del Plan de presentación XML.  
+     Muestra las sugerencias de consulta o el plan de consulta que se va a aplicar a la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] . Cuando un plan de consulta se especifica como una sugerencia, se mostrará la salida del Plan de presentación XML.  
   
      **Está deshabilitado**  
      Muestra el estado de la guía de plan. Los valores posibles son **True** o **False**.  
@@ -65,19 +69,19 @@ caps.handback.revision: 19
      Muestra el nombre de la guía de plan.  
   
      **Parámetros**  
-     Cuando el tipo de ámbito es SQL o TEMPLATE, muestra el nombre y el tipo de dato de todos los parámetros incorporados en la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+     Cuando el tipo de ámbito es SQL o TEMPLATE, muestra el nombre y el tipo de dato de todos los parámetros incorporados en la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
      **Lote del ámbito**  
-     Muestra el texto del lote en el que aparece la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+     Muestra el texto del lote en el que aparece la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
      **Nombre de objeto del ámbito**  
-     Si el tipo de ámbito es OBJECT, muestra el nombre del procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)], función escalar definida por el usuario, función con valores de tabla de múltiples instrucciones o desencadenador DML en que aparece la instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+     Si el tipo de ámbito es OBJECT, muestra el nombre del procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)] , función escalar definida por el usuario, función con valores de tabla de múltiples instrucciones o desencadenador DML en que aparece la instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
      **Nombre de esquema del ámbito**  
      Si el tipo de ámbito es OBJECT, muestra el nombre del esquema en el que está contenido el objeto.  
   
      **Tipo de ámbito**  
-     Muestra el tipo de entidad en la que aparece la instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Así se especifica el contexto para hacer coincidir la instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] con la guía de plan. Los valores posibles son **OBJECT**, **SQL**y **TEMPLATE**.  
+     Muestra el tipo de entidad en la que aparece la instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Así se especifica el contexto para hacer coincidir la instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] con la guía de plan. Los valores posibles son **OBJECT**, **SQL**y **TEMPLATE**.  
   
      **Estamento**  
      Muestra la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] frente a la que se aplicará la guía de plan.  
@@ -86,7 +90,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para ver las propiedades de una guía de plan  
+#### <a name="to-view-the-properties-of-a-plan-guide"></a>Para ver las propiedades de una guía de plan  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

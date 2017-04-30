@@ -1,27 +1,31 @@
 ---
-title: "Usar el modo AUTO con FOR XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Cláusula FOR XML, modo AUTO"
-  - "ELEMENTS, opción"
-  - "FOR XML AUTO, modo"
-  - "AUTO FOR XML, modo"
+title: Usar el modo AUTO con FOR XML | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, AUTO mode
+- ELEMENTS option
+- FOR XML AUTO mode
+- AUTO FOR XML mode
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1dcb415f177d7a7163520c1b4295cadbca5f4cc9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar el modo AUTO con FOR XML
+# <a name="use-auto-mode-with-for-xml"></a>Usar el modo AUTO con FOR XML
   Tal como se describe en [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md), el modo AUTO devuelve los resultados de la consulta como elementos XML anidados. Esto no ofrece un gran control sobre la forma del XML generado a partir del resultado de una consulta. Las consultas en modo AUTO son útiles si desea generar jerarquías sencillas. Pero [Usar el modo EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) y [Usar el modo PATH con FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md) ofrecen mayor control y flexibilidad a la hora de decidir la forma del XML procedente del resultado de una consulta.  
   
  Cada tabla de la cláusula FROM, de la que al menos se presenta una columna en la cláusula SELECT, se representa como un elemento XML. Las columnas que se incluyen en la cláusula SELECT se asignan a atributos o subelementos, si se especifica la opción ELEMENTS en la cláusula FOR XML.  
@@ -122,13 +126,13 @@ FOR XML AUTO, ELEMENTS
   
  En esta consulta, los valores CustomerID de una fila se comparan con los de la siguiente al crear elementos \<Cust>, porque CustomerID es la clave principal de la tabla. Si no se identifica CustomerID como clave principal de la tabla, todos los valores de columna (CustomerID, CustomerType en esta consulta) de una fila se comparan con los de la siguiente. Si los valores difieren, se agrega un nuevo elemento \<Cust> al XML.  
   
- Cuando se comparan estos valores de columna, si algunas de las columnas que se comparan son de tipo **text**, **ntext**, **image**o **xml**, FOR XML asume que los valores son diferentes y no los compara, incluso si son los mismos. Esto se debe a que no se admite la comparación de objetos grandes. Se agregan elementos al resultado para cada fila seleccionada. Tenga en cuenta que se comparan las columnas de **(n)varchar(max)** y **varbinary(max)**.  
+ Cuando se comparan estos valores de columna, si algunas de las columnas que se comparan son de tipo **text**, **ntext**, **image**o **xml**, FOR XML asume que los valores son diferentes y no los compara, incluso si son los mismos. Esto se debe a que no se admite la comparación de objetos grandes. Se agregan elementos al resultado para cada fila seleccionada. Tenga en cuenta que se comparan las columnas de **(n)varchar(max)** y **varbinary(max)** .  
   
  Si no se puede asociar una columna de la cláusula SELECT con ninguna de las tablas identificadas en la cláusula FROM, como en el caso de una columna de agregado o una columna calculada, se agrega la columna en el documento XML en el nivel de anidamiento más profundo cuando se encuentra en la lista. Si esa columna aparece como la primera de la cláusula SELECT, la columna se agrega al elemento superior.  
   
  Si se especifica el carácter comodín * (asterisco) en la cláusula SELECT, el anidamiento se determina del mismo modo que se ha explicado anteriormente, en función de las filas devueltas por el motor de consulta.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  Los temas siguientes proporcionan más información sobre el modo AUTO:  
   
 -   [Usar la opción BINARY BASE64](../../relational-databases/xml/use-the-binary-base64-option.md)  
@@ -137,7 +141,7 @@ FOR XML AUTO, ELEMENTS
   
 -   [Ejemplos: Usar el modo AUTO](../../relational-databases/xml/examples-using-auto-mode.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   

@@ -1,37 +1,41 @@
 ---
-title: "Usar SQL Server Profiler para crear y probar gu&#237;as de plan | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "comprobar guías de plan"
-  - "guías de plan [SQL Server], probar"
-  - "guías de plan [SQL Server], SQL Server Profiler"
-  - "consultas coincidentes con las guías de plan [SQL Server]"
-  - "probar guías de plan"
-  - "SQL Server Profiler, guías de plan"
-  - "guías de plan [SQL Server], crear"
-  - "capturar texto de consulta [SQL Server]"
-  - "comprobar guías de plan"
-  - "Profiler [SQL Server Profiler], guías de plan"
-  - "coincidencia de la guía de plan con la consulta [SQL Server]"
+title: "Usar SQL Server Profiler para crear y probar guías de plan | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- checking plan guides
+- plan guides [SQL Server], testing
+- plan guides [SQL Server], SQL Server Profiler
+- matching queries to plan guides [SQL Server]
+- testing plan guides
+- SQL Server Profiler, plan guides
+- plan guides [SQL Server], creating
+- capturing query text [SQL Server]
+- verifying plan guides
+- Profiler [SQL Server Profiler], plan guides
+- query-to-plan guide matching [SQL Server]
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 06df9d04d443ee83ab188bf56b08afd7126e70b2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar SQL Server Profiler para crear y probar gu&#237;as de plan
-  Cuando cree una guía de plan, puede usar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para capturar el texto exacto de la consulta con el fin de usarlo en el argumento *statement_text* del procedimiento almacenado **sp_create_plan_guide**. Esto contribuye a garantizar que la guía de plan coincidirá con la consulta en tiempo de compilación. Una vez creada la guía de plan, se puede utilizar también el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para probar que, realmente, esa guía de plan coincidirá con la consulta. Por lo general, debe probar las guías de plan mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para comprobar que se buscan las coincidencias de la consulta con la guía de plan.  
+# <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Usar SQL Server Profiler para crear y probar guías de plan
+  Cuando cree una guía de plan, puede usar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para capturar el texto exacto de la consulta con el fin de usarlo en el argumento *statement_text* del procedimiento almacenado **sp_create_plan_guide** . Esto contribuye a garantizar que la guía de plan coincidirá con la consulta en tiempo de compilación. Una vez creada la guía de plan, se puede utilizar también el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para probar que, realmente, esa guía de plan coincidirá con la consulta. Por lo general, debe probar las guías de plan mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para comprobar que se buscan las coincidencias de la consulta con la guía de plan.  
   
-## Capturar texto de consulta utilizando SQL Server Profiler  
+## <a name="capturing-query-text-by-using-sql-server-profiler"></a>Capturar texto de consulta utilizando SQL Server Profiler  
  Si ejecuta una consulta y captura el texto exactamente como se envió a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], puede crear una guía de plan de tipo SQL o TEMPLATE que coincidirá exactamente con el texto de la consulta. Esto garantiza que el optimizador de consultas utiliza la guía de plan.  
   
  Considere la siguiente consulta que envía una aplicación como lote independiente:  
@@ -65,7 +69,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  Abra el archivo de texto del lote en el Bloc de notas y copie el texto en el búfer de copiar y pegar.  
   
-8.  Cree la guía de plan y pegue el texto copiado entre las comillas (**''**) especificadas para el argumento **@stmt**. Debe utilizar un carácter de escape con las comillas simples en el argumento **@stmt** utilizando delante de ellas otra comilla simple. Al insertar estas comillas simples, tenga cuidado de no agregar ni quitar ningún otro carácter. Por ejemplo, el literal de fecha **'**20000101**'** debe delimitarse como **''**20000101**''**.  
+8.  Cree la guía de plan y pegue el texto copiado entre las comillas (**''**) especificadas para el argumento **@stmt** . Debe utilizar un carácter de escape con las comillas simples en el argumento **@stmt** utilizando delante de ellas otra comilla simple. Al insertar estas comillas simples, tenga cuidado de no agregar ni quitar ningún otro carácter. Por ejemplo, el literal de fecha **'**20000101**'** debe delimitarse como **''**20000101**''**.  
   
  Ésta es la guía de plan:  
   
@@ -79,10 +83,10 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (MERGE JOIN)';  
 ```  
   
-## Probar guías de plan utilizando SQL Server Profiler  
+## <a name="testing-plan-guides-by-using-sql-server-profiler"></a>Probar guías de plan utilizando SQL Server Profiler  
  Para comprobar que una guía de plan coincide con una consulta, siga estos pasos:  
   
-1.  Inicie un seguimiento de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], asegurándose de seleccionar el tipo de evento **Showplan XML** (ubicado en el nodo **Performance**).  
+1.  Inicie un seguimiento de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , asegurándose de seleccionar el tipo de evento **Showplan XML** (ubicado en el nodo **Performance** ).  
   
 2.  Haga que la aplicación ejecute la consulta.  
   
@@ -95,7 +99,7 @@ EXEC sp_create_plan_guide
   
 5.  Si la guía de plan es de tipo OBJECT o SQL, compruebe que el evento **Showplan XML** contiene los atributos **PlanGuideDB** y **PlanGuideName** para la guía de plan que espera que coincida con la consulta. O bien, en el caso de una guía de plan TEMPLATE, compruebe que el evento **Showplan XML** contiene los atributos **TemplatePlanGuideDB** y **TemplatePlanGuideName** de la guía de plan que se espera. Esto comprueba que la guía de plan funciona. Estos atributos se incluyen en el elemento **\<StmtSimple>** del plan.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  
   
   

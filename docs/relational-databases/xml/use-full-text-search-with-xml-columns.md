@@ -1,25 +1,29 @@
 ---
-title: "Usar la b&#250;squeda de texto completo con columnas XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "columnas xml [búsqueda de texto completo]"
-  - "índices [búsqueda de texto completo]"
+title: "Usar la búsqueda de texto completo con columnas XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xml columns [full-text search]
+- indexes [full-text search]
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41e91aaf7977fe44a268bccf71dd386d7c0b993a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar la b&#250;squeda de texto completo con columnas XML
+# <a name="use-full-text-search-with-xml-columns"></a>Usar la búsqueda de texto completo con columnas XML
   Puede crear un índice de texto completo en columnas XML para indizar el contenido de los valores XML, pero omitiendo el marcado XML. Las etiquetas de elemento se usan como límites de token. Los siguientes elementos se indizan:  
   
 -   Contenido de los elementos XML.  
@@ -32,7 +36,7 @@ caps.handback.revision: 14
   
 2.  A continuación, realice una consulta en los valores XML que usen índice XML en la columna XML.  
   
-## Ejemplo: combinar una búsqueda de texto completo con consultas XML  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>Ejemplo: combinar una búsqueda de texto completo con consultas XML  
  Una vez creado un índice de texto completo en la columna XML, la siguiente consulta comprueba que un valor XML contiene la palabra "custom" en el título de un libro:  
   
 ```  
@@ -48,7 +52,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
   
  Además, la búsqueda de texto completo usa lematización de palabras, pero la función **contains()** de XQuery busca una coincidencia literal. Esta diferencia se describe en el siguiente ejemplo.  
   
-## Ejemplo: búsqueda de texto completo en valores XML mediante lematización  
+## <a name="example-full-text-search-on-xml-values-using-stemming"></a>Ejemplo: búsqueda de texto completo en valores XML mediante lematización  
  Por lo general, la comprobación de la función **contains()** de XQuery que se ha efectuado en el ejemplo anterior no se puede eliminar. Considere esta consulta:  
   
 ```  
@@ -61,7 +65,7 @@ WHERE  CONTAINS(xCol,'run')
   
  Cuando el XML se descompone en columnas relacionales utilizando AXSD y las columnas se incluyen en el índice de texto completo, las consultas XPath que se ejecutan en la vista XML no efectúan búsquedas de texto completo en las tablas subyacentes.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Índices XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   

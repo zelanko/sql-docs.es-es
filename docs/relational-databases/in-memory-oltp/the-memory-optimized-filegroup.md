@@ -1,23 +1,27 @@
 ---
-title: "El grupo de archivos con optimizaci&#243;n para memoria | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "El grupo de archivos con optimización para memoria | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 07cda4d0c3e3bf0dd604de193ceef602a36c0ca9
+ms.lasthandoff: 04/11/2017
+
 ---
-# El grupo de archivos con optimizaci&#243;n para memoria
+# <a name="the-memory-optimized-filegroup"></a>El grupo de archivos con optimización para memoria
   Para crear tablas con optimización para memoria, primero debe crear un grupo de archivos con optimización para memoria. El grupo de archivos con optimización para memoria contiene uno o varios contenedores. Cada contenedor contiene archivos de datos, archivos delta o ambos tipos de archivos.  
   
  Aunque las filas de datos de las tablas SCHEMA_ONLY no se conservan y los metadatos de las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa se almacenan en los catálogos tradicionales, el motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] todavía requiere un grupo de archivos con optimización para memoria para que las tablas SCHEMA_ONLY con optimización para memoria proporcionen una experiencia uniforme para las bases de datos con tablas con optimización para memoria.  
@@ -36,7 +40,7 @@ caps.handback.revision: 15
     ALTER DATABASE imoltp ADD FILE (name='imoltp_mod1', filename='c:\data\imoltp_mod1') TO FILEGROUP imoltp_mod  
     ```  
   
--   No es necesario habilitar la secuencia de archivos ([Habilitar y configurar FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)) para crear un grupo de archivos con optimización para memoria. La asignación a la secuencia de archivos la realiza el motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
+-   No es necesario habilitar la secuencia de archivos ([Habilitar y configurar FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)) para crear un grupo de archivos con optimización para memoria. La asignación a la secuencia de archivos la realiza el motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   
 -   Puede agregar nuevos contenedores a un grupo de archivos con optimización para memoria. Quizás necesite un nuevo contenedor para expandir el almacenamiento necesario para la tabla con optimización para memoria durable y también para distribuir la E/S entre varios contenedores.  
   
@@ -50,12 +54,12 @@ caps.handback.revision: 15
   
 -   No puede especificar MAXSIZE para el contenedor.  
   
-## Configurar un grupo de archivos con optimización para memoria  
+## <a name="configuring-a-memory-optimized-filegroup"></a>Configurar un grupo de archivos con optimización para memoria  
  Debe considerar la posibilidad de crear varios contenedores en el mismo grupo de archivos con optimización para memoria y distribuirlos en distintas unidades para lograr más ancho de banda para transmitir los datos en memoria.  
   
  Al configurar el almacenamiento, debe proporcionar una cantidad de espacio en disco disponible que sea cuatro veces el tamaño de tablas durables con optimización para memoria. También debe asegurarse de que el subsistema de E/S admite los IOPS necesarios para la carga de trabajo. Si los pares de archivos de datos y delta se rellenan en las IOPS especificadas, necesita 3 veces esas IOPS para dar cabida a las operaciones de almacenamiento y mezcla. Puede agregar capacidad de almacenamiento e IOPS si agrega uno o varios contenedores al grupo de archivos con optimización para memoria.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Crear y administrar el almacenamiento de objetos con optimización para memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

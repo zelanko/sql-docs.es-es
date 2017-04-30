@@ -1,33 +1,37 @@
 ---
-title: "Estimar los requisitos de memoria para las tablas con optimizaci&#243;n para memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Estimar los requisitos de memoria para las tablas con optimización para memoria | Microsoft Docs"
+ms.custom: 
+ms.date: 12/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ea8b5ddea3edfbe5d2521bd30e4a51fd62a2b482
+ms.lasthandoff: 04/11/2017
+
 ---
-# Estimar los requisitos de memoria para las tablas con optimizaci&#243;n para memoria
+# <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar los requisitos de memoria para las tablas con optimización para memoria
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 Las tablas con optimización para memoria requieren que exista memoria suficiente para mantener todas las filas e índices en memoria. Dado que la memoria es un recurso finito, es importante que conozca y administre el uso que hace de la memoria en su sistema. Los temas de esta sección se ocupan de situaciones de uso y administración de la memoria.
 
-Si va a crear una nueva tabla con optimización para memoria o va a migrar una tabla basada en disco existente a una tabla con optimización para memoria de [!INCLUDE[hek_2](../../includes/hek-2-md.md)], es importante tener una estimación razonable de las necesidades de memoria de cada tabla para que puede aprovisionar el servidor con la memoria adecuada. En esta sección se describe cómo calcular la cantidad de memoria necesaria para almacenar los datos de una tabla con optimización para memoria.  
+Si va a crear una nueva tabla con optimización para memoria o va a migrar una tabla basada en disco existente a una tabla con optimización para memoria de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , es importante tener una estimación razonable de las necesidades de memoria de cada tabla para que puede aprovisionar el servidor con la memoria adecuada. En esta sección se describe cómo calcular la cantidad de memoria necesaria para almacenar los datos de una tabla con optimización para memoria.  
   
 Si va a realizar la migración desde tablas basadas en disco a tablas con optimización para memoria, antes de continuar en este tema, vea el tema [Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) para obtener información sobre qué tablas son más adecuadas para la migración. Todos los temas de [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md) ofrecen instrucciones sobre la migración de tablas basadas en disco a tablas con optimización para memoria. 
   
 ## <a name="basic-guidance-for-estimating-memory-requirements"></a>Instrucciones básicas para estimar los requisitos de memoria
 
-A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], no existe límite en el tamaño de las tablas con optimización para memoria, aunque estas deben adaptarse a la memoria.  En [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], el tamaño de datos admitido es de 256 GB para las tablas SCHEMA_AND_DATA.
+A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], no existe límite en el tamaño de las tablas con optimización para memoria, aunque estas deben adaptarse a la memoria.  En [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , el tamaño de datos admitido es de 256 GB para las tablas SCHEMA_AND_DATA.
 
 El tamaño de una tabla con optimización para memoria corresponde al tamaño de los datos más alguna sobrecarga de los encabezados de fila. Al migrar una tabla basada en disco a una con optimización para memoria, el tamaño de la tabla con optimización para memoria corresponderá aproximadamente al tamaño del índice agrupado o al montón de la tabla original basada en disco.
 
@@ -50,7 +54,7 @@ Cuando existe una carga de trabajo activa, se necesita tener en cuenta la memori
   
 - [Memoria para el crecimiento](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForGrowth)  
   
-###  <a name="a-namebkmkexampletablea-example-memory-optimized-table"></a><a name="bkmk_ExampleTable"></a> Tabla con optimización para memoria de ejemplo  
+###  <a name="bkmk_ExampleTable"></a> Tabla con optimización para memoria de ejemplo  
 
 Considere el esquema de tabla con optimización para memoria siguiente:
   
@@ -82,7 +86,7 @@ GO
 
 Con este esquema determinaremos la memoria mínima necesaria para esta tabla con optimización para memoria.  
   
-###  <a name="a-namebkmkmemoryfortablea-memory-for-the-table"></a><a name="bkmk_MemoryForTable"></a> Memoria para la tabla  
+###  <a name="bkmk_MemoryForTable"></a> Memoria para la tabla  
 
 Una fila de una tabla con optimización para memoria consta de tres partes:
   
@@ -99,9 +103,9 @@ A continuación se muestra un cálculo de tamaño para 5.000.000 filas (5 millon
   
 #### <a name="memory-for-the-tables-rows"></a>Memoria para las filas de la tabla  
   
-Según se desprende de los cálculos anteriores, el tamaño de cada fila de la tabla con optimización para memoria es 24 + 32 + 200, o 256 bytes.  Como tenemos 5 millones de filas, la tabla usará 5 000 000 * 256 bytes, o 1 280 000 000 bytes, aproximadamente 1,28 GB.  
+Según se desprende de los cálculos anteriores, el tamaño de cada fila de la tabla con optimización para memoria es 24 + 32 + 200, o 256 bytes.  Como tenemos 5 millones de filas, la tabla usará 5 000 000 * 256 bytes, o 1 280 000 000 bytes, aproximadamente 1,28 GB.  
   
-###  <a name="a-namebkmkindexmeemorya-memory-for-indexes"></a><a name="bkmk_IndexMeemory"></a> Memoria para índices  
+###  <a name="bkmk_IndexMeemory"></a> Memoria para índices  
 
 #### <a name="memory-for-each-hash-index"></a>Memoria para cada índice hash  
   
@@ -130,11 +134,11 @@ SELECT COUNT(DISTINCT [Col2])
   
 Si va a crear una tabla nueva, necesitará estimar el tamaño de la matriz o recopilar datos de la prueba antes de la implementación.  
   
-Para obtener información sobre cómo funcionan los índices de hash en las tablas con optimización para memoria de [!INCLUDE[hek_2](../../includes/hek-2-md.md)], vea [Indexes for Memory-Optimized Tables (Índices para tablas con optimización para memoria)](../Topic/Hash%20Indexes.md).  
+Para obtener información sobre cómo funcionan los índices de hash en las tablas con optimización para memoria de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , vea [Indexes for Memory-Optimized Tables (Índices para tablas con optimización para memoria)](http://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
   
 #### <a name="setting-the-hash-index-array-size"></a>Establecer el tamaño de la matriz de índices hash  
   
-El tamaño de la matriz hash se establece mediante `(bucket_count= value)` donde `value` es un valor entero mayor que cero. Si `value` no es una potencia de 2, el valor real de bucket_count se redondea a la siguiente potencia más cercana de 2.  En la tabla de ejemplo (bucket_count = 5000000), como 5 000 000 no es una potencia de 2, el número de depósitos real se redondea hasta 8 388 608 (2^23).  Debe usar este número, no 5.000.000, al calcular la memoria necesaria para la matriz hash.  
+El tamaño de la matriz hash se establece mediante `(bucket_count= value)` donde `value` es un valor entero mayor que cero. Si `value` no es una potencia de 2, el valor real de bucket_count se redondea a la siguiente potencia más cercana de 2.  En la tabla de ejemplo (bucket_count = 5000000), como 5 000 000 no es una potencia de 2, el número de depósitos real se redondea hasta 8 388 608 (2^23).  Debe usar este número, no 5.000.000, al calcular la memoria necesaria para la matriz hash.  
   
 Así, en nuestro ejemplo, la memoria necesaria para cada matriz hash es:  
   
@@ -164,7 +168,7 @@ SELECT * FRON t_hk
    WHERE c2 > 5;  
 ```  
   
-###  <a name="a-namebkmkmemoryforrowversionsa-memory-for-row-versioning"></a><a name="bkmk_MemoryForRowVersions"></a> Memoria para versiones de fila
+###  <a name="bkmk_MemoryForRowVersions"></a> Memoria para versiones de fila
 
 Para evitar bloqueos, OLTP en memoria emplea simultaneidad optimista al actualizar o eliminar filas. Esto significa que cuando se actualiza una fila, se crea una versión adicional de la fila. Además, las eliminaciones se realizan de manera lógica: la fila existente se marca como eliminada, pero no se quita de inmediato. El sistema conserva versiones de filas anteriores (incluidas las filas eliminadas) disponibles hasta que finaliza la ejecución de todas las transacciones que podrían usar la versión. 
   
@@ -180,16 +184,18 @@ Las necesidades de memoria para las filas obsoletas se calculan después multipl
   
 `memoryForRowVersions = rowVersions * rowSize`  
   
-###  <a name="a-namebkmktablevariablesa-memory-for-table-variables"></a><a name="bkmk_TableVariables"></a> Memoria para variables de tabla
+###  <a name="bkmk_TableVariables"></a> Memoria para variables de tabla
   
 La memoria usada para una variable de tabla solo se libera cuando la variable de tabla sale del ámbito. Las filas eliminadas, incluidas las filas eliminadas como parte de una actualización, de una variable de tabla no están sujetas a recolección de elementos no utilizados. No se libera memoria hasta que la variable de tabla no sale del ámbito.  
   
 Las variables de tabla definidas en un lote de SQL de gran tamaño, en comparación con un ámbito de procedimiento, que se usan en muchas transacciones, pueden consumir mucha memoria. Como no se eliminan mediante el recolector de elementos no utilizados, las filas eliminadas de una variable de tabla pueden usar mucha memoria y disminuir el rendimiento porque las operaciones de lectura deben examinar más allá de las filas eliminadas.  
   
-###  <a name="a-namebkmkmemoryforgrowtha-memory-for-growth"></a><a name="bkmk_MemoryForGrowth"></a> Memoria para el crecimiento
+###  <a name="bkmk_MemoryForGrowth"></a> Memoria para el crecimiento
 
 Los cálculos anteriores estiman sus necesidades de memoria para la tabla tal y como es actualmente. Además de esta memoria, debe calcular el crecimiento de la tabla y proporcionar la memoria adecuada para permitir ese crecimiento.  Por ejemplo, si prevé un crecimiento del 10 %, necesita multiplicar los resultados anteriores por 1,1 para obtener la memoria total necesaria para la tabla.  
   
 ## <a name="see-also"></a>Vea también
 
 [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+
+

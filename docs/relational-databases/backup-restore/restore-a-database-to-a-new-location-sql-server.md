@@ -1,31 +1,35 @@
 ---
-title: "Restaurar una base de datos a una nueva ubicaci&#243;n (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restaurar bases de datos [SQL Server], mover"
-  - "restauraciones de bases de datos [SQL Server], crear bases de datos"
-  - "restaurar [SQL Server], con desplazamiento"
-  - "restaurar bases de datos [SQL Server], crear bases de datos"
-  - "copias de seguridad de bases de datos [SQL Server], crear bases de datos desde"
-  - "realizar copia de seguridad de bases de datos [SQL Server], crear bases de datos desde"
-  - "restaurar bases de datos [SQL Server], cambiar nombre"
-  - "creación de base de datos [SQL Server], restaurar con desplazamiento"
+title: "Restaurar una base de datos a una nueva ubicación (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring databases [SQL Server], moving
+- database restores [SQL Server], creating new databases
+- restoring [SQL Server], with move
+- restoring databases [SQL Server], creating new databases
+- database backups [SQL Server], creating new database from
+- backing up databases [SQL Server], creating new database from
+- restoring databases [SQL Server], renaming
+- database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 caps.latest.revision: 71
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 71
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 23023f6f4d8fe277bfee15c467be88aaa04a5723
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurar una base de datos a una nueva ubicaci&#243;n (SQL Server)
+# <a name="restore-a-database-to-a-new-location-sql-server"></a>Restaurar una base de datos a una nueva ubicación (SQL Server)
   En este tema se explica cómo restaurar una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una nueva ubicación y, opcionalmente, cómo cambiar el nombre de la base de datos, en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante SQL Server Management Studio(SSMS) o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Puede mover una base de datos a una nueva ruta de acceso de directorio o crear una copia de una base de datos en la misma instancia de servidor o en una instancia de servidor diferente.  
     
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
@@ -44,23 +48,23 @@ caps.handback.revision: 71
   
 -   Para consideraciones adicionales sobre cómo mover una base de datos, consulte [Copiar bases de datos con Copias de seguridad y restauración](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
--   Si restaura una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de datos se actualiza automáticamente. Normalmente, la base de datos está disponible inmediatamente. Pero si la base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, en función del valor de la propiedad del servidor **upgrade_option**. Si la opción de actualización se establece en importar (**upgrade_option** = 2) o en volver a generar (**upgrade_option** = 0), los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la importación puede requerir varias horas y volver a generar puede requerir hasta diez veces más. Observe también que cuando la opción de actualización se establece en importar, se vuelven a generar los índices de texto completo asociados si no se dispone de un catálogo de texto completo. Para cambiar el valor de la propiedad de servidor **upgrade_option**, use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
+-   Si restaura una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de datos se actualiza automáticamente. Normalmente, la base de datos está disponible inmediatamente. Pero si la base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, en función del valor de la propiedad del servidor  **upgrade_option** . Si la opción de actualización se establece en importar (**upgrade_option** = 2) o en volver a generar (**upgrade_option** = 0), los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la importación puede requerir varias horas y volver a generar puede requerir hasta diez veces más. Observe también que cuando la opción de actualización se establece en importar, se vuelven a generar los índices de texto completo asociados si no se dispone de un catálogo de texto completo. Para cambiar el valor de la propiedad de servidor **upgrade_option** , use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
 ###  <a name="Security"></a> Seguridad  
  Por razones de seguridad, se recomienda no adjuntar ni restaurar bases de datos de orígenes desconocidos o que no sean de confianza. Es posible que dichas bases de datos contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Para usar una base de datos desde un origen desconocido o que no sea de confianza, ejecute [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) en la base de datos de un servidor que no sea de producción y examine también el código, como procedimientos almacenados u otro código definido por el usuario, en la base de datos.  
   
 ####  <a name="Permissions"></a> Permisos  
- Si la base de datos que se va a restaurar no existe, el usuario debe tener permisos CREATE DATABASE para poder ejecutar RESTORE. Si la base de datos existe, los permisos RESTORE corresponden de forma predeterminada a los miembros de los roles fijos de servidor **sysadmin** y **dbcreator**, y al propietario (**dbo**) de la base de datos.  
+ Si la base de datos que se va a restaurar no existe, el usuario debe tener permisos CREATE DATABASE para poder ejecutar RESTORE. Si la base de datos existe, los permisos RESTORE corresponden de forma predeterminada a los miembros de los roles fijos de servidor **sysadmin** y **dbcreator** , y al propietario (**dbo**) de la base de datos.  
   
  Los permisos RESTORE se conceden a los roles en los que la información acerca de la pertenencia está siempre disponible para el servidor. Debido a que la pertenencia a un rol fijo de base de datos solo se puede comprobar cuando la base de datos es accesible y no está dañada, lo que no siempre ocurre cuando se ejecuta RESTORE, los miembros del rol fijo de base de datos **db_owner** no tienen permisos RESTORE.  
   
   
-## Restaurar una base de datos en una nueva ubicación; opcionalmente, cambiar el nombre de la base de datos con SSMS 
+## <a name="restore-a-database-to-a-new-location-optionally-rename-the-database-using-ssms"></a>Restaurar una base de datos en una nueva ubicación; opcionalmente, cambiar el nombre de la base de datos con SSMS 
 
   
-1.  Conéctese a la instancia adecuada de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y después, en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol.  
+1.  Conéctese a la instancia adecuada de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y después, en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol.  
   
-2.  Haga clic con el botón derecho en **Bases de datos** y, luego, haga clic en **Restaurar base de datos**. Se abre el cuadro de diálogo **Restaurar base de datos** .  
+2.  Haga clic con el botón derecho en **Bases de datos**y, luego, haga clic en **Restaurar base de datos**. Se abre el cuadro de diálogo **Restaurar base de datos** .  
   
 3.  En la página **General** , use la sección **Origen** para especificar el origen y la ubicación de los conjuntos de copias de seguridad que se deben restaurar. Seleccione una de las siguientes opciones:  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 71
   
     1.  **Dispositivo**  
   
-         Haga clic en el botón Examinar **...** para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad**. En el cuadro **Tipo de medio de copia de seguridad** , seleccione uno de los tipos de dispositivo. Para seleccionar uno o varios dispositivos del cuadro **Medio de copia de seguridad** , haga clic en **Agregar**.  
+         Haga clic en el botón Examinar**...**para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . En el cuadro **Tipo de medio de copia de seguridad** , seleccione uno de los tipos de dispositivo. Para seleccionar uno o varios dispositivos del cuadro **Medio de copia de seguridad** , haga clic en **Agregar**.  
   
          Después de agregar los dispositivos que desee al cuadro de lista **Medio de copia de seguridad** , haga clic en **Aceptar** para volver a la página **General** .  
   
@@ -92,18 +96,18 @@ caps.handback.revision: 71
   
 8.  Si lo desea, en la página **Opciones** ajuste las opciones. Para obtener más información sobre estas opciones, vea [Restaurar base de datos &#40;página Opciones&#41;](../../relational-databases/backup-restore/restore-database-options-page.md).  
 
- ## Restaurar una base de datos en una nueva ubicación; opcionalmente, cambiar el nombre de la base de datos mediante T-SQL
+ ## <a name="restore-database-to-a-new-location-optionally-rename-the-database-using-t-sql"></a>Restaurar una base de datos en una nueva ubicación; opcionalmente, cambiar el nombre de la base de datos mediante T-SQL
  
  
 1.  Opcionalmente, determine los nombres lógicos y físicos de los archivos del conjunto de copia de seguridad que contiene la copia de seguridad de base de datos completa que desea restaurar. Esta instrucción devuelve una lista con los archivos de base de datos y de registro del conjunto de copia de seguridad. La sintaxis básica es la siguiente:  
   
      RESTORE FILELISTONLY FROM *<dispositivo_copia_seguridad>* WITH FILE = *backup_set_file_number* 
   
-     Aquí, *backup_set_file_number* indica la posición de la copia de seguridad en el conjunto de medios. Puede obtener la posición  de un conjunto de copia de seguridad utilizando la instrucción [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md) . Para obtener más información, vea "Especificar un conjunto de copia de seguridad" en [RESTORE &#40;argumentos, Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md).  
+     Aquí, *backup_set_file_number* indica la posición de la copia de seguridad en el conjunto de medios. Puede obtener la posición  de un conjunto de copia de seguridad utilizando la instrucción [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) . Para obtener más información, vea "Especificar un conjunto de copia de seguridad" en [RESTORE &#40;argumentos, Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
-     Esta instrucción también admite varias opciones WITH. Para obtener más información, vea [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md).  
+     Esta instrucción también admite varias opciones WITH. Para obtener más información, vea [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
-2.  Use la instrucción [RESTORE DATABASE](../Topic/RESTORE%20\(Transact-SQL\).md) para restaurar la copia de seguridad completa de la base de datos. De manera predeterminada, los archivos de datos y de registro se restauran en sus ubicaciones originales. Para cambiar la ubicación de una base de datos, use la opción MOVE para mover cada uno de los archivos de la base de datos y evitar conflictos con los archivos existentes.  
+2.  Use la instrucción [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) para restaurar la copia de seguridad completa de la base de datos. De manera predeterminada, los archivos de datos y de registro se restauran en sus ubicaciones originales. Para cambiar la ubicación de una base de datos, use la opción MOVE para mover cada uno de los archivos de la base de datos y evitar conflictos con los archivos existentes.  
   
      A continuación se muestra la sintaxis básica de [!INCLUDE[tsql](../../includes/tsql-md.md)] para restaurar la base de datos en una ubicación nueva y con un nombre nuevo:  
   
@@ -125,9 +129,9 @@ caps.handback.revision: 71
   
      ;  
   
-    > **NOTA:** Cuando prepare la reubicación de una base de datos en un disco diferente, compruebe si hay espacio suficiente e identifique cualquier posible conflicto con los archivos existentes. Para ello, se usa una instrucción [RESTORE VERIFYONLY](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md) que especifica los mismos parámetros MOVE que tiene previsto usar en la instrucción RESTORE DATABASE.  
+    > **NOTA:** Cuando prepare la reubicación de una base de datos en un disco diferente, compruebe si hay espacio suficiente e identifique cualquier posible conflicto con los archivos existentes. Para ello, se usa una instrucción [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) que especifica los mismos parámetros MOVE que tiene previsto usar en la instrucción RESTORE DATABASE.  
   
-     En la tabla siguiente se describen los argumentos de esta instrucción RESTORE para restaurar una base de datos en una nueva ubicación. Para obtener más información sobre estos argumentos, vea [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+     En la tabla siguiente se describen los argumentos de esta instrucción RESTORE para restaurar una base de datos en una nueva ubicación. Para obtener más información sobre estos argumentos, vea [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
      *new_database_name*  
      El nuevo nombre para la base de datos.  
@@ -147,23 +151,23 @@ caps.handback.revision: 71
      En caso contrario, use la opción RECOVERY, que es la predeterminada.  
   
      FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
-     Identifica el conjunto de copia de seguridad que se va a restaurar. Por ejemplo, si *backup_set_file_number* es **1**, indica el primer conjunto de copia de seguridad del medio de copia, y si *backup_set_file_number* es **2**, indica el segundo conjunto de copia de seguridad. Puede obtener el valor *backup_set_file_number* de un conjunto de copia de seguridad mediante la instrucción [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md).  
+     Identifica el conjunto de copia de seguridad que se va a restaurar. Por ejemplo, si *backup_set_file_number* es **1** , indica el primer conjunto de copia de seguridad del medio de copia, y si *backup_set_file_number* es **2** , indica el segundo conjunto de copia de seguridad. Puede obtener el valor *backup_set_file_number* de un conjunto de copia de seguridad mediante la instrucción [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) .  
   
      Cuando no se especifica esta opción, el comportamiento predeterminado es usar el primer conjunto de copia de seguridad del dispositivo de copia de seguridad.  
   
-     Para obtener más información, vea "Especificar un conjunto de copia de seguridad" en [RESTORE &#40;argumentos, Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md).  
+     Para obtener más información, vea "Especificar un conjunto de copia de seguridad" en [RESTORE &#40;argumentos, Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
      MOVE **'***logical_file_name_in_backup***'** TO **'***operating_system_file_name***'** [ **,**...*n* ]  
      Especifica que el archivo de datos o de registro especificado por *logical_file_name_in_backup* debe restaurarse en la ubicación especificada por *operating_system_file_name*. Especifique una instrucción MOVE para cada archivo lógico del conjunto de copia de seguridad que desee restaurar en otra ubicación.  
   
     |Opción|Descripción|  
     |------------|-----------------|  
-    |*logical_file_name_in_backup*|Especifica el nombre lógico de un archivo de datos o de registro del conjunto de copia de seguridad. El nombre de archivo lógico de un archivo de datos o de registro de un conjunto de copia de seguridad coincide con el nombre lógico que tenía en la base de datos cuando se creó el conjunto de copia de seguridad.<br /><br /> <br /><br /> Nota: Use [RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)para obtener una lista de los archivos lógicos del conjunto de copia de seguridad.|  
+    |*logical_file_name_in_backup*|Especifica el nombre lógico de un archivo de datos o de registro del conjunto de copia de seguridad. El nombre de archivo lógico de un archivo de datos o de registro de un conjunto de copia de seguridad coincide con el nombre lógico que tenía en la base de datos cuando se creó el conjunto de copia de seguridad.<br /><br /> <br /><br /> Nota: Use [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)para obtener una lista de los archivos lógicos del conjunto de copia de seguridad.|  
     |*operating_system_file_name*|Especifica una nueva ubicación para el archivo especificado por *logical_file_name_in_backup*. El archivo se restaurará en esta ubicación.<br /><br /> Opcionalmente, *operating_system_file_name* especifica un nombre de archivo nuevo para el archivo restaurado. Lo cual sería necesario si fuese a crear una copia de una base de datos existente en la misma instancia de servidor.|  
     |*n*|Es un marcador de posición que indica que puede especificar instrucciones MOVE adicionales.|  
   
 ###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
- En este ejemplo se crea una base de datos denominada `MyAdvWorks` restaurando una copia de seguridad de la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], que incluye dos archivos: [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data y [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log. Esta base de datos usa el modelo de recuperación simple. La base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ya existe en la instancia de servidor y, por lo tanto, los archivos de la copia de seguridad deben restaurarse en una nueva ubicación. La instrucción RESTORE FILELISTONLY se utiliza para determinar el número y los nombres de los archivos de la base de datos que se restaura. La copia de seguridad de la base de datos es el primer conjunto de copia de seguridad del dispositivo de copia de seguridad.  
+ En este ejemplo se crea una base de datos denominada `MyAdvWorks` restaurando una copia de seguridad de la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , que incluye dos archivos: [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data y [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log. Esta base de datos usa el modelo de recuperación simple. La base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ya existe en la instancia de servidor y, por lo tanto, los archivos de la copia de seguridad deben restaurarse en una nueva ubicación. La instrucción RESTORE FILELISTONLY se utiliza para determinar el número y los nombres de los archivos de la base de datos que se restaura. La copia de seguridad de la base de datos es el primer conjunto de copia de seguridad del dispositivo de copia de seguridad.  
   
 > **NOTA**: En los ejemplos de copia de seguridad y restauración del registro de transacciones, que incluyen restauraciones a un momento dado, se usa la base de datos `MyAdvWorks_FullRM`, creada a partir de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] igual que en el siguiente ejemplo `MyAdvWorks`. Sin embargo, la base de datos `MyAdvWorks_FullRM` resultante debe cambiarse para utilizar el modelo de recuperación completa mediante la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]: ALTER DATABASE <nombreDeBaseDeDatos> SET RECOVERY FULL.  
   
@@ -184,7 +188,7 @@ GO
   
 ```  
   
- Para obtener un ejemplo de cómo crear una copia de seguridad completa de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], vea [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+ Para obtener un ejemplo de cómo crear una copia de seguridad completa de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , vea [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   
@@ -196,9 +200,10 @@ GO
   
 -   [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-## Vea también  
- [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Vea también  
+ [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Copiar bases de datos con Copias de seguridad y restauración](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)  
   
   
+

@@ -1,24 +1,28 @@
 ---
-title: "Hash Warning (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Hash Warning [clase de eventos]"
+title: Clase de eventos Hash Warning | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Hash Warning event class
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 322018e04193b8cabd7354719b85f230b11b2d26
+ms.lasthandoff: 04/11/2017
+
 ---
-# Hash Warning (clase de eventos)
+# <a name="hash-warning-event-class"></a>Hash Warning [clase de eventos]
   La clase de eventos Hash Warning se puede utilizar para supervisar cuándo se ha producido una recursividad hash o un cese de hash (salida hash) durante una operación de hash.  
   
  La recursividad hash se produce cuando no hay suficiente memoria para la entrada generada, lo que causa que ésta se divida en varias particiones que se procesan por separado. Si alguna de estas particiones sigue sin caber en la memoria disponible, se vuelve a dividir en subparticiones, que también se procesan por separado. El proceso de división continúa hasta que cada partición quepa en la memoria disponible o hasta que se alcance el nivel máximo de recursividad (que se muestra en la columna de datos IntegerData).  
@@ -38,12 +42,12 @@ caps.handback.revision: 39
  Crear o actualizar las estadísticas de la columna afectada en la combinación es el modo más eficaz de reducir el número de repeticiones hash o de ceses de hash que se producen.  
   
 > [!NOTE]  
->  Para describir las salidas de hash, también se usan los términos *combinación hash aplazada* y *combinación hash de repetición*.  
+>  Para describir las salidas de hash, también se usan los términos *combinación hash aplazada* y *combinación hash de repetición* .  
   
 > [!IMPORTANT]  
 >  Para determinar dónde se está produciendo el evento Hash Warning cuando el optimizador de consultas genera un plan de ejecución, debería recopilar la clase de eventos Showplan en el seguimiento. Puede elegir cualquiera de las clases de eventos Showplan, excepto Showplan Text y Showplan Text (Unencoded), que no devuelven ningún identificador de nodo. Los identificadores de nodo en las clases de evento Showplans identifican cada operación que realiza el optimizador de consultas cuando genera un plan de ejecución de consultas. Estas operaciones se denominan *operadores*y cada operador de un Showplan tiene un identificador de nodo. La columna ObjectID para los eventos Warning Hash se corresponden con el identificador de nodo en las clase de eventos Showplan para que pueda determinar qué operador u operación está provocando el error.  
   
-## Columnas de datos de la clase de eventos Hash Warning  
+## <a name="hash-warning-event-class-data-columns"></a>Columnas de datos de la clase de eventos Hash Warning  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -58,7 +62,7 @@ caps.handback.revision: 39
 |HostName|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IntegerData|**int**|Nivel de recursividad (solo recursividad hash).|25|Sí|  
 |IsSystem|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
-|LoginName|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de Windows con el formato *\<DOMINIO>\\<NombreUsuario\>*).|11|Sí|  
+|LoginName|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de Windows con el formato *\<DOMINIO>\\<nombre de usuario\>*).|11|Sí|  
 |LoginSid|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede buscar esta información en la vista de catálogo sys.server_principals. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |NTDomainName|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |NTUserName|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
@@ -71,7 +75,7 @@ caps.handback.revision: 39
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

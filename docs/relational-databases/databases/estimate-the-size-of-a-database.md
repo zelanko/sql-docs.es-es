@@ -1,31 +1,35 @@
 ---
-title: "Estimar el tama&#241;o de una base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "asignación de espacio [SQL Server], tamaño de base de datos"
-  - "calcular el tamaño de la base de datos"
-  - "aumentar tamaño de base de datos"
-  - "tamaño de base de datos [SQL Server], estimar"
-  - "predecir el tamaño de la base de datos"
-  - "tamaño [SQL Server], bases de datos"
-  - "calcular tamaño de la base de datos"
-  - "diseñar bases de datos [SQL Server], estimar tamaño"
+title: "Estimar el tamaño de una base de datos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- space allocation [SQL Server], database size
+- calculating database size
+- increasing database size
+- database size [SQL Server], estimating
+- predicting database size
+- size [SQL Server], databases
+- estimating database size
+- designing databases [SQL Server], estimating size
 ms.assetid: 5b240161-eba4-44b0-946c-61a8fc00fc8c
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d2d986d7e899e630429f431f040addb9076f081a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Estimar el tama&#241;o de una base de datos
+# <a name="estimate-the-size-of-a-database"></a>Estimar el tamaño de una base de datos
   Cuando diseña una base de datos, puede que necesite realizar una estimación del tamaño que tendrá la base de datos cuando esté llena. Esta estimación puede ayudarle a determinar la configuración de hardware que necesitará para realizar lo siguiente:  
   
 -   Conseguir el rendimiento que necesitan las aplicaciones.  
@@ -36,7 +40,7 @@ caps.handback.revision: 20
   
  Para realizar una estimación del tamaño de una base de datos, efectúe una estimación del tamaño de cada tabla por separado y sume los valores obtenidos. El tamaño de una tabla depende de si tiene índices y, si los tiene, del tipo de índices.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
   
 |Tema|Descripción|  
 |-----------|-----------------|  

@@ -1,22 +1,26 @@
 ---
-title: "Restaurar y recuperar tablas con optimizaci&#243;n para memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Restaurar y recuperar tablas con optimización para memoria | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56e6ac814b90fdd38f21be32f506846e542be977
+ms.lasthandoff: 04/11/2017
+
 ---
-# Restaurar y recuperar tablas con optimizaci&#243;n para memoria
+# <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restaurar y recuperar tablas con optimización para memoria
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   El mecanismo básico para recuperar o restaurar una base de datos con tablas con optimización para memoria es similar al de las bases de datos con solo tablas basadas en disco. Pero a diferencia de las tablas basadas en disco, las tablas con optimización para memoria deben cargarse en memoria antes de que la base de datos esté disponible para el acceso de usuario. Esto agrega un nuevo paso en la recuperación de la base de datos.  
@@ -31,7 +35,7 @@ caps.handback.revision: 10
   
 -   La cantidad de entradas de registro en la parte activa del registro que tienen que rehacerse.  
   
- Cuando se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cada base de datos pasa por una fase de recuperación que consta de las tres fases siguientes:  
+ Cuando se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cada base de datos pasa por una fase de recuperación que consta de las tres fases siguientes:  
   
 1.  La fase de análisis. Durante esta fase, se realiza un paso en los registros de transacciones activos para detectar las transacciones confirmadas y no confirmadas. El motor de OLTP en memoria identifica el punto de comprobación que se va a cargar y carga previamente sus entradas de registro de la tabla del sistema. También procesará algunas entradas del registro de asignación de archivos.  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 10
   
 -   En tablas de gran tamaño con optimización para memoria y con uno o varios índices no clúster (a diferencia de un índice de hash, cuyo número de depósitos se establece en el momento de la creación), los índices no clúster aumentan dinámicamente, lo que da lugar a un uso elevado de la CPU.  
   
-## Vea también  
- [Hacer copia de seguridad, restaurar y recuperar tablas con optimización para memoria](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+## <a name="see-also"></a>Vea también  
+ [Hacer copia de seguridad, restaurar y recuperar tablas con optimización para memoria](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

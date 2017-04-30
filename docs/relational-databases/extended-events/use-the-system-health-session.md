@@ -1,28 +1,32 @@
 ---
-title: "Usar la sesi&#243;n system_health | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "eventos extendidos [SQL Server], sesión de estado del sistema"
-  - "eventos extendidos [SQL Server], sesión system_health"
-  - "sesión system_health [eventos extendidos de SQL Server]"
-  - "sesión de estado del sistema [eventos extendidos de SQL Server]"
+title: "Usar la sesión system_health | Microsoft Docs"
+ms.custom: 
+ms.date: 06/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extended events [SQL Server], system health session
+- extended events [SQL Server], system_health session
+- system_health session [SQL Server extended events]
+- system health session [SQL Server extended events]
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 caps.latest.revision: 17
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c64a0a128576a4bbf38f10b70514dbc4def84d11
+ms.lasthandoff: 04/11/2017
+
 ---
-# Usar la sesi&#243;n system_health
+# <a name="use-the-systemhealth-session"></a>Usar la sesión system_health
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   La sesión system_health es una sesión de eventos extendidos que se incluye de forma predeterminada con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta sesión se inicia automáticamente cuando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] se inicia, y se ejecuta sin ningún efecto de rendimiento notable. La sesión recopila datos del sistema que se pueden utilizar para ayudar a solucionar problemas de rendimiento en el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por consiguiente, se recomienda no detener ni eliminar la sesión.  
@@ -57,7 +61,7 @@ caps.handback.revision: 17
   
 -   Errores de seguridad utilizando security_error_ring_buffer_recorded.  
   
-## Ver los datos de la sesión  
+## <a name="viewing-the-session-data"></a>Ver los datos de la sesión  
  La sesión utiliza el destino del búfer en anillo para almacenar los datos. Para ver los datos de la sesión, utilice la siguiente consulta:  
   
 ```  
@@ -69,14 +73,15 @@ WHERE xe.name = 'system_health'
   
 Para ver los datos de sesión del archivo de eventos, use la interfaz de usuario Eventos extendidos disponible en Management Studio. Para obtener más información, vea [Advanced Viewing of Target Data from Extended Events in SQL Server (Visualización avanzada de datos de destino de eventos extendidos en SQL Server)](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).
   
-## Restaurar la sesión system_health  
- Si elimina la sesión system_health, puede restaurarla si ejecuta el archivo **u_tables.sql** en el Editor de consultas. Este archivo se encuentra en la siguiente carpeta, donde C: representa la unidad en la que se instalaron los archivos de programa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+## <a name="restoring-the-systemhealth-session"></a>Restaurar la sesión system_health  
+ Si elimina la sesión system_health, puede restaurarla si ejecuta el archivo **u_tables.sql** en el Editor de consultas. Este archivo se encuentra en la siguiente carpeta, donde C: representa la unidad en la que se instalaron los archivos de programa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
- C:\Archivos de programa\Microsoft SQL Server\MSSQL13.\<*idDeInstancia*>\MSSQL\Install  
+ C:\Archivos de programa\Microsoft SQL Server\MSSQL13.\<*id de instancia*>\MSSQL\Install  
   
- Tenga en cuenta que después de restaurar la sesión, debe iniciarla utilizando la instrucción ALTER EVENT SESSION o utilizando el nodo **Eventos extendidos** en el Explorador de objetos. De lo contrario, la sesión se iniciará automáticamente la próxima vez que se reinicie el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Tenga en cuenta que después de restaurar la sesión, debe iniciarla utilizando la instrucción ALTER EVENT SESSION o utilizando el nodo **Eventos extendidos** en el Explorador de objetos. De lo contrario, la sesión se iniciará automáticamente la próxima vez que se reinicie el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Herramientas de eventos extendidos](../../relational-databases/extended-events/extended-events-tools.md)  
   
   
+

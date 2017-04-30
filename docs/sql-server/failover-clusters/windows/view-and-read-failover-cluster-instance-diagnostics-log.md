@@ -1,34 +1,38 @@
 ---
-title: "Ver y leer el registro de diagn&#243;sticos de la instancia de cl&#250;ster de conmutaci&#243;n por error | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ver y leer el registro de diagnósticos de la instancia de clúster de conmutación por error | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 912c05cd783ead67aaa506f07586387eabcb2ca4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ver y leer el registro de diagn&#243;sticos de la instancia de cl&#250;ster de conmutaci&#243;n por error
+# <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Ver y leer el registro de diagnósticos de la instancia de clúster de conmutación por error
   Todos los errores críticos y eventos de advertencia de la DLL de recursos de SQL Server se escriben en el registro de eventos de Windows. El procedimiento almacenado del sistema [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) captura un registro en ejecución de la información de diagnóstico específica de SQL Server y lo escribe en los archivos de registro de diagnósticos de clústeres de conmutación por error de SQL Server (también conocidos como registros *SQLDIAG*).  
   
 -   **Antes de empezar:**  [Recomendaciones](#Recommendations), [Seguridad](#Security)  
   
--   **Para ver el registro de diagnóstico, mediante:** [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **To View the Diagnostic Log, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Para configurar los valores del registro de diagnóstico, mediante:** [Transact-SQL](#TsqlConfigure)  
+-   **To Configure Diagnostic Log settings, using:** [Transact-SQL](#TsqlConfigure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
- De forma predeterminada, los SQLDIAG se almacenan en una carpeta LOG local del directorio de la instancia de SQL Server, por ejemplo, 'C\Archivos de programa\Microsoft SQL Server\MSSQL13.\<nombreDeInstancia>\MSSQL\LOG' del nodo propietario de la instancia de clúster de conmutación por error (FCI) AlwaysOn. El tamaño de cada archivo de registro de SQLDIAG se fija en 100 MB. Diez archivos de registro se almacenan en el equipo antes de que se reciclen para los nuevos registros.  
+ De forma predeterminada, los SQLDIAG se almacenan en una carpeta LOG local del directorio de la instancia de SQL Server, por ejemplo, "C\Archivos de programa\Microsoft SQL Server\MSSQL13.\<nombre de instancia>\MSSQL\LOG" del nodo propietario de la instancia de clúster de conmutación por error (FCI) AlwaysOn. El tamaño de cada archivo de registro de SQLDIAG se fija en 100 MB. Diez archivos de registro se almacenan en el equipo antes de que se reciclen para los nuevos registros.  
   
  Los registros usan el formato de archivo extendido de eventos. La función del sistema **sys.fn_xe_file_target_read_file** se puede usar para leer los archivos creados por eventos extendidos. Se devuelve un evento, en formato XML, por cada fila. Consulte la vista del sistema para analizar los datos XML como conjunto de resultados. Para obtener más información, vea [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md).  
   
@@ -90,30 +94,30 @@ ORDER BY Time;
  **Para configurar las propiedades de registro de diagnóstico**  
   
 > [!NOTE]  
->  Para ver un ejemplo de este procedimiento, vea [Ejemplo (Transact-SQL)](#TsqlExample) más adelante en esta sección.  
+>  Para ver un ejemplo de este procedimiento, vea [Ejemplo (Transact-SQL)](#TsqlExample)más adelante en esta sección.  
   
  Con la instrucción de lenguaje de definición de datos (DDL) **ALTER SERVER CONFIGURATION**, puede iniciar o detener el registro de los datos de diagnóstico capturados por el procedimiento [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) y establecer parámetros de configuración del registro de SQLDIAG como el recuento de sustitución incremental del archivo de registro, el tamaño del archivo de registro y la ubicación del archivo. Para obtener información detallada sobre la sintaxis, vea [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic).  
   
 ###  <a name="ConfigTsqlExample"></a> Ejemplos (Transact-SQL)  
   
-####  <a name="TsqlExample"></a> Establecer opciones de registro de diagnóstico  
+####  <a name="TsqlExample"></a> Setting diagnostic log options  
  En los ejemplos de esta sección se muestra cómo establecer los valores para la opción de registro de diagnóstico.  
   
-##### A. Iniciar el registro de diagnóstico  
+##### <a name="a-starting-diagnostic-logging"></a>A. Iniciar el registro de diagnóstico  
  En el ejemplo siguiente se inicia el registro de los datos de diagnóstico.  
   
 ```  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG ON;  
 ```  
   
-##### B. Detener el registro de diagnóstico  
+##### <a name="b-stopping-diagnostic-logging"></a>B. Detener el registro de diagnóstico  
  En el ejemplo siguiente se detiene el registro de los datos de diagnóstico.  
   
 ```  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG OFF;  
 ```  
   
-##### C. Especificar la ubicación de los registros de diagnóstico  
+##### <a name="c-specifying-the-location-of-the-diagnostic-logs"></a>C. Especificar la ubicación de los registros de diagnóstico  
  En el ejemplo siguiente se establece la ubicación de los registros de diagnóstico en la ruta de acceso de archivo especificada.  
   
 ```  
@@ -121,7 +125,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG PATH = 'C:\logs';  
 ```  
   
-##### D. Especificar el tamaño máximo de cada registro de diagnóstico  
+##### <a name="d-specifying-the-maximum-size-of-each-diagnostic-log"></a>D. Especificar el tamaño máximo de cada registro de diagnóstico  
  En el ejemplo siguiente se establece el tamaño máximo de cada registro de diagnóstico en 10 megabytes.  
   
 ```  
@@ -129,7 +133,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Directiva de conmutación por error para instancias de clústeres de conmutación por error](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

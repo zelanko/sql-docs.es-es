@@ -1,37 +1,41 @@
 ---
-title: "Supervisar y aplicar las pr&#225;cticas recomendadas usando la administraci&#243;n basada en directivas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Prácticas recomendadas [motor de base de datos]"
+title: "Supervisión y aplicación de las prácticas recomendadas usando la administración basada en directivas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8e343ee942845bda5c874a3a238a4450ec391aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# Supervisar y aplicar las pr&#225;cticas recomendadas usando la administraci&#243;n basada en directivas
+# <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas
   La administración basada en directivas permite supervisar los procedimientos recomendados de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un conjunto de archivos de directivas que puede importar como directivas de procedimientos recomendados y después evalúa las directivas con un conjunto de destinos que incluye instancias, objetos de instancia, bases de datos u objetos de base de datos. Evalúe manualmente las directivas y establecer directivas para evaluar un conjunto de destinos según una programación o para evaluar un conjunto de destinos según un evento. Para obtener más información sobre la administración basada en directivas, vea [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
-## Directivas y reglas para el motor de base de datos  
+## <a name="policy-and-rules-for-database-engine"></a>Directivas y reglas para el motor de base de datos  
  En la tabla siguiente se muestran las directivas incluidas con la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se ofrece información sobre las reglas de los procedimientos recomendados que evalúa cada directiva. Las directivas se almacenan como archivos XML y se deben importar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre cómo importar directivas, vea [Importar una directiva de administración basada en directivas](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md).  
   
 |Nombre de la directiva|Regla de práctica recomendada|  
 |-----------------|------------------------|  
 |Algoritmo de cifrado de claves asimétricas|[Intensidad del cifrado de claves asimétricas](../../relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md)|  
-|Ubicación de copia de seguridad y archivo de datos|[Los archivos de copia de seguridad deben estar en dispositivos independientes de los archivos de base de datos](../Topic/Backup%20Files%20Must%20Be%20on%20Separate%20Devices%20from%20the%20Database%20Files.md)|  
+|Ubicación de copia de seguridad y archivo de datos|[Los archivos de copia de seguridad deben estar en dispositivos independientes de los archivos de base de datos](http://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
 |Ubicación de datos y archivo de registro|[Colocar los datos y los archivos de registro en unidades independientes](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)|  
 |Cerrar automáticamente la base de datos|[Establecer en OFF la opción de base de datos AUTO_CLOSE](../../relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md)|  
 |Reducir automáticamente la base de datos|[Establecer la opción de base de datos AUTO_SHRINK en OFF](../../relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md)|  
-|Intercalación de base de datos|[Establecer la intercalación de bases de datos definidas por el usuario para que coincidan con las de las bases de datos modelo y maestra](../Topic/Set%20the%20Collation%20of%20User-defined%20Databases%20to%20Match%20Those%20of%20the%20master%20and%20model%20Databases.md)|  
+|Intercalación de base de datos|[Establecer la intercalación de bases de datos definidas por el usuario para que coincidan con las de las bases de datos modelo y maestra](http://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
 |Comprobación de página de la base de datos|[Establecer la opción de base de datos PAGE_VERIFY en CHECKSUM.](../../relational-databases/policy-based-management/set-the-page-verify-database-option-to-checksum.md)|  
 |Estado de la página de la base de datos|[Comprobar la integridad de una base de datos con páginas sospechosas](../../relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md)|  
 |Permisos de invitado|[Permisos de invitado en bases de datos de usuario](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
@@ -65,7 +69,7 @@ caps.handback.revision: 27
 |Error por superación de tiempo de espera de E/S en sistema de registro de eventos de Windows|[Tiempo de espera de entrada y salida del sistema de almacenamiento](../../relational-databases/policy-based-management/storage-system-input-output-time-out.md)|  
 |Error del sistema del registro de eventos de Windows|[Errores del sistema inesperados](../../relational-databases/policy-based-management/unexpected-system-failures.md)|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Trabajar con facetas de administración basada en directivas](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
   
   

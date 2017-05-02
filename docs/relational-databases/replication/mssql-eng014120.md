@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG014120 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "error MSSQL_ENG014120"
+title: MSSQL_ENG014120 | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG014120 error
 ms.assetid: 6b169a3b-30da-4981-b998-b52d61811572
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 127a8b4b7b1b91559ad221e38eff2475b34b3ddf
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG014120
+# <a name="mssqleng014120"></a>MSSQL_ENG014120
     
-## Detalles del mensaje  
+## <a name="message-details"></a>Detalles del mensaje  
   
 |||  
 |-|-|  
@@ -31,14 +35,14 @@ caps.handback.revision: 14
 |Nombre simbólico||  
 |Texto del mensaje|No se pudo quitar la base de datos de distribución '%s'. Esta base de datos está asociada a un publicador.|  
   
-## Explicación  
+## <a name="explanation"></a>Explicación  
  La base de datos de distribución almacena metadatos y datos del historial de todos los tipos de replicación y transacciones para la replicación transaccional. Este error se produce si intenta quitar una base de datos de distribución que está asociada a uno o más publicadores.  
   
-## Acción del usuario  
- Para quitar una base de datos de distribución, primero debe quitar la asociación entre el distribuidor y el publicador. Para obtener más información, consulte [sp_dropdistpublisher & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md).  
+## <a name="user-action"></a>Acción del usuario  
+ Para quitar una base de datos de distribución, primero debe quitar la asociación entre el distribuidor y el publicador. Para obtener más información, vea [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md).  
   
-## Vea también  
- [Errores y eventos referencia & #40; Replicación y nº 41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
+## <a name="see-also"></a>Vea también  
+ [Referencia de errores y eventos &#40;replicación&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [Configurar la distribución](../../relational-databases/replication/configure-distribution.md)  
   
   

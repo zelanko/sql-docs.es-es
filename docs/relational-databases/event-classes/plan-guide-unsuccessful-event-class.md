@@ -1,24 +1,28 @@
 ---
-title: "Clase de eventos Plan Guide Unsuccessful | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Clase de eventos Plan Guide Unsuccessful"
+title: Clase de eventos Plan Guide Unsuccessful | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Plan Guide Unsuccessful event class
 ms.assetid: ef9759f8-5613-4884-9257-86b609313f69
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 94ccb2d809fe5da7d793ffae753b42765ff0fe1a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Clase de eventos Plan Guide Unsuccessful
+# <a name="plan-guide-unsuccessful-event-class"></a>Clase de eventos Plan Guide Unsuccessful
   La clase de eventos Plan Guide Unsuccessful indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no pudo generar un plan de ejecución para una consulta o lote que contenía una guía de plan. En su lugar, el plan se compiló sin utilizar la guía de plan. El evento se disparará cuando se cumplan las siguientes condiciones:  
   
 -   El lote/módulo de la definición de la guía de plan coincide con el lote que se está ejecutando.  
@@ -29,9 +33,9 @@ caps.handback.revision: 13
   
  Es posible que la causa de este evento sea una guía de plan no válida. Valide la guía de plan que usa la consulta o lote mediante la función [sys.fn_validate_plan_guide](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md) y corrija el error que notificó esta función.  
   
- Este evento se incluye en la plantilla de Optimización [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+ Este evento se incluye en la plantilla de Optimización [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
   
-## Columnas de datos de la clase de eventos Plan Guide Unsuccessful  
+## <a name="plan-guide-unsuccessful-event-class-data-columns"></a>Columnas de datos de la clase de eventos Plan Guide Unsuccessful  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -44,7 +48,7 @@ caps.handback.revision: 13
 |HostName|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IsSystem|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario1 = sistema, 0 = usuario.|60|Sí|  
 |LoginName|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con el formato DOMINIO\\*nombreDeUsuario*).|11|Sí|  
-|LoginSid|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Encontrará esta información en la vista [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) o en las vistas de catálogo [sys.sql_logins](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md). Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
+|LoginSid|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Encontrará esta información en la vista [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) o en las vistas de catálogo [sys.sql_logins](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md) . Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |NTDomainName|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |NTUserName|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |ObjectID|**int**|Id. de objeto del módulo que se estaba compilando cuando se aplicó la guía de plan. Si la guía de plan no se aplicó a un módulo, esta columna estará establecida en NULL.|22|Sí|  
@@ -57,7 +61,7 @@ caps.handback.revision: 13
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Clase de evento Guía de plan correcta](../../relational-databases/event-classes/plan-guide-successful-event-class.md)   
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

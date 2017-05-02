@@ -1,29 +1,33 @@
 ---
-title: "Object:Created (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Object:Created, clase de eventos"
+title: Object:Created, clase de eventos | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Object:Created event class
 ms.assetid: 57536924-5e66-4b09-a76d-8fcea2131771
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 25cdce0deb228a8a02688a8b01fa3995c5230f6b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Object:Created (clase de eventos)
+# <a name="objectcreated-event-class"></a>Object:Created, clase de eventos
   La clase de eventos Object:Created indica que se ha creado un objeto; por ejemplo, por parte de la instrucción CREATE INDEX, la instrucción CREATE TABLE o la instrucción CREATE DATABASE.  
   
  Esta clase de eventosse puede utilizar para determinar si los objetos se crean correctamente, por ejemplo en el caso de aplicaciones ODBC que suelen crear procedimientos almacenados temporales. En las columnas de datos LoginName y NTUserName, puede determinar el nombre del usuario que crea, elimina o tiene acceso a los objetos.  
   
-## Columnas de datos de la clase de eventos Object:Created  
+## <a name="objectcreated-event-class-data-columns"></a>Columnas de datos de la clase de eventos Object:Created  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -55,7 +59,7 @@ caps.handback.revision: 32
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que se utiliza para describir la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

@@ -1,32 +1,36 @@
 ---
-title: "Crear una nueva cuenta de Correo electr&#243;nico de base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Correo electrónico de base de datos [SQL Server], cuentas"
-  - "cuentas [Correo electrónico de base de datos]"
+title: "Creación de una nueva cuenta de Correo electrónico de base de datos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Database Mail [SQL Server], accounts
+- accounts [Database Mail]
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 603259e6c6d93d5fa92e2680dcc8939e51365033
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear una nueva cuenta de Correo electr&#243;nico de base de datos
+# <a name="create-a-database-mail-account"></a>Crear una nueva cuenta de Correo electrónico de base de datos
   Use el **Asistente para configuración de Correo electrónico de base de datos** o [!INCLUDE[tsql](../../includes/tsql-md.md)] para crear una cuenta de Correo electrónico de base de datos.  
   
--   **Antes de empezar:**  [Requisitos previos](#Prerequisites)  
+-   **Before you begin:**  [Prerequisites](#Prerequisites)  
   
--   **Para crear una cuenta de correo electrónico de base de datos con: ** [Asistente para configuración de Correo electrónico de base de datos](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **To Create a Database Mail Account, using:**  [Database Mail Configuration Wizard](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**  [Pasos para configurar el Correo electrónico de base de datos](#FollowUp)  
+-   **Follow Up:**  [Next Steps to Configure the Database Mail](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   

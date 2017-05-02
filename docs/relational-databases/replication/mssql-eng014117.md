@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG014117 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "error MSSQL_ENG014117"
+title: MSSQL_ENG014117 | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG014117 error
 ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b53e204550ce8f48b14e2b76667eb74fadc86346
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG014117
+# <a name="mssqleng014117"></a>MSSQL_ENG014117
     
-## Detalles del mensaje  
+## <a name="message-details"></a>Detalles del mensaje  
   
 |||  
 |-|-|  
@@ -31,7 +35,7 @@ caps.handback.revision: 17
 |Nombre simbólico||  
 |Texto del mensaje|%1!' no está configurado como base de datos de distribución.|  
   
-## Explicación  
+## <a name="explanation"></a>Explicación  
  Este problema puede ocurrir si se cumple uno de los siguientes supuestos o ambos:  
   
 -   Falta la entrada de la base de datos de distribución especificada en **msdb..MSdistributiondbs**.  
@@ -42,7 +46,7 @@ caps.handback.revision: 17
   
      La replicación no se admite si ha registrado alguna de las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por dirección IP o por nombre de dominio completo (FQDN). Es posible que aparezca este error si registró alguna de las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante dirección IP o FQDN en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] cuando configuró la replicación.  
   
-## Acción del usuario  
+## <a name="user-action"></a>Acción del usuario  
  Compruebe que la instancia del distribuidor esté correctamente registrada. Si el nombre de red del equipo y el nombre de la instancia de SQL Server son diferentes, lleve a cabo una de estas acciones.  
   
 -   Agregue el nombre de la instancia de SQL Server como nombre de red válido. Un método para establecer un nombre de red alternativo es agregarlo al archivo de hosts local. El archivo de hosts local se encuentra de manera predeterminada en WINDOWS\system32\drivers\etc o en WINNT\system32\drivers\etc. Para obtener más información, consulte la documentación de Windows.  
@@ -60,17 +64,17 @@ caps.handback.revision: 17
     go  
     ```  
   
-     Después de ejecutar el [sp_addserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) el procedimiento almacenado, debe reiniciar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service para @@SERVERNAME surta efecto el cambio.  
+     Después de ejecutar el procedimiento almacenado [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md), debe reiniciar el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que el cambio en @@SERVERNAME surta efecto.  
   
-     Si el valor de @@SERVERNAME no es correcto en una instancia en clúster, debe cambiarle el nombre utilizando el Administrador de clústeres. Para obtener más información, consulte [instancias de clúster de conmutación por error AlwaysOn & #40; SQL Server & #41;](../Topic/AlwaysOn%20Failover%20Cluster%20Instances%20\(SQL%20Server\).md).  
+     Si el valor de @@SERVERNAME no es correcto en una instancia en clúster, debe cambiarle el nombre usando el Administrador de clústeres. Para obtener más información, vea [Always On Failover Cluster Instances (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) (Instancias de clúster de conmutación por error de Always On [SQL Server]).  
   
  Después de comprobar que la instancia del distribuidor está correctamente registrada, asegúrese de que la base de datos de distribución aparece en **msdb..MSdistributiondbs**. Si no es así:  
   
 1.  Genere un script para la configuración de la distribución. Para más información, consulte [Scripting Replication](../../relational-databases/replication/scripting-replication.md).  
   
-2.  Deshabilite la distribución y, a continuación, vuelva a habilitarla. Para obtener más información, consulte [Configurar distribución](../../relational-databases/replication/configure-distribution.md).  
+2.  Deshabilite la distribución y, a continuación, vuelva a habilitarla. Para más información, vea [Configurar la distribución](../../relational-databases/replication/configure-distribution.md).  
   
-## Vea también  
- [Errores y eventos referencia & #40; Replicación y nº 41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
+## <a name="see-also"></a>Vea también  
+ [Referencia de errores y eventos &#40;replicación&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

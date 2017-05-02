@@ -1,30 +1,34 @@
 ---
-title: "Replicar columnas de identidad | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "identidades [replicación de SQL Server]"
-  - "valores de identidad [replicación de SQL Server]"
-  - "replicación de mezcla [replicación de SQL Server], administración de intervalos de identidad"
-  - "publicar [replicación de SQL Server], columnas de identidad"
-  - "replicación transaccional, administración de intervalos de identidad"
-  - "columnas de identidad [SQL Server], replicación"
+title: "Replicación de columnas de identidad | Microsoft Docs"
+ms.custom: 
+ms.date: 10/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- identities [SQL Server replication]
+- identity values [SQL Server replication]
+- merge replication [SQL Server replication], identity range management
+- publishing [SQL Server replication], identity columns
+- transactional replication, identity range management
+- identity columns [SQL Server], replication
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 caps.latest.revision: 51
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ca40d9329a35e4036ec6dd1d065daf86950b26fa
+ms.lasthandoff: 04/11/2017
+
 ---
-# Replicar columnas de identidad
-  Cuando asigna una propiedad IDENTITY a una columna, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] genera automáticamente números que se incrementan secuencialmente para las nuevas filas insertadas en la tabla que contiene la columna de identidad. Para obtener más información, consulte [identidad &#40; Propiedad &#41; &Nº 40; Transact-SQL &#41;](../Topic/IDENTITY%20\(Property\)%20\(Transact-SQL\).md). Debido a que las columnas de identidad pueden estar incluidas como parte de la clave principal, resulta importante evitar los valores duplicados en las columnas de identidad. Para utilizar columnas de identidad en una topología de replicación que tenga actualizaciones en más de un nodo, cada nodo de la topología de replicación debe usar diferentes valores en el intervalo de identidad con el fin de que no se produzcan duplicados.  
+# <a name="replicate-identity-columns"></a>Replicar columnas de identidad
+  Cuando asigna una propiedad IDENTITY a una columna, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] genera automáticamente números que se incrementan secuencialmente para las nuevas filas insertadas en la tabla que contiene la columna de identidad. Para obtener más información, vea [IDENTITY &#40;propiedad &#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md). Debido a que las columnas de identidad pueden estar incluidas como parte de la clave principal, resulta importante evitar los valores duplicados en las columnas de identidad. Para utilizar columnas de identidad en una topología de replicación que tenga actualizaciones en más de un nodo, cada nodo de la topología de replicación debe usar diferentes valores en el intervalo de identidad con el fin de que no se produzcan duplicados.  
   
  Por ejemplo, podría asignarse el rango 1-100 al Publicador, el rango 101-200 al Suscriptor A y el rango 201-300 al Suscriptor B. Si se inserta una fila en el Publicador y el valor de identidad es, por ejemplo, 65, ese valor se replica en cada Suscriptor. Cuando la replicación inserta datos en cada suscriptor, no incrementa el valor de la columna de identidad en la tabla del suscriptor; en su lugar, se inserta el valor literal 65. Son solo las inserciones del usuario y no las del agente de replicación las que hacen que se incremente el valor de la columna de identidad.  
   
@@ -33,7 +37,7 @@ caps.handback.revision: 51
 > [!NOTE]  
 >  No se admite la posibilidad de agregar una columna de identidad a una tabla publicada porque puede dar como resultado la falta de convergencia cuando la columna se replica en el suscriptor. Los valores de la columna de identidad en el publicador dependen del orden en que se almacenen físicamente las filas de la tabla afectada. Las filas se pueden almacenar de forma diferente en el suscriptor; por tanto, el valor de la columna de identidad puede ser diferente para las mismas filas.  
   
-## Especificar una opción de administración del intervalo de identidad  
+## <a name="specifying-an-identity-range-management-option"></a>Especificar una opción de administración del intervalo de identidad  
  La replicación ofrece tres opciones de administración del intervalo de identidad:  
   
 -   Automático. Se utiliza para replicación de mezcla y replicación transaccional con actualizaciones en el suscriptor. Especifique intervalos de tamaño para el publicador y los suscriptores, y la replicación automáticamente administrará las asignaciones de los nuevos intervalos. La replicación establece la opción NOT FOR REPLICATION en la columna de identidad en el suscriptor, con el fin de que solo las inserciones del usuario hagan que el valor se incremente en el suscriptor.  
@@ -45,14 +49,14 @@ caps.handback.revision: 51
   
 -   Ninguno. Esta opción solo se recomienda para lograr la compatibilidad con versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y solo está disponible desde la interfaz de procedimientos almacenados de publicaciones transaccionales.  
   
- Para especificar una opción de administración de intervalo de identidad, vea [administrar columnas de identidad](../../../relational-databases/replication/publish/manage-identity-columns.md).  
+ Para especificar una opción de administración del intervalo de identidad, vea [Administrar columnas de identidad](../../../relational-databases/replication/publish/manage-identity-columns.md).  
   
-## Asignar intervalos de identidad  
+## <a name="assigning-identity-ranges"></a>Asignar intervalos de identidad  
  La replicación de mezcla y la replicación transaccional utilizan métodos diferentes para asignar intervalos. Estos métodos se describen en esta sección.  
   
  Existen dos tipos de intervalos que deben tenerse en cuenta a la hora de replicar columnas de identidad: los intervalos asignados al publicador y a los suscriptores, y el intervalo del tipo de datos de la columna. En la siguiente tabla se muestran los intervalos disponibles para los tipos de datos que se utilizan normalmente en las columnas de identidad. El intervalo se utiliza en todos los nodos de una topología. Por ejemplo, si utiliza **smallint** comenzando por 1 con un incremento de 1, el número máximo de inserciones es de 32.767 para el publicador y todos los suscriptores. El número real de inserciones depende de si hay espacios en los valores utilizados y de si se ha utilizado un valor de umbral. Para obtener más información acerca de los umbrales, vea las secciones "Replicación de mezcla" y "Replicación transaccional con suscripciones de actualización en cola" más adelante.  
   
- Si el publicador agota su intervalo de identidad después de insertar, puede asignar automáticamente un nuevo intervalo si la inserción se realizó un miembro de la **db_owner** rol fijo de base de datos. Si la inserción se realizó por un usuario no está en esa función, el agente de lector del registro, agente de mezcla o un usuario que sea miembro de la **db_owner** debe ejecutarse [sp_adjustpublisheridentityrange &#40; Transact-SQL &#41;](../../../relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql.md). Para las publicaciones transaccionales, el Agente de registro del LOG debe estar ejecutándose para asignar automáticamente un nuevo intervalo (la opción predeterminada es que el agente se ejecute continuamente).  
+ Si el publicador agota su intervalo de identidad después de una inserción, puede asignar automáticamente un nuevo intervalo si la inserción la realizó un miembro del rol fijo de base de datos **db_owner** . Si la inserción la realizó un usuario con otro rol, el Agente de registro del LOG, el Agente de mezcla o un usuario miembro del rol **db_owner**, deberá ejecutar [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql.md). Para las publicaciones transaccionales, el Agente de registro del LOG debe estar ejecutándose para asignar automáticamente un nuevo intervalo (la opción predeterminada es que el agente se ejecute continuamente).  
   
 > [!WARNING]  
 >  Durante una inserción por lotes grande, el desencadenador de replicación se desencadena una sola vez, no para cada fila de la inserción. Esto puede provocar un error en la instrucción de inserción si se agota un intervalo de identidad durante una inserción grande, como una instrucción **INSERT INTO** .  
@@ -68,43 +72,43 @@ caps.handback.revision: 51
 > [!NOTE]  
 >  Para crear un número que se incremente automáticamente y que se pueda usar en varias tablas, o que se pueda llamar desde las aplicaciones sin hacer referencia a ninguna tabla, vea [Números de secuencia](../../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
-### Replicación de mezcla  
- Los intervalos de identidad los administra el publicador y se propagan a los suscriptores mediante el Agente de mezcla (en una jerarquía de republicación, los intervalos los administra el publicador raíz y los republicadores). Los valores de identidad se asignan a partir de un grupo en el publicador. Al agregar un artículo con una columna de identidad a una publicación en el Asistente para nueva publicación o mediante [sp_addmergearticle &#40; Transact-SQL &#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), especifique valores para:  
+### <a name="merge-replication"></a>Replicación de mezcla  
+ Los intervalos de identidad los administra el publicador y se propagan a los suscriptores mediante el Agente de mezcla (en una jerarquía de republicación, los intervalos los administra el publicador raíz y los republicadores). Los valores de identidad se asignan a partir de un grupo en el publicador. Cuando agregue un artículo con una columna de identidad a una publicación en el Asistente para nueva publicación o mediante [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), especifique valores para:  
   
--   El **@identity_range** parámetro, que controla el tamaño del intervalo de identidad inicialmente asignado al publicador y a los suscriptores con suscripciones de cliente.  
+-   El parámetro **@identity_range** , que controla el tamaño del intervalo de identidad inicialmente asignado al publicador y a los suscriptores con suscripciones de cliente.  
   
     > [!NOTE]  
-    >  Para los suscriptores que ejecuten versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], este parámetro (en lugar de **@pub_identity_range** parámetro) también controla el tamaño del intervalo de identidad en los suscriptores de republicación.  
+    >  En los suscriptores que se ejecuten en versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], este parámetro (y no el parámetro **@pub_identity_range** ) también controla el tamaño del intervalo de identidad en los suscriptores que se pueden volver a publicar.  
   
--   El **@pub_identity_range** parámetro, que controla el tamaño del intervalo de identidad para las republicaciones asignadas a los suscriptores con suscripciones de servidor (necesarias para volver a publicar datos). Todos los suscriptores con suscripciones de servidor reciben un intervalo para volver a publicar, incluso si no han vuelto a publicar ningún dato.  
+-   El parámetro **@pub_identity_range** , que controla el tamaño del intervalo de identidad para las republicaciones asignadas a los suscriptores con suscripciones de servidor (requerido para volver a publicar datos). Todos los suscriptores con suscripciones de servidor reciben un intervalo para volver a publicar, incluso si no han vuelto a publicar ningún dato.  
   
 -   El parámetro **@threshold** , que se utiliza para determinar cuándo se requiere un nuevo intervalo de identidades para una suscripción a [!INCLUDE[ssEW](../../../includes/ssew-md.md)] o a una versión anterior de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Por ejemplo, puede especificar 10000 para **@identity_range** y 500000 para **@pub_identity_range**. El publicador y todos los suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o una versión posterior, incluido el suscriptor con la suscripción de servidor, están asignados un intervalo principal de 10000. El suscriptor a la suscripción de servidor también se asigna un intervalo principal de 500000, que se puede usar los suscriptores que se sincronizan con el suscriptor de republicación (también se debe especificar **@identity_range**, **@pub_identity_range**, y **@threshold** para los artículos de la publicación en el suscriptor de republicación).  
+ Por ejemplo, puede especificar 10000 para **@identity_range** y 500000 para **@pub_identity_range**. El publicador y todos los suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o una versión posterior, incluido el suscriptor con la suscripción de servidor, están asignados un intervalo principal de 10000. Al suscriptor con la suscripción de servidor también se le asigna un intervalo principal de 500000, que pueden usar los suscriptores que se sincronizan con el suscriptor de republicación (también se debe especificar **@identity_range**, **@pub_identity_range**y **@threshold** para los artículos de la publicación en el suscriptor de republicación).  
   
  Todos los suscriptores que se ejecutan en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o una versión posterior también reciben un intervalo de identidad secundario. El intervalo secundario tiene el mismo tamaño que el intervalo principal. Cuando se agota el intervalo principal, se utiliza el intervalo secundario y el Agente de mezcla asigna un nuevo intervalo en el suscriptor. El nuevo intervalo se convierte en el intervalo secundario y el proceso continúa a medida que el suscriptor utiliza valores de identidad.  
   
   
-### Replicación transaccional con suscripciones de actualización en cola  
- El distribuidor administra los intervalos de identidad y el Agente de distribución los propaga a los suscriptores. Los valores de identidad se asignan a partir de un grupo en el distribuidor. El tamaño del grupo se basa en el tamaño del tipo de datos y en el incremento utilizado para la columna de identidad. Al agregar un artículo con una columna de identidad a una publicación en el Asistente para nueva publicación o mediante [sp_addarticle &#40; Transact-SQL &#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), especifique valores para:  
+### <a name="transactional-replication-with-queued-updating-subscriptions"></a>Replicación transaccional con suscripciones de actualización en cola  
+ El distribuidor administra los intervalos de identidad y el Agente de distribución los propaga a los suscriptores. Los valores de identidad se asignan a partir de un grupo en el distribuidor. El tamaño del grupo se basa en el tamaño del tipo de datos y en el incremento utilizado para la columna de identidad. Cuando agregue un artículo con una columna de identidad a una publicación en el Asistente para nueva publicación o mediante [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), especifique valores para:  
   
--   El **@identity_range** parámetro, que controla el tamaño del intervalo de identidad inicialmente asignado a todos los suscriptores.  
+-   El parámetro **@identity_range** , que controla el tamaño del intervalo de identidad inicialmente asignado a todos los suscriptores.  
   
--   El **@pub_identity_range** parámetro, que controla el tamaño del intervalo de identidad asignado al publicador.  
+-   El parámetro **@pub_identity_range** , que controla el tamaño del intervalo de identidad asignado al publicador.  
   
 -   El parámetro **@threshold** , que se utiliza para determinar cuándo se requiere un nuevo intervalo de identidades para una suscripción.  
   
- Por ejemplo, puede especificar 10000 para **@pub_identity_range**, 1000 para **@identity_range** (suponiendo menos actualizaciones en el suscriptor) y el 80 por ciento para **@threshold**. Después de 800 inserciones en el suscriptor (80 por ciento de 1000), al suscriptor se le asigna un nuevo intervalo. Después de 8000 inserciones en el publicador, al publicador se le asigna un nuevo intervalo. Cuando se asigne un nuevo intervalo, habrá un espacio en los valores del intervalo de identidad de la tabla. Si se especifica un umbral mayor, se obtienen menos espacios pero el sistema es menos tolerante a los errores: si el Agente de distribución no se puede ejecutar por alguna razón, es más fácil que un suscriptor se quede sin identidades.  
+ Por ejemplo, puede especificar 10000 para **@pub_identity_range**, 1000 para **@identity_range** (suponiendo menos actualizaciones en el suscriptor), y 80 por ciento para **@threshold**. Después de 800 inserciones en el suscriptor (80 por ciento de 1000), al suscriptor se le asigna un nuevo intervalo. Después de 8000 inserciones en el publicador, al publicador se le asigna un nuevo intervalo. Cuando se asigne un nuevo intervalo, habrá un espacio en los valores del intervalo de identidad de la tabla. Si se especifica un umbral mayor, se obtienen menos espacios pero el sistema es menos tolerante a los errores: si el Agente de distribución no se puede ejecutar por alguna razón, es más fácil que un suscriptor se quede sin identidades.  
   
-## Asignar intervalos para la administración manual del intervalo de identidad  
+## <a name="assigning-ranges-for-manual-identity-range-management"></a>Asignar intervalos para la administración manual del intervalo de identidad  
  Si especifica la administración manual del intervalo de identidad, debe asegurarse de que el publicador y todos los suscriptores utilizan intervalos de identidad diferentes. Por ejemplo, imagine una tabla en el publicador con una columna de identidad definida como `IDENTITY(1,1)`: la columna de identidad comienza en 1 y se incrementa en 1 cada vez que se inserta una fila. Si la tabla del publicador tiene 5.000 filas y prevé que aumentará durante la vida de la aplicación, el publicador podría utilizar el rango 1-10.000. Si hay dos suscriptores, el Suscriptor A podría usar el rango 10.001–20.000 y el Suscriptor B, el rango 20.001-30.000.  
   
  Después de inicializar un suscriptor mediante una instantánea u otro medio, ejecute DBCC CHECKIDENT para asignarle al suscriptor un punto de partida para este intervalo de identidad. Por ejemplo, en el suscriptor A, ejecutaría `DBCC CHECKIDENT('<TableName>','reseed',10001)`. En el suscriptor B, ejecutaría `CHECKIDENT('<TableName>','reseed',20001)`.  
   
  Para asignar nuevos intervalos en el publicador o en los suscriptores, ejecute DBCC CHECKIDENT y especifique un valor nuevo para regenerar la tabla. Debería encontrar una manera de determinar cuándo se debe asignar un intervalo nuevo. Por ejemplo, su aplicación podría tener un mecanismo que detectara si un nodo va a consumir su intervalo y asignarle uno nuevo utilizando DBCC CHECKIDENT. También puede agregar una restricción CHECK para asegurarse de que no se pueda agregar una fila si va a ocasionar el uso de un valor fuera del intervalo de identidad.  
   
-## Controlar los intervalos de identidad tras la restauración de una base de datos  
- Si está utilizando la administración automática del intervalo de identidad, cuando un suscriptor se restaura de una copia de seguridad, automáticamente solicita un nuevo intervalo de valores de identidad. Si un publicador se restaura de una copia de seguridad, debe asegurarse de que al publicador se le ha asignado un intervalo adecuado. Replicación de mezcla, asigne un intervalo nuevo mediante [sp_restoremergeidentityrange &#40; Transact-SQL &#41;](../../../relational-databases/system-stored-procedures/sp-restoremergeidentityrange-transact-sql.md). En la replicación transaccional, determine el valor más alto que se ha utilizado y después establezca el punto de partida para nuevos intervalos. Utilice el siguiente procedimiento después de la restauración de la base de datos de publicaciones:  
+## <a name="handling-identity-ranges-after-a-database-restore"></a>Controlar los intervalos de identidad tras la restauración de una base de datos  
+ Si está utilizando la administración automática del intervalo de identidad, cuando un suscriptor se restaura de una copia de seguridad, automáticamente solicita un nuevo intervalo de valores de identidad. Si un publicador se restaura de una copia de seguridad, debe asegurarse de que al publicador se le ha asignado un intervalo adecuado. Para la replicación de mezcla, asigne un nuevo intervalo con [sp_restoremergeidentityrange &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-restoremergeidentityrange-transact-sql.md). En la replicación transaccional, determine el valor más alto que se ha utilizado y después establezca el punto de partida para nuevos intervalos. Utilice el siguiente procedimiento después de la restauración de la base de datos de publicaciones:  
   
 1.  Detenga todas las actividades en todos los suscriptores.  
   
@@ -114,18 +118,19 @@ caps.handback.revision: 51
   
     2.  Registre el valor más alto encontrado en todos los suscriptores.  
   
-    3.  En la base de datos de publicación en el publicador, ejecute `DBCC CHECKIDENT(<TableName>','reseed',<HighestValueFound+1>`).  
+    3.  En la base de datos de publicaciones en el publicador, ejecute `DBCC CHECKIDENT(<TableName>','reseed',<HighestValueFound+1>`.  
   
     4.  En la base de datos de publicaciones en el publicador, ejecute `sp_adjustpublisheridentityrange <PublicationName>, <TableName>`.  
   
     > [!NOTE]  
     >  Si el valor de la columna de identidad está establecido para que se reduzca y no para que se incremente, registre el valor más bajo encontrado y regenere con ese valor.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [BACKUP &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md)   
- [DBCC CHECKIDENT &#40; Transact-SQL &#41;](../../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [IDENT_CURRENT &#40; Transact-SQL &#41;](../../../t-sql/functions/ident-current-transact-sql.md)   
- [IDENTITY &#40;propiedad de Transact-SQL&#41;](../Topic/IDENTITY%20\(Property\)%20\(Transact-SQL\).md)   
- [sp_adjustpublisheridentityrange &#40; Transact-SQL &#41;](../../../relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql.md)  
+ [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
+ [IDENT_CURRENT &#40;Transact-SQL&#41;](../../../t-sql/functions/ident-current-transact-sql.md)   
+ [IDENTITY &#40;propiedad&#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md)   
+ [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql.md)  
   
   
+

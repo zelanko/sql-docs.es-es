@@ -1,42 +1,46 @@
 ---
-title: "Seguridad del recopilador de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "recopilación de datos [SQL Server]"
-  - "seguridad [recopilador de datos]"
-  - "recopilador de datos [SQL Server], seguridad"
+title: Seguridad del recopilador de datos | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data collection [SQL Server]
+- security [data collector]
+- data collector [SQL Server], security
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d5b90faa09f6185ffe5e273e43707bc9dc2dc1c0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Seguridad del recopilador de datos
-  El recopilador de datos utiliza el modelo de seguridad basada en roles implementado por el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este modelo permite al administrador de bases de datos ejecutar las distintas tareas de recopilador de datos en un contexto de seguridad que solo tiene los permisos necesarios realizar dicha tarea. Este enfoque también se utiliza para operaciones que implican tablas internas, a las que solamente se puede tener acceso utilizando un procedimiento almacenado o vista. No se concede ningún permiso a las tablas internas. En lugar de ello, los permisos se comprueban en el usuario del procedimiento almacenado o vista que se utiliza para tener acceso a una tabla.  
+# <a name="data-collector-security"></a>Seguridad del recopilador de datos
+  El recopilador de datos utiliza el modelo de seguridad basada en roles implementado por el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este modelo permite al administrador de bases de datos ejecutar las distintas tareas de recopilador de datos en un contexto de seguridad que solo tiene los permisos necesarios realizar dicha tarea. Este enfoque también se utiliza para operaciones que implican tablas internas, a las que solamente se puede tener acceso utilizando un procedimiento almacenado o vista. No se concede ningún permiso a las tablas internas. En lugar de ello, los permisos se comprueban en el usuario del procedimiento almacenado o vista que se utiliza para tener acceso a una tabla.  
   
 > [!IMPORTANT]  
->  Otro aspecto clave de este modelo de seguridad son los permisos concéntricos. Con los permisos concéntricos, los roles con más privilegios heredan los permisos de los roles con menos privilegios sobre los objetos (incluidos alertas, operadores, trabajos, programaciones y servidores proxy). Para más información, consulte [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+>  Otro aspecto clave de este modelo de seguridad son los permisos concéntricos. Con los permisos concéntricos, los roles con más privilegios heredan los permisos de los roles con menos privilegios sobre los objetos (incluidos alertas, operadores, trabajos, programaciones y servidores proxy). Para más información, consulte [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
  En las secciones siguientes se describe la seguridad de la recopilación de datos en general, así como los roles que debe conceder a los usuarios para que puedan configurar y utilizar el recopilador de datos y llevar a cabo tareas asociadas al almacén de administración de datos.  
   
-## Seguridad general  
+## <a name="general-security"></a>Seguridad general  
  El recopilador de datos se instala según los estándares especificados para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-### Seguridad de la red  
+### <a name="network-security"></a>Seguridad de la red  
  Se puede pasar información confidencial entre las instancias de destino, la instancia relacional asociada al servidor de configuración, los conjuntos de recopilación que se están ejecutando y el servidor que hospeda el almacén de administración de datos.  
   
  Para proteger los datos que se transfieren a través de una red, se implementan mecanismos de seguridad estándar, como el cifrado de protocolos para [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## Permisos para configurar y utilizar el recopilador de datos  
+## <a name="permissions-for-configuring-and-using-the-data-collector"></a>Permisos para configurar y utilizar el recopilador de datos  
  En función de la tarea, los usuarios deben ser miembros de uno o varios de los roles fijos de base de datos que se proporcionan para el recopilador de datos. En orden de acceso con más privilegios a acceso con menos privilegios, los roles son las siguientes:  
   
 -   **dc_admin**  
@@ -50,9 +54,9 @@ caps.handback.revision: 32
  Los usuarios que son miembros del rol fijo de servidor **sysadmin** tienen acceso total a los objetos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y a las vistas del recopilador de datos. No obstante, deben agregarse explícitamente a los roles del recopilador de datos.  
   
 > [!IMPORTANT]  
->  Los miembros del rol db_ssisadmin y del rol dc_admin quizá puedan elevar sus privilegios a sysadmin. Esta elevación de privilegio se puede producir porque estos roles pueden modificar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] los puede ejecutar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando el contexto de seguridad de sysadmin del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para protegerse contra esta elevación de privilegio al ejecutar planes de mantenimiento, conjuntos de recopilación de datos y otros paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], configure los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecutan paquetes para utilizar una cuenta de proxy con privilegios limitados o agregar solo los miembros de sysadmin a los roles dc_admin y db_ssisadmin.  
+>  Los miembros del rol db_ssisadmin y del rol dc_admin quizá puedan elevar sus privilegios a sysadmin. Esta elevación de privilegio se puede producir porque estos roles pueden modificar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] los puede ejecutar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando el contexto de seguridad de sysadmin del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para protegerse contra esta elevación de privilegio al ejecutar planes de mantenimiento, conjuntos de recopilación de datos y otros paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configure los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecutan paquetes para utilizar una cuenta de proxy con privilegios limitados o agregar solo los miembros de sysadmin a los roles dc_admin y db_ssisadmin.  
   
-### Rol dc_admin  
+### <a name="dcadmin-role"></a>Rol dc_admin  
  Los usuarios asignados al rol **dc_admin** tienen acceso de administrador completo (crear, leer, actualizar y eliminar) a la configuración del recopilador de datos de una instancia del servidor. Los miembros de este rol pueden realizar las operaciones siguientes:  
   
 -   Establecer propiedades de nivel del recopilador.  
@@ -61,7 +65,7 @@ caps.handback.revision: 32
   
 -   Instalar nuevos tipos de recopilación.  
   
--   Realizar todas las operaciones permitidas al rol **dc_operator**.  
+-   Realizar todas las operaciones permitidas al rol **dc_operator** .  
   
  El rol **dc_admin** es miembro de los roles siguientes:  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 32
   
 -   **dc_operator**. Los miembros de la función **dc_admin** heredan los permisos concedidos a **dc_operator**.  
   
-### Rol dc_operator  
+### <a name="dcoperator-role"></a>Rol dc_operator  
  Los miembros del rol **dc_operator** tienen acceso de lectura y actualización. Este rol admite tareas de operaciones relacionadas con la ejecución y configuración de conjuntos de recopilación. Los miembros de este rol pueden realizar las operaciones siguientes:  
   
 -   Iniciar o detener un conjunto de recopilación.  
@@ -93,7 +97,7 @@ caps.handback.revision: 32
   
  Para obtener más información, vea [Roles de Integration Services &#40;servicio SSIS&#41;](../../integration-services/service/integration-services-roles-ssis-service.md).  
   
-### Rol dc_proxy  
+### <a name="dcproxy-role"></a>Rol dc_proxy  
  Los miembros del rol **dc_proxy** tienen acceso de lectura a los conjuntos de recopilación y a las propiedades de nivel de recopilador. Los miembros de este rol también pueden ejecutar los trabajos que les pertenecen, así como crear pasos de trabajos que se ejecuten como una cuenta de proxy existente.  
   
  Los miembros de este rol pueden realizar las operaciones siguientes:  
@@ -112,7 +116,7 @@ caps.handback.revision: 32
   
  Para obtener más información, vea [Roles de Integration Services &#40;servicio SSIS&#41;](../../integration-services/service/integration-services-roles-ssis-service.md).  
   
-## Permisos para configurar y utilizar el almacén de administración de datos  
+## <a name="permissions-for-configuring-and-using-the-management-data-warehouse"></a>Permisos para configurar y utilizar el almacén de administración de datos  
  En función de la tarea, los usuarios deben ser miembros de uno o varios de los roles fijos de base de datos que se proporcionan para tener acceso al almacén de administración de datos. En orden de acceso con más privilegios a acceso con menos privilegios, los roles son las siguientes:  
   
 -   **mdw_admin**  
@@ -125,7 +129,7 @@ caps.handback.revision: 32
   
  Los usuarios que son miembros del rol fijo de servidor **sysadmin** tienen acceso total a las vistas del recopilador de datos. No obstante, deben agregarse explícitamente a los roles de la base de datos para realizar otras operaciones.  
   
-### Rol mdw_admin  
+### <a name="mdwadmin-role"></a>Rol mdw_admin  
  Los miembros del rol **mdw_admin** tienen acceso de lectura, escritura, actualización y eliminación al almacén de administración de datos.  
   
  Los miembros de este rol pueden realizar las operaciones siguientes:  
@@ -137,13 +141,13 @@ caps.handback.revision: 32
   
 -   Ejecutar trabajos de mantenimiento en el almacén de administración de datos, por ejemplo archivado o limpieza.  
   
-### Rol mdw_writer  
+### <a name="mdwwriter-role"></a>Rol mdw_writer  
  Los miembros del rol **mdw_writer** pueden cargar y escribir datos en el almacén de administración de datos. Cualquier recopilador de datos que almacene datos en el almacén de administración de datos tiene que ser miembro de este rol.  
   
-### Rol mdw_reader  
+### <a name="mdwreader-role"></a>Rol mdw_reader  
  Los miembros del rol **mdw_reader** tienen acceso de lectura al almacén de administración de datos. Dado que la finalidad de este rol es permitir solucionar problemas proporcionando acceso a datos históricos, los miembros de este rol no pueden ver otros elementos del esquema de almacén de administración de datos.  
   
-## Vea también  
- [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)  
+## <a name="see-also"></a>Vea también  
+ [Implementar la seguridad del Agente SQL Server](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
   
   

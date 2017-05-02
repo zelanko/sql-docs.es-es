@@ -1,23 +1,27 @@
 ---
-title: "Compilaci&#243;n nativa de tablas y procedimientos almacenados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Compilación nativa de tablas y procedimientos almacenados | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 caps.latest.revision: 23
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f2f56574dacf58e5c79e79e5540ce20ec83846a4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Compilaci&#243;n nativa de tablas y procedimientos almacenados
-  OLTP en memoria introduce el concepto de compilación nativa. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede compilar de forma nativa procedimientos almacenados que acceden a tablas con optimización para memoria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también puede compilar de forma nativa las tablas con optimización para memoria. La compilación nativa permite un acceso más rápido a los datos y una ejecución de consultas más eficiente que el lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado (tradicional). La compilación nativa de tablas y procedimientos almacenados produce los archivos DLL.  
+# <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilación nativa de tablas y procedimientos almacenados
+  OLTP en memoria introduce el concepto de compilación nativa. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede compilar de forma nativa procedimientos almacenados que acceden a tablas con optimización para memoria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también puede compilar de forma nativa las tablas con optimización para memoria. La compilación nativa permite un acceso más rápido a los datos y una ejecución de consultas más eficiente que el lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado (tradicional). La compilación nativa de tablas y procedimientos almacenados produce los archivos DLL.  
   
  Se admite también la compilación nativa de los tipos de tabla con optimización para memoria. Para obtener más información, vea [Faster temp table and table variable by using memory optimization (Tabla temporal y variable de tabla más rápidas con optimización de memoria)](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).  
   
@@ -28,7 +32,7 @@ caps.handback.revision: 23
 > [!NOTE]  
 >  Las tablas con optimización para memoria se vuelven a compilar durante un reinicio del servidor. Para acelerar la recuperación de bases de datos, los procedimientos almacenados compilados de forma nativa no se vuelven a compilar durante un reinicio del servidor, sino que se compilan en el momento de la primera ejecución. Como consecuencia de esta compilación diferida, los procedimientos almacenados compilados de forma nativa solo aparecen al llamar a [sys.dm_os_loaded_modules &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-loaded-modules-transact-sql.md) tras la primera ejecución.  
   
-## Mantenimiento de los archivos DLL de OLTP en memoria  
+## <a name="maintenance-of-in-memory-oltp-dlls"></a>Mantenimiento de los archivos DLL de OLTP en memoria  
  La consulta siguiente muestra todos los archivos DLL de tablas y procedimientos almacenados cargados actualmente en la memoria del servidor:  
   
 ```tsql  
@@ -44,8 +48,8 @@ where description = 'XTP Native DLL'
 > [!NOTE]  
 >  SQL Server compila los archivos DLL para todas las tablas necesarias para la recuperación de la base de datos. Si se quita una tabla justo antes de un reinicio de la base de datos, puede haber residuos de la tabla en los archivos de punto de control o en el registro de transacciones, de modo que puede volver a compilar el archivo DLL de la tabla durante el inicio de la base de datos. Después de reiniciar, el archivo DLL se descargará y se quitarán los archivos con el proceso de limpieza normal.  
   
-## Compilación nativa de tablas  
- Al crear una tabla con optimización para memoria mediante la instrucción **CREATE TABLE**, la información de la tabla se escribe en los metadatos de la base de datos y se crean las estructuras de tabla y de índice en la memoria. Además, la tabla se compila en un archivo DLL.  
+## <a name="native-compilation-of-tables"></a>Compilación nativa de tablas  
+ Al crear una tabla con optimización para memoria mediante la instrucción **CREATE TABLE** , la información de la tabla se escribe en los metadatos de la base de datos y se crean las estructuras de tabla y de índice en la memoria. Además, la tabla se compila en un archivo DLL.  
   
  Considere el script de ejemplo siguiente, que crea una base de datos y una tabla con optimización para memoria:  
   
@@ -76,7 +80,7 @@ go
   
  El archivo DLL de la tabla entiende las estructuras de índice y el formato de fila de la tabla. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza el archivo DLL para recorrer índices, recuperar filas y almacenar el contenido de estas.  
   
-## Compilación nativa de procedimientos almacenados  
+## <a name="native-compilation-of-stored-procedures"></a>Compilación nativa de procedimientos almacenados  
  Los procedimientos almacenados marcados con NATIVE_COMPILATION se compilan de forma nativa. Esto significa que todas las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] del procedimiento se compilan en código nativo para lograr una ejecución eficaz de la lógica de negocios de rendimiento crítico.  
   
  Para obtener más información acerca de los procedimientos almacenados compilados de forma nativa, vea [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
@@ -110,15 +114,15 @@ go
   
  El compilador de OLTP en memoria utiliza el optimizador de consultas para crear un plan de ejecución eficaz para cada una de las consultas del procedimiento almacenado. Tenga en cuenta que los procedimientos almacenados compilados de forma nativa no se recompilan automáticamente si cambian los datos de la tabla. Para obtener más información sobre el mantenimiento de estadísticas y procedimientos almacenados con OLTP en memoria, vea [Estadísticas para las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md).  
   
-## Consideraciones de seguridad para la compilación nativa  
+## <a name="security-considerations-for-native-compilation"></a>Consideraciones de seguridad para la compilación nativa  
  La compilación nativa de tablas y procedimientos almacenados utiliza el compilador de OLTP en memoria. Este compilador genera archivos que se escriben en el disco y se cargan en la memoria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza los siguientes mecanismos para restringir el acceso a estos archivos.  
   
-### Compilador nativo  
+### <a name="native-compiler"></a>Compilador nativo  
  El archivo ejecutable del compilador, así como los archivos binarios y de encabezado necesarios para la compilación nativa, se instalan como parte de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la carpeta MSSQL\Binn\Xtp. Así, si la instancia predeterminada se instala en C:\Archivos de programa, los archivos del compilador se instalan en C:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\Binn\Xtp.  
   
  Para limitar el acceso al compilador, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza listas de control de acceso (ACL) para restringir el acceso a los archivos binarios. Todos los archivos binarios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] están protegidos frente a su modificación o alteración mediante ACL. Las ACL del compilador nativo también limitan el uso del compilador; solo la cuenta de servicio y los administradores del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen permisos de ejecución y de lectura para los archivos del compilador nativo.  
   
-### Archivos generados por una compilación nativa  
+### <a name="files-generated-by-a-native-compilation"></a>Archivos generados por una compilación nativa  
  Entre los archivos que se generan cuando se compila una tabla o un procedimiento almacenado se incluyen los archivos intermedios y DLL, incluidos aquellos que tienen las extensiones siguientes: .c, .obj, .xml y .pdb. Los archivos generados se guardan en una subcarpeta de la carpeta de datos predeterminada. La subcarpeta se denomina Xtp. Al instalar la instancia predeterminada con la carpeta de datos predeterminada, los archivos generados se colocan en C:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\DATA\Xtp.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] evita la alteración con las DLL generadas de tres maneras:  
@@ -131,8 +135,8 @@ go
   
  No se necesita ninguna interacción del usuario para administrar estos archivos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creará y quitará los archivos según sea necesario.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
- [Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
+ [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

@@ -1,39 +1,43 @@
 ---
-title: "Administrar la tabla suspect_pages (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "824 (error del motor de base de datos)"
-  - "restaurar páginas [SQL Server]"
-  - "páginas [SQL Server], sospecha"
-  - "páginas [SQL Server], restaurar"
-  - "suspect_pages system table"
-  - "páginas sospechosas [SQL Server]"
-  - "restaurar [SQL Server], páginas"
+title: "Administración de la tabla suspect_pages (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- 824 (Database Engine error)
+- restoring pages [SQL Server]
+- pages [SQL Server], suspect
+- pages [SQL Server], restoring
+- suspect_pages system table
+- suspect pages [SQL Server]
+- restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f06acec180d12a9cabfff5e35b4f254883111838
+ms.lasthandoff: 04/11/2017
+
 ---
-# Administrar la tabla suspect_pages (SQL Server)
+# <a name="manage-the-suspectpages-table-sql-server"></a>Administrar la tabla suspect_pages (SQL Server)
   En este tema se describe cómo administrar la tabla **suspect_pages** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] por medio de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La tabla **suspect_pages** sirve para conservar información sobre las páginas sospechosas y es de gran utilidad para decidir si es necesaria una restauración. La tabla [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) reside en la [base de datos msdb](../../relational-databases/databases/msdb-database.md).  
   
- Una página se considera "sospechosa" cuando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] encuentra uno de los errores siguientes al intentar leer una página de datos:  
+ Una página se considera "sospechosa" cuando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] encuentra uno de los errores siguientes al intentar leer una página de datos:  
   
--   Un [error 823](../Topic/MSSQLSERVER_823.md) producido por una prueba cíclica de redundancia (CRC) emitido por el sistema operativo, por ejemplo un error de disco (ciertos errores de hardware)  
+-   Un error 823 producido por una comprobación de redundancia cíclica (CRC) y emitido por el sistema operativo, por ejemplo, un error de disco (ciertos errores de hardware)  
   
--   Un [error 824](../Topic/MSSQLSERVER_824.md), por ejemplo, una página rasgada (cualquier error lógico)  
+-   Un error 824, por ejemplo, una página rasgada (cualquier error lógico)  
   
- El identificador de página de cada página sospechosa se registra en la tabla **suspect_pages**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] registra todas las páginas sospechosas que encuentra durante el procesamiento normal, como en estos casos:  
+ El identificador de página de cada página sospechosa se registra en la tabla **suspect_pages** . [!INCLUDE[ssDE](../../includes/ssde-md.md)] registra todas las páginas sospechosas que encuentra durante el procesamiento normal, como en estos casos:  
   
 -   Una consulta tiene que leer una página.  
   
@@ -63,9 +67,9 @@ caps.handback.revision: 54
   
 -   **Errores registrados en la tabla suspect_pages**  
   
-     La tabla **suspect_pages** contiene una fila por cada página que causó un error 824, hasta un límite de 1000 filas. En la siguiente tabla se muestran los errores registrados en la columna **event_type** de la tabla **suspect_pages**.  
+     La tabla **suspect_pages** contiene una fila por cada página que causó un error 824, hasta un límite de 1000 filas. En la siguiente tabla se muestran los errores registrados en la columna **event_type** de la tabla **suspect_pages** .  
   
-    |Descripción del error|Valor **event_type**|  
+    |Descripción del error|Valor**event_type** |  
     |-----------------------|---------------------------|  
     |Error 823 producido por un error de CRC del sistema operativo, o error 824 que no sea una suma de comprobación no válida o una página rasgada (por ejemplo, un Id. de página no válido)|1|  
     |Suma de comprobación errónea|2|  
@@ -78,7 +82,7 @@ caps.handback.revision: 54
   
 -   **Cómo actualiza el motor de base de datos la tabla suspect_pages**  
   
-     El [!INCLUDE[ssDE](../../includes/ssde-md.md)] realiza las siguientes acciones en la tabla **suspect_pages**:  
+     El [!INCLUDE[ssDE](../../includes/ssde-md.md)] realiza las siguientes acciones en la tabla **suspect_pages** :  
   
     -   Si la tabla no está llena, se actualiza para cada error 824, para indicar que se ha producido un error, y el contador de errores se incrementa. Si una página tiene un error después de ser corregida mediante reparación, restauración o desasignación, su contador **number_of_errors** se incrementa y la columna **last_update** se actualiza.  
   
@@ -94,13 +98,13 @@ caps.handback.revision: 54
   
     -   Error 824, (error lógico, como una página rasgada)  
   
-     Las siguientes acciones también actualizan automáticamente las filas de la tabla **suspect_pages**.  
+     Las siguientes acciones también actualizan automáticamente las filas de la tabla **suspect_pages** .  
   
     -   DBCC CHECKDB REPAIR_ALLOW_DATA_LOSS actualiza la tabla **suspect_pages** para indicar cada página que se ha reparado o desasignado.  
   
     -   Una operación de restauración RESTORE completa, de archivos o de páginas marca las entradas de página como restauradas.  
   
-     Las siguientes acciones eliminan automáticamente filas de la tabla **suspect_pages**.  
+     Las siguientes acciones eliminan automáticamente filas de la tabla **suspect_pages** .  
   
     -   ALTER DATABASE REMOVE FILE  
   
@@ -117,11 +121,11 @@ caps.handback.revision: 54
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- Cualquier persona con acceso a **msdb** puede leer los datos de la tabla **suspect_pages**. Cualquier persona con el permiso UPDATE en la tabla suspect_pages puede actualizar sus registros. Los miembros del rol fijo de base de datos **db_owner** de **msdb** o el rol fijo de servidor **sysadmin** pueden insertar, actualizar y eliminar registros.  
+ Cualquier persona con acceso a **msdb** puede leer los datos de la tabla **suspect_pages** . Cualquier persona con el permiso UPDATE en la tabla suspect_pages puede actualizar sus registros. Los miembros del rol fijo de base de datos **db_owner** de **msdb** o el rol fijo de servidor **sysadmin** pueden insertar, actualizar y eliminar registros.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para administrar la tabla suspect_pages  
+#### <a name="to-manage-the-suspectpages-table"></a>Para administrar la tabla suspect_pages  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expándala y, a continuación, expanda **Bases de datos**.  
   
@@ -133,7 +137,7 @@ caps.handback.revision: 54
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para administrar la tabla suspect_pages  
+#### <a name="to-manage-the-suspectpages-table"></a>Para administrar la tabla suspect_pages  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -149,7 +153,7 @@ GO
   
 ```  
   
- E este ejemplo se devuelve las páginas no válidas de la tabla `suspect_pages`.  
+ E este ejemplo se devuelve las páginas no válidas de la tabla `suspect_pages` .  
   
 ```  
 -- Select nonspecific 824, bad checksum, and torn page errors.  
@@ -159,14 +163,18 @@ GO
   
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
  [Restaurar páginas &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
- [MSSQLSERVER_823](../Topic/MSSQLSERVER_823.md)   
- [MSSQLSERVER_824](../Topic/MSSQLSERVER_824.md)  
+    
+   
   
   
+
+
+
+

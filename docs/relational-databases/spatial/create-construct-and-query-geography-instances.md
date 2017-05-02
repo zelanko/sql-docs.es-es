@@ -1,27 +1,31 @@
 ---
-title: "Crear, construir y consultar instancias de Geography | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tipo de datos Geography [SQL Server]"
-  - "tipo de datos geodésicos [SQL Server]"
-  - "tipo de datos Geography [SQL Server], acerca de tipo de datos Geography"
+title: "Creación, construcción y consulta de instancias de Geography | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- geography data type [SQL Server]
+- geodetic data type [SQL Server]
+- geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 13e7519e11e23d73ff22a3f7d420d0fafc132abf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear, construir y consultar instancias de Geography
-  El tipo de datos espaciales geography, **geography**, representa los datos en un sistema de coordenadas de tierra redonda. Se implementa como un tipo de datos de .NET CLR (Common Language Runtime) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El tipo de datos **geography** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacena los datos elipsoidales (globo), como coordenadas de latitud y longitud de GPS.  
+# <a name="create-construct-and-query-geography-instances"></a>Crear, construir y consultar instancias de Geography
+  El tipo de datos espaciales geography, **geography**, representa los datos en un sistema de coordenadas de tierra redonda. Se implementa como un tipo de datos de .NET CLR (Common Language Runtime) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.  
   
  El tipo **geography** está predefinido y está disponible en cada base de datos. Puede crear columnas de tabla de tipo **geography** y operar con los datos **geography** de la misma manera que con los demás tipos proporcionados por el sistema.  
   
@@ -160,7 +164,7 @@ caps.handback.revision: 14
  [STEndpoint &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/stendpoint-geography-data-type.md)  
   
 ###  <a name="dimension"></a> Dimensión  
- Una instancia de **geography** no vacía puede ser no dimensional, unidimensional o bidimensional. Las instancias de **geography** no dimensionales, como **Point** y **MultiPoint**, no tienen longitud ni área. Los objetos unidimensionales, como **LineString, CircularString**, **CompoundCurve** y **MultiLineString**, tienen longitud. Las instancias bidimensionales, como **Polygon, CurvePolygon** y **MultiPolygon**, tienen área y longitud. Las instancias vacías informan de una dimensión de -1 y **GeometryCollection** informa de la dimensión máxima de su contenido.  
+ Una instancia de **geography** no vacía puede ser no dimensional, unidimensional o bidimensional. Las instancias de **geography** no dimensionales, como **Point** y **MultiPoint**, no tienen longitud ni área. Los objetos unidimensionales, como **LineString, CircularString**, **CompoundCurve**y **MultiLineString**, tienen longitud. Las instancias bidimensionales, como **Polygon, CurvePolygon**y **MultiPolygon**, tienen área y longitud. Las instancias vacías informan de una dimensión de -1 y **GeometryCollection** informa de la dimensión máxima de su contenido.  
   
  **Devolver la dimensión de una instancia**  
  [STDimension &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
@@ -192,7 +196,7 @@ caps.handback.revision: 14
  [RingN &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/ringn-geography-data-type.md)  
   
 ###  <a name="srid"></a> Identificador de referencia espacial (SRID)  
- El identificador de referencia espacial (SRID) es un identificador que especifica en qué sistema de coordenadas elipsoidales está representada la instancia **geography**. No se pueden comparar dos instancias **geography** con SRID diferentes.  
+ El identificador de referencia espacial (SRID) es un identificador que especifica en qué sistema de coordenadas elipsoidales está representada la instancia **geography** . No se pueden comparar dos instancias **geography** con SRID diferentes.  
   
  **Para establecer o devolver el SRID de una instancia**  
  [STSrid &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/stsrid-geography-data-type.md)  
@@ -200,7 +204,7 @@ caps.handback.revision: 14
  Esta propiedad se puede modificar.  
   
 ##  <a name="rel"></a> Determinar las relaciones entre instancias de geography  
- El tipo de datos **geography** proporciona muchos métodos integrados que puede usar para determinar las relaciones entre dos instancias de **geography**.  
+ El tipo de datos **geography** proporciona muchos métodos integrados que puede usar para determinar las relaciones entre dos instancias de **geography** .  
   
  **Para determinar si dos instancias comprenden el mismo conjunto de puntos**  
  [STEquals &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stequals-geometry-data-type.md)  
@@ -224,14 +228,14 @@ caps.handback.revision: 14
  [STSymDifference &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/stsymdifference-geography-data-type.md)  
   
 ##  <a name="supportedsrid"></a> Las instancias de geography deben usar SRID compatibles  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite SRID basados en las normas de EPSG. Se debe usar un SID compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para instancias de **geography** cuando se realicen cálculos o se usen los métodos con datos espaciales de geografía. El SRID debe coincidir con uno de los SRID mostrados en la vista de catálogo **sys.spatial_reference_systems**. Como se mencionó anteriormente, al realizar cálculos en sus datos espaciales usando el tipo de datos **geography**, sus resultados dependerán de qué elipsoide se usó en la creación de sus datos, ya que cada elipsoide está asignado a un identificador de referencia espacial concreto (SRID).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite SRID basados en las normas de EPSG. Se debe usar un SID compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para instancias de **geography** cuando se realicen cálculos o se usen los métodos con datos espaciales de geografía. El SRID debe coincidir con uno de los SRID mostrados en la vista de catálogo **sys.spatial_reference_systems** . Como se mencionó anteriormente, al realizar cálculos en sus datos espaciales usando el tipo de datos **geography** , sus resultados dependerán de qué elipsoide se usó en la creación de sus datos, ya que cada elipsoide está asignado a un identificador de referencia espacial concreto (SRID).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el SRID predeterminado de 4326, que se asigna al sistema de referencia espacial WGS 84, al usar métodos en instancias de **geography** . Si usa datos de un sistema de referencia espacial distinto de WGS 84 (o SRID 4326), tendrá que determinar el SRID concreto para sus datos espaciales de geography.  
   
 ##  <a name="examples"></a> Ejemplos  
  En los ejemplos siguientes se muestra cómo agregar y consultar datos geography.  
   
--   En el primer ejemplo se crea una tabla con una columna de identidad y una columna de tipo `geography`, `GeogCol1`. Una tercera columna representa la columna de tipo `geography` en su representación Well-Known Text (WKT) de Open Geospatial Consortium (OGC) y utiliza el método `STAsText()`. A continuación se insertan dos filas: una que contiene una instancia de `LineString` de `geography` y otra que contiene una instancia de `Polygon`.  
+-   En el primer ejemplo se crea una tabla con una columna de identidad y una columna de tipo `geography` , `GeogCol1`. Una tercera columna representa la columna de tipo `geography` en su representación Well-Known Text (WKT) de Open Geospatial Consortium (OGC) y utiliza el método `STAsText()` . A continuación se insertan dos filas: una que contiene una instancia de `LineString` de `geography`y otra que contiene una instancia de `Polygon` .  
   
     ```  
     IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -265,7 +269,7 @@ caps.handback.revision: 14
     SELECT @result.STAsText();  
     ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Datos espaciales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

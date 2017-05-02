@@ -1,28 +1,32 @@
 ---
-title: "Planear y realizar secuencias de restauraci&#243;n (modelo de recuperaci&#243;n completa) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "secuencias de restauración [SQL Server], planear para"
-  - "modelo de recuperación completa [SQL Server], planear secuencias de restauración"
+title: "Planeación y realización de secuencias de restauración (modelo de recuperación completa) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restore sequences [SQL Server], planning for
+- full recovery model [SQL Server], planning restore sequences
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 92fca3a74586d7c7adbe135422283342db36a204
+ms.lasthandoff: 04/11/2017
+
 ---
-# Planear y realizar secuencias de restauraci&#243;n (modelo de recuperaci&#243;n completa)
+# <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Planear y realizar secuencias de restauración (modelo de recuperación completa)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  En este tema se explica cómo planear y realizar una secuencia de restauración para bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa normalmente el modelo de recuperación completa. Una *secuencia de restauración* es una secuencia formada por una o varias instrucciones [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) . Por lo general, una secuencia de restauración inicializa el contenido de la base de datos, archivos y/o páginas que se van a restaurar (la fase de copia de datos), pone al día las transacciones registradas (fase de rehacer) y revierte las transacciones no confirmadas (fase de deshacer).  
+  En este tema se explica cómo planear y realizar una secuencia de restauración para bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa normalmente el modelo de recuperación completa. Una *secuencia de restauración* es una secuencia formada por una o varias instrucciones [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) . Por lo general, una secuencia de restauración inicializa el contenido de la base de datos, archivos y/o páginas que se van a restaurar (la fase de copia de datos), pone al día las transacciones registradas (fase de rehacer) y revierte las transacciones no confirmadas (fase de deshacer).  
   
  En los casos más sencillos, la secuencia de restauración solo requiere una copia de seguridad completa de la base de datos, una copia de seguridad diferencial de la base de datos y las copias de seguridad de registros subsiguientes. En estos casos, la creación de una secuencia de restauración correcta es fácil. Por ejemplo, para restaurar una base de datos completa al punto de error, empiece por hacer una copia de seguridad del registro de transacciones activo (el *tail* del registro). A continuación, restaure la copia de seguridad más reciente de la base de datos completa, la copia de seguridad diferencial más reciente (si la hay) y todas las copias de seguridad de registros subsiguientes en el orden en que se realizaron.  
   
@@ -31,20 +35,20 @@ caps.handback.revision: 33
 > [!NOTE]  
 >  Una *ruta de recuperación* es la secuencia de copias de seguridad de datos y de registros que sitúan la base de datos en un momento dado (denominado punto de recuperación). Una ruta de recuperación es un conjunto específico de transformaciones que han hecho evolucionar la base de datos a lo largo del tiempo manteniendo su coherencia. Una ruta de recuperación describe una serie de LSN desde un punto de inicio (LSN o GUID) hasta un extremo (LSN o GUID). La serie de LSN de una ruta de recuperación puede incluir una o varias ramas de recuperación desde el principio hasta el final.  
   
-## Para planear una secuencia de restauración  
+## <a name="to-plan-a-restore-sequence"></a>Para planear una secuencia de restauración  
  Antes de iniciar una secuencia de restauración, siga estos pasos:  
   
 1.  Cree una copia del final del registro de la base de datos, si puede. Para obtener más información, vea [Copias del final del registro &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
 2.  Determine el punto de recuperación de destino.  
   
-     El punto de recuperación de destino puede ser cualquier momento dado o cualquier marca de la copia de seguridad de un registro de transacciones. Para obtener más información, vea [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md) y [Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/use marked transactions to recover related databases consistently.md).  
+     El punto de recuperación de destino puede ser cualquier momento dado o cualquier marca de la copia de seguridad de un registro de transacciones. Para obtener más información, vea [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md) y [Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
 3.  Determine el tipo de restauración que desee realizar. Para obtener más información, vea [Información general sobre restauración y recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
   
 4.  Identifique qué copias de seguridad son necesarias y asegúrese de que están disponibles los conjuntos de medios y los dispositivos de copia de seguridad necesarios. Para obtener más información, vea [ Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md) y [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
-## Para realizar una secuencia de restauración  
+## <a name="to-perform-a-restore-sequence"></a>Para realizar una secuencia de restauración  
  Para llevar a cabo una secuencia de restauración, siga estos pasos:  
   
 1.  Para empezar la secuencia, restaure una o varias copias de seguridad de los datos, como una copia de seguridad de la base de datos, una copia de seguridad parcial, o una o varias copias de seguridad de archivos.  
@@ -59,10 +63,10 @@ caps.handback.revision: 33
   
     -   Para las restauraciones a un momento dado, podría no necesitar las copias de seguridad de registros más recientes. Si usa [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], el Asesor para recuperación de base de datos se asegura de que solo estén seleccionadas las copias de seguridad necesarias para restaurar al momento que ha especificado. Estas copias de seguridad componen el plan de restauraciones recomendado para la restauración a un momento dado. Para obtener más información, vea [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
-## Reiniciar una secuencia de restauración  
+## <a name="restarting-a-restore-sequence"></a>Reiniciar una secuencia de restauración  
  Si encuentra algún problema con el resultado de una secuencia de restauración, puede salir de ella y reiniciarla desde el principio. Por ejemplo, si accidentalmente restaura demasiadas copias de seguridad de registros y se supera el punto de recuperación deseado, debe reiniciar la secuencia de restauración hasta la copia de seguridad de registros que contenga el punto de recuperación de destino.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Información general sobre restauración y recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Restauraciones de base de datos completas &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

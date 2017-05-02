@@ -1,39 +1,43 @@
 ---
-title: "Mover bases de datos del sistema | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mover bases de datos del sistema"
-  - "recuperación ante desastres [SQL Server], movimiento de los archivos de base de datos"
-  - "archivos de base de datos [SQL Server], movimiento"
-  - "archivos de datos [SQL Server], movimiento"
-  - "base de datos tempdb [SQL Server], movimiento"
-  - "bases de datos system [SQL Server], movimiento"
-  - "mantenimiento de disco programado [SQL Server]"
-  - "mover bases de datos"
-  - "base de datos msdb [SQL Server], movimiento"
-  - "mover archivos de base de datos"
-  - "reubicar archivos de base de datos"
-  - "reubicaciones de bases de datos planeadas [SQL Server]"
-  - "base de datos maestra [SQL Server], movimiento"
-  - "base de datos modelo [SQL Server], movimiento"
-  - "base de datos Resource [SQL Server]"
-  - "bases de datos [SQL Server], movimiento"
+title: Movimiento de bases de datos del sistema | Microsoft Docs
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- moving system databases
+- disaster recovery [SQL Server], moving database files
+- database files [SQL Server], moving
+- data files [SQL Server], moving
+- tempdb database [SQL Server], moving
+- system databases [SQL Server], moving
+- scheduled disk maintenace [SQL Server]
+- moving databases
+- msdb database [SQL Server], moving
+- moving database files
+- relocating database files
+- planned database relocations [SQL Server]
+- master database [SQL Server], moving
+- model database [SQL Server], moving
+- Resource database [SQL Server]
+- databases [SQL Server], moving
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 caps.latest.revision: 62
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 62
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e452cc778a0a677b9cb71e5e60605af436a31d18
+ms.lasthandoff: 04/11/2017
+
 ---
-# Mover bases de datos del sistema
+# <a name="move-system-databases"></a>Mover bases de datos del sistema
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   En este tema se describe cómo mover bases de datos del sistema en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mover bases de datos del sistema puede resultar útil en las situaciones siguientes:  
@@ -44,9 +48,9 @@ caps.handback.revision: 62
   
 -   Reubicación para el mantenimiento planeado del disco.  
   
- Los siguientes procedimientos se aplican para mover archivos de base de datos dentro de una misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para mover una base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a otro servidor, use la operación [copia de seguridad y restauración](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+ Los siguientes procedimientos se aplican para mover archivos de base de datos dentro de una misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para mover una base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a otro servidor, use la operación [copia de seguridad y restauración](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) .  
 
- Los procedimientos descritos en este tema requieren el nombre lógico de los archivos de la base de datos. Para obtener el nombre, consulte la columna de nombre de la vista de catálogo [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md).  
+ Los procedimientos descritos en este tema requieren el nombre lógico de los archivos de la base de datos. Para obtener el nombre, consulte la columna de nombre de la vista de catálogo [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) .  
   
 > [!IMPORTANT]  
 >  Si se mueve una base de datos del sistema y posteriormente se vuelve a generar la base de datos maestra, se debe mover de nuevo la base de datos del sistema porque la operación de regeneración instala todas las bases de datos del sistema en su ubicación predeterminada.  
@@ -64,11 +68,11 @@ caps.handback.revision: 62
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-2.  Detenga la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o cierre el sistema para realizar el mantenimiento. Para obtener más información, vea [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md).  
+2.  Detenga la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o cierre el sistema para realizar el mantenimiento. Para más información, consulte [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Mueva el archivo o los archivos a la nueva ubicación.  
 
-4.  Reinicie la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el servidor. Para obtener más información, vea [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md).  
+4.  Reinicie la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el servidor. Para obtener más información, vea [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 5.  Compruebe el cambio de los archivos ejecutando la consulta siguiente.  
   
@@ -114,7 +118,7 @@ caps.handback.revision: 62
         NET START MSSQL$instancename /f /T3608
         ```  
   
-     Para obtener más información, vea [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md).  
+     Para obtener más información, vea [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  En cada uno de los archivos que se van a mover, use los comandos **sqlcmd** o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para ejecutar la siguiente instrucción.  
   
@@ -122,7 +126,7 @@ caps.handback.revision: 62
     ALTER DATABASE database_name MODIFY FILE( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-     Para obtener más información sobre cómo usar la utilidad **sqlcmd**, vea [Usar la utilidad sqlcmd](../../relational-databases/scripting/use-the-sqlcmd-utility.md).  
+     Para obtener más información sobre cómo usar la utilidad **sqlcmd** , vea [Usar la utilidad sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
   
 4.  Salga de la utilidad **sqlcmd** o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -145,19 +149,19 @@ caps.handback.revision: 62
   
 1.  Desde el menú **Inicio** , seleccione **Todos los programas**, **Microsoft SQL Server 2005**, **Herramientas de configuración**y, finalmente, haga clic en **Administrador de configuración de SQL Server**.  
   
-2.  En el nodo **Servicios de SQL Server**, haga clic con el botón derecho en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo,**SQL Server (MSSQLSERVER)**) y elija **Propiedades**.  
+2.  En el nodo **Servicios de SQL Server** , haga clic con el botón derecho en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, **SQL Server (MSSQLSERVER)**) y elija **Propiedades**.  
   
-3.  En el cuadro de diálogo **Propiedades de (***nombre_de_instancia***) de SQL Server**, haga clic en la pestaña **Parámetros de inicio**.  
+3.  En el cuadro de diálogo **Propiedades de (***nombre_de_instancia***) de SQL Server** , haga clic en la pestaña **Parámetros de inicio** .  
   
-4.  En el cuadro **Parámetros existentes**, seleccione el parámetro –d para mover el archivo de datos maestros. Haga clic en **Actualizar** para guardar el cambio.  
+4.  En el cuadro **Parámetros existentes** , seleccione el parámetro –d para mover el archivo de datos maestros. Haga clic en **Actualizar** para guardar el cambio.  
   
-     En el cuadro **Especifique un parámetro de inicio**, cambie el parámetro a la nueva ruta de acceso de la base de datos maestra.  
+     En el cuadro **Especifique un parámetro de inicio** , cambie el parámetro a la nueva ruta de acceso de la base de datos maestra.  
   
-5.  En el cuadro **Parámetros existentes**, seleccione el parámetro –l para mover el archivo de registro maestro. Haga clic en **Actualizar** para guardar el cambio.  
+5.  En el cuadro **Parámetros existentes** , seleccione el parámetro –l para mover el archivo de registro maestro. Haga clic en **Actualizar** para guardar el cambio.  
   
-     En el cuadro **Especifique un parámetro de inicio**, cambie el parámetro a la nueva ruta de acceso de la base de datos maestra.  
+     En el cuadro **Especifique un parámetro de inicio** , cambie el parámetro a la nueva ruta de acceso de la base de datos maestra.  
   
-     El valor de parámetro del archivo de datos debe ir a continuación del parámetro `-d` y el valor del archivo de registro debe ir a continuación del parámetro `-l`. En el siguiente ejemplo se muestran los valores de los parámetros para la ubicación predeterminada del archivo de datos maestros.  
+     El valor de parámetro del archivo de datos debe ir a continuación del parámetro `-d` y el valor del archivo de registro debe ir a continuación del parámetro `-l` . En el siguiente ejemplo se muestran los valores de los parámetros para la ubicación predeterminada del archivo de datos maestros.  
   
      `-dC:\Program Files\Microsoft SQL Server\MSSQL<version>.MSSQLSERVER\MSSQL\DATA\master.mdf`  
   
@@ -169,7 +173,7 @@ caps.handback.revision: 62
   
      `-lE:\SQLData\mastlog.ldf`  
   
-6.  Para detener la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], haga clic con el botón derecho en el nombre de la instancia y elija **Detener**.  
+6.  Para detener la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic con el botón derecho en el nombre de la instancia y elija **Detener**.  
   
 7.  Mueva los archivos master.mdf y mastlog.ldf a la nueva ubicación.  
   
@@ -184,11 +188,11 @@ caps.handback.revision: 62
     GO  
     ```  
 
-10. En este punto, SQL Server se debería ejecutar con normalidad. Sin embargo, Microsoft también recomienda ajustar la entrada del Registro en`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`, donde *instance_ID* es similar a `MSSQL13.MSSQLSERVER`. En ese subárbol, cambie el valor de `SQLDataRoot` a la ruta de acceso nuevo. Si no actualiza el Registro, puede que la aplicación de revisiones y las actualizaciones presenten errores.
+10. En este punto, SQL Server se debería ejecutar con normalidad. Sin embargo, Microsoft también recomienda ajustar la entrada del Registro en `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`, donde *instance_ID* es similar a `MSSQL13.MSSQLSERVER`. En ese subárbol, cambie el valor de `SQLDataRoot` a la ruta de acceso nuevo. Si no actualiza el Registro, puede que la aplicación de revisiones y las actualizaciones presenten errores.
 
   
 ##  <a name="Resource"></a> Mover la base de datos Resource  
- La ubicación de la base de datos Resource es \<*unidad*>:\Archivos de programa\Microsoft SQL Server\MSSQL\<versión>.\<*nombre_de_instancia*>\MSSQL\Binn\\. No se puede mover la base de datos.  
+ La ubicación de la base de datos Resource es \<*unidad*>:\Archivos de programa\Microsoft SQL Server\MSSQL\<versión>.\<*nombreDeInstancia*>\MSSQL\Binn\\. No se puede mover la base de datos.  
   
 ##  <a name="Follow"></a> Seguimiento: después de mover todas las bases de datos del sistema  
  Si ha movido todas las bases de datos del sistema a una nueva unidad o volumen o a otro servidor con una letra de unidad diferente, realice las actualizaciones siguientes.  
@@ -197,15 +201,15 @@ caps.handback.revision: 62
   
 -   Cambie la ubicación predeterminada de la base de datos. Si la letra de unidad y la ruta de acceso especificada como ubicación predeterminada no existen, es posible que no se pueda crear una nueva base de datos.  
   
-#### Cambiar la ruta de acceso del registro del Agente SQL Server  
+#### <a name="change-the-sql-server-agent-log-path"></a>Cambiar la ruta de acceso del registro del Agente SQL Server  
   
 1.  En SQL Server Management Studio, en el Explorador de objetos, expanda **Agente SQL Server**.  
   
 2.  Haga clic con el botón derecho en **Registros de errores** y haga clic en **Configurar**.  
   
-3.  En el cuadro de diálogo **Configurar registros de errores del Agente SQL Server** , especifique la nueva ubicación del archivo SQLAGENT.OUT. La ubicación predeterminada es C:\Archivos de programa\Microsoft SQL Server\MSSQL\<versión>.<nombre_instancia>\MSSQL\Log\\.  
+3.  En el cuadro de diálogo **Configurar registros de errores del Agente SQL Server** , especifique la nueva ubicación del archivo SQLAGENT.OUT. La ubicación predeterminada es C:\Archivos de programa\Microsoft SQL Server\MSSQL\<versión>.<nombreDeInstancia>\MSSQL\Log\\.  
   
-#### Cambiar la ubicación predeterminada de la base de datos  
+#### <a name="change-the-database-default-location"></a>Cambiar la ubicación predeterminada de la base de datos  
   
 1.  En SQL Server Management Studio, en el Explorador de objetos, haga clic con el botón derecho en el servidor de SQL Server y, después, haga clic en **Propiedades**.  
   
@@ -217,11 +221,11 @@ caps.handback.revision: 62
   
 ##  <a name="Examples"></a> Ejemplos  
   
-### A. Mover la base de datos tempdb  
+### <a name="a-moving-the-tempdb-database"></a>A. Mover la base de datos tempdb  
  En el ejemplo siguiente se mueven los archivos de datos y registro de `tempdb` a una nueva ubicación como parte de una reubicación planeada.  
   
 > [!NOTE]  
->  Puesto que tempdb se vuelve a crear cada vez que se inicia la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no hay que mover físicamente los archivos de datos y registro. Los archivos se crean en la ubicación nueva cuando se reinicia el servicio en el paso 3. Hasta que se reinicie el servicio, tempdb continúa utilizando los archivos de datos y de registro de la ubicación existente.  
+>  Puesto que tempdb se vuelve a crear cada vez que se inicia la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , no hay que mover físicamente los archivos de datos y registro. Los archivos se crean en la ubicación nueva cuando se reinicia el servicio en el paso 3. Hasta que se reinicie el servicio, tempdb continúa utilizando los archivos de datos y de registro de la ubicación existente.  
   
 1.  Determine los nombres de los archivos lógicos de la base de datos `tempdb` y su ubicación actual en el disco.  
   
@@ -257,7 +261,7 @@ caps.handback.revision: 62
   
 5.  Elimine los archivos `tempdb.mdf` y `templog.ldf` de la ubicación original.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Base de datos Resource](../../relational-databases/databases/resource-database.md)   
  [Base de datos tempdb](../../relational-databases/databases/tempdb-database.md)   
  [Base de datos maestra](../../relational-databases/databases/master-database.md)   
@@ -265,8 +269,9 @@ caps.handback.revision: 62
  [Base de datos model](../../relational-databases/databases/model-database.md)   
  [Mover bases de datos de usuario](../../relational-databases/databases/move-user-databases.md)   
  [Mover archivos de base de datos](../../relational-databases/databases/move-database-files.md)   
- [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md)   
+ [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Volver a generar bases de datos del sistema](../../relational-databases/databases/rebuild-system-databases.md)  
   
   
+

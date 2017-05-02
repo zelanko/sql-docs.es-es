@@ -1,26 +1,30 @@
 ---
-title: "Asistente de compilaci&#243;n nativa | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.nativecompilationwizard.f1"
-  - "swb.nativecompilationwizard.f1"
+title: "Asistente de compilación nativa | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.nativecompilationwizard.f1
+- swb.nativecompilationwizard.f1
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6a6107fe8c3b05c31320f90c77df04731e226ba8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Asistente de compilaci&#243;n nativa
+# <a name="native-compilation-advisor"></a>Asistente de compilación nativa
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Los informes de análisis de rendimiento de transacciones le informan sobre los procedimientos almacenados interpretados de la base de datos que se beneficiarían si se convierten para utilizar la compilación nativa. Para obtener más información, vea [Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md).  
@@ -31,16 +35,16 @@ caps.handback.revision: 14
   
  Para obtener más información sobre las metodologías de migración, vea [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones sobre la migración](http://msdn.microsoft.com/library/dn673538.aspx).  
   
-## Tutorial del uso del Asistente de compilación nativa  
+## <a name="walkthrough-using-the-native-compilation-advisor"></a>Tutorial del uso del Asistente de compilación nativa  
  En el **Explorador de objetos**, haga clic con el botón secundario en el procedimiento almacenado que desea convertir, y seleccione **Asistente de compilación nativa**. Se mostrará la página de bienvenida del **Asistente de compilación nativa de procedimiento almacenado**. Para continuar, haga clic en **Siguiente** .  
   
-### Validación del procedimiento almacenado  
+### <a name="stored-procedure-validation"></a>Validación del procedimiento almacenado  
  Esta página le indicará si el procedimiento almacenado utiliza construcciones que no son compatibles con la compilación nativa. Puede hacer clic en **Siguiente** para ver los detalles. Si hay construcciones que no son compatibles con la compilación nativa, puede hacer clic en **Siguiente** para ver los detalles.  
   
-### Resultado de la validación del procedimiento almacenado  
- Si hay construcciones que no son compatibles con la compilación nativa, la página **Resultado de la validación del procedimiento almacenado** mostrará los detalles. Puede generar un informe (haga clic en **Generar informe**), salir del **Asistente de compilación nativa** y actualizar el código para que sea compatible con la compilación nativa.  
+### <a name="stored-procedure-validation-result"></a>Resultado de la validación del procedimiento almacenado  
+ Si hay construcciones que no son compatibles con la compilación nativa, la página **Resultado de la validación del procedimiento almacenado** mostrará los detalles. Puede generar un informe (haga clic en **Generar informe**), salir del **Asistente de compilación nativa**y actualizar el código para que sea compatible con la compilación nativa.  
   
-## Ejemplo de código  
+## <a name="code-sample"></a>Ejemplo de código  
  El ejemplo siguiente muestra un procedimiento almacenado interpretado y el procedimiento almacenado *equivalente* para la compilación nativa. El ejemplo supone que existe un directorio denominado c:\data.  
   
 > [!NOTE]  
@@ -102,7 +106,7 @@ EXECUTE dbo.InsertOrderXTP @id= 11, @date = '1956-01-01 12:01:00', @status = 2;
 SELECT * from SalesOrders;  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)   
  [Requisitos para utilizar las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)  
   

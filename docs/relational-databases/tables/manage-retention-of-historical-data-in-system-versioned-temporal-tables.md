@@ -1,23 +1,27 @@
 ---
-title: "Administraci&#243;n de la retenci&#243;n de datos hist&#243;ricos en las tablas temporales con versiones del sistema | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Administración de la retención de datos históricos en las tablas temporales con versiones del sistema | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/31/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 caps.latest.revision: 23
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c8237dfcc25045fb0fec915c942ea7968e02a13
+ms.lasthandoff: 04/11/2017
+
 ---
-# Administraci&#243;n de la retenci&#243;n de datos hist&#243;ricos en las tablas temporales con versiones del sistema
+# <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Administración de la retención de datos históricos en las tablas temporales con versiones del sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Con las tablas temporales con versiones del sistema, la tabla de historial puede aumentar el tamaño de la base de datos más que las tablas normales, especialmente en las siguientes condiciones:  
@@ -28,7 +32,7 @@ caps.handback.revision: 23
   
  Una tabla de historial de gran tamaño y creciente puede ser un problema debido a los costos de almacenamiento puro y a la imposición de un impuesto de rendimiento sobre las consultas temporales. Por lo tanto, al desarrollar una directiva de retención de datos para administrar datos en la tabla de historial es un aspecto importante de la planeación y la administración del ciclo de vida de cada tabla temporal.  
   
-## Administración de la retención de datos para la tabla de historial  
+## <a name="data-retention-management-for-history-table"></a>Administración de la retención de datos para la tabla de historial  
  La administración de la retención de datos de la tabla temporal empieza por determinar el período de retención requerido para cada tabla temporal. La directiva de retención, en la mayoría de los casos, debe considerarse parte de la lógica de negocios de la aplicación mediante las tablas temporales. Por ejemplo, las aplicaciones de datos de auditoría y escenarios de viaje en el tiempo tienen requisitos firmes en términos de cuánto tiempo deben estar disponibles los datos históricos para la consulta en línea.  
   
  Una vez que determine el período de retención de datos, el siguiente paso es desarrollar un plan para administrar los datos históricos, cómo y dónde almacenar los datos históricos y cómo eliminar los datos históricos que son anteriores a los requisitos de retención. Con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], tiene los tres enfoques siguientes para administrar los datos históricos en la tabla de historial temporal:  
@@ -41,11 +45,11 @@ caps.handback.revision: 23
   
  Con cada uno de estos enfoques, la lógica para la migración o limpieza de datos del historial se basa en la columna que se corresponde con el final del período en la tabla actual. El final del valor del período para cada fila determina el momento en el que la versión de fila se "cierra", es decir, cuando llega a la tabla de historial. Por ejemplo, la condición `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` especifica que esos datos históricos anteriores a un mes tienen quitarse o extraerse de la tabla de historial.  
   
-> **NOTA:** Los ejemplos de este tema usan este [ejemplo de tabla temporal](https://msdn.microsoft.com/library/mt590957.aspx).  
+> **NOTA:**  Los ejemplos de este tema usan este [ejemplo de tabla temporal](https://msdn.microsoft.com/library/mt590957.aspx).  
   
-## Uso del enfoque de Stretch Database  
+## <a name="using-stretch-database-approach"></a>Uso del enfoque de Stretch Database  
   
-> **NOTA:** El uso del enfoque de Stretch Database solo se aplica a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y no se aplica a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+> **NOTA:**  El uso del enfoque de Stretch Database solo se aplica a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y no se aplica a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md) en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migra los datos históricos de forma transparente a Azure. Para obtener seguridad adicional, puede cifrar los datos en movimiento con la característica [Always Encrypted](https://msdnstage.redmond.corp.microsoft.com/library/mt163865.aspx) de SQL Server. Además, puede usar [Seguridad de nivel de fila](../../relational-databases/security/row-level-security.md) y otras características de seguridad avanzadas de SQL Server con Temporal y Stretch Database para proteger los datos.  
   
@@ -62,26 +66,26 @@ caps.handback.revision: 23
   
  Puede configurar una tabla de historial temporal para Stretch con el Asistente de Stretch o Transact-SQL, y puede habilitar el ajuste para una tabla de historial temporal mientras la versión del sistema se establece en **ON**. El ajuste de la tabla actual no está permitido porque no tiene sentido aplicarlo.  
   
-### Uso del Asistente de Stretch para ajustar la tabla de historial completo  
+### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>Uso del Asistente de Stretch para ajustar la tabla de historial completo  
  El método más sencillo para los principiantes es usar el Asistente de Stretch para habilitar el ajuste para la base de datos completa y, después, seleccionar la tabla de historial temporal en el Asistente de Stretch (en este ejemplo se supone que ha configurado la tabla de departamento como una tabla temporal con versiones del sistema en una base de datos vacía). En [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], no puede hacer clic con el botón derecho en la propia tabla de historial temporal y hacer clic en Stretch.  
   
-1.  Haga clic con el botón derecho en la base de datos y seleccione **Tareas**, seleccione **Stretch** y, después, haga clic en **Habilitar** para iniciar el asistente.  
+1.  Haga clic con el botón derecho en la base de datos y seleccione **Tareas**, seleccione **Stretch**y, después, haga clic en **Habilitar** para iniciar el asistente.  
   
-2.  En la ventana **Seleccionar tablas**, seleccione la casilla de la tabla de historial temporal y haga clic en Siguiente.  
+2.  En la ventana **Seleccionar tablas** , seleccione la casilla de la tabla de historial temporal y haga clic en Siguiente.  
   
-     ![Selecting the history table on the Select tables page](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Selecting the history table on the Select tables page")  
+     ![Selección de la tabla de historial en la página Seleccionar tablas](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Selección de la tabla de historial en la página Seleccionar tablas")  
   
-3.  En la ventana **Configuración de Azure**, proporcione las credenciales de inicio de sesión. Inicie sesión en Microsoft Azure o regístrese para obtener una cuenta. Seleccione la suscripción que va a usar y la región de Azure. Después, cree un nuevo servidor o seleccione un servidor existente. Haga clic en **Siguiente**.  
+3.  En la ventana **Configuración de Azure** , proporcione las credenciales de inicio de sesión. Inicie sesión en Microsoft Azure o regístrese para obtener una cuenta. Seleccione la suscripción que va a usar y la región de Azure. Después, cree un nuevo servidor o seleccione un servidor existente. Haga clic en **Siguiente**.  
   
-     ![Create new Azure server - Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-4.png "Create new Azure server - Stretch Database wizard")  
+     ![Creación de nuevo servidor de Azure: asistente para Stretch Database](../../relational-databases/tables/media/stretch-wizard-4.png "Creación de nuevo servidor de Azure: asistente para Stretch Database")  
   
-4.  En la ventana **Credenciales de seguridad**, proporcione una contraseña para la clave maestra de base de datos para proteger sus credenciales de base de datos de SQL Server de origen y haga clic en Siguiente.  
+4.  En la ventana **Credenciales de seguridad** , proporcione una contraseña para la clave maestra de base de datos para proteger sus credenciales de base de datos de SQL Server de origen y haga clic en Siguiente.  
   
-     ![Secure credentials page of the Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-6.png "Secure credentials page of the Stretch Database wizard")  
+     ![Página Credenciales de seguridad del asistente para Stretch Database](../../relational-databases/tables/media/stretch-wizard-6.png "Página Credenciales de seguridad del asistente para Stretch Database")  
   
-5.  En la ventana **Seleccionar dirección IP**, proporcione el intervalo de direcciones IP para SQL Server para que el servidor de Azure se comunique con SQL Server (si selecciona un servidor existente para el ya existe una regla de firewall, simplemente haga clic en Siguiente aquí para usar la regla de firewall existente). Haga clic en **Siguiente** y, después, en **Finalizar** para habilitar Stretch Database y ajustar la tabla de historial temporal.  
+5.  En la ventana **Seleccionar dirección IP** , proporcione el intervalo de direcciones IP para SQL Server para que el servidor de Azure se comunique con SQL Server (si selecciona un servidor existente para el ya existe una regla de firewall, simplemente haga clic en Siguiente aquí para usar la regla de firewall existente). Haga clic en **Siguiente** y, después, en **Finalizar** para habilitar Stretch Database y ajustar la tabla de historial temporal.  
   
-     ![Select IP address page of the Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-7.png "Select IP address page of the Stretch Database wizard")  
+     ![Página Seleccionar dirección IP del asistente para Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Página Seleccionar dirección IP del asistente para Stretch Database")  
   
 6.  Cuando se complete el asistente, compruebe que se haya habilitado el ajuste correctamente para la base de datos. Vea los iconos del Explorador de objetos que indican que se ha ajustado la base de datos.  
   
@@ -95,15 +99,15 @@ caps.handback.revision: 23
   
 -   [Habilitar Stretch Database para una tabla](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
-### Uso de Transact-SQL para ajustar la tabla de historial completo  
- También puede usar Transact-SQL para habilitar Stretch en el servidor local y [Habilitación de Stretch Database para una base de datos](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). Después, puede [usar Transact-SQL para habilitar Stretch Database en una tabla](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1). Con una base de datos habilitada previamente para Stretch Database, ejecute el siguiente script de Transact-SQL para ajustar una tabla de historial temporal con versiones del sistema existente:  
+### <a name="using-transact-sql-to-stretch-the-entire-history-table"></a>Uso de Transact-SQL para ajustar la tabla de historial completo  
+ También puede usar Transact-SQL para habilitar Stretch en el servidor local y [Habilitación de Stretch Database para una base de datos](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). Después, puede  [usar Transact-SQL para habilitar Stretch Database en una tabla](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1). Con una base de datos habilitada previamente para Stretch Database, ejecute el siguiente script de Transact-SQL para ajustar una tabla de historial temporal con versiones del sistema existente:  
   
 ```  
 ALTER TABLE <history table name>   
 SET (REMOTE_DATA_ARCHIVE = ON (MIGRATION_STATE = OUTBOUND));  
 ```  
   
-### Uso de Transact-SQL para ajustar una parte de la tabla de historial  
+### <a name="using-transact-sql-to-stretch-a-portion-of-the-history-table"></a>Uso de Transact-SQL para ajustar una parte de la tabla de historial  
  Para ajustar solo una parte de la tabla de historial primero debe crear una [función de predicado en línea](https://msdn.microsoft.com/library/mt613432.aspx). En este ejemplo, supongamos que ha configurado la función de predicado en línea por primera vez el 1 de diciembre de 2015 y quiere ajustar a Azure todas las fechas de historial anteriores al 1 de noviembre de 2015. Para lograr esto, empiece por crear la siguiente función:  
   
 ```  
@@ -157,7 +161,7 @@ COMMIT ;
   
  utilice el Agente SQL Server o algún otro mecanismo de programación para asegurarse de que la definición de la función de predicado es válida todo el tiempo.  
   
-## Uso del enfoque de la partición de tabla  
+## <a name="using-table-partitioning-approach"></a>Uso del enfoque de la partición de tabla  
  La[partición de tabla](https://msdn.microsoft.com/library/ms188730.aspx) puede hacer que las tablas grandes sean más escalables y fáciles de administrar. Con el enfoque de partición de tabla, puede usar particiones de tabla de historial para implementar la limpieza de datos personalizada o el archivado sin conexión según una condición de tiempo. La partición de tabla también le proporcionará ventajas de rendimiento cuando se realicen consultas de tablas temporales en un subconjunto de historial de datos mediante la eliminación de una partición.  
   
  Con la partición de tabla, puede implementar un enfoque de ventana deslizante para extraer la parte más antigua de los datos históricos de la tabla de historial y mantener el tamaño de la parte retenida constante en términos de edad: manteniendo los datos en la tabla de historial igual que en el período de retención requerido. Se admite la operación de conmutación de datos fuera de la tabla de historial cuando SYSTEM_VERSIONING está activado, lo que significa que puede limpiar una parte de los datos del historial sin introducir una ventana de mantenimiento o bloquear las cargas de trabajo normales.  
@@ -176,7 +180,7 @@ COMMIT ;
   
  En la siguiente imagen se muestra la configuración inicial de la creación de particiones para mantener 6 meses de datos.  
   
- ![Partitioning](../../relational-databases/tables/media/partitioning.png "Partitioning")  
+ ![Creación de particiones](../../relational-databases/tables/media/partitioning.png "Creación de particiones")  
   
 > **NOTA:** Consulte las consideraciones de rendimiento con las particiones de tabla siguientes para las implicaciones de rendimiento de uso de la opción RANGE LEFT frente a la opción RANGE RIGHT al configurar la creación de particiones.  
   
@@ -185,7 +189,7 @@ A medida que pasa el tiempo, las nuevas filas de la tabla del historial se dirig
   
  La imagen siguiente muestra las tareas de mantenimiento periódico de la partición (vea los pasos detallados a continuación).  
   
- ![Partitioning2](../../relational-databases/tables/media/partitioning2.png "Partitioning2")  
+ ![Creación de particiones2](../../relational-databases/tables/media/partitioning2.png "Creación de particiones2")  
   
  Los pasos detallados para las tareas de mantenimiento periódico de la partición son:  
   
@@ -201,7 +205,7 @@ A medida que pasa el tiempo, las nuevas filas de la tabla del historial se dirig
   
 3.  SPLIT RANGE: permite crear una nueva partición 7 vacía mediante [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md) con la opción SPLIT RANGE (vea el ejemplo A). Al agregar un nuevo límite superior mediante esta función, crea eficazmente una partición independiente para el próximo mes.  
   
-### Uso de Transact-SQL para crear particiones en la tabla de historial  
+### <a name="use-transact-sql-to-create-partitions-on-history-table"></a>Uso de Transact-SQL para crear particiones en la tabla de historial  
  Utilice el script de Transact-SQL en la ventana de código siguiente para crear la función de partición y el esquema de partición, y volver a crear el índice agrupado para que la partición se alinee con las particiones o el esquema de partición. En este ejemplo, crearemos un enfoque de ventana deslizante de seis meses con particiones mensuales a partir de septiembre de 2015.  
   
 ```  
@@ -243,7 +247,7 @@ COMMIT TRANSACTION;
   
 ```  
   
-### Uso de Transact-SQL para mantener particiones en el escenario de ventana deslizante  
+### <a name="using-transact-sql-to-maintain-partitions-in-sliding-window-scenario"></a>Uso de Transact-SQL para mantener particiones en el escenario de ventana deslizante  
  Utilice el script de Transact-SQL en la siguiente ventana de código siguiente para mantener las particiones en el escenario de ventana deslizante. En este ejemplo, se conmutará la partición de septiembre de 2015 con la opción MERGE RANGE y, a continuación, se agregará una nueva partición de marzo de 2016 con la opción SPLIT RANGE.  
   
 ```  
@@ -326,12 +330,12 @@ COMMIT TRANSACTION
   
  Sin embargo, la mejor solución sería ejecutar regularmente un script de Transact-SQL genérico que fuese capaz de llevar a cabo la acción apropiada cada mes sin modificar el script. Es posible generalizar el script anterior para que actúe sobre los parámetros proporcionados (límite inferior que debe combinarse y límite nuevo que se creará con la división de particiones). Para evitar la creación de una tabla de almacenamiento provisional cada mes, puede crear una con antelación y volver a usarla cambiando la restricción de comprobación para que coincida con la partición que se conmutará. Eche un vistazo a las páginas siguientes para obtener ideas sobre [cómo la ventana deslizante puede automatizarse al completo](https://msdn.microsoft.com/library/aa964122.aspx) mediante un script de Transact-SQL.  
   
-### Consideraciones de rendimiento con las particiones de tabla  
+### <a name="performance-considerations-with-table-partitioning"></a>Consideraciones de rendimiento con las particiones de tabla  
  Es importante realizar las operaciones MERGE y SPLIT RANGE para evitar cualquier movimiento de datos, ya que este puede provocar una sobrecarga considerable del rendimiento. Para obtener más información, vea [Modificar una función de partición](../../relational-databases/partitions/modify-a-partition-function.md). Conseguirá esto usando la opción RANGE LEFT en lugar de la opción RANGE RIGHT cuando aplique [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md).  
   
  Vamos a explicar primero visualmente el significado de las opciones RANGE LEFT y RANGE RIGHT:  
   
- ![Partitioning3](../../relational-databases/tables/media/partitioning3.png "Partitioning3")  
+ ![Creación de particiones3](../../relational-databases/tables/media/partitioning3.png "Creación de particiones3")  
   
  Si se define una función de partición como RANGE LEFT, los valores especificados son los límites superiores de las particiones. Cuando utilice la opción RANGE RIGHT, los valores especificados son los límites inferiores de las particiones. Cuando utilice la operación MERGE RANGE para quitar un límite de la definición de la función de partición, la implementación subyacente también quita la partición que contiene el límite. Si esa partición no está vacía, los datos se moverán a la partición que resulta de la operación MERGE RANGE.  
   
@@ -343,7 +347,7 @@ COMMIT TRANSACTION
   
  Conclusión: utilizando la opción RANGE LEFT en la partición deslizante es mucho más simple para la administración de la partición y evita el movimiento de datos. Sin embargo, la definición de los límites de partición con la opción RANGE RIGHT es un poco más simple, ya que no tiene que tratar con problemas de marca de tiempo de fecha y hora.  
   
-## Uso del enfoque de script de limpieza personalizado  
+## <a name="using-custom-cleanup-script-approach"></a>Uso del enfoque de script de limpieza personalizado  
  En los casos en los que el enfoque de particiones de tabla y Stretch Database no sean opciones viables, el tercer enfoque consiste en eliminar los datos de la tabla de historial con el script de limpieza personalizado. La eliminación de los datos de la tabla de historial es posible solo cuando aplica **SYSTEM_VERSIONING = OFF**. Para evitar la incoherencia de datos, realice la limpieza durante la ventana de mantenimiento (cuando las cargas de trabajo que modifican datos no están activas) o dentro de una transacción (bloqueando de forma efectiva otras cargas de trabajo).  Esta operación requiere el permiso de **CONTROL** sobre tablas de historial y actuales.  
   
  Para bloquear mínimamente las aplicaciones normales y las consultas de usuario, elimine los datos en fragmentos más pequeños con un retraso al realizar el script de limpieza dentro de una transacción. Aunque no hay ningún tamaño óptimo para la eliminación de cada fragmento de datos en todos los escenarios, la eliminación de más de 10.000 filas en una sola transacción puede suponer un impacto significativo.  
@@ -352,7 +356,7 @@ COMMIT TRANSACTION
   
  El siguiente diagrama muestra cómo debe organizarse la lógica de limpieza para una tabla única para reducir el impacto en las cargas de trabajo en ejecución.  
   
- ![CustomCleanUpScriptDiagram](../../relational-databases/tables/media/customcleanupscriptdiagram.png "CustomCleanUpScriptDiagram")  
+ ![DiagramaDeScriptsParaLaLimpiezaPersonalizada](../../relational-databases/tables/media/customcleanupscriptdiagram.png "DiagramaDeScriptsParaLaLimpiezaPersonalizada")  
   
  Estas son algunas directrices de alto nivel para implementar el proceso. Programe la lógica de limpieza para que se ejecute todos los días y realice la iteración sobre todas las tablas temporales que necesitan la limpieza de datos. Use el Agente SQL Server u otra herramienta para programar este proceso:  
   
@@ -421,7 +425,7 @@ BEGIN TRAN
 COMMIT;  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tablas temporales](../../relational-databases/tables/temporal-tables.md)   
  [Introducción a las tablas temporales con versión del sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Comprobaciones de coherencia del sistema de la tabla temporal](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
@@ -432,3 +436,4 @@ COMMIT;
  [Funciones y vistas de metadatos de la tabla temporal](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

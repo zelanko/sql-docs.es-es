@@ -1,29 +1,33 @@
 ---
-title: "OLEDB QueryInterface (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "OLEDB QueryInterface, clase de eventos"
+title: OLEDB QueryInterface, clase de eventos | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLEDB QueryInterface event class
 ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b47d42e3d8de99ad7dc4fc508c2af42a745ca704
+ms.lasthandoff: 04/11/2017
+
 ---
-# OLEDB QueryInterface (clase de eventos)
+# <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface, clase de eventos
   La clase de evento **OLEDB QueryInterface** se produce cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emite una llamada **QueryInterface** de OLE DB para consultas distribuidas y procedimientos almacenados remotos. Incluya esta clase de evento en los seguimientos que supervisan problemas asociados a consultas distribuidas y procedimientos almacenados remotos.  
   
  Al incluir la clase de evento **OLEDB QueryInterface** , habrá una gran sobrecarga. Si estos eventos se producen frecuentemente, el seguimiento puede reducir mucho el rendimiento. Para minimizar la sobrecarga, limite el uso de esta clase de evento a los seguimientos que supervisen problemas específicos durante periodos breves.  
   
-## Columnas de datos de la clase de evento OLEDB QueryInterface  
+## <a name="oledb-queryinterface-event-class-data-columns"></a>Columnas de datos de la clase de evento OLEDB QueryInterface  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -54,7 +58,7 @@ caps.handback.revision: 34
 |TextData|**nvarchar**|Parámetros enviados y recibidos en la llamada OLE DB.|1|No|  
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Objetos de automatización OLE en Transact-SQL](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  

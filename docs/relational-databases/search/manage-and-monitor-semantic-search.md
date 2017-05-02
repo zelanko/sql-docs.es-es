@@ -1,29 +1,33 @@
 ---
-title: "Administrar y supervisar la b&#250;squeda sem&#225;ntica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "búsqueda semántica [SQL Server], administrar"
-  - "búsqueda semántica [SQL Server], supervisar"
+title: "Administración y supervisión de la búsqueda semántica | Microsoft Docs"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- semantic search [SQL Server], managing
+- semantic search [SQL Server], monitoring
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 6749d7f7db6e6e76cd940c166180a7ccd206aaf9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Administrar y supervisar la b&#250;squeda sem&#225;ntica
+# <a name="manage-and-monitor-semantic-search"></a>Administrar y supervisar la búsqueda semántica
   Describe el proceso de indización semántica y las tareas relacionadas con la administración y supervisión de los índices.  
   
-##  <a name="HowToMonitorStatus"></a> Comprobar el estado de la indización semántica  
- **¿Se ha completado la primera fase de la indización semántica?**  
+##  <a name="HowToMonitorStatus"></a> Comprobación del estado de la indización semántica  
+### <a name="is-the-first-phase-of-semantic-indexing-complete"></a>¿Se ha completado la primera fase de la indización semántica?
  Consulte la vista de administración dinámica [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md) y compruebe las columnas **status** y **status_description**.  
   
  La primera fase de la indización incluye el rellenado del índice de palabras clave de texto completo y el índice semántico de frases clave, así como la extracción de datos de similitud de documentos.  
@@ -36,7 +40,7 @@ SELECT * FROM sys.dm_fts_index_population WHERE table_id = OBJECT_ID('table_name
 GO  
 ```  
   
- **¿Se ha completado la segunda fase de la indización semántica?**  
+### <a name="is-the-second-phase-of-semantic-indexing-complete"></a>¿Se ha completado la segunda fase de la indización semántica?
  Consulte la vista de administración dinámica [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md) y compruebe las columnas **status** y **status_description**.  
   
  La segunda fase de la indicación incluye el rellenado del índice semántico de similitud de documentos.  
@@ -49,8 +53,8 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population WHERE table_id = OBJECT_
 GO  
 ```  
   
-##  <a name="HowToCheckSize"></a> Comprobar el tamaño de los índices semánticos  
- **¿Cuál es el tamaño lógico de un índice semántico de frases clave o un índice semántico de similitud de documentos?**  
+##  <a name="HowToCheckSize"></a> Comprobación del tamaño de los índices semánticos  
+### <a name="what-is-the-logical-size-of-a-semantic-key-phrase-index-or-a-semantic-document-similarity-index"></a>¿Cuál es el tamaño lógico de un índice semántico de frases clave o un índice semántico de similitud de documentos?
  Consulte la vista de administración dinámica [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md).  
   
  El tamaño lógico se muestra en el número de páginas de índice.  
@@ -63,7 +67,7 @@ SELECT * FROM sys.dm_db_fts_index_physical_stats WHERE object_id = OBJECT_ID('ta
 GO  
 ```  
   
- **¿Cuál es el tamaño total de los índices de texto completo y semántico de un catálogo de texto completo?**  
+### <a name="what-is-the-total-size-of-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>¿Cuál es el tamaño total de los índices de texto completo y semántico de un catálogo de texto completo?  
  Consulte la propiedad **IndexSize** de la función de metadatos [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).  
   
 ```tsql  
@@ -71,7 +75,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')
 GO  
 ```  
   
- **¿Cuántos elementos se indizan en los índices de texto completo y semántico de un catálogo de texto completo?**  
+### <a name="how-many-items-are-indexed-in-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>¿Cuántos elementos se indizan en los índices de texto completo y semántico de un catálogo de texto completo?  
  Consulte la propiedad **ItemCount** de la función de metadatos [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).  
   
 ```tsql  
@@ -79,7 +83,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')
 GO  
 ```  
   
-##  <a name="HowToForcePopulation"></a> Aplicar el rellenado de los índices semánticos  
+##  <a name="HowToForcePopulation"></a> Aplicación del rellenado de los índices semánticos  
  Puede aplicar el rellenado de los índices de texto completo y de los índices semánticos usando las cláusulas START/STOP/PAUSE o RESUME POPULATION con la misma sintaxis y el mismo comportamiento descritos para los índices de texto completo. Para obtener más información, vea [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md) y [Rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).  
   
  Dado que la indización semántica depende de la indización de texto completo, los índices semánticos solo se rellenan cuando lo hacen los índices de texto completo.  
@@ -97,7 +101,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-##  <a name="HowToDisableIndexing"></a> Deshabilitar o volver a habilitar la indización semántica  
+##  <a name="HowToDisableIndexing"></a> Deshabilitación o nueva habilitación de la indización semántica  
  Puede habilitar o deshabilitar la indización de texto completo o semántica usando la cláusula ENABLE/DISABLE con la misma sintaxis y el mismo comportamiento descritos para los índices de texto completo. Para obtener más información, vea [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md).  
   
  Cuando se deshabilita y se suspende la indización semántica, las consultas sobre datos semánticos siguen funcionando correctamente y devolviendo los datos indizados previamente. Este comportamiento no es coherente con el comportamiento de la búsqueda de texto completo.  
@@ -118,7 +122,7 @@ ALTER FULLTEXT INDEX ON table_name ENABLE
 GO  
 ```  
   
-##  <a name="SemanticIndexing"></a> Fases de la indización semántica  
+##  <a name="SemanticIndexing"></a> Acerca de las fases de la indización semántica  
  La búsqueda semántica indiza dos tipos de datos para cada columna en la que esté habilitada:  
   
 1.  **Frases clave**  
@@ -133,13 +137,13 @@ GO
   
 ##  <a name="BestPracticeUnderstand"></a>   
 ##  <a name="ProblemNotPopulated"></a> Problema: los índices semánticos no se rellenan  
- **¿Se rellenan los índices de texto completo asociados?**  
+### <a name="are-the-associated-full-text-indexes-populated"></a>¿Se rellenan los índices de texto completo asociados?  
  Dado que la indización semántica depende de la indización de texto completo, los índices semánticos solo se rellenan cuando lo hacen los índices de texto completo.  
   
- **¿La búsqueda de texto completo y la búsqueda semántica están instaladas y configuradas correctamente?**  
+### <a name="are-full-text-search-and-semantic-search-properly-installed-and-configured"></a>¿La búsqueda de texto completo y la búsqueda semántica están instaladas y configuradas correctamente?  
  Para obtener más información, vea [Instalar y configurar la búsqueda semántica](../../relational-databases/search/install-and-configure-semantic-search.md).  
   
- **¿El servicio FDHOST no está disponible o existe otra condición que provocaría un error de indización de texto completo?**  
+### <a name="is-the-fdhost-service-not-available-or-is-there-another-condition-that-would-cause-full-text-indexing-to-fail"></a>¿El servicio FDHOST no está disponible o existe otra condición que provocaría un error de indización de texto completo?  
  Para obtener más información, vea [Solucionar problemas de indexación de texto completo](../../relational-databases/search/troubleshoot-full-text-indexing.md).  
   
   

@@ -1,33 +1,37 @@
 ---
-title: "Lecci&#243;n 1: Publicar datos con la replicaci&#243;n de mezcla | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "replicación [SQL Server], tutoriales"
+title: "Lección 1: Publicación de datos con la replicación de mezcla | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0b1bbad6626f6270ab555c18b49d436eadfd0dff
+ms.lasthandoff: 04/11/2017
+
 ---
-# Lecci&#243;n 1: Publicar datos con la replicaci&#243;n de mezcla
+# <a name="lesson-1-publishing-data-using-merge-replication"></a>Lección 1: Publicar datos con la replicación de mezcla
 En esta lección, creará una publicación de combinación con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar un subconjunto de las tablas **Employee**, **SalesOrderHeader**y **SalesOrderDetail** en la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Estas tablas están filtradas con filtros de fila con parámetros para que cada suscripción contenga una partición única de los datos. También agregará el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa el Agente de mezcla a la lista de acceso a la publicación (PAL). Para realizar este tutorial, es preciso que haya finalizado el anterior, [Preparar el servidor para replicación](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
-### Para crear publicaciones y definir artículos  
+### <a name="to-create-a-publication-and-define-articles"></a>Para crear publicaciones y definir artículos  
   
 1.  Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y luego expanda el nodo del servidor.  
   
-2.  Expanda la carpeta **Replicación**, haga clic con el botón derecho en la carpeta **Publicaciones locales** y, después, haga clic en **Nueva publicación**.  
+2.  Expanda la carpeta **Replicación** , haga clic con el botón derecho en la carpeta **Publicaciones locales**y, después, haga clic en **Nueva publicación**.  
   
     Se iniciará el Asistente para nueva publicación.  
   
@@ -44,7 +48,7 @@ En esta lección, creará una publicación de combinación con [!INCLUDE[ssManSt
   
 7.  En la página Filtrar filas de tabla, haga clic en **Agregar** y luego en **Agregar filtro**.  
   
-8.  En el cuadro de diálogo **Agregar filtro**, seleccione **Employee (HumanResources)** en **Seleccione la tabla que quiere filtrar**, haga clic en la columna **LoginID**, haga clic en la flecha derecha para agregar la columna a la cláusula WHERE de la consulta del filtro y modifique la cláusula WHERE de la manera siguiente:  
+8.  En el cuadro de diálogo **Agregar filtro** , seleccione **Employee (HumanResources)** en **Seleccione la tabla que quiere filtrar**, haga clic en la columna **LoginID** , haga clic en la flecha derecha para agregar la columna a la cláusula WHERE de la consulta del filtro y modifique la cláusula WHERE de la manera siguiente:  
   
     ```  
     WHERE [LoginID] = HOST_NAME()  
@@ -52,7 +56,7 @@ En esta lección, creará una publicación de combinación con [!INCLUDE[ssManSt
   
 9. Haga clic en **Una fila de esta tabla irá a una sola suscripción**y luego en **Aceptar**  
   
-10. En la página **Filtrar filas de tabla**, haga clic en **Employee (Human Resources)**, haga clic en **Agregar** y, después, en **Agregar combinación para ampliar el filtro seleccionado**.  
+10. En la página **Filtrar filas de tabla** , haga clic en **Employee (Human Resources)**, haga clic en **Agregar** y, después, en **Agregar combinación para ampliar el filtro seleccionado**.  
   
 11. En el cuadro de diálogo **Agregar combinación** , seleccione **Sales.SalesOrderHeader** en **Tabla combinada**, haga clic en **Escribir instrucción de combinación manualmente**y complete la instrucción de combinación de la manera siguiente:  
   
@@ -78,31 +82,31 @@ En esta lección, creará una publicación de combinación con [!INCLUDE[ssManSt
   
 18. En **Especifique las opciones de combinación**, seleccione **Clave única**y, a continuación, haga clic en **Aceptar**.  
   
-19. En la página **Filtrar filas de tabla**, haga clic en **SalesOrderHeader (Sales)**, haga clic en **Agregar** y, después, en **Agregar combinación para ampliar el filtro seleccionado**.  
+19. En la página **Filtrar filas de tabla** , haga clic en **SalesOrderHeader (Sales)**, haga clic en **Agregar**y, después, en **Agregar combinación para ampliar el filtro seleccionado**.  
   
 20. En el cuadro de diálogo **Agregar combinación** , seleccione **Sales.SalesOrderDetail** en **Tabla combinada**, haga clic en **Aceptar**y luego en **Siguiente**.  
   
 21. Seleccione **Crear una instantánea inmediatamente**, desactive **Programar el Agente de instantáneas para ejecutarse**y, a continuación, haga clic en **Siguiente**.  
   
-22. En la página Seguridad del agente, haga clic en **Configuración de seguridad**, escriba \<*nombre_equipo>***\repl_snapshot** en el cuadro **Cuenta de proceso**, proporcione la contraseña de la cuenta y haga clic en **Aceptar**. Haga clic en **Finalizar**.  
+22. En la página Seguridad del agente, haga clic en **Configuración de seguridad**, escriba \<*nombreDeEquipo>***\repl_snapshot** en el cuadro **Cuenta de proceso**, escriba la contraseña de la cuenta y haga clic en **Aceptar**. Haga clic en **Finalizar**.  
   
 23. En la página Finalización del asistente, escriba **AdvWorksSalesOrdersMerge** en el cuadro **Nombre de publicación** y, a continuación, haga clic en **Finalizar**.  
   
 24. Una vez creada la publicación, haga clic en **Cerrar**.  
   
-### Para ver el estado de la generación de instantáneas  
+### <a name="to-view-the-status-of-snapshot-generation"></a>Para ver el estado de la generación de instantáneas  
   
 1.  Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda el nodo del servidor y luego la carpeta **Replicación** .  
   
-2.  En la carpeta Publicaciones locales, haga clic con el botón derecho en **AdvWorksSalesOrdersMerge** y luego haga clic en **Ver estado del Agente de instantáneas**.  
+2.  En la carpeta Publicaciones locales, haga clic con el botón derecho en **AdvWorksSalesOrdersMerge**y luego haga clic en **Ver estado del Agente de instantáneas**.  
   
 3.  Se muestra el estado actual del trabajo del Agente de instantáneas para la publicación. Compruebe que el trabajo de instantáneas sea correcto antes de continuar con la siguiente lección.  
   
-### Para agregar el inicio de sesión del Agente de mezcla para la lista de acceso de la publicación (PAL)  
+### <a name="to-add-the-merge-agent-login-to-the-pal"></a>Para agregar el inicio de sesión del Agente de mezcla para la lista de acceso de la publicación (PAL)  
   
 1.  Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda el nodo del servidor y luego la carpeta **Replicación** .  
   
-2.  En la carpeta Publicaciones locales, haga clic con el botón derecho en **AdvWorksSalesOrdersMerge** y luego haga clic en **Propiedades**.  
+2.  En la carpeta Publicaciones locales, haga clic con el botón derecho en **AdvWorksSalesOrdersMerge**y luego haga clic en **Propiedades**.  
   
     Se mostrará el cuadro de diálogo **Propiedades de la publicación** .  
   
@@ -110,13 +114,14 @@ En esta lección, creará una publicación de combinación con [!INCLUDE[ssManSt
   
 4.  En el cuadro de diálogo Agregar acceso de publicación, seleccione *<nombre_equipo>***\repl_merge** y haga clic en **Aceptar**. Haga clic en **Aceptar**.  
   
-## Pasos siguientes  
+## <a name="next-steps"></a>Pasos siguientes  
 Ha creado correctamente la publicación de combinación. A continuación se suscribirá a esta publicación. Consulte la [Lección 2: Crear una suscripción a la publicación de combinación](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-merge-publication.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
 [Filtrar datos publicados](../../relational-databases/replication/publish/filter-published-data.md)  
-[Filtros de fila con parámetros](../../relational-databases/replication/merge/parameterized-row-filters.md)  
+[Filtros de fila con parámetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
 [Definir un artículo](../../relational-databases/replication/publish/define-an-article.md)  
   
   
   
+

@@ -1,28 +1,32 @@
 ---
-title: "Crear restricciones CHECK | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restricciones de tabla [SQL Server]"
-  - "adjuntar restricciones CHECK"
-  - "columnas [SQL Server], restricciones"
-  - "restricciones [SQL Server], check"
-  - "restricciones CHECK, adjuntar"
+title: "Creación de restricciones CHECK | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table constraints [SQL Server]
+- attaching check constraints
+- columns [SQL Server], constraints
+- constraints [SQL Server], check
+- CHECK constraints, attaching
 ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a7d6d12e6a2673fd38c8c7341c4703dd7588501
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear restricciones CHECK
+# <a name="create-check-constraints"></a>Crear restricciones CHECK
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Puede crear una restricción CHECK en una tabla para especificar los valores de datos aceptables en una o más columnas de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -48,11 +52,11 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para crear una restricción CHECK nueva  
+#### <a name="to-create-a-new-check-constraint"></a>Para crear una restricción CHECK nueva  
   
 1.  En el **Explorador de objetos**, expanda la tabla a la que quiera agregar una restricción CHECK, haga clic con el botón derecho en **Restricciones** y haga clic en **Nueva restricción**.  
   
-2.  En el cuadro de diálogo **Comprobar restricciones**, haga clic en el campo **Expresión** y, luego, en los puntos suspensivos **(…)**.  
+2.  En el cuadro de diálogo **Comprobar restricciones** , haga clic en el campo **Expresión** y, luego, en los puntos suspensivos **(…)**.  
   
 3.  En el cuadro de diálogo **Expresión de restricción CHECK** , escriba expresiones SQL para la restricción CHECK. Por ejemplo, para limitar las entradas de la columna `SellEndDate` de la tabla `Product` a un valor que sea mayor o igual que la fecha de la columna `SellStartDate` o que sea un valor NULL, escriba:  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 17
   
 4.  Haga clic en **Aceptar**.  
   
-5.  En la categoría **Identidad**, puede cambiar el nombre de la restricción CHECK y agregar una descripción (propiedad extendida) para la restricción.  
+5.  En la categoría **Identidad** , puede cambiar el nombre de la restricción CHECK y agregar una descripción (propiedad extendida) para la restricción.  
   
 6.  En la categoría **Diseñador de tablas** , puede definir cuándo debe exigirse la restricción.  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para crear una restricción CHECK nueva  
+#### <a name="to-create-a-new-check-constraint"></a>Para crear una restricción CHECK nueva  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

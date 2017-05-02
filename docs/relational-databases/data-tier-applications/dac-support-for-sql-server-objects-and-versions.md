@@ -1,25 +1,29 @@
 ---
-title: "Compatibilidad de DAC con las versiones y objetos de SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "aplicación de capa de datos [SQL Server], objetos admitidos"
-  - "objetos [SQL Server], aplicaciones de capa de datos"
+title: Compatibilidad de DAC con las versiones y objetos de SQL Server | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data-tier application [SQL Server], supported objects
+- objects [SQL Server], data-tier applications
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6c6fa912592feefe48ce023f58fbf032d64004e6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Compatibilidad de DAC con las versiones y objetos de SQL Server
+# <a name="dac-support-for-sql-server-objects-and-versions"></a>Compatibilidad de DAC con las versiones y objetos de SQL Server
   Una aplicación de capa de datos (DAC) admite los objetos [!INCLUDE[ssDE](../../includes/ssde-md.md)] más comúnmente utilizados.  
   
  **En este tema**  
@@ -60,7 +64,7 @@ caps.handback.revision: 19
   
 -   La exportación y la extracción se admiten en todas las versiones compatibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Todas las operaciones se admiten en [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] y en todas las versiones de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].  
+-   Todas las operaciones se admiten en [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] y en todas las versiones de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]y [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].  
   
 -   Todas las operaciones se admiten en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Service Pack 2 (SP2) o posterior y en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 o posterior.  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 19
 ##  <a name="DeploymentLimitations"></a> Limitaciones de la implementación de datos  
  Tenga en cuenta estas limitaciones en la fidelidad del motor de implementación de datos de DAC Framework en SQL Server 2012 SP1. Las limitaciones se aplican a las siguientes acciones de DAC Framework: implementar o publicar un archivo .dacpac e importar un archivo .bacpac.  
   
-1.  Pérdida de metadatos para ciertas condiciones y tipos base en columnas sql_variant. En los casos correspondientes, aparecerá una advertencia con el siguiente mensaje: **Determinadas propiedades de determinados tipos de datos utilizados dentro de una columna sql_variant no se conservan al implementarlos DAC Framework**.  
+1.  Pérdida de metadatos para ciertas condiciones y tipos base en columnas sql_variant. En los casos correspondientes, aparecerá una advertencia con el siguiente mensaje:  **Determinadas propiedades de determinados tipos de datos utilizados dentro de una columna sql_variant no se conservan al implementarlos DAC Framework**.  
   
     -   Tipos base MONEY, SMALLMONEY NUMERIC y DECIMAL: no se mantiene la precisión.  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 19
 ##  <a name="Considerations"></a> Consideraciones adicionales para las acciones de implementación  
  Tenga en cuenta las siguientes consideraciones en acciones de implementación de datos de DAC Framework:  
   
--   **Extraer, exportar:** estas limitaciones no se aplican en acciones que usan DAC Framework para crear un paquete a partir de una base de datos como, por ejemplo, extraer un archivo .dacpac o exportar un archivo .bacpac. Los datos del paquete son una representación totalmente exacta de los datos en la base de datos de origen. Si el paquete incorpora alguna de estas condiciones, el registro de extracciones y exportaciones incluirá un resumen de los problemas que se enviaron en los mensajes indicados anteriormente. Con esto, se pretende advertir a los usuario de los potenciales problemas en la implementación de datos con el paquete que han creado. El usuario verá también el mensaje de resumen siguiente en el registro: **Estas limitaciones no afectan a la fidelidad de los tipos de datos y de los valores almacenados en el paquete DAC que ha creado DAC Framework; solo se aplican a los tipos de datos y a los valores resultantes al implementar un paquete DAC en una base de datos. Para obtener más información sobre los datos que se ven afectados y cómo evitar esta limitación, vea **[este tema](http://go.microsoft.com/fwlink/?LinkId=267086).  
+-   **Extraer, exportar:** estas limitaciones no se aplican en acciones que usan DAC Framework para crear un paquete a partir de una base de datos como, por ejemplo, extraer un archivo .dacpac o exportar un archivo .bacpac. Los datos del paquete son una representación totalmente exacta de los datos en la base de datos de origen. Si el paquete incorpora alguna de estas condiciones, el registro de extracciones y exportaciones incluirá un resumen de los problemas que se enviaron en los mensajes indicados anteriormente. Con esto, se pretende advertir a los usuario de los potenciales problemas en la implementación de datos con el paquete que han creado. El usuario verá también el mensaje de resumen siguiente en el registro: **Estas limitaciones no afectan a la fidelidad de los tipos de datos y de los valores almacenados en el paquete DAC que ha creado DAC Framework; solo se aplican a los tipos de datos y a los valores resultantes al implementar un paquete DAC en una base de datos. Para obtener más información sobre los datos que se ven afectados y cómo evitar esta limitación, vea** [este tema](http://go.microsoft.com/fwlink/?LinkId=267086).  
   
 -   **Implementar, publicar, importar:** estas limitaciones se aplican en acciones que usan DAC Framework para implementar un paquete en una base de datos como, por ejemplo, implementar o publicar un archivo .dacpac e importar un archivo .bacpac. Es posible que los datos que se obtienen en la base de datos de destino no contengan una representación totalmente exacta de los datos del paquete. El registro de implementaciones e importaciones contendrá un mensaje (arriba indicado) para cada instancia donde se produzca el problema. Si hay errores, estos bloquearán la operación (vea la categoría 3 de más arriba), pero seguirá con las otras advertencias.  
   
@@ -114,7 +118,7 @@ caps.handback.revision: 19
   
 -   **Soluciones alternativas:** las operaciones de extracción y exportación escribirán archivos de datos BCP totalmente exactos en archivos .dacpac o .bacpac. Para evitar limitaciones, utilice la utilidad de línea de comandos SQL Server BCP.exe con el fin de implementar datos totalmente exactos en una base de datos de destino a partir de un paquete DAC.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   

@@ -1,32 +1,36 @@
 ---
-title: "Configurar IIS 7 para la sincronizaci&#243;n web | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "configuración del servidor IIS 7 [replicación de SQL Server]"
-  - "Sincronización web, servidores IIS 7"
+title: "Configurar IIS 7 para la sincronización web | Microsoft Docs"
+ms.custom: 
+ms.date: 09/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IIS 7 server configuration [SQL Server replication]
+- Web synchronization, IIS 7 servers
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80239c8fbf3111d0161dece677b369aea30d9060
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configurar IIS 7 para la sincronizaci&#243;n web
+# <a name="configure-iis-7-for-web-synchronization"></a>Configurar IIS 7 para la sincronización web
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Los procedimientos de este tema le guiará a través del proceso de configuración manual de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) versión 7 o posterior para usar con la sincronización Web para la replicación de mezcla. 
+  Los procedimientos descritos en este tema le guiarán a través del proceso de configurar manualmente [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) versión 7 y superior para su uso con la sincronización web en la replicación de mezcla. 
   
- Configuración de IIS 7 o posterior es el primero de tres pasos necesarios para habilitar la sincronización Web.  
+ La configuración de IIS 7 o superior es el primero de los tres pasos necesarios para habilitar la sincronización web.  
   
- Para obtener información general del proceso de configuración completa, consulte [Configurar sincronización Web](../../relational-databases/replication/configure-web-synchronization.md).  
+ Para obtener información general sobre todo el proceso de configuración, vea [Configurar sincronización web](../../relational-databases/replication/configure-web-synchronization.md).  
   
 > [!IMPORTANT]  
 >  Asegúrese de que la aplicación solo utilice [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versiones posteriores, y de que no haya versiones anteriores de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] instaladas en el servidor IIS. Las versiones anteriores de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pueden producir los errores similares a "El formato de un mensaje durante la sincronización web no era válido. Asegúrese de que los componentes de replicación se han configurado correctamente en el servidor web."  
@@ -41,17 +45,17 @@ caps.handback.revision: 11
   
 4.  Configure una cuenta y establezca permisos para la Escucha de replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Instalar la Escucha de replicación de SQL Server  
+## <a name="installing-the-sql-server-replication-listener"></a>Instalar la Escucha de replicación de SQL Server  
 
-Se admite la sincronización Web en IIS, a partir de la versión 5.0. Configurar Web sincronización Asistente de IIS versión 5 y 6, no está disponible con IIS 7.0 y versiones posteriores. **A partir de SQL Server 2012, para usar el componente de sincronización web en el servidor IIS, debe instalar a SQL Server con replicación. Esto puede ser la edición gratuita de SQL Server Express.**
+La sincronización web es compatible con IIS, a partir de la versión 5.0. El Asistente de configuración de sincronización web de IIS versión 5 y 6 no está disponible con IIS versión 7.0 o superior. **A partir de SQL Server 2012, para usar el componente de sincronización web en el servidor IIS, debe instalar SQL Server con replicación. Puede ser la edición gratuita de SQL Server Express.**
   
-#### Para instalar y configurar la Escucha de replicación de SQL Server  
+#### <a name="to-install-and-configure-the-sql-server-replication-listener"></a>Para instalar y configurar la Escucha de replicación de SQL Server  
   
-1.  Instalar la replicación de SQL Server en el equipo IIS.
+1.  Instale la replicación de SQL Server en el equipo de IIS.
 
-2. Cree un directorio de archivos para replisapi.dll en el equipo que ejecute IIS. Puede crear el directorio donde desee, pero se recomienda que cree el directorio en el \<*unidad*>: \Inetpub directory. Por ejemplo, cree el directorio \<*unidad*>: \Inetpub\SQLReplication\\.  
+2. Cree un directorio de archivos para replisapi.dll en el equipo que ejecute IIS. Puede crear el directorio donde desee, pero recomendamos crearlo en el directorio \<*unidad*>:\Inetpub. Por ejemplo, cree el directorio \<*drive*>:\Inetpub\SQLReplication\\.  
   
-3.  Copie replisapi.dll del directorio [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]com\ al directorio del archivo que creó en el paso 1.  
+3.  Copie replisapi.dll del directorio [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]com\ al directorio de archivos que creó en el paso 1.  
   
 4.  Registre el archivo replisapi.dll:  
   
@@ -65,15 +69,15 @@ Se admite la sincronización Web en IIS, a partir de la versión 5.0. Configurar
   
 6.  Cree un directorio virtual en IIS. El directorio virtual se debe crear en el sitio web creado en el paso 4 y asignarse al directorio creado en el paso 1. Asigne a este directorio el mínimo de permisos posible. Debe seleccionar los permisos **Lectura** y **Ejecutar** como mínimo.  
   
-    1.  En **Internet Information Services (IIS) Manager**, en la **conexiones** panel, haga clic en **sitio Web predeterminado**, y, a continuación, seleccione **Agregar directorio Virtual**.  
+    1.  En **Administrador de Internet Information Services (IIS)**, en el panel **Conexiones** , haga clic con el botón secundario en **Sitio web predeterminado**y, a continuación, seleccione **Agregar directorio virtual**.  
   
     2.  En **Alias**, escriba **SQLReplication**.  
   
-    3.  Para **ruta de acceso física**, escriba **\< unidad>: \Inetpub\SQLReplication\\**, y, a continuación, haga clic en **Aceptar**.  
+    3.  En **Ruta de acceso física**, escriba **\<<unidad>:\Inetpub\SQLReplication\\** y haga clic en **Aceptar**.  
   
 7.  Configure IIS para permitir la ejecución de replisapi.dll.  
   
-    1.  En **Internet Information Services (IIS) Manager**, haga clic en **sitio Web predeterminado**.  
+    1.  En **Administrador de Internet Information Services (IIS)**, haga clic en **Sitio web predeterminado**.  
   
     2.  En el panel del centro, haga clic en **Asignaciones de controlador**.  
   
@@ -81,9 +85,9 @@ Se admite la sincronización Web en IIS, a partir de la versión 5.0. Configurar
   
     4.  En **Ruta de acceso de solicitudes** , escriba **replisapi.dll**.  
   
-    5.  Desde el **módulo** lista desplegable, seleccione **IsapiModule**.  
+    5.  En la lista desplegable **Módulo** , seleccione **IsapiModule**.  
   
-    6.  Para **ejecutable**, escriba **\< unidad>: \Inetpub\SQLReplication\replisapi.dll**.  
+    6.  En **Ejecutable**, escriba **\<unidad>:\Inetpub\SQLReplication\replisapi.dll**.  
   
     7.  En **Nombre**especifique **Replisapi**.  
   
@@ -91,26 +95,26 @@ Se admite la sincronización Web en IIS, a partir de la versión 5.0. Configurar
   
     9. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Restricciones de solicitudes** y, a continuación, haga clic de nuevo en **Aceptar** para cerrar el cuadro de diálogo **Agregar asignación de módulo** . Cuando se le pida que permita la extensión ISAPI, haga clic en **Sí** para agregar la extensión.  
   
-    10. Compruebe que Replisapi.dll está en la lista, en las asignaciones de controlador **Habilitadas** . Si se encuentra en la **deshabilitado** lista, haga clic en la entrada de Replisapi y, a continuación, haga clic en **Editar permisos de función**. Active la casilla **Ejecutar** y haga clic en **Aceptar**.  
+    10. Compruebe que Replisapi.dll está en la lista, en las asignaciones de controlador **Habilitadas** . Si está en la lista **Deshabilitadas** , haga clic con el botón secundario en la entrada de Replisapi y, a continuación, haga clic en **Modificar permisos de características**. Active la casilla **Ejecutar** y haga clic en **Aceptar**.  
   
-## Configurar la autenticación IIS  
+## <a name="configuring-iis-authentication"></a>Configurar la autenticación IIS  
  Cuando los equipos suscriptores se conectan a IIS, IIS debe autenticarlos para que puedan tener acceso a los recursos y procesos. La autenticación se puede aplicar a todo el sitio web o al directorio virtual que ha creado.  
   
  Se recomienda usar la autenticación básica con SSL. SSL es necesario, independientemente del tipo de autenticación que se utilice.  
   
  Se recomienda usar la autenticación básica con SSL. SSL es necesario, independientemente del tipo de autenticación que se utilice.  
   
-#### Para configurar la autenticación IIS  
+#### <a name="to-configure-iis-authentication"></a>Para configurar la autenticación IIS  
   
-1.  En **Internet Information Services (IIS) Manager**, haga clic en **sitio Web predeterminado**.  
+1.  En **Administrador de Internet Information Services (IIS)**, haga clic en **Sitio web predeterminado**.  
   
-2.  En el panel central, haga doble clic en **autenticación**.  
+2.  En el panel central, haga doble clic en **Autenticación**.  
   
 3.  Haga clic con el botón secundario en Autenticación anónima y, a continuación, elija Deshabilitar.  
   
 4.  Haga clic con el botón secundario en Autenticación básica y, a continuación, elija Habilitar.  
   
-## Configurar la Capa de sockets seguros (SSL)  
+## <a name="configuring-secure-sockets-layer"></a>Configurar la Capa de sockets seguros (SSL)  
  Para configurar SSL, especifique un certificado para que lo utilice el equipo en el que se ejecuta IIS. La sincronización web para la replicación de mezcla es compatible con el uso de certificados de servidor, pero no de certificados de cliente. Para configurar IIS para implementación, primero debe obtener un certificado por parte de una entidad de certificación (CA). Para obtener más información acerca de los certificados, vea la documentación de IIS.  
   
  Cuando el certificado esté instalado, debe asociarlo al sitio web que utiliza la sincronización web. En el caso las tareas de desarrollo y pruebas, puede especificar un certificado autofirmado. IIS 7 puede crear un certificado y registrarlo en el equipo.  
@@ -128,48 +132,48 @@ Se admite la sincronización Web en IIS, a partir de la versión 5.0. Configurar
   
 3.  Enlace el certificado al sitio web de replicación.  
   
-#### Para exigir la seguridad SSL en un sitio web  
+#### <a name="to-require-ssl-security-for-a-web-site"></a>Para exigir la seguridad SSL en un sitio web  
   
-1.  En **Internet Information Services (IIS) Manager**, expanda el nodo del servidor local y, a continuación, haga clic en el **sitio Web predeterminado** (o el sitio de sincronización Web si es diferente del sitio Web predeterminado).  
+1.  En el **Administrador de Internet Information Services (IIS)**, expanda el nodo de servidor local y, a continuación, haga clic en **Sitio web predeterminado** (o el sitio de sincronización web si es diferente del sitio web predeterminado).  
   
-2.  En el panel central, haga doble clic en **la configuración de SSL**.  
+2.  En el panel central, haga doble clic en **Configuración SSL**.  
   
 3.  Active la opción **Requerir SSL** . En **Certificados cliente**, compruebe que el botón **Omitir** está seleccionado.  
   
-#### Para crear un certificado autofirmado para pruebas  
+#### <a name="to-create-a-self-signed-certificate-for-testing"></a>Para crear un certificado autofirmado para pruebas  
   
-1.  En **Internet Information Services (IIS) Manager**, haga clic en el nodo del servidor local y, a continuación, en el panel central, haga doble clic en **certificados de servidor**.  
+1.  En el **Administrador de Internet Information Services (IIS)**, haga clic en el nodo de servidor local y, a continuación, en el panel del centro, haga doble clic en **Certificados de servidor**.  
   
-2.  En el **acciones** panel, haga clic en **Crear certificado autofirmado**.  
+2.  En el panel **Acciones** , haga clic en **Crear certificado autofirmado**.  
   
-3.  En la **Crear certificado autofirmado** cuadro de diálogo, escriba un nombre para el certificado y, a continuación, haga clic en **Aceptar**.  
+3.  En el cuadro de diálogo **Crear certificado autofirmado** , escriba un nombre para el certificado y, a continuación, haga clic en **Aceptar**.  
   
-###### Para enlazar un certificado a un sitio web  
+###### <a name="to-bind-a-certificate-to-a-web-site"></a>Para enlazar un certificado a un sitio web  
   
-1.  En el **conexiones** panel, haga clic en el **sitio Web predeterminado** (o el sitio Web de sincronización, si es diferente del sitio Web predeterminado).  
+1.  En el panel **Conexiones** , haga clic en **Sitio web predeterminado** (o el sitio de sincronización web, si es diferente del sitio web predeterminado).  
   
 2.  En el panel **Acciones** , haga clic en **Enlaces**y, a continuación, haga clic en **Agregar**. Se abre el cuadro de diálogo **Agregar enlace de sitio** .  
   
-3.  Desde el **tipo** lista desplegable, seleccione **https**. Mantenga la configuración predeterminada en **Dirección IP** y **Puerto**.  
+3.  En la lista desplegable **Tipo** , seleccione **https**. Mantenga la configuración predeterminada en **Dirección IP** y **Puerto**.  
   
-4.  Desde el **certificado SSL** lista de lista desplegable, seleccione el certificado que creó en "Para crear un certificado autofirmado para pruebas," haga clic en **Aceptar**, y, a continuación, haga clic en **Cerrar**.  
+4.  En la lista desplegable **Certificado SSL** , seleccione el certificado creado en "Para crear un certificado autofirmado para pruebas", haga clic en **Aceptar**y, a continuación, en **Cerrar**.  
   
-###### Para probar el certificado  
+###### <a name="to-test-the-certificate"></a>Para probar el certificado  
   
-1.  En **Internet Information Services (IIS) Manager**, haga clic en **sitio Web predeterminado.**  
+1.  En **Enternet Enformation Services (IIS) Manager**, haga clic en **Sitio web predeterminado.**  
   
-2.  Desde el **acciones** panel, haga clic en **Examinar \*: 443(https)**.  
+2.  En el panel **Acciones**, haga clic en **Examinar \*:443(https)**.  
   
-3.  Se abre Internet Explorer, con un mensaje que indica que "Hay un problema con el certificado de seguridad de este sitio web". Esta advertencia indica que el certificado asociado no fue emitido por una entidad de certificación reconocida y podría no ser de confianza. Se trata de una advertencia esperada, haga clic en **continuar a este sitio Web (no recomendado)**.  
+3.  Se abre Internet Explorer, con un mensaje que indica que "Hay un problema con el certificado de seguridad de este sitio web". Esta advertencia indica que el certificado asociado no fue emitido por una entidad de certificación reconocida y podría no ser de confianza. Es una advertencia esperada, de modo que haga clic en **Pasar a este sitio web (no recomendado)**.  
   
 4.  Si se pide confirmación para **Conectar a localhost**, escriba un nombre de usuario y contraseña para continuar. Debe aparecer la página predeterminada del sitio web.  
   
-## Establecer los permisos para la Escucha de replicación de SQL Server  
+## <a name="setting-permissions-for-the-sql-server-replication-listener"></a>Establecer los permisos para la Escucha de replicación de SQL Server  
  Cuando un equipo suscriptor se conecta al equipo en el que se ejecuta IIS, se autentica usando el tipo de autenticación especificado al configurar IIS. Tras autenticar al suscriptor, IIS comprueba si el suscriptor está autorizado para invocar la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Debe controlar los usuarios que pueden invocar la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estableciendo permisos para replisapi.dll. Es necesario configurar permisos para impedir el acceso no autorizado a la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Para configurar los permisos mínimos para la cuenta con la que se ejecuta la Escucha de replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , lleve a cabo el siguiente procedimiento. Los pasos del siguiente procedimiento son únicamente para [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Server 2008 con IIS 7.0.  
   
- Además de realizar los siguientes pasos, asegúrese de que los inicios de sesión necesarios se encuentran en la lista de acceso a la publicación (PAL). Para obtener más información acerca de la PAL, consulte [proteger el publicador](../../relational-databases/replication/security/secure-the-publisher.md).  
+ Además de realizar los siguientes pasos, asegúrese de que los inicios de sesión necesarios se encuentran en la lista de acceso a la publicación (PAL). Para obtener más información sobre la PAL, vea [Secure the Publisher](../../relational-databases/replication/security/secure-the-publisher.md) (Proteger el publicador).  
   
  **Importante** La cuenta creada en esta sección es la cuenta que se conectará al publicador y el distribuidor durante la sincronización. La cuenta se debe agregar como cuenta de inicio de sesión SQL en el servidor de distribución y publicación.  
   
@@ -185,15 +189,15 @@ Se admite la sincronización Web en IIS, a partir de la versión 5.0. Configurar
   
 -   Tener permisos de lectura en el recurso compartido de instantáneas.  
   
-#### Para configurar la cuenta y los permisos  
+#### <a name="to-configure-the-account-and-permissions"></a>Para configurar la cuenta y los permisos  
   
 1.  Cree una cuenta local en el equipo en el que se ejecuta IIS:  
   
-    1.  Abra el **Administrador del servidor**. En el menú Inicio, haga clic en **equipo**, y, a continuación, haga clic en **administrar**.  
+    1.  Abra el **Administrador del servidor**. En el menú Inicio, haga clic con el botón secundario en **Equipo**y, a continuación, en **Administrar**.  
   
     2.  En el **Administrador del servidor**, expanda **Configuración**y, a continuación, expanda **Usuarios y grupos locales**.  
   
-    3.  Haga clic en **usuarios**, y, a continuación, haga clic en **nuevo usuario**.  
+    3.  Haga clic con el botón secundario en **Usuarios**y después en **Usuario nuevo**.  
   
     4.  Escriba un nombre de usuario y una contraseña segura. Desactive **El usuario debe cambiar la contraseña en el siguiente inicio de sesión**.  
   
@@ -203,46 +207,46 @@ Se admite la sincronización Web en IIS, a partir de la versión 5.0. Configurar
   
     1.  En el **Administrador del servidor**, expanda **Configuración**, expanda **Usuarios y grupos locales**y después haga clic en **Grupos**.  
   
-    2.  Haga clic en **IIS_IUSRS**, y, a continuación, haga clic en **Agregar al grupo**.  
+    2.  Haga clic con el botón secundario en **IIS_IUSRS**y, después, en **Agregar a grupo**.  
   
-    3.  En la **Propiedades de IIS_IUSRS** cuadro de diálogo, haga clic en **Agregar**.  
+    3.  En el cuadro de diálogo **Propiedades de IIS_IUSRS** , haga clic en **Agregar**.  
   
     4.  En el cuadro de diálogo **Seleccionar usuarios, equipos o grupos** , agregue la cuenta que creó en el paso 1.  
   
-    5.  Compruebe que **desde esta ubicación** muestra el nombre del equipo local (no en un dominio). Si no aparece el nombre del equipo local, haga clic en **Ubicaciones**. En el cuadro de diálogo **Ubicaciones** , seleccione el equipo local y, a continuación, haga clic en **Aceptar**.  
+    5.  Compruebe que en **Desde esta ubicación** aparece el nombre del equipo local (no un dominio). Si no aparece el nombre del equipo local, haga clic en **Ubicaciones**. En el cuadro de diálogo **Ubicaciones** , seleccione el equipo local y, a continuación, haga clic en **Aceptar**.  
   
-    6.  En la **Seleccionar usuarios** cuadro de diálogo y la **Propiedades de IIS_IUSRS** cuadro de diálogo, haga clic en**Aceptar**.  
+    6.  Haga clic en **Aceptar** en los cuadros de diálogo **Seleccionar usuarios** , haga clic en**Aceptar**.  
   
 3.  Conceda los permisos mínimos de cuenta en la carpeta que contiene el archivo replisapi.dll:  
   
-    1.  En el Explorador de Windows, haga clic en la carpeta que ha creado para replisapi.dll y, a continuación, haga clic en **propiedades**.  
+    1.  En el Explorador de Windows, haga clic con el botón secundario en la carpeta que ha creado para replisapi.dll y, a continuación, haga clic en **Propiedades**.  
   
     2.  En la pestaña **Seguridad** , haga clic en **Editar**.  
   
-    3.  En el **permisos para \< nombre de carpeta>** cuadro de diálogo, haga clic en **Agregar** para agregar la cuenta que creó en el paso 1.  
+    3.  En el cuadro de diálogo **Permisos de \<nombreDeCarpeta>**, haga clic en **Agregar** para agregar la cuenta que creó en el paso 1.  
   
-    4.  Compruebe que **desde esta ubicación** muestra el nombre del equipo local (no en un dominio). Si no aparece el nombre del equipo local, haga clic en **Ubicaciones**. En el cuadro de diálogo **Ubicaciones** , seleccione el equipo local y, a continuación, haga clic en **Aceptar**.  
+    4.  Compruebe que en **Desde esta ubicación** aparece el nombre del equipo local (no un dominio). Si no aparece el nombre del equipo local, haga clic en **Ubicaciones**. En el cuadro de diálogo **Ubicaciones** , seleccione el equipo local y, a continuación, haga clic en **Aceptar**.  
   
-    5.  Compruebe que la cuenta tiene permisos de sólo **lectura**, **leer y ejecutar**, y **Enumerar contenido de carpeta** permisos.  
+    5.  Compruebe que la cuenta solo tiene permisos de **Lectura**, **Lectura y ejecución** y **Mostrar el contenido de la carpeta**.  
   
     6.  Seleccione los usuarios o grupos que no requieran acceso al directorio , haga clic en **Quitar**y, después, en **Aceptar**.  
   
-4.  Crear un grupo de aplicaciones en **Internet Information Services (IIS) Manager**:  
+4.  Cree un grupo de aplicaciones en **Administrador de Internet Information Services (IIS)**:  
   
-    1.  En **Internet Information Services (IIS) Manager**, en la **conexiones** panel, expanda el nodo del servidor local.  
+    1.  En **Administrador de Internet Information Services (IIS)**, en el panel **Conexiones** , expanda el nodo del servidor local.  
   
-    2.  Haga clic en **grupos de aplicaciones**, y, a continuación, haga clic en **Agregar grupo de aplicaciones**.  
+    2.  Haga clic con el botón secundario en **Grupos de aplicaciones**y haga clic en **Grupo de aplicaciones**.  
   
     3.  Escriba un nombre para el grupo de aplicaciones, deje los valores predeterminado para el resto de los campos y, a continuación, haga clic en **Aceptar**.  
   
     > [!NOTE]  
-    >  Si piensa que va a tener más de dos clientes de sincronización simultáneos, podría crear hospedaje multiproceso en una única máquina. Para obtener más información, vea "Crear un jardín Web" en [Configurar sincronización Web](../../relational-databases/replication/configure-web-synchronization.md).  
+    >  Si piensa que va a tener más de dos clientes de sincronización simultáneos, podría crear hospedaje multiproceso en una única máquina. Para obtener más información, consulte la sección Crear hospedaje multiproceso en una única máquina de [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
   
 5.  Asocie la cuenta al grupo de aplicaciones:  
   
-    1.  En **Internet Information Services (IIS) Manager**, expanda el nodo del servidor local y, a continuación, haga clic en **grupos de aplicaciones**.  
+    1.  En **Administrador de Internet Information Services (IIS)**, expanda el nodo del servidor y, después, haga clic en **Grupos de aplicaciones**.  
   
-    2.  Haga clic en el grupo de aplicaciones que creó y, a continuación, haga clic en **establecer valores predeterminados de grupo de aplicaciones**.  
+    2.  Haga clic con el botón secundario en el grupo de aplicaciones que ha creado y, a continuación, haga clic en **Establecer valores predeterminados de grupos de aplicaciones**.  
   
     3.  En el cuadro de diálogo **Valores predeterminados de grupo de aplicaciones** , desplácese a la sección **Procesar modelo** y, a continuación, haga clic en el campo **Identidad** .  
   
@@ -256,20 +260,20 @@ Se admite la sincronización Web en IIS, a partir de la versión 5.0. Configurar
   
 6.  Asocie el grupo de aplicaciones al sitio web de replicación:  
   
-    1.  En **Internet Information Services (IIS) Manager**, expanda el nodo del servidor local y, a continuación, haga clic en el **sitio Web predeterminado** (o el sitio de sincronización Web si es diferente del sitio Web predeterminado).  
+    1.  En el **Administrador de Internet Information Services (IIS)**, expanda el nodo de servidor local y, a continuación, haga clic en **Sitio web predeterminado** (o el sitio de sincronización web si es diferente del sitio web predeterminado).  
   
     2.  En el panel **Acciones** , en **Administrar sitio web**, haga clic en **Configuración avanzada**.  
   
     3.  En el cuadro de diálogo **Configuración avanzada** , haga clic en el botón de puntos suspensivos que hay a la derecha de **Grupo de aplicaciones**.  
   
-    4.  Desde el **grupo de aplicaciones** la lista desplegable, seleccione el grupo de aplicaciones creado en el paso 4 y, a continuación, haga clic en **Aceptar**.  
+    4.  En la lista desplegable **Grupo de aplicaciones** , seleccione el grupo de aplicaciones que ha creado en el paso 4 y, a continuación, haga clic en **Aceptar**.  
   
     5.  Vuelva a hacer clic en **Aceptar** para cerrar Configuración avanzada.  
   
-## Probar la conexión con replisapi.dll  
- Ejecute la sincronización Web en modo de diagnóstico para probar la conexión al equipo que ejecuta IIS y asegurarse de que el certificado de capa de Sockets seguros (SSL) está instalado correctamente. Para ejecutar la sincronización web en modo de diagnóstico, debe ser administrador en el equipo donde se ejecuta IIS.  
+## <a name="testing-the-connection-to-replisapidll"></a>Probar la conexión con replisapi.dll  
+ Ejecute la sincronización web en modo de diagnóstico para probar la conexión al equipo en el que se ejecuta IIS y para asegurarse de que el certificado SSL (Capa de sockets seguros) está instalado correctamente. Para ejecutar la sincronización web en modo de diagnóstico, debe ser administrador en el equipo donde se ejecuta IIS.  
   
-#### Para probar la conexión con replisapi.dll  
+#### <a name="to-test-the-connection-to-replisapidll"></a>Para probar la conexión con replisapi.dll  
   
 1.  Asegúrese de que la configuración de red de área local (LAN) del suscriptor es correcta:  
   
@@ -284,7 +288,7 @@ Se admite la sincronización Web en IIS, a partir de la versión 5.0. Configurar
 2.  En el suscriptor, en Internet Explorer, conéctese al servidor en modo de diagnóstico agregando `?diag` a la dirección de replisapi.dll. Por ejemplo: **https://server.domain.com/directory/replisapi.dll?diag**.  
   
     > [!NOTE]  
-    >  En el ejemplo anterior, **servidor.dominio.com** debe reemplazarse con exactos **emitido para** nombre aparece bajo el **certificados de servidor** sección en el Administrador de IIS.  
+    >  En el ejemplo anterior, **servidor.dominio.com** se debe reemplazar con el nombre de **Emitido** exacto que aparece en la sección **Certificados de servidor** en el Administrador de IIS.  
   
 3.  Si el sistema operativo Windows no reconoce el certificado especificado para IIS, aparece el cuadro de diálogo **Alerta de seguridad** . Esta alerta puede producirse porque el certificado es un certificado de prueba, o bien porque lo emitió una entidad de certificación (CA) que Windows no reconoce.  
   
@@ -308,7 +312,7 @@ Se admite la sincronización Web en IIS, a partir de la versión 5.0. Configurar
     > [!NOTE]  
     >  Los certificados los instalan los usuarios. Este proceso lo deben realizar todos los usuarios que vayan a realizar sincronizaciones con IIS.  
   
-4.  En el **Conectar con \< nombreDeServidor>** cuadro de diálogo, especifique el inicio de sesión y la contraseña que utilizará el agente de mezcla para conectarse a IIS. Estas credenciales también se especificarán en el Asistente para nueva suscripción.  
+4.  En el cuadro de diálogo **Conectarse a \<nombreDeServidor>**, especifique el nombre de usuario y la contraseña que el Agente de mezcla usará para conectarse a IIS. Estas credenciales también se especificarán en el Asistente para nueva suscripción.  
   
 5.  En la ventana de Internet Explorer con ****información de diagnóstico sobre la sincronización web de SQL, compruebe que el valor de todas las columnas **** de estado de la página sea **SUCCESS**.  
   
@@ -318,8 +322,9 @@ Se admite la sincronización Web en IIS, a partir de la versión 5.0. Configurar
   
     2.  Conéctese al servidor en modo de diagnóstico. Si el certificado se ha instalado correctamente, no aparecerá el cuadro de diálogo **Alerta de seguridad** . Si se muestra este cuadro de diálogo, se producirá un error en el Agente de mezcla cuando intente conectarse al equipo en el que se ejecuta IIS. Debe asegurarse de que el certificado del servidor al que está obteniendo acceso se ha agregado al almacén de certificados del suscriptor como certificado de confianza. Para obtener más información acerca de la exportación de certificados, vea la documentación de IIS.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Sincronización web para la replicación de mezcla](../../relational-databases/replication/web-synchronization-for-merge-replication.md)   
  [Configurar sincronización web](../../relational-databases/replication/configure-web-synchronization.md)  
   
   
+

@@ -1,31 +1,35 @@
 ---
-title: "Propiedades de columna (p&#225;gina General) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.columnproperties.general.f1"
+title: "Propiedades de columna (página General) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.columnproperties.general.f1
 ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 478dc0e10767f9e4e10c5c3ede74aec5ddaddef4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Propiedades de columna (p&#225;gina General)
+# <a name="column-properties-general-page"></a>Propiedades de columna (página General)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Utilice esta página para ver propiedades de la columna seleccionada.  
   
- La información de esta página es de solo lectura. Para modificar la columna, cierre el cuadro de diálogo **Propiedades de columna**, expanda la tabla y las columnas en el Explorador de objetos, haga clic con el botón derecho en la columna y, después, haga clic en **Diseño**.  
+ La información de esta página es de solo lectura. Para modificar la columna, cierre el cuadro de diálogo **Propiedades de columna** , expanda la tabla y las columnas en el Explorador de objetos, haga clic con el botón derecho en la columna y, después, haga clic en **Diseño**.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Nombre**  
  Nombre de la columna.  
   

@@ -1,28 +1,32 @@
 ---
-title: "Eliminar una publicaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "quitar publicaciones"
-  - "publicaciones [replicación de SQL Server], eliminar"
-  - "artículos [replicación de SQL Server], eliminar"
-  - "eliminar publicaciones"
+title: "Eliminación de una publicación | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing publications
+- publications [SQL Server replication], deleting
+- articles [SQL Server replication], deleting
+- deleting publications
 ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e63359b9005b1f2f2651699121c5a86c78be7a3e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eliminar una publicaci&#243;n
-  En este tema se describe cómo eliminar una publicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o Replication Management Objects (RMO).  
+# <a name="delete-a-publication"></a>Eliminar una publicación
+  En este tema se describe cómo eliminar una publicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
   
  **En este tema**  
   
@@ -37,13 +41,13 @@ caps.handback.revision: 35
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
  Elimine publicaciones de la carpeta **Publicaciones locales** en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
-#### Para eliminar una publicación  
+#### <a name="to-delete-a-publication"></a>Para eliminar una publicación  
   
 1.  Conéctese al publicador en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]y, a continuación, expanda el nodo del servidor.  
   
 2.  Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Publicaciones locales** .  
   
-3.  Haga clic en la publicación que desea eliminar y, a continuación, haga clic en **Eliminar**.  
+3.  Haga clic con el botón secundario en la publicación que desea eliminar y, a continuación, haga clic en **Eliminar**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  Las publicaciones pueden eliminarse mediante programación con procedimientos almacenados de replicación. Los procedimientos almacenados que use dependen del tipo de publicación que se elimina.  
@@ -51,35 +55,35 @@ caps.handback.revision: 35
 > [!NOTE]  
 >  Al eliminar una publicación, no se quitan los objetos publicados de la base de datos de publicación ni los objetos correspondientes de la base de datos de suscripciones. Si es necesario, use el comando `DROP <object>` para quitar estos objetos manualmente.  
   
-#### Para eliminar una publicación transaccional o de instantáneas  
+#### <a name="to-delete-a-snapshot-or-transactional-publication"></a>Para eliminar una publicación transaccional o de instantáneas  
   
 1.  Realice una de las siguientes operaciones:  
   
-    -   Para eliminar una publicación, ejecute [sp_droppublication](../../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md) en el publicador de la base de datos de publicación.  
+    -   Para eliminar una publicación, ejecute [sp_droppublication](../../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md) en la base de datos de publicación del publicador.  
   
-    -   Para eliminar todas las publicaciones de y quitar todos los objetos de replicación de base de datos publicada, ejecute [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) en el publicador. Especifique el valor de **tran** para **@type**. (Opcional) Si el distribuidor no puede tener acceso o si el estado de la base de datos es sospechosa o sin conexión, especifique un valor de **1** para **@force**. (Opcional) Especifique el nombre de la base de datos **@dbname** Si [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) no se ejecuta en la base de datos de publicación.  
+    -   Para eliminar todas las publicaciones de una base de datos publicada y quitar todos sus objetos de replicación, ejecute [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) en el publicador. Especifique el valor de **tran** para **@type**. (Opcional) Si no se puede tener acceso al distribuidor, o bien si el estado de la base de datos es sospechoso o está sin conexión, especifique un valor de **1** para **@force**. (Opcional) Especifique el nombre de la base de datos para **@dbname** si [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) no se ejecuta en la base de datos de publicación.  
   
         > [!NOTE]  
-        >  Especifica el valor de **1** para **@force** puede dejar los objetos de publicación relacionadas con la replicación en la base de datos.  
+        >  Especificar un valor de **1** para **@force** puede dejar los objetos de publicación relacionados con replicación en la base de datos.  
   
-2.  (Opcional) Si esta base de datos no tiene otras publicaciones, ejecute [sp_replicationdboption & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) Para deshabilitar la publicación de la base de datos actual utilizando la replicación transaccional o instantáneas.  
+2.  (Opcional) Si esta base de datos no tiene otras publicaciones, ejecute [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) para deshabilitar la publicación de la base de datos actual mediante la replicación transaccional o de instantáneas.  
   
-3.  (Opcional) En el suscriptor en la base de datos de suscripción, ejecute [sp_subscription_cleanup](../../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md) para quitar los metadatos de replicación restantes en la base de datos de suscripción.  
+3.  (Opcional) En la base de datos de suscripciones del suscriptor, ejecute [sp_subscription_cleanup](../../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md) para quitar los metadatos de replicación restantes en la base de datos de suscripciones.  
   
-#### Para eliminar una publicación de combinación  
+#### <a name="to-delete-a-merge-publication"></a>Para eliminar una publicación de combinación  
   
 1.  Realice una de las siguientes operaciones:  
   
-    -   Para eliminar una publicación, ejecute [sp_dropmergepublication & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md) en el publicador de la base de datos de publicación.  
+    -   Para eliminar una publicación, ejecute [sp_dropmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md) en la base de datos de publicación del publicador.  
   
-    -   Para eliminar todas las publicaciones de y quitar todos los objetos de replicación de base de datos publicada, ejecute [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) en el publicador. Especifique el valor de **merge** para **@type**. (Opcional) Si el distribuidor no puede tener acceso o si el estado de la base de datos es sospechosa o sin conexión, especifique un valor de **1** para **@force**. (Opcional) Especifique el nombre de la base de datos **@dbname** Si [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) no se ejecuta en la base de datos de publicación.  
+    -   Para eliminar todas las publicaciones de una base de datos publicada y quitar todos sus objetos de replicación, ejecute [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) en el publicador. Especifique el valor de **merge** para **@type**. (Opcional) Si no se puede tener acceso al distribuidor, o bien si el estado de la base de datos es sospechoso o está sin conexión, especifique un valor de **1** para **@force**. (Opcional) Especifique el nombre de la base de datos para **@dbname** si [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) no se ejecuta en la base de datos de publicación.  
   
         > [!NOTE]  
-        >  Especifica el valor de **1** para **@force** puede dejar los objetos de publicación relacionadas con la replicación en la base de datos.  
+        >  Especificar un valor de **1** para **@force** puede dejar los objetos de publicación relacionados con replicación en la base de datos.  
   
-2.  (Opcional) Si esta base de datos no tiene otras publicaciones, ejecute [sp_replicationdboption & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) Para deshabilitar la publicación de la base de datos actual mediante la replicación de mezcla.  
+2.  (Opcional) Si esta base de datos no tiene otras publicaciones, ejecute [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) para deshabilitar la publicación de la base de datos actual con la replicación de mezcla.  
   
-3.  (Opcional) En el suscriptor en la base de datos de suscripción, ejecute [sp_mergesubscription_cleanup & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md) Para quitar los metadatos de replicación restantes en la base de datos de suscripción.  
+3.  (Opcional) En la base de datos de suscripciones del suscriptor, ejecute [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md) para quitar los metadatos de replicación restantes en la base de datos de suscripciones.  
   
 ###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  Este ejemplo muestra cómo quitar una publicación transaccional y deshabilitar la publicación transaccional para una base de datos. Este ejemplo supone que se quitaron todas las suscripciones previamente. Para obtener más información, consulte [Delete a Pull Subscription](../../../relational-databases/replication/delete-a-pull-subscription.md) o [Delete a Push Subscription](../../../relational-databases/replication/delete-a-push-subscription.md).  
@@ -93,68 +97,68 @@ caps.handback.revision: 35
 ##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
  Puede eliminar publicación mediante programación utilizando Replication Management Objects (RMO). Las clases RMO que utiliza para quitar una publicación dependen del tipo de publicación que quita.  
   
-#### Para quitar una publicación transaccional o de instantáneas  
+#### <a name="to-remove-a-snapshot-or-transactional-publication"></a>Para quitar una publicación transaccional o de instantáneas  
   
-1.  Crear una conexión al publicador mediante la <xref:Microsoft.SqlServer.Management.Common.ServerConnection> clase.  
+1.  Cree una conexión al publicador mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Cree una instancia de la <xref:Microsoft.SqlServer.Replication.TransPublication> clase.  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransPublication>.  
   
-3.  Establecer el <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> y <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> Propiedades de la publicación y establezca el <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> propiedad en la conexión creada en el paso 1.  
+3.  Establezca las propiedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> y <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para la publicación y la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la conexión creada en el paso 1.  
   
-4.  Compruebe el <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> propiedad para comprobar que la publicación existe. Si el valor de esta propiedad es **false**, significa que las propiedades de la publicación del paso 3 se definieron incorrectamente, o bien que la publicación no existe.  
+4.  Compruebe la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para asegurarse de que la publicación existe. Si el valor de esta propiedad es **false**, significa que las propiedades de la publicación del paso 3 se definieron incorrectamente, o bien que la publicación no existe.  
   
-5.  Llame a la <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> método.  
+5.  Llame al método <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A>.  
   
 6.  (Opcional) Si no existe ninguna otra publicación transaccional para esta base de datos, ésta se puede deshabilitar para la publicación transaccional del siguiente modo:  
   
-    1.  Cree una instancia de la <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> clase. Establecer el <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> propiedad a la instancia de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1.  
+    1.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationDatabase>. Establezca la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> del en la instancia <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1.  
   
-    2.  Llame a la <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> método. Si este método devuelve **false**, confirme que la base de datos existe.  
+    2.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Si este método devuelve **false**, confirme que la base de datos existe.  
   
-    3.  Establecer el <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> propiedad **false**.  
+    3.  Establezca la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> en **False**.  
   
-    4.  Llame a la <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> método.  
+    4.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
   
 7.  Cierre las conexiones.  
   
-#### Para quitar una publicación de combinación  
+#### <a name="to-remove-a-merge-publication"></a>Para quitar una publicación de combinación  
   
-1.  Crear una conexión al publicador mediante la <xref:Microsoft.SqlServer.Management.Common.ServerConnection> clase.  
+1.  Cree una conexión al publicador mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Cree una instancia de la <xref:Microsoft.SqlServer.Replication.MergePublication> clase.  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergePublication>.  
   
-3.  Establecer el <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> y <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> Propiedades de la publicación y establezca el <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> propiedad en la conexión creada en el paso 1.  
+3.  Establezca las propiedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> y <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para la publicación y la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la conexión creada en el paso 1.  
   
-4.  Compruebe el <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> propiedad para comprobar que la publicación existe. Si el valor de esta propiedad es **false**, significa que las propiedades de la publicación del paso 3 se definieron incorrectamente, o bien que la publicación no existe.  
+4.  Compruebe la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para asegurarse de que la publicación existe. Si el valor de esta propiedad es **false**, significa que las propiedades de la publicación del paso 3 se definieron incorrectamente, o bien que la publicación no existe.  
   
-5.  Llame a la <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> método.  
+5.  Llame al método <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A>.  
   
 6.  (Opcional) Si no existe ninguna otra publicación de combinación para esta base de datos, ésta se puede deshabilitar para la publicación de combinación del siguiente modo:  
   
-    1.  Cree una instancia de la <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> clase. Establecer el <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> propiedad a la instancia de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1.  
+    1.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationDatabase>. Establezca la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> del en la instancia <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1.  
   
-    2.  Llame a la <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> método. Si este método devuelve **false**, compruebe que la base de datos existe.  
+    2.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Si este método devuelve **false**, compruebe que la base de datos existe.  
   
-    3.  Establecer el <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> propiedad **false**.  
+    3.  Establezca la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> en **False**.  
   
-    4.  Llame a la <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> método.  
+    4.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
   
 7.  Cierre las conexiones.  
   
 ###  <a name="PShellExample"></a> Ejemplos (RMO)  
  En el siguiente ejemplo se elimina una publicación transaccional Si no existe ninguna otra publicación transaccional para esta base de datos, también se deshabilita la publicación transaccional.  
   
- [!code-csharp[HowTo#rmo_DropTranPub](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_droptranpub)]  
+ [!code-cs[HowTo#rmo_DropTranPub](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_droptranpub)]  
   
  [!code-vb[HowTo#rmo_vb_DropTranPub](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_droptranpub)]  
   
  En el siguiente ejemplo se elimina una publicación de combinación. Si no existe ninguna otra publicación de combinación para esta base de datos, también se deshabilita la publicación de combinación.  
   
- [!code-csharp[HowTo#rmo_DropMergePub](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_dropmergepub)]  
+ [!code-cs[HowTo#rmo_DropMergePub](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_dropmergepub)]  
   
  [!code-vb[HowTo#rmo_vb_DropMergePub](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_dropmergepub)]  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conceptos sobre los procedimientos almacenados del sistema de replicación](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Publicar datos y objetos de base de datos](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

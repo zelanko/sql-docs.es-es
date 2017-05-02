@@ -1,28 +1,32 @@
 ---
-title: "Crear &#237;ndices XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "índices [XML en SQL Server]"
-  - "índices XML [SQL Server], crear"
+title: "Creación de índices XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [XML in SQL Server]
+- XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e7dbb0a712f1edbe0234a68e2481915b76bec90a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear &#237;ndices XML
+# <a name="create-xml-indexes"></a>Crear índices XML
   En este tema se describe cómo crear índices XML principales y secundarios.  
   
-## Crear un índice XML principal  
+## <a name="creating-a-primary-xml-index"></a>Crear un índice XML principal  
  Para crear un índice XML principal, use la instrucción DDL [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]. Los índices XML no admiten todas las opciones que están disponibles para índices que no son XML.  
   
  Cuando cree un índice XML, tenga en cuenta lo siguiente:  
@@ -50,11 +54,11 @@ caps.handback.revision: 19
 -   Al crear un índice XML, la opción ARITHABORT debe configurarse en ON. Para consultar, insertar, eliminar o actualizar valores en la columna XML usando métodos de tipo de datos XML, debe establecerse la misma opción en la conexión. De lo contrario, los métodos de tipo de datos XML darán error.  
   
     > [!NOTE]  
-    >  Las vistas de catálogo incluyen información acerca de los índices XML. Pero no se admite **sp_helpindex**. Los ejemplos que se ofrecen más adelante en este tema muestran cómo consultar las vistas de catálogo para encontrar información de índices XML.  
+    >  Las vistas de catálogo incluyen información acerca de los índices XML. Pero no se admite **sp_helpindex** . Los ejemplos que se ofrecen más adelante en este tema muestran cómo consultar las vistas de catálogo para encontrar información de índices XML.  
   
  Al crear o volver a crear un índice XML principal o una columna de tipo de datos XML que contiene valores de los tipos de esquema XML **xs:date** o **xs:dateTime** (o cualquier subtipo de estos tipos) que tengan un año de menos de 1, se producirá un error en la creación del índice en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] permitía estos valores, por lo que este problema se puede producir al crear índices en una base de datos generada en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obtener más información, vea [Comparar XML con tipo y XML sin tipo](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
-### Ejemplo: Crear un índice XML principal  
+### <a name="example-creating-a-primary-xml-index"></a>Ejemplo: Crear un índice XML principal  
  En la mayoría de los ejemplos, se utiliza la tabla T (pk INT PRIMARY KEY, xCol XML) con una columna XML sin tipo. Se pueden ampliar a XML con tipo de forma directa. Para simplificar el trabajo, las consultas se describen para instancias de datos XML como se indica a continuación:  
   
 ```  
@@ -78,7 +82,7 @@ caps.handback.revision: 19
 CREATE PRIMARY XML INDEX idx_xCol on T (xCol)  
 ```  
   
-## Crear un índice XML secundario  
+## <a name="creating-a-secondary-xml-index"></a>Crear un índice XML secundario  
  Use la instrucción DDL [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] para crear índices XML secundarios y especificar el tipo de índice XML secundario que quiere.  
   
  Cuando cree índices XML secundarios, tenga en cuenta lo siguiente:  
@@ -98,7 +102,7 @@ FROM    sys.xml_indexes;
   
  Los valores que se devuelven en la columna **secondary_type_desc** pueden ser NULL, PATH, VALUE o PROPERTY. El valor devuelto para el índice XML principal es NULL.  
   
-### Ejemplo: Crear índices XML secundarios  
+### <a name="example-creating-secondary-xml-indexes"></a>Ejemplo: Crear índices XML secundarios  
  El ejemplo siguiente muestra cómo crear índices XML secundarios. En el ejemplo también se muestra información acerca de los índices XML que ha creado.  
   
 ```  
@@ -198,7 +202,7 @@ DROP TABLE T;
 Go  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Índices XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [Datos XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

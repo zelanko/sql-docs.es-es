@@ -1,34 +1,38 @@
 ---
-title: "CLR (categor&#237;a de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clases de eventos [SQL Server], categoría de eventos CLR"
-  - "clases de eventos de SQL Server, categoría de eventos CLR"
-  - "CLR, categoría de eventos [SQL Server]"
+title: "CLR (categoría de eventos) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event classes [SQL Server], CLR event category
+- SQL Server event classes, CLR event category
+- CLR event category [SQL Server]
 ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31222b30465a65341e3a00c0567790ae93bf24ff
+ms.lasthandoff: 04/11/2017
+
 ---
-# CLR (categor&#237;a de eventos)
+# <a name="clr-event-category"></a>CLR (categoría de eventos)
   La categoría de eventos **CLR** incluye clases de eventos producidas por la ejecución de objetos [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  
- ## Assembly Load (clase de eventos) 
+ ## <a name="assembly-load-event-class"></a>Assembly Load (clase de eventos) 
   La clase de evento **Assembly Load** se produce cuando se ejecuta una solicitud de carga de un ensamblado.  
   
  Incluya la clase de evento **Assembly Load** en seguimientos en los que desea supervisar las cargas de ensamblado. Puede resultar útil al solucionar problemas de una consulta que utilice CLR, de un servidor que se ejecute lentamente al ejecutar consultas CLR o al supervisar un servidor para recopilar información de usuarios, bases de datos, éxitos, etc. sobre las cargas de ensamblado.  
   
-## Columnas de datos de la clase de evento Assembly Load  
+## <a name="assembly-load-event-class-data-columns"></a>Columnas de datos de la clase de evento Assembly Load  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -40,7 +44,7 @@ caps.handback.revision: 17
 |**GroupID**|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**LoginName**|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con el formato DOMINIO\nombreDeUsuario).|11|Sí|  
-|**LoginSID**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals**. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
+|**LoginSID**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals** . Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |**ObjectID**|**int**|Id. de ensamblado|22|Sí|  
@@ -53,13 +57,13 @@ caps.handback.revision: 17
 |**Correcto**|**int**|Indica si la carga de ensamblado se realizó satisfactoriamente (1) o produjo errores (0).|23|Sí|  
 |**TextData**|**ntext**|"Carga de ensamblado satisfactoria" si la carga se realiza satisfactoriamente; de lo contrario, "Error en la carga de ensamblado".|1|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [Ensamblados &#40;motor de la base de datos&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)  
   
    
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)  
   
   

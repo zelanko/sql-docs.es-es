@@ -1,35 +1,39 @@
 ---
-title: "Comprimir datos | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "paginar la compresión [motor de base de datos]"
-  - "índices [SQL Server], comprimidos"
-  - "índices comprimidos [SQL Server]"
-  - "compresión del almacenamiento [motor de base de datos]"
-  - "tablas [SQL Server], comprimidas"
-  - "almacenamiento [SQL Server], comprimido"
-  - "compresión [SQL Server]"
-  - "compresión de fila [motor de base de datos]"
-  - "compresión [SQL Server], acerca de las tablas y los índices comprimidos"
-  - "compresión de datos [motor de base de datos]"
-  - "tablas comprimidas [SQL Server]"
+title: "Compresión de datos | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-compression
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- page compression [Database Engine]
+- indexes [SQL Server], compressed
+- compressed indexes [SQL Server]
+- storage compression [Database Engine]
+- tables [SQL Server], compressed
+- storage [SQL Server], compressed
+- compression [SQL Server]
+- row compression [Database Engine]
+- compression [SQL Server], about compressed tables and indexes
+- data compression [Database Engine]
+- compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: 60
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 686f793e6579b54278a4d43e11e764efda84972e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Comprimir datos
+# <a name="data-compression"></a>Data Compression
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] admiten la compresión de fila y de página para las tablas e índices de almacén de filas, así como la compresión de almacén de columnas y de archivo de almacén de columnas para las tablas e índices de almacén de columnas.  
@@ -57,14 +61,14 @@ caps.handback.revision: 60
 > [!NOTE]  
 >  También es posible comprimir los datos con el formato de algoritmo GZIP. Se trata de un paso adicional y es más adecuado para comprimir partes de los datos para archivar datos antiguos para su almacenamiento a largo plazo. Los datos comprimidos con la función de COMPRESS no pueden indexarse. Para obtener más información, vea [COMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/compress-transact-sql.md).  
   
-## Consideraciones sobre el uso de la compresión de filas y páginas  
+## <a name="considerations-for-when-you-use-row-and-page-compression"></a>Consideraciones sobre el uso de la compresión de filas y páginas  
  Cuando utilice la compresión de filas y páginas, tenga en cuenta las consideraciones siguientes:  
   
 -   Los detalles de la compresión de datos se pueden cambiar sin previo aviso en los Service Pack o versiones posteriores.
 
 -   La compresión está disponible en [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]  
   
--   La compresión no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Características compatibles con las ediciones de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   La compresión no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   La compresión no está disponible para las tablas del sistema.  
   
@@ -109,15 +113,15 @@ caps.handback.revision: 60
 -   Las tablas que implementaron el formato de almacenamiento vardecimal en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] conservarán ese valor cuando se actualicen. Puede aplicar la compresión de filas a una tabla que tenga el formato de almacenamiento vardecimal. Sin embargo, como la compresión de filas es un superconjunto del formato de almacenamiento vardecimal, no hay ninguna razón para conservar el formato de almacenamiento vardecimal. Los valores decimales no obtienen una compresión adicional cuando se combina el formato de almacenamiento vardecimal con la compresión de filas. Puede aplicar la compresión de páginas a una tabla que tenga el formato de almacenamiento vardecimal; sin embargo, es probable que las columnas con formato de almacenamiento vardecimal no consigan una compresión adicional.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite el formato de almacenamiento vardecimal, pero como la compresión de nivel de fila logra los mismos objetivos, el formato de almacenamiento vardecimal ha quedado en desuso. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite el formato de almacenamiento vardecimal; sin embargo, como la compresión de nivel de fila consigue los mismos objetivos, el formato de almacenamiento vardecimal ha quedado desusado. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-## Usar la compresión de almacén de columnas y de archivo de almacén de columnas  
+## <a name="using-columnstore-and-columnstore-archive-compression"></a>Usar la compresión de almacén de columnas y de archivo de almacén de columnas  
   
 ||  
 |-|  
-|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)) y [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)].|  
+|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)) y [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)].|  
   
-### Conceptos básicos  
+### <a name="basics"></a>Conceptos básicos  
  Las tablas y los índices de almacén de columnas siempre se almacenan con compresión de almacén de columnas. El tamaño de los datos de almacén de columnas se puede reducir más configurando una compresión adicional denominada compresión de archivo.  Para realizar la compresión de archivo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta el algoritmo de compresión de Microsoft XPRESS en los datos. La compresión de archivo se agrega o se quita mediante los tipos de compresión de datos siguientes:  
   
 -   Use la compresión de datos **COLUMNSTORE_ARCHIVE** para comprimir los datos de almacén de columnas con la compresión de archivo.  
@@ -166,12 +170,12 @@ REBUILD PARTITION = ALL WITH (
 ) ;  
 ```  
   
-### Rendimiento  
+### <a name="performance"></a>Rendimiento  
  Al comprimir los índices de almacén de columnas con la compresión de archivo, el índice se ejecutará más lentamente que los índices de almacén de columnas que no tienen la compresión de archivo.  Use la compresión de archivo solo cuando se puede permitirse emplear tiempo y recursos de CPU adicionales para comprimir y recuperar los datos.  
   
  La contrapartida del rendimiento más lento es el almacenamiento reducido, que sirve para los datos que no son de acceso frecuente. Por ejemplo, si tiene una partición para cada mes de datos y la mayor parte de la actividad tiene lugar en los meses más recientes, podría archivar los meses más antiguos para reducir los requisitos de almacenamiento.  
   
-### Metadatos  
+### <a name="metadata"></a>Metadatos  
  Las vistas del sistema siguientes contienen información sobre la compresión de datos para los índices clúster:  
   
 -   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md): las columnas **type** y **type_desc** incluyen CLUSTERED COLUMNSTORE y NONCLUSTERED COLUMNSTORE.  
@@ -180,7 +184,7 @@ REBUILD PARTITION = ALL WITH (
   
  El procedimiento [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) no se aplica a los índices de almacén de columnas.  
   
-## Cómo afecta la compresión a tablas e índices con particiones  
+## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>Cómo afecta la compresión a tablas e índices con particiones  
  Cuando use la compresión de datos con tablas e índices con particiones, tenga en cuenta las consideraciones siguientes:  
   
 -   Cuando se divide una partición utilizando la instrucción ALTER PARTITION, ambas particiones heredan el atributo de compresión de datos de la partición original.  
@@ -217,10 +221,10 @@ REBUILD PARTITION = ALL WITH (
   
      La operación de quitar un índice clúster OFFLINE es muy rápida porque solo se quitan los niveles superiores de índices clústeres. Cuando se quita un índice clúster ONLINE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe volver a generar el montón dos veces, una vez para el paso 1 y otra para el paso 2.  
   
-## Cómo afecta la compresión a la replicación 
+## <a name="how-compression-affects-replication"></a>Cómo afecta la compresión a la replicación 
 ||  
 |-|  
-|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|   
+|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|   
  Cuando utilice la compresión de datos con replicación, tenga en cuenta las consideraciones siguientes:  
   
 -   Cuando el Agente de instantáneas genera el script de esquema inicial, el nuevo esquema utilizará los mismos valores de compresión para la tabla y sus índices. La compresión no se puede habilitar solo en la tabla y no en el índice.  
@@ -242,10 +246,10 @@ REBUILD PARTITION = ALL WITH (
 |No replicar el esquema de partición y no comprimir los datos en el suscriptor.|False|False|No se crean scripts para la partición o para los valores de compresión.|  
 |Comprimir la tabla en el suscriptor si todas las particiones se comprimen en el publicador, pero no replicar el esquema de partición.|False|True|Comprueba si todas las particiones están habilitadas para la compresión.<br /><br /> Se crean scripts para la compresión en el nivel de tabla.|  
   
-## Cómo afecta la compresión a los demás componentes de SQL Server 
+## <a name="how-compression-affects-other-sql-server-components"></a>Cómo afecta la compresión a los demás componentes de SQL Server 
 ||  
 |-|  
-|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|
+|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|
    
  La compresión se produce en el motor de almacenamiento y los datos se presentan a la mayoría de los demás componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un estado sin comprimir. Esto limita los efectos de la compresión en los demás componentes para lo siguiente:  
   
@@ -265,7 +269,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   Al habilitar la compresión, se puede hacer que los planes de consulta cambien porque los datos se almacenan utilizando un número diferente de páginas y de filas por cada página.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Implementación de la compresión de fila](../../relational-databases/data-compression/row-compression-implementation.md)   
  [Implementación de la compresión de página](../../relational-databases/data-compression/page-compression-implementation.md)   
  [Implementación de la compresión Unicode](../../relational-databases/data-compression/unicode-compression-implementation.md)   
@@ -277,3 +281,5 @@ REBUILD PARTITION = ALL WITH (
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
   
+
+

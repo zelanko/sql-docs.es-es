@@ -1,28 +1,32 @@
 ---
-title: "Crear &#237;ndices no cl&#250;ster | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "creación de índices [SQL Server], índices no agrupados"
-  - "índices no agrupados [SQL Server], crear"
-  - "índices no agrupados [SQL Server], restricción UNIQUE"
-  - "índices [SQL Server], no agrupados"
-  - "índices no agrupados [SQL Server], restricción PRIMARY KEY"
+title: "Creación de índices no agrupados | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index creation [SQL Server], nonclustered indexes
+- nonclustered indexes [SQL Server], creating
+- nonclustered indexes [SQL Server], UNIQUE constraint
+- indexes [SQL Server], nonclustered
+- nonclustered indexes [SQL Server], PRIMARY KEY constraint
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38b54a03706cbb44f0c4001d00d5505201940be6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear &#237;ndices no cl&#250;ster
+# <a name="create-nonclustered-indexes"></a>Crear índices no clúster
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Puede crear índices no clúster en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un índice no clúster es una estructura de índice independiente de los datos almacenados en una tabla que reordena una o más columnas seleccionadas. Con frecuencia, los índices no clúster pueden ayudarle a encontrar datos más rápidamente que cuando se busca en la tabla subyacente; las consultas a veces pueden responderse completamente con los datos del índice no clúster o el índice no clúster puede apuntar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] hacia las filas de la tabla subyacente. Normalmente, los índices no clúster se crean para mejorar el rendimiento de las consultas usadas con frecuencia no cubiertas por el índice clúster o para buscar filas en una tabla sin un índice clúster (denominado montón). Se pueden crear varios índices no clúster en una tabla o una vista indizada.  
@@ -54,18 +58,18 @@ caps.handback.revision: 41
   
      De forma predeterminada, se crea un índice no clúster si no hay ninguno clúster especificado. El número máximo de índices no clúster que se pueden crear por tabla es 999. Se incluyen los índices creados por restricciones PRIMARY KEY o UNIQUE, pero no los índices XML.  
   
--   **Índice no clúster en una vista indizada **  
+-   **Índice no clúster en una vista indizada**  
   
      Una vez creado un índice clúster único en una vista, se pueden crear índices no clúster. Para obtener más información, vea [Crear vistas indexadas](../../relational-databases/views/create-indexed-views.md).  
   
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner**.  
+ Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para crear un índice no clúster mediante el Diseñador de tablas  
+#### <a name="to-create-a-nonclustered-index-by-using-the-table-designer"></a>Para crear un índice no clúster mediante el Diseñador de tablas  
   
 1.  En el Explorador de objetos, expanda la base de datos que contiene la tabla en la que desea crear un índice no clúster.  
   
@@ -73,19 +77,19 @@ caps.handback.revision: 41
   
 3.  Haga clic con el botón derecho en la tabla en la que quiere crear un índice no agrupado y seleccione **Diseño**.  
   
-4.  En el menú **Diseñador de tablas**, haga clic en **Índices o claves**.  
+4.  En el menú **Diseñador de tablas** , haga clic en **Índices o claves**.  
   
-5.  En el cuadro de diálogo **Índices o claves**, haga clic en **Agregar**.  
+5.  En el cuadro de diálogo **Índices o claves** , haga clic en **Agregar**.  
   
-6.  Seleccione el nuevo índice en el cuadro de texto **Clave principal o única, o índice seleccionado**.  
+6.  Seleccione el nuevo índice en el cuadro de texto **Clave principal o única, o índice seleccionado** .  
   
-7.  En la cuadrícula, seleccione **Crear como CLUSTERED** y elija **No** en la lista desplegable que aparece a la derecha de la propiedad.  
+7.  En la cuadrícula, seleccione **Crear como CLUSTERED**y elija **No** en la lista desplegable que aparece a la derecha de la propiedad.  
   
 8.  Haga clic en **Cerrar**.  
   
-9. En el menú **Archivo**, haga clic en **Guardar***table_name*.  
+9. En el menú **Archivo** , haga clic en **Guardar***table_name*.  
   
-#### Para crear un índice no clúster mediante el Explorador de objetos  
+#### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>Para crear un índice no clúster mediante el Explorador de objetos  
   
 1.  En el Explorador de objetos, expanda la base de datos que contiene la tabla en la que desea crear un índice no clúster.  
   
@@ -93,13 +97,13 @@ caps.handback.revision: 41
   
 3.  Expanda la tabla en la que desea crear un índice no clúster.  
   
-4.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y, luego, **Índice no agrupado…**.  
+4.  Haga clic con el botón derecho en la carpeta **Índices** , seleccione **Nuevo índice**y, luego, **Índice no agrupado…**.  
   
 5.  En el cuadro de diálogo **Nuevo índice** , en la página **General** , escriba el nombre del nuevo índice en el cuadro **Nombre de índice** .  
   
 6.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar**.  
   
-7.  En el cuadro de diálogo **Seleccionar columnas de***nombre_tabla*, active las casillas de las columnas de tabla que se van a agregar al índice no agrupado.  
+7.  En el cuadro de diálogo **Seleccionar columnas de***nombre_tabla* , active las casillas de las columnas de tabla que se van a agregar al índice no agrupado.  
   
 8.  Haga clic en **Aceptar**.  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 41
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para crear un índice no clúster en una tabla  
+#### <a name="to-create-a-nonclustered-index-on-a-table"></a>Para crear un índice no clúster en una tabla  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -133,3 +137,4 @@ caps.handback.revision: 41
  Para obtener más información, vea [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+

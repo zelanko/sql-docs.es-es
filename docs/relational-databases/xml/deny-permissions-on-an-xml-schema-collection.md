@@ -1,27 +1,31 @@
 ---
-title: "Denegar permisos en una colecci&#243;n de esquemas XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "denegar permisos [SQL Server], colecciones de servidores XML"
+title: "Revocación de los permisos en una colección de esquemas XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- denying permissions [SQL Server], XML server collections
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 803150cde12790eefbeea8c8f4ef0ad32dc350fe
+ms.lasthandoff: 04/11/2017
+
 ---
-# Denegar permisos en una colecci&#243;n de esquemas XML
+# <a name="deny-permissions-on-an-xml-schema-collection"></a>Denegar permisos en una colección de esquemas XML
   Es posible denegar permisos para crear una colección de esquemas XML nueva o utilizar una existente.  
   
-## Denegar permisos para crear una colección de esquemas XML  
+## <a name="denying-permission-to-create-an-xml-schema-collection"></a>Denegar permisos para crear una colección de esquemas XML  
  Puede denegar los permisos para crear una colección de esquemas XML del modo siguiente:  
   
 -   Denegar el permiso ALTER en el esquema relacional.  
@@ -30,7 +34,7 @@ caps.handback.revision: 34
   
 -   Denegar el permiso ALTER ANY SCHEMA en la base de datos. En este caso, la entidad de seguridad no puede crear una colección de esquemas XML en ninguna parte de la base de datos. Observe que al denegar los permisos ALTER o CONTROL en la base de datos, se denegarán todos los permisos en todos los objetos de la base de datos.  
   
-## Denegar permisos en un objeto de colección de esquemas XML  
+## <a name="denying-permissions-on-an-xml-schema-collection-object"></a>Denegar permisos en un objeto de colección de esquemas XML  
  A continuación, se enumeran los permisos que pueden denegarse en una colección de esquemas XML y los resultados:  
   
 -   Denegar el permiso ALTER deniega a la entidad de seguridad la posibilidad de modificar el contenido de la colección de esquemas XML.  
@@ -43,10 +47,10 @@ caps.handback.revision: 34
   
 -   Denegar el permiso EXECUTE deniega a la entidad de seguridad la posibilidad de insertar o actualizar los valores de las columnas, variables y parámetros que se escriben o limitan por parte de la colección de esquemas XML. También deniega a la entidad de seguridad la posibilidad de consultar los valores en las mismas variables y columnas de tipo xml.  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
  Los escenarios de los ejemplos siguientes muestran el funcionamiento de los permisos de los esquemas XML En cada ejemplo se crea la base de datos de prueba, los esquemas relacionales y los inicios de sesión necesarios. A estos inicios de sesión se les conceden los permisos necesarios para la colección de esquemas XML. Al final, cada ejemplo realiza las operaciones de limpieza necesarias.  
   
-### A. Evitar que un usuario cree una colección de esquemas XML  
+### <a name="a-preventing-a-user-from-creating-an-xml-schema-collection"></a>A. Evitar que un usuario cree una colección de esquemas XML  
  Una de las formas de evitar que un usuario cree una colección de esquemas XML consiste en denegar el permiso ALTER en un esquema relacional. Esto se muestra en el ejemplo siguiente.  
   
  El ejemplo crea un usuario, `TestLogin1`, y una base de datos. Además del esquema `dbo` , también se crea un esquema relacional en la base de datos. Inicialmente, el permiso `CREATE XML SCHEMA` permite al usuario crear una colección de esquemas en cualquier lugar de la base de datos. A continuación, se deniega el permiso `ALTER` al usuario en uno de los esquemas relacionales. Esto impide al usuario crear una colección de esquemas XML en ese esquema relacional.  
@@ -108,7 +112,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### B. Denegar permisos en una colección de esquemas XML  
+### <a name="b-denying-permissions-on-an-xml-schema-collection"></a>B. Denegar permisos en una colección de esquemas XML  
  El ejemplo siguiente muestra cómo se puede denegar a un inicio de sesión un permiso específico en una colección de esquemas XML existente. En este ejemplo, se deniega el permiso REFERENCES a un inicio de sesión de prueba para una colección de esquemas XML existente.  
   
  El ejemplo crea un usuario, `TestLogin1`, y una base de datos. Además del esquema `dbo` , también se crea un esquema relacional en la base de datos. Inicialmente, el permiso `CREATE XML SCHEMA` permite al usuario crear una colección de esquemas en cualquier lugar de la base de datos.  
@@ -187,7 +191,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Comparar XML con tipo y XML sin tipo](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Colecciones de esquemas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   
  [Requisitos y limitaciones de las colecciones de esquemas XML en el servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)   

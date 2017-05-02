@@ -1,22 +1,26 @@
 ---
-title: "Eliminar archivos de blob de copia de seguridad con concesiones activas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Eliminación de archivos de blob de copia de seguridad con concesiones activas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8590c7e7adbf796d44347b66a790f98c13667bc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Eliminar archivos de blob de copia de seguridad con concesiones activas
+# <a name="deleting-backup-blob-files-with-active-leases"></a>Eliminar archivos de blob de copia de seguridad con concesiones activas
   Cuando se hace copia de seguridad en el almacenamiento de Windows Azure, o cuando se restaura del mismo, SQL Server adquiere una concesión infinita con el fin de bloquear el acceso exclusivo al blob. Cuando el proceso de copia de seguridad o de restauración se ha completado correctamente, se libera la concesión. Si una copia de seguridad o una restauración dan error, el proceso de copia de seguridad intenta limpiar los blobs no válidos. Sin embargo, si el error de la copia de seguridad se debe a un error de conectividad en la red mantenido o prolongado, es posible que el proceso de copia de seguridad no pueda obtener acceso al blob y este podría quedar huérfano. Esto significa que no se puede escribir en el blob o que el blob no se puede eliminar hasta que no se libera la concesión. En este tema se describe cómo liberar la concesión y eliminar el blob.  
   
  Para obtener más información sobre los tipos de concesiones, lea este [artículo](http://go.microsoft.com/fwlink/?LinkId=275664).  
@@ -25,7 +29,7 @@ caps.handback.revision: 16
   
  Si se produce un error de restauración, las restauraciones posteriores no se bloquean y, por tanto, la concesión activa puede no suponer ningún problema. Solo es necesario interrumpir la concesión cuando se tiene que sobrescribir o eliminar el blob.  
   
-## Administrar blobs huérfanos  
+## <a name="managing-orphaned-blobs"></a>Administrar blobs huérfanos  
  En los pasos siguientes se describe cómo realizar la limpieza después de una actividad de copia de seguridad o restauración con errores. Todos los pasos se pueden realizar mediante scripts de PowerShell. En la sección siguiente se proporciona un ejemplo de código:  
   
 1.  **Identificar blobs que tienen concesiones** : si tiene un script o un proceso que ejecuta los procesos de copia de seguridad, es posible que pueda capturar el error dentro del script o del proceso y usarlo para limpiar los blobs.   También puede usar las propiedades LeaseStats y LeastState para identificar los blobs que tienen concesiones. Una vez identificados los blobs, se recomienda que revise la lista y compruebe la validez del archivo de copia de seguridad antes de eliminar el blob.  
@@ -81,9 +85,9 @@ caps.handback.revision: 16
   
      **Interrumpir concesiones**  
   
-     **La concesión de \<dirección URL del blob> es una concesión de restauración: solo verá este mensaje si tiene un blob con una concesión de restauración que todavía esté activa.**  
+     **La concesión de \<dirección URL del blob es una concesión de restauración: solo verá este mensaje si tiene un blob con una concesión de restauración que todavía esté activa.**  
   
-     **La concesión en \<dirección URL del blob> no es una concesión de restauración. Interrumpiendo la concesión en \<dirección URL del blob>.**  
+     **La concesión en \<dirección URL del blob no es una concesión de restauración. Interrumpiendo la concesión en \<dirección URL del blob.**  
   
 ```  
 param(  
@@ -154,7 +158,7 @@ if($lockedBlobs.Count -gt 0)
   
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   

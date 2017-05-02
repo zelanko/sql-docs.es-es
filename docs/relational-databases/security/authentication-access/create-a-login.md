@@ -1,65 +1,69 @@
 ---
-title: "Crear un inicio de sesi&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.login.status.f1"
-  - "sql13.swb.login.effectivepermissions.f1"
-  - "sql13.swb.login.general.f1"
-  - "sql13.swb.login.databaseaccess.f1"
-  - "sql13.swb.login.serverroles.f1"
-helpviewer_keywords: 
-  - "autenticación [SQL Server], inicios de sesión"
-  - "inicios de sesión [SQL Server], crear"
-  - "crear inicios de sesión con Management Studio"
-  - "Create login [SQL Server]"
-  - "inicios de sesión de SQL Server"
+title: "Creación de un inicio de sesión | Microsoft Docs"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.login.status.f1
+- sql13.swb.login.effectivepermissions.f1
+- sql13.swb.login.general.f1
+- sql13.swb.login.databaseaccess.f1
+- sql13.swb.login.serverroles.f1
+helpviewer_keywords:
+- authentication [SQL Server], logins
+- logins [SQL Server], creating
+- creating logins with Management Studio
+- Create login [SQL Server]
+- SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 297b1f20843f16a1885676e4428331f75ced8cd6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear un inicio de sesi&#243;n
+# <a name="create-a-login"></a>Crear un inicio de sesión
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   En este tema se describe cómo crear un inicio de sesión en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] o en [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un inicio de sesión es la identidad de la persona o proceso que se está conectando a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ##  <a name="Background"></a> Información previa  
- Un inicio de sesión es una entidad de seguridad o una entidad que puede ser autenticada por un sistema seguro. Los usuarios necesitan iniciar sesión para conectarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Puede crear un inicio de sesión basado en una entidad de seguridad de Windows (como un usuario de dominio o un grupo de dominio de Windows) o puede crear un inicio de sesión que no lo esté (como un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
+ Un inicio de sesión es una entidad de seguridad o una entidad que puede ser autenticada por un sistema seguro. Los usuarios necesitan iniciar sesión para conectarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Puede crear un inicio de sesión basado en una entidad de seguridad de Windows (como un usuario de dominio o un grupo de dominio de Windows) o puede crear un inicio de sesión que no lo esté (como un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
   
-> **NOTA:** Para usar la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el [!INCLUDE[ssDE](../../../includes/ssde-md.md)] debe utilizar la autenticación de modo mixto. Para obtener más información, vea [Elegir un modo de autenticación](../../../relational-databases/security/choose-an-authentication-mode.md).  
+> **NOTA:** Para usar la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , el [!INCLUDE[ssDE](../../../includes/ssde-md.md)] debe utilizar la autenticación de modo mixto. Para obtener más información, vea [Elegir un modo de autenticación](../../../relational-databases/security/choose-an-authentication-mode.md).  
   
- Como entidad de seguridad, se pueden conceder permisos a los inicios de sesión. El ámbito de un inicio de sesión es todo el [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Para establecer conexión con una base de datos concreta de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un inicio de sesión debe estar asignado a un usuario de la base de datos. Los permisos dentro de la base de datos se conceden y deniegan al usuario de la base de datos, no al inicio de sesión. Los permisos que tienen como ámbito la instancia completa de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (por ejemplo, el permiso **CREATE ENDPOINT**) se pueden conceder a un inicio de sesión.  
+ Como entidad de seguridad, se pueden conceder permisos a los inicios de sesión. El ámbito de un inicio de sesión es todo el [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Para establecer conexión con una base de datos concreta de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un inicio de sesión debe estar asignado a un usuario de la base de datos. Los permisos dentro de la base de datos se conceden y deniegan al usuario de la base de datos, no al inicio de sesión. Los permisos que tienen como ámbito la instancia completa de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (por ejemplo, el permiso **CREATE ENDPOINT** ) se pueden conceder a un inicio de sesión.  
   
-> **NOTA:** Cuando un inicio de sesión se conecta a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la identidad se valida en la base de datos maestra. Use los usuarios de base de datos independiente para autenticar conexiones [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]y [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] en el nivel de base de datos. No se necesita un inicio de sesión si se usan usuarios de base de datos independiente. Una base de datos independiente es una base de datos que está aislada de otras bases de datos y de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (y de la base de datos maestra) que hospeda la base de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite usuarios de base de datos independientes para la autenticación de Windows y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Al usar [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], se combinan las reglas de usuarios de la base de datos independiente con las de firewall de nivel de base de datos. Para obtener más información, vea [Usuarios de base de datos independiente: hacer que la base de datos sea portátil](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+> **NOTA:** Cuando un inicio de sesión se conecta a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la identidad se valida en la base de datos maestra. Use los usuarios de base de datos independiente para autenticar conexiones [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]y [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] en el nivel de base de datos. No se necesita un inicio de sesión si se usan usuarios de base de datos independiente. Una base de datos independiente es una base de datos que está aislada de otras bases de datos y de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (y de la base de datos maestra) que hospeda la base de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite usuarios de base de datos independientes para la autenticación de Windows y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Al usar [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], se combinan las reglas de usuarios de la base de datos independiente con las de firewall de nivel de base de datos. Para obtener más información, vea [Usuarios de base de datos independiente: hacer que la base de datos sea portátil](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ##  <a name="Security"></a> Seguridad  
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiere el permiso **ALTER ANY LOGIN** o **ALTER LOGIN** en el servidor.  
   
- [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] requiere la pertenencia al rol **loginmanager**.  
+ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] requiere la pertenencia al rol **loginmanager** .  
   
 ##  <a name="SSMSProcedure"></a> Creación de un inicio de sesión utilizando SSMS  
   
   
 1.  En el Explorador de objetos, expanda la carpeta de la instancia de servidor en la que desea crear el nuevo inicio de sesión.  
   
-2.  Haga clic con el botón derecho en la carpeta **Seguridad**, seleccione **Nuevo** y, después, seleccione **Inicio de sesión…**.  
+2.  Haga clic con el botón derecho en la carpeta **Seguridad** , seleccione **Nuevo**y, después, seleccione **Inicio de sesión…**.  
   
 3.  En el cuadro de diálogo **Inicio de sesión - Nuevo** , en la página **General** , escriba el nombre de un usuario en el cuadro **Nombre de inicio de sesión** . Como alternativa, haga clic en **(Buscar)** para abrir el cuadro de diálogo **Seleccionar usuarios o grupos** .  
   
      Si hace clic en **Buscar**:  
   
-    1.  En **Seleccionar este tipo de objeto**, haga clic en **Tipos de objeto** para abrir el cuadro de diálogo **Tipos de objeto** y seleccione alguna o todas las opciones siguientes: **Entidades de seguridad integradas**, **Grupos** y **Usuarios**. Las opciones **Entidades de seguridad integradas** y **Usuarios** están seleccionadas de forma predeterminada. Cuando termine, haga clic en **Aceptar**.  
+    1.  En **Seleccionar este tipo de objeto**, haga clic en **Tipos de objeto** para abrir el cuadro de diálogo **Tipos de objeto** y seleccione alguna o todas las opciones siguientes: **Entidades de seguridad integradas**, **Grupos**y **Usuarios**. Las opciones**Entidades de seguridad integradas** y **Usuarios** están seleccionadas de forma predeterminada. Cuando termine, haga clic en **Aceptar**.  
   
     2.  En **Desde esta ubicación**, haga clic en **Ubicaciones** para abrir el cuadro de diálogo **Ubicaciones** y seleccione una de las ubicaciones de servidor disponibles. Cuando termine, haga clic en **Aceptar**.  
   
@@ -95,44 +99,44 @@ caps.handback.revision: 29
   
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### Opciones adicionales  
+### <a name="additional-options"></a>Opciones adicionales  
  El cuadro de diálogo **Inicio de sesión - Nuevo** también proporciona opciones de cuatro páginas adicionales: **Roles del servidor**, **Asignación de usuarios**, **Elementos protegibles**y **Estado**.  
   
-### Roles del servidor  
+### <a name="server-roles"></a>Roles del servidor  
  La página **Roles de servidor** enumera todos los roles posibles que se pueden asignar al nuevo inicio de sesión. Las siguientes opciones están disponibles:  
   
- Casilla **bulkadmin**  
+ Casilla**bulkadmin**   
  Los miembros del rol fijo de servidor **bulkadmin** pueden ejecutar la instrucción BULK INSERT.  
   
- Casilla **dbcreator**  
+ Casilla**dbcreator**   
  Los miembros del rol fijo de servidor **dbcreator** pueden crear, modificar, quitar y restaurar cualquier base de datos.  
   
- Casilla **diskadmin**  
+ Casilla**diskadmin**   
  Los miembros del rol fijo de servidor **diskadmin** pueden administrar archivos de disco.  
   
- Casilla **processadmin**  
+ Casilla**processadmin**   
  Los miembros del rol fijo de servidor **processadmin** pueden finalizar procesos mediante la ejecución de una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
- Casilla **public**  
+ Casilla**public**   
  Todos los usuarios, grupos y roles de SQL Server pertenecen al rol fijo de servidor **public** de forma predeterminada.  
   
- Casilla **securityadmin**  
- Los miembros del rol fijo de servidor **securityadmin** administran los inicios de sesión y sus propiedades. Administran los permisos de servidor GRANT, DENY y REVOKE. También administran los permisos de base de datos GRANT, DENY y REVOKE. Asimismo, pueden restablecer contraseñas para inicios de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Casilla**securityadmin**   
+ Los miembros del rol fijo de servidor **securityadmin** administran los inicios de sesión y sus propiedades. Administran los permisos de servidor GRANT, DENY y REVOKE. También administran los permisos de base de datos GRANT, DENY y REVOKE. Asimismo, pueden restablecer contraseñas para inicios de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- Casilla **serveradmin**  
+ Casilla**serveradmin**   
  Los miembros del rol fijo de servidor **serveradmin** pueden cambiar opciones de configuración en el servidor y cerrar el servidor.  
   
- Casilla **setupadmin**  
+ Casilla**setupadmin**   
  Los miembros del rol fijo de servidor **setupadmin** pueden agregar y quitar servidores vinculados, y ejecutar algunos procedimientos almacenados del sistema.  
   
- Casilla **sysadmin**  
+ Casilla**sysadmin**   
  Los miembros del rol fijo de servidor **sysadmin** pueden realizar cualquier actividad en el [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-### Asignación de usuarios  
+### <a name="user-mapping"></a>Asignación de usuarios  
  La página **Asignación de usuarios** enumera todas las bases de datos posibles y las pertenencias al rol de base de datos en esas bases de datos que se pueden aplicar al inicio de sesión. Las bases de datos seleccionadas determinan las pertenencias a roles disponibles para el inicio de sesión. En esta página están disponibles las opciones siguientes:  
   
  **Usuarios asignados a este inicio de sesión**  
- Selecciona las bases de datos a las que se puede obtener acceso con este inicio de sesión. Cuando se seleccione una base de datos, sus roles de bases de datos válidos se mostrarán en el panel **Miembros del rol de base de datos para:** *nombre_baseDeDatos*.  
+ Selecciona las bases de datos a las que se puede obtener acceso con este inicio de sesión. Cuando se seleccione una base de datos, sus roles de bases de datos válidos se mostrarán en el panel **Miembros del rol de base de datos para:** *nombre_baseDeDatos* .  
   
  **Mapa**  
  Permite que el inicio de sesión obtenga acceso a las bases de datos que se muestran a continuación.  
@@ -146,13 +150,13 @@ caps.handback.revision: 29
  **Esquema predeterminado**  
  Especifica el esquema predeterminado del usuario. Cuando se crea un usuario por primera vez, el esquema predeterminado es **dbo**. Es posible especificar un esquema predeterminado que aún no existe. No puede especificar un esquema predeterminado para un usuario asignado a un grupo, un certificado o una clave asimétrica de Windows.  
   
- **Cuenta de invitado habilitada para:** *nombre_baseDeDatos*  
+ **Guest account enabled for:**  *database_name*  
  Atributo de solo lectura que indica si la cuenta de invitado está habilitada en la base de datos seleccionada. Utilice la página **Estado** del cuadro de diálogo **Propiedades de inicio de sesión** de la cuenta de invitado para habilitarla o deshabilitarla.  
   
- **Miembros del rol de base de datos para:** *nombre_BaseDeDatos*  
+ **Database role membership for:**  *database_name*  
  Selecciona los roles para el usuario en la base de datos especificada. Todos los usuarios son miembros del rol **public** de todas las bases de datos, y no pueden eliminarse. Para obtener más información sobre los roles de base de datos, vea [Roles de nivel de base de datos](../../../relational-databases/security/authentication-access/database-level-roles.md).  
   
-### Elementos protegibles  
+### <a name="securables"></a>Elementos protegibles  
  La página **Elementos protegibles** muestra todos los elementos protegibles posibles y los permisos en esos elementos protegibles que se pueden conceder al inicio de sesión. En esta página están disponibles las opciones siguientes:  
   
  **Cuadrícula superior**  
@@ -162,9 +166,9 @@ caps.handback.revision: 29
   
 1.  Haga clic en **Buscar**.  
   
-2.  En el cuadro de diálogo **Agregar objetos**, seleccione una de las opciones siguientes: **Objetos específicos…**, **Todos los objetos de los tipos…** o **El servidor***nombre_servidor*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  En el cuadro de diálogo **Agregar objetos** , seleccione una de las opciones siguientes: **Objetos específicos…**, **Todos los objetos de los tipos…**o **El servidor***nombre_servidor*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **NOTA:** Cuando se selecciona **El servidor***nombre_servidor*, se rellena automáticamente la cuadrícula superior con todos los objetos que se pueden proteger de ese servidor.  
+    > **NOTA:** Cuando se selecciona **El servidor***nombre_servidor* , se rellena automáticamente la cuadrícula superior con todos los objetos que se pueden proteger de ese servidor.  
   
 3.  Si selecciona **Objetos específicos**:  
   
@@ -204,7 +208,7 @@ caps.handback.revision: 29
  **Denegar**  
  Active esta casilla para denegar el permiso al inicio de sesión. Desactívela para revocar el permiso.  
   
-### Estado  
+### <a name="status"></a>Estado  
  La página **Estado** enumera algunas de las opciones de autenticación y autorización que se pueden configurar en el inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seleccionado.  
   
  En esta página están disponibles las opciones siguientes:  
@@ -221,7 +225,7 @@ caps.handback.revision: 29
   
  Seleccione esta opción para habilitar o deshabilitar este inicio de sesión. Esta opción utiliza la instrucción ALTER LOGIN con las opciones ENABLE o DISABLE.  
   
- **Autenticación de SQL Server**  
+ **SQL Server Authentication**  
  La casilla **Inicio de sesión bloqueado** solo está disponible si el inicio de sesión se conecta usando la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y si este se ha bloqueado. Este valor es solo de lectura. Para desbloquear un inicio de sesión fuera el que se bloquea, ejecute ALTER LOGIN con la opción de UNLOCK.  
   
 ##  <a name="TsqlProcedure"></a> Creación de un inicio de sesión utilizando la autenticación de Windows mediante T-SQL  
@@ -241,7 +245,7 @@ caps.handback.revision: 29
   
     ```  
   
-## Creación de un inicio de sesión utilizando la autenticación de SQL Server mediante SSMS  
+## <a name="create-a-login-using-sql-server-authentication-with-ssms"></a>Creación de un inicio de sesión utilizando la autenticación de SQL Server mediante SSMS  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -270,7 +274,8 @@ caps.handback.revision: 29
   
 -   Para conceder un permiso a un inicio de sesión, vea [Conceder un permiso a una entidad de seguridad](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
+

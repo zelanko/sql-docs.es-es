@@ -1,33 +1,37 @@
 ---
-title: "Navegar por c&#243;digo y texto | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "búsquedas [SQL Server Management Studio], incrementales"
-  - "mouse [SQL Server Management Studio]"
-  - "marcadores [SQL Server Management Studio]"
-  - "Editor de consultas [SQL Server Management Studio], código de navegación"
-  - "Editor de consultas [SQL Server Management Studio], Ir al símbolo del sistema"
-  - "búsquedas incrementales [SQL Server Management Studio]"
-  - "Editor de consultas [SQL Server Management Studio], marcadores"
-  - "Editor de consultas [SQL Server Management Studio], mouse"
-  - "navegar por el código"
-  - "Ir a, comando"
+title: "Exploración de código y texto | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- searches [SQL Server Management Studio], incremental
+- mouse [SQL Server Management Studio]
+- bookmarks [SQL Server Management Studio]
+- Query Editor [SQL Server Management Studio], navigating code
+- Query Editor [SQL Server Management Studio], Go To Command
+- incremental searches [SQL Server Management Studio]
+- Query Editor [SQL Server Management Studio], bookmarks
+- Query Editor [SQL Server Management Studio], mouse
+- navigating code
+- Go To command
 ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e62b052b5d17b5cefb7a2e081cb3b3e5503e9b9f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Navegar por c&#243;digo y texto
+# <a name="navigate-code-and-text"></a>Navegar por código y texto
   Para moverse por el texto utilice:  
   
 -   Marcadores  
@@ -41,13 +45,13 @@ caps.handback.revision: 24
 > [!NOTE]  
 >  Para obtener una lista completa de las teclas de método abreviado, vea [Métodos abreviados de teclado de SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
   
-## Navegar con marcadores  
+## <a name="navigating-with-bookmarks"></a>Navegar con marcadores  
  Para modificar un documento en cualquier lugar y volver después a la ubicación original, agregue un marcador. Mediante métodos abreviados de teclado, podrá establecer marcadores y moverse por ellos. Vea los marcadores en la ventana de marcadores.  
   
-## Búsqueda incremental  
+## <a name="incremental-search"></a>Búsqueda incremental  
  La búsqueda incremental permite navegar directamente a diferentes ubicaciones del documento actual según se van escribiendo los caracteres de búsqueda. Es posible obtener acceso a la búsqueda incremental mediante los métodos abreviados de teclado.  
   
-## Navegar con el mouse (ratón) y el teclado  
+## <a name="navigating-with-the-mouse-and-keyboard"></a>Navegar con el mouse (ratón) y el teclado  
  La manera más habitual de navegar por el texto es utilizar el mouse y las teclas de navegación:  
   
 -   Utilice las teclas FLECHA IZQUIERDA y FLECHA DERECHA para moverse un carácter cada vez o combinadas con la tecla CTRL para desplazarse una palabra cada vez. Con las teclas FLECHA ARRIBA y FLECHA ABAJO se mueve una línea cada vez.  
@@ -62,8 +66,8 @@ caps.handback.revision: 24
   
 -   Utilice la combinación de teclas CTRL+FLECHA ARRIBA y CTRL+FLECHA ABAJO para desplazar la vista sin mover el punto de inserción.  
   
-## Ir a, comando  
- Use el comando**Ir a** para ir a un número de línea específico. Para que la numeración de líneas esté visible, en el cuadro de diálogo **Opciones** , haga clic en **Editor de texto**, **Todos los lenguajes**, **General**y, finalmente, seleccione **Números de línea**.  
+## <a name="go-to-command"></a>Ir a, comando  
+ Use el comando **Ir a** para ir a un número de línea específico. Para que la numeración de líneas esté visible, en el cuadro de diálogo **Opciones** , haga clic en **Editor de texto**, **Todos los lenguajes**, **General**y, finalmente, seleccione **Números de línea**.  
   
  **Para ir a un número de línea específico**  
   

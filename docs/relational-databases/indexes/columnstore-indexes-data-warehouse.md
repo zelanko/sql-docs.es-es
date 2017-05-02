@@ -1,22 +1,26 @@
 ---
-title: "&#205;ndices de almac&#233;n de columnas para el almacenamiento de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Almacenamiento de datos de índices de almacén de columnas | Microsoft Docs"
+ms.custom: 
+ms.date: 01/27/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 caps.latest.revision: 15
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ba866cdea9d6158affc31e74572bb9610ab94489
+ms.lasthandoff: 04/11/2017
+
 ---
-# &#205;ndices de almac&#233;n de columnas para el almacenamiento de datos
+# <a name="columnstore-indexes---data-warehouse"></a>Almacenamiento de datos de índices de almacén de columnas
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Los índices de almacén de columnas, junto con las particiones, son esenciales para crear un almacenamiento de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -137,11 +141,12 @@ END TRAN
  Use el aislamiento de instantánea (SI) para garantizar la coherencia transaccional y los aislamientos de instantánea de lectura confirmada (RCSI) para garantizar la coherencia de nivel de instrucción de las consultas en índices de almacén de columnas. Esto permite que las consultas se ejecuten sin bloquear escrituras de datos. Este comportamiento de no bloqueo también reduce notablemente la probabilidad de que se produzcan interbloqueos en las transacciones complejas. Para obtener más información, consulte [Aislamiento de instantáneas en SQL Server](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) en MSDN.  
   
 ## <a name="see-also"></a>Vea también  
- [Guía de índices de almacén de columnas](../Topic/Columnstore%20Indexes%20Guide.md)   
- [Carga de datos de índices de almacén de columnas](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
- [Resumen de las características de los índices de almacén de columnas para cada versión](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)   
+ Guía de índices de almacén de columnas   
+ Carga de datos de índices de almacén de columnas   
+ Resumen de las características de los índices de almacén de columnas para cada versión   
  [Rendimiento de las consultas de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Introducción al almacén de columnas para análisis operativos en tiempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  [Desfragmentación de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

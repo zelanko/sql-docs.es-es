@@ -1,40 +1,44 @@
 ---
-title: "Crear tablas e &#237;ndices con particiones | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.createpartition.progress.f1"
-  - "sql13.swb.createpartition.partitioncolumn.f1"
-  - "sql13.swb.createpartition.createjob.f1"
-  - "sql13.swb.createpartition.finish.f1"
-  - "sql13.swb.createpartition.selectoutput.f1"
-  - "sql13.swb.createpartition.partitionfunction.f1"
-  - "sql13.swb.createpartition.partitionscheme.f1"
-  - "sql13.swb.createpartition.getstart.f1"
-  - "sql13.swb.createpartition.mappartition.f1"
-  - "sql13.swb.createpartition.summary.f1"
-helpviewer_keywords: 
-  - "índices con particiones [SQL Server], crear"
-  - "esquemas de partición [SQL Server], crear"
-  - "funciones de partición [SQL Server], crear"
-  - "tablas con particiones [SQL Server], crear"
-  - "funciones de partición [SQL Server]"
-  - "esquemas de partición [SQL Server]"
+title: "Creación de tablas e índices con particiones | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.createpartition.progress.f1
+- sql13.swb.createpartition.partitioncolumn.f1
+- sql13.swb.createpartition.createjob.f1
+- sql13.swb.createpartition.finish.f1
+- sql13.swb.createpartition.selectoutput.f1
+- sql13.swb.createpartition.partitionfunction.f1
+- sql13.swb.createpartition.partitionscheme.f1
+- sql13.swb.createpartition.getstart.f1
+- sql13.swb.createpartition.mappartition.f1
+- sql13.swb.createpartition.summary.f1
+helpviewer_keywords:
+- partitioned indexes [SQL Server], creating
+- partition schemes [SQL Server], creating
+- partition functions [SQL Server], creating
+- partitioned tables [SQL Server], creating
+- partition functions [SQL Server]
+- partition schemes [SQL Server]
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 453f7ed733752453c8de05053fb37527c75d6612
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear tablas e &#237;ndices con particiones
+# <a name="create-partitioned-tables-and-indexes"></a>Crear tablas e índices con particiones
   Puede crear una tabla o índice con particiones en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los datos en tablas e índices con particiones se dividen horizontalmente en unidades que pueden propagarse por más de un grupo de archivos de la base de datos. Las particiones pueden hacer que las tablas y los índices grandes sean más escalables y fáciles de administrar.  
   
  La creación de una tabla o índice con particiones tiene lugar normalmente en cuatro partes:  
@@ -74,7 +78,7 @@ caps.handback.revision: 35
 ####  <a name="Permissions"></a> Permisos  
  La creación de una tabla con particiones requiere el permiso CREATE TABLE en la base de datos y el permiso ALTER en el esquema en el que se crea la tabla. Crear un índice con particiones requiere el permiso ALTER en la tabla o vista donde se crea el índice. Crear una tabla o índice con particiones requiere alguno de los permisos adicionales siguientes:  
   
--   Permiso ALTER ANY DATASPACE. De forma predeterminada, este permiso corresponde a los miembros del rol fijo de servidor **sysadmin** y a los roles fijos de base de datos **db_owner** y **db_ddladmin**.  
+-   Permiso ALTER ANY DATASPACE. De forma predeterminada, este permiso corresponde a los miembros del rol fijo de servidor **sysadmin** y a los roles fijos de base de datos **db_owner** y **db_ddladmin** .  
   
 -   Permiso CONTROL o ALTER en la base de datos en la que se está creando la función de partición y el esquema de partición.  
   
@@ -83,11 +87,11 @@ caps.handback.revision: 35
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
  Siga los pasos de este procedimiento para crear uno o más grupos de archivos, los archivos correspondientes y una tabla. Hará referencia a estos objetos en el siguiente procedimiento al crear la tabla con particiones.  
   
-#### Para crear nuevos grupos de archivos en una tabla con particiones  
+#### <a name="to-create-new-filegroups-for-a-partitioned-table"></a>Para crear nuevos grupos de archivos en una tabla con particiones  
   
 1.  En el Explorador de objetos, haga clic con el botón derecho en la base de datos en la que quiere crear una tabla con particiones y seleccione **Propiedades**.  
   
-2.  En el cuadro de diálogo **Propiedades de la base de datos:** *nombre_base_de_datos*, en **Seleccionar una página**, haga clic en **Grupos de archivos**.  
+2.  En el cuadro de diálogo **Propiedades de la base de datos:** *nombre_base_de_datos* , en **Seleccionar una página**, haga clic en **Grupos de archivos**.  
   
 3.  En **Filas**, haga clic en **Agregar**. En la nueva fila, escriba el nombre del grupo de archivos.  
   
@@ -106,9 +110,9 @@ caps.handback.revision: 35
   
 9. Expanda la carpeta de **Tablas** y cree una tabla como haría normalmente. Para obtener más información, vea [Crear tablas &#40;motor de base de datos&#41;](../../relational-databases/tables/create-tables-database-engine.md). O bien, puede especificar una tabla existente en el procedimiento siguiente.  
   
-#### Para crear una tabla con particiones  
+#### <a name="to-create-a-partitioned-table"></a>Para crear una tabla con particiones  
   
-1.  Haga clic con el botón derecho en la tabla donde quiere crear particiones, seleccione **Almacenamiento** y, después, haga clic en **Crear partición…**.  
+1.  Haga clic con el botón derecho en la tabla donde quiere crear particiones, seleccione **Almacenamiento**y, después, haga clic en **Crear partición…**.  
   
 2.  En el **Asistente para la creación de particiones**, en la página **Asistente para la creación de particiones** , haga clic en **Siguiente**.  
   
@@ -152,7 +156,7 @@ caps.handback.revision: 35
      Selecciona la fecha de inicio para los valores de rango de las particiones.  
   
      **Fecha de finalización**  
-     Selecciona la fecha de finalización para los valores de rango de las particiones. Si ha seleccionado la opción **Límite izquierdo** en la página **Asignar particiones**, esta fecha será el último valor para cada grupo de archivos o partición. Si ha seleccionado la opción **Límite derecho** en la página **Asignar particiones**, esta fecha será el primer valor en el grupo de archivos siguiente al último.  
+     Selecciona la fecha de finalización para los valores de rango de las particiones. Si ha seleccionado la opción **Límite izquierdo** en la página **Asignar particiones** , esta fecha será el último valor para cada grupo de archivos o partición. Si ha seleccionado la opción **Límite derecho** en la página **Asignar particiones** , esta fecha será el primer valor en el grupo de archivos siguiente al último.  
   
      **Intervalo de fechas**  
      Selecciona la granularidad de fechas o el incremento de los valores de rango que desea para cada partición.  
@@ -200,7 +204,7 @@ caps.handback.revision: 35
   
                 -   Si selecciona **Día**, especifique la fecha del mes que desea que se ejecute la programación de trabajo y con qué frecuencia debe repetirse la programación de trabajo en meses. Por ejemplo, si desea que la programación de trabajo se ejecute el decimoquinto día de cada mes, seleccione **Día** y escriba "15" en el primer cuadro y "2" en el segundo cuadro. Tenga en cuenta que el mayor número permitido en el segundo cuadro es "99".  
   
-                -   Si selecciona **El**, seleccione el día concreto de la semana del mes en que desea que se ejecute la programación de trabajo y con qué frecuencia debe repetirse la programación de trabajo en meses. Por ejemplo, si desea que la programación de trabajo se ejecute el último día de la semana de cada mes, seleccione **Día**, seleccione **último** en la primera lista y **día de la semana** en la segunda lista y, a continuación, escriba "2" en el último cuadro. En las primeras dos listas, también puede seleccionar **primero**, **segundo**, **tercero** o **cuarto**, así como días de la semana concretos (por ejemplo: domingo o miércoles). Tenga en cuenta que el mayor número permitido en el último cuadro es "99".  
+                -   Si selecciona **El**, seleccione el día concreto de la semana del mes en que desea que se ejecute la programación de trabajo y con qué frecuencia debe repetirse la programación de trabajo en meses. Por ejemplo, si desea que la programación de trabajo se ejecute el último día de la semana de cada mes, seleccione **Día**, seleccione **último** en la primera lista y **día de la semana** en la segunda lista y, a continuación, escriba "2" en el último cuadro. En las primeras dos listas, también puede seleccionar **primero**, **segundo**, **tercero**o **cuarto**, así como días de la semana concretos (por ejemplo: domingo o miércoles). Tenga en cuenta que el mayor número permitido en el último cuadro es "99".  
   
         2.  Debajo de **Frecuencia diaria**, especifique la frecuencia con que se repite la programación de trabajo en el día en que se ejecuta:  
   
@@ -212,7 +216,7 @@ caps.handback.revision: 35
   
         3.  Debajo de **Duración**, en **Fecha de inicio**, escriba la fecha en que desea que la programación de trabajo inicie su ejecución. Seleccione **Fecha de finalización** o **Sin fecha de finalización** para indicar cuándo se debe detener la ejecución de la programación de trabajo. Si selecciona **Fecha de finalización**, escriba la fecha en que desea que deje de ejecutarse la programación de trabajo.  
   
-    5.  Si selecciona **Una vez**, debajo de **Única repetición**, en el cuadro **Fecha**, escriba la fecha en que se ejecutará la programación de trabajo. En el cuadro **Hora** , especifique la hora a la que se ejecutará la programación de trabajo. Especifique la hora, minuto y segundo del día, así como a.m. o p.m.  
+    5.  Si selecciona **Una vez**, debajo de **Única repetición**, en el cuadro **Fecha** , escriba la fecha en que se ejecutará la programación de trabajo. En el cuadro **Hora** , especifique la hora a la que se ejecutará la programación de trabajo. Especifique la hora, minuto y segundo del día, así como a.m. o p.m.  
   
     6.  Debajo de **Resumen**, en **Descripción**, compruebe que todos los valores de la programación de trabajo son correctos.  
   
@@ -242,10 +246,10 @@ caps.handback.revision: 35
      Crea un informe que contiene los resultados del Asistente para la creación de particiones. Las opciones son **Ver informe**, **Guardar informe en archivo**, **Copiar informe al Portapapeles**y **Enviar informe como correo electrónico**.  
   
      **Ver informe**  
-     Abre el cuadro de diálogo **Ver informe**, que contiene un informe de texto del progreso del Asistente para la creación de particiones.  
+     Abre el cuadro de diálogo **Ver informe** , que contiene un informe de texto del progreso del Asistente para la creación de particiones.  
   
      **Guardar informe en archivo**  
-     Abre el cuadro de diálogo **Guardar informe como**.  
+     Abre el cuadro de diálogo **Guardar informe como** .  
   
      **Copiar informe al Portapapeles**  
      Copia los resultados del informe de progreso del asistente al Portapapeles.  
@@ -259,7 +263,7 @@ caps.handback.revision: 35
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para crear una tabla con particiones  
+#### <a name="to-create-a-partitioned-table"></a>Para crear una tabla con particiones  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -342,7 +346,7 @@ caps.handback.revision: 35
     GO  
     ```  
   
-#### Para determinar si se crean particiones de una tabla  
+#### <a name="to-determine-if-a-table-is-partitioned"></a>Para determinar si se crean particiones de una tabla  
   
 1.  La consulta siguiente devuelve una o más filas si la tabla tiene particiones `PartitionTable` . Si la tabla no tiene particiones, no se devuelve ninguna fila.  
   
@@ -358,7 +362,7 @@ caps.handback.revision: 35
     GO  
     ```  
   
-#### Para determinar los valores de límite para una tabla con particiones  
+#### <a name="to-determine-the-boundary-values-for-a-partitioned-table"></a>Para determinar los valores de límite para una tabla con particiones  
   
 1.  La consulta siguiente devuelve los valores de límite para cada partición de la tabla `PartitionTable` .  
   
@@ -379,7 +383,7 @@ caps.handback.revision: 35
     ORDER BY p.partition_number;  
     ```  
   
-#### Para determinar la columna de partición de una tabla con particiones  
+#### <a name="to-determine-the-partition-column-for-a-partitioned-table"></a>Para determinar la columna de partición de una tabla con particiones  
   
 1.  La consulta siguiente devuelve el nombre de la columna de partición de la tabla. `PartitionTable`.  
   
@@ -408,7 +412,7 @@ caps.handback.revision: 35
   
  Para obtener más información, vea:  
   
--   [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md)  
+-   [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
   
 -   [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)  
   

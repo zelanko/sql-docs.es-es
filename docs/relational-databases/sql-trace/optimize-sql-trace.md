@@ -1,27 +1,31 @@
 ---
-title: "Optimizar el seguimiento de SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "hora [SQL Server], seguimientos"
-  - "Seguimiento de SQL, rendimiento"
-  - "seguimientos [SQL Server], rendimiento"
-  - "rendimiento [SQL Server], seguimiento"
+title: "Optimización del seguimiento de SQL | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- time [SQL Server], traces
+- SQL Trace, performance
+- traces [SQL Server], performance
+- performance [SQL Server], trace
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2eb701bd4ade246ebaf7b796a49c207b0f89e5e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Optimizar el seguimiento de SQL
+# <a name="optimize-sql-trace"></a>Optimizar el seguimiento de SQL
   Aunque la ejecución de Seguimiento de SQL supone un costo de rendimiento porque utiliza recursos del sistema para recopilar datos, dicho costo se puede reducir al mínimo de muchas maneras. Para minimizar el costo de rendimiento que provoca un seguimiento, intente las siguientes acciones:  
   
 -   Considere el uso del símbolo del sistema para ejecutar seguimientos. El uso de una interfaz gráfica de usuario afecta negativamente al rendimiento. Para obtener más información, vea [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).  
@@ -42,7 +46,7 @@ caps.handback.revision: 25
   
 -   Limite el número de eventos que se devuelven. Con [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , puede limitar el número de eventos devueltos guardando el seguimiento en una tabla y configurando el número máximo de filas. Los resultados del seguimiento siguen mostrándose en la pantalla de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] tras alcanzar el número máximo de filas, pero se elimina el costo de registrar los resultados en una tabla.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Filtrar un seguimiento](../../relational-databases/sql-trace/filter-a-trace.md)  
   
   

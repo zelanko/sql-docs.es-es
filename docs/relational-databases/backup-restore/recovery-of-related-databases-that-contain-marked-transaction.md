@@ -1,34 +1,38 @@
 ---
-title: "Recuperaci&#243;n de bases de datos relacionadas que contienen transacciones marcadas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "registros de transacciones [SQL Server], marcas"
-  - "STOPBEFOREMARK, opción [RESTORE, instrucción]"
-  - "STOPATMARK, opción [RESTORE, instrucción]"
-  - "recuperación a un momento dado [SQL Server]"
-  - "restaurar bases de datos [SQL Server], momento dado"
-  - "recuperación [SQL Server], bases de datos"
-  - "restaurar [SQL Server], momento dado"
-  - "transacciones [SQL Server], recuperar hasta una marca"
-  - "recuperación de base de datos [SQL Server]"
-  - "transacciones marcadas [SQL Server], restaurar"
-  - "restauraciones de bases de datos [SQL Server], momento dado"
+title: "Recuperación de bases de datos relacionadas que contienen transacciones marcadas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transaction logs [SQL Server], marks
+- STOPBEFOREMARK option [RESTORE statement]
+- STOPATMARK option [RESTORE statement]
+- point in time recovery [SQL Server]
+- restoring databases [SQL Server], point in time
+- recovery [SQL Server], databases
+- restoring [SQL Server], point in time
+- transactions [SQL Server], recovering to a mark
+- database recovery [SQL Server]
+- marked transactions [SQL Server], restoring
+- database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8848fbbe73b377a329c8b3af29c8a6a32881f50b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Recuperaci&#243;n de bases de datos relacionadas que contienen transacciones marcadas
+# <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recuperación de bases de datos relacionadas que contienen transacciones marcadas
   Este tema solo es pertinente para las bases de datos que contienen transacciones marcadas y utilizan los modelos de recuperación completa u optimizado para cargas masivas de registros.  
   
  Para obtener información sobre los requisitos para la restauración a un punto de recuperación específico, vea [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
@@ -41,12 +45,12 @@ caps.handback.revision: 37
   
 -   Después de la confirmación de una transacción marcada, se inserta una fila en la tabla [logmarkhistory](../../relational-databases/system-tables/logmarkhistory-transact-sql.md) de **msdb**.  
   
--   Si la transacción marcada abarca varias bases de datos del mismo servidor de base de datos o de diferentes servidores, las marcas se registran en los registros de todas las bases de datos afectadas. Para obtener más información, vea [Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/use marked transactions to recover related databases consistently.md).  
+-   Si la transacción marcada abarca varias bases de datos del mismo servidor de base de datos o de diferentes servidores, las marcas se registran en los registros de todas las bases de datos afectadas. Para obtener más información, vea [Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
 > [!NOTE]  
->  Para obtener información sobre cómo marcar transacciones, vea [Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/use marked transactions to recover related databases consistently.md).  
+>  Para obtener información sobre cómo marcar transacciones, vea [Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
-## Sintaxis de Transact-SQL para insertar marcas con nombre en un registro de transacciones  
+## <a name="transact-sql-syntax-for-inserting-named-marks-into-a-transaction-log"></a>Sintaxis de Transact-SQL para insertar marcas con nombre en un registro de transacciones  
  Para insertar marcas en los registros de transacciones, use la instrucción [BEGIN TRANSACTION](../../t-sql/language-elements/begin-transaction-transact-sql.md) y la cláusula WITH MARK [*description*]. La marca recibe el mismo nombre que la transacción. La descripción ( *description* ) es opcional y es un texto descriptivo de la marca, no su nombre. Por ejemplo, el nombre de la transacción y de la marca que se crea en la siguiente instrucción `BEGIN TRANSACTION` es `Tx1`:  
   
 ```wmimof  
@@ -55,10 +59,10 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
  El registro de transacciones registra el nombre de la marca (nombre de la transacción), su descripción, la base de datos, el usuario, la información de **datetime** y el número de flujo de registro (LSN). La información de **datetime** se utiliza con el nombre de la marca para identificar la marca de forma única.  
   
- Para obtener información sobre cómo insertar una marca en una transacción que abarca varias bases de datos, vea [Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/use marked transactions to recover related databases consistently.md).  
+ Para obtener información sobre cómo insertar una marca en una transacción que abarca varias bases de datos, vea [Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
-## Sintaxis de Transact-SQL para recuperar hasta una marca  
- Si el destino es una transacción marcada con la instrucción[RESTORE LOG](../Topic/RESTORE%20\(Transact-SQL\).md), puede usar una de las cláusulas siguientes para detenerse en la marca o inmediatamente antes:  
+## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Sintaxis de Transact-SQL para recuperar hasta una marca  
+ Si el destino es una transacción marcada con la instrucción[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md), puede usar una de las cláusulas siguientes para detenerse en la marca o inmediatamente antes:  
   
 -   Use la cláusula WITH STOPATMARK = **'***<nombre_de_marca>***'** para especificar que la transacción marcada es el punto de recuperación.  
   
@@ -79,9 +83,9 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
  [Restaurar una base de datos en una transacción marcada &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
-### Preparar las copias de seguridad de registros  
+### <a name="preparing-the-log-backups"></a>Preparar las copias de seguridad de registros  
  En este ejemplo, una estrategia correcta de copia de seguridad para estas bases de datos relacionadas sería:  
   
 1.  Utilizar el modelo de recuperación completa para ambas bases de datos.  
@@ -90,11 +94,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
      La copia de seguridad de las bases de datos se puede realizar de forma secuencial o simultánea.  
   
-3.  Antes de realizar la copia de seguridad del registro de transacciones, marque una transacción que se ejecute en todas las bases de datos. Para obtener información sobre cómo crear transacciones marcadas, vea [Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/use marked transactions to recover related databases consistently.md).  
+3.  Antes de realizar la copia de seguridad del registro de transacciones, marque una transacción que se ejecute en todas las bases de datos. Para obtener información sobre cómo crear transacciones marcadas, vea [Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
 4.  Realizar una copia de seguridad del registro de transacciones en ambas bases de datos.  
   
-### Recuperar la base de datos a una transacción marcada  
+### <a name="recovering-the-database-to-a-marked-transaction"></a>Recuperar la base de datos a una transacción marcada  
  **Para restaurar la copia de seguridad**  
   
 1.  Cree [copias de seguridad del final del registro](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) de las bases de datos no dañadas, si es posible.  
@@ -109,11 +113,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
 6.  Recupere cada base de datos.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Aplicar copias de seguridad de registros de transacción &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/use marked transactions to recover related databases consistently.md)   
+ [Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
  [Información general sobre restauración y recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [Planear y realizar secuencias de restauración &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  

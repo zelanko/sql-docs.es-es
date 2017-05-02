@@ -1,25 +1,29 @@
 ---
-title: "Cambiar el nombre de las estad&#237;sticas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cambiar el nombre de las estadísticas"
-  - "estadísticas [SQL Server], cambio de nombre"
+title: "Cambio de nombre de las estadísticas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- renaming statistics
+- statistics [SQL Server], renaming
 ms.assetid: a3bed7b7-3dc5-4b33-b1c6-67c27f573764
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 00d72d7a3fc3d152cd5b05056812ba93041be67d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Cambiar el nombre de las estad&#237;sticas
+# <a name="rename-statistics"></a>Cambiar el nombre de las estadísticas
   Puede cambiar el nombre de un objeto de estadísticas en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **En este tema**  
@@ -48,7 +52,7 @@ caps.handback.revision: 11
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para cambiar el nombre de un objeto de estadísticas  
+#### <a name="to-rename-a-statistics-object"></a>Para cambiar el nombre de un objeto de estadísticas  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

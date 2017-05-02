@@ -1,44 +1,48 @@
 ---
-title: "Administrar el seguimiento de cambios (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "seguimiento de cambios de datos [SQL Server]"
-  - "seguimiento de cambios [SQL Server], sobrecarga"
-  - "seguimiento de cambios [SQL Server]"
-  - "seguimiento de cambios [SQL Server], administrar"
+title: "Administración del seguimiento de cambios (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tracking data changes [SQL Server]
+- change tracking [SQL Server], overhead
+- change tracking [SQL Server]
+- change tracking [SQL Server], managing
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e6a29f384995058da7b4beef3edc3dac37e3e616
+ms.lasthandoff: 04/11/2017
+
 ---
-# Administrar el seguimiento de cambios (SQL Server)
+# <a name="manage-change-tracking-sql-server"></a>Administrar el seguimiento de cambios (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   En este tema se describe cómo administrar el seguimiento de los cambios. También se describe cómo configurar la seguridad, así como determinar los efectos en el almacenamiento y en el rendimiento cuando se utiliza esta característica.  
   
-## Administración del seguimiento de cambios  
+## <a name="managing-change-tracking"></a>Administración del seguimiento de cambios  
  En las secciones siguientes se enumeran las vistas de catálogo, los permisos y los valores de configuración que son importantes para la administración del seguimiento de cambios.  
   
-### Vistas de catálogo  
+### <a name="catalog-views"></a>Vistas de catálogo  
  Para determinar qué tablas y bases de datos tienen el seguimiento de cambios habilitado, puede utilizar las vistas de catálogo siguientes:  
   
--   [sys.change_tracking_databases &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)  
+-   [sys.change_tracking_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)  
   
--   [sys.change_tracking_tables &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)  
+-   [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)  
   
  También, la vista de catálogo [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) genera una lista de las tablas internas que se crean al habilitar el seguimiento de cambios para una tabla de usuario.  
   
-### Seguridad  
+### <a name="security"></a>Seguridad  
  Para tener acceso a información del seguimiento de cambios mediante las [funciones de seguimiento de cambios](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md), la entidad de seguridad debe tener los permisos siguientes:  
   
 -   Permiso SELECT para la tabla que se consulta, por lo menos para las columnas de clave principal de la tabla sometida a seguimiento de cambios.  
@@ -49,7 +53,7 @@ caps.handback.revision: 9
   
     -   El seguimiento de cambios puede contener información sobre qué columnas se han visto modificadas por las operaciones de actualización. Es posible que se le haya denegado a una entidad de seguridad el permiso para una columna que contiene información confidencial. Sin embargo, dado que la información del seguimiento de cambios está disponible, una entidad de seguridad puede determinar que el valor de una columna ha sido actualizado, pero no puede determinar el valor la citada columna.  
   
-## Descripción de la sobrecarga que supone el seguimiento de cambios  
+## <a name="understanding-change-tracking-overhead"></a>Descripción de la sobrecarga que supone el seguimiento de cambios  
  Al habilitar el seguimiento de cambios para una tabla, algunas operaciones de administración quedan afectadas. En la tabla siguiente se enumeran las operaciones y los efectos que se deben considerar.  
   
 |Operación|Cuando el seguimiento de cambios está habilitado|  
@@ -65,7 +69,7 @@ caps.handback.revision: 9
   
  Cuando se usa el seguimiento de cambios, se agrega cierta sobrecarga a las operaciones DML debido a que la información correspondiente se almacena como parte de la operación.  
   
-### Efectos en DML  
+### <a name="effects-on-dml"></a>Efectos en DML  
  El seguimiento de cambios se ha optimizado para minimizar la sobrecarga de rendimiento en operaciones DML. El incremento en la sobrecarga de rendimiento que se asocia al uso del seguimiento de cambios en una tabla es similar a la sobrecarga en que se incurre cuando se crea un índice para una tabla y hay que mantenerlo.  
   
  Para cada fila modificada por una operación DML, se agrega una fila a la tabla de seguimiento de cambios interna. El efecto de esta agregación en lo que respecta a la operación DML depende de factores tales como:  
@@ -78,7 +82,7 @@ caps.handback.revision: 9
   
  El aislamiento de instantánea, si se usa, también afectará al rendimiento de todas las operaciones DML, esté habilitado o no el seguimiento de cambios.  
   
-### Efectos en el almacenamiento  
+### <a name="effects-on-storage"></a>Efectos en el almacenamiento  
  Los datos del seguimiento de cambios se almacenan en los tipos siguientes de tablas internas:  
   
 -   Tabla de cambios interna  
@@ -95,22 +99,23 @@ caps.handback.revision: 9
   
 -   Por cada transacción confirmada, se agrega una fila a una tabla de transacciones interna.  
   
- Como en el caso de otras tablas internas, es posible determinar el espacio usado para las tablas de seguimiento de cambios a través del procedimiento almacenado [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md). Los nombres de las tablas internas se pueden obtener con la vista de catálogo [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md), como se muestra en el ejemplo siguiente.  
+ Como en el caso de otras tablas internas, es posible determinar el espacio usado para las tablas de seguimiento de cambios a través del procedimiento almacenado [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) . Los nombres de las tablas internas se pueden obtener con la vista de catálogo [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) , como se muestra en el ejemplo siguiente.  
   
 ```tsql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [Propiedades de la base de datos &#40;página ChangeTracking&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   
- [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)   
- [sys.change_tracking_databases &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)   
- [sys.change_tracking_tables &#40;Transact-SQL&#41;](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)   
+ [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [sys.change_tracking_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   
+ [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)   
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Acerca del seguimiento de cambios &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Trabajar con datos modificados &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
   
+

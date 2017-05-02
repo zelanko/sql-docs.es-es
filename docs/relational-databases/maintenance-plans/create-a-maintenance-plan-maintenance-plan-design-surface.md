@@ -1,24 +1,28 @@
 ---
-title: "Crear un plan de mantenimiento (superficie de dise&#241;o del plan de mantenimiento) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Superficie de diseño del plan de mantenimiento"
+title: "Creación de un plan de mantenimiento (superficie de diseño del plan de mantenimiento) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Maintenance Plan Design Surface
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 616b2d7d823d8a273b3ac260339bb76fba65dd00
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear un plan de mantenimiento (superficie de dise&#241;o del plan de mantenimiento)
+# <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Crear un plan de mantenimiento (superficie de diseño del plan de mantenimiento)
   En este tema se describe cómo crear un plan de mantenimiento de varios servidores o de uno mediante la superficie de diseño del plan de mantenimiento de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Aunque el **Asistente para plan de mantenimiento** es mejor para crear planes de mantenimiento básicos, crear un plan con la superficie de diseño le permite usar un flujo de trabajo mejorado.  
   
  **En este tema**  
@@ -37,7 +41,7 @@ caps.handback.revision: 10
   
 -   Para crear un plan de mantenimiento multiservidor, se debe configurar un entorno multiservidor que contenga un servidor maestro y uno o varios servidores de destino. Los planes de mantenimiento multiservidor se deben crear y mantener en el servidor maestro. Estos planes se pueden ver, pero no mantener, en servidores de destino.  
   
--   Los miembros de los roles **db_ssisadmin** y **dc_admin** quizá puedan elevar sus privilegios a **sysadmin**. Esta elevación de privilegio se puede producir porque estos roles pueden modificar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ; estos paquetes los puede ejecutar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando el contexto de seguridad de **sysadmin** del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para protegerse contra esta elevación de privilegio al ejecutar planes de mantenimiento, conjuntos de recopilación de datos y otros paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], configure los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecutan paquetes para usar una cuenta de proxy con privilegios limitados o agregar solo los miembros de **sysadmin** a los roles **db_ssisadmin** y **dc_admin**.  
+-   Los miembros de los roles **db_ssisadmin** y **dc_admin** quizá puedan elevar sus privilegios a **sysadmin**. Esta elevación de privilegio se puede producir porque estos roles pueden modificar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ; estos paquetes los puede ejecutar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando el contexto de seguridad de **sysadmin** del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para protegerse contra esta elevación de privilegio al ejecutar planes de mantenimiento, conjuntos de recopilación de datos y otros paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configure los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecutan paquetes para usar una cuenta de proxy con privilegios limitados o agregar solo los miembros de **sysadmin** a los roles **db_ssisadmin** y **dc_admin** .  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 10
   
 ##  <a name="SSMSProcedure"></a> Usar la Superficie de diseño del plan de mantenimiento  
   
-#### Para crear un plan de mantenimiento  
+#### <a name="to-create-a-maintenance-plan"></a>Para crear un plan de mantenimiento  
   
 1.  En el Explorador de objetos, haga clic en el signo más para expandir el servidor donde desea crear un plan de mantenimiento.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 10
      Agrega un subplán que puede configurar.  
   
      **Propiedades del subplán**  
-     Muestra el cuadro de diálogo **Propiedades del subplán** para el subplán seleccionado en la cuadrícula principal. O bien, haga doble clic en un subplán de la cuadrícula para mostrar el cuadro de diálogo **Propiedades del subplán**. Vea a continuación para obtener más información sobre este cuadro de diálogo.  
+     Muestra el cuadro de diálogo **Propiedades del subplán** para el subplán seleccionado en la cuadrícula principal. O bien, haga doble clic en un subplán de la cuadrícula para mostrar el cuadro de diálogo **Propiedades del subplán** . Vea a continuación para obtener más información sobre este cuadro de diálogo.  
   
      **Eliminar subplán seleccionado**  
      Elimina el subplán seleccionado.  
@@ -74,13 +78,13 @@ caps.handback.revision: 10
      Quita una programación del subplán seleccionado.  
   
      **Administrar conexiones**  
-     Muestra el cuadro de diálogo **Administrar conexiones**. Se utiliza para agregar conexiones adicionales de instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al plan de mantenimiento. Vea a continuación para obtener más información sobre este cuadro de diálogo.  
+     Muestra el cuadro de diálogo **Administrar conexiones** . Se utiliza para agregar conexiones adicionales de instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al plan de mantenimiento. Vea a continuación para obtener más información sobre este cuadro de diálogo.  
   
      **Informes y registro**  
      Muestra el cuadro de diálogo **Informes y registro** . Vea a continuación para obtener más información sobre este cuadro de diálogo.  
   
      **Servidores**  
-     Muestra el cuadro de diálogo **Servidores**, que se usa para seleccionar los servidores en los que se ejecutarán las tareas del subplan. Esta opción está habilitada solo en servidores maestros en entornos multiservidor. Para obtener más información, vea [Crear un entorno multiservidor](../../ssms/agent/create-a-multiserver-environment.md) y [Maintenance Plan &#40;Servers&#41; (Plan de mantenimiento &#40;servidores&#41;)](../../relational-databases/maintenance-plans/maintenance-plan-servers.md).  
+     Muestra el cuadro de diálogo **Servidores** , que se usa para seleccionar los servidores en los que se ejecutarán las tareas del subplan. Esta opción está habilitada solo en servidores maestros en entornos multiservidor. Para obtener más información, vea [Crear un entorno multiservidor](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6) y [Maintenance Plan &#40;Servers&#41; (Plan de mantenimiento &#40;servidores&#41;)](../../relational-databases/maintenance-plans/maintenance-plan-servers.md).  
   
      **Nombre**  
      Muestra el nombre del plan de mantenimiento. En los nuevos planes de mantenimiento, el nombre se especifica en un cuadro de diálogo antes de que se abra el diseñador de planes de mantenimiento. Para cambiar el nombre de un plan de mantenimiento, haga clic con el botón derecho en el plan en el Explorador de objetos y, luego, haga clic en **Cambiar nombre**.  
@@ -93,7 +97,7 @@ caps.handback.revision: 10
   
      Un vínculo de precedencia entre dos tareas establece una relación entre ellas. La segunda tarea (la *tarea dependiente*) solo se ejecuta si el resultado de la ejecución de la primera tarea (la *tarea precedente*) coincide con el criterio especificado. Por lo general, el resultado de la ejecución es **Correcto**, **Error**o **Conclusión**. Para obtener más información, vea el paso **8** a continuación.  
   
-5.  En el encabezado del espacio de diseño, haga doble clic en **Subplan_1** y escriba un nombre y una descripción para el subplán en el cuadro de diálogo **Propiedades del subplán**.  
+5.  En el encabezado del espacio de diseño, haga doble clic en **Subplan_1** y escriba un nombre y una descripción para el subplán en el cuadro de diálogo **Propiedades del subplán** .  
   
      Las siguientes opciones están disponibles en el cuadro de diálogo **Propiedades del subplán** .  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 10
      **Programación**  
      Indica en qué programación se ejecutó el subplán. Haga clic en **Programación del subplán** para abrir el cuadro de diálogo **Nueva programación de trabajo** . Haga clic en **Quitar programación** para eliminar la programación del subplán.  
   
-     Lista de **Ejecutar como**  
+     Lista de**Ejecutar como**   
      Seleccione la cuenta que se utilizará para ejecutar esta subtarea.  
   
 6.  Haga clic en **Programación del subplán** para escribir detalles de programación en el cuadro de diálogo **Nueva programación del trabajo** .  
@@ -158,17 +162,17 @@ caps.handback.revision: 10
          **Opción de restricción**  
          Define cómo funciona una restricción entre dos tareas.  
   
-         Lista **Operación de evaluación**  
+         Lista**Operación de evaluación**    
          Permite especificar la operación de evaluación que utiliza la restricción de precedencia. Las operaciones son: **Restricción**, **Expresión**, **Expresión y restricción**, y **Expresión o restricción**.  
   
-         Lista **Valor**  
-         Permite especificar el valor de restricción: **Correcto**, **Error** o **Conclusión**. **Correcto** es el valor predeterminado.  
+         Lista**Valor**   
+         Permite especificar el valor de restricción: **Correcto**, **Error**o **Conclusión**. **Correcto** es el valor predeterminado.  
   
         > [!NOTE]  
-        >  La línea de restricción de precedencia es verde para **Correcto**, roja para **Error** y azul para **Conclusión**.  
+        >  La línea de restricción de precedencia es verde para **Correcto**, roja para **Error**y azul para **Conclusión**.  
   
          **Expresión**  
-         Si usa las operaciones **Expresión**, **Expresión y restricción** o **Expresión o restricción**, escriba una expresión. La expresión debe evaluarse como un valor booleano.  
+         Si usa las operaciones **Expresión**, **Expresión y restricción**o **Expresión o restricción**, escriba una expresión. La expresión debe evaluarse como un valor booleano.  
   
          **Prueba**  
          Permite validar la expresión.  
@@ -198,7 +202,7 @@ caps.handback.revision: 10
   
     3.  En el cuadro de diálogo **Propiedades de conexión** , en el cuadro **Nombre de la conexión** , escriba el nombre de la conexión que va a crear.  
   
-    4.  En **Especificar lo siguiente para conectarse a los datos de SQL Server**, en el cuadro **Seleccionar o especificar un nombre de servidor**, escriba el nombre del servidor SQL Server que quiere usar o haga clic en los puntos suspensivos **(…)** y seleccione un servidor en el cuadro de diálogo **SQL Server**. Si selecciona un servidor en el cuadro de diálogo **SQL Server** , haga clic en **Aceptar**.  
+    4.  En **Especificar lo siguiente para conectarse a los datos de SQL Server**, en el cuadro **Seleccionar o especificar un nombre de servidor** , escriba el nombre del servidor SQL Server que quiere usar o haga clic en los puntos suspensivos **(…)** y seleccione un servidor en el cuadro de diálogo **SQL Server** . Si selecciona un servidor en el cuadro de diálogo **SQL Server** , haga clic en **Aceptar**.  
   
     5.  En **Especificar información para iniciar sesión en el servidor**, seleccione **Usar seguridad integrada de Windows NT** o **Usar un nombre de usuario y contraseña específicos**. Si elige usar un nombre de usuario y una contraseña específicos, escriba esa información en los cuadros **Nombre de usuario** y **Contraseña** , respectivamente.  
   
@@ -214,7 +218,7 @@ caps.handback.revision: 10
   
         1.  Si selecciona **Generar un informe de archivo de texto**, seleccione **Crear un nuevo archivo** o **Anexar a archivo**.  
   
-        2.  Según la selección anterior, escriba el nombre y la ruta de acceso completa del nuevo archivo o del archivo que se va a anexar especificando la información en los cuadros **Carpeta** o **Nombre de archivo** . Como alternativa, haga clic en los puntos suspensivos **(…)** y seleccione la ruta de acceso a la carpeta o el nombre de archivo en los cuadros de diálogo **Buscar carpeta -***server_name* o **Buscar archivos de base de datos - ***server_name*.  
+        2.  Según la selección anterior, escriba el nombre y la ruta de acceso completa del nuevo archivo o del archivo que se va a anexar especificando la información en los cuadros **Carpeta** o **Nombre de archivo** . Como alternativa, haga clic en los puntos suspensivos **(…)** y seleccione la ruta de acceso a la carpeta o el nombre de archivo en los cuadros de diálogo **Buscar carpeta -***server_name* o **Buscar archivos de base de datos -***server_name* .  
   
         3.  Si selecciona **Enviar informe a un destinatario de correo electrónico**, en la lista de **Operador del agente** , seleccione el destinatario del informe enviado por correo electrónico.  
   
@@ -229,7 +233,7 @@ caps.handback.revision: 10
   
 12. Para ver los resultados en el visor del archivo de registro, en el **Explorador de objetos**, haga clic con el botón derecho en la carpeta **Planes de mantenimiento** o en el plan de mantenimiento específico y, luego, selecciones **Ver historial**.  
   
-     Las siguientes opciones están disponibles en el cuadro de diálogo **Visor de archivos de registro - ***server_name*.  
+     Las siguientes opciones están disponibles en el cuadro de diálogo **Visor de archivos de registro -***server_name* .  
   
      **Cargar registro**  
      Abre un cuadro de diálogo donde puede especificar un archivo de registro para cargar.  
@@ -241,7 +245,7 @@ caps.handback.revision: 10
      Actualice la vista de los registros seleccionados. El botón **Actualizar** hace que se vuelvan a leer los registros seleccionados del servidor de destino al tiempo que se aplica una configuración de filtro.  
   
      **Filtro**  
-     Abre un cuadro de diálogo que permite especificar la configuración que se usa para filtrar el archivo de registro, como **Conexión**, **Fecha** u otros criterios de filtro de **General**.  
+     Abre un cuadro de diálogo que permite especificar la configuración que se usa para filtrar el archivo de registro, como **Conexión**, **Fecha**u otros criterios de filtro de **General** .  
   
      **Buscar**  
      Permite buscar texto específico en el archivo de registro. No se admite la búsqueda con caracteres comodín.  
@@ -250,7 +254,7 @@ caps.handback.revision: 10
      Detiene la carga de las entradas del archivo de registro. Por ejemplo, puede utilizar esta opción si la carga de un archivo de registro remoto o sin conexión tarda mucho tiempo y solo desea ver las entradas más recientes.  
   
      **Resumen de archivos de registro**  
-     Este panel de información muestra un resumen del filtro del archivo de registro. Si no se ha filtrado el archivo, se mostrará el siguiente texto: **No se aplicó ningún filtro**. Si se ha aplicado un filtro al registro, se mostrará el texto **Filtrar entradas del registro en:** \<criterios de filtro>.  
+     Este panel de información muestra un resumen del filtro del archivo de registro. Si no se ha filtrado el archivo, se mostrará el siguiente texto: **No se aplicó ningún filtro**. Si se aplica un filtro al registro, se mostrará el texto **Filtrar entradas del registro en:** \<criteriosDeFiltro>.  
   
      **Date**  
      Muestra la fecha del evento.  

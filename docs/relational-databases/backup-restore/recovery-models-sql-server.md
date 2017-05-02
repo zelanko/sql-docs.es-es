@@ -1,40 +1,44 @@
 ---
-title: "Modelos de recuperaci&#243;n (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "copias de seguridad de base de datos [SQL Server], modelos de recuperación"
-  - "modelo de recuperación optimizado para cargas masivas de registros [SQL Server]"
-  - "recuperación [SQL Server], modelo de recuperación"
-  - "restaurar registros de transacciones [SQL Server], modelos de recuperación"
-  - "copia de seguridad de bases de datos [SQL Server], modelos de recuperación"
-  - "modelos de recuperación [SQL Server], acerca de"
-  - "copias de seguridad de registro de transacciones [SQL Server]"
-  - "modelo de recuperación simple [SQL Server]"
-  - "copias de seguridad [SQL Server], modelos de recuperación"
-  - "modelos de recuperación [SQL Server]"
-  - "modelos de recuperación [SQL Server], administración de registros de transacciones"
-  - "restauraciones de base de datos [SQL Server], modelos de recuperación"
-  - "restauraciones de registros de transacciones [SQL Server]"
-  - "registros [SQL Server], modelos de recuperación"
-  - "restaurar bases de datos [SQL Server], modelos de recuperación"
-  - "modelo de recuperación completa [SQL Server]"
-  - "realizar copia de seguridad de registros de transacciones [SQL Server], modelos de recuperación"
+title: "Modelos de recuperación (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 07/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database backups [SQL Server], recovery models
+- bulk-logged recovery model [SQL Server]
+- recovery [SQL Server], recovery model
+- restoring transaction logs [SQL Server], recovery models
+- backing up databases [SQL Server], recovery models
+- recovery models [SQL Server], about
+- transaction log backups [SQL Server]
+- simple recovery model [SQL Server]
+- backups [SQL Server], recovery models
+- recovery models [SQL Server]
+- recovery models [SQL Server], transaction log management
+- database restores [SQL Server], recovery models
+- transaction log restores [SQL Server]
+- logs [SQL Server], recovery models
+- restoring databases [SQL Server], recovery models
+- full recovery model [SQL Server]
+- backing up transaction logs [SQL Server], recovery models
 ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
 caps.latest.revision: 70
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 70
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a39a4fe37d8a567b4af72840ff9c3166ecb0194
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modelos de recuperaci&#243;n (SQL Server)
+# <a name="recovery-models-sql-server"></a>Modelos de recuperación (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se producen en el contexto del modelo de recuperación de la base de datos. Los modelos de recuperación se han diseñado para controlar el mantenimiento del registro de transacciones. Un *modelo de recuperación* es una propiedad de base de datos que controla la forma en que se registran las transacciones, si el registro de transacciones requiere que se realice la copia de seguridad y si lo permite, y qué tipos de operaciones de restauración hay disponibles. Existen tres modelos de recuperación: simple, completa y por medio de registros de operaciones masivas. Normalmente, en las bases de datos se usa el modelo de recuperación completa o el modelo de recuperación simple. El modelo de recuperación de las bases de datos se puede cambiar en cualquier momento.  
   
  **En este tema:**  
@@ -46,7 +50,7 @@ caps.handback.revision: 70
 ##  <a name="RMov"></a> Introducción al modelo de recuperación  
  En la tabla siguiente se resumen los tres modelos de recuperación.  
   
-|Modelo de recuperación|Descripción|Riesgo de pérdida de trabajo|¿Recuperación hasta un momento dado?|  
+|modelo de recuperación|Descripción|Riesgo de pérdida de trabajo|¿Recuperación hasta un momento dado?|  
 |--------------------|-----------------|------------------------|-------------------------------|  
 |**Simple**|Sin copias de seguridad de registros.<br /><br /> Recupera automáticamente el espacio de registro para mantener al mínimo los requisitos de espacio, eliminando, en esencia, la necesidad de administrar el espacio del registro de transacciones. Para obtener información sobre las copias de seguridad de base de datos en el modelo de recuperación simple, vea [Copias de seguridad completas de bases de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md).<br /><br /> Las operaciones que requieren copias de seguridad del registro de transacciones no son compatibles con el modelo de recuperación simple. Las características siguientes no se pueden utilizar en modo de recuperación simple:<br /><br /> -Trasvase de registros<br /><br /> -AlwaysOn o creación de reflejo de la base de datos<br /><br /> -Recuperación de medios sin pérdida de datos<br /><br /> -Restauraciones a un momento dado|Los cambios realizados después de la copia de seguridad más reciente no están protegidos. En caso de desastre, es necesario volver a realizar dichos cambios.|Solo se puede recuperar hasta el final de una copia de seguridad. Para obtener más información, vea [Restauraciones de base de datos completas &#40;modelo de recuperación simple&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md). <br><br> Para obtener una explicación más amplia sobre el modelo de recuperación simple, vea [Modelo de recuperación simple de SQL Server](https://www.mssqltips.com/sqlservertutorial/4/sql-server-simple-recovery-model/) proporcionado por los compañeros de [MSSQLTips!](https://www.mssqltips.com).|  
 |**Completa**|Requiere copias de seguridad de registros.<br /><br /> No se pierde trabajo si un archivo de datos se pierde o resulta dañado.<br /><br /> Se puede recuperar hasta cualquier momento, por ejemplo, antes del error de aplicación o usuario. Para obtener información sobre las copias de seguridad de base de datos en el modelo de recuperación completa, vea [Copias de seguridad completas de bases de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md) y [Restauraciones de base de datos completas &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).|Normalmente ninguno.<br /><br /> Si el final del registro resulta dañado, se deben repetir los cambios realizados desde la última copia de seguridad de registros.|Se puede recuperar hasta determinado momento, siempre que las copias de seguridad se hayan completado hasta ese momento. Para obtener más información sobre cómo usar copias de seguridad de registros para restaurar hasta el momento del error, vea [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).<br /><br /> Nota: Si tiene dos o más bases de datos con el modelo de recuperación completa que tengan que ser lógicamente coherentes, es posible que tenga que implementar procedimientos especiales para garantizar la capacidad de recuperación de dichas bases de datos. Para obtener más información, vea [Recuperación de bases de datos relacionadas que contienen transacciones marcadas](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md).|  
@@ -58,13 +62,14 @@ caps.handback.revision: 70
   
 -   [Solucionar problemas de un registro de transacciones lleno &#40;Error 9002 de SQL Server&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)   
+ [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
- [Tareas administrativas automatizadas &#40;Agente SQL Server&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)   
+ [Tareas administrativas automatizadas &#40;Agente SQL Server&#41;](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)   
  [Información general sobre restauración y recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)  
   
   
+

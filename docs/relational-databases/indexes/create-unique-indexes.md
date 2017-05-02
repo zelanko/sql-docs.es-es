@@ -1,29 +1,33 @@
 ---
-title: "Crear &#237;ndices &#250;nicos | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "índices únicos"
-  - "diseñar índices [SQL Server], únicos"
-  - "índices agrupados, únicos"
-  - "índices [SQL Server], únicos"
-  - "índices no agrupados [SQL Server], únicos"
-  - "índices únicos, directrices de diseño"
+title: "Creación de nombre de los índices | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unique indexes
+- designing indexes [SQL Server], unique
+- clustered indexes, unique
+- indexes [SQL Server], unique
+- nonclustered indexes [SQL Server], unique
+- unique indexes, design guidelines
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad915ae7f113e7080f3fe5b7dbd9bb1c233f8bb4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear &#237;ndices &#250;nicos
+# <a name="create-unique-indexes"></a>Crear índices únicos
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   En este tema se describe cómo crear un índice único en una tabla de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un índice único garantiza que la clave de índice no contiene valores duplicados y, por tanto, cada fila de la tabla es en cierta forma única. No existen diferencias significativas entre crear una restricción UNIQUE y crear un índice único que es independiente de una restricción. La validación de datos se produce de igual modo y el optimizador de consultas no distingue entre un índice único creado mediante una restricción o creado manualmente. Sin embargo, la creación de una restricción UNIQUE en la columna aclara el objetivo del índice. Para obtener más información acerca de las restricciones UNIQUE, vea [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
@@ -93,11 +97,11 @@ caps.handback.revision: 29
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner**.  
+ Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para crear un índice único mediante el Diseñador de tablas  
+#### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>Para crear un índice único mediante el Diseñador de tablas  
   
 1.  En el Explorador de objetos, expanda la base de datos que contiene la tabla en la que desea crear un índice único.  
   
@@ -105,15 +109,15 @@ caps.handback.revision: 29
   
 3.  Haga clic con el botón derecho en la tabla en la que quiere crear un índice único y seleccione **Diseño**.  
   
-4.  En el menú **Diseñador de tablas**, seleccione **Índices o claves**.  
+4.  En el menú **Diseñador de tablas** , seleccione **Índices o claves**.  
   
-5.  En el cuadro de diálogo **Índices o claves**, haga clic en **Agregar**.  
+5.  En el cuadro de diálogo **Índices o claves** , haga clic en **Agregar**.  
   
-6.  Seleccione el nuevo índice en el cuadro de texto **Clave principal o única, o índice seleccionado**.  
+6.  Seleccione el nuevo índice en el cuadro de texto **Clave principal o única, o índice seleccionado** .  
   
 7.  En la cuadrícula principal, en **(General)**, seleccione **Tipo** y luego **Índice** en la lista.  
   
-8.  Seleccione **Columnas** y luego haga clic en el botón de puntos suspensivos **(…)**.  
+8.  Seleccione **Columnas**y luego haga clic en el botón de puntos suspensivos **(…)**.  
   
 9. En el cuadro de diálogo **Columnas de índice** , debajo de **Nombre de columna**, seleccione las columnas que desea indizar. Puede seleccionar hasta 16 columnas. Para obtener un rendimiento óptimo, no seleccione más de una o dos columnas por cada índice. Para cada columna que seleccione, puede indicar si el índice organiza los valores de esta columna en orden ascendente o descendente.  
   
@@ -125,9 +129,9 @@ caps.handback.revision: 29
   
 13. Haga clic en **Cerrar**.  
   
-14. En el menú **Archivo**, haga clic en **Guardar***table_name*.  
+14. En el menú **Archivo** , haga clic en **Guardar***table_name*.  
   
-#### Crear un índice único mediante el Explorador de objetos  
+#### <a name="create-a-unique-index-by-using-object-explorer"></a>Crear un índice único mediante el Explorador de objetos  
   
 1.  En el Explorador de objetos, expanda la base de datos que contiene la tabla en la que desea crear un índice único.  
   
@@ -135,7 +139,7 @@ caps.handback.revision: 29
   
 3.  Expanda la tabla en la que desea crear un índice único.  
   
-4.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y luego **Índice no agrupado…**  
+4.  Haga clic con el botón derecho en la carpeta **Índices** , seleccione **Nuevo índice**y luego **Índice no agrupado…**  
   
 5.  En el cuadro de diálogo **Nuevo índice** , en la página **General** , escriba el nombre del nuevo índice en el cuadro **Nombre de índice** .  
   
@@ -143,7 +147,7 @@ caps.handback.revision: 29
   
 7.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar**.  
   
-8.  En el cuadro de diálogo **Seleccionar columnas de***table_name*, active las casillas de las columnas de tabla que se van a agregar al índice único.  
+8.  En el cuadro de diálogo **Seleccionar columnas de***table_name* , active las casillas de las columnas de tabla que se van a agregar al índice único.  
   
 9. Haga clic en **Aceptar**.  
   
@@ -151,7 +155,7 @@ caps.handback.revision: 29
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para crear un índice único en una tabla  
+#### <a name="to-create-a-unique-index-on-a-table"></a>Para crear un índice único en una tabla  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -177,3 +181,4 @@ caps.handback.revision: 29
  Para obtener más información, vea [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+

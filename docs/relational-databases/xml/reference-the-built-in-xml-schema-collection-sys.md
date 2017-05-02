@@ -1,28 +1,32 @@
 ---
-title: "Hacer referencia a la colecci&#243;n de esquemas XML integrada (sys) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colecciones de esquemas XML sys [SQL Server]"
-  - "colecciones de esquemas [SQL Server], predefinidas"
-  - "colecciones de esquemas XML predefinidas [SQL Server]"
-  - "colecciones de esquemas XML [SQL Server], predefinidas"
-  - "colecciones de esquemas XML integradas [SQL Server]"
+title: "Asignación de referencias a la colección de esquemas XML integrada (sys) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sys XML schema collections [SQL Server]
+- schema collections [SQL Server], predefined
+- predefined XML schema collections [SQL Server]
+- XML schema collections [SQL Server], predefined
+- built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fa2b103a4c846e52c9af999980bb3c8080a4f6d5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Hacer referencia a la colecci&#243;n de esquemas XML integrada (sys)
+# <a name="reference-the-built-in-xml-schema-collection-sys"></a>Hacer referencia a la colección de esquemas XML integrada (sys)
   Cada base de datos que se crea posee una colección de esquemas XML **sys** predefinida en el esquema relacional **sys** . Estos esquemas predefinidos se reservan, y son accesibles desde cualquier otra colección de esquemas XML creada por el usuario. Los prefijos utilizados en estos esquemas predefinidos son significativos en XQuery. El único prefijo reservado es **xml** .  
   
 ```  
@@ -91,7 +95,7 @@ GO
   
  Se debe tener en cuenta lo siguiente:  
   
--   No se pueden modificar esquemas XML con estos espacios de nombres en ninguna colección de esquemas XML definida por el usuario. Por ejemplo, la siguiente colección de esquemas XML genera un error porque agrega un componente al espacio de nombres protegido `sqltypes`:  
+-   No se pueden modificar esquemas XML con estos espacios de nombres en ninguna colección de esquemas XML definida por el usuario. Por ejemplo, la siguiente colección de esquemas XML genera un error porque agrega un componente al espacio de nombres protegido `sqltypes` :  
   
     ```  
     CREATE XML SCHEMA COLLECTION SC AS '  
@@ -148,7 +152,7 @@ GO
   
  La expresión `instance of sqltypes:varchar?` devuelve TRUE, porque el valor del elemento <`root`> es de un tipo derivado de **varchar** según el esquema asociado a la variable `@var`.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Colecciones de esquemas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

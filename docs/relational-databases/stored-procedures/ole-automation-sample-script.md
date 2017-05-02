@@ -1,24 +1,28 @@
 ---
-title: "Ejemplo de script de automatizaci&#243;n OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ole"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "automatización OLE [SQL Server], ejemplos"
+title: "Ejemplo de script de automatización OLE | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ole
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLE Automation [SQL Server], examples
 ms.assetid: e59f75a9-ed41-4f12-888e-ffc57f9b3882
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9db090a1bf5d4cf53896bb0de2e7390f426bdb5b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ejemplo de script de automatizaci&#243;n OLE
+# <a name="ole-automation-sample-script"></a>Ejemplo de script de automatización OLE
   Este tema contiene un ejemplo de un lote de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] en el que se emplean los procedimientos almacenados de automatización OLE para crear y usar un objeto SQLServer de SQL-DMO en la instancia local de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Algunas partes de este código se utilizan como ejemplos en los temas de referencia de los procedimientos almacenados de sistema de automatización OLE.  
   
 ```  
@@ -137,7 +141,7 @@ RETURN;
 GO  
 ```  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
  [Objetos de automatización OLE en Transact-SQL](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  
   
  [sp_OACreate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md)  

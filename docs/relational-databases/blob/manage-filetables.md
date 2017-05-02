@@ -1,25 +1,29 @@
 ---
-title: "Administrar FileTables | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], seguridad"
-  - "FileTables [SQL Server], administrar acceso"
+title: "Administración de FileTables | Microsoft Docs"
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], security
+- FileTables [SQL Server], managing access
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ec52f5b4ebdb3fdd61fda320316186d220b6b53
+ms.lasthandoff: 04/11/2017
+
 ---
-# Administrar FileTables
+# <a name="manage-filetables"></a>Administrar FileTables
   Describe las tareas administrativas comunes para administrar FileTables.  
   
 ##  <a name="HowToEnumerate"></a> Obtener una lista de FileTables y de objetos relacionados  
@@ -61,7 +65,7 @@ GO
   
      Si se cancela el comando ALTER DATABASE o finaliza con un tiempo de espera, no se cambia el nivel de acceso transaccional.  
   
--   Si se llama a la instrucción ALTER DATABASE con una cláusula WITH \<terminación> (ROLLBACK AFTER integer [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT), todos los identificadores de archivo no transaccionales abiertos se eliminan.  
+-   Si llama a la instrucción ALTER DATABASE con una cláusula WITH \<terminación> (ROLLBACK AFTER entero [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT), todos los identificadores de archivo no transaccionales abiertos se eliminan.  
   
 > [!WARNING]  
 >  Eliminar los identificadores de archivos abiertos puede hacer que los usuarios pierdan los datos no guardados. Este comportamiento es coherente con el comportamiento del propio sistema de archivos.  
@@ -79,7 +83,7 @@ GO
 -   Ninguno de los directorios de nivel de base de datos de la instancia se ve si se deshabilita FILESTREAM en el nivel de instancia.  
   
 ###  <a name="HowToDisable"></a> Cómo: deshabilitar o volver a habilitar el acceso no transaccional en el nivel de base de datos.  
- Para obtener más información, vea [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+ Para obtener más información, vea [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  **Para deshabilitar el acceso no transaccional total**  
  Llame a la instrucción **ALTER DATABASE** y establezca el valor de **NON_TRANSACTED_ACCESS** en **READ_ONLY** o en **OFF**.  
@@ -138,7 +142,7 @@ GO
 -   El directorio de FileTable y los archivos y directorios que este contiene se vuelve visible en el sistema de archivos y están disponibles para el acceso E/S del archivo.  
   
 ###  <a name="HowToEnableNS"></a> Cómo: deshabilitar y volver a habilitar el espacio de nombres FileTable en el nivel de tabla  
- Se llama a la instrucción ALTER TABLE con la opción **{ ENABLE | DISABLE } FILETABLE_NAMESPACE**.  
+ Se llama a la instrucción ALTER TABLE con la opción **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** .  
   
  **Para deshabilitar el espacio de nombres de FileTable**  
  ```tsql  
@@ -169,7 +173,7 @@ GO
 ```  
   
 ###  <a name="HowToKill"></a> Cómo: eliminar los identificadores de archivos abiertos asociados con FileTable  
- Llame al procedimiento almacenado [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../Topic/sp_kill_filestream_non_transacted_handles%20\(Transact-SQL\).md) con los argumentos apropiados para eliminar todos los identificadores de archivo abiertos de la base de datos o de FileTable, o bien eliminar un identificador específico.  
+ Llame al procedimiento almacenado [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) con los argumentos apropiados para eliminar todos los identificadores de archivo abiertos de la base de datos o de FileTable, o bien eliminar un identificador específico.  
   
 ```  
 USE database_name;  
@@ -202,7 +206,7 @@ GO
 ```  
   
 ##  <a name="BasicsSecurity"></a> Seguridad de FileTable  
- Los archivos y directorios almacenados en FileTables están protegidos solo por la seguridad de SQL Server. La seguridad basada en tabla y columna se aplica para el acceso al sistema de archivos así como para el acceso a [!INCLUDE[tsql](../../includes/tsql-md.md)]. No se admiten las API de seguridad del sistema de archivo de Windows ni la configuración de ACL.  
+ Los archivos y directorios almacenados en FileTables están protegidos solo por la seguridad de SQL Server. La seguridad basada en tabla y columna se aplica para el acceso al sistema de archivos así como para el acceso a [!INCLUDE[tsql](../../includes/tsql-md.md)] . No se admiten las API de seguridad del sistema de archivo de Windows ni la configuración de ACL.  
   
  La seguridad y los permisos de acceso que son aplicables a los grupos de archivo y contenedores de FILESTREAM también son aplicables a FileTables, ya que los datos de archivos se almacenan como columna FILESTREAM en FileTable.  
   
@@ -230,8 +234,9 @@ GO
 ##  <a name="OtherDBCC"></a> DBCC y FileTables  
  Puede usar DBCC CHECKCONSTRAINTS para validar las restricciones de una FileTable, incluidas las restricciones definidas por el sistema.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad de FileTable con otras características de SQL Server](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)   
  [DDL de FileTable, funciones, procedimientos almacenados y vistas](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
+

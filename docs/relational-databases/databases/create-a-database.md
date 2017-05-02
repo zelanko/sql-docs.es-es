@@ -1,26 +1,30 @@
 ---
-title: "Crear una base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "bases de datos [SQL Server], crear"
-  - "creación de bases de datos [SQL Server], SQL Server Management Studio"
-  - "crear bases de datos"
+title: "Creacíón de una base de datos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- databases [SQL Server], creating
+- database creation [SQL Server], SQL Server Management Studio
+- creating databases
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 06b00c9eceac816935b2c0fa69306a6681383d80
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear una base de datos
+# <a name="create-a-database"></a>Crear una base de datos
   En este tema se describe cómo crear una base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
@@ -66,11 +70,11 @@ caps.handback.revision: 38
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para crear una base de datos  
+#### <a name="to-create-a-database"></a>Para crear una base de datos  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y expándala.  
   
-2.  Haga clic con el botón derecho en **Bases de datos** y luego haga clic en **Nueva base de datos**.  
+2.  Haga clic con el botón derecho en **Bases de datos**y luego haga clic en **Nueva base de datos**.  
   
 3.  En **Nueva base de datos**, especifique un nombre de base de datos.  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 38
   
 8.  Para cambiar el modelo de recuperación, seleccione la página **Opciones** y un modelo de recuperación de la lista.  
   
-9. Para cambiar opciones de base de datos, seleccione la página **Opciones** y modifique las opciones de la base de datos. Para obtener una descripción de cada opción, vea [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+9. Para cambiar opciones de base de datos, seleccione la página **Opciones** y modifique las opciones de la base de datos. Para obtener una descripción de cada opción, vea [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 10. Para agregar un nuevo grupo de archivos, haga clic en la página **Grupos de archivos** . Haga clic en **Agregar** y especifique los valores para el grupo de archivos.  
   
@@ -101,7 +105,7 @@ caps.handback.revision: 38
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para crear una base de datos  
+#### <a name="to-create-a-database"></a>Para crear una base de datos  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -130,10 +134,10 @@ GO
   
  Para obtener más ejemplos, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Archivos y grupos de archivos de base de datos](../../relational-databases/databases/database-files-and-filegroups.md)   
  [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Agregar archivos de datos o de registro a una base de datos](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
+ [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
   
   

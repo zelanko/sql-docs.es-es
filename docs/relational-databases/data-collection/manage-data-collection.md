@@ -1,31 +1,35 @@
 ---
-title: "Administrar la recopilaci&#243;n de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "Recopilación de datos"
-helpviewer_keywords: 
-  - "recopilación de datos [SQL Server]"
-  - "recopilador de datos [SQL Server], Transact-SQL"
-  - "recopilador de datos [SQL Server], SQL Server Management Studio"
+title: "Administración de la recopilación de datos | Microsoft Docs"
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- "Recopilación de datos"
+helpviewer_keywords:
+- data collection [SQL Server]
+- data collector [SQL Server], Transact-SQL
+- data collector [SQL Server], SQL Server Management Studio
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3501375e366cd5c84dd4544d4af0c11f00f2dbb1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Administrar la recopilaci&#243;n de datos
+# <a name="manage-data-collection"></a>Administrar la recopilación de datos
  Use procedimientos almacenados y funciones de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] para administrar distintos aspectos de la recopilación de datos, como habilitar o deshabilitar la recopilación de datos, cambiar la configuración de un conjunto de recopilación o ver los datos en el almacén de administración de datos.  
   
-## Administrar la recopilación de datos con SSMS  
+## <a name="manage-data-collection-using-ssms"></a>Administrar la recopilación de datos con SSMS  
  Realice las siguientes tareas relacionadas con el recopilador de datos usando Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 -   [Configurar el almacén de administración de datos &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)  
@@ -36,7 +40,7 @@ caps.handback.revision: 26
   
 -   [Iniciar o detener un conjunto de recopilación](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
--   [Usar SQL Server Profiler para crear un conjunto de recopilación de Seguimiento de SQL &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/use sql server profiler to create a sql trace collection set.md)  
+-   [Usar SQL Server Profiler para crear un conjunto de recopilación de Seguimiento de SQL &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)  
   
 -   [Ver los registros del conjunto de recopilación &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-collection-set-logs-sql-server-management-studio.md)  
   
@@ -44,8 +48,8 @@ caps.handback.revision: 26
   
 -   [Ver un informe de conjunto de recopilación &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)  
   
-## Administrar la recopilación de datos con Transact-SQL  
- El recopilador de datos proporciona una recopilación extensa de procedimientos almacenados que puede usar para realizar cualquier tarea relacionada con el recopilador de datos. Por ejemplo, mediante el uso de [!INCLUDE[tsql](../../includes/tsql-md.md)] puede realizar las siguientes tareas:  
+## <a name="manage-data-collection-using-transact-sql"></a>Administrar la recopilación de datos con Transact-SQL  
+ El recopilador de datos proporciona una recopilación extensa de procedimientos almacenados que puede usar para realizar cualquier tarea relacionada con el recopilador de datos. Por ejemplo, mediante el uso de [!INCLUDE[tsql](../../includes/tsql-md.md)]puede realizar las siguientes tareas:  
   
 -   [Configurar parámetros para la recopilación de datos &#40;Transact-SQL&#41;](../../relational-databases/data-collection/configure-data-collection-parameters-transact-sql.md)  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 26
   
 -   [Iniciar o detener un conjunto de recopilación](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
--   [Crear un conjunto de recopilación personalizado que use el tipo de recopilador de consultas T-SQL genérico &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create custom collection set - generic t-sql query collector type.md)  
+-   [Crear un conjunto de recopilación personalizado que use el tipo de recopilador de consultas T-SQL genérico &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)  
   
 -   [Agregar un elemento de recopilación a un conjunto de recopilación &#40;Transact-SQL&#41;](../../relational-databases/data-collection/add-a-collection-item-to-a-collection-set-transact-sql.md)  
   
@@ -63,9 +67,9 @@ caps.handback.revision: 26
   
 >**IMPORTANTE:** A diferencia de los procedimientos almacenados normales, los procedimientos almacenados del recopilador usan parámetros con establecimiento estricto de tipos y no admiten la conversión automática de tipos de datos. Si no se llama a estos parámetros con los tipos de datos de parámetros de entrada correctos, según se especifica en la descripción del argumento, el procedimiento almacenado devuelve un error.  
   
- Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para crear y ejecutar los ejemplos de código que se proporcionan. Para obtener más información, vea [Explorador de objetos](../../ssms/object/object-explorer.md). Como alternativa, puede crear la consulta en cualquier editor y guardarla en un archivo de texto con la extensión de nombre de archivo .sql. Puede ejecutar la consulta desde el símbolo del sistema de Windows mediante la utilidad **sqlcmd** . Para obtener más información, vea [Usar la utilidad sqlcmd](../../relational-databases/scripting/use-the-sqlcmd-utility.md).  
+ Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para crear y ejecutar los ejemplos de código que se proporcionan. Para obtener más información, vea [Explorador de objetos](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2). Como alternativa, puede crear la consulta en cualquier editor y guardarla en un archivo de texto con la extensión de nombre de archivo .sql. Puede ejecutar la consulta desde el símbolo del sistema de Windows mediante la utilidad **sqlcmd** . Para obtener más información, vea [Usar la utilidad sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
   
-### Procedimientos almacenados y vistas  
+### <a name="stored-procedures-and-views"></a>Procedimientos almacenados y vistas  
  **Trabajar con el recopilador de datos**  
   
  La tabla siguiente describe los procedimientos almacenados que puede usar para trabajar con el recopilador de datos.  
@@ -161,7 +165,7 @@ caps.handback.revision: 26
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql.md)|Elimina entradas del conjunto de recopilación del registro de ejecución.|  
   
-### Funciones  
+### <a name="functions"></a>Funciones  
  La tabla siguiente describe las funciones que puede usar para obtener información de seguimiento y ejecución.  
   
 |Nombre de función|Descripción|  
@@ -170,9 +174,10 @@ caps.handback.revision: 26
 |[fn_syscollector_get_execution_stats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|Obtenga las estadísticas de ejecución para un paquete o un conjunto de recopilación. Esta información incluye errores que están registrados.|  
 |[snapshots.fn_trace_getdata &#40;Transact-SQL&#41;](../../relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql.md)|Obtenga los eventos que se registran cuando se usa el tipo de recopilador de Seguimiento de SQL genérico para recopilar datos.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Ejecutar un procedimiento almacenado](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
- [Usar SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)   
+ [Usar SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)  
   
   
+

@@ -1,29 +1,33 @@
 ---
-title: "Leer p&#225;ginas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "server-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "páginas"
+title: "Lectura de páginas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pages
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
 caps.latest.revision: 3
-author: "pmasl"
-ms.author: "pelopes"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: pmasl
+ms.author: pelopes
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c7ac5398f3b10db59812539e58abaff9ef2c7cd0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Leer p&#225;ginas
+# <a name="reading-pages"></a>Leer páginas
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 La E/S de una instancia de SQL Server [!INCLUDE[ssDE](../includes/ssde-md.md)] incluye lecturas lógicas y físicas. Una lectura lógica se produce cada vez que [!INCLUDE[ssDE](../includes/ssde-md.md)] solicita una página desde la [caché del búfer](../relational-databases/memory-management-architecture-guide.md). Si la página no se encuentra actualmente en la caché del búfer, una lectura física copia primero la página desde el disco a la caché.
 
-El motor relacional controla las solicitudes de lectura generadas por una instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)], mientras que el motor de almacenamiento las optimiza. El motor relacional determina el método de acceso más eficaz (como un recorrido de tabla, un recorrido de índice o una lectura con clave); los métodos de acceso y los componentes del administrador de búferes del motor de almacenamiento determinan el patrón general de las lecturas que se llevarán a cabo y optimizan las lecturas necesarias para implementar el método de acceso. El subproceso que ejecuta el lote programa las lecturas.
+El motor relacional controla las solicitudes de lectura generadas por una instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)] , mientras que el motor de almacenamiento las optimiza. El motor relacional determina el método de acceso más eficaz (como un recorrido de tabla, un recorrido de índice o una lectura con clave); los métodos de acceso y los componentes del administrador de búferes del motor de almacenamiento determinan el patrón general de las lecturas que se llevarán a cabo y optimizan las lecturas necesarias para implementar el método de acceso. El subproceso que ejecuta el lote programa las lecturas.
 
 ## <a name="read-ahead"></a>Lectura anticipada
 [!INCLUDE[ssDE](../includes/ssde-md.md)] admite un mecanismo de optimización del rendimiento denominado lectura anticipada. La lectura anticipada prevé las páginas de datos y de índice necesarias para cumplir un plan de ejecución de consultas y lleva las páginas a la caché del búfer antes de ser utilizadas por la consulta. Esto permite que el cálculo y la E/S se superpongan, aprovechando al completo la CPU y el disco. 

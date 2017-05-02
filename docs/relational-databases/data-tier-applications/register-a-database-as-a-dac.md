@@ -1,48 +1,52 @@
 ---
-title: "Registrar una base de datos como una DAC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.registerdacwizard.summary.f1"
-  - "sql13.swb.registerdacwizard.introduction.f1"
-  - "sql13.swb.registerdacwizard.setproperties.f1"
-  - "sql13.swb.registerdacwizard.registerdac.f1"
-helpviewer_keywords: 
-  - "asistente [DAC], registrar"
-  - "Cómo [DAC], registrar"
-  - "registrar DAC"
-  - "aplicación de capa de datos [SQL Server], registrar"
+title: Registro de una base de datos como una DAC | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.registerdacwizard.summary.f1
+- sql13.swb.registerdacwizard.introduction.f1
+- sql13.swb.registerdacwizard.setproperties.f1
+- sql13.swb.registerdacwizard.registerdac.f1
+helpviewer_keywords:
+- wizard [DAC], register
+- How to [DAC], register
+- register DAC
+- data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: af264d24411b3d384abea2723df465dd926232c6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Registrar una base de datos como una DAC
+# <a name="register-a-database-as-a-dac"></a>Registrar una base de datos como una DAC
   Use el **Asistente para registrar aplicación de capa de datos** o un script de Windows PowerShell para compilar una definición de aplicación de capa de datos (DAC) que describa los objetos de una base de datos existente y registre la definición de la DAC en la base de datos del sistema **msdb** (**maestra** en [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
   
--   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [Permisos](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Para actualizar una DAC mediante:** [Asistente para registrar aplicación de capa de datos](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **To upgrade a DAC, using:**  [The Register Data-tier Application Wizard](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
-## Antes de empezar  
- El proceso de registro crea una definición de DAC que define los objetos de la base de datos. La combinación de la definición de DAC y la base de datos forma una instancia de DAC. Si registra una base de datos como una DA CONTINUACIÓN en una instancia administrada del motor de base de datos, la DAC registrada se incorporará a la Utilidad de SQL Server la próxima vez que el conjunto de recopilación de utilidades se envíe desde la instancia al punto de control de la utilidad. Posteriormente, la DAC aparecerá en el nodo **Aplicaciones de capa de datos implementadas** del **Explorador de la utilidad** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y se notificará en la página de detalles **Aplicaciones de capa de datos implementadas**.  
+## <a name="before-you-begin"></a>Antes de empezar  
+ El proceso de registro crea una definición de DAC que define los objetos de la base de datos. La combinación de la definición de DAC y la base de datos forma una instancia de DAC. Si registra una base de datos como una DA CONTINUACIÓN en una instancia administrada del motor de base de datos, la DAC registrada se incorporará a la Utilidad de SQL Server la próxima vez que el conjunto de recopilación de utilidades se envíe desde la instancia al punto de control de la utilidad. Posteriormente, la DAC aparecerá en el nodo **Aplicaciones de capa de datos implementadas** del [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Aplicaciones de capa de datos implementadas** details page.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
- El registro de la DAC solo se puede realizar en una base de datos en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o posterior. El registro de la DAC no se puede llevar a cabo si una DAC ya está registrada en la base de datos. Por ejemplo, si la base de datos se creó implementando una DAC, no puede ejecutar el **Asistente para registrar aplicación de capa de datos**.  
+ El registro de la DAC solo se puede realizar en una base de datos en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o posterior. El registro de la DAC no se puede llevar a cabo si una DAC ya está registrada en la base de datos. Por ejemplo, si la base de datos se creó implementando una DAC, no puede ejecutar el **Asistente para registrar aplicación de capa de datos**.  
   
  No puede registra ninguna DAC si la base de datos tiene objetos que no se admiten en una DAC o usuarios contenidos. Para obtener más información acerca de los objetos admitidos por una DAC, vea [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
 ###  <a name="Permissions"></a> Permisos  
- El registro de una DAC en una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] requiere, por lo menos, permisos ALTER ANY LOGIN y DEFINITION VIEW en el ámbito de la base de datos, permisos SELECT en **sys.sql_expression_dependencies** y pertenencia al rol fijo de servidor **dbcreator**. Los miembros del rol fijo de servidor **sysadmin** o la cuenta de administrador del sistema de SQL Server integrada denominada **sa** también pueden registrar una DAC. El registro de una DAC que no tiene inicios de sesión en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiere la pertenencia a los roles **dbmanager** o **serveradmin** . El registro de una DAC que tiene inicios de sesión en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiere la pertenencia a los roles **loginmanager** o **serveradmin** .  
+ El registro de una DAC en una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] requiere, por lo menos, permisos ALTER ANY LOGIN y DEFINITION VIEW en el ámbito de la base de datos, permisos SELECT en **sys.sql_expression_dependencies**y pertenencia al rol fijo de servidor **dbcreator** . Los miembros del rol fijo de servidor **sysadmin** o la cuenta de administrador del sistema de SQL Server integrada denominada **sa** también pueden registrar una DAC. El registro de una DAC que no tiene inicios de sesión en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiere la pertenencia a los roles **dbmanager** o **serveradmin** . El registro de una DAC que tiene inicios de sesión en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiere la pertenencia a los roles **loginmanager** o **serveradmin** .  
   
 ##  <a name="UsingRegisterDACWizard"></a> Usar el Asistente para registrar aplicación de capa de datos  
  **Para registrar una DAC mediante un asistente**  
@@ -51,7 +55,7 @@ caps.handback.revision: 22
   
 2.  Expanda el nodo **Bases de datos** .  
   
-3.  Haga clic con el botón derecho en la base de datos que se registrará, seleccione **Tareas** y **Registrar como aplicación de capa de datos…**  
+3.  Haga clic con el botón derecho en la base de datos que se registrará, seleccione **Tareas**y **Registrar como aplicación de capa de datos…**  
   
 4.  Complete los cuadros de diálogo del asistente:  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 22
   
  **Siguiente >**: avanza a la página **Definir propiedades**.  
   
- **Cancelar**: sale del asistente sin registrar una DAC.  
+ **Cancelar** : sale del asistente sin registrar una DAC.  
   
  [Usar el Asistente para registrar aplicación de capa de datos](#UsingRegisterDACWizard)  
   
@@ -83,11 +87,11 @@ caps.handback.revision: 22
   
  **Descripción.** - Opcional. Texto que explica el propósito de la DAC. Al implementar una DAC, la descripción se almacena en la base de datos **msdb** y se puede ver después en el nodo **Aplicaciones de capa de datos** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- **\< Anterior**: vuelve a la página **Introducción**.  
+ **< Anterior**: vuelve a la página **Introducción**.  
   
  **Siguiente >**: comprueba que se puede crear una DAC a partir de los objetos de la base de datos y muestra los resultados en la página **Validación y resumen**.  
   
- **Cancelar**: sale del asistente sin registrar la DAC.  
+ **Cancelar** : sale del asistente sin registrar la DAC.  
   
  [Usar el Asistente para registrar aplicación de capa de datos](#UsingRegisterDACWizard)  
   
@@ -96,49 +100,49 @@ caps.handback.revision: 22
   
  [Usar el Asistente para registrar aplicación de capa de datos](#UsingRegisterDACWizard)  
   
-### Recuperar objetos  
+### <a name="retrieving-objects"></a>Recuperar objetos  
  **Recuperando la base de datos y los objetos de servidor.** - Muestra una barra de progreso a medida que el asistente recupera todos los objetos necesarios de la base de datos y la instancia del motor de base de datos.  
   
- **\< Anterior**: vuelve a la página **Definir propiedades** para cambiar las entradas.  
+ **< Anterior**: vuelve a la página **Definir propiedades** para cambiar las entradas.  
   
  **Siguiente >**: registra la DAC y muestra los resultados en la página **Registrar DAC**.  
   
- **Cancelar**: sale del asistente sin registrar la DAC.  
+ **Cancelar** : sale del asistente sin registrar la DAC.  
   
  [Usar el Asistente para registrar aplicación de capa de datos](#UsingRegisterDACWizard)  
   
-### Validar objetos  
- **Comprobando**  *nombreDeEsquema* **.** *nombreDeObjeto* **.** - Muestra una barra de progreso cuando el asistente comprueba las dependencias de los objetos recuperados y comprueba que son todos objetos válidos para una DAC. *SchemaName***.***ObjectName* identifican el objeto que se está comprobando.  
+### <a name="validating-objects"></a>Validar objetos  
+ **Checking**  *SchemaName* **.** *ObjectName* **.** - Muestra una barra de progreso cuando el asistente comprueba las dependencias de los objetos recuperados y comprueba que son todos objetos válidos para una DAC. *SchemaName***.***ObjectName* identifican el objeto que se está comprobando.  
   
- **\< Anterior**: vuelve a la página **Definir propiedades** para cambiar las entradas.  
+ **< Anterior**: vuelve a la página **Definir propiedades** para cambiar las entradas.  
   
  **Siguiente >**: registra la DAC y muestra los resultados en la página **Registrar DAC**.  
   
- **Cancelar**: sale del asistente sin registrar la DAC.  
+ **Cancelar** : sale del asistente sin registrar la DAC.  
   
  [Usar el Asistente para registrar aplicación de capa de datos](#UsingRegisterDACWizard)  
   
-### Resumen  
+### <a name="summary"></a>Resumen  
  **El siguiente valor se usará para registrar la DAC.** - Muestra un informe de las propiedades y objetos que se incluirán en la DAC.  
   
- **Guardar informe**: seleccione este botón para guardar una copia del informe de validación en un archivo HTML. La carpeta predeterminada es una carpeta **SQL Server Management Studio\DAC Packages** de la carpeta Documentos de su cuenta de Windows.  
+ **Guardar informe** : seleccione este botón para guardar una copia del informe de validación en un archivo HTML. La carpeta predeterminada es una carpeta **SQL Server Management Studio\DAC Packages** de la carpeta Documentos de su cuenta de Windows.  
   
- **\< Anterior**: vuelve a la página **Definir propiedades** para cambiar las entradas.  
+ **< Anterior**: vuelve a la página **Definir propiedades** para cambiar las entradas.  
   
  **Siguiente >**: registra la DAC y muestra los resultados en la página **Registrar DAC**.  
   
- **Cancelar**: sale del asistente sin registrar la DAC.  
+ **Cancelar** : sale del asistente sin registrar la DAC.  
   
  [Usar el Asistente para registrar aplicación de capa de datos](#UsingRegisterDACWizard)  
   
 ##  <a name="Register"></a> Página Registrar DAC  
  Esta página notifica si la operación de registro se realizó correctamente o no.  
   
- **Registrando la DAC**: notifica si cada acción realizada para registrar la DAC se realizó correctamente o no. Revise la información para determinar si cada acción se realizó o no correctamente. Cualquier acción que encontrara un error tendrá un vínculo en la columna **Resultado** . Seleccione el vínculo para ver un informe del error para esa acción.  
+ **Registrando la DAC** : notifica si cada acción realizada para registrar la DAC se realizó correctamente o no. Revise la información para determinar si cada acción se realizó o no correctamente. Cualquier acción que encontrara un error tendrá un vínculo en la columna **Resultado** . Seleccione el vínculo para ver un informe del error para esa acción.  
   
- **Guardar informe**: seleccione este botón para guardar el informe de registro en un archivo HTML. El archivo notifica el estado de cada acción, incluidos todos los errores generados por cualquiera de las acciones. La carpeta predeterminada es una carpeta **SQL Server Management Studio\DAC Packages** de la carpeta Documentos de su cuenta de Windows. El nombre de archivo tiene el formato \<nombreDelPaqueteDAC>_RegisterDACReport_aaaammdd.html, donde \<*nombreDelPaqueteDAC*> es el nombre del paquete que se implementa; *aaaa*, el año actual; *mm*, el mes actual y *dd*, el día actual.  
+ **Guardar informe** : seleccione este botón para guardar el informe de registro en un archivo HTML. El archivo notifica el estado de cada acción, incluidos todos los errores generados por cualquiera de las acciones. La carpeta predeterminada es una carpeta **SQL Server Management Studio\DAC Packages** de la carpeta Documentos de su cuenta de Windows. El nombre de archivo tiene el formato \<nombreDelPaqueteDAC>_RegisterDACReport_aaaammdd.html, donde \<*nombreDelPaqueteDAC*> es el nombre del paquete que se implementa; *aaaa*, el año actual; *mm*, el mes actual y *dd*, el día actual.  
   
- **Finalizar**: termina el asistente.  
+ **Finalizar** : termina el asistente.  
   
  [Usar el Asistente para registrar aplicación de capa de datos](#UsingRegisterDACWizard)  
   
@@ -153,7 +157,7 @@ caps.handback.revision: 22
   
 4.  Ejecute el método Register con la información especificada anteriormente.  
   
-### Ejemplo (PowerShell)  
+### <a name="example-powershell"></a>Ejemplo (PowerShell)  
  El ejemplo siguiente registra una base de datos denominada MyDB como DAC.  
   
 ```  
@@ -175,7 +179,8 @@ $registerunit.Description = $description
 $registerunit.Register()  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   
+

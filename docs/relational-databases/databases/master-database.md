@@ -1,28 +1,32 @@
 ---
-title: "Base de datos maestra | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "base de datos maestra [SQL Server], acerca de"
-  - "maestra, base de datos [SQL Server]"
+title: Base de datos maestra (master) | Microsoft Docs
+ms.custom: 
+ms.date: 03/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- master database [SQL Server], about
+- master database [SQL Server]
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 caps.latest.revision: 50
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 778915dbe6c89b17520ca44b6d437862a882b078
+ms.lasthandoff: 04/11/2017
+
 ---
-# Base de datos maestra
-  La base de datos **maestra** registra toda la información de sistema de un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dentro de esta información se incluyen los metadatos de una sola instancia, como las cuentas de inicio de sesión, los extremos, los servidores vinculados y la configuración del sistema. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los objetos de sistema ya no se almacenan en la base de datos **maestra** , sino en la [base de datos de recursos](../../relational-databases/databases/resource-database.md). Asimismo, **maestra** es la base de datos que registra la existencia de las demás bases de datos, la ubicación de los archivos de las bases de datos y la información de inicialización de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por lo tanto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede iniciarse si la base de datos **maestra** no está disponible.  
+# <a name="master-database"></a>Base de datos maestra
+  La base de datos **maestra** registra toda la información de sistema de un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dentro de esta información se incluyen los metadatos de una sola instancia, como las cuentas de inicio de sesión, los extremos, los servidores vinculados y la configuración del sistema. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los objetos de sistema ya no se almacenan en la base de datos **maestra** , sino en la [base de datos de recursos](../../relational-databases/databases/resource-database.md). Asimismo, **maestra** es la base de datos que registra la existencia de las demás bases de datos, la ubicación de los archivos de las bases de datos y la información de inicialización de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por lo tanto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede iniciarse si la base de datos **maestra** no está disponible.  
   
-## Propiedades físicas de la base de datos maestra  
+## <a name="physical-properties-of-master"></a>Propiedades físicas de la base de datos maestra  
  En la siguiente tabla se enumeran los valores de configuración iniciales de los archivos de registro y datos **maestros** . El tamaño de estos archivos puede variar ligeramente para diferentes ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Archivo|Nombre lógico|Nombre físico|Crecimiento del archivo|  
@@ -30,9 +34,9 @@ caps.handback.revision: 50
 |Datos principales|maestra|master.mdf|Crecimiento automático del 10 por ciento hasta llenar el disco.|  
 |Log|mastlog|mastlog.ldf|Crecimiento automático del 10 por ciento hasta un máximo de 2 terabytes.|  
   
- Para obtener información sobre cómo mover los archivos de registro y los datos **maestros**, vea [Mover bases de datos del sistema](../../relational-databases/databases/move-system-databases.md).  
+ Para obtener información sobre cómo mover los archivos de registro y los datos **maestros** , vea [Mover bases de datos del sistema](../../relational-databases/databases/move-system-databases.md).  
   
-### Opciones de base de datos  
+### <a name="database-options"></a>Opciones de base de datos  
  En la siguiente tabla se enumera el valor predeterminado de cada opción de base de datos en la base de datos **maestra** y se indica si la opción se puede modificar. Para ver la configuración actual de estas opciones, utilice la vista de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
   
 |Opción de base de datos|Valor predeterminado|Se puede modificar|  
@@ -69,7 +73,7 @@ caps.handback.revision: 50
   
  Para obtener una descripción de estas opciones de la base de datos, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## Restricciones  
+## <a name="restrictions"></a>Restricciones  
  Las siguientes operaciones no se pueden realizar en la base de datos **maestra** :  
   
 -   Agregar archivos o grupos de archivos.  
@@ -98,7 +102,7 @@ caps.handback.revision: 50
   
 -   Establecer la base de datos o el grupo de archivos principal en READ_ONLY.  
   
-## Recomendaciones  
+## <a name="recommendations"></a>Recomendaciones  
  Cuando trabaje con la base de datos **maestra** , tenga en cuenta las siguientes recomendaciones:  
   
 -   Tenga siempre disponible una copia de seguridad actualizada de la base de datos **maestra** .  
@@ -115,7 +119,7 @@ caps.handback.revision: 50
   
 -   No establezca la opción TRUSTWORTHY en ON para la base de datos **maestra** .  
   
-## Qué hacer si la base de datos maestra queda inutilizable  
+## <a name="what-to-do-if-master-becomes-unusable"></a>Qué hacer si la base de datos maestra queda inutilizable  
  Si la base de datos **maestra** está inutilizable, puede devolverla a un estado válido de dos formas:  
   
 -   Restaure la base de datos **maestra** desde una copia de seguridad de la base de datos actual.  
@@ -127,9 +131,9 @@ caps.handback.revision: 50
      Si no puede iniciar **a causa de daños graves en la base de datos** maestra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], deberá volver a generar la base de datos **maestra**. Para obtener más información, vea [Volver a generar bases de datos del sistema](../../relational-databases/databases/rebuild-system-databases.md).  
   
     > [!IMPORTANT]  
-    >  Al recompilar la base de datos **maestra**, se recompilan todas las bases de datos del sistema.  
+    >  Al recompilar la base de datos **maestra** , se recompilan todas las bases de datos del sistema.  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
  [Volver a generar bases de datos del sistema](../../relational-databases/databases/rebuild-system-databases.md)  
   
  [Bases de datos del sistema](../../relational-databases/databases/system-databases.md)  
@@ -141,3 +145,4 @@ caps.handback.revision: 50
  [Mover archivos de base de datos](../../relational-databases/databases/move-database-files.md)  
   
   
+

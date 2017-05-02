@@ -1,28 +1,32 @@
 ---
-title: "Crear variables y columnas del tipo de datos XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tipo de datos XML [SQL Server], variables"
-  - "tipo de datos XML [SQL Server], columnas"
+title: "Creación de variables y columnas del tipo de datos XML | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xml data type [SQL Server], variables
+- xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 751fccc2a458239715c187a1925046cdf74de98a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear variables y columnas del tipo de datos XML
+# <a name="create-xml-data-type-variables-and-columns"></a>Crear variables y columnas del tipo de datos XML
   El tipo de datos **xml** es un tipo de datos integrado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y es de algún modo similar a otros tipos integrados, como **int** y **varchar**. Al igual que ocurre con otros tipos integrados, se puede usar el tipo de datos **xml** como un tipo de columna al crear una tabla como un tipo de variable, un tipo de parámetro, un tipo de valor devuelto por una función o en [CAST y CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-## Crear columnas y variables  
+## <a name="creating-columns-and-variables"></a>Crear columnas y variables  
  Para crear una columna de tipo `xml` como parte de una tabla, utilice una instrucción `CREATE TABLE` , como se muestra en el ejemplo siguiente:  
   
 ```  
@@ -49,7 +53,7 @@ CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...
   
  Puede utilizar XQuery para consultar instancias XML almacenadas en columnas, parámetros o variables. También puede utilizar el Lenguaje de manipulación de datos XML (XML DML) para aplicar actualizaciones a las instancias XML. Puesto que el estándar XQuery no definió el DML de XQuery cuando se desarrolló, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye las extensiones del [Lenguaje de manipulación de datos XML (XML DML)](../../t-sql/xml/xml-data-modification-language-xml-dml.md) en XQuery. Estas extensiones permiten realizar operaciones de inserción, actualización y eliminación.  
   
-## Asignar valores predeterminados  
+## <a name="assigning-defaults"></a>Asignar valores predeterminados  
  En una tabla, puede asignar una instancia XML predeterminada a una columna de tipo **xml** . Puede proporcionar el XML predeterminado de una de estas dos maneras: con una constante XML o con una conversión explícita al tipo **xml** .  
   
  Para proporcionar el XML predeterminado como una constante XML, utilice la sintaxis como se muestra en el ejemplo siguiente. Observe que la cadena se convierte implícitamente al tipo **xml** .  
@@ -58,21 +62,21 @@ CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...
 CREATE TABLE T (XmlColumn xml default N'<element1/><element2/>')  
 ```  
   
- Para proporcionar el XML predeterminado mediante una operación de conversión (`CAST`) explícita a `xml`, utilice la sintaxis como se muestra en el ejemplo siguiente.  
+ Para proporcionar el XML predeterminado mediante una operación de conversión ( `CAST` ) explícita a `xml`, utilice la sintaxis como se muestra en el ejemplo siguiente.  
   
 ```  
 CREATE TABLE T (XmlColumn xml   
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también admite restricciones NULL y NOT NULL en columnas de tipo **xml**. Por ejemplo:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también admite restricciones NULL y NOT NULL en columnas de tipo **xml** . Por ejemplo:  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  
 ```  
   
-## Especificar restricciones  
- Al crear columnas de tipo **xml**, puede definir restricciones de nivel de columna o de nivel de tabla. Las restricciones se emplean en estas situaciones:  
+## <a name="specifying-constraints"></a>Especificar restricciones  
+ Al crear columnas de tipo **xml** , puede definir restricciones de nivel de columna o de nivel de tabla. Las restricciones se emplean en estas situaciones:  
   
 -   Sus reglas de negocios no se pueden expresar en esquemas XML. Por ejemplo, la dirección de entrega de una floristería debe estar a menos de 75 kilómetros de su ubicación. Esto se puede escribir como una restricción en la columna XML. La restricción puede afectar a métodos de tipo de datos **xml** .  
   
@@ -92,7 +96,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
  Una alternativa al uso de restricciones consiste en crear una función de contenedor definida por el usuario para ajustar el método de tipo de datos **xml** y especificar una función definida por el usuario en la restricción CHECK, como se muestra en el siguiente ejemplo.  
   
- En el siguiente ejemplo, la restricción de `Col2` especifica que cada instancia XML almacenada en esta columna debe tener un elemento `<ProductDescription>` con un atributo `ProductID`. Esta restricción se exige mediante la siguiente función definida por el usuario:  
+ En el siguiente ejemplo, la restricción de `Col2` especifica que cada instancia XML almacenada en esta columna debe tener un elemento `<ProductDescription>` con un atributo `ProductID` . Esta restricción se exige mediante la siguiente función definida por el usuario:  
   
 ```  
 CREATE FUNCTION my_udf(@var xml) returns bit  
@@ -102,7 +106,7 @@ END
 GO  
 ```  
   
- Observe que el método `exist()` del tipo de datos `xml` devuelve `1` si el elemento `<ProductDescription>` de la instancia contiene el atributo `ProductID`. En caso contrario, devuelve `0`.  
+ Observe que el método `exist()` del tipo de datos `xml` devuelve `1` si el elemento `<ProductDescription>` de la instancia contiene el atributo `ProductID` . En caso contrario, devuelve `0`.  
   
  En este momento, puede crear una tabla con una restricción de columna del modo siguiente:  
   
@@ -125,7 +129,7 @@ INSERT INTO T values(1,'<ProductDescription ProductID="1" />')
 INSERT INTO T values(1,'<Product />')  
 ```  
   
-## La misma tabla o una tabla diferente  
+## <a name="same-or-different-table"></a>La misma tabla o una tabla diferente  
  Es posible crear una columna de tipo de datos **xml** en una tabla que contenga otras columnas relacionales o en otra tabla con una relación de clave externa con una tabla principal.  
   
  Puede crear una columna de tipo de datos **xml** en la misma tabla si se cumple una de las condiciones siguientes:  
@@ -136,7 +140,7 @@ INSERT INTO T values(1,'<Product />')
   
  Puede crear la columna de tipo de datos **xml** en otra tabla si se cumplen las condiciones siguientes:  
   
--   Quiere generar un índice XML en la columna de tipo de datos **xml**, pero la clave principal de la tabla principal es distinta de su clave de agrupación en clústeres, la tabla principal no tiene una clave principal, o la tabla principal es un montón (sin clave de agrupación en clústeres). Esto puede ser cierto si la tabla principal ya existe.  
+-   Quiere generar un índice XML en la columna de tipo de datos **xml** , pero la clave principal de la tabla principal es distinta de su clave de agrupación en clústeres, la tabla principal no tiene una clave principal, o la tabla principal es un montón (sin clave de agrupación en clústeres). Esto puede ser cierto si la tabla principal ya existe.  
   
 -   No desea que se ralenticen los recorridos de las tablas por la presencia de la columna XML en la tabla. Ésta usa espacio independientemente de si está o no almacenada de manera consecutiva.  
   

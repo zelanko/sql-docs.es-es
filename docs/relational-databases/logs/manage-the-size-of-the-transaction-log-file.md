@@ -1,24 +1,28 @@
 ---
-title: "Administrar el tama&#241;o del archivo de registro de transacciones | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-transaction-log"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "registros de transacciones [SQL Server], administración de tamaño"
+title: "Administración del tamaño del archivo de registro de transacciones | Microsoft Docs"
+ms.custom: 
+ms.date: 07/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-transaction-log
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transaction logs [SQL Server], size management
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5736ae436f7b07bbc7eda9eda301c41969a69cc9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Administrar el tama&#241;o del archivo de registro de transacciones
+# <a name="manage-the-size-of-the-transaction-log-file"></a>Administrar el tamaño del archivo de registro de transacciones
 Este tema contiene información acerca de cómo supervisar el tamaño de un registro de transacciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , reducir el registro de transacciones, agregar o ampliar un archivo de registro de transacciones, optimizar la tasa de crecimiento del registro de transacciones **tempdb** y controlar el crecimiento de un archivo de registro de transacciones.  
 
   ##  <a name="MonitorSpaceUse"></a> Supervisar el uso del espacio del registro  
@@ -30,7 +34,8 @@ Supervise el uso del espacio del registro mediante DBCC SQLPERF (LOGSPACE). Este
 ##  <a name="ShrinkSize"></a> Reducir el tamaño del archivo de registro  
  Para reducir el tamaño físico de un archivo de registro físico, debe reducir el archivo de registro. Esto es útil cuando se sabe que un archivo del registro de transacciones contiene espacio sin usar que no es necesario. Solo se puede reducir un archivo de registro mientras la base de datos está en línea y al menos un archivo de registro virtual es gratuito. En algunos casos, no será posible reducir el registro hasta el siguiente truncamiento del registro.  
   
-> [!NOTE]  Los factores que mantienen activos los archivos de registro virtuales por un periodo prolongado de tiempo, como puede ser una transacción de ejecución prolongada, pueden restringir la reducción del registro o incluso impedirla completamente. Para obtener información sobre los factores que pueden retrasar el truncamiento del registro, vea [Registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+> [!NOTE]
+>  Los factores que mantienen activos los archivos de registro virtuales por un periodo prolongado de tiempo, como puede ser una transacción de ejecución prolongada, pueden restringir la reducción del registro o incluso impedirla completamente. Para obtener información sobre los factores que pueden retrasar el truncamiento del registro, vea [Registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
  Con la reducción de un archivo de registro se quitan uno o varios archivos de registro virtuales que no contienen ninguna parte del registro lógico (es decir, los *archivos de registro virtuales inactivos*). Cuando se reduce un archivo de registro de transacciones, se quitan suficientes archivos de registro virtuales inactivos del final del archivo de registro como para reducirlo aproximadamente al tamaño de destino.  
   
@@ -50,7 +55,8 @@ Supervise el uso del espacio del registro mediante DBCC SQLPERF (LOGSPACE). Este
   
 -   [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) (Vea las columnas **size**, **max_size** y **growth** de los archivos de registro).  
   
-> [!NOTE]  La reducción de los archivos de base de datos y registro se puede establecer para que se produzca automáticamente. Sin embargo, no recomendamos realizar una reducción automática, y la propiedad de base de datos **autoshrink** está establecida en FALSE de forma predeterminada. Si **autoshrink** está establecida en TRUE, el proceso de reducción automática solo reduce el tamaño de un archivo cuando más del 25% de su espacio está sin utilizar. El tamaño del archivo se reduce hasta un tamaño en el que solo el 25% del archivo corresponde al espacio sin utilizar o hasta el tamaño original del archivo (el que sea mayor). Para obtener información sobre cómo cambiar la configuración de la propiedad **autoshrink**, vea [Ver o cambiar las propiedades de una base de datos](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md): use la propiedad **Auto Shrink** de la página **Opciones**, u [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md): use la opción AUTO_SHRINK.  
+> [!NOTE]
+>  La reducción de los archivos de base de datos y registro se puede establecer para que se produzca automáticamente. Sin embargo, no recomendamos realizar una reducción automática, y la propiedad de base de datos **autoshrink** está establecida en FALSE de forma predeterminada. Si **autoshrink** está establecida en TRUE, el proceso de reducción automática solo reduce el tamaño de un archivo cuando más del 25% de su espacio está sin utilizar. El tamaño del archivo se reduce hasta un tamaño en el que solo el 25% del archivo corresponde al espacio sin utilizar o hasta el tamaño original del archivo (el que sea mayor). Para obtener información sobre cómo cambiar la configuración de la propiedad **autoshrink**, vea [Ver o cambiar las propiedades de una base de datos](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md): use la propiedad **Auto Shrink** de la página **Opciones**, u [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md): use la opción AUTO_SHRINK.  
   
 
 ##  <a name="AddOrEnlarge"></a> Agregar o ampliar un archivo de registro  
@@ -76,8 +82,9 @@ Para obtener información sobre cómo cambiar la propiedad de crecimiento de un 
 -   Para controlar el máximo el tamaño de un archivo de registro en unidades de KB, MB, GB y TB o establecer el crecimiento en UNLIMITED, use la opción MAXSIZE.  
   
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Solucionar problemas de un registro de transacciones lleno &#40;Error 9002 de SQL Server&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
   
+

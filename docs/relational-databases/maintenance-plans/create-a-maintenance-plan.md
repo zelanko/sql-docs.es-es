@@ -1,24 +1,28 @@
 ---
-title: "Crear un plan de mantenimiento | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "planes de mantenimiento [SQL Server], crear"
+title: "Creación de un plan de mantenimiento | Microsoft Docs"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- maintenance plans [SQL Server], creating
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: adab1fc3a3a009a4a6fe74ddbe9ee97f8c128bdf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Crear un plan de mantenimiento
+# <a name="create-a-maintenance-plan"></a>Crear un plan de mantenimiento
   En este tema se describe cómo crear un plan de mantenimiento de un solo servidor o multiservidor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Hay dos formas de crear estos planes de mantenimiento con [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]: con el Asistente para planes de mantenimiento o con la superficie de diseño. El uso del asistente es más conveniente si desea crear planes de mantenimiento básicos, mientras que la superficie de diseño le permite utilizar un flujo de trabajo mejorado.  
   
  **En este tema**  
@@ -52,7 +56,7 @@ La [opción de configuración del servidor Agent XPs](../../database-engine/conf
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para crear un plan de mantenimiento con el Asistente para planes de mantenimiento  
+#### <a name="to-create-a-maintenance-plan-using-the-maintenance-plan-wizard"></a>Para crear un plan de mantenimiento con el Asistente para planes de mantenimiento  
   
 1.  En el Explorador de objetos, haga clic en el signo más para expandir el servidor donde desea crear un plan de mantenimiento.  
   
@@ -62,7 +66,7 @@ La [opción de configuración del servidor Agent XPs](../../database-engine/conf
   
 4.  Siga los pasos del asistente para crear un plan de mantenimiento. Para obtener más información, consulte [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md).  
   
-#### Para crear un plan de mantenimiento mediante la superficie de diseño  
+#### <a name="to-create-a-maintenance-plan-using-the-design-surface"></a>Para crear un plan de mantenimiento mediante la superficie de diseño  
   
 1.  En el Explorador de objetos, haga clic en el signo más para expandir el servidor donde desea crear un plan de mantenimiento.  
   
@@ -74,7 +78,7 @@ La [opción de configuración del servidor Agent XPs](../../database-engine/conf
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para crear un plan de mantenimiento  
+#### <a name="to-create-a-maintenance-plan"></a>Para crear un plan de mantenimiento  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -150,3 +154,4 @@ La [opción de configuración del servidor Agent XPs](../../database-engine/conf
 -   [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   
+

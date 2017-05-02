@@ -1,27 +1,31 @@
 ---
-title: "Missing Join Predicate (clase de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Missing Join Predicate, clase de eventos"
+title: Clase de eventos Missing Join Predicate | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Missing Join Predicate event class
 ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: fdd6f18f8c2423c9118e27bfa5ae9bf1d67fad3a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Missing Join Predicate (clase de eventos)
-  La clase de eventos Missing Join Predicate indica que se está ejecutando una consulta que no tiene ningún predicado de combinación. Esto podría dar como resultado una consulta de ejecución prolongada. Para obtener más información sobre los predicados de combinación, vea [Predicados &#40;Transact-SQL&#41;](../Topic/Predicates%20\(Transact-SQL\).md).  
+# <a name="missing-join-predicate-event-class"></a>Missing Join Predicate, clase de eventos
+  La clase de eventos Missing Join Predicate indica que se está ejecutando una consulta que no tiene ningún predicado de combinación. Esto podría dar como resultado una consulta de ejecución prolongada. Para obtener más información sobre los predicados de combinación, vea [Predicados &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md).  
   
-## Columnas de datos de la clase de eventos Missing Join Predicate  
+## <a name="missing-join-predicate-event-class-data-columns"></a>Columnas de datos de la clase de eventos Missing Join Predicate  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -46,8 +50,9 @@ caps.handback.revision: 33
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
+

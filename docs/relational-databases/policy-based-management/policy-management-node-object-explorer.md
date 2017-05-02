@@ -1,22 +1,26 @@
 ---
-title: "Nodo Administraci&#243;n de directivas (Explorador de objetos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Nodo Administración de directivas (Explorador de objetos) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 075e44b9b50eb356a4eabdebf8524f186db3d527
+ms.lasthandoff: 04/11/2017
+
 ---
-# Nodo Administraci&#243;n de directivas (Explorador de objetos)
+# <a name="policy-management-node-object-explorer"></a>Nodo Administración de directivas (Explorador de objetos)
   Esta sección contiene los siguientes temas de la Ayuda F1 para el nodo **PolicyManagement** del Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   [Cuadro de diálogo Crear nueva condición o Abrir condición, página General](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)  
@@ -53,7 +57,7 @@ caps.handback.revision: 22
   
 -   [Importar directivas (cuadro de diálogo)](../../relational-databases/policy-based-management/import-policies-dialog-box.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

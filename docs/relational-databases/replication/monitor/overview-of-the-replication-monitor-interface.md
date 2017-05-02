@@ -1,35 +1,39 @@
 ---
-title: "Informaci&#243;n general de la interfaz del Monitor de replicaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Monitor de replicación"
-  - "Monitor de replicación, acerca del Monitor de replicación"
+title: "Información general de la interfaz del Monitor de replicación | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Replication Monitor
+- Replication Monitor, about Replication Monitor
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 85b3b97fa9dc219012727b01a0d8013e0481a85c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Informaci&#243;n general de la interfaz del Monitor de replicaci&#243;n
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Monitor de replicación presenta una vista centrada en el publicador o una vista centrada en el distribuidor de toda la actividad de replicación en un formato de dos paneles. Se agrega un publicador al monitor en el panel izquierdo y, en el panel derecho, el monitor muestra información sobre el publicador, sus publicaciones, las suscripciones a esas publicaciones y los diversos agentes de replicación. Además de presentar información de la topología de replicación, el Monitor de replicación permite realizar varias tareas, como iniciar y detener agentes y validar datos.  
+# <a name="overview-of-the-replication-monitor-interface"></a>Información general de la interfaz del Monitor de replicación
+  El Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] presenta una vista centrada en el publicador o una vista centrada en el distribuidor de toda la actividad de replicación en un formato de dos paneles. Se agrega un publicador al monitor en el panel izquierdo y, en el panel derecho, el monitor muestra información sobre el publicador, sus publicaciones, las suscripciones a esas publicaciones y los diversos agentes de replicación. Además de presentar información de la topología de replicación, el Monitor de replicación permite realizar varias tareas, como iniciar y detener agentes y validar datos.  
   
-## Ver información de toda la topología  
+## <a name="viewing-information-for-the-entire-topology"></a>Ver información de toda la topología  
  El panel izquierdo del Monitor de replicación muestra  
   
 -   Grupos de publicadores, publicadores y publicaciones.  
   
 -   Distribuidores, publicadores y publicaciones.  
   
- Para ver cualquier información en el Monitor de replicación, primero debe agregar un publicador. Para obtener más información, consulte [Agregar y quitar publicadores del Monitor de replicación](../../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md).  
+ Para ver cualquier información en el Monitor de replicación, primero debe agregar un publicador. Para obtener más información, vea [Agregar y quitar publicadores del Monitor de replicación](../../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md).  
   
  El panel izquierdo ayuda a responder a las siguientes preguntas:  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 41
   
      Un agente no funciona en un momento determinado porque no está programado para ejecutarse o porque se ha producido un error. Si se ha producido un error, se muestra un icono de error en los nodos correspondientes del panel izquierdo. Por ejemplo, si el Agente de instantáneas de una publicación se detiene debido a un error, se muestra un icono de error en el grupo de publicador, el publicador y los nodos de publicación. En la pestaña **Agentes** de la publicación se muestra información resumida del Agente de instantáneas; haga doble clic en el Agente de instantáneas de esta pestaña para obtener información detallada del error.  
   
-## Ver información y realizar tareas relacionadas con distribuidores  
+## <a name="viewing-information-and-performing-tasks-related-to-distributors"></a>Ver información y realizar tareas relacionadas con distribuidores  
  El Monitor de replicación muestra información sobre distribuidores en tres pestañas:  
   
 -   Pestaña**Publicaciones**   
@@ -76,7 +80,7 @@ caps.handback.revision: 41
   
 -   Cambiar a la vista de grupo de publicador.  
   
-## Ver información y realizar tareas relacionadas con publicadores  
+## <a name="viewing-information-and-performing-tasks-related-to-publishers"></a>Ver información y realizar tareas relacionadas con publicadores  
  El Monitor de replicación muestra información sobre publicadores en tres pestañas:  
   
 -   Pestaña**Publicaciones**   
@@ -103,7 +107,7 @@ caps.handback.revision: 41
   
      Esta pestaña muestra información detallada sobre los agentes y trabajos utilizados por todos los tipos de replicación. La pestaña también le permite iniciar y detener cada agente y trabajo.  
   
- Para obtener más información, consulte [Ver información y realizar tareas para un publicador & #40; Monitor de replicación & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
+ Para obtener más información, consulte [Ver información y realizar tareas para un publicador &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
   
  El Monitor de replicación también proporciona un menú contextual para el nodo de publicador. En el panel izquierdo, haga clic con el botón secundario en un publicador para:  
   
@@ -115,7 +119,7 @@ caps.handback.revision: 41
   
 -   Conectarse o desconectarse del distribuidor que almacena información sobre el publicador.  
   
-## Ver información y realizar tareas relacionadas con publicaciones  
+## <a name="viewing-information-and-performing-tasks-related-to-publications"></a>Ver información y realizar tareas relacionadas con publicaciones  
  El Monitor de replicación muestra información sobre publicaciones en tres pestañas y varias ventanas de detalles:  
   
 -   Pestaña**Todas las suscripciones**   
@@ -148,7 +152,7 @@ caps.handback.revision: 41
   
      Esta pestaña le permite especificar advertencias y alertas para los agentes. Para más información, consulte [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
--   **Testigos** ficha (solo replicación transaccional)  
+-   Pestaña**Testigos de seguimiento** (solo replicación transaccional)  
   
      Esta pestaña permite medir la latencia, es decir, el tiempo que transcurre entre la confirmación de una transacción en el publicador y la confirmación de la transacción correspondiente en el suscriptor.  
   
@@ -158,7 +162,7 @@ caps.handback.revision: 41
   
          Vea el tiempo total que tarda una transacción en viajar por el sistema y compárelo también con tiempos anteriores.  
   
-     Esta pestaña no se muestra para los distribuidores que ejecuten [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o anterior. Para obtener más información sobre los testigos, consulte [medida latencia y validar conexiones para la replicación transaccional](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
+     Esta pestaña no se muestra para los distribuidores que ejecuten [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o anterior. Para obtener más información sobre cómo utilizar los testigos de seguimiento, vea [Medir la latencia y validar las conexiones de la replicación transaccional](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 -   Ventanas de detalles para los agentes asociados con una publicación. Los siguientes agentes están asociados con publicaciones:  
   
@@ -176,7 +180,7 @@ caps.handback.revision: 41
   
          Los mensajes de error disponibles proporcionan información detallada sobre por qué no funciona un agente y un punto inicial para solucionar problemas con los agentes asociados con una publicación.  
   
- Para obtener más información, consulte [Ver información y realizar tareas para una publicación & #40; Monitor de replicación & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) y [Ver información y realizar tareas de los agentes asociados con una publicación & #40; Monitor de replicación & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md).  
+ Para obtener más información, consulte [Ver información y realizar tareas para una publicación &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) y [Ver información y realizar tareas para los agentes asociados a una publicación &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
   
  El Monitor de replicación también proporciona un menú contextual para el nodo de publicaciones. En el panel izquierdo, haga clic con el botón secundario en una publicación para:  
   
@@ -188,26 +192,26 @@ caps.handback.revision: 41
   
 -   Ver y editar las propiedades de una publicación.  
   
-## Ver información y realizar tareas relacionadas con suscripciones  
+## <a name="viewing-information-and-performing-tasks-related-to-subscriptions"></a>Ver información y realizar tareas relacionadas con suscripciones  
  El Monitor de replicación muestra información sobre suscripciones en varias pestañas diferentes. Haga doble clic en una suscripción en el Monitor de replicación para tener acceso a estas pestañas en una ventana de detalles. Todas estas pestañas son útiles para responder a la pregunta "¿Por qué no funciona un agente?". Los mensajes de error disponibles proporcionan información detallada sobre por qué no funciona un agente y un punto inicial para solucionar problemas con los agentes asociados con una suscripción.  
   
--   **Todas las suscripciones** y **Lista de supervisión de suscripciones**  
+-   **All Subscriptions tab** and **Subscription Watch List tab.**  
   
      Estas pestañas se han descrito anteriormente en este tema.  
   
--   **Historial de distribuidor de publicador a** ficha (solo replicación transaccional)  
+-   Pestaña**Historial de Publicador a distribuidor** (solo replicación transaccional)  
   
      En esta pestaña se muestra información sobre el Agente de registro del LOG para una publicación (la pestaña es idéntica a la ventana de detalles del Agente de registro del LOG).  
   
--   **Distribuidor a suscriptor historial** ficha (replicación de instantáneas y transaccional)  
+-   Pestaña**Historial de Distribuidor a suscriptor** (replicación de instantánea y replicación transaccional)  
   
      En esta pestaña se muestra información sobre el Agente de distribución para una suscripción.  
   
--   **Comandos sin distribuir** ficha (solo replicación transaccional)  
+-   Pestaña**Comandos sin distribuir** (solo replicación transaccional)  
   
      En esta pestaña se muestra información sobre le número de comandos de la base de datos de distribución que no se han entregado al suscriptor seleccionado y el tiempo estimado para entregar esos comandos. La pestaña ayuda a responder a la pregunta, "¿Qué retraso tiene mi suscripción?" Esta pestaña no se muestra en los distribuidores que ejecuten versiones anteriores a SQL Server 2005.  
   
--   **Historial de sincronizaciones** ficha (sólo la replicación de mezcla)  
+-   Pestaña**Historial de sincronizaciones** (solo replicación de mezcla)  
   
      En esta pestaña se muestra información sobre el Agente de mezcla para una suscripción. Esta pestaña ayuda a responder a la siguiente pregunta:  
   
@@ -215,16 +219,16 @@ caps.handback.revision: 41
   
          En esta pestaña se proporcionan estadísticas detalladas de cada artículo procesado durante la sincronización, incluido el tiempo invertido en cada fase del proceso (carga de cambios, descarga de cambios, etc.). Puede ayudar a identificar con precisión tablas específicas que provocan lentitud y el mejor lugar para solucionar problemas de rendimiento con suscripciones de mezcla.  
   
- Para obtener más información, consulte [Ver información y realizar tareas para una suscripción & #40; Monitor de replicación & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md) y [Ver información y realizar tareas de los agentes asociados con una suscripción & #40; Monitor de replicación & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md).  
+ Para obtener más información, consulte [Ver información y realizar tareas para una suscripción &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md) y [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
-## Ver información y realizar tareas relacionadas con perfiles de agente  
+## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>Ver información y realizar tareas relacionadas con perfiles de agente  
  El Monitor de replicación incluye varios cuadros de diálogo para administrar perfiles de agente. Los perfiles de agente son conjuntos de parámetros de un agente que determinan su comportamiento. Para más información, consulte [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md). Los cuadros de diálogo son:  
   
 -   **Perfiles de agente**  
   
      Este cuadro de diálogo permite: cambiar las propiedades de perfiles, crear y eliminar perfiles, especificar un perfil predeterminado y especificar que todos los agentes de un tipo específico (por ejemplo, los Agentes de instantáneas) deben utilizar un perfil determinado.  
   
--   **\< Nombredeperfildeagente> Propiedades**  
+-   **\<nombreDelPerfilDeAgente> Propiedades**  
   
      Este cuadro de diálogo permite ver y editar la configuración de parámetros de un perfil.  
   
@@ -232,7 +236,7 @@ caps.handback.revision: 41
   
      Este cuadro de diálogo permite crear un perfil nuevo y, opcionalmente, incluye los valores de un perfil existente.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Supervisar la replicación](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

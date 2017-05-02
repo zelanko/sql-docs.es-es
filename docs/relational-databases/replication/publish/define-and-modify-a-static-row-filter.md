@@ -1,26 +1,30 @@
 ---
-title: "Definir y modificar un filtro de fila est&#225;tico | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modificar filtros, fila estática"
-  - "filtros de fila estáticos"
-  - "filtros [replicación de SQL Server], fila estática"
+title: "Definición y modificación de un filtro de fila estático | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying filters, static row
+- static row filters
+- filters [SQL Server replication], static row
 ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d9326b4395a2883b172ff59ef009128a85e3098e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Definir y modificar un filtro de fila est&#225;tico
+# <a name="define-and-modify-a-static-row-filter"></a>Definir y modificar un filtro de fila estático
   En este tema se describe cómo definir y modificar un filtro de fila estático en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **En este tema**  
@@ -41,7 +45,7 @@ caps.handback.revision: 38
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
--   Si agrega, modifica o elimina un filtro de fila estático una vez inicializadas las suscripciones a la publicación, deberá generar una instantánea nueva y reinicializar todas las suscripciones después de realizar el cambio. Para obtener más información acerca de los requisitos para los cambios de propiedad, vea [Propiedades de artículo y publicación de cambio](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+-   Si agrega, modifica o elimina un filtro de fila estático una vez inicializadas las suscripciones a la publicación, deberá generar una instantánea nueva y reinicializar todas las suscripciones después de realizar el cambio. Para obtener más información sobre los requisitos para los cambios de propiedad, consulte [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
   
 -   Si la publicación está habilitada para la replicación transaccional punto a punto, no se pueden filtrar las tablas.  
   
@@ -50,17 +54,17 @@ caps.handback.revision: 38
 -   Dado que estos filtros son estáticos, todos los suscriptores recibirán el mismo subconjunto de los datos. Si necesita filtrar dinámicamente las filas en un artículo de la tabla que pertenece a una publicación de combinación para que cada suscriptor reciba una partición diferente de los datos, vea [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md). La replicación de mezcla también permite filtrar filas relacionadas con un filtro de filas existente. Para obtener más información, consulte [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
- Definir, modificar y eliminar filtros de fila estáticos en el **filtrar filas de tabla** página del Asistente para nueva publicación o **filtrar filas** página de la **Propiedades de la publicación - \< publicación>** cuadro de diálogo. Para obtener más información sobre cómo usar el asistente y acceso al cuadro de diálogo, vea [crear una publicación](../../../relational-databases/replication/publish/create-a-publication.md) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Defina, modifique y elimine filtros de filas estáticas en la página **Filtrar filas de tabla** del Asistente para nueva publicación o en la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**. Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, vea [Crear una publicación](../../../relational-databases/replication/publish/create-a-publication.md) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-#### Para definir un filtro de fila estático  
+#### <a name="to-define-a-static-row-filter"></a>Para definir un filtro de fila estático  
   
-1.  En el **filtrar filas de tabla** página del Asistente para nueva publicación o **filtrar filas** página de la **Propiedades de la publicación - \< publicación>** cuadro de diálogo, la acción realizada depende del tipo de publicación:  
+1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o en la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**, la acción que realice depende del tipo de publicación:  
   
     -   Para una publicación de instantáneas o transaccional, haga clic en **Agregar**.  
   
     -   Para una publicación de combinación, haga clic en **Agregar**y, a continuación, en **Agregar filtro**.  
   
-2.  En el **Agregar filtro** cuadro de diálogo, seleccione una tabla para filtrar en el cuadro de lista desplegable.  
+2.  En el cuadro de diálogo **Agregar filtro** , seleccione la tabla que va a filtrar en el cuadro de lista desplegable.  
   
 3.  Cree una instrucción de filtro en el área de texto **Instrucción de filtro** . Puede escribir directamente en el área de texto o puede arrastrar y colocar columnas del cuadro de lista **Columnas** .  
   
@@ -87,62 +91,62 @@ caps.handback.revision: 38
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Si se encuentra en la **Propiedades de la publicación - \< publicación>** cuadro de diálogo, haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
+5.  Si se encuentra en el cuadro de diálogo **Propiedades de la publicación: \<publicación>**, haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
   
-#### Para modificar un filtro de fila estático  
+#### <a name="to-modify-a-static-row-filter"></a>Para modificar un filtro de fila estático  
   
-1.  En el **filtrar filas de tabla** página del Asistente para nueva publicación o **filtrar filas** página de la **Propiedades de la publicación - \< publicación>** cuadro de diálogo, seleccione un filtro en el **tablas filtradas** panel y, a continuación, haga clic en **Editar**.  
+1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**, seleccione un filtro en el panel**Tablas filtradas** y, después, haga clic en **Editar**.  
   
 2.  Modifique el filtro en el cuadro de diálogo **Editar filtro** .  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-#### Para eliminar un filtro de fila estático  
+#### <a name="to-delete-a-static-row-filter"></a>Para eliminar un filtro de fila estático  
   
-1.  En el **filtrar filas de tabla** página del Asistente para nueva publicación o **filtrar filas** página de la **Propiedades de la publicación - \< publicación>** cuadro de diálogo, seleccione un filtro en el **tablas filtradas** panel y, a continuación, haga clic en **Eliminar**.  
+1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**, seleccione un filtro en el panel **Tablas filtradas** y, después, haga clic en **Eliminar**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  Al crear los artículos de la tabla, puede definir una cláusula WHERE para filtrar las filas de un artículo. También puede cambiar un filtro de fila una vez definido. Los filtros de fila estáticos se pueden crear y modificar mediante programación con los procedimientos almacenados de la replicación.  
   
-#### Para definir un filtro de fila estático para una publicación transaccional o de instantáneas  
+#### <a name="to-define-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Para definir un filtro de fila estático para una publicación transaccional o de instantáneas  
   
 1.  Defina el artículo que se va a filtrar. Para más información, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
-2.  En el publicador de la base de datos de publicación, ejecute [sp_articlefilter & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md). Especifique el nombre del artículo para **@article**, el nombre de la publicación para **@publication**, un nombre para el filtro de **@filter_name**, y la cláusula de filtrado para **@filter_clause** (sin incluir `WHERE`).  
+2.  En la base de datos de publicación del publicador, ejecute [sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md). Especifique el nombre del artículo para **@article**, el nombre de la publicación para **@publication**, un nombre de filtro para **@filter_name**y la cláusula de filtrado para **@filter_clause** (no se incluye `WHERE`).  
   
-3.  Si todavía debe definirse un filtro de columna, vea [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). De lo contrario, ejecute [sp_articleview & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Especifique el nombre de publicación para **@publication**, el nombre del artículo filtrado para **@article**, y la cláusula de filtro especificada en el paso 2 para **@filter_clause**. Esto crea los objetos de sincronización para el artículo filtrado.  
+3.  Si todavía debe definirse un filtro de columna, vea [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). De lo contrario, ejecute [sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Especifique el nombre de la publicación para **@publication**, el nombre del artículo filtrado para **@article**y la cláusula de filtro especificada en el paso 2 para **@filter_clause**. Esto crea los objetos de sincronización para el artículo filtrado.  
   
-#### Para modificar un filtro de fila estático para una publicación transaccional o de instantáneas  
+#### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Para modificar un filtro de fila estático para una publicación transaccional o de instantáneas  
   
-1.  En el publicador de la base de datos de publicación, ejecute [sp_articlefilter & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md). Especifique el nombre del artículo para **@article**, el nombre de la publicación para **@publication**, un nombre para el nuevo filtro de **@filter_name**, y la nueva cláusula de filtrado para **@filter_clause** (sin incluir `WHERE`). Dado que este cambio invalidará los datos en las suscripciones existentes, especifique un valor de **1** para **@force_reinit_subscription**.  
+1.  En la base de datos de publicación del publicador, ejecute [sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md). Especifique el nombre del artículo para **@article**, el nombre de la publicación para **@publication**, un nombre de filtro nuevo para **@filter_name**y la cláusula de filtrado nueva para **@filter_clause** (no se incluye `WHERE`). Dado que este cambio invalidará los datos en las suscripciones existentes, especifique un valor de **1** para **@force_reinit_subscription**.  
   
-2.  En el publicador de la base de datos de publicación, ejecute [sp_articleview & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Especifique el nombre de publicación para **@publication**, el nombre del artículo filtrado para **@article**, y la cláusula de filtro especificada en el paso 1 para **@filter_clause**. Esto vuelve a crear la vista que define el artículo filtrado.  
+2.  En la base de datos de publicación del publicador, ejecute [sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Especifique el nombre de la publicación para **@publication**, el nombre del artículo filtrado para **@article**y la cláusula de filtro especificada en el paso 1 para **@filter_clause**. Esto vuelve a crear la vista que define el artículo filtrado.  
   
 3.  Vuelva a ejecutar el trabajo del Agente de instantáneas para que la publicación genere una instantánea actualizada. Para obtener más información, consulte [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
-4.  Reinicialice las suscripciones. Para obtener más información, consulte [reinicializar suscripciones](../../../relational-databases/replication/reinitialize-subscriptions.md).  
+4.  Reinicialice las suscripciones. Para obtener más información, vea [Reinicializar suscripciones](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
-#### Para eliminar un filtro de fila estático para una instantánea o una publicación transaccional  
+#### <a name="to-delete-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Para eliminar un filtro de fila estático para una instantánea o una publicación transaccional  
   
-1.  En el publicador de la base de datos de publicación, ejecute [sp_articlefilter & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md). Especifique el nombre del artículo para **@article**, el nombre de la publicación para **@publication**, un valor NULL para **@filter_name**, y un valor NULL para **@filter_clause**. Dado que este cambio invalidará los datos en las suscripciones existentes, especifique un valor de **1** para **@force_reinit_subscription**.  
+1.  En la base de datos de publicación del publicador, ejecute [sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md). Especifique el nombre del artículo para **@article**, el nombre de la publicación para **@publication**, un valor de NULL para **@filter_name**y un valor de NULL para **@filter_clause**. Dado que este cambio invalidará los datos en las suscripciones existentes, especifique un valor de **1** para **@force_reinit_subscription**.  
   
 2.  Vuelva a ejecutar el trabajo del Agente de instantáneas para que la publicación genere una instantánea actualizada. Para obtener más información, consulte [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
-3.  Reinicialice las suscripciones. Para obtener más información, consulte [reinicializar suscripciones](../../../relational-databases/replication/reinitialize-subscriptions.md).  
+3.  Reinicialice las suscripciones. Para obtener más información, vea [Reinicializar suscripciones](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
-#### Para definir un filtro de fila estático para una publicación de combinación  
+#### <a name="to-define-a-static-row-filter-for-a-merge-publication"></a>Para definir un filtro de fila estático para una publicación de combinación  
   
-1.  En el publicador de la base de datos de publicación, ejecute [sp_addmergearticle & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Especifique la cláusula de filtrado para **@subset_filterclause** (sin incluir `WHERE`). Para más información, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  En la base de datos de publicación del publicador, ejecute [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Especifique la cláusula de filtrado para **@subset_filterclause** (no se incluye `WHERE`). Para obtener más información, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  Si todavía debe definirse un filtro de columna, vea [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
-#### Para modificar un filtro de fila estático para una publicación de combinación  
+#### <a name="to-modify-a-static-row-filter-for-a-merge-publication"></a>Para modificar un filtro de fila estático para una publicación de combinación  
   
-1.  En el publicador de la base de datos de publicación, ejecute [sp_changemergearticle & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique el nombre de publicación para **@publication**, el nombre del artículo filtrado para **@article**, un valor de **subset_filterclause** para **@property**, y la nueva cláusula de filtrado para **@value** (sin incluir `WHERE`). Dado que este cambio invalidará los datos en las suscripciones existentes, especifique un valor de 1 para **@force_reinit_subscription**.  
+1.  En el publicador de la base de datos de publicación, ejecute [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique el nombre de la publicación para **@publication**, el nombre del artículo filtrado para **@article**, un valor de **subset_filterclause** para **@property**y la cláusula de filtrado nueva para **@value** (no se incluye `WHERE`). Dado que este cambio invalidará los datos en las suscripciones existentes, especifique un valor de 1 para **@force_reinit_subscription**.  
   
 2.  Vuelva a ejecutar el trabajo del Agente de instantáneas para que la publicación genere una instantánea actualizada. Para obtener más información, consulte [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
-3.  Reinicialice las suscripciones. Para obtener más información, consulte [reinicializar suscripciones](../../../relational-databases/replication/reinitialize-subscriptions.md).  
+3.  Reinicialice las suscripciones. Para obtener más información, vea [Reinicializar suscripciones](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
 ###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  En este ejemplo de la replicación transaccional, el artículo se filtra horizontalmente para quitar todos los productos desusados.  
@@ -153,8 +157,8 @@ caps.handback.revision: 38
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-stat_2.sql)]  
   
-## Vea también  
- [Definir y modificar un filtro de fila con parámetros para un artículo de mezcla](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+## <a name="see-also"></a>Vea también  
+ [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Cambiar las propiedades de la publicación y de los artículos](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Filtrar datos publicados](../../../relational-databases/replication/publish/filter-published-data.md)   
  [Filtrar datos publicados para la replicación de mezcla](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  

@@ -1,27 +1,31 @@
 ---
-title: "Modificar vistas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "vistas [SQL Server], cambio de nombre"
-  - "vistas [SQL Server], modificar"
-  - "modificar vistas"
-  - "cambiar el nombre de vistas"
+title: "Modificación de vistas | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- views [SQL Server], renaming
+- views [SQL Server], modifying
+- modifying views
+- renaming views
 ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 242d7b946699560cf24c59a262e3a14a5c08b8d9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Modificar vistas
+# <a name="modify-views"></a>Modificar vistas
   Después de definir una vista, puede cambiar su definición en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sin tener que quitarla y volverla a crear si usa [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
@@ -55,7 +59,7 @@ caps.handback.revision: 22
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para modificar una vista  
+#### <a name="to-modify-a-view"></a>Para modificar una vista  
   
 1.  En el **Explorador de objetos**, haga clic en el signo más situado junto a la base de datos donde se encuentra la vista y, a continuación, haga clic en el signo más situado junto a la carpeta **Vistas** .  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 22
   
     1.  Active o desactive las casillas de cualquier elemento que desee agregar o quitar.  
   
-    2.  Haga clic con el botón derecho en el panel de diagrama, seleccione **Agregar tabla** y, luego, las columnas adicionales que quiere agregar a la vista del cuadro de diálogo **Agregar tabla**.  
+    2.  Haga clic con el botón derecho en el panel de diagrama, seleccione **Agregar tabla**y, luego, las columnas adicionales que quiere agregar a la vista del cuadro de diálogo **Agregar tabla** .  
   
     3.  Haga clic con el botón derecho en la barra de título de la tabla que quiere quitar y seleccione **Quitar**.  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 22
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para modificar una vista  
+#### <a name="to-modify-a-view"></a>Para modificar una vista  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

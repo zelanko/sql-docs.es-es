@@ -1,35 +1,40 @@
 ---
-title: "Crear un usuario de base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.user.securables.f1"
-  - "SQL13.SWB.DATABASEUSER.GENERAL.F1"
-helpviewer_keywords: 
-  - "usuarios de la base de datos, crear"
-  - "crear usuarios con Management Studio"
-  - "asignar usuarios"
-  - "usuarios [SQL Server], crear"
-  - "adiciones de usuario de base de datos [SQL Server]"
-  - "usuarios de la base de datos, asignar\"
-  - "CREATE USER [Management Studio]"
-  - "usuarios [SQL Server], agregar"
-  - "asignar usuarios de base de datos"
+title: Crear un usuario de base de datos | Microsoft Docs
+ms.custom: 
+ms.date: 04/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.user.securables.f1
+- SQL13.SWB.DATABASEUSER.GENERAL.F1
+helpviewer_keywords:
+- database users, creating
+- creating users with Management Studio
+- mapping users
+- users [SQL Server], creating
+- database user additions [SQL Server]
+- database users, mapping
+- CREATE USER [Management Studio]
+- users [SQL Server], adding
+- mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
----
-# Crear un usuario de base de datos
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 29621ffb4694c725024b6fee7220f6b2e76d305a
+ms.lasthandoff: 05/03/2017
+
+---   
+
+# <a name="create-a-database-user"></a>Crear un usuario de base de datos
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   En este tema se describe cómo crear los tipos más comunes de usuarios de base de datos. Hay once tipos de usuarios. La lista completa se proporciona en el tema [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Todas las variedades de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admiten usuarios de base de datos, pero no necesariamente todos los tipos de usuarios.  
@@ -41,7 +46,7 @@ caps.handback.revision: 31
   
  ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
   
-### Seleccionar el tipo de usuario  
+### <a name="selecting-the-type-of-user"></a>Seleccionar el tipo de usuario  
  **Credenciales de inicio de sesión o usuario no asignado a un inicio de sesión**  
   
  Si no está familiarizado con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], puede resultarle difícil determinar qué tipo de usuario quiere crear. En primer lugar, pregúntese lo siguiente: ¿tiene credenciales de inicio de sesión la persona o el grupo que necesita acceder a la base de datos? Los inicios de sesión en la base de datos maestra son habituales para las personas que administran [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y para las personas que necesitan acceder a la mayoría de las bases de datos en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)](o a todas). En este caso, creará un **usuario SQL con inicio de sesión**. El usuario de la base de datos es la identidad del inicio de sesión cuando está conectado a una base de datos. El usuario de la base de datos puede utilizar el mismo nombre que el inicio de sesión, pero no es necesario. En este tema se supone que ya existe un inicio de sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener información sobre cómo crear un inicio de sesión, vea [Crear un inicio de sesión](../../../relational-databases/security/authentication-access/create-a-login.md).  
@@ -61,7 +66,7 @@ caps.handback.revision: 31
   
  Como entidad de seguridad, se pueden conceder permisos a los usuarios. El ámbito de un usuario es la base de datos. Para establecer conexión con una base de datos concreta de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un inicio de sesión debe estar asignado a un usuario de la base de datos. Los permisos dentro de la base de datos se conceden y deniegan al usuario de la base de datos, no al inicio de sesión.  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
  Debe tener el permiso **ALTER ANY USER** para la base de datos.  
   
 ##  <a name="SSMSProcedure"></a> Crear un usuario con SSMS  
@@ -75,7 +80,7 @@ caps.handback.revision: 31
   
 4.  En el cuadro de diálogo **Usuario de base de datos - Nuevo** , en la página **General** , seleccione uno de los siguientes tipos de usuario de la lista **Tipo de usuario** :  
   
-    -   **usuario SQL con inicio de sesión**  
+    -   **Usuario SQL con inicio de sesión**  
   
     -   **Usuario SQL con contraseña**  
   
@@ -112,7 +117,7 @@ caps.handback.revision: 31
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### Opciones adicionales  
+### <a name="additional-options"></a>Opciones adicionales  
  El cuadro de diálogo **Usuario de la base de datos - Nuevo** también proporciona opciones en cuatro páginas adicionales: **Esquemas de propiedad**, **Pertenencia**, **Elementos protegibles**y **Propiedades extendidas**.  
   
 -   La página **Esquemas de propiedad** enumera todos los esquemas posibles que pueden ser propiedad del nuevo usuario de base de datos. Para agregar o quitar esquemas en un usuario de base de datos, en **Esquemas propiedad de este usuario**, active o desactive las casillas situadas junto a los esquemas.  
@@ -133,9 +138,9 @@ caps.handback.revision: 31
      Muestra o especifica las propiedades extendidas del objeto. Cada propiedad extendida está formada por un par nombre/valor de metadatos asociados al objeto.  
   
      **Puntos suspensivos (…)**  
-     Haga clic en los puntos suspensivos **(…)** que se encuentran a continuación de **Valor** para abrir el cuadro de diálogo **Valor para propiedad extendida**. Escriba o muestre el valor de la propiedad extendida en esta ubicación mayor. Para obtener más información, vea [Valor para propiedad extendida (cuadro de diálogo)](http://msdn.microsoft.com/library/ms189353.aspx).  
+     Haga clic en los puntos suspensivos **(…)** que se encuentran a continuación de **Valor** para abrir el cuadro de diálogo **Valor para propiedad extendida** . Escriba o muestre el valor de la propiedad extendida en esta ubicación mayor. Para obtener más información, vea [Valor para propiedad extendida (cuadro de diálogo)](http://msdn.microsoft.com/library/ms189353.aspx).  
   
-     **Eliminar**  
+     **Delete**  
      Elimina la propiedad extendida que se ha seleccionado.  
   
 ##  <a name="TsqlProcedure"></a> Crear un usuario con T-SQL  
@@ -159,9 +164,10 @@ caps.handback.revision: 31
   
  Para obtener más información, vea [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md) que contiene muchos más ejemplos de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Crear un inicio de sesión](../../../relational-databases/security/authentication-access/create-a-login.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  
   
   
+

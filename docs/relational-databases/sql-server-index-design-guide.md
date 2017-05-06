@@ -26,9 +26,9 @@ ms.lasthandoff: 04/11/2017
 # <a name="sql-server-index-design-guide"></a>Guía de diseño de índices de SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Los índices mal diseñados y la falta de índices constituyen las principales fuentes de atascos en aplicaciones de base de datos. El diseño eficaz de los índices tiene gran importancia para conseguir un buen rendimiento de una base de datos y una aplicación. Esta guía de diseño de índices de SQL Server contiene información y prácticas recomendadas que le ayudarán a diseñar índices eficaces que resuelvan las necesidades de la aplicación.  
+Los índices mal diseñados y la falta de índices constituyen las principales fuentes de atascos en aplicaciones de base de datos. El diseño eficaz de los índices tiene gran importancia para conseguir un buen rendimiento de una base de datos y una aplicación. Esta guía de diseño de índices de SQL Server contiene información y prácticas recomendadas que le ayudarán a diseñar índices eficaces que resuelvan las necesidades de la aplicación.  
     
- En esta guía se da por supuesto que el lector tiene información general sobre los tipos de índice disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener una descripción general de los tipos de índice, vea [Tipos de índice](http://msdn.microsoft.com/library/ms175049.aspx).  
+En esta guía se da por supuesto que el lector tiene información general sobre los tipos de índice disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener una descripción general de los tipos de índice, vea [Tipos de índice](http://msdn.microsoft.com/library/ms175049.aspx).  
   
   
 ##  <a name="Basics"></a> Conceptos básicos del diseño de índices  
@@ -82,7 +82,7 @@ ms.lasthandoff: 04/11/2017
   
 -   Escriba consultas que inserten o modifiquen tantas filas como sea posible en una sola instrucción, en lugar de utilizar varias consultas para actualizar las mismas filas. Al utilizar solo una instrucción, se puede aprovechar el mantenimiento de índices optimizados.  
   
--   Analice el tipo de la consulta y cómo se utilizan las columnas en ella. Por ejemplo, una columna utilizada en una consulta de coincidencia exacta sería una buena candidata para un índice no clúster o clúster.  
+-   Analice el tipo de la consulta y cómo se utilizan las columnas en ella. Por ejemplo, una columna utilizada en una consulta de coincidencia exacta sería una buena candidata para un índice no clúster o clúster.
   
 ### <a name="column-considerations"></a>Consideraciones sobre columnas  
  Cuando diseñe un índice, tenga en cuenta las siguientes directrices acerca de las columnas:  
@@ -588,9 +588,8 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
   
 ##  <a name="Additional_Reading"></a> Lecturas adicionales  
- [Mejorar el rendimiento con vistas indizadas de SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
-  
- [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+[Mejorar el rendimiento con vistas indizadas de SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+[Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   
 

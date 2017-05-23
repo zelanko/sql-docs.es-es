@@ -18,9 +18,10 @@ caps.latest.revision: 76
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: cb839fc8929f20c0ac7ca72dc90f364382bc33d0
+ms.contentlocale: es-es
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -109,7 +110,7 @@ CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;
 GO  
 ```  
   
- La siguiente instrucción [](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] modifica una lista de palabras irrelevantes denominada myStoplist; para ello, agrega la palabra "en", primero para el idioma español y, a continuación, para el francés:  
+ La siguiente instrucción [ALTER FULLTEXT STOPLIST](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] modifica una lista de palabras irrelevantes denominada myStoplist; para ello, agrega la palabra "en", primero para el idioma español y, a continuación, para el francés:  
   
 ```tsql  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'Spanish';  

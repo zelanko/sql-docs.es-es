@@ -21,7 +21,7 @@ ms.contentlocale: es-es
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Change the Scheduling Details for a SQL Server Agent Master Job
+# <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Cambiar los detalles de programación de un trabajo maestro del Agente SQL Server
 En este tema se describe cómo cambiar los detalles de la programación de una definición de trabajo en [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] o [!INCLUDE[tsql](../../includes/tsql_md.md)].  
   
 **En este tema**  

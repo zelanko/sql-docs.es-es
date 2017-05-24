@@ -22,9 +22,10 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0d646d06bd41ce4db35011d65ecab45109326c15
+ms.contentlocale: es-es
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -174,7 +175,7 @@ ms.lasthandoff: 04/11/2017
 >  Esta opción no estará disponible para los índices XML ni cuando el índice sea un índice clúster deshabilitado.  
   
  **Establecer grado máximo de paralelismo**  
- Limita el número de procesadores que se van a utilizar durante la ejecución de planes paralelos. El valor predeterminado es 0, que utiliza el número real de CPU disponibles. Si el valor se establece en 1, se suprime la generación de planes paralelos; si el valor se establece en un número mayor que 1, se restringe el número máximo de procesadores que se utilizan en la ejecución de una única consulta. Esta opción solo está disponible si el cuadro de diálogo está en los estados **Volver a generar** o **Volver a crear** . Para más información, consulte [Set the Max Degree of Parallelism Option for Optimal Performance](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
+ Limita el número de procesadores que se van a utilizar durante la ejecución de planes paralelos. El valor predeterminado es 0, que utiliza el número real de CPU disponibles. Si el valor se establece en 1, se suprime la generación de planes paralelos; si el valor se establece en un número mayor que 1, se restringe el número máximo de procesadores que se utilizan en la ejecución de una única consulta. Esta opción solo está disponible si el cuadro de diálogo está en los estados **Volver a generar** o **Volver a crear** . Para más información, consulte [PerformanceEstablecer la opción Grado máximo de paralelismo para lograr un rendimiento óptimo](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
   
 > [!NOTE]  
 >  Si especifica un valor superior al número de CPU disponibles, se utilizará el número real de CPU disponibles.  

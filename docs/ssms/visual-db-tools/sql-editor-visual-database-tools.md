@@ -25,9 +25,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dd01c244e33751b49c4bd811a879eedd500be957
+ms.contentlocale: es-es
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,7 +50,7 @@ El editor SQL proporciona numerosas características de edición de texto SQL de
 > [!NOTE]  
 > IntelliSense no está disponible en el Editor SQL.  
   
-Al editar instrucciones SQL, algunas instrucciones Transact-SQL se incluyen en un cuadro rodeado por una línea fina. Esto ayuda a dividir visualmente el código SQL en secciones de comandos e identifica bloques de instrucciones SQL que pueden diseñarse de forma gráfica mediante el Diseñador de consultas. Para más información sobre cómo usar el Diseñador de consultas, vea [Design Queries and Views How-to Topics &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md).  
+Al editar instrucciones SQL, algunas instrucciones Transact-SQL se incluyen en un cuadro rodeado por una línea fina. Esto ayuda a dividir visualmente el código SQL en secciones de comandos e identifica bloques de instrucciones SQL que pueden diseñarse de forma gráfica mediante el Diseñador de consultas. Para más información sobre cómo usar el Diseñador de consultas, vea [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md).  
   
 ## <a name="see-also"></a>Vea también  
 [Temas de procedimientos de diseño de consultas y vistas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

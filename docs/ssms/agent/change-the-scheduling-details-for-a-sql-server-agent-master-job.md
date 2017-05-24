@@ -46,7 +46,7 @@ No se puede destinar un trabajo principal del Agente [!INCLUDE[ssNoVersion](../.
 ### <a name="Security"></a>Seguridad  
   
 #### <a name="Permissions"></a>Permissions  
-A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modificar los trabajos de su propiedad. Para obtener información detallada, vea [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modificar los trabajos de su propiedad. Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
   

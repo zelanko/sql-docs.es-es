@@ -16,9 +16,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2a8a21c9fc7ade45f13e055a30f4649af13677af
+ms.contentlocale: es-es
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -37,7 +38,7 @@ Haga clic en este botón para mostrar una lista de los objetos de cuyas dependen
 Haga clic en este botón para mostrar una lista de los objetos de cuyas dependencias se realiza un seguimiento y de los que depende el objeto seleccionado.  
   
 **Dependencias**  
-Si se hace clic en **Objetos que dependen de** *<selected object>* , aquí se muestra una vista jerárquica de los objetos que dependen del objeto seleccionado. Si se hace clic en **Objetos de los que** *<selected object>* **depende** is clicked, this displays an hierarchical view of objects on which the selected object depende.  
+Si se hace clic en **Objetos que dependen de** *<selected object>* , aquí se muestra una vista jerárquica de los objetos que dependen del objeto seleccionado. Si se hace clic en **Objetos de los que**  *<selected object>* **depende**, se muestra una vista jerárquica de los objetos que dependen del objeto seleccionado.  
   
 **Nombre**  
 Muestra el nombre del objeto seleccionado en la vista de árbol **Dependencias** anterior.  

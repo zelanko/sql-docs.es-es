@@ -18,9 +18,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 98961d875eaef7e6c941212780ddcb60b44d57ac
+ms.contentlocale: es-es
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -38,7 +39,7 @@ Cada servidor de destino puede ejecutar una instancia del mismo trabajo al mismo
 > Si no es posible el acceso al servidor maestro cuando el servidor de destino intenta cargar el estado del trabajo, dicho estado de trabajo se coloca en la cola hasta que se pueda obtener acceso al servidor principal.  
   
 ### <a name="Security"></a>Seguridad  
-Para obtener información detallada, vea [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md) y [Choose the Right SQL Server Agent Service Account for Multiserver Environments](../../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
+Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md) y [Elegir la cuenta correcta del servicio del Agente SQL Server para entornos multiservidor](../../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
   
 ## <a name="SSMS"></a>Usar SQL Server Management Studio  
 **Para establecer el intervalo de sondeo para servidores de destino**  

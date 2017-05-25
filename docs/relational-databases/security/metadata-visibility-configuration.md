@@ -23,9 +23,10 @@ caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9381b69a605ed7928851a18e64d7054d43fcb65c
+ms.contentlocale: es-es
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -66,7 +67,7 @@ GO
   
 -   Las funciones integradas que emiten metadatos, como OBJECTPROPERTYEX, pueden devolver NULL.  
   
--   Los procedimientos almacenados [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** stored procedures might return only a subset of rows, or NULL.  
+-   Los procedimientos almacenados [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** pueden devolver únicamente un subconjunto de filas, o NULL.  
   
  Los módulos SQL, como procedimientos almacenados y desencadenadores, se ejecutan en el contexto de seguridad del autor de la llamada y, por tanto, tienen un acceso limitado a los metadatos. Por ejemplo, en el siguiente código, cuando el procedimiento almacenado intenta obtener acceso a los metadatos de la tabla `myTable` sobre la que el autor de la llamada no tienen ningún derecho, se devuelve un conjunto de resultados vacío. En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]se devuelve una fila.  
   

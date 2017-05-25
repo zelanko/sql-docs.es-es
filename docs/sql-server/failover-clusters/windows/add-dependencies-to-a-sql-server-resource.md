@@ -19,18 +19,19 @@ caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bffe545296432d465fd744092519c9882ccc04c1
+ms.contentlocale: es-es
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>Agregar dependencias a un recurso de SQL Server
   En este tema se describe cómo se agregan dependencias a un recurso de instancia de clúster de conmutación por error (FCI) AlwaysOn con el complemento Administrador de clústeres de conmutación por error. El complemento Administrador de clústeres de conmutación por error es la aplicación de administración de clústeres del servicio de clústeres de conmutación por error de Windows Server (WSFC).  
   
--   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Prerequisites](#Prerequisites)  
+-   **Antes de empezar:**  [Limitaciones y restricciones](#Restrictions), [Requisitos previos](#Prerequisites)  
   
--   **To add a dependency to a SQL Server resource, using:** [Windows Failover Cluster Manager](#WinClusManager)  
+-   **Para agregar una dependencia a un recurso de SQL Server con:** [Administrador de clústeres de conmutación por error de Windows](#WinClusManager)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   

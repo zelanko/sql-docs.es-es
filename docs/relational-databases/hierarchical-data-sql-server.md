@@ -21,9 +21,10 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 502bbf9e763ffc8132e741a33ebe0ec4d0cad499
+ms.contentlocale: es-es
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -125,7 +126,7 @@ GO
   
   
 ### <a name="xml"></a>XML  
- Un documento XML es un árbol y, por lo tanto, una única instancia de tipo de datos XML puede representar una jerarquía completa. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] when an XML dedex is created, **hierarchyid** values are used deternally to represent the position de the hierarchy.  
+ Un documento XML es un árbol y, por lo tanto, una única instancia de tipo de datos XML puede representar una jerarquía completa. Cuando se crea un índice XML en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se usan internamente los valores **hierarchyid** para representar la posición en la jerarquía.  
   
  Utilizar el tipo de datos XML puede ser mejor opción cuando se cumplen todas las condiciones siguientes:  
   

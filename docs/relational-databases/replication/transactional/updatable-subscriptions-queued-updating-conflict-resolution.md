@@ -20,9 +20,10 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 666ad0200e8429c470772fc68110d14a7809d12a
+ms.contentlocale: es-es
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/11/2017
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
   
--   Programación de la replicación con Transact-SQL: [Enable Updating Subscriptions for Transactional Publications](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   Programación de la replicación con Transact-SQL: [Habilitar suscripciones actualizables para publicaciones transaccionales](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **Para ver conflictos de datos**  
   
@@ -81,6 +82,6 @@ ms.lasthandoff: 04/11/2017
  La detección de conflictos con la directiva El suscriptor gana significa que la última transacción de suscriptor que actualice el publicador ganará. En este caso, cuando se detecte un conflicto, se seguirá utilizando la transacción enviada por el suscriptor y se actualizará el publicador. Esta directiva es apropiada para las aplicaciones en que estos cambios no pongan en peligro la integridad de los datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [Suscripciones actualizables para replicación transaccional](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

@@ -19,9 +19,10 @@ caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0cc4118a2cfc722ad89ca4b66a6afe403c2967d4
+ms.contentlocale: es-es
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -92,11 +93,11 @@ Clúster de conmutación por error incorpora una medida de seguridad integrada p
  **Solución 1**: use el modificador **/qb** en lugar del **/qn** . Si usa el modificador **/qb** , se mostrará la interfaz de usuario básica en cada paso, incluidos los mensajes de error.  
   
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>Problema: SQL Server no puede iniciar una sesión en la red después de migrar a otro nodo  
- **Issue 1:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service accounts are unable to contact a domain controller.  
+ **Problema 1:** las cuentas de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no pueden ponerse en contacto con un controlador de dominio.  
   
  **Solución 1**: compruebe los registros de eventos para ver si hay problemas de red, como errores de los adaptadores o problemas de DNS. Compruebe que puede hacer ping al controlador de dominio.  
   
- **Issue 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account passwords are not identical on all cluster nodes, or the node does not restart a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service that has migrated from a failed node.  
+ **Problema 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no son idénticas en todos los nodos de clúster o el nodo no reinicia un servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se ha migrado desde un nodo con error.  
   
  **Solución 2:** cambie las contraseñas de las cuentas de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si no lo hace y cambia las contraseñas de la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un nodo, debe cambiar también las contraseñas de los demás nodos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lo hace automáticamente.  
   
@@ -126,7 +127,7 @@ Clúster de conmutación por error incorpora una medida de seguridad integrada p
   
  **Solución 2:** utilice NBTSTAT para encontrar el nombre duplicado y, a continuación, solucione el problema.  
   
- **Issue 3:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is not connecting using Named Pipes.  
+ **Problema 3:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no se conecta mediante Canalizaciones con nombre.  
   
  **Solución 3:** para conectarse mediante Canalizaciones con nombre, cree un alias mediante el Administrador de configuración de SQL Server a fin de conectarse al equipo apropiado. Por ejemplo, si tiene un clúster con dos nodos (**Nodo A** y **Nodo B**) y una instancia de clúster de conmutación por error (**Virtsql**) con una instancia predeterminada, puede conectarse al servidor que tiene el recurso sin conexión Nombre de red al hacer lo siguiente:  
   

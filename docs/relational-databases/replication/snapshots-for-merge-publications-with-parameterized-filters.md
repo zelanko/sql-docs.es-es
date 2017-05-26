@@ -20,9 +20,10 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 246e2e5db5c3e64973c165be8b03e03b7c8226a5
+ms.contentlocale: es-es
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/11/2017
   
  Considere [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], que tiene un personal móvil que proporciona inventarios a las tiendas. Cada vendedor recibe una suscripción según su inicio de sesión, que recupera los datos de las tiendas a las que prestan servicio. El administrador genera previamente las instantáneas y las actualiza cada domingo. Ocasionalmente, se agrega al sistema un usuario nuevo que necesita datos para una partición que no tiene una instantánea disponible. El administrador también permite las instantáneas iniciadas por el suscriptor, con el fin de evitar situaciones en las que un suscriptor no puede suscribirse a la publicación porque la instantánea aún no está disponible. Cuando el nuevo suscriptor se conecta por primera vez, se genera la instantánea para la partición especificada y se aplica al suscriptor (debe ejecutarse el Agente[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el publicador para que se pueda generar la instantánea).  
   
- Para crear una instantánea para una publicación con filtros con parámetros, vea [Create a Snapshot for a Merge Publication with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ Para crear una instantánea para una publicación con filtros con parámetros, vea [Crear una instantánea para una publicación de mezcla con filtros con parámetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="security-settings-for-the-snapshot-agent"></a>Configuración de seguridad para el Agente de instantáneas  
  El Agente de instantáneas crea instantáneas para cada partición. Para las instantáneas generadas previamente y las solicitadas por un suscriptor, el agente se ejecuta y establece conexiones con las credenciales especificadas cuando se creó el trabajo del Agente de instantáneas para la publicación (el trabajo lo crea el Asistente para nueva publicación o **sp_addpublication_snapshot**). Para cambiar las credenciales, utilice **sp_changedynamicsnapshot_job**. Para obtener más información, consulte [sp_changedynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md).  

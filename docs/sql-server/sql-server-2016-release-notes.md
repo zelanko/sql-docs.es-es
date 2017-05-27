@@ -16,9 +16,10 @@ caps.latest.revision: 276
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0447dd94774287a71028252723508ebc5e2e50f8
+ms.contentlocale: es-es
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,11 +32,11 @@ ms.lasthandoff: 04/11/2017
     
 [![Azure Virtual Machine pequeña](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) ¿Tiene una cuenta de Azure?  Si es así, vaya **[aquí](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** para poner en marcha una máquina virtual con SQL Server 2016 SP1 ya instalado.
     
-[![Download SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **SSMS:** To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)**.   
+[![Descargar SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **SSMS:** Para obtener la versión más reciente de SQL Server Management Studio, consulte **[Descarga de SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)**.   
     
  Para obtener más información sobre las novedades, vea el artículo de [novedades de SQL Server 2016](http://msdn.microsoft.com/library/8223c19b-4b0d-4b1d-a042-9a726c18e708).
     
-##  <a name="bkmk_top"></a> Sections In this topic:    
+##  <a name="bkmk_top"></a> Secciones de este tema:    
 
 -   [SQL Server 2016 Service Pack 1 (SP1) disponible](#bkmk_2016sp1)    
 -   [Disponibilidad general (GA) de SQL Server 2016](#bkmk_2016_ga) 

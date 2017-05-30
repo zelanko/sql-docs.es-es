@@ -16,9 +16,10 @@ caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6c005c3de0b3cd1e8e5562c038321a53e04da38a
+ms.contentlocale: es-es
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -38,7 +39,7 @@ ms.lasthandoff: 04/11/2017
 > [!IMPORTANT]  
 >  Las columnas de destino deben tener habilitada la indización de texto completo y semántica.  
   
-###  <a name="HowToTopPhrases"></a> Example 1: Find the top key phrases in a specific document  
+###  <a name="HowToTopPhrases"></a> Ejemplo 1: Buscar las frases clave principales de un documento determinado  
  En el ejemplo siguiente se recuperan las 10 frases clave principales del documento especificado por la variable @DocumentId en la columna Document de la tabla Production.Document de la base de datos de ejemplo AdventureWorks. La variable @DocumentId representa un valor de la columna de clave del índice de texto completo.  
   
 ```tsql  
@@ -55,7 +56,7 @@ GO
   
  La función **SEMANTICKEYPHRASETABLE** recupera estos resultados eficazmente mediante una búsqueda de índice en vez de un recorrido de tabla.  
   
-###  <a name="HowToTopDocuments"></a> Example 2: Find the top documents that contain a specific key phrase  
+###  <a name="HowToTopDocuments"></a> Ejemplo 2: Buscar los documentos principales que contienen una frase clave específica  
  En el ejemplo siguiente se recuperan los 25 primeros documentos que contengan la palabra clave “Bracket” de la columna Document de la tabla Production.Document de la base de datos de ejemplo AdventureWorks.  
   
 ```tsql  

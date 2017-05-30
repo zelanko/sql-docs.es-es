@@ -16,9 +16,10 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 40724f35684d4da590d02163028a14ef711e392d
+ms.contentlocale: es-es
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -29,7 +30,7 @@ ms.lasthandoff: 04/11/2017
   
 ##  <a name="BasicEnabling"></a> Crear un índice semántico  
   
-###  <a name="reqenable"></a> Requirements and restrictions for creating a semantic index  
+###  <a name="reqenable"></a> Requisitos y restricciones para crear un índice semántico  
   
 -   Puede crear un índice en cualquiera de los objetos de base de datos admitidos para la indización de texto completo, incluidas las tablas y las vistas indizadas.  
   
@@ -150,7 +151,7 @@ GO
 
 ## <a name="alter-a-semantic-index"></a>Modificar un índice semántico
   
-###  <a name="addreq"></a> Requirements and restrictions for altering an existing index  
+###  <a name="addreq"></a> Requisitos y restricciones para modificar un índice existente  
   
 -   No puede modificar ningún índice existente mientras el rellenado del mismo esté en curso. Para obtener más información sobre cómo supervisar el progreso del rellenado de índices, vea [Administrar y supervisar la búsqueda semántica](../../relational-databases/search/manage-and-monitor-semantic-search.md).  
   
@@ -187,7 +188,7 @@ GO
  ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>Agregar o quitar un índice semántico con SQL Server Management Studio  
  Puede cambiar las columnas habilitadas para la indexación semántica y de texto completo en la página **Columnas de índice de texto completo** del cuadro de diálogo **Propiedades del índice de texto completo** . Para obtener más información, vea [Administrar índices de texto completo](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
   
-###  <a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
+###  <a name="dropreq"></a> Requisitos y restricciones para quitar un índice semántico  
   
 -   No puede quitar la indización de texto completo de ninguna columna mientras se conserve la indización semántica. La indización semántica depende de la indización de texto completo para los resultados de similitud de documentos.  
   
@@ -276,7 +277,7 @@ GO
   
  Si el tipo de documento que desea indizar no está en la lista de tipos compatibles, puede tener que buscar, descargar, e instalar filtros adicionales. Para obtener más información, consulte [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="BestPracticeFilegroup"></a> Best practice: Consider creating a separate filegroup for the full-text and semantic indexes  
+##  <a name="BestPracticeFilegroup"></a> Práctica recomendada: plantearse crear un grupo de archivos independiente para los índices de texto completo y los semánticos  
  Plantéese crear un grupo de archivos independiente para los índices de texto completo y semántico si la asignación de espacio en disco es un problema. Los índices semánticos se crean en el mismo grupo de archivos que el índice de texto completo. Un índice semántico totalmente rellenado puede contener una gran cantidad de datos.  
  
 ##  <a name="IssueNoResults"></a> Problema: la búsqueda en una columna específica no devuelve resultados  

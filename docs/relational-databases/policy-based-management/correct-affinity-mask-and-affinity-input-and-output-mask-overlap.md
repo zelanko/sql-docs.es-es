@@ -23,7 +23,7 @@ ms.contentlocale: es-es
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="correct-affinity-mask-and-affinity-input-and-output-mask-overlap"></a>Correct Affinity Mask and Affinity Input and Output Mask Overlap
+# <a name="correct-affinity-mask-and-affinity-input-and-output-mask-overlap"></a>Superposición correcta de la máscara de afinidad y la máscara de entrada y salida de afinidad
   Esta regla comprueba si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene uno o varios procesadores que están asignados para usarse con las opciones de máscara de afinidad y de máscara de afinidad de E/S. En un equipo con más de un procesador, las opciones de máscara de afinidad y de máscara de afinidad de E/S se utilizan para designar qué CPU usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al habilitar una CPU con la máscara de afinidad y con la máscara de afinidad de E/S, se puede ralentizar el rendimiento al exigir que el procesador se use demasiado.  
   
 ## <a name="best-practices-recommendations"></a>Prácticas recomendadas  

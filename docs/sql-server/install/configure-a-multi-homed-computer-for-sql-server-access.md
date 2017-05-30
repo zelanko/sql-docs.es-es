@@ -18,9 +18,10 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 61df6c613fec3d5a549f5dc1468b44affa37f047
+ms.contentlocale: es-es
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -107,7 +108,7 @@ ms.lasthandoff: 04/11/2017
 10. En la página **Acción** , revise las opciones. En este ejemplo no se usa el firewall para aplicar conexiones seguras. Por lo tanto, haga clic en **Permitir la conexión**y, a continuación, haga clic en **Siguiente**.  
   
     > [!NOTE]  
-    >  El entorno podría requerir conexiones seguras. Si selecciona una de las opciones de conexiones seguras, podría tener que configurar un certificado y la opción **Forzar cifrado** . Para obtener más información sobre las conexiones seguras, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;.](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)[](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)  
+    >  El entorno podría requerir conexiones seguras. Si selecciona una de las opciones de conexiones seguras, podría tener que configurar un certificado y la opción **Forzar cifrado** . Para obtener más información sobre las conexiones seguras, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;.](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)[Habilitar conexiones cifradas en el motor de base de datos &#40; Administrador de configuración de SQL Server &#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)  
   
 11. En la página **Perfil** , seleccione uno o varios perfiles para la regla. Si no conoce los perfiles de firewall, haga clic en el vínculo **Más información acerca de los perfiles** del programa de firewall.  
   

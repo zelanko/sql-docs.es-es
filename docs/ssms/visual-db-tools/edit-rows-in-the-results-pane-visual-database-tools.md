@@ -29,7 +29,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>Editar filas del panel Resultados (Visual Database Tools)
-En muchos casos, se pueden editar los datos del [panel Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Para información más detallada sobre cómo cambiar los datos, consulte [Rules for Updating Results &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md) y [Work with Data in the Results Pane &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  
+En muchos casos, se pueden editar los datos del [panel Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Para información más detallada sobre cómo cambiar los datos, consulte [Reglas para actualizar resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md) y [Trabajar con datos en el panel Resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  
   
 ### <a name="to-edit-data-in-the-results-pane"></a>Para editar datos en el panel Resultados  
   

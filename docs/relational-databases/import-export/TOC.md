@@ -1,4 +1,4 @@
-# [Bulk Overview](bulk-import-and-export-of-data-sql-server.md) (Información general de BULK)  
+# [Información general de BULK](bulk-import-and-export-of-data-sql-server.md)  
 # [Importar y exportar datos de forma masiva con la utilidad bcp](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)  
 # [Importar de forma masiva datos mediante BULK INSERT u OPENROWSET(BULK...)](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)  
 # [Requisitos previos para el registro mínimo durante la importación en bloque](prerequisites-for-minimal-logging-in-bulk-import.md)  
@@ -28,4 +28,4 @@
 ## [Usar un archivo de formato para omitir un campo de datos](use-a-format-file-to-skip-a-data-field-sql-server.md)  
 ## [Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
 # [Ejemplos de importación y exportación de forma masiva documentos XML](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
-# [Examples of Bulk Access to Data in Azure Blob Storage](examples-of-bulk-access-to-data-in-azure-blob-storage.md) (Ejemplos de acceso masivo a datos en Azure Blob Storage)  
+# [Ejemplos de acceso masivo a datos en Azure Blob Storage](examples-of-bulk-access-to-data-in-azure-blob-storage.md)  

@@ -24,7 +24,7 @@
 ### [Comprobación del subsistema de entrada y salida de disco para problemas de retraso de E/S](check-disk-input-and-output-subsystem-for-io-delay-problems.md)  
 ### [Comprobación de la existencia de problemas de reintento de lectura en el subsistema de entrada y salida del disco](check-disk-input-output-subsystem-for-read-retry-problems.md)  
 ### [Comprobar la integridad de una base de datos con páginas sospechosas](check-integrity-of-database-with-suspect-pages.md)  
-### [Correct Affinity Mask and Affinity Input and Output Mask Overlap](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md) (Superposición correcta de la máscara de afinidad y la máscara de entrada y salida de afinidad)  
+### [Superposición correcta de la máscara de afinidad y la máscara de entrada y salida de afinidad](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)  
 ### [Archivos de registro de seguimiento predeterminados deshabilitados](default-trace-log-files-disabled.md)  
 ### [Detectar solicitudes de entrada y salida con error](detect-failed-input-and-output-requests.md)  
 ### [Detectar problemas de adaptadores de host SCSI](detect-scsi-host-adapter-issues.md)  

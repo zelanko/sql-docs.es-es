@@ -27,11 +27,11 @@ ms.lasthandoff: 04/11/2017
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forzar el inicio de un clúster WSFC sin un quórum
   En este tema se describe cómo forzar que un nodo de clúster de los clústeres de conmutación por error de Windows Server (WSFC) se inicie sin un quórum.  Esto puede ser necesario en los escenarios de recuperación de desastres y de múltiples subredes para recuperar datos y reestablecer por completo la alta disponibilidad para las instancias de clúster de conmutación por error de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   **Before you start:**  [Recommendations](#Recommendations), [Security](#Security)  
+-   **Antes de empezar:**  [Recomendaciones](#Recommendations), [Seguridad](#Security)  
   
--   **To force a cluster to start without a quorum using:**  [Using Failover Cluster Manager](#FailoverClusterManagerProcedure), [Using Powershell](#PowerShellProcedure), [Using Net.exe](#CommandPromptProcedure)  
+-   **Para forzar un clúster se inicie sin un quórum mediante:**  [utilizando el Administrador de clústeres de conmutación por error](#FailoverClusterManagerProcedure), [mediante Powershell](#PowerShellProcedure), [usar Net.exe](#CommandPromptProcedure)  
   
--   **Follow up:**  [Follow Up: After Forcing Cluster to Start without a Quorum](#FollowUp)  
+-   **Seguimiento:**  [Seguimiento: Después de forzar que el clúster se inicie sin un quórum](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
   

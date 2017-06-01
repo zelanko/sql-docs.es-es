@@ -59,7 +59,7 @@ ms.lasthandoff: 04/11/2017
   
 -   Si selecciona seguimiento de conflictos por registro lógico, se considera un conflicto si los cambios se realizan en cualquier fila del mismo registro lógico en más de un nodo de replicación (las columnas afectadas en las filas correspondientes no tienen que ser las mismas).  
   
- Para más información, consulte [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
+ Para más información, consulte [Detectar y solucionar conflictos en registros lógicos](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
  Para especificar el seguimiento de conflictos y el nivel de resolución para un artículo, vea [especificar el nivel de resolución y de seguimiento de conflictos para artículos de mezcla](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
   
@@ -85,11 +85,11 @@ ms.lasthandoff: 04/11/2017
   
 -   Un solucionador personalizado basado en COM  
   
-     La replicación de mezcla propociona una API para escribir solucionadoes como objetos COM en lenguajes como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Para más información, consulte [COM-Based Custom Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+     La replicación de mezcla propociona una API para escribir solucionadoes como objetos COM en lenguajes como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Para más información, consulte [Solucionadores personalizados para COM](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
 -   Un solucionador basado en COM proporcionado por [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] includes a number of COM-based resolvers. Para obtener más información, consulte [Microsoft COM-Based Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye varios solucionadores basados en COM. Para obtener más información, consulte [Solucionadores basados en Microsoft COM](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
  Para obtener información sobre cómo seleccionar el tipo de solucionador adecuado, consulte [Elegir un solucionador](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-choose-a-resolver.md).  
   
@@ -100,10 +100,10 @@ ms.lasthandoff: 04/11/2017
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specify a Merge Subscription Type and Conflict Resolution Priority &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Programación de replicación [!INCLUDE[tsql](../../../includes/tsql-md.md)] y programación con Replication Management Objects (RMO): [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md) y [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)  
+-   Programación de replicación [!INCLUDE[tsql](../../../includes/tsql-md.md)] y programación con Replication Management Objects (RMO): [Crear una suscripción de extracción](../../../relational-databases/replication/create-a-pull-subscription.md) y [Crear una suscripción de inserción](../../../relational-databases/replication/create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>Solucionador interactivo  
- La replicación proporciona una interfaz de usuario Solucionador interactivo que se puede utilizar junto con el solucionador de conflictos basado en prioridad predeterminado o un solucionador de artículos. Cuando se ejecuta una sincronización a petición a través del Administrador de sincronización de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, el Solucionador interactivo muestra los datos en conflicto en tiempo de ejecución y permite elegir la forma de solucionar los conflictos. Para obtener más información acerca de cómo habilitar la resolución interactiva e iniciar el Solucionador interactivo, vea [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
+ La replicación proporciona una interfaz de usuario Solucionador interactivo que se puede utilizar junto con el solucionador de conflictos basado en prioridad predeterminado o un solucionador de artículos. Cuando se ejecuta una sincronización a petición a través del Administrador de sincronización de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, el Solucionador interactivo muestra los datos en conflicto en tiempo de ejecución y permite elegir la forma de solucionar los conflictos. Para obtener más información acerca de cómo habilitar la resolución interactiva e iniciar el Solucionador interactivo, vea [Resolución interactiva de conflictos](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
 ## <a name="viewing-conflicts"></a>Ver conflictos  
  La forma más directa de ver conflictos es utilizar el Visor de conflictos de replicación, disponible en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] también proporciona procedimientos almacenados que permiten consultar tablas de conflictos). El Visor de conflictos y el Solucionador interactivo son herramientas parecidas, pero el Solucionador interactivo permite solucionar los conflictos cuando se realiza la sincronización, mientras que el Visor de conflictos está diseñado para ver los conflictos después de haberlos resuelto. Si los metadatos en conflicto aún están disponibles en las tablas del sistema (los metadatos en conflicto se conservan, de forma predeterminada, durante 14 días), puede reemplazar el resultado de la resolución de conflictos en el Visor de conflictos, pero si se requiere con frecuencia una intervención directa, debe considerar la posibilidad de utilizar el Solucionador interactivo.  

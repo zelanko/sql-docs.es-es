@@ -29,7 +29,7 @@ SQL Server y Azure SQL Database permiten trabajar con texto en formato JSON. Par
 ## <a name="store-json-in-memory-optimized-tables"></a>Almacenamiento de datos JSON en tablas con optimización para memoria
 En el ejemplo siguiente se crea una tabla `Product` con optimización para memoria con dos columnas: `Tags` y `Data`.
 
-```tsql
+```sql
 CREATE SCHEMA xtp;
 GO
 CREATE TABLE xtp.Product(
@@ -54,7 +54,7 @@ Las nuevas características disponibles en SQL Server y Azure SQL Database permi
 ## <a name="validate-json-columns"></a>Validación de columnas JSON
 SQL Server y Azure SQL Database permiten agregar restricciones CHECK compiladas de forma nativa que validan el contenido de los documentos JSON almacenados en una columna de cadena, tal y como se muestra en el ejemplo siguiente.
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -72,7 +72,7 @@ CREATE TABLE xtp.Product(
 
 La restricción CHECK compilada de forma nativa puede agregarse en las tablas existentes que contienen columnas JSON:
 
-```tsql
+```sql
 ALTER TABLE xtp.Product
     ADD CONSTRAINT [Data should be JSON]
         CHECK (ISJSON(Data)=1)
@@ -87,7 +87,7 @@ En el ejemplo siguiente se muestra cómo exponer los dos valores siguientes de l
 -   El país donde se fabricó un producto.
 -   El costo de fabricación del producto.
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -108,7 +108,7 @@ Las columnas calculadas `MadeIn` y `Cost` se actualizan cada vez que se guarda e
 ## <a name="index-values-in-json-columns"></a>Indexación de valores en las columnas JSON
 SQL Server y Azure SQL Database permiten indexar valores en columnas JSON utilizando índices con optimización para memoria. Se deben exponer los valores JSON que se indexan y se tipan fuertemente utilizando las columnas calculadas, tal y como se muestra en el ejemplo siguiente.
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -136,7 +136,7 @@ Los valores de columnas JSON se pueden indexar con los índices NONCLUSTERED y H
 ## <a name="native-compilation-of-json-queries"></a>Compilación nativa de consultas JSON
 Finalmente, la compilación nativa de procedimientos, funciones y desencadenadores de Transact-SQL que contienen consultas con funciones JSON mejora el rendimiento de las consultas y reduce los ciclos de CPU necesarios para ejecutar los procedimientos. En el ejemplo siguiente se muestra un procedimiento compilado de forma nativa que utiliza varias funciones: JSON_VALUE, OPENJSON y JSON_MODIFY.
 
-```tsql
+```sql
 CREATE PROCEDURE xtp.ProductList(@ProductIds nvarchar(100))
 WITH SCHEMABINDING, NATIVE_COMPILATION
 AS BEGIN

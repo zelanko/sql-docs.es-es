@@ -34,7 +34,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="example---use-the-with-clause-to-format-the-output"></a>Ejemplo - Uso de la cláusula WITH para dar formato a la salida  
  La siguiente consulta devuelve los resultados mostrados en la tabla siguiente. Observe cómo la cláusula AS JSON hace que los valores se devuelvan como objetos JSON, en lugar de como valores escalares en col5 y array_element.  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX) =
 N'{"someObject":   
     {"someArray":  
@@ -70,7 +70,7 @@ WITH ( k1 int,
 ## <a name="example---load-json-into-a-includessnoversionincludesssnoversion-mdmd-table"></a>Ejemplo: Carga de JSON en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  En el ejemplo siguiente se carga un objeto JSON completo en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX) = '{  
   "id" : 2,  
   "firstName": "John",  

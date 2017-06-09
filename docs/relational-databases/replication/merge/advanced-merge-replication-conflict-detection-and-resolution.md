@@ -27,7 +27,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be8f8a4e1df903cc70191dc582ce2aef19e7e7aa
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Replicación de mezcla avanzada: detección y resolución de conflictos
@@ -98,7 +98,7 @@ ms.lasthandoff: 04/11/2017
   
  Para especificar un tipo de suscripción de mezcla y la prioridad de resolución de conflictos, vea  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specify a Merge Subscription Type and Conflict Resolution Priority &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Especificar un tipo de suscripción de mezcla y la prioridad de resolución de conflictos &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
 -   Programación de replicación [!INCLUDE[tsql](../../../includes/tsql-md.md)] y programación con Replication Management Objects (RMO): [Crear una suscripción de extracción](../../../relational-databases/replication/create-a-pull-subscription.md) y [Crear una suscripción de inserción](../../../relational-databases/replication/create-a-push-subscription.md)  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 04/11/2017
   
  **Para ver conflictos**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Ver y resolver conflictos de datos para publicaciones de mezcla &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
 -   Programación [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la replicación: [Ver información de conflictos para publicaciones de mezcla &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
   

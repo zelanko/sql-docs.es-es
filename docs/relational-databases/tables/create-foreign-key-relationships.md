@@ -18,14 +18,17 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b417655cd22cefd4c872b7eb4fb75eac3fb201df
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: f6d1acfc492d4d2c37bd4e7cfe66a2b95266a80a
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="create-foreign-key-relationships"></a>Crear relaciones de clave externa
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+
+ > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Crear relaciones de clave externa](https://msdn.microsoft.com/en-US/library/ms189049(SQL.120).aspx).
+
 
   En este tema se describe cómo crear relaciones de clave externa en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cuando se asocian filas de una tabla con filas de otra tabla, se crea una relación entre las dos tablas.    
      

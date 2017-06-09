@@ -1,7 +1,7 @@
 ---
 title: "Reorganización y nueva generación de índices | Microsoft Docs"
 ms.custom: 
-ms.date: 04/29/2016
+ms.date: 05/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -35,42 +35,23 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3c0adf0cb598d11b8bf07d31281c63561fd8db43
+ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
+ms.openlocfilehash: 8f0efc0281809b6547a86d708e4596666f10e0c0
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Reorganizar y volver a generar índices
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
+ > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Reorganizar y volver a generar índices](https://msdn.microsoft.com/en-US/library/ms189858(SQL.120).aspx).
+
   En este tema se describe cómo reorganizar o volver a generar un índice fragmentado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] mantiene los índices automáticamente cada vez que se realizan operaciones de inserción, actualización o eliminación en los datos subyacentes. Con el tiempo, estas modificaciones pueden hacer que la información del índice se disperse por la base de datos (se fragmente). La fragmentación ocurre cuando los índices tienen páginas en las que la ordenación lógica, basada en el valor de clave, no coincide con la ordenación física dentro del archivo de datos. Los índices muy fragmentados pueden reducir el rendimiento de la consulta y ralentizar la respuesta de la aplicación.  
   
  Puede solucionar la fragmentación del índice reorganizándolo o volviéndolo a generar. Para los índices con particiones generados en un esquema de partición, puede usar cualquiera de estos métodos en un índice completo o en una sola partición de un índice. El proceso de volver a crear un índice quita y vuelve a crear el índice. Quita la fragmentación, utiliza espacio en disco al compactar las páginas según el valor de factor de relleno especificado o existente y vuelve a ordenar las filas del índice en páginas contiguas. Cuando se especifica ALL, todos los índices de la tabla se quitan y se vuelven a generar en una única transacción. La reorganización de un índice usa muy pocos recursos del sistema. Desfragmenta el nivel hoja de los índices agrupados y no clúster de las tablas y las vistas al volver a ordenar físicamente las páginas de nivel hoja para que coincidan con el orden lógico de los nodos hoja, de izquierda a derecha. La reorganización también compacta las páginas de índice. La compactación se basa en el valor de factor de relleno existente.  
   
- **En este tema**  
   
--   **Antes de empezar:**  
-  
-     [Detectar la fragmentación](#Fragmentation)  
-  
-     [Limitaciones y restricciones](#Restrictions)  
-  
-     [Seguridad](#Security)  
-  
--   **Para comprobar la fragmentación de un índice, usando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedureFrag)  
-  
-     [Transact-SQL](#TsqlProcedureFrag)  
-  
--   **Para reorganizar o volver a generar un índice, usando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedureReorg)  
-  
-     [Transact-SQL](#TsqlProcedureReorg)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Fragmentation"></a> Detectar la fragmentación  
  El primer paso necesario para detectar qué método de desfragmentación utilizar es analizar el índice a fin de determinar la magnitud de la fragmentación. Si usa la función del sistema [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md), podrá detectar la fragmentación de un índice específico, de todos los índices de una tabla o vista indexada, de todos los índices de una base de datos o de todos los índices de todas las bases de datos. Para los índices con particiones, **sys.dm_db_index_physical_stats** también proporciona información de la fragmentación para cada partición.  
@@ -188,8 +169,10 @@ ms.lasthandoff: 04/11/2017
     -- Find the average fragmentation percentage of all indexes  
     -- in the HumanResources.Employee table.   
     SELECT a.index_id, name, avg_fragmentation_in_percent  
-    FROM sys.dm_db_index_physical_stats (DB_ID(N'AdventureWorks2012'), OBJECT_ID(N'HumanResources.Employee'), NULL, NULL, NULL) AS a  
-        JOIN sys.indexes AS b ON a.object_id = b.object_id AND a.index_id = b.index_id;   
+    FROM sys.dm_db_index_physical_stats (DB_ID(N'AdventureWorks2012'), 
+          OBJECT_ID(N'HumanResources.Employee'), NULL, NULL, NULL) AS a  
+        JOIN sys.indexes AS b 
+          ON a.object_id = b.object_id AND a.index_id = b.index_id;   
     GO  
     ```  
   
@@ -256,7 +239,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  Expanda la carpeta **Índices** .  
   
-5.  Haga clic con el botón derecho en el índice que quiera reorganizar y seleccione **Reorganizar**.  
+5.  Haga clic con el botón derecho en el índice que quiera reorganizar y seleccione **Volver a generar**.  
   
 6.  En el cuadro de diálogo **Volver a generar índices** , compruebe que el índice correcto se encuentra en la cuadrícula **Índices que se van a volver a generar** y haga clic en **Aceptar**.  
   
@@ -277,9 +260,11 @@ ms.lasthandoff: 04/11/2017
     ```  
     USE AdventureWorks2012;   
     GO  
-    -- Reorganize the IX_Employee_OrganizationalLevel_OrganizationalNode index on the HumanResources.Employee table.   
+    -- Reorganize the IX_Employee_OrganizationalLevel_OrganizationalNode 
+    -- index on the HumanResources.Employee table.   
   
-    ALTER INDEX IX_Employee_OrganizationalLevel_OrganizationalNode ON HumanResources.Employee  
+    ALTER INDEX IX_Employee_OrganizationalLevel_OrganizationalNode 
+      ON HumanResources.Employee  
     REORGANIZE ;   
     GO  
     ```  
@@ -324,7 +309,6 @@ ms.lasthandoff: 04/11/2017
  Para obtener más información, vea [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Prácticas recomendadas de desfragmentación de índices de Microsoft SQL Server 2000](http://technet.microsoft.com/library/cc966523.aspx)  
-  
+  [Guía de diseño de índices de SQL Server](../../relational-databases/sql-server-index-design-guide.md)   
   
 

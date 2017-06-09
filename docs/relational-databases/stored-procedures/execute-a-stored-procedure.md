@@ -24,13 +24,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1e76212425f01aba20c8a0d0fdb548415559be1
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: 75e4f9647c7d19c82fd74caa15775fc3d8a97b12
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="execute-a-stored-procedure"></a>Ejecutar un procedimiento almacenado
+
+ > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Ejecutar un procedimiento almacenado](https://msdn.microsoft.com/en-US/library/ms189915(SQL.120).aspx).
+
   En este tema se describe cómo ejecutar un procedimiento almacenado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Hay dos formas diferentes de ejecutar un procedimiento almacenado. El primer método y más común es que una aplicación o un usuario llame al procedimiento. El segundo método consiste en establecer el procedimiento para que se ejecute automáticamente cuando se inicie una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando una aplicación o un usuario llama a un procedimiento, la palabra clave EXECUTE o EXEC de [!INCLUDE[tsql](../../includes/tsql-md.md)] se indica explícitamente en la llamada. Como alternativa, se puede llamar al procedimiento y ejecutarlo sin la palabra clave si el procedimiento es la primera instrucción del lote de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  

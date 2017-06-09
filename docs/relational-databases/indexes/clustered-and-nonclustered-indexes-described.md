@@ -18,14 +18,17 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 01dfceee2f0d4fb1e0c475333be49e6dacec1c3f
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: 860844c00da732d2a40b4572aff98ec06f5d4ddf
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Índices agrupados y no agrupados descritos
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+ > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Índices agrupados y no agrupados descritos](https://msdn.microsoft.com/en-US/library/ms190457(SQL.120).aspx).
+
 
   Un índice es una estructura de disco asociada con una tabla o una vista que acelera la recuperación de filas de la tabla o de la vista. Un índice contiene claves generadas a partir de una o varias columnas de la tabla o la vista. Dichas claves están almacenadas en una estructura (árbol b) que permite que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] busque de forma rápida y eficiente la fila o filas asociadas a los valores de cada clave.  
   

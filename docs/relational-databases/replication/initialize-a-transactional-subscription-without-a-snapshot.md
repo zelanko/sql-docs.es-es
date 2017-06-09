@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4b4c95296d12ba08582ecf6929c5c13dd02b2bae
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Inicializar una suscripción transaccional sin una instantánea
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/11/2017
   
  Para inicializar una suscripción con una copia de seguridad, primero debe habilitar la opción al crear una publicación y, a continuación, al crear una suscripción, especificar valores para una serie de opciones. Las publicaciones se pueden habilitar mediante el Asistente para nueva publicación o mediante programación. Sin embargo, los valores necesarios para las opciones de suscripción solo se pueden especificar mediante programación.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Enable Initialization with a Backup for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Habilitar la inicialización con una copia de seguridad para las publicaciones transaccionales &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
   
 -   Programación de la replicación con Transact-SQL: [Inicializar una suscripción transaccional a partir de un copia de seguridad &#40;programación de la replicación con Transact-SQL&#41;](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md)  
   

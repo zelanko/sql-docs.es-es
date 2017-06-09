@@ -23,13 +23,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 219a32bb6296fac9ec50f78899a31fe52475095c
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: ccd682b0f193628b900ca2b2baf32691582d993c
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Crear servidores vinculados (motor de base de datos de SQL Server)
+
+ > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Crear servidores vinculados (motor de base de datos de SQL Server)](https://msdn.microsoft.com/en-US/library/ff772782(SQL.120).aspx).
+
   En este tema se muestra cómo crear un servidor vinculado y tener acceso a los datos desde otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La creación de un servidor vinculado permite trabajar con datos de varios orígenes. El servidor vinculado no necesita ser otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sino que es un escenario común.  
   
 ##  <a name="Background"></a> Información previa  

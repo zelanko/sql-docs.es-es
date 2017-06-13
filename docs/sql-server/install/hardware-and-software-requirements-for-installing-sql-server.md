@@ -51,14 +51,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2fd9cc456c7cb71108eced3328583a004deb171c
+ms.sourcegitcommit: 70bdaa29578874c6a795199347cb082606e14c5c
+ms.openlocfilehash: 6aa732f1ab8633af453e6b12d45285bbc94233ad
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/21/2017
 
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Requisitos de hardware y software para instalar SQL Server
-  En este tema se enumeran los requisitos mínimos de hardware y software para instalar y ejecutar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  En este tema se enumeran los requisitos mínimos de hardware y software para instalar y ejecutar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+
+ > Para el contenido relacionado con las versiones anteriores de SQL Server, vea [requisitos de Hardware y Software para instalar SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx). 
   
  **Pruébelo:**  
   

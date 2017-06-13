@@ -1,30 +1,35 @@
 ---
-title: "Personalizar los par&#225;metros de extensi&#243;n de representaci&#243;n en RSReportServer.Config | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "opciones de configuración [Reporting Services]"
-  - "DeviceInfo, configuración de"
-  - "extensiones de representación [Reporting Services], reemplazar comportamientos"
-  - "parámetros [Reporting Services], representación de informes"
-  - "reemplazar el comportamiento de representación del informe"
-  - "extensiones [Reporting Services], representar"
+title: "Personalizar la representación de los parámetros de extensión en RSReportServer.Config | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- configuration options [Reporting Services]
+- DeviceInfo settings
+- rendering extensions [Reporting Services], overriding behaviors
+- parameters [Reporting Services], report rendering
+- overriding report rendering behavior
+- extensions [Reporting Services], rendering
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 caps.latest.revision: 31
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 31
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 009b40c83d662b40b3215f701a2eb490ebc4fed1
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Personalizar los par&#225;metros de extensi&#243;n de representaci&#243;n en RSReportServer.Config
+# <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Personalizar los parámetros de extensión de representación en RSReportServer.Config
   Es posible especificar parámetros de extensión de representación en el archivo de configuración RSReportServer para invalidar el comportamiento predeterminado de la representación de los informes que se ejecutan en un servidor de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Los parámetros de extensión de representación se pueden modificar para lograr los siguientes objetivos:  
   
 -   Cambiar la manera en que aparece el nombre de la extensión de representación en la lista Exportar de la barra de herramientas de informe (por ejemplo, para cambiar "Archivo web" a "MHTML") o traducir el nombre a un idioma diferente.  
@@ -35,9 +40,9 @@ caps.handback.revision: 31
   
  La modificación de los parámetros de extensión de representación solo afecta a las operaciones de representación del servidor de informes. La configuración de la extensión de representación no se puede reemplazar en la vista previa del informe del Diseñador de informes.  
   
- Cuando se especifican parámetros de extensión de representación en los archivos de configuración, las extensiones de representación se ven afectadas globalmente. Los valores de los archivos de configuración se usarán en lugar de los valores predeterminados siempre que se utilice una extensión de representación determinada. Si se quiere establecer parámetros de extensión de representación para un informe o una operación de representación específicos, debe especificarse la información de dispositivo mediante programación, usando el método <xref:ReportExecution2005.ReportExecutionService.Render%2A> o especificando la configuración de información de dispositivo en una dirección URL de informe. Para obtener más información sobre cómo especificar los valores de información de dispositivo para una operación de representación, y ver la lista completa de valores de información de dispositivo, vea [Pasar la configuración de información de dispositivo a las extensiones de representación](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
+ Cuando se especifican parámetros de extensión de representación en los archivos de configuración, las extensiones de representación se ven afectadas globalmente. Los valores de los archivos de configuración se usarán en lugar de los valores predeterminados siempre que se utilice una extensión de representación determinada. Si se desea establecer parámetros de extensión de representación para un informe o una operación de representación específicos, debe especificarse la información de dispositivo mediante programación, utilizando el método <xref:ReportExecution2005.ReportExecutionService.Render%2A> o especificando la configuración de información de dispositivo en una dirección URL de informe. Para obtener más información sobre cómo especificar los valores de información de dispositivo para una operación de representación, y ver la lista completa de valores de información de dispositivo, vea [Pasar la configuración de información de dispositivo a las extensiones de representación](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
   
-## Buscar y modificar RSReportServer.config  
+## <a name="finding-and-modifying-rsreportserverconfig"></a>Buscar y modificar RSReportServer.config  
  Los ajustes de configuración para los formatos de la salida de informes se especifican como parámetros de extensión de representación en el archivo RSReportServer.config. Para especificar parámetros de extensión de representación en los archivos de configuración, es necesario saber cómo se definen las estructuras XML que establecen los parámetros de representación. Hay dos estructuras XML que se pueden modificar:  
   
 -   El elemento **OverrideNames** define el nombre para mostrar y el idioma de la extensión de representación.  
@@ -46,7 +51,7 @@ caps.handback.revision: 31
   
  Para modificarlo, se puede usar un editor de texto. El archivo RSReportServer.config se encuentra en la carpeta \Reporting Services\Report Server\Bin. Para obtener más información sobre cómo modificar archivos de configuración, vea [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
-## Cambiar el nombre para mostrar  
+## <a name="changing-the-display-name"></a>Cambiar el nombre para mostrar  
  El nombre para mostrar de una extensión de representación aparece en la lista Exportar de la barra de herramientas de informe. Algunos ejemplos de nombres para mostrar predeterminados son Archivo web, Archivo TIFF y Archivo PDF de Acrobat. El nombre para mostrar predeterminado se puede sustituir por un valor personalizado especificando el elemento **OverrideNames** en los archivos de configuración. Además, si se van a definir dos instancias de una extensión de representación, se puede utilizar el elemento **OverrideNames** para distinguirlas en la lista Exportar.  
   
  Dado que los nombres para mostrar se traducen, será necesario establecer el atributo **Language** si se va a sustituir el nombre para mostrar predeterminado por un valor personalizado. Si no, se pasará por alto cualquier nombre que se especifique. El valor de idioma que se establezca debe ser válido en el equipo del servidor de informes. Por ejemplo, si el servidor de informes se ejecuta en un sistema operativo en francés, deberá especificarse "fr-FR" como valor del atributo.  
@@ -61,7 +66,7 @@ caps.handback.revision: 31
 </Extension>  
 ```  
   
-## Cambiar la configuración de la información del dispositivo  
+## <a name="changing-device-information-settings"></a>Cambiar la configuración de la información del dispositivo  
  Para modificar la configuración predeterminada de la información del dispositivo que utiliza una extensión de representación ya implementada en el servidor de informes, debe incluirse la estructura XML **DeviceInfo** en los archivos de configuración. Cada extensión de representación admite valores de información de dispositivo exclusivos para esa extensión. Para ver la lista completa de la configuración de la información de dispositivos, vea [Pasar la configuración de información de dispositivo a las extensiones de representación](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
   
  En el ejemplo siguiente se muestran la estructura XML y la sintaxis que modifica la configuración predeterminada de la extensión de representación en imágenes:  
@@ -84,7 +89,7 @@ caps.handback.revision: 31
 </Render>  
 ```  
   
-## Configurar varias entradas para una extensión de representación  
+## <a name="configuring-multiple-entries-for-a-rendering-extension"></a>Configurar varias entradas para una extensión de representación  
  Se pueden crear varias instancias de la misma extensión de representación para admitir diferentes opciones de presentación de informes. Cada instancia que se defina puede tener una combinación distinta de valores de parámetro. Cuando defina nuevas instancias de una extensión de representación existente, realice los pasos siguientes:  
   
 -   Especifique un nombre único para la extensión.  
@@ -128,7 +133,7 @@ caps.handback.revision: 31
 </Render>  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [El archivo de configuración RSReportServer.config](../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Archivo de configuración RSReportDesigner](../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [Configuración de la información del dispositivo CSV](../reporting-services/csv-device-information-settings.md)   

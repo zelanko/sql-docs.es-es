@@ -1,34 +1,39 @@
 ---
-title: "Asistente para mapas y Asistente para capas de mapa (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.mapandlayerwizard.f1"
-  - "10542"
-  - "MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME"
+title: Asistente para mapas y Asistente para capas de mapa (generador de informes y SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.rtp.rptdesigner.mapandlayerwizard.f1
+- "10542"
+- MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 8eb09925e1f1b1e1f79cc9e9b7e3fdd56d7ed165
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Asistente para mapas y Asistente para capas de mapa (Generador de informes y SSRS)
- En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], el Asistente para mapas y el Asistente para capas de mapa automatizan las tareas de crear un mapa, agregar una capa de mapa o cambiar las opciones de capas de mapa en una capa existente.  
+# <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Asistente para mapas y Asistente para capas de mapa (Generador de informes y SSRS)
+ En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , el Asistente para mapas y el Asistente para capas de mapa automatizan las tareas de crear un mapa, agregar una capa de mapa o cambiar las opciones de capas de mapa en una capa existente.  
   
  Antes de agregar un mapa a un informe o una capa de mapa a un mapa, necesita recopilar esta información:  
   
 -   **Origen de datos espaciales.** La ubicación o conexión a un origen que proporcione los datos espaciales, como el nombre de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y una base de datos que contenga los datos espaciales, o bien el nombre de un archivo de forma de Environmental Systems Research Institute, Inc. (ESRI).  
   
--   **.** Del origen de datos espaciales, un campo que contenga los conjuntos de coordenadas que especifican las ubicaciones.  
+-   **Spatial data.** Del origen de datos espaciales, un campo que contenga los conjuntos de coordenadas que especifican las ubicaciones.  
   
 -   **Datos analíticos.** Los datos analíticos que se usan para variar la presentación del mapa, por ejemplo, el almacén de ventas anuales.  
   
@@ -112,16 +117,16 @@ caps.handback.revision: 11
   
  Para obtener más información, consulte la documentación del tipo de datos espaciales que utiliza.  
   
-###  <a name="MapGallery"></a> ¿Qué es la Galería de mapas?  
+###  <a name="MapGallery"></a>¿Qué es la Galería de mapas?  
  La galería de mapas contiene mapas de los informes que se encuentran en la carpeta de la galería de mapas del entorno de creación de informes. Los mapas de la galería permiten comenzar rápidamente a agregar un mapa a un informe. Un proveedor de mapas proporciona los mapas predefinidos de la galería.  
   
 > [!NOTE]  
->  Esta característica de mapas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa los datos de archivos de forma TIGER/Line que se proporcionan por cortesía de la Oficina del censo estadounidense ([http://www.census.gov/](http://www.census.gov/)). Los archivos de forma TIGER/Line son un extracto de información geográfica y cartográfica seleccionada de la base de datos MAF/TIGRE del Censo. Los archivos de forma TIGER/Line están disponibles sin cargo en la Oficina del censo estadounidense. Para más información sobre los archivos de forma TIGER/Line, vaya a [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). La información de fronteras de los archivos de forma TIGER/Line está destinada únicamente para la recopilación de datos estadísticos y tabulación; su representación y designación para fines estadísticos no constituye ninguna determinación de autoridad jurisdiccional ni derechos de propiedad ni de titularidad, y no son descripciones legales de territorios. Census TIGER and TIGER/Line son marcas registradas de la Oficina del censo estadounidense.  
+>  Esta característica de mapas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa los datos de archivos de forma TIGER/Line que se proporcionan por cortesía de la Oficina del censo estadounidense ([http://www.census.gov/](http://www.census.gov/)). Los archivos de forma TIGER/Line son un extracto de información geográfica y cartográfica seleccionada de la base de datos MAF/TIGRE del Censo. Los archivos de forma TIGER/Line están disponibles sin cargo en la Oficina del censo estadounidense. Para obtener más información sobre los archivos de forma TIGER/Line, vaya a [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). La información de fronteras de los archivos de forma TIGER/Line está destinada únicamente para la recopilación de datos estadísticos y tabulación; su representación y designación para fines estadísticos no constituye ninguna determinación de autoridad jurisdiccional ni derechos de propiedad ni de titularidad, y no son descripciones legales de territorios. Census TIGER and TIGER/Line son marcas registradas de la Oficina del censo estadounidense.  
   
  Para extender la galería de mapas, puede agregar o quitar informes del directorio de la galería de mapas, y agregar carpetas para organizar los mapas. Para más información, vea [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-###  <a name="Shapefile"></a> ¿Qué es un archivo de forma ESRI?  
- Un archivo de forma ESRI es un conjunto de archivos con datos que cumplen el formato de datos espaciales de los archivos de forma del Environmental Systems Research Institute, Inc. (ESRI). El conjunto de archivos suele incluir el archivo *\<nombreDeArchivo>*.shp que contiene datos espaciales y un archivo auxiliar, *\<nombreDeArchivo>*.dbf.  
+###  <a name="Shapefile"></a>¿Qué es un archivo de forma ESRI?  
+ Un archivo de forma ESRI es un conjunto de archivos con datos que cumplen el formato de datos espaciales de los archivos de forma del Environmental Systems Research Institute, Inc. (ESRI). El conjunto de archivos suele incluir el  *\<filename >*archivo .shp que contiene los datos espaciales y un archivo auxiliar, * \<filename >*.dbf.  
   
  Al especificar un archivo de forma como origen de datos espaciales, si se encuentra en el equipo local, los datos espaciales se incrustan automáticamente en el informe. Para usar los datos espaciales de un archivo ESRI dinámicamente, debe hacer lo siguiente:  
   
@@ -136,7 +141,7 @@ caps.handback.revision: 11
  Una consulta espacial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una consulta de conjunto de datos que especifica datos de tipo SQLGeometry o SQLGeography de una base de datos relacional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Al definir un origen de datos en el asistente, verá diseñadores de consultas diferentes en la página Diseñar una consulta, en función del tipo de origen de datos al que se haya conectado. Para más información, vea [Diseñadores de consultas &#40;Generador de informes&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md).  
+>  Al definir un origen de datos en el asistente, verá diseñadores de consultas diferentes en la página Diseñar una consulta, en función del tipo de origen de datos al que se haya conectado. Para más información, vea [Diseñadores de consultas &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
   
  Al ejecutar la consulta en el diseñador de consultas, el conjunto de resultados muestra una columna con datos espaciales que aparece como texto. Por ejemplo, una fila podría contener datos espaciales que sean un único punto y la siguiente fila podría contener datos espaciales que definan un conjunto de puntos. Cada fila se convierte en un elemento de mapa. Puede variar la presentación de cada elemento de mapa como una unidad indivisible.  
   
@@ -185,7 +190,7 @@ caps.handback.revision: 11
   
 -   **Híbrido.** Muestra la combinación de las vistas **Carretera** y **Aéreo** .  
   
- Para obtener más información acerca de los mosaicos, vea [Sistema de mosaicos de Bing Maps](http://go.microsoft.com/fwlink/?LinkId=147315). Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](http://go.microsoft.com/fwlink/?LinkId=151371) y [Declaración de privacidad](http://go.microsoft.com/fwlink/?LinkId=151372).  
+ Para obtener más información acerca de los mosaicos, vea [Sistema de mosaicos de Bing Maps](http://go.microsoft.com/fwlink/?LinkId=147315). Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](http://go.microsoft.com/fwlink/?LinkId=151371).  
   
  Para ver un fondo de mosaico en la vista de diseño, debe tener acceso a Internet. Para ver el fondo de mosaico en una vista previa de un informe en un servidor de informes, el servidor de informes se debe configurar para ser compatible con los mosaicos de Bing Maps. Para más información, vea [Solucionar problemas de los informes: informes de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) y [Planear un informe de mapa](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
@@ -247,9 +252,9 @@ caps.handback.revision: 11
   
 -   **Puntos.** Puede especificar reglas de color, reglas de tamaño y reglas de tipo de marcador.  
   
- El procesador de informes aplica las reglas que establezca y determina automáticamente la lista de elementos que se mostrarán en una leyenda. De forma predeterminada, los resultados de todas las capas se muestran en la primera leyenda. Puede ajustar esto al completar el asistente. Para más información, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+ El procesador de informes aplica las reglas que establezca y determina automáticamente la lista de elementos que se mostrarán en una leyenda. De forma predeterminada, los resultados de todas las capas se muestran en la primera leyenda. Puede ajustar esto al completar el asistente. Para más información, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Solucionar problemas de los informes: informes de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Planear un informe de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  

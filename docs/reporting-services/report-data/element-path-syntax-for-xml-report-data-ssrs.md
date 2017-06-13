@@ -1,26 +1,31 @@
 ---
-title: "Sintaxis de ruta de acceso de elemento para datos de informe XML (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ElementPath (sintaxis)"
-  - "XML [Reporting Services], recuperación de datos"
+title: Sintaxis de ruta de acceso de elemento de datos de informe XML (SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ElementPath syntax
+- XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 caps.latest.revision: 43
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 43
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 7c25d6665198e0392aa70d649ca658adec84d2de
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Sintaxis de ruta de acceso de elemento para datos de informe XML (SSRS)
+# <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintaxis de ruta de acceso de elemento para datos de informe XML (SSRS)
   En el Diseñador de informes, se define una ruta de acceso de elemento que distingue mayúsculas de minúsculas para especificar los datos que se van a utilizar en un informe desde un origen de datos XML. Una ruta de acceso de elemento indica cómo se deben recorrer los nodos jerárquicos XML y sus atributos en el origen de datos XML. Para utilizar la ruta de acceso de elemento predeterminada, mantenga vacía la consulta del conjunto de datos o el elemento XML **ElementPath** del elemento XML **Query** . Cuando se recuperan datos del origen de datos XML, los nodos de elemento que tienen valores de texto y atributos de nodo de elemento se convierten en columnas en el conjunto de resultados. Los valores de los nodos y atributos pasan a ser datos de fila al ejecutar la consulta. Las columnas aparecen como la colección de campos del conjunto de datos en el panel Datos de informe. En este tema se describe la sintaxis de la ruta de acceso de elemento.  
   
 > [!NOTE]  
@@ -32,11 +37,11 @@ caps.handback.revision: 43
 |----------------|--------------|  
 |**Negrita**|Texto que debe escribirse exactamente como se muestra.|  
 |&#124; (barra vertical)|Separa los elementos de sintaxis. Solo se puede elegir uno de los elementos.|  
-|[ ] (corchetes)|Elementos opcionales de sintaxis. No escriba los corchetes.|  
+|`[ ]`(paréntesis)|Elementos opcionales de sintaxis. No escriba los corchetes.|  
 |**{ }** (llaves)|Delimita los parámetros de los elementos de sintaxis.|  
-|[**,**…*n*]|Indica que el elemento anterior puede repetirse *n* veces. Cada repetición se separa de la siguiente con una coma.|  
+|[**,**...*n*]|Indica que el elemento anterior puede repetirse  *n*  número de veces. Cada repetición se separa de la siguiente con una coma.|  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -66,7 +71,7 @@ XMLLocalName :: =
     Identifier in the XML tag.   
 ```  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  En la tabla siguiente se resumen los términos de ruta de acceso de elemento. Los ejemplos de la tabla hacen referencia al documento XML de ejemplo Customers.xml, que se incluye en la sección Ejemplos de este tema.  
   
 > [!NOTE]  
@@ -75,18 +80,18 @@ XMLLocalName :: =
 |Término|Definición|  
 |----------|----------------|  
 |Ruta de acceso de elemento|Define la secuencia de nodos que deben recorrerse en el documento XML para recuperar los datos de campo de un conjunto de datos con un origen de datos XML.|  
-|**ElementNode**|Nodo XML en el documento XML. Los nodos se designan mediante etiquetas y existen en una relación jerárquica con otros nodos. Por ejemplo, \<Customers> es el nodo de elemento raíz. \<Customer> es un subelemento de \<Customers>.|  
+|**ElementNode**|Nodo XML en el documento XML. Los nodos se designan mediante etiquetas y existen en una relación jerárquica con otros nodos. Por ejemplo, \<clientes > es el nodo de elemento raíz. \<Cliente > es un subelemento de \<clientes >.|  
 |**XMLName**|Nombre del nodo. Por ejemplo, el nombre del nodo Customers es Customers. **XMLName** puede incluir delante un identificador de espacio de nombres para asignar un nombre único a cada nodo.|  
 |**Codificación**|Indica que **Value** para este elemento es XML codificado y debe descodificarse e incluirse como un subelemento de este elemento.|  
 |**FieldList**|Define el conjunto de elementos y atributos que se van a utilizar para recuperar datos.<br /><br /> Si no se especifica, se usan como campos todos los atributos y subelementos. Si se especifica la lista de campos vacíos (**{}**), no se usará ningún campo de este nodo.<br /><br /> **FieldList** no puede contener a la vez **Value** y **Element** o **ElementNode**.|  
 |**Campo**|Especifica los datos que se recuperan como campo de conjunto de datos.|  
-|**Atributo**|Un par nombre-valor en el **ElementNode**. Por ejemplo, en el nodo de elemento \<Customer ID="1">, **ID** es un atributo y **@ID(Integer)** devuelve "1" como un tipo de entero en el campo de datos **ID** correspondiente.|  
-|**Value**|El valor del elemento. **Value** solo se puede usar en el último **ElementNode** de la ruta de acceso del elemento. Por ejemplo, ya que \<Return> es un nodo hoja, si se incluye al final de una ruta de acceso de elemento, el valor de **Return {@}** es **Chair**.|  
-|**Elemento**|Valor del subelemento con nombre. Por ejemplo, Customers {}/Customer {}/LastName recupera valores únicamente para el elemento LastName.|  
+|**Atributo**|Un par nombre-valor en el **ElementNode**. Por ejemplo, en el nodo de elemento \<Customer ID = "1" >, **Id. de** es un atributo y  **@ID(entero)** devuelve "1" como un tipo entero en el campo de datos correspondiente **identificador**.|  
+|**Valor**|El valor del elemento. **Value** solo se puede usar en el último **ElementNode** de la ruta de acceso del elemento. Por ejemplo, porque \<devolver > es un nodo hoja, si se incluye al final de una ruta de acceso de elemento, el valor de **devolver {@}** es **silla**.|  
+|**Element**|Valor del subelemento con nombre. Por ejemplo, Customers {}/Customer {}/LastName recupera valores únicamente para el elemento LastName.|  
 |**Tipo**|Tipo de datos opcional que se usa para el campo creado a partir de este elemento.|  
 |**NamespacePrefix**|**NamespacePrefix** se define en el elemento XML Query. Si no existe ningún elemento XML Query, se pasan por alto los espacios de nombres del elemento XML **ElementPath** . Si hay un elemento XML Query, el elemento XML **ElementPath** tiene un atributo **IgnoreNamespaces**opcional. Si IgnoreNamespaces es **true**, se omitirán los espacios de nombres de **ElementPath** del XML y el documento. Para más información, vea [Sintaxis de consulta XML para los datos de informe XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).|  
   
-## Ejemplo: sin espacios de nombres  
+## <a name="example---no-namespaces"></a>Ejemplo: sin espacios de nombres  
  En los ejemplos siguientes se usa el documento XML Customers.xml. En esta tabla se muestran ejemplos de sintaxis de ruta de acceso de elemento y los resultados que se obtienen al utilizar la ruta de acceso de elemento en una consulta que define un conjunto de datos, basándose en el documento XML como origen de datos.  
   
 > [!NOTE]  
@@ -135,7 +140,7 @@ XMLLocalName :: =
 |8|Crystal|Hu|20|  
 |15|Wyatt|Diaz|33|  
   
-#### Documento XML: Customers.xml  
+#### <a name="xml-document-customersxml"></a>Documento XML: Customers.xml  
  Para probar los ejemplos de ruta de acceso de elemento de la sección anterior, puede copiar este XML, guardarlo en una dirección URL a la que tenga acceso el Diseñador de informes y, a continuación, usar el documento XML como origen de datos XML: por ejemplo, `http://localhost/Customers.xml`.  
   
 ```  
@@ -173,7 +178,7 @@ XMLLocalName :: =
   
  O bien, puede crear un origen de datos XML que no tenga ninguna cadena de conexión e incrustar Customers.XML en la consulta mediante el procedimiento siguiente:  
   
-###### Para incrustar Customers.XML en una consulta  
+###### <a name="to-embed-customersxml-in-a-query"></a>Para incrustar Customers.XML en una consulta  
   
 1.  Cree un origen de datos XML con una cadena de conexión en blanco.  
   
@@ -203,9 +208,10 @@ XMLLocalName :: =
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tipo de conexión XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
  [Tutoriales de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Agregar, editar y actualizar campos en el panel Datos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
   
+

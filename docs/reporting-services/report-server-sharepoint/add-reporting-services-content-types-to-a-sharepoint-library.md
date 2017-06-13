@@ -1,23 +1,28 @@
 ---
-title: "Agregue los tipos de contenido de Reporting Services a la biblioteca de SharePoint. | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Agregar Reporting Services los tipos de contenido a una biblioteca de SharePoint | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ecb38b65092e15139b0a7c969903105c88a88aa
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Agregue los tipos de contenido de Reporting Services a la biblioteca de SharePoint.
+# <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Agregue los tipos de contenido de Reporting Services a la biblioteca de SharePoint.
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona tipos de contenido de SharePoint predefinidos que se usan para administrar archivos de orígenes de datos compartidos (.rsds), modelos de informe (.smdl) y archivos de definición de informe (.rdl) del Generador de informes. Al agregar un tipo de contenido **Informe del Generador de informes**, **Modelo de informe**y **Origen de datos de informe** a una biblioteca se habilita el comando **Nuevo** para que pueda crear nuevos documentos de ese tipo.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]   
@@ -55,7 +60,7 @@ caps.handback.revision: 7
   
 2.  Vaya a **Configuración del sitio**.  
   
-    -   En SharePoint 2013, haga clic en el icono de **Configuración** . ![Configuración de SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.png "Configuración de SharePoint")  
+    -   En SharePoint 2013, haga clic en el icono de **Configuración** . ![Configuración de SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "configuración de SharePoint")  
   
     -   En SharePoint 2010, haga clic en **Acciones del sitio**y, a continuación, haga clic en **Configuración del sitio**.  
   
@@ -108,7 +113,7 @@ caps.handback.revision: 7
 8.  Cuando termine de agregar tipos de contenido, haga clic en **Aceptar**.  
   
 9. > [!NOTE]  
-    >  Si el grupo de tipos de contenido de **Tipos de contenido de SQL Server Reporting Services** de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no es visible en la página **Agregar tipos de contenido**, se cumple una de las condiciones siguientes:  
+    >  Si el grupo de tipos de contenido de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Tipos de contenido de SQL Server Reporting Services **de** no es visible en la página **Agregar tipos de contenido** , se cumple una de las condiciones siguientes:  
   
     -   No se ha instalado el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint. Para obtener más información, vea [Instalar o desinstalar el complemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). El tema contiene información sobre la instalación del complemento y la ejecución paso a paso en una instalación solo de archivos del complemento para solucionar problemas.  
   
@@ -154,7 +159,7 @@ caps.handback.revision: 7
   
 1.  En los servidores de informes de SQL Server Reporting Services 2008 y 2008 R2, puede habilitar los tipos de contenido y la administración de contenido para varios sitios de Centro de inteligencia empresarial:  
   
-2.  En Administración central de SharePoint, haga clic en la **Configuración de aplicaciones generales**. En la sección **SQL Server Reporting Services (2008 y 2008 R2)**, haga clic en **Integración de Reporting Services**.  
+2.  En Administración central de SharePoint, haga clic en la **Configuración de aplicaciones generales**. En la sección **SQL Server Reporting Services (2008 y 2008 R2)** , haga clic en **Integración de Reporting Services**.  
   
      ![rs_general_app_settings](../../reporting-services/report-server-sharepoint/media/rs-general-app-settings.gif "rs_general_app_settings")  
   
@@ -164,7 +169,7 @@ caps.handback.revision: 7
   
 4.  Haga clic en **Aceptar**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [Iniciar el Generador de informes](../../reporting-services/report-builder/start-report-builder.md)  
   

@@ -1,24 +1,29 @@
 ---
-title: "Agregar un gr&#225;fico a un informe (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Agregar un gráfico a un informe (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a2d2ad7ae37e0f787709fb79afbf80ef3e584b5e
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Agregar un gr&#225;fico a un informe (Generador de informes y SSRS)
-  Para resumir datos con un formato visual en un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], use una región de datos de gráfico. Es importante elegir el tipo de gráfico adecuado para el tipo de datos que se va a presentar. Esto determinará en qué medida se podrán interpretar correctamente los datos cuando se trasladen al gráfico. Para más información, vea [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
+# <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Agregar un gráfico a un informe (Generador de informes y SSRS)
+  Para resumir datos con un formato visual en un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , use una región de datos de gráfico. Es importante elegir el tipo de gráfico adecuado para el tipo de datos que se va a presentar. Esto determinará en qué medida se podrán interpretar correctamente los datos cuando se trasladen al gráfico. Para más información, vea [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
  La manera más simple de agregar una región de datos de Gráfico a su informe es ejecutar el Asistente para nuevo gráfico. El asistente proporciona gráficos de columna, línea, circular, barra y área. Para éstos y otros tipos de gráfico, puede agregar también un gráfico manualmente.  
   
@@ -27,7 +32,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Para agregar un gráfico a un informe utilizando el Asistente para gráficos  
+## <a name="to-add-a-chart-to-a-report-by-using-the-chart-wizard"></a>Para agregar un gráfico a un informe utilizando el Asistente para gráficos  
   
 1.  > [!NOTE]  
     >  El Asistente para gráficos solamente está disponible en el Generador de informes.  
@@ -40,7 +45,7 @@ caps.handback.revision: 8
   
 4.  En la pestaña **Ejecutar** , haga clic en **Diseño** para seguir trabajando en el informe.  
   
-## Para agregar un gráfico a un informe  
+## <a name="to-add-a-chart-to-a-report"></a>Para agregar un gráfico a un informe  
   
 1.  Cree un informe y defina un conjunto de datos. Para más información, vea [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 8
   
 7.  Agregue un campo de agrupación al área **Grupos de categorías** . Al agregar este campo al área **Grupos de categorías** , se crea un campo de agrupación automáticamente. Cada grupo representa un punto de datos de la serie.  
   
-8.  Para resumir los datos por categoría, haga clic con el botón derecho en el campo de datos y, después, haga clic en **Propiedades de la serie**. En el cuadro **Categoría**, seleccione el campo de categoría en la lista desplegable. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  Para resumir los datos por categoría, haga clic con el botón derecho en el campo de datos y, después, haga clic en **Propiedades de la serie**. En el cuadro **Categoría** , seleccione el campo de categoría en la lista desplegable. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 9. En la pestaña **Inicio** , haga clic en **Ejecutar** para ver el informe representado.  
   
@@ -66,7 +71,7 @@ caps.handback.revision: 8
   
  En los gráficos con ejes, como los gráficos de barras y de columnas, es posible que el eje de categorías no muestre todas las etiquetas de categoría. Para más información sobre cómo cambiar las etiquetas de los ejes, vea [Especificar un intervalo de eje &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Puntos de datos vacíos y nulos en los gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   

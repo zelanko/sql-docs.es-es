@@ -1,23 +1,28 @@
 ---
-title: "Incluir indicadores y medidores en un panel de medidores (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Incluir indicadores y medidores en un Panel de medidores (generador de informes y SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eb8b6569d75891a2922b283fbde37840910213db
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Incluir indicadores y medidores en un panel de medidores (Generador de informes y SSRS)
+# <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>Incluir indicadores y medidores en un panel de medidores (Generador de informes y SSRS)
   El panel de medidores es el contenedor de nivel superior que contiene uno o más medidores e indicadores. Los indicadores se pueden incrustar en los medidores o colocar a su lado en el panel de medidores.  
   
  Si el indicador y el medidor son adyacentes en el panel de medidores y muestran datos de campos distintos, podría desear agregar etiquetas para dejar claro qué datos comunican el medidor y el indicador.  
@@ -27,7 +32,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Para incrustar un indicador en un medidor  
+### <a name="to-embed-an-indicator-in-a-gauge"></a>Para incrustar un indicador en un medidor  
   
 1.  Abra un informe existente o cree un informe que contenga una tabla y matriz con los datos que desea mostrar.   
   
@@ -41,9 +46,9 @@ caps.handback.revision: 8
   
 6.  Haga clic en el medidor. El panel **Medidor de datos** se abre.  
   
-7.  En el área **Valores**, en el cuadro de lista **(Sin especificar)**, haga clic en el campo cuyos valores quiere que se muestren en el medidor. Si lo prefiere, puede arrastrar el campo que desea utilizar desde el conjunto de datos de informe.  
+7.  En el área **Valores** , en el cuadro de lista **(Sin especificar)** , haga clic en el campo cuyos valores quiere que se muestren en el medidor. Si lo prefiere, puede arrastrar el campo que desea utilizar desde el conjunto de datos de informe.  
   
-8.  Haga clic con el botón derecho en el medidor, haga clic en **Agregar indicador** y, después, haga clic en **Secundario**. Se abre el cuadro de diálogo **Seleccionar estilo de indicador** .  
+8.  Haga clic con el botón derecho en el medidor, haga clic en **Agregar indicador**y, después, haga clic en **Secundario**. Se abre el cuadro de diálogo **Seleccionar estilo de indicador** .  
   
 9. En el cuadro de diálogo **Seleccionar estilo de indicador** , en el panel izquierdo, haga clic en el tipo de indicador que desea y, a continuación, haga clic en el indicador establecido.  
   
@@ -51,13 +56,13 @@ caps.handback.revision: 8
   
 11. Haga clic en el indicador. El panel **Medidor de datos** se abre.  
   
-12. En el área **Valores**, en el cuadro de lista **(Sin especificar)**, haga clic en el campo cuyos valores quiera mostrar como un indicador. Si lo prefiere, puede arrastrar el campo que desea utilizar desde el conjunto de datos de informe.  
+12. En el área **Valores** , en el cuadro de lista **(Sin especificar)** , haga clic en el campo cuyos valores quiera mostrar como un indicador. Si lo prefiere, puede arrastrar el campo que desea utilizar desde el conjunto de datos de informe.  
   
      El campo puede ser el mismo que el utilizado en el medidor, u otro distinto.  
   
 13. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Para mostrar un indicador y medidor en paralelo  
+### <a name="to-show-an-indicator-and-gauge-side-by-side"></a>Para mostrar un indicador y medidor en paralelo  
   
 1.  Abra un informe existente o cree un informe que contenga una tabla y matriz con los datos que desea mostrar.  
   
@@ -71,9 +76,9 @@ caps.handback.revision: 8
   
 6.  Haga clic en el medidor. El panel **Medidor de datos** se abre.  
   
-7.  En el área **Valores**, en el cuadro de lista **(Sin especificar)**, haga clic en el campo cuyos valores quiere que se muestren en el medidor. Si lo prefiere, puede arrastrar el campo que desea utilizar desde el conjunto de datos de informe.  
+7.  En el área **Valores** , en el cuadro de lista **(Sin especificar)** , haga clic en el campo cuyos valores quiere que se muestren en el medidor. Si lo prefiere, puede arrastrar el campo que desea utilizar desde el conjunto de datos de informe.  
   
-8.  Haga clic con el botón derecho en el medidor, haga clic en **Agregar indicador** y, después, haga clic en **Adyacente**. Se abre el cuadro de diálogo **Seleccionar estilo de indicador** .  
+8.  Haga clic con el botón derecho en el medidor, haga clic en **Agregar indicador**y, después, haga clic en **Adyacente**. Se abre el cuadro de diálogo **Seleccionar estilo de indicador** .  
   
 9. En el cuadro de diálogo **Seleccionar estilo de indicador** , en el panel izquierdo, haga clic en el tipo de indicador que desea y, a continuación, haga clic en el indicador establecido.  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 8
   
 11. Haga clic en el indicador. El panel **Medidor de datos** se abre.  
   
-12. En el área **Valores**, en el cuadro de lista **(Sin especificar)**, haga clic en el campo cuyos valores quiera mostrar como un indicador. Si lo prefiere, puede arrastrar el campo que desea utilizar desde el conjunto de datos de informe.  
+12. En el área **Valores** , en el cuadro de lista **(Sin especificar)** , haga clic en el campo cuyos valores quiera mostrar como un indicador. Si lo prefiere, puede arrastrar el campo que desea utilizar desde el conjunto de datos de informe.  
   
      El campo puede ser el mismo que el utilizado en el medidor, u otro distinto.  
   
@@ -93,13 +98,13 @@ caps.handback.revision: 8
   
 15. Arrastre cada etiqueta hasta un lugar próximo al medidor o indicador.  
   
-16. Haga clic con el botón derecho en la etiqueta próxima al medidor, haga clic en **Propiedades de etiqueta** y escriba el texto que quiera en el cuadro **Texto**.  
+16. Haga clic con el botón derecho en la etiqueta próxima al medidor, haga clic en **Propiedades de etiqueta**y escriba el texto que quiera en el cuadro **Texto** .  
   
-17. Haga clic con el botón derecho en la etiqueta próxima al indicador, haga clic en **Propiedades de etiqueta** y escriba el texto que quiera en el cuadro **Texto**.  
+17. Haga clic con el botón derecho en la etiqueta próxima al indicador, haga clic en **Propiedades de etiqueta**y escriba el texto que quiera en el cuadro **Texto** .  
   
 18. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Indicadores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

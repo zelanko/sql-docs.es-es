@@ -1,34 +1,41 @@
 ---
-title: "P&#225;ginas de propiedades del proyecto (cuadro de di&#225;logo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.rpt.rptdesigner.projectpropertypages.general.f1"
-helpviewer_keywords: 
-  - "Páginas de propiedades del proyecto (cuadro de diálogo)"
+title: "Cuadro de diálogo páginas de propiedades del proyecto | Documentos de Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.rpt.rptdesigner.projectpropertypages.general.f1
+helpviewer_keywords:
+- Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 caps.latest.revision: 35
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 35
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 659be9982440426eee0d8b5a2df8d54b4d32bbc4
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# P&#225;ginas de propiedades del proyecto (cuadro de di&#225;logo)
-  Utilice las páginas de propiedades del proyecto para configurar las propiedades de implementación de un proyecto del servidor de informes. Para abrir este cuadro de diálogo, en el menú **Proyecto**, haga clic en *\<Nombre del proyecto de informe>***Propiedades**.  
+
+# <a name="project-property-pages-dialog-box"></a>Páginas de propiedades del proyecto (cuadro de diálogo)
+
+  Utilice las páginas de propiedades del proyecto para configurar las propiedades de implementación de un proyecto del servidor de informes. Para abrir este cuadro de diálogo desde el **proyecto** menú, haga clic en  *\<el nombre del proyecto de informe >***propiedades**.  
   
  Después de definir las propiedades de configuración, puede seleccionar una configuración en la lista desplegable **Configuraciones de soluciones** de la barra de herramientas.  
 
 ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png)
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Configuración**  
  Seleccione la configuración que desee editar. Inicialmente, están disponibles las configuraciones siguientes: **Debug**, **DebugLocal**y **Release**. La configuración activa aparece en primer lugar (por ejemplo, **Active(Debug)**).  
   
@@ -55,7 +62,7 @@ caps.handback.revision: 35
  Seleccione **True** para sobrescribir el origen de datos del servidor con el origen de datos del proyecto cuando se publiquen los informes. Seleccione **False** para dejar el origen de datos existente en el servidor.  
   
  **TargetServerVersion**  
- Seleccione la versión adecuada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o bien seleccione **Detectar versión** para determinar automáticamente la versión instalada en el servidor identificado por la propiedad **TargetServer URL**. El valor predeterminado es **[!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)]**.  
+ Seleccione la versión adecuada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , o bien seleccione **Detectar versión** para determinar automáticamente la versión instalada en el servidor identificado por la propiedad **TargetServer URL** . El valor predeterminado es **SQL Server 2016**.  
   
  **TargetDataSourceFolder**  
  Nombre de la carpeta donde se almacenarán los orígenes de datos publicados. Si no especifica una carpeta, el origen de datos se publica en la misma carpeta que el informe. Si la carpeta no existe en el servidor de informes, el Diseñador de informes la crea cuando los informes se publiquen.  
@@ -80,11 +87,12 @@ caps.handback.revision: 35
 + `http:\\<servername>`, 
 + `http:\\<servername\<site>` 
 + `http:\\<servername>\<site>\<subsite>`.  
-  
-## Vea también  
- [Publicar informes](../Topic/Publish%20Reports.md)   
- [Publicar un informe en una biblioteca de SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
- [Establecer propiedades de implementación &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
- [Diseñador de informes (Ayuda F1)](../../reporting-services/tools/report-designer-f1-help.md)  
-  
-  
+
+## <a name="next-steps"></a>Pasos siguientes
+
+[Publicar informes](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
+[Publicar un informe en una biblioteca de SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
+[Establecer propiedades de implementación &#40; Reporting Services &#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
+[Diseñador de informes (Ayuda F1)](../../reporting-services/tools/report-designer-f1-help.md)  
+
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

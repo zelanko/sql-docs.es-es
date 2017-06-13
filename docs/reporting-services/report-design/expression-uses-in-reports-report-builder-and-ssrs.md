@@ -1,28 +1,33 @@
 ---
-title: "Usar expresiones en informes (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "expresiones [Reporting Services], acerca de las expresiones"
+title: "Expresión que se utiliza en los informes (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 caps.latest.revision: 59
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 59
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 546817a006d06b1acbea5962cc1a3230867e111e
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Usar expresiones en informes (Generador de informes y SSRS)
-En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], las expresiones se usan durante la definición de informe para especificar o calcular valores para parámetros, consultas, filtros, propiedades de elementos de informe, definiciones de ordenación y de grupos, propiedades de cuadros de texto, marcadores, mapas de documento, contenido de encabezados y pies de página dinámicos, imágenes, y definiciones de orígenes de datos dinámicas. En este tema, se proporcionan ejemplos de los muchos lugares en los que se pueden usar expresiones para modificar el contenido o el aspecto de un informe. Esta lista no es una lista completa. Puede establecer una expresión para una propiedad de un cuadro de diálogo que muestre el botón (**fx**) de la expresión o en una lista desplegable que muestre **\<Expresión…>**.  
+# <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Usar expresiones en informes (Generador de informes y SSRS)
+En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , las expresiones se usan durante la definición de informe para especificar o calcular valores para parámetros, consultas, filtros, propiedades de elementos de informe, definiciones de ordenación y de grupos, propiedades de cuadros de texto, marcadores, mapas de documento, contenido de encabezados y pies de página dinámicos, imágenes, y definiciones de orígenes de datos dinámicas. En este tema, se proporcionan ejemplos de los muchos lugares en los que se pueden usar expresiones para modificar el contenido o el aspecto de un informe. Esta lista no es una lista completa. Puede establecer una expresión para una propiedad en un cuadro de diálogo que muestra la expresión (**fx**) botón o en una lista desplegable que muestra  **\<expresión... >**.  
   
- Las expresiones pueden ser simples o complejas. Las *expresiones simples* contienen una referencia a un único campo de conjunto de datos, parámetro o campo integrado. Las expresiones complejas pueden contener varias referencias, operadores y llamadas a función integrados. Por ejemplo, una expresión compleja podría incluir la función Sum aplicada al campo Sales.  
+ Las expresiones pueden ser simples o complejas. Las*expresiones simples* contienen una referencia a un único campo de conjunto de datos, parámetro o campo integrado. Las expresiones complejas pueden contener varias referencias, operadores y llamadas a función integrados. Por ejemplo, una expresión compleja podría incluir la función Sum aplicada al campo Sales.  
   
  Las expresiones se escriben en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Una expresión comienza por un signo igual (=) seguido de una combinación de referencias a colecciones integradas, como campos y parámetros de conjunto de datos, constantes, funciones y operadores.  
   
@@ -59,7 +64,7 @@ En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnove
 |Dar formato a los datos de un cuadro de texto en función del valor.|Propiedad Color de un marcador de posición dentro de un cuadro de texto de la fila de detalles de Tablix. Use **Propiedades de cuadro de texto (cuadro de diálogo), Fuente**.|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |Calcular un valor una sola vez y hacer referencia a él en el informe.|Propiedad Value de una variable de informe. Use **Propiedades del informe (cuadro de diálogo), Variables**.|`=Variables!MyCalculation.Value`|  
 |Incluir valores específicos de varios campos de un conjunto de datos.|Ecuación de filtro de un grupo de Tablix. Use **Propiedades de Tablix (cuadro de diálogo), Filtros**.|Como tipo de datos, seleccione **Boolean**.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
-|Ocultar un cuadro de texto en la superficie de diseño y permitir que el usuario pueda volver a mostrarlo con un parámetro Boolean denominado *Show*.|Propiedad Hidden de un cuadro de texto. Use **Propiedades de cuadro de texto (cuadro de diálogo), Visibilidad**.|`=Not Parameters!` *Show\<parámetro booleano>* `.Value`|  
+|Ocultar un cuadro de texto en la superficie de diseño y permitir que el usuario pueda volver a mostrarlo con un parámetro Boolean denominado *Show*.|Propiedad Hidden de un cuadro de texto. Use **Propiedades de cuadro de texto (cuadro de diálogo), Visibilidad**.|`=Not Parameters!`*Mostrar\<parámetro booleano >*`.Value`|  
 |Especificar contenido dinámico para el encabezado o el pie de página.|Propiedad Value de un marcador de posición dentro de un cuadro de texto situado en el encabezado o pie de página.|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |Especificar un origen de datos de forma dinámica mediante un parámetro.|Cadena de conexión del origen de datos. Use **Propiedades del origen de datos (cuadro de diálogo), General**.|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |Identificar todos los valores de un parámetro de varios valores elegidos por el usuario.|Propiedad Value de un marcador de posición dentro de un cuadro de texto. Use **Propiedades de Tablix (cuadro de diálogo), Filtros**.|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  
@@ -68,7 +73,7 @@ En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnove
 |Especificar una fecha con formato para una referencia cultural concreta.|Propiedad Value de un marcador de posición dentro de un cuadro de texto de una región de datos. Use **Propiedades de cuadro de texto (cuadro de diálogo), General**.|`=Fields!OrderDate.Value.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("de-DE"))`|  
 |Concatenar una cadena y un número con formato de porcentaje con dos decimales.|Propiedad Value de un marcador de posición dentro de un cuadro de texto de una región de datos. Use **Propiedades de cuadro de texto (cuadro de diálogo), General**.|`="Growth Percent: " & Format(Fields!Growth.Value,"p2")`|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

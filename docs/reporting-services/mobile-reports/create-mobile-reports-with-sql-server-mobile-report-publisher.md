@@ -1,37 +1,43 @@
 ---
-title: "Creaci&#243;n y publicaci&#243;n de informes m&#243;viles con el Publicador de informes m&#243;viles de SQL Server | Microsoft Docs"
-description: Learn about Reporting Services mobile reports for mobile devices, connected to on-premises data, with an assortment of data visualizations.
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "Crear informes móviles con SQL Server Mobile Report Publisher | Documentos de Microsoft"
+description: "Obtenga información acerca de Reporting Services informes móviles para dispositivos móviles, conectados a datos locales, con una gran variedad de visualizaciones de datos."
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 caps.latest.revision: 35
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 34
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 4fe797ac21e1f659b1a2a196be3f860a65b36896
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Creaci&#243;n y publicaci&#243;n de informes m&#243;viles con el Publicador de informes m&#243;viles de SQL Server
+# <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Creación y publicación de informes móviles con el Publicador de informes móviles de SQL Server
 Obtenga información sobre los informes móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , que están optimizados para dispositivos móviles y conectados a datos locales y disponen de una gran variedad de visualizaciones de datos. 
 
-> **Nota:** ¿Necesita migrar el contenido de un servidor Datazen, como paneles y KPI, a un servidor de SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] ? Pruebe el [Asistente para migración de SQL Server para Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
+>[!NOTE]
+>  ¿Necesita migrar el contenido del servidor de Datazen como paneles y KPI a un SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] server? Pruebe el [Asistente para migración de SQL Server para Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
 Con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)], puede crear rápidamente informes móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , optimizados para dispositivos móviles y muchos otros factores de forma. Los informes móviles cuentan con una gran variedad de visualizaciones, desde gráficos de tiempo, categoría y comparación, hasta gráficos de rectángulos y mapas personalizados. 
 
 * Conecte los informes móviles a diversos orígenes de datos, incluidos los datos locales de SQL Server y Analysis Services. 
-* Diseñe informes móviles en una superficie de diseño con filas y columnas de cuadrícula ajustable y elementos flexibles de informes móviles que se escalan de manera adecuada a cualquier tamaño de pantalla. 
-* Después, guarde estos informes móviles en un servidor de Reporting Services y véalos e interactúe con ellos en un explorador o en la aplicación móvil de Power BI en iPad, iPhone, teléfonos Android y dispositivos Windows 10.
+* Cree informes móviles en una superficie de diseño con cuadrícula ajustable de filas y columnas, y elementos flexibles de informes móviles que se escalan correctamente para cualquier tamaño de pantalla. 
+* A continuación, guardar estos informes móviles en un servidor de Reporting Services y ver e interactuar con ellos en un explorador o en la aplicación móvil de Power BI en iPad, iPhone, Android teléfonos y tabletas y dispositivos Windows 10.
   
-## <a name="create-includessrsnoversionmdtokenssrsnoversionmdmd-mobile-reports"></a>Crear informes móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  
+## <a name="create-includessrsnoversionmdincludesssrsnoversion-mdmd--mobile-reports"></a>Crear informes móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  
   
 Estos artículos le ayudarán a empezar a trabajar.
 -  Descargar el [Publicador de informes móviles de Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=733527)  
@@ -47,12 +53,11 @@ Estos artículos le ayudarán a empezar a trabajar.
   
 ## <a name="ssrs-mobile-reports-in-the-power-bi-mobile-apps"></a>Informes móviles de SSRS en las aplicaciones móviles de Power BI
 
--  [Visualización de informes móviles y KPI de Reporting Services en la aplicación de iPad](https://powerbi.microsoft.com/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI para iOS)  
--  [Visualización de informes móviles y KPI de Reporting Services en la aplicación de iPhone](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI para iOS)  
--  [Visualización de informes móviles y KPI de Reporting Services en la aplicación de Android para Power BI](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
+-  Vista [informes móviles de Reporting Services y KPI en la aplicación móvil de iOS](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports)
+-  Vista [informes móviles de Reporting Services y KPI en la aplicación de Power BI para dispositivos Android](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
 -  [Visualización de informes móviles y KPI de Reporting Services en la aplicación móvil de Power BI para Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
 
-### <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también  
   
 -   [Crear, modificar y eliminar orígenes de datos compartidos (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
 -   [Administrar conjuntos de datos compartidos](../../reporting-services/report-data/manage-shared-datasets.md)  
@@ -61,3 +66,5 @@ Estos artículos le ayudarán a empezar a trabajar.
 
   
   
+
+

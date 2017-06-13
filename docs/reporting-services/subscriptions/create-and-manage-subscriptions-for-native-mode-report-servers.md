@@ -1,26 +1,31 @@
 ---
-title: "Crear y administrar suscripciones para servidores de informes en modo nativo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "suscripciones estándar [Reporting Services]"
-  - "suscripciones [Reporting Services], estándar"
+title: Crear y administrar suscripciones para servidores de informes en modo nativo | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- standard subscriptions [Reporting Services]
+- subscriptions [Reporting Services], standard
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 caps.latest.revision: 52
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 52
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7983325b1036809058e4866dd217c72c97c8238b
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Crear y administrar suscripciones para servidores de informes en modo nativo
+# <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Crear y administrar suscripciones para servidores de informes en modo nativo
   Una suscripción estándar es la que crean usuarios individuales que desean recibir un informe por correo electrónico o en una carpeta compartida. Este tema proporciona información sobre las suscripciones estándar que los usuarios individuales crean y administran. Las suscripciones controladas por datos tienen diferentes requisitos y pasos, y se tratan en otro tema. Para obtener más información, vea [Cómo crear, modificar y eliminar suscripciones controladas por datos](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
   
  **En este tema:**  
@@ -38,11 +43,11 @@ caps.handback.revision: 52
 ##  <a name="bkmk_create_subscription"></a> Requisitos generales de las suscripciones  
  En el contenido de este tema se explica cómo se crean suscripciones en un servidor de informes en modo nativo mediante el Administrador de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una vez definida una suscripción, puede tener acceso a ella en el Administrador de informes a través de la página Mis suscripciones o la pestaña **Suscripciones** de un informe específico.  
   
- En [Crear y administrar suscripciones para servidores de informes en modo de SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) se explica cómo se usan las páginas de aplicación de un sitio de SharePoint para suscribirse a los informes de un servidor de informes que se ejecuta en el modo de SharePoint.  
+ En[Crear y administrar suscripciones para servidores de informes en modo de SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) se explica cómo se usan las páginas de aplicación de un sitio de SharePoint para suscribirse a los informes de un servidor de informes que se ejecuta en el modo de SharePoint.  
   
 -   Para utilizar la entrega por correo electrónico, el servidor de informes debe estar configurado para una conexión de puerta de enlace o servidor SMTP antes de crear la suscripción.  
   
--   Para utilizar la entrega a recursos compartidos de archivos, se debe haber definido la carpeta de destino. Para obtener más información, vea [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](http://msdn.microsoft.com/es-es/b838f970-d11a-4239-b164-8d11f4581d83).  
+-   Para utilizar la entrega a recursos compartidos de archivos, se debe haber definido la carpeta de destino. Para obtener más información, vea [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
   
  Antes de que pueda suscribirse a un informe, hay que configurar el origen de datos del informe de modo que utilice credenciales almacenadas o ninguna credencial. Para obtener más información, vea [Almacenamiento de las credenciales en un origen de datos de Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md). De lo contrario, el botón **Nueva suscripción** no está disponible.  
   
@@ -50,11 +55,11 @@ caps.handback.revision: 52
   
 ###  <a name="bkmk_create_fileshare_subscription"></a> Para crear una suscripción a recursos compartidos de archivos  
   
-1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Vaya al informe al que quiera suscribirse. Haga clic en el menú del informe y haga clic en **Suscribirse**.  
   
-     ![report menu](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "report menu")  
+     ![menú informe](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "menú informe")  
   
 3.  **Descripción**: escriba una descripción para el informe, con un máximo de 512 caracteres.  
   
@@ -66,13 +71,13 @@ caps.handback.revision: 52
   
 7.  **Agregar una extensión de archivo cuando se crea el archivo**: esta opción agrega una extensión de archivo de tres caracteres al nombre de archivo. La extensión de archivo está determinada por el formato de salida de informes seleccionado.  
   
-8.  **Ruta de acceso**: escriba una ruta UNC (convención de nomenclatura universal) para una carpeta existente en la que quiera entregar los informes (por ejemplo, \\\\<nombreDeServidor\>\\<misInformes\>). Incluya dos barras diagonales inversas al comienzo de la ruta de acceso. No escriba una barra diagonal inversa al final.  
+8.  **Ruta de acceso**: escriba una ruta de acceso de convención de nomenclatura universal (UNC, Universal Naming Convention) a una carpeta existente en la que desea entregar los informes (por ejemplo, \\ \\< servername\>\\< misinformes\>). Incluya dos barras diagonales inversas al comienzo de la ruta de acceso. No escriba una barra diagonal inversa al final.  
   
-     ![file share subscription](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "file share subscription")  
+     ![suscripción a recursos compartidos de archivos](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "suscripción a recursos compartidos de archivos")  
   
 9. **Formato de representación**: seleccione un formato de salida de informes para la entrega de archivos. Elija el formato correspondiente a la aplicación de escritorio que utilizará para abrir el informe. Evite formatos que no representen los informes en un solo flujo o que especifiquen una interactividad no admitida en un archivo estático (por ejemplo, HTML 4.0).  
   
-10. **Credenciales**: seleccione esta opción para usar la cuenta de recurso compartido de archivos o las credenciales de usuario específicas de Windows. La opción **Use file share account** (Usar la cuenta de recurso compartido de archivos) está deshabilitada si el administrador de informes no ha configurado una cuenta de recurso compartido de archivos. Para obtener más información, vea [Configuración de la suscripción y una cuenta de recurso compartido de archivos &#40;Administrador de configuración&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). En los cuadros de texto **Nombre de usuario** y **Contraseña**, especifique las credenciales necesarias para obtener acceso al recurso compartido de archivos. Use el formato *\<dominio>*\\*\<nombre de usuario>* para el nombre de usuario.  
+10. **Credenciales**: seleccione esta opción para usar la cuenta de recurso compartido de archivos o las credenciales de usuario específicas de Windows. La opción **Use file share account** (Usar la cuenta de recurso compartido de archivos) está deshabilitada si el administrador de informes no ha configurado una cuenta de recurso compartido de archivos. Para obtener más información, vea [Configuración de la suscripción y una cuenta de recurso compartido de archivos &#40;Administrador de configuración&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). En el **nombre de usuario** y **contraseña** cuadros de texto, especifique las credenciales necesarias para tener acceso a recurso compartido de archivos, con el formato  *\<dominio >*\\*\<nombre de usuario >* del nombre de usuario.  
   
 11. **Opciones de sobrescritura**:  
   
@@ -86,7 +91,7 @@ caps.handback.revision: 52
   
     -   Para seleccionar una programación compartida predefinida que ya tenga la fecha, hora e información de periodicidad que desea utilizar, haga clic en **Según una programación compartida**y, a continuación, seleccione la programación que se va a utilizar.  
   
-    -   Para entregar el informe cuando una instantánea de informe se actualice con una versión más reciente, haga clic en **Cuando se actualiza el contenido del informe**. Si se suscribe a un informe que recupera los datos en intervalos programados, la programación utilizada para actualizar los datos determina cuándo se procesa su suscripción.  
+    -   Para entregar el informe cuando una instantánea de informe se actualice con una versión más reciente, haga clic en**Cuando se actualiza el contenido del informe**. Si se suscribe a un informe que recupera los datos en intervalos programados, la programación utilizada para actualizar los datos determina cuándo se procesa su suscripción.  
   
         > [!NOTE]  
         >  Esta opción solo está disponible para instantáneas que ya están asociadas a una programación de actualización.  
@@ -97,24 +102,24 @@ caps.handback.revision: 52
   
 ###  <a name="bkmk_create_email_subscription"></a> Para crear una suscripción de correo electrónico  
   
-1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Vaya al informe al que quiera suscribirse. Haga clic en el menú del informe y haga clic en **Suscribirse**.  
   
-     ![report menu](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "report menu")  
+     ![menú informe](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "menú informe")  
   
 3.  **Descripción**: escriba una descripción para el informe, con un máximo de 512 caracteres.  
   
 4.  **Propietario**: el valor predeterminado del campo de propietario es el usuario actual y no se puede editar cuando se crea la suscripción. Sin embargo, puede cambiar las propiedades de la suscripción después de guardarla, incluido el propietario y la descripción.  
   
-5.  **Entregado por**: seleccione **Correo electrónico**. Si **Correo electrónico** no está disponible, su servidor de informes no se ha configurado para las suscripciones de correo electrónico. Vea [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](http://msdn.microsoft.com/es-es/b838f970-d11a-4239-b164-8d11f4581d83).  
+5.  **Entregado por**: seleccione **Correo electrónico**. Si **Correo electrónico** no está disponible, su servidor de informes no se ha configurado para las suscripciones de correo electrónico. Vea [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
   
-6.  **Para**: el nombre del destinatario del campo Para: se rellena automáticamente con su cuenta de usuario de dominio. Compruebe que el formato es [nombre de usuario]@[dominio.com]. La configuración del servidor de informes determina si el campo **Para** se rellena automáticamente con su cuenta de usuario. Para obtener más información sobre cómo cambiar las direcciones de correo electrónico de la configuración, vea [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](http://msdn.microsoft.com/es-es/b838f970-d11a-4239-b164-8d11f4581d83).  
+6.  **Para**: el nombre del destinatario del campo Para: se rellena automáticamente con su cuenta de usuario de dominio. Compruebe que el formato es [nombre de usuario]@[dominio.com]. La configuración del servidor de informes determina si el campo **Para** se rellena automáticamente con su cuenta de usuario. Para obtener más información sobre cómo cambiar las direcciones de correo electrónico de la configuración, vea [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
   
     > [!NOTE]  
-    >  Dependiendo de sus permisos, podrá escribir la dirección de correo electrónico donde desea recibir el informe. Para especificar varias direcciones de correo electrónico, sepárelas con un punto y coma (;). También puede escribir direcciones de correo electrónico adicionales en los cuadros de texto **CC**, **CCO** y **Responder a**. Esto requiere que tenga permiso para administrar todas las suscripciones.  
+    >  Dependiendo de sus permisos, podrá escribir la dirección de correo electrónico donde desea recibir el informe. Para especificar varias direcciones de correo electrónico, sepárelas con un punto y coma (;). También puede escribir direcciones de correo electrónico adicionales en los cuadros de texto **CC**, **CCO**y **Responder a** . Esto requiere que tenga permiso para administrar todas las suscripciones.  
   
-7.  **Asunto**: el valor predeterminado es "@ReportName se ha ejecutado a las @ExecutionTime". Puede editar el asunto, pero tenga en cuenta que @ReportName y @ExecutionTime son las únicas variables globales que se admiten en el campo **Asunto** .  
+7.  **Asunto**: valor predeterminado es "@ReportName se ha ejecutado a @ExecutionTime". Puede editar el asunto, pero tenga en cuenta que la @ReportName y @ExecutionTime son las únicas variables globales admitidas en el **asunto** campo.  
   
 8.  Seleccione las opciones de entrega del siguiente modo:  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 52
   
     -   Para seleccionar una programación compartida predefinida que ya tenga la fecha, hora e información de periodicidad que desea utilizar, haga clic en **Según una programación compartida**y, a continuación, seleccione la programación que se va a utilizar.  
   
-    -   Para entregar el informe cuando una instantánea de informe se actualice con una versión más reciente, haga clic en **Cuando se actualiza el contenido del informe**. Si se suscribe a un informe que recupera los datos en intervalos programados, la programación utilizada para actualizar los datos determina cuándo se procesa su suscripción.  
+    -   Para entregar el informe cuando una instantánea de informe se actualice con una versión más reciente, haga clic en**Cuando se actualiza el contenido del informe**. Si se suscribe a un informe que recupera los datos en intervalos programados, la programación utilizada para actualizar los datos determina cuándo se procesa su suscripción.  
   
     > [!NOTE]  
     >  Esta opción solo está disponible para instantáneas que ya están asociadas a una programación de actualización.  
@@ -151,7 +156,7 @@ caps.handback.revision: 52
   
  El usuario que crea una suscripción es su propietario. Cada usuario puede modificar o eliminar las suscripciones de las que sea propietario. Puede cambiar el propietario del informe desde la página de propiedades de la suscripción o puede cambiar la propiedad mediante programación. Para obtener más información, vea:  
   
--   [Use PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage subscription owners and run subscription - powershell.md)  
+-   [Use PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
 -   <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
@@ -165,13 +170,13 @@ caps.handback.revision: 52
 ##  <a name="bkmk_delete_subscription"></a> Para eliminar una suscripción  
  Para eliminar una suscripción"  
   
-1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  En el Administrador de informes, haga clic en **Mis suscripciones** en la barra de herramientas y vaya a la suscripción que quiere modificar o eliminar.  
   
 3.  Abra el menú del informe y haga clic en **Eliminar**.  
   
-     ![report menu](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "report menu")  
+     ![menú informe](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "menú informe")  
   
  Para cancelar una suscripción que se está procesando actualmente en el servidor de informes, vea [Administrar un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
@@ -179,12 +184,12 @@ caps.handback.revision: 52
   
  La suscripción se elimina automáticamente si se elimina el informe subyacente. Si elimina una suscripción mientras se está procesando, ésta se detiene si la operación de eliminación se produce antes de que la extensión de entrega reciba los datos de la suscripción. De lo contrario, se continúa procesando la suscripción.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Crear y administrar suscripciones para servidores de informes en modo de SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Use PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage subscription owners and run subscription - powershell.md)   
+ [Use PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
  [Suscripciones controladas por datos](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Administrador de informes &#40;Modo nativo de SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Usar Mis suscripciones &#40;servidor de informes en modo nativo&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "Tutorial: Agregar un gr&#225;fico de columnas a un informe (Generador de informes) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Tutorial: Agregar un gráfico de columnas al informe (generador de informes) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 09/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tutorial: Agregar un gr&#225;fico de columnas a un informe (Generador de informes)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de columnas a un informe (Generador de informes)
 En este tutorial, creará un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con un gráfico de columnas que muestra una serie como un conjunto de barras verticales agrupadas por categoría. 
 
 Los gráficos de columna son útiles para:  
@@ -35,8 +40,8 @@ En la ilustración siguiente se muestra el gráfico de columnas que creará, con
   
 Tiempo estimado para completar este tutorial: 15 minutos.  
   
-## Requisitos  
-Para obtener información sobre los requisitos, consulte [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
+## <a name="requirements"></a>Requisitos  
+Para obtener información sobre los requisitos, vea [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Chart"></a>1. Crear un informe de gráfico a partir del Asistente para gráficos  
 En esta sección, usará el Asistente para gráficos con el fin de crear un conjunto de datos incrustado, elegir un origen de datos compartido y crear un gráfico de columnas.  
@@ -44,7 +49,7 @@ En esta sección, usará el Asistente para gráficos con el fin de crear un conj
 > [!NOTE]  
 > En este tutorial, la consulta contiene los valores de datos, de forma que no necesita un origen de datos externo. Esto hace que la consulta requiera bastante tiempo. En un entorno empresarial, la consulta no contendría los datos. Esto es solo con fines de aprendizaje.  
   
-### Para crear un informe de gráfico  
+### <a name="to-create-a-chart-report"></a>Para crear un informe de gráfico  
   
 1.  [Inicie el Generador de informes](../reporting-services/report-builder/start-report-builder.md) desde el equipo, el portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o el modo integrado de SharePoint.  
   
@@ -56,9 +61,9 @@ En esta sección, usará el Asistente para gráficos con el fin de crear un conj
   
 3.  En el panel derecho, haga clic en **Asistente para gráficos**.  
   
-4.  En la **página Elegir un conjunto de datos**, haga clic en **Crear un conjunto de datos** y,después, haga clic en **Siguiente**.  
+4.  En la **página Elegir un conjunto de datos**, haga clic en **Crear un conjunto de datos**y,después, haga clic en **Siguiente**.  
   
-5.  En la página **Elegir una conexión a un origen de datos**, seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos, y después haga clic en **Siguiente**. Puede que necesite escribir un nombre de usuario y contraseña.  
+5.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos, y después haga clic en **Siguiente**. Puede que necesite escribir un nombre de usuario y contraseña.  
   
     > [!NOTE]  
     > El origen de datos que elija no importa, con tal de que tenga los permisos adecuados. No está recibiendo datos del origen de datos. Para obtener más información, consulte [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -93,11 +98,11 @@ En esta sección, usará el Asistente para gráficos con el fin de crear un conj
 ## <a name="ChartType"></a>2. Elegir el tipo de gráfico  
 Puede elegir entre varios tipos de gráfico predefinidos y luego modificar el gráfico después de completar el asistente.  
   
-### Para agregar un gráfico de columnas  
+### <a name="to-add-a-column-chart"></a>Para agregar un gráfico de columnas  
   
-1.  En la página **Elegir un tipo de gráfico**, el gráfico de columnas es el tipo de gráfico predeterminado. Haga clic en **Siguiente**.  
+1.  En la página **Elegir un tipo de gráfico** , el gráfico de columnas es el tipo de gráfico predeterminado. Haga clic en **Siguiente**.  
   
-2.  En la página **Organizar campos del gráfico**, arrastre el campo SalesDate hasta **Categorías**. Categorías se muestra en el eje horizontal.  
+2.  En la página **Organizar campos del gráfico** , arrastre el campo SalesDate hasta **Categorías**. Categorías se muestra en el eje horizontal.  
   
 3.  Arrastre el campo Sales hasta **Valores**. El cuadro **Valores** muestra Sum(Sales), porque la suma del valor total de ventas se agrega para cada fecha. Valores se muestra en el eje vertical.  
   
@@ -126,7 +131,7 @@ De forma predeterminada, el eje horizontal muestra los valores en un formato gen
   
 3.  En la pestaña **Número**, en **Categoría**, seleccione **fecha**.  
   
-5.  En el cuadro **Tipo**, seleccione **31 Ene 2000**.  
+5.  En el cuadro **Tipo** , seleccione **31 Ene 2000**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -138,7 +143,7 @@ La fecha se mostrará en el formato de fecha que haya seleccionado. El gráfico 
   
 Puede personalizar la presentación de las etiquetas girándolas y especificando el intervalo.  
   
-## 4. Girar las etiquetas de eje en el eje horizontal  
+## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4. Girar las etiquetas de eje en el eje horizontal  
   
 1.  Cambie a la vista de diseño del informe.  
   
@@ -171,7 +176,7 @@ La leyenda se crea automáticamente a partir de los datos de las categorías y l
   
 3.  En **Diseño y posición**, seleccione una posición diferente. Por ejemplo, seleccione la opción centrada en la parte inferior.  
   
-    Cuando la leyenda se coloca en la parte superior o inferior de un gráfico, su diseño cambia de vertical a horizontal. Puede seleccionar un diseño diferente en el cuadro **Diseño**.  
+    Cuando la leyenda se coloca en la parte superior o inferior de un gráfico, su diseño cambia de vertical a horizontal. Puede seleccionar un diseño diferente en el cuadro **Diseño** .  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -210,7 +215,7 @@ De forma predeterminada, el eje vertical muestra los valores en un formato gener
 
 10. Haga clic con el botón derecho en el eje vertical > **Propiedades del título del eje**.  
   
-10. Reemplace el texto del campo **Texto del título ** con **Total de ventas (en miles)**. También puede especificar una gran variedad de opciones de formato para el título.  
+10. Reemplace el texto del campo **Texto del título**  con **Total de ventas (en miles)**. También puede especificar una gran variedad de opciones de formato para el título.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -218,7 +223,7 @@ De forma predeterminada, el eje vertical muestra los valores en un formato gener
 
     ![generador-informes-gráfico-columnas-formato-eje-x](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
-## 8. Mostrar todas las etiquetas del eje horizontal (x)
+## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. Mostrar todas las etiquetas del eje horizontal (x)
 
 Observe que solo se muestran algunas de las etiquetas del eje x. En esta sección, se establece una propiedad en el panel Propiedades para mostrarlas todas.
 
@@ -234,7 +239,7 @@ Observe que solo se muestran algunas de las etiquetas del eje x. En esta secció
     
 5.  Haga clic en **Ejecutar** para obtener la vista previa del informe.
 
-    ![generador-informes-gráfico-columnas-intervalo-etiquetas-una-vista-previa](../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
+    ![report-builder-column-chart-label-interval-one-preview](../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
     
     Ahora el gráfico muestra todas sus etiquetas.
   
@@ -244,17 +249,17 @@ Una media móvil es una media de los datos de la serie, calculada en el tiempo. 
   
 1.  Cambie a la vista de diseño del informe.  
   
-2.  Haga doble clic en el gráfico para mostrar el panel **Datos del gráfico**.  
+2.  Haga doble clic en el gráfico para mostrar el panel **Datos del gráfico** .  
   
 3.  Haga clic con el botón derecho en el campo **[Sum(Sales)]** en el área **Valores** y, después, haga clic en **Agregar serie calculada**.  
 
      ![generador-informes-gráfico-columnas-agregar-serie-calculada](../reporting-services/media/report-builder-column-chart-add-calculated-series.png)
   
-4.  En **Fórmula**, compruebe que esté seleccionada la opción **Media móvil**.  
+4.  En **Fórmula**, compruebe que esté seleccionada la opción **Media móvil** .  
   
 5.  En **Establecer parámetros de fórmula**, para **Período**, seleccione **4**.  
   
-6.  En la pestaña **Borde**, en **Ancho de línea**, seleccione **3pt**.  
+6.  En la pestaña **Borde** , en **Ancho de línea**, seleccione **3pt**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -288,7 +293,7 @@ El gráfico muestra una línea que muestra la media móvil del total de ventas p
   
 ## <a name="Save"></a>11. Guardar el informe  
   
-### Para guardar el informe  
+### <a name="to-save-the-report"></a>Para guardar el informe  
   
 1.  Cambie a la vista de diseño del informe.  
   
@@ -300,10 +305,12 @@ El gráfico muestra una línea que muestra la media móvil del total de ventas p
   
 4.  Haga clic en **Guardar**.  
   
-## Pasos siguientes  
+## <a name="next-steps"></a>Pasos siguientes  
 Ha completado correctamente el tutorial Agregar un gráfico de columnas al informe. Para obtener más información sobre los gráficos, consulte [Gráficos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) y [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
 -    [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md) 
 -    [Generador de informes en SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

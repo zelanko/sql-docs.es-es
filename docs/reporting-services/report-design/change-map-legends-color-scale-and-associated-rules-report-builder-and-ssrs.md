@@ -1,47 +1,52 @@
 ---
-title: "Cambiar leyendas de mapa, escala de colores y reglas asociadas (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.mapcolorscaleproperties.labels.f1"
-  - "sql13.rtp.rptdesigner.mappointlayerproperties.typerules.f1"
-  - "sql13.rtp.rptdesigner.shared.maprulesdistribution.f1"
-  - "10512"
-  - "10539"
-  - "10533"
-  - "sql13.rtp.rptdesigner.maplegendtitleproperties.general.f1"
-  - "10534"
-  - "10516"
-  - "sql13.rtp.rptdesigner.mapdistancescaleproperties.general.f1"
-  - "sql13.rtp.rptdesigner.mapcolorscaleproperties.general.f1"
-  - "sql13.rtp.rptdesigner.mapcolorscaletitleproperties.general.f1"
-  - "10514"
-  - "sql13.rtp.rptdesigner.mappointlayerproperties.sizerules.f1"
-  - "10513"
-  - "sql13.rtp.rptdesigner.shared.mapruleslegend.f1"
-  - "sql13.rtp.rptdesigner.shared.embeddedlabels.f1"
-  - "10510"
-  - "10509"
-  - "sql13.rtp.rptdesigner.maplegendproperties.general.f1"
-  - "10540"
-  - "10517"
+title: Cambiar reglas de asociados a la escala de Color de leyendas de mapa en el generador de informes SSRS | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.mapcolorscaleproperties.labels.f1
+- sql13.rtp.rptdesigner.mappointlayerproperties.typerules.f1
+- sql13.rtp.rptdesigner.shared.maprulesdistribution.f1
+- "10512"
+- "10539"
+- "10533"
+- sql13.rtp.rptdesigner.maplegendtitleproperties.general.f1
+- "10534"
+- "10516"
+- sql13.rtp.rptdesigner.mapdistancescaleproperties.general.f1
+- sql13.rtp.rptdesigner.mapcolorscaleproperties.general.f1
+- sql13.rtp.rptdesigner.mapcolorscaletitleproperties.general.f1
+- "10514"
+- sql13.rtp.rptdesigner.mappointlayerproperties.sizerules.f1
+- "10513"
+- sql13.rtp.rptdesigner.shared.mapruleslegend.f1
+- sql13.rtp.rptdesigner.shared.embeddedlabels.f1
+- "10510"
+- "10509"
+- sql13.rtp.rptdesigner.maplegendproperties.general.f1
+- "10540"
+- "10517"
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: aee605482e4de390b545f63ac96bfc123cee568a
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Cambiar leyendas de mapa, escala de colores y reglas asociadas (Generador de informes y SSRS)
-  En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], un mapa puede contener leyendas de mapa, una escala de colores y una escala de distancia. Estas partes de un mapa ayudan a los usuarios a interpretar la visualización de los datos del mapa.  
+# <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Cambiar leyendas de mapa, escala de colores y reglas asociadas (Generador de informes y SSRS)
+  En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , un mapa puede contener leyendas de mapa, una escala de colores y una escala de distancia. Estas partes de un mapa ayudan a los usuarios a interpretar la visualización de los datos del mapa.  
   
  Las leyendas incluyen las siguientes partes de un mapa:  
   
@@ -55,13 +60,13 @@ caps.handback.revision: 12
   
 ##  <a name="Viewport"></a> Para cambiar la posición de una leyenda con respecto a la ventanilla  
   
-#### Para cambiar la posición de una leyenda con respecto a la ventanilla  
+#### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>Para cambiar la posición de una leyenda con respecto a la ventanilla  
   
-1.  En la vista de diseño, haga clic con el botón derecho en la leyenda y abra la página *\<elemento de informe>***Propiedades**.  
+1.  En la vista de diseño, haga clic en la leyenda y abra el  *\<elemento de informe >***propiedades** página.  
   
 2.  En **Posición**, haga clic en la ubicación que especifica dónde desea mostrar la leyenda con respecto a la ventanilla.  
   
-3.  Para mostrar la leyenda fuera de la ventanilla, seleccione **Mostrar \<elemento de informe> fuera de la ventanilla**.  
+3.  Para mostrar la leyenda fuera de la ventanilla, seleccione **mostrar \<elemento de informe > fuera de la ventanilla**.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -70,9 +75,9 @@ caps.handback.revision: 12
   
 ##  <a name="MapLegend"></a> Cambiar el diseño de la leyenda de un mapa  
   
-#### Cambiar el diseño de la leyenda de un mapa  
+#### <a name="to-change-the-layout-of-a-map-legend"></a>Cambiar el diseño de la leyenda de un mapa  
   
-1.  En la vista Diseño, haga clic con el botón derecho en la leyenda y, después, abra la página **Propiedades de la leyenda**.  
+1.  En la vista Diseño, haga clic con el botón derecho en la leyenda y, después, abra la página **Propiedades de la leyenda** .  
   
 2.  En **Diseño de la leyenda**, haga clic en el diseño de la tabla que desea utilizar para la leyenda. Según haga clic en las diferentes opciones, cambiará la disposición de la superficie de diseño.  
   
@@ -80,44 +85,44 @@ caps.handback.revision: 12
   
 ##  <a name="MapLegendTitle"></a> Mostrar u ocultar el título de una leyenda de mapa  
   
-#### Mostrar u ocultar el título de una leyenda de mapa  
+#### <a name="to-show-or-hide-a-map-legend-title"></a>Mostrar u ocultar el título de una leyenda de mapa  
   
 -   Haga clic con el botón derecho en la leyenda de mapa en la superficie de diseño y, después, haga clic en **Mostrar título de leyenda**.  
   
 ##  <a name="ColorScaleTitle"></a> Mostrar u ocultar el título de una escala de colores  
   
-#### Mostrar u ocultar el título de una escala de colores  
+#### <a name="to-show-or-hide-a-color-scale-title"></a>Mostrar u ocultar el título de una escala de colores  
   
 -   Haga clic con el botón derecho en la escala de colores en la superficie de diseño y, después, haga clic en **Mostrar título de escala de colores**.  
   
 ##  <a name="MoveItems"></a> Sacar elementos de la primera leyenda  
  Cree tantas leyendas adicionales cuando necesite y, a continuación, actualice las reglas para cada capa de mapa especificando qué leyenda muestran los resultados de la regla.  
   
-#### Crear una nueva leyenda  
+#### <a name="to-create-a-new-legend"></a>Crear una nueva leyenda  
   
 -   En la vista Diseño, haga clic con el botón derecho fuera de la ventanilla del mapa y, después, haga clic en **Agregar leyenda**.  
   
      Una nueva leyenda aparece en el mapa.  
   
-#### Mostrar los resultados de la regla en una leyenda  
+#### <a name="to-display-rule-results-in-a-legend"></a>Mostrar los resultados de la regla en una leyenda  
   
 1.  En la vista Diseño, haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  Haga clic con el botón derecho en la capa que contenga los datos que quiera y, después, haga clic en *\<tipo de elemento de mapa>***Regla de color**.  
+2.  Haga clic en la capa que contenga los datos que desee y, a continuación, haga clic en  *\<tipo de elemento de mapa >***regla de Color**.  
   
 3.  Haga clic en **Leyenda**.  
   
-4.  En la lista desplegable **Mostrar en esta leyenda**, haga clic en el nombre de la leyenda para mostrar los resultados de la regla.  
+4.  En la lista desplegable **Mostrar en esta leyenda** , haga clic en el nombre de la leyenda para mostrar los resultados de la regla.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##  <a name="TemplateStyle"></a> Variar los colores del elemento de mapa según un estilo de plantilla  
   
-#### Variar los colores del elemento de mapa según un estilo de plantilla  
+#### <a name="to-vary-map-element-colors-based-on-a-template-style"></a>Variar los colores del elemento de mapa según un estilo de plantilla  
   
 1.  En la vista Diseño, haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  Haga clic con el botón derecho en la capa que contenga los datos que quiera y, después, haga clic en *\<tipo de elemento de mapa>***Regla de color**.  
+2.  Haga clic en la capa que contenga los datos que desee y, a continuación, haga clic en  *\<tipo de elemento de mapa >***regla de Color**.  
   
 3.  Haga clic en **Aplicar estilo de plantilla**.  
   
@@ -127,11 +132,11 @@ caps.handback.revision: 12
   
 ##  <a name="ColorPalette"></a> Variar los colores del elemento de mapa según la paleta de colores  
   
-#### Variar los colores del elemento de mapa según la paleta de colores  
+#### <a name="to-vary-map-element-colors-based-on-color-palette"></a>Variar los colores del elemento de mapa según la paleta de colores  
   
 1.  En la vista Diseño, haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  Haga clic con el botón derecho en la capa que contenga los datos que quiera y, después, haga clic en *\<tipo de elemento de mapa>***Regla de color**.  
+2.  Haga clic en la capa que contenga los datos que desee y, a continuación, haga clic en  *\<tipo de elemento de mapa >***regla de Color**.  
   
 3.  Haga clic en **Visualizar datos mediante la paleta de colores**.  
   
@@ -145,11 +150,11 @@ caps.handback.revision: 12
   
 ##  <a name="ColorRanges"></a> Variar los colores del elemento de mapa según las gamas de colores  
   
-#### Variar los colores del elemento de mapa según las gamas de colores  
+#### <a name="to-vary-map-element-colors-based-on-color-ranges"></a>Variar los colores del elemento de mapa según las gamas de colores  
   
 1.  En la vista Diseño, haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  Haga clic con el botón derecho en la capa que contenga los datos que quiera y, después, haga clic en *\<tipo de elemento de mapa>***Regla de color**.  
+2.  Haga clic en la capa que contenga los datos que desee y, a continuación, haga clic en  *\<tipo de elemento de mapa >***regla de Color**.  
   
 3.  Haga clic en **Visualizar datos mediante los rangos de colores**.  
   
@@ -167,11 +172,11 @@ caps.handback.revision: 12
   
 ##  <a name="CustomColors"></a> Variar los colores del elemento de mapa según los colores personalizados  
   
-#### Variar los colores del elemento de mapa según los colores personalizados  
+#### <a name="to-vary-map-element-colors-based-on-custom-colors"></a>Variar los colores del elemento de mapa según los colores personalizados  
   
 1.  En la vista Diseño, haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  Haga clic con el botón derecho en la capa que contenga los datos que quiera y, después, haga clic en *\<tipo de elemento de mapa>***Regla de color**.  
+2.  Haga clic en la capa que contenga los datos que desee y, a continuación, haga clic en  *\<tipo de elemento de mapa >***regla de Color**.  
   
 3.  Haga clic en **Visualizar datos mediante los colores personalizados**.  
   
@@ -185,13 +190,13 @@ caps.handback.revision: 12
   
 ##  <a name="DistributionOptions"></a> Establecer las opciones de distribución de una leyenda  
   
-#### Establecer las opciones de distribución de una leyenda  
+#### <a name="to-set-distribution-options-for-a-legend"></a>Establecer las opciones de distribución de una leyenda  
   
 1.  En la vista Diseño, haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  Haga clic con el botón derecho en la capa que contenga los datos que quiera y, después, haga clic en *\<tipo de elemento de mapa>***Regla de color**.  
+2.  Haga clic en la capa que contenga los datos que desee y, a continuación, haga clic en  *\<tipo de elemento de mapa >***regla de Color**.  
   
-3.  Seleccione la opción **Visualizar datos mediante** \<tipo de regla>. Para utilizar las opciones de distribución, debe crear intervalos en la página **Distribución** según los datos analíticos asociados a la capa.  
+3.  Seleccione el **visualizar datos mediante** \<tipo de regla > opción. Para utilizar las opciones de distribución, debe crear intervalos en la página **Distribución** según los datos analíticos asociados a la capa.  
   
 4.  Haga clic en **Distribución**.  
   
@@ -205,7 +210,7 @@ caps.handback.revision: 12
   
     -   **Personalizado**. Especifique su propio número de intervalos para controlar la distribución de valores.  
   
-     Para obtener más información sobre las opciones de distribución, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+     Para obtener más información sobre las opciones de distribución, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 6.  En **Número de subrangos**, escriba el número de subrangos que va a utilizar. Cuando el tipo de distribución es **Óptimo**, el número de subrangos se calcula automáticamente.  
   
@@ -217,13 +222,13 @@ caps.handback.revision: 12
   
 ##  <a name="RuleLegend"></a> Cambiar el contenido de una leyenda de la regla  
   
-#### Cambiar el contenido de una leyenda de tipo de color, tamaño, ancho o marcador  
+#### <a name="to-change-the-contents-of-a-color-size-width-or-marker-type-legend"></a>Cambiar el contenido de una leyenda de tipo de color, tamaño, ancho o marcador  
   
 1.  En la vista Diseño, haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  Haga clic con el botón derecho en la capa que contenga los datos que quiera y, luego, haga clic en *\<tipo de elemento de mapa>***Regla**.  
+2.  Haga clic en la capa que contenga los datos que desee y, a continuación, haga clic en  *\<tipo de elemento de mapa >***regla**.  
   
-3.  Compruebe que esté seleccionado **Visualizar datos mediante el uso de** \<*tipo de regla*>.  
+3.  Compruebe que **visualizar datos mediante** \< *tipo de regla*> está seleccionada.  
   
 4.  En **Campo de datos**, compruebe que los datos analíticos que está visualizando en la capa están seleccionados.  
   
@@ -238,13 +243,13 @@ caps.handback.revision: 12
   
 ##  <a name="ColorScale"></a> Cambiar los contenidos de la escala de colores  
   
-#### Para cambiar el contenido de la escala de colores o una leyenda de regla de colores  
+#### <a name="to-change-the-contents-of-the-color-scale-or-a-color-legend"></a>Para cambiar el contenido de la escala de colores o una leyenda de regla de colores  
   
 1.  En la vista Diseño, haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  Haga clic con el botón derecho en la capa que contenga los datos que quiera y, después, haga clic en *\<tipo de elemento de mapa>***Regla de color**.  
+2.  Haga clic en la capa que contenga los datos que desee y, a continuación, haga clic en  *\<tipo de elemento de mapa >***regla de Color**.  
   
-3.  Seleccione la opción de regla de color que desee usar. Para mostrar los elementos en una leyenda de mapa o escala de colores, debe seleccionar una de las opciones de **Visualizar datos mediante** \<tipo de regla>.  
+3.  Seleccione la opción de regla de color que desee usar. Para mostrar los elementos en una escala de color o de leyenda de mapa, debe seleccionar uno de los **visualizar datos mediante** \<tipo de regla > Opciones.  
   
 4.  En **Campo de datos**, compruebe que los datos analíticos que está visualizando en la capa están seleccionados.  
   
@@ -259,11 +264,11 @@ caps.handback.revision: 12
   
 ##  <a name="HideItems"></a> Quitar todos los elementos de una leyenda  
   
-#### Ocultar elementos basados en una regla  
+#### <a name="to-hide-items-based-on-a-rule"></a>Ocultar elementos basados en una regla  
   
 1.  En la vista Diseño, haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  Haga clic con el botón derecho en la capa que contenga los datos que quiera y, luego, haga clic en *\<tipo de elemento de mapa>***Regla**.  
+2.  Haga clic en la capa que contenga los datos que desee y, a continuación, haga clic en  *\<tipo de elemento de mapa >***regla**.  
   
 3.  Haga clic en **Leyenda**.  
   
@@ -272,19 +277,19 @@ caps.handback.revision: 12
 ##  <a name="ChangeFormatItems"></a> Cambiar el formato del contenido de una leyenda  
  Establezca las opciones de leyenda para la regla que está asociada a la leyenda de mapa.  
   
-#### Cambiar el formato del contenido de una leyenda  
+#### <a name="to-change-the-format-of-content-in-a-legend"></a>Cambiar el formato del contenido de una leyenda  
   
 1.  En la vista Diseño, haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  Haga clic con el botón derecho en la capa que contenga los datos que quiera y, luego, haga clic en *\<tipo de elemento de mapa>***Regla**.  
+2.  Haga clic en la capa que contenga los datos que desee y, a continuación, haga clic en  *\<tipo de elemento de mapa >***regla**.  
   
 3.  Haga clic en **Leyenda**.  
   
-4.  **Texto de leyenda** muestra las palabras clave que especifican qué datos aparecen en la leyenda. Use las palabras clave y los formatos personalizados para ayudar a controlar el formato del texto de la leyenda. Por ejemplo, #FROMVALUE {C2} especifica un formato de moneda con dos posiciones decimales. Para obtener más información, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+4.  **Texto de leyenda** muestra las palabras clave que especifican qué datos aparecen en la leyenda. Use las palabras clave y los formatos personalizados para ayudar a controlar el formato del texto de la leyenda. Por ejemplo, #FROMVALUE {C2} especifica un formato de moneda con dos posiciones decimales. Para obtener más información, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Agregar, cambiar o eliminar un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Personalizar los datos y la presentación de un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   

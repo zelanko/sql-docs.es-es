@@ -1,28 +1,33 @@
 ---
-title: "Crear una suscripci&#243;n controlada por datos (Tutorial de SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "suscripciones [Reporting Services], tutoriales"
-  - "visitas guiadas [Reporting Services]"
-  - "suscripciones controladas por datos"
+title: "Crear una suscripción controlada por datos (Tutorial de SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 05/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- subscriptions [Reporting Services], tutorials
+- walkthroughs [Reporting Services]
+- data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 caps.latest.revision: 50
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 50
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ca542c75d289b79284c5affeea5095ac032e1e0
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Crear una suscripci&#243;n controlada por datos (Tutorial de SSRS)
+# <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Crear una suscripción controlada por datos (Tutorial de SSRS)
 En este tutorial de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se explican los conceptos relacionados con las suscripciones controladas por datos mediante un ejemplo sencillo en el que se crea una suscripción controlada por datos para generar y guardar la salida de informe filtrado en un recurso compartido de archivos. 
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Las suscripciones controladas por datos permiten personalizar y automatizar la distribución de un informe en función de datos dinámicos de suscriptores. Las suscripciones controladas por datos están destinadas a los escenarios siguientes:  
   
@@ -31,7 +36,7 @@ En este tutorial de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] s
 -   La distribución de informes a un grupo específico de destinatarios basado en criterios predefinidos. Por ejemplo, enviar un informe de rendimiento de ventas a todos los directores de ventas de una organización.
 + La automatización de la generación de informes en una amplia variedad de formatos, como .xlsx y .pdf.  
   
-## Aprendizaje  
+## <a name="what-you-will-learn"></a>Aprendizaje  
  El tutorial está compuesto por tres lecciones:  
  Lección | Comentarios
  ------- | --------------
@@ -52,7 +57,7 @@ Paso  |Description
  
    ![ssrs_tutorial_datadriven_flow](../reporting-services/media/ssrs-tutorial-datadriven-flow.png) 
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
 Normalmente, los administradores del servidor de informes se ocupan de crear y mantener las suscripciones controladas por datos. Los pasos para crear suscripciones controladas por datos requieren crear consultas, estar familiarizado con los orígenes de datos que contienen datos de suscriptores y tener permisos elevados en un servidor de informes.  
   
 En el tutorial se usan el informe *Pedido de venta* creado en el tutorial [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) y los datos de la base de datos de ejemplo **AdventureWorks2014**.  
@@ -67,7 +72,7 @@ Para utilizar este tutorial, debe tener el software siguiente instalado en el eq
   
 -   Un informe que contenga parámetros. En este tutorial, se supone que usa el informe de ejemplo `Sales Orders` que creó con el tutorial [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
--   La base de datos de ejemplo **AdventureWorks2014**, que proporciona datos para el informe de ejemplo.  
+-   La base de datos de ejemplo **AdventureWorks2014** , que proporciona datos para el informe de ejemplo.  
   
 -   Una asignación de roles de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] que incluye la tarea Administrar todas las suscripciones en el informe de ejemplo. Esta tarea es necesaria para definir una suscripción controlada por datos. Si es administrador del equipo, la asignación de roles predeterminada para los administradores locales le proporciona los permisos necesarios para crear suscripciones controladas por datos. Para obtener más información, consulte [Granting Permissions on a Native Mode Report Server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
@@ -75,7 +80,9 @@ Para utilizar este tutorial, debe tener el software siguiente instalado en el eq
   
 **Tiempo estimado para completar este tutorial:** 30 minutos. Otros 30 minutos si no ha completado el tutorial de informe básico.  
   
-## Vea también  
-[Suscripciones controladas por datos](../reporting-services/subscriptions/data-driven-subscriptions.md)  
+## <a name="see-also"></a>Vea también  
+[Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  
+
+

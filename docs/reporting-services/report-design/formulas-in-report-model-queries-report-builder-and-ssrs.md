@@ -1,25 +1,30 @@
 ---
-title: "Utilizar f&#243;rmulas en consultas de modelo de informe (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10151"
+title: "Las fórmulas en informes de modelo consultas (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f74c464aad45ffad0c1dfc2a40d62944446e63d7
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Utilizar f&#243;rmulas en consultas de modelo de informe (Generador de informes y SSRS)
+# <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Utilizar fórmulas en consultas de modelo de informe (Generador de informes y SSRS)
   Las fórmulas son los cálculos que se realizan en los valores de un informe que utiliza un modelo de informe como origen de datos. Al definir fórmulas en el cuadro de diálogo **Definir fórmula** en el diseñador de consultas de modelo de informe, se define una consulta para el origen de datos del modelo de informe. Una fórmula puede contener funciones, operadores, constantes y referencias a campos o entidades. Las fórmulas permiten combinar, agregar, filtrar y evaluar datos numéricos y de texto. Puede crear fórmulas y guardarlas como campos nuevos, o puede modificar las fórmulas de campos existentes.  
   
  Las fórmulas no son expresiones RDL y no comienzan con un signo de igual (=). Para más información sobre las expresiones RDL, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
@@ -35,12 +40,12 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## References  
+## <a name="references"></a>References  
  Una referencia es un nombre de campo. Puede ser un nombre de campo existente en la entidad o un nombre de campo calculado que se haya creado y agregado a la lista Campos. La referencia indica al Generador de informes dónde debe buscar los valores o los datos que se desean utilizar en una fórmula. Puede hacer referencia a los campos de la entidad de contexto y a los de otras entidades de una fórmula o utilizar el valor de un campo en varias fórmulas.  
   
  Cuando se utilizan referencias, el procesador de informes ejecuta la fórmula en cada valor del campo. Por ejemplo, imagine que un campo contiene el total de ventas anuales de los últimos cinco años. Este campo contiene cinco valores; cada uno representa el total de ventas de un año determinado. Si la fórmula contiene una referencia a este campo, calcula el nuevo valor mediante cada valor individual.  
   
-## Operadores  
+## <a name="operators"></a>Operadores  
  Los operadores especifican el tipo de cálculo que se desea realizar en los valores de una fórmula. Hay tres tipos diferentes de operadores de cálculo: aritmético, de comparación y de texto. Los operadores se indican mediante símbolos, como el signo más (+).  
   
  **Operadores aritméticos.** Los operadores aritméticos realizan las operaciones matemáticas básicas, como la suma, la resta o la multiplicación, combinan números y generan resultados numéricos.  
@@ -57,7 +62,7 @@ caps.handback.revision: 9
   
  Las funciones se pueden utilizar para realizar cálculos sencillos o complejos. La estructura de una función consta del nombre de la función seguido de los argumentos de la función separados por comas y encerrados entre paréntesis.  
   
- ![Ejemplo de una función](../../reporting-services/report-design/media/functionexample.gif "Ejemplo de una función")  
+ ![Un ejemplo de una función. ] (../../reporting-services/report-design/media/functionexample.gif "Muestra un ejemplo de una función.")  
   
  Los argumentos pueden ser referencias de campo, números, texto y valores lógicos como **TRUE** o **FALSE**. Los argumentos pueden ser también constantes, fórmulas u otras funciones. Los argumentos que se escriban deben generar un valor válido para dicho argumento. Por ejemplo, si la fórmula consiste en multiplicar dos enteros, el resultado no puede ser una cadena de texto.  
   

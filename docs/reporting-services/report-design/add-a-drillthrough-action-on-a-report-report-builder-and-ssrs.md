@@ -1,23 +1,28 @@
 ---
-title: "Agregar una acci&#243;n de obtenci&#243;n de detalles en un informe (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Agregar una acción de obtención de detalles en un informe (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f1e5c7c678cb3c38d9e0225ce47bc2dca91ab326
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Agregar una acci&#243;n de obtenci&#243;n de detalles en un informe (Generador de informes y SSRS)
+# <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>Agregar una acción de obtención de detalles en un informe (Generador de informes y SSRS)
   El informe que se abre al hacer clic en el vínculo del informe principal se denomina *informe detallado*. Este vínculo de obtención de detalles habilita una acción de obtención de detalles.  
   
  Los informes detallados deben publicarse en el mismo servidor de informes que el informe principal, pero pueden estar en carpetas diferentes. Puede agregar un vínculo de obtención de detalles a cualquier elemento que tenga una propiedad **Action** , como un cuadro de texto, una imagen o los puntos de datos de un gráfico.  
@@ -27,7 +32,7 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Para agregar una acción de obtención de detalles  
+### <a name="to-add-a-drillthrough-action"></a>Para agregar una acción de obtención de detalles  
   
 1.  En la vista Diseño, haga clic con el botón derecho en el gráfico, la imagen o el cuadro de texto al que quiere agregar el vínculo y, después, haga clic en **Propiedades**.  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 9
   
 5.  En **Utilizar estos parámetros para ejecutar el informe**, haga clic en **Agregar**. Se agrega una nueva fila a la cuadrícula de parámetros.  
   
-    -   En el cuadro de texto **Nombre**, haga clic en la lista desplegable o escriba el nombre del parámetro de informe del informe detallado.  
+    -   En el cuadro de texto **Nombre** , haga clic en la lista desplegable o escriba el nombre del parámetro de informe del informe detallado.  
   
         > [!NOTE]  
         >  Los nombres de la lista de parámetros deben coincidir exactamente con los parámetros previstos en el informe de destino. Por ejemplo, los nombres de parámetro deben coincidir en mayúsculas y minúsculas. Si los nombres no coinciden o si en la lista falta algún parámetro previsto, se produce un error en el informe detallado.  
@@ -59,8 +64,8 @@ caps.handback.revision: 9
   
 7.  Para probar el vínculo, ejecute el informe y haga clic en el elemento de informe en el que ha establecido este vínculo.  
   
-## Vea también  
- [Cuadro de diálogo Propiedades de acción &#40;Generador de informes y SSRS&#41;](../Topic/Action%20Properties%20Dialog%20Box%20\(Report%20Builder%20and%20SSRS\).md)   
+## <a name="see-also"></a>Vea también  
+ [Cuadro de diálogo Propiedades de acción &#40;Generador de informes y SSRS&#41;](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)   
  [Aplicar formato a los puntos de datos de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Mostrar la información sobre herramientas en una serie &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   

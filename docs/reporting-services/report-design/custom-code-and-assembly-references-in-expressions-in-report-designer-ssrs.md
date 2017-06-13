@@ -1,36 +1,41 @@
 ---
-title: "Referencias a ensamblados y c&#243;digo personalizado en expresiones en el Dise&#241;ador de informes (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "elementos [Reporting Services], expresiones"
-  - "datos [Reporting Services], expresiones"
-  - "expresiones [Reporting Services], acerca de las expresiones"
-  - "expresiones [Reporting Services]"
-  - "SSRS, expresiones"
-  - "fórmulas [Reporting Services]"
-  - "manipulación de datos [Reporting Services]"
-  - "SQL Server Reporting Services, expresiones"
+title: "Código personalizado y las referencias de ensamblado en las expresiones de informan diseñador (SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- items [Reporting Services], expressions
+- data [Reporting Services], expressions
+- expressions [Reporting Services], about expressions
+- expressions [Reporting Services]
+- SSRS, expressions
+- formulas [Reporting Services]
+- data manipulation [Reporting Services]
+- SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 caps.latest.revision: 77
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 77
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dc8491006425de79f8e96be1affb10687a1553f9
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Referencias a ensamblados y c&#243;digo personalizado en expresiones en el Dise&#241;ador de informes (SSRS)
+# <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes (SSRS)
   Puede agregar referencias al código personalizado incrustado en un informe o a los ensamblados personalizados que haya generado y guardado en el equipo e implementado en el servidor de informes. El código incrustado se utiliza en constantes, funciones complejas o funciones personalizadas que se usan varias veces en un único informe. Use ensamblados de código personalizados para mantener el código en un único lugar y compartirlo con el fin de utilizarlos en múltiples informes. El código personalizado puede incluir nuevas constantes, variables, funciones o subrutinas personalizadas. Puede incluir referencias de solo lectura en las colecciones integradas, como la colección Parameters. Sin embargo, no puede pasar conjuntos de valores de datos de informe a las funciones personalizadas; concretamente, no se admiten agregados personalizados.  
   
 > [!IMPORTANT]  
->  Para cálculos dependientes del tiempo que se evalúan una sola vez en tiempo de ejecución y cuyo valor desea conservar a lo largo del procesamiento del informe, considere la posibilidad de usar una variable de informe o una variable de grupo. Para más información, vea [Referencias a las colecciones de variables de informe y de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-and-group-variables-collections-references-report-builder-and-ssrs.md).  
+>  Para cálculos dependientes del tiempo que se evalúan una sola vez en tiempo de ejecución y cuyo valor desea conservar a lo largo del procesamiento del informe, considere la posibilidad de usar una variable de informe o una variable de grupo. Para más información, vea [Referencias a las colecciones de variables de informe y de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md).  
   
  El Diseñador de informes es el entorno de creación preferido para agregar código personalizado a un informe. El Generador de informes admite el procesamiento de informes que tienen expresiones válidas o que incluyen referencias a ensamblados personalizados en un servidor de informes. El Generador de informes no proporciona un medio para agregar una referencia a un ensamblado personalizado.  
   
@@ -50,14 +55,14 @@ caps.handback.revision: 77
 2.  Obtener una vista previa de un informe con referencias a ensamblados personalizados en modo local.  
   
 ##  <a name="Common"></a> Incluir referencias a funciones de uso frecuente  
- Use el cuadro de diálogo **Expresión** para ver una lista organizada en categorías de las funciones de uso frecuente integradas en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si expande **Funciones comunes** y hace clic en una categoría, el panel **Elemento** muestra la lista de funciones que puede incluir en una expresión. En las funciones comunes se incluyen clases de los espacios de nombres [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> y <xref:System.Convert>, así como funciones de biblioteca en tiempo de ejecución de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Para mayor comodidad, puede ver las funciones de uso más frecuente en el cuadro de diálogo **Expresión** , donde aparecen agrupadas por categorías: Texto, Fecha y hora, Matemáticas, Inspección, Flujo de programa, Agregado, Finanzas, Conversión y Varios. Las funciones de uso menos frecuente no aparecen en la lista, pero se pueden usar en una expresión.  
+ Use el cuadro de diálogo **Expresión** para ver una lista organizada en categorías de las funciones de uso frecuente integradas en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si expande **Funciones comunes** y hace clic en una categoría, el panel **Elemento** muestra la lista de funciones que puede incluir en una expresión. Las funciones comunes incluyen clases a partir de la [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> y <xref:System.Convert> espacios de nombres y [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] funciones de biblioteca en tiempo de ejecución. Para mayor comodidad, puede ver las funciones de uso más frecuente en el cuadro de diálogo **Expresión** , donde aparecen agrupadas por categorías: Texto, Fecha y hora, Matemáticas, Inspección, Flujo de programa, Agregado, Finanzas, Conversión y Varios. Las funciones de uso menos frecuente no aparecen en la lista, pero se pueden usar en una expresión.  
   
  Para usar una función integrada, haga doble clic en el nombre de la función en el panel Elemento. En el panel Descripción, aparece una descripción de la función; en el panel Ejemplo, aparece un ejemplo de la llamada a la función. En el panel de código, al escribir el nombre de la función seguido por un paréntesis izquierdo **(**, la Ayuda de IntelliSense muestra la sintaxis válida para la llamada a la función. Por ejemplo, para calcular el valor máximo de un campo denominado `Quantity` en una tabla, agregue la expresión simple `=Max(` al panel de código y, a continuación, use las etiquetas inteligentes para ver todas las posibles sintaxis válidas para la llamada a la función. Para completar este ejemplo, escriba `=Max(Fields!Quantity.Value)`.  
   
- Para más información sobre cada función, vea <xref:System.Math>, <xref:System.Convert> y [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](http://go.microsoft.com/fwlink/?LinkId=198941) en MSDN.  
+ Para obtener más información sobre cada función, consulte <xref:System.Math>, <xref:System.Convert>, y [miembros de biblioteca en tiempo de ejecución de Visual Basic](http://go.microsoft.com/fwlink/?LinkId=198941) en MSDN.  
   
 ##  <a name="NotCommon"></a> Incluir referencias a funciones de uso menos frecuente  
- Para incluir una referencia a otros espacios de nombres de CLR de uso menos frecuente es necesario usar una referencia completa (por ejemplo, <xref:System.Text.StringBuilder>). IntelliSense no se admite en el panel de código del cuadro de diálogo **Expresión** para estas funciones menos frecuentes.  
+ Para incluir una referencia a otros menos utilizadas espacios de nombres CLR, debe usar una referencia completa, por ejemplo, <xref:System.Text.StringBuilder>. IntelliSense no se admite en el panel de código del cuadro de diálogo **Expresión** para estas funciones menos frecuentes.  
   
  Para obtener más información, vea [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](http://go.microsoft.com/fwlink/?LinkId=198941) en MSDN.  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 77
 =Code.ToUSD(Fields!StandardCost.Value)  
 ```  
   
- Para hacer referencia a colecciones integradas en el código personalizado, incluya una referencia al objeto integrado **Report**:  
+ Para hacer referencia a colecciones integradas en el código personalizado, incluya una referencia al objeto integrado **Report** :  
   
 ```  
 =Report.Parameters!Param1.Value  
@@ -114,14 +119,14 @@ Public Function FixSpelling(ByVal s As String) As String
 End Function  
 ```  
   
- Para más información sobre las colecciones de objetos integradas y la inicialización, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-globals-and-users-references-report-builder-and-ssrs.md) e [Inicializar objetos de ensamblados personalizados](../../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md).  
+ Para más información sobre las colecciones de objetos integradas y la inicialización, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md) e [Inicializar objetos de ensamblados personalizados](../../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md).  
   
 ##  <a name="Parameters"></a> Incluir referencias a parámetros desde el código  
  Se puede hacer referencia a la colección global Parameters mediante código personalizado en un bloque de código de la definición de informe o en un ensamblado personalizado proporcionado por el usuario. La colección Parameters es de solo lectura y no tiene iteradores públicos. No se puede usar una construcción [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **de** para recorrer la colección. Debe conocer el nombre del parámetro definido en la definición de informe para poder hacer referencia a él en el código. Pero puede recorrer en iteración todos los valores de un parámetro de varios valores.  
   
  En la tabla siguiente se incluyen ejemplos de referencias a la colección integrada `Parameters` desde código personalizado:  
   
- **Pasa una colección de parámetros globales a código personalizado.** Esta función devuelve el valor de un parámetro de informes específico *MyParameter*.  
+ **Pasa una colección de parámetros globales a código personalizado.**Esta función devuelve el valor de un parámetro de informes específico *MyParameter*.  
   
  Referencia en la expresión `=Code.DisplayAParameterValue(Parameters)`  
   
@@ -180,7 +185,7 @@ End Function
  Para obtener más información sobre cómo tener acceso al código, vea [Accessing Custom Assemblies Through Expressions](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md).  
   
 ##  <a name="collections"></a> Pasar colecciones integradas a ensamblados personalizados  
- Si quiere pasar colecciones integradas (como las colecciones *Globals* o *Parameters*) a un ensamblado personalizado para su procesamiento, necesita agregar una referencia de ensamblado de su proyecto de código al ensamblado que define las colecciones integradas y el acceso al espacio de nombres correcto. Dependiendo de si desarrolla el ensamblado personalizado para un informe que se ejecuta en un servidor de informes (informe de servidor) o para un informe que se ejecuta localmente en una aplicación .NET (informe local), el ensamblado al que debe hacerse referencia será diferente. A continuación se incluye información detallada.  
+ Si quiere pasar colecciones integradas (como las colecciones *Globals* o *Parameters* ) a un ensamblado personalizado para su procesamiento, necesita agregar una referencia de ensamblado de su proyecto de código al ensamblado que define las colecciones integradas y el acceso al espacio de nombres correcto. Dependiendo de si desarrolla el ensamblado personalizado para un informe que se ejecuta en un servidor de informes (informe de servidor) o para un informe que se ejecuta localmente en una aplicación .NET (informe local), el ensamblado al que debe hacerse referencia será diferente. A continuación se incluye información detallada.  
   
 -   **Espacio de nombres:** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
   
@@ -190,7 +195,7 @@ End Function
   
  Como el contenido de las colecciones *Fields* y *ReportItems* puede cambiar dinámicamente en tiempo de ejecución, no las incluya en las llamadas al ensamblado personalizado (por ejemplo, en una variable miembro). La misma recomendación se aplica normalmente a todas las colecciones integradas.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Agregar código a un informe &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
  [Usar ensamblados personalizados con informes](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Agregar una referencia de ensamblado a un informe &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   

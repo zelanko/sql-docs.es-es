@@ -1,42 +1,47 @@
 ---
-title: "Instalar el Generador de informes | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: Instalar el generador de informes | Documentos de Microsoft
+ms.custom: 
+ms.date: 09/22/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 caps.latest.revision: 20
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 20
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5d2d84a84ef5abf6f048fe5f0d73e5724ae32950
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Instalar el Generador de informes
+# <a name="install-report-builder"></a>Instalar el Generador de informes
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] es una aplicación independiente que el usuario o un administrador pueden instalar en el equipo. Puede instalarlo desde el Centro de descarga de Microsoft, desde un servidor de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] o desde un sitio de SharePoint integrado con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  Un administrador normalmente instala y configura [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], concede permiso para descargar [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde el portal web y administra carpetas y permisos a los informes, los elementos de informe y los conjuntos de datos compartidos guardados en el servidor de informes. Para obtener más información sobre la administración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
-## Instalar [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde un portal web o una biblioteca de SharePoint 
+## <a name="install-includessrbnoversionincludesssrbnoversion-mdmd-from--a--web-portal-or-sharepoint-library"></a>Instalar [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde un portal web o una biblioteca de SharePoint 
   
  Puede iniciar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde un portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o desde un sitio de SharePoint integrado con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obtener información, vea [Iniciar el Generador de informes](../../reporting-services/report-builder/start-report-builder.md).  
   
-### Sitio de SharePoint integrado con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
+### <a name="sharepoint-site-integrated-with-includessrsnoversionincludesssrsnoversion-mdmd"></a>Sitio de SharePoint integrado con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
  En un sitio de SharePoint integrado con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], si en el menú **Nuevo documento** no aparece **Informe del Generador de informes**, **Modelo del Generador de informes**y **Orígenes de datos de informe**, será necesario agregar sus tipos de contenido a la biblioteca de SharePoint. Para obtener más información, vea [Add Reporting Services Content Types to a SharePoint Library (Agregar los tipos de contenido de Reporting Services a una biblioteca de SharePoint)](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
  
-## Instalar [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] con System Center Configuration Manager 
+## <a name="install-includessrbnoversionincludesssrbnoversion-mdmd-with-system-center-configuration-manager"></a>Instalar [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] con System Center Configuration Manager 
   
  Un administrador también puede usar software como System Center Configuration Manager para insertar el programa en su equipo. Para obtener información sobre la forma de usar software específico para instalar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], consulte la documentación del software. Para más información, consulte el [sitio de System Center Configuration Manager](https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager).  
   
 > [!IMPORTANT]  
 >  Las características de seguridad de Windows Vista y Windows 7 exigen permisos elevados para ejecutar operaciones de línea de comandos y solicitarán permiso para ejecutar la línea de comandos. La instalación no es silenciosa. Para que la instalación sea silenciosa, es necesario ejecutar la línea de comandos como administrador.  
   
-## Requisitos del sistema
+## <a name="system-requirements"></a>Requisitos del sistema
   
  Consulte la sección **System Requirements** (Requisitos del sistema) en la [página de descarga del Generador de informes](http://go.microsoft.com/fwlink/?LinkID=734968) en el Centro de descarga de Microsoft.
   
@@ -57,21 +62,21 @@ caps.handback.revision: 20
   
 5.  Haga clic en **Instalar** para completar la instalación del [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
   
-## Para instalar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde un recurso compartido  
+## <a name="to-install-includessrbnoversionincludesssrbnoversion-mdmd-from-a-share"></a>Para instalar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde un recurso compartido  
   
 1.  Póngase en contacto con el administrador para obtener información sobre la ubicación del archivo ReportBuilder3.msi que necesitará ejecutar para instalar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] en el equipo local.  
   
-2.  Busque el archivo ReportBuilder3.msi, el paquete de Windows Installer (MSI) para [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] y haga clic en él.  
+2.  Busque el archivo ReportBuilder3.msi, el paquete de Windows Installer (MSI) para [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]y haga clic en él.  
   
      De este modo se inicia el Asistente para el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] de SQL Server.  
   
 3.  Complete el resto de los pasos de [To install Report Builder from the download site](#download).  
   
-## Para instalar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde la línea de comandos 
+## <a name="to-install-includessrbnoversionincludesssrbnoversion-mdmd-from-the-command-line"></a>Para instalar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde la línea de comandos 
 
  También puede realizar una instalación de línea de comandos del [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] y especificar argumentos para personalizar la instalación. Además de los parámetros estándar intrínsecos de MSI, puede usar los parámetros personalizados que proporciona el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] : RBINSTALLDIR y REPORTSERVERURL. RBINSTALLDIR especifica la carpeta de instalación raíz para el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. REPORTSERVERURL especifica el servidor de informes predeterminado que usa el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] para guardar los informes en el servidor.  
   
- Si quiere realizar una instalación completamente silenciosa, sin ninguna interacción con la interfaz de usuario, especifique la opción **/quiet**. Por diseño, la marca de la opción quiet suprime los errores de instalación. Por lo tanto, es recomendable que, cuando use la opción quiet, incluya la opción **/l** que especifica el registro.   
+ Si quiere realizar una instalación completamente silenciosa, sin ninguna interacción con la interfaz de usuario, especifique la opción **/quiet** . Por diseño, la marca de la opción quiet suprime los errores de instalación. Por lo tanto, es recomendable que, cuando use la opción quiet, incluya la opción **/l** que especifica el registro.   
   
 1.  En la [página del Generador de informes del Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/?LinkID=734968), haga clic en **Download**(Descargar).  
   
@@ -93,7 +98,7 @@ caps.handback.revision: 20
   
 7.  Para ejecutar el comando, pulse ENTRAR.  
   
-## Establecer los valores predeterminados del [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
+## <a name="set-includessrbnoversionincludesssrbnoversion-mdmd-defaults"></a>Establecer los valores predeterminados del [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
   
 -   Después de instalar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], puede establecer algunas opciones predeterminadas. Haga clic en **Archivo** > **Opciones**.  
   
@@ -103,8 +108,9 @@ caps.handback.revision: 20
   
      Si no ve el servidor de informes en la lista de servidores existentes, cierre el cuadro de diálogo **Abrir informe** y haga clic en **Conectar** en la parte inferior del [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] para conectarse al servidor.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Iniciar el Generador de informes](../../reporting-services/report-builder/start-report-builder.md)   
  [Desinstalar el Generador de informes](../../reporting-services/install-windows/uninstall-report-builder.md)  
   
   
+

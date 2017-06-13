@@ -1,25 +1,33 @@
 ---
-title: "Trabajar con informes paginados (portal web) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Trabajar con informes paginados (portal web) | Documentos de Microsoft
+ms.custom: 
+ms.date: 05/25/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 5
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 222b9ae4ca3ff3f1dd1f08205a502473fea07da4
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Trabajar con informes paginados (portal web)
+# <a name="working-with-paginated-reports-web-portal"></a>Trabajar con informes paginados (portal web)
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 Las propiedades de un informe paginado se pueden ver y administrar en el portal web. El portal web puede iniciar el Generador de informes para crear o editar informes paginados.  
    
-## Crear un informe paginado  
+## <a name="create-a-paginated-report"></a>Crear un informe paginado  
   
 Para crear un nuevo conjunto de datos compartido, puede hacer lo siguiente:  
   
@@ -33,33 +41,34 @@ Para crear un nuevo conjunto de datos compartido, puede hacer lo siguiente:
   
 4.  Cree el informe paginado y, después, seleccione el icono para **guardar** situado en la esquina superior izquierda para guardarlo en el servidor de informes.  
   
-## Administrar un informe paginado existente  
+## <a name="manage-an-existing-paginated-report"></a>Administrar un informe paginado existente  
   
 Para administrar un informe paginado existente, puede hacer lo siguiente.  
   
-> [!NOTE] Si no ve informes paginados en la carpeta, asegúrese de que está viendo informes paginados. Puede seleccionar **Ver** en la barra de menús de la esquina superior derecha del portal web. Procure que **Informes paginados** esté activado.  
+> [!NOTE]
+> Si no ve informes paginados en la carpeta, asegúrese de que está viendo informes paginados. Puede seleccionar **Ver** en la barra de menús de la esquina superior derecha del portal web. Procure que **Informes paginados** esté activado.  
   
-1.  Seleccione los **puntos suspensivos (...)** del conjunto de datos que desea administrar.  
+1.  Seleccione el **puntos suspensivos (...)**  del conjunto de datos que desea administrar.  
       
     ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
-2.  Seleccione **Administrar**, que le llevará a la pantalla de edición.  
+2.  Seleccione **Administrar** , que le llevará a la pantalla de edición.  
     
     ![ssRSWebPortal-manage-report2](../reporting-services/media/ssrswebportal-manage-report2.png)  
   
-## Propiedades  
+## <a name="properties"></a>Propiedades  
   
 En la pantalla de propiedades, puede cambiar el **nombre** y la **descripción** del informe paginado. También puede usar las opciones **Eliminar**, **Mover**, **Crear informe vinculado**, **Editar en el Generador de informes**, **Descargar** o **Reemplazar**.  
     
 ![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
    
-## Parámetros  
+## <a name="parameters"></a>Parámetros  
   
 Puede modificar los parámetros existentes de un informe paginado. Para agregar un nuevo parámetro, hay que editar el informe en el Generador de informes o en SQL Server Data Tools.  
   
 ![ssRSWebPortal-report-parameters](../reporting-services/media/ssrswebportal-report-parameters.png)  
    
-## Origen de datos  
+## <a name="data-source"></a>Origen de datos  
 Puede apuntar a un origen de datos compartido o escribir la información de conexión correspondiente a un origen de datos personalizado.  
   
 ![ssRSWebPortal-report-datasource](../reporting-services/media/ssrswebportal-report-datasource.png)  
@@ -82,7 +91,8 @@ La cadena de conexión puede configurarse como expresión para que pueda especif
   
 Puede especificar la opción que determina cómo se obtienen las credenciales.  
   
-> [!IMPORTANT] Si las credenciales se suministran en la cadena de conexión, se omiten las opciones y los valores que se proporcionan en esta sección. Tenga en cuenta que, si especifica las credenciales en la cadena de conexión, todos los usuarios que abran esta página verán los valores como texto no cifrado.  
+> [!IMPORTANT]
+> Si las credenciales se suministran en la cadena de conexión, se omiten las opciones y los valores que se proporcionan en esta sección. Tenga en cuenta que, si especifica las credenciales en la cadena de conexión, todos los usuarios que abran esta página verán los valores como texto no cifrado.  
   
 **Como el usuario que visualiza el informe**  
   
@@ -114,15 +124,15 @@ Esto hace que no sea necesario proporcionar las credenciales del origen de datos
   
 Para usar esta opción, debe haber configurado previamente la cuenta de ejecución desatendida para el servidor de informes. La cuenta de ejecución desatendida se usa para conectarse a los orígenes de datos externos cuando otros orígenes de credenciales no están disponibles. Si especifica esta opción y la cuenta no está configurada, se producirá un error en la conexión al origen de datos del informe y no se producirá el procesamiento de informes. Para más información sobre esta cuenta, vea [Configurar la cuenta de ejecución desatendida (Administrador de configuración de SSRS)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-## Suscripciones  
-Una suscripción de Reporting Services es una configuración que entrega un informe a una hora concreta o a raíz de un evento. Lo hace en el formato de archivo que especifique. Por ejemplo, todos los miércoles, se guarda el informe VentasMensuales en formato de documento Microsoft Word en un recurso compartido de archivos. Las suscripciones se pueden utilizar para programar y automatizar la entrega de un informe con un conjunto concreto de valores de parámetros de informes. [Más información]  
+## <a name="subscriptions"></a>Suscripciones  
+Una suscripción de Reporting Services es una configuración que entrega un informe a una hora concreta o a raíz de un evento. Lo hace en el formato de archivo que especifique. Por ejemplo, todos los miércoles, se guarda el informe VentasMensuales en formato de documento Microsoft Word en un recurso compartido de archivos. Las suscripciones se pueden utilizar para programar y automatizar la entrega de un informe con un conjunto concreto de valores de parámetros de informes. Para obtener más información, consulte [trabajar con suscripciones](working-with-subscriptions-web-portal.md).
   
-![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)  
+![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
-## Elementos dependientes  
-Use la página Elementos dependientes para ver una lista de los elementos que hacen referencia a este informe. El icono de cada tipo de elemento indica en qué consiste. Luego, puede seleccionar el botón de **puntos suspensivos (...)** de cada elemento para seguir administrándolo.  
+## <a name="dependent-items"></a>Elementos dependientes  
+Use la página Elementos dependientes para ver una lista de los elementos que hacen referencia a este informe. El icono de cada tipo de elemento indica en qué consiste. A continuación, puede seleccionar la **puntos suspensivos (...)**  en cada elemento para administrar los elementos más adelante.  
   
-## Almacenamiento en memoria caché  
+## <a name="caching"></a>Almacenamiento en memoria caché  
 Dispone de varias opciones para almacenar en memoria caché los datos de un informe paginado. Puede empezar con una selección simple.  
   
 1.  **Ejecutar este informe siempre con los datos más recientes** emitirá consultas al origen de datos cada vez que el informe se ejecute. Esto da como resultado un informe a petición que contiene los datos más actualizados. Cada vez que se abra el informe, se creará una instancia de este con los resultados de una nueva consulta. Cuando se usa esta opción, si diez usuarios abren el informe a la vez, se enviarán diez consultas para procesar al origen de datos.  
@@ -136,14 +146,17 @@ Dispone de varias opciones para almacenar en memoria caché los datos de un info
 Si selecciona **Cache Copies of this report and use them when available** (Almacenar en caché copias del informe y usarlas cuando estén disponibles), dispondrá de más opciones.  
   
 ![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
+
+Para obtener más información, consulte [trabajar con instantáneas](working-with-snapshots-web-portal.md).
   
-### Expiración de la caché  
+### <a name="cache-expiration"></a>Expiración de la caché  
   
 Puede controlar si quiere que la memoria caché expire para el informe paginado transcurrido un tiempo determinado, o bien si prefiere hacerlo según una programación. Puede usar una programación compartida.  
   
-> [!NOTE] La memoria caché no se actualiza.  
+> [!NOTE]
+> La memoria caché no se actualiza.  
   
-### Planes de actualización de caché  
+### <a name="cache-refresh-plans"></a>Planes de actualización de caché  
   
 Puede usar planes de actualización de caché a fin de crear programaciones para cargar previamente la memoria caché con copias temporales de datos de un informe paginado. Un plan de actualización incluye una programación y la opción para especificar o invalidar los valores de los parámetros. No puede invalidar los valores de los parámetros que estén marcados como de solo lectura. Puede crear y utilizar más de un plan de actualización.  
    
@@ -153,15 +166,16 @@ Después de aplicar la opción de caché anterior, puede definir el plan de actu
   
 Para crear un nuevo plan de actualización de caché, seleccione **Nuevo plan de actualización de caché**. Después, puede escribir un nombre para el plan y especificar una programación. Si el conjunto de datos tiene parámetros definidos, verá que se enumeran y podrá especificar valores, a menos que estén marcados como de solo lectura.  
   
-Cuando haya terminado, puede seleccionar **Create Cache Refresh Plan** (Crear plan de actualización de caché).  
+Cuando haya terminado, puede seleccionar **Create Cache Refresh Plan**(Crear plan de actualización de caché).  
   
 ![ssRSWebPortal-report-caching3](../reporting-services/media/ssrswebportal-report-caching3.png)  
   
-> [!NOTE] El Agente SQL Server debe estar ejecutándose para poder crear un plan de actualización de caché.  
+> [!NOTE]
+> El Agente SQL Server debe estar ejecutándose para poder crear un plan de actualización de caché.  
   
 A continuación, puede **editar** o **eliminar** los planes que se muestren. La opción **Nuevo a partir de existente** se habilita cuando solo está seleccionado un plan de actualización de caché. Esta opción creará un plan de actualización nuevo que se copia a partir del plan original. El plan de actualización de caché se abre rellenado de antemano con detalles del plan que se seleccionara. A continuación puede modificar las opciones del plan de actualización y guardar el plan con otra descripción.  
   
-## Instantáneas del historial  
+## <a name="history-snapshots"></a>Instantáneas del historial  
   
 Use la página Instantáneas del historial para ver las instantáneas de informe que se han generado y almacenado a lo largo del tiempo. Según las opciones que se hayan configurado, es posible que el historial de informes solamente contenga las instantáneas más recientes.  
   
@@ -171,13 +185,18 @@ Para generar una instantánea, el informe debe poder ejecutarse en modo desatend
   
 Puede hacer clic en una instantánea del historial de un informe para verla. Las instantáneas que aparecen en un historial de informe solamente se distinguen por la fecha y la hora en que fueron creadas. No hay manera de distinguir visualmente si una instantánea se generó como respuesta a una operación programada o manual.  
   
-## Seguridad  
+## <a name="security"></a>Seguridad  
 Use la página Propiedades de seguridad para ver o modificar la configuración de seguridad que determina el acceso al informe. Esta página está disponible para los elementos para los que tenga permiso de protección.  
   
 El acceso a los elementos se define a través de asignaciones de roles, que especifican las tareas que puede realizar un grupo o usuario. Una asignación de roles consta de un nombre de usuario o grupo y de una o varias definiciones de roles que especifican un conjunto de tareas.  
   
 **Editar seguridad del elemento**  
   
-Seleccione para cambiar la manera en la que se define la seguridad para el elemento actual.  
-  
-  
+Seleccione para cambiar la manera en la que se define la seguridad para el elemento actual.
+
+## <a name="next-steps"></a>Pasos siguientes
+
+[Portal Web](../reporting-services/web-portal-ssrs-native-mode.md)  
+[Trabajar con conjuntos de datos compartidos](../reporting-services/work-with-shared-datasets-web-portal.md)
+
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

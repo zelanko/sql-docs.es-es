@@ -1,7 +1,7 @@
 ---
 title: Crear un proxy del Agente SQL Server | Microsoft Docs
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 05/04/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dc46da89f0cc905c743da8900e0a1b58feb478fc
+ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
+ms.openlocfilehash: 2853583d3902f9b0da32e2b0e1c5a55b696d34e0
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/06/2017
 
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>Crear un proxy del Agente SQL Server
@@ -48,7 +48,7 @@ Una cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
 -   Debe crear una credencial antes de crear un proxy si todavía no hay uno disponible.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] utilizan credenciales para almacenar información acerca de las cuentas de usuario de Windows. El usuario especificado en las credenciales debe tener el permiso "Iniciar sesión como proceso por lotes" en el equipo en que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] utilizan credenciales para almacenar información acerca de las cuentas de usuario de Windows. El usuario especificado en las credenciales debe tener permiso de "Acceso a este equipo desde la red" (SeNetworkLogonRight) en el equipo en el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] está ejecutando.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] comprueba el acceso al subsistema de un proxy y da acceso al proxy cada vez que se ejecuta el paso de trabajo. Si el proxy ya no tiene acceso al subsistema, el paso de trabajo da error. De lo contrario, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] suplanta al usuario especificado en el proxy y ejecuta el paso de trabajo.  
   

@@ -1,23 +1,28 @@
 ---
-title: "Implementaci&#243;n y compatibilidad de versiones en las herramientas de datos de SQL Server (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Implementación y compatibilidad de versiones de SQL Server Data Tools (SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 caps.latest.revision: 19
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 19
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29df783121de48e39d824b9b9e9666d764717ebc
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Implementaci&#243;n y compatibilidad de versiones en las herramientas de datos de SQL Server (SSRS)
+# <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>Implementación y compatibilidad de versiones en las herramientas de datos de SQL Server (SSRS)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] admite los escenarios siguientes:  
   
 -   Abrir definiciones de informe (*.rdl) y proyectos de servidor de informes (\*.rptproj).  
@@ -41,7 +46,7 @@ caps.handback.revision: 19
   
 -   OutputPath es una propiedad de generación que identifica la ruta de acceso de las carpetas donde almacenar la definición de informe que se usa en la comprobación de la generación, la implementación y la vista previa de informes.  
   
--   ErrorLevel es una propiedad de generación que identifica la severidad de los problemas de la generación que se notifican como errores. Los problemas con un nivel de gravedad menor o igual que el valor de ErrorLevel se notifican como errores; de lo contrario, se notifican como advertencias. Para obtener más información, vea la sección "Validación de informes y niveles de Error" de [Diseñar informes con el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/tools/design-reports-with-report-designer-ssrs.md).  
+-   ErrorLevel es una propiedad de generación que identifica la severidad de los problemas de la generación que se notifican como errores. Los problemas con un nivel de gravedad menor o igual que el valor de ErrorLevel se notifican como errores; de lo contrario, se notifican como advertencias. Para obtener más información, vea la sección "Validación de informes y niveles de Error" de [Diseñar informes con el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 -   TargetServerVersion es una propiedad de implementación que identifica la versión esperada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que está instalada en el servidor de informes de destino especificado en la propiedad TargetServerURL.  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 19
 ##  <a name="bkmk_SupportedVersions"></a> Versiones admitidas  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el entorno de desarrollo de 32 bits para proyectos de servidor de informes, no está diseñado para ejecutarse en equipos basados en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] y no se instala en servidores basados en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. En cambio, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] sí es compatible con los equipos basados en x64.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el entorno de desarrollo de 32 bits para proyectos de servidor de informes, no está diseñado para ejecutarse en equipos basados en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]y no se instala en servidores basados en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. En cambio, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] sí es compatible con los equipos basados en x64.  
   
  En la tabla siguiente se describen las versiones compatibles para crear y publicar los informes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 19
   
  Para obtener más información sobre la forma de abrir informes en una versión anterior del esquema de definición de informes, vea [Actualizar informes](../../reporting-services/install-windows/upgrade-reports.md). Para obtener más información sobre esquemas de definición de informe concretos, vea la [SQL Server RDL Specification](http://go.microsoft.com/fwlink/?linkid=116865).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Publicar orígenes de datos e informes](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
   
   

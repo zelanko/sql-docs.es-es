@@ -1,30 +1,35 @@
 ---
-title: "Obtener acceso al proveedor WMI de Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "Reporting Services WMI Provider"
-apilocation: 
-  - "reportingservices.mof"
-helpviewer_keywords: 
-  - "proveedor WMI [Reporting Services]"
-  - "programación [Reporting Services]"
+title: Proveedor WMI de servicios de acceso a los informes | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- Reporting Services WMI Provider
+apilocation:
+- reportingservices.mof
+helpviewer_keywords:
+- WMI provider [Reporting Services]
+- programming [Reporting Services]
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 caps.latest.revision: 57
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 57
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aa02df2ee2953c1a3f4b02236cd5203ff08cdc3
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Obtener acceso al proveedor WMI de Reporting Services
+# <a name="access-the-reporting-services-wmi-provider"></a>Obtener acceso al proveedor WMI de Reporting Services
   El proveedor WMI de Reporting Services expone dos clases de WMI para administrar instancias del servidor de informes en modo nativo mediante scripts:  
   
 > [!IMPORTANT]  
@@ -32,12 +37,12 @@ caps.handback.revision: 57
   
 |Clase|Espacio de nombres|Description|  
 |-----------|---------------|-----------------|  
-|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>*\v13|Proporciona la información básica requerida para que un cliente se conecte a un servidor de informes instalado.|  
-|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>*\v13\Admin|Representa la instalación y los parámetros de tiempo de ejecución de una instancia del servidor de informes. Estos parámetros se guardan en el archivo de configuración del servidor de informes.<br /><br /> **\*\* Importante \*\*** Esta clase solo está disponible con privilegios de administrador.|  
+|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName >*\v13|Proporciona la información básica requerida para que un cliente se conecte a un servidor de informes instalado.|  
+|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName >*\v13\Admin|Representa la instalación y los parámetros de tiempo de ejecución de una instancia del servidor de informes. Estos parámetros se guardan en el archivo de configuración del servidor de informes.<br /><br /> **\*\* Importante \*\*** Esta clase solo está disponible con privilegios de administrador.|  
   
  Se crea una instancia de cada una de las clases anteriores para cada instancia del servidor de informes. Puede utilizar cualquier herramienta de Microsoft o de terceros para tener acceso a los objetos de WMI expuestos por el servidor de informes, incluidas las interfaces de programación de WMI, expuestas por .NET Framework. En este tema se describe cómo acceder y usar las instancias de clases WMI con el comando de PowerShell [Get-WmiObject](http://technet.microsoft.com/library/dd315295.aspx).  
   
-## Determinar el nombre de instancia en la cadena del espacio de nombres  
+## <a name="determine-the-instance-name-in-the-namespace-string"></a>Determinar el nombre de instancia en la cadena del espacio de nombres  
  El nombre de instancia de la ruta de acceso del espacio de nombres para las clases de WMI de Reporting Services es una codificación de los nombres de instancia especificados al instalar las instancias con nombre de Reporting Services. Concretamente, los caracteres especiales en los nombres de instancia se codifican. Por ejemplo, el carácter de subrayado (_) se codifica como “_5f”, por lo que el nombre de instancia “My_Instance” se codificará como “My_5fInstance” en la ruta de acceso del espacio de nombres de WMI.  
   
  Para enumerar los nombres de instancia codificados de las instancias del servidor de informes en la ruta de acceso del espacio de nombres de WMI, utilice el siguiente comando de PowerShell:  
@@ -46,7 +51,7 @@ caps.handback.revision: 57
 PS C:\windows\system32> Get-WmiObject –namespace root\Microsoft\SqlServer\ReportServer  –class __Namespace –ComputerName hostname | select Name  
 ```  
   
-## Obtener acceso a clases de WMI mediante PowerShell  
+## <a name="access-the-wmi-classes-using-powershell"></a>Obtener acceso a clases de WMI mediante PowerShell  
  Para obtener acceso a las clases de WMI, ejecute el siguiente comando:  
   
 ```  
@@ -67,14 +72,14 @@ PS C:\windows\system32> Get-WmiObject –namespace "root\Microsoft\SqlServer\Rep
 PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v13\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost -filter "InstanceName='MSSQLSERVER'"  
 ```  
   
-## Consultar los métodos y propiedades disponibles  
+## <a name="query-the-available-methods-and-properties"></a>Consultar los métodos y propiedades disponibles  
  Para ver qué métodos y propiedades están disponibles en una de las clases de WMI de Reporting Services, canalice los resultados desde Get-WmiObject al comando Get-Member. Por ejemplo:  
   
 ```  
 PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v13\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost | Get-Member  
 ```  
   
-## Utilizar un método o propiedad de WMI  
+## <a name="use-a-wmi-method-or-property"></a>Utilizar un método o propiedad de WMI  
  Una vez tenga los objetos de WMI en las clases de Reporting Services y conozca los métodos y propiedades disponibles, podrá usar esos métodos y propiedades. Por ejemplo, si tiene una instancia con nombre del servidor de informes en modo integrado de SharePoint denominada SHAREPOINT, use la siguiente secuencia de comandos para recuperar la dirección URL del sitio de Administración central de SharePoint:  
   
 ```  
@@ -83,8 +88,9 @@ PS C:\windows\system32> $rsconfig.GetAdminSiteUrl()
   
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la biblioteca de proveedores WMI de Reporting Services &#40;SSRS&#41;](../../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
  [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   
+

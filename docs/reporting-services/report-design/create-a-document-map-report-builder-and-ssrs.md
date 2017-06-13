@@ -1,24 +1,31 @@
 ---
-title: "Crear un mapa del documento (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Crear un mapa del documento (generador de informes y SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 3abd0b8ce2b463cf793b6b75c908a69308cb68a8
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Crear un mapa del documento (Generador de informes y SSRS)
-  Un mapa del documento proporciona un conjunto de vínculos de navegación a los elementos de informe de un informe representado. Cuando se ve un informe que incluya un mapa del documento, aparece un panel lateral separado junto al informe. Un usuario puede hacer clic en los vínculos del mapa del documento para saltar a la página del informe que muestra el elemento. Las secciones y los grupos del informe se organizan en una jerarquía de vínculos. Cada vez que se hace clic en un elemento del mapa del documento, se actualiza el informe y se muestra el área del mismo correspondiente a dicho elemento en el mapa del documento.  
+
+# <a name="create-a-document-map-report-builder-and-ssrs"></a>Crear un mapa del documento (Generador de informes y SSRS)
+
+Un mapa del documento proporciona un conjunto de vínculos de navegación a los elementos de informe de un informe representado. Cuando se ve un informe que incluya un mapa del documento, aparece un panel lateral separado junto al informe. Un usuario puede hacer clic en los vínculos del mapa del documento para saltar a la página del informe que muestra el elemento. Las secciones y los grupos del informe se organizan en una jerarquía de vínculos. Cada vez que se hace clic en un elemento del mapa del documento, se actualiza el informe y se muestra el área del mismo correspondiente a dicho elemento en el mapa del documento.  
   
  Para agregar vínculos al mapa del documento, se establece la propiedad **DocumentMapLabel** del elemento de informe en un texto o en una expresión que se evalúa como el texto que se desea mostrar en el mapa del documento. También puede agregar los valores únicos para un grupo de tablas o de matrices al mapa del documento. Por ejemplo, para un grupo basado en colores, cada color único es un vínculo a la página del informe que muestra la instancia de grupo para ese color.  
   
@@ -38,10 +45,10 @@ caps.handback.revision: 13
   
 -   Atom, TIFF, XML y CSV omiten los mapas de documento.  
   
- Para obtener más información, vea [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md).  
+ Para obtener más información, vea [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md).  
   
 ##  <a name="AddRptItemToMap"></a>   
-#### Para agregar un elemento de informe a un mapa del documento  
+#### <a name="to-add-a-report-item-to-a-document-map"></a>Para agregar un elemento de informe a un mapa del documento  
   
 1.  En la vista de diseño, seleccione el elemento de informe (tabla, matriz o medidor, por ejemplo) que desea agregar al mapa del documento. Las propiedades del elemento de informe aparecen en el panel de propiedades.  
   
@@ -51,7 +58,7 @@ caps.handback.revision: 13
 2.  En el panel de propiedades, en la propiedad **DocumentMapLabel** , escriba el texto que desea que aparezca en el mapa del documento o escriba una expresión que se evalúe como una etiqueta. Por ejemplo, escriba **Gráfico de ventas**.  
   
     > [!NOTE]  
-    >  Si no ve el panel de propiedades, en la pestaña **Vista**, en el grupo **Mostrar u ocultar**, seleccione **Propiedades**.  
+    >  Si no ve el panel de propiedades, en la pestaña **Vista** , en el grupo **Mostrar u ocultar** , seleccione **Propiedades**.  
   
 3.  Repita los pasos 1 y 2 para cada elemento de informe que desee que aparezca en el mapa del documento.  
   
@@ -59,7 +66,7 @@ caps.handback.revision: 13
 
   
 ##  <a name="AddUniqueValuesToMap"></a>   
-#### Para agregar valores de grupo únicos a un mapa del documento  
+#### <a name="to-add-unique-group-values-to-a-document-map"></a>Para agregar valores de grupo únicos a un mapa del documento  
   
 1.  En la vista Diseño, seleccione la tabla, la matriz o la lista que contiene el grupo que desea mostrar en el mapa del documento. El Panel de agrupación muestra los grupos de filas y de columnas.  
   
@@ -76,7 +83,7 @@ caps.handback.revision: 13
 7.  Haga clic en **Ejecutar**. El informe se ejecuta y el mapa del documento muestra los valores de grupo. Haga clic en cualquier vínculo para saltar a la página del informe que contiene ese elemento.  
   
 ##  <a name="HideMapWhenViewRpt"></a>   
-#### Para ocultar el mapa del documento al ver un informe  
+#### <a name="to-hide-the-document-map-when-you-view-a-report"></a>Para ocultar el mapa del documento al ver un informe  
   
 1.  En el Administrador de informes, busque el informe que contiene el mapa del documento.  
   
@@ -109,10 +116,9 @@ caps.handback.revision: 13
 4.  Pegue la dirección URL en el Administrador de informes y, a continuación, presione ENTRAR. El informe se ejecuta con el mapa del documento oculto.  
   
 > [!NOTE]  
->  Para obtener más información sobre cómo descargar los informes de ejemplo, consulte [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Informes de ejemplo del Generador de informes y el Diseñador de informes](http://go.microsoft.com/fwlink/?LinkId=198283).  
+>  Para obtener más información sobre cómo descargar los informes de ejemplo, vea [informes de ejemplo del generador de informes y el Diseñador de informes](http://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
 >  Para obtener más información, vea el tema acerca del acceso URL en la [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) en los Libros en pantalla de SQL Server.  
-  
 
-  
-  
+
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

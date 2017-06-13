@@ -1,36 +1,41 @@
 ---
-title: "Personalizar los datos y la presentaci&#243;n de un mapa o una capa de mapa (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10521"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.filter.f1"
-  - "10515"
-  - "10512"
-  - "10520"
-  - "sql13.rtp.rptdesigner.shared.font.f1"
-  - "10523"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.general.f1"
-  - "sql13.rtp.rptdesigner.shared.number.f1"
-  - "sql13.rtp.rptdesigner.shared.shadowdv.f1"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.variables.f1"
-  - "10507"
+title: "Personalizar los datos y la presentación de un mapa o una capa de mapa (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10521"
+- sql13.rtp.rptdesigner.mapgroupproperties.filter.f1
+- "10515"
+- "10512"
+- "10520"
+- sql13.rtp.rptdesigner.shared.font.f1
+- "10523"
+- sql13.rtp.rptdesigner.mapgroupproperties.general.f1
+- sql13.rtp.rptdesigner.shared.number.f1
+- sql13.rtp.rptdesigner.shared.shadowdv.f1
+- sql13.rtp.rptdesigner.mapgroupproperties.variables.f1
+- "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a9751ad1f640181db57e4107ff1debfa510d3b0e
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Personalizar los datos y la presentaci&#243;n de un mapa o una capa de mapa (Generador de informes y SSRS)
+# <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizar los datos y la presentación de un mapa o una capa de mapa (Generador de informes y SSRS)
   Después de agregar un mapa o una capa de mapa a un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] con un asistente, puede que quiera cambiar el aspecto del mapa en el informe. Puede realizar mejoras considerando las ideas siguientes:  
   
 -   Para ayudar a los usuarios a entender cómo interpretar la presentación de los datos en un mapa, puede agregar leyendas y una escala de colores, además de etiquetas e información sobre herramientas.  
@@ -69,7 +74,7 @@ caps.handback.revision: 13
   
 -   Dar ilusión de profundidad especificando una sombra.  
   
- Para cambiar estas opciones, haga clic con el botón derecho en el mapa, haga clic en **Mapa** y cámbielas.  
+ Para cambiar estas opciones, haga clic con el botón derecho en el mapa, haga clic en **Mapa**y cámbielas.  
   
 ##  <a name="Viewport"></a> Cambiar las opciones de la ventanilla  
  Utilice las opciones de la ventanilla para cambiar la vista del mapa que aparece en un informe.  
@@ -88,7 +93,7 @@ caps.handback.revision: 13
   
 -   Resolución y simplificación. Buscar un equilibro entre el tiempo de dibujo y los contornos detallados de las líneas y polígonos.  
   
- Para cambiar estas opciones, haga clic con el botón derecho en la ventanilla del mapa y use la página [Cuadro de diálogo Propiedades de ventanilla de mapa, General](../Topic/Map%20Viewport%20Properties%20Dialog%20Box,%20General.md) y las páginas relacionadas.  
+ Para cambiar estas opciones, haga clic con el botón derecho en la ventanilla del mapa y use la página [Cuadro de diálogo Propiedades de ventanilla de mapa, General](http://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) y las páginas relacionadas.  
   
 ##  <a name="Legends"></a> Cambiar las opciones de las leyendas  
  Las leyendas ayudan a los usuarios a interpretar los datos de un mapa.  
@@ -159,9 +164,9 @@ caps.handback.revision: 13
   
 -   Opciones de invalidación de los puntos, líneas o polígonos incrustados individuales de una capa. Los cambios que realice son permanentes. Para revertir estos cambios, debe volver a cargar los datos de la capa.  
   
- Para más información, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+ Para más información, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Asistente para mapas y Asistente para capas de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   

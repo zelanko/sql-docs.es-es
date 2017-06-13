@@ -1,27 +1,32 @@
 ---
-title: "Referencia de par&#225;metros de acceso URL | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/09/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "informes [Reporting Services], opciones de visualización"
-  - "acceso URL [Reporting Services], parámetros de visualización de informe"
+title: "Dirección URL Access Parameter Reference | Documentos de Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 09/09/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reports [Reporting Services], display options
+- URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 caps.latest.revision: 48
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 48
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e79341b1988e43d27ac35d46fcba482de0ab371
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Referencia de par&#225;metros de acceso URL
+# <a name="url-access-parameter-reference"></a>Referencia de parámetros de acceso URL
   Puede usar los siguientes parámetros como parte de una dirección URL para configurar la apariencia de los informes de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Los parámetros más comunes se muestran en esta sección. Los parámetros distinguen entre mayúsculas y minúsculas y empiezan con el prefijo de parámetro *rs:* si se dirige al servidor de informes y *rc:* si se dirige a un Visor HTML. También puede especificar parámetros que son específicos de dispositivos o extensiones de representación. Para obtener más información sobre parámetros específicos del dispositivo, vea [Especificar la configuración de la información del dispositivo en una dirección URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
   
 > [!IMPORTANT]  
@@ -40,7 +45,7 @@ caps.handback.revision: 48
 ##  <a name="bkmk_htmlviewer"></a> Comandos del Visor HTML (rc:)  
  Se usan comandos del Visor HTML para establecer como destino el Visor HTML (por ejemplo, desde el Administrador de informes) y tienen el prefijo *rc:*:  
   
--   *Toolbar*:  
+-   *Toolbar* :  
                   Muestra u oculta la barra de herramientas. Si el valor de este parámetro es **false**, se omiten todas las opciones restantes. Si omite este parámetro, la barra de herramientas se muestra automáticamente para los formatos de representación que lo admiten. El valor predeterminado de este parámetro es **true**.  
   
     > [!IMPORTANT]  
@@ -60,7 +65,7 @@ caps.handback.revision: 48
     http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
--   *Zoom* : establece el valor de ampliación del informe como un porcentaje entero o una constante de cadena. Los valores de cadena estándar incluyen **Page Width** y **Whole Page**. Las versiones de Internet Explorer anteriores a Internet Explorer 5.0 y todos los exploradores que no son de [!INCLUDE[msCoName](../includes/msconame-md.md)] omiten este parámetro. El valor predeterminado de este parámetro es **100**.  
+-   *Zoom* : establece el valor de ampliación del informe como un porcentaje entero o una constante de cadena. Los valores de cadena estándar incluyen **Page Width** y **Whole Page**. Las versiones de Internet Explorer anteriores a Internet Explorer 5.0 y todos los exploradores que no son de[!INCLUDE[msCoName](../includes/msconame-md.md)] omiten este parámetro. El valor predeterminado de este parámetro es **100**.  
   
      Por ejemplo, en modo **Native** :  
   
@@ -120,7 +125,7 @@ caps.handback.revision: 48
   
 -   *Stylesheet*: especifica una hoja de estilos que se va a aplicar al Visor HTML.  
   
--   Configuración de información del dispositivo: especifica una configuración de información del dispositivo en forma de `rc:tag=value`, donde *tag* es el nombre de la configuración de información de un dispositivo concreto de la extensión de representación que se usa actualmente (vea la descripción del parámetro *Format*). Por ejemplo, puede usar la configuración de información del dispositivo *OutputFormat* para que la extensión de representación IMAGE represente el informe en imágenes JPEG con los siguientes parámetros en la cadena de acceso URL: `…&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Para obtener más información sobre toda la configuración de información del dispositivo específica de la extensión, vea [Configuración de información de dispositivos para las extensiones de representación &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
+-   Configuración de información del dispositivo: especifica una configuración de información del dispositivo en forma de `rc:tag=value`, donde *tag* es el nombre de la configuración de información de un dispositivo concreto de la extensión de representación que se usa actualmente (vea la descripción del parámetro *Format* ). Por ejemplo, puede usar la configuración de información del dispositivo *OutputFormat* para que la extensión de representación IMAGE represente el informe en imágenes JPEG con los siguientes parámetros en la cadena de acceso URL: `…&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Para obtener más información sobre toda la configuración de información del dispositivo específica de la extensión, vea [Configuración de información de dispositivos para las extensiones de representación &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
   
 ##  <a name="bkmk_reportserver"></a> Comandos del servidor de informes (rs:)  
  Los comandos de servidor de informes tienen el prefijo *rs:* y se usan para establecer el servidor de informes como destino:  
@@ -200,7 +205,7 @@ caps.handback.revision: 48
   
     -   **GetComponentDefinition** Muestra la definición XML asociada a un elemento de informe publicado. Para usar este valor, debe tener el permiso **Leer contenido** en un elemento de informe publicado.  
   
--   *Format*:  
+-   *Format* :  
                   Especifica el formato en el que se representará y verá un informe. Los valores habituales son:  
   
     -   **HTML5**  
@@ -227,7 +232,7 @@ caps.handback.revision: 48
   
      El valor predeterminado es **HTML5**. Para obtener más información, consulte [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md).  
   
-     Para ver una lista completa, consulte la sección de la extensión **\<Render>** del archivo rsreportserver.config del servidor de informes.  Para obtener más información sobre dónde encontrar este archivo, consulte [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
+     Para obtener una lista completa, consulte la  **\<representar >** sección de extensión del archivo rsreportserver.config del servidor de informes.  Para obtener más información sobre dónde encontrar este archivo, consulte [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
      Por ejemplo, para obtener una copia en PDF de un informe directamente desde un servidor de informes en modo **Native** :  
   
@@ -244,7 +249,7 @@ caps.handback.revision: 48
 -   *ParameterLanguage*:  
                   Proporciona un idioma para los parámetros pasados en una dirección URL que es independiente del idioma del explorador. El valor predeterminado es el idioma del explorador. El valor puede ser un valor de referencia cultural, como **en-us** o **de-de.**  
   
-     Por ejemplo, en modo **Native**, para invalidar el idioma del explorador y especificar un valor de referencia cultural de-DE:  
+     Por ejemplo, en modo **Native** , para invalidar el idioma del explorador y especificar un valor de referencia cultural de-DE:  
   
     ```  
     http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
@@ -252,7 +257,7 @@ caps.handback.revision: 48
   
 -   *Snapshot* : representa un informe según una instantánea del historial de informes. Para obtener más información, vea [Representar instantáneas del historial de informes mediante acceso URL](../reporting-services/render-a-report-history-snapshot-using-url-access.md).  
   
-     Por ejemplo, en modo **Native**, para recuperar una instantánea del historial de informes con fecha 2003-04-07 con una marca de tiempo de 13:40:02:  
+     Por ejemplo, en modo **Native** , para recuperar una instantánea del historial de informes con fecha 2003-04-07 con una marca de tiempo de 13:40:02:  
   
     ```  
     http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
@@ -262,7 +267,7 @@ caps.handback.revision: 48
                   Representa un informe en un flujo almacenado único. El procesador de imagen utiliza este parámetro para transmitir el informe representado fragmento por fragmento. Después de utilizar este parámetro en una cadena de acceso de dirección URL, utilice la misma cadena de acceso de dirección URL con el parámetro *GetNextStream* en lugar del parámetro *PersistStreams* para obtener el fragmento siguiente en el flujo almacenado. Este comando de dirección URL devolverá a la larga un flujo de cero bytes para indicar el fin del flujo almacenado. El valor predeterminado es **false**.  
   
 -   *GetNextStream*:  
-                  Obtiene el siguiente grupo de datos en una transmisión persistente a la que se tiene acceso con el parámetro *PersistStreams*. Para obtener más información, vea la descripción de *PersistStreams*. El valor predeterminado es **false**.  
+                  Obtiene el siguiente grupo de datos en una transmisión persistente a la que se tiene acceso con el parámetro *PersistStreams* . Para obtener más información, vea la descripción de *PersistStreams*. El valor predeterminado es **false**.  
   
 -   *SessionID*:  
                   Especifica una sesión de informe activa establecida entre la aplicación cliente y el servidor de informes. El valor de este parámetro se establece en el identificador de la sesión.  
@@ -303,7 +308,7 @@ caps.handback.revision: 48
   
     -   **None**: no muestra el encabezado.  
   
-     Por ejemplo, en modo de **SharePoint**, para mostrar solamente la navegación detallada en el encabezado.  
+     Por ejemplo, en modo de **SharePoint** , para mostrar solamente la navegación detallada en el encabezado.  
   
     ```  
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly  
@@ -373,8 +378,9 @@ caps.handback.revision: 48
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
     ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Acceso URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [Exportar un informe mediante el acceso URL](../reporting-services/export-a-report-using-url-access.md)  
   
   
+

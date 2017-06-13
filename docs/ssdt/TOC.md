@@ -3,5 +3,4 @@
 # [Marco de trabajo de la aplicación de capa de datos: Términos de la licencia](data-tier-application-framework-license-terms.md)
 # [Versiones anteriores de SSDT y SSDT-BI](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)
 # [Herramientas de SQL Server](sql-server-tools.md)
-# [Versión candidata para lanzamiento SSDT](sql-server-data-tools-ssdt-release-candidate.md)
 # [Términos de licencia: SSDT](sql-server-data-tools-license-terms.md)

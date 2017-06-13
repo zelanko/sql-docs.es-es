@@ -1,54 +1,59 @@
 ---
-title: "Panel de agrupaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10033"
-  - "sql13.rtp.rptdesigner.group.f1"
-helpviewer_keywords: 
-  - "Panel de agrupación, cuadro de diálogo"
+title: "Panel de agrupación | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10033"
+- sql13.rtp.rptdesigner.group.f1
+helpviewer_keywords:
+- Grouping Pane dialog box
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 caps.latest.revision: 22
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 22
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed88ddae33151e46c080a8bd747fd8a7f5055eba
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Panel de agrupaci&#243;n
-Cuando se diseñan informes de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], el panel de agrupación muestra los grupos de filas y de columnas para la región de datos Tablix seleccionada actualmente. El panel de agrupación no está disponible para las regiones de datos Gráfico o Medidor. El panel Agrupación consta de los paneles Grupos de filas y Grupos de columnas. El panel en cuestión tiene dos modos: predeterminado y avanzado. El modo predeterminado muestra una vista jerárquica de los miembros dinámicos para los grupos de filas y de columnas. El modo avanzado muestra los miembros dinámicos y estáticos para los grupos de filas y de columnas. Un grupo es un conjunto de datos con nombre de un conjunto de datos de informe que se muestra en una región de datos. Los grupos se organizan en jerarquías que incluyen miembros estáticos y dinámicos. Para obtener más información, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
+# <a name="grouping-pane"></a>Panel de agrupación
+Cuando se diseñan informes de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , el panel de agrupación muestra los grupos de filas y de columnas para la región de datos Tablix seleccionada actualmente. El panel de agrupación no está disponible para las regiones de datos Gráfico o Medidor. El panel Agrupación consta de los paneles Grupos de filas y Grupos de columnas. El panel en cuestión tiene dos modos: predeterminado y avanzado. El modo predeterminado muestra una vista jerárquica de los miembros dinámicos para los grupos de filas y de columnas. El modo avanzado muestra los miembros dinámicos y estáticos para los grupos de filas y de columnas. Un grupo es un conjunto de datos con nombre de un conjunto de datos de informe que se muestra en una región de datos. Los grupos se organizan en jerarquías que incluyen miembros estáticos y dinámicos. Para más información, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
-  ![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Si no ve el panel Agrupación, en el menú **Informe**, haga clic en **Agrupación**.
+  ![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Si no ve el panel Agrupación, en el menú **Informe** , haga clic en **Agrupación**.
   
  Las celdas de las áreas de grupos de filas y grupos de columnas pueden ser miembros estáticos o dinámicos de un grupo. Los miembros estáticos solo se repiten una vez para cada grupo y normalmente contienen etiquetas o totales. Los miembros dinámicos se repiten una vez para cada instancia de grupo y normalmente contienen los valores únicos de la expresión de grupo. A medida que se seleccionan celdas de Tablix en el área de grupos de filas o de grupos de columnas, se selecciona el miembro del grupo correspondiente en el panel Grupos de filas o Grupos de columnas. Y a la inversa, si se seleccionan grupos en el Panel de agrupación, se selecciona en la superficie de diseño la celda correspondiente asociada al miembro de grupo. Para obtener más información sobre las áreas de grupos de filas y grupos de columnas de Tablix, vea [Describir las áreas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  El Panel de agrupación admite los modos siguientes:  
   
--   **Predeterminado.** use el modo predeterminado para agregar, modificar o eliminar grupos. Puede agregar grupos primarios, secundarios y de detalles arrastrando campos desde el panel Datos de informe e insertándolos en la jerarquía de grupos. Para agregar un grupo adyacente, debe usar el acceso directo **Agregar grupo** . Para obtener más información, vea [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+-   **Predeterminado.** use el modo predeterminado para agregar, modificar o eliminar grupos. Puede agregar grupos primarios, secundarios y de detalles arrastrando campos desde el panel Datos de informe e insertándolos en la jerarquía de grupos. Para agregar un grupo adyacente, debe usar el acceso directo **Agregar grupo** . Para más información, vea [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
--   **Avanzado**: use el **modo avanzado** para ver todos los miembros de los grupos de filas y de columnas, así como para establecer propiedades en miembros estáticos. Al crear grupos o agregar totales, se establecen automáticamente las propiedades que controlan cómo la región de datos Tablix representa las filas y las columnas en cada página del informe. Para ajustar manualmente estas propiedades, debe establecerlas en el miembro del Tablix. Para obtener más información, vea [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling the tablix data region display on a report page.md).  
+-   **Avanzado**: use el **modo avanzado** para ver todos los miembros de los grupos de filas y de columnas, así como para establecer propiedades en miembros estáticos. Al crear grupos o agregar totales, se establecen automáticamente las propiedades que controlan cómo la región de datos Tablix representa las filas y las columnas en cada página del informe. Para ajustar manualmente estas propiedades, debe establecerlas en el miembro del Tablix. Para obtener más información, vea [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
-## Modo predeterminado  
+## <a name="default-mode"></a>Modo predeterminado  
  En el modo predeterminado, los paneles Grupos de filas y Grupos de columnas muestran una vista jerárquica para todos los grupos primarios, secundarios y adyacentes. Los grupos secundarios aparecen con una sangría debajo de sus grupos primarios. Los grupos adyacentes aparecen en el mismo nivel de sangría que sus grupos relacionados. La ilustración siguiente muestra una región de datos Tablix con grupos de filas anidados y grupos de columnas anidados y adyacentes.  
   
- ![Tablix, grupos de filas y columnas anidadas y adyacentes](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tablix, grupos de filas y columnas anidadas y adyacentes")  
+ ![Tablix, grupos anidados y adyacentes filas y columnas](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tablix, grupos anidados y adyacentes filas y columnas")  
   
  El panel Agrupación muestra los grupos de filas y de columnas correspondientes. En la ilustración siguiente, el grupo basado en subcategorías se ha seleccionado en el panel Grupos de filas, y la celda de agrupamiento [Subcat] está seleccionada en la región de datos Tablix:  
   
- ![Panel de agrupación para la fila anidada y grupos de columnas](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "Panel de agrupación para la fila anidada y grupos de columnas")  
+ ![Panel de agrupación para los grupos de filas y de columnas anidados](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "panel de agrupación para los grupos anidados de filas y columnas")  
   
  En el panel Grupos de filas, el grupo basado en subcategorías es un grupo secundario del grupo basado en categorías. En el panel Grupos de columnas, el grupo de país/región es un grupo secundario del grupo de geografía. El grupo de años y los grupos de país/región son grupos adyacentes.  
   
- Para obtener más información, vea [Celdas, filas y columnas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+ Para más información, vea [Celdas, filas y columnas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-## modo avanzado  
+## <a name="advanced-mode"></a>modo avanzado  
 En el modo avanzado, puede ver todos los miembros estáticos y dinámicos de un grupo. Al seleccionar un miembro, la ventana Propiedades muestra las propiedades para el **Miembro de Tablix**seleccionado actualmente.  
   
 ![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Para activar el **Modo avanzado**, haga clic con el botón derecho en la flecha abajo situada junto al panel Grupos de columnas y, después, haga clic en **Modo avanzado**.  
@@ -71,15 +76,15 @@ Para modificar los valores predeterminados, debe seleccionar el miembro del grup
   
 -   **ToggleItem** : cadena. Nombre del cuadro de texto al que se va a agregar la imagen de alternancia. El cuadro de texto debe estar en el mismo ámbito de grupo o en un ámbito contenedor.  
   
- Para obtener más información sobre cómo se puede controlar este comportamiento en una región de datos Tablix, vea [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling the tablix data region display on a report page.md).  
+ Para obtener más información sobre cómo se puede controlar este comportamiento en una región de datos Tablix, vea [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
  No todos los miembros estáticos tienen un encabezado que corresponde a una celda de la superficie de diseño. En el panel Agrupación, la convención siguiente indica si un miembro estático no tiene ningún encabezado:  
   
 -   **Static** : indica un miembro estático con una celda de encabezado.  
   
--   **(Static)**: indica un miembro estático sin celda de encabezado, lo que se denomina miembro estático oculto.  
+-   **(Static)** : indica un miembro estático sin celda de encabezado, lo que se denomina miembro estático oculto.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

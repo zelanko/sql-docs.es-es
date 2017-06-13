@@ -1,42 +1,51 @@
 ---
-title: "Trabajar con suscripciones (portal web) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Trabajar con suscripciones (portal web) | Documentos de Microsoft
+ms.custom: 
+ms.date: 05/25/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 5
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 72e0abad76008b445fe32a9fed3cb4522ab64af2
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Trabajar con suscripciones (portal web)
+# <a name="working-with-subscriptions-web-portal"></a>Trabajar con suscripciones (portal web)
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 Use la página Suscripciones para mostrar todas las suscripciones del informe actual. Si tiene permisos suficientes, concedidos por la tarea "Administrar todas las suscripciones", puede ver las suscripciones de todos los usuarios. En caso contrario, esta página solo muestra las suscripciones que le pertenecen.  
   
 Para poder crear una suscripción nueva, debe comprobar primero si el origen de datos de informe usa credenciales almacenadas. Use la página de propiedades Orígenes de datos para almacenar las credenciales.  
   
-> [!NOTE] El servicio del Agente SQL Server debe estar iniciado.   
+> [!NOTE]
+> El servicio del Agente SQL Server debe estar iniciado.   
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-Para llegar a la página Suscripciones, seleccione el botón de **puntos suspensivos (...)** de un informe, elija **Administrar** y, luego, seleccione **Suscripciones**.  
+Puede llegar a la página de suscripciones seleccionando el **puntos suspensivos (...)**  de un informe, seleccione **administrar** y seleccionando **suscripciones**.  
   
 Para crear suscripciones en la página Suscripciones, seleccione **+ Nueva suscripción**. También puede editar las suscripciones existentes o eliminar las suscripciones que haya seleccionado.  
   
-Esta página también proporciona el estado de los resultados de las ejecuciones de suscripción en la columna **Resultado**. Si se ha producido un error en una suscripción, nos interesa consultar la columna de resultados antes de nada para saber cuál fue el mensaje.  
+Esta página también proporciona el estado de los resultados de las ejecuciones de suscripción en la columna **Resultado** . Si se ha producido un error en una suscripción, nos interesa consultar la columna de resultados antes de nada para saber cuál fue el mensaje.  
   
-## Crear o editar una suscripción  
+## <a name="creating-or-editing-a-subscription"></a>Crear o editar una suscripción  
 Use la página Nueva suscripción o Editar suscripción para crear una nueva suscripción a un informe o modificar una existente. Las opciones de esta página varían dependiendo de los roles que tenga asignados. Los usuarios con permisos avanzados pueden trabajar con más opciones.  
   
 Las suscripciones se admiten para informes que se pueden ejecutar en modo desatendido. Como mínimo, el informe debe usar credenciales almacenadas o ninguna credencial. Si el informe utiliza parámetros, debe especificarse un valor predeterminado. Las suscripciones pueden pasar a estar inactivas si se cambia la configuración de ejecución del informe o si se quitan los valores predeterminados que se utilizan en las propiedades de los parámetros. Para más información, vea [Crear y administrar suscripciones para servidores de informes en modo nativo].  
   
-### Tipo de suscripción  
+### <a name="type-of-subscription"></a>Tipo de suscripción  
 Puede optar entre una **suscripción estándar** y una **suscripción controlada por datos**.  
   
 ![ssRSWebPortal-subscriptions3](../reporting-services/media/ssrswebportal-subscriptions3.png)  
@@ -47,7 +56,7 @@ Para crear una suscripción controlada por datos, es necesario saber cómo escri
   
 Esta opción está disponible para los usuarios con permisos avanzados. Si se usa la seguridad predeterminada, no se pueden utilizar suscripciones controladas por datos en los informes situados en la carpeta Mis informes.  
   
-### Destino  
+### <a name="destination"></a>Destino  
 Seleccione la extensión de entrega que se va a utilizar para distribuir el informe.   
   
 La disponibilidad de una extensión de entrega depende de si está instalada y configurada en el servidor de informes. El correo electrónico del Servidor de informes es la extensión de entrega predeterminada, pero debe configurarla primero para poder utilizarla. No es necesario configurar la entrega al recurso compartido de archivos, pero se debe definir una carpeta compartida para poder utilizarla.  
@@ -60,7 +69,7 @@ Según la extensión de entrega que usted seleccione, aparece la siguiente confi
   
 -   La suscripción a recursos compartidos de archivos proporciona campos que permiten especificar una ubicación de destino. Puede entregar cualquier informe a un recurso compartido de archivos. Sin embargo, los informes que admiten características interactivas, como los informes matriciales que permiten obtener detalles de filas y columnas complementarias, se representan como archivos estáticos. En este tipo de archivos, no es posible ver filas y columnas de detalle. El nombre del recurso compartido de archivos debe especificarse con el formato UNC (Convención de nomenclatura universal); por ejemplo: \miEquipo\public\misArchivosDeInformes. No incluya una barra inversa al final del nombre de la ruta de acceso. El archivo del informe se entregará en un formato de archivo basado en el formato de representación (por ejemplo, si elige Excel, el informe se entrega como archivo .xlsx).  
   
-### Conjunto de datos de suscripción controlada por datos  
+### <a name="data-driven-subscription-dataset"></a>Conjunto de datos de suscripción controlada por datos  
 En una suscripción controlada por datos hay que definir el conjunto de datos que se usará para la suscripción. Seleccione **Editar conjunto de datos** para proporcionar esa información.  
   
 ![ssRSWebPortal-subscriptions4](../reporting-services/media/ssrswebportal-subscriptions4.png)  
@@ -79,7 +88,10 @@ Para obtener los mejores resultados, ejecute primero la consulta en SQL Server M
   
 Ya podemos pasar a validar la consulta. También se puede definir un **tiempo de espera de consulta**.  
   
-Una vez creada la consulta, puede asignar valores a los campos obligatorios. Puede hacerlo escribiendo los datos manualmente o seleccionando un campo del conjunto de datos que ha creado.  
-  
-  
-  
+Una vez creada la consulta, puede asignar valores a los campos obligatorios. Puede hacerlo escribiendo los datos manualmente o seleccionando un campo del conjunto de datos que ha creado.
+
+[Portal Web](../reporting-services/web-portal-ssrs-native-mode.md)  
+[Trabajar con informes paginados](working-with-paginated-reports-web-portal.md)  
+[Trabajar con conjuntos de datos compartidos](../reporting-services/work-with-shared-datasets-web-portal.md)
+
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

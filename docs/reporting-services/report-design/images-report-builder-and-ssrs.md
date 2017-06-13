@@ -1,23 +1,28 @@
 ---
-title: "Im&#225;genes (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Imágenes (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b50d53f5b7ba102454f53646dec8cf1897df52f9
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Im&#225;genes (Generador de informes y SSRS)
+# <a name="images-report-builder-and-ssrs"></a>Imágenes (Generador de informes y SSRS)
   Una imagen es un elemento de informe que contiene una referencia a una imagen incrustada en el informe, o almacenada en una base de datos, en el servidor de informes o en cualquier lugar de Internet. Una imagen puede ser una imagen que se repite con filas de datos. También se puede utilizar una imagen como fondo para determinados elementos del informe.  
   
  Almacenar los logotipos en un servidor es una buena idea porque puede utilizar el mismo logotipo en muchos informes.  
@@ -34,19 +39,16 @@ caps.handback.revision: 9
   
  ![rs_DataboundBikes](../../reporting-services/report-design/media/rs-databoundbikes.gif "rs_DataboundBikes")  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
 ##  <a name="ImagesReportParts"></a> Imágenes como elementos de informe  
  Puede guardar imágenes por separado de un informe como elementos de informe. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
 ##  <a name="EmbedImages"></a> Incrustar imágenes  
  Se pueden incrustar imágenes en un informe de manera que todos los datos de imagen se almacenen en la definición de informe. Cuando se incrusta una imagen, esta se codifica como MIME y se almacena como texto en la definición de informe. El uso de imágenes incrustadas garantiza su disponibilidad permanente en el informe, pero también aumenta el tamaño de la definición de informe.  
   
  Para obtener más información sobre cómo insertar una imagen, vea [Incrustar una imagen en un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md).  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
 ##  <a name="ExternalImages"></a> Imágenes externas  
  Puede incluir imágenes almacenadas en un informe especificando una dirección URL para la imagen. Cuando se utiliza una imagen externa en un informe, el origen de la imagen se establece en **External** y el valor de la imagen es su dirección URL o ruta de acceso.  
@@ -57,7 +59,6 @@ caps.handback.revision: 9
   
  Para obtener más información sobre cómo agregar una imagen externa a un informe, vea [Agregar una imagen externa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md).  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
 ##  <a name="BackgroundImages"></a> Imágenes de fondo  
  Puede utilizarse una imagen como imagen de fondo en el cuerpo del informe o en el interior de un rectángulo, cuadro de texto, lista, matriz o tabla. Las imágenes de fondo tienen propiedades similares a las de las demás imágenes. También es posible especificar el modo de repetición de una imagen para rellenar el fondo de un elemento.  
@@ -67,12 +68,10 @@ caps.handback.revision: 9
   
  Para obtener más información sobre cómo agregar una imagen de fondo, vea [Agregar una imagen de fondo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md).  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
 ##  <a name="DataboundImages"></a> Imágenes enlazadas a datos  
  Es posible agregar imágenes almacenadas en una base de datos a los informes. Se puede usar el mismo elemento de informe de imagen que para las imágenes estáticas, pero con un conjunto de propiedades que indica que la imagen está almacenada en una base de datos. Para obtener instrucciones sobre cómo trabajar con imágenes enlazadas a datos, vea [Agregar una imagen enlazada a datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md).  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
 ##  <a name="HowTo"></a> Temas de procedimientos  
  [Agregar una imagen externa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)  
@@ -83,9 +82,8 @@ caps.handback.revision: 9
   
  [Agregar una imagen enlazada a datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Exportar a un archivo de imagen &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   

@@ -1,35 +1,40 @@
 ---
-title: "Aplicar formato a n&#250;meros y fechas (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.placeholderproperties.number.f1"
-  - "10127"
-  - "sql13.rtp.rptdesigner.textboxproperties.number.f1"
-  - "10130"
-  - "10286"
-  - "sql13.rtp.rptdesigner.serieslabelproperties.number.f1"
-  - "10285"
-  - "sql13.rtp.rptdesigner.axisproperties.number.f1"
+title: "Aplicar formato a números y fechas (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.placeholderproperties.number.f1
+- "10127"
+- sql13.rtp.rptdesigner.textboxproperties.number.f1
+- "10130"
+- "10286"
+- sql13.rtp.rptdesigner.serieslabelproperties.number.f1
+- "10285"
+- sql13.rtp.rptdesigner.axisproperties.number.f1
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 186bb0bab4abac91ea95d397f379986cac9d2f0f
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Aplicar formato a n&#250;meros y fechas (Generador de informes y SSRS)
+# <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Aplicar formato a números y fechas (Generador de informes y SSRS)
   Para dar formato a los números y fechas de las regiones de datos, seleccione un formato en la página **Número** del cuadro de diálogo **Propiedades** de la región de datos correspondiente.  
   
- Para especificar las cadenas de formato dentro de un elemento de informe de cuadro de texto, debe seleccionar el elemento al que quiere dar formato, hacer clic con el botón derecho, seleccionar **Propiedades de cuadro de texto** y, después, hacer clic en **Número**. Puede dar formato de la misma manera a las celdas individuales de una tabla o región de datos de la matriz, porque las celdas de una tabla o la matriz son cuadros de texto individuales.  
+ Para especificar las cadenas de formato dentro de un elemento de informe de cuadro de texto, debe seleccionar el elemento al que quiere dar formato, hacer clic con el botón derecho, seleccionar **Propiedades de cuadro de texto**y, después, hacer clic en **Número**. Puede dar formato de la misma manera a las celdas individuales de una tabla o región de datos de la matriz, porque las celdas de una tabla o la matriz son cuadros de texto individuales.  
   
  Normalmente, una región de datos de gráfico muestra las fechas a lo largo del eje de categorías (x) y los valores a lo largo del eje de valores (y). Para especificar el formato en un gráfico, haga clic con el botón derecho en un eje y seleccione **Propiedades del eje**. En el eje de valores solo se pueden especificar formatos para los números. Para obtener más información, vea [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Consideraciones sobre la aplicación de formato a los números y las fechas  
+## <a name="considerations-for-formatting-numbers-and-dates"></a>Consideraciones sobre la aplicación de formato a los números y las fechas  
  Antes de dar formato a los números y las fechas del informe, debería tener en cuenta lo siguiente:  
   
 -   De forma predeterminada, se da formato a los números de acuerdo con la configuración de referencia cultural del equipo cliente. Use cadenas de formato para especificar cómo se muestran los números y hacer que el formato sea coherente, independientemente de dónde se encuentre la persona que está viendo el informe.  
@@ -56,7 +61,7 @@ caps.handback.revision: 6
   
 -   Si selecciona **Moneda** en **Categoría** y activa **Mostrar valores en**, puede seleccionar **Miles**, **Millones**o **Miles de millones** para mostrar los números mediante formatos financieros. Por ejemplo, si el valor del campo es 1.789.905.394, y selecciona **Miles de millones** y especifica 2 decimales, el valor mostrado en el informe será 1,78.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Aplicar formato a líneas, colores e imágenes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   

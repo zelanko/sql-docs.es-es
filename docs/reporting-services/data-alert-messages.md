@@ -1,37 +1,48 @@
 ---
-title: "Mensajes de alertas de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Mensajes de alerta de datos | Documentos de Microsoft
+ms.custom: 
+ms.date: 05/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 1182111ce441c5a02417532cf4344ceb4ce7e44e
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Mensajes de alertas de datos
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] envían dos tipos de mensajes de alertas de datos por correo electrónico: mensajes con resultados de alertas de datos y mensajes con descripciones de errores. Los mensajes con resultados informan a todos los destinatarios de los cambios realizados en los datos del informe que sean de interés común e importantes para las decisiones empresariales. Si por alguna razón se produce un error y los resultados no están disponibles, se envía en su lugar el mensaje de error.  
-  
- El propietario de la definición de la alerta de datos también puede ver la información sobre la instancia de la alerta de datos en el Administrador de alertas de datos. Para más información, consulte [Data Alert Manager for SharePoint Users](../reporting-services/data-alert-manager-for-sharepoint-users.md).  
+# <a name="data-alert-messages"></a>Mensajes de alertas de datos
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] envían dos tipos de mensajes de alertas de datos por correo electrónico: mensajes con resultados de alertas de datos y mensajes con descripciones de errores. Los mensajes con resultados informan a todos los destinatarios de los cambios realizados en los datos del informe que sean de interés común e importantes para las decisiones empresariales. Si por alguna razón se produce un error y los resultados no están disponibles, se envía en su lugar el mensaje de error.
+
+El propietario de la definición de la alerta de datos también puede ver la información sobre la instancia de la alerta de datos en el Administrador de alertas de datos. Para más información, consulte [Data Alert Manager for SharePoint Users](../reporting-services/data-alert-manager-for-sharepoint-users.md).  
+
+> [!NOTE]
+> Integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
   
 ##  <a name="DataAlertMessages"></a> Mensajes de alertas de datos  
  En las imágenes siguientes se muestra un mensaje de alerta de datos con resultados y un mensaje de alerta con una descripción de error.  
   
  **Mensaje de resultados**  
   
- ![Mensaje de correo electrónico de alerta de datos con los resultados](../reporting-services/media/rs-alertmessageresults.gif "Mensaje de correo electrónico de alerta de datos con los resultados")  
+ ![Mensaje de correo electrónico de alerta de datos con resultados](../reporting-services/media/rs-alertmessageresults.gif "mensaje de correo electrónico de alerta de datos con resultados")  
   
  **Mensaje de error**  
   
- ![Mensaje de alerta de datos con mensaje de error](../reporting-services/media/rs-alertmessageerrror.gif "Mensaje de alerta de datos con mensaje de error")  
+ ![Mensaje de alerta de datos con el mensaje de error](../reporting-services/media/rs-alertmessageerrror.gif "mensaje de alerta de datos con el mensaje de error")  
   
  Los mensajes incluyen los mismos tipos de información.  
   
@@ -43,7 +54,7 @@ caps.handback.revision: 8
   
 4.  **Ir a informe** es un vínculo al informe en el que se basa la definición de alerta. Si el vínculo no es válido porque se ha movido o eliminado el informe, se muestra un mensaje de error.  
   
-5.  En **Reglas** se muestran las reglas y las cláusulas de la definición de alerta. Esta información le ayuda a comprobar y entender los resultados de la alerta, así como a identificar reglas en la definición de alerta de datos que tal vez desee cambia para restringir o ampliar los resultados.  
+5.  En**Reglas** se muestran las reglas y las cláusulas de la definición de alerta. Esta información le ayuda a comprobar y entender los resultados de la alerta, así como a identificar reglas en la definición de alerta de datos que tal vez desee cambia para restringir o ampliar los resultados.  
   
 6.  En**Parámetros de informe** se muestran los parámetros y los valores de parámetro que se usaron cuando se ejecutó el informe. Los parámetros y los valores de parámetro le ayudan a entender los resultados de las alertas.  
   
@@ -51,7 +62,6 @@ caps.handback.revision: 8
   
  La única diferencia entre los dos tipos de mensajes es el elemento 5, **Resultados de alertas**. Si ocurre un error cuando se crea una instancia de alerta de datos o un mensaje de alerta de datos, **Resultados de alertas** muestra un mensaje de error que describe el problema. El mensaje de error, enviado a todos los destinatarios, permite saber que los resultados de alertas esperados para la toma de decisiones empresariales no están disponibles.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
 ##  <a name="HowTo"></a> Tareas relacionadas  
  En esta sección se muestran los procedimientos para crear y editar las definiciones de alertas de datos que proporcionan la mayor parte de la información que se muestra en los mensajes de alertas de datos.  
@@ -59,11 +69,10 @@ caps.handback.revision: 8
 -   [Crear una alerta de datos en el Diseñador de alertas de datos](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
   
 -   [Modificar una alerta de datos en el Diseñador de alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
-  
-## Vea también  
- [Diseñador de alertas de datos](../reporting-services/data-alert-designer.md)   
- [Alertas de datos de Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
-  
-  
+
+## <a name="see-also"></a>Vea también
+
+[Diseñador de alertas de datos](../reporting-services/data-alert-designer.md)   
+[Alertas de datos de Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
+
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,37 +1,43 @@
 ---
-title: "Planeamiento para Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Planeamiento para Reporting Services | Documentos de Microsoft
+ms.custom: 
+ms.date: 09/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6fd3910626a639b0081a24c9394b2478c08dd43a
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Planeamiento para Reporting Services
+# <a name="planning-for-reporting-services"></a>Planeamiento para Reporting Services
   En estos temas obtendrá más información sobre [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Aprenda a instalar y configurar el entorno de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para adaptarlo a sus necesidades.  
   
- ![Icono pequeño de carpeta de archivos](../analysis-services/media/filefolder-small.png "Icono pequeño de carpeta de archivos") **Planeamiento y arquitectura de las características generales de Reporting Services**  
+ ![Icono de carpeta de archivos pequeños](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **generales de Reporting Services característica planeamiento y arquitectura**  
  [Compatibilidad del explorador de Reporting Services y Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
   
- [Planeación del diseño y la implementación de informes | Reporting Services](http://msdn.microsoft.com/es-es/1c1e265e-52a2-4de3-96fd-ca4abae01c02)  
+ [Planeación del diseño y la implementación de informes | Reporting Services](http://msdn.microsoft.com/en-us/1c1e265e-52a2-4de3-96fd-ca4abae01c02)  
   
- [Ver informes de Reporting Services en dispositivos de Microsoft Surface y de Apple iOS](../Topic/View%20Reporting%20Services%20Reports%20on%20Microsoft%20Surface%20Devices%20and%20%20Apple%20iOS%20Devices.md)  
+ [Ver informes de Reporting Services en dispositivos de Microsoft Surface y de Apple iOS](http://msdn.microsoft.com/library/2124bcf5-d60a-475f-a4ae-de6df44d2860)  
   
- ![Icono pequeño de carpeta de archivos](../analysis-services/media/filefolder-small.png "Icono pequeño de carpeta de archivos") **Configuración de Reporting Services**  
- [Servidor de informes de Reporting Services](../reporting-services/report-server-sharepoint/servidor-de-informes-de-reporting-services.md)  
+ ![Icono pequeño de carpeta de archivo](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **el programa de instalación de Reporting Services**  
+ [Servidor de informes de Reporting Services](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
- [Lista de comprobación de la implementación: instalar Reporting Services en una granja de servidores de SharePoint existente](../Topic/Deployment%20Checklist:%20Install%20Reporting%20Services%20into%20an%20Existing%20SharePoint%20Farm.md)  
+ [Lista de comprobación de la implementación: instalar Reporting Services en una granja de servidores de SharePoint existente](http://msdn.microsoft.com/library/436b4c3d-3f2f-464a-be7e-5c051d9ffb8f)  
   
- [Topologías de implementación para las características BI de SQL Server en SharePoint](../Topic/Deployment%20Topologies%20for%20SQL%20Server%20BI%20Features%20in%20SharePoint.md)  
+ [Topologías de implementación para las características BI de SQL Server en SharePoint](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)  
   
   
+

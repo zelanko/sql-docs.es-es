@@ -1,37 +1,44 @@
 ---
-title: "Reporting Services en SQL Server Data Tools (SSDT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Business Intelligence Development Studio, Reporting Services en"
+title: Reporting Services en SQL Server Data Tools (SSDT) | Documentos de Microsoft
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 caps.latest.revision: 76
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 75
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ee41ccb35aef5f0ab94c663a1556aad07bb85faa
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services en SQL Server Data Tools (SSDT)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] es un entorno [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] para crear soluciones de inteligencia empresarial. SSDT cuenta con un Diseñador de informes para crear el entorno, donde puede abrir, modificar, obtener una vista previa, guardar e implementar definiciones de informe paginadas de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], orígenes de datos compartidos, conjuntos de datos compartidos y elementos de informe. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] no se incluye en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Descargar [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
+
+# <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services en SQL Server Data Tools (SSDT)
+
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT cuenta con un Diseñador de informes para crear el entorno, donde puede abrir, modificar, obtener una vista previa, guardar e implementar definiciones de informe paginadas de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , orígenes de datos compartidos, conjuntos de datos compartidos y elementos de informe. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]no se incluye con SQL Server. Descargar [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
   
  En este tema se describen las soluciones, proyectos, plantillas de proyecto y configuraciones de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] utilizadas para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], y las vistas, menús, barras de herramientas y métodos abreviados que se pueden usar en el Diseñador de informes.  
   
- Para empezar a diseñar informes, vea [Diseñar informes con el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/tools/design-reports-with-report-designer-ssrs.md).  
+ Para empezar a diseñar informes, vea [Diseñar informes con el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 ##  <a name="bkmk_SolutionsandProjects"></a> Soluciones y proyectos  
  Un proyecto de informe actúa como contenedor de definiciones y recursos de informe. Todos los archivos del proyecto de informe se publican en el servidor de informes cuando se implementa el proyecto. Cuando se crea un proyecto por primera vez, también se crea una solución como contenedor del proyecto. Se pueden agregar varios proyectos a una solución.  
   
   
 ##  <a name="bkmk_Configurations"></a> Configuraciones  
- Para crear varios conjuntos de propiedades de proyecto para las variaciones de implementación, como servidores de informes de prueba y producción, use el Administrador de configuración. Para obtener más información, vea [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+ Para crear varios conjuntos de propiedades de proyecto para las variaciones de implementación, como servidores de informes de prueba y producción, use el Administrador de configuración. Para obtener más información, vea [Implementación y compatibilidad de versiones en las herramientas de datos de SQL Server &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 ##  <a name="bkmk_ReportServerProjects"></a> Proyectos de servidor de informes  
  Cuando se instala [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], pasan a estar disponibles las siguientes plantillas de proyecto en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]:  
@@ -40,7 +47,7 @@ caps.handback.revision: 75
   
 -   **Asistente de proyectos de servidor de informes.** Cuando se selecciona un proyecto de asistente de proyectos de servidor de informes, se crea automáticamente un proyecto de servidor de informes y se abre el Asistente para informes. En el asistente, puede crear un informe siguiendo las instrucciones de cada página para crear una cadena de conexión a un origen de datos, establecer las credenciales del origen de datos, diseñar una consulta, agregar una región de datos de tabla o matriz, especificar datos y grupos de informe, elegir un estilo de fuente y color, publicar el informe en un servidor de informes y obtener una vista previa del informe localmente. Después de crear un informe con el asistente, puede modificar los datos del informe y el diseñador de informes mediante el Diseñador de informes en el proyecto de servidor de informes.  
   
- ![Nuevas plantillas de proyecto de SSDT](../../analysis-services/media/ssdt-biprojects.png "Nuevas plantillas de proyecto de SSDT")  
+ ![Nuevas plantillas de proyecto SSDT](../../analysis-services/media/ssdt-biprojects.png "plantillas de proyecto nuevo en SSDT")  
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Ventanas y paneles del Diseñador de informes  
@@ -57,7 +64,7 @@ caps.handback.revision: 75
   
 -   **Conjuntos de datos** Cada conjunto de datos incluye una consulta que especifica qué datos deben recuperarse del origen de datos. Expanda el conjunto de datos para ver la colección de campos especificada por la consulta del conjunto de datos.  
   
-     En algunos diseñadores de consultas para los conjuntos de datos multidimensionales, se pueden especificar filtros en el panel Filtros e indicar si se van a crear parámetros de informe. Si especifica la opción de parámetro de informe, se crea un conjunto de datos especial automáticamente para rellenar la lista de valores válidos del parámetro.  El conjunto de datos no aparece en el panel Datos de informe de forma predeterminada. Para más información, vea [Mostrar conjuntos de datos ocultos para los valores de parámetro de datos multidimensionales &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/show hidden datasets for parameter values - multidimensional data.md).  
+     En algunos diseñadores de consultas para los conjuntos de datos multidimensionales, se pueden especificar filtros en el panel Filtros e indicar si se van a crear parámetros de informe. Si especifica la opción de parámetro de informe, se crea un conjunto de datos especial automáticamente para rellenar la lista de valores válidos del parámetro.  El conjunto de datos no aparece en el panel Datos de informe de forma predeterminada. Para más información, vea [Mostrar conjuntos de datos ocultos para los valores de parámetro de datos multidimensionales &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
 -   **Parámetros de informe** La lista de parámetros de informe. Los parámetros se pueden crear manual o automáticamente cuando una consulta de conjunto de datos incluye parámetros de consulta.  
   
@@ -94,7 +101,7 @@ caps.handback.revision: 75
   
  Use el panel de propiedades para:  
   
--   Establecer las propiedades del elemento seleccionado en la superficie de diseño. Algunas propiedades proporcionan una lista desplegable de valores. También puede escribir directamente el valor en la celda. En algunas propiedades se incluye una colección de valores, que se indica con el valor **(Colección)**. La mayoría de las propiedades pueden aceptar una expresión (las expresiones complejas se indican con el valor **\<Expresión>**). Haga clic en **\<Expresión>** para abrir el cuadro de diálogo **Expresión**. Para obtener más información, vea [Expression Dialog Box](../Topic/Expression%20Dialog%20Box.md).  
+-   Establecer las propiedades del elemento seleccionado en la superficie de diseño. Algunas propiedades proporcionan una lista desplegable de valores. También puede escribir directamente el valor en la celda. En algunas propiedades se incluye una colección de valores, que se indica con el valor **(Colección)**. La mayoría de las propiedades puede aceptar una expresión; expresiones complejas se indican mediante el valor  **\<expresión >**. Haga clic en  **\<expresión >** para abrir el **expresión** cuadro de diálogo. Para obtener más información, vea [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
   
 -   Use los botones de la barra de herramientas del panel de propiedades para cambiar la cuadrícula de la vista por categorías a la vista alfabética. En la vista por categorías, es probable que tenga que expandir una categoría para ver todas las propiedades de la misma. Para abrir el cuadro de diálogo Propiedades de un elemento, haga clic en el botón **Páginas de propiedades** en la barra de herramientas, o bien haga clic con el botón derecho en el elemento y seleccione **Propiedades**.  
   
@@ -247,7 +254,7 @@ caps.handback.revision: 75
   
   
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> Compatibilidad de la línea de comandos con SQL Server Data Tools  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] está basado en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] y en la aplicación devenv.exe subyacente. Para poder usar estas opciones, debe establecer valores válidos para los dos elementos siguientes:  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]se basa en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] y la aplicación devenv.exe subyacente. Para poder usar estas opciones, debe establecer valores válidos para los dos elementos siguientes:  
   
 -   Propiedades de proyecto de OverwriteDataSources, TargetDataSourceFolder, TargetReportFolder y TargetServerURL.  
   
@@ -304,11 +311,12 @@ caps.handback.revision: 75
     |En un cuadro de texto, seleccionar el texto desde la posición del cursor actual hasta el final de la expresión|CTRL+MAYÚS+FIN|  
     |Abrir el menú contextual para el elemento de informe seleccionado|MAYÚS+F10+tecla de propiedad en teclados más recientes|
   
-## Vea también  
+## <a name="next-steps"></a>Pasos siguientes
+
 [Descargar SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
- [Explorador de soluciones](../../ssms/solution/solution-explorer.md)   
- [Informes de Reporting Services &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
- [Report Definition Language &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)   
- [Implementación y compatibilidad de versiones en las herramientas de datos de SQL Server &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
-  
-  
+[el Explorador de soluciones](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
+[Informes de Reporting Services](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
+[Lenguaje de definición de informe](../../reporting-services/reports/report-definition-language-ssrs.md)   
+[Implementación y compatibilidad de versiones en las herramientas de datos de SQL Server](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

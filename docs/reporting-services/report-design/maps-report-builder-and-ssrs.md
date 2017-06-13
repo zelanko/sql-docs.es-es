@@ -1,31 +1,36 @@
 ---
-title: "Mapas (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10508"
-  - "MICROSOFT.REPORTDESIGNER.MAPBINDINGFIELDPAIR.FIELDNAME"
-  - "sql13.rtp.rptdesigner.mapproperties.general.f1"
-  - "MICROSOFT.REPORTDESIGNER.MAPPOLYGON.CENTERPOINTTEMPLATE"
-  - "10500"
-  - "sql13.rtp.rptdesigner.maptitleproperties.general.f1"
+title: Mapas (generador de informes y SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10508"
+- MICROSOFT.REPORTDESIGNER.MAPBINDINGFIELDPAIR.FIELDNAME
+- sql13.rtp.rptdesigner.mapproperties.general.f1
+- MICROSOFT.REPORTDESIGNER.MAPPOLYGON.CENTERPOINTTEMPLATE
+- "10500"
+- sql13.rtp.rptdesigner.maptitleproperties.general.f1
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 caps.latest.revision: 30
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 29
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 64fd4ab25d7328a649e6629d16c88538c6bee6e6
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Mapas (Generador de informes y SSRS)
-  Para visualizar datos comerciales con un fondo geográfico, puede agregar un mapa a un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. El tipo de mapa que seleccione dependerá de qué información desee comunicar en el informe. Puede agregar un mapa que solo muestre las ubicaciones, un mapa de burbujas que varíe el tamaño de la burbuja en función del número de casas de un área, un mapa de marcadores que varíe el estilo de marcador según el producto más rentable de cada almacén o un mapa de líneas que muestre las rutas entre los almacenes.  
+# <a name="maps-report-builder-and-ssrs"></a>Mapas (Generador de informes y SSRS)
+  Para visualizar datos comerciales con un fondo geográfico, puede agregar un mapa a un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . El tipo de mapa que seleccione dependerá de qué información desee comunicar en el informe. Puede agregar un mapa que solo muestre las ubicaciones, un mapa de burbujas que varíe el tamaño de la burbuja en función del número de casas de un área, un mapa de marcadores que varíe el estilo de marcador según el producto más rentable de cada almacén o un mapa de líneas que muestre las rutas entre los almacenes.  
   
  Un mapa contiene un título, una ventanilla que especifica el punto central y la escala, un fondo de mosaico de Bing Maps opcional para la ventanilla, una o más capas que muestran los datos espaciales y diversas leyendas que ayudan a los usuarios a interpretar las visualizaciones de datos. La ilustración siguiente muestra las partes básicas de un mapa.  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 29
   
  Para visualizar los datos de un mapa, los datos analíticos y los datos espaciales deben tener una relación. Cuando los datos espaciales y los datos analíticos proceden del mismo origen, la relación se conoce. Cuando proceden de orígenes diferentes, debe especificar campos coincidentes para relacionarlos.  
   
-### Datos espaciales  
+### <a name="spatial-data"></a>Datos espaciales  
  Los datos espaciales están compuestos de conjuntos de coordenadas. Los datos espaciales de un origen de datos pueden ser un único punto, varios puntos, una única línea, varias líneas o un conjunto de polígonos. Cada conjunto de coordenadas define un *elemento de mapa*, por ejemplo, un polígono que representa el contorno de un condado, una línea que representa un camino o un punto que representa la ubicación de una ciudad.  
   
  Los datos espaciales se basan en uno de los sistemas de coordenadas siguientes:  
@@ -69,23 +74,23 @@ caps.handback.revision: 29
   
  Cada capa de mapa muestra un tipo de datos espaciales: polígonos, líneas o puntos. Para mostrar varios tipos de datos espaciales, agregue varias capas al mapa. También puede agregar una capa de mosaico de Microsoft Bing Maps. La capa de mosaico no depende de los datos espaciales. La capa de mosaico muestra los mosaicos de la imagen que corresponden a las coordenadas de la ventanilla de mapa.  
   
-#### Orígenes de datos espaciales  
+#### <a name="sources-of-spatial-data"></a>Orígenes de datos espaciales  
  Se admiten los orígenes siguientes de datos espaciales:  
   
--   **Informes de la Galería de mapas.** Los datos espaciales se incrustan en los informes que se encuentran en la galería de mapas. De forma predeterminada, la Galería de mapas se instala en *\<unidad>*:\Archivos de programa\Microsoft SQL Server\Report Builder\MapGallery.  
+-   **Informes de la Galería de mapas.** Los datos espaciales se incrustan en los informes que se encuentran en la galería de mapas. De forma predeterminada, la Galería de mapas se instala en  *\<unidad >*: \Program SQL Server\Report \MapGallery.  
   
     > [!NOTE]  
     >  Esta característica de mapas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa los datos de archivos de forma TIGER/Line que se proporcionan por cortesía de la Oficina del censo estadounidense ([http://www.census.gov/](http://www.census.gov/)). Los archivos de forma TIGER/Line son un extracto de información geográfica y cartográfica seleccionada de la base de datos MAF/TIGRE del Censo. Los archivos de forma TIGER/Line están disponibles sin cargo en la Oficina del censo estadounidense. Para obtener más información sobre los archivos de forma TIGER/Line, vaya a [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). La información de fronteras de los archivos de forma TIGER/Line está destinada únicamente para la recopilación de datos estadísticos y tabulación; su representación y designación para fines estadísticos no constituye ninguna determinación de autoridad jurisdiccional ni derechos de propiedad ni de titularidad, y no son descripciones legales de territorios. Census TIGER and TIGER/Line son marcas registradas de la Oficina del censo estadounidense.  
   
 -   **Archivos de forma ESRI.** Los archivos de forma ESRI contienen datos que cumplen con el formato de datos espaciales de los archivos de forma del Environmental Systems Research Institute, Inc. (ESRI). Hacen referencia a un conjunto de archivos. Los datos del archivo .shp especifican las formas geográficas o geométricas. Los datos del archivo .dbf proporcionan los atributos para las formas. Para ver un mapa en la vista de diseño o ejecutar un mapa desde el servidor de informes, ambos archivos deben estar en la misma carpeta. Al agregar los datos espaciales de un archivo .shp al sistema de archivos local, los datos espaciales se incrustan en el informe. Para recuperar los datos espaciales de forma dinámica en tiempo de ejecución, cargue los archivos de forma en el servidor de informes y especifíquelos como el origen de los datos espaciales. Para obtener más información, vea [Buscar archivos de forma ESRI para un mapa](http://go.microsoft.com/fwlink/?linkid=178814).  
   
--   **Datos espaciales de SQL Server almacenados en una base de datos.** Puede usar una consulta que especifique los tipos de datos **SQLGeometry** o **SQLGeography** de una base de datos relacional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Información general de los tipos de datos espaciales](../../relational-databases/spatial/spatial-data-types-overview.md) en los [Libros en pantalla de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
+-   **Datos espaciales de SQL Server almacenados en una base de datos.** Puede usar una consulta que especifique los tipos de datos **SQLGeometry** o **SQLGeography** de una base de datos relacional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Información general de los tipos de datos espaciales](../../relational-databases/spatial/spatial-data-types-overview.md) en los [Libros en pantalla de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
   
      En el conjunto de resultados que ve en el diseñador de consultas, cada fila de datos espaciales se trata como una unidad y se almacena en un único elemento de mapa. Por ejemplo, si hay varios puntos que se definen en una fila en el conjunto de resultados, las propiedades de presentación se aplican a todos los puntos de ese elemento de mapa.  
   
 -   **Ubicaciones personalizadas que crea.** Puede agregar manualmente ubicaciones como puntos incrustados a una capa de puntos incrustados. Para obtener más información, vea [Agregar ubicaciones personalizadas a un mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
   
-#### Datos espaciales en la vista de diseño  
+#### <a name="spatial-data-in-design-view"></a>Datos espaciales en la vista de diseño  
  En la vista de diseño, el procesador de informes muestra datos espaciales de ejemplo para ayudarle a diseñar la capa de mapa. Los datos que ve dependen de la disponibilidad de los datos espaciales:  
   
 -   **Datos incrustados.** Los datos de ejemplo se recuperan de los elementos de mapa incrustados en las capas de mapa del informe.  
@@ -94,17 +99,17 @@ caps.handback.revision: 29
   
 -   **Datos espaciales de SQL Server.** Si el origen de datos está disponible y las credenciales son válidas, los datos de ejemplo se cargan desde los datos espaciales de la base de datos. De lo contrario, el procesador de informes genera los datos de ejemplo y muestra el mensaje **No hay datos espaciales disponibles**.  
   
-#### Incrustar datos espaciales en la definición de informe  
+#### <a name="embedding-spatial-data-in-the-report-definition"></a>Incrustar datos espaciales en la definición de informe  
  A diferencia de lo que ocurre con los datos analíticos, dispone de la opción de incrustar los datos espaciales para una capa de mapa en la definición de informe. Al incrustar los datos espaciales, incrusta los elementos de mapa que se utilizan en la capa de mapa.  
   
  Los elementos incrustados aumentan el tamaño de la definición de informe pero garantizan que los datos espaciales siempre están disponibles cuando se ejecuta el informe, ya sea en la vista previa o en el servidor de informes. Más datos implican más almacenamiento y tiempos de proceso más largos. Siempre es aconsejable limitar los datos espaciales, además de otros datos del informe, simplemente a la información necesaria para el informe.  
   
-#### Controlar la resolución de mapa en tiempo de ejecución  
+#### <a name="controlling-map-resolution-at-run-time"></a>Controlar la resolución de mapa en tiempo de ejecución  
  Al cambiar la resolución de los datos espaciales, está especificando el grado de detalle con que desea que las líneas se dibujen en un mapa. Por ejemplo, para las áreas, ¿necesita una granularidad de hasta cientos de metros del área terrestre o con unas pocas millas estarían suficientemente detalladas?  
   
  Si los datos espaciales se incrustan en el informe, la resolución que utilice afectará al número de elementos de mapa de la definición de informe. Una resolución más alta aumenta el número de elementos que se necesitan para dibujar los bordes en esa resolución. Si los datos espaciales no se incrustan en el informe, el servidor de informes calcula las líneas que se requieren para dibujar los bordes en esa resolución cada vez que se vea el informe. Para diseñar un informe que equilibre la resolución de la pantalla y un tiempo de representación del informe aceptable, simplifique la resolución de mapa al grado de detalle que necesite en el informe para visualizar los datos analíticos.  
   
-### Datos analíticos  
+### <a name="analytical-data"></a>Datos analíticos  
  Los datos analíticos son los que desea visualizar en el mapa, por ejemplo, la población de una ciudad o el total de ventas de un almacén. Pueden proceder de alguno de los orígenes siguientes:  
   
 -   **Campo de conjunto de datos.** Campo de un conjunto de datos del panel Datos de informe.  
@@ -113,9 +118,9 @@ caps.handback.revision: 29
   
 -   **Datos incrustados para un elemento de mapa.** Después de incrustar polígonos, líneas o puntos en un informe, puede invalidar los campos de datos para elementos de mapa individuales y establecer valores personalizados.  
   
- Al especificar las reglas para una capa y seleccionar el campo de datos analíticos, si el tipo de datos es numérico, el procesador de informes usa automáticamente la función Sum predeterminada para calcular los valores de agregado para el elemento de mapa. Si el campo no es numérico, no se especifica ninguna función de agregado y se usa la función de agregado implícita First. Para cambiar la expresión predeterminada, cambie las opciones de las reglas de la capa. Para obtener más información, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+ Al especificar las reglas para una capa y seleccionar el campo de datos analíticos, si el tipo de datos es numérico, el procesador de informes usa automáticamente la función Sum predeterminada para calcular los valores de agregado para el elemento de mapa. Si el campo no es numérico, no se especifica ninguna función de agregado y se usa la función de agregado implícita First. Para cambiar la expresión predeterminada, cambie las opciones de las reglas de la capa. Para obtener más información, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
-### Campos coincidentes  
+### <a name="match-fields"></a>Campos coincidentes  
  Para relacionar los datos analíticos con los elementos de mapa en una capa, debe especificar los *campos coincidentes*. Los campos coincidentes se utilizan para generar una relación entre los elementos de mapa y los datos analíticos. Puede utilizar uno o varios campos con los que buscar una coincidencia siempre que especifiquen un valor analítico único para cada ubicación espacial.  
   
  Por ejemplo, para un mapa de burbujas que varíe el tamaño de burbuja según la población de la ciudad, se requieren los datos siguientes:  
@@ -162,7 +167,7 @@ caps.handback.revision: 29
   
  Para obtener instrucciones paso a paso, vea [Agregar, cambiar o eliminar un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Para obtener más información acerca de los mosaicos, vea [Sistema de mosaicos de Bing Maps](http://go.microsoft.com/fwlink/?linkid=147315). Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](http://go.microsoft.com/fwlink/?LinkId=151371) y [Declaración de privacidad](http://go.microsoft.com/fwlink/?LinkId=151372).  
+ Para obtener más información acerca de los mosaicos, vea [Sistema de mosaicos de Bing Maps](http://go.microsoft.com/fwlink/?linkid=147315). Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](http://go.microsoft.com/fwlink/?LinkId=151371).  
   
 ##  <a name="MapLayers"></a> Descripción de las capas de mapa y los elementos de mapa  
  Un mapa puede tener varias capas. Hay tres tipos de capas. Cada capa muestra un tipo de datos espaciales:  
@@ -185,7 +190,7 @@ caps.handback.revision: 29
   
  Para obtener más información sobre las capas de mapa, vea [Agregar, cambiar o eliminar un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
-### Variar las propiedades de presentación de los puntos, líneas y polígonos  
+### <a name="varying-display-properties-for-points-lines-and-polygons"></a>Variar las propiedades de presentación de los puntos, líneas y polígonos  
  Las opciones de pantalla para los elementos de un mapa se pueden establecer en el nivel de capa, utilizando las reglas para la capa, o en elementos individuales. Por ejemplo, puede establecer las propiedades de presentación para todos los puntos de una capa o puede establecer reglas que controlen las propiedades de presentación de todos los puntos de una capa tanto si están incrustados como si no, o puede invalidar la configuración de las propiedades de presentación para puntos incrustados concretos.  
   
  Al ver un informe, los valores de presentación que ve se controlan con esta jerarquía, enumerada en orden ascendente. Los números mayores tienen prioridad:  
@@ -198,7 +203,7 @@ caps.handback.revision: 29
   
 4.  **Invalidar las propiedades de polígono incrustado, línea o punto**. Para los elementos de los mapas incrustados, puede seleccionar la opción para invalidar y cambiar cualquier propiedad o valor de los datos. Cualquier cambio que realice para invalidar las reglas de los elementos individuales es irreversible. Por ejemplo, puede resaltar un almacén concreto utilizando un marcador de pin.  
   
- Para obtener más información, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+ Para obtener más información, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
  Además de variar la apariencia de los elementos de un mapa, puede agregar interactividad a los puntos, líneas y polígonos, o a las capas, de las maneras siguientes:  
   
@@ -208,7 +213,7 @@ caps.handback.revision: 29
   
 -   Agregue parámetros en expresiones que definan la visibilidad de las capas para permitir a un usuario mostrar u ocultar capas concretas de un mapa.  
   
- Para obtener más información, vea [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
+ Para más información, vea [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
 ##  <a name="Legends"></a> Descripción de las leyendas de mapa, la escala de colores y la escala de distancia  
  Puede agregar diversas leyendas a un informe para ayudar a los usuarios a interpretar un mapa. Los mapas pueden incluir los elementos siguientes:  
@@ -219,7 +224,7 @@ caps.handback.revision: 29
   
 -   **Escala de distancia.** Puede mostrar una escala de distancia. La escala de distancia muestra una escala para la vista del mapa actual en kilómetros y millas.  
   
- Puede colocar las leyendas, la escala de color y la escala de distancia en ubicaciones discretas dentro de la ventanilla o fuera de ella. Para más información, vea [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
+ Puede colocar las leyendas, la escala de color y la escala de distancia en ubicaciones discretas dentro de la ventanilla o fuera de ella. Para obtener más información, vea [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
 ##  <a name="Troubleshooting"></a> Solución de problemas de los mapas  
  Los informes de mapas utilizan datos espaciales y datos analíticos de diversos orígenes de datos. Cada capa de mapa puede utilizar orígenes diferentes de datos. Las propiedades de presentación de cada capa siguen una prioridad concreta según las propiedades de la capa, reglas y propiedades de los elementos de la capa.  
@@ -244,7 +249,7 @@ caps.handback.revision: 29
   
  [Personalizar los datos y la presentación de un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
- [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md)  
+ [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
  [Agregar, cambiar o eliminar un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   

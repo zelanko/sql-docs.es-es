@@ -1,23 +1,28 @@
 ---
-title: "Administrar una aplicaci&#243;n de servicio de SharePoint para Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Administrar una aplicación de servicio de SharePoint de Reporting Services | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 caps.latest.revision: 18
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 18
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0930c8f5d3b0af4460c3deac2b8aa780e1f2568
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Administrar una aplicaci&#243;n de servicio de SharePoint para Reporting Services
+# <a name="manage-a-reporting-services-sharepoint-service-application"></a>Administrar una aplicación de servicio de SharePoint para Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se administran desde Administración central de SharePoint. Las páginas Administración y Propiedades permiten actualizar la configuración de la aplicación de servicio así como las tareas de administración comunes.  
   
  Este tema contiene la información siguiente:  
@@ -36,7 +41,7 @@ caps.handback.revision: 18
   
 -   [Aprovisionar suscripciones y alertas](#bkmk_provisionsubscriptions)  
   
-## Para abrir la página Propiedades de la aplicación de servicio  
+## <a name="to-open-service-application-properties-page"></a>Para abrir la página Propiedades de la aplicación de servicio  
  Para abrir la página de propiedades de una aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , haga lo siguiente:  
   
 1.  En Administración central, en el grupo Administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
@@ -93,7 +98,7 @@ caps.handback.revision: 18
 |Habilitar el registro de la ejecución|El valor predeterminado es TRUE.<br /><br /> Especifique si el servidor de informes genera registros de seguimiento y el número de días que debe guardarse el registro. . Los registros se almacenan en el equipo del servidor de informes, en la carpeta \Microsoft SQL Server\MSSQL.n\ReportServer\Log. Se inicia un nuevo archivo de registro cada vez que se reinicia el servicio. Para obtener más información acerca de los archivos de registro, vea [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |Días de almacenamiento del registro de ejecución|El valor predeterminado es 60 días.|  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite el registro ULS de SharePoint.  Para más información, vea [Activar eventos de Reporting Services para el registro de seguimiento de SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite el registro ULS de SharePoint.  Para obtener más información, vea [Activar eventos de Reporting Services para el registro de seguimiento de SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ###  <a name="bkmk_security_settings_section"></a> Configuración de seguridad  
   
@@ -109,7 +114,7 @@ caps.handback.revision: 18
 |Configuración|Comentarios|  
 |-------------|--------------|  
 |Habilitar la descarga del Generador de informes|El valor predeterminado es TRUE.<br /><br /> Especifica si los clientes pueden ver el botón para descargar la aplicación del Generador de informes.|  
-|URL de inicio del Generador de informes|Especifique una dirección URL personalizada si el servidor de informes no utiliza la dirección URL predeterminada del Generador de informes. Este valor es opcional. Si no especifica un valor, se usará la dirección URL predeterminada, que inicia el Generador de informes. Para iniciar el Generador de informes 3.0 como aplicación ClickOnce, especifique el valor siguiente: http://\<nombreDeEquipo>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
+|URL de inicio del Generador de informes|Especifique una dirección URL personalizada si el servidor de informes no utiliza la dirección URL predeterminada del Generador de informes. Este valor es opcional. Si no especifica un valor, se usará la dirección URL predeterminada, que inicia el Generador de informes. Para iniciar el generador de informes 3.0 como un clic-aplicación, escriba el siguiente valor: http://\<nombreDeEquipo > / ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
 |Habilitar la impresión de cliente|El valor predeterminado es TRUE.<br /><br /> Especifica si los usuarios pueden descargar el control del lado cliente, que proporciona opciones de impresión.|  
 |Tiempo de espera de sesión de edición|El valor predeterminado es 7200 segundos.|  
 |Límite de caché de sesión de edición|El valor predeterminado es 5.|  
@@ -117,7 +122,7 @@ caps.handback.revision: 18
 ##  <a name="bkmk_managejobs"></a> Administrar trabajos  
  Puede ver y eliminar los trabajos en ejecución, por ejemplo, los que las suscripciones de informe y las suscripciones controladas por datos crean. La página no se usa para administrar suscripciones sino los trabajos que una suscripción desencadena. Para obtener un ejemplo de suscripción programada para ejecutarse una vez a la hora, generará un trabajo una vez a la hora que aparece en la página **Administrar trabajos** .  
   
- ![administrar trabajos en ejecución](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "administrar trabajos en ejecución")  
+ ![Administrar trabajos en ejecución](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "administrar trabajos en ejecución")  
   
 ##  <a name="bkmk_keymgt"></a> Administración de claves  
  En la tabla siguiente se muestran las páginas de administración de claves.  
@@ -127,8 +132,8 @@ caps.handback.revision: 18
   
 |Página|Description|  
 |----------|-----------------|  
-|Copia de seguridad de clave de cifrado|1) Escriba una contraseña en los cuadros **Contraseña** y **Confirmar contraseña**, y haga clic en **Exportar**. Verá una advertencia si la contraseña especificada no satisface los requisitos de complejidad de la directiva de dominio.<br /><br /> 2) Se le pedirá una ubicación para guardar el archivo de claves. Considere la posibilidad de almacenar el archivo de claves en un equipo distinto del que ejecuta [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. El nombre de archivo predeterminado es el mismo que el de la aplicación de servicio.|  
-|Restaurar clave de cifrado|1) Escriba o busque el archivo de claves en el cuadro **Ubicación del archivo**.<br /><br /> 2) En el cuadro **Contraseña**, escriba la contraseña que ha usado para realizar la copia de seguridad del archivo de cifrado.<br /><br /> 3) Haga clic en **Aceptar**.|  
+|Copia de seguridad de clave de cifrado|1) Escriba una contraseña en los cuadros **Contraseña** y **Confirmar contraseña** , y haga clic en **Exportar**. Verá una advertencia si la contraseña especificada no satisface los requisitos de complejidad de la directiva de dominio.<br /><br /> 2) Se le pedirá una ubicación para guardar el archivo de claves. Considere la posibilidad de almacenar el archivo de claves en un equipo distinto del que ejecuta [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. El nombre de archivo predeterminado es el mismo que el de la aplicación de servicio.|  
+|Restaurar clave de cifrado|1) Escriba o busque el archivo de claves en el cuadro **Ubicación del archivo** .<br /><br /> 2) En el cuadro **Contraseña** , escriba la contraseña que ha usado para realizar la copia de seguridad del archivo de cifrado.<br /><br /> 3) Haga clic en **Aceptar**.|  
 |Cambiar la clave de cifrado|Esta operación creará una nueva clave y volverá a cifrar el contenido cifrado. Si tiene mucho contenido, esta operación puede durar varias horas.<br /><br /> Cuando se complete la operación de cambio de la clave de cifrado, es recomendable que haga una copia de seguridad de la nueva clave.|  
 |Contenido cifrado eliminado|El contenido eliminado no se puede recuperar.<br /><br /> **\*\* Importante \*\*** La acción de eliminar y volver a crear la clave simétrica no puede revertirse ni deshacerse. Eliminar o regenerar la clave puede tener consecuencias importantes en la instalación actual. Si elimina la clave, los datos existentes cifrados con la clave simétrica también se eliminan. Entre los datos eliminados se incluyen cadenas de conexión a orígenes de datos de informes externos, cadenas de conexión almacenadas y algunos datos de suscripción.|  
   
@@ -145,7 +150,7 @@ caps.handback.revision: 18
   
  Puede utilizar cualquier cuenta de usuario de Windows. Para obtener mejores resultados, elija una cuenta que tenga permisos de lectura y de inicio de sesión en red para que admita conexiones con otros equipos. Debe tener permisos de lectura para todas las imágenes o archivos de datos externos que desee utilizar en sus informes. No especifique ninguna cuenta local a no ser que todos los orígenes de datos de informe e imágenes externas estén almacenados en el equipo del servidor de informes. Utilice la cuenta solo para el procesamiento de informes en modo desatendido.  
   
- ![Contenido relacionado con PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.png "Contenido relacionado con PowerShell")  
+ ![Contenido relacionado con PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "contenido relacionado con PowerShell")  
   
  A continuación, se ofrece un ejemplo de comando de PowerShell para devolver la lista de aplicaciones de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con la propiedad UEAccount:  
   
@@ -155,12 +160,12 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
   
  Para más información, vea [Cmdlets de PowerShell para el modo de SharePoint de Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
-### Opciones  
+### <a name="options"></a>Opciones  
  **Especificar una cuenta de ejecución**  
  Seleccione para especificar una cuenta.  
   
  **Cuenta**  
- Especifique una cuenta de usuario de dominio de Windows. Use este formato: *\<dominio>\\<cuenta de usuario\>*.  
+ Especifique una cuenta de usuario de dominio de Windows. Utilice este formato:  *\<dominio >\\< cuenta de usuario\>*.  
   
  **Contraseña**  
  Escriba la contraseña.  
@@ -171,7 +176,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 ##  <a name="bkmk_email"></a> Configuración del correo electrónico  
  Utilice esta página para especificar la configuración del Protocolo simple de transferencia de correo (SMTP) que habilita la entrega de correo electrónico del servidor de informes desde este. Puede utilizar la extensión de entrega por correo electrónico del servidor de informes para distribuir informes o notificaciones de procesamiento de informes a través de suscripciones por correo electrónico. La extensión de entrega por correo electrónico del servidor de informes requiere un servidor SMTP y una dirección de correo electrónico para el campo De:.  
   
-### Opciones  
+### <a name="options"></a>Opciones  
  **Utilizar servidor SMTP**  
  Especifica que el correo electrónico del servidor de informes se enruta a través de un servidor SMTP.  
   
@@ -184,7 +189,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 ##  <a name="bkmk_provisionsubscriptions"></a> Aprovisionar suscripciones y alertas  
  Utilice esta página para comprobar si el Agente SQL Server se está ejecutando y está proporcionando acceso a Reporting Services. El Agente SQL Server es necesario para las suscripciones, programaciones y alertas de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . [Aprovisionar Subscripciones y alertas para aplicaciones de servicio SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
-## Asociación del proxy  
+## <a name="proxy-association"></a>Asociación del proxy  
  Cuando creó la aplicación de servicio de Reporting Services, seleccionó la aplicación web para asociar y proporcionar permisos de acceso a la aplicación. Si decidió no crear una asociación o si desea cambiar la asociación, puede usar el procedimiento siguiente.  
   
 1.  En Administración central de SharePoint, en Administración de aplicaciones, haga clic en **Configurar las asociaciones de aplicación de servicio**.  

@@ -1,28 +1,33 @@
 ---
-title: "Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "permisos [Reporting Services], modo integrado de SharePoint"
-  - "integración de SharePoint [Reporting Services], permisos"
-  - "seguridad [Reporting Services], modo integrado de SharePoint"
-  - "conjuntos de permisos [Reporting Services]"
+title: Sitio de SharePoint y referencia de permisos de lista de elementos del servidor de informes | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Reporting Services], SharePoint integrated mode
+- SharePoint integration [Reporting Services], permissions
+- security [Reporting Services], SharePoint integrated mode
+- permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 14
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ca45a9fc4c37798983c4cc8956fbb27828a5ff01
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes
+# <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes
   En este tema se proporciona una referencia de los permisos de SharePoint que se pueden usar para conceder acceso a las operaciones del servidor de informes para un servidor de informes que se ejecuta en el modo integrado de SharePoint. Si va a crear niveles de permisos personalizados, este tema puede ayudarle a elegir qué permisos usar.  
   
  SharePoint proporciona treinta y tres permisos que puede usar para controlar el acceso al contenido y a las operaciones. No todos estos permisos se aplican a los documentos y a las operaciones en las que interviene el servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Puede usar las tablas de referencia de permisos de este artículo para saber qué permisos son compatibles con determinadas tareas de informes.  
@@ -41,7 +46,7 @@ caps.handback.revision: 14
 |-|  
 |[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo de SharePoint &#124; SharePoint 2010 y SharePoint 2013.|  
   
-## Permisos de lista  
+## <a name="list-permissions"></a>Permisos de lista  
  Los permisos que se establecen en la biblioteca que contiene los elementos del servidor de informes determinan la forma en que los usuarios obtienen acceso a dichos elementos.  
   
 |Permiso|Description|F|C|V|Operación del servidor de informes|  
@@ -58,7 +63,7 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  Otros permisos de lista son Omitir desprotección, Aprobar elementos y Ver páginas de aplicaciones. El servidor de informes no evalúa estos permisos. El servidor de informes no controla estas operaciones.  
   
-## Permisos de sitio  
+## <a name="site-permissions"></a>Permisos de sitio  
  Los permisos de sitio determinan el acceso a las operaciones del servidor de informes que no están directamente relacionadas con los elementos almacenados en una biblioteca específica. Entre los ejemplos se incluye la creación y administración de programaciones compartidas, que los elementos pueden usar en varias bibliotecas, y la configuración del elemento web Visor de informes, que se puede usar en todo un sitio.  
   
 |Permiso|Description|F|C|V|Operación del servidor de informes|  
@@ -72,7 +77,7 @@ caps.handback.revision: 14
 |Utilizar interfaces remotas|Usar las interfaces de SOAP, Web DAV o SharePoint Designer para tener acceso al sitio web.|X|X|X|Se usa para llamar al extremo proxy de dirección URL del servidor de informes.|  
 |Abrir|Abrir un sitio web, una lista o una carpeta para obtener acceso a los elementos incluidos en dicho contenedor.|X|X|X|Leer programaciones y propiedades de elementos.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Comparar roles y tareas de Reporting Services con grupos y permisos de SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   

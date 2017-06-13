@@ -1,23 +1,28 @@
 ---
-title: "Glosario (Generador de informes) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Glosario (generador de informes) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 69a348a8f2f2d44dbe17f5500557db03b95e5b04
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Glosario (Generador de informes)
+# <a name="glossary-report-builder"></a>Glosario (Generador de informes)
   
   
 |Término|Definición|  
@@ -76,7 +81,7 @@ caps.handback.revision: 8
 |reglas de color|Algoritmo que asigna colores automáticamente a cada elemento de mapa de una capa de mapa.|  
 |escala de colores|Tipo de leyenda de mapa que se usa para interpretar los colores de un mapa.|  
 |common language runtime|Motor en el núcleo de la ejecución de código administrado. El motor de tiempo de ejecución proporciona código administrado con servicios como integración entre idiomas, seguridad de acceso del código, administración de la duración de objetos y compatibilidad con la depuración y la creación de perfiles.|  
-|expresión compleja|Expresión que no se puede representar como una única referencia de campo integrado y se muestra en la superficie de diseño como <\<Expr>>.|  
+|expresión compleja|Una expresión que no se puede representar como una referencia de campo integrado único y se muestra en la superficie de diseño como <\<Expr >>.|  
 |concatenación|Combinación de dos o más cadenas o expresiones de caracteres en una sola cadena o expresión de caracteres, o combinación de dos o más cadenas o expresiones binarias en una sola cadena o expresión binaria.|  
 |simultaneidad|Proceso que permite a varios usuarios tener acceso a, y modificar, datos compartidos al mismo tiempo. SQL Server utiliza bloqueos para permitir a varios usuarios el acceso y la modificación de datos compartidos de forma simultánea sin tener conflictos entre sí.|  
 |archivo config|Véase: archivo de configuración|  
@@ -358,7 +363,7 @@ caps.handback.revision: 8
 |instancia de usuario|Instancia de SQL Server Express generada por la instancia primaria en nombre de un usuario.|  
 |eje de valores (Y)|Eje en el que se muestran los valores numéricos de un gráfico. Normalmente es el eje vertical. Excepción: en los gráficos de barras, los ejes están invertidos y los datos de agrupación se muestran en el eje Y.|  
 |expresión de valor|Expresión en MDX (Expresiones multidimensionales) que devuelve un valor. Las expresiones de valor pueden operar en conjuntos, tuplas, miembros, niveles, números o cadenas.|  
-|variable|1. En Integration Services, almacena valores que se pueden usar en scripts, expresiones y expresiones de propiedad para establecer valores de columna y las propiedades de los objetos de paquete. <br />2. Entidades definidas que son valores asignados. Una variable local se define con una instrucción DECLARE@localvariable y se le asigna un valor inicial en el lote de instrucciones, donde se declara con una instrucción SELECT o SET@localvariable.|  
+|variable|1. En Integration Services, almacena valores que se pueden usar en scripts, expresiones y expresiones de propiedad para establecer valores de columna y las propiedades de los objetos de paquete. <br />2. Entidades definidas que son valores asignados. Se define una variable local con un DECLARE@localvariable instrucción y le asigna un valor inicial en el lote de instrucciones donde se declara con ya sea una instrucción SELECT o SET@localvariable instrucción.|  
 |intervalo variable|Opción de un gráfico de Reporting Services que se puede especificar para que calcule automáticamente el número óptimo de etiquetas que se pueden colocar en un eje, en función del ancho o alto del gráfico.|  
 |virtualización|En los mapas, gráficos y medidores, forma en que un usuario decide visualizar datos analíticos.|  
 |servicio web|En Reporting Services, servicio que usa el protocolo simple de acceso a objetos (SOAP) sobre HTTP y actúa como interfaz de comunicaciones entre programas cliente y el servidor de informes.|  
@@ -369,7 +374,7 @@ caps.handback.revision: 8
 |eje X|Véase: eje de categorías (X)|  
 |eje Y|Véase: eje de valores (Y)|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

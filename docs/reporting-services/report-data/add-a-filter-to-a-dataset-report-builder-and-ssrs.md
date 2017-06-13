@@ -1,23 +1,28 @@
 ---
-title: "Agregar un filtro a un conjunto de datos (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Agregar un filtro a un conjunto de datos (generador de informes y SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
 caps.latest.revision: 8
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 68838748a77567747cd7f44f7924738d87b68450
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Agregar un filtro a un conjunto de datos (Generador de informes y SSRS)
+# <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>Agregar un filtro a un conjunto de datos (Generador de informes y SSRS)
   Agregue un filtro a un conjunto de datos para limitar los datos en un informe una vez recuperados de un origen de datos externo. Al agregar un filtro a un conjunto de datos, todos los elementos de informe o regiones de datos usan solo los datos que cumplen las condiciones del filtro.  
   
  En el caso de un conjunto de datos compartido, un filtro que se aplica a todos los elementos dependientes debe formar parte de la definición del conjunto de datos compartida en el servidor de informes. Un informe o elemento de informe que contenga una instancia de un conjunto de datos compartido puede crear un filtro adicional que se aplique solo a esa instancia.  
@@ -27,7 +32,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Para agregar un filtro a un conjunto de datos compartido  
+### <a name="to-add-a-filter-to-a-shared-dataset"></a>Para agregar un filtro a un conjunto de datos compartido  
   
 1.  Abra un conjunto de datos compartido en modo de conjunto de datos compartido.  
   
@@ -49,11 +54,11 @@ caps.handback.revision: 8
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Para agregar un filtro a un conjunto de datos incrustado o una instancia de conjunto de datos compartido  
+### <a name="to-add-a-filter-to-an-embedded-dataset-or-a-shared-dataset-instance"></a>Para agregar un filtro a un conjunto de datos incrustado o una instancia de conjunto de datos compartido  
   
 1.  Abra un informe en el modo de diseño de informes.  
   
-2.  En el panel **Datos de informe**, haga clic con el botón derecho en un conjunto de datos y, después, haga clic en **Propiedades del conjunto de datos**. Se abre el cuadro de diálogo **Propiedades del conjunto de datos** .  
+2.  En el panel **Datos de informe** , haga clic con el botón derecho en un conjunto de datos y, después, haga clic en **Propiedades del conjunto de datos**. Se abre el cuadro de diálogo **Propiedades del conjunto de datos** .  
   
 3.  Haga clic en **Filtros**. Aparece la lista actual de ecuaciones de filtro. La lista aparece vacía de forma predeterminada.  
   
@@ -71,8 +76,8 @@ caps.handback.revision: 8
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Vea también  
- [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+## <a name="see-also"></a>Vea también  
+ [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Agregar un filtro &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-filter-report-builder-and-ssrs.md)  
   

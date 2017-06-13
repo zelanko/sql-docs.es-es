@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9b66cd3d05632792b851f039aa653c15de18c78b
+ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
+ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/07/2017
 
 ---
 # <a name="thread-and-task-architecture-guide"></a>guía de arquitectura de subprocesos y tareas
@@ -51,7 +51,6 @@ La sobrecarga que supone el cambio de contexto de los subprocesos no es excesiva
 Estos sistemas pueden notar un pequeño incremento en el rendimiento si el valor de agrupación ligera se establece en 1.
 
 No se recomienda utilizar la programación en modo de fibra para un funcionamiento habitual. La razón es que puede reducir el rendimiento al eliminar las ventajas normales del cambio de contexto, y que algunos componentes de SQL Server no funcionan correctamente en modo de fibra. Para obtener más información, vea lightweight pooling (opción de configuración del servidor).
-
 
 ## <a name="thread-and-fiber-execution"></a>Ejecución de subprocesos y fibras
 
@@ -94,15 +93,14 @@ El crecimiento automático no es un método fidedigno para aumentar el tamaño d
 
 El rendimiento de las operaciones de índice como crear o volver a generar índices puede mejorarse en los equipos con muchas CPU estableciendo temporalmente el modelo de recuperación de la base de datos en el modelo de recuperación optimizado para cargas masivas de registros o en el modelo de recuperación simple. Estas operaciones de índice pueden generar actividad de registro significativa, y la contención del registro puede afectar a la elección del mejor grado de paralelismo (DOP) realizada por SQL Server.
 
-Además, considere la posibilidad de ajustar la configuración del grado máximo de paralelismo (MAXDOP) para estas operaciones. Las directrices siguientes se basan en pruebas internas y constituyen recomendaciones generales. Debe probar varios valores distintos para MAXDOP con objeto de determinar el valor óptimo para su entorno.
+Además, considere la posibilidad de ajustar la **grado máximo de paralelismo (MAXDOP)** opción de configuración del servidor para estas operaciones. Las directrices siguientes se basan en pruebas internas y constituyen recomendaciones generales. Debe probar varios valores distintos para MAXDOP con objeto de determinar el valor óptimo para su entorno.
 
 * Para el modelo de recuperación completa, limite el valor de la opción Grado máximo de paralelismo a ocho o menos.   
 * Para el modelo para cargas masivas de registros o el modelo de recuperación simple, se debe tener en cuenta la posibilidad de establecer la opción Grado máximo de paralelismo en un valor superior a ocho.   
 * Para los servidores con NUMA configurado, el grado máximo de paralelismo no debería superar el número de CPU asignadas a cada nodo NUMA. Esto se debe a que es más probable que la consulta utilice memoria local desde 1 nodo NUMA, lo que puede mejorar el tiempo de acceso a la memoria.  
-* Para los servidores que tienen habilitada la tecnología Hyper-Threading y se fabricaron en 2009 o antes, el valor MAXDOP no debería superar el número de procesadores físicos.  
+* Para servidores que tienen el hyperthreading habilitado y se fabricar en 2009 o una versión anterior (antes de que se ha mejorado la característica hyper-threading), el valor MAXDOP no debería superar el número de procesadores físicos, en lugar de procesadores lógicos.
 
-
-Para obtener más información acerca de la opción Grado máximo de paralelismo, consulte [Establecer la opción Grado máximo de paralelismo](../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).
+Para obtener más información acerca de la opción max degree of parallelism, consulte [configurar la max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 ### <a name="setting-the-maximum-number-of-worker-threads"></a>Configurar el número máximo de subprocesos de trabajo
 
@@ -120,17 +118,17 @@ Normalmente, el número de archivos de datos tempdb debería coincidir con el n�
 
 La tabla siguiente contiene una lista de los componentes de SQL Server e indica si pueden utilizar más de 64 CPUs.
 
-|Nombre del proceso    |Programa ejecutable    |Utilizar más de 64 CPU |  
+|Nombre del proceso   |Programa ejecutable |Utilizar más de 64 CPU |  
 |----------|----------|----------|  
-|Motor de base de datos de SQL Server    |Sqlserver.exe    |Sí |  
-|Reporting Services    |Rs.exe    |No |  
-|Analysis Services    |As.exe    |No |  
-|Integration Services    |Is.exe    |No |  
-|Service Broker    |Sb.exe    |No |  
-|Búsqueda de texto completo    |Fts.exe    |No |  
-|Agente SQL Server    |Sqlagent.exe    |No |  
-|SQL Server Management Studio    |Ssms.exe    |No |  
-|programa de instalación de SQL Server    |Setup.exe    |No |  
+|Motor de base de datos de SQL Server |Sqlserver.exe  |Sí |  
+|Reporting Services |Rs.exe |No |  
+|Analysis Services  |As.exe |No |  
+|Integration Services   |Is.exe |No |  
+|Service Broker |Sb.exe |No |  
+|Búsqueda de texto completo   |Fts.exe    |No |  
+|Agente SQL Server   |Sqlagent.exe   |No |  
+|SQL Server Management Studio   |Ssms.exe   |No |  
+|programa de instalación de SQL Server   |Setup.exe  |No |  
 
 
 

@@ -1,21 +1,29 @@
 ---
-title: "Uso de los KPI en Reporting Services | Microsoft Docs"
-ms.date: "02/24/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Trabajar con los KPI en Reporting Services | Documentos de Microsoft
+ms.date: 05/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b451b1773d97d490c0021cdf8cfcfb14c07117b4
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Uso de los KPI en Reporting Services
+# <a name="working-with-kpis-in-reporting-services"></a>Uso de los KPI en Reporting Services
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 Un indicador clave de rendimiento (KPI) es una indicación visual que transmite la cantidad de progreso realizado hacia la consecución de un objetivo.  Los indicadores clave de rendimiento sirven para que los equipos, los administradores y las empresas evalúen rápidamente el progreso realizado frente a objetivos cuantificables.   
   
 Si utiliza KPI en SQL Server 2016, podrá visualizar rápidamente las respuestas a las siguientes preguntas:  
@@ -26,22 +34,22 @@ Si utiliza KPI en SQL Server 2016, podrá visualizar rápidamente las respuestas
   
 -   ¿Cuál es el progreso mínimo completado?  
   
-## Creación de un conjunto de datos  
+## <a name="creating-a-dataset"></a>Creación de un conjunto de datos  
 Un KPI solo utilizará la primera fila de datos de un conjunto de datos compartido. Asegúrese de que los datos que desea utilizar se encuentran en la primera fila. Para crear un conjunto de datos compartido, puede utilizar el Generador de informes o SQL Server Data Tools.  
   
 > **Nota**: El conjunto de datos no tiene que estar en la misma carpeta que el KPI.  
   
-## Ubicación de los KPI  
+## <a name="placement-of-kpis"></a>Ubicación de los KPI  
   
 Los KPI pueden crearse en cualquier carpeta de su servidor de informes.  Antes de crear un KPI, deberá tener clara la ubicación correcta donde colocarlo. Se recomienda colocarlo en una carpeta que sea visible para los usuarios y a la vez pertinente para otros informes y KPI relacionados.  
   
-## Adición de un KPI  
+## <a name="adding-a-kpi"></a>Adición de un KPI  
   
 Después de determinar la ubicación de los KPI, vaya a la carpeta y seleccione **Nuevo** > **KPI** en el menú superior.  
   
 ![rsCreateKPI1](../reporting-services/media/rscreatekpi1.png)  
   
-Así se abrirá la pantalla **Nuevo KPI**.  
+Así se abrirá la pantalla **Nuevo KPI** .  
   
 ![rsCreateKPI2](../reporting-services/media/rscreatekpi2.png)  
   
@@ -61,11 +69,11 @@ Puede asignar valores estáticos o utilizar los datos de un conjunto de datos co
   
 Para utilizar datos de un conjunto de datos compartido, puede realizar lo siguiente:  
   
-1.  Cambie el valor del cuadro desplegable del campo de **Set manually** (Establecer manualmente), o **Not set** (No establecido), a **Dataset field** (Campo de conjunto de datos).  
+1.  Cambie el valor del cuadro desplegable del campo de **Set manually**(Establecer manualmente), o **Not set**(No establecido), a **Dataset field**(Campo de conjunto de datos).  
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2.  Seleccione **…** (los puntos suspensivos) en el cuadro de datos. Se abrirá la pantalla **Pick a Dataset** (Elegir un conjunto de datos).  
+2.  Seleccione el **puntos suspensivos (...)**  en el cuadro de datos. Se abrirá la pantalla **Pick a Dataset** (Elegir un conjunto de datos).  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
@@ -83,11 +91,11 @@ Para utilizar datos de un conjunto de datos compartido, puede realizar lo siguie
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)  
   
-## Eliminación de un KPI  
+## <a name="removing-a-kpi"></a>Eliminación de un KPI  
   
 Para quitar un KPI, puede hacer lo siguiente.  
   
-1.  Seleccione **...** (los puntos suspensivos) del KPI que desea quitar. Seleccione **Administrar**.  
+1.  Seleccione el **puntos suspensivos (...)**  del KPI que desea quitar. Seleccione **Administrar**.  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   
@@ -95,41 +103,13 @@ Para quitar un KPI, puede hacer lo siguiente.
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   
-## Actualización de un KPI  
+## <a name="refreshing-a-kpi"></a>Actualización de un KPI  
   
-Para actualizar el KPI, tendrá que configurar un **plan de actualización de caché** el conjunto de datos compartido. Actualmente, no es posible configurar un plan de actualización de caché desde el portal web. Debe ir al antiguo Administrador de informes para hacerlo.   
+Para actualizar el KPI, debe configurar un almacenamiento en caché para el conjunto de datos compartido. Para obtener más información sobre la memoria caché de planes de actualización, vea [trabajar con conjuntos de datos compartidos](../reporting-services/work-with-shared-datasets-web-portal.md).  
   
-Este lo guiará por los pasos necesarios para configurar un plan de actualización de caché con algunas opciones básicas. Para obtener más información sobre los planes de actualización de caché, consulte [Opciones de actualización de memoria caché (Administrador de informes)](Cache%20Refresh%20Options%20(Report%20Manager).xml).  
+## <a name="next-steps"></a>Pasos siguientes
   
-1.  Abra el Administrador de informes y busque el conjunto de datos compartido para el que desea configurar las propiedades del plan de actualización de caché.   
-  
-2.  Pase el mouse por encima del informe o el conjunto de datos compartido, y seleccione la flecha de lista desplegable.  
-  
-3.  En la lista desplegable, seleccione **Administrar**. Se abrirá la página **Propiedades generales**.  
-  
-4.  Seleccione la pestaña **Opciones de actualización de caché**.  
-  
-5.  Para crear un nuevo plan de memoria caché, haga clic en **Nuevo plan de actualización de caché**.  
-  
-    ![rsRefreshKPI1](../reporting-services/media/rsrefreshkpi1.png)  
-  
-6.  Se le mostrará un mensaje donde se le pregunta si desea habilitar el almacenamiento en caché para este elemento con las opciones predeterminadas. Elija **Aceptar**.  
-  
-    > **Nota:** Debe habilitar e iniciar el servicio del Agente SQL Server para crear un plan de actualización de caché.  
-  
-7.  Puede elegir una programación específica o seleccionar una compartida, si existe alguna.  
-  
-8.  Los valores del KPI se actualizarán cuando se ejecute la programación del plan de actualización de caché.  
-  
-    ![rsRefreshKPI2](../reporting-services/media/rsrefreshkpi2.png)  
-  
-## Vea también  
-  
-- [Portal web (modo nativo de SSRS)](../reporting-services/web-portal-ssrs-native-mode.md)  
-  
-- [Opciones de actualización de memoria caché (Administrador de informes)](Cache%20Refresh%20Options%20(Report%20Manager).xml)  
-  
-    
-  
-  
-  
+[Portal Web](../reporting-services/web-portal-ssrs-native-mode.md)  
+[Trabajar con conjuntos de datos compartidos](../reporting-services/work-with-shared-datasets-web-portal.md)
+
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

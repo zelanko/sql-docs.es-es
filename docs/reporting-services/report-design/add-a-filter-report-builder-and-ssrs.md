@@ -1,23 +1,28 @@
 ---
-title: "Agregar un filtro (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Agregar un filtro (generador de informes y SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 088e219e120eeb6b4608db9379811caf1b5406cd
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Agregar un filtro (Generador de informes y SSRS)
+# <a name="add-a-filter-report-builder-and-ssrs"></a>Agregar un filtro (Generador de informes y SSRS)
   Agregue un filtro a un conjunto de datos, una región de datos o un grupo cuando desee incluir o excluir valores específicos para la realización de cálculos o la visualización. Los filtros se aplican en tiempo de ejecución y en este orden: primero en el conjunto de datos, a continuación, en la región de datos y, por último, en el grupo; en las jerarquías de grupo, se aplican en orden descendente. En una tabla, matriz o lista, los filtros de los grupos de filas, los grupos de columnas y los grupos adyacentes se aplican de forma independiente. En un gráfico, también se aplican de forma independiente los filtros de los grupos de categorías y los grupos de series.  
   
  Para agregar un filtro, debe especificar una o varias ecuaciones de filtro. Una ecuación de filtro se compone de una expresión que identifica los datos que se van a filtrar, un operador y el valor con el que se va a llevar a cabo la comparación. Los tipos de datos de los datos filtrados y el valor deben coincidir. No está permitido el filtrado por valores agregados para un conjunto de datos o una región de datos.  
@@ -29,11 +34,11 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Para establecer un filtro en una región de datos  
+### <a name="to-set-a-filter-on-a-data-region"></a>Para establecer un filtro en una región de datos  
   
 1.  Abra un informe en la vista **Diseño** .  
   
-2.  En la superficie de diseño, seleccione la región de datos y, después, haga clic con el botón derecho en **Propiedades de** *\<región de datos>*. Si se trata de un medidor, seleccione **Propiedades del panel de medidores**. Se abre el cuadro de diálogo **Propiedades de** *\<región de datos>*.  
+2.  Seleccione la región de datos en la superficie de diseño y, a continuación, haga clic en  *\<región de datos >***propiedades**. Si se trata de un medidor, seleccione **Propiedades del panel de medidores**. El  *\<región de datos >***propiedades** abre el cuadro de diálogo.  
   
     > [!NOTE]  
     >  En una región de datos Tablix, haga clic con el botón derecho en la celda de la esquina o en un identificador de fila o columna y, después, haga clic en **Propiedades de Tablix**.  
@@ -54,7 +59,7 @@ caps.handback.revision: 8
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Para establecer un filtro en un grupo de filas o de columnas de un Tablix  
+### <a name="to-set-a-filter-on-a-tablix-row-or-column-group"></a>Para establecer un filtro en un grupo de filas o de columnas de un Tablix  
   
 1.  Abra un informe en la vista **Diseño** .  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 8
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Para establecer un filtro en un grupo de categorías de gráfico  
+### <a name="to-set-a-filter-on-a-chart-category-group"></a>Para establecer un filtro en un grupo de categorías de gráfico  
   
 1.  Abra un informe en la vista **Diseño** .  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 8
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Para establecer un filtro en un grupo de series de gráfico  
+### <a name="to-set-a-filter-on-a-chart-series-group"></a>Para establecer un filtro en un grupo de series de gráfico  
   
 1.  Abra un informe en la vista **Diseño** .  
   
@@ -126,8 +131,8 @@ caps.handback.revision: 8
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Vea también  
- [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+## <a name="see-also"></a>Vea también  
+ [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

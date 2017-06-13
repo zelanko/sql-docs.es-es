@@ -1,0 +1,5 @@
+# [Autenticación de Windows en Reporting Services](authentication-in-reporting-services.md)
+# [Autorización en Reporting Services](authorization-in-reporting-services.md)
+# [Cómo instalar extensiones de seguridad personalizadas](how-to-install-custom-security-extensions.md)
+# [Implementar una extensión de seguridad](implementing-a-security-extension.md)
+# [Información general de las extensiones de seguridad](security-extensions-overview.md)

@@ -1,23 +1,28 @@
 ---
-title: "Modificar un archivo de configuraci&#243;n de Reporting Services (RSreportserver.config) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Modificar un archivo de configuración de Reporting Services (RSreportserver.config) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: f5862f4faec4784aac678d578c155ac5992a55f6
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Modificar un archivo de configuraci&#243;n de Reporting Services (RSreportserver.config)
+# <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modificar un archivo de configuración de Reporting Services (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] almacena la configuración de la aplicación en un conjunto de archivos de configuración. La instalación crea los archivos de configuración para cada instancia del servidor de informes que instala. Dentro de cada archivo, los valores se establecen durante la instalación o al usar herramientas y aplicaciones para configurar un servidor para la operación. En algunos casos, debe modificar directamente un archivo para agregar o configurar la configuración avanzada. Los parámetros de configuración se especifican como atributos o elementos XML. Si comprende XML y los archivos de configuración, puede utilizar un editor de texto o de código para modificar las opciones de configuración definibles por el usuario.  
   
  Algunos valores de configuración solo se pueden establecer a través de una herramienta. La configuración que contiene valores cifrados se debe modificar a través de la herramienta de configuración de Reporting Services, el programa de instalación o la utilidad de línea de comandos **rsconfig** . Debe ser miembro del grupo local de administradores para ejecutar estas herramientas.  
@@ -59,13 +64,24 @@ caps.handback.revision: 7
     -   **RSReportServer.config** se encuentra en la siguiente carpeta:  
   
         ```  
-        C:\Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer  
+        C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
         ```  
+        
+        ||  
+        |-|  
+        |**[!INCLUDE[applies](../../includes/applies-md.md)]**  Versión preliminar técnica de informes de Power BI en SQL Server Reporting Services de enero de 2017|
+        
+        ```  
+        C:\Program Files\Microsoft SQL Server Reporting Services\RSServer\ReportServer
+        ```
   
     -   **RSReportServerServices.exe.config** se encuentra en la siguiente carpeta:  
+    
+        > [!NOTE] 
+        > Esto no está disponible con la de enero de 2017 los informes de vista previa técnica de Power BI de SQL Server Reporting Services.
   
         ```  
-        C:\Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer\bin  
+        C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer\bin  
         ```  
   
     -   **RSReportDesigner.config** se encuentra en la siguiente carpeta:  
@@ -82,7 +98,7 @@ caps.handback.revision: 7
   
     -   [Autenticación con el servidor de informes](../../reporting-services/security/authentication-with-the-report-server.md)  
   
-    -   [Configurar el Administrador de informes para pasar cookies de autenticación personalizada](../Topic/Configure%20Report%20Manager%20to%20Pass%20Custom%20Authentication%20Cookies.md)  
+    -   [Configurar el portal web para pasar cookies de autenticación personalizada](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
   
     -   [Personalizar los parámetros de extensión de representación en RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
@@ -90,14 +106,14 @@ caps.handback.revision: 7
   
 6.  Compruebe los archivos de registro de seguimiento para ver que no se produjeron errores. Si observa condiciones de error es porque una opción de configuración o su valor se especificó incorrectamente. Examine [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) para ver los valores válidos para cualquier configuración que esté produciendo un error. Para obtener más información sobre cómo ver el registro de seguimiento, vea [Registro de seguimiento del servicio del servidor de informes](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Archivo de configuración ReportingServicesService](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)   
  [Archivo de configuración RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [Implementar una extensión de procesamiento de datos](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Implementar una extensión de entrega](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [Implementar una extensión de representación](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [Cómo implementar un elemento de informe personalizado](../Topic/How%20to:%20Deploy%20a%20Custom%20Report%20Item.md)   
  [Archivos de configuración de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)  
   
   
+

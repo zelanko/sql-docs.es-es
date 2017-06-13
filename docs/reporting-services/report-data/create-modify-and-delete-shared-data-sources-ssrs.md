@@ -1,36 +1,41 @@
 ---
-title: "Crear, modificar y eliminar or&#237;genes de datos compartidos (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modificar propiedades del origen de datos"
-  - "orígenes de datos compartidos [Reporting Services]"
-  - "quitar orígenes de datos compartidos"
-  - "roles [Reporting Services], orígenes de datos compartidos"
-  - "orígenes de datos [Reporting Services], compartidos"
-  - "orígenes de datos [Reporting Services], modificar propiedades"
-  - "eliminar orígenes de datos compartidos"
+title: "Crear, modificar y eliminar orígenes de datos compartidos (SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying data source properties
+- shared data sources [Reporting Services]
+- removing shared data sources
+- roles [Reporting Services], shared data sources
+- data sources [Reporting Services], shared
+- data sources [Reporting Services], modifying properties
+- deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 caps.latest.revision: 53
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 53
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 3d4025539369dcc955e8675a92def39e356cb86d
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Crear, modificar y eliminar or&#237;genes de datos compartidos (SSRS)
-  Un origen de datos compartido es un conjunto de propiedades de conexión de un origen de datos a las que pueden hacer referencia varios informes, modelos y suscripciones controladas por datos que se ejecutan en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  Los orígenes de datos compartidos proporcionan una manera fácil de administrar las propiedades del origen de datos que, a menudo, cambian con el tiempo. Si una cuenta de usuario o una contraseña cambia, o si mueve la base de datos a otro servidor, puede actualizar la información de conexión en un único lugar.  
+# <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Crear, modificar y eliminar orígenes de datos compartidos (SSRS)
+  Un origen de datos compartido es un conjunto de propiedades de conexión de un origen de datos a las que pueden hacer referencia varios informes, modelos y suscripciones controladas por datos que se ejecutan en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Los orígenes de datos compartidos proporcionan una manera fácil de administrar las propiedades del origen de datos que, a menudo, cambian con el tiempo. Si una cuenta de usuario o una contraseña cambia, o si mueve la base de datos a otro servidor, puede actualizar la información de conexión en un único lugar.  
   
  El siguiente icono indica que existe un origen de datos compartido en la jerarquía de carpetas del Administrador de informes:  
   
- ![Icono de origen de datos compartido](../../reporting-services/report-data/media/hlp-16datasource.png "Icono de origen de datos compartido")  
+ ![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")  
 Icono de origen de datos compartido  
   
  Los orígenes de datos compartidos son opcionales para los informes y para las suscripciones controladas por datos, pero obligatorios para los modelos de informe. Si tiene previsto usar modelos de informe para la notificación ad hoc, deberá crear y mantener un elemento de origen de datos compartido que proporcione información de conexión al modelo.  
@@ -47,7 +52,7 @@ Icono de origen de datos compartido
   
  El origen de datos compartido no contiene información de consulta utilizada para recuperar datos. La consulta siempre se conserva en la definición de informe.  
   
-## Creación y modificación de origen de datos compartidos  
+## <a name="creating-and-modifying-shared-data-sources"></a>Creación y modificación de origen de datos compartidos  
  Para crear un origen de datos compartido o modificar sus propiedades, debe tener permisos de tipo **Administrar orígenes de datos** en el servidor de informes. Si el servidor de informes se ejecuta en modo nativo, puede usar el Administrador de informes para crear y configurar el origen de datos compartido. Si el servidor de informes se ejecuta en el modo integrado de SharePoint, puede usar las páginas de aplicación de un sitio de SharePoint. Para cualquier servidor de informes, sea cual sea su modo, puede crear un origen de datos compartido en el Diseñador de informes y, a continuación, publicarlo en un servidor de destino.  
   
  Después de crear un origen de datos compartido en el servidor de informes, puede crear asignaciones de roles para controlar el acceso a él, moverlo a otra ubicación, cambiar su nombre o ponerlo en modo sin conexión para evitar el procesamiento de informes mientras se realizan operaciones de mantenimiento en el origen de datos externos. Si cambia de nombre o mueve un origen de datos compartido a otra ubicación en la jerarquía de carpetas del servidor de informes, la información de ruta de acceso en todos los informes o suscripciones que hagan referencia a él se actualiza en consecuencia. Si pone el origen de datos en modo sin conexión, todos los informes, modelos y suscripciones dejarán de ejecutarse hasta que vuelva a habilitar el origen de datos.  
@@ -59,7 +64,7 @@ Icono de origen de datos compartido
 1.  En la barra de herramientas del panel Datos de informe, haga clic en **Nuevo** y, a continuación, haga clic en **Origen de datos**. Se abre el cuadro de diálogo **Propiedades del origen de datos** .  
   
     > [!NOTE]  
-    >  Si el panel Datos de informe no es visible, haga clic en **Datos de informe** en el menú **Ver**.  
+    >  Si el panel Datos de informe no es visible, haga clic en **Datos de informe** en el menú **Ver** .  
   
 2.  En el cuadro de texto **Nombre** , escriba un nombre para el origen de datos o acepte el valor predeterminado. El nombre del origen de datos se utiliza internamente en el informe. Para evitar confusiones, se recomienda que el nombre del origen de datos contenga el nombre de la base de datos especificada en la cadena de conexión.  
   
@@ -77,13 +82,13 @@ Icono de origen de datos compartido
   
  **Para crear un origen de datos compartido en el Administrador de informes**  
   
-1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  En el Administrador de informes, navegue hasta la página **Contenido** .  
   
 3.  Haga clic en **Nuevo origen de datos**. Se abre la página **Nuevo origen de datos** .  
   
-4.  Escriba el nombre del elemento. El nombre debe incluir al menos un carácter y debe empezar con una letra. También puede incluir determinados símbolos, pero no espacios en blanco o los caracteres ; ? : @ & = + , $ / * \< > | " /.  
+4.  Escriba el nombre del elemento. El nombre debe incluir al menos un carácter y debe empezar con una letra. También puede incluir determinados símbolos, pero no espacios en blanco o los caracteres ; ? : @ & = + , $ / * < > | " /.  
   
 5.  Si lo desea, escriba una descripción que ofrezca a los usuarios información sobre la conexión. Esta descripción aparecerá en la página **Contenido** del Administrador de informes.  
   
@@ -105,7 +110,7 @@ Icono de origen de datos compartido
   
     -   Si desea que el servidor de informes envíe las credenciales del usuario que tiene acceso al informe al servidor que hospeda el origen de datos externo, haga clic en **Seguridad integrada de Windows NT**. En este caso, no se solicita al usuario que escriba un nombre de usuario ni una contraseña.  
   
-    -   Si el origen de datos no usa credenciales (por ejemplo, si el origen de datos es un archivo XML al que se accede desde el sistema de archivos), haga clic en **No se necesitan credenciales**. Solo debería especificar este tipo de credencial si es válido para el origen de datos. Si selecciona esta opción para un origen de datos que requiere autenticación, se producirá un error en la conexión. Si selecciona esta opción, asegúrese de que configura la cuenta de ejecución desatendida que permite al servidor de informes conectar a otros equipos para recuperar datos o archivos cuando las credenciales del usuario no están disponibles.  
+    -   Si el origen de datos no usa credenciales (por ejemplo, si el origen de datos es un archivo XML al que se tiene acceso desde el sistema de archivos), haga clic en **No se necesitan credenciales**. Solo debería especificar este tipo de credencial si es válido para el origen de datos. Si selecciona esta opción para un origen de datos que requiere autenticación, se producirá un error en la conexión. Si selecciona esta opción, asegúrese de que configura la cuenta de ejecución desatendida que permite al servidor de informes conectar a otros equipos para recuperar datos o archivos cuando las credenciales del usuario no están disponibles.  
   
          Para más información sobre la configuración de credenciales, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Para más información sobre la cuenta de ejecución desatendida, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
@@ -120,11 +125,11 @@ Icono de origen de datos compartido
   
 1.  En el Administrador de informes, navegue a la página Contenido.  
   
-2.  Navegue al elemento de orígenes de datos compartidos, mantenga el mouse sobre el elemento, haga clic en la lista desplegable y seleccione **Administrar** en el menú contextual. Se abre la página **Propiedades** .  
+2.  Navegue al elemento de orígenes de datos compartidos, mantenga el mouse sobre el elemento, haga clic en la lista desplegable y seleccione **Administrar**en el menú contextual. Se abre la página **Propiedades** .  
   
 3.  Modifique el origen de datos y, a continuación, haga clic en **Aplicar**.  
   
-## Eliminación de orígenes de datos compartidos  
+## <a name="deleting-shared-data-sources"></a>eliminar orígenes de datos compartidos  
  Puede eliminar un origen de datos compartido de la misma manera que eliminaría cualquier elemento del servidor de informes.  
   
  **Para eliminar un origen de datos compartido**  
@@ -139,7 +144,7 @@ Icono de origen de datos compartido
   
     -   En la página **Contenido** , navegue a la carpeta que contiene el origen de datos que desea eliminar.  
   
-         Mantenga el mouse sobre el elemento, haga clic en la lista desplegable y seleccione **Eliminar** en el menú contextual.  
+         Mantenga el mouse sobre el elemento, haga clic en la lista desplegable y seleccione **Eliminar**en el menú contextual.  
   
          [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -151,7 +156,7 @@ Icono de origen de datos compartido
   
  No hay ninguna operación de deshacer para eliminar un origen de datos compartido. Sin embargo, si elimina accidentalmente un origen de datos compartido, puede crear uno nuevo usando las mismas propiedades que las del origen eliminado. Tendrá que abrir cada uno de los informes, modelos y suscripciones controladas por datos para volver a enlazar el origen de datos compartido al elemento que lo usa, pero siempre y cuando las propiedades del origen de datos sean las mismas, los informes, modelos y suscripciones continuarán funcionando como antes.  
   
-## Importación de orígenes de datos compartidos  
+## <a name="importing-shared-data-sources"></a>Importación de orígenes de datos compartidos  
  **Para importar un origen de datos existente en el Diseñador de informes**  
   
 1.  En el Explorador de soluciones, haga clic con el botón derecho en la carpeta **Orígenes de datos compartidos** del proyecto de servidor de informes y, después, haga clic en **Agregar elemento existente**. Se abrirá el cuadro de diálogo **Agregar elemento existente** .  
@@ -160,7 +165,7 @@ Icono de origen de datos compartido
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Orígenes de datos compartidos en SharePoint  
+## <a name="shared-data-sources-in-sharepoint"></a>Orígenes de datos compartidos en SharePoint  
  Al ejecutar un informe desde una biblioteca de SharePoint, la información de conexión puede definirse dentro del informe o en un archivo externo que esté vinculado al informe. Si la información de conexión está incrustada en el informe, se denomina origen de datos personalizado. Si la información de conexión se define en un archivo externo, se denomina origen de datos compartido. El archivo externo puede ser un archivo de origen de datos del servidor de informes (.rsds) o un archivo de conexión de datos de Office (.odc).  
   
  Un archivo .rsds es similar a un archivo .rds, pero tiene un esquema distinto. Para crear un archivo .rsds, puede publicar un archivo .rds del Diseñador de informes o del Diseñador de modelos en una biblioteca de SharePoint (se creará un nuevo archivo .rsds a partir del archivo .rds original). O bien, puede crear un nuevo archivo en una biblioteca de un sitio de SharePoint.  
@@ -215,7 +220,7 @@ Icono de origen de datos compartido
   
  Tenga cuidado al eliminar un modelo de informe. Si elimina un modelo, no podrá abrir ni modificar ningún informe basado en ese modelo en el Generador de informes. Si elimina accidentalmente un modelo utilizado por los informes existentes, deberá volver a generar el modelo, deberá volver a crear y guardar todos los informes que utilicen dicho modelo y deberá volver a especificar la seguridad de elementos de modelo que desee utilizar. No basta con volver a generar el modelo y luego adjuntarlo a un informe existente.  
   
-## Elementos dependientes  
+## <a name="dependent-items"></a>Elementos dependientes  
  Si desea ver una lista de informes y modelos que usan el origen de datos, abra la página Elementos dependientes para el origen de datos compartido. Puede tener acceso a esta página al abrir el origen de datos en el Administrador de informes o en una página de aplicación de SharePoint. Observe que la página Elementos dependientes no muestra las suscripciones controladas por datos. Si una suscripción usa un origen de datos compartido, la suscripción no aparecerá en la lista de elementos dependientes.  
   
  **Para ver elementos dependientes en SharePoint**  
@@ -228,14 +233,15 @@ Icono de origen de datos compartido
   
      En el caso de los modelos de informe, la lista de elementos dependientes muestra los informes creados en el Generador de informes. En el caso de los orígenes de datos compartidos, la lista de elementos dependientes puede incluir tanto informes como modelos de informe.  
   
-## Vea también  
- [Crear y administrar orígenes de datos compartidos &#40;Reporting Services en el modo integrado de SharePoint&#41;](../Topic/Create%20and%20Manage%20Shared%20Data%20Sources%20\(Reporting%20Services%20in%20SharePoint%20Integrated%20Mode\).md)   
+## <a name="see-also"></a>Vea también  
+ [Crear y administrar orígenes de datos compartidos &#40;Reporting Services en el modo integrado de SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Administrar orígenes de datos de informe](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Administrador de informes &#40;Modo nativo de SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
- [Conexiones de datos u orígenes de datos compartidos e incrustados &#40;Generador de informes y SSRS&#41;](../Topic/Embedded%20and%20Shared%20Data%20Connections%20or%20Data%20Sources%20\(Report%20Builder%20and%20SSRS\).md)   
- [Orígenes de datos &#40;página de propiedades del Administrador de informes&#41;](../Topic/Data%20Sources%20Properties%20Page%20\(Report%20Manager\).md)   
- [Crear, eliminar o modificar un origen de datos compartido &#40;Administrador de informes&#41;](../Topic/Create,%20Delete,%20or%20Modify%20a%20Shared%20Data%20Source%20\(Report%20Manager\).md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Conexiones de datos u orígenes de datos compartidos e incrustados &#40;Generador de informes y SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
+ [Orígenes de datos &#40;página de propiedades del Administrador de informes&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
+ [Crear, eliminar o modificar un origen de datos compartido &#40;Administrador de informes&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
  [Configurar propiedades de origen de datos para un informe &#40;Administrador de informes&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   
+

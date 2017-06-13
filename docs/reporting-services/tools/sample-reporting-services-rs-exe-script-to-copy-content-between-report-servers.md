@@ -1,30 +1,34 @@
 ---
-title: "Script rs.exe de ejemplo de Reporting Services para copiar contenido entre servidores de informes | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/27/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Script rs.exe para copiar contenido entre servidores de informes de servicios de informes de ejemplo | Documentos de Microsoft
+ms.custom: 
+ms.date: 07/27/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b46f26baae77ec3c18e0a4291e5c5cbfa8e672e1
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Script rs.exe de ejemplo de Reporting Services para copiar contenido entre servidores de informes
+# <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Script rs.exe de ejemplo de Reporting Services para copiar contenido entre servidores de informes
   Este tema incluye y describe un script RSS de ejemplo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que copia elementos y configuraciones de contenido de un servidor de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a otro servidor de informes mediante la utilidad **RS.exe** . RS.exe se instala con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], en los modos nativo y de SharePoint. El script copia elementos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , como informes y suscripciones, de un servidor a otro. El script admite servidores de informes del modo de SharePoint y de modo nativo.  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
   
-## En este tema:  
+> **[!INCLUDE[applies](../../includes/applies-md.md)]**  Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 
+  
+## <a name="in-this-topic"></a>En este tema:  
   
 -   [Para descargar el script ssrs_migration.rss](#bkmk_download_script)  
   
@@ -95,7 +99,7 @@ caps.handback.revision: 15
 |Mis informes|**No**|**No**|La característica "Mis informes" del modo nativo se basa en inicios de sesión de usuarios individuales, por lo que el servicio de scripting no tiene acceso al contenido de las carpetas "Mis informes" para los usuarios que no hayan usado el parámetro **– u** para ejecutar el script RSS. Además, "Mis informes" no es una característica del modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y los elementos de las carpetas no se pueden copiar a un entorno de SharePoint. Por tanto, el script no copia elementos de informe que se encuentran en las carpetas "Mis informes” de un servidor de informes en modo nativo de origen.<br /><br /> Para migrar el contenido de las carpetas "Mis informes" con este script, haga lo siguiente:<br /><br /> 1.  Cree nuevas carpetas en el Administrador de informes. Opcionalmente, puede crear carpetas o subcarpetas para cada usuario.<br />2.  Inicie sesión como uno de los usuarios con contenido de "Mis informes".<br />3.  En el Administrador de informes, haga clic en la carpeta **Mis informes**.<br />4.  Haga clic en la vista **Detalles** de la carpeta.<br />5.  Seleccione cada informe que desea copiar.<br />6.  Haga clic en **Mover** en la barra de herramientas del Administrador de informes.<br />7.  Seleccione la carpeta de destino deseada.<br />8.  Repita los pasos 2 a 7 para cada usuario.<br />9. Ejecute el script.|  
 |Historial|**No**|**No**||  
 |Configuración del historial|Sí|Sí|La configuración del historial se migra, pero los detalles del historial NO se migran.|  
-|Programaciones|sí|sí|Para migrar programaciones, es necesario que el Agente SQL Server se esté ejecutando en el servidor de destino. Si el Agente SQL Server no se está ejecutando en el destino, verá un mensaje de error similar al siguiente:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
+|Programaciones|Sí|Sí|Para migrar programaciones, es necesario que el Agente SQL Server se esté ejecutando en el servidor de destino. Si el Agente SQL Server no se está ejecutando en el destino, verá un mensaje de error similar al siguiente:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
 |Roles y directivas del sistema|Sí|Sí|De forma predeterminada, el script no copiará el esquema de permisos personalizado entre servidores. El comportamiento predeterminado es que los elementos se copien al servidor de destino con la marca ‘inherit parent permissions’ establecida en TRUE. Si desea que el script copie permisos para elementos individuales, use el modificador SECURITY.<br /><br /> Si los servidores de origen y de destino **no están en el mismo modo del servidor de informes**, por ejemplo de modo nativo a modo de SharePoint, y usa el modificador SECURITY, el script intentará asignar roles y grupos predeterminados según la comparación que se muestra en el tema [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md). Los roles y grupos personalizados no se copian al servidor de destino.<br /><br /> Cuando el script va a copiar datos entre servidores **que están en el mismo modo**, y usa el modificador SECURITY, el script creará nuevos roles (modo nativo) o grupos (modo de SharePoint) en el servidor de destino.<br /><br /> Si un rol ya existe en el servidor de destino, el script creará un mensaje de "Error" similar al siguiente y continuará con la migración de otros elementos. Cuando se completa el script, compruebe que los roles del servidor de destino están configurados de acuerdo con sus necesidades. the Migrating roles: 8 items found.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> Para más información, vea [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).<br /><br /> **Nota** : si un usuario que existe en el servidor de origen no existe en el servidor de destino, el script no puede aplicar las asignaciones de roles en el servidor de destino, incluso aunque se use el modificador SECURITY.|  
 |Origen de datos compartido|Sí|Sí|El script no sobrescribirá elementos existentes en el servidor de destino. Si ya existe un elemento en el servidor de destino con el mismo nombre, verá un mensaje de error similar al siguiente:<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> Las credenciales **NO** se copian como parte del origen de datos. Después de migrar elementos de contenido, actualice la información de credenciales en el servidor de destino.|  
 |Conjunto de datos compartidos|Sí|Sí||  
@@ -324,7 +328,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
 ##  <a name="bkmk_verification"></a> Comprobación  
  En esta sección se resumen algunos pasos que se deben realizar en el servidor de destino para comprobar que el contenido y las directivas se han migrado correctamente.  
   
-### Programaciones  
+### <a name="schedules"></a>Programaciones  
  Para comprobar las programaciones en el servidor de destino:  
   
  **Modo nativo**  
@@ -341,7 +345,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
   
 2.  En el grupo **Reporting Services** , haga clic en **Administrar programaciones compartidas**.  
   
-### Roles y grupos  
+### <a name="roles-and-groups"></a>Roles y grupos  
  **Modo nativo**  
   
 1.  Abra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y conéctese al servidor de informes en modo nativo.  
@@ -353,14 +357,15 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
 ##  <a name="bkmk_troubleshoot"></a> Solucionar problemas  
  Use la marca de seguimiento **– t** para recibir más información. Por ejemplo, si ejecuta el script y ve un mensaje similar al siguiente  
   
--   No se pudo conectar al servidor: http://\<servername>/ReportServer/ReportService2010.asmx  
+-   No se pudo conectar al servidor: http://\<servername > /ReportServer/ReportService2010.asmx  
   
  Ejecute el script de nuevo con la marca **– t** ; verá un mensaje similar al siguiente:  
   
--   Excepción del sistema: No se pudo conectar al servidor: http://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **Error en la solicitud con el estado HTTP 401: No autorizado**.   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)   at Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired()   at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout)   at Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()   --- End of inner exception stack trace ---  
+-   System.Exception: No se pudo conectar al servidor: http://\<servername > /ReportServer/ReportService2010.asmx---> System.Net.WebException: **error en la solicitud con estado HTTP 401: no autorizado**.   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)   at Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired()   at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout)   at Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()   --- End of inner exception stack trace ---  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Utilidad RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   
- [Comparar roles y tareas de Reporting Services con grupos y permisos de SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
   
+

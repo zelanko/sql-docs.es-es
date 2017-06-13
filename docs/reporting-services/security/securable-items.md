@@ -1,28 +1,33 @@
 ---
-title: "Elementos protegibles | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "elementos protegibles [Reporting Services]"
-  - "roles [Reporting Services], elementos protegibles"
-  - "seguridad [Reporting Services], elementos protegibles enumerados"
-  - "seguridad basada en funciones [Reporting Services], elementos protegibles"
+title: Elementos protegibles | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- securable items [Reporting Services]
+- roles [Reporting Services], securable items
+- security [Reporting Services], securable items listed
+- role-based security [Reporting Services], securable items
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
 caps.latest.revision: 45
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 45
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1c11b204b5a48e4324f49e05467cc3ac96e7fa4
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Elementos protegibles
+# <a name="securable-items"></a>Elementos protegibles
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa la seguridad basada en roles para controlar el acceso a los elementos que se almacenan en un servidor de informes. Cuando concede un acceso de usuario a un servidor de informes, normalmente lo hace creando un par de asignaciones de roles:  
   
 -   En el nivel de sitio  
@@ -47,7 +52,7 @@ caps.handback.revision: 45
   
  Otras construcciones, como programaciones y suscripciones, no se protegen de forma explícita. Las programaciones y suscripciones operan en el contexto de seguridad de un informe.  
   
-## Descripciones de elementos  
+## <a name="item-descriptions"></a>Descripciones de elementos  
  La siguiente tabla muestra los elementos protegibles y describe sus características.  
   
 |Elemento|Características|  
@@ -59,10 +64,10 @@ caps.handback.revision: 45
 |Orígenes de datos compartidos|Los orígenes de datos compartidos se pueden proteger para limitar el acceso al elemento y sus páginas de propiedades. Para obtener más información, vea [Proteger elementos de orígenes de datos compartidos](../../reporting-services/security/secure-shared-data-source-items.md).|  
 |Conjuntos de datos compartidos|Los conjuntos de datos compartidos se pueden proteger para controlar el intervalo de acciones que los usuarios pueden realizar, como ver o cambiar la definición, o cambiar las propiedades de un conjunto de datos compartido determinado.<br /><br /> Para obtener más información, vea [Proteger los elementos de un conjunto de datos compartido](../../reporting-services/security/secure-shared-dataset-items.md).|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](../../reporting-services/security/create-delete-or-modify-a-role-management-studio.md)   
+ [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modificar o eliminar una asignación de roles &#40;Administrador de informes&#41;](../../reporting-services/security/modify-or-delete-a-role-assignment-report-manager.md)  
+ [Modificar o eliminar una asignación de roles &#40;Administrador de informes&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
   
   

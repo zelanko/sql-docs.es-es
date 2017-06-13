@@ -1,27 +1,38 @@
 ---
-title: "Crear una alerta de datos en el Dise&#241;ador de alertas de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Crear una alerta de datos en el Diseñador de alertas de datos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 05/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 13
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 5203aab062888ca40ee83ee3f00521d6661defba
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Crear una alerta de datos en el Dise&#241;ador de alertas de datos
-  Las definiciones de alertas de datos se crean en el Diseñador de alertas de datos. Una vez guardadas las definiciones de alertas, es posible volver a abrirlas, modificarlas y volver a guardarlas en el Diseñador de alertas de datos. Para más información sobre cómo editar definiciones de alertas, vea [Administrar mis alertas de datos en el Administrador de alertas de datos](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) y [Editar una alerta de datos en el Diseñador de alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
-  
-### Para crear una definición de alertas de datos  
-  
+# <a name="create-a-data-alert-in-data-alert-designer"></a>Crear una alerta de datos en el Diseñador de alertas de datos
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+Las definiciones de alertas de datos se crean en el Diseñador de alertas de datos. Una vez guardadas las definiciones de alertas, es posible volver a abrirlas, modificarlas y volver a guardarlas en el Diseñador de alertas de datos. Para más información sobre cómo editar definiciones de alertas, vea [Administrar mis alertas de datos en el Administrador de alertas de datos](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) y [Editar una alerta de datos en el Diseñador de alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md).
+
+> [!NOTE]
+> Integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+
+## <a name="create-a-data-alert-definition"></a>Crear una definición de alerta de datos
+ 
 1.  Busque la biblioteca de SharePoint que contiene el informe para el que desea crear una definición de alerta de datos.  
   
 2.  Haga clic en el informe.  
@@ -35,7 +46,7 @@ caps.handback.revision: 13
   
      La imagen siguiente muestra el menú **Acciones** .  
   
-     ![Open Alert Designer from SharePoint library](../reporting-services/media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
+     ![Abra el Diseñador de alertas de biblioteca de SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "abrir Diseñador de alertas de biblioteca de SharePoint")  
   
      Se abre el Diseñador de alertas de datos y en él se muestra una tabla con las 100 primeras filas de la primera fuente de distribución de datos generada por el informe.  
   
@@ -44,9 +55,9 @@ caps.handback.revision: 13
     >   
     >  Si la opción **Nueva alerta de datos** aparece atenuada, el origen de datos del informe está configurado para utilizar las credenciales de seguridad integradas o para solicitar credenciales. Para que la opción **Nueva alerta de datos** esté disponible, debe actualizar el origen de datos de modo que use las credenciales almacenadas o no use credenciales.  
   
-     El nombre de la fuente de distribución de datos aparece en la lista desplegable **Nombre de los datos de informe**.  
+     El nombre de la fuente de distribución de datos aparece en la lista desplegable **Nombre de los datos de informe** .  
   
-4.  De manera opcional, seleccione otra fuente de distribución de datos en la lista desplegable **Nombre de los datos de informe**.  
+4.  De manera opcional, seleccione otra fuente de distribución de datos en la lista desplegable **Nombre de los datos de informe** .  
   
      Si no se genera ninguna fuente de distribución de datos a partir del informe, no puede crear una definición de alerta para el informe. El diseño del informe determina el contenido de cada fuente de distribución de datos. Para más información, vea [Generar fuentes de distribución de datos a partir de informes &#40;Generador de informes y SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
@@ -70,13 +81,13 @@ caps.handback.revision: 13
   
 10. Escriba el valor de comparación.  
   
-11. De manera opcional, vuelva a hacer clic en el signo de puntos suspensivos **(…)**.  
+11. De manera opcional, vuelva a hacer clic en el signo de puntos suspensivos **(…)** .  
   
      Los puntos suspensivos **(…)** aparecen en la línea que contiene la primera cláusula.  
   
      La cláusula OR se agrega debajo y dentro de la regla AND.  
   
-12. De manera opcional, haga clic en la flecha abajo, seleccione **Modo de selección de campos** y, después, seleccione una columna de la lista.  
+12. De manera opcional, haga clic en la flecha abajo, seleccione **Modo de selección de campos**y, después, seleccione una columna de la lista.  
   
      Observará que el signo de puntos suspensivos **(…)** en los que se hace clic para agregar cláusulas OR ha desaparecido.  
   
@@ -105,19 +116,20 @@ caps.handback.revision: 13
   
 19. Escriba las direcciones de correo electrónico de los destinatarios del mensaje de alerta. Separe las direcciones con signos de punto y coma.  
   
-     Si la dirección de correo electrónico de la persona que ha creado la definición de alerta está disponible, se agrega al cuadro **Destinatarios**.  
+     Si la dirección de correo electrónico de la persona que ha creado la definición de alerta está disponible, se agrega al cuadro **Destinatarios** .  
   
 20. Si lo desea, en el cuadro de texto **Asunto** , actualice la línea de asunto del mensaje de alerta.  
   
-     El asunto predeterminado es **Alerta de datos para \<nombre de alerta>**.  
+     El valor predeterminado es asunto **de alerta de datos para \<nombredealertadedatos >**.  
   
 21. Si lo desea, en el cuadro de texto **Descripción** , escriba una descripción del mensaje de alerta.  
   
 22. Haga clic en **Guardar**.  
-  
-## Vea también  
- [Diseñador de alertas de datos](../reporting-services/data-alert-designer.md)   
- [Administrador de alertas de datos para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [Alertas de datos de Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
-  
-  
+
+## <a name="see-also"></a>Vea también
+
+[Diseñador de alertas de datos](../reporting-services/data-alert-designer.md)   
+[Administrador de alertas de datos para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[Alertas de datos de Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
+
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

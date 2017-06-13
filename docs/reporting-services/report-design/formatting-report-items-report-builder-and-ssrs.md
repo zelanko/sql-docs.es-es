@@ -1,25 +1,30 @@
 ---
-title: "Aplicar formato a los elementos de informe (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10444"
+title: Aplicar formato a elementos de informe (generador de informes y SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 993571d2e5d70ba0553a0ed747caccfcadb3a0da
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Aplicar formato a los elementos de informe (Generador de informes y SSRS)
+# <a name="formatting-report-items-report-builder-and-ssrs"></a>Aplicar formato a los elementos de informe (Generador de informes y SSRS)
   Aplicar formato a los elementos del informe hace que este tenga una apariencia más atractiva y mejora su legibilidad. En el modo de diseño de informe se puede aplicar formato a los cuadros de texto y a los elementos incluidos en ellos, a las imágenes, a las expresiones y a los datos.  
   
  ![rs_FormattingReporttItems](../../reporting-services/report-design/media/rs-formattingreporttitems.gif "rs_FormattingReporttItems")  
@@ -37,7 +42,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  Describe cómo dar formato al texto y personalizar las opciones de formato para los distintos bloques de texto de un cuadro de texto.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 7
  [Establecer la configuración regional de un informe o un cuadro de texto &#40;Reporting Services&#41;](../../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  Describe cómo cambiar la configuración de los formatos de presentación de datos que difieren en función del idioma y de la región, como fecha, moneda y valores numéricos.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   

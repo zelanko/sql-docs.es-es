@@ -1,29 +1,34 @@
 ---
-title: "Ocultar un encabezado o un pie de p&#225;gina en la primera o en la &#250;ltima p&#225;gina (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ocultar el encabezado de página o pie de página en la primera o última página-Report Builder-SSRS | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 17c9a8c854fad691b864ff1b0aba4e91b5d7b64d
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Ocultar un encabezado o un pie de p&#225;gina en la primera o en la &#250;ltima p&#225;gina (Generador de informes y SSRS)
+# <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>Ocultar un encabezado o un pie de página en la primera o en la última página (Generador de informes y SSRS)
   Un informe puede contener un encabezado de página y un pie de página que aparecen en la parte superior e inferior de cada página, respectivamente. Después de agregar un encabezado o un pie de página, puede ocultarlo selectivamente en la primera y en la última página de un informe.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Para ocultar el encabezado en la primera o en la última página  
+### <a name="to-hide-a-page-header-on-the-first-or-last-page"></a>Para ocultar el encabezado en la primera o en la última página  
   
 1.  Abra un informe en la vista Diseño.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 6
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Para ocultar el pie de página en la primera o en la última página  
+### <a name="to-hide-a-page-footer-on-the-first-or-last-page"></a>Para ocultar el pie de página en la primera o en la última página  
   
 1.  Abra un informe en la vista Diseño.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 6
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Encabezados y pies de página &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Agregar o quitar un encabezado o un pie de página &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  

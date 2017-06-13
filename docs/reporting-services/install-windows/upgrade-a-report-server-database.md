@@ -1,34 +1,42 @@
 ---
-title: "Actualizar una base de datos del servidor de informes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "actualizar bases de datos"
-  - "base de datos del servidor de informes"
-  - "actualizar Reporting Services"
+title: Actualizar una base de datos del servidor de informes | Documentos de Microsoft
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- upgrading databases
+- report server database
+- upgrading Reporting Services
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 caps.latest.revision: 44
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 44
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 89bb5de5f669d033dd18bc63e11ef5bd29644542
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Actualizar una base de datos del servidor de informes
-  La base de datos del servidor de informes proporciona almacenamiento para una o varias instancias del servidor de informes. Dado que el esquema de la base de datos del servidor de informes puede cambiar con cada versión nueva de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], es necesario que la versión de base de datos coincida con la versión de la instancia del servidor de informes que esté utilizando. En la mayoría de los casos, una base de datos del servidor de informes se puede actualizar automáticamente sin ninguna acción específica de su parte.  
+
+# <a name="upgrade-a-report-server-database"></a>Actualizar una base de datos del servidor de informes
+
+La base de datos del servidor de informes proporciona almacenamiento para una o varias instancias del servidor de informes. Dado que el esquema de la base de datos del servidor de informes puede cambiar con cada versión nueva de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], es necesario que la versión de base de datos coincida con la versión de la instancia del servidor de informes que esté utilizando. En la mayoría de los casos, una base de datos del servidor de informes se puede actualizar automáticamente sin ninguna acción específica de su parte.  
   
  **Modo nativo:** en el modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , la base de datos del servidor de informes consta realmente de dos bases de datos que tienen los nombres predeterminados “ReportServer y ReportServerTempDB”.  
   
- **Modo de SharePoint:** en el modo de SharePoint de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , la base de datos del servidor de informe es realmente una colección de bases de datos que se crea para cada instancia de la aplicación de servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
-  
-## Formas de actualizar una base de datos del servidor de informes en modo nativo  
+ **Modo de SharePoint:** en modo de SharePoint SQL Server 2016 Reporting Services el informe de servidor de base de datos es realmente una colección de bases de datos que se crea para cada instancia de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aplicación de servicio.  
+
+## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Formas de actualizar una base de datos del servidor de informes en modo nativo
+
  En la lista siguiente se identifican las condiciones en las que se actualiza una base de datos del servidor de informes:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actualiza una única instancia de un servidor de informes. El esquema de la base de datos del servidor de informes se actualiza automáticamente después del inicio del servicio y el servidor de informes determina que la versión del esquema de la base de datos no coincide con la versión del servidor.  
@@ -41,7 +49,7 @@ caps.handback.revision: 44
   
  Una vez actualizado el esquema, no es posible revertir la actualización a una versión anterior. Realice siempre una copia de seguridad de la base de datos del servidor de informes, por si necesita volver a crear una instalación previa.  
   
-## Cómo se actualizan el esquema, los metadatos y el contenido del servidor de informes  
+## <a name="how-the-schema-metadata-and-report-server-content-is-updated"></a>Cómo se actualizan el esquema, los metadatos y el contenido del servidor de informes  
  La base de datos del servidor de informes se actualiza en tres etapas:  
   
 1.  El esquema se actualiza automáticamente después de la instalación y del inicio del servicio, o al seleccionar una base de datos del servidor de informes en modo nativo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que es de una versión anterior. Además, el servicio del servidor de informes comprueba la versión de la base de datos en el inicio. Si el servidor de informes está conectado a una base de datos que es de una versión anterior, la actualizará durante el inicio.  
@@ -52,7 +60,7 @@ caps.handback.revision: 44
   
  Además de la base de datos del servidor de informes, un servidor de informes utiliza también una base de datos temporal. La base de datos temporal se actualiza automáticamente al actualizar la base de datos del servidor de informes.  
   
-## Permisos necesarios para actualizar una base de datos del servidor de informes  
+## <a name="permissions-required-to-upgrade-a-report-server-database"></a>Permisos necesarios para actualizar una base de datos del servidor de informes  
  Si va a actualizar una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que incluye una base de datos del servidor de informes, puede aparecer un mensaje de error si la actualización de la base de datos se realiza sin los permisos adecuados. De manera predeterminada, el programa de instalación utiliza el token de seguridad del usuario que ejecuta el programa de instalación para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remota y actualizar el esquema. Si tiene permisos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **de** en el servidor de bases de datos donde se hospedan las bases de datos del servidor de informes, la actualización de la base de datos se realizará correctamente. De manera similar, si ejecuta el programa de instalación desde el símbolo del sistema y se especifican los argumentos RSUPGRADEDATABASEACCOUNT y RSUPGRADEPASSWORD para una cuenta que tiene permiso **sysadmin** para modificar el esquema en el equipo remoto, la base de datos se actualizará correctamente.  
   
  Sin embargo, si no tiene permiso **sysadmin** para la base de datos del equipo remoto, se rechazará la conexión y aparecerá un error que indica lo siguiente:  
@@ -61,14 +69,15 @@ caps.handback.revision: 44
   
  En este momento, los archivos de programa del servidor de informes se actualizarán, pero la base de datos del servidor de informes tendrá el formato de la versión anterior. El servidor de informes no estará disponible hasta que finalice el proceso de actualización actualizando la base de datos manualmente.  
   
-#### Para actualizar una base de datos en modo nativo con scripts  
- Puede utilizar scripts de WMI para actualizar una base de datos del servidor de informes. Para obtener más información, vea [Método GenerateDatabaseUpgradeScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/generatedatabaseupgradescript-method-wmi-msreportserver-configurationsetting.md).  
+#### <a name="to-upgrade-a-native-mode-database-with-scripts"></a>Para actualizar una base de datos en modo nativo con scripts  
+ Puede utilizar scripts de WMI para actualizar una base de datos del servidor de informes. Para obtener más información, vea [Método GenerateDatabaseUpgradeScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md).  
   
-## Vea también  
- [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Crear una base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/create-a-report-server-database-ssrs-configuration-manager.md)   
- [Asistente para cambiar base de datos &#40;Administrador de configuración&#41;](../Topic/Change%20Database%20Wizard%20\(Configuration%20Manager\).md)   
- [Actualizar y migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
- [Migrar una instalación de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
-  
-  
+## <a name="next-steps"></a>Pasos siguientes
+
+[Administrador de configuración de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[Crear una base de datos del servidor de informes](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+[Asistente para la base de datos de cambio](http://msdn.microsoft.com/library/1a2e8d18-5997-482f-a9c1-87d99f7407b8)   
+[Actualizar y migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+[Migrar una instalación de Reporting Services](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

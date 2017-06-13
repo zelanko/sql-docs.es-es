@@ -1,23 +1,28 @@
 ---
-title: "Controlar los encabezados de fila y de columna (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Controlar encabezados de fila y columna (generador de informes y SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f83ece6730c623a8c710d9b3aef3f8b4786b83ca
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Controlar los encabezados de fila y de columna (Generador de informes y SSRS)
+# <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>Controlar los encabezados de fila y de columna (Generador de informes y SSRS)
   Una región de datos de tabla, de matriz o de lista puede abarcar varias páginas en horizontal o vertical. Puede especificar si los encabezados de fila o de columna se repiten en cada página. En un representador interactivo como el Administrador de informes o la vista previa del informe también puede especificar si inmovilizar o no los encabezados de filas o de columnas para mantenerlos a la vista al desplazarse por un informe. En una tabla o matriz, la primera fila suele contener los encabezados de columna que etiquetan los datos de cada columna; la primera columna suele contener los encabezados de fila que etiquetan los datos de cada fila. En los grupos anidados, es posible que desee repetir el conjunto inicial de encabezados de fila y columna que contienen etiquetas de grupo. De forma predeterminada, una región de datos de lista no incluye encabezados.  
   
  El modo de controlar si los encabezados se repiten o se inmovilizan depende de:  
@@ -35,7 +40,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Descripción de las filas y columnas de una región de datos Tablix  
+## <a name="understanding-rows-and-columns-in-a-tablix-data-region"></a>Descripción de las filas y columnas de una región de datos Tablix  
  Una tabla o matriz es una plantilla para la región de datos Tablix subyacente. Una región de datos Tablix tiene cuatro áreas posibles: el área de grupo de filas que controla las filas que se expanden un informe, el área de grupo de columnas que controla las columnas que se expanden a través de un informe, el cuerpo que muestra los datos y la esquina. Para entender dónde establecer las propiedades que permiten controlar si los encabezados se repiten o se inmovilizan, es útil saber que hay dos representaciones posibles para una región de datos Tablix:  
   
 -   **En la definición de informe** : cada fila o columna de la definición de una región de datos Tablix es un miembro Tablix de un grupo de filas o columnas específico. Un miembro Tablix es estático o dinámico. Si es estático, contiene etiquetas o subtotales y se repite una vez en cada grupo. Si es dinámico, contiene valores de grupo y se repite una vez por cada valor único de un grupo, que también se conoce como instancia de grupo.  
@@ -62,11 +67,11 @@ caps.handback.revision: 8
 ###  <a name="Matrix"></a> Matriz  
  De forma predeterminada, una matriz simple tiene un grupo de filas y un grupo de columnas. En la ilustración siguiente se muestra una matriz con un grupo de filas que se basa en la categoría y un grupo de columnas que se basa en la geografía:  
   
- ![Grupo de columnas Geography y fila Categoría, Matriz](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "Grupo de columnas Geography y fila Categoría, Matriz")  
+ ![Grupo de columnas Geography y fila categoría, matriz](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "matriz, grupo de columnas Geography y fila categoría")  
   
  Las líneas de puntos muestran las cuatro áreas Tablix. El área de un grupo de filas tiene un encabezado de grupo de filas que controla las etiquetas Categoría de la primera columna. De igual modo, el área de un grupo de columnas tiene un encabezado de grupo de columnas que controla las etiquetas Geografía de la primera fila. En la vista previa, a medida que la matriz se expande a través de la página, la primera fila muestra los encabezados de columna, según se ve en la ilustración siguiente:  
   
- ![Vista previa de matriz representada con grupos expandidos](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "Vista previa de matriz representada con grupos expandidos")  
+ ![Vista previa de matriz representada con grupos expandidos](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "vista previa de matriz representada con grupos expandidos")  
   
  Si desea repetir o inmovilizar los encabezados de columna de la primera fila, puede establecer propiedades para los encabezados de columna de la región de datos Tablix. Los encabezados de columna de los grupos de columnas anidados se incluyen automáticamente.  
   
@@ -77,19 +82,19 @@ caps.handback.revision: 8
 ###  <a name="TableNoGroups"></a> Tabla sin grupos de filas  
  De forma predeterminada, una tabla simple sin grupos incluye el grupo de detalles. En la ilustración siguiente se muestra una tabla que presenta los datos de la categoría, número de pedido y ventas:  
   
- ![Diseño, tabla con una fila dinámica y otra estática](../../reporting-services/report-design/media/rs-tableheaderstaticdesign.gif "Diseño, tabla con una fila dinámica y otra estática")  
+ ![Diseño, tabla con uno estático, una fila dinámica](../../reporting-services/report-design/media/rs-tableheaderstaticdesign.gif "diseño, tabla con uno estático, una fila dinámica")  
   
  No hay líneas de puntos porque la tabla únicamente consta del área del cuerpo de Tablix. La primera fila muestra los encabezados de columna y representa un miembro Tablix estático que no está asociado a un grupo. La segunda fila muestra los datos de detalle y representa un miembro Tablix dinámico que está asociado al grupo de detalles. En la ilustración siguiente se muestra la tabla en la vista previa:  
   
- ![Vista previa, tabla con una fila dinámica y otra estática](../../reporting-services/report-design/media/rs-tableheaderstaticpreview.gif "Vista previa, tabla con una fila dinámica y otra estática")  
+ ![Vista previa, tabla con uno estático, una fila dinámica](../../reporting-services/report-design/media/rs-tableheaderstaticpreview.gif "vista previa, tabla con uno estático, una fila dinámica")  
   
  Si desea repetir o inmovilizar los encabezados de columna, puede establecer propiedades en el miembro Tablix para la fila estática que forma parte de la definición de la región de datos Tablix. Para seleccionar la fila estática, debe usar el modo avanzado del panel Agrupar. La ilustración siguiente muestra el panel Grupos de filas:  
   
- ![Grupos de fila, tabla con una fila dinámica y otra estática](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpanedefault.gif "Grupos de fila, tabla con una fila dinámica y otra estática")  
+ ![Fila de grupos, tabla con 1 estático, 1 fila dinámica](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpanedefault.gif "grupos de filas, tabla con 1 estático, 1 fila dinámica")  
   
  En el modo avanzado, la ilustración siguiente muestra los miembros Tablix dinámicos y estáticos para los grupos de filas de la tabla:  
   
- ![Grupos de fila, avanzados para tabla predeterminada](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpaneadvanced.gif "Grupos de fila, avanzados para tabla predeterminada")  
+ ![Grupos de fila, avanzados para tabla predeterminada](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpaneadvanced.gif "grupos de filas, avanzados para tabla predeterminada")  
   
  Si quiere repetir o inmovilizar los encabezados de columna para el miembro Tablix, seleccione la fila estática que tenga la etiqueta (**Estático**). En el panel de propiedades se muestran las propiedades del miembro Tablix seleccionado. Al establecer las propiedades de este miembro Tablix, puede controlar cómo se repite o permanece a la vista la primera fila.  
   
@@ -98,19 +103,19 @@ caps.handback.revision: 8
 ###  <a name="TableRowGroupsGroupHeader"></a> Tabla con grupos de filas y un área de grupos de filas  
  Si agrega un grupo de filas a una tabla sencilla, se agrega un área de grupo de filas a la tabla en el área de diseño. En la ilustración siguiente se muestra una tabla con un grupo de filas que se basa en la categoría.  
   
- ![Diseño, tabla con un grupo de fila y detalles](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "Diseño, tabla con un grupo de fila y detalles")  
+ ![Diseño, tabla con un grupo de filas y detalles](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "diseño, tabla con un grupo de filas y detalles")  
   
  Las líneas de puntos muestran las áreas de grupos de filas y cuerpo de Tablix. El área del grupo de filas tiene un encabezado de grupo de filas, pero carece de encabezado de grupo de columnas. En la ilustración siguiente se muestra esta tabla en la vista previa:  
   
- ![Vista previa, tabla con un grupo de fila y detalles](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercellpreview.gif "Vista previa, tabla con un grupo de fila y detalles")  
+ ![Vista previa, tabla con un grupo de filas y detalles](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercellpreview.gif "vista previa, tabla con un grupo de filas y detalles")  
   
  Para repetir o inmovilizar los encabezados de columnas, use el mismo enfoque en el ejemplo anterior. La ilustración siguiente muestra la vista predeterminada del panel Grupos de filas:  
   
- ![Grupo de fila, predeterminado con miembros dinámicos](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "Grupo de fila, predeterminado con miembros dinámicos")  
+ ![Grupos de filas, de forma predeterminada con miembros dinámicos](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "grupos de filas, de manera predeterminada con miembros dinámicos")  
   
  Use el modo **avanzado** del panel Grupos de filas para mostrar los miembros Tablix, según se ve en la ilustración siguiente:  
   
- ![Grupo de fila, modo avanzado con miembros estáticos](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "Grupo de fila, modo avanzado con miembros estáticos")  
+ ![Grupos, modo avanzado con miembros estáticos de filas](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "grupos de filas, modo avanzado con miembros estáticos")  
   
  Se muestran cuatro miembros Tablix: **Estático**, (**Estático**), Categoría y (**Detalles**). Un miembro Tablix que incluya paréntesis () indica que no hay un encabezado de grupo correspondiente. Si desea repetir o inmovilizar los encabezados de columna, seleccione el miembro Tablix Estático y establezca propiedades en el panel de propiedades.  
   
@@ -125,25 +130,25 @@ caps.handback.revision: 8
   
  En la ilustración siguiente se muestra una tabla con un grupo de filas pero que carece de área de grupo de filas en el área de diseño:  
   
- ![Diseño, la tabla tiene grupo de filas pero no encabezado de grupo](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelldesign.gif "Diseño, la tabla tiene grupo de filas pero no encabezado de grupo")  
+ ![Diseño, tabla tiene grupo de filas pero no encabezado de grupo](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelldesign.gif "diseño, tabla tiene grupo de filas pero no encabezado de grupo")  
   
  La tabla tiene tres filas. La primera contiene encabezados de columna. La segunda fila contiene el valor del grupo y los subtotales. La tercera fila contiene datos de detalle. No hay líneas de puntos porque solo hay un área del cuerpo de Tablix. En la ilustración siguiente se muestra esta tabla en la vista previa:  
   
- ![Vista previa, la tabla tiene grupo de filas pero no encabezado de grupo](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercellpreview.gif "Vista previa, la tabla tiene grupo de filas pero no encabezado de grupo")  
+ ![Vista previa, tabla tiene grupo de filas pero no encabezado de grupo](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercellpreview.gif "de vista previa, tabla tiene grupo de filas pero no encabezado de grupo")  
   
  Para controlar el modo en que las filas se repiten o permanecen a la vista, debe establecer las propiedades de este miembro Tablix para cada fila. En el modo predeterminado, no hay diferencia entre este ejemplo y el anterior en el caso de una tabla con un grupo de filas y un encabezado de grupo. En la ilustración siguiente se muestra el panel Agrupar en el modo predeterminado para esta tabla:  
   
- ![Grupo de fila, predeterminado con miembros dinámicos](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "Grupo de fila, predeterminado con miembros dinámicos")  
+ ![Grupos de filas, de forma predeterminada con miembros dinámicos](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "grupos de filas, de manera predeterminada con miembros dinámicos")  
   
  Sin embargo, en el modo avanzado, esta estructura de diseño muestra un conjunto diferente de miembros Tablix. En la ilustración siguiente se muestra el panel Agrupar en el modo avanzado para esta tabla:  
   
- ![Grupos de fila, avanzados, sin encabezado de grupo.](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Grupos de fila, avanzados, sin encabezado de grupo.")  
+ ![Fila de grupos, opciones avanzadas, ningún encabezado de grupo. ] (../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Grupos de filas, opciones avanzadas, ningún encabezado de grupo.")  
   
  En el panel Grupos de filas, se enumeran los siguientes miembros Tablix: (**Estático**), (Categoría), (**Estático**) y (**Detalles**). Si quiere repetir o inmovilizar los encabezados de columna, seleccione el miembro Tablix (**Estático**) superior y establezca propiedades en el panel de propiedades.  
   
  [Volver al principio](#Top)  
   
-## Compatibilidad de los representadores para repetir o inmovilizar los encabezados  
+## <a name="renderer-support-for-repeating-or-freezing-headers"></a>Compatibilidad de los representadores para repetir o inmovilizar los encabezados  
  La compatibilidad de los representadores para repetir o inmovilizar los encabezados es variada.  
   
  Los que usan páginas físicas (PDF, Image, Print) admiten las características siguientes:  
@@ -160,7 +165,7 @@ caps.handback.revision: 8
   
  Para obtener más información, vea [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   

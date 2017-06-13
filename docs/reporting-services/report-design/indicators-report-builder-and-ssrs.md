@@ -1,31 +1,36 @@
 ---
-title: "Indicadores (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10545"
-  - "10547"
-  - "sql13.rtp.rptdesigner.indicatorproperties.action.f1"
-  - "10546"
-  - "sql13.rtp.rptdesigner.indicatorproperties.validateandstates.f1"
-  - "sql13.rtp.rptdesigner.indicatorproperties.general.f1"
+title: Indicadores (generador de informes y SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10545"
+- "10547"
+- sql13.rtp.rptdesigner.indicatorproperties.action.f1
+- "10546"
+- sql13.rtp.rptdesigner.indicatorproperties.validateandstates.f1
+- sql13.rtp.rptdesigner.indicatorproperties.general.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c902fc6195481ab6570612c5ac9012bba33ef79
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Indicadores (Generador de informes y SSRS)
-  En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], los indicadores son medidores mínimos que comunican el estado del valor de un dato de un vistazo. Los iconos que representan a los indicadores y sus estados son simples y visualmente efectivos incluso cuando su tamaño es pequeño.  
+# <a name="indicators-report-builder-and-ssrs"></a>Indicadores (Generador de informes y SSRS)
+  En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , los indicadores son medidores mínimos que comunican el estado del valor de un dato de un vistazo. Los iconos que representan a los indicadores y sus estados son simples y visualmente efectivos incluso cuando su tamaño es pequeño.  
   
  Puede usar indicadores de estado en los informes para mostrar lo siguiente:  
   
@@ -64,10 +69,10 @@ caps.handback.revision: 11
   
 |Conjunto de indicadores|Tipo de indicador|  
 |-------------------|--------------------|  
-|![Rs_DirectionalIcons](../../reporting-services/report-design/media/rs-directionalicons.png "Rs_DirectionalIcons")|Direccional: indica las tendencias mediante flechas hacia arriba, abajo, plana (sin cambios), de tendencia al alza o de tendencia a la baja.|  
-|![Rs_SymbolIcons](../../reporting-services/report-design/media/rs-symbolicons.png "Rs_SymbolIcons")|Símbolos: indica los estados utilizando símbolos muy conocidos como marcas de verificación y signos de admiración.|  
-|![Rs_ShapeIcons](../../reporting-services/report-design/media/rs-shapeicons.png "Rs_ShapeIcons")|Forma: indica las condiciones utilizando formas muy conocidas, como señales de tráfico y formas romboidales.|  
-|![rs_RatingIcons](../../reporting-services/report-design/media/rs-ratingicons.png "rs_RatingIcons")|Clasificaciones: indica las clasificaciones mediante formas y símbolos muy conocidos que muestran valores progresivos, como el número de cuadrantes en un cuadrado.|  
+|![Rs_DirectionalIcons](../../reporting-services/report-design/media/rs-directionalicons.gif "Rs_DirectionalIcons")|Direccional: indica las tendencias mediante flechas hacia arriba, abajo, plana (sin cambios), de tendencia al alza o de tendencia a la baja.|  
+|![Rs_SymbolIcons](../../reporting-services/report-design/media/rs-symbolicons.gif "Rs_SymbolIcons")|Símbolos: indica los estados utilizando símbolos muy conocidos como marcas de verificación y signos de admiración.|  
+|![Rs_ShapeIcons](../../reporting-services/report-design/media/rs-shapeicons.gif "Rs_ShapeIcons")|Forma: indica las condiciones utilizando formas muy conocidas, como señales de tráfico y formas romboidales.|  
+|![rs_RatingIcons](../../reporting-services/report-design/media/rs-ratingicons.gif "rs_RatingIcons")|Clasificaciones: indica las clasificaciones mediante formas y símbolos muy conocidos que muestran valores progresivos, como el número de cuadrantes en un cuadrado.|  
   
  Después de elegir un conjunto de indicadores, puede personalizar la apariencia de cada icono de indicador del conjunto estableciendo sus propiedades en los cuadros de diálogo para indicadores o en el panel Propiedades. Puede usar los colores, iconos y tamaños integrados o expresiones para configurar los indicadores.  
   
@@ -89,7 +94,7 @@ caps.handback.revision: 11
 ##  <a name="UsingIndicatorsInTablesMatrices"></a> Usar indicadores en tablas y matrices  
  Las formas simples de los indicadores hacen que sean idóneos para su uso en tablas y matrices. Los indicadores son efectivos incluso si su tamaño es pequeño. Esto les confiere su utilidad en las filas de detalle o de grupo de los informes.  
   
- El siguiente diagrama muestra un informe con una tabla que usa el conjunto de indicadores direccionales **Four Arrows (Colored)** para indicar las ventas. Los iconos de indicador del informe se configuran de forma que usen tonos de azul en lugar de los colores predeterminados: rojo, amarillo y verde.  
+ El siguiente diagrama muestra un informe con una tabla que usa el conjunto de indicadores direccionales **Four Arrows (Colored)**para indicar las ventas. Los iconos de indicador del informe se configuran de forma que usen tonos de azul en lugar de los colores predeterminados: rojo, amarillo y verde.  
   
  ![rs_IndicatorReportBlueArrows](../../reporting-services/report-design/media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   
@@ -101,7 +106,7 @@ caps.handback.revision: 11
   
  Los indicadores transmiten los valores de datos sincronizando los valores de datos del indicador que están en un ámbito especificado. De forma predeterminada, el ámbito es el contenedor primario del indicador, por ejemplo la tabla o matriz que contiene el indicador. Puede cambiar la sincronización del indicador eligiendo otro ámbito, por ejemplo un grupo, en función del diseño del informe. El indicador puede omitir la sincronización. Para obtener más información, vea [Establecer el ámbito de sincronización &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md).  
   
- Para obtener información general sobre la descripción y el ámbito de configuración de informes, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression scope for totals, aggregates, and built-in collections.md).  
+ Para obtener información general sobre la descripción y el ámbito de configuración de informes, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
  Los indicadores solo usan un valor único. Si tiene que mostrar varios valores de datos, use un minigráfico o una barra de datos en lugar de un indicador. Los indicadores pueden representar varios valores de datos, pero son sencillos, fáciles de entender en tamaños pequeños y funcionan bien en tablas y matrices. Para obtener más información, vea [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
@@ -117,9 +122,9 @@ caps.handback.revision: 11
   
  En el siguiente diagrama se muestra un indicador en paralelo de un medidor y dentro de él.  
   
- ![rs_GaugePanelWithIndicatorAndGauge](../../reporting-services/report-design/media/rs-gaugepanelwithindicatorandgauge.png "rs_GaugePanelWithIndicatorAndGauge")  
+ ![rs_GaugePanelWithIndicatorAndGauge](../../reporting-services/report-design/media/rs-gaugepanelwithindicatorandgauge.gif "rs_GaugePanelWithIndicatorAndGauge")  
   
- Para obtener más información, vea [Incluir indicadores y medidores en un Panel de medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md).  
+ Para obtener más información, vea [Incluir indicadores y medidores en un panel de medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md).  
   
  Para obtener más información sobre el uso de medidores, vea [Medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
@@ -128,7 +133,7 @@ caps.handback.revision: 11
   
  Esto puede suceder si usa la unidad de medida de estado de porcentaje o numérica. Es más probable que se produzca cuando se usa la unidad de medida numérica porque se proporcionan valores específicos para esta medida. También es más probable que suceda cuando redondea valores de datos porque tiende a crear valores menos discretos.  
   
- Los escenarios siguientes describen cómo la visualización de los datos se ve afectada cuando se cambia la secuencia de los tres estados en el indicador de dirección **3 flechas (en color)**. De forma predeterminada, la secuencia es:  
+ Los escenarios siguientes describen cómo la visualización de los datos se ve afectada cuando se cambia la secuencia de los tres estados en el indicador de dirección **3 flechas (en color)** . De forma predeterminada, la secuencia es:  
   
 1.  Flecha roja hacia abajo  
   
@@ -189,7 +194,7 @@ caps.handback.revision: 11
   
 -   [Incluir indicadores y medidores en un panel de medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
  [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  

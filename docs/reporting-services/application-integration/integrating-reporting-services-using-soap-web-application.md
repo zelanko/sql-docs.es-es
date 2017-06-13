@@ -1,0 +1,98 @@
+---
+title: "Usar la API SOAP en una aplicación Web | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- docset-sql-devref
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: reference
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- SOAP [Reporting Services], Web applications
+- impersonation [Reporting Services]
+- user impersonation [Reporting Services]
+- report servers [Reporting Services], SOAP
+- Web applications [Reporting Services]
+ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
+caps.latest.revision: 34
+author: sabotta
+ms.author: carlasab
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 15901a45f5342fa5c7d26a9b95230eabb67e20af
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
+---
+# <a name="integrating-reporting-services-using-soap---web-application"></a>Integración de Reporting Services utilizando SOAP: aplicación Web
+  Puede tener acceso a la funcionalidad completa del servidor de informes a través de la API SOAP de Reporting Services. Dado que es un servicio web, se puede tener acceso con facilidad a esta API para proporcionar características de informes de empresa para aplicaciones empresariales personalizadas. Para tener acceso al servicio web del servidor de informes desde una aplicación web, se usa casi el mismo proceso que en el acceso a la API SOAP desde una aplicación para [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Mediante el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], puede generar una clase de proxy que expone las propiedades y métodos de la Web del servidor de informes de servicio y le permite usar una infraestructura y herramientas conocidas para compilar aplicaciones empresariales [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tecnología.  
+  
+ El acceso a la funcionalidad de administración de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se realiza con tanta facilidad desde una aplicación web como desde una aplicación para Windows. Desde una aplicación web, puede agregar y quitar los elementos de la base de datos del servidor de informes, establecer la seguridad de los elementos, modificar los elementos de la base de datos del servidor de informes, administrar la programación y la entrega, etcétera.  
+  
+## <a name="enabling-impersonation"></a>Habilitar la suplantación  
+ El primer paso para configurar una aplicación web es habilitar la suplantación desde el cliente de servicios web. Con la suplantación, las aplicaciones de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] pueden ejecutarse con la identidad del cliente en cuyo el nombre operan. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] se basa en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) para autenticar al usuario y pasar un token autenticado a la aplicación de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] o, si no se puede autenticar al usuario, pasar un token sin autenticar. En cualquier caso, la aplicación de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] suplanta al token que se reciba, si está habilitada la suplantación. Puede habilitar la suplantación en el cliente modificando el archivo Web.config de la aplicación cliente como sigue:  
+  
+```  
+<!-- Web.config file. -->  
+<identity impersonate="true"/>  
+```  
+  
+> [!NOTE]  
+>  De manera predeterminada, la suplantación está deshabilitada.  
+  
+ Para obtener más información acerca de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] suplantación, vea el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentación del SDK.  
+  
+## <a name="managing-the-report-server-using-soap-api"></a>Administrar el servidor de informes mediante la API SOAP  
+ También puede utilizar la aplicación web para administrar un servidor de informes y su contenido. El Administrador de informes, que se incluye con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], es un ejemplo de aplicación web que se genera completamente utilizando [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] y la API SOAP de Reporting Services. Puede agregar la funcionalidad de administración de informes del Administrador de informes a sus aplicaciones web personalizadas. Por ejemplo, puede devolver una lista de informes disponibles en la base de datos del servidor de informes y mostrarlos en una [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** control para los usuarios que elegir. El código siguiente se conecta a la base de datos del servidor de informes y devuelve una lista de los elementos de la base de datos del servidor de informes. A continuación, los informes disponibles se agregan a un control Listbox, que muestra la ruta de acceso de cada informe.  
+  
+```vb  
+Private Sub Page_Load(sender As Object, e As System.EventArgs)  
+   ' Create a Web service proxy object and set credentials  
+   Dim rs As New ReportingService2005()  
+   rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
+  
+   ' Return a list of catalog items in the report server database  
+   Dim items As CatalogItem() = rs.ListChildren("/", True)  
+  
+   ' For each report, display the path of the report in a Listbox  
+   Dim ci As CatalogItem  
+   For Each ci In  items  
+      If ci.Type = ItemTypeEnum.Report Then  
+         catalogListBox.Items.Add(ci.Path)  
+      End If  
+   Next ci  
+End Sub ' Page_Load   
+```  
+  
+```csharp  
+private void Page_Load(object sender, System.EventArgs e)  
+{  
+   // Create a Web service proxy object and set credentials  
+   ReportingService2005 rs = new ReportingService2005();  
+   rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
+  
+   // Return a list of catalog items in the report server database  
+   CatalogItem[] items = rs.ListChildren("/", true);  
+  
+   // For each report, display the path of the report in a Listbox  
+   foreach(CatalogItem ci in items)  
+   {  
+      if (ci.Type == ItemTypeEnum.Report)  
+         catalogListBox.Items.Add(ci.Path);  
+   }  
+}  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Creación de aplicaciones con el servicio Web y .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [Integración de Reporting Services en aplicaciones](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Usar la API SOAP en una aplicación de Windows](../../reporting-services/application-integration/integrating-reporting-services-using-soap-windows-application.md)  
+  
+  

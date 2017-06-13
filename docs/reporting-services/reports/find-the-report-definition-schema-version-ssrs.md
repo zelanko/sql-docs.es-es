@@ -1,30 +1,37 @@
 ---
-title: "Buscar la versi&#243;n del esquema de definici&#243;n de informe (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "esquemas XML [Reporting Services]"
-  - "Esquema XML de lenguaje RDL (Report Definition Language)"
-  - "esquemas [Reporting Services]"
+title: "Buscar la versión de esquema de definición de informe (SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XML schemas [Reporting Services]
+- Report Definition Language, XML schema
+- schemas [Reporting Services]
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 354f69ea0d63502a66db541f968f0efe2e690a6e
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Buscar la versi&#243;n del esquema de definici&#243;n de informe (SSRS)
-  Un archivo de definición de informe especifica el espacio de nombres RDL para la versión del esquema de definición de informe que se utiliza para validar el archivo rdl. Cuando se abre un archivo .rdl en un entorno de creación de informes, como por ejemplo, el Diseñador de informes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o el Generador de informes, si el informe se ha creado para un espacio de nombres anterior, se crea automáticamente un archivo de copia de seguridad y se actualiza el informe al espacio de nombres actual. Si se guarda la definición de informe actualizada, se ha guardado el archivo .rdl convertido. Esta es la única manera para actualizar una definición de informe. La definición de informe en sí misma no se actualiza en un servidor de informes. El informe de compilación se actualiza en un servidor de informes. Para más información, consulte [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
+
+# <a name="find-the-report-definition-schema-version-ssrs"></a>Buscar la versión del esquema de definición de informe (SSRS)
+
+Un archivo de definición de informe especifica el espacio de nombres RDL para la versión del esquema de definición de informe que se utiliza para validar el archivo rdl. Cuando se abre un archivo .rdl en un entorno de creación de informes, como por ejemplo, el Diseñador de informes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o el Generador de informes, si el informe se ha creado para un espacio de nombres anterior, se crea automáticamente un archivo de copia de seguridad y se actualiza el informe al espacio de nombres actual. Si se guarda la definición de informe actualizada, se ha guardado el archivo .rdl convertido. Esta es la única manera para actualizar una definición de informe. La definición de informe en sí misma no se actualiza en un servidor de informes. El informe de compilación se actualiza en un servidor de informes. Para más información, consulte [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
   
-### Identificar la versión de esquema RDL de un informe  
+### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>Identificar la versión de esquema RDL de un informe  
   
 1.  Abra el archivo .rdl de informe en una aplicación como Bloc de notas o XML Notepad 2007 en la que pueda ver el xml.  
   
@@ -37,9 +44,9 @@ caps.handback.revision: 15
   
      La dirección URL siguiente especifica el espacio de nombres para la definición de informe: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`.  
   
-### Identificar la versión de esquema RDL del Diseñador de informes  
+### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Identificar la versión de esquema RDL del Diseñador de informes  
   
-1.  Abra un proyecto nuevo. La versión del proyecto que elija determina la versión del esquema RDL. En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], se admite más de una versión de esquema. Para obtener más información, vea [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41; (Implementación y compatibilidad de versiones en SQL Server Data Tools &#40;SSRS&#41;)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+1.  Abra un proyecto nuevo. La versión del proyecto que elija determina la versión del esquema RDL. En SQL Server, se admite más de una versión de esquema. Para obtener más información, consulte [implementación y compatibilidad de versiones de SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 2.  En el menú **Proyecto** , haga clic en **Agregar nuevo elemento**. Se abre el cuadro de diálogo **Agregar nuevo elemento** .  
   
@@ -60,7 +67,7 @@ caps.handback.revision: 15
   
      La dirección URL siguiente especifica el espacio de nombres para la definición de informe: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
-### Identificar la versión de esquema RDL en el servidor de informes  
+### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Identificar la versión de esquema RDL en el servidor de informes  
   
 -   En el Administrador de informes, escriba la siguiente dirección URL para el servidor de informes. Por ejemplo, la dirección URL siguiente especifica un servidor de informes en el equipo local:  
   
@@ -79,9 +86,10 @@ caps.handback.revision: 15
     ```  
   
      La dirección URL siguiente especifica el espacio de nombres para la definición de informe: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
-  
-## Vea también  
- [Actualizar informes](../../reporting-services/install-windows/upgrade-reports.md)   
- [Report Definition Language &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)  
-  
-  
+
+## <a name="next-steps"></a>Pasos siguientes
+
+[Actualizar informes](../../reporting-services/install-windows/upgrade-reports.md)   
+[Lenguaje de definición de informe](../../reporting-services/reports/report-definition-language-ssrs.md)  
+
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,24 +1,29 @@
 ---
-title: "Sugerencias para el dise&#241;o de informes (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Informe de sugerencias de diseño (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d30cf6d4ad8e2a4903172230469f1ba41bab360
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Sugerencias para el dise&#241;o de informes (Generador de informes y SSRS)
-  Use las siguientes sugerencias para diseñar sus informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+# <a name="report-design-tips-report-builder-and-ssrs"></a>Sugerencias para el diseño de informes (Generador de informes y SSRS)
+  Use las siguientes sugerencias para diseñar sus informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -55,7 +60,7 @@ caps.handback.revision: 12
   
         2.  **Región de datos como una fuente de distribución de datos.** Con los permisos adecuados, el lector de un informe puede crear una fuente de distribución de datos ATOM desde una región de datos.  
   
--   Utilice el carácter de subrayado en lugar de espacios en los nombres de informe. Si descarga un informe de un portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], los espacios se sustituyen por caracteres de subrayado. Si utiliza la característica de descarga para guardar informes localmente y, a continuación, los incluye en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el uso de caracteres de subrayado le ayudará a conservar la precisión de las dependencias de informe para los subinformes y los vínculos de obtención de detalles.  
+-   Utilice el carácter de subrayado en lugar de espacios en los nombres de informe. Si descarga un informe de un portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , los espacios se sustituyen por caracteres de subrayado. Si utiliza la característica de descarga para guardar informes localmente y, a continuación, los incluye en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el uso de caracteres de subrayado le ayudará a conservar la precisión de las dependencias de informe para los subinformes y los vínculos de obtención de detalles.  
   
 ##  <a name="Data"></a> Trabajar con datos  
   
@@ -157,7 +162,7 @@ caps.handback.revision: 12
   
  La combinación de este comportamiento, las propiedades de alto y ancho de los elementos de informe, el tamaño del cuerpo del informe, la definición del alto y el ancho de página, la configuración de los márgenes del informe primario, y la compatibilidad específica del representador con la paginación, en conjunto, determinan qué elementos de informe pueden estar juntos en una página representada. Para obtener más información, vea [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Generador de informes en SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Tutoriales de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Tutoriales del Generador de informes](../../reporting-services/report-builder-tutorials.md)  

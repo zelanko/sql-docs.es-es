@@ -2,7 +2,7 @@
 title: Always Encrypted (motor de base de datos) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/13/2017
+ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f848c5ebf1233d6b34dcf00bb7084adcebc95ea1
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (motor de base de datos)
@@ -126,33 +126,32 @@ Use el [Asistente para Always Encrypted](../../../relational-databases/security/
 
 -   Después de cambiar la definición de un objeto cifrado, ejecute [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) para actualizar los metadatos de Always Encrypted para el objeto.
   
- No se admite Always Encrypted en las columnas con las características siguientes (por ejemplo, la cláusula *Encrypted WITH* no puede usarse en **CREATE TABLE/ALTER TABLE** para una columna si alguna de las condiciones siguientes se aplica a la columna):  
+No se admite Always Encrypted en las columnas con las características siguientes (por ejemplo, la cláusula *Encrypted WITH* no puede usarse en **CREATE TABLE/ALTER TABLE** para una columna si alguna de las condiciones siguientes se aplica a la columna):  
   
 -   Columnas con uno de los siguientes tipos de datos: **xml**, **timestamp**/**rowversion**, **image**, **ntext**, **text**, **sql_variant**, **hierarchyid**, **geography**, **geometry**, alias, tipos definidos por el usuario.  
-  
 - Columnas FILESTREAM  
-  
-- Columnas con la propiedad ROWGUIDCOL
-- Columnas de cadena (varchar, char, etc.) con intercalaciones que no son bin2
-- Columnas que son claves para índices no agrupados mediante una columna cifrada aleatoria como columna de clave (las columnas cifradas deterministas son válidas)
-- Columnas que son claves para índices agrupados mediante una columna cifrada aleatoria como columna de clave (las columnas cifradas deterministas son válidas)
-- Columnas que son claves para índices de texto completo que contienen columnas cifradas tanto aleatorias como deterministas
-- Columnas que hacen referencia a columnas calculadas (cuando la expresión realiza operaciones no admitidas para Always Encrypted)
-- Conjunto de columnas dispersas
-- Columnas a las que hacen referencia las estadísticas
-- Columnas con tipo de alias
-- Columnas de partición
-- Columnas con restricciones predeterminadas
-- Columnas a las que hacen referencia las restricciones únicas mediante el cifrado aleatorio (se admite el cifrado determinista)
-- Columnas de clave principal al usar cifrado aleatorio (se admite el cifrado determinista)
-- Columnas de referencia en las restricciones de clave externa cuando se usa el cifrado aleatorio o el cifrado determinista, si las columnas de referencia y las que se hace referencia usan diferentes claves o algoritmos
-- Columnas de referencia por restricciones de comprobación
-- Columnas de tablas que utilizan captura de datos modificados
-- Columnas de clave principal en tablas que tienen seguimiento de cambios
-- Columnas que están enmascaradas (mediante el enmascaramiento de datos dinámicos)
-- Columnas de tablas de Stretch Database. (Las tablas con columnas cifradas con Always Encrypted pueden habilitarse para Stretch).
-- Columnas de tablas externas (PolyBase) (Nota: Se admite el uso de tablas externas y tablas con columnas cifradas en la misma consulta)
-- No se admiten parámetros con valores de tabla que se dirijan a columnas cifradas.
+- Columnas con la propiedad IDENTITY  
+- Columnas con la propiedad ROWGUIDCOL  
+- Columnas de cadena (varchar, char, etc.) con intercalaciones que no son bin2  
+- Columnas que son claves para índices no agrupados mediante una columna cifrada aleatoria como columna de clave (las columnas cifradas deterministas son válidas)  
+- Columnas que son claves para índices agrupados mediante una columna cifrada aleatoria como columna de clave (las columnas cifradas deterministas son válidas)  
+- Columnas que son claves para índices de texto completo que contienen columnas cifradas tanto aleatorias como deterministas  
+- Columnas que hacen referencia a columnas calculadas (cuando la expresión realiza operaciones no admitidas para Always Encrypted)  
+- Conjunto de columnas dispersas  
+- Columnas a las que hacen referencia las estadísticas  
+- Columnas con tipo de alias  
+- Columnas de partición  
+- Columnas con restricciones predeterminadas  
+- Columnas a las que hacen referencia las restricciones únicas mediante el cifrado aleatorio (se admite el cifrado determinista)  
+- Columnas de clave principal al usar cifrado aleatorio (se admite el cifrado determinista)  
+- Columnas de referencia en las restricciones de clave externa cuando se usa el cifrado aleatorio o el cifrado determinista, si las columnas de referencia y las que se hace referencia usan diferentes claves o algoritmos  
+- Columnas de referencia por restricciones de comprobación  
+- Columnas de tablas que utilizan captura de datos modificados  
+- Columnas de clave principal en tablas que tienen seguimiento de cambios  
+- Columnas que están enmascaradas (mediante el enmascaramiento de datos dinámicos)  
+- Columnas de tablas de Stretch Database. (Las tablas con columnas cifradas con Always Encrypted pueden habilitarse para Stretch).  
+- Columnas de tablas externas (PolyBase) (Nota: Se admite el uso de tablas externas y tablas con columnas cifradas en la misma consulta)  
+- No se admiten parámetros con valores de tabla que se dirijan a columnas cifradas.  
 
 Las cláusulas siguientes no se pueden usar en las columnas cifradas:
 

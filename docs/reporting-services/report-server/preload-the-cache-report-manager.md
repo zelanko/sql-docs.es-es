@@ -1,26 +1,31 @@
 ---
-title: "Cargar previamente la memoria cach&#233; (Administrador de informes) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "caché [Reporting Services]"
-  - "cargar previamente la memoria caché"
+title: "Cargar previamente la memoria caché (Administrador de informes) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cache [Reporting Services]
+- preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 caps.latest.revision: 35
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 35
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c5543c648289dee007a2249299ecb006d41f6b98
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Cargar previamente la memoria cach&#233; (Administrador de informes)
+# <a name="preload-the-cache-report-manager"></a>Cargar previamente la memoria caché (Administrador de informes)
   Puede cargar previamente la memoria caché para un conjunto de datos compartido creando un plan de actualización de caché para él.  
   
  Puede cargar previamente la memoria caché para un informe de dos maneras:  
@@ -37,9 +42,9 @@ caps.handback.revision: 35
   
 -   Se debe ejecutar el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### Para cargar previamente la memoria caché creando un plan de actualización de caché  
+### <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>Para cargar previamente la memoria caché creando un plan de actualización de caché  
   
-1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  En el Administrador de informes, navegue a la página **Contenido** y después navegue al elemento que desee almacenar en caché.  
   
@@ -58,15 +63,15 @@ caps.handback.revision: 35
   
 7.  En una programación compartida, haga clic en **Programación compartida**y seleccione el nombre de la programación que se va a usar.  
   
-     En una programación personalizada, haga clic en **Programación específica del elemento** y, después, haga clic en **Configurar**.  
+     En una programación personalizada, haga clic en **Programación específica del elemento**y, después, haga clic en **Configurar**.  
   
 8.  Configurar la programación  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Para cargar previamente la memoria caché con un informe específico del usuario utilizando una suscripción controlada por datos  
+### <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>Para cargar previamente la memoria caché con un informe específico del usuario utilizando una suscripción controlada por datos  
   
-1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  En el Administrador de informes, navegue a la página **Contenido** y después, al informe para el que desea crear una suscripción.  
   
@@ -103,7 +108,7 @@ caps.handback.revision: 35
      O bien, para crear una programación personalizada, haga clic en **Según una programación creada para esta suscripción** y, a continuación, en **Siguiente**. Configure la programación y, a continuación, haga clic en **Finalizar**.  
   
     > [!NOTE]  
-    >  Para que los suscriptores reciban el informe más reciente, el programa que configure debe ser coherente con la programación de entrega del informe que haya definido para los suscriptores. Para más información, vea [Administrador de informes &#40;Modo nativo de SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+    >  Para que los suscriptores reciban el informe más reciente, el programa que configure debe ser coherente con la programación de entrega del informe que haya definido para los suscriptores. Para más información, vea [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 14. Configure las opciones de Ejecución correspondientes al informe de la forma siguiente: En la página del informe, haga clic en la pestaña **Propiedades** .  
   
@@ -119,7 +124,7 @@ caps.handback.revision: 35
   
 18. Haga clic en **Aplicar**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Suscripciones controladas por datos](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Rendimiento, instantáneas, almacenamiento en caché &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   

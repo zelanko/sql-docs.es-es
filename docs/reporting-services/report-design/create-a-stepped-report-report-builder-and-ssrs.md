@@ -1,26 +1,31 @@
 ---
-title: "Crear un informe escalonado (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Crear un informe escalonado (generador de informes y SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 232b8e03dc8e5e2130d127408f356ba2dc0492d5
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Crear un informe escalonado (Generador de informes y SSRS)
-Un informe escalonado es un tipo de informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] donde se muestran filas de detalles o grupos secundarios con una sangría debajo de un grupo primario en la misma columna, como se muestra en el ejemplo siguiente:  
+# <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Crear un informe escalonado (Generador de informes y SSRS)
+Un informe escalonado es un tipo de informe paginado de  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] donde se muestran filas de detalles o grupos secundarios con una sangría debajo de un grupo primario en la misma columna, como se muestra en el ejemplo siguiente:  
   
- ![Informe escalonado representado](../../reporting-services/report-design/media/steppedreportrendered.gif "Informe escalonado representado")  
+ ![Informe escalonado representado](../../reporting-services/report-design/media/steppedreportrendered.gif "procesado escalonadas informes")  
   
  Los informes de tabla tradicionales sitúan el grupo primario en una columna adyacente del informe. La nueva región de datos tablix permite agregar un grupo y filas de detalles o grupos secundarios a la misma columna. Para diferenciar las filas de grupos de las filas de detalles o grupos secundarios, puede aplicar un formato, como el color de fuente, o puede aplicar una sangría a las filas de detalles.  
   
@@ -32,7 +37,7 @@ Un informe escalonado es un tipo de informe paginado de [!INCLUDE[ssRSnoversion]
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Para crear un informe escalonado  
+## <a name="to-create-a-stepped-report"></a>Para crear un informe escalonado  
   
 1.  Cree un informe de tabla. Por ejemplo, inserte una región de datos tablix y agregue campos a la fila de datos.  
   
@@ -40,23 +45,23 @@ Un informe escalonado es un tipo de informe paginado de [!INCLUDE[ssRSnoversion]
   
     1.  Haga clic en cualquier lugar de la tabla para seleccionarla. El panel Agrupación muestra el grupo de detalles en el panel Grupos de fila.  
   
-    2.  En el panel de agrupación, haga clic con el botón derecho en el grupo de detalles, seleccione **Agregar grupo** y, después, haga clic en **Grupo primario**.  
+    2.  En el panel de agrupación, haga clic con el botón derecho en el grupo de detalles, seleccione **Agregar grupo**y, después, haga clic en **Grupo primario**.  
   
-    3.  En el cuadro de diálogo **Grupo de Tablix**, especifique un nombre para el grupo y escriba o seleccione una expresión de grupo en la lista desplegable. La lista desplegable muestra las expresiones de campo simples que están disponibles en el panel Datos de informe. Por ejemplo, [PostalCode] es una expresión de campo simple para el campo PostalCode en un conjunto de datos.  
+    3.  En el cuadro de diálogo **Grupo de Tablix** , especifique un nombre para el grupo y escriba o seleccione una expresión de grupo en la lista desplegable. La lista desplegable muestra las expresiones de campo simples que están disponibles en el panel Datos de informe. Por ejemplo, [PostalCode] es una expresión de campo simple para el campo PostalCode en un conjunto de datos.  
   
     4.  Seleccione **Agregar encabezado de grupo**. Esta opción agrega una fila estática encima del grupo para la etiqueta y los totales de grupo. Del mismo modo, puede seleccionar **Agregar pie de grupo** para agregar una fila estática debajo del grupo. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      Ahora ya tiene un informe tabular básico. Cuando se represente, verá una columna con el valor de instancia de grupo y una o varias columnas con datos de detalles agrupados. En la siguiente ilustración se muestra el aspecto que podría tener la región de datos en la superficie de diseño.  
   
-     ![Región de datos de tabla con grupo](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "Región de datos de tabla con grupo")  
+     ![Región de datos de tabla con grupo](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "región de datos de tabla con grupo")  
   
      En la siguiente ilustración se muestra el aspecto que podría tener la región de datos representada al visualizar el informe.  
   
-     ![Informe agrupado representado](../../reporting-services/report-design/media/tablereportrendered.gif "Informe agrupado representado")  
+     ![Informe agrupado representado](../../reporting-services/report-design/media/tablereportrendered.gif "procesado informe agrupado")  
   
 3.  En un informe escalonado, no es necesaria la primera columna que muestra la instancia de grupo. En su lugar, copie el valor en la celda de encabezado de grupo, elimine la columna de grupo y pegue el primer cuadro de texto en la fila de encabezado de grupo. Para quitar la columna de grupo, haga clic con el botón derecho en la columna o celda de grupo y, después, haga clic en **Eliminar columnas**. En la siguiente ilustración se muestra el aspecto que podría tener la región de datos en la superficie de diseño.  
   
-     ![Región de datos con fila de encabezado de grupo](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "Región de datos con fila de encabezado de grupo")  
+     ![Región de datos con la fila de encabezado de grupo](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "región de datos con la fila de encabezado de grupo")  
   
 4.  Para aplicar una sangría a las filas de detalles situadas debajo de la fila de encabezado de grupo en la misma columna, cambie el relleno de la celda de datos de detalles.  
   
@@ -78,32 +83,32 @@ Un informe escalonado es un tipo de informe paginado de [!INCLUDE[ssRSnoversion]
   
      La región de datos tendrá un aspecto similar al siguiente:  
   
-     ![Región de datos para informe escalonado](../../reporting-services/report-design/media/steppedreportdataregion.gif "Región de datos para informe escalonado")  
+     ![Región de datos de informe escalonado](../../reporting-services/report-design/media/steppedreportdataregion.gif "región de datos de informe escalonado")  
   
      **Región de datos para el diseño del informe escalonado**  
   
      En la pestaña **Inicio** , haga clic en **Ejecutar**. El informe muestra el grupo con niveles de sangría para los valores de grupo secundario.  
   
-## Para crear un informe escalonado con varios grupos  
+## <a name="to-create-a-stepped-report-with-multiple-groups"></a>Para crear un informe escalonado con varios grupos  
   
 1.  Cree un informe tal y como se describe en el procedimiento anterior.  
   
 2.  Agregue grupos adicionales al informe.  
   
-    1.  En el panel Grupos de filas, haga clic con el botón derecho en el grupo, haga clic en **Agregar grupo** y, después, elija el tipo de grupo que quiera agregar.  
+    1.  En el panel Grupos de filas, haga clic con el botón derecho en el grupo, haga clic en **Agregar grupo**y, después, elija el tipo de grupo que quiera agregar.  
   
         > [!NOTE]  
         >  Existen varias formas de agregar grupos a una región de datos. Para más información, vea [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
     2.  En el cuadro de diálogo **Grupo de Tablix** , escriba un nombre.  
   
-    3.  En **Expresión de grupo**, escriba una expresión o seleccione un campo de conjunto de datos por el que realizar la agrupación. Para crear una expresión, haga clic en el botón de expresión (**fx**) para abrir el cuadro de diálogo **Expresión**.  
+    3.  En **Expresión de grupo**, escriba una expresión o seleccione un campo de conjunto de datos por el que realizar la agrupación. Para crear una expresión, haga clic en el botón de expresión (**fx**) para abrir el cuadro de diálogo **Expresión** .  
   
     4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  Cambie el relleno para la celda que muestra los datos del grupo.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Encabezados y pies de página &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   

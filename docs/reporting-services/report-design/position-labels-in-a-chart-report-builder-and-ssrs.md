@@ -1,23 +1,28 @@
 ---
-title: "Colocar etiquetas en un gr&#225;fico (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Colocar etiquetas en un gráfico (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 53f0d4b0c6aed30746af82de7d5f1caf5e42721c
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Colocar etiquetas en un gr&#225;fico (Generador de informes y SSRS)
+# <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>Colocar etiquetas en un gráfico (Generador de informes y SSRS)
   Dado que cada tipo de gráfico en un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tiene una forma diferente, las etiquetas de punto de datos se colocan en una ubicación óptima para no interferir en el gráfico. La posición predeterminada de las etiquetas depende del tipo de gráfico:  
   
 -   En los gráficos apilados, las etiquetas solo se pueden colocar dentro de la serie.  
@@ -33,7 +38,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Para cambiar la posición de las etiquetas de punto de datos de un gráfico circular  
+## <a name="to-change-the-position-of-point-labels-in-a-pie-chart"></a>Para cambiar la posición de las etiquetas de punto de datos de un gráfico circular  
   
 1.  Cree un gráfico circular.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 8
   
 6.  Seleccione un valor para la propiedad PieLabelStyle.  
   
-## Para cambiar la posición de las etiquetas de punto de datos en un gráfico de embudo o piramidal  
+## <a name="to-change-the-position-of-point-labels-in-a-funnel-or-pyramid-chart"></a>Para cambiar la posición de las etiquetas de punto de datos en un gráfico de embudo o piramidal  
   
 1.  Cree un gráfico de embudo o piramidal.  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  Cuando esta propiedad se establece en un valor **OutsideInColumn**, las etiquetas se representan en una columna vertical. No hay ninguna manera de cambiar la posición de la columna.  
   
-## Para cambiar la posición de las etiquetas de punto de datos de un gráfico de barras  
+## <a name="to-change-the-position-of-point-labels-in-a-bar-chart"></a>Para cambiar la posición de las etiquetas de punto de datos de un gráfico de barras  
   
 1.  Cree un gráfico de barras.  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 8
   
  Si el estilo de la etiqueta de la barra se establece en **Outside**, la etiqueta se colocará fuera de la barra, siempre y cuando quepa en el área del gráfico. Si la etiqueta no se puede colocar fuera de la barra, pero sí dentro del área del gráfico, la etiqueta se situará dentro de la barra en la posición más próxima al extremo de la misma.  
   
-## Para cambiar la posición de las etiquetas de punto de datos en una gráfico de áreas, de columnas, de líneas o de dispersión  
+## <a name="to-change-the-position-of-point-labels-in-an-area-column-line-or-scatter-chart"></a>Para cambiar la posición de las etiquetas de punto de datos en una gráfico de áreas, de columnas, de líneas o de dispersión  
   
 1.  Cree un gráfico de áreas, de columnas, de líneas o de dispersión.  
   
@@ -94,7 +99,7 @@ caps.handback.revision: 8
   
 6.  Seleccione un valor para la propiedad Position.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Gráficos circulares &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
  [Gráficos de barras &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
  [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

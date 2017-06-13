@@ -1,24 +1,29 @@
 ---
-title: "Planear un informe de mapa (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Planear un informe de mapa (generador de informes y SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 78f69746e290ea004d28edf8a0a90aeabfb9151d
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Planear un informe de mapa (Generador de informes y SSRS)
-Los buenos informes presentan información que motiva acciones o conocimientos. Para presentar datos analíticos como totales de ventas o datos demográficos en un contexto geográfico, puede agregar un mapa al informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. Un mapa puede contener varias capas, y en cada una se muestran elementos de mapa definidos por un tipo concreto de datos espaciales: puntos que representan ubicaciones, líneas que representan rutas o polígonos que representan áreas. Puede asociar los datos analíticos a elementos de mapa en cada capa.  
+# <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planear un informe de mapa (Generador de informes y SSRS)
+Los buenos informes presentan información que motiva acciones o conocimientos. Para presentar datos analíticos como totales de ventas o datos demográficos en un contexto geográfico, puede agregar un mapa al informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Un mapa puede contener varias capas, y en cada una se muestran elementos de mapa definidos por un tipo concreto de datos espaciales: puntos que representan ubicaciones, líneas que representan rutas o polígonos que representan áreas. Puede asociar los datos analíticos a elementos de mapa en cada capa.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -51,7 +56,7 @@ Los buenos informes presentan información que motiva acciones o conocimientos. 
   
  Después de identificar qué datos espaciales necesita, debe buscar un origen para ellos.  
   
-### Buscar un origen para los datos espaciales  
+### <a name="find-a-source-for-spatial-data"></a>Buscar un origen para los datos espaciales  
  Para buscar los datos espaciales que se usarán en un mapa, puede utilizar los orígenes siguientes:  
   
 -   Archivos de forma ESRI, que incluyen los archivos de forma disponibles públicamente que puede encontrar en Internet.  
@@ -60,7 +65,7 @@ Los buenos informes presentan información que motiva acciones o conocimientos. 
   
 -   Mapas de los informes de la galería de mapas.  
   
--   Sitios de terceros que proporcionan datos espaciales como archivos de forma ESRI o datos espaciales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Sitios de terceros que proporcionan datos espaciales como archivos de forma ESRI o datos espaciales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Mosaicos de Bing Maps, que proporcionan un fondo para la vista del mapa. Para mostrar los mosaicos en un mapa, se debe configurar el servidor de informes para que admita Servicios web de Bing Maps.  
   
@@ -70,18 +75,18 @@ Los buenos informes presentan información que motiva acciones o conocimientos. 
   
  Cuando encuentre los datos que desea, puede incrustarlos en la definición de informe o recuperarlos dinámicamente al procesar el informe. Para obtener más información, vea [Equilibrar el tamaño de la definición de informe y el tiempo de procesamiento del informe](#Embedding) , más adelante en este tema.  
   
-### Determinar los datos espaciales y los campos coincidentes de datos espaciales  
+### <a name="determine-the-spatial-data-and-the-spatial-data-match-fields"></a>Determinar los datos espaciales y los campos coincidentes de datos espaciales  
  Para mostrar datos analíticos en un mapa y variar el tamaño, color o tipo de marcador, debe especificar los campos que relacionan los datos espaciales y los datos analíticos.  
   
  Los datos espaciales deben contener los campos siguientes:  
   
--   **.** Campo de datos espaciales que tiene los conjuntos de coordenadas que definen cada punto, línea o polígono.  
+-   **Spatial data.** Campo de datos espaciales que tiene los conjuntos de coordenadas que definen cada punto, línea o polígono.  
   
 -   **Campos coincidentes.** Uno o varios campos que identifican de forma única cada campo de datos espaciales. Por ejemplo, para un punto de ubicación de un almacén, podría utilizar el nombre del almacén. Si el nombre del almacén no es único en los datos espaciales, podría incluir el nombre de la ciudad además del almacén.  
   
  Los campos coincidentes se utilizan para relacionar los datos espaciales con los datos analíticos.  
   
-### Determinar los campos coincidentes de datos analíticos y datos espaciales  
+### <a name="determine-the-analytical-data-and-the-analytical-data-match-fields"></a>Determinar los campos coincidentes de datos analíticos y datos espaciales  
  Después de identificar los datos espaciales, debe identificar los datos analíticos. Los datos analíticos pueden proceder de alguno de los orígenes siguientes:  
   
 -   Un conjunto de datos de informe existente. Los campos se especifican como expresiones de campo sencillas, por ejemplo, [Sales] o =Fields!Sales.Value.  
@@ -107,14 +112,14 @@ Los buenos informes presentan información que motiva acciones o conocimientos. 
   
 |Icono del asistente|Estilo de la capa|Tipo de capa|Descripción y opciones|  
 |-----------------|-----------------|----------------|-----------------------------|  
-|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.png "rs_MapType_Polygon_Basic")|Mapa básico|Polígono|Mapa que solo muestra áreas, por ejemplo territorios de ventas.<br /><br /> Opciones: varíe el color según la paleta o utilice un único color. Una paleta es un conjunto predefinido de colores. Cuando se han asignado todos los colores de una paleta, se asignan las sombras de los colores.|  
-|![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.png "rs_MapType_Polygon_ColorAnalytical")|Mapa analítico de color|Polígono|Mapa que muestra los datos analíticos mediante la variación del color, por ejemplo los datos de ventas por área.|  
-|![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.png "rs_MapType_Polygon_Bubble")|Mapa de burbujas|Polígono|Mapa que muestra los datos analíticos variando el tamaño de burbuja centrada en las áreas, por ejemplo los datos de ventas por área.<br /><br /> Opciones: varíe los colores del área según un segundo campo analítico y especifique reglas de color.|  
-|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.png "rs_MapType_Line_Basic")|Mapa de líneas básico|Línea|Mapa que muestra únicamente líneas, por ejemplo las rutas de entrega.<br /><br /> Opciones: varíe el color según la paleta o utilice un único color.|  
-|![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.png "rs_MapType_Line_Analytical")|Mapa de líneas analítico|Línea|Mapa que varía el color y ancho de las líneas, por ejemplo el número de paquetes entregados y las métricas de tiempo por ruta.<br /><br /> Opciones: varíe el ancho de línea con un campo analítico, varíe el color de línea con un segundo campo analítico y especifique las reglas de color.|  
-|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.png "rs_MapType_Marker_Basic")|Mapa de marcadores básico|Punto|Mapa que muestra un marcador en cada ubicación, por ejemplo las ciudades.<br /><br /> Opciones: varíe el color por paleta o utilice un único color y cambie el estilo de marcador.|  
-|![rs_MapType_Marker_Bubble](../../reporting-services/report-design/media/rs-maptype-marker-bubble.png "rs_MapType_Marker_Bubble")|Mapa de marcadores de burbuja|Punto|Mapa que muestra una burbuja para cada ubicación y varía el tamaño de burbuja mediante un campo de datos analíticos, por ejemplo los datos de ventas por ciudad.<br /><br /> Opciones: varíe el color de las burbujas con un segundo campo analítico y especifique las reglas de color.|  
-|![rs_MapType_Marker_Analytical](../../reporting-services/report-design/media/rs-maptype-marker-analytical.png "rs_MapType_Marker_Analytical")|Mapa de marcadores analítico|Punto|Mapa que muestra un marcador en cada ubicación y varía el color, el tamaño y el tipo de los marcadores según datos analíticos, por ejemplo los productos de mayores ventas, el intervalo de ganancia y la estrategia de descuentos.<br /><br /> Opciones: varíe el tipo de los marcadores con un campo analítico, varíe el tamaño de los marcadores con un segundo campo analítico, varíe el color de los marcadores con un tercer campo analítico y especifique las reglas de color.|  
+|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Mapa básico|Polígono|Mapa que solo muestra áreas, por ejemplo territorios de ventas.<br /><br /> Opciones: varíe el color según la paleta o utilice un único color. Una paleta es un conjunto predefinido de colores. Cuando se han asignado todos los colores de una paleta, se asignan las sombras de los colores.|  
+|![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Mapa analítico de color|Polígono|Mapa que muestra los datos analíticos mediante la variación del color, por ejemplo los datos de ventas por área.|  
+|![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Mapa de burbujas|Polígono|Mapa que muestra los datos analíticos variando el tamaño de burbuja centrada en las áreas, por ejemplo los datos de ventas por área.<br /><br /> Opciones: varíe los colores del área según un segundo campo analítico y especifique reglas de color.|  
+|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Mapa de líneas básico|Línea|Mapa que muestra únicamente líneas, por ejemplo las rutas de entrega.<br /><br /> Opciones: varíe el color según la paleta o utilice un único color.|  
+|![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Mapa de líneas analítico|Línea|Mapa que varía el color y ancho de las líneas, por ejemplo el número de paquetes entregados y las métricas de tiempo por ruta.<br /><br /> Opciones: varíe el ancho de línea con un campo analítico, varíe el color de línea con un segundo campo analítico y especifique las reglas de color.|  
+|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Mapa de marcadores básico|Punto|Mapa que muestra un marcador en cada ubicación, por ejemplo las ciudades.<br /><br /> Opciones: varíe el color por paleta o utilice un único color y cambie el estilo de marcador.|  
+|![rs_MapType_Marker_Bubble](../../reporting-services/report-design/media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|Mapa de marcadores de burbuja|Punto|Mapa que muestra una burbuja para cada ubicación y varía el tamaño de burbuja mediante un campo de datos analíticos, por ejemplo los datos de ventas por ciudad.<br /><br /> Opciones: varíe el color de las burbujas con un segundo campo analítico y especifique las reglas de color.|  
+|![rs_MapType_Marker_Analytical](../../reporting-services/report-design/media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|Mapa de marcadores analítico|Punto|Mapa que muestra un marcador en cada ubicación y varía el color, el tamaño y el tipo de los marcadores según datos analíticos, por ejemplo los productos de mayores ventas, el intervalo de ganancia y la estrategia de descuentos.<br /><br /> Opciones: varíe el tipo de los marcadores con un campo analítico, varíe el tamaño de los marcadores con un segundo campo analítico, varíe el color de los marcadores con un tercer campo analítico y especifique las reglas de color.|  
   
  Después de agregar un mapa con el Asistente para mapas, puede crear capas adicionales o cambiar las opciones de una capa utilizando el Asistente para capas. Para más información sobre los asistentes, vea [Asistente para mapas y Asistente para capas de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
@@ -135,7 +140,7 @@ Los buenos informes presentan información que motiva acciones o conocimientos. 
   
  De forma predeterminada, todas las capas muestran los resultados de las reglas en la primera leyenda del mapa. Puede crear varias leyendas y, a continuación, para cada regla, asignar qué leyenda utilizar para mostrar los resultados.  
   
- Para más información, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md) y [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
+ Para más información, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md) y [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
 ##  <a name="Embedding"></a> Equilibrar el tamaño de la definición de informe y el tiempo de procesamiento del informe  
  Un buen diseño de informe para mapas requiere que equilibre las opciones que controlan el rendimiento del informe y el tamaño de su definición. Los elementos de un mapa que se basan en datos espaciales, o mosaicos de Bing Maps, pueden ser estáticos e incrustarse en la definición de informe, o dinámicos y crearse cada vez que se procesa el mismo. Debe evaluar las ventajas comparativas de los datos de mapas estáticos y dinámicos, y encontrar el equilibrio que resulte apropiado en sus circunstancias. Considere la información siguiente para tomar esta decisión:  
@@ -150,7 +155,7 @@ Los buenos informes presentan información que motiva acciones o conocimientos. 
   
  Para utilizar los datos espaciales dinámicos, el origen de datos espaciales debe estar en el servidor de informes. Cuando los informes se diseñan en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], los orígenes de datos espaciales se pueden agregar a un proyecto y publicar en el servidor de informes junto con la definición de informe. Si usa el Generador de informes para diseñar informes, debe cargar primero los datos espaciales en el servidor de informes y, a continuación, en las propiedades de las capas o el asistente, especificar ese origen de datos espaciales para la capa de mapa.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Personalizar los datos y la presentación de un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Tutorial: informe de asignaciones &#40;Generador de informes&#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
  [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   

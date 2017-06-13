@@ -1,31 +1,36 @@
 ---
-title: "Configurar la memoria disponible para las aplicaciones del servidor de informes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "memoria [Reporting Services]"
-  - "umbrales de memoria [Reporting Services]"
+title: Configurar la memoria disponible para aplicaciones de servidor de informes | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- memory [Reporting Services]
+- memory thresholds [Reporting Services]
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 caps.latest.revision: 49
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 49
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 21f15afcea2904a88e8e9bdb71b2cccc677ff43d
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Configurar la memoria disponible para las aplicaciones del servidor de informes
+# <a name="configure-available-memory-for-report-server-applications"></a>Configurar la memoria disponible para las aplicaciones del servidor de informes
   Aunque [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] puede usar toda la memoria disponible, puede invalidar el comportamiento predeterminado configurando un límite superior en la cantidad total de los recursos de memoria asignados a las aplicaciones de servidor [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . También puede establecer umbrales que hacen que el servidor de informes cambie la manera de asignar prioridades y procesa las solicitudes dependiendo de si la presión de memoria es baja, media o alta. En niveles bajos de presión de memoria, el servidor de informes responde concediendo una prioridad ligeramente superior al procesamiento de informes a petición o interactivo. En los niveles altos de presión de memoria, el servidor de informes usa varias técnicas para seguir siendo operativo usando los recursos limitados que están disponibles para él.  
   
  En este tema se describe la configuración que puede especificar y la manera en la que el servidor responde cuando la presión de memoria se convierte en un factor en las solicitudes de procesamiento.  
   
-## Directivas de administración de memoria  
+## <a name="memory-management-policies"></a>Directivas de administración de memoria  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] responde a las restricciones de recursos del sistema ajustando la cantidad de memoria que se asigna a aplicaciones concretas y tipos de solicitudes de procesamiento. Entre las aplicaciones que se ejecutan en el servicio del servidor de informes y que están sujetas a la administración de memoria se incluyen:  
   
 -   El Administrador de informes, que es una aplicación front-end web para el servidor de informes.  
@@ -46,12 +51,12 @@ caps.handback.revision: 49
   
  Aunque no puede personalizar las respuestas del servidor de informes a los diferentes escenarios de presión de memoria, puede especificar la configuración que define los límites que separan las respuestas de presión de memoria alta, media y baja.  
   
-## Cuándo personalizar la configuración de administración de memoria  
+## <a name="when-to-customize-memory-management-settings"></a>Cuándo personalizar la configuración de administración de memoria  
  La configuración predeterminada especifica los intervalos desiguales para presión de memoria baja, media y alta. De forma predeterminada, la zona de presión de memoria baja es mayor que las zonas para la presión de memoria media y alta. Esta configuración es óptima para las cargas de procesamiento que se distribuyen uniformemente o que crecen o se rechazan de manera incremental. En este escenario, la transición entre las zonas es gradual y el servidor de informes tiene el tiempo de ajustar su respuesta.  
   
  La modificación de la configuración predeterminada resulta útil si el modelo de carga incluye picos. Cuando hay picos repentinos en la carga de procesamiento, el servidor de informes puede pasar de no tener presión de memoria a presentar errores de asignación de memoria muy rápidamente. Esto puede producirse si tiene varias instancias simultáneas de un informe que usa mucha memoria que empiezan al mismo tiempo. Para controlar este tipo de carga de procesamiento, desea que el servidor de informes pase a una respuesta de presión de memoria media o alta lo antes posible de manera que pueda reducir el procesamiento. Esto permite que se completen más solicitudes. Para ello, debería disminuir el valor para **MemorySafetyMargin** para hacer la zona de presión de memoria baja menor en relación con las demás zonas. Si se hace, dará lugar a que las respuestas para presión de memoria media o alta se produzcan antes.  
   
-## Valores de configuración para la administración de memoria  
+## <a name="configuration-settings-for-memory-management"></a>Valores de configuración para la administración de memoria  
  Entre los valores de configuración que controlan la asignación de memoria para el servidor de informes se incluyen **WorkingSetMaximum**, **WorkingSetMinimum**, **MemorySafetyMargin**y **MemoryThreshold**.  
   
 -   **WorkingSetMaximum** y **WorkingSetMinimum** definen el intervalo de memoria disponible. Puede configurar estos valores para establecer un intervalo de memoria disponible para las aplicaciones del servidor de informes. Esto puede resultar útil si está hospedando varias aplicaciones en el mismo equipo y determina que el servidor de informes está usando una cantidad desproporcionada de recursos del sistema en relación con otras aplicaciones del mismo equipo.  
@@ -62,7 +67,7 @@ caps.handback.revision: 49
   
  La ilustración siguiente muestra cómo se usa la configuración en conjunto para distinguir entre los niveles bajo, medio y alto de presión de memoria:  
   
- ![Valores de configuración para el estado de la memoria](../../reporting-services/report-server/media/rs-memoryconfigurationzones.gif "Valores de configuración para el estado de la memoria")  
+ ![Configuración de estado de la memoria](../../reporting-services/report-server/media/rs-memoryconfigurationzones.gif "opciones de configuración de estado de la memoria")  
   
  En la tabla siguiente se describen las configuraciones **WorkingSetMaximum**, **WorkingSetMinimum**, **MemorySafetyMargin**y **MemoryThreshold** . Los valores de configuración se especifican en el archivo [RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
@@ -74,10 +79,10 @@ caps.handback.revision: 49
 |**MemorySafetyMargin**|Especifica un porcentaje de **WorkingSetMaximum** que define el límite entre el los escenarios de presión media y baja. Este valor es el porcentaje de memoria disponible que se reserva para el sistema y no se puede usar para las operaciones del servidor de informes. El valor predeterminado es 80.|  
   
 > [!NOTE]  
-> Las configuraciones  **MemoryLimit** y **MaximumMemoryLimit** están obsoletas en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores. Si ha actualizado una instalación existente o está usando un archivo RSReportServer.config que incluye dicha configuración, el servidor de informes ya no leerá dichos valores.  
+> Las configuraciones **MemoryLimit** y **MaximumMemoryLimit** están obsoletas en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y later versions. Si ha actualizado una instalación existente o está usando un archivo RSReportServer.config que incluye dicha configuración, el servidor de informes ya no leerá dichos valores.  
   
-#### Ejemplo de los valores de configuración de memoria  
- El ejemplo siguiente muestra los valores de configuración para un equipo del servidor de informes que usa valores de configuración de memoria personalizados. Si desea agregar **WorkingSetMaximum** o **WorkingSetMinimum**, debe escribir los elementos y los valores en el archivo RSReportServer.config. Ambos valores son enteros que expresan kilobytes de RAM que está asignando a las aplicaciones de servidor. El ejemplo siguiente especifica que la asignación de memoria total para las aplicaciones del servidor de informes no puede superar los 4 gigabytes. Si el valor predeterminado de **WorkingSetMinimum** es aceptable (el 60 % de **WorkingSetMaximum**), puede omitirlo y especificar únicamente **WorkingSetMaximum** en el archivo RSReportServer.config. Este ejemplo incluye **WorkingSetMinimum** para mostrar cómo aparecería si deseara agregarlo:  
+#### <a name="example-of-memory-configuration-settings"></a>Ejemplo de los valores de configuración de memoria  
+ El ejemplo siguiente muestra los valores de configuración para un equipo del servidor de informes que usa valores de configuración de memoria personalizados. Si desea agregar **WorkingSetMaximum** o **WorkingSetMinimum**, debe escribir los elementos y los valores en el archivo RSReportServer.config. Ambos valores son enteros que expresan kilobytes de RAM que está asignando a las aplicaciones de servidor. El ejemplo siguiente especifica que la asignación de memoria total para las aplicaciones del servidor de informes no puede superar los 4 gigabytes. Si el valor predeterminado de **WorkingSetMinimum** es aceptable (el 60 % de **WorkingSetMaximum**), puede omitirlo y especificar únicamente **WorkingSetMaximum** en el archivo RSReportServer.config. Este ejemplo incluye **WorkingSetMinimum** para mostrar cómo aparecería si deseara agregarlo:  
   
 ```  
       <MemorySafetyMargin>80</MemorySafetyMargin>  
@@ -86,13 +91,13 @@ caps.handback.revision: 49
       <WorkingSetMinimum>2400000</WorkingSetMinimum>  
 ```  
   
-#### Acerca de los valores de configuración de memoria de ASP.NET  
- Aunque el servicio web del servidor de informes y el Administrador de informes son aplicaciones de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)], ninguna aplicación responde a los valores de configuración de memoria que especifica en la sección **processModel** de machine.config para aplicaciones de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] que se ejecutan en el modo de compatibilidad de IIS 5.0. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] lee solamente los valores de configuración de la memoria del archivo RSReportServer.config.  
+#### <a name="about-aspnet-memory-configuration-settings"></a>Acerca de los valores de configuración de memoria de ASP.NET  
+ Aunque el servicio web del servidor de informes y el Administrador de informes son aplicaciones de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , ninguna aplicación responde a los valores de configuración de memoria que especifica en la sección **processModel** de machine.config para aplicaciones de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] que se ejecutan en el modo de compatibilidad de IIS 5.0. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] lee solamente los valores de configuración de la memoria del archivo RSReportServer.config.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Dominios de aplicación para las aplicaciones del servidor de informes](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
+ [Dominios de aplicación para aplicaciones de servidor de informes](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
   
   

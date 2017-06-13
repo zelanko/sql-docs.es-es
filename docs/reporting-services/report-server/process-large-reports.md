@@ -1,29 +1,34 @@
 ---
-title: "Procesar informes grandes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "procesamiento de informes [Reporting Services], informes grandes"
-  - "saltos de página [Reporting Services]"
-  - "informes grandes"
-  - "tamaño [SQL Server], informes"
-  - "distribuir informes [Reporting Services], informes grandes"
+title: Procesar informes grandes | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- report processing [Reporting Services], large reports
+- page breaks [Reporting Services]
+- large reports
+- size [SQL Server], reports
+- distributing reports [Reporting Services], large reports
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 caps.latest.revision: 42
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 42
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 065902778339650fcd123556acdeabfe8504224f
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Procesar informes grandes
+# <a name="process-large-reports"></a>Procesar informes grandes
   Los informes de gran tamaño presentan determinados problemas de procesamiento y requieren determinadas configuraciones para que se ejecuten correctamente. Estos informes no deben ejecutarse a petición a menos que estén configurados para admitir paginación.  
   
 > [!NOTE]  
@@ -35,7 +40,7 @@ caps.handback.revision: 42
   
  Para obtener más información y sugerencias sobre cómo diagnosticar errores de tiempo de espera y errores de memoria insuficiente, vea el artículo sobre [cómo diagnosticar problemas cuando se ejecutan informes en el servidor de informes](http://go.microsoft.com/fwlink/?LinkId=85634) en blogs.msdn.com.  
   
-## Recomendaciones para la configuración  
+## <a name="configuration-recommendations"></a>Recomendaciones para la configuración  
  Entre las recomendaciones para la ejecución de informes, la representación de informes y el acceso a los informes, se contemplan los siguientes aspectos:  
   
 -   El informe debe diseñarse para que admita paginación. El servidor de informes envía los informes página por página. Si el informe incluye paginación, podrá controlar el volumen de datos que se envía al explorador. Para obtener más información, vea [Cargar previamente la memoria caché &#40;Administrador de informes&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md).  
@@ -50,12 +55,12 @@ caps.handback.revision: 42
   
      De forma predeterminada, los usuarios pueden abrir cualquier informe que vean en la jerarquía de carpetas. Incluso si configura un informe para que se ejecute como una instantánea, los usuarios que puedan ver el elemento de informe en una carpeta también podrán abrir el informe. Si el informe es muy grande, podría hacer que el explorador deje de responder cuando un usuario abra el informe con el Administrador de informes.  
   
-## Recomendaciones para la representación  
+## <a name="rendering-recommendations"></a>Recomendaciones para la representación  
  Antes de configurar la distribución de los informes es importante saber qué clientes de representación pueden trabajar con documentos de gran tamaño. El formato recomendado es la extensión de representación en HTML predeterminada con salto de página automático, pero puede elegir cualquier formato que admita paginación.  
   
  El rendimiento y el consumo de memoria varían según cada uno de los formatos de representación. El mismo informe se representará a diferentes velocidades y requerirá distintas cantidades de memoria en función del formato que seleccione. Los formatos más rápidos y que requieren menor cantidad de memoria son CSV, XML y HTML. PDF y Excel tienen el rendimiento más bajo, pero por diferentes motivos. PDF hace un uso importante de CPU, mientras que Excel utiliza una gran cantidad de RAM. Las representaciones de imágenes se encuentra entre los dos grupos. Puede especificar el formato al definir el modo de distribución del informe.  
   
-## Recomendaciones para la implementación y la distribución  
+## <a name="deployment-and-distribution-recommendations"></a>Recomendaciones para la implementación y la distribución  
  Si utiliza saltos de página para controlar la representación de informe, puede implementar un informe de gran tamaño del mismo modo que implementaría cualquier informe. Puede proporcionar acceso al informe mediante el Administrador de informes, un elemento web de SharePoint o una dirección URL que se agrega a un portal o sitio web. Todas estas opciones de implementación admiten acceso a petición, así como también una instantánea de informe ejecutada con anterioridad.  
   
  Una estrategia de implementación alternativa es distribuir informes a usuarios individuales. Puede distribuir informes de gran tamaño mediante suscripciones si configura las opciones de entrega con cuidado. Puede utilizar una suscripción estándar o una controlada por datos para efectuar la entrega del informe. Entre las recomendaciones de suscripción y entrega, se incluyen los siguientes aspectos:  
@@ -68,7 +73,7 @@ caps.handback.revision: 42
   
  Si desea utilizar la entrega de informes por correo electrónico, configure la suscripción para que incluya un vínculo. Evite enviar el informe como datos adjuntos.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Establecer las propiedades del procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   

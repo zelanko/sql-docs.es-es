@@ -1,29 +1,34 @@
 ---
-title: "Representar elementos de informe (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Representar elementos de informe (generador de informes y SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3a254c48e1639c95b1d93f180f1fdd00326a79ae
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Representar elementos de informe (Generador de informes y SSRS)
+# <a name="rendering-report-items-report-builder-and-ssrs"></a>Representar elementos de informe (Generador de informes y SSRS)
   El número, tamaño y ubicación de los elementos de informe afectan a la manera en que los representadores paginan el cuerpo del informe. A continuación se incluye una descripción de cómo se representan los distintos elementos de informe.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Elementos de informe superpuestos  
+## <a name="overlapping-report-items"></a>Elementos de informe superpuestos  
  Los elementos de informe superpuestos no se admiten en HTML, MHTML, Word, Excel, la vista previa ni el Visor de informes. Si existe algún elemento superpuesto, se mueve. A los elementos de informe se les aplican las reglas siguientes:  
   
 -   Si es mayor la superposición vertical de los elementos de informe, uno de los elementos superpuestos se desplaza a la derecha. El elemento situado más a la izquierda permanece en su lugar.  
@@ -36,7 +41,7 @@ caps.handback.revision: 7
   
  Los elementos de informe superpuestos son compatibles con los formatos de saltos de página duros, incluyendo la impresión.  
   
-## Visibilidad y elementos de informe  
+## <a name="visibility-and-report-items"></a>Visibilidad y elementos de informe  
  Los elementos de informe se pueden ocultar o mostrar de forma predeterminada, o de forma condicional mediante expresiones. Opcionalmente, la visibilidad se puede cambiar haciendo clic en otro elemento de informe.  
   
  Se aplican las reglas de visibilidad siguientes al representar elementos de informe:  
@@ -47,7 +52,7 @@ caps.handback.revision: 7
   
 -   Si la visibilidad de un elemento de informe y su contenido se puede cambiar haciendo clic en otro elemento de informe, la paginación cambia para adaptarse al elemento de informe y su contenido solo cuando se muestra inicialmente.  
   
-## Mantener unidos los elementos de informe en una sola página  
+## <a name="keeping-report-items-together-on-a-single-page"></a>Mantener unidos los elementos de informe en una sola página  
  Muchos de los elementos de informe incluidos en un informe se pueden conservar unidos en una sola página de forma implícita o explícita estableciendo las propiedades KeepWithGroup o KeepTogether. Los elementos de informe siempre se representan en la misma página si el elemento de informe no tiene ningún salto de página lógico y es más pequeño que el área de página utilizable. Si un elemento de informe no cabe por completo en la página en la que normalmente se iniciaría, se inserta un salto de página duro antes de dicho elemento, forzando a que se muestre en la página siguiente. En los representadores de salto de página automático, la página aumenta de tamaño para dar cabida al elemento de informe.  
   
  Si el elemento de informe está oculto siempre, las reglas para mantener unidos los elementos se omiten.  
@@ -68,7 +73,7 @@ caps.handback.revision: 7
   
 -   Elementos de informe que se pueden activar o desactivar en una región de datos Tablix.  
   
-### Orden de prioridad  
+### <a name="priority-order"></a>Orden de prioridad  
  Debido a las limitaciones de tamaño de la página, pueden surgir conflictos entre las reglas para mantener unidos los elementos de informe. En este caso, se usa el orden de prioridad siguiente para mantener unidos los elementos al efectuar la representación:  
   
 -   Líneas, gráficos e imágenes.  
@@ -85,7 +90,7 @@ caps.handback.revision: 7
   
 -   Las regiones de datos Tablix con una propiedad KeepTogether explícita establecida en **true**.  
   
-### Subinformes  
+### <a name="subreports"></a>Subinformes  
  Un subinforme se representa como un rectángulo que contiene otro informe definido en un archivo de informe .rdl independiente. El archivo de subinforme se debe publicar en un servidor de informes para que el informe primario pueda tener acceso a él.  
   
  Se aplican las reglas siguientes al representar los subinformes:  
@@ -104,10 +109,10 @@ caps.handback.revision: 7
   
  Para más información sobre subinformes, vea [Subinformes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

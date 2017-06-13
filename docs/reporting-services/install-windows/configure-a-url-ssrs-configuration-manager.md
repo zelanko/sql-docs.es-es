@@ -1,24 +1,29 @@
 ---
-title: "Configurar una direcci&#243;n URL (Administrador de configuraci&#243;n de SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "acceso URL [Reporting Services], sintaxis"
+title: "Configurar una dirección URL (Administrador de configuración de SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 05/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 13
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 99c21c41115748c82267ed72845607b044ee3a6a
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Configurar una direcci&#243;n URL (Administrador de configuraci&#243;n de SSRS)
+# <a name="configure-a-url--ssrs-configuration-manager"></a>Configurar una dirección URL (Administrador de configuración de SSRS)
   Para poder usar el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] o el servicio web del servidor de informes, debe configurar al menos una dirección URL para cada aplicación. Configurar las direcciones URL es obligatorio si ha instalado [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el modo de "solo archivos" (es decir, al seleccionar la opción **Install but do not configure the server (Instalar pero no configurar el servidor)** en la página Opciones de instalación del servidor de informes del Asistente para la instalación). Si instaló [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la configuración predeterminada, las direcciones URL ya están configuradas para cada aplicación.  
   
  Utilice la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar las direcciones URL. Todas las partes de la dirección URL se definen en esta herramienta. A diferencia de las versiones anteriores, los sitios web de Internet Information Services (IIS) ya no proporcionan acceso a las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
@@ -33,9 +38,9 @@ caps.handback.revision: 13
   
 -   Establecer propiedades avanzadas de las direcciones URL para definir más direcciones URL.  
   
- Para obtener más información sobre cómo se almacenan y mantienen las direcciones URL, o sobre problemas de interoperabilidad, vea [Acerca de las reservas y el registro de reservas de URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) e [Instalar Reporting Services e Internet Information Services en paralelo &#40;modo nativo de SSRS&#41;](../../reporting-services/install-windows/install reporting and internet information services side-by-side.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para revisar ejemplos de direcciones URL que suelen usarse en una instalación de Reporting Services, vea [Ejemplos de direcciones URL](#URLExamples) en este tema.  
+ Para obtener más información sobre cómo se almacenan y mantienen las direcciones URL, o sobre problemas de interoperabilidad, vea [Acerca de las reservas y el registro de reservas de URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) e [Instalar Reporting Services e Internet Information Services en paralelo &#40;modo nativo de SSRS&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para revisar ejemplos de direcciones URL que suelen usarse en una instalación de Reporting Services, vea [Ejemplos de direcciones URL](#URLExamples) en este tema.  
   
-## Requisitos previos  
+## <a name="prerequisites"></a>Requisitos previos  
  Antes de crear o modificar una dirección URL, recuerde los puntos siguientes:  
   
 -   Debe ser miembro del grupo local de administradores en el equipo del servidor de informes.  
@@ -48,7 +53,7 @@ caps.handback.revision: 13
   
 -   Para obtener información general de la construcción de la dirección URL y el uso de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
-### Para configurar una dirección URL para el servicio web del servidor de informes  
+### <a name="to-configure-a-url-for-the-report-server-web-service"></a>Para configurar una dirección URL para el servicio web del servidor de informes  
   
 1.  Inicie la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y conéctese a una instancia local del servidor de informes  
   
@@ -56,13 +61,13 @@ caps.handback.revision: 13
   
 3.  Especifique el directorio virtual. El nombre del directorio virtual identifica qué aplicación recibe la solicitud. Dado que varias aplicaciones pueden compartir una dirección IP y el puerto, el nombre del directorio virtual especifica qué aplicación recibe la solicitud.  
   
-     Este valor debe ser único para asegurarse de que la solicitud alcanza el destino pretendido. Este valor es necesario. No distingue entre mayúsculas y minúsculas. Hay una correspondencia uno a uno entre un nombre de directorio virtual y una instancia de una aplicación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si crea varias direcciones URL para la misma instancia de aplicación, debe utilizar el mismo nombre de directorio virtual en todas las direcciones URL que defina para esta instancia de aplicación.  
+     Este valor debe ser único para asegurarse de que la solicitud alcanza el destino pretendido. Este valor es necesario. No distingue entre mayúsculas y minúsculas. Hay una correspondencia uno a uno entre un nombre de directorio virtual y una instancia de una aplicación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si crea varias direcciones URL para la misma instancia de aplicación, debe utilizar el mismo nombre de directorio virtual en todas las direcciones URL que defina para esta instancia de aplicación.  
   
      Para el servicio web del servidor de informes, el nombre del directorio virtual predeterminado es **ReportServer**.  
   
 4.  Especifique la dirección IP que identifique de forma exclusiva el equipo del servidor de informes en la red. Si desea especificar un encabezado de host o definir más direcciones URL para la misma instancia de aplicación, debe hacer clic en **Avanzadas**. Para obtener instrucciones de cómo establecer las propiedades avanzadas de la dirección URL, consúltelas posteriormente en este tema. De lo contrario, utilice la página **Dirección URL del servicio web** para seleccionar entre los valores siguientes:  
   
-    -   **Todas asignadas** especifica que cualquiera de las direcciones IP que están asignadas al equipo se puede utilizar en una dirección URL que señale a una aplicación de servidor de informes. Este valor también abarca nombres de host descriptivos (como nombres de equipo) que un servidor de nombres de dominio puede resolver en una dirección IP que se asigna al equipo. Éste es el valor predeterminado de una dirección URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+    -   **Todas asignadas** especifica que cualquiera de las direcciones IP que están asignadas al equipo se puede utilizar en una dirección URL que señale a una aplicación de servidor de informes. Este valor también abarca nombres de host descriptivos (como nombres de equipo) que un servidor de nombres de dominio puede resolver en una dirección IP que se asigna al equipo. Éste es el valor predeterminado de una dirección URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
     -   **Todas sin asignar** especifica que el servidor de informes recibirá cualquier solicitud no administrada por otra aplicación. Recomendamos que evite esta opción. Si selecciona esta opción, es posible que otra aplicación que tenga una reserva de direcciones URL más fuertes intercepte las solicitudes destinadas al servidor de informes.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 13
   
     -   **::1** es la dirección de retorno con el formato IPv6.  
   
-    -   Las direcciones IP concretas también aparecen en esta lista. Las direcciones IP pueden estar en los formatos IPv4 e IPv6. *Nnn.nnn.nnn.nnn* es la dirección IPv4 de 32 bits de una tarjeta adaptadora de red del equipo. Las direcciones IPv6 son de 128 bits, con ocho campos de 4 bytes separados por dos puntos: el \<prefijo>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*.  
+    -   Las direcciones IP concretas también aparecen en esta lista. Las direcciones IP pueden estar en los formatos IPv4 e IPv6. *Nnn.nnn.nnn.nnn* es la dirección IPv4 de 32 bits de una tarjeta adaptadora de red del equipo. Las direcciones IPv6 son de 128 bits, con ocho campos de 4 bytes separados por dos puntos: \<prefijo >:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
   
          Si tiene varias tarjetas o si la tarjeta de red admite tanto direcciones IPv4 como direcciones IPv6, verá varias direcciones IP. Si selecciona solo una dirección IP, limitará el acceso de la aplicación únicamente a la dirección IP (y a cualquier nombre de host que un servidor de nombres de dominio asigne a esa dirección). No puede utilizar el host local para tener acceso a un servidor de informes y no puede utilizar las direcciones IP de otras tarjetas de adaptadores de red que estén instalados en el equipo del servidor de informes. Normalmente, si selecciona este valor, es porque está configurando varias reservas de direcciones URL que también especifican direcciones IP explícitas o nombres de host (por ejemplo, uno para una tarjeta de un adaptador de red que se use para las conexiones de intranet y un segundo que se use para las conexiones de extranet).  
   
@@ -92,7 +97,7 @@ caps.handback.revision: 13
   
 9. Haga clic en **Aplicar** para crear la dirección URL.  
   
-10. Pruebe la dirección URL haciendo clic en el vínculo en la sección **Direcciones URL** de la página. Observe que la base de datos del servidor de informes debe crearse y configurarse para poder probar la dirección URL. Para obtener más información, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/create-a-native-mode-report-server-database-ssrs-configuration-manager.md).  
+10. Pruebe la dirección URL haciendo clic en el vínculo en la sección **Direcciones URL** de la página. Observe que la base de datos del servidor de informes debe crearse y configurarse para poder probar la dirección URL. Para obtener más información, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
 > [!NOTE]  
 >  Si tiene enlaces SSL y reservas de direcciones URL existentes y desea cambiar el enlace SSL para, por ejemplo, usar otro certificado o encabezado de host, se recomienda que complete los pasos siguientes por orden:  
@@ -107,7 +112,7 @@ caps.handback.revision: 13
 >   
 >  Para corregir el problema, elimine todos los enlaces y, a continuación, cree nuevos enlaces con una configuración única, o configure los registros de direcciones URL de Reporting Services con caracteres comodín.
   
-### Para crear una reserva de dirección URL para el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  
+### <a name="to-create-a-url-reservation-for-the-includessrswebportalincludesssrswebportalmd"></a>Para crear una reserva de dirección URL para el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  
   
 1.  Inicie la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y conéctese a la instancia del servidor de informes.  
   
@@ -123,12 +128,12 @@ caps.handback.revision: 13
   
 6.  Pruebe la dirección URL haciendo clic en el vínculo en la sección **Direcciones URL** de la página.  
   
-## Establecer las propiedades avanzadas para especificar direcciones URL adicionales  
+## <a name="setting-advanced-properties-to-specify-additional-urls"></a>Establecer las propiedades avanzadas para especificar direcciones URL adicionales  
  Puede reservar varias direcciones URL para el servicio web del servidor de informes o el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] al especificar puertos diferentes o nombres de host (una dirección IP o un nombre de encabezado de host que un servidor de nombres de dominio pueda resolver como una dirección IP asignada al equipo). Si se crean varias direcciones URL, puede establecer rutas de acceso diferentes a la misma instancia del servidor de informes. Por ejemplo, para permitir el acceso desde la intranet y la extranet a un servidor de informes, podría utilizar la dirección URL predeterminada para el acceso a través de la intranet y un nombre de host completo adicional para el acceso desde la extranet:  
   
--   http://myserver01/reportserver  
+-   `http://myserver01/reportserver`  
   
--   http://www.adventure-works.com/reportserver  
+-   `http://www.adventure-works.com/reportserver`  
   
  No puede establecer varios nombres de directorios virtuales para la misma instancia de aplicación. A cada instancia de aplicación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se le asigna un único nombre de directorio virtual. Si tiene varias instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el mismo equipo, el nombre del directorio virtual para una aplicación debería incluir el nombre de instancia para asegurarse de que cada solicitud llega a su destino pretendido.  
  
@@ -145,15 +150,15 @@ caps.handback.revision: 13
   
  Especifica el nombre completo del equipo para el que se registra el certificado. El nombre que se especifica debe ser idéntico al nombre para el que se registra el certificado.  
   
- Para utilizar esta opción debe tener instalado un certificado. También debe modificar la opción de configuración UrlRoot del archivo RSReportServer.config de manera que especifique el nombre completo del equipo para el que se ha registrado el certificado. Para obtener más información, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Para utilizar esta opción debe tener instalado un certificado. También debe modificar la opción de configuración UrlRoot del archivo RSReportServer.config de manera que especifique el nombre completo del equipo para el que se ha registrado el certificado. Para obtener más información, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### Para establecer propiedades avanzadas en una dirección URL  
+### <a name="to-set-advanced-properties-on-a-url"></a>Para establecer propiedades avanzadas en una dirección URL  
   
-1.  En la página **Dirección URL del servicio web** o **Dirección URL del Portal web**, haga clic en **Avanzadas**.  
+1.  En la página **Dirección URL del servicio web** o **Dirección URL del Portal web** , haga clic en **Avanzadas**.  
   
 2.  Haga clic en **Agregar**.  
   
-3.  Haga clic en la dirección IP o en el nombre de encabezado de host. Si especifica un encabezado de host, asegúrese de especificar un nombre que el servicio DNS pueda resolver. Si está especificando el nombre de dominio disponible públicamente, incluya toda la dirección URL, incluido http://www.  
+3.  Haga clic en la dirección IP o en el nombre de encabezado de host. Si especifica un encabezado de host, asegúrese de especificar un nombre que el servicio DNS pueda resolver. Si está especificando el nombre de dominio disponible públicamente, incluya la dirección URL completa, incluidos los `http://www`.  
   
 4.  Especifique el puerto. Si especifica un puerto personalizado, la dirección URL de la aplicación siempre debe incluir el número de puerto.  
   
@@ -161,38 +166,39 @@ caps.handback.revision: 13
   
 6.  Para probar la dirección URL, abra una ventana del explorador y escriba la dirección URL.  
   
-## Direcciones URL para varias instancias del servidor de informes en el mismo equipo  
- Si está reservando direcciones URL para varias instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debería seguir las convenciones de nomenclatura para poder evitar conflictos de nombres. Para obtener más información, vea [Reservas de direcciones URL para implementaciones del servidor de informes de varias instancias &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/url reservations for multi-instance report server deployments.md).  
+## <a name="urls-for-multiple-report-server-instances-on-the-same-computer"></a>Direcciones URL para varias instancias del servidor de informes en el mismo equipo  
+ Si está reservando direcciones URL para varias instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debería seguir las convenciones de nomenclatura para poder evitar conflictos de nombres. Para obtener más información, vea [Reservas de direcciones URL para implementaciones del servidor de informes de varias instancias &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md).  
   
 ##  <a name="URLExamples"></a> Ejemplos de configuraciones de direcciones URL  
  En la lista siguiente se muestran algunos ejemplos de la apariencia que puede tener una dirección URL del servidor de informes:  
   
--   http://localhost/reportserver  
+-   `http://localhost/reportserver`  
   
--   http://localhost/reportserver_SQLEXPRESS  
+-   `http://localhost/reportserver_SQLEXPRESS`  
   
--   http://sales01/reportserver  
+-   `http://sales01/reportserver`  
   
--   http://sales01:8080/reportserver  
+-   `http://sales01:8080/reportserver`  
   
--   https://sales.adventure-works.com/reportserver  
+-   `https://sales.adventure-works.com/reportserver`  
   
--   https://www.adventure-works.com:8080/reportserver01  
+-   `https://www.adventure-works.com:8080/reportserver01`  
   
- Las direcciones URL que se usan para obtener acceso al [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] comparten un formato similar y suelen crearse en el mismo sitio web que hospeda al servidor de informes. La única diferencia es el nombre del directorio virtual (en este caso es **reports**, pero se puede configurar para que se use el nombre que se prefiera):  
+ Las direcciones URL que se usan para obtener acceso al [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] comparten un formato similar y suelen crearse en el mismo sitio web que hospeda al servidor de informes. La única diferencia es el nombre del directorio virtual (en este caso es **reports** , pero se puede configurar para que se use el nombre que se prefiera):  
   
--   http://localhost/reports  
+-   `http://localhost/reports`  
   
--   http://localhost/reports_SQLEXPRESS  
+-   `http://localhost/reports_SQLEXPRESS`  
   
--   http://sales01/reports  
+-   `http://sales01/reports`  
   
--   http://sales01:8080/reports  
+-   `http://sales01:8080/reports`  
   
--   https://sales.adventure-works.com/reports  
+-   `https://sales.adventure-works.com/reports`  
   
--   https://www.adventure-works.com:8080/reports  
+-   `https://www.adventure-works.com:8080/reports`  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+

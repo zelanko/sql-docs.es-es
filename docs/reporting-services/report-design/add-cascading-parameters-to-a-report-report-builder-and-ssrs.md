@@ -1,35 +1,40 @@
 ---
-title: "Agregar par&#225;metros en cascada a un informe (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Agregar parámetros en cascada a un informe (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8efc7a0b7120faa53a63bd07c51029a1b379f9e
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Agregar par&#225;metros en cascada a un informe (Generador de informes y SSRS)
+# <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Agregar parámetros en cascada a un informe (Generador de informes y SSRS)
   Los parámetros en cascada permiten administrar grandes cantidades de datos de informe. Es posible definir un conjunto de parámetros relacionados de manera que la lista de valores de uno de ellos dependa del valor seleccionado en otro parámetro. Por ejemplo, el primer parámetro es independiente y podría presentar una lista de categorías de productos. Cuando el usuario selecciona una categoría, el segundo parámetro depende del valor del primer parámetro. Sus valores se actualizan con una lista de subcategorías para la categoría elegida. Cuando el usuario ve el informe, los valores de los parámetros de categoría y subcategoría se usan para filtrar los datos del informe.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Para crear parámetros en cascada, primero debe definir la consulta del conjunto de datos e incluir un parámetro de consulta para cada parámetro en cascada que necesite. También debe crear un conjunto de datos independiente para que para cada parámetro en cascada proporcione los valores disponibles. Para obtener más información, vea [Agregar, cambiar o eliminar los valores disponibles para un parámetro de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add, change, or delete available values for a report parameter.md).  
+ Para crear parámetros en cascada, primero debe definir la consulta del conjunto de datos e incluir un parámetro de consulta para cada parámetro en cascada que necesite. También debe crear un conjunto de datos independiente para que para cada parámetro en cascada proporcione los valores disponibles. Para obtener más información, vea [Agregar, cambiar o eliminar los valores disponibles para un parámetro de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
  El orden es importante para los parámetros en cascada, dado que la consulta del conjunto de datos de un parámetro que aparece más adelante en la lista incluye una referencia a cada parámetro que aparece antes en la lista. En tiempo de ejecución, el orden de los parámetros en el panel Datos de informe determina el orden en que aparecen las consultas de parámetros en el informe, y por consiguiente, el orden en el que el usuario elige cada uno de los valores de los parámetros sucesivos.  
   
  Para obtener información sobre la creación de parámetros en cascada con varios valores e incluso la función Select All, vea [Tener un parámetro en cascada con varios valores y Select All](http://go.microsoft.com/fwlink/?LinkId=184757).  
   
-## Para crear el conjunto de datos principal con una consulta que incluye varios parámetros relacionados  
+## <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>Para crear el conjunto de datos principal con una consulta que incluye varios parámetros relacionados  
   
 1.  En el panel Datos de informe, haga clic con el botón derecho en un origen de datos y, después, haga clic en **Agregar conjunto de datos**.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 11
   
  A continuación, creará un conjunto de datos que proporciona los valores para el parámetro independiente.  
   
-## Para crear un conjunto de datos para proporcionar los valores para un parámetro independiente  
+## <a name="to-create-a-dataset-to-provide-values-for-an-independent-parameter"></a>Para crear un conjunto de datos para proporcionar los valores para un parámetro independiente  
   
 1.  En el panel Datos de informe, haga clic con el botón derecho en un origen de datos y, después, haga clic en **Agregar conjunto de datos**.  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 11
   
  A continuación, establecerá las propiedades del primer parámetro que se debe usar en este conjunto de datos para rellenar sus valores disponibles en tiempo de ejecución.  
   
-## Para establecer los valores disponibles para un parámetro de informe  
+## <a name="to-set-available-values-for-a-report-parameter"></a>Para establecer los valores disponibles para un parámetro de informe  
   
 1.  En la carpeta Parámetros del panel Datos de informe, haga clic con el botón derecho en el primer parámetro y, después, haga clic en **Propiedades del parámetro**.  
   
@@ -98,7 +103,7 @@ caps.handback.revision: 11
   
  A continuación, creará un conjunto de datos que proporcione los valores para el parámetro dependiente.  
   
-## Para crear un conjunto de datos para proporcionar los valores para un parámetro dependiente  
+## <a name="to-create-a-dataset-to-provide-values-for-a-dependent-parameter"></a>Para crear un conjunto de datos para proporcionar los valores para un parámetro dependiente  
   
 1.  En el panel Datos de informe, haga clic con el botón derecho en un origen de datos y, después, haga clic en **Agregar conjunto de datos**.  
   
@@ -115,13 +120,13 @@ caps.handback.revision: 11
     WHERE (Category = @Category)  
     ```  
   
-     En la cláusula WHERE, Category es el nombre de un campo de \<table> y @Category es un parámetro de la consulta. Esta instrucción genera una lista de subcategorías para la categoría especificada en @Category. En tiempo de ejecución, este valor se rellenará con el valor elegido por el usuario para el parámetro de informe que tiene el mismo nombre.  
+     En la cláusula WHERE, categoría es el nombre de un campo de \<tabla > y @Category es un parámetro de consulta. Esta instrucción genera una lista de subcategorías para la categoría especificada en @Category. En tiempo de ejecución, este valor se rellenará con el valor elegido por el usuario para el parámetro de informe que tiene el mismo nombre.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
  A continuación, establecerá las propiedades del segundo parámetro que se debe usar en este conjunto de datos para rellenar sus valores disponibles en tiempo de ejecución.  
   
-## Para establecer los valores disponibles para un parámetro de informe  
+## <a name="to-set-available-values-for-a-report-parameter"></a>Para establecer los valores disponibles para un parámetro de informe  
   
 1.  En la carpeta Parámetros del panel Datos de informe, haga clic con el botón derecho en el primer parámetro y, después, haga clic en **Propiedades del parámetro**.  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 11
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Para probar los parámetros en cascada  
+## <a name="to-test-the-cascading-parameters"></a>Para probar los parámetros en cascada  
   
 1.  Haga clic en **Ejecutar**.  
   
@@ -153,12 +158,12 @@ caps.handback.revision: 11
   
 4.  Haga clic en **Ver informe**. El informe actualiza la presentación basándose en los parámetros que ha elegido.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Agregar, cambiar o eliminar parámetros de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Tutorial: Agregar un parámetro a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Tutoriales del Generador de informes](../../reporting-services/report-builder-tutorials.md)   
- [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+ [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

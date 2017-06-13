@@ -1,23 +1,28 @@
 ---
-title: "Seguridad (Generador de informes) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Seguridad (generador de informes) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 7e6f09ff050246777e307f73280c764dd6da3ad7
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Seguridad (Generador de informes)
+# <a name="security-report-builder"></a>Seguridad (Generador de informes)
   El Generador de informes es una aplicación cliente de creación de informes diseñada para que funcione con un servidor de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . El servidor de informes se puede configurar para funcione en modo nativo como un servidor independiente o en modo integrado de SharePoint, para que admita los informes de un sitio de SharePoint.  
   
  En el Generador de informes puede crear informes, conjuntos de datos compartidos y elementos de informe reutilizables. Desde un servidor de informes o sitio de SharePoint, puede editar los informes y agregar orígenes de datos compartidos, conjuntos de datos compartidos y elementos de informe compartidos.  
@@ -45,7 +50,7 @@ caps.handback.revision: 10
   
      Para ver o publicar elementos en un servidor de informes, los conjuntos de permisos que se aplican a los elementos y las operaciones relacionados con los informes se organizan en roles. El administrador de un servidor de informes asigna a cada usuario a uno o varios roles. Por ejemplo, el rol predefinido Explorador permite ver informes, carpetas, modelos y recursos.  
   
-     Si no puede conectarse o desplazarse a un servidor de informes, póngase en contacto con el administrador del servidor de informes. Para más información, vea [Seguridad y protección de Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md) en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Si no puede conectarse o desplazarse a un servidor de informes, póngase en contacto con el administrador del servidor de informes. Para más información, vea [Seguridad y protección de Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md) en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 -   Servidor de informes configurado en el modo integrado de SharePoint  
   
@@ -55,7 +60,6 @@ caps.handback.revision: 10
   
      Si no puede conectarse a un sitio o subsitio de SharePoint, o no puede examinarlo, póngase en contacto con el administrador del sitio de SharePoint.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
 ##  <a name="Reports"></a> Descripción de la seguridad de los informes publicados y los elementos relacionados con los informes  
  El administrador del servidor de informes administra la seguridad de los informes y los elementos relacionados con los informes. Son elementos relacionados con los informes los orígenes de datos incrustados y compartidos como credenciales, conjuntos de datos compartidos, parámetros, elementos de informe y modelos.  
@@ -74,7 +78,7 @@ caps.handback.revision: 10
   
 -   [Administrar conjuntos de datos compartidos](../../reporting-services/report-data/manage-shared-datasets.md)  
   
-### Actualizar notificaciones de los elementos de informe  
+### <a name="update-notifications-for-report-parts"></a>Actualizar notificaciones de los elementos de informe  
  Los elementos de informe se publican en un servidor de informes para que otros usuarios puedan compartirlos. Por cuestiones de diseño, se especifica la ubicación en la que se deben publicar los elementos de informe.  
   
  Los usuarios que incluyen elementos de informe en los informes pueden habilitar la característica de actualización. Cuando esta característica está habilitada, los usuarios reciben notificaciones cuando los elementos de informe cambian en el servidor de informes.  
@@ -83,7 +87,6 @@ caps.handback.revision: 10
   
  Para más información, vea [Elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
 ##  <a name="Data"></a> Descripción de la seguridad de los datos de informe y los orígenes de datos externos  
  Para tener acceso a los datos de cada origen de datos externo de un informe, debe crear origen de datos incrustado o agregar una referencia a un origen de datos compartido o conjunto de datos compartido en el informe.  
@@ -92,36 +95,33 @@ caps.handback.revision: 10
   
  Las credenciales no se guardan en la definición de informe. Se administran independientemente del informe en el servidor de informes o sitio de SharePoint y en el cliente de creación de informes.  
   
- En el momento del diseño de informe, las credenciales se utilizan para ejecutar consultas de conjunto de datos y obtener la vista previa del informe. En tiempo de ejecución, las credenciales se utilizan para ejecutar el informe y almacenar en caché los resultados de la consulta. También puede almacenar en memoria caché por separado los resultados de la consulta del conjunto de datos compartido. Las credenciales del tiempo de diseño y las del tiempo de ejecución pueden ser distintas. Para más información, vea [Especificar credenciales en el Generador de informes](../Topic/Specify%20Credentials%20in%20Report%20Builder.md).  
+ En el momento del diseño de informe, las credenciales se utilizan para ejecutar consultas de conjunto de datos y obtener la vista previa del informe. En tiempo de ejecución, las credenciales se utilizan para ejecutar el informe y almacenar en caché los resultados de la consulta. También puede almacenar en memoria caché por separado los resultados de la consulta del conjunto de datos compartido. Las credenciales del tiempo de diseño y las del tiempo de ejecución pueden ser distintas. Para más información, vea [Especificar credenciales en el Generador de informes](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
  Para obtener más información acerca de cómo proteger los datos, consulte el siguiente tema en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
- Para más información sobre orígenes de datos, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md).  
+ Para más información sobre orígenes de datos, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
 ##  <a name="Models"></a> Descripción de los modelos y los filtros de seguridad  
  Cuando se recuperan datos de un modelo de informe basado en datos externos, puede aplicar filtros de seguridad en el modelo. De esta manera se protegen los datos de forma que cada usuario que ejecuta un informe pueda ver solo los datos para los que tiene permiso.  
   
  Los parámetros de informe no se utilizan para la seguridad en el nivel de fila; no evitan que los usuarios o grupos de usuarios vean filas de datos específicas. Para aplicar seguridad a los datos que se muestran en un informe, es necesario utilizar filtros de seguridad o seguridad de elemento de modelo.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
 ##  <a name="Interactive"></a> Descripción de la seguridad de las características interactivas en la creación de informes  
  A menudo, los informes utilizan parámetros para que un usuario pueda personalizar interactivamente la vista de un informe. A continuación se ofrecen algunas sugerencias para diseñar informes correctamente:  
   
 -   No utilice parámetros basados en parámetros de consulta y que son de tipo **Texto** , a menos que proporcione valores válidos. Una lista de valores disponibles ayuda al usuario a elegir solo valores válidos. Sin una lista de valores disponibles, no se pueden restringir los valores que puede especificar un usuario.  
   
--   No utilice el global [& UserID] para proteger datos privados. Como parámetro de informe, este valor se puede especificar en una dirección URL de informe mediante sintaxis de acceso a dirección URL. El uso de este valor en una expresión en un conjunto de datos compartido evita que el conjunto de datos se almacene en memoria caché. Para más información, vea [Referencia de parámetros de acceso URL](../../reporting-services/url-access-parameter-reference.md) en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   No utilice el global [& UserID] para proteger datos privados. Como parámetro de informe, este valor se puede especificar en una dirección URL de informe mediante sintaxis de acceso a dirección URL. El uso de este valor en una expresión en un conjunto de datos compartido evita que el conjunto de datos se almacene en memoria caché. Para más información, vea [Referencia de parámetros de acceso URL](../../reporting-services/url-access-parameter-reference.md) en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
- Después de la publicación de elementos en un servidor de informes, el administrador del servidor de informes puede contribuir a protegerlos asignando seguridad del nivel de rol o seguridad del nivel de carpeta y elemento. Para más información, vea [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md) en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Después de la publicación de elementos en un servidor de informes, el administrador del servidor de informes puede contribuir a protegerlos asignando seguridad del nivel de rol o seguridad del nivel de carpeta y elemento. Para más información, vea [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md) en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
-## Vea también  
- [Instalar y desinstalar el Generador de informes](../Topic/Install%20and%20Uninstall%20Report%20Builder.md)   
+## <a name="see-also"></a>Vea también  
+ [Instalar y desinstalar el Generador de informes](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

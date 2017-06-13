@@ -1,40 +1,48 @@
 ---
-title: "Tipo de conexi&#243;n de lista de SharePoint (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Tipo de conexión de lista de SharePoint (SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 05/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 caps.latest.revision: 11
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 11
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 23799f3c292e7a64ca859d06b570bd8f4657953a
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tipo de conexi&#243;n de lista de SharePoint (SSRS)
-  Para incluir los datos de una lista de Microsoft SharePoint en el informe, debe agregar o crear un conjunto de datos basado en un origen de datos de informe de tipo de lista de Microsoft SharePoint. Este es un tipo de origen de datos integrado que se basa en la extensión de datos de lista de SharePoint de Microsoft SQL Server Reporting Services. Utilice este tipo de origen de datos para conectarse a, y recuperar datos de lista de, los sitios de [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 y [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
-  
- Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones paso a paso, vea [Agregar y comprobar una conexión de datos o un origen de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
-  
+# <a name="sharepoint-list-connection-type-ssrs"></a>Tipo de conexión de lista de SharePoint (SSRS)
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)] [!INCLUDE [ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+Para incluir los datos de una lista de Microsoft SharePoint en el informe, debe agregar o crear un conjunto de datos basado en un origen de datos de informe de tipo de lista de Microsoft SharePoint. Este es un tipo de origen de datos integrado que se basa en la extensión de datos de lista de SharePoint de Microsoft SQL Server Reporting Services. Utilice este tipo de origen de datos para conectarse y recuperar datos de la lista de SharePoint 2013 y versiones posteriores.
+
+Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones paso a paso, vea [Agregar y comprobar una conexión de datos o un origen de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+
 ##  <a name="Connection"></a> Cadena de conexión  
  La cadena de conexión a una lista de SharePoint es la dirección URL al sitio o subsitio de SharePoint; por ejemplo, `http://MySharePointWeb/MySharePointSite` o `http://MySharePointWeb/MySharePointSite/Subsite`.  
   
  El diseñador de consultas muestra automáticamente las listas de SharePoint para las que el usuario tiene los permisos necesarios para obtener acceso.  
   
- Para obtener más información sobre ejemplos de cadenas de conexión, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md).  
+ Para obtener más información sobre ejemplos de cadenas de conexión, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
 ##  <a name="Credentials"></a> Credenciales  
  Se necesitan credenciales para ejecutar consultas y obtener una vista previa del informe localmente y desde el servidor de informes. Después de publicar el informe, es posible que necesite cambiar las credenciales para el origen de datos de tal forma que, cuando el informe se ejecute en el servidor de informes, los permisos para recuperar los datos sean válidos. Los tipos de credenciales que se pueden utilizar con esta extensión de datos dependen de la configuración de la tecnología de SharePoint para la lista de SharePoint que se esté utilizando como origen de datos.  
   
  En las tablas siguientes se describe el comportamiento de recuperación de credenciales de la extensión de lista de SharePoint cuando se conecta a una lista de SharePoint de una granja local y a una lista remota de SharePoint.  
   
- La**tabla 1** es para los informes implementados en un sitio heredado de Windows SharePoint. Un sitio heredado de Windows solo admite Kerberos, NTLM y Autenticación basada en formularios (FBA). La **tabla 2** es para los informes implementados en un sitio de SharePoint basado en notificaciones.  
+ La**tabla 1** es para los informes implementados en un sitio heredado de Windows SharePoint. Un sitio heredado de Windows solo admite Kerberos, NTLM y Autenticación basada en formularios (FBA). La**tabla 2** es para los informes implementados en un sitio de SharePoint basado en notificaciones.  
   
  **tabla 1**  
   
@@ -59,18 +67,18 @@ caps.handback.revision: 11
  *Autenticación de Windows, Autenticación basada en formularios (FBA), tokens de Secure Application Markup Language (SAML), otros proveedores de identidad o una combinación de más de uno de los proveedores de autenticación mencionados anteriormente.  
   
  **Autenticación de Windows**  
- Esta opción no se admite en el caso de una tecnología de SharePoint que esté configurada para trabajar con un servidor de informes en el modo de cuenta de confianza. Esto solo se aplica a las versiones anteriores a SQL Server 2012 Reporting Services.  
-  
- En el caso de una tecnología de SharePoint que esté configurada para trabajar con un servidor de informes en el modo integrado de Windows, esta opción se aplica tanto al usuario de Windows actual como al usuario de SharePoint actual.  
-  
- En el caso de una tecnología de SharePoint configurada para funcionar sin un servidor de informes (modo local), esta opción no se admite. Para obtener más información en modo local, vea [Informes en modo local frente al  modo local en el Visor de informes &#40;Reporting Services en modo de SharePoint&#41;](../../reporting-services/report-server-sharepoint/local mode vs. connected mode reports in the report viewer.md).  
+ Esta opción no se admite en el caso de una tecnología de SharePoint que esté configurada para trabajar con un servidor de informes en el modo de cuenta de confianza. Esto solo se aplica a las versiones anteriores a SQL Server 2012 Reporting Services.
+
+ En el caso de una tecnología de SharePoint que esté configurada para trabajar con un servidor de informes en el modo integrado de Windows, esta opción se aplica tanto al usuario de Windows actual como al usuario de SharePoint actual.
+ 
+ En el caso de una tecnología de SharePoint configurada para funcionar sin un servidor de informes (modo local), esta opción no se admite. Para obtener más información en modo local, vea [Informes en modo local frente al  modo local en el Visor de informes &#40;Reporting Services en modo de SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
   
  **No se necesitan credenciales (No usar credenciales):**  
  Para usar esta opción, la cuenta de ejecución desatendida debe estar configurada en el servidor de informes. Para obtener más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  Para obtener información sobre la compatibilidad con la autenticación basada en notificaciones en la pila de Microsoft BI, vea [Usar autenticación basada en notificaciones en la pila de Microsoft BI](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
- Para obtener más información, vea [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Especificar credenciales en el Generador de informes](../Topic/Specify%20Credentials%20in%20Report%20Builder.md) y [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ Para obtener más información, vea [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Especificar credenciales en el Generador de informes](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) y [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 ##  <a name="Query"></a> Consultas  
  Para diseñar una consulta, cree un nuevo conjunto de datos basado en el origen de datos y, a continuación, abra el diseñador de consultas asociado. Para obtener más información, vea [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
@@ -87,9 +95,9 @@ caps.handback.revision: 11
   
 -   **Oculto** Determina si el campo se muestra en la vista de lista de SharePoint.  
   
- No se admite la selección de campos de varias listas. Puede crear un conjunto de datos para cada lista y seleccionar campos de cada conjunto de datos. Si las listas tienen un campo común, puede utilizar la función de búsqueda en una región de datos de Tablix enlazada a un conjunto de datos para recuperar un valor del otro conjunto de datos que no está enlazado a la región de datos. Para obtener más información, vea [Función Lookup &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/lookup-function-report-builder-and-ssrs.md).  
+ No se admite la selección de campos de varias listas. Puede crear un conjunto de datos para cada lista y seleccionar campos de cada conjunto de datos. Si las listas tienen un campo común, puede utilizar la función de búsqueda en una región de datos de Tablix enlazada a un conjunto de datos para recuperar un valor del otro conjunto de datos que no está enlazado a la región de datos. Para obtener más información, vea [Función Lookup &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md).  
   
--   **Campos seleccionados**  Muestra los campos que se han seleccionado. Los nombres de campo de este panel son solo nombres descriptivos especificados por un usuario de SharePoint. Al cerrar el diseñador de consultas, estos nombres se ven en la colección de campos de conjunto de datos en el panel Datos de informe. La relación entre los nombres únicos y los nombres descriptivos está disponible en la página [Propiedades del conjunto de datos (cuadro de diálogo), Campos &#40;Generador de informes&#41;](../Topic/Dataset%20Properties%20Dialog%20Box,%20Fields%20\(Report%20Builder\).md).  
+-   **Campos seleccionados**  Muestra los campos que se han seleccionado. Los nombres de campo de este panel son solo nombres descriptivos especificados por un usuario de SharePoint. Al cerrar el diseñador de consultas, estos nombres se ven en la colección de campos de conjunto de datos en el panel Datos de informe. La relación entre los nombres únicos y los nombres descriptivos está disponible en la página [Propiedades del conjunto de datos (cuadro de diálogo), Campos &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42).  
   
 -   **Filtros aplicados**  Limita los datos que se devuelven desde la lista de SharePoint, antes de que los datos se devuelvan al informe. Seleccione el nombre de campo, el operador y el valor que se deben usar para limitar los datos que se recuperan de la lista. Los operadores varían en función del tipo de datos del valor que se seleccione.  
   
@@ -97,7 +105,7 @@ caps.handback.revision: 11
   
 -   **Resultados de consulta**  Muestra filas de ejemplo que se devuelven cuando se ejecuta la consulta. Si los valores de lista de SharePoint cambian con frecuencia en el sitio de SharePoint, los valores que se ven en el panel de resultados de la consulta podrían diferir de los valores que se ven en el informe.  
   
--   **Campos seleccionados**  Muestra los campos que se han seleccionado. Los nombres de campo de este panel son solo nombres descriptivos especificados por un usuario de SharePoint. Al cerrar el diseñador de consultas, estos nombres se ven en la colección de campos de conjunto de datos en el panel Datos de informe. La relación entre los nombres únicos y los nombres descriptivos está disponible en la página [Propiedades del conjunto de datos (cuadro de diálogo), Campos &#40;Generador de informes&#41;](../Topic/Dataset%20Properties%20Dialog%20Box,%20Fields%20\(Report%20Builder\).md).  
+-   **Campos seleccionados**  Muestra los campos que se han seleccionado. Los nombres de campo de este panel son solo nombres descriptivos especificados por un usuario de SharePoint. Al cerrar el diseñador de consultas, estos nombres se ven en la colección de campos de conjunto de datos en el panel Datos de informe. La relación entre los nombres únicos y los nombres descriptivos está disponible en la página [Propiedades del conjunto de datos (cuadro de diálogo), Campos &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42).  
   
 -   **Filtros aplicados**  Limita los datos que se devuelven desde la lista de SharePoint, antes de que los datos se devuelvan al informe. Seleccione el nombre de campo, el operador y el valor que se deben usar para limitar los datos que se recuperan de la lista. Los operadores varían en función del tipo de datos del valor que se seleccione.  
   
@@ -107,10 +115,10 @@ caps.handback.revision: 11
   
  Para obtener más información, vea [Diseñador de consultas de lista de SharePoint &#40;Generador de informes&#41;](../../reporting-services/report-data/sharepoint-list-query-designer-report-builder.md).  
   
-### Texto de consulta  
+### <a name="query-text"></a>Texto de consulta  
  Para ver la consulta generada por el diseñador gráfico de consultas, cambie al diseñador de consultas basado en texto. En esta vista, puede ver el XML creado por el diseñador gráfico de consultas. El XML incluye elementos para el nombre de la lista, la colección de campos y el filtro.  
   
-#### Ejemplo 1. Campos especificados para una lista  
+#### <a name="example-1-specified-fields-for-a-list"></a>Ejemplo 1. Campos especificados para una lista  
  En el siguiente ejemplo se muestra una consulta de SharePoint con el formato correcto:  
   
 ```  
@@ -139,7 +147,7 @@ caps.handback.revision: 11
   
  Puede modificar esta vista de la consulta, siempre que siga siendo texto XML con el formato correcto.  
   
-#### Ejemplo 2. Todos los campos para una lista  
+#### <a name="example-2-all-fields-for-a-list"></a>Ejemplo 2. Todos los campos para una lista  
  También puede especificar solo el nombre de una lista y se devuelven todos los campos, incluidos los campos ocultos. En el siguiente ejemplo se recuperan todos los campos de una lista denominada Tareas:  
   
 ```  
@@ -168,7 +176,7 @@ caps.handback.revision: 11
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Proporciona información general sobre cómo obtener acceso a los datos del informe.  
   
- [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)  
+ [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Proporciona información sobre las conexiones de datos y los orígenes de datos.  
   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -179,10 +187,11 @@ caps.handback.revision: 11
   
  [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Proporciona información detallada sobre la compatibilidad de versiones y plataformas para cada extensión de datos.  
-  
-## Vea también  
- [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
-  
+
+## <a name="see-also"></a>Vea también
+
+[Parámetros de informe](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+[Filtrar, agrupar y ordenar datos](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+[Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

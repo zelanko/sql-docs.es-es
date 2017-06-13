@@ -1,7 +1,7 @@
 ---
 title: "Características admitidas en los módulos T-SQL compilados de forma nativa | Microsoft Docs"
 ms.custom: 
-ms.date: 12/16/2016
+ms.date: 04/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 16f09bada7bbf3ae964ecfa09aa33208aa2f3acf
+ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
+ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Características admitidas en los módulos T-SQL compilados de forma nativa
@@ -51,19 +51,29 @@ ms.lasthandoff: 04/11/2017
 
 Se admiten las siguientes construcciones de consulta:  
 
+Expresión CASE: caso puede utilizarse en cualquier instrucción o cláusula que permita una expresión válida.
+   - **Se aplica a:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+    A partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], ahora se admiten instrucciones CASE para módulos T-SQL compilados de forma nativa.
+
 Cláusula SELECT:  
 
 -   Alias de columnas y nombre (con sintaxis AS o =).  
 
--   Subconsultas escalares  
+-   Subconsultas escalares
+    - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], subconsultas escalares ahora se admiten en módulos compilados de forma nativa.
 
 -   TOP*  
 
 -   SELECT DISTINCT  
+    - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], se admite el operador DISTINCT en módulos compilados de forma nativa.
 
               DISTINCT aggregates are not supported.  
 
 -   UNION y UNION ALL
+    - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten los operadores UNION y UNION ALL en módulos compilados de forma nativa.
 
 -   Asignaciones de variables  
 
@@ -73,15 +83,22 @@ Cláusula FROM:
 
 -   FROM \<TVF insertada compilada de forma nativa>  
 
--   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN y INNER JOIN.  
+-   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN y INNER JOIN.
+    - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten combinaciones en módulos compilados de forma nativa.
 
--   Subconsultas `[AS] table_alias`. Para obtener más información, vea [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
+-   Subconsultas `[AS] table_alias`. Para obtener más información, vea [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md). 
+    - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten subconsultas en módulos compilados de forma nativa.
 
 Cláusula WHERE:  
 
 -   Predicado de filtro IS [NOT] NULL  
 
--   AND, OR, NOT, IN, EXISTS, BETWEEN  
+-   ASÍ, ENTRE  
+-   OR, NO ES ASÍ, EN, EXISTE
+    - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten operadores OR, NOT, IN y EXISTS en módulos compilados de forma nativa.
 
 
 Cláusula[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) :

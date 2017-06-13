@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
-ms.openlocfilehash: 9cd813b72eda096f780ed7140b6691f528251a30
+ms.sourcegitcommit: f9debfb35bdf0458a34dfc5933fd3601e731f037
+ms.openlocfilehash: 3a11180d35ec0a67eed18e03cfe5f0e82d0cc180
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedimiento recomendado con el Almacén de consultas
@@ -56,7 +56,7 @@ Los parámetros predeterminados son buenos para un inicio rápido pero debe supe
   
  El valor predeterminado (100 MB) puede no ser suficiente si la carga de trabajo genera gran cantidad de planes y consultas diferentes o si desea mantener el historial de consultas durante un período de tiempo más largo. Realice un seguimiento del uso de espacio actual y aumente el valor de Tamaño máximo (MB) para impedir que el Almacén de consultas cambie al modo de solo lectura.  Utilice [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o ejecute el siguiente script para obtener la información más reciente sobre el tamaño del Almacén de consultas:  
   
-```  
+```tsql 
 USE [QueryStoreDB];  
 GO  
   
@@ -67,14 +67,14 @@ FROM sys.database_query_store_options;
   
  El siguiente script establece un nuevo valor para Tamaño de máximo (MB):  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
   
  **Intervalo de recopilación de estadísticas:** define el nivel de granularidad de la estadística recopilada en tiempo de ejecución (el valor predeterminado es 1 hora). Considere el uso de un valor inferior si necesita una granularidad más fina o menos tiempo para detectar y mitigar los problemas, pero tenga en cuenta que afectará directamente al tamaño de los datos del Almacén de consultas. Use SSMS o Transact-SQL para establecer otro valor para Statistics Collection Interval (Intervalo de recopilación de estadísticas):  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);  
 ```  
   
@@ -83,7 +83,7 @@ De forma predeterminada, el Almacén de consultas se configura para conservar lo
   
  Evite mantener datos históricos que no piense utilizar. Esto reducirá cambios al estado de solo lectura. El tamaño de los datos del Almacén de consultas así como el tiempo para detectar y mitigar el problema serán más predecibles. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o el siguiente script para configurar la directiva de limpieza basada en el tiempo:  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));  
 ```  
@@ -92,7 +92,7 @@ SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));
   
  Se recomienda activar la limpieza basada en el tamaño para asegurar que el Almacén de consultas siempre se ejecuta en modo de lectura y escritura y recopila los datos más recientes.  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
@@ -107,7 +107,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  El siguiente script establece el modo de captura de consultas en Automático:  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
@@ -119,7 +119,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
   
  Habilite el Almacén de consultas mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] como se describe en la sección anterior, o ejecute la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
-```  
+```tsql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
   
@@ -140,9 +140,11 @@ El Almacén de consultas de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.
 |Vista SSMS|Escenario|  
 |---------------|--------------|  
 |Regressed Queries (Consultas devueltas)|Consultas de pinpoint para las que las métricas de ejecución se han devuelto recientemente (es decir, han cambiado a peor). <br />Use esta vista para poner en correlación los problemas de rendimiento observados en la aplicación con las consultas reales que se necesita arreglar o mejorar.|  
-|Top Resource Consuming Queries (Consultas que consumen más recursos)|Elija una métrica de ejecución de interés e identifique las consultas que tenían los valores más extremos para un intervalo de tiempo proporcionado. <br />Use esta vista para centrar la atención en las consultas más importantes que tienen el mayor impacto en el consumo de recursos de base de datos.|  
-|Tracked Queries (Consultas seguidas)|Realice un seguimiento de la ejecución de las consultas más importantes en tiempo real. Normalmente, esta vista se utiliza cuando tiene consultas con planes forzados y desea asegurarse de que el rendimiento de las mismas es estable.|  
 |Overall Resource Consumption (Consumo total de recursos)|Analice el consumo total de recursos para la base de datos para cualquiera de las métricas de ejecución.<br />Use esta vista para identificar patrones de recursos (cargas de trabajo por el día frente a cargas de trabajo por la noche) y optimizar el consumo total para la base de datos.|  
+|Top Resource Consuming Queries (Consultas que consumen más recursos)|Elija una métrica de ejecución de interés e identifique las consultas que tenían los valores más extremos para un intervalo de tiempo proporcionado. <br />Use esta vista para centrar la atención en las consultas más importantes que tienen el mayor impacto en el consumo de recursos de base de datos.|  
+|Consultas con planes forzados|Listas previamente forzar planes con el almacén de consultas. <br />Utilice esta vista para obtener acceso rápidamente a todos los planes forzados actualmente.|  
+|Consultas con una variación alta|Analizar consultas con una variación de la ejecución alta en lo referente a cualquiera de las dimensiones disponibles, como el uso de duración, tiempo de CPU, E/S y memoria en el intervalo de tiempo deseado.<br />Utilice esta vista para identificar consultas con un rendimiento muy variant que puede afectar a la experiencia del usuario a través de las aplicaciones.|  
+|Tracked Queries (Consultas seguidas)|Realice un seguimiento de la ejecución de las consultas más importantes en tiempo real. Normalmente, esta vista se utiliza cuando tiene consultas con planes forzados y desea asegurarse de que el rendimiento de las mismas es estable.|
   
 > [!TIP]  
 >  Para obtener una descripción detallada sobre cómo usar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para identificar las consultas que consumen más recursos y corregir aquellas devueltas debido al cambio de una opción de plan, vea los [blogs de @Azure sobre el Almacén de consultas](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
@@ -152,7 +154,16 @@ El Almacén de consultas de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.
 -   Si la consulta se ejecutó con varios planes y el último plan es mucho peor que el plan anterior, puede utilizar el mecanismo que fuerza el plan para exigir a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que utilice siempre el plan óptimo para ejecuciones futuras.  
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
-  
+
+> [!NOTE]  
+> El gráfico anterior puede características distintas formas para los planes de consulta específica, con los significados siguientes para cada estado posible:<br />  
+> |Forma|Significado|  
+> |-------------------|-------------|
+> |Circle|Consultar completado (normal de ejecución termine correctamente)|
+> |Square|Cancelado (iniciadas por clientes anuló la ejecución)|
+> |Triangle|Error (excepción anulada ejecución)|
+> Además, el tamaño de la forma refleja el recuento de la ejecución de consulta dentro del intervalo de tiempo especificado, aumenten de tamaño con un número mayor de ejecuciones.  
+
 -   Se puede concluir que a la consulta le falta un índice la ejecución óptima. Esta información aparece en el plan de ejecución de la consulta. Cree el índice que falta y compruebe el rendimiento de la consulta mediante el Almacén de consultas.  
   
      ![query-store-show-plan](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")  
@@ -166,7 +177,7 @@ El Almacén de consultas de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.
 ##  <a name="Verify"></a> Verify Query Store is Collecting Query Data Continuously  
  El Almacén de consultas puede cambiar el modo de operación automáticamente. Debe supervisar periódicamente el estado del Almacén de consulta para asegurarse de que está funcionando y tomar medidas para evitar errores debido a causas evitables. Ejecute la siguiente consulta para determinar el modo de operación y ver los parámetros más importantes:  
   
-```  
+```tsql
 USE [QueryStoreDB];  
 GO  
   
@@ -187,13 +198,13 @@ FROM sys.database_query_store_options;
   
 -   Limpie los datos del Almacén de consultas mediante la siguiente instrucción:  
   
-    ```  
+    ```tsql  
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
  Puede aplicar uno de estos dos pasos o ambos ejecutando la siguiente instrucción que vuelve a cambiar explícitamente el modo de operación a lectura y escritura:  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);  
 ```  
@@ -209,7 +220,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 ### <a name="error-state"></a>Estado de error  
  Para recuperar el Almacén de consultas intente establecer explícitamente el modo de lectura y escritura y compruebe de nuevo el estado real.  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);    
 GO  
@@ -221,9 +232,13 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
- Si el problema continúa, significa que los datos del Almacén de consultas siguen estando dañados en el disco. Debe borrar el Almacén de consultas antes de solicitar el modo de lectura y escritura.  
+ Si el problema continúa, indica daños en la consulta del almacén de datos en el disco.
+ 
+ Almacén de consultas podría recuperarse mediante la ejecución de **sp_query_store_consistency_check** procedimiento almacenado dentro de la base de datos.
+ 
+ Que no le ha ayudado, puede intentar borrar el almacén de consultas antes de solicitar el modo de lectura y escritura.  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE CLEAR;  
 GO  
@@ -285,7 +300,7 @@ Por tanto, el rendimiento de la carga de trabajo será deficiente y el Almacén 
 ##  <a name="CheckForced"></a> Check the Status of Forced Plans Regularly  
  Forzar el plan es un mecanismo conveniente para corregir el rendimiento de las consultas críticas y hacer que sean más predecibles. Sin embargo, al igual que con las sugerencias de plan y las guías de plan, forzar un plan no es una garantía de que se utilizará en ejecuciones futuras. Normalmente, cuando se cambia el esquema de base de datos de forma que se modifican o se quitan objetos a los que hace referencia el plan de ejecución, al forzar el plan se empiezan a generar errores. En ese caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuelve a la recompilación de consultas mientras el motivo real del error de la operación de forzado aparece en [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). La siguiente consulta devuelve información sobre planes forzados.  
   
-```  
+```tsql  
 USE [QueryStoreDB];  
 GO  
   
@@ -307,6 +322,5 @@ Si cambia el nombre de una base de datos, al forzar el plan se producirá un err
  [Query Store Stored Procedures &#40;Transact-SQL&#41; (Procedimientos almacenados del Almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Uso del almacén de consultas con OLTP en memoria](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [Supervisar el rendimiento mediante el almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
-  
   
 

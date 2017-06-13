@@ -1,23 +1,28 @@
 ---
-title: "Regi&#243;n de datos Tablix (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Región de datos Tablix (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cbe2dd936369c89b52302b1d244829dcb12744bc
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Regi&#243;n de datos Tablix (Generador de informes y SSRS)
+# <a name="tablix-data-region-report-builder-and-ssrs"></a>Región de datos Tablix (Generador de informes y SSRS)
   En [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], la región de datos Tablix es un elemento de informe de diseño generalizado que muestra los datos del informe paginado en celdas organizadas en filas y columnas. Los datos del informe pueden ser datos detallados tal y como se recuperan del origen de datos, o datos detallados agregados organizados en grupos previamente especificados. Cada celda de Tablix puede contener cualquier elemento de informe, como un cuadro de texto o una imagen, o bien otra región de datos, como una región de Tablix, un gráfico o un medidor. Para agregar varios elementos de informe a una celda, agregue primero un rectángulo que actúe como contenedor. Después, agregue los elementos de informe al rectángulo.  
   
  Las regiones de datos de tabla, matriz y lista se representan en la cinta de opciones mediante plantillas para la región de datos Tablix subyacente. Al agregar una de estas plantillas a un informe, en realidad se está agregando una región de datos Tablix que está optimizada para un diseño de datos concreto. De forma predeterminada, una plantilla de tabla muestra datos detallados en un diseño de cuadrícula, una matriz muestra datos de grupo en un diseño de cuadrícula y una lista muestra datos detallados en un diseño de forma libre.  
@@ -41,17 +46,17 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Descripción de los datos detallados y los datos agrupados  
+## <a name="understanding-detail-and-grouped-data"></a>Descripción de los datos detallados y los datos agrupados  
  Los datos detallados son todos los datos de un conjunto de datos de informe tal y como se recuperan del origen de datos. Los datos detallados son básicamente lo que se ve en el panel de resultados del diseñador de consultas al ejecutar una consulta de conjunto de datos. Los datos detallados reales incluyen campos calculados creados por el usuario, y están restringidos por filtros establecidos en el conjunto de datos, la región de datos y el grupo de detalles. Para mostrar datos detallados en una fila de detalles, use una expresión simple como [Quantity]. Cuando se ejecuta el informe, la fila de detalles se repite una vez en tiempo de ejecución para cada fila de los resultados de la consulta.  
   
  Los datos agrupados son datos detallados que se organizan por un valor especificado en la definición de grupo, como [SalesOrder]. Para mostrar datos agrupados en filas y columnas de grupo, use expresiones simples que agreguen los datos agrupados, como [Sum(Quantity)]. Para más información, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
-## Descripción de las jerarquías de grupo  
+## <a name="understanding-group-hierarchies"></a>Descripción de las jerarquías de grupo  
  Los grupos se organizan como miembros de jerarquías de grupos. Las jerarquías de grupos de filas y de columnas son estructuras idénticas en ejes diferentes. Piense en los grupos de columnas como elementos que se expanden a lo ancho de la página y en los grupos de filas como elementos que se expanden hacia abajo.  
   
  Una estructura de árbol representa grupos de filas y de columnas anidados que tienen una relación de elementos primarios y secundarios como, por ejemplo, una categoría con subcategorías. El grupo primario es la raíz del árbol y los grupos secundarios son sus bifurcaciones. Los grupos también pueden tener una relación adyacente independiente, como por ejemplo ventas por territorio y ventas por año. Varias jerarquías de árbol no relacionadas reciben el nombre de bosque. En una región de datos Tablix, los grupos de filas y los grupos de columnas se representan como bosques independientes. Para más información, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
-## Descripción de las áreas de la región de datos Tablix  
+## <a name="understanding-tablix-data-region-areas"></a>Descripción de las áreas de la región de datos Tablix  
  Una región de datos Tablix tiene cuatro áreas posibles para las celdas: la esquina de Tablix, la jerarquía de grupos de filas de Tablix, la jerarquía de grupos de columnas de Tablix y el cuerpo de Tablix. El cuerpo de Tablix siempre existe. Las demás áreas son opcionales.  
   
  Las celdas del área del cuerpo de Tablix muestran datos detallados y de grupo.  
@@ -64,7 +69,7 @@ caps.handback.revision: 7
   
  Para más información, vea [Describir las áreas de la región de datos Tablix &#40;Generador de informes y SSRS&#41](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
-## Descripción de las filas y columnas estáticas y dinámicas  
+## <a name="understanding-static-and-dynamic-rows-and-columns"></a>Descripción de las filas y columnas estáticas y dinámicas  
  Una región de datos Tablix organiza las celdas en filas y columnas que están asociadas a grupos. Las estructuras de grupo para los grupos de filas y las columnas son idénticas. Este ejemplo utiliza los grupos de filas, pero puede aplicar los mismos conceptos a grupos de columna.  
   
  Una fila puede ser estática o dinámica. Una fila estática no está asociada con un grupo. Cuando se ejecuta el informe, una fila estática se representa una vez. Los encabezados y pies de tabla son filas estáticas. Las filas estáticas muestran etiquetas y totales. El ámbito de las celdas de una fila estática es la región de datos.  
@@ -77,9 +82,9 @@ caps.handback.revision: 7
   
  La característica Agregar total crea automáticamente una fila fuera del grupo actual en la que mostrar valores cuyo ámbito es el grupo. También puede agregar filas estáticas y dinámicas manualmente. Los indicadores visuales le ayudan a entender qué filas son estáticas y qué filas son dinámicas. Para más información, vea [Celdas, filas y columnas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Vincular varias regiones de datos al mismo conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling the tablix data region display on a report page.md)   
+ [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
  [Explorar la flexibilidad de una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

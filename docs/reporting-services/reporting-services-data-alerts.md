@@ -1,30 +1,37 @@
 ---
-title: "Alertas de datos de Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Alertas de datos de Reporting Services | Documentos de Microsoft
+ms.custom: 
+ms.date: 05/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 caps.latest.revision: 33
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 33
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 86cf02b246cc8ca11e7ed490cfb6082c2c6c7760
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Alertas de datos de Reporting Services
+# <a name="reporting-services-data-alerts"></a>Alertas de datos de Reporting Services
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] son una solución de alertas orientadas a los datos que le permite mantenerse informado puntualmente de los datos de alertas que sean de su interés o considere importantes. Si usa alertas de datos, ya no tendrá que buscar información puesto que la recibirá directamente.  
   
  Los mensajes de alertas de datos se envían por correo electrónico. Dependiendo de la importancia de la información, puede elegir enviar mensajes con mayor o menor frecuencia y solo cuando cambien los resultados. Puede especificar varios destinatarios de correo electrónico para mantener informadas a otras personas y mejorar la eficacia y la colaboración.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../includes/applies-md.md)]**  |  
+
+> [!NOTE]
+> Integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
   
 ##  <a name="AlertingWF"></a> Arquitectura y flujo de trabajo de alertas de datos  
  A continuación se resumen las áreas clave de las alertas de datos de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :  
@@ -45,9 +52,9 @@ caps.handback.revision: 33
   
  El siguiente diagrama muestra el flujo de trabajo para crear y guardar una definición de alerta de datos, crear un trabajo del Agente SQL para comenzar a procesar una instancia de la alerta de datos, y enviar por correo electrónico mensajes de alerta de datos que contienen los datos del informe que desencadenaron la alerta a uno o varios destinatarios.  
   
- ![Flujo de trabajo de las alertas de Reporting Services](../reporting-services/media/rs-alertingworkflow.gif "Flujo de trabajo de las alertas de Reporting Services")  
+ ![Flujo de trabajo de alertas de Reporting Services](../reporting-services/media/rs-alertingworkflow.gif "flujo de trabajo de alertas de Reporting Services")  
   
-### Informes admitidos por las alertas de datos  
+### <a name="reports-supported-by-data-alerts"></a>Informes admitidos por las alertas de datos  
  Puede crear alertas de datos para todos los tipos de informes profesionales escritos en el lenguaje de definición de informes (RDL) y creados en el Diseñador de informes o en el Generador de informes. Informes que incluyen regiones de datos como tablas y gráficos, informes con subinformes, e informes complejos con múltiples grupos de columnas paralelos y regiones de datos anidadas. Los únicos requisitos son que el informe incluya al menos una región de datos de cualquier tipo y que el origen de datos del informe esté configurado para utilizar credenciales almacenadas o ninguna credencial. Si el informe no tiene ninguna región de datos, no puede crear una alerta para él.  
   
  No puede crear alertas de datos en los informes creados con [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)].  
@@ -62,29 +69,29 @@ caps.handback.revision: 33
   
 -   [Autenticación con el servidor de informes](../reporting-services/security/authentication-with-the-report-server.md)  
   
-### Ejecutar informes  
+### <a name="run-reports"></a>Ejecutar informes  
  El primer paso para crear una definición de alerta de datos es buscar el informe que desee en la biblioteca de SharePoint y después ejecutarlo. Si un informe no contiene datos cuando se ejecuta, no puede crear una alerta para él en ese momento.  
   
  Si el informe contiene parámetros, especificará los valores de parámetro que se deben usar cuando ejecute el informe. Los valores de parámetro se guardarán en las definiciones de alerta de datos que crea para un informe. Los valores se utilizan cuando se vuelve a ejecutar el informe durante el procesamiento de la definición de alerta de datos. Si desea cambiar los valores de parámetro, tendrá que volver a ejecutar el informe con esos valores de parámetro y crear una definición de alerta para esa versión del informe.  
   
-### Crear definiciones de alerta de datos  
+### <a name="create-data-alert-definitions"></a>Crear definiciones de alerta de datos  
  La característica de alertas de datos de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye el Diseñador de alertas de datos, que se utiliza para crear definiciones de alerta de datos.  
   
  Para crear una definición de alerta de datos, tendrá que ejecutar el informe y abrir el Diseñador de alerta de datos desde el menú **Acciones** del visor de informes de SharePoint. Se generan las fuentes de distribución de datos del informe y se muestran las 100 primeras filas de la fuente de distribución de datos en una tabla de vista previa de los datos en el Diseñador de alertas de datos. Todas las fuentes de distribución de datos de un informe se almacenan en caché siempre que utilice el Diseñador de alertas de datos para trabajar con la definición de alerta. El almacenamiento en caché permite cambiar rápidamente entre las fuentes de distribución de datos. Al volver a abrir una definición de alerta en el Diseñador de alertas de datos, se actualizan las fuentes de distribución de datos.  
   
  Las definiciones de alertas de datos constan de reglas y cláusulas que los datos del informe deben satisfacer para desencadenar un mensaje de alerta de datos, una programación que define la frecuencia con que se envía el mensaje de alerta y, opcionalmente, las fechas de inicio y detención del envío del mensaje de alerta, información como la línea de asunto y una descripción que se incluyen en el mensaje de alerta y los destinatarios del mensaje. Después de crear una definición de alerta, esta se guarda en la base de datos de alertas de SQL Server.  
   
-### Guardar definiciones de alertas de datos y metadatos de alertas  
+### <a name="save-data-alert-definitions-and-alerting-metadata"></a>Guardar definiciones de alertas de datos y metadatos de alertas  
  Cuando instala [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo de SharePoint, se crea automáticamente la base de datos de alertas de SQL Server.  
   
- Las definiciones de alerta de datos y los metadatos de las alertas se guardan en la base de datos de alertas. De forma predeterminada, esta base de datos se denomina ReportingServices\<GUID>_Alerting.  
+ Las definiciones de alerta de datos y los metadatos de las alertas se guardan en la base de datos de alertas. De forma predeterminada, esta base de datos se denomina ReportingServices\<GUID > _Alerting.  
   
  Cuando se guarda la definición de una alerta de datos, el sistema de alertas crea un trabajo del Agente SQL para la definición de alerta. El trabajo incluye una programación del trabajo. La programación se basa en el patrón de periodicidad que defina en la definición de alerta. Al ejecutar el trabajo se inicia el procesamiento de la definición de alerta de datos.  
   
-### Procesar definiciones de alerta de datos  
+### <a name="process-data-alert-definitions"></a>Procesar definiciones de alerta de datos  
  Cuando la programación del trabajo del Agente SQL Server inicia el procesamiento de la definición de alerta, se ejecuta el informe para actualizar las fuentes de distribución de datos. El servicio de alertas lee las fuentes de distribución de datos y aplica a los valores de los datos las reglas que especifican las definiciones de las alertas de datos. Si uno o más valores de datos satisfacen las reglas, se crea una instancia de alerta de datos y se envía por correo electrónico un mensaje de alerta de datos a todos los destinatarios. Los resultados son las filas de los datos del informe que satisfacían todas las reglas en el momento en que se creó la instancia de alerta. Para evitar que se envíen varios mensajes de alerta con los mismos resultados, puede especificar que los mensajes solo se envíen cuando cambien los resultados. En este caso, se crea una instancia de alerta y se guarda en la base de datos de alertas, pero no se genera ningún mensaje de alerta. Si ocurre un error, la instancia de alerta se guarda también en la base de datos de alertas y se envía un mensaje de alerta con los detalles del error a los destinatarios. En la sección Diagnósticos y registro, incluida más adelante en este tema, se proporciona más información sobre el registro y la solución de problemas.  
   
-### Enviar mensajes de alerta de datos  
+### <a name="send-data-alert-messages"></a>Enviar mensajes de alerta de datos  
  El mensaje de alerta de datos se envía por correo electrónico.  
   
  La línea **De** contiene un valor determinado por la configuración de entrega de correo electrónico de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . La línea **Para** incluye los destinatarios especificados al crear la alerta en el Diseñador de alertas de datos.  
@@ -112,14 +119,14 @@ caps.handback.revision: 33
 ##  <a name="InstallAlerting"></a> Instalar alertas de datos  
  La característica de alertas de datos solo está disponible cuando [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] está instalado en el modo de SharePoint. Cuando se instala [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo de SharePoint, el programa de instalación crea automáticamente la base de datos de alertas donde se guardan las definiciones de alertas de datos y los metadatos de las alertas, y dos páginas de SharePoint para administrar alertas; también agrega el Diseñador de alertas de datos al sitio de SharePoint. No hay que realizar pasos especiales ni configurar opciones para las alertas durante la instalación.  
   
- Si desea obtener más información sobre cómo instalar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo de SharePoint, incluido el servicio compartido de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que es nuevo en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] y la aplicación de servicio de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que debe crear y configurar para poder usar las características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , consulte [Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](http://msdn.microsoft.com/es-es/47efa72e-1735-4387-8485-f8994fb08c8c) en MSDN Library.  
+ Si desea obtener más información sobre cómo instalar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo de SharePoint, incluido el servicio compartido de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que es nuevo en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] y la aplicación de servicio de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que debe crear y configurar para poder usar las características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , consulte [Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c) en MSDN Library.  
   
- Como se muestra en el diagrama del tema anterior, las alertas de datos usan trabajos del Agente SQL Server. Para poder crear los trabajos, es necesario que el Agente SQL Server se esté ejecutando. Es posible que haya configurado el Agente SQL Server para que se inicie automáticamente cuando instaló [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Si no es así, puede iniciar el Agente SQL Server manualmente. Para obtener más información, vea[Configurar el Agente SQL Server](../ssms/agent/configure-sql-server-agent.md) e [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md).  
+ Como se muestra en el diagrama del tema anterior, las alertas de datos usan trabajos del Agente SQL Server. Para poder crear los trabajos, es necesario que el Agente SQL Server se esté ejecutando. Es posible que haya configurado el Agente SQL Server para que se inicie automáticamente cuando instaló [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Si no es así, puede iniciar el Agente SQL Server manualmente. Para obtener más información, vea [Configurar el Agente SQL Server](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) e [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
  Puede usar la página **Aprovisionar suscripciones y alertas** en Administración central de SharePoint para averiguar si el Agente SQL Server se está ejecutando y crear y descargar scripts de [!INCLUDE[tsql](../includes/tsql-md.md)] personalizados que puede ejecutar después para conceder permisos al Agente SQL Server. Si puede también generar los scripts de [!INCLUDE[tsql](../includes/tsql-md.md)] mediante PowerShell. Para obtener más información, consulte [Provision Subscriptions and Alerts for SSRS Service Applications](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ##  <a name="ConfigAlert"></a> Configurar alertas de datos  
- A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], la configuración de las características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], incluidas las alertas de datos, se distribuyen entre el archivo de configuración del servidor de informes (rsreportserver.config) y una base de datos de configuración de SharePoint siempre que instala [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo de SharePoint. Cuando crea la aplicación de servicio como parte de la instalación y configuración de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], la base de datos de configuración de SharePoint se crea automáticamente. Para obtener más información, vea [El archivo de configuración RSReportServer.config](../reporting-services/report-server/rsreportserver-config-configuration-file.md) y [Archivos de configuración de Reporting Services](../reporting-services/report-server/reporting-services-configuration-files.md).  
+ A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , la configuración de las características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , incluidas las alertas de datos, se distribuyen entre el archivo de configuración del servidor de informes (rsreportserver.config) y una base de datos de configuración de SharePoint siempre que instala [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo de SharePoint. Cuando crea la aplicación de servicio como parte de la instalación y configuración de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], la base de datos de configuración de SharePoint se crea automáticamente. Para obtener más información, vea [El archivo de configuración RSReportServer.config](../reporting-services/report-server/rsreportserver-config-configuration-file.md) y [Archivos de configuración de Reporting Services](../reporting-services/report-server/reporting-services-configuration-files.md).  
   
  La configuración de las alertas de datos de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye los intervalos de limpieza de los datos y metadatos de alertas y el número de reintentos al enviar mensajes de alerta de datos por correo electrónico. Puede actualizar el archivo de configuración y la base de datos de configuración para utilizar valores diferentes para la configuración de alertas de datos.  
   
@@ -138,7 +145,7 @@ caps.handback.revision: 33
   
  De forma predeterminada, los valores de MaxRetries y SecondsBeforeRetry se aplican a todos los eventos que desencadenan alertas de datos. Si desea tener más control sobre los reintentos y los intervalos entre reintentos, puede agregar elementos para cada uno de los controladores de eventos que especifican valores de MaxRetries y SecondsBeforeRetry diferentes.  
   
-### Controladores de eventos y reintentos  
+### <a name="event-handlers-and-retry"></a>Controladores de eventos y reintentos  
  Los controladores de eventos son:  
   
 |Controlador de eventos|Description|  
@@ -197,7 +204,7 @@ caps.handback.revision: 33
   
 -   [Generar fuentes de distribución de datos a partir de informes &#40;Generador de informes y SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
--   [Establecer permisos para elementos del servidor de informes en un sitio de SharePoint &#40;Reporting Services en el modo integrado de SharePoint&#41;](../reporting-services/security/set permissions for report server items on a sharepoint site.md)  
+-   [Establecer permisos para elementos del servidor de informes en un sitio de SharePoint &#40;Reporting Services en el modo integrado de SharePoint&#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admiten dos niveles de permisos: trabajador de la información y administrador de alertas. En la tabla siguiente se enumeran los permisos de SharePoint y las tareas relacionados para cada tipo de usuario.  
   
@@ -209,7 +216,7 @@ caps.handback.revision: 33
 ##  <a name="DiagnosticsLogging"></a> Diagnósticos y registro  
  Las alertas de datos proporcionan varias maneras de ayudar a los trabajadores de la información y a los administradores a realizar un seguimiento de las alertas y a entender por qué se producen errores en las alertas, así como ayudar a los administradores a usar los registros de ejecución para saber a quién se envió cada mensaje de alerta, el número de instancias de alertas enviadas, etcétera.  
   
-### Administrador de alertas de datos  
+### <a name="data-alert-manager"></a>Administrador de alertas de datos  
  El Administrador de alertas de datos muestra listas de definiciones de alertas e información sobre errores que ayudan a los trabajadores de la información y a los administradores de alertas a entender las causas de los errores. Algunos de los motivos comunes de los errores son:  
   
 -   La fuente de distribución de datos del informe ha cambiado y las columnas que se usaron en las reglas de la definición de la alerta de datos ya no están incluidas en la fuente de distribución de datos.  
@@ -218,12 +225,12 @@ caps.handback.revision: 33
   
 -   El tipo de datos del origen de datos subyacente ha cambiado y la definición de la alerta ya no es válida.  
   
-### Registros  
+### <a name="logs"></a>Registros  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona varios registros que pueden ayudarle a obtener más información sobre los informes que se ejecutan al procesar definiciones de alerta de datos, las instancias de alertas de datos que se crean, etc. Hay tres registros particularmente útiles: el registro de ejecución de la alerta, el registro de ejecución del servidor de informes y el registro de seguimiento del servidor de informes.  
   
- Para obtener información sobre otros registros de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vea [Archivos de registro y orígenes de Reporting Services](../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+ Para obtener información sobre otros registros de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , vea [Archivos de registro y orígenes de Reporting Services](../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
-#### Registro de ejecución de alertas  
+#### <a name="alerting-execution-log"></a>Registro de ejecución de alertas  
  El servicio de tiempo de ejecución de alertas escribe entradas en la tabla ExecutionLogView de la base de datos de alertas. Puede consultar la tabla o ejecutar los procedimientos almacenados siguientes para obtener una información de diagnóstico más completa sobre las alertas de datos que se guardan en la base de datos de alertas.  
   
 -   ReadAlertData  
@@ -242,12 +249,12 @@ caps.handback.revision: 33
   
 -   ReadSentAlerts  
   
- Puede utilizar el Agente SQL para ejecutar el procedimiento almacenado de acuerdo con una programación. Para obtener más información, consulte [SQL Server Agent](../ssms/agent/sql-server-agent.md).  
+ Puede utilizar el Agente SQL para ejecutar el procedimiento almacenado de acuerdo con una programación. Para obtener más información, consulte [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec).  
   
-#### Registro de ejecución del servidor de informes  
+#### <a name="report-server-execution-log"></a>Registro de ejecución del servidor de informes  
  Los informes se ejecutan para generar fuentes de distribución de datos en las que se basan las definiciones de alerta de datos. El registro de ejecución del servidor de informes de la base de datos del servidor de informes recopila información cada vez que se ejecuta el informe. Puede realizar una consulta de la vista ExecutionLog2 en la base de datos para obtener información detallada. Para obtener más información, vea [Registro de ejecución del servidor de informes y la vista ExecutionLog3](../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
-#### Registro de seguimiento del servidor de informes  
+#### <a name="report-server-trace-log"></a>Registro de seguimiento del servidor de informes  
  El registro de seguimiento del servidor de informes contiene información bastante detallada de las operaciones del servicio del servidor de informes, incluidas las operaciones realizadas por el servicio web del servidor de informes y el procesamiento en segundo plano. La información del registro de seguimiento resulta útil si se está depurando una aplicación que incluye un servidor de informes o se investiga un problema específico que se incluyó en el registro de eventos o de ejecución. Para obtener más información, consulte [Report Server Service Trace Log](../reporting-services/report-server/report-server-service-trace-log.md).  
   
 ##  <a name="PerformanceCounters"></a> Performance Counters  
@@ -264,7 +271,7 @@ caps.handback.revision: 33
 |GenerateAlert|Alertas: eventos procesados - GenerateAlert|  
 |DeliverAlert|Alertas: eventos procesados - DeliverAlert|  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona contadores de rendimiento para otras características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Para obtener más información, vea [Contadores de rendimiento de los objetos ReportServer:Service y ReportServerSharePoint:Service](../reporting-services/report-server/performance counters - reportserver service, performance objects.md), [Contadores de rendimiento para los objetos de rendimiento de MSRS 2011 Web Service y MSRS 2011 Windows Service &#40;modo nativo&#41;](../reporting-services/report-server/performance counters msrs 2011 web service, performance objects.md) y [Contadores de rendimiento para los objetos de rendimiento en modo SharePoint de MSRS 2011 Web Service y SharePoint de MSRS 2011 Windows Service &#40;modo SharePoint&#41;](../reporting-services/report-server/performance counters msrs 2011 sharepoint mode performance objects.md).  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona contadores de rendimiento para otras características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Para obtener más información, vea [Contadores de rendimiento de los objetos ReportServer:Service y ReportServerSharePoint:Service](../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md), [Contadores de rendimiento para los objetos de rendimiento de MSRS 2011 Web Service y MSRS 2011 Windows Service &#40;modo nativo&#41;](../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) y [Contadores de rendimiento para los objetos de rendimiento en modo SharePoint de MSRS 2011 Web Service y SharePoint de MSRS 2011 Windows Service &#40;modo SharePoint&#41;](../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
 ##  <a name="SupportForSSL"></a> Compatibilidad con SSL  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] puede usar el servicio SSL (Capa de sockets seguros) de HTTP para establecer conexiones cifradas con un servidor de informes o un sitio de SharePoint.  
@@ -311,9 +318,10 @@ caps.handback.revision: 33
   
 -   [Conceder permisos a los usuarios y alertar a los administradores](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
-## Vea también  
- [Diseñador de alertas de datos](../reporting-services/data-alert-designer.md)   
- [Administrador de alertas de datos para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [Administrador de alertas de datos para los usuarios de SharePoint](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
-  
-  
+## <a name="see-also"></a>Vea también
+
+[Diseñador de alertas de datos](../reporting-services/data-alert-designer.md)   
+[Administrador de alertas de datos para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[Administrador para los usuarios de SharePoint de alertas de datos](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
+
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

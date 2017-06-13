@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 51e336a22d0c1052c48b8e569330aef26f2af094
+ms.sourcegitcommit: b68d454230d414ff52d90b4f3f71dd68ee65c6bc
+ms.openlocfilehash: 1733a789fb2dc17eea82ab22d4a50614d1fffc3b
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/26/2017
 
 ---
 # <a name="sql-server-management-studio----release-notes"></a>SQL Server Management Studio: notas de la versión
@@ -28,44 +28,36 @@ Para instalar la versión más reciente de SQL Server Management Studio, vea [Do
   
 A continuación indicamos los problemas y las limitaciones de esta versión de SQL Server Management Studio:  
 
-1. **Una sola cuenta de Azure Active Directory puede iniciar sesión para una instancia de SSMS utilizando la autenticación universal de Active Directory.**  
+1. **Asistente para la base de datos de restauración genera un modelo de ruta de acceso incorrecta para la ubicación del archivo de base de datos de destino** 
+    trata de un problema conocido cuando SSMS está conectado a un servidor Linux. Aunque la ruta de acceso tiene un aspecto correcto/impar, que se procese correctamente en el servidor, es decir, no hay ningún problema funcional.
+
+2. **Problemas del explorador de archivos**
+    - Cuando se trabaja con una instancia basada en Windows de SQL Server de 2017 CTP 2.0, se puede producir un error en el Explorador de archivos de interfaz de usuario de SSMS abrir si el servidor tiene una unidad de disquete vacía o un disco fijo protegidas por Bitlocker instalado. 
+    - La interfaz de usuario del explorador de archivos ya no es compatible con las versiones de SQL Server 2017 antes de CTP 2.0.
+    
+
+
+3. **Una sola cuenta de Azure Active Directory puede iniciar sesión para una instancia de SSMS utilizando la autenticación universal de Active Directory.**  
     Esta restricción se limita a la autenticación universal de Active Directory. Puede iniciar sesión en servidores diferentes mediante la autenticación de contraseña de Active Directory, la autenticación integrada de Active Directory o la autenticación de SQL Server.
     
     Como alternativa, puede utilizar otra instancia de SSMS para iniciar sesión con otra cuenta de Azure Active Directory. 
     
-2. **Los comandos del marco de aplicación de capa de datos (DacFx) y el Diseñador de esquemas en SSMS no admiten la autenticación universal de Active Directory.**  
+4. **Los comandos del marco de aplicación de capa de datos (DacFx) y el Diseñador de esquemas en SSMS no admiten la autenticación universal de Active Directory.**  
     Los comandos que utiliza DacFx (por ejemplo, importar y exportar) y el Diseñador de esquemas en SSMS no admiten actualmente la autenticación universal de Active Directory.
     
     Como solución alternativa, puede usar las otras formas de autenticación proporcionada en SSMS - autenticación de contraseña de Active Directory, la autenticación integrada de Active Directory o la autenticación de SQL Server.
 
-3. **SSMS solo puede conectarse a instancias de SQL Server 2016 Integrated Services (SSIS 2016).**  
+5. **SSMS solo puede conectarse a instancias de SQL Server 2016 Integrated Services (SSIS 2016).**  
     Hay una limitación de compatibilidad conocida con SQL Server Integration Services que impide la conexión a versiones anteriores.
     
     Como solución alternativa para este problema, puede conectarse a la instancia de SQL Server Integration Service mediante la [versión SSMS alineado con la instancia SSIS.](../ssms/previous-sql-server-management-studio-releases.md) 
   
-4. **SSMS no guardará los planes de mantenimiento de SQL Server 2008 R2 y versiones anteriores de SQL Server.**  
+5. **SSMS no guardará los planes de mantenimiento de SQL Server 2008 R2 y versiones anteriores de SQL Server.**  
     Se trata de una limitación conocida que esperamos solucionar en el futuro. Mientras tanto, puede usar la [versión de SSMS de 2014](../ssms/previous-sql-server-management-studio-releases.md) para guardar los planes de mantenimiento.  
     
 5. **Las instalaciones de SSMS que no estén en inglés pueden requerir la instalación de un paquete de seguridad adicional.**  
 Las versiones localizadas de SSMS en idiomas diferentes al inglés requieren el [paquete de actualización de seguridad KB 2862966](https://support.microsoft.com/en-us/kb/2862966) si se instalan en Windows 8, Windows 7, Windows Server 2012 y Windows Server 2008 R2.
   
-6. **Administrador de configuración de SQL Server no se iniciará si no hay ningún servidor de SQL Server instalado en el equipo cliente**  
-    Si no tiene SQL Server instalado en el equipo cliente e inicia el Administrador de configuración de SQL Server, verá el siguiente error:   
-     `Cannot connect to WMI provider. You do not have permission or the server is unreachable. Note that you can only manage SQL Server 2005 and later servers with SQL Server Configuration Manager. Invalid namespace \[0x8004100e]`,   
-   
-     * Si ha agregado instancias de SQL Server a la lista 'Servidores registrados' en SSMS:  
-        1. Desplácese a la vista 'Servidores registrados' en SSMS.  
-        2. Haga clic con el botón derecho en la instancia de SQL Server que desee configurar.  
-        3. Seleccione 'Administrador de configuración de SQL Server' en el menú de clic con el botón derecho.    
-          
-      * Si no ha agregado una instancia de SQL Server a la lista 'Servidores registrados' en SSMS:  
-        1. Abra un símbolo del sistema como administrador.  
-        2. Ejecute la herramienta Mofcomp con el siguiente comando:  
-    `mofcomp "%programfiles(x86)%\Microsoft SQL Server\130\Shared\sqlmgmproviderxpsp2up.mof"`  
-        3. Después de ejecutar la herramienta Mofcomp, ejecute los comandos para reiniciar el servicio WMI para que los cambios surtan efecto:  
-        `net stop "Windows Management Instrumentation"`  
-        `net start “Windows Management Instrumentation”`  
-
 ## <a name="feedback"></a>Comentarios  
   
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Foro de Herramientas de cliente de SQL](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Registre un problema o una sugerencia en Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback).  

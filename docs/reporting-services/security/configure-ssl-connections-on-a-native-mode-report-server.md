@@ -1,40 +1,45 @@
 ---
-title: "Configurar conexiones SSL en un servidor de informes en modo nativo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Capa de sockets seguros (SSL)"
+title: Configurar conexiones SSL en un servidor de informes de modo nativo | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 caps.latest.revision: 34
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 34
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4f973faa65ed34695804de0815331f562b7a24f4
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Configurar conexiones SSL en un servidor de informes en modo nativo
+# <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Configurar conexiones SSL en un servidor de informes en modo nativo
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] El modo nativo usa el servicio HTTP SSL (Capa de sockets seguros) para establecer conexiones cifradas con un servidor de informes. Si tiene el archivo de certificado (.cer) instalado en un almacén de certificados local en el equipo del servidor de informes, puede enlazar el certificado a una reserva de direcciones URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para admitir las conexiones con el servidor de informes en un canal cifrado.  
   
 > [!TIP]  
->  Si usa el modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vea la documentación de SharePoint para obtener más información. Por ejemplo, [How to enable SSL on a SharePoint 2010 web application (http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx) (Cómo habilitar SSL en una aplicación web de SharePoint 2010).  
+>  Si usa el modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vea la documentación de SharePoint para obtener más información. Por ejemplo, [How to enable SSL on a SharePoint 2010 web application (http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)(Cómo habilitar SSL en una aplicación web de SharePoint 2010).  
   
  Como Internet Information Services (IIS) también usa HTTP SSL, hay importantes problemas de interoperabilidad que es necesario tener en cuenta si IIS y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se ejecutan en el mismo equipo. Asegúrese de revisar la sección Problemas de interoperabilidad con IIS para obtener información sobre cómo resolver estos problemas.  
   
-## Requisitos de certificado de servidor  
+## <a name="server-certificate-requirements"></a>Requisitos de certificado de servidor  
  Debe tener un certificado de servidor instalado en el equipo (no se admiten los certificados de cliente). Reporting Services no proporciona funciones para solicitar, generar, descargar o instalar un certificado. [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] proporciona un complemento Certificados que se puede usar para pedir un certificado de una entidad de certificación de confianza.  
   
  En esta prueba, puede generar un certificado localmente. Si usa la utilidad **MakeCert** y el comando de ejemplo como una plantilla, asegúrese de especificar el nombre del servidor como host y quite todos los saltos de línea antes de ejecutar el comando. Si ejecuta el comando en una ventana DOS, puede que tenga que aumentar el tamaño de búfer de la ventana para que pueda contener todo el comando.  
   
  Si ejecuta IIS y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] conjuntamente en el mismo equipo, puede usar la aplicación de consola [!INCLUDE[iismgr](../../includes/iismgr-md.md)] para hacer que se instale el certificado en el equipo. [!INCLUDE[iismgr](../../includes/iismgr-md.md)] incluye opciones para crear y empaquetar un archivo de solicitud de certificado (.crt) para su posterior procesamiento por una entidad de certificación de confianza. La entidad de certificación que use generará un archivo de certificado (.cer) y se lo enviará de vuelta. Puede utilizar la Consola de administración de IIS para instalar el archivo de certificado en el almacén local. Para obtener más información, vea [Using SSL to Encrypt Confidential Data](http://go.microsoft.com/fwlink/?LinkId=71123) en Technet.  
   
-## Problemas de interoperabilidad con IIS  
+## <a name="interoperability-issues-with-iis"></a>Problemas de interoperabilidad con IIS  
  La presencia de IIS en el mismo equipo que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] afectará significativamente a las conexiones SSL con un servidor de informes:  
   
 -   Si IIS está instalado, el servicio World Wide Web (W3SVC) siempre debe estar ejecutándose. El servicio HTTP SSL establecerá una dependencia con IIS si detecta que IIS se está ejecutando. Esto significa que el servicio World Wide Web (W3SVC) tiene que ejecutarse siempre que IIS y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] estén instalados en el mismo equipo y se configuren direcciones URL de servidor de informes para las conexiones SSL.  
@@ -43,12 +48,12 @@ caps.handback.revision: 34
   
      Es necesario reiniciar el equipo para borrar todas las sesiones SSL de la memoria caché. Algunos sistemas operativos almacenan en memoria caché las sesiones SSL hasta diez horas, con lo que una dirección URL https:// continúa funcionando incluso después de quitar el enlace SSL de la reserva de direcciones URL en HTTP.SYS. Al reiniciar el equipo, se cierra cualquier conexión abierta que utilice el canal.  
   
-## Enlazar SSL a una reserva de direcciones URL de Reporting Services  
+## <a name="bind-ssl-to-a-reporting-services-url-reservation"></a>Enlazar SSL a una reserva de direcciones URL de Reporting Services  
  Los pasos siguientes no incluyen instrucciones para solicitar, generar, descargar o instalar un certificado. Debe tener un certificado instalado y disponible para usarlo. Puede elegir libremente las propiedades del certificado que especifique, la entidad de certificación de la que lo obtenga y las herramientas y utilidades que use para solicitar e instalar el certificado.  
   
  Puede utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para enlazar el certificado. Si el certificado está instalado correctamente en el almacén del equipo local, la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] lo detectará y lo mostrará en la lista **Certificados SSL** en las páginas **Dirección URL del servicio web** y **Dirección URL del Administrador de informes** .  
   
-### Para configurar una dirección URL del servidor de informes para SSL  
+### <a name="to-configure-a-report-server-url-for-ssl"></a>Para configurar una dirección URL del servidor de informes para SSL  
   
 1.  Inicie la herramienta Configuración de Reporting Services y conéctese al servidor de informes.  
   
@@ -76,7 +81,7 @@ caps.handback.revision: 34
   
 5.  Haga clic en la dirección URL para comprobar que funciona.  
   
-## Cómo se almacenan los enlaces de certificados  
+## <a name="how-certificate-bindings-are-stored"></a>Cómo se almacenan los enlaces de certificados  
  Los enlaces de certificados se almacenarán en HTTP.SYS. Una representación de los enlaces que definió también se almacenará en la sección **URLReservations** del archivo RSReportServer.config. Los valores del archivo de configuración solo son una representación de los valores reales que se especifican en otro lugar. No modifique directamente los valores en el archivo de configuración. La configuración solo aparecerá en el archivo después de utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o el proveedor de Instrumental de administración de Windows (WMI) del servidor de informes para enlazar un certificado.  
   
 > [!NOTE]  
@@ -86,7 +91,7 @@ caps.handback.revision: 34
   
  Si quita enlaces SSL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con el Administrador de configuración de Reporting Services, puede que los enlaces SSL ya no funcionen para los sitios web en un servidor que ejecute Internet Information Services (IIS) o en otro servidor HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] quite la siguiente clave del Registro. Cuando se quita esta clave del Registro, también se quita el enlace SSL para IIS. Sin este enlace, SSL no se proporciona para el protocolo HTTPS. Para diagnosticar este problema, use el Administrador de IIS o la utilidad de línea de comandos HTTPCFG.exe. Para resolver el problema, restaure el enlace SSL para los sitios web mediante el Administrador de IIS. Para evitar que se produzca este problema en el futuro, use el Administrador de IIS para quitar los enlaces SSL y use el Administrador de IIS para restaurar el enlace para los sitios web que desee. Para más información, vea el artículo de la base de conocimiento [SSL no funciona después de quitar un enlace SSL (http://support.microsoft.com/kb/956209/n)](http://support.microsoft.com/kb/956209/n).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Autenticación con el servidor de informes](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Configurar y administrar un servidor de informes &#40;modo nativo de SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

@@ -1,24 +1,29 @@
 ---
-title: "Crear un conjunto de datos compartido o un conjunto de datos incrustado (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Crear un conjunto de datos compartido o conjunto de datos incrustado (generador de informes y SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 10/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 25caf057e8d75fd3ed463f4165b3259331d18182
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Crear un conjunto de datos compartido o un conjunto de datos incrustado (Generador de informes y SSRS)
-Los conjuntos de datos incrustados se usan en un único informe de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. Los conjuntos de datos compartidos en un servidor de informes se pueden usar en varios informes, tanto móviles como paginados. Para crear un conjunto de datos, necesita un origen de datos incrustado o compartido.  
+# <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Crear un conjunto de datos compartido o un conjunto de datos incrustado (Generador de informes y SSRS)
+Los conjuntos de datos incrustados se usan en un único informe de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Los conjuntos de datos compartidos en un servidor de informes se pueden usar en varios informes, tanto móviles como paginados. Para crear un conjunto de datos, necesita un origen de datos incrustado o compartido.  
   
  Use el **Generador de informes** para realizar las tareas siguientes:  
   
@@ -41,7 +46,7 @@ Los conjuntos de datos incrustados se usan en un único informe de [!INCLUDE[ssR
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Para abrir el Generador de informes y crear un conjunto de datos compartido  
+## <a name="to-open-report-builder-and-create-a-shared-dataset"></a>Para abrir el Generador de informes y crear un conjunto de datos compartido  
   
 1.  Abra el Generador de informes. Se abre el panel **Nuevo informe o conjunto de datos** , como se muestra en en la siguiente figura:  
   
@@ -62,7 +67,7 @@ Los conjuntos de datos incrustados se usan en un único informe de [!INCLUDE[ssR
   
 7.  Para salir del Generador de informes, haga clic en **Generador de informes**y, a continuación, haga clic en **Salir del Generador de informes**. Para trabajar con informes, haga clic en **Generador de informes**y haga clic en **Nuevo** o en **Abrir**.  
   
-## Para establecer opciones de los parámetros de consultas  
+## <a name="to-set-query-parameter-options"></a>Para establecer opciones de los parámetros de consultas  
   
 1.  Abra el Generador de informes.  
   
@@ -81,7 +86,7 @@ Los conjuntos de datos incrustados se usan en un único informe de [!INCLUDE[ssR
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
   
-## Crear un conjunto de datos a partir de una base de datos relacional de SQL Server  
+## <a name="to-create-a-dataset-from-a-sql-server-relational-database"></a>Crear un conjunto de datos a partir de una base de datos relacional de SQL Server  
   
 1.  En el panel Datos de informe, haga clic con el botón derecho en el nombre del origen de datos y, después, haga clic en **Agregar conjunto de datos**. Se abrirá la página **Consulta** del cuadro de diálogo **Propiedades del conjunto de datos** .  
   
@@ -110,11 +115,12 @@ Los conjuntos de datos incrustados se usan en un único informe de [!INCLUDE[ssR
   
      El conjunto de datos y su colección de campos aparecen en el panel Datos de informe bajo el nodo del origen de datos.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)   
+ [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [Conjuntos de datos incrustados y compartidos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
+

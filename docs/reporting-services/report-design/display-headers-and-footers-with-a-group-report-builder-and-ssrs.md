@@ -1,23 +1,28 @@
 ---
-title: "Mostrar encabezados y pies de p&#225;gina con un grupo (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Mostrar encabezados y pies de página con un grupo (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 22c9592550b79fa5fa25e31f023a6d53c5b002f5
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Mostrar encabezados y pies de p&#225;gina con un grupo (Generador de informes y SSRS)
+# <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Mostrar encabezados y pies de página con un grupo (Generador de informes y SSRS)
   Puede ayudar a controlar si una fila estática, como un encabezado o un pie de grupo, se representa en filas dinámicas asociadas a un grupo en una región de datos Tablix.  
   
  Para repetir todos los encabezados de columna o de fila en varias páginas, puede establecer propiedades para la región de datos Tablix. Para más información, vea [Mostrar encabezados de fila y de columna en varias páginas (Generador de informes y SSRS)](https://msdn.microsoft.com/library/dd207045.aspx).  
@@ -32,7 +37,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Para mantener una fila estática con un conjunto de filas dinámicas asociadas con un grupo de filas  
+### <a name="to-keep-a-static-row-with-a-set-of-dynamic-rows-associated-with-a-row-group"></a>Para mantener una fila estática con un conjunto de filas dinámicas asociadas con un grupo de filas  
   
 1.  En la superficie de diseño, haga clic en cualquier lugar de la región de datos Tablix para seleccionarla. El Panel de agrupación muestra los grupos de filas y de columnas para la región de datos.  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 8
   
 3.  Haga clic en el miembro estático correspondiente al encabezado de fila o al pie de página que desea mantener con las filas de grupo. El panel de propiedades muestra las propiedades de **Miembro de Tablix** .  
   
-4.  En el panel de propiedades, haga clic en **KeepWithGroup** y, después, elija uno de los valores siguientes en la lista desplegable:  
+4.  En el panel de propiedades, haga clic en **KeepWithGroup**y, después, elija uno de los valores siguientes en la lista desplegable:  
   
     -   **Ninguno** : seleccione esta opción si no desea indicar ninguna preferencia para mantener este miembro con los miembros del grupo de filas seleccionado.  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 8
   
 5.  (Opcional) Obtenga una vista previa del informe. Donde sea posible, el presentador de informes mantendrá este miembro con los miembros de grupo de filas especificados.  
   
-### Para mantener una columna estática con un conjunto de columnas dinámicas asociadas con un grupo de columnas  
+### <a name="to-keep-a-static-column-with-a-set-of-dynamic-columns-associated-with-a-column-group"></a>Para mantener una columna estática con un conjunto de columnas dinámicas asociadas con un grupo de columnas  
   
 1.  En la superficie de diseño, haga clic en cualquier lugar de la región de datos Tablix para seleccionarla. El Panel de agrupación muestra los grupos de filas y de columnas para la región de datos.  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 8
   
 3.  Haga clic en el miembro estático correspondiente a la columna estática que desea mantener con las columnas de grupo. El panel de propiedades muestra las propiedades de **Miembro de Tablix** .  
   
-4.  En el panel de propiedades, haga clic en **KeepWithGroup** y, después, elija uno de los valores siguientes en la lista desplegable:  
+4.  En el panel de propiedades, haga clic en **KeepWithGroup**y, después, elija uno de los valores siguientes en la lista desplegable:  
   
     -   **Ninguno** : seleccione esta opción si no desea indicar ninguna preferencia para mantener este miembro con los miembros del grupo de columnas seleccionado.  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 8
   
 5.  (Opcional) Obtenga una vista previa del informe. Donde sea posible, el representador de informes mantendrá este miembro con los miembros de grupo de columnas especificados.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Celdas, filas y columnas de la región de datos Tablix (Generador de informes y SSRS)](https://msdn.microsoft.com/library/dd220587.aspx)   
  
   

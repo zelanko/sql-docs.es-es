@@ -1,23 +1,28 @@
 ---
-title: "Representaci&#243;n y dise&#241;o de p&#225;ginas (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Representación y diseño de página (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d688ed124a419017e97d405d7f5bd80e6e3bf530
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Representaci&#243;n y dise&#241;o de p&#225;ginas (Generador de informes y SSRS)
+# <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Representación y diseño de páginas (Generador de informes y SSRS)
 Obtenga información sobre las extensiones de representación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para los informes paginados, de forma que esté seguro de que su informe tiene el aspecto que quiere, incluidos el diseño y los saltos de página, y el tamaño del papel. 
 
  Al ver los informes en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o en el panel de vista previa del Generador de informes o del Diseñador de informes, el informe se representa primero mediante el representador de HTML. Después, puede exportar el informe a formatos diferentes, por ejemplo a Excel o a un archivo delimitado por comas (CSV). El informe exportado se puede usar entonces para realizar un análisis más extenso en Excel o como un origen de datos para las aplicaciones que pueden importar y usar archivos CSV.  
@@ -38,7 +43,7 @@ Otros elementos de informe establecen un vínculo a un solo elemento y lo muestr
 
 Un informe también puede contener subinformes.  
   
-## Diseño de página
+## <a name="page-layout"></a>Diseño de página
 
  Con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], puede colocar elementos de informe en cualquier parte de la superficie de diseño. Puede colocar y ampliar o reducir interactivamente la forma inicial del elemento de informe usando las líneas de ajuste y cambiando los controladores de tamaño. Puede colocar regiones de datos con conjuntos de datos distintos o incluso los mismos datos en formatos diferentes, uno al lado de otro. Cuando se coloca un elemento de informe en la superficie de diseño, tiene un tamaño y una forma predeterminados y una relación inicial con todos los demás elementos de informe. 
  
@@ -65,7 +70,7 @@ Un informe también puede contener subinformes.
   
 -   **Representadores de saltos de página manuales** Los representadores de saltos de página manuales mantienen el diseño y el formato de los informes. El archivo resultante se optimiza para que su aspecto no varíe al imprimirlo o para ver el informe en pantalla con formato de libro. Los representadores de saltos de página manuales disponibles son TIFF y PDF.  
   
- Cuando se obtiene una vista previa de un informe en el Generador de informes o el Diseñador de informes o se ejecuta un informe en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], siempre se representa primero en HTML. Después de ejecutar el informe, puede exportarlo a otros formatos de archivo. Para más información, vea [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+ Cuando se obtiene una vista previa de un informe en el Generador de informes o el Diseñador de informes o se ejecuta un informe en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , siempre se representa primero en HTML. Después de ejecutar el informe, puede exportarlo a otros formatos de archivo. Para más información, vea [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 ##  <a name="RenderingBehaviors"></a> Comportamiento de la representación  
  En función del representador que seleccione, se aplican ciertas reglas al representar el informe. La forma en la que los elementos de informe se ajustan en una página viene determinada por la combinación de estos factores:  
@@ -113,8 +118,8 @@ Un informe también puede contener subinformes.
  [Controlar saltos de página, encabezados, columnas y filas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  Proporciona información sobre cómo utilizar saltos de página.  
   
-## Vea también  
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+## <a name="see-also"></a>Vea también  
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

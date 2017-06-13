@@ -1,27 +1,32 @@
 ---
-title: "Entrega a recursos compartidos de archivos en Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "suscripciones [Reporting Services], entrega a recursos compartidos de archivos"
-  - "entrega a recursos compartidos de archivos [Reporting Services]"
+title: Archivo entrega a recursos compartidos en Reporting Services | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscriptions [Reporting Services], file share delivery
+- file share delivery [Reporting Services]
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 caps.latest.revision: 54
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 54
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e33585c625c49967304ca36ad91ccc1ebac32f1
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Entrega a recursos compartidos de archivos en Reporting Services
-  SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incorpora una extensión de entrega a recursos compartidos de archivos que permite entregar un informe a una carpeta. Esta extensión está disponible de forma predeterminada y no requiere configuración adicional. Para que la entrega de archivos sea satisfactoria, debe establecer permisos de escritura en la carpeta compartida. La cuenta que requiere permisos de escritura pueden ser credenciales configuradas en la suscripción o una **cuenta de recurso compartido de archivos** configurada para el servidor de informes. Para obtener más información sobre la cuenta del recurso compartido de archivos, vea [Subscription Settings and a File Share Account &#40;Configuration Manager&#41; (Configuración de la suscripción y una cuenta de recurso compartido de archivos &#40;Administrador de configuración&#41;)](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Además, los usuarios que necesitan acceso a los informes deben tener permisos de lectura en la carpeta compartida.  
+# <a name="file-share-delivery-in-reporting-services"></a>Entrega a recursos compartidos de archivos en Reporting Services
+  SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incorpora una extensión de entrega a recursos compartidos de archivos que permite entregar un informe a una carpeta. Esta extensión está disponible de forma predeterminada y no requiere configuración adicional. Para que la entrega de archivos sea satisfactoria, debe establecer permisos de escritura en la carpeta compartida. La cuenta que requiere permisos de escritura pueden ser credenciales configuradas en la suscripción o una **cuenta de recurso compartido de archivos** configurada para el servidor de informes. Para obtener más información sobre la cuenta del recurso compartido de archivos, vea [Configuración de la suscripción y una cuenta de recurso compartido de archivos &#40;Administrador de configuración&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Además, los usuarios que necesitan acceso a los informes deben tener permisos de lectura en la carpeta compartida.  
   
  Para distribuir un informe a un recurso compartido de archivos, defina una suscripción estándar o controlada por datos. Para obtener información sobre cómo usar la entrega a recursos compartidos en una suscripción controlada por datos, vea [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md). Además, la cuenta que ejecuta las suscripciones a recursos compartidos de archivos remotos necesita derechos para iniciar sesión localmente en el equipo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -78,9 +83,9 @@ caps.handback.revision: 54
   
  La imagen siguiente es un ejemplo de una configuración de archivo para una suscripción configurada para la entrega a recursos compartidos de archivos.  
   
- ![file share subscription](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "file share subscription")  
+ ![suscripción a recursos compartidos de archivos](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "suscripción a recursos compartidos de archivos")  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Crear y administrar suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Configuración de la suscripción y una cuenta de recurso compartido de archivos &#40;Administrador de configuración&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
   

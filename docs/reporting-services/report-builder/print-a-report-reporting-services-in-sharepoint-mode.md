@@ -1,26 +1,31 @@
 ---
-title: "Imprimir un informe (Reporting Services en el modo de SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "imprimir informes, aplicación web de SharePoint"
-  - "imprimir informes"
+title: Imprimir un informe (Reporting Services en modo de SharePoint) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- printing reports, SharePoint Web application
+- printing reports
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f89c8f0d330561aacd678e4556fdaf2910b5dcc7
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Imprimir un informe (Reporting Services en el modo de SharePoint)
+# <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Imprimir un informe (Reporting Services en el modo de SharePoint)
   Para un servidor de informes que se ejecuta en el modo integrado de SharePoint, existen tres formas de imprimir un informe desde una aplicación web de SharePoint:  
   
 -   **Desde un sitio de SharePoint** Elija **Imprimir** en el menú **Acciones** que se muestra en la barra de tareas del informe al abrirlo. Esto proporciona a Reporting Services funcionalidad para imprimir, que incluye un cuadro de diálogo **Imprimir** estándar que se utiliza para seleccionar una impresora, especificar páginas y márgenes y obtener una vista previa del informe. Esta función de impresión está concebida para utilizarse en lugar del comando Imprimir del menú Archivo del explorador. Al imprimir de esta forma, el informe se imprime tal y como se diseñó, sin los elementos adicionales que se ven en la impresión de una página web.  
@@ -36,7 +41,7 @@ caps.handback.revision: 11
   
  Los creadores de informes pueden diseñar informes expresamente para imprimirlos o para un formato de aplicación concreto. Debido al modo en que se implementa la paginación para los distintos formatos de aplicación, es posible que no pueda lograr unos resultados de impresión óptimos con cada uno de los informes en los distintos formatos de exportación. En contraste con los informes diseñados para una salida de impresión, las páginas de los informes en pantalla están diseñadas para adaptarse a cantidades de datos variables. Por ejemplo, los informes que incluyen una matriz pueden ocasionar que una página aumente de manera horizontal y vertical en función de cómo se expandan las filas y las columnas. Al imprimir un informe de tamaño variable, un usuario que no expanda una matriz obtendrá unos resultados de impresión diferentes de los de otro usuario que sí la expanda. En la mayoría de los informes exportados, las copias impresas de los informes incluyen todo lo que es visible en el informe, tal y como lo ve el usuario en el monitor de un equipo.  
   
-### Cómo imprimir informes en el menú Acciones  
+### <a name="how-to-print-reports-from-the-actions-menu"></a>Cómo imprimir informes en el menú Acciones  
   
 1.  Abra el informe.  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 11
   
      Para ver el informe antes de imprimirlo, haga clic en el botón **Vista previa** . Se abre la primera página del informe en una ventana de vista previa independiente. A medida que el informe se representa en el servidor de informes, se proporcionan más páginas. Un informe en vista previa se representa en formato EMF. Puede navegar hasta la página anterior o siguiente hasta llegar a la última página y hasta que el botón **Siguiente** aparezca deshabilitado. Para modificar los márgenes de impresión de la página de vista previa, haga clic en el botón **Márgenes** . Se mostrará el cuadro de diálogo **Márgenes** . Configure los márgenes superior, inferior, derecho e izquierdo y haga clic en **Aceptar**. El cuadro de diálogo se cierra y la configuración se almacena para representar la vista previa y la impresión.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   

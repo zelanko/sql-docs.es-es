@@ -3,7 +3,7 @@ title: "Índices de tablas con optimización para memoria | Microsoft Docs"
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 10/24/2016
+ms.date: 06/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.service: sql-database
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f55708bc9eaf8e94cf33ead19cf62cbc319e8e63
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b468f44444a9c6cc031ea892f44849db401e0ab7
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="indexes-for-memory-optimized-tables"></a>Índices de tablas con optimización para memoria
@@ -225,34 +225,10 @@ En la tabla siguiente se enumeran todas las operaciones que son compatibles con 
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
 | Index scan, recupera todas las filas de la tabla. | Sí | Sí | Sí |  
 | Index seek en predicados de igualdad (=). | Sí <br/> (Se requiere la clave completa). | Sí  | Sí |  
-| Index seek en predicados de desigualdad y de intervalo <br/> (>, <, \<=, >=, BETWEEN). | No <br/> (Resultados de un examen de índice). | Sí | Sí |  
+| Index seek en predicados de desigualdad y de intervalo <br/> (>, <, <=, >=, BETWEEN). | No <br/> (Resultados de un examen de índice). | Sí | Sí |  
 | Recuperar filas según un criterio de ordenación que coincida con la definición de índice. | No | Sí | Sí |  
 | Recuperar filas según un criterio de ordenación que coincida con el opuesto de la definición de índice. | No | No | Sí |  
   
   
 En la tabla, Sí se refiere a que el índice puede atender la solicitud con eficiencia y No se refiere a que el índice no puede satisfacer la solicitud con eficiencia.  
-
-
-  
-  
-\<!--   
-Indexes_for_Memory-Optimized_Tables.md, que es...  
-guid MAYÚS: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
-mt670614.aspx  
-  
-Application-Level%20Partitioning.xml , {162d1392-39d2-4436-a4d9-ee5c47864c5a}  
-  
-/Image/hekaton_tables_23d.png, fbc511a0-304c-42f7-807d-d59f3193748f  
-  
-  
-Reemplaza dn511012.aspx, que es....  
-guid MAYÚS: {86805eeb-6972-45d8-8369-16ededc535c7}  
-  
-GeneMi,  2016-05-05  miércoles 17:25 p..m  (contenido hash movido al nuevo artículo secundario, e922cc3a-3d6e-453b-8d32-f4b176e98488.)  
--->  
-  
-  
-  
-
-
 

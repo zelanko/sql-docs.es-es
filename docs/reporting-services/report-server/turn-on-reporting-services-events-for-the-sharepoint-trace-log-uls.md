@@ -1,23 +1,30 @@
 ---
-title: "Activar eventos de Reporting Services para el registro de seguimiento de SharePoint (ULS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Activar eventos de Reporting Services para el registro de seguimiento de SharePoint (ULS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 caps.latest.revision: 19
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 19
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 45d2f680e35666c9958665ac6c687725c6db0eb4
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Activar eventos de Reporting Services para el registro de seguimiento de SharePoint (ULS)
+
+# <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Activar eventos de Reporting Services para el registro de seguimiento de SharePoint (ULS)
+
   A partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], los servidores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint pueden escribir los eventos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el registro de seguimiento del Servicio de creación de registros unificado (ULS). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] están disponibles en la página Supervisión de Administración central de SharePoint.  
   
  En este tema:  
@@ -42,9 +49,9 @@ caps.handback.revision: 19
 |Categoría|Nivel|Description|  
 |--------------|-----------|-----------------|  
 |Base de datos|Detallado|Registra eventos que implican el acceso a bases de datos.|  
-|General|Verbose|Registra eventos que implican el acceso a los elementos siguientes:<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] páginas Web<br /><br /> Controlador HTTP del visor de informes<br /><br /> Acceso a informes (archivos .rdl)<br /><br /> Orígenes de datos (archivos .rsds)<br /><br /> Direcciones URL en el sitio de SharePoint (archivos .smdl)|  
+|General|Detallado|Registra eventos que implican el acceso a los elementos siguientes:<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] páginas Web<br /><br /> Controlador HTTP del visor de informes<br /><br /> Acceso a informes (archivos .rdl)<br /><br /> Orígenes de datos (archivos .rsds)<br /><br /> Direcciones URL en el sitio de SharePoint (archivos .smdl)|  
 |Office Server General|Exception|Registra errores de inicio de sesión.|  
-|Topología|Verbose|Registra información del usuario actual.|  
+|Topología|Detallado|Registra información del usuario actual.|  
 |elementos web|Detallado|Registra eventos que implican el acceso al elemento web Visor de informes.|  
   
 ##  <a name="bkmk_turnon"></a> Para activar y desactivar eventos de Reporting Services en la categoría de Reporting Services  
@@ -88,7 +95,7 @@ Get-SPDiagnosticConfig
   
 2.  **Categoría:** los eventos relacionados con el servidor tendrán los caracteres “Servidor de informes” en el nombre. Por ejemplo, “Tiempo de ejecución de alertas del servidor de informes”. Estos eventos se registran también en los archivos de registro del servidor de informes.  
   
-3.  **Categoría**: los eventos relacionados o comunicados desde un componente front-end web no contendrán “Servidor de informes”. Por ejemplo, “Proxy de aplicación de servicio”. Las entradas de WFE contienen un CorrelationID pero no así las entradas del servidor.  
+3.  **Categoría** : los eventos relacionados o comunicados desde un componente front-end web no contendrán “Servidor de informes”. Por ejemplo, “Proxy de aplicación de servicio”. Las entradas de WFE contienen un CorrelationID pero no así las entradas del servidor.  
   
 ##  <a name="bkmk_list"></a> Lista de eventos de SQL Server Reporting Services  
  La tabla siguiente contiene una lista de eventos de la categoría SQL Server Reporting Services:  
@@ -101,7 +108,7 @@ Get-SPDiagnosticConfig
 |Representación de modo local||  
 |Proxy de cliente SOAP||  
 |Páginas de la interfaz de usuario||  
-|Power View|Entradas del registro escritas en la API de **LogClientTraceEvents** . Estas entradas se obtienen de aplicaciones cliente, como [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], una característica del complemento [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> Todas las entradas del registro desde la API de LogClientTraceEvents se registran en **Categoría** de “SQL Server Reporting Services” y **Área** de “Vista avanzada”.<br /><br /> El contenido de las entradas registradas con el área de “Vista avanzada” viene determinado por la aplicación cliente.|  
+|Power View|Entradas del registro escritas en la API de **LogClientTraceEvents** . Estas entradas se obtienen de aplicaciones cliente, incluyendo Power View, una característica del complemento de SQL Server Reporting Services.<br /><br /> Todas las entradas del registro desde la API de LogClientTraceEvents se registran en **Categoría** de “SQL Server Reporting Services” y **Área** de “Vista avanzada”.<br /><br /> El contenido de las entradas registradas con el área de “Vista avanzada” viene determinado por la aplicación cliente.|  
 |Tiempo de ejecución de alertas del servidor de informes||  
 |Administrador de dominios de aplicación del servidor de informes||  
 |Respuesta en búfer del servidor de informes||  
@@ -109,7 +116,7 @@ Get-SPDiagnosticConfig
 |Catálogo del servidor de informes||  
 |Fragmento del servidor de informes||  
 |Limpieza del servidor de informes||  
-|Administrador de configuración del servidor de informes|Entradas de ejemplo:<br /><br /> Dirección URL interna del servidor de informes MediumUsing http://localhost:80/ReportServer.<br /><br /> Configuración UnexpectedMissing o ExtendedProtectionLevel no válido|  
+|Administrador de configuración del servidor de informes|Entradas de ejemplo:<br /><br /> Dirección url interna del servidor de informes mediumusing http://localhost `http://localhost:80/ReportServer`.<br /><br /> Configuración UnexpectedMissing o ExtendedProtectionLevel no válido|  
 |Criptografía del servidor de informes||  
 |Extensión de datos del servidor de informes||  
 |Sondeo de base de datos del servidor de informes||  
@@ -139,7 +146,7 @@ Get-SPDiagnosticConfig
 |Servicio compartido|Entradas de ejemplo:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> Acceso de MediumGranting a las bases de datos de contenido.<br /><br /> Instancias de MediumProvisioning para ReportingWebServiceApplication<br /><br /> Cambio de la cuenta de servicio de MediumProcessing para ReportingWebServiceApplication<br /><br /> Permisos de base de datos de MediumSetting.|  
   
 ##  <a name="bkmk_powershell"></a> Ver un archivo de registro con PowerShell  
- ![Contenido relacionado con PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.png "Contenido relacionado con PowerShell")Puede usar PowerShell para devolver una lista de los eventos relacionados con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] desde un archivo de registro ULS. Escriba el comando siguiente desde el Shell de administración de SharePoint 2010 para devolver una lista filtrada de filas desde el archivo de registro ULS UESQL11SPOINT-20110606-1530.log, que contiene “**sql server reporting services**”:  
+ ![Contenido relacionado con PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "contenido relacionado con PowerShell")puede usar PowerShell para devolver una lista de los [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] relacionados con eventos de un archivo de registro de ULS. Escriba el comando siguiente desde el Shell de administración de SharePoint 2010 para devolver una lista filtrada de filas desde el archivo de registro ULS UESQL11SPOINT-20110606-1530.log, que contiene “**sql server reporting services**”:  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
@@ -150,8 +157,8 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
  Para más información sobre cómo usar PowerShell para ver datos de registro, vea [Visualización de registros de diagnóstico (SharePoint Server 2010)](http://technet.microsoft.com/library/ff463595.aspx).  
   
 ##  <a name="bkmk_trace"></a> Ubicación del registro de seguimiento  
- Los archivos de registro de seguimiento se encuentran normalmente en la carpeta **c:\Archivos de programa\Common files\Microsoft Shared\Web Server Extensions\14\logs**, pero puede comprobar o cambiar la ruta de acceso en la página **Registro de diagnóstico** de Administración central de SharePoint.  
+ Los archivos de registro de seguimiento se encuentran normalmente en la carpeta **c:\Archivos de programa\Common files\Microsoft Shared\Web Server Extensions\14\logs** , pero puede comprobar o cambiar la ruta de acceso en la página **Registro de diagnóstico** de Administración central de SharePoint.  
   
  Para más información y conocer los pasos para configurar el registro de diagnóstico en un servidor de SharePoint en Administración Central de SharePoint 2010, vea [Configuración de las opciones del registro de diagnóstico (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423).  
-  
-  
+
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

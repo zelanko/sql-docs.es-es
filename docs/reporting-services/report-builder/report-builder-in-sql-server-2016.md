@@ -1,33 +1,36 @@
 ---
-title: "Generador de informes en SQL Server 2016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-f1_keywords: 
-  - "10428"
-helpviewer_keywords: 
-  - "información general del Generador de informes"
-  - "introducción"
+title: En SQL Server 2016 del generador de informes | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+f1_keywords:
+- "10428"
+helpviewer_keywords:
+- overview of Report Builder
+- getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 caps.latest.revision: 35
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 35
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c2a8702fcee392936451e4a55a4b97327de2b97d
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Generador de informes en SQL Server 2016
+# <a name="report-builder-in-sql-server-2016"></a>Generador de informes en SQL Server 2016
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] es una herramienta de creación de informes paginados para usuarios profesionales que prefieren trabajar en un entorno independiente en lugar de usar el Diseñador de informes de Visual Studio.  Al diseñar un informe paginado, crea una definición de informe que especifica dónde obtener los datos, qué datos obtener y cómo visualizarlos. Al ejecutar el informe, el procesador de informes usa la definición de informe especificada, recupera los datos y los combina con el diseño del informe para generar el informe. Puede obtener una vista previa del informe en el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] o publicarlo en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo o en modo integrado de SharePoint, donde otros usuarios podrán ejecutarlo.  
   
- [Iniciar el Generador de informes](../../reporting-services/report-builder/start-report-builder.md)  
-  
- ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.gif "rs_GettingStartedReport")  
+ ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
  En este informe paginado se muestra una matriz con grupos de filas y columnas, minigráficos, indicadores y un gráfico circular de resumen en la celda de la esquina, acompañada de un mapa con dos conjuntos de datos geográficos representados por color y tamaño del círculo.  
   
@@ -70,18 +73,21 @@ caps.handback.revision: 35
 > [!NOTE]  
 >  El administrador del servidor de informes se encarga de administrar los informes publicados en un servidor de informes o un servidor de informes en el modo integrado de SharePoint. Los administradores del servidor de informes pueden definir la seguridad, establecer las propiedades y programar operaciones como el historial de informes y la entrega de informes por correo electrónico. Pueden crear programaciones compartidas y orígenes de datos compartidos, y ponerlos a disposición de todos los usuarios. Los administradores también controlan todas las carpetas del servidor de informes. La posibilidad de realizar tareas de administración depende de los permisos de usuario.  
   
-##  <a name="InThisSection"></a> En esta sección  
- [Novedades en Reporting Services y el Generador de informes de SQL Server 2016](What's%20New%20in%20Reporting%20Services%20\(SSRS\).md)  
-  Se describen las nuevas características de esta versión de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] y [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
+## <a name="see-also"></a>Vea también  
+  [Iniciar el Generador de informes](../../reporting-services/report-builder/start-report-builder.md)  
   
- [Tutorial: crear un informe de gráfico rápido sin conexión](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+  [Instalar el Generador de informes](../../reporting-services/install-windows/install-report-builder.md)
+
+  [Novedades en Reporting Services y el Generador de informes de SQL Server 2016](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+  Se describen las nuevas características de esta versión de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] y [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].   
+  [Tutorial: Crear un informe de gráfico rápido sin conexión](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Presenta el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] y los asistentes disponibles para ayudarlo a crear los informes. El tutorial proporciona un conjunto de datos para que los use de modo que no tenga que conectarse a un origen de datos para empezar.  
   
  [Planear un informe &#40;Generador de informes&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  Proporciona información acerca de lo que debería tener en cuenta antes de empezar a generar el informe.  
   
  [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
- Define conceptos básicos usados en toda la documentación del [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
+ Define conceptos básicos usados en toda la documentación del [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] .  
   
  [Vista de diseño de informe &#40;Generador de informes&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
  Explica los diferentes paneles y regiones de la vista de diseño del informe.  
@@ -92,7 +98,5 @@ caps.handback.revision: 35
  [Métodos abreviados de teclado &#40;Generador de informes&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
  Se describen las teclas de método abreviado disponibles para navegar y diseñar informes en el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
   
-## Vea también  
- [Iniciar el Generador de informes](../../reporting-services/report-builder/start-report-builder.md)  
-  
-  
+
+

@@ -1,31 +1,36 @@
 ---
-title: "Cargar archivos a una carpeta | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "publicar informes [Reporting Services], cargar archivos"
-  - "informes [Reporting Services], publicar"
-  - "cargar informes [Reporting Services]"
-  - "cargar archivos [Reporting Services]"
-  - "archivos [Reporting Services], cargar"
-  - "archivos [Reporting Services]"
-  - "carpetas [Reporting Services], cargar archivos en"
+title: Cargar archivos a una carpeta | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publishing reports [Reporting Services], uploading files
+- reports [Reporting Services], publishing
+- uploading reports [Reporting Services]
+- uploading files [Reporting Services]
+- files [Reporting Services], uploading
+- files [Reporting Services]
+- folders [Reporting Services], uploading files to
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 caps.latest.revision: 42
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 42
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b4a7d4a5babf6789baa551f808b840c469dfa31a
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Cargar archivos a una carpeta
+# <a name="upload-files-to-a-folder"></a>Cargar archivos a una carpeta
   Puede cargar archivos desde el sistema de archivos y almacenarlos en una base de datos del servidor de informes como elementos administrados. Lo que sucede al cargar el archivo depende del tipo de archivo.  
   
 -   Cargar un archivo .rdl equivale a publicar un informe.  
@@ -39,13 +44,13 @@ caps.handback.revision: 42
   
  Visualmente, los archivos que se cargan a la base de datos del servidor de informes aparecen representados en la jerarquía de carpetas con los siguientes iconos.  
   
- ![Icono de informe](../../reporting-services/report-server/media/hlp-16doc.png "Icono de informe")  
+ ![Report icon](../../reporting-services/report-server/media/hlp-16doc.gif "Report icon")  
 Icono de informe  
   
- ![Icono de modelo](../../reporting-services/report-server/media/model-icon.png "Icono de modelo")  
+ ![Icono de modelo](../../reporting-services/report-server/media/model-icon.gif "Model icon")  
 Icono de modelo de informe  
   
- ![Icono de recurso genérico](../../reporting-services/report-server/media/hlp-16file.png "Icono de recurso genérico")  
+ ![Icono de recurso genérico](../../reporting-services/report-server/media/hlp-16file.gif "generic resource icon")  
 Icono de recurso genérico  
   
  Al cargar un archivo, éste se sitúa siempre en la carpeta seleccionada. Puede navegar en primer lugar hasta la carpeta en la que desea hospedar el elemento o bien puede cargar el archivo y moverlo después a la ubicación final.  
@@ -58,8 +63,8 @@ Icono de recurso genérico
 |Cargar cualquier archivo como objeto binario|Administrar recursos|  
 |Ver el contenido de una carpeta|Ver recursos, Ver informes|  
   
-## Vea también  
- [Administrador de informes &#40;Modo nativo de SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+## <a name="see-also"></a>Vea también  
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Tareas y permisos](../../reporting-services/security/tasks-and-permissions.md)   
  [Cargar un archivo o un informe &#40;Administrador de informes&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  

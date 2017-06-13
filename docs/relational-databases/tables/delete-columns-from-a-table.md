@@ -1,7 +1,7 @@
 ---
 title: "Eliminación de columnas desde una tabla (motor de base de datos) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 04/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20aa31c62de21e9718f504538ae4199395a5dab0
+ms.sourcegitcommit: 621185759462020bca20985c3133c93814a1f333
+ms.openlocfilehash: ef0c4b8b66af5dfc46c836fc8c18734609b1301a
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="delete-columns-from-a-table"></a>Eliminar columnas de una tabla
@@ -66,7 +66,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  En el **Explorador de objetos**, haga clic con el botón derecho en la tabla de la que quiere eliminar columnas y elija **Eliminar**.  
+2.  En **Explorador de objetos**, busque la tabla desde el que desea eliminar columnas y se expanden para exponer los nombres de columna. 
+
+3.  Haga clic en la columna que desea eliminar y elija **eliminar**.  
   
 3.  En el cuadro de diálogo **Eliminar objeto** , haga clic en **Aceptar**.  
   
@@ -101,3 +103,4 @@ ms.lasthandoff: 04/11/2017
  Para obtener otros ejemplos, vea [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ##  <a name="FollowUp"></a>  
+

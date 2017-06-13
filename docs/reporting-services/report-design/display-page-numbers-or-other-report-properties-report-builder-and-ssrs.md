@@ -1,23 +1,28 @@
 ---
-title: "Mostrar n&#250;meros de p&#225;gina u otras propiedades del informe (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Mostrar números de página u otras propiedades del informe (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0f2fc7a28d8c8b0a66e706a9518290d0ca56c876
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Mostrar n&#250;meros de p&#225;gina u otras propiedades del informe (Generador de informes y SSRS)
+# <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Mostrar números de página u otras propiedades del informe (Generador de informes y SSRS)
   Es fácil agregar números de página, un título del informe, nombre de archivo y otras propiedades del informe a los encabezados o pies de página de su informe. Estas propiedades se almacenan como campos en la carpeta Campos integrados del panel Datos de informe:  
   
 -   Tiempo de ejecución  
@@ -44,7 +49,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Para agregar un número de página u otras propiedades del informe  
+### <a name="to-add-a-page-number-or-other-report-properties"></a>Para agregar un número de página u otras propiedades del informe  
   
 1.  En el panel Datos de informe, expanda la carpeta Campos integrados.  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 7
     >   
     >  Se agrega un cuadro de texto contiene la expresión simple [&PageNumber].  
   
-### Para agregar la palabra "Página" antes del número de página  
+### <a name="to-add-the-word-page-before-the-page-number"></a>Para agregar la palabra "Página" antes del número de página  
   
 1.  Haga clic con el botón derecho en el cuadro de texto que contiene [&PageNumber] y haga clic en **Expresiones**.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 7
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Para agregar el número total de páginas después del número de página  
+### <a name="to-add-total-number-of-pages-after-the-page-number"></a>Para agregar el número total de páginas después del número de página  
   
 1.  Haga clic con el botón secundario en el cuadro de texto con la expresión y haga clic en **Expresiones**.  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 7
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Encabezados y pies de página &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Dar formato al texto en un cuadro de texto &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
   

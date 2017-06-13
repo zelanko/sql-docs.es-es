@@ -1,24 +1,29 @@
 ---
-title: "Establecer y configurar unidades de medida (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Establecer y configurar unidades de medida (generador de informes y SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a15a96c3-7d2c-433e-a440-4ea051e967a9
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 46d639df93661b5cd27810c72a44f698539aac2f
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Establecer y configurar unidades de medida (Generador de informes y SSRS)
-  En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], los indicadores usan una de dos unidades de medida: porcentaje o valor numérico.   
+# <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>Establecer y configurar unidades de medida (Generador de informes y SSRS)
+  En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , los indicadores usan una de dos unidades de medida: porcentaje o valor numérico.   
     
   De forma predeterminada, los indicadores se configuran para usar porcentajes como unidad de medida. Esto significa que un intervalo de porcentajes determina los valores de indicador asignados a cada icono del indicador. Los intervalos de porcentajes están divididos uniformemente entre los iconos del conjunto de indicadores. Cada icono representa un estado del indicador. Puede cambiar los porcentajes para cada icono en el conjunto de indicadores especificando porcentajes inicial y final diferentes. Los indicadores también detectan automáticamente los valores máximo y mínimo de los datos.  
   
@@ -26,7 +31,7 @@ caps.handback.revision: 8
   
  Opciones como las unidades de medida se pueden establecer mediante expresiones. Para obtener más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
-## Utilizar la unidad de medida de estado numérica  
+## <a name="to-use-the-numeric-state-measurement-unit"></a>Utilizar la unidad de medida de estado numérica  
   
 1.  Haga clic con el botón derecho en el indicador que quiera cambiar y seleccione **Propiedades de indicador**.  
   
@@ -38,14 +43,14 @@ caps.handback.revision: 8
   
 4.  Para cada icono en el indicador establecido, actualice los valores de los cuadros de texto **Inicial** y **Final** .  
   
-     Si quiere, haga clic en el botón **Expresión** (*fx*) para modificar la expresión que establece los valores de las opciones **Inicial** y **Final**.  
+     Si quiere, haga clic en el botón **Expresión** (*fx*) para modificar la expresión que establece los valores de las opciones **Inicial** y **Final** .  
   
     > [!NOTE]  
     >  Los valores de los cuadros de texto **Inicial** y **Final** deben ser numéricos.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Para utilizar la unidad de medida en porcentaje  
+## <a name="to-use-the-percentage-measurement-unit"></a>Para utilizar la unidad de medida en porcentaje  
   
 1.  Haga clic con el botón derecho en el indicador que quiera cambiar y seleccione **Propiedades de indicador**.  
   
@@ -64,14 +69,14 @@ caps.handback.revision: 8
   
 5.  Para cada icono en el indicador establecido, actualice los valores de los cuadros de texto **Inicial** y **Final** .  
   
-     Si quiere, haga clic en el botón **Expresión** (*fx*) para modificar la expresión que establece los valores de las opciones **Inicial** y **Final**.  
+     Si quiere, haga clic en el botón **Expresión** (*fx*) para modificar la expresión que establece los valores de las opciones **Inicial** y **Final** .  
   
     > [!NOTE]  
     >  Los valores de los cuadros de texto **Inicial** y **Final** deben ser numéricos.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Indicadores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

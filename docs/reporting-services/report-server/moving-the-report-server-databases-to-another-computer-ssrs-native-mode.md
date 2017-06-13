@@ -1,26 +1,33 @@
 ---
-title: "Mover las bases de datos del servidor de informes a otro equipo (Modo nativo de SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Mover las bases de datos del servidor de informes a otro equipo (modo nativo de SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 caps.latest.revision: 10
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 10
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: bb803f632f9c325430c811082e5e2cebdfa29df8
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Mover las bases de datos del servidor de informes a otro equipo (Modo nativo de SSRS)
+
+# <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Mover las bases de datos del servidor de informes a otro equipo (Modo nativo de SSRS)
+
   Las bases de datos del servidor de informes que se emplean en una instalación se pueden mover a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se encuentre en un equipo diferente. Las bases de datos reportserver y reportservertempdb se deben mover o copiar en conjunto. Una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiere las dos bases de datos; la base de datos reportservertempdb debe estar relacionada por nombre con la base de datos reportserver principal que se vaya a mover.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
   
  Mover una base de datos no afecta a las operaciones programadas que están actualmente definidas para los elementos del servidor de informes.  
   
@@ -37,8 +44,8 @@ caps.handback.revision: 10
 > [!IMPORTANT]  
 >  Los pasos que se proporcionan en este tema se recomiendan cuando la modificación de la ubicación de la base de datos del servidor de informes es el único cambio que se realiza en la instalación existente. Para migrar una instalación completa de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (es decir, mover la base de datos y cambiar la identidad del servicio Windows del servidor de informes que usa la base de datos), es necesario volver a configurar la conexión y restablecer una clave de cifrado.  
   
-## Separar y adjuntar bases de datos del servidor de informes  
- Si puede poner el servidor de informes sin conexión, puede separar las bases de datos para moverlas a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que desea usar. Con este método, se conservan los permisos de las bases de datos. Si utiliza una base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , debe moverla a otra instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Después de mover las bases de datos, será necesario volver a configurar la conexión del servidor de informes con la base de datos del servidor de informes. Si se utiliza una implementación escalada, será necesario volver a configurar la conexión de la base de datos del servidor de informes para cada servidor de informes de la implementación.  
+## <a name="detaching-and-attaching-the-report-server-databases"></a>Separar y adjuntar bases de datos del servidor de informes  
+ Si puede poner el servidor de informes sin conexión, puede separar las bases de datos para moverlas a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que desea usar. Con este método, se conservan los permisos de las bases de datos. Si usa una base de datos de SQL Server, debe moverlo a otra instancia de SQL Server. Después de mover las bases de datos, será necesario volver a configurar la conexión del servidor de informes con la base de datos del servidor de informes. Si se utiliza una implementación escalada, será necesario volver a configurar la conexión de la base de datos del servidor de informes para cada servidor de informes de la implementación.  
   
  Lleve a cabo los siguientes pasos para mover las bases de datos:  
   
@@ -70,10 +77,10 @@ caps.handback.revision: 10
   
 14. Reinicie el servicio del servidor de informes.  
   
-## Realizar copias de seguridad de las bases de datos del servidor de informes y restaurarlas  
+## <a name="backing-up-and-restoring-the-report-server-databases"></a>Realizar copias de seguridad de las bases de datos del servidor de informes y restaurarlas  
  Si no es posible que el servidor de informes esté sin conexión, puede realizar una copia de seguridad de las bases de datos del servidor de informes y restaurarlas para cambiar su ubicación. Debe usar instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] para realizar copias de seguridad y restauraciones. Después de restaurar las bases de datos, debe configurar el servidor de informes para que utilice la base de datos en la nueva instancia del servidor. Para obtener más información, vea las instrucciones que se incluyen al final de este tema.  
   
-### Usar BACKUP y COPY_ONLY para la copia de seguridad de las bases de datos del servidor de informes  
+### <a name="using-backup-and-copyonly-to-backup-the-report-server-databases"></a>Usar BACKUP y COPY_ONLY para la copia de seguridad de las bases de datos del servidor de informes  
  Cuando realice copias de seguridad de las bases de datos, establezca el argumento COPY_ONLY. Asegúrese de incluir ambas bases de datos y los archivos de registro en la copia de seguridad.  
   
 ```  
@@ -136,7 +143,7 @@ BACKUP LOG ReportServerTempDB
    WITH COPY_ONLY  
 ```  
   
-### Usar RESTORE y MOVE para cambiar la ubicación de las bases de datos del servidor de informes  
+### <a name="using-restore-and-move-to-relocate-the-report-server-databases"></a>Usar RESTORE y MOVE para cambiar la ubicación de las bases de datos del servidor de informes  
  Al restaurar las bases de datos, no olvide incluir el argumento MOVE para especificar una ruta de acceso. Use el argumento NORECOVERY para realizar la restauración inicial; de esta manera, la base de datos se mantendrá en estado RESTORING y tendrá tiempo para revisar las copias de seguridad de los registros y determinar cuál desea restaurar. En el último paso se repite la operación RESTORE con el argumento RECOVERY.  
   
  El argumento MOVE utiliza el nombre lógico del archivo de datos. Para encontrar el nombre lógico, ejecute la siguiente instrucción: `RESTORE FILELISTONLY FROM DISK='C:\ReportServerData.bak';`  
@@ -197,7 +204,7 @@ RESTORE DATABASE ReportServerTempDB
 GO  
 ```  
   
-### Configurar la conexión de la base de datos del servidor de informes  
+### <a name="how-to-configure-the-report-server-database-connection"></a>Configurar la conexión de la base de datos del servidor de informes  
   
 1.  Inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y abra una conexión con el servidor de informes.  
   
@@ -214,16 +221,17 @@ GO
 7.  Haga clic en **Siguiente** y, a continuación, en **Finalizar**.  
   
 > [!NOTE]  
->  Una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiere que la instancia [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] incluya el rol **RSExecRole**. La creación de roles, el registro de inicio de sesión y las asignaciones de roles tienen lugar cuando se establece la conexión de la base de datos del servidor de informes a través de la herramienta de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si se utilizan métodos alternativos (concretamente, si se utiliza la herramienta del símbolo del sistema rsconfig.exe) para configurar la conexión, el servidor de informes no estará en estado de funcionamiento. Es posible que tenga que escribir código WMI para que el servidor de informes esté disponible. Para más información, vea [Obtener acceso al proveedor WMI de Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
-  
-## Vea también  
- [Crear el RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
- [Iniciar y detener el servicio del servidor de informes](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
- [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [rsconfig (utilidad) &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
- [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-and-manage-encryption-keys-ssrs-configuration-manager.md)   
- [Base de datos del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
-  
-  
+>  Una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiere que la instancia [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] incluya el rol **RSExecRole** . La creación de roles, el registro de inicio de sesión y las asignaciones de roles tienen lugar cuando se establece la conexión de la base de datos del servidor de informes a través de la herramienta de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si se utilizan métodos alternativos (concretamente, si se utiliza la herramienta del símbolo del sistema rsconfig.exe) para configurar la conexión, el servidor de informes no estará en estado de funcionamiento. Es posible que tenga que escribir código WMI para que el servidor de informes esté disponible. Para obtener más información, vea [Obtener acceso al proveedor WMI de Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
+
+## <a name="next-steps"></a>Pasos siguientes
+
+[Crear el RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
+[Iniciar y detener el servicio del servidor de informes](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
+[Configurar una conexión de base de datos del servidor de informes](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[Configurar la cuenta de ejecución desatendida](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+[Administrador de configuración de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[rsconfig (utilidad)](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
+[Configurar y administrar las claves de cifrado](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+[Base de datos de servidor de informes](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
+
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

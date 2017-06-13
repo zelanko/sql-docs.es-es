@@ -1,27 +1,32 @@
 ---
-title: "Interfaz de usuario del Dise&#241;ador de consultas basado en texto (Generador de informes) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10010"
-helpviewer_keywords: 
-  - "diseñadores de consultas, basados en texto"
+title: "Interfaz de usuario del Diseñador de consultas basado en texto (generador de informes) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10010"
+helpviewer_keywords:
+- query designers, text-based
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1640b0536b6e206afbd2aff5ea8dd11349277f12
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Interfaz de usuario del Dise&#241;ador de consultas basado en texto (Generador de informes)
+# <a name="text-based-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas basado en texto (Generador de informes)
   Use el diseñador de consultas basado en texto para especificar una consulta mediante el lenguaje de consulta admitido por el origen de datos, para ejecutar la consulta y para ver los resultados en tiempo de diseño. Puede especificar varias sintaxis de consulta, comandos o instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] para extensiones de procesamiento de datos personalizadas, y consultas que se especifican como expresiones. Dado que el generador de consultas basado en texto no procesa previamente la consulta y puede acomodar todo tipo de sintaxis de consulta, es la herramienta de generación de consultas predeterminada para varios tipos de orígenes de datos.  
   
 > [!IMPORTANT]  
@@ -33,17 +38,17 @@ caps.handback.revision: 15
   
 -   **Resultado** Muestra los resultados de la ejecución de la consulta en tiempo de diseño.  
   
-## Barra de herramientas del diseñador de consultas basado en texto  
+## <a name="text-based-query-designer-toolbar"></a>Barra de herramientas del diseñador de consultas basado en texto  
  El diseñador de consultas basado en texto proporciona una sola barra de herramientas para todos los tipos de comando. La tabla siguiente contiene una lista con los botones de la barra de herramientas y sus funciones.  
   
 |Botón|Description|  
 |------------|-----------------|  
 |**Editar como texto**|Alterna entre el diseñador de consultas basado en texto y el diseñador gráfico de consultas. No todos los tipos de orígenes de datos admiten diseñadores gráficos de consultas.|  
 |**Importar**|Importa una consulta existente de un archivo o informe. Solo se admiten los tipos de archivo sql y rdl.|  
-|![Ejecutar la consulta](../../reporting-services/report-data/media/rsqdicon-run.png "Ejecutar la consulta")|Ejecuta la consulta y muestra el conjunto de resultados en el panel Resultado.|  
+|![Ejecute la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "ejecutar la consulta")|Ejecuta la consulta y muestra el conjunto de resultados en el panel Resultado.|  
 |**Tipo de comando**|Seleccione **Text**, **StoredProcedure**o **TableDirect**. Si un procedimiento almacenado tiene parámetros, el cuadro de diálogo **Definir parámetros de consulta** aparece al hacer clic en **Ejecutar** en la barra de herramientas; puede rellenar los valores según sea necesario. La compatibilidad del tipo de comando varía en función del tipo de origen de datos. Por ejemplo, solamente OLE DB y ODBC son compatibles con **TableDirect**.<br /><br /> Nota: Si un procedimiento almacenado devuelve más de un conjunto de resultados, solo se usa el primero para rellenar el conjunto de datos.|  
   
-### Tipo de comando Text  
+### <a name="command-type-text"></a>Tipo de comando Text  
  Al crear un conjunto de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el diseñador de consultas relacionales se abre de forma predeterminada. Para cambiar al diseñador de consultas basado en texto, haga clic en el botón de alternancia **Editar como texto** de la barra de herramientas. El diseñador de consultas basado en texto consta de dos paneles: el panel Consulta y el panel Resultado. En la siguiente ilustración se indica el nombre de cada panel.  
   
  ![Diseñador de consultas genérico, para consultas de datos relacionales](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "Diseñador de consultas genérico, para consultas de datos relacionales")  
@@ -52,10 +57,10 @@ caps.handback.revision: 15
   
 |Panel|Función|  
 |----------|--------------|  
-|Query|Muestra el texto de consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Use este panel para escribir o editar una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
+|Consulta|Muestra el texto de consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Use este panel para escribir o editar una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |Resultado|Muestra los resultados de la consulta. Para ejecutar la consulta, haga clic con el botón derecho en cualquier panel y haga clic en **Ejecutar**, o bien haga clic en el botón **Ejecutar** de la barra de herramientas.|  
   
-#### Ejemplo  
+#### <a name="example"></a>Ejemplo  
  La siguiente consulta devuelve la lista de nombres de la tabla **ContactType** de la base de datos AdventureWorks2014 para el esquema **Person** .  
   
 ```  
@@ -64,12 +69,12 @@ SELECT Name FROM Person.ContactType
   
  Si hace clic en **Ejecutar** en la barra de herramientas, el comando del panel **Consulta** se ejecuta y los resultados se muestran en el panel **Resultado** . El conjunto de resultados muestra una lista de 20 tipos de contactos; por ejemplo, Owner o Sales Agent.  
   
-### Tipo de comando StoredProcedure  
+### <a name="command-type-storedprocedure"></a>Tipo de comando StoredProcedure  
  Si selecciona **Tipo de comando StoredProcedure**, el diseñador de consultas basado en texto presenta dos paneles: el panel Consulta y el panel Resultado. Escriba el nombre del procedimiento almacenado en el panel Consulta y haga clic en **Ejecutar** en la barra de herramientas. Si el procedimiento almacenado utiliza parámetros, se abre el cuadro de diálogo **Definir parámetros de consulta** . Escriba los valores de los parámetros para el procedimiento almacenado. Se crea un parámetro de informe para cada parámetro de entrada de procedimiento almacenado.  
   
  La figura siguiente muestra los paneles Consulta y Resultado al ejecutar un procedimiento almacenado. En este caso, los parámetros de entrada son constantes.  
   
- ![Procedimiento almacenado en un diseñador de consultas basado en texto](../../reporting-services/report-data/media/rs-relational-text-sp.gif "Procedimiento almacenado en un diseñador de consultas basado en texto")  
+ ![Procedimiento almacenado en el Diseñador de consultas basado en texto](../../reporting-services/report-data/media/rs-relational-text-sp.gif "procedimiento almacenado en el Diseñador de consultas basado en texto")  
   
  En la siguiente tabla se describe la función de cada panel.  
   
@@ -78,7 +83,7 @@ SELECT Name FROM Person.ContactType
 |Consulta|Muestra el nombre del procedimiento almacenado y de los parámetros de entrada.|  
 |Resultado|Muestra los resultados de la consulta. Para ejecutar la consulta, haga clic con el botón derecho en cualquier panel y haga clic en **Ejecutar**, o bien haga clic en el botón **Ejecutar** de la barra de herramientas.|  
   
-#### Ejemplo  
+#### <a name="example"></a>Ejemplo  
  La consulta siguiente llama a un procedimiento almacenado de AdventureWorks2014 denominado **uspGetWhereUsedProductID**. Debe especificar un valor para el parámetro de número de identificación de producto al ejecutar la consulta.  
   
 ```  
@@ -94,18 +99,18 @@ uspGetWhereUsedProductID
   
  Para la fecha especificada, el conjunto de resultados muestra una lista de 13 identificadores del producto que utilizaron el número de componente especificado.  
   
-### Tipo de comando TableDirect  
+### <a name="command-type-tabledirect"></a>Tipo de comando TableDirect  
  Si selecciona **Tipo de comando TableDirect**, el diseñador de consultas basado en texto presenta dos paneles: el panel Consulta y el panel Resultado. Si selecciona una tabla y hace clic en el botón **Ejecutar** , se devolverán todas las columnas de dicha tabla.  
   
-#### Ejemplo  
+#### <a name="example"></a>Ejemplo  
  Para un tipo de origen de datos OLE DB, la siguiente consulta del conjunto de datos devuelve un conjunto de resultados para todos los tipos de datos en la base de datos AdventureWorks2014.  
   
  `Person.ContactType`  
   
  Especificar el nombre de tabla Person.ContactType equivale a crear la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] `SELECT * FROM Person.ContactType`.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Interfaz de usuario del Diseñador de consultas relacionales &#40;Generador de informes&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)   
- [Diseñadores de consultas &#40;Generador de informes&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md)  
+ [Diseñadores de consultas &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

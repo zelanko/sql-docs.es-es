@@ -1,30 +1,35 @@
 ---
-title: "Establecer permisos para las operaciones del servidor de informes en una aplicaci&#243;n web de SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "permisos [Reporting Services], modo integrado de SharePoint"
-  - "integración de SharePoint [Reporting Services], permisos"
-  - "integración de SharePoint [Generador de informes]"
-  - "seguridad [Reporting Services], modo integrado de SharePoint"
-  - "Generador de informes 1.0, integración de SharePoint"
-  - "seguridad de elemento de modelo [Reporting Services]"
+title: "Establecer permisos para las operaciones del servidor de informes en una aplicación Web de SharePoint | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Reporting Services], SharePoint integrated mode
+- SharePoint integration [Reporting Services], permissions
+- SharePoint integration [Report Builder]
+- security [Reporting Services], SharePoint integrated mode
+- Report Builder 1.0, SharePoint integration
+- model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 caps.latest.revision: 17
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 17
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d6d0c434fbac82990ad43e0b631cc7e418e47db8
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Establecer permisos para las operaciones del servidor de informes en una aplicaci&#243;n web de SharePoint
+# <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Establecer permisos para las operaciones del servidor de informes en una aplicación web de SharePoint
   En el caso de un servidor de informes que se ejecuta en el modo integrado de SharePoint, la configuración de seguridad definida en el sitio de SharePoint determina el modo en que se ven y administran los informes, los modelos de informe y los orígenes de datos compartidos. Si usa los grupos, niveles de permiso y asignaciones de permiso predeterminados de SharePoint, puede trabajar con informes y otros documentos mediante la configuración de seguridad actual.  
   
  Si la configuración de seguridad predeterminada no proporciona el nivel de acceso deseado, puede usar la información que se ofrece en las siguientes secciones para saber qué permisos son necesarios para operaciones específicas:  
@@ -51,7 +56,7 @@ caps.handback.revision: 17
   
  Si usa niveles de permisos predefinidos no tendrá que realizar ninguna acción, puesto que los permisos anteriores ya se incluyen en Control total, Diseño, Colaborar, Lectura y Acceso limitado. No obstante, si usa niveles de permisos personalizados o edita los permisos asignados a un usuario o grupo concreto, debe agregar el permiso manualmente.  
   
- El permiso "Examinar información de usuario" permite al servidor de informes devolver información acerca del usuario que creó el elemento y el usuario que lo modificó por última vez. Sin este permiso, el servidor de informes devolverá los errores siguientes. Para las operaciones de exploración, el error es: "El servidor de informes encontró un error de SharePoint. ---> System.UnauthorizedAccessException: acceso denegado." Para las operaciones de publicación, el error es el siguiente: "Los permisos concedidos al usuario '\<dominio>\\<usuario\>' son insuficientes para realizar esta operación".  
+ El permiso "Examinar información de usuario" permite al servidor de informes devolver información acerca del usuario que creó el elemento y el usuario que lo modificó por última vez. Sin este permiso, el servidor de informes devolverá los errores siguientes. Para las operaciones de exploración, el error es: "El servidor de informes encontró un error de SharePoint. ---> System.UnauthorizedAccessException: acceso denegado." Para las operaciones de publicación, el error es: "los permisos otorgados al usuario '\<dominio >\\< usuario\>' son insuficientes para realizar esta operación."  
   
 ##  <a name="permissionReports"></a> Permisos para ver y administrar informes  
  Los permisos de definición de informes se definen mediante permisos de lista de la biblioteca que contiene el informe, pero puede establecer permisos en informes individuales si desea restringir el acceso. En la siguiente tabla se proporciona una lista de las tareas y los permisos compatibles.  
@@ -131,7 +136,7 @@ caps.handback.revision: 17
 > [!NOTE]  
 >  No existen permisos para modificar modelos de informe. Aunque se pueden crear o eliminar modelos de informe, no se pueden modificar desde un sitio de SharePoint. Para poder modificar modelos de informe, es necesario usar el Diseñador de modelos, una herramienta de creación de cliente a la que no afectan los permisos que haya establecido en SharePoint.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Comparar roles y tareas de Reporting Services con grupos y permisos de SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   

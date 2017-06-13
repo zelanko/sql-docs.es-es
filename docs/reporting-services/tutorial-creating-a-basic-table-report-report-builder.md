@@ -1,62 +1,43 @@
 ---
-title: "Tutorial: Crear un informe de tabla b&#225;sico (Generador de informes) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Tutorial: Crear un informe de tabla básico (generador de informes) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 06/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 caps.latest.revision: 16
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 15
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 021a980dee9f6cd72f663475ba084962fa543cd4
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tutorial: Crear un informe de tabla b&#225;sico (Generador de informes)
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Crear un informe de tabla básico (Generador de informes)
 Este tutorial muestra cómo crear un informe de tabla básico basado en datos de ventas de ejemplo. En la siguiente ilustración se muestra el informe que va a crear.  
   
 ![SSRS_Tutorial_Basic_Table_Report](../reporting-services/media/ssrs-tutorial-basic-table-report.png)  
   
-## <a name="BackToTop"></a>Aprendizaje  
-En este tutorial, aprenderá a realizar las siguientes tareas:  
-  
-1.  [Crear un informe mediante un asistente](#CreateTable)  
-  
-    1.  [Especificar una conexión de datos en el Asistente para tablas](#DataConnection)  
-  
-    2.  [Crear una consulta en el Asistente para tablas](#Query)  
-  
-    3.  [Organizar datos en grupos en el Asistente para tablas](#Groups)  
-  
-    4.  [Agregar filas de subtotal y de total en el Asistente para tablas](#Subtotals)  
-  
-2.  [Dar formato a los datos como moneda](#FormatCurrency)  
-  
-3.  [Dar formato a los datos como fecha](#FormatDate)  
-  
-4.  [Cambiar el ancho de columna](#Width)  
-  
-5.  [Agregar un título de informe](#Title)  
-  
-6.  [Guardar el informe](#Save)  
-  
-7.  [Exportar el informe](#Export)  
-  
+
 Tiempo estimado para completar este tutorial: 20 minutos.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
 Para obtener más información sobre los requisitos, consulte [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="CreateTable"></a>1. Crear un informe mediante un asistente  
 Cree un informe de tabla con el Asistente para tablas o matrices. Existen dos modos: diseño de informe y el diseño de conjunto de datos compartido. En el modo de diseño de informe, los datos se especifican en el panel Datos de informe y el diseño del informe se especifica en la superficie de diseño. En modo de diseño de conjunto de datos compartido, se crean consultas de conjunto de datos para compartir con otros usuarios. En este tutorial, utilizará el modo de diseño de informe.  
   
-### Para crear un informe  
+### <a name="to-create-a-report"></a>Para crear un informe  
   
 1.  [Inicie el Generador de informes](../reporting-services/report-builder/start-report-builder.md) desde el equipo, el portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o el modo integrado de SharePoint.  
   
@@ -69,13 +50,13 @@ Cree un informe de tabla con el Asistente para tablas o matrices. Existen dos mo
 3.  En el panel de la derecha, haga clic en **Asistente para tablas o matrices**.  
   
 ## <a name="DataConnection"></a>1a. Especificar una conexión de datos en el Asistente para tablas  
-Una conexión de datos contiene la información para conectarse a un origen de datos externo, por ejemplo una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Normalmente, la información de conexión y el tipo de credenciales que se debe usar utilizar se obtienen del propietario del origen de datos. Para especificar una conexión de datos, puede utilizar un origen de datos compartido del servidor de informes o crear un origen de datos incrustado que solo se utilice en este informe.  
+Una conexión de datos contiene la información para conectarse a un origen de datos externo, por ejemplo una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Normalmente, la información de conexión y el tipo de credenciales que se debe usar utilizar se obtienen del propietario del origen de datos. Para especificar una conexión de datos, puede utilizar un origen de datos compartido del servidor de informes o crear un origen de datos incrustado que solo se utilice en este informe.  
   
 En este tutorial, utilizará un origen del datos incrustado. Para obtener más información sobre cómo usar orígenes de datos compartidos, consulte [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-### Para crear un origen de datos incrustado  
+### <a name="to-create-an-embedded-data-source"></a>Para crear un origen de datos incrustado  
   
-1.  En la página **Elegir un conjunto de datos**, seleccione **Crear un conjunto de datos** y, después, haga clic en **Siguiente**. Se abre la página **Elegir una conexión a un origen de datos**.  
+1.  En la página **Elegir un conjunto de datos** , seleccione **Crear un conjunto de datos**y, después, haga clic en **Siguiente**. Se abre la página **Elegir una conexión a un origen de datos** .  
   
 2.  Haga clic en **Nueva**. Se abre el cuadro de diálogo **Propiedades del origen de datos** .  
   
@@ -99,7 +80,7 @@ En este tutorial, utilizará un origen del datos incrustado. Para obtener más i
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    Volverá a la página **Elegir una conexión a un origen de datos**, donde aparece el nuevo origen de datos seleccionado.  
+    Volverá a la página **Elegir una conexión a un origen de datos** , donde aparece el nuevo origen de datos seleccionado.  
   
 9. Haga clic en **Siguiente**.  
   
@@ -109,9 +90,9 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
 > [!NOTE]  
 > En este tutorial, la consulta contiene los valores de datos, de forma que no necesita un origen de datos externo. Esto hace que la consulta requiera bastante tiempo. En un entorno empresarial, la consulta no contendría los datos. Esto es solo con fines de aprendizaje.  
   
-### Para crear una consulta  
+### <a name="to-create-a-query"></a>Para crear una consulta  
   
-1.  En la página **Diseñar una consulta**, el diseñador de consultas relacionales está abierto. En este tutorial, usará el diseñador de consultas basado en texto.  
+1.  En la página **Diseñar una consulta** , el diseñador de consultas relacionales está abierto. En este tutorial, usará el diseñador de consultas basado en texto.  
   
     Haga clic en **Editar como texto**. El diseñador de consultas basado en texto muestra un panel de consulta y un panel de resultados.  
   
@@ -162,9 +143,9 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
 ## <a name="Groups"></a>1c. Organizar datos en grupos en el Asistente para tablas  
 Al seleccionar los campos por los que desea agrupar, diseña una tabla que tiene filas y columnas en las que se muestran datos detallados y datos agregados.  
   
-### Para organizar los datos en grupos  
+### <a name="to-organize-data-into-groups"></a>Para organizar los datos en grupos  
   
-1.  En la página **Organizar campos**, arrastre Product hasta **Valores**.  
+1.  En la página **Organizar campos** , arrastre Product hasta **Valores**.  
   
 2.  Arrastre Quantity hasta **Valores** y colóquelo debajo de Product.  
   
@@ -189,11 +170,11 @@ Al seleccionar los campos por los que desea agrupar, diseña una tabla que tiene
 ## <a name="Subtotals"></a>1d. Agregar filas de subtotal y de total en el Asistente para tablas  
 Después de crear grupos, puede agregar filas y darles formato, para mostrar en ellas los valores agregados de los campos. Puede decidir si mostrar todos los datos o permitir que los usuarios expandan y contraigan de forma interactiva los datos agrupados.  
   
-### Para agregar subtotales y totales  
+### <a name="to-add-subtotals-and-totals"></a>Para agregar subtotales y totales  
   
-1.  En la página **Elegir el diseño**, en **Opciones**, compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales**.  
+1.  En la página **Elegir el diseño** , en **Opciones**, compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
   
-2.  Compruebe que esté seleccionada la opción **Bloqueado, subtotal abajo**.  
+2.  Compruebe que esté seleccionada la opción **Bloqueado, subtotal abajo** .  
   
     El panel Vista previa del asistente muestra una tabla con cinco filas. Al ejecutar el informe, cada fila se mostrará de la siguiente forma:  
   
@@ -216,13 +197,13 @@ La tabla se agrega a la superficie de diseño. La tabla tiene 5 columnas y 5 fil
 ## <a name="FormatCurrency"></a>2. Dar formato a los datos como moneda  
 De forma predeterminada, los datos de resumen del campo Sales se muestran en forma de número general. Aplíquele el formato adecuado para mostrar el número como moneda.   
   
-### Para dar formato a un campo de moneda  
+### <a name="to-format-a-currency-field"></a>Para dar formato a un campo de moneda  
   
 1.  Para ver los cuadros de texto con formato y el texto de marcador de posición como valores de ejemplo en la vista Diseño, en la pestaña **Inicio**, en el grupo **Número**, haga clic en la flecha situada junto al icono **Estilos de marcador de posición** > **Valores de ejemplo**.  
   
 2.   Haga clic en la celda en la segunda fila (bajo la fila de encabezados de columna) en la columna Sales y arrástrela hacia abajo para seleccionar todas las celdas que contienen `[Sum(Sales)]`.  
   
-3.  En la pestaña **Inicio**, en el grupo **Número**, haga clic en el botón **Moneda**. Las celdas cambian para mostrar la moneda con formato.  
+3.  En la pestaña **Inicio** , en el grupo **Número** , haga clic en el botón **Moneda** . Las celdas cambian para mostrar la moneda con formato.  
   
     Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [**$12,345.00**]. Si no ve un valor de moneda de ejemplo, en la pestaña **Inicio**, en el grupo **Número**, haga clic en la flecha situada junto al icono **Estilos de marcador de posición** > **Valores de ejemplo**.  
   
@@ -233,13 +214,13 @@ Los valores de resumen de Sales se muestran como moneda.
 ## <a name="FormatDate"></a>3. Dar formato a los datos como fecha  
 De forma predeterminada, en el campo SalesDate se muestra la fecha y la hora. Puede darle formato para mostrar solo la fecha.  
   
-### Para dar formato a un campo de fecha como el formato predeterminado  
+### <a name="to-format-a-date-field-as-the-default-format"></a>Para dar formato a un campo de fecha como el formato predeterminado  
   
 1.  Haga clic en **Diseño** para volver a la vista de diseño.  
   
 2.  Haga clic en la celda que contiene `[SalesDate]`.  
   
-3.  En la cinta de opciones, en la pestaña **Inicio**, en el grupo **Número**, haga clic en la flecha y seleccione **Fecha**.  
+3.  En la cinta de opciones, en la pestaña **Inicio** , en el grupo **Número** , haga clic en la flecha y seleccione **Fecha**.  
   
     La celda muestra la fecha de ejemplo **[31/1/2000]**. Si no ve una fecha de ejemplo, en la pestaña **Inicio**, en el grupo **Número**, haga clic en la flecha situada junto al icono **Estilos de marcador de posición** > **Valores de ejemplo**.  
   
@@ -247,19 +228,19 @@ De forma predeterminada, en el campo SalesDate se muestra la fecha y la hora. Pu
   
 Los valores SalesDate se muestran en el formato de fecha predeterminado.  
   
-### Para cambiar el formato de fecha a un formato personalizado  
+### <a name="to-change-the-date-format-to-a-custom-format"></a>Para cambiar el formato de fecha a un formato personalizado  
   
 1.  Haga clic en **Diseño** para volver a la vista de diseño.  
   
 2.  Seleccione la celda que contiene `[SalesDate]`.  
   
-3.  En la pestaña **Inicio**, en el grupo **Número**, haga clic en la flecha situada en la esquina inferior derecha para abrir el cuadro de diálogo.  
+3.  En la pestaña **Inicio** , en el grupo **Número** , haga clic en la flecha situada en la esquina inferior derecha para abrir el cuadro de diálogo.  
   
-    Se abre el cuadro de diálogo **Propiedades del cuadro de texto**.  
+    Se abre el cuadro de diálogo **Propiedades del cuadro de texto** .  
   
-4.  En el panel Categoría, compruebe que está seleccionada la opción **Fecha**.  
+4.  En el panel Categoría, compruebe que está seleccionada la opción **Fecha** .  
   
-5.  En el panel **Tipo**, seleccione **31 de enero de 2000**.  
+5.  En el panel **Tipo** , seleccione **31 de enero de 2000**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -274,7 +255,7 @@ De forma predeterminada, cada celda de una tabla contiene un cuadro de texto. Un
   
 Para reducir la cantidad de espacio vertical que ocupa cada fila, expanda el ancho de columna para dar cabida en una línea al contenido previsto de los cuadros de texto de la columna.  
   
-### Para cambiar el ancho de las columnas de la tabla  
+### <a name="to-change-the-width-of-table-columns"></a>Para cambiar el ancho de las columnas de la tabla  
   
 1.  Haga clic en **Diseño** para volver a la vista de diseño.  
   
@@ -289,30 +270,30 @@ Para reducir la cantidad de espacio vertical que ocupa cada fila, expanda el anc
 ## <a name="Title"></a>5. Agregar un título de informe  
 Los títulos de informe aparecen en la parte superior. Puede situar el título del informe en un encabezado de informe o, si el informe no lo utiliza, en un cuadro de texto en la parte superior del cuerpo del informe. En este tutorial, deberá utilizar el cuadro de texto que se coloca automáticamente en la parte superior del cuerpo del informe.  
   
-El texto se puede mejorar aún más aplicando estilos de fuente, tamaños y colores diferentes a las frases y caracteres individuales. Para obtener más información, consulte [Dar formato al texto en un cuadro de texto &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
+El texto se puede mejorar aún más aplicando estilos de fuente, tamaños y colores diferentes a las frases y caracteres individuales. Para obtener más información, vea [Dar formato al texto en un cuadro de texto &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
-### Para agregar un título de informe  
+### <a name="to-add-a-report-title"></a>Para agregar un título de informe  
   
 1.  En la superficie de diseño, haga clic en **Haga clic para agregar título**.  
   
-2.  Escriba **Ventas del producto** y después haga clic fuera del cuadro de texto.  
+2.  Escriba **Ventas del producto**y después haga clic fuera del cuadro de texto.  
   
 3.  Haga clic con el botón secundario en el cuadro de texto que contiene **Ventas del producto** y haga clic en **Propiedades de cuadro de texto**.  
   
-4.  En el cuadro de diálogo **Propiedades de cuadro de texto**, haga clic en **Fuente**.  
+4.  En el cuadro de diálogo **Propiedades de cuadro de texto** , haga clic en **Fuente**.  
   
-5.  En la lista **Tamaño**, seleccione **18 pt**.  
+5.  En la lista **Tamaño** , seleccione **18 pt**.  
   
-6.  En la lista **Color**, seleccione **Azul aciano**.  
+6.  En la lista **Color** , seleccione **Azul aciano**.  
   
 7.  Seleccione **Negrita**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="Save"></a>6. Guardar el informe  
-Guarde el informe un servidor de informes o en su equipo. Si no guarda el informe en el servidor de informes, varias características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], como los elementos de informe y los subinformes, no estarán disponibles.  
+Guarde el informe un servidor de informes o en su equipo. Si no guarda el informe en el servidor de informes, varias características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , como los elementos de informe y los subinformes, no estarán disponibles.  
   
-### Para guardar el informe en un servidor de informes  
+### <a name="to-save-the-report-on-a-report-server"></a>Para guardar el informe en un servidor de informes  
   
 1.  Haga clic en **Archivo** > **Guardar como**.  
   
@@ -328,11 +309,11 @@ Guarde el informe un servidor de informes o en su equipo. Si no guarda el inform
   
 El informe se guarda en el servidor de informes. El nombre del servidor de informes al que está conectado aparecerá en la barra de estado en la parte inferior de la ventana.  
   
-### Para guardar el informe en el equipo  
+### <a name="to-save-the-report-on-your-computer"></a>Para guardar el informe en el equipo  
   
 1.  Haga clic en **Archivo** > **Guardar como**.  
   
-2.  Haga clic en **Escritorio**, **Mis documentos** o **Mi PC** y vaya a la carpeta donde quiere guardar el informe.  
+2.  Haga clic en **Escritorio**, **Mis documentos**o **Mi PC**y vaya a la carpeta donde quiere guardar el informe.  
   
 3.  En **Nombre**, reemplace **Sin título** con **Product Sales**.  
   
@@ -343,7 +324,7 @@ Los informes se pueden exportar a diversos formatos, por ejemplo a archivos de M
   
 En este tutorial, exportará el informe a Excel y establecerá una propiedad en el informe para proporcionar un nombre personalizado para la pestaña del libro.  
   
-### Para especificar el nombre de la pestaña del libro  
+### <a name="to-specify-the-workbook-tab-name"></a>Para especificar el nombre de la pestaña del libro  
   
 1.  Haga clic en **Diseño** para volver a la vista de diseño.  
   
@@ -355,7 +336,7 @@ En este tutorial, exportará el informe a Excel y establecerá una propiedad en 
     > Si el panel de propiedades no está visible, en la pestaña **Ver** , seleccione **Propiedades**.  
     > Si no ve una propiedad en el panel Propiedades, intente seleccionar el botón **Alfabético** situado en la parte superior del panel para ordenar alfabéticamente todas las propiedades.   
   
-### Exportar un informe a Excel  
+### <a name="to-export-a-report-to-excel"></a>Exportar un informe a Excel  
   
 1.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
@@ -363,7 +344,7 @@ En este tutorial, exportará el informe a Excel y establecerá una propiedad en 
   
     Se abrirá.  
   
-3.  En el cuadro de diálogo **Guardar como**, desplácese hasta la ubicación en la que quiere guardar el archivo.  
+3.  En el cuadro de diálogo **Guardar como** , desplácese hasta la ubicación en la que quiere guardar el archivo.  
   
 4.  En el cuadro **Nombre de archivo**, escriba **Excel_Ventas_del_producto**.  
   
@@ -371,16 +352,18 @@ En este tutorial, exportará el informe a Excel y establecerá una propiedad en 
   
 6.  Haga clic en **Guardar**.  
   
-### Ver el informe en Excel.  
+### <a name="to-view-the-report-in-excel"></a>Ver el informe en Excel.  
   
 1.  Abra la carpeta donde guardó el libro y haga doble clic en **Excel_Ventas_del_producto.xlsx**.  
   
 2.  Compruebe que el nombre de la pestaña del libro es **Excel de Ventas del producto**.  
   
-## Pasos siguientes  
+## <a name="next-steps"></a>Pasos siguientes  
 Aquí termina el tutorial sobre la creación de un informe de tabla básico. Para obtener más información, consulte [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
 [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md)  
 [Generador de informes en SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

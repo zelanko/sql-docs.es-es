@@ -1,40 +1,45 @@
 ---
-title: "Administrar un proceso en ejecuci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "procesamiento de informes [Reporting Services], información de estado"
-  - "trabajos [Reporting Services]"
-  - "ver trabajos"
-  - "cancelar trabajos"
-  - "trabajos del usuario [Reporting Services]"
-  - "trabajos del sistema [Reporting Services]"
-  - "procesamiento de informes [Reporting Services], administrar procesos en ejecución"
-  - "procesos [Reporting Services]"
-  - "recorrer procesos [Reporting Services]"
-  - "información de estado [Reporting Services]"
-  - "procesar informes [Reporting Services]"
-  - "cancelar suscripciones"
-  - "servidores de informes [Reporting Services], trabajos"
-  - "suscripciones controladas por datos"
-  - "mostrar trabajos"
-  - "suscripciones [Reporting Services], ejecutar procesos"
+title: "Administrar un proceso en ejecución | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- report processing [Reporting Services], status information
+- jobs [Reporting Services]
+- viewing jobs
+- canceling jobs
+- user jobs [Reporting Services]
+- system jobs [Reporting Services]
+- report processing [Reporting Services], managing running processes
+- processes [Reporting Services]
+- scanning processes [Reporting Services]
+- status information [Reporting Services]
+- report processing [Reporting Services]
+- canceling subscriptions
+- report servers [Reporting Services], jobs
+- data-driven subscriptions
+- displaying jobs
+- subscriptions [Reporting Services], running processes
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 caps.latest.revision: 53
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 53
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 103472f5003235e0e08c65c40999545ff4d864ee
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Administrar un proceso en ejecuci&#243;n
+# <a name="manage-a-running-process"></a>Administrar un proceso en ejecución
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supervisa el estado de los trabajos que se ejecutan en el servidor de informes. Periódicamente, el servidor de informes realiza un recorrido de los trabajos en curso y escribe la información sobre su estado en su propia base de datos o en las bases de datos de aplicación de servicio para el modo de SharePoint. Un trabajo está en curso si se está llevando a cabo alguno de los siguientes procesos: ejecución de consultas en un servidor de bases de datos remoto o local, procesamiento de informes o representación de informes.  
   
  Se pueden administrar *trabajos de usuario* y *trabajos del sistema*.  
@@ -73,7 +78,7 @@ caps.handback.revision: 53
   
  No puede usar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para enumerar o cancelar la generación de modelos, el procesamiento de modelos o las suscripciones controladas por datos. Al notificar un servicio, no se proporciona una manera de cancelar el procesamiento o la generación de modelos. Sin embargo, puede cancelar las suscripciones controladas por datos usando las instrucciones proporcionadas en este tema.  
   
-### Cómo cancelar una suscripción o procesamiento de informes  
+### <a name="how-to-cancel-report-processing-or-subscription"></a>Cómo cancelar una suscripción o procesamiento de informes  
   
 1.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], conéctese al servidor de informes. Para obtener instrucciones, vea [Conectar con un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 53
   
 3.  Haga clic con el botón derecho en el informe y, después, haga clic en **Cancelar trabajos**.  
   
-### Cómo cancelar una suscripción controlada por datos  
+### <a name="how-to-cancel-a-data-driven-subscription"></a>Cómo cancelar una suscripción controlada por datos  
   
 1.  Abra el archivo RSReportServer.config en un editor de texto.  
   
@@ -97,13 +102,13 @@ caps.handback.revision: 53
   
 7.  Guarde el archivo.  
   
-### Configurar los ajustes de frecuencia para recuperar el estado del trabajo  
+### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>Configurar los ajustes de frecuencia para recuperar el estado del trabajo  
  Un trabajo en ejecución se almacena en la base de datos temporal del servidor de informes. Los parámetros de configuración del archivo RSReportServer.config se pueden modificar para controlar la frecuencia con la que el servidor de informes recorre los trabajos en curso y el intervalo después del cual cambia el estado de un trabajo en ejecución de nuevo a en ejecución. El parámetro **RunningRequestsDbCycle** especifica la frecuencia con la que el servidor de informes recorre los procesos en ejecución. De forma predeterminada, la información de estado se registra cada 60 segundos. El parámetro **RunningRequestsAge** especifica el intervalo que transcurre hasta que un trabajo pasa de considerarse "nuevo" a "en ejecución".  
   
 ##  <a name="bkmk_sharepoint"></a> Ver y cancelar trabajos (modo de SharePoint)  
  La administración de trabajos en una implementación de SharePoint se lleva a cabo con Administración central de SharePoint, para cada aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-#### Para administrar trabajos en modo de SharePoint  
+#### <a name="to-manage-jobs-in-sharepoint-mode"></a>Para administrar trabajos en modo de SharePoint  
   
 1.  En Administración central de SharePoint, haga clic en **Administrar aplicaciones de servicio**.  
   
@@ -116,14 +121,14 @@ caps.handback.revision: 53
 5.  O haga clic en el cuadro correspondiente a su trabajo y en **Eliminar** para cancelar el trabajo. La eliminación del trabajo no elimina la suscripción.  
   
 ##  <a name="bkmk_programmatically"></a> Administrar trabajos mediante programación  
- Es posible administrar los trabajos mediante programación o con un script. Para más información, vea <xref:ReportService2010.ReportingService2010.ListJobs%2A>, <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
+ Es posible administrar los trabajos mediante programación o con un script. Para obtener más información, consulte <xref:ReportService2010.ReportingService2010.ListJobs%2A>, <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Cancelar trabajos del servidor de informes &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
  [Propiedades del trabajo &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
  [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Administrador de informes &#40;Modo nativo de SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Supervisar el rendimiento del servidor de informes](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   

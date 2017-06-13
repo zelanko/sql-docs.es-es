@@ -1,28 +1,33 @@
 ---
-title: "Proteger carpetas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "carpetas de alta seguridad [Reporting Services]"
-  - "carpetas de baja seguridad"
-  - "carpetas [Reporting Services], seguridad"
-  - "seguridad [Reporting Services], carpetas"
+title: Proteger carpetas | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- high-security folders [Reporting Services]
+- low-security folders
+- folders [Reporting Services], security
+- security [Reporting Services], folders
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 caps.latest.revision: 34
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 34
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5aad5bbe0b53e2e6669df93496795f4c5b6a3bca
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Proteger carpetas
+# <a name="secure-folders"></a>Proteger carpetas
   La seguridad de las carpetas es fundamental para proteger todo el contenido de un servidor de informes. Puesto que la seguridad se hereda en toda la estructura de carpetas, puede designar secciones grandes o pequeñas de la jerarquía de carpetas para permitir ciertos tipos de acceso.  
   
  Las carpetas de alta seguridad se pueden utilizar para almacenar informes confidenciales o como áreas de ensayo; por ejemplo, puede utilizar una carpeta para probar informes antes de moverlos a la ubicación final. Para controlar el acceso a esta área, puede definir una asignación de roles que solo permita a los autores de los informes agregar y eliminar elementos, y una segunda asignación de roles que permita a los evaluadores ejecutar informes, pero no agregar ni quitar elementos. Puesto que las asignaciones de roles están definidas explícitamente para evaluadores y autores de informes, ningún otro usuario (excepto los administradores del sistema local) puede tener acceso a la carpeta.  
@@ -31,7 +36,7 @@ caps.handback.revision: 34
   
  La seguridad de las carpetas constituye la base de la seguridad de nivel de elemento, comenzando con el nodo raíz de la jerarquía de carpetas del servidor de informes, la carpeta Inicio. Puesto que la seguridad se hereda, es aconsejable establecer una directiva de seguridad bastante restrictiva en la carpeta Inicio. Usar el rol **Explorador** en las asignaciones de roles de la carpeta particular es exactamente igual que proporcionar acceso de solo vista.  
   
-## Tareas y acceso a carpetas  
+## <a name="tasks-and-folder-access"></a>Tareas y acceso a carpetas  
  Cuando cree asignaciones de roles para carpetas, tenga en cuenta las tareas que figuran en la siguiente tabla.  
   
 |Seleccione esta tarea|Para conceder permiso para|  
@@ -42,7 +47,7 @@ caps.handback.revision: 34
 |Administrar orígenes de datos|Agregar nuevos elementos de orígenes de datos compartidos a una carpeta y cambiar los orígenes de datos compartidos existentes.|  
 |Establecer la seguridad de elementos individuales|Puede definir y modificar las asignaciones de roles que controlan el acceso a la carpeta. Esta tarea debe utilizarse con "Ver carpetas" o "Administrar carpetas". De lo contrario, no surtirá efecto, ya que el usuario no podrá seleccionar el elemento.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md)   
  [Proteger elementos de orígenes de datos compartidos](../../reporting-services/security/secure-shared-data-source-items.md)   
  [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  

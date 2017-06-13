@@ -3,7 +3,7 @@ title: "Índices de hash de tablas con optimización para memoria | Microsoft Do
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 08/29/2016
+ms.date: 06/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.service: sql-database
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de23d5625c883792f5c99de75dc90ccd1cabe326
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b1acbcd97dfabfa5d23fa82e55d4eb01101233aa
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="hash-indexes-for-memory-optimized-tables"></a>Índices de hash de tablas con optimización para memoria
@@ -439,30 +439,4 @@ Nuestro índice de dos columnas puede ser un índice no agrupado o un índice de
 El índice de hash requiere que la cláusula WHERE contenga una prueba de igualdad para cada una de las columnas en la clave. De lo contrario, dicho índice no tendrá ninguna utilidad para el optimizador.  
   
 Ningún tipo de índice resultará útil si solo se especifica la segunda columna de la clave de índice en la cláusula WHERE.  
-  
-  
-  
-\<!--   
-Hash_Indexes_for_Memory-Optimized_Tables.md , que es....  
-guid MAYÚS: {e922cc3a-3d6e-453b-8d32-f4b176e98488}  
-guid MAYÚS del elemento primario: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
-  
-  
-  
-  
-| IndexName | total_bucket_count | empty_bucket_count | EmptyBucketPercent | avg_chain_length | max_chain_length |  
-| :-------- | -----------------: | -----------------: | -----------------: | ---------------: | ---------------: |  
-| ix_OrderSequence | 32768 | 13 | 0 | 8 | 26 |  
-| ix_StatusCode | 8 | 4 | 50 | 65536 | 65536 |  
-| PK_SalesOrd_B14003E308C1A23C | 262144 | 96525 | 36 | 1 | 8 |  
-  
-  
-  
-  
-GeneMi  ,  2016-05-05  Thursday  15:01pm  
--->  
-  
-  
-  
-
 

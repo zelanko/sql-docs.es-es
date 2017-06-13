@@ -1,30 +1,35 @@
 ---
-title: "Administraci&#243;n de contenido del servidor de informes (Modo nativo de SSRS) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "administrar Reporting Services"
-  - "informes publicados [Reporting Services], administrar"
-  - "servidores de informes [Reporting Services], administración de contenido"
-  - "administración de contenido [Reporting Services]"
+title: "Informes de administración de contenido de servidor (modo nativo de SSRS) | Documentos de Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- administering Reporting Services
+- published reports [Reporting Services], managing
+- report servers [Reporting Services], content management
+- content management [Reporting Services]
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 caps.latest.revision: 50
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 50
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2289f62499f876cc296d6c939c4d9e70ccfe4c3f
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Administraci&#243;n de contenido del servidor de informes (Modo nativo de SSRS)
-  En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la administración de contenido hace referencia a la administración de elementos del servidor de informes. Es posible administrar todos los elementos de un modo independiente mediante la configuración de las propiedades y de la seguridad. Cualquier elemento puede moverse a una ubicación diferente en el espacio de nombres de carpetas del servidor de informes. Para administrar estos elementos de un modo eficaz, necesita saber las tareas que realiza un administrador de contenido. A partir de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2, está disponible el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. En este artículo examinaremos el Administrador de informes y la nueva experiencia de portal web.  
+# <a name="report-server-content-management-ssrs-native-mode"></a>Administración de contenido del servidor de informes (Modo nativo de SSRS)
+  En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la administración de contenido hace referencia a la administración de elementos del servidor de informes. Es posible administrar todos los elementos de un modo independiente mediante la configuración de las propiedades y de la seguridad. Cualquier elemento puede moverse a una ubicación diferente en el espacio de nombres de carpetas del servidor de informes. Para administrar estos elementos de un modo eficaz, necesita saber las tareas que realiza un administrador de contenido. A partir de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2, está disponible el portal web de  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . En este artículo examinaremos el Administrador de informes y la nueva experiencia de portal web.  
   
 > [!NOTE]  
 >  La administración de contenido es diferente de la administración de servidores de informes. Si quiere obtener más información sobre cómo administrar el entorno en el que se ejecuta un servidor de informes, vea [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
@@ -61,11 +66,11 @@ caps.handback.revision: 50
   
 |Icono|Elemento que puede moverse|  
 |----------|-------------------|  
-|![Icono de informe](../../reporting-services/report-server/media/hlp-16doc.png "Icono de informe")|Informe|  
-|![Icono de informe vinculado](../../reporting-services/report-server/media/hlp-16linked.png "Icono de informe vinculado")|Informe vinculado|  
-|![Icono de carpeta](../../reporting-services/report-server/media/hlp-16folder.png "Icono de carpeta")|Carpeta|  
-|![Icono de recurso genérico](../../reporting-services/report-server/media/hlp-16file.png "Icono de recurso genérico")|Recurso genérico|  
-|![Icono de origen de datos compartido](../../reporting-services/report-data/media/hlp-16datasource.png "Icono de origen de datos compartido")|Origen de datos compartido|  
+|![Icono de informe](../../reporting-services/report-server/media/hlp-16doc.gif "el icono de informe")|Informe|  
+|![Icono de informe vinculado](../../reporting-services/report-server/media/hlp-16linked.gif "icono de informe vinculado")|Informe vinculado|  
+|![Icono de carpeta](../../reporting-services/report-server/media/hlp-16folder.gif "icono de carpeta")|Carpeta|  
+|![icono de recurso genérico](../../reporting-services/report-server/media/hlp-16file.gif "icono de recurso genérico")|Recurso genérico|  
+|![Icono de origen de datos compartido](../../reporting-services/report-data/media/hlp-16datasource.png "icono de origen de datos compartido")|Origen de datos compartido|  
 ||Conjunto de datos compartidos|  
   
  No todos los elementos se pueden mover. Por ejemplo, los elementos asociados a un informe, tales como las suscripciones o el historial del informe, no pueden moverse. Estos elementos se mueven con los informes asociados. Asimismo, tampoco pueden moverse elementos como las programaciones compartidas que existen fuera de la jerarquía de carpetas. No pueden moverse elementos para los que no se tienen los permisos adecuados. Este permiso se concede mediante la selección de las siguientes tareas durante la asignación de roles del elemento en cuestión: "Administrar informes", "Administrar modelos", "Administrar carpetas" y "Administrar orígenes de datos".  
@@ -97,7 +102,7 @@ caps.handback.revision: 50
   
 -   Otras carpetas  
   
-### Carpetas reservadas  
+### <a name="reserved-folders"></a>Carpetas reservadas  
  Las carpetas predefinidas están reservadas por Reporting Services; no se pueden mover, cambiar de nombre ni eliminar. Las carpetas definidas por el usuario son todas las carpetas creadas por un usuario o un administrador del servidor de informes con permiso para agregar elementos a una carpeta.  
   
  En la siguiente tabla, se describen las carpetas predefinidas que fijan la jerarquía de carpetas y proporcionan un marco para varias características.  
@@ -108,15 +113,15 @@ caps.handback.revision: 50
 |Usuarios|Esta carpeta aparece cuando se habilita la característica Mis informes. Contiene subcarpetas para todos los usuarios que utilizan la característica Mis informes, y solo los administradores del servidor de informes tienen acceso a ella. El nombre de cada subcarpeta coincide con el de un usuario.|  
 |Mis informes|Proporciona un área de trabajo personal para cada usuario.|  
   
-### Crear carpetas  
+### <a name="creating-folders"></a>Crear carpetas  
  Puede crear una carpeta en cualquier carpeta disponible de la jerarquía.  
   
  Si está creando las carpetas con el propósito de restringir el acceso a informes y modelos concretos, debería especificar asignaciones de roles que les permitan a los usuarios examinar, pero no ver el contenido de, las carpetas primarias que se encuentran en la ruta de la carpeta.  
   
-### Modificar las propiedades de carpetas  
+### <a name="modifying-folder-properties"></a>Modificar las propiedades de carpetas  
  Una vez que haya creado la carpeta, puede modificar sus propiedades para cambiarle el nombre, agregar o modificar una descripción, o mover la carpeta a otra ubicación. Estas propiedades están disponibles desde la página de propiedades General de la carpeta. Para obtener más información sobre cómo establecer las propiedades que conceden acceso a una carpeta, vea [Proteger carpetas](../../reporting-services/security/secure-folders.md).  
   
-### Eliminar carpetas y su contenido  
+### <a name="deleting-folders-and-folder-contents"></a>Eliminar carpetas y su contenido  
  Al eliminar una carpeta, también se eliminan todos los elementos que contiene. Antes de eliminar una carpeta, debería revisar el contenido para decidir si incluye elementos a los que hacen referencia otros elementos o que utilizan otros elementos de la jerarquía de carpetas. Entre los elementos a los que se hace referencia, figuran las definiciones de informe compatibles con informes vinculados, orígenes de datos compartidos y recursos.  
   
  Si elimina un informe al que hacen referencia uno o más informes vinculados, éstos dejarán de ser válidos una vez eliminado el informe en cuestión. No es posible determinar por adelantado los informes vinculados que se verán afectados porque los informes no conservan información sobre los informes vinculados que se basan en ellos. En cambio, sí que es posible revisar las propiedades de un informe vinculado para determinar el informe en el que se basa. Por su parte, los elementos de orígenes de datos compartidos incluyen una lista de todos los informes que utilizan actualmente el elemento para que pueda determinar con facilidad si la información de conexión está en uso o no. Para obtener más información, vea [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md). Por último, los recursos que utilizan los informes no los identifican.  
@@ -128,22 +133,22 @@ caps.handback.revision: 50
 ##  <a name="bkmk_Resources"></a> Recursos  
  Un recurso es un elemento administrado que se almacena en un servidor de informes pero no se procesa allí. Normalmente, un recurso proporciona contenido externo a los usuarios de los informes. Algunos ejemplos son una imagen de un archivo .jpg, un archivo de forma ESRI que contiene datos espaciales o un archivo HTML que describe las reglas de negocios usadas en un informe. El archivo JPG, SHP o HTML está almacenado en el servidor de informes, pero el servidor de informes pasa el archivo directamente al explorador en lugar de procesarlo primero. Para obtener más información, vea [Imágenes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) y la sección "Agregar datos a un mapa" en [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-### Agregar y ver un recurso  
+### <a name="adding-and-viewing-a-resource"></a>Agregar y ver un recurso  
  Para agregar un recurso a un servidor de informes, se carga o se publica un archivo:  
   
 |Operación|Tipo de archivo|  
 |---------------|---------------|  
-|Cargar|Para cargar un recurso, debe usar el Administrador de informes si el servidor de informes se ejecuta en modo nativo o una página de aplicación de un sitio de SharePoint si el servidor se ejecuta en el modo integrado con SharePoint. Para obtener más información, vea [Cargar un archivo o un informe &#40;Administrador de informes&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) y [Cargar documentos en una biblioteca de SharePoint &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
+|Cargar|Para cargar un recurso, debe usar el Administrador de informes si el servidor de informes se ejecuta en modo nativo o una página de aplicación de un sitio de SharePoint si el servidor se ejecuta en el modo integrado con SharePoint. Para más información, vea [Cargar un archivo o un informe &#40;Administrador de informes&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) y [Cargar documentos en una biblioteca de SharePoint &#40;Reporting Services en modo de SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
 |Publicar|Todos los archivos de un proyecto que no son informes, elementos de informe, orígenes de datos o conjuntos de datos se cargan como recursos. Para publicar un recurso, agregue un elemento existente a un proyecto en el Diseñador de informes y, a continuación, publique el proyecto en un servidor de informes.|  
   
  Todos los recursos se originan como archivos en un sistema de archivos, que se cargan posteriormente en un servidor de informes. Excepto para las limitaciones de tamaño de archivo predeterminadas de 4 megabytes impuestas por ASP.NET, no hay ninguna restricción en los tipos de archivos que se pueden cargar. Sin embargo, cuando se publica en un servidor de informes como un recurso, los tipos de archivos que tienen tipos MIME equivalentes resultan más óptimos que otros. Por ejemplo, los recursos que se basan en archivos HTML o JPG se abren en una ventana de explorador cuando el usuario hace clic en el recurso, representándose el archivo HTML como una página web y el archivo JPG como una imagen que el usuario puede ver. Por el contrario, los recursos que no tienen tipos MIME equivalentes, como archivos de aplicación de escritorio, por ejemplo, no se pueden representar en la ventana del explorador.  
   
  Si un recurso puede ser visto o no por los usuarios de los informes depende de las opciones de visualización del explorador. Dado que los recursos no se procesan por el servidor de informes, el explorador debe proporcionar la capacidad de visualización para representar un tipo MIME concreto. Si el explorador no puede representar el contenido, los usuarios que vean el recurso solamente podrán ver las propiedades generales del recurso.  
   
-### Proteger y administrar un recurso  
+### <a name="securing-and-managing-a-resource"></a>Proteger y administrar un recurso  
  Los recursos existen junto con informes, orígenes de datos compartidos, programaciones compartidas y carpetas como elementos con nombre en la jerarquía de carpetas del servidor de informes. Puede buscar, ver, proteger y establecer propiedades en los recursos de la misma manera que lo haría con cualquier elemento almacenado en un servidor de informes. Para ver o administrar un recurso, debe tener las tareas Ver recursos o Administrar recursos en su asignación de roles.  
   
-### Hacer referencia a un recurso de imagen desde un informe  
+### <a name="referencing-an-image-resource-from-a-report"></a>Hacer referencia a un recurso de imagen desde un informe  
  Los recursos pueden contener una imagen a la que hace referencia en un informe. Si entre los requisitos de informe se incluye el uso de imágenes externas, piense en las ventajas siguientes de almacenar la imagen como un recurso:  
   
 -   Almacenamiento centralizado en la base de datos del servidor de informes. Si mueve la base de datos del servidor de informes y su contenido a otro equipo, la imagen externa permanece con el informe. No tiene que realizar un seguimiento de los archivos de imagen almacenados en disco en equipos diferentes.  
@@ -177,7 +182,7 @@ caps.handback.revision: 50
   
  La característica Mis informes es opcional. Cuando se instala un servidor de informes, la característica Mis informes está deshabilitada de forma predeterminada. Para obtener más información sobre cómo habilitar esta característica, vea [Habilitar y deshabilitar Mis informes](../../reporting-services/report-server/enable-and-disable-my-reports.md). Para obtener más información, vea [Proteger Mis informes](../../reporting-services/security/secure-my-reports.md).  
   
-## Tareas  
+## <a name="tasks"></a>Tareas  
  [Cargar archivos a una carpeta](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
  [Crear, eliminar o modificar una carpeta &#40;Administrador de informes&#41;](../../reporting-services/report-server/create-delete-or-modify-a-folder-report-manager.md)  
@@ -186,7 +191,7 @@ caps.handback.revision: 50
   
  [Cargar archivos a una carpeta](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Roles y permisos &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)   
  [Informes de Reporting Services &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)  

@@ -1,23 +1,28 @@
 ---
-title: "Copias de seguridad y restauraci&#243;n de aplicaciones de servicio de SharePoint para Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Copia de seguridad y restaurar aplicaciones de servicio de SharePoint de servicios de informes | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 11
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: a4f320a1e806dce3411137abc74f2fe07bab7217
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Copias de seguridad y restauraci&#243;n de aplicaciones de servicio de SharePoint para Reporting Services
+# <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Copias de seguridad y restauración de aplicaciones de servicio de SharePoint para Reporting Services
   Este tema se describe cómo hacer una copia de seguridad y restaurar una aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mediante Administración central de SharePoint o PowerShell. El tema contiene:  
   
 -   [Limitaciones y restricciones](#bkmk_Restrictions)  
@@ -33,7 +38,7 @@ caps.handback.revision: 11
 ###  <a name="bkmk_Restrictions"></a> Limitaciones y restricciones  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y restaurar dicha copia mediante la funcionalidad de copia de seguridad y restauración de SharePoint. **Se requieren pasos adicionales** y los pasos se documentan en este tema. Actualmente, el proceso de copia de seguridad **no** realiza una copia de seguridad de las claves de cifrado ni de las credenciales para las cuentas de ejecución desatendidas (UEA) o con autenticación de Windows en la base de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y restaurar dicha copia mediante la funcionalidad de copia de seguridad y restauración de SharePoint. **Se requieren pasos adicionales** y los pasos se documentan en este tema. Actualmente, el proceso de copia de seguridad **no** realiza una copia de seguridad de las claves de cifrado ni de las credenciales para las cuentas de ejecución desatendidas (UEA) o con autenticación de Windows en la base de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ###  <a name="bkmk_recommendations"></a> Recomendaciones  
   
@@ -52,8 +57,8 @@ caps.handback.revision: 11
   
 3.  Compruebe si la aplicación de servicio utiliza UEA o la autenticación de Windows para acceder a la base de datos. Si es así, anote las credenciales para poder usarlas cuando configure la aplicación de servicio una vez restaurada.  
   
-### Copia de seguridad de las claves de cifrado mediante Administración central  
- Para más información sobre cómo realizar copias de seguridad de las claves de cifrado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea la sección "Claves de cifrado" de [Administrar una aplicación de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
+### <a name="backup-the-encryption-keys-using-central-administration"></a>Copia de seguridad de las claves de cifrado mediante Administración central  
+ Para más información sobre cómo realizar copias de seguridad de las claves de cifrado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vea la sección "Claves de cifrado" de [Administrar una aplicación de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
 ###  <a name="bkmk_centraladmin"></a> Copia de seguridad de la aplicación de servicio mediante Administración central de SharePoint  
  Para realizar una copia de seguridad de la aplicación de servicio, siga estos pasos:  
@@ -74,7 +79,7 @@ caps.handback.revision: 11
   
  [Copia de seguridad de una aplicación de servicio (SharePoint Server 2010)](http://technet.microsoft.com/library/ee428318.aspx)  
   
-### Comprobación de la cuenta de ejecución y autenticación de la base de datos  
+### <a name="verify-execution-account-and-database-authentication"></a>Comprobación de la cuenta de ejecución y autenticación de la base de datos  
  **Cuenta de la ejecución:** para comprobar si la aplicación de servicio utiliza una cuenta de ejecución:  
   
 1.  En Administración central de SharePoint, en el grupo **Administración de aplicaciones** , haga clic en **Administrar aplicaciones de servicio** .  
@@ -91,7 +96,7 @@ caps.handback.revision: 11
   
 2.  Haga clic el nombre de la aplicación de servicio y después en **Propiedades** en la cinta de opciones de SharePoint.  
   
-3.  Examine la sección **Base de datos del servicio Reporting Services (SSRS)**.  
+3.  Examine la sección **Base de datos del servicio Reporting Services (SSRS)** .  
   
 4.  Si se configura la autenticación de Windows, necesita conocer las credenciales para poder configurar la aplicación de servicio una vez restaurada. No realice el procedimiento de copia de seguridad y restauración hasta que sepa cuáles son las credenciales correctas.  
   
@@ -104,7 +109,7 @@ caps.handback.revision: 11
   
 3.  Si la aplicación de servicio utilizaba una cuenta de ejecución o la autenticación de Windows para el acceso a la base de datos, configure las credenciales.  
   
-### Restauración de la aplicación de servicio mediante Administración central de SharePoint  
+### <a name="restore-the-service-application-using-sharepoint-central-administration"></a>Restauración de la aplicación de servicio mediante Administración central de SharePoint  
   
 1.  En Administración central de SharePoint, haga clic en **Restaurar de una copia de seguridad** en el grupo **Realizar copias de seguridad y restauración** .  
   
@@ -124,12 +129,12 @@ caps.handback.revision: 11
   
  [Restauración de una aplicación de servicio (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748615.aspx).  
   
- [Restauración de una aplicación de servicio (SharePoint Server 2010)](ttp://technet.microsoft.com/library/ee428305.aspx).  
+ [Restauración de una aplicación de servicio (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx).  
   
-### Restauración de las claves de cifrado mediante Administración central  
- Para más información sobre la restauración de las claves de cifrado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea la sección "Claves de cifrado" de [Administrar una aplicación de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
+### <a name="restore-the-encryption-keys-using-central-administration"></a>Restauración de las claves de cifrado mediante Administración central  
+ Para más información sobre la restauración de las claves de cifrado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vea la sección "Claves de cifrado" de [Administrar una aplicación de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
-### Configurar la cuenta de ejecución y la autenticación de la base de datos  
+### <a name="configure-the-execution-account-and-database-authentication"></a>Configurar la cuenta de ejecución y la autenticación de la base de datos  
  **Cuenta de ejecución:** si la aplicación de servicio utilizaba una cuenta de ejecución, realice el procedimiento siguiente para configurarla:  
   
 1.  En Administración central de SharePoint, en el grupo **Administración de aplicaciones** , haga clic en **Administrar aplicaciones de servicio** .  
@@ -148,7 +153,7 @@ caps.handback.revision: 11
   
 2.  Haga clic el nombre de la aplicación de servicio y después en **Propiedades** en la cinta de opciones de SharePoint.  
   
-3.  Examine la sección **Base de datos del servicio Reporting Services (SSRS)**.  
+3.  Examine la sección **Base de datos del servicio Reporting Services (SSRS)** .  
   
 4.  Seleccione **Autenticación de Windows**.  
   

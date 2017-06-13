@@ -1,33 +1,38 @@
 ---
-title: "Gr&#225;ficos de l&#237;neas (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Línea gráficos (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 194e6679-890d-4a3e-a756-130d32ef7e29
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b309753291bfae573be58b124c033d021adb254c
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Gr&#225;ficos de l&#237;neas (Generador de informes y SSRS)
+# <a name="line-charts-report-builder-and-ssrs"></a>Gráficos de líneas (Generador de informes y SSRS)
   Los gráficos de líneas muestran una serie como un conjunto de puntos conectados mediante una sola línea. Los gráficos de líneas se usan para representar grandes cantidades de datos que tienen lugar durante un período continuado de tiempo. Para obtener más información sobre cómo agregar datos a un gráfico de líneas, vea [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
  La ilustración siguiente muestra un gráfico de líneas que contiene tres series.  
   
- ![Gráfico de líneas](../../reporting-services/report-design/media/rs-linechart.gif "Gráfico de líneas")  
+ ![Gráfico de líneas](../../reporting-services/report-design/media/rs-linechart.gif "gráfico de líneas")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Variaciones  
+## <a name="variations"></a>Variaciones  
   
 -   **Línea suavizada**. Gráfico de líneas que usa una línea curva en lugar de una línea normal.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 7
   
 -   **Gráficos sparkline**. Variaciones del gráfico de líneas que muestran solo la serie de líneas en la celda de una tabla o una matriz. Para obtener más información, vea [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## Consideraciones sobre los datos para los gráficos de líneas  
+## <a name="data-considerations-for-line-charts"></a>Consideraciones sobre los datos para los gráficos de líneas  
   
 -   Para mejorar el impacto visual del gráfico de líneas predeterminado, considere la posibilidad de cambiar el ancho del borde de la serie a 3 y agregar un desplazamiento de sombra de 1. Esto creará un gráfico de líneas mucho más oscuro. Deberá revertir estas propiedades a sus valores originales si cambia el tipo de gráfico de Línea por otro.  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 7
   
 -   Una serie que se dibuja como una línea no ocupará mucho espacio dentro de un área de gráfico.  Por este motivo, los gráficos de líneas se combinan con frecuencia con otros tipos de gráficos, como los gráficos de columnas. Sin embargo, no se puede combinar un gráfico de líneas con los tipos de gráficos siguientes: Barras, Polar, Circular o de formas.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Gráficos de barras &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
  [Gráficos de columnas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
  [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   

@@ -1,23 +1,28 @@
 ---
-title: "Comportamientos de la representaci&#243;n (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Representar comportamientos (generador de informes y SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 518b74abc3238fcebee1e8b5356315e49f35db01
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Comportamientos de la representaci&#243;n (Generador de informes y SSRS)
+# <a name="rendering-behaviors-report-builder--and-ssrs"></a>Comportamientos de la representación (Generador de informes y SSRS)
   Dependiendo del representador que seleccione, se aplican ciertas reglas al cuerpo del informe y a su contenido al representar un informe. La forma en la que los elementos de informe se ajustan en una página viene determinada por la combinación de estos factores:  
   
 -   Reglas de representación.  
@@ -35,7 +40,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Comportamientos generales para HTML, MHTML, Word y Excel (representadores de saltos de página automáticos)  
+## <a name="general-behaviors-for-html-mhtml-word-and-excel-soft-page-break-renderers"></a>Comportamientos generales para HTML, MHTML, Word y Excel (representadores de saltos de página automáticos)  
  Los informes exportados usando los formatos HTML y MHTML están optimizados para una visualización en pantalla, en la que las páginas pueden tener distintas longitudes. Los saltos de página solo se insertan verticalmente en ubicaciones aproximadas dentro del cuerpo del informe. El valor de alto interactivo del panel de propiedades determina estas ubicaciones aproximadas. Por ejemplo, imagine que el alto interactivo se establece en 5 pulgadas. Cuando se representa el informe, el alto de página tiene una longitud de aproximadamente 5 pulgadas. Word y Excel realizan la paginación basándose en los saltos de página lógicos y omiten el valor de alto interactivo.  
   
 > [!NOTE]  
@@ -58,7 +63,7 @@ caps.handback.revision: 7
   
 -   No se aplican los márgenes de página.  
   
-## Comportamientos generales para PDF, Imagen e Imprimir (representadores de saltos de página duros)  
+## <a name="general-behaviors-for-pdf-image-and-print-hard-page-break-renderers"></a>Comportamientos generales para PDF, Imagen e Imprimir (representadores de saltos de página duros)  
  Los informes exportados usando los formatos PDF e Imagen están optimizados para el formato impreso, en el que las páginas tienen un tamaño uniforme. Los saltos de página se insertan vertical y horizontalmente en ubicaciones concretas dentro del cuerpo del informe. La configuración del ancho y alto de página determina estas ubicaciones concretas.  
   
 > [!NOTE]  
@@ -79,12 +84,12 @@ caps.handback.revision: 7
     > [!NOTE]  
     >  El valor de ancho interactivo no se utiliza en los representadores de saltos de página duros.  
   
-## Espaciado mínimo entre los elementos de informe  
+## <a name="minimum-spacing-between-report-items"></a>Espaciado mínimo entre los elementos de informe  
  El tamaño de los elementos de informe aumenta dentro del cuerpo del informe para dar cabida a su contenido. Por ejemplo, una región de datos de matriz normalmente se expande por la página al representar el informe, y el alto de un cuadro de texto se ajusta dependiendo de los datos devueltos por una expresión.  
   
  Los representadores mantienen el espacio mínimo entre los elementos de informe definidos en el diseño del informe. Cuando se coloca un elemento de informe junto a otro en el diseño del informe, la distancia entre los elementos de informe se convierte en la distancia mínima que se debe mantener a medida que el informe crece horizontal o verticalmente. Por ejemplo, si agrega una región de datos de matriz a un informe y, a continuación, agrega un rectángulo situado 0,25 pulgadas a la derecha de la matriz, este espacio se mantiene a medida que la matriz aumenta de tamaño. Cada elemento se desplaza hacia la derecha para mantener la distancia mínima entre él y los que acaban a su izquierda.  
   
-## Encabezados y pies de página  
+## <a name="page-headers-and-footers"></a>Encabezados y pies de página  
  Los encabezados y pies de página aparecen en la parte superior e inferior de cada página representada. Puede dar formato al encabezado y al pie de página, y asignar un color, un estilo y un ancho a los bordes. También puede agregar un color o una imagen de fondo. Todas estas opciones de formato se representan dependiendo del formato elegido.  
   
  Las reglas siguientes se aplican a los encabezados y pies de página cuando se representan en el formato de representación HTML o MHTML:  
@@ -112,7 +117,7 @@ caps.handback.revision: 7
   
 -   Los encabezados y pies de página que se definen en el archivo RDL original no se representan cuando el informe se representa como un subinforme.  
   
-## Saltos de página lógicos  
+## <a name="logical-page-breaks"></a>Saltos de página lógicos  
  Los saltos de página lógicos son saltos de página que se insertan manualmente antes o después de los elementos de informe o los grupos. Los saltos de página ayudan a determinar cómo se ajusta el contenido a una página del informe para una visualización óptima a la hora de representar o exportar el informe.  
   
  Las reglas siguientes se aplican al representar los saltos de página lógicos:  
@@ -127,8 +132,8 @@ caps.handback.revision: 7
   
 -   No se mantienen los saltos de página lógicos definidos en elementos en celdas de tablas o matriz. Esto no se aplica a los elementos en listas.  
   
-## Vea también  
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+## <a name="see-also"></a>Vea también  
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Representar en HTML &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
  [Representación y diseño de páginas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   

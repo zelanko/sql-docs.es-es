@@ -1,38 +1,43 @@
 ---
-title: "Lecci&#243;n 8: Crear un filtro de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lección 8: Crear un filtro de datos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 05/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ea0e116101c9599268b3fc2f3cd556d2149433c8
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lecci&#243;n 8: Crear un filtro de datos
+# <a name="lesson-8-create-a-data-filter"></a>Lección 8: Crear un filtro de datos
 Después de agregar una acción de obtención de detalles en el informe primario, el paso siguiente consiste en crear un filtro de los datos de la tabla de datos que definió para el informe secundario.  
   
 Puede crear un filtro basado en una tabla **o** un filtro de consulta para el informe de obtención de detalles. Esta lección proporciona instrucciones para ambas opciones.  
   
-## Filtro basado en una tabla  
+## <a name="table-based-filter"></a>Filtro basado en una tabla  
 Debe completar las tareas siguientes para implementar un filtro basado en una tabla.  
   
 -   Agregue una expresión de filtro al Tablix en el informe secundario.  
   
--   Cree una función que seleccione datos sin filtrar de la tabla **PurchaseOrderDetail**.  
+-   Cree una función que seleccione datos sin filtrar de la tabla **PurchaseOrderDetail** .  
   
 -   Agregue un controlador de eventos que enlace el DataTable **PurchaseOrderDetail** al informe secundario.  
   
-### Para agregar una expresión de filtro al Tablix en el informe secundario  
+### <a name="to-add-a-filter-expression-to-the-tablix-in-the-child-report"></a>Para agregar una expresión de filtro al Tablix en el informe secundario  
   
 1.  Abra el informe secundario.  
   
@@ -40,17 +45,17 @@ Debe completar las tareas siguientes para implementar un filtro basado en una ta
   
 3.  Seleccione en la página **Filtros** y, después, seleccione **Agregar**.  
   
-4.  En el campo **Expresión**, seleccione **ProductID** de la lista desplegable. Es la columna a la que se aplica el filtro.  
+4.  En el campo **Expresión** , seleccione **ProductID** de la lista desplegable. Es la columna a la que se aplica el filtro.  
   
-5.  Seleccione el operador igual (**=**) en la lista desplegable **Operador**.  
+5.  Seleccione el operador igual (**=**) en la lista desplegable **Operador** .  
   
-6.  Seleccione el botón de expresión junto al campo **Valor**, seleccione **Parámetros** en el área **Categoría** y, después, haga doble clic en **productid** en el área **Valores**. El campo **Establecer expresión para: Valor** ahora debe contener una expresión similar a **=Parameters!productid.Value**.  
+6.  Seleccione el botón de expresión junto al campo **Valor** , seleccione **Parámetros** en el área **Categoría** y, después, haga doble clic en **productid** en el área **Valores** . El campo **Establecer expresión para: Valor** ahora debe contener una expresión similar a **=Parameters!productid.Value**.  
   
-7.  Seleccione **Aceptar** y de nuevo **Aceptar** en el cuadro de diálogo **Propiedades de Tablix**.  
+7.  Seleccione **Aceptar** y de nuevo **Aceptar** en el cuadro de diálogo **Propiedades de Tablix** .  
   
 8.  Guarde el archivo .rdlc.  
   
-### Para crear una función que seleccione datos sin filtrar de la tabla PurchaseOrdeDetail.  
+### <a name="to-create-a-function-that-selects-unfiltered-data-from-the-purchaseordedetail-table"></a>Para crear una función que seleccione datos sin filtrar de la tabla PurchaseOrdeDetail.  
   
 1.  En el Explorador de soluciones, expanda Default.aspx y haga doble clic en Default.aspx.cs.  
   
@@ -64,7 +69,7 @@ Debe completar las tareas siguientes para implementar un filtro basado en una ta
   
     4.  Rellene la instancia DataSet con los datos sin filtrar ejecutando la consulta.  
   
-    5.  Devolver el DataTable **PurchaseOrderDetail**.  
+    5.  Devolver el DataTable **PurchaseOrderDetail** .  
   
         La función será similar a la siguiente. (Esto es solo para la referencia. Puede seguir cualquier modelo que desee, para capturar los datos necesarios para el informe secundario).  
   
@@ -102,15 +107,15 @@ Debe completar las tareas siguientes para implementar un filtro basado en una ta
             }  
         ```  
   
-### Para agregar un controlador de eventos que enlaza el DataTable PurchaseOrderDetail al informe secundario.  
+### <a name="to-add-an-event-handler-that-binds-the-purchaseorderdetail-datatable-to-the-child-report"></a>Para agregar un controlador de eventos que enlaza el DataTable PurchaseOrderDetail al informe secundario.  
   
 1.  Abra el archivo Default.aspx en la vista del diseñador.  
   
 2.  Haga clic con el botón derecho en el control ReportViewer y, después, seleccione **Propiedades**.  
   
-3.  En la página **Propiedades**, seleccione el icono **Eventos**.  
+3.  En la página **Propiedades** , seleccione el icono **Eventos** .  
   
-4.  Haga doble clic en el evento **Obtención de detalles**.  
+4.  Haga doble clic en el evento **Obtención de detalles** .  
   
     De este modo agregará una sección del controlador de eventos en el código, que será similar al bloque siguiente.  
   
@@ -122,7 +127,7 @@ Debe completar las tareas siguientes para implementar un filtro basado en una ta
   
 5.  Complete el controlador de eventos. Debe incluir la funcionalidad siguiente.  
   
-    1.  Capture la referencia al objeto de informe secundario del parámetro *DrillthroughEventArgs*.  
+    1.  Capture la referencia al objeto de informe secundario del parámetro *DrillthroughEventArgs* .  
   
     2.  Llame a la función **GetPurchaseOrderDetail**.  
   
@@ -153,14 +158,14 @@ Debe completar las tareas siguientes para implementar un filtro basado en una ta
   
 6.  Guarde el archivo.  
   
-## Filtro de consulta  
+## <a name="query-filter"></a>Filtro de consulta  
 Debe completar las tareas siguientes para implementar un filtro de consulta.  
   
--   Cree una función que seleccione datos filtrados de la tabla **PurchaseOrderDetail**.  
+-   Cree una función que seleccione datos filtrados de la tabla **PurchaseOrderDetail** .  
   
 -   Agregue un controlador de eventos que recupere los valores de los parámetros y enlace el DataTable **PurchaseOrdeDetail** al informe secundario.  
   
-### Para crear una función que seleccione datos filtrados de la tabla PurchaseOrderDetail.  
+### <a name="to-create-a-function-that-selects-filtered-data-from-the-purchaseorderdetail-table"></a>Para crear una función que seleccione datos filtrados de la tabla PurchaseOrderDetail.  
   
 1.  En el Explorador de soluciones, expanda Default.aspx y haga doble clic en Default.aspx.cs.  
   
@@ -174,7 +179,7 @@ Debe completar las tareas siguientes para implementar un filtro de consulta.
   
     4.  Rellene la instancia DataSet con los datos filtrados ejecutando la consulta.  
   
-    5.  Devolver el DataTable **PurchaseOrderDetail**.  
+    5.  Devolver el DataTable **PurchaseOrderDetail** .  
   
         La función será similar a la siguiente. (Esto es solo para la referencia. Puede seguir cualquier modelo que desee, para capturar los datos necesarios para el informe secundario).  
   
@@ -218,15 +223,15 @@ Debe completar las tareas siguientes para implementar un filtro de consulta.
             }  
         ```  
   
-### Para agregar un controlador de eventos que recupere los valores de los parámetros y enlace el DataTable PurchaseOrdeDetail al informe secundario.  
+### <a name="to-add-an-event-handler-that-retrieves-parameter-values-and-binds-the-purchaseordedetail-datatable-to-the-child-report"></a>Para agregar un controlador de eventos que recupere los valores de los parámetros y enlace el DataTable PurchaseOrdeDetail al informe secundario.  
   
 1.  Abra el archivo Default.aspx en la vista del diseñador.  
   
 2.  Haga clic con el botón derecho en el control ReportViewer y, después, seleccione **Propiedades**.  
   
-3.  En el panel **Propiedades**, haga clic en el icono **Eventos**.  
+3.  En el panel **Propiedades** , haga clic en el icono **Eventos** .  
   
-4.  Haga doble clic en el evento **Obtención de detalles**.  
+4.  Haga doble clic en el evento **Obtención de detalles** .  
   
     De este modo agregará una sección del controlador de eventos en el código, que será similar a la siguiente.  
   
@@ -238,13 +243,13 @@ Debe completar las tareas siguientes para implementar un filtro de consulta.
   
 5.  Complete el controlador de eventos. Debe incluir la funcionalidad siguiente.  
   
-    1.  Capture la referencia al objeto de informe secundario del parámetro *DrillthroughEventArgs*.  
+    1.  Capture la referencia al objeto de informe secundario del parámetro *DrillthroughEventArgs* .  
   
     2.  Obtenga la lista de parámetros del informe secundario del objeto de informe secundario capturado.  
   
     3.  Recorra en iteración la colección de parámetros y recupere el valor del parámetro, **ProductID**, que se ha pasado desde el informe primario.  
   
-    4.  Llame a la función **GetPurchaseOrderDetail** y pase el valor del parámetro **ProductID**.  
+    4.  Llame a la función **GetPurchaseOrderDetail**y pase el valor del parámetro **ProductID**.  
   
     5.  Enlace el DataTable **PurchaseOrderDetail** con el origen de datos correspondiente del informe.  
   
@@ -289,8 +294,10 @@ Debe completar las tareas siguientes para implementar un filtro de consulta.
   
 6.  Guarde el archivo.  
   
-## Tarea siguiente  
+## <a name="next-task"></a>Tarea siguiente  
 Ha creado correctamente un filtro de datos para la tabla de datos que definió para el informe secundario. A continuación, compilará y ejecutará la aplicación del sitio Web. Vea [Lección 9: Generar y ejecutar la aplicación](../reporting-services/lesson-9-build-and-run-the-application.md).  
   
   
   
+
+

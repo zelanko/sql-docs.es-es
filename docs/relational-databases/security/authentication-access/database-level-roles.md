@@ -2,7 +2,7 @@
 title: Roles de nivel de base de datos | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 12/16/2016
+ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -43,10 +43,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ccfe7ee55e50f0530b33855f4ad57549a1da712
+ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
+ms.openlocfilehash: 411da6974090c9ccad6aa6184c248537bfdebe79
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/25/2017
 
 ---
 # <a name="database-level-roles"></a>Roles de nivel de base de datos
@@ -71,7 +71,7 @@ Para una lista de todos los permisos, consulte el póster [Permisos del motor de
 
 ## <a name="fixed-database-roles"></a>roles fijos de base de datos
   
- En la tabla siguiente se muestran los roles fijos de base de datos y sus funcionalidades. Estos roles existen en todas las bases de datos. No se pueden cambiar los permisos asignados a los roles fijos de base de datos.   
+ En la tabla siguiente se muestran los roles fijos de base de datos y sus funcionalidades. Estos roles existen en todas las bases de datos. Excepto para la **público** no se puede cambiar el rol de base de datos, los permisos asignados a los roles fijos de base de datos.   
   
 |Nombre del rol fijo de base de datos|Description|  
 |-------------------------------|-----------------|  
@@ -87,7 +87,7 @@ Para una lista de todos los permisos, consulte el póster [Permisos del motor de
 
 No se pueden cambiar los permisos asignados a los roles fijos de base de datos. La ilustración siguiente muestra los permisos asignados a los roles fijos de base de datos:
 
-![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/fixed-database-role-permissions.jpg)
+![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
 ## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>Roles especiales para [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] y [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
 
@@ -106,7 +106,7 @@ Estos roles de base de datos solo existen en la base de datos maestra virtual. S
   
 |Nombre de rol de msdb|Description|  
 |--------------------|-----------------|  
-|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|Los miembros de estos roles de base de datos pueden administrar y utilizar [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se actualizan desde una versión anterior podrían contener una versión anterior del rol cuya denominación se realizaba al usar Servicios de transformación de datos (DTS) en lugar de [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Para obtener más información, vea [Roles de Integration Services &#40;servicio SSIS&#41;](../../../integration-services/service/integration-services-roles-ssis-service.md).|  
+|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|Los miembros de estos roles de base de datos pueden administrar y utilizar [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se actualizan desde una versión anterior podrían contener una versión anterior del rol cuya denominación se realizaba al usar Servicios de transformación de datos (DTS) en lugar de [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Para obtener más información, vea [Roles de Integration Services &#40;servicio SSIS&#41;](../../../integration-services/security/integration-services-roles-ssis-service.md).|  
 |**dc_admin**<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|Los miembros de estos roles de base de datos pueden administrar y utilizar el recopilador de datos. Para obtener más información, consulte [Data Collection](../../../relational-databases/data-collection/data-collection.md).|  
 |**PolicyAdministratorRole**|Los miembros del rol de base de datos **db_ PolicyAdministratorRole** pueden realizar todas las actividades de mantenimiento y configuración en las condiciones y directivas de Administración basada en directivas. Para obtener más información, vea [Administrar servidores mediante administración basada en directivas](../../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|Los miembros de estos roles de base de datos pueden administrar y utilizar grupos de servidores registrados.|  

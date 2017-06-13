@@ -1,29 +1,34 @@
 ---
-title: "Cuadros de texto (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10134"
-  - "10120"
-  - "sql13.rtp.rptdesigner.textproperties.general.f1"
-  - "sql13.rtp.rptdesigner.textboxproperties.general.f1"
+title: Cuadros de texto (generador de informes y SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10134"
+- "10120"
+- sql13.rtp.rptdesigner.textproperties.general.f1
+- sql13.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee30a42b69f4bd3079fe6345df619abde413e588
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Cuadros de texto (Generador de informes y SSRS)
-  Al pensar en un cuadro de texto, probablemente se imagina un cuadro independiente que contiene el texto en una superficie, como en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. En informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], algunos cuadros de texto son así y pueden mostrar texto estático de títulos, descripciones y etiquetas, o bien texto dinámico basado en expresiones. Pero, además, todas las celdas de una tabla o una matriz (región de datos Tablix) contienen un cuadro de texto al que se puede dar formato de la misma forma que a los cuadros de texto independientes de un informe.  
+# <a name="text-boxes-report-builder-and-ssrs"></a>Cuadros de texto (Generador de informes y SSRS)
+  Al pensar en un cuadro de texto, probablemente se imagina un cuadro independiente que contiene el texto en una superficie, como en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. En informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , algunos cuadros de texto son así y pueden mostrar texto estático de títulos, descripciones y etiquetas, o bien texto dinámico basado en expresiones. Pero, además, todas las celdas de una tabla o una matriz (región de datos Tablix) contienen un cuadro de texto al que se puede dar formato de la misma forma que a los cuadros de texto independientes de un informe.  
   
 > [!NOTE]  
 >  Si arrastra un valor de campo de un conjunto de datos de informe directamente hasta la superficie de diseño del informe, o hasta un cuadro de texto situado en la superficie de diseño del informe, al ejecutar el informe solamente verá el primer valor del conjunto de resultados. Para ver todos los valores de un campo, primero necesita crear una tabla, una matriz o una región de datos de lista y, después, arrastrar el campo a una celda en la región de datos. Así, al ejecutar el informe, verá todos los valores en ese campo.  
@@ -42,7 +47,7 @@ caps.handback.revision: 8
 ##  <a name="GrowShrinkTextBox"></a> Aumentar y disminuir el tamaño de un cuadro de texto  
  De manera predeterminada, los cuadros de texto tienen un tamaño fijo. Puede permitir que un cuadro de texto se reduzca o se expanda verticalmente según su contenido. Para más información, vea [Permitir que un cuadro de texto aumente o se reduzca &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md).  
   
-## Girar un cuadro de texto  
+## <a name="rotating-a-text-box"></a>Girar un cuadro de texto  
  Girar los cuadros de texto puede ayudarle a crear informes más legibles, permitir una orientación del texto específica de la configuración regional, ajustar más columnas en un informe impreso con un tamaño de página fijo y crear informes con gráficos más atractivos. Un cuadro de texto se puede girar en diferentes direcciones: horizontal, vertical (girar 90 grados) o 270 grados. La opción vertical se suele utilizar más para los idiomas de Asia oriental que se escriben de arriba abajo. En la mayoría de los representadores, la opción vertical controla el giro de glifo correctamente para que el texto se escriba de arriba abajo y evitar que los caracteres estén en los lados. Para otros idiomas, el texto de las opciones vertical y girado 270 grados se escribe de lado.  
   
  Se pueden girar los cuadros de texto que contengan texto estático, los campos de un conjunto de datos de informe, o bien datos calculados. El cuadro de texto puede ser independiente en el cuerpo del informe, en una tabla o matriz, o en un encabezado y pie de página del informe.  
@@ -64,7 +69,7 @@ caps.handback.revision: 8
   
  [Permitir que un cuadro de texto aumente o se reduzca &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   

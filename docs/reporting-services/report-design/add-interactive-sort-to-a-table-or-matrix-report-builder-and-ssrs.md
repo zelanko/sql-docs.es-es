@@ -1,26 +1,31 @@
 ---
-title: "Agregar una ordenaci&#243;n interactiva a una tabla o una matriz (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10121"
-  - "sql13.rtp.rptdesigner.textboxproperties.intrctvsort.f1"
+title: "Agregar una ordenación interactiva a una tabla o matriz (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10121"
+- sql13.rtp.rptdesigner.textboxproperties.intrctvsort.f1
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ab2138bdee0abc064ae1fabb06ef04ed3c490170
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Agregar una ordenaci&#243;n interactiva a una tabla o una matriz (Generador de informes y SSRS)
+# <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Agregar una ordenación interactiva a una tabla o una matriz (Generador de informes y SSRS)
   Agregue botones de ordenación interactiva para que los usuarios puedan cambiar el criterio de ordenación de las filas y las columnas en las tablas y matrices. Esta característica solo es compatible con los formatos de representación que admiten la interacción con el usuario, como HTML.  
   
  Al crear un botón de ordenación interactiva, debe especificar qué desea ordenar, por qué datos ordenar y el ámbito al que desea aplicar la ordenación. Por ejemplo, puede ordenar las filas de detalles por los apellidos del cliente, los valores de grupo de subcategorías dentro de un grupo de categorías por ventas, o los valores de grupo de categorías y subcategorías combinados por totales.  
@@ -44,7 +49,7 @@ caps.handback.revision: 7
 ##  <a name="SortingDetailRows"></a> Ordenar filas de detalles para una tabla sin grupos  
  Agregue un botón de ordenación interactiva a un encabezado de columna para que los usuarios puedan hacer clic en dicho encabezado y ordenar las filas de detalles de una tabla por el valor mostrado en esa columna.  
   
-#### Para agregar un botón de ordenación interactiva a un encabezado de columna para ordenar la tabla por valor  
+#### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-the-table-by-value"></a>Para agregar un botón de ordenación interactiva a un encabezado de columna para ordenar la tabla por valor  
   
 1.  En la vista de diseño del informe, en una tabla sin grupos, haga clic con el botón derecho en el cuadro de texto del encabezado de columna al que quiere agregar un botón de ordenación interactiva y, luego, haga clic en **Propiedades de cuadro de texto**.  
   
@@ -62,12 +67,12 @@ caps.handback.revision: 7
   
  Para comprobar la acción de ordenación, haga clic en **Ejecutar** para mostrar una vista previa del informe y, a continuación, haga clic en los botones de ordenación interactiva.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
+ ![Icono de flecha usado con Back vínculo al principio](../../analysis-services/instances/media/uparrow16x16.gif "icono de flecha usado con Back vínculo al principio") [volver al principio](#BackToTop)  
   
 ##  <a name="SortingTopLevelParent"></a> Ordenar un grupo de filas primarias de nivel superior para una tabla o matriz  
  Agregue un botón de ordenación interactiva a un encabezado de columna para que los usuarios puedan hacer clic en dicho encabezado y ordenar las filas del grupo primario de una tabla o matriz por el valor mostrado en esa columna. El orden de los grupos secundarios permanece invariable.  
   
-#### Para agregar un botón de ordenación interactiva a un encabezado de columna para ordenar los grupos  
+#### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-groups"></a>Para agregar un botón de ordenación interactiva a un encabezado de columna para ordenar los grupos  
   
 1.  En una tabla o matriz de una vista de diseño del informe, haga clic con el botón derecho en el cuadro de texto del encabezado de columna para el grupo al que quiere agregar un botón de ordenación interactiva y, luego, haga clic en **Propiedades de cuadro de texto**.  
   
@@ -86,12 +91,12 @@ caps.handback.revision: 7
   
  Para comprobar la acción de ordenación, haga clic en **Ejecutar** para mostrar una vista previa del informe y, a continuación, haga clic en los botones de ordenación interactiva.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
+ ![Icono de flecha usado con Back vínculo al principio](../../analysis-services/instances/media/uparrow16x16.gif "icono de flecha usado con Back vínculo al principio") [volver al principio](#BackToTop)  
   
 ##  <a name="SortingChildGroups"></a> Ordenar grupos secundarios o filas de detalles para un grupo  
  Agregue un botón de ordenación interactiva a una fila de encabezado de grupo para que los usuarios puedan ordenar los valores de un grupo secundario perteneciente a un grupo primario u ordenar las filas de detalles para el grupo secundario más interior.  
   
-#### Para agregar un botón de ordenación interactiva a un cuadro de texto de una fila de encabezado de grupo para ordenar grupos secundarios o filas de detalles  
+#### <a name="to-add-an-interactive-sort-button-to-a-text-box-in-a-group-row-header-to-sort-child-groups-or-detail-rows"></a>Para agregar un botón de ordenación interactiva a un cuadro de texto de una fila de encabezado de grupo para ordenar grupos secundarios o filas de detalles  
   
 1.  En la vista de diseño del informe, haga clic con el botón derecho en el cuadro de texto de la fila de encabezado de grupo a la que quiere agregar un botón de ordenación interactiva y, luego, haga clic en **Propiedades de cuadro de texto**.  
   
@@ -109,7 +114,7 @@ caps.handback.revision: 7
   
  Para comprobar la acción de ordenación, haga clic en **Ejecutar** para mostrar una vista previa del informe y, a continuación, haga clic en los botones de ordenación interactiva.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
+ ![Icono de flecha usado con Back vínculo al principio](../../analysis-services/instances/media/uparrow16x16.gif "icono de flecha usado con Back vínculo al principio") [volver al principio](#BackToTop)  
   
 ##  <a name="SortingMultipleRowGroups"></a> Ordenar filas basadas en una expresión de grupo compleja  
  Agregue un botón de ordenación interactiva a un encabezado de columna para que los usuarios puedan hacer clic en dicho encabezado y ordenar los grupos primarios y secundarios combinados. Para lograr este efecto, debe cambiar la expresión de grupo para que sea una expresión compuesta de ambos grupos. Por ejemplo, imagine que una matriz muestra los totales de inventario de una tienda para los artículos agrupados por color y tamaño. Para ordenar las filas basadas en la combinación de color y tamaño, en lugar de tener un grupo para el color y otro para el tamaño, puede definir un grupo basado en la combinación de ambos. Para más información sobre la definición de expresiones de grupo, vea [Ejemplos de expresión de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
@@ -118,7 +123,7 @@ caps.handback.revision: 7
   
  Normalmente, cuando se ordenan filas basadas en varios grupos, se desea ver los totales para las filas ordenadas, sin tener en cuenta los grupos de columnas. En este procedimiento no se usa ningún grupo de columnas. Puede empezar agregando una matriz y quitando el grupo de columnas predeterminado. También podría empezar agregando una tabla y quitando el grupo de detalles.  
   
-#### Para agregar un botón de ordenación interactiva a un encabezado de columna para ordenar varios grupos  
+#### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-multiple-groups"></a>Para agregar un botón de ordenación interactiva a un encabezado de columna para ordenar varios grupos  
   
 1.  En la vista de diseño del informe, agregue una matriz.  
   
@@ -132,7 +137,7 @@ caps.handback.revision: 7
   
 5.  En **Nombre**, reemplace el nombre predeterminado por un nombre que especifique los grupos por los que desea realizar la agrupación.  
   
-6.  En **Expresiones de grupo**, en **Agrupar por**, haga clic en el botón Expresión (**fx**) para abrir el cuadro de diálogo **Expresión**.  
+6.  En **Expresiones de grupo**, en **Agrupar por**, haga clic en el botón Expresión (**fx**) para abrir el cuadro de diálogo **Expresión** .  
   
 7.  Escriba la expresión que especifica todos los campos por los que desea agrupar. Por ejemplo, la expresión de grupo siguiente combina un campo denominado Color y un campo denominado Size: `=Fields!Color.Value & Fields!Size.Value`.  
   
@@ -162,18 +167,18 @@ caps.handback.revision: 7
   
      Ha agregado el botón de ordenación al cuadro de texto.  
   
-16. (Opcional) Puede suprimir los valores duplicados en las columnas que muestran valores de grupo. En la superficie de diseño del informe, haga clic en el cuadro de texto que muestra el valor para el que desea ocultar los valores repetidos. En el panel Propiedades, desplácese a **HideDuplicates** y, en la lista desplegable, seleccione el nombre del conjunto de datos que está vinculado a esta matriz.  
+16. (Opcional) Puede suprimir los valores duplicados en las columnas que muestran valores de grupo. En la superficie de diseño del informe, haga clic en el cuadro de texto que muestra el valor para el que desea ocultar los valores repetidos. En el panel Propiedades, desplácese a **HideDuplicates**y, en la lista desplegable, seleccione el nombre del conjunto de datos que está vinculado a esta matriz.  
   
  Para comprobar la acción de ordenación, haga clic en **Ejecutar** para mostrar una vista previa del informe y, a continuación, haga clic en el botón de ordenación interactiva. La matriz realiza la ordenación por los valores combinados de la expresión de grupo, aunque cada valor individual se muestra en su propia columna.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
+ ![Icono de flecha usado con Back vínculo al principio](../../analysis-services/instances/media/uparrow16x16.gif "icono de flecha usado con Back vínculo al principio") [volver al principio](#BackToTop)  
   
 ##  <a name="SynchronizingSortOrder"></a> Sincronizar el criterio de ordenación para varias regiones de datos  
  Agregue un botón de ordenación interactiva que permita a los usuarios hacer clic en un botón de ordenación y ordenar varias regiones de datos. Al crear un botón de ordenación interactiva, puede especificar si desea sincronizar la ordenación para varias regiones de datos basadas en el mismo conjunto de datos de informe. Por ejemplo, un informe podría incluir una matriz y un gráfico que represente gráficamente los datos. Cuando un usuario cambia el criterio de ordenación de las filas de la matriz, el gráfico muestra automáticamente el mismo criterio de ordenación.  
   
  Para sincronizar el criterio de ordenación, debe usar expresiones de ordenación idénticas para las regiones de datos o grupos que desea ordenar, así como definir el ámbito de la ordenación de tal forma que sea un antecesor mutuo de ambas regiones de datos. El antecesor mutuo puede ser el conjunto de datos al que están vinculadas ambas regiones de datos o una región de datos contenedora dentro de la que aparecen ambas regiones de datos. Por ejemplo, imagine que un informe tiene una matriz y un gráfico que muestran datos del mismo conjunto de datos y que están incluidos en una lista. Para sincronizar la acción de ordenación, debe especificar la ordenación interactiva en una columna de la matriz y establecer el ámbito en la lista. Cuando el usuario ordena la matriz, el gráfico también se ordena.  
   
-#### Para sincronizar el criterio de ordenación con un gráfico para un botón de ordenación interactiva en una región de datos de matriz  
+#### <a name="to-synchronize-sort-order-with-a-chart-for-an-interactive-sort-button-on-a-matrix-data-region"></a>Para sincronizar el criterio de ordenación con un gráfico para un botón de ordenación interactiva en una región de datos de matriz  
   
 1.  En la vista de diseño del informe, agregue una matriz al informe.  
   
@@ -215,9 +220,9 @@ caps.handback.revision: 7
   
  Para comprobar la acción de ordenación, haga clic en **Ejecutar** para mostrar una vista previa del informe y, a continuación, haga clic en el botón de ordenación interactiva. La matriz realiza la ordenación por los valores combinados de la expresión de grupo, aunque cada valor individual se muestra en su propia columna.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
+ ![Icono de flecha usado con Back vínculo al principio](../../analysis-services/instances/media/uparrow16x16.gif "icono de flecha usado con Back vínculo al principio") [volver al principio](#BackToTop)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Ordenación interactiva &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
  [Ordenar datos en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   

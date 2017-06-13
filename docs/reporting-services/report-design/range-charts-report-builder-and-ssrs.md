@@ -1,33 +1,38 @@
 ---
-title: "Rangos de intervalos (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Intervalo de gráficos (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 48e351d3-ac5b-4eda-a4bd-32a0de206a30
 caps.latest.revision: 5
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 5
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1cdcf1877134ea93ec52b3c7fb70dbfeda536a93
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Rangos de intervalos (Generador de informes y SSRS)
+# <a name="range-charts-report-builder-and-ssrs"></a>Rangos de intervalos (Generador de informes y SSRS)
   Un tipo de gráfico de intervalos muestra un conjunto de puntos de datos en el que cada uno de ellos se define mediante varios valores para la misma categoría. Los valores se representan mediante el alto de los marcadores con relación al eje de valores. Las etiquetas de las categorías se muestran en el eje de categorías. El gráfico de intervalos sencillo rellena el área situada entre el valor superior y el valor inferior de cada punto de datos.  
   
  En la ilustración siguiente se muestra un gráfico de intervalos sencillo con tres series.  
   
- ![Gráfico de intervalos](../../reporting-services/report-design/media/rs-rangechart.gif "Gráfico de intervalos")  
+ ![Gráfico de intervalos](../../reporting-services/report-design/media/rs-rangechart.gif "gráfico de intervalos")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Variaciones  
+## <a name="variations"></a>Variaciones  
   
 -   **Intervalo suavizado**. Un gráfico de intervalos suavizados muestra las líneas curvas en lugar de rectas.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 5
   
 -   **Intervalo de barras**. Un gráfico de intervalos de barras usa barras en lugar de áreas para mostrar los intervalos.  
   
-## Consideraciones sobre los datos para los gráficos de intervalos  
+## <a name="data-considerations-for-range-charts"></a>Consideraciones sobre los datos para los gráficos de intervalos  
   
 -   Los tipos de gráficos de intervalos requieren dos valores para cada punto de datos. Estos valores se corresponden con un valor alto y un valor bajo que definen el intervalo para cada punto de datos.  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 5
   
 -   Se pueden crear diagramas de Gantt usando un gráfico de intervalos de barras.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  

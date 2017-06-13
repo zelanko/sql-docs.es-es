@@ -1,26 +1,31 @@
 ---
-title: "M&#233;todos abreviados de teclado (Generador de informes) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "métodos abreviados de teclado"
-  - "métodos abreviados"
+title: "(Generador de informes) de métodos abreviados de teclado | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- keyboard shortcuts
+- shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 caps.latest.revision: 20
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 20
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a9b6a8f5eb6238fac6b0588ecf6c79227e9ec7d
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# M&#233;todos abreviados de teclado (Generador de informes)
+# <a name="keyboard-shortcuts-report-builder"></a>Métodos abreviados de teclado (Generador de informes)
   Al crear y editar informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el Generador de informes, tendrá acceso a todas las teclas de método abreviado para la navegación que se proporcionan para el entorno de Windows. Puede seleccionar entre varios esquemas de asignación de teclado estándar.  
   
  Puede navegar por la ventana del Generador de informes o seleccionar y cambiar opciones en los cuadros de diálogo sin usar el ratón.  
@@ -30,7 +35,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  Los métodos abreviados de teclado pueden contener las teclas MAYÚS, ALT y/o CTRL en combinación con letras; o bien usar las teclas de función. Por ejemplo, F1 abre el archivo de Ayuda del Generador de informes.  
   
-## Métodos abreviados de teclado del Generador de informes  
+## <a name="keyboard-shortcuts-in-report-builder"></a>Métodos abreviados de teclado del Generador de informes  
   
 |Description|Combinación de teclas|  
 |-----------------|---------------------|  
@@ -91,7 +96,7 @@ caps.handback.revision: 20
 |Alejar un área de vista del mapa cuando una ventanilla de mapa está seleccionada.|CTRL+Signo menos (-)|  
 |Modo Acelerador para realizar una panorámica y ampliar el área de vista del mapa cuando una ventanilla de mapa está seleccionada.|CTRL+Clic con el botón primario|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Generador de informes en SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Vista de diseño de informe &#40;Generador de informes&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [Glosario &#40;Generador de informes&#41;](../../reporting-services/report-builder/glossary-report-builder.md)  

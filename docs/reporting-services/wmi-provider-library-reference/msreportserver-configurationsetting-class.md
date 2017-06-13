@@ -1,36 +1,41 @@
 ---
-title: "Clase MSReportServer_ConfigurationSetting | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "MSReportServer_ConfigurationSetting Class"
-apilocation: 
-  - "reportingservices.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "Proveedor WMI [Reporting Services], clase MSReportServer_ConfigurationSetting"
-  - "clase MSReportServer_ConfigurationSetting"
+title: Clase MSReportServer_ConfigurationSetting | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- MSReportServer_ConfigurationSetting Class
+apilocation:
+- reportingservices.mof
+apitype: MOFDef
+helpviewer_keywords:
+- WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class
+- MSReportServer_ConfigurationSetting class
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 caps.latest.revision: 39
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 39
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c9a364ca856fef827afee604f64893ce20d21a1
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Clase MSReportServer_ConfigurationSetting
+# <a name="msreportserverconfigurationsetting-class"></a>clase MSReportServer_ConfigurationSetting
   Representa la instalación y los parámetros de tiempo de ejecución de una instancia del servidor de informes. Estos parámetros se guardan en el archivo de configuración del servidor de informes.  
   
  Para obtener una lista de todos los miembros de este tipo, vea [Miembros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```vb  
 Public Class MSReportServer_ConfigurationSetting  
@@ -40,11 +45,11 @@ Public Class MSReportServer_ConfigurationSetting
 public class MSReportServer_ConfigurationSetting  
 ```  
   
-## Seguridad para subprocesos  
+## <a name="thread-safety"></a>Seguridad para subprocesos  
  Todos los miembros estáticos (**compartidos** en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) públicos de este tipo son seguros para operaciones multiproceso. No se garantiza que los miembros de instancia sean seguros para subprocesos.  
   
-## Ejemplo  
- Para ejecutar el código siguiente, agregue el nombre de servidor en lugar de cada \<*servername*>. Actualice la ruta de acceso para que señale su ubicación de instalación si no es el valor predeterminado. En el ejemplo de código siguiente se recorre en iteración cada propiedad en la clase *MSReportServer_ConfigurationSetting*, imprimiendo el nombre de cada propiedad y su valor en la consola.  
+## <a name="example"></a>Ejemplo  
+ Para ejecutar el siguiente código, agregue el nombre del servidor en lugar de cada \< *servername*>. Actualice la ruta de acceso para que señale su ubicación de instalación si no es el valor predeterminado. En el ejemplo de código siguiente se recorre en iteración cada propiedad en la clase *MSReportServer_ConfigurationSetting* , imprimiendo el nombre de cada propiedad y su valor en la consola.  
   
 ```vb  
 Imports System  
@@ -168,12 +173,12 @@ class Class1
 }  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
  **Plataforma:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Miembros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

@@ -1,45 +1,44 @@
 ---
-title: "Habilitar y deshabilitar la impresi&#243;n del lado cliente para Reporting Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/14/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pdf"
-  - "visor"
-  - "reportviewer"
-  - "barra de herramientas"
+title: "Habilitar y deshabilitar la impresión del lado cliente para Reporting Services | Documentos de Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pdf
+- viewer
+- reportviewer
+- toolbar
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 14
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ee650a09b57ae92abda378fea6fc780b550fbac4
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Habilitar y deshabilitar la impresi&#243;n del lado cliente para Reporting Services
+
+# <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Habilitar y deshabilitar la impresión del lado cliente para Reporting Services
+
   El botón de impresión de la barra de herramientas del Visor de informes usa el formato Portable Document Format (PDF) en las impresiones del lado cliente de los informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] visualizados en un explorador. En la nueva experiencia de impresión remota se usa la extensión de representación de PDF incluida en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]para representar el informe en formato PDF. Puede descargar un formulario en .PDF del informe o, si tiene una aplicación instalada para ver archivos .PDF, el botón de impresión abrirá un cuadro de diálogo de impresión con los elementos de configuración comunes de página, como el tamaño y la orientación de página y una vista previa del archivo .PDF. Aunque la impresión del lado cliente está habilitada de manera predeterminada, puede deshabilitar esta característica para impedir que sea utilizada.  
   
- En las versiones anteriores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se usaba un control ActiveX que requería la descarga en el equipo cliente desde el servidor de informes. Si actualiza el servidor de informes a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], el control de impresión no se quita de los equipos cliente ni del servidor de informes.  
-  
-##  <a name="bkmk_top"></a> En este tema  
-  
--   [La experiencia de impresión](#bkmk_clientside_printexpereince)  
-  
--   [Solucionar problemas de impresión del lado cliente](#bkmk_troubleshoot_clientsideprinting)  
-  
--   [Habilitar y deshabilitar la impresión del lado cliente](#bkmk_enable)  
-  
+ En las versiones anteriores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se usaba un control ActiveX que requería la descarga en el equipo cliente desde el servidor de informes. Si actualiza el servidor de informes a SQL Server 2016 no se quita el control de impresión desde el servidor de informes o los equipos cliente.  
+
 ##  <a name="bkmk_clientside_printexpereince"></a> La experiencia de impresión  
- Cuando se hace clic en el botón de impresión ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") de la barra de herramientas del Visor de informes, la experiencia variará en función de la aplicación de visualización de .PDF que haya instalada en el equipo cliente y del explorador que se use.   Dependiendo del equipo cliente, puede descargar el archivo PDF o configurar las opciones de impresión en un cuadro de diálogo (o ambos).  
+ Al hacer clic en la impresión ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") botón en la barra de herramientas del Visor de informes, la experiencia varía en función de qué. Aplicaciones de visualización de PDF están instaladas en el equipo cliente y qué explorador que está utilizando.   Dependiendo del equipo cliente, puede descargar el archivo PDF o configurar las opciones de impresión en un cuadro de diálogo (o ambos).  
   
- ![Barra de herramientas de informe](../../reporting-services/media/ssrs-htmlviewer-toolbar.gif "Barra de herramientas de informe")  
+ ![Barra de herramientas informes](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "barra de herramientas de informe")  
   
 |||  
 |-|-|  
@@ -51,7 +50,7 @@ caps.handback.revision: 14
 ##  <a name="bkmk_troubleshoot_clientsideprinting"></a> Solucionar problemas de impresión del lado cliente  
  Si el botón de impresión de la barra de herramientas del Visor de informes está deshabilitado, compruebe lo siguiente:  
   
--   La impresión del lado cliente está deshabilitada en el servidor de informes en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Vea la sección [Habilitar y deshabilitar la impresión del lado cliente](#bkmk_enable) de este tema.  
+-   La impresión del lado cliente está deshabilitada en el servidor de informes en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Vea la sección  [Habilitar y deshabilitar la impresión del lado cliente](#bkmk_enable) de este tema.  
   
 -   La extensión de representación de PDF [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] está deshabilitada. Consulte la sección `<Extension Name="PDF"` del archivo **rsreportserver.config** .  
   
@@ -96,7 +95,7 @@ caps.handback.revision: 14
   
  El siguiente script de ejemplo ilustra un enfoque válido para deshabilitar la impresión de lado cliente. Compile y ejecute el siguiente código de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para establecer la propiedad **EnableClientPrinting** en **False**. Después de ejecutar el código, reinicie IIS.  
   
-### Script de ejemplo  
+### <a name="sample-script"></a>Script de ejemplo  
   
 ```  
 Imports System  
@@ -119,6 +118,7 @@ Dim rs As New ReportingService()
         End Try  
     End Sub 'Main  
 End Class 'Sample  
-```  
-  
-  
+```
+
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

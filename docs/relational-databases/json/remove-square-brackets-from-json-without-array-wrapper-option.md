@@ -18,25 +18,25 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ea60d5a74c680e9c2aba571a76815f77913da471
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: 36e612b6c3759d968687d8ba35286c399de02a74
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="remove-square-brackets-from-json---withoutarraywrapper-option"></a>Eliminación de corchetes de JSON: opción WITHOUT_ARRAY_WRAPPER
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Para quitar los corchetes que rodean la salida JSON de la cláusula **FOR JSON** de manera predeterminada, especifique la opción **WITHOUT_ARRAY_WRAPPER** . Use esta opción para generar un objeto JSON único como resultado en lugar de una matriz.  
+Para quitar los corchetes que rodean la salida JSON de la cláusula **FOR JSON** de manera predeterminada, especifique la opción **WITHOUT_ARRAY_WRAPPER** . Utilice esta opción con un sola fila de resultados para generar un objeto JSON único como salida en lugar de una matriz con un único elemento.
+
+Si utiliza esta opción con un resultado de varias filas, el resultado no es un valor JSON válido debido a varios elementos y los corchetes que faltan.  
   
- Si no especifica esta opción, la salida JSON aparecerá entre corchetes.  
-  
-## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se muestra la salida de la cláusula **FOR JSON** con y sin la opción **WITHOUT_ARRAY_WRAPPER** .  
+## <a name="example-single-row-result"></a>Ejemplo (resultados de fila única)  
+En el ejemplo siguiente se muestra la salida de la cláusula **FOR JSON** con y sin la opción **WITHOUT_ARRAY_WRAPPER** .  
   
  **Consulta**  
   
-```tsql  
+```sql  
 SELECT 2015 as year, 12 as month, 15 as day  
 FOR JSON PATH, WITHOUT_ARRAY_WRAPPER 
 ```  
@@ -51,7 +51,7 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 } 
 ```  
   
- **Resultado** sin la opción **WITHOUT_ARRAY_WRAPPER**  
+ **Resultado** (predeterminado) sin el **WITHOUT_ARRAY_WRAPPER** opción  
   
 ```json  
 [{
@@ -60,13 +60,14 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
     "day": 15
 }]
 ```  
-  
- Este es otro ejemplo de una cláusula **FOR JSON** con y sin la opción **WITHOUT_ARRAY_WRAPPER** .  
+
+## <a name="example-multiple-row-result"></a>Ejemplo (resultados de varias filas)
+Este es otro ejemplo de una cláusula **FOR JSON** con y sin la opción **WITHOUT_ARRAY_WRAPPER** . Este ejemplo genera un resultado de varias filas. El resultado no es un valor JSON válido debido a varios elementos y los corchetes que faltan.
   
  **Consulta**  
   
-```tsql  
-SELECT TOP 1 SalesOrderNumber, OrderDate, Status  
+```sql  
+SELECT TOP 3 SalesOrderNumber, OrderDate, Status  
 FROM Sales.SalesOrderHeader  
 ORDER BY ModifiedDate  
 FOR JSON PATH, WITHOUT_ARRAY_WRAPPER 
@@ -76,21 +77,40 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
   
 ```json  
 {
+    "SalesOrderNumber": "SO43662",
+    "OrderDate": "2011-05-31T00:00:00",
+    "Status": 5
+}, {
+    "SalesOrderNumber": "SO43661",
+    "OrderDate": "2011-05-31T00:00:00",
+    "Status": 5
+}, {
     "SalesOrderNumber": "SO43660",
     "OrderDate": "2011-05-31T00:00:00",
     "Status": 5
 } 
 ```  
   
- **Resultado** sin la opción **WITHOUT_ARRAY_WRAPPER**  
+ **Resultado** (predeterminado) sin el **WITHOUT_ARRAY_WRAPPER** opción  
   
 ```json  
 [{
+    "SalesOrderNumber": "SO43662",
+    "OrderDate": "2011-05-31T00:00:00",
+    "Status": 5
+}, {
+    "SalesOrderNumber": "SO43661",
+    "OrderDate": "2011-05-31T00:00:00",
+    "Status": 5
+}, {
     "SalesOrderNumber": "SO43660",
     "OrderDate": "2011-05-31T00:00:00",
     "Status": 5
 }]
 ```  
+
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Obtener más información sobre la compatibilidad integrada de JSON en SQL Server  
+Para una gran cantidad de soluciones específicas, casos de uso y recomendaciones, consulte el [entradas de blog sobre la compatibilidad integrada de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) en SQL Server y en la base de datos de SQL de Azure mediante el Administrador de programas de Microsoft Jovan Popovic.
   
 ## <a name="see-also"></a>Vea también  
  [Cláusula FOR &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  

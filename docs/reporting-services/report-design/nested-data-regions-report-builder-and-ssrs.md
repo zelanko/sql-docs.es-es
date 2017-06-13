@@ -1,23 +1,28 @@
 ---
-title: "Anidar regiones de datos (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Anidar regiones de datos (generador de informes y SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3a2829591b4024a9423c83b057ed1462c6762255
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Anidar regiones de datos (Generador de informes y SSRS)
+# <a name="nested-data-regions-report-builder-and-ssrs"></a>Anidar regiones de datos (Generador de informes y SSRS)
   Normalmente, una región de datos, como un gráfico, se anida dentro de otra, como una matriz, para mostrar resúmenes de los datos de una manera concisa o para mostrar los datos de forma gráfica, además de hacerlo en una tabla o una matriz.  
   
  Por ejemplo, en el caso de una matriz (también denominada *Tablix*) cuyas filas contienen pedidos de ventas agrupados por almacén y cuyas columnas contienen pedidos de ventas agrupados por trimestre, puede agregar una tabla o un gráfico en la celda de la esquina para resumir las ventas de todos los almacenes, o puede agregar un gráfico a un encabezado de columna de una matriz para mostrar la contribución a las ventas de los datos de la columna como porcentaje de todas las ventas.  
@@ -26,13 +31,13 @@ caps.handback.revision: 8
   
  En esta ilustración, el gráfico circular de la celda de la esquina y los gráficos sparkline de las filas son regiones de datos anidadas.  
   
- Por definición, las regiones de datos anidadas se basan en el mismo conjunto de datos de informe. No puede anidar regiones de datos basadas en conjuntos de datos diferentes. Para mostrar datos de conjuntos de datos diferentes, plantéese la posibilidad de usar informes o subinformes detallados. Para obtener más información, vea [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough, drilldown, subreports, and nested data regions.md).  
+ Por definición, las regiones de datos anidadas se basan en el mismo conjunto de datos de informe. No puede anidar regiones de datos basadas en conjuntos de datos diferentes. Para mostrar datos de conjuntos de datos diferentes, plantéese la posibilidad de usar informes o subinformes detallados. Para obtener más información, vea [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Descripción del ámbito de una región de datos anidada  
- El ámbito de los datos de una región de datos anidada se define automáticamente mediante su posición en la región de datos primaria. Por ejemplo, el ámbito correspondiente a los datos de un gráfico que está anidado en la celda de la esquina de Tablix son los datos procedentes del conjunto de datos enlazado a la región de datos Tablix una vez aplicados los filtros para el conjunto de datos, la región de datos Tablix y la región de datos de gráfico. El ámbito de un Tablix anidado en una celda de Tablix es el mismo que el ámbito de la celda de la esquina pero, además, se sitúa en el ámbito de la pertenencia al grupo de filas y columnas de la celda en la que está anidado, con los correspondientes filtros de grupo aplicados. Para obtener más información sobre el ámbito, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression scope for totals, aggregates, and built-in collections.md).  
+## <a name="understanding-scope-for-a-nested-data-region"></a>Descripción del ámbito de una región de datos anidada  
+ El ámbito de los datos de una región de datos anidada se define automáticamente mediante su posición en la región de datos primaria. Por ejemplo, el ámbito correspondiente a los datos de un gráfico que está anidado en la celda de la esquina de Tablix son los datos procedentes del conjunto de datos enlazado a la región de datos Tablix una vez aplicados los filtros para el conjunto de datos, la región de datos Tablix y la región de datos de gráfico. El ámbito de un Tablix anidado en una celda de Tablix es el mismo que el ámbito de la celda de la esquina pero, además, se sitúa en el ámbito de la pertenencia al grupo de filas y columnas de la celda en la que está anidado, con los correspondientes filtros de grupo aplicados. Para obtener más información sobre el ámbito, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
  En la lista siguiente, se describe el ámbito para las celdas de las áreas de Tablix siguientes:  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 8
   
  Para obtener más información, vea [Describir las áreas de la región de datos Tablix &#40;Generador de informes y SSRS&#41](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
-## Anidar un gráfico, un minigráfico o una barra de datos en un Tablix  
+## <a name="nesting-a-chart-sparkline-or-data-bar-in-a-tablix"></a>Anidar un gráfico, un minigráfico o una barra de datos en un Tablix  
  Cuando se agrega un gráfico (incluido un minigráfico o una barra de datos) a una fila de encabezado o pie de grupo de columnas de Tablix, o a una celda de cuerpo de Tablix, los datos que se pasan al gráfico pertenecen al ámbito del subconjunto de datos de esa celda. De forma predeterminada, al agregar un gráfico a una celda de Tablix, el gráfico aumenta de tamaño para rellenar la celda.  
   
 > [!NOTE]  
@@ -54,10 +59,10 @@ caps.handback.revision: 8
   
  De forma predeterminada, los colores de los puntos de datos de la serie del gráfico determinan los colores de la leyenda. Si desea tener un mayor control sobre los colores a fin de que todas las regiones de datos anidadas del gráfico usen el mismo color para la misma categoría de datos, deberá usar colores personalizados y establecer expresiones de ordenación en los datos. Para obtener más información, vea [Especificar colores uniformes en varios gráficos de formas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md) y [Ordenar datos en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
   
-## Anidar un medidor o un indicador en un Tablix  
+## <a name="nesting-a-gauge-or-an-indicator-in-a-tablix"></a>Anidar un medidor o un indicador en un Tablix  
  Puede anidar un medidor o un indicador dentro de una tabla, una matriz o una lista para mostrar un indicador clave de rendimiento (KPI). Cuando se sitúa un medidor o un indicador en una tabla, se representará para cada fila del Tablix. Para obtener más información sobre cómo agregar indicadores a un Tablix, vea [Indicadores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
-### Agregar un medidor a un Tablix  
+### <a name="adding-a-gauge-to-a-tablix"></a>Agregar un medidor a un Tablix  
  Hay dos maneras de agregar un medidor a una región de datos Tablix:  
   
 -   Haga clic dentro de la celda de Tablix e inserte un medidor. Aparece el cuadro de diálogo **Seleccionar tipo de medidor** . Una vez seleccionado el tipo de medidor, la región de datos de medidor se sitúa dentro de la celda de Tablix seleccionada. Probablemente, necesitará cambiar el tamaño de Tablix para dar formato al medidor.  
@@ -72,7 +77,7 @@ caps.handback.revision: 8
   
  Si los datos se vuelven demasiado grandes en el medidor, plantéese la posibilidad de usar un multiplicador de escala para reducir el número de dígitos mostrados. Para especificar un multiplicador, puede hacer clic con el botón derecho en la escala y seleccionar **Propiedades de escala**. Cuando se abra el cuadro de diálogo **Propiedades de escala** , especifique un valor para **Multiplicador**.  
   
-## Anidar una tabla o matriz y un gráfico en una lista  
+## <a name="nesting-a-table-or-matrix-and-a-chart-in-a-list"></a>Anidar una tabla o matriz y un gráfico en una lista  
  Para anidar varias regiones de datos en una lista, primero se agrega un rectángulo y, a continuación, se agregan las regiones de datos al rectángulo.  
   
  Puede definir un grupo para una región de datos de lista y, a continuación, agregar un Tablix y un gráfico para proporcionar vistas diferentes de los mismos datos. Para lograr este efecto, debe definir expresiones de grupo y de ordenación idénticas para el Tablix y el gráfico incrustados. Por definición, el Tablix y el gráfico usan datos procedentes del conjunto de datos de la región de datos de lista primaria.  
@@ -82,7 +87,7 @@ caps.handback.revision: 8
   
  Para obtener más información, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md) y [Agregar, mover o eliminar una tabla, una matriz o una lista &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   

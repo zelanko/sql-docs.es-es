@@ -1,31 +1,36 @@
 ---
-title: "Dise&#241;ador de consultas de lista de SharePoint (Generador de informes) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10016"
+title: "Diseñador de consultas de lista de SharePoint (generador de informes) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10016"
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 957ddf233fbbf41f468f8c981c3e8303a3672d9b
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Dise&#241;ador de consultas de lista de SharePoint (Generador de informes)
+# <a name="sharepoint-list-query-designer-report-builder"></a>Diseñador de consultas de lista de SharePoint (Generador de informes)
   El Generador de informes y el Diseñador de informes proporcionan un diseñador gráfico de consultas y un diseñador de consultas basados en texto para ayudarle a crear una consulta que especifique los datos que deben recuperarse de un sitio de SharePoint para un conjunto de datos de informe. Use el diseñador gráfico de consultas para explorar los metadatos de la lista de SherPoint, crear una consulta de forma interactiva y ver los resultados de la consulta. Use el diseñador de consultas basado en texto para ver la consulta creada por el diseñador gráfico de consultas, modificar una consulta o escribir los comandos de la consulta. También puede importar una consulta existente de un archivo o informe.  
   
 > [!IMPORTANT]  
 >  Los usuarios tienen acceso a los orígenes de datos cuando crean y ejecutan las consultas. Debe conceder permisos mínimos para los orígenes de datos, por ejemplo permisos de solo lectura.  
   
-## Diseñador gráfico de consultas  
+## <a name="graphical-query-designer"></a>Diseñador gráfico de consultas  
  En el diseñador gráfico de consultas puede el explorador el sitio de SharePoint, compilar interactivamente el comando que recupera los datos de la lista de SharePoint para un conjunto de datos. Debe elegir los campos que se incluirán en el conjunto de datos y, si lo desea, especificar los filtros que limitan los datos en el conjunto de datos. Puede especificar que los filtros se usan como parámetros y proporcionar el valor del filtro en tiempo de ejecución.  
   
  Las listas de SharePoint incluyen un gran número de campos concretos de SharePoint que podría no ser útil incluir en los informes. El diseñador de consultas proporciona una opción para ocultar estos campos y facilitar y agilizar la determinación de los campos que se utilizan.  
@@ -84,7 +89,7 @@ caps.handback.revision: 7
   
  El criterio de ordenación del conjunto de resultados se determina según el orden de los datos recuperados del origen de datos. El criterio de ordenación puede cambiarse modificando la consulta o después de recuperar los datos para el informe.  
   
-### Barra de herramientas del diseñador gráfico de consultas  
+### <a name="graphical-query-designer-toolbar"></a>Barra de herramientas del diseñador gráfico de consultas  
  La barra de herramientas del diseñador de consultas relacionales ofrece los siguientes botones para ayudarle a especificar o ver los resultados de una consulta.  
   
 |Botón|Description|  
@@ -94,7 +99,7 @@ caps.handback.revision: 7
 |**Ejecutar consulta**|Ejecuta la consulta. El panel Resultados de la consulta muestra el conjunto de resultados.|  
 |**Mostrar campos ocultos**|Alterna entre mostrar u ocultar los campos que SharePoint generó automáticamente como el ProgID y Level para los elementos de vínculo de SharePoint, pero normalmente no se utiliza en informes. Al ocultar estos campos, la lista de campos se hace más corta y más fácil de utilizar.|  
   
-## Vea también  
- [Diseñadores de consultas &#40;Generador de informes&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md)  
+## <a name="see-also"></a>Vea también  
+ [Diseñadores de consultas &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

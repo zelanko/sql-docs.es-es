@@ -2,7 +2,7 @@
 title: Escenarios de uso de tablas temporales | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/13/2017
+ms.date: 05/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,27 +16,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bb6a2865838df1d66119f68c6d8cd19809a8f86c
+ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
+ms.openlocfilehash: 007b40b36317a67c6b9714b89aac0d3324312f30
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="temporal-table-usage-scenarios"></a>Escenarios de uso de tablas temporales
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Las tablas temporales suelen ser útiles en escenarios que requieren historial de seguimiento de cambios de datos.    
-Debido a las enormes ventajas de productividad, se recomienda tener en cuenta las tablas temporales en los siguientes casos de uso:  
-  
--   [Auditoría de datos](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_0)  
-  
--   [Análisis a un momento dado (viaje en el tiempo)](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_1)  
-  
--   [Detección de anomalías](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_2)  
-  
--   [Dimensiones de variación lenta](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_3)  
-  
--   [Reparación de daños en los datos de fila](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_4)  
+Se recomienda tener en cuenta las tablas temporales en los siguientes casos de uso de las mayores ventajas de productividad.  
   
 ## <a name="data-audit"></a>Auditoría de datos  
  Use el control de versiones del sistema temporal en tablas que almacenan información crítica para la que necesita realizar un seguimiento de qué ha cambiado y cuándo, y para realizar análisis forense de datos en cualquier momento.    

@@ -1,30 +1,35 @@
 ---
-title: "Causa y resoluci&#243;n de errores de Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mensajes [Reporting Services]"
-  - "errores [Reporting Services]"
-  - "solución de problemas [Reporting Services], errores"
+title: "Causa y resolución de errores de los servicios de Reporting | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- messages [Reporting Services]
+- errors [Reporting Services]
+- troubleshooting [Reporting Services], errors
 ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
 caps.latest.revision: 17
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 17
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 653001080c8ede72abf608c7b8b982558d55c46b
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Causa y resoluci&#243;n de errores de Reporting Services
+# <a name="cause-and-resolution-of-reporting-services-errors"></a>Causa y resolución de errores de Reporting Services
   Este tema incluye información sobre la causa y la resolución de una serie de errores relacionados con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Los temas sobre mensajes de error de esta sección proporcionan una explicación del mensaje de error, las posibles causas y las medidas que se pueden tomar para solucionar el problema.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
   
 |Error|de mensaje|  
 |-----------|-------------|  
@@ -36,7 +41,7 @@ caps.handback.revision: 17
 |[rrRenderingError - Error de Reporting Services](../../reporting-services/troubleshooting/rrrenderingerror-reporting-services-error.md)|Error durante la representación del informe. (rrRenderingError) %1.|  
 |[Servicio Servidor de informes de Windows &#40;MSSQLServer&#41; 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|El servicio Servidor de informes de Windows (MSSQLSERVER) no se puede conectar a la base de datos del servidor de informes.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Referencia de errores y eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   

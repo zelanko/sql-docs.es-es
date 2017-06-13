@@ -1,25 +1,30 @@
 ---
-title: "Propiedades del trabajo (Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.jobproperties.f1"
+title: Trabajo propiedades (Management Studio) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.jobproperties.f1
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 13
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2f138c5caef261757a4bce22cb84ebeb7a2a68b8
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Propiedades del trabajo (Management Studio)
+# <a name="job-properties-management-studio"></a>Propiedades del trabajo (Management Studio)
   Use la página **Propiedades del trabajo** para ver información sobre una suscripción o un informe en curso antes de cancelarlo.  
   
  Para abrir esta página, inicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a un servidor de informes y abra la carpeta **Trabajos** . Haga clic con el botón derecho en un trabajo que se está ejecutando y luego haga clic en **Propiedades**.  
@@ -27,16 +32,16 @@ caps.handback.revision: 13
 > [!NOTE]  
 >  Esta característica no se admite en [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] con Advanced Services. La página no aparece cuando se ejecuta [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
-## Tareas  
+## <a name="tasks"></a>Tareas  
  Para poder ver información acerca de un trabajo, actualice la página para recuperar información sobre los trabajos que se están ejecutando actualmente en el servidor de informes:  
   
 1.  Abra la carpeta del servidor de informes.  
   
-2.  Haga clic con el botón derecho en **Trabajos** y luego haga clic en **Actualizar**.  
+2.  Haga clic con el botón derecho en **Trabajos**y luego haga clic en **Actualizar**.  
   
 3.  Si un trabajo aparece en una lista, haga clic con el botón derecho en él y luego haga clic en **Propiedades**.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Id. del trabajo**  
  Un GUID que se asigna a un trabajo mientras se está procesando. El valor se genera de forma aleatoria cada vez que se ejecuta un informe o suscripción.  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 13
  **Nombre de usuario**  
  Para los procesos iniciados por un usuario, esta columna muestra el nombre del usuario. Para los trabajos del sistema, éste es el nombre del servidor de informes.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Servidor de informes en Management Studio ayuda F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Conectar con un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Administrar un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md)  

@@ -1,7 +1,7 @@
 ---
 title: Roles de nivel de servidor | Microsoft Docs
 ms.custom: 
-ms.date: 12/29/2016
+ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -27,20 +27,20 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8850c5e74e5e77ecad1b847f6176713c0af9b537
+ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
+ms.openlocfilehash: f4f99b8869aca02d63b5aacaa883ce501e332ea7
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/25/2017
 
 ---
 # <a name="server-level-roles"></a>Roles de nivel de servidor
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona roles de nivel de servidor para ayudarle a administrar los permisos de un servidor. Estos roles son entidades de seguridad que agrupan otras entidades de seguridad. Los roles de nivel de servidor se aplican a todo el servidor en lo que respecta a su ámbito de permisos. (Los*roles* son como los *grupos* del sistema operativo Windows).  
   
  Los roles fijos de servidor se proporcionan por comodidad y compatibilidad con versiones anteriores. Siempre que sea posible, asigne permisos más específicos.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona nueve roles fijos de servidor. Los permisos que se conceden a los roles fijos de servidor no se pueden modificar. A partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], puede crear roles de servidor definidos por el usuario y agregarles permisos de nivel de servidor.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona nueve roles fijos de servidor. Los permisos que se conceden a los roles fijos de servidor (excepto **público**) no se puede cambiar. A partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], puede crear roles de servidor definidos por el usuario y agregarles permisos de nivel de servidor.  
   
  Puede agregar entidades de seguridad a nivel de servidor (inicios de sesión de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cuentas de Windows y grupos de Windows) a los roles de nivel de servidor. Cada miembro de un rol fijo de servidor puede agregar otros inicios de sesión a ese mismo rol. Los miembros de roles de servidor definidos por el usuario no pueden agregar otras entidades de seguridad de servidor al rol.  
 >  [!NOTE]
@@ -49,21 +49,21 @@ ms.lasthandoff: 04/11/2017
 ## <a name="fixed-server-level-roles"></a>Roles fijos de nivel de servidor  
  En la tabla siguiente se muestran los roles fijos de nivel de servidor y sus capacidades.  
   
-|Rol fijo de nivel de servidor|Descripción|  
+|Rol fijo de nivel de servidor|Description|  
 |------------------------------|-----------------|  
-|sysadmin|Los miembros del rol fijo de servidor sysadmin pueden realizar cualquier actividad en el servidor.|  
-|serveradmin|Los miembros del rol fijo de servidor serveradmin pueden cambiar las opciones de configuración en el servidor y cerrar el servidor.|  
-|securityadmin|Los miembros del rol fijo de servidor securityadmin administran los inicios de sesión y sus propiedades. Administran los permisos de servidor GRANT, DENY y REVOKE. También pueden administrar los permisos de nivel de base de datos GRANT, DENY y REVOKE si tienen acceso a una base de datos. Asimismo, pueden restablecer contraseñas para inicios de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> **\*\* Nota de seguridad \*\*** La capacidad de conceder acceso a [!INCLUDE[ssDE](../../../includes/ssde-md.md)] y configurar los permisos de usuario permite que el administrador de seguridad asigne la mayoría de los permisos de servidor. El rol **securityadmin** se debe tratar como equivalente al rol **sysadmin** .|  
-|processadmin|Los miembros del rol fijo de servidor processadmin pueden finalizar los procesos que se ejecutan en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|setupadmin|Los miembros del rol fijo de servidor setupadmin pueden agregar y quitar servidores vinculados mediante instrucciones de [!INCLUDE[tsql](../../../includes/tsql-md.md)] . (Es necesaria la pertenencia a sysadmin cuando se usa [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]).|  
-|bulkadmin|Los miembros del rol fijo de servidor bulkadmin pueden ejecutar la instrucción BULK INSERT.|  
-|diskadmin|El rol fijo de servidor diskadmin se utiliza para administrar archivos de disco.|  
-|dbcreator|Los miembros del rol fijo de servidor dbcreator pueden crear, modificar, quitar y restaurar cualquier base de datos.|  
-|public|Cada inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pertenece al rol público de servidor. Cuando a una entidad de seguridad de servidor no se le han concedido ni denegado permisos específicos para un objeto protegible, el usuario hereda los permisos concedidos al rol pública para ese elemento. Solo asigne los permisos públicos en cualquier objeto cuando desee que el objeto esté disponible para todos los usuarios. No puede cambiar la pertenencia en public.<br /><br /> Nota: public se implementa de manera diferente que otros roles. Pero se pueden conceder, denegar o revocar permisos desde public.|  
+|**sysadmin**|Los miembros de la **sysadmin** rol fijo de servidor puede realizar cualquier actividad en el servidor.|  
+|**serveradmin**|Los miembros del rol fijo de servidor **serveradmin** pueden cambiar opciones de configuración en el servidor y cerrar el servidor.|  
+|**securityadmin**|Los miembros del rol fijo de servidor **securityadmin** administran los inicios de sesión y sus propiedades. Luego puede `GRANT`, `DENY`, y `REVOKE` permisos de nivel de servidor. También pueden `GRANT`, `DENY`, y `REVOKE` base de datos de nivel de permisos si tienen acceso a una base de datos. Asimismo, pueden restablecer contraseñas para inicios de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> **Importante:** la capacidad de conceder acceso a la [!INCLUDE[ssDE](../../../includes/ssde-md.md)] y configurar los permisos de usuario permite que el Administrador de seguridad asignar la mayoría de los permisos de servidor. El rol **securityadmin** se debe tratar como equivalente al rol **sysadmin** .|  
+|**processadmin**|Los miembros de la **processadmin** rol fijo de servidor puede finalizar los procesos que se ejecutan en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|**setupadmin**|Los miembros de la **setupadmin** rol fijo de servidor puede agregar y quitar servidores vinculados mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucciones. (**sysadmin** es necesaria cuando se usa la pertenencia a [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)|  
+|**bulkadmin**|Los miembros de la **bulkadmin** rol fijo de servidor puede ejecutar la `BULK INSERT` instrucción.|  
+|**diskadmin**|El **diskadmin** rol fijo de servidor se utiliza para administrar archivos de disco.|  
+|**dbcreator**|Los miembros del rol fijo de servidor **dbcreator** pueden crear, modificar, quitar y restaurar cualquier base de datos.|  
+|**pública**|Cada [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inicio de sesión pertenece a la **público** rol de servidor. Cuando a una entidad de seguridad de servidor no se le han concedido ni denegado permisos específicos para un objeto protegible, el usuario hereda los permisos concedidos al rol pública para ese elemento. Solo asigne los permisos públicos en cualquier objeto cuando desee que el objeto esté disponible para todos los usuarios. No puede cambiar la pertenencia en public.<br /><br /> **Nota:** **público** se implementa de manera diferente que otros roles y permisos pueden ser concedido, denegados o revocados desde los roles fijos de servidor público.|  
   
 ## <a name="permissions-of-fixed-server-roles"></a>Permisos de los roles fijos de servidor  
  Cada rol fijo de servidor cuenta con diversos permisos asignados. El gráfico siguiente muestra los permisos asignados a los roles de servidor.   
-![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/fixed-server-role-permissions.png)   
+![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
 >  El permiso **CONTROL SERVER** es similar, pero no idéntico al rol fijo de servidor **sysadmin** . Los permisos no conllevan la pertenencia a los roles y la pertenencia a los roles no otorga permisos. (Por ejemplo, **CONTROL SERVER** no implica la pertenencia al rol fijo de servidor. **sysadmin**). Sin embargo, en ocasiones, es posible hacer suplantaciones entre roles y permisos equivalentes. La mayoría de los comandos **DBCC** y muchos procedimientos del sistema necesitan pertenencia al rol fijo de servidor **sysadmin** . Para obtener una lista de 171 procedimientos almacenados del sistema que requieren la pertenencia a **sysadmin** , vea la siguiente publicación del blog de Andreas Wolter [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation - caveats (CONTROL SERVER frente a administradores del sistema: permisos, procedimientos del sistema, DBCC, creación automática de esquemas y escalación de privilegios - advertencias)](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
@@ -71,7 +71,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="server-level-permissions"></a>Permisos de nivel de servidor  
  Solo se pueden agregar a los roles de servidor definidos por el usuario los permisos de nivel de servidor. Para obtener una lista de los permisos en el nivel de servidor, ejecute la siguiente instrucción: Los permisos en el nivel de servidor son:  
   
-```tsql  
+```  
 SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;  
 ```  
   

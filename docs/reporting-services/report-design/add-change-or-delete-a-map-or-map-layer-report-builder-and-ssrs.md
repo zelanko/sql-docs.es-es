@@ -1,41 +1,46 @@
 ---
-title: "Agregar, cambiar o eliminar un mapa o una capa de mapa (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.maplayerproperties.general.f1"
-  - "10526"
-  - "sql13.rtp.rptdesigner.mappolygonlayerproperties.general.f1"
-  - "10529"
-  - "10525"
-  - "10535"
-  - "sql13.rtp.rptdesigner.mappointlayerproperties.general.f1"
-  - "sql13.rtp.rptdesigner.shared.layerfilters.f1"
-  - "sql13.rtp.rptdesigner.maplinelayerproperties.general.f1"
-  - "10524"
-  - "sql13.rtp.rptdesigner.maptilelayerproperties.general.f1"
-  - "10532"
-  - "sql13.rtp.rptdesigner.maplayerproperties.analyticaldata.f1"
-  - "10528"
-  - "10527"
-  - "sql13.rtp.rptdesigner.shared.layervisibility.f1"
+title: Agregar, cambiar o eliminar un mapa o una capa de mapa (generador de informes y SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.maplayerproperties.general.f1
+- "10526"
+- sql13.rtp.rptdesigner.mappolygonlayerproperties.general.f1
+- "10529"
+- "10525"
+- "10535"
+- sql13.rtp.rptdesigner.mappointlayerproperties.general.f1
+- sql13.rtp.rptdesigner.shared.layerfilters.f1
+- sql13.rtp.rptdesigner.maplinelayerproperties.general.f1
+- "10524"
+- sql13.rtp.rptdesigner.maptilelayerproperties.general.f1
+- "10532"
+- sql13.rtp.rptdesigner.maplayerproperties.analyticaldata.f1
+- "10528"
+- "10527"
+- sql13.rtp.rptdesigner.shared.layervisibility.f1
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 caps.latest.revision: 15
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 14
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 8c45b97760006a9939f44b41c018d04321060df9
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Agregar, cambiar o eliminar un mapa o una capa de mapa (Generador de informes y SSRS)
-  Un mapa es una colección de capas. Al agregar un mapa a un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], define la primera capa. Puede crear capas adicionales con el Asistente para capas de mapa.  
+# <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Agregar, cambiar o eliminar un mapa o una capa de mapa (Generador de informes y SSRS)
+  Un mapa es una colección de capas. Al agregar un mapa a un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , define la primera capa. Puede crear capas adicionales con el Asistente para capas de mapa.  
   
  La manera más fácil de agregar, quitar o cambiar las opciones de una capa es utilizar el asistente. También puede cambiar manualmente las opciones del panel Mapa. Para mostrar el panel **Mapa** , haga clic en el mapa en la superficie de diseño del informe. La figura siguiente muestra las partes del panel:  
   
@@ -47,12 +52,12 @@ caps.handback.revision: 14
   
 |Símbolo|Description|Cuándo se usa|  
 |------------|-----------------|-----------------|  
-|![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.png "rs_IconMapLayerWizard")|Asistente para capas de mapa|Para agregar una capa con un asistente, haga clic en **Asistente para nueva capa**.|  
-|![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.png "rs_IconMapAddLayer")|Agregar capa|Para agregar una capa manualmente, haga clic en **Agregar capa**y, a continuación, haga clic en el tipo de capa de mapa que desea agregar.|  
-|![rs_IconMapPolygonLayer](../../reporting-services/report-design/media/rs-iconmappolygonlayer.png "rs_IconMapPolygonLayer")|Capa de polígono|Agregue una capa de mapa que muestre áreas o formas basadas en conjuntos de coordenadas de un polígono.|  
-|![rs_IconMapLineLayer](../../reporting-services/report-design/media/rs-iconmaplinelayer.png "rs_IconMapLineLayer")|Capa de línea|Agregue una capa de mapa que muestre los trazados o rutas basados en conjuntos de coordenadas de una línea.|  
-|![rs_IconMapPointLayer](../../reporting-services/report-design/media/rs-iconmappointlayer.png "rs_IconMapPointLayer")|Capa de punto|Agregue una capa de mapa que muestre las ubicaciones basadas en los conjuntos de coordenadas de un punto.|  
-|![rs_IconMapTileLayer](../../reporting-services/report-design/media/rs-iconmaptilelayer.png "rs_IconMapTileLayer")|Capa de mosaico|Agregue una capa de mapa que muestre los mosaicos de Bing Maps que correspondan al área de la vista del mapa actual que se define en la ventanilla.|  
+|![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|Asistente para capas de mapa|Para agregar una capa con un asistente, haga clic en **Asistente para nueva capa**.|  
+|![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|Agregar capa|Para agregar una capa manualmente, haga clic en **Agregar capa**y, a continuación, haga clic en el tipo de capa de mapa que desea agregar.|  
+|![rs_IconMapPolygonLayer](../../reporting-services/report-design/media/rs-iconmappolygonlayer.gif "rs_IconMapPolygonLayer")|Capa de polígono|Agregue una capa de mapa que muestre áreas o formas basadas en conjuntos de coordenadas de un polígono.|  
+|![rs_IconMapLineLayer](../../reporting-services/report-design/media/rs-iconmaplinelayer.gif "rs_IconMapLineLayer")|Capa de línea|Agregue una capa de mapa que muestre los trazados o rutas basados en conjuntos de coordenadas de una línea.|  
+|![rs_IconMapPointLayer](../../reporting-services/report-design/media/rs-iconmappointlayer.gif "rs_IconMapPointLayer")|Capa de punto|Agregue una capa de mapa que muestre las ubicaciones basadas en los conjuntos de coordenadas de un punto.|  
+|![rs_IconMapTileLayer](../../reporting-services/report-design/media/rs-iconmaptilelayer.gif "rs_IconMapTileLayer")|Capa de mosaico|Agregue una capa de mapa que muestre los mosaicos de Bing Maps que correspondan al área de la vista del mapa actual que se define en la ventanilla.|  
   
  En la parte inferior del panel Mapa es el área de la vista Mapa. Para cambiar las opciones de centro o zoom del mapa, utilice las teclas de dirección para ajustar el centro de la vista y el control deslizante para ajustar el nivel de zoom.  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 14
   
 ##  <a name="ChangeLayer"></a> Cambiar las opciones de una capa con el Asistente para capas de mapa  
   
--   Ejecute el Asistente para capas de mapa. Este asistente le permite cambiar las opciones de una capa que creó utilizando el Asistente para capas de mapa. En el panel Mapa, haga clic con el botón secundario en la capa y, en la barra de herramientas, haga clic en el botón (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.png "rs_IconMapLayerWizard")) del Asistente para capas.  
+-   Ejecute el Asistente para capas de mapa. Este asistente le permite cambiar las opciones de una capa que creó utilizando el Asistente para capas de mapa. En el panel mapa, haga clic en la capa y, en la barra de herramientas, haga clic en el botón de Asistente de capa (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
      Para obtener más información, vea [Asistente para mapas y Asistente para capas de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
@@ -77,10 +82,10 @@ caps.handback.revision: 14
   
 1.  Haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  En la barra de herramientas, haga clic en el botón **Agregar capa** y, en la lista desplegable, haga clic en el tipo de capa que quiere agregar: **Punto**, **Línea** o **Polígono**.  
+2.  En la barra de herramientas, haga clic en el botón **Agregar capa** y, en la lista desplegable, haga clic en el tipo de capa que quiere agregar: **Punto**, **Línea**o **Polígono**.  
   
     > [!NOTE]  
-    >  Aunque puede agregar una capa de mapa y configurarla manualmente, recomendamos utilizar el Asistente para capas de mapa si desea agregar capas nuevas. Para iniciar el asistente en la barra de herramientas del panel Mapa, haga clic en el botón (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.png "rs_IconMapLayerWizard")) del Asistente para capas.  
+    >  Aunque puede agregar una capa de mapa y configurarla manualmente, recomendamos utilizar el Asistente para capas de mapa si desea agregar capas nuevas. Para iniciar el asistente desde la barra de herramientas del panel mapa, haga clic en el botón de Asistente de capa (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
 3.  Haga clic con el botón derecho en la capa y, después, haga clic en **Datos de la capa**.  
   
@@ -106,19 +111,19 @@ caps.handback.revision: 14
   
 1.  Haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  Haga clic con el botón derecho en el panel Mapa y, después, haga clic en **Datos de la capa**.  
+2.  Haga clic con el botón derecho en el panel Mapa y, después, haga clic en  **Datos de la capa**.  
   
 3.  Haga clic en **Filtros**.  
   
-4.  Defina una ecuación de filtro para limitar los datos analíticos que se usan en la presentación del mapa. Para obtener más información, vea [Ejemplos de ecuaciones de filtro &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
+4.  Defina una ecuación de filtro para limitar los datos analíticos que se usan en la presentación del mapa. Para más información, vea [Ejemplos de ecuaciones de filtro &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
 ##  <a name="PointProperties"></a> Para controlar las propiedades del punto para una capa de punto o para puntos centrales de polígonos  
   
 1.  Seleccione **General** en el cuadro de diálogo **Propiedades de punto de mapa** para cambiar las opciones de etiqueta, información sobre herramientas y tipo de marcador de los elementos de mapa siguientes:  
   
-    -   Todos los puntos dinámicos o incrustados de una capa de punto. Las reglas de color, reglas de tamaño y reglas de tipo de marcador de los puntos invalidan estas opciones. Para invalidar las opciones de un punto incrustado concreto, utilice la página [Map Embedded Point Properties Dialog Box, Marker](../Topic/Map%20Embedded%20Point%20Properties%20Dialog%20Box,%20Marker.md) .  
+    -   Todos los puntos dinámicos o incrustados de una capa de punto. Las reglas de color, reglas de tamaño y reglas de tipo de marcador de los puntos invalidan estas opciones. Para invalidar las opciones de un punto incrustado concreto, utilice la página [Map Embedded Point Properties Dialog Box, Marker](http://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) .  
   
-    -   El punto central de todos los polígonos dinámicos o incrustados de una capa de polígono. Las reglas de color, reglas de tamaño y reglas de tipo de marcador de los puntos centrales invalidan estas opciones. Para invalidar las opciones de un punto central concreto, use la página [Cuadro de diálogo de Propiedades de punto incrustado de mapa, Marcador](../Topic/Map%20Embedded%20Point%20Properties%20Dialog%20Box,%20Marker.md).  
+    -   El punto central de todos los polígonos dinámicos o incrustados de una capa de polígono. Las reglas de color, reglas de tamaño y reglas de tipo de marcador de los puntos centrales invalidan estas opciones. Para invalidar las opciones de un punto central concreto, use la página [Cuadro de diálogo de Propiedades de punto incrustado de mapa, Marcador](http://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) .  
   
 ##  <a name="Embedded"></a> Para especificar datos incrustados como un origen de datos espaciales  
   
@@ -148,7 +153,7 @@ caps.handback.revision: 14
 4.  En **Nombre de archivo**, escriba la ubicación del archivo de forma ESRI o haga clic en **Examinar** para seleccionar un archivo de forma ESRI.  
   
     > [!NOTE]  
-    >  Si el archivo de forma está en el equipo local, los datos espaciales se incrustan en la definición de informe. Para recuperar los datos dinámicamente cuando se procesa el informe, debe cargar el archivo de forma ESRI .shp y su archivo auxiliar .dbf en el servidor de informes. Para obtener más información, vea cómo cargar un archivo o informe (Administrador de informes) en la [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312), en los Libros en pantalla de SQL Server.  
+    >  Si el archivo de forma está en el equipo local, los datos espaciales se incrustan en la definición de informe. Para recuperar los datos dinámicamente cuando se procesa el informe, debe cargar el archivo de forma ESRI .shp y su archivo auxiliar .dbf en el servidor de informes. Para obtener más información, vea cómo cargar un archivo o informe (Administrador de informes) en la [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) , en los Libros en pantalla de SQL Server.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -173,7 +178,7 @@ caps.handback.revision: 14
 2.  En la barra de herramientas, haga clic en el botón **Agregar capa** y, en la lista desplegable, haga clic en **Capa de mosaico**.  
   
     > [!NOTE]  
-    >  Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](http://go.microsoft.com/fwlink/?LinkId=151371) y [Declaración de privacidad](http://go.microsoft.com/fwlink/?LinkId=151372).  
+    >  Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](http://go.microsoft.com/fwlink/?LinkId=151371).  
   
 3.  Haga clic con el botón derecho en la capa de mosaico en el panel Mapa y, después, haga clic en **Propiedades del mosaico**.  
   
@@ -250,7 +255,7 @@ caps.handback.revision: 14
   
      También puede ocultar la capa de forma condicional. Para obtener más información, vea [Ocultar un elemento &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Solucionar problemas de los informes: informes de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   

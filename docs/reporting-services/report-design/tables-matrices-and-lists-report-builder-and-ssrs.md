@@ -1,51 +1,56 @@
 ---
-title: "Tablas, matrices y listas (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.tablixgroup.f1"
-  - "10045"
-  - "sql13.rtp.rptdesigner.tablix.visibility.f1"
-  - "10039"
-  - "sql13.rtp.rptdesigner.groupproperties.visibility.f1"
-  - "10104"
-  - "10047"
-  - "sql13.rtp.rptdesigner.groupproperties.advanced.f1"
-  - "10044"
-  - "sql13.rtp.rptdesigner.groupproperties.filters.f1"
-  - "sql13.rtp.rptdesigner.tablix.sort.f1"
-  - "sql13.rtp.rptdesigner.tablix.general.f1"
-  - "sql13.rtp.rptdesigner.groupproperties.general.f1"
-  - "sql13.rtp.rptdesigner.groupproperties.variables.f1"
-  - "10046"
-  - "10101"
-  - "sql13.rtp.rptdesigner.tablix.filter.f1"
-  - "sql13.rtp.rptdesigner.groupproperties.sort.f1"
-  - "10042"
-  - "10041"
-  - "10102"
-  - "10103"
-  - "10043"
-  - "sql13.rtp.rptdesigner.groupproperties.pagebreaks.f1"
+title: Tablas, Matrices y listas (generador de informes y SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.tablixgroup.f1
+- "10045"
+- sql13.rtp.rptdesigner.tablix.visibility.f1
+- "10039"
+- sql13.rtp.rptdesigner.groupproperties.visibility.f1
+- "10104"
+- "10047"
+- sql13.rtp.rptdesigner.groupproperties.advanced.f1
+- "10044"
+- sql13.rtp.rptdesigner.groupproperties.filters.f1
+- sql13.rtp.rptdesigner.tablix.sort.f1
+- sql13.rtp.rptdesigner.tablix.general.f1
+- sql13.rtp.rptdesigner.groupproperties.general.f1
+- sql13.rtp.rptdesigner.groupproperties.variables.f1
+- "10046"
+- "10101"
+- sql13.rtp.rptdesigner.tablix.filter.f1
+- sql13.rtp.rptdesigner.groupproperties.sort.f1
+- "10042"
+- "10041"
+- "10102"
+- "10103"
+- "10043"
+- sql13.rtp.rptdesigner.groupproperties.pagebreaks.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: aa7d5ba489e0f23c6802a1d6596a22f2263decd8
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tablas, matrices y listas (Generador de informes y SSRS)
- En [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], las tablas, matrices y listas son *regiones de datos* en las que se muestran los datos del informe paginado en celdas organizadas en filas y columnas. Normalmente, las celdas contienen datos como texto, fechas y números, pero también pueden contener medidores, gráficos o elementos de informe como imágenes. Colectivamente, las tablas, matrices y listas se denominan a menudo regiones de datos *Tablix*.  
+# <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tablas, matrices y listas (Generador de informes y SSRS)
+ En [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], las tablas, matrices y listas son *regiones de datos* en las que se muestran los datos del informe paginado en celdas organizadas en filas y columnas. Normalmente, las celdas contienen datos como texto, fechas y números, pero también pueden contener medidores, gráficos o elementos de informe como imágenes. Colectivamente, las tablas, matrices y listas se denominan a menudo regiones de datos *Tablix* .  
   
- La plantillas de tabla, matriz y lista se generan en la región de datos Tablix, que es una cuadrícula flexible que puede mostrar datos en celdas. En las plantillas para matrices y tablas, las celdas se organizan en filas y columnas. Puesto que las plantillas son variaciones de la región de datos Tablix genérica subyacente, los datos se pueden mostrar en combinaciones de formatos de plantilla; la tabla, matriz o lista se pueden cambiar al diseñar el informe, de forma que contengan características de otra región de datos. Por ejemplo, si agrega una tabla y se da cuenta de que no le resulta útil, puede agregar grupos de columnas para convertir la tabla en una matriz.  
+ La plantillas de tabla, matriz y lista se generan en la región de datos Tablix, que es una cuadrícula flexible que puede mostrar datos en celdas. En las plantillas para matrices y tablas, las celdas se organizan en filas y columnas. Puesto que las plantillas son variaciones de la región de datos tablix genérica subyacente, puede mostrar los datos en la combinación de formatos de plantilla y cambiar la tabla, matriz o lista en para incluir las características de otra región de datos como diseñar el informe. Por ejemplo, si agrega una tabla y se da cuenta de que no le resulta útil, puede agregar grupos de columnas para convertir la tabla en una matriz.  
   
  Las regiones de datos de matriz y tabla pueden mostrar relaciones complejas entre los datos mediante la inclusión de tablas, matrices, listas, gráficos y medidores anidados. Las tablas y matrices tienen un diseño tabular y sus datos proceden de un conjunto de datos único, generado a partir de un origen de datos único. La diferencia clave entre las tablas y las matrices es que las tablas solo pueden tener grupos de filas, mientras que las matrices tienen grupos de filas y grupos de columnas.  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 10
 ##  <a name="Table"></a> Table  
  use una tabla para mostrar datos detallados, para organizar los datos en grupos de filas, o para ambas cosas. La plantilla Tabla contiene tres columnas con una fila de encabezado de tabla y una fila de detalles para los datos. En la ilustración siguiente, se muestra la plantilla de tabla inicial, seleccionada en la superficie de diseño:  
   
- ![Plantilla de tabla en la superficie de diseño, seleccionada](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "Plantilla de tabla en la superficie de diseño, seleccionada")  
+ ![Plantilla de tabla en la superficie de diseño, seleccionada](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "plantilla de tabla en la superficie de diseño, seleccionada")  
   
  Puede agrupar los datos por un solo campo, por varios campos o escribiendo su propia expresión. Puede crear grupos anidados o independientes, grupos adyacentes y presentar valores para datos agrupados, o agregar totales a los grupos. Por ejemplo, si la tabla tiene un grupo de filas llamado [Categoría], puede agregar un subtotal para cada grupo, así como un total general para el informe. Para mejorar la apariencia de tabla y resaltar los datos a los que desee dar énfasis, puede combinar celdas y aplicar formato a los datos y encabezados de tabla.  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 10
 ##  <a name="Matrix"></a> Matriz  
  use una matriz para mostrar resúmenes de los datos agregados agrupados en filas y en columnas; algo similar a una tabla dinámica o a una tabla de referencias cruzadas. El número de valores únicos por cada grupo de filas y columnas determina el número de filas y de columnas de los grupos. En la ilustración siguiente, se muestra la plantilla de matriz inicial, seleccionada en la superficie de diseño:  
   
- ![Nueva matriz agregada desde el cuadro de herramientas, seleccionada](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nueva matriz agregada desde el cuadro de herramientas, seleccionada")  
+ ![Nueva matriz que agregó en cuadro de herramientas seleccionado](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "nueva matriz que agregó en el cuadro de herramientas, seleccionada")  
   
  Puede agrupar datos por varios campos o expresiones en grupos de filas y de columnas. En tiempo de ejecución, cuando se combinan las regiones de datos y los datos del informe, una matriz crece en horizontal y vertical en la página al irse agregando columnas a los grupos de columnas y filas a los grupos de filas. Las celdas de la matriz muestran valores agregados cuyo ámbito es la intersección de los grupos de filas y de columnas a los que pertenece la celda. Por ejemplo, si la matriz tiene un grupo de filas (Categoría) y dos grupos de columnas (Territorio y Año) que muestran la suma de las ventas, el informe muestra dos celdas con las sumas de ventas de cada valor del grupo de categorías. El ámbito de las celdas es las dos intersecciones: Categoría y Territorio y Categoría y Año. La matriz puede tener grupos anidados y adyacentes. Los grupos anidados tienen una relación primario-secundario y los adyacentes una relación del mismo nivel. Puede agregar los subtotales a cualquiera de los niveles de grupos anidados de filas y columnas de la matriz.  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 10
 ##  <a name="List"></a> Lista  
  use una lista para crear un diseño de forma libre. Con una lista, no está limitado a un diseño de cuadrícula, sino que puede colocar libremente los campos dentro de la lista. Use una lista para diseñar un formulario que permita mostrar muchos campos de conjunto de datos, o como contenedor para mostrar en paralelo varias regiones de datos para los datos agrupados. Por ejemplo, puede definir un grupo para una lista; agregar una tabla, un gráfico y una imagen; y mostrar los valores en forma de tabla y de gráfico para cada valor del grupo, tal y como lo haría con un registro de un empleado o de un paciente.  
   
- ![Nueva lista agregada desde el cuadro de herramientas, seleccionada](../../reporting-services/report-design/media/rs-listtemplatenewselected.png "Nueva lista agregada desde el cuadro de herramientas, seleccionada")  
+ ![Agrega la nueva lista de cuadro de herramientas, seleccionada](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "agrega la nueva lista de cuadro de herramientas, seleccionada")  
   
  Para más información, vea [Crear facturas y formularios con listas].  
   
@@ -110,7 +115,7 @@ caps.handback.revision: 10
   
  Para continuar el desarrollo de una tabla, matriz o lista, puede agregar cualquier característica de Tablix. Entre las características de Tablix se incluye la visualización de datos detallados o agregados para los datos agrupados en filas y columnas. Puede crear grupos anidados, grupos adyacentes independientes o grupos recursivos. Puede filtrar y ordenar datos agrupados, y combinar grupos fácilmente mediante la inclusión de varias expresiones de grupo en una definición de grupo.  
   
- También puede agregar totales para un grupo o totales generales para la región de datos. Puede ocultar filas o columnas para simplificar un informe y permitir al usuario alternar entre mostrar u ocultar los datos, como en un informe detallado. Para más información, vea [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling the tablix data region display on a report page.md).  
+ También puede agregar totales para un grupo o totales generales para la región de datos. Puede ocultar filas o columnas para simplificar un informe y permitir al usuario alternar entre mostrar u ocultar los datos, como en un informe detallado. Para más información, vea [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
 ##  <a name="HowTo"></a> Temas de procedimientos  
  En esta sección se describen procedimientos que muestran, paso a paso, cómo trabajar con tablas, matrices y listas en los informes; cómo mostrar los datos en filas y columnas, agregar y eliminar columnas, combinar celdas, e incluir subtotales para los grupos de filas y columnas.  
@@ -148,7 +153,7 @@ caps.handback.revision: 10
  [Agregar datos a una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
  Proporciona información detallada sobre cómo agregar a una región de datos Tablix datos detallados y agrupados, subtotales y totales, y etiquetas.  
   
- [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling the tablix data region display on a report page.md)  
+ [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)  
  Se describen las propiedades que puede modificar en una región de datos Tablix para cambiar la manera en la que aparece dicha región al verla en un informe.  
   
  [Controlar los encabezados de fila y de columna &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling-row-and-column-headings-report-builder-and-ssrs.md)  
@@ -160,8 +165,8 @@ caps.handback.revision: 10
  [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)  
  Se explica qué son los grupos y cuándo utilizarlos, y se describen los grupos disponibles para las distintas regiones de datos Tablix.  
   
-## Vea también  
- [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+## <a name="see-also"></a>Vea también  
+ [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
  [Vincular varias regiones de datos al mismo conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   

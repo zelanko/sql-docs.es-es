@@ -1,38 +1,43 @@
 ---
-title: "Establecer la configuraci&#243;n regional de un informe o un cuadro de texto (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "configuraciones regionales [Reporting Services]"
+title: "Establecer la configuración regional para un informe o un cuadro de texto (Reporting Services) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- locales [Reporting Services]
 ms.assetid: df115b01-184b-47f0-b5ec-0ad965ff9bee
 caps.latest.revision: 43
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 43
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3ce894281c47d0e54837917b05e785e9d106cdfa
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Establecer la configuraci&#243;n regional de un informe o un cuadro de texto (Reporting Services)
+# <a name="set-the-locale-for-a-report-or-text-box-reporting-services"></a>Establecer la configuración regional de un informe o un cuadro de texto (Reporting Services)
   La propiedad **Language** de un informe o un cuadro de texto contiene la configuración regional, que determina los formatos predeterminados para mostrar los datos de informe que difieren según el idioma y la región, como por ejemplo, la fecha, la moneda o los valores numéricos. La propiedad **Language** de un cuadro de texto invalida la propiedad **Language** del informe. Si no se especifica ningún valor para **Language**, Reporting Services usa la configuración regional del sistema operativo del servidor de informes para los informes publicados o la del equipo en que se crea el informe para la vista previa del informe.  
   
  Para los informes HTML, puede invalidar el valor de **Language** predeterminado y usar el idioma especificado por el encabezado HTTP del cliente de explorador usando el campo integrado User!Language en una expresión para la propiedad **Language** de un informe o un cuadro de texto.  
   
  También puede especificar la propiedad **Language** para un informe en una dirección URL. Para más información, vea [Establecer el idioma para los parámetros de informe en una dirección URL](../../reporting-services/set-the-language-for-report-parameters-in-a-url.md).  
   
-### Para establecer la configuración regional de un informe  
+### <a name="to-set-the-locale-for-a-report"></a>Para establecer la configuración regional de un informe  
   
 1.  En la vista Diseño, haga clic fuera de la superficie de diseño del informe para seleccionar el informe.  
   
 2.  En el panel Propiedades, en la propiedad **Language** , escriba o seleccione el idioma que desea usar para el informe.  
   
-### Para establecer la configuración regional de un cuadro de texto  
+### <a name="to-set-the-locale-for-a-text-box"></a>Para establecer la configuración regional de un cuadro de texto  
   
 1.  En la vista Diseño, seleccione el cuadro de texto al que desea aplicar la configuración regional.  
   
@@ -50,8 +55,8 @@ caps.handback.revision: 43
   
     -   En la propiedad **UnicodeBiDi** , seleccione el nivel de incrustación bidireccional que se va a usar en el cuadro de texto.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Consideraciones de diseño de soluciones para las implementaciones multilingües o globales (Reporting Services)](http://msdn.microsoft.com/es-es/55630eca-d1e5-4ac6-93c7-9a3f15c0d08a)  
+ [Consideraciones de diseño de soluciones para las implementaciones multilingües o globales (Reporting Services)](http://msdn.microsoft.com/en-us/55630eca-d1e5-4ac6-93c7-9a3f15c0d08a)  
   
   

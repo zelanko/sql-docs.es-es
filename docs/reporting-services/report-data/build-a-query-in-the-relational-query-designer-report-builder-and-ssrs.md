@@ -1,29 +1,34 @@
 ---
-title: "Crear una consulta en el Dise&#241;ador de consultas relacionales (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Crear una consulta en el Diseñador de consultas relacionales (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 28b25861-f3b4-4c3e-a9b0-03d6e4cfea26
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8f7c711b3cd56302b05d7dcf4f3045283c376d73
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Crear una consulta en el Dise&#241;ador de consultas relacionales (Generador de informes y SSRS)
+# <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>Crear una consulta en el Diseñador de consultas relacionales (Generador de informes y SSRS)
   Los diseñadores de consultas le ayudan a especificar los datos que se deben recuperar de un origen de datos externo para un conjunto de datos de informe. Puede utilizar un diseñador de consultas cuando genere una consulta en un asistente o cree una consulta de conjunto de datos.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Una conjunto de datos se basa en un origen de datos. El tipo de origen de datos y el entorno de creación determina el diseñador de consultas que se ha de abrir al definir la consulta de conjunto de datos. Las características del diseñador de consultas varían en función del origen de datos subyacente. Para más información sobre las capas de datos, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md) o [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Una conjunto de datos se basa en un origen de datos. El tipo de origen de datos y el entorno de creación determina el diseñador de consultas que se ha de abrir al definir la consulta de conjunto de datos. Las características del diseñador de consultas varían en función del origen de datos subyacente. Para más información sobre las capas de datos, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) o [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
  Puede utilizar un diseñador de consultas para las siguientes tareas:  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 7
   
  Para más información, vea [Interfaz de usuario del Diseñador de consultas relacionales &#40;Generador de informes&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
   
-### Para crear una consulta para un conjunto de datos incrustado en la vista de diseño del informe  
+### <a name="to-build-a-query-for-an-embedded-dataset-in-report-design-view"></a>Para crear una consulta para un conjunto de datos incrustado en la vista de diseño del informe  
   
 1.  Abra el diseñador de consultas. En el panel Datos de informe, haga clic con el botón derecho en el conjunto de datos y, después, haga clic en **Consulta**.  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 7
   
      La lista de campos de conjunto de datos aparecerá en el panel Datos de informe.  
   
-### Para especificar los límites de una consulta  
+### <a name="to-specify-limits-for-a-query"></a>Para especificar los límites de una consulta  
   
 1.  En el diseñador de consultas relacionales, compruebe que los campos están seleccionados y que aparecen en el panel **Campos seleccionados** .  
   
@@ -81,22 +86,22 @@ caps.handback.revision: 7
   
  La lista de campos de conjunto de datos aparecerá en el panel Datos de informe.  
   
-### Para ver un conjunto de resultados de consulta  
+### <a name="to-view-a-query-result-set"></a>Para ver un conjunto de resultados de consulta  
   
 1.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar consulta (!)**.  
   
     > [!NOTE]  
-    >  El diseñador de consultas utiliza las credenciales de tiempo de diseño para ejecutar la consulta y recuperar el conjunto de resultados. Para más información, vea [Especificar credenciales en el Generador de informes](../Topic/Specify%20Credentials%20in%20Report%20Builder.md).  
+    >  El diseñador de consultas utiliza las credenciales de tiempo de diseño para ejecutar la consulta y recuperar el conjunto de resultados. Para más información, vea [Especificar credenciales en el Generador de informes](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
  La consulta se ejecuta en el origen de datos y devuelve datos de ejemplo en el panel Resultados de la consulta.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Agregar datos de orígenes de datos externos &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [Diseñadores de consultas &#40;Generador de informes&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md)   
+ [Diseñadores de consultas &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)   
  [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Vista de diseño de informe &#40;Generador de informes&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [Vista de diseño de conjunto de datos compartidos &#40;Generador de informes&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
- [Diseñadores de consultas de Reporting Services](../Topic/Reporting%20Services%20Query%20Designers.md)  
+ [Diseñadores de consultas de Reporting Services](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)  
   
   

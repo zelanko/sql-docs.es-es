@@ -1,7 +1,7 @@
 ---
 title: Cifrar una columna de datos | Microsoft Docs
 ms.custom: 
-ms.date: 03/18/2016
+ms.date: 05/22/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1451071485e8994dd90ea447e28d9b32e511dd1a
+ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
+ms.openlocfilehash: c27f699eb519c1e9a72756c26e8b320869786c6c
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="encrypt-a-column-of-data"></a>Cifrar una columna de datos
@@ -55,7 +55,14 @@ ms.lasthandoff: 04/11/2017
 -   Algún permiso en la clave y no debe haberse denegado el permiso VIEW DEFINITION.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
-  
+
+Para usar los ejemplos siguientes deben tener una clave maestra de base de datos. Si la base de datos aún no tiene una clave maestra de base de datos, cree uno mediante la ejecución de la siguiente instrucción que proporcionar la contraseña:   
+```  
+CREATE MASTER KEY ENCRYPTION BY   
+PASSWORD = '<some strong password>';  
+```  
+Siempre la clave maestra de base de datos de copia de seguridad. Para obtener más información sobre las claves maestras de base de datos, vea [CREATE MASTER KEY &#40; Transact-SQL &#41; ](../../../t-sql/statements/create-master-key-transact-sql.md).
+
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Para cifrar una columna de datos usando un cifrado simétrico simple  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
@@ -66,11 +73,7 @@ ms.lasthandoff: 04/11/2017
   
     ```  
     USE AdventureWorks2012;  
-    --If there is no master key, create one now.   
-    IF NOT EXISTS   
-        (SELECT * FROM sys.symmetric_keys WHERE symmetric_key_id = 101)  
-        CREATE MASTER KEY ENCRYPTION BY   
-        PASSWORD = '23987hxJKL95QYV4369#ghf0%lekjg5k3fd117r$$#1946kcj$n44ncjhdlj'  
+    
     GO  
   
     CREATE CERTIFICATE Sales09  
@@ -129,13 +132,6 @@ ms.lasthandoff: 04/11/2017
   
     ```  
     USE AdventureWorks2012;  
-    GO  
-  
-    --If there is no master key, create one now.   
-    IF NOT EXISTS   
-        (SELECT * FROM sys.symmetric_keys WHERE symmetric_key_id = 101)  
-        CREATE MASTER KEY ENCRYPTION BY   
-        PASSWORD = '23987hxJKL969#ghf0%94467GRkjg5k3fd117r$$#1946kcj$n44nhdlj'  
     GO  
   
     CREATE CERTIFICATE HumanResources037  

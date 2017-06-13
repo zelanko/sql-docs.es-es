@@ -1,25 +1,32 @@
 ---
-title: "Elementos de informe en el Dise&#241;ador de informes (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.components.f1"
+title: "Elementos de informes en el Diseñador de informes (SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 66d5312047b516176e8aa1b331b36745bcdb20d9
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Elementos de informe en el Dise&#241;ador de informes (SSRS)
+
+# <a name="report-parts-in-report-designer-ssrs"></a>Elementos de informe en el Diseñador de informes (SSRS)
+
   En el Diseñador de informes, después de crear tablas, gráficos y otros elementos de informe paginado en un proyecto, puede publicarlos como *elementos de informe* en un servidor de informes o en el sitio de SharePoint integrado con un servidor de informes para que su usuario y otros usuarios puedan reutilizarlos en otros informes.  
   
  En general, los elementos de informe funcionan de la misma manera en el Diseñador de informes y en el Generador de informes. Para más información sobre las funciones básicas, vea [Elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -27,7 +34,7 @@ caps.handback.revision: 11
  Hay diferencias fundamentales en el modo en que los elementos de informe se usan en el Diseñador de informes. Una diferencia principal es el flujo de trabajo. El Generador de informes habilita la creación colaborativa: creo un elemento de informe y lo publico. Puede reutilizarlo, modificarlo y volver a publicarlo. En el Diseñador de informes la publicación es unidireccional: se puede publicar un elemento de informe en el Diseñador de informes y reutilizarlo. Pero no se puede reutilizar un elemento de informe existente en un informe en el Diseñador de informes. En este tema se elaboran estas diferencias, después de una información general rápida de los elementos de informe.  
   
 ##  <a name="ComponentWorkflow"></a> Ciclo de vida de la publicación de un elemento de informe  
- ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.png "rs_ComponentCreation")  
+ ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  En el Diseñador de informes, la persona A crea un proyecto que contiene un informe con un gráfico que depende de un conjunto de datos incrustado.  
   
@@ -35,7 +42,7 @@ caps.handback.revision: 11
   
 3.  La persona B crea un informe en blanco en el Generador de informes y agrega el gráfico a él. El gráfico forma ahora parte del informe de la persona B, junto con el conjunto de datos incrustado. La persona B puede modificar las instancias del gráfico y el conjunto de datos que están en el informe. Esto no tendrá ningún efecto en las instancias del gráfico y el conjunto de datos en el servidor de informes, ni interrumpirá la relación entre las instancias en el informe y en el servidor de informes.  
   
-     ![rs_BIDScomponentupdate](../../reporting-services/report-design/media/rs-bidscomponentupdate.png "rs_BIDScomponentupdate")  
+     ![rs_BIDScomponentupdate](../../reporting-services/report-design/media/rs-bidscomponentupdate.gif "rs_BIDScomponentupdate")  
   
 4.  En el Diseñador de informes, la persona A modifica el gráfico en el informe original.  
   
@@ -74,9 +81,8 @@ caps.handback.revision: 11
   
 2.  Implemente el informe.  
   
- Al implementar el informe, el elemento de informe se publica en un sitio de SharePoint o servidor de informes, y otros pueden reutilizarla. Para publicar un elemento de informe, debe disponer de una conexión y de los permisos necesarios en un servidor de informes de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] al implementar el informe.  
+ Al implementar el informe, el elemento de informe se publica en un sitio de SharePoint o servidor de informes, y otros pueden reutilizarla. Para publicar un elemento de informe, debe tener una conexión y los permisos necesarios en un servidor de informes al implementar el informe.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
 ##  <a name="SearchReuseComponents"></a> Reutilizar elementos de informe  
  A diferencia de lo que ocurre en el Generador de informes, no puede buscar y reutilizar un elemento de informe en un proyecto distinto de aquel en el que se creó.  
@@ -89,10 +95,9 @@ caps.handback.revision: 11
  Puede modificar y, a continuación, volver a publicar el elemento de informe en el sitio o servidor. Los autores de un informe del Generador de informes que hayan agregado ese elemento de informe a un informe son informados del cambio la próxima vez que lo abran. Pueden elegir aceptar sus cambios o no.  
   
  También puede decidir publicar como nuevo un informe que ya haya publicado. En el cuadro de diálogo Publicación de elementos de informe, haga clic en Publicar como un nuevo elemento de informe. Este nuevo elemento de informe tiene un nuevo identificador único y no tiene relación con el elemento de informe anterior.  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
-  
-## Vea también  
- [Administrar elementos de informe](../../reporting-services/report-design/managing-report-parts.md)  
-  
-  
+
+## <a name="next-steps"></a>Pasos siguientes
+
+[Administrar elementos de informe](../../reporting-services/report-design/managing-report-parts.md)  
+
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

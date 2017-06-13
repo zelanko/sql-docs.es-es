@@ -1,24 +1,29 @@
 ---
-title: "Guardar informes (Generador de informes) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Guardar informes (generador de informes) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c5d4f5efbe000946f543fd9b22b5a45f48e06050
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Guardar informes (Generador de informes)
-  En el Generador de informes puede guardar un informe pagina en un servidor de informes de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], una biblioteca de SharePoint, un recurso compartido de archivos en el que tenga permiso de escritura o en su equipo. 
+# <a name="saving-reports-report-builder"></a>Guardar informes (Generador de informes)
+  En el Generador de informes puede guardar un informe pagina en un servidor de informes de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , una biblioteca de SharePoint, un recurso compartido de archivos en el que tenga permiso de escritura o en su equipo. 
   
 Cuando guarda un informe, lo que realmente se guarda es la definición de informe, que describe su diseño. No se guardan los datos. Cada vez que ejecuta el informe, sus datos se actualizan y es probable que sean diferentes a los de antes de la ejecución.  
   
@@ -37,7 +42,7 @@ Cuando guarda un informe, lo que realmente se guarda es la definición de inform
   
 -   Los informes están disponibles para todos los que tengan permiso de acceso a la carpeta en la que guardaron.  
   
--   Los informes se pueden administrar y ver en el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   Los informes se pueden administrar y ver en el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 -   Los recursos de informe como los orígenes de datos, las imágenes y los subinformes están almacenadas en un lugar para facilitar el acceso.  
   
@@ -62,9 +67,9 @@ Cuando guarda un informe, lo que realmente se guarda es la definición de inform
   
 -   [Guardar un informe en una biblioteca de SharePoint &#40;Generador de informes&#41;](../../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
    
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Informes, elementos de informe y definiciones de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Instalar, desinstalar y asistencia del Generador de informes 3.0](../Topic/Install%20and%20Uninstall%20Report%20Builder.md)   
+ [Instalar, desinstalar y asistencia del Generador de informes 3.0](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Imprimir informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  

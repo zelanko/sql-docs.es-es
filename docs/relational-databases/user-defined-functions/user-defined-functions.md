@@ -18,10 +18,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f4c8c44b4c07b26676fd424acb36ea7ccce19df3
+ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
+ms.openlocfilehash: 12297570eae81459949b6c910fba26525e27d9ed
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/05/2017
 
 ---
 # <a name="user-defined-functions"></a>Funciones definidas por el usuario
@@ -44,7 +44,8 @@ ms.lasthandoff: 04/11/2017
   
      Una operación que filtra datos basándose en restricciones complejas que no se puede expresar en una sola expresión escalar se puede expresar como una función. La función se puede invocar en la cláusula WHERE para reducir el número de filas que se envían al cliente.  
   
-> **NOTA:** Las funciones [!INCLUDE[tsql](../../includes/tsql-md.md)] definidas por el usuario en consultas solo se pueden ejecutar en un único subproceso (plan de ejecución en serie).  
+> [!NOTE]
+> Las funciones definidas por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)] en consultas solo se pueden ejecutar en un único subproceso (plan de ejecución en serie).  
   
 ##  <a name="FunctionTypes"></a> Tipos de funciones  
 **Función escalar**  
@@ -62,12 +63,13 @@ ms.lasthandoff: 04/11/2017
   
  Las instrucciones de un bloque BEGIN...END no pueden producir efectos secundarios. Los efectos secundarios de una función son cambios definitivos del estado de un recurso que está fuera del ámbito de la función, como una modificación de una tabla de base de datos. Los únicos cambios que pueden realizar las instrucciones de la función son cambios en objetos locales de la función, como cursores o variables locales. En una función no se pueden llevar a cabo algunas acciones como, por ejemplo, modificar tablas de base de datos, realizar operaciones en cursores no locales de la función, enviar correo electrónico, intentar modificar un catálogo o generar un conjunto de resultados que se devuelve al usuario.  
   
-> **NOTA:** Si una instrucción CREATE FUNCTION genera efectos secundarios sobre recursos que no existen en el momento que se emite la instrucción CREATE FUNCTION, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta la instrucción. Sin embargo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no ejecuta la función cuando ésta se invoca.  
+> [!NOTE]
+> Si una instrucción CREATE FUNCTION genera efectos secundarios sobre recursos que no existen en el momento que se emite la instrucción CREATE FUNCTION, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta la instrucción. Sin embargo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no ejecuta la función cuando ésta se invoca.  
   
  El número de veces que se ejecuta realmente una función especificada en una consulta puede variar entre los planes de ejecución generados por el optimizador. Un ejemplo es una función invocada por una subconsulta en una cláusula WHERE. El número de veces que se ejecuta la subconsulta y su función puede variar con diferentes rutas de acceso seleccionadas por el optimizador.  
   
 ##  <a name="ValidStatements"></a> Instrucciones válidas en una función  
- Entre los tipos de instrucciones válidos en una función se incluyen:  
+Entre los tipos de instrucciones válidos en una función se incluyen:  
   
 -   Las instrucciones DECLARE pueden utilizarse para definir variables y cursores de datos locales de la función.  
   
@@ -110,7 +112,7 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="SchemaBound"></a> Funciones enlazadas a esquema  
  CREATE FUNCTION admite una cláusula SCHEMABINDING que enlaza la función con el esquema de cualquier objeto al que haga referencia, como tablas, vistas y otras funciones definidas por el usuario. Se producen errores al intentar modificar o quitar objetos a los que hace referencia una función enlazada con un esquema.  
   
- Para poder especificar SCHEMABINDING en [CREATE FUNCTION](https://msdn.microsoft.com/library/ms186755.aspx) deben cumplirse estas condiciones:  
+ Para poder especificar SCHEMABINDING en [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) deben cumplirse estas condiciones:  
   
 -   Todas las vistas y las funciones definidas por el usuario a las que hace referencia la función deben estar enlazadas con un esquema.  
   
@@ -138,7 +140,4 @@ ms.lasthandoff: 04/11/2017
 |Describe cómo puede ver la definición de una función definida por el usuario.|[Ver funciones definidas por el usuario](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   
-
-
-
 

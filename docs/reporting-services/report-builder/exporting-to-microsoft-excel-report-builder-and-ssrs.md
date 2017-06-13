@@ -1,26 +1,31 @@
 ---
-title: "Exportar a Microsoft Excel (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Exportar a Microsoft Excel (generador de informes y SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 01/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 caps.latest.revision: 28
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 27
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 4f612dc69be670d6a99418fbf8e17f34fb8e9d7c
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Exportar a Microsoft Excel (Generador de informes y SSRS)
+# <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exportar a Microsoft Excel (Generador de informes y SSRS)
   La extensión de representación de Excel [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] representa un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el formato de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (.xlsx). Con la extensión de representación de Excel, el ancho de las columnas de Excel refleja más exactamente el ancho de las columnas de los informes.  
   
- El formato es Office Open XML. El tipo de contenido de los archivos generados por este representador es **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet**, y la extensión de los archivos es .xlsx.  
+ El formato es Office Open XML. El tipo de contenido de los archivos generados por este representador es **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** , y la extensión de los archivos es .xlsx.  
   
  Puede cambiar parte de la configuración predeterminada de este representador cambiando los valores de configuración de la información del dispositivo. Para más información, vea [Excel Device Information Settings](../../reporting-services/excel-device-information-settings.md).  
   
@@ -36,9 +41,11 @@ caps.handback.revision: 27
   
 -   El ancho máximo de las columnas en Excel es de 255 caracteres o 1726,5 puntos. El representador no comprueba que el ancho de columna es menor que el límite.  
   
--   El alto máximo de las filas es de 409 puntos. Si el contenido de la fila provoca que el alto de fila supere los 409 puntos, el contenido se divide.  
-  
 -   El número máximo de caracteres de una celda es de 32.767. Si se supera este límite, el representador muestra un mensaje de error.  
+  
+-   El alto máximo de las filas es de 409 puntos. Si el contenido de la fila provoca que el alto de fila supere los 409 puntos, la celda de Excel muestra un importe parcial de texto hasta 409 puntos. El resto del contenido de la celda está aún dentro de la celda (max número de Excel máximo de caracteres de 32.767).
+
+-  Dado que el alto de fila máximo es 409 puntos, si el alto de la celda en el informe definido es algo mayor que 409 puntos, Excel divide el contenido de la celda en varias filas.
   
 -   En Excel no se define un número máximo de hojas de cálculo, pero hay una serie de factores externos, como la memoria y el espacio en disco, que pueden hacer que se apliquen limitaciones.  
   
@@ -48,17 +55,17 @@ caps.handback.revision: 27
   
  Para obtener más información sobre las limitaciones de Excel, vea [Especificaciones y límites de Excel](https://support.office.com/article/Excel-specifications-and-limits-CA36E2DC-1F09-4620-B726-67C00B05040F).  
   
-### Tamaño de los archivos de Excel 2003 (.xls)  
+### <a name="sizes-of-excel-2003-xls-files"></a>Tamaño de los archivos de Excel 2003 (.xls)  
   
 > [!IMPORTANT]  
->  La extensión de representación de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 ha quedado obsoleta. Para obtener más información, vea [Características obsoletas de SQL Server Reporting Services en SQL Server 2016](../Topic/Deprecated%20Features%20in%20SQL%20Server%20Reporting%20Services%20in%20SQL%20Server%202016.md).  
+>  La extensión de representación de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 ha quedado obsoleta. Para obtener más información, vea [Características obsoletas de SQL Server Reporting Services en SQL Server 2016](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
- Cuando los informes se exportan y guardan en Excel 2003, no se benefician de la optimización de archivos que Excel aplica automáticamente a sus archivos de libro *.xls. El mayor tamaño del archivo puede producir problemas al enviar por correo electrónico suscripciones y datos adjuntos. Para reducir el tamaño de los archivos\*.xls de los informes exportados, abra los archivos \*.xls y vuelva a guardar los libros. Al guardar de nuevo los libros se suele reducir el tamaño de los archivos entre un 40 y un 50%.  
+ Cuando los informes se exportan y guardan en Excel 2003, no se benefician de la optimización de archivos que Excel aplica automáticamente a sus archivos de libro *.xls. El mayor tamaño del archivo puede producir problemas al enviar por correo electrónico suscripciones y datos adjuntos. Para reducir el tamaño de los archivos \*.xls de los informes exportados, abra los archivos \*.xls y vuelva a guardar los libros. Al guardar de nuevo los libros se suele reducir el tamaño de los archivos entre un 40 y un 50%.  
   
 > [!NOTE]  
 >  En Excel 2003, en una celda de una hoja de cálculo de Excel se muestran aproximadamente 1000 caracteres, pero el resto de los caracteres hasta alcanzar el máximo permitido pueden editarse en la barra de fórmulas. Esta limitación no se aplica a los archivos actuales de Excel (.xlsx).  
   
-### Cuadros de texto y texto  
+### <a name="text-boxes-and-text"></a>Cuadros de texto y texto  
  Las siguientes limitaciones se aplican a los cuadros de texto y al texto:  
   
 -   Los valores de cuadro de texto que son expresiones no se convierten en fórmulas de Excel. El valor de cada cuadro de texto se evalúa durante el procesamiento del informe. La expresión evaluada se exporta como el contenido de cada celda de Excel.  
@@ -72,19 +79,19 @@ caps.handback.revision: 27
     > [!NOTE]  
     >  Para evitar este problema, aumente el ancho del cuadro de texto en el informe.  
   
-### Imágenes  
+### <a name="images"></a>Imágenes  
  Las siguientes limitaciones se aplican a las imágenes:  
   
 -   Las imágenes de fondo de los elementos de informe se omiten porque Excel no admite imágenes de fondo en celdas individuales.  
   
 -   La extensión de presentación en Excel solamente admite la imagen de fondo del cuerpo del informe. Si se muestra una imagen de fondo del cuerpo del informe en el informe, la imagen se presenta como una imagen de fondo de la hoja de cálculo.  
   
-### Rectángulos  
+### <a name="rectangles"></a>Rectángulos  
  La siguiente limitación se aplica a los rectángulos.  
   
 -   Los rectángulos de los pies de página del informe no se exportan a Excel. Sin embargo, los rectángulos del cuerpo del informe, las celdas de Tablix, etc., se representa como un intervalo de celdas de Excel.  
   
-### Encabezados y pies de página del informe  
+### <a name="report-headers-and-footers"></a>Encabezados y pies de página del informe  
  Las siguientes limitaciones se aplican a los encabezados y pies de página del informe:  
   
 -   Los encabezados y pies de página de Excel admiten un máximo de 256 caracteres, incluido el marcado. La extensión de presentación trunca la cadena en los 256 caracteres.  
@@ -93,7 +100,7 @@ caps.handback.revision: 27
   
 -   Los cuadros de texto de un encabezado o pie de página mantienen el formato, pero no su alineación, cuando se exportan a Excel. Esto se produce porque los espacios iniciales y finales se recortan cuando el informe se representa en Excel.  
   
-### Combinar celdas  
+### <a name="merging-cells"></a>Combinar celdas  
  La siguiente limitación se aplica a la combinación de celdas:  
   
 -   Si se combinan celdas, el ajuste de línea no funcionará correctamente. Si hay celdas combinadas en una fila donde se ha representado un cuadro de texto con la propiedad Ajustar tamaño automáticamente, el ajuste automático de tamaño no funcionará.  
@@ -106,32 +113,32 @@ caps.handback.revision: 27
   
 -   Aunque alinee todos los elementos con precisión, podría encontrar en algunos casos raros en los que algunas columnas siguen estando combinadas. Esto podría deberse al redondeo y a la conversión interna de unidades cuando se representa la hoja de cálculo de Excel. En el lenguaje de definición de informes (RDL), puede especificar la posición y el tamaño de diferentes unidades de medida, como pulgadas, píxeles, centímetros y puntos. Internamente Excel utiliza los puntos. Para minimizar la conversión y la posible imprecisión del redondeo al convertir pulgadas y centímetros a puntos, considere la posibilidad de especificar todas las mediciones en puntos enteros para obtener los resultados más directos. Una pulgada es 72 puntos.  
   
-### Grupos de filas y grupos de columna de informes  
+### <a name="report-row-groups-and-column-groups"></a>Grupos de filas y grupos de columna de informes  
  Los informes con grupos de filas o grupos de columnas contienen celdas vacías cuando se exportan a Excel. Imagine un informe que agrupa las filas según la distancia a la que se encuentran los clientes. Cada distancia puede contener más de un cliente. El informe se muestra en la siguiente imagen.  
   
- ![Report in the Reporting Services web portal](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Report in the Reporting Services web portal")  
+ ![Informe en el portal web de Reporting Services](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "informes en el portal web de Reporting Services")  
   
  Cuando el informe se exporta a Excel, la distancia de viaje solo aparece en una celda de la columna Commute Distance. En función de la alineación del texto en el informe (arriba, en el centro o abajo), el valor está en la celda primera, central o última. Las demás celdas están vacías. La columna Name que contiene los nombres de los clientes no tiene ninguna celda vacía. En la siguiente imagen se muestra el informe una vez exportado a Excel. Los bordes de celdas rojos se han agregado por motivos de claridad. Los cuadros grises son las celdas vacías. (Ni las líneas rojas ni los cuadros grises forman parte del informe exportado).  
   
- ![Report exported to Excel, with lines](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Report exported to Excel, with lines")  
+ ![Informe se exporta a Excel, con líneas](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "informe se exporta a Excel, con líneas")  
   
  Esto significa que es necesario modificar los informes con grupos de filas o grupos de columnas después de exportarlos a Excel y antes de poder mostrar los datos exportados en una tabla dinámica. Debe agregar el valor de grupo a las celdas en que faltan para que la hoja de cálculo sea una tabla plana con valores en todas las celdas. En la siguiente imagen se muestra la hoja de cálculo actualizada.  
   
- ![Report exported to Excel, flattened](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Report exported to Excel, flattened")  
+ ![Informe exportado a Excel, una estructura jerárquica](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "informe se exporta a Excel, una estructura jerárquica")  
   
  Así pues, si crea un informe y va a exportarlo a Excel para realizar análisis más exhaustivos de los datos, considere la posibilidad de no agrupar las filas ni las columnas del informe.  
   
-## Representador de Excel  
+## <a name="excel-renderer"></a>Representador de Excel  
   
-### Representador de los archivos de Excel actuales (.xlsx)  
+### <a name="current-xlsx-excel-file-renderer"></a>Representador de los archivos de Excel actuales (.xlsx)  
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], el representador predeterminado de Excel es la versión compatible con los archivos actuales de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (.xlsx). Es la opción de **Excel** que aparece en los menús de **Exportar** del portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y la lista de SharePoint.  
   
  Si va a usar el representador de Excel predeterminado, en lugar del representador de Excel 2003 (.xls) anterior, instale el Paquete de compatibilidad de Microsoft Office para Word, Excel y PowerPoint con el fin de que las versiones anteriores de Excel puedan abrir los archivos que se exportan.  
   
-### Representador de Excel 2003 (.xls)  
+### <a name="excel-2003-xls-renderer"></a>Representador de Excel 2003 (.xls)  
   
 > [!IMPORTANT]  
->  La extensión de representación de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 ha quedado obsoleta. Para obtener más información, vea [Características obsoletas de SQL Server Reporting Services en SQL Server 2016](../Topic/Deprecated%20Features%20in%20SQL%20Server%20Reporting%20Services%20in%20SQL%20Server%202016.md).  
+>  La extensión de representación de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 ha quedado obsoleta. Para obtener más información, vea [Características obsoletas de SQL Server Reporting Services en SQL Server 2016](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
  La versión anterior del representador de Excel, compatible con Excel 2003, se denomina ahora Excel 2003 y aparece en los menús con ese nombre. El tipo de contenido de los archivos generados por este representador es **application/vnd.ms-excel** y la extensión del nombre de los archivos es .xls.  
   
@@ -141,7 +148,7 @@ caps.handback.revision: 27
   
 -   El Generador de informes está en modo sin conexión y se obtiene la vista previa de un informe en el Generador de informes. El archivo de configuración RSReportServer reside en el servidor de informes, por lo que las herramientas o productos desde los que exporte informes se deben conectar con un servidor de informes para leer el archivo de configuración.  
   
--   El elemento web Visor de informes está en modo local y la granja de servidores de SharePoint no está integrada en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información, vea [Informes en modo local frente al modo local en el Visor de informes &#40;Reporting Services en modo de SharePoint&#41;](../../reporting-services/report-server-sharepoint/local mode vs. connected mode reports in the report viewer.md).  
+-   El elemento web Visor de informes está en modo local y la granja de servidores de SharePoint no está integrada en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para más información, vea [Informes en modo local frente al modo local en el Visor de informes &#40;Reporting Services en modo de SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
   
  Si el representador de la opción de menú **Excel 2003** se configura para que esté visible, las opciones de Excel y de Excel 2003 están disponibles en los escenarios siguientes:  
   
@@ -163,7 +170,7 @@ caps.handback.revision: 27
   
  La extensión EXCELOPENXML define el representador de Excel para los archivos actuales de Excel (.xlsx). La extensión EXCEL define la versión de Excel 2003. `Visible = “false”` indica que el representador de Excel 2003 está oculto. Para obtener más información, vea [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) y [Archivo de configuración RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
   
-### Diferencias entre el representador actual de Excel (.xlsx) y el representador de Excel 2003  
+### <a name="differences-between-the-current-xlsx-excel-and-excel-2003-renderers"></a>Diferencias entre el representador actual de Excel (.xlsx) y el representador de Excel 2003  
  Los informes, representados con el representador actual de Excel (.xlsx) o el representador de Excel 2003, suelen ser idénticos y solo en raras ocasiones observará diferencias entre los dos formatos. En la tabla siguiente se comparan los representadores de Excel y de Excel 2003.  
   
 |Propiedad|Excel 2003|Excel actual|  
@@ -187,7 +194,7 @@ caps.handback.revision: 27
   
  Si desea trabajar con datos de gráficos, minigráficos, barras de datos, mapas, medidores e indicadores, exporte el informe a un archivo .csv o genere fuentes de distribución de datos conformes a Atom a partir del informe. Para obtener más información, vea [Exportar a un archivo CSV &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) y [Generar fuentes de distribución de datos a partir de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
-## Tamaño de página  
+## <a name="page-sizing"></a>Tamaño de página  
  La extensión de representación en Excel usa la configuración del ancho y del alto de la página para determinar la configuración del papel en la hoja de cálculo Excel. Excel intenta hacer coincidir los valores de las propiedades PageHeight y PageWidth con uno de los tamaños de papel más comunes.  
   
  Si no encuentra ninguna coincidencia, Excel usa el tamaño de página predeterminado para la impresora. La orientación se establece en Vertical si el ancho de página es menor que el alto; en caso contrario, se establece en Horizontal.  
@@ -199,7 +206,7 @@ caps.handback.revision: 27
   
  Si el informe no proporciona un nombre de página inicial ni nombres de página relacionados con los saltos de página, las pestañas de la hoja de cálculo tendrán los nombres predeterminados **Hoja1**, **Hoja2**y así sucesivamente.  
   
- Reporting Services proporciona propiedades para establecer en los informes, regiones de datos, grupos y rectángulos con el fin de ayudarle a crear informes que se puedan exportar a Excel de la manera que desee. Para obtener más información, vea [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ Reporting Services proporciona propiedades para establecer en los informes, regiones de datos, grupos y rectángulos con el fin de ayudarle a crear informes que se puedan exportar a Excel de la manera que desee. Para más información, vea [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 ##  <a name="DocumentProperties"></a> Propiedades de documento  
  El presentador de Excel escribe los metadatos siguientes en el archivo de Excel.  
@@ -218,7 +225,7 @@ caps.handback.revision: 27
   
  Las secciones de encabezados y pies de página de Excel admiten un máximo de 256 caracteres, incluido el marcado. Si se supera este límite, el representador de Excel quita caracteres de marcado comenzando al final de la cadena de encabezado, la cadena de pie de página o ambas cadenas; de este modo, reduce el número total de caracteres. Si se quitan todos los caracteres de marcado y la longitud todavía supera el máximo, la cadena se trunca comenzando por la derecha.  
   
-### Configuración de SimplePageHeader  
+### <a name="simplepageheader-settings"></a>Configuración de SimplePageHeader  
  De forma predeterminada, el parámetro SimplePageHeaders de información del dispositivo se establece en **False**; por consiguiente, los encabezados de página se representan como filas en el informe en la superficie de la hoja de cálculo de Excel. Las filas de la hoja de cálculo que contienen los encabezados se convierten en filas bloqueadas. Puede inmovilizar o movilizar el panel en Excel. Si está seleccionada la opción **Imprimir títulos** , estos encabezados se imprimen en cada página de la hoja de cálculo de manera automática.  
   
  El encabezado de página se repite en la parte superior de cada hoja de cálculo del libro, excepto en la portada del mapa del documento si la opción **Imprimir títulos** está seleccionada en la pestaña Diseño de página de Excel. Si la opción **Imprimir en la primera página** o **Imprimir en la última página** no está seleccionada en los cuadros de diálogo Editar propiedades del encabezado de informe o Propiedades de pie de informe, el encabezado no se agregará a la primera o a la última página respectivamente.  
@@ -230,7 +237,7 @@ caps.handback.revision: 27
 ##  <a name="Interactivity"></a> Interactividad  
  En Excel se admiten algunos elementos interactivos. A continuación se describen sus comportamientos específicos.  
   
-### Mostrar u ocultar  
+### <a name="show-and-hide"></a>Mostrar u ocultar  
  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] tiene limitaciones en el modo de administrar los elementos de informe ocultos y visibles cuando éstos se exportan. Los grupos, filas y columnas que contienen elementos de informe que pueden mostrarse y ocultarse se representan como esquemas de Excel. Excel crea esquemas que expanden y contraen filas y columnas completas, lo que puede provocar que se colapsen elementos de informe que no se deberían contraer. Además, los símbolos de esquema de Excel pueden mostrarse desordenados con esquemas superpuestos. Para solucionar estos problemas, al usar la extensión de representación en Excel se aplican las reglas de esquema siguientes:  
   
 -   El elemento de informe que se puede mostrar y ocultar y que está situado en la esquina superior izquierda se podrá seguir mostrando y ocultando en Excel. Los elementos de informe que se pueden mostrar y ocultar y que comparten un espacio vertical u horizontal con el elemento de informe que se puede mostrar y ocultar y que está situado en la esquina superior izquierda no se podrán mostrar ni ocultar en Excel.  
@@ -241,35 +248,36 @@ caps.handback.revision: 27
   
 -   Debido a una limitación de Excel, los esquemas se pueden anidar 7 niveles como máximo.  
   
-### Mapa del documento  
+### <a name="document-map"></a>Mapa del documento  
  Si existe alguna etiqueta de mapa del documento en el informe, se representa un mapa del documento. El mapa del documento se representa como una portada de Excel que se inserta en la posición de la primera pestaña del libro. La hoja de cálculo se denomina **Mapa del documento**.  
   
  La propiedad DocumentMapLabel del elemento de informe o grupo determina el texto mostrado en el mapa del documento. Las etiquetas del mapa del documento aparecen en el orden en que aparecen en el informe, comenzando en la primera fila y en la primera columna. A cada celda de etiqueta de mapa del documento se le aplica una sangría equivalente al número de niveles que aparece en el informe. Para representar cada nivel de sangría se sitúa la etiqueta en la columna siguiente. Excel admite hasta 256 niveles de anidamiento de esquema.  
   
  El esquema del mapa del documento se representa como un esquema de Excel que se puede contraer. La estructura de esquema coincide con la estructura anidada del mapa del documento. El estado de expansión y contracción del esquema se inicia en el segundo nivel.  
   
- El nodo raíz del mapa es el nombre del informe, \<*reportname*>.rdl, y no es interactivo. La fuente de los vínculos del mapa del documento es Arial, 10pt.  
+ El nodo raíz del mapa es el nombre del informe, el \< *reportname*> .rdl y no es interactivo. La fuente de los vínculos del mapa del documento es Arial, 10pt.  
   
-### Vínculos de obtención de detalles  
+### <a name="drillthrough-links"></a>Vínculos de obtención de detalles  
  Los vínculos de obtención de detalles que aparecen en cuadros de texto se representan como hipervínculos de Excel en la celda en la que se representa el texto. Los vínculos de obtención de detalles para imágenes y gráficos se representan como hipervínculos de Excel en la imagen cuando se representa ésta. Al hacer clic, el vínculo de obtención de detalles abre el explorador predeterminado del cliente y navega hasta la vista HTML del destino.  
   
-### Hipervínculos  
+### <a name="hyperlinks"></a>Hipervínculos  
  Los hipervínculos que aparecen en cuadros de texto se representan como hipervínculos de Excel en la celda en la que se representa el texto. Los hipervínculos para imágenes y gráficos se representan como hipervínculos de Excel en la imagen cuando se representa ésta. Al hacer clic, el hipervínculo abre el explorador predeterminado del cliente y navega hasta la dirección URL de destino.  
   
-### Ordenación interactiva  
+### <a name="interactive-sorting"></a>Ordenación interactiva  
  Excel no admite la ordenación interactiva.  
   
-### Marcadores  
+### <a name="bookmarks"></a>Marcadores  
  Los vínculos de marcador que aparecen en cuadros de texto se representan como hipervínculos de Excel en la celda en la que se representa el texto. Los vínculos de marcador para imágenes y gráficos se representan como hipervínculos de Excel en la imagen cuando se representa ésta. Cuando se hace clic, el marcador va a la celda de Excel en la que se presenta el elemento de informe marcado.  
   
 ##  <a name="ConditionalFormat"></a> Cambiar informes en tiempo de ejecución  
- Si un informe se debe representar en varios formatos y no es posible crear un diseño del informe que se represente de la manera que desea en todos los formatos necesarios, podría considerar la utilización del valor del RenderFormat integrado global, para cambiar condicionalmente la apariencia del informe en tiempo de ejecución. De este modo puede ocultar o presentar los elementos de informe dependiendo del representador usado para obtener los mejores resultados en cada formato. Para obtener más información, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-globals-and-users-references-report-builder-and-ssrs.md).  
+ Si un informe se debe representar en varios formatos y no es posible crear un diseño del informe que se represente de la manera que desea en todos los formatos necesarios, podría considerar la utilización del valor del RenderFormat integrado global, para cambiar condicionalmente la apariencia del informe en tiempo de ejecución. De este modo puede ocultar o presentar los elementos de informe dependiendo del representador usado para obtener los mejores resultados en cada formato. Para obtener más información, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
+

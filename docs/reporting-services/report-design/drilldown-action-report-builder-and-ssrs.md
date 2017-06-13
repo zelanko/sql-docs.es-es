@@ -1,53 +1,58 @@
 ---
-title: "Acci&#243;n de obtenci&#243;n de detalles (generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10249"
-  - "10186"
-  - "10092"
-  - "10167"
-  - "10174"
-  - "sql13.rtp.rptdesigner.charttitleproperties.visibility.f1"
-  - "10155"
-  - "sql13.rtp.rptdesigner.chartproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.pictureproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.majorgridlineproperties.visibility.f1"
-  - "10123"
-  - "10425"
-  - "sql13.rtp.rptdesigner.axisproperties.visibility.f1"
-  - "10217"
-  - "10161"
-  - "10215"
-  - "sql13.rtp.rptdesigner.legendproperties.visibility.f1"
-  - "10258"
-  - "10144"
-  - "sql13.rtp.rptdesigner.subreportproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.textboxproperties.visibility.f1"
-  - "10062"
-  - "sql13.rtp.rptdesigner.serieslabelproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.rectangleproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.calculatedseriesproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.chartareaproperties.visibility.f1"
-  - "10053"
-  - "sql13.rtp.rptdesigner.minorgridlineproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.seriesproperties.visibility.f1"
+title: "Acción de obtención de detalles (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10249"
+- "10186"
+- "10092"
+- "10167"
+- "10174"
+- sql13.rtp.rptdesigner.charttitleproperties.visibility.f1
+- "10155"
+- sql13.rtp.rptdesigner.chartproperties.visibility.f1
+- sql13.rtp.rptdesigner.pictureproperties.visibility.f1
+- sql13.rtp.rptdesigner.majorgridlineproperties.visibility.f1
+- "10123"
+- "10425"
+- sql13.rtp.rptdesigner.axisproperties.visibility.f1
+- "10217"
+- "10161"
+- "10215"
+- sql13.rtp.rptdesigner.legendproperties.visibility.f1
+- "10258"
+- "10144"
+- sql13.rtp.rptdesigner.subreportproperties.visibility.f1
+- sql13.rtp.rptdesigner.textboxproperties.visibility.f1
+- "10062"
+- sql13.rtp.rptdesigner.serieslabelproperties.visibility.f1
+- sql13.rtp.rptdesigner.rectangleproperties.visibility.f1
+- sql13.rtp.rptdesigner.calculatedseriesproperties.visibility.f1
+- sql13.rtp.rptdesigner.chartareaproperties.visibility.f1
+- "10053"
+- sql13.rtp.rptdesigner.minorgridlineproperties.visibility.f1
+- sql13.rtp.rptdesigner.seriesproperties.visibility.f1
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10cbda042d03d5405c136894017418e341665c99
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Acci&#243;n de obtenci&#243;n de detalles (generador de informes y SSRS)
+# <a name="drilldown-action-report-builder-and-ssrs"></a>Acción de obtención de detalles (generador de informes y SSRS)
   Si desea que los usuarios puedan ocultar y mostrar elementos de forma interactiva, incluya iconos más y menos en un cuadro de texto. Esto se denomina acción *de obtención de detalles* . En una tabla o matriz, puede mostrar u ocultar filas y columnas estáticas, o filas y columnas que están asociadas a grupos.  
   
  ![rs_drilldown](../../reporting-services/report-design/media/rs-drilldown.gif "rs_drilldown")  
@@ -70,10 +75,10 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Comparar informes de obtención de detalles con informes detallados  
- En un informe de obtención de detalles, un usuario hace clic en un botón de más o menos para expandir o contraer una sección de un informe para mostrar los datos detallados. En un informe detallado, el usuario hace clic en un vínculo para obtener un valor de resumen y este abre un informe relacionado independiente con los datos detallados. Estos datos solo se recuperan al ejecutar el informe de detalles. Generalmente, los informes detallados requieren menos recursos que los informes de obtención de detalles. Para obtener más información, vea [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough, drilldown, subreports, and nested data regions.md).  
+## <a name="comparing-drilldown-and-drillthrough-reports"></a>Comparar informes de obtención de detalles con informes detallados  
+ En un informe de obtención de detalles, un usuario hace clic en un botón de más o menos para expandir o contraer una sección de un informe para mostrar los datos detallados. En un informe detallado, el usuario hace clic en un vínculo para obtener un valor de resumen y este abre un informe relacionado independiente con los datos detallados. Estos datos solo se recuperan al ejecutar el informe de detalles. Generalmente, los informes detallados requieren menos recursos que los informes de obtención de detalles. Para obtener más información, vea [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md).  
   
-## Compatibilidad con extensiones de representación para elementos de informe ocultos  
+## <a name="rendering-extension-support-for-hidden-report-items"></a>Compatibilidad con extensiones de representación para elementos de informe ocultos  
  La alternancia mostrar u ocultar en los elementos de informe solo es compatible con las extensiones de representación que admiten la interactividad del usuario como, por ejemplo, la extensión de representación en HTML que se utiliza cuando se ejecuta un informe en el Generador de informes o en el Administrador de informes. Otras extensiones de representación muestran elementos ocultos. En la lista siguiente se describe la compatibilidad para los elementos de informe con visibilidad condicional:  
   
 -   En HTML, si los elementos están ocultos, no estarán visibles en el código fuente HTML.  
@@ -84,8 +89,8 @@ caps.handback.revision: 9
   
  Para obtener más información, vea [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
-## Vea también  
- [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough, drilldown, subreports, and nested data regions.md)   
+## <a name="see-also"></a>Vea también  
+ [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)   
  [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   

@@ -1,23 +1,28 @@
 ---
-title: "Mantener visibles los encabezados al desplazarse a trav&#233;s de un informe (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Mantener visibles los encabezados al desplazarse a través de un informe (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f2fac57fe0e898a1ccbfbe33fb271eae76da1389
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Mantener visibles los encabezados al desplazarse a trav&#233;s de un informe (Generador de informes y SSRS)
+# <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Mantener visibles los encabezados al desplazarse a través de un informe (Generador de informes y SSRS)
   Para evitar que las etiquetas de fila y de columna se desplacen fuera de la vista después de representar un informe, puede inmovilizar los encabezados de fila o de columna.  
   
  La forma de controlar las filas y las columnas depende de si tiene una tabla o una matriz. Si tiene una tabla, configure los miembros estáticos (encabezados de fila y columna) para que sigan siendo visibles. Si tiene una matriz, configure los encabezados de grupos de filas y columnas para que sigan siendo visibles.  
@@ -29,16 +34,16 @@ caps.handback.revision: 10
   
  En la ilustración siguiente se muestra una tabla.  
   
- ![Tabla](../../reporting-services/report-design/media/table.png "Tabla")  
+ ![Tabla](../../reporting-services/report-design/media/table.png "tabla")  
   
  En la ilustración siguiente se muestra una matriz.  
   
- ![Matriz](../../reporting-services/report-design/media/matrix.png "Matriz")  
+ ![Matriz](../../reporting-services/report-design/media/matrix.png "matriz")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Para mantener visibles los encabezados de grupo de matrices al desplazarse  
+### <a name="to-keep-matrix-group-headers-visible-while-scrolling"></a>Para mantener visibles los encabezados de grupo de matrices al desplazarse  
   
 1.  Haga clic con el botón derecho en la fila, columna o controlador de tabla de una región de datos Tablix y, después, haga clic en **Propiedades de Tablix**.  
   
@@ -46,11 +51,11 @@ caps.handback.revision: 10
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Para mantener visible mientras se desplaza un miembro de Tablix estático (fila o columna)  
+### <a name="to-keep-a-static-tablix-member-row-or-column-visible-while-scrolling"></a>Para mantener visible mientras se desplaza un miembro de Tablix estático (fila o columna)  
   
 1.  En la superficie de diseño, haga clic en cualquier lugar de la tabla para mostrar los miembros estáticos, así como los grupos, en el panel agrupación.  
   
-     ![Panel de agrupación](../../reporting-services/report-design/media/grouppane-updated.png "Panel de agrupación")  
+     ![Panel de agrupación](../../reporting-services/report-design/media/grouppane-updated.png "panel de agrupación")  
   
      El panel Grupos de filas muestra los miembros jerárquicos estáticos y dinámicos de la jerarquía de grupos de fila, mientras que el panel Grupos de columnas muestra una vista similar de la jerarquía de grupos de columna.  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 10
   
 3.  Haga clic en el miembro estático (fila o columna) que desea que siga siendo visible durante el desplazamiento. El panel de propiedades muestra las propiedades de **Miembro de Tablix** .  
   
-     ![Propiedades de Miembro de Tablix](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "Propiedades de Miembro de Tablix")  
+     ![Propiedades de miembro de Tablix](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "propiedades de miembro de Tablix")  
   
 4.  En el panel de propiedades, establezca **FixedData** en **True**.  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 10
   
  Cuando recorra el informe, los miembros de Tablix estáticos permanecerán visibles.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   

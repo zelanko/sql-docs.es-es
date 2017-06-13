@@ -1,28 +1,33 @@
 ---
-title: "Iniciar y detener el servicio del servidor de informes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "detener el servicio del servidor de informes"
-  - "servicio de Windows del servidor de informes, iniciar"
-  - "servicio del servidor de informes, iniciar"
-  - "iniciar el servicio del servidor de informes"
+title: Iniciar y detener el servicio de servidor de informes | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stopping Report Server service
+- Report Server Windows service, starting
+- Report Server service, starting
+- starting Report Server service
 ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
 caps.latest.revision: 55
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 55
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 90106293e319e53c8fcbfe772c119f5c6a0f20c2
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Iniciar y detener el servicio del servidor de informes
+# <a name="start-and-stop-the-report-server-service"></a>Iniciar y detener el servicio del servidor de informes
   Un servidor de informes se implementa como un servicio de Windows que contiene el servicio web del servidor de informes, el Administrador de informes y una aplicación de procesamiento en segundo plano. El servicio se debe estar ejecutando si desea usar cualquier funcionalidad del servidor de informes. Al detener el servicio se detienen todas las operaciones del servidor de informes.  
   
  Aunque se detiene el servicio, las solicitudes para el procesamiento de informes y suscripciones programado que deberían haberse producido si se hubiera estado ejecutando el servicio se agregan a la cola. Esto se debe a que los trabajos que se ejecutan con el Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crean los eventos. Si desea evitar un trabajo acumulado de operaciones mientras el servicio está apagado, piense también en detener el Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -33,26 +38,26 @@ caps.handback.revision: 55
   
  No puede pausar ni reanudar el servicio. No existen parámetros de inicio. Aunque no hay dependencias explícitas, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ejecutarse si se admiten suscripciones u operaciones de informe programadas en el servidor de informes.  
   
-### Iniciar o detener el servicio mediante la herramienta de configuración de Reporting Services  
+### <a name="to-start-or-stop-the-service-using-the-reporting-services-configuration-tool"></a>Iniciar o detener el servicio mediante la herramienta de configuración de Reporting Services  
   
 1.  Inicie la herramienta de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y conéctese al servidor de informes.  
   
 2.  En la página Estado del servidor de informes, haga clic en **Detener** o **Iniciar**.  
   
-### Iniciar o detener el servicio usando Servicios en Herramientas administrativas  
+### <a name="to-start-or-stop-the-service-using-services-in-administrative-tools"></a>Iniciar o detener el servicio usando Servicios en Herramientas administrativas  
   
--   En Herramientas administrativas, abra Servicios, haga clic con el botón derecho en **SQL Server Reporting Services (MSSQLSERVER)** y haga clic en **Detener** o **Reiniciar**.  
+-   En Herramientas administrativas, abra Servicios, haga clic con el botón derecho en **SQL Server Reporting Services (MSSQLSERVER)**y haga clic en **Detener** o **Reiniciar**.  
   
  Si se están ejecutando varias instancias o si el servidor de informes se está ejecutando como una instancia con nombre, compruebe que el nombre de instancia que está entre paréntesis corresponde a la instancia del servidor de informes que desea detener o reiniciar.  
   
-### Iniciar o detener el servicio usando el Administrador de configuración de SQL Server  
+### <a name="to-start-or-stop-the-service-using-sql-server-configuration-manager"></a>Iniciar o detener el servicio usando el Administrador de configuración de SQL Server  
   
 1.  Inicie el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-2.  Seleccione Servicios de SQL Server, haga clic con el botón derecho en **SQL Server Reporting Services** y haga clic en **Detener** o en **Reiniciar**.  
+2.  Seleccione Servicios de SQL Server, haga clic con el botón derecho en **SQL Server Reporting Services**y haga clic en **Detener** o en **Reiniciar**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Iniciar, detener o pausar el servicio del Agente SQL Server](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
+ [Iniciar, detener o pausar el servicio del Agente SQL Server](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: Construcciones Transact-SQL no admitidas por OLTP en memoria | Microsoft Docs
 ms.custom: 
-ms.date: 12/16/2016
+ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a3539b07a27be375ebfe58e16a4792d9095fce0c
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 66f9964d94ebcbab021c9dcf69ae50663196a597
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construcciones Transact-SQL no admitidas por OLTP en memoria
@@ -70,7 +70,7 @@ ms.lasthandoff: 04/11/2017
 |Operación|Actualización de columnas de clave principal|Las columnas de clave principal de las tablas con optimización para memoria y los tipos de tablas no se pueden actualizar. Si es necesario actualizar la clave principal, elimine la fila antigua e inserte la nueva fila con la clave principal actualizada.|  
 |Operación|CREATE INDEX|Los índices de las tablas con optimización para memoria deben especificarse insertados con la instrucción **CREATE TABLE** o con la instrucción **ALTER TABLE** .|  
 |Operación|CREATE FULLTEXT INDEX|Las tablas con optimización para memoria no admiten índices de texto completo.|  
-|Operación|Cambios en los esquemas|Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no admiten cambios en los esquemas, por ejemplo, **sp_rename**.<br /><br /> El intento de realizar algunos cambios de esquema generará el error 12320. No se admiten las operaciones que requieren un cambio en la versión de esquema, como cambiar el nombre, con tablas con optimización para memoria.<br /><br /> Se permiten algunos cambios de esquema que usen ALTER TABLE y ALTER PROCEDURE.|  
+|Operación|Cambios en los esquemas|Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no admiten cambios en los esquemas, por ejemplo, **sp_rename**.<br /><br /> El intento de realizar algunos cambios de esquema generará el error 12320. No se admiten las operaciones que requieren un cambio en la versión de esquema, como cambiar el nombre, con tablas con optimización para memoria.<br /><br /> Se permiten algunos cambios de esquema que usen ALTER TABLE y ALTER PROCEDURE.<br/><br/>**Se aplica a:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].<br/>A partir de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], sp_rename se admite.| 
 |Operación|TRUNCATE TABLE|Las tablas con optimización para memoria no admiten la operación TRUNCATE. Para quitar todas las filas de una tabla, elimínelas con **DELETE FROM***table* , o bien quite y vuelva a crear la tabla.|  
 |Operación|ALTER AUTHORIZATION|No es posible cambiar el propietario de una tabla con optimización para memoria o de un procedimiento almacenado compilado de forma nativa existente. Para cambiar el propietario, quite y vuelva a crear la tabla o el procedimiento.|  
 |Operación|ALTER SCHEMA|Transferencia de un elemento protegible entre esquemas.|  

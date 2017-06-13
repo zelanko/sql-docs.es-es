@@ -19,10 +19,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d5b90faa09f6185ffe5e273e43707bc9dc2dc1c0
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 62b958f5a1c032e11b5aaef37692b5de21a0bec4
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="data-collector-security"></a>Seguridad del recopilador de datos
@@ -96,7 +96,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **db_ssisoperator**  
   
- Para obtener más información, vea [Roles de Integration Services &#40;servicio SSIS&#41;](../../integration-services/service/integration-services-roles-ssis-service.md).  
+ Para obtener más información, vea [Roles de Integration Services &#40;servicio SSIS&#41;](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
 ### <a name="dcproxy-role"></a>Rol dc_proxy  
  Los miembros del rol **dc_proxy** tienen acceso de lectura a los conjuntos de recopilación y a las propiedades de nivel de recopilador. Los miembros de este rol también pueden ejecutar los trabajos que les pertenecen, así como crear pasos de trabajos que se ejecuten como una cuenta de proxy existente.  
@@ -115,7 +115,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **db_ssisoperator**  
   
- Para obtener más información, vea [Roles de Integration Services &#40;servicio SSIS&#41;](../../integration-services/service/integration-services-roles-ssis-service.md).  
+ Para obtener más información, vea [Roles de Integration Services &#40;servicio SSIS&#41;](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
 ## <a name="permissions-for-configuring-and-using-the-management-data-warehouse"></a>Permisos para configurar y utilizar el almacén de administración de datos  
  En función de la tarea, los usuarios deben ser miembros de uno o varios de los roles fijos de base de datos que se proporcionan para tener acceso al almacén de administración de datos. En orden de acceso con más privilegios a acceso con menos privilegios, los roles son las siguientes:  

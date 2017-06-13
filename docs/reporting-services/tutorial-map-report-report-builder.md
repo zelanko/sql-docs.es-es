@@ -1,25 +1,30 @@
 ---
-title: "Tutorial: informe de asignaciones (Generador de informes) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Tutorial: Asignar informes (generador de informes) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 08/31/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 caps.latest.revision: 18
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 18
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: efe91a2e1e8ca7b0744639ed718d63b70e3adc5c
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tutorial: informe de asignaciones (Generador de informes)
-En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)], obtendrá información sobre las características de mapa que puede usar para mostrar datos en un fondo geográfico de un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. 
+# <a name="tutorial-map-report-report-builder"></a>Tutorial: informe de asignaciones (Generador de informes)
+En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , obtendrá información sobre las características de mapa que puede usar para mostrar datos en un fondo geográfico de un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
   
 Los mapas están basados en datos espaciales que normalmente está compuestos de puntos, líneas y polígonos. Por ejemplo, un polígono puede representar el perfil de un condado, una línea puede representar una carretera y un punto puede representar la ubicación de una ciudad. Cada tipo de datos espaciales se muestra en una capa de mapa independiente, como un conjunto de elementos de mapa.  
   
@@ -34,15 +39,15 @@ En este tutorial, compilará un informe de mapa que muestre ubicaciones de almac
   
 Tiempo estimado para completar este tutorial: 30 minutos.  
   
-## Requisitos  
-Para este tutorial, deberá configurarse el servidor de informes para que admita los mapas de Bing como fondo. Para obtener más información, consulte [Planear la compatibilidad de informe de mapa](http://msdn.microsoft.com/es-es/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
+## <a name="requirements"></a>Requisitos  
+Para este tutorial, deberá configurarse el servidor de informes para que admita los mapas de Bing como fondo. Para obtener más información, consulte [Planear la compatibilidad de informe de mapa](http://msdn.microsoft.com/en-us/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
 
 Para obtener información sobre otros requisitos, consulte [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Map"></a>1. Crear un mapa con una capa de polígono desde el Asistente para mapas  
 En esta sección, agregará un mapa al informe desde la galería de mapas. El mapa tiene una capa que muestra los condados del Estado de Nueva York. La forma de cada condado es un polígono basado en los datos espaciales que se incrustan en el mapa desde la galería de mapas.  
   
-### Para agregar un mapa con el Asistente para mapas en un informe nuevo  
+### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>Para agregar un mapa con el Asistente para mapas en un informe nuevo  
   
 1.  [Inicie el Generador de informes](../reporting-services/report-builder/start-report-builder.md) desde el equipo, el portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o el modo integrado de SharePoint.  
   
@@ -54,9 +59,9 @@ En esta sección, agregará un mapa al informe desde la galería de mapas. El ma
   
 3.  En el panel derecho, haga clic en **Asistente para mapas**.  
   
-4.  En la página **Elegir un origen de datos espaciales**, compruebe que está seleccionado **Galería de mapas**.  
+4.  En la página **Elegir un origen de datos espaciales** , compruebe que está seleccionado **Galería de mapas** .  
   
-6.  En el cuadro Galería de mapas, expanda **Estados por condado** en **EE.UU.** y haga clic en **Nueva York**.  
+6.  En el cuadro Galería de mapas, expanda **Estados por condado** en **EE.UU.**y haga clic en **Nueva York**.  
   
     El panel Vista previa del mapa muestra el mapa del condado de Nueva York.  
     
@@ -64,7 +69,7 @@ En esta sección, agregará un mapa al informe desde la galería de mapas. El ma
   
 7.  Haga clic en **Siguiente**.  
   
-8.  En la página **Elegir opciones de datos espaciales y vista de mapa**, acepte los valores predeterminados y haga clic en **Siguiente**. 
+8.  En la página **Elegir opciones de datos espaciales y vista de mapa** , acepte los valores predeterminados y haga clic en **Siguiente**. 
  
     De forma predeterminada, los elementos de mapa de una galería de mapas se incrustan automáticamente en la definición de informe.  
   
@@ -74,7 +79,7 @@ En esta sección, agregará un mapa al informe desde la galería de mapas. El ma
   
 12. Si está seleccionada, desactive la opción **Mapa de un color** .  
   
-13. En la lista desplegable **Campo de datos**, haga clic en **#COUNTYNAME**. El panel Vista previa del mapa del asistente muestra los elementos siguientes:  
+13. En la lista desplegable **Campo de datos** , haga clic en **#COUNTYNAME**. El panel Vista previa del mapa del asistente muestra los elementos siguientes:  
   
     -   Un título con el texto **Título del mapa**.  
   
@@ -97,7 +102,7 @@ En esta sección, agregará un mapa al informe desde la galería de mapas. El ma
 15. Haga doble clic en el mapa para mostrar el panel **Capas de mapa**. El panel **Capas de mapa** muestra una capa de polígono, PolygonLayer1, del tipo **Insertada**. Cada condado es un elemento de mapa incrustado en esta capa.  
   
     > [!NOTE]  
-    > Si no ve el panel **Capas de mapa**, quizá se esté mostrando fuera de su vista actual. Use la barra de desplazamiento de la parte inferior de la ventana de la vista Diseño para cambiar la vista. O bien, en la pestaña **Ver**, desactive la opción **Datos del informe** para proporcionar una mayor área de diseño expuesta.   
+    > Si no ve el panel **Capas de mapa** , quizá se esté mostrando fuera de su vista actual. Use la barra de desplazamiento de la parte inferior de la ventana de la vista Diseño para cambiar la vista. O bien, en la pestaña **Ver**, desactive la opción **Datos del informe** para proporcionar una mayor área de diseño expuesta.   
 
 15. Seleccione la flecha situada junto a PolygonLayer1 > **Propiedades del polígono**.
 
@@ -117,17 +122,17 @@ En esta sección, usará el asistente para capas de mapa para agregar una capa d
 > [!NOTE]  
 > En este tutorial, la consulta contiene los valores de datos, de forma que no necesita un origen de datos externo. Esto hace que la consulta requiera bastante tiempo. En un entorno empresarial, la consulta no contendría los datos. Esto es solo con fines de aprendizaje.  
   
-### Para agregar una capa de punto según una consulta espacial de SQL Server  
+### <a name="to-add-a-point-layer-based-on-a-sql-server-spatial-query"></a>Para agregar una capa de punto según una consulta espacial de SQL Server  
   
 1.  En la pestaña **Ejecutar** > **Diseño** para volver a cambiar a la vista Diseño.  
   
-2.  Haga doble clic en el mapa para mostrar el panel **Capas de mapa**. En la barra de herramientas, haga clic en el botón **Asistente para nueva capa** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.png "rs_IconMapLayerWizard"). 
+2.  Haga doble clic en el mapa para mostrar el panel **Capas de mapa** . En la barra de herramientas, haga clic en el **Asistente para nueva capa** botón ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"). 
 
     ![report-builder-map-new-layer-wizard-icon](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
 3.  En la página **Elegir un origen de datos espaciales** , seleccione **Consulta espacial de SQL Server**y haga clic en **Siguiente**.  
   
-4.  En la página **Elija un conjunto de datos con datos espaciales de SQL Server**, haga clic en **Agregar un nuevo conjunto de datos con datos espaciales de SQL Server** > **Siguiente**.  
+4.  En la página **Elija un conjunto de datos con datos espaciales de SQL Server** , haga clic en **Agregar un nuevo conjunto de datos con datos espaciales de SQL Server** > **Siguiente**.  
   
 5.  En la página **Elegir una conexión con un origen de datos espaciales de SQL Server** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos.  
 
@@ -194,19 +199,19 @@ En esta sección, usará el asistente para capas de mapa para agregar una capa d
   
 13. En la página Elegir visualización de mapa, haga clic en **Mapa de burbujas** para un tipo de mapa que muestra marcadores que varían de tamaño, según los datos. Haga clic en **Siguiente**.  
   
-14. En la página **Elegir el conjunto de datos analíticos**, haga clic en DataSet1 y, después, en **Siguiente**. Este conjunto de datos contiene datos analíticos y datos espaciales que se mostrarán en la nueva capa de punto.   
+14. En la página **Elegir el conjunto de datos analíticos** , haga clic en DataSet1 y, después, en **Siguiente**. Este conjunto de datos contiene datos analíticos y datos espaciales que se mostrarán en la nueva capa de punto.   
   
-16. En la página **Elegir tema de color y visualización de datos**, seleccione **Usar tamaño de burbuja para visualizar datos**.  
+16. En la página **Elegir tema de color y visualización de datos** , seleccione **Usar tamaño de burbuja para visualizar datos**.  
   
 17. En **Campo de datos**, seleccione `[Sum(SellingArea)]` para variar los tamaños de burbuja según el tamaño del área que un almacén separa para mostrar productos.  
   
-18. Seleccione **Mostrar etiquetas** y, en **Campo de datos**, seleccione `[City]`.
+18. Seleccione **Mostrar etiquetas**y, en **Campo de datos**, seleccione `[City]`.
 
 18. Haga clic en **Finalizar**.  
   
     La capa de mapa se agrega al informe. La leyenda muestra los tamaños de burbuja según los valores de SellingArea.  
   
- 19. Haga doble clic en el mapa para mostrar el panel **Capa de mapa**. El panel **Capa de mapa** muestra una nueva capa, PointLayer1, con el tipo de origen de datos espaciales **DataRegion**.  
+ 19. Haga doble clic en el mapa para mostrar el panel **Capa de mapa** . El panel **Capa de mapa** muestra una nueva capa, PointLayer1, con el tipo de origen de datos espaciales **DataRegion**.  
   
 19. Agregue un título a la leyenda. En la leyenda, seleccione el texto **Título**, escriba **Área de visualización (metros cuadrados)** y pulse ENTRAR.  
   
@@ -214,11 +219,11 @@ En esta sección, usará el asistente para capas de mapa para agregar una capa d
 
     ![report-builder-map-point-properties](../reporting-services/media/report-builder-map-point-properties.png)
   
-22. En la pestaña **Fuente**, elija el estilo **Negrita** y el tamaño **10pt**.
+22. En la pestaña **Fuente** , elija el estilo **Negrita** y el tamaño **10pt**.
 
     ![report-builder-map-point-properties-font](../reporting-services/media/report-builder-map-point-properties-font.png)
   
-23. En la pestaña **General**, seleccione **Inferior** en **Colocación**.
+23. En la pestaña **General** , seleccione **Inferior** en **Colocación**.
 
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -233,11 +238,11 @@ En esta sección, usará el asistente para capas de mapa para agregar una capa d
 ## <a name="LineLayer"></a>3. Agregar una capa de línea de mapa para mostrar una ruta  
 Use el Asistente para capas de mapa para agregar una capa de mapa que muestre una ruta entre dos almacenes. En este tutorial, la ruta de acceso se crea a partir de tres ubicaciones de almacén. En una aplicación empresarial, la ruta podría ser la ruta mejor entre los almacenes.  
   
-### Para agregar una capa de línea al mapa  
+### <a name="to-add-a-line-layer-to-map"></a>Para agregar una capa de línea al mapa  
   
 1.  Cambie a la vista de diseño.  
   
-2.  Haga doble clic en el mapa para mostrar el panel **Capa de mapa**. En la barra de herramientas, haga clic en el botón **Asistente para nueva capa** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.png "rs_IconMapLayerWizard").  
+2.  Haga doble clic en el mapa para mostrar el panel **Capa de mapa** . En la barra de herramientas, haga clic en el **Asistente para nueva capa** botón ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
   
 3.  En la página **Elegir un origen de datos espaciales** , seleccione **Consulta espacial de SQL Server** y haga clic en **Siguiente**.  
   
@@ -278,10 +283,10 @@ Use el Asistente para capas de mapa para agregar una capa de mapa que muestre un
   
      El mapa muestra una nueva capa de línea con el tipo de origen de datos espaciales **DataRegion**. En este ejemplo, los datos espaciales proceden de un conjunto de datos, pero ningún dato analítico se asocia a la línea.  
 
-## Ajustar el zoom
-1. Si no puede ver el estado completo de Nueva York, puede ajustar el zoom. Con el mapa seleccionado, en el panel Propiedades verá propiedades de **MapViewport**. 
+## <a name="adjust-the-zoom"></a>Ajustar el zoom
+1. Si no puede ver el estado completo de Nueva York, puede ajustar el zoom. Con el mapa seleccionado, en el panel Propiedades verá propiedades de **MapViewport** . 
 
-15. Expanda la sección **Ver** y, después, expanda **Ver** para que pueda ver la propiedad **Zoom**. Establézcalo en **125**. 
+15. Expanda la sección **Ver** y, después, expanda **Ver** para que pueda ver la propiedad **Zoom** . Establézcalo en **125**. 
 
     ![report-builder-map-zoom](../reporting-services/media/report-builder-map-zoom.png)
 
@@ -292,7 +297,7 @@ En esta sección, agregará una capa de mapa que muestre un fondo de mosaico de 
   
 1.  Cambie a la vista de diseño.  
   
-2.  Haga doble clic en el mapa para mostrar el panel **Capa de mapa**. En la barra de herramientas, haga clic en **Agregar capa** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.png "rs_IconMapAddLayer").  
+2.  Haga doble clic en el mapa para mostrar el panel **Capa de mapa** . En la barra de herramientas, haga clic en **Agregar capa** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer").  
   
 3.  En la lista desplegable, haga clic en **Capa de mosaico**.  
   
@@ -316,7 +321,7 @@ En esta sección, para permitir que los elementos de una capa se muestren a trav
   
 3.  Haga clic en la flecha situada junto a PolygonLayer1 > **Datos de la capa**. Se abre el cuadro de diálogo **Propiedades de capa de polígono de mapa** .  
   
-4.  En la pestaña **Visibilidad**, en **Transparencia (porcentaje)**, escriba **30**.  
+4.  En la pestaña **Visibilidad** , en **Transparencia (porcentaje)**, escriba **30**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -334,11 +339,11 @@ Para variar las formas del condado por el color según los datos analíticos, de
   
 1.  Cambie a la vista de diseño.  
   
-2.  Haga doble clic en el mapa para mostrar el panel **Capas de mapa**.  
+2.  Haga doble clic en el mapa para mostrar el panel **Capas de mapa** .  
   
 3.  Haga clic en la flecha situada junto a PolygonLayer1 y, después, haga clic en **Datos de la capa**. Se abre el cuadro de diálogo **Propiedades de capa de polígono de mapa** .  
   
-4.  En la pestaña **Datos analíticos**, en **Conjunto de datos analíticos**, seleccione DataSet1. El asistente ha creado este conjunto de datos al crear la consulta de datos espaciales para los condados.  
+4.  En la pestaña **Datos analíticos** , en **Conjunto de datos analíticos**, seleccione DataSet1. El asistente ha creado este conjunto de datos al crear la consulta de datos espaciales para los condados.  
   
 6.  En **Campos en los que establecer coincidencias**, haga clic en **Agregar**. Se agrega una nueva fila.  
   
@@ -361,7 +366,7 @@ Cada condado que contiene un almacén tiene un color que está basado en la pale
 ### <a name="ColorRules"></a>6b. Especificar las reglas de color para polígonos  
 Para crear una regla que varía el color de cada condado basándose en las ventas por almacén, debe especificar los valores de rango, el número de divisiones dentro de ese rango que desea mostrar y los colores que se van a usar.  
   
-#### Especificar las reglas de color para todos los polígonos que tienen datos asociados  
+#### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>Especificar las reglas de color para todos los polígonos que tienen datos asociados  
   
 1.  Cambie a la vista de diseño.  
   
@@ -429,11 +434,11 @@ Los condados que tienen asociados almacenes y ventas se muestran e acuerdo con l
 ### <a name="NoData"></a>6f. Cambiar el color en los condados sin datos  
 Puede configurar las opciones de presentación predeterminadas para todos los elementos de mapa de una capa. Las reglas de color tienen prioridad sobre estas opciones de presentación.  
   
-#### Para establecer las propiedades de presentación de todos los elementos de una capa  
+#### <a name="to-set-the-display-properties-for-all-elements-on-a-layer"></a>Para establecer las propiedades de presentación de todos los elementos de una capa  
   
 1.  Cambie a la vista de diseño.  
   
-2.  Haga doble clic en el mapa para mostrar el panel **Capa de mapa**.  
+2.  Haga doble clic en el mapa para mostrar el panel **Capa de mapa** .  
   
 3.  Haga clic en la flecha abajo en PolygonLayer1 y, a continuación, haga clic en **Propiedades del polígono**. 
 
@@ -441,7 +446,7 @@ Puede configurar las opciones de presentación predeterminadas para todos los el
 
      El cuadro de diálogo **Propiedades de polígono de mapa** se abre. Las opciones de presentación configuradas en este cuadro de diálogo se aplican a todos los polígonos de la capa antes de que se apliquen las opciones de presentación basadas en reglas.  
   
-4.  En la pestaña **Relleno**, compruebe que el estilo de relleno es **Sólido.** Los degradados y patrones se aplican a todos los colores.  
+4.  En la pestaña **Relleno** , compruebe que el estilo de relleno es **Sólido.** Los degradados y patrones se aplican a todos los colores.  
   
 6.  En **Color**, seleccione **Azul acero claro**.  
   
@@ -456,7 +461,7 @@ Para representar un nuevo almacén que aún no se ha generado, en esta sección 
   
 1.  Cambie a la vista de diseño.  
   
-2.  Haga doble clic en el mapa para mostrar el panel **Capa de mapa**. En la barra de herramientas, haga clic en **Agregar capa** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.png "rs_IconMapAddLayer") y luego haga clic en **Capa de punto**.  
+2.  Haga doble clic en el mapa para mostrar el panel **Capa de mapa** . En la barra de herramientas, haga clic en **Agregar capa**![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer"), a continuación, haga clic en **capa de punto**.    
   
     Una nueva capa de punto se agrega al mapa. De forma predeterminada, la capa de punto tiene el tipo de datos espaciales **Incrustado**.  
   
@@ -474,15 +479,15 @@ Para representar un nuevo almacén que aún no se ha generado, en esta sección 
 
     ![report-builder-map-custom-point-general](../reporting-services/media/report-builder-map-custom-point-general.png)
   
-8.  En la pestaña **Marcador**, en **Tipo de marcador**, seleccione **Estrella**.  
+8.  En la pestaña **Marcador** , en **Tipo de marcador**, seleccione **Estrella**.  
 
 10. Cambie **Tamaño de marcador** a **18pt**.
   
-3.  En **Etiquetas**, en **Texto de etiqueta**, escriba **Nuevo almacén**.  
+3.  En **Etiquetas** , en **Texto de etiqueta**, escriba **Nuevo almacén**.  
   
 5.  En **Colocación**, haga clic en **Superior**.  
 
-13. En la pestaña **Fuente**, elija el tamaño de fuente **10pt** y **Negrita**.
+13. En la pestaña **Fuente** , elija el tamaño de fuente **10pt** y **Negrita**.
 
     ![report-builder-map-custom-point-font](../reporting-services/media/report-builder-map-custom-point-font.png)
   
@@ -501,7 +506,7 @@ En esta sección, aprenderá a cambiar el centro del mapa y otro método para ca
 
 1.  Seleccione el mapa, haga clic con el botón derecho y haga clic en **Propiedades de ventanilla**.  
   
-2.  En la pestaña **Centrar y hacer zoom**, asegúrese de que la opción **Establecer un nivel de zoom y centrado de la vista** está seleccionada.  
+2.  En la pestaña **Centrar y hacer zoom** , asegúrese de que la opción **Establecer un nivel de zoom y centrado de la vista** está seleccionada.  
 
 4. Establezca **Nivel de zoom (porcentaje)** en **125**.
   
@@ -531,7 +536,7 @@ Este título aparecerá en la parte superior del informe. Cuando no hay ningún 
  
 3.  En **Nombre**, escriba **Ventas de almacenes en Nueva York**.  
 
-3. Guárdelo en el equipo local o en un servidor de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].
+3. Guárdelo en el equipo local o en un servidor de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .
   
 4. Haga clic en **Guardar**. 
 
@@ -539,14 +544,16 @@ Si lo guarda en un servidor de informes, puede verlo allí.
 
 ![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
   
-## Pasos siguientes  
+## <a name="next-steps"></a>Pasos siguientes  
 De esta forma se concluye el tutorial sobre cómo agregar un mapa a un informe.  
   
 Para más información, vea [Mapas &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
 [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md)  
 [Generador de informes en SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [Asistente para mapas y Asistente para capas de mapa &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
-[Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md)  
+[Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
+
+

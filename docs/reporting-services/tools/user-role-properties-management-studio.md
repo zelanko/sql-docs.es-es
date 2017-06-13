@@ -1,25 +1,30 @@
 ---
-title: "Propiedades de rol de usuario (Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.userroleproperties.f1"
+title: Propiedades de rol de usuario (Management Studio) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.userroleproperties.f1
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
 caps.latest.revision: 27
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 27
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 76bd80e1fc470d9cdb998d23834d0a3473d411fe
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Propiedades de rol de usuario (Management Studio)
+# <a name="user-role-properties-management-studio"></a>Propiedades de rol de usuario (Management Studio)
   Use esta página para ver qué tareas se incluyen en una definición de roles de nivel de elemento. También puede usar esta página para cambiar la lista de tareas o modificar una descripción de roles.  
   
  Una definición de roles de nivel de elemento es una colección con nombre de las tareas que realizan los usuarios respecto a un elemento determinado, es decir, una carpeta, un informe, un recurso o un origen de datos compartido. Las definiciones de roles se asignan a un usuario o grupo para crear una asignación de roles en el Administrador de informes. Las tareas de la definición de roles describen lo que puede hacer el usuario o grupo.  
@@ -29,7 +34,7 @@ caps.handback.revision: 27
 > [!NOTE]  
 >  Las asignaciones de roles de usuario solo se usan en un servidor de informes que se ejecuta en modo nativo. Si el servidor de informes se configura para la integración con SharePoint, esta página muestra la información de solo lectura sobre los roles y los niveles de permisos que se definen en el sitio de SharePoint.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Nombre**  
  Especifica el nombre de la definición de roles.  
   
@@ -42,11 +47,11 @@ caps.handback.revision: 27
  **Descripción de la tarea**  
  Proporciona información sobre cada tarea. No puede modificar descripciones de tareas.  
   
-## Vea también  
- [Tareas de nivel de elemento](../../reporting-services/security/item-level-tasks.md)   
+## <a name="see-also"></a>Vea también  
+ [Tareas de nivel de elemento](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)   
  [Definiciones de roles](../../reporting-services/security/role-definitions.md)   
  [Servidor de informes en Management Studio ayuda F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Tareas y permisos](../../reporting-services/security/tasks-and-permissions.md)   
- [Roles predefinidos](../../reporting-services/security/predefined-roles.md)  
+ [Roles predefinidos](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   

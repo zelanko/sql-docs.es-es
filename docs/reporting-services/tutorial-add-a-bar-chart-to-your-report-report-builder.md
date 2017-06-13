@@ -1,25 +1,30 @@
 ---
-title: "Tutorial: Agregar un gr&#225;fico de barras a un informe (Generador de informes) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Tutorial: Agregar un gráfico de barras a un informe (generador de informes) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 06/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: af11d5fdee9122663431f4f00ef5e40fb765c7b4
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tutorial: Agregar un gr&#225;fico de barras a un informe (Generador de informes)
-En este tutorial, usará un asistente en [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] para crear un gráfico de barras en un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. Después, agregará un filtro y mejorará el gráfico. 
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de barras a un informe (Generador de informes)
+En este tutorial, usará un asistente en [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] para crear un gráfico de barras en un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Después, agregará un filtro y mejorará el gráfico. 
 
 Un gráfico de barras muestra los datos de categoría horizontalmente. Esto puede ayudar a:  
   
@@ -31,35 +36,13 @@ La siguiente ilustración muestra el gráfico de barras que creará, con ventas 
   
 ![generador-informes-gráfico-de-barras](../reporting-services/media/report-builder-bar-chart.png) 
   
-## <a name="BackToTop"></a>Aprendizaje  
-En este tutorial, aprenderá a:  
-  
-1.  [Crear un gráfico a partir del Asistente para gráficos](#Chart)  
-  
-2.  [Elegir el tipo de gráfico](#ChartType)  
-  
-3.  [Mostrar todos los valores de categoría en el eje vertical](#AllValues)  
-  
-4.  [Cambiar el criterio de ordenación en el eje vertical](#Sort)  
-  
-5.  [Mover la leyenda](#Legend)  
-  
-6.  [Titular el gráfico](#ChartTitle)  
-  
-7.  [Dar formato al eje horizontal y etiquetarlo](#Horizontal)  
-  
-8.  [Agregar un filtro para mostrar cinco valores superiores](#Filter)  
-  
-9. [Agregar un título de informe](#Title)  
-  
-10. [Guardar el informe](#Save)  
-  
+ 
 > [!NOTE]  
 > En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, crear un conjunto de datos y elegir un origen de datos, consulte el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tiempo estimado para completar este tutorial: 15 minutos.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
 Para obtener más información sobre los requisitos, consulte [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Chart"></a>1. Crear un informe de gráfico a partir del Asistente para gráficos  
@@ -72,17 +55,17 @@ En el que puede crear un conjunto de datos incrustado, elegir un origen de datos
   
      Aparecerá el cuadro de diálogo **Introducción** .  
   
-     ![Report Builder Get Started](../reporting-services/media/rb-getstarted.png "Report Builder Get Started")  
+     ![El generador de informes Introducción](../reporting-services/media/rb-getstarted.png "empezar a trabajar el generador de informes")  
   
-     Si no ve el cuadro de diálogo **Introducción**, haga clic en **Archivo** >**Nuevo**. El cuadro de diálogo **Nuevo informe o conjunto de datos** tiene prácticamente el mismo contenido que el cuadro de diálogo **Introducción** . 
+     Si no ve el cuadro de diálogo **Introducción** , haga clic en **Archivo** >**Nuevo**. El cuadro de diálogo **Nuevo informe o conjunto de datos** tiene prácticamente el mismo contenido que el cuadro de diálogo **Introducción** . 
       
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
 3.  En el panel derecho, haga clic en **Asistente para gráficos**.  
   
-4.  En la página **Elegir un conjunto de datos**, haga clic en **Crear un conjunto de datos** y, después, haga clic en **Siguiente**.  
+4.  En la página **Elegir un conjunto de datos** , haga clic en **Crear un conjunto de datos**y, después, haga clic en **Siguiente**.  
   
-5.  En la página **Elegir una conexión a un origen de datos**, seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos, y después haga clic en **Siguiente**. Puede que necesite escribir un nombre de usuario y contraseña.  
+5.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos, y después haga clic en **Siguiente**. Puede que necesite escribir un nombre de usuario y contraseña.  
   
     > [!NOTE]  
     > El origen de datos que elija no importa, con tal de que tenga los permisos adecuados. No está recibiendo datos del origen de datos. Para obtener más información, consulte [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -116,9 +99,9 @@ En el que puede crear un conjunto de datos incrustado, elegir un origen de datos
  
 1.  En la página **Elegir un tipo de gráfico**, el gráfico de columnas es el tipo de gráfico predeterminado.  
   
-2.  Haga clic en **Barras** y después en **Siguiente**.  
+2.  Haga clic en **Barras**y después en **Siguiente**.  
   
-    En la página **Organizar campos del gráfico**, hay cuatro campos en el panel **Campos disponibles**: FirstName, LastName, SalesYear2015 y SalesYear2014.  
+    En la página **Organizar campos del gráfico** , hay cuatro campos en el panel **Campos disponibles** : FirstName, LastName, SalesYear2015 y SalesYear2014.  
   
 3.  Arrastre LastName hasta el panel Categorías.  
   
@@ -145,7 +128,7 @@ De forma predeterminada, solo aparecen algunos de los valores del eje vertical. 
   
 2.  Haga clic con el botón secundario en el eje vertical y, después, haga clic en **Propiedades del eje vertical**.  
   
-3.  En **Rango e intervalo del eje**, en el cuadro **Intervalo**, escriba **1**.  
+3.  En **Rango e intervalo del eje**, en el cuadro **Intervalo** , escriba **1**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -159,9 +142,9 @@ Puede cambiar la expresión de categoría para incluir para cada vendedor el ape
   
 1.  Cambie a la vista de diseño del informe.  
   
-2.  Haga doble clic en el gráfico para mostrar el panel **Datos del gráfico**.  
+2.  Haga doble clic en el gráfico para mostrar el panel **Datos del gráfico** .  
   
-3.  En el área **Grupos de categorías**, haga clic con el botón secundario en [LastName] y, después, haga clic en **Propiedades del grupo de categorías**.  
+3.  En el área **Grupos de categorías** , haga clic con el botón secundario en [LastName] y, después, haga clic en **Propiedades del grupo de categorías**.  
   
 4.  En Etiqueta, haga clic en el botón de expresión (Fx).  
   
@@ -175,7 +158,7 @@ Puede cambiar la expresión de categoría para incluir para cada vendedor el ape
   
 8.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-Si los nombres no aparecen al ejecutar el informe, puede actualizar los datos manualmente. Estando todavía en modo de vista previa, en la pestaña **Ejecutar** en el grupo **Navegación**, haga clic en **Actualizar**.  
+Si los nombres no aparecen al ejecutar el informe, puede actualizar los datos manualmente. Estando todavía en modo de vista previa, en la pestaña **Ejecutar** en el grupo **Navegación** , haga clic en **Actualizar**.  
   
 > [!NOTE]  
 > Si no se leen los nombres de vendedor en el eje vertical, puede hacer más alto el gráfico o cambiar las opciones de formato para las etiquetas del eje.  
@@ -185,15 +168,15 @@ Al ordenar los datos en un gráfico, está cambiando el orden de valores en el e
   
 1.  Cambie a la vista de diseño del informe.  
   
-2.  Haga doble clic en el gráfico para mostrar el panel **Datos del gráfico**.  
+2.  Haga doble clic en el gráfico para mostrar el panel **Datos del gráfico** .  
   
-3.  En el área **Grupos de categorías**, haga clic con el botón secundario en [LastName] y, después, haga clic en **Propiedades del grupo de categorías**.  
+3.  En el área **Grupos de categorías** , haga clic con el botón secundario en [LastName] y, después, haga clic en **Propiedades del grupo de categorías**.  
   
 4.  Haga clic en **Ordenar**. La página **Cambiar opciones de ordenación** muestra una lista de expresiones de ordenación. De forma predeterminada, esta lista tiene una expresión de ordenación que es igual que la expresión de grupo de categorías original.  
   
 5.  En **Ordenar por**, haga clic en **[SalesYear2015]**.  
   
-6.  en la lista **Ordenar**, seleccione **A a Z** para que los nombres aparezcan en orden de mayor a menor venta de 2015.
+6.  en la lista **Ordenar** , seleccione **A a Z** para que los nombres aparezcan en orden de mayor a menor venta de 2015.
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -204,7 +187,7 @@ Los nombres en el eje horizontal están ordenados por ventas de 2015, de mayor a
 ## <a name="Legend"></a>5. Mover la leyenda  
 Para mejorar la legibilidad de los valores del gráfico, es posible que le interese mover la leyenda correspondiente. Por ejemplo, en un gráfico de barras, donde las barras se muestran horizontalmente, puede cambiar la posición de la leyenda para que aparezca debajo o encima del área de gráfico. Esto proporciona más espacio horizontal para las barras.  
   
-#### Para mostrar la leyenda debajo del área de gráfico de un gráfico de barras  
+#### <a name="to-display-the-legend-below-the-chart-area-of-a-bar-chart"></a>Para mostrar la leyenda debajo del área de gráfico de un gráfico de barras  
   
 1.  Cambie a la vista de diseño del informe.  
   
@@ -214,7 +197,7 @@ Para mejorar la legibilidad de los valores del gráfico, es posible que le inter
   
 4.  Para **Posición de la leyenda**, seleccione una posición diferente. Por ejemplo, sitúe la leyenda centrada en la parte inferior.  
   
-    Cuando la leyenda se coloca en la parte superior o inferior de un gráfico, su diseño cambia de vertical a horizontal. Puede seleccionar un diseño diferente en la lista desplegable **Diseño**.  
+    Cuando la leyenda se coloca en la parte superior o inferior de un gráfico, su diseño cambia de vertical a horizontal. Puede seleccionar un diseño diferente en la lista desplegable **Diseño** .  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -239,17 +222,17 @@ De forma predeterminada, el eje horizontal muestra los valores en un formato gen
   
 3.  En la pestaña **Inicio** > grupo **Número** > **Moneda**. Las etiquetas del eje horizontal cambian al formato de moneda.  
   
-3.  (Opcional) Quite los dígitos decimales. Cerca del botón **Moneda**, haga clic dos veces en el botón **Disminuir decimales**.  
+3.  (Opcional) Quite los dígitos decimales. Cerca del botón **Moneda** , haga clic dos veces en el botón **Disminuir decimales** .  
   
 4.  Haga clic con el botón secundario en el eje horizontal y, después, haga clic en **Propiedades del eje horizontal**.  
   
-5.  En la pestaña **Número**, seleccione **Mostrar valores en miles**.  
+5.  En la pestaña **Número** , seleccione **Mostrar valores en miles**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
 8.  Haga clic con el botón secundario en el eje horizontal y seleccione **Mostrar título del eje**.
   
-7.  En el cuadro **Título del eje**, escriba **Ventas en miles** y presione Entrar.  
+7.  En el cuadro **Título del eje** , escriba **Ventas en miles** y presione Entrar.  
 
     >**Nota:** mientras escribe, el cuadro Título del eje aparece en el eje vertical. Pero cuando presione Entrar, pasa al eje horizontal.
   
@@ -262,15 +245,15 @@ Puede agregar un filtro al gráfico para especificar qué datos del conjunto de 
   
 1.  Cambie a la vista de diseño del informe.  
   
-2.  Haga doble clic en el gráfico para mostrar el panel **Datos del gráfico**.  
+2.  Haga doble clic en el gráfico para mostrar el panel **Datos del gráfico** .  
   
-3.  En el área **Grupos de categorías**, haga clic con el botón secundario en el campo [LastName] y, después, haga clic en **Propiedades del grupo de categorías**.  
+3.  En el área **Grupos de categorías** , haga clic con el botón secundario en el campo [LastName] y, después, haga clic en **Propiedades del grupo de categorías**.  
   
 4.  Haga clic en **Filtros**. La página **Cambiar filtros** puede mostrar una lista de expresiones de filtro. Esta lista aparece vacía de forma predeterminada.  
   
 5.  Haga clic en **Agregar**. Aparece un nuevo filtro en blanco.  
   
-6.  En **Expresión**, escriba **[Sum(SalesYear2015)]**. Esto crea la expresión subyacente `=Sum(Fields!SalesYear2015.Value)`, que puede ver si hace clic en el botón **fx**.  
+6.  En **Expresión**, escriba **[Sum(SalesYear2015)]**. Esto crea la expresión subyacente `=Sum(Fields!SalesYear2015.Value)`, que puede ver si hace clic en el botón **fx** .  
   
 7.  Compruebe que el tipo de datos es **Texto**.  
   
@@ -282,7 +265,7 @@ Puede agregar un filtro al gráfico para especificar qué datos del conjunto de 
   
 11. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-Si no se filtran los resultados al ejecutar el informe, puede actualizar los datos manualmente. En la pestaña **Ejecutar**, en el grupo **Navegación**, haga clic en **Actualizar**.  
+Si no se filtran los resultados al ejecutar el informe, puede actualizar los datos manualmente. En la pestaña **Ejecutar** , en el grupo **Navegación** , haga clic en **Actualizar**.  
   
 El gráfico muestra los nombres de los cinco primeros vendedores de los datos de ventas de 2015.  
   
@@ -296,9 +279,9 @@ El gráfico muestra los nombres de los cinco primeros vendedores de los datos de
   
     **Cinco primeros vendedores de 2015**  
   
-3.  Seleccione **Gráfico de barras de ventas** y haga clic en el botón **Negrita**.  
+3.  Seleccione **Gráfico de barras de ventas**y haga clic en el botón **Negrita** .  
   
-4.  Seleccione **Cinco primeros vendedores de 2015** y, en la sección **Fuente** de la pestaña **Inicio**, establezca el tamaño de fuente en **10**.  
+4.  Seleccione **Cinco primeros vendedores de 2015**y, en la sección **Fuente** de la pestaña **Inicio** , establezca el tamaño de fuente en **10**.  
   
 5.  (Opcional) Es posible que necesite hacer más alto el cuadro de texto Título y bajar la parte superior del gráfico de barras, para que quepan las dos líneas de texto.  
   
@@ -318,10 +301,12 @@ El gráfico muestra los nombres de los cinco primeros vendedores de los datos de
   
 4.  Haga clic en **Guardar**.   
   
-## Pasos siguientes  
+## <a name="next-steps"></a>Pasos siguientes  
 Ha completado correctamente el tutorial Agregar un gráfico de barras al informe. Para obtener más información sobre gráficos, consulte [Gráficos](../reporting-services/report-design/charts-report-builder-and-ssrs.md) y [Gráficos de barras](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
 [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md)  
 [Generador de informes en SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

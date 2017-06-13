@@ -1,23 +1,28 @@
 ---
-title: "Gr&#225;ficos de rect&#225;ngulos y de proyecci&#243;n solar en Reporting Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/31/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Árbol de gráficos de rectángulos y proyección solar en Reporting Services | Documentos de Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/31/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Gr&#225;ficos de rect&#225;ngulos y de proyecci&#243;n solar en Reporting Services
+# <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Gráficos de rectángulos y de proyección solar en Reporting Services
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   Las visualizaciones de rectángulos y proyección solar de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] resultan excepcionales para representar visualmente datos jerárquicos.   En este tema se describe cómo agregar un gráfico de rectángulos o de proyección solar a un informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Aquí también encontrará una consulta de AdventureWorks de ejemplo para ayudarlo a ponerse manos a la obra.  
@@ -31,12 +36,12 @@ caps.handback.revision: 16
   
  ![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
   
-### Para insertar un gráfico de rectángulos y configurarlo con los datos de AdventureWorks de ejemplo, siga estos pasos:  
+### <a name="to-insert-a-tree-map-chart-and-configure-for-the-sample-adventureworks-data"></a>Para insertar un gráfico de rectángulos y configurarlo con los datos de AdventureWorks de ejemplo, siga estos pasos:  
  **Nota:** Antes de agregar un gráfico al informe, crear un origen y un conjunto de datos.  Para obtener una consulta y datos de ejemplo, consulte la sección [Datos de ejemplo de AdventureWorks](#bkmk_sample_data) de este tema.  
   
-1.  Haga clic con el botón derecho en la superficie de diseño y seleccione **Insertar** y, después, **Gráfico**.  
+1.  Haga clic con el botón derecho en la superficie de diseño y seleccione **Insertar**y, después, **Gráfico** .  
   
-     Seleccione el gráfico de rectángulos ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
+     Seleccione gráfico de rectángulos ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
   
      ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
   
@@ -66,7 +71,6 @@ caps.handback.revision: 16
   
 7.  El número de valores de etiqueta que se muestran viene determinado por el tamaño de la fuente, del área general del gráfico y de los rectángulos específicos.  Para ver más etiquetas, cambie la propiedad Fuente de etiqueta de LineTotal a 10 pt en lugar del valor predeterminado de 8 pt.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [En este tema](#bkmk_top)  
   
 ##  <a name="bkmk_sunburst_chart"></a> Gráfico de proyección solar  
  ![ssrs_sunburst_icon](../../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon")  
@@ -75,12 +79,12 @@ caps.handback.revision: 16
   
  ![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
   
-### Para insertar un gráfico de proyección solar y configurarlo con los datos de AdventureWorks de ejemplo, siga estos pasos:  
+### <a name="to-insert-a-sunburst-chart-and-configure-for-the-sample-adventureworks-data"></a>Para insertar un gráfico de proyección solar y configurarlo con los datos de AdventureWorks de ejemplo, siga estos pasos:  
  **Nota:** Antes de agregar un gráfico al informe, crear un origen y un conjunto de datos.  Para obtener una consulta y datos de ejemplo, consulte la sección [Datos de ejemplo de AdventureWorks](#bkmk_sample_data) de este tema.  
   
-1.  Haga clic con el botón derecho en la superficie de diseño y seleccione **Insertar** y, después, **Gráfico**.  
+1.  Haga clic con el botón derecho en la superficie de diseño y seleccione **Insertar**y, después, **Gráfico** .  
   
-     Seleccione el gráfico de proyección solar ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
+     Seleccionar proyección solar ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
   
      ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
   
@@ -98,13 +102,12 @@ caps.handback.revision: 16
   
 6.  |||  
     |-|-|  
-    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|Para agregar los valores de los grupos de categorías al gráfico de proyección solar como etiquetas, establezca la propiedad de etiqueta **Visible** en True y **UseValueAsLabel** en False.<br /><br /> Los valores de etiqueta que se muestran vienen determinados por el tamaño de la fuente, del área general del gráfico y de los rectángulos específicos.  Para ver más etiquetas, cambie la propiedad Fuente de etiqueta de LineTotal a 8 pt en lugar del valor predeterminado de 10 pt.|  
+    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|Para agregar los valores de los grupos de categorías al gráfico de proyección solar como etiquetas, establezca la propiedad de etiqueta **Visible** en True y **UseValueAsLabel**en False.<br /><br /> Los valores de etiqueta que se muestran vienen determinados por el tamaño de la fuente, del área general del gráfico y de los rectángulos específicos.  Para ver más etiquetas, cambie la propiedad Fuente de etiqueta de LineTotal a 8 pt en lugar del valor predeterminado de 10 pt.|  
   
 7.  Si desea utilizar una gama de colores distinta, cambie la propiedad **Paleta** del gráfico.  
   
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [En este tema](#bkmk_top)  
   
 ##  <a name="bkmk_sample_data"></a> Datos de ejemplo de AdventureWorks  
  En esta sección se incluye una consulta de ejemplo y los pasos básicos para crear un origen y un conjunto de datos en [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Si el informe ya contiene un origen y un conjunto de datos, puede omitir esta sección.  
@@ -119,7 +122,7 @@ caps.handback.revision: 16
   
 2.  **Crear un origen de datos:**  
   
-    1.  En el panel **Datos de informe**, haga clic con el botón derecho **Orígenes de datos** y, después, haga clic en **Agregar origen de datos**.  
+    1.  En el panel **Datos de informe** , haga clic con el botón derecho **Orígenes de datos** y, después, haga clic en **Agregar origen de datos**.  
   
     2.  Seleccione **Usar una conexión incrustada en el informe**.  
   
@@ -137,7 +140,7 @@ caps.handback.revision: 16
   
 3.  **Crear un conjunto de datos:**  
   
-    -   En el panel **Datos de informe**, haga clic con el botón derecho en **Conjuntos de datos** y haga clic en **Agregar conjunto de datos**.  
+    -   En el panel **Datos de informe** , haga clic con el botón derecho en **Conjuntos de datos** y haga clic en **Agregar conjunto de datos**.  
   
     -   Seleccione **Usar un conjunto de datos insertado en el informe**.  
   
@@ -172,9 +175,8 @@ caps.handback.revision: 16
   
      Para obtener más información sobre la creación de un conjunto de datos, vea [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [En este tema](#bkmk_top)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Vista de diseño de conjunto de datos compartidos &#40;Generador de informes&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
  [Mostrar la información sobre herramientas en una serie &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)   
  [Tutorial: Gráficos de rectángulos en Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)   
@@ -182,3 +184,5 @@ caps.handback.revision: 16
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+

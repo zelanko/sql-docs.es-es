@@ -1,60 +1,47 @@
 ---
-title: "Tutorial: Dar formato a texto (Generador de informes) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Tutorial: Dar formato al texto (generador de informes) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 caps.latest.revision: 16
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 15
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: cfbe1001a049466af839363db29156df6b972556
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tutorial: Dar formato a texto (Generador de informes)
-En este tutorial, puede practicar el proceso de dar formato al texto de varias maneras en un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. Puede experimentar con diferentes formatos. 
+
+# <a name="tutorial-format-text-report-builder"></a>Tutorial: Dar formato a texto (Generador de informes)
+
+En este tutorial, puede practicar el proceso de dar formato al texto de varias maneras en un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Puede experimentar con diferentes formatos. 
 
 Después de configurar el informe en blanco con el origen de datos y el conjunto de datos, puede elegir los formatos que quiere explorar. En la siguiente ilustración se muestra un informe similar al que creará.  
   
 ![informe-generar-formato-informe](../reporting-services/media/report-build-format-report.png) 
   
 En un paso puede cometer un error voluntario para ver por qué es un error. A continuación, corrija el error para lograr el efecto deseado.  
-   
-## <a name="BackToTop"></a>Aprendizaje  
-  
-### Configurar el informe  
-1. [Crear un Informe en blanco con un origen de datos y un conjunto de datos](#CreateReport)  
-  
-2. [Agregar un campo a la superficie de diseño del informe(incorrectamente y, luego, correctamente)](#AddField)  
-  
-3. [Agregar un tabla a la superficie de diseño del informe](#AddTable)  
-  
-### Escoger y elegir  
-* [Agregar un hipervínculo al informe](#AddHyperlink)  
-  
-* [Girar texto en el informe](#RotateText)  
-  
-* [Dar formato a moneda](#FormatCurrency)  
-  
-* [Mostrar texto con formato HTML](#FormatHTML)  
-  
-* [Guardar el informe](#Save)  
-  
+    
 Tiempo estimado para completar este tutorial: 20 minutos.  
   
-## Requisitos  
-Para obtener información sobre los requisitos, consulte [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
+## <a name="requirements"></a>Requisitos  
+Para obtener información sobre los requisitos, vea [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="CreateReport"></a>Crear un Informe en blanco con un origen de datos y un conjunto de datos  
   
-### Para crear un informe en blanco  
+### <a name="to-create-a-blank-report"></a>Para crear un informe en blanco  
   
 1.  [Inicie el Generador de informes](../reporting-services/report-builder/start-report-builder.md) desde el equipo, el portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o el modo integrado de SharePoint.  
   
@@ -66,30 +53,30 @@ Para obtener información sobre los requisitos, consulte [Requisitos previos par
   
 3.  En el panel derecho, haga clic en **Informe en blanco**.  
   
-### Para crear un origen de datos  
+### <a name="to-create-a-data-source"></a>Para crear un origen de datos  
   
 1.  En el panel Datos de informe, haga clic en **Nuevo** > **Origen de datos**.  
 
-    Si no ve el panel **Datos de informe**, en la pestaña **Ver** haga clic en **Datos de informe**.
+    Si no ve el panel **Datos de informe** , en la pestaña **Ver** haga clic en **Datos de informe**.
   
-2.  En el cuadro **Nombre**, escriba: **TextDataSource**  
+2.  En el cuadro **Nombre** , escriba: **TextDataSource**  
   
 3.  Haga clic en **Usar una conexión incrustada en mi informe**.  
   
-4.  Compruebe que el tipo de conexión sea Microsoft SQL Server y, luego, en el cuadro **Cadena de conexión**, escriba: `Data Source = <servername>`  
+4.  Compruebe que el tipo de conexión sea Microsoft SQL Server y, luego, en el cuadro **Cadena de conexión** , escriba: `Data Source = <servername>`  
   
     > [!NOTE]  
-    > La expresión `<servername>`, por ejemplo Report001, especifica un equipo en el que se ha instalado una instancia del motor de base de datos de SQL Server. Este tutorial no necesita datos concretos; solo necesita una conexión a una base de datos de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Si ya tiene una conexión a un origen de datos enumerada bajo **Conexiones de origen de datos**, puede seleccionarla e ir al procedimiento siguiente, "Para crear un conjunto de datos". Para obtener más información, consulte [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > La expresión `<servername>`, por ejemplo Report001, especifica un equipo en el que se ha instalado una instancia del motor de base de datos de SQL Server. Este tutorial no necesita datos concretos; solo necesita una conexión a una base de datos de SQL Server. Si ya tiene una conexión a un origen de datos enumerada bajo **Conexiones de origen de datos**, puede seleccionarla e ir al procedimiento siguiente, "Para crear un conjunto de datos". Para obtener más información, consulte [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### Para crear un conjunto de datos  
+### <a name="to-create-a-dataset"></a>Para crear un conjunto de datos  
   
 1.  En el panel Datos de informe, haga clic en **Nuevo** > **Conjunto de datos**.  
   
 2.  Compruebe que el origen de datos es **TextDataSource**.  
   
-3.  En el cuadro **Nombre**, escriba: **TextDataset.**  
+3.  En el cuadro **Nombre** , escriba: **TextDataset.**  
   
 4.  Compruebe que el tipo de consulta **Texto** está seleccionado, y, a continuación, haga clic en **Diseñador de consultas**.  
   
@@ -144,7 +131,7 @@ Para obtener información sobre los requisitos, consulte [Requisitos previos par
 ## <a name="AddField"></a>Agregar un campo a la superficie de diseño del informe  
 Si desea que un campo del conjunto de datos aparezca en un informe, su primer impulso puede ser arrastrarlo hasta la superficie de diseño directamente. En este ejercicio se describe por qué eso no funciona y lo que se ha de hacer en su lugar.  
   
-### Para agregar un campo al informe (y obtener el resultado incorrecto)  
+### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>Para agregar un campo al informe (y obtener el resultado incorrecto)  
   
 1.  Arrastre el campo **FullName** desde el panel Datos de informe hasta la superficie de diseño.  
   
@@ -170,9 +157,9 @@ Si desea que un campo del conjunto de datos aparezca en un informe, su primer im
   
 6.  Seleccione el cuadro de texto (si tiene la expresión seleccionada, presione ESC para seleccionarlo) y presione la tecla SUPRIMIR.  
   
-### Para agregar un campo al informe (y obtener el resultado correcto)  
+### <a name="to-add-a-field-to-the-report-and-get-the-right-result"></a>Para agregar un campo al informe (y obtener el resultado correcto)  
   
-1.  En la pestaña **Insertar** de la cinta de opciones, en el área **Regiones de datos**, haga clic en **Lista**. Haga clic en la superficie de diseño y, a continuación, arrástrela para crear un cuadro que tenga aproximadamente dos pulgadas de ancho y una de alto.  
+1.  En la pestaña **Insertar** de la cinta de opciones, en el área **Regiones de datos** , haga clic en **Lista**. Haga clic en la superficie de diseño y, a continuación, arrástrela para crear un cuadro que tenga aproximadamente dos pulgadas de ancho y una de alto.  
   
 2.  Arrastre el campo **FullName** desde el panel Datos de informe hasta el cuadro de lista.  
   
@@ -186,7 +173,7 @@ Si desea que un campo del conjunto de datos aparezca en un informe, su primer im
   
 5.  Seleccione la expresión en el cuadro de texto.  
   
-6.  En el panel Propiedades, para la propiedad **Value**, ve lo siguiente:  
+6.  En el panel Propiedades, para la propiedad **Value** , ve lo siguiente:  
   
     ```  
     =Fields!FullName.Value  
@@ -203,11 +190,11 @@ Cree esta tabla para tener un lugar donde colocar los hipervínculos y el texto 
   
 2.  En la página **Elegir un conjunto de datos** del nuevo Asistente para tablas o matrices, haga clic en **Elegir un conjunto de datos existente en este informe o un conjunto de datos compartido** > **TextDataset (en este Informe)** > **Siguiente**.  
   
-3.  En la página **Organizar campos**, arrastre los campos **Territory**, **LinkText** y **Product** hasta **Grupos de filas**, arrastre el campo **Sales** hasta **Valores** y después haga clic en **Siguiente**.  
+3.  En la página **Organizar campos** , arrastre los campos **Territory**, **LinkText**y **Product** hasta **Grupos de filas**, arrastre el campo **Sales** hasta **Valores**y después haga clic en **Siguiente**.  
 
     ![generador-de-informes-organizar-campos-de-texto](../reporting-services/media/report-builder-text-arrange-fields.png)
   
-4.  En la página **Elegir el diseño**, desactive la casilla **Expandir o contraer grupos** de modo que pueda ver la tabla entera, y,después, haga clic en **Siguiente**. 
+4.  En la página **Elegir el diseño** , desactive la casilla **Expandir o contraer grupos** de modo que pueda ver la tabla entera, y,después, haga clic en **Siguiente**. 
   
 5.  Haga clic en **Finalizar**.  
   
@@ -219,7 +206,7 @@ Cree esta tabla para tener un lugar donde colocar los hipervínculos y el texto 
   
 8.  Haga clic en **Diseño** para volver a la vista de diseño.  
   
-9. Seleccione la celda **Total** de la columna **LinkText** y, después, mantenga presionada la tecla MAYÚS y seleccione las dos celdas a su derecha: la celda vacía de la columna **Product** y la celda `[Sum(Sales)]` de la columna **Sales**.  
+9. Seleccione la celda **Total** de la columna **LinkText** y, después, mantenga presionada la tecla MAYÚS y seleccione las dos celdas a su derecha: la celda vacía de la columna **Product** y la celda `[Sum(Sales)]` de la columna **Sales** .  
   
 11. Con esas tres celdas seleccionadas, haga clic con el botón secundario en uno de esas celdas y haga clic en **Eliminar filas**.  
 
@@ -236,11 +223,11 @@ En esta sección, agrega un hipervínculo al texto de la tabla desde la sección
   
 1.  Haga clic en **Diseño** para volver a la vista de diseño.  
   
-2.  Haga clic con el botón secundario en la celda que contiene `[LinkText]` y haga clic en **Propiedades de cuadro de texto**.  
+2.  Haga clic con el botón secundario en la celda que contiene `[LinkText]`y haga clic en **Propiedades de cuadro de texto**.  
   
-3.  En la pestaña **Acción**, haga clic en **Ir a dirección URL**.  
+3.  En la pestaña **Acción** , haga clic en **Ir a dirección URL**.  
   
-5.  En el cuadro **Seleccionar dirección URL**, haga clic en **[URL]** y después en **Aceptar**.  
+5.  En el cuadro **Seleccionar dirección URL** , haga clic en **[URL]**y después en **Aceptar**.  
   
 6.  Observe que el texto no parece diferente. Necesita que se parezca al texto del vínculo.  
   
@@ -263,14 +250,14 @@ En esta sección, girará parte del texto de la tabla de las secciones anteriore
   
 2.  Haga clic en la celda que contiene `[Territory].`  
   
-3.  En la pestaña **Inicio**, en la sección **Fuente**, haga clic en el botón **Negrita**.  
+3.  En la pestaña **Inicio** , en la sección **Fuente** , haga clic en el botón **Negrita** .  
   
-4.  Si el panel de propiedades no está abierto, en la pestaña **Ver** active la casilla **Propiedades**.  
+4.  Si el panel de propiedades no está abierto, en la pestaña **Ver** active la casilla **Propiedades** .  
   
 5.  Busque la propiedad WritingMode en el panel Propiedades y cámbiela de **Default** a **Rotate270**.  
  
     > [!NOTE]  
-    > Cuando las propiedades del panel de propiedades se organizan en categorías, WritingMode está en la categoría **Localización**. Asegúrese de haber seleccionado la celda y no el texto. WritingMode es una propiedad del cuadro de texto, no del texto.  
+    > Cuando las propiedades del panel de propiedades se organizan en categorías, WritingMode está en la categoría **Localización** . Asegúrese de haber seleccionado la celda y no el texto. WritingMode es una propiedad del cuadro de texto, no del texto.  
 
     ![generador-de-informes-seleccionar-territorio-celda](../reporting-services/media/report-builder-select-territory-cell.png)
    
@@ -294,7 +281,7 @@ Ahora el texto de la celda `[Territory]` está situado verticalmente desde la pa
 
     ![generador-de-informes-botón-valor-marcador-de-posición](../reporting-services/media/report-builder-placeholder-value-button.png)
   
-5.  (Opcional) En la pestaña **Inicio**, en el grupo **Número**, haga clic dos veces en el botón **Disminuir decimales** para mostrar las cifras en dólares sin centavos.  
+5.  (Opcional) En la pestaña **Inicio** , en el grupo **Número** , haga clic dos veces en el botón **Disminuir decimales** para mostrar las cifras en dólares sin centavos.  
   
 6.  Haga clic en Ejecutar (**!**) para obtener la vista previa del informe.  
   
@@ -306,7 +293,7 @@ El informe muestra ahora datos dados con formato y es más fácil de leer.
   
 1.  Haga clic en **Diseño** para cambiar a la vista de diseño.  
   
-2.  En la pestaña **Insertar**, haga clic en **Cuadro de texto** y, después, en la superficie de diseño, haga clic y arrastre para crear un cuadro de texto bajo la tabla, aproximadamente de cuatro pulgadas de ancho y tres de alto.  
+2.  En la pestaña **Insertar** , haga clic en **Cuadro de texto**y, después, en la superficie de diseño, haga clic y arrastre para crear un cuadro de texto bajo la tabla, aproximadamente de cuatro pulgadas de ancho y tres de alto.  
   
 3.  Copie este texto y péguelo en el cuadro de texto:  
   
@@ -334,7 +321,7 @@ El informe muestra ahora datos dados con formato y es más fácil de leer.
   
     Esta es una propiedad del texto, no del cuadro de texto, por lo que en un cuadro de texto puede tener una mezcla de texto sin formato y texto que usa etiquetas HTML como estilos.  
   
-6.  En la pestaña **General**, bajo **Tipo de marcado**, haga clic en **HTML: interpretar etiquetas HTML como estilos**.  
+6.  En la pestaña **General** , bajo **Tipo de marcado**, haga clic en **HTML: interpretar etiquetas HTML como estilos**.  
   
 7.  Haga clic en **Aceptar**.  
   
@@ -349,7 +336,7 @@ Puede guardar los informes en un servidor de informes, en una biblioteca de Shar
   
 En este tutorial, guarde el informe en un servidor de informes. Si no tiene acceso a un servidor de informes, guarde el informe en su equipo.  
   
-### Para guardar el informe en un servidor de informes  
+### <a name="to-save-the-report-on-a-report-server"></a>Para guardar el informe en un servidor de informes  
   
 1.  En el botón **Generador de informes** , haga clic en **Guardar como**.  
   
@@ -365,7 +352,7 @@ En este tutorial, guarde el informe en un servidor de informes. Si no tiene acce
   
 El informe se guarda en el servidor de informes. El nombre del servidor de informes al que está conectado aparecerá en la barra de estado en la parte inferior de la ventana.  
   
-### Para guardar el informe en el equipo  
+### <a name="to-save-the-report-on-your-computer"></a>Para guardar el informe en el equipo  
   
 1.  En el botón **Generador de informes** , haga clic en **Guardar como**.  
   
@@ -374,12 +361,13 @@ El informe se guarda en el servidor de informes. El nombre del servidor de infor
 3.  En **Nombre**, reemplace el nombre predeterminado por un nombre de su elección. 
   
 4.  Haga clic en **Guardar**.  
-  
-## Pasos siguientes  
-Existen numerosas formas de dar formato al texto en el Generador de informes. El [Tutorial: Crear un informe de forma libre &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contiene más ejemplos.  
-  
-## Vea también  
--   [Tutoriales del Generador de informes ](../reporting-services/report-builder-tutorials.md) 
--   [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
--   [Generador de informes en SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-  
+
+## <a name="next-steps"></a>Pasos siguientes
+
+Existen numerosas formas de dar formato al texto en el Generador de informes. [Tutorial: Crear un informe de forma libre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contiene más ejemplos.  
+
+[Tutoriales del generador de informes ](../reporting-services/report-builder-tutorials.md)  
+ [aplicar formato a elementos de informe](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
+[Generador de informes en SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

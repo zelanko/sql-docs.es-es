@@ -1,23 +1,28 @@
 ---
-title: "Exportar a un archivo PDF (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Exportar a un archivo PDF (generador de informes y SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 10/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 69c8be9ba7c2994928a992325e565f1af802b852
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Exportar a un archivo PDF (Generador de informes y SSRS)
+# <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportar a un archivo PDF (Generador de informes y SSRS)
   La extensión de representación en PDF representa informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] en archivos que se pueden abrir en Adobe Acrobat y en visores de PDF de terceros compatibles con PDF 1.3. Aunque PDF 1.3 es compatible con Adobe Acrobat 4.0 y versiones posteriores, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite Adobe Acrobat 11.0 o versiones posteriores. La extensión de representación no requiere el software Adobe para representar el informe. Sin embargo, se necesitan visores de PDF, como Adobe Acrobat, para ver o imprimir un informe en formato PDF.  
   
  La extensión de representación en PDF admite caracteres ANSI y puede traducir caracteres Unicode del japonés, coreano, chino tradicional, chino simplificado, cirílico, hebreo y árabe, con ciertas limitaciones. Para más información sobre las limitaciones, vea [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
@@ -43,14 +48,13 @@ caps.handback.revision: 12
 > [!NOTE]  
 >  Aunque se cumplan las condiciones, hay una circunstancia en la que no se incrustan fuentes en el archivo PDF. Si las fuentes usadas son las de la especificación de PDF que se conoce normalmente como fuentes estándar de tipo 1 o fuentes de base catorce, no se incrustan fuentes para el contenido ANSI.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
-### Fuentes en el equipo cliente  
+### <a name="fonts-on-the-client-computer"></a>Fuentes en el equipo cliente  
  Cuando una fuente se incrusta en el archivo PDF, el equipo que se usa para ver el informe (equipo cliente) no necesita tener la fuente instalada para que el informe se muestre correctamente.  
   
  Cuando una fuente no se incrusta en el archivo PDF, el equipo cliente debe tener instalada la fuente correcta para que el informe se muestre correctamente. Si la fuente no está instalada en el equipo cliente, el archivo PDF muestra un carácter de signo de interrogación de cierre (?) para los caracteres no compatibles.  
   
-### Comprobar las fuentes de un archivo PDF  
+### <a name="verifying-fonts-in-a-pdf-file"></a>Comprobar las fuentes de un archivo PDF  
  Suelen producirse diferencias en la salida en PDF si se usa una fuente que no admite caracteres no latinos en un informe y, a continuación, se agregan caracteres no latinos al informe. Se debe comprobar la salida de representación en PDF tanto en el servidor de informes como en los equipos cliente para comprobar que el informe se representa correctamente.  
   
  No confíe en la visualización del informe en vista previa ni en la exportación a HTML, ya que el informe parece correcto por la sustitución de fuentes automática realizada por la interfaz de diseño gráfico o por Microsoft Internet Explorer, respectivamente. Si faltan glifos de Unicode en el servidor, es posible que vea caracteres reemplazados por un signo de interrogación de cierre (?). Si falta una fuente en el cliente, puede ver que algunos caracteres se reemplazan con cuadros (□).  
@@ -69,29 +73,27 @@ caps.handback.revision: 12
 |**Productor**|El nombre y la versión de la extensión de representación.|  
 |**CreationDate**|La hora de ejecución del informe en el formato **datetime** de PDF.|  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
 ##  <a name="Interactivity"></a> Interactividad  
  Algunos elementos interactivos se admiten en PDF. A continuación se describen sus comportamientos específicos.  
   
-### Mostrar u ocultar  
+### <a name="show-and-hide"></a>Mostrar u ocultar  
  El formato PDF no permite mostrar y ocultar elementos dinámicamente. El documento PDF se representa para que coincida con el estado actual de cualquier elemento del informe. Por ejemplo, si el elemento se mostraba cuando se ejecutó inicialmente el informe, el elemento se representará. Las imágenes que pueden alternarse no se representarán si estaban ocultas al exportar el informe.  
   
-### Mapa del documento  
+### <a name="document-map"></a>Mapa del documento  
  Si hay alguna etiqueta de mapa del documento presente en el informe, se agrega un esquema de documento al archivo PDF. Cada etiqueta de mapa del documento aparece como una entrada en el esquema de documento en el orden en el que figura en el informe. En Acrobat, solo se agrega un marcador de destino al esquema del documento si se representa la página en la que aparece.  
   
  Si solo se representa una página, no se agrega ningún esquema de documento. El mapa del documento se organiza jerárquicamente para reflejar el nivel de anidamiento del informe. En Acrobat, puede obtenerse acceso al esquema de documento debajo de la pestaña Marcadores. Haga clic en una entrada dentro del esquema de documento para que el documento se desplace a la ubicación marcada.  
   
-### Marcadores  
+### <a name="bookmarks"></a>Marcadores  
  No se admiten marcadores en la representación en PDF.  
   
-### Vínculos de obtención de detalles  
+### <a name="drillthrough-links"></a>Vínculos de obtención de detalles  
  Los vínculos de obtención de detalles no se admiten en representación de PDF. Los vínculos de obtención de detalles no se representan como vínculos en los que se puede hacer clic y los informes detallados no se pueden conectar con el destino de la obtención de detalles.  
   
-### Hipervínculos  
+### <a name="hyperlinks"></a>Hipervínculos  
  Los hipervínculos de los informes se representan como vínculos en los que puede hacerse clic en el archivo PDF. Al hacer clic en ellos, Acrobat abrirá el explorador predeterminado del cliente y navegará a la dirección URL del hipervínculo.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
 ##  <a name="Compression"></a> Compresión  
  La compresión de imágenes está basada en el tipo de archivo original de la imagen. La extensión de representación en PDF comprime los archivos PDF de forma predeterminada.  
@@ -101,18 +103,17 @@ caps.handback.revision: 12
 > [!NOTE]  
 >  Los archivos PDF no admiten incrustar imágenes PNG.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
 ##  <a name="DeviceInfo"></a> Configuración de la información del dispositivo  
  Puede cambiar parte de la configuración predeterminada de este representador cambiando los valores de configuración de la información del dispositivo. Para obtener más información, consulte [PDF Device Information Settings](../../reporting-services/pdf-device-information-settings.md).  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
+

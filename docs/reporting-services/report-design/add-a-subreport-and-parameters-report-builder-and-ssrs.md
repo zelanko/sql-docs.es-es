@@ -1,26 +1,31 @@
 ---
-title: "Agregar un subinforme y par&#225;metros (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10093"
-  - "sql13.rtp.rptdesigner.subreportproperties.general.f1"
+title: "Agregar un subinforme y parámetros (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10093"
+- sql13.rtp.rptdesigner.subreportproperties.general.f1
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9e594025e0d4451d563f4d1b8b500d7f1ef1b576
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Agregar un subinforme y par&#225;metros (Generador de informes y SSRS)
+# <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Agregar un subinforme y parámetros (Generador de informes y SSRS)
   Agregue subinformes a un informe cuando desee crear un informe principal que actúe como contenedor para varios informes relacionados. Un subinforme es una referencia a otro informe. Para relacionar informes mediante valores de datos (por ejemplo, para que varios informes muestren datos del mismo cliente), debe diseñar un informe con parámetros (por ejemplo, un informe que muestre los detalles de un cliente concreto) como el subinforme. Al agregar un subinforme al informe principal, puede especificar los parámetros que se deben pasar al subinforme.  
   
  También puede agregar subinformes a filas o columnas dinámicas de una tabla o matriz. Cuando se procesa el informe principal, se procesa el subinforme para cada fila. En este caso, considere la posibilidad de lograr el efecto deseado usando regiones de datos o regiones de datos anidadas.  
@@ -30,7 +35,7 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Agregar un subinforme  
+### <a name="to-add-a-subreport"></a>Agregar un subinforme  
   
 1.  En la pestaña **Insertar** , haga clic en **Subinforme**.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 9
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Especificar los parámetros que se pasarán a un subinforme  
+### <a name="to-specify-parameters-to-pass-to-a-subreport"></a>Especificar los parámetros que se pasarán a un subinforme  
   
 1.  En la vista de diseño, haga clic con el botón derecho en el subinforme y, después, haga clic en **Propiedades del subinforme**.  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 9
   
      Cambiar el orden de un parámetro de subinforme no afecta al procesamiento del subinforme.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Subinformes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   

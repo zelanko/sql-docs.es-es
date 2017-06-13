@@ -1,30 +1,35 @@
 ---
-title: "Programaciones | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "programaciones [Reporting Services]"
-  - "programaciones [Reporting Services], acerca de las programaciones"
-  - "informes publicados [Reporting Services], programaciones"
-  - "informes [Reporting Services], programación"
-  - "suscripciones [Reporting Services], programación"
-  - "procesamiento automático de informes"
+title: Programaciones | Documentos de Microsoft
+ms.custom: 
+ms.date: 07/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- schedules [Reporting Services]
+- schedules [Reporting Services], about schedules
+- published reports [Reporting Services], schedules
+- reports [Reporting Services], scheduling
+- subscriptions [Reporting Services], scheduling
+- automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 caps.latest.revision: 51
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 51
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a49274f347768a1a213c9a0010917e9e1d1376a5
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Programaciones
+# <a name="schedules"></a>Programaciones
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona **programaciones compartidas** y **programaciones específicas del informe** para ayudarle a controlar el procesamiento y distribución de los informes. La diferencia entre los dos tipos de programaciones radica en cómo se definen, almacenan y administran. La construcción interna de los dos tipos de programación es la misma. Todas las programaciones especifican un tipo de periodicidad: mensual, semanal o diaria. Dentro del tipo de periodicidad, se deben establecer los intervalos y el período para la frecuencia con que se debe producir un evento. El tipo de patrón de periodicidad y cómo se especifican los patrones es el mismo si crea una programación compartida o una programación específica del informe.
   
   -   Las programaciones compartidas se crean como elementos independientes. Una vez creadas, deben incluirse referencias a las mismas durante la definición de una suscripción o cualquier otra operación programada.  
@@ -37,7 +42,7 @@ caps.handback.revision: 51
   
   
 ##  <a name="bkmk_whatyoucando"></a> Qué puede hacer con las programaciones  
- Puede usar el portal web de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], el [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] en modo nativo y las páginas de administración de sitios de SharePoint en modo de SharePoint para crear y administrar programaciones. Puede hacer lo siguiente:  
+ Puede usar el portal web de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , el [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] en modo nativo y las páginas de administración de sitios de SharePoint en modo de SharePoint para crear y administrar programaciones. Puede hacer lo siguiente:  
   
 -   Programar la entrega del informe mediante una suscripción estándar o controlada por datos.  
   
@@ -56,12 +61,12 @@ caps.handback.revision: 51
  Para obtener información detallada acerca de cómo crear y administrar programaciones, vea [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md).  
   
 > [!NOTE]  
->  Las operaciones de programación no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con la edición de SQL Server 2016](Features%20Supported%20by%20Edition%20of%20SQL%20Server_deleted.md).  
+>  Las operaciones de programación no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con la edición de SQL Server 2016](http://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454).  
   
 ##  <a name="bkmk_compare"></a> Comparar programaciones compartidas y programaciones específicas del informe  
  Ambos tipos de programaciones producen el mismo resultado:.  
   
--   Las **programaciones compartidas** son elementos multipropósito, que se pueden trasladar y que contienen información de programación lista para usar. Dado que las programaciones compartidas son elementos de nivel de sistema, crear una programación de este tipo requiere permisos de nivel de sistema. Por este motivo, un administrador de un servidor de informes o un administrador de contenido suele crear las programaciones compartidas disponibles en el servidor de informes. Las programaciones compartidas se almacenan y administran en el servidor de informes mediante el portal web o la configuración de sitio de SharePoint.  
+-   Las**programaciones compartidas** son elementos multipropósito, que se pueden trasladar y que contienen información de programación lista para usar. Dado que las programaciones compartidas son elementos de nivel de sistema, crear una programación de este tipo requiere permisos de nivel de sistema. Por este motivo, un administrador de un servidor de informes o un administrador de contenido suele crear las programaciones compartidas disponibles en el servidor de informes. Las programaciones compartidas se almacenan y administran en el servidor de informes mediante el portal web o la configuración de sitio de SharePoint.  
   
      A diferencia de las programaciones específicas que defina a través de las propiedades de informe, conjunto de datos compartidos o suscripciones, las programaciones compartidas son más fáciles de administrar y mantener por los siguientes motivos:  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 51
   
     -   Si solo usa programaciones compartidas, sabrá de forma precisa cuándo se producen las operaciones programadas. Esto hace más sencillo preveer y ajustar las cargas del servidor antes de que se produzcan problemas de rendimiento. Por ejemplo, si decide programar copias de seguridad del equipo a una hora concreta, puede ajustar las programaciones compartidas para que se ejecuten en momentos diferentes.  
   
--   Las **programaciones específicas del informe** se definen en el contexto de un informe individual, suscripción u operación de ejecución de informes para determinar las actualizaciones de la expiración de la memoria caché o de la instantánea. Estas programaciones se insertan durante la definición de una suscripción o el establecimiento de las propiedades de ejecución del informe. Las programaciones específicas del informe se pueden crear cuando la programación compartida no ofrece el modelo de frecuencia o periodicidad deseado. Para evitar que se ejecute un informe, las programaciones específicas del informe deben modificarse manualmente. Las programaciones específicas del informe las crean los usuarios individuales.  
+-   Las**programaciones específicas del informe** se definen en el contexto de un informe individual, suscripción u operación de ejecución de informes para determinar las actualizaciones de la expiración de la memoria caché o de la instantánea. Estas programaciones se insertan durante la definición de una suscripción o el establecimiento de las propiedades de ejecución del informe. Las programaciones específicas del informe se pueden crear cuando la programación compartida no ofrece el modelo de frecuencia o periodicidad deseado. Para evitar que se ejecute un informe, las programaciones específicas del informe deben modificarse manualmente. Las programaciones específicas del informe las crean los usuarios individuales.  
   
 ##  <a name="bkmk_configuredatasources"></a> Configurar los orígenes de datos  
  Para poder programar el procesamiento de una suscripción o datos para un informe, debe configurar el origen de datos del informe para usar las credenciales almacenadas o la cuenta de procesamiento de informes desatendido. Si usa credenciales almacenadas, solo puede almacenar un conjunto de credenciales, que usarán todos los usuarios que ejecuten el informe. Las credenciales pueden ser una cuenta de usuario de Windows o una cuenta de usuario de base de datos.  
@@ -90,7 +95,7 @@ caps.handback.revision: 51
 |Crear, modificar o eliminar programaciones específicas del informe en una suscripción definida por el usuario|Administrar suscripciones individuales|Explorador, Generador de informes, Mis informes, Administrador de contenido|Visitantes, Miembros|  
 |Crear, modificar o eliminar programaciones específicas del informe para todo el resto de operaciones programadas|Administrar historial de informe, Administrar todas las suscripciones y Administrar informes|Administrador de contenido|Propietarios|  
   
- Para más información sobre la seguridad en un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo, vea [Roles predefinidos](../../reporting-services/security/predefined-roles.md), [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) y [Tareas y permisos](../../reporting-services/security/tasks-and-permissions.md). Para el modo de SharePoint, vea [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
+ Para más información sobre la seguridad en un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]en modo nativo, vea [Roles predefinidos](../../reporting-services/security/role-definitions-predefined-roles.md), [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) y [Tareas y permisos](../../reporting-services/security/tasks-and-permissions.md). Para el modo de SharePoint, vea [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
   
 ##  <a name="bkmk_how_scheduling_works"></a> Funcionamiento del Procesador de entrega y programación  
  El Procesador de entrega y programación ofrece las siguientes funcionalidades:  
@@ -127,12 +132,12 @@ caps.handback.revision: 51
  Para procesar informes programados, se utiliza de forma predeterminada el Agente SQL Server. Si se detiene el servicio, las nuevas solicitudes de procesamiento solo se pueden agregar a la cola mediante programación con el método <xref:ReportService2010.ReportingService2010.FireEvent%2A>. Cuando se reinicia el servicio, se reanudan los trabajos que crean solicitudes de procesamiento de informes. El servidor de informes no trata de volver a crear trabajos de procesamiento de informes que pudieran haberse producido en el pasado, mientras el Agente SQL Server estaba sin conexión. Si se detiene el Agente SQL Server durante una semana, todas las operaciones programadas se pierden para esa semana.  
   
 > [!NOTE]  
->  Las funciones que proporciona el Agente SQL Server a Reporting Services se pueden reemplazar con código personalizado que use el método <xref:ReportService2010.ReportingService2010.FireEvent%2A> para agregar eventos de programación a la cola.  
+>  La funcionalidad que proporciona el Agente SQL Server a Reporting Services se puede reemplazar con código personalizado que utilice el método <xref:ReportService2010.ReportingService2010.FireEvent%2A> para agregar eventos de programación a la cola.  
   
 ###  <a name="bkmk_stoppingservice"></a> Efectos de detener el servicio del servidor de informes  
  Si se detiene el servicio del servidor de informes, el Agente SQL Server sigue agregando solicitudes de procesamiento de informes a la cola. La información de estado del Agente SQL Server indica que el trabajo concluyó correctamente. No obstante, puesto que se ha detenido el servicio del servidor de informes, en realidad no se produce el procesamiento de informes. Las solicitudes se siguen acumulando en la cola hasta que se reinicia el servicio del servidor de informes. Una vez reiniciado este servicio, todas las solicitudes de procesamiento de informes existentes en la cola se procesan por orden.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Crear, modificar y eliminar instantáneas del historial de informes](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Suscripciones controladas por datos](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
@@ -141,3 +146,4 @@ caps.handback.revision: 51
  [Almacenar en caché conjuntos de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
   
   
+

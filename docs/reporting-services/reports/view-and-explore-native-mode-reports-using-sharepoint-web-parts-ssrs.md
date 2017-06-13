@@ -1,26 +1,32 @@
 ---
-title: "Ver y explorar los informes en modo nativo usando elementos web de SharePoint (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Ver y explorar los informes en modo nativo usando elementos Web de SharePoint (SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 507cac75588632cfd89f5275ee7038a49b8cdfc5
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Ver y explorar los informes en modo nativo usando elementos web de SharePoint (SSRS)
-    
+
+# <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>Ver y explorar los informes en modo nativo usando elementos web de SharePoint (SSRS)
+
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ya no admite el uso de elementos web (RSWebParts.cab) en modo nativo para tener acceso al contenido del servidor de informes en un sitio de SharePoint desde un servidor de informes en modo nativo. Use el [elemento web Visor de informes en un sitio de SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) en su lugar.  
+>  SQL Server Reporting Services ya no se admite el uso de elementos web de modo nativo (RSWebParts.cab) para tener acceso al contenido de servidor de informes en un sitio de SharePoint desde un servidor de informes de modo nativo. Use el [elemento web Visor de informes en un sitio de SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) en su lugar.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona varios elementos web que funcionan con versiones específicas de un servidor de informes y en determinados modos de implementación.  
   
@@ -31,7 +37,7 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  El elemento web del visor de informes para el modo nativo (SPViewer.dwp) es un elemento web diferente del que instala el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint (ReportViewer.dwp). Los elementos web tienen implementaciones y esquemas diferentes pero ambos pueden instalarse en la misma granja de SharePoint. Visualmente, puede distinguir los dos elementos web mediante la siguiente característica: el elemento web Visor de informes que se instala mediante el complemento tiene el menú **Acciones** en la barra de herramientas.  
   
- Para más información sobre los modos del servidor de informes, vea [Servidor de informes de Reporting Services](../../reporting-services/report-server-sharepoint/servidor-de-informes-de-reporting-services.md).  
+ Para más información sobre los modos del servidor de informes, vea [Servidor de informes de Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md).  
   
  En este tema:  
   
@@ -50,18 +56,18 @@ caps.handback.revision: 9
   
  Tenga en cuenta que no se admite la personalización de elementos web. Los elementos web se usan tal cual y no se pueden extender ni modificar.  
   
--   El **Explorador de informes** (SPExplorer.dwp) se conecta al Administrador de informes en el equipo con el servidor de informes. Puede buscar informes disponibles en un servidor de informes y suscribirse a informes individuales. Si el Generador de informes está habilitado y tiene permisos suficientes, puede iniciar el Generador de informes desde el elemento web Explorador de informes.  
+-   El**Explorador de informes** (SPExplorer.dwp) se conecta al Administrador de informes en el equipo con el servidor de informes. Puede buscar informes disponibles en un servidor de informes y suscribirse a informes individuales. Si el Generador de informes está habilitado y tiene permisos suficientes, puede iniciar el Generador de informes desde el elemento web Explorador de informes.  
   
      El Explorador de informes muestra el contenido de una carpeta mediante una página del Administrador de informes. El acceso a los elementos y carpetas individuales en la jerarquía de carpetas del servidor de informes se controla mediante asignaciones de roles en el servidor de informes. Al seleccionar un informe, se abre en una ventana nueva del explorador. El Visor de HTML del servidor de informes muestra el informe y proporciona la barra de herramientas de informe, pero no el elemento web Visor de informes. Si desea personalizar la configuración de la barra de herramientas, asegúrese de especificar los parámetros de acceso a la dirección URL en el servidor de informes. Para obtener instrucciones, vea [Referencia de parámetros de acceso URL](../../reporting-services/url-access-parameter-reference.md).  
   
--   El **Visor de informes** (SPViewer.dwp) muestra un informe y proporciona una barra de herramientas que puede usar para navegar por las páginas, buscar contenido o exportar el informe. Puede agregar el elemento web Visor de informes a una página de elementos web para mostrar siempre un informe específico en dicha página o **puede conectarlo con el Explorador de informes** para mostrar informes abiertos mediante el elemento web.  
+-   El**Visor de informes** (SPViewer.dwp) muestra un informe y proporciona una barra de herramientas que puede usar para navegar por las páginas, buscar contenido o exportar el informe. Puede agregar el elemento web Visor de informes a una página de elementos web para mostrar siempre un informe específico en dicha página o **puede conectarlo con el Explorador de informes** para mostrar informes abiertos mediante el elemento web.  
   
 ##  <a name="bkmk_requirements"></a> Requisitos para usar los elementos web  
  Los requisitos para usar los elementos web Visor de informes y Explorador de informes son:  
   
 -   Las versiones admitidas de productos y tecnologías de SharePoint incluyen:  
   
-    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
+    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
   
     -   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] y [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
   
@@ -76,9 +82,9 @@ caps.handback.revision: 9
 ##  <a name="bkmk_installingwebparts"></a> Instalar elementos web  
  Los elementos web se suministran a un servidor de SharePoint como un archivo .CAB. Ejecute la herramienta Stsadm.exe de SharePoint en el archivo .cab desde la línea de comandos para instalar los elementos web. Para obtener más información acerca de la herramienta y la implementación de elementos web, vea la documentación de SharePoint.  
   
-#### Instalar elementos web con PowerShell  
+#### <a name="install-web-parts-using-powershell"></a>Instalar elementos web con PowerShell  
   
-1.  Copie el archivo **RSWebParts.cab** en una carpeta del servidor de SharePoint. Puede copiarlo en cualquier carpeta del servidor de SharePoint y, a continuación, eliminarlo una vez instalados los elementos web. De forma predeterminada, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instala el archivo RSWebParts.cab en la carpeta siguiente:  
+1.  Copie el archivo **RSWebParts.cab** en una carpeta del servidor de SharePoint. Puede copiarlo en cualquier carpeta del servidor de SharePoint y, a continuación, eliminarlo una vez instalados los elementos web. De forma predeterminada en SQL Server 2014 Reporting Services y versiones anteriores se instala el archivo RSWebParts.cab en la carpeta siguiente:  
   
     ```  
     C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint  
@@ -102,7 +108,7 @@ caps.handback.revision: 9
   
      Para más información sobre el uso de PowerShell, vea [Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx).  
   
-#### Instalar elementos web con STSADM.exe  
+#### <a name="install-web-parts-using-stsadmexe"></a>Instalar elementos web con STSADM.exe  
   
 1.  Copie el archivo **RSWebParts.cab** en la misma ubicación en el servidor de SharePoint descrita en la sección PowerShell de este documento.  
   
@@ -118,14 +124,14 @@ caps.handback.revision: 9
   
 4.  Debería recibir un mensaje que indique que la operación se completó correctamente.  
   
-     Al especificar `-globalinstall`, se agregan los elementos web a la caché de ensamblados global (GAC). Este paso es necesario si desea conectar los elementos web.  
+     Al especificar `-globalinstall` , se agregan los elementos web a la caché de ensamblados global (GAC). Este paso es necesario si desea conectar los elementos web.  
   
 ##  <a name="bkmk_configurewebparts"></a> Agregar y configurar elementos web  
  Una vez instalados los elementos web, puede agregarlos a una o a varias páginas en un sitio de SharePoint. El usuario debe tener permiso para crear sitios web y agregar contenido.  
   
  El procedimiento siguiente agregará ambos elementos web a una página y, después, conectará el Explorador de informes y el Visor de informes de modo que, cuando haga clic en un informe en el Explorador de informes, se mostrará dentro del Visor de informes.  
   
-#### Agregar el Visor de informes  
+#### <a name="add-report-viewer"></a>Agregar el Visor de informes  
   
 1.  En Acciones del sitio, haga clic en **Editar página**.  
   
@@ -136,19 +142,19 @@ caps.handback.revision: 9
 4.  Seleccione **Visor de informes**.  
   
     > [!WARNING]  
-    >  No seleccione **Visor de informes de SQL Server Reporting Services**. Ese elemento web se registra al instalar el Complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint y se usa para ejecutar un servidor de informes en modo de SharePoint. No se puede usar para ver informes en un servidor de informes en modo nativo.  
+    >  No seleccione **Visor de informes de SQL Server Reporting Services** . Ese elemento web se registra al instalar el Complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint y se usa para ejecutar un servidor de informes en modo de SharePoint. No se puede usar para ver informes en un servidor de informes en modo nativo.  
   
 5.  Haga clic en **Agregar**.  
   
 6.  Mientras la página está en el modo de edición, haga clic en **Editar elemento web** en el elemento web Visor de informes.  
   
-7.  En **Report Manager URL**, escriba una dirección URL a una instancia del Administrador de informes asociada al servidor de informes en modo nativo al que desea tener acceso. De manera predeterminada, la dirección URL del Administrador de informes tiene la siguiente sintaxis: **http://\<nombreDeServidor>/reports**.  
+7.  En **Report Manager URL**, escriba una dirección URL a una instancia del Administrador de informes asociada al servidor de informes en modo nativo al que desea tener acceso. De forma predeterminada, una dirección URL del Administrador de informes tiene la siguiente sintaxis: **http://\<servername > / reports**.  
   
 8.  En **Ruta de acceso del informe**, especifique una barra diagonal, seguida de la ruta de acceso a la carpeta y el nombre del informe. **No** incluya el nombre del servidor ni el directorio virtual del Administrador de informes. Por ejemplo, para abrir el informe "Company Sales" de la carpeta Adventure Works, especifique **/Adventure Works/Company Sales**. Aquí se proporciona otro ejemplo en el que el informe "Products" está en la carpeta raíz del servidor de informes **/Products**.  
   
 9. Haga clic en **Aceptar**.  
   
-#### Agregar el Explorador de informes y conectarse al Visor de informes  
+#### <a name="add-report-explorer-and-connect-to-report-viewer"></a>Agregar el Explorador de informes y conectarse al Visor de informes  
   
 1.  En otra zona de la página, haga clic en **Agregar un elemento web** y, en la carpeta Varios haga clic en **Explorador de informes** y haga clic en **Agregar**.  
   
@@ -167,10 +173,5 @@ caps.handback.revision: 9
     2.  Haga clic en **Mostrar informe en**.  
   
     3.  Haga clic en **Visor de informes**.  
-  
-## Vea también  
- [Administrador de informes &#40;Modo nativo de SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
- [Servidor de informes de Reporting Services &#40;modo de SharePoint&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)   
- [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)  
-  
-  
+
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,36 +1,41 @@
 ---
-title: "Encabezados y pies de p&#225;gina (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10125"
-  - "sql13.rtp.rptdesigner.pagefooter.border.f1"
-  - "10121"
-  - "10120"
-  - "10122"
-  - "sql13.rtp.rptdesigner.pageheader.general.f1"
-  - "10123"
-  - "sql13.rtp.rptdesigner.pageheader.fill.f1"
-  - "sql13.rtp.rptdesigner.pageheader.border.f1"
-  - "sql13.rtp.rptdesigner.pagefooter.fill.f1"
-  - "sql13.rtp.rptdesigner.pagefooter.general.f1"
-  - "10124"
+title: "Página encabezados y pies de página (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10125"
+- sql13.rtp.rptdesigner.pagefooter.border.f1
+- "10121"
+- "10120"
+- "10122"
+- sql13.rtp.rptdesigner.pageheader.general.f1
+- "10123"
+- sql13.rtp.rptdesigner.pageheader.fill.f1
+- sql13.rtp.rptdesigner.pageheader.border.f1
+- sql13.rtp.rptdesigner.pagefooter.fill.f1
+- sql13.rtp.rptdesigner.pagefooter.general.f1
+- "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f89d2e283daf9b9ac107c098d38db4feab17a736
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Encabezados y pies de p&#225;gina (Generador de informes y SSRS)
+# <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Encabezados y pies de página (Generador de informes y SSRS)
   Un informe puede contener un encabezado y un pie de página que aparecen en la parte superior e inferior de cada página, respectivamente. Los encabezados y pies de página pueden contener texto estático, imágenes, líneas, rectángulos, bordes, color de fondo, imágenes de fondo y expresiones. Las expresiones incluyen referencias a campos de conjunto de datos para informes que tienen un conjunto de datos y llamadas a funciones de agregado que incluyen el conjunto de datos como ámbito.  
   
 > [!NOTE]  
@@ -45,10 +50,10 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Encabezados y pies de página del informe  
+## <a name="report-headers-and-footers"></a>Encabezados y pies de página del informe  
  Los encabezados y los pies de página no son lo mismo que los encabezados y los pies de informe. Los informes no tienen un área especial para situar el encabezado o el pie. Un encabezado de informe se compone de elementos de informe que se sitúan en la parte superior del cuerpo del informe en la superficie de diseño del informe. Solo aparecen una vez como el primer contenido del informe. Un pie de informe se compone de elementos de informe que se sitúan en la parte inferior del cuerpo del informe. Solo aparecen una vez como el último contenido del informe.  
   
-## Mostrar datos variables en un encabezado o pie de página  
+## <a name="displaying-variable-data-in-a-page-header-or-footer"></a>Mostrar datos variables en un encabezado o pie de página  
  El contenido de los encabezados y los pies de página puede ser estático, aunque es habitual usarlos para mostrar contenido variable, como números de página o información sobre el contenido de una página. Para mostrar datos variables distintos en cada página, debe usar una expresión.  
   
  Si solo hay un conjunto de datos definido en el informe, podrá agregar expresiones simples como `[FieldName]` al encabezado o pie de página. Arrastre el campo desde la colección de campos de conjunto de datos del panel Datos de informe o desde la colección de campos integrados hasta el encabezado o pie de página. Se agrega un cuadro de texto con la expresión adecuada de forma automática.  
@@ -66,7 +71,7 @@ caps.handback.revision: 6
   
  Las secciones siguientes de este tema muestran expresiones listas para usar que generan datos variables usados habitualmente en los encabezados y pies de página. También hay una sección en la que se explica la forma en que la extensión de representación en Excel procesa encabezados y pies de página. Para más información sobre las expresiones, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
-### Agregar un total de páginas calculado a un encabezado o pie de página  
+### <a name="adding-calculated-page-totals-to-a-header-or-footer"></a>Agregar un total de páginas calculado a un encabezado o pie de página  
  En algunos informes, resulta útil incluir un valor calculado en el encabezado o pie de página; por ejemplo, una suma total por página si la página incluye valores numéricos. Dado que no se puede hacer referencia a los campos directamente, la expresión que use en el encabezado o pie de página debe hacer referencia al nombre del elemento del informe (por ejemplo, un cuadro de texto), en lugar de a un campo de datos:  
   
  `=Sum(ReportItems!Textbox1.Value)`  
@@ -75,7 +80,7 @@ caps.handback.revision: 6
   
  Si usa extensiones de representación diferentes para ver el informe, es probable que al calcular los totales de página también obtenga resultados diferentes. El resultado paginado se calcula de forma diferente para cada extensión de representación. La misma página que ve en HTML puede mostrar totales diferentes cuando se ve en PDF si la cantidad de datos que aparece en la página PDF es diferente. Para más información, vea [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
-### Para informes con varios conjuntos de datos  
+### <a name="for-reports-with-multiple-datasets"></a>Para informes con varios conjuntos de datos  
  Si se trata de informes con más de un conjunto de datos, no podrá agregar campos ni imágenes enlazadas a datos directamente en un encabezado o pie de página. Sin embargo, sí podrá escribir una expresión que haga referencia indirectamente al campo o imagen enlazada a datos que desee usar en un encabezado o pie de página.  
   
  Para usar datos variables en un encabezado o pie de página:  
@@ -90,7 +95,7 @@ caps.handback.revision: 6
   
  No puede usar funciones de agregado en campos del encabezado o pie de página. Solo puede usar funciones de agregado en elementos de informe del cuerpo del informe. Para consultar expresiones comunes en encabezados y pies de página, vea [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
   
-#### Agregar una imagen enlazada a datos a un encabezado o pie de página  
+#### <a name="adding-a-data-bound-image-to-a-header-or-footer"></a>Agregar una imagen enlazada a datos a un encabezado o pie de página  
  Puede usar datos de imágenes almacenados en una base de datos en el encabezado o pie de página. Sin embargo, no puede hacer referencia a campos de la base de datos directamente desde el elemento de informe Imagen. En su lugar, debe agregar un cuadro de texto al cuerpo del informe y, a continuación, asignar dicho cuadro de texto al campo de datos que contiene la imagen (tenga en cuenta que el valor debe estar en formato codificado base64). Puede ocultar el cuadro de texto en el cuerpo del informe para evitar que se muestre la imagen con codificación base64. A continuación, puede hacer referencia al valor del cuadro de texto oculto desde el elemento de informe Imagen en el encabezado o pie de página.  
   
  Por ejemplo, imagine que tiene un informe que consta de páginas de información de producto. En el encabezado de cada página, desea que aparezca una fotografía del producto. Para imprimir una imagen almacenada en el encabezado del informe, defina un cuadro de texto oculto denominado `TXT_Photo` en el cuerpo del informe que recupere la imagen de la base de datos y use una expresión para asignarle un valor:  
@@ -101,17 +106,17 @@ caps.handback.revision: 6
   
  `=Convert.FromBase64String(ReportItems!TXT_Photo.Value)`  
   
-## Usar encabezados y pies de página para colocar texto  
+## <a name="using-headers-and-footers-to-position-text"></a>Usar encabezados y pies de página para colocar texto  
  Puede usar encabezados y pies de página para colocar texto en una página. Por ejemplo, suponga que está creando un informe que desea enviar por correo a los clientes. Puede utilizar un encabezado o pie de página para colocar la dirección del cliente de forma que aparezca en una ventanilla de sobre cuando doble el informe.  
   
  Si solamente utiliza un cuadro de texto para llenar un encabezado o pie de página, puede ocultar este cuadro de texto en el cuerpo del informe. La colocación del cuadro de texto en el cuerpo del informe puede influir en si el valor aparece en el encabezado o el pie de página de la primera o la última página de un informe. Por ejemplo, si tiene tablas, matrices o listas que hacen que el informe ocupe varias páginas, el valor del cuadro de texto oculto aparecerá en la última página. Si desea que aparezca en la primera página, coloque el cuadro de texto oculto en la parte superior del cuerpo del informe.  
   
-## Diseñar informes con encabezados y pies de página para representadores específicos  
+## <a name="designing-reports-with-page-headers-and-footers-for-specific-renderers"></a>Diseñar informes con encabezados y pies de página para representadores específicos  
  Cuando se procesa un informe, se combinan los datos y la información sobre el diseño. Cuando se ve un informe, la información combinada se pasa a un representador que determina la cantidad de datos que caben en cada página del informe.  
   
  Si usa un explorador para ver un informe del servidor de informes, el representador de HTML controlará el contenido que se ve en cada una de las páginas. Si piensa entregar los informes en un formato diferente del que se usa para verlos, o si piensa imprimir los informes en un formato concreto, es posible que le interese optimizar el diseño del informe para el representador que va a usar para el formato final. Para más información sobre la paginación de informes, vea [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-### Trabajar con encabezados y pies de página en Excel  
+### <a name="working-with-page-headers-and-footers-in-excel"></a>Trabajar con encabezados y pies de página en Excel  
  Cuando defina encabezados y pies de página en informes destinados a la extensión de representación en Excel, siga estas instrucciones para lograr los mejores resultados:  
   
 -   Utilice pies de página para mostrar números de página.  
@@ -126,7 +131,7 @@ caps.handback.revision: 6
   
  Para más información, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Incrustar una imagen en un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [Rectángulos y líneas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   

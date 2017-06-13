@@ -1,25 +1,33 @@
 ---
-title: "Lecci&#243;n 1: Crear un proyecto de servidor de informes (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "Lección 1: Crear un proyecto de servidor de informes (Reporting Services) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 caps.latest.revision: 57
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 55
----
-# Lecci&#243;n 1: Crear un proyecto de servidor de informes (Reporting Services)
-En esta lección, creará un *proyecto de servidor de informes* y un archivo de * definición de informe (.rdl)* en [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] dentro de Visual Studio. 
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: bead48dd2f32047b2782a54204bf06a145a7d71d
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
 
-Para crear un informe con [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , primero necesita un proyecto de servidor de informes en el que guardar el archivo de definición del informe (.rdl) y cualquier otro archivo de recurso que necesite para el informe. 
+---
+# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lección 1: Crear un proyecto de servidor de informes (Reporting Services)
+
+ > Para el contenido relacionado con las versiones anteriores de SQL Server, vea [lección 1: crear un proyecto de servidor de informes (Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx).
+
+En esta lección, creará un *proyecto de servidor de informes* y un archivo de *definición de informe (.rdl)* en [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] dentro de Visual Studio. 
+
+Para crear un informe con [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], primero necesita un proyecto de servidor de informes en el que guardar el archivo de definición del informe (.rdl) y cualquier otro archivo de recurso que necesite para el informe. 
 
 En las siguientes lecciones, defina un origen de datos para el informe, un conjunto de datos y el diseño del informe. Cuando ejecuta el informe, los datos se recuperan y combinan con el diseño y luego se representan en pantalla, desde donde se pueden exportar, imprimir o guardar.  
   
@@ -39,7 +47,7 @@ En las siguientes lecciones, defina un origen de datos para el informe, un conju
 
 5. Haga clic en **Proyecto de servidor de informes** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png). 
 
-   >**Nota**: Si no ve las opciones de **Business Intelligence** o **Proyecto de servidor de informes**, necesitará actualizar SSDT con las plantillas de Business Intelligence. Consulte [Descargar SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)  
+   >**Tenga en cuenta**: si no ve el **Business Intelligence** o **Report Server Project** opciones, debe actualizar SSDT con las plantillas de Business Intelligence. Consulte [Descargar SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)  
   
 5.  En **Nombre**, escriba **tutorial**.  
 
@@ -53,9 +61,9 @@ En las siguientes lecciones, defina un origen de datos para el informe, un conju
   
 ## <a name="to-create-a-new-report-definition-file"></a>Para crear un nuevo archivo de definición de informe  
   
-1.  En el panel **Explorador de soluciones**, haga clic con el botón derecho en **Informes** > **Agregar** > **Nuevo elemento**. 
+1.  En el panel **Explorador de soluciones** , haga clic con el botón derecho en **Informes** > **Agregar** > **Nuevo elemento**. 
 
-    >**Consejo**: si no ve el panel del **Explorador de soluciones**, en el menú **View**, haga clic en el **Explorador de soluciones**. 
+    >**Consejo**: si no ve el panel del **Explorador de soluciones** , en el menú **View** , haga clic en el **Explorador de soluciones**. 
 
     ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
   
@@ -77,3 +85,5 @@ Ha creado un proyecto de informe denominado "Tutorial" y ha agregado un archivo 
 ## <a name="see-also"></a>Vea también  
 [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
+
+

@@ -1,63 +1,49 @@
 ---
-title: "Tutorial: Agregar un KPI a un informe (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: 'Tutorial: Agregar un KPI a un informe (generador de informes) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 06/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 6ff993552c5c5b8a3e48c672a29f6567107f2331
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tutorial: Agregar un KPI a un informe (Generador de informes y SSRS)
-En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)], agregue un indicador de rendimiento clave (KPI) a un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Agregar un KPI a un informe (Generador de informes y SSRS)
+En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , agregue un indicador de rendimiento clave (KPI) a un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
 
 Los KPI son valores medibles con significado empresarial. En este escenario, el resumen de ventas por subcategorías de producto es el KPI. El estado actual del KPI se muestra con colores, medidores e indicadores.
   
 La ilustración siguiente es similar al informe que va a crear.  
   
 ![generador-de-informes-informe-kpi](../reporting-services/media/report-builder-kpi-report.png)
-  
-## <a name="BackToTop"></a>Aprendizaje  
-En este tutorial, aprenderá a agregar un KPI estableciendo el color de fondo de las celdas de la tabla en función del valor de celda, así como a agregar y configurar un medidor y un indicador. También aprenderá a escribir la expresión que establece el color de fondo de las celdas de la tabla.  
-  
-Este tutorial contiene los siguientes procedimientos:  
-  
-1.  [Crear un informe de tabla y un conjunto de datos con el asistente para tablas o matrices](#Table)  
-  
-2.  [Organizar datos y elegir el diseño en el Asistente para tabla o matriz](#CompleteWizard)  
-  
-3.  [Utilizar los colores de fondo para mostrar un KPI](#BackgroundColors)  
-  
-4.  [Mostrar un KPI usando un medidor](#Gauge)  
-  
-5.  [Mostrar un KPI usando un indicador](#Indicator)  
-  
-6.  [Agregar un título de informe](#Title)  
-  
-7.  [Guardar el informe](#Save)  
-  
+    
 > [!NOTE]  
 > En este tutorial, los pasos del asistente se fusionan en dos procedimientos: uno para crear el conjunto de datos y otro para crear una tabla. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, elegir un origen de datos, crear un conjunto de datos y ejecutar el asistente, vea el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tiempo estimado para completar este tutorial: 15 minutos.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
 Para obtener información sobre los requisitos, vea [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Table"></a>1. Crear un informe de tabla y un conjunto de datos con el asistente para tablas o matrices  
 En esta sección, elija un origen de datos compartido, cree un conjunto de datos incrustado y muestre los datos en una tabla.  
  
-### Para crear una tabla con un conjunto de datos incrustado  
+### <a name="to-create-a-table-with-an-embedded-dataset"></a>Para crear una tabla con un conjunto de datos incrustado  
   
 1.  [Inicie el Generador de informes](../reporting-services/report-builder/start-report-builder.md) desde el equipo, el portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o el modo integrado de SharePoint.  
   
@@ -69,15 +55,15 @@ En esta sección, elija un origen de datos compartido, cree un conjunto de datos
   
 3.  En el panel de la derecha, haga clic en **Asistente para tabla o matriz**.  
   
-4.  En la página **Elegir un conjunto de datos**, haga clic en **Crear un conjunto de datos**.  
+4.  En la página **Elegir un conjunto de datos** , haga clic en **Crear un conjunto de datos**.  
   
 5.  Haga clic en **Siguiente**.  
   
-6.  En la página **Elegir una conexión a un origen de datos**, seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos. Si no está disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen del datos incrustados en su lugar. Para obtener más información, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos. Si no está disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen del datos incrustados en su lugar. Para obtener más información, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Haga clic en **Siguiente**.  
   
-8.  En la página **Diseñar una consulta**, haga clic en **Editar como texto**.  
+8.  En la página **Diseñar una consulta** , haga clic en **Editar como texto**.  
   
 9. Copie y pegue la siguiente consulta en el panel de consulta:  
 
@@ -124,7 +110,7 @@ En esta sección, elija un origen de datos compartido, cree un conjunto de datos
 ## <a name="CompleteWizard"></a>2. Organizar datos y elegir el diseño en el asistente  
 El Asistente para tabla o matriz proporciona un diseño inicial en el que se van a mostrar los datos. El panel de vista previa del asistente le ayudará a visualizar el resultado de las agrupaciones de datos antes de completar la tabla o el diseño de la matriz.  
   
-### Para organizar los datos en grupos y elegir un diseño 
+### <a name="to-organize-data-into-groups-and-choose-a-layout"></a>Para organizar los datos en grupos y elegir un diseño 
   
 1.  En la página Organizar campos, arrastre Product hasta **Valores**.  
   
@@ -146,9 +132,9 @@ El Asistente para tabla o matriz proporciona un diseño inicial en el que se van
   
     Al ejecutar el informe, la tabla muestra cada fecha, todos los pedidos de cada fecha, y todos los productos, cantidades y totales de ventas de cada pedido.  
   
-7.  En la página Elegir el diseño, en **Opciones**, compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales**.  
+7.  En la página Elegir el diseño, en **Opciones**, compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
   
-8.  Compruebe que esté seleccionada la opción **Bloqueado, subtotal abajo**.  
+8.  Compruebe que esté seleccionada la opción **Bloqueado, subtotal abajo** .  
   
 9. Desactive la opción **Expandir o contraer grupos**.  
   
@@ -168,7 +154,7 @@ Para cada producto vendido en una fecha concreta, la tabla muestra el nombre del
 
 ![generador-de-informes-kpi-tabla-básica](../reporting-services/media/report-builder-kpi-basic-table.png)
     
-### Aplicar formato de fecha y moneda
+### <a name="format-dates-and-currency"></a>Aplicar formato de fecha y moneda
 Vamos a hacer las columnas más anchas y establecer el formato de moneda y fecha.
 
 1. Haga clic en **Diseño** para volver a la vista Diseño.
@@ -177,13 +163,13 @@ Vamos a hacer las columnas más anchas y establecer el formato de moneda y fecha
 
 3. Presione la tecla CTRL y, después, seleccione las cuatro celdas que contienen [Sum(Sales)].
 
-4. En la pestaña **Inicio** > **Número** > **Moneda**. Las celdas cambian para mostrar la moneda con formato.
+4. On the **Home** tab > **Number** > **Currency**. Las celdas cambian para mostrar la moneda con formato.
 
    Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [$12,345.00]. Si no ve un valor de moneda de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** > **Valores de ejemplo**.
     
     ![generador-de-informes-marcador de posición-botón-valor](../reporting-services/media/report-builder-placeholder-value-button.png)
 
-5. (Opcional) En la pestaña **Inicio**, en el grupo **Número**, haga clic dos veces en el botón **Disminuir decimales** para mostrar las cifras en dólares sin centavos.
+5. (Opcional) En la pestaña **Inicio** , en el grupo **Número** , haga clic dos veces en el botón **Disminuir decimales** para mostrar las cifras en dólares sin centavos.
 
 6. Haga clic en la celda que contiene [SalesDate].
 
@@ -198,7 +184,7 @@ Vamos a hacer las columnas más anchas y establecer el formato de moneda y fecha
 ## <a name="BackgroundColors"></a>3. Utilizar los colores de fondo para mostrar un KPI  
 Los colores de fondo se pueden establecer en una expresión que se evalúe al ejecutar el informe.  
   
-### Para mostrar el estado actual de un KPI mediante colores de fondo  
+### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>Para mostrar el estado actual de un KPI mediante colores de fondo  
   
 1.  En la tabla, haga clic con el botón derecho en la segunda celda de `[Sum(Sales)]` (la fila de subtotal que muestra las ventas de una subcategoría) y, después, haga clic en **Propiedades de cuadro de texto**. 
 
@@ -206,7 +192,7 @@ Los colores de fondo se pueden establecer en una expresión que se evalúe al ej
     
     ![generador-de-informes-cuadro-de-texto-propiedades](../reporting-services/media/report-builder-text-box-properties.png)
   
-2.  En la pestaña **Relleno**, haga clic en el botón **fx** situado junto a la opción **Color de relleno** y escriba la siguiente expresión en el campo **Establecer expresión para: BackgroundColor**:  
+2.  En la pestaña **Relleno** , haga clic en el botón **fx** situado junto a la opción **Color de relleno** y escriba la siguiente expresión en el campo **Establecer expresión para: BackgroundColor** :  
   
     `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   
@@ -223,7 +209,7 @@ En la fila de subtotal que muestra las ventas de una subcategoría, el color de 
 ## <a name="Gauge"></a>4. Mostrar un KPI usando un medidor  
 Un medidor muestra un valor único de un conjunto de datos. En este tutorial se usa un medidor lineal horizontal porque su forma y simplicidad hacen que resulte fácil leerlo, incluso cuando tiene un tamaño pequeño y está dentro de la celda de una tabla. Para más información, vea [Medidores &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
-### Para mostrar el estado actual de un KPI usando un medidor  
+### <a name="to-display-the-present-state-of-a-kpi-using-a-gauge"></a>Para mostrar el estado actual de un KPI usando un medidor  
   
 1.  Cambie de nuevo a la vista Diseño.  
   
@@ -260,7 +246,7 @@ Un medidor muestra un valor único de un conjunto de datos. En este tutorial se 
     > [!NOTE]  
     > En lugar de una constante como 25 000, puede usar una expresión para calcular dinámicamente el valor de la opción **Máximo**. La expresión usaría el agregado de la característica de agregados y es similar a la expresión `=Max(Sum(Fields!Sales.value), "Tablix1")`.  
 
-14. En la pestaña **Etiquetas**, compruebe **Ocultar etiquetas de escala**.
+14. En la pestaña **Etiquetas** , compruebe **Ocultar etiquetas de escala**.
 
 15. Haga clic en **Aceptar**.
   
@@ -278,7 +264,7 @@ Un medidor muestra un valor único de un conjunto de datos. En este tutorial se 
 ## <a name="Indicator"></a>5. Mostrar un KPI usando un indicador  
 Los indicadores son medidores pequeños y simples que comunican los valores de datos de un vistazo. Debido a su tamaño y simplicidad, los indicadores se utilizan a menudo en tablas y matrices. Para obtener más información, vea [Indicadores &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
-### Para mostrar el estado actual de un KPI usando un indicador  
+### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>Para mostrar el estado actual de un KPI usando un indicador  
   
 1.  Cambie a la vista de diseño.  
   
@@ -298,9 +284,9 @@ Los indicadores son medidores pequeños y simples que comunican los valores de d
   
 8.  Haga clic con el botón derecho en el indicador y, después, haga clic en **Propiedades de indicador**.  
   
-9. En la pestaña **Valores y estados**, en el cuadro **Valor**, seleccione **[Sum(Sales)]**. No cambie ninguna de las otras opciones.  
+9. En la pestaña **Valores y estados** , en el cuadro **Valor** , seleccione **[Sum(Sales)]**. No cambie ninguna de las otras opciones.  
   
-    De manera predeterminada, la sincronización de datos se produce en la región de datos y podrá ver el valor **Tablix1**, el nombre de la región de datos de la tabla del informe, en el cuadro **Ámbito de sincronización**.  
+    De manera predeterminada, la sincronización de datos se produce en la región de datos y podrá ver el valor **Tablix1**, el nombre de la región de datos de la tabla del informe, en el cuadro **Ámbito de sincronización** .  
   
     En este informe, podrá cambiar también el ámbito de un indicador colocado en la celda del subtotal de la subcategoría para realizar la sincronización en el campo SalesDate.  
   
@@ -315,20 +301,20 @@ Los títulos de informe aparecen en la parte superior. Puede situar el título d
   
 Puede mejorar aún más el texto aplicando estilos de fuente, tamaños y colores diferentes a las frases y los caracteres individuales de este. Para obtener más información, vea [Dar formato al texto en un cuadro de texto &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
-### Para agregar un título de informe  
+### <a name="to-add-a-report-title"></a>Para agregar un título de informe  
   
 1.  En la superficie de diseño, haga clic en **Haga clic para agregar título**.  
   
-2.  Escriba **KPI de ventas del producto** y, después, haga clic fuera del cuadro de texto.  
+2.  Escriba **KPI de ventas del producto**y, después, haga clic fuera del cuadro de texto.  
   
-3.  De manera opcional, haga clic con el botón derecho en el cuadro de texto que contiene **KPI de ventas del producto**, haga clic en **Propiedades de cuadro de texto** y, después, en la pestaña Fuente, seleccione los diferentes estilos de fuente, tamaños y colores.  
+3.  De manera opcional, haga clic con el botón derecho en el cuadro de texto que contiene **KPI de ventas del producto**, haga clic en **Propiedades de cuadro de texto**y, después, en la pestaña Fuente, seleccione los diferentes estilos de fuente, tamaños y colores.  
   
 4.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
 ## <a name="Save"></a>7. Guardar el informe  
-Guarde el informe un servidor de informes o en su equipo. Si no guarda el informe en el servidor de informes, varias características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], como los elementos de informe y los subinformes, no estarán disponibles.  
+Guarde el informe un servidor de informes o en su equipo. Si no guarda el informe en el servidor de informes, varias características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , como los elementos de informe y los subinformes, no estarán disponibles.  
   
-### Para guardar el informe en un servidor de informes  
+### <a name="to-save-the-report-on-a-report-server"></a>Para guardar el informe en un servidor de informes  
   
 1.  En el botón **Generador de informes** , haga clic en **Guardar como**.  
   
@@ -344,25 +330,27 @@ Guarde el informe un servidor de informes o en su equipo. Si no guarda el inform
   
 El informe se guarda en el servidor de informes. El nombre del servidor de informes al que está conectado aparecerá en la barra de estado en la parte inferior de la ventana.  
   
-### Para guardar el informe en el equipo  
+### <a name="to-save-the-report-on-your-computer"></a>Para guardar el informe en el equipo  
   
 1.  En el botón **Generador de informes** , haga clic en **Guardar como**.  
   
-2.  Haga clic en **Escritorio**, **Mis documentos** o **Mi PC** y vaya a la carpeta donde quiere guardar el informe.  
+2.  Haga clic en **Escritorio**, **Mis documentos**o **Mi PC**y vaya a la carpeta donde quiere guardar el informe.  
   
 > [!NOTE]  
-> Si no tiene acceso a un servidor de informes, haga clic en **Escritorio**, **Mis documentos** o **Mi PC** y guarde el informe en su equipo.  
+> Si no tiene acceso a un servidor de informes, haga clic en **Escritorio**, **Mis documentos**o **Mi PC** y guarde el informe en su equipo.  
   
 1.  En **Nombre**, reemplace el nombre predeterminado por **KPI de ventas del producto**.  
   
 2.  Haga clic en **Guardar**.  
   
-## Pasos siguientes  
+## <a name="next-steps"></a>Pasos siguientes  
 Ha completado correctamente el tutorial Agregar un KPI a un informe. Para obtener más información, vea:
 *  [Medidores](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [Indicadores](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
 * [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md)
 * [Generador de informes en SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

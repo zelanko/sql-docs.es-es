@@ -1,32 +1,37 @@
 ---
-title: "Caracter&#237;sticas y tareas de Reporting Services (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/18/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Reporting Services, programar"
-  - "desarrollo [Reporting Services]"
+title: "Características y tareas (SSRS) Reporting Services | Documentos de Microsoft"
+ms.custom: 
+ms.date: 12/18/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services, programming
+- development [Reporting Services]
 ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
 caps.latest.revision: 42
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 41
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 8134ebc66d9b0d75b3eae53b666eea37dee3df5a
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Caracter&#237;sticas y tareas de Reporting Services (SSRS)
+# <a name="reporting-services-features-and-tasks-ssrs"></a>Características y tareas de Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se organiza mediante los informes y las características de informes, las características del servidor de informes y las características del producto [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Creación y publicación de informes móviles con el Publicador de informes móviles de SQL Server](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
- [Servidor de informes de Reporting Services](../reporting-services/report-server-sharepoint/servidor-de-informes-de-reporting-services.md)  
+ [Servidor de informes de Reporting Services](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
  [Informes de Reporting Services &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)  
   
@@ -50,8 +55,9 @@ caps.handback.revision: 41
   
  [Herramientas de Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
   
-## Vea también  
- [Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-ssrs.md)   
- [Novedades de Reporting Services &#40;SSRS&#41;](../Topic/What's%20New%20in%20Reporting%20Services%20\(SSRS\).md)  
+## <a name="see-also"></a>Vea también  
+ [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Novedades de Reporting Services &#40;SSRS&#41;](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
   
   
+

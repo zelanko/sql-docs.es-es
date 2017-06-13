@@ -1,24 +1,31 @@
 ---
-title: "Generar fuentes de distribuci&#243;n de datos a partir de un informe (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Generar fuentes de distribución de datos desde un informe (generador de informes y SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b49b80de8516e14972b05d7ae91f4f72e765803a
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Generar fuentes de distribuci&#243;n de datos a partir de un informe (Generador de informes y SSRS)
-  Puede generar fuentes de distribución de datos conformes con Atom a partir de los informes paginados y, después, usar las fuentes de distribución de datos en las aplicaciones, como el cliente de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], que puede usar fuentes de distribución de datos.  
+
+# <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>Generar fuentes de distribución de datos a partir de un informe (Generador de informes y SSRS)
+
+Puede generar fuentes de distribución de datos compatibles con Atom desde informes paginados y, a continuación, usar las fuentes de distribución de datos en aplicaciones, como Power Pivot, o fuentes de Power BI, que puede consumir datos.  
   
  La extensión de representación de Atom de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] genera un documento de servicio de Atom que enumera las fuentes de distribución de datos disponibles en un informe. El documento enumera al menos una fuente de distribución de datos para cada región de datos del informe. Según el tipo de región de datos y los datos que esta muestra, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podría generar varias fuentes de distribución de datos a partir de una región de datos.  
   
@@ -29,15 +36,15 @@ caps.handback.revision: 11
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Generar un documento de servicio de Atom  
+### <a name="to-generate-an-atom-service-document"></a>Generar un documento de servicio de Atom  
   
-1.  en el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], navegue hasta el informe para el que quiere generar fuentes de distribución de datos.  
+1.  en el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , navegue hasta el informe para el que quiere generar fuentes de distribución de datos.  
   
 2.  Haga clic en el informe.  
   
      El informe se ejecuta.  
   
-3.  En la barra de herramientas, haga clic en el icono **Exportar a fuente de distribución de datos**.  
+3.  En la barra de herramientas, haga clic en el icono **Exportar a fuente de distribución de datos** .  
   
      Aparece un mensaje en el que se pregunta si desea guardar o abrir el documento de Atom que contiene la fuente de distribución de datos.  
   
@@ -54,7 +61,7 @@ caps.handback.revision: 11
   
 8.  Si lo desea, abra el archivo .atomsvc en un explorador o un editor de texto o XML.  
   
-### Ver una fuente de distribución de datos conforme a Atom  
+### <a name="to-view-an-atom-compliant-data-feed"></a>Ver una fuente de distribución de datos conforme a Atom  
   
 1.  Si el documento de servicio de Atom no está abierto aún, búsquelo y ábralo en un explorador como Internet Explorer.  
   
@@ -80,8 +87,9 @@ caps.handback.revision: 11
 7.  Compruebe que el tipo de documento es **Archivo ATOM**y, a continuación, haga clic en **Guardar**.  
   
 8.  Si lo desea, abra el archivo .atom en un explorador o editor de texto o XML.  
-  
-## Vea también  
- [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
-  
-  
+
+## <a name="next-steps"></a>Pasos siguientes
+
+[Exportación de informes](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
+
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

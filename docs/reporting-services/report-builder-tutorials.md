@@ -1,28 +1,36 @@
 ---
-title: "Tutoriales del Generador de informes | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: Tutoriales del generador de informes | Documentos de Microsoft
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 0db221b65dff8a531893657c47c776dc350c4aef
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tutoriales del Generador de informes
-Consulte los siguientes tutoriales del Generador de informes para obtener información sobre cómo crear informes básicos de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
+# <a name="report-builder-tutorials"></a>Tutoriales del Generador de informes
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
+Consulte los siguientes tutoriales del Generador de informes para obtener información sobre cómo crear informes básicos de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
   
 [Requisitos previos para los tutoriales&#40;Generador de informes&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)  
-Para usar estos tutoriales, debe tener acceso de solo lectura a una base de datos de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] y permisos de acceso a un servidor de informes de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
+Para utilizar estos tutoriales, debe tener acceso de solo lectura a una base de datos de SQL Server y los permisos para tener acceso a un [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] servidor de informes.  
   
 Para obtener ayuda con estos requisitos previos, póngase en contacto con el administrador del servidor de informes.  
   
@@ -67,11 +75,11 @@ Siga los pasos de este tutorial para obtener información sobre cómo crear los 
   
 [Tutorial: Introducción a las expresiones](../reporting-services/tutorial-introducing-expressions.md)  
 Siga los pasos de este tutorial para aprender a usar expresiones que le permitan concatenar valores de campo, calcularlos, buscarlos y mostrarlos en un informe. También aprenderá a mostrar de forma condicional diferentes imágenes y estados de indicador mediante expresiones.  
-  
-## Vea también  
-[Vista de diseño de informe &#40;Generador de informes&#41;](../reporting-services/report-builder/report-design-view-report-builder.md)  
+
+## <a name="next-steps"></a>Pasos siguientes
+
+[Vista Diseño del informe](../reporting-services/report-builder/report-design-view-report-builder.md)  
 [Generador de informes en SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-[Tutorial: Crear un informe de gráfico rápido sin conexión &#40;Generador de informes&#41;](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
-  
-  
-  
+[Tutorial: Crear un informe de gráfico rápido sin conexión](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

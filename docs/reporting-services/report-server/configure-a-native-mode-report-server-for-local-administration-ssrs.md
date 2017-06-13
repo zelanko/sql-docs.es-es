@@ -1,31 +1,36 @@
 ---
-title: "Configurar un servidor de informes en modo nativo para la administraci&#243;n local (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UAC"
-  - "instalar Reporting Services"
-  - "Windows Vista"
-  - "Localhost"
-  - "windows server 2008"
-  - "Vista"
+title: "Configurar un servidor de informes de modo nativo para la administración Local (SSRS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UAC
+- installing Reporting Services
+- Windows Vista
+- Localhost
+- windows server 2008
+- Vista
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 caps.latest.revision: 20
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 20
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9939a592288fb5bc031dc53b94ac21c3809d0314
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Configurar un servidor de informes en modo nativo para la administraci&#243;n local (SSRS)
-  La implementación de un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en uno de los sistemas operativos siguientes requiere más pasos de configuración si desea administrar la instancia del servidor de informes localmente. En este tema, se describe cómo configurar el servidor de informes para la administración local. Si aún no tiene instalado o configurado el servidor de informes, vea [Instalación de SQL Server 2016 desde el Asistente para la instalación &#40;programa de instalación&#41;](../../database-engine/install-windows/install-sql-server-2016-from-the-installation-wizard-setup.md) y [Administrar un servidor de informes en modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
+# <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurar un servidor de informes en modo nativo para la administración local (SSRS)
+  La implementación de un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en uno de los sistemas operativos siguientes requiere más pasos de configuración si desea administrar la instancia del servidor de informes localmente. En este tema, se describe cómo configurar el servidor de informes para la administración local. Si aún no tiene instalado o configurado el servidor de informes, vea [Instalación de SQL Server 2016 desde el Asistente para la instalación &#40;programa de instalación&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) y [Administrar un servidor de informes en modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  
@@ -73,11 +78,11 @@ caps.handback.revision: 20
   
 ###  <a name="bkmk_site_settings"></a> Configuración de sitios de confianza en el explorador  
   
-1.  Abra una ventana del explorador con los permisos Ejecutar como administrador. En el menú **Inicio**, haga clic en **Todos los programas**, haga clic con el botón derecho en **Internet Explorer** y seleccione **Ejecutar como administrador**.  
+1.  Abra una ventana del explorador con los permisos Ejecutar como administrador. En el menú **Inicio** , haga clic en **Todos los programas**, haga clic con el botón derecho en **Internet Explorer**y seleccione **Ejecutar como administrador**.  
   
 2.  Haga clic en **Permitir** para continuar.  
   
-3.  En la dirección URL, escriba la dirección URL del Administrador de informes. Para obtener instrucciones, vea [Administrador de informes &#40;Modo nativo de SSRS&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  En la dirección URL, escriba la dirección URL del Administrador de informes. Para obtener instrucciones, vea [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 4.  Haga clic en **Herramientas**.  
   
@@ -118,7 +123,7 @@ caps.handback.revision: 20
 2.  Haga clic en **Configuración del sitio** en la esquina superior de la página Inicio.  
   
     > [!TIP]  
-    >  **Nota:** Si no ve la opción **Configuración del sitio**, cierre y vuelva a abrir el explorador y vaya al Administrador de informes con privilegios administrativos.  
+    >  **Nota:** Si no ve la opción **Configuración del sitio** , cierre y vuelva a abrir el explorador y vaya al Administrador de informes con privilegios administrativos.  
   
 3.  Haga clic en **Seguridad**.  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 20
   
  **Para configurar asignaciones de roles de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** no es necesario iniciar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] con permisos elevados todas las veces:  
   
--   En el menú **Inicio**, haga clic en **Todos los programas** y en **SQL Server 2014**, haga clic con el botón derecho en **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]** y luego haga clic en **Ejecutar como administrador**.  
+-   En el menú **Inicio** , haga clic en **Todos los programas**y en **SQL Server 2014**, haga clic con el botón derecho en **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**y luego haga clic en **Ejecutar como administrador**.  
   
 -   Conéctese al servidor local de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -181,7 +186,7 @@ caps.handback.revision: 20
 ##  <a name="bkmk_addiitonal_informaiton"></a> Información adicional  
  Un paso de configuración frecuente adicional relacionado con la administración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste en abrir el puerto 80 en Firewall de Windows para permitir el acceso al equipo servidor de informes. Para obtener instrucciones, consulte [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Administrar un servidor de informes en modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   

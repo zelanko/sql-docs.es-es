@@ -1,33 +1,38 @@
 ---
-title: "Report Definition Language (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Reporting Services, RDL"
-  - "Reporting Services, RDL"
-  - "RDL [Reporting Services], acerca del lenguaje RDL (Report Definition Language)"
-  - "SSRS, RDL"
-  - "Lenguaje RDL (Report Definition Language), acerca de RDL"
-  - "lenguaje RDL (Report Definition Language)"
-  - "RDL [Reporting Services]"
-  - "informes [Reporting Services], definiciones"
+title: Report Definition Language (SSRS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Reporting Services, RDL
+- Reporting Services, RDL
+- RDL [Reporting Services], about Report Definition Language
+- SSRS, RDL
+- Report Definition Language, about Report Definition Language
+- Report Definition Language
+- RDL [Reporting Services]
+- reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 caps.latest.revision: 52
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 52
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 003d81f131eeeadbf672e63f0c949e4a1a6df2ad
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Report Definition Language (SSRS)
-  El lenguaje RDL (Report Definition Language) es una representación XML de una definición de informe de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Una definición de informe contiene información acerca de la recuperación y el diseño de los datos de un informe. RDL está formado por elementos XML que cumplen la sintaxis XML creada para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Puede agregar sus propias funciones personalizadas para controlar los valores de elemento de informe, los estilos y el formato si obtiene acceso a los ensamblados de código en los archivos de definición de informe.  
+# <a name="report-definition-language-ssrs"></a>Report Definition Language (SSRS)
+  El lenguaje RDL (Report Definition Language) es una representación XML de una definición de informe de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una definición de informe contiene información acerca de la recuperación y el diseño de los datos de un informe. RDL está formado por elementos XML que cumplen la sintaxis XML creada para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Puede agregar sus propias funciones personalizadas para controlar los valores de elemento de informe, los estilos y el formato si obtiene acceso a los ensamblados de código en los archivos de definición de informe.  
   
  RDL promueve la interoperabilidad de productos de generación de informes comerciales al definir un esquema común que habilita el intercambio de definiciones de informe. Cualquier protocolo o interfaz de programación que funciona con XML se puede utilizar con RDL. RDL es:  
   
@@ -41,25 +46,25 @@ caps.handback.revision: 52
  Para descargar las especificaciones de versiones específicas de esquema, vea [Especificación del lenguaje RDL](http://go.microsoft.com/fwlink/?linkid=116865).  
   
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> Definición de esquema XML de RDL  
- Un archivo RDL (Report Definition Language) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se valida con un archivo de definición de esquema XML (XSD). El esquema define las reglas para dónde se pueden producir elementos RDL en un archivo .rdl. Un elemento incluye su tipo de datos y cardinalidad, es decir, el número de repeticiones que se permiten. Los elementos pueden ser simples o complejos. Un elemento simple no tiene elementos o atributos secundarios. Un elemento complejo tiene elementos secundarios y opcionalmente, atributos.  
+ A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se valida con un archivo de definición de esquema XML (XSD). El esquema define las reglas para dónde se pueden producir elementos RDL en un archivo .rdl. Un elemento incluye su tipo de datos y cardinalidad, es decir, el número de repeticiones que se permiten. Los elementos pueden ser simples o complejos. Un elemento simple no tiene elementos o atributos secundarios. Un elemento complejo tiene elementos secundarios y opcionalmente, atributos.  
   
- Por ejemplo, el esquema incluye el elemento RDL **ReportParameters**que es del tipo complejo **ReportParametersType**. Por convención, un tipo complejo para un elemento es el nombre del elemento seguido de la palabra **Type**. Un elemento **ReportParameters** puede estar contenido en un elemento **Report** (un tipo complejo) y puede contener elementos **ReportParameter**. Un **ReportParameterType** es un tipo simple que solo puede tener uno de los siguientes valores: **Boolean**, **DateTime**, **Integer**, **Float**o **String**. Para obtener más información sobre los tipos de datos de esquema XML, vea [Parte 2 del esquema XML: tipos de datos Segunda edición](http://go.microsoft.com/fwlink/?linkid=4871).  
+ Por ejemplo, el esquema incluye el elemento RDL **ReportParameters**que es del tipo complejo **ReportParametersType**. Por convención, un tipo complejo para un elemento es el nombre del elemento seguido de la palabra **Type**. Un elemento **ReportParameters** puede estar contenido en un elemento **Report** (un tipo complejo) y puede contener elementos **ReportParameter** . Un **ReportParameterType** es un tipo simple que solo puede tener uno de los siguientes valores: **Boolean**, **DateTime**, **Integer**, **Float**o **String**. Para obtener más información sobre los tipos de datos de esquema XML, vea [Parte 2 del esquema XML: tipos de datos Segunda edición](http://go.microsoft.com/fwlink/?linkid=4871).  
   
- El XSD de RDL está disponible en el archivo ReportDefinition.xsd, que se encuentra en la carpeta Extras del CD-ROM del producto. También está disponible en el servidor de informes a través de la dirección URL siguiente: http://nombreDeServidor/servidorDeInformes/definiciónDeInforme.xsd.  
+ El XSD de RDL está disponible en el archivo ReportDefinition.xsd, que se encuentra en la carpeta Extras del CD-ROM del producto. También está disponible en el servidor de informes a través de la siguiente dirección URL: `http://servername/reportserver/reportdefinition.xsd`.  
   
 ##  <a name="bkmk_Creating_RDL"></a> Crear RDL  
  Debido a la naturaleza abierta y extensible de RDL, se pueden compilar diversas herramientas y aplicaciones que generan RDL basándose en su esquema XML.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona varias herramientas para crear archivos RDL. Para más información, vea [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
   
- Una de las maneras más fáciles de generar RDL desde una aplicación es usar las clases [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] del espacio de nombres <xref:System.Xml> y del espacio de nombres <xref:System.Linq>. Una clase en particular, la clase **XmlTextWriter** , se puede utilizar para escribir RDL. Con **XmlTextWriter**, puede generar una definición de informe completa en cualquier aplicación [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Los programadores también pueden ampliar RDL agregando elementos de informe personalizados con propiedades personalizadas. Para más información sobre la clase **XmlTextWriter** y el espacio de nombres <xref:System.Xml>, vea la Guía del programador de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Para obtener más información sobre Language-Integrated Query (LINQ), busque "LINQ to XML" en MSDN.  
+ Una de las formas más sencillas de generar RDL a partir de una aplicación consiste en usar la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] clases de la <xref:System.Xml> espacio de nombres y <xref:System.Linq> espacio de nombres. Una clase en particular, la clase **XmlTextWriter** , se puede utilizar para escribir RDL. Con **XmlTextWriter**, puede generar una definición de informe completa en cualquier aplicación [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Los programadores también pueden ampliar RDL agregando elementos de informe personalizados con propiedades personalizadas. Para obtener más información sobre la **XmlTextWriter** clase y la <xref:System.Xml> espacio de nombres, vea la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Guía del desarrollador. Para obtener más información sobre Language-Integrated Query (LINQ), busque "LINQ to XML" en MSDN.  
   
  La extensión de archivo estándar para los archivos de definición de informe es .rdl. También puede desarrollar archivos de definición de informe de cliente, que tienen extensiones .rdlc. El tipo MIME para ambas extensiones es text/xml. Para más información sobre los informes, vea [Informes de Reporting Services &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md).  
   
 ##  <a name="bkmk_RDL_Types"></a> Tipos de RDL  
  En la tabla siguiente se enumeran los tipos usados en los atributos y elementos del lenguaje RDL.  
   
-|Tipo|Description|  
+|Type|Description|  
 |----------|-----------------|  
 |**Binario**|Una propiedad con un valor binario codificado de base 64.|  
 |**Boolean**|Propiedad con **true** o **false** como valor del objeto. A menos que se especifique lo contrario, el valor de un objeto booleano opcional omitido es **False**.|  
@@ -86,7 +91,7 @@ caps.handback.revision: 52
 |Single, Double|Float|  
 |String, Char, GUID, Timespan|String|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Buscar la versión del esquema de definición de informe &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)   
  [Usar ensamblados personalizados con informes](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Elementos de informe personalizados](../../reporting-services/custom-report-items/custom-report-items.md)  

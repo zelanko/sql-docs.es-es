@@ -1,37 +1,42 @@
 ---
-title: "Aprovisionar Subscripciones y alertas para aplicaciones de servicio SSRS | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Servicio compartido de Reporting Services"
-  - "modo de SharePoint [Reporting Services]"
-  - "modo de SharePoint"
-  - "Aplicación de servicio de Reporting Services"
-  - "aplicación de servicio SSRS"
+title: Aprovisionar subscripciones y alertas para aplicaciones de servicio SSRS | Documentos de Microsoft
+ms.custom: 
+ms.date: 06/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services Shared Service
+- SharePoint Mode [Reporting Services]
+- SharePoint Mode
+- Reporting Services Service Application
+- SSRS service application
 ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
 caps.latest.revision: 20
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 20
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 43a5b233f39e52555696d2b6f3e08ce9077581b6
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Aprovisionar Subscripciones y alertas para aplicaciones de servicio SSRS
+# <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Aprovisionar Subscripciones y alertas para aplicaciones de servicio SSRS
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requieren el Agente SQL Server y la configuración de permisos del mismo. Si ve mensajes de error que indican que se requiere el Agente SQL Server y ha comprobado que se está ejecutando, actualice o compruebe los permisos. El ámbito de este tema es [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint y en él se describen tres formas de actualizar los permisos del Agente SQL Server con suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las credenciales que use para los pasos de este tema deben disponer de los permisos adecuados para conceder permisos de ejecución a RSExecRole para los objetos de la aplicación de servicio, msdb y las bases de datos maestras.  
   
 ||  
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
   
- ![SQL Agent permissions to Service Application DBs](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "SQL Agent permissions to Service Application DBs")  
+ ![Permisos de agente SQL para bases de datos de aplicación de servicio](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "permisos de agente SQL para bases de datos de aplicación de servicio")  
   
-||Descripción|  
+||Description|  
 |------|-----------------|  
 |**1**|Instancia del Motor de base de datos de SQL Server que hospeda las bases de datos de aplicación de servicio de Reporting Services.|  
 |**2**|Instancia del agente SQL Server para la instancia del motor de base de datos SQL.|  
@@ -46,7 +51,7 @@ caps.handback.revision: 20
   
 3.  Ejecute un cmdlet de PowerShell para compilar un script Transact-SQL que se pueda utilizar para configurar los permisos.  
   
-### Para actualizar los permisos mediante la página de aprovisionamiento  
+### <a name="to-update-permissions-using-the-provision-page"></a>Para actualizar los permisos mediante la página de aprovisionamiento  
   
 1.  En Administración central de SharePoint, en el grupo **Administración de aplicaciones** , haga clic en **Administrar aplicaciones de servicio**.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 20
   
 5.  Haga clic en **Descargar script** para descargar un script de Transact-SQL que puede ejecutar SQL Server Management Studio para conceder los permisos. El nombre del archivo de script que se cree contendrá el nombre de su nombre de aplicación de servicio de Reporting Services, por ejemplo, **[nombre de la aplicación de servicio] -GrantRights.sql**.  
   
-### Para generar la instrucción Transact-SQL con PowerShell  
+### <a name="to-generate-the-transact-sql-statement-with-powershell"></a>Para generar la instrucción Transact-SQL con PowerShell  
   
 1.  También puede usar un cmdlet de Windows PowerShell en el Shell de administración de SharePoint 2016 o SharePoint 2013 para crear el script Transact-SQL.  
   
@@ -84,10 +89,10 @@ caps.handback.revision: 20
   
      **Cmdlet de prueba:** `Get-SPRSDatabaseRightsScript –DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c –UserName “NT AUTHORITY\NETWORK SERVICE” –IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
   
-## Usar el script Transact-SQL  
+## <a name="using-the-transact-sql-script"></a>Usar el script Transact-SQL  
  Los siguientes procedimientos se pueden utilizar con los scripts descargados de la página de provisiones o con los scripts creados con PowerShell.  
   
-#### Para cargar el script Transact-SQL en SQL Server Management Studio  
+#### <a name="to-load-the-transact-sql-script-in-sql-server-management-studio"></a>Para cargar el script Transact-SQL en SQL Server Management Studio  
   
 1.  Para abrir SQL Server Management Studio, en el menú **Inicio** , haga clic en [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] y en **SQL Server Management Studio**.  
   
@@ -103,7 +108,7 @@ caps.handback.revision: 20
   
 3.  Haga clic en **Conectar**.  
   
-#### Para ejecutar la instrucción Transact-SQL  
+#### <a name="to-run-the-transact-sql-statement"></a>Para ejecutar la instrucción Transact-SQL  
   
 1.  En la barra de herramientas de SQL Server Management Studio, haga clic en **Nueva consulta**.  
   
@@ -118,3 +123,4 @@ caps.handback.revision: 20
 5.  Haga clic en **Ejecutar**.  
   
   
+

@@ -1,56 +1,41 @@
 ---
-title: "Tutorial: Agregar un minigr&#225;fico a un informe (Generador de informes) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Tutorial: Agregar un minigráfico a un informe (generador de informes) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c4cc42eaf9862f2154f598d6f91dafffa906c799
+ms.contentlocale: es-es
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tutorial: Agregar un minigr&#225;fico a un informe (Generador de informes)
-En este tutorial del [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)], puede crear una tabla básica con un minigráfico en un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].   
+
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Agregar un minigráfico a un informe (Generador de informes)
+
+En este tutorial del [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)], puede crear una tabla básica con un minigráfico en un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
   
-Los minigráficos y las barras de datos son gráficos simples y pequeños que contienen mucha información en poco espacio, a menudo en tablas y matrices de los informes de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. En la siguiente ilustración se muestra un informe similar al que creará.  
+Los minigráficos y las barras de datos son gráficos simples y pequeños que contienen mucha información en poco espacio, a menudo en tablas y matrices de los informes de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . En la siguiente ilustración se muestra un informe similar al que creará.  
   
 ![generador-de-informes-minigráfico-final](../reporting-services/media/report-builder-sparkline-final.png)  
-   
-## <a name="BackToTop"></a>Aprendizaje  
-En este tutorial, aprenderá a realizar las siguientes tareas:  
-  
-1. [Crear un informe con una tabla](#CreateTable)  
-  
-2. [Crear una consulta y un diseño de tabla en el Asistente para tabla o matriz](#Query)
- 
-    2a. (Opcional) [Dar formato a los datos como moneda](#FormatCurrency)  
-  
-    2b. (Opcional) [Dar formato a los datos como fechas](#FormatDates)  
-  
-3. [Agregar un minigráfico a la tabla](#Sparkline)  
-  
-4. [Alinear los minigráficos vertical y horizontalmente](#AlignSparklines)  
-  
-### Otros pasos opcionales  
-7. [Cambiar el ancho de columna](#Width)  
-  
-8. [Agregar un título de informe](#Title)  
-  
-9. [Guardar el informe](#Save)  
-  
+     
 Tiempo estimado para completar este tutorial: 30 minutos.  
   
-## Requisitos  
-Para obtener más información sobre los requisitos, vea [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
+## <a name="requirements"></a>Requisitos  
+Para obtener más información sobre los requisitos, consulte [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="CreateTable"></a>1. Crear un informe con una tabla  
   
@@ -64,16 +49,16 @@ Para obtener más información sobre los requisitos, vea [Requisitos previos par
   
 3.  En el panel de la derecha, haga clic en **Asistente para tabla o matriz**.  
   
-4.  En la página **Elegir un conjunto de datos**, seleccione **Crear un conjunto de datos** > **Siguiente**. Se abre la página **Elegir una conexión a un origen de datos**.  
+4.  En la página **Elegir un conjunto de datos** , seleccione **Crear un conjunto de datos** > **Siguiente**. Se abre la página **Elegir una conexión a un origen de datos** .  
   
     > [!NOTE]  
-    > Este tutorial no necesita datos concretos; solo necesita una conexión a una base de datos de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Si ya tiene una conexión de origen de datos enumerada en **Conexiones de origen de datos**, puede seleccionarla e ir al paso 10. Para obtener más información, vea [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > Este tutorial no necesita datos concretos; solo necesita una conexión a una base de datos de SQL Server. Si ya tiene una conexión de origen de datos enumerada en **Conexiones de origen de datos**, puede seleccionarla e ir al paso 10. Para obtener más información, vea [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  Haga clic en **Nueva**. Se abre el cuadro de diálogo **Propiedades del origen de datos** .  
   
-6.  En **Nombre**, escriba **Ventas de producto** como nombre del origen de datos.  
+6.  En **Nombre**, escriba **Ventas de producto**como nombre del origen de datos.  
   
-7.  En **Seleccionar un tipo de conexión**, compruebe que está seleccionado **Microsoft SQL Server**.  
+7.  En **Seleccionar un tipo de conexión**, compruebe que está seleccionado **Microsoft SQL Server** .  
   
 8.  En **Cadena de conexión**, escriba el texto siguiente:  
   
@@ -85,9 +70,9 @@ Para obtener más información sobre los requisitos, vea [Requisitos previos par
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    Volverá a encontrarse en la página **Elegir una conexión a un origen de datos**.  
+    Volverá a encontrarse en la página **Elegir una conexión a un origen de datos** .  
   
-11. Para comprobar que se puede conectar al origen de datos, haga clic en **Probar conexión**.  
+11. Para comprobar que se puede conectar al origen de datos, haga clic en **Prueba de conexión**.  
   
     Aparece un mensaje que indica que la conexión se ha creado correctamente.  
   
@@ -101,13 +86,13 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
 > [!NOTE]  
 > En este tutorial, la consulta contiene los valores de datos, de forma que no necesita un origen de datos externo. Esto hace que la consulta requiera bastante tiempo. En un entorno empresarial, la consulta no contendría los datos. Esto es solo con fines de aprendizaje.  
   
-### Para crear una consulta y un diseño de tabla en el Asistente para tablas 
+### <a name="to-create-a-query-and-table-layout-in-the-table-wizard"></a>Para crear una consulta y un diseño de tabla en el Asistente para tablas 
   
-1.  En la página **Diseñar una consulta**, el diseñador de consultas relacionales está abierto. En este tutorial, usará el diseñador de consultas basado en texto.  
+1.  En la página **Diseñar una consulta** , el diseñador de consultas relacionales está abierto. En este tutorial, usará el diseñador de consultas basado en texto.  
   
 2.  Haga clic en **Editar como texto**. El diseñador de consultas basado en texto muestra un panel de consulta y un panel de resultados.  
   
-3.  Pegue la siguiente consulta [!INCLUDE[tsql](../includes/tsql-md.md)] en el cuadro **Consulta**.  
+3.  Pegue la siguiente consulta [!INCLUDE[tsql](../includes/tsql-md.md)] en el cuadro **Consulta** .  
   
     ```  
     SELECT CAST('2015-01-04' AS date) as SalesDate, 'Accessories' as Subcategory,   
@@ -144,13 +129,13 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
 4.  En la barra de herramientas del diseñador de consultas, haga clic en Ejecutar (**!**).  
   
-    La consulta se ejecuta y muestra el conjunto de resultados para los campos **SalesDate**, **Subcategory**, **Product**, **Sales** y **Quantity**.  
+    La consulta se ejecuta y muestra el conjunto de resultados para los campos **SalesDate**, **Subcategory**, **Product**, **Sales**y **Quantity**.  
   
 5.  Haga clic en **Siguiente**.  
   
-6.  En la página **Organizar campos**, arrastre **Sales** hasta **Valores**.  
+6.  En la página **Organizar campos** , arrastre **Sales** hasta **Valores**.  
   
-    La función Sum agrega **Sales**. El valor es [Sum(Sales)].  
+    La función Sum agrega**Sales** . El valor es [Sum(Sales)].  
   
 7.  Arrastre **Product** hasta **Grupos de filas**.  
   
@@ -160,7 +145,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
 9. Haga clic en **Siguiente**.  
   
-10. En la página **Elegir el diseño**, en **Opciones**, compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales**.  
+10. En la página **Elegir el diseño** , en **Opciones**, compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
   
     El panel Vista previa del asistente muestra una tabla con tres filas. Al ejecutar el informe, cada fila se mostrará de la siguiente forma:  
   
@@ -178,7 +163,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
 14. La tabla se agrega a la superficie de diseño. La tabla tiene tres columnas y tres filas.  
   
-    Busque en el panel Agrupación. Si no ve el panel Agrupación, en el menú **Vista**, haga clic en **Agrupación**. El panel Grupos de filas muestra un grupo de filas: **Product**. El panel Grupos de columnas muestra un grupo de columnas: **SalesDate**. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
+    Busque en el panel Agrupación. Si no ve el panel Agrupación, en el menú **Vista** , haga clic en **Agrupación**. El panel Grupos de filas muestra un grupo de filas: **Product**. El panel Grupos de columnas muestra un grupo de columnas: **SalesDate**. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
     
     ![generador-de-informes-minigráfico-panel-agrupación](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   
@@ -189,7 +174,7 @@ De manera predeterminada, los datos de resumen del campo **Sales** se muestran e
   
 1.  Haga clic en **Diseño** para cambiar a la vista de diseño.  
   
-2.  Haga clic en la celda en la segunda fila (bajo la fila de encabezados de columna) en la columna **SalesDate**. Mantenga presionada la tecla CTRL y seleccione todas las celdas que contienen `[Sum(Sales)]`. 
+2.  Haga clic en la celda en la segunda fila (bajo la fila de encabezados de columna) en la columna **SalesDate** . Mantenga presionada la tecla CTRL y seleccione todas las celdas que contienen `[Sum(Sales)]`. 
 
     ![generador-de-informes-seleccionar-sum-sales](../reporting-services/media/report-builder-select-sum-sales.png) 
   
@@ -220,7 +205,7 @@ Los valores **SalesDate** se muestran en el formato de fecha predeterminado, y l
   
 2.  Seleccione la columna Total en su tabla.  
   
-3.  Haga clic con el botón derecho, señale **Insertar columna** y, después, haga clic en **Izquierda**.  
+3.  Haga clic con el botón derecho, señale **Insertar columna**y, después, haga clic en **Izquierda**.  
 
     ![generador-de-informes-agregar-columna-izquierda](../reporting-services/media/report-builder-add-column-left.png)
   
@@ -228,7 +213,7 @@ Los valores **SalesDate** se muestran en el formato de fecha predeterminado, y l
 
     ![generador-de-informes-insertar-minigráfico](../reporting-services/media/report-builder-insert-sparkline.png)
   
-5.  En el cuadro de diálogo **Seleccionar tipo de minigráfico**, asegúrese de que está seleccionado el primer minigráfico de la fila **Columna** y, después, haga clic en **Aceptar**.  
+5.  En el cuadro de diálogo **Seleccionar tipo de minigráfico** , asegúrese de que está seleccionado el primer minigráfico de la fila **Columna** y, después, haga clic en **Aceptar**.  
   
 6.  Haga clic en el minigráfico para mostrar el panel Datos del gráfico.  
   
@@ -255,7 +240,7 @@ Los minigráficos son difíciles de leer cuando no usan todos las mismas medidas
   
 2.  Haga clic con el botón derecho en el minigráfico y, después, haga clic en **Propiedades del eje vertical**.  
   
-3.  Active la casilla **Alinear ejes en**. Tablix1 es la única opción de la lista.  
+3.  Active la casilla **Alinear ejes en** . Tablix1 es la única opción de la lista.  
   
      Establece el alto de las barras en cada minigráfico con respecto a los demás. 
   
@@ -263,13 +248,13 @@ Los minigráficos son difíciles de leer cuando no usan todos las mismas medidas
   
 5.  Haga clic con el botón derecho en el minigráfico y, después, haga clic en **Propiedades del eje horizontal**.  
   
-6.  Active la casilla **Alinear ejes en**. Tablix1 es la única opción de la lista. 
+6.  Active la casilla **Alinear ejes en** . Tablix1 es la única opción de la lista. 
   
     Establece el ancho de las barras en cada minigráfico con respecto a los demás. Si algunos minigráficos tienen menos barras que otros, dichos minigráficos tendrán espacios en blanco correspondientes a los datos que faltan.  
   
 7.  Haga clic en **Aceptar**.  
   
-8.  Para volver a obtener una vista previa de un informe, haga clic en **Ejecutar**.  
+8.  Para volver a obtener una vista previa de un informe, haga clic en **Ejecutar** .  
   
 Ahora todas las barras de cada minigráfico se alinean con las barras de los otros minigráficos, y el alto es relativo.  
   
@@ -280,7 +265,7 @@ De forma predeterminada, cada celda de una tabla contiene un cuadro de texto. Un
   
 Para reducir la cantidad de espacio vertical que ocupa cada fila, expanda el ancho de columna para dar cabida en una línea al contenido previsto de los cuadros de texto de la columna.  
   
-### Para cambiar el ancho de las columnas  
+### <a name="to-change-the-width-of-columns"></a>Para cambiar el ancho de las columnas  
   
 1.  Haga clic en **Diseño** para volver a la vista de diseño.  
   
@@ -295,11 +280,11 @@ Los títulos de informe aparecen en la parte superior. Puede situar el título d
   
 El texto se puede mejorar aún más aplicando estilos de fuente, tamaños y colores diferentes a las frases y caracteres individuales. Para obtener más información, vea [Dar formato al texto en un cuadro de texto &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
-### Para agregar un título de informe  
+### <a name="to-add-a-report-title"></a>Para agregar un título de informe  
   
 1.  En la superficie de diseño, haga clic en **Haga clic para agregar título**.  
   
-2.  Escriba **Ventas por fecha** y, después, haga clic fuera del cuadro de texto.  
+2.  Escriba **Ventas por fecha**y, después, haga clic fuera del cuadro de texto.  
   
 3.  Seleccione el cuadro de texto que contiene **Ventas de producto**.  
   
@@ -310,9 +295,9 @@ El texto se puede mejorar aún más aplicando estilos de fuente, tamaños y colo
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="Save"></a>9. Guardar el informe  
-Guarde el informe un servidor de informes o en su equipo. Si no guarda el informe en el servidor de informes, varias características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], como los elementos de informe y los subinformes, no estarán disponibles.  
+Guarde el informe un servidor de informes o en su equipo. Si no guarda el informe en el servidor de informes, varias características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , como los elementos de informe y los subinformes, no estarán disponibles.  
   
-### Para guardar el informe en un servidor de informes  
+### <a name="to-save-the-report-on-a-report-server"></a>Para guardar el informe en un servidor de informes  
   
 1.  En el botón **Generador de informes** , haga clic en **Guardar como**.  
   
@@ -328,20 +313,21 @@ Guarde el informe un servidor de informes o en su equipo. Si no guarda el inform
   
 El informe se guarda en el servidor de informes. El nombre del servidor de informes al que está conectado aparecerá en la barra de estado en la parte inferior de la ventana.  
   
-### Para guardar el informe en el equipo  
+### <a name="to-save-the-report-on-your-computer"></a>Para guardar el informe en el equipo  
   
 1.  En el botón **Generador de informes** , haga clic en **Guardar como**.  
   
-2.  Haga clic en **Escritorio**, **Mis documentos** o **Mi PC** y vaya a la carpeta donde quiere guardar el informe.  
+2.  Haga clic en **Escritorio**, **Mis documentos**o **Mi PC**y vaya a la carpeta donde quiere guardar el informe.  
   
 3.  En **Nombre**, reemplace el nombre predeterminado por **Ventas de producto**.  
   
 4.  Haga clic en **Guardar**.  
   
-## Pasos siguientes  
-Esto concluye el tutorial para crear un informe de tabla con minigráficos. Para obtener más información sobre minigráficos, vea [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+## <a name="next-steps"></a>Pasos siguientes  
+
+Esto concluye el tutorial para crear un informe de tabla con minigráficos. Para obtener más información acerca de los minigráficos, vea [minigráficos y barras de datos](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## Vea también  
 [Tutoriales (Generador de informes)](../reporting-services/report-builder-tutorials.md) 
 [Generador de informes en SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-  
+
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

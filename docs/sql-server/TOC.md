@@ -21,6 +21,7 @@
 ## [Notas de la versión de SQL Server 2012](../release-notes/sql-server-2012-release-notes.md)
 ## [SQL Server 2012 SP1 Release Notes](../release-notes/sql-server-2012-sp1-release-notes.md)
 ## [SQL Server 2012 SP2 Release Notes](../release-notes/sql-server-2012-sp2-release-notes.md)
+## [Notas de la versión SQL Server 2012 SP3](../release-notes/sql-server-2012-sp3-release-notes.md)
 ## [SQL Server 2008 R2 SP2 Release Notes](../release-notes/sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services](../analysis-services/analysis-services.md)
@@ -37,5 +38,4 @@
 
 # Acerca de la documentación
 ## [Recursos de SQL Server](sql-server-resources.md)
-## [Acceso sin conexión a la documentación de SQL Server](sql-server-documentation-offline-access.md)
 ## [Visor de Ayuda](../release-notes/sql-server-help-installation.md)

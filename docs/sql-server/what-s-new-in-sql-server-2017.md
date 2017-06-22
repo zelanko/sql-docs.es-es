@@ -1,7 +1,7 @@
 ---
 title: "¿Qué &#39; s de SQL Server de 2017 | Documentos de Microsoft"
 ms.custom: 
-ms.date: 05/23/2017
+ms.date: 06/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 1d363db8e8bd0e1460cdea3c3a7add68e48714c9
-ms.openlocfilehash: 25d81efe1b915f0e4ddc5eab2feb4142ad2ceb8f
+ms.sourcegitcommit: aa08b5e7de9bb317fd781a98ee5d829431b92df6
+ms.openlocfilehash: 66c9bc4f2cba20076c357d27fdfacbc767a94c5c
 ms.contentlocale: es-es
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="what39s-new-in-sql-server-2017"></a>¿Qué &#39; s de SQL Server de 2017
@@ -32,7 +32,7 @@ Este tema es un resumen de lo que es nuevo en la última versión de Community T
 
 
 **Pruébelo:**    
-   -   [![Descargar desde el centro de evaluación](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477) ** [descargar Community Technology Preview SQL Server de 2017](http://go.microsoft.com/fwlink/?LinkID=829477)**
+   -   [![Descargar desde el centro de evaluación](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  **[descargar Community Technology Preview SQL Server de 2017](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
 ## <a name="whats-new-in-sql-server-2017-ctp-21-may-2017"></a>Novedades de CTP de SQL Server de 2017 2.1 (mayo de 2017)
 ### <a name="sql-server-database-engine"></a>Motor de base de datos de SQL Server  
@@ -67,8 +67,8 @@ Este tema es un resumen de lo que es nuevo en la última versión de Community T
 - CLR usa la seguridad de acceso del código (CAS) de .NET Framework, que ya no se admite como un límite de seguridad. Un ensamblado CLR creado con `PERMISSION_SET = SAFE` posible que pueda tener acceso a recursos externos del sistema, llamar a código no administrado y adquirir privilegios de sysadmin. A partir de [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)], `sp_configure` opción denominada `clr strict security` se introduce para mejorar la seguridad de los ensamblados CLR. `clr strict security`está habilitada de forma predeterminada y trata `SAFE` y `EXTERNAL_ACCESS` ensamblados como si se han marcado `UNSAFE`. El `clr strict security` se puede deshabilitar la opción de compatibilidad con versiones anteriores, pero no se recomienda. Microsoft recomienda que todos los ensamblados firmarse con un certificado o clave asimétrica con el correspondiente inicio de sesión que se ha concedido `UNSAFE ASSEMBLY` permiso en la base de datos maestra. Para obtener más información, consulte [seguridad estricta de CLR](../database-engine/configure-windows/clr-strict-security.md).  
 - Capacidades de base de datos de gráfico para modelar las relaciones de varios a varios. Esto incluye nuevos [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) sintaxis para crear el nodo y tablas de borde y la palabra clave [coincidencia](../t-sql/queries/match-sql-graph.md) para las consultas. Para obtener más información, consulte [gráfico procesamiento con SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md).   
 - El ajuste automático es una característica de base de datos que proporciona una visión general de la consulta posible problemas de rendimiento, pueden recomendar soluciones y corrección identifica automáticamente problemas. El ajuste automático [!INCLUDE[ssnoversion](../includes/ssnoversion.md)], le notifica cada vez que se detecta un posible problema de rendimiento y le permite aplicar acciones correctivas o permite el [!INCLUDE[ssde](../includes/ssde-md.md)] reparar automáticamente problemas de rendimiento. Para obtener más información, consulte [el ajuste automático](../relational-databases/automatic-tuning/automatic-tuning.md).  
--    Procesar por lotes modo unir adaptable para mejorar la calidad del plan (bajo 140 de compatibilidad de base de datos).
--    Ejecución intercalada de TVF de múltiples instrucciones T-SQL mejorar la calidad del plan (bajo 140 de compatibilidad de base de datos).
+-   Procesar por lotes modo unir adaptable para mejorar la calidad del plan (bajo 140 de compatibilidad de base de datos).
+-   Ejecución intercalada de TVF de múltiples instrucciones T-SQL mejorar la calidad del plan (bajo 140 de compatibilidad de base de datos).
 - Almacén de consultas ahora también realiza un seguimiento de información de resumen de estadísticas de espera. Categorías de estadísticas de espera por cada consulta en el almacén de consultas de seguimiento habilita el siguiente nivel de rendimiento experiencia de solución de problemas, lo que proporciona, incluso más, información sobre el rendimiento de la carga de trabajo y sus cuellos de botella conservando las ventajas claves de almacén de consultas.
 - Compatibilidad con DTC para grupos de disponibilidad AlwaysOn para todas las transacciones entre bases de datos entre bases de datos que forman parte del grupo de disponibilidad, incluidas las bases de datos que forman parte de la misma instancia. Para obtener más información, vea [transacciones - grupos de disponibilidad AlwaysOn y creación de reflejo de base de datos](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 - Una nueva columna **modified_extent_page_count** se incorporó en [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) para realizar un seguimiento de los cambios diferenciales de cada archivo de base de datos de la base de datos.
@@ -76,7 +76,6 @@ Este tema es un resumen de lo que es nuevo en la última versión de Community T
 - El programa de instalación de SQL Server permite especificar el tamaño del archivo de tempdb inicial hasta **256 GB (262.144 MB)** por cada archivo con una advertencia si el tamaño del archivo se establece en valor mayor que **1 GB** y si IFI no está habilitado.
 - Una nueva vista de administración dinámica (DMV) [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) se introdujo para realizar el seguimiento de uso del almacén de versión por base de datos.
 - Una nueva DMV [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) se introduce para exponer la información de VLF similar a DBCC LOGINFO.
-- DBCC CLONEDATABASE hará que se vacíe las estadísticas de tiempo de ejecución durante la clonación para evitar que falten las estadísticas de tiempo de ejecución del almacén de consultas en clon de la base de datos. Además, DBCC CLONEDATABASE se ha mejorado para admitir y clonar índices de texto completo.
 - Las tablas temporales con versión del sistema admiten ahora CASCADE UPDATE y eliminación en cascada.
 - Este CTP contiene correcciones de errores para el Motor de base de datos.
 - Para obtener una lista detallada de 2017 mejoras CTP en versiones anteriores de CTP, consulte [What's New en SQL Server 2017 (motor de base de datos)](../database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).   

@@ -1,1 +1,1 @@
-![Descargar](../ssdt/media/download.png)[Descargar controlador para .Net](https://msdn.microsoft.com/vstudio/aa496123.aspx)
+![Descargar](../ssdt/media/download.png)[Descargar controlador para .Net](http://www.microsoft.com/net/download/)

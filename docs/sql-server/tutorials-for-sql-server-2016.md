@@ -1,7 +1,7 @@
 ---
 title: Tutoriales de SQL Server | Documentos de Microsoft
 ms.custom: 
-ms.date: 05/24/2017
+ms.date: 06/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: erikre
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: f1220e70a98fd38ac2f38f892a42ff88c3f64555
+ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
+ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
 ms.contentlocale: es-es
-ms.lasthandoff: 05/25/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tutorials-for-sql-server"></a>Tutoriales de SQL Server
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/25/2017
 |[Tutoriales de Integration Services](../integration-services/integration-services-tutorials.md)|Aprenda a crear e implementar soluciones [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Tutoriales de replicación](../relational-databases/replication/replication-tutorials.md)|Aprenda a configurar y ejecutar topologías de replicación con [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Tutoriales de Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Aprenda a crear informes básicos y suscripciones.|  
-|[Tutoriales de SQL Server R Services](../advanced-analytics/r-services/sql-server-r-services-tutorials.md)|Obtenga información sobre cómo trabajar con datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante el lenguaje R y cómo ejecutar scripts R de [!INCLUDE[tsql](../includes/tsql-md.md)].|  
+|[Tutoriales de SQL Server R Services](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Obtenga información sobre cómo trabajar con datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante el lenguaje R y cómo ejecutar scripts R de [!INCLUDE[tsql](../includes/tsql-md.md)].|  
   
  ## <a name="previously-published-tutorials"></a>Tutoriales publicados anteriormente:  
   

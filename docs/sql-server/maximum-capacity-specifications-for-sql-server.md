@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: b03d9514e39fad101a305784b6852e012e3e4aad
+ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
+ms.openlocfilehash: b93591eb1d0f34b792adc6f2c998dbfdd9fca4b5
 ms.contentlocale: es-es
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificaciones de capacidad máxima para SQL Server
@@ -140,14 +140,14 @@ ms.lasthandoff: 05/12/2017
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objeto de replicación||Tamaño y número máximo SQL Server (64 bits)|  
 |--------------------------------------------------|-|---------------------------------------------------|  
-|Artículos (publicación de combinación)||256|  
+|Artículos (publicación de combinación)||2048|  
 |Artículos (publicación de instantáneas o transaccional)||32,767|  
 |Columnas de una tabla* (publicación de mezcla)||246|  
 |Columnas de una tabla**(publicación de instantáneas o transaccional de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] )||1,000|  
 |Columnas de una tabla** (publicación de instantáneas o transaccional de Oracle)||995|  
 |Bytes para una columna utilizada en un filtro de fila (publicación de combinación)||1,024|  
 |Bytes para una columna utilizada en un filtro de fila (publicación de instantáneas o transaccional)||8,000|  
-  
+
  *Si se utiliza el seguimiento por fila en la detección de conflictos (valor predeterminado), la tabla base puede incluir un máximo de 1024 columnas, pero las columnas deben filtrarse desde el artículo de forma que se publique un máximo de 246 columnas. Si se utiliza el seguimiento por columna, la tabla base puede incluir 246 columnas como máximo.  
   
  **La tabla base puede incluir el número máximo de columnas permitido en la base de datos de publicación (1024 para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), pero las columnas deben filtrarse desde el artículo si superan el máximo especificado para el tipo de publicación.  

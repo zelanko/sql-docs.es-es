@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 03f81b7010fdba70cccc916406b70131dd24cb8d
+ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
+ms.openlocfilehash: 40b7bd5f5f8bf6682a7c85d332cce420baf06105
 ms.contentlocale: es-es
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
@@ -35,24 +35,6 @@ Los niveles de aislamiento de transacción en SQL Server se aplican de manera di
 Para ver condiciones de error específicas de las transacciones en tablas con optimización para memoria, vaya a la sección [Detección de conflictos y lógica de reintento](#confdetretry34ni).
   
 Para obtener información general, consulte [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
-  
-  
-  
-#### <a name="sections-in-this-article"></a>Secciones de este artículo:  
-  
-- [Pesimista frente a optimista](#pessvoptim22ni)  
-- [Modos de inicio de transacciones](#txninitmodes24ni)  
-  - [Ejemplo de código con el modo explícito](#codeexamexpmode25ni)  
-- [Versiones de fila](#rowver28ni)  
-- [Niveles de aislamiento de transacción](#confdegreeiso30ni)  
-- [Duración y fases de la transacción](#txnphaslife32ni)  
-- [Detección de conflictos y lógica de reintento](#confdetretry34ni)  
-  - [Ejemplo de reintento con código T-SQL](#retrytsqlcodeexam35ni)  
-- [Transacción entre contenedores](#crossconttxn38ni)  
-- [Limitaciones](#limitations40ni)  
-- [Procedimientos almacenados compilados de forma nativa](#natcompstorprocs42ni)  
-- [Otros vínculos de transacción](#othertxnlinks44ni)  
-  
   
   
 <a name="pessvoptim22ni"/>  

@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
 ms.openlocfilehash: 508440b3e6cd15d4fb70f933c380e958dad74d56
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>Directrices para operaciones de índices en línea
@@ -97,7 +97,7 @@ Para más información, consulte [Disk Space Requirements for Index DDL Operatio
 >
 
 Al realizar la reconstrucción de índices en línea reanudables se aplican las siguientes directrices:
--    Administración, planificación y ampliación de las ventanas de mantenimiento de índice. Puede pausar y reiniciar una operación de regeneración del índice varias veces para ajustarse a las ventanas de mantenimiento.
+-   Administración, planificación y ampliación de las ventanas de mantenimiento de índice. Puede pausar y reiniciar una operación de regeneración del índice varias veces para ajustarse a las ventanas de mantenimiento.
 - Recuperarse de errores de regeneración de índice (por ejemplo, las conmutaciones por error de base de datos o quedarse sin espacio en disco).
 - Cuando una operación de índice está en pausa, tanto el índice original y uno recién creado requieren espacio en disco y deben actualizarse durante las operaciones de DML.
 

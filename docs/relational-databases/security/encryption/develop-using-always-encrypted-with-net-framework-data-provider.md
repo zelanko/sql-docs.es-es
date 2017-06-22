@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 09253894ace06e9bd0b6a515e133eb8e2f5860a1
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Desarrollar con Always Encrypted con el proveedor de datos .NET Framework
@@ -262,7 +262,7 @@ Para obtener un valor de texto sin formato de una clave de cifrado de columnas, 
 
 El proceso para obtener una clave de cifrado de columna:
 
-1.    Si Always Encrypted está habilitado para una consulta, el proveedor de datos .NET Framework para SQL Server llama a **sys.sp_describe_parameter_encryption** de forma transparente para recuperar los metadatos de cifrado de los parámetros que tienen como destino las columnas cifradas, siempre que la consulta tenga parámetros. En el caso de los datos cifrados que se incluyen en los resultados de una consulta, SQL Server adjunta automáticamente los metadatos de cifrado. La información sobre la clave maestra de columna incluye lo siguiente:
+1.  Si Always Encrypted está habilitado para una consulta, el proveedor de datos .NET Framework para SQL Server llama a **sys.sp_describe_parameter_encryption** de forma transparente para recuperar los metadatos de cifrado de los parámetros que tienen como destino las columnas cifradas, siempre que la consulta tenga parámetros. En el caso de los datos cifrados que se incluyen en los resultados de una consulta, SQL Server adjunta automáticamente los metadatos de cifrado. La información sobre la clave maestra de columna incluye lo siguiente:
     - El nombre de un proveedor de almacén de claves que encapsula el almacén de claves que contiene la clave maestra de columna. 
     - La ruta de acceso a la clave que especifica la ubicación de la clave maestra de columna en el almacén de claves.
     
@@ -270,8 +270,8 @@ El proceso para obtener una clave de cifrado de columna:
 
     - El valor cifrado de una clave de cifrado de columna.
     - El nombre del algoritmo que se usó para cifrar la clave de cifrado de columna.
-2.    El proveedor de datos .NET Framework para SQL Server usa el nombre del proveedor de almacén de claves maestras de columna para buscar el objeto de proveedor (una instancia de una clase derivada de la clase SqlColumnEncryptionKeyStoreProvider) en una estructura de datos interna.
-3.    Para descifrar la clave de cifrado de columna, el proveedor de datos .NET Framework para SQL Server llama al método SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryptionKey y pasa la ruta de acceso a la clave maestra de columna, el valor cifrado de la clave de cifrado de columna y el nombre del algoritmo de cifrado, que usa para generar la clave de cifrado de columna cifrada.
+2.  El proveedor de datos .NET Framework para SQL Server usa el nombre del proveedor de almacén de claves maestras de columna para buscar el objeto de proveedor (una instancia de una clase derivada de la clase SqlColumnEncryptionKeyStoreProvider) en una estructura de datos interna.
+3.  Para descifrar la clave de cifrado de columna, el proveedor de datos .NET Framework para SQL Server llama al método SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryptionKey y pasa la ruta de acceso a la clave maestra de columna, el valor cifrado de la clave de cifrado de columna y el nombre del algoritmo de cifrado, que usa para generar la clave de cifrado de columna cifrada.
 
 
 

@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ef7a1e703ffb9d874f81c5540e1da7810ea5e2e6
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>Compatibilidad con FOR XML para varios tipos de datos de SQL Server

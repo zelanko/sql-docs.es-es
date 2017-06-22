@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
 ms.contentlocale: es-es
-ms.lasthandoff: 04/25/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (motor de base de datos)
@@ -103,15 +103,15 @@ Use el [Asistente para Always Encrypted](../../../relational-databases/security/
 > [!NOTE]  
 >  Para ver un vídeo que incluye el uso del asistente, vea [Getting Started with Always Encrypted with SSMS (Introducción a Always Encrypted con SSMS)](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS).
 
-1.    Conéctese a una base de datos existente que contenga tablas con columnas que quiera cifrar mediante el **Explorador de objetos** de Management Studio, o cree una nueva base de datos, cree una o más tablas con columnas para cifrar y conéctese a ella.
-2.    Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y después haga clic en** Cifrar columnas** para abrir el **Asistente de Always Encrypted**.
-3.    Revise la página **Introduction** y haga clic en **Next**.
-4.    En la página **Column Selection** , expanda las tablas y seleccione las columnas que desea cifrar.
-5.    En cada columna seleccionada para cifrado, establezca **Tipo de cifrado** en *Determinista* o *Aleatorio*.
-6.    Para cada columna seleccionada para cifrado, seleccione una **clave de cifrado**. Si aún no ha creado claves de cifrado para esta base de datos, seleccione la opción predeterminada de una nueva clave generada automáticamente y después haga clic en **Siguiente**.
-7.    En la página **Configuración de la clave maestra** , seleccione una ubicación para almacenar la clave nueva y seleccione un origen de clave maestra. Después, haga clic en **Siguiente**.
-8.    En la página **Validation** , elija si desea ejecutar inmediatamente el script o crear un script de PowerShell y, después, haga clic en **Next**.
-9.    En la página **Summary** , revise las opciones que ha seleccionado y haga clic en **Finish**. Cierre al asistente cuando finalice.
+1.  Conéctese a una base de datos existente que contenga tablas con columnas que quiera cifrar mediante el **Explorador de objetos** de Management Studio, o cree una nueva base de datos, cree una o más tablas con columnas para cifrar y conéctese a ella.
+2.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y después haga clic en** Cifrar columnas** para abrir el **Asistente de Always Encrypted**.
+3.  Revise la página **Introduction** y haga clic en **Next**.
+4.  En la página **Column Selection** , expanda las tablas y seleccione las columnas que desea cifrar.
+5.  En cada columna seleccionada para cifrado, establezca **Tipo de cifrado** en *Determinista* o *Aleatorio*.
+6.  Para cada columna seleccionada para cifrado, seleccione una **clave de cifrado**. Si aún no ha creado claves de cifrado para esta base de datos, seleccione la opción predeterminada de una nueva clave generada automáticamente y después haga clic en **Siguiente**.
+7.  En la página **Configuración de la clave maestra** , seleccione una ubicación para almacenar la clave nueva y seleccione un origen de clave maestra. Después, haga clic en **Siguiente**.
+8.  En la página **Validation** , elija si desea ejecutar inmediatamente el script o crear un script de PowerShell y, después, haga clic en **Next**.
+9.  En la página **Summary** , revise las opciones que ha seleccionado y haga clic en **Finish**. Cierre al asistente cuando finalice.
 
   
 ## <a name="feature-details"></a>Detalles de las características  

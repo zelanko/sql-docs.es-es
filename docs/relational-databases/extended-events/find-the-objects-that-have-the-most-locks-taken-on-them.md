@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fd171596bf52ebc25887b378103ffe751955fd03
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="find-the-objects-that-have-the-most-locks-taken-on-them"></a>Buscar los objetos que han obtenido más bloqueos

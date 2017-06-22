@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: cfc19f15cee7ca1185a2a9177474510c368b56bf
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Mover un índice existente a un grupo de archivos diferente

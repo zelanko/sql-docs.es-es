@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 49a53643e94d64fc47932bc2ee8dc3200967ae23
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>Auditoría local para colección de comentarios sobre el uso de SSMS
@@ -28,9 +28,9 @@ SQL Server Management Studio (SSMS) contiene características habilitadas para I
 ## <a name="audit-feature-usage-data"></a>Auditar datos del uso características
 
 Para ver los datos del uso de características recopilados mediante SSMS, haga lo siguiente:
-1.    Inicie SSMS.
-2.    Haga clic en **Ver** y en **Salida** en el menú principal para mostrar la ventana **Salida**. 
-3.    Cuando aparezca la ventana **Salida**, seleccione **Telemetría** en el menú **Mostrar salida de:**.
+1.  Inicie SSMS.
+2.  Haga clic en **Ver** y en **Salida** en el menú principal para mostrar la ventana **Salida**. 
+3.  Cuando aparezca la ventana **Salida**, seleccione **Telemetría** en el menú **Mostrar salida de:**.
 
 Mientras use SSMS para interactuar con las bases de datos, la ventana **Salida** mostrará los datos que se recopilen.
 

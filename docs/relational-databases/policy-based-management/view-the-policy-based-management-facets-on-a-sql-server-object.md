@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 79cdef304ef11e7d8f58b922e1ed924afb3eb1fa
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-the-policy-based-management-facets-on-a-sql-server-object"></a>Ver las facetas de administración basada en directivas en un objeto de SQL Server

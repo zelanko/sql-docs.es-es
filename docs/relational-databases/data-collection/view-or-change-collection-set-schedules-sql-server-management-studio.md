@@ -27,7 +27,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b882c8e5f82beb7d467d1063695fa032ed562ca0
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Ver o cambiar las programaciones del conjunto de recopilación (SQL Server Management Studio)

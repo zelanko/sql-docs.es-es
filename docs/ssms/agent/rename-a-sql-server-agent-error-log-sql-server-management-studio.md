@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a6da7992bd9767f4a5b05c307c85af694b074729
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="rename-a-sql-server-agent-error-log-sql-server-management-studio"></a>Cambiar el nombre del registro de errores del Agente SQL Server (SQL Server Management Studio)

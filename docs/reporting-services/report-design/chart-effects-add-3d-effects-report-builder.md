@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7170699a3f0cbb26dd2376a8805978fe792223f0
 ms.contentlocale: es-es
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="chart-effects---add-3d-effects-report-builder"></a>Gráfico efectos - agregar efectos 3D (generador de informes)

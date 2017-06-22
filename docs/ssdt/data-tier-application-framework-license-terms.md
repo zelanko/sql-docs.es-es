@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 20cd5814a6855e7a576642d23d83166c48603a8a
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="data-tier-application-framework---license-terms"></a>Data-Tier Application Framework - License Terms (Marco de trabajo de la aplicación de capa de datos: Términos de la licencia)

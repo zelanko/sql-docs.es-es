@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a5479b5082811d3e0997b23bc9c69bc5cf75bd0b
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="lesson-1-4---summary---converting-a-table-to-a-hierarchical-structure"></a>Lección 1-4: Resumen: Convertir una tabla en una estructura jerárquica

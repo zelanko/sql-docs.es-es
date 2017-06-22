@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3f801ab4a8033d7f457aad0483ead5cb080fd8ed
 ms.contentlocale: es-es
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Solución de problemas de recuperación de datos de informes de Reporting Services

@@ -30,7 +30,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 40ac7dd736d0366fe5cb564719a375e2e6a6a43d
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Editor de consultas del motor de base de datos (SQL Server Management Studio)

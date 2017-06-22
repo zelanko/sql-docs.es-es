@@ -51,5 +51,5 @@
     > [!NOTE]
     > **admin_addr** es el recurso de clúster IP virtual que se configura durante la configuración inicial de un clúster de un nodo.
 
-7.    **Procedimientos de eliminación**. Si necesita quitar un nodo del clúster, use el script de arranque **ha-cluster-remove**. Para más información, vea [Overview of the Bootstrap Scripts](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.bootstrap) (Información general de los scripts de arranque).  
+7.  **Procedimientos de eliminación**. Si necesita quitar un nodo del clúster, use el script de arranque **ha-cluster-remove**. Para más información, vea [Overview of the Bootstrap Scripts](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.bootstrap) (Información general de los scripts de arranque).  
 

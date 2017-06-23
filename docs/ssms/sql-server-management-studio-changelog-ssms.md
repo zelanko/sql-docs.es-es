@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 470e6c83318eaf8eb579d053f65b5353862eb4c7
 ms.openlocfilehash: 23e304e52967d5d16672872d8d5712f26ef8c610
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
@@ -404,9 +404,9 @@ Disponible con carácter general | Número de versión: 13.0.15600.2
 ## <a name="ssms-july-2016-release"></a>Versión SSMS, julio de 2016 
 Disponible con carácter general | Número de versión: 13.0.15500.91
 
-* *Edición, 5 de julio:* ** compatibilidad mejorada para bases de datos tabulares de SQL Server 2016 (nivel de compatibilidad de 1200) en el cuadro de diálogo del proceso de Analysis Services y el Asistente para la implementación de Analysis Service**.
+* *Edición, 5 de julio:*  **compatibilidad mejorada para bases de datos tabulares de SQL Server 2016 (nivel de compatibilidad de 1200) en el cuadro de diálogo del proceso de Analysis Services y el Asistente para la implementación de Analysis Service**.
 
-* *Edición, 5 de julio:* ** opción nueva en el cuadro de diálogo de opciones de ejecución de consulta de SSMS para establecer 'XACT_ABORT'. Esta opción está habilitada de forma predeterminada en esta versión de SSMS e indica a SQL Server que revierta la transacción completa y anule el lote si se produce un error de tiempo de ejecución**.
+* *Edición, 5 de julio:*  **opción nueva en el cuadro de diálogo de opciones de ejecución de consulta de SSMS para establecer 'XACT_ABORT'. Esta opción está habilitada de forma predeterminada en esta versión de SSMS e indica a SQL Server que revierta la transacción completa y anule el lote si se produce un error de tiempo de ejecución**.
 
 * **Compatibilidad con Almacenamiento de datos SQL de Azure en SSMS.**
 

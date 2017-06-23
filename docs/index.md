@@ -1,9 +1,428 @@
 ---
-redirect_url: /sql/sql-hub-menu?toc=%2fsql%2ftoc.json
-translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 521794835f9d789004399d0683083ada7bc9d3b8
-ms.lasthandoff: 04/11/2017
+layout: HubPage
+hide_bc: true
+title: "Documentación de Microsoft SQL | Microsoft Docs"
+description: "Información sobre SQL"
+ms.translationtype: Human Translation
+ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
+ms.openlocfilehash: c7ae180aed734d85a10cb8b3b750426ecf552b8a
+ms.contentlocale: es-es
+ms.lasthandoff: 06/23/2017
 
 ---
 
+<div id="main" class="v2">
+    <div class="container">
+        <h1>Documentación de SQL</h1>
+        <ul class="pivots">
+            <li>
+                <a data-default="true" href="#main"></a>
+                <ul id="main">
+                    <li>
+                        <a href="#get-started">Introducción</a>
+                        <ul id="get-started" class="cardsW">
+                            <li class="fullSpan">
+                                <div class="container intro" style="color: #535353; font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif;">
+                                    <p>Temas populares y descargas para la plataforma SQL de Microsoft</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sql/sql-get-started-whats-new.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Novedades</h3>
+                                                </div>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">SQL Server</h4>
+                                                <ul>
+                                                    <li><a href="/sql/sql-server/what-s-new-in-sql-server-2017">Versión preliminar de SQL Server 2017</a></li>
+                                                    <li><a href="https://docs.microsoft.com/sql/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs">Versión preliminar de SQL Server 2017 Reporting Services</a></li>
+                                                    <li><a href="/sql/linux/sql-server-linux-whats-new">SQL Server en Linux</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sql/sql-get-started-understand.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Explorar</h3>
+                                                </div>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Cree su primer</h4>
+                                                <ul>
+                                                    <li><a href="/azure/sql-database/sql-database-get-started-portal">Azure SQL Database</a></li>
+                                                    <li><a href="/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision">Azure SQL Data Warehouse</a></li>
+                                                    <li><a href="/azure/machine-learning/machine-learning-create-experiment">Experimento de ciencia de datos</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sql/sql-get-started-download.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Descarga e instalación</h3>
+                                                </div>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">SQL Server</h4>
+                                                <ul>
+                                                    <li><a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads">SQL Server 2016</a></li>
+                                                    <li><a href="https://www.microsoft.com/en-us/sql-server/sql-server-2017">Versión preliminar de SQL Server 2017</a></li>
+                                                    <li><a href="https://docs.microsoft.com/sql/reporting-services/install-windows/install-reporting-services">SQL Server Reporting Services (SSRS)</a></li>
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Herramientas</h4>
+                                                <ul>
+                                                    <li><a href="/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio (SSMS)</a></li>
+                                                    <li><a href="/sql/ssdt/download-sql-server-data-tools-ssdt">SQL Server Data Tools (SSDT)</a></li>
+                                                    <li><a href="https://www.microsoft.com/download/details.aspx?id=55253">Herramientas y servidor de informes de Power BI</a></li>
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Bases de datos de ejemplo</h4>
+                                                <ul>
+                                                    <li><a href="https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0">Base de datos de ejemplo de Wide World Importers</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#databases">Bases de datos</a>
+                        <ul id="databases" class="cardsW">
+                            <li class="fullSpan">
+                                <div class="container intro" style="color: #535353; font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif;">
+                                    <p>Administración de datos relacionales mediante bases de datos SQL en un centro de datos o Azure</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sql/sql-database-sql-server.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">SQL Server</h3>
+                                                </div>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Últimas versiones</h4>
+                                                <ul>
+                                                    <li><a href="/sql/sql-server/sql-server-technical-documentation">SQL Server (2016, 2017)</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/en-us/library/hh278311(v=sql.10).aspx">SQL Server 2014</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/en-us/library/dn197878(v=sql.10).aspx">SQL Server 2012</a></li>
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Ejecución en Windows o Linux</h4>
+                                                <ul>
+                                                    <li><a href="/sql/linux/?toc=/sql/linux/toc.json">SQL Server en Linux</a></li>
+                                                    <li><a href="/azure/virtual-machines/linux/">Máquinas virtuales de Linux</a></li>
+                                                    <li><a href="/azure/virtual-machines/windows/">Máquinas virtuales de Windows</a></li>
+                                                    <li><a href="https://www.microsoft.com/en-us/cloud-platform/windows-server">Windows Server 2016</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sql/sql-database-service.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Base de datos como servicio</h3>
+                                                </div>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Microsoft SQL</h4>
+                                                <ul>
+                                                    <li><a href="/azure/sql-database/sql-database-design-first-database">Azure SQL Database</a></li>
+                                                    <li><a href="/azure/sql-data-warehouse/sql-data-warehouse-get-started-tutorial">Azure SQL Data Warehouse</a></li>
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Código abierto SQL</h4>
+                                                <ul>
+                                                    <li><a href="/azure/postgresql/">Azure Database para PostgreSQL</a></li>
+                                                    <li><a href="/azure/mysql/">Azure Database para MySQL</a></li>
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">NoSQL</h4>
+                                                <ul>
+                                                    <li><a href="/azure/cosmos-db/">Cosmos DB</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sql/sql-database-develop.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Desarrollo</h3>
+                                                </div>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Diseño</h4>
+                                                <ul>
+                                                    <li><a href="/sql/connect/sql-server-driver-documentation">Conexión con aplicaciones cliente</a></li>
+                                                    <li><a href="/sql/relational-databases/database-features">Conceptos sobre las bases de datos relacionales</a></li>
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Herramientas</h4>
+                                                <ul>
+                                                    <li><a href="/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio (SSMS)</a></li>
+                                                    <li><a href="/sql/ssdt/download-sql-server-data-tools-ssdt">SQL Server Data Tools (SSDT)</a></li>
+                                                    <li><a href="/sql/tools/command-prompt-utility-reference-database-engine">Todas las herramientas SQL</a></li>
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Referencia</h4>
+                                                <ul>
+                                                    <li><a href="/sql/t-sql/language-reference">T-SQL</a></li>
+                                                    <li><a href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views">DMVs</a></li>
+                                                    <li><a href="/sql/xquery/xquery-language-reference-sql-server">XQuery</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#movement">Movimiento de datos</a>
+                        <ul id="movement" class="cardsW">
+                            <li class="fullSpan">
+                                <div class="container intro" style="color: #535353; font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif;">
+                                    <p>Migración de bases de datos o movimientos entre ellas</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sql/azure-architecture-fundamentals.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <div style="height:135px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Migración de bases de datos</h3>
+                                                </div>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Descarga de herramientas de migración</h4>
+                                                <ul>
+                                                    <li><a href="https://www.microsoft.com/download/details.aspx?id=53595">Data Migration Assistant</a></li>
+                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54255">SSMA para Access</a></li>
+                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54254">SSMA para DB2</a></li>
+                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54257">SSMA para MySql</a></li>
+                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54258">SSMA para Oracle</a></li>
+                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54256">SSMA para SAP ASE</a></li>
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Migración de bases de datos de SQL Server</h4>
+                                                <ul>
+                                                    <li><a href="/azure/sql-database/sql-database-migrate-your-sql-server-database">A Azure SQL Database</a></li>
+                                                    <li><a href="/azure/sql-data-warehouse/sql-data-warehouse-overview-migrate">A Azure SQL Data Warehouse</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sql/azure-architecture-reference.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <div style="height:135px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Movimiento de datos a Azure Storage para su preparación</h3>
+                                                </div>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Redes</h4>
+                                                <ul>
+                                                    <li><a href="/azure/networking/networking-overview">Información general</a></li>
+                                                    <li><a href="/azure/networking/networking-overview">ExpressRoute</a></li>
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Movimiento a Azure Blob Storage</h4>
+                                                <ul>
+                                                    <li><a href="/azure/vs-azure-tools-storage-manage-with-storage-explorer">Azure Storage Explorer</a></li>
+                                                    <li><a href="/azure/storage/storage-use-azcopy">AZCopy</a></li>
+                                                    <li><a href="/azure/storage/storage-import-export-service">Servicio de importación y exportación</a></li>
+                                                    <li>
+                                                        <a href="/sql/integration-services/sql-server-integration-services">SQL Server Integration Services (SSIS)</a>
+                                                    </li>
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Movimiento a Azure Data Lake Store</h4>
+                                                <ul>
+                                                    <li><a href="/azure/data-lake-store/data-lake-store-copy-data-azure-storage-blob">ADLCopy</a></li>
+                                                    <li><a href="/sql/integration-services/sql-server-integration-services">SQL Server Integration Services</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sql/azure-architecture-patterns.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <div style="height:135px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Movimiento de datos a una base de datos</h3>
+                                                </div>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">SQL</h4>
+                                                <ul>
+                                                    <li><a href="/sql/integration-services/sql-server-integration-services">SQL Server Integration Services</a></li>
+                                                    <li><a href="/sql/relational-databases/polybase/polybase-guide">PolyBase</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/en-us/library/system.data.sqlclient.sqlbulkcopy(v=vs.110).aspx">SqlBulkCopy Class</a></li>
+                                                    <li><a href="/sql/tools/bcp-utility">BCP</a></li>
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">NoSQL</h4>
+                                                <ul>
+                                                    <li><a href="/azure/documentdb/documentdb-import-data">Importación de datos en Azure Cosmos DB</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#analytics">Análisis</a>
+                        <ul id="analytics" class="cardsW">
+                            <li class="fullSpan">
+                                <div class="container intro" style="color: #535353; font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif;">
+                                    <p>Uso del aprendizaje automático y los análisis para obtener información detallada sobre los datos de SQL</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sql/sql-analytics-sql-server.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">SQL Server</h3>
+                                                </div>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Aprendizaje automático</h4>
+                                                <ul>
+                                                    <li><a href="https://docs.microsoft.com/sql/advanced-analytics/r/r-services">Servicios de aprendizaje de máquina SQL Server</a></li>
+                                                    <li><a href="https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone">Machine Learning Server (independiente)</a></li>
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Analysis Services</h4>
+                                                <ul>
+                                                    <li><a href="/sql/analysis-services/analysis-services">SQL Server Analysis Services (2016, 2017)</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.120).aspx">SQL Server 2014 Analysis Services</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.110).aspx">SQL Server 2012 Analysis Services</a></li>
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Reporting Services</h4>
+                                                <ul>
+                                                    <li><a href="/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports">SQL Server Reporting Services (2016, 2017)</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.120).aspx">SQL Server 2014 Reporting Services</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.110).aspx">SQL Server 2012 Reporting Services</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sql/sql-analytics-service.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Análisis como servicio</h3>
+                                                </div>
+                                                <ul>
+                                                    <li><a href="https://docs.microsoft.com/azure/machine-learning/">Azure Machine Learning</a></li>
+                                                    <li><a href="/azure/analysis-services/">Azure Analysis Services</a></li>
+                                                    <li><a href="/azure/stream-analytics/">Azure Stream Analytics</a></li>
+                                                    <li><a href="/azure/data-lake-analytics/">Azure Data Lake Analytics</a></li>
+                                                    <li><a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-ads.standard-data-science-vm">Data Science Virtual Machine</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sql/sql-analytics-power-bi.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Power BI</h3>
+                                                </div>
+                                                <ul>
+                                                    <li><a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-service-get-started/">Servicio Power BI</a></li>
+                                                    <li><a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-desktop-get-the-desktop/">Power BI Desktop</a></li>
+                                                    <li><a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/">Aplicaciones móviles de Power BI</a></li>
+                                                    <li><a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-developer-overview-of-power-bi-rest-api/">Desarrolladores de Power BI</a></li>
+                                                    <li><a href="https://powerbi.microsoft.com/en-us/documentation/reportserver-get-started/">Servidor de informes de BI de energía</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,5 +1,5 @@
 ---
-title: "¿Qué &#39; s de SQL Server de 2017 | Documentos de Microsoft"
+title: Novedades en SQL Server de 2017 | Documentos de Microsoft
 ms.custom: 
 ms.date: 06/19/2017
 ms.prod: sql-server-2017
@@ -21,7 +21,7 @@ ms.contentlocale: es-es
 ms.lasthandoff: 06/23/2017
 
 ---
-# <a name="what39s-new-in-sql-server-2017"></a>¿Qué &#39; s de SQL Server de 2017
+# <a name="what39s-new-in-sql-server-2017"></a>Novedades en SQL Server de 2017
 SQL Server 2017 representa un paso importante hacia convirtiendo SQL Server en una plataforma que proporciona opciones de lenguajes de desarrollo, los tipos de datos, local y en la nube y en sistemas operativos si se ponen la potencia de SQL Server para Linux, contenedores de Docker basados en Linux y Windows.
 
 Este tema es un resumen de lo que es nuevo en la última versión de Community Technical Preview (CTP) y vínculos a más detallados ¿cuál es la nueva información de las áreas de características específicas.

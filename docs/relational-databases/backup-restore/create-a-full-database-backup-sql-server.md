@@ -1,7 +1,7 @@
 ---
 title: "Creación de una copia de seguridad completa de base de datos (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 07/25/2016
+ms.date: 06/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,19 +20,19 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: fb2aa3981cd5107cf3ea6f6dc0408acfe3292701
+ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
+ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
 ms.contentlocale: es-es
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Crear una copia de seguridad completa de base de datos (SQL Server)
 
- > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Crear una copia de seguridad completa de base de datos (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
+ > Para SQL Server 2014, vaya a [Crear una copia de seguridad completa de base de datos (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
 
   En este tema se explica cómo crear una copia de seguridad completa de la base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
   
->  Para obtener información sobre la copia de seguridad de SQL Server en el servicio de almacenamiento de blobs de Windows Azure, vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) y [Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+>  Para obtener información sobre la copia de seguridad de SQL Server en el servicio de Windows Azure Blob storage, vea [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service (Copia de seguridad y restauración de SQL Server con el servicio de Microsoft Azure Blob Storage)](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) y [Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar 
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/05/2017
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
--   A medida que la base de datos aumenta de tamaño, las copias de seguridad completas requieren una mayor cantidad de tiempo para finalizar y espacio de almacenamiento. En el caso de una base de datos grande, es posible que quiera complementar una copia de seguridad completa con una serie de *copias de seguridad diferenciales*. Para obtener más información, vea [Copias de seguridad diferenciales &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md) y [Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+-   A medida que la base de datos aumenta de tamaño, las copias de seguridad completas requieren una mayor cantidad de tiempo para finalizar y espacio de almacenamiento. Para una base de datos mayor, considere la posibilidad de complementar una copia de seguridad completa de la base de datos con una serie de [copias de seguridad diferenciales de la base de datos]((../../relational-databases/backup-restore/differential-backups-sql-server.md). Para obtener más información, vea [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 -   Calcule el tamaño de una copia de seguridad completa de la base de datos mediante el procedimiento almacenado del sistema [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .  
   
@@ -198,7 +198,7 @@ En este ejemplo, se creará una copia de seguridad de la base de datos `Sales` c
 
 7.  Haga clic en **Aceptar**.
 
-#### <a name="d--backing-up-to-the-microsoft-azure-blob-storage-service"></a>**D.  Realizar una copia de seguridad del servicio de almacenamiento de blobs de Microsoft Azure**
+#### <a name="d--back-up-to-the-azure-blob-storage-service"></a>**D.  Copia de seguridad en el servicio de Azure Blob Storage**
 #### <a name="common-steps"></a>**Pasos comunes**  
 Los tres ejemplos siguientes realizan una copia de seguridad completa de la base de datos `Sales` en el servicio de almacenamiento de blobs de Microsoft Azure.  El nombre de la cuenta de almacenamiento es `mystorageaccount`.  El contenedor se denomina `myfirstcontainer`.  Por motivos de brevedad, los cuatro primeros pasos se enumeran aquí una vez y todos los ejemplos se iniciarán en el **paso 5**.
 1.  En el **Explorador de objetos**, conéctese a una instancia del Motor de base de datos de SQL Server y expándala.
@@ -212,7 +212,7 @@ Los tres ejemplos siguientes realizan una copia de seguridad completa de la base
     **D1.  Ya existen una copia de seguridad distribuida en URL y una credencial de SQL Server**  
 Se ha creado una directiva de acceso almacenada con derechos de lectura, escritura y lista.  La credencial de SQL Server, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, se creó con una firma de acceso compartido asociada a la directiva de acceso almacenada.  
 *
-    5.    Seleccione `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` en el cuadro de texto **Contenedor de almacenamiento de Azure** .
+    5.  Seleccione `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` en el cuadro de texto **Contenedor de almacenamiento de Azure** .
 
     6.  En el cuadro de texto **Archivo de copia de seguridad** , escriba `Sales_stripe1of2_20160601.bak`.
 
@@ -247,7 +247,7 @@ Se ha creado una directiva de acceso almacenada con derechos de lectura, escritu
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-### <a name="to-create-a-full-database-backup"></a>Para crear una copia de seguridad completa de la base de datos  
+### <a name="create-a-full-database-backup"></a>Crear una copia de seguridad completa de base de datos  
   
 1.  Ejecute la instrucción BACKUP DATABASE para crear la copia de seguridad de base de datos completa, especificando:  
   
@@ -299,7 +299,7 @@ Se ha creado una directiva de acceso almacenada con derechos de lectura, escritu
   
 ###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
   
-#### <a name="a-backing-up-to-a-disk-device"></a>**A. Realizar la copia de seguridad en un dispositivo de disco**  
+#### <a name="a-back-up-to-a-disk-device"></a>**A. Realizar la copia de seguridad en un dispositivo de disco**  
  En el ejemplo siguiente se realiza una copia de seguridad completa de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en el disco y se usa `FORMAT` para crear un conjunto de medios nuevo.  
   
 ```tsql  
@@ -313,7 +313,7 @@ TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.Bak'
 GO  
 ```  
   
-#### <a name="b-backing-up-to-a-tape-device"></a>**B. Realizar la copia de seguridad en un dispositivo de cinta**  
+#### <a name="b-back-up-to-a-tape-device"></a>**B. Realizar la copia de seguridad en un dispositivo de cinta**  
  En este ejemplo se realiza una copia de seguridad en cinta de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] completa y se anexa a las copias de seguridad anteriores.  
   
 ```tsql  
@@ -326,7 +326,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### <a name="c-backing-up-to-a-logical-tape-device"></a>**C. Realizar la copia de seguridad en un dispositivo de cinta lógico**  
+#### <a name="c-back-up-to-a-logical-tape-device"></a>**C. Realizar la copia de seguridad en un dispositivo de cinta lógico**  
  En este ejemplo, se crea un dispositivo de copia de seguridad lógico para una unidad de cinta. A continuación, se realiza una copia de seguridad completa de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en dicho dispositivo.  
   
 ```tsql  

@@ -1,7 +1,7 @@
 ---
 title: Tipos de datos admitidos para OLTP en memoria | Microsoft Docs
 ms.custom: 
-ms.date: 06/05/2017
+ms.date: 06/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 1d363db8e8bd0e1460cdea3c3a7add68e48714c9
-ms.openlocfilehash: 0095d4e8ab9f3dc48e9414dc888213b79b3c34c6
+ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
+ms.openlocfilehash: ee8d16f8999f2e3e39d90086993c9a46a30ac21a
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>Tipos de datos admitidos para OLTP en memoria
@@ -57,7 +57,7 @@ A partir de SQL Server 2016, cabe destacar lo siguiente en relación con los tip
 
 ### <a name="identify-lobs-and-other-columns-that-are-off-row"></a>Identificar las columnas de LOB y otras columnas no consecutivas
 
-A partir de SQL Server 2016, tablas optimizadas en memoria admiten las columnas de forma no consecutiva, lo que permite una sola fila de tabla sea mayor que 8060 bytes. La siguiente instrucción Transact-SQL SELECT informa de todas las columnas que no son consecutivas en tablas con optimización para memoria. Tenga en cuenta lo siguiente:
+A partir de SQL Server 2016, las tablas optimizadas en memoria [admiten las columnas de forma no consecutiva](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md), lo que permite que una sola fila de tabla sea mayor que 8060 bytes. La siguiente instrucción Transact-SQL SELECT informa de todas las columnas que no son consecutivas en tablas con optimización para memoria. Tenga en cuenta lo siguiente:
 
 - Todas las columnas de clave de índice se almacenan en filas consecutivas.
   - Las claves de índice no únicas ahora pueden incluir columnas que aceptan valores NULL en tablas con optimización para memoria.
@@ -91,6 +91,7 @@ SELECT
 ## <a name="see-also"></a>Vea también  
  [Compatibilidad de Transact-SQL con OLTP en memoria](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
  [Implementar SQL_VARIANT en una tabla con optimización para memoria](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
+ [Tamaño de tabla y fila de tabla con optimización para memoria](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
 

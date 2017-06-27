@@ -18,10 +18,10 @@ author: pelopes
 ms.author: harinid
 manager: 
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: d81eabfa1bdb5736bbf6f53ed34c2e1ac157e782
+ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
+ms.openlocfilehash: 30a271511fff2d9c3c9eab73a0d118bfb3f8130d
 ms.contentlocale: es-es
-ms.lasthandoff: 05/25/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guía de optimización y validación posterior a la migración
@@ -30,9 +30,27 @@ ms.lasthandoff: 05/25/2017
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]registrar el paso de migración es muy fundamental para reconciliar cualquier precisión de los datos y la integridad, así como ayudan a solucionar problemas de rendimiento con la carga de trabajo.
 
 # <a name="common-performance-scenarios"></a>Escenarios comunes de rendimiento 
-A continuación se muestran algunos de los escenarios comunes de rendimiento que se encontró después de migrar a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] plataforma y cómo resolverlos. Puede tratarse de escenarios que resultan specifdic a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migración (versiones anteriores a las versiones más recientes), así como la plataforma externa (por ejemplo, Oracle, DB2, MySQL y Sybase) a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migración.
+A continuación se muestran algunos de los escenarios comunes de rendimiento que se encontró después de migrar a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] plataforma y cómo resolverlos. Puede tratarse de escenarios que son específicos de la migración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (versiones anteriores a las versiones más recientes), así como de la plataforma externa (por ejemplo, Oracle, DB2, MySQL y Sybase) a la migración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-## <a name="Parameter Sniffing"></a>Sensibilidad a examen de parámetros
+## <a name="CEUpgrade"></a>Consultar las regresiones debidas a un cambio en la versión CE
+
+**Se aplica a:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para la migración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+
+Al migrar desde una versión anterior de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] o versiones más recientes y al actualizar el [nivel de compatibilidad de la base de datos](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) a la versión más reciente, una carga de trabajo podría quedar expuesta a sufrir una regresión del rendimiento.
+
+Esto es debido a que, a partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], todos los cambios del optimizador de consultas están vinculados al [nivel de compatibilidad de la base de datos](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)más reciente, por lo que los planes no se cambian en el momento de la actualización, sino cuando un usuario cambia la opción de base de datos `COMPATIBILITY_LEVEL` a la versión más reciente. Esta función, junto con el Almacén de consultas, confiere al usuario un enorme control sobre el rendimiento de las consultas en el proceso de actualización. 
+
+Para obtener más información sobre los cambios del optimizador de consultas introducidas en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], consulte [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator (Optimizar los planes de consulta con el programa de estimación de cardinalidad de SQL Server 2014)](http://msdn.microsoft.com/library/dn673537.aspx).
+
+### <a name="steps-to-resolve"></a>Pasos para resolver
+
+Cambie el [nivel de compatibilidad de la base de datos](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) a la versión de origen y siga el flujo de trabajo de actualización recomendado, tal como se muestra en la siguiente imagen:
+
+![consultaDeAlmacénDeUso5](../relational-databases/performance/media/query-store-usage-5.png "consultaDeAlmacénDeUso5")  
+
+Para obtener más información sobre este tema, consulte [Mantener la estabilidad del rendimiento al actualizar a SQL Server 2016](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade).
+
+## <a name="ParameterSniffing"></a>Sensibilidad a examen de parámetros
 
 **Se aplica a:** plataforma externa (por ejemplo, Oracle, DB2, MySQL y Sybase) a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migración.
 
@@ -40,20 +58,20 @@ A continuación se muestran algunos de los escenarios comunes de rendimiento que
 > Para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migraciones, si este problema existía en el origen de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], migrar a una versión más reciente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como-será no se contempla en este escenario. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]compila los planes de consulta en procedimientos almacenados mediante el uso de examen de los parámetros de entrada en la primera compilación, generar un plan con parámetros y reutilizable, optimizado para que una entrada de distribución de datos. Incluso si no almacena los procedimientos, la mayoría de instrucciones generar planes triviales se se pueden parametrizar. Después de un plan en primer lugar se almacena en caché, cualquier ejecución futuras se asigna a un plan en caché previamente.
-Un posible problema que surge cuando esa primera compilación puede no ha usado los conjuntos de parámetros más comunes para la carga de trabajo habitual. Para los parámetros diferentes, el mismo plan de ejecución pasa a ser ineficaz.
+Un posible problema que surge cuando esa primera compilación puede no ha usado los conjuntos de parámetros más comunes para la carga de trabajo habitual. Para los parámetros diferentes, el mismo plan de ejecución pasa a ser ineficaz. Para obtener más información sobre este tema, consulte [Examen de parámetros](../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
 
 ### <a name="steps-to-resolve"></a>Pasos para resolver
 
-1.    Use la `RECOMPILE` sugerencia. Cada vez que adaptarse a cada valor de parámetro, se calcula un plan.
-2.    Vuelva a escribir el procedimiento almacenado para usar la opción `(OPTIMIZE FOR(<input parameter> = <value>))`. Decidir qué valor desea usar se adapte a la mayor parte de la carga de trabajo relevante, crear y mantener un plan que pasa a ser eficaz para el valor con parámetros.
-3.    Vuelva a escribir el procedimiento almacenado mediante la variable local dentro del procedimiento. Ahora el optimizador utiliza el vector de densidad para las estimaciones son erróneas, lo que produce el mismo plan sin tener en cuenta el valor del parámetro.
-4.    Vuelva a escribir el procedimiento almacenado para usar la opción `(OPTIMIZE FOR UNKNOWN)`. Mismo efecto que usar la técnica de variable local.
-5.    Vuelva a escribir la consulta para utilizar la sugerencia `DISABLE_PARAMETER_SNIFFING`. Mismo efecto que usar la técnica de la variable local por deshabilitar completamente el examen de parámetros, a menos que `OPTION(RECOMPILE)`, `WITH RECOMPILE` o `OPTIMIZE FOR <value>` se utiliza.
+1.  Use la `RECOMPILE` sugerencia. Cada vez que adaptarse a cada valor de parámetro, se calcula un plan.
+2.  Vuelva a escribir el procedimiento almacenado para usar la opción `(OPTIMIZE FOR(<input parameter> = <value>))`. Decidir qué valor desea usar se adapte a la mayor parte de la carga de trabajo relevante, crear y mantener un plan que pasa a ser eficaz para el valor con parámetros.
+3.  Vuelva a escribir el procedimiento almacenado mediante la variable local dentro del procedimiento. Ahora el optimizador utiliza el vector de densidad para las estimaciones son erróneas, lo que produce el mismo plan sin tener en cuenta el valor del parámetro.
+4.  Vuelva a escribir el procedimiento almacenado para usar la opción `(OPTIMIZE FOR UNKNOWN)`. Mismo efecto que usar la técnica de variable local.
+5.  Vuelva a escribir la consulta para utilizar la sugerencia `DISABLE_PARAMETER_SNIFFING`. Mismo efecto que usar la técnica de la variable local por deshabilitar completamente el examen de parámetros, a menos que `OPTION(RECOMPILE)`, `WITH RECOMPILE` o `OPTIMIZE FOR <value>` se utiliza.
 
 > [!TIP] 
 > Aproveche el [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] característica de análisis de Plan para identificar rápidamente si se trata de un problema. Más información disponible [aquí](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/).
 
-## <a name="Missing indexes"></a>Índices que faltan
+## <a name="MissingIndexes"></a>Índices que faltan
 
 **Se aplica a:** plataforma externa (por ejemplo, Oracle, DB2, MySQL y Sybase) y [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migración.
 
@@ -63,15 +81,15 @@ Los índices que faltan o incorrectos hace E/S adicional que conduce a memoria a
 
 ### <a name="steps-to-resolve"></a>Pasos para resolver
 
-1.    Aprovechar el plan de ejecución gráfico para las referencias de índice que faltan.
-2.    Indización sugerencias generadas por [el Asistente para la optimización de motor de base de datos](../tools/dta/tutorial-database-engine-tuning-advisor.md).
-3.    Aproveche el [DMV de índices que faltan](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) o a través del [panel de rendimiento de SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
-4.    Aprovechar las secuencias de comandos existentes que pueden utilizar DMV existentes para proporcionar una visión general de los índices que faltan, duplicados, redundantes, poco usados y completamente sin usar, sino también si cualquier referencia de índice se sugiere una/codificado de forma rígida en los procedimientos existentes y las funciones de la base de datos. 
+1.  Aprovechar el plan de ejecución gráfico para las referencias de índice que faltan.
+2.  Indización sugerencias generadas por [el Asistente para la optimización de motor de base de datos](../tools/dta/tutorial-database-engine-tuning-advisor.md).
+3.  Aproveche el [DMV de índices que faltan](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) o a través del [panel de rendimiento de SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
+4.  Aprovechar las secuencias de comandos existentes que pueden utilizar DMV existentes para proporcionar una visión general de los índices que faltan, duplicados, redundantes, poco usados y completamente sin usar, sino también si cualquier referencia de índice se sugiere una/codificado de forma rígida en los procedimientos existentes y las funciones de la base de datos. 
 
 > [!TIP] 
 > Ejemplos de estos scripts preexistentes [creación de índices](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Creation) y [información del índice](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Information). 
 
-## <a name="Inability to use predicates"></a>Predicados de no pueden usar para filtrar los datos
+## <a name="InabilityPredicates"></a>Predicados de no pueden usar para filtrar los datos
 
 **Se aplica a:** plataforma externa (por ejemplo, Oracle, DB2, MySQL y Sybase) y [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migración.
 
@@ -97,9 +115,9 @@ Algunos ejemplos de predicados de no SARGable:
   -   Expresiones complejas en función de los datos en columnas: evaluar la necesidad de crear columnas calculadas persistentes, que se pueden indizar;
 
 > [!NOTE] 
-> Todo lo anterior puede realizarse programmaticaly.
+> Todo lo anterior puede realizarse mediante programación.
 
-## <a name="Table Valued Functions"></a>Uso de las funciones con valores de tabla (frente a varias instrucciones en línea)
+## <a name="TableValuedFunctions"></a>Uso de las funciones con valores de tabla (frente a varias instrucciones en línea)
 
 **Se aplica a:** plataforma externa (por ejemplo, Oracle, DB2, MySQL y Sybase) y [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migración.
 
@@ -112,7 +130,7 @@ Las funciones con valores de tabla devuelven un tipo de datos de tabla que puede
 > Puesto que no se creó la tabla de salida de un MSTVF (función con valores de tabla de múltiples instrucciones) en tiempo de compilación, el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] optimizador de consultas se basa en la heurística y las estadísticas no reales, para determinar las estimaciones de fila. Aunque los índices se agregan a las tablas base, esto no va a ayudar. Para MSTVFs, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza una estimación fija de 1 para el número de filas que se espera que va a devolver un MSTVF (a partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] que corrigen estimación es 100 filas).
 
 ### <a name="steps-to-resolve"></a>Pasos para resolver
-1.    Si la función TVF de múltiples instrucciones es la única instrucción solo, convertir en Inline TVF.
+1.  Si la función TVF de múltiples instrucciones es la única instrucción solo, convertir en Inline TVF.
 
     ```tsql
     CREATE FUNCTION dbo.tfnGetRecentAddress(@ID int)
@@ -142,7 +160,7 @@ Las funciones con valores de tabla devuelven un tipo de datos de tabla que puede
     )
     ```
 
-2.    Si es más complejo, considere el uso de los resultados intermedios que se almacenan en tablas optimizadas en memoria o tablas temporales.
+2.  Si es más complejo, considere el uso de los resultados intermedios que se almacenan en tablas optimizadas en memoria o tablas temporales.
 
 ##  <a name="Additional_Reading"></a> Lecturas adicionales  
  [Procedimiento recomendado con el Almacén de consultas](../relational-databases/performance/best-practice-with-the-query-store.md)  

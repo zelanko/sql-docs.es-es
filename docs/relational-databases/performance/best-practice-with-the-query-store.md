@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f9debfb35bdf0458a34dfc5933fd3601e731f037
-ms.openlocfilehash: 3a11180d35ec0a67eed18e03cfe5f0e82d0cc180
+ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
+ms.openlocfilehash: a13e098829fdf1ffee42075a57750513234dc997
 ms.contentlocale: es-es
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedimiento recomendado con el Almacén de consultas
@@ -29,9 +29,9 @@ ms.lasthandoff: 05/30/2017
 
   En este tema se describen los procedimientos recomendados para usar el Almacén de consultas con la carga de trabajo.  
   
-##  <a name="SSMS"></a> Use the Latest SQL Server Management Studio  
+##  <a name="SSMS"></a> Uso de la versión más reciente de SQL Server Management Studio  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tiene un conjunto de interfaces de usuario diseñadas para configurar el Almacén de consultas, así como para consumir datos recopilados sobre la carga de trabajo.  
-Descargue la versión más reciente de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] desde: [https://msdn.microsoft.com/library/mt238290.aspx](https://msdn.microsoft.com/library/mt238290.aspx)  
+Descargue la última versión de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [aquí](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).  
   
  Para obtener una descripción rápida sobre cómo usar el Almacén de consultas en escenarios de solución de problemas, vea los [blogs de @Azure del Almacén de consultas](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
@@ -42,7 +42,8 @@ Para obtener más información, vea [Información de rendimiento de consultas de
 
 ##  <a name="using-query-store-with-elastic-pool-databases"></a>Uso del Almacén de consultas con bases de datos del grupo elástico
 Puede usar el Almacén de consultas en todas las bases de datos sin problemas, incluso en grupos densamente empaquetados. Se solucionaron todos los problemas relacionados con el uso excesivo de los recursos que pudieron haber surgido cuando el Almacén de consultas estaba habilitado para el gran número de bases de datos en los grupos elásticos.
-##  <a name="Configure"></a> Keep Query Store Adjusted to your Workload  
+
+##  <a name="Configure"></a>Mantener el Almacén de consultas ajustado a la carga de trabajo  
  Configure el Almacén de consultas en función de la carga de trabajo y los requisitos de solución de problemas de rendimiento.   
 Los parámetros predeterminados son buenos para un inicio rápido pero debe supervisar el comportamiento del Almacén de consultas a lo largo del tiempo y ajustar su configuración en consecuencia:  
   
@@ -143,7 +144,7 @@ El Almacén de consultas de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.
 |Overall Resource Consumption (Consumo total de recursos)|Analice el consumo total de recursos para la base de datos para cualquiera de las métricas de ejecución.<br />Use esta vista para identificar patrones de recursos (cargas de trabajo por el día frente a cargas de trabajo por la noche) y optimizar el consumo total para la base de datos.|  
 |Top Resource Consuming Queries (Consultas que consumen más recursos)|Elija una métrica de ejecución de interés e identifique las consultas que tenían los valores más extremos para un intervalo de tiempo proporcionado. <br />Use esta vista para centrar la atención en las consultas más importantes que tienen el mayor impacto en el consumo de recursos de base de datos.|  
 |Consultas con planes forzados|Listas previamente forzar planes con el almacén de consultas. <br />Utilice esta vista para obtener acceso rápidamente a todos los planes forzados actualmente.|  
-|Consultas con una variación alta|Analizar consultas con una variación de la ejecución alta en lo referente a cualquiera de las dimensiones disponibles, como el uso de duración, tiempo de CPU, E/S y memoria en el intervalo de tiempo deseado.<br />Utilice esta vista para identificar consultas con un rendimiento muy variant que puede afectar a la experiencia del usuario a través de las aplicaciones.|  
+|Consultas con una variación alta|Analizar consultas con una variación de la ejecución alta en lo referente a cualquiera de las dimensiones disponibles, como el uso de duración, tiempo de CPU, E/S y memoria en el intervalo de tiempo deseado.<br />Use esta vista para identificar consultas con un rendimiento muy variable que pueda afectar a la experiencia del usuario a través de las aplicaciones.|  
 |Tracked Queries (Consultas seguidas)|Realice un seguimiento de la ejecución de las consultas más importantes en tiempo real. Normalmente, esta vista se utiliza cuando tiene consultas con planes forzados y desea asegurarse de que el rendimiento de las mismas es estable.|
   
 > [!TIP]  
@@ -273,32 +274,33 @@ La tabla siguiente proporciona prácticas recomendadas:
 |Filtrar las consultas no relevantes.|Configurar Modo de captura de consultas en Automático.|  
 |Eliminar consultas menos relevantes cuando se alcanza el tamaño máximo.|Activar la directiva de limpieza basada en el tamaño.|  
   
-##  <a name="Parameterize"></a> Avoid Using Non-Parameterized Queries  
- El uso de consultas sin parámetros cuando no es absolutamente necesario (por ejemplo, en caso de análisis ad hoc) no es una práctica recomendada.  Los planes almacenados no se puede reutilizar, lo que obliga al optimizador de consultas a compilar consultas para cada texto de consulta única.  
+##  <a name="Parameterize"></a> Evitar el uso de consultas sin parámetros  
+ El uso de consultas sin parámetros cuando no es absolutamente necesario (por ejemplo, en caso de análisis ad hoc) no es una práctica recomendada.  Los planes almacenados no se puede reutilizar, lo que obliga al optimizador de consultas a compilar consultas para cada texto de consulta única. Para obtener más información sobre este tema, consulte [Directrices para usar la parametrización forzada](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).  
   Además, el Almacén de consultas puede superar rápidamente la cuota de tamaño debido a la posibilidad de un gran número de textos de consulta diferentes y, por consiguiente, un gran número de planes de ejecución distintos con forma similar.  
 Por tanto, el rendimiento de la carga de trabajo será deficiente y el Almacén de consultas podría cambiar al modo de solo lectura o podría estar eliminando los datos constantemente intentando mantenerse al día con las consultas entrantes.  
   
  Tenga en cuenta las siguientes opciones:  
+
+  -   Parametrice consultas donde proceda, por ejemplo, el encapsulamiento de consultas dentro de un procedimiento almacenado osp_executesql. Para obtener más información sobre este tema, consulte [Parámetros y reutilización de un plan de ejecución](../../relational-databases/query-processing-architecture-guide.md#PlanReuse).    
   
--   Parametrizar consultas donde proceda, por ejemplo encapsular consultas dentro de un procedimiento almacenado.  
-  
--   Use la opción **Optimizar para cargas de trabajo ad hoc** si la carga de trabajo contiene muchos lotes ad hoc de un solo uso con distintos planes de consulta.  
+-   Use la opción [**Optimizar para cargas de trabajo ad hoc**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) si la carga de trabajo contiene muchos lotes ad hoc de un solo uso con distintos planes de consulta.  
   
     -   Comparar el número de valores query_hash distintos con el número total de entradas en sys.query_store_query. Si la relación es cercana a 1, la carga de trabajo ad hoc genera consultas diferentes.  
   
--   Aplicar la PARAMETRIZACIÓN FORZADA para la base de datos o para un subconjunto de consultas si el número de planes de consulta diferentes no es grande.  
+-   Aplique la [**parametrización forzada**](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) para la base de datos o para un subconjunto de consultas si el número de planes de consulta diferentes no es grande.  
   
-    -   Usar la guía de plan para forzar la parametrización solo para la consulta seleccionada.  
+    -   Use la [guía de plan](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md) para forzar la parametrización solo para la consulta seleccionada.  
   
-    -   Configurar la PARAMETRIZACIÓN FORZADA para la base de datos si hay un pequeño número de planes de consulta diferentes en la carga de trabajo. (Cuando la relación entre el recuento de valores query_hash distintos y el número total de entradas de sys.query_store_query es mucho menor que 1.)  
+    -   Configure la parametrización forzada mediante el comando [opción de base de datos Parametrización](../../relational-databases/databases/database-properties-options-page.md#miscellaneous) si hay un pequeño número de planes de consulta diferentes en la carga de trabajo: cuando la relación entre el recuento de valores query_hash distintos y el número total de entradas de sys.query_store_query es mucho menor que 1.  
   
 -   Establezca **Modo de captura de consulta** en AUTOMÁTICO para filtrar las consultas ad hoc con consumo pequeño de recursos automáticamente.  
   
-##  <a name="Drop"></a> Avoid a DROP and CREATE Pattern When Maintaining Containing Objects for the Queries  
+##  <a name="Drop"></a>Evitar un patrón DROP y CREATE al mantener de objetos contenedores para las consultas  
  El Almacén de consultas asocia la entrada de consulta a un objeto contenedor (procedimiento almacenado, función y desencadenador).  Cuando se vuelve a crear un objeto contenedor, se genera una nueva entrada de consulta para el mismo texto de consulta. Esto impide realizar un seguimiento de las estadísticas de rendimiento para esa consulta a lo largo del tiempo y usar un mecanismo para forzar el plan. Para evitar esto, utilice el proceso `ALTER <object>` para cambiar una definición de objeto contenedor siempre que sea posible.  
   
-##  <a name="CheckForced"></a> Check the Status of Forced Plans Regularly  
- Forzar el plan es un mecanismo conveniente para corregir el rendimiento de las consultas críticas y hacer que sean más predecibles. Sin embargo, al igual que con las sugerencias de plan y las guías de plan, forzar un plan no es una garantía de que se utilizará en ejecuciones futuras. Normalmente, cuando se cambia el esquema de base de datos de forma que se modifican o se quitan objetos a los que hace referencia el plan de ejecución, al forzar el plan se empiezan a generar errores. En ese caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuelve a la recompilación de consultas mientras el motivo real del error de la operación de forzado aparece en [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). La siguiente consulta devuelve información sobre planes forzados.  
+##  <a name="CheckForced"></a> Comprobación periódica del estado de los planes forzados  
+
+ Forzar el plan es un mecanismo conveniente para corregir el rendimiento de las consultas críticas y hacer que sean más predecibles. Sin embargo, al igual que con las sugerencias de plan y las guías de plan, forzar un plan no es una garantía de que se utilizará en ejecuciones futuras. Normalmente, cuando se cambia el esquema de base de datos de forma que se modifican o se quitan objetos a los que hace referencia el plan de ejecución, al forzar el plan se empiezan a generar errores. En ese caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuelve a la recompilación de consultas mientras el motivo real del error de la operación de forzado aparece en [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). La siguiente consulta devuelve información sobre planes forzados.  
   
 ```tsql  
 USE [QueryStoreDB];  
@@ -311,16 +313,19 @@ JOIN sys.query_store_query AS q on p.query_id = q.query_id
 WHERE is_forced_plan = 1;  
 ```  
   
- Para ver una lista completa de motivos, vea [sys.query_store_plan &#40;Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). También puede usar el XEvent **query_store_plan_forcing_failed** para realizar un seguimiento de los errores forzados del plan de solución de problemas.  
+ Para ver una lista completa de motivos, vea [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). También puede usar el XEvent **query_store_plan_forcing_failed** para realizar un seguimiento de los errores forzados del plan de solución de problemas.  
   
-##  <a name="Renaming"></a> Avoid Renaming Databases if you have Queries with Forced Plans  
- Los planes de ejecución hacen referencia a objetos que usan nombres de tres partes (`database.schema.object`).   
+##  <a name="Renaming"></a> Evitar el cambio de nombre de las bases de datos si hay consultas con planes de forzados  
+
+ Los planes de ejecución hacen referencia a objetos que usan nombres de tres partes `database.schema.object`.   
+
 Si cambia el nombre de una base de datos, al forzar el plan se producirá un error que provocará la recompilación en todas las ejecuciones de consulta subsiguientes.  
   
 ## <a name="see-also"></a>Vea también  
  [Query Store Catalog Views &#40;Transact-SQL&#41; (Vistas de catálogo del almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Query Store Stored Procedures &#40;Transact-SQL&#41; (Procedimientos almacenados del Almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Uso del almacén de consultas con OLTP en memoria](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
- [Supervisar el rendimiento mediante el almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [Guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md)  
   
 

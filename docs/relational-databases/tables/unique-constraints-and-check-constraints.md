@@ -1,7 +1,7 @@
 ---
 title: Restricciones UNIQUE y restricciones CHECK | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 06/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -25,7 +25,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Restricciones UNIQUE y restricciones CHECK
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Las restricciones UNIQUE y las restricciones CHECK son dos tipos de restricciones que se pueden usar para exigir la integridad de los datos en las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se trata de objetos de base de datos importantes.  
   
@@ -107,3 +107,4 @@ DELETE CheckTbl WHERE col1 = 10;
 |Describe cómo ver las propiedades de una restricción CHECK.|[Restricciones UNIQUE y restricciones CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md)|  
   
   
+

@@ -1,4 +1,6 @@
 # [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md)  
+
+# Administración basada en directivas
 ## [Almacenamiento de la administración basada en directivas](policy-based-management-storage.md)  
 ## [Configurar las propiedades generales de la administración basada en directivas](configure-the-general-properties-of-policy-based-management.md)  
 ## [Configurar alertas para notificar los errores de directiva a los administradores de directivas](configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
@@ -71,6 +73,8 @@
 ### [Seleccionar origen (cuadro de diálogo)](select-source-dialog-box.md)  
 ### [Exportar como directiva (cuadro de diálogo)](export-as-policy-dialog-box.md)  
 ### [Importar directivas (cuadro de diálogo)](import-policies-dialog-box.md)  
+
+
 # [Tutorial: Administrar servidores mediante administración basada en directivas](tutorial-administering-servers-by-using-policy-based-management.md)  
 ## [Lección 1: Crear y aplicar una directiva Desactivado de forma predeterminada](lesson-1-create-and-apply-an-off-by-default-policy.md)  
 ### [Lección 1-1: Crear la directiva Desactivado de forma predeterminada](lesson-1-1-create-the-off-by-default-policy.md)  

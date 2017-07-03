@@ -1,4 +1,6 @@
-# [Información general](create-deploy-and-manage-mobile-and-paginated-reports.md)
+# [¿Qué es SQL Server Reporting Services (SSRS)?](create-deploy-and-manage-mobile-and-paginated-reports.md)
+
+# Información general
 ## [Novedades de Reporting Services](what-s-new-in-sql-server-reporting-services-ssrs.md) 
 ## [Conceptos de Reporting Services (SSRS)](reporting-services-concepts-ssrs.md)
 ## [Características y tareas de Reporting Services](reporting-services-features-and-tasks-ssrs.md)   
@@ -69,7 +71,7 @@
 
 # Desarrollador
 ## [Integración de aplicaciones](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
-## [Servicio web de servidor de informes](../reporting-services/report-server-web-service/accessing-the-soap-api.md)
+## [Servicio web de servidor de informes](../reporting-services/report-server-web-service/report-server-web-service.md)
 ## [Extensiones](../reporting-services/extensions/reporting-services-extension-library.md)
 ## [Elementos de informe personalizados](../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)
 ## [Ensamblados personalizados](../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md)
@@ -81,9 +83,9 @@
 ### [Configuración de información del dispositivo ATOM](atom-device-information-settings.md)  
 ### [CSV Device Information Settings](csv-device-information-settings.md)  
 ### [Excel Device Information Settings](excel-device-information-settings.md)  
-### [Configuración de la información de dispositivo HTML](html-device-information-settings.md)  
-### [Configuración de la información de dispositivo de imagen](image-device-information-settings.md)  ### [MHTML Device Information Settings](mhtml-device-information-settings.md)  
-### [PDF Device Information Settings](pdf-device-information-settings.md)  
+### [Configuración de la información del dispositivo HTML](html-device-information-settings.md)  
+### [Configuración de la información de dispositivo de imagen](image-device-information-settings.md) ### [MHTML Device Information Settings](mhtml-device-information-settings.md)  
+### [Configuración de la información del dispositivo PDF](pdf-device-information-settings.md)  
 ### [Configuración de información del dispositivo PPTX](pptx-device-information-settings.md)  
 ### [Configuración de información del dispositivo XML](xml-device-information-settings.md)  
 ### [Word Device Information Settings](word-device-information-settings.md)  
@@ -107,11 +109,11 @@
 
 ## [Crear un informe detallado (RDLC) con parámetros mediante ReportViewer (Tutorial de SSRS)](create-drillthrough-rdlc-report-with-parameters-reportviewer.md)  
 ### [Lección 1: Crear un nuevo sitio Web](lesson-1-create-a-new-web-site.md)  
-### [Lección 2: Definir una conexión de datos y la tabla de datos para el informe primario](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
-### [Lección 3: Diseñar el informe primario usando al Asistente para informes](lesson-3-design-the-parent-report-using-the-report-wizard.md)  
-### [Lección 4: Definir una conexión de datos y la tabla de datos para el informe secundario](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
-### [Lección 5: Diseñar el informe secundario usando al Asistente para informes](lesson-5-design-the-child-report-using-the-report-wizard.md)  
-### [Lección 6: Agregar un Control ReportViewer a la aplicación](lesson-6-add-a-reportviewer-control-to-the-application.md)  
+### [Lección 2: Definir una conexión de datos y una tabla de datos para el informe primario](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
+### [Lección 3: Diseñar el informe primario usando el Asistente para informes](lesson-3-design-the-parent-report-using-the-report-wizard.md)  
+### [Lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
+### [Lección 5: Diseñar el informe secundario usando el Asistente para informes](lesson-5-design-the-child-report-using-the-report-wizard.md)  
+### [Lección 6: agregar un control ReportViewer a la aplicación](lesson-6-add-a-reportviewer-control-to-the-application.md)  
 ### [Lección 7: Agregar una acción de obtención de detalles en el informe primario](lesson-7-add-drillthrough-action-on-parent-report.md)  
 ### [Lección 8: Crear un filtro de datos](lesson-8-create-a-data-filter.md)  
 ### [Lección 9: Compilar y ejecutar la aplicación](lesson-9-build-and-run-the-application.md)  

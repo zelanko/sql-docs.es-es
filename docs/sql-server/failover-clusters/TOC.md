@@ -1,4 +1,6 @@
 # [Instalación de clúster de conmutación por error de SQL Server](install/sql-server-failover-cluster-installation.md)  
+
+# Diseño
 ## [Antes de instalar los clústeres de conmutación por error](install/before-installing-failover-clustering.md)  
 ## [Crear un nuevo clúster de conmutación por error de SQL Server (programa de instalación)](install/create-a-new-sql-server-failover-cluster-setup.md)  
 ## [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server (programa de instalación)](install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  

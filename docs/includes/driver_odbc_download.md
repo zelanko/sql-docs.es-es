@@ -1,1 +1,1 @@
-![Descargar](../ssdt/media/download.png)[Descargar controlador para ODBC](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/10/20/odbc-driver-13-0-for-linux-released/)
+![Descargar](../ssdt/media/download.png)[Descargar controlador para ODBC](../connect/odbc/download-odbc-driver-for-sql-server.md)

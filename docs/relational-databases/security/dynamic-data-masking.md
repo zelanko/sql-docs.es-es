@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2a16a7b0399a696c670887e49b4cf5c32012afb1
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="dynamic-data-masking"></a>Enmascaramiento de datos dinámicos
@@ -30,10 +30,10 @@ El enmascaramiento dinámico de datos (DDM) limita la exposición de informació
 
 El enmascaramiento dinámico de datos evita el acceso no autorizado a información confidencial permitiendo que los clientes designen la cantidad de información confidencial que se debe revelar, con un impacto mínimo en la capa de aplicación. DDM se puede configurar en la base de datos para ocultar la información adicional de los conjuntos de resultados de las consultas de campos designados de una base de datos, sin modificar los datos de esta última. El enmascaramiento dinámico de datos resulta fácil de usar con las aplicaciones existentes, ya que las reglas de enmascaramiento se aplican en los resultados de la consulta. Muchas aplicaciones pueden enmascarar información confidencial sin modificar las consultas existentes.
 
-*     Una directiva de enmascaramiento de datos central actúa directamente en los campos confidenciales de la base de datos.
-*     Designe roles o usuarios con privilegios que tienen acceso a la información confidencial.
-*     DDM cuenta con funciones de enmascaramiento total y parcial, además de una máscara aleatoria para datos numéricos.
-*     Comandos [!INCLUDE[tsql_md](../../includes/tsql-md.md)] simples definen y administran las máscaras.
+*  Una directiva de enmascaramiento de datos central actúa directamente en los campos confidenciales de la base de datos.
+*  Designe roles o usuarios con privilegios que tienen acceso a la información confidencial.
+*  DDM cuenta con funciones de enmascaramiento total y parcial, además de una máscara aleatoria para datos numéricos.
+*  Comandos [!INCLUDE[tsql_md](../../includes/tsql-md.md)] simples definen y administran las máscaras.
 
 Por ejemplo, un técnico de soporte técnico de un centro de llamadas puede identificar al autor de la llamada mediante varios dígitos de su número del seguro social o de una tarjeta de crédito, pero esos elementos no deben mostrarse por completo a dicho técnico. Puede definir una regla de enmascaramiento enmascare todos los dígitos, excepto los cuatro últimos, de cualquier número del seguro social o de una tarjeta de crédito en el conjunto de resultados de cualquier consulta. Por poner otro ejemplo, si utiliza la máscara de datos adecuada para proteger la información de identificación personal, un desarrollador puede realizar consultas en los entornos de producción para resolver problemas sin que ello suponga una infracción de las normativas de cumplimiento.
 

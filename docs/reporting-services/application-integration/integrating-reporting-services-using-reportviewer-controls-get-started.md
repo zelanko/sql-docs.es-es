@@ -23,11 +23,13 @@ ms.contentlocale: es-es
 ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>Integración de Reporting Services utilizando controles ReportViewer: empezar a trabajar
+<a id="integrating-reporting-services-using-reportviewer-controls---get-started" class="xliff"></a>
+# Integración de Reporting Services utilizando controles ReportViewer: empezar a trabajar
 
 Obtenga información acerca de cómo los desarrolladores pueden incrustar informes paginados en sitios web de ASP.Net y aplicaciones de formularios de Windows, a través del Control de ReportViewer Reporting Services 2016. Puede agregar el control a un nuevo proyecto, o actualizar un proyecto existente.
 
-## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>Agregar el control ReportViewer a un nuevo proyecto web
+<a id="adding-the-reportviewer-control-to-a-new-web-project" class="xliff"></a>
+## Agregar el control ReportViewer a un nuevo proyecto web
 
 1. Crear un nuevo **sitio Web ASP.NET vacía** o abrir un proyecto ASP.NET existente.
 
@@ -36,7 +38,7 @@ Obtenga información acerca de cómo los desarrolladores pueden incrustar inform
 2. Instalar el paquete de nuget del control ReportViewer 2016 a través de la **consola del Administrador de paquetes de Nuget**.
 
     ```
-    Install-Package Microsoft.ReportingServices.ReportViewerControl.WebForms -Pre
+    Install-Package Microsoft.ReportingServices.ReportViewerControl.WebForms
     ```
 3. Agregar una nueva página .aspx al proyecto y registrar el ensamblado del control ReportViewer para su uso dentro de la página.
 
@@ -80,11 +82,13 @@ La página final debe ser similar al siguiente.
 
 ```
 
-## <a name="updating-an-existing-project-to-use-the-reportviewer-control"></a>Actualizar un proyecto existente para usar el control ReportViewer
+<a id="updating-an-existing-project-to-use-the-reportviewer-control" class="xliff"></a>
+## Actualizar un proyecto existente para usar el control ReportViewer
 
 Para hacer usar del control ReportViewer 2016 en un proyecto existente, agregue el control a través de Nuget y actualizar las referencias de ensamblado a la versión *14.0.0.0*. Esto incluirá la actualización de web.config del proyecto y todas las páginas .aspx que hace referencia al control ReportViewer.
 
-### <a name="sample-webconfig-changes"></a>Cambios de web.config de ejemplo
+<a id="sample-webconfig-changes" class="xliff"></a>
+### Cambios de web.config de ejemplo
 
 ```
 <?xml version="1.0"?>
@@ -131,7 +135,8 @@ Para hacer usar del control ReportViewer 2016 en un proyecto existente, agregue 
 </configuration>
 ```
 
-### <a name="sample-aspx"></a>Ejemplo .aspx
+<a id="sample-aspx" class="xliff"></a>
+### Ejemplo .aspx
 
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SampleAspx" %>
@@ -142,7 +147,8 @@ Para hacer usar del control ReportViewer 2016 en un proyecto existente, agregue 
 <!DOCTYPE html>
 ```
 
-## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>Agregar el control ReportViewer a un nuevo proyecto de Windows forms
+<a id="adding-the-reportviewer-control-to-a-new-windows-forms-project" class="xliff"></a>
+## Agregar el control ReportViewer a un nuevo proyecto de Windows forms
 
 1. Crear un nuevo **aplicación de Windows Forms** o abrir un proyecto existente.
 
@@ -151,7 +157,7 @@ Para hacer usar del control ReportViewer 2016 en un proyecto existente, agregue 
 2. Instalar el paquete de nuget del control ReportViewer 2016 a través de la **consola del Administrador de paquetes de Nuget**.
 
     ```
-    Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms -Pre
+    Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
     ```
 3. Agregar un nuevo control desde el código o [agregar el control al cuadro de herramientas](##adding-control-to-visual-studio-toolbar).
 
@@ -177,13 +183,15 @@ Para hacer usar del control ReportViewer 2016 en un proyecto existente, agregue 
     }
     ```
 
-## <a name="how-to-set-100-height-on-the-report-viewer-2016-control"></a>Cómo establecer el alto de 100% en el control de 2016 de Visor de informes
+<a id="how-to-set-100-height-on-the-report-viewer-2016-control" class="xliff"></a>
+## Cómo establecer el alto de 100% en el control de 2016 de Visor de informes
 
 El nuevo control de 2016 de Visor de informes está optimizado para las páginas de modo de estándares de HTML5 y funciona en todos los exploradores modernos. En el pasado, con el control RVC anterior, al establecer la propiedad height de 100%, ha funcionado aunque ninguno de los antecesores tenía alto especificado. Este comportamiento ha cambiado en HTML5. Cuando se establece esta propiedad en el nuevo control RVC, funcionará correctamente sólo si el elemento primario tiene un alto definido, es decir, no un valor de "auto" o todos los antecesores de RVC tienen alto de 100% también.
 
 A continuación se muestran los dos ejemplos de ello.
 
-### <a name="by-setting-the-height-of-all-the-parent-elements-to-100"></a>Al establecer el alto de todas las principales de los elementos al 100%
+<a id="by-setting-the-height-of-all-the-parent-elements-to-100" class="xliff"></a>
+### Al establecer el alto de todas las principales de los elementos al 100%
 
 ```
 <!DOCTYPE html>
@@ -209,7 +217,8 @@ A continuación se muestran los dos ejemplos de ello.
 
 ```
 
-### <a name="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control"></a>Estableciendo el atributo height estilo en el elemento primario del control reportviewer
+<a id="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control" class="xliff"></a>
+### Estableciendo el atributo height estilo en el elemento primario del control reportviewer
 
 Para obtener más información acerca de longitudes de porcentaje del área de visualización, consulte [longitudes de porcentaje de la ventanilla](https://www.w3.org/TR/css3-values/#viewport-relative-lengths).
 
@@ -232,7 +241,8 @@ Para obtener más información acerca de longitudes de porcentaje del área de v
 
 ```
 
-## <a name="adding-control-to-visual-studio-toolbar"></a>Agregar control a la barra de herramientas de Visual Studio
+<a id="adding-control-to-visual-studio-toolbar" class="xliff"></a>
+## Agregar control a la barra de herramientas de Visual Studio
 
 El Control de Visor de informes ahora se incluye como un paquete de NuGet. Por este motivo, no verá el Control de Visor de informes aparecen en el cuadro de herramientas de Visual Studio de forma predeterminada. Puede agregar el control al cuadro de herramientas mediante los pasos siguientes.
 
@@ -259,14 +269,16 @@ El Control de Visor de informes ahora se incluye como un paquete de NuGet. Por e
 
     ![rvcontrol de cuadro de herramientas de ssRS](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
 
-### <a name="things-to-be-aware-of"></a>Cosas a tener en cuenta
+<a id="things-to-be-aware-of" class="xliff"></a>
+### Cosas a tener en cuenta
 
 - Esto agregará una referencia al paquete de NuGet instalado dentro del proyecto actual. El elemento en el cuadro de herramientas se conservará a otros proyectos. Cuando se instala el paquete de NuGet en una nueva solución o proyecto, el elemento de cuadro de herramientas puede hacer referencia a una versión anterior. 
 
 - Incluso si el ensamblado ya no está disponible, el control permanecerá en el cuadro de herramientas. Si se ha eliminado ese proyecto, Visual Studio se producirá un error si intenta agregar el control del cuadro de herramientas. Para corregir este error, quite el control del cuadro de herramientas y vuelva a agregarlo siguiendo los pasos anteriores.
 
 
-## <a name="common-issues"></a>Problemas comunes
+<a id="common-issues" class="xliff"></a>
+## Problemas comunes
     
 - El control ReportViewer 2016 está diseñado para utilizarse con los exploradores modernos. El control podría no funcionar si los exploradores representar la página web en un modo de compatibilidad de Internet Explorer. Sitios de intranet pueden requerir una etiqueta meta para invalidar la configuración que fomentar la representación de páginas en modo de compatibilidad de la intranet.
 
@@ -274,11 +286,13 @@ El Control de Visor de informes ahora se incluye como un paquete de NuGet. Por e
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     ```
       
-## <a name="providing-feedback"></a>Proporcionar comentarios
+<a id="providing-feedback" class="xliff"></a>
+## Proporcionar comentarios
 
 Informar al equipo acerca de los problemas que pueda surgir con el control en el [foros de MSDN de servicios de informes](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices) o a través de correo electrónico en [ RVCFeedback@microsoft.com ](mailto:RVCFeedback@microsoft.com).
 
-## <a name="see-also"></a>Vea también
+<a id="see-also" class="xliff"></a>
+## Vea también
 
 [Recopilación de datos en el control de ReportingViewer de 2016](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
 ¿Más preguntas? [Pruebe el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

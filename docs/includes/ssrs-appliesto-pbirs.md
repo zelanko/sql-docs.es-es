@@ -1,0 +1,1 @@
+![sí](media/yes.png)Servidor de informes de Power BI

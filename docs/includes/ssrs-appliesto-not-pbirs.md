@@ -1,0 +1,1 @@
+![no](media/no.png)Servidor de informes de Power BI

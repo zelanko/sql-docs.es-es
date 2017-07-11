@@ -1,7 +1,7 @@
 ---
 title: "Tamaño de tabla y fila de las tablas con optimización para memoria | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 06/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,19 +14,23 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 57d2a22fc535f3613ce680156a0a6bb55ec62fa1
+ms.translationtype: HT
+ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
+ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/10/2017
 
 ---
-# <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamaño de tabla y fila de las tablas con optimización para memoria
+<a id="table-and-row-size-in-memory-optimized-tables" class="xliff"></a>
+
+# Tamaño de tabla y fila de las tablas con optimización para memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Una tabla con optimización para memoria consta de una colección de filas e índices que contienen punteros a las filas. En una tabla con optimización para memoria, los datos consecutivos no pueden ser mayores de 8060 bytes. Pero, a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , se puede crear una tabla con varias columnas de gran tamaño (por ejemplo, varias columnas varbinary(8000)) y columnas LOB (por ejemplo, varbinary(max), varchar(max) y nvarchar(max)). Las columnas que superen el tamaño máximo de datos consecutivos se colocan de forma no consecutiva, en tablas internas especiales. Para obtener más información sobre estas tablas internas, vea [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
+  Antes de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], el tamaño de los datos de una fila de una tabla optimizada para memoria no podía superar los [8.060 bytes](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx). Pero a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y en Azure SQL Database es posible crear una tabla optimizada para memoria con varias columnas de gran tamaño (por ejemplo, varias columnas varbinary(8000)) y columnas LOB (es decir, varbinary(max), varchar(max) y nvarchar(max)) y realizar operaciones en ellas con módulos T-SQL compilados de forma nativa y tipos de tabla. 
   
- Hay dos motivos para calcular el tamaño de tabla y fila:  
+  Las columnas que no quepan en el límite de tamaño de fila de 8060 bytes se colocan de forma no consecutiva, en una tabla interna aparte. Cada columna no consecutiva tiene una tabla interna correspondiente que, a su vez, tiene un único índice no agrupado. Para obtener detalles sobre estas tablas internas usadas para columnas no consecutivas, vea [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md). 
+ 
+  Hay determinados escenarios donde resulta útil calcular el tamaño de la fila y la tabla:
   
 -   ¿Cuánta memoria usa una tabla?  
   
@@ -38,13 +42,12 @@ ms.lasthandoff: 06/22/2017
   
 -   El tamaño de los datos de una fila y si cabe en la limitación de tamaño de fila de 8.060 bytes. Para responder a estas preguntas, utilice el cálculo del [tamaño del texto de la fila], descrito a continuación.  
 
-Las columnas que no quepan en el límite de tamaño de fila de 8060 bytes se colocan de forma no consecutiva, en una tabla interna aparte. Cada columna no consecutiva tiene una tabla interna correspondiente que, a su vez, tiene un único índice no agrupado. Para obtener más información sobre las tablas internas usadas para columnas no consecutivas, vea [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md). 
-  
- La ilustración siguiente muestra una tabla con índices y filas, que a su vez tienen encabezados de fila y cuerpos:  
+  Una tabla con optimización para memoria consta de una colección de filas e índices que contienen punteros a las filas. La ilustración siguiente muestra una tabla con índices y filas, que a su vez tienen encabezados de fila y cuerpos:  
   
  ![Tabla con optimización para memoria.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
 La tabla con optimización para memoria, que consta de índices y filas.  
-  
+
+##  <a name="bkmk_TableSize"></a> Cálculo del tamaño de una tabla
  El tamaño en memoria de una tabla, en bytes, se calcula de la forma siguiente:  
   
 ```  
@@ -65,34 +68,10 @@ La tabla con optimización para memoria, que consta de índices y filas.
 [row size] = [row header size] + [actual row body size]  
 [row header size] = 24 + 8 * [number of indices]  
 ```  
-  
- **Tamaño del cuerpo de la fila**  
-  
- El recálculo de [tamaño del cuerpo de la fila] se describe en la siguiente tabla.  
-  
- Hay dos cálculos diferentes para el tamaño del cuerpo de la fila: el tamaño calculado y el tamaño real:  
-  
--   El tamaño calculado, indicado mediante el [tamaño del cuerpo calculado de la fila], se utiliza para determinar si la limitación de tamaño de fila de 8.060 bytes se supera.  
-  
--   El tamaño real se indica con [tamaño del texto real de la fila], es el tamaño de almacenamiento real del cuerpo de la fila en memoria y en los archivos de puntos de comprobación.  
-  
- Ambos [tamaño del cuerpo calculado de la fila] y [tamaño del texto real de la fila] se calculan de igual forma. La única diferencia es el cálculo de tamaño de las columnas (n)varchar(i) y varbinary(i), como se refleja en la parte inferior de la tabla siguiente. El tamaño del cuerpo calculado de la fila utiliza el tamaño *i* declarado como tamaño de columna, mientras que el tamaño del cuerpo real de la fila utiliza el tamaño real de los datos.  
-  
- En la tabla siguiente se describe el cálculo del tamaño del cuerpo de fila, indicado como [tamaño real del cuerpo de fila] = SUM([tamaño de tipos superficiales]) + 2 + 2 * [número de columnas de tipo profundo].  
-  
-|Sección|Tamaño|Comentarios|  
-|-------------|----------|--------------|  
-|Columnas de tipo superficial|SUM([tamaño de tipos superficiales]) El tamaño en bytes de los tipos individuales es el siguiente:<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **Numeric** (precisión <=18): 8<br /><br /> **Time**: 8<br /><br /> **Numeric** (precisión >18): 16<br /><br /> **Uniqueidentifier**: 16||  
-|Relleno superficial de la columna|Los valores posibles son:<br /><br /> 1, si hay columnas de tipo profundo y el tamaño total de datos de las columnas superficiales es un número impar.<br /><br /> De lo contrario, es 0|Los tipos profundos son (var)binary y (n)(var)char.|  
-|Matriz de desplazamiento para las columnas de tipo profundo|Los valores posibles son:<br /><br /> 0, si no hay columnas de tipos profundos<br /><br /> 2 + 2 * [número de columnas de tipo profundo], en caso contrario|Los tipos profundos son (var)binary y (n)(var)char.|  
-|Matriz NULL|[número de columnas que admiten valores NULL] / 8, redondeado a bytes completos.|La matriz tiene un bit por cada columna que admite valores NULL. Se redondea a bytes completos.|  
-|Relleno de matriz NULL|Los valores posibles son:<br /><br /> 1, si hay columnas de tipo profundo y el tamaño de la matriz NULL es un número de bytes impar.<br /><br /> De lo contrario, es 0|Los tipos profundos son (var)binary y (n)(var)char.|  
-|Relleno|Si no hay columnas de tipos profundos: 0<br /><br /> Si hay columnas de tipo profundo, se agregan los bytes de relleno 0-7, según la alineación mayor requerida por una columna superficial. Cada columna superficial requiere una alineación igual a su tamaño según se documentó anteriormente, salvo en que las columnas GUID necesitan la alineación de 1 byte (no 16) y las columnas numéricas necesitan siempre la alineación de 8 bytes (nunca 16). Se usa el requisito de alineación mayor entre todas las columnas superficiales y se agregan los bytes 0 a 7 de relleno de forma que el tamaño total (sin las columnas de tipo profundo) sea un múltiplo de la alineación requerida.|Los tipos profundos son (var)binary y (n)(var)char.|  
-|Columnas de tipo profundo de longitud fija|SUM([tamaño de columnas de tipo profundo de longitud fija])<br /><br /> El tamaño de cada columna es el siguiente:<br /><br /> i para char(i) y binary(i).<br /><br /> 2 * i para nchar(i)|Las columnas de tipo profundo de longitud fija son de tipo char(i), nchar(i) o binary(i).|  
-|Columnas de tipo profundo de longitud variable [tamaño calculado]|SUM([tamaño calculado de columnas de tipo profundo de longitud variable])<br /><br /> El tamaño calculado de cada columna es el siguiente:<br /><br /> i para varchar(i) y varbinary(i)<br /><br /> 2 * i para nvarchar(i)|Esta fila solo se aplica al [tamaño del texto calculado de la fila].<br /><br /> Las columnas de tipo profundo de longitud variable son de tipo varchar(i), nvarchar(i) o varbinary(i). El tamaño calculado se determina mediante la longitud máxima (i) de la columna.|  
-|Columnas de tipo profundo de longitud variable [tamaño real]|SUM([tamaño real de columnas de tipo profundo de longitud variable])<br /><br /> El tamaño real de cada columna es el siguiente:<br /><br /> n, donde n es el número de caracteres almacenados en la columna, para varchar(i).<br /><br /> 2 * n, donde n es el número de caracteres almacenados en la columna, para nvarchar(i).<br /><br /> n, donde n es el número de bytes almacenados en la columna, para varbinary(i).|Esta fila solo se aplica al [tamaño del texto real de la fila].<br /><br /> El tamaño real se determina con los datos almacenados en las columnas de la fila.|  
-  
-##  <a name="bkmk_RowStructure"></a> Estructura de filas  
+##  <a name="bkmk_RowBodySize"></a> Cálculo del tamaño del cuerpo de la fila
+
+**Estructura de filas**
+    
  Las filas de una tabla con optimización para memoria tienen los siguientes componentes:  
   
 -   El encabezado de fila contiene la marca de tiempo necesaria para implementar las versiones de fila. El encabezado de fila también contiene el puntero de índice para implementar el encadenamiento de filas en cubos de hash (descritos arriba).  
@@ -139,6 +118,32 @@ La tabla con optimización para memoria, que consta de índices y filas.
 |John|Paris|  
 |Jane|Praga|  
 |Susan|Bogotá|  
+  
+ 
+  
+ El recálculo de [tamaño del cuerpo de la fila] se describe en la siguiente tabla.  
+  
+ Hay dos cálculos diferentes para el tamaño del cuerpo de la fila: el tamaño calculado y el tamaño real:  
+  
+-   El tamaño calculado, indicado mediante el [tamaño del cuerpo calculado de la fila], se utiliza para determinar si la limitación de tamaño de fila de 8.060 bytes se supera.  
+  
+-   El tamaño real se indica con [tamaño del texto real de la fila], es el tamaño de almacenamiento real del cuerpo de la fila en memoria y en los archivos de puntos de comprobación.  
+  
+ Ambos [tamaño del cuerpo calculado de la fila] y [tamaño del texto real de la fila] se calculan de igual forma. La única diferencia es el cálculo de tamaño de las columnas (n)varchar(i) y varbinary(i), como se refleja en la parte inferior de la tabla siguiente. El tamaño del cuerpo calculado de la fila utiliza el tamaño *i* declarado como tamaño de columna, mientras que el tamaño del cuerpo real de la fila utiliza el tamaño real de los datos.  
+  
+ En la tabla siguiente se describe el cálculo del tamaño del cuerpo de fila, indicado como [tamaño real del cuerpo de fila] = SUM([tamaño de tipos superficiales]) + 2 + 2 * [número de columnas de tipo profundo].  
+  
+|Sección|Tamaño|Comentarios|  
+|-------------|----------|--------------|  
+|Columnas de tipo superficial|SUM([tamaño de tipos superficiales]) El tamaño en bytes de los tipos individuales es el siguiente:<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **Numeric** (precisión <=18): 8<br /><br /> **Time**: 8<br /><br /> **Numeric** (precisión >18): 16<br /><br /> **Uniqueidentifier**: 16||  
+|Relleno superficial de la columna|Los valores posibles son:<br /><br /> 1, si hay columnas de tipo profundo y el tamaño total de datos de las columnas superficiales es un número impar.<br /><br /> De lo contrario, es 0|Los tipos profundos son (var)binary y (n)(var)char.|  
+|Matriz de desplazamiento para las columnas de tipo profundo|Los valores posibles son:<br /><br /> 0, si no hay columnas de tipos profundos<br /><br /> 2 + 2 * [número de columnas de tipo profundo], en caso contrario|Los tipos profundos son (var)binary y (n)(var)char.|  
+|Matriz NULL|[número de columnas que admiten valores NULL] / 8, redondeado a bytes completos.|La matriz tiene un bit por cada columna que admite valores NULL. Se redondea a bytes completos.|  
+|Relleno de matriz NULL|Los valores posibles son:<br /><br /> 1, si hay columnas de tipo profundo y el tamaño de la matriz NULL es un número de bytes impar.<br /><br /> De lo contrario, es 0|Los tipos profundos son (var)binary y (n)(var)char.|  
+|Relleno|Si no hay columnas de tipos profundos: 0<br /><br /> Si hay columnas de tipo profundo, se agregan los bytes de relleno 0-7, según la alineación mayor requerida por una columna superficial. Cada columna superficial requiere una alineación igual a su tamaño según se documentó anteriormente, salvo en que las columnas GUID necesitan la alineación de 1 byte (no 16) y las columnas numéricas necesitan siempre la alineación de 8 bytes (nunca 16). Se usa el requisito de alineación mayor entre todas las columnas superficiales y se agregan los bytes 0 a 7 de relleno de forma que el tamaño total (sin las columnas de tipo profundo) sea un múltiplo de la alineación requerida.|Los tipos profundos son (var)binary y (n)(var)char.|  
+|Columnas de tipo profundo de longitud fija|SUM([tamaño de columnas de tipo profundo de longitud fija])<br /><br /> El tamaño de cada columna es el siguiente:<br /><br /> i para char(i) y binary(i).<br /><br /> 2 * i para nchar(i)|Las columnas de tipo profundo de longitud fija son de tipo char(i), nchar(i) o binary(i).|  
+|Columnas de tipo profundo de longitud variable [tamaño calculado]|SUM([tamaño calculado de columnas de tipo profundo de longitud variable])<br /><br /> El tamaño calculado de cada columna es el siguiente:<br /><br /> i para varchar(i) y varbinary(i)<br /><br /> 2 * i para nvarchar(i)|Esta fila solo se aplica al [tamaño del texto calculado de la fila].<br /><br /> Las columnas de tipo profundo de longitud variable son de tipo varchar(i), nvarchar(i) o varbinary(i). El tamaño calculado se determina mediante la longitud máxima (i) de la columna.|  
+|Columnas de tipo profundo de longitud variable [tamaño real]|SUM([tamaño real de columnas de tipo profundo de longitud variable])<br /><br /> El tamaño real de cada columna es el siguiente:<br /><br /> n, donde n es el número de caracteres almacenados en la columna, para varchar(i).<br /><br /> 2 * n, donde n es el número de caracteres almacenados en la columna, para nvarchar(i).<br /><br /> n, donde n es el número de bytes almacenados en la columna, para varbinary(i).|Esta fila solo se aplica al [tamaño del texto real de la fila].<br /><br /> El tamaño real se determina con los datos almacenados en las columnas de la fila.|   
   
 ##  <a name="bkmk_ExampleComputation"></a> Ejemplo: Cálculo del tamaño de fila y tabla  
  Para los índices hash, el número de depósitos real se redondea a la potencia más cercana de 2. Por ejemplo, si el bucket_count especificado es 100000, el número real de depósitos para el índice es 131072.  
@@ -231,8 +236,22 @@ GO
 select * from sys.dm_db_xtp_table_memory_stats  
 where object_id = object_id('dbo.Orders')  
 ```  
+
+##  <a name="bkmk_OffRowLimitations"></a> Limitaciones de las columnas no consecutivas
+  A continuación se muestran varias limitaciones y advertencias relacionadas con el uso de columnas no consecutivas en una tabla optimizada para memoria:
   
-## <a name="see-also"></a>Vea también  
+-   Si hay un índice de almacén de columnas en una tabla optimizada para memoria, todas las columnas deben ajustarse de forma consecutiva. 
+-   Todas las columnas de clave de índice se deben almacenar de forma consecutiva. Si una columna de clave de índice no se ajusta de forma consecutiva, se produce un error al agregar el índice. 
+-   Advertencias sobre la [modificación de una tabla optimizada para memoria con columnas no consecutivas](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md).
+-   En el caso de los LOB, la limitación de tamaño es igual a la de las tablas basadas en disco (límite de 2 GB sobre los valores de LOB). 
+-   Para obtener un rendimiento óptimo, se recomienda que la mayoría de las columnas se ajusten a 8060 bytes. 
+
+La entrada de blog [What's new for In-Memory OLTP in SQL Server 2016 since CTP3 (Novedades de OLTP en memoria en SQL Server 2016 desde CTP3)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) detalla algunas de estas particularidades.   
+ 
+<a id="see-also" class="xliff"></a>
+
+## Vea también  
  [Tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
+

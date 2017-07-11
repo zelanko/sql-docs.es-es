@@ -18,13 +18,15 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ce278d494e2d5ab7dfc82e244a9d6b8821099cc0
+ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
+ms.openlocfilehash: 171f33aa7ff745b8a66efe2cd5f3879d78b1c9f4
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="query-store-usage-scenarios"></a>Escenarios de uso del Almacén de consultas
+<a id="query-store-usage-scenarios" class="xliff"></a>
+
+# Escenarios de uso del Almacén de consultas
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   El Almacén de consultas se puede usar en un gran número de escenarios en los que es fundamental controlar y procurar un rendimiento de carga de trabajo de predicción. Estos son algunos ejemplos que se pueden tener en cuenta:  
@@ -35,29 +37,33 @@ ms.lasthandoff: 04/11/2017
   
 -   Realizar pruebas A/B  
   
--   Mantener la estabilidad del rendimiento al actualizar a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+-   Mantener la estabilidad del rendimiento al actualizar a una versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Identificar y mejorar las cargas de trabajo ad hoc  
   
-## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>Localizar y solucionar consultas con regresiones de elección del plan  
+<a id="pinpoint-and-fix-queries-with-plan-choice-regressions" class="xliff"></a>
+
+## Localizar y solucionar consultas con regresiones de elección del plan  
  Durante una ejecución de consultas normal, el optimizador de consultas puede decidir adoptar un plan diferente porque las entradas importantes ahora son distintas, ya sea porque la cardinalidad de los datos ha cambiado, porque se han creado, modificado o eliminado índices, porque se han actualizado estadísticas, etc.  En gran parte, el nuevo plan elegido será mejor o aproximadamente igual que el que se usó anteriormente. Sin embargo, hay casos en los que el nuevo plan es claramente peor. Es a esta situación a la que denominamos regresión de cambio de elección de plan. Antes de que existiera el almacén de consultas, este era un problema muy difícil de identificar y resolver, ya que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no proporcionaba un almacén de datos integrado donde los usuarios pudieran buscar los planes de ejecución usados en el tiempo.  
   
- Ahora, con el Almacén de consultas puede hacer lo siguiente rápidamente:  
+ Con el Almacén de consultas puede hacer lo siguiente rápidamente:  
   
 -   Identificar todas las consultas cuyas métricas de ejecución se hayan degradado en el periodo de tiempo especificado (última hora, día, semana, etc.). Use la opción **Consultas devueltas** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para acelerar el análisis.  
   
 -   Entre las consultas devueltas es muy fácil distinguir las que tenían varios planes y que se degradaron debido a una mala elección del plan. Use el panel **Resumen del plan** en **Consultas devueltas** para visualizar todos los planes de una consulta devuelta y su rendimiento de consulta en el tiempo.  
   
--   Forzar el plan anterior del historial si está confirmado que es mejor. Use el botón **Forzar plan** en **Consultas devueltas** para forzar el plan seleccionado para la consulta.  
+-   Forzar el plan anterior del historial si está confirmado que es mejor. Use el botón **Forzar plan** de **Consultas con regresión** para aplicar el plan seleccionado para la consulta.  
   
  ![consultaDeAlmacénDeUso1](../../relational-databases/performance/media/query-store-usage-1.png "consultaDeAlmacénDeUso1")  
   
  Para ver una descripción detallada del escenario, consulte el blog [Query Store: A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) (Almacén de consultas: una caja negra de su base de datos).  
   
-## <a name="identify-and-tune-top-resource-consuming-queries"></a>Identificar y ajustar las consultas que consumen más recursos  
+<a id="identify-and-tune-top-resource-consuming-queries" class="xliff"></a>
+
+## Identificar y ajustar las consultas que consumen más recursos  
  Aunque la carga de trabajo puede generar miles de consultas, normalmente solo unas pocas usan realmente la mayor parte de los recursos del sistema y, por tanto, requieren su atención. Entre las consultas que más recursos consumen suelen estar las consultas devueltas o aquellas que se pueden ajustar para mejorarlas.  
   
- La forma más sencilla de empezar a explorar es abrir **Principales consultas que consumen recursos** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  La interfaz de usuario se divide en tres paneles: un histograma con las consultas que consumen más recurso (izquierda), un resumen del plan para la consulta seleccionada (derecha) y un plan de consulta visual para el plan seleccionado (abajo). Haga clic en el botón **Configurar** para controlar la cantidad de consultas que quiere analizar y el intervalo de tiempo que le interesa. También puede elegir entre diferentes dimensiones de consumo de recursos (duración, CPU, memoria, E/S, número de ejecución) y la línea base (promedio, mínima, máxima, total, desviación estándar).  
+ La forma más sencilla de empezar a explorar es abrir **Principales consultas que consumen recursos** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La interfaz de usuario se divide en tres paneles: un histograma con las consultas que consumen más recurso (izquierda), un resumen del plan para la consulta seleccionada (derecha) y un plan de consulta visual para el plan seleccionado (abajo). Haga clic en el botón **Configurar** para controlar la cantidad de consultas que quiere analizar y el intervalo de tiempo que le interesa. También puede elegir entre diferentes dimensiones de consumo de recursos (duración, CPU, memoria, E/S, número de ejecuciones) y la base (promedio, mínima, máxima, total, desviación estándar).  
   
  ![consultaDeAlmacénDeUso2](../../relational-databases/performance/media/query-store-usage-2.png "consultaDeAlmacénDeUso2")  
   
@@ -75,8 +81,10 @@ ms.lasthandoff: 04/11/2017
   
 5.  Considere si merece la pena volver a escribir una consulta costosa. Por ejemplo, puede aprovechar las ventajas de la parametrización de consultas y reducir el uso de SQL dinámico. Implemente una lógica óptima al leer los datos (aplique el filtrado de datos en la base de datos, no en la aplicación).  
   
-## <a name="ab-testing"></a>Realizar pruebas A/B  
- Use el Almacén de consultas para comparar el rendimiento de una carga de trabajo antes y después del cambio de aplicación que tiene previsto realizar.  La siguiente lista contiene ejemplos en los que se puede usar el Almacén de consultas para evaluar el impacto del cambio de entorno o aplicación en el rendimiento de la carga de trabajo:  
+<a id="ab-testing" class="xliff"></a>
+
+## Realizar pruebas A/B  
+ Use el Almacén de consultas para comparar el rendimiento de una carga de trabajo antes y después del cambio de aplicación que tiene previsto realizar. La siguiente lista contiene ejemplos en los que se puede usar el Almacén de consultas para evaluar el impacto del cambio de entorno o aplicación en el rendimiento de la carga de trabajo:  
   
 -   Implementar una nueva versión de la aplicación.  
   
@@ -118,22 +126,26 @@ ms.lasthandoff: 04/11/2017
   
  Según el análisis, probablemente lo más conveniente sea mantener el índice, ya que el rendimiento de la consulta ha mejorado.  
   
-## <a name="keep-performance-stability-during-the-upgrade-to-sql-server-2016"></a>Mantener la estabilidad del rendimiento al actualizar a SQL Server 2016  
+## <a name="CEUpgrade"></a> Mantener la estabilidad del rendimiento al actualizar a una versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Antes de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], los usuarios corrían el riesgo de sufrir una regresión del rendimiento al actualizar a la versión más reciente de la plataforma. Esto se debía a que la versión más reciente del optimizador de consultas se activaba inmediatamente después de que se instalaran los nuevos bits.  
   
- Desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , todos los cambios del optimizador de consultas están vinculados al `COMPATIBILITY_LEVEL`más reciente, por lo que los planes no se cambian en el momento de la actualización, sino cuando un usuario cambie `COMPATIBILITY_LEVEL` a la versión más reciente. Esta función, junto con el Almacén de consultas, confiere al usuario un enorme control sobre el rendimiento de las consultas en el proceso de actualización. En la siguiente imagen se muestra el flujo de trabajo de actualización recomendado:  
+ A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], todos los cambios del optimizador de consultas están vinculados al [nivel de compatibilidad de la base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) más reciente, por lo que los planes no se cambian en el momento de la actualización, sino cuando un usuario cambia `COMPATIBILITY_LEVEL` a la versión más reciente. Esta función, junto con el Almacén de consultas, confiere al usuario un enorme control sobre el rendimiento de las consultas en el proceso de actualización. En la siguiente imagen se muestra el flujo de trabajo de actualización recomendado:  
   
  ![consultaDeAlmacénDeUso5](../../relational-databases/performance/media/query-store-usage-5.png "consultaDeAlmacénDeUso5")  
   
-1.  Actualice [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin cambiar `COMPATIBILITY_LEVEL`. No dispondrá del optimizador de consultas más reciente, pero sí características de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] como el Almacén de consultas.  
+1.  Actualice [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin cambiar el nivel de compatibilidad de la base de datos. No expone los últimos cambios del optimizador de consultas, pero sí las características más recientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluido el Almacén de consultas.  
   
-2.  Habilite el Almacén de consultas: capture consultas y planes y establezca la base de rendimiento del `COMPATIBILITY_LEVEL`anterior. Permanezca en este paso el tiempo suficiente como para capturar todos los planes y obtener una base estable.  
+2.  Habilite el Almacén de consultas. Para más información sobre este tema, vea [Mantener el Almacén de consultas ajustado a la carga de trabajo](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
+
+3.  Permita al Almacén de consultas capturar consultas y planes y establezca una base de rendimiento con el nivel de compatibilidad de base de datos de origen o anterior. Continúe en este paso el tiempo suficiente para capturar todos los planes y obtener una base estable. Puede ser la duración de un ciclo comercial habitual de una carga de trabajo de producción.  
   
-3.  Avance al nivel de compatibilidad más reciente: exponga su carga de trabajo al optimizador de consultas más reciente y deje que cree posibles nuevos planes.  
+4.  Pase al nivel de compatibilidad de base de datos más reciente: exponga la carga de trabajo a los últimos cambios del optimizador de consultas y deje que cree posibles nuevos planes.  
   
-4.  Use el Almacén de consultas para realizar correcciones de regresión y análisis, si bien la mayoría de las veces el nuevo optimizador de consultas debería generar mejores planes. Con todo, el Almacén de consultas le proporcionará una forma fácil de identificar las regresiones de elección del plan y de corregirlos mediante el mecanismo de forzado de plan.  
+5.  Use el Almacén de consultas para realizar correcciones de regresión y análisis, si bien la mayoría de las veces los nuevos cambios del optimizador de consultas deberían generar mejores planes. Con todo, el Almacén de consultas proporcionará una forma fácil de identificar las regresiones de elección del plan y de corregirlas mediante el mecanismo de forzado de plan.  
   
-## <a name="identify-and-improve-ad-hoc-workloads"></a>Identificar y mejorar las cargas de trabajo ad hoc  
+<a id="identify-and-improve-ad-hoc-workloads" class="xliff"></a>
+
+## Identificar y mejorar las cargas de trabajo ad hoc  
  Algunas cargas de trabajo no tienen consultas dominantes que se pueden ajustar para mejorar el rendimiento general de la aplicación. Estas cargas de trabajo se suelen caracterizar por un número relativamente grande de consultas diferentes, y todas ellas consumen parte de los recursos del sistema. Al ser únicas, estas consultas se ejecutan con poca frecuencia (normalmente una sola vez, de ahí la nomenclatura “ad hoc”), por lo que su consumo de tiempo de ejecución no es crítico. Por otro lado, dado que la aplicación genera nuevas consultas netas todo el tiempo, se dedica una parte significativa de los recursos del sistema a compilar consultas de una forma que no es óptima. Esta situación tampoco es ideal para el Almacén de consultas, dado que el elevado número de consultas y planes acapara el espacio que tiene reservado, lo que significa que el Almacén de consultas probablemente acabe en modo de solo lectura muy rápidamente. Si activó la **directiva de limpieza según el tamaño** ([muy recomendable](https://msdn.microsoft.com/library/mt604821.aspx) para mantener el almacén de consultas siempre en funcionamiento), el proceso en segundo plano limpiará las estructuras del almacén de consultas prácticamente todo el tiempo, lo que también consume muchos recursos del sistema.  
   
  La vista**Consultas que más recursos consumen** proporcionará un primer indicio de la naturaleza ad hoc de la carga de trabajo:  
@@ -144,7 +156,7 @@ ms.lasthandoff: 04/11/2017
   
  Opcionalmente, puede ejecutar el script [!INCLUDE[tsql](../../includes/tsql-md.md)] para obtener el número total de textos de consulta, consultas y planes en el sistema y conocer sus diferencias comparando sus query_hash y plan_hash:  
   
-```  
+```tsql  
 /*Do cardinality analysis when suspect on ad-hoc workloads*/  
 SELECT COUNT(*) AS CountQueryTextRows FROM sys.query_store_query_text;  
 SELECT COUNT(*) AS CountQueryRows FROM sys.query_store_query;  
@@ -165,8 +177,7 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
   
  El método de las plantillas de consulta individuales requiere crear una guía de plan:  
   
-```  
-  
+```tsql  
 /*Apply plan guide for the selected query template*/  
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
@@ -188,21 +199,23 @@ EXEC sp_create_plan_guide
   
  Si todas las consultas (o la mayoría de ellas) son aptas para la parametrización automática, cambiar `FORCED PARAMETERIZATION` para toda la base de datos puede ser una mejor opción:  
   
-```  
-  
+```tsql  
 /*Apply forced parameterization for entire database*/  
 ALTER DATABASE <database name> SET PARAMETERIZATION  FORCED;  
 ```  
-  
+
+ > [!NOTE]
+ > Para obtener más información sobre este tema, consulte [Directrices para usar la parametrización forzada](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).
+
  Después de aplicar cualquiera de estos pasos, **Principales consultas que consumen recursos** mostrará una imagen distinta de la carga de trabajo.  
   
  ![consultaDeAlmacénDeUso8](../../relational-databases/performance/media/query-store-usage-8.png "consultaDeAlmacénDeUso8")  
   
- En algunos casos, la aplicación puede generar una gran cantidad de consultas diferentes que no son aptas para la parametrización automática. En ese caso, verá un gran número de consultas en el sistema, pero la relación entre las consultas únicas y los query_hash únicos está bastante próxima a 1.  
+ En algunos casos, la aplicación puede generar una gran cantidad de consultas diferentes que no son aptas para la parametrización automática. En ese caso, verá un gran número de consultas en el sistema, pero la relación entre las consultas únicas y los `query_hash` únicos está bastante próxima a 1.  
   
- En consecuencia, puede que convenga especificar 'optimize for ad hoc workloads' para no desperdiciar memoria caché con consultas que probablemente no vuelvan a ejecutarse. Para evitar que se capturen esas consultas en el Almacén de consultas, establezca `QUERY_CAPTURE_MODE` en `AUTO`.  
+ En consecuencia, es posible que quiera habilitar la opción del servidor [**Optimizar para cargas de trabajo ad hoc**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) para no desperdiciar memoria caché con consultas que probablemente no vuelvan a ejecutarse. Para evitar que se capturen esas consultas en el Almacén de consultas, establezca `QUERY_CAPTURE_MODE` en `AUTO`.  
   
-```  
+```tsql  
 sp_configure 'show advanced options', 1;  
 GO  
 RECONFIGURE;  
@@ -218,7 +231,9 @@ ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON
     (OPERATION_MODE = READ_WRITE, QUERY_CAPTURE_MODE = AUTO);  
 ```  
   
-## <a name="see-also"></a>Vea también  
+<a id="see-also" class="xliff"></a>
+
+## Vea también  
  [Supervisar el rendimiento mediante el almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Procedimiento recomendado con el Almacén de consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   

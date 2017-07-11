@@ -1,7 +1,7 @@
 ---
 title: "Creación de un esquema de la base de datos | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 07/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -22,13 +22,15 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fe54e464e4aabc53eb8645c1fbf20f509f427978
+ms.sourcegitcommit: 3a224f5be40f6f7a68a28cb4c8f741c24527e8bd
+ms.openlocfilehash: b164e70bf4b1e7586d8e70ab8edb7baa1dfcaade
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/05/2017
 
 ---
-# <a name="create-a-database-schema"></a>Crear un esquema de la base de datos
+<a id="create-a-database-schema" class="xliff"></a>
+
+# Crear un esquema de la base de datos
   En este tema se describe cómo crear un esquema en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **En este tema**  
@@ -51,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
 -   El esquema nuevo es propiedad de una de las siguientes entidades de seguridad de nivel de base de datos: usuario de base de datos, rol de base de datos o rol de aplicación. Los objetos creados dentro de un esquema son propiedad del esquema y tienen un **principal_id** NULL en **sys.objects**. La propiedad de los objetos incluidos en el esquema puede transferirse a cualquier entidad de seguridad de nivel de base de datos, pero el propietario del esquema siempre mantiene el permiso CONTROL en los objetos del esquema.  
   
--   Cuando se crea un objeto de base de datos, si especifica una entidad de seguridad de dominio válida (usuario o grupo) como la propietaria del objeto, la entidad de seguridad de dominio se agregará a la base de datos como esquema. Esa entidad de seguridad de dominio será la propietaria del nuevo esquema.  
+-   Al crear un objeto de base de datos, si especifica una entidad de seguridad de dominio válida (usuario o grupo) como la propietaria del objeto, la entidad de seguridad de dominio se agrega a la base de datos como esquema. Esa entidad de seguridad de dominio es la propietaria del nuevo esquema.  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -59,11 +61,13 @@ ms.lasthandoff: 06/22/2017
   
 -   Requiere el permiso CREATE SCHEMA en la base de datos.  
   
--   Para especificar otro usuario como el propietario del esquema que se está creando, el autor de la llamada debe tener el permiso IMPERSONATE sobre ese usuario. Si se especifica un rol de base de datos como propietario, el autor de la llamada debe pertenecer al rol o debe tener el permiso ALTER para el rol.  
+-   Para especificar otro usuario como el propietario del esquema que se está creando, el autor de la llamada debe tener el permiso IMPERSONATE sobre ese usuario. Si se especifica un rol de base de datos como propietario, el autor de la llamada debe cumplir uno de los siguientes criterios: pertenencia al rol o permiso ALTER en el rol.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-##### <a name="to-create-a-schema"></a>Para crear un esquema  
+<a id="to-create-a-schema" class="xliff"></a>
+
+##### Para crear un esquema  
   
 1.  En el Explorador de objetos, expanda la carpeta **Bases de datos** .  
   
@@ -77,7 +81,9 @@ ms.lasthandoff: 06/22/2017
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### <a name="additional-options"></a>Opciones adicionales  
+<a id="additional-options" class="xliff"></a>
+
+### Opciones adicionales  
  El cuadro de diálogo **Esquema - Nuevo** también proporciona opciones de dos páginas adicionales: **Permisos** y **Propiedades extendidas**.  
   
 -   La página **Permisos** muestra todos los elementos protegibles posibles y los permisos en esos elementos protegibles que se pueden conceder al inicio de sesión.  
@@ -86,27 +92,37 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### <a name="to-create-a-schema"></a>Para crear un esquema  
+<a id="to-create-a-schema" class="xliff"></a>
+
+#### Para crear un esquema  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  En la barra de Estándar, haga clic en **Nueva consulta**.  
   
-3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
-  
-    ```  
-    USE AdventureWorks2012;  
-    GO  
-    -- Creates the schema Sprockets owned by Annik that contains table NineProngs.   
-    -- The statement grants SELECT to Mandar and denies SELECT to Prasanna.  
-  
+3.  En el siguiente ejemplo se crea un esquema denominado `Chains` y luego se crea una tabla denominada `Sizes`.  
+    ```sql  
+    CREATE SCHEMA Chains;
+    GO
+    CREATE TABLE Chains.Sizes (ChainID int, width dec(10,2));
+    ```
+
+4.  Se pueden realizar opciones adicionales en una sola instrucción. En el ejemplo siguiente se crea el esquema `Sprockets`, que es propiedad de Annik y contiene la tabla `NineProngs`. La instrucción concede el permiso `SELECT` a Mandar y deniega el permiso `SELECT` a Prasanna.  
+
+    ```sql  
     CREATE SCHEMA Sprockets AUTHORIZATION Annik  
         CREATE TABLE NineProngs (source int, cost int, partnumber int)  
         GRANT SELECT ON SCHEMA::Sprockets TO Mandar  
         DENY SELECT ON SCHEMA::Sprockets TO Prasanna;  
     GO  
     ```  
-  
+5. Ejecute la siguiente instrucción para ver los esquemas de esta base de datos:
+
+   ```sql
+   SELECT * FROM sys.schemas;
+   ```
+
  Para obtener más información, vea [CREATE INDEX &#40;Transact-SQL&#41;](../../../t-sql/statements/create-schema-transact-sql.md).  
   
   
+

@@ -21,10 +21,12 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7fdc75559ffafea97e9ad3f4ef4b5e0788d7fb3d
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="create-and-apply-the-snapshot"></a>Crear y aplicar una instantánea
+<a id="create-and-apply-the-snapshot" class="xliff"></a>
+
+# Crear y aplicar una instantánea
   El Agente de instantáneas genera instantáneas una vez creada la publicación. Se pueden generar de la siguiente manera:  
   
 -   Inmediatamente. De manera predeterminada, se genera una instantánea para una publicación de combinación inmediatamente después de haberse creado la publicación en el Asistente para nueva publicación.  
@@ -47,11 +49,13 @@ ms.lasthandoff: 04/11/2017
   
  Para ver o modificar la ubicación de la carpeta de instantáneas predeterminada, vea  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Especificar la ubicación predeterminada de instantáneas &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md)  
   
 -   Programación de la replicación y programación con RMO: [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)  
   
-## <a name="see-also"></a>Vea también  
+<a id="see-also" class="xliff"></a>
+
+## Vea también  
  [Inicializar una suscripción con una instantánea](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Proteger la carpeta de instantáneas](../../relational-databases/replication/security/secure-the-snapshot-folder.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)  

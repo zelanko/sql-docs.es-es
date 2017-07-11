@@ -40,10 +40,12 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bc4b16adf509a811980323e2bc41e3f44c9906d9
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="configure-web-synchronization"></a>Configurar la sincronización web
+<a id="configure-web-synchronization" class="xliff"></a>
+
+# Configurar la sincronización web
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   La opción de sincronización web para la replicación de mezcla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] habilita la replicación de datos con el protocolo HTTPS a través de Internet. Para utilizar la sincronización web, primero debe realizar las siguientes acciones de configuración:  
@@ -63,7 +65,9 @@ ms.lasthandoff: 04/11/2017
   
  En los procedimientos que siguen, se describe una configuración de seguridad simplificada utilizando cuentas locales por motivos de brevedad. Esta configuración simplificada es adecuada para instalaciones donde IIS y el publicador y distribuidor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecutan en el mismo equipo, aunque es mucho más probablemente (y recomendado) que utilice una topología de varios servidores en una instalación de producción. Puede sustituir las cuentas de dominio por cuentas locales en los procedimientos.  
   
-## <a name="creating-new-accounts-and-mapping-sql-server-logins"></a>Crear cuentas nuevas y asignar inicios de sesión de SQL Server  
+<a id="creating-new-accounts-and-mapping-sql-server-logins" class="xliff"></a>
+
+## Crear cuentas nuevas y asignar inicios de sesión de SQL Server  
  La Escucha de replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (replisapi.dll) se conecta al publicador suplantando la cuenta especificada para el grupo de aplicaciones asociado al sitio web de replicación.  
   
  La cuenta utilizada para la Escucha de replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener los permisos descritos en [Merge Agent Security](../../relational-databases/replication/merge-agent-security.md), en la sección sobre conexión al publicador o distribuidor. En resumen, la cuenta debe:  
@@ -80,7 +84,9 @@ ms.lasthandoff: 04/11/2017
   
  Antes de configurar la sincronización web, se recomienda leer la sección "Prácticas recomendadas de seguridad para la sincronización web", de este tema. Para obtener más información acerca de la seguridad en la sincronización web, vea [Security Architecture for Web Synchronization](../../relational-databases/replication/security/security-architecture-for-web-synchronization.md).  
   
-## <a name="configuring-the-computer-that-is-running-iis"></a>Configurar el equipo en el que se ejecuta IIS  
+<a id="configuring-the-computer-that-is-running-iis" class="xliff"></a>
+
+## Configurar el equipo en el que se ejecuta IIS  
  La sincronización web requiere que instale y configure IIS. Necesitará la dirección URL del sitio web de replicación para poder configurar una publicación para utilizar la sincronización web.  
   
  La sincronización web es compatible con IIS, a partir de la versión 5.0. El Asistente para configurar la sincronización web no se admite en la versión 7.0 de IIS. A partir de SQL Server 2012, para usar el componente de sincronización web en el servidor IIS, recomendamos instalar SQL Server con replicación. Puede ser la edición gratuita de SQL Server Express.  
@@ -90,18 +96,22 @@ ms.lasthandoff: 04/11/2017
   
  **Para configurar IIS para la sincronización web**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configure IIS for Web Synchronization](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configurar IIS para la sincronización web](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configure IIS 7 for Web Synchronization](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configurar IIS 7 para la sincronización web](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
-## <a name="creating-a-web-garden"></a>Crear hospedaje multiproceso en una única máquina  
+<a id="creating-a-web-garden" class="xliff"></a>
+
+## Crear hospedaje multiproceso en una única máquina  
  La Escucha de replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite dos operaciones de sincronización simultáneas por subproceso. Si se supera este límite la Escucha de replicación podría dejar de responder. La propiedad de máximo de subprocesos de trabajo del grupo de aplicaciones determina el número de subprocesos asignado a replisapi.dll. De forma predeterminada, esta propiedad está establecida en 1.  
   
  Puede admitir un número mayor de operaciones de sincronización simultáneas por CPU aumentando el valor de la propiedad de máximo de procesos de trabajo. La ampliación horizontal mediante el aumento del número de procesos de trabajo por CPU se denomina crear "hospedaje multiproceso en una única máquina".  
   
  El hospedaje multiproceso en una única máquina permitirá que más de dos suscriptores se sincronicen a la vez. También aumentará la utilización de la CPU por parte de replisapi.dll, lo que puede afectar al rendimiento del servidor negativamente. Es importante tener en cuenta estos aspectos al elegir un valor para el máximo de procesos de trabajo.  
   
-#### <a name="to-increase-maximum-worker-processes-in-iis-7"></a>Para aumentar el máximo de procesos de trabajo en IIS 7  
+<a id="to-increase-maximum-worker-processes-in-iis-7" class="xliff"></a>
+
+#### Para aumentar el máximo de procesos de trabajo en IIS 7  
   
 1.  En **Administrador de Internet Information Services (IIS)**, expanda el nodo del servidor y, después, haga clic en el nodo **Grupos de aplicaciones** .  
   
@@ -109,7 +119,9 @@ ms.lasthandoff: 04/11/2017
   
 3.  En el cuadro de diálogo Configuración avanzada, bajo en el encabezado **Procesar modelo** , haga clic la fila etiquetada **Máximo de procesos de trabajo**. Cambie el valor de la propiedad y haga clic en **Aceptar**.  
   
-## <a name="configuring-the-publication"></a>Configurar la publicación  
+<a id="configuring-the-publication" class="xliff"></a>
+
+## Configurar la publicación  
  Para utilizar la sincronización web, cree una publicación igual que lo haría para una topología de mezcla estándar. Para obtener más información sobre la creación de publicaciones, vea [Publicar datos y objetos de base de datos](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
  Una vez creada la publicación, habilite la opción para permitir la sincronización web mediante de estos métodos: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO). Para habilitar la sincronización web, tendrá que proporcionar la dirección del servidor web para las conexiones del suscriptor.  
@@ -118,13 +130,19 @@ ms.lasthandoff: 04/11/2017
   
  **gen** es una palabra reservada en los archivos XML de websync. No intente publicar tablas que contengan columnas denominadas **gen**.  
   
-## <a name="configuring-the-subscription"></a>Configurar la suscripción  
+<a id="configuring-the-subscription" class="xliff"></a>
+
+## Configurar la suscripción  
  Después de habilitar una publicación y configurar IIS, cree una suscripción de extracción y especifique que dicha suscripción debe sincronizarse mediante IIS. La sincronización web solo puede usarse para las suscripciones de extracción.  
   
-## <a name="upgrading-from-an-earlier-version-of-sql-server"></a>Actualizar de una versión anterior de SQL Server  
+<a id="upgrading-from-an-earlier-version-of-sql-server" class="xliff"></a>
+
+## Actualizar de una versión anterior de SQL Server  
  Si tiene una topología de sincronización web existente configurada y actualiza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe asegurarse de que la última versión de Replisapi.dll se copia en el directorio virtual utilizado por la sincronización web. De forma predeterminada, la última versión de Replisapi.dll se encuentra en C:\Archivos de programa\Microsoft SQL Server\\<nnn\>\COM.  
   
-## <a name="replicating-large-volumes-of-data"></a>Replicar grandes volúmenes de datos.  
+<a id="replicating-large-volumes-of-data" class="xliff"></a>
+
+## Replicar grandes volúmenes de datos.  
  Para evitar que se produzcan posibles problemas de memoria en los equipos suscriptores, la sincronización web usa un tamaño máximo predeterminado de 100 MB para el archivo XML que se utiliza para transferir los cambios. Es posible aumentar este límite estableciendo la siguiente clave del Registro:  
   
  **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\Replication**  
@@ -143,7 +161,9 @@ ms.lasthandoff: 04/11/2017
   
  Para grandes volúmenes de datos, especifique un número pequeño para cada uno de los parámetros de procesamiento por lotes. Se recomienda comenzar con un valor de 10 y optimizarlo después de acuerdo con las necesidades y el rendimiento de la aplicación. Normalmente, estos parámetros se especifican en un perfil de agente. Para obtener más información acerca de los perfiles, vea [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
-## <a name="security-best-practices-for-web-synchronization"></a>Prácticas recomendadas de seguridad para la sincronización web  
+<a id="security-best-practices-for-web-synchronization" class="xliff"></a>
+
+## Prácticas recomendadas de seguridad para la sincronización web  
  Existen muchas opciones de configuración relacionadas con la seguridad en la sincronización web. Se recomienda el siguiente enfoque:  
   
 -   El distribuidor y el publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden estar en el mismo equipo, configuración típica para la replicación de mezcla. Sin embargo, IIS debe estar en otro equipo.  
@@ -178,7 +198,9 @@ ms.lasthandoff: 04/11/2017
 > [!IMPORTANT]  
 >  El hecho de abrir puertos en el firewall puede dejar el servidor expuesto a ataques malintencionados. Asegúrese de que conoce los sistemas de firewall antes de abrir puertos. Para obtener más información, vea [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
-## <a name="see-also"></a>Vea también  
+<a id="see-also" class="xliff"></a>
+
+## Vea también  
  [Sincronización web para la replicación de mezcla](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

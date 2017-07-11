@@ -32,10 +32,12 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 640c90e4f58c0dc09a732eb26a03808be2097999
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="subscribe-to-publications"></a>Suscribirse a publicaciones
+<a id="subscribe-to-publications" class="xliff"></a>
+
+# Suscribirse a publicaciones
   Una suscripción es una solicitud de copia de datos y objetos de base de datos en una publicación. Una suscripción define qué publicación se recibirá, dónde y cuándo. Al planear suscripciones, tenga en cuenta dónde se realizará el proceso del agente. El tipo de suscripción que elige controla dónde se ejecuta el agente. Con una suscripción de inserción, el Agente de mezcla o el Agente de distribución se ejecutan en el distribuidor, mientras que en una suscripción de extracción los agentes se ejecutan en los suscriptores. Después de crear una suscripción, no se puede cambiar de un tipo a otro.  
   
 |Suscripción|Características|Se utiliza si|  
@@ -43,13 +45,19 @@ ms.lasthandoff: 04/11/2017
 |Suscripción de inserción|Con una suscripción de inserción, el publicador propaga los cambios al suscriptor sin que éste lo solicite. Los cambios pueden insertarse en los suscriptores a petición, de manera continua o según una programación. De forma predeterminada, el Agente de distribución o el Agente de mezcla se ejecutan en el distribuidor.|Normalmente, los datos se sincronizarán de forma continua o con una frecuencia determinada.<br /><br /> Las publicaciones requieren que el movimiento de datos sea casi en tiempo real.<br /><br /> La sobrecarga del procesador en el distribuidor no afecta al rendimiento.<br /><br /> Se utiliza frecuentemente en la replicación de instantáneas y transaccional.|  
 |Suscripción de extracción|En una suscripción de extracción, el suscriptor solicita los cambios efectuados en el publicador. Las suscripciones de extracción permiten al usuario del suscriptor determinar cuándo se sincronizan los cambios en los datos. El Agente de distribución o el Agente de mezcla se ejecutan en el suscriptor.|Los datos se sincronizarán, generalmente, a petición o en función de una programación, en lugar de hacerlo de forma continuada.<br /><br /> La publicación dispone de un gran número de suscriptores y/o la ejecución de todos los agentes en el distribuidor supone un uso demasiado intensivo de recursos.<br /><br /> Los suscriptores son autónomos, están desconectados o se desplazan. Los suscriptores determinan cuándo se conectarán y sincronizarán los cambios.<br /><br /> Se utiliza frecuentemente en la replicación de mezcla.|  
   
-## <a name="merge-replication-subscription-types"></a>Tipos de suscripción de replicación de mezcla  
+<a id="merge-replication-subscription-types" class="xliff"></a>
+
+## Tipos de suscripción de replicación de mezcla  
  Todos los tipos de replicación permiten suscripciones de inserción y extracción. La replicación de mezcla utiliza dos términos adicionales para distinguir las suscripciones: suscripciones de cliente y suscripciones de servidor. Ambos tipos de suscripción se pueden utilizar con suscripciones de inserción o extracción. Las suscripciones de cliente son adecuadas para la mayoría de suscriptores, mientras que las suscripciones de servidor se utilizan normalmente en suscriptores que vuelven a publicar datos en otros suscriptores. La elección de la suscripción también afecta a la resolución de conflictos.  
   
-## <a name="non-sql-server-subscribers"></a>Suscriptores que no son de SQL Server  
+<a id="non-sql-server-subscribers" class="xliff"></a>
+
+## Suscriptores que no son de SQL Server  
  Oracle e IBM DB2 pueden suscribirse a publicaciones de instantáneas y transaccionales con suscripciones de inserción. Para más información, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
-## <a name="creating-subscriptions"></a>Crear suscripciones  
+<a id="creating-subscriptions" class="xliff"></a>
+
+## Crear suscripciones  
  Para crear una suscripción, proporcione la siguiente información:  
   
 -   Nombre de la publicación.  
@@ -76,14 +84,14 @@ ms.lasthandoff: 04/11/2017
   
  **Para eliminar una suscripción de inserción**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Eliminar una suscripción de inserción](../../relational-databases/replication/delete-a-push-subscription.md)  
   
 > [!NOTE]  
 >  Al eliminar una suscripción no se quitan los objetos publicados del suscriptor.  
   
  **Para crear una suscripción de extracción**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Crear una suscripción de extracción](../../relational-databases/replication/create-a-pull-subscription.md)  
   
  **Para ver o modificar las propiedades de una suscripción de extracción**  
   
@@ -93,7 +101,9 @@ ms.lasthandoff: 04/11/2017
   
  [Eliminar una suscripción de extracción](../../relational-databases/replication/delete-a-pull-subscription.md)  
   
-## <a name="see-also"></a>Vea también  
+<a id="see-also" class="xliff"></a>
+
+## Vea también  
  [Proteger el suscriptor](../../relational-databases/replication/security/secure-the-subscriber.md)   
  [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   

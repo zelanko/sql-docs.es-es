@@ -32,10 +32,12 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d68baa882e382b2b68e5eded3ea7807e4b13aa6d
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="populate-full-text-indexes"></a>Rellenar índices de texto completo
+<a id="populate-full-text-indexes" class="xliff"></a>
+
+# Rellenar índices de texto completo
   La creación y el mantenimiento de un índice de texto completo implica el rellenado del índice mediante un proceso denominado *rellenado* (también se denomina *rastreo*).  
   
 ##  <a name="types"></a> Types of population  
@@ -44,7 +46,9 @@ Un índice de texto completo admite los siguientes tipos de rellenado:
 -   Rellenado automático o manual basado en el **seguimiento de cambios**
 -   Rellenado incremental basado en una **marca de tiempo**
   
-## <a name="full-population"></a>Rellenado completo  
+<a id="full-population" class="xliff"></a>
+
+## Rellenado completo  
  Durante un rellenado completo, se crean entradas de índice para todas las filas de una tabla o vista indizada. Un rellenado completo de un índice de texto completo genera entradas de índice para todas las filas de la tabla base o vista indizada.  
   
 De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rellena totalmente un nuevo índice de texto completo en cuanto se crea.
@@ -53,7 +57,9 @@ De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 
 Para crear un índice de texto completo sin rellenarlo inmediatamente, especifique la cláusula `CHANGE_TRACKING OFF, NO POPULATION` en la instrucción `CREATE FULLTEXT INDEX`. Si especifica `CHANGE_TRACKING MANUAL`, el motor de texto completo no rellena el nuevo índice de texto completo hasta que se ejecute una instrucción `ALTER FULLTEXT INDEX` mediante la cláusula `START FULL POPULATION` o `START INCREMENTAL POPULATION`. 
 
-### <a name="example---create-a-full-text-index-without-running-a-full-population"></a>Ejemplo: Creación de un índice de texto completo sin ejecutar un rellenado completo  
+<a id="example---create-a-full-text-index-without-running-a-full-population" class="xliff"></a>
+
+### Ejemplo: Creación de un índice de texto completo sin ejecutar un rellenado completo  
  En el ejemplo siguiente se crea un índice de texto completo en la tabla `Production.Document` de la base de datos de ejemplo `AdventureWorks` . Este ejemplo utiliza `WITH CHANGE_TRACKING OFF, NO POPULATION` para retrasar el rellenado completo inicial.  
   
 ```tsql
@@ -72,7 +78,9 @@ GO
   
 ```  
   
-### <a name="example---run-a-full-population-on-a-table"></a>Ejemplo: Ejecución de un rellenado completo en una tabla  
+<a id="example---run-a-full-population-on-a-table" class="xliff"></a>
+
+### Ejemplo: Ejecución de un rellenado completo en una tabla  
  En el ejemplo siguiente se ejecuta un rellenado completo en la tabla `Production.Document` de la base de datos de ejemplo `AdventureWorks` .  
   
 ```tsql
@@ -80,7 +88,9 @@ ALTER FULLTEXT INDEX ON Production.Document
    START FULL POPULATION;  
 ```  
    
-## <a name="population-based-on-change-tracking"></a>Rellenado basado en el seguimiento de cambios
+<a id="population-based-on-change-tracking" class="xliff"></a>
+
+## Rellenado basado en el seguimiento de cambios
  Si se desea, se puede usar el seguimiento de cambios para mantener un índice de texto completo después de su rellenado completo inicial. El seguimiento de cambios provoca una pequeña sobrecarga de trabajo porque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene una tabla en la que realiza el seguimiento de los cambios de la tabla base desde el último rellenado. Cuando se utiliza el seguimiento de cambios, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene un registro de las filas de la tabla base o la vista indexada que se han modificado con las actualizaciones, eliminaciones o inserciones. Los cambios realizados en los datos con WRITETEXT y UPDATETEXT no se reflejan en el índice de texto completo y no se recopilan con el seguimiento de cambios.  
   
 > [!NOTE]  
@@ -88,7 +98,9 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  Cuando el seguimiento de cambios está habilitado durante la creación de índices, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rellena totalmente el nuevo índice de texto completo justo después de crearse. Después de esto, los cambios se siguen y propagan al índice de texto completo.
 
-### <a name="enable-change-tracking"></a>Enable change tracking
+<a id="enable-change-tracking" class="xliff"></a>
+
+### Enable change tracking
 Hay dos tipos de seguimiento de cambios:
 -   Automático (opción `CHANGE_TRACKING AUTO`). El seguimiento de cambios automático es el comportamiento predeterminado.
 -   Manual (opción `CHANGE_TRACKING MANUAL`).   
@@ -149,14 +161,18 @@ Hay dos tipos de seguimiento de cambios:
     GO  
     ```
    
-### <a name="disable-change-tracking"></a>Deshabilitación del seguimiento de cambios 
+<a id="disable-change-tracking" class="xliff"></a>
+
+### Deshabilitación del seguimiento de cambios 
   
 -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING OFF  
   
 -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING OFF  
    
   
-## <a name="incremental-population-based-on-a-timestamp"></a>Rellenado incremental basado en una marca de tiempo  
+<a id="incremental-population-based-on-a-timestamp" class="xliff"></a>
+
+## Rellenado incremental basado en una marca de tiempo  
  Un rellenado incremental es un mecanismo alternativo para rellenar un índice de texto completo manualmente. Si una tabla experimenta un volumen alto de inserciones, el rellenado incremental puede ser más eficaz que el rellenado manual.
  
  Puede ejecutar un llenado incremental de un índice de texto completo que tenga CHANGE_TRACKING configurado en MANUAL o en OFF. 
@@ -170,7 +186,9 @@ En algunos casos, la solicitud de un rellenado incremental produce un llenado co
 -   Si el primer llenado de un índice de texto completo es un llenado incremental, indiza todas las filas, lo que lo hace equivalente a un llenado completo. 
 -   Si alguno de los metadatos que afectan al índice de texto completo de la tabla ha cambiado desde el último rellenado, las solicitudes de rellenado incremental se implementan como rellenados completos. Esto incluye los cambios en los metadatos ocasionados al alterar la definición de una columna, índice o índice de texto completo. 
 
-### <a name="run-an-incremental-population"></a>Ejecución de un rellenado incremental
+<a id="run-an-incremental-population" class="xliff"></a>
+
+### Ejecución de un rellenado incremental
   
  Para ejecutar un rellenado incremental, ejecute una instrucción `ALTER FULLTEXT INDEX` mediante la cláusula `START INCREMENTAL POPULATION`.  
   
@@ -221,11 +239,13 @@ El archivo de registro de rastreo sigue el siguiente esquema de nomenclatura:
 Las partes variables del nombre de archivo de registro de rastreo son las siguientes.
 -   <**DatabaseID**> - El identificador de una base de datos. <**dbid**> es un número de cinco dígitos con ceros a la izquierda.  
 -   <**FullTextCatalogID**> - Identificador de catálogo de texto completo. <**catid**> es un número de cinco dígitos con ceros a la izquierda.  
--   <**n**> - Es un entero que indica la existencia de uno o varios registros de rastreo del mismo catálogo de texto completo.  
+-   <**n**> es un entero que indica la existencia de uno o varios registros de rastreo del mismo catálogo de texto completo.  
   
  Por ejemplo, `SQLFT0000500008.2` es el archivo de registro de rastreo para un identificador de base de datos = 5 y un identificador de catálogo de texto completo = 8. El 2 al final del nombre de archivo indica que existen dos archivos de registro de rastreo para esta pareja de base de datos y catálogo.  
 
-## <a name="see-also"></a>Vea también  
+<a id="see-also" class="xliff"></a>
+
+## Vea también  
  [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)   
  [Introducción a la búsqueda de texto completo](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Crear y administrar índices de texto completo](../../relational-databases/search/create-and-manage-full-text-indexes.md)   

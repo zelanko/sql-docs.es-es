@@ -29,11 +29,13 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 915d79db6a2c8f55443c92cb568bac8a9cc2c7d4
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="use-alerts-for-replication-agent-events"></a>Usar alertas para eventos del Agente de replicación
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent provide a way to monitor events, such as replication agent events, using alerts. El Agente[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supervisa el registro de aplicación de Windows en busca de eventos que se asocian con alertas. Si se produce uno de esos eventos, el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] responde automáticamente, mediante la ejecución de una tarea que haya sido definida y/o el envío de un mensaje de correo electrónico o de buscapersonas a un operador especificado. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye un conjunto de alertas predefinidas para los agentes de replicación que puede configurar para ejecutar una tarea y/o notificar a un operador. Para obtener más información sobre cómo definir la ejecución de una tarea, vea la sección "Automatizar la respuesta a una alerta" en este tema.  
+<a id="use-alerts-for-replication-agent-events" class="xliff"></a>
+
+# Usar alertas para eventos del Agente de replicación
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y el Agente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporcionan un modo de supervisar eventos, tales como eventos de Agente de replicación, mediante alertas. El Agente[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supervisa el registro de aplicación de Windows en busca de eventos que se asocian con alertas. Si se produce uno de esos eventos, el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] responde automáticamente, mediante la ejecución de una tarea que haya sido definida y/o el envío de un mensaje de correo electrónico o de buscapersonas a un operador especificado. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye un conjunto de alertas predefinidas para los agentes de replicación que puede configurar para ejecutar una tarea y/o notificar a un operador. Para obtener más información sobre cómo definir la ejecución de una tarea, vea la sección "Automatizar la respuesta a una alerta" en este tema.  
   
  Las siguientes alertas se instalan cuando un equipo se configura como distribuidor:  
   
@@ -53,15 +55,21 @@ ms.lasthandoff: 04/11/2017
   
  **Para configurar las alertas de replicación predefinidas**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configure Predefined Replication Alerts &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configurar alertas de replicación predefinidas &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
-## <a name="viewing-the-application-log-directly"></a>Ver directamente el registro de aplicación  
+<a id="viewing-the-application-log-directly" class="xliff"></a>
+
+## Ver directamente el registro de aplicación  
  Para ver el registro de aplicación Windows, utilice el Visor de eventos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. El registro de aplicación contiene mensajes de error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] así como mensajes de muchas otras actividades del equipo. A diferencia del registro de errores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , no se crea un nuevo registro de aplicación cada vez que se inicia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (cada sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] escribe nuevos eventos en un registro de aplicación existente); no obstante, puede especificar durante cuánto tiempo desea mantener los eventos registrados. Al ver un registro de aplicación Windows, puede filtrar el registro en busca de eventos específicos. Para obtener más información, consulte la documentación de Windows.  
   
-## <a name="automating-a-response-to-an-alert"></a>Automatizar la respuesta a una alerta  
+<a id="automating-a-response-to-an-alert" class="xliff"></a>
+
+## Automatizar la respuesta a una alerta  
  La replicación proporciona un trabajo de respuesta para las suscripciones que no pueden validar los datos y también proporciona un marco de trabajo para la creación de respuestas automatizadas adicionales a las alertas. El trabajo de respuesta se llama **Reinicializar suscripciones con errores de validación de datos** y se almacena en la carpeta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Trabajos **del Agente** en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Para obtener información sobre cómo habilitar este trabajo de respuesta, consulte [Configure Predefined Replication Alerts &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md) (Configurar alertas predefinidas de replicación [SQL Server Management Studio]). Si se produce un error en la validación de los artículos de una publicación transacional, el trabajo de respuesta reinicializa únicamente aquellos artículos que no se hayan validado. Si se produce un error en la validación de los artículos de una publicación de combinación, el trabajo de respuesta reinicializa todos los artículos de la publicación.  
   
-### <a name="framework-for-automating-responses"></a>Marco de trabajo para la automatización de respuestas  
+<a id="framework-for-automating-responses" class="xliff"></a>
+
+### Marco de trabajo para la automatización de respuestas  
  Normalmente, cuando se produce una alerta, la única información de que dispone para comprender qué la ha provocado y la acción más apropiada que puede llevar a cabo está contenida en el propio mensaje de la alerta. El análisis de esta información puede estar sujeta a errores y lleva mucho tiempo. La replicación facilita la automatización de respuestas al proporcionar información adicional sobre la alerta en la tabla del sistema **sysreplicationalerts** ; la información que se proporciona ya está analizada de una forma que los programas personalizados pueden utilizar fácilmente.  
   
  Por ejemplo, si se produce un error al validar los datos de la tabla **Sales.SalesOrderHeader** en el suscriptor A, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede desencadenar el mensaje 20574, que le notifica dicho error. El mensaje que reciba será: "La suscripción del suscriptor 'A' al artículo 'SalesOrderHeader' de la publicación 'MyPublication', no pasó la validación de datos."  
@@ -90,7 +98,9 @@ close hc
 deallocate hc  
 ```  
   
-## <a name="see-also"></a>Vea también  
+<a id="see-also" class="xliff"></a>
+
+## Vea también  
  [Administración del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [Monitoring &#40;Replication&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md) (Monitorización [replicación])  

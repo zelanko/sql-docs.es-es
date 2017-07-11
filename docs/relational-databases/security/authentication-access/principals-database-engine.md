@@ -36,15 +36,19 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9ac118739640b288307e09c8fd36ba842d0c7ef1
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="principals-database-engine"></a>Entidades de seguridad (motor de base de datos)
+<a id="principals-database-engine" class="xliff"></a>
+
+# Entidades de seguridad (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Las*entidades de seguridad* son entidades que pueden solicitar recursos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Igual que otros componentes del modelo de autorización de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , las entidades de seguridad se pueden organizar en jerarquías. El ámbito de influencia de una entidad de seguridad depende del ámbito de su definición: Windows, servidor o base de datos; y de si la entidad de seguridad es indivisible o es una colección. Un Inicio de sesión de Windows es un ejemplo de entidad de seguridad indivisible y un Grupo de Windows es un ejemplo de una del tipo colección. Toda entidad de seguridad tiene un identificador de seguridad (SID). Este tema se aplica a todas las versiones de SQL Server, pero hay algunas restricciones en las entidades de seguridad de nivel de servidor de SQL Database o SQL Data Warehouse. 
   
-## <a name="sql-server-level-principals"></a>Entidades de seguridad de nivel de SQL Server  
+<a id="sql-server-level-principals" class="xliff"></a>
+
+## Entidades de seguridad de nivel de SQL Server  
   
 -  Inicio de sesión con autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]   
 -  Inicio de sesión con autenticación de Windows para un usuario de Windows  
@@ -53,27 +57,39 @@ ms.lasthandoff: 04/11/2017
 -  Inicio de sesión con autenticación de Azure Active Directory para un grupo de AD
 -  Rol del servidor  
   
- ## <a name="database-level-principals"></a>Entidades de seguridad de nivel de bases de datos  
+<a id="database-level-principals" class="xliff"></a>
+
+ ## Entidades de seguridad de nivel de bases de datos  
   
 -   Usuario de base de datos (hay 11 tipos de usuarios. Para obtener más información, vea [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md)). 
 -   Rol de base de datos  
 -   Rol de aplicación  
   
-## <a name="sa-login"></a>Inicio de sesión sa  
+<a id="sa-login" class="xliff"></a>
+
+## Inicio de sesión sa  
  El inicio de sesión `sa` de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es una entidad de seguridad a nivel de servidor. Se crea de forma predeterminada cuando se instala una instancia. A partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la base de datos predeterminada de sa es master. Es un cambio de comportamiento con respecto a versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El inicio de sesión `sa` es miembro del rol fijo de base de datos `sysadmin`. Este inicio de sesión `sa` tiene todos los permisos en el servidor y no puede limitarse. Además, `sa` no se puede quitar, pero puede deshabilitarse para que nadie lo emplee.
 
-## <a name="dbo-user-and-dbo-schema"></a>Usuario y esquema dbo
+<a id="dbo-user-and-dbo-schema" class="xliff"></a>
+
+## Usuario y esquema dbo
 
 `dbo` use es una entidad de seguridad de usuario especial que hay en cada base de datos. Todos los administradores de SQL Server, los miembros del rol fijo de servidor `sysadmin`, el inicio de sesión `sa` y los propietarios de la base de datos especifican las bases de datos como el usuario `dbo`. El usuario `dbo` tiene todos los permisos en la base de datos y no se limitar ni quitar. `dbo` representa el propietario de la base de datos, pero la cuenta de usuario `dbo` no es lo mismo que el rol fijo de base de datos `db_owner`, mientras que el rol fijo de base de datos `db_owner` no es lo mismo que la cuenta de usuario que se registra como el propietario de la base de datos.     
 El usuario `dbo` tiene la propiedad del esquema `dbo`. El esquema `dbo` es el predeterminado para todos los usuarios, salvo que se especifique otro.  El esquema `dbo` no puede quitarse.
   
-## <a name="public-server-role-and-database-role"></a>Rol público de base de datos y de servidor  
+<a id="public-server-role-and-database-role" class="xliff"></a>
+
+## Rol público de base de datos y de servidor  
 Cada inicio de sesión pertenece al rol fijo de servidor `public` y cada usuario de base de datos pertenece al rol de base de datos `public`. Cuando a un usuario o inicio de sesión no se le han concedido ni denegado permisos concretos para un elemento protegible, hereda los permisos para ese elemento concedidos a public. El rol fijo de servidor `public` y el de base de datos `public` no pueden quitarse. Sin embargo, puede revocar los permisos de los roles `public`. Hay muchos de los permisos que se asignan a los roles `public` de forma predeterminada. La mayoría de estos permisos son necesarios para realizar operaciones rutinarias en la base de datos; el tipo de tareas que todo el mundo debe poder hacer. Tenga cuidado al revocar permisos desde el usuario o el inicio de sesión público, ya que afectará a todos los inicios de sesión y usuarios. Normalmente, no debe denegar permisos a public, ya que la instrucción deny invalida cualquier instrucción grant que podrían crear para los usuarios. 
   
-## <a name="informationschema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA, y usuarios y esquemas sys 
+<a id="informationschema-and-sys-users-and-schemas" class="xliff"></a>
+
+## INFORMATION_SCHEMA, y usuarios y esquemas sys 
  Todas las bases de datos incluyen dos entidades que aparecen como usuarios en las vistas de catálogo:`INFORMATION_SCHEMA` y `sys`. Estas entidades son necesarias para uso interno por parte del motor de base de datos. No se pueden modificar ni quitar.  
   
-## <a name="certificate-based-sql-server-logins"></a>Inicios de sesión de SQL Server basados en certificados  
+<a id="certificate-based-sql-server-logins" class="xliff"></a>
+
+## Inicios de sesión de SQL Server basados en certificados  
  Las entidades de seguridad de servidor con nombres incluidos entre signos de número dobles (##) son exclusivamente para uso interno del sistema. Las siguientes entidades de seguridad se crean a partir de certificados cuando se instala [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y no deben eliminarse.  
   
 -   \##MS_SQLResourceSigningCertificate##    
@@ -84,11 +100,15 @@ Cada inicio de sesión pertenece al rol fijo de servidor `public` y cada usuario
 -   \##MS_PolicySigningCertificate##   
 -   \##MS_PolicyTsqlExecutionLogin##   
   
-## <a name="the-guest-user"></a>Usuario guest  
+<a id="the-guest-user" class="xliff"></a>
+
+## Usuario guest  
  Cada base de datos incluye un usuario `guest`. Los permisos concedidos al usuario `guest` se aplican a todos los usuarios que tienen acceso a la base de datos, pero no disponen de una cuenta en la base de datos. No se puede quitar el usuario `guest`, pero se puede deshabilitar si se revoca su permiso CONNECT. El permiso CONNECT se puede revocar si se ejecuta `REVOKE CONNECT FROM GUEST;` en cualquier base de datos que no sea `master` ni `tempdb`.  
   
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+<a id="related-tasks" class="xliff"></a>
+
+## Tareas relacionadas  
  Para más información acerca de cómo diseñar un sistema de permisos, consulte [Getting Started with Database Engine Permissions](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
  Los temas siguientes se incluyen en esta sección de Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -101,7 +121,9 @@ Cada inicio de sesión pertenece al rol fijo de servidor `public` y cada usuario
   
 -   [Roles de aplicación](../../../relational-databases/security/authentication-access/application-roles.md)  
   
-## <a name="see-also"></a>Vea también  
+<a id="see-also" class="xliff"></a>
+
+## Vea también  
  [Proteger SQL Server](../../../relational-databases/security/securing-sql-server.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   

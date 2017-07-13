@@ -2,7 +2,7 @@
 title: Reporting Services (SSRS) | Documentos de Microsoft
 description: "Obtenga información sobre herramientas y servicios para móviles y paginados informes de Reporting Services e informes de Power BI de forma local."
 ms.custom: 
-ms.date: 05/12/2017
+ms.date: 07/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -23,22 +23,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 053323f96e489f264e50b2db4e120f19ccbd4dcd
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 49f990d30564a2c4fc38a527e7da1e97f9a21ca1
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 
-# <a name="what-is-sql-server-reporting-services-ssrs"></a>¿Qué es SQL Server Reporting Services (SSRS)?
+# ¿Qué es SQL Server Reporting Services (SSRS)?
+<a id="what-is-sql-server-reporting-services-ssrs" class="xliff"></a>
 
-> Para el contenido relacionado con las versiones anteriores de SQL Server, vea [Reporting Services (SSRS)](https://msdn.microsoft.com/en-US/library/ms159106(SQL.120).aspx).
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
 Crear, implementar y administrar informes paginados o móviles de Reporting Services e informes de Power BI de forma local y el intervalo de listos para usar herramientas y servicios que SQL Server Reporting Services (SSRS) y Power BI proporcionan.
 
 ![SQL Server Reporting Services todos juntos](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services todos juntos")
 
-## <a name="create-deploy-and-manage-mobile-and-paginated-reports"></a>Crear, implementar y administrar informes paginados o móviles
+## Crear, implementar y administrar informes paginados o móviles
+<a id="create-deploy-and-manage-mobile-and-paginated-reports" class="xliff"></a>
 
 SQL Server Reporting Services es una solución que los clientes pueden implementar de forma local para crear, publicar y administrar informes y, luego, entregarlos a los usuarios adecuados de distintas formas: visualizándolos en el explorador web, en el dispositivo móvil o como correo electrónico en su Bandeja de entrada.
 
@@ -53,7 +57,8 @@ Siga leyendo para obtener más información sobre estos productos.
 > [!NOTE]
 > ¿Busca el servidor de informes de BI de energía? Vea [empezar a trabajar con el servidor de informes de Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
 
-### <a name="whats-new-in-reporting-services"></a>Novedades de Reporting Services
+### Novedades de Reporting Services
+<a id="whats-new-in-reporting-services" class="xliff"></a>
 
 Estos orígenes le mantendrán al día sobre las nuevas funciones en SQL Server 2016 Reporting Services.
 
@@ -61,7 +66,8 @@ Estos orígenes le mantendrán al día sobre las nuevas funciones en SQL Server 
 * [Blog del equipo de SQL Server Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/)
 * Canal de YouTube The [Guy in a Cube](https://www.youtube.com/channel/UCFp1vaKzpfvoGai0vE5VJ0w)
 
-## <a name="paginated-reports"></a>Informes paginados
+## Informes paginados
+<a id="paginated-reports" class="xliff"></a>
 
 ![ssrs-paginated-reports](../reporting-services/media/ssrs-paginated-reports.png)
 
@@ -74,7 +80,8 @@ Esta carga de trabajo esencial de BI sigue existiendo en la actualidad, por lo q
 * Puede exportar a nuevos formatos, como PowerPoint. Las visualizaciones de Reporting Services en PowerPoint son activas y se pueden editar; es decir, no son capturas de pantalla.
 * Puede crear una experiencia híbrida de Power BI o de Reporting Services: en lugar de volver a crear los informes locales de Reporting Services en Power BI, puede anclar elementos visuales de estos informes en los paneles de Power BI. Luego puede supervisarlo todo desde un lugar en el panel de Power BI.
 
-## <a name="mobile-reports"></a>Informes móviles
+## Informes móviles
+<a id="mobile-reports" class="xliff"></a>
 
 ![ssrs-mobile-reports](../reporting-services/media/ssrs-mobile-reports.png)
 
@@ -84,7 +91,8 @@ Lo que necesita con estos factores de forma de pantalla claramente diferentes no
 
 Puede crear estos informes móviles en la nueva aplicación [Publicador de informes móviles](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) . En las [aplicaciones nativas de Power BI para dispositivos móviles](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) para Windows 10, iOS, Android y HTML5, puede obtener acceso a los datos que tiene en la nube de Power BI, además de los datos locales de SQL Server 2016 Reporting Services. A medida que crea visualizaciones, el Publicador de informes móviles genera automáticamente datos de ejemplo para cada una de ellas; así, puede ver el aspecto que tendrá la visualización con los datos y comprobar qué tipo de datos va bien en cada visualización.
 
-## <a name="web-portal"></a>Portal web
+## Portal web
+<a id="web-portal" class="xliff"></a>
 
 ![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
 
@@ -100,19 +108,22 @@ También puede seguir programando el procesamiento de informes, obtener acceso a
 
 Obtenga más información sobre la [portal Web (modo nativo de SSRS)](../reporting-services/web-portal-ssrs-native-mode.md).
 
-## <a name="reporting-services-in-sharepoint-integrated-mode"></a>Reporting Services en el modo integrado de SharePoint
+## Reporting Services en el modo integrado de SharePoint
+<a id="reporting-services-in-sharepoint-integrated-mode" class="xliff"></a>
 
 Puede publicar informes en Reporting Services en el modo integrado de SharePoint. Puede programar el procesamiento de informes, el acceso a informes a petición, la suscripción a informes publicados y la exportación de informes a otras aplicaciones, como Microsoft Excel. Puede crear también alertas de datos en los informes publicados en un sitio de SharePoint y recibir mensajes de correo electrónico cuando cambien los datos del informe.  
 
 Más información sobre el [Servidor de informes de Reporting Services en el modo integrado de SharePoint](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md).
 
-## <a name="includessrsnoversionincludesssrsnoversion-mdmd-programming-features"></a>Características de programación de[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 
+## Características de programación de[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 
+<a id="includessrsnoversionincludesssrsnoversion-mdmd-programming-features" class="xliff"></a>
 
 Benefíciese de las características de programación de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , para que pueda extender y personalizar la funcionalidad de creación de informes, con API para integrar o extender el procesamiento de datos e informes en aplicaciones personalizadas.
 
 Más [documentación para desarrolladores de Reporting Services](../reporting-services/reporting-services-developer-documentation.md). 
 
-## <a name="next-steps"></a>Pasos siguientes
+## Pasos siguientes
+<a id="next-steps" class="xliff"></a>
 
 * [Instalar Reporting Services](../reporting-services/install-windows/install-reporting-services.md)  
 * [Instalar el Generador de informes](../reporting-services/install-windows/install-report-builder.md)   

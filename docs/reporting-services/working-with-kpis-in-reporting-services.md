@@ -1,6 +1,6 @@
 ---
 title: Trabajar con los KPI en Reporting Services | Documentos de Microsoft
-ms.date: 05/15/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,15 +14,17 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b451b1773d97d490c0021cdf8cfcfb14c07117b4
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="working-with-kpis-in-reporting-services"></a>Uso de los KPI en Reporting Services
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+# Uso de los KPI en Reporting Services
+<a id="working-with-kpis-in-reporting-services" class="xliff"></a>
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Un indicador clave de rendimiento (KPI) es una indicación visual que transmite la cantidad de progreso realizado hacia la consecución de un objetivo.  Los indicadores clave de rendimiento sirven para que los equipos, los administradores y las empresas evalúen rápidamente el progreso realizado frente a objetivos cuantificables.   
   
@@ -34,16 +36,19 @@ Si utiliza KPI en SQL Server 2016, podrá visualizar rápidamente las respuestas
   
 -   ¿Cuál es el progreso mínimo completado?  
   
-## <a name="creating-a-dataset"></a>Creación de un conjunto de datos  
+## Creación de un conjunto de datos
+<a id="creating-a-dataset" class="xliff"></a>  
 Un KPI solo utilizará la primera fila de datos de un conjunto de datos compartido. Asegúrese de que los datos que desea utilizar se encuentran en la primera fila. Para crear un conjunto de datos compartido, puede utilizar el Generador de informes o SQL Server Data Tools.  
   
 > **Nota**: El conjunto de datos no tiene que estar en la misma carpeta que el KPI.  
   
-## <a name="placement-of-kpis"></a>Ubicación de los KPI  
+## Ubicación de los KPI
+<a id="placement-of-kpis" class="xliff"></a>  
   
 Los KPI pueden crearse en cualquier carpeta de su servidor de informes.  Antes de crear un KPI, deberá tener clara la ubicación correcta donde colocarlo. Se recomienda colocarlo en una carpeta que sea visible para los usuarios y a la vez pertinente para otros informes y KPI relacionados.  
   
-## <a name="adding-a-kpi"></a>Adición de un KPI  
+## Adición de un KPI
+<a id="adding-a-kpi" class="xliff"></a>  
   
 Después de determinar la ubicación de los KPI, vaya a la carpeta y seleccione **Nuevo** > **KPI** en el menú superior.  
   
@@ -91,7 +96,8 @@ Para utilizar datos de un conjunto de datos compartido, puede realizar lo siguie
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)  
   
-## <a name="removing-a-kpi"></a>Eliminación de un KPI  
+## Eliminación de un KPI
+<a id="removing-a-kpi" class="xliff"></a>  
   
 Para quitar un KPI, puede hacer lo siguiente.  
   
@@ -103,11 +109,13 @@ Para quitar un KPI, puede hacer lo siguiente.
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   
-## <a name="refreshing-a-kpi"></a>Actualización de un KPI  
+## Actualización de un KPI
+<a id="refreshing-a-kpi" class="xliff"></a>  
   
 Para actualizar el KPI, debe configurar un almacenamiento en caché para el conjunto de datos compartido. Para obtener más información sobre la memoria caché de planes de actualización, vea [trabajar con conjuntos de datos compartidos](../reporting-services/work-with-shared-datasets-web-portal.md).  
   
-## <a name="next-steps"></a>Pasos siguientes
+## Pasos siguientes
+<a id="next-steps" class="xliff"></a>
   
 [Portal Web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Trabajar con conjuntos de datos compartidos](../reporting-services/work-with-shared-datasets-web-portal.md)

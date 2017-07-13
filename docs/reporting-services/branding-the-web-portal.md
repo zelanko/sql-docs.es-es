@@ -1,7 +1,7 @@
 ---
 title: "Personalización de marca del portal web | Documentos de Microsoft"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,22 +15,24 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 19742f59b104d18633a954dc2f8bc9824b58ef21
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: fcca4ace177a9d606a49db485fe6c61c4ef24355
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 
-# <a name="branding-the-web-portal"></a>Personalización de marca del portal web
+# Personalización de marca del portal web
+<a id="branding-the-web-portal" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Puede modificar la apariencia del portal web personalizándolo con la marca de su empresa. Esto se realiza mediante un paquete de marca. El paquete de marca se ha diseñado de forma que no deba estar muy familiarizado con las hojas de estilo CSS para crearlo.  
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    
-## <a name="creating-the-brand-package"></a>Creación del paquete de marca  
+## Creación del paquete de marca
+<a id="creating-the-brand-package" class="xliff"></a>  
   
 Un paquete de marca para Reporting Services se compone de tres elementos y se empaqueta como archivo ZIP.   
   
@@ -40,7 +42,8 @@ Un paquete de marca para Reporting Services se compone de tres elementos y se em
   
 Los archivos deben tener los nombres especificados arriba. Sin embargo, el archivo ZIP puede tener el nombre que quiera.  
   
-### <a name="metadataxml"></a>metadata.xml  
+### metadata.xml
+<a id="metadataxml" class="xliff"></a>  
   
 El archivo metadata.xml permite establecer el nombre del paquete de marca y presenta una entrada de referencia para los archivos colors.json y logo.png.  
   
@@ -63,7 +66,8 @@ Ejemplo con un archivo de logotipo.
       <Item key="logo" path="logo.png" />  
     </Contents>  
   
-### <a name="colorsjson"></a>colors.json  
+### colors.json
+<a id="colorsjson" class="xliff"></a>  
   
 Cuando se carga el paquete de marca, el servidor extrae los pares nombre-valor del archivo colors.json y los combina con la hoja de estilos LESS maestra, brand.less. Después, este archivo LESS se procesa y el archivo CSS resultante se envía al cliente. Todos los colores de la hoja de estilos siguen la representación hexadecimal de seis caracteres de un color.  
   
@@ -114,13 +118,15 @@ La primera vez que se conecte con el Publicador de informes móviles a un servid
   
 Después, puede utilizar este tema para los informes móviles que cree, aunque no estén destinados al mismo servidor donde tenga implementado dicho tema.   
   
-### <a name="using-a-logo"></a>Uso de un logotipo  
+### Uso de un logotipo
+<a id="using-a-logo" class="xliff"></a>  
   
 Si incluye un logotipo en el paquete de marca, se mostrará en el portal web en lugar del nombre establecido para aquel en el menú Configuración del sitio.  
   
 El archivo que incluya para el logotipo debe presentar el formato PNG. Las dimensiones del archivo se adaptarán una vez que se cargue al servidor. Se adaptarán para que presenten unos valores de unos 290 x 60 píxeles.  
    
-## <a name="applying-the-brand-package-to-the-web-portal"></a>Aplicación del paquete de la marca al portal web  
+## Aplicación del paquete de la marca al portal web
+<a id="applying-the-brand-package-to-the-web-portal" class="xliff"></a>  
   
 Para agregar, descargar o quitar un paquete de marca, puede hacer lo siguiente:  
   
@@ -140,7 +146,8 @@ La opción**Upload brand package** (Cargar paquete de marca) aplicará el paquet
   
 También puede **descargarse** o **quitar** el paquete. Si quita el paquete, se restablecerá inmediatamente el portal web a la marca predeterminada.  
   
-## <a name="metadataxml-example"></a>Ejemplo de metadata.xml  
+## Ejemplo de metadata.xml
+<a id="metadataxml-example" class="xliff"></a>  
   
     \<?xml version="1.0" encoding="utf-8"?>  
     <SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
@@ -154,7 +161,8 @@ También puede **descargarse** o **quitar** el paquete. Si quita el paquete, se 
         </Contents>  
     </SystemResourcePackage>  
    
-## <a name="colorsjson-example"></a>Ejemplo de colors.json  
+## Ejemplo de colors.json
+<a id="colorsjson-example" class="xliff"></a>  
   
     {  
         "name":"Multicolored example brand",  

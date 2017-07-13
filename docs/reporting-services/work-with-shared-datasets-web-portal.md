@@ -1,7 +1,7 @@
 ---
 title: Trabajar con conjuntos de datos compartidos (portal web) | Documentos de Microsoft
 ms.custom: 
-ms.date: 05/15/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,21 +15,23 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6dfbc134c0f0e351648d19cf8c485fe25a58eb99
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="work-with-shared-datasets---web-portal"></a>Trabajar con conjuntos de datos compartidos - portal web
+# Trabajar con conjuntos de datos compartidos - portal web
+<a id="work-with-shared-datasets---web-portal" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Con un conjunto de datos compartido, puede administrar los valores para un conjunto de datos de forma independiente de los informes y otros elementos de catálogo que lo utilizan. Los conjuntos de datos compartidos pueden usarse con informes paginados y móviles, junto con los KPI.
 
 Puede ver y administrar las propiedades de un conjunto de datos compartido en el portal web. El portal web puede iniciar el Generador de informes para crear o editar conjuntos de datos compartidos.
 
-## <a name="create-a-shared-dataset"></a>Creación de un conjunto de datos compartido
+## Creación de un conjunto de datos compartido
+<a id="create-a-shared-dataset" class="xliff"></a>
   
 Para crear un nuevo conjunto de datos compartido, puede hacer lo siguiente:  
   
@@ -47,7 +49,8 @@ Para crear un nuevo conjunto de datos compartido, puede hacer lo siguiente:
   
 6.  Cree el conjunto de datos y, después, seleccione el icono de **guardado** situado en la esquina superior izquierda para guardarlo en el servidor de informes.  
   
-## <a name="manage-an-existing-shared-dataset"></a>Administración de un conjunto de datos compartido existente
+## Administración de un conjunto de datos compartido existente
+<a id="manage-an-existing-shared-dataset" class="xliff"></a>
   
 Para administrar un conjunto de datos compartido existente, puede hacer lo siguiente:  
   
@@ -62,13 +65,15 @@ Para administrar un conjunto de datos compartido existente, puede hacer lo sigui
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   
-## <a name="properties"></a>Propiedades
+## Propiedades
+<a id="properties" class="xliff"></a>
   
 En la pantalla de propiedades, puede cambiar el **nombre** y la **descripción** del conjunto de datos. También puede **Eliminar**, **Mover**, **Editar en el Generador de informes**, **Descargar** o **Reemplazar**.  
   
 ![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
   
-## <a name="caching"></a>Almacenamiento en memoria caché
+## Almacenamiento en memoria caché
+<a id="caching" class="xliff"></a>
   
 Dispone de varias opciones para almacenar en memoria caché los datos de un conjunto de datos. Puede empezar con una selección simple.  
   
@@ -82,7 +87,8 @@ Si selecciona **Cache Copies of this report and use them when available** (Almac
   
 ![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
   
-### <a name="cache-expiration"></a>Expiración de la caché  
+### Expiración de la caché
+<a id="cache-expiration" class="xliff"></a>  
   
 Puede controlar si desea que la caché expire, para el conjunto de datos compartido, después de una cantidad de tiempo determinada, o bien si prefiere hacerlo según una programación. Puede usar una programación compartida.  
   
@@ -91,7 +97,8 @@ Puede controlar si desea que la caché expire, para el conjunto de datos compart
 > [!NOTE]
 > La memoria caché no se actualiza al establecer una expiración. Sin un plan de actualización de caché, los datos se actualizarán con la siguiente ejecución del conjunto de datos.  
   
-### <a name="cache-refresh-plans"></a>Planes de actualización de caché  
+### Planes de actualización de caché
+<a id="cache-refresh-plans" class="xliff"></a>  
   
 Puede utilizar planes de actualización de caché a fin de crear programaciones para cargar previamente la caché con copias temporales de datos de un conjunto de datos compartido. Un plan de actualización incluye una programación y la opción para especificar o invalidar los valores de los parámetros. No puede invalidar los valores de los parámetros que estén marcados como de solo lectura. Puede crear y utilizar más de un plan de actualización.   
   

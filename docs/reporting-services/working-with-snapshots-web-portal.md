@@ -1,7 +1,7 @@
 ---
 title: "Trabajar con instantáneas (portal web) | Documentos de Microsoft"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,15 +15,17 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f158c027acfd2acdf7a745c640babad561ec0d20
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 2bca4e3089bde763669c4fe518f509fbe94cb6eb
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="working-with-snapshots-web-portal"></a>Trabajo con instantáneas (portal web)
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+# Trabajo con instantáneas (portal web)
+<a id="working-with-snapshots-web-portal" class="xliff"></a>
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Puede controlar si las instantáneas se crean para un informe seleccionando el **puntos suspensivos (...)**  de un informe, seleccione **administrar** y seleccionando **Caching** o **instantáneas del historial de**.  
   
@@ -32,7 +34,8 @@ Puede controlar si las instantáneas se crean para un informe seleccionando el *
    
 Puede crear una instantánea de caché para que las propiedades de ejecución específicas se ejecuten más rápido. También puede trabajar con instantáneas de historial para capturar diferentes momentos.  
   
-## <a name="creating-a-cache-snapshot"></a>Crear una instantánea de almacenamiento en caché  
+## Crear una instantánea de almacenamiento en caché
+<a id="creating-a-cache-snapshot" class="xliff"></a>  
   
 Haga esto para crear una instantánea.  
   
@@ -44,7 +47,8 @@ Haga esto para crear una instantánea.
   
 3.  Seleccione **Crear una instantánea de caché cuando haga clic en el botón Aplicar en esta página** si quiere crear una caché de instantánea ahora mismo. Si selecciona esta opción únicamente, la instantánea no se actualizará.  
   
-## <a name="create-modify-and-delete-history-snapshots"></a>Crear, modificar y eliminar instantáneas del historial  
+## Crear, modificar y eliminar instantáneas del historial
+<a id="create-modify-and-delete-history-snapshots" class="xliff"></a>  
   
 Para trabajar con instantáneas del historial, administre un informe y seleccione **Instantáneas del historial**.  
   
@@ -62,7 +66,8 @@ Para generar una instantánea del historial, el informe debe poder ejecutarse en
   
 3.  Puede seleccionar una instantánea del historial para verla. Las instantáneas que aparecen en un historial de informe solamente se distinguen por la fecha y la hora en que fueron creadas. No hay manera de distinguir visualmente si una instantánea se generó como respuesta a una operación programada o manual.  
   
-### <a name="schedule-and-settings"></a>Programación y configuración  
+### Programación y configuración
+<a id="schedule-and-settings" class="xliff"></a>  
   
 Si selecciona **Programación y configuración** , dispondrá de más opciones para la retención de programación y el control de instantáneas creadas.  
   
@@ -76,7 +81,8 @@ También puede definir cómo prefiere conservar las instantáneas.
   
 Si activa esta casilla, se copiará en el historial de un informe una instantánea del informe generada según las propiedades de ejecución del informe. Puede establecer las propiedades de ejecución de informes para ejecutar un informe a partir de una instantánea generada. Al establecer esta propiedad del historial del informe, se puede mantener un registro de todas las instantáneas del informe generadas con el tiempo, colocando copias de las mismas en el historial.
 
-## <a name="next-steps"></a>Pasos siguientes
+## Pasos siguientes
+<a id="next-steps" class="xliff"></a>
 
 [Portal Web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Trabajar con informes paginados](working-with-paginated-reports-web-portal.md)  

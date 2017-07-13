@@ -1,7 +1,7 @@
 ---
 title: "Características desusadas en SQL Server Reporting Services en SQL Server 2016 | Documentos de Microsoft"
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,33 +21,43 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 9e3723e8fd524810e593234c1bb7b0535e192d07
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 4a02f1937207f0d3dd559c539d078b1a218666df
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="deprecated-features-in-sql-server-reporting-services-ssrs"></a>Características desusadas en SQL Server Reporting Services (SSRS)
-  En este tema se describen las características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] desusadas. Las características siguen estando disponibles en la versión en que están desusadas; no obstante, las características están programadas para quitarlas en una versión futura de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No use características en desuso en nuevas aplicaciones.  
-  
-## <a name="features-not-supported-in-the-next-version-of-sql-server-reporting-services"></a>Características no admitidas en la siguiente versión de SQL Server Reporting Services  
- Las características del [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] siguientes no se admitirán en la siguiente versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No use estas características en nuevos trabajos de desarrollo y modifique lo antes posible las aplicaciones que las usan actualmente.  
-  
+
+# Características en desuso de SQL Server Reporting Services en SQL Server 2016
+<a id="deprecated-features-in-sql-server-reporting-services-in-sql-server-2016" class="xliff"></a>
+
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+En este tema se describe las características de SQL Server Reporting Services en desuso. Las características siguen estando disponibles en la versión en que están desusadas; no obstante, las características están programadas para quitarlas en una versión futura de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No use características en desuso en nuevas aplicaciones.
+
+## Características no admitidas en la siguiente versión de SQL Server Reporting Services
+<a id="features-not-supported-in-the-next-version-of-sql-server-reporting-services" class="xliff"></a>
+
+No se admiten las siguientes características de SQL Server Reporting Services en la próxima versión de SQL Server. No use estas características en nuevos trabajos de desarrollo y modifique lo antes posible las aplicaciones que las usan actualmente.
+
 |Categoría|Característica desusada|
 |--------------|------------------------| 
 |Servidor de informes|Representador de HTML 4.0. Usar el representador de HTML5.|
-  
-## <a name="features-not-supported-in-previous-versions-of-sql-server-reporting-services"></a>Características no admitidas en versiones anteriores de SQL Server Reporting Services  
-  
--   [Características desusadas de SQL Server 2014 Reporting Services](https://msdn.microsoft.com/library/ms143509\(v=sql.120\).aspx)  
-  
--   [Características desusadas de SQL Server 2012 Reporting Services](https://msdn.microsoft.com/library/ms143509\(v=sql.110\).aspx)  
-  
-## <a name="see-also"></a>Vea también  
- [Novedades de Reporting Services &#40;SSRS&#41;](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) 
- [Compatibilidad con versiones anteriores | Reporting Services](../reporting-services/reporting-services-backward-compatibility.md)   
+
+## Características no admitidas en versiones anteriores de SQL Server Reporting Services
+<a id="features-not-supported-in-previous-versions-of-sql-server-reporting-services" class="xliff"></a>
+
+- [Características desusadas de SQL Server 2014 Reporting Services](https://msdn.microsoft.com/library/ms143509\(v=sql.120\).aspx)
+
+- [Características desusadas de SQL Server 2012 Reporting Services](https://msdn.microsoft.com/library/ms143509\(v=sql.110\).aspx)
+
+## Pasos siguientes
+<a id="next-steps" class="xliff"></a>
+
+ [Novedades de Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) [compatibilidad con versiones anteriores | Reporting Services](../reporting-services/reporting-services-backward-compatibility.md)   
  [Cambios de comportamiento de SQL Server Reporting Services en SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
  [Funcionalidad de SQL Server Reporting Services no incluida en SQL Server 2016](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md) 
-  
-  
 
+¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

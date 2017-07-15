@@ -21,14 +21,16 @@ ms.contentlocale: es-es
 ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="query-spatial-data-for-nearest-neighbor"></a>Consultar datos espaciales para el vecino más próximo
+# Consultar datos espaciales para el vecino más próximo
+<a id="query-spatial-data-for-nearest-neighbor" class="xliff"></a>
   Una consulta frecuente utilizada con datos espaciales es la de vecino más cercano. Las consultas de vecino más cercano se emplean para encontrar los objetos espaciales más cercanos a un objeto espacial concreto. Por ejemplo, un buscador de tiendas de un sitio web debe encontrar a menudo las ubicaciones de las tiendas más cercanas a la ubicación de un cliente.  
   
  Se puede escribir una consulta de vecino más cercano en distintos formatos de consulta válidos, pero para que dicha consulta use un índice espacial se debe emplear la siguiente sintaxis.  
   
-## <a name="syntax"></a>Sintaxis  
+## Sintaxis
+<a id="syntax" class="xliff"></a>  
   
-```vb  
+```  
 SELECT TOP ( number )  
         [ WITH TIES ]  
         [ * | expression ]   
@@ -54,7 +56,8 @@ SELECT TOP ( number )
   
 ```  
   
-## <a name="nearest-neighbor-query-and-spatial-indexes"></a>Consulta de vecino más cercano e índices espaciales  
+## Consulta de vecino más cercano e índices espaciales
+<a id="nearest-neighbor-query-and-spatial-indexes" class="xliff"></a>  
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], las cláusulas **TOP** y **ORDER BY** se usan para realizar una consulta de vecino más próximo en columnas de datos espaciales. La cláusula **ORDER BY** contiene una llamada al método `STDistance()` para el tipo de datos de columna espacial. La cláusula **TOP** indica el número de objetos que se va a devolver para la consulta.  
   
  Se deben cumplir los siguientes requisitos para que una consulta de vecino más cercano utilice un índice espacial:  
@@ -78,10 +81,11 @@ SELECT TOP ( number )
   
  Se recomienda utilizar las nuevas teselaciones de índice espacial para los índices empleados en las consultas de vecino más cercano. Para obtener más información sobre las teselaciones de índice espacial, vea [Datos espaciales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
-## <a name="example"></a>Ejemplo  
+## Ejemplo
+<a id="example" class="xliff"></a>  
  En el ejemplo de código siguiente se muestra una consulta de vecino más cercano que puede utilizar un índice espacial. En el ejemplo se utiliza la tabla `Person.Address` de la base de datos `AdventureWorks2012` .  
   
-```  
+```tsql  
 USE AdventureWorks2012  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
@@ -93,10 +97,11 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  Cree un índice espacial en la columna SpatialLocation para ver cómo una consulta de vecino más cercano utiliza un índice espacial. Para obtener más información sobre cómo crear índices espaciales, vea [Create, Modify, and Drop Spatial Indexes](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md).  
   
-## <a name="example"></a>Ejemplo  
+## Ejemplo
+<a id="example" class="xliff"></a>  
  En el ejemplo de código siguiente se muestra una consulta de vecino más cercano que no puede utilizar un índice espacial.  
   
-```  
+```tsql  
 USE AdventureWorks2012  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
@@ -107,7 +112,9 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  A la consulta le falta una cláusula **WHERE** que usa `STDistance()` en un formato especificado en la sección de sintaxis, por lo que la consulta no puede usar un índice espacial.  
   
-## <a name="see-also"></a>Vea también  
+## Vea también
+<a id="see-also" class="xliff"></a>  
  [Datos espaciales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   
+

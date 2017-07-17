@@ -15,7 +15,7 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: e3dff8b613f933caa84522b31bdc862aa9c799f7
 ms.contentlocale: es-es
@@ -68,7 +68,7 @@ Algunas características del portal web solo están disponibles en determinadas 
 En una instalación nueva, solo los administradores locales tienen permisos suficientes para trabajar con el contenido y la configuración. Para conceder permisos a otros usuarios, un administrador local debe crear asignaciones de roles que proporcionen acceso al servidor de informes. Las tareas y las páginas de aplicación a las que un usuario puede obtener acceso posteriormente dependerán de las asignaciones de roles para dicho usuario. Para obtener más información, vea [conceder acceso de usuario a un servidor de informes](security/grant-user-access-to-a-report-server-report-manager.md)
 
 > [!NOTE]
-> Si va a examinar el portal web en la máquina local donde se ejecuta el servidor, aparecerá un mensaje que le indica que no tiene permiso para ver esta carpeta. Esto se debe al control de acceso universal (UAC) y a que no está ejecutando el explorador como administrador. No puede ejecutar Edge como administrador. Tendrá que utilizar Internet Explorer. Puede acceder al servidor de forma remota o iniciar Internet Explorer como administrador e ir al portal web. Si desea usar el portal web de forma remota, debe conceder a su cuenta de derechos de administrador de contenido para la carpeta.  
+> Si va a examinar el portal web en la máquina local donde se ejecuta el servidor, aparecerá un mensaje que le indica que no tiene permiso para ver esta carpeta. Esto se debe al control de acceso universal (UAC) y a que no está ejecutando el explorador como administrador. No puede ejecutar Microsoft Edge como administrador. Tendrá que utilizar Internet Explorer. Puede acceder al servidor de forma remota o iniciar Internet Explorer como administrador e ir al portal web. Si desea usar el portal web de forma remota, debe conceder a su cuenta de derechos de administrador de contenido para la carpeta.  
 
 ## Inicio y uso del portal web
 <a id="start-and-use-the-web-portal" class="xliff"></a>

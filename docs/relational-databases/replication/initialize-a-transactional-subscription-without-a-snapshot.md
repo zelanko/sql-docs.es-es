@@ -18,25 +18,21 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4b4c95296d12ba08582ecf6929c5c13dd02b2bae
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/18/2017
 
 ---
-<a id="initialize-a-transactional-subscription-without-a-snapshot" class="xliff"></a>
-
-# Inicializar una suscripción transaccional sin una instantánea
+# <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Inicializar una suscripción transaccional sin una instantánea
   De forma predeterminada, una suscripción a una publicación transaccional se inicializa con una instantánea generada por el Agente de instantáneas y aplicada por el Agente de distribución. En algunos escenarios, como aquellos en los que intervienen grandes conjuntos de datos iniciales, es preferible inicializar una suscripción mediante otro método. Otros métodos para inicializar un suscriptor incluyen:  
   
 -   Especificar una copia de seguridad. Se restaura la copia de seguridad en el suscriptor y, a continuación, el Agente de distribución copia los metadatos de replicación y los procedimientos del sistema necesarios. La inicialización con una copia de seguridad es la forma más rápida de entregar datos al suscriptor, además de resultar cómoda, ya que se puede utilizar cualquier copia de seguridad reciente si se ha realizado después de que se habilitara la publicación para inicialización mediante una copia de seguridad.  
   
 -   Copiar un conjunto de datos inicial en el suscriptor mediante otro mecanismo, como adjuntar una base de datos. Debe asegurarse de que los datos y el esquema correctos se encuentran en el suscriptor. A continuación, el Agente de distribución copia los metadatos y los procedimientos del sistema necesarios.  
   
-<a id="initializing-a-subscription-with-a-backup" class="xliff"></a>
-
-## Inicializar una suscripción con una copia de seguridad  
+## <a name="initializing-a-subscription-with-a-backup"></a>Inicializar una suscripción con una copia de seguridad  
  Una copia de seguridad contiene una base de datos completa; por esa razón, cada base de datos de suscripciones contendrá una copia completa de la base de datos de publicación cuando se inicialice.  
   
 -   La copia de seguridad incluye tablas no especificadas como artículos de la publicación.  
@@ -59,9 +55,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  Si una suscripción se inicializa sin una instantánea, la cuenta con la que se ejecuta el servicio SQL Server en el publicador debe contar con permisos de escritura en la carpeta de instantáneas en el distribuidor. Para obtener más información sobre los permisos, vea [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-<a id="ensuring-the-suitability-of-a-backup" class="xliff"></a>
-
-### Asegurar la idoneidad de una copia de seguridad  
+### <a name="ensuring-the-suitability-of-a-backup"></a>Asegurar la idoneidad de una copia de seguridad  
  Una copia de seguridad es adecuada para inicializar un suscriptor si todas las transacciones que se producen después de realizar la copia de seguridad se almacenan en el distribuidor. Si la copia de seguridad no es adecuada, la replicación mostrará un mensaje de error.  
   
  Para ayudar a asegurar que una copia de seguridad es adecuada, siga estas directrices:  
@@ -76,18 +70,14 @@ ms.lasthandoff: 06/22/2017
   
 -   Las columnas de marca de tiempo suscritas de la base de datos restaurada deben convertirse en columnas **binary(8)** : copie el contenido de las tablas que contienen columnas de marca de tiempo en nuevas tablas con esquemas coincidentes, excepto las que tengan columnas **binary(8)** en lugar de columnas de marca de tiempo, quite las tablas originales y cambie el nombre de las tablas nuevas por el que tenían las tablas originales.  
   
-<a id="initializing-a-subscription-with-an-alternative-method" class="xliff"></a>
-
-## Inicializar una suscripción con un método alternativo  
+## <a name="initializing-a-subscription-with-an-alternative-method"></a>Inicializar una suscripción con un método alternativo  
  Es posible inicializar una suscripción mediante cualquier método que permita copiar el esquema y los datos de la base de datos de publicación en el suscriptor, como [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Cuando se utiliza un método alternativo para inicializar el suscriptor, los objetos de soporte de replicación se copian en el suscriptor.  
   
  A diferencia de lo que ocurre al inicializar con una copia de seguridad, el usuario o la aplicación debe asegurarse de que los datos y el esquema se han sincronizado correctamente en el momento de agregar la suscripción. Por ejemplo, si se produce actividad en el publicador entre el momento en que se copian los datos y el esquema en el suscriptor y el momento en que se agrega la suscripción, es posible que los cambios que resulten de dicha actividad no se repliquen en el suscriptor.  
   
  Para inicializar una suscripción con un método alternativo, vea [Initialize a Subscription Manually](../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
-<a id="see-also" class="xliff"></a>
-
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Inicializar una suscripción](../../relational-databases/replication/initialize-a-subscription.md)  
   
   

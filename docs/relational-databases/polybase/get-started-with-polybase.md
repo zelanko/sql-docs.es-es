@@ -2,7 +2,7 @@
 title: "Introducción a PolyBase | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 5/30/2017
+ms.date: 7/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -24,11 +24,11 @@ caps.latest.revision: 78
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
-ms.openlocfilehash: 59bf4021617603f0720c23ca192f4ddb65aa6834
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: baf9d02b824a8aae2a282d0f6203791c4b72f1f8
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="get-started-with-polybase"></a>Introducción a PolyBase
@@ -53,10 +53,11 @@ ms.lasthandoff: 06/23/2017
   
 -   La versión de Oracle Java SE RunTime Environment (JRE) 7.51 o una superior (64 bits). (Tanto [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) como [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) funcionarán). Vaya a la página de [descargas de Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html). El programa de instalación generará un error si JRE no está presente.   
   
--   Memoria mínima: 4 GB.  
+-   Mínimo de memoria: 4 GB  
   
--   Espacio disponible en disco duro mínimo: 2 GB.    
--   La conectividad TCP/IP debe estar habilitada. (Vea [Habilitar o deshabilitar un protocolo de red de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)).  
+-   Espacio disponible en disco duro mínimo: 2 GB    
+
+-   La conectividad TCP/IP debe estar habilitada. (Vea [Habilitar o deshabilitar un protocolo de red de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)). Las ediciones SQL Server Developer y Express tienen TCP/IP deshabilitado de forma predeterminada. PolyBase se puede instalar, pero no se iniciará completamente hasta que se habilite TCP/IP. Debe habilitar manualmente TCP/IP para tener la funcionalidad PolyBase. 
   
  
  Un origen de datos externo, como uno de los siguientes:  
@@ -156,7 +157,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
  Para obtener más información, vea [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md)(Grupos de escalado horizontal de PolyBase).  
   
 ## <a name="create-t-sql-objects"></a>Creación de objetos de T-SQL  
- Crear objetos de función del origen de datos externo, Hadoop o almacenamiento de Azure.  
+ Cree objetos a partir del origen de datos externo, sea este Hadoop o un almacenamiento de Azure.  
   
 ### <a name="hadoop"></a>Hadoop  
   
@@ -354,7 +355,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
  Después de actualizar de SQL Server 2016 RC1 a RC2 o RC3, las consultas pueden producir errores. Para obtener más información y saber cómo solucionarlo, vea [Notas de la versión de SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md) y busque "PolyBase".  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Para entender la característica de escalado horizontal, vea [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md)(Grupos de escalado horizontal de PolyBase).  Para supervisar PolyBase, consulte [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md)(Solución de problemas de PolyBase). Para solucionar problemas de rendimiento de PolyBase, consulte [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).  
+ Para entender la característica de escalado horizontal, vea [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md)(Grupos de escalado horizontal de PolyBase).  Para supervisar PolyBase, consulte [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md)(Solución de problemas de PolyBase). Para solucionar problemas de rendimiento de PolyBase, consulte [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80) (Solución de problemas de PolyBase con vistas de administración dinámica).  
   
 ## <a name="see-also"></a>Vea también  
  [Guía de PolyBase](../../relational-databases/polybase/polybase-guide.md)   

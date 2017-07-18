@@ -1,7 +1,7 @@
 ---
 title: "Directrices para operaciones de índices en línea | Microsoft Docs"
 ms.custom: 
-ms.date: 04/14/2017
+ms.date: 07/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +21,11 @@ caps.latest.revision: 64
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
-ms.openlocfilehash: 508440b3e6cd15d4fb70f933c380e958dad74d56
+ms.translationtype: HT
+ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
+ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>Directrices para operaciones de índices en línea
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/23/2017
 -   Los índices no clúster que no son únicos se pueden crear en línea cuando la tabla contiene tipos de datos LOB, pero ninguna de estas columnas se utiliza en la definición del índice como columna de clave o sin clave (incluida).  
   
 -   Los índices de tablas temporales locales no se pueden crear, reconstruir o quitar en línea. Esta restricción no se aplica a los índices de tablas temporales globales.
-- Los índices se pueden reanudar desde donde se detuvo tras un error inesperado, conmutación por error de la base de datos, o un **pausa** comando. Vea [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Esta característica está en versión preliminar pública de 2017 de SQL Server.
+- Los índices se pueden reanudar desde donde se detuvo tras un error inesperado, conmutación por error de la base de datos, o un **pausa** comando. Vea [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Esta característica está en versión preliminar pública de SQL Server 2017 y Azure SQL Database.
 
 > [!NOTE]  
 >  Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Features supported by editions](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) (Características compatibles con las ediciones de SQL Server 2016).  
@@ -93,7 +93,7 @@ Para más información, consulte [Disk Space Requirements for Index DDL Operatio
 ## <a name="resumable-index-rebuild-considerations"></a>Consideraciones de regeneración de índice reanudables
 
 > [!NOTE]
-> Vea [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Esta característica está en versión preliminar pública de 2017 de SQL Server.
+> Vea [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Esta característica está en versión preliminar pública de SQL Server 2017 y Azure SQL Database.
 >
 
 Al realizar la reconstrucción de índices en línea reanudables se aplican las siguientes directrices:

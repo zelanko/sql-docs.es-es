@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58db786512aa1ed167df55831c6a7cc3c53224bd
+ms.translationtype: HT
+ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
+ms.openlocfilehash: f13f4f60d8df7d2a2fb668cc6d5a93f092973116
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="how-query-store-collects-data"></a>Introducción a la recopilación de datos del almacén de consultas
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="views"></a>Vistas  
  En el diagrama siguiente se muestran las vistas del almacén de consultas y sus relaciones lógicas (la información de tiempo de compilación se presenta como entidades de color azul):  
   
- ![query-store-process-1views](../../relational-databases/performance/media/query-store-process-1views.png "query-store-process-1views")  
+ ![query-store-process-2views](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
   
  **Descripciones de las vistas**  
   
@@ -68,7 +68,8 @@ ms.lasthandoff: 04/11/2017
   
  En caso de producirse un bloqueo del sistema, el almacén de consultas puede perder datos del runtime hasta la cantidad definida con `DATA_FLUSH_INTERVAL_SECONDS`. El valor predeterminado de 900 segundos (15 minutos) ofrece un equilibrio óptimo entre el rendimiento de la captura de consultas y la disponibilidad de los datos.  
 En caso de presión de memoria, es posible vaciar las estadísticas del runtime en el disco antes de lo definido con `DATA_FLUSH_INTERVAL_SECONDS`.  
-Durante la lectura del almacén de consultas, los datos en memoria y en disco se unifican de manera transparente.  
+Durante la lectura del almacén de consultas, los datos en memoria y en disco se unifican de manera transparente.
+No se registrarán las estadísticas de consultas en caso de terminación de la sesión o de reinicio o bloqueo de la aplicación cliente.  
   
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 

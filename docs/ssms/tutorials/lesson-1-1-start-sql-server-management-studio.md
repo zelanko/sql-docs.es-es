@@ -1,7 +1,7 @@
 ---
 title: Iniciar SQL Server Management Studio | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: c472ec73a5b0b24f47b5bc59121eda206e285ac9
+ms.translationtype: HT
+ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
+ms.openlocfilehash: 2d5147747a0b9bac8e90c77cca24fd3632d42240
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 # <a name="lesson-1-1---start-sql-server-management-studio"></a>Lección 1.1: Iniciar SQL Server Management Studio
@@ -31,8 +31,8 @@ Para empezar este tutorial, veamos [!INCLUDE[ssManStudioFull](../../includes/ssm
 #### <a name="to-open-sql-server-management-studio"></a>Para abrir SQL Server Management Studio  
   
 1.  Cómo inicia [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] (SSMS) depende de su sistema operativo.  
-* Para las versiones más recientes de Windows con una **página de inicio**, en la **página de inicio**, escriba **[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]** y aparecerá el programa. Haga clic en el programa para abrir SSMS. Puede que quiera hacer clic con el botón derecho en el programa y anclarlo a la **página de inicio**.   
-* Para versiones anteriores de Windows, en el menú **Inicio** , seleccione **Todos los programas**, señale [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]y, luego, haga clic en **SQL Server Management Studio**. De manera alternativa, desde el cuadro de diálogo **Ejecutar** , escriba **SSMS.exe** y, después, haga clic en **Aceptar**.  
+  * Para las versiones más recientes de Windows con una **página de inicio**, en la **página de inicio**, escriba **[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]** y aparecerá el programa. Haga clic en el programa para abrir SSMS. Puede que quiera hacer clic con el botón derecho en el programa y anclarlo a la **página de inicio**.   
+  * Para versiones anteriores de Windows, en el menú **Inicio** , seleccione **Todos los programas**, señale [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]y, luego, haga clic en **SQL Server Management Studio**. De manera alternativa, desde el cuadro de diálogo **Ejecutar** , escriba **SSMS.exe** y, después, haga clic en **Aceptar**.  
   
     > [!NOTE]  
     >  Si SSMS no aparece, puede que no lo haya instalado correctamente. Instale SSMS desde el [Centro de descarga](https://msdn.microsoft.com/library/mt238290.aspx). SSMS no se instala automáticamente con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Use la última versión para tener acceso a todas las características.  
@@ -40,11 +40,14 @@ Para empezar este tutorial, veamos [!INCLUDE[ssManStudioFull](../../includes/ssm
 2.  En el siguiente paso, conéctese a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el componente del **Explorador de objetos** de SSMS. Si el panel del Explorador de objetos no está visible, en el menú **Ver** , haga clic en **Explorador de objetos**. En el menú del Explorador de objetos, haga clic en el botón **Conectar** y, después, en **Motor de base de datos**. Debe aparecer el cuadro de diálogo **Conectar al servidor** . (Si ha instalado anteriormente SSMS, la configuración de usuario puede estar provocando que el cuadro de diálogo **Conectar al servidor** aparezca automáticamente).  
   
 3.  En el cuadro de diálogo **Conectar al servidor** , complete el cuadro **Nombre de servidor** . Puede conectarse a uno de los tres tipos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cada tipo tiene un formato ligeramente diferente del cuadro **Nombre de servidor** . Seleccione uno de los formatos siguientes:  
---  **Instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** cuando instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un equipo, puede especificar que la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sea una instancia con nombre o una instancia predeterminada (instancia sin nombre). Si se está conectando a una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], inserte el nombre del equipo. Por ejemplo, si está ejecutando SSMS en un equipo denominado Contabilidad y se está conectando a una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  instalada en ese equipo, escriba **Contabilidad** en el cuadro **Nombre de servidor** .  
---  **Instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** al configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede especificar un nombre para la instancia; por ejemplo, en un equipo denominado Contabilidad, puede especificar una instancia con nombre denominada **Cobros**. Para conectarse a una instancia con nombre, en el cuadro **Nombre de servidor** , escriba el nombre del equipo, barra diagonal inversa, nombre de instancia; por ejemplo, **Contabilidad\Cobros**.  
---  **Azure SQL Database:** el formato del nombre del servidor de SQL Database es Nombre_servidor_SQL.database.windows.net, por ejemplo, **mydb2.database.windows.net**. Si tiene problemas para determinar el nombre del servidor, visite Azure Portal para obtener ayuda para crear una cadena de conexión.  
+  -  **Una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** cuando instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un equipo, puede especificar que la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sea una instancia con nombre o una instancia predeterminada (instancia sin nombre). Si se está conectando a una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], inserte el nombre del equipo. Por ejemplo, si está ejecutando SSMS en un equipo denominado Contabilidad y se está conectando a una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  instalada en ese equipo, escriba **Contabilidad** en el cuadro **Nombre de servidor** .  
+  -  **Instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** al configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede especificar un nombre para la instancia; por ejemplo, en un equipo denominado Contabilidad, puede especificar una instancia con nombre denominada **Cobros**. Para conectarse a una instancia con nombre, en el cuadro **Nombre de servidor** , escriba el nombre del equipo, barra diagonal inversa, nombre de instancia; por ejemplo, **Contabilidad\Cobros**.  
+  -  **Azure SQL Database:** el formato del nombre del servidor de SQL Database es Nombre_servidor_SQL.database.windows.net, por ejemplo, **mydb2.database.windows.net**. Si tiene problemas para determinar el nombre del servidor, visite Azure Portal para obtener ayuda para crear una cadena de conexión.  
   
-4. En el área **Autenticación**  
+4. En el área **Autenticación**, seleccione un método de autenticación.  
+  - Si es administrador del equipo y acaba de instalar SQL Server, pruebe **Autenticación de Windows**.  Esto también funciona si se ha configurado como usuario de dominio con acceso a SQL Server. Como el intento de inicio de sesión usa las credenciales que ha utilizado para iniciar sesión en Windows, los cuadros **Nombre de usuario** y **Contraseña** están en gris. 
+  -  Si conoce el nombre y la contraseña de una cuenta de usuario, seleccione **Autenticación de SQL Server** y, a continuación, proporcione el **nombre de usuario** y la **contraseña**.
+  - Si tiene la versión más reciente de SSMS, tiene tres opciones más, a partir de **Autenticación de Active Directory**. Para obtener información sobre estas opciones más avanzadas, consulte [Autenticación universal con SQL Database y SQL Data Warehouse (compatibilidad de SSMS con MFA)](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-ssms-mfa-authentication).  
   
 ## <a name="management-studio-components"></a>Componentes de Management Studio  
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] presenta la información en ventanas dedicadas a tipos de información específicos. La información de la base de datos se muestra en las ventanas de documentos y en el Explorador de objetos.  
@@ -65,5 +68,6 @@ Para empezar este tutorial, veamos [!INCLUDE[ssManStudioFull](../../includes/ssm
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
 [Conectar con el Explorador de objetos y Servidores registrados](../../tools/sql-server-management-studio/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
+
   
 

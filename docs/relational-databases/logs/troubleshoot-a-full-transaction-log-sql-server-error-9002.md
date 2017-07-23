@@ -22,11 +22,11 @@ caps.latest.revision: 59
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 09bb30a44ef1675353fe8fa5bd9245c3f25c3894
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/21/2017
 
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Solucionar problemas de un registro de transacciones lleno (Error 9002 de SQL Server)
@@ -114,8 +114,7 @@ Esta instrucción permite identificar el Id. de usuario del propietario de la tr
 Hay veces en que simplemente tiene que finalizar el proceso; puede que tenga que usar la instrucción [KILL](https://msdn.microsoft.com/library/ms173730.aspx) . Use esta instrucción con sumo cuidado, especialmente cuando se estén ejecutando procesos críticos que no desea terminar. Para más información, consulte [KILL (Transact-SQL)](https://msdn.microsoft.com/library/ms173730.aspx)
 
 ## <a name="see-also"></a>Vea también  
-[Artículo de soporte técnico de KB: Un registro de transacciones crece de manera inesperada o se llena en SQL Server](https://support.microsoft.com/en-us/kb/317375)
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+[Artículo de soporte técnico de KB: Un registro de transacciones crece de manera inesperada o se llena en SQL Server](https://support.microsoft.com/en-us/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Administrar el tamaño del archivo de registro de transacciones](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  

@@ -3,7 +3,7 @@
 # [Administración de inicios de sesión y trabajos tras la conmutación de roles](management-of-logins-and-jobs-after-role-switching-sql-server.md)  
 # [Solucionar problemas de usuarios huérfanos](troubleshoot-orphaned-users-sql-server.md)  
 
-# [Instalación de clústeres de conmutación por error (artículos)](install/TOC.md)  
+# [Instalación de clústeres de conmutación por error](install/sql-server-failover-cluster-installation.md)  
 
 # [Clústeres de conmutación por error de Windows Server (WSFC), con SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
 ## [Configuración de los votos y modos de cuórum WSFC](windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)  

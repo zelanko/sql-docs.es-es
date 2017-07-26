@@ -28,15 +28,11 @@ ms.contentlocale: es-es
 ms.lasthandoff: 06/22/2017
 
 ---
-<a id="improve-the-performance-of-full-text-indexes" class="xliff"></a>
-
-# Mejorar el rendimiento de los índices de texto completo
+# <a name="improve-the-performance-of-full-text-indexes"></a>Mejorar el rendimiento de los índices de texto completo
 En este tema se describen algunas de las causas comunes de un rendimiento deficiente de las consultas y los índices de texto completo. También se proporcionan algunas sugerencias para mitigar estos problemas y mejorar el rendimiento.
   
 ##  <a name="causes"></a> Common causes of performance issues
-<a id="hardware-resource-issues" class="xliff"></a>
-
-### Problemas de los recursos de hardware
+### <a name="hardware-resource-issues"></a>Problemas de los recursos de hardware
 El rendimiento de la indización y las búsquedas de texto completo se ve afectado por los recursos de hardware; por ejemplo, la memoria, la velocidad de disco y de CPU, y la arquitectura del equipo.  
 
 La causa principal de un rendimiento reducido de la indización de texto completo son los límites de los recursos de hardware.  
@@ -50,18 +46,14 @@ La causa principal de un rendimiento reducido de la indización de texto complet
     > [!NOTE]  
     >  A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], el motor de texto completo puede utilizar la memoria AWE porque forma parte del proceso de sqlservr.exe.  
 
-<a id="full-text-batching-issues" class="xliff"></a>
-
-### Problemas de procesamiento por lotes de texto completo
+### <a name="full-text-batching-issues"></a>Problemas de procesamiento por lotes de texto completo
  Si el sistema no tiene cuellos de botella de hardware, el rendimiento de la indización de la búsqueda de texto completo depende sobre todo de lo siguiente:  
   
 -   El tiempo que tarda [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en crear lotes de texto completo.  
   
 -   La rapidez con la que el denomino de filtro puede consumir dichos lotes.  
 
-<a id="full-text-index-population-issues" class="xliff"></a>
-
-### Problemas de rellenado de índices de texto completo
+### <a name="full-text-index-population-issues"></a>Problemas de rellenado de índices de texto completo
 -   **Tipo de rellenado**. A diferencia del rellenado completo, el rellenado incremental, manual y de seguimiento automático de cambios no se han diseñado para obtener los máximos recursos de hardware y así aumentar la velocidad. Por lo tanto, las sugerencias de optimización de este tema no pueden mejorar el rendimiento de indización de texto completo cuando se usa rellenado de seguimiento incremental, manual o de cambio automático.  
   
 -   **Combinación maestra**. Cuando se completa un rellenado, se desencadena un proceso de combinación final que combina los fragmentos de índice en un solo índice de texto completo maestro. Esto permite mejorar el rendimiento de las consultas, ya que únicamente es necesario realizar consultas en el índice maestro, en lugar de hacerlo en varios fragmentos de índice, y se pueden utilizar mejores estadísticas de puntuación para obtener la clasificación por relevancia. Sin embargo, la combinación maestra puede requerir un uso intensivo de E/S, ya que es necesario escribir y leer una gran cantidad de datos cuando se mezclan los fragmentos de índice; aunque esto no bloquea las consultas entrantes.  
@@ -82,9 +74,7 @@ Para obtener el máximo rendimiento de los índices de texto completo, implement
 -   Si usa rellenado incremental basado en una columna de marca de tiempo, cree un índice secundario en una columna **timestamp** si desea mejorar el rendimiento del rellenado incremental.  
   
 ##  <a name="full"></a> Solucionar problemas de rendimiento de los rellenados completos  
-<a id="review-the-full-text-crawl-logs" class="xliff"></a>
-
-### Revisar los registros de rastreo de texto completo
+### <a name="review-the-full-text-crawl-logs"></a>Revisar los registros de rastreo de texto completo
  Para ayudar a diagnosticar problemas de rendimiento, examine los registros de rastreo de texto completo.
  
 Cuando se produce un error durante un rastreo, la función de registro de rastreo de la búsqueda de texto completo crea y mantiene un registro de rastreo, que es un archivo sin formato. Cada registro de rastreo se corresponde con un determinado catálogo de texto completo. De forma predeterminada, los registros de rastreo de una instancia determinada (en este ejemplo, la instancia predeterminada) se encuentran en la carpeta `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG`.
@@ -100,9 +90,7 @@ Las partes variables del nombre de archivo de registro de rastreo son las siguie
   
  Por ejemplo, `SQLFT0000500008.2` es el archivo de registro de rastreo para un identificador de base de datos = 5 y un identificador de catálogo de texto completo = 8. El 2 al final del nombre de archivo indica que existen dos archivos de registro de rastreo para esta pareja de base de datos y catálogo.  
 
-<a id="check-physical-memory-usage" class="xliff"></a>
-
-### Comprobar el uso de la memoria física  
+### <a name="check-physical-memory-usage"></a>Comprobar el uso de la memoria física  
  Durante un rellenado de texto completo, es posible que fdhost.exe o sqlservr.exe no dispongan de suficiente memoria o se queden sin memoria.
 -   Si el registro de rastreo de texto completo muestra que fdhost.exe se reinicia con frecuencia o que se devuelve el código de error 8007008, significa que uno de estos procesos se está quedando sin memoria.
 -   Si fdhost.exe produce volcados, especialmente en equipos grandes con varias CPU, es posible que se esté quedando sin memoria.  
@@ -120,9 +108,7 @@ Las partes variables del nombre de archivo de registro de rastreo son las siguie
 
 -   **Problemas de paginación**. Un tamaño insuficiente del archivo de paginación, como ocurre en un sistema que tiene un archivo de paginación pequeño con un crecimiento restringido, también puede hacer que fdhost.exe o sqlservr.exe se queden sin memoria. Si los registros de rastreo no indican ningún error relacionado con la memoria, es probable que el rendimiento sea lento debido a una paginación excesiva.  
   
-<a id="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe" class="xliff"></a>
-
-### Estimar los requisitos de memoria del proceso de host de demonio de filtro (fdhost.exe)  
+### <a name="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe"></a>Estimar los requisitos de memoria del proceso de host de demonio de filtro (fdhost.exe)  
  La cantidad de memoria requerida por el proceso fdhost.exe para un rellenado depende principalmente del número de intervalos de rastreo de texto completo que utiliza, del tamaño de la memoria compartida entrante (ISM) y del número máximo de instancias de ISM.  
   
  La cantidad de memoria (en bytes) consumida por el host de demonio de filtro puede calcularse de forma aproximada utilizando esta fórmula:  
@@ -157,9 +143,7 @@ Para información esencial sobre las fórmulas siguientes, vea las notas que sig
 2.  500 MB es un cálculo de la memoria requerida por otros procesos en el sistema. Si el sistema está realizando trabajo adicional, aumente este valor en consecuencia.  
 3.  .*ism_size* es 8 MB para plataformas x64.  
   
-<a id="example-estimate-the-memory-requirements-of-fdhostexe" class="xliff"></a>
-
- #### Ejemplo: evaluar los requisitos de memoria de fdhost.exe  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Ejemplo: evaluar los requisitos de memoria de fdhost.exe  
   
  Este ejemplo corresponde a un equipo de 64 bits que tiene 8 GB de RAM y 4 procesadores de doble núcleo. El primer cálculo evalúa la memoria que necesita fdhost.exe (*F*). El número de rangos de rastreo es `8`.  
   
@@ -169,9 +153,7 @@ Para información esencial sobre las fórmulas siguientes, vea las notas que sig
   
  `M = 8192-640-500=7052`  
   
-<a id="example-setting-max-server-memory" class="xliff"></a>
-
- #### Ejemplo: establecer max server memory  
+ #### <a name="example-setting-max-server-memory"></a>Ejemplo: establecer max server memory  
   
  En este ejemplo, se usan las instrucciones [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) y [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] para establecer **max server memory** en el valor que se calculó para *M* en el ejemplo precedente, `7052`:  
   
@@ -186,9 +168,7 @@ GO
   
 Para más información sobre las opciones de memoria de servidor, vea [Opciones de configuración de memoria del servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
   
-<a id="check-cpu-usage" class="xliff"></a>
-
-### Comprobar el uso de CPU  
+### <a name="check-cpu-usage"></a>Comprobar el uso de CPU  
 El rendimiento de los rellenados completos no es el óptimo cuando el consumo de CPU medio es inferior a un 30 por ciento, aproximadamente. Aquí se discuten algunos factores que afectan al consumo de CPU.  
   
 -   Tiempo de espera alto para las páginas  
@@ -231,9 +211,7 @@ El motor de texto completo usa dos tipos de filtros cuando rellena un índice de
   
 Para solucionar este problema, marque el filtro para el documento contenedor (en este ejemplo, el documento de Word) como filtro de un solo subproceso. Para marcar un filtro como de un solo subproceso, establezca el valor del Registro **ThreadingModel** del filtro en **Apartment Threaded**. Para obtener más información sobre los contenedores uniproceso, vea las notas del producto [Understanding and Using COM Threading Models](http://go.microsoft.com/fwlink/?LinkId=209159)(Descripción y uso de modelos de subprocesos COM).  
   
-<a id="see-also" class="xliff"></a>
-
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones de configuración de memoria del servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [max full-text crawl range (opción de configuración del servidor)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
  [Rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md)   

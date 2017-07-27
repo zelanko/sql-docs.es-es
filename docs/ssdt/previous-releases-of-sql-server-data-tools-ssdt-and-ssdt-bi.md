@@ -14,22 +14,22 @@ caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 16a6e0bce020b3108901d3a8fa08ecdf30475afe
+ms.translationtype: HT
+ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
+ms.openlocfilehash: 1f64d004b54f8bc34c17ab3c36c952f9eb831096
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Versiones anteriores de SQL Server Data Tools (SSDT y SSDT-BI)
 SQL Server Data Tools (SSDT) proporciona plantillas de proyecto y superficies de diseño para crear diversos tipos de contenido de SQL Server: bases de datos relacionales, modelos de Analysis Services, informes de Reporting Services y paquetes de Integration Services.  
   
-Este producto se basa en un shell de Visual Studio y se lanzó a la vez que SQL Server. Las nuevas versiones de SSDT integran las características de SQL Server más recientes. Las versiones anteriores incluían las plantillas y el entorno de diseño más actualizados en el momento correspondiente a cada lanzamiento.  
+Este producto se basa en un shell de Visual Studio y se lanzó a la vez que SQL Server. Las nuevas versiones de SSDT integran las características más recientes de SQL Server. Las versiones anteriores incluían las plantillas y el entorno de diseño más actualizados en el momento correspondiente a cada lanzamiento.  
   
-SSDT es compatible con versiones anteriores, así que siempre puede usar [la versión más reciente](https://msdn.microsoft.com/library/mt204009.aspx) para diseñar e implementar bases de datos, modelos, informes y paquetes destinados a versiones más antiguas de SQL Server. También puede usar cualquiera de las versiones publicadas anteriormente que se muestran a continuación.  
+SSDT es compatible con versiones anteriores, por lo que siempre puede usar [versión más reciente de SSDT](https://msdn.microsoft.com/library/mt204009.aspx) para diseñar e implementar bases de datos, modelos, informes y paquetes que se ejecutan en versiones anteriores de SQL Server.  
   
 > [!NOTE]  
-> Desde que se creó, el shell de Visual Studio que se utiliza para crear tipos de contenido de SQL Server se ha lanzado con diferentes nombres, como **SQL Server Data Tools**, **SQL Server Data Tools - Business Intelligence**y **Business Intelligence Development Studio**. Las versiones anteriores incluían conjuntos específicos de plantillas de proyecto. Para que todas las plantillas de proyecto se encuentren en una misma versión de SSDT, necesita instalar [la más reciente](https://msdn.microsoft.com/library/mt204009.aspx). De lo contrario, es probable que tenga que instalar varias versiones anteriores para obtener todas las plantillas que se usan en SQL Server.  Solo se instalará un shell por cada versión de Visual Studio; si se instala una segunda versión de SSDT, simplemente se agregarán las plantillas que falten.  
+> Desde que se creó, el shell de Visual Studio que se utiliza para crear tipos de contenido de SQL Server se ha lanzado con diferentes nombres, como **SQL Server Data Tools**, **SQL Server Data Tools - Business Intelligence**y **Business Intelligence Development Studio**. Las versiones anteriores incluían conjuntos específicos de plantillas de proyecto. Para que todas las plantillas de proyecto se encuentren en una misma versión de SSDT, necesita instalar [la más reciente](https://msdn.microsoft.com/library/mt204009.aspx). De lo contrario, es probable que tenga que instalar varias versiones anteriores para obtener todas las plantillas que se usan en SQL Server.  Solo se instala un shell por versión de Visual Studio; si se instala una segunda versión de SSDT solo se agregan las plantillas que faltan.  
 
 ## <a name="recent-downloads"></a>Descargas más recientes
 
@@ -37,11 +37,11 @@ Las tres últimas descargas recientes se proporcionan para el caso improbable de
 
 |Versión| Visual Studio 2015|Visual Studio 2013|
 |:---|:---|:---|
+|17.0|[SSDT para VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| \* n/d|
 |16.5|[SSDT para VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|[SSDT para VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|
 |16.4.1|[SSDT para VS2015 16.4.1](https://go.microsoft.com/fwlink/?LinkID=828740)|[SSDT para VS2013 16.4.1](https://go.microsoft.com/fwlink/?LinkID=828737)|
-|16.3|[SSDT para VS2015 16.3](https://go.microsoft.com/fwlink/?LinkID=824659)|[SSDT para VS2013 16.3](https://go.microsoft.com/fwlink/?LinkID=824656)|
 
-
+\* SSDT admite las dos versiones más recientes de Visual Studio. Con el lanzamiento de Visual Studio 2017, SSDT para VS2013 se deja de actualizar. Para información adicional, consulte la sección de *preguntas más frecuentes* de [esta entrada del blog del equipo de SSDT](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
 
   
 ## <a name="links-to-download-pages"></a>Vínculos a páginas de descarga  
@@ -55,7 +55,7 @@ Proporciona plantillas con las que pueden crearse bases de datos relacionales pa
   
 -   [Descargar SSDT para Visual Studio 2012](https://msdn.microsoft.com/jj650015)  
   
--   **SSDT para Visual Studio 2010** ya no está disponible, así que seleccione una versión más reciente. Las versiones más recientes de SSDT ejecutarán en paralelo la instalación existente de Visual Studio 2010. No es necesario que SSDT coincida con la versión del producto completa de Visual Studio instalada en el equipo.  
+-   **SSDT para Visual Studio 2010** ya no está disponible, así que seleccione una versión más reciente. Las versiones más recientes de SSDT se ejecutan en paralelo con las instalaciones existentes de Visual Studio 2010. No es necesario que SSDT coincida con la versión del producto completa de Visual Studio instalada en el equipo.  
   
 Los clientes de Visual Studio 2013 pueden descargar una versión de vista previa de SSDT para probar las nuevas características que aún no están en la versión de lanzamiento del producto.  
   
@@ -65,13 +65,13 @@ Las plantillas de la edición Business Intelligence (BI) se utilizan para crear 
   
 **Diseñadores de BI**  
   
-[Descargar SSDT-BI para Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313): SQL Server 2014, SQL Server 2012, SQL Server 2008 y 2008 R2  
+[Descargar SSDT-BI para Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313) (SQL Server 2014, SQL Server 2012, SQL Server 2008 y 2008 R2)  
   
-[Descargar SSDT-BI para Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843): SQL Server 2014, SQL Server 2012, SQL Server 2008 y 2008 R2  
+[Descargar SSDT-BI para Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843) (SQL Server 2014, SQL Server 2012, SQL Server 2008 y 2008 R2)  
   
-Business Intelligence Development Studio (BIDS) - BIDS se instala mediante el programa de instalación de SQL Server. No hay ninguna descarga web: SQL Server 2008 y 2008 R2  
+Business Intelligence Development Studio (BIDS) se instala mediante el programa de instalación de SQL Server. Esta solución no se puede descargar por Internet. (SQL Server 2008 y 2008 R2)  
   
-Para SQL Server 2012 o 2014, puede usar **SSDT-BI para Visual Studio 2012** o **SSDT-BI fo Visual Studio 2013**. La única diferencia que hay entre estas dos opciones es la versión de Visual Studio.  
+Para SQL Server 2012 o 2014, puede usar **SSDT-BI para Visual Studio 2012** o **SSDT-BI fo Visual Studio 2013**. La única diferencia entre ambos es la versión de Visual Studio.  
   
 ## <a name="see-also"></a>Vea también  
 [Descargar SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  

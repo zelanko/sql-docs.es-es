@@ -12,19 +12,17 @@ ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 06/30/2017
+ms.date: 07/17/2017
 ms.author: genemi
 ms.workload: ssms-sql-server-management-studio
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 96e9fe438082ae1909076e9667a98d11b0cecea2
+ms.translationtype: HT
+ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
+ms.openlocfilehash: 4938dd27bf3f42cc85f22de99fef01adbad08ace
 ms.contentlocale: es-es
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/19/2017
 
 ---
-<a id="new-and-recently-updated-sql-server-management-studio-ssms-for-sql-server" class="xliff"></a>
-
-# Nuevos y actualizados recientemente: SQL Server Management Studio (SSMS) para SQL Server
+# <a name="new-and-recently-updated-sql-server-management-studio-ssms-for-sql-server"></a>Nuevos y actualizados recientemente: SQL Server Management Studio (SSMS) para SQL Server
 
 
 
@@ -36,7 +34,7 @@ Actualizaciones recientes se notifican para el siguiente intervalo de fechas y e
 
 
 
-- *Intervalo de fechas de las actualizaciones:* &nbsp; **17-05-2017** &nbsp; a &nbsp; **30-06-2017**
+- *Intervalo de fechas de las actualizaciones:* &nbsp; **23-05-2017** &nbsp; a &nbsp; **17-07-2017**
 - *Área temática:* &nbsp; **SQL Server Management Studio (SSMS)**.
 
 
@@ -44,66 +42,70 @@ Actualizaciones recientes se notifican para el siguiente intervalo de fechas y e
 
 &nbsp;
 
-<a id="new-articles-created-recently" class="xliff"></a>
-
-## Nuevos artículos creados recientemente
+## <a name="new-articles-created-recently"></a>Nuevos artículos creados recientemente
 
 Los siguientes vínculos llevan a nuevos artículos que se han agregado recientemente.
 
-*De momento no se ha agregado ningún artículo realmente nuevo.*
 
-<!--  GeneMi:  These are all merely phystical relocations and consolidations, not genuinely new content.
-
-1. [Change a Server&#39;s Registration (SQL Server Management Studio)](register-servers/change-a-server-s-registration-sql-server-management-studio.md)
-2. [Change the Name of Registered Server or Registered Server Group](register-servers/change-the-name-of-registered-server-or-registered-server-group.md)
-3. [Connect to a Registered Server (SQL Server Management Studio)](register-servers/connect-to-a-registered-server-sql-server-management-studio.md)
-4. [Create a Central Management Server and Server Group](register-servers/create-a-central-management-server-and-server-group.md)
-5. [Create a New Registered Server (SQL Server Management Studio)](register-servers/create-a-new-registered-server-sql-server-management-studio.md)
-6. [Create or Edit a Server Group (SQL Server Management Studio)](register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)
-7. [Disconnect from a Registered Server (SQL Server Management Studio)](register-servers/disconnect-from-a-registered-server-sql-server-management-studio.md)
-8. [Execute Statements Against Multiple Servers Simultaneously](register-servers/execute-statements-against-multiple-servers-simultaneously.md)
-9. [Export Registered Server Information (SQL Server Management Studio)](register-servers/export-registered-server-information-sql-server-management-studio.md)
-10. [Import Registered Server Information (SQL Server Management Studio)](register-servers/import-registered-server-information-sql-server-management-studio.md)
-11. [Move a Registered Server or Registered Server Group](register-servers/move-a-registered-server-or-registered-server-group.md)
-12. [Register a Connected Server (SQL Server Management Studio)](register-servers/register-a-connected-server-sql-server-management-studio.md)
-13. [Registered Servers F1 Help](register-servers/registered-servers-f1-help.md)
-14. [Register Servers](register-servers/register-servers.md)
-15. [Remove a Registered Server (SQL Server Management Studio)](register-servers/remove-a-registered-server-sql-server-management-studio.md)
-16. [Remove a Server Group (SQL Server Management Studio)](register-servers/remove-a-server-group-sql-server-management-studio.md)
-17. [View Registered Servers in SQL Server Management Studio](register-servers/view-registered-servers-in-sql-server-management-studio.md)
-18. [SQL Server Management Studio Keyboard Shortcuts](sql-server-management-studio-keyboard-shortcuts.md)
-19. [Ssms Utility](ssms-utility.md)
-20. [Lesson 1-1 - Start SQL Server Management Studio](tutorials/lesson-1-1-start-sql-server-management-studio.md)
-21. [Lesson 1-2 - Connect with Registered Servers and Object Explorer](tutorials/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)
-22. [Lesson 1-3 - Change the Environment Layout](tutorials/lesson-1-3-change-the-environment-layout.md)
-23. [Lesson 1-4 - Display the Query Window](tutorials/lesson-1-4-display-the-query-window.md)
-24. [Lesson 1-5 - Show the Object Explorer Details Page](tutorials/lesson-1-5-show-the-object-explorer-details-page.md)
-25. [Lesson 1-6 - Select the Keyboard Shortcut Scheme](tutorials/lesson-1-6-select-the-keyboard-shortcut-scheme.md)
-26. [Lesson 1-7 - Set the Startup Options](tutorials/lesson-1-7-set-the-startup-options.md)
-27. [Lesson 1-8 - Restore the Default SQL Server Management Studio Configuration](tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md)
-28. [Lesson 1-9 - Summary - Basic Navigation](tutorials/lesson-1-9-summary-basic-navigation.md)
-29. [Lesson 1: Basic Navigation in SQL Server Management Studio](tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md)
-30. [Lesson 2-1 - Connecting with Query Editor](tutorials/lesson-2-1-connecting-with-query-editor.md)
-31. [Lesson 2-2 - Adding Indentation](tutorials/lesson-2-2-adding-indentation.md)
-32. [Lesson 2-3 - Maximizing Query Editor](tutorials/lesson-2-3-maximizing-query-editor.md)
-33. [Lesson 2-4 - Using Comments](tutorials/lesson-2-4-using-comments.md)
-34. [Lesson 2-5 - Other Ways of Viewing the Code Window](tutorials/lesson-2-5-other-ways-of-viewing-the-code-window.md)
-35. [Lesson 2-6 - Script a Table](tutorials/lesson-2-6-script-a-table.md)
-36. [Lesson 2: Writing Transact-SQL](tutorials/lesson-2-writing-transact-sql.md)
-37. [Lesson 3-1 - Create Scripts Using Templates](tutorials/lesson-3-1-create-scripts-using-templates.md)
-38. [Lesson 3-2 - Create Custom Templates](tutorials/lesson-3-2-create-custom-templates.md)
-39. [Lesson 3-3 - Save Scripts as Projects or Solutions](tutorials/lesson-3-3-save-scripts-as-projects-or-solutions.md)
-40. [Lesson 3-4 - Summary - Solutions and Script Projects](tutorials/lesson-3-4-summary-solutions-and-script-projects.md)
-41. [Lesson 3: Working with Templates, Solutions, and Script Projects](tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md)
+1. [Cambiar el registro de un servidor (SQL Server Management Studio)](register-servers/change-a-server-s-registration-sql-server-management-studio.md)
+2. [Cambiar el nombre de un servidor registrado o un grupo de servidores registrados](register-servers/change-the-name-of-registered-server-or-registered-server-group.md)
+3. [Conectarse a un servidor registrado (SQL Server Management Studio)](register-servers/connect-to-a-registered-server-sql-server-management-studio.md)
+4. [Crear un servidor de administración central y un grupo de servidores](register-servers/create-a-central-management-server-and-server-group.md)
+5. [Crear un servidor registrado (SQL Server Management Studio)](register-servers/create-a-new-registered-server-sql-server-management-studio.md)
+6. [Crear o editar un grupo de servidores (SQL Server Management Studio)](register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)
+7. [Desconectarse de un servidor registrado (SQL Server Management Studio)](register-servers/disconnect-from-a-registered-server-sql-server-management-studio.md)
+8. [Ejecutar instrucciones en varios servidores simultáneamente](register-servers/execute-statements-against-multiple-servers-simultaneously.md)
+9. [Exportar información de servidores registrados (SQL Server Management Studio)](register-servers/export-registered-server-information-sql-server-management-studio.md)
+10. [Importar información de servidores registrados (SQL Server Management Studio)](register-servers/import-registered-server-information-sql-server-management-studio.md)
+11. [Mover un servidor registrado o un grupo de servidores registrados](register-servers/move-a-registered-server-or-registered-server-group.md)
+12. [Registrar un servidor conectado (SQL Server Management Studio)](register-servers/register-a-connected-server-sql-server-management-studio.md)
+13. [Servidores registrados (Ayuda F1)](register-servers/registered-servers-f1-help.md)
+14. [Registrar servidores](register-servers/register-servers.md)
+15. [Quitar un servidor registrado (SQL Server Management Studio)](register-servers/remove-a-registered-server-sql-server-management-studio.md)
+16. [Quitar un grupo de servidores (SQL Server Management Studio)](register-servers/remove-a-server-group-sql-server-management-studio.md)
+17. [Ver los servidores registrados en SQL Server Management Studio](register-servers/view-registered-servers-in-sql-server-management-studio.md)
+18. [Métodos abreviados de teclado de SQL Server Management Studio](sql-server-management-studio-keyboard-shortcuts.md)
+19. [Ssms (Utilidad)](ssms-utility.md)
+20. [Lección 1.1: Iniciar SQL Server Management Studio](tutorials/lesson-1-1-start-sql-server-management-studio.md)
+21. [Lección 1.2: Conectar con el Explorador de objetos y Servidores registrados](tutorials/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)
+22. [Lección 1.3: Cambiar el diseño del entorno](tutorials/lesson-1-3-change-the-environment-layout.md)
+23. [Lección 1.4: Mostrar la ventana Consulta](tutorials/lesson-1-4-display-the-query-window.md)
+24. [Lección 1.5: Mostrar la página Detalles del Explorador de objetos](tutorials/lesson-1-5-show-the-object-explorer-details-page.md)
+25. [Lección 1.6: Seleccionar el esquema de métodos abreviados de teclado](tutorials/lesson-1-6-select-the-keyboard-shortcut-scheme.md)
+26. [Lección 1.7: Establecer las opciones de inicio](tutorials/lesson-1-7-set-the-startup-options.md)
+27. [Lección 1.8: Restaurar la configuración predeterminada de SQL Server Management Studio](tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md)
+28. [Lección 1.9: Resumen: Navegación básica](tutorials/lesson-1-9-summary-basic-navigation.md)
+29. [Lección 1: Navegación básica en SQL Server Management Studio](tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md)
+30. [Lección 2.1: Conectar con el Editor de consultas](tutorials/lesson-2-1-connecting-with-query-editor.md)
+31. [Lección 2.2: Agregar sangría](tutorials/lesson-2-2-adding-indentation.md)
+32. [Lección 2.3: Maximizar el Editor de consultas](tutorials/lesson-2-3-maximizing-query-editor.md)
+33. [Lección 2.4: Usar comentarios](tutorials/lesson-2-4-using-comments.md)
+34. [Lección 2.5: Otras formas de ver la ventana de código](tutorials/lesson-2-5-other-ways-of-viewing-the-code-window.md)
+35. [Lección 2.6: Incluir una tabla en un script](tutorials/lesson-2-6-script-a-table.md)
+36. [Lección 2: Escribir Transact-SQL](tutorials/lesson-2-writing-transact-sql.md)
+37. [Lección 3.1: Crear scripts mediante plantillas](tutorials/lesson-3-1-create-scripts-using-templates.md)
+38. [Lección 3.2: Crear plantillas personalizadas](tutorials/lesson-3-2-create-custom-templates.md)
+39. [Lección 3.3: Guardar scripts como proyectos o soluciones](tutorials/lesson-3-3-save-scripts-as-projects-or-solutions.md)
+40. [Lección 3.4: Resumen: Soluciones y proyectos de scripts](tutorials/lesson-3-4-summary-solutions-and-script-projects.md)
+41. [Lección 3: Trabajar con plantillas, soluciones, proyectos de script](tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md)
 42. [Tutorial: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
--->
+
+
 
 
 &nbsp;
 
-<a id="updated-articles-with-excerpts" class="xliff"></a>
+<a name="compactupdatedlist"/>
 
-## Artículos actualizados con extractos
+## <a name="compact-list-of-articles-updated-recently"></a>Compact lista de artículos que se actualizó recientemente
+
+Esta lista compacta proporciona vínculos a todos los artículos actualizados que aparecen en la sección de extractos.
+
+
+
+&nbsp;
+
+## <a name="updated-articles-with-excerpts"></a>Artículos actualizados con extractos
 
 Esta sección muestra los extractos de las actualizaciones que se recopilan de los artículos que han presentado recientemente una actualización a gran escala.
 
@@ -119,9 +121,7 @@ Por estas y otras razones, no se copie el código de estos fragmentos y no toma 
 
 <a name="TitleNum_1"/>
 
-<a id="1-nbsp-sql-server-management-studio---changelog-ssmssql-server-management-studio-changelog-ssmsmd" class="xliff"></a>
-
-### 1. &nbsp; [SQL Server Management Studio - Changelog (SSMS) (SQL Server Management Studio: registro de cambios (SSMS))](sql-server-management-studio-changelog-ssms.md)
+### <a name="1-nbsp-sql-server-management-studio---changelog-ssmssql-server-management-studio-changelog-ssmsmd"></a>1. &nbsp; [SQL Server Management Studio - Changelog (SSMS) (SQL Server Management Studio: registro de cambios (SSMS))](sql-server-management-studio-changelog-ssms.md)
 
 *Actualizado: 08-06-2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
@@ -167,65 +167,44 @@ Disponible con carácter general | Número de compilación: 14.0.17119.0
 
 
 
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-<a id="compact-list-of-articles-updated-recently" class="xliff"></a>
-
-## Compact lista de artículos que se actualizó recientemente
-
-Esta lista compact proporciona vínculos a todos los artículos actualizados que se enumeran en la sección anterior.
-
-1. [SQL Server Management Studio - Changelog (SSMS)](#TitleNum_1)
-
-
-
-
-<a name="sisters2"/>
+<a name="similars2"/>
 
 &nbsp;
 
-<a id="sister-articles" class="xliff"></a>
-
-## Hermana artículos
+## <a name="similar-articles"></a>Artículos similares
 
 En esta sección se enumeran artículos muy similares a los artículos actualizados recientemente en otras áreas temáticas, dentro del mismo repositorio de GitHub.com: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
 
-<!--  20170630-1150  -->
+<!--  20170717-1101  -->
 
-<a id="subject-areas-which-do-have-new-or-recently-updated-articles" class="xliff"></a>
+#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Áreas temáticas con artículos nuevos o actualizados recientemente
 
-#### Áreas temáticas con artículos nuevos o actualizados recientemente
-
-- [Nuevos + Actualizados (12+2): documentos de **Análisis avanzado para SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nuevos + Actualizados (1+0): documentos de **Analysis Services para SQL**](../analysis-services/new-updated-analysis-services.md)
-- [Nuevos + Actualizados (0+2): documentos de **Conectar con SQL**](../connect/new-updated-connect.md)
-- [Nuevos + Actualizados (3+0): documentos de **Motor de base de datos para SQL**](../database-engine/new-updated-database-engine.md)
-- [Nuevos + Actualizados (1+2): documentos de **Integration Services para SQL**](../integration-services/new-updated-integration-services.md)
-- [Nuevos + Actualizados (2+8): documentos de **Linux para SQL**](../linux/new-updated-linux.md)
-- [Nuevos + Actualizados (1+0): documentos de **Master Data Services (MDS) para SQL**](../master-data-services/new-updated-master-data-services.md)
-- [Nuevos + Actualizados (5+5): documentos de **Bases de datos relacionales para SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Nuevos + Actualizados (2+0): documentos de **Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Nuevos + Actualizados (0+4): documentos de **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Nuevos + Actualizados (0+1): documentos de **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Nuevos + Actualizados (0+1): documentos de **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Nuevos + Actualizados (1+0): documentos de **Herramientas para SQL**](../tools/new-updated-tools.md)
+- [Nuevos + Actualizados (4+4) : documentos de **Análisis avanzado para SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nuevos + Actualizados (2+0) : documentos de **Analysis Services para SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Nuevos + Actualizados (1+2) : documentos de **Conexión a SQL**](../connect/new-updated-connect.md)
+- [Nuevos + Actualizados (6+0) : documentos de **Motor de base de datos para SQL**](../database-engine/new-updated-database-engine.md)
+- [Nuevos + Actualizados (13+2): documentos de **Linux para SQL**](../linux/new-updated-linux.md)
+- [Nuevos + Actualizados (1+0) : documentos de **Master Data Services (MDS) para SQL**](../master-data-services/new-updated-master-data-services.md)
+- [Nuevos + Actualizados (1+0) : documentos de **ODBC (conectividad abierta de bases de datos) para SQL**](../odbc/new-updated-odbc.md)
+- [Nuevos + Actualizados (8+4) : documentos de **Bases de datos relacionales para SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Nuevos + Actualizados (2+2) : documentos de **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Nuevos + Actualizados (0+1) : documentos de **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Nuevos + Actualizados (1+0) : documentos de **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Nuevos + Actualizados (1+0) : documentos de **Herramientas para SQL**](../tools/new-updated-tools.md)
 
 
-<a id="subject-areas-which-have-no-new-or-recently-updated-articles" class="xliff"></a>
-
-#### Áreas temáticas sin artículos nuevos ni actualizados recientemente
+#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Áreas temáticas sin artículos nuevos ni actualizados recientemente
 
 - [Nuevos + Actualizados (0+0): documentos de **Objetos de datos ActiveX (ADO) para SQL**](../ado/new-updated-ado.md)
 - [Nuevos + Actualizados (0+0): documentos de **Data Quality Services para SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Nuevos + Actualizados (0+0): documentos de **Extensiones de minería de datos (DMX) para SQL**](../dmx/new-updated-dmx.md)
+- [Nuevos + Actualizados (0+0): documentos de **Integration Services para SQL**](../integration-services/new-updated-integration-services.md)
 - [Nuevos + Actualizados (0+0): documentos de **Expresiones multidimensionales (MDX) para SQL**](../mdx/new-updated-mdx.md)
-- [Nuevos + Actualizados (0+0): documentos de **ODBC (conectividad abierta de bases de datos) para SQL**](../odbc/new-updated-odbc.md)
 - [Nuevos + Actualizados (0+0): documentos de **PowerShell para SQL**](../powershell/new-updated-powershell.md)
+- [Nuevos + Actualizados (0+0): documentos de **Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
 - [Nuevos + Actualizados (0+0): documentos de **Ejemplos para SQL**](../sample/new-updated-sample.md)
+- [Nuevos + Actualizados (0+0): documentos de **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
 - [Nuevos + Actualizados (0+0): documentos de **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
-- [Nuevos + Actualizados (0+0): documentos de **Transact-SQL**](../t-sql/new-updated-t-sql.md)
 - [Nuevos + Actualizados (0+0): documentos de **XQuery para SQL**](../xquery/new-updated-xquery.md)
 
 

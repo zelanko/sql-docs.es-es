@@ -41,29 +41,30 @@ Antes de crear el grupo de disponibilidad, debe:
    sudo vi /etc/hosts
    ```
 
-   El ejemplo siguiente muestra `/etc/hosts` en **Nodo1** adiciones para **Nodo1** y **Nodo2**. En este documento **Nodo1** hace referencia a la réplica principal de SQL Server. **Nodo2** hace referencia a la secundaria de SQL Server.;
+   El ejemplo siguiente muestra `/etc/hosts` en **node1** con adiciones para **node1**, **node2** y **node3**. En este documento, **node1** hace referencia al servidor que hospeda la réplica principal. **node2** y **node3** hacen referencia a servidores que hospedan réplicas secundarias.
 
 
    ```
    127.0.0.1   localhost localhost4 localhost4.localdomain4
    ::1       localhost localhost6 localhost6.localdomain6
-   10.128.18.128 node1
+   10.128.18.12 node1
    10.128.16.77 node2
+   10.128.15.33 node3
    ```
 
 ### <a name="install-sql-server"></a>Instalar SQL Server
 
 Instalar a SQL Server. Los siguientes vínculos apuntan a las instrucciones de instalación de SQL Server para varias distribuciones. 
 
-- [Red Hat Enterprise Linux](..\linux\sql-server-linux-setup-red-hat.md)
+- [Red Hat Enterprise Linux](../linux/quickstart-install-connect-red-hat.md)
 
-- [SUSE Linux Enterprise Server](..\linux\sql-server-linux-setup-suse-linux-enterprise-server.md)
+- [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md)
 
-- [Ubuntu](..\linux\sql-server-linux-setup-ubuntu.md)
+- [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)
 
 ## <a name="enable-always-on-availability-groups-and-restart-sqlserver"></a>Habilitar a grupos de disponibilidad AlwaysOn y reinicie SQL Server
 
-Habilitar grupos de disponibilidad AlwaysOn en cada nodo que hospeda el servicio SQL Server, a continuación, reinicie `mssql-server`.  Ejecute el script siguiente:
+Habilite los grupos de disponibilidad AlwaysOn en cada nodo que hospede una instancia de SQL Server y, luego, reinicie `mssql-server`.  Ejecute el script siguiente:
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
@@ -72,7 +73,7 @@ sudo systemctl restart mssql-server
 
 ##  <a name="enable-alwaysonhealth-event-session"></a>Habilitar la sesión de eventos AlwaysOn_health 
 
-Puede habilitar optionaly grupos de disponibilidad AlwaysOn específico eventos extendidos para ayudar a un diagnóstico más detallado y causa para solucionar un grupo de disponibilidad.
+Opcionalmente, puede habilitar los eventos extendidos de los grupos de disponibilidad AlwaysOn para ayudar con el diagnóstico de la causa raíz cuando solucione los problemas de un grupo de disponibilidad. Ejecute el comando siguiente en cada instancia de SQL Server. 
 
 ```Transact-SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
@@ -83,7 +84,7 @@ Para obtener más información acerca de esta sesión XE, consulte [siempre en E
 
 ## <a name="create-db-mirroring-endpoint-user"></a>Crear usuario del extremo de creación de reflejo de la base de datos
 
-El siguiente script de Transact-SQL crea un inicio de sesión denominado `dbm_login`y un usuario denominado `dbm_user`. Actualizar la secuencia de comandos con una contraseña segura. Ejecute el siguiente comando en todos los servidores de SQL Server para crear la base de datos de usuario del extremo de creación de reflejo.
+El siguiente script de Transact-SQL crea un inicio de sesión denominado `dbm_login`y un usuario denominado `dbm_user`. Actualizar la secuencia de comandos con una contraseña segura. Ejecute el comando siguiente en todas las instancias de SQL Server para crear el usuario de punto de conexión de la creación de reflejo de la base de datos.
 
 ```Transact-SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
@@ -92,9 +93,9 @@ CREATE USER dbm_user FOR LOGIN dbm_login;
 
 ## <a name="create-a-certificate"></a>Crear un certificado
 
-Servicio de SQL Server en Linux utiliza certificados para autenticar las comunicaciones entre los extremos de creación de reflejo. 
+El servicio SQL Server en Linux usa certificados para autenticar la comunicación entre los puntos de conexión de creación de reflejo. 
 
-El siguiente script de Transact-SQL crea una clave maestra y el certificado. A continuación, se realiza una copia del certificado y se protege el archivo con una clave privada. Actualizar la secuencia de comandos con contraseñas seguras. Conectarse a SQL Server principal y ejecute el siguiente Transact-SQL para crear el certificado:
+El siguiente script de Transact-SQL crea una clave maestra y el certificado. A continuación, se realiza una copia del certificado y se protege el archivo con una clave privada. Actualizar la secuencia de comandos con contraseñas seguras. Conéctese a la instancia de SQL Server principal y ejecute el siguiente comando de Transact-SQL para crear el certificado:
 
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -116,7 +117,7 @@ cd /var/opt/mssql/data
 scp dbm_certificate.* root@**<node2>**:/var/opt/mssql/data/
 ```
 
-En el servidor de destino, conceda permisos a mssql usuario tiene acceso al certificado.
+En cada servidor de destino, conceda permiso al usuario de mssql para que acceda al certificado.
 
 ```bash
 cd /var/opt/mssql/data
@@ -144,7 +145,6 @@ Los extremos de creación de reflejo de la base de datos utilizan el Protocolo d
 
 El código Transact-SQL siguiente crea un extremo de escucha denominado `Hadr_endpoint` para el grupo de disponibilidad. Se inicia el punto de conexión, y concede permiso de conexión para el usuario que ha creado. Antes de ejecutar la secuencia de comandos, reemplace los valores entre `**< ... >**`.
 
-
 >[!NOTE]
 >En esta versión, no utilice una dirección IP diferente para la dirección IP del agente de escucha. Estamos trabajando en una solución para este problema, pero el valor aceptable sólo por ahora es '0.0.0.0'.
 
@@ -164,5 +164,8 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 
 >[!IMPORTANT]
 >El puerto TCP en el servidor de seguridad debe estar abierto para el puerto de escucha.
+
+>[!IMPORTANT]
+>Para la versión de SQL Server 2017, el único método de autenticación que se admite para el punto de conexión de creación de reflejo de la base de datos es `CERTIFICATE`. La opción `WINDOWS` se habilitará en una futura versión.
 
 Para obtener más información, consulte [el extremo de creación de reflejo de base de datos (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).

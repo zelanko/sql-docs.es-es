@@ -15,17 +15,17 @@ caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a4cdbe630a64ce01c6319dcc5791c0f3f9b3176b
+ms.translationtype: HT
+ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
+ms.openlocfilehash: 5f9f128cab773951438aa89998ad76e7ba29bb4d
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="temporal-tables"></a>Tablas temporales
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] incorpora una característica de base de datos que admite tablas temporales con versión del sistema, lo que permite proporcionar información sobre los datos almacenados en la tabla en cualquier momento en el tiempo, en vez de únicamente los datos que son correctos en el momento actual determinado. La característica temporal de las bases de datos surgió con ANSI SQL 2011 y ahora es compatible con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  SQL Server 2016 incorpora una característica de base de datos que admite tablas temporales con versión del sistema, lo que permite proporcionar información sobre los datos almacenados en la tabla en cualquier momento en el tiempo, en vez de únicamente los datos que son correctos en el momento actual determinado. La característica temporal de las bases de datos surgió con ANSI SQL 2011 y ahora es compatible con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **Inicio rápido**  
   

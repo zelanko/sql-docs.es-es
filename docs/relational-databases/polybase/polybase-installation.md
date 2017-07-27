@@ -18,10 +18,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
-ms.openlocfilehash: 0c39bbf997fb5041a1fc4ea55699fbb3a40e3d75
+ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
+ms.openlocfilehash: 9a4f230e8c25a24f85f36f3a1aaf82fbf247cd9a
 ms.contentlocale: es-es
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/17/2017
 
 ---
 # <a name="polybase-installation"></a>Instalación de PolyBase
@@ -41,7 +41,7 @@ ms.lasthandoff: 07/14/2017
   
 -   Espacio disponible en disco duro mínimo: 2 GB.  
   
--   La conectividad TCP/IP debe estar habilitada. (Vea [Habilitar o deshabilitar un protocolo de red de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)).  La conectividad TCP/IP está deshabilitada de forma predeterminada con las ediciones SQL Server Developer y Express. Esto se debe habilitar manualmente para que PolyBase sea funcional.
+-   TCP/IP debe estar habilitado para que Polybase funcione correctamente. TCP/IP está habilitado de manera predeterminada en todas las ediciones de SQL Server, excepto en las ediciones Developer y Express de SQL Server. Para que Polybase funcione correctamente en las ediciones Developer y Express debe habilitar la conectividad TCP/IP (consulte [Habilitar o deshabilitar un protocolo de red de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)).
   
  **Notas**  
   

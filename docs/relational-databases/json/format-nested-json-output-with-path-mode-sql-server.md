@@ -2,7 +2,7 @@
 title: Formato de salida JSON anidada con el modo PATH (SQL Server) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/02/2016
+ms.date: 07/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,19 +15,19 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 3a11cee5097ed686d20d3bb8fcc7894138700841
+ms.translationtype: HT
+ms.sourcegitcommit: 1aa87e3d821e6d111948baa0843edf31d087d739
+ms.openlocfilehash: 3fc86f957f4ece3564d8f72558467cdf6c54c935
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>Formato de salida JSON anidada con el modo PATH (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Para mantener el control total sobre la salida de la cláusula **FOR JSON**, especifique la opción**PATH**.  
+Para mantener el control total sobre la salida de la cláusula **FOR JSON**, especifique la opción**PATH**.  
   
- El modo**PATH** le permite crear objetos contenedores y anidar propiedades complejas. Se da formato a los resultados como una matriz de objetos JSON.  
+El modo**PATH** le permite crear objetos contenedores y anidar propiedades complejas. Se da formato a los resultados como una matriz de objetos JSON.  
   
 La alternativa es usar la opción **AUTO** para aplicar formato a la salida automáticamente en función de la estructura de la instrucción **SELECT**.
  -   Para más información sobre la opción **AUTO**, vea [Aplicar formato a la salida JSON automáticamente con el modo AUTO](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md).
@@ -36,9 +36,9 @@ La alternativa es usar la opción **AUTO** para aplicar formato a la salida auto
 Estos son algunos ejemplos de la cláusula **FOR JSON** con la opción **PATH** . Aplique formato a los resultados anidados utilizando nombres de columna separados por puntos o consultas anidadas, tal como se muestra en los ejemplos siguientes. De forma predeterminada los valores null no se incluyen en la salida de **FOR JSON**.  
 
 ## <a name="example---dot-separated-column-names"></a>Ejemplo: nombres de columna separados por puntos  
- La siguiente consulta da formato a las cinco primeras filas de la tabla AdventureWorks Person como JSON.  
+La siguiente consulta da formato a las cinco primeras filas de la tabla AdventureWorks `Person` como JSON.  
 
-La cláusula FOR JSON PATH usa el alias de columna o el nombre de columna para determinar el nombre de clave en la salida de JSON. Si un alias que contiene puntos, la opción PATH crea objetos anidados.  
+La cláusula **FOR JSON PATH** usa el alias de columna o el nombre de columna para determinar el nombre de clave en la salida de JSON. Si un alias que contiene puntos, la opción PATH crea objetos anidados.  
 
  **Consulta**  
   
@@ -58,7 +58,7 @@ SELECT TOP 5
 [{
     "Id": 1,
     "FirstName": "Ken",
-    "LastName": "Sánchez",
+    "LastName": "Sanchez",
     "Info": {
         "MiddleName": "J"
     }
@@ -89,7 +89,7 @@ SELECT TOP 5
 ```  
    
 ## <a name="example---multiple-tables"></a>Ejemplo: varias tablas  
- Si se hace referencia a más de una tabla en una consulta, FOR JSON PATH anida cada columna mediante su alias. La siguiente consulta crea un objeto JSON por par (OrderHeader, OrderDetails) combinado en la consulta. 
+Si se hace referencia a más de una tabla en una consulta, **FOR JSON PATH** anida cada columna mediante su alias. La siguiente consulta crea un objeto JSON por par (OrderHeader, OrderDetails) combinado en la consulta. 
   
  **Consulta**  
   

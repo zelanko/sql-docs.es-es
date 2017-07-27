@@ -2,7 +2,7 @@
 title: "Aplicar formato a la salida JSON automáticamente con el modo AUTO (SQL Server) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/02/2016
+ms.date: 07/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: cba250a399bb3de87c9713ac600c9807527a1cd9
+ms.translationtype: HT
+ms.sourcegitcommit: 1aa87e3d821e6d111948baa0843edf31d087d739
+ms.openlocfilehash: 09e81a8bbc77e9bbf9f76bb669ab53bd549bef85
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>Aplicar formato a la salida JSON automáticamente con el modo AUTO (SQL Server)
@@ -29,20 +29,22 @@ ms.lasthandoff: 06/23/2017
 
 Para aplicar formato a la salida de la cláusula **FOR JSON** automáticamente en función de la estructura de la instrucción **SELECT**, especifique la opción **AUTO**.  
   
-Con la opción **AUTO** , el formato de la salida JSON se determina automáticamente según el orden de las columnas en la lista SELECT y sus tablas de origen. No se puede cambiar este formato.
+Cuando especifica la opción **AUTO**, el formato de la salida JSON se determina automáticamente según el orden de las columnas en la lista SELECT y sus tablas de origen. No se puede cambiar este formato.
  
- La alternativa consiste en usar la opción **PATH** para mantener el control sobre la salida.
- -   Para obtener más información sobre la opción **PATH**, consulte [Format Nested JSON Output with PATH Mode](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md) (Aplicar formato a la salida JSON anidada con el modo PATH).
- -   Para obtener información general sobre ambas opciones, consulte [Format Query Results as JSON with FOR JSON](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md) (Aplicar formato a los resultados de la consulta como JSON con FOR JSON).
+La alternativa consiste en usar la opción **PATH** para mantener el control sobre la salida.
+-   Para obtener más información sobre la opción **PATH**, consulte [Format Nested JSON Output with PATH Mode](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md) (Aplicar formato a la salida JSON anidada con el modo PATH).
+-   Para obtener información general sobre ambas opciones, consulte [Format Query Results as JSON with FOR JSON](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md) (Aplicar formato a los resultados de la consulta como JSON con FOR JSON).
+
+Una consulta que usa la opción **FOR JSON AUTO** debe tener una cláusula **FROM** .  
   
- Una consulta que usa la opción **FOR JSON AUTO** debe tener una cláusula **FROM** .  
+Estos son algunos ejemplos de la cláusula **FOR JSON** con la opción **AUTO** .  
   
- Estos son algunos ejemplos de la cláusula **FOR JSON** con la opción **AUTO** .  
+## <a name="examples"></a>Ejemplos
+
+### <a name="example-1"></a>Ejemplo 1
+ **Query**  
   
-## <a name="examples"></a>Ejemplos  
- **Consulta 1**  
-  
-Los resultados de la cláusula FOR JSON AUTO son similares a los de FOR JSON PATH cuando se usa solo una tabla en la consulta. En este caso, FOR JSON AUTO no crea objetos anidados. La única diferencia es que FOR JSON AUTO genera alias separados por puntos (por ejemplo, `Info.MiddleName` en el siguiente ejemplo) como claves con puntos, no como objetos anidados.  
+Cuando una consulta hace referencia solo a una tabla, los resultados de la cláusula FOR JSON AUTO son similares a los resultados de FOR JSON PATH. En este caso, FOR JSON AUTO no crea objetos anidados. La única diferencia es que FOR JSON AUTO genera alias separados por puntos (por ejemplo, `Info.MiddleName` en el siguiente ejemplo) como claves con puntos, no como objetos anidados.  
   
 ```sql  
 SELECT TOP 5   
@@ -54,7 +56,7 @@ SELECT TOP 5
    FOR JSON AUTO  
 ```  
   
- **Resultado 1**  
+ **Resultado**  
   
 ```json  
 [{
@@ -83,10 +85,12 @@ SELECT TOP 5
     "Info.MiddleName": "A"
 }]
 ```  
+
+### <a name="example-2"></a>Ejemplo 2
+
+**Query**  
   
- **Consulta 2**  
-  
- Al unir tablas, las columnas de la primera tabla se generan como propiedades del objeto raíz. Las columnas de la segunda tabla se generan como propiedades de un objeto anidado. El nombre de tabla o alias de la segunda tabla (por ejemplo, `D` en el ejemplo siguiente) se usa como el nombre de la matriz anidada.  
+Al unir tablas, las columnas de la primera tabla se generan como propiedades del objeto raíz. Las columnas de la segunda tabla se generan como propiedades de un objeto anidado. El nombre de tabla o alias de la segunda tabla (por ejemplo, `D` en el ejemplo siguiente) se usa como el nombre de la matriz anidada.  
   
 ```sql  
 SELECT TOP 2 SalesOrderNumber,  
@@ -99,7 +103,7 @@ FROM Sales.SalesOrderHeader H
 FOR JSON AUTO   
 ```  
   
- **Resultado 2**  
+**Resultado**  
   
 ```json  
 [{
@@ -119,9 +123,11 @@ FOR JSON AUTO
     }]
 }]
 ```  
+
+### <a name="example-3"></a>Ejemplo 3
  
- **Consulta 3**  
- En lugar de usar FOR JSON AUTO, puede anidar una subconsulta FOR JSON PATH en la instrucción SELECT, como se muestra en el ejemplo siguiente. Este ejemplo produce el mismo resultado que el ejemplo anterior.  
+**Query**  
+En lugar de usar FOR JSON AUTO, puede anidar una subconsulta FOR JSON PATH en la instrucción SELECT, como se muestra en el ejemplo siguiente. Este ejemplo produce el mismo resultado que el ejemplo anterior.  
   
 ```sql  
 SELECT TOP 2  
@@ -135,7 +141,7 @@ FROM Sales.SalesOrderHeader AS H
 FOR JSON PATH  
 ```  
   
- **Resultado 3**  
+**Resultado**  
   
 ```json  
 [{

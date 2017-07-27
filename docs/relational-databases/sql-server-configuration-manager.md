@@ -2,7 +2,7 @@
 title: "Administrador de configuración de SQL Server | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 02/25/2016
+ms.date: 07/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -26,11 +26,11 @@ caps.latest.revision: 58
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 54e170a54d3b4008a46b722734919769e2244ef1
+ms.translationtype: HT
+ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
+ms.openlocfilehash: 8c9ab15a35c892a31b882797271629a5ec9ef1a0
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="sql-server-configuration-manager"></a>Administrador de configuración de SQL Server
@@ -40,11 +40,11 @@ ms.lasthandoff: 06/23/2017
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es una herramienta para administrar los servicios asociados a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], para configurar los protocolos de red utilizados por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]y para administrar la configuración de conectividad de red de los equipos cliente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] El Administrador de configuración es un complemento de [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console que está disponible desde el menú Inicio o que se puede agregar a cualquier otra pantalla de [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (**mmc.exe**) usa el archivo **SQLServerManager\<versión>.msc** (como, por ejemplo, **SQLServerManager13.msc** para [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) para abrir el Administrador de configuración. Cuando instala Windows en la unidad C, estas son las rutas de acceso a las cuatro últimas versiones.  
   
 |||  
-|-|-|  
+|-|-|
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|  
 |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
-|[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
-|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
+|[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
   
 > [!NOTE]  
 >  Como el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es un complemento del programa [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console y no un programa independiente, el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no aparece como aplicación en las versiones más recientes de Windows.  
@@ -69,7 +69,7 @@ ms.lasthandoff: 06/23/2017
 > [!IMPORTANT]  
 >  Utilice siempre herramientas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para cambiar la cuenta utilizada por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o los servicios del Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , o para cambiar la contraseña de la cuenta. Además de cambiar el nombre de la cuenta, el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] realiza configuraciones adicionales, como establecer los permisos del Registro de Windows para que la nueva cuenta pueda leer la configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Otras herramientas, como el Administrador de control de servicios de Windows, pueden cambiar el nombre de la cuenta, pero no la configuración asociada. Si el servicio no puede obtener acceso a la parte de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] del Registro, no se puede iniciar correctamente.  
   
- Como ventaja adicional, las contraseñas modificadas mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], SMO o WMI tienen efecto inmediatamente, sin necesidad de reiniciar el servicio.  
+ Como ventaja adicional, las contraseñas modificadas mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , SMO o WMI tienen efecto inmediatamente, sin necesidad de reiniciar el servicio.  
   
 ## <a name="manage-server--client-network-protocols"></a>Administrar protocolos de red de servidor & cliente  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] permite configurar protocolos de red de servidor y cliente, así como opciones de conectividad. Una vez habilitados los protocolos correctos, no suele ser necesario cambiar las conexiones de red del servidor. Sin embargo, puede utilizar el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] si necesita volver a configurar las conexiones del servidor de modo que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] escuche en un protocolo de red, puerto o canalización concretos. Para obtener más información sobre cómo habilitar protocolos, vea [Habilitar o deshabilitar un protocolo de red de servidor](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md). Para obtener más información sobre cómo habilitar el acceso a los protocolos a través de un firewall, vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  

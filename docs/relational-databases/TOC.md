@@ -1,10 +1,5 @@
-# [Características de la base de datos](database-features.md)
+# [Información general](database-features.md)
 # [Artículos nuevos y recientemente actualizados](new-updated-relational-databases.md)
-
-# Información general
-## [Características entre instancias del motor de base de datos](database-engine-cross-instance-features.md)
-## [Referencia técnica](technical-reference-database-engine.md)  
-## [Referencia de características](feature-reference-database-engine.md)   
 
 # [Guías de SQL Server](sql-server-guides.md)
 ## Guía de solución de problemas y supervisión de grupos de disponibilidad AlwaysOn

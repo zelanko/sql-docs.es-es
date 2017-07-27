@@ -2,7 +2,7 @@
 title: Restricciones entre claves principales y claves externas | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/02/2016
+ms.date: 07/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Restricciones entre claves principales y claves externas
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Las claves principales y las claves externas son dos tipos de restricciones que se pueden usar para aplicar la integridad de datos en las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se trata de objetos de base de datos importantes.  
   

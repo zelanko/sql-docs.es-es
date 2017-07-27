@@ -1,7 +1,7 @@
 ---
 title: "Eliminación de relaciones de claves externas | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 07/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -26,7 +26,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="delete-foreign-key-relationships"></a>Eliminar relaciones entre claves externas.
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Puede eliminar una restricción de clave externa en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Al eliminar una restricción de clave externa se elimina el requisito de forzar la integridad referencial.  
   

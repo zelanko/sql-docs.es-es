@@ -1,7 +1,7 @@
 ---
 title: "Tarea Reorganizar índice (Plan de mantenimiento) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 07/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Reorganize Index Task dialog box
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9b9be64710acf299e601582127fa2e326061c5e2
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 223d43974e6b63f7375a3d3e000492612fb6856e
+ms.openlocfilehash: c07ca6e5a69f368d916c700dbc949726f198af50
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/25/2017
 
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>Tarea Reorganizar índice (Plan de mantenimiento)
@@ -62,12 +62,17 @@ ms.lasthandoff: 06/22/2017
   
  **Compactar objetos grandes**  
  Cancela la asignación de espacio para tablas y vistas cuando es posible. Esta opción utiliza `ALTER INDEX LOB_COMPACTION = ON`.  
+
+
+[!INCLUDE[index-stats-options-reorg-5589131-2999104](../../includes/paragraph-content/index-stats-options-reorganize-maintenance-plan-include.md)]
+
   
  **Ver T-SQL**  
  Muestra las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] realizadas en el servidor para esta tarea, en función de las opciones seleccionadas.  
   
 > [!NOTE]  
 >  Si el número de objetos afectados es elevado, es posible que deba esperar un rato hasta que se muestren.  
+
   
 ## <a name="new-connection-dialog-box"></a>Cuadro de diálogo Nueva conexión  
  **Nombre de conexión**  

@@ -69,7 +69,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Pueden importar un DACPAC a un proyecto de base de datos y seguir diseñando la base de datos.  
   
-Las herramientas de SQL Server también admiten base de datos local para el desarrollo de aplicaciones de bases de datos de lado cliente no conectadas. El desarrollador puede utilizar una instantánea de esta base de datos local para crear un DACPAC contenido en un archivo .dacpac.  
+        Las herramientas de SQL Server también admiten base de datos local para el desarrollo de aplicaciones de bases de datos de lado cliente no conectadas. El desarrollador puede utilizar una instantánea de esta base de datos local para crear un DACPAC contenido en un archivo .dacpac.  
   
     -   Independientemente, el desarrollador puede publicar un proyecto de base de datos directamente en una base de datos sin tener que generar un DACPAC. La operación de publicación sigue un comportamiento similar a la operación de implementación con otras herramientas.  
   

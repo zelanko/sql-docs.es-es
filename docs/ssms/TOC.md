@@ -7,16 +7,13 @@
 ## [Artículos nuevos y recientemente actualizados](new-updated-ssms.md)
 ## [Versiones de SSMS anteriores](previous-sql-server-management-studio-releases.md)
 
-# [Usar SSMS](use-sql-server-management-studio.md)
-# [Características en SSMS](features-in-sql-server-management-studio.md)
-# [Recopilación de comentarios de uso](sql-server-management-studio-telemetry-ssms.md)
-# [Descargar el módulo de PowerShell SQL Server](download-sql-server-ps-module.md)
+# [Descargar el módulo de PowerShell de SQL Server](download-sql-server-ps-module.md)
 
 # [Agente SQL Server +](../ssms/agent/sql-server-agent.md)
-# [F1 Ayuda +](../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md)
+# [Ayuda F1 +](../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md)
 # [Menú Ayuda +](../ssms/menu-help/sql-server-management-studio-menu-help.md)
 # [Explorador de objetos +](../ssms/object/object-explorer.md)
-# [El Explorador de soluciones +](../ssms/solution/solution-explorer.md)
+# [Explorador de soluciones +](../ssms/solution/solution-explorer.md)
 # [Plantillas +](../ssms/template/template-explorer.md)
 # [Visual Database Tools +](../ssms/visual-db-tools/visual-database-tools.md)
 # [Registrar servidores +](../ssms/register-servers/register-servers.md)
@@ -45,8 +42,8 @@
 # [Argumentos de las herramientas externas](use-of-sql-server-features-and-capabilities-wwi-oltp.md)
 # [Agregar una herramienta externa al menú Herramientas](add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md)
 # [Configurar la auditoría de inicio de sesión](configure-login-auditing-sql-server-management-studio.md)
-# [Usar el cuadro de herramientas](use-the-toolbox.md)
+# [Utilizar el cuadro de herramientas](use-the-toolbox.md)
 
 # [Ssms (Utilidad)](ssms-utility.md)  
 # [Métodos abreviados de teclado de SSMS](sql-server-management-studio-keyboard-shortcuts.md)  
-
+# [Datos de uso anónimos](sql-server-management-studio-telemetry-ssms.md)

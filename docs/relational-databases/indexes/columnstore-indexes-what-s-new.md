@@ -22,9 +22,7 @@ ms.contentlocale: es-es
 ms.lasthandoff: 06/29/2017
 
 ---
-<a id="columnstore-indexes---what39s-new" class="xliff"></a>
-
-# Novedades de los índices de almacén de columnas
+# <a name="columnstore-indexes---what39s-new"></a>Novedades de los índices de almacén de columnas
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Resumen de las características de almacén de columnas disponibles en cada versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y las versiones más recientes de Azure SQL Database Premium Edition, Azure SQL Data Warehouse y Almacenamiento de datos paralelo.  
@@ -32,9 +30,7 @@ ms.lasthandoff: 06/29/2017
  >[!NOTE]
  > En el caso de Azure SQL Database, los índices de almacén de columnas solo están disponibles en Premium Edition.
  
-<a id="feature-summary-for-product-releases" class="xliff"></a>
-
-## Resumen de las características para cada versión del producto  
+## <a name="feature-summary-for-product-releases"></a>Resumen de las características para cada versión del producto  
  En esta tabla se resumen las características fundamentales de los índices de almacén de columnas y los productos en los que están disponibles.  
 
   
@@ -63,17 +59,13 @@ ms.lasthandoff: 06/29/2017
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] agrega estas nuevas características.
 
-<a id="functional" class="xliff"></a>
-
-### Funciones
+### <a name="functional"></a>Funciones
 - [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] admite columnas calculadas no persistentes en índices de almacén de columnas agrupados. No se admiten columnas persistentes en índices de almacén de columnas agrupados. No se puede crear un índice no agrupado en un índice de almacén columnas con una columna calculada. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] incorpora mejoras esenciales destinadas a mejorar el rendimiento y la flexibilidad de los índices de almacén de columnas. Estas mejoras optimizan los escenarios de almacenamiento de datos y facilitan los análisis operativos en tiempo real.  
   
-<a id="functional" class="xliff"></a>
-
-### Funciones  
+### <a name="functional"></a>Funciones  
   
 -   Una tabla de almacén de filas puede contar con un índice de almacén de columnas no agrupado actualizable. Antes, el índice de almacén de columnas no agrupado era de solo lectura.  
   
@@ -87,9 +79,7 @@ ms.lasthandoff: 06/29/2017
   
 -   Los índices de almacén de columnas tienen una opción de retraso de compresión que minimiza el impacto de la carga de trabajo transaccional en los análisis operativos en tiempo real.  Esta opción permite cambiar con frecuencia filas para estabilizarlas antes de comprimirlas en el almacén de columnas. Para más información, vea [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) e [Introducción al almacén de columnas para análisis operativos en tiempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
-<a id="performance-for-database-compatibility-level-120-or-130" class="xliff"></a>
-
-### Rendimiento del nivel de compatibilidad de base de datos 120 o 130  
+### <a name="performance-for-database-compatibility-level-120-or-130"></a>Rendimiento del nivel de compatibilidad de base de datos 120 o 130  
   
 -   Los índices de almacén de columnas admiten el nivel de aislamiento de instantánea de lectura confirmada (RCSI) y el aislamiento de instantánea (SI). De esta forma, se pueden realizar consultas de análisis homogéneas transaccionales sin ningún bloqueo.  
   
@@ -101,9 +91,7 @@ ms.lasthandoff: 06/29/2017
   
 -   La aplicación de predicado acelera las consultas que comparan cadenas del tipo [v]char o n[v]char. Esto se aplica a los operadores de comparación habituales y se incluyen operadores que utilizan filtros de mapa de bits, como LIKE. Además, funciona con todas las intercalaciones que admite SQL Server.  
   
-<a id="performance-for-database-compatibility-level-130" class="xliff"></a>
-
-### Rendimiento del nivel de compatibilidad de base de datos 130  
+### <a name="performance-for-database-compatibility-level-130"></a>Rendimiento del nivel de compatibilidad de base de datos 130  
   
 -   El modo de ejecución por lotes admite ahora consultas con cualquiera de estas operaciones:  
   
@@ -121,9 +109,7 @@ ms.lasthandoff: 06/29/2017
   
 -   Las consultas de tabla con optimización para memoria pueden tener planes paralelos en el modo de interoperabilidad de SQL a la hora de acceder a datos de índices de almacén de columnas o almacén de filas.  
   
-<a id="supportability" class="xliff"></a>
-
-### Compatibilidad  
+### <a name="supportability"></a>Compatibilidad  
  Las siguientes vistas del sistema son nuevas para el almacén de columnas:  
   
 -   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
@@ -154,9 +140,7 @@ ms.lasthandoff: 06/29/2017
   
 -   [sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)  
   
-<a id="limitations" class="xliff"></a>
-
-### Limitaciones  
+### <a name="limitations"></a>Limitaciones  
   
 -   La función MERGE se deshabilita cuando se define un índice de árbol B en un índice de almacén de columnas agrupado.  
   
@@ -164,9 +148,7 @@ ms.lasthandoff: 06/29/2017
   
 -   Para las tablas en memoria, las consultas de índices de almacén de columnas se ejecutan únicamente en el modo de interoperabilidad y no en el modo nativo en memoria. Se admite la ejecución en paralelo.  
   
-<a id="sql-server-2014" class="xliff"></a>
-
-## SQL Server 2014  
+## <a name="sql-server-2014"></a>SQL Server 2014  
  SQL Server 2014 introdujo el índice de almacén de columnas agrupadas como el formato de almacenamiento principal. Este permitía cargas regulares, así como operaciones de actualización, eliminación e inserción.  
   
 -   La tabla puede utilizar un índice de almacén de columnas agrupadas como el almacenamiento de tabla principal. No se permite ningún otro índice en la tabla, pero el índice de almacén de columnas agrupado se puede actualizar. De este modo, se pueden realizar cargas regulares y efectuar cambios en filas individuales.  
@@ -179,9 +161,7 @@ ms.lasthandoff: 06/29/2017
   
 -   Estos operadores se ejecutan en modo por lotes de consultas multiproceso: SCAN, FILTER, PROJECT, JOIN, GROUP BY y UNION ALL.  
   
-<a id="sql-server-2012" class="xliff"></a>
-
-## SQL Server 2012  
+## <a name="sql-server-2012"></a>SQL Server 2012  
  SQL Server 2012 introdujo el índice de almacén de columnas no agrupado como otro tipo de índice en las tablas de almacén de filas y el procesamiento por lotes para las consultas de los datos de almacén de columnas.  
   
 -   Una tabla de almacén de filas puede contar con un índice de almacén de columnas no agrupado.  
@@ -192,9 +172,7 @@ ms.lasthandoff: 06/29/2017
   
 -   El procesamiento por lotes se traduce en que las consultas rinden el doble de bien o mejor, pero solo está disponible para la ejecución de consultas en paralelo.  
   
-<a id="see-also" class="xliff"></a>
-
-## Vea también  
+## <a name="see-also"></a>Vea también  
  Guía de índices de almacén de columnas   
  Carga de datos de índices de almacén de columnas   
  [Rendimiento de las consultas de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   

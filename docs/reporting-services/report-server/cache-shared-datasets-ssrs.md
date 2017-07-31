@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
 -   La consulta se ejecuta como resultado de una referencia del conjunto de datos compartido en un informe que se entrega a través del correo electrónico, donde es probable que un número grande de personas haga clic en el vínculo en un breve intervalo de tiempo.  
   
--   La siguiente lista proporciona ejemplos de cuándo no almacenar en memoria caché un conjunto de datos compartido:  
+ La siguiente lista proporciona ejemplos de cuándo no almacenar en memoria caché un conjunto de datos compartido:  
   
 -   Los resultados de la consulta siempre deben incluir los datos más recientes.  
   

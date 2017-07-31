@@ -16,24 +16,20 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 caps.latest.revision: 8
 author: sabotta
 ms.author: carlasab
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
 ms.openlocfilehash: ca52d53cf25fa0ead6abd9b870f4d8dab424d11a
 ms.contentlocale: es-es
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="help-viewer-and-offline-content-for-sql-server" class="xliff"></a>
-
-# Visor de Ayuda y contenido sin conexión para SQL Server
+# <a name="help-viewer-and-offline-content-for-sql-server"></a>Visor de Ayuda y contenido sin conexión para SQL Server
   
   
   
 Este artículo muestra cómo instalar el Visor de Ayuda y ver la documentación de SQL Server sin conexión. El artículo cubre documentación para [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016 y SQL Server 2017. 
 
-<a id="install-help-viewer" class="xliff"></a>
-
-## Instalar el Visor de Ayuda
+## <a name="install-help-viewer"></a>Instalar el Visor de Ayuda
 En la tabla siguiente se indican las herramientas que instalan el Visor de Ayuda en función de la versión de SQL Server que use. Instale una de las herramientas enumeradas para instalar el Visor de Ayuda.
 
 
@@ -56,9 +52,7 @@ En la tabla siguiente se indican las herramientas que instalan el Visor de Ayuda
 > Puede ver la Ayuda local de [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] mediante el Visor de Ayuda 2.x, pero únicamente si selecciona **Instalar contenido desde disco**. 
 
 
-<a id="sql-server-2016-sql-server-2017-offline-content" class="xliff"></a>
-
-## Contenido sin conexión de SQL Server 2016 y SQL Server 2017  
+## <a name="sql-server-2016-sql-server-2017-offline-content"></a>Contenido sin conexión de SQL Server 2016 y SQL Server 2017  
  
 **Para instalar el contenido sin conexión**  
 1. Abra el Visor de Ayuda. Para ello, inicie SQL Server Management Studio o Visual Studio y haga clic en **Agregar y quitar contenido de la Ayuda** en el menú **Ayuda**.  
@@ -85,9 +79,7 @@ En la tabla siguiente se indican las herramientas que instalan el Visor de Ayuda
    >[!IMPORTANT]
    > Si aparece un mensaje que indica que se ha producido un error en la operación de mover, cierre el cuadro de mensaje, cierre el Visor de Ayuda y, después, vuelva a abrir el Visor de Ayuda. La nueva ubicación del contenido debería aparecer ahora en la **Ruta de acceso del almacén local**.   
  
-<a id="includesssql14mdincludessssql14-mdmd-offline-content" class="xliff"></a>
-
-## [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] Contenido sin conexión 
+## <a name="includesssql14mdincludessssql14-mdmd-offline-content"></a>[!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] Contenido sin conexión 
  
   
 **Para instalar el contenido sin conexión**  
@@ -118,9 +110,7 @@ En la tabla siguiente se indican las herramientas que instalan el Visor de Ayuda
   
     ![HelpViewer1_withContentInstalled_ZoomedIn](../release-notes/media/helpviewer1-withcontentinstalled-zoomedin.png)  
   
-<a id="view-online-content-in-help-viewer" class="xliff"></a>
-
-## Ver el contenido en línea en el Visor de Ayuda
+## <a name="view-online-content-in-help-viewer"></a>Ver el contenido en línea en el Visor de Ayuda
 
 En el Visor de Ayuda v2.x, puede ver el contenido en línea mediante una de las siguientes acciones.
 
@@ -140,17 +130,13 @@ En el Visor de Ayuda v1.x, puede ver el contenido en línea si hace lo siguiente
 
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../release-notes/media/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
 
-<a id="f1-help-and-other-tips" class="xliff"></a>
-
-## Ayuda F1 y otras sugerencias
+## <a name="f1-help-and-other-tips"></a>Ayuda F1 y otras sugerencias
 
 Cuando se presiona F1, aparece en pantalla el tema correspondiente. El tema no se puede mostrar en la Ayuda local.
 
 Además, el Visor de Ayuda no admite la configuración del proxy ni tampoco el formato ISO. 
 
 
-<a id="additional-information" class="xliff"></a>
-
-## Información adicional
+## <a name="additional-information"></a>Información adicional
 [Visor de Ayuda de Microsoft (Visual Studio 2015)](https://msdn.microsoft.com/library/hh580782.aspx)
 

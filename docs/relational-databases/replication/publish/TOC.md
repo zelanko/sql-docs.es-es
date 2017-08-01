@@ -10,7 +10,7 @@
 ## [Definir un artículo](define-an-article.md)  
 ### [Especificar tipos de artículo (programación de la replicación con Transact-SQL)](specify-article-types-replication-transact-sql-programming.md)  
 ## [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md)  
-## [Ver y modificar las propiedades del artículo](view-and-modify-article-properties.md)  
+## [Ver y modificar las propiedades de un artículo](view-and-modify-article-properties.md)  
 ## [Eliminar una publicación](delete-a-publication.md)  
 ## [Eliminar un artículo](delete-an-article.md)  
 ## [Crear una publicación a partir de una base de datos de Oracle](create-a-publication-from-an-oracle-database.md)  

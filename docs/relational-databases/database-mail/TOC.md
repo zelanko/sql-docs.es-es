@@ -4,7 +4,7 @@
 ## [Crear una cuenta de Correo electrónico de base de datos](create-a-database-mail-account.md)  
 ## [Configurar el Correo electrónico de base de datos](configure-database-mail.md)  
 # [Objetos de mensajería de Correo electrónico de base de datos](database-mail-messaging-objects.md)  
-# [Programa externo de Correo electrónico de base de datos](database-mail-external-program.md)  
+# [Programa externo Correo electrónico de base de datos](database-mail-external-program.md)  
 # [Registro y auditorías del Correo electrónico de base de datos](database-mail-log-and-audits.md)  
 ## [Crear un trabajo del Agente SQL Server para archivar mensajes y registros de eventos del Correo electrónico de base de datos](create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
 ## [Comprobar el estado de los mensajes de correo electrónico enviados con Correo electrónico de base de datos](check-the-status-of-e-mail-messages-sent-with-database-mail.md)  

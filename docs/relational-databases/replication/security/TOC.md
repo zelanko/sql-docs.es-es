@@ -5,7 +5,7 @@
 ## [Administrar inicios de sesión y contraseñas en la replicación](manage-logins-and-passwords-in-replication.md)  
 ## [Desarrollo seguro](secure-development-replication.md)  
 ## [Modelo de seguridad del Agente de replicación](replication-agent-security-model.md)  
-## [Requisitos del rol de seguridad para la replicación](security-role-requirements-for-replication.md)  
+## [Security Role Requirements for Replication](security-role-requirements-for-replication.md)  
 ## [Prácticas recomendadas de seguridad de replicación](replication-security-best-practices.md)  
 # [Implementación segura](secure-deployment-replication.md)  
 ## [Proteger el distribuidor](secure-the-distributor.md)  

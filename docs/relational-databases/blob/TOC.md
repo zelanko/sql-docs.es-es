@@ -2,7 +2,7 @@
 # [Comparar opciones para almacenar objetos Blob](compare-options-for-storing-blobs-sql-server.md)  
 # [FILESTREAM](filestream-sql-server.md)  
 ## [Habilitar y configurar FILESTREAM](enable-and-configure-filestream.md)  
-## [Crear una base de datos habilitada para FILESTREAM](create-a-filestream-enabled-database.md)  
+## [crear una base de datos habilitada para FILESTREAM](create-a-filestream-enabled-database.md)  
 ## [Crear una tabla para almacenar datos FILESTREAM](create-a-table-for-storing-filestream-data.md)  
 ## [Obtener acceso a datos FILESTREAM con Transact-SQL](access-filestream-data-with-transact-sql.md)  
 ## [Crear aplicaciones cliente para datos FILESTREAM](create-client-applications-for-filestream-data.md)  

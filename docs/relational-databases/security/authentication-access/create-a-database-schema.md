@@ -21,16 +21,14 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 3a224f5be40f6f7a68a28cb4c8f741c24527e8bd
 ms.openlocfilehash: b164e70bf4b1e7586d8e70ab8edb7baa1dfcaade
 ms.contentlocale: es-es
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="create-a-database-schema" class="xliff"></a>
-
-# Crear un esquema de la base de datos
+# <a name="create-a-database-schema"></a>Crear un esquema de la base de datos
   En este tema se describe cómo crear un esquema en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **En este tema**  
@@ -65,9 +63,7 @@ ms.lasthandoff: 07/05/2017
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-<a id="to-create-a-schema" class="xliff"></a>
-
-##### Para crear un esquema  
+##### <a name="to-create-a-schema"></a>Para crear un esquema  
   
 1.  En el Explorador de objetos, expanda la carpeta **Bases de datos** .  
   
@@ -81,9 +77,7 @@ ms.lasthandoff: 07/05/2017
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-<a id="additional-options" class="xliff"></a>
-
-### Opciones adicionales  
+### <a name="additional-options"></a>Opciones adicionales  
  El cuadro de diálogo **Esquema - Nuevo** también proporciona opciones de dos páginas adicionales: **Permisos** y **Propiedades extendidas**.  
   
 -   La página **Permisos** muestra todos los elementos protegibles posibles y los permisos en esos elementos protegibles que se pueden conceder al inicio de sesión.  
@@ -92,9 +86,7 @@ ms.lasthandoff: 07/05/2017
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-<a id="to-create-a-schema" class="xliff"></a>
-
-#### Para crear un esquema  
+#### <a name="to-create-a-schema"></a>Para crear un esquema  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

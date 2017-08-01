@@ -22,16 +22,14 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1e8b91f880f5cc4f5db69f09fb0bded2b51aaa3c
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="implement-a-business-logic-handler-for-a-merge-article" class="xliff"></a>
-
-# Implementar un controlador de lógica de negocios para un artículo de mezcla
+# <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementar un controlador de lógica de negocios para un artículo de mezcla
   En este tema se describe cómo implementar un controlador de lógica de negocios para un artículo de mezcla en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante programación de la replicación o Replication Management Objects (RMO).  
   
  El espacio de nombres <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa una interfaz que le permite escribir una lógica de negocios compleja para administrar eventos que se producen durante el proceso de sincronización de la replicación de mezcla. El proceso de la replicación puede invocar los métodos en el controlador de lógica de negocios para cada fila cambiada que se replica durante la sincronización.  
@@ -58,9 +56,7 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="ReplProg"></a> Usar programación de la replicación  
   
-<a id="to-create-and-deploy-a-business-logic-handler" class="xliff"></a>
-
-#### Para crear e implementar un controlador de lógica de negocios  
+#### <a name="to-create-and-deploy-a-business-logic-handler"></a>Para crear e implementar un controlador de lógica de negocios  
   
 1.  En Visual Studio [!INCLUDE[msCoName](../../includes/msconame-md.md)] , cree un nuevo proyecto para el ensamblado .NET que contenga el código que implementa el controlador de lógica de negocios.  
   
@@ -103,9 +99,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  Un controlador de lógica de negocios se debe implementar en cada servidor en el que se ejecute el Agente de mezcla, que incluye el servidor IIS que hospeda replisapi.dll al usar la sincronización web.  
   
-<a id="to-register-a-business-logic-handler" class="xliff"></a>
-
-#### Para registrar un controlador de lógica de negocios  
+#### <a name="to-register-a-business-logic-handler"></a>Para registrar un controlador de lógica de negocios  
   
 1.  En el publicador, ejecute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) para comprobar que el ensamblado aún no se ha registrado como un controlador de lógica de negocios.  
   
@@ -114,15 +108,11 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  Si el ensamblado no está implementado en el mismo directorio que el ejecutable del Agente de mezcla, en el mismo directorio que la aplicación que inicia de forma sincrónica dicho agente o en la caché de ensamblados global (GAC), debe especificar la ruta de acceso completa con el nombre del ensamblado para **@dotnet_assembly_name**. Al usar la sincronización web, debe especificar la ubicación de ensamblado en el servidor web.  
   
-<a id="to-use-a-business-logic-handler-with-a-new-table-article" class="xliff"></a>
-
-#### Para usar un controlador de lógica de negocios con un nuevo artículo de tabla  
+#### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>Para usar un controlador de lógica de negocios con un nuevo artículo de tabla  
   
 1.  Ejecute [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) para definir un artículo, especificando el nombre descriptivo del controlador de lógica de negocios para **@article_resolver**. Para más información, consulte [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-<a id="to-use-a-business-logic-handler-with-an-existing-table-article" class="xliff"></a>
-
-#### Para usar un controlador de lógica de negocios con un artículo de tabla existente  
+#### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Para usar un controlador de lógica de negocios con un artículo de tabla existente  
   
 1.  Ejecute [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) especificando **@publication**, **@article** un valor de **article_resolver** para **@property** y el nombre descriptivo del controlador de lógica de negocios para **@value**.  
   
@@ -139,9 +129,7 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
   
-<a id="to-create-a-business-logic-handler" class="xliff"></a>
-
-#### Para crear un controlador de lógica de negocios  
+#### <a name="to-create-a-business-logic-handler"></a>Para crear un controlador de lógica de negocios  
   
 1.  En Visual Studio [!INCLUDE[msCoName](../../includes/msconame-md.md)] , cree un nuevo proyecto para el ensamblado .NET que contenga el código que implementa el controlador de lógica de negocios.  
   
@@ -182,9 +170,7 @@ ms.lasthandoff: 06/22/2017
   
 6.  Genere el proyecto para crear el ensamblado del controlador de lógica de negocios.  
   
-<a id="to-register-a-business-logic-handler" class="xliff"></a>
-
-#### Para registrar un controlador de lógica de negocios  
+#### <a name="to-register-a-business-logic-handler"></a>Para registrar un controlador de lógica de negocios  
   
 1.  Cree una conexión al distribuidor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
@@ -202,15 +188,11 @@ ms.lasthandoff: 06/22/2017
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - un valor de **true**.  
   
-<a id="to-deploy-a-business-logic-handler" class="xliff"></a>
-
-#### Para implementar un controlador de lógica de negocios  
+#### <a name="to-deploy-a-business-logic-handler"></a>Para implementar un controlador de lógica de negocios  
   
 1.  Implemente el ensamblado en el servidor donde se ejecuta el Agente de mezcla, en la ubicación del archivo especificada cuando el controlador de lógica de negocios se registró en el distribuidor. Para una suscripción de extracción, el agente se ejecuta en el suscriptor y, para una suscripción de inserción, se ejecuta en el distribuidor. Al usar la sincronización web, el agente se ejecuta en el servidor web. Si la ruta de acceso completa no estuviera incluida con el nombre del ensamblado cuando se registró el controlador de lógica de negocios, implemente el ensamblado en el mismo directorio como el ejecutable del Agente de mezcla, en el mismo directorio que la aplicación que inicia sincrónicamente dicho agente. Puede instalar el ensamblado en la GAC si hay varias aplicaciones que usen el mismo ensamblado.  
   
-<a id="to-use-a-business-logic-handler-with-a-new-table-article" class="xliff"></a>
-
-#### Para usar un controlador de lógica de negocios con un nuevo artículo de tabla  
+#### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>Para usar un controlador de lógica de negocios con un nuevo artículo de tabla  
   
 1.  Cree una conexión al publicador mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
@@ -226,9 +208,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Llame al método <xref:Microsoft.SqlServer.Replication.Article.Create%2A> . Para más información, consulte [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-<a id="to-use-a-business-logic-handler-with-an-existing-table-article" class="xliff"></a>
-
-#### Para usar un controlador de lógica de negocios con un artículo de tabla existente  
+#### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Para usar un controlador de lógica de negocios con un artículo de tabla existente  
   
 1.  Cree una conexión al publicador mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
@@ -261,9 +241,7 @@ ms.lasthandoff: 06/22/2017
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-<a id="see-also" class="xliff"></a>
-
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Implementar un solucionador de conflictos personalizado para un artículo de mezcla](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [Depurar un controlador de lógica de negocios &#40;programación de la replicación&#41;](../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)   
  [Prácticas recomendadas de seguridad de replicación](../../relational-databases/replication/security/replication-security-best-practices.md)   

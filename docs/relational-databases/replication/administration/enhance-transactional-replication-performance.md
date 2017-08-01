@@ -25,29 +25,23 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 441ae5e2f835146f3d25bda645c44b33fa0146d2
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="enhance-transactional-replication-performance" class="xliff"></a>
-
-# Aumentar el rendimiento de la replicación transaccional
+# <a name="enhance-transactional-replication-performance"></a>Aumentar el rendimiento de la replicación transaccional
   Una vez que haya considerado las sugerencias generales sobre el rendimiento que se describen en [Aumentar el rendimiento general de la replicación](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), tenga en cuenta estas áreas adicionales específicas de la replicación transaccional.  
   
-<a id="database-design" class="xliff"></a>
-
-## Diseño de la base de datos  
+## <a name="database-design"></a>Diseño de la base de datos  
   
 -   Minimice el tamaño de la transacción en el diseño de la aplicación.  
   
      De manera predeterminada, la replicación transaccional propaga los cambios en función de los límites de las transacciones. Si las transacciones son más pequeñas, es menos probable que el Agente de distribución tenga que volver a enviar una transacción debido a problemas de red. Si el agente tiene que volver a enviar una transacción, la cantidad de datos que se enviarán será menor.  
   
-<a id="distributor-configuration" class="xliff"></a>
-
-## Configuración del distribuidor  
+## <a name="distributor-configuration"></a>Configuración del distribuidor  
   
 -   Configure el distribuidor en un servidor dedicado.  
   
@@ -57,9 +51,7 @@ ms.lasthandoff: 06/22/2017
   
      Pruebe la replicación con una carga típica para el sistema con el fin de determinar cuánto espacio se necesita para almacenar comandos. Asegúrese de que la base de datos es lo suficientemente grande para almacenar comandos sin recurrir al crecimiento automático con frecuencia. Para más información sobre cómo cambiar el tamaño de una base de datos, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md).  
   
-<a id="publication-design" class="xliff"></a>
-
-## Diseño de la publicación  
+## <a name="publication-design"></a>Diseño de la publicación  
   
 -   Replique la ejecución de los procedimientos almacenados al realizar actualizaciones por lotes en las tablas publicadas.  
   
@@ -69,9 +61,7 @@ ms.lasthandoff: 06/22/2017
   
      Si no puede utilizar el parámetro **-SubscriptionStreams** que se describe más adelante en este tema, considere la posibilidad de crear varias publicaciones. Repartir artículos entre dichas publicaciones permite que la replicación aplique en paralelo los cambios a los suscriptores.  
   
-<a id="subscription-considerations" class="xliff"></a>
-
-## Consideraciones acerca de las suscripciones  
+## <a name="subscription-considerations"></a>Consideraciones acerca de las suscripciones  
   
 -   Utilice agentes independientes en lugar de agentes compartidos si tiene varias publicaciones en el mismo publicador (este es el valor predeterminado del Asistente para nueva publicación).  
   
@@ -81,9 +71,7 @@ ms.lasthandoff: 06/22/2017
   
     -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Especificar programaciones de sincronización](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
-<a id="distribution-agent-and-log-reader-agent-parameters" class="xliff"></a>
-
-## Parámetros del Agente de distribución y del Agente de registro del LOG  
+## <a name="distribution-agent-and-log-reader-agent-parameters"></a>Parámetros del Agente de distribución y del Agente de registro del LOG  
   
 -   Para resolver los cuellos de botella accidentales que solo ocurren una vez, use el parámetro **–MaxCmdsInTran** para el Agente de registro del LOG.  
   

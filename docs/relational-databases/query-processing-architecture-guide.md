@@ -21,7 +21,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
 ms.openlocfilehash: 0052444959911431f68bb40fd5059fb45b0d3412
 ms.contentlocale: es-es
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
@@ -214,7 +214,7 @@ Además de los requisitos de las sugerencias de tabla y opciones `SET` options a
 
 Una consulta no tiene que hacer referencia explícita a una vista indexada en la cláusula `FROM` clause for the Query Optimizer to use the indexed view. Si la consulta contiene referencias a columnas de las tablas base que también se encuentran en la vista indizada y el optimizador de consultas considera que la vista indizada constituye el mecanismo de acceso de menor costo, el optimizador elige la vista indizada, de forma similar a como elige los índices de la tabla base cuando no se hace referencia directa a los mismos en una consulta. El optimizador de consultas puede elegir la vista en caso de contener columnas a las que no se hace referencia en la consulta, siempre y cuando la vista ofrezca la opción de costo más bajo para incluir una o varias de las columnas especificadas en la consulta.
 
-The Query Optimizer treats an indexed view referenced in the `FROM` . Expande la definición de la vista en la consulta al inicio del proceso de optimización. A continuación se realiza la coincidencia de vista indizada. Puede que se use la vista indexada en el plan de ejecución final seleccionado por el Optimizador de consultas o que, en su lugar, el plan materialice los datos necesarios de la vista mediante el acceso a las tablas base a las que hace referencia la vista. El Optimizador de consultas elige la alternativa de menor costo.
+El optimizador de consultas trata `FROM` como vista estándar cualquier vista indexada a la que se haga referencia en la cláusula. Expande la definición de la vista en la consulta al inicio del proceso de optimización. A continuación se realiza la coincidencia de vista indizada. Puede que se use la vista indexada en el plan de ejecución final seleccionado por el Optimizador de consultas o que, en su lugar, el plan materialice los datos necesarios de la vista mediante el acceso a las tablas base a las que hace referencia la vista. El Optimizador de consultas elige la alternativa de menor costo.
 
 #### <a name="using-hints-with-indexed-views"></a>Usar sugerencias con vistas indizadas
 

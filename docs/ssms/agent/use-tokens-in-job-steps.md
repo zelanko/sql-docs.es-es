@@ -20,11 +20,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bc46faf06a34a41f94ee9eb4fa05c2a9ce3a5cec
+ms.translationtype: HT
+ms.sourcegitcommit: 8ec830912e034436d2de0613c793c08ce961c031
+ms.openlocfilehash: bc10ed9c7b6ea1a240b9274c9880c44fa3e8f3ab
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/25/2017
 
 ---
 # <a name="use-tokens-in-job-steps"></a>Usar tokens en pasos de trabajo
@@ -70,8 +70,8 @@ En las siguientes tablas se indican y describen los tokens y macros compatibles 
 |**(A-ERR)**|Número de error. Si el trabajo se ejecuta a causa de una alerta, el valor del número de error sustituye automáticamente a este token en el paso de trabajo.|  
 |**(A-SEV)**|Gravedad del error. Si el trabajo se ejecuta a causa de una alerta, el valor de la gravedad del error sustituye automáticamente a este token en el paso de trabajo.|  
 |**(A-MSG)**|Texto del mensaje. Si el trabajo se ejecuta a causa de una alerta, el valor del texto del mensaje sustituye automáticamente a este token en el paso de trabajo.|  
-|**(AGENT_JOB_NAME)**|Nombre del trabajo.|  
-|**(AGENT_STEP_NAME)**|Nombre del paso.|  
+|**(JOBNAME)**|Nombre del trabajo.|  
+|**(STEPNAME)**|Nombre del paso.|  
 |**(DATE)**|Fecha actual (en formato AAAAMMDD).|  
 |**(INST)**|Nombre de instancia. Para una instancia predeterminada, este token tendrá el nombre de instancia predeterminado: MSSQLSERVER.|  
 |**(JOBID)**|Id. del trabajo.|  

@@ -1,7 +1,7 @@
 ---
 title: Novedades de SQL Server 2017 | Microsoft Docs
 ms.custom: 
-ms.date: 07/12/2017
+ms.date: 07/25/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
-ms.openlocfilehash: 731d53110d9dc47de5a44dd7f65190e029e120dc
+ms.sourcegitcommit: 70a1fd4dbec68d22187585de69a1d603c39e259e
+ms.openlocfilehash: 31572214a8276182ce1358fc05979a72b57a2ad6
 ms.contentlocale: es-es
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novedades de SQL Server 2017
@@ -41,10 +41,17 @@ SQL Server 2017 representa un paso importante hacia convertir SQL Server en una 
     -   Se cambió el nombre del parámetro *runincluster* del procedimiento almacenado **[catálogo].[create_execution]** a *runinscaleout* para mejorar la coherencia y la legibilidad.
     -   El catálogo de SSIS tiene una nueva propiedad global para especificar el modo predeterminado de ejecución de los paquetes de SSIS.
 
+### <a name="master-data-services-mds"></a>Master Data Services (MDS)
+- Se han mejorado la experiencia de actualización y el rendimiento al actualizar a SQL Server 2017 Master Data Services desde las versiones anteriores siguientes de SQL Server.
+    - SQL Server 2012
+    - SQL Server 2014
+    - SQL Server 2016
+
+
 ## <a name="sql-server-database-engine"></a>Motor de base de datos de SQL Server  
 SQL Server 2017 incluye muchas mejoras de rendimiento, perfeccionamiento y características de Motor de base de datos. 
-- La **recompilación de índices en línea reanudable** reanuda una operación de recompilación de índices en línea desde donde se detuvo después de un error (como una conmutación por error en una réplica o espacio en disco insuficiente), o bien pausa y reanuda más adelante una operación de recompilación de índices en línea. Vea [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) y [directrices para operaciones de índice en línea](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
-- La opción **IDENTITY_CACHE** de ALTER DATABASE SCOPED CONFIGURATION permite evitar lagunas en los valores de columnas e identidad si un servidor se reinicia inesperadamente o realiza conmutación por error en un servidor secundario. Vea [configuración de ALTER DATABASE en el ámbito](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). (CTP 2.0)
+- La **recompilación de índices en línea reanudable** reanuda una operación de recompilación de índices en línea desde donde se detuvo después de un error (como una conmutación por error en una réplica o espacio en disco insuficiente), o bien pausa y reanuda más adelante una operación de recompilación de índices en línea. Vea [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) y [Directrices para operaciones de índices en línea](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
+- La opción **IDENTITY_CACHE** de ALTER DATABASE SCOPED CONFIGURATION permite evitar lagunas en los valores de columnas e identidad si un servidor se reinicia inesperadamente o realiza conmutación por error en un servidor secundario. Vea [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). (CTP 2.0)
 - El **ajuste automático de bases de datos** proporciona información de los posibles problemas de rendimiento de las consultas, recomienda soluciones y puede corregir automáticamente los problemas identificados. Consulte [Ajuste automático](../relational-databases/automatic-tuning/automatic-tuning.md). (CTP 2.0)
 - Las nuevas **funcionalidades de base de datos de gráficos** para modelar relaciones varios a varios incluyen una nueva sintaxis de [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) para crear tablas de nodos y perimetrales, y la palabra clave [MATCH](../t-sql/queries/match-sql-graph.md) para consultas. Consulte [Procesamiento de gráficos con SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md). (CTP 2.0)
 - Una opción de sp_configure llamada `clr strict security` se habilita de manera predeterminada para mejorar la seguridad de los ensamblados CLR. Consulte [Seguridad estricta de CLR](../database-engine/configure-windows/clr-strict-security.md). (CTP 2.0)
@@ -77,10 +84,16 @@ Para más información, consulte [Novedades de Motor de base de datos de SQL Ser
     -   El catálogo de SSIS tiene una nueva propiedad global para especificar el modo predeterminado de ejecución de los paquetes de SSIS.
 - En la nueva característica **Escalabilidad horizontal de SSIS**, ahora puede usar el parámetro **Use32BitRuntime** cuando desencadena la ejecución. (CTP 2.1)
 - SQL Server 2017 Integration Services (SSIS) ahora admite **SQL Server en Linux** y un paquete nuevo le permite ejecutar paquetes de SSIS en Linux desde la línea de comandos. Para más información, consulte la [entrada de blog que anuncia la compatibilidad de SSIS con Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). (CTP 2.1)
-- La nueva característica **Escalabilidad horizontal de SSIS** facilita en gran medida la ejecución de SSIS en varias máquinas. Consulte [Escalabilidad horizontal de Integration Services](~/integration-services/integration-services-ssis-scale-out.md). (CTP 1.0)
+- La nueva característica **Escalabilidad horizontal de SSIS** facilita en gran medida la ejecución de SSIS en varias máquinas. Vea [Integration Services Scale Out](~/integration-services/scale-out/integration-services-ssis-scale-out.md) (Escalabilidad horizontal de Integration Services). (CTP 1.0)
 - Origen OData y Administrador de conexiones OData ahora admiten la conexión a fuentes de OData de Microsoft Dynamics AX Online y Microsoft Dynamics CRM Online. (CTP 1.0)
 
 Para más información, consulte [Novedades de Integration Services en SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md).
+
+## <a name="master-data-services-mds"></a>Master Data Services (MDS)
+Además de mejorar el rendimiento y la experiencia de actualización a SQL Server 2017 MDS, también se han introducido las siguientes mejoras adicionales en Master Data Services.
+- Ahora puede ver las listas ordenadas de entidades, colecciones y jerarquías en la página del **Explorador** de la aplicación web.
+- Se ha mejorado el rendimiento del almacenamiento provisional de millones de registros con el procedimiento almacenado de almacenamiento provisional.
+- Se ha mejorado el rendimiento al expandir la carpeta **Entidades** de la página **Administrar grupos** para asignar permisos de modelos. La página **Administrar grupos** se encuentra en la sección **Seguridad** de la aplicación web. Para más información sobre la mejora del rendimiento, vea [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview). Para más información sobre cómo asignar permisos, vea [Assign Model Object Permissions (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md) [Asignar permisos de objeto de modelo (Master Data Services)].
 
 ## <a name="sql-server-analysis-services-ssas"></a>SQL Server Analysis Services (SSAS) 
 SQL Server Analysis Services 2017 presenta muchas mejoras para los modelos tabulares. Estos incluyen:
@@ -99,14 +112,14 @@ SQL Server Analysis Services 2017 presenta muchas mejoras para los modelos tabul
 Para más información, consulte [Novedades de SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).
 
 ## <a name="sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS)
-A partir de CTP 2.1, SSRS ya no está disponible para instalarse mediante el programa de instalación de SQL Server. Vaya al Centro de descarga de Microsoft para [descargar la versión preliminar de mayo de 2017 de Servidor de informes de Power BI y Power BI Desktop optimizado para Servidor de informes de Power BI](https://www.microsoft.com/download/details.aspx?id=55253). Para obtener información sobre el servidor de informes de Power BI, consulte [empezar a trabajar con el servidor de informes de Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
+A partir de CTP 2.1, SSRS ya no está disponible para instalarse mediante el programa de instalación de SQL Server. Vaya al Centro de descarga de Microsoft para [descargar la versión candidata para lanzamiento de Microsoft SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252). 
 - Ahora hay comentarios disponibles para los informes a fin de agregar perspectivas y colaborar con otros usuarios. También puede incluir archivos adjuntos con los comentarios. (CTP 2.1)
 - En las versiones más recientes del Generador de informes y SQL Server Data Tools, puede crear consultas DAX nativas sobre los modelos de datos tabulares de SQL Server Analysis Services si arrastra y coloca los campos deseados en los diseñadores de consultas. Consulte el [blog de Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
 Para más información, consulte [Novedades de SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
-## <a name="sql-server-machine-learning-services"></a>Servicios de aprendizaje de máquina SQL Server
-SQL Server R Services ahora se llama **SQL Server Machine Learning Services** para reflejar la nueva compatibilidad con Python además de los lenguajes R. Puede usar Machine Learning Services (en base de datos) para ejecutar scripts de R o Python en SQL Server, o bien instalar Microsoft Machine Learning Server (independiente) para implementar y usar modelos de R y Python que no requieren SQL Server. Ambas plataformas incluyen nuevos algoritmos de MicrosoftML de aprendizaje automático de distribuida y la versión más reciente de Microsoft R (versión 9.1.0). (CTP 2.0)
+## <a name="sql-server-machine-learning-services"></a>Machine Learning Services en SQL Server
+SQL Server R Services ahora se llama **SQL Server Machine Learning Services** para reflejar la nueva compatibilidad con Python además de los lenguajes R. Puede usar Machine Learning Services (en base de datos) para ejecutar scripts de R o Python en SQL Server, o bien instalar Microsoft Machine Learning Server (independiente) para implementar y usar modelos de R y Python que no requieren SQL Server. Ambas plataformas incluyen nuevos algoritmos de MicrosoftML para el aprendizaje automático distribuido y la última versión de Microsoft R (versión 9.1.0). (CTP 2.0)
 - El aprendizaje automático con Python incluye el módulo **revoscalepy**, que admite un subconjunto de los algoritmos distribuidos y los contextos de cálculo proporcionados en RevoScaleR. 
 - Puede crear fácilmente varios modelos en paralelo desde R con la nueva función **rxExecBy**. Los contextos de cálculo admitidos incluyen RxSpark y RxInSQLServer. (CTP 2.0)
 

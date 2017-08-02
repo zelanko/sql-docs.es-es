@@ -14,26 +14,25 @@ caps.latest.revision: 51
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
-ms.openlocfilehash: f593303a681e2f52161777fc48f0fb1b479d20d9
+ms.translationtype: HT
+ms.sourcegitcommit: 223d43974e6b63f7375a3d3e000492612fb6856e
+ms.openlocfilehash: 7fb0aa5f5d8b78a4783efdbb4e1f064eb025538a
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-management-studio----release-notes"></a>SQL Server Management Studio: notas de la versión
 Bienvenido/a a nuestra versión de disponibilidad general de SQL Server Management Studio.  Esta versión de SQL Server Management Studio (SSMS) es una instalación independiente fuera de la versión de SQL Server. Nuestro objetivo es actualizarla con frecuencia con nuevas funciones, correcciones y compatibilidad para las características más recientes de SQL Server y de Base de datos SQL de Azure.  
   
-Para instalar la versión más reciente de SQL Server Management Studio, vea [Download SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md).  
+Para instalar la versión más reciente de SQL Server Management Studio, vea [Descargar SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md).  
   
 A continuación indicamos los problemas y las limitaciones de esta versión de SQL Server Management Studio:  
 
-1. **Asistente para la base de datos de restauración genera un modelo de ruta de acceso incorrecta para la ubicación del archivo de base de datos de destino** 
-    trata de un problema conocido cuando SSMS está conectado a un servidor Linux. Aunque la ruta de acceso tiene un aspecto correcto/impar, que se procese correctamente en el servidor, es decir, no hay ningún problema funcional.
+1. **El asistente Restaurar base de datos genera un modelo de ruta de acceso incorrecta a la ubicación del archivo de base de datos de destino** Se trata de un problema conocido cuando SSMS está conectado a un servidor Linux. Aunque la ruta de acceso tiene un aspecto incorrecto o extraño, se procesa correctamente en el servidor, lo que significa que no existe ningún problema funcional.
 
-2. **Problemas del explorador de archivos**
-    - Cuando se trabaja con una instancia basada en Windows de SQL Server de 2017 CTP 2.0, se puede producir un error en el Explorador de archivos de interfaz de usuario de SSMS abrir si el servidor tiene una unidad de disquete vacía o un disco fijo protegidas por Bitlocker instalado. 
-    - La interfaz de usuario del explorador de archivos ya no es compatible con las versiones de SQL Server 2017 antes de CTP 2.0.
+2. **Errores del explorador de archivos**
+    - Cuando se trabaja con una instancia de SQL Server 2017 CTP 2.0 basada en Windows, la interfaz de usuario del explorador de archivos puede no abrirse si el servidor tiene instalados una unidad de disquete vacía o un disco fijo protegido por BitLocker. 
+    - La interfaz de usuario del explorador de archivos ya no es compatible con las versiones de SQL Server 2017 previas a CTP 2.0.
     
 
 
@@ -47,7 +46,7 @@ A continuación indicamos los problemas y las limitaciones de esta versión de S
     
     Como solución alternativa, puede usar las otras formas de autenticación proporcionada en SSMS - autenticación de contraseña de Active Directory, la autenticación integrada de Active Directory o la autenticación de SQL Server.
 
-5. **SSMS solo puede conectarse a instancias de SQL Server 2016 Integrated Services (SSIS 2016).**  
+5. **SSMS 17.x solo puede conectarse a instancias de SQL Server 2017 Integrated Services (SSIS 2017).**  
     Hay una limitación de compatibilidad conocida con SQL Server Integration Services que impide la conexión a versiones anteriores.
     
     Como solución alternativa para este problema, puede conectarse a la instancia de SQL Server Integration Service mediante la [versión SSMS alineado con la instancia SSIS.](../ssms/previous-sql-server-management-studio-releases.md) 
@@ -67,7 +66,7 @@ Algunos entornos muestran lo siguiente al hacer clic en Ayuda o pulsar F1: **Nec
   
 ## <a name="see-also"></a>Vea también  
 [Tutorial de SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
-[Descargar SQL Server Management Studio &amp;#40;SSMS&amp;#41;](../ssms/download-sql-server-management-studio-ssms.md)  
+[Descargar SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)  
 [Versiones anteriores de SQL Server Management Studio](../ssms/previous-sql-server-management-studio-releases.md)  
 
   

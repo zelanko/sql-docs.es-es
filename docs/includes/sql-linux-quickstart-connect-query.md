@@ -19,7 +19,7 @@ En los pasos siguientes se usa **sqlcmd** para conectarse localmente a la nueva 
 1. Si recibe un error de conexión, intente primero diagnosticar el problema a partir del mensaje de error. Luego revise las [recomendaciones para solucionar problemas de conexión](../linux/sql-server-linux-troubleshooting-guide.md#connection).
 
 ## <a name="create-and-query-data"></a>Creación y consulta de datos
-Las secciones siguientes le guían en el uso de **sqlcmd** y Transact-SQL para crear una base de datos, agregar datos y ejecutar una consulta simple.
+Las secciones siguientes le guían en el uso de **sqlcmd** para crear una base de datos, agregar datos y ejecutar una consulta simple.
 
 ### <a name="create-a-new-database"></a>Creación de una base de datos
 
@@ -97,7 +97,7 @@ QUIT
 
 ## <a name="connect-from-windows"></a>Conexión desde Windows
 
-Es importante tener en cuenta que las herramientas de SQL Server en Windows se conecten a instancias de SQL Server en Linux del mismo modo en que se conectarían a cualquier instancia remota de SQL Server.
+Las herramientas de SQL Server en Windows se conectan a instancias de SQL Server en Linux del mismo modo en que se conectarían a cualquier instancia remota de SQL Server.
 
 Si tiene una máquina Windows que se puede conectar a la máquina Linux, pruebe con los mismos pasos de este tema desde un símbolo del sistema Windows mediante la ejecución de **sqlcmd**. Simplemente compruebe que usa el nombre o la dirección IP de la máquina Linux de destino en lugar del host local y asegúrese de que el puerto TCP 1433 esté abierto. Si tiene problemas para conectarse desde Windows, consulte las [recomendaciones para solucionar problemas de conexión](../linux/sql-server-linux-troubleshooting-guide.md#connection).
 
@@ -109,6 +109,15 @@ Para las otras herramientas que se ejecutan en Windows pero se conectan a SQL Se
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Si no conoce T-SQL, consulte [Tutorial: Escribir instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md) y [Referencia de Transact-SQL (motor de base de datos)](../t-sql/language-reference.md).
+Para otros escenarios de instalación, vea los siguientes recursos:
 
-Para explorar otras formas de conectar y administrar SQL Server, consulte [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) y [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md).
+|||
+|---|---|
+| [Actualización](../linux/sql-server-linux-setup.md#upgrade) | Obtenga información sobre cómo actualizar una instalación existente de SQL Server en Linux |
+| [Desinstalar](../linux/sql-server-linux-setup.md#uninstall) | Desinstalación de SQL Server en Linux |
+| [Instalación desatendida](../linux/sql-server-linux-setup.md#unattended) | Obtenga información sobre cómo crear un script para la instalación sin pedir confirmación |
+| [Instalación sin conexión](../linux/sql-server-linux-setup.md#offline) | Obtenga información sobre cómo descargar manualmente los paquetes de instalación sin conexión |
+
+Para explorar otras formas de conectar y administrar SQL Server, vea [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) y [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md).
+
+Para más información sobre cómo escribir consultas e instrucciones Transact-SQL, vea [Tutorial: Escribir instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).

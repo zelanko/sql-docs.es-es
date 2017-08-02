@@ -14,11 +14,11 @@ caps.latest.revision: 15
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 002507c03a66bd262e7d5dfa44283d2e3e0a901a
+ms.translationtype: HT
+ms.sourcegitcommit: f0ebadeaa959c6eb148cdd9a9d6e0a1019d858ab
+ms.openlocfilehash: 413be658a429308744b303d2d3ef82892c964c5a
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/27/2017
 
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Crear procedimientos almacenados compilados de forma nativa
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Bloques atomic. Para obtener más información, consulte [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
   
--   Restricciones**NOT NULL** en los parámetros y variables de los procedimientos almacenados compilados de forma nativa. No se pueden asignar valores **NULL** a los parámetros o variables declarados como **NOT NULL**. Para obtener más información, vea [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
+-   Restricciones **NOT NULL** en parámetros y variables. No se pueden asignar valores **NULL** a los parámetros o variables declarados como **NOT NULL**. Para obtener más información, vea [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
   
     -   CREATE PROCEDURE dbo.myproc (@myVarchar  varchar(32)  **not null**) ...  
   
@@ -74,3 +74,4 @@ go
  [Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   
+

@@ -18,11 +18,11 @@ caps.latest.revision: 141
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 880d10a367cc625bcc313b19c06ee4504e955a19
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="before-installing-failover-clustering"></a>Antes de instalar los clústeres de conmutación por error
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="BestPractices"></a> Procedimientos recomendados  
   
--   Review [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [Release Notes](http://go.microsoft.com/fwlink/?LinkId=296445)  
+-   Revise las [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [Notas de la versión](http://go.microsoft.com/fwlink/?LinkId=296445)  
   
 -   Instale el software previo requerido. Antes de ejecutar el programa de instalación para instalar o actualizar a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], instale el software previo siguiente para reducir el tiempo de instalación. Puede instalar el software previo en cada nodo de clúster de conmutación por error y, a continuación, reiniciar los nodos una vez antes de ejecutar el programa de instalación.  
   

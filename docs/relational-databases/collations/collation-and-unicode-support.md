@@ -31,11 +31,11 @@ caps.latest.revision: 46
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 782e5a9458daf8c820b71d39e27b424c6995dba9
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
@@ -45,7 +45,7 @@ ms.lasthandoff: 06/22/2017
     
  Para hacer el mejor uso posible de la compatibilidad con la intercalación en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se deben conocer los términos que se definen en este tema y cómo se relacionan con las características de los datos.    
     
-##  <a name="Terms"></a> Collation Terms    
+##  <a name="Terms"></a> Términos de intercalación    
     
 -   [Intercalación](#Collation_Defn)    
     
@@ -81,7 +81,7 @@ ms.lasthandoff: 06/22/2017
  Hay dos tipos de intercalaciones binarias en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; las intercalaciones **BIN** antiguas y las intercalaciones **BIN2** nuevas. En una intercalación **BIN2** todos los caracteres se ordenan de acuerdo a sus puntos de código. En una intercalación **BIN** solamente el primer carácter se ordena de acuerdo al punto de código y el resto de ellos se ordenan según sus valores de byte. (Dado que la plataforma de Intel tiene una arquitectura "litte endian", los caracteres de codificación Unicode siempre se intercambian por bytes).    
     
  Intercalaciones de SQL Server    
-Las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL_*) son compatibles en cuanto al criterio de ordenación con las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las reglas de ordenación alfabética de datos no Unicode son incompatibles con cualquier rutina de ordenación suministrada por los sistemas operativos Windows. Sin embargo, la ordenación de datos Unicode es compatible con una versión especial de las reglas de ordenación de Windows. Como las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan reglas de comparación diferentes para los datos Unicode y para los que no son Unicode, verá resultados diferentes en las comparaciones de los mismos datos, dependiendo del tipo de datos subyacente. Para obtener más información, vea [Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).    
+ Las intercalaciones de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL_*) son compatibles en cuanto al criterio de ordenación con las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las reglas de ordenación alfabética de datos no Unicode son incompatibles con cualquier rutina de ordenación suministrada por los sistemas operativos Windows. Sin embargo, la ordenación de datos Unicode es compatible con una versión especial de las reglas de ordenación de Windows. Como las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan reglas de comparación diferentes para los datos Unicode y para los que no son Unicode, verá resultados diferentes en las comparaciones de los mismos datos, dependiendo del tipo de datos subyacente. Para obtener más información, vea [Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).    
     
 > [!NOTE]    
 >  Al actualizar una instancia en idioma inglés de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se puede especificar la compatibilidad de las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL_*) con las instancias existentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como la intercalación predeterminada de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se define durante la instalación, asegúrese de especificar con cuidado la configuración de la intercalación cuando se cumple lo siguiente:    
@@ -121,7 +121,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ###  <a name="Sort_Order_Defn"></a> Sort Order    
  El criterio de ordenación especifica cómo se ordenan los valores de datos. Esto afecta a los resultados de la comparación de los datos. Los datos se ordenan con las intercalaciones, y se pueden optimizar mediante los índices.    
     
-##  <a name="Unicode_Defn"></a> Unicode Support    
+##  <a name="Unicode_Defn"></a> Compatibilidad con Unicode    
  Unicode es un estándar que permite asignar puntos de código con caracteres. Puesto que se ha diseñado para cubrir todos los caracteres de todos los idiomas del mundo, no es preciso usar páginas de códigos diferentes para controlar los distintos juegos de caracteres. Si almacena datos de caracteres que reflejan varios idiomas, use siempre tipos de datos Unicode (**nchar**, **nvarchar**y **ntext**) en lugar de tipos de datos que no sean Unicode (**char**, **varchar**y **text**).    
     
  Hay limitaciones significativas asociadas a los tipos de datos no Unicode. Esto se debe a que un equipo no Unicode se limitará a utilizar una única página de códigos. Podría experimentar una ganancia en el rendimiento mediante Unicode porque se requieren menos conversiones de páginas de códigos. Las intercalaciones Unicode deben seleccionarse individualmente en el nivel de expresión, base de datos o columna porque no se admiten en el nivel de servidor.    
@@ -151,7 +151,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |No Unicode|Unicode|No es una configuración ideal para utilizar datos multilingües. No puede escribir los datos Unicode en el servidor no Unicode. Es probable que se produzcan problemas si los datos se envían a servidores externos a la página de códigos del servidor.|    
 |No Unicode|No Unicode|Se trata de un escenario muy limitado para datos multilingües. Puede usar solo una única página de códigos.|    
     
-##  <a name="Supplementary_Characters"></a> Supplementary Characters    
+##  <a name="Supplementary_Characters"></a> Caracteres complementarios    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona tipos de datos, como **nchar** y **nvarchar** , para almacenar los datos Unicode. Estos tipos de datos codifican el texto en un formato denominado *UTF-16*. Unicode Consortium asigna a cada carácter un punto de código único, que es un valor en el intervalo comprendido entre 0x0000 y 0x10FFFF. Los caracteres que se usan con más frecuencia tienen valores de punto de código que se ajustarán a una palabra de 16 bits en memoria y en disco, pero los caracteres con valores de punto de código mayores que 0xFFFF requieren dos palabras de 16 bits consecutivas. Estos caracteres se denominan *caracteres adicionales*y las dos palabras de 16 bits consecutivas, *pares suplentes*.    
     
  Si utiliza caracteres adicionales:    
@@ -188,10 +188,10 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |[UNICODE](../../t-sql/functions/unicode-transact-sql.md)|Devuelve un punto de código UTF-16 en el intervalo comprendido entre 0 y 0x10FFFF.|Devuelve un punto de código UCS-2 en el intervalo comprendido entre 0 y 0xFFFF.|    
 |[Hacer coincidir un carácter comodín](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)<br /><br /> [Carácter comodín - caracteres no coincidentes](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)|Se admiten caracteres adicionales para todas las operaciones de caracteres comodín.|No se admiten caracteres adicionales para estas operaciones de caracteres comodín. Se admiten otros operadores de caracteres comodín.|    
     
-##  <a name="GB18030"></a> GB18030 Support    
+##  <a name="GB18030"></a> Compatibilidad con GB18030    
  GB18030 es un estándar independiente que se usa en la República Popular China para codificar caracteres chinos. En GB18030, los caracteres pueden tener una longitud de 1, 2 o 4 bytes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite caracteres de codificación GB18030, reconociéndolos en el momento de su entrada en un servidor procedentes de una aplicación del lado cliente y convirtiéndolos y almacenándolos de forma nativa como caracteres Unicode. Una vez almacenados en el servidor, se tratan como caracteres Unicode en las operaciones siguientes. Puede usar cualquier intercalación china, preferentemente la más reciente: la versión 100. Todas las intercalaciones de nivel _100 admiten la ordenación lingüística con caracteres GB18030. Si los datos incluyen caracteres suplementarios (pares suplentes), puede usar las intercalaciones SC disponibles en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para mejorar la búsqueda y la clasificación.    
     
-##  <a name="Complex_script"></a> Complex Script Support    
+##  <a name="Complex_script"></a> Compatibilidad con escritura compleja    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede admitir la entrada, el almacenamiento, el cambio, y la visualización de escrituras complejas. Ejemplos de escritura compleja son los siguientes:    
     
 -   Escritura que incluye la combinación de texto de derecha a izquierda y de izquierda a derecha, caso de una combinación de textos en árabe e inglés.    
@@ -202,7 +202,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
  Las aplicaciones de base de datos que interactúan con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben utilizar controles que sean compatibles con escritura compleja. Los controles de formato estándar de Windows creados en código administrado están habilitados para escritura compleja.    
 
-##  <a name="Japanese_Collations"></a> Japanese Collations added in  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+##  <a name="Japanese_Collations"></a> Intercalaciones japonesas agregadas en  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
 A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], se admiten dos nuevas familias de intercalaciones japonesas, con las permutaciones de varias opciones (_CS, _AS, _KS, _WS, _VSS, etc.). 
 
@@ -214,7 +214,7 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 
 Estas intercalaciones se admiten en los índices de Motor de base de datos, las tablas con optimización para memoria, los índices de almacén de columnas y los módulos compilados de forma nativa.
     
-##  <a name="Related_Tasks"></a> Related Tasks    
+##  <a name="Related_Tasks"></a> Tareas relacionadas    
     
 |Tarea|Tema|    
 |----------|-----------|    
@@ -225,7 +225,7 @@ Estas intercalaciones se admiten en los índices de Motor de base de datos, las 
 |Describe cómo escribir instrucciones Transact-SQL que las hagan más portátiles de un idioma a otro, o que admitan varios idiomas más fácilmente.|[Escribir instrucciones Transact-SQL internacionales](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
 |Describe cómo cambiar el idioma de la sesión permite cambiar el idioma de los mensajes de error y las preferencias acerca de cómo usar y mostrar los datos de fecha, hora y divisa.|[Establecer un idioma de la sesión](../../relational-databases/collations/set-a-session-language.md)|    
     
-##  <a name="Related_Content"></a> Related Content    
+##  <a name="Related_Content"></a> Contenido relacionado    
  [Prácticas recomendadas para cambiar las intercalaciones en SQL Server](http://go.microsoft.com/fwlink/?LinkId=113891)    
     
  ["Migración de las prácticas recomendadas de SQL Server a Unicode"](http://go.microsoft.com/fwlink/?LinkId=113890)    

@@ -20,11 +20,11 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 82a29880c3595f5c3df5814a65c163ddd02da6a8
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementar un solucionador de conflictos personalizado para un artículo de mezcla
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
  Puede escribir su propio solucionador de conflictos personalizado como un procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)] en cada publicador. Durante la sincronización, se llama a este procedimiento almacenado cuando se encuentran conflictos en un artículo para el que se registró el solucionador y el Agente de mezcla pasa información sobre la fila del conflicto a los parámetros pertinentes del procedimiento. Los solucionadores de conflictos personalizados basados en el procedimiento almacenado siempre se crean en el publicador.  
   
 > [!NOTE]  
-> Los solucionadores de procedimientos almacenados de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo se invocan para solucionar conflictos debidos a cambios de filas. No se pueden utilizar para solucionar otros tipos de conflictos como errores de inserción debidos a infracciones de CLAVE PRINCIPAL o a infracciones de restricción de índice único.  
+>  Los solucionadores de procedimientos almacenados de[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo se invocan para solucionar conflictos debidos a cambios de filas. No se pueden utilizar para solucionar otros tipos de conflictos como errores de inserción debidos a infracciones de CLAVE PRINCIPAL o a infracciones de restricción de índice único.  
   
 #### <a name="to-create-a-stored-procedure-based-custom-conflict-resolver"></a>Para crear un solucionador de conflictos personalizado basado en un procedimiento almacenado  
   

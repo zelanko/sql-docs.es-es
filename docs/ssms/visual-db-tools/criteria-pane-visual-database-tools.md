@@ -22,11 +22,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 30bd3badd2ac11c7bd00125ed9ceedefbe1f1f7b
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Panel Criterios (Visual Database Tools)
@@ -59,7 +59,7 @@ Si no se ve el panel Criterios, haga clic con el botón derecho en el diseñador
   
 ## <a name="options"></a>Opciones  
   
-|**Columnaa**|**Tipo de consulta**|**Description**|  
+|**Columna**|**Tipo de consulta**|**Description**|  
 |--------------|------------------|-------------------|  
 |Columna|Todos|Muestra el nombre de una columna de datos utilizada para la consulta o la expresión de una columna calculada. Esta columna está bloqueada de modo que sea siempre visible a medida que se desplaza horizontalmente.|  
 |Alias|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Especifica un nombre alternativo para una columna o el nombre que puede utilizar para una columna calculada.|  
@@ -74,11 +74,11 @@ Si no se ve el panel Criterios, haga clic con el botón derecho en el diseñador
 |Valor nuevo|UPDATE, INSERT INTO|Especifica el valor que se va a colocar en la columna asociada. Escriba un valor literal o una expresión.|  
   
 ## <a name="see-also"></a>Vea también  
-[Temas de procedimientos de diseño de consultas y vistas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Panel Diagrama &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)  
-[Reglas para especificar valores de búsqueda &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
-[Ordenar y agrupar los resultados de una consulta &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
-[Panel Resultados &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)  
-[Panel SQL &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)  
+[Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Panel Diagrama &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)  
+[Reglas para especificar valores de búsqueda &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
+[Ordenar y agrupar los resultados de una consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Panel Resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)  
+[Panel SQL &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)  
   
 

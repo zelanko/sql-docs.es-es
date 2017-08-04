@@ -1,7 +1,7 @@
 ---
 title: Cambio de nombre de las columnas (motor de base de datos) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -26,7 +26,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="rename-columns-database-engine"></a>Cambiar el nombre a las columnas (motor de base de datos)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Puede cambiar una columna de la tabla en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

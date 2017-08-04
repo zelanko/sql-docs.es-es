@@ -1,28 +1,36 @@
 ---
-title: "Transacciones (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/10/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "transacciones [Master Data Services], acerca de transacciones"
-  - "transacciones [Master Data Services]"
+title: Transacciones (Master Data Services) | Documentos de Microsoft
+ms.custom: 
+ms.date: 01/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transactions [Master Data Services], about transactions
+- transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 caps.latest.revision: 15
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 841657a13d802ba1af2f81436769f76a3c3aa409
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Transacciones (Master Data Services)
+# <a name="transactions-master-data-services"></a>Transacciones (Master Data Services)
+
+
+--------------------------------------------------
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se registra una transacción cada vez que se realiza una acción en un miembro. Todos los usuarios pueden ver las transacciones y los administradores pueden invertirlas. Las transacciones muestran la fecha, la hora, el usuario que aplicó la acción y otros detalles. Los usuarios pueden agregar una anotación a una transacción para indicar por qué tuvo lugar una transacción.  
   
-## Cuándo se registran las transacciones  
+## <a name="when-transaction-are-recorded"></a>Cuándo se registran las transacciones  
  Las transacciones se registran cuando los miembros:  
   
 -   se crean, eliminan o reactivan.  
@@ -33,10 +41,13 @@ caps.handback.revision: 13
   
  No se graban las transacciones cuando las reglas de negocios cambian los valores de atributo.  
   
-## Ver y administrar transacciones  
- En el área funcional del **Explorador**, puede ver y anotar (agregar comentarios a) las transacciones que haya realizado por sí mismo.  
+## <a name="view-and-manage-transactions"></a>Ver y administrar transacciones  
+ En el área funcional del **Explorador** , puede ver y anotar (agregar comentarios a) las transacciones que haya realizado por sí mismo. 
   
- En el área funcional de **Administración de versiones** , los administradores pueden ver todas las transacciones de todos los usuarios para los modelos a los que tienen acceso e invertirlas.  
+ En el área funcional de **Administración de versiones** , los administradores pueden ver todas las transacciones de todos los usuarios para los modelos a los que tienen acceso e invertirlas.
+ 
+> [!NOTE]  
+>  Los administradores pueden ver todas las transacciones para todos los usuarios siempre que no tengan el permiso de solo lectura nivel se aplican en el **administración de versiones** área funcional. Por ejemplo, si se establece el nivel de permiso de solo lectura permiso y de actualización para el administrador, el administrador no podrá ver otras transacciones de usuario porque el permiso de sólo lectura tienen prioridad sobre el permiso update.
   
  Puede configurar el tiempo que se conservan los datos del registro de transacciones; para ello, establezca la propiedad **Retención de registro en días** en la configuración del sistema para la base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , y establezca **Log Retention Days** (Días de retención del registro) al crear o editar un modelo. Para obtener más información, consulte [Configuración del sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md) y [Crear un modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md).  
   
@@ -66,29 +77,30 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
 ```  
   
-## Configuración del sistema  
+## <a name="system-settings"></a>Configuración del sistema  
  Hay un valor en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] que hace que las transacciones se graben o no cuando se cargan registros de almacenamiento provisional. Puede ajustar este valor en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] o directamente en la tabla Configuración del sistema de la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Para obtener más información, vea [Configuración del sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
  Al importar los datos en esta versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], puede especificar si registrar o no las transacciones al iniciar el procedimiento almacenado. Para obtener más información, consulte [Procedimiento almacenado de almacenamiento provisional &#40;Master Data Services&#41;](../master-data-services/staging-stored-procedure-master-data-services.md).  
   
-## Simultaneidad  
+## <a name="concurrency"></a>Simultaneidad  
  Si un valor de entidad determinado se muestra de forma simultánea en más de una sesión del Explorador, es posible que se efectúen modificaciones en paralelo en el mismo valor. MDS no detecta las modificaciones simultáneas automáticamente. Esto puede producirse cuando hay varios usuarios que están utilizando MDS Explorer en el explorador web desde varias sesiones, por ejemplo, desde diversos equipos, diversas pestañas o ventanas del explorador o desde múltiples cuentas de usuario.  
   
  Varios usuarios pueden actualizar los mismos valores de entidad sin que se produzcan errores pese a que estén habilitadas transacciones. Por lo general, prevalecerá la última modificación a un valor en una secuencia temporal. El conflicto de modificación duplicada se puede observar en el historial de transacciones y lo puede corregir el administrador manualmente. El historial de transacciones mostrará las transacciones individuales para **Valor anterior** y **Valor nuevo** para el atributo relevante en cada sesión, pero no solucionará automáticamente el conflicto cuando haya varios **Valores nuevos** para el mismo valor antiguo.  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
 |Deshacer una acción invirtiendo una transacción (solo administradores).|[Invertir una transacción &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)|  
   
-## Recursos externos  
+## <a name="external-resources"></a>Recursos externos  
  Entrada de blog, [Transactions, Validation Issue and Staging table cleanup](http://go.microsoft.com/fwlink/p/?LinkId=615374)(Limpieza de la tabla de transacciones, de problemas de validación y de almacenamiento provisional), en msdn.com.  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
   
--   [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
+-   [Los administradores &#40; Master Data Services &#41;](../master-data-services/administrators-master-data-services.md)  
   
--   [Anotaciones &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)  
+-   [Anotaciones &#40; Master Data Services &#41;](../master-data-services/annotations-master-data-services.md)  
   
   
+

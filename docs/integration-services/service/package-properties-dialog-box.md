@@ -1,25 +1,30 @@
 ---
-title: "Propiedades del paquete, cuadro de di&#225;logo | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.ssms.ispackageprop.general.f1"
-  - "sql13.ssis.ssms.packageproperties.f1"
+title: "Cuadro de diálogo Propiedades del paquete | Documentos de Microsoft"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.ssms.ispackageprop.general.f1
+- sql13.ssis.ssms.packageproperties.f1
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2269955b34d8077a56c83044bf12c262be166aa8
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Propiedades del paquete, cuadro de di&#225;logo
+# <a name="package-properties-dialog-box"></a>Propiedades del paquete, cuadro de diálogo
   Utilice el cuadro de diálogo **Propiedades del paquete** para ver las propiedades de los paquetes almacenados en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Para obtener más información, vea [Paquetes de Integration Services &#40;SSIS&#41;](https://msdn.microsoft.com/library/ms141134.aspx).  
@@ -64,3 +69,4 @@ caps.handback.revision: 27
  Muestra la descripción opcional del paquete.  
   
   
+

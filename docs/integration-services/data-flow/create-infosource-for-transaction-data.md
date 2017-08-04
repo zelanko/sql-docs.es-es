@@ -1,22 +1,27 @@
 ---
-title: "Crear Infosource para datos de transacci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Crear InfoSource para datos de transacción | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aae1b77456b66a00a547fa35f9a253f0199963cc
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Crear Infosource para datos de transacci&#243;n
+# <a name="create-infosource-for-transaction-data"></a>Crear Infosource para datos de transacción
   Use el cuadro de diálogo **Crear InfoSource para los datos de transacción** para crear un InfoSource nuevo para los datos de transacción en el sistema SAP Netweaver BW.  
   
  Puede abrir el cuadro de diálogo **Crear InfoSource para los datos de transacción** desde la página **Administrador de conexiones** del **Editor de destino de SAP BW**. Para obtener más información acerca del destino de SAP BW, vea [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
@@ -28,7 +33,7 @@ caps.handback.revision: 10
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contiene el destino SAP BW.  
   
-2.  En la pestaña **Flujo de datos**, haga doble clic en el destino SAP BW.  
+2.  En la pestaña **Flujo de datos** , haga doble clic en el destino de SAP BW.  
   
 3.  En **Editor de destino SAP BW**, haga clic en **Administrador de conexiones** para abrir la página **Administrador de conexiones** del editor.  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 10
   
 5.  En el cuadro de diálogo **Crear InfoSource** , seleccione **Datos transaccionales**y, a continuación, haga clic en **Aceptar**.  
   
-## Opciones de General  
+## <a name="general-options"></a>Opciones de General  
  **Nombre de InfoSource**  
  Permite escribir un nombre para el nuevo InfoSource.  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 10
  **Guardar y activar**  
  Permite guardar y activar el nuevo InfoSource.  
   
-## Opciones de la estructura de transferencia de InfoSource  
+## <a name="infosource-transfer-structure-options"></a>Opciones de la estructura de transferencia de InfoSource  
  La estructura de transferencia de InfoSource permite asociar columnas del flujo de datos a InfoSources.  
   
  **PipelineElement**  
@@ -90,7 +95,7 @@ caps.handback.revision: 10
  **Campo de unidad**  
  Permite especificar las unidades que va a usar el InfoObject.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Crear InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

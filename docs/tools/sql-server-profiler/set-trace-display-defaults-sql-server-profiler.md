@@ -1,27 +1,32 @@
 ---
-title: "Establecer los valores predeterminados de presentaci&#243;n de seguimiento (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "seguimientos [SQL Server], valores predeterminados"
+title: "Establecer valores predeterminados de presentación de seguimiento (SQL Server Profiler) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], defaults
 ms.assetid: d471aaed-c40c-4c55-a993-835e6394b5d2
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66d51901d14ab5455f4b74a9782aa9ddd7947f0c
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Establecer los valores predeterminados de presentaci&#243;n de seguimiento (SQL Server Profiler)
+# <a name="set-trace-display-defaults-sql-server-profiler"></a>Establecer los valores predeterminados de presentación de seguimiento (SQL Server Profiler)
   En este tema se describe el modo de establecer las opciones de la herramienta que especifican los tipos de fuente, tamaño y estilo que el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] utiliza para mostrar los seguimientos en la ventana de seguimiento. También puede especificar que el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestre todas las fechas y horas con la misma configuración regional del sistema operativo.  
   
-### Para establecer las opciones predeterminadas de presentación de seguimiento  
+### <a name="to-set-trace-display-defaults"></a>Para establecer las opciones predeterminadas de presentación de seguimiento  
   
 1.  En el menú **Herramientas** , haga clic en **Opciones**.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 21
   
 6.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Opciones generales** .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

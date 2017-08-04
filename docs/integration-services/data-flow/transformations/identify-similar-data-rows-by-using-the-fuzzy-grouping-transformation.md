@@ -1,30 +1,35 @@
 ---
-title: "Identificar filas de datos similares mediante la transformaci&#243;n Agrupaci&#243;n aproximada | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Agrupación aproximada, transformación"
-  - "coincidir datos parecidos [Integration Services]"
-  - "filas de datos parecidos [Integration Services]"
-  - "coincidencia aproximada"
+title: "Identificar filas de datos similares mediante la transformación Agrupación aproximada | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Fuzzy Grouping transformation
+- match similar data [Integration Services]
+- similar data rows [Integration Services]
+- fuzzy matches
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d6d11c2474853586930e5cd46fde8f61526cd6ed
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Identificar filas de datos similares mediante la transformaci&#243;n Agrupaci&#243;n aproximada
+# <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>Identificar filas de datos similares mediante la transformación Agrupación aproximada
   Para agregar y configurar una transformación Agrupación aproximada, el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen.  
   
-### Para implementar la transformación Agrupación aproximada en un flujo de datos  
+### <a name="to-implement-fuzzy-grouping-transformation-in-a-data-flow"></a>Para implementar la transformación Agrupación aproximada en un flujo de datos  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] que contiene el paquete que desea.  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 23
   
 9. Opcionalmente, actualice los nombres de las columnas de salida en la columna **Alias de salida** .  
   
-10. También puede actualizar los nombres de las columnas limpias en la columna **Alias de salida de grupo**.  
+10. También puede actualizar los nombres de las columnas limpias en la columna **Alias de salida de grupo** .  
   
     > [!NOTE]  
     >  Los nombres predeterminados de las columnas son los nombres de las columnas de entrada con el sufijo "_clean".  
@@ -78,10 +83,10 @@ caps.handback.revision: 23
   
 20. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Transformación Agrupación aproximada](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Rutas de Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
- [Tarea Flujo de datos](../../../integration-services/control-flow/data-flow-task.md)  
+ [Tarea flujo de datos](../../../integration-services/control-flow/data-flow-task.md)  
   
   

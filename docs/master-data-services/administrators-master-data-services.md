@@ -1,30 +1,35 @@
 ---
-title: "Administradores (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "administradores [Master Data Services], acerca de los administradores"
-  - "administradores [Master Data Services]"
-  - "modelos [Master Data Services], administradores"
+title: Administradores (Master Data Services) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- administrators [Master Data Services], about administrators
+- administrators [Master Data Services]
+- models [Master Data Services], administrators
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 caps.latest.revision: 14
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aa037c47b7ec276188e1f67d5a415bfba1da232
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Administradores (Master Data Services)
+# <a name="administrators-master-data-services"></a>Administradores (Master Data Services)
   En este artículo se describen los tipos de administradores de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]: administradores de modelos, administradores de entidad y superusuario.  
   
-## Administradores de modelos  
- En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrador de modelos es un usuario que tiene el permiso **Admin** asignado al objeto de modelo de nivel superior en la pestaña **Objetos de modelo**. Cuando un usuario tiene permiso Admin en un modelo determinado, cualquier otro permiso en objetos secundarios del modelo (tanto permisos de objeto de modelo como de miembro) es superado por el permiso **Admin** del modelo y se omiten en la práctica.  
+## <a name="model-administrators"></a>Administradores de modelos  
+ En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrador de modelos es un usuario que tiene el permiso **Admin** asignado al objeto de modelo de nivel superior en la pestaña **Objetos de modelo** . Cuando un usuario tiene permiso Admin en un modelo determinado, cualquier otro permiso en objetos secundarios del modelo (tanto permisos de objeto de modelo como de miembro) es superado por el permiso **Admin** del modelo y se omiten en la práctica.  
   
 -   Si el usuario tiene acceso al área funcional del **Explorador** , podrá agregar, eliminar y actualizar todos los datos maestros de esta área.  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 14
   
  Un usuario se puede configurar como administrador de modelo en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] o mediante programación. Para obtener más información, consulte [Crear un administrador de modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
   
-## Administradores de entidad  
+## <a name="entity-administrators"></a>Administradores de entidad  
  En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrador de entidad es un usuario que tiene permisos de administrador asignados para el objeto de entidad en la pestaña Objetos de modelo. Cuando un usuario tiene permisos de administrador para una entidad, cualquier otro permiso en los objetos secundarios de la entidad (tanto permisos de objeto de modelo como de miembro) es reemplazado por los permisos de administrador y se omite.  
   
 -   Si el usuario tiene acceso al área funcional del **Explorador** , podrá agregar, eliminar y actualizar todos los datos maestros de esta área.  
@@ -45,7 +50,7 @@ caps.handback.revision: 14
   
  Un usuario se puede configurar como administrador de entidad en [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] o mediante programación. Para obtener más información, consulte [Creación de un administrador de entidades &#40;Master Data Services&#41;](../master-data-services/create-an-entity-administrator-master-data-services.md).  
   
-## Superusuario de Master Data Services  
+## <a name="master-data-services-super-user"></a>Superusuario de Master Data Services  
  En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede asignar a un usuario permisos para el área funcional de superusuario. Un usuario con permisos al área funcional de superusuario tiene permiso efectivo Admin en todos los modelos y tiene permisos para las demás áreas funcionales. Para obtener información sobre los permisos de las áreas funcionales, consulte [Permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
  El superusuario predeterminado se especifica para la **cuenta de administrador** al crear la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] mediante el [Asistente para crear bases de datos &#40;Administrador de configuración de Master Data Services&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).  
@@ -54,11 +59,11 @@ caps.handback.revision: 14
   
 -   Acceder a todas las áreas funcionales.  
   
--   Agregar, eliminar y actualizar todos los datos maestros de todos los modelos en el área funcional del **Explorador**.  
+-   Agregar, eliminar y actualizar todos los datos maestros de todos los modelos en el área funcional del **Explorador** .  
   
  Puede asignar permisos de superusuario a varios usuarios o grupos de usuarios.  
   
-## Comparar los tipos de administradores  
+## <a name="comparing-administrator-types"></a>Comparar los tipos de administradores  
   
 |Tipo de administrador|Description|  
 |------------------------|-----------------|  
@@ -66,12 +71,12 @@ caps.handback.revision: 14
 |Administrador de modelo|Puede ser un administrador de modelo según los permisos de administración que se le asignen explícitamente o los permisos heredados de un grupo.<br /><br /> Solo tiene acceso a áreas funcionales a las que se permita el acceso.<br /><br /> Tiene automáticamente todos los permisos para todos los objetos y miembros en el modelo concreto.|  
 |Administrador de la entidad|Puede ser un administrador de entidad según los permisos de administrador que se le asignen explícitamente o los permisos heredados de un grupo.<br /><br /> Solo tiene acceso a áreas funcionales a las que se permita el acceso.<br /><br /> Tiene automáticamente todos los permisos para todos los objetos y miembros en la entidad concreta.<br /><br /> Puede aprobar los conjuntos de cambios pendientes si los cambios de entidad exigen aprobación.|  
   
-## Recursos externos  
+## <a name="external-resources"></a>Recursos externos  
  Entrada de blog, [Security Improvements](http://go.microsoft.com/fwlink/p/?LinkId=615376)(Mejoras de seguridad), en msdn.com.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Crear un administrador de modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
- [Crea una base de datos de Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
- [Notificaciones &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
+ [Crear una base de datos de Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
+ [Las notificaciones de &#40; Master Data Services &#41;](../master-data-services/notifications-master-data-services.md)  
   
   

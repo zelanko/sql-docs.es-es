@@ -1,31 +1,36 @@
 ---
-title: "Editor de transformaci&#243;n B&#250;squeda (p&#225;gina Columnas) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.lookuptransformation.columns.f1"
-helpviewer_keywords: 
-  - "Búsqueda, editor de transformación"
+title: "Editor de transformación búsqueda (página columnas) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.lookuptransformation.columns.f1
+helpviewer_keywords:
+- Lookup Transformation Editor
 ms.assetid: 690ffef5-fd59-4e95-a27d-4fcf0d6b1c0b
 caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1903f316c601a1685d8644d24a2a6eb12116293d
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de transformaci&#243;n B&#250;squeda (p&#225;gina Columnas)
+# <a name="lookup-transformation-editor-columns-page"></a>Editor de transformación Búsqueda (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de transformación Búsqueda** para especificar la combinación entre la tabla de origen y la tabla de referencia, y para seleccionar columnas de búsqueda de la tabla de referencia.  
   
  Para obtener más información acerca de la transformación Búsqueda, vea [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Columnas de entrada disponibles**  
  Muestra la lista de columnas de entrada disponibles. Las columnas de entrada son las columnas del flujo de datos de un origen conectado. Las columnas de entrada y la columna de búsqueda deben tener tipos de datos coincidentes.  
   
@@ -51,11 +56,11 @@ caps.handback.revision: 39
  **Alias de salida**  
  Escriba un alias para la salida de cada columna de búsqueda. El valor predeterminado es el nombre de la columna de búsqueda; no obstante, puede elegir un nombre descriptivo exclusivo.  
   
-## Vea también  
- [Editor de transformación Búsqueda &#40;página General&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-general-page.md)   
- [Editor de transformación Búsqueda &#40;página Conexión&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)   
- [Editor de transformación Búsqueda &#40;página Avanzadas&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md)   
- [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)   
+## <a name="see-also"></a>Vea también  
+ [Editor de transformación Búsqueda &#40; Página general &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-general-page.md)   
+ [Editor de transformación Búsqueda &#40; Página de conexión &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)   
+ [Editor de transformación Búsqueda &#40; Página avanzadas &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md)   
+ [Editor de transformación Búsqueda &#40; Página de salida de error &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)   
  [Transformación Búsqueda aproximada](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

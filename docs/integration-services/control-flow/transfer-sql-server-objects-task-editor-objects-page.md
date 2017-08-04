@@ -1,40 +1,45 @@
 ---
-title: "Editor de la tarea Transferir objetos de SQL Server (p&#225;gina Objetos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.transfersqlserverobjects.objects.f1"
-helpviewer_keywords: 
-  - "Transferir objetos de SQL Server, editor de la tarea"
+title: "Transferir el Editor de tareas de objetos de SQL Server (página objetos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.transfersqlserverobjects.objects.f1
+helpviewer_keywords:
+- Transfer SQL Server Objects Task Editor
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 67557562dd3f2efbe3c40673a835dd557f617604
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de la tarea Transferir objetos de SQL Server (p&#225;gina Objetos)
+# <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Editor de la tarea Transferir objetos de SQL Server (página Objetos)
   Utilice la página **Objetos** del cuadro de diálogo **Editor de la tarea Transferir objetos de SQL Server** para especificar propiedades para copiar uno o más objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a otra. Las tablas, las vistas, los procedimientos almacenados y las funciones definidas por el usuario son algunos ejemplos de objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que puede copiar. Para obtener más información acerca de esta tarea, vea [Transfer SQL Server Objects Task](../../integration-services/control-flow/transfer-sql-server-objects-task.md).  
   
 > [!NOTE]  
 >  El usuario que crea la tarea Transferir objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener suficientes permisos en los objetos del servidor de origen para seleccionarlos para la copia, además de permiso para tener acceso a la base de datos del servidor de destino donde se transferirán los objetos.  
   
-## Opciones estáticas  
+## <a name="static-options"></a>Opciones estáticas  
  **SourceConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en **\<Nueva conexión…>** para crear una conexión al servidor de origen.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en  **\<nueva conexión... >** para crear una nueva conexión con el servidor de origen.  
   
  **SourceDatabase**  
  Seleccione una base de datos en el servidor de origen desde donde se copiarán los objetos.  
   
  **DestinationConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en **\<Nueva conexión…>** para crear una conexión al servidor de destino.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en  **\<nueva conexión... >** para crear una nueva conexión con el servidor de destino.  
   
  **DestinationDatabase**  
  Seleccione una base de datos en el servidor de destino al que se copiarán los objetos.  
@@ -60,7 +65,7 @@ caps.handback.revision: 30
 >  La opción **ExistingData** solo está disponible cuando **CopyData** se establece en **True**.  
   
  **CopySchema**  
- Seleccione esta opción si el esquema se copia durante la tarea Transferir objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Seleccione esta opción si el esquema se copia durante la tarea Transferir objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  **CopySchema** solo está disponible para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -126,92 +131,92 @@ caps.handback.revision: 30
  **GenerateScriptsInUnicode**  
  Especifique si los scripts de transferencia generados están en formato Unicode.  
   
-## Opciones dinámicas  
+## <a name="dynamic-options"></a>Opciones dinámicas  
   
-### CopyAllObjects = False  
+### <a name="copyallobjects--false"></a>CopyAllObjects = False  
  **CopyAllTables**  
  Seleccione si la tarea copiará todas las tablas de la base de datos de origen especificada o solo las tablas seleccionadas.  
   
  **TablesList**  
- Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar tablas**.  
+ Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar tablas** .  
   
  **CopyAllViews**  
  Seleccione si la tarea copiará todas las vistas de la base de datos de origen especificada o solo las vistas seleccionadas.  
   
  **ViewsList**  
- Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar vistas**.  
+ Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar vistas** .  
   
  **CopyAllStoredProcedures**  
  Seleccione si la tarea copiará todos los procedimientos almacenados definidos por el usuario en la base de datos de origen especificada o solo los procedimientos seleccionados.  
   
  **StoredProceduresList**  
- Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar procedimientos almacenados**.  
+ Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar procedimientos almacenados** .  
   
  **CopyAllUserDefinedFunctions**  
  Seleccione si la tarea copiará todas las funciones definidas por el usuario en la base de datos de origen especificada o solo las UDF seleccionadas.  
   
  **UserDefinedFunctionsList**  
- Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar funciones definidas por el usuario**.  
+ Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar funciones definidas por el usuario** .  
   
  **CopyAllDefaults**  
  Seleccione si la tarea copiará todos los valores predeterminados de la base de datos de origen especificada o solo los valores predeterminados seleccionados.  
   
  **DefaultsList**  
- Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar valores predeterminados**.  
+ Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar valores predeterminados** .  
   
  **CopyAllUserDefinedDataTypes**  
  Seleccione si la tarea copiará todos los tipos de datos definidos por el usuario en la base de datos de origen especificada o solo los tipos de datos definidos por el usuario seleccionados.  
   
  **UserDefinedDataTypesList**  
- Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar tipos de datos definidos por el usuario**.  
+ Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar tipos de datos definidos por el usuario** .  
   
  **CopyAllPartitionFunctions**  
  Seleccione si la tarea copiará todas las funciones de partición definidas por el usuario en la base de datos de origen especificada o solo las seleccionadas. Esta opción solo es compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **PartitionFunctionsList**  
- Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar funciones de partición**.  
+ Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar funciones de partición** .  
   
  **CopyAllPartitionSchemes**  
  Seleccione si la tarea copiará todos los esquemas de partición de la base de datos de origen especificada o solo los seleccionados. Esta opción solo es compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **PartitionSchemesList**  
- Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar esquemas de partición**.  
+ Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar esquemas de partición** .  
   
  **CopyAllSchemas**  
  Seleccione si la tarea copiará todos los esquemas de la base de datos de origen especificada o solo los seleccionados. Esta opción solo es compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **SchemasList**  
- Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar esquemas**.  
+ Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar esquemas** .  
   
  **CopyAllSqlAssemblies**  
  Seleccione si la tarea copiará todos los ensamblados de SQL de la base de datos de origen especificada o solo los seleccionados. Esta opción solo es compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **SqlAssembliesList**  
- Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar ensamblados de SQL**.  
+ Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar ensamblados de SQL** .  
   
  **CopyAllUserDefinedAggregates**  
  Seleccione si la tarea copiará todas las funciones de agregado definidas por el usuario en la base de datos de origen especificada o solo las seleccionadas. Esta opción solo es compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **UserDefinedAggregatesList**  
- Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar agregados definidos por el usuario**.  
+ Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar agregados definidos por el usuario** .  
   
  **CopyAllUserDefinedTypes**  
  Seleccione si la tarea copiará todos los tipos definidos por el usuario en la base de datos de origen especificada o solo los seleccionados. Esta opción solo es compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **UserDefinedTypes**  
- Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar tipos definidos por el usuario**.  
+ Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar tipos definidos por el usuario** .  
   
  **CopyAllXmlSchemaCollections**  
  Seleccione si la tarea copiará todas las colecciones de esquemas XML de la base de datos de origen especificada o solo las seleccionadas. Esta opción solo es compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **XmlSchemaCollectionsList**  
- Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar colecciones de esquemas XML**.  
+ Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar colecciones de esquemas XML** .  
   
-## Vea también  
- [Referencia de errores y mensajes de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vea también  
+ [Referencia de mensajes y Error de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
- [Editor de la tarea Transferir objetos de SQL Server &#40;página General&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
- [Página Expresiones](../../integration-services/expressions/expressions-page.md)   
+ [Editor de la tarea de objetos de transferencia SQL Server &#40; Página general &#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
+ [Página expresiones](../../integration-services/expressions/expressions-page.md)   
  [Formatos de datos para importación en bloque o exportación masiva &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Consideraciones de seguridad para una instalación de SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   

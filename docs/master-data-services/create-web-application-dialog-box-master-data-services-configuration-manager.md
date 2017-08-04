@@ -1,27 +1,32 @@
 ---
-title: "Cuadro de di&#225;logo Crear aplicaci&#243;n web (Administrador de configuraci&#243;n de Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.mds.configmanager.createapp.f1"
+title: "Crear cuadro de diálogo de aplicación Web (Administrador de configuración de Master Data Services) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.mds.configmanager.createapp.f1
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 5fb6605ae951c83b70aa6bb0499be0d077b398c8
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Cuadro de di&#225;logo Crear aplicaci&#243;n web (Administrador de configuraci&#243;n de Master Data Services)
+# <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>Cuadro de diálogo Crear aplicación web (Administrador de configuración de Master Data Services)
   Utilice el cuadro de diálogo **Crear aplicación web** para crear la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Esta aplicación web se crea en el sitio que seleccionó en la página **Configuración web** .  
   
-## Aplicación web  
+## <a name="web-application"></a>Aplicación web  
  El servidor web sirve el contenido para esta aplicación web desde la carpeta [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **de** en el sistema de archivos. Esta ubicación se especifica durante la instalación y, de manera predeterminada, la ruta de acceso es *unidad*:\Archivos de programa\Microsoft SQL Server\130\Master Data Services\WebApplication.  
   
 |Nombre del control|Description|  
@@ -29,7 +34,7 @@ caps.handback.revision: 9
 |Ruta de acceso virtual|Seleccione la ruta de acceso virtual en la que desea crear la aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Una ruta de acceso virtual forma parte de la dirección URL que se utiliza para tener acceso a una aplicación web.<br /><br /> Esta lista se filtra solo para mostrar rutas de acceso virtual de aplicaciones en las que se puede crear la aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . No puede crear una aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] en otra aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] .|  
 |Alias|Escriba un nombre para la aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] o use el nombre predeterminado. Este nombre se utiliza en una dirección URL para tener acceso a la aplicación web de un explorador web.|  
   
-## Grupo de aplicaciones  
+## <a name="application-pool"></a>Grupo de aplicaciones  
   
 |Nombre del control|Description|  
 |------------------|-----------------|  
@@ -38,10 +43,9 @@ caps.handback.revision: 9
 |**Contraseña**|Escriba la contraseña de la cuenta de usuario especificada.|  
 |**Confirmar contraseña**|Vuelva a escribir la contraseña de la cuenta de usuario especificada. Los campos **Contraseña** y **Confirmar contraseña** deben contener la misma contraseña.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Página Configuración web &#40;Administrador de configuración de Master Data Services&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
- [Introducción a Master Data Services &#40;SQL Server 2016&#41;](../Topic/Get%20Started%20with%20Master%20Data%20Services%20\(SQL%20Server%202016\).md)   
- [Requisitos de la aplicación web &#40;Master Data Services&#41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md)   
- [Crear una aplicación web de Master Data Manager &#40;Master Data Services&#41;](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
+[Instalación de Master Data Services y la configuración](../master-data-services/master-data-services-installation-and-configuration.md) [Web requisitos de la aplicación &#40; Master Data Services &#41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md)   
+ [Crear una aplicación Web Master Data Services &#40; Master Data Services &#41;](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

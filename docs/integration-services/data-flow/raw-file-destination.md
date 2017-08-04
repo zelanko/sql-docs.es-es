@@ -1,30 +1,35 @@
 ---
-title: "Destino de archivo sin formato | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rawfiledest.f1"
-helpviewer_keywords: 
-  - "anexar, opciones [Integration Services]"
-  - "destinos [Integration Services], archivo sin formato"
-  - "datos sin procesar [Integration Services]"
-  - "escribir datos sin procesar"
-  - "destino de archivo sin formato"
+title: Destino de archivo sin formato | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rawfiledest.f1
+helpviewer_keywords:
+- append options [Integration Services]
+- destinations [Integration Services], Raw File
+- raw data [Integration Services]
+- writing raw data
+- Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a890502e4db72f00d21ed9656441cc27fa5e532d
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Destino de archivo sin formato
+# <a name="raw-file-destination"></a>destino de archivo sin formato
   El destino de archivo sin formato escribe datos sin procesar en un archivo. Como el formato de los datos es el nativo del destino, no es necesario traducir los datos y prácticamente no es necesario analizar el archivo. Esto significa que el destino de archivo sin formato puede escribir datos más rápidamente que otros destinos, como el destino de archivo plano o los destinos de OLE DB.  
   
  Además de escribir datos sin procesar en un archivo, puede utilizar el destino de archivo sin formato para generar un archivo sin formato vacío que contenga solo las columnas (archivo solo para metadatos), sin tener que ejecutar el paquete. El origen de archivo sin formato se usa para recuperar datos sin formato escritos previamente por el destino. Puede también designar el origen de archivo sin formato para el archivo que solo tiene metadatos.  
@@ -47,7 +52,7 @@ caps.handback.revision: 59
   
  Este origen tiene una entrada normal. No admite una salida de error.  
   
-## Opciones de anexar y nuevo archivo  
+## <a name="append-and-new-file-options"></a>Opciones de anexar y nuevo archivo  
  La propiedad WriteOption incluye opciones para anexar datos a un archivo existente o para crear un archivo.  
   
  En la tabla siguiente se describen las opciones disponibles para la propiedad WriteOption.  
@@ -105,33 +110,33 @@ caps.handback.revision: 59
   
 6.  Reemplace RawFile1 con RawFile2.  
   
-### Usar el destino de archivo sin formato en un bucle  
+### <a name="using-the-raw-file-destination-in-a-loop"></a>Usar el destino de archivo sin formato en un bucle  
  Si el flujo de datos que usa el destino de archivo sin formato se encuentra en un bucle, puede resultar conveniente crear el archivo una vez y, después, agregar los datos al archivo cuando se repita el bucle. Para agregar los datos al archivo, los datos agregados deben tener el mismo formato que el archivo existente.  
   
  Para crear el archivo en la primera iteración del bucle y, posteriormente, agregar filas en las iteraciones subsiguientes, debe hacer lo siguiente en tiempo de diseño:  
   
-1.  Establezca la propiedad WriteOption en **CreateOnce** o **CreateAlways** y ejecute una iteración del bucle. Se crea el archivo. Así se garantiza que los metadatos de los datos agregados y del archivo sean iguales.  
+1.  Establezca la propiedad WriteOption en **CreateOnce** o **CreateAlways**y ejecute una iteración del bucle. Se crea el archivo. Así se garantiza que los metadatos de los datos agregados y del archivo sean iguales.  
   
 2.  Restablezca la propiedad WriteOption a **Append** y establezca la propiedad ValidateExternalMetadata en **False**.  
   
  Si usa la opción **TruncateAppend** en lugar de la opción **Append** , truncará las filas que se agregaron en toda iteración anterior y anexará filas nuevas. Con la opción **TruncateAppend** también es necesario que los datos tengan el mismo formato que el archivo.  
   
-## Configuración del destino de archivo sin formato  
+## <a name="configuration-of-the-raw-file-destination"></a>Configuración del destino de archivo sin formato  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](../Topic/Common%20Properties.md)  
+-   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de archivo sin formato](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
  Para obtener información sobre cómo establecer las propiedades del componente, vea [Establecer las propiedades de un componente de flujo de datos](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
  Entrada del blog, sobre los [archivos sin formato](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), en sqlservercentral.com  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Origen de archivo sin formato](../../integration-services/data-flow/raw-file-source.md)   
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  
   

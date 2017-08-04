@@ -1,22 +1,27 @@
 ---
-title: "Buscar destino RFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Buscar destino RFC | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c9db6a056a69d502b4a93b9575cb565da798adf
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Buscar destino RFC
+# <a name="look-up-rfc-destination"></a>Buscar destino RFC
   Use el cuadro de diálogo **Buscar destino RFC** para buscar un destino RFC que se haya definido en el sistema de SAP Netweaver BW. Cuando aparezca la lista de destinos RFC disponibles, seleccione el destino que desee y el componente rellenará las opciones asociadas a los valores necesarios.  
   
  El origen y el destino de SAP BW utilizan el cuadro de diálogo **Buscar destino RFC** . Para más información sobre estos componentes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, vea [Origen de SAP BW](../../integration-services/data-flow/sap-bw-source.md) y [Destino de SAP BW](../../integration-services/data-flow/sap-bw-destination.md).  
@@ -28,7 +33,7 @@ caps.handback.revision: 10
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contiene el origen o destino de SAP BW.  
   
-2.  En la pestaña **Flujo de datos**, haga doble clic en el origen o destino de SAP BW.  
+2.  En la pestaña **Flujo de datos** , haga doble clic en el origen o destino de SAP BW.  
   
 3.  En **Editor de origen SAP BW** o **Editor de destino de SAP BW**, haga clic en **Administrador de conexiones** para abrir la página **Administrador de conexiones** del editor.  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 10
   
      En el **Editor de origen de SAP BW**, el cuadro del grupo **Destino RFC** solo aparece si el valor de **Modo de ejecución** es **P - Desencadenar cadena de procesos** o **W - Esperar notificación**.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Destino**  
  Permite ver el nombre del destino RFC que se haya definido en el sistema de SAP Netweaver BW.  
   
@@ -49,9 +54,9 @@ caps.handback.revision: 10
  **Id. de programa**  
  Permite ver el identificador de programa asociado al destino RFC.  
   
-## Vea también  
- [Editor de origen de SAP BW &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
- [Editor de destino de SAP BW &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+## <a name="see-also"></a>Vea también  
+ [Editor de origen de SAP BW &#40; Página Administrador de conexiones &#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
+ [Editor de destino de SAP BW &#40; Página Administrador de conexiones &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

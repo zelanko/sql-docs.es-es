@@ -1,29 +1,34 @@
 ---
-title: "Componente de script | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.scriptcomponentdetails.f1"
-helpviewer_keywords: 
-  - "Script, transformación"
-  - "scripts [Integration Services], transformaciones"
-  - "componente de script [Integration Services], acerca del componente de script"
-  - "componente de script [Integration Services]"
+title: Componente de script | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.scriptcomponentdetails.f1
+helpviewer_keywords:
+- Script transformation
+- scripts [Integration Services], transformations
+- Script component [Integration Services], about Script component
+- Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 caps.latest.revision: 70
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 70
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b9411fdeb050a63c94c9904cd3f1b6e8aefd6b0a
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Componente de script
+# <a name="script-component"></a>Componente de script
   El componente de script hospeda el script y permite a un paquete incluir y ejecutar código personalizado de script. Puede usar el componente de script en paquetes para los siguientes fines:  
   
 -   Aplicar varias transformaciones a los datos en lugar de usar varias transformaciones en el flujo de datos. Por ejemplo, un script puede sumar los valores de dos columnas y luego calcular el promedio de la suma.  
@@ -51,15 +56,15 @@ caps.handback.revision: 70
   
  Una vez que haya decidido que el componente de script es la opción adecuada para su paquete, tiene que configurar las entradas y salidas, desarrollar el script que el componente utiliza y configurar el propio componente.  
   
-## Descripción de los modos del componente de script  
- En el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)], el componente de script tiene dos modos: modo de diseño de metadatos y modo de diseño de código. En el modo de diseño de metadatos, se pueden agregar y modificar las entradas y salidas de componente de script, pero no se puede escribir código. Una vez configuradas todas las entradas y salidas, se cambia al modo de diseño de código para escribir el script. El componente de script genera automáticamente código base a partir de los metadatos de entradas y salidas. Si cambia los metadatos después de que el componente de script genere el código de base, es posible que su código ya no pueda compilarse porque el código base actualizado puede ser incompatible con su código.  
+## <a name="understanding-the-script-component-modes"></a>Descripción de los modos del componente de script  
+ En el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , el componente de script tiene dos modos: modo de diseño de metadatos y modo de diseño de código. En el modo de diseño de metadatos, se pueden agregar y modificar las entradas y salidas de componente de script, pero no se puede escribir código. Una vez configuradas todas las entradas y salidas, se cambia al modo de diseño de código para escribir el script. El componente de script genera automáticamente código base a partir de los metadatos de entradas y salidas. Si cambia los metadatos después de que el componente de script genere el código de base, es posible que su código ya no pueda compilarse porque el código base actualizado puede ser incompatible con su código.  
   
-## Escribir el script que el componente utiliza  
+## <a name="writing-the-script-that-the-component-uses"></a>Escribir el script que el componente utiliza  
  El componente de script usa [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools para aplicaciones (VSTA) como entorno para escribir los scripts. Puede tener acceso a VSTA en el **Editor de transformación Script**. Para obtener más información, vea [Editor de transformación Script &#40;página Script&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
   
  El componente de script proporciona un proyecto de VSTA que incluye una clase autogenerada, llamada ScriptMain, que representa los metadatos del componente. Por ejemplo, si el componente de script se usa como una transformación que tiene tres salidas, ScriptMain incluye un método para cada salida. ScriptMain es el punto de entrada al script.  
   
- VSTA incluye todas las características estándar del entorno [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], como el editor de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] con códigos de color, IntelliSense y el Explorador de objetos. El script que usa el componente de script se almacena en la definición de paquete. Al diseñar el paquete, el código de script se escribe temporalmente en un archivo de proyecto.  
+ VSTA incluye todas las características estándar del entorno [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] , como el editor de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] con códigos de color, IntelliSense y el Explorador de objetos. El script que usa el componente de script se almacena en la definición de paquete. Al diseñar el paquete, el código de script se escribe temporalmente en un archivo de proyecto.  
   
  VSTA es compatible con los lenguajes de programación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# y [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic.  
   
@@ -68,13 +73,13 @@ caps.handback.revision: 70
 > [!NOTE]  
 >  A diferencia de las versiones anteriores en las que podía indicar si se precompilaban los scripts, todos los scripts se precompilan en [!INCLUDE[ssISversion10](../../../includes/ssisversion10-md.md)] y versiones posteriores. Al precompilar el script, no se carga el motor del lenguaje en tiempo de ejecución, por lo que el paquete se ejecuta con mayor rapidez. Sin embargo, los archivos binarios precompilados utilizan una cantidad considerable de espacio en disco.  
   
-## Configurar el componente de script  
+## <a name="configuring-the-script-component"></a>Configurar el componente de script  
  Puede configurar el componente de script de las maneras siguientes:  
   
 -   Seleccionar las columnas de entrada a las que hacer referencia.  
   
     > [!NOTE]  
-    >  Puede configurar solo una entrada al usar el Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+    >  Puede configurar solo una entrada al usar el Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] .  
   
 -   Proporcionar el script que ejecuta el componente.  
   
@@ -86,7 +91,7 @@ caps.handback.revision: 70
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
-### Configurar el componente de script en el Diseñador  
+### <a name="configuring-the-script-component-in-the-designer"></a>Configurar el componente de script en el Diseñador  
  Para obtener más información sobre las propiedades que se pueden establecer en el cuadro de diálogo **Editor de transformación Script** , haga clic en uno de los siguientes temas:  
   
 -   [Editor de transformación Script &#40;página Columnas de entrada&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)  
@@ -101,10 +106,10 @@ caps.handback.revision: 70
   
 -   [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-### Configurar el componente de script mediante programación  
+### <a name="configuring-the-script-component-programmatically"></a>Configurar el componente de script mediante programación  
  Para obtener más información sobre las propiedades que se pueden establecer en la ventana **Propiedades** o mediante programación, haga clic en uno de los siguientes temas:  
   
--   [Propiedades comunes](../Topic/Common%20Properties.md)  
+-   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -112,9 +117,9 @@ caps.handback.revision: 70
   
 -   [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
- [Ampliar el flujo de datos con el componente de script](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
+ [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
   
   

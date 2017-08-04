@@ -1,32 +1,37 @@
 ---
-title: "Origen de archivo HDFS | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.hdfsfilesrc.f1"
+title: Origen de archivo HDFS | Documentos de Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.hdfsfilesrc.f1
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b7ed3c3789b7c28476719422f600106a73bfebd
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Origen de archivo HDFS
+# <a name="hdfs-file-source"></a>Origen de archivo HDFS
   El componente de origen de archivo HDFS permite que un paquete SSIS lea datos desde un archivo HDFS. Los formatos de archivo admitidos son Text y Avro. (No se admiten los orígenes ORC).  
   
  Para configurar el componente de origen de archivo HDFS, arrastre y suelte el origen de archivo HDFS en el diseñador de flujo de datos y haga doble clic en el componente para abrir el editor.  
   
- ![HDFS File Source Editor](../../integration-services/data-flow/media/hdfs-file-source.png "HDFS File Source Editor")  
+ ![Editor de origen de archivo HDFS](../../integration-services/data-flow/media/hdfs-file-source.png "Editor de origen de archivo HDFS")  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  Configure las opciones siguientes en la pestaña **General** del cuadro de diálogo **Hadoop File Source Editor** (Editor de origen de archivo Hadoop).  
   
 |Campo|Description|  
@@ -39,8 +44,8 @@ caps.handback.revision: 8
   
  Después de configurar estas opciones, seleccione la pestaña **Columna** para asignar columnas de origen a columnas de destino del flujo de datos.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Administrador de conexiones de Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)   
- [HDFS File Destination](../../integration-services/data-flow/hdfs-file-destination.md)  
+ [Destino de archivo HDFS](../../integration-services/data-flow/hdfs-file-destination.md)  
   
   

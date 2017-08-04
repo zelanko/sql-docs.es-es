@@ -1,25 +1,30 @@
 ---
-title: "Palabras reservadas (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "palabras reservadas {Master Data Services]"
-  - "Master Data Services, palabras reservadas"
+title: Reservado palabras (Master Data Services) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reserved words [Master Data Services]
+- Master Data Services, reserved words
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 caps.latest.revision: 11
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6815fb319b670226694e2fad4ed5768470d79e5e
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Palabras reservadas (Master Data Services)
+# <a name="reserved-words-master-data-services"></a>Palabras reservadas (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], al crear objetos del modelo o miembros, algunas palabras no se pueden usar. Su uso puede producir errores.  
   
 > [!NOTE]  
@@ -48,13 +53,13 @@ caps.handback.revision: 11
   
 -   **ID**  
   
--   **código**  
+-   **Code**  
   
 -   **EnterUserName**  
   
 -   **LastChgUserName**  
   
--   **Nombre**  
+-   **Name**  
   
 -   **EnterDTM**  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 11
 ##  <a name="members"></a> Miembros  
  Para los miembros, no puede usar **MDMMemberStatus**, **MDMUnused**o **ROOT** para el valor de atributo **Code** .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Introducción a Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
   

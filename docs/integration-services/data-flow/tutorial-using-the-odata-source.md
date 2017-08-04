@@ -1,25 +1,30 @@
 ---
-title: "Tutorial: Usar el origen OData | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Tutorial: Usar el origen OData | Documentos de Microsoft'
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38fc17519a5c0450b2a80a4bb0429ea24f34ac64
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Tutorial: Usar el origen OData
+# <a name="tutorial-using-the-odata-source"></a>Tutorial: Usar el origen OData
   En este tutorial se indican los pasos del proceso para extraer la colección **Employees** del servicio OData del ejemplo **Northwind** (http://services.odata.org/V3/Northwind/Northwind.svc/) y, después, cargarlo en un archivo plano.  
   
-## 1. Crear un proyecto de Integration Services  
+## <a name="1-create-an-integration-services-project"></a>1. Crear un proyecto de Integration Services  
   
 1.  Inicie **SQL Server Data Tools** o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 6
   
 5.  Escriba un **nombre** y seleccione una **ubicación** para el proyecto; a continuación, haga clic en **Aceptar**.  
   
-## 2. Agregar y configurar el origen OData al paquete SSIS  
+## <a name="2-add-and-configure-odata-source-to-the-ssis-package"></a>2. Agregar y configurar el origen OData al paquete SSIS  
   
 1.  Arrastre y coloque una **Tarea Flujo de datos** desde el **Cuadro de herramientas de SSIS** hasta la superficie de diseño del flujo de control del paquete SSIS.  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 6
   
 15. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Editor de origen OData** .  
   
-## 3. Agregar el destino del archivo plano y probar la solución  
+## <a name="3-add-flat-file-destination-and-test-the-solution"></a>3. Agregar el destino del archivo plano y probar la solución  
   
 1.  Después, arrastre y coloque un **Destino de archivo plano** desde el **Cuadro de herramientas de SSIS** hasta la superficie de diseño Flujo de datos, debajo el componente **Origen OData**.  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 6
   
 5.  En el cuadro de diálogo **Formato del archivo plano** , seleccione **Delimitado**. Debe ver el cuadro de diálogo **Editor del administrador de conexiones de archivos planos** .  
   
-6.  En el cuadro de diálogo **Editor del administrador de conexiones de archivos planos**, en **Nombre de archivo**, escriba **c:\Employees.txt**.  
+6.  En el cuadro de diálogo **Editor del administrador de conexiones de archivos planos** , en **Nombre de archivo**, escriba **c:\Employees.txt**.  
   
 7.  En el panel de navegación de la izquierda, haga clic en **Columnas**. Puede obtener una vista previa de los datos de esta página.  
   

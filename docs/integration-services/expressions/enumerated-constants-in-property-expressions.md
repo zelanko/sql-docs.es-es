@@ -1,29 +1,34 @@
 ---
-title: "Constantes enumeradas en expresiones de propiedad | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "enumeradores [Integration Services]"
-  - "paquetes [Integration Services], expresiones"
-  - "propiedades dinámicas"
-  - "actualizar propiedades del paquete"
-  - "constantes enumeradas [Integration Services]"
-  - "expresiones de propiedades [Integration Services]"
+title: Constantes en expresiones de propiedad enumeradas | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- enumerators [Integration Services]
+- packages [Integration Services], expressions
+- dynamic properties
+- updating package properties
+- enumerated constants [Integration Services]
+- property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8483c36dca5a24485e865b1115e766aa579635b9
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Constantes enumeradas en expresiones de propiedad
+# <a name="enumerated-constants-in-property-expressions"></a>Constantes enumeradas en expresiones de propiedad
   Si las expresiones de propiedad incluyen valores de una lista de miembros enumeradores, la expresión debe utilizar el valor numérico del miembro enumerador en lugar del nombre descriptivo del miembro. Por ejemplo, si una expresión establece la propiedad **LoggingMode** , debe utilizar el valor 2 en lugar del nombre descriptivo Deshabilitado.  
   
  Este tema enumera solo los valores numéricos equivalentes a los nombres descriptivos de los enumeradores cuyos miembros se utilizan generalmente en expresiones de propiedad. El modelo de objetos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye varios enumeradores adicionales que puede utilizar cuando programa el modelo de objetos para generar paquetes mediante programación o elementos de paquete de código personalizado tales como tareas y componentes de flujo de datos.  
@@ -107,7 +112,7 @@ caps.handback.revision: 34
 ##  <a name="Foreach"></a> Enumeradores de bucle Foreach  
  El bucle Foreach incluye un conjunto de enumeradores con propiedades que se pueden establecer a partir de expresiones de propiedad.  
   
-### Enumerador de ADO para Foreach  
+### <a name="foreach-ado-enumerator"></a>Enumerador de ADO para Foreach  
  Propiedad**Type** : se establece mediante el uso de valores provenientes de la enumeración **ADOEnumerationType** .  
   
 |Nombre descriptivo en ADOEnumerationType|Valor numérico|  
@@ -116,7 +121,7 @@ caps.handback.revision: 34
 |EnumerateAllRows|1|  
 |EnumerateRowsInFirstTable|2|  
   
-### Enumerador de lista de nodos para Foreach  
+### <a name="foreach-nodelist-enumerator"></a>Enumerador de lista de nodos para Foreach  
  Propiedades**SourceDocumentType**, **InnerXPathStringSourceType**y **OuterXPathStringSourceType** : se establecen mediante el uso de valores provenientes de la enumeración **SourceType** .  
   
 |Nombre descriptivo en SourceType|Valor numérico|  
@@ -145,7 +150,7 @@ caps.handback.revision: 34
 ##  <a name="Tasks"></a> Tareas  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye numerosas tareas con propiedades que se establecen a partir de expresiones de propiedad.  
   
-### Tarea Ejecutar DDL de Analysis Services  
+### <a name="analysis-services-execute-ddl-task"></a>Tarea Ejecutar DDL de Analysis Services  
  Propiedad**SourceType** : se establece mediante el uso de valores provenientes de la enumeración **DDLSourceType** .  
   
 |Nombre descriptivo en DDLSourceType|Valor numérico|  
@@ -154,8 +159,8 @@ caps.handback.revision: 34
 |FileConnection|1|  
 |Variable|2|  
   
-### Tarea Inserción masiva  
- Propiedad **DataFileType**: se establece mediante el uso de valores provenientes de la enumeración **DTSBulkInsert_DataFileType**.  
+### <a name="bulk-insert-task"></a>Tarea Inserción masiva  
+ Propiedad**DataFileType** : se establece mediante el uso de valores provenientes de la enumeración **DTSBulkInsert_DataFileType** .  
   
 |Nombre descriptivo en DTSBulkInsert_DataFileType|Valor numérico|  
 |--------------------------------------------------|-------------------|  
@@ -164,7 +169,7 @@ caps.handback.revision: 34
 |DTSBulkInsert_DataFileType_WideChar|2|  
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
-### Tarea Ejecutar SQL  
+### <a name="execute-sql-task"></a>Tarea Ejecutar SQL  
  Propiedad**ResultSetType** : se establece mediante el uso de valores provenientes de la enumeración **ResultSetType** .  
   
 |Nombre descriptivo en ResultSetType|Valor numérico|  
@@ -182,7 +187,7 @@ caps.handback.revision: 34
 |FileConnection|2|  
 |Variable|3|  
   
-### Tarea Sistema de archivos  
+### <a name="file-system-task"></a>Tarea Sistema de archivos  
  Propiedad**Operation** : se establece mediante el uso de valores provenientes de la enumeración **DTSFileSystemOperation** .  
   
 |Nombre descriptivo en DTSFileSystemOperation|Valor numérico|  
@@ -208,7 +213,7 @@ caps.handback.revision: 34
 |Solo lectura|4|  
 |Sistema|8|  
   
-### Tarea FTP  
+### <a name="ftp-task"></a>Tarea FTP  
  Propiedad**Operation** : se establece mediante el uso de valores provenientes de la enumeración **DTSFTPOp** .  
   
 |Nombre descriptivo en DTSFTPOp|Valor numérico|  
@@ -222,7 +227,7 @@ caps.handback.revision: 34
 |RemoveDirLocal|6|  
 |RemoveDirRemote|7|  
   
-### Tarea Cola de mensajes  
+### <a name="message-queue-task"></a>Tarea Cola de mensajes  
  Propiedad**MessageType** : se establece mediante el uso de valores provenientes de la enumeración **MQMessageType** .  
   
 |Nombre descriptivo en MQMessageType|Valor numérico|  
@@ -248,7 +253,7 @@ caps.handback.revision: 34
 |DTSMQType_Sender|0|  
 |DTSMQType_Receiver|1|  
   
-### Tarea Enviar correo  
+### <a name="send-mail-task"></a>Tarea Enviar correo  
  Propiedad**MessageSourceType** : se establece mediante el uso de valores provenientes de la enumeración **SendMailMessageSourceType** .  
   
 |Nombre descriptivo en SendMailMessageSourceType|Valor numérico|  
@@ -265,7 +270,7 @@ caps.handback.revision: 34
 |Normal|3|  
 |Baja|5|  
   
-### Tarea Transferir bases de datos  
+### <a name="transfer-database-task"></a>Tarea Transferir bases de datos  
  Propiedad**Action** : se establece mediante el uso de valores provenientes de la enumeración **TransferAction** .  
   
 |Nombre descriptivo en TransferAction|Valor numérico|  
@@ -280,7 +285,7 @@ caps.handback.revision: 34
 |DatabaseOffline|0|  
 |DatabaseOnline|1|  
   
-### Tarea Transferir mensajes de error  
+### <a name="transfer-error-messages-task"></a>Tarea Transferir mensajes de error  
  Propiedad**IfObjectExists** : se establece mediante el uso de valores provenientes de la enumeración **IfObjectExists** .  
   
 |Nombre descriptivo en IfObjectExists|Valor numérico|  
@@ -289,7 +294,7 @@ caps.handback.revision: 34
 |Sobrescribir|1|  
 |Omitir|2|  
   
-### Tarea Transferir trabajos  
+### <a name="transfer-jobs-task"></a>Tarea Transferir trabajos  
  Propiedad**IfObjectExists** : se establece mediante el uso de valores provenientes de la enumeración **IfObjectExists** .  
   
 |Nombre descriptivo en IfObjectExists|Valor numérico|  
@@ -298,7 +303,7 @@ caps.handback.revision: 34
 |Sobrescribir|1|  
 |Omitir|2|  
   
-### Tarea Transferir inicios de sesión  
+### <a name="transfer-logins-task"></a>Tarea Transferir inicios de sesión  
  Propiedad**IfObjectExists** : se establece mediante el uso de valores provenientes de la enumeración **IfObjectExists** .  
   
 |Nombre descriptivo en IfObjectExists|Valor numérico|  
@@ -315,7 +320,7 @@ caps.handback.revision: 34
 |SelectedLogins|1|  
 |AllLoginsFromSelectedDatabases|2|  
   
-### Tarea Transferir procedimientos almacenados principales  
+### <a name="transfer-master-stored-procedures-task"></a>Tarea Transferir procedimientos almacenados principales  
  Propiedad**IfObjectExists** : se establece mediante el uso de valores provenientes de la enumeración **IfObjectExists** .  
   
 |Nombre descriptivo en IfObjectExists|Valor numérico|  
@@ -324,7 +329,7 @@ caps.handback.revision: 34
 |Sobrescribir|1|  
 |Omitir|2|  
   
-### Tarea Transferir objetos de SQL Server  
+### <a name="transfer-sql-server-objects-task"></a>Tarea Transferir objetos de SQL Server  
  Propiedad**ExistingData** : se establece mediante el uso de valores provenientes de la enumeración **ExistingData** .  
   
 |Nombre descriptivo en ExistingData|Valor numérico|  
@@ -332,7 +337,7 @@ caps.handback.revision: 34
 |Reemplazar|0|  
 |Anexar|1|  
   
-### Tarea Servicio web  
+### <a name="web-service-task"></a>Tarea Servicio web  
  Propiedad**OutputType** : se establece mediante el uso de valores provenientes de la enumeración **DTSOutputType** .  
   
 |Nombre descriptivo en DTSOutputType|Valor numérico|  
@@ -340,7 +345,7 @@ caps.handback.revision: 34
 |Archivo|0|  
 |Variable|1|  
   
-### Tarea Lector de datos WMI  
+### <a name="wmi-data-reader-task"></a>Tarea Lector de datos WMI  
  Propiedad**OverwriteDestination** : se establece mediante el uso de valores provenientes de la enumeración **OverwriteDestination** .  
   
 |Nombre descriptivo en OverwriteDestination|Valor numérico|  
@@ -410,7 +415,7 @@ caps.handback.revision: 34
 |DirectInput|1|  
 |Variable|2|  
   
-### Tarea XML  
+### <a name="xml-task"></a>Tarea XML  
  Propiedad**OperationType** : se establece mediante el uso de valores provenientes de la enumeración **DTSXMLOperation** .  
   
 |Nombre descriptivo en DTSXMLOperation|Valor numérico|  
@@ -479,7 +484,7 @@ caps.handback.revision: 34
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite el trabajo con estas tareas mediante programación y la documentación de referencia de programación no incluye documentación de API de estas tareas y sus enumeradores.  
   
-### Todas las tareas de mantenimiento  
+### <a name="all-maintenance-tasks"></a>Todas las tareas de mantenimiento  
  Todas las tareas de mantenimiento utilizan las siguientes enumeraciones para establecer las propiedades especificadas.  
   
  Propiedad**DatabaseSelectionType** : se establece mediante el uso de valores provenientes de la enumeración **DatabaseSelection** .  
@@ -508,7 +513,7 @@ caps.handback.revision: 34
 |Ver|1|  
 |TableView|2|  
   
-### Tarea Copia de seguridad de la base de datos  
+### <a name="back-up-database-task"></a>Tarea Copia de seguridad de la base de datos  
  Propiedad**DestinationCreationType** : se establece mediante el uso de valores provenientes de la enumeración **DestinationType** .  
   
 |Nombre descriptivo en DestinationType|Valor numérico|  
@@ -531,7 +536,7 @@ caps.handback.revision: 34
 |Archivos|1|  
 |Log|2|  
   
- Propiedad **BackupDevice**: se establece mediante el uso de valores provenientes de la enumeración **DeviceType** de los objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO).  
+ Propiedad**BackupDevice** : se establece mediante el uso de valores provenientes de la enumeración [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de los objetos de administración de **de los objetos de administración de** (SMO).  
   
 |Nombre descriptivo en DeviceType|Valor numérico|  
 |---------------------------------|-------------------|  
@@ -541,7 +546,7 @@ caps.handback.revision: 34
 |Pipe|3|  
 |VirtualDevice|4|  
   
-### Tarea Limpieza de mantenimiento  
+### <a name="maintenance-cleanup-task"></a>Tarea Limpieza de mantenimiento  
  Propiedad**FileTypeSelected** : se establece mediante el uso de valores provenientes de la enumeración **FileType** .  
   
 |Nombre descriptivo en FileType|Valor numérico|  
@@ -558,8 +563,8 @@ caps.handback.revision: 34
 |Month|2|  
 |Year|3|  
   
-### Tarea Actualizar estadísticas  
- Propiedad **UpdateType**: se establece mediante el uso de valores provenientes de la enumeración **StatisticsTarget** de los objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO).  
+### <a name="update-statistics-task"></a>Tarea Actualizar estadísticas  
+ Propiedad**UpdateType** : se establece mediante el uso de valores provenientes de la enumeración [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de los objetos de administración de **de los objetos de administración de** (SMO).  
   
 |Nombre descriptivo en StatisticsTarget|Valor numérico|  
 |---------------------------------------|-------------------|  
@@ -597,12 +602,12 @@ caps.handback.revision: 34
 |Admitida|1|  
 |Necesario|2|  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
  [Agregar o cambiar una expresión de propiedad](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Usar expresiones de propiedad en paquetes](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Paquetes de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
+ [Integration Services &#40; SSIS &#41; Paquetes](../../integration-services/integration-services-ssis-packages.md)   
  [Contenedores de Integration Services](../../integration-services/control-flow/integration-services-containers.md)   
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Restricciones de precedencia](../../integration-services/control-flow/precedence-constraints.md)  

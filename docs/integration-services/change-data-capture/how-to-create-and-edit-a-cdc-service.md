@@ -1,27 +1,32 @@
 ---
-title: "C&#243;mo crear y editar un servicio CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo crear y editar un servicio CDC | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: daf64f88220832573485701883921ad575e789bc
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# C&#243;mo crear y editar un servicio CDC
+# <a name="how-to-create-and-edit-a-cdc-service"></a>Cómo crear y editar un servicio CDC
   En estos procedimientos se describe cómo crear y editar un nuevo servicio CDC de Oracle desde la Consola de configuración del servicio CDC.  
   
  Para poder realizar este procedimiento, un usuario de Windows debe tener privilegios de administrador en el equipo donde está configurado el servicio CDC de Oracle.  
   
-### Para crear un nuevo servicio CDC  
+### <a name="to-create-a-new-cdc-service"></a>Para crear un nuevo servicio CDC  
   
 1.  En el menú **Inicio** , seleccione **Configuración del servicio CDC para Oracle**.  
   
@@ -41,11 +46,11 @@ caps.handback.revision: 7
   
 5.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo Nuevo servicio CDC de Oracle.  
   
-### Para editar un servicio CDC  
+### <a name="to-edit-a-cdc-service"></a>Para editar un servicio CDC  
   
 1.  En el menú **Inicio** , seleccione **Configuración del servicio CDC para Oracle**.  
   
-2.  En el panel izquierdo, seleccione **Servicios CDC locales**, haga clic con el botón derecho en el servicio local que quiera editar y seleccione **Propiedades**.  
+2.  En el panel izquierdo, seleccione **Servicios CDC locales** , haga clic con el botón derecho en el servicio local que quiera editar y seleccione **Propiedades**.  
   
      También puede seleccionar el servicio con el que está trabajando en la parte central y a continuación, en el panel **Acciones** , hacer clic en **Propiedades**.  
   
@@ -53,13 +58,13 @@ caps.handback.revision: 7
   
 4.  Cuando termine de escribir la información necesaria, haga clic en **Aceptar**; se abrirá el cuadro de diálogo Conectar con SQL Server.  
   
-     Cuando un inicio de sesión sin permiso de escritura para la base de datos MSXDBDCDC intenta crear una nueva instancia CDC de Oracle, se muestra un mensaje de error. Haga clic en **Aceptar** en ese cuadro de diálogo para mostrar el cuadro de diálogo Conectar con SQL Server. En este cuadro de diálogo debe especificar las credenciales para un inicio de sesión que tenga permiso de escritura para la base de datos MSXDBCDC, como el rol de base de datos **db_owner**.  
+     Cuando un inicio de sesión sin permiso de escritura para la base de datos MSXDBDCDC intenta crear una nueva instancia CDC de Oracle, se muestra un mensaje de error. Haga clic en **Aceptar** en ese cuadro de diálogo para mostrar el cuadro de diálogo Conectar con SQL Server. En este cuadro de diálogo debe especificar las credenciales para un inicio de sesión que tenga permiso de escritura para la base de datos MSXDBCDC, como el rol de base de datos **db_owner** .  
   
      Para obtener información acerca de los datos que debe escribir en el cuadro de diálogo Conectar con SQL Server, vea [Connection to SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md).  
   
 5.  Haga clic en **Aceptar** en el cuadro de diálogo Conectar con Oracle. Se cerrarán ambos cuadros de diálogo, y se actualizará y registrará el servicio.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Diseñador de captura de datos modificados para Oracle de Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
  [Crear y editar un servicio CDC de Oracle](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   

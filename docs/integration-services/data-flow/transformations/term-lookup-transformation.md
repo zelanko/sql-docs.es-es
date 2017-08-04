@@ -1,32 +1,37 @@
 ---
-title: "Transformaci&#243;n B&#250;squeda de t&#233;rminos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.termlookuptrans.f1"
-helpviewer_keywords: 
-  - "extraer datos [Integration Services]"
-  - "coincidir términos extraídos [Integration Services]"
-  - "extracción de texto [Integration Services]"
-  - "extracciones de términos [Integration Services]"
-  - "búsquedas [Integration Services]"
-  - "contar elementos extraídos"
-  - "Búsqueda de términos, transformación"
+title: "Transformación Búsqueda de términos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.termlookuptrans.f1
+helpviewer_keywords:
+- extracting data [Integration Services]
+- match extracted terms [Integration Services]
+- text extraction [Integration Services]
+- term extractions [Integration Services]
+- lookups [Integration Services]
+- counting extracted items
+- Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 caps.latest.revision: 56
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3eefbab1c6f9b3cd5e51faa9e875a44218c33b3f
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transformaci&#243;n B&#250;squeda de t&#233;rminos
+# <a name="term-lookup-transformation"></a>Búsqueda de términos, transformación
   La transformación Búsqueda de términos compara los términos extraídos del texto en una columna de entrada de transformación con los términos de una tabla de referencia. A continuación, cuenta la cantidad de veces que un término aparece en la tabla de búsqueda en el conjunto de datos de entrada y escribe el recuento junto con el término de la tabla de referencia en columnas en la salida de transformación. Esta transformación resulta útil para crear una lista personalizada de palabras basada en el texto de entrada, que incluye estadísticas de frecuencia de aparición de palabras.  
   
  Antes de que la transformación Búsqueda de términos realice una búsqueda, extrae palabras del texto en una columna de entrada aplicando el mismo método que la transformación Extracción de términos:  
@@ -39,7 +44,7 @@ caps.handback.revision: 56
   
  Para personalizar de forma adicional cuáles son los términos que deben coincidir, la transformación Búsqueda de términos puede configurarse para obtener coincidencias que distingan mayúsculas de minúsculas.  
   
-## Coincide  
+## <a name="matches"></a>Coincide  
  La transformación Búsqueda de términos realiza una búsqueda y devuelve un valor aplicando las siguientes reglas:  
   
 -   Si la transformación se configura para obtener coincidencias que distingan mayúsculas de minúsculas, se descartan las coincidencias que no pasan la comparación con distinción de mayúsculas y minúsculas. Por ejemplo, *estudiante* y *ESTUDIANTE* se consideran palabras diferentes.  
@@ -61,12 +66,12 @@ caps.handback.revision: 56
 |Términos de referencia|Windows, Windows 7 Professional|  
 |Salida|Windows|  
   
- La transformación Búsqueda de términos puede obtener coincidencias de nombres y frases que contienen caracteres especiales, y los datos en la tabla de referencia pueden incluir estos caracteres. Los caracteres especiales son: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, y ‘.  
+ La transformación Búsqueda de términos puede obtener coincidencias de nombres y frases que contienen caracteres especiales, y los datos en la tabla de referencia pueden incluir estos caracteres. Los caracteres especiales son los siguientes: %, @ &, $, #, \*,:,,., **,** ,!,?, \<, >, +, =, ^, ~, |, \\, /, (,), [,], {,}, ", y '.  
   
-## Tipos de datos  
+## <a name="data-types"></a>Tipos de datos  
  La transformación Búsqueda de términos solo puede usar una columna que tenga el tipo de datos DT_WSTR o DT_NTEXT. Si una columna contiene texto, pero no tiene uno de estos tipos de datos, la transformación Conversión de datos puede agregar una columna con el tipo de datos DT_WSTR o DT_NTEXT al flujo de datos y copiar los valores de columnas en la nueva columna. La salida de transformación Conversión de datos posteriormente se puede usar como la entrada para la transformación Búsqueda de términos. Para más información, consulte [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
   
-## Configuración de la transformación Búsqueda de términos  
+## <a name="configuration-the-term-lookup-transformation"></a>Configuración de la transformación Búsqueda de términos  
  Las columnas de entrada de la transformación Búsqueda de términos incluyen la propiedad InputColumnType, que indica el uso de la columna. InputColumnType puede incluir los valores siguientes:  
   
 -   El valor 0 indica que la columna se pasa a la salida solamente y no se utiliza en la búsqueda.  
@@ -101,10 +106,10 @@ caps.handback.revision: 56
   
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](../Topic/Common%20Properties.md)  
+-   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- Para obtener más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Para más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
   

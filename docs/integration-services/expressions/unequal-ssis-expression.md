@@ -1,30 +1,35 @@
 ---
-title: "!= (Diferente) (expresi&#243;n de SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "diferente, operador (!=)"
-  - "!= (no es igual a)"
+title: "! = (Diferente) (expresión de SSIS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unequal operator (!=)
+- '!= (not equal to)'
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 caps.latest.revision: 53
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 53
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 062024b2e222c0240852ce36646ecfd5b001deba
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# != (Diferente) (expresi&#243;n de SSIS)
+# <a name="-unequal-ssis-expression"></a>!= (Diferente) (expresión de SSIS)
   Realiza una comparación para determinar si dos expresiones con tipos de datos compatibles no son iguales. El evaluador de expresiones convierte automáticamente muchos tipos de datos antes de realizar la comparación.  
   
  Sin embargo, algunos tipos de datos requieren que la expresión incluya una conversión explícita para que se pueda evaluar correctamente. Para más información sobre conversiones válidas entre tipos de datos, vea [Conversión &#40;expresión de SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -32,14 +37,14 @@ expression1 != expression2
   
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *expression1, expression2*  
  Es cualquier expresión válida.  
   
-## Tipos de resultado  
+## <a name="result-types"></a>Tipos de resultado  
  DT_BOOL  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Si una de las expresiones de la comparación es NULL, el resultado de la comparación es NULL. Si ambas expresiones son NULL, el resultado es NULL.  
   
  El conjunto de expresiones *expression1* y *expression2*debe cumplir una de las siguientes reglas:  
@@ -84,7 +89,7 @@ expression1 != expression2
   
  Para obtener más información acerca de los tipos de datos, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Ejemplos de expresiones  
+## <a name="expression-examples"></a>Ejemplos de expresiones  
  Este ejemplo devuelve TRUE únicamente si la fecha actual no es el 4 de julio de 2003. Para más información, vea [GETDATE &#40;expresión de SSIS&#41;](../../integration-services/expressions/getdate-ssis-expression.md).  
   
 ```  
@@ -103,9 +108,9 @@ ListPrice != 500
 @LPrice != 500  
 ```  
   
-## Vea también  
- [== &#40;Igual&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/equal-ssis-expression.md)   
- [Precedencia y capacidad de asociación de operadores](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Vea también  
+ [== &#40; Igual &#41; &#40; Expresión de SSIS &#41;](../../integration-services/expressions/equal-ssis-expression.md)   
+ [Prioridad y asociatividad](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operadores &#40; Expresión de SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

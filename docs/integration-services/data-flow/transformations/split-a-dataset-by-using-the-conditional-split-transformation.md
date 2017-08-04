@@ -1,29 +1,34 @@
 ---
-title: "Dividir un conjunto de datos usando la transformaci&#243;n Divisi&#243;n condicional | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "División condicional, transformación"
-  - "dividir conjuntos de datos"
-  - "conjuntos de datos [Integration Services], dividir"
+title: "Dividir un conjunto de datos mediante la transformación División condicional | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Conditional Split transformation
+- splitting dataset
+- datasets [Integration Services], splitting
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
 caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 8248e068541c6bd72b21f78d121811f4851850bb
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Dividir un conjunto de datos usando la transformaci&#243;n Divisi&#243;n condicional
+# <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>Dividir un conjunto de datos usando la transformación División condicional
   Para agregar y configurar una transformación División condicional, el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen.  
   
-### Para realizar la división condicional de un conjunto de datos  
+### <a name="to-conditionally-split-a-dataset"></a>Para realizar la división condicional de un conjunto de datos  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] que contiene el paquete que desea.  
   
@@ -52,18 +57,18 @@ caps.handback.revision: 40
   
 9. Opcionalmente, modifique el nombre de la salida predeterminada para filas de datos que no coinciden con ninguna condición.  
   
-10. Para configurar una salida de error, haga clic en **Configurar la salida de errores**. Para más información, vea [Configurar una salida de error en un componente de flujo de datos](../../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md).  
+10. Para configurar una salida de error, haga clic en **Configurar la salida de errores**. Para más información, consulte [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 11. Haga clic en **Aceptar**.  
   
 12. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Transformación División condicional](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Rutas de Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
  [Tipos de datos de Integration Services](../../../integration-services/data-flow/integration-services-data-types.md)   
- [Tarea Flujo de datos](../../../integration-services/control-flow/data-flow-task.md)   
- [Expresiones de Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Tarea flujo de datos](../../../integration-services/control-flow/data-flow-task.md)   
+ [Integration Services &#40; SSIS &#41; Expresiones](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   

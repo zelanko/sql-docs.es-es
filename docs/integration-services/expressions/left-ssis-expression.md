@@ -1,42 +1,47 @@
 ---
-title: "LEFT (expresi&#243;n de SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "LEFT (expresión de SSIS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
 caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aad5c2de4903b5ad79fd5087be7801a8195e943f
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# LEFT (expresi&#243;n de SSIS)
+# <a name="left-ssis-expression"></a>LEFT (expresión de SSIS)
   Devuelve el número de caracteres especificado de la parte más a la izquierda de la expresión de caracteres dada.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
 LEFT(character_expression,number)  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *character_expression*  
  Expresión de caracteres de la que se van a extraer caracteres.  
   
  *number*  
  Expresión entera que indica el número de caracteres que se van a devolver.  
   
-## Tipos de resultado  
+## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Si *number* es mayor que la longitud de *character_expression*, la función devuelve *character_expression*.  
   
  Si el valor de *number* es cero, la función devuelve una cadena de longitud cero.  
@@ -49,15 +54,15 @@ LEFT(character_expression,number)
   
  LEFT devuelve un resultado NULL si alguno de los argumentos es NULL.  
   
-## Ejemplos de expresiones  
+## <a name="expression-examples"></a>Ejemplos de expresiones  
  En el siguiente ejemplo se utiliza un literal de cadena. El resultado devuelto es `"Mountain"`.  
   
 ```  
 LEFT("Mountain Bike", 8)  
 ```  
   
-## Vea también  
- [RIGHT &#40;expresión de SSIS&#41;](../../integration-services/expressions/right-ssis-expression.md)   
- [Funciones &#40;expresión de SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Vea también  
+ [DERECHA &#40; Expresión de SSIS &#41;](../../integration-services/expressions/right-ssis-expression.md)   
+ [Funciones &#40; Expresión de SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

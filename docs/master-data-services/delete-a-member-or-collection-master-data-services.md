@@ -1,35 +1,40 @@
 ---
-title: "Eliminar un miembro o una colecci&#243;n (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colecciones [Master Data Services], eliminación"
-  - "miembros hoja [Master Data Services], eliminación"
-  - "eliminar miembros [Master Data Services]"
-  - "miembros [Master Data Services], eliminación"
-  - "miembros consolidados [Master Data Services], eliminación"
+title: "Eliminar un miembro o colección (Master Data Services) | Documentos de Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collections [Master Data Services], deleting
+- leaf members [Master Data Services], deleting
+- deleting members [Master Data Services]
+- members [Master Data Services], deleting
+- consolidated members [Master Data Services], deleting
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 89e49964ef41c7d093a2bdba1673ae8ea44a4a70
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Eliminar un miembro o una colecci&#243;n (Master Data Services)
+# <a name="delete-a-member-or-collection-master-data-services"></a>Eliminar un miembro o una colección (Master Data Services)
   En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], elimine un miembro o recopilación cuando ya no lo necesite. Si desea eliminar miembros de forma masiva, en su lugar, utilice las tablas de almacenamiento provisional. Para obtener más información, consulte [Importar datos de tablas &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
   
 > [!NOTE]  
 >  No puede eliminar un miembro si se utiliza como un valor de atributo basado en dominio para otro miembro.  
   
-## Requisitos previos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional **Explorador** .  
@@ -38,7 +43,7 @@ caps.handback.revision: 10
   
 -   Para las colecciones, debe tener como mínimo el permiso **Actualizar** en el objeto de colección hoja que vaya a eliminar.  
   
-### Para eliminar un miembro o colección  
+### <a name="to-delete-a-member-or-collection"></a>Para eliminar un miembro o colección  
   
 1.  En la página principal de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , en la lista **Modelo** , seleccione un modelo.  
   
@@ -62,9 +67,9 @@ caps.handback.revision: 10
   
 8.  En el cuadro de diálogo de confirmación, haga clic en **Aceptar**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Reactivar un miembro o una colección &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
- [Miembros &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
- [Colecciones &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
+ [Los miembros &#40; Master Data Services &#41;](../master-data-services/members-master-data-services.md)   
+ [Colecciones de &#40; Master Data Services &#41;](../master-data-services/collections-master-data-services.md)  
   
   

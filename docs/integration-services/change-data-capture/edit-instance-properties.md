@@ -1,22 +1,27 @@
 ---
-title: "Editar propiedades de la instancia | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Editar propiedades de la instancia | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14a55010cd2adc4ea02f0207b91a8e608ed7b176
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editar propiedades de la instancia
+# <a name="edit-instance-properties"></a>Editar propiedades de la instancia
   Use el editor de propiedades para realizar cambios en la instancia CDC después de crear las configuraciones iniciales. Puede hacer lo siguiente en el editor de propiedades.  
   
 -   [Editar las propiedades de la base de datos de Oracle](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)  
@@ -27,11 +32,11 @@ caps.handback.revision: 6
   
 -   [Editar las propiedades de tabla](../../integration-services/change-data-capture/edit-the-table-properties.md)  
   
--   [Revisar y generar scripts de registro complementario](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
+-   [Revisar y generar Scripts de registro complementario](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   
 -   [Editar las propiedades avanzadas](../../integration-services/change-data-capture/edit-the-advanced-properties.md)  
   
-### Para abrir el editor de propiedades  
+### <a name="to-open-the-properties-editor"></a>Para abrir el editor de propiedades  
   
 1.  En el panel izquierdo de la Consola del diseñador CDC, expanda el servicio con el que está trabajando.  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 6
   
      También puede hacer clic con el botón derecho en el servicio en el panel izquierdo y seleccionar **Propiedades**.  
   
-### O BIEN  
+### <a name="or"></a>O BIEN  
   
 1.  En el panel izquierdo de la Consola del diseñador CDC, seleccione el servicio con el que está trabajando.  
   

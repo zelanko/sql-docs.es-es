@@ -1,25 +1,30 @@
 ---
-title: "Propiedades de SQL Server (pesta&#241;a Par&#225;metros de inicio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Propiedades de SQL Server (pestaña parámetros de inicio) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14d9259d613ac1c147dbd054e0cacb2f350cb007
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propiedades de SQL Server (pesta&#241;a Par&#225;metros de inicio)
+# <a name="sql-server-properties-startup-parameters-tab"></a>Propiedades de SQL Server (pestaña Parámetros de inicio)
   Utilice este cuadro de diálogo para agregar o quitar parámetros de inicio para el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Los parámetros de inicio pueden tener una gran influencia en el rendimiento del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Antes de agregar o cambiar los parámetros de inicio, vea el tema "Usar las opciones de inicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Especifique un parámetro de inicio**  
  Para agregar un parámetro, escríbalo y haga clic en **Agregar**.  
   
@@ -28,29 +33,29 @@ caps.handback.revision: 10
  **Parámetros existentes**  
  Para quitar un parámetro, selecciónelo y haga clic en **Quitar**.  
   
-## Formato de parámetros  
- No incluya un separador entre parámetros. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo agrega automáticamente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplica los requisitos de parámetro siguientes.  
+## <a name="parameter-format"></a>Formato de parámetros  
+ No incluya un separador entre parámetros. El Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo agrega automáticamente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Aplica los siguientes requisitos de parámetro.  
   
 -   Los espacios iniciales y finales se recortan de los parámetros de inicio.  
   
 -   Todos los parámetros de inicio empiezan con un guión (–) y el segundo valor es una letra.  
   
-## Parámetros necesarios  
+## <a name="required-parameters"></a>Parámetros necesarios  
  Los parámetros siguientes son necesarios. Se pueden cambiar pero no quitar.  
   
 -   -d es la ruta de acceso al archivo **master.mdf** (el archivo de datos de la base de datos maestra).  
   
 -   -l es la ruta de acceso al archivo **master.ldf** (el archivo de registro de la base de datos maestra).  
   
--   -e es la ruta de acceso de los archivos de registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   -e es la ruta de acceso de los archivos de registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!CAUTION]  
 >  Si los parámetros de ruta de acceso al archivo son incorrectos, es posible que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se inicie.  
   
  Para obtener más información sobre cómo mover la base de datos maestra, vea el tema "Mover bases de datos del sistema" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Parámetros opcionales  
- Todos los parámetros de inicio admitidos se describen en el tema "Usar las opciones de inicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un parámetro de inicio de -T*n.º de seguimiento* indica que una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha de iniciarse con una marca de seguimiento especificada (*n.º de seguimiento*) activa. Las marcas de seguimiento se utilizan para iniciar el servidor con un comportamiento distinto del habitual. Para más información sobre las marcas de seguimiento, vea el tema "Marcas de seguimiento ([!INCLUDE[tsql](../../includes/tsql-md.md)])" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="optional-parameters"></a>Parámetros opcionales  
+ Todos los parámetros de inicio admitidos se describen en el tema "Usar las opciones de inicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un parámetro de inicio de -T*n.º de seguimiento* indica que una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha de iniciarse con una marca de seguimiento especificada (*n.º de seguimiento*) activa. Las marcas de seguimiento se utilizan para iniciar el servidor con un comportamiento distinto del habitual. Para más información sobre las marcas de seguimiento, vea el tema "Marcas de seguimiento ([!INCLUDE[tsql](../../includes/tsql-md.md)])" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!CAUTION]  
 >  Puede ver parámetros de inicio y marcas de seguimiento sin documentar adicionales en Internet. Los parámetros de inicio y marcas de seguimiento sin documentar se crean para resolver problemas poco habituales o forzar determinadas condiciones requeridas para las pruebas. El uso de parámetros de inicio sin documentar puede proporcionar resultados inesperados. No utilice parámetros sin documentar a menos que estén dirigidos por los servicios de soporte al cliente de Microsoft.  
@@ -68,14 +73,14 @@ caps.handback.revision: 10
 > [!CAUTION]  
 >  Algunos parámetros opcionales pueden cambiar el comportamiento del servidor y afectar al rendimiento.  
   
-## Permissions  
+## <a name="permissions"></a>Permissions  
  El uso de esta página está restringido a los usuarios que pueden cambiar las entradas relacionadas en el Registro. Esto incluye a los usuarios siguientes.  
   
 -   Miembros del grupo local de administradores.  
   
 -   La cuenta de dominio utilizada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el [!INCLUDE[ssDE](../../includes/ssde-md.md)] está configurado para ejecutarse bajo una cuenta de dominio.  
   
-## Referencias de los Libros en pantalla  
- Para más información sobre los parámetros de inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea "Cómo configurar opciones de inicio del servidor (Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="books-online-references"></a>Referencias de los Libros en pantalla  
+ Para más información sobre los parámetros de inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea "Cómo configurar opciones de inicio del servidor (Administrador de configuración de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   

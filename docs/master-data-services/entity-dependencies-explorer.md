@@ -1,24 +1,29 @@
 ---
-title: "Explorador de dependencias de entidad | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/06/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "master data services"
+title: Explorador de dependencias de entidad | Documentos de Microsoft
+ms.custom: 
+ms.date: 04/06/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- master data services
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccac7deb9d40896082cddda7c438ebe5f6e53a83
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Explorador de dependencias de entidad
+# <a name="entity-dependencies-explorer"></a>Explorador de dependencias de entidad
   
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 agrega una nueva página del explorador, Dependencias de entidades, que proporciona una forma alternativa de visualizar las relaciones entre miembros de la entidad dentro de un modelo, según lo especificado por sus valores de atributo basados en dominio (DBA), pero sin tener que definir primero una jerarquía derivada.   
   
@@ -43,3 +48,5 @@ La vista se puede modificar por completo, al igual que en la página del explora
   
   
   
+
+

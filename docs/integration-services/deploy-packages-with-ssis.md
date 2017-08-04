@@ -1,32 +1,37 @@
 ---
-title: "Implementar paquetes con SSIS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "tutorial de implementación [Integration Services]"
-  - "implementar paquetes [Integration Services]"
-  - "SSIS, tutoriales"
-  - "Integration Services, tutoriales"
-  - "implementar paquetes [Integration Services], instalar"
-  - "SQL Server Integration Services, tutoriales"
-  - "visitas guiadas [Integration Services]"
-  - "utilidad de implementación [Integration Services]"
-  - "implementar paquetes [Integration Services], configuraciones"
+title: Implementar paquetes de SSIS | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- deployment tutorial [Integration Services]
+- deploying packages [Integration Services]
+- SSIS, tutorials
+- Integration Services, tutorials
+- deploying packages [Integration Services], installing
+- SQL Server Integration Services, tutorials
+- walkthroughs [Integration Services]
+- deployment utility [Integration Services]
+- deploying packages [Integration Services], configurations
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 939f988b8d91e93aa8f1cc4ef4b555af7b26cf67
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Implementar paquetes con SSIS
+# <a name="deploy-packages-with-ssis"></a>Implementar paquetes con SSIS
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona herramientas que permiten implementar paquetes en otro equipo. Las herramientas de implementación también administran las dependencias, como configuraciones y archivos que necesita el paquete. En este tutorial, aprenderá a usar estas herramientas para instalar paquetes y sus dependencias en un equipo de destino.    
     
 Primero, realizará tareas para preparar la implementación. Creará un nuevo proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y agregará paquetes y archivos de datos existentes al proyecto. No creará nuevos paquetes desde el principio; solamente trabajará con paquetes completados creados exclusivamente para este tutorial. En este tutorial no modificará la funcionalidad de los paquetes; no obstante, después de agregar los paquetes al proyecto, puede resultar útil abrirlos en el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] y revisar el contenido de cada paquete. Mediante el examen de los paquetes, conocerá las dependencias de los paquetes como los archivos de registro y otras características interesantes de los mismos.    
@@ -49,7 +54,7 @@ Este tutorial está concebido para los usuarios familiarizados con las operacion
     
 **Equipo de origen.** El equipo en el que creará el paquete de implementación **debe tener instalados los siguientes componentes:**
 - SQL Server  
-- Datos de ejemplo, paquetes completados, configuraciones y un archivo Léame. Estos archivos se instalan conjuntamente si descarga [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550) (Bases de datos de ejemplo de Adventure Works 2014).     
+- Datos de ejemplo, paquetes completados, configuraciones y un archivo Léame. Estos archivos se instalan conjuntamente si descarga [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)(Bases de datos de ejemplo de Adventure Works 2014).     
 > **Nota** asegúrese de que tiene permiso para crear y quitar tablas en AdventureWorks u otros datos que use.         
     
 -   [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).    
@@ -57,7 +62,7 @@ Este tutorial está concebido para los usuarios familiarizados con las operacion
 **Equipo de destino.** El equipo en el que implementará los paquetes **debe tener instalados los siguientes componentes:**    
     
 - SQL Server
-- Datos de ejemplo, paquetes completados, configuraciones y un archivo Léame. Estos archivos se instalan conjuntamente si descarga [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550) (Bases de datos de ejemplo de Adventure Works 2014). 
+- Datos de ejemplo, paquetes completados, configuraciones y un archivo Léame. Estos archivos se instalan conjuntamente si descarga [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)(Bases de datos de ejemplo de Adventure Works 2014). 
     
 - [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx).    
     
@@ -81,3 +86,5 @@ En esta lección, generará una utilidad de implementación y comprobará que el
 [Lección 3: Instalar los paquetes de SSIS](../integration-services/lesson-3-install-ssis-packages.md)    
 En esta lección, copiará el paquete de implementación en el equipo de destino, instalará los paquetes y, a continuación, los ejecutará.    
     
+
+

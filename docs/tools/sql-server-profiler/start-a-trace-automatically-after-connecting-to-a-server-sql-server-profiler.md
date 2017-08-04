@@ -1,29 +1,34 @@
 ---
-title: "Iniciar un seguimiento autom&#225;ticamente despu&#233;s de conectarse a un servidor (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "inicio automático de seguimiento"
-  - "seguimientos [SQL Server], iniciar"
-  - "iniciar segumiento automáticamente"
+title: "Iniciar un seguimiento automáticamente después de conectarse a un servidor (SQL Server Profiler) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- automatic trace start
+- traces [SQL Server], starting
+- starting trace automatically
 ms.assetid: d74b848d-e796-49af-a8c5-dd69230f3a78
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4850c8ca65aecc5800d3fcf6940a12f79b270662
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Iniciar un seguimiento autom&#225;ticamente despu&#233;s de conectarse a un servidor (SQL Server Profiler)
+# <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>Iniciar un seguimiento automáticamente después de conectarse a un servidor (SQL Server Profiler)
   En este tema se describe el modo de iniciar seguimientos de forma automática tras conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
-### Para iniciar un seguimiento automáticamente después de conectarse a un servidor con SQL Server Profiler  
+### <a name="to-start-a-trace-automatically-after-connecting-to-a-server-with-sql-server-profiler"></a>Para iniciar un seguimiento automáticamente después de conectarse a un servidor con SQL Server Profiler  
   
 1.  En el menú **Herramientas** , haga clic en **Opciones**.  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  Si se selecciona **Iniciar el seguimiento inmediatamente tras realizar la conexión**, el cuadro de diálogo **Propiedades de seguimiento**no aparecerá y, en su lugar, se iniciará el seguimiento. Para editar las propiedades del seguimiento, primero debe desactivar este ajuste.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

@@ -1,25 +1,30 @@
 ---
-title: "C&#243;mo administrar una instancia CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo administrar una instancia CDC | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d368fcacfb8e548647785c8b5f6ef5b73b4ef10b
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# C&#243;mo administrar una instancia CDC
+# <a name="how-to-manage-a-cdc-instance"></a>Cómo administrar una instancia CDC
   En este procedimiento se describe cómo usar la Consola del diseñador CDC para administrar las operaciones de la instancia CDC en tiempo de ejecución.  
   
-### Para administrar las operaciones de la instancia CDC  
+### <a name="to-manage-cdc-instance-operations"></a>Para administrar las operaciones de la instancia CDC  
   
 1.  En el menú **Inicio** , seleccione **Consola del diseñador CDC**.  
   

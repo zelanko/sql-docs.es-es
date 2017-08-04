@@ -1,34 +1,39 @@
 ---
-title: "Transformaci&#243;n Exportar columna | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.exportcolumntrans.f1"
-helpviewer_keywords: 
-  - "exportar datos"
-  - "anexar, opciones [Integration Services]"
-  - "Exportar columna, transformación [Integration Services]"
-  - "columnas [Integration Services], exportar"
-  - "insertar datos"
-  - "opciones de truncamiento [Integration Services]"
+title: "Transformación Exportar columna | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.exportcolumntrans.f1
+helpviewer_keywords:
+- exporting data
+- append options [Integration Services]
+- Export Column transformation [Integration Services]
+- columns [Integration Services], exporting
+- inserting data
+- truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 caps.latest.revision: 45
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e7e611452f931d049c63c822587dc7610bf1eb25
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transformaci&#243;n Exportar columna
+# <a name="export-column-transformation"></a>Transformación Exportar columna
   La transformación Exportar columna lee datos de un flujo de datos e inserta dichos datos en un archivo. Por ejemplo, si el flujo de datos contiene información de productos, como una foto de cada producto, puede usar la transformación Exportar columna para guardar las imágenes en archivos.  
   
-## Opciones de anexar y truncar  
+## <a name="append-and-truncate-options"></a>Opciones de anexar y truncar  
  En la tabla siguiente se describe cómo afectan a los resultados las opciones para anexar y truncar.  
   
 |Anexar|Truncamiento|El archivo existe|Resultado|  
@@ -42,7 +47,7 @@ caps.handback.revision: 45
 |True|False|Sí|La transformación abre el archivo y escribe los datos al final del archivo.|  
 |True|True|Sí|Se produce un error al validar la transformación en tiempo de diseño. No se permite establecer ambas propiedades en **true**.|  
   
-## Configuración de la transformación Exportar columna  
+## <a name="configuration-of-the-export-column-transformation"></a>Configuración de la transformación Exportar columna  
  Puede configurar la transformación Exportar columna de las maneras siguientes:  
   
 -   Especificar las columnas de datos y las columnas que contienen la ruta de los archivos en los que se van a escribir los datos.  
@@ -64,7 +69,7 @@ caps.handback.revision: 45
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](../Topic/Common%20Properties.md)  
+-   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

@@ -1,25 +1,30 @@
 ---
-title: "C&#243;mo administrar un servicio CDC local | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo administrar un servicio CDC Local | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 40678ff92e4513354db09cca42d48ed0302369ac
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# C&#243;mo administrar un servicio CDC local
+# <a name="how-to-manage-a-local-cdc-service"></a>Cómo administrar un servicio CDC local
   En este procedimiento se describe cómo usar la Consola de configuración del servicio CDC para administrar servicios CDC concretos.  
   
-### Para administrar un servicio CDC específico  
+### <a name="to-manage-a-specific-cdc-service"></a>Para administrar un servicio CDC específico  
   
 1.  En el menú **Inicio** , seleccione **Configuración del servicio CDC para Oracle**.  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 6
   
          También puede hacer clic con el botón derecho en el servicio CDC cuyas propiedades quiera editar y seleccionar **Propiedades**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Administrar un servicio CDC de Oracle](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   

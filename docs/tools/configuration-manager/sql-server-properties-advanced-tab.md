@@ -1,25 +1,30 @@
 ---
-title: "Propiedades de SQL Server (pesta&#241;a Avanzadas) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Propiedades de SQL Server (pestaña Avanzadas) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4023e504dfee0b0655a78e773771d3ae16b4a2fb
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propiedades de SQL Server (pesta&#241;a Avanzadas)
+# <a name="sql-server-properties-advanced-tab"></a>Propiedades de SQL Server (pestaña Avanzadas)
   Las siguientes propiedades aparecen de forma predeterminada en la pestaña **Avanzadas** . Si se han definido propiedades personalizadas, aparecen también en esta pestaña junto con los valores correspondientes.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Agrupado**  
  Indica si este servicio está instalado como un recurso de un servidor en clúster.  
   
@@ -33,10 +38,10 @@ caps.handback.revision: 19
  Muestra la ubicación donde se colocan los volcados de memoria en caso de producirse un error.  
   
  **Informes de errores**  
- Cuando se establece en **Sí**, el programa Dr. Watson envía información a [!INCLUDE[msCoName](../../includes/msconame-md.md)] o a su servidor de errores si se produce un error grave. Para obtener más información acerca de Informes de errores, busque el tema sobre la configuración de informes de errores y uso en los Libros en pantalla. Para cambiar este valor, en el [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Explorador de objetos, haga clic con el botón derecho en el servidor, haga clic en **Propiedades** y luego haga clic en la página **Configuración adicional del servidor**. Las opciones se presentan en el área de información **** .  
+ Cuando se establece en **Yes**, el programa Dr. Watson envía información a [!INCLUDE[msCoName](../../includes/msconame-md.md)] o a su servidor de errores si se produce un error grave. Para obtener más información acerca de Informes de errores, busque el tema sobre la configuración de informes de errores y uso en los Libros en pantalla. Para cambiar este valor, en el [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Explorador de objetos, haga clic con el botón derecho en el servidor, haga clic en **Propiedades** y luego haga clic en la página **Configuración adicional del servidor**. Las opciones se presentan en el área de información **** .  
   
  **Versión del archivo**  
- Muestra la versión del archivo ejecutable de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Muestra la versión del archivo ejecutable de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Ruta de instalación**  
  Muestra la ruta de acceso a los archivos binarios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para esta instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

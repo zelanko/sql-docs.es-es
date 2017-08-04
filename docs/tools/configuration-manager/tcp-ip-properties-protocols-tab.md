@@ -1,24 +1,29 @@
 ---
-title: "Propiedades de TCP/IP (pesta&#241;a Protocolos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TCP/IP [SQL Server], opciones de configuración"
+title: "Propiedades de TCP/IP (pestaña protocolos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 08/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TCP/IP [SQL Server], configuration options
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1a3d4995d3cc79f9a31533b918268f14204d511
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propiedades de TCP/IP (pesta&#241;a Protocolos)
+# Propiedades de TCP/IP (pestaña Protocolos)
   Use el cuadro de diálogo **Propiedades de TCP/IP** para configurar las opciones para el protocolo TCP/IP. Haga clic en **TCP/IP** en el panel izquierdo para mostrar configuraciones de direcciones IP individuales en el panel de detalles.  
   
  Es necesario reiniciar Microsoft SQL Server para que se apliquen los cambios.  
@@ -38,6 +43,7 @@ caps.handback.revision: 38
   
 ## Vea también  
  [Elegir un protocolo de red](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
- [Crear una cadena de conexión válida con TCP/IP](https://msdn.microsoft.com/library/ms191260.aspx)  
+ [Crear una cadena de conexión válida con TCP / IP](https://msdn.microsoft.com/library/ms191260.aspx)  
   
   
+

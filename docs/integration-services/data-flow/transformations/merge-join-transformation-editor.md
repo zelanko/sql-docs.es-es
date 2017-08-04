@@ -1,26 +1,31 @@
 ---
-title: "Editor de transformaci&#243;n Combinaci&#243;n de mezcla | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.mergejointransformation.f1"
-helpviewer_keywords: 
-  - "Editor de transformación Combinación de mezcla"
+title: "Editor de transformación combinación de mezcla | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.mergejointransformation.f1
+helpviewer_keywords:
+- Merge Join Transformation Editor
 ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6bba110363b36294a67880f3efbdec52e1c6db0d
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de transformaci&#243;n Combinaci&#243;n de mezcla
+# <a name="merge-join-transformation-editor"></a>Editor de transformación Combinación de mezcla
   Use el cuadro de diálogo **Editor de transformación Combinación de mezcla** para especificar el tipo de combinación, las columnas de combinación y las columnas de salida para mezclar dos entradas fusionadas por combinación.  
   
 > [!IMPORTANT]  
@@ -28,12 +33,12 @@ caps.handback.revision: 31
   
  Para obtener más información acerca de la transformación Combinación de mezcla, vea [Merge Join Transformation](../../../integration-services/data-flow/transformations/merge-join-transformation.md).  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Tipo de combinación**  
  Especifique si desea utilizar una combinación interna (inner join), una combinación externa izquierda (left outer join) o una combinación completa (full join).  
   
  **Intercambiar entradas**  
- Para cambiar el orden de las entradas, use el botón **Intercambiar entradas**. Esta selección resulta útil con la opción de combinación externa izquierda (left outer join).  
+ Para cambiar el orden de las entradas, use el botón **Intercambiar entradas** . Esta selección resulta útil con la opción de combinación externa izquierda (left outer join).  
   
  **Entrada**  
  Seleccione las columnas que desee en la salida combinada de la lista de entradas disponibles.  
@@ -46,11 +51,11 @@ caps.handback.revision: 31
  **Alias de salida**  
  Escriba un alias para cada columna de salida. El nombre predeterminado es el de la columna de entrada, pero puede elegir cualquier nombre descriptivo único.  
   
-## Vea también  
- [Referencia de errores y mensajes de Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
- [Ampliar un conjunto de datos con la transformación Combinación de mezcla](../../../integration-services/data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
- [Transformación Mezclar](../../../integration-services/data-flow/transformations/merge-transformation.md)   
- [Transformación Unión de todo](../../../integration-services/data-flow/transformations/union-all-transformation.md)  
+## <a name="see-also"></a>Vea también  
+ [Referencia de mensajes y Error de Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [Ordenar datos para la combinación y transformaciones de combinación de mezcla](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
+ [Ampliar un conjunto de datos mediante la transformación combinación de mezcla](../../../integration-services/data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
+ [Transformación mezclar](../../../integration-services/data-flow/transformations/merge-transformation.md)   
+ [Unión transformación todo](../../../integration-services/data-flow/transformations/union-all-transformation.md)  
   
   

@@ -1,27 +1,32 @@
 ---
-title: "Cuadro de di&#225;logo Filtrar (Complemento MDS para Excel) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Filtrar, cuadro de diálogo (agregar de MDS para Excel) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc882d5ae5a53577ac1c6aedb1fdf20e2d31d6e6
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Cuadro de di&#225;logo Filtrar (Complemento MDS para Excel)
+# <a name="filter-dialog-box-mds-add-in-for-excel"></a>Cuadro de diálogo Filtrar (Complemento MDS para Excel)
   En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], use el cuadro de diálogo **Filtro** para restringir la lista de datos administrados por MDS antes de cargarla en Excel.  
   
  Este cuadro de diálogo contiene tres secciones: **Columnas**, **Filas**, y **Resumen**.  
   
-## Columnas  
+## <a name="columns"></a>Columnas  
  Use la sección **Columnas** para determinar los atributos (columnas) que quiere mostrar en Excel.  
   
 |Nombre del control|Description|  
@@ -33,7 +38,7 @@ caps.handback.revision: 8
 |Borrar todo|Haga clic para borrar los atributos seleccionados mostrados en la lista.<br /><br /> No puede borrar **Nombre** ni **Código**.|  
 |Flecha arriba/flecha abajo|Haga clic para subir y bajar el atributo seleccionado en la lista. El orden de arriba a abajo corresponde al orden de izquierda a derecha en el que se muestran las columnas en la hoja.|  
   
-## Filas  
+## <a name="rows"></a>Filas  
  Use la sección **Filas** para determinar los miembros (filas) que quiere mostrar en Excel. Para ello, defina criterios para filtrar las filas que se muestran.  
   
 |Nombre del control|Description|  
@@ -46,7 +51,7 @@ caps.handback.revision: 8
 |Quitar todo|Quita todos los filtros de la lista.|  
 |Quitar|Quita el filtro seleccionado de la lista.|  
   
-## Resumen  
+## <a name="summary"></a>Resumen  
  Use la sección **Resumen** para ver los detalles de la cantidad de datos que se cargarán, antes de cargarlos.  
   
 |Nombre del control|Description|  
@@ -57,7 +62,7 @@ caps.handback.revision: 8
 |Filas|El número de filas que se cargan en Excel, basado en los filtros aplicados en la sección **Filas** .|  
 |Columnas|El número de columnas que se cargarán en Excel, en función de los atributos seleccionados en la sección **Columnas** .|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Filtrar los datos antes de exportar &#40;complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)   
  [Información general: Exportar datos a Excel &#40;complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   

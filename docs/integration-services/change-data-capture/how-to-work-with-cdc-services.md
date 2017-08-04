@@ -1,25 +1,30 @@
 ---
-title: "C&#243;mo trabajar con servicios CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo trabajar con servicios CDC | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd4d1ea9deb9451701f84470ed2f35f7aa220df2
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# C&#243;mo trabajar con servicios CDC
+# <a name="how-to-work-with-cdc-services"></a>Cómo trabajar con servicios CDC
   En este procedimiento se describe cómo usar la Consola de configuración del servicio CDC para preparar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de manera que funcione con servicios CDC de Oracle y para crear un nuevo servicio CDC.  
   
-### Para trabajar con servicios CDC  
+### <a name="to-work-with-cdc-services"></a>Para trabajar con servicios CDC  
   
 1.  En el menú **Inicio** , seleccione **Configuración del servicio CDC para Oracle**.  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 6
   
          Seleccione esta opción en el panel **Acciones** del lado derecho de la Consola de configuración del servicio CDC.  
   
-         También puede hacer clic con el botón derecho en **Local CDC Services** (Servicios CDC locales) y seleccionar **Prepare SQL Server** (Preparar SQL Server).  
+         También puede hacer clic con el botón derecho en **Local CDC Services** (Servicios CDC locales) y seleccionar **Prepare SQL Server**(Preparar SQL Server).  
   
          Se abrirá el cuadro de diálogo Preparando instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para CDC de Oracle.  
   
@@ -49,11 +54,11 @@ caps.handback.revision: 6
   
          Para obtener información acerca de cómo usar este cuadro de diálogo, vea [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md). Para obtener información acerca de cómo crear o editar un servicio CDC, vea [How to Create and Edit a CDC Service](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md).  
   
-         El inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado por el servicio CDC de Oracle solo necesita ser miembro del rol fijo de servidor `public`; no se necesita ningún otro privilegio. Pero, para crear el servicio CDC de Oracle, el inicio de sesión necesita tener permiso de escritura en la base de datos MSXDBCDC (por ejemplo, es necesario asignar el rol de base de datos **db_owner** al inicio de sesión). Cuando un inicio de sesión sin permiso de escritura para la base de datos MSXDBDCDC intenta crear una nueva instancia CDC de Oracle, se muestra un mensaje de error. Haga clic en **Aceptar** en ese cuadro de diálogo para mostrar el cuadro de diálogo Conectar con SQL Server.  
+         El inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado por el servicio CDC de Oracle solo necesita ser miembro del rol fijo de servidor `public` ; no se necesita ningún otro privilegio. Pero, para crear el servicio CDC de Oracle, el inicio de sesión necesita tener permiso de escritura en la base de datos MSXDBCDC (por ejemplo, es necesario asignar el rol de base de datos **db_owner** al inicio de sesión). Cuando un inicio de sesión sin permiso de escritura para la base de datos MSXDBDCDC intenta crear una nueva instancia CDC de Oracle, se muestra un mensaje de error. Haga clic en **Aceptar** en ese cuadro de diálogo para mostrar el cuadro de diálogo Conectar con SQL Server.  
   
-         Para más información sobre cómo especificar las credenciales de un inicio de sesión que tenga permisos de escritura en la base de datos MSXDBCDC, como el rol de base de datos **db_owner**, vea [Crear y editar un servicio CDC de Oracle](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md) y [Conexión con SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md).  
+         Para más información sobre cómo especificar las credenciales de un inicio de sesión que tenga permisos de escritura en la base de datos MSXDBCDC, como el rol de base de datos **db_owner** , vea [Crear y editar un servicio CDC de Oracle](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md) y [Conexión con SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Trabajar con servicios CDC](../../integration-services/change-data-capture/work-with-cdc-services.md)  
   
   

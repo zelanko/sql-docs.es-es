@@ -1,29 +1,34 @@
 ---
-title: "Configurar los valores predeterminados de definici&#243;n de seguimiento (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "seguimientos [SQL Server], valores predeterminados"
+title: "Establecer valores predeterminados de definición de seguimiento (SQL Server Profiler) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], defaults
 ms.assetid: ab9fc570-797d-411e-814f-1c46d2d5feae
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4ef7efda96c725e38ebb3f5d63f93c33816e790a
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurar los valores predeterminados de definici&#243;n de seguimiento (SQL Server Profiler)
+# <a name="set-trace-definition-defaults-sql-server-profiler"></a>Configurar los valores predeterminados de definición de seguimiento (SQL Server Profiler)
   El valor predeterminado de definición de seguimiento es la plantilla de seguimiento predeterminada que se utiliza para cada proveedor o servidor. Puede configurar las plantillas de seguimiento predeterminadas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-### Para configurar los valores predeterminados de definición de seguimiento  
+### <a name="to-set-trace-definition-defaults"></a>Para configurar los valores predeterminados de definición de seguimiento  
   
-1.  En el menú **Archivo**, seleccione **Plantillas** y haga clic en **Editar plantilla**.  
+1.  En el menú **Archivo** , seleccione **Plantillas**y haga clic en **Editar plantilla**.  
   
 2.  En la pestaña **General** del cuadro de diálogo **Propiedades de la plantilla de seguimiento**, seleccione un tipo de servidor en la lista **Seleccionar tipo de servidor**.  
   
@@ -35,8 +40,8 @@ caps.handback.revision: 23
   
 6.  Haga clic en **Guardar**.  
   
-## Vea también  
- [Plantillas de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates.md)   
+## <a name="see-also"></a>Vea también  
+ [Plantillas SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

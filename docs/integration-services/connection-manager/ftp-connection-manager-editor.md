@@ -1,26 +1,31 @@
 ---
-title: "Editor del administrador de conexiones FTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.ftpconnectionmanager.f1"
-helpviewer_keywords: 
-  - "Editor del administrador de conexiones FTP"
+title: Editor del Administrador de conexiones FTP | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ftpconnectionmanager.f1
+helpviewer_keywords:
+- FTP Connection Manager Editor
 ms.assetid: 874b6585-255b-4a43-8396-bb08c3e8ac2b
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2028a460ac0e7b56a3ad733150ff20029d72fd97
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor del administrador de conexiones FTP
+# <a name="ftp-connection-manager-editor"></a>Editor del administrador de conexiones FTP
   Utilice el cuadro de diálogo **Editor del administrador de conexiones FTP** para especificar propiedades de conexión con un servidor FTP.  
   
 > [!IMPORTANT]  
@@ -28,7 +33,7 @@ caps.handback.revision: 26
   
  Para obtener más información acerca del administrador de conexiones FTP, vea [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md).  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Nombre del servidor**  
  Proporcione el nombre del servidor FTP.  
   
@@ -54,9 +59,9 @@ caps.handback.revision: 26
  Indique un tamaño de fragmento en kilobytes para transmitir datos.  
   
  **Probar conexión**  
- Después de configurar el Administrador de conexiones FTP, haga clic en **Probar conexión** para confirmar que la conexión es viable.  
+ Después de configurar el Administrador de conexiones FTP, haga clic en **Probar conexión**para confirmar que la conexión es viable.  
   
-## Vea también  
- [Referencia de errores y mensajes de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
+## <a name="see-also"></a>Vea también  
+ [Referencia de mensajes y Error de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
   
   

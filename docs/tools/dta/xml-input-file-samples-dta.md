@@ -1,37 +1,42 @@
 ---
-title: "Ejemplos de archivos de entrada XML (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "aplicaciones de ejemplo [DTA]"
+title: Ejemplos de archivos (DTA) de entrada XML | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- XML
+helpviewer_keywords:
+- sample applications [DTA]
 ms.assetid: 1ed28805-a9ae-43ca-92da-101ba0c0c43a
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 885f73ac2f0e273e6911ecc59a9f70289c13050c
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Ejemplos de archivos de entrada XML (DTA)
+# <a name="xml-input-file-samples-dta"></a>Ejemplos de archivos de entrada XML (DTA)
   En esta sección, se incluyen archivos de entrada XML de ejemplo que se pueden utilizar con la herramienta de línea de comandos **dta** . Esta herramienta es una de las interfaces de usuario del Asistente para la optimización de motor de base de datos, una herramienta que se puede utilizar para optimizar las bases de datos y conseguir un mejor rendimiento de las consultas. El Asistente para la optimización de motor de base de datos analiza los efectos de una carga de trabajo sobre una o varias bases de datos. Una carga de trabajo es un conjunto de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecuta en las bases de datos que se desean optimizar. Una vez que el Asistente para la optimización de motor de base de datos termina de analizar los efectos de la carga de trabajo, genera una recomendación para agregar índices, vistas indizadas o estrategias de partición que mejoren el rendimiento de las consultas en las bases de datos.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
   
--   [Ejemplo de archivo de entrada XML simple &#40;DTA&#41;](../../tools/dta/simple-xml-input-file-sample-dta.md)  
+-   [Ejemplo de archivo de entrada XML simple &#40; DTA &#41;](../../tools/dta/simple-xml-input-file-sample-dta.md)  
   
--   [Ejemplo de archivo de entrada XML con carga de trabajo insertada &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md)  
+-   [Ejemplo de archivo de entrada XML con carga de trabajo insertada &#40; DTA &#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md)  
   
--   [Ejemplo de archivo de entrada XML con configuración especificada por el usuario &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)  
+-   [Ejemplo de archivo de entrada XML con especificado por el usuario Configuración &#40; DTA &#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Asistente para la optimización de motor de base de datos](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

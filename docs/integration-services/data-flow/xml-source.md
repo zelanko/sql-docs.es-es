@@ -1,28 +1,33 @@
 ---
-title: "Origen XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.xmlsource.f1"
-helpviewer_keywords: 
-  - "orígenes [Integration Services], XML"
-  - "XML, origen [Integration Services]"
-  - "origen de XML, editor de"
+title: Origen XML | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.xmlsource.f1
+helpviewer_keywords:
+- sources [Integration Services], XML
+- XML source [Integration Services]
+- XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 caps.latest.revision: 47
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e3af9fa8b743b01b222d1596197aa83bbb39854
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Origen XML
+# <a name="xml-source"></a>Origen XML
   El origen XML lee un archivo de datos XML y rellena las columnas de la salida de origen con los datos.  
   
  Los datos de los archivos XML suelen incluir relaciones jerárquicas. Por ejemplo, un archivo de datos XML puede representar catálogos y elementos en catálogos. Para que los datos puedan entrar en el flujo de datos, se debe determinar la relación de los elementos del archivo de datos XML y se debe generar una salida para cada elemento del archivo.  
@@ -68,7 +73,7 @@ caps.handback.revision: 47
   
  El origen XML admite varias salidas normales y varias salidas de error.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye el cuadro de diálogo **Editor de origen de XML** para configurar el origen XML. Este cuadro de diálogo está disponible en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye el cuadro de diálogo **Editor de origen de XML**para configurar el origen XML. Este cuadro de diálogo está disponible en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 47
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](../Topic/Common%20Properties.md)  
+-   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas del origen XML](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -92,3 +97,4 @@ caps.handback.revision: 47
   
 ## <a name="related-tasks"></a>Tareas relacionadas  
  [Extraer datos mediante el origen de XML](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
+

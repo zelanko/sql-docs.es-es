@@ -1,32 +1,37 @@
 ---
-title: "Destino de OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.oledbdest.f1"
-helpviewer_keywords: 
-  - "carga rápida, modo de acceso a datos [Integration Services]"
-  - "OLE DB, destino [Integration Services]"
-  - "opciones de carga rápida [Integration Services]"
-  - "carga rápida, opciones [Integration Services]"
-  - "destinos [Integration Services], OLE DB"
-  - "modo de acceso de datos de carga rápida [Integration Services]"
-  - "insertar datos"
+title: Destino de OLE DB | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.oledbdest.f1
+helpviewer_keywords:
+- fast-load data access mode [Integration Services]
+- OLE DB destination [Integration Services]
+- fast load options [Integration Services]
+- fast-load options [Integration Services]
+- destinations [Integration Services], OLE DB
+- fast load data access mode [Integration Services]
+- inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 caps.latest.revision: 79
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 79
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a16dc276a0ed875c2343bf0b5de7739e3c2955a
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Destino de OLE DB
+# <a name="ole-db-destination"></a>Destino de OLE DB
   El destino de OLE DB carga datos en una serie de bases de datos compatibles con OLE DB que usan una tabla o vista de base de datos o un comando SQL. Por ejemplo, un origen de OLE DB puede cargar datos en tablas en bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
@@ -47,7 +52,7 @@ caps.handback.revision: 79
 > [!NOTE]  
 >  El destino de OLE DB no admite parámetros. Si tiene que ejecutar una instrucción INSERT con parámetros, puede usar la transformación Comando de OLE DB. Para más información, consulte [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md).  
   
- Cuando el destino de OLE DB carga datos que utilizan un juego de caracteres de doble byte (DBCS), los datos se pueden dañar si el modo del acceso a datos no usa la opción de carga rápida y si el administrador de conexiones OLE DB utiliza el proveedor OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB). Para garantizar la integridad de datos de DBCS es necesario configurar el administrador de conexiones OLE DB para que use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o uno de los modos de acceso de carga rápida: **Carga rápida de tabla o vista** o **Carga rápida de variable de nombre de tabla o nombre de vista**. Ambas opciones están disponibles en el cuadro de diálogo **Editor de destino de OLE DB** . Al programar el modelo de objetos [!INCLUDE[ssIS](../../includes/ssis-md.md)], es necesario configurar la propiedad AccessMode en **OpenRowset con FastLoad** o en **OpenRowset con FastLoad desde variable**.  
+ Cuando el destino de OLE DB carga datos que utilizan un juego de caracteres de doble byte (DBCS), los datos se pueden dañar si el modo del acceso a datos no usa la opción de carga rápida y si el administrador de conexiones OLE DB utiliza el proveedor OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB). Para garantizar la integridad de datos de DBCS es necesario configurar el administrador de conexiones OLE DB para que use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o uno de los modos de acceso de carga rápida: **Carga rápida de tabla o vista** o **Carga rápida de variable de nombre de tabla o nombre de vista**. Ambas opciones están disponibles en el cuadro de diálogo **Editor de destino de OLE DB** . Al programar el modelo de objetos [!INCLUDE[ssIS](../../includes/ssis-md.md)] , es necesario configurar la propiedad AccessMode en **OpenRowset con FastLoad**o en **OpenRowset con FastLoad desde variable**.  
   
 > [!NOTE]  
 >  Si usa el cuadro de diálogo **Editor de destino de OLE DB** en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] para crear la tabla de destino en la que el destino de OLE DB inserta los datos, puede tener que seleccionar la tabla nueva manualmente. La necesidad de selección manual se produce cuando un proveedor OLE DB, como el proveedor OLE DB para DB2 agrega automáticamente identificadores de esquema al nombre de la tabla.  
@@ -65,8 +70,8 @@ caps.handback.revision: 79
   
  Para obtener más información acerca de los tipos de datos, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Opciones de carga rápida  
- Si el destino de OLE DB usa el modo de acceso a datos de carga rápida, puede especificar las siguientes opciones de carga rápida en la interfaz de usuario del **Editor de destino de OLE DB** para el destino:  
+## <a name="fast-load-options"></a>Opciones de carga rápida  
+ Si el destino de OLE DB usa el modo de acceso a datos de carga rápida, puede especificar las siguientes opciones de carga rápida en la interfaz de usuario del **Editor de destino de OLE DB**para el destino:  
   
 -   Mantener los valores de identidad del archivo de datos importado o usar valores exclusivos asignados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -78,27 +83,27 @@ caps.handback.revision: 79
   
 -   Especificar la cantidad de filas del lote y el tamaño de confirmación.  
   
- Algunas opciones de carga rápida están almacenadas en propiedades específicas del destino de OLE DB. Por ejemplo, FastLoadKeepIdentity especifica si se mantienen los valores de identificación, FastLoadKeepNulls especifica si se mantienen los valores nulos y FastLoadMaxInsertCommitSize especifica el número de filas que se confirmarán como un lote. Otras opciones de carga rápida se almacenan en una lista separada por comas, en la propiedad FastLoadOptions. Si el destino de OLE DB usa todas las opciones de carga rápida que se almacenan en FastLoadOptions y que se muestran en el cuadro de diálogo **Editor de destino de OLE DB**, el valor de la propiedad se establece en **TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000**. El valor 1000 indica que el destino se configura para usar lotes de 1000 filas.  
+ Algunas opciones de carga rápida están almacenadas en propiedades específicas del destino de OLE DB. Por ejemplo, FastLoadKeepIdentity especifica si se mantienen los valores de identificación, FastLoadKeepNulls especifica si se mantienen los valores nulos y FastLoadMaxInsertCommitSize especifica el número de filas que se confirmarán como un lote. Otras opciones de carga rápida se almacenan en una lista separada por comas, en la propiedad FastLoadOptions. Si el destino de OLE DB usa todas las opciones de carga rápida que se almacenan en FastLoadOptions y que se muestran en el cuadro de diálogo **Editor de destino de OLE DB** , el valor de la propiedad se establece en **TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000**. El valor 1000 indica que el destino se configura para usar lotes de 1000 filas.  
   
 > [!NOTE]  
 >  Los errores de restricciones en el destino provocan el error del lote completo de las filas definidas por FastLoadMaxInsertCommitSize.  
   
- Además de las opciones de carga rápida que se muestran en el cuadro de diálogo **Editor de destino de OLE DB**, puede configurar el destino de OLE DB para usar las siguientes opciones de carga masiva al escribir las opciones en la propiedad FastLoadOptions del cuadro de diálogo **Editor avanzado**.  
+ Además de las opciones de carga rápida que se muestran en el cuadro de diálogo **Editor de destino de OLE DB** , puede configurar el destino de OLE DB para usar las siguientes opciones de carga masiva al escribir las opciones en la propiedad FastLoadOptions del cuadro de diálogo **Editor avanzado** .  
   
 |Opción de carga rápida|Description|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|Especifica el tamaño en kilobytes para insertar. La opción tiene la forma **KILOBYTES_PER_BATCH** = \<valor de entero positivo**>**.|  
+|KILOBYTES_PER_BATCH|Especifica el tamaño en kilobytes para insertar. La opción tiene la forma **KILOBYTES_PER_BATCH** = \<valor entero positivo**>**.|  
 |FIRE_TRIGGERS|Especifica si se activan los desencadenadores en la tabla de inserción. La opción tiene la forma **FIRE_TRIGGERS**. La presencia de la opción indica que se activan los desencadenadores.|  
-|ORDER|Especifica cómo se ordenan los datos de entrada. La opción tiene la forma ORDER \<nombre de columna> ASC&#124;DESC. Se puede enumerar cualquier cantidad de columnas (el orden es opcional). Si se omite el orden, la operación de inserción presupone que los datos no están ordenados.<br /><br /> Nota: El rendimiento puede mejorar si se utiliza la opción ORDER para ordenar los datos de entrada según el índice agrupado de la tabla.|  
+|ORDER|Especifica cómo se ordenan los datos de entrada. La opción tiene el formato orden \<nombre de columna > ASC &#124; DESC. Se puede enumerar cualquier cantidad de columnas (el orden es opcional). Si se omite el orden, la operación de inserción presupone que los datos no están ordenados.<br /><br /> Nota: El rendimiento puede mejorar si se utiliza la opción ORDER para ordenar los datos de entrada según el índice agrupado de la tabla.|  
   
  Las palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] se suelen escribir en mayúsculas, aunque las palabras clave no distinguen entre mayúsculas y minúsculas.  
   
  Para más información sobre las opciones de carga rápida, vea [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-## Solucionar problemas del destino de OLE DB  
+## <a name="troubleshooting-the-ole-db-destination"></a>Solucionar problemas del destino de OLE DB  
  Puede registrar las llamadas realizadas por el destino OLE DB a proveedores de datos externos. Puede utilizar esta nueva capacidad de registro para solucionar problemas relacionados con el almacenamiento de datos en orígenes de datos externos que realiza el destino OLE DB. Para registrar las llamadas realizadas por el destino OLE DB a proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
-## Configurar el destino de OLE DB  
+## <a name="configuring-the-ole-db-destination"></a>Configurar el destino de OLE DB  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
  Para obtener más información sobre las propiedades que se pueden establecer en el cuadro de diálogo **Editor de destino de OLE DB** , haga clic en uno de los siguientes temas:  
@@ -111,7 +116,7 @@ caps.handback.revision: 79
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](../Topic/Common%20Properties.md)  
+-   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -121,7 +126,7 @@ caps.handback.revision: 79
   
 -   [Establecer las propiedades de un componente de flujo de datos](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
  [Origen de OLE DB](../../integration-services/data-flow/ole-db-source.md)  
   
  [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  

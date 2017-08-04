@@ -1,25 +1,30 @@
 ---
-title: "Cuadro de di&#225;logo Editor de transformaci&#243;n Limpieza de DQS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssdqs.designer.cleansing.f1"
-  - "sql13.SSDQS.DESIGNER.DQCONNECTION.F1"
+title: "Cuadro de diálogo Editor de transformación limpieza de DQS | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssdqs.designer.cleansing.f1
+- sql13.SSDQS.DESIGNER.DQCONNECTION.F1
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee0247e25e5ada17f3d79ce9ba63576a5b866b42
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Cuadro de di&#225;logo Editor de transformaci&#243;n Limpieza de DQS
+# <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Cuadro de diálogo Editor de transformación Limpieza de DQS
   Use el cuadro de diálogo **Editor de transformación Limpieza de DQS** para corregir datos con Data Quality Services (DQS). Para más información, consulte [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md).  
   
  Para obtener más información acerca de la transformación, vea [DQS Cleansing Transformation](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md).  
@@ -44,10 +49,10 @@ caps.handback.revision: 16
   
 ##  <a name="connection"></a> Establecer opciones en la pestaña Administrador de conexiones  
  **Administrador de conexiones de calidad de datos**  
- Seleccione un administrador de conexiones DQS existente de la lista, o bien haga clic en **Nuevo** para crear una conexión.  
+ Seleccione un administrador de conexiones DQS existente de la lista, o bien haga clic en **Nuevo**para crear una conexión.  
   
  **Nuevo**  
- Cree un administrador de conexiones con el cuadro de diálogo **Administrador de conexiones de limpieza de DQS**. Vea [Set the options in the DQS Cleansing Connection Manager dialog box](#manager).  
+ Cree un administrador de conexiones con el cuadro de diálogo **Administrador de conexiones de limpieza de DQS** . Vea [Set the options in the DQS Cleansing Connection Manager dialog box](#manager).  
   
  **Base de conocimiento de calidad de datos**  
  Seleccione una base de conocimiento de DQS existente para el origen de datos conectado. Para obtener más información acerca de la base de conocimiento de DQS, vea [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
@@ -78,7 +83,7 @@ caps.handback.revision: 16
  Enumera las columnas del origen de datos conectado. Seleccione una o varias columnas que contengan los datos que desee corregir.  
   
  **Columna de entrada**  
- Muestra una columna de entrada que ha seleccionado en el área **Columnas de entrada disponibles**.  
+ Muestra una columna de entrada que ha seleccionado en el área **Columnas de entrada disponibles** .  
   
  **Dominio**  
  Seleccione un dominio para asignar a la columna de entrada.  
@@ -123,11 +128,11 @@ caps.handback.revision: 16
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], abra un proyecto de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] existente o cree uno nuevo.  
   
-2.  Haga clic con el botón derecho en el área de conexiones, haga clic en **Nueva conexión** y, después, en **DQS**.  
+2.  Haga clic con el botón derecho en el área de conexiones, haga clic en **Nueva conexión**y, después, en **DQS**.  
   
 3.  Haga clic en **Agregar**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Aplicar reglas de calidad de los datos al origen de datos](../../../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
   

@@ -1,31 +1,36 @@
 ---
-title: "Versiones (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "marcas de versiones [Master Data Services], acerca de las marcas de versiones"
-  - "versiones [Master Data Services]"
-  - "marcas de versiones [Master Data Services]"
-  - "versiones [Master Data Services], marcas de versiones"
+title: Versiones (Master Data Services) | Documentos de Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- version flags [Master Data Services], about version flags
+- versions [Master Data Services]
+- version flags [Master Data Services]
+- versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4aa3e9252b57b596ab576616820bbad706a4ea92
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Versiones (Master Data Services)
+# <a name="versions-master-data-services"></a>Versiones (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede crear varias versiones de los datos maestros dentro de un modelo. Las versiones se pueden bloquear mientras se validan los datos y confirmarse una vez validados los datos. Las versiones confirmadas forman un registro auditable de cambios. Cada versión que cree contendrá todos los miembros, valores de atributo, miembros de jerarquía, relaciones de jerarquía y colecciones del modelo.  
   
-## Cuándo usar versiones  
+## <a name="when-to-use-versions"></a>Cuándo usar versiones  
  Use versiones para:  
   
 -   Conservar un registro auditable de los datos maestros según vayan cambiando a medida que pasa el tiempo.  
@@ -39,10 +44,10 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  Cuando cambie la estructura del modelo, por ejemplo cuando cree una entidad o un atributo basado en dominio nuevos, el cambio se aplicará a todas las versiones. Si ve una versión anterior del modelo, la entidad o el atributo se muestran, pero no hay datos.  
   
-## Marcas de versión  
+## <a name="version-flags"></a>Marcas de versión  
  Cuando una versión está preparada para los usuarios o para un sistema de suscripción, podrá establecer una marca para identificar la versión. Puede mover esta marca de versión a versión según sea necesario. Las marcas ayudan a los usuarios y sistemas de suscripción a identificar la versión del modelo que utilizan.  
   
-## Flujo de trabajo para la administración de versiones  
+## <a name="workflow-for-version-management"></a>Flujo de trabajo para la administración de versiones  
  Use el flujo de trabajo siguiente para administrar las versiones:  
   
 1.  La versión inicial se crea automáticamente cuando crea un modelo y rellena la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] con los datos maestros de la compañía. Según los permisos, los usuarios pueden realizar cambios en esta versión según sea necesario.  
@@ -55,7 +60,7 @@ caps.handback.revision: 9
   
 5.  Copie la versión confirmada y notifique a los usuarios que pueden empezar a trabajar en una nueva versión del modelo.  
   
-## Versiones secuenciales o simultáneas  
+## <a name="sequential-or-simultaneous-versions"></a>Versiones secuenciales o simultáneas  
  Puede crear versiones secuenciales o simultáneas de su modelo.  
   
 -   **Versiones secuenciales.** Cada vez que confirma una versión, crea una copia nueva y asigna a la versión el siguiente número secuencial. Por ejemplo, puede copiar **Versión 7** de su modelo y llamar a la copia **Versión 8**.  
@@ -65,27 +70,27 @@ caps.handback.revision: 9
     > [!NOTE]  
     >  Una opción de [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] determina si puede copiar o no todas las versiones o únicamente aquellas que se hayan confirmado. Para crear versiones simultáneas debe configurar [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para que permita copiar todas las versiones. Este valor también está disponible en la tabla Configuración del sistema. Para obtener más información, vea [Configuración del sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Cambiar el nombre de una versión existente.|[Cambiar un nombre de versión &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
-|Bloquear una versión para que solo los administradores puedan editar sus datos.|[Bloquear una versión &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)|  
-|Desbloquear una versión para que los usuarios puedan editar sus datos.|[Desbloquear una versión &#40;Master Data Services&#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
-|Confirmar una versión después de validar todos los datos.|[Confirmar una versión &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)|  
-|Crear una nueva marca para marcar una versión.|[Crear una marca de versión &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
-|Cambiar el nombre de una marca de versión existente.|[Cambiar el nombre de marca de una versión &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
-|Asignar una marca existente a una versión.|[Asignar una marca a una versión &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
-|Crear una nueva copia de una versión existente|[Copiar una versión &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)|  
+|Cambiar el nombre de una versión existente.|[Cambiar un nombre de la versión & #40; Master Data Services & #41;](../master-data-services/change-a-version-name-master-data-services.md)|  
+|Bloquear una versión para que solo los administradores puedan editar sus datos.|[Bloquear una versión & #40; Master Data Services & #41;](../master-data-services/lock-a-version-master-data-services.md)|  
+|Desbloquear una versión para que los usuarios puedan editar sus datos.|[Desbloquear una versión & #40; Master Data Services & #41;](../master-data-services/unlock-a-version-master-data-services.md)|  
+|Confirmar una versión después de validar todos los datos.|[Confirmar una versión & #40; Master Data Services & #41;](../master-data-services/commit-a-version-master-data-services.md)|  
+|Crear una nueva marca para marcar una versión.|[Crear una marca de versión & #40; Master Data Services & #41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
+|Cambiar el nombre de una marca de versión existente.|[Cambiar el nombre de una marca de versión & #40; Master Data Services & #41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|Asignar una marca existente a una versión.|[Asignar una marca a una versión & #40; Master Data Services & #41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
+|Crear una nueva copia de una versión existente|[Copiar una versión & #40; Master Data Services & #41;](../master-data-services/copy-a-version-master-data-services.md)|  
 |Eliminar una versión existente.|[Eliminar una versión &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md)|  
 |Purga los miembros eliminados temporalmente de una versión.|[Purga de miembros de versión &#40;Master Data Services&#41;](../master-data-services/purge-version-members-master-data-services.md)|  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
   
--   [Invertir una transacción &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
+-   [Invertir una transacción & #40; Master Data Services & #41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
--   [Notificaciones &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
+-   [Las notificaciones de & #40; Master Data Services & #41;](../master-data-services/notifications-master-data-services.md)  
   
--   [Reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [Las reglas de negocios & #40; Master Data Services & #41;](../master-data-services/business-rules-master-data-services.md)  
   
   

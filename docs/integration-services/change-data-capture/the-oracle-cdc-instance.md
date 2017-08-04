@@ -1,23 +1,28 @@
 ---
-title: "La instancia CDC de Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: La instancia CDC de Oracle | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 13704cfef54e3401d31eb22f6dca9c9f247c079b
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# La instancia CDC de Oracle
-  La instancia CDC de Oracle es un proceso creado por el servicio CDC de Oracle para procesar los cambios capturados a partir de una sola base de datos de origen de Oracle. La instancia CDC de Oracle recupera su configuración de la tabla **cdc.xdbcdc_config** y mantiene su estado en la tabla **cdc.xdbcdc_state**. Estas tablas forman parte de la base de datos CDC, que define la instancia CDC de Oracle. Para obtener más información acerca de la base de datos y las tablas xdbcdc, vea [The CDC Databases](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_CDCdatabase).  
+# <a name="the-oracle-cdc-instance"></a>La instancia CDC de Oracle
+  La instancia CDC de Oracle es un proceso creado por el servicio CDC de Oracle para procesar los cambios capturados a partir de una sola base de datos de origen de Oracle. La instancia CDC de Oracle recupera su configuración de la tabla **cdc.xdbcdc_config** y mantiene su estado en la tabla **cdc.xdbcdc_state** . Estas tablas forman parte de la base de datos CDC, que define la instancia CDC de Oracle. Para obtener más información acerca de la base de datos y las tablas xdbcdc, vea [The CDC Databases](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_CDCdatabase).  
   
  A continuación se describen las tareas que realiza la instancia CDC de Oracle:  
   
@@ -37,11 +42,11 @@ caps.handback.revision: 8
   
     -   En un subproceso independiente, escribe en la tabla de transacciones de ensayo todos los registros almacenados en caché posibles durante un máximo de 30 segundos (de la transacción más antigua a la más reciente), actualiza la tabla **xdbcdc_state** y confirma todos los cambios.  
   
--   **Administrar los cambios de configuración**: la instancia CDC de Oracle recibe una notificación de los cambios de configuración por parte del servicio CDC o mediante la detección de una nueva versión de la tabla **cdc.xdbcdc_config**. La mayoría de los cambios no necesitan que se reinicie la instancia CDC de Oracle (por ejemplo, agregar o quitar instancias de captura). Sin embargo, algunos cambios (como cambiar las credenciales de acceso o la cadena de conexión de Oracle) sí hacen necesario el reinicio de la instancia CDC.  
+-   **Administrar los cambios de configuración**: la instancia CDC de Oracle recibe una notificación de los cambios de configuración por parte del servicio CDC o mediante la detección de una nueva versión de la tabla **cdc.xdbcdc_config** . La mayoría de los cambios no necesitan que se reinicie la instancia CDC de Oracle (por ejemplo, agregar o quitar instancias de captura). Sin embargo, algunos cambios (como cambiar las credenciales de acceso o la cadena de conexión de Oracle) sí hacen necesario el reinicio de la instancia CDC.  
   
--   **Administrar la recuperación**: cuando se inicia una instancia CDC de Oracle, su estado interno se restaura desde las tablas **xdbcdc_state** y **xdbcdc_staged_transactions**. Una vez restaurado el estado, la instancia CDC continúa de la forma habitual.  
+-   **Administrar la recuperación**: cuando se inicia una instancia CDC de Oracle, su estado interno se restaura desde las tablas **xdbcdc_state** y **xdbcdc_staged_transactions** . Una vez restaurado el estado, la instancia CDC continúa de la forma habitual.  
   
-## Vea también  
- [Tratamiento de errores](../../integration-services/change-data-capture/error-handling.md)  
+## <a name="see-also"></a>Vea también  
+ [Control de errores](../../integration-services/change-data-capture/error-handling.md)  
   
   

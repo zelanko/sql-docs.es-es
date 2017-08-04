@@ -1,30 +1,35 @@
 ---
-title: "Tarea Enviar correo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sendmailtask.f1"
-helpviewer_keywords: 
-  - "correo [Integration Services]"
-  - "Enviar correo, tarea"
-  - "electrónico, correo [Integration Services]"
-  - "mensajes [Integration Services]"
-  - "enviar mensajes"
+title: Tarea Enviar correo | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sendmailtask.f1
+helpviewer_keywords:
+- mail [Integration Services]
+- Send Mail task
+- e-mail [Integration Services]
+- messages [Integration Services]
+- sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 caps.latest.revision: 51
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: fd6f7a19c1b553ee06013a4a24fbbf26a759a6cd
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Tarea Enviar correo
+# <a name="send-mail-task"></a>Enviar correo, tarea
   La tarea Enviar correo envía un mensaje de correo electrónico. Un paquete puede utilizar la tarea Enviar correo para enviar mensajes si las tareas del paquete de flujo de trabajo finalizan correctamente o si se producen errores, o para enviar mensajes en respuesta a eventos provocados por el paquete en tiempo de ejecución. Por ejemplo, la tarea puede notificar a un administrador de base de datos si la tarea Copia de seguridad de la base de datos se realizó correctamente o no.  
   
  Puede configurar la tarea Enviar correo de las siguientes maneras:  
@@ -54,8 +59,8 @@ caps.handback.revision: 51
   
  La tarea usa el administrador de conexiones SMTP para conectar con un servidor de correo. Para más información, consulte [SMTP Connection Manager](../../integration-services/connection-manager/smtp-connection-manager.md).  
   
-## Mensajes de registro personalizados disponibles en la tarea Enviar correo  
- La siguiente tabla contiene las entradas del registro personalizadas para la tarea Enviar correo. Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../../integration-services/performance/custom-messages-for-logging.md).  
+## <a name="custom-logging-messages-available-on-the-send-mail-task"></a>Mensajes de registro personalizados disponibles en la tarea Enviar correo  
+ La siguiente tabla contiene las entradas del registro personalizadas para la tarea Enviar correo. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Entrada del registro|Description|  
 |---------------|-----------------|  
@@ -63,7 +68,7 @@ caps.handback.revision: 51
 |**SendMailTaskEnd**|Indica que la tarea finalizó el envío de un mensaje de correo electrónico.|  
 |**SendMailTaskInfo**|Proporciona información descriptiva sobre la tarea.|  
   
-## Configurar la tarea Enviar correo  
+## <a name="configuring-the-send-mail-task"></a>Configurar la tarea Enviar correo  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
  Para obtener información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
@@ -78,14 +83,14 @@ caps.handback.revision: 51
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask>  
   
-## Tareas relacionadas  
- Para obtener información sobre cómo establecer estas propiedades en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)], haga clic en [Establecer las propiedades de tareas o contenedores](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md).  
+## <a name="related-tasks"></a>Tareas relacionadas  
+ Para obtener información sobre cómo establecer estas propiedades en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
   
--   Artículo técnico [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625) (Enviar un mensaje de correo electrónico con una notificación de entrega en C#) en shareourideas.com  
+-   Artículo técnico [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625)(Enviar un mensaje de correo electrónico con una notificación de entrega en C#) en shareourideas.com  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  
   

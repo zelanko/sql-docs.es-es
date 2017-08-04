@@ -1,27 +1,32 @@
 ---
-title: "Origen de Excel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.excelsource.f1"
-helpviewer_keywords: 
-  - "Excel [Integration Services]"
-  - "orígenes [Integration Services], Excel"
+title: Origen de Excel | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.excelsource.f1
+helpviewer_keywords:
+- Excel [Integration Services]
+- sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 caps.latest.revision: 60
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d9db81f159d831fe10aaf99a4b27a34aef0764fc
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Origen de Excel
+# <a name="excel-source"></a>Origen de Excel
   El origen de Excel extrae datos de hojas de cálculo o de rangos de libros de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
   
  El origen de Excel ofrece cuatro modos de acceso a datos distintos para extraer datos:  
@@ -41,7 +46,7 @@ caps.handback.revision: 60
   
  El origen de Excel tiene una salida normal y una salida de error.  
   
-## Consideraciones de uso  
+## <a name="usage-considerations"></a>Consideraciones de uso  
  El Administrador de conexiones con Excel usa el Proveedor OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para Jet 4.0 y el controlador ISAM (Método de acceso secuencial indexado) de Excel asociado para conectar con orígenes Excel de datos y leer y escribir datos en ellos.  
   
  Muchos artículos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base documentan el comportamiento de este proveedor y el controlador. Aunque estos artículos no son específicos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ni de Servicios de transformación de datos (su predecesor), posiblemente le interese conocer determinados comportamientos que pueden provocar resultados inesperados. Para obtener información general sobre el uso y el comportamiento del controlador de Excel, vea [Cómo usar ADO con datos de Excel procedentes de Visual Basic o VBA](http://support.microsoft.com/kb/257819).  
@@ -50,9 +55,9 @@ caps.handback.revision: 60
   
 -   **Orígenes de datos**. El origen de datos de un libro de Excel puede ser una hoja de cálculo, a cuyo nombre debe agregarse el signo $ (por ejemplo, Hoja1$), un rango con nombre (por ejemplo, MiRango). En una instrucción SQL, el nombre de la hoja debe estar delimitado (por ejemplo [Hoja1$]) para evitar un error de sintaxis producido por el signo $. El Generador de consultas agrega automáticamente estos delimitadores. Al especificar una hoja de cálculo o un rango, el controlador lee los bloques contiguos de celdas, comenzando con la primera celda no vacía en la esquina superior izquierda de la hoja de cálculo o rango. Por tanto, no deben dejarse filas vacías en los datos de origen, ni una fila vacía entre las filas de título o de cabecera y las filas de datos.  
   
--   **Valores que faltan**. Este controlador lee un cierto número de filas (de forma predeterminada, 8) en el origen especificado para elegir el tipo de datos de cada columna. Cuando una columna parece contener varios tipos de datos, especialmente numéricos y de texto, el controlador elige el tipo más usado y devuelve valores NULL en las celdas que contienen datos de los demás tipos. (En caso de empate, el tipo numérico tiene prioridad.) La mayoría de las opciones de formato en las hojas Excel parecen no afectar a esta determinación de tipos de datos. Para modificar este comportamiento del controlador de Excel, especifique el modo de importación. Para especificar el modo de importación, agregue **IMEX=1** al valor de Propiedades extendidas en la cadena de conexión del Administrador de conexiones con Excel en la ventana **Propiedades**. Para obtener más información, vea [PRB: valores de Excel devueltos como NULL usando DAO OpenRecordset](http://support.microsoft.com/kb/194124).  
+-   **Valores que faltan**. Este controlador lee un cierto número de filas (de forma predeterminada, 8) en el origen especificado para elegir el tipo de datos de cada columna. Cuando una columna parece contener varios tipos de datos, especialmente numéricos y de texto, el controlador elige el tipo más usado y devuelve valores NULL en las celdas que contienen datos de los demás tipos. (En caso de empate, el tipo numérico tiene prioridad.) La mayoría de las opciones de formato en las hojas Excel parecen no afectar a esta determinación de tipos de datos. Para modificar este comportamiento del controlador de Excel, especifique el modo de importación. Para especificar el modo de importación, agregue **IMEX=1** al valor de Propiedades extendidas en la cadena de conexión del Administrador de conexiones con Excel en la ventana **Propiedades** . Para obtener más información, vea [PRB: valores de Excel devueltos como NULL usando DAO OpenRecordset](http://support.microsoft.com/kb/194124).  
   
--   **Texto truncado**. Cuando el controlador determina que una columna de Excel contiene datos de texto, el controlador selecciona el tipo de datos (cadena o memorando) en función del valor más largo que muestrea. Si el controlador no descubre valores de más de 255 caracteres en las filas que muestrea, trata a la columna como una columna de cadena de 255 caracteres en lugar de una columna memorando. Así, es posible que se trunquen las cadenas con más de 255 caracteres. Para importar datos de una columna memorando sin que se trunquen, debe asegurarse de que la columna memo contenga, en al menos una de las filas muestreadas, un valor superior a los 255 caracteres, o tendrá que incrementar el número de filas muestreadas por el controlador para que se incluya dicha fila. Puede aumentar el número de filas muestreadas al incrementar el valor de **TypeGuessRows** en la clave del registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel**. Para más información, vea [PRB: transferencia de datos del origen de OLEDB de Jet 4.0 con error](http://support.microsoft.com/kb/281517).  
+-   **Texto truncado**. Cuando el controlador determina que una columna de Excel contiene datos de texto, el controlador selecciona el tipo de datos (cadena o memorando) en función del valor más largo que muestrea. Si el controlador no descubre valores de más de 255 caracteres en las filas que muestrea, trata a la columna como una columna de cadena de 255 caracteres en lugar de una columna memorando. Así, es posible que se trunquen las cadenas con más de 255 caracteres. Para importar datos de una columna memorando sin que se trunquen, debe asegurarse de que la columna memo contenga, en al menos una de las filas muestreadas, un valor superior a los 255 caracteres, o tendrá que incrementar el número de filas muestreadas por el controlador para que se incluya dicha fila. Puede aumentar el número de filas muestreadas al incrementar el valor de **TypeGuessRows** en la clave del registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** . Para más información, vea [PRB: transferencia de datos del origen de OLEDB de Jet 4.0 con error](http://support.microsoft.com/kb/281517).  
   
 -   **Tipos de datos**. El controlador de Excel reconoce solo un conjunto limitado de tipos de datos. Por ejemplo, todas las columnas numéricas se interpretan como dobles (DT_R8) y todas las columnas de cadena (a excepción de las columnas memorando) se interpretan como cadenas Unicode de 255 caracteres (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] asigna los tipos de datos de Excel de la siguiente manera:  
   
@@ -76,7 +81,7 @@ caps.handback.revision: 60
   
     -   Conversión entre columnas numéricas de Excel de doble precisión y columnas numéricas de otros tipos  
   
-## Configuración del origen de Excel  
+## <a name="excel-source-configuration"></a>Configuración del origen de Excel  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
  Para obtener más información acerca de las propiedades que puede establecer en el cuadro de diálogo **Editor de origen de Excel** , haga clic en uno de los temas siguientes:  
@@ -89,13 +94,13 @@ caps.handback.revision: 60
   
  El cuadro de diálogo **Editor avanzado** indica todas las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](../Topic/Common%20Properties.md)  
+-   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de Excel](../../integration-services/data-flow/excel-custom-properties.md)  
   
  Para más información sobre cómo crear bucles entre un grupo de archivos de Excel, vea [Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
   
 -   [Asignar parámetros de consulta a variables en un componente de flujo de datos](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
@@ -105,9 +110,9 @@ caps.handback.revision: 60
   
 -   [Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
   
--   Entrada de blog sobre cómo [importar datos de Excel de 64 bits en SSIS](http://go.microsoft.com/fwlink/?LinkId=217673) en hrvoje.piasevoli.com  
+-   Entrada de blog sobre cómo [importar datos de Excel de 64 bits en SSIS](http://go.microsoft.com/fwlink/?LinkId=217673)en hrvoje.piasevoli.com  
   
 -   Entrada de blog, [Excel en Integration Services, parte 1 de 3: conexiones y componentes](http://go.microsoft.com/fwlink/?LinkId=217674), en dougbert.com  
   

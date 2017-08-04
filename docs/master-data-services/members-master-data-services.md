@@ -1,39 +1,44 @@
 ---
-title: "Miembros (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "miembros hoja [Master Data Services]"
-  - "miembros consolidados [Master Data Services]"
-  - "miembros consolidados [Master Data Services], acerca de los miembros consolidados"
-  - "miembros [Master Data Services], acerca de los miembros"
-  - "miembros hoja [Master Data Services], acerca de los miembros hoja"
-  - "miembros [Master Data Services]"
+title: Miembros (Master Data Services) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- leaf members [Master Data Services]
+- consolidated members [Master Data Services]
+- consolidated members [Master Data Services], about consolidated members
+- members [Master Data Services], about members
+- leaf members [Master Data Services], about leaf members
+- members [Master Data Services]
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 caps.latest.revision: 16
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: abda6e0259b924a184d9d7cf888fdf5f430a8dd6
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Miembros (Master Data Services)
+# <a name="members-master-data-services"></a>Miembros (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], los miembros son los datos maestros físicos. Por ejemplo, un miembro puede ser una bicicleta Road-150 de una entidad Product o un cliente específico de una entidad Customer.  
   
-## Cómo se relacionan los miembros con otros objetos del modelo  
+## <a name="how-members-relate-to-other-model-objects"></a>Cómo se relacionan los miembros con otros objetos del modelo  
  Se puede considerar que los miembros son como filas de una tabla. Los miembros relacionados están contenidos en una entidad y cada miembro se define mediante valores de atributo.  
   
  En este ejemplo, la tabla representa una entidad, las filas serían los miembros y las columnas, los atributos. Cada celda representa un valor de atributo de un miembro concreto.  
   
- ![Entidad de Master Data Services representada como una tabla](../master-data-services/media/mds-conc-entity-table.gif "Entidad de Master Data Services representada como una tabla")  
+ ![Entidad de Master Data Services representada como tabla](../master-data-services/media/mds-conc-entity-table.gif "entidad de Master Data Services representada como tabla")  
   
-## Tipos de miembro  
+## <a name="member-types"></a>Tipos de miembro  
  Existen tres tipos de miembros: hoja, consolidados y de colección.  
   
  Los miembros hoja son los miembros predeterminados en una entidad.  
@@ -48,15 +53,15 @@ caps.handback.revision: 14
   
 -   En las jerarquías explícitas, los miembros consolidados pueden ser elementos primarios de otros miembros de la jerarquía o pueden ser elementos secundarios.  
   
-## Usar jerarquías y colecciones para organizar los miembros  
+## <a name="use-hierarchies-and-collections-to-organize-members"></a>Usar jerarquías y colecciones para organizar los miembros  
  Las jerarquías y las colecciones se pueden usar para agrupar miembros con fines de informes o análisis. Para obtener más información, consulte [Jerarquías &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md) y [Colecciones &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md).  
   
-## Ejemplo de miembro  
+## <a name="member-example"></a>Ejemplo de miembro  
  En el ejemplo siguiente, cada miembro se compone de los valores de atributo Name, Code, Subcategory, StandardCost, ListPrice y FilePhoto.  
   
- ![Tabla de entidades de producto de bicicleta](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabla de entidades de producto de bicicleta")  
+ ![Tabla de la entidad de producto de una bicicleta](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike de la tabla de la entidad de producto")  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
@@ -65,10 +70,9 @@ caps.handback.revision: 14
 |Eliminar un miembro o colección existente.|[Eliminar un miembro o una colección &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)|  
 |Reactivar un miembro o una colección eliminados.|[Reactivar un miembro o una colección &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
 |Actualizar los valores de atributo de un miembro.|[Cambar el tipo de atributo &#40;complemento MDS para Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
-|Mover miembros dentro de una jerarquía.|[Mover miembros dentro de una jerarquía &#40;Master Data Services&#41;](../Topic/Move%20Members%20within%20a%20Hierarchy%20\(Master%20Data%20Services\).md)|  
-|Solucionar conflictos de combinación.|[Conflictos de combinación &#40;Master Data Services&#41;](../master-data-services/merge-conflicts-master-data-services.md)|  
+
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
   
 -   [Introducción a Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
@@ -82,8 +86,7 @@ caps.handback.revision: 14
   
 -   [Permisos de hoja &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)  
   
--   [Permisos consolidados &#40;Master Data Services&#41;](../Topic/Consolidated%20Permissions%20\(Master%20Data%20Services\).md)  
-  
+ 
 -   [Operadores de filtro &#40;Master Data Services&#41;](../master-data-services/filter-operators-master-data-services.md)  
   
   

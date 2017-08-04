@@ -1,31 +1,36 @@
 ---
-title: "Editor de la tarea Cola de mensajes (p&#225;gina Enviar) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.msgqueuetask.send.f1"
-helpviewer_keywords: 
-  - "Editor de la tarea Cola de mensajes"
+title: "Editor de tareas de cola de mensajes (página Enviar) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.msgqueuetask.send.f1
+helpviewer_keywords:
+- Message Queue Task Editor
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d0914b6ab2222fa91d7db229970b081d4a43314d
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de la tarea Cola de mensajes (p&#225;gina Enviar)
+# <a name="message-queue-task-editor-send-page"></a>Editor de la tarea Cola de mensajes (página Enviar)
   Utilice la página **Enviar** del cuadro de diálogo **Editor de la tarea Cola de mensajes** para configurar una tarea Cola de mensajes para enviar mensajes desde un paquete de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Para obtener información acerca de esta tarea, vea [Message Queue Task](../../integration-services/control-flow/message-queue-task.md).  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **UseEncryption**  
  Indica si se debe cifrar el mensaje. El valor predeterminado es **False**.  
   
@@ -47,26 +52,26 @@ caps.handback.revision: 37
 |**Mensaje de variable**|El mensaje se almacena en una variable. Al seleccionar este valor se muestra la opción dinámica **VariableMessage**.|  
 |**Mensaje de cadena**|El mensaje se almacena en la tarea Cola de mensajes. Al seleccionar este valor se muestra la opción dinámica **StringMessage**.|  
   
-## Opciones dinámicas de MessageType  
+## <a name="messagetype-dynamic-options"></a>Opciones dinámicas de MessageType  
   
-### MessageType = Mensaje de archivo de datos  
+### <a name="messagetype--data-file-message"></a>MessageType = Mensaje de archivo de datos  
  **DataFileMessage**  
  Escriba la ruta de acceso del archivo de datos o haga clic en el botón de puntos suspensivos **(…)** para ubicar el archivo.  
   
-### MessageType = Mensaje de variable  
+### <a name="messagetype--variable-message"></a>MessageType = Mensaje de variable  
  **VariableMessage**  
  Escriba los nombres de las variables o haga clic en el botón de puntos suspensivos **(…)** para seleccionar las variables. Las variables se separan con comas.  
   
  **Temas relacionados:** Seleccionar variables  
   
-### MessageType = Mensaje de cadena  
+### <a name="messagetype--string-message"></a>MessageType = Mensaje de cadena  
  **StringMessage**  
- Escriba el mensaje de cadena o haga clic en el botón de puntos suspensivos **(…)** y escriba el mensaje en el cuadro de diálogo **Escribir mensaje de cadena**.  
+ Escriba el mensaje de cadena o haga clic en el botón de puntos suspensivos **(…)** y escriba el mensaje en el cuadro de diálogo **Escribir mensaje de cadena** .  
   
-## Vea también  
- [Referencia de errores y mensajes de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor de la tarea Cola de mensajes &#40;página General&#41;](../../integration-services/control-flow/message-queue-task-editor-general-page.md)   
- [Editor de la tarea Cola de mensajes &#40;página Recibir&#41;](../../integration-services/control-flow/message-queue-task-editor-receive-page.md)   
+## <a name="see-also"></a>Vea también  
+ [Referencia de mensajes y Error de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de tareas de cola de mensajes &#40; Página general &#41;](../../integration-services/control-flow/message-queue-task-editor-general-page.md)   
+ [Editor de tareas de cola de mensajes &#40; Aparece la página &#41;](../../integration-services/control-flow/message-queue-task-editor-receive-page.md)   
  [Página Expresiones](../../integration-services/expressions/expressions-page.md)  
   
   

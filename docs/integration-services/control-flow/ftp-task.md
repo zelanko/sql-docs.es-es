@@ -1,26 +1,31 @@
 ---
-title: "Tarea FTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.ftptask.f1"
-helpviewer_keywords: 
-  - "FTP, tarea [Integration Services]"
+title: La tarea FTP | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ftptask.f1
+helpviewer_keywords:
+- FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 caps.latest.revision: 52
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 14cfb9dafee9b12bac8864e15cc1a46ac5762680
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Tarea FTP
+# <a name="ftp-task"></a>Tarea FTP
   La tarea FTP descarga y carga archivos de datos, y administra directorios en servidores. Por ejemplo, un paquete puede descargar archivos de datos de un servidor remoto o de una ubicación de Internet como parte de un flujo de trabajo de paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Puede usar la tarea FTP para los siguientes fines:  
   
 -   Copiar directorios y archivos de datos de un directorio a otro, antes o después de mover datos, y aplicar transformaciones a los datos.  
@@ -44,7 +49,7 @@ caps.handback.revision: 52
   
  Es posible configurar las operaciones de FTP para detener la tarea Sistema de archivos cuando la operación no se realice correctamente o para transferir archivos en modo ASCII. Las operaciones que envían y reciben archivos pueden configurarse para sobrescribir los archivos y directorios de destino.  
   
-## Operaciones FTP predefinidas  
+## <a name="predefined-ftp-operations"></a>Operaciones FTP predefinidas  
  La tarea FTP incluye un conjunto predefinido de operaciones. Estas operaciones se describen en la siguiente tabla.  
   
 |Operación|Description|  
@@ -58,24 +63,24 @@ caps.handback.revision: 52
 |Eliminar archivos locales|Elimina un archivo del equipo local.|  
 |Eliminar archivos remotos|Elimina un archivo del servidor FTP.|  
   
-## Entradas del registro personalizadas disponibles en la tarea FTP  
- La siguiente tabla contiene las entradas del registro personalizadas para la tarea FTP. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../../integration-services/performance/custom-messages-for-logging.md).  
+## <a name="custom-log-entries-available-on-the-ftp-task"></a>Entradas del registro personalizadas disponibles en la tarea FTP  
+ La siguiente tabla contiene las entradas del registro personalizadas para la tarea FTP. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Entrada del registro|Description|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|Indica que la tarea inició una conexión con el servidor FTP.|  
 |**FTPOperation**|Informa del comienzo y del tipo de operación de FTP que realiza la tarea.|  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener información sobre cómo establecer estas propiedades en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)], vea [Establecer las propiedades de tareas o contenedores](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md).  
+ Para obtener información sobre cómo establecer estas propiedades en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
  Para obtener más información sobre la configuración mediante programación de estas propiedades, vea <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Editor de la tarea FTP &#40;página General&#41;](../../integration-services/control-flow/ftp-task-editor-general-page.md)   
- [Editor de la tarea FTP &#40;página Transferencia de archivos&#41;](../../integration-services/control-flow/ftp-task-editor-file-transfer-page.md)   
+ [Editor de la tarea FTP &#40; Página transferencia de archivos &#41;](../../integration-services/control-flow/ftp-task-editor-file-transfer-page.md)   
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  
   

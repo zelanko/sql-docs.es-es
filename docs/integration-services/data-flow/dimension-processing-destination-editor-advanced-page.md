@@ -1,31 +1,36 @@
 ---
-title: "Editor de destino de procesamiento de dimensiones (p&#225;gina Avanzadas) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dimprocessingtransformation.advanced.f1"
-helpviewer_keywords: 
-  - "destino de procesamiento de dimensiones, editor de"
+title: "Editor de destino de procesamiento de dimensiones (página avanzadas) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dimprocessingtransformation.advanced.f1
+helpviewer_keywords:
+- Dimension Processing Destination Editor
 ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 81e97a5a5e653fb02f0e8a1ccc5741bb3e86acf1
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de destino de procesamiento de dimensiones (p&#225;gina Avanzadas)
+# <a name="dimension-processing-destination-editor-advanced-page"></a>Editor de destino de procesamiento de dimensiones (página Avanzadas)
   Utilice la página **Avanzadas** del cuadro de diálogo **Editor de destino de procesamiento de dimensiones** para configurar el control de errores.  
   
  Para obtener más información acerca del destino de procesamiento de dimensiones, vea [Dimension Processing Destination](../../integration-services/data-flow/dimension-processing-destination.md).  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Utilizar la configuración de error predeterminada**  
  Especifica si debe utilizarse el control de errores predeterminado de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Este valor es **True**de forma predeterminada.  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 27
 |**ReportAndStop**|Informa del error y detiene el procesamiento.|  
   
  **Clave NULL convertida en desconocida**  
- Especifica la acción que se realizará cuando una clave NULL se convierta al valor **UnknownMember**. Este valor es **IgnoreError**de forma predeterminada.  
+ Especifica la acción que se realizará cuando una clave NULL se convierta al valor **UnknownMember** . Este valor es **IgnoreError**de forma predeterminada.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -96,9 +101,9 @@ caps.handback.revision: 27
  **Examinar (...)**  
  Seleccione una ruta de acceso para el registro de errores.  
   
-## Vea también  
- [Referencia de errores y mensajes de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor de destino de procesamiento de dimensiones &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/dimension-processing-destination-editor-connection-manager-page.md)   
- [Editor de destino de procesamiento de dimensiones &#40;página Asignaciones&#41;](../../integration-services/data-flow/dimension-processing-destination-editor-mappings-page.md)  
+## <a name="see-also"></a>Vea también  
+ [Referencia de mensajes y Error de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de destino de procesamiento de dimensiones &#40; Página Administrador de conexiones &#41;](../../integration-services/data-flow/dimension-processing-destination-editor-connection-manager-page.md)   
+ [Editor de destino de procesamiento de dimensiones &#40; Página Asignaciones &#41;](../../integration-services/data-flow/dimension-processing-destination-editor-mappings-page.md)  
   
   

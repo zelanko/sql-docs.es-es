@@ -1,47 +1,52 @@
 ---
-title: "LN (expresi&#243;n de SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "LN, función"
-  - "logaritmo natural de la expresión [Integration Services]"
+title: "LN (expresión de SSIS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- LN function
+- natural logarithm of expression [Integration Services]
 ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d34eb7a3087f30709a55912f1c60b97569fb209
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# LN (expresi&#243;n de SSIS)
+# <a name="ln-ssis-expression"></a>LN (expresión de SSIS)
   Devuelve el logaritmo natural de una expresión numérica.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
 LN(numeric_expression)  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *numeric_expression*  
  Expresión numérica distinta de cero y no negativa válida.  
   
-## Tipos de resultado  
+## <a name="result-types"></a>Tipos de resultado  
  DT_R8  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  La expresión numérica se convierte al tipo de datos DT_R8 antes de que se calcule el logaritmo. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
- Si *numeric_expression* da como resultado cero o un valor negativo, el resultado devuelto será nulo.  
+ Si la evaluación de *numeric_expression* devuelve cero o un valor negativo, el resultado devuelto será NULL.  
   
-## Ejemplos de expresiones  
+## <a name="expression-examples"></a>Ejemplos de expresiones  
  Este ejemplo usa un literal numérico. La función devuelve el valor 3,737766961828337.  
   
 ```  
@@ -60,8 +65,8 @@ LN(Length)
 LN(@Length)   
 ```  
   
-## Vea también  
- [LOG &#40;expresión de SSIS&#41;](../../integration-services/expressions/log-ssis-expression.md)   
- [Funciones &#40;expresión de SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Vea también  
+ [Registro &#40; Expresión de SSIS &#41;](../../integration-services/expressions/log-ssis-expression.md)   
+ [Funciones &#40; Expresión de SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

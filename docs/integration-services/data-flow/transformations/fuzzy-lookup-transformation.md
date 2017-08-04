@@ -1,42 +1,47 @@
 ---
-title: "Transformaci&#243;n B&#250;squeda aproximada | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.fuzzylookuptrans.f1"
-helpviewer_keywords: 
-  - "limpiar datos"
-  - "comparar datos"
-  - "delimitadores de token [Integration Services]"
-  - "índices temporales [Integration Services]"
-  - "tablas temporales [Integration Services]"
-  - "Búsqueda aproximada, transformación"
-  - "tablas de referencia [Integration Services]"
-  - "coincidir datos parecidos [Integration Services]"
-  - "reemplazar valores ausentes"
-  - "corregir datos [Integration Services]"
-  - "caché [Integration Services]"
-  - "estandarizar datos [Integration Services]"
-  - "búsquedas [Integration Services]"
-  - "puntuaciones de confianza [Integration Services]"
-  - "coincidencia aproximada"
-  - "valores ausentes sustituidos [Integration Services]"
-  - "umbrales de similitud [Integration Services]"
+title: "La transformación Búsqueda aproximada | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fuzzylookuptrans.f1
+helpviewer_keywords:
+- cleaning data
+- comparing data
+- token delimiters [Integration Services]
+- temporary indexes [Integration Services]
+- temporary tables [Integration Services]
+- Fuzzy Lookup transformation
+- reference tables [Integration Services]
+- match similar data [Integration Services]
+- replacing missing values
+- correcting data [Integration Services]
+- cache [Integration Services]
+- standardizing data [Integration Services]
+- lookups [Integration Services]
+- confidence scores [Integration Services]
+- fuzzy matches
+- missing values replaced [Integration Services]
+- similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 caps.latest.revision: 75
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 75
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2c05d44e6a91c79e5a5ce71b1e26ac2f4a319a88
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transformaci&#243;n B&#250;squeda aproximada
+# <a name="fuzzy-lookup-transformation"></a>Búsqueda aproximada, transformación
   La Transformación Búsqueda aproximada realiza tareas de limpieza de datos como normalizar datos, corregir datos y proporcionar valores que faltan.  
   
 > [!NOTE]  
@@ -50,13 +55,13 @@ caps.handback.revision: 75
   
  Esta transformación tiene una entrada y una salida.  
   
- Para la coincidencia aproximada, solo se pueden usar columnas de entrada con tipos de datos **DT_WSTR** y **DT_STR**. La coincidencia exacta puede usar cualquier tipo de datos DTS, excepto **DT_TEXT**, **DT_NTEXT** y **DT_IMAGE**. Para más información, consulte [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md). Las columnas que participan en la combinación entre la entrada y la tabla de referencia deben tener tipos de datos compatibles. Por ejemplo, es válido combinar una columna con el tipo de datos DTS **DT_WSTR** con una columna con el tipo de datos **nvarchar** de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], pero no se puede combinar una columna con el tipo de datos **DT_WSTR** con otra que tenga el tipo de datos **int**.  
+ Para la coincidencia aproximada, solo se pueden usar columnas de entrada con tipos de datos **DT_WSTR** y **DT_STR** . La coincidencia exacta puede usar cualquier tipo de datos DTS, excepto **DT_TEXT**, **DT_NTEXT**y **DT_IMAGE**. Para más información, consulte [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md). Las columnas que participan en la combinación entre la entrada y la tabla de referencia deben tener tipos de datos compatibles. Por ejemplo, es válido combinar una columna con el tipo de datos DTS **DT_WSTR** con una columna con el tipo de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** data type, but invalid to join a column with the **DT_WSTR** con una columna con el tipo de datos **int** data type.  
   
  Puede personalizar esta transformación, especificando la cantidad máxima de memoria, el algoritmo de comparación de filas y el almacenamiento en caché de índices y tablas de referencia que utiliza la transformación.  
   
  La cantidad de memoria que usa la transformación Búsqueda aproximada se puede configurar al establecer la propiedad personalizada MaxMemoryUsage. Puede especificar el número de megabytes (MB) o utilizar el valor 0, lo que permite a la transformación utilizar una cantidad de memoria dinámica en función de sus necesidades y de la memoria física disponible. La propiedad personalizada MaxMemoryUsage se puede actualizar a través de una expresión de propiedad, al cargar el paquete. Para más información, vea [Expresiones de Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Usar expresiones de propiedad en paquetes](../../../integration-services/expressions/use-property-expressions-in-packages.md) y [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
-## Controlar el comportamiento de la coincidencia aproximada  
+## <a name="controlling-fuzzy-matching-behavior"></a>Controlar el comportamiento de la coincidencia aproximada  
  La transformación Búsqueda aproximada incluye tres características para personalizar la búsqueda realiza: el número máximo de coincidencias que se van a devolver por fila de entrada, delimitadores de token y umbrales de similitud.  
   
  La transformación devuelve cero o más coincidencias, hasta alcanzar el número especificado. Especificar un número máximo de coincidencias no garantiza que la transformación devuelva ese número de coincidencias; solo garantiza que la transformación devolverá, como máximo, ese número de coincidencias. Si establece el número máximo de coincidencias en un valor mayor que 1, la salida de transformación puede incluir más de una fila por búsqueda y algunas de las filas pueden ser duplicados.  
@@ -79,7 +84,7 @@ caps.handback.revision: 75
   
  La transformación utiliza la conexión a la base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para crear las tablas temporales que utiliza el algoritmo de coincidencia aproximada.  
   
-## Ejecutar la transformación Búsqueda aproximada  
+## <a name="running-the-fuzzy-lookup-transformation"></a>Ejecutar la transformación Búsqueda aproximada  
  Cuando el paquete ejecuta la transformación por primera vez, ésta copia la tabla de referencia, agrega una clave con un tipo de datos entero a la tabla nueva y crea un índice en la columna de clave. Después, la transformación crea un índice, llamado índice de coincidencias, en la copia de la tabla de referencia. El índice de coincidencias almacena los resultados de la división de los valores en tokens en las columnas de entrada de la transformación y posteriormente, la transformación utiliza los tokens en la operación de búsqueda. El índice de coincidencias es una tabla en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Cuando se vuelve a ejecutar el paquete, la transformación puede utilizar un índice de coincidencias existente o crear uno. Si la tabla de referencia es estática, el paquete puede evitar el proceso potencialmente costoso de volver a crear el índice para sesiones reiteradas de limpieza de datos. Si elige utilizar un índice existente, el índice se creará la primera vez que se ejecute el paquete. Si varias transformaciones Búsqueda aproximada utilizan la misma tabla de referencia, todas pueden utilizar el mismo índice. Para volver a usar el índice, las operaciones de búsqueda deben ser idénticas; la búsqueda debe utilizar las mismas columnas. Puede asignar un nombre al índice y seleccionar la conexión a la base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la que se guarda el índice.  
@@ -95,32 +100,32 @@ caps.handback.revision: 75
 |**GenerateNewIndex**|Crea un índice, pero no lo guarda.|  
 |**ReuseExistingIndex**|Vuelve a utilizar un índice existente.|  
   
-### Mantenimiento de la tabla del índice de coincidencias  
+### <a name="maintenance-of-the-match-index-table"></a>Mantenimiento de la tabla del índice de coincidencias  
  La opción **GenerateAndMaintainNewIndex** instala desencadenadores en la tabla de referencia para mantener la tabla del índice de coincidencias sincronizada con la tabla de referencia. Si tiene que quitar el desencadenador instalado, debe ejecutar el procedimiento almacenado **sp_FuzzyLookupTableMaintenanceUnInstall** y proporcionar el nombre especificado en la propiedad MatchIndexName como valor del parámetro de entrada.  
   
- No debe eliminar la tabla del índice de coincidencias mantenida antes de ejecutar el procedimiento almacenado **sp_FuzzyLookupTableMaintenanceUnInstall**. Si elimina la tabla del índice de coincidencias, los desencadenadores de la tabla de referencia no se ejecutarán correctamente. Todas las actualizaciones posteriores de la tabla de referencia generarán errores hasta que quite manualmente los desencadenadores de la tabla de referencia.  
+ No debe eliminar la tabla del índice de coincidencias mantenida antes de ejecutar el procedimiento almacenado **sp_FuzzyLookupTableMaintenanceUnInstall** . Si elimina la tabla del índice de coincidencias, los desencadenadores de la tabla de referencia no se ejecutarán correctamente. Todas las actualizaciones posteriores de la tabla de referencia generarán errores hasta que quite manualmente los desencadenadores de la tabla de referencia.  
   
  El comando SQL TRUNCATE TABLE no invoca desencadenadores DELETE. Si se utiliza el comando TRUNCATE TABLE en la tabla de referencia, la tabla de referencia y el índice de coincidencias dejarán de estar sincronizados y la Transformación Búsqueda aproximada generará un error. Mientras estén instalados en la tabla de referencia los desencadenadores que mantienen la tabla del índice de coincidencias, debe utilizar el comando SQL DELETE en lugar del comando TRUNCATE TABLE.  
   
 > [!NOTE]  
->  Al seleccionar **Mantener el índice almacenado** en la pestaña **Tabla de referencia** del **Editor de transformación Búsqueda aproximada**, la transformación utiliza los procedimientos almacenados administrados para mantener el índice. Estos procedimientos almacenados administrados usan la característica de integración de Common Language Runtime (CLR) en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. De forma predeterminada, la integración de CLR en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no está habilitada. Para utilizar la funcionalidad **Mantener el índice almacenado** , debe habilitar la integración de CLR. Para más información, consulte [Enabling CLR Integration](../Topic/Enabling%20CLR%20Integration.md).  
+>  Al seleccionar **Mantener el índice almacenado** en la pestaña **Tabla de referencia** del **Editor de transformación Búsqueda aproximada**, la transformación utiliza los procedimientos almacenados administrados para mantener el índice. Estos procedimientos almacenados administrados usan la característica de integración de Common Language Runtime (CLR) en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. De forma predeterminada, la integración de CLR en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no está habilitada. Para utilizar la funcionalidad **Mantener el índice almacenado** , debe habilitar la integración de CLR. Para más información, consulte [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
 >   
 >  Dado que la opción **Mantener el índice almacenado** requiere la integración con CLR, esta característica solo funciona al seleccionar una tabla de referencia en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] donde se habilite la integración con CLR.  
   
-## Comparar filas  
+## <a name="row-comparison"></a>Comparar filas  
  Al configurar la transformación Búsqueda aproximada, puede especificar el algoritmo de comparación que utiliza la transformación para localizar los registros que coinciden en la tabla de referencia. Si establece la propiedad Exhaustive en **True**, la transformación compara cada fila de la entrada con todas las filas de la tabla de referencia. Este algoritmo de comparación puede producir resultados más exactos, pero es probable que la transformación sea más lenta, a menos que la tabla de referencia tenga un número de filas reducido. Si establece la propiedad Exhaustive en **True**, se cargará en la memoria la tabla de referencia completa. Para evitar problemas de rendimiento, es conveniente establecer la propiedad Exhaustive en **True** durante el desarrollo de paquetes únicamente.  
   
  Si la propiedad Exhaustive se establece en **False**, la transformación Búsqueda aproximada devuelve solo coincidencias que tienen al menos un token indizado o una subcadena (la subcadena se denomina *q-gram*) en común con el registro de entrada. Para maximizar la eficacia de las búsquedas, solamente se indiza un subconjunto de los tokens de cada fila de la tabla en la estructura de índice invertido que utiliza la transformación Búsqueda aproximada para localizar coincidencias. Si el conjunto de datos de entrada es pequeño, puede establecer Exhaustive en **True** para evitar que falten las coincidencias para las que no existen tokens comunes en la tabla del índice.  
   
-## Almacenar en caché índices y tablas de referencia  
+## <a name="caching-of-indexes-and-reference-tables"></a>Almacenar en caché índices y tablas de referencia  
  Al configurar la transformación Búsqueda aproximada, puede especificar si la transformación almacenará parcialmente en caché el índice y la tabla de referencia antes de que la transformación realice su trabajo. Si establece la propiedad WarmCaches en **True**, se cargarán en la memoria el índice y la tabla de referencia. Si la entrada tiene muchas filas, establecer la propiedad WarmCaches en **True** puede mejorar el rendimiento de la transformación. Cuando el número de filas de entrada es pequeño, establecer la propiedad WarmCaches en **False** puede hacer que la reutilización de un índice grande sea más rápida.  
   
-## Tablas e índices temporales  
+## <a name="temporary-tables-and-indexes"></a>Tablas e índices temporales  
  En tiempo de ejecución, la transformación Búsqueda aproximada crea objetos temporales, como tablas e índices, en la base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la que se conecta la transformación. El tamaño de estas tablas e índices temporales es proporcional al número de filas y tokens de la tabla de referencia y al número de tokens que crea la transformación Búsqueda aproximada; por lo tanto, podría consumir una cantidad importante de espacio en disco. La transformación también consulta estas tablas temporales. Por lo tanto, debe considerar la posibilidad de conectar la transformación Búsqueda aproximada a una instancia de la base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que no sea de producción, en especial si el servidor de producción tiene un espacio en disco disponible limitado.  
   
  El rendimiento de esta transformación puede mejorar si las tablas e índices que utiliza están ubicados en el equipo local. Si la tabla de referencia que utiliza la transformación Búsqueda aproximada está en el servidor de producción, debe plantearse copiar la tabla a un servidor que no sea de producción y configurar la transformación Búsqueda aproximada para que tenga acceso a la copia. Haciendo esto, puede evitar que las consultas de búsqueda consuman recursos del servidor de producción. Además, si MatchIndexOptions está establecida en **GenerateAndMaintainNewIndex**, la transformación Búsqueda aproximada mantiene el índice de coincidencias y puede bloquear la tabla de referencia durante la operación de limpieza de datos, evitando que otros usuarios y aplicaciones accedan a ella.  
   
-## Configurar la transformación Búsqueda aproximada  
+## <a name="configuring-the-fuzzy-lookup-transformation"></a>Configurar la transformación Búsqueda aproximada  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
  Para obtener más información acerca de las propiedades que puede establecer en el cuadro de diálogo **Editor de transformación Búsqueda aproximada** , haga clic en uno de los temas siguientes:  
@@ -133,14 +138,14 @@ caps.handback.revision: 75
   
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](../Topic/Common%20Properties.md)  
+-   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
  Para obtener más detalles sobre cómo establecer las propiedades de un componente de flujo de datos, vea [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Transformación Búsqueda](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
  [Transformación Agrupación aproximada](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

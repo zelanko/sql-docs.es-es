@@ -1,25 +1,30 @@
 ---
-title: "Caracter&#237;sticas en desuso de Master Data Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Las características de Master Data Services en desuso | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 caps.latest.revision: 18
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
-caps.handback.revision: 18
+author: sabotta
+ms.author: carlasab
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e4d9b433e72c916ae6611520498b0eb8fa85c8f6
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Caracter&#237;sticas en desuso de Master Data Services
+# <a name="deprecated-master-data-services-features"></a>Características en desuso de Master Data Services
   Este tema describe las características desusadas de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] que siguen estando disponibles en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Está previsto quitar estas características en una futura versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
   
-## Jerarquías explícitas, colecciones y componentes relacionados  
+## <a name="explicit-hierarchies-collections-and-related-components"></a>Jerarquías explícitas, colecciones y componentes relacionados  
  Las jerarquías explícitas, las colecciones y los componentes relacionados están en desuso. Los miembros que antes se modelaban como tipos de miembro consolidados (primario de jerarquía explícita) y tipos de miembro de colección se modelarán como miembros hoja en jerarquías derivadas. Las siguientes características nuevas permiten que las jerarquías derivadas ocupen el lugar de las jerarquías explícitas.  
   
 -   Las jerarquías derivadas recursivas ahora se pueden usar para asignar permisos de seguridad de miembro.  
@@ -42,15 +47,15 @@ caps.handback.revision: 18
   
 -   [Miembros &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
-## Tipo de registro de transacciones de entidad Attribute  
+## <a name="attribute-entity-transaction-log-type"></a>Tipo de registro de transacciones de entidad Attribute  
 El tipo de registro de transacciones de entidad "Attribute" está en desuso, migre al tipo de registro de transacciones de entidad "Member". Para obtener información sobre los tipos de registro de transacciones de entidad, consulte el tema siguiente:
 * [Cambio del tipo de registro de transacciones de entidad (Master Data Services)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)
 * [Historial de revisiones de miembro](../master-data-services/member-revision-history-master-data-services.md)
   
-## Recursos externos  
+## <a name="external-resources"></a>Recursos externos  
  Entrada de blog, [Deprecated: Explicit Hierarchies and Collections](http://go.microsoft.com/fwlink/p/?LinkId=615373)(En desuso: jerarquías explícitas y colecciones), en msdn.com.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Características descontinuadas de Master Data Services](../master-data-services/discontinued-master-data-services-features.md)  
   
   

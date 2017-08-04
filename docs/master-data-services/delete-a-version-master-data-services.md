@@ -1,36 +1,41 @@
 ---
-title: "Eliminar una versi&#243;n (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "versiones [Master Data Services], eliminar"
-  - "eliminar versiones [Master Data Services]"
+title: "Eliminar una versión (Master Data Services) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- versions [Master Data Services], deleting
+- deleting versions [Master Data Services]
 ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bf3a315d60bed733bd2d72cd6ba2317a8ab84ae5
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Eliminar una versi&#243;n (Master Data Services)
+# <a name="delete-a-version-master-data-services"></a>Eliminar una versión (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], elimine una versión cuando esté seguro de que ya no necesita los datos maestros asociados a la misma. Después de eliminar una versión, no puede recuperar los datos maestros asociados.  
   
 > [!WARNING]  
 >  Si un modelo tiene solo una versión y lo elimina, el modelo se vuelve inutilizable.  
   
-## Requisitos previos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe tener el permiso para ver la vista mdm.viw_SYSTEM_SCHEMA_VERSION y para ejecutar el procedimiento almacenado mds.udpVersionDelete en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Para obtener más información, consulte [Seguridad de objetos de base de datos &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md).  
   
-### Para eliminar una versión  
+### <a name="to-delete-a-version"></a>Para eliminar una versión  
   
 1.  Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y conéctese a la instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)] para la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
@@ -51,8 +56,8 @@ caps.handback.revision: 6
     > [!NOTE]  
     >  Puede que tenga que esperar unos minutos antes de que la aplicación web refleje el cambio.  
   
-## Vea también  
- [Versiones &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
- [Copiar una versión &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
+## <a name="see-also"></a>Vea también  
+ [Versiones de &#40; Master Data Services &#41;](../master-data-services/versions-master-data-services.md)   
+ [Copiar una versión &#40; Master Data Services &#41;](../master-data-services/copy-a-version-master-data-services.md)  
   
   

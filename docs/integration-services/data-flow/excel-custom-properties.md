@@ -1,22 +1,27 @@
 ---
-title: "Propiedades personalizadas de Excel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Propiedades personalizadas de Excel | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a635dcb4facce4cb9b6cf8501dc8bd01977a1b4
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Propiedades personalizadas de Excel
+# <a name="excel-custom-properties"></a>Propiedades personalizadas de Excel
   **Propiedades personalizadas de origen**  
   
  El origen de Excel tiene propiedades personalizadas y propiedades comunes a todos los componentes de flujo de datos.  
@@ -59,7 +64,7 @@ caps.handback.revision: 8
   
  Para más información, consulte [Excel Destination](../../integration-services/data-flow/excel-destination.md).  
   
-## Vea también  
- [Propiedades comunes](../Topic/Common%20Properties.md)  
+## <a name="see-also"></a>Vea también  
+ [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

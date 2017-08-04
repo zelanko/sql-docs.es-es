@@ -1,30 +1,35 @@
 ---
-title: "Determinar si los datos modificados est&#225;n preparados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "carga incremental [Integration Services], determinar la disposición"
+title: "Determinar si los datos modificados están preparados | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 91c0f342c63df8d3a1376850615c5b68745ab4c9
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Determinar si los datos modificados est&#225;n preparados
+# <a name="determine-whether-the-change-data-is-ready"></a>Determinar si los datos modificados están preparados
   En el flujo de control de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza una carga incremental de los datos modificados, la segunda tarea consiste en asegurarse de que éstos están listos para el intervalo seleccionado. Este paso es necesario porque el proceso de captura asincrónico podría no haber procesado todavía todos los cambios hasta el extremo seleccionado.  
   
 > [!NOTE]  
 >  La primera tarea para el flujo de control consiste en calcular los extremos del intervalo de cambios. Para más información sobre esta tarea, vea [Especificar un intervalo de datos modificados](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md). Para obtener una descripción del proceso general de diseño del flujo de control, vea [Captura de datos modificados &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
   
-## Entender los componentes de la solución  
+## <a name="understanding-the-components-of-the-solution"></a>Entender los componentes de la solución  
  La solución descrita en este tema usa 4 componentes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  
   
 -   Un contenedor de bucles For que evalúa repetidamente la salida de una tarea Ejecutar SQL.  
@@ -37,7 +42,7 @@ caps.handback.revision: 26
   
  Estos componentes establecen o leen los valores de varias variables del paquete para controlar el flujo de ejecución dentro del bucle y después en el paquete.  
   
-#### Para establecer las variables de paquetes  
+#### <a name="to-set-up-package-variables"></a>Para establecer las variables de paquetes  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], en la ventana **Variables** , cree las variables siguientes:  
   
@@ -61,10 +66,10 @@ caps.handback.revision: 26
   
          En este ejemplo se utiliza el nombre de variable IntervalID y solamente se comprueba que exista un valor de 0 que indique la carga inicial.  
   
-## Configurar un contenedor de bucles For  
+## <a name="configuring-a-for-loop-container"></a>Configurar un contenedor de bucles For  
  Con las variables establecidas, el contenedor de bucles For es el primer componente que se va a agregar.  
   
-#### Para configurar un contenedor de bucles For de tal forma que espere hasta que los datos modificados estén listos  
+#### <a name="to-configure-a-for-loop-container-to-wait-until-change-data-is-ready"></a>Para configurar un contenedor de bucles For de tal forma que espere hasta que los datos modificados estén listos  
   
 1.  En la pestaña **Flujo de control** del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , agregue un contenedor de bucles For al flujo de control.  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 26
   
          Cuando esta expresión se evalúa como **False**, la ejecución se transfiere al bucle y comienza la carga incremental.  
   
-## Configurar la tarea Ejecutar SQL que consulta los datos modificados  
+## <a name="configuring-the-execute-sql-task-that-queries-for-change-data"></a>Configurar la tarea Ejecutar SQL que consulta los datos modificados  
  Dentro del contenedor de bucles For, agregue una tarea Ejecutar SQL. Esta tarea consulta las tablas que el proceso de captura de datos modificados mantiene en la base de datos. El resultado de esta consulta es un valor de estado que indica si los datos modificados están listos.  
   
  En la tabla siguiente, la primera columna muestra los valores devueltos desde la tarea Ejecutar SQL por la consulta de ejemplo de Transact-SQL. La segunda columna muestra cómo responden los otros componentes a estos valores.  
@@ -93,7 +98,7 @@ caps.handback.revision: 26
 |3|Indica la carga inicial de todos los datos modificados disponibles.<br /><br /> La lógica condicional obtiene este valor de una variable de paquete especial que solamente se utiliza para este propósito.|La ejecución se transfiere al contenedor de bucles For y comienza la carga incremental.|  
 |5|Indica que se ha alcanzado el valor de la variable TimeoutCeiling.<br /><br /> El bucle ha comprobado la existencia de datos el número de veces especificado, pero los datos todavía no están disponibles. Sin esta prueba u otra similar, el paquete podría ejecutarse indefinidamente.|La ejecución continúa con el componente opcional que registra el tiempo de espera.|  
   
-#### Para configurar una tarea Ejecutar SQL de forma que consulte si los datos modificados están listos  
+#### <a name="to-configure-an-execute-sql-task-to-query-whether-change-data-is-ready"></a>Para configurar una tarea Ejecutar SQL de forma que consulte si los datos modificados están listos  
   
 1.  Dentro del contenedor de bucles For, agregue una tarea Ejecutar SQL.  
   
@@ -150,13 +155,13 @@ caps.handback.revision: 26
   
 4.  En la página **Conjunto de resultados** del **Editor de la tarea Ejecutar SQL**, asigne el resultado de DataReady a la variable DataReady, y el resultado de TimeoutCount a la variable TimeoutCount.  
   
-## Esperar hasta que los datos modificados estén listos  
+## <a name="waiting-until-the-change-data-is-ready"></a>Esperar hasta que los datos modificados estén listos  
  Puede utilizar varios métodos para implementar un retraso cuando los datos modificados no estén listos. Los dos procedimientos siguientes muestran cómo utilizar una tarea Script o una tarea Ejecutar SQL para implementar el retraso.  
   
 > [!NOTE]  
 >  Un script precompilado produce menos sobrecarga que una tarea Ejecutar SQL.  
   
-#### Para implementar un retraso mediante una tarea Script  
+#### <a name="to-implement-a-delay-by-using-a-script-task"></a>Para implementar un retraso mediante una tarea Script  
   
 1.  Dentro del contenedor de bucles For, agregue una tarea Script.  
   
@@ -180,7 +185,7 @@ caps.handback.revision: 26
   
 6.  En el procedimiento Main, escriba una de las líneas de código siguientes:  
   
-    -   Si está programando en C#, escriba la línea de código siguiente:   
+    -   Si está programando en C#, escriba la línea de código siguiente:  
   
         ```  
         System.Threading.Thread.Sleep((int)Dts.Variables["DelaySeconds"].Value * 1000);  
@@ -202,7 +207,7 @@ caps.handback.revision: 26
   
 8.  Cierre el entorno de desarrollo de script y el **Editor de la tarea Script**.  
   
-#### Para implementar un retraso mediante una tarea Ejecutar SQL  
+#### <a name="to-implement-a-delay-by-using-an-execute-sql-task"></a>Para implementar un retraso mediante una tarea Ejecutar SQL  
   
 1.  Dentro del contenedor de bucles For, agregue una tarea Ejecutar SQL.  
   
@@ -239,16 +244,16 @@ caps.handback.revision: 26
   
 5.  En la página **Asignación de parámetros** del editor, asigne la variable de cadena DelaySeconds al parámetro 0.  
   
-## Controlar una condición de error  
+## <a name="handling-an-error-condition"></a>Controlar una condición de error  
  Si lo desea, puede configurar un componente adicional dentro del bucle para registrar un error o que se ha superado el tiempo de espera:  
   
 -   Este componente puede registrar una condición de error cuando el valor de la variable DataReady es igual a 1. Este valor indica que no hay datos modificados disponibles antes del inicio del intervalo seleccionado.  
   
 -   Este componente también puede registrar un error de tiempo de espera cuando se alcanza el valor de la variable TimeoutCeiling. Este valor indica que el bucle ha comprobado la existencia de datos el número de veces especificado pero los datos aún no están disponibles. Sin esta prueba u otra similar, el paquete podría ejecutarse indefinidamente.  
   
-#### Para configurar una tarea Script opcional de forma que registre una condición de error  
+#### <a name="to-configure-an-optional-script-task-to-log-an-error-condition"></a>Para configurar una tarea Script opcional de forma que registre una condición de error  
   
-1.  Si desea informar del error o de que se ha superado el tiempo de espera escribiendo un mensaje en el registro, configure el registro para el paquete. Para más información, vea [Habilitar el registro de paquetes en SQL Server Data Tools](../../integration-services/performance/enable-package-logging-in-sql-server-data-tools.md).  
+1.  Si desea informar del error o de que se ha superado el tiempo de espera escribiendo un mensaje en el registro, configure el registro para el paquete. Para más información, vea [Habilitar el registro de paquetes en SQL Server Data Tools](../../integration-services/performance/integration-services-ssis-logging.md#ssdt).  
   
 2.  Dentro del contenedor de bucles For, agregue una tarea Script.  
   
@@ -330,7 +335,7 @@ caps.handback.revision: 26
   
 8.  Cierre el entorno de desarrollo de script y el **Editor de la tarea Script**.  
   
-## Paso siguiente  
+## <a name="next-step"></a>Paso siguiente  
  Después de determinar que los datos modificados están listos, el paso siguiente consiste en preparar la consulta de los mismos.  
   
  **Siguiente tema:** [Preparar para consultar datos modificados](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  

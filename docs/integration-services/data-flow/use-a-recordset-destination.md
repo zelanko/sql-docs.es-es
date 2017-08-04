@@ -1,25 +1,30 @@
 ---
-title: "Usar un destino de conjunto de registros | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "destino de conjunto de registros"
+title: Usar un destino de conjunto de registros | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e2423a1d19122a3eb13bd69c4bce495c96d81ff
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Usar un destino de conjunto de registros
-  El destino de conjunto de registros no guarda los datos en un origen de datos externo. En su lugar, el destino de conjunto de registros guarda los datos en memoria, en un conjunto de registros que se almacena en una variable de paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] del tipo de datos **Objeto**. Una vez que el destino de conjunto de registros guarda los datos, normalmente se utiliza un contenedor de bucles Foreach con el enumerador de ADO para Foreach para procesar una fila del conjunto de registros cada vez. El enumerador de ADO para Foreach guarda el valor de cada columna de la fila actual en una variable de paquete independiente. A continuación, las tareas que se configuran en el contenedor de bucles Foreach leen esos valores de las variables y realizan alguna acción con ellos.  
+# <a name="use-a-recordset-destination"></a>Usar un destino de conjunto de registros
+  El destino de conjunto de registros no guarda los datos en un origen de datos externo. En su lugar, el destino de conjunto de registros guarda los datos en memoria, en un conjunto de registros que se almacena en una variable de paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] del tipo de datos **Objeto** . Una vez que el destino de conjunto de registros guarda los datos, normalmente se utiliza un contenedor de bucles Foreach con el enumerador de ADO para Foreach para procesar una fila del conjunto de registros cada vez. El enumerador de ADO para Foreach guarda el valor de cada columna de la fila actual en una variable de paquete independiente. A continuación, las tareas que se configuran en el contenedor de bucles Foreach leen esos valores de las variables y realizan alguna acción con ellos.  
   
  Puede utilizar el destino de conjunto de registros en muchos escenarios diferentes. A continuación se muestran algunos ejemplos:  
   
@@ -29,10 +34,10 @@ caps.handback.revision: 11
   
  En las secciones siguientes se describe en primer lugar el proceso general de uso del destino de conjunto de registros y, a continuación, se muestra un ejemplo concreto acerca de cómo se utiliza el destino.  
   
-## Pasos generales para utilizar un destino de conjunto de registros  
+## <a name="general-steps-to-using-a-recordset-destination"></a>Pasos generales para utilizar un destino de conjunto de registros  
  El procedimiento siguiente resume los pasos que son necesarios para guardar los datos en un destino de conjunto de registros y utilizar, a continuación, el contenedor de bucles Foreach para procesar cada fila.  
   
-#### Para guardar los datos en un destino de conjunto de registros y procesar cada fila utilizando el contenedor de bucles Foreach  
+#### <a name="to-save-data-to-a-recordset-destination-and-process-each-row-by-using-the-foreach-loop-container"></a>Para guardar los datos en un destino de conjunto de registros y procesar cada fila utilizando el contenedor de bucles Foreach  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], cree o abra un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -50,16 +55,16 @@ caps.handback.revision: 11
   
     1.  En la página **Colección** , seleccione el enumerador ADO para Foreach. A continuación, en **Variable de origen de objeto ADO**, seleccione la variable que contiene el conjunto de registros.  
   
-    2.  En la página **Asignaciones de variables**, asigne el índice de base cero de cada columna que quiera usar a la variable adecuada.  
+    2.  En la página **Asignaciones de variables** , asigne el índice de base cero de cada columna que quiera usar a la variable adecuada.  
   
          En cada iteración del bucle, el enumerador rellena estas variables con los valores de columna de la fila actual.  
   
 8.  Dentro del contenedor de bucles Foreach, agregue y configure las tareas que va a utilizar para procesar una fila del conjunto cada vez al leer los valores de las variables.  
   
-## Ejemplo de uso del destino de conjunto de registros  
+## <a name="example-of-using-the-recordset-destination"></a>Ejemplo de uso del destino de conjunto de registros  
  En el ejemplo siguiente, la tarea Flujo de datos carga información sobre los empleados de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] de la tabla Sales.SalesPerson en un destino de conjunto de registros. A continuación, un contenedor de bucles Foreach lee una fila de datos cada vez y llama a la tarea Enviar correo. La tarea Enviar correo utiliza expresiones para enviar un mensaje de correo electrónico personalizado a cada vendedor sobre el importe de su paga extraordinaria.  
   
-#### Para crear el proyecto y configurar las variables  
+#### <a name="to-create-the-project-and-configure-the-variables"></a>Para crear el proyecto y configurar las variables  
   
 1.  En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], cree un nuevo proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -83,7 +88,7 @@ caps.handback.revision: 11
   
          La variable **Bonus** contiene el importe de la bonificación del vendedor.  
   
-#### Para configurar los administradores de conexión  
+#### <a name="to-configure-the-connection-managers"></a>Para configurar los administradores de conexión  
   
 1.  En el área de Administradores de conexiones del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , agregue y configure un nuevo administrador de conexiones OLE DB que se conecte a la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
@@ -93,7 +98,7 @@ caps.handback.revision: 11
   
      La tarea Enviar correo incluida en el contenedor de bucles Foreach utilizará este administrador de conexiones para enviar correos electrónicos.  
   
-#### Para configurar el flujo de datos y el destino de conjunto de registros  
+#### <a name="to-configure-the-data-flow-and-the-recordset-destination"></a>Para configurar el flujo de datos y el destino de conjunto de registros  
   
 1.  En la pestaña **Flujo de control** del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , agregue una tarea Flujo de datos a la superficie de diseño.  
   
@@ -124,7 +129,7 @@ caps.handback.revision: 11
   
     2.  En la pestaña **Columnas de entrada** , seleccione las tres columnas disponibles.  
   
-#### Para configurar el contenedor de bucles Foreach y ejecutar el paquete  
+#### <a name="to-configure-the-foreach-loop-container-and-run-the-package"></a>Para configurar el contenedor de bucles Foreach y ejecutar el paquete  
   
 1.  En la pestaña **Flujo de control** del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , agregue un contenedor de bucles Foreach y conecte el contenedor después de la tarea Flujo de datos.  
   

@@ -1,25 +1,30 @@
 ---
-title: "Seguridad de reproducci&#243;n distribuida | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Seguridad de reproducción distribuida | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 71e00ff0a5ea435715c5895fa2ec212ad5a8f056
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Seguridad de reproducci&#243;n distribuida
+# <a name="distributed-replay-security"></a>Seguridad de reproducción distribuida
   Antes de instalar y usar la característica [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, debe revisar la importante información de seguridad en este tema. Aquí se describen los pasos para la configuración de seguridad posteriores a la instalación, necesarios para poder utilizar Distributed Replay. En este tema también se describen consideraciones importantes relacionadas con la protección de datos y pasos importantes de eliminación.  
   
-## Cuentas de usuario y de servicio  
+## <a name="user-and-service-accounts"></a>Cuentas de usuario y de servicio  
  En la tabla siguiente se describen las cuentas que se utilizan para Distributed Replay. Después de la instalación de Distributed Replay, debe asignar las entidades de seguridad que se ejecutarán como cuentas de servicio del controlador y del cliente. Por tanto, se recomienda configurar las cuentas de usuario de dominio correspondientes antes de instalar las características de Distributed Replay.  
   
 |Cuenta de usuario|Requisitos|  
@@ -50,21 +55,21 @@ caps.handback.revision: 29
   
     -   Haga clic en **Inicio**, haga clic en **Ejecutar**, escriba **services.msc**y, a continuación, presione ENTRAR.  
   
-2.  En el cuadro de diálogo **Servicios**, haga clic con el botón derecho en el servicio que quiera configurar y, después, haga clic en **Propiedades**.  
+2.  En el cuadro de diálogo **Servicios** , haga clic con el botón derecho en el servicio que quiera configurar y, después, haga clic en **Propiedades**.  
   
 3.  En la pestaña **Iniciar sesión** , haga clic en **Esta cuenta**.  
   
 4.  Configure la cuenta de usuario que desea utilizar.  
   
-## Permisos de carpetas y archivos  
+## <a name="file-and-folder-permissions"></a>Permisos de carpetas y archivos  
  Después de que se hayan especificado las cuentas de servicio, debe conceder los permisos de carpetas y archivos necesarios para esas cuentas de servicio. Configure los permisos de carpetas y archivos según la tabla siguiente:  
   
 |Cuenta|Permisos de carpeta|  
 |-------------|------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|`<Controller_Installation_Path>\DReplayController` (lectura, escritura, eliminación)<br /><br /> `DReplayServer.xml` archivo (lectura, escritura)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|`<Client_Installation_Path>\DReplayClient` (lectura, escritura, eliminación)<br /><br /> `DReplayClient.xml` archivo (lectura, escritura)<br /><br /> Los directorios de trabajo y resultado, como se especifica en el archivo de configuración del cliente mediante los elementos `WorkingDirectory` y `ResultDirectory`, respectivamente. (Lectura, escritura)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|`<Client_Installation_Path>\DReplayClient` (lectura, escritura, eliminación)<br /><br /> `DReplayClient.xml` archivo (lectura, escritura)<br /><br /> Los directorios de trabajo y resultado, como se especifica en el archivo de configuración del cliente mediante los elementos `WorkingDirectory` y `ResultDirectory` , respectivamente. (Lectura, escritura)|  
   
-## Permisos DCOM  
+## <a name="dcom-permissions"></a>Permisos DCOM  
  DCOM se usa para la comunicación de llamada a procedimiento remoto (RPC) entre el controlador y la herramienta de administración, y entre el controlador y todos los clientes. Cuando se hayan instalado las características de Distributed Replay, debe configurar los permisos DCOM específicos de la aplicación y de todos los equipos del controlador.  
   
  Para configurar los permisos DCOM del controlador, siga estos pasos.  
@@ -91,12 +96,12 @@ caps.handback.revision: 29
 > [!IMPORTANT]  
 >  Para protegerse frente a consultas malintencionadas o ataques de denegación de servicio, asegúrese de que utiliza solo un usuario de confianza para la cuenta de servicio del cliente. Esta cuenta podrá conectarse y reproducir cargas de trabajo en la instancia de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## Permisos de SQL Server  
+## <a name="sql-server-permissions"></a>Permisos de SQL Server  
  Las cuentas del servicio de cliente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay se usan para conectarse a la instancia de destino de la carga de trabajo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Solo se admite el modo de autenticación de Windows para estas conexiones.  
   
- Después de instalar el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client en un conjunto de equipos, se debe conceder al rol de servidor sysadmin en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la entidad de seguridad que se ha usado para las cuentas de servicio en las que se quiere reproducir la carga de trabajo de seguimiento. Este paso no se realiza automáticamente durante la instalación de Distributed Replay.  
+ Después de instalar el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client en un conjunto de equipos, se debe conceder al rol de servidor sysadmin en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la entidad de seguridad que se ha usado para las cuentas de servicio en las que se quiere reproducir la carga de trabajo de seguimiento. Este paso no se realiza automáticamente durante la instalación de Distributed Replay.  
   
-## Protección de datos  
+## <a name="data-protection"></a>Protección de datos  
  En el entorno de Distributed Replay, las cuentas de usuario siguientes tienen acceso completo a la instancia del servidor de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a la información de seguimiento de entrada y a los archivos de seguimiento de resultados:  
   
 -   La cuenta de usuario interactivo que se usa para ejecutar la herramienta de administración.  
@@ -114,21 +119,21 @@ caps.handback.revision: 29
   
  Recomendamos que realice las siguientes precauciones de seguridad:  
   
--   Almacene la información de seguimiento de entrada, resultados de seguimiento de salida y los archivos de base de datos en una ubicación que use el sistema de archivos NTFS, y aplique las listas de control de acceso (ACL) adecuadas. Si es necesario, cifre los datos almacenados en el equipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tenga en cuenta que las listas ACL no se aplican a los archivos de seguimiento y que no hay ningún tipo de enmascaramiento de datos ni ofuscación. Debe eliminar estos archivos rápidamente después de su uso.  
+-   Almacene la información de seguimiento de entrada, resultados de seguimiento de salida y los archivos de base de datos en una ubicación que use el sistema de archivos NTFS, y aplique las listas de control de acceso (ACL) adecuadas. Si es necesario, cifre los datos almacenados en el equipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Tenga en cuenta que las listas ACL no se aplican a los archivos de seguimiento y que no hay ningún tipo de enmascaramiento de datos ni ofuscación. Debe eliminar estos archivos rápidamente después de su uso.  
   
 -   Aplique las listas ACL y la directiva de retención correspondientes a todos los archivos intermedios y de distribución generados por Distributed Replay.  
   
 -   Use Capa de sockets seguros (SSL) para proteger el transporte de red.  
   
-## Pasos importantes de eliminación  
+## <a name="important-removal-steps"></a>Pasos importantes de eliminación  
  Se recomienda usar solo Distributed Replay en un entorno de prueba. Una vez que haya completado la comprobación, y antes de que prepare los equipos para otra tarea, asegúrese de realizar lo siguiente:  
   
 -   Desinstale las características de Distributed Replay y quite archivos de configuración relacionados del controlador y todos los clientes.  
   
 -   Elimine cualquier archivo de seguimiento, intermedio, de distribución y de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se haya utilizado para realizar pruebas. Los archivos intermedios y de distribución se almacenan en el directorio de trabajo del controlador y el cliente, respectivamente.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Install Distributed Replay - Overview](../../tools/distributed-replay/install-distributed-replay-overview.md)  
+ [Install Distributed Replay - Overview (Instalar Distributed Replay: información general)](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
   

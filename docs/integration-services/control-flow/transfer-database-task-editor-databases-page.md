@@ -1,34 +1,39 @@
 ---
-title: "Editor de la tarea Transferir bases de datos (p&#225;gina Bases de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.transferdatabasetask.database.f1"
-helpviewer_keywords: 
-  - "Transferir bases de datos, editor de la tarea"
+title: "Transferir el Editor de la tarea de base de datos (página de bases de datos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.transferdatabasetask.database.f1
+helpviewer_keywords:
+- Transfer Database Task Editor
 ms.assetid: ccdb74d0-4bea-420c-a726-2e0eb8957e0a
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b104103ab5fdde0084cfcadcc82897d71d9a5c11
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de la tarea Transferir bases de datos (p&#225;gina Bases de datos)
+# <a name="transfer-database-task-editor-databases-page"></a>Editor de la tarea Transferir bases de datos (página Bases de datos)
   Utilice la página **Bases de datos** del cuadro de diálogo **Editor de la tarea Transferir bases de datos** para especificar propiedades para las bases de datos de origen y destino implicadas en la tarea Transferir bases de datos. La tarea Transferir bases de datos copia o mueve una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre dos instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta tarea también puede utilizarse para copiar una base de datos en el mismo servidor. Para obtener más información sobre esta tarea, vea [Tarea Transferir bases de datos](../../integration-services/control-flow/transfer-database-task.md).  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **SourceConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en **\<Nueva conexión…>** para crear una conexión al servidor de origen.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en  **\<nueva conexión... >** para crear una nueva conexión con el servidor de origen.  
   
  **DestinationConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en **\<Nueva conexión…>** para crear una conexión al servidor de destino.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en  **\<nueva conexión... >** para crear una nueva conexión con el servidor de destino.  
   
  **DestinationDatabaseName**  
  Especifique el nombre de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el servidor de destino.  
@@ -86,11 +91,11 @@ caps.handback.revision: 26
 |**True**|Volver a adjuntar la base de datos de origen.|  
 |**False**|No volver a adjuntar la base de datos de origen.|  
   
-## Vea también  
- [Referencia de errores y mensajes de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>Vea también  
+ [Referencia de mensajes y Error de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
- [Editor de la tarea Transferir bases de datos &#40;página General&#41;](../../integration-services/control-flow/transfer-database-task-editor-general-page.md)   
- [Página Expresiones](../../integration-services/expressions/expressions-page.md)   
- [Administrador de conexiones SMO](../../integration-services/connection-manager/smo-connection-manager.md)  
+ [Editor de la tarea de transferencia de base de datos &#40; Página general &#41;](../../integration-services/control-flow/transfer-database-task-editor-general-page.md)   
+ [Página expresiones](../../integration-services/expressions/expressions-page.md)   
+ [Administrador de conexiones SMO.](../../integration-services/connection-manager/smo-connection-manager.md)  
   
   

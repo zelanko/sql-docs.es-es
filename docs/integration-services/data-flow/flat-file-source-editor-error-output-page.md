@@ -1,31 +1,36 @@
 ---
-title: "Editor de origen de archivos planos (p&#225;gina Salida de error) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.flatfilesourceadapter.errorhandling.f1"
-helpviewer_keywords: 
-  - "origen de archivos planos, editor de"
+title: "Editor de origen de archivo (página de salida de Error) planos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.flatfilesourceadapter.errorhandling.f1
+helpviewer_keywords:
+- Flat File Source Editor
 ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 34968aa784466a3a06a6ee3d1ded58fbc7d429a2
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de origen de archivos planos (p&#225;gina Salida de error)
+# <a name="flat-file-source-editor-error-output-page"></a>Editor de origen de archivos planos (página Salida de error)
   Use la página **Salida de error** del cuadro de diálogo **Editor de origen de archivos planos** para seleccionar opciones de control de errores y establecer las propiedades en las columnas de salida de error.  
   
  Para obtener más información acerca del origen de archivo plano, vea [Flat File Source](../../integration-services/data-flow/flat-file-source.md).  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Entrada/salida**  
  Muestra el nombre del origen de datos.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 26
  **Error**  
  Permite especificar qué debe ocurrir cuando se produce un error: omitir el error, redirigir la fila o hacer que el componente no funcione.  
   
- **Temas relacionados:** [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).  
+ **Temas relacionados:** [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **Truncamiento**  
  Permite especificar qué debe ocurrir cuando se produce un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  
@@ -49,10 +54,10 @@ caps.handback.revision: 26
  **Aplicar**  
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
-## Vea también  
- [Referencia de errores y mensajes de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor de origen de archivos planos &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/flat-file-source-editor-connection-manager-page.md)   
- [Editor de origen de archivos planos &#40;página Columnas&#41;](../../integration-services/data-flow/flat-file-source-editor-columns-page.md)   
- [Administrador de conexiones de archivos planos](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+## <a name="see-also"></a>Vea también  
+ [Referencia de mensajes y Error de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de origen de archivos planos &#40; Página Administrador de conexiones &#41;](../../integration-services/data-flow/flat-file-source-editor-connection-manager-page.md)   
+ [Editor de origen de archivos planos &#40; Página columnas &#41;](../../integration-services/data-flow/flat-file-source-editor-columns-page.md)   
+ [Administrador de conexión de archivos planos](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
   

@@ -1,28 +1,33 @@
 ---
-title: "Requisitos de Distributed Replay | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Distributed Replay Requirements | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: a014a2de0f3f8540845eb703910890458bc99eca
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Requisitos de Distributed Replay
+# <a name="distributed-replay-requirements"></a>Requisitos de Distributed Replay
   Antes de utilizar la característica Distributed Replay de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tenga en cuenta los requisitos de productos que se describen en este tema.  
   
-## Requisitos del seguimiento de entrada  
+## <a name="input-trace-requirements"></a>Requisitos del seguimiento de entrada  
  Para reproducir correctamente los datos de seguimiento, deben cumplir los requisitos de versión y el formato, y contener las columnas y eventos necesarios.  
   
-### Versiones de seguimiento de entrada  
+### <a name="input-trace-versions"></a>Versiones de seguimiento de entrada  
  Distributed Replay admite los datos de seguimiento de entrada que se recopilan en las siguientes versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
@@ -37,14 +42,14 @@ caps.handback.revision: 36
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
-### Formatos de seguimiento de entrada  
+### <a name="input-trace-formats"></a>Formatos de seguimiento de entrada  
  Los datos de seguimiento de entrada pueden estar en cualquiera de los siguientes formatos:  
   
 -   Un archivo de seguimiento con la extensión `.trc` .  
   
 -   Un conjunto de archivos de seguimiento de sustitución que cumplen la convención de nomenclatura de sustitución incremental de archivos, por ejemplo: `<TraceFile>.trc`, `<TraceFile>_1.trc`, `<TraceFile>_2.trc`, `<TraceFile>_3.trc`… `<TraceFile>_n.trc`.  
   
-### Columnas y eventos de seguimiento de entrada  
+### <a name="input-trace-events-and-columns"></a>Columnas y eventos de seguimiento de entrada  
  Los datos de seguimiento de entrada deben contener columnas y eventos específicos que se reproduzcan mediante Distributed Replay. La plantilla **TSQL_Replay** de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] contiene todas las columnas y eventos necesarios, además de información adicional. Para obtener más información acerca de esa plantilla, vea [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md).  
   
 > [!WARNING]  
@@ -114,7 +119,7 @@ caps.handback.revision: 36
   
 -   IsSystem  
   
-## Combinaciones admitidas de servidor de destino y seguimiento de entrada  
+## <a name="supported-input-trace-and-target-server-combinations"></a>Combinaciones admitidas de servidor de destino y seguimiento de entrada  
  En la tabla siguiente se enumeran las versiones admitidas de los datos de seguimiento y, para cada una, las versiones admitidas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en las que los datos se pueden reproducir.  
   
 |Versión de los datos de seguimiento de entrada|Versiones admitidas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la instancia del servidor de destino|  
@@ -126,12 +131,12 @@ caps.handback.revision: 36
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|  
   
-## Requisitos de sistema operativo  
- Los sistemas operativos admitidos para ejecutar la herramienta de administración y los servicios del controlador y el cliente son los mismos que para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre qué sistemas operativos son compatibles con la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md).  
+## <a name="operating-system-requirements"></a>Requisitos de sistema operativo  
+ Los sistemas operativos admitidos para ejecutar la herramienta de administración y los servicios del controlador y el cliente son los mismos que para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre qué sistemas operativos son compatibles con la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
  Las características de Distributed Replay se admiten en sistemas operativos basados en x86 y en x64. Para los sistemas operativos basados en x64, solo se admite el modo Windows sobre Windows (WOW).  
   
-## Limitaciones de la instalación  
+## <a name="installation-limitations"></a>Limitaciones de la instalación  
  Un equipo solo puede tener instalada una única instancia de cada característica Distributed Replay. La siguiente tabla muestra cuántas instalaciones de cada característica se permiten en un único entorno de Distributed Replay.  
   
 |Característica Distributed Replay|Instalaciones máximas por cada entorno de reproducción|  
@@ -143,10 +148,10 @@ caps.handback.revision: 36
 > [!NOTE]  
 >  Aunque solo se puede instalar una instancia de la herramienta de administración en un solo equipo, puede iniciar varias instancias de la herramienta de administración. Los comandos emitidos desde varias herramientas de administración se resuelven en el mismo orden en el que se reciben.  
   
-## Proveedor de acceso a datos  
+## <a name="data-access-provider"></a>Proveedor de acceso a datos  
  Distributed Replay solamente admite el proveedor de acceso a datos ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
-## Requisitos de preparación del servidor de destino  
+## <a name="target-server-preparation-requirements"></a>Requisitos de preparación del servidor de destino  
  Se recomienda que el servidor de destino se encuentre en un entorno de prueba. Para reproducir los datos de seguimiento en otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferente a donde se registró originalmente, asegúrese de que se ha realizado lo siguiente en el servidor de destino:  
   
 -   Todos los inicios de sesión y los usuarios que se encuentran en los datos de seguimiento deben estar presentes en la misma base de datos del servidor de destino.  
@@ -155,13 +160,13 @@ caps.handback.revision: 36
   
 -   Los Id. de base de datos del destino deben ser los mismos que los del origen. Sin embargo, si no son los mismos, se puede realizar la coincidencia basándose en **DatabaseName** , si está presente en el seguimiento.  
   
--   La base de datos predeterminada de cada inicio de sesión contenido en los datos de seguimiento debe establecerse (en el servidor de destino) en la base de datos de destino respectiva del inicio de sesión. Por ejemplo, los datos de seguimiento que se van a reproducir contienen la actividad del inicio de sesión, **Fred**, en la base de datos **Fred_Db** de la instancia original de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por tanto, en el servidor de destino, la base de datos predeterminada del inicio de sesión, **Fred**, debe establecerse en la base de datos que coincida con **Fred_Db** (aunque el nombre de la base de datos sea diferente). Para establecer la base de datos predeterminada del inicio de sesión, utilice el procedimiento almacenado del sistema `sp_defaultdb`.  
+-   La base de datos predeterminada de cada inicio de sesión contenido en los datos de seguimiento debe establecerse (en el servidor de destino) en la base de datos de destino respectiva del inicio de sesión. Por ejemplo, los datos de seguimiento que se van a reproducir contienen la actividad del inicio de sesión, **Fred**, en la base de datos **Fred_Db** de la instancia original de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por tanto, en el servidor de destino, la base de datos predeterminada del inicio de sesión, **Fred**, debe establecerse en la base de datos que coincida con **Fred_Db** (aunque el nombre de la base de datos sea diferente). Para establecer la base de datos predeterminada del inicio de sesión, utilice el procedimiento almacenado del sistema `sp_defaultdb` .  
   
  La reproducción de eventos asociados a inicios de sesión que faltan o que son incorrectos tendrá como resultado errores de reproducción, pero la operación de reproducción continuará.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Seguridad de reproducción distribuida](../../tools/distributed-replay/distributed-replay-security.md)   
- [Install Distributed Replay - Overview](../../tools/distributed-replay/install-distributed-replay-overview.md)  
+ [Install Distributed Replay - Overview (Instalar Distributed Replay: información general)](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
   

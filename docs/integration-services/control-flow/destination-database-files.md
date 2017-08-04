@@ -1,29 +1,34 @@
 ---
-title: "Archivos de la base de datos de destino | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.transferdatabasetask.destdbfiles.f1"
+title: Archivos de base de datos de destino | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.transferdatabasetask.destdbfiles.f1
 ms.assetid: f6f90417-86fb-4b8c-a790-0b215c344ef6
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 592000ef801a0845468d37a12a5e1515f590848a
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Archivos de la base de datos de destino
+# <a name="destination-database-files"></a>Archivos de la base de datos de destino
   Utilice el cuadro de diálogo **Archivos de la base de datos de destino** para ver o cambiar las ubicaciones y los nombres de archivos de la base de datos en el servidor de destino o para especificar una ubicación de archivo de red para la tarea Transferir bases de datos. Para más información sobre esta tarea, vea [Tarea Transferir bases de datos](../../integration-services/control-flow/transfer-database-task.md).  
   
  Para rellenar automáticamente este cuadro de diálogo con las ubicaciones y los nombres de archivos de la base de datos en el servidor de origen, especifique primero **SourceConnection**, **SourceDatabaseName**y **SourceDatabaseFiles** en la página **Bases de datos** del cuadro de diálogo **Editor de la tarea Transferir bases de datos** .  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Archivo de destino**  
  Nombres de los archivos de base de datos transferidos en el servidor de destino.  
   
@@ -41,9 +46,9 @@ caps.handback.revision: 16
   
  Cuando transfiera una base de datos en el modo sin conexión, los archivos se copian en la ubicación **Recurso compartido de archivos de red** antes de transferirlos a la ubicación **Carpeta de destino** .  
   
-## Vea también  
- [Referencia de errores y mensajes de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor de la tarea Transferir bases de datos &#40;página General&#41;](../../integration-services/control-flow/transfer-database-task-editor-general-page.md)   
- [Editor de la tarea Transferir bases de datos &#40;página Bases de datos&#41;](../../integration-services/control-flow/transfer-database-task-editor-databases-page.md)  
+## <a name="see-also"></a>Vea también  
+ [Referencia de mensajes y Error de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de la tarea de transferencia de base de datos &#40; Página general &#41;](../../integration-services/control-flow/transfer-database-task-editor-general-page.md)   
+ [Editor de la tarea de transferencia de base de datos &#40; página bases de datos &#41;](../../integration-services/control-flow/transfer-database-task-editor-databases-page.md)  
   
   

@@ -1,36 +1,41 @@
 ---
-title: "Tutorial: Publicar un paquete SSIS como una vista SQL | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.packagepublishwizard.f1"
+title: 'Tutorial: Publicar un paquete SSIS como una vista SQL | Documentos de Microsoft'
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fe3ec4ebb7b62bd1bee9e6ba43c630bc17460dbb
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Tutorial: Publicar un paquete SSIS como una vista SQL
+# <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Tutorial: Publicar un paquete SSIS como una vista SQL
   En este tutorial se explica detalladamente cómo publicar un paquete SSIS como una vista SQL en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Requisitos previos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este tutorial, debe tener instalado el siguiente software en el equipo:  
   
 1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o posterior con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 2.  [SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx).  
   
-## Paso 1: Compilar e implementar un proyecto de SSIS en el catálogo de SSIS  
- En este paso, creará un paquete SSIS que extrae datos de un origen de datos compatible con SSIS (en este ejemplo, usaremos una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) y genera datos de salida con un componente de Destino de streaming de datos. Luego, compilará e implementará el proyecto de SSIS en el catálogo de SSIS.  
+## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Paso 1: Compilar e implementar un proyecto de SSIS en el catálogo de SSIS  
+ En este paso, creará un paquete SSIS que extrae datos de un origen de datos compatible con SSIS (en este ejemplo, usaremos una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) y genera datos de salida con un componente de Destino de streaming de datos. Luego, compilará e implementará el proyecto de SSIS en el catálogo de SSIS.  
   
 1.  Inicie **SQL Server Data Tools**. En el menú **Inicio** , elija **Todos los programas**, **Microsoft SQL Server**y, a continuación, haga clic en **SQL Server Data Tools**.  
   
@@ -67,9 +72,9 @@ caps.handback.revision: 12
   
     4.  Arrastre el componente **Origen de OLE DB** desde el **cuadro de herramientas de SSIS** hasta el **diseñador de flujos de datos**.  
   
-    5.  Configure el componente para que extraiga datos de la tabla **Employee** de la base de datos **TestDB** . Seleccione **(local).TestDB** en **Administrador de conexiones OLE DB**, **Tabla o vista** en **Modo de acceso a datos** y **[dbo].[Employee]** en **Nombre de la tabla o la vista**.  
+    5.  Configure el componente para que extraiga datos de la tabla **Employee** de la base de datos **TestDB** . Seleccione **(local).TestDB** en **Administrador de conexiones OLE DB**, **Tabla o vista** en **Modo de acceso a datos**y **[dbo].[Employee]** en **Nombre de la tabla o la vista**.  
   
-         ![Data Streaming Destination - OLE DB Connection](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "Data Streaming Destination - OLE DB Connection")  
+         ![Datos de transmisión por secuencias Destination - conexión OLE DB](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "datos Streaming Destination - conexión OLE DB")  
   
 6.  Ahora, arrastre el **Destino de streaming de datos** desde el cuadro de herramientas al flujo de datos. Este componente debería estar en la sección Común del cuadro de herramientas.  
   
@@ -81,28 +86,28 @@ caps.handback.revision: 12
   
     2.  Siga las instrucciones del asistente para implementar el proyecto en el catálogo de SSIS en el servidor de base de datos local. En el siguiente ejemplo, se usa **Power BI** como nombre de carpeta y **SSISPackagePublishing** como nombre del proyecto en el catálogo de SSIS.  
   
-## Paso 2: Usar el asistente para la publicación de fuentes de distribución de datos de SSIS para publicar el paquete SSIS como una vista SQL  
+## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>Paso 2: Usar el asistente para la publicación de fuentes de distribución de datos de SSIS para publicar el paquete SSIS como una vista SQL  
  En este paso, usará el asistente para la publicación de fuentes de distribución de datos de SQL Server Integration Services (SSIS ) para publicar el paquete SSIS como una vista en la base de datos de SQL Server. Los datos de salida del paquete se podrán usar realizando una consulta en esta vista.  
   
  El asistente para la publicación de fuentes de distribución de datos de SSIS crea un servidor vinculado mediante el proveedor OLE DB para SSIS (SSISOLEDB) y, tras ello, crea una vista SQL que consta de una consulta en el servidor vinculado. Esta consulta incluye el nombre de la carpeta, el nombre del proyecto y el nombre del paquete en el catálogo de SSIS.  
   
  En el tiempo de ejecución, la vista envía la consulta al proveedor OLE DB para SSIS a través del servidor vinculado creado. El proveedor OLE DB para SSIS ejecuta el paquete especificado en la consulta y devuelve el conjunto de resultados tabulares a la consulta.  
   
-1.  Para iniciar el **Asistente para la publicación de fuentes de distribución de datos de SSIS**, ejecute ISDataFeedPublishingWizard.exe desde C:\Archivos de programa\Microsoft SQL Server\130\DTS\Binn o haga clic en Microsoft SQL Server 2016\SQL Server 2016 Data Feed Publishing Wizard en Inicio\Todos los programas.  
+1.  Para iniciar el **Asistente para la publicación de fuentes de distribución de datos de SSIS** , ejecute ISDataFeedPublishingWizard.exe desde C:\Archivos de programa\Microsoft SQL Server\130\DTS\Binn o haga clic en Microsoft SQL Server 2016\SQL Server 2016 Data Feed Publishing Wizard en Inicio\Todos los programas.  
   
 2.  Haga clic en **Siguiente** en la página **Introducción** .  
   
-     ![Data Feed Publishing Wizard - Introduction Page](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "Data Feed Publishing Wizard - Introduction Page")  
+     ![Fuente de datos de publicación Asistente - página Introducción](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "Asistente - página de introducción de publicación de fuentes de datos")  
   
 3.  En la página **Configuración del paquete** , haga lo siguiente:  
   
     1.  Escriba el **nombre** de la instancia de SQL Server que contiene el catálogo de SSIS o haga clic en **Examinar** para seleccionar el servidor.  
   
-         ![Data Feed Publishing Wizard - Package Settings Pag](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Data Feed Publishing Wizard - Package Settings Pag")  
+         ![Fuente de datos de publicación Asistente - página Configuración del paquete](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Asistente - página Configuración del paquete de publicación de fuentes de datos")  
   
     2.  Haga clic en **Examinar** en el campo Ruta de acceso, vaya al catálogo de SSIS, seleccione el paquete SSIS que quiera publicar (por ejemplo, **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**) y haga clic en **Aceptar**.  
   
-         ![Data Feed Publishing Wizard - Browse for Package](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Data Feed Publishing Wizard - Browse for Package")  
+         ![Fuente de datos de publicación Asistente - buscar paquete](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Asistente - buscar paquete de publicación de fuentes de datos")  
   
     3.  En las pestañas Parámetros de paquete, Parámetros de proyecto y Administradores de conexiones al final de la página, escriba los valores de configuración de los parámetros de paquete, los parámetros de proyecto o los administradores de conexiones relativos al paquete. También puede indicar que se use un entorno de referencia para ejecutar el paquete y enlazar los parámetros de paquete y de proyecto a variables de entorno.  
   
@@ -114,7 +119,7 @@ caps.handback.revision: 12
   
     1.  Seleccione la **base de datos** relativa a la vista que se va a crear.  
   
-         ![Data Feed Publishing Wizard - Publish Settings Pag](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "Data Feed Publishing Wizard - Publish Settings Pag")  
+         ![Datos Asistente para publicación de fuentes de distribución - página Configuración de publicación](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "fuente de datos de publicación Asistente - página Configuración de publicación")  
   
     2.  Escriba un **nombre** para la **vista**. También puede seleccionar una vista existente de la lista desplegable.  
   
@@ -122,13 +127,13 @@ caps.handback.revision: 12
   
     4.  Haga clic en el botón **Avanzadas** . Debería abrirse el cuadro de diálogo **Configuración avanzada** .  
   
-    5.  Haga lo siguiente en ** ** este cuadro de diálogo:  
+    5.  Haga lo siguiente en ****  este cuadro de diálogo:  
   
         1.  Especifique el esquema de base de datos en el que quiere crear la vista (campo Esquema).  
   
         2.  Especifique si los datos se van a cifrar antes de enviarlos a través de la red (campo Cifrar). Consulte el tema [Usar el cifrado sin validación](http://msdn.microsoft.com/library/ms131691.aspx) para ver más detalles sobre esta configuración y la configuración de TrustServerCertificate.  
   
-        3.  Especifique si se puede usar un certificado de servidor autofirmado cuando la opción de cifrado esté habilitada (campo **TrustServerCertificate**).  
+        3.  Especifique si se puede usar un certificado de servidor autofirmado cuando la opción de cifrado esté habilitada (campo**TrustServerCertificate** ).  
   
         4.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Configuración avanzada** .  
   
@@ -136,7 +141,7 @@ caps.handback.revision: 12
   
 5.  En la página **Validación** , revise los resultados correspondientes a la validación de los valores de todas las configuraciones. En el siguiente ejemplo, se abre una **advertencia** sobre la existencia de un servidor vinculado, ya que no hay un servidor vinculado en la instancia de SQL Server seleccionada. Si ve **Error** en **Resultado**, mantenga el puntero sobre **Error** para ver más detalles al respecto. Por ejemplo, si no se habilitó la opción Permitir InProcess del proveedor SSISOLEDB, obtendrá un error en la acción de configuración del servidor vinculado.  
   
-     ![Data Feed Publishing Wizard - Validation Page](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "Data Feed Publishing Wizard - Validation Page")  
+     ![Fuente de datos de publicación Asistente - página validación](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "Asistente - página validación de publicación de fuentes de datos")  
   
 6.  Haga clic en Guardar informe para guardar el informe como un archivo XML.  
   
@@ -144,7 +149,7 @@ caps.handback.revision: 12
   
 8.  Revise la selección en la página **Resumen** y haga clic en **Publicar** para iniciar el proceso de publicación, en el que se creará el servidor vinculado (si aún no existe en el servidor) con el que, luego, se creará la vista.  
   
-     ![Data Feed Publishing Wizard - Summary Page](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "Data Feed Publishing Wizard - Summary Page")  
+     ![Asistente para la página Resumen de publicación de fuentes de datos](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "Asistente - página de resumen de publicación de fuentes de datos")  
   
      Ahora los datos de salida del paquete se pueden consultar ejecutando la siguiente instrucción SQL en la base de datos TestDB: SELECT * FROM [SSISPackageView].  
   
@@ -155,30 +160,30 @@ caps.handback.revision: 12
     > [!NOTE]  
     >  No se admiten los siguientes tipos de datos: text, ntext, image, nvarchar(max), varchar(max) ni varbinary(max).  
   
-## Paso 3: Probar la vista SQL  
+## <a name="step-3-test-the-sql-view"></a>Paso 3: Probar la vista SQL  
  Aquí ejecutará la vista SQL creada en el asistente para la publicación anterior.  
   
 1.  Inicie SQL Server Management Studio.  
   
-2.  Expanda \<**nombre del equipo**>, **Bases de datos**, \<**base de datos seleccionada en el asistente**> y **Vistas**.  
+2.  Expanda \< **nombre de la máquina**>, **bases de datos**, \< **base de datos seleccionada en el Asistente para**>, y **vistas**.  
   
-3.  Haga clic con el botón derecho en \<**vista creada por el asistente**> y haga clic en **Select top 1000 rows** (Seleccionar las 1000 primeras filas).  
+3.  Haga clic en el \< **vista creada por el Asistente para**> creados por el asistente y haga clic en **seleccionar las primeras 1000 filas**.  
   
 4.  Confirme que ve los resultados del paquete SSIS.  
   
-## Paso 4: Comprobar la ejecución del paquete SSIS  
+## <a name="step-4-verify-the-ssis-package-execution"></a>Paso 4: Comprobar la ejecución del paquete SSIS  
  En este paso comprobará que el paquete SSIS se ha ejecutado.  
   
 1.  En SQL Server Management Studio, expanda **Catálogos de Integration Services**, **SSISDB**y la **carpeta** en la que está el proyecto de SSIS. Después, expanda **Proyectos**, luego el nodo del proyecto y, por último, **Paquetes**.  
   
-2.  Haga clic con el botón derecho en el paquete SSIS, seleccione **Informes** e **Informes estándar** y, después, haga clic en **Todas las ejecuciones**.  
+2.  Haga clic con el botón derecho en el paquete SSIS, seleccione **Informes**e **Informes estándar**y, después, haga clic en **Todas las ejecuciones**.  
   
 3.  La ejecución del paquete SSIS debería aparecer reflejada en el informe.  
   
     > [!NOTE]  
     >  En un equipo con Windows Vista Service Pack 2, es posible que el informe contenga dos ejecuciones de paquete SSIS, una correcta y otra con errores. Omita esta última, ya que se debe a un problema conocido de esta versión.  
   
-## Más información  
+## <a name="more-info"></a>Más información  
  El asistente para la publicación de fuentes de distribución de datos realiza los siguientes pasos importantes:  
   
 1.  Crea un servidor vinculado y lo configura para que use el proveedor OLE DB para SSIS.  
@@ -187,7 +192,7 @@ caps.handback.revision: 12
   
  En esta sección se describen otros procedimientos para crear un servidor vinculado y una vista SQL sin recurrir al asistente para la publicación de fuentes de distribución de datos. En ella también encontrará más información sobre cómo usar la función OPENQUERY con el proveedor OLE DB para SSIS.  
   
-### Crear un servidor vinculado con el proveedor OLE DB para SSIS  
+### <a name="create-a-linked-server-using-the-ole-db-provider-for-ssis"></a>Crear un servidor vinculado con el proveedor OLE DB para SSIS  
  Cree un servidor vinculado con el proveedor OLE DB para SSIS (SSISOLEDB); para ello, ejecute la siguiente consulta en SQL Server Management Studio.  
   
 ```  
@@ -204,7 +209,7 @@ GO
   
 ```  
   
-### Crear una vista con un servidor vinculado y la información del catálogo de SSIS  
+### <a name="create-a-view-using-linked-server-and-ssis-catalog-information"></a>Crear una vista con un servidor vinculado y la información del catálogo de SSIS  
  En este paso, creará una vista SQL que ejecuta una consulta en el servidor vinculado que creó en la sección anterior. Esta consulta incluye el nombre de la carpeta, el nombre del proyecto y el nombre del paquete en el catálogo de SSIS.  
   
  En el tiempo de ejecución, cuando la vista se ejecuta, la consulta de servidor vinculado definida en la vista inicia el paquete SSIS especificado en dicha consulta y recibe el resultado del paquete como un conjunto de resultados tabulares.  
@@ -238,7 +243,7 @@ GO
     SELECT * FROM SSISPackageView  
     ```  
   
-### Función OPENQUERY  
+### <a name="openquery-function"></a>Función OPENQUERY  
  La sintaxis de la función OPENQUERY es:  
   
 ```  
@@ -265,7 +270,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  Barra diagonal (\\): cada \ usada en la cláusula de consulta debe ir acompañada de un carácter de escape. Por ejemplo, \\\ se evalúa como \ en la cláusula de consulta.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Destino de streaming de datos](../../integration-services/data-flow/data-streaming-destination.md)   
  [Configuración del destino de streaming de datos](../../integration-services/data-flow/configure-data-streaming-destination.md)  
   

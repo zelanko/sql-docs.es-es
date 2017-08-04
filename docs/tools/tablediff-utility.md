@@ -1,30 +1,35 @@
 ---
-title: "tablediff (utilidad) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "comparar datos"
-  - "tablediff, utilidad"
-  - "tablas [replicación de SQL Server]"
-  - "comparaciones de tablas [SQL Server]"
-  - "utilidades del símbolo del sistema [SQL Server], tablediff"
-  - "solucionar problemas [replicación de SQL Server], no convergencia"
-  - "no convergencia [SQL Server]"
+title: tablediff (utilidad) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- comparing data
+- tablediff utility
+- tables [SQL Server replication]
+- table comparisons [SQL Server]
+- command prompt utilities [SQL Server], tablediff
+- troubleshooting [SQL Server replication], non-convergence
+- non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5ecdf895353c1ec75004b2268bbd055b255b53ab
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# tablediff (utilidad)
+# <a name="tablediff-utility"></a>tablediff, utilidad
   La utilidad **tablediff** se usa para comparar los datos de dos tablas para determinar la no convergencia y es especialmente útil para solucionar problemas de no convergencia en una topología de replicación. Esta utilidad se puede usar desde el símbolo del sistema o en un archivo por lotes para realizar las siguientes tareas:  
   
 -   Una comparación fila a fila entre una tabla de origen de una instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que actúa como publicador de replicación y la tabla de destino de una o más instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que actúan como suscriptores de replicación.  
@@ -37,7 +42,7 @@ caps.handback.revision: 30
   
 -   Registrar resultados en un archivo de salida o en una tabla de la base de datos de destino.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -73,7 +78,7 @@ tablediff
 }  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  [ **-?** ]  
  Devuelve la lista de parámetros admitidos.  
   
@@ -90,13 +95,13 @@ tablediff
  Es el propietario del esquema de la tabla de origen. De forma predeterminada, se asume que el propietario de la tabla es dbo.  
   
  **-sourcepassword** *source_password*  
- Es la contraseña para el inicio de sesión que se usa para conectar con el servidor de origen mediante autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Es la contraseña para el inicio de sesión que se usa para conectar con el servidor de origen mediante autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  Cuando sea posible, proporcione credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales en un archivo de script, debe proteger el archivo para impedir el acceso no autorizado.  
   
  **-sourceuser** *source_login*  
- Es el inicio de sesión que se usa para conectar con el servidor de origen mediante autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Si no se proporciona *source_login*, se usa autenticación de Windows para conectar con el servidor de origen. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
+ Es el inicio de sesión que se usa para conectar con el servidor de origen mediante autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Si no se proporciona *source_login* , se usa autenticación de Windows para conectar con el servidor de origen. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-sourcelocked**  
  La tabla de origen se bloquea durante la comparación con las sugerencias de tabla TABLOCK y HOLDLOCK.  
@@ -114,13 +119,13 @@ tablediff
  Es el propietario del esquema de la tabla de destino. De forma predeterminada, se asume que el propietario de la tabla es dbo.  
   
  **-destinationpassword** *destination_password*  
- Es la contraseña para el inicio de sesión que se usa para conectar con el servidor de destino mediante autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Es la contraseña para el inicio de sesión que se usa para conectar con el servidor de destino mediante autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  Cuando sea posible, proporcione credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales en un archivo de script, debe proteger el archivo para impedir el acceso no autorizado.  
   
  **-destinationuser** *destination_login*  
- Es el inicio de sesión que se usa para conectar con el servidor de destino mediante autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Si no se proporciona *destination_login*, se usa autenticación de Windows para conectar con el servidor. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
+ Es el inicio de sesión que se usa para conectar con el servidor de destino mediante autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Si no se proporciona *destination_login* , se usa autenticación de Windows para conectar con el servidor. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-destinationlocked**  
  La tabla de destino se bloquea durante la comparación con las sugerencias de tabla TABLOCK y HOLDLOCK.  
@@ -128,20 +133,20 @@ tablediff
  **-b** *large_object_bytes*  
  Es el número de bytes que se va a comparar en las columnas de tipo de datos de objetos grandes, lo que incluye: **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)** y **varbinary(max)**. *large_object_bytes* toma como valor predeterminado el tamaño de la columna. Los datos que superen *large_object_bytes* no se compararán.  
   
- **-bf** *number_of_statements*  
- Es el número de instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] que se va a escribir en el archivo de script actual [!INCLUDE[tsql](../includes/tsql-md.md)] cuando se usa la opción**-f**. Cuando el número de instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] supera el valor de *number_of_statements*, se crea un nuevo archivo de script [!INCLUDE[tsql](../includes/tsql-md.md)].  
+ **-bf**  *number_of_statements*  
+ Es el número de instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] que se va a escribir en el archivo de script actual [!INCLUDE[tsql](../includes/tsql-md.md)] cuando se usa la opción **-f** . Cuando el número de instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] supera el valor de *number_of_statements*, se crea un nuevo archivo de script [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
  **-c**  
  Compara diferencias de nivel de columna.  
   
  **-dt**  
- Quita la tabla de resultados especificada por *table_name* si la tabla ya existe.  
+ Quita la tabla de resultados especificada por *table_name*si la tabla ya existe.  
   
  **-et** *table_name*  
  Especifica el nombre de la tabla de resultados que se desea crear. Si ya existe esta tabla, debe usarse **-DT** o la operación no se realizará correctamente.  
   
  **-f** [ *file_name* ]  
- Genera un script de [!INCLUDE[tsql](../includes/tsql-md.md)] para hacer que la tabla del servidor de destino converja con la tabla del servidor de origen. Tiene la opción de especificar un nombre y una ruta de acceso para el archivo de script [!INCLUDE[tsql](../includes/tsql-md.md)] generado. Si no se especifica *file_name*, el archivo de script [!INCLUDE[tsql](../includes/tsql-md.md)] se genera en el directorio en el que se ejecuta la utilidad.  
+ Genera un script de [!INCLUDE[tsql](../includes/tsql-md.md)] para hacer que la tabla del servidor de destino converja con la tabla del servidor de origen. Tiene la opción de especificar un nombre y una ruta de acceso para el archivo de script [!INCLUDE[tsql](../includes/tsql-md.md)] generado. Si no se especifica *file_name* , el archivo de script [!INCLUDE[tsql](../includes/tsql-md.md)] se genera en el directorio en el que se ejecuta la utilidad.  
   
  **-o** *output_file_name*  
  Es la ruta y el nombre completo del archivo de salida.  
@@ -152,7 +157,7 @@ tablediff
  **-rc** *number_of_retries*  
  Número de reintentos de la utilidad para operaciones con errores.  
   
- **-ri** *retry_interval*  
+ **-ri**  *retry_interval*  
  Intervalo (en segundos) entre los reintentos.  
   
  **-strict**  
@@ -161,7 +166,7 @@ tablediff
  **-t** *connection_timeouts*  
  Establece el período de tiempo de espera de la conexión, en segundos, para las conexiones con el servidor de origen y el servidor de destino.  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -169,29 +174,29 @@ tablediff
 |**1**|Error grave|  
 |**2**|Diferencias entre tablas|  
   
-## Comentarios  
- La utilidad **tablediff** no se puede usar con servidores que no son [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+## <a name="remarks"></a>Comentarios  
+ La utilidad **tablediff** no se puede usar con servidores que no son[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- No se admiten tablas que contengan columnas con el tipo de datos **sql_variant**.  
+ No se admiten tablas que contengan columnas con el tipo de datos **sql_variant** .  
   
  De forma predeterminada, la utilidad **tablediff** admite las siguientes asignaciones de tipos de datos entre las columnas de origen y de destino.  
   
 |Tipo de datos de origen|Tipo de datos de destino|  
 |----------------------|---------------------------|  
-|**tinyint**|**smallint**, **int** o **bigint**|  
+|**tinyint**|**smallint**, **int**o **bigint**|  
 |**smallint**|**int** o **bigint**|  
 |**int**|**bigint**|  
 |**timestamp**|**varbinary**|  
-|**varchar(max)**|**texto**|  
+|**varchar(max)**|**text**|  
 |**nvarchar(max)**|**ntext**|  
-|**varbinary(max)**|**imagen**|  
-|**texto**|**varchar(max)**|  
+|**varbinary(max)**|**image**|  
+|**text**|**varchar(max)**|  
 |**ntext**|**nvarchar(max)**|  
-|**imagen**|**varbinary(max)**|  
+|**image**|**varbinary(max)**|  
   
  Use la opción **-strict** para no permitir estas asignaciones y llevar a cabo una validación estricta.  
   
- La tabla de origen de la comparación debe contener como mínimo una columna de clave principal, de identidad o ROWGUID. Cuando se emplea la opción **-strict**, la tabla de destino también debe tener una columna de clave principal, de identidad o ROWGUID.  
+ La tabla de origen de la comparación debe contener como mínimo una columna de clave principal, de identidad o ROWGUID. Cuando se emplea la opción **-strict** , la tabla de destino también debe tener una columna de clave principal, de identidad o ROWGUID.  
   
  El script [!INCLUDE[tsql](../includes/tsql-md.md)] generado para hacer que la tabla de destino converja no incluye los siguientes tipos de datos:  
   
@@ -205,22 +210,22 @@ tablediff
   
 -   **xml**  
   
--   **texto**  
+-   **text**  
   
 -   **ntext**  
   
--   **imagen**  
+-   **image**  
   
-## Permisos  
+## <a name="permissions"></a>Permisos  
  Para comparar tablas, necesita los permisos SELECT ALL en los objetos de la tabla que se están comparando.  
   
- Para usar la opción **-et**, debe ser miembro del rol fijo de base de datos db_owner o, como mínimo, tener el permiso CREATE TABLE en la base de datos de suscripciones y el permiso ALTER en el esquema del propietario de destino del servidor de destino.  
+ Para usar la opción **-et** , debe ser miembro del rol fijo de base de datos db_owner o, como mínimo, tener el permiso CREATE TABLE en la base de datos de suscripciones y el permiso ALTER en el esquema del propietario de destino del servidor de destino.  
   
- Para usar la opción **-dt**, debe ser miembro del rol fijo de base de datos db_owner o, como mínimo, tener el permiso ALTER en el esquema del propietario de destino del servidor de destino.  
+ Para usar la opción **-dt** , debe ser miembro del rol fijo de base de datos db_owner o, como mínimo, tener el permiso ALTER en el esquema del propietario de destino del servidor de destino.  
   
- Para usar las opciones **-o** o **-f**, debe tener permisos de escritura en la ubicación del directorio de archivos especificada.  
+ Para usar las opciones **-o** o **-f** , debe tener permisos de escritura en la ubicación del directorio de archivos especificada.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Comparar tablas replicadas para buscar diferencias &#40;programación de la replicación&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

@@ -1,35 +1,40 @@
 ---
-title: "Operadores de filtro (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Operadores (Master Data Services) de filtro | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 caps.latest.revision: 11
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 95f2b4fea6effb3260648717a1e50c4e390ff3f7
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Operadores de filtro (Master Data Services)
+# <a name="filter-operators-master-data-services"></a>Operadores de filtro (Master Data Services)
   Al filtrar una lista de miembros, están disponibles los operadores siguientes.  
   
 > [!NOTE]  
 >  Cuando se filtra por varios criterios, deben cumplirse todos los criterios para que se devuelvan resultados. Por ejemplo, SquareFeet = 2000 **AND** Division <> 123.  
   
-## Operadores de filtro  
+## <a name="filter-operators"></a>Operadores de filtro  
   
 |Nombre del control|Description|  
 |------------------|-----------------|  
 |**Es igual que**|Devuelve valores de atributo que son exactamente iguales que los criterios especificados. Por ejemplo, para filtrar según **Mountain-100**, debe escribir **Mountain-100**.|  
 |**No es igual que**|Devuelve valores de atributo que no son exactamente iguales a los criterios especificados. Los criterios de filtro deben ser exactamente iguales que el valor de atributo que desea omitir en los resultados. Por ejemplo, para omitir resultados que coincidan con **Mountain-100**, debe escribir **Mountain-100**.<br /><br /> <br /><br /> Nota: Al aplicar una condición de filtro con una cláusula "no es igual" en un atributo, un miembro para el que el atributo es NULL pasará la condición de filtro y se devolverá si SET ANSI_NULLS está establecido en ON en la configuración de la base de datos. Para detener este comportamiento, establezca SET ANSI_NULLS en OFF en la configuración de la base de datos. Cuando SET ANSI_NULLS se establece en OFF, las comparaciones de todos los datos con un valor NULL se evalúan en TRUE si el valor de los datos es NULL, con el resultado de que el miembro no pasaría la cláusula “no es igual”. Para obtener más información, vea [SET ANSI_NULLS &#40;Transact-SQL&#41;](../t-sql/statements/set-ansi-nulls-transact-sql.md).|  
-|**Es como**|Usa el operador LIKE de Transact-SQL para filtrar los resultados. Para obtener más información, consulte [LIKE &#40;Transact-SQL&#41;](../t-sql/language-elements/like-transact-sql.md) en los Libros en pantalla de SQL Server.|  
-|**No es como**|Utiliza al operador NOT de Transact-SQL para filtrar los resultados. Para obtener más información, consulte [NOT &#40;Transact-SQL&#41;](../t-sql/language-elements/not-transact-sql.md) en los Libros en pantalla de SQL Server.|  
+|**Es como**|Usa el operador LIKE de Transact-SQL para filtrar los resultados. Para más información, vea [LIKE &#40;Transact-SQL&#41;](../t-sql/language-elements/like-transact-sql.md) en los Libros en pantalla de SQL Server.|  
+|**No es como**|Utiliza al operador NOT de Transact-SQL para filtrar los resultados. Para más información, vea [NOT &#40;Transact-SQL&#41;](../t-sql/language-elements/not-transact-sql.md) en los Libros en pantalla de SQL Server.|  
 |**Es mayor que**|Devuelve valores de atributo que son mayores que los criterios especificados. Por ejemplo, para devolver valores de atributo que comiencen con una letra en una posición posterior a **F**, escriba **F**.|  
 |**Es menor que**|Devuelve valores de atributo que son menores que los criterios especificados. Por ejemplo, para devolver valores de atributo que comiencen con una letra en una posición anterior a **F**, escriba **F**.|  
 |**Es mayor o igual que**|Devuelve valores de atributo que son mayores o iguales que los criterios especificados. Por ejemplo, para devolver valores de atributo que comiencen con el número **3** o un número mayor, escriba **3**.|  

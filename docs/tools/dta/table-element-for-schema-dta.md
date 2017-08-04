@@ -1,29 +1,34 @@
 ---
-title: "Table (DTA, elemento de Schema) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "Table, elemento [DTA]"
+title: Elemento de la tabla de esquema (DTA) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- XML
+helpviewer_keywords:
+- Table element [DTA]
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8786081dfd306de3fdfcf3d407854e49061548a2
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Table (DTA, elemento de Schema)
+# <a name="table-element-for-schema-dta"></a>Table (DTA, elemento de Schema)
   Especifica la tabla que se va a optimizar.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -32,13 +37,13 @@ caps.handback.revision: 13
     <Table>...</Table>  
 ```  
   
-## Atributos del elemento  
+## <a name="element-attributes"></a>Atributos del elemento  
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |**NumberOfRows**|Opcional. Entero que permite simular tablas de diferentes tamaños.|  
   
-## Características de los elementos  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -46,20 +51,20 @@ caps.handback.revision: 13
 |**Valor predeterminado**|Ninguno.|  
 |**Repetición**|Opcional. Presenta tantas tablas como sea necesario para la carga de trabajo.|  
   
-## Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Schema &#40;DTA, elemento de Database&#41;](../../tools/dta/schema-element-for-database-dta.md)|  
-|**Elementos secundarios**|[Elemento Name de Table &#40;DTA&#41;](../../tools/dta/name-element-for-table-dta.md)|  
+|**Elemento primario**|[Elemento de esquema de base de datos &#40; DTA &#41;](../../tools/dta/schema-element-for-database-dta.md)|  
+|**Elementos secundarios**|[Elemento de nombre de tabla &#40; DTA &#41;](../../tools/dta/name-element-for-table-dta.md)|  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Si no se especifica un elemento **Table** , el Asistente para la optimización de motor de base de datos asumirá que todas las tablas de la base de datos especificada se pueden optimizar.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de uso, vea [Server &#40;DTA, elemento&#41;](../../tools/dta/server-element-dta.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

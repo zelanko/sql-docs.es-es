@@ -1,31 +1,36 @@
 ---
-title: "Editor de la tarea FTP (p&#225;gina Transferencia de archivos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.ftptask.filetransfer.f1"
-helpviewer_keywords: 
-  - "Editor de la tarea Protocolo de transferencia de archivos"
+title: "Editor de la tarea FTP (página de transferencia de archivos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ftptask.filetransfer.f1
+helpviewer_keywords:
+- File Transfer Protocol Task Editor
 ms.assetid: 37e52220-feb2-474c-ad88-fa1b1059acd4
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ca75f79962fcf7b7cae067a7d841f80f9c4c2032
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de la tarea FTP (p&#225;gina Transferencia de archivos)
+# <a name="ftp-task-editor-file-transfer-page"></a>Editor de la tarea FTP (página Transferencia de archivos)
   Use la página **Transferencia de archivos** del cuadro de diálogo **Editor de la tarea FTP** para configurar la operación de FTP que realiza la tarea.  
   
  Para más información sobre esta tarea, vea [Tarea FTP](../../integration-services/control-flow/ftp-task.md).  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **IsRemotePathVariable**  
  Indica si la ruta remota se almacena en una variable. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
@@ -62,37 +67,37 @@ caps.handback.revision: 26
  **IsTransferASCII**  
  Indica si los archivos transferidos a y desde el servidor FTP remoto deben transferirse en modo ASCII.  
   
-## Opciones dinámicas de IsRemotePathVariable  
+## <a name="isremotepathvariable-dynamic-options"></a>Opciones dinámicas de IsRemotePathVariable  
   
-### IsRemotePathVariable = True  
+### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
  **RemoteVariable**  
- Seleccione una variable existente definida por el usuario o haga clic en \<**Nueva variable...**> para crear una.  
+ Seleccione una variable definida por el usuario existente o haga clic en \< **nueva variable...** > para crear una variable definida por el usuario.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Agregar variable  
   
-### IsRemotePathVariable = False  
+### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
- Seleccione un administrador de conexiones FTP existente o haga clic en \<**Nueva conexión...**> para crear uno nuevo.  
+ Seleccione un administrador de conexiones FTP existente o haga clic en \< **nueva conexión...** > para crear una conexión de administrador.  
   
  **Temas relacionados**: [Administrador de conexiones FTP](../../integration-services/connection-manager/ftp-connection-manager.md), [Editor del administrador de conexiones FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
-## Opciones dinámicas de IsLocalPathVariable  
+## <a name="islocalpathvariable-dynamic-options"></a>Opciones dinámicas de IsLocalPathVariable  
   
-### IsLocalPathVariable = True  
+### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
  **LocalVariable**  
- Seleccione una variable existente definida por el usuario o haga clic en \<**Nueva variable...**> para crear una.  
+ Seleccione una variable definida por el usuario existente o haga clic en \< **nueva variable...** > para crear una variable.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Agregar variable  
   
-### IsLocalPathVariable = False  
+### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
- Seleccione un administrador de conexiones de archivos existente o haga clic en \<**Nueva conexión...**> para crear uno nuevo.  
+ Seleccione un administrador de conexión de archivos existente o haga clic en \< **nueva conexión...** > para crear una conexión de administrador.  
   
  **Temas relacionados**: [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
-## Vea también  
- [Referencia de errores y mensajes de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor de la tarea FTP &#40;página General&#41;](../../integration-services/control-flow/ftp-task-editor-general-page.md)   
+## <a name="see-also"></a>Vea también  
+ [Referencia de mensajes y Error de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de la tarea FTP &#40; Página general &#41;](../../integration-services/control-flow/ftp-task-editor-general-page.md)   
  [Página Expresiones](../../integration-services/expressions/expressions-page.md)  
   
   

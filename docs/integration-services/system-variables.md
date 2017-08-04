@@ -1,33 +1,38 @@
 ---
-title: "Variables del sistema | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "contenedores [Integration Services], variables"
-  - "tareas [Integration Services], variables"
-  - "variables del sistema [Integration Services]"
-  - "controladores de eventos [Integration Services], variables"
-  - "variables [Integration Services], sistema"
+title: Las Variables del sistema | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- containers [Integration Services], variables
+- tasks [Integration Services], variables
+- system variables [Integration Services]
+- event handlers [Integration Services], variables
+- variables [Integration Services], system
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 caps.latest.revision: 54
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c472b50d9bf7f208a474c14bd5576767842a56c
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Variables del sistema
+# <a name="system-variables"></a>Variables del sistema
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona un conjunto de variables del sistema que almacenan información sobre el paquete en ejecución y sus objetos. Estas variables se pueden usar en expresiones y expresiones de propiedad para personalizar paquetes, contenedores, tareas y controladores de eventos.  
   
  Todas las variables, del sistema y definidas por el usuario, se pueden utilizar en los enlaces de parámetros que utiliza la tarea Ejecutar SQL para asignar variables a parámetros.  
   
-## Variables del sistema para paquetes  
+## <a name="system-variables-for-packages"></a>Variables del sistema para paquetes  
  La siguiente tabla describe las variables del sistema que proporciona [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para paquetes.  
   
 |Variable del sistema|Tipo de datos|Description|  
@@ -40,7 +45,7 @@ caps.handback.revision: 54
 |**ExecutionInstanceGUID**|String|Identificador exclusivo de la instancia de ejecución de un paquete.|  
 |**FailedConfigurations**|String|Nombres de las configuraciones de paquete que no se pudieron realizar.|  
 |**IgnoreConfigurationsOnLoad**|Boolean|Indica si las configuraciones de paquete se omiten al cargar el paquete.|  
-|**InteractiveMode**|Boolean|Indica si el paquete se ejecuta en modo interactivo. Si un paquete se ejecuta en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)], esta propiedad se establece en **True**. Si un paquete se ejecuta con la utilidad de símbolo del sistema **DTExec**, la propiedad se establece en **False**.|  
+|**InteractiveMode**|Boolean|Indica si el paquete se ejecuta en modo interactivo. Si un paquete se ejecuta en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] , esta propiedad se establece en **True**. Si un paquete se ejecuta con la utilidad de símbolo del sistema **DTExec** , la propiedad se establece en **False**.|  
 |**LocaleId**|Int32|Configuración regional que usa el paquete.|  
 |**MachineName**|String|Nombre del equipo en el que se está ejecutando el paquete.|  
 |**OfflineMode**|Boolean|Indica si el paquete está en el modo sin conexión. El modo sin conexión no adquiere conexiones a orígenes de datos.|  
@@ -55,14 +60,14 @@ caps.handback.revision: 54
 |**VersionMajor**|Int32|Versión principal del paquete.|  
 |**VersionMinor**|Int32|Versión secundaria del paquete.|  
   
-## Variables del sistema para contenedores  
+## <a name="system-variables-for-containers"></a>Variables del sistema para contenedores  
  La siguiente tabla describe las variables del sistema que proporciona [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para los contenedores de bucles For, Foreach y de secuencia.  
   
 |Variable del sistema|Tipo de datos|Description|Contenedor|  
 |---------------------|---------------|-----------------|---------------|  
 |**LocaleId**|Int32|Configuración regional que usa el contenedor.|Contenedor de bucles For<br /><br /> Contenedor de bucles Foreach<br /><br /> contenedor de secuencias|  
   
-## Variables del sistema para tareas  
+## <a name="system-variables-for-tasks"></a>Variables del sistema para tareas  
  La siguiente tabla describe las variables del sistema que proporciona [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para tareas.  
   
 |Variable del sistema|Tipo de datos|Description|  
@@ -73,7 +78,7 @@ caps.handback.revision: 54
 |**TaskName**|String|Nombre de la instancia de tarea.|  
 |**TaskTransactionOption**|Int32|Opción de transacción que usa la tarea.|  
   
-## Variables del sistema para los controladores de eventos  
+## <a name="system-variables-for-event-handlers"></a>Variables del sistema para los controladores de eventos  
  La siguiente tabla describe las variables del sistema que proporciona [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para los controladores de eventos. No todas las variables están disponibles para todos los controladores de eventos.  
   
 |Variable del sistema|Tipo de datos|Description|Controlador de eventos|  
@@ -95,14 +100,14 @@ caps.handback.revision: 54
 |**VariableDescription**|String|Descripción de la variable.|Controlador de eventos OnVariableValueChanged|  
 |**VariableID**|String|Identificador único de la variable.|Controlador de eventos OnVariableValueChanged|  
   
-## Variables del sistema en enlaces de parámetros  
+## <a name="system-variables-in-parameter-bindings"></a>Variables del sistema en enlaces de parámetros  
  Con frecuencia resulta útil guardar los valores de variables del sistema en tablas cuando se ejecuta el paquete. Por ejemplo, un paquete que crea dinámicamente una tabla y escribe el GUID de la instancia de ejecución del paquete que creó la tabla en una columna de la tabla.  
   
  Si utiliza variables del sistema para asignar parámetros en la instrucción SQL que utiliza una tarea Ejecutar SQL, es importante que establezca el tipo de datos de cada parámetro enlazando al tipo de datos de la variable del sistema. De lo contrario, los valores de las variables del sistema se pueden traducir incorrectamente. Por ejemplo, si la variable del sistema **ExecutionInstanceGUID** , que tiene el tipo de datos de cadena y contiene una cadena que representa el GUID de la instancia de ejecución de un paquete, se usa en un enlace de parámetro con el tipo de datos del GUID, el GUID de la instancia del paquete se traducirá de manera incorrecta.  
   
  Esta regla se aplica también a las variables definidas por el usuario. No obstante, si bien los tipos de datos de las variables del sistema no se pueden cambiar y usted debe adaptar el uso de estas variables para que se ajusten a los tipos de datos, las variables definidas por el usuario son más flexibles. Las variables definidas por el usuario que se utilizan en enlaces de parámetros generalmente se definen con tipos de datos que son compatibles con los tipos de datos de parámetros a los que se asignan.  
   
-## Tareas relacionadas  
- [asignar parámetros de consulta a variables en una tarea Ejecutar SQL](../Topic/Map%20Query%20Parameters%20to%20Variables%20in%20an%20Execute%20SQL%20Task.md)  
+## <a name="related-tasks"></a>Tareas relacionadas  
+ [asignar parámetros de consulta a variables en una tarea Ejecutar SQL](http://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "Incorporar una tarea de generaci&#243;n de perfiles de datos en un flujo de trabajo de paquetes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Tarea de generación de perfiles de datos [Integration Services], uso de salida en el flujo de trabajo"
+title: "Incorporar una tarea de flujo de trabajo de paquete de generación de perfiles de datos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ea3c68e0320216c81ce2a47f426112dd4a25f22f
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Incorporar una tarea de generaci&#243;n de perfiles de datos en un flujo de trabajo de paquetes
+# <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporar una tarea de generación de perfiles de datos en un flujo de trabajo de paquetes
   La generación de perfiles de datos y la limpieza no son aptos para la aplicación de un proceso automatizado en sus primeras etapas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], el resultado de la tarea de generación de perfiles de datos normalmente requiere un análisis visual y un criterio humano para determinar si las infracciones detectadas son significativas o excesivas. Incluso después de reconocer la existencia de problemas relacionados con la calidad de los datos, sigue siendo necesario disponer de un plan minuciosamente diseñado que indique el mejor método para la limpieza.  
   
  Sin embargo, una vez establecidos los criterios para la calidad de los datos, es posible que desee automatizar el análisis y la limpieza periódicos del origen de datos. Considere estos escenarios:  
@@ -29,10 +34,10 @@ caps.handback.revision: 24
   
  Una vez que disponga de un flujo de trabajo en el que pueda incorporar la tarea Flujo de datos, deberá comprender los pasos requeridos para agregar esta tarea. En la sección siguiente se describe el proceso general de incorporación de la tarea Flujo de datos. Las dos secciones finales describen cómo conectar la tarea Flujo de datos directamente a un origen de datos o a datos transformados del flujo de datos.  
   
-## Definir un flujo de trabajo general para la tarea Flujo de datos  
+## <a name="defining-a-general-workflow-for-the-data-flow-task"></a>Definir un flujo de trabajo general para la tarea Flujo de datos  
  En el procedimiento siguiente se describe el método general para usar el resultado de la tarea de generación de perfiles de datos en el flujo de trabajo de un paquete.  
   
-#### Para usar el resultado de la tarea de generación de perfiles de datos en un paquete mediante programación  
+#### <a name="to-use-the-output-of-the-data-profiling-task-programmatically-in-a-package"></a>Para usar el resultado de la tarea de generación de perfiles de datos en un paquete mediante programación  
   
 1.  Agregue y configure la tarea de generación de perfiles de datos en un paquete.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 24
   
  En las siguientes secciones se aplica este flujo de trabajo general a la generación de perfiles de datos que proceden directamente de un origen de datos externo o que han sido transformados por la tarea Flujo de datos. En dichas secciones también se muestra cómo controlar los requisitos de entrada y salida de la tarea Flujo de datos.  
   
-## Conectar directamente la tarea de generación de perfiles de datos a un origen de datos externo  
+## <a name="connecting-the-data-profiling-task-directly-to-an-external-data-source"></a>Conectar directamente la tarea de generación de perfiles de datos a un origen de datos externo  
  La tarea de generación de perfiles de datos puede generar perfiles de los datos que provienen directamente de un origen de datos.  Para ilustrar esta capacidad, el ejemplo siguiente usa la tarea de generación de perfiles de datos para calcular un perfil de proporción de columnas nulas en las columnas de la tabla Person.Address de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . A continuación, el ejemplo utiliza una tarea Script para recuperar los resultados del archivo de resultados y rellenar las variables de paquete que se pueden usar para dirigir el flujo de trabajo.  
   
 > [!NOTE]  
@@ -71,33 +76,33 @@ caps.handback.revision: 24
   
 -   Configurar las restricciones de precedencia que controlarán las bifurcaciones de nivel inferior del flujo de trabajo que se ejecutan dependiendo de los resultados de la tarea de generación de perfiles de datos.  
   
-### Configurar los administradores de conexión  
+### <a name="configure-the-connection-managers"></a>Configurar los administradores de conexión  
  En este ejemplo hay dos administradores de conexión:  
   
 -   Un administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] que se conecta a la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
 -   Un administrador de conexiones de archivos que crea el archivo de resultados que contendrá los resultados de la tarea de generación de perfiles de datos.  
   
-##### Para configurar los administradores de conexión  
+##### <a name="to-configure-the-connection-managers"></a>Para configurar los administradores de conexión  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], cree un nuevo paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-2.  Agregue un administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] al paquete. Configure dicho administrador de conexiones de forma que use el Proveedor de datos .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) y se conecte a una instancia disponible de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+2.  Agregue un administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] al paquete. Configure dicho administrador de conexiones de forma que use el Proveedor de datos .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) y se conecte a una instancia disponible de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-     De forma predeterminada, el administrador de conexiones tiene el nombre siguiente: \<nombre de servidor>.AdventureWorks1.  
+     De forma predeterminada, el Administrador de conexiones tiene el siguiente nombre: \<nombre del servidor >. AdventureWorks1.  
   
 3.  Agregue un administrador de conexiones de archivos al paquete. Configure este administrador de conexiones con objeto de crear el archivo de resultados para la tarea de generación de perfiles de datos.  
   
      En este ejemplo se usa el nombre de archivo DataProfile1.xml. De forma predeterminada, el administrador de conexiones tiene el mismo nombre que el archivo.  
   
-### Configurar las variables de paquete  
+### <a name="configure-the-package-variables"></a>Configurar las variables de paquete  
  En este ejemplo se usan dos variables de paquete:  
   
 -   La variable ProfileConnectionName pasa el nombre del administrador de conexiones de archivos a la tarea Script.  
   
 -   La variable AddressLine2NullRatio pasa al paquete la proporción de columnas nulas calculada para esta columna por la tarea Script.  
   
-##### Para configurar las variables de paquete que almacenarán los resultados del perfil  
+##### <a name="to-configure-the-package-variables-that-will-hold-profile-results"></a>Para configurar las variables de paquete que almacenarán los resultados del perfil  
   
 -   En la ventana **Variables** , agregue y configure las dos variables de paquete siguientes:  
   
@@ -105,7 +110,7 @@ caps.handback.revision: 24
   
     -   Escriba el nombre, **AddressLine2NullRatio**, para la otra variable y establezca el tipo de esta en **Double**.  
   
-### Configurar la tarea de generación de perfiles de datos  
+### <a name="configure-the-data-profiling-task"></a>Configurar la tarea de generación de perfiles de datos  
  La tarea de generación de perfiles de datos se debe configurar de la siguiente manera:  
   
 -   Para que use los datos que el administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] especifica como entrada.  
@@ -114,7 +119,7 @@ caps.handback.revision: 24
   
 -   Para que guarde los resultados del perfil en el archivo asociado al administrador de conexiones de archivos.  
   
-##### Para configurar la tarea de generación de perfiles de datos  
+##### <a name="to-configure-the-data-profiling-task"></a>Para configurar la tarea de generación de perfiles de datos  
   
 1.  Agregue una tarea de generación de perfiles de datos al flujo de control.  
   
@@ -128,10 +133,10 @@ caps.handback.revision: 24
   
 6.  Cierre el Editor de tareas de generación de perfiles de datos.  
   
-### Configurar la tarea Script  
+### <a name="configure-the-script-task"></a>Configurar la tarea Script  
  Debe configurarse la tarea Script para que recupere los resultados del archivo de resultados y rellene las variables de paquete previamente configuradas.  
   
-##### Para configurar la tarea Script  
+##### <a name="to-configure-the-script-task"></a>Para configurar la tarea Script  
   
 1.  Agregue una tarea Script al flujo de control.  
   
@@ -262,7 +267,7 @@ caps.handback.revision: 24
   
 8.  Cierre el entorno de desarrollo de script y, a continuación, el Editor de la tarea Script.  
   
-#### Código alternativo: leer los resultados del perfil desde una variable  
+#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>Código alternativo: leer los resultados del perfil desde una variable  
  El procedimiento anterior muestra cómo se carga el resultado de la tarea de generación de perfiles de datos desde un archivo. Sin embargo, un método alternativo consistiría en cargar dicho resultado desde una variable de paquete. Para cargar el resultado desde una variable, debe realizar los cambios siguientes en el código de ejemplo:  
   
 -   Llame al método **LoadXml** de la clase **XmlDocument** en lugar de llamar al método **Load** .  
@@ -285,16 +290,16 @@ caps.handback.revision: 24
     profileOutput.LoadXml(outputString);  
     ```  
   
-### Configurar las restricciones de precedencia  
+### <a name="configure-the-precedence-constraints"></a>Configurar las restricciones de precedencia  
  Se deben configurar las restricciones de precedencia con objeto de que controlen las bifurcaciones de nivel inferior del flujo de trabajo que se ejecutan dependiendo de los resultados de la tarea de generación de perfiles de datos.  
   
-##### Para configurar las restricciones de precedencia  
+##### <a name="to-configure-the-precedence-constraints"></a>Para configurar las restricciones de precedencia  
   
 -   En las restricciones de precedencia que conectan la tarea Script a las bifurcaciones de nivel inferior del flujo de trabajo, escriba expresiones que usen los valores de las variables para dirigir el flujo de trabajo.  
   
      Por ejemplo, puede establecer el valor de la lista **Operación de evaluación** para la restricción de precedencia en **Expresión y restricción**. A continuación, puede usar `@AddressLine2NullRatio < .90` como valor de la expresión. Esto hará que el flujo de trabajo siga la ruta seleccionada cuando las tareas previas se ejecuten correctamente, y cuando el porcentaje de valores NULL en la columna seleccionada sea inferior al 90%.  
   
-## Conectar la tarea de generación de perfiles de datos a los datos transformados del flujo de datos  
+## <a name="connecting-the-data-profiling-task-to-transformed-data-from-the-data-flow"></a>Conectar la tarea de generación de perfiles de datos a los datos transformados del flujo de datos  
  En lugar de generar perfiles para los datos directamente desde un origen de datos, puede generar dichos perfiles para los datos ya cargados y transformados en el flujo de datos. Sin embargo, la tarea de generación de perfiles de datos solo funciona con datos persistentes, no con datos almacenados en la memoria. Por lo tanto, primero debe usar un componente de destino para guardar los datos transformados en una tabla de ensayo.  
   
 > [!NOTE]  
@@ -310,7 +315,7 @@ caps.handback.revision: 24
   
  El procedimiento siguiente proporciona el método general para usar la tarea de generación de perfiles de datos con objeto de generar perfiles de los datos transformados por el flujo de datos. Muchos de estos pasos son similares a los descritos anteriormente para la generación de perfiles de datos que proceden directamente de un origen de datos externo. Conviene revisar dichos pasos para obtener más información sobre cómo configurar los distintos componentes.  
   
-#### Para usar la tarea de generación de perfiles de datos en el flujo de datos  
+#### <a name="to-use-the-data-profiling-task-in-the-data-flow"></a>Para usar la tarea de generación de perfiles de datos en el flujo de datos  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], cree un paquete.  
   
@@ -326,7 +331,7 @@ caps.handback.revision: 24
   
 7.  En las restricciones de precedencia que conectan la tarea Script a las bifurcaciones de nivel inferior del flujo de trabajo, escriba expresiones que usen los valores de las variables para dirigir el flujo de trabajo.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Configuración de la Tarea de generación de perfiles de datos](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)   
  [Visor de perfil de datos](../../integration-services/control-flow/data-profile-viewer.md)  
   

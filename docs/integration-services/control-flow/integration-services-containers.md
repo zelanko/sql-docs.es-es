@@ -1,28 +1,33 @@
 ---
-title: "Contenedores de Integration Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SSIS, contenedores"
-  - "contenedores [Integration Services]"
-  - "contenedores [Integration Services], acerca de los contenedores"
-  - "flujo de control [Integration Services], contenedores"
-  - "SQL Server Integration Services, contenedores"
+title: Contenedores de Integration Services | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SSIS containers
+- containers [Integration Services]
+- containers [Integration Services], about containers
+- control flow [Integration Services], containers
+- SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 95b6e69e463bd8e3b44e55c11d308b3d5a25ce63
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Contenedores de Integration Services
+# <a name="integration-services-containers"></a>Contenedores de Integration Services
   Los contenedores son objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que proporcionan estructura a los paquetes y servicios a las tareas. Permiten repetir flujos de control en paquetes y agrupan tareas y contenedores en unidades de trabajo significativas. Los contenedores pueden incluir otros contenedores, además de tareas.  
   
  Los paquetes usan contenedores para los siguientes fines:  
@@ -33,7 +38,7 @@ caps.handback.revision: 48
   
 -   Agrupar tareas y contenedores que deben completarse correctamente o no completarse como una unidad (todas o ninguna). Por ejemplo, un paquete puede agrupar tareas que eliminan y agregan filas de una tabla de base de datos, y confirmar o revertir todas las tareas si una no se completa correctamente.  
   
-## Tipos de contenedor  
+## <a name="container-types"></a>Tipos de contenedor  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona cuatro tipos de contenedores para generar paquetes. En la tabla siguiente se muestran los tipos de contenedor.  
   
 |Contenedor|Description|  
@@ -45,7 +50,7 @@ caps.handback.revision: 48
   
  Los paquetes y los controladores de eventos también son tipos de contenedores. Para obtener información, vea [Paquetes de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md) y [Controladores de eventos de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md).  
   
-### Resumen de propiedades de contenedor  
+### <a name="summary-of-container-properties"></a>Resumen de propiedades de contenedor  
  Todos los tipos de contenedor tienen un conjunto de propiedades comunes. Si se crean paquetes con las herramientas gráficas de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , en la ventana Propiedades se enumeran las siguientes propiedades de los contenedores de bucles Foreach, bucles For y secuencias. Las propiedades del contenedor del host de la tarea se configuran como parte de la configuración de la tarea que el host de la tarea encapsula. Las propiedades del host de la tarea se establecen al configurar la tarea.  
   
 |Propiedad|Description|  
@@ -78,25 +83,25 @@ caps.handback.revision: 48
   
 -   T:Microsoft.SqlServer.Dts.Runtime.TaskHost  
   
-## Objetos que extienden la funcionalidad de un contenedor  
+## <a name="objects-that-extend-container-functionality"></a>Objetos que extienden la funcionalidad de un contenedor  
  Los contenedores incluyen flujos de control formados por ejecutables y restricciones de precedencia, y pueden usar controladores de eventos y variables. El contenedor del host de la tarea es una excepción: puesto que este contenedor encapsula una única tarea, no utiliza las restricciones de precedencia.  
   
-### Ejecutables  
+### <a name="executables"></a>Ejecutables  
  Los ejecutables hacen referencia a las tareas de nivel de contenedor y a cualquier contenedor contenido en el contenedor. Un ejecutable puede ser una de las tareas y los contenedores proporcionados por [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , o una tarea personalizada. Para más información, consulte [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md).  
   
-### Restricciones de precedencia  
+### <a name="precedence-constraints"></a>Restricciones de precedencia  
  Las restricciones de precedencia vinculan los contenedores y las tareas del mismo contenedor principal en un flujo de control ordenado. Para más información, consulte [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
   
-### Controladores de eventos  
+### <a name="event-handlers"></a>Controladores de eventos  
  Los controladores de eventos de nivel de contenedor responden a eventos provocados por el contenedor o por los objetos que incluye. Para obtener más información, vea [Controladores de eventos de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md).  
   
-### Variables  
+### <a name="variables"></a>Variables  
  Las variables que se usan en contenedores incluyen las variables del sistema de nivel de contenedor proporcionadas por [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y las variables definidas por el usuario usadas por el contenedor. Para obtener más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
-## Puntos de interrupción  
+## <a name="break-points"></a>Puntos de interrupción  
  Al establecer un punto de interrupción en un contenedor y si la condición de interrupción es **Salto cuando el contenedor recibe el evento OnVariableValueChanged**, defina la variable en el ámbito del contenedor.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  
   
   

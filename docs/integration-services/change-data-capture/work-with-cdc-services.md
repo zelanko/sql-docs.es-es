@@ -1,31 +1,36 @@
 ---
-title: "Trabajar con servicios CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cdcServ"
+title: Trabajar con servicios CDC | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- cdcServ
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 496eead0f37abd155b789d4ae4c40a40a64ac9f1
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Trabajar con servicios CDC
+# <a name="work-with-cdc-services"></a>Trabajar con servicios CDC
   Puede usar la Consola de configuración del servicio CDC para crear un nuevo servicio CDC y para preparar una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para CDC.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Preparar SQL Server**  
  Seleccione esta opción en el panel **Acciones** del lado derecho de la Consola de configuración del servicio CDC.  
   
- También puede hacer clic con el botón derecho en **Local CDC Services** (Servicios CDC locales) y seleccionar **Prepare SQL Server** (Preparar SQL Server).  
+ También puede hacer clic con el botón derecho en **Local CDC Services** (Servicios CDC locales) y seleccionar **Prepare SQL Server**(Preparar SQL Server).  
   
  Se abrirá el cuadro de diálogo Preparando instancia de SQL Server para CDC de Oracle.  
   
@@ -38,7 +43,7 @@ caps.handback.revision: 6
   
  Se abrirá el cuadro de diálogo Nuevo servicio CDC de Oracle.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Cómo trabajar con servicios CDC](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
  [Crear y editar un servicio CDC de Oracle](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   

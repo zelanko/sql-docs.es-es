@@ -1,22 +1,27 @@
 ---
-title: "Definir una variable de estado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Definir una Variable de estado | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ebec44b7492ead6e3417758ac653360f44d4df9
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Definir una variable de estado
+# <a name="define-a-state-variable"></a>Definir una variable de estado
   Este procedimiento describe cómo definir una variable de paquete donde se almacena el estado CDC.  
   
  La tarea Control CDC carga, inicializa y actualiza la variable de estado CDC y el componente de flujo de datos de origen de CDC la usa para determinar el intervalo de procesamiento actual de los registros de cambios. La variable de estado CDC se puede definir en cualquier contenedor común a la tarea Control CDC y al origen de CDC. Esto puede darse en el nivel de paquete pero también en otros contenedores, por ejemplo, en un contenedor de bucles.  
@@ -27,18 +32,18 @@ caps.handback.revision: 12
   
 |Componente|Description|  
 |---------------|-----------------|  
-|**\<state-name>**|Este es el nombre del estado CDC actual.|  
+|**\<nombre del estado >**|Este es el nombre del estado CDC actual.|  
 |**CS**|Esto marca el punto inicial del intervalo de procesamiento actual (inicio actual).|  
-|**\<cs-lsn>**|Este es el último LSN (número de secuencia de registro) procesado en la anterior ejecución de CDC.|  
+|**\<CS-lsn >**|Este es el último LSN (número de secuencia de registro) procesado en la anterior ejecución de CDC.|  
 |**CE**|Esto marca el punto final del intervalo de procesamiento actual (final actual). La presencia del componente CE en el estado CDC indica que, o bien se está procesando actualmente un paquete CDC, o un paquete CDC generó un error antes de procesar completamente su intervalo de procesamiento de CDC.|  
-|**\<ce-lsn>**|Este es el último LSN que se va a procesar en la ejecución de CDC actual. Se da siempre por supuesto que el último número de secuencia que se va a procesar en el máximo (0xFFF…).|  
+|**\<lsn de CE >**|Este es el último LSN que se va a procesar en la ejecución de CDC actual. Se da siempre por supuesto que el último número de secuencia que se va a procesar en el máximo (0xFFF…).|  
 |**IR**|Esto marca el intervalo de procesamiento inicial.|  
-|**\<ir-start>**|Este es un LSN de un cambio justo antes de que comenzara la carga inicial.|  
-|**\<ir-end>**|Este es un LSN de un cambio justo después de que finalizara la carga inicial.|  
+|**\<inicio de infrarrojos >**|Este es un LSN de un cambio justo antes de que comenzara la carga inicial.|  
+|**\<final de infrarrojos >**|Este es un LSN de un cambio justo después de que finalizara la carga inicial.|  
 |**TS**|Esto establece la marca de tiempo para la última actualización del estado CDC.|  
-|**\<timestamp>**|Esta es una representación decimal de la propiedad System.DateTime.UtcNow de 64 bits.|  
+|**\<marca de tiempo >**|Esta es una representación decimal de la propiedad System.DateTime.UtcNow de 64 bits.|  
 |**ER**|Esto aparece si la última operación generó un error e incluye una breve descripción de la causa de este. Si este componente está presente, siempre aparecerá el último.|  
-|**\<short-error-text>**|Esta es la descripción breve del error.|  
+|**\<texto breve del error >**|Esta es la descripción breve del error.|  
   
  Los LSN y los números de secuencia se codifican como cadenas hexadecimales de hasta 20 dígitos que representan el valor LSN de Binary(10).  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 12
   
 -   TFREDO/CS/0x0000030D000000AE0003/CE/0x0000159D1E0F01000000/TS/2011-08-09T05:30:59.5544900/  
   
-### Para definir una variable de estado CDC  
+### <a name="to-define-a-cdc-state-variable"></a>Para definir una variable de estado CDC  
   
 1.  En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], abra el paquete de [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] que tenga el flujo CDC donde debe definir la variable.  
   
@@ -83,8 +88,8 @@ caps.handback.revision: 12
   
  Si no usa la tarea Control CDC con la persistencia automática de estado, debe cargar el valor de la variable del almacenamiento persistente donde se guardó su valor la última vez que el paquete se ejecutó y escribirlo de nuevo en el almacenamiento persistente cuando procesamiento del intervalo de procesamiento actual se complete.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tarea Control CDC](../../integration-services/control-flow/cdc-control-task.md)   
- [Editor de la tarea Control de CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
+ [Editor de la tarea Control CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   

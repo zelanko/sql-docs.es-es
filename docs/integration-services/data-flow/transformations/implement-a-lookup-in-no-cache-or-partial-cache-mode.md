@@ -1,27 +1,32 @@
 ---
-title: "Implementar una b&#250;squeda en modo No hay cach&#233; o Cach&#233; parcial | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transformación de búsqueda"
-  - "coincidir exactamente [Integration Services]"
-  - "búsquedas [Integration Services]"
-  - "coincidencias exactas [Integration Services]"
+title: "Implementar una búsqueda en modo no hay caché o caché parcial | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Lookup transformation
+- match exactly [Integration Services]
+- lookups [Integration Services]
+- exact matches [Integration Services]
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 caps.latest.revision: 67
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb81f969cc30366489df367016c8096ea2ac1168
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Implementar una b&#250;squeda en modo No hay cach&#233; o Cach&#233; parcial
+# <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementar una búsqueda en modo No hay caché o Caché parcial
   Puede configurar la transformación Búsqueda para utilizar el modo Caché parcial o el modo Sin caché:  
   
 -   Caché parcial  
@@ -34,7 +39,7 @@ caps.handback.revision: 67
   
  Tanto si se selecciona el modo Caché parcial como el modo Sin caché, se utiliza un administrador de conexiones OLE DB para conectar con el conjunto de datos de referencia. El conjunto de datos de referencia se genera mediante una tabla, vista o consulta SQL durante la ejecución de la transformación Búsqueda  
   
-### Para implementar una transformación Búsqueda en modo No hay caché o Caché parcial  
+### <a name="to-implement-a-lookup-transformation-in-no-cache-or-partial-cache-mode"></a>Para implementar una transformación Búsqueda en modo No hay caché o Caché parcial  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] que contiene el paquete con el que desea trabajar y ábralo.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 67
   
 4.  Haga doble clic en el origen o la transformación anterior para configurar el componente.  
   
-5.  Haga doble clic en la transformación Búsqueda y, luego, en el **Editor de transformación Búsqueda**, en la página **General**, seleccione **Caché parcial** o **No hay caché**.  
+5.  Haga doble clic en la transformación Búsqueda y, luego, en el **Editor de transformación Búsqueda**, en la página **General** , seleccione **Caché parcial** o **No hay caché**.  
   
 6.  En la lista **Especificar cómo administrar las filas con entradas no coincidentes** , seleccione una opción de control de errores.  
   
@@ -87,9 +92,9 @@ caps.handback.revision: 67
   
 11. Si seleccionó **Caché parcial** en el paso 5, en la página **Avanzadas** , establezca las opciones de caché siguientes:  
   
-    -   En la lista **Tamaño de caché (32 bits)**, seleccione el tamaño de caché para los entornos de 32 bits.  
+    -   En la lista **Tamaño de caché (32 bits)** , seleccione el tamaño de caché para los entornos de 32 bits.  
   
-    -   En la lista **Tamaño de caché (64 bits)**, seleccione el tamaño de caché para los entornos de 64 bits.  
+    -   En la lista **Tamaño de caché (64 bits)** , seleccione el tamaño de caché para los entornos de 64 bits.  
   
     -   Para almacenar en memoria caché las filas con entradas no coincidentes en la referencia, seleccione **Habilitar caché para las filas con entradas no coincidentes**.  
   
@@ -106,7 +111,7 @@ caps.handback.revision: 67
   
 14. Haga clic en **Aceptar** para guardar los cambios en la transformación Búsqueda y, a continuación, ejecute el paquete.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

@@ -1,29 +1,34 @@
 ---
-title: "Transformaci&#243;n Dimensi&#243;n de variaci&#243;n lenta | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.slowlychangingdimtrans.f1"
-helpviewer_keywords: 
-  - "Dimensión de variación lenta, transformación"
-  - "dimensiones de variación lenta"
-  - "SCD, transformación"
-  - "actualizar dimensiones de variación lenta"
+title: "Transformación dimensión de variación lenta | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.slowlychangingdimtrans.f1
+helpviewer_keywords:
+- Slowly Changing Dimension transformation
+- slowly changing dimensions
+- SCD transformation
+- updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 caps.latest.revision: 55
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 59f467f9aee0637bc9463c39b51b30e47eeaff47
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transformaci&#243;n Dimensi&#243;n de variaci&#243;n lenta
+# <a name="slowly-changing-dimension-transformation"></a>Transformación Dimensión de variación lenta
   La transformación Dimensión de variación lenta coordina la actualización e inserción de registros en las tablas de dimensiones de almacenamiento de datos. Por ejemplo, puede usar esta transformación para configurar las salidas de transformación que insertan y actualizan registros en la tabla DimProduct de la base de datos [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] con datos de la tabla Production.Products de la base de datos OLTP AdventureWorks.  
   
 > [!IMPORTANT]  
@@ -58,7 +63,7 @@ caps.handback.revision: 55
   
  Si se encuentra una coincidencia, la transformación Dimensión de variación lenta detecta si la fila contiene cambios. Si la fila contiene cambios, la transformación Dimensión de variación lenta identifica el tipo de actualización para cada columna y dirige la fila a la **Salida de actualizaciones de atributos variables**, **Salida de atributo fijo**, **Salida de inserciones de atributos históricos**o **Salida de actualizaciones de miembros deducidos**. Si no hay cambios en la fila, la transformación Dimensión de variación lenta dirige la fila a la **Salida sin cambios**.  
   
-## Salidas de la transformación Dimensión de variación lenta  
+## <a name="slowly-changing-dimension-transformation-outputs"></a>Salidas de la transformación Dimensión de variación lenta  
  La transformación Dimensión de variación lenta tiene una entrada y hasta seis salidas. Una salida dirige una fila al subconjunto del flujo de datos que corresponde a la actualización y los requisitos de inserción de la fila. Esta transformación no admite una salida de error.  
   
  La siguiente tabla describe las salidas de la transformación y los requisitos de sus flujos de datos posteriores. Los requisitos describen el flujo de datos que crea el Asistente para dimensiones variables.  
@@ -72,39 +77,39 @@ caps.handback.revision: 55
 |**Nueva salida**|La tabla de búsqueda no contiene filas coincidentes. La fila se agrega a la tabla de dimensiones. Esta salida se usa para nuevas filas y cambios en las filas de atributos históricos.|Una transformación Columna derivada establece el indicador de fila actual, y un destino de OLE DB inserta la fila.|  
 |**Salida sin cambios**|Los valores de la tabla de búsqueda coinciden con los valores de la fila. Esta salida se usa para filas sin cambios.|No se crea un flujo de datos predeterminado porque la transformación Dimensión de variación lenta no realiza ningún trabajo. Si desea capturar estas filas, debe crear un flujo de datos para esta salida.|  
   
-## Claves empresariales  
+## <a name="business-keys"></a>Claves empresariales  
  La transformación Dimensión de variación lenta requiere por lo menos una columna de clave empresarial.  
   
  La transformación Dimensión de variación lenta no admite claves empresariales con valor NULL. Si los datos incluyen filas en las que la columna de clave empresarial tiene un valor NULL, estas filas deben quitarse del flujo de datos. Puede usar la transformación División condicional para filtrar filas cuyas columnas de clave empresarial contengan valores NULL. Para más información, consulte [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md).  
   
-## Optimizar el rendimiento de la transformación Dimensión de variación lenta  
+## <a name="optimizing-the-performance-of-the-slowly-changing-dimension-transformation"></a>Optimizar el rendimiento de la transformación Dimensión de variación lenta  
  Para obtener sugerencias sobre cómo mejorar el rendimiento de la transformación Dimensión de variación lenta, vea [Características de rendimiento de flujo de datos](../../../integration-services/data-flow/data-flow-performance-features.md).  
   
-## Solucionar problemas de la transformación Dimensión de variación lenta  
+## <a name="troubleshooting-the-slowly-changing-dimension-transformation"></a>Solucionar problemas de la transformación Dimensión de variación lenta  
  Puede registrar las llamadas realizadas por la transformación Dimensión de variación lenta a proveedores de datos externos. Puede utilizar esta capacidad de registro para solucionar problemas relacionados con las conexiones, los comandos y las consultas a orígenes de datos externos realizados por la transformación Dimensión de variación lenta. Para registrar las llamadas que la transformación Dimensión de variación lenta realiza a proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
-## Configurar la transformación Dimensión de variación lenta  
+## <a name="configuring-the-slowly-changing-dimension-transformation"></a>Configurar la transformación Dimensión de variación lenta  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](../Topic/Common%20Properties.md)  
+-   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  Para más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Configurar las salidas de la transformación Dimensión de variación lenta  
+## <a name="configuring-the-slowly-changing-dimension-transformation-outputs"></a>Configurar las salidas de la transformación Dimensión de variación lenta  
  Coordinar la actualización e inserción de registros en las tablas de dimensiones puede ser una tarea compleja, especialmente si se usan datos de tipo 1 y 2. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ofrece dos maneras de configurar las dimensiones de variación lenta:  
   
 -   El cuadro de diálogo **Editor avanzado** , en el que se selecciona una conexión, se establecen propiedades de componentes comunes y personalizados, se eligen columnas de entrada y se establecen propiedades de columnas en las seis salidas. Para completar la tarea de configuración de una dimensión de variación lenta, debe crear manualmente el flujo de datos para las salidas que usa la transformación Dimensión de variación lenta. Para más información, consulte [Data Flow](../../../integration-services/data-flow/data-flow.md).  
   
 -   Cargar el Asistente para dimensiones, que lo guía por los pasos necesarios para configurar la transformación Dimensión de variación lenta y generar el flujo de datos para las salidas de la transformación. Para cambiar la configuración de las dimensiones de variación lenta, vuelva a ejecutar el Asistente para cargar dimensión. Para más información, vea [Configurar salidas mediante el Asistente para dimensión de variación lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md).  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
  [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
   
 -   La entrada del blog sobre cómo [optimizar el Asistente para dimensiones de variación lenta](http://go.microsoft.com/fwlink/?LinkId=199481), en blogs.msdn.com.  
   

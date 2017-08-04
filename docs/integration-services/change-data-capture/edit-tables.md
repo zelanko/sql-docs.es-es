@@ -1,24 +1,29 @@
 ---
-title: "Editar tablas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "tabProps"
+title: Editar tablas | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- tabProps
 ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aece26acf5992160124dfa14eda26a524e82ff5a
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editar tablas
+# <a name="edit-tables"></a>Editar tablas
   Use la pestaña **Tablas** para realizar cambios en las tablas y columnas que seleccionó en la base de datos de origen de Oracle. Esta pestaña contiene los elementos siguientes:  
   
  **Lista de la tabla**  
@@ -42,8 +47,8 @@ caps.handback.revision: 6
  **Quitar**  
  Seleccione una tabla de la lista y haga clic en **Quitar** para quitar la tabla de la instancia CDC.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Cómo editar las propiedades de la instancia CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [Seleccionar tablas y columnas de Oracle](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
+ [Seleccione las columnas y tablas de Oracle](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   
   

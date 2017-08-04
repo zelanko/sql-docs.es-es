@@ -1,45 +1,50 @@
 ---
-title: "Tarea Transferir bases de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.transferdatabasetask.f1"
-helpviewer_keywords: 
-  - "Transferir bases de datos, tarea [Integration Services]"
+title: Tarea de la base de datos de transferencia | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.transferdatabasetask.f1
+helpviewer_keywords:
+- Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 86e2b602632d1492d3889981af041c5ee38cfb6b
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Tarea Transferir bases de datos
+# <a name="transfer-database-task"></a>Tarea Transferir bases de datos
   La tarea Transferir bases de datos transfiere una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre dos instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A diferencia de otras tareas que solo transfieren objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copiándolos, la tarea Transferir bases de datos puede copiar o mover una base de datos. Esta tarea también puede utilizarse para copiar una base de datos en el mismo servidor.  
   
-## Modo sin conexión y en línea  
+## <a name="offline-and-online-modes"></a>Modo sin conexión y en línea  
  La base de datos se puede transferir en modo en línea o sin conexión. Cuando se utiliza el modo en línea, la base de datos permanece adjunta y se transfiere utilizando el Objeto de administración de SQL (SMO) para copiar los objetos de la base de datos. Cuando se utiliza el modo sin conexión, la base de datos se separa, los archivos de la base de datos se copian o se mueven, y la base de datos se adjunta en el destino cuando finaliza la transferencia correctamente. Si la base de datos se copia, se vuelve a adjuntar automáticamente al origen después de que la copia se lleve a cabo correctamente. En el modo sin conexión, la base de datos se copia más rápidamente, pero no está disponible para los usuarios durante la transferencia.  
   
  El modo sin conexión requiere que se especifiquen los recursos compartidos de archivos de red en los servidores de origen y de destino que contienen los archivos de la base de datos. Si la carpeta está compartida y el usuario tiene acceso a ella, puede hacer referencia al recurso compartido de red con la sintaxis \\\nombreDeEquipo\Archivos de programa\miCarpeta\\. De lo contrario, debe usar la sintaxis \\\nombreDeEquipo\c$\Archivos de programa\miCarpeta\\. Para utilizar esta última sintaxis, el usuario debe tener acceso de escritura a los recursos compartidos de red en el origen y en el destino.  
   
-## Transferencia de bases de datos entre versiones de SQL Server  
+## <a name="transfer-of-databases-between-versions-of-sql-server"></a>Transferencia de bases de datos entre versiones de SQL Server  
  La tarea Transferir bases de datos puede transferir una base de datos entre instancias de versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferentes.  
   
-## Eventos  
+## <a name="events"></a>Eventos  
  La tarea Transferir bases de datos no indica el progreso incremental de la transferencia del mensaje de error; solo indica 0% y 100%.  
   
-## Valor de ejecución  
+## <a name="execution-value"></a>Valor de ejecución  
  El valor de ejecución, definido en la propiedad **ExecutionValue** de la tarea, devuelve el valor 1, ya que a diferencia de otras tareas de transferencia, la tarea Transferir bases de datos solo puede transferir una base de datos.  
   
- Si se asigna una variable definida por el usuario a la propiedad **ExecValueVariable** de la tarea Transferir bases de datos, se puede hacer que la información de la transferencia del mensaje de error esté disponible para otros objetos del paquete. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Usar variables en paquetes](../Topic/Use%20Variables%20in%20Packages.md).  
+ Si se asigna una variable definida por el usuario a la propiedad **ExecValueVariable** de la tarea Transferir bases de datos, se puede hacer que la información de la transferencia del mensaje de error esté disponible para otros objetos del paquete. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Usar variables en paquetes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
-## Entradas del registro  
+## <a name="log-entries"></a>Entradas del registro  
  La tarea Transferir bases de datos incluye las siguientes entradas del registro personalizadas:  
   
 -   SourceSQLServer    Esta entrada del registro muestra el nombre del servidor de origen.  
@@ -50,12 +55,12 @@ caps.handback.revision: 26
   
  Además, se escribe una entrada del registro para el evento **OnInformation** cuando se sobrescribe la base de datos de destino.  
   
-## Seguridad y permisos  
+## <a name="security-and-permissions"></a>Seguridad y permisos  
  Para transferir una base de datos en el modo sin conexión, el usuario que ejecuta el paquete debe ser miembro del rol de servidor sysadmin.  
   
  Para transferir una base de datos en el modo en línea, el usuario que ejecuta el paquete debe ser miembro del rol de servidor sysadmin o el propietario (dbo) de la base de datos seleccionada.  
   
-## Configuración de la tarea Transferir bases de datos  
+## <a name="configuration-of-the-transfer-database-task"></a>Configuración de la tarea Transferir bases de datos  
  Puede especificar si la tarea debe intentar volver a adjuntar la base de datos de origen si la transferencia de la base de datos no se realiza.  
   
  La tarea Transferir bases de datos también se puede configurar para que permita sobrescribir y reemplazar una base de datos de destino con el mismo nombre.  
@@ -78,9 +83,9 @@ caps.handback.revision: 26
   
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el siguiente tema:  
   
--   [Establecer las propiedades de tareas o contenedores](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Configuración mediante programación de la tarea Transferir bases de datos  
+## <a name="programmatic-configuration-of-the-transfer-database-task"></a>Configuración mediante programación de la tarea Transferir bases de datos  
  Para obtener más información sobre cómo establecer estas propiedades mediante programación, haga clic en el tema siguiente:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferDatabaseTask.TransferDatabaseTask>  

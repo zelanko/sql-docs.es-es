@@ -1,32 +1,37 @@
 ---
-title: "Configuraci&#243;n de la Tarea de generaci&#243;n de perfiles de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tarea de generación de perfiles de datos [Integration Services], configuración"
+title: "Configuración de la tarea de generación de perfiles de datos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: 757bee96609bf389100076434cc733ff7ad46d25
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Configuraci&#243;n de la Tarea de generaci&#243;n de perfiles de datos
+# <a name="setup-of-the-data-profiling-task"></a>Configuración de la Tarea de generación de perfiles de datos
   El primer paso previo a la revisión de un perfil de los datos de origen consiste en configurar y ejecutar la tarea de generación de perfiles de datos. Esta tarea se crea dentro de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para configurar la tarea de generación de perfiles de datos, utilice el Editor de tareas de generación de perfiles de datos. Este editor le permite seleccionar dónde deben generarse los perfiles y qué perfiles deben calcularse. Una vez configurada la tarea, se ejecuta el paquete para calcular los perfiles de datos.  
   
-## Requisitos y limitaciones  
+## <a name="requirements-and-limitations"></a>Requisitos y limitaciones  
  La tarea de generación de perfiles de datos solo funciona con datos que estén almacenados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No funciona con orígenes de datos de otros fabricantes o basados en archivos.  
   
  Además, para ejecutar un paquete que contiene la tarea de generación de perfiles de datos, debe utilizar una cuenta que tenga permisos de lectura/escritura, incluidos los permisos CREATE TABLE, en la base de datos tempdb.  
   
-## Tarea Generación de perfiles de datos en un paquete  
+## <a name="data-profiling-task-in-a-package"></a>Tarea Generación de perfiles de datos en un paquete  
  La tarea de generación de perfiles de datos solo configura los perfiles y crea el archivo de salida que contiene los perfiles calculados. Para revisar este archivo de salida, debe usar el Visor de perfil de datos, un programa visor independiente. Dado que debe ver la salida de forma independiente, puede utilizar la tarea de generación de perfiles de datos en un paquete que no contenga ninguna otra tarea.  
   
  Sin embargo, no tiene que utilizar la tarea de generación de perfiles de datos como única tarea en un paquete. Si desea realizar la generación de perfiles de datos en el flujo de trabajo o en el flujo de datos de un paquete más complejo, tiene las opciones siguientes:  
@@ -37,15 +42,15 @@ caps.handback.revision: 34
   
  Para obtener más información, vea [Incorporar una tarea de generación de perfiles de datos en un flujo de trabajo de paquetes](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md).  
   
-## Configuración de la salida de la tarea  
+## <a name="setup-of-the-task-output"></a>Configuración de la salida de la tarea  
  Después de que la tarea de generación de perfiles de datos esté en un paquete, debe configurar la salida para los perfiles que la tarea calculará. Para configurar la salida para los perfiles, se utiliza la página **General** del Editor de tareas de generación de perfiles de datos. Además de especificar el destino para la salida, la página **General** también le ofrece la capacidad de realizar un perfil rápido de los datos. Cuando selecciona **Perfil rápido**, la tarea de generación de perfiles de datos genera perfiles en una tabla o vista utilizando algunos o todos los perfiles predeterminados con su configuración predeterminada.  
   
  Para obtener más información, vea [Editor de tareas de generación de perfiles de datos &#40;página General&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md) y [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md).  
   
 > [!IMPORTANT]  
->  El archivo de salida podría contener datos confidenciales acerca de la base de datos y de los datos que contiene. Para conocer sugerencias sobre cómo hacer que este archivo sea más seguro, vea [Acceso a los archivos usados por los paquetes](../../integration-services/security/access-to-files-used-by-packages.md).  
+>  El archivo de salida podría contener datos confidenciales acerca de la base de datos y de los datos que contiene. Para conocer sugerencias sobre cómo hacer que este archivo sea más seguro, vea [Acceso a los archivos usados por los paquetes](../../integration-services/security/security-overview-integration-services.md#files).  
   
-## Selección y configuración de los perfiles que hay que calcular  
+## <a name="selection-and-configuration-of-the-profiles-to-be-computed"></a>Selección y configuración de los perfiles que hay que calcular  
  Después de configurar el archivo de resultados, es preciso seleccionar los perfiles de datos que hay que calcular. La tarea de generación de perfiles de datos puede calcular ocho perfiles de datos diferentes. Cinco de estos perfiles analizan columnas individuales y los otros tres analizan varias columnas o relaciones entre las columnas y las tablas. En una única tarea de generación de perfiles puede calcular varias filas para varias columnas o combinaciones de columnas en varias tablas o vistas.  
   
  En la tabla siguiente se describen los informes que calcula cada uno de estos perfiles y los tipos de datos para los que el perfil es válido.  
@@ -89,7 +94,7 @@ caps.handback.revision: 34
   
 -   [Opciones de Solicitud de perfil de inclusión de valores &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## Ejecución del paquete que contiene la tarea de generación de perfiles de datos  
+## <a name="execution-of-the-package-that-contains-the-data-profiling-task"></a>Ejecución del paquete que contiene la tarea de generación de perfiles de datos  
  Después de configurar la tarea de generación de perfiles de datos, puede ejecutarla. A continuación, la tarea calcula los perfiles de datos y genera esta información en formato XML en un archivo o en una variable de paquete. La estructura de este XML sigue el esquema DataProfile.xsd. Puede abrir el esquema en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] u otro editor de esquemas, en un editor XML o en un editor de texto como Bloc de notas. Este esquema de información sobre la calidad de los datos puede se útil para los siguientes fines:  
   
 -   Intercambiar información sobre la calidad de los datos dentro de las organizaciones y entre ellas.  
@@ -98,7 +103,7 @@ caps.handback.revision: 34
   
  El espacio de nombres de destino se identifica en el esquema como [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
   
-## Paso siguiente  
+## <a name="next-step"></a>Paso siguiente  
  [Visor de perfil de datos](../../integration-services/control-flow/data-profile-viewer.md).  
   
   

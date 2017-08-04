@@ -1,42 +1,47 @@
 ---
-title: "ISNULL (expresi&#243;n de SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "valores NULL [Integration Services]"
-  - "ISNULL, función"
+title: "ISNULL (expresión de SSIS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- null values [Integration Services]
+- ISNULL function
 ms.assetid: 88dbf49e-1307-4dda-b9db-ff1632053550
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dd74ffbf491733826eef4cf61530e838033d7e3d
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# ISNULL (expresi&#243;n de SSIS)
+# <a name="isnull-ssis-expression"></a>ISNULL (expresión de SSIS)
   Devuelve un resultado booleano en función de si una expresión es NULL.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
 ISNULL(expression)  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *expression*  
  Expresión válida de cualquier tipo de datos.  
   
-## Tipos de resultado  
+## <a name="result-types"></a>Tipos de resultado  
  DT_BOOL  
   
-## Ejemplos de expresiones  
+## <a name="expression-examples"></a>Ejemplos de expresiones  
  Este ejemplo devuelve TRUE si la columna **DiscontinuedDate** contiene un valor NULL.  
   
 ```  
@@ -55,8 +60,8 @@ ISNULL(LastName)? "Unknown last name":LastName
 ISNULL(DaysToManufacture + @AddDays)  
 ```  
   
-## Vea también  
- [Funciones &#40;expresión de SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)   
- [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)  
+## <a name="see-also"></a>Vea también  
+ [Funciones &#40; Expresión de SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)   
+ [COALESCE &#40; Transact-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)  
   
   

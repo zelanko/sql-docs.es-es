@@ -1,28 +1,33 @@
 ---
-title: "Configuraci&#243;n del sistema (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Master Data Services, configuración del sistema"
-  - "configuración del sistema [Master Data Services]"
+title: "Configuración del sistema (Master Data Services) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Master Data Services, system settings
+- system settings [Master Data Services]
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 caps.latest.revision: 17
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0856c24aee54589941ba96aad979ef732d143f37
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configuraci&#243;n del sistema (Master Data Services)
+# <a name="system-settings-master-data-services"></a>Configuración del sistema (Master Data Services)
   Para todas las aplicaciones web y servicios web asociados a la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , puede configurar las opciones del sistema.  
   
- Muchas de estas opciones se pueden configurar en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] en la página **Base de datos** . Otras se pueden configurar en la tabla Configuración del sistema (mdm.tblSystemSetting) en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+ Muchas de estas opciones se pueden configurar en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] en la página **Base de datos** . Otras se pueden configurar en la tabla Configuración del sistema (mdm.tblSystemSetting) en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
  La configuración puede agruparse en las siguientes categorías:  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 17
 |-----------------------------------|--------------------|-----------------|  
 |**Copiar solo las versiones confirmadas**|**CopyOnlyCommittedVersion**|En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], determina si los usuarios pueden copiar versiones de modelos con el estado **Confirmado**o las versiones con cualquier tipo de estado. El valor predeterminado es **Sí** o **1**, que indica que los usuarios solo pueden copiar las versiones **Confirmadas** . Cambie a **No** o **2** , para permitir que los usuarios copien todas las versiones.|  
   
- Para obtener más información, consulte [Versiones &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md).  
+ Para más información, vea [Versiones &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md).  
   
 ##  <a name="Staging"></a> Configuración del almacenamiento provisional  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 17
 |-----------------------------------|--------------------|-----------------|  
 |**Número predeterminado de miembros en la jerarquía**|**HierarchyChildNodeLimit**|En el área funcional de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , número máximo de miembros que se muestran en cada nodo de la jerarquía antes de que se muestre **...más...** . Puede hacer clic en **...más...** para mostrar el grupo siguiente de miembros. El valor predeterminado es **50**.|  
 |**Mostrar nombres en jerarquía de manera predeterminada**|**ShowNamesInHierarchy**|En el área funcional del [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , determina la configuración predeterminada que se selecciona al ver jerarquías.<br /><br /> El valor predeterminado es **Sí** o **1**, que indica que se muestran el nombre y el código de cada miembro. Cambie a **No** o **2** para mostrar solo el código.|  
-|**Número de atributos basados en dominio de la lista**|**DBAListRowLimit**|En el área funcional del **Explorador** de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], el número de atributos que se muestran en una lista al hacer doble clic en un valor de atributo basado en dominio de la cuadrícula. El valor predeterminado es **50**. Si hay más de 50 miembros, en su lugar se muestra un cuadro de diálogo en el que se puede buscar.|  
+|**Número de atributos basados en dominio de la lista**|**DBAListRowLimit**|En el área funcional del [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , el número de atributos que se muestran en una lista al hacer doble clic en un valor de atributo basado en dominio de la cuadrícula. El valor predeterminado es **50**. Si hay más de 50 miembros, en su lugar se muestra un cuadro de diálogo en el que se puede buscar.|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|En el área funcional del [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , nivel de similitud que se usa cuando se utiliza el criterio de filtro **Coincide** . El valor predeterminado es **0.3**. Establezca el valor más próximo a **1** para devolver una coincidencia que se aproxime más al criterio de búsqueda. Establezca el valor en **1** para obtener una coincidencia exacta.|  
   
 ##  <a name="xls"></a> Configuración del complemento para Excel  
@@ -97,13 +102,13 @@ caps.handback.revision: 17
 |**Incrementar nuevas reglas de negocios en**|**BusinessRuleDefaultPriorityIncrement**|En el área funcional de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , número en que se incrementa la prioridad de cada nueva regla de negocio. El valor predeterminado es **10**.|  
 |**Número de miembros a los que aplicar las reglas de negocios**|**BusinessRuleRealtimeMemberCount**|En el área funcional [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , número máximo de miembros en la cuadrícula al que se van a aplicar las reglas de negocios. En [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], número máximo de miembros en la hoja de cálculo activa a los que se van a aplicar reglas de negocios. El valor predeterminado es **10000**.|  
   
- Para obtener más información, consulte [Reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md).  
+ Para más información, vea [Reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md).  
   
 ##  <a name="Notifications"></a> Configuración de notificaciones  
   
 |Configuración del Administrador de configuración|Configuración del sistema|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**Dirección URL de Master Data Manager para notificaciones**|**MDMRootURL**|La dirección URL de la aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], que se usa en el vínculo en las notificaciones por correo electrónico; por ejemplo, http://constoso/mds.|  
+|**Dirección URL de Master Data Manager para notificaciones**|**MDMRootURL**|La dirección URL para el [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] la aplicación web, que se usa en el vínculo notificaciones por correo electrónico, por ejemplo `http://constoso/mds`.|  
 |**Intervalo de las notificaciones de correo electrónico**|**NotificationInterval**|La frecuencia, en segundos, con la que se envían las notificaciones de correo electrónico. El valor predeterminado es **120** segundos (2 minutos).|  
 |**Número de notificaciones en un solo correo electrónico**|**NotificationsPerEmail**|El número máximo de problemas de validación que se enumerarán en un solo correo electrónico de notificación. Los problemas adicionales, si los hay, no se incluyen en el correo electrónico, pero están disponibles en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
 |**Formato de correo electrónico predeterminado**|**EmailFormat**|El formato de todas las notificaciones de correo electrónico. El valor predeterminado es **HTML** o **1**. La configuración de la base de datos **2** indica **Texto**.<br /><br /> Puede invalidar esta opción para un usuario individual en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cambiando y guardando el **Formato de correo electrónico** en la pestaña **General** del usuario.|  
@@ -115,7 +120,7 @@ caps.handback.revision: 17
 ||**VersionStatusChangeText**|En formato de texto plano, texto que los usuarios de correo electrónico obtienen cuando el estado de una versión cambia. Solo los usuarios con permiso **Actualizar** para el modelo completo reciben este correo electrónico.|  
 ||**VersionStatusChangeHTML**|En el formato HTML, texto que los usuarios de correo electrónico obtienen cuando el estado de una versión cambia. Solo los usuarios con permiso **Actualizar** para el modelo completo reciben este correo electrónico.|  
   
- Para obtener más información, consulte [Notificaciones &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md).  
+ Para más información, vea [Notificaciones &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md).  
   
 ##  <a name="Security"></a> Configuración de seguridad  
   
@@ -144,7 +149,7 @@ caps.handback.revision: 17
   
 -   **AttributeExplorerMarkAllActionMemberCount**  
   
-## Vea también  
- [Seguridad de objetos de base de datos &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  
+## <a name="see-also"></a>Vea también  
+ [Seguridad de objetos de base de datos &#40; Master Data Services &#41;](../master-data-services/database-object-security-master-data-services.md)  
   
   

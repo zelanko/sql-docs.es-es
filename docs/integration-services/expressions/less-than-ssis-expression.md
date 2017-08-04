@@ -1,25 +1,30 @@
 ---
-title: "&lt; (Menor que) (expresi&#243;n de SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "menor que (<)"
-  - "< (operador menor que)"
+title: "&lt;(Menor que) (Expresión de SSIS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- less than (<)
+- < (less than operator)
 ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eb12a0ff651cf50c5208bae6ba0229d1e6be85f6
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# &lt; (Menor que) (expresi&#243;n de SSIS)
+# <a name="lt-less-than-ssis-expression"></a>&lt;(Menor que) (Expresión de SSIS)
   Realiza una comparación para determinar si la primera expresión es menor que la segunda. El evaluador de expresiones convierte automáticamente muchos tipos de datos antes de realizar la comparación.  
   
 > [!NOTE]  
@@ -27,7 +32,7 @@ caps.handback.revision: 48
   
  Sin embargo, algunos tipos de datos requieren que la expresión incluya una conversión explícita para que se pueda evaluar correctamente. Para más información sobre conversiones válidas entre tipos de datos, vea [Conversión &#40;expresión de SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -35,14 +40,14 @@ expression1 < expression2
   
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *expression1, expression2*  
  Es cualquier expresión válida.  
   
-## Tipos de resultado  
+## <a name="result-types"></a>Tipos de resultado  
  DT_BOOL  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Si una de las expresiones de la comparación es NULL, el resultado de la comparación es NULL. Si ambas expresiones son NULL, el resultado es NULL.  
   
  El conjunto de expresiones *expression1* y *expression2*debe cumplir una de las siguientes reglas:  
@@ -79,7 +84,7 @@ expression1 < expression2
   
  Para obtener más información acerca de los tipos de datos, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Ejemplos de expresiones  
+## <a name="expression-examples"></a>Ejemplos de expresiones  
  Este ejemplo devuelve TRUE si la fecha actual es posterior al 4 de julio de 2003. Para más información, vea [GETDATE &#40;expresión de SSIS&#41;](../../integration-services/expressions/getdate-ssis-expression.md).  
   
 ```  
@@ -98,11 +103,11 @@ ListPrice < 500
 @LPrice < 500  
 ```  
   
-## Vea también  
- [&#62; &#40;Mayor que&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
- [&#62;= &#40;Mayor o igual que&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
- [&#60;= &#40;Menor o igual que&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
- [Precedencia y capacidad de asociación de operadores](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Vea también  
+ [&#62; &#40; Mayor &#41; &#40; Expresión de SSIS &#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
+ [&#62; = &#40; Mayor que o igual a &#41; &#40; Expresión de SSIS &#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
+ [&#60; = &#40; Menor o igual a &#41; &#40; Expresión de SSIS &#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
+ [Prioridad y asociatividad](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operadores &#40; Expresión de SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

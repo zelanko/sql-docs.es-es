@@ -1,28 +1,33 @@
 ---
-title: "Ordenar datos para las transformaciones Mezclar y Combinaci&#243;n de mezcla | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "atributos de ordenación [Integration Services]"
-  - "columnas de salida [Integration Services]"
+title: "Ordenar los datos para la combinación y transformaciones de combinación de mezcla | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sort attributes [Integration Services]
+- output columns [Integration Services]
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b9a99a414a74e873e5c09d22c6469a13ac04a32d
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Ordenar datos para las transformaciones Mezclar y Combinaci&#243;n de mezcla
+# <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Ordenar datos para las transformaciones Mezclar y Combinación de mezcla
   En [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], las transformaciones Mezclar y Combinación de mezcla requieren datos ordenados en sus entradas. Los datos de entrada deben estar ordenados físicamente, y se deben establecer opciones de ordenación en las salidas y en las columnas de salida del origen o en la transformación de nivel superior. Si las opciones de ordenación indican que los datos están ordenados, pero en realidad no lo están, los resultados de la operación de mezcla o combinación de mezcla son impredecibles.  
   
-## Ordenar los datos  
+## <a name="sorting-the-data"></a>Ordenar los datos  
  Para ordenar estos datos, puede usar uno de los métodos siguientes:  
   
 -   En el origen, use una cláusula ORDER BY en la instrucción empleada para cargar los datos.  
@@ -31,7 +36,7 @@ caps.handback.revision: 31
   
  Si los datos son cadenas, las transformaciones Mezclar y Combinación de mezcla esperan que los valores de cadena se hayan ordenado usando la intercalación de Windows. Para proporcionar valores de cadena a las transformaciones Mezclar y Combinación de mezcla ordenadas mediante la intercalación de Windows, use el procedimiento siguiente:  
   
-#### Para proporcionar valores de cadena ordenados mediante la intercalación de Windows  
+#### <a name="to-provide-string-values-that-are-sorted-by-using-windows-collation"></a>Para proporcionar valores de cadena ordenados mediante la intercalación de Windows  
   
 -   Utilice una transformación Ordenar para ordenar los datos.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 31
     > [!IMPORTANT]  
     >  No puede utilizar la cláusula ORDER BY en solitario porque la cláusula ORDER BY utiliza una intercalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para ordenar los valores de cadena. El uso de la intercalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede dar lugar a un criterio de ordenación diferente del obtenido con la intercalación de Windows, lo que puede hacer que la transformación Mezclar o Combinación de mezcla genere resultados inesperados.  
   
-## Establecer opciones de ordenación en los datos  
+## <a name="setting-sort-options-on-the-data"></a>Establecer opciones de ordenación en los datos  
  Hay dos propiedades de ordenación importantes que se deben establecer para el origen o la transformación de nivel superior que proporciona los datos a las transformaciones Mezclar y Combinación de mezcla:  
   
 -   La propiedad **IsSorted** de la salida que indica si los datos se han ordenado. Esta propiedad debe estar establecida en **True**.  
@@ -58,7 +63,7 @@ caps.handback.revision: 31
   
  Sin embargo, si no usa una transformación Ordenar para ordenar los datos, debe establecer estas propiedades de ordenación manualmente en el origen o en la transformación de nivel superior. Para establecer manualmente las propiedades de ordenación en el origen o en la transformación de nivel superior, use el procedimiento siguiente.  
   
-#### Para establecer manualmente los atributos de ordenación en un componente de origen o de transformación  
+#### <a name="to-manually-set-sort-attributes-on-a-source-or-transformation-component"></a>Para establecer manualmente los atributos de ordenación en un componente de origen o de transformación  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] que contiene el paquete que desea.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 31
   
 5.  Haga clic en la pestaña **Propiedades de entrada y salida** .  
   
-6.  Haga clic en **Salida de \<nombre del componente>** y establezca la propiedad **IsSorted** en **True**.  
+6.  Haga clic en  **\<nombre de componente > salida**y establezca el **IsSorted** propiedad **True**.  
   
     > [!NOTE]  
     >  Si establece manualmente la propiedad **IsSorted** de la salida en **True** y los datos no están ordenados, es posible que falten datos o que haya comparaciones de datos no válidas en la transformación de nivel inferior Mezclar o Combinación de mezcla al ejecutar el paquete.  
@@ -87,7 +92,7 @@ caps.handback.revision: 31
   
     -   El valor predeterminado, 0, indica que la columna no está ordenada. Conserve el valor 0 para las columnas de salida que no forman parte de la ordenación.  
   
-     Como ejemplo del modo en que se establece la propiedad **SortKeyPosition**, considere la instrucción Transact-SQL siguiente que carga datos en un origen:  
+     Como ejemplo del modo en que se establece la propiedad **SortKeyPosition** , considere la instrucción Transact-SQL siguiente que carga datos en un origen:  
   
      `SELECT * FROM MyTable ORDER BY ColumnA, ColumnB DESC, ColumnC`  
   
@@ -105,11 +110,11 @@ caps.handback.revision: 31
   
 11. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
   
-## Vea también  
- [Transformación Mezclar](../../../integration-services/data-flow/transformations/merge-transformation.md)   
- [Transformación Combinación de mezcla](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
+## <a name="see-also"></a>Vea también  
+ [Transformación mezclar](../../../integration-services/data-flow/transformations/merge-transformation.md)   
+ [Transformación combinación de mezcla](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Rutas de Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
- [Tarea Flujo de datos](../../../integration-services/control-flow/data-flow-task.md)  
+ [Tarea flujo de datos](../../../integration-services/control-flow/data-flow-task.md)  
   
   

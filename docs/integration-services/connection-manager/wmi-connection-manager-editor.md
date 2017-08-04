@@ -1,31 +1,36 @@
 ---
-title: "Editor del administrador de conexiones WMI | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.wmiconnection.f1"
-helpviewer_keywords: 
-  - "Editor del administrador de conexiones WMI"
+title: "Editor del Administrador de conexión de WMI | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.wmiconnection.f1
+helpviewer_keywords:
+- WMI Connection Manager Editor
 ms.assetid: 0ef2c913-0779-4a07-989e-3361cd83170b
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6b39bf96634b93b366492c9551942e633e20e9b0
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor del administrador de conexiones WMI
+# <a name="wmi-connection-manager-editor"></a>Editor del administrador de conexiones WMI
   Use el cuadro de diálogo **Administrador de conexiones WMI** para especificar una conexión del Instrumental de administración de Microsoft Windows (WMI) a un servidor.  
   
  Para obtener más información acerca del administrador de conexiones WMI, vea [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md).  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Nombre**  
  Proporcione un nombre único para el administrador de conexiones.  
   
@@ -50,9 +55,9 @@ caps.handback.revision: 28
  **Prueba**  
  Permite probar la configuración del administrador de conexiones.  
   
-## Vea también  
- [Referencia de errores y mensajes de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Conceptos del proveedor WMI de administración de configuración](../Topic/WMI%20Provider%20for%20Configuration%20Management%20Concepts.md)   
+## <a name="see-also"></a>Vea también  
+ [Referencia de mensajes y Error de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Proveedor WMI de conceptos de administración de configuración](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
  [Conceptos del proveedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

@@ -1,35 +1,40 @@
 ---
-title: "Combinar datos mediante la transformaci&#243;n Uni&#243;n de todo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "conjuntos de datos, combinar [Integration Services]"
-  - "combinar entradas [Integration Services]"
-  - "combinar conjuntos de datos"
-  - "Unión de todo, transformación"
-  - "conjuntos de datos [Integration Services], combinar"
+title: "Combinar datos mediante la unión transformación todo | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- merging datasets [Integration Services]
+- merging inputs [Integration Services]
+- combining datasets
+- Union All transformation
+- datasets [Integration Services], merging
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b2f9933f48083b0849ba01312979911bacb4fd86
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Combinar datos mediante la transformaci&#243;n Uni&#243;n de todo
+# <a name="merge-data-by-using-the-union-all-transformation"></a>Combinar datos mediante la transformación Unión de todo
   Para agregar y configurar una transformación Unión de todo, el paquete ya debe incluir al menos una tarea Flujo de datos y dos orígenes de datos.  
   
  La transformación Unión de todo combina varias entradas. La primera entrada que se conecta con la transformación es la entrada de referencia y las entradas conectadas posteriormente son las entradas secundarias. La salida incluye las columnas en la entrada de referencia.  
   
-### Para combinar entradas en un flujo de datos  
+### <a name="to-combine-inputs-in-a-data-flow"></a>Para combinar entradas en un flujo de datos  
   
-1.  En [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], haga doble clic en el paquete del Explorador de soluciones para abrir el paquete en el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] y, después, haga clic en la pestaña **Flujo de datos**.  
+1.  En [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], haga doble clic en el paquete del Explorador de soluciones para abrir el paquete en el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] y, después, haga clic en la pestaña **Flujo de datos** .  
   
 2.  Desde el **cuadro de herramientas**, arrastre la transformación Unión de todo a la superficie de diseño de la pestaña **Flujo de datos** .  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 22
   
 4.  Haga doble clic en la transformación Unión de todo.  
   
-5.  En el **Editor de transformación Unión de todo**, asigne una columna de una entrada a una columna en la lista **Nombre de la columna de salida** haciendo clic en una fila y luego seleccionando una columna en la lista de entrada. Seleccione **\<omitir>** en la lista de entrada para omitir la asignación de la columna.  
+5.  En el **Editor de transformación Unión de todo**, asigne una columna de una entrada a una columna en la lista **Nombre de la columna de salida** haciendo clic en una fila y luego seleccionando una columna en la lista de entrada. Seleccione  **\<omitir >** en la lista de entrada para omitir la asignación de la columna.  
   
     > [!NOTE]  
     >  La asignación entre dos columnas requiere que los metadatos de las columnas coincidan.  
@@ -53,10 +58,10 @@ caps.handback.revision: 22
   
 9. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
   
-## Vea también  
- [Transformación Unión de todo](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+## <a name="see-also"></a>Vea también  
+ [Unión transformación todo](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Rutas de Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
- [Tarea Flujo de datos](../../../integration-services/control-flow/data-flow-task.md)  
+ [Tarea flujo de datos](../../../integration-services/control-flow/data-flow-task.md)  
   
   

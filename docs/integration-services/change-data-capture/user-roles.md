@@ -1,28 +1,33 @@
 ---
-title: "Roles de usuario | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Roles de usuario | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c302cecea6c443e97badeca3737211cdadec239
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Roles de usuario
+# <a name="user-roles"></a>Roles de usuario
   En esta sección se describen los roles de usuario para el Servicio de captura de datos modificados para Oracle de Attunity. Los roles descritos son roles de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , roles de Windows o roles de base de datos de Oracle.  
   
-## Roles de usuario de Windows  
+## <a name="windows-user-roles"></a>Roles de usuario de Windows  
  A continuación se describen los roles de usuario de Windows que el servicio CDC de Oracle emplea.  
   
-### Administrador del equipo: Servicio CDC de Oracle  
+### <a name="computer-administrator-oracle-cdc-service"></a>Administrador del equipo: Servicio CDC de Oracle  
  El administrador del equipo es un usuario de Windows responsable de crear y mantener el servicio CDC en el equipo. Este usuario debe pertenecer al grupo Administradores del equipo local.  
   
  Entre las tareas realizadas por el administrador del equipo del servicio CDC de Oracle se incluyen:  
@@ -51,10 +56,10 @@ caps.handback.revision: 7
   
 -   Actuar como administrador del equipo autorizado como administrador en el equipo donde está instalado el servicio CDC para Oracle. Esta persona instala el servicio CDC para Oracle y emplea la Consola de configuración del servicio CDC para configurar un servicio CDC para Oracle en un equipo local.  
   
-### Cuenta de servicio: Servicio CDC de Oracle  
+### <a name="service-account-oracle-cdc-service"></a>Cuenta de servicio: Servicio CDC de Oracle  
  Esta cuenta de servicio de Windows de servicio CDC de Oracle es una cuenta de Windows que se usa para ejecutar el servicio CDC de Oracle (la cuenta de servicio).  
   
- El único privilegio necesario para la cuenta de servicio es poder usar el cliente de Oracle y el proveedor ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Esta cuenta no necesita tener acceso a archivos, a menos que lo necesiten determinados proveedores (por ejemplo, si la cadena de conexión de cliente de Oracle hace referencia a instancias de base de datos de Oracle en un archivo **tnsnames.ora**, la cuenta de servicio necesita tener acceso de lectura a ese archivo).  
+ El único privilegio necesario para la cuenta de servicio es poder usar el cliente de Oracle y el proveedor ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Esta cuenta no necesita tener acceso a archivos, a menos que lo necesiten determinados proveedores (por ejemplo, si la cadena de conexión de cliente de Oracle hace referencia a instancias de base de datos de Oracle en un archivo **tnsnames.ora** , la cuenta de servicio necesita tener acceso de lectura a ese archivo).  
   
  Al crear un servicio CDC de Oracle en Windows Vista o Windows Server 2008, la cuenta de servicio predeterminada es SERVICIO DE RED.  
   
@@ -62,17 +67,17 @@ caps.handback.revision: 7
   
  Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en otro equipo o es una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en clúster y el servicio necesita conectar con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino usando la autenticación de Windows, la cuenta de servicio debe ser una cuenta de dominio.  
   
-## Roles de usuario de SQL Server  
+## <a name="sql-server-user-roles"></a>Roles de usuario de SQL Server  
  A continuación se describen los roles de usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el servicio CDC de Oracle emplea.  
   
-### Administrador del servicio CDC de Oracle  
+### <a name="oracle-cdc-service-administrator"></a>Administrador del servicio CDC de Oracle  
  El administrador del servicio CDC es un usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con control total sobre los artefactos del servicio CDC de Oracle en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino. El administrador del servicio CDC usa la Consola del diseñador CDC de Oracle para diseñar instancias CDC de Oracle.  
   
  El administrador del servicio CDC debe conceder los roles fijos de servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] public **y** dbcreator **de**.  
   
  Entre las tareas realizadas por el administrador del servicio CDC se incluyen:  
   
--   Preparar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para hospedar instancias CDC de Oracle (que son bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). En esta tarea, se crea una base de datos especial denominada MSXDBCDC en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Preparar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para hospedar instancias CDC de Oracle (que son bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). En esta tarea, se crea una base de datos especial denominada MSXDBCDC en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Crear una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la instancia CDC de Oracle. La tarea incluye habilitar la nueva base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para CDC, para la que se necesita un administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (**sysadmin**).  
   
@@ -90,31 +95,31 @@ caps.handback.revision: 7
   
  El administrador del servicio CDC no necesita conocer la contraseña maestra especificada al crear el servicio de Windows CDC de Oracle.  
   
-### Administrador del sistema  
+### <a name="system-administrator"></a>Administrador del sistema  
  El administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y necesita tener concedido el rol fijo de servidor **sysadmin** en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asociada a los servicios CDC de Oracle.  
   
  Solo hay una tarea específica de CDC de Oracle que se realiza con el rol administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y es habilitar la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para una instancia CDC de Oracle para CDC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esta tarea se realiza mediante la Consola del diseñador CDC de Oracle al crear una nueva instancia CDC de Oracle.  
   
-### Usuario del servicio CDC de Oracle  
+### <a name="oracle-cdc-service-user"></a>Usuario del servicio CDC de Oracle  
  El usuario del servicio CDC de Oracle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el servicio CDC de Oracle emplea para realizar su trabajo en la base de datos MSXDBCDC y en todas las instancias CDC de Oracle (bases de datos CDC) administradas por este servicio.  
   
  El usuario del servicio CDC de Oracle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser lo siguiente:  
   
--   Miembro de los roles fijos de base de datos **db_dlladmin**, **db_datareader** y **db_datawriter** para todas las bases de datos CDC controladas por el servidor.  
+-   Miembro de los roles fijos de base de datos **db_dlladmin**, **db_datareader**y **db_datawriter** para todas las bases de datos CDC controladas por el servidor.  
   
 -   Miembro de los roles fijos de base de datos **db_datareader** y **db_datawriter** para la base de datos MSXDBCDC.  
   
  Puesto que el servicio CDC de Oracle usa un único inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para trabajar con todas las bases de datos CDC y la base de datos MSXDBCDC, este inicio de sesión se debe asignar en todas las bases de datos.  
   
-### Consumidor de cambios CDC de Oracle  
+### <a name="oracle-cdc-change-consumer"></a>Consumidor de cambios CDC de Oracle  
  El consumidor de cambios CDC de Oracle es un usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa los cambios almacenados en las tablas CDC de la base de datos de la instancia CDC de Oracle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Este usuario determina el rol de usuario necesario para tener acceso a cada una de las tablas CDC mediante las funciones CDC generadas por la infraestructura CDC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si no se especifica ningún rol de usuario al especificar una instancia de captura, el acceso a los cambios está limitado al miembro del rol fijo de base de datos **db_owner** de la base de datos CDC.  
   
-## Roles de usuario de Oracle  
+## <a name="oracle-user-roles"></a>Roles de usuario de Oracle  
  A continuación se describen los roles de usuario de Oracle que el servicio CDC de Oracle emplea.  
   
-### Administrador de base de datos (DBA)  
+### <a name="database-administrator-dba"></a>Administrador de base de datos (DBA)  
  El administrador de base de datos (DBA) de Oracle es un usuario de bases de datos de Oracle. Entre las tareas realizadas por el DBA de Oracle se incluyen:  
   
 -   Configurar la base de datos de Oracle de origen para que funcione en modo ARCHIVELOG.  
@@ -131,14 +136,14 @@ caps.handback.revision: 7
   
  El administrador de base de datos de Oracle trabaja en coordinación con el administrador del servicio CDC de Oracle en la configuración de las instancias CDC de Oracle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### Usuario de minería de registros  
+### <a name="log-mining-user"></a>Usuario de minería de registros  
  El usuario extractor de registros de Oracle es un usuario especial de base de datos de Oracle al que se conceden los privilegios necesarios para obtener acceso a los registros de transacciones de Oracle y procesarlos.  
   
  Las credenciales de este usuario se almacenan en la base de datos de la instancia CDC de Oracle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el cifrado de claves asimétricas. Solo son accesibles para el servicio CDC de Oracle, no para el propietario de la base de datos de la instancia CDC de Oracle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  En la lista siguiente se describen los privilegios necesarios que se deben conceder al usuario de minería de registros:  
   
--   SELECT en \<any-captured-table>  
+-   Seleccione en \<any-captured-table >  
   
 -   SELECT ANY TRANSACTION  
   
@@ -166,7 +171,7 @@ caps.handback.revision: 7
   
  Si alguno de estos privilegios no se puede conceder a un V$xxx, se debe conceder al V $xxx.  
   
-### Usuario de esquema  
+### <a name="schema-user"></a>Usuario de esquema  
  El usuario de esquema de Oracle es un usuario de Oracle con acceso de lectura para el esquema de las tablas de Oracle que se van a capturar. Este usuario es necesario cuando se trabaja con la Consola del diseñador CDC de Oracle recuperar la lista de esquemas de Oracle, tablas que se van a capturar y sus columnas, índices y claves.  
   
  Las credenciales para este usuario nunca se almacenan. La Consola del diseñador CDC las solicita cada vez que son necesarias y se mantienen para las demás sesiones de la interfaz de usuario.  

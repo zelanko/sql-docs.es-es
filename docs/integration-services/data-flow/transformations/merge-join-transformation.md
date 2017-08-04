@@ -1,30 +1,35 @@
 ---
-title: "Transformaci&#243;n Combinaci&#243;n de mezcla | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.mergejointrans.f1"
-helpviewer_keywords: 
-  - "conjuntos de datos [Integration Services]"
-  - "Combinación de mezcla, transformación"
-  - "conjuntos de datos [Integration Services], combinar"
-  - "combinar conjuntos de datos [Integration Services]"
-  - "combinaciones [SQL Server], SSIS"
+title: "Transformación combinación de mezcla | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.mergejointrans.f1
+helpviewer_keywords:
+- datasets [Integration Services]
+- Merge Join transformation
+- datasets [Integration Services], joining
+- joining datasets [Integration Services]
+- joins [SQL Server], SSIS
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 caps.latest.revision: 54
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38dd168d67b4be972be9c135e754abf3b925dae0
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transformaci&#243;n Combinaci&#243;n de mezcla
+# <a name="merge-join-transformation"></a>Transformación Combinación de mezcla
   La transformación Combinación de mezcla proporciona una salida que se genera combinando dos conjuntos de datos ordenados mediante una combinación FULL, LEFT o INNER. Por ejemplo, puede utilizar una combinación LEFT para combinar una tabla que incluye información de productos con una tabla que incluye el país o la región en que se fabricó un producto. El resultado es una tabla que muestra todos los productos y su país o región de origen.  
   
  Puede configurar la transformación Combinación de mezcla de las siguientes maneras:  
@@ -40,16 +45,16 @@ caps.handback.revision: 54
   
  Esta transformación tiene dos entradas y una salida. No admite una salida de error.  
   
-## Requisitos de entrada  
+## <a name="input-requirements"></a>Requisitos de entrada  
  La transformación Combinación de mezcla requiere datos ordenados para sus entradas. Para obtener más información sobre este importante requisito, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
   
-## Requisitos de combinación  
+## <a name="join-requirements"></a>Requisitos de combinación  
  La transformación Combinación de mezcla requiere que las columnas combinadas tengan metadatos coincidentes. Por ejemplo, no puede combinar una columna que tenga un tipo de datos numérico con una columna que tenga un tipo de datos de carácter. Si los datos tienen un tipo de datos de cadena, la longitud de la columna de la segunda entrada debe ser menor o igual que la longitud de la columna de la primera entrada con la que se va a combinar.  
   
-## Limitación del búfer  
+## <a name="buffer-throttling"></a>Limitación del búfer  
  Ya no tiene que configurar el valor de la propiedad **MaxBuffersPerInput** porque Microsoft ha realizado modificaciones que reducen el riesgo de que la transformación Combinación de mezcla utilice demasiada memoria. Este problema se producía a veces cuando varias entradas de la Combinación de mezcla generaban datos a velocidades desiguales.  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
  Puede establecer propiedades a través del Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
  Para obtener información sobre cómo establecer las propiedades de esta transformación, haga clic en uno de los temas siguientes:  
@@ -60,10 +65,10 @@ caps.handback.revision: 54
   
 -   [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Editor de transformación Combinación de mezcla](../../../integration-services/data-flow/transformations/merge-join-transformation-editor.md)   
- [Transformación Mezclar](../../../integration-services/data-flow/transformations/merge-transformation.md)   
- [Transformación Unión de todo](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+ [Transformación mezclar](../../../integration-services/data-flow/transformations/merge-transformation.md)   
+ [Unión transformación todo](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

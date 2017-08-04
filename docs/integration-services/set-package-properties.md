@@ -1,37 +1,42 @@
 ---
-title: "Establecer las propiedades de paquetes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "paquetes de Integration Services, propiedades"
-  - "propiedades [Integration Services]"
-  - "puntos de comprobación [Integration Services]"
-  - "ejecución, propiedades [Integration Services]"
-  - "paquetes [Integration Services], propiedades"
-  - "identificación, propiedades [Integration Services]"
-  - "contraseñas [Integration Services]"
-  - "SSIS paquetes, propiedades"
-  - "transacción, propiedades [Integration Services]"
-  - "actualizar propiedades del paquete"
-  - "valor de ejecución forzada, propiedades [Integration Services]"
-  - "seguridad, propiedades [Integration Services]"
-  - "versión, propiedades [Integration Services]"
-  - "SQL Server Integration Services, paquetes, propiedades"
+title: Establecer las propiedades de paquete | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Integration Services packages, properties
+- properties [Integration Services]
+- checkpoints [Integration Services]
+- execution properties [Integration Services]
+- packages [Integration Services], properties
+- identification properties [Integration Services]
+- passwords [Integration Services]
+- SSIS packages, properties
+- transaction properties [Integration Services]
+- updating package properties
+- forced execution value properties [Integration Services]
+- security properties [Integration Services]
+- version properties [Integration Services]
+- SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: 658f7e77fe821fa4821b61162662175ab5f840c1
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Establecer las propiedades de paquetes
+# <a name="set-package-properties"></a>Establecer las propiedades de paquetes
   Cuando se crea un paquete en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mediante la interfaz gráfica proporcionada por [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , se configuran las propiedades del objeto de paquete en la ventana Propiedades.  
   
  La ventana **Propiedades** proporciona una lista categorizada y alfabética de propiedades. Para organizar la ventana **Propiedades** por categorías, haga clic en el icono Por categorías.  
@@ -54,13 +59,13 @@ caps.handback.revision: 39
   
 -   [Versión](#Version)  
   
- Para obtener información sobre propiedades adicionales de paquetes que no se pueden establecer en la ventana **Propiedades**, vea <xref:Microsoft.SqlServer.Dts.Runtime.Package>.  
+ Para obtener información sobre propiedades adicionales de paquetes que no se pueden establecer en la ventana **Propiedades** , vea <xref:Microsoft.SqlServer.Dts.Runtime.Package>.  
   
-### Para establecer las propiedades del paquete en la ventana Propiedades.  
+### <a name="to-set-package-properties-in-the-properties-window"></a>Para establecer las propiedades del paquete en la ventana Propiedades.  
   
--   [Establecer las propiedades de un paquete](../Topic/Set%20the%20Properties%20of%20a%20Package.md)  
+-   [Establecer las propiedades de un paquete](http://msdn.microsoft.com/library/0d20346e-475c-412f-b3ff-7bce25242b7a)  
   
-## Propiedades por categoría  
+## <a name="properties-by-category"></a>Propiedades por categoría  
  Las siguientes tablas enumeran las propiedades de paquete por categoría.  
   
 ###  <a name="Checkpoints"></a> Puntos de comprobación  
@@ -107,7 +112,7 @@ caps.handback.revision: 39
 |**CreatorComputerName**|Nombre del equipo en el que creó el paquete.|  
 |**CreatorName**|Nombre de la persona que creó el paquete.|  
 |**Description**|Descripción de la funcionalidad del paquete.|  
-|**ID**|GUID del paquete, que se asigna cuando se crea el paquete. Esta propiedad es de solo lectura. Para generar un nuevo valor aleatorio para la propiedad **ID**, seleccione **\<Generar nuevo Id.>** en la lista desplegable.|  
+|**ID**|GUID del paquete, que se asigna cuando se crea el paquete. Esta propiedad es de solo lectura. Para generar un nuevo valor aleatorio para el **identificador** propiedad, seleccione  **\<generar nuevo Id.\>**  en la lista desplegable.|  
 |**Nombre**|Nombre del paquete.|  
 |**PackageType**|Tipo de paquete. Los valores son **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**y **SQLReplication**. El valor predeterminado de esta propiedad es **Default**. Para obtener más información, vea <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   
@@ -123,10 +128,10 @@ caps.handback.revision: 39
 |**LoggingMode**|Valor que especifica el comportamiento de registro del paquete. Los valores son **Disabled**, **Enabled**y **UseParentSetting**. El valor predeterminado de esta propiedad es **UseParentSetting**. Para obtener más información, vea <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  
 |**OfflineMode**|Indica si el paquete está en el modo sin conexión. Esta propiedad es de solo lectura. La propiedad se establece en el nivel de proyecto. Por lo general, el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] intenta conectarse a cada origen de datos utilizado por el paquete para validar los metadatos asociados a los orígenes y destinos. Es posible habilitar la opción **Trabajar sin conexión** en el menú **SSIS** , incluso antes de abrir un paquete, para evitar los intentos de conexión y los errores de validación provocados por esos intentos cuando los orígenes de datos no están disponibles. También se puede habilitar la opción **Trabajar sin conexión** para acelerar las operaciones en el diseñador, y deshabilitarla solo cuando se quiere validar el paquete.|  
 |**SuppressConfigurationWarnings**|Indica si se suprimen las advertencias generadas por configuraciones. El valor predeterminado de esta propiedad es **False**.|  
-|**UpdateObjects**|Indica si el paquete se actualiza para usar versiones más recientes de los objetos que contiene, si hay versiones más recientes disponibles. Por ejemplo, si esta propiedad se establece en **True**, un paquete que incluye una tarea Inserción masiva se actualiza para usar una versión más reciente de la tarea Inserción masiva que proporciona [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. El valor predeterminado de esta propiedad es **False**.|  
+|**UpdateObjects**|Indica si el paquete se actualiza para usar versiones más recientes de los objetos que contiene, si hay versiones más recientes disponibles. Por ejemplo, si esta propiedad se establece en **True**, un paquete que incluye una tarea Inserción masiva se actualiza para usar una versión más reciente de la tarea Inserción masiva que proporciona [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . El valor predeterminado de esta propiedad es **False**.|  
   
 ###  <a name="Security"></a> Seguridad  
- Las propiedades en esta categoría se usan para configurar el nivel de protección del paquete. Para más información, consulte [Access Control for Sensitive Data in Packages](../integration-services/packages/access-control-for-sensitive-data-in-packages.md).  
+ Las propiedades en esta categoría se usan para configurar el nivel de protección del paquete. Para más información, consulte [Access Control for Sensitive Data in Packages](../integration-services/security/access-control-for-sensitive-data-in-packages.md).  
   
 |Propiedad|Description|  
 |--------------|-----------------|  
@@ -151,5 +156,19 @@ caps.handback.revision: 39
 |**VersionGUID**|GUID de la versión del paquete. Esta propiedad es de solo lectura.|  
 |**VersionMajor**|Última versión importante del paquete.|  
 |**VersionMinor**|Última versión de menor importancia del paquete.|  
+
+## <a name="set-package-properties-in-the-properties-window"></a>Establecer las propiedades de paquete en la ventana Propiedades 
+1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contiene el paquete que desea configurar.  
   
+2.  En el **Explorador de soluciones**, haga doble clic en el paquete para abrirlo en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] , o bien haga clic con el botón derecho y seleccione **Diseñador de vistas**.  
+  
+3.  Haga clic en la pestaña **Flujo de control** y, a continuación, realice una de las operaciones siguientes:  
+  
+    -   Haga clic con el botón derecho en cualquier parte del fondo de la superficie de diseño de flujo de control y haga clic en **Propiedades**.  
+  
+    -   En el menú **Ver** , haga clic en **Ventana de propiedades**.  
+  
+4.  Modifique las propiedades del paquete en la ventana **Propiedades** .  
+  
+5.  En el menú **Archivo** , haga clic en **Guardar los elementos seleccionados** para guardar el paquete actualizado.  
   

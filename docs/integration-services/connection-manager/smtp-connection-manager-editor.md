@@ -1,31 +1,36 @@
 ---
-title: "Editor del administrador de conexiones SMTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.smtpconnection.f1"
-helpviewer_keywords: 
-  - "Editor del administrador de conexiones SMTP"
+title: "Editor del Administrador de conexión de SMTP | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.smtpconnection.f1
+helpviewer_keywords:
+- SMTP Connection Manager Editor
 ms.assetid: 2693de0d-b04d-4325-a856-ce667d2b8aa1
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3ef8edce1f187ac427463a0a0722c12666265d93
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor del administrador de conexiones SMTP
+# <a name="smtp-connection-manager-editor"></a>Editor del administrador de conexiones SMTP
   Use el cuadro de diálogo **Editor del administrador de conexiones SMTP** para especificar un servidor de protocolo simple de transferencia de correo (SMTP).  
   
  Para obtener más información acerca del administrador de conexiones SMTP, vea [SMTP Connection Manager](../../integration-services/connection-manager/smtp-connection-manager.md).  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Nombre**  
  Proporcione un nombre único para el administrador de conexiones.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 37
  **Habilitar capa de sockets seguros (SSL)**  
  Seleccione esta opción para cifrar comunicación mediante Capa de sockets seguros (SSL) al enviar mensajes de correo electrónico.  
   
-## Vea también  
- [Referencia de errores y mensajes de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
+## <a name="see-also"></a>Vea también  
+ [Referencia de mensajes y Error de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
   
   

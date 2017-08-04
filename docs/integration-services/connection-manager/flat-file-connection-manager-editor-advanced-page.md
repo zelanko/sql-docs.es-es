@@ -1,33 +1,38 @@
 ---
-title: "Editor del administrador de conexiones de archivos planos (p&#225;gina Avanzadas) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.ffileconnection.columnproperties.f1"
-helpviewer_keywords: 
-  - "Administrador de conexiones de archivos planos, editor del"
+title: "Editor del Administrador de conexiones de archivo (página avanzadas) planos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ffileconnection.columnproperties.f1
+helpviewer_keywords:
+- Flat File Connection Manager Editor
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
 caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6a7fee65a2bf7c387ec207f6f516c55b12b635b0
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor del administrador de conexiones de archivos planos (p&#225;gina Avanzadas)
+# <a name="flat-file-connection-manager-editor-advanced-page"></a>Editor del administrador de conexiones de archivos planos (página Avanzadas)
   Utilice la página **Avanzadas** del cuadro de diálogo **Editor del administrador de conexiones de archivos planos** para establecer prioridades que especifiquen la forma en que Integration Services debe leer y escribir datos en archivos planos. Puede cambiar los nombres de columna del archivo plano y establecer propiedades que incluyan tipos de datos y delimitadores para cada columna del archivo.  
   
  De forma predeterminada, la longitud de las columnas de cadena es de 50 caracteres. Puede cambiar la longitud de estas columnas para evitar el truncamiento de los datos o el exceso del ancho de columna. También puede actualizar otros metadatos para habilitar la compatibilidad con las columnas de destino. Por ejemplo, puede cambiar el tipo de datos de una columna que solo contiene tipos de datos enteros a un tipo de datos numéricos, como DT_I2. Puede realizar estas modificaciones de forma manual o puede hacer clic en el botón **Sugerir tipos...** para usar el cuadro de diálogo **Sugerir tipos de columna** a fin de evaluar datos de ejemplo y que algunos de estos cambios se realicen automáticamente.  
   
  Para obtener más información acerca del administrador de conexiones de archivos planos, vea [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Nombre del administrador de conexiones**  
  Especifique un nombre único para el administrador de conexiones de archivos planos en el flujo de trabajo. El nombre que indique se mostrará en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 36
 |**InputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, aparecerá como recuento de caracteres. Este valor se omite para las columnas delimitadas.<br /><br /> **Nota** En el modelo de objetos, el nombre de esta propiedad es ColumnWidth.|  
   
  **Nuevo**  
- Para agregar una nueva columna, haga clic en **Nuevo**. De manera predeterminada, el botón **Nueva** agrega una columna nueva al final de la lista. El botón siempre tiene las siguientes opciones, disponibles en la lista desplegable.  
+ Para agregar una columna, haga clic en **Nuevo**. De manera predeterminada, el botón **Nueva** agrega una columna nueva al final de la lista. El botón siempre tiene las siguientes opciones, disponibles en la lista desplegable.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -59,15 +64,15 @@ caps.handback.revision: 36
 |**Insertar detrás**|Inserta una nueva columna detrás de la columna seleccionada.|  
   
  **Delete**  
- Seleccione una columna y, después, haga clic en **Eliminar** para quitarla.  
+ Seleccione una columna y, después, haga clic en **Eliminar**para quitarla.  
   
  **Sugerir tipos**  
  Use el cuadro de diálogo **Sugerir tipos de columna** para evaluar los datos de ejemplo del archivo y obtener sugerencias para el tipo de datos y la longitud de cada columna. Para más información, vea [Referencia de la interfaz de usuario del cuadro de diálogo Sugerir tipos de columna](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md).  
   
-## Vea también  
- [Referencia de errores y mensajes de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor del administrador de conexiones de archivos planos &#40;página General&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)   
- [Editor del administrador de conexiones de archivos planos &#40;página Columnas&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)   
+## <a name="see-also"></a>Vea también  
+ [Referencia de mensajes y Error de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Planos, Editor del Administrador de conexiones de archivos &#40; Página general &#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)   
+ [Planos, Editor del Administrador de conexiones de archivos &#40; Página columnas &#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)   
  [Editor del administrador de conexiones de archivos planos &#40;página Vista previa&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)  
   
   

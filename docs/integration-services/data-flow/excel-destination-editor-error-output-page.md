@@ -1,31 +1,36 @@
 ---
-title: "Editor de destino de Excel (p&#225;gina Salida de error) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.exceldestadapter.erroroutput.f1"
-helpviewer_keywords: 
-  - "destino de Excel, editor de"
+title: "Editor de destino de Excel (página de salida de Error) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.exceldestadapter.erroroutput.f1
+helpviewer_keywords:
+- Excel Destination Editor
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
 caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7b826ecd93e7de8519b22f9001756fba6114bcf7
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de destino de Excel (p&#225;gina Salida de error)
+# <a name="excel-destination-editor-error-output-page"></a>Editor de destino de Excel (página Salida de error)
   Utilice la página **Avanzadas** del cuadro de diálogo **Editor de destino de Excel** para especificar opciones para el control de errores.  
   
  Para obtener más información acerca del destino de Excel, vea [Excel Destination](../../integration-services/data-flow/excel-destination.md).  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Entrada o salida**  
  Muestra el nombre del origen de datos.  
   
@@ -49,10 +54,10 @@ caps.handback.revision: 18
  **Aplicar**  
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
-## Vea también  
- [Referencia de errores y mensajes de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor de destino de Excel &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/excel-destination-editor-connection-manager-page.md)   
- [Editor de destino de Excel &#40;página Asignaciones&#41;](../../integration-services/data-flow/excel-destination-editor-mappings-page.md)   
- [Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+## <a name="see-also"></a>Vea también  
+ [Referencia de mensajes y Error de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de destino de Excel &#40; Página Administrador de conexiones &#41;](../../integration-services/data-flow/excel-destination-editor-connection-manager-page.md)   
+ [Editor de destino de Excel &#40; Página Asignaciones &#41;](../../integration-services/data-flow/excel-destination-editor-mappings-page.md)   
+ [Bucle a través de Excel, archivos y tablas mediante el uso de un contenedor de bucles Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
   

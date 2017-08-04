@@ -1,31 +1,36 @@
 ---
-title: "Editor de la tarea Cola de mensajes (p&#225;gina Recibir) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.msgqueuetask.receive.f1"
-helpviewer_keywords: 
-  - "Editor de la tarea Cola de mensajes"
+title: "Editor de tareas de cola de mensajes (página recibir) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.msgqueuetask.receive.f1
+helpviewer_keywords:
+- Message Queue Task Editor
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1f51937fa402accf4e18fefdcec5763987241de4
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de la tarea Cola de mensajes (p&#225;gina Recibir)
+# <a name="message-queue-task-editor-receive-page"></a>Editor de la tarea Cola de mensajes (página Recibir)
   Use la página **Recibir** del cuadro de diálogo **Editor de la tarea Cola de mensajes** para configurar una tarea de la cola de mensajes para recibir mensajes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ).  
   
  Para obtener información acerca de esta tarea, vea [Message Queue Task](../../integration-services/control-flow/message-queue-task.md).  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **RemoveFromMessageQueue**  
  Indique si desea eliminar el mensaje de la cola una vez recibido. De manera predeterminada, este valor se establece en **False**.  
   
@@ -45,9 +50,9 @@ caps.handback.revision: 29
 |**Mensaje de cadena**|El mensaje se almacena en la tarea Cola de mensajes. Al seleccionar este valor se muestra la opción dinámica **StringMessage**.|  
 |**Mensaje de cadena para variable**|El mensaje.<br /><br /> Al seleccionar este valor se muestra la opción dinámica **StringMessage**.|  
   
-## Opciones dinámicas de MessageType  
+## <a name="messagetype-dynamic-options"></a>Opciones dinámicas de MessageType  
   
-### MessageType = Mensaje de archivo de datos  
+### <a name="messagetype--data-file-message"></a>MessageType = Mensaje de archivo de datos  
  **SaveFileAs**  
  Escriba la ruta del archivo que quiere usar o haga clic en el botón de puntos suspensivos **(…)** para buscar el archivo.  
   
@@ -62,19 +67,19 @@ caps.handback.revision: 29
 |**Sin filtro**|La tarea no filtra mensajes. Al seleccionar este valor se muestra la opción dinámica **IdentifierReadOnly**.|  
 |**De paquete**|El mensaje solo recibe mensajes del paquete seleccionado. Al seleccionar este valor se muestra la opción dinámica **Identifier**.|  
   
-### Opciones dinámicas de Filtro  
+### <a name="filter-dynamic-options"></a>Opciones dinámicas de Filtro  
   
-#### Filtro = Sin filtro  
+#### <a name="filter--no-filter"></a>Filtro = Sin filtro  
  **IdentifierReadOnly**  
  Esta opción es de solo lectura. Podría estar en blanco o contener el GUID de un paquete si se ha establecido anteriormente la propiedad Filtro.  
   
-#### Filtro = De paquete  
- **Identificador**  
+#### <a name="filter--from-package"></a>Filtro = De paquete  
+ **Identifier**  
  Si elige aplicar un filtro, escriba el identificador único del paquete del que se recibirán los mensajes o haga clic en el botón de puntos suspensivos **(…)** y seleccione el paquete.  
   
- **Temas relacionados:** [Seleccionar un paquete](../../integration-services/control-flow/select-a-package.md).  
+ **Temas relacionados:** [Seleccionar un paquete](../../integration-services/control-flow/select-a-package.md)  
   
-### MessageType = Mensaje de variable  
+### <a name="messagetype--variable-message"></a>MessageType = Mensaje de variable  
  **Filtro**  
  Especifica si se desea aplicar un filtro a los mensajes. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
@@ -84,23 +89,23 @@ caps.handback.revision: 29
 |**De paquete**|El mensaje solo recibe mensajes del paquete seleccionado. Al seleccionar este valor se muestra la opción dinámica **Identifier**.|  
   
  **Variable**  
- Escriba el nombre de la variable o haga clic en \<**Nueva variable…**> y configure una nueva variable.  
+ Escriba el nombre de variable o haga clic en \< **nueva variable...** > y, a continuación, configure una nueva variable.  
   
- **Temas relacionados:** [Agregar variable](../Topic/Add%20Variable.md).  
+ **Temas relacionados:** [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-### Opciones dinámicas de Filtro  
+### <a name="filter-dynamic-options"></a>Opciones dinámicas de Filtro  
   
-#### Filtro = Sin filtro  
+#### <a name="filter--no-filter"></a>Filtro = Sin filtro  
  **IdentifierReadOnly**  
  Esta opción está en blanco.  
   
-#### Filtro = De paquete  
- **Identificador**  
+#### <a name="filter--from-package"></a>Filtro = De paquete  
+ **Identifier**  
  Si elige aplicar un filtro, escriba el identificador único del paquete del que se recibirán los mensajes o haga clic en el botón de puntos suspensivos **(…)** y seleccione el paquete.  
   
- **Temas relacionados:** [Seleccionar un paquete](../../integration-services/control-flow/select-a-package.md).  
+ **Temas relacionados:** [Seleccionar un paquete](../../integration-services/control-flow/select-a-package.md)  
   
-### MessageType = Mensaje de cadena  
+### <a name="messagetype--string-message"></a>MessageType = Mensaje de cadena  
  **Comparar**  
  Especifica si se desea aplicar un filtro a los mensajes. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
@@ -114,7 +119,7 @@ caps.handback.revision: 29
  **CompareString**  
  A menos que la opción **Comparar** se haya establecido en **Ninguno**, deberá indicar la cadena con la que se comparará el mensaje.  
   
-### MessageType = Mensaje de cadena para variable  
+### <a name="messagetype--string-message-to-variable"></a>MessageType = Mensaje de cadena para variable  
  **Comparar**  
  Especifica si se desea aplicar un filtro a los mensajes. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
@@ -129,15 +134,15 @@ caps.handback.revision: 29
  A menos que la opción **Comparar** se haya establecido en **Ninguno**, deberá indicar la cadena con la que se comparará el mensaje.  
   
  **Variable**  
- Escriba el nombre de la variable para retener el mensaje recibido o haga clic en \<**Nueva variable…**> y configure una nueva variable.  
+ Escriba el nombre de la variable para conservar el mensaje recibido o haga clic en \< **nueva variable...** > y, a continuación, configure una nueva variable.  
   
- **Temas relacionados:** [Agregar variable](../Topic/Add%20Variable.md).  
+ **Temas relacionados:** [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-## Vea también  
- [Referencia de errores y mensajes de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor de la tarea Cola de mensajes &#40;página General&#41;](../../integration-services/control-flow/message-queue-task-editor-general-page.md)   
- [Editor de la tarea Cola de mensajes &#40;página Enviar&#41;](../../integration-services/control-flow/message-queue-task-editor-send-page.md)   
- [Página Expresiones](../../integration-services/expressions/expressions-page.md)   
- [Tarea Cola de mensajes](../../integration-services/control-flow/message-queue-task.md)  
+## <a name="see-also"></a>Vea también  
+ [Referencia de mensajes y Error de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de tareas de cola de mensajes &#40; Página general &#41;](../../integration-services/control-flow/message-queue-task-editor-general-page.md)   
+ [Editor de tareas de cola de mensajes &#40; Enviar página &#41;](../../integration-services/control-flow/message-queue-task-editor-send-page.md)   
+ [Página expresiones](../../integration-services/expressions/expressions-page.md)   
+ [Tarea cola de mensajes](../../integration-services/control-flow/message-queue-task.md)  
   
   

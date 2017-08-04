@@ -1,41 +1,46 @@
 ---
-title: "TOKENCOUNT (expresi&#243;n de SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "TOKENCOUNT (expresión de SSIS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77faf8083207373dee5dba3721fb38f91eefc3f2
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# TOKENCOUNT (expresi&#243;n de SSIS)
+# <a name="tokencount-ssis-expression"></a>TOKENCOUNT (expresión de SSIS)
   Devuelve el número de tokens en una cadena que contiene los tokens separados por los delimitadores especificados.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 TOKENCOUNT(character_expression, delimiter_string)  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *character_expression*  
  Cadena que contiene los tokens separados por delimitadores.  
   
  *delimiter_string*  
  Cadena que contiene caracteres delimitadores. Por ejemplo, "; ,” contiene tres caracteres delimitadores punto y coma, un espacio en blanco y una coma.  
   
-## Tipos de resultado  
+## <a name="result-types"></a>Tipos de resultado  
  DT_I4  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Las observaciones siguientes se aplican a la función TOKEN:  
   
 -   La cadena delimitadora puede contener uno o más caracteres delimitadores.  
@@ -48,7 +53,7 @@ TOKENCOUNT(character_expression, delimiter_string)
   
 -   Puede usar variables y columnas como argumentos de esta expresión.  
   
-## Ejemplos de expresiones  
+## <a name="expression-examples"></a>Ejemplos de expresiones  
  En el ejemplo siguiente, la función de TOKENCOUNT devuelve 3 porque la cadena contiene tres tokens: "01", "12", "2011".  
   
 ```  
@@ -79,7 +84,7 @@ TOKENCOUNT("a:little|white dog","| ,.:")
 TOKENCOUNT("        a little white dog", " ")  
 ```  
   
-## Vea también  
- [Funciones &#40;expresión de SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Vea también  
+ [Funciones &#40; Expresión de SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

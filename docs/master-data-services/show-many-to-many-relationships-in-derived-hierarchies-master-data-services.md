@@ -1,26 +1,31 @@
 ---
-title: "Visualizaci&#243;n de relaciones varios a varios en jerarqu&#237;as derivadas (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Visualización de relaciones de varios a varios en jerarquías derivadas (Master Data Services) | Documentos de Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 5653a69d945fda68c197107461f6af0861135505
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Visualizaci&#243;n de relaciones varios a varios en jerarqu&#237;as derivadas (Master Data Services)
+# <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Visualización de relaciones varios a varios en jerarquías derivadas (Master Data Services)
   En las jerarquías derivadas se muestran relaciones uno a varios y, ahora, también se pueden ver en ellas relaciones varios a varios.  
   
-## Relaciones de varios a varios (M2M)  
+## <a name="many-to-many-m2m-relationships"></a>Relaciones de varios a varios (M2M)  
  Se puede modelar una relación de varios a varios (M2M) entre dos entidades mediante el uso de una tercera entidad que proporcione una asignación entre ellas.  
   
  ![mds_hierarchies_manytomany](../master-data-services/media/mds-hierarchies-manytomany.png "mds_hierarchies_manytomany")  
@@ -37,7 +42,7 @@ caps.handback.revision: 13
   
  ![mds_hierarchies_edit_derived_hierarchy_one](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-one.PNG "mds_hierarchies_edit_derived_hierarchy_one")  
   
- En la captura de pantalla anterior, observe que la entidad **Employee** figura en **Niveles actuales** , en la parte intermedia, como el único nivel. En la **vista previa** de la jerarquía derivada del lado derecho podrá ver una lista de todos los miembros de la entidad **Employee** . En la sección **Niveles disponibles** del lado izquierdo se muestran los niveles que se pueden agregar encima del nivel superior actual (**Employee**). La mayoría de ellos son atributos basados en dominio (DBA) de la entidad **Employee**, incluido el DBA **Department**.  
+ En la captura de pantalla anterior, observe que la entidad **Employee** figura en **Niveles actuales** , en la parte intermedia, como el único nivel. En la **vista previa** de la jerarquía derivada del lado derecho podrá ver una lista de todos los miembros de la entidad **Employee** . En la sección **Niveles disponibles** del lado izquierdo se muestran los niveles que se pueden agregar encima del nivel superior actual (**Employee**). La mayoría de ellos son atributos basados en dominio (DBA) de la entidad **Employee** , incluido el DBA **Department** .  
   
  A partir de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], existe un nuevo tipo de nivel que modela las relaciones de M2M, por ejemplo: **Class (asignado mediante ClassRegistration.Student)**. El nombre del nivel es más detallado que los demás a fin de reflejar la información adicional necesaria para describir la relación de asignación de forma inequívoca. Arrastre este nivel y colóquelo en el nivel **Employee** , que se encuentra en la sección **Niveles actuales** :  
   
@@ -76,9 +81,9 @@ Como se muestra en la siguiente imagen, el nombre del nivel que modela esta rela
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
-Para obtener instrucciones sobre cómo implementar el modelo de ejemplo Customer y otros modelos de ejemplo incluidos con [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], consulte [Implementar modelos y datos de ejemplo](../sql-server/media/master-data-services.png#deploySample).   
+Para obtener instrucciones sobre cómo implementar el modelo de ejemplo Customer y otros modelos de ejemplo incluidos con [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], consulte [Implementar modelos y datos de ejemplo](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md).   
   
-## Relación uno a varios  
+## <a name="one-many-relationship"></a>Relación uno a varios  
  Un miembro de una jerarquía derivada puede ser el elemento primario de muchos miembros secundarios, pero normalmente no puede tener más de un elemento primario (para ver las excepciones, consulte [Seguridad de miembros](#bkmk_member_security)). Por ejemplo, supongamos que hay dos entidades: Employee y Department, donde cada empleado pertenece a un solo departamento. Esta relación se modela agregando a la entidad Employee un atributo basado en dominio (DBA) que haga referencia a la entidad Department:  
   
  ![mds_hierarchies_onetomany](../master-data-services/media/mds-hierarchies-onetomany.png "mds_hierarchies_onetomany")  
@@ -96,10 +101,11 @@ Para obtener instrucciones sobre cómo implementar el modelo de ejemplo Customer
   
 -   Una jerarquía derivada con un nivel de M2M (es posible asignar un elemento secundario a muchos primarios).  
   
-## Colecciones  
+## <a name="collections"></a>Colecciones  
  Las colecciones y las jerarquías explícitas se encuentran en desuso. El procedimiento almacenado de conversión (udpConvertCollectionAndConsolidatedMembersToLeaf) convierte los miembros de la colección en miembros hoja y crea jerarquías derivadas de varios a varios para capturar información de pertenencia a la colección.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Jerarquías derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   
+

@@ -1,41 +1,46 @@
 ---
-title: "Ver y analizar seguimientos con SQL Server Profiler | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Profiler [SQL Server Profiler], ver seguimientos"
-  - "SQL Server Profiler, ver seguimientos"
-  - "seguimientos [SQL Server], ver"
-  - "SQL Server Profiler, solución de problemas"
-  - "solución de problemas [SQL Server], seguimientos"
-  - "eventos [SQL Server], buscar en seguimientos"
-  - "Profiler [SQL Server Profiler], solución de problemas"
-  - "seguimientos [SQL Server], eventos"
+title: Ver y analizar seguimientos con SQL Server Profiler | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Profiler [SQL Server Profiler], viewing traces
+- SQL Server Profiler, viewing traces
+- traces [SQL Server], viewing
+- SQL Server Profiler, troubleshooting
+- troubleshooting [SQL Server], traces
+- events [SQL Server], finding inside trace
+- Profiler [SQL Server Profiler], troubleshooting
+- traces [SQL Server], events
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 026f6f0422de3345be3dc5d44c17bf9dfcdc1137
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Ver y analizar seguimientos con SQL Server Profiler
-  Utilice [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para ver los datos de eventos capturados en un seguimiento. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra datos basados en propiedades de seguimiento definidas. Una manera de analizar datos del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste en copiarlos a otro programa, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el Asistente para la optimización del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. [!INCLUDE[ssDE](../../includes/ssde-md.md)] El Asistente para la optimización puede usar un archivo de seguimiento que contenga lotes SQL y eventos RPC (llamada a procedimiento remoto) si el seguimiento incluye la columna de datos **Text**. Para asegurarse de que se capturan las columnas y los eventos correctos para su utilización con el Asistente para la optimización del [!INCLUDE[ssDE](../../includes/ssde-md.md)], utilice la plantilla predefinida Tuning que se proporciona con el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+# <a name="view-and-analyze-traces-with-sql-server-profiler"></a>Ver y analizar seguimientos con SQL Server Profiler
+  Utilice [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para ver los datos de eventos capturados en un seguimiento. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra datos basados en propiedades de seguimiento definidas. Una manera de analizar datos del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste en copiarlos a otro programa, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el Asistente para la optimización del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)] El Asistente para la optimización puede usar un archivo de seguimiento que contenga lotes SQL y eventos RPC (llamada a procedimiento remoto) si el seguimiento incluye la columna de datos **Text** . Para asegurarse de que se capturan las columnas y los eventos correctos para su utilización con el Asistente para la optimización del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , utilice la plantilla predefinida Tuning que se proporciona con el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
  Cuando abra un seguimiento mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], no es necesario que el archivo de seguimiento tenga la extensión de archivo .trc si se creó mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o los procedimientos almacenados del sistema de Seguimiento de SQL.  
   
 > [!NOTE]  
->  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] también puede leer archivos .log de Seguimiento de SQL y archivos de scripts SQL genéricos. Si abre un archivo .log de Seguimiento de SQL que no tiene la extensión .log, por ejemplo, trace.txt, deberá especificar **SQLTrace_Log** como formato del archivo.  
+>  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]También puede leer archivos .log de seguimiento de SQL y archivos de scripts SQL genéricos. Si abre un archivo .log de Seguimiento de SQL que no tiene la extensión .log, por ejemplo, trace.txt, deberá especificar **SQLTrace_Log** como formato del archivo.  
   
  Puede configurar el formato de visualización de la fecha y hora del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] como ayuda en el análisis de seguimientos.  
   
-## Solución de problemas de los datos  
+## <a name="troubleshooting-data"></a>Solución de problemas de los datos  
  El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]permite solucionar problemas de datos mediante la agrupación de seguimientos o archivos de seguimiento según las columnas de datos **Duration**, **CPU**, **Reads**o **Writes** . Algunos ejemplos son consultas que no se ejecutan satisfactoriamente o que tienen una cantidad excepcionalmente alta de lecturas lógicas.  
   
  Puede buscar información adicional si guarda los seguimientos en tablas y utiliza [!INCLUDE[tsql](../../includes/tsql-md.md)] para realizar consultas en los datos de eventos. Por ejemplo, para determinar los eventos **SQL:BatchCompleted** con un tiempo de espera excesivo, ejecute lo siguiente:  
@@ -50,12 +55,12 @@ AND     CPU < (Duration * 1000)
 > [!NOTE]  
 >  El servidor informa de la duración de un evento en microsegundos (10 ^-6 segundos) y de la cantidad de tiempo de CPU utilizado por el evento en milisegundos (10 ^-3 segundos). La interfaz gráfica de usuario de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra la columna **Duración** en milisegundos de manera predeterminada, pero cuando se guarda un seguimiento en un archivo o en una tabla de base de datos, el valor de la columna **Duración** se escribe en microsegundos.  
   
-## Mostrar nombres de objetos al ver seguimientos  
- Si quiere visualizar el nombre de un objeto en lugar de su identificador (**Object ID**), debe capturar las columnas de datos **Server Name** y **Database ID** junto con **Object Name**.  
+## <a name="displaying-object-names-when-viewing-traces"></a>Mostrar nombres de objetos al ver seguimientos  
+ Si quiere visualizar el nombre de un objeto en lugar de su identificador (**Object ID**), debe capturar las columnas de datos **Server Name** y **Database ID** junto con **Object Name** .  
   
  Si decide realizar una agrupación mediante la columna de datos **Object ID** , realícela primero mediante las columna de datos **Server Name** y **Database ID** , y luego mediante **Object ID** . Del mismo modo, si decide realizar una agrupación mediante la columna de datos **Index ID** , realícela primero mediante las columna de datos **Server Name**, **Database ID**y **Object ID** , y luego mediante **Index ID** . Es necesario que siga este orden ya que los Id. de objeto y de índice no son exclusivos entre servidores y bases de datos (ni entre objetos, en el caso de los Id. de índice).  
   
-## Buscar eventos específicos en un seguimiento  
+## <a name="finding-specific-events-within-a-trace"></a>Buscar eventos específicos en un seguimiento  
  Para encontrar y agrupar eventos en un seguimiento, siga estos pasos:  
   
 1.  Cree el seguimiento.  
@@ -68,9 +73,9 @@ AND     CPU < (Duration * 1000)
   
 2.  Busque los eventos de destino.  
   
-    -   Abra el archivo o la tabla de seguimiento y expanda el nodo de la clase de evento que desee, por ejemplo, **Deadlock Chain**. Para obtener más información, vea [Abrir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) o [Abrir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md).  
+    -   Abra el archivo o la tabla de seguimiento y expanda el nodo de la clase de evento que desee, por ejemplo, **Deadlock Chain**. Para obtener más información, vea [Abrir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) o el Asistente para la optimización del [Abrir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md).  
   
-    -   Busque en los datos de seguimiento hasta que encuentre los eventos que busca. Para facilitar la búsqueda, puede usar el comando **Buscar** del menú **Edición** de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Anote los valores de las columnas de datos **ClientProcessID** y **Start Time** correspondientes a los eventos de los que se realiza un seguimiento.  
+    -   Busque en los datos de seguimiento hasta que encuentre los eventos que busca. Para facilitar la búsqueda, puede usar el comando **Buscar** del menú **Edición** de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Anote los valores de las columnas de datos **ClientProcessID** y **Start Time** correspondientes a los eventos de los que se realiza un seguimiento.  
   
 3.  Muestre los eventos en el contexto.  
   
@@ -78,14 +83,14 @@ AND     CPU < (Duration * 1000)
   
     -   Expanda los nodos de cada Id. de proceso de cliente que desee ver. Realice una búsqueda manual en el seguimiento o utilice **Buscar** hasta que encuentre los valores de **Start Time**anotados anteriormente de los eventos de destino. Los eventos se muestran en orden cronológico con los demás eventos que pertenecen a cada identificador de proceso de cliente seleccionado. Por ejemplo, los eventos **Deadlock** y **Deadlock Chain**, capturados dentro del seguimiento, aparecen inmediatamente después de los eventos **SQL:BatchStarting**events within the expyed client process ID.  
   
- La misma técnica se puede emplear para buscar cualquier evento agrupado. Una vez que haya encontrado los eventos que busca, agrúpelos por **ClientProcessID**, **ApplicationName** u otra clase de eventos para ver la actividad relacionada en orden cronológico.  
+ La misma técnica se puede emplear para buscar cualquier evento agrupado. Una vez que haya encontrado los eventos que busca, agrúpelos por **ClientProcessID**, **ApplicationName**u otra clase de eventos para ver la actividad relacionada en orden cronológico.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Ver un seguimiento guardado &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/view-a-saved-trace-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [Ver información de un filtro &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
- [Ver información de un filtro &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/view-filter-information-transact-sql.md)   
- [Abrir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
+ [Ver información del filtro &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
+ [Ver información del filtro &#40; Transact-SQL &#41;](../../relational-databases/sql-trace/view-filter-information-transact-sql.md)   
+ [Abrir un archivo de seguimiento &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [Abrir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)  
   
   

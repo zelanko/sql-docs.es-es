@@ -1,42 +1,47 @@
 ---
-title: "HEX (expresi&#243;n de SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "datos hexadecimales"
-  - "HEX, función"
+title: "HEX (expresión de SSIS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- hexadecimal data
+- HEX function
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f44919fb8992a26ce5adddfabba9f3b1164ee7be
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# HEX (expresi&#243;n de SSIS)
+# <a name="hex-ssis-expression"></a>HEX (expresión de SSIS)
   Devuelve una cadena que representa el valor hexadecimal de un entero.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
 HEX(integer_expression)  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *integer_expression*  
  Entero con o sin signo.  
   
-## Tipos de resultado  
+## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  HEX devuelve null si *integer_expression* es null.  
   
  El argumento *integer_expression* debe devolver un entero. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -55,7 +60,7 @@ HEX(integer_expression)
   
 -   DT_I8 y DT_UI8 devuelven una cadena con una longitud máxima de 16.  
   
-## Ejemplos de expresiones  
+## <a name="expression-examples"></a>Ejemplos de expresiones  
  Este ejemplo usa un literal numérico. La función devuelve el valor 190.  
   
 ```  
@@ -74,7 +79,7 @@ HEX(ReorderPoint)
 HEX(@LocaleID)  
 ```  
   
-## Vea también  
- [Funciones &#40;expresión de SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Vea también  
+ [Funciones & #40; Expresión de SSIS & #41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

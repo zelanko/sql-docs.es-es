@@ -2,7 +2,7 @@
 title: Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 03/01/2017
+ms.date: 08/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,11 +18,11 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a6f70a5be224219a572df858e37ecbfe5f9fde07
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: b18d5078244bf83d8820bf3f03039ac120287f8a
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria
@@ -48,6 +48,8 @@ ms.lasthandoff: 06/22/2017
 ## <a name="transaction-performance-analysis-reports"></a>Informes de análisis del rendimiento de las transacciones  
  Puede generar informes de análisis del rendimiento de las transacciones en **Explorador de objetos** haciendo clic con el botón derecho en la base de datos, seleccionando **Informes**y, después, **Informes estándar**e **Información general de análisis del rendimiento de las transacciones**. La base de datos debe tener una carga de trabajo activa o haber ejecutado una recientemente para generar un informe de análisis significativo.  
   
+### <a name="tables"></a>Tablas
+  
  El informe de detalles de una tabla consta de tres secciones:  
   
 -   Sección de estadísticas de recorrido  
@@ -57,9 +59,7 @@ ms.lasthandoff: 06/22/2017
     -   Porcentaje de accesos en total. El porcentaje de recorridos y de búsquedas en esta tabla con respecto a la actividad de toda la base de datos. Cuanto mayor sea el porcentaje, más se usa la tabla en comparación con otras de la base de datos.  
   
     -   Estadísticas de búsqueda y de recorrido de intervalos. Esta columna registra el número de búsquedas de puntos y de recorridos de intervalo (recorridos de índice y recorridos de tabla) realizados en la tabla durante la generación de perfiles. El promedio por transacción es una estimación.  
-  
-    -   Mejora de la interoperabilidad y mejora nativa. Estas columnas estiman el grado de mejora en el rendimiento que tendrían una búsqueda o un recorrido de intervalo si la tabla se convirtiera en una tabla con optimización para memoria.  
-  
+    
 -   Sección de estadísticas de contención  
   
      Esta sección incluye una tabla que muestra la contención en la tabla de base de datos. Para obtener más información sobre los bloqueos y los bloqueos temporales de la base de datos, consulte Locking Architecture (Arquitectura de bloqueo). Estas son sus columnas:  
@@ -74,8 +74,10 @@ ms.lasthandoff: 06/22/2017
   
      Esta sección incluye una tabla que muestra las dificultades de convertir esta tabla de base de datos en una tabla con optimización para memoria. Una clasificación de mayor dificultad indica que convertir la tabla es más difícil. Para ver información sobre cómo convertir esta tabla de base de datos, utilice el Asesor de optimización de memoria.  
   
- Las estadísticas de contención del informe de detalles de la tabla se recopilan y agregan desde sys.dm_db_index_operational_stats (Transact-SQL).  
-  
+Las estadísticas de contención del informe de detalles de la tabla se recopilan y agregan desde sys.dm_db_index_operational_stats (Transact-SQL).  
+
+### <a name="stored-procedures"></a>Procedimientos almacenados
+
  Un procedimiento almacenado con un proporción alta de tiempo de CPU/tiempo transcurrido es un candidato a la migración. El informe muestra todas las referencias de tabla, ya que los procedimientos almacenados compilados de forma nativa solo pueden hacer referencia a tablas con optimización para memoria, que pueden incrementar el costo de la migración.  
   
  El informe de detalles de un procedimiento almacenado consta de dos secciones:  
@@ -107,7 +109,7 @@ ms.lasthandoff: 06/22/2017
   
  Puede generar una lista de comprobación de migración en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando el comando **Generar listas de comprobación de migración de OLTP en memoria** o a través de PowerShell.  
   
- **Pasos para generar una lista de comprobación de migración mediante el comando de la interfaz de usuario**  
+**Pasos para generar una lista de comprobación de migración mediante el comando de la interfaz de usuario**  
   
 1.  En **Explorador de objetos**, haga clic con el botón derecho en una base de datos que no sea la del sistema, en **Tareas**y, después, en **Generar listas de comprobación de migración de OLTP en memoria**.  
   
@@ -127,7 +129,7 @@ ms.lasthandoff: 06/22/2017
   
  Puede comprobar la precisión de los informes comparándolos con los generados mediante la herramienta Asesor de optimización de memoria y el Asistente para compilación nativa. Para obtener más información, consulte [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) y [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md).  
   
- **Pasos para generar una lista de comprobación de migración mediante SQL Server PowerShell**  
+**Pasos para generar una lista de comprobación de migración mediante SQL Server PowerShell**  
   
 1.  En **Explorador de objetos**, haga clic en una base de datos y, luego, en **Iniciar PowerShell**. Compruebe que aparece el siguiente aviso.  
   
@@ -147,7 +149,7 @@ ms.lasthandoff: 06/22/2017
   
     -   El informe de lista de comprobación de migración se ha generado para todas las tablas y los procedimientos almacenados de la base de datos y el informe se encuentra en la ubicación especificada mediante ruta_carpeta.  
   
- **Pasos para generar una lista de comprobación de migración con Windows PowerShell**  
+**Pasos para generar una lista de comprobación de migración con Windows PowerShell**  
   
 1.  Inicie una sesión de Windows PowerShell con privilegios elevados.  
   
@@ -178,3 +180,4 @@ ms.lasthandoff: 06/22/2017
  [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+

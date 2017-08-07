@@ -1,5 +1,5 @@
 ---
-title: "Personalizar los datos y la presentación de un mapa o una capa de mapa (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Personalizar los datos y la presentación de un mapa o una capa de mapa (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -28,11 +28,11 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a9751ad1f640181db57e4107ff1debfa510d3b0e
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizar los datos y la presentación de un mapa o una capa de mapa (Generador de informes y SSRS)
@@ -104,7 +104,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Para cambiar el contenido o el formato del contenido de una leyenda, cambie las opciones de la leyenda para las reglas correspondientes de una capa.  
   
- Para más información, vea [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
+ Para obtener más información, vea [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
 ##  <a name="Layer"></a> Cambiar las opciones de la capa  
  Para mostrar las capas de un mapa, haga clic en él para seleccionarlo. Aparece el panel Mapa. Para cambiar las opciones de una capa, haga clic con el botón secundario en ella y utilice el menú contextual.  
@@ -164,7 +164,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Opciones de invalidación de los puntos, líneas o polígonos incrustados individuales de una capa. Los cambios que realice son permanentes. Para revertir estos cambios, debe volver a cargar los datos de la capa.  
   
- Para más información, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
+ Para obtener más información, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Asistente para mapas y Asistente para capas de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   

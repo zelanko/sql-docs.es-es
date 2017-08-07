@@ -1,5 +1,5 @@
 ---
-title: Establecer y configurar unidades de medida (generador de informes y SSRS) | Documentos de Microsoft
+title: Establecer y configurar unidades de medida (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 46d639df93661b5cd27810c72a44f698539aac2f
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>Establecer y configurar unidades de medida (Generador de informes y SSRS)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
   
  Puede cambiar la unidad de medida para que sea un valor numérico. En este caso, no especifica para los datos el valor mínimo sino el máximo; en su lugar, solo proporciona los valores inicial y final para cada icono que usa el indicador.  
   
- Opciones como las unidades de medida se pueden establecer mediante expresiones. Para obtener más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
+ Opciones como las unidades de medida se pueden establecer mediante expresiones. Para más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
 ## <a name="to-use-the-numeric-state-measurement-unit"></a>Utilizar la unidad de medida de estado numérica  
   

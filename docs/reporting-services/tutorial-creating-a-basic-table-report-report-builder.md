@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Crear un informe de tabla básico (generador de informes) | Documentos de Microsoft"
+title: "Tutorial: Crear un informe de tabla básico (Generador de informes) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/23/2016
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 021a980dee9f6cd72f663475ba084962fa543cd4
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Crear un informe de tabla básico (Generador de informes)
@@ -41,7 +41,7 @@ Cree un informe de tabla con el Asistente para tablas o matrices. Existen dos mo
   
 1.  [Inicie el Generador de informes](../reporting-services/report-builder/start-report-builder.md) desde el equipo, el portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o el modo integrado de SharePoint.  
   
-    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos**.  
+    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos** .  
   
     Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos**, vaya al menú **Archivo** > **Nuevo**.  
   
@@ -62,7 +62,7 @@ En este tutorial, utilizará un origen del datos incrustado. Para obtener más i
   
 3.  En **Nombre**, escriba **Product_Sales** como nombre del origen de datos.  
   
-4.  En **Seleccionar un tipo de conexión**, compruebe que está seleccionado **Microsoft SQL Server**.  
+4.  En **Seleccionar un tipo de conexión**, compruebe que está seleccionado **Microsoft SQL Server** .  
   
 5.  En **Cadena de conexión**, escriba el siguiente texto, donde \<nombreServidor> es el nombre de una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
@@ -72,7 +72,7 @@ En este tutorial, utilizará un origen del datos incrustado. Para obtener más i
   
     Puesto que va a usar una consulta con los datos en lugar de recuperar los datos de una base de datos, la cadena de conexión no incluye el nombre de la base de datos. Para obtener más información, consulte [Requisitos previos para los tutoriales&#40;Generador de informes&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-6.  Haga clic en la pestaña **Credenciales**. Escriba las credenciales necesarias para tener acceso al origen de datos externo.  
+6.  Haga clic en la pestaña **Credenciales** . Escriba las credenciales necesarias para tener acceso al origen de datos externo.  
   
 7. Haga clic en la pestaña General de nuevo. Para comprobar que se puede conectar al origen de datos, haga clic en **Probar conexión**.  
   
@@ -222,7 +222,7 @@ De forma predeterminada, en el campo SalesDate se muestra la fecha y la hora. Pu
   
 3.  En la cinta de opciones, en la pestaña **Inicio** , en el grupo **Número** , haga clic en la flecha y seleccione **Fecha**.  
   
-    La celda muestra la fecha de ejemplo **[31/1/2000]**. Si no ve una fecha de ejemplo, en la pestaña **Inicio**, en el grupo **Número**, haga clic en la flecha situada junto al icono **Estilos de marcador de posición** > **Valores de ejemplo**.  
+    La celda muestra la fecha de ejemplo **[1/31/2000]**. Si no ve una fecha de ejemplo, en la pestaña **Inicio**, en el grupo **Número**, haga clic en la flecha situada junto al icono **Estilos de marcador de posición** > **Valores de ejemplo**.  
   
 4.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
@@ -320,7 +320,7 @@ El informe se guarda en el servidor de informes. El nombre del servidor de infor
 4.  Haga clic en **Guardar**.  
   
 ## <a name="Export"></a>7. Exportar el informe  
-Los informes se pueden exportar a diversos formatos, por ejemplo a archivos de Microsoft Excel y de valores separados por comas (CSV). Para más información, vea [Exportación de informes &#40;Generador de informes y SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+Los informes se pueden exportar a diversos formatos, por ejemplo a archivos de Microsoft Excel y de valores separados por comas (CSV). Para más información, vea [Export Reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 En este tutorial, exportará el informe a Excel y establecerá una propiedad en el informe para proporcionar un nombre personalizado para la pestaña del libro.  
   
@@ -346,9 +346,9 @@ En este tutorial, exportará el informe a Excel y establecerá una propiedad en 
   
 3.  En el cuadro de diálogo **Guardar como** , desplácese hasta la ubicación en la que quiere guardar el archivo.  
   
-4.  En el cuadro **Nombre de archivo**, escriba **Excel_Ventas_del_producto**.  
+4.  En el cuadro **Nombre de archivo** , escriba **Excel_Ventas_del_producto**.  
   
-5.  Compruebe que el tipo de archivo es **Excel (\*.xlsx)**.  
+5.  Compruebe que el tipo de archivo sea **Excel (\*.xlsx)**.  
   
 6.  Haga clic en **Guardar**.  
   

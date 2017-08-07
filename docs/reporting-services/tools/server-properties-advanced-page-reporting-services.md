@@ -1,5 +1,5 @@
 ---
-title: "Propiedades del servidor (página avanzadas) - Reporting Services | Documentos de Microsoft"
+title: "Propiedades del servidor (página de opciones avanzadas) - Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b5cd82621ecd65bb56b8a5a2eb0314935fd3a37a
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propiedades del servidor (página de opciones avanzadas) - Reporting Services
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
  Número de días que mantener la información de ejecución de informes en el registro de ejecución. Entre los valores válidos de esta propiedad están el rango **-1** - **2**,**147**,**483**y**647**. Si el valor es **1** , no se eliminan las entradas de la tabla del registro de ejecución. El valor predeterminado es **60**.  
  
 > [!NOTE] 
-> Establece un valor de **0** le *eliminar* todas las entradas del registro de ejecución. Un valor de **-1** conservará las entradas del registro de ejecución y no se eliminarán.
+> Si establece un valor de **0**, se *eliminarán* todas las entradas del registro de ejecución. Un valor de **-1** conservará las entradas del registro de ejecución y no se eliminarán.
   
  **SessionTimeout**  
  El período, en segundos, que una sesión permanece activa. El valor predeterminado es **600**.  

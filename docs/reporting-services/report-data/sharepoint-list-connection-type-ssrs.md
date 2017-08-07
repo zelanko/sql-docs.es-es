@@ -1,5 +1,5 @@
 ---
-title: "Tipo de conexión de lista de SharePoint (SSRS) | Documentos de Microsoft"
+title: "Tipo de conexión de lista de SharePoint (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-server-2016
@@ -15,18 +15,18 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 23799f3c292e7a64ca859d06b570bd8f4657953a
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo de conexión de lista de SharePoint (SSRS)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)] [!INCLUDE [ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-Para incluir los datos de una lista de Microsoft SharePoint en el informe, debe agregar o crear un conjunto de datos basado en un origen de datos de informe de tipo de lista de Microsoft SharePoint. Este es un tipo de origen de datos integrado que se basa en la extensión de datos de lista de SharePoint de Microsoft SQL Server Reporting Services. Utilice este tipo de origen de datos para conectarse y recuperar datos de la lista de SharePoint 2013 y versiones posteriores.
+Para incluir los datos de una lista de Microsoft SharePoint en el informe, debe agregar o crear un conjunto de datos basado en un origen de datos de informe de tipo de lista de Microsoft SharePoint. Este es un tipo de origen de datos integrado que se basa en la extensión de datos de lista de SharePoint de Microsoft SQL Server Reporting Services. Utilice este tipo de origen de datos para recuperar los datos de las listas de SharePoint 2013 y versiones posteriores, así como para conectarse a ellos.
 
 Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones paso a paso, vea [Agregar y comprobar una conexión de datos o un origen de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
 
@@ -71,7 +71,7 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
 
  En el caso de una tecnología de SharePoint que esté configurada para trabajar con un servidor de informes en el modo integrado de Windows, esta opción se aplica tanto al usuario de Windows actual como al usuario de SharePoint actual.
  
- En el caso de una tecnología de SharePoint configurada para funcionar sin un servidor de informes (modo local), esta opción no se admite. Para obtener más información en modo local, vea [Informes en modo local frente al  modo local en el Visor de informes &#40;Reporting Services en modo de SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
+ En el caso de una tecnología de SharePoint configurada para funcionar sin un servidor de informes (modo local), esta opción no se admite. Para obtener más información sobre el modo local, vea [Informes en modo local frente al modo conectado en el Visor de informes &#40;Reporting Services en modo de SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
   
  **No se necesitan credenciales (No usar credenciales):**  
  Para usar esta opción, la cuenta de ejecución desatendida debe estar configurada en el servidor de informes. Para obtener más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
@@ -194,4 +194,4 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
 [Filtrar, agrupar y ordenar datos](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

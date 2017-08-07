@@ -1,5 +1,5 @@
 ---
-title: "Aplicar formato a los puntos de datos de un gráfico (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Aplicar formato a los puntos de datos de un gráfico (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -18,11 +18,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d1514b7ec2a5f1d7d2d5abd3513db47a208a2e24
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a los puntos de datos de un gráfico (Generador de informes y SSRS)
@@ -43,7 +43,7 @@ En el informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-
   
  `=Iif(Fields!MyField.Value >= Max(Fields!MyField.Value, "MyDataSet"), "Red", "Green")`  
   
- En este ejemplo, el valor más alto para `MyField` tendrá el color rojo y el resto de puntos de datos tendrán el color verde. Al especificar un color para la serie usando la propiedad **Fill** de la serie, el gráfico invalida los colores que se especifican en la paleta. Para más información, vea [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
+ En este ejemplo, el valor más alto para `MyField` tendrá el color rojo y el resto de puntos de datos tendrán el color verde. Al especificar un color para la serie usando la propiedad **Fill** de la serie, el gráfico invalida los colores que se especifican en la paleta. Para obtener más información, vea [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="positioning-data-point-labels-on-a-chart"></a>Colocar etiquetas de puntos de datos en un gráfico  
  Para mostrar etiquetas de punto de datos en cualquier tipo de gráfico, haga clic con el botón derecho en el gráfico y seleccione **Mostrar etiquetas de datos**. La posición de las etiquetas de puntos de datos se especifica en función del tipo de gráfico:  
@@ -81,12 +81,12 @@ En el informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-
 |#MAX|Máximo de todos los valores Y de la serie.|Todos|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|El primero de todos los valores Y de la serie.|Todos|`=First(Fields!MyDataField.Value)`|  
   
- Para dar formato a la palabra clave, incluya una cadena de formato de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] entre paréntesis. Por ejemplo, para especificar el valor del punto de datos en una información sobre herramientas como un número con dos posiciones decimales, incluya la cadena de formato "N2" entre llaves (por ejemplo, "#VALY {N2}" para la propiedad **ToolTip** de la serie). Para obtener más información sobre las cadenas de formato de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , vea [Aplicar formato a tipos](http://go.microsoft.com/fwlink/?LinkId=112024) en MSDN. Para más información sobre cómo dar formato a los números en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
+ Para dar formato a la palabra clave, incluya una cadena de formato de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] entre paréntesis. Por ejemplo, para especificar el valor del punto de datos en una información sobre herramientas como un número con dos posiciones decimales, incluya la cadena de formato "N2" entre llaves (por ejemplo, "#VALY {N2}" para la propiedad **ToolTip** de la serie). Para obtener más información sobre las cadenas de formato de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , vea [Aplicar formato a tipos](http://go.microsoft.com/fwlink/?LinkId=112024) en MSDN. Para obtener más información sobre cómo dar formato a los números en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
- Para más información sobre cómo agregar palabras clave a un gráfico, vea [Mostrar la información sobre herramientas en una serie &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md) y [Cambiar el texto de un elemento de leyenda &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
+ Para obtener más información sobre cómo agregar palabras clave a un gráfico, vea [Mostrar la información sobre herramientas en una serie &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md) y [Cambiar el texto de un elemento de leyenda &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
 ## <a name="increasing-readability-in-a-chart-with-multiple-data-points"></a>Aumentar la legibilidad en un gráfico con varios puntos de datos  
- Si tiene varias series en un gráfico, puede reducir la legibilidad de los puntos de datos del gráfico. Al agregar varias series al gráfico, considere la posibilidad de usar una técnica que permita leer y entender cada serie en el gráfico de manera eficaz. Para más información, vea [Mostrar varias series en un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
+ Si tiene varias series en un gráfico, puede reducir la legibilidad de los puntos de datos del gráfico. Al agregar varias series al gráfico, considere la posibilidad de usar una técnica que permita leer y entender cada serie en el gráfico de manera eficaz. Para más información, vea [Mostrar varias series en un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md):  
   
  Para simplificar el trabajo, cuando esté usando un gráfico de formas, considere la posibilidad de agregar un único campo de datos y un único campo de categorías. Para más información, vea [Gráficos de formas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md). Si un gráfico necesita más de un campo de datos y un campo de categoría, considere cambiar el tipo de gráfico. Puede hacer clic con el botón derecho en la serie y seleccionar **Cambiar tipo de gráfico**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Trabajo propiedades (Management Studio) | Documentos de Microsoft
+title: Propiedades del trabajo (Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2f138c5caef261757a4bce22cb84ebeb7a2a68b8
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="job-properties-management-studio"></a>Propiedades del trabajo (Management Studio)

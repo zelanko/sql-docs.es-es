@@ -1,5 +1,5 @@
 ---
-title: "Crear una consulta en el Diseñador de consultas relacionales (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Crear una consulta en el Diseñador de consultas relacionales (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8f7c711b3cd56302b05d7dcf4f3045283c376d73
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>Crear una consulta en el Diseñador de consultas relacionales (Generador de informes y SSRS)
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Una conjunto de datos se basa en un origen de datos. El tipo de origen de datos y el entorno de creación determina el diseñador de consultas que se ha de abrir al definir la consulta de conjunto de datos. Las características del diseñador de consultas varían en función del origen de datos subyacente. Para más información sobre las capas de datos, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) o [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Una conjunto de datos se basa en un origen de datos. El tipo de origen de datos y el entorno de creación determina el diseñador de consultas que se ha de abrir al definir la consulta de conjunto de datos. Las características del diseñador de consultas varían en función del origen de datos subyacente. Para obtener más información sobre las capas de datos, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) o [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
  Puede utilizar un diseñador de consultas para las siguientes tareas:  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
  Después de abrir un diseñador de consultas, cree una consulta de la misma manera para un conjunto de datos incrustado que para uno compartido. Los siguientes procedimientos utilizan una consulta de conjunto de datos incrustada.  
   
- Para más información, vea [Interfaz de usuario del Diseñador de consultas relacionales &#40;Generador de informes&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
+ Para obtener más información, vea [Interfaz de usuario del Diseñador de consultas relacionales &#40;Generador de informes&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
   
 ### <a name="to-build-a-query-for-an-embedded-dataset-in-report-design-view"></a>Para crear una consulta para un conjunto de datos incrustado en la vista de diseño del informe  
   

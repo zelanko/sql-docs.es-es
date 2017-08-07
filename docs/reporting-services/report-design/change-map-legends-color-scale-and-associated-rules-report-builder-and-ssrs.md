@@ -1,5 +1,5 @@
 ---
-title: Cambiar reglas de asociados a la escala de Color de leyendas de mapa en el generador de informes SSRS | Documentos de Microsoft
+title: Cambiar leyendas de mapa, escala de colores y reglas asociadas en Generador de informes y SSRS | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -38,11 +38,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: aee605482e4de390b545f63ac96bfc123cee568a
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Cambiar leyendas de mapa, escala de colores y reglas asociadas (Generador de informes y SSRS)
@@ -62,11 +62,11 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>Para cambiar la posición de una leyenda con respecto a la ventanilla  
   
-1.  En la vista de diseño, haga clic en la leyenda y abra el  *\<elemento de informe >***propiedades** página.  
+1.  En la vista de diseño, haga clic con el botón derecho en la leyenda y abra la página **Propiedades** de *\<elemento de informe>*.  
   
 2.  En **Posición**, haga clic en la ubicación que especifica dónde desea mostrar la leyenda con respecto a la ventanilla.  
   
-3.  Para mostrar la leyenda fuera de la ventanilla, seleccione **mostrar \<elemento de informe > fuera de la ventanilla**.  
+3.  Para mostrar la leyenda fuera de la ventanilla, seleccione **Mostrar \<elemento de informe> fuera de la ventanilla**.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  En la vista Diseño, haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  Haga clic en la capa que contenga los datos que desee y, a continuación, haga clic en  *\<tipo de elemento de mapa >***regla de Color**.  
+2.  Haga clic con el botón derecho en la capa que contenga los datos que desee y, después, haga clic en **Regla de color** de *\<tipo de elemento de mapa>*.  
   
 3.  Haga clic en **Leyenda**.  
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  En la vista Diseño, haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  Haga clic en la capa que contenga los datos que desee y, a continuación, haga clic en  *\<tipo de elemento de mapa >***regla de Color**.  
+2.  Haga clic con el botón derecho en la capa que contenga los datos que desee y, después, haga clic en **Regla de color** de *\<tipo de elemento de mapa>*.  
   
 3.  Haga clic en **Aplicar estilo de plantilla**.  
   
@@ -136,7 +136,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  En la vista Diseño, haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  Haga clic en la capa que contenga los datos que desee y, a continuación, haga clic en  *\<tipo de elemento de mapa >***regla de Color**.  
+2.  Haga clic con el botón derecho en la capa que contenga los datos que desee y, después, haga clic en **Regla de color** de *\<tipo de elemento de mapa>*.  
   
 3.  Haga clic en **Visualizar datos mediante la paleta de colores**.  
   
@@ -154,7 +154,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  En la vista Diseño, haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  Haga clic en la capa que contenga los datos que desee y, a continuación, haga clic en  *\<tipo de elemento de mapa >***regla de Color**.  
+2.  Haga clic con el botón derecho en la capa que contenga los datos que desee y, después, haga clic en **Regla de color** de *\<tipo de elemento de mapa>*.  
   
 3.  Haga clic en **Visualizar datos mediante los rangos de colores**.  
   
@@ -176,7 +176,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  En la vista Diseño, haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  Haga clic en la capa que contenga los datos que desee y, a continuación, haga clic en  *\<tipo de elemento de mapa >***regla de Color**.  
+2.  Haga clic con el botón derecho en la capa que contenga los datos que desee y, después, haga clic en **Regla de color** de *\<tipo de elemento de mapa>*.  
   
 3.  Haga clic en **Visualizar datos mediante los colores personalizados**.  
   
@@ -194,9 +194,9 @@ ms.lasthandoff: 06/22/2017
   
 1.  En la vista Diseño, haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  Haga clic en la capa que contenga los datos que desee y, a continuación, haga clic en  *\<tipo de elemento de mapa >***regla de Color**.  
+2.  Haga clic con el botón derecho en la capa que contenga los datos que desee y, después, haga clic en **Regla de color** de *\<tipo de elemento de mapa>*.  
   
-3.  Seleccione el **visualizar datos mediante** \<tipo de regla > opción. Para utilizar las opciones de distribución, debe crear intervalos en la página **Distribución** según los datos analíticos asociados a la capa.  
+3.  Seleccione la opción **Visualizar datos mediante** \<tipo de regla>. Para utilizar las opciones de distribución, debe crear intervalos en la página **Distribución** según los datos analíticos asociados a la capa.  
   
 4.  Haga clic en **Distribución**.  
   
@@ -226,9 +226,9 @@ ms.lasthandoff: 06/22/2017
   
 1.  En la vista Diseño, haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  Haga clic en la capa que contenga los datos que desee y, a continuación, haga clic en  *\<tipo de elemento de mapa >***regla**.  
+2.  Haga clic con el botón derecho en la capa que contenga los datos que desee y luego haga clic en **Regla** de *\<tipo de elemento de mapa>*.  
   
-3.  Compruebe que **visualizar datos mediante** \< *tipo de regla*> está seleccionada.  
+3.  Compruebe que esté seleccionado **Visualizar datos mediante el uso de** \<*tipo de regla*>.  
   
 4.  En **Campo de datos**, compruebe que los datos analíticos que está visualizando en la capa están seleccionados.  
   
@@ -247,9 +247,9 @@ ms.lasthandoff: 06/22/2017
   
 1.  En la vista Diseño, haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  Haga clic en la capa que contenga los datos que desee y, a continuación, haga clic en  *\<tipo de elemento de mapa >***regla de Color**.  
+2.  Haga clic con el botón derecho en la capa que contenga los datos que desee y, después, haga clic en **Regla de color** de *\<tipo de elemento de mapa>*.  
   
-3.  Seleccione la opción de regla de color que desee usar. Para mostrar los elementos en una escala de color o de leyenda de mapa, debe seleccionar uno de los **visualizar datos mediante** \<tipo de regla > Opciones.  
+3.  Seleccione la opción de regla de color que desee usar. Para mostrar los elementos en una leyenda de mapa o escala de colores, debe seleccionar una de las opciones de **Visualizar datos mediante** \<tipo de regla>.  
   
 4.  En **Campo de datos**, compruebe que los datos analíticos que está visualizando en la capa están seleccionados.  
   
@@ -268,7 +268,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  En la vista Diseño, haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  Haga clic en la capa que contenga los datos que desee y, a continuación, haga clic en  *\<tipo de elemento de mapa >***regla**.  
+2.  Haga clic con el botón derecho en la capa que contenga los datos que desee y luego haga clic en **Regla** de *\<tipo de elemento de mapa>*.  
   
 3.  Haga clic en **Leyenda**.  
   
@@ -281,7 +281,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  En la vista Diseño, haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  Haga clic en la capa que contenga los datos que desee y, a continuación, haga clic en  *\<tipo de elemento de mapa >***regla**.  
+2.  Haga clic con el botón derecho en la capa que contenga los datos que desee y luego haga clic en **Regla** de *\<tipo de elemento de mapa>*.  
   
 3.  Haga clic en **Leyenda**.  
   

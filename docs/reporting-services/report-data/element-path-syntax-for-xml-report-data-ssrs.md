@@ -1,5 +1,5 @@
 ---
-title: Sintaxis de ruta de acceso de elemento de datos de informe XML (SSRS) | Documentos de Microsoft
+title: Sintaxis de ruta de acceso de elemento para datos de informe XML (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -18,11 +18,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7c25d6665198e0392aa70d649ca658adec84d2de
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintaxis de ruta de acceso de elemento para datos de informe XML (SSRS)
@@ -37,9 +37,9 @@ ms.lasthandoff: 06/22/2017
 |----------------|--------------|  
 |**Negrita**|Texto que debe escribirse exactamente como se muestra.|  
 |&#124; (barra vertical)|Separa los elementos de sintaxis. Solo se puede elegir uno de los elementos.|  
-|`[ ]`(paréntesis)|Elementos opcionales de sintaxis. No escriba los corchetes.|  
+|`[ ]` (corchetes)|Elementos opcionales de sintaxis. No escriba los corchetes.|  
 |**{ }** (llaves)|Delimita los parámetros de los elementos de sintaxis.|  
-|[**,**...*n*]|Indica que el elemento anterior puede repetirse  *n*  número de veces. Cada repetición se separa de la siguiente con una coma.|  
+|[**,**…*n*]|Indica que el elemento anterior puede repetirse *n* veces. Cada repetición se separa de la siguiente con una coma.|  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -80,13 +80,13 @@ XMLLocalName :: =
 |Término|Definición|  
 |----------|----------------|  
 |Ruta de acceso de elemento|Define la secuencia de nodos que deben recorrerse en el documento XML para recuperar los datos de campo de un conjunto de datos con un origen de datos XML.|  
-|**ElementNode**|Nodo XML en el documento XML. Los nodos se designan mediante etiquetas y existen en una relación jerárquica con otros nodos. Por ejemplo, \<clientes > es el nodo de elemento raíz. \<Cliente > es un subelemento de \<clientes >.|  
+|**ElementNode**|Nodo XML en el documento XML. Los nodos se designan mediante etiquetas y existen en una relación jerárquica con otros nodos. Por ejemplo, \<Customers> es el nodo de elemento raíz. \<Customer> es un subelemento de \<Customers>.|  
 |**XMLName**|Nombre del nodo. Por ejemplo, el nombre del nodo Customers es Customers. **XMLName** puede incluir delante un identificador de espacio de nombres para asignar un nombre único a cada nodo.|  
 |**Codificación**|Indica que **Value** para este elemento es XML codificado y debe descodificarse e incluirse como un subelemento de este elemento.|  
 |**FieldList**|Define el conjunto de elementos y atributos que se van a utilizar para recuperar datos.<br /><br /> Si no se especifica, se usan como campos todos los atributos y subelementos. Si se especifica la lista de campos vacíos (**{}**), no se usará ningún campo de este nodo.<br /><br /> **FieldList** no puede contener a la vez **Value** y **Element** o **ElementNode**.|  
 |**Campo**|Especifica los datos que se recuperan como campo de conjunto de datos.|  
-|**Atributo**|Un par nombre-valor en el **ElementNode**. Por ejemplo, en el nodo de elemento \<Customer ID = "1" >, **Id. de** es un atributo y  **@ID(entero)** devuelve "1" como un tipo entero en el campo de datos correspondiente **identificador**.|  
-|**Valor**|El valor del elemento. **Value** solo se puede usar en el último **ElementNode** de la ruta de acceso del elemento. Por ejemplo, porque \<devolver > es un nodo hoja, si se incluye al final de una ruta de acceso de elemento, el valor de **devolver {@}** es **silla**.|  
+|**Atributo**|Un par nombre-valor en el **ElementNode**. Por ejemplo, en el nodo de elemento \<Customer ID="1">, **ID** es un atributo y el valor **@IDID(Integer)** devuelve "1" como un tipo de entero en el campo de datos **ID** correspondiente.|  
+|**Valor**|El valor del elemento. **Value** solo se puede usar en el último **ElementNode** de la ruta de acceso del elemento. Por ejemplo, ya que \<Return> es un nodo hoja, si se incluye al final de una ruta de acceso de elemento, el valor de **Return {@}** será **Chair**.|  
 |**Element**|Valor del subelemento con nombre. Por ejemplo, Customers {}/Customer {}/LastName recupera valores únicamente para el elemento LastName.|  
 |**Tipo**|Tipo de datos opcional que se usa para el campo creado a partir de este elemento.|  
 |**NamespacePrefix**|**NamespacePrefix** se define en el elemento XML Query. Si no existe ningún elemento XML Query, se pasan por alto los espacios de nombres del elemento XML **ElementPath** . Si hay un elemento XML Query, el elemento XML **ElementPath** tiene un atributo **IgnoreNamespaces**opcional. Si IgnoreNamespaces es **true**, se omitirán los espacios de nombres de **ElementPath** del XML y el documento. Para más información, vea [Sintaxis de consulta XML para los datos de informe XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).|  

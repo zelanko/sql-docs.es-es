@@ -1,5 +1,5 @@
 ---
-title: Crear un conjunto de datos compartido o conjunto de datos incrustado (generador de informes y SSRS) | Documentos de Microsoft
+title: Crear un conjunto de datos compartido o un conjunto de datos incrustado (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 10/17/2016
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 25caf057e8d75fd3ed463f4165b3259331d18182
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Crear un conjunto de datos compartido o un conjunto de datos incrustado (Generador de informes y SSRS)

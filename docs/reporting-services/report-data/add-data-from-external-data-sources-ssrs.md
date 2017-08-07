@@ -1,5 +1,5 @@
 ---
-title: "Agregar datos de orígenes de datos externos (SSRS) | Documentos de Microsoft"
+title: "Agregar datos de orígenes de datos externos (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 76e09d1f90d7eb2f3d91aef60e4ce2a9c671ab13
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Agregar datos de orígenes de datos externos (SSRS)
@@ -108,7 +108,7 @@ ms.lasthandoff: 06/22/2017
 |[Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|Proporciona información sobre conjuntos de datos compartidos e incrustados.|  
 |[Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)|Proporciona información sobre la colección de campos de conjunto de datos que genera la consulta.|  
 |[Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Proporciona información detallada sobre la compatibilidad de versiones y plataformas para cada extensión de datos.|  
-|[Data Processing Extensions Overview](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md) in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).|Proporciona a los usuarios expertos información detallada sobre las extensiones de datos.|  
+|[Introducción a las extensiones de procesamiento de datos](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [de](http://go.microsoft.com/fwlink/?linkid=121312).|Proporciona a los usuarios expertos información detallada sobre las extensiones de datos.|  
   
   
 ## <a name="see-also"></a>Vea también  

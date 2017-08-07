@@ -1,5 +1,5 @@
 ---
-title: "Agregar o eliminar un grupo en una región de datos (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Agregar o eliminar un grupo en una región de datos (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,21 +15,21 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a28d250be3c4fe43b16825bf033e86836a036db0
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>Agregar o eliminar un grupo en una región de datos (Generador de informes y SSRS)
-En informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , agregue un grupo a una región de datos cuando quiera organizar los datos por un valor o un conjunto de expresiones determinados para presentación y cálculos. Un grupo tiene un nombre y una expresión que identifica qué datos de un conjunto de datos pertenecen al grupo. Para más información sobre los grupos, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
+En informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , agregue un grupo a una región de datos cuando quiera organizar los datos por un valor o un conjunto de expresiones determinados para presentación y cálculos. Un grupo tiene un nombre y una expresión que identifica qué datos de un conjunto de datos pertenecen al grupo. Para obtener más información sobre los grupos, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
  En una región de datos Tablix, haga clic en la tabla, la matriz o la lista para mostrar el panel Agrupación. Arrastre campos del conjunto de datos al panel Grupo de filas y Grupo de columnas para crear grupos primarios o secundarios. Haga clic con el botón secundario en un grupo existente para agregar un grupo adyacente. Por definición, el grupo de detalles es el grupo más interior y solo se puede agregar como grupo secundario. Haga clic con el botón secundario en un grupo existente para eliminarlo. Las filas y columnas en que se visualizarán los valores del grupo se agregan automáticamente. Para más información, vea [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
  En una región de datos Gráfico, haga clic en el gráfico para mostrar las zonas de colocación. Cree grupos arrastrando campos de conjunto de datos a las zonas de colocación de categorías y de series. Para agregar grupos anidados, agregue varios campos a la zona de colocación.  
   
- De forma predeterminada, no se definen grupos en un medidor. El comportamiento predeterminado para el medidor consiste en agregar todos los valores del campo especificado en un valor que se muestra en el medidor. Para más información, vea [Medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
+ De forma predeterminada, no se definen grupos en un medidor. El comportamiento predeterminado para el medidor consiste en agregar todos los valores del campo especificado en un valor que se muestra en el medidor. Para obtener más información, vea [Medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -67,7 +67,7 @@ En informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-m
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-     Se agrega un nuevo grupo de detalles como un grupo secundario en el panel Agrupación, y el identificador de fila para el grupo seleccionado en el paso 1 muestra el icono de grupo de detalles. Para más información sobre los identificadores, vea [Celdas, filas y columnas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+     Se agrega un nuevo grupo de detalles como un grupo secundario en el panel Agrupación, y el identificador de fila para el grupo seleccionado en el paso 1 muestra el icono de grupo de detalles. Para obtener más información sobre los identificadores, vea [Celdas, filas y columnas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
 ## <a name="to-edit-a-row-or-column-group-in-a-tablix-data-region"></a>Para editar un grupo de filas o de columnas de una región de datos Tablix  
   

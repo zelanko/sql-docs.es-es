@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Dar formato al texto (generador de informes) | Documentos de Microsoft'
+title: 'Tutorial: Dar formato a texto (Generador de informes) | Microsoft Docs'
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cfbe1001a049466af839363db29156df6b972556
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -45,7 +45,7 @@ Para obtener información sobre los requisitos, vea [Requisitos previos para los
   
 1.  [Inicie el Generador de informes](../reporting-services/report-builder/start-report-builder.md) desde el equipo, el portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o el modo integrado de SharePoint.  
   
-    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos**.  
+    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos** .  
   
     Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos**, vaya al menú **Archivo** > **Nuevo**.  
  
@@ -66,7 +66,7 @@ Para obtener información sobre los requisitos, vea [Requisitos previos para los
 4.  Compruebe que el tipo de conexión sea Microsoft SQL Server y, luego, en el cuadro **Cadena de conexión** , escriba: `Data Source = <servername>`  
   
     > [!NOTE]  
-    > La expresión `<servername>`, por ejemplo Report001, especifica un equipo en el que se ha instalado una instancia del motor de base de datos de SQL Server. Este tutorial no necesita datos concretos; solo necesita una conexión a una base de datos de SQL Server. Si ya tiene una conexión a un origen de datos enumerada bajo **Conexiones de origen de datos**, puede seleccionarla e ir al procedimiento siguiente, "Para crear un conjunto de datos". Para obtener más información, consulte [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > La expresión `<servername>`, por ejemplo Report001, especifica un equipo en el que se ha instalado una instancia del motor de SQL Server Database. Para este tutorial no se necesitan datos concretos, solo una conexión a una base de datos de SQL Server. Si ya tiene una conexión a un origen de datos enumerada bajo **Conexiones de origen de datos**, puede seleccionarla e ir al procedimiento siguiente, "Para crear un conjunto de datos". Para obtener más información, consulte [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -233,7 +233,7 @@ En esta sección, agrega un hipervínculo al texto de la tabla desde la sección
   
 7.  Seleccione `[LinkText]`.  
   
-8.  En la pestaña **Inicio** > **Fuente**, seleccione **Subrayado** y cambie **Color** por **Azul**.  
+8.  En la pestaña **Inicio** > **Fuente**, seleccione **Subrayado** y cambie **Color** a **Azul**.  
   
 9. Haga clic en **Ejecutar**.  
   
@@ -259,7 +259,7 @@ En esta sección, girará parte del texto de la tabla de las secciones anteriore
     > [!NOTE]  
     > Cuando las propiedades del panel de propiedades se organizan en categorías, WritingMode está en la categoría **Localización** . Asegúrese de haber seleccionado la celda y no el texto. WritingMode es una propiedad del cuadro de texto, no del texto.  
 
-    ![generador-de-informes-seleccionar-territorio-celda](../reporting-services/media/report-builder-select-territory-cell.png)
+    ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
    
 6.  En la pestaña **Inicio**, sección **Párrafo**, seleccione **Centro** y **Centrar** para colocar el texto en el centro de la celda tanto vertical como horizontalmente.  
   
@@ -366,8 +366,8 @@ El informe se guarda en el servidor de informes. El nombre del servidor de infor
 
 Existen numerosas formas de dar formato al texto en el Generador de informes. [Tutorial: Crear un informe de forma libre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contiene más ejemplos.  
 
-[Tutoriales del generador de informes ](../reporting-services/report-builder-tutorials.md)  
- [aplicar formato a elementos de informe](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
+[Tutoriales del Generador de informes ](../reporting-services/report-builder-tutorials.md) 
+[Aplicar formato a elementos de informe](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
 [Generador de informes en SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

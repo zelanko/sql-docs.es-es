@@ -1,5 +1,5 @@
 ---
-title: "Informes de administración de contenido de servidor (modo nativo de SSRS) | Documentos de Microsoft"
+title: "Administración de contenido del servidor de informes (Modo nativo de SSRS) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -21,11 +21,11 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2289f62499f876cc296d6c939c4d9e70ccfe4c3f
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Administración de contenido del servidor de informes (Modo nativo de SSRS)
@@ -66,11 +66,11 @@ ms.lasthandoff: 06/22/2017
   
 |Icono|Elemento que puede moverse|  
 |----------|-------------------|  
-|![Icono de informe](../../reporting-services/report-server/media/hlp-16doc.gif "el icono de informe")|Informe|  
-|![Icono de informe vinculado](../../reporting-services/report-server/media/hlp-16linked.gif "icono de informe vinculado")|Informe vinculado|  
-|![Icono de carpeta](../../reporting-services/report-server/media/hlp-16folder.gif "icono de carpeta")|Carpeta|  
-|![icono de recurso genérico](../../reporting-services/report-server/media/hlp-16file.gif "icono de recurso genérico")|Recurso genérico|  
-|![Icono de origen de datos compartido](../../reporting-services/report-data/media/hlp-16datasource.png "icono de origen de datos compartido")|Origen de datos compartido|  
+|![Icono de informe](../../reporting-services/report-server/media/hlp-16doc.gif "Icono de informe")|Informe|  
+|![Icono de informe vinculado](../../reporting-services/report-server/media/hlp-16linked.gif "Icono de informe vinculado")|Informe vinculado|  
+|![Icono de carpeta](../../reporting-services/report-server/media/hlp-16folder.gif "Icono de carpeta")|Carpeta|  
+|![Icono de recurso genérico](../../reporting-services/report-server/media/hlp-16file.gif "Icono de recurso genérico")|Recurso genérico|  
+|![Icono de origen de datos compartido](../../reporting-services/report-data/media/hlp-16datasource.png "Icono de origen de datos compartido")|Origen de datos compartido|  
 ||Conjunto de datos compartidos|  
   
  No todos los elementos se pueden mover. Por ejemplo, los elementos asociados a un informe, tales como las suscripciones o el historial del informe, no pueden moverse. Estos elementos se mueven con los informes asociados. Asimismo, tampoco pueden moverse elementos como las programaciones compartidas que existen fuera de la jerarquía de carpetas. No pueden moverse elementos para los que no se tienen los permisos adecuados. Este permiso se concede mediante la selección de las siguientes tareas durante la asignación de roles del elemento en cuestión: "Administrar informes", "Administrar modelos", "Administrar carpetas" y "Administrar orígenes de datos".  

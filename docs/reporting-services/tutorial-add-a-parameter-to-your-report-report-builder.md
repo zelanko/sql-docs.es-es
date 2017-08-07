@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Agregar un parámetro a un informe (generador de informes) | Documentos de Microsoft"
+title: "Tutorial: Agregar un parámetro a un informe (Generador de informes) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a3e5da225eb8008f74d6fc5aade3e55543d93d91
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Agregar un parámetro a un informe (Generador de informes)
@@ -48,7 +48,7 @@ Cree un informe de matriz, un origen de datos y un conjunto de datos.
   
 1.  [Inicie el Generador de informes](../reporting-services/report-builder/start-report-builder.md) desde el equipo, el portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o el modo integrado de SharePoint.  
   
-    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos**.  
+    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos** .  
   
     Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos**, vaya al menú **Archivo** > **Nuevo**.  
   
@@ -505,7 +505,7 @@ Para cambiar un parámetro de un solo valor a varios valores, debe cambiar la co
 El informe se guarda en el servidor de informes. El servidor de informes al que está conectado aparece en la barra de estado en la parte inferior de la ventana.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
-De esta forma se concluye el tutorial sobre cómo agregar un parámetro a un informe. Para obtener más información sobre parámetros, consulte [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+De esta forma se concluye el tutorial sobre cómo agregar un parámetro a un informe. Para obtener más información sobre los parámetros, consulte [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## <a name="see-also"></a>Vea también  
 * [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md)

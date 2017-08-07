@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Asignar informes (generador de informes) | Documentos de Microsoft'
+title: 'Tutorial: Informe de asignaciones (Generador de informes) | Microsoft Docs'
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-server-2016
@@ -16,14 +16,14 @@ caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: efe91a2e1e8ca7b0744639ed718d63b70e3adc5c
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="tutorial-map-report-report-builder"></a>Tutorial: informe de asignaciones (Generador de informes)
+# <a name="tutorial-map-report-report-builder"></a>Tutorial: Informe de asignaciones (Generador de informes)
 En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , obtendrá información sobre las características de mapa que puede usar para mostrar datos en un fondo geográfico de un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
   
 Los mapas están basados en datos espaciales que normalmente está compuestos de puntos, líneas y polígonos. Por ejemplo, un polígono puede representar el perfil de un condado, una línea puede representar una carretera y un punto puede representar la ubicación de una ciudad. Cada tipo de datos espaciales se muestra en una capa de mapa independiente, como un conjunto de elementos de mapa.  
@@ -51,7 +51,7 @@ En esta sección, agregará un mapa al informe desde la galería de mapas. El ma
   
 1.  [Inicie el Generador de informes](../reporting-services/report-builder/start-report-builder.md) desde el equipo, el portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o el modo integrado de SharePoint.  
   
-    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos**.  
+    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos** .  
   
     Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos**, vaya al menú **Archivo** > **Nuevo**.  
   
@@ -102,11 +102,11 @@ En esta sección, agregará un mapa al informe desde la galería de mapas. El ma
 15. Haga doble clic en el mapa para mostrar el panel **Capas de mapa**. El panel **Capas de mapa** muestra una capa de polígono, PolygonLayer1, del tipo **Insertada**. Cada condado es un elemento de mapa incrustado en esta capa.  
   
     > [!NOTE]  
-    > Si no ve el panel **Capas de mapa** , quizá se esté mostrando fuera de su vista actual. Use la barra de desplazamiento de la parte inferior de la ventana de la vista Diseño para cambiar la vista. O bien, en la pestaña **Ver**, desactive la opción **Datos del informe** para proporcionar una mayor área de diseño expuesta.   
+    > Si no ve el panel **Capas de mapa** , quizá se esté mostrando fuera de su vista actual. Use la barra de desplazamiento de la parte inferior de la ventana de la vista Diseño para cambiar la vista. O bien, en la pestaña **Ver** , desactive la opción **Datos del informe** para proporcionar una mayor área de diseño expuesta.   
 
 15. Seleccione la flecha situada junto a PolygonLayer1 > **Propiedades del polígono**.
 
-16. En la pestaña **Fuente**, modifique el color por **Gris pálido**.
+16. En la pestaña **Fuente** , modifique el color por **Gris pálido**.
 
 17. En la pestaña **Inicio** > **Ejecutar** para obtener una vista previa del informe.  
   
@@ -126,7 +126,7 @@ En esta sección, usará el asistente para capas de mapa para agregar una capa d
   
 1.  En la pestaña **Ejecutar** > **Diseño** para volver a cambiar a la vista Diseño.  
   
-2.  Haga doble clic en el mapa para mostrar el panel **Capas de mapa** . En la barra de herramientas, haga clic en el **Asistente para nueva capa** botón ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"). 
+2.  Haga doble clic en el mapa para mostrar el panel **Capas de mapa** . En la barra de herramientas, haga clic en el botón **Asistente para nueva capa** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"). 
 
     ![report-builder-map-new-layer-wizard-icon](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
@@ -242,7 +242,7 @@ Use el Asistente para capas de mapa para agregar una capa de mapa que muestre un
   
 1.  Cambie a la vista de diseño.  
   
-2.  Haga doble clic en el mapa para mostrar el panel **Capa de mapa** . En la barra de herramientas, haga clic en el **Asistente para nueva capa** botón ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
+2.  Haga doble clic en el mapa para mostrar el panel **Capa de mapa** . En la barra de herramientas, haga clic en el botón **Asistente para nueva capa** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
   
 3.  En la página **Elegir un origen de datos espaciales** , seleccione **Consulta espacial de SQL Server** y haga clic en **Siguiente**.  
   
@@ -308,7 +308,7 @@ En esta sección, agregará una capa de mapa que muestre un fondo de mosaico de 
   
 4.  Haga clic en la flecha situada junto a TileLayer1 > **Propiedades del mosaico**.  
   
-5.  En la pestaña **General**, en **Tipo**, seleccione **Aéreo**. La vista aérea no contiene texto.  
+5.  En la pestaña **General** , en **Tipo**, seleccione **Aéreo**. La vista aérea no contiene texto.  
 
     ![report-builder-map-bing-aerial](../reporting-services/media/report-builder-map-bing-aerial.png)
   
@@ -317,7 +317,7 @@ En esta sección, agregará una capa de mapa que muestre un fondo de mosaico de 
 ## <a name="Transparent"></a>5. Hacer una capa transparente  
 En esta sección, para permitir que los elementos de una capa se muestren a través de otra capa, puede ajustar el orden y la transparencia de las capas para obtener el efecto que quiere. Empiece con la primera capa que ha creado, PolygonLayer1. 
   
-1.  Haga doble clic en el mapa para mostrar el panel **Capa de mapa**.  
+1.  Haga doble clic en el mapa para mostrar el panel **Capa de mapa** .  
   
 3.  Haga clic en la flecha situada junto a PolygonLayer1 > **Datos de la capa**. Se abre el cuadro de diálogo **Propiedades de capa de polígono de mapa** .  
   
@@ -413,7 +413,7 @@ De forma predeterminada, los datos tienen un formato general. En esta sección, 
 
 2. Seleccione la escala de colores. En la pestaña **Inicio** > sección **Número**, haga clic en **Moneda**.  
   
-4.  Aún en la sección **Número**, haga clic en el botón **Disminuir decimales** dos veces.  
+4.  Aún en la sección **Número** , haga clic en el botón **Disminuir decimales** dos veces.  
   
     La escala de colores muestra las ventas anuales en el formato de moneda para cada rango.  
   
@@ -457,11 +457,11 @@ Puede configurar las opciones de presentación predeterminadas para todos los el
 Los condados que no tienen datos asociados se muestran como azul grisáceo. Solo los condados que tienen datos analíticos asociados tienen los colores **Rojo** a **Verde** de las reglas de color que ha especificado.  
   
 ## <a name="CustomPoint"></a>7. Agregar un punto personalizado  
-Para representar un nuevo almacén que aún no se ha generado, en esta sección especificará un punto con el tipo de marcador **Estrella**.  
+Para representar un nuevo almacén que aún no se ha generado, en esta sección especificará un punto con el tipo de marcador **Estrella** .  
   
 1.  Cambie a la vista de diseño.  
   
-2.  Haga doble clic en el mapa para mostrar el panel **Capa de mapa** . En la barra de herramientas, haga clic en **Agregar capa**![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer"), a continuación, haga clic en **capa de punto**.    
+2.  Haga doble clic en el mapa para mostrar el panel **Capa de mapa** . En la barra de herramientas, haga clic en **Agregar capa** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer") y, después, en **Capa de punto**.  
   
     Una nueva capa de punto se agrega al mapa. De forma predeterminada, la capa de punto tiene el tipo de datos espaciales **Incrustado**.  
   
@@ -547,7 +547,7 @@ Si lo guarda en un servidor de informes, puede verlo allí.
 ## <a name="next-steps"></a>Pasos siguientes  
 De esta forma se concluye el tutorial sobre cómo agregar un mapa a un informe.  
   
-Para más información, vea [Mapas &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
+Para obtener más información, vea [Mapas &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
 [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md)  

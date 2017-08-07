@@ -1,5 +1,5 @@
 ---
-title: "Establezca las propiedades de implementación (Reporting Services) | Documentos de Microsoft"
+title: "Establecer propiedades de implementación (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -20,11 +20,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 30d542287f81032aa1bc2540d461a8f8c163b2f9
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Establecer propiedades de implementación (Reporting Services)
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  En el cuadro de diálogo **Páginas de propiedades** del proyecto, haga clic en **Administrador de configuración**.  
   
-3.  En el cuadro de diálogo **Administrador de configuración** , seleccione la configuración que desea modificar. La configuración activa actualmente se muestra como **Active (***\<configuración >***)**.  
+3.  En el cuadro de diálogo **Administrador de configuración** , seleccione la configuración que desea modificar. La configuración activa se muestra como **Active(***\<configuración>***)**.  
   
 4.  En **Contextos del proyecto**, para cada proyecto de la solución, active o desactive **Generar** o **Implementar**.  
   

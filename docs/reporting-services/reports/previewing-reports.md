@@ -1,5 +1,5 @@
 ---
-title: Vistas previas de informes | Documentos de Microsoft
+title: Obtener la vista previa de informes | Microsoft Docs
 ms.custom: 
 ms.date: 05/05/2016
 ms.prod: sql-server-2016
@@ -20,28 +20,28 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 45df97d21abc1ac494592c98e69964a38d7f4d21
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="previewing-reports"></a>Obtener la vista previa de informes
   Después de diseñar un informe de     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puede que quiera verlo antes de publicarlo en un entorno de producción. Existen varias maneras de verlo: cambiar al modo de vista previa del Diseñador de informes, usar la ventana de vista previa del Diseñador de informes y publicar el informe en un servidor de informes en un entorno de prueba.  
   
 > [!NOTE]  
->  Cuando se obtiene una vista previa de un informe, los datos de ese informe se almacenan en la caché en un archivo del equipo local. Cuando se obtiene de nuevo una vista previa del mismo informe mediante la misma consulta, los mismos parámetros y las mismas credenciales, el Diseñador de informes recupera la copia en caché en lugar de volver a ejecutar la consulta. El archivo de datos se guarda como  *\<reportname >*. rdl.data en el mismo directorio que el archivo de definición de informe. El archivo no se elimina cuando se cierra el Diseñador de informes.  
+>  Cuando se obtiene una vista previa de un informe, los datos de ese informe se almacenan en la caché en un archivo del equipo local. Cuando se obtiene de nuevo una vista previa del mismo informe mediante la misma consulta, los mismos parámetros y las mismas credenciales, el Diseñador de informes recupera la copia en caché en lugar de volver a ejecutar la consulta. El archivo de datos se guarda como *\<nombreDeInforme>*.rdl.data en el mismo directorio que el archivo de definición de informe. El archivo no se elimina cuando se cierra el Diseñador de informes.  
   
 ## <a name="preview-mode"></a>Modo de vista previa  
- Puede ver un informe en el Diseñador de informes, haga clic en ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png "ssrs_ssdt_preview"). El informe se ejecuta en modo local, utilizando la misma funcionalidad de procesamiento y representación de informes disponible en el servidor de informes. El informe que se muestra es una imagen interactiva; puede seleccionar parámetros, hacer clic en vínculos, ver el mapa del documento, así como expandir y contraer las áreas ocultas del informe. También puede exportar el informe con cualquiera de los formatos de representación instalados.  
+ Para obtener una vista previa del informe en el Diseñador de informes, haga clic en ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png "ssrs_ssdt_preview"). El informe se ejecuta en modo local, utilizando la misma funcionalidad de procesamiento y representación de informes disponible en el servidor de informes. El informe que se muestra es una imagen interactiva; puede seleccionar parámetros, hacer clic en vínculos, ver el mapa del documento, así como expandir y contraer las áreas ocultas del informe. También puede exportar el informe con cualquiera de los formatos de representación instalados.  
   
 ## <a name="standalone-preview"></a>Vista previa independiente  
  También puede obtener una vista previa de un informe si ejecuta el proyecto de informe en una configuración de depuración, por ejemplo, para depurar los ensamblados personalizados que ha escrito. El informe se abre en el explorador predeterminado. Existen tres modos de ejecutar un proyecto:  
   
 -   Hacer clic en **Iniciar depuración** en el menú **Depurar** .  
   
--   Haciendo clic en el **iniciar** situado en la [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] barra de herramientas estándar ![ssrs_ssdt_startdebug](../../reporting-services/reports/media/ssrs-ssdt-startdebug.png "ssrs_ssdt_startdebug").  
+-   Hacer clic en el botón **Inicio** de la barra de herramientas estándar de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ![ssrs_ssdt_startdebug](../../reporting-services/reports/media/ssrs-ssdt-startdebug.png "ssrs_ssdt_startdebug").  
   
 -   Pulsar **F5**.  
   

@@ -1,5 +1,5 @@
 ---
-title: "Interfaz de usuario del Diseñador de consultas basado en texto (generador de informes) | Documentos de Microsoft"
+title: "Interfaz de usuario del Diseñador de consultas basado en texto (Generador de informes) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -19,11 +19,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1640b0536b6e206afbd2aff5ea8dd11349277f12
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas basado en texto (Generador de informes)
@@ -45,7 +45,7 @@ ms.lasthandoff: 06/22/2017
 |------------|-----------------|  
 |**Editar como texto**|Alterna entre el diseñador de consultas basado en texto y el diseñador gráfico de consultas. No todos los tipos de orígenes de datos admiten diseñadores gráficos de consultas.|  
 |**Importar**|Importa una consulta existente de un archivo o informe. Solo se admiten los tipos de archivo sql y rdl.|  
-|![Ejecute la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "ejecutar la consulta")|Ejecuta la consulta y muestra el conjunto de resultados en el panel Resultado.|  
+|![Ejecutar la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta la consulta y muestra el conjunto de resultados en el panel Resultado.|  
 |**Tipo de comando**|Seleccione **Text**, **StoredProcedure**o **TableDirect**. Si un procedimiento almacenado tiene parámetros, el cuadro de diálogo **Definir parámetros de consulta** aparece al hacer clic en **Ejecutar** en la barra de herramientas; puede rellenar los valores según sea necesario. La compatibilidad del tipo de comando varía en función del tipo de origen de datos. Por ejemplo, solamente OLE DB y ODBC son compatibles con **TableDirect**.<br /><br /> Nota: Si un procedimiento almacenado devuelve más de un conjunto de resultados, solo se usa el primero para rellenar el conjunto de datos.|  
   
 ### <a name="command-type-text"></a>Tipo de comando Text  
@@ -74,7 +74,7 @@ SELECT Name FROM Person.ContactType
   
  La figura siguiente muestra los paneles Consulta y Resultado al ejecutar un procedimiento almacenado. En este caso, los parámetros de entrada son constantes.  
   
- ![Procedimiento almacenado en el Diseñador de consultas basado en texto](../../reporting-services/report-data/media/rs-relational-text-sp.gif "procedimiento almacenado en el Diseñador de consultas basado en texto")  
+ ![Procedimiento almacenado en un diseñador de consultas basado en texto](../../reporting-services/report-data/media/rs-relational-text-sp.gif "Procedimiento almacenado en un diseñador de consultas basado en texto")  
   
  En la siguiente tabla se describe la función de cada panel.  
   

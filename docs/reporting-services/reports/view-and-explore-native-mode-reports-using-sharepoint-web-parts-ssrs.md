@@ -1,5 +1,5 @@
 ---
-title: Ver y explorar los informes en modo nativo usando elementos Web de SharePoint (SSRS) | Documentos de Microsoft
+title: Ver y explorar los informes en modo nativo usando elementos web de SharePoint (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -15,18 +15,18 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 507cac75588632cfd89f5275ee7038a49b8cdfc5
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>Ver y explorar los informes en modo nativo usando elementos web de SharePoint (SSRS)
 
 > [!IMPORTANT]  
->  SQL Server Reporting Services ya no se admite el uso de elementos web de modo nativo (RSWebParts.cab) para tener acceso al contenido de servidor de informes en un sitio de SharePoint desde un servidor de informes de modo nativo. Use el [elemento web Visor de informes en un sitio de SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) en su lugar.  
+>  SQL Server Reporting Services ya no admite el uso de elementos web (RSWebParts.cab) en modo nativo para tener acceso al contenido del servidor de informes en un sitio de SharePoint desde un servidor de informes en modo nativo. Use el [elemento web Visor de informes en un sitio de SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) en su lugar.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona varios elementos web que funcionan con versiones específicas de un servidor de informes y en determinados modos de implementación.  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Las versiones admitidas de productos y tecnologías de SharePoint incluyen:  
   
-    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
+    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
   
     -   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] y [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="install-web-parts-using-powershell"></a>Instalar elementos web con PowerShell  
   
-1.  Copie el archivo **RSWebParts.cab** en una carpeta del servidor de SharePoint. Puede copiarlo en cualquier carpeta del servidor de SharePoint y, a continuación, eliminarlo una vez instalados los elementos web. De forma predeterminada en SQL Server 2014 Reporting Services y versiones anteriores se instala el archivo RSWebParts.cab en la carpeta siguiente:  
+1.  Copie el archivo **RSWebParts.cab** en una carpeta del servidor de SharePoint. Puede copiarlo en cualquier carpeta del servidor de SharePoint y, a continuación, eliminarlo una vez instalados los elementos web. De manera predeterminada, SQL Server 2014 Reporting Services y las versiones anteriores instalan el archivo RSWebParts.cab en la siguiente carpeta:  
   
     ```  
     C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint  
@@ -148,7 +148,7 @@ ms.lasthandoff: 06/22/2017
   
 6.  Mientras la página está en el modo de edición, haga clic en **Editar elemento web** en el elemento web Visor de informes.  
   
-7.  En **Report Manager URL**, escriba una dirección URL a una instancia del Administrador de informes asociada al servidor de informes en modo nativo al que desea tener acceso. De forma predeterminada, una dirección URL del Administrador de informes tiene la siguiente sintaxis: **http://\<servername > / reports**.  
+7.  En **Report Manager URL**, escriba una dirección URL a una instancia del Administrador de informes asociada al servidor de informes en modo nativo al que desea tener acceso. De manera predeterminada, la dirección URL del Administrador de informes tiene la siguiente sintaxis: **http://\<nombreDeServidor>/informes**.  
   
 8.  En **Ruta de acceso del informe**, especifique una barra diagonal, seguida de la ruta de acceso a la carpeta y el nombre del informe. **No** incluya el nombre del servidor ni el directorio virtual del Administrador de informes. Por ejemplo, para abrir el informe "Company Sales" de la carpeta Adventure Works, especifique **/Adventure Works/Company Sales**. Aquí se proporciona otro ejemplo en el que el informe "Products" está en la carpeta raíz del servidor de informes **/Products**.  
   
@@ -174,4 +174,4 @@ ms.lasthandoff: 06/22/2017
   
     3.  Haga clic en **Visor de informes**.  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

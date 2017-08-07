@@ -1,5 +1,5 @@
 ---
-title: "Agregar un hipervínculo a una dirección URL (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Agregar un hipervínculo a una dirección URL (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/07/2016
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c4d66e7d74d06cbad20351f80a312be95cc253c0
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Agregar un hipervínculo a una dirección URL (Generador de informes y SSRS)
@@ -33,7 +33,7 @@ Aprenda a agregar acciones de hipervínculo a cuadros de texto, imágenes, gráf
  
  *  Y puede **agregar un marcador a un lugar específico** en el mismo informe. 
   
-Intente agregar hipervínculos con los datos de ejemplo en [Tutorial: Dar formato a texto &#40;(Generador de informes)&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+Intente agregar hipervínculos con los datos de ejemplo incluidos en [Tutorial: Dar formato a texto &#40;(Generador de informes)&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  Los vínculos que se enlazan a los campos de conjunto de datos pueden ser vulnerables a la alteración con fines malintencionados. Para obtener más información, vea [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md).  

@@ -1,5 +1,5 @@
 ---
-title: "Agregar una ordenación interactiva a una tabla o matriz (generador de informes y SSRS) | Documentos de Microsoft"
+title: "Agregar una ordenación interactiva a una tabla o una matriz (Generador de informes y SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -18,11 +18,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ab2138bdee0abc064ae1fabb06ef04ed3c490170
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Agregar una ordenación interactiva a una tabla o una matriz (Generador de informes y SSRS)
@@ -67,7 +67,7 @@ ms.lasthandoff: 06/22/2017
   
  Para comprobar la acción de ordenación, haga clic en **Ejecutar** para mostrar una vista previa del informe y, a continuación, haga clic en los botones de ordenación interactiva.  
   
- ![Icono de flecha usado con Back vínculo al principio](../../analysis-services/instances/media/uparrow16x16.gif "icono de flecha usado con Back vínculo al principio") [volver al principio](#BackToTop)  
+ ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
 ##  <a name="SortingTopLevelParent"></a> Ordenar un grupo de filas primarias de nivel superior para una tabla o matriz  
  Agregue un botón de ordenación interactiva a un encabezado de columna para que los usuarios puedan hacer clic en dicho encabezado y ordenar las filas del grupo primario de una tabla o matriz por el valor mostrado en esa columna. El orden de los grupos secundarios permanece invariable.  
@@ -91,7 +91,7 @@ ms.lasthandoff: 06/22/2017
   
  Para comprobar la acción de ordenación, haga clic en **Ejecutar** para mostrar una vista previa del informe y, a continuación, haga clic en los botones de ordenación interactiva.  
   
- ![Icono de flecha usado con Back vínculo al principio](../../analysis-services/instances/media/uparrow16x16.gif "icono de flecha usado con Back vínculo al principio") [volver al principio](#BackToTop)  
+ ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
 ##  <a name="SortingChildGroups"></a> Ordenar grupos secundarios o filas de detalles para un grupo  
  Agregue un botón de ordenación interactiva a una fila de encabezado de grupo para que los usuarios puedan ordenar los valores de un grupo secundario perteneciente a un grupo primario u ordenar las filas de detalles para el grupo secundario más interior.  
@@ -114,12 +114,12 @@ ms.lasthandoff: 06/22/2017
   
  Para comprobar la acción de ordenación, haga clic en **Ejecutar** para mostrar una vista previa del informe y, a continuación, haga clic en los botones de ordenación interactiva.  
   
- ![Icono de flecha usado con Back vínculo al principio](../../analysis-services/instances/media/uparrow16x16.gif "icono de flecha usado con Back vínculo al principio") [volver al principio](#BackToTop)  
+ ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
 ##  <a name="SortingMultipleRowGroups"></a> Ordenar filas basadas en una expresión de grupo compleja  
- Agregue un botón de ordenación interactiva a un encabezado de columna para que los usuarios puedan hacer clic en dicho encabezado y ordenar los grupos primarios y secundarios combinados. Para lograr este efecto, debe cambiar la expresión de grupo para que sea una expresión compuesta de ambos grupos. Por ejemplo, imagine que una matriz muestra los totales de inventario de una tienda para los artículos agrupados por color y tamaño. Para ordenar las filas basadas en la combinación de color y tamaño, en lugar de tener un grupo para el color y otro para el tamaño, puede definir un grupo basado en la combinación de ambos. Para más información sobre la definición de expresiones de grupo, vea [Ejemplos de expresión de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
+ Agregue un botón de ordenación interactiva a un encabezado de columna para que los usuarios puedan hacer clic en dicho encabezado y ordenar los grupos primarios y secundarios combinados. Para lograr este efecto, debe cambiar la expresión de grupo para que sea una expresión compuesta de ambos grupos. Por ejemplo, imagine que una matriz muestra los totales de inventario de una tienda para los artículos agrupados por color y tamaño. Para ordenar las filas basadas en la combinación de color y tamaño, en lugar de tener un grupo para el color y otro para el tamaño, puede definir un grupo basado en la combinación de ambos. Para obtener más información sobre la definición de expresiones de grupo, vea [Ejemplos de expresión de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
   
- En el procedimiento siguiente, los términos especifican las áreas de la región de datos Tablix. Para más información, vea [Describir las áreas de la región de datos Tablix &#40;Generador de informes y SSRS&#41](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ En el procedimiento siguiente, los términos especifican las áreas de la región de datos Tablix. Para obtener más información, vea [Describir las áreas de la región de datos Tablix &#40;Generador de informes y SSRS&#41](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  Normalmente, cuando se ordenan filas basadas en varios grupos, se desea ver los totales para las filas ordenadas, sin tener en cuenta los grupos de columnas. En este procedimiento no se usa ningún grupo de columnas. Puede empezar agregando una matriz y quitando el grupo de columnas predeterminado. También podría empezar agregando una tabla y quitando el grupo de detalles.  
   
@@ -171,7 +171,7 @@ ms.lasthandoff: 06/22/2017
   
  Para comprobar la acción de ordenación, haga clic en **Ejecutar** para mostrar una vista previa del informe y, a continuación, haga clic en el botón de ordenación interactiva. La matriz realiza la ordenación por los valores combinados de la expresión de grupo, aunque cada valor individual se muestra en su propia columna.  
   
- ![Icono de flecha usado con Back vínculo al principio](../../analysis-services/instances/media/uparrow16x16.gif "icono de flecha usado con Back vínculo al principio") [volver al principio](#BackToTop)  
+ ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
 ##  <a name="SynchronizingSortOrder"></a> Sincronizar el criterio de ordenación para varias regiones de datos  
  Agregue un botón de ordenación interactiva que permita a los usuarios hacer clic en un botón de ordenación y ordenar varias regiones de datos. Al crear un botón de ordenación interactiva, puede especificar si desea sincronizar la ordenación para varias regiones de datos basadas en el mismo conjunto de datos de informe. Por ejemplo, un informe podría incluir una matriz y un gráfico que represente gráficamente los datos. Cuando un usuario cambia el criterio de ordenación de las filas de la matriz, el gráfico muestra automáticamente el mismo criterio de ordenación.  
@@ -220,7 +220,7 @@ ms.lasthandoff: 06/22/2017
   
  Para comprobar la acción de ordenación, haga clic en **Ejecutar** para mostrar una vista previa del informe y, a continuación, haga clic en el botón de ordenación interactiva. La matriz realiza la ordenación por los valores combinados de la expresión de grupo, aunque cada valor individual se muestra en su propia columna.  
   
- ![Icono de flecha usado con Back vínculo al principio](../../analysis-services/instances/media/uparrow16x16.gif "icono de flecha usado con Back vínculo al principio") [volver al principio](#BackToTop)  
+ ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
 ## <a name="see-also"></a>Vea también  
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   

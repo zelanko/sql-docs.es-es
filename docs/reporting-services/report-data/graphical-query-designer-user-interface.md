@@ -1,5 +1,5 @@
 ---
-title: "Interfaz de usuario del diseñador gráfico de consultas | Documentos de Microsoft"
+title: "Interfaz de usuario del diseñador gráfico de consultas | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -24,11 +24,11 @@ caps.latest.revision: 54
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3c3bc432fc4dd02527f617b920cdf045103247a9
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interfaz de usuario del diseñador gráfico de consultas
@@ -55,7 +55,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="command-type-text"></a>Tipo de comando Text  
  En el tipo **Text** , el diseñador gráfico de consultas presenta cuatro áreas o paneles. En una consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] , puede especificar columnas, alias, valores de ordenación y valores de filtro. Asimismo, puede ver el texto de consulta generado a partir de las selecciones, ejecutar la consulta y ver el conjunto de resultados. La figura siguiente muestra los cuatro paneles.  
   
- ![Diseñador gráfico de consultas para consultas sql](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "diseñador gráfico de consultas para consultas sql")  
+ ![Diseñador gráfico de consultas para consultas SQL](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "Diseñador gráfico de consultas para consultas SQL")  
   
  En la siguiente tabla se describe la función de cada panel.  
   
@@ -76,18 +76,18 @@ ms.lasthandoff: 06/22/2017
 |Botón|Description|  
 |------------|-----------------|  
 |**Editar como texto**|Alterna entre el diseñador de consultas basado en texto y el diseñador gráfico de consultas.|  
-|**Importar**|Importe una consulta existente de un archivo o informe. Solo se admiten los tipos de archivos .sql y .rdl. Para obtener más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Botón de alternancia Mostrar u ocultar diagrama panel](../../reporting-services/report-data/media/rsqdicon-showhidediagram.gif "botón de alternancia de panel de diagrama de mostrar u ocultar")|Muestra u oculta el panel Diagrama.|  
-|![Botón de alternancia Mostrar u ocultar cuadrícula de panel](../../reporting-services/report-data/media/rsqdicon-showhidegrid.gif "botón de alternancia Mostrar u ocultar cuadrícula de panel")|Muestra u oculta el panel Cuadrícula.|  
-|![Mostrar u ocultar el botón de alternancia de panel sql](../../reporting-services/report-data/media/rsqdicon-showhidesql.gif "mostrar u ocultar el botón de alternancia de panel de sql")|Muestra u oculta el panel de SQL.|  
-|![Botón de alternancia Mostrar u ocultar resultado de panel](../../reporting-services/report-data/media/rsqdicon-showhideresult.gif "botón de alternancia Mostrar u ocultar resultado de panel")|Muestra u oculta el panel Resultado.|  
-|![Ejecute la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "ejecutar la consulta")|Ejecuta la consulta.|  
-|![Comprobar SQL en el botón del panel SQL](../../reporting-services/report-data/media/rsqdicon-verifysql.gif "comprobar SQL en el botón del panel SQL")|Comprueba que la sintaxis del texto de consulta sea correcta.|  
-|![Establecer orden ascendente en el campo seleccionado](../../reporting-services/report-data/media/rsqdicon-sortascending.gif "establecer orden ascendente en el campo seleccionado")|Establece el criterio de ordenación en **Orden ascendente** para la columna seleccionada en el panel Diagrama.|  
-|![Establecer orden descendente en el campo seleccionado](../../reporting-services/report-data/media/rsqdicon-sortdescending.gif "establecer orden descendente en el campo seleccionado")|Establece el criterio de ordenación en **Orden descendente** para la columna seleccionada en el panel Diagrama.|  
-|![Quitar filtro en el campo seleccionado](../../reporting-services/report-data/media/rsqdicon-removefilter.gif "Quitar filtro en el campo seleccionado")|Quitar el filtro para la columna seleccionada en el panel de diagrama que está marcado como poseedora de filtro (![gráfico de filtro junto a columna de filtro seleccionada](../../reporting-services/report-data/media/rsqdicon-filter.gif "gráfico de filtro junto a columna de filtro seleccionada")).|  
-|![Utilizar Group By para el campo seleccionado](../../reporting-services/report-data/media/rsqdicon-usegroupby.gif "utilizar Group By para el campo seleccionado")|Muestra u oculta la columna **Agrupar por** en el panel Cuadrícula. Cuando el botón de alternancia **Agrupar por** está activado, aparece una columna adicional llamada **Agrupar por** en el panel Cuadrícula; cada valor de las columnas seleccionadas de la consulta tiene el valor predeterminado **Agrupar por**, que hace que la columna seleccionada se incluya en una cláusula GROUP BY del texto SQL. Utilice el botón Agrupar por para agregar automáticamente una cláusula GROUP BY que incluya todas las columnas en la cláusula SELECT. Cuando la cláusula SELECT incluya llamadas de función de agregado (por ejemplo, SUM(nombreDeColumna)), incluya cada columna que no sea de agregado en la cláusula GROUP BY si desea que aparezca en el conjunto de resultados.<br /><br /> Para que aparezca en el panel Resultado, cada columna de la consulta debe tener una función de agregado definida para utilizarse en el cálculo del valor que se mostrará en dicho panel. De lo contrario, la columna de la consulta debe especificarse en la cláusula GROUP BY de la consulta SQL.|  
-|![Agregar una nueva tabla al panel Diagrama](../../reporting-services/report-data/media/rsqdicon-addtable.gif "agregar una nueva tabla en el panel de diagrama")|Agrega una nueva tabla del origen de datos al panel Diagrama.<br /><br /> **Nota** Cuando agrega una nueva tabla, el diseñador de consultas intenta hacer que coincidan las relaciones de clave externa del origen de datos. Después de agregar una tabla, confirme que las relaciones de clave externa, representadas por los vínculos entre las tablas, sean correctas.|  
+|**Importar**|Importe una consulta existente de un archivo o informe. Solo se admiten los tipos de archivos .sql y .rdl. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|![Botón de alternancia Mostrar u ocultar panel de diagrama](../../reporting-services/report-data/media/rsqdicon-showhidediagram.gif "Botón de alternancia Mostrar u ocultar panel de diagrama")|Muestra u oculta el panel Diagrama.|  
+|![Botón de alternancia Mostrar u ocultar panel de cuadrícula](../../reporting-services/report-data/media/rsqdicon-showhidegrid.gif "Botón de alternancia Mostrar u ocultar panel de cuadrícula")|Muestra u oculta el panel Cuadrícula.|  
+|![Botón de alternancia Mostrar u ocultar panel de SQL](../../reporting-services/report-data/media/rsqdicon-showhidesql.gif "Botón de alternancia Mostrar u ocultar panel de SQL")|Muestra u oculta el panel de SQL.|  
+|![Botón de alternancia Mostrar u ocultar panel de resultados](../../reporting-services/report-data/media/rsqdicon-showhideresult.gif "Botón de alternancia Mostrar u ocultar panel de resultados")|Muestra u oculta el panel Resultado.|  
+|![Ejecutar la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta la consulta.|  
+|![Botón Comprobar SQL en el panel de SQL](../../reporting-services/report-data/media/rsqdicon-verifysql.gif "Botón Comprobar SQL en el panel de SQL")|Comprueba que la sintaxis del texto de consulta sea correcta.|  
+|![Establecer orden ascendente en el campo seleccionado](../../reporting-services/report-data/media/rsqdicon-sortascending.gif "Establecer orden ascendente en el campo seleccionado")|Establece el criterio de ordenación en **Orden ascendente** para la columna seleccionada en el panel Diagrama.|  
+|![Establecer orden descendente en el campo seleccionado](../../reporting-services/report-data/media/rsqdicon-sortdescending.gif "Establecer orden descendente en el campo seleccionado")|Establece el criterio de ordenación en **Orden descendente** para la columna seleccionada en el panel Diagrama.|  
+|![Quitar filtro del campo seleccionado](../../reporting-services/report-data/media/rsqdicon-removefilter.gif "Quitar filtro del campo seleccionado")|Quita el filtro para la columna seleccionada en el panel de diagrama que está marcado como filtrado (![Gráfico de filtro junto a la columna de filtro seleccionada](../../reporting-services/report-data/media/rsqdicon-filter.gif "Gráfico de filtro junto a la columna de filtro seleccionada")).|  
+|![Usar Agrupar por para el campo seleccionado](../../reporting-services/report-data/media/rsqdicon-usegroupby.gif "Usar Agrupar por para el campo seleccionado")|Muestra u oculta la columna **Agrupar por** en el panel Cuadrícula. Cuando el botón de alternancia **Agrupar por** está activado, aparece una columna adicional llamada **Agrupar por** en el panel Cuadrícula; cada valor de las columnas seleccionadas de la consulta tiene el valor predeterminado **Agrupar por**, que hace que la columna seleccionada se incluya en una cláusula GROUP BY del texto SQL. Utilice el botón Agrupar por para agregar automáticamente una cláusula GROUP BY que incluya todas las columnas en la cláusula SELECT. Cuando la cláusula SELECT incluya llamadas de función de agregado (por ejemplo, SUM(nombreDeColumna)), incluya cada columna que no sea de agregado en la cláusula GROUP BY si desea que aparezca en el conjunto de resultados.<br /><br /> Para que aparezca en el panel Resultado, cada columna de la consulta debe tener una función de agregado definida para utilizarse en el cálculo del valor que se mostrará en dicho panel. De lo contrario, la columna de la consulta debe especificarse en la cláusula GROUP BY de la consulta SQL.|  
+|![Agregar una nueva tabla al panel de diagrama](../../reporting-services/report-data/media/rsqdicon-addtable.gif "Agregar una nueva tabla al panel de diagrama")|Agrega una nueva tabla del origen de datos al panel Diagrama.<br /><br /> **Nota** Cuando agrega una nueva tabla, el diseñador de consultas intenta hacer que coincidan las relaciones de clave externa del origen de datos. Después de agregar una tabla, confirme que las relaciones de clave externa, representadas por los vínculos entre las tablas, sean correctas.|  
   
 #### <a name="example"></a>Ejemplo  
  La siguiente consulta devuelve la lista de apellidos de la tabla [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Person **de la base de datos** :  
@@ -121,9 +121,9 @@ EXEC uspGetEmployeeManagers '1';
 |Botón|Description|  
 |------------|-----------------|  
 |**Editar como texto**|Alterna entre el diseñador de consultas basado en texto y el diseñador gráfico de consultas.|  
-|**Importar**|Importe una consulta existente de un archivo o informe. Solo se admiten los tipos de archivos .sql y .rdl. Para obtener más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Icono del botón Diseñador de consultas genérico](../../reporting-services/report-data/media/icongenericquerydesigner.gif "icono del botón Diseñador de consultas genérico")|Alterna el diseñador de consultas genérico y el diseñador gráfico de consultas, a la vez que mantiene el texto de consulta o la vista del procedimiento almacenado.|  
-|![Ejecute la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "ejecutar la consulta")|Selecciona todas las columnas de la tabla seleccionada.|  
+|**Importar**|Importe una consulta existente de un archivo o informe. Solo se admiten los tipos de archivos .sql y .rdl. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|![Icono del botón Diseñador de consultas genérico](../../reporting-services/report-data/media/icongenericquerydesigner.gif "Icono del botón Diseñador de consultas genérico")|Alterna el diseñador de consultas genérico y el diseñador gráfico de consultas, a la vez que mantiene el texto de consulta o la vista del procedimiento almacenado.|  
+|![Ejecutar la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Ejecutar la consulta")|Selecciona todas las columnas de la tabla seleccionada.|  
   
 ### <a name="command-type-storedprocedure"></a>Tipo de comando StoredProcedure  
  En el tipo **StoredProcedure** , el diseñador gráfico de consultas muestra una lista desplegable de los procedimientos almacenados disponibles del origen de datos y el panel Resultado. En la siguiente tabla se describe la función de cada panel.  
@@ -139,8 +139,8 @@ EXEC uspGetEmployeeManagers '1';
 |Botón|Description|  
 |------------|-----------------|  
 |**Editar como texto**|Alterna entre el diseñador de consultas basado en texto y el diseñador gráfico de consultas.|  
-|**Importar**|Importe una consulta existente de un archivo o informe. Solo se admiten los tipos de archivos .sql y .rdl. Para obtener más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Ejecute la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "ejecutar la consulta")|Ejecuta el procedimiento almacenado.|  
+|**Importar**|Importe una consulta existente de un archivo o informe. Solo se admiten los tipos de archivos .sql y .rdl. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|![Ejecutar la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta el procedimiento almacenado.|  
 |Lista desplegable de procedimientos almacenados|Haga clic en la flecha abajo para mostrar una lista de procedimientos almacenados disponibles del origen de datos. Haga clic en un procedimiento almacenado de la lista para seleccionarlo.|  
   
 #### <a name="example"></a>Ejemplo  

@@ -1,26 +1,31 @@
 ---
-title: "Novedades de Integration Services en SQL Server 2016 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Integration Services, novedades"
-  - "novedades en [Integration Services]"
+title: "¿Qué &#39; s de Integration Services en SQL Server 2016 | Documentos de Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Integration Services, what's new
+- what's new [Integration Services]
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 caps.latest.revision: 183
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 182
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: bdb767ed145a95868bb11e5a9fa4facc837d0c07
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Novedades de Integration Services en SQL Server 2016
+# <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>¿Qué &#39; s de Integration Services en SQL Server 2016
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
  En este tema, se describen las características que se han agregado o actualizado en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -144,16 +149,16 @@ caps.handback.revision: 182
   
 -   Restauró la base de datos de una versión anterior de SQL Server.  
   
--   No quitó la base de datos de un grupo de disponibilidad AlwaysOn antes de actualizar la instancia de SQL Server. Esto evita la actualización automática de la base de datos. Para obtener más información, vea [Upgrading SSISDB in an availability group](../integration-services/service/always-on-for-ssis-catalog-ssisdb.md#Upgrade).  
+-   No quitó la base de datos de un grupo de disponibilidad AlwaysOn antes de actualizar la instancia de SQL Server. Esto evita la actualización automática de la base de datos. Para obtener más información, vea [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade).  
   
- Para obtener más información, vea [Actualización del catálogo de SSIS &#40;SSISDB&#41;](../integration-services/service/upgrade-the-ssis-catalog-ssisdb.md). 
+ Para obtener más información, consulte [catálogo de SSIS &#40; SSISDB &#41; ](../integration-services/service/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> Compatibilidad con Always On en el catálogo de SSIS  
  La característica Grupos de disponibilidad AlwaysOn es una solución de alta disponibilidad y de recuperación ante desastres que proporciona una alternativa empresarial a la creación de reflejo de la base de datos. Un grupo de disponibilidad admite un entorno de conmutación por error para un conjunto discreto de bases de datos de usuario, conocido como bases de datos de disponibilidad, que realizan la conmutación por error conjuntamente. Para obtener más información, vea [Grupos de disponibilidad Always On](https://msdn.microsoft.com/library/hh510230.aspx).  
   
  En [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], SSIS introduce nuevas funcionalidades que le permiten implementar fácilmente en un catálogo de SSIS centralizado (es decir, la base de datos de usuario de SSISDB). Para proporcionar alta disponibilidad de la base de datos SSISDB y su contenido, proyectos, paquetes, registros de ejecución, etc., puede agregar la base de datos SSISDB a un grupo de disponibilidad Always On, como en cualquier otra base de datos de usuario. Cuando se produce una conmutación por error, uno de los nodos secundarios se convierte automáticamente en el nuevo nodo principal.  
   
- Para obtener más información e instrucciones paso a paso sobre cómo habilitar AlwaysOn para SSISDB, vea [AlwaysOn para el catálogo de SSIS &#40;SSISDB&#41;](../integration-services/service/always-on-for-ssis-catalog-ssisdb.md).  
+ Para obtener una descripción detallada e instrucciones paso a paso para habilitar Always On para SSISDB, vea [catálogo de SSIS](../integration-services/service/ssis-catalog.md).  
 
 ####  <a name="IncrementalDeployment"></a> Implementación incremental de paquetes  
 La característica Implementación incremental de paquetes le permite implementar uno o varios paquetes en un proyecto nuevo o existente sin implementar todo el proyecto. Puede implementar paquetes de forma incremental con las herramientas siguientes.  
@@ -168,7 +173,7 @@ La característica Implementación incremental de paquetes le permite implementa
   
 -   API del modelo de objetos de administración (MOM)  
   
- Para obtener más información, vea [Deploy Packages to Integration Services Server](../integration-services/packages/deploy-packages-to-integration-services-server.md) .  
+ Para obtener más información, consulte [Integration Services (SSIS) implementar proyectos y paquetes] (../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
 
 ####  <a name="encrypted"></a> Compatibilidad con Always Encrypted en el catálogo de SSIS  
  SSIS ya es compatible con la característica Always Encrypted en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, vea las entradas de blog siguientes.  
@@ -188,7 +193,7 @@ La característica Implementación incremental de paquetes le permite implementa
  El nuevo nivel de registro **RuntimeLineage** del catálogo de SSIS recopila los datos necesarios para realizar un seguimiento de la información de linaje en el flujo de datos. Puede analizar esta información de linaje para asignar la relación de linaje entre las tareas. Los ISV y los desarrolladores pueden generar herramientas de asignación de linaje personalizadas con esta información. 
 
 ####  <a name="CustomLogging"></a> Nuevo nivel de registro personalizado en el catálogo de SSIS  
- Las versiones anteriores del catálogo de SSIS le permiten elegir entre cuatro niveles de registro integrados al ejecutar un paquete: **ninguno, básico, rendimiento o detallado**. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] agrega el nivel de registro **RuntimeLineage**. Además, ahora puede crear varios niveles de registro personalizado y guardarlos en el catálogo de SSIS, y elegir el nivel de registro que va a usar cada vez que ejecute un paquete. Para cada nivel de registro personalizado, seleccione solo las estadísticas y los eventos que quiera capturar. También puede incluir el contexto del evento para ver los valores de las variables, las cadenas de conexión y las propiedades de la tarea. Para obtener más información, vea [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/enable-logging-for-package-execution-on-the-ssis-server.md). 
+ Las versiones anteriores del catálogo de SSIS le permiten elegir entre cuatro niveles de registro integrados al ejecutar un paquete: **ninguno, básico, rendimiento o detallado**. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] agrega el nivel de registro **RuntimeLineage** . Además, ahora puede crear varios niveles de registro personalizado y guardarlos en el catálogo de SSIS, y elegir el nivel de registro que va a usar cada vez que ejecute un paquete. Para cada nivel de registro personalizado, seleccione solo las estadísticas y los eventos que quiera capturar. También puede incluir el contexto del evento para ver los valores de las variables, las cadenas de conexión y las propiedades de la tarea. Para obtener más información, vea [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
 
 ####  <a name="ErrorColumn"></a> Nombres de columna para errores del flujo de datos  
  Al redirigir las filas en el flujo de datos que contienen errores a una salida de error, el resultado contiene un identificador numérico para la columna en la que se produjo el error, pero no muestra el nombre de la columna. Ahora existen varias formas de buscar o mostrar el nombre de la columna en la que se produjo el error.  
@@ -220,7 +225,7 @@ La característica Implementación incremental de paquetes le permite implementa
  En **Propiedades del servidor**de SQL Server, en la propiedad **Nivel de registro de servidor** , ahora puede seleccionar un nivel de registro predeterminado de todo el servidor. Puede elegir entre uno de los niveles de registro integrados (básico, ninguno, detallado, rendimiento o linaje en tiempo de ejecución) o puede elegir un nivel de registro personalizado existente. El nivel de registro seleccionado se aplica a todos los paquetes que se implementen en el catálogo de SSIS. También se aplica de forma predeterminada a un paso de trabajo del Agente SQL que ejecuta un paquete SSIS.  
 
 ####  <a name="CMD130"></a> Nueva interfaz IDTSComponentMetaData130 de la API  
- La nueva interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> agrega nueva funcionalidad de SQL Server 2016 a la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> existente, especialmente el método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> . (El método **GetIdentificationStringByID** pasa a la nueva interfaz desde la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> ). También hay nuevas interfaces, <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn130> e <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn130> , que ofrecen la propiedad **LineageIdentificationString** . Para obtener más información, vea [Nombres de columna para errores del flujo de datos](#ErrorColumn).  
+ El nuevo nivel de registro <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> agrega nueva funcionalidad de SQL Server 2016 a la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> existente, especialmente el método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> . (El método **GetIdentificationStringByID** pasa a la nueva interfaz desde la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> ). También hay nuevas interfaces, <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn130> y <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn130> , que ofrecen la propiedad **LineageIdentificationString** . Para obtener más información, vea [Nombres de columna para errores del flujo de datos](#ErrorColumn).  
 
 ### <a name="better-package-management"></a>Mejor administración de paquetes
 
@@ -286,8 +291,6 @@ Se han publicado los adaptadores de destino para cargar datos en PDW con AU5. Pa
 ####  <a name="AFP2016"></a> Feature Pack de Azure para SSIS publicado para SQL Server 2016  
  Se ha publicado el Feature Pack de Azure para Integration Services para [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. El Feature Pack contiene administradores de conexiones para conectarse a orígenes de datos de Azure y tareas para realizar operaciones comunes de Azure. Para obtener más información, vea [Azure Feature Pack para Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
 
->   [!NOTE] Para garantizar que el Administrador de conexiones de Almacenamiento de Azure y los componentes que lo usan (es decir, el origen y el destino de blob y las tareas de carga y descarga de blobs) se puedan conectar tanto a las cuentas de almacenamiento general como a las cuentas de almacenamiento de blobs, descargue la versión más reciente de Azure Feature Pack [aquí](https://www.microsoft.com/download/details.aspx?id=49492). Para más información sobre estos dos tipos de cuentas de almacenamiento, vea [Introducción a Almacenamiento de Microsoft Azure](https://azure.microsoft.com/en-us/documentation/articles/storage-introduction/#general-purpose-storage-accounts).
-
 #### <a name="dynamics"></a> Compatibilidad con recursos de Microsoft Dynamics Online publicados en el Service Pack 1
 
 Con SQL Server 2016 Service Pack 1 instalado, el origen OData y el administrador de conexiones OData ahora admiten la conexión a fuentes de OData de Microsoft Dynamics AX Online y Microsoft Dynamics CRM Online.
@@ -305,7 +308,7 @@ La versión más reciente de Azure Feature Pack incluye la tarea de carga de Azu
 ### <a name="better-install-experience"></a>Mejor experiencia de instalación
 
 ####  <a name="Upgrade"></a> Actualización bloqueada cuando SSISDB pertenece a un grupo de disponibilidad  
- Si la base de datos del catálogo de SSIS (SSISDB) pertenece a un grupo de disponibilidad AlwaysOn, tiene que quitar SSISDB del grupo de disponibilidad, actualizar SQL Server y volver a agregar SSISDB al grupo de disponibilidad. Para obtener más información, vea [Upgrading SSISDB in an availability group](../integration-services/service/always-on-for-ssis-catalog-ssisdb.md#Upgrade).  
+ Si la base de datos del catálogo de SSIS (SSISDB) pertenece a un grupo de disponibilidad AlwaysOn, tiene que quitar SSISDB del grupo de disponibilidad, actualizar SQL Server y volver a agregar SSISDB al grupo de disponibilidad. Para obtener más información, vea [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade).  
 
 ### <a name="better-design-experience"></a>Mejor experiencia de diseño
 
@@ -314,9 +317,10 @@ La versión más reciente de Azure Feature Pack incluye la tarea de carga de Azu
 
  En el Explorador de soluciones, haga clic con el botón derecho en un proyecto de Integration Services y seleccione **Propiedades** para abrir las páginas de propiedades del proyecto. En la pestaña **General** de **Propiedades de configuración**, seleccione la propiedad **TargetServerVersion** y luego elija SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
    
- ![TargetServerVersion property in project properties dialog box](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
+ ![Propiedad TargetServerVersion en el cuadro de diálogo de propiedades de proyecto](../integration-services/media/targetserverversion2.png "TargetServerVersion propiedad en el cuadro de diálogo de propiedades de proyecto")  
 
->   [!IMPORTANT] Si desarrolla extensiones personalizadas para SSIS, vea [Support multi-targeting in your custom components](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) (Admitir varias versiones en los componentes personalizados) y [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)(Conseguir que la compatibilidad con varias versiones de SSDT 2015 para SQL Server 2016 admita extensiones personalizadas de SSIS).  
+>   [!IMPORTANT]
+> Si desarrolla extensiones personalizadas para SSIS, vea [Support multi-targeting in your custom components](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) (Admitir varias versiones en los componentes personalizados) y [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)(Conseguir que la compatibilidad con varias versiones de SSDT 2015 para SQL Server 2016 admita extensiones personalizadas de SSIS).  
 
 ### <a name="better-management-experience-in-sql-server-management-studio"></a>Mejor experiencia de administración en SQL Server Management Studio
 
@@ -333,8 +337,6 @@ La versión más reciente de Azure Feature Pack incluye la tarea de carga de Azu
 
 ####  <a name="AzureBlob"></a> Compatibilidad con Azure Blob Storage en el Asistente para importación y exportación de SQL Server  
  El Asistente para importación y exportación de SQL Server puede ahora importar datos del Almacenamiento de blobs de Azure y guardar datos en él. Para obtener más información, vea [Elegir un origen de datos &#40;Asistente para importación y exportación de SQL Server&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) y [Elegir un destino &#40;Asistente para importación y exportación de SQL Server&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md). 
-
->   [!NOTE] Para garantizar que el Administrador de conexiones de Almacenamiento de Azure y los componentes que lo usan (es decir, el origen y el destino de blob y las tareas de carga y descarga de blobs) se puedan conectar tanto a las cuentas de almacenamiento general como a las cuentas de almacenamiento de blobs, descargue la versión más reciente de Azure Feature Pack [aquí](https://www.microsoft.com/download/details.aspx?id=49492). Para más información sobre estos dos tipos de cuentas de almacenamiento, vea [Introducción a Almacenamiento de Microsoft Azure](https://azure.microsoft.com/en-us/documentation/articles/storage-introduction/#general-purpose-storage-accounts).
 
 ####  <a name="CDCOracle"></a> Diseñador y servicio de captura de datos modificados para Oracle para Microsoft SQL Server 2016 publicado  
  El servicio y el diseñador de captura de datos modificados para Oracle de Attunity de Microsoft® para Microsoft SQL Server® 2016 se publican como parte del Feature Pack de SQL Server 2016.  Estos componentes admiten ahora Oracle 12c en la instalación clásica. (No se admite la instalación multiinquilino) Para descargar los componentes del Feature Pack, vea [Feature Pack de Microsoft® SQL Server® 2016](http://go.microsoft.com/fwlink/?LinkID=746297).  
@@ -360,7 +362,9 @@ La versión más reciente de Azure Feature Pack incluye la tarea de carga de Azu
 
 ## <a name="see-also"></a>Vea también  
  [Novedades de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)   
- [Características compatibles con las ediciones de SQL Server 2016](../sql-server/características-compatibles-con-las-ediciones-de-sql-server-2016.md)
+ [Características compatibles con las ediciones de SQL Server 2016](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+

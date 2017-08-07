@@ -1,60 +1,65 @@
 ---
-title: "Propiedades personalizadas de transformaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "agregado, transformación [Integration Services]"
-  - "Dimensión de variación lenta, transformación"
-  - "Importar columna, transformación [Integration Services]"
-  - "Ordenar, transformación"
-  - "Anulación de dinamización, transformación"
-  - "Combinación de mezcla, transformación"
-  - "Consulta de minería de datos, transformación"
-  - "Agrupación aproximada, transformación"
-  - "Conversión de datos, transformación"
-  - "Búsqueda aproximada, transformación"
-  - "Extracción de términos, transformación"
-  - "transformación Recuento de filas, propiedades personalizadas [Integration Services]"
-  - "transformaciones [Integration Services], propiedades"
-  - "Dinámica, transformación"
-  - "Transformación de búsqueda"
-  - "Muestreo de porcentaje, transformación"
-  - "Exportar columna, transformación [Integration Services]"
-  - "Muestreo de fila, transformación"
-  - "transformación División condicional, propiedades personalizadas [Integration Services]"
-  - "propiedades personalizadas [Integration Services]"
-  - "Auditar, transformación"
-  - "Búsqueda de términos, transformación"
-  - "Transformación Componente de script, propiedades personalizadas [Integration Services]"
-  - "Transformación Columna derivada"
-  - "transformación Comando de OLE DB"
-  - "transformación Copiar columna, propiedades personalizadas [Integration Services]"
-  - "transformación Mapa de caracteres, propiedades personalizadas [Integration Services]"
+title: "Propiedades personalizadas de transformación | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Aggregate transformation [Integration Services]
+- Slowly Changing Dimension transformation
+- Import Column transformation [Integration Services]
+- Sort transformation
+- Unpivot transformation
+- Merge Join transformation
+- Data Mining Query transformation
+- Fuzzy Grouping transformation
+- Data Conversion transformation
+- Fuzzy Lookup transformation
+- Term Extraction transformation
+- Row Count transformation custom properties [Integration Services]
+- transformations [Integration Services], properties
+- Pivot transformation
+- Lookup transformation
+- Percentage Sampling transformation
+- Export Column transformation [Integration Services]
+- Row Sampling transformation
+- Conditional Split transformation custom properties [Integration Services]
+- custom properties [Integration Services]
+- Audit transformation
+- Term Lookup transformation
+- Script Component transformation custom properties [Integration Services]
+- Derived Column transformation
+- OLE DB Command transformation
+- Copy Column transformation custom properties [Integration Services]
+- Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 caps.latest.revision: 72
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 72
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 62ff6e04e7f26e6ca1af9760ebb17c5f41d37f0d
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Propiedades personalizadas de transformaci&#243;n
-  Además de las propiedades que son comunes a la mayoría de los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], muchos objetos de flujo de datos tienen propiedades personalizadas que son específicas del objeto. Estas propiedades personalizadas solo están disponibles en tiempo de ejecución y no se incluyen en la documentación de referencia de la programación administrada de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
+# <a name="transformation-custom-properties"></a>Propiedades personalizadas de transformación
+  Además de las propiedades que son comunes a la mayoría de los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], muchos objetos de flujo de datos tienen propiedades personalizadas que son específicas del objeto. Estas propiedades personalizadas solo están disponibles en tiempo de ejecución y no se incluyen en la documentación de referencia de la programación administrada de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
   
- En este tema se enumeran y describen las propiedades personalizadas de las diversas transformaciones de flujo de datos. Para obtener información sobre las propiedades comunes a la mayor parte de los objetos de flujo de datos, vea [Propiedades comunes](../Topic/Common%20Properties.md).  
+ En este tema se enumeran y describen las propiedades personalizadas de las diversas transformaciones de flujo de datos. Para obtener información sobre las propiedades comunes a la mayor parte de los objetos de flujo de datos, vea [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
- Algunas propiedades de transformaciones se pueden establecer mediante expresiones de propiedad. Para obtener más información, vea [Propiedades de flujo de datos que se pueden establecer utilizando expresiones](../Topic/Data%20Flow%20Properties%20that%20Can%20Be%20Set%20by%20Using%20Expressions.md).  
+ Algunas propiedades de transformaciones se pueden establecer mediante expresiones de propiedad. Para obtener más información, vea [Propiedades de flujo de datos que se pueden establecer utilizando expresiones](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8).  
   
-## Transformaciones con propiedades personalizadas  
+## <a name="transformations-with-custom-properties"></a>Transformaciones con propiedades personalizadas  
   
 ||||  
 |-|-|-|  
@@ -68,8 +73,8 @@ caps.handback.revision: 72
 |[Consulta de minería de datos](#dmquery)|[Muestreo de porcentaje](#percent)|[Anulación de dinamización](#unpivot)|  
 |[Columna derivada](#derived)|[Dinamización](#pivot)||  
   
-### Transformaciones sin propiedades personalizadas  
- Las transformaciones siguientes no tienen ninguna propiedad personalizada en los niveles de componentes, entradas o salidas: [transformación Mezclar](../../../integration-services/data-flow/transformations/merge-transformation.md), [transformación Multidifusión](../../../integration-services/data-flow/transformations/multicast-transformation.md) y [transformación Unión de todo](../../../integration-services/data-flow/transformations/union-all-transformation.md). Utilizan solo las propiedades comunes a todos los componentes de flujo de datos.  
+### <a name="transformations-without-custom-properties"></a>Transformaciones sin propiedades personalizadas  
+ Las transformaciones siguientes no tienen ninguna propiedad personalizada en los niveles de componentes, entradas o salidas: [transformación Mezclar](../../../integration-services/data-flow/transformations/merge-transformation.md), [transformación Multidifusión](../../../integration-services/data-flow/transformations/multicast-transformation.md)y [transformación Unión de todo](../../../integration-services/data-flow/transformations/union-all-transformation.md). Utilizan solo las propiedades comunes a todos los componentes de flujo de datos.  
   
 ##  <a name="aggregate"></a> Propiedades personalizadas de la transformación Agregado  
  La transformación Agregado tiene tanto propiedades personalizadas como propiedades comunes a todos los componentes de flujo de datos.  
@@ -140,7 +145,7 @@ caps.handback.revision: 72
 |Propiedad|Tipo de datos|Description|  
 |--------------|---------------|-----------------|  
 |InputColumnLineageId|Integer|Valor que especifica el valor de **LineageID** de la columna de entrada que es el origen de la columna de salida.|  
-|MapFlags|Integer (enumeración)|Valor que especifica las operaciones de cadena que la transformación Mapa de caracteres realiza en la columna. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Inversión de byte** (2)<br /><br /> **Formato completo** (6)<br /><br /> **Formato medio** (5)<br /><br /> **Hiragana** (3)<br /><br /> **Katakana** (4)<br /><br /> **Utilización lingüística de mayúsculas y minúsculas** (7)<br /><br /> **Minúsculas** (0)<br /><br /> **Chino simplificado** (8)<br /><br /> **Chino tradicional** (9)<br /><br /> **Mayúsculas** (1)|  
+|MapFlags|Integer (enumeración)|Valor que especifica las operaciones de cadena que la transformación Mapa de caracteres realiza en la columna. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Inversión de byte** (2)<br /><br /> **Formato completo** (6)<br /><br /> **Formato medio** (5)<br /><br /> **Hiragana** (3)<br /><br /> **Katakana** (4)<br /><br /> **Utilización lingüística de mayúsculas y minúsculas** (7)<br /><br /> **Minúsculas** (0)<br /><br /> **Chino simplificado** (8)<br /><br /> **Chino tradicional**(9)<br /><br /> **Mayúsculas** (1)|  
   
  La entrada, las columnas de entrada y la salida de transformación Mapa de caracteres no tienen ninguna propiedad personalizada.  
   
@@ -182,7 +187,7 @@ caps.handback.revision: 72
   
 |Propiedad|Tipo de datos|Description|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|Valor que indica si la columna usa las rutinas de análisis más rápidas que no distinguen la configuración regional y permiten un análisis rápido que [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona, o las rutinas de análisis estándar, que sí distinguen la configuración regional. El valor predeterminado de esta propiedad es **False**. Para obtener más información, consulte [Fast Parse](../Topic/Fast%20Parse.md) y [Standard Parse](../Topic/Standard%20Parse.md). .<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Conversión de datos**, pero se puede establecer con el **Editor avanzado**.|  
+|FastParse|Boolean|Valor que indica si la columna usa las rutinas de análisis más rápidas que no distinguen la configuración regional y permiten un análisis rápido que [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona, o las rutinas de análisis estándar, que sí distinguen la configuración regional. El valor predeterminado de esta propiedad es **False**. Para obtener más información, consulte [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) y [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). .<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Conversión de datos**, pero se puede establecer con el **Editor avanzado**.|  
 |SourceInputColumnLineageId|Integer|**LineageID** de la columna de entrada que es el origen de la columna de salida.|  
   
  La entrada, las columnas de entrada y la salida de transformación Conversión de datos no tienen ninguna propiedad personalizada.  
@@ -197,8 +202,8 @@ caps.handback.revision: 72
 |Propiedad|Tipo de datos|Description|  
 |--------------|---------------|-----------------|  
 |ASConnectionId|String|El identificador único del objeto de conexión.|  
-|ASConnectionString|String|Cadena de conexión a un proyecto de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] o una base de datos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|CatalogName|String|Nombre de una base de datos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|ASConnectionString|String|Cadena de conexión a un proyecto de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] o una base de datos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
+|CatalogName|String|Nombre de una base de datos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
 |ModelName|String|Nombre del modelo de minería de datos.|  
 |ModelStructureName|String|Nombre de la estructura de minería de datos.|  
 |ObjectRef|String|Etiqueta XML que identifica la estructura de minería de datos que la transformación usa:|  
@@ -259,7 +264,7 @@ caps.handback.revision: 72
   
 |Propiedad|Tipo de datos|Description|  
 |--------------|---------------|-----------------|  
-|Delimiters|String|Los delimitadores de token que la transformación utiliza. Los delimitadores predeterminados incluyen los caracteres siguientes: espacio ( ), coma (,), punto (.), punto y coma (;), dos puntos (:), guión (-), comillas rectas dobles ("), comillas rectas sencillas ('), y comercial (&), marca de barra diagonal (/), barra diagonal inversa (\\), arroba (@), signo de exclamación (!), signo de interrogación (?), paréntesis de apertura ((), paréntesis de cierre ()), menor que (\<), mayor que (>), corchete de apertura ([), corchete de cierre (]), llave de apertura ({), llave de cierre (}), barra vertical (&#124;), signo de número (#), asterisco (*), símbolo de intercalación (^) y porcentaje (%).|  
+|Delimiters|String|Los delimitadores de token que la transformación utiliza. Los delimitadores predeterminados incluyen los siguientes caracteres: espacio (), comas (,), punto (.), punto y coma (;), dos puntos (:), guión (-), doble comillas rectas ("), marca de comillas rectas ('), marca" y "comercial (&), la barra diagonal (/), barra diagonal inversa (\\), arroba (@), signo de exclamación (!), signo de interrogación (?), abrir paréntesis ((), cerrar paréntesis ()), menor que (\<), mayor que (>), abrir corchete ([]), corchete de cierre (]), llave ({}), Cerrar llave (}), canalización (&#124;), de apertura de cierre signo de almohadilla (#), asterisco (*), símbolo de intercalación (^) y porcentaje (%).|  
 |Exhaustive|Boolean|Valor que especifica si cada registro de entrada se compara con el resto. El valor de **True** está destinado sobre todo a fines de depuración. El valor predeterminado de esta propiedad es **False**.<br /><br /> Nota: Esta propiedad no está disponible en **Editor de transformación Agrupación aproximada**, pero se puede establecer con el **Editor avanzado**.|  
 |MaxMemoryUsage|Integer|Cantidad de memoria máxima que puede usar la transformación. El valor predeterminado de esta propiedad es **0**, que habilita el uso de la memoria dinámica.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.<br /><br /> Nota: Esta propiedad no está disponible en **Editor de transformación Agrupación aproximada**, pero se puede establecer con el **Editor avanzado**.|  
 |MinSimilarity|Doble|Umbral de similitud que la transformación utiliza para identificar los duplicados, expresado como un valor entre 0 y 1.  El valor predeterminado de esta propiedad es 0.8.|  
@@ -278,7 +283,7 @@ caps.handback.revision: 72
   
 |Nombre de la propiedad|Tipo de datos|Description|  
 |-------------------|---------------|-----------------|  
-|ColumnType|Integer (enumeración)|Valor que identifica el tipo de columna de resultados. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Undefined** (0)<br /><br /> **KeyIn** (1)<br /><br /> **KeyOut** (2)<br /><br /> **Similarity** (3)<br /><br /> **ColumnSimilarity** (4)<br /><br /> **PassThru** (5)<br /><br /> **Canonical** (6)|  
+|ColumnType|Integer (enumeración)|Valor que identifica el tipo de columna de resultados. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Undefined** (0)<br /><br /> **KeyIn** (1)<br /><br /> **KeyOut** (2)<br /><br /> **Similarity** (3)<br /><br /> **ColumnSimilarity** (4)<br /><br /> **PassThru** (5)<br /><br /> **Canonical**(6)|  
 |InputID|Integer|**LineageID** de la columna de entrada correspondiente.|  
   
  La entrada y la salida de transformación Agrupación aproximada no tienen ninguna propiedad personalizada.  
@@ -293,7 +298,7 @@ caps.handback.revision: 72
 |Propiedad|Tipo de datos|Description|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Boolean|Especifica si se debería crear una copia de la tabla de referencia para la construcción del índice de búsqueda aproximada y las búsquedas subsiguientes. El valor predeterminado de esta propiedad es **True**.|  
-|Delimiters|String|Delimitadores que la transformación utilizará para dividir en tokens los valores de las columnas. Los delimitadores predeterminados incluyen los caracteres siguientes: espacio ( ), coma (,), punto (.), punto y coma (;), dos puntos (:), guión (-), comillas rectas dobles ("), comillas rectas sencillas ('), y comercial (&), marca de barra diagonal (/), barra diagonal inversa (\\), arroba (@), signo de exclamación (!), signo de interrogación (?), paréntesis de apertura ((), paréntesis de cierre ()), menor que (\<), mayor que (>), corchete de apertura ([), corchete de cierre (]), llave de apertura ({), llave de cierre (}), barra vertical (&#124;). almohadilla (#), asterisco (*), símbolo de intercalación (^) y porcentaje (%).|  
+|Delimiters|String|Delimitadores que la transformación utilizará para dividir en tokens los valores de las columnas. Los delimitadores predeterminados incluyen los siguientes caracteres: espacio (), coma (,), semicolon(;) de punto (.), guión (-) de dos puntos (:), doble comillas rectas ("), marca de comillas rectas ('), marca" y "comercial (&), la barra diagonal (/), barra diagonal inversa (\\), arroba (@), signo de exclamación (!), signo de interrogación (?), paréntesis de apertura ((), cerrar paréntesis ()), menor que (\<), mayor que (>), abrir corchete ([]), corchete de cierre (]), llave ({}), Cerrar llave (}), canalización (&#124;) de apertura de cierre. almohadilla (#), asterisco (*), símbolo de intercalación (^) y porcentaje (%).|  
 |DropExistingMatchIndex|Boolean|Valor que especifica si el índice de coincidencia especificado en MatchIndexName se elimina cuando MatchIndexOptions no se establece en ReuseExistingIndex. El valor predeterminado de esta propiedad es **True**.|  
 |Exhaustive|Boolean|Valor que especifica si cada registro de entrada se compara con el resto. El valor de **True** está destinado sobre todo a fines de depuración. El valor predeterminado de esta propiedad es **False**.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Búsqueda aproximada**, pero se puede establecer con el **Editor avanzado**.|  
 |MatchIndexName|String|Nombre del índice de coincidencia. El índice de coincidencia es la tabla en la que la transformación crea y guarda el índice que utiliza. Si se reutiliza el índice de coincidencia, MatchIndexName especifica el índice que se reutilizará. MatchIndexName debe ser un nombre de identificador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] válido. Por ejemplo, si el nombre contiene espacios, debe escribirse entre corchetes.|  
@@ -310,7 +315,7 @@ caps.handback.revision: 72
 |Propiedad|Tipo de datos|Description|  
 |--------------|---------------|-----------------|  
 |FuzzyComparisonFlags|Integer|Valor que especifica cómo compara la transformación los datos de cadena de una columna. Para más información, consulte [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).|  
-|FuzzyComparisonFlagsEx|Integer (enumeración)|Valor que especifica qué marcas de comparación extendida usa la transformación. Los valores pueden incluir **MapExpandLigatures, MapFoldCZone**, **MapFoldDigits**, **MapPrecomposed** y **NoMapping**. **NoMapping** no se puede usar con otras marcas.|  
+|FuzzyComparisonFlagsEx|Integer (enumeración)|Valor que especifica qué marcas de comparación extendida usa la transformación. Los valores pueden incluir **MapExpandLigatures, MapFoldCZone**, **MapFoldDigits**, **MapPrecomposed**y **NoMapping**. **NoMapping** no se puede usar con otras marcas.|  
 |JoinToReferenceColumn|String|Valor que especifica el nombre de la columna en la tabla de referencia con la que se combina la columna.|  
 |JoinType|Integer|Valor que especifica si la transformación realiza una coincidencia aproximada o exacta. El valor predeterminado de esta propiedad es **Aproximada**. El valor entero para el tipo de combinación exacta es **1** y para el tipo de combinación aproximado es **2**.|  
 |MinSimilarity|Doble|Umbral de similitud que la transformación usa en el nivel de columna, especificado como un valor entre 0 y 1. Solo las filas mayores que el umbral se consideran coincidencias.|  
@@ -342,8 +347,8 @@ caps.handback.revision: 72
 |MaxMemoryUsage|Integer|Tamaño máximo permitido de la caché para la tabla de búsqueda. El valor predeterminado de esta propiedad es **25**, lo que significa que el tamaño de la memoria caché no tiene límite.|  
 |MaxMemoryUsage64|Integer|Tamaño de caché máximo para la tabla de búsqueda en un equipo de 64 bits.|  
 |NoMatchBehavior|Integer (enumeración)|Valor que especifica si las filas que no tienen entradas coincidentes del conjunto de datos de referencia se tratan como errores.<br /><br /> Cuando la propiedad se establece en **Tratar filas sin entradas coincidentes como errores** (0), las filas sin entradas coincidentes se tratan como errores. Puede especificar lo que debería pasar cuando se produce este tipo de error con la página **Salida de error** del cuadro de diálogo **Editor de transformación Búsqueda**. Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).<br /><br /> Cuando la propiedad está establecida en **Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes** (1), las filas no se tratan como errores.<br /><br /> El valor predeterminado es **Tratar filas sin entradas coincidentes como errores** (0).|  
-|ParameterMap|String|Lista delimitada por puntos y comas de identificadores de linaje que se asignan a los parámetros que se usan en la instrucción **SqlCommand**.|  
-|ReferenceMetaDataXML|String|Metadatos para las columnas en la tabla de búsqueda que la transformación copia en su salida.|  
+|ParameterMap|String|Lista delimitada por puntos y comas de identificadores de linaje que se asignan a los parámetros que se usan en la instrucción **SqlCommand** .|  
+|ReferenceMetadataXML|String|Metadatos para las columnas en la tabla de búsqueda que la transformación copia en su salida.|  
 |SqlCommand|String|La instrucción SELECT que rellena la tabla de búsqueda.|  
 |SqlCommandParam|String|La instrucción SQL parametrizada que rellena la tabla de búsqueda.|  
   
@@ -374,7 +379,7 @@ caps.handback.revision: 72
 |JoinType|Integer (enumeración)|Especifica si la combinación es una combinación interna (2), externa izquierda (1) o completa (0).|  
 |MaxBuffersPerInput|Integer|Ya no tiene que configurar el valor de la propiedad **MaxBuffersPerInput** porque Microsoft ha realizado modificaciones que reducen el riesgo de que la transformación Combinación de mezcla utilice demasiada memoria. Este problema se producía a veces cuando varias entradas de la Combinación de mezcla generaban datos a velocidades desiguales.|  
 |NumKeyColumns|Integer|Número de columnas que se utilizan en la combinación.|  
-|TreatNullsAsEqual|Boolean|Valor que especifica si la transformación trata los valores nulos como valores iguales. El valor predeterminado de esta propiedad es **True**. Si el valor de la propiedad es **False**, la transformación trata los valores NULL como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|TreatNullsAsEqual|Boolean|Valor que especifica si la transformación trata los valores nulos como valores iguales. El valor predeterminado de esta propiedad es **True**. Si el valor de la propiedad es **False**, la transformación trata los valores NULL como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Combinación de mezcla. Todas las propiedades son de lectura y escritura.  
   
@@ -395,7 +400,7 @@ caps.handback.revision: 72
 |-------------------|---------------|-----------------|  
 |CommandTimeOut|Integer|Número máximo de segundos que el comando SQL se puede ejecutar antes de superar el tiempo de espera. Si el valor es **0** , indica un tiempo infinito. El valor predeterminado de esta propiedad es **0**.|  
 |DefaultCodePage|Integer|Página de códigos que se usa cuando no hay información disponible de la misma en el origen de datos.|  
-|SQLCommand|String|La instrucción de Transact-SQL que la transformación ejecuta para cada fila en el flujo de datos.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.|  
+|SqlCommand|String|La instrucción de Transact-SQL que la transformación ejecuta para cada fila en el flujo de datos.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.|  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas externas de la transformación Comando de OLE DB. Todas las propiedades son de lectura y escritura.  
   
@@ -421,7 +426,7 @@ caps.handback.revision: 72
   
 |Nombre de la propiedad|Tipo de datos|Description|  
 |-------------------|---------------|-----------------|  
-|Seleccionado|Boolean|Designa la salida a la que se dirigen las filas del muestreo. En la salida seleccionada, Selected se establece en **True** y, en la salida sin seleccionar, Selected se establece en **False**.|  
+|Seleccionado|Boolean|Designa la salida a la que se dirigen las filas del muestreo. En la salida seleccionada, Selected se establece en **True**y, en la salida sin seleccionar, Selected se establece en **False**.|  
   
  La entrada, las columnas de entrada y las columnas de salida de transformación Muestreo de porcentaje no tienen ninguna propiedad personalizada.  
   
@@ -476,7 +481,7 @@ caps.handback.revision: 72
   
 |Nombre de la propiedad|Tipo de datos|Description|  
 |-------------------|---------------|-----------------|  
-|Seleccionado|Boolean|Designa la salida a la que se dirigen las filas del muestreo. En la salida seleccionada, Selected se establece en **True** y, en la salida sin seleccionar, Selected se establece en **False**.|  
+|Seleccionado|Boolean|Designa la salida a la que se dirigen las filas del muestreo. En la salida seleccionada, Selected se establece en **True**y, en la salida sin seleccionar, Selected se establece en **False**.|  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Muestreo de fila. Todas las propiedades son de lectura y escritura.  
   
@@ -515,7 +520,7 @@ caps.handback.revision: 72
 |FailOnLookupFailure|Boolean|Valor que especifica si se produce un error en la transformación cuando se produce un error en una búsqueda de un registro existente. El valor predeterminado de esta propiedad es **False**.|  
 |IncomingRowChangeType|Integer|Valor que especifica si todas las filas entrantes son filas nuevas, o si la transformación debería detectar el tipo de cambio.|  
 |InferredMemberIndicator|String|Nombre de columna del miembro deducido.|  
-|SQLCommand|String|Instrucción SQL que se usa para crear un conjunto de filas de esquema.|  
+|SqlCommand|String|Instrucción SQL que se usa para crear un conjunto de filas de esquema.|  
 |UpdateChangingAttributeHistory|Boolean|Valor que indica si las actualizaciones de atributos históricos se dirigen a la salida de transformación para cambiar las actualizaciones de atributos.|  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de entrada de la transformación Dimensión de variación lenta. Todas las propiedades son de lectura y escritura.  
@@ -613,7 +618,7 @@ caps.handback.revision: 72
 |Propiedad|Tipo de datos|Description|  
 |--------------|---------------|-----------------|  
 |DestinationColumn|Integer|**LineageID** de la columna de salida a la que asigna la columna de entrada. El valor -1 indica que la columna de entrada no está asignada a una columna de resultados.|  
-|PivotKeyValue|String|Valor que se copia en una columna de salida de transformación.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.<br /><br /> En el escenario Anulación de dinamización que se describe en [Transformación Anulación de dinamización](../../../integration-services/data-flow/transformations/unpivot-transformation.md), los valores de dinamización son los valores de texto Ham, Coke, Milk, Beer y Chips. Estos aparecerán como valores de texto en la nueva columna Product designada por la opción **Nombre de la columna del valor de clave dinámica**.|  
+|PivotKeyValue|String|Valor que se copia en una columna de salida de transformación.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.<br /><br /> En el escenario Anulación de dinamización que se describe en [Transformación Anulación de dinamización](../../../integration-services/data-flow/transformations/unpivot-transformation.md), los valores de dinamización son los valores de texto Ham, Coke, Milk, Beer y Chips. Estos aparecerán como valores de texto en la nueva columna Product designada por la opción **Nombre de la columna del valor de clave dinámica** .|  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Anulación de dinamización. Todas las propiedades son de lectura y escritura.  
   
@@ -625,10 +630,10 @@ caps.handback.revision: 72
   
  Para obtener más información, vea [Transformación Anulación de dinamización](../../../integration-services/data-flow/transformations/unpivot-transformation.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Propiedades comunes](../Topic/Common%20Properties.md)   
- [Propiedades de la ruta de acceso](../Topic/Path%20Properties.md)   
- [Propiedades de flujo de datos que se pueden establecer utilizando expresiones](../Topic/Data%20Flow%20Properties%20that%20Can%20Be%20Set%20by%20Using%20Expressions.md)  
+ [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
+ [Propiedades de ruta de acceso](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
+ [Propiedades del flujo de datos que se pueden establecer mediante expresiones](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
   
   

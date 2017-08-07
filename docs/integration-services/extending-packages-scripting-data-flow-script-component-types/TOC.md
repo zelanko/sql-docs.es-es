@@ -1,0 +1,5 @@
+# [Desarrollar tipos específicos de los componentes de script](developing-specific-types-of-script-components.md)
+# [Crear un origen con el componente de script](creating-a-source-with-the-script-component.md)
+# [Crear una transformación sincrónica con el componente de script](creating-a-synchronous-transformation-with-the-script-component.md)
+# [Crear una transformación asincrónica con el componente de script](creating-an-asynchronous-transformation-with-the-script-component.md)
+# [Crear un destino con el componente de script](creating-a-destination-with-the-script-component.md)

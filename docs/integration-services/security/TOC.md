@@ -1,4 +1,4 @@
-# [Mitigar amenazas y vulnerabilidades](threat-and-vulnerability-mitigation-integration-services.md)
-# [Acceso a los archivos usados por los paquetes](access-to-files-used-by-packages.md)
-# [Acceso al servicio Integration Services](access-to-the-integration-services-service.md)
-# [Seguridad](security-overview-integration-services.md)
+# [Información general](security-overview-integration-services.md)  
+# [Control del acceso a la información confidencial en paquetes](access-control-for-sensitive-data-in-packages.md)  
+# [Identificar el origen de paquetes con firmas digitales](identify-the-source-of-packages-with-digital-signatures.md)  
+# [Roles de Integration Services (servicio SSIS)](integration-services-roles-ssis-service.md)

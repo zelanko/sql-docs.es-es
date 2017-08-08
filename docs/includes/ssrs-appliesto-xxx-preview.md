@@ -1,1 +1,1 @@
-**En este tema se aplica a:**![no](media/no.png)SQL Server 2016![Sí](media/yes.png)servidor de informes de Power BI
+**ESTE TEMA SE APLICA A:**![no](media/no.png)SQL Server 2016![sí](media/yes.png)Servidor de informes de Power BI

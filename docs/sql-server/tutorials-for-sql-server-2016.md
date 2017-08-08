@@ -1,5 +1,5 @@
 ---
-title: Tutoriales de SQL Server | Documentos de Microsoft
+title: Tutoriales de SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 06/21/2017
 ms.prod: sql-server-2016
@@ -14,19 +14,19 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: erikre
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
 ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="tutorials-for-sql-server"></a>Tutoriales de SQL Server
 [!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Proporciona tutoriales para ayudarle a aprender nuevas tecnologías y características. Tutoriales para versiones anteriores normalmente pueden utilizarse con las versiones más recientes. Cuando una característica más reciente de direcciones de tutoriales, indicará la versión mínima para completar el tutorial.  
+[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] proporciona tutoriales para ayudarle a obtener más información sobre nuevas tecnologías y características. Normalmente se pueden usar los tutoriales de versiones anteriores con las versiones más recientes. Cuando un tutorial se dirige a una característica más reciente, se indicará la versión mínima necesaria para completarlo.  
      
--   Si un tutorial utiliza uno de los [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] bases de datos, debe descargar y usar la versión más reciente desde CodePlex. Para obtener más información, consulte [bases de datos de AdventureWorks y secuencias de comandos para SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
+-   Si un tutorial usa una de las bases de datos de [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], debe descargar y usar la versión más reciente de CodePlex. Para obtener más información, consulte [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) (Scripts y bases de datos de AdventureWorks para SQL Server 2016 CTP3).    
 -   Descargue un libro de [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] e informes de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] para usarlos con los tutoriales de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , vaya a [Power View Samples for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=220734)(Ejemplos de Power View para SQL Server 2012).  
 - Visite el nuevo ejemplo [Wide World Importers](https://msdn.microsoft.com/library/mt734199(SQL.1).aspx) disponible en el repositorio de GitHub [sql-server-samples](https://github.com/Microsoft/sql-server-samples) . 
 

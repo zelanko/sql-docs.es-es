@@ -20,4 +20,4 @@
 
 # [Configure the Windows Firewall to Allow SQL Server Access (Configurar el Firewall de Windows para permitir el acceso a SQL Server)](configure-the-windows-firewall-to-allow-sql-server-access.md)  
 ## [Configurar un equipo de host múltiple para el acceso a SQL Server](configure-a-multi-homed-computer-for-sql-server-access.md)  
-# [Ayuda del Asistente para la instalación](instance-configuration.md)
+# [Ayuda del Asistente para instalación](instance-configuration.md)

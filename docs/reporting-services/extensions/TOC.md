@@ -1,4 +1,4 @@
-# [Biblioteca de extensión de Reporting Services](reporting-services-extension-library.md)
+# [Biblioteca de extensiones de Reporting Services](reporting-services-extension-library.md)
 
 # [Procesamiento de datos +](../../reporting-services/extensions/data-processing/creating-a-data-processing-extension-library.md)
 # [Extensión de entrega +](../../reporting-services/extensions/delivery-extension/creating-a-delivery-extension-library.md)

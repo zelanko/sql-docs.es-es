@@ -1,5 +1,5 @@
 # [Información general](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-# [Documento de requisitos de privacidad y GDPR](microsoft-sql-and-the-gdpr-requirements.md) 
+# [Notas del producto sobre requisitos de GDPR y privacidad](microsoft-sql-and-the-gdpr-requirements.md) 
 # [Auditoría](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)
 # [Acceso de autenticación](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
 # [Cifrado](../../relational-databases/security/encryption/sql-server-encryption.md)

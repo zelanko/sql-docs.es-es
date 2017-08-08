@@ -11,7 +11,7 @@
 ## [Optimización y validación posterior a la migración](post-migration-validation-and-optimization-guide.md)
 ## [Arquitectura de procesamiento de consultas](query-processing-architecture-guide.md)
 ## [Arquitectura de subprocesos y tareas](thread-and-task-architecture-guide.md)
-## [Administración y arquitectura del registro de transacciones](sql-server-transaction-log-architecture-and-management-guide.md)
+## [Arquitectura y administración de registros de transacciones](sql-server-transaction-log-architecture-and-management-guide.md)
 ## Guía de versiones de fila y bloqueo de transacciones
 
 # [Copias de seguridad y restauración](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)

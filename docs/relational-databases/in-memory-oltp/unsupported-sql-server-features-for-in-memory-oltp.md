@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: cf8509cab2424529ca0ed16c936fa63a139dfca4
 ms.openlocfilehash: 85a720edefe425146e5c54613b0a0f88007765a9
 ms.contentlocale: es-es
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Características de SQL Server no admitidas para OLTP en memoria
@@ -56,8 +56,8 @@ Con algunas excepciones, las transacciones entre bases de datos no se admiten. E
 
 |Bases de datos|Permitido|Description|  
 |---------------|-------------|-----------------|  
-| Bases de datos de usuario, **modelo** y **msdb**. | No | En la mayoría de los casos, las consultas y transacciones entre bases de datos *no* se admiten.<br /><br />Una consulta no puede acceder a otras bases de datos si usa una tabla optimizada para memoria o un procedimiento almacenamiento compilado de forma nativa. Esta restricción se aplica tanto a transacciones como a consultas.<br /><br />Las excepciones son las bases de datos del sistema **tempdb** y **master**. Aquí, la base de datos **maestra** está disponible para acceso de solo lectura. |
-| Base de datos de **recursos**, **tempdb** | Sí | En una transacción que toca los objetos OLTP en memoria, las bases de datos **recursos** y **tempdb** del sistema se pueden usar sin una restricción agregada.
+| Bases de datos de usuario, **modelo** y **msdb**. | No | En la mayoría de los casos, las consultas y transacciones entre bases de datos *no* se admiten.<br /><br />Una consulta no puede acceder a otras bases de datos si usa una tabla optimizada para memoria o un procedimiento almacenado compilado de forma nativa. Esta restricción se aplica tanto a transacciones como a consultas.<br /><br />Las excepciones son las bases de datos del sistema **tempdb** y **master**. Aquí, la base de datos **master** está disponible para acceso de solo lectura. |
+| Base de datos de **recursos**, **tempdb** | Sí | En una transacción que toca los objetos OLTP en memoria, las bases de datos de **recursos** y **tempdb** del sistema se pueden usar sin una restricción agregada.
 
 
 ## <a name="scenarios-not-supported"></a>Escenarios no admitidos  
@@ -67,7 +67,7 @@ Con algunas excepciones, las transacciones entre bases de datos no se admiten. E
 - Cursores de conjunto de claves y dinámicos en consultas que tienen acceso a tablas con optimización para memoria. Estos cursores se degradan a estáticos y de solo lectura.  
   
 - No se admite el uso de **MERGE INTO** *destino*, donde *destino* es una tabla optimizada para memoria.
-    - **MERGE USING***origen* se admite para las tablas optimizadas para memoria.  
+    - **MERGE USING** *origen* se admite para las tablas optimizadas para memoria.  
   
 - El tipo de datos ROWVERSION (TIMESTAMP) no se admite. Para obtener más información, vea [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).
   
@@ -83,7 +83,7 @@ Con algunas excepciones, las transacciones entre bases de datos no se admiten. E
     - No se admiten los modos de impedir y solo registrar de PBM. La existencia de estas directivas en el servidor puede impedir la correcta ejecución de DDL de OLTP en memoria. Se admiten los modos a petición y programado.  
 
 - La contención de base de datos ([Bases de datos contenidas](../../relational-databases/databases/contained-databases.md)) no es compatible con OLTP en memoria.
-    - Se admite la autenticación de la base de datos independiente. Sin embargo, todos los objetos OLTP en memoria se marcan como "breaking containment" en la vista de administración dinámica (DMV) **dm_db_uncontained_entities**.
+    - Se admite la autenticación de la base de datos independiente. En cambio, todos los objetos OLTP en memoria se marcan como "breaking containment" en la vista de administración dinámica (DMV) **dm_db_uncontained_entities**.
 
   
 ## <a name="see-also"></a>Vea también  

@@ -14,11 +14,11 @@ caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
 ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Características admitidas en los módulos T-SQL compilados de forma nativa
@@ -51,9 +51,9 @@ ms.lasthandoff: 06/23/2017
 
 Se admiten las siguientes construcciones de consulta:  
 
-Expresión CASE: caso puede utilizarse en cualquier instrucción o cláusula que permita una expresión válida.
+Expresión CASE: se puede usar CASE en cualquier instrucción o cláusula que permita una expresión válida.
    - **Se aplica a:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
-    A partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], ahora se admiten instrucciones CASE para módulos T-SQL compilados de forma nativa.
+    A partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], ahora se admiten las instrucciones CASE para módulos T-SQL compilados de forma nativa.
 
 Cláusula SELECT:  
 
@@ -61,19 +61,19 @@ Cláusula SELECT:
 
 -   Subconsultas escalares
     - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], subconsultas escalares ahora se admiten en módulos compilados de forma nativa.
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten las subconsultas escalares en módulos compilados de forma nativa.
 
 -   TOP*  
 
 -   SELECT DISTINCT  
     - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], se admite el operador DISTINCT en módulos compilados de forma nativa.
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], el operador DISTINCT se admite en módulos compilados de forma nativa.
 
               DISTINCT aggregates are not supported.  
 
 -   UNION y UNION ALL
     - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten los operadores UNION y UNION ALL en módulos compilados de forma nativa.
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], los operadores UNION y UNION ALL se admiten en módulos compilados de forma nativa.
 
 -   Asignaciones de variables  
 
@@ -85,20 +85,20 @@ Cláusula FROM:
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN y INNER JOIN.
     - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten combinaciones en módulos compilados de forma nativa.
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten las operaciones JOIN en módulos compilados de forma nativa.
 
 -   Subconsultas `[AS] table_alias`. Para obtener más información, vea [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md). 
     - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten subconsultas en módulos compilados de forma nativa.
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten las subconsultas en módulos compilados de forma nativa.
 
 Cláusula WHERE:  
 
 -   Predicado de filtro IS [NOT] NULL  
 
--   ASÍ, ENTRE  
--   OR, NO ES ASÍ, EN, EXISTE
+-   AND, BETWEEN  
+-   OR, NOT, IN, EXISTS
     - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten operadores OR, NOT, IN y EXISTS en módulos compilados de forma nativa.
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten los operadores ON, NOT, IN y EXISTS en módulos compilados de forma nativa.
 
 
 Cláusula[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) :
@@ -194,7 +194,7 @@ Se admiten las siguientes instrucciones DML.
 -   Operadores ~, &, | y ^ bit a bit  
 
 -   APPLY, operador
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, el operador APPLY se admite en los módulos compilados de forma nativa.
 
 ##  <a name="bfncsp"></a> Funciones integradas en módulos compilados de forma nativa  
@@ -205,7 +205,7 @@ Se admiten las siguientes instrucciones DML.
 -   Funciones de fecha: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME y YEAR.  
 
 -   Funciones de cadena: LEN, LTRIM, RTRIM y SUBSTRING.  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, también se admiten las siguientes funciones integradas: TRIM, TRANSLATE y CONCAT_WS.  
 
 -   Funciones de identidad: SCOPE_IDENTITY  
@@ -215,7 +215,7 @@ Se admiten las siguientes instrucciones DML.
 -   Funciones uniqueidentifier: NEWID y NEWSEQUENTIALID  
 
 -   Funciones JSON  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, las funciones JSON se admiten en los módulos compilados de forma nativa.
 
 -   Funciones de error: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY y ERROR_STATE  

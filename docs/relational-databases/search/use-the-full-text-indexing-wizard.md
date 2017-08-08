@@ -27,11 +27,11 @@ caps.latest.revision: 24
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
 ms.openlocfilehash: 204b0e834db9ad1c5fe7d3f08f507629313e3cad
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Usar el Asistente para indización de texto completo
@@ -102,9 +102,9 @@ ms.lasthandoff: 06/23/2017
      e. Seleccionar un valor:  
       |Value|Descripción|  
       |-----------|-----------------|
-      |**<default>**| Si la tabla o la vista no tienen particiones, seleccione este valor para usar el mismo grupo de archivos que la tabla o vista subyacente. Si la tabla o vista tiene particiones, se usa el grupo de archivos principal|
+      |**<default>**| Si la tabla o la vista no tienen particiones, seleccione este valor para usar el mismo grupo de archivos que la tabla o vista subyacente. Si la tabla o la vista tienen particiones, se usa el grupo de archivos principal.|
       |**PRIMARY**|Seleccione este valor para usar el grupo de archivos principal para el nuevo índice de texto completo.|
-      *grupo de archivos predeterminado especificado por el usuario*|Si existe una lista de palabras irrelevantes predeterminada definida por el usuario, seleccione su nombre en la lista para utilizar ese grupo de archivos para el nuevo índice de texto completo.|   
+      *grupo de archivos predeterminado especificado por el usuario*|Si existe una lista de palabras irrelevantes predeterminada definida por el usuario, seleccione su nombre en la lista para usar ese grupo de archivos para el nuevo índice de texto completo.|   
   
      
  11. **Seleccionar lista de palabras irrelevantes de texto completo**  

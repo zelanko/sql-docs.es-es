@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 1aa87e3d821e6d111948baa0843edf31d087d739
-ms.openlocfilehash: 017f0c1a33ea00e675115d91e6654ec7730b4bd3
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: d8c99e842ceaa2351c98583238cbba28e2a152c7
 ms.contentlocale: es-es
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>Validar, consultar y cambiar datos JSON con funciones integradas (SQL Server)
@@ -61,7 +61,7 @@ SET @jsonInfo=N'{
 ##  <a name="ISJSON"></a> Validar texto JSON mediante la función ISJSON  
  La función **ISJSON** prueba si una cadena contiene un valor JSON válido.  
   
-En el ejemplo siguiente se devuelven las filas en las que la columna `json_col` contiene JSON válido.  
+En el ejemplo siguiente, se devuelven las filas en las que la columna `json_col` contiene JSON válido.  
   
 ```sql  
 SELECT id, json_col
@@ -74,7 +74,7 @@ Para obtener más información, vea [ISJSON &#40;Transact-SQL&#41;](../../t-sql/
 ##  <a name="VALUE"></a> Extraer un valor de texto JSON mediante la función JSON_VALUE  
 La función **JSON_VALUE** extrae un valor escalar de una cadena JSON.  
   
-En el ejemplo siguiente se extrae el valor de la propiedad JSON anidada `town` en una variable local.  
+En el ejemplo siguiente, se extrae el valor de la propiedad JSON anidada `town` en una variable local.  
   
 ```sql  
 SET @town = JSON_VALUE(@jsonInfo, '$.info.address.town')  
@@ -161,7 +161,7 @@ HAVING SUM(SubTotal)>1000
 ##  <a name="MODIFY"></a> Actualizar valores de propiedad en texto JSON mediante la función JSON_MODIFY  
 La función **JSON_MODIFY** actualiza el valor de una propiedad en una cadena JSON y devuelve la cadena JSON actualizada.  
   
-En el ejemplo siguiente se actualiza el valor de una propiedad JSON en una variable que contiene JSON.  
+En el ejemplo siguiente, se actualiza el valor de una propiedad JSON en una variable que contiene JSON.  
   
 ```sql  
 SET @info = JSON_MODIFY(@jsonInfo, "$.info.address[0].town", 'London')    
@@ -169,8 +169,8 @@ SET @info = JSON_MODIFY(@jsonInfo, "$.info.address[0].town", 'London')
   
  Para obtener más información, vea [JSON_MODIFY &#40;Transact-SQL&#41;](../../t-sql/functions/json-modify-transact-sql.md).  
   
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Obtener más información sobre la compatibilidad integrada de JSON en SQL Server  
-Para una gran cantidad de soluciones específicas, casos de uso y recomendaciones, consulte el [entradas de blog sobre la compatibilidad integrada de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) en SQL Server y en la base de datos de SQL de Azure mediante el Administrador de programas de Microsoft Jovan Popovic.
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Más información sobre la compatibilidad integrada de JSON en SQL Server  
+Para obtener una gran cantidad de soluciones específicas, casos de uso y recomendaciones, consulte las [entradas de blog sobre la compatibilidad integrada de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) en SQL Server y en Azure SQL Database ofrecidas por el director de programas de Microsoft Jovan Popovic.
   
 ## <a name="see-also"></a>Vea también  
  [ISJSON &#40;Transact-SQL&#41;](../../t-sql/functions/isjson-transact-sql.md)   

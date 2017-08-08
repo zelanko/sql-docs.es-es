@@ -19,7 +19,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
 ms.openlocfilehash: bc86472cabd742e83980126dce2cf22d42dfdde2
 ms.contentlocale: es-es
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="developer-guides-for-sql-server"></a>Guías del desarrollador para SQL Server
@@ -35,11 +35,11 @@ ms.lasthandoff: 07/20/2017
 
   
 ### <a name="programmable-features-and-services"></a>Servicios y características de programación: 
- - [Documentación para desarrolladores de motor de base de datos](../relational-databases/database-engine-developer-documentation.md)  
+ - [Documentación para desarrolladores de Motor de base de datos](../relational-databases/database-engine-developer-documentation.md)  
   
  - [Documentación para desarrolladores de Analysis Services](../analysis-services/analysis-services-developer-documentation.md)  
   
- - [Reporting Services Developer Documentation](../reporting-services/reporting-services-developer-documentation.md) (Documentación para desarrolladores de Reporting Services)  
+ - [Documentación para desarrolladores de Reporting Services](../reporting-services/reporting-services-developer-documentation.md)  
   
  - [Integration Services Developer Documentation](../integration-services/integration-services-developer-documentation.md) (Documentación para desarrolladores de Integration Services)  
   

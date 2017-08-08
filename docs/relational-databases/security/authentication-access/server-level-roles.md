@@ -26,11 +26,11 @@ caps.latest.revision: 52
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
 ms.openlocfilehash: f4f99b8869aca02d63b5aacaa883ce501e332ea7
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="server-level-roles"></a>Roles de nivel de servidor
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/23/2017
   
  Los roles fijos de servidor se proporcionan por comodidad y compatibilidad con versiones anteriores. Siempre que sea posible, asigne permisos más específicos.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona nueve roles fijos de servidor. Los permisos que se conceden a los roles fijos de servidor (excepto **público**) no se puede cambiar. A partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], puede crear roles de servidor definidos por el usuario y agregarles permisos de nivel de servidor.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona nueve roles fijos de servidor. Los permisos que se conceden a los roles fijos de servidor (a excepción de **public**) no se pueden modificar. A partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], puede crear roles de servidor definidos por el usuario y agregarles permisos de nivel de servidor.  
   
  Puede agregar entidades de seguridad a nivel de servidor (inicios de sesión de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cuentas de Windows y grupos de Windows) a los roles de nivel de servidor. Cada miembro de un rol fijo de servidor puede agregar otros inicios de sesión a ese mismo rol. Los miembros de roles de servidor definidos por el usuario no pueden agregar otras entidades de seguridad de servidor al rol.  
 >  [!NOTE]
@@ -49,17 +49,17 @@ ms.lasthandoff: 06/23/2017
 ## <a name="fixed-server-level-roles"></a>Roles fijos de nivel de servidor  
  En la tabla siguiente se muestran los roles fijos de nivel de servidor y sus capacidades.  
   
-|Rol fijo de nivel de servidor|Description|  
+|Rol fijo de nivel de servidor|Descripción|  
 |------------------------------|-----------------|  
-|**sysadmin**|Los miembros de la **sysadmin** rol fijo de servidor puede realizar cualquier actividad en el servidor.|  
+|**sysadmin**|Los miembros del rol fijo de servidor **sysadmin** pueden realizar cualquier actividad en el servidor.|  
 |**serveradmin**|Los miembros del rol fijo de servidor **serveradmin** pueden cambiar opciones de configuración en el servidor y cerrar el servidor.|  
-|**securityadmin**|Los miembros del rol fijo de servidor **securityadmin** administran los inicios de sesión y sus propiedades. Luego puede `GRANT`, `DENY`, y `REVOKE` permisos de nivel de servidor. También pueden `GRANT`, `DENY`, y `REVOKE` base de datos de nivel de permisos si tienen acceso a una base de datos. Asimismo, pueden restablecer contraseñas para inicios de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> **Importante:** la capacidad de conceder acceso a la [!INCLUDE[ssDE](../../../includes/ssde-md.md)] y configurar los permisos de usuario permite que el Administrador de seguridad asignar la mayoría de los permisos de servidor. El rol **securityadmin** se debe tratar como equivalente al rol **sysadmin** .|  
-|**processadmin**|Los miembros de la **processadmin** rol fijo de servidor puede finalizar los procesos que se ejecutan en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|**setupadmin**|Los miembros de la **setupadmin** rol fijo de servidor puede agregar y quitar servidores vinculados mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucciones. (**sysadmin** es necesaria cuando se usa la pertenencia a [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)|  
-|**bulkadmin**|Los miembros de la **bulkadmin** rol fijo de servidor puede ejecutar la `BULK INSERT` instrucción.|  
-|**diskadmin**|El **diskadmin** rol fijo de servidor se utiliza para administrar archivos de disco.|  
+|**securityadmin**|Los miembros del rol fijo de servidor **securityadmin** administran los inicios de sesión y sus propiedades. Pueden administrar los permisos de nivel de servidor `GRANT`, `DENY`, y `REVOKE`. También pueden administrar los permisos de nivel de base de datos `GRANT`, `DENY` y `REVOKE` si tienen acceso a una base de datos. Asimismo, pueden restablecer contraseñas para inicios de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> **IMPORTANTE:** La capacidad de conceder acceso a [!INCLUDE[ssDE](../../../includes/ssde-md.md)] y configurar los permisos de usuario permite que el administrador de seguridad asigne la mayoría de los permisos de servidor. El rol **securityadmin** se debe tratar como equivalente al rol **sysadmin** .|  
+|**processadmin**|Los miembros del rol fijo de servidor **processadmin** pueden finalizar los procesos que se ejecutan en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|**setupadmin**|Los miembros del rol fijo de servidor **setupadmin** pueden agregar y quitar servidores vinculados mediante instrucciones de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. (Es necesaria la pertenencia a **sysadmin** cuando se usa [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]).|  
+|**bulkadmin**|Los miembros del rol fijo de servidor **bulkadmin** pueden ejecutar la instrucción `BULK INSERT`.|  
+|**diskadmin**|El rol fijo de servidor **diskadmin** se usa para administrar archivos de disco.|  
 |**dbcreator**|Los miembros del rol fijo de servidor **dbcreator** pueden crear, modificar, quitar y restaurar cualquier base de datos.|  
-|**pública**|Cada [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inicio de sesión pertenece a la **público** rol de servidor. Cuando a una entidad de seguridad de servidor no se le han concedido ni denegado permisos específicos para un objeto protegible, el usuario hereda los permisos concedidos al rol pública para ese elemento. Solo asigne los permisos públicos en cualquier objeto cuando desee que el objeto esté disponible para todos los usuarios. No puede cambiar la pertenencia en public.<br /><br /> **Nota:** **público** se implementa de manera diferente que otros roles y permisos pueden ser concedido, denegados o revocados desde los roles fijos de servidor público.|  
+|**public**|Cada inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pertenece al rol de servidor **public**. Cuando a una entidad de seguridad de servidor no se le han concedido ni denegado permisos específicos para un objeto protegible, el usuario hereda los permisos concedidos al rol pública para ese elemento. Solo asigne los permisos públicos en cualquier objeto cuando desee que el objeto esté disponible para todos los usuarios. No puede cambiar la pertenencia en public.<br /><br /> **Nota:** El rol **public** se implementa de manera diferente que otros roles y los permisos se pueden conceder, denegar o revocar de los roles fijos de servidor públicos.|  
   
 ## <a name="permissions-of-fixed-server-roles"></a>Permisos de los roles fijos de servidor  
  Cada rol fijo de servidor cuenta con diversos permisos asignados. El gráfico siguiente muestra los permisos asignados a los roles de servidor.   

@@ -17,11 +17,11 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
 ms.openlocfilehash: a13e098829fdf1ffee42075a57750513234dc997
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedimiento recomendado con el Almacén de consultas
@@ -143,27 +143,27 @@ El Almacén de consultas de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.
 |Regressed Queries (Consultas devueltas)|Consultas de pinpoint para las que las métricas de ejecución se han devuelto recientemente (es decir, han cambiado a peor). <br />Use esta vista para poner en correlación los problemas de rendimiento observados en la aplicación con las consultas reales que se necesita arreglar o mejorar.|  
 |Overall Resource Consumption (Consumo total de recursos)|Analice el consumo total de recursos para la base de datos para cualquiera de las métricas de ejecución.<br />Use esta vista para identificar patrones de recursos (cargas de trabajo por el día frente a cargas de trabajo por la noche) y optimizar el consumo total para la base de datos.|  
 |Top Resource Consuming Queries (Consultas que consumen más recursos)|Elija una métrica de ejecución de interés e identifique las consultas que tenían los valores más extremos para un intervalo de tiempo proporcionado. <br />Use esta vista para centrar la atención en las consultas más importantes que tienen el mayor impacto en el consumo de recursos de base de datos.|  
-|Consultas con planes forzados|Listas previamente forzar planes con el almacén de consultas. <br />Utilice esta vista para obtener acceso rápidamente a todos los planes forzados actualmente.|  
-|Consultas con una variación alta|Analizar consultas con una variación de la ejecución alta en lo referente a cualquiera de las dimensiones disponibles, como el uso de duración, tiempo de CPU, E/S y memoria en el intervalo de tiempo deseado.<br />Use esta vista para identificar consultas con un rendimiento muy variable que pueda afectar a la experiencia del usuario a través de las aplicaciones.|  
+|Consultas con planes forzados|Enumera los planes forzados anteriormente mediante el Almacén de consultas. <br />Use esta vista para obtener acceso rápidamente a todos los planes forzados actualmente.|  
+|Consultas con gran variación|Analice consultas con una gran variación de ejecución en lo referente a cualquiera de las dimensiones disponibles, como la duración, el tiempo de CPU, la E/S y el uso de memoria en el intervalo de tiempo deseado.<br />Use esta vista para identificar consultas con un rendimiento muy variable que pueda afectar a la experiencia del usuario a través de las aplicaciones.|  
 |Tracked Queries (Consultas seguidas)|Realice un seguimiento de la ejecución de las consultas más importantes en tiempo real. Normalmente, esta vista se utiliza cuando tiene consultas con planes forzados y desea asegurarse de que el rendimiento de las mismas es estable.|
   
 > [!TIP]  
 >  Para obtener una descripción detallada sobre cómo usar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para identificar las consultas que consumen más recursos y corregir aquellas devueltas debido al cambio de una opción de plan, vea los [blogs de @Azure sobre el Almacén de consultas](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
- Cuando identifique una consulta con un rendimiento deficiente, la acción depende de la naturaleza del problema.  
+ Cuando identifique una consulta con un rendimiento deficiente, la acción dependerá de la naturaleza del problema.  
   
 -   Si la consulta se ejecutó con varios planes y el último plan es mucho peor que el plan anterior, puede utilizar el mecanismo que fuerza el plan para exigir a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que utilice siempre el plan óptimo para ejecuciones futuras.  
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
 > [!NOTE]  
-> El gráfico anterior puede características distintas formas para los planes de consulta específica, con los significados siguientes para cada estado posible:<br />  
+> El gráfico anterior puede presentar distintas formas para planes de consulta específicos, con los significados siguientes para cada estado posible:<br />  
 > |Forma|Significado|  
 > |-------------------|-------------|
-> |Circle|Consultar completado (normal de ejecución termine correctamente)|
-> |Square|Cancelado (iniciadas por clientes anuló la ejecución)|
-> |Triangle|Error (excepción anulada ejecución)|
-> Además, el tamaño de la forma refleja el recuento de la ejecución de consulta dentro del intervalo de tiempo especificado, aumenten de tamaño con un número mayor de ejecuciones.  
+> |Circle|Consulta completada (ejecución normal finalizada correctamente)|
+> |Square|Cancelado (ejecución del cliente iniciada anulada)|
+> |Triangle|Error (ejecución de excepción anulada)|
+> Además, el tamaño de la forma refleja el recuento de la ejecución de consulta dentro del intervalo de tiempo especificado, aumentando de tamaño con un número mayor de ejecuciones.  
 
 -   Se puede concluir que a la consulta le falta un índice la ejecución óptima. Esta información aparece en el plan de ejecución de la consulta. Cree el índice que falta y compruebe el rendimiento de la consulta mediante el Almacén de consultas.  
   
@@ -175,7 +175,7 @@ El Almacén de consultas de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.
   
 -   Vuelva a escribir las consultas problemáticas. Por ejemplo, para aprovechar las ventajas de la parametrización de la consulta o para implementar la lógica más óptima.  
   
-##  <a name="Verify"></a> Verify Query Store is Collecting Query Data Continuously  
+##  <a name="Verify"></a> Comprobación de que el Almacén de consultas está recopilando datos de consulta continuamente  
  El Almacén de consultas puede cambiar el modo de operación automáticamente. Debe supervisar periódicamente el estado del Almacén de consulta para asegurarse de que está funcionando y tomar medidas para evitar errores debido a causas evitables. Ejecute la siguiente consulta para determinar el modo de operación y ver los parámetros más importantes:  
   
 ```tsql
@@ -233,11 +233,11 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
- Si el problema continúa, indica daños en la consulta del almacén de datos en el disco.
+ Si el problema continúa, significa que los datos del Almacén de consultas siguen estando dañados en el disco.
  
- Almacén de consultas podría recuperarse mediante la ejecución de **sp_query_store_consistency_check** procedimiento almacenado dentro de la base de datos.
+ El Almacén de consultas podría recuperarse mediante la ejecución del procedimiento almacenado **sp_query_store_consistency_check** en la base de datos afectada.
  
- Que no le ha ayudado, puede intentar borrar el almacén de consultas antes de solicitar el modo de lectura y escritura.  
+ Si esto no ha solucionado el problema, puede intentar borrar el Almacén de consultas antes de solicitar el modo de lectura y escritura.  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   

@@ -15,11 +15,11 @@ caps.latest.revision: 18
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
 ms.openlocfilehash: 5ee3aa9223ae8ab832eff23a1da1755278e86d0b
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Limitaciones y consideraciones de las tablas temporales
@@ -53,13 +53,13 @@ ms.lasthandoff: 06/23/2017
   
 -   Las instrucciones**INSERT** y **UPDATE** no pueden hacer referencia a las columnas de periodo SYSTEM_TIME. Se bloquearán los intentos de insertar valores directamente en estas columnas.  
   
--   **TRUNCATE TABLE** is not supported while **SYSTEM_VERSIONING** is **ON**  
+-   **TRUNCATE TABLE** no se admite mientras **SYSTEM_VERSIONING** esté configurado como **ON**  
   
 -   No se permite la modificación directa de los datos en una tabla de historial.  
   
 -   **ON DELETE CASCADE** y **ON UPDATE CASCADE** no se permiten en la tabla actual. Es decir, cuando la tabla temporal hace referencia a la tabla de la relación de clave externa (correspondiente a *parent_object_id* en sys.foreign_keys), no se permiten las opciones CASCADE. Para abordar esta limitación, use la lógica de aplicación o los desencadenadores AFTER para mantener la coherencia de eliminación en la tabla de clave principal (correspondiente a  *referenced_object_id* en sys.foreign_keys). Si la tabla de clave principal es temporal y de referencia no lo es, significa que no hay ninguna limitación de este tipo. 
 
-    **Nota:** esta limitación sólo se aplica a SQL Server 2016. Se admiten opciones CASCADE en [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] y a partir de la versión 2.0 de CTP de SQL Server 2017.  
+    **Nota:** Esta limitación solo se aplica a SQL Server 2016. Se admiten opciones CASCADE en [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] y a partir de la versión CTP 2.0 de SQL Server 2017.  
   
 -   Los desencadenadores**INSTEAD OF** no se permiten en la tabla actual o de historial para evitar que se invalide la lógica DML. Los desencadenadores**AFTER** solo se permiten en la tabla actual. Se bloquean en la tabla de historial para evitar que se invalide la lógica DML.  
   

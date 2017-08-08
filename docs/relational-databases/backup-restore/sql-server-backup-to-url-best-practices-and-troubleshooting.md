@@ -14,11 +14,11 @@ caps.latest.revision: 26
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: b76a0f262fd12e53797c0ad86c991a6e4423927a
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server
@@ -100,7 +100,7 @@ ms.lasthandoff: 06/23/2017
 -   Al restaurar desde una copia de seguridad comprimida, puede aparecer el siguiente error:  
   
     -   `SqlException 3284 occurred. Severity: 16 State: 5`  
-        **Mensaje la marca de archivo en el dispositivo `'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'` no está alineada. Emita de nuevo la instrucción Restore con el mismo tamaño de bloque usado para crear el conjunto de copia de seguridad: '65536' parece un valor posible.**  
+        **Mensaje: La marca de archivo del dispositivo `'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'` no está alineada. Emita de nuevo la instrucción Restore con el mismo tamaño de bloque usado para crear el conjunto de copia de seguridad: '65536' parece un valor posible.**  
   
          Para resolver este error, vuelva a emitir la instrucción **BACKUP** especificando **BLOCKSIZE = 65536** .  
   
@@ -125,7 +125,7 @@ ms.lasthandoff: 06/23/2017
   
 -   Error de escritura en "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak": BACKUP TO URL recibió una excepción del extremo remoto. Mensaje de excepción: No se pueden leer datos de la conexión de transporte: La conexión se cerró.  
   
--   Error de E/S irrecuperable en el archivo "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`" no se pudo recopilar el Error del extremo remoto.  
+-   Error de E/S irrecuperable en el archivo "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`". No se pudo recopilar el error del punto de conexión remoto.  
   
      Mensaje 3013, nivel 16, estado 1, línea 2  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 06/23/2017
   
  **Configuración de proxy predeterminada no seleccionada:**  
   
- A veces la configuración predeterminada no se recoge produce errores de autenticación, como se muestra a continuación de proxy:*un error de E/S irrecuperable en el archivo "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`" Backup to URL recibió una excepción del extremo remoto. Mensaje de excepción: Error en el servidor remoto: (407)* **Se requiere autorización del proxy**.  
+ A veces, la configuración predeterminada no se selecciona, lo que produce errores de autenticación del proxy como el que se muestra a continuación: *Error de E/S irrecuperable en el archivo "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`". La copia de seguridad en URL recibió una excepción del punto de conexión remoto. Mensaje de excepción: Error en el servidor remoto: (407)* **Se requiere autorización del proxy**.  
   
  Para resolver este problema, cree un archivo de configuración que permita al proceso Copia de seguridad en URL utilizar la configuración de proxy predeterminada mediante los pasos siguientes:  
   

@@ -16,11 +16,11 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: 0218298a95d1e7df242b3ca7cbae657effead719
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Mantenimiento y solución de problemas del conector de SQL Server
@@ -166,12 +166,11 @@ Se pueden restaurar las copias de seguridad de claves en regiones de Azure, siem
  La clave asimétrica en el Almacén de claves se usa para proteger las claves de cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La parte pública de la clave asimétrica es la única que sale del almacén: el almacén no exporta nunca la parte privada. Todas las operaciones de cifrado en las que se usa la clave asimétrica se realizan en el servicio de Almacén de claves de Azure y se protegen con la seguridad del servicio.  
   
  **¿Qué es un URI de clave?**  
- Todas las claves del Almacén de claves de Azure tienen un identificador uniforme de recursos, (URI), que se puede usar para hacer referencia a la clave en la aplicación. Use el formato `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` para obtener la versión actual y use el formato `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` para obtener una versión específica.  
+ Todas las claves del Almacén de claves de Azure tienen un identificador uniforme de recursos, (URI), que se puede usar para hacer referencia a la clave en la aplicación. Use el formato `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` para obtener la versión actual y el formato `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` para obtener una versión específica.  
   
 ### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>Configuración [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-**¿Qué son los extremos a los que necesita tener acceso el conector de SQL Server?** 
- El conector se comunica con dos extremos, que deben estar en una lista blanca. El único puerto requerido para la comunicación saliente a estos otros servicios es el puerto 443 para Https:
+**¿Qué son los extremos a los que necesita tener acceso el conector de SQL Server?** El conector se comunica con dos extremos, que deben estar en una lista blanca. El único puerto requerido para la comunicación saliente a estos otros servicios es el puerto 443 para Https:
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/*:443
   
@@ -188,7 +187,7 @@ Se pueden restaurar las copias de seguridad de claves en regiones de Azure, siem
   
 -   Para crear una clave asimétrica, necesita el permiso `CREATE ASYMMETRIC KEY` .  
 
-**¿Cómo puedo cambiar el Active Directory predeterminado para que mi almacén de claves se cree en la misma suscripción y Active Directory de la entidad de servicio que creé para el Conector de [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]?**
+**¿Cómo puedo cambiar el Active Directory predeterminado para que mi almacén de claves se cree en la misma suscripción y Active Directory de la entidad de servicio que creé para el Conector de [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] ?**
 
 ![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
@@ -299,7 +298,7 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
 -   Referencia de [cmdlets del Almacén de claves de Azure](https://msdn.microsoft.com/library/dn868052.aspx) de PowerShell  
   
 ## <a name="see-also"></a>Vea también  
- [Extensible Key Management Using Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
+ [Administración extensible de claves con el Almacén de claves de Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
  [EKM provider enabled (opción de configuración del servidor)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
   

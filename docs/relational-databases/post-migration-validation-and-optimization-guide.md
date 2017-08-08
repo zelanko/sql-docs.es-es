@@ -1,5 +1,5 @@
 ---
-title: "Guía de optimización y posteriores a la migración validación | Documentos de Microsoft"
+title: "Guía de optimización y validación posterior a la migración | Microsoft Docs"
 ms.custom: 
 ms.date: 5/03/2017
 ms.prod: sql-server-2016
@@ -17,20 +17,20 @@ caps.latest.revision: 3
 author: pelopes
 ms.author: harinid
 manager: 
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
 ms.openlocfilehash: 30a271511fff2d9c3c9eab73a0d118bfb3f8130d
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guía de optimización y validación posterior a la migración
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]registrar el paso de migración es muy fundamental para reconciliar cualquier precisión de los datos y la integridad, así como ayudan a solucionar problemas de rendimiento con la carga de trabajo.
+El paso posterior a la migración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es fundamental para reconciliar cualquier precisión e integridad de los datos, así como para solucionar problemas de rendimiento con la carga de trabajo.
 
 # <a name="common-performance-scenarios"></a>Escenarios comunes de rendimiento 
-A continuación se muestran algunos de los escenarios comunes de rendimiento que se encontró después de migrar a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] plataforma y cómo resolverlos. Puede tratarse de escenarios que son específicos de la migración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (versiones anteriores a las versiones más recientes), así como de la plataforma externa (por ejemplo, Oracle, DB2, MySQL y Sybase) a la migración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+A continuación se muestran algunos de los escenarios comunes de rendimiento detectados después de migrar a la plataforma [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y cómo resolverlos. Puede tratarse de escenarios que son específicos de la migración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (versiones anteriores a las versiones más recientes), así como de la plataforma externa (por ejemplo, Oracle, DB2, MySQL y Sybase) a la migración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 ## <a name="CEUpgrade"></a>Consultar las regresiones debidas a un cambio en la versión CE
 
@@ -50,87 +50,87 @@ Cambie el [nivel de compatibilidad de la base de datos](../relational-databases/
 
 Para obtener más información sobre este tema, consulte [Mantener la estabilidad del rendimiento al actualizar a SQL Server 2016](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade).
 
-## <a name="ParameterSniffing"></a>Sensibilidad a examen de parámetros
+## <a name="ParameterSniffing"></a> Sensibilidad al examen de parámetros
 
-**Se aplica a:** plataforma externa (por ejemplo, Oracle, DB2, MySQL y Sybase) a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migración.
+**Se aplica a:** plataforma externa (por ejemplo, Oracle, DB2, MySQL y Sybase) a la migración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
-> Para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migraciones, si este problema existía en el origen de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], migrar a una versión más reciente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como-será no se contempla en este escenario. 
+> Para migraciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], si este problema existía en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de origen, migrar a una versión más reciente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tal cual no se contempla en este escenario. 
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]compila los planes de consulta en procedimientos almacenados mediante el uso de examen de los parámetros de entrada en la primera compilación, generar un plan con parámetros y reutilizable, optimizado para que una entrada de distribución de datos. Incluso si no almacena los procedimientos, la mayoría de instrucciones generar planes triviales se se pueden parametrizar. Después de un plan en primer lugar se almacena en caché, cualquier ejecución futuras se asigna a un plan en caché previamente.
-Un posible problema que surge cuando esa primera compilación puede no ha usado los conjuntos de parámetros más comunes para la carga de trabajo habitual. Para los parámetros diferentes, el mismo plan de ejecución pasa a ser ineficaz. Para obtener más información sobre este tema, consulte [Examen de parámetros](../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compila planes de consulta en procedimientos almacenados mediante el examen de parámetros de entrada en la primera compilación, generando un plan con parámetros y reutilizable, optimizado para esa distribución de datos de entrada. Incluso si no hay procedimientos almacenados, la mayoría de instrucciones que generan planes triviales se parametrizarán. Después de que un plan se almacene en caché por primera vez, cualquier ejecución futura se asigna a un plan previamente almacenado en caché.
+Surge un posible problema si esa primera compilación puede que no haya usado los conjuntos de parámetros más comunes para la carga de trabajo habitual. Para parámetros diferentes, el mismo plan de ejecución es ineficaz. Para obtener más información sobre este tema, consulte [Examen de parámetros](../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
 
 ### <a name="steps-to-resolve"></a>Pasos para resolver
 
-1.  Use la `RECOMPILE` sugerencia. Cada vez que adaptarse a cada valor de parámetro, se calcula un plan.
-2.  Vuelva a escribir el procedimiento almacenado para usar la opción `(OPTIMIZE FOR(<input parameter> = <value>))`. Decidir qué valor desea usar se adapte a la mayor parte de la carga de trabajo relevante, crear y mantener un plan que pasa a ser eficaz para el valor con parámetros.
-3.  Vuelva a escribir el procedimiento almacenado mediante la variable local dentro del procedimiento. Ahora el optimizador utiliza el vector de densidad para las estimaciones son erróneas, lo que produce el mismo plan sin tener en cuenta el valor del parámetro.
-4.  Vuelva a escribir el procedimiento almacenado para usar la opción `(OPTIMIZE FOR UNKNOWN)`. Mismo efecto que usar la técnica de variable local.
-5.  Vuelva a escribir la consulta para utilizar la sugerencia `DISABLE_PARAMETER_SNIFFING`. Mismo efecto que usar la técnica de la variable local por deshabilitar completamente el examen de parámetros, a menos que `OPTION(RECOMPILE)`, `WITH RECOMPILE` o `OPTIMIZE FOR <value>` se utiliza.
+1.  Use la sugerencia `RECOMPILE`. Un plan se calcula cada vez adaptado a cada valor de parámetro.
+2.  Vuelva a escribir el procedimiento almacenado para usar la opción `(OPTIMIZE FOR(<input parameter> = <value>))`. Decida qué valor quiere usar que se adapte a la mayor parte de la carga de trabajo relevante, creando y manteniendo un plan que sea eficaz para el valor con parámetros.
+3.  Vuelva a escribir el procedimiento almacenado mediante la variable local dentro del procedimiento. Ahora, el optimizador usa el vector de densidad para las estimaciones, lo que produce el mismo plan independientemente del valor del parámetro.
+4.  Vuelva a escribir el procedimiento almacenado para usar la opción `(OPTIMIZE FOR UNKNOWN)`. Se consigue el mismo efecto que al usar la técnica de variable local.
+5.  Vuelva a escribir la consulta para usar la sugerencia `DISABLE_PARAMETER_SNIFFING`. Se consigue el mismo efecto que al usar la técnica de variable local al deshabilitar completamente el examen de parámetros, a menos que se usen `OPTION(RECOMPILE)`, `WITH RECOMPILE` o `OPTIMIZE FOR <value>`.
 
 > [!TIP] 
-> Aproveche el [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] característica de análisis de Plan para identificar rápidamente si se trata de un problema. Más información disponible [aquí](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/).
+> Aproveche la característica de análisis de plan de [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] para identificar rápidamente si se trata de un problema. Encontrará más información [aquí](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/).
 
-## <a name="MissingIndexes"></a>Índices que faltan
+## <a name="MissingIndexes"></a> Faltan índices
 
-**Se aplica a:** plataforma externa (por ejemplo, Oracle, DB2, MySQL y Sybase) y [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migración.
+**Se aplica a:** plataforma externa (por ejemplo, Oracle, DB2, MySQL y Sybase) y la migración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-Los índices que faltan o incorrectos hace E/S adicional que conduce a memoria adicional y CPU que se malgasta. Este puede ser porque ha cambiado el perfil de carga de trabajo como el uso de predicados diferentes, invalidando existente el diseño de índices. Evidencia de una estrategia de indexación deficiente o cambios en el perfil de carga de trabajo incluyen:
--   Busque duplicado, redundante, usado con poca frecuencia y los índices no usados por completo.
--   Especial cuidado con los índices no usados con las actualizaciones.
+Los índices que faltan o son incorrectos causan una E/S adicional que producen una memoria adicional y se malgasta CPU. Esto puede ser porque ha cambiado el perfil de carga de trabajo, como al usar predicados diferentes, invalidando el diseño de índices existente. Evidencia de una estrategia de indexación deficiente o cambios en el perfil de carga de trabajo incluyen:
+-   Busque índices duplicados, redundantes, usados con poca frecuencia y que no se han usado nunca.
+-   Tenga especial cuidado con los índices no usados con actualizaciones.
 
 ### <a name="steps-to-resolve"></a>Pasos para resolver
 
-1.  Aprovechar el plan de ejecución gráfico para las referencias de índice que faltan.
-2.  Indización sugerencias generadas por [el Asistente para la optimización de motor de base de datos](../tools/dta/tutorial-database-engine-tuning-advisor.md).
-3.  Aproveche el [DMV de índices que faltan](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) o a través del [panel de rendimiento de SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
-4.  Aprovechar las secuencias de comandos existentes que pueden utilizar DMV existentes para proporcionar una visión general de los índices que faltan, duplicados, redundantes, poco usados y completamente sin usar, sino también si cualquier referencia de índice se sugiere una/codificado de forma rígida en los procedimientos existentes y las funciones de la base de datos. 
+1.  Aproveche el plan de ejecución gráfico de cualquiera referencia de índice que falte.
+2.  Sugerencias de indexación generadas por el [Asistente para la optimización de motor de base de datos](../tools/dta/tutorial-database-engine-tuning-advisor.md).
+3.  Aproveche la [DMV de los índices que faltan](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) o a través del [panel de rendimiento de SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
+4.  Aproveche los scripts que existían previamente que puedan usar DMV existentes para proporcionar una visión general de los índices, duplicados, redundantes, poco usados, que no se han usado nunca o que faltan, pero también si alguna referencia de índice se sugiere o codifica de forma rígida en procedimientos y funciones existentes de la base de datos. 
 
 > [!TIP] 
-> Ejemplos de estos scripts preexistentes [creación de índices](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Creation) y [información del índice](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Information). 
+> Entre los ejemplos de estos scripts que existían previamente se encuentran la [creación de índices](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Creation) y la [información del índice](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Information). 
 
-## <a name="InabilityPredicates"></a>Predicados de no pueden usar para filtrar los datos
+## <a name="InabilityPredicates"></a> Incapacidad de usar predicados para filtrar datos
 
-**Se aplica a:** plataforma externa (por ejemplo, Oracle, DB2, MySQL y Sybase) y [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migración.
+**Se aplica a:** plataforma externa (por ejemplo, Oracle, DB2, MySQL y Sybase) y la migración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
-> Para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migraciones, si este problema existía en el origen de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], migrar a una versión más reciente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como-será no se contempla en este escenario.
+> Para migraciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], si este problema existía en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de origen, migrar a una versión más reciente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tal cual no se contempla en este escenario.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Optimizador de consultas sólo puede tener en cuenta para obtener información que se conoce en tiempo de compilación. Si una carga de trabajo se basa en predicados que solo pueden conocerse en tiempo de ejecución, a continuación, se aumenta la posibilidad de una opción de plan deficiente. Para un plan de mejor calidad, predicados deben ser **SARGable**, o **S**buscar **Arg**umentos**capaz de**.
+El optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] solo puede tener en cuenta información que se conoce en tiempo de compilación. Si una carga de trabajo se basa en predicados que solo se pueden conocer en tiempo de ejecución, se aumenta la posibilidad de una opción de plan deficiente. Para un plan de mejor calidad, los predicados deben ser **SARGable** o **S**earch **Arg**ument**able**.
 
-Algunos ejemplos de predicados de no SARGable:
--   Conversiones implícitas de datos, como VARCHAR a NVARCHAR o INT a VARCHAR. Busque las advertencias de CONVERT_IMPLICIT de tiempo de ejecución en los planes de ejecución real. Convertir de un tipo a otro, también puede provocar una pérdida de precisión.
+Algunos ejemplos de predicados que no son SARGable:
+-   Conversiones implícitas de datos, como VARCHAR a NVARCHAR o INT a VARCHAR. Busque las advertencias de CONVERT_IMPLICIT en tiempo de ejecución en los planes de ejecución reales. La conversión de un tipo a otro también puede provocar una pérdida de precisión.
 -   Las expresiones complejas indeterminadas como `WHERE UnitPrice + 1 < 3.975`, pero no `WHERE UnitPrice < 320 * 200 * 32`.
--   Expresiones que utilizan funciones, como `WHERE ABS(ProductID) = 771` o`WHERE UPPER(LastName) = 'Smith'`
+-   Expresiones que usan funciones, como `WHERE ABS(ProductID) = 771` o `WHERE UPPER(LastName) = 'Smith'`.
 -   Cadenas con un carácter comodín inicial, tales como `WHERE LastName LIKE '%Smith'`, pero no `WHERE LastName LIKE 'Smith%'`.
 
 ### <a name="steps-to-resolve"></a>Pasos para resolver
 
-1. Declare siempre las variables o parámetros como el destino deseado [tipo de datos](../t-sql/data-types/data-types-transact-sql.md). 
-  -   Esto puede implicar la comparación de cualquier construcción del código definido por el usuario que se almacena en la base de datos (por ejemplo, procedimientos almacenados, vistas o funciones definidas por el usuario) con las tablas del sistema que contienen información de tipos de datos utilizados en las tablas subyacentes (como [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md)).
+1. Declare siempre las variables o los parámetros como el [tipo de datos](../t-sql/data-types/data-types-transact-sql.md) de destino deseado. 
+  -   Esto puede implicar la comparación de cualquier construcción de código definido por el usuario que se almacena en la base de datos (por ejemplo, procedimientos almacenados, vistas o funciones definidas por el usuario) con tablas del sistema que contienen información de tipos de datos usados en las tablas subyacentes (como [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md)).
 2. Si no se puede recorrer todo el código hasta el punto anterior, con la misma finalidad, cambie el tipo de datos en la tabla para que coincida con las declaraciones de variable o parámetro.
-3. La utilidad de las siguientes construcciones de motivo:
+3. Motivo de la utilidad de las siguientes construcciones:
   -   Funciones que se usan como predicados;
   -   Búsquedas con caracteres comodín;
-  -   Expresiones complejas en función de los datos en columnas: evaluar la necesidad de crear columnas calculadas persistentes, que se pueden indizar;
+  -   Expresiones complejas en función de los datos en columnas (evalúe la necesidad de crear columnas calculadas persistentes, que se pueden indexar).
 
 > [!NOTE] 
 > Todo lo anterior puede realizarse mediante programación.
 
-## <a name="TableValuedFunctions"></a>Uso de las funciones con valores de tabla (frente a varias instrucciones en línea)
+## <a name="TableValuedFunctions"></a> Uso de funciones con valores de tabla (múltiples instrucciones frente a insertadas)
 
-**Se aplica a:** plataforma externa (por ejemplo, Oracle, DB2, MySQL y Sybase) y [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migración.
+**Se aplica a:** plataforma externa (por ejemplo, Oracle, DB2, MySQL y Sybase) y la migración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
-> Para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migraciones, si este problema existía en el origen de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], migrar a una versión más reciente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como-será no se contempla en este escenario.
+> Para migraciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], si este problema existía en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de origen, migrar a una versión más reciente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tal cual no se contempla en este escenario.
 
-Las funciones con valores de tabla devuelven un tipo de datos de tabla que puede ser una alternativa a las vistas. Mientras que las vistas se limitan a una sola `SELECT` (instrucción), funciones definidas por el usuario pueden contener instrucciones adicionales que permiten una lógica más que es posible en las vistas.
+Las funciones con valores de tabla devuelven un tipo de datos de tabla que puede ser una alternativa a las vistas. Mientras que las vistas se limitan a una única instrucción `SELECT`, las funciones definidas por el usuario pueden contener instrucciones adicionales que permiten una lógica más eficaz que en las vistas.
 
 > [!IMPORTANT] 
-> Puesto que no se creó la tabla de salida de un MSTVF (función con valores de tabla de múltiples instrucciones) en tiempo de compilación, el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] optimizador de consultas se basa en la heurística y las estadísticas no reales, para determinar las estimaciones de fila. Aunque los índices se agregan a las tablas base, esto no va a ayudar. Para MSTVFs, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza una estimación fija de 1 para el número de filas que se espera que va a devolver un MSTVF (a partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] que corrigen estimación es 100 filas).
+> Puesto que no se ha creado la tabla de salida de una MSTVF (función con valores de tabla de múltiples instrucciones) en tiempo de compilación, el optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se basa en la heurística (y non en las estadísticas reales) para determinar las estimaciones de fila. Aunque los índices se agreguen a las tablas base, esto no servirá de ayuda. Para MSTVF, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa una estimación fija de 1 para el número de filas que se espera que va a devolver una MSTVF (a partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], esa estimación corregida es de 100 filas).
 
 ### <a name="steps-to-resolve"></a>Pasos para resolver
-1.  Si la función TVF de múltiples instrucciones es la única instrucción solo, convertir en Inline TVF.
+1.  Si la TVF de múltiples instrucciones es la única instrucción, conviértala en TVF insertada.
 
     ```tsql
     CREATE FUNCTION dbo.tfnGetRecentAddress(@ID int)
@@ -160,13 +160,13 @@ Las funciones con valores de tabla devuelven un tipo de datos de tabla que puede
     )
     ```
 
-2.  Si es más complejo, considere el uso de los resultados intermedios que se almacenan en tablas optimizadas en memoria o tablas temporales.
+2.  Si es más complejo, considere la opción de usar los resultados intermedios que se almacenan en tablas optimizadas para memoria o tablas temporales.
 
 ##  <a name="Additional_Reading"></a> Lecturas adicionales  
  [Procedimiento recomendado con el Almacén de consultas](../relational-databases/performance/best-practice-with-the-query-store.md)  
-[Tablas con optimización para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+[Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
 [Funciones definidas por el usuario](../relational-databases/user-defined-functions/user-defined-functions.md)  
-[Las Variables de tabla y fila estimaciones - parte 1](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)  
-[Las Variables de tabla y fila estimaciones - parte 2](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)  
-[Almacenamiento en caché del Plan de ejecución y reutilización](../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)
+[Table Variables and Row Estimations - Part 1](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/) (Variables de tabla y estimaciones de fila: parte 1)  
+[Table Variables and Row Estimations - Part 2](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/) (Variables de tabla y estimaciones de fila: parte 2)  
+[Almacenar en caché y volver a utilizar un plan de ejecución](../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)
 

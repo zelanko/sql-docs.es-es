@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
-ms.openlocfilehash: a0118939a71b06d7c3258efdfbe291a910358c37
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: bb35a5255b35b93cd42e83bd17d9efdcf751bc84
 ms.contentlocale: es-es
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>Optimización del procesamiento de OLTP en memoria JSON
@@ -53,7 +53,7 @@ Las características disponibles en SQL Server y Azure SQL Database permiten int
 ## <a name="validate"></a> Validación de columnas JSON
 SQL Server y Azure SQL Database permiten agregar restricciones CHECK compiladas de forma nativa que validan el contenido de los documentos JSON almacenados en una columna de cadena. Con las restricciones CHECK de JSON compiladas de forma nativa, puede asegurarse de que el texto JSON almacenado en las tablas con optimización para memoria tiene el formato correcto.
 
-El ejemplo crea una tabla `Product` con una columna JSON `Tags`. La columna `Tags` tiene una restricción CHECK que usa la función `ISJSON` para validar el texto JSON en la columna.
+En el ejemplo siguiente, se crea una tabla `Product` con una columna JSON `Tags`. La columna `Tags` tiene una restricción CHECK que usa la función `ISJSON` para validar el texto JSON en la columna.
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;
@@ -111,7 +111,7 @@ Los valores de las columnas JSON se pueden indexar con los índices NONCLUSTERED
 -   Los índices NONCLUSTERED optimizan las consultas que seleccionan rangos de filas por algún valor JSON u ordenan los resultados por valores JSON.
 -   Los índices HASH optimizan las consultas que seleccionan una sola fila o algunas filas mediante la especificación de un valor exacto que se debe buscar.
 
-En el ejemplo siguiente se crea una tabla que expone valores JSON mediante el uso de dos columnas calculadas. El ejemplo crea un índice NONCLUSTERED en uno de los valores JSON y un índice HASH en el otro.
+En el ejemplo siguiente se crea una tabla que expone valores JSON mediante el uso de dos columnas calculadas. En el ejemplo, se crea un índice NONCLUSTERED en uno de los valores JSON y un índice HASH en el otro.
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;
@@ -136,9 +136,9 @@ ALTER TABLE Product
 ```
 
 ## <a name="compile"></a> Compilación nativa de consultas JSON
-Si los procedimientos, funciones y desencadenadores contienen consultas que usan las funciones JSON integradas, la compilación nativa aumenta el rendimiento de estas consultas y disminuye los ciclos de CPU que se requieren para ejecutarlos.
+Si los procedimientos, las funciones y los desencadenadores contienen consultas que usan las funciones JSON integradas, la compilación nativa aumenta el rendimiento de estas consultas y disminuye los ciclos de CPU que se requieren para ejecutarlos.
 
-En el ejemplo siguiente se muestra un procedimiento compilado de forma nativa que usa varias funciones JSON: **JSON_VALUE**, **OPENJSON** y **JSON_MODIFY**.
+En el ejemplo siguiente, se muestra un procedimiento compilado de forma nativa que usa varias funciones JSON: **JSON_VALUE**, **OPENJSON** y **JSON_MODIFY**.
 
 ```sql
 CREATE PROCEDURE xtp.ProductList(@ProductIds nvarchar(100))
@@ -165,6 +165,6 @@ AS BEGIN
 END
 ```
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Obtener más información sobre la compatibilidad integrada de JSON en SQL Server  
-Para una gran cantidad de soluciones específicas, casos de uso y recomendaciones, consulte el [entradas de blog sobre la compatibilidad integrada de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) en SQL Server y en la base de datos de SQL de Azure mediante el Administrador de programas de Microsoft Jovan Popovic.
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Más información sobre la compatibilidad integrada de JSON en SQL Server  
+Para obtener una gran cantidad de soluciones específicas, casos de uso y recomendaciones, consulte las [entradas de blog sobre la compatibilidad integrada de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) en SQL Server y en Azure SQL Database ofrecidas por el director de programas de Microsoft Jovan Popovic.
 

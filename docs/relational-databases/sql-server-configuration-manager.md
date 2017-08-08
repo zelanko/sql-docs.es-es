@@ -30,7 +30,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
 ms.openlocfilehash: 8c9ab15a35c892a31b882797271629a5ec9ef1a0
 ms.contentlocale: es-es
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-configuration-manager"></a>Administrador de configuración de SQL Server

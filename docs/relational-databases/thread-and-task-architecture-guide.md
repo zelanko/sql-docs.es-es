@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
 ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="thread-and-task-architecture-guide"></a>guía de arquitectura de subprocesos y tareas
@@ -93,14 +93,14 @@ El crecimiento automático no es un método fidedigno para aumentar el tamaño d
 
 El rendimiento de las operaciones de índice como crear o volver a generar índices puede mejorarse en los equipos con muchas CPU estableciendo temporalmente el modelo de recuperación de la base de datos en el modelo de recuperación optimizado para cargas masivas de registros o en el modelo de recuperación simple. Estas operaciones de índice pueden generar actividad de registro significativa, y la contención del registro puede afectar a la elección del mejor grado de paralelismo (DOP) realizada por SQL Server.
 
-Además, considere la posibilidad de ajustar la **grado máximo de paralelismo (MAXDOP)** opción de configuración del servidor para estas operaciones. Las directrices siguientes se basan en pruebas internas y constituyen recomendaciones generales. Debe probar varios valores distintos para MAXDOP con objeto de determinar el valor óptimo para su entorno.
+Además, considere la posibilidad de ajustar la opción de configuración del servidor **Grado máximo de paralelismo (MAXDOP)** para estas operaciones. Las directrices siguientes se basan en pruebas internas y constituyen recomendaciones generales. Debe probar varios valores distintos para MAXDOP con objeto de determinar el valor óptimo para su entorno.
 
 * Para el modelo de recuperación completa, limite el valor de la opción Grado máximo de paralelismo a ocho o menos.   
 * Para el modelo para cargas masivas de registros o el modelo de recuperación simple, se debe tener en cuenta la posibilidad de establecer la opción Grado máximo de paralelismo en un valor superior a ocho.   
 * Para los servidores con NUMA configurado, el grado máximo de paralelismo no debería superar el número de CPU asignadas a cada nodo NUMA. Esto se debe a que es más probable que la consulta utilice memoria local desde 1 nodo NUMA, lo que puede mejorar el tiempo de acceso a la memoria.  
-* Para servidores que tienen el hyperthreading habilitado y se fabricar en 2009 o una versión anterior (antes de que se ha mejorado la característica hyper-threading), el valor MAXDOP no debería superar el número de procesadores físicos, en lugar de procesadores lógicos.
+* Para los servidores que tienen habilitada la tecnología Hyper-Threading y se fabricaron en 2009 o antes (antes de que se mejorara la característica Hyper-Threading), el valor MAXDOP no debería superar el número de procesadores físicos, en vez de procesadores lógicos.
 
-Para obtener más información acerca de la opción max degree of parallelism, consulte [configurar la max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+Para obtener más información sobre la opción de grado máximo de paralelismo, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 ### <a name="setting-the-maximum-number-of-worker-threads"></a>Configurar el número máximo de subprocesos de trabajo
 

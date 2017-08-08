@@ -17,11 +17,11 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: c96f36b9f59f5cd091dfa3e61be9e1cf7e744f3d
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: c2d05cd846bc2c591f9628f550fcd947a47e8758
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="use-openjson-with-an-explicit-schema-sql-server"></a>Uso de OPENJSON con un esquema explícito (SQL Server)
@@ -90,8 +90,8 @@ DECLARE @json NVARCHAR(MAX) = '{
         dateOfBirth datetime2, spouse nvarchar(50))  
 ```  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Obtener más información sobre la compatibilidad integrada de JSON en SQL Server  
-Para una gran cantidad de soluciones específicas, casos de uso y recomendaciones, consulte el [entradas de blog sobre la compatibilidad integrada de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) en SQL Server y en la base de datos de SQL de Azure mediante el Administrador de programas de Microsoft Jovan Popovic.
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Más información sobre la compatibilidad integrada de JSON en SQL Server  
+Para obtener una gran cantidad de soluciones específicas, casos de uso y recomendaciones, consulte las [entradas de blog sobre la compatibilidad integrada de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) en SQL Server y en Azure SQL Database ofrecidas por el director de programas de Microsoft Jovan Popovic.
   
 ## <a name="see-also"></a>Vea también  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  

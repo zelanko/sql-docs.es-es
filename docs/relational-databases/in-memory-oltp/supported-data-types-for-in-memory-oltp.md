@@ -14,11 +14,11 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
 ms.openlocfilehash: ee8d16f8999f2e3e39d90086993c9a46a30ac21a
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>Tipos de datos admitidos para OLTP en memoria
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/23/2017
   
 -   Tablas con optimización para memoria  
   
--   Módulos T-SQL compilados de forma nativa  
+-   Módulos T-SQL compilados de manera nativa  
   
 ## <a name="unsupported-data-types"></a>Tipos de datos no compatibles  
  No se admiten los tipos de datos siguientes:  
@@ -91,7 +91,7 @@ SELECT
 ## <a name="see-also"></a>Vea también  
  [Compatibilidad de Transact-SQL con OLTP en memoria](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
  [Implementar SQL_VARIANT en una tabla con optimización para memoria](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
- [Tamaño de tabla y fila de tabla con optimización para memoria](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
+ [Tamaño de tabla y fila de tabla optimizada para memoria](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
 

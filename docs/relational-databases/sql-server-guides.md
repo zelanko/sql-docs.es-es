@@ -17,11 +17,11 @@ caps.latest.revision: 6
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
 ms.openlocfilehash: f854bc49f1543782f0e92067635c77cf53d0cdd2
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-guides"></a>Guías de SQL Server

@@ -17,16 +17,16 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
 ms.openlocfilehash: 7eb8ea4b29caaf7f1600bbd31db4f669b86476c1
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Devolver datos de un procedimiento almacenado
 
- > Para el contenido relacionado con las versiones anteriores de SQL Server, vea [devolver datos de un procedimiento almacenado](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
+ > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Devolver datos de un procedimiento almacenado](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
 
   Existen dos formas de devolver conjuntos de resultados o datos de un procedimiento a un programa de llamada: parámetros de salida y códigos de retorno. En este tema se proporciona información sobre ambos enfoques.  
   

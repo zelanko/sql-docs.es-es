@@ -24,7 +24,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
 ms.openlocfilehash: e65ea926f3a2d2fb3c30c511a1fbba6150de7b42
 ms.contentlocale: es-es
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>Solución de problemas de PolyBase
@@ -52,7 +52,7 @@ ms.lasthandoff: 07/20/2017
 |[sys.dm_exec_dms_services &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-services-transact-sql.md)|[sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |[sys.dm_exec_external_operations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-operations-transact-sql.md)|[sys.dm_exec_external_work &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)|  
   
-  Las consultas de PolyBase se dividen en una serie de pasos en sys.dm_exec_distributed_request_steps. La tabla siguiente proporciona una asignación desde el nombre del paso a la DMV asociada.
+  Las consultas de PolyBase se dividen en una serie de pasos en sys.dm_exec_distributed_request_steps. En la tabla siguiente, se proporciona una asignación desde el nombre del paso a la DMV asociada.
   
  |Paso de PolyBase|DMV asociada|  
  |-|-| 
@@ -224,7 +224,7 @@ ms.lasthandoff: 07/20/2017
  ## <a name="known-limitations"></a>Restricciones conocidas
  
  PolyBase presenta las siguientes limitaciones: 
- - El tamaño máximo posible de fila, incluida la longitud total de las columnas de longitud variable, no puede superar los 1 MB. 
+ - El tamaño máximo posible de fila, incluida la longitud total de las columnas de longitud variable, no puede superar 1 MB. 
  - PolyBase no admite los tipos de datos de Hive 0.12+ (es decir, Char(), VarChar())   
  - Al exportar datos en un formato de archivo ORC desde SQL Server o Azure SQL Data Warehouse, las columnas pesadas de texto pueden limitarse a tan solo 50 columnas debido a errores de memoria insuficiente de Java. Para solucionar este problema, exporte solo un subconjunto de las columnas.
 - [PolyBase no se instala cuando se agrega un nodo a un clúster de conmutación por error de SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)

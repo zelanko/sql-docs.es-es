@@ -14,11 +14,11 @@ caps.latest.revision: 10
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: cf69aa2c57e86aab11974b5874039ae7f72b9917
 ms.openlocfilehash: 3384d962c3765bf4feb00f957ad56a668f8d92e4
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>Resumen de características de PolyBase con versiones

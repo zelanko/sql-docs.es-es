@@ -22,17 +22,13 @@ ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: cb839fc8929f20c0ac7ca72dc90f364382bc33d0
 ms.contentlocale: es-es
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="get-started-with-full-text-search" class="xliff"></a>
-
-# Introducción a la búsqueda de texto completo
+# <a name="get-started-with-full-text-search"></a>Introducción a la búsqueda de texto completo
 Las bases de datos de SQL Server están habilitadas para texto completo de manera predeterminada. Pero para poder ejecutar consultas de texto completo debe crear primero un catálogo de texto completo y un índice de texto completo en las vistas indexadas o tablas en las que quiere realizar una búsqueda.
 
-<a id="set-up-full-text-search-in-two-steps" class="xliff"></a>
-
-## Configurar una búsqueda de texto completo en dos pasos
+## <a name="set-up-full-text-search-in-two-steps"></a>Configurar una búsqueda de texto completo en dos pasos
 Existen dos pasos básicos para configurar una búsqueda de texto completo:  
 1.  Crear un catálogo de texto completo  
 2.  Cree un índice de texto completo en las tablas o en la vista indizada en la que desea realizar una búsqueda. 
@@ -42,15 +38,11 @@ Cada índice de texto completo debe pertenecer a un catálogo de texto completo.
 > [!NOTE]
 > En estos pasos se presupone que se han instalado los componentes opcionales de búsqueda de texto completo al instalar SQL Server. Si no es así, tiene que ejecutar de nuevo el programa de instalación de SQL Server para agregarlos.  
 
-<a id="set-up-full-text-search-with-a-wizard" class="xliff"></a>
-
-## Configurar una búsqueda de texto completo con un asistente 
+## <a name="set-up-full-text-search-with-a-wizard"></a>Configurar una búsqueda de texto completo con un asistente 
  
 Para configurar una búsqueda de texto completo con un asistente, vea [Usar el Asistente para indización de texto completo](../../relational-databases/search/use-the-full-text-indexing-wizard.md).
 
-<a id="set-up-full-text-search-with-transact-sql" class="xliff"></a>
-
-## Configurar una búsqueda de texto completo con Transact-SQL 
+## <a name="set-up-full-text-search-with-transact-sql"></a>Configurar una búsqueda de texto completo con Transact-SQL 
  En el siguiente ejemplo, compuesto por dos partes, se crea un catálogo de texto completo denominado `AdvWksDocFTCat` en la base de datos de ejemplo AdventureWorks y luego se crea un índice de texto completo en la tabla `Document` de la base de datos de ejemplo. Esta instrucción creará el catálogo de texto completo en el directorio predeterminado especificado durante la instalación de SQL Server. La carpeta denominada `AdvWksDocFTCat` se encuentra en el directorio predeterminado.  
   
 1.  Para crear un catálogo de texto completo denominado `AdvWksDocFTCat`, en el ejemplo se usa una instrucción [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md) :  
@@ -89,19 +81,13 @@ Para configurar una búsqueda de texto completo con un asistente, vea [Usar el A
 
 ##  <a name="options"></a> Elegir opciones para un índice de texto completo 
   
-<a id="choose-a-language" class="xliff"></a>
-
-### Elegir un idioma  
+### <a name="choose-a-language"></a>Elegir un idioma  
  Para información sobre cómo elegir el idioma de la columna, consulte [Elegir un idioma al crear un índice de texto completo](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
   
-<a id="choose-a-filegroup" class="xliff"></a>
-
-### Elegir un grupo de archivos  
+### <a name="choose-a-filegroup"></a>Elegir un grupo de archivos  
  El proceso de creación de un índice de texto completo realiza un uso bastante intensivo de E/S. En resumen, consiste en leer datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y luego propagar los datos filtrados a todo el índice de texto completo. Como práctica recomendada, busque en el grupo de archivos de bases de datos el índice de texto completo que mejor maximice el rendimiento de E/S o busque los índices de texto completo en un grupo de archivos diferente de otro volumen.
   
-<a id="choose-a-full-text-catalog" class="xliff"></a>
-
-### Elegir un catálogo de texto completo   
+### <a name="choose-a-full-text-catalog"></a>Elegir un catálogo de texto completo   
  
  Recomendamos asociar las tablas que tienen las mismas características de actualización (como un número reducido de cambios frente a un número elevado de cambios, o tablas que suelen cambiar durante un período determinado del día) bajo el mismo catálogo de texto completo. Al configurar la programación del rellenado de catálogos de texto completo, los índices de texto completo permanecen sincronizados con las tablas sin que ello afecte negativamente al uso de los recursos del servidor de bases de datos en momentos en los que la actividad de la base de datos es más intensa.  
   
@@ -111,14 +97,10 @@ Para configurar una búsqueda de texto completo con un asistente, vea [Usar el A
   
 -   Tenga en cuenta la cantidad de cambios que se producen en las tablas con índices de texto completo, así como el número total de filas. Si el número total de filas que van a cambiar, junto con el número de filas existentes en la tabla durante el último rellenado de texto, asciende a varios millones, asigne a la tabla su propio catálogo de texto completo.  
 
-<a id="associate-a-unique-index" class="xliff"></a>
-
-### Asociar un índice único
+### <a name="associate-a-unique-index"></a>Asociar un índice único
 Seleccione siempre el índice exclusivo más pequeño disponible para la clave exclusiva de texto completo. (Un índice de tipo entero de cuatro bytes es el más apropiado.) Esto reduce considerablemente los recursos necesarios para el servicio [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search en el sistema de archivos. Si la clave principal es grande (más de 100 bytes), considere la posibilidad de elegir otro índice exclusivo en la tabla (o de crear otro índice exclusivo) como clave exclusiva de texto completo. Si, por el contrario, el tamaño de la clave exclusiva de texto completo supera el tamaño máximo permitido (900 bytes), no se podrá realizar un rellenado de texto.  
  
-<a id="associate-a-stoplist" class="xliff"></a>
-
-### Asociar una lista de palabras irrelevantes   
+### <a name="associate-a-stoplist"></a>Asociar una lista de palabras irrelevantes   
   Una *lista de palabras irrelevantes* es una lista de palabras sin importancia. Cada índice de texto completo tiene asociada una lista de palabras irrelevantes, y las palabras de dicha lista se aplican a las consultas de texto completo que se realizan en ese índice. De forma predeterminada, a cada índice de texto completo nuevo se asocia la lista de palabras irrelevantes del sistema. También puede crear y usar su propia lista de palabras irrelevantes.   
   
  Por ejemplo, la siguiente instrucción [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)] crea una lista de palabras irrelevantes de texto completo denominada myStoplist copiando la lista de palabras irrelevantes del sistema:  
@@ -137,17 +119,13 @@ GO
 ```  
 Para obtener más información, vea [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).
 
-<a id="update-a-full-text-index" class="xliff"></a>
-
-## Actualizar un índice de texto completo  
+## <a name="update-a-full-text-index"></a>Actualizar un índice de texto completo  
  Al igual que los índices normales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los índices de texto completo se pueden actualizar automáticamente cuando se modifican los datos de las tablas asociadas. Éste es el comportamiento predeterminado. Como alternativa, puede mantener actualizados los índices de texto completo de forma manual o durante los intervalos programados especificados. Rellenar un índice de texto completo puede consumir mucho tiempo y muchos recursos. Por consiguiente, la actualización del índice se suele realizar como un proceso asincrónico que se ejecuta en segundo plano para mantenerlo al día después de haber llevado a cabo modificaciones en la tabla base. 
  
 Actualizar un índice de texto completo inmediatamente después de cada cambio realizado en la tabla también consume muchos recursos. Por tanto, si el porcentaje de actualizaciones, inserciones y eliminaciones es muy elevado, es posible que experimente una disminución en el rendimiento de las consultas. Si se da esta situación, plantéese la posibilidad de programar las actualizaciones provocadas por el seguimiento de cambios manual; es decir, en lugar de disputarse los recursos con las consultas, lleve a cabo una actualización de vez en cuando.  
   
 Para obtener más información, vea [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md) (Rellenar índices de texto completo). 
 
-<a id="next-steps" class="xliff"></a>
-
-## Pasos siguientes
+## <a name="next-steps"></a>Pasos siguientes
 Después de configurar la búsqueda de texto completo de SQL Server, está listo para ejecutar consultas de texto completo. Para obtener más información, vea [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md) (Consultar con búsqueda de texto completo).
 

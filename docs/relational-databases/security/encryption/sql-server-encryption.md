@@ -19,11 +19,11 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
 ms.openlocfilehash: c7aee6098b6cf8eca74dd3f34b9ed9a836bb9d20
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-encryption"></a>Cifrado de SQL Server
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/23/2017
 > [!NOTE]  
 >  Encontrará la información más reciente sobre la seguridad de nivel de transporte (TSL1.2) en [Soporte de TLS 1.2 para Microsoft SQL Server](https://support.microsoft.com/kb/3135244).  
 
-Puede utilizar el cifrado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para las conexiones, los datos y los procedimientos almacenados. Los temas siguientes contienen más información acerca del cifrado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+Puede utilizar el cifrado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para las conexiones, los datos y los procedimientos almacenados. En la tabla siguiente, se incluye más información sobre el cifrado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
 
  [Jerarquía de cifrado](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
  Información acerca de la jerarquía de cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -79,7 +79,7 @@ Puede utilizar el cifrado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversio
  Información sobre cómo utilizar un certificado para cifrar datos.  
   
 ## <a name="external-resources"></a>Recursos externos  
- [Microsoft TechNet: SQL Server TechCenter: seguridad de SQL Server 2012 y protección](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
+ [Microsoft TechNet: SQL Server TechCenter: Seguridad y protección de SQL Server 2012](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
  Información actual sobre la seguridad en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vea también  

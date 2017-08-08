@@ -21,19 +21,19 @@ caps.latest.revision: 50
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0c1e5939ddf08692998f26ccbb2c2fa699342c55
 ms.openlocfilehash: 4ff24dabc28ae25ec38a546ed8f119979eef4e60
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="sqlcmd---use-the-utility"></a>Sqlcmd: Use la utilidad
+# <a name="sqlcmd---use-the-utility"></a>sqlcmd: usar la utilidad
   La utilidad **sqlcmd** es una herramienta de línea de comandos para la ejecución ad hoc e interactiva de instrucciones y scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] y para la automatización de tareas de creación de scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para usar **sqlcmd** interactivamente o para compilar archivos de script que se ejecutan mediante **sqlcmd**, los usuarios deben estar familiarizados con [!INCLUDE[tsql](../../includes/tsql-md.md)]. La utilidad **sqlcmd** se usa normalmente de las formas siguientes:  
   
--   Los usuarios escribir [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones de forma similar a trabajar en el símbolo del sistema. Los resultados se muestran en el símbolo del sistema. Para abrir una ventana de símbolo del sistema, escriba "cmd" en el cuadro de búsqueda de Windows y haga clic en **símbolo** para abrir. En el símbolo del sistema, escriba **sqlcmd** seguido de una lista de opciones que quiera. Para obtener una lista completa de las opciones admitidas por **sqlcmd**, vea [sqlcmd (utilidad)](../../tools/sqlcmd-utility.md).  
+-   Los usuarios escriben instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de una forma similar al modo en que trabajan con el símbolo del sistema. Los resultados se muestran en el símbolo del sistema. Para abrir una ventana del símbolo del sistema, escriba "cmd" en el cuadro de búsqueda de Windows y haga clic en **Símbolo del sistema** para abrirla. En el símbolo del sistema, escriba **sqlcmd** seguido de una lista de opciones que quiera. Para obtener una lista completa de las opciones admitidas por **sqlcmd**, vea [sqlcmd (utilidad)](../../tools/sqlcmd-utility.md).  
   
--   Los usuarios envían un trabajo **sqlcmd** especificando la ejecución de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] individual o dirigiendo la utilidad hacia un archivo de texto que contiene las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se van a ejecutar. El resultado se dirige normalmente hacia un archivo de texto, pero también puede mostrarse en el símbolo del sistema.  
+-   Los usuarios envían un trabajo **sqlcmd** especificando la ejecución de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] individual o dirigiendo la utilidad hacia un archivo de texto que contiene las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se van a ejecutar. El resultado se dirige normalmente hacia un archivo de texto, aunque también se puede mostrar en el símbolo del sistema.  
   
 -   [Modo SQLCMD](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md) en el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
@@ -41,15 +41,15 @@ ms.lasthandoff: 06/23/2017
   
 -   Trabajos CmdExec del Agente SQL Server.  
   
-## <a name="typically-used-sqlcmd-options"></a>Normalmente utiliza opciones de sqlcmd  
+## <a name="typically-used-sqlcmd-options"></a>Opciones de sqlcmd que se suelen usar  
   
--   Opción de servidor (**-S**) identifica la instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que **sqlcmd** se conecta.  
+-   La opción del servidor (**-S**) que identifica la instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que se conecta **sqlcmd**.  
   
--   Opciones de autenticación (**-E**, **- U**, y **-P**) Especifique las credenciales que **sqlcmd** utiliza para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Nota:** la opción **-E** es el valor predeterminado y no deben especificarse.  
+-   Las opciones de autenticación (**-E**, **-U** y **-P**) que especifican las credenciales que usa **sqlcmd** para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **NOTA:** La opción **-E** es la predeterminada, por lo que no es necesario especificarla.  
   
--   Opciones de entrada (**-Q**, **- q**, y **-i**) identifican la ubicación de la entrada **sqlcmd**.  
+-   Las opciones de entrada (**-Q**, **-q** e **-i**) que identifican la ubicación de la entrada a **sqlcmd**.  
   
--   La opción de salida (**-o**) especifica el archivo en el que **sqlcmd** es poner su salida.  
+-   La opción de salida (**-o**) que especifica el archivo en el que se guardará la salida de **sqlcmd**.  
   
 ## <a name="connect-to-the-sqlcmd-utility"></a>Conectarse a la utilidad sqlcmd  
   
@@ -203,7 +203,7 @@ ms.lasthandoff: 06/23/2017
   
  Las líneas posteriores a la línea `3> GO` son la salida de una instrucción `SELECT` . Para generar una salida, `sqlcmd` restablece el símbolo de sistema `sqlcmd` y muestra `1>`. Después de escribir `EXIT` en la línea `1>`, la ventana del símbolo del sistema muestra la misma línea que se mostró cuando se la abrió por primera vez. Esto indica que `sqlcmd` ha finalizado la sesión. Ahora ya puede cerrar la ventana del símbolo del sistema escribiendo otro comando `EXIT` .  
   
-## <a name="running-transact-sql-script-files-using-sqlcmd"></a>Ejecutar archivos de script de Transact-SQL mediante sqlcmd  
+## <a name="running-transact-sql-script-files-using-sqlcmd"></a>Ejecutar archivos de script Transact-SQL mediante sqlcmd  
  Puede usar **sqlcmd** para ejecutar los archivos de script de base de datos. Los archivos de script son archivos de texto que contienen una combinación de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] , comandos de **sqlcmd** y variables de scripting. Para obtener más información sobre cómo incluir variables en scripts, vea [Usar sqlcmd con variables de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). **sqlcmd** funciona con las instrucciones, los comandos y las variables de scripting en un archivo de script de una forma parecida a como opera con instrucciones y comandos indicados de forma interactiva. La diferencia principal es que **sqlcmd** lee el archivo de entrada sin pausas, en lugar de esperar a que un usuario indique las instrucciones, los comandos y las variables de scripting.  
   
  Hay distintas maneras de crear archivos de script de base de datos:  
@@ -557,7 +557,7 @@ SQLCMD –E –N –C
   
  Si el proveedor especifica `ForceProtocolEncryption = True` se habilita el cifrado aun cuando `Encrypt=No` en la cadena de conexión.  
   
-## <a name="more-about-sqlcmd"></a>Más información acerca de sqlcmd  
+## <a name="more-about-sqlcmd"></a>Más información sobre sqlcmd  
  [sqlcmd (utilidad)](../../tools/sqlcmd-utility.md)   
  [Usar sqlcmd con variables de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
  [Modificar scripts SQLCMD con el Editor de consultas](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   

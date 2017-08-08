@@ -14,11 +14,11 @@ caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 66f9964d94ebcbab021c9dcf69ae50663196a597
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construcciones Transact-SQL no admitidas por OLTP en memoria
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/23/2017
 |----------|----------|----------------|  
 |Característica|ON|Las tablas con optimización para memoria no se pueden colocar en un grupo de archivos ni en un esquema de partición. Quite la cláusula ON de la instrucción **CREATE TABLE** .<br /><br /> Todas las tablas con optimización para memoria se asignan al grupo de archivos con optimización para memoria.|  
 |Tipo de datos|*Nombre del tipo de datos*|No se admite el tipo de datos indicado. Reemplace el tipo por uno de los tipos de datos admitidos. Para obtener más información, vea [Tipos de datos admitidos para OLTP en memoria](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).|  
-|Característica|Columnas calculadas|Las tablas con optimización para memoria no admiten columnas calculadas. Quite las columnas calculadas de la instrucción **CREATE TABLE** .<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se admiten columnas calculadas en tablas e índices optimizados para memoria.|  
+|Característica|Columnas calculadas|Las tablas con optimización para memoria no admiten columnas calculadas. Quite las columnas calculadas de la instrucción **CREATE TABLE** .<br/><br/>**Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se admiten columnas calculadas en tablas e índices optimizados para memoria.|  
 |Característica|Replicación|La replicación no es compatible con las tablas con optimización para memoria.|  
 |Característica|FILESTREAM|Las columnas de las tablas con optimización para memoria no admiten el almacenamiento FILESTREAM. Quite la palabra clave **FILESTREAM** de la definición de columna.|  
 |Característica|SPARSE|Las columnas de las tablas con optimización para memoria no se pueden definir como columnas SPARSE. Quite la palabra clave **SPARSE** de la definición de columna.|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/23/2017
 |Operación|Actualización de columnas de clave principal|Las columnas de clave principal de las tablas con optimización para memoria y los tipos de tablas no se pueden actualizar. Si es necesario actualizar la clave principal, elimine la fila antigua e inserte la nueva fila con la clave principal actualizada.|  
 |Operación|CREATE INDEX|Los índices de las tablas con optimización para memoria deben especificarse insertados con la instrucción **CREATE TABLE** o con la instrucción **ALTER TABLE** .|  
 |Operación|CREATE FULLTEXT INDEX|Las tablas con optimización para memoria no admiten índices de texto completo.|  
-|Operación|Cambios en los esquemas|Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no admiten cambios en los esquemas, por ejemplo, **sp_rename**.<br /><br /> El intento de realizar algunos cambios de esquema generará el error 12320. No se admiten las operaciones que requieren un cambio en la versión de esquema, como cambiar el nombre, con tablas con optimización para memoria.<br /><br /> Se permiten algunos cambios de esquema que usen ALTER TABLE y ALTER PROCEDURE.<br/><br/>**Se aplica a:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].<br/>A partir de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], sp_rename se admite.| 
+|Operación|Cambios en los esquemas|Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no admiten cambios en los esquemas, por ejemplo, **sp_rename**.<br /><br /> El intento de realizar algunos cambios de esquema generará el error 12320. No se admiten las operaciones que requieren un cambio en la versión de esquema, como cambiar el nombre, con tablas con optimización para memoria.<br /><br /> Se permiten algunos cambios de esquema que usen ALTER TABLE y ALTER PROCEDURE.<br/><br/>**Se aplica a:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].<br/>A partir de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], se admite sp_rename.| 
 |Operación|TRUNCATE TABLE|Las tablas con optimización para memoria no admiten la operación TRUNCATE. Para quitar todas las filas de una tabla, elimínelas con **DELETE FROM***table* , o bien quite y vuelva a crear la tabla.|  
 |Operación|ALTER AUTHORIZATION|No es posible cambiar el propietario de una tabla con optimización para memoria o de un procedimiento almacenado compilado de forma nativa existente. Para cambiar el propietario, quite y vuelva a crear la tabla o el procedimiento.|  
 |Operación|ALTER SCHEMA|Transferencia de un elemento protegible entre esquemas.|  
@@ -141,7 +141,7 @@ ms.lasthandoff: 06/23/2017
 |Operador|OFFSET|No se admite este operador. Quite **OFFSET** del procedimiento almacenado compilado de forma nativa.|  
 |Operador|INTERSECT|No se admite este operador. Quite **INTERSECT** del procedimiento almacenado compilado de forma nativa. En algunos casos se puede usar INNER JOIN para obtener el mismo resultado.|  
 |Operador|EXCEPT|No se admite este operador. Quite **EXCEPT** del procedimiento almacenado compilado de forma nativa.|  
-|Operador|APPLY|No se admite este operador. Quite **APPLY** del procedimiento almacenado compilado de forma nativa.<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, el operador APPLY se admite en los módulos compilados de forma nativa.|  
+|Operador|APPLY|No se admite este operador. Quite **APPLY** del procedimiento almacenado compilado de forma nativa.<br/><br/>**Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, el operador APPLY se admite en los módulos compilados de forma nativa.|  
 |Operador|PIVOT|No se admite este operador. Quite **PIVOT** del procedimiento almacenado compilado de forma nativa.|  
 |Operador|UNPIVOT|No se admite este operador. Quite **UNPIVOT** del procedimiento almacenado compilado de forma nativa.|  
 |Operador|CONTAINS|No se admite este operador. Quite **CONTAINS** del procedimiento almacenado compilado de forma nativa.|  

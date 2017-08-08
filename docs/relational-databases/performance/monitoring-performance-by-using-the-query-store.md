@@ -1,5 +1,5 @@
 ---
-title: "Supervisión del rendimiento mediante el almacén de consultas | Microsoft Docs"
+title: "Supervisión del rendimiento mediante el Almacén de consultas | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 11/28/2016
@@ -18,16 +18,14 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
 ms.openlocfilehash: 53e0f5d479d7fc3cdeae2c6ce121734b6fc16f21
 ms.contentlocale: es-es
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 08/03/2017
 
 ---
-<a id="monitoring-performance-by-using-the-query-store" class="xliff"></a>
-
-# Supervisión del rendimiento mediante el almacén de consultas
+# <a name="monitoring-performance-by-using-the-query-store"></a>Supervisión del rendimiento mediante el almacén de consultas
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   La característica del Almacén de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece datos detallados sobre el rendimiento y la elección del plan de consultas. Esta característica simplifica la solución de problemas de rendimiento al permitirle encontrar rápidamente las diferencias de rendimiento provocadas por cambios en los planes de consulta. El Almacén de consultas captura automáticamente un historial de consultas, planes y estadísticas en tiempo de ejecución y las conserva para su revisión. Además, separa los datos por ventanas de tiempo, lo que permite ver patrones de uso de la base de datos y comprender cuándo se produjeron cambios del plan de consultas en el servidor. El almacén de consultas se puede configurar con la opción [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . 
@@ -37,9 +35,7 @@ ms.lasthandoff: 06/28/2017
 ##  <a name="Enabling"></a> Habilitar el Almacén de consultas  
  El Almacén de consultas no está activo para nuevas bases de datos de manera predeterminada.  
   
-<a id="use-the-query-store-page-in-management-studio" class="xliff"></a>
-
-#### Uso de la página Almacén de consultas en Management Studio  
+#### <a name="use-the-query-store-page-in-management-studio"></a>Uso de la página Almacén de consultas en Management Studio  
   
 1.  En el Explorador de objetos, haga clic con el botón derecho en una base de datos y, luego, haga clic en **Propiedades**.  
   
@@ -50,9 +46,7 @@ ms.lasthandoff: 06/28/2017
   
 3.  En el cuadro **Modo de operación (solicitado)** seleccione **Activado**.  
   
-<a id="use-transact-sql-statements" class="xliff"></a>
-
-#### Uso de instrucciones Transact-SQL  
+#### <a name="use-transact-sql-statements"></a>Uso de instrucciones Transact-SQL  
   
 1.  Use la instrucción **ALTER DATABASE** para habilitar el almacén de consultas. Por ejemplo:  
   
@@ -158,7 +152,7 @@ Tiene disponibles las siguientes opciones para configurar los parámetros del al
  Entero que representa el número máximo de planes que se tienen para cada consulta. El valor predeterminado es 200.  
  
  `WAIT_STATS_CAPTURE_MODE`  
- Controla si el almacén de consultas captura espera información estadística. Puede ser OFF = 0 o en = 1 (valor predeterminado)  
+ Controla si el Almacén de consultas captura información de estadísticas de espera. Puede ser OFF = 0 u ON = 1 (valor predeterminado)  
  
  Consulte la vista **sys.database_query_store_options** para determinar las opciones actuales del almacén de consultas. Para obtener más información sobre los valores, vea [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).  
   
@@ -171,9 +165,7 @@ Tiene disponibles las siguientes opciones para configurar los parámetros del al
 |-|-|  
 |[sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)|| 
   
-<a id="query-store-catalog-views" class="xliff"></a>
-
-### Vistas de catálogo del almacén de consultas  
+### <a name="query-store-catalog-views"></a>Vistas de catálogo del almacén de consultas  
  Las vistas de catálogo presentan información sobre el Almacén de consultas.  
 
 ||| 
@@ -181,11 +173,9 @@ Tiene disponibles las siguientes opciones para configurar los parámetros del al
 |[sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)|[sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)|  
 |[sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)|[sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)|  
 |[sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|[sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)|  
-|[Sys.query_store_wait_stats &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
+|[sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
   
-<a id="query-store-stored-procedures" class="xliff"></a>
-
-### Procedimientos almacenados del almacén de consultas  
+### <a name="query-store-stored-procedures"></a>Procedimientos almacenados del almacén de consultas  
  Los procedimientos almacenados configuran el Almacén de consultas.  
 
 ||| 
@@ -460,7 +450,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
  Si quiere ver el rendimiento de todas las regresiones (no solo de aquellas relacionadas con el cambio de elección de plan), solo tiene que eliminar la condición `AND p1.plan_id <> p2.plan_id` de la consulta anterior.  
 
  **¿Consultas que más esperan?**
- Esta consulta devolverá las diez principales consultas que más esperan. 
+Esta consulta devolverá las diez principales consultas que más esperan. 
  
  ```tsql 
   SELECT TOP 10
@@ -579,9 +569,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Procedimiento recomendado con el Almacén de consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Uso del almacén de consultas con OLTP en memoria](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [Escenarios de uso del Almacén de consultas](../../relational-databases/performance/query-store-usage-scenarios.md)   

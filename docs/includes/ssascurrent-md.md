@@ -1,1 +1,1 @@
- SQL Server de 2017 Analysis Services (SSAS) 
+ SQL Server 2017 Analysis Services (SSAS) 

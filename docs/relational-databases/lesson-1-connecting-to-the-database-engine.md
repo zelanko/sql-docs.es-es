@@ -14,17 +14,17 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
 ms.openlocfilehash: 87f75b288cdf7da9097350a117cbd2bf94b69758
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>Lección 1: conectarse al motor de base de datos
+# <a name="lesson-1-connecting-to-the-database-engine"></a>Lección 1: Conexión al motor de base de datos
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
- > Para el contenido relacionado con las versiones anteriores de SQL Server, vea [lección 1: conectar con el motor de base de datos](https://msdn.microsoft.com/en-US/library/ms345332(SQL.120).aspx).
+ > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Lección 1: Conexión al motor de base de datos](https://msdn.microsoft.com/en-US/library/ms345332(SQL.120).aspx).
 
 Al instalar [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], las herramientas instaladas dependen de la edición y de las opciones que seleccione al realizar la instalación. En esta lección se revisan las herramientas principales y se muestra cómo conectarse y realizar una función básica (autorizar a más usuarios).  
   
@@ -55,7 +55,7 @@ Las bases de datos de ejemplo y los ejemplos no están incluidos en [!INCLUDE[ss
   
 ##### <a name="to-start-sql-server-configuration-manager"></a>Para iniciar el Administrador de configuración de SQL Server  
   
-- En las versiones actuales de Windows, en la página de **inicio**, escriba **Administrador de configuración** y, después, haga clic en ***Administrador de configuración de SQL Server* versión**.   
+- En las versiones actuales de Windows, en la página de **Inicio** , escriba **Administrador de configuración**y luego haga clic en **Administrador de configuración de SQL Server *versión* Administrador de configuración**.   
 -   Si usa versiones anteriores de Windows, en el menú **Inicio** , seleccione **Todos los programas**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **Herramientas de configuración**y, después, haga clic en **Administrador de configuración de SQL Server**.  
   
 ## <a name="connect"></a>Conectarse a Management Studio  

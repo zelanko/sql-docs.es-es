@@ -19,18 +19,18 @@ ms.translationtype: HT
 ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
 ms.openlocfilehash: 4938dd27bf3f42cc85f22de99fef01adbad08ace
 ms.contentlocale: es-es
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-management-studio-ssms-for-sql-server"></a>Nuevos y actualizados recientemente: SQL Server Management Studio (SSMS) para SQL Server
 
 
 
-Casi todos los días, Microsoft actualiza algunos de los artículos existentes en su [Docs.Microsoft.com](http://docs.microsoft.com/) sitio Web de documentación. Este artículo muestra extractos de los artículos actualizados recientemente. También pueden aparecer vínculos a artículos nuevos.
+Casi todos los días, Microsoft actualiza algunos de los artículos existentes en su sitio web de documentación [Docs.Microsoft.com](http://docs.microsoft.com/). En este artículo se muestran los extractos de los artículos actualizados recientemente. También pueden aparecer vínculos a artículos nuevos.
 
-En este artículo es generado por un programa que se vuelve a ejecutar periódicamente. En ocasiones, un extracto puede aparecer con formato imperfecto, o como marcado del artículo de origen. Nunca las imágenes se muestran aquí.
+Este artículo se genera mediante un programa que se vuelve a ejecutar periódicamente. En ocasiones, un extracto puede aparecer con formato imperfecto o como recorte del artículo de origen. Aquí nunca se muestran las imágenes.
 
-Actualizaciones recientes se notifican para el siguiente intervalo de fechas y el asunto:
+Se informa de las actualizaciones recientes del siguiente intervalo de fechas y tema:
 
 
 
@@ -97,9 +97,9 @@ Los siguientes vínculos llevan a nuevos artículos que se han agregado reciente
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>Compact lista de artículos que se actualizó recientemente
+## <a name="compact-list-of-articles-updated-recently"></a>Lista compacta de artículos que se han actualizado recientemente
 
-Esta lista compacta proporciona vínculos a todos los artículos actualizados que aparecen en la sección de extractos.
+En esta lista compacta se proporcionan vínculos a todos los artículos actualizados que aparecen en la sección de extractos.
 
 
 
@@ -107,11 +107,11 @@ Esta lista compacta proporciona vínculos a todos los artículos actualizados qu
 
 ## <a name="updated-articles-with-excerpts"></a>Artículos actualizados con extractos
 
-Esta sección muestra los extractos de las actualizaciones que se recopilan de los artículos que han presentado recientemente una actualización a gran escala.
+En esta sección se muestran los extractos de las actualizaciones que se recopilan de los artículos que han presentado recientemente una gran actualización.
 
-Los extractos que se muestran aquí aparecen separados de su contexto semántica correcta. Además, en ocasiones, un extracto se separa de la sintaxis de markdown importante que rodea en el artículo real. Por lo tanto, estos extractos son para obtener instrucciones generales solo. Los extractos de sólo le permiten saber si sus intereses garantizan dedicar tiempo a haga clic en y visite el artículo real.
+Los extractos que se muestran aquí aparecen separados de su contexto semántico correcto. Además, en ocasiones, un extracto se separa de sintaxis de Markdown importante que rodea el artículo real. Por tanto, estos extractos son solo para obtener instrucciones generales. Los extractos solo le permiten saber si le interesa dedicar tiempo a hacer clic en el artículo real para visitarlo.
 
-Por estas y otras razones, no se copie el código de estos fragmentos y no toma como verdaderos exacta cualquier fragmento de texto. En su lugar, visite el artículo real.
+Por estas y otras razones, no copie código de estos fragmentos y no tome como verdad exacta ningún extracto de texto. En su lugar, visite el artículo real.
 
 
 
@@ -141,26 +141,26 @@ Disponible con carácter general | Número de compilación: 14.0.17119.0
 **Mejoras**
 
 
-- Generador de perfiles: Ayuda > aproximadamente ahora muestra el número de versión de lanzamiento (por ejemplo, 17.1)
-- Análisis de servicio a los usuarios puede actualizar las credenciales de sus orígenes de datos de 1200 los modelos de TM y versiones posteriores en el menú contextual en el origen de datos
-- SSIS integrados informes ahora mostrar registros de ejecución de escalado horizontal SSIS en CTP 2.1
-- Aplicación de administración de escalado horizontal SSIS
-  - Ver información básica sobre el patrón de escalabilidad horizontal.
-  - Agregar fácilmente un trabajo a la implementación de ampliación horizontal.
-  - Ver todos los trabajadores de la escala horizontal y la información básica acerca de ellos y puede también habilitar o deshabilitar ellos fácilmente.
+- Generador de perfiles: Ayuda > ahora muestra el número de versión de lanzamiento (por ejemplo, 17.1)
+- Los usuarios de Analysis Services pueden actualizar las credenciales de sus orígenes de datos de modelos TM 1200 y versiones posteriores desde el menú contextual del origen de datos.
+- Los informes integrados de SSIS ahora muestran registros de la ejecución de escalado horizontal en CTP 2.1.
+- Aplicación de administración de escalado horizontal de SSIS
+  - Vea información básica sobre el patrón de escalabilidad horizontal.
+  - Agregue fácilmente un trabajo a la implementación escalada.
+  - Vea todos los trabajos de escalado horizontal y la información básica sobre ellos y también puede habilitar o deshabilitarlos fácilmente.
 
 **Correcciones de errores**
 
 - AlwaysOn:
-  - Se ha corregido un problema donde las propiedades de una réplica de disponibilidad siempre aparecía como "Conmutación automática por error" modo para grupos de disponibilidad de WSFC.
-  - Se corrigió un problema en la que se ha sobrescrito la lista de enrutamiento de solo lectura al actualizar el grupo de disponibilidad
-- Always Encrypted: corregido un problema en el archivo de registro generado faltaba la información generada por DacFx.
-- Plan de presentación: se ha corregido en problema donde la interfaz de usuario siempre muestra el atributo de tipo de combinación real para operadores de combinación no es adaptable.
+  - Se ha corregido un problema que hacía que las propiedades de una réplica de disponibilidad siempre aparecieran como modo de "Conmutación automática por error" para grupos de disponibilidad de WSFC.
+  - Se ha corregido un problema que hacía que la lista de enrutamiento de solo lectura se sobrescribiera al actualizar el grupo de disponibilidad.
+- Always Encrypted: se ha corregido un problema que hacía que en el archivo de registro generado faltara la información generada por DacFx.
+- Plan de presentación: se ha corregido un problema que hacía que la interfaz de usuario mostrara siempre el atributo Tipo de combinación real para operadores de combinación no adaptables.
 - Programa de instalación:
-  - Se corrigió un problema donde 17,0 SSMS se interrumpa SSDT con Visual Studio 2013 [conectarse elemento 3133479]
-  - Se corrigió un problema donde al hacer clic en "Reiniciar" al final del programa de instalación no se reiniciar el equipo
-- Secuencias de comandos: evita temporalmente que SSMS de eliminación accidental de objetos de base de datos de Azure al intentar la eliminación de script al deshabilitar esa opción.  Corrección correcta estará en una próxima versión de SSMS.
-- Explorador de objetos: se corrigió un problema donde no se ha expandido nodo "Bases de datos" cuando se conecta a una base de datos de Azure creado mediante "la copia AS"
+  - Se ha corregido un problema que hacía que SSMS 17.0 interrumpiera SSDT en Visual Studio 2013 [elemento de conexión 3133479].
+  - Se ha corregido un problema que hacía que, al hacer clic en "Reiniciar" al final de la instalación, no se reiniciara el equipo.
+- Scripting: se evita temporalmente que SSMS elimine de forma accidental objetos de base de datos de Azure al intentar incluir en script la eliminación al deshabilitar esa opción.  La corrección correcta estará en una próxima versión de SSMS.
+- Explorador de objetos: se ha corregido un problema que hacía que no se expandiera el nodo "Bases de datos" al conectarse a una base de datos de Azure creada mediante "AS COPY".
 
 
 

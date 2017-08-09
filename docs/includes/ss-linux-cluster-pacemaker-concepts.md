@@ -1,23 +1,23 @@
-## <a name="pacemakerNotify"></a>Comprender el agente de recursos de SQL Server para marcapasos
+## <a name="pacemakerNotify"></a>Comprender el agente de recursos de SQL Server para Pacemaker
 
-Antes de la versión 1.4 de CTP, el agente de recursos marcapasos para grupos de disponibilidad podría conocer no si una réplica se marca como `SYNCHRONOUS_COMMIT` estaban realmente actualizados o no. Era posible que la réplica hubiera dejado de sincronizarse con la réplica principal pero que no lo supiera. Por lo tanto el agente pudo promover una réplica obsoleta principales - que, si se realiza correctamente, podría provocar la pérdida de datos. 
+Antes de la versión CTP 1.4, el agente de recursos de Pacemaker para grupos de disponibilidad no podía saber si una réplica marcada como `SYNCHRONOUS_COMMIT` estaba realmente actualizada o no. Era posible que la réplica hubiera dejado de sincronizarse con la réplica principal pero que no lo supiera. Por tanto, el agente podía promover a principal una réplica obsoleta, lo que provocaría una pérdida de datos si se llevara a cabo correctamente. 
 
-SQL Server de 2017 CTP 1.4 agrega `sequence_number` a `sys.availability_groups` para resolver este problema. `sequence_number`es un progresión BIGINT que representa el grado de actualización es la réplica del grupo de disponibilidad local con respecto al resto de las réplicas del grupo de disponibilidad. Este número de actualización de realizar conmutaciones por error, agregar o quitar las réplicas y otras operaciones de grupo de disponibilidad. El número se actualiza en el servidor principal, a continuación, inserta en las réplicas secundarias. Por lo tanto una réplica secundaria que está actualizada tendrá el mismo sequence_number como la réplica principal. 
+SQL Server 2017 CTP 1.4 ha agregado `sequence_number` a `sys.availability_groups` para resolver este problema. `sequence_number` es un valor BIGINT con una progresión continua que representa el grado de actualización de la réplica del grupo de disponibilidad local con respecto al resto de réplicas del grupo de disponibilidad. Las conmutaciones por error, la adición o la eliminación de réplicas y otras operaciones del grupo de disponibilidad actualizan este número. El número se actualiza en la réplica principal y, después, se inserta en las réplicas secundarias. Por tanto, una réplica secundaria que esté actualizada tendrá el mismo número de secuencia que la principal. 
 
-Cuando decida marcapasos promocionar una réplica principal, primero envía una notificación a todas las réplicas para extraer el número de secuencia y los almacene (Esto se llama el previamente promover notificación). A continuación, cuando realmente marcapasos intenta promover una réplica principal, la réplica solo promueve a sí mismo si su número de secuencia es el nivel más alto de todos los números de secuencia de todas las réplicas y rechaza la operación promover en caso contrario. De esta manera, solo se puede promover a principal la réplica con el número de secuencia más alto, lo que garantiza que no se producirá una pérdida de datos. 
+Cuando Pacemaker decide promover una réplica a principal, en primer lugar envía una notificación a todas las réplicas para extraer el número de secuencia y almacenarlo (esto se denomina notificación previa a la promoción). Después, cuando Pacemaker intenta realmente promover una réplica a principal, la réplica solo se promueve a sí misma si su número de secuencia es el más alto de todos los números de secuencia de todas las réplicas. En caso contrario, rechaza la operación de promoción. De esta manera, solo se puede promover a principal la réplica con el número de secuencia más alto, lo que garantiza que no se producirá una pérdida de datos. 
 
-Tenga en cuenta que solo se garantiza que esto funcione si al menos una réplica disponible para la promoción tiene el mismo número de secuencia que la réplica principal anterior. Para asegurarse de esto, el comportamiento predeterminado es para que el agente de recursos marcapasos establecer automáticamente `REQUIRED_COPIES_TO_COMMIT` forma que al menos una sincrónica confirmar secundaria réplica está actualizada y disponible para ser el destino de una conmutación por error automática. Con cada acción de supervisión, el valor de `REQUIRED_COPIES_TO_COMMIT` es calculada (y actualiza si es necesario) como ('número de réplicas de confirmación sincrónica' / 2). A continuación, en tiempo de conmutación por error, el agente de recursos requerirá (`total number of replicas`  -  `required_copies_to_commit` réplicas) para responder a la previamente promover notificación para poder promover uno de ellos al elemento principal. La réplica con el nivel más alto `sequence_number` se promoverá a principal. 
+Tenga en cuenta que solo se garantiza que esto funcione si al menos una réplica disponible para la promoción tiene el mismo número de secuencia que la réplica principal anterior. Para asegurarse de esto, el comportamiento predeterminado es que el agente de recursos de Pacemaker establezca automáticamente `REQUIRED_COPIES_TO_COMMIT` de forma que al menos una réplica secundaria de confirmación sincrónica está actualizada y disponible para ser el destino de una conmutación por error automática. Con cada acción de supervisión, el valor de `REQUIRED_COPIES_TO_COMMIT` se calcula (y actualiza, si es necesario) como ("número de réplicas de confirmación sincrónica" / 2). Después, en tiempo de conmutación por error, el agente de recursos requerirá que (`total number of replicas` - `required_copies_to_commit` réplicas) respondan a la notificación previa a la promoción para poder promover una de ellas a principal. La réplica con el `sequence_number` más alto se promoverá a principal. 
 
-Por ejemplo, consideremos el caso de un grupo de disponibilidad con tres réplicas sincrónicas - una réplica principal y dos réplicas secundarias de confirmación sincrónica.
+Por ejemplo, consideremos el caso de un grupo de disponibilidad con tres réplicas sincrónicas (una réplica principal y dos réplicas secundarias de confirmación sincrónica).
 
-- `REQUIRED_COPIES_TO_COMMIT`es 3 / 2 = 1
+- `REQUIRED_COPIES_TO_COMMIT` es 3 / 2 = 1
 
-- El número necesario de réplicas para responder para promover la acción previamente es 3-1 = 2. Por lo que 2 réplicas tienen que estar activos para que la conmutación por error para que se desencadene. Esto significa que, en el caso de interrupción principal, si una de las réplicas secundarias no responde y solo uno de los servidores secundarios se responde a las previamente promover acción, el agente de recursos no puede garantizar que la base de datos secundaria que respondió tiene el sequence_number más alto y no se desencadena una conmutación por error.
+- El número necesario de réplicas para responder a la acción previa a la promoción es de 3 - 1 = 2. Por lo que 2 réplicas tienen que estar activas para que se desencadene la conmutación por error. Esto significa que, en el caso de una interrupción principal, si una de las réplicas secundarias no responde y solo responde una de las secundarias a la acción previa a la promoción, el agente de recursos no puede garantizar que la réplica secundaria que ha respondido tenga el sequence_number más alto y no se desencadena una conmutación por error.
 
-Un usuario puede elegir invalidar el comportamiento predeterminado y configurar el recurso de grupo de disponibilidad para no establecer `REQUIRED_COPIES_TO_COMMIT` automáticamente como arriba.
+Un usuario puede elegir invalidar el comportamiento predeterminado y configurar el recurso de grupo de disponibilidad para no establecer `REQUIRED_COPIES_TO_COMMIT` automáticamente como se ha mostrado anteriormente.
 
 >[!IMPORTANT]
->Cuando `REQUIRED_COPIES_TO_COMMIT` es ahí 0 es el riesgo de pérdida de datos. En el caso de una interrupción de la réplica principal, el agente de recursos no desencadenará automáticamente una conmutación por error. El usuario tiene que decidir si quieren que debe esperar para que el elemento primario recuperar o conmutación por error manual.
+>Cuando `REQUIRED_COPIES_TO_COMMIT` es 0, existe riesgo de pérdida de datos. En el caso de una interrupción de la réplica principal, el agente de recursos no desencadenará automáticamente una conmutación por error. El usuario tiene que decidir si quiere esperar para que la principal se recupere o conmute por error de forma manual.
 
 Para establecer `REQUIRED_COPIES_TO_COMMIT` en 0, ejecute:
 
@@ -31,44 +31,44 @@ El comando equivalente con crm (en SLES) es:
 sudo crm resource param <**ag_cluster**> set required_synchronized_secondaries_to_commit 0
 ```
 
-Para volver al valor predeterminado valor calculado, ejecute:
+Para revertir al valor calculado predeterminado, ejecute:
 
 ```bash
 sudo pcs resource update <**ag_cluster**> required_copies_to_commit=
 ```
 
 >[!NOTE]
->Actualizar propiedades de recursos hace que todas las réplicas detener y reiniciar. Esto significa principal se temporalmente se degrada a la base de datos secundaria y promueve nuevo que casue temporal escribirá falta de disponibilidad. El nuevo valor de REQUIRED_COPIES_TO_COMMIT solo establecerá una vez que se reinician las réplicas, por lo que no sea instantáneo al ejecutar el comando de equipos.
+>Actualizar las propiedades de recursos hace que todas las réplicas se detengan y reinicien. Esto significa que la réplica principal se degradará temporalmente a secundaria y se volverá a promover de nuevo, lo que causará una falta de disponibilidad de escritura temporal. El nuevo valor de REQUIRED_COPIES_TO_COMMIT solo se establecerá una vez que se reinicien las réplicas, por lo que no será instantáneo al ejecutar el comando del equipo.
 
-## <a name="balancing-high-availability-and-data-protection"></a>Equilibrio de la alta disponibilidad y protección de datos 
+## <a name="balancing-high-availability-and-data-protection"></a>Equilibrio de la alta disponibilidad y la protección de datos 
 
-El comportamiento predeterminado anterior también se aplica en el caso de 2 réplicas sincrónicas (principales y secundarias). Marcapasos tendrá como valor predeterminado `REQUIRED_COPIES_TO_COMMIT = 1` para asegurarse de la base de datos secundaria réplica siempre está actualizada para la protección de datos máximo.  
+El comportamiento predeterminado anterior también se aplica en el caso de 2 réplicas sincrónicas (principal + secundaria). Pacemaker tendrá como valor predeterminado `REQUIRED_COPIES_TO_COMMIT = 1` para asegurarse de que la réplica secundaria siempre esté actualizada para la máxima protección de datos.  
 
 >[!WARNING]
->Esto viene con mayor riesgo de falta de disponibilidad de la réplica principal debido a errores previstos e imprevistos en la base de datos secundaria. El usuario puede elegir cambiar el comportamiento predeterminado del agente de recursos e invalidar el `REQUIRED_COPIES_TO_COMMIT` en 0:
+>Esto viene con un mayor riesgo de falta de disponibilidad de la réplica principal debido a interrupciones previstas e imprevistas en la réplica secundaria. El usuario puede elegir cambiar el comportamiento predeterminado del agente de recursos e invalidar `REQUIRED_COPIES_TO_COMMIT` en 0:
 
 ```bash
 sudo pcs resource update <**ag1**> required_copies_to_commit=0
 ```
 
-Una vez que se reemplaza, se utilizará la nueva configuración para el agente de recurso `REQUIRED_COPIES_TO_COMMIT` y detener calcularlo. Esto significa que los usuarios tengan que actualizarlo de forma manual según corresponda (por ejemplo, si aumenta el número de réplicas).
+Una vez que se invalida, el agente de recursos usará la nueva configuración para `REQUIRED_COPIES_TO_COMMIT` y dejará de calcularlo. Esto significa que los usuarios tienen que actualizarlo de forma manual según corresponda (por ejemplo, si aumentan el número de réplicas).
 
-Las tablas siguientes se describe el resultado de una interrupción para las réplicas principales o secundarias en configuraciones de recursos de grupo de disponibilidad diferentes:
+En las tablas siguientes, se describe el resultado de una interrupción para las réplicas principal o secundaria en configuraciones de recursos de grupo de disponibilidad diferentes:
 
 ### <a name="availability-group---2-sync-replicas"></a>Grupo de disponibilidad: 2 réplicas de sincronización
 
-| |Interrupción principal |Una interrupción de la réplica secundaria
+| |Interrupción principal |Interrupción de réplica secundaria
 |:---|:--- |:--- |
-|`REQUIRED_COPIES_TO_COMMIT=0`|Usuario tiene que emitir una conmutación por error manual. <br>Podría tener la pérdida de datos.<br> Nuevo elemento principal es de lectura/escritura |Principal es de lectura/escritura, ejecución expuesta a la pérdida de datos
-|`REQUIRED_COPIES_TO_COMMIT=1` * |Clúster emitirá automáticamente la conmutación por error <br>Sin pérdida de datos. <br> Nuevo elemento principal rechazará todas las conexiones hasta que el objeto principal anterior se recupera y une a grupo de disponibilidad como base de datos secundaria. |Principal rechazará todas las conexiones hasta que recupera secundaria.
+|`REQUIRED_COPIES_TO_COMMIT=0`|El usuario tiene que emitir una conmutación por error manual. <br>Es posible que haya pérdida de datos.<br> La nueva réplica principal es de L/E. |La réplica principal es de L/E, la ejecución se expone a pérdida de datos.
+|`REQUIRED_COPIES_TO_COMMIT=1` * |El clúster emitirá automáticamente la conmutación por error. <br>No se produce pérdida de datos. <br> La nueva réplica principal rechazará todas las conexiones hasta que la réplica principal anterior se recupere y una al grupo de disponibilidad como réplica secundaria. |La réplica principal rechazará todas las conexiones hasta que se recupere la secundaria.
 
-\*Agente de recursos de SQL Server para el comportamiento predeterminado de marcapasos.
+\* Comportamiento predeterminado del agente de recursos de SQL Server para Pacemaker.
 
 ### <a name="availability-group---3-sync-replicas"></a>Grupo de disponibilidad: 3 réplicas de sincronización
 
-| |Interrupción principal |Una interrupción de la réplica secundaria
+| |Interrupción principal |Interrupción de réplica secundaria
 |:---|:--- |:--- |
-|`REQUIRED_COPIES_TO_COMMIT=0`|Usuario tiene que emitir una conmutación por error manual. <br>Podría tener la pérdida de datos. <br>Nuevo elemento principal es de lectura/escritura |Principal es de lectura/escritura
-|`REQUIRED_COPIES_TO_COMMIT=1` * |Clúster emitirá automáticamente la conmutación por error. <br>Sin pérdida de datos. <br>Nuevo elemento principal es RW |Principal es de lectura/escritura 
+|`REQUIRED_COPIES_TO_COMMIT=0`|El usuario tiene que emitir una conmutación por error manual. <br>Es posible que haya pérdida de datos. <br>La nueva réplica principal es de L/E. |La réplica principal es de L/E.
+|`REQUIRED_COPIES_TO_COMMIT=1` * |El clúster emitirá automáticamente la conmutación por error. <br>No se produce pérdida de datos. <br>La nueva réplica principal es de L/E. |La réplica principal es de L/E. 
 
-\*Agente de recursos de SQL Server para el comportamiento predeterminado de marcapasos.
+\* Comportamiento predeterminado del agente de recursos de SQL Server para Pacemaker.

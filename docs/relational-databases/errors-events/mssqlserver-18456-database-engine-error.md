@@ -16,11 +16,11 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 45f30fa7d1153f4ee70a9cfcb7c7e891bc15fec1
 ms.openlocfilehash: 53733118cf5fcf0b2b29544d64ebac6622425d56
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
@@ -76,11 +76,11 @@ Para aumentar la seguridad, en el mensaje de error que se devuelve al cliente se
 |11|El inicio de sesión es válido, pero se ha producido un error de acceso al servidor. Una causa posible de este error se produce cuando el usuario de Windows tiene acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como miembro del grupo de administradores locales, pero Windows no proporciona las credenciales de administrador. Para conectarse, inicie el programa de conexión mediante la opción **Ejecutar como administrador** y, a continuación, agregue el usuario de Windows a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como inicio de sesión específico.|  
 |12|El inicio de sesión es válido, pero se ha producido un error de acceso al servidor.|  
 |18|Se debe cambiar la contraseña.|  
-|38, 46|No se pudo encontrar la base de datos solicitado por el usuario.|
-|102 - 111|Error AAD.|
-|122 - 124|Error debido a que el nombre de usuario vacío o la contraseña.|
-|126|Base de datos solicitado por el usuario no existe.|
-|132 - 133|Error AAD.|
+|38, 46|No se pudo encontrar la base de datos solicitada por el usuario.|
+|102 - 111|Error de AAD.|
+|122 - 124|Error debido a que el nombre de usuario o la contraseña están vacíos.|
+|126|La base de datos solicitada por el usuario no existe.|
+|132 - 133|Error de AAD.|
   
 Hay otros estados de error e indican un error de procesamiento interno inesperado.  
   

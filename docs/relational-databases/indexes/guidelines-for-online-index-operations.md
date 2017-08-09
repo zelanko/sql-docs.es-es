@@ -25,7 +25,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
 ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
 ms.contentlocale: es-es
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>Directrices para operaciones de índices en línea
@@ -38,7 +38,7 @@ ms.lasthandoff: 07/11/2017
 -   Los índices no clúster que no son únicos se pueden crear en línea cuando la tabla contiene tipos de datos LOB, pero ninguna de estas columnas se utiliza en la definición del índice como columna de clave o sin clave (incluida).  
   
 -   Los índices de tablas temporales locales no se pueden crear, reconstruir o quitar en línea. Esta restricción no se aplica a los índices de tablas temporales globales.
-- Los índices se pueden reanudar desde donde se detuvo tras un error inesperado, conmutación por error de la base de datos, o un **pausa** comando. Vea [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Esta característica está en versión preliminar pública de SQL Server 2017 y Azure SQL Database.
+- Los índices se pueden reanudar desde la ubicación en la que se hayan detenido tras un error inesperado, una conmutación por error de la base de datos o un comando **PAUSE**. Vea [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Esta característica está en versión preliminar pública de SQL Server 2017 y Azure SQL Database.
 
 > [!NOTE]  
 >  Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Features supported by editions](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) (Características compatibles con las ediciones de SQL Server 2016).  
@@ -90,29 +90,29 @@ Para más información, consulte [Disk Space Requirements for Index DDL Operatio
 ## <a name="transaction-log-considerations"></a>Consideraciones del registro de transacciones  
  Las operaciones de índice a gran escala, realizadas sin conexión o en línea, pueden generar grandes cargas de datos que pueden hacer que el registro de transacciones se llene rápidamente. Para estar seguros de que la operación de índice se pueda revertir, el registro de transacciones no se puede truncar hasta que se haya completado la operación de índice; no obstante, se puede realizar una copia de seguridad del registro durante la operación de índice. Por lo tanto, el registro de transacciones debe tener suficiente espacio para almacenar las transacciones de la operación de índice y cualquier transacción de usuario simultánea durante la operación de índice. Para más información, consulte [Transaction Log Disk Space for Index Operations](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md).  
 
-## <a name="resumable-index-rebuild-considerations"></a>Consideraciones de regeneración de índice reanudables
+## <a name="resumable-index-rebuild-considerations"></a>Consideraciones sobre la recompilación de índices reanudables
 
 > [!NOTE]
 > Vea [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Esta característica está en versión preliminar pública de SQL Server 2017 y Azure SQL Database.
 >
 
-Al realizar la reconstrucción de índices en línea reanudables se aplican las siguientes directrices:
--   Administración, planificación y ampliación de las ventanas de mantenimiento de índice. Puede pausar y reiniciar una operación de regeneración del índice varias veces para ajustarse a las ventanas de mantenimiento.
-- Recuperarse de errores de regeneración de índice (por ejemplo, las conmutaciones por error de base de datos o quedarse sin espacio en disco).
-- Cuando una operación de índice está en pausa, tanto el índice original y uno recién creado requieren espacio en disco y deben actualizarse durante las operaciones de DML.
+Al realizar la recompilación de índices en línea reanudables, se aplican las siguientes directrices:
+-   Administración, planificación y ampliación de las ventanas de mantenimiento de índice. Puede pausar y reiniciar una operación de recompilación de índice varias veces para que se ajuste a los períodos de mantenimiento.
+- Recuperación de errores de recompilación de índice (por ejemplo, las conmutaciones por error de base de datos o quedarse sin espacio en disco).
+- Cuando una operación de índice está en pausa, tanto el índice original como uno recién creado requieren espacio en disco y deben actualizarse durante las operaciones de DML.
 
-- Se permite el truncamiento de registros de truncamiento durante una operación de regeneración de índice (no se puede realizar esta operación para una operación de índice en línea normal).
-- SORT_IN_TEMPDB = ON no se admite la opción
+- Se permite el truncamiento de registros de truncamiento durante una operación de recompilación de índice (no se puede realizar esta operación para una operación de índice en línea normal).
+- Opción SORT_IN_TEMPDB=ON no admitida
 
 > [!IMPORTANT]
-> Regeneración reanudable no le exige que mantenga abierto un truncamiento de larga ejecución, lo que permite el truncamiento del registro durante esta operación y una mejor administración de espacio de registro. Con el nuevo diseño, se administran mantener los datos necesarios en una base de datos junto con todas las referencias necesarios para reiniciar la operación reanudable.
+> La recompilación reanudable no le exige que mantenga abierto un truncamiento de larga ejecución, lo que permite el truncamiento del registro durante esta operación y una mejor administración del espacio de registro. Con el nuevo diseño, se consigue mantener los datos necesarios en una base de datos junto con todas las referencias necesarias para reiniciar la operación reanudable.
 >
 
-Por lo general, no hay ninguna diferencia de rendimiento entre la reconstrucción de índices en línea reanudables y no reanudables. Al actualizar un índice reanudable mientras la operación de regeneración de un índice está en pausa:
-- Principalmente de solo lectura, cargas de trabajo, el impacto en el rendimiento es insignificante. 
-- Para las cargas de trabajo con muchas actualizaciones, puede experimentar una degradación del rendimiento (nuestra pruebas muestra menor que el 10% de degradación).
+Por lo general, no hay ninguna diferencia de rendimiento entre la recompilación de índices en línea reanudables y no reanudables. Al actualizar un índice reanudable mientras una operación de regeneración de índice está en pausa:
+- Para las cargas de trabajo principalmente de solo lectura, el impacto de rendimiento es insignificante. 
+- Para las cargas de trabajo con muchas actualizaciones, puede experimentar una reducción del rendimiento (nuestras pruebas muestran una menor al 10 %).
 
-Por lo general, no hay ninguna diferencia en la calidad de desfragmentación entre la reconstrucción de índices en línea reanudables y no reanudables.
+Por lo general, no hay ninguna diferencia en la calidad de desfragmentación entre la recompilación de índices en línea reanudables y no reanudables.
  
 ## <a name="related-content"></a>Contenido relacionado  
  [Cómo funcionan las operaciones de índice en línea](../../relational-databases/indexes/how-online-index-operations-work.md)  

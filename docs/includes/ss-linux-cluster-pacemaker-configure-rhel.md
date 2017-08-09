@@ -1,4 +1,4 @@
-3. En todos los nodos del clúster, abra los puertos de firewall marcapasos. Para abrir estos puertos con `firewalld`, ejecute el comando siguiente:
+3. En todos los nodos de clúster, abra los puertos de firewall de Pacemaker. Para abrir estos puertos con `firewalld`, ejecute el comando siguiente:
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
@@ -16,7 +16,7 @@
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
 
-2. Establezca la contraseña para el usuario predeterminado que se crea al instalar paquetes de Pacemaker y Corosync. Usar la misma contraseña en todos los nodos. 
+2. Establezca la contraseña para el usuario predeterminado que se crea al instalar paquetes de Pacemaker y Corosync. Use la misma contraseña en todos los nodos. 
 
    ```bash
    sudo passwd hacluster
@@ -39,7 +39,7 @@
    ```
    
    >[!NOTE]
-   >Si ya configuró un clúster en los mismos nodos, necesita usar la opción `--force` al ejecutar `pcs cluster setup`. Esta opción es equivalente a ejecutar `pcs cluster destroy`. Para volver a habilitar Pacemaker, ejecute `sudo systemctl enable pacemaker`.
+   >Si ya ha configurado un clúster en los mismos nodos, necesita usar la opción `--force` al ejecutar `pcs cluster setup`. Esta opción es equivalente a ejecutar `pcs cluster destroy`. Para volver a habilitar Pacemaker, ejecute `sudo systemctl enable pacemaker`.
 
 5. Instale el agente de recursos de SQL Server para SQL Server. Ejecute los siguientes comandos en todos los nodos. 
 

@@ -17,18 +17,18 @@ ms.assetid: 25ea679c-84cc-4977-867c-2cbe9d192553
 caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 44bfd54aa494dd52174eeed8479e14a99d810af3
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 07c873941669f7a36ff9b93651a938ecae2662b7
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="json-path-expressions-sql-server"></a>Expresiones de ruta de acceso JSON (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- Usar expresiones de ruta de acceso JSON para hacer referencia a las propiedades de objetos JSON.  
+ Use expresiones de rutas de acceso JSON para hacer referencia a las propiedades de los objetos JSON.  
   
  Al llamar a las siguientes funciones, hay que proporcionar una expresión de ruta de acceso.  
   
@@ -43,18 +43,18 @@ ms.lasthandoff: 06/23/2017
 ## <a name="parts-of-a-path-expression"></a>Partes de una expresión de ruta de acceso
  Una expresión de ruta de acceso tiene dos componentes.  
   
-1.  Opcional [modo path](#PATHMODE), con un valor de **lax** o **estricta**.  
+1.  El [modo de ruta de acceso](#PATHMODE) opcional, con un valor de **lax** o **strict**.  
   
 2.  La [ruta de acceso](#PATH) en sí.  
 
 ##  <a name="PATHMODE"></a> Path mode  
  Al principio de la expresión de ruta de acceso, puede optar por declarar el modo de la ruta de acceso con las palabras clave **lax** o **strict**. El valor predeterminado es **lax**.  
   
--   En **lax** modo, la función devuelve valores vacíos si la expresión de ruta de acceso contiene un error. Por ejemplo, si se solicita el valor **$.name**, y el texto JSON no contiene un **nombre** clave, la función devuelve null, pero no genera un error.  
+-   En el modo **lax**, las funciones devuelven valores vacíos si la expresión de ruta de acceso contiene un error. Por ejemplo, si se solicita el valor **$.name** y el texto JSON no contiene una clave **name**, la función devuelve NULL, pero no genera ningún error.  
   
--   En **estricta** modo, la función genera un error si la expresión de ruta de acceso contiene un error.  
+-   En el modo **strict**, las funciones generan un error si la expresión de ruta de acceso contiene un error.  
 
-La consulta siguiente especifica explícitamente `lax` modo en la expresión de ruta de acceso.
+La consulta siguiente especifica explícitamente el modo `lax` en la expresión de ruta de acceso.
 
 ```sql  
 DECLARE @json NVARCHAR(MAX)
@@ -102,7 +102,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
 |$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>Control de las rutas de acceso duplicadas por las funciones integradas  
- Si el texto JSON contiene propiedades duplicadas: por ejemplo, dos claves con el mismo nombre en el mismo nivel - el **JSON_VALUE** y **JSON_QUERY** funciones devuelven solo el primer valor que coincide con la ruta de acceso. Para analizar un objeto JSON que contiene las claves duplicadas y devolver todos los valores, utilice **OPENJSON**, tal y como se muestra en el ejemplo siguiente.  
+ Si el texto JSON contiene propiedades duplicadas (por ejemplo, dos claves con el mismo nombre en el mismo nivel), las funciones **JSON_VALUE** y **JSON_QUERY** devuelven solo el primer valor que coincida con la ruta de acceso. Para analizar un objeto JSON que contiene claves duplicadas y devuelve todos los valores, use **OPENJSON**, como se muestra en el siguiente ejemplo.  
   
 ```sql  
 DECLARE @json NVARCHAR(MAX)
@@ -112,8 +112,8 @@ SELECT value
 FROM OPENJSON(@json,'$.person.info') 
 ```  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Obtener más información sobre la compatibilidad integrada de JSON en SQL Server  
-Para una gran cantidad de soluciones específicas, casos de uso y recomendaciones, consulte el [entradas de blog sobre la compatibilidad integrada de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) en SQL Server y en la base de datos de SQL de Azure mediante el Administrador de programas de Microsoft Jovan Popovic.
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Más información sobre la compatibilidad integrada de JSON en SQL Server  
+Para obtener una gran cantidad de soluciones específicas, casos de uso y recomendaciones, consulte las [entradas de blog sobre la compatibilidad integrada de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) en SQL Server y en Azure SQL Database ofrecidas por el director de programas de Microsoft Jovan Popovic.
   
 ## <a name="see-also"></a>Vea también  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)   

@@ -1,6 +1,6 @@
 ---
-title: 'Actualizado: los documentos de SQL Server | Documentos de Microsoft'
-description: "Mostrar fragmentos de contenido actualizado para recientemente modificadas en documentación, SQL Server."
+title: 'Actualizados: documentos de SQL Server | Microsoft Docs'
+description: "Muestra fragmentos de contenido actualizado de documentación modificada recientemente de SQL Server."
 services: na
 documentationcenter: 
 author: MightyPen
@@ -19,23 +19,23 @@ ms.translationtype: HT
 ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
 ms.openlocfilehash: 748f2ec122ea9a889b33cbcf15a188acd5da8459
 ms.contentlocale: es-es
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="new-and-recently-updated-sql-server-docs"></a>Las nuevas y recientemente actualizado: los documentos de servidor de SQL
+# <a name="new-and-recently-updated-sql-server-docs"></a>Nuevos y actualizados recientemente: documentos de SQL Server
 
 
 
-Casi todos los días, Microsoft actualiza algunos de los artículos existentes en su [Docs.Microsoft.com](http://docs.microsoft.com/) sitio Web de documentación. Este artículo muestra extractos de los artículos actualizados recientemente. También pueden aparecer vínculos a artículos nuevos.
+Casi todos los días, Microsoft actualiza algunos de los artículos existentes en su sitio web de documentación [Docs.Microsoft.com](http://docs.microsoft.com/). En este artículo se muestran los extractos de los artículos actualizados recientemente. También pueden aparecer vínculos a artículos nuevos.
 
-En este artículo es generado por un programa que se vuelve a ejecutar periódicamente. En ocasiones, un extracto puede aparecer con formato imperfecto, o como marcado del artículo de origen. Nunca las imágenes se muestran aquí.
+Este artículo se genera mediante un programa que se vuelve a ejecutar periódicamente. En ocasiones, un extracto puede aparecer con formato imperfecto o como recorte del artículo de origen. Aquí nunca se muestran las imágenes.
 
-Actualizaciones recientes se notifican para el siguiente intervalo de fechas y el asunto:
+Se informa de las actualizaciones recientes del siguiente intervalo de fechas y tema:
 
 
 
 - *Intervalo de fechas de las actualizaciones:* &nbsp; **23-05-2017** &nbsp; a &nbsp; **17-07-2017**
-- *Área de asunto:* &nbsp; **SQL Server**.
+- *Área temática:* &nbsp; **SQL Server**.
 
 
 
@@ -57,9 +57,9 @@ Los siguientes vínculos llevan a nuevos artículos que se han agregado reciente
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>Compact lista de artículos que se actualizó recientemente
+## <a name="compact-list-of-articles-updated-recently"></a>Lista compacta de artículos que se han actualizado recientemente
 
-Esta lista compacta proporciona vínculos a todos los artículos actualizados que aparecen en la sección de extractos.
+En esta lista compacta se proporcionan vínculos a todos los artículos actualizados que aparecen en la sección de extractos.
 
 
 
@@ -67,11 +67,11 @@ Esta lista compacta proporciona vínculos a todos los artículos actualizados qu
 
 ## <a name="updated-articles-with-excerpts"></a>Artículos actualizados con extractos
 
-Esta sección muestra los extractos de las actualizaciones que se recopilan de los artículos que han presentado recientemente una actualización a gran escala.
+En esta sección se muestran los extractos de las actualizaciones que se recopilan de los artículos que han presentado recientemente una gran actualización.
 
-Los extractos que se muestran aquí aparecen separados de su contexto semántica correcta. Además, en ocasiones, un extracto se separa de la sintaxis de markdown importante que rodea en el artículo real. Por lo tanto, estos extractos son para obtener instrucciones generales solo. Los extractos de sólo le permiten saber si sus intereses garantizan dedicar tiempo a haga clic en y visite el artículo real.
+Los extractos que se muestran aquí aparecen separados de su contexto semántico correcto. Además, en ocasiones, un extracto se separa de sintaxis de Markdown importante que rodea el artículo real. Por tanto, estos extractos son solo para obtener instrucciones generales. Los extractos solo le permiten saber si le interesa dedicar tiempo a hacer clic en el artículo real para visitarlo.
 
-Por estas y otras razones, no se copie el código de estos fragmentos y no toma como verdaderos exacta cualquier fragmento de texto. En su lugar, visite el artículo real.
+Por estas y otras razones, no copie código de estos fragmentos y no tome como verdad exacta ningún extracto de texto. En su lugar, visite el artículo real.
 
 
 
@@ -129,7 +129,7 @@ Por estas y otras razones, no se copie el código de estos fragmentos y no toma 
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-editions-and-supported-features-of-sql-server-2016editions-and-components-of-sql-server-2016md"></a>2. &nbsp; [Ediciones y las características admitidas de SQL Server 2016](editions-and-components-of-sql-server-2016.md)
+### <a name="2-nbsp-editions-and-supported-features-of-sql-server-2016editions-and-components-of-sql-server-2016md"></a>2. &nbsp; [Ediciones y características admitidas de SQL Server 2016](editions-and-components-of-sql-server-2016.md)
 
 *Actualización: 16-06-2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([anterior](#TitleNum_1))
 
@@ -157,7 +157,7 @@ La edición Developer sigue siendo compatible con solo un cliente para [SQL Serv
 |Capacidad máxima de cálculo usada por una sola instancia - [!INCLUDE[ssASnoversion--../includes/ssasnoversion-md.md)] o [!INCLUDE[ssRSnoversion--../includes/ssrsnoversion-md.md)]|Sistema operativo máximo|Limitada a menos de 4 sockets o 24 núcleos|Limitada a menos de 4 sockets o 16 núcleos|Limitada a menos de 1 socket o 4 núcleos|Limitada a menos de 1 socket o 4 núcleos|  
 |Memoria máxima para el grupo de búferes por instancia de [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]|Sistema operativo máximo|128 GB|64 GB|1410 MB|1410 MB|
 |Memoria máxima para la caché del segmento de almacén de columnas por instancia de [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]|Memoria ilimitada| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 GB<sup>2</sup>| 352 GB<sup>2</sup>|  
-|Tamaño máximo de datos con optimización para memoria por base de datos en [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]|Memoria ilimitada| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 GB<sup>2</sup>| 352 GB<sup>2</sup>|  
+|Tamaño máximo de datos optimizados para memoria por base de datos en [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]|Memoria ilimitada| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 GB<sup>2</sup>| 352 GB<sup>2</sup>|  
 
 
 

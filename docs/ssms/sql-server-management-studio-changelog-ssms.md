@@ -14,83 +14,83 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 470e6c83318eaf8eb579d053f65b5353862eb4c7
 ms.openlocfilehash: 23e304e52967d5d16672872d8d5712f26ef8c610
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
+# <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio: Registro de cambios (SSMS)
 
 ## <a name="ssms-171-release"></a>Versión de SSMS 17.1
 Disponible con carácter general | Número de compilación: 14.0.17119.0
 
 ### <a name="enhancements"></a>Mejoras
 
-- Generador de perfiles: Ayuda > aproximadamente ahora muestra el número de versión de lanzamiento (por ejemplo, 17.1)
-- Análisis de servicio a los usuarios puede actualizar las credenciales de sus orígenes de datos de 1200 los modelos de TM y versiones posteriores en el menú contextual en el origen de datos
-- SSIS integrados informes ahora mostrar registros de ejecución de escalado horizontal SSIS en CTP 2.1
-- Aplicación de administración de escalado horizontal SSIS
-  - Ver información básica sobre el patrón de escalabilidad horizontal.
-  - Agregar fácilmente un trabajo a la implementación de ampliación horizontal.
-  - Ver todos los trabajadores de la escala horizontal y la información básica acerca de ellos y puede también habilitar o deshabilitar ellos fácilmente.
+- Generador de perfiles: Ayuda > ahora muestra el número de versión de lanzamiento (por ejemplo, 17.1)
+- Los usuarios de Analysis Services pueden actualizar las credenciales de sus orígenes de datos de modelos TM 1200 y versiones posteriores desde el menú contextual del origen de datos.
+- Los informes integrados de SSIS ahora muestran registros de la ejecución de escalado horizontal en CTP 2.1.
+- Aplicación de administración de escalado horizontal de SSIS
+  - Vea información básica sobre el patrón de escalabilidad horizontal.
+  - Agregue fácilmente un trabajo a la implementación escalada.
+  - Vea todos los trabajos de escalado horizontal y la información básica sobre ellos y también puede habilitar o deshabilitarlos fácilmente.
 
 ### <a name="bug-fixes"></a>Correcciones de errores
 - AlwaysOn:
-  - Se ha corregido un problema donde las propiedades de una réplica de disponibilidad siempre aparecía como "Conmutación automática por error" modo para grupos de disponibilidad de WSFC.
-  - Se corrigió un problema en la que se ha sobrescrito la lista de enrutamiento de solo lectura al actualizar el grupo de disponibilidad
-- Always Encrypted: corregido un problema en el archivo de registro generado faltaba la información generada por DacFx.
-- Plan de presentación: se ha corregido en problema donde la interfaz de usuario siempre muestra el atributo de tipo de combinación real para operadores de combinación no es adaptable.
+  - Se ha corregido un problema que hacía que las propiedades de una réplica de disponibilidad siempre aparecieran como modo de "Conmutación automática por error" para grupos de disponibilidad de WSFC.
+  - Se ha corregido un problema que hacía que la lista de enrutamiento de solo lectura se sobrescribiera al actualizar el grupo de disponibilidad.
+- Always Encrypted: se ha corregido un problema que hacía que en el archivo de registro generado faltara la información generada por DacFx.
+- Plan de presentación: se ha corregido un problema que hacía que la interfaz de usuario mostrara siempre el atributo Tipo de combinación real para operadores de combinación no adaptables.
 - Programa de instalación:
-  - Se corrigió un problema donde 17,0 SSMS se interrumpa SSDT con Visual Studio 2013 [conectarse elemento 3133479]
-  - Se corrigió un problema donde al hacer clic en "Reiniciar" al final del programa de instalación no se reiniciar el equipo
-- Secuencias de comandos: evita temporalmente que SSMS de eliminación accidental de objetos de base de datos de Azure al intentar la eliminación de script al deshabilitar esa opción.  Corrección correcta estará en una próxima versión de SSMS.
-- Explorador de objetos: se corrigió un problema donde no se ha expandido nodo "Bases de datos" cuando se conecta a una base de datos de Azure creado mediante "la copia AS"
+  - Se ha corregido un problema que hacía que SSMS 17.0 interrumpiera SSDT en Visual Studio 2013 [elemento de conexión 3133479].
+  - Se ha corregido un problema que hacía que, al hacer clic en "Reiniciar" al final de la instalación, no se reiniciara el equipo.
+- Scripting: se evita temporalmente que SSMS elimine de forma accidental objetos de base de datos de Azure al intentar incluir en script la eliminación al deshabilitar esa opción.  La corrección correcta estará en una próxima versión de SSMS.
+- Explorador de objetos: se ha corregido un problema que hacía que no se expandiera el nodo "Bases de datos" al conectarse a una base de datos de Azure creada mediante "AS COPY".
 
-## <a name="ssms-170-release"></a>Versión de SSMS 17,0
+## <a name="ssms-170-release"></a>Versión de SSMS 17.0
 Disponible con carácter general | Número de compilación: 14.0.17099.0
 
 ### <a name="enhancements"></a>Mejoras 
 
-- Paquete de actualización y Windows Software Update Services (WSUS) 
-    - Las versiones futuras de 17.X incluyen un paquete de actualización acumulativa más pequeño 
-  - El paquete de actualización también se publicarán en el catálogo de WSUS  
+- Paquete de actualización y Windows Server Update Services (WSUS) 
+    - Las versiones futuras 17.X incluyen una actualización acumulativa más pequeña. 
+  - La actualización también se publicará en el catálogo de WSUS.  
 - Actualizaciones de iconos
-    - Iconos se han actualizado para ser coherentes con los iconos de Shell de VS que se proporciona y admite resoluciones valores altos de PPP
+    - Se han actualizado los iconos para que sean coherentes con los iconos de VS Shell que se proporcionan y admiten resoluciones de valores altos de PPP.
     - Nuevos iconos de programa para SSMS y Profiler a fin de diferenciar entre las versiones 16.X y 17.X
 - Módulo de SQL PowerShell
-  - Módulo de PowerShell de SQL Server quitará SSMS y ahora se distribuye a través de la Galería de PowerShell (PowerShell 5.0 ahora debe para admitir el control de versiones de módulo)
-  - Varias mejoras en la "presentación" (formato) de algunos objetos SMO (por ejemplo, las bases de datos ahora muestran el tamaño y el espacio disponible y el uso de recuento y el espacio de la fila del Mostrar tablas)
-  - Colores agregados cuando se invoca la línea de comandos de PowerShell en el menú "Iniciar PowerShell" en Ayuda de OE
+  - Se ha quitado el módulo de SQL Server PowerShell de SSMS y ahora se distribuye a través de la Galería de PowerShell (PowerShell 5.0 ahora debe admitir el control de versiones de módulo).
+  - Mejoras varias con respecto a la "presentación" (formato) de algunos objetos SMO (por ejemplo, ahora las bases de datos muestran el tamaño y el espacio disponible, y las tablas muestran el recuento de filas y el uso del espacio).
+  - Se ha agregado coloración cuando se invoca el símbolo del sistema de PowerShell desde el menú "Iniciar PowerShell" en OE.
   - Se agregaron los parámetros -ClusterType y -RequiredCopiesToCommit a los cmdlets de AG (los cmdlets New-SqlAvailabilityGroup, Join-SqlAvailabilityGroup y Set-SqlAvailabilityGroup)
   - Se agregaron los parámetros -ActiveDirectoryAuthority y -AzureKeyVaultResourceId al cmdlet Add-SqlAzureAuthenticationContext
-  - Revoke-SqlAvailabilityGroupCreateAnyDatabase agregada, Grant SqlAvailabilityGroupCreateAnyDatabase y SqlAvailabilityReplicaRoleToSecondary del conjunto de cmdlets
-  - Parámetro - SeedingMode agregado a los cmdlets Set-SqlAvailabilityReplica y New-SqlAvailabilityReplica
-  - Parámetro - ConnectionString agregado a Get-SqlDatabase
+  - Se han agregado los cmdlets Revoke-SqlAvailabilityGroupCreateAnyDatabase, Grant-SqlAvailabilityGroupCreateAnyDatabase y Set-SqlAvailabilityReplicaRoleToSecondary.
+  - Se ha agregado el parámetro -SeedingMode a los cmdlets Set-SqlAvailabilityReplica y New-SqlAvailabilityReplica.
+  - Se ha agregado el parámetro -ConnectionString a Get-SqlDatabase.
 - SQL Server en Linux
     - Mejoras y correcciones generales para el trasvase de registros
-  - Se agregó compatibilidad para rutas de acceso de Linux nativo adjuntar, base de datos de copia de seguridad y restauración
-  - Se agregó compatibilidad para rutas de acceso de Linux nativo para la carpeta de destino de registro de auditoría
+  - Se ha agregado compatibilidad con rutas de acceso nativas de Linux para adjuntar, restaurar y realizar una copia de seguridad de la base de datos.
+  - Se ha agregado compatibilidad con rutas de acceso nativas de Linux para la carpeta de destino del registro de auditoría.
 - Analysis Services
-  - Ventana de consulta DAX:
-    - Búsqueda de coincidencias en el editor de paréntesis
-    - Compatibilidad con la sintaxis definir medida y defina VAR
-    - Diversas mejoras de Intellisense
+  - Ventana Consulta DAX:
+    - Coincidencia de paréntesis en el editor
+    - Compatibilidad con la sintaxis DEFINE MEASURE y DEFINE VAR
+    - Diversas mejoras de IntelliSense
   - Autenticación universal
-    - Permite a los usuarios especificar que un nombre de usuario y no hay ninguna contraseña y el cuadro de diálogo de inicio de sesión de Azure controla la conexión
+    - Permite a los usuarios especificar un nombre de usuario y ninguna contraseña y el cuadro de diálogo de inicio de sesión de Azure controla la conexión.
   - Integración de SSMS PQ: 
     - Scripting de trabajos de orígenes de datos estructurados 
-    - Visualización y edición de orígenes de datos estructurados en la interfaz de usuario de PQ
+    - Ver y editar orígenes de datos estructurados en la interfaz de usuario de PQ
 - Nueva plantilla "Agregar restricción única"
 - Showplan
     - Se muestra el máximo en lugar de la suma de los subprocesos en la ventana Propiedades para el tiempo transcurrido
     - Se exponen nuevas propiedades del operador de concesión de memoria
     - Se habilitó el botón "Editar consulta" en Estadísticas de consultas activas
     - Compatibilidad con la ejecución intercalada
-  - Nueva opción de "Analizar el Plan de ejecución real"
-  - Mejoras generales para la comparación del plan de presentación
-  - Introdujo funcionalidad en función de comparación del plan de presentación para buscar diferencias significativas en la estimación de cardinalidad entre nodos coincidentes de dos planes de consulta y realizar un análisis básico de las causas posibles
+  - Nueva opción "Analizar el plan de ejecución real"
+  - Mejoras generales en la comparación de planes de presentación
+  - Se ha introducido una funcionalidad en la característica Comparación de plan de presentación para buscar diferencias significativas en la estimación de cardinalidad entre nodos coincidentes de dos planes de consulta y realizar un análisis básico de las posibles causas principales.
 - Se quitó Configuration Manager del explorador de Servidores registrados
 - Se habilita la lectura de los registros de auditoría desde Azure Blob Storage
 - Se ha agregado parametrización para Always Encrypted. Consulte [esta página](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/) para obtener más detalles. 
@@ -98,20 +98,20 @@ Disponible con carácter general | Número de compilación: 14.0.17099.0
 - La opción Generar scripts de la base de datos de Azure SQL ahora genera scripts para texto completo, reglas y base de datos.
 - Se ha corregido la personalización de marca en las pantallas de presentación de SSMS y del generador de perfiles.
 - Se ha quitado de SSMS la interfaz de usuario del punto de control de la utilidad.
-- SSMS ahora puede crear bases de datos de SQL Azure "PremiumRS" edition
+- SSMS ahora puede crear bases de datos de SQL Azure de la edición "PremiumRS".
 - Grupos de disponibilidad AlwaysOn
-  - Agregar compatibilidad con nuevos tipos de clúster: externos y ninguno
-    - Agregar compatibilidad con SQL Server en Linux
-    - Agregar la propagación automática como una opción para la sincronización de datos iniciales
-    - Fija la algunos defectos, por ejemplo, dirección URL del extremo de control, la actualización de base de datos y el diseño de la interfaz de usuario
-    - Características relacionadas con la réplica de Azure quitado
-  - IntelliSense mejorada para varias palabras clave de grupo de disponibilidad
+  - Se ha agregado compatibilidad con nuevos tipos de clúster: EXTERNAL y NONE.
+    - Se ha agregado compatibilidad con SQL Server en Linux.
+    - Se ha agregado la propagación automática como una opción para la sincronización de datos inicial.
+    - Se han corregido algunos defectos, por ejemplo, el control de dirección URL del punto de conexión, la actualización de base de datos y el diseño de la interfaz de usuario.
+    - Se han quitado características relacionadas con la réplica de Azure.
+  - Se ha mejorado IntelliSense para varias palabras clave de grupo de disponibilidad.
 - Monitor de actividad
-  - Ha agregado nuevo panel "Monitor de actividad" en la ventana de salida de SSMS
-  - Cambiar el mensaje de error o tiempo de espera de conexión para registrar información para generar la ventana, en lugar de un mensaje emergente
-  - Vacío quitado del gráfico (gráfico de 5) en la sección información general
-  - Agrega "(en pausa)" al título de la información general sobre si se detiene la recopilación de datos del Monitor de actividad
-  - Extensiones de gráfico a las tablas de nodo y el borde del gráfico de SQL Server - nuevos iconos para las tablas de nodo y el borde del gráfico - se mostrarán en la carpeta tablas de gráfico: plantillas para crear tablas disponibles de nodo y el borde del gráfico
+  - Se ha agregado un nuevo panel "Monitor de actividad" en la ventana de salida de SSMS.
+  - Se ha cambiado el mensaje de error o tiempo de espera de conexión por información de registro en la ventana de salida, en lugar de un mensaje emergente.
+  - Se ha quitado el gráfico vacío (5.º gráfico) en la sección Información general.
+  - Se ha agregado "(en pausa)" al título Información general si se pausa la recopilación de datos del Monitor de actividad.
+  - Extensiones Graph a SQL Server - Nuevos iconos para el nodo de Graph y las tablas perimetrales - El nodo de Graph y las tablas perimetrales aparecerán en la carpeta Tablas de Graph - Plantillas disponibles para crear el nodo de Graph y tablas perimetrales
 - Modo de presentación
     - 3 tareas nuevas disponibles a través de Inicio rápido (Ctr-Q)
     - PresentOn: active el modo de presentación
@@ -121,12 +121,12 @@ Disponible con carácter general | Número de compilación: 14.0.17099.0
 
 ### <a name="bug-fixes"></a>Correcciones de errores
 
-- Se corrigió un problema donde SSMS bloqueado al plan de presentación se desplaza a través de la pantalla táctil surfacebook
-- Se corrigió un problema donde SSMS se bloquea durante mucho veces al obtener las propiedades de una base de datos que se va a restaurar o sin conexión 
-- Se corrigió un problema donde "Visor de ayuda" no se pudo abrir en las compilaciones RC
-- Se corrigió un problema donde los elementos "Herramientas de tareas de planes de mantenimiento" pueden faltar en SSMS.
-- Se corrigió un problema en SSMS donde el usuario no pudo reducir una base de datos cuando el nombre de la base de datos incluye llaves. [Artículo de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3122618)
-- Se corrigió un problema donde estaba intentando SSMS generar el script de la eliminación de un Azure base de datos causa la eliminación de la base de datos. [Artículo de Connect](http://connect.microsoft.com/SQLServer/feedback/details/3131458/)
+- Se ha corregido un problema que hacía que SSMS se bloqueara cuando el plan de presentación se desplazaba mediante el panel táctil de Surface Book.
+- Se ha corregido un problema que hacía que SSMS se bloqueara durante mucho tiempo al obtener las propiedades de una base de datos que se está restaurando o está sin conexión. 
+- Se ha corregido un problema que hacía que el "Visor de ayuda" no se pudiera abrir en las compilaciones de RC.
+- Se ha corregido un problema que hacía que los elementos del "cuadro de herramientas Tareas de planes de mantenimiento" pudieran faltar en SSMS.
+- Se ha corregido un problema en SSMS que hacía que el usuario no pudiera reducir una base de datos cuando el nombre de la base de datos incluía llaves. [Artículo de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3122618)
+- Se ha corregido un problema que hacía que, cuando SSMS intentaba generar el script de la eliminación de una base de datos de Azure, se eliminara la base de datos. [Artículo de Connect](http://connect.microsoft.com/SQLServer/feedback/details/3131458/)
 - Se corrigió un error en el que los valores predeterminados no se podían incluir en scripts para los tipos de tabla definidos por el usuario. [Artículo de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3119027)
 - Otra ronda de mejoras de rendimiento en torno a índices o menús contextuales. [Artículo de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3120783)
 - Se corrigió un problema que provocaba parpadeo excesivo al mantener el puntero del mouse sobre un índice faltante en el plan de ejecución. [Artículo de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3118510)
@@ -142,10 +142,10 @@ Disponible con carácter general | Número de compilación: 14.0.17099.0
     - Se corrigió un problema en que el Asistente de AE mostraba un error incorrecto si el usuario no tenía permisos en ninguna suscripción o no tenía instancias de Azure Key Vault en ninguna de ellas.
     - Se corrigió un problema en el Asistente de AE en que la página de inicio de sesión de Azure Key Vault no mostraba suscripciones de Azure en caso de varias instancias de AAD
     - Se corrigió un problema en el Asistente de AE en que la página de inicio de sesión de Azure Key Vault no mostraba suscripciones de Azure para las que el usuario tenía permisos de lectura
-  - Se corrigió un problema donde los archivos de recursos pueden no cargarse correctamente, por lo que genera mensajes de error incorrectos
+  - Se ha corregido un problema que hacía que los archivos de recursos no cargaran correctamente, por lo que aparecían mensajes de error incorrectos.
 - Se mejoró el contraste de los hipervínculos en la página de configuración de SSMS
 - Se corrigió un problema en que los nodos de Polybase no se mostraban cuando se conectaba a SQL Server Express (2016 SP1)
-- Se corrigió un problema donde SSMS es no se puede cambiar el nivel de compatibilidad de una base de datos de Azure en v140
+- Se ha corregido un problema que hacía que SSMS no pudiera cambiar el nivel de compatibilidad de una base de datos de Azure a la versión 140.
 - Se mejoró el rendimiento de Explorador de objetos cuando se expande la lista de bases de datos de Azure [Artículo de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3100675)
 - Se corrigió un problema en que el elemento de menú contextual "Ver registro de SQL Server" aparecía de forma incorrecta para los tipos de servidores no relacionales (AS\RS\IS) 
 - Se corrigió un error en que la comprobación de la sintaxis de una consulta de partición de Analysis Services mediante la autenticación de SQL podía generar un mensaje de error de inicio de sesión
@@ -156,7 +156,7 @@ Disponible con carácter general | Número de compilación: 14.0.17099.0
 - Se produce un error en la creación de SecurityPolicy si el nombre del objeto de destino contiene ].
 - El menú "Abrir recientes" de SSMS 2016 no muestra los archivos guardados recientemente. [Artículo de Connect](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
 - Se ha quitado el restablecimiento de la configuración de usuario cuando se actualiza el shell de VS.
-- Se ha corregido un problema que impedía que el usuario pueda cambiar el nivel de compatibilidad de una base de datos en SQL Server 2017.
+- Se ha corregido un problema que impedía que el usuario cambiase el nivel de compatibilidad de una base de datos en SQL Server 2017.
 - Las ventanas de consulta que usan la autenticación universal de AAD no pueden actualizar la consulta después de una hora.
 - Se ha quitado de SSMS la interfaz de usuario del punto de control de la utilidad.
 - Las conexiones de autenticación universal de AD no pueden consultar datos después de la expiración del token inicial.
@@ -180,7 +180,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Se ha corregido un problema que hacía que se produjese un error en "Generar script…" para las bases de datos de SQL Azure.
 - Se ha corregido la opción "Script como" y el "Asistente para generar scripts" para que no agreguen nuevas líneas adicionales al generar scripts para objetos, como procedimientos almacenados. [Artículo de Connect](http://connect.microsoft.com/SQLServer/feedback/details/3115850)
 - Proveedor SQLAS de PowerShell: se ha agregado la propiedad LastProcessed a las carpetas Dimension y MeasureGroup. [Artículo de Connect](http://connect.microsoft.com/SQLServer/feedback/details/3111879)
-- Estadísticas de consultas activas: se ha corregido un problema que hacía que solo se mostrase la primera consulta de un lote. [Conectar elemento] (http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
+- Estadísticas de consultas activas: se ha corregido un problema que hacía que solo se mostrase la primera consulta de un lote. [Elemento de conexión] (http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
 - Plan de presentación: se muestra el máximo en lugar de la suma de los subprocesos en la ventana Propiedades.
 - Almacén de consultas: se ha agregado un nuevo informe en las consultas con una alta variación de ejecución.
 - Problemas de rendimiento del explorador de objetos. [Artículo de Connect](http://connect.microsoft.com/SQLServer/feedback/details/3114074)
@@ -194,20 +194,20 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Se ha corregido un problema que podía hacer que SSMS se bloquease al intentar mostrar los permisos de una base de datos.
 - Almacén de consultas: se han realizado mejoras generales en los elementos del menú contextual para las cuadrículas de resultados del informe del almacén de consultas.
 - La configuración de Always Encrypted para una tabla existente produce errores en los objetos relacionados. [Artículo de Connect](http://connect.microsoft.com/SQLServer/feedback/details/3103181)
-- La Configuración de Always Encrypted para una base de datos existente con varios esquemas no funciona. [Conectar elemento] (http://connect.microsoft.com/SQLServer/feedback/details/3109591)
-- El Asistente para columnas cifradas de Always Encrypted produce un error debido a la base de datos que contiene vistas que hacen referencia a vistas del sistema. [Conectar elemento] (http://connect.microsoft.com/SQLServer/feedback/details/3111925)
+- La Configuración de Always Encrypted para una base de datos existente con varios esquemas no funciona. [Elemento de conexión] (http://connect.microsoft.com/SQLServer/feedback/details/3109591)
+- El Asistente para columnas cifradas de Always Encrypted produce un error debido a la base de datos que contiene vistas que hacen referencia a vistas del sistema. [Elemento de conexión] (http://connect.microsoft.com/SQLServer/feedback/details/3111925)
 - Cuando se cifra mediante Always Encrypted, los errores al actualizar los módulos después del cifrado se tratan incorrectamente.
 - Se ha corregido un problema de truncamiento de la interfaz de usuario del cuadro de diálogo "Nuevo registro de servidor".
 - Se ha corregido la interfaz de usuario de la condición DMF, que actualizaba incorrectamente las expresiones con valores de constante de cadena que incluían comillas.
 - Se ha corregido un problema que podía hacer que SSMS se bloquease al ejecutar informes personalizados.
 - Se ha agregado el elemento de menú "Execution in Scale Out…" (Ejecución en escalado horizontal…) al nodo de carpeta.
-- Se corrigió un problema con la característica de direcciones de base de datos de SQL Azure firewall lista blanca de direcciones IP
-- Un problema en SSMS que produjo una referencia de objeto que no establezca excepción al editar el origen de partición multidimensional fijo
-- Un problema en SSMS que produjo una referencia de objeto que no establezca excepción al eliminar un ensamblado de cliente de AS multidimensionales fijo server
-- Se corrigió un problema donde no pudo cambiar el nombre de una base de datos de 1400 tabular de AS
-- Se corrigió un problema con un nivel de compatibilidad de 1400 de secuencias de comandos como origen de datos tabular de cuadro de diálogo de propiedades de conexión
-- Quitar la suposición de que las tablas en que el modelo de nivel de compatibilidad de 1400 tengan al menos una partición
-- CTRL-R alterna ahora el panel de resultados en el editor de consultas de SSMS DAX
+- Se ha corregido un problema con la característica de dirección IP de lista blanca de firewall de base de datos SQL de Azure.
+- Se ha corregido un problema en SSMS que hacía que una referencia de objeto no estableciera la excepción al editar el origen de la partición multidimensional de AS.
+- Se ha corregido un problema en SSMS que hacía que una referencia de objeto no estableciera la excepción al eliminar un ensamblado personalizado del servidor multidimensional de AS.
+- Se ha corregido un problema que hacía que no se pudiera cambiar el nombre de una base de datos tabular 1400 de AS.
+- Se ha corregido un problema con el scripting de un origen de datos tabular de AS de nivel de compatibilidad 1400 del cuadro de diálogo de propiedades de la conexión.
+- Se ha quitado la suposición de que las tablas en el modelo de nivel de compatibilidad 1400 de AS tengan al menos una partición.
+- Ctrl-R ahora alterna el panel de resultados en el editor de consultas DAX de SSMS.
 
 
 ## <a name="ssms-1653-release"></a>Versión de SSMS 16.5.3
@@ -329,7 +329,7 @@ Disponible con carácter general | Número de compilación: 13.0.15900.1
 *  Se corrigió un problema donde Ctrl+Q no seleccionaría la barra de herramientas Inicio rápido.
     
 *  Se corrigió un problema donde el cambio de MaxSize de una base de datos mediante el cuadro de diálogo Propiedades del servidor se rompía para bases de datos > 2 TB.  
-[Microsoft Connect, n.º 1231091](https://connect.microsoft.com/SQLServer/feedback/details/1231091)
+[Microsoft Connect, nº 1231091](https://connect.microsoft.com/SQLServer/feedback/details/1231091)
     
 *  Se corrigió un problema en el asistente Restaurar base de datos no aceptaría nombres de archivo con espacios en blanco iniciales:   
 [Microsoft Connect, n.º 2395147](https://connect.microsoft.com/SQLServer/feedback/details/2395147)
@@ -343,7 +343,7 @@ Disponible con carácter general | Número de versión: 13.0.15700.28
 
 * [Nueva opción de autenticación **'Autenticación universal de Active Directory'**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). Se trata de un mecanismo de autenticación basado en token impulsado por Azure Active Directory que es compatible con mecanismos de autenticación integrados, contraseñas y multifactor.
 
-* Nuevas plantillas de eventos extendidos que coinciden con la funcionalidad de las plantillas de SQL Server Profiler [(Microsoft Connect, n.º 2543925)](https://connect.microsoft.com/SQLServer/feedback/details/2543925/sql-server-extended-events-profiler-tool). Obtenga más información acerca de las [plantillas de SQL Server Profiler](https://msdn.microsoft.com/library/ms190176.aspx).
+* Nuevas plantillas de eventos extendidos que coinciden con la funcionalidad de las plantillas de SQL Server Profiler [(Microsoft Connect, n.º 2543925).](https://connect.microsoft.com/SQLServer/feedback/details/2543925/sql-server-extended-events-profiler-tool). Obtenga más información acerca de las [plantillas de SQL Server Profiler](https://msdn.microsoft.com/library/ms190176.aspx).
 
 * Nuevos cuadros de diálogo Crear base de datos y propiedades de bases de datos para Bases de datos SQL de Azure.
 

@@ -25,11 +25,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
 ms.openlocfilehash: 3050dc3fc207f2154a70c68770ca266d2d47ce92
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Seleccionar una cuenta para el servicio Agente SQL Server
@@ -112,7 +112,7 @@ Para resolver este problema, reinicie el equipo donde se ejecuta [!INCLUDE[ssNoV
 ## <a name="common-tasks"></a>Tareas comunes  
 **Para especificar la cuenta de inicio del servicio del Agente SQL Server**  
   
--   [Establecer la cuenta de inicio de servicio para el Agente SQL Server &amp;#40;Administración de configuración de SQL Server&amp;#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
+-   [Establecer la cuenta de inicio de servicio para el Agente SQL Server &#40;Administración de configuración de SQL Server&#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
   
 **Para especificar el perfil de correo del Agente SQL Server**  
   

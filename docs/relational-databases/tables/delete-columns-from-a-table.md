@@ -19,11 +19,11 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 621185759462020bca20985c3133c93814a1f333
 ms.openlocfilehash: ef0c4b8b66af5dfc46c836fc8c18734609b1301a
 ms.contentlocale: es-es
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="delete-columns-from-a-table"></a>Eliminar columnas de una tabla
@@ -66,9 +66,9 @@ ms.lasthandoff: 06/23/2017
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  En **Explorador de objetos**, busque la tabla desde el que desea eliminar columnas y se expanden para exponer los nombres de columna. 
+2.  En el **Explorador de objetos**, busque la tabla de la que quiere eliminar columnas y expanda los nombres de esas columnas para exponerlas. 
 
-3.  Haga clic en la columna que desea eliminar y elija **eliminar**.  
+3.  Haga clic con el botón derecho en la columna que quiera eliminar y, después, elija **Eliminar**.  
   
 3.  En el cuadro de diálogo **Eliminar objeto** , haga clic en **Aceptar**.  
   

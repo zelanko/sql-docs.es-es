@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: e14166437e035c347fec8f50a1248eeb0d0e5597
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: dcb3ee622bac9c70a235e1ff124f7041549825c0
 ms.contentlocale: es-es
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Descarga de SQL Server Management Studio (SSMS)
@@ -75,15 +75,15 @@ Para más información sobre la colección de datos de usuario, consulte
   
 ## <a name="supported-operating-systems"></a>Sistemas operativos admitidos
   
-Esta versión de SSMS admite las siguientes plataformas cuando se usa con el Service Pack más reciente disponible:   
-- Windows 10
-- Windows 8.1
-- Windows 8
-- Windows 7 (SP1)
+Esta versión de SSMS admite las siguientes plataformas de 64 bits cuando se usa con el Service Pack más reciente disponible:
+- Windows 10 (64 bits)
+- Windows 8.1 (64 bits)
+- Windows 8 (64 bits)
+- Windows 7 (SP1) (64 bits)
 - Windows Server 2016
-- Windows Server 2012 (64 bits) 
-- Windows Server 2012 R2 (64 bits) 
-- Windows Server 2008 R2 (64 bits)  
+- Windows Server 2012 R2 (64 bits)
+- Windows Server 2012 (64 bits)
+- Windows Server 2008 R2 (64 bits)
 
 >[!NOTE]
 >SSMS 17.X se basa en el shell aislado de Visual Studio 2015, que se lanzó antes que Windows Server 2016. Microsoft se toma en serio la compatibilidad entre aplicaciones y garantiza que las aplicaciones ya publicadas sigan funcionando en las últimas versiones de Windows. Para minimizar los problemas de ejecución de SSMS en Windows Server 2016, asegúrese de que SSMS tiene aplicadas todas las actualizaciones más recientes. Si experimenta problemas con SSMS en Windows Server 2016, póngase en contacto con soporte técnico. El equipo de soporte técnico determina si el problema es con SSMS, Visual Studio o con la compatibilidad de Windows. A continuación, dirige el problema al equipo adecuado para una investigación más exhaustiva.

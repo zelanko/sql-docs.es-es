@@ -1,4 +1,4 @@
-2. En todos los nodos del clúster, cree un archivo para almacenar el nombre de usuario de SQL Server y la contraseña para el inicio de sesión marcapasos. Con el siguiente comando se crea y rellena este archivo:
+2. En todos los nodos del clúster, cree un archivo para almacenar el nombre de usuario y la contraseña de SQL Server para el inicio de sesión de Pacemaker. Con el siguiente comando se crea y rellena este archivo:
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
@@ -8,7 +8,7 @@
    sudo chmod 600 /var/opt/mssql/secrets/passwd    
    ```
 
-3. En todos los nodos del clúster, abra los puertos de firewall marcapasos. Para abrir estos puertos con `firewalld`, ejecute el comando siguiente:
+3. En todos los nodos de clúster, abra los puertos de firewall de Pacemaker. Para abrir estos puertos con `firewalld`, ejecute el comando siguiente:
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
@@ -28,7 +28,7 @@
 
    
 
-2. Establezca la contraseña para el usuario predeterminado que se crea al instalar paquetes de Pacemaker y Corosync. Usar la misma contraseña en todos los nodos. 
+2. Establezca la contraseña para el usuario predeterminado que se crea al instalar paquetes de Pacemaker y Corosync. Use la misma contraseña en todos los nodos. 
 
    ```bash
    sudo passwd hacluster

@@ -29,7 +29,7 @@ En estos temas se tratan los comandos y las opciones de los cuadros de diálogo 
 Para obtener acceso a los temas del cuadro de diálogo, presione F1 cuando éste esté abierto y tenga el foco. Para obtener acceso a los temas de ventana de propiedades, haga clic en la ventana Propiedades y presione F1.  
   
 ## <a name="see-also"></a>Vea también  
-[Diseñar tablas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
-[Temas de procedimientos de diseño de consultas y vistas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Diseñar tablas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 

@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Introducción a las expresiones | Microsoft Docs"
+title: "Tutorial: Introducción a las expresiones | Documentos de Microsoft"
 ms.custom: 
 ms.date: 09/16/2016
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 97b19aaffd06a196d3cbd39e44b49c971a146edf
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Introducción a las expresiones
@@ -49,7 +49,7 @@ En esta sección, creará un informe de tabla, un origen de datos y un conjunto 
   
 1.  [Inicie el Generador de informes](../reporting-services/report-builder/start-report-builder.md) desde el equipo, el portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o el modo integrado de SharePoint.  
   
-    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos** .  
+    Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos**.  
   
     Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos**, vaya al menú **Archivo** > **Nuevo**.  
   
@@ -183,7 +183,7 @@ En esta sección, usará la función **Left** y el operador **Concatenate** (**&
   
 8.  Escriba **, 1)**  
   
-    Esta expresión extrae un carácter del valor **FirstName** , contando desde la izquierda.  
+    Esta expresión extrae un carácter del valor **FirstName**, contando desde la izquierda.  
   
 9. Escriba **&". "&**.  
 
@@ -267,7 +267,7 @@ Para mantener el color que ha aplicado en la celda de la tabla cuando crea un in
   
 2.  En el cuadro de diálogo **Propiedades del rectángulo** > pestaña **Relleno**, haga clic en el botón de la expresión **fx** junto a **Color de relleno**.  
   
-3.  En el cuadro de diálogo **Expresión** , expanda **Funciones comunes** y, después, haga clic en **Flujo de programa**.  
+3.  En el cuadro de diálogo **Expresión**, expanda **Funciones comunes** y, después, haga clic en **Flujo de programa**.  
   
 4.  En la lista **Elemento** , haga doble clic en **Cambiar**.  
   
@@ -326,7 +326,7 @@ En esta sección, creará el conjunto de datos CountryRegion y usará la funció
   
 2.  En el panel Datos de informe, haga clic en **Nuevo** y, después, en **Conjunto de datos**.  
   
-3.  En **Propiedades del conjunto de datos, haga clic en **Usar un conjunto de datos insertado en el informe**.  
+3.  En ** Propiedades del conjunto de datos, haga clic en **utilizar un conjunto de datos incrustada en el informe**.  
   
 4.  En la lista **Origen de datos** , seleccione ExpressionsDataSource.  
   
@@ -404,7 +404,7 @@ En esta sección, agregará una columna y, después, usará la función **Now** 
   
 5.  En el cuadro de diálogo **Expresión**, expanda **Funciones comunes** y haga clic en **Fecha y hora**.  
   
-6.  En la lista **Elemento** , haga doble clic en **DateDiff**.  
+6.  En la lista **Elemento**, haga doble clic en **DateDiff**.  
   
 7.  Inmediatamente después de `DateDiff(`, escriba **"d",** (incluidas las comillas "" y la coma). 
   
@@ -412,7 +412,7 @@ En esta sección, agregará una columna y, después, usará la función **Now** 
   
 11. Inmediatamente después de `Fields!LastPurchase.Value`, escriba **,** (una coma). 
   
-13. En la lista **Categoría**, haga clic en **Fecha y hora** de nuevo y, en la lista **Elemento**, haga doble clic en **Ahora**.  
+13. En la lista **Categoría**, haga clic en **Fecha y hora** de nuevo y, en la lista **Elemento**, haga doble clic en **Now**.  
   
     > [!WARNING]  
     > En los informes de producción no debe usar la función **Ahora** en las expresiones que se evalúan varias veces como representadores de informes (por ejemplo, en las filas de detalle de un informe). El valor de **Ahora** cambia de una fila a otra y los diferentes valores afectan a los resultados de evaluación de las expresiones, lo que conduce a resultados ligeramente incoherentes. En su lugar, use la variable global `ExecutionTime` que proporciona [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -492,7 +492,7 @@ Configurar el indicador y sus estados tiene muchos pasos. Si quiere, puede salta
   
 24. Expanda **Funciones comunes** de nuevo, haga clic en **Agregado**y, en la lista **Elemento** , haga doble clic en **Promedio**.  
   
-26. En la lista **Categoría** , haga clic en **Campos (expresiones)**y, en la lista **Valores** , haga doble clic en **YTDPurchase**.  
+26. En la lista **Categoría**, haga clic en **Campos (expresiones)** y, en la lista **Valores**, haga doble clic en **YTDPurchase**.  
   
 28. Inmediatamente después de `Fields!YTDPurchase.Value`, escriba **, "Expresiones")) < 0**  
   

@@ -19,11 +19,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 27956feca3ad15233943a447422e2260bd61c913
 ms.contentlocale: es-es
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Alertas de datos de Reporting Services
-<a id="reporting-services-data-alerts" class="xliff"></a>
+# <a name="reporting-services-data-alerts"></a>Alertas de datos de Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -58,8 +57,7 @@ A continuación se resumen las áreas clave de las alertas de datos de [!INCLUDE
   
  ![Flujo de trabajo de alertas de Reporting Services](../reporting-services/media/rs-alertingworkflow.gif "flujo de trabajo de alertas de Reporting Services")  
   
-### Informes admitidos por las alertas de datos
-<a id="reports-supported-by-data-alerts" class="xliff"></a>  
+### <a name="reports-supported-by-data-alerts"></a>Informes admitidos por las alertas de datos  
  Puede crear alertas de datos para todos los tipos de informes profesionales escritos en el lenguaje de definición de informes (RDL) y creados en el Diseñador de informes o en el Generador de informes. Informes que incluyen regiones de datos como tablas y gráficos, informes con subinformes, e informes complejos con múltiples grupos de columnas paralelos y regiones de datos anidadas. Los únicos requisitos son que el informe incluya al menos una región de datos de cualquier tipo y que el origen de datos del informe esté configurado para utilizar credenciales almacenadas o ninguna credencial. Si el informe no tiene ninguna región de datos, no puede crear una alerta para él.  
   
  No puede crear alertas de datos en los informes creados con [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)].  
@@ -74,34 +72,29 @@ A continuación se resumen las áreas clave de las alertas de datos de [!INCLUDE
   
 -   [Autenticación con el servidor de informes](../reporting-services/security/authentication-with-the-report-server.md)  
   
-### Ejecutar informes
-<a id="run-reports" class="xliff"></a>  
+### <a name="run-reports"></a>Ejecutar informes  
  El primer paso para crear una definición de alerta de datos es buscar el informe que desee en la biblioteca de SharePoint y después ejecutarlo. Si un informe no contiene datos cuando se ejecuta, no puede crear una alerta para él en ese momento.  
   
  Si el informe contiene parámetros, especificará los valores de parámetro que se deben usar cuando ejecute el informe. Los valores de parámetro se guardarán en las definiciones de alerta de datos que crea para un informe. Los valores se utilizan cuando se vuelve a ejecutar el informe durante el procesamiento de la definición de alerta de datos. Si desea cambiar los valores de parámetro, tendrá que volver a ejecutar el informe con esos valores de parámetro y crear una definición de alerta para esa versión del informe.  
   
-### Crear definiciones de alerta de datos
-<a id="create-data-alert-definitions" class="xliff"></a>  
+### <a name="create-data-alert-definitions"></a>Crear definiciones de alerta de datos  
  La característica de alertas de datos de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye el Diseñador de alertas de datos, que se utiliza para crear definiciones de alerta de datos.  
   
  Para crear una definición de alerta de datos, tendrá que ejecutar el informe y abrir el Diseñador de alerta de datos desde el menú **Acciones** del visor de informes de SharePoint. Se generan las fuentes de distribución de datos del informe y se muestran las 100 primeras filas de la fuente de distribución de datos en una tabla de vista previa de los datos en el Diseñador de alertas de datos. Todas las fuentes de distribución de datos de un informe se almacenan en caché siempre que utilice el Diseñador de alertas de datos para trabajar con la definición de alerta. El almacenamiento en caché permite cambiar rápidamente entre las fuentes de distribución de datos. Al volver a abrir una definición de alerta en el Diseñador de alertas de datos, se actualizan las fuentes de distribución de datos.  
   
  Las definiciones de alertas de datos constan de reglas y cláusulas que los datos del informe deben satisfacer para desencadenar un mensaje de alerta de datos, una programación que define la frecuencia con que se envía el mensaje de alerta y, opcionalmente, las fechas de inicio y detención del envío del mensaje de alerta, información como la línea de asunto y una descripción que se incluyen en el mensaje de alerta y los destinatarios del mensaje. Después de crear una definición de alerta, esta se guarda en la base de datos de alertas de SQL Server.  
   
-### Guardar definiciones de alertas de datos y metadatos de alertas
-<a id="save-data-alert-definitions-and-alerting-metadata" class="xliff"></a>  
+### <a name="save-data-alert-definitions-and-alerting-metadata"></a>Guardar definiciones de alertas de datos y metadatos de alertas  
  Cuando instala [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo de SharePoint, se crea automáticamente la base de datos de alertas de SQL Server.  
   
  Las definiciones de alerta de datos y los metadatos de las alertas se guardan en la base de datos de alertas. De forma predeterminada, esta base de datos se denomina ReportingServices\<GUID > _Alerting.  
   
  Cuando se guarda la definición de una alerta de datos, el sistema de alertas crea un trabajo del Agente SQL para la definición de alerta. El trabajo incluye una programación del trabajo. La programación se basa en el patrón de periodicidad que defina en la definición de alerta. Al ejecutar el trabajo se inicia el procesamiento de la definición de alerta de datos.  
   
-### Procesar definiciones de alerta de datos
-<a id="process-data-alert-definitions" class="xliff"></a>  
+### <a name="process-data-alert-definitions"></a>Procesar definiciones de alerta de datos  
  Cuando la programación del trabajo del Agente SQL Server inicia el procesamiento de la definición de alerta, se ejecuta el informe para actualizar las fuentes de distribución de datos. El servicio de alertas lee las fuentes de distribución de datos y aplica a los valores de los datos las reglas que especifican las definiciones de las alertas de datos. Si uno o más valores de datos satisfacen las reglas, se crea una instancia de alerta de datos y se envía por correo electrónico un mensaje de alerta de datos a todos los destinatarios. Los resultados son las filas de los datos del informe que satisfacían todas las reglas en el momento en que se creó la instancia de alerta. Para evitar que se envíen varios mensajes de alerta con los mismos resultados, puede especificar que los mensajes solo se envíen cuando cambien los resultados. En este caso, se crea una instancia de alerta y se guarda en la base de datos de alertas, pero no se genera ningún mensaje de alerta. Si ocurre un error, la instancia de alerta se guarda también en la base de datos de alertas y se envía un mensaje de alerta con los detalles del error a los destinatarios. En la sección Diagnósticos y registro, incluida más adelante en este tema, se proporciona más información sobre el registro y la solución de problemas.  
   
-### Enviar mensajes de alerta de datos
-<a id="send-data-alert-messages" class="xliff"></a>  
+### <a name="send-data-alert-messages"></a>Enviar mensajes de alerta de datos  
  El mensaje de alerta de datos se envía por correo electrónico.  
   
  La línea **De** contiene un valor determinado por la configuración de entrega de correo electrónico de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . La línea **Para** incluye los destinatarios especificados al crear la alerta en el Diseñador de alertas de datos.  
@@ -155,8 +148,7 @@ A continuación se resumen las áreas clave de las alertas de datos de [!INCLUDE
   
  De forma predeterminada, los valores de MaxRetries y SecondsBeforeRetry se aplican a todos los eventos que desencadenan alertas de datos. Si desea tener más control sobre los reintentos y los intervalos entre reintentos, puede agregar elementos para cada uno de los controladores de eventos que especifican valores de MaxRetries y SecondsBeforeRetry diferentes.  
   
-### Controladores de eventos y reintentos
-<a id="event-handlers-and-retry" class="xliff"></a>  
+### <a name="event-handlers-and-retry"></a>Controladores de eventos y reintentos  
  Los controladores de eventos son:  
   
 |Controlador de eventos|Description|  
@@ -227,8 +219,7 @@ A continuación se resumen las áreas clave de las alertas de datos de [!INCLUDE
 ##  <a name="DiagnosticsLogging"></a> Diagnósticos y registro  
  Las alertas de datos proporcionan varias maneras de ayudar a los trabajadores de la información y a los administradores a realizar un seguimiento de las alertas y a entender por qué se producen errores en las alertas, así como ayudar a los administradores a usar los registros de ejecución para saber a quién se envió cada mensaje de alerta, el número de instancias de alertas enviadas, etcétera.  
   
-### Administrador de alertas de datos
-<a id="data-alert-manager" class="xliff"></a>  
+### <a name="data-alert-manager"></a>Administrador de alertas de datos  
  El Administrador de alertas de datos muestra listas de definiciones de alertas e información sobre errores que ayudan a los trabajadores de la información y a los administradores de alertas a entender las causas de los errores. Algunos de los motivos comunes de los errores son:  
   
 -   La fuente de distribución de datos del informe ha cambiado y las columnas que se usaron en las reglas de la definición de la alerta de datos ya no están incluidas en la fuente de distribución de datos.  
@@ -237,14 +228,12 @@ A continuación se resumen las áreas clave de las alertas de datos de [!INCLUDE
   
 -   El tipo de datos del origen de datos subyacente ha cambiado y la definición de la alerta ya no es válida.  
   
-### Registros
-<a id="logs" class="xliff"></a>  
+### <a name="logs"></a>Registros  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona varios registros que pueden ayudarle a obtener más información sobre los informes que se ejecutan al procesar definiciones de alerta de datos, las instancias de alertas de datos que se crean, etc. Hay tres registros particularmente útiles: el registro de ejecución de la alerta, el registro de ejecución del servidor de informes y el registro de seguimiento del servidor de informes.  
   
  Para obtener información sobre otros registros de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , vea [Archivos de registro y orígenes de Reporting Services](../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
-#### Registro de ejecución de alertas
-<a id="alerting-execution-log" class="xliff"></a>  
+#### <a name="alerting-execution-log"></a>Registro de ejecución de alertas  
  El servicio de tiempo de ejecución de alertas escribe entradas en la tabla ExecutionLogView de la base de datos de alertas. Puede consultar la tabla o ejecutar los procedimientos almacenados siguientes para obtener una información de diagnóstico más completa sobre las alertas de datos que se guardan en la base de datos de alertas.  
   
 -   ReadAlertData  
@@ -265,12 +254,10 @@ A continuación se resumen las áreas clave de las alertas de datos de [!INCLUDE
   
  Puede utilizar el Agente SQL para ejecutar el procedimiento almacenado de acuerdo con una programación. Para obtener más información, consulte [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec).  
   
-#### Registro de ejecución del servidor de informes
-<a id="report-server-execution-log" class="xliff"></a>  
+#### <a name="report-server-execution-log"></a>Registro de ejecución del servidor de informes  
  Los informes se ejecutan para generar fuentes de distribución de datos en las que se basan las definiciones de alerta de datos. El registro de ejecución del servidor de informes de la base de datos del servidor de informes recopila información cada vez que se ejecuta el informe. Puede realizar una consulta de la vista ExecutionLog2 en la base de datos para obtener información detallada. Para obtener más información, vea [Registro de ejecución del servidor de informes y la vista ExecutionLog3](../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
-#### Registro de seguimiento del servidor de informes
-<a id="report-server-trace-log" class="xliff"></a>  
+#### <a name="report-server-trace-log"></a>Registro de seguimiento del servidor de informes  
  El registro de seguimiento del servidor de informes contiene información bastante detallada de las operaciones del servicio del servidor de informes, incluidas las operaciones realizadas por el servicio web del servidor de informes y el procesamiento en segundo plano. La información del registro de seguimiento resulta útil si se está depurando una aplicación que incluye un servidor de informes o se investiga un problema específico que se incluyó en el registro de eventos o de ejecución. Para obtener más información, consulte [Report Server Service Trace Log](../reporting-services/report-server/report-server-service-trace-log.md).  
   
 ##  <a name="PerformanceCounters"></a> Performance Counters  
@@ -334,8 +321,7 @@ A continuación se resumen las áreas clave de las alertas de datos de [!INCLUDE
   
 -   [Conceder permisos a los usuarios y alertar a los administradores](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
-## Vea también
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Vea también
 
 [Diseñador de alertas de datos](../reporting-services/data-alert-designer.md)   
 [Administrador de alertas de datos para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md)   

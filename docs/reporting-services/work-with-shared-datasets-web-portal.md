@@ -18,11 +18,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
 ms.contentlocale: es-es
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Trabajar con conjuntos de datos compartidos - portal web
-<a id="work-with-shared-datasets---web-portal" class="xliff"></a>
+# <a name="work-with-shared-datasets---web-portal"></a>Trabajar con conjuntos de datos compartidos - portal web
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -30,8 +29,7 @@ Con un conjunto de datos compartido, puede administrar los valores para un conju
 
 Puede ver y administrar las propiedades de un conjunto de datos compartido en el portal web. El portal web puede iniciar el Generador de informes para crear o editar conjuntos de datos compartidos.
 
-## Creación de un conjunto de datos compartido
-<a id="create-a-shared-dataset" class="xliff"></a>
+## <a name="create-a-shared-dataset"></a>Creación de un conjunto de datos compartido
   
 Para crear un nuevo conjunto de datos compartido, puede hacer lo siguiente:  
   
@@ -49,8 +47,7 @@ Para crear un nuevo conjunto de datos compartido, puede hacer lo siguiente:
   
 6.  Cree el conjunto de datos y, después, seleccione el icono de **guardado** situado en la esquina superior izquierda para guardarlo en el servidor de informes.  
   
-## Administración de un conjunto de datos compartido existente
-<a id="manage-an-existing-shared-dataset" class="xliff"></a>
+## <a name="manage-an-existing-shared-dataset"></a>Administración de un conjunto de datos compartido existente
   
 Para administrar un conjunto de datos compartido existente, puede hacer lo siguiente:  
   
@@ -65,15 +62,13 @@ Para administrar un conjunto de datos compartido existente, puede hacer lo sigui
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   
-## Propiedades
-<a id="properties" class="xliff"></a>
+## <a name="properties"></a>Propiedades
   
 En la pantalla de propiedades, puede cambiar el **nombre** y la **descripción** del conjunto de datos. También puede **Eliminar**, **Mover**, **Editar en el Generador de informes**, **Descargar** o **Reemplazar**.  
   
 ![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
   
-## Almacenamiento en memoria caché
-<a id="caching" class="xliff"></a>
+## <a name="caching"></a>Almacenamiento en memoria caché
   
 Dispone de varias opciones para almacenar en memoria caché los datos de un conjunto de datos. Puede empezar con una selección simple.  
   
@@ -87,8 +82,7 @@ Si selecciona **Cache Copies of this report and use them when available** (Almac
   
 ![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
   
-### Expiración de la caché
-<a id="cache-expiration" class="xliff"></a>  
+### <a name="cache-expiration"></a>Expiración de la caché  
   
 Puede controlar si desea que la caché expire, para el conjunto de datos compartido, después de una cantidad de tiempo determinada, o bien si prefiere hacerlo según una programación. Puede usar una programación compartida.  
   
@@ -97,8 +91,7 @@ Puede controlar si desea que la caché expire, para el conjunto de datos compart
 > [!NOTE]
 > La memoria caché no se actualiza al establecer una expiración. Sin un plan de actualización de caché, los datos se actualizarán con la siguiente ejecución del conjunto de datos.  
   
-### Planes de actualización de caché
-<a id="cache-refresh-plans" class="xliff"></a>  
+### <a name="cache-refresh-plans"></a>Planes de actualización de caché  
   
 Puede utilizar planes de actualización de caché a fin de crear programaciones para cargar previamente la caché con copias temporales de datos de un conjunto de datos compartido. Un plan de actualización incluye una programación y la opción para especificar o invalidar los valores de los parámetros. No puede invalidar los valores de los parámetros que estén marcados como de solo lectura. Puede crear y utilizar más de un plan de actualización.   
   

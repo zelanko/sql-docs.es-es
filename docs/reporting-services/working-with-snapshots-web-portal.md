@@ -18,12 +18,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 2bca4e3089bde763669c4fe518f509fbe94cb6eb
 ms.contentlocale: es-es
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Trabajo con instantáneas (portal web)
-<a id="working-with-snapshots-web-portal" class="xliff"></a>
+# <a name="working-with-snapshots-web-portal"></a>Trabajo con instantáneas (portal web)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -34,8 +33,7 @@ Puede controlar si las instantáneas se crean para un informe seleccionando el *
    
 Puede crear una instantánea de caché para que las propiedades de ejecución específicas se ejecuten más rápido. También puede trabajar con instantáneas de historial para capturar diferentes momentos.  
   
-## Crear una instantánea de almacenamiento en caché
-<a id="creating-a-cache-snapshot" class="xliff"></a>  
+## <a name="creating-a-cache-snapshot"></a>Crear una instantánea de almacenamiento en caché  
   
 Haga esto para crear una instantánea.  
   
@@ -47,8 +45,7 @@ Haga esto para crear una instantánea.
   
 3.  Seleccione **Crear una instantánea de caché cuando haga clic en el botón Aplicar en esta página** si quiere crear una caché de instantánea ahora mismo. Si selecciona esta opción únicamente, la instantánea no se actualizará.  
   
-## Crear, modificar y eliminar instantáneas del historial
-<a id="create-modify-and-delete-history-snapshots" class="xliff"></a>  
+## <a name="create-modify-and-delete-history-snapshots"></a>Crear, modificar y eliminar instantáneas del historial  
   
 Para trabajar con instantáneas del historial, administre un informe y seleccione **Instantáneas del historial**.  
   
@@ -66,8 +63,7 @@ Para generar una instantánea del historial, el informe debe poder ejecutarse en
   
 3.  Puede seleccionar una instantánea del historial para verla. Las instantáneas que aparecen en un historial de informe solamente se distinguen por la fecha y la hora en que fueron creadas. No hay manera de distinguir visualmente si una instantánea se generó como respuesta a una operación programada o manual.  
   
-### Programación y configuración
-<a id="schedule-and-settings" class="xliff"></a>  
+### <a name="schedule-and-settings"></a>Programación y configuración  
   
 Si selecciona **Programación y configuración** , dispondrá de más opciones para la retención de programación y el control de instantáneas creadas.  
   
@@ -81,8 +77,7 @@ También puede definir cómo prefiere conservar las instantáneas.
   
 Si activa esta casilla, se copiará en el historial de un informe una instantánea del informe generada según las propiedades de ejecución del informe. Puede establecer las propiedades de ejecución de informes para ejecutar un informe a partir de una instantánea generada. Al establecer esta propiedad del historial del informe, se puede mantener un registro de todas las instantáneas del informe generadas con el tiempo, colocando copias de las mismas en el historial.
 
-## Pasos siguientes
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Pasos siguientes
 
 [Portal Web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Trabajar con informes paginados](working-with-paginated-reports-web-portal.md)  

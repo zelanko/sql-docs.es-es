@@ -18,12 +18,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 4f49f5376344d6c52159c3a4dcff553255c79320
 ms.contentlocale: es-es
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Trabajar con suscripciones (portal web)
-<a id="working-with-subscriptions-web-portal" class="xliff"></a>
+# <a name="working-with-subscriptions-web-portal"></a>Trabajar con suscripciones (portal web)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -42,14 +41,12 @@ Para crear suscripciones en la página Suscripciones, seleccione **+ Nueva suscr
   
 Esta página también proporciona el estado de los resultados de las ejecuciones de suscripción en la columna **Resultado** . Si se ha producido un error en una suscripción, nos interesa consultar la columna de resultados antes de nada para saber cuál fue el mensaje.  
   
-## Crear o editar una suscripción
-<a id="creating-or-editing-a-subscription" class="xliff"></a>  
+## <a name="creating-or-editing-a-subscription"></a>Crear o editar una suscripción  
 Use la página Nueva suscripción o Editar suscripción para crear una nueva suscripción a un informe o modificar una existente. Las opciones de esta página varían dependiendo de los roles que tenga asignados. Los usuarios con permisos avanzados pueden trabajar con más opciones.  
   
 Las suscripciones se admiten para informes que se pueden ejecutar en modo desatendido. Como mínimo, el informe debe usar credenciales almacenadas o ninguna credencial. Si el informe utiliza parámetros, debe especificarse un valor predeterminado. Las suscripciones pueden pasar a estar inactivas si se cambia la configuración de ejecución del informe o si se quitan los valores predeterminados que se utilizan en las propiedades de los parámetros. Para más información, vea [Crear y administrar suscripciones para servidores de informes en modo nativo].  
   
-### Tipo de suscripción
-<a id="type-of-subscription" class="xliff"></a>  
+### <a name="type-of-subscription"></a>Tipo de suscripción  
 Puede optar entre una **suscripción estándar** y una **suscripción controlada por datos**.  
   
 ![ssRSWebPortal-subscriptions3](../reporting-services/media/ssrswebportal-subscriptions3.png)  
@@ -60,8 +57,7 @@ Para crear una suscripción controlada por datos, es necesario saber cómo escri
   
 Esta opción está disponible para los usuarios con permisos avanzados. Si se usa la seguridad predeterminada, no se pueden utilizar suscripciones controladas por datos en los informes situados en la carpeta Mis informes.  
   
-### Destino
-<a id="destination" class="xliff"></a>  
+### <a name="destination"></a>Destino  
 Seleccione la extensión de entrega que se va a utilizar para distribuir el informe.   
   
 La disponibilidad de una extensión de entrega depende de si está instalada y configurada en el servidor de informes. El correo electrónico del Servidor de informes es la extensión de entrega predeterminada, pero debe configurarla primero para poder utilizarla. No es necesario configurar la entrega al recurso compartido de archivos, pero se debe definir una carpeta compartida para poder utilizarla.  
@@ -74,8 +70,7 @@ Según la extensión de entrega que usted seleccione, aparece la siguiente confi
   
 -   La suscripción a recursos compartidos de archivos proporciona campos que permiten especificar una ubicación de destino. Puede entregar cualquier informe a un recurso compartido de archivos. Sin embargo, los informes que admiten características interactivas, como los informes matriciales que permiten obtener detalles de filas y columnas complementarias, se representan como archivos estáticos. En este tipo de archivos, no es posible ver filas y columnas de detalle. El nombre del recurso compartido de archivos debe especificarse con el formato UNC (Convención de nomenclatura universal); por ejemplo: \miEquipo\public\misArchivosDeInformes. No incluya una barra inversa al final del nombre de la ruta de acceso. El archivo del informe se entregará en un formato de archivo basado en el formato de representación (por ejemplo, si elige Excel, el informe se entrega como archivo .xlsx).  
   
-### Conjunto de datos de suscripción controlada por datos
-<a id="data-driven-subscription-dataset" class="xliff"></a>  
+### <a name="data-driven-subscription-dataset"></a>Conjunto de datos de suscripción controlada por datos  
 En una suscripción controlada por datos hay que definir el conjunto de datos que se usará para la suscripción. Seleccione **Editar conjunto de datos** para proporcionar esa información.  
   
 ![ssRSWebPortal-subscriptions4](../reporting-services/media/ssrswebportal-subscriptions4.png)  

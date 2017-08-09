@@ -17,12 +17,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
 ms.contentlocale: es-es
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Uso de los KPI en Reporting Services
-<a id="working-with-kpis-in-reporting-services" class="xliff"></a>
+# <a name="working-with-kpis-in-reporting-services"></a>Uso de los KPI en Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -36,19 +35,16 @@ Si utiliza KPI en SQL Server 2016, podrá visualizar rápidamente las respuestas
   
 -   ¿Cuál es el progreso mínimo completado?  
   
-## Creación de un conjunto de datos
-<a id="creating-a-dataset" class="xliff"></a>  
+## <a name="creating-a-dataset"></a>Creación de un conjunto de datos  
 Un KPI solo utilizará la primera fila de datos de un conjunto de datos compartido. Asegúrese de que los datos que desea utilizar se encuentran en la primera fila. Para crear un conjunto de datos compartido, puede utilizar el Generador de informes o SQL Server Data Tools.  
   
 > **Nota**: El conjunto de datos no tiene que estar en la misma carpeta que el KPI.  
   
-## Ubicación de los KPI
-<a id="placement-of-kpis" class="xliff"></a>  
+## <a name="placement-of-kpis"></a>Ubicación de los KPI  
   
 Los KPI pueden crearse en cualquier carpeta de su servidor de informes.  Antes de crear un KPI, deberá tener clara la ubicación correcta donde colocarlo. Se recomienda colocarlo en una carpeta que sea visible para los usuarios y a la vez pertinente para otros informes y KPI relacionados.  
   
-## Adición de un KPI
-<a id="adding-a-kpi" class="xliff"></a>  
+## <a name="adding-a-kpi"></a>Adición de un KPI  
   
 Después de determinar la ubicación de los KPI, vaya a la carpeta y seleccione **Nuevo** > **KPI** en el menú superior.  
   
@@ -96,8 +92,7 @@ Para utilizar datos de un conjunto de datos compartido, puede realizar lo siguie
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)  
   
-## Eliminación de un KPI
-<a id="removing-a-kpi" class="xliff"></a>  
+## <a name="removing-a-kpi"></a>Eliminación de un KPI  
   
 Para quitar un KPI, puede hacer lo siguiente.  
   
@@ -109,13 +104,11 @@ Para quitar un KPI, puede hacer lo siguiente.
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   
-## Actualización de un KPI
-<a id="refreshing-a-kpi" class="xliff"></a>  
+## <a name="refreshing-a-kpi"></a>Actualización de un KPI  
   
 Para actualizar el KPI, debe configurar un almacenamiento en caché para el conjunto de datos compartido. Para obtener más información sobre la memoria caché de planes de actualización, vea [trabajar con conjuntos de datos compartidos](../reporting-services/work-with-shared-datasets-web-portal.md).  
   
-## Pasos siguientes
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Pasos siguientes
   
 [Portal Web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Trabajar con conjuntos de datos compartidos](../reporting-services/work-with-shared-datasets-web-portal.md)

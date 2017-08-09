@@ -1,6 +1,6 @@
 ---
 title: "Documentación técnica de SQL Server | Microsoft Docs"
-ms.date: 06/27/2017
+ms.date: 07/31/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
-ms.openlocfilehash: 334c3d130a1d0c8371c1a7810d82d443e1fbecc8
+ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
+ms.openlocfilehash: 56d4c398f8dc26f00e2d0dc26fb41a3089ea0ebf
 ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="sql-server-technical-documentation"></a>Documentación técnica de SQL Server
@@ -36,29 +36,31 @@ ms.lasthandoff: 07/31/2017
 
  Documentación que le ayuda a instalar, configurar y usar SQL Server. El contenido incluye ejemplos descentralizados, ejemplos de código y vídeos. Para temas sobre el lenguaje [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] , consulte [Referencia del lenguaje](../t-sql/language-reference.md).
 
-También puede ver la documentación de SQL Server sin conexión mediante el Visor de Ayuda. Para más información, vea [Visor de Ayuda y contenido sin conexión para SQL Server](../release-notes/sql-server-help-installation.md).
+ 
 
 **SQL Server 2017**
 
 - [Notas de la versión de SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)
 - [Novedades de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
- 
-**SQL Server 2016:**
+
+
+**SQL Server 2016**
  
 - [Notas de la versión de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)
 - [Novedades de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
     
  **Probar SQL Server**    
+ - [![Descargar desde el Centro de evaluación](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  Descargar [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] desde el **[Centro de evaluación](http://go.microsoft.com/fwlink/?LinkID=829477)** 
  - [**Descargar SQL Server 2016 desde el Centro de evaluación**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
  - **[Poner en marcha una máquina virtual con SQL Server 2016 ya instalado](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
- - **[Descargar la versión más reciente de SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**   
+ - **[Descargar la última versión de SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)**   
       
 ## <a name="sql-server-technologies"></a>Tecnologías de SQL Server    
     
 |||    
 |-|-|    
 |![Motor de base de datos de SQL](../sql-server/media/sql-database-engine.png "Motor de base de datos de SQL")|**[Motor de base de datos](../database-engine/configure-windows/sql-server-database-engine.md)**<br /><br /> El Motor de base de datos es el servicio principal para almacenar, procesar y proteger datos. El Motor de base de datos proporciona acceso controlado y procesamiento rápido de transacciones para cumplir los requisitos de las aplicaciones consumidoras de datos más exigentes de su empresa. El Motor de base de datos también proporciona una completa compatibilidad para mantener una gran disponibilidad.|    
-|![R Server](../sql-server/media/r-server.png "R Server")|**[R Services](../advanced-analytics/r-services/r-services.md)**<br /><br /> Microsoft R Services proporciona varias maneras de incorporar el popular lenguaje R en los flujos de trabajo de la empresa.<br /><br /> [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] integra el lenguaje R con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], facilitando así la compilación, el reciclaje y los modelos de puntuación llamando a los procedimientos almacenados de [!INCLUDE[tsql](../includes/tsql-md.md)] .<br /><br /> Microsoft R Server proporciona compatibilidad multiplataforma y escalable para R en la empresa y admite orígenes de datos como Hadoop y Teradata.|    
+|![R Server](../sql-server/media/r-server.png "R Server")|**[Machine Learning Services](../advanced-analytics/r-services/r-services.md)**<br /><br /> A través de los lenguajes populares R y Python, Microsoft Machine Learning Services integra el aprendizaje automático con los flujos de trabajo empresariales.<br /><br /> Machine Learning Services (en base de datos) integra R y Python con SQL Server, lo que simplifica la compilación, el reciclaje y los modelos de puntuación llamando a procedimientos almacenados.<br /><br /> Asimismo, proporciona una compatibilidad de escala empresarial con R y Python sin necesidad de utilizar SQL Server.|    
 |![Data Quality Services](../sql-server/media/data-quality-services.png "Data Quality Services")|**[Data Quality Services](../data-quality-services/data-quality-services.md)**<br /><br /> SQL Server Data Quality Services (DQS) proporciona una solución de limpieza de datos controlada por conocimiento. DQS permite generar una base de conocimiento y usarla para realizar tareas de corrección de datos y eliminación de datos duplicados, usando medios asistidos por ordenador e interactivos. Puede usar servicios de consulta de datos basados en la nube y puede generar una solución de administración de datos que integra DQS con SQL Server Integration Services y Master Data Services.|    
 |![Integration Services](../sql-server/media/integration-services.png "Integration Services")|**[Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es una plataforma para generar soluciones de integración de datos de alto rendimiento, lo que incluye paquetes que proporcionan procesamiento de extracción, transformación y carga (ETL) para almacenamiento de datos.|    
 |![Master Data Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] es la solución de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para la administración de datos maestros. Una solución basada en [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ayuda a asegurarse de que los informes y los análisis se basan en la información correcta. Con [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se crea un repositorio central de los datos maestros y se mantiene un registro auditable y protegible de los mismos a medida que van cambiando con el tiempo.|    
@@ -81,6 +83,7 @@ También puede ver la documentación de SQL Server sin conexión mediante el Vis
 - [Ejemplos de SQL Server en GitHub](https://github.com/Microsoft/sql-server-samples) 
    
  ## <a name="more-information"></a>Más información   
++ También puede ver la documentación de SQL Server sin conexión mediante el Visor de Ayuda. Para más información, vea [Visor de Ayuda y contenido sin conexión para SQL Server](../release-notes/sql-server-help-installation.md).
 + [Administrador de configuración de SQL Server](../relational-databases/sql-server-configuration-manager.md)
 + Vínculos e información del[Centro de actualizaciones de SQL Server](https://msdn.microsoft.com/library/ff803383.aspx) sobre todas las versiones compatibles 
 + [Instalar el motor de base de datos de SQL Server](../database-engine/install-windows/install-sql-server-database-engine.md) 
@@ -88,5 +91,8 @@ También puede ver la documentación de SQL Server sin conexión mediante el Vis
 + [Herramientas de datos de SQL Server en Visual Studio 2015](https://msdn.microsoft.com/mt186501.aspx)
 + [Vídeos, ejemplos y recursos de la comunidad](https://msdn.microsoft.com/library/dn237258.aspx)
   
-[!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
+##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) Comunicación con el equipo de ingeniería de SQL Server 
+- [Stack Overflow en español (etiqueta sql server): preguntas técnicas](http://stackoverflow.com/questions/tagged/sql-server)
+- [Foros de MSDN: preguntas técnicas](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
+- [Microsoft Connect: informar sobre errores y solicitar características](https://connect.microsoft.com/SQLServer/Feedback)
+- [Reddit: debate general sobre SQL Server](https://www.reddit.com/r/SQLServer/)

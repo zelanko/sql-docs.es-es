@@ -20,12 +20,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: f7e12ebcec8e06828430e10c377205e2421f50f4
 ms.contentlocale: es-es
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Instalar Reporting y en paralelo de los servicios de Internet Information Server
-<a id="install-reporting-and-internet-information-services-side-by-side" class="xliff"></a>
+# <a name="install-reporting-and-internet-information-services-side-by-side"></a>Instalar Reporting y en paralelo de los servicios de Internet Information Server
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -37,8 +36,7 @@ Puede instalar y ejecutar SQL Server Reporting Services (SSRS) y servicios de In
 |-----------------|------------|-----------------|  
 |8.0, 8.5|Las solicitudes destinadas a una aplicación las acepta una aplicación diferente.<br /><br /> HTTP.SYS exige reglas de prioridad para las reservas de direcciones URL. Puede que las solicitudes que se envían a aplicaciones con el mismo nombre de directorio virtual y que supervisan de manera conjunta el puerto 80, no alcancen el destino deseado si la reserva de direcciones URL es débil en relación con la reserva de direcciones URL de otra aplicación.|En determinadas condiciones, un extremo registrado que reemplaza otro extremo de dirección URL en el esquema de reserva de direcciones URL podría recibir solicitudes HTTP pensadas para la otra aplicación.<br /><br /> El uso de nombres de directorio virtual únicos para el servicio web del servidor de informes y el [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] ayuda a evitar este conflicto.<br /><br /> En este tema se proporciona información detallada acerca de este escenario.|  
   
-## Reglas de prioridad para las reservas de direcciones URL
-<a id="precedence-rules-for-url-reservations" class="xliff"></a>  
+## <a name="precedence-rules-for-url-reservations"></a>Reglas de prioridad para las reservas de direcciones URL  
  Para poder resolver problemas de interoperabilidad entre IIS y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debe entender las reglas de prioridad de reserva de direcciones URL. Las reglas de prioridad se pueden generalizar en la instrucción siguiente: una reserva de direcciones URL que tiene valores definidos de forma más explícita se encuentra en la primera posición para recibir solicitudes que coinciden con la dirección URL.  
   
 -   Una reserva de direcciones URL que especifica un directorio virtual es más explícita que una que omite un directorio virtual.  
@@ -59,8 +57,7 @@ Puede instalar y ejecutar SQL Server Reporting Services (SSRS) y servicios de In
   
  Una indicación de que hay un conflicto en el puerto es que verá el siguiente mensaje de error: 'System.IO.FileLoadException: El proceso no puede tener acceso al archivo porque está siendo utilizado en otro proceso. (Excepción de HRESULT: 0x80070020).'.  
   
-## Reservas de direcciones URL para IIS 8.0 y 8.5 con SQL Server Reporting Services
-<a id="url-reservations-for-iis-80-85-with-sql-server-reporting-services" class="xliff"></a>  
+## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>Reservas de direcciones URL para IIS 8.0 y 8.5 con SQL Server Reporting Services  
  Dadas las reglas de prioridad descritas en la sección anterior, puede empezar a entender cómo las reservas de direcciones URL definidas para Reporting Services e IIS promueven la interoperabilidad. Reporting Services recibe las solicitudes que especifican explícitamente los nombres de directorio virtual para sus aplicaciones; IIS recibe todas las solicitudes restantes, que se pueden dirigir a continuación a las aplicaciones que se ejecutan dentro del modelo de proceso de IIS.  
   
 |Aplicación|Reserva de direcciones URL|Descripción|Confirmación de solicitud|  
@@ -69,8 +66,7 @@ Puede instalar y ejecutar SQL Server Reporting Services (SSRS) y servicios de In
 |Portal web|`http://+:80/Reports`|Carácter comodín fuerte en el puerto 80, con directorio virtual Reports.|Recibe todas las solicitudes del puerto 80 que especifican el directorio virtual de informes. El [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] recibe todas las solicitudes para http://\<nombreDeEquipo > / reports.|  
 |IIS|`http://*:80/`|Carácter comodín débil en el puerto 80.|Recibe las solicitudes restantes del puerto 80 que no recibe ninguna otra aplicación.|  
 
-## Implementaciones en paralelo de SQL Server Reporting Services en IIS 8.0 y 8.5
-<a id="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85" class="xliff"></a>
+## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>Implementaciones en paralelo de SQL Server Reporting Services en IIS 8.0 y 8.5
 
  Los problemas de interoperabilidad entre IIS y Reporting Services se producen cuando los sitios web de IIS tienen nombres de directorio virtual idénticos a los usados por Reporting Services. Por ejemplo, supongamos que tiene la siguiente configuración:  
   
@@ -88,8 +84,7 @@ Puede instalar y ejecutar SQL Server Reporting Services (SSRS) y servicios de In
   
 -   Para las instalaciones que configure manualmente, adopte las convenciones de nomenclatura predeterminadas en las direcciones URL que configure. Si instala [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] como una instancia con nombre, incluya el nombre de la instancia al crear un directorio virtual.  
 
-## Pasos siguientes
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Pasos siguientes
 
 [Configurar direcciones URL del servidor de informes](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [Configurar una dirección URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   

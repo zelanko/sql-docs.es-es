@@ -23,12 +23,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 3a8ed8433d06f9f0250c42f6e5a190bc64e30235
 ms.contentlocale: es-es
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Novedades de SQL Server Reporting Services (SSRS)
-<a id="whats-new-in-sql-server-reporting-services-ssrs" class="xliff"></a>
+# <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novedades de SQL Server Reporting Services (SSRS)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -48,8 +47,7 @@ Obtenga información acerca de cuáles son las novedades en SQL Server [!INCLUDE
 
 Para obtener información sobre el servidor de informes de Power BI, consulte [empezar a trabajar con el servidor de informes de Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
 
-## Diseñador compatibilidad con consultas de DAX ahora en el generador de informes y las herramientas de datos de SQL Server
-<a id="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools" class="xliff"></a>
+## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>Diseñador compatibilidad con consultas de DAX ahora en el generador de informes y las herramientas de datos de SQL Server
 
 En las últimas versiones del generador de informes y SQL Server Data Tools – Release Candidate, ahora puede crear consultas nativas de DAX sobre los modelos de datos tabulares de Analysis Services de SQL Server admitidos. Puede utilizar el Diseñador de consultas en ambas herramientas para arrastrar y colocar los campos que desee y tener la consulta DAX generada automáticamente en lugar de escribir usted mismo.  
  
@@ -60,11 +58,9 @@ Leer más sobre la [blog de Reporting Services](https://blogs.msdn.microsoft.com
 
 > **Tenga en cuenta**: solo se puede utilizar el Diseñador de consultas de DAX con orígenes de datos tabulares de SSAS integrados en SQL Server 2016 +.
  
-## Novedades de SQL Server 2016
-<a id="whats-new-in-sql-server-2016" class="xliff"></a>
+## <a name="whats-new-in-sql-server-2016"></a>Novedades de SQL Server 2016
   
-### Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]
-<a id="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd" class="xliff"></a>  
+### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
  Un nuevo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] está disponible. Se trata de un portal actualizado y moderno que incorpora KPI, informes móviles, informes paginados y archivos de Excel y Power BI Desktop. El [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] reemplaza al Administrador de informes de versiones anteriores. También puede descargar el Publicador de informes móviles y el Generador de informes desde el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] , sin que sea necesario usar la tecnología ClickOnce.
  
  Para crear informes móviles, necesitará el [!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short-md.md)].  
@@ -73,14 +69,12 @@ Leer más sobre la [blog de Reporting Services](https://blogs.msdn.microsoft.com
   
  ![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
  
- #### Personalización de marca para el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]
-<a id="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd" class="xliff"></a> 
+ #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Personalización de marca para el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
   Puede personalizar el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] con el logotipo y los colores de su organización con un paquete de personalización de marca.  
   
   Para más información sobre la personalización de marca, consulte [Personalización de marca del portal web](http://msdn.microsoft.com/en-us/6dac97f7-02a6-4711-81a3-e850a6b40bf1).
  
- #### Indicadores de rendimiento clave (KPI) en el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]
-<a id="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd" class="xliff"></a> 
+ #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Indicadores de rendimiento clave (KPI) en el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
 Puede crear KPI directo en el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] que sean contextuales a la carpeta en que se encuentra. Al crear los KPI, puede elegir campos de conjunto de datos y resumir esos valores. También puede seleccionar contenido relacionado para la obtención de detalles.
   
@@ -89,29 +83,25 @@ Puede crear KPI directo en el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/
  Para más información, vea [Uso de los KPI en Reporting Services](http://msdn.microsoft.com/en-us/a28cf500-6d47-4268-a248-04837e7a09eb)
   
  
- ### Mobile Reports (Informes móviles)
-<a id="mobile-reports" class="xliff"></a>
+ ### <a name="mobile-reports"></a>Mobile Reports (Informes móviles)
  
 Los informes móviles de Reporting Services son informes dedicados optimizados para una amplia variedad de factores de forma y para ofrecer una experiencia óptima para usuarios que accedan a informes en dispositivos móviles. Los informes móviles cuentan con una amplia variedad de visualizaciones, desde gráficos de tiempo, categoría y comparación, hasta gráficos de rectángulos y mapas personalizados. Puede conectar sus informes móviles a una gran variedad de orígenes de datos, como datos tabulares y multidimensionales de SQL Server Analysis Services local. Cree informes móviles en una superficie de diseño con cuadrícula ajustable de filas y columnas, y elementos flexibles de informes móviles que se escalan correctamente para cualquier tamaño de pantalla. Después, guarde estos informes móviles en un servidor de Reporting Services y visualice e interactúe con estos en un explorador o en la aplicación móvil de Power BI en dispositivos iPad, iPhone, Android y Windows 10.
   
-#### Publicador de informes móviles
-<a id="mobile-report-publisher" class="xliff"></a>  
+#### <a name="mobile-report-publisher"></a>Publicador de informes móviles  
  El [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)]le permite crear y publicar informes móviles de SQL Server en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)].  
   
  ![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
   
  Para más información, vea [Creación y publicación de informes móviles con el Publicador de informes móviles de SQL Server](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
   
-#### Informes móviles de SQL Server hospedados en Reporting Services disponibles en la aplicación móvil de Power BI
-<a id="sql-server-mobile-reports-hosted-in-reporting-services-available-in-power-bi-mobile-app" class="xliff"></a>  
+#### <a name="sql-server-mobile-reports-hosted-in-reporting-services-available-in-power-bi-mobile-app"></a>Informes móviles de SQL Server hospedados en Reporting Services disponibles en la aplicación móvil de Power BI  
  La aplicación móvil de Power BI para iOS en iPad y iPhone puede mostrar ahora informes móviles de SQL Server hospedados en el servidor de informes local.  
   
  ![SS_MRP_iPad_HomeSm](../reporting-services/media/ss-mrp-ipad-homesm.png "SS_MRP_iPad_HomeSm")  
   
  No puede conectarse de forma predeterminada sin realizar algunos cambios en la configuración. Para obtener más información sobre cómo permitir que la aplicación móvil de Power BI se conecte a su servidor de informes, consulte [Enable a report server for Power BI Mobile access](../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md).
   
-### Compatibilidad del modo de SharePoint y SharePoint 2016
-<a id="support-of-sharepoint-mode-and-sharepoint-2016" class="xliff"></a>  
+### <a name="support-of-sharepoint-mode-and-sharepoint-2016"></a>Compatibilidad del modo de SharePoint y SharePoint 2016  
  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite la integración con SharePoint 2013 y SharePoint 2016.
  
 Para obtener más información, vea:  
@@ -122,12 +112,10 @@ Para obtener más información, vea:
   
 -   [Instalar el modo de SharePoint de Reporting Services](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)  
 
-### Compatibilidad con Microsoft .NET Framework 4
-<a id="microsoft-net-framework-4-support" class="xliff"></a>  
+### <a name="microsoft-net-framework-4-support"></a>Compatibilidad con Microsoft .NET Framework 4  
  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] admite las versiones actuales de Microsoft .NET Framework 4. Esto incluye la versión 4.0 y 4.5.1. Si no hay instalada ninguna versión de .NET Framework 4.x, la configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instalará .NET 4.0 durante el paso de instalación de las características.  
 
-### Mejoras del informe
-<a id="report-improvements" class="xliff"></a>
+### <a name="report-improvements"></a>Mejoras del informe
 
 **Motor de representación HTML 5:** un nuevo motor de representación HTML5 destinado al modo de estándares modernos web "completos" y a los exploradores modernos.  El nuevo motor de representación ya no cuenta con el modo de interpretación usado por algunos exploradores antiguos.
   
@@ -161,8 +149,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 ![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
 
-### Mejoras en la suscripción
-<a id="subscription-improvements" class="xliff"></a>  
+### <a name="subscription-improvements"></a>Mejoras en la suscripción  
  
 |Característica|Modo de servidor admitido|  
 |-------------|---------------------------|  
@@ -171,12 +158,10 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 |**Cambiar el propietario de la suscripción**. Se ha mejorado la interfaz de usuario para poder cambiar rápidamente el propietario de una suscripción. Las versiones anteriores de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] permiten a los administradores cambiar los propietarios de la suscripción con un script. A partir de la versión de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] , puede cambiar los propietarios de la suscripción con la interfaz de usuario o con un script. El cambio del propietario de una suscripción es una tarea administrativa común cuando los usuarios dejan la organización o cuando cambian sus roles.|Modo nativo y SharePoint|  
 |**Credenciales compartidas para las suscripciones de recurso compartido de archivos**. Ahora existen dos flujos de trabajo con las suscripciones de recurso compartido de archivos de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :<br /><br /> Como novedad de esta versión, el administrador de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] puede configurar una única cuenta de recurso compartido de archivos, que se usa para una o para varias suscripciones. Para configurar la cuenta de recurso compartido de archivos, el administrador de configuración del modo nativo de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] debe definir la opción **Specify a file share account**(Especificar una cuenta de recurso compartido de archivos) y, después, en la página de configuración de la suscripción, los usuarios deben seleccionar **Use file share account**(Usar la cuenta de recurso compartido de archivos).<br /><br /> Configure suscripciones individuales con credenciales específicas para el recurso compartido de archivos de destino.<br /><br /> También puede combinar los dos enfoques y definir que algunas suscripciones de recurso compartido de archivos usen la cuenta central de recurso compartido de archivos mientras otras suscripciones usan credenciales específicas.|en modo nativo|  
 
-### SQL Server Data Tools (SSDT)
-<a id="sql-server-data-tools-ssdt" class="xliff"></a>  
+### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
  En la nueva versión de SSDT se incluyen plantillas de proyecto para [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: Asistente de proyectos de servidor de informes y Proyecto de servidor de informes. Para obtener más información acerca de la descarga de SSDT, consulte [SQL Server Data Tools para Visual Studio 2015](http://go.microsoft.com/fwlink/?LinkId=827542).  
 
-### Mejoras del generador de informes
-<a id="report-builder-improvements" class="xliff"></a>
+### <a name="report-builder-improvements"></a>Mejoras del generador de informes
 
 **Nueva interfaz de usuario del Generador de informes:** la interfaz de usuario principal de [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] ahora tiene una apariencia moderna, con elementos de interfaz de usuario simplificados.  
   
@@ -196,8 +181,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
   
 -   [Valores altos de PPP y Windows 8.1](http://technet.microsoft.com/library/dn528848.aspx)  
 
-## Pasos siguientes
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Pasos siguientes
 
 [Novedades de Analysis Services](http://msdn.microsoft.com/en-us/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [Versión preliminar técnica de informes de Power BI en SSRS: notas de la versión](../reporting-services/reporting-services-release-notes.md)  

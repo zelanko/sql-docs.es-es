@@ -29,11 +29,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: fb5790cb0eaf8b160de98b2fa7ff3c327f654336
 ms.contentlocale: es-es
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Compatibilidad del explorador de Reporting Services y Power View
-<a id="browser-support-for-reporting-services-and-power-view" class="xliff"></a>
+# <a name="browser-support-for-reporting-services-and-power-view"></a>Compatibilidad del explorador de Reporting Services y Power View
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -42,8 +41,7 @@ Obtenga información sobre qué explorador versiones son compatibles para la adm
 > [!NOTE]
 > Integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
 
-## Requisitos del explorador para el portal web
-<a id="browser-requirements-for-the-web-portal" class="xliff"></a>
+## <a name="browser-requirements-for-the-web-portal"></a>Requisitos del explorador para el portal web
 
 La siguiente es la lista actual de los exploradores admitidos para el portal web.
 
@@ -73,8 +71,7 @@ La siguiente es la lista actual de los exploradores admitidos para el portal web
 
  **(+)** Última versión publicada
 
-## Requisitos del explorador para el control web ReportViewer (2015)
-<a id="browser-requirements-for-the-reportviewer-web-control-2015" class="xliff"></a>
+## <a name="browser-requirements-for-the-reportviewer-web-control-2015"></a>Requisitos del explorador para el control web ReportViewer (2015)
 
  Esta es la lista actual de exploradores compatibles con el control web ReportViewer (2015). El visor de informes permite ver informes desde el portal web de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y desde bibliotecas de SharePoint.  
 
@@ -95,8 +92,7 @@ La siguiente es la lista actual de los exploradores admitidos para el portal web
 
  Si usa un producto de SharePoint integrado con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vea  [Planear la compatibilidad con exploradores en SharePoint 2016](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
 
-### Requisitos de autenticación
-<a id="authentication-requirements" class="xliff"></a>
+### <a name="authentication-requirements"></a>Requisitos de autenticación
 
  Los exploradores admiten esquemas de autenticación concretos que deben ser administrados por el servidor de informes para que la solicitud del cliente tenga éxito. En la tabla siguiente se identifican los tipos de autenticación predeterminados que admite cada explorador que se ejecuta en un sistema operativo Windows.
 
@@ -110,8 +106,7 @@ La siguiente es la lista actual de los exploradores admitidos para el portal web
 
  **(+)** Última versión publicada
 
-### Requisitos de script para ver informes
-<a id="script-requirements-for-viewing-reports" class="xliff"></a>
+### <a name="script-requirements-for-viewing-reports"></a>Requisitos de script para ver informes
 
  Para usar el Visor de informes, configure el explorador para que ejecute scripts.
 
@@ -124,8 +119,7 @@ La siguiente es la lista actual de los exploradores admitidos para el portal web
 > [!NOTE]
 > La barra de herramientas Informes forma parte del componente Visor HTML. De forma predeterminada la barra de herramientas aparece en la parte superior de todos los informes que se representan en una ventana de explorador. El visor de informes proporciona características entre las que se incluyen la posibilidad de buscar información en el informe, desplazarse a una página específica y ajustar el tamaño de página para la visualización. Para obtener más información acerca de la barra de herramientas Informes o el Visor HTML, vea [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md).
 
-## Compatibilidad del explorador con los controles de servidor web ReportViewer en Visual Studio
-<a id="browser-support-for-reportviewer-web-server-controls-in-visual-studio" class="xliff"></a>
+## <a name="browser-support-for-reportviewer-web-server-controls-in-visual-studio"></a>Compatibilidad del explorador con los controles de servidor web ReportViewer en Visual Studio
 
  El control de servidor web ReportViewer se emplea para incrustar funcionalidad de informes en una aplicación web ASP.NET. Los controles se incluyen con Visual Studio y admiten otros exploradores y versiones de explorador que de los demás componentes descritos en este tema. El tipo de explorador utilizado para ver la aplicación determina el tipo de funcionalidad de ReportViewer que puede ofrecer en la aplicación. Use la tabla que se facilita en este tema para determinar qué exploradores admitidos están sujetos a las restricciones de la funcionalidad de informes y las plataformas admitidas.  
 
@@ -141,8 +135,7 @@ La siguiente es la lista actual de los exploradores admitidos para el portal web
 
  **(+)** Última versión publicada
 
-## Compatibilidad con exploradores para Power View
-<a id="power-view-browser-support" class="xliff"></a>
+## <a name="power-view-browser-support"></a>Compatibilidad con exploradores para Power View
 
 **Microsoft Windows**  
 *Windows 7, 8.1, 10; Windows Server 2008 R2, 2012, 2012 R2*
@@ -159,8 +152,7 @@ La siguiente es la lista actual de los exploradores admitidos para el portal web
 
  Para más información sobre la compatibilidad con exploradores de SharePoint 2016, vea [Planear la compatibilidad con exploradores en SharePoint 2013](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
 
-## Pasos siguientes
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Pasos siguientes
 
 [Buscar y ver informes en el portal web](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Herramientas de Reporting Services](../reporting-services/tools/reporting-services-tools.md)  

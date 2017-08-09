@@ -26,11 +26,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 10ec05b662839e5cf2aac0d756d7ae581bdf8de9
 ms.contentlocale: es-es
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Diseñador de alertas de datos
-<a id="data-alert-designer" class="xliff"></a>
+# <a name="data-alert-designer"></a>Diseñador de alertas de datos
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -68,8 +67,7 @@ Las definiciones de alertas de datos se crean y editan en el Diseñador de alert
  ![Las distintas áreas de la interfaz de usuario del Diseñador de alertas](../reporting-services/media/rs-alertdesigner.gif "áreas dentro de la interfaz de usuario del Diseñador de alertas")  
   
   
-### Datos de la alerta
-<a id="alert-data" class="xliff"></a>  
+### <a name="alert-data"></a>Datos de la alerta  
  Cuando se abre el Diseñador de alertas de datos, este genera y hace que estén disponibles todas las fuentes de distribución de datos del informe, y la lista desplegable **Nombre de los datos de informe** contiene los nombres de las fuentes. Las fuentes de distribución de datos se almacenan en la memoria caché mientras se crea la definición de la alerta y la tabla que muestra los datos de la fuente de distribución de datos se llena rápidamente al cambiar entre las fuentes de distribución de datos para explorar los datos del informe.  
   
  El primer paso para crear una definición de alerta de datos consiste en seleccionar la fuente de distribución de datos del informe que contiene los datos que desea que supervise la alerta. Los informes pueden tener varias fuentes de distribución de datos o ninguna. Si un informe no tiene ninguna fuente de distribución de datos, no es posible crear alertas para el mismo. Una fuente de distribución de datos se puede generar mediante cualquier región de datos, incluidos todos los tipos de gráficos, medidores e indicadores, así como tablas, matrices y listas.  
@@ -82,14 +80,12 @@ Las definiciones de alertas de datos se crean y editan en el Diseñador de alert
   
  Algunos informes tienen millones de filas de datos. La tabla solo muestra las 100 primeras filas de datos de la fuente.  
   
-### Nombre de la alerta
-<a id="alert-name" class="xliff"></a>  
+### <a name="alert-name"></a>Nombre de la alerta  
  De forma predeterminada, la definición de la alerta tiene el mismo nombre que el informe. Puede cambiar el nombre de la alerta para que sea más significativo. Esto facilita la administración de las alertas, así como determinar las alertas que es preciso actualizar, eliminar, etcétera.  
   
  Puede crear varias alertas en un informe. Es posible tener varias definiciones de alertas con el mismo nombre, pero se recomienda que use nombres únicos para las alertas. Facilita la labor de distinguir y administrar las definiciones de alertas. Puede ver una lista de todas las alertas que ha creado en el Administrador de alertas de datos. Para obtener más información, vea [Administrador de alertas de datos para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md) y [Administrar mis alertas de datos en el Administrador de alertas de datos](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
-### Reglas y cláusulas
-<a id="rules-and-clauses" class="xliff"></a>  
+### <a name="rules-and-clauses"></a>Reglas y cláusulas  
  El ámbito de los cambios en los datos y las reglas de la alerta definen los cambios en los datos que desencadenan la alerta. El ámbito de los cambios en los datos es el siguiente:  
   
 -   **Cualquier dato tiene**: al menos un valor de los datos satisface las reglas especificadas por la condición.  
@@ -160,8 +156,7 @@ Las definiciones de alertas de datos se crean y editan en el Diseñador de alert
   
  Las reglas y las cláusulas se incluyen en el mensaje de alerta de datos.  
   
-### Configuración de la programación
-<a id="schedule-settings" class="xliff"></a>  
+### <a name="schedule-settings"></a>Configuración de la programación  
  La programación que se define para la alerta de datos define el patrón de periodicidad para enviar el mensaje de alerta de datos y cuándo iniciar y detener el envío de mensajes de alerta. Los patrones son: una vez, minuto, diaria y semanal. Aunque una alerta solo tiene una programación, puede crear patrones de periodicidad complejos que cubran la mayoría de las necesidades empresariales mediante estos intervalos. A continuación se ofrecen algunos ejemplos de patrones de periodicidad comunes para su uso en las programaciones:  
   
 -   **Diaria cada 10 días** : envía alertas una vez al día, cada 10 días.  
@@ -179,8 +174,7 @@ Las definiciones de alertas de datos se crean y editan en el Diseñador de alert
 > [!IMPORTANT]  
 >  Es recomendable que no use un patrón de periodicidad que sea más frecuente que el envío diario a menos que exista una importante razón empresarial para hacerlo. El procesamiento de la definición de alerta de datos en tiempo real no es un escenario admitido. El procesamiento de definiciones de alertas de datos afecta frecuentemente al rendimiento del servidor de informes y a la implementación de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en su conjunto.  
   
-### Configuración de correo electrónico
-<a id="email-settings" class="xliff"></a>  
+### <a name="email-settings"></a>Configuración de correo electrónico  
  Las direcciones de correo electrónico de los destinatarios que reciben mensajes de alertas de datos por correo electrónico se especifican en la opción **Destinatarios** . Si usa varias direcciones de correo electrónico, sepárelas mediante signos de punto y coma, tal como hace en los mensajes de correo electrónico de Microsoft Office Outlook. También puede especificar grupos de distribución como destinatarios, lo que permite administrar más fácil y eficazmente la lista de destinatarios. Si SharePoint puede determinar su dirección de correo electrónico mientras crea una definición de alerta, su dirección de correo electrónico se agrega automáticamente a la lista de destinatarios; en caso contrario, debe agregarse explícitamente como destinatario.  
   
  El asunto predeterminado del correo electrónico es **de alerta de datos para \<nombre de la alerta >**. Puede cambiar el asunto de acuerdo con sus necesidades.  
@@ -223,8 +217,7 @@ Las definiciones de alertas de datos se crean y editan en el Diseñador de alert
   
 -   [Crear una alerta de datos en el Diseñador de alertas de datos](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
 
-## Vea también
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Vea también
 
 [Alertas de datos de Reporting Services](../reporting-services/reporting-services-data-alerts.md)   
 [Administrador de alertas de datos para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md)  

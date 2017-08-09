@@ -1,5 +1,5 @@
 ---
-title: "Archivo de configuración RsReportServer.config | Documentos de Microsoft"
+title: "Archivo de configuración RSReportServer.config | Microsoft Docs"
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-server-2016
@@ -15,15 +15,15 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 64cab4cc760ee1af2c3777bca88be2663d8039a4
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
-# <a name="rsreportserverconfig-configuration-file"></a>El archivo de configuración RSReportServer.config
-El [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **RsReportServer.config** archivo almacena valores que son utilizados por el servicio Web del servidor de informes y procesamiento en segundo plano. Todas las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se ejecutan dentro de un proceso único que lee la configuración almacenada en el archivo RSReportServer.config. Los servidores de informes de modo nativo y SharePoint usan el archivo RSReportServer.config, pero los dos modos no usan los mismos valores en el archivo de configuración. La versión del modo de SharePoint del archivo es más pequeña porque muchas de las configuraciones del modo de SharePoint se almacenan en las bases de datos de configuración de SharePoint y no en el archivo. En este tema se describe el archivo de configuración predeterminado que se instala en el modo nativo y en el modo de SharePoint, y algunos de los valores y comportamientos importantes que se controlan mediante el archivo de configuración.  
+# <a name="rsreportserverconfig-configuration-file"></a>Archivo de configuración RSReportServer.config
+El archivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** almacena valores que utiliza el servicio web del servidor de informes y los procesamientos en segundo plano. Todas las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se ejecutan dentro de un proceso único que lee la configuración almacenada en el archivo RSReportServer.config. Los servidores de informes de modo nativo y SharePoint usan el archivo RSReportServer.config, pero los dos modos no usan los mismos valores en el archivo de configuración. La versión del modo de SharePoint del archivo es más pequeña porque muchas de las configuraciones del modo de SharePoint se almacenan en las bases de datos de configuración de SharePoint y no en el archivo. En este tema se describe el archivo de configuración predeterminado que se instala en el modo nativo y en el modo de SharePoint, y algunos de los valores y comportamientos importantes que se controlan mediante el archivo de configuración.  
 
 En el modo de SharePoint, el archivo de configuración contiene los valores que se aplican a todas las instancias de aplicación de servicio que se ejecutan en ese equipo. La base de datos de configuración de SharePoint contiene los valores de configuración correspondientes a las aplicaciones de servicio concretas. Los valores que se almacenan en la base de datos de configuración y que se administran a través de las páginas de administración de SharePoint pueden ser diferentes en cada aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -49,10 +49,10 @@ C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Repo
 C:\Program Files\Microsoft SQL Server Reporting Services\RSServer\ReportServer
 ```  
   
-### <a name="sharepoint-mode-report-server"></a>Servidor de informes de modo de SharePoint
+### <a name="sharepoint-mode-report-server"></a>Servidor de informes en modo de SharePoint
 
 > [!NOTE]
-> El modo integrado de SharePoint no está disponible con la de enero de 2017 los informes de vista previa técnica de Power BI de SQL Server Reporting Services.
+> En la versión de enero de 2017 de SQL Server Reporting Services, el modo integrado de SharePoint no está disponible con la versión preliminar de los informes de Power BI.
   
 ```  
 C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting  
@@ -71,9 +71,9 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
 |**Dsn**|Especifica la cadena de conexión al servidor de base de datos que hospeda la base de datos del servidor de informes. Este valor está cifrado y se agrega al archivo de configuración al crear la base de datos del servidor de informes. Para SharePoint, la información de conexión de la base de datos se toma de la base de datos de configuración de SharePoint.|N,S|  
 |**ConnectionType**|Especifica el tipo de credenciales que el servidor de informes utiliza para conectarse a la base de datos del servidor de informes. Los valores válidos son **Default** e **Impersonate**. Se especifica**Default** si el servidor de informes se configura para utilizar un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o la cuenta de servicio para conectarse con la base de datos del servidor de informes. Se especifica**Impersonate** si el servidor de informes usa una cuenta de Windows para conectarse con la base de datos del servidor de informes.|N|  
 |**LogonUser, LogonDomain, LogonCred**|Almacena el dominio, el nombre de usuario y la contraseña de una cuenta de dominio utilizada por un servidor de informes para conectarse a una base de datos del servidor de informes. Los valores de **LogonUser**, **LogonDomain**y **LogonCred** se crean cuando la conexión del servidor de informes se ha configurado para utilizar una cuenta de dominio. Para obtener más información sobre la conexión de base de datos del servidor de informes, vea [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).|N|  
-|**InstanceID**|Identificador de la instancia de servidor de informes. Los nombres de instancia del servidor de informes se basan en nombres de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este valor especifica un nombre de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . De forma predeterminada, este valor es **MSRS12***\<instancename >*. No modifique este parámetro. A continuación, se ofrece un ejemplo del valor completo: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> A continuación, se ofrece un ejemplo del modo de SharePoint:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
+|**InstanceID**|Identificador de la instancia de servidor de informes. Los nombres de instancia del servidor de informes se basan en nombres de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este valor especifica un nombre de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . De manera predeterminada, este valor es **MSRS12instancename***\<nombreDeInstancia>*. No modifique este parámetro. A continuación, se ofrece un ejemplo del valor completo: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> A continuación, se ofrece un ejemplo del modo de SharePoint:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
 |**InstallationID**|Identificador para la instalación del servidor de informes que crea el programa de instalación. Este valor se establece en un GUID. No modifique este parámetro.|N|  
-|**SecureConnectionLevel**|Especifica el grado en que las llamadas al servicio web deben usar Capa de sockets seguros (SSL). Esta configuración se utiliza para el servicio Web del servidor de informes y el portal web. Este valor se establece cuando se configura una dirección URL para utilizar HTTP o HTTPS en la herramienta de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . El intervalo de valores válidos es de 0 a 3, donde 0 es el menos seguro. Para obtener más información, vea [Usar métodos de servicio web seguros](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) y [Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|N,S|  
+|**SecureConnectionLevel**|Especifica el grado en que las llamadas al servicio web deben usar Capa de sockets seguros (SSL). Este valor se utiliza para el servicio web del servidor de informes y el portal web. Este valor se establece cuando se configura una dirección URL para utilizar HTTP o HTTPS en la herramienta de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . El intervalo de valores válidos es de 0 a 3, donde 0 es el menos seguro. Para obtener más información, vea [Usar métodos de servicio web seguros](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) y [Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|N,S|  
 |**DisableSecureFormsAuthenticationCookie**|El valor predeterminado es False.<br /><br /> Especifica si se deshabilita el forzado de la cookie usada para que la autenticación mediante formularios y personalizada se marquen como seguras. A partir de SQL Server 2012, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] marcará automáticamente las cookies de autenticación de formularios usadas con extensiones de autenticación personalizada como cookies seguras cuando se envíen al cliente. Al cambiar esta propiedad, los administradores del servidor de informes y los autores de extensiones de seguridad personalizadas pueden revertir al comportamiento anterior que permitía al autor de una extensión de seguridad personalizada determinar si se debía marcar la cookie como segura. Se recomienda usar cookies seguras para la autenticación de formularios con el fin de ayudar a evitar ataques de examen de red y reproducción.|N|  
 |**CleanupCycleMinutes**|Especifica los minutos tras los que se eliminarán las sesiones antiguas y las instantáneas expiradas de las bases de datos del servidor de informes. El intervalo de valores válidos es de 0 al entero máximo. El valor predeterminado es 10. Si el valor se establece en 0, se deshabilita el proceso de limpieza de la base de datos.|N,S|  
 |**MaxActiveReqForOneUser**|Especifica el número máximo de informes que puede procesar a la vez un usuario. Una vez alcanzado el límite, se deniegan las demás solicitudes de procesamiento de informes. Los valores válidos son de 1 al entero máximo. El valor predeterminado es 20.<br /><br /> Tenga en cuenta que la mayoría de las solicitudes se procesan con mucha rapidez, por lo que no es probable que un solo usuario tenga más de 20 conexiones abiertas al mismo tiempo. Si los usuarios abren más de 15 informes con un uso intensivo de procesos al mismo tiempo, puede que sea necesario aumentar este valor.<br /><br /> Este parámetro se omite en el caso de los servidores de informes que se ejecutan en el modo integrado de SharePoint.|N,S|  
@@ -83,7 +83,7 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
 |**AlertingExecutionLogCleanup**Minutes|El valor predeterminado es 10080.<br /><br /> Determina durante cuánto tiempo se conservan los valores del registro de ejecución de alertas. El valor predeterminado es 7 días.|S|  
 |**AlertingMaxDataRetentionDays**|El valor predeterminado es 180.<br /><br /> Determina durante cuánto tiempo se conservan los datos de alerta necesarios para evitar mensajes de alerta duplicados cuando los datos de la alerta no han cambiado.|S|  
 |**RunningRequestsScavengerCycle**|Especifica la frecuencia con la que se cancelan las solicitudes huérfanas y expiradas. El valor debe especificarse en segundos. El intervalo de valores válidos es de 0 al entero máximo. El valor predeterminado es 60.|N,S|  
-|**RunningRequestsDbCycle**|Especifica la frecuencia con el servidor de informes evalúa los trabajos en ejecución para comprobar si han superado los tiempos de espera de ejecución de informes y cuando se debe presentar la información trabajo curso en la página Administrar trabajos del portal web. El valor debe especificarse en segundos. Los valores válidos oscilan entre 0 y 2147483647. El valor predeterminado es 60.|N,S|  
+|**RunningRequestsDbCycle**|Especifica la frecuencia con la que el servidor de informes evalúa los trabajos en ejecución para comprobar si han superado los tiempos de espera de ejecución de informes, así como el momento en el que se debe presentar la información del trabajo en curso en la página Administrar trabajos del portal web. El valor debe especificarse en segundos. Los valores válidos oscilan entre 0 y 2147483647. El valor predeterminado es 60.|N,S|  
 |**RunningRequestsAge**|Especifica un intervalo, en segundos, tras el que el estado de un trabajo en ejecución cambia de "nuevo" a "en ejecución". Los valores válidos oscilan entre 0 y 2147483647. El valor predeterminado es 30.|N,S|  
 |**MaxScheduleWait**|Especifica los segundos que espera el servicio del servidor de informes de Windows para que el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actualice una programación cuando se solicita la **hora siguiente de ejecución** . Los valores válidos oscilan entre 1 y 60.<br /><br /> En el archivo de configuración predeterminado, MaxScheduleWait se establece en **5**.<br /><br /> Si el servidor de informes no puede encontrar o leer el archivo de configuración, el servidor usa el valor predeterminado 1 para MaxScheduleWait.|N,S|  
 |**DisplayErrorLink**|Indica si se muestra un vínculo al sitio de Ayuda y soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] cuando se producen errores. Este vínculo aparece en los mensajes de error. Los usuarios pueden hacer clic en el vínculo para abrir el contenido actualizado de mensajes de error de este sitio. Los valores válidos son **True** (predeterminado) y **False**.|N,S|  
@@ -93,7 +93,7 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
 |**WatsonDumpExcludeIfContainsExceptions**|Especifica una lista de excepciones que no se van notificar en un registro de errores. Esto resulta útil cuando se diagnostica un problema y no se desea que el servidor cree volcados para una excepción específica.|N,S|  
   
 ##  <a name="bkmk_URLReservations"></a> URLReservations (archivo RSReportServer.config)  
- **URLReservations** define el acceso HTTP al servicio Web del servidor de informes y el portal web de la instancia actual. Las direcciones URL se reservan y almacenan en HTTP.SYS al configurar el servidor de informes.  
+ **URLReservations** define el acceso HTTP al servicio web del servidor de informes y al portal web para la instancia actual. Las direcciones URL se reservan y almacenan en HTTP.SYS al configurar el servidor de informes.  
   
 > [!WARNING]  
 >  En el modo de SharePoint, las reservas de direcciones URL se configuran en Administración central de SharePoint. Para obtener más información, vea [Configuración de asignación de acceso alternativa (http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
@@ -170,20 +170,20 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
 |**UnattendedExecutionAccount**|Especifica un nombre de usuario, una contraseña y un dominio que utiliza el servidor de informes para ejecutar un informe. Estos valores están cifrados. Use la herramienta de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o la utilidad **rsconfig** para establecer estos valores. Para obtener más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).<br /><br /> Para el modo de SharePoint, la cuenta de ejecución se establece para una aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mediante Administración central de SharePoint. Para obtener más información, vea [Administrar una aplicación de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).|N|  
 |**PolicyLevel**|Especifica el archivo de configuración de la directiva de seguridad. El valor válido es Rssrvrpolicy.config. Para obtener más información, vea [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|N,S|  
 |**IsWebServiceEnabled**|Especifica si el servicio web del servidor de informes responde a las solicitudes de acceso de SOAP y dirección URL. Se establece este valor al habilitar o deshabilitar el servicio utilizando la faceta Configuración de área expuesta para Reporting Services en Administración basada en directivas.|N,S|  
-|**IsReportManagerEnabled**|Esta opción está en desuso a partir de SQL Server 2016 Reporting Services actualización acumulativa 2. Siempre se habilitará el portal web.|N|  
+|**IsReportManagerEnabled**|Esta opción está en desuso desde la actualización acumulativa 2 de SQL Server 2016 Reporting Services. El portal web siempre estará habilitado.|N|  
 |**FileShareStorageLocation**|Especifica una sola carpeta en el sistema de archivos para almacenar instantáneas temporales. Aunque se puede especificar la ruta de carpeta como una ruta de acceso UNC, no es recomendable. El valor predeterminado está vacío.<br /><br /> `<FileShareStorageLocation>`<br /><br /> `<Path>`<br /><br /> `</Path>`<br /><br /> `</FileShareStorageLocation>`|N,S|  
 |**IsRdceEnabled**|Especifica si está habilitada la extensión de personalización de definición de informe (Report Definition Customization Extension, RDCE). Los valores válidos son **True** y **False**.|N,S|  
   
 ##  <a name="bkmk_UI"></a> UI (archivo RSReportServer.config)  
- **Interfaz de usuario** especifica la configuración que se aplican a la aplicación de portal web.  
+ **UI** especifica la configuración que se establece para la aplicación del portal web.  
   
  La última columna de la tabla siguiente indica si el valor se aplica a un servidor de informes de modo nativo (N), un servidor de modo de SharePoint (S) o ambos.  
   
 |Configuración|Description|Modo|  
 |-------------|-----------------|----------|  
-|**ReportServerUrl**|Especifica la dirección URL del servidor de informes que se conecta el portal web. Solo modifique este valor si va a configurar el portal web para conectarse a un servidor de informes en otra instancia o en un equipo remoto.|N,S|  
+|**ReportServerUrl**|Especifica la URL del servidor de informes a la que se conecta el portal web. Solo modifique este valor si configura el portal web para conectarse a un servidor de informes en otra instancia o en un equipo remoto.|N,S|  
 |**ReportBuilderTrustLevel**|No modifique este valor; no es configurable. En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y versiones posteriores, el Generador de informes solo se ejecuta en **FullTrust**. Para obtener más información, vea [Configurar el acceso al Generador de informes](../../reporting-services/report-server/configure-report-builder-access.md) . Para obtener más información sobre cómo interrumpir el modo de confianza parcial, vea [Funcionalidad de SQL Server Reporting Services no incluida en SQL Server 2016](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md).|N,S|  
-|**PageCountMode**|Solo el portal web, esta configuración especifica si el servidor de informes calcula un valor de número de página antes de presentar el informe o tal y como se ve el informe. Los valores válidos son **Estimate** (predeterminado) y **Actual**. Utilice **Estimate** para calcular la información del recuento de páginas tal y como el usuario ve el informe. Inicialmente, el recuento de páginas está establecido en 2 (para la página actual más una página adicional), pero ajusta hacia arriba conforme el usuario se desplaza por las páginas del informe. Use **Actual** si desea calcular el recuento de páginas antes de mostrar el informe. **Actual** se proporciona para mantener la compatibilidad con versiones anteriores. Tenga en cuenta que si establece **PageCountMode** en **Actual**, debe procesarse todo el informe para obtener un recuento de páginas válido, aumentando el tiempo de espera previo a que se muestre el informe.|N,S|  
+|**PageCountMode**|Solo para el portal web, este valor especifica si el servidor calcula un valor de recuento de páginas antes de que se represente el informe o en el momento de verse. Los valores válidos son **Estimate** (predeterminado) y **Actual**. Utilice **Estimate** para calcular la información del recuento de páginas tal y como el usuario ve el informe. Inicialmente, el recuento de páginas está establecido en 2 (para la página actual más una página adicional), pero ajusta hacia arriba conforme el usuario se desplaza por las páginas del informe. Use **Actual** si desea calcular el recuento de páginas antes de mostrar el informe. **Actual** se proporciona para mantener la compatibilidad con versiones anteriores. Tenga en cuenta que si establece **PageCountMode** en **Actual**, debe procesarse todo el informe para obtener un recuento de páginas válido, aumentando el tiempo de espera previo a que se muestre el informe.|N,S|  
   
 ##  <a name="bkmk_extensions"></a> Extensions (archivo RSReportServer.config) de modo nativo  
  La sección Extensions aparece en el archivo rsreportserver.config **únicamente para los servidores de informes de modo nativo** . La información de extensión para los servidores de informes de modo de SharePoint se almacena en la base de datos de configuración de SharePoint y se configura con aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -270,10 +270,10 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
 |**ExcludedRenderFormats, RenderingExtension**|Esta configuración se utiliza para excluir de forma intencionada los formatos de exportación que no funcionan correctamente con la entrega a la biblioteca de documentos. Se excluyen las extensiones de entrega HTMLOWC, RGDI y NULL. Estos formatos se utilizan normalmente para informes interactivos, vistas previas o la carga previa de la caché de informes. No generan archivos de aplicación que puedan verse fácilmente desde una aplicación de escritorio.|  
   
 ####  <a name="bkmk_null_extension"></a> Configuración de la extensión de entrega NULL  
- El proveedor de entrega NULL se utiliza para cargar previamente la caché con informes generados previamente para cada uno de los usuarios. No hay valores de configuración para esta extensión de entrega. Para obtener más información, vea [Informes almacenados en caché &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
+ El proveedor de entrega NULL se utiliza para cargar previamente la caché con informes generados previamente para cada uno de los usuarios. No hay valores de configuración para esta extensión de entrega. Para más información, vea [Informes almacenados en caché &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
   
 ###  <a name="bkmk_ui"></a> Configuración general de las extensiones de la interfaz de usuario de entrega  
- Especifica las extensiones de entrega que contienen un componente de la interfaz de usuario que aparece en las páginas de definición de suscripciones utilizadas al definir cada suscripción en el portal web. Si crea e implementa una extensión de entrega personalizada tiene opciones definidas por el usuario y desea usar el portal web, debe registrar la extensión de entrega en esta sección. De forma predeterminada, hay valores de configuración para el correo electrónico del servidor de informes y el recurso compartido de archivos del servidor de informes. Esta sección no incluye los valores para las extensiones de entrega utilizadas únicamente en suscripciones controladas por datos o en páginas de la aplicación de SharePoint.  
+ Especifica las extensiones de entrega que contienen un componente de la interfaz de usuario que aparece en las páginas de definición de suscripciones utilizadas al definir cada suscripción en el portal web. Si crea e implementa una extensión de entrega personalizada que tenga opciones definidas por el usuario y desea utilizar el portal web, debe registrar la extensión de entrega en esta sección. De forma predeterminada, hay valores de configuración para el correo electrónico del servidor de informes y el recurso compartido de archivos del servidor de informes. Esta sección no incluye los valores para las extensiones de entrega utilizadas únicamente en suscripciones controladas por datos o en páginas de la aplicación de SharePoint.  
   
 |Configuración|Description|  
 |-------------|-----------------|  
@@ -322,7 +322,7 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
   
 -   [Configuración de información de dispositivos para las extensiones de representación &#40;Reporting Services&#41;](../../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- Para obtener información acerca de los atributos para el elemento secundario  **\<extensión >** elemento bajo ** \<representar >**, vea lo siguiente:  
+ Para obtener información sobre los atributos del elemento secundario **\<Extension>**, supeditado a **\<Render>**, consulte lo siguiente:  
   
 -   [Personalizar los parámetros de extensión de representación en RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
@@ -393,7 +393,7 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
 ##  <a name="bkmk_nativedefaultfile"></a> Archivo de configuración predeterminada para un servidor de informes de modo nativo  
  El archivo rsreportserver.config se instala en la siguiente ubicación de forma predeterminada:  
   
- **C:\Program Files\Microsoft SQL Server\MSRS13. MSSQLSERVER\Reporting Services\ReportServer**  
+ **C:\Archivos de programa\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer**  
   
 ```  
 <Configuration>
@@ -727,7 +727,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 ##  <a name="bkmk_sharepointdefaultfile"></a> Archivo de configuración predeterminada para un servidor de informes de modo de SharePoint  
  El archivo rsreportserver.config se instala en la siguiente ubicación de forma predeterminada:  
   
- **C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting**  
+ **C:\Archivos de programa\Archivos comunes\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting**  
   
 ```  
 <Configuration>  
@@ -846,7 +846,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Almacenar datos cifrados del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- ¿Más preguntas? [Pruebe el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+ ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
   
   
 

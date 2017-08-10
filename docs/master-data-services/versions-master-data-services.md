@@ -74,23 +74,23 @@ ms.lasthandoff: 08/02/2017
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Cambiar el nombre de una versión existente.|[Cambiar un nombre de la versión & #40; Master Data Services & #41;](../master-data-services/change-a-version-name-master-data-services.md)|  
-|Bloquear una versión para que solo los administradores puedan editar sus datos.|[Bloquear una versión & #40; Master Data Services & #41;](../master-data-services/lock-a-version-master-data-services.md)|  
-|Desbloquear una versión para que los usuarios puedan editar sus datos.|[Desbloquear una versión & #40; Master Data Services & #41;](../master-data-services/unlock-a-version-master-data-services.md)|  
-|Confirmar una versión después de validar todos los datos.|[Confirmar una versión & #40; Master Data Services & #41;](../master-data-services/commit-a-version-master-data-services.md)|  
-|Crear una nueva marca para marcar una versión.|[Crear una marca de versión & #40; Master Data Services & #41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
-|Cambiar el nombre de una marca de versión existente.|[Cambiar el nombre de una marca de versión & #40; Master Data Services & #41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
-|Asignar una marca existente a una versión.|[Asignar una marca a una versión & #40; Master Data Services & #41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
-|Crear una nueva copia de una versión existente|[Copiar una versión & #40; Master Data Services & #41;](../master-data-services/copy-a-version-master-data-services.md)|  
+|Cambiar el nombre de una versión existente.|[Cambiar un nombre de la versión &#40; Master Data Services &#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
+|Bloquear una versión para que solo los administradores puedan editar sus datos.|[Bloquear una versión &#40; Master Data Services &#41;](../master-data-services/lock-a-version-master-data-services.md)|  
+|Desbloquear una versión para que los usuarios puedan editar sus datos.|[Desbloquear una versión &#40; Master Data Services &#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
+|Confirmar una versión después de validar todos los datos.|[Confirmar una versión &#40; Master Data Services &#41;](../master-data-services/commit-a-version-master-data-services.md)|  
+|Crear una nueva marca para marcar una versión.|[Crear una marca de versión &#40; Master Data Services &#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
+|Cambiar el nombre de una marca de versión existente.|[Cambiar el nombre de una marca de versión &#40; Master Data Services &#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|Asignar una marca existente a una versión.|[Asignar una marca a una versión &#40; Master Data Services &#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
+|Crear una nueva copia de una versión existente|[Copiar una versión &#40; Master Data Services &#41;](../master-data-services/copy-a-version-master-data-services.md)|  
 |Eliminar una versión existente.|[Eliminar una versión &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md)|  
 |Purga los miembros eliminados temporalmente de una versión.|[Purga de miembros de versión &#40;Master Data Services&#41;](../master-data-services/purge-version-members-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Invertir una transacción & #40; Master Data Services & #41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
+-   [Invertir una transacción &#40; Master Data Services &#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
--   [Las notificaciones de & #40; Master Data Services & #41;](../master-data-services/notifications-master-data-services.md)  
+-   [Las notificaciones de &#40; Master Data Services &#41;](../master-data-services/notifications-master-data-services.md)  
   
--   [Las reglas de negocios & #40; Master Data Services & #41;](../master-data-services/business-rules-master-data-services.md)  
+-   [Las reglas de negocios &#40; Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

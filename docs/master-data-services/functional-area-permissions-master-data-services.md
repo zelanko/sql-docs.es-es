@@ -50,9 +50,9 @@ ms.lasthandoff: 08/02/2017
  Un usuario o grupo deben disponer de permisos para al menos un área funcional y un modelo en la pestaña **Modelos** con el fin de tener acceso a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
- [Asignar permisos del área funcional & #40; Master Data Services & #41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)   
- [Permisos de objeto de modelo & #40; Master Data Services & #41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [Permisos de miembro de jerarquía & #40; Master Data Services & #41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [¿Cómo se determinan los permisos & #40; Master Data Services & #41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [Asignar permisos del área funcional &#40; Master Data Services &#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)   
+ [Permisos de objeto de modelo &#40; Master Data Services &#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [Permisos de miembro de jerarquía &#40; Master Data Services &#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [¿Cómo se determinan los permisos &#40; Master Data Services &#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

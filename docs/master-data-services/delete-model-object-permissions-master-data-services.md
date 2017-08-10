@@ -58,7 +58,7 @@ ms.lasthandoff: 08/02/2017
 9. Haga clic en **Guardar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Permisos de objeto de modelo & #40; Master Data Services & #41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [Asignar permisos de objeto de modelo & #40; Master Data Services & #41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
+ [Permisos de objeto de modelo &#40; Master Data Services &#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [Asignar permisos de objeto de modelo &#40; Master Data Services &#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
   

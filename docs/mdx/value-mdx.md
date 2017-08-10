@@ -44,7 +44,7 @@ Member_Expression[.Value]
  Expresión MDX válida que devuelve un miembro.  
   
 ## <a name="remarks"></a>Comentarios  
- El **valor** función devuelve el valor del miembro especificado como una cadena. El **valor** argumento es opcional porque el valor de un miembro es la propiedad predeterminada de un miembro y es el valor devuelto para un miembro si no se especifica ningún otro valor. Para obtener más información acerca de las propiedades de miembros, vea [propiedades de miembro intrínsecas & #40; MDX & #41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) y [propiedades de miembro definidas por el usuario & #40; MDX & #41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+ El **valor** función devuelve el valor del miembro especificado como una cadena. El **valor** argumento es opcional porque el valor de un miembro es la propiedad predeterminada de un miembro y es el valor devuelto para un miembro si no se especifica ningún otro valor. Para obtener más información acerca de las propiedades de miembros, vea [propiedades de miembro intrínsecas &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) y [propiedades de miembro definidas por el usuario &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve el valor de un miembro además de devolver explícitamente el nombre del miembro.  
@@ -65,11 +65,11 @@ from [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [MemberValue & #40; MDX & #41;](../mdx/membervalue-mdx.md)   
- [Propiedades & #40; MDX & #41;](../mdx/properties-mdx.md)   
- [Nombre de & #40; MDX & #41;](../mdx/name-mdx.md)   
- [UniqueName & #40; MDX & #41;](../mdx/uniquename-mdx.md)   
- [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MemberValue &#40; MDX &#41;](../mdx/membervalue-mdx.md)   
+ [Propiedades &#40; MDX &#41;](../mdx/properties-mdx.md)   
+ [Nombre de &#40; MDX &#41;](../mdx/name-mdx.md)   
+ [UniqueName &#40; MDX &#41;](../mdx/uniquename-mdx.md)   
+ [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
 

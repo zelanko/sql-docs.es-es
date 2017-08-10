@@ -105,8 +105,8 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [+ & #40; Unión & #41; & #40; MDX & #41;](../mdx/union-mdx-operator-reference.md)   
- [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [+ &#40; Unión &#41; &#40; MDX &#41;](../mdx/union-mdx-operator-reference.md)   
+ [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
 

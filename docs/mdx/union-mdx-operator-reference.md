@@ -48,7 +48,7 @@ Set_Expression + Set_Expression
  Un conjunto que contiene los miembros de ambos conjuntos especificados.  
   
 ## <a name="remarks"></a>Comentarios  
- El **+ (unión)** operador es funcionalmente equivalente a la [unión & #40; MDX & #41; ](../mdx/union-mdx.md) (función).  
+ El **+ (unión)** operador es funcionalmente equivalente a la [unión &#40; MDX &#41; ](../mdx/union-mdx.md) (función).  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se muestra el uso de este operador.  
@@ -66,7 +66,7 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de operadores MDX & #40; MDX & #41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Referencia de operadores MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   
 

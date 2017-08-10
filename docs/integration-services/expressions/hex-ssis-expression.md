@@ -80,6 +80,6 @@ HEX(@LocaleID)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones & #40; Expresión de SSIS & #41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [Funciones &#40; Expresión de SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

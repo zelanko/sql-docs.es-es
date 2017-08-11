@@ -19,11 +19,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 17df333a21a99d3f25c98cab94a0af7199ecf3a7
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter"></a>Agregar, cambiar o eliminar los valores disponibles para un parámetro de informe
@@ -81,12 +81,12 @@ ms.lasthandoff: 06/22/2017
      Cuando muestre una vista previa del informe, no verá la lista desplegable de valores disponibles para el parámetro.  
   
 ## <a name="see-also"></a>Vea también  
- [Cambiar el orden de un parámetro de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
- [Agregar, cambiar o eliminar parámetros de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [Agregar parámetros en cascada a un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [Agregar, cambiar o eliminar valores predeterminados para un parámetro de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)   
- [Usar referencias a la colección de parámetros &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)   
- [Tutorial: Agregar un parámetro a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
- [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [Cambiar el orden de un parámetro de informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [Agregar, cambiar o eliminar un parámetro de informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [Agregar parámetros en cascada a un informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [Agregar, cambiar o eliminar valores predeterminados para un parámetro de informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)   
+ [Referencias de la colección de parámetros &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)   
+ [Tutorial: Agregar un parámetro a un informe &#40; El generador de informes &#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

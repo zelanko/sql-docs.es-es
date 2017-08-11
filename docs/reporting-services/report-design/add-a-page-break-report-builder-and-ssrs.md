@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 81f305fdb34231a14c53d376ed9c4535ce6b9f53
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>Agregar un salto de página (Generador de informes y SSRS)
@@ -66,8 +66,8 @@ ms.lasthandoff: 06/22/2017
 3.  Opcionalmente, seleccione **También al principio de un grupo** o **También al final de un grupo** para especificar que se agregue un salto de página cuando un grupo se inicie o finalice en la tabla.  
   
 ## <a name="see-also"></a>Vea también  
- [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Encabezados y pies de página &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
+ [Paginación en Reporting Services &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Comportamientos de representación &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Encabezados de página y pies de página &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

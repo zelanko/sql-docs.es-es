@@ -17,11 +17,11 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f4917fea7fbaa0f652287a08e0a3a5727feaad9e
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="new-system-role-management-studio"></a>Nuevo rol del sistema (Management Studio)

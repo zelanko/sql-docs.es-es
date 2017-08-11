@@ -27,14 +27,14 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 58588838e0e74b545290df5ff0e77dc68ad5e918
+ms.translationtype: MT
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: e228d60a4ae01aa345f007be91109b7bccb76f5a
 ms.contentlocale: es-es
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Building Applications Using the Web Service and the .NET Framework
+# <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Generar aplicaciones utilizando el servicio web y .NET Framework
   Con el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], puede utilizar construcciones de programación conocidas, como métodos, los tipos primitivos y tipos complejos definidos por el usuario para trabajar con los servicios Web. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] contiene una infraestructura y herramientas que puede utilizar para crear clientes de servicios web que pueden llamar a cualquier servicio web que cumpla los estándares del World Wide Web Consortium (W3C).  
   
  Un cliente del servicio web del servidor de informes es cualquier componente o aplicación que se comunica con un servidor de informes utilizando los mensajes del Protocolo simple de acceso a objetos (SOAP).  
@@ -57,15 +57,15 @@ ms.lasthandoff: 06/13/2017
   
 |Tema|Description|  
 |-----------|-----------------|  
-|[Crear al Proxy de servicio Web](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)|Describe las maneras de agregar una clase de proxy para el proyecto con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].|  
-|[Autenticación del servicio Web](../../../reporting-services/report-server-web-service/net-framework/web-service-authentication.md)|Describe cómo se autentican las llamadas al servicio web del servidor de informes.|  
-|[Llamar a métodos de servicio Web](../../../reporting-services/report-server-web-service/net-framework/calling-web-service-methods.md)|Describe cómo usar la API SOAP para llamar a métodos de servicio Web [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
-|[Establecer la propiedad de dirección Url del servicio Web](../../../reporting-services/report-server-web-service/net-framework/setting-the-url-property-of-the-web-service.md)|Explica cómo dirigir mediante programación el proxy del servicio web a una dirección URL de un servidor nuevo después de haber creado su referencia web.|  
-|[Proporcionar argumentos de método de servicio Web](../../../reporting-services/report-server-web-service/net-framework/supplying-web-service-method-arguments.md)|Describe cómo invocar un método de servicio web y proporcionar los argumentos del método.|  
-|[Omitiendo los valores de objetos de servicio Web opcionales](../../../reporting-services/report-server-web-service/net-framework/omitting-values-for-optional-web-service-objects.md)|Describe cómo omitir los valores para los objetos de servicio web opcionales.|  
-|[Uso de métodos de servicio Web seguro](../../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)|Describe la **SecureConnectionLevel** y la manera en que afecta a la utilización de la API de SOAP de Reporting Services.|  
-|[Pasar la configuración de información de dispositivo para las extensiones de representación](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)|Describe la configuración de la información de dispositivos que se utiliza para representar los informes en formatos diferentes.|  
-|[Opciones de extensión de entrega de Reporting Services](../../../reporting-services/report-server-web-service/net-framework/reporting-services-delivery-extension-settings.md)|Describe la configuración que se utiliza para entregar informes mediante el correo electrónico del servidor de informes.|  
+|[Creación del proxy del servicio web](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)|Describe las maneras de agregar una clase de proxy para el proyecto con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].|  
+|[Autenticación del servicio web](../../../reporting-services/report-server-web-service/net-framework/web-service-authentication.md)|Describe cómo se autentican las llamadas al servicio web del servidor de informes.|  
+|[Llamada a métodos de servicio web](../../../reporting-services/report-server-web-service/net-framework/calling-web-service-methods.md)|Describe cómo usar la API SOAP para llamar a métodos de servicio Web [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
+|[Definición de la propiedad Url del servicio web](../../../reporting-services/report-server-web-service/net-framework/setting-the-url-property-of-the-web-service.md)|Explica cómo dirigir mediante programación el proxy del servicio web a una dirección URL de un servidor nuevo después de haber creado su referencia web.|  
+|[Proporcionar argumentos de métodos de servicio web](../../../reporting-services/report-server-web-service/net-framework/supplying-web-service-method-arguments.md)|Describe cómo invocar un método de servicio web y proporcionar los argumentos del método.|  
+|[Omisión de valores para objetos de servicio web opcionales](../../../reporting-services/report-server-web-service/net-framework/omitting-values-for-optional-web-service-objects.md)|Describe cómo omitir los valores para los objetos de servicio web opcionales.|  
+|[Uso de métodos de servicio web seguros](../../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)|Describe la **SecureConnectionLevel** y la manera en que afecta a la utilización de la API de SOAP de Reporting Services.|  
+|[Transferencia de la configuración de la información de dispositivo a las extensiones de representación](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)|Describe la configuración de la información de dispositivos que se utiliza para representar los informes en formatos diferentes.|  
+|[Configuración de la extensión de entrega de Reporting Services](../../../reporting-services/report-server-web-service/net-framework/reporting-services-delivery-extension-settings.md)|Describe la configuración que se utiliza para entregar informes mediante el correo electrónico del servidor de informes.|  
 |[Usar Reporting Services encabezados SOAP](../../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|Explica el uso de encabezados SOAP en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
 |[Introducción a control de excepciones en Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|Proporciona información sobre la manera en la que [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] administra los errores.|  
   

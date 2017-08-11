@@ -18,11 +18,11 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c5543c648289dee007a2249299ecb006d41f6b98
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="preload-the-cache-report-manager"></a>Cargar previamente la memoria caché (Administrador de informes)
@@ -108,7 +108,7 @@ ms.lasthandoff: 06/22/2017
      O bien, para crear una programación personalizada, haga clic en **Según una programación creada para esta suscripción** y, a continuación, en **Siguiente**. Configure la programación y, a continuación, haga clic en **Finalizar**.  
   
     > [!NOTE]  
-    >  Para que los suscriptores reciban el informe más reciente, el programa que configure debe ser coherente con la programación de entrega del informe que haya definido para los suscriptores. Para más información, vea [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+    >  Para que los suscriptores reciban el informe más reciente, el programa que configure debe ser coherente con la programación de entrega del informe que haya definido para los suscriptores. Para obtener más información, consulte [el Administrador de informes &#40; Modo nativo de SSRS &#41; ](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 14. Configure las opciones de Ejecución correspondientes al informe de la forma siguiente: En la página del informe, haga clic en la pestaña **Propiedades** .  
   
@@ -118,17 +118,17 @@ ms.lasthandoff: 06/22/2017
   
 17. Elija una de las dos opciones de caché siguientes y configure la expiración como se indica a continuación:  
   
-    -   Para lograr que la copia en caché expire después de un período de tiempo concreto, haga clic en **Almacenar en caché una copia temporal del informe. La copia del informe expira después de un número determinado de minutos.** Escriba el número de minutos para la expiración del informe.  
+    -   Para lograr que la copia en caché expire después de un período de tiempo concreto, haga clic en **Almacenar en caché una copia temporal del informe. La copia expira transcurrido un número de minutos.** Escriba el número de minutos para la expiración del informe.  
   
-    -   Para lograr que la copia en caché expire siguiendo una programación, haga clic en **Guardar en caché una copia temporal del informe. La copia del informe debe caducar según la siguiente programación.** Haga clic en **Configurar**o seleccione una programación compartida para establecer una programación para la expiración del informe.  
+    -   Para realizar la copia en caché expire siguiendo una programación, haga clic en **guardar en caché una copia temporal del informe. La copia del informe en la siguiente programación expira.** Haga clic en **Configurar**o seleccione una programación compartida para establecer una programación para la expiración del informe.  
   
 18. Haga clic en **Aplicar**.  
   
 ## <a name="see-also"></a>Vea también  
  [Suscripciones controladas por datos](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Rendimiento, instantáneas, almacenamiento en caché &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
- [Establecer las propiedades del procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [Rendimiento, instantáneas, almacenamiento en caché &#40; Reporting Services &#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
+ [Establecer las propiedades de procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Informes almacenados en caché &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
   
   

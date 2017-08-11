@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9a422c1619ae284ec49643465bd8b84efda1910b
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>Funcionalidad interactiva - diferentes extensiones de representación de informes
@@ -59,7 +59,7 @@ ms.lasthandoff: 06/22/2017
 |-------------------|-------------------------|  
 |Vista previa/Visor de informes, HTML|Los usuarios hacen clic en iconos de expansión y contracción para ver las secciones de un informe.|  
 |PDF|El servidor de informes exporta el estado de mostrar u ocultar actual del informe a formato PDF. No se admite la alternancia interactiva.|  
-|Excel|Los vínculos y los elementos de obtención de detalles que pueden alternarse se representan como esquemas contraíbles en Excel. Excel permite expandir y contraer secciones del informe. Para más información sobre las limitaciones impuestas por Excel, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
+|Excel|Los vínculos y los elementos de obtención de detalles que pueden alternarse se representan como esquemas contraíbles en Excel. Excel permite expandir y contraer secciones del informe. Para obtener más información acerca de las limitaciones impuestas por Excel, vea [exportar a Microsoft Excel &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |Word|El servidor de informes exporta el estado de mostrar u ocultar actual del informe a formato PDF. No se admite la alternancia interactiva.|  
 |Otro|No disponible en MHTML, XML ni CSV. Al exportar a un formato Imagen, el servidor de informes exporta el estado de mostrar u ocultar actual del informe al formato PDF. No se admite la alternancia interactiva.|  
   
@@ -115,10 +115,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [Ordenación interactiva, mapas de documento y vínculos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
     
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Gráficos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
 

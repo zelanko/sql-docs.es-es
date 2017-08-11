@@ -17,11 +17,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d9ee4dd3c00d9e250fd3c773a917ad3cf90f84c4
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="export-a-report-using-url-access"></a>Exportar un informe mediante el acceso URL
@@ -50,7 +50,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
  Si no incluye el parámetro *Format* como parte de la dirección URL, el servidor de informes detecta el explorador y representa el informe en el formato HTML adecuado.  
   
 ## <a name="see-also"></a>Vea también  
- [Acceso URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
+ [Acceso URL &#40; SSRS &#41;](../reporting-services/url-access-ssrs.md)   
  [Referencia de parámetros de acceso URL](../reporting-services/url-access-parameter-reference.md)  
   
   

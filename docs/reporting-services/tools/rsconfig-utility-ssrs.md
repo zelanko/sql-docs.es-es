@@ -21,11 +21,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 68b5e38f2b4e71298fbf7b6ec6970fc7824c3cde
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig (utilidad) (SSRS)
@@ -55,13 +55,13 @@ rsconfig {-?}
 |**-?**|Opcional.|Muestra la sintaxis de los argumentos de Rsconfig.exe.|  
 |**-c**|Necesario si no se usa el argumento **-e** .|Especifica la cadena de conexión, las credenciales y los valores de origen de datos que se utilizan para conectar un servidor de informes a la base de datos del servidor de informes.<br /><br /> Este argumento no toma ningún valor. No obstante, deben especificarse argumentos adicionales para proporcionar todos los valores de conexión requeridos.<br /><br /> Los argumentos que se pueden especificar con **-c** son **-m**, **-s**, **-i**,**-d**,**-a**,**-u**,**-p**y**-t**.|  
 |**-e**|Necesario si no se usa el argumento **-c** .|Especifica la cuenta de ejecución desatendida del informe.<br /><br /> Este argumento no toma ningún valor. Sin embargo, deben incluirse argumentos adicionales en la línea de comandos para especificar los valores que están cifrados en el archivo de configuración.<br /><br /> Los argumentos que se pueden especificar con **-e** son **-u** y **-p**. También puede establecer **-t**.|  
-|**-m**  *computername*|Requerido si configura una instancia de servidor de informes remoto.|Especifica el nombre del equipo donde está hospedado el servidor de informes. Si se omite este argumento, el valor predeterminado es **localhost**.|  
-|**-s**  *servername*|Requerido.|Especifica la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos del servidor de informes.|  
-|**-i**  *instancename*|Requerido si utiliza instancias con nombre.|Si ha utilizado una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para hospedar la base de datos del servidor de informes, este valor especifica la instancia con nombre.|  
-|**-d**  *databasename*|Requerido.|Especifica el nombre de la base de datos de servidor de informes.|  
-|**-a**  *authmethod*|Requerido.|Especifica el método de autenticación que el servidor de informes utiliza para conectarse a la base de datos de servidor de informes. Los valores válidos son **Windows** o **SQL** (este argumento no distingue mayúsculas de minúsculas).<br /><br /> **Windows** especifica que el servidor de informes utilice la autenticación de Windows.<br /><br /> **SQL** especifica que el servidor de informes utilice la autenticación de SQL Server.|  
-|**-u** *[dominio\\]nombreDeUsuario*|Necesario con **-e** y opcional con **-c**.|Especifica una cuenta de usuario para la conexión de base de datos del servidor de informes o para la cuenta desatendida.<br /><br /> Para **rsconfig -e**, este argumento es obligatorio. Debe ser una cuenta de usuario de dominio.<br /><br /> Para **rsconfig -c** y **-a SQL**, este argumento necesita especificar un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Para **rsconfig -c** y **-a Windows**, este argumento puede especificar un usuario de dominio, una cuenta integrada o credenciales de cuenta de servicio. Si especifica una cuenta de dominio, especifique un *dominio* y un *nombre de usuario* en el formato *dominio\nombre de usuario*. Si está utilizando una cuenta integrada, este argumento es opcional. Si desea utilizar las credenciales de la cuenta de servicio, omita este argumento.|  
-|**-p**  *password*|Obligatorio si se especifica **-u** .|Especifica la contraseña que se utilizará con el argumento *username* . Este argumento se puede establecer en un valor en blanco si la cuenta no requiere una contraseña. Este valor distingue entre mayúsculas y minúsculas para cuentas de dominio.|  
+|**-m**  *nombreDeEquipo*|Requerido si configura una instancia de servidor de informes remoto.|Especifica el nombre del equipo donde está hospedado el servidor de informes. Si se omite este argumento, el valor predeterminado es **localhost**.|  
+|**-s**  *nombreDeServidor*|Requerido.|Especifica la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos del servidor de informes.|  
+|**-i**  *nombreDeInstancia*|Requerido si utiliza instancias con nombre.|Si ha utilizado una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para hospedar la base de datos del servidor de informes, este valor especifica la instancia con nombre.|  
+|**-d**  *nombreDeBaseDeDatos*|Requerido.|Especifica el nombre de la base de datos de servidor de informes.|  
+|**-a**  *métodoDeAutenticación*|Requerido.|Especifica el método de autenticación que el servidor de informes utiliza para conectarse a la base de datos de servidor de informes. Los valores válidos son **Windows** o **SQL** (este argumento no distingue mayúsculas de minúsculas).<br /><br /> **Windows** especifica que el servidor de informes utilice la autenticación de Windows.<br /><br /> **SQL** especifica que el servidor de informes utilice la autenticación de SQL Server.|  
+|**-u***[dominio\\] nombre de usuario* |Necesario con **-e** y opcional con **-c**.|Especifica una cuenta de usuario para la conexión de base de datos del servidor de informes o para la cuenta desatendida.<br /><br /> Para **rsconfig -e**, este argumento es obligatorio. Debe ser una cuenta de usuario de dominio.<br /><br /> Para **rsconfig -c** y **-a SQL**, este argumento necesita especificar un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Para **rsconfig -c** y **-a Windows**, este argumento puede especificar un usuario de dominio, una cuenta integrada o credenciales de cuenta de servicio. Si especifica una cuenta de dominio, especifique un *dominio* y un *nombre de usuario* en el formato *dominio\nombre de usuario*. Si está utilizando una cuenta integrada, este argumento es opcional. Si desea utilizar las credenciales de la cuenta de servicio, omita este argumento.|  
+|**-p**  *contraseña*|Obligatorio si se especifica **-u** .|Especifica la contraseña que se utilizará con el argumento *username* . Este argumento se puede establecer en un valor en blanco si la cuenta no requiere una contraseña. Este valor distingue entre mayúsculas y minúsculas para cuentas de dominio.|  
 |**-t**|Opcional.|Registra los mensajes de error en el registro de seguimiento. Este argumento no toma ningún valor. Para obtener más información, consulte [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
   
 ## <a name="permissions"></a>Permissions  
@@ -127,12 +127,12 @@ rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <P
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Almacenar datos cifrados del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Configurar una conexión de base de datos del servidor de informes &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurar la cuenta de ejecución desatendida &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Informes de servidor de informes de servicios &#40; Modo nativo &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Cifrado de almacén de datos del servidor de informes &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Archivos de configuración de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Utilidades del símbolo del sistema del servidor de informes &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
+ [Utilidades de símbolo del sistema del servidor de informes &#40; SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [Archivo de configuración RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   

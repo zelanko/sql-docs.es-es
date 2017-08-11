@@ -21,11 +21,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b042bef86620c773f39f81ea16a62b3d9c4c2a6a
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>Claves de cifrado de SSRS: eliminar y volver a crear las claves de cifrado
@@ -120,8 +120,8 @@ ms.lasthandoff: 06/22/2017
 4.  Para suscripciones que utilizan datos cifrados (como la extensión de entrega de recurso compartido de archivos y todas las extensiones de entrega de terceros que utilicen cifrado), abra cada suscripción y vuelva a escribir las credenciales. Las suscripciones que usan entrega por correo electrónico del Servidor de informes no emplean datos cifrados y, por tanto, no les afecta el cambio de clave.  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Almacenar datos cifrados del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Configurar y administrar las claves de cifrado &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Cifrado de almacén de datos del servidor de informes &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   
 

@@ -32,11 +32,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 37ae409b2c0d9d703c0bce162bc607c9f571cd29
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="chart-legend---formatting-report-builder"></a>Leyenda del gráfico - formato (generador de informes)
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="changing-the-text-or-color-of-a-legend-item-in-the-legend"></a>Cambiar el texto o el color de un elemento de leyenda en la leyenda  
  Cuando se coloca un campo en la zona de colocación de campos de datos de un gráfico, automáticamente se genera un elemento de leyenda que contiene el nombre de este campo. De forma predeterminada, el texto de cada elemento de leyenda se toma del nombre del campo de datos. Cada elemento de leyenda se conecta a una serie individual del gráfico, a excepción de los gráficos de formas, donde la leyenda se conecta a puntos de datos individuales en lugar de a series individuales. Cuando se define un grupo de categorías en un gráfico de formas, el texto de cada elemento de leyenda procede de la representación de cadena del grupo de categorías. En los gráficos circulares, de anillos y de embudo, puede especificar texto de etiqueta personalizado para mostrar información distinta de la etiqueta de grupo de categorías relacionada con cada punto de datos individual de la leyenda. Para ello, seleccione la leyenda y especifique el texto de leyenda en el cuadro de diálogo **Propiedades de la serie** o la propiedad **LegendText** en el panel de propiedades. Para obtener más información, vea [Cambiar el texto de un elemento de leyenda &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
- También puede especificar palabras clave específicas del gráfico, con distinción de mayúsculas y minúsculas, para los atributos a los que se hace referencia más habitualmente en la propiedad **LegendText** o en el cuadro de diálogo **Propiedades de la serie** . El control de gráfico reemplaza estas palabras clave por su representación de datos en tiempo de ejecución. Este enfoque resulta útil en los gráficos de formas porque le permite mostrar información relacionada con puntos de datos específicos. Para obtener más información, vea [Aplicar formato a los puntos de datos de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
+ También puede especificar palabras clave específicas del gráfico, con distinción de mayúsculas y minúsculas, para los atributos a los que se hace referencia más habitualmente en la propiedad **LegendText** o en el cuadro de diálogo **Propiedades de la serie** . El control de gráfico reemplaza estas palabras clave por su representación de datos en tiempo de ejecución. Este enfoque resulta útil en los gráficos de formas porque le permite mostrar información relacionada con puntos de datos específicos. Para más información, vea [Aplicar formato a los puntos de datos de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
  El cuadro coloreado que se muestra para cada elemento de leyenda se hereda del color de relleno de su serie correspondiente. Si desea cambiar el color mostrado en un elemento de leyenda, tendrá que cambiar el color de la serie correspondiente. Para obtener más información, vea [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
@@ -85,11 +85,11 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Cuadro de diálogo de Propiedades de la leyenda, General &#40;Generador de informes y SSRS&#41;](http://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   
- [Cambiar el texto de un elemento de leyenda &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
- [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Ocultar elementos de leyenda en el gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
+ [Cambiar el texto de un elemento de leyenda &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
+ [Aplicar formato a un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Aplicar formato a los colores de serie en un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Gráficos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Ocultar elementos de leyenda en el gráfico &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
  [Definir los colores de un gráfico mediante una paleta &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
   

@@ -20,15 +20,15 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b1c11b204b5a48e4324f49e05467cc3ac96e7fa4
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="securable-items"></a>Elementos protegibles
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa la seguridad basada en roles para controlar el acceso a los elementos que se almacenan en un servidor de informes. Cuando concede un acceso de usuario a un servidor de informes, normalmente lo hace creando un par de asignaciones de roles:  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]utiliza la seguridad basada en roles para controlar el acceso a los elementos que están almacenados en un servidor de informes. Cuando concede un acceso de usuario a un servidor de informes, normalmente lo hace creando un par de asignaciones de roles:  
   
 -   En el nivel de sitio  
   
@@ -65,9 +65,9 @@ ms.lasthandoff: 08/03/2017
 |Conjuntos de datos compartidos|Los conjuntos de datos compartidos se pueden proteger para controlar el intervalo de acciones que los usuarios pueden realizar, como ver o cambiar la definición, o cambiar las propiedades de un conjunto de datos compartido determinado.<br /><br /> Para obtener más información, vea [Proteger los elementos de un conjunto de datos compartido](../../reporting-services/security/secure-shared-dataset-items.md).|  
   
 ## <a name="see-also"></a>Vea también  
- [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modificar o eliminar una asignación de roles &#40;Administrador de informes&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
+ [Conceder permisos en un servidor de informes de modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Crear, eliminar o modificar un rol &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Conceder acceso de usuario a un servidor de informes &#40; El Administrador de informes &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Modificar o eliminar una asignación de roles &#40; El Administrador de informes &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
   
   

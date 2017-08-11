@@ -24,11 +24,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 422c3efc7f6514efafcfa552ed78658d002a2f42
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrar, agrupar y ordenar datos (Generador de informes y SSRS)
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **Ordenación interactiva** : para permitir a los usuarios ordenar o invertir el criterio de ordenación de una columna, puede agregar un botón de ordenación interactivo a un encabezado de columna o a una celda del encabezado de grupo en una tabla o matriz.  
   
- Para ayudar a los usuarios a personalizar las expresiones de filtro, grupo u ordenación, puede cambiar una expresión para agregar una referencia a un parámetro de informe. Para obtener más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Para ayudar a los usuarios a personalizar las expresiones de filtro, grupo u ordenación, puede cambiar una expresión para agregar una referencia a un parámetro de informe. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
  Para obtener más información y ejemplos, vea los siguientes temas:  
   
@@ -62,13 +62,13 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="Filtering"></a> Filtrar los datos del informe  
  Los filtros son las partes de un informe que ayudan a controlar los datos del informe una vez recuperados de la conexión de datos. Utilice filtros cuando no pueda cambiar una consulta de conjunto de datos para filtrar datos antes de recuperarlos de un origen de datos externo.  
   
- Siempre que resulte posible, cree consultas de conjunto de datos que devuelvan solo los datos que necesite mostrar en el informe. Al reducir la cantidad de los datos que se deben recuperar y procesar, contribuirá a mejorar el rendimiento del informe. Para obtener más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+ Siempre que resulte posible, cree consultas de conjunto de datos que devuelvan solo los datos que necesite mostrar en el informe. Al reducir la cantidad de los datos que se deben recuperar y procesar, contribuirá a mejorar el rendimiento del informe. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
  Una vez recuperados los datos del origen de datos externo, podrá agregar filtros a los conjuntos de datos, regiones de datos y grupos de regiones de datos, incluidos los grupos de detalles. Los filtros se aplican en tiempo de ejecución y en este orden: primero en el conjunto de datos, a continuación, en la región de datos y, por último, en el grupo; en las jerarquías de grupo, se aplican en orden descendente. En una tabla, matriz o lista, los filtros de los grupos de filas, los grupos de columnas y los grupos adyacentes se aplican de forma independiente. En un gráfico, también se aplican de forma independiente los filtros de los grupos de categorías y los grupos de series. Para obtener más información, vea [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
   
  Para cada filtro, especifique una *ecuación de filtro*. Una ecuación de filtro incluye un campo de conjunto de datos o una expresión que especifica los datos que se van a filtrar, un operador y un valor con el que realizar la comparación. Cuando se procese el elemento, solo se incluirán los valores de datos que coincidan con la condición de filtro.  
   
- Para permitir a los usuarios controlar los datos de un informe, puede incluir parámetros en las expresiones de filtro. Para obtener más información, vea [Usar referencias a la colección de parámetros &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md).  
+ Para permitir a los usuarios controlar los datos de un informe, puede incluir parámetros en las expresiones de filtro. Para más información, vea [Usar referencias a la colección de parámetros &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md).  
   
  Para personalizar una vista para cada usuario, puede incluir una referencia al campo integrado UserID en un filtro. Para más información, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 06/22/2017
   
  Para realizar la agrupación según varios campos de conjunto de datos, agregue cada campo al conjunto de expresiones de grupo. También puede escribir sus propias expresiones de grupo en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Por ejemplo, puede agrupar por un intervalo de valores o usando un parámetro de informe que permita al usuario seleccionar el modo de agrupar los datos de una región de datos. Para obtener más información, vea [Ejemplos de expresión de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
   
- En la presentación del informe, puede agregar saltos de página antes y después de cada grupo, o de cada instancia de un grupo, para reducir la cantidad de datos mostrados en cada página y administrar el rendimiento del proceso de representación de informes. Para obtener más información, vea [Agregar un salto de página &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md).  
+ En la presentación del informe, puede agregar saltos de página antes y después de cada grupo, o de cada instancia de un grupo, para reducir la cantidad de datos mostrados en cada página y administrar el rendimiento del proceso de representación de informes. Para obtener más información, vea [agregar un salto de página &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md).  
   
  Crear grupos de regiones de datos es una manera de organizar los datos en un informe. Existen otras maneras de organizar los datos, cada una de ellas con sus propias ventajas. Para obtener más información, vea [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md).  
   
@@ -213,11 +213,11 @@ FROM Production.Product
   
 ## <a name="see-also"></a>Vea también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [Indicadores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+ [Tablas, Matrices y listas de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Gráficos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Mapas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Los minigráficos y barras de datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [Medidores &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [Indicadores &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

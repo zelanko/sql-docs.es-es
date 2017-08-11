@@ -17,11 +17,11 @@ caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 933f3287d8e02df8aeadf93bbd7ce39f20aff268
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="server-properties-execution-page"></a>Propiedades del servidor (página Ejecución)
@@ -37,10 +37,10 @@ ms.lasthandoff: 06/22/2017
  Establezca una restricción horaria en la ejecución de informes. El período de tiempo empieza cuando se solicita el informe. Si el período finaliza antes de que el informe se haya procesado completamente, el servidor de informes cancela el proceso y todas las consultas en proceso para orígenes de datos externos.  
   
 ## <a name="see-also"></a>Vea también  
- [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
- [Conectar con un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Establecer las propiedades del procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)   
+ [Establecer propiedades del servidor de informes &#40; Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+ [Conectarse a un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Establecer las propiedades de procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [Especifique los valores de tiempo de espera de informes y procesamiento de conjunto de datos compartido &#40; SSRS &#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)   
  [Servidor de informes en Management Studio ayuda F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
   
   

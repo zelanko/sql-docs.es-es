@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2a73370c0ae9f3d405a185d53754aa0620d593e3
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propiedades de campo extendidas para una base de datos de Analysis Services (SSRS)
@@ -27,7 +27,7 @@ ms.lasthandoff: 06/22/2017
   
  Las propiedades extendidas incluyen propiedades predefinidas y propiedades personalizadas. Las propiedades predefinidas son propiedades comunes para varios orígenes de datos que se asignan a nombres de propiedades de campo específicos y a las que se tiene acceso por su nombre con la colección **Fields** integrada. Las propiedades personalizadas son específicas de cada proveedor de datos y se puede acceder a ellas con la colección **Fields** integrada, pero solo con la sintaxis que usa el nombre de la propiedad extendida como una cadena.  
   
- Al usar el diseñador de consultas MDX para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo gráfico para definir la consulta, se agrega automáticamente un conjunto predefinido de propiedades de celda y propiedades de dimensión a la consulta MDX. Solo puede usar las propiedades extendidas que se indican de forma específica en la consulta MDX del informe. En función del informe, puede que desee modificar el texto del comando MDX predeterminado para incluir otras propiedades de dimensión o personalizadas definidas en el cubo. Para más información sobre los campos extendidos disponibles en los orígenes de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Crear y usar los valores de propiedad &#40;MDX&#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2).  
+ Al usar el diseñador de consultas MDX para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo gráfico para definir la consulta, se agrega automáticamente un conjunto predefinido de propiedades de celda y propiedades de dimensión a la consulta MDX. Solo puede usar las propiedades extendidas que se indican de forma específica en la consulta MDX del informe. En función del informe, puede que desee modificar el texto del comando MDX predeterminado para incluir otras propiedades de dimensión o personalizadas definidas en el cubo. Para obtener más información sobre los campos extendidos disponibles en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] orígenes de datos, vea [crear y con valores de propiedad &#40; MDX &#41; ](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2).  
   
 ## <a name="working-with-field-properties-in-a-report"></a>Trabajar con propiedades de campo en un informe  
  Las propiedades de campo extendidas incluyen propiedades predefinidas y propiedades específicas del proveedor de datos. Las propiedades de campo no aparecen con la lista de campos del panel **Datos de informe** , aunque estén en la consulta creada para un conjunto de datos; por tanto, las propiedades de campo no se pueden arrastrar a la superficie de diseño del informe. En su lugar, debe arrastrar el campo al informe y, después, cambiar la propiedad **Value** del campo a la propiedad que se desee usar. Por ejemplo, si ya se ha dado formato a los datos de celda de un cubo, puede usar la propiedad de campo FormattedValue con la siguiente expresión: `=Fields!FieldName.FormattedValue`.  
@@ -155,7 +155,7 @@ CELL PROPERTIES
   
 ## <a name="see-also"></a>Vea también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Colecciones integradas en expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Colección de campos de conjunto de datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

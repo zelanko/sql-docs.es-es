@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6414ac861d66bdacde41575662c7c66fc5014839
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="manage-shared-datasets"></a>Administrar conjuntos de datos compartidos
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
  La definición del conjunto de datos compartidos incluye una consulta, parámetros de conjunto de datos que incluyen valores predeterminados, opciones de datos con distinción entre mayúsculas y minúsculas, y filtros de conjunto de datos. Los valores que establezca en la definición se usarán siempre que el conjunto de datos compartido se incluya en un informe.  
   
- Para utilizar un conjunto de datos compartido en un informe, abra una aplicación como el Generador de informes, busque el servidor de informes o el sitio de SharePoint y seleccione el conjunto de datos compartido. De este modo, agrega una instancia del conjunto de datos compartido al informe. En el informe, no puede ver ni cambiar la consulta o el origen de datos compartido para el conjunto de datos compartido. Puede especificar un conjunto adicional de valores de propiedad del conjunto de datos que se apliquen a la instancia en el informe. Por ejemplo, puede agregar un filtro o cambiar opciones de datos como la distinción entre mayúsculas y minúsculas. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) en la [documentación del Generador de informes](http://go.microsoft.com/fwlink/?LinkId=154494) en msdn.microsoft.com.  
+ Para utilizar un conjunto de datos compartido en un informe, abra una aplicación como el Generador de informes, busque el servidor de informes o el sitio de SharePoint y seleccione el conjunto de datos compartido. De este modo, agrega una instancia del conjunto de datos compartido al informe. En el informe, no puede ver ni cambiar la consulta o el origen de datos compartido para el conjunto de datos compartido. Puede especificar un conjunto adicional de valores de propiedad del conjunto de datos que se apliquen a la instancia en el informe. Por ejemplo, puede agregar un filtro o cambiar opciones de datos como la distinción entre mayúsculas y minúsculas. Para obtener más información, vea [conjuntos de datos incrustados de informes y conjuntos de datos compartidos &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) en el [documentación del generador de informes](http://go.microsoft.com/fwlink/?LinkId=154494) en msdn.microsoft.com.  
   
 ## <a name="managing-shared-datasets"></a>Administrar los conjuntos de datos compartidos  
  Para administrar las propiedades de un conjunto de datos compartidos publicado, puede usar el Administrador de informes para un servidor de informes en modo nativo o las páginas de aplicación de un sitio de SharePoint, si implementó el servidor de informes en el modo integrado de SharePoint. Las tareas que puede realizar en un conjunto de datos compartido dependen de sus asignaciones de roles y de los permisos del nivel de sitio y de elemento, incluidos los permisos de la carpeta, si la herencia de permisos está en vigor. La seguridad en el nivel de elemento de los conjuntos de datos compartidos sigue el mismo modelo que la de los informes. Para más información, vea [Proteger los elementos de un conjunto de datos compartido](../../reporting-services/security/secure-shared-dataset-items.md).  
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
 |-|-|  
 |Editar nombre|Cambie el nombre del conjunto de datos compartido. Todas las referencias en los elementos dependientes continuarán funcionando.|  
 |Editar descripción|Cambie la descripción del conjunto de datos compartido.|  
-|Modificar el tiempo de espera de ejecución de la consulta|Establezca el tiempo de espera de ejecución de la consulta en segundos. Cero (0) segundos significa que no hay tiempo de espera. Determina el número de segundos antes de que la consulta de conjunto de datos supere el tiempo de espera. Para no especificar ningún valor de tiempo de espera, utilice 0. Para más información, vea [Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  
+|Modificar el tiempo de espera de ejecución de la consulta|Establezca el tiempo de espera de ejecución de la consulta en segundos. Cero (0) segundos significa que no hay tiempo de espera. Determina el número de segundos antes de que la consulta de conjunto de datos supere el tiempo de espera. Para no especificar ningún valor de tiempo de espera, utilice 0. Para obtener más información, vea [especifique los valores de tiempo de espera de informes y procesamiento de conjunto de datos compartido &#40; SSRS &#41; ](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  
 |Ver elementos dependientes|Vea los elementos que utilizan este conjunto de datos compartido: los elementos de informe publicados, los orígenes de datos compartidos y los informes.|  
   
  Se configuran automáticamente la siguientes propiedades de conjunto de datos compartidas adicionales:  
@@ -126,6 +126,6 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 ## <a name="see-also"></a>Vea también  
  [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Conceder permisos en un servidor de informes de modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 488c17afabc7dc828ccf88ed1e058f1e13c7e0b2
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de los informes: informes de mapa (Generador de informes y SSRS)
@@ -180,7 +180,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>Mi escala de colores no aparece cuando ejecuto el informe.  
  La escala de colores muestra información al usuario cuando una capa de mapa especifica reglas de colores para los polígonos, líneas o puntos de toda la capa o de los elementos de mapa incrustado. Si ningún elemento de mapa especifica una regla de colores o si las reglas de colores se especifican con una leyenda en lugar del mapa de colores, el mapa de colores no aparece en el informe representado.  
   
- Para mostrar la escala de colores, especifique las reglas de colores para una capa o un elemento de mapa incrustado. Para obtener más información, vea [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
+ Para mostrar la escala de colores, especifique las reglas de colores para una capa o un elemento de mapa incrustado. Para más información, vea [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
 ##  <a name="Tile"></a> Problemas con el mosaico  
  Utilice esta sección como ayuda para resolver problemas relacionados con las opciones del fondo de mosaico.  
@@ -212,7 +212,7 @@ ms.lasthandoff: 06/22/2017
  Para especificar los datos relacionados con los datos espaciales que no forman parte de un conjunto de datos de informe, debe utilizar el símbolo # seguido de una etiqueta que especifique el nombre de los datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Solucionar problemas del Generador de informes](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
+ [Mapas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Solucionar problemas del generador de informes](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
   
   

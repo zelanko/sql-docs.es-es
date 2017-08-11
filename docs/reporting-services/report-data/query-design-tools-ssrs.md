@@ -25,11 +25,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cb010d0c545e0ff6031a07ff0d4439f5d9dc8116
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="query-design-tools-ssrs"></a>Herramientas de diseño de consulta (SSRS)
@@ -77,7 +77,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="Graphical"></a> Diseñador gráfico de consultas  
  El diseñador gráfico de consultas se utiliza para crear o modificar consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecutan con una base de datos relacional. Esta herramienta de diseño de consultas se utiliza en varios productos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] y en otros componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dependiendo del tipo de origen de datos, admite los modos Text, StoredProcedure y TableDirect. En la imagen siguiente se ilustra el diseñador gráfico de consultas.  
   
- ![Diseñador gráfico de consultas para consultas sql](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "diseñador gráfico de consultas para consultas sql")  
+ ![Diseñador gráfico de consultas para consultas SQL](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "Diseñador gráfico de consultas para consultas SQL")  
   
  Puede alternar el botón **Editar como texto** en la barra de herramientas para cambiar entre el diseñador gráfico de consultas y el diseñador de consultas basado en texto. Para más información, consulte [Graphical Query Designer User Interface](../../reporting-services/report-data/graphical-query-designer-user-interface.md).  
   
@@ -120,8 +120,8 @@ ms.lasthandoff: 06/22/2017
  [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [Tutoriales de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
- [Crear un origen de datos incrustado o compartido &#40;SSRS&#41;](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)  
+ [Reporting Services Tutorials &#40; SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Orígenes de datos admitidos por Reporting Services &#40; SSRS &#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
+ [Crear un origen de datos incrustado o compartido &#40; SSRS &#41;](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)  
   
   

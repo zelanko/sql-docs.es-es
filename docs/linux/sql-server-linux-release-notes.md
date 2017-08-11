@@ -4,16 +4,16 @@ description: "Este tema contiene las notas de la versión y características adm
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.translationtype: MT
-ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
-ms.openlocfilehash: 1907ef1ae99146fe7cdf2ca124af22aabdc29b35
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: baa5826e9722bfb23afacf729d80bebf88985ed3
 ms.contentlocale: es-es
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de la versión de SQL Server 2017 en Linux
@@ -152,6 +152,8 @@ En las siguientes secciones se describen los problemas conocidos con esta versi�
       sudo systemctl restart mssql-server
       ```
 
+- No se puede restaurar las bases de datos de SQL Server 2014 en Windows que use OLTP en memoria en SQL Server 2017 en Linux. Para restaurar una base de datos de SQL Server 2014 que utiliza OLTP en memoria, actualizar las bases de datos a SQL Server 2016 o 2017 de SQL Server en Windows antes de pasar a SQL Server en Linux a través de copia de seguridad/restauración o separar y adjuntar.
+
 #### <a name="remote-database-files"></a>Archivos de base de datos remota
 
 - Hospedar los archivos de base de datos en un servidor NFS no se admite en esta versión. Esto incluye el uso de NFS para agrupación en clústeres, así como las bases de datos en instancias no clúster de conmutación por error de disco compartido. Estamos trabajando en habilitar la compatibilidad de servidor NFS en las próximas versiones.
@@ -267,6 +269,7 @@ Las siguientes características y servicios no están disponibles en Linux en es
 | &nbsp; | Stretch DB |
 | &nbsp; | Polybase |
 | &nbsp; | Consulta distribuida |
+| &nbsp; | Servicios de aprendizaje automático |
 | &nbsp; | (XP_CMDSHELL, etcetera) los procedimientos almacenados extendidos del sistema |
 | &nbsp; | Filetable |
 | &nbsp; | Conjunto de ensamblados CLR con EXTERNAL_ACCESS o UNSAFE permiso |
@@ -856,7 +859,7 @@ En las siguientes secciones se describen los problemas conocidos con esta versi�
     - Captura de datos modificados
 
 #### <a name="in-memory-oltp"></a>OLTP en memoria
-- Solo se pueden crear bases de datos OLTP en memoria en el directorio /var/opt/mssql. Para obtener más información, visite la [tema de OLTP en memoria](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
+- Solo se pueden crear bases de datos OLTP en memoria en el directorio /var/opt/mssql. Para obtener más información, visite la [tema de OLTP en memoria](sql-server-linux-performance-get-started.md#use-in-memory-oltp).
 
 #### <a name="sqlpackage"></a>SqlPackage
 - Mediante SqlPackage, debe especificar una ruta de acceso absoluta para los archivos. Uso de rutas de acceso relativas se asignarán los archivos en el "/ tmp/sqlpackage. \<código \> /sistema/system32 "carpeta. 

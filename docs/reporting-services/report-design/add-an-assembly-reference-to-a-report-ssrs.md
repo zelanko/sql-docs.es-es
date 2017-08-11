@@ -21,15 +21,15 @@ caps.latest.revision: 43
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1bf8106435899a97572c5972721bdf3190d031a6
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-an-assembly-reference-to-a-report-ssrs"></a>Agregar una referencia de ensamblado a un informe (SSRS)
-  Al incrustar código personalizado que contiene referencias a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] clases que no están en <xref:System.Math> o <xref:System.Convert>, debe proporcionar una referencia de ensamblado para el informe para que el procesador de informes pueda resolver los nombres. Para más información, vea [Agregar código a un informe &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md).  
+  Al insertar código personalizado que contiene referencias a clases [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que no están en <xref:System.Math> ni en <xref:System.Convert>, necesita proporcionar una referencia de ensamblado al informe para que el procesador de informes pueda resolver los nombres. Para más información, vea [Agregar código a un informe &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md).  
   
 ### <a name="to-add-an-assembly-reference-to-a-report"></a>Para agregar una referencia de ensamblado a un informe  
   
@@ -48,6 +48,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Usar ensamblados personalizados con informes](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Propiedades del informe (cuadro de diálogo), Referencias](http://msdn.microsoft.com/library/4639d368-9918-4bb1-9953-7a724ca78dea)  
+ [Cuadro de diálogo Propiedades del informe, referencias](http://msdn.microsoft.com/library/4639d368-9918-4bb1-9953-7a724ca78dea)  
   
   

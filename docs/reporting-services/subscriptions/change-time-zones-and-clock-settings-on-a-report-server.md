@@ -20,11 +20,11 @@ caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 79f8068d11d707c4b0237d32e1645a80a12cdbbb
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>Cambiar las zonas horarias y la configuración del reloj en un servidor de informes
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
  El cambio del reloj del equipo no afecta a los valores de marca de tiempo existentes (por ejemplo, si adelanta el reloj una hora, las marcas de tiempo de las instantáneas de historial del informe no cambian). Es posible que se produzca una demora de 10 segundos antes de que el Procesador de entrega y programación utilice la nueva configuración. La demora real puede variar si ha modificado la configuración de intervalo de sondeo en los archivos de configuración.  
   
 ## <a name="see-also"></a>Vea también  
- [Iniciar y detener el servicio del servidor de informes](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
+ [Iniciar y detener el servicio de servidor de informes](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
  [Programaciones](../../reporting-services/subscriptions/schedules.md)  
   
   

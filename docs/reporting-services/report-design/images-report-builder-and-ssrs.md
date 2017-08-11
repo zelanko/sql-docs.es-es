@@ -15,11 +15,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b50d53f5b7ba102454f53646dec8cf1897df52f9
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="images-report-builder-and-ssrs"></a>Imágenes (Generador de informes y SSRS)
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="ExternalImages"></a> Imágenes externas  
  Puede incluir imágenes almacenadas en un informe especificando una dirección URL para la imagen. Cuando se utiliza una imagen externa en un informe, el origen de la imagen se establece en **External** y el valor de la imagen es su dirección URL o ruta de acceso.  
   
- Para obtener más información, vea [Especificar las rutas de acceso a los elementos externos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
+ Para más información, vea [Especificar las rutas de acceso a los elementos externos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
  Cuando el informe se ejecuta en el Generador de informes o en el Diseñador de informes, la vista previa usa las credenciales del usuario para mostrar la imagen. Cuando el informe se ejecuta en el servidor de informes, no se puede mostrar la imagen del informe si las credenciales del servidor no son suficientes para tener acceso a la imagen. En ese caso, póngase en contacto con su administrador del sistema.  
   
@@ -85,6 +85,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Exportar a un archivo de imagen &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
- [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
+ [Comportamientos de representación &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   

@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e5d4e66fa2de743e7a28dfeba78bb7a753374a5a
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo
@@ -97,14 +97,14 @@ ms.lasthandoff: 06/22/2017
 ### <a name="value"></a>Valor  
  La expresión de valor especifica la parte final de la ecuación de filtro. El procesador de informes convierte la expresión evaluada en el tipo de datos que especificó y, a continuación, evalúa la ecuación de filtro completa para determinar si los datos especificados en Expresión pasan a través del filtro.  
   
- Para convertir en un tipo de datos que no es un tipo de datos CLR estándar, debe modificar la expresión para que realice la conversión de manera explícita. Puede usar las funciones de conversión del cuadro de diálogo **Expresión** comprendidas en la categoría **Funciones comunes**, **Conversión**. Por ejemplo, si un campo `ListPrice` que representa los datos que se almacenarán como un **dinero** de tipo de datos en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la extensión de procesamiento de datos de origen de datos, devuelve el valor del campo como un <xref:System.Decimal> tipo de datos. Si desea establecer un filtro para usar solo valores mayores que **$50000.00** en la moneda del informe, convierta el valor en Decimal con la expresión `=CDec(50000.00)`.  
+ Para convertir en un tipo de datos que no es un tipo de datos CLR estándar, debe modificar la expresión para que realice la conversión de manera explícita. Puede usar las funciones de conversión del cuadro de diálogo **Expresión** comprendidas en la categoría **Funciones comunes**, **Conversión**. Por ejemplo, para un campo `ListPrice` que representa datos que están almacenados como un tipo de datos **money** en un origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la extensión de procesamiento de datos devuelve el valor de campo como un tipo de datos <xref:System.Decimal> . Si desea establecer un filtro para usar solo valores mayores que **$50000.00** en la moneda del informe, convierta el valor en Decimal con la expresión `=CDec(50000.00)`.  
   
  Este valor también puede incluir una referencia de parámetro para permitir al usuario seleccionar de forma interactiva el valor por el que va a filtrarse.  
   
  Volver al principio  
   
 ## <a name="see-also"></a>Vea también  
- [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [Usar expresiones en informes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Parámetros de informe &#40; El generador de informes y el Diseñador de informes &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

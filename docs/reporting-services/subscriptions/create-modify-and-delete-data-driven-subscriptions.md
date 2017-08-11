@@ -20,17 +20,17 @@ caps.latest.revision: 51
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0eb66b6e5590408b1fa8c67c01989bb537436283
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Cómo crear, modificar y eliminar suscripciones controladas por datos
   Una suscripción controlada por datos es una suscripción basada en consultas que obtiene los valores de los datos que se utilizan para procesar la suscripción en tiempo de ejecución. Cuando se desencadena la suscripción, se procesa una consulta para obtener información actualizada sobre destinatarios, opciones de entrega del informe, formatos de representación y valores de los parámetros. Los resultados de la consulta se combinan con la definición de la suscripción para crear una suscripción dinámica que utiliza datos que se mantienen en una base de datos de empleados, de clientes o de cualquier otro tipo que contenga información que se pueda utilizar como datos de suscriptor.  
   
- Para crear una nueva suscripción controlada por datos o modificar una existente, use las páginas Crear suscripción controlada por datos del Administrador de informes. Estas páginas le guían por los pasos necesarios para crear o modificar una suscripción. Para tener acceso a una suscripción una vez creada, utilice la página Mis suscripciones y la lista Suscripciones de un informe. Para más información sobre cómo crear una suscripción controlada por datos, vea [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ Para crear una nueva suscripción controlada por datos o modificar una existente, use las páginas Crear suscripción controlada por datos del Administrador de informes. Estas páginas le guían por los pasos necesarios para crear o modificar una suscripción. Para tener acceso a una suscripción una vez creada, utilice la página Mis suscripciones y la lista Suscripciones de un informe. Para obtener información sobre cómo crear una suscripción controlada por datos, consulte [crear una suscripción controlada por datos &#40; Tutorial de SSRS &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
  En este tema:  
   
@@ -107,10 +107,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Crear y administrar suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Las suscripciones y entrega &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [El Administrador de informes &#40; Modo nativo de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Crear y administrar suscripciones para servidores de informes en modo nativo](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [Suscripciones &#40;página del Administrador de informes&#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
- [Mis suscripciones &#40;página del Administrador de informes&#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
+ [Página suscripciones &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
+ [Página Mis suscripciones &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
   
   

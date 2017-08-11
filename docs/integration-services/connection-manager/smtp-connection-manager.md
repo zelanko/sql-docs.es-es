@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.smtpconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], SMTP
 - SMTP connection manager [Integration Services]
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d350ca1ef990278eb64fc0589787fc5ea9b6125f
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: b952c9427a9bd15b29b806a5afb9f11d75d7393a
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="smtp-connection-manager"></a>Administrador de conexiones SMTP
@@ -50,6 +52,33 @@ ms.lasthandoff: 08/03/2017
   
  Para obtener más información sobre las propiedades que puede configurar en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Editor del administrador de conexiones SMTP](../../integration-services/connection-manager/smtp-connection-manager-editor.md).  
   
- Para obtener más información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
+ Para más información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
+## <a name="smtp-connection-manager-editor"></a>Editor del administrador de conexiones SMTP
+  Use el cuadro de diálogo **Editor del administrador de conexiones SMTP** para especificar un servidor de protocolo simple de transferencia de correo (SMTP).  
   
+ Para obtener más información acerca del administrador de conexiones SMTP, vea [SMTP Connection Manager](../../integration-services/connection-manager/smtp-connection-manager.md).  
+  
+### <a name="options"></a>Opciones  
+ **Nombre**  
+ Proporcione un nombre único para el administrador de conexiones.  
+  
+ **Description**  
+ Describa el administrador de conexiones. Como método recomendado, describa el administrador de conexiones desde el punto de vista de su propósito, para que los paquetes estén autodocumentados y sean más fáciles de mantener.  
+  
+ **Servidor SMTP**  
+ Proporcione el nombre del servidor SMTP.  
+  
+ **Utilizar autenticación de Windows**  
+ Seleccione esta opción para enviar correo electrónico mediante un servidor SMTP que utiliza Autenticación de Windows para autenticar el acceso al servidor.  
+  
+> [!IMPORTANT]  
+>  El administrador de conexiones SMTP solo es compatible con la autenticación anónima y la autenticación de Windows. No admite la autenticación básica.  
+  
+> [!NOTE]  
+>  Cuando utilice Microsoft Exchange como servidor SMTP, es posible que deba establecer **Utilizar autenticación de Windows** en **True**. Es posible que los servidores Exchange estén configurados para no permitir conexiones SMTP no autenticadas.  
+  
+ **Habilitar capa de sockets seguros (SSL)**  
+ Seleccione esta opción para cifrar comunicación mediante Capa de sockets seguros (SSL) al enviar mensajes de correo electrónico.  
+  
+

@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4426bffe23295c623d0bba5592c1488cb0ede770
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-builder-functions---lookup-function"></a>Funciones del generador de informes - Lookup, función
@@ -64,7 +64,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   Devuelve el valor de la expresión de resultado.  
   
- Para recuperar varios valores para un único nombre o un campo de clave donde hay una relación de uno a varios, use [Función LookupSet &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md). Para llamar a **Lookup** para un conjunto de valores, use [Función Multilookup &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
+ Para recuperar varios valores para un único nombre o un campo de clave donde hay una relación de uno a varios, use [Función LookupSet &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md). Para llamar a **búsqueda** para un conjunto de valores, utilice [función Multilookup &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
   
  Se aplican las siguientes restricciones:  
   
@@ -102,9 +102,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Usar expresiones en informes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Ejemplos de expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Tipos de datos en expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [Ámbito de expresión para totales, agregados y colecciones integradas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

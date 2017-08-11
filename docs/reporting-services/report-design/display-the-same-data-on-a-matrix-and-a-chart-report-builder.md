@@ -15,11 +15,11 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bf125e2438d3d79662920c8fbc93faab8e8024d4
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>Mostrar los mismos datos en una matriz y en un gráfico (Generador de informes y SSRS)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
   
  Para usar los valores de grupo de columnas de la matriz como una leyenda para el gráfico, debe especificar los colores para los datos de las series en el gráfico y, a continuación, usar los mismos colores como colores de relleno para el fondo de los cuadros de texto en la celda de la matriz que muestra los valores de grupo. Para obtener más información, vea [Especificar colores uniformes en varios gráficos de formas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md).  
   
- En tiempo de ejecución, su informe puede aparecer desordenado si hay demasiados valores de grupo para sus definiciones de grupo. Es posible que necesite filtrar valores, combinar grupos o ajustar el umbral para que el gráfico combine los grupos automáticamente. Para obtener más información, vea [Vincular varias regiones de datos al mismo conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ En tiempo de ejecución, su informe puede aparecer desordenado si hay demasiados valores de grupo para sus definiciones de grupo. Es posible que necesite filtrar valores, combinar grupos o ajustar el umbral para que el gráfico combine los grupos automáticamente. Para obtener más información, vea [Linking Multiple Data Regions to the Same Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -101,9 +101,9 @@ ms.lasthandoff: 06/22/2017
 25. Obtenga una vista previa del resultado. Los grupos de filas y de columnas de la matriz muestran los mismos datos que los grupos de series y de categorías del gráfico.  
   
 ## <a name="see-also"></a>Vea también  
- [Vincular varias regiones de datos al mismo conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Vincular varias regiones de datos al mismo conjunto de datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Tablas, Matrices y listas de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Gráficos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

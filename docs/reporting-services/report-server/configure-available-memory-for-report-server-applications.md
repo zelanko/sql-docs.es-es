@@ -18,11 +18,11 @@ caps.latest.revision: 49
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 21f15afcea2904a88e8e9bdb71b2cccc677ff43d
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurar la memoria disponible para las aplicaciones del servidor de informes
@@ -79,7 +79,7 @@ ms.lasthandoff: 06/22/2017
 |**MemorySafetyMargin**|Especifica un porcentaje de **WorkingSetMaximum** que define el límite entre el los escenarios de presión media y baja. Este valor es el porcentaje de memoria disponible que se reserva para el sistema y no se puede usar para las operaciones del servidor de informes. El valor predeterminado es 80.|  
   
 > [!NOTE]  
-> Las configuraciones **MemoryLimit** y **MaximumMemoryLimit** están obsoletas en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y later versions. Si ha actualizado una instalación existente o está usando un archivo RSReportServer.config que incluye dicha configuración, el servidor de informes ya no leerá dichos valores.  
+>  **MemoryLimit** y **MaximumMemoryLimit** configuración está obsoleta en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores. Si ha actualizado una instalación existente o está usando un archivo RSReportServer.config que incluye dicha configuración, el servidor de informes ya no leerá dichos valores.  
   
 #### <a name="example-of-memory-configuration-settings"></a>Ejemplo de los valores de configuración de memoria  
  El ejemplo siguiente muestra los valores de configuración para un equipo del servidor de informes que usa valores de configuración de memoria personalizados. Si desea agregar **WorkingSetMaximum** o **WorkingSetMinimum**, debe escribir los elementos y los valores en el archivo RSReportServer.config. Ambos valores son enteros que expresan kilobytes de RAM que está asignando a las aplicaciones de servidor. El ejemplo siguiente especifica que la asignación de memoria total para las aplicaciones del servidor de informes no puede superar los 4 gigabytes. Si el valor predeterminado de **WorkingSetMinimum** es aceptable (el 60 % de **WorkingSetMaximum**), puede omitirlo y especificar únicamente **WorkingSetMaximum** en el archivo RSReportServer.config. Este ejemplo incluye **WorkingSetMinimum** para mostrar cómo aparecería si deseara agregarlo:  
@@ -97,7 +97,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Vea también  
  [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Dominios de aplicación para aplicaciones de servidor de informes](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
+ [Modificar un archivo de configuración de Reporting Services &#40; RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Dominios de aplicación para las aplicaciones del servidor de informes](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
   
   

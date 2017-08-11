@@ -20,11 +20,11 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5aad5bbe0b53e2e6669df93496795f4c5b6a3bca
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="secure-folders"></a>Proteger carpetas
@@ -48,8 +48,8 @@ ms.lasthandoff: 06/22/2017
 |Establecer la seguridad de elementos individuales|Puede definir y modificar las asignaciones de roles que controlan el acceso a la carpeta. Esta tarea debe utilizarse con "Ver carpetas" o "Administrar carpetas". De lo contrario, no surtirá efecto, ya que el usuario no podrá seleccionar el elemento.|  
   
 ## <a name="see-also"></a>Vea también  
- [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md)   
- [Proteger elementos de orígenes de datos compartidos](../../reporting-services/security/secure-shared-data-source-items.md)   
- [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Proteger los informes y recursos](../../reporting-services/security/secure-reports-and-resources.md)   
+ [Proteger elementos de origen de datos compartidos](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [Conceder permisos en un servidor de informes de modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: df288358b8fd8b209adda5c52af5f23f878541e9
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Colecciones integradas - referencias de colección de campos de conjunto de datos (generador de informes)
@@ -91,7 +91,7 @@ End Function
  El cuadro de texto muestra el valor de campo o el texto especificado.  
   
 ### <a name="using-extended-field-properties"></a>Usar propiedades de campo extendidas  
- Las propiedades de campo extendidas son propiedades adicionales que la extensión de procesamiento de datos define en un campo, extensión que está determinada por el tipo de origen de datos del conjunto de datos. Las propiedades de campo extendidas pueden ser predefinidas o específicas de un tipo de origen de datos. Para obtener más información, vea [Propiedades de campo extendidas para una base de datos de Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+ Las propiedades de campo extendidas son propiedades adicionales que la extensión de procesamiento de datos define en un campo, extensión que está determinada por el tipo de origen de datos del conjunto de datos. Las propiedades de campo extendidas pueden ser predefinidas o específicas de un tipo de origen de datos. Para más información, vea [Propiedades de campo extendidas para una base de datos de Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
  Si especifica una propiedad no admitida para ese campo, la expresión se evalúa como **null** (**Nothing** en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). Si un proveedor de datos no admite propiedades de campo extendidas o si no se encuentra el campo al ejecutar la consulta, el valor de la propiedad será **null** (**Nothing** en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) para las propiedades de tipo **String** y **Object**, y cero (0) para las propiedades de tipo **Integer**. Una extensión de procesamiento de datos puede sacar partido de las propiedades predefinidas optimizando consultas que incluyan esta sintaxis.  
   

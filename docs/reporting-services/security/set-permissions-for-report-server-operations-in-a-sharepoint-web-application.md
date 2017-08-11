@@ -22,11 +22,11 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d6d0c434fbac82990ad43e0b631cc7e418e47db8
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Establecer permisos para las operaciones del servidor de informes en una aplicación web de SharePoint
@@ -137,9 +137,9 @@ ms.lasthandoff: 06/22/2017
 >  No existen permisos para modificar modelos de informe. Aunque se pueden crear o eliminar modelos de informe, no se pueden modificar desde un sitio de SharePoint. Para poder modificar modelos de informe, es necesario usar el Diseñador de modelos, una herramienta de creación de cliente a la que no afectan los permisos que haya establecido en SharePoint.  
   
 ## <a name="see-also"></a>Vea también  
- [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Comparar roles y tareas de Reporting Services con grupos y permisos de SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Conceder permisos sobre elementos de servidor de informes en un sitio de SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Comparar Roles y tareas de Reporting Services con permisos y grupos de SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [Conceder permisos sobre elementos de servidor de informes en un sitio de SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Usar la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
   
   

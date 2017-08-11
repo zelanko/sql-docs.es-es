@@ -18,11 +18,11 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: da2a367b582d39ea8cc8dc7ffc281a3515bb2d8b
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Configurar un servidor de informes (modo nativo de Reporting Services)
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Inicie la herramienta de configuración de Reporting Services y conéctese a la instancia del servidor de informes Para obtener instrucciones, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
-2.  Haga clic en **Dirección URL del servicio web** con el fin de abrir la página para configurar una dirección URL para el servidor de informes. Para obtener instrucciones sobre cómo definir la dirección URL, vea [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
+2.  Haga clic en **Dirección URL del servicio web** con el fin de abrir la página para configurar una dirección URL para el servidor de informes. Para obtener instrucciones sobre cómo definir la dirección URL, vea [configurar una dirección URL &#40; Administrador de configuración de SSRS &#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
 3.  Haga clic en **Base de datos** para crear la base de datos del servidor de informes. Para obtener más información, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 06/22/2017
 5.  Siga las instrucciones de "Pasos siguientes" para completar la implementación.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Para completar la implementación, debería configurar la integración de SharePoint o el Administrador de informes. Para más información, vea [Configurar el Administrador de informes &#40;modo nativo&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md).  
+ Para completar la implementación, debería configurar la integración de SharePoint o el Administrador de informes. Para obtener más información, vea [Configurar el Administrador de informes &#40;modo nativo&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md).  
   
  Si Firewall de Windows está activado, es probable que el puerto que el servidor de informes está configurado para usar esté cerrado. Una indicación de que un puerto puede estar cerrado es que aparece una página en blanco al intentar abrir el Administrador de informes desde un equipo cliente remoto. Para obtener más información acerca de la configuración del firewall, vea [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
@@ -65,9 +65,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Administrar un servidor de informes en modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
- [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
- [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
+ [Configurar un Firewall para el acceso del servidor de informes](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
+ [Configurar un servidor de informes de modo nativo para la administración Local &#40; SSRS &#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
  [Configurar un servidor de informes para la administración remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)   
- [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Reporting Services Configuration Manager &#40; Modo nativo &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

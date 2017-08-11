@@ -21,18 +21,18 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bd44bb279b61785784ce6ebe443ad78d30b4fc82
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas relacionales (Generador de informes)
   El Generador de informes y el Diseñador de informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]proporciona tanto un diseñador gráfico de consultas como un diseñador de consultas basado en texto para ayudarle a crear una consulta que especifique los datos que deben recuperarse de bases de datos relacionales de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases y de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] para un conjunto de datos de informe. Use el diseñador gráfico de consultas para explorar los metadatos, crear una consulta de forma interactiva y ver los resultados de la consulta. Use el diseñador de consultas basado en texto para ver la consulta creada por el diseñador gráfico de consultas o para modificar una consulta. También puede importar una consulta existente de un archivo o informe.  
   
 > [!NOTE]  
->  En el Generador de informes, para especificar una consulta para los tipos de orígenes de datos Oracle, OLE DB, ODBC y Teradata, debe usarse el diseñador de consultas basado en texto. Para obtener más información, vea [Interfaz de usuario del Diseñador de consultas basado en texto &#40;Generador de informes&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+>  En el Generador de informes, para especificar una consulta para los tipos de orígenes de datos Oracle, OLE DB, ODBC y Teradata, debe usarse el diseñador de consultas basado en texto. Para obtener más información, vea [basado en texto Query Designer User Interface &#40; El generador de informes &#41; ](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 > [!IMPORTANT]  
 >  Los usuarios tienen acceso a los orígenes de datos cuando crean y ejecutan las consultas. Debe conceder permisos mínimos para los orígenes de datos, por ejemplo permisos de solo lectura.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
  El diseñador gráfico de consultas se divide en tres áreas. El diseño del diseñador de consultas cambia en función de si la consulta usa tablas o vistas, o bien funciones con valores de tabla o procedimientos almacenados.  
   
 > [!NOTE]  
->  [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] no admite procedimientos almacenados o funciones con valores de tabla.  
+>  [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)]no admite procedimientos almacenados o funciones con valores de tabla.  
   
  La figura siguiente muestra el diseñador gráfico de consultas cuando se utiliza con tablas o vistas.  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 06/22/2017
   
  Los agregados proporcionan resúmenes de datos y los datos se agrupan para admitir el agregado que ofrece los datos de resumen. Al utilizar un agregado en la consulta, los otros campos que devuelve se agrupan automáticamente y la consulta incluye la cláusula de SQL GROUP BY. Puede resumir los datos sin agregar un agregado utilizando solo la opción **Agrupar por** en la lista **Grupo y agregado** . Muchos de los agregados incluyen una versión que utiliza la palabra clave DISTINCT. Al incluir DISTINCT, se eliminan los valores duplicados.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses [!INCLUDE[tsql](../../includes/tsql-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] uses [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Ambos dialectos del lenguaje SQL admiten la cláusula, la palabra clave y los agregados que el diseñador de consultas proporciona.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa [!INCLUDE[tsql](../../includes/tsql-md.md)] y de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] usa [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Ambos dialectos del lenguaje SQL admiten la cláusula, la palabra clave y los agregados que el diseñador de consultas proporciona.  
   
  Para obtener más información sobre [!INCLUDE[tsql](../../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](../../t-sql/transact-sql-reference-database-engine.md) en los [Libros en pantalla](http://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en msdn.microsoft.com.  
   
@@ -199,9 +199,9 @@ ms.lasthandoff: 06/22/2017
  Al seleccionar tablas y columnas, o procedimientos almacenados y vistas en el panel Vista de base de datos, el diseñador de consultas recupera la clave principal subyacente y las relaciones de clave externa del esquema de la base de datos. Al analizar estas relaciones, el diseñador de consultas detecta las relaciones entre dos tablas y agrega las combinaciones a la consulta. A continuación, puede modificar la consulta agregando grupos y agregados, agregando o cambiando relaciones, y agregando filtros. Para ver el texto de la consulta que muestra las columnas de las que recuperar los datos, las combinaciones entre las tablas y cualquier grupo o agregado, haga clic en **Editar como texto**.  
   
 ## <a name="text-based-query-designer"></a>Diseñador de consultas basado en texto  
- Para obtener el máximo control sobre la consulta, use el diseñador de consultas basado en texto. Para cambiar al diseñador de consultas basado en texto, en la barra de herramientas, haga clic en **Editar como texto**. Una vez que haya modificado una consulta en el diseñador de consultas basado en texto, ya no podrá usar el diseñador de consultas relacionales. La consulta se abrirá siempre en el diseñador de consultas basado en texto. Para obtener más información, vea [Interfaz de usuario del Diseñador de consultas basado en texto &#40;Generador de informes&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+ Para obtener el máximo control sobre la consulta, use el diseñador de consultas basado en texto. Para cambiar al diseñador de consultas basado en texto, en la barra de herramientas, haga clic en **Editar como texto**. Una vez que haya modificado una consulta en el diseñador de consultas basado en texto, ya no podrá usar el diseñador de consultas relacionales. La consulta se abrirá siempre en el diseñador de consultas basado en texto. Para obtener más información, vea [basado en texto Query Designer User Interface &#40; El generador de informes &#41; ](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Diseñadores de consultas &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [Diseñadores de consultas &#40; El generador de informes &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

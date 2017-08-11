@@ -15,11 +15,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e658d85131921354443cfc80e0c41b0aee3ecac8
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Vista de diseño de conjunto de datos compartidos (Generador de informes)
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/22/2017
  Utilice el botón **Seleccionar** del grupo Conexión para seleccionar un origen de datos compartido en el informe o vaya a un origen de datos compartido en el servidor de informes.  
   
 > [!NOTE]  
->  Un conjunto de datos compartido debe basarse en un origen de datos compartido. Si el origen de datos que necesita no está disponible, debe crear uno en el servidor de informes. Para obtener más información, vea [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
+>  Un conjunto de datos compartido debe basarse en un origen de datos compartido. Si el origen de datos que necesita no está disponible, debe crear uno en el servidor de informes. Para obtener más información, vea [crear, modificar y eliminar orígenes de datos compartidos &#40; SSRS &#41; ](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) .  
   
  Para obtener más información, consulte [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
@@ -55,9 +55,9 @@ ms.lasthandoff: 06/22/2017
   
  Una vez agregado un conjunto de datos compartido a un informe, los autores de informes podrán invalidar las siguientes opciones: intercalación, distinción entre mayúsculas y minúsculas, distinción de acentos, distinción de tipos de kana, distinción de ancho y subtotales. También podrán crear filtros de conjunto de datos adicionales para limitar los datos del informe.  
   
- Para obtener más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+ Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
- Para obtener más información sobre los planes de actualización de la memoria caché, vea [Almacenar en caché conjuntos de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md).  
+ Para obtener más información acerca de los planes de actualización de caché, consulte [conjuntos de datos compartidos de caché &#40; SSRS &#41; ](../../reporting-services/report-server/cache-shared-datasets-ssrs.md).  
   
 ### <a name="query-designer"></a>Diseñador de consultas  
  Utilice la barra de herramientas del diseñador de consultas como ayuda para crear una consulta que especifique qué datos deben recuperarse de la conexión de datos. La barra de herramientas que ve depende del diseñador de consultas que está asociado al tipo de origen de datos de la conexión de datos.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [Filtro, grupo y ordenar los datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Parámetros de informe &#40; El generador de informes y el Diseñador de informes &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

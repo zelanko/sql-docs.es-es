@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 95e64239c30aab1a341c281230c887f9668b9277
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt (utilidad) (SSRS)
@@ -100,7 +100,7 @@ rskeymgmt {-?}
  Especifica el nombre del equipo remoto que hospeda la instancia del servidor de informes que está uniendo a la implementación de ampliación horizontal del servidor de informes. Utilice el nombre del equipo que lo identifica en la red.  
   
  **-n**  
- Especifica el nombre de la instancia del servidor de informes en un equipo remoto. Este argumento es opcional si ha instalado el servidor de informes en el valor predeterminado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia (el valor predeterminado de  **-n**  es MSSQLSERVER). Si ha instalado el servidor de informes como una instancia con nombre,  **-n**  es necesario.  
+ Especifica el nombre de la instancia del servidor de informes en un equipo remoto. Este argumento es opcional si ha instalado el servidor de informes en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predeterminada (el valor predeterminado para **-n** es MSSQLSERVER). Si ha instalado el servidor de informes como una instancia con nombre, se requiere **-n** .  
   
  **-u**  *useraccount*  
  Especifica la cuenta de administrador del equipo remoto que está combinando con la implementación escalada. Si no se especifica una cuenta, se usan las credenciales del usuario actual.  
@@ -170,7 +170,7 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>Ubicación del archivo  
- RSKEYMGMT.exe se encuentra en  **\<* unidad*>: \Program SQL Server\110\Tools\Binn ** o en * * \<* unidad*>: \Program archivos (x86) \Microsoft SQL Server\110\Tools\Binn**. Puede ejecutar la utilidad desde cualquier carpeta del sistema de archivos.  
+ RSKEYMGMT.exe se encuentra en  **\<* unidad*>: \Program SQL Server\110\Tools\Binn ** o en  **\<* unidad*>: \Program archivos (x86) \Microsoft SQL Server\110\Tools\Binn**. Puede ejecutar la utilidad desde cualquier carpeta del sistema de archivos.  
   
 ## <a name="remarks"></a>Comentarios  
  El servidor de informes cifra las credenciales almacenadas y la información de la conexión. Para cifrar los datos, se utiliza una clave pública y una clave simétrica. Para que el servidor de informes funcione, la base de datos debe tener claves válidas. Puede usar **rskeymgmt** para realizar una copia de seguridad de las claves, eliminarlas o restaurarlas. Si las claves no se pueden restaurar, esta herramienta proporciona un método para eliminar el contenido cifrado que ya no se pueda usar.  
@@ -181,8 +181,8 @@ rskeymgmt -r <installationID>
   
 ## <a name="see-also"></a>Vea también  
  [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
- [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Utilidades del símbolo del sistema del servidor de informes &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Informes de servidor de informes de servicios &#40; Modo nativo &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Utilidades de símbolo del sistema del servidor de informes &#40; SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [Configurar y administrar las claves de cifrado &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

@@ -18,11 +18,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a1825a28cd9939228a73c1a4a6269c717b691ab2
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>Incrustar una imagen en un informe (Generador de informes y SSRS)
@@ -68,8 +68,8 @@ ms.lasthandoff: 06/22/2017
 3.  Haga clic en el cuadro de texto situado junto a la propiedad **MIMEType** y seleccione un nuevo tipo MIME en la lista desplegable.  
   
 ## <a name="see-also"></a>Vea también  
- [Imágenes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
- [Agregar una imagen enlazada a datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)   
- [Cuadro de diálogo de Propiedades de la imagen, General &#40;Generador de informes y SSRS&#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
+ [Imágenes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
+ [Agregar una imagen enlazada a datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)   
+ [Cuadro de diálogo de propiedades de imagen, General &#40; El generador de informes y SSRS &#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   

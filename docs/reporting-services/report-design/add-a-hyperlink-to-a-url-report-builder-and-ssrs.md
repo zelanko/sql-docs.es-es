@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c4d66e7d74d06cbad20351f80a312be95cc253c0
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Agregar un hipervínculo a una dirección URL (Generador de informes y SSRS)
@@ -93,8 +93,8 @@ Puede crear vínculos a marcadores en una ubicación en el informe actual. Para 
 7.  Para probar el vínculo, haga clic en **Ejecutar** para obtener la vista previa del informe y, a continuación, haga clic en el elemento de informe en el que ha establecido este vínculo.  
   
 ## <a name="see-also"></a>Vea también  
- [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [Crear un mapa del documento &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
+ [Ordenación interactiva, mapas de documento y vínculos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [Crear un mapa del documento &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
   
   
 

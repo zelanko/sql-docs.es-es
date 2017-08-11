@@ -18,11 +18,11 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d0650fb86cd929d67170f54adec1424c36467dcc
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="update-a-resource-report-manager"></a>Actualizar un recurso (Administrador de informes)
@@ -49,9 +49,9 @@ ms.lasthandoff: 06/22/2017
  Si el recurso que está actualizando contiene una imagen que se utiliza en un informe, debe actualizar el informe para ver la imagen actualizada.  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido &#40;página del Administrador de informes&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Cargar archivo &#40;página del Administrador de informes&#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
+ [Página contenido &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Cargar archivo página &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [Cargar archivos a una carpeta](../../reporting-services/report-server/upload-files-to-a-folder.md)   
- [Administrador de informes (Ayuda F1)](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
+ [El Administrador de informes (Ayuda F1)](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
   

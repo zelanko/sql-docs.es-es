@@ -16,11 +16,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 99c21c41115748c82267ed72845607b044ee3a6a
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurar una dirección URL (Administrador de configuración de SSRS)
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/22/2017
   
  Utilice la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar las direcciones URL. Todas las partes de la dirección URL se definen en esta herramienta. A diferencia de las versiones anteriores, los sitios web de Internet Information Services (IIS) ya no proporcionan acceso a las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona los valores predeterminados que mejor funcionan en la mayoría de escenarios de implementación, incluso en las implementaciones en paralelo con otros servicios web y aplicaciones. Las direcciones URL predeterminadas incorporan nombres de instancia, con lo que se reduce el riesgo de que se produzcan conflictos de direcciones URL si ejecuta varias instancias del servidor de informes en el mismo equipo.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Proporciona valores predeterminados que funcionan bien en la mayoría de los escenarios de implementación, incluidas las implementaciones en paralelo con otras aplicaciones y servicios Web. Las direcciones URL predeterminadas incorporan nombres de instancia, con lo que se reduce el riesgo de que se produzcan conflictos de direcciones URL si ejecuta varias instancias del servidor de informes en el mismo equipo.  
   
  Este tema proporciona instrucciones para las tareas siguientes:  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Establecer propiedades avanzadas de las direcciones URL para definir más direcciones URL.  
   
- Para obtener más información sobre cómo se almacenan y mantienen las direcciones URL, o sobre problemas de interoperabilidad, vea [Acerca de las reservas y el registro de reservas de URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) e [Instalar Reporting Services e Internet Information Services en paralelo &#40;modo nativo de SSRS&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para revisar ejemplos de direcciones URL que suelen usarse en una instalación de Reporting Services, vea [Ejemplos de direcciones URL](#URLExamples) en este tema.  
+ Para obtener más información acerca de cómo se almacenan y mantienen las direcciones URL o problemas de interoperabilidad, consulte [sobre reservas de direcciones URL y el registro &#40; Administrador de configuración de SSRS &#41; ](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) y [instalar Reporting Services y Internet información Services Side-by-Side &#40; Modo nativo de SSRS &#41; ](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla. Para revisar ejemplos de direcciones URL que suelen usarse en una instalación de Reporting Services, vea [Ejemplos de direcciones URL](#URLExamples) en este tema.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Antes de crear o modificar una dirección URL, recuerde los puntos siguientes:  
@@ -199,6 +199,6 @@ ms.lasthandoff: 06/22/2017
 -   `https://www.adventure-works.com:8080/reports`  
   
 ## <a name="see-also"></a>Vea también  
- [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+ [Reporting Services Configuration Manager &#40; Modo nativo &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [Configurar direcciones URL del servidor de informes &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 

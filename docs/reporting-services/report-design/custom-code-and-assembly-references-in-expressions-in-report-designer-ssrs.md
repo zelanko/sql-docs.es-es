@@ -24,11 +24,11 @@ caps.latest.revision: 77
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dc8491006425de79f8e96be1affb10687a1553f9
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes (SSRS)
@@ -55,14 +55,14 @@ ms.lasthandoff: 06/22/2017
 2.  Obtener una vista previa de un informe con referencias a ensamblados personalizados en modo local.  
   
 ##  <a name="Common"></a> Incluir referencias a funciones de uso frecuente  
- Use el cuadro de diálogo **Expresión** para ver una lista organizada en categorías de las funciones de uso frecuente integradas en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si expande **Funciones comunes** y hace clic en una categoría, el panel **Elemento** muestra la lista de funciones que puede incluir en una expresión. Las funciones comunes incluyen clases a partir de la [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> y <xref:System.Convert> espacios de nombres y [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] funciones de biblioteca en tiempo de ejecución. Para mayor comodidad, puede ver las funciones de uso más frecuente en el cuadro de diálogo **Expresión** , donde aparecen agrupadas por categorías: Texto, Fecha y hora, Matemáticas, Inspección, Flujo de programa, Agregado, Finanzas, Conversión y Varios. Las funciones de uso menos frecuente no aparecen en la lista, pero se pueden usar en una expresión.  
+ Use el cuadro de diálogo **Expresión** para ver una lista organizada en categorías de las funciones de uso frecuente integradas en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si expande **Funciones comunes** y hace clic en una categoría, el panel **Elemento** muestra la lista de funciones que puede incluir en una expresión. En las funciones comunes se incluyen clases de los espacios de nombres [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> y <xref:System.Convert> , así como funciones de biblioteca en tiempo de ejecución de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Para mayor comodidad, puede ver las funciones de uso más frecuente en el cuadro de diálogo **Expresión** , donde aparecen agrupadas por categorías: Texto, Fecha y hora, Matemáticas, Inspección, Flujo de programa, Agregado, Finanzas, Conversión y Varios. Las funciones de uso menos frecuente no aparecen en la lista, pero se pueden usar en una expresión.  
   
  Para usar una función integrada, haga doble clic en el nombre de la función en el panel Elemento. En el panel Descripción, aparece una descripción de la función; en el panel Ejemplo, aparece un ejemplo de la llamada a la función. En el panel de código, al escribir el nombre de la función seguido por un paréntesis izquierdo **(**, la Ayuda de IntelliSense muestra la sintaxis válida para la llamada a la función. Por ejemplo, para calcular el valor máximo de un campo denominado `Quantity` en una tabla, agregue la expresión simple `=Max(` al panel de código y, a continuación, use las etiquetas inteligentes para ver todas las posibles sintaxis válidas para la llamada a la función. Para completar este ejemplo, escriba `=Max(Fields!Quantity.Value)`.  
   
- Para obtener más información sobre cada función, consulte <xref:System.Math>, <xref:System.Convert>, y [miembros de biblioteca en tiempo de ejecución de Visual Basic](http://go.microsoft.com/fwlink/?LinkId=198941) en MSDN.  
+ Para más información sobre cada función, vea <xref:System.Math>, <xref:System.Convert>y [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](http://go.microsoft.com/fwlink/?LinkId=198941) en MSDN.  
   
 ##  <a name="NotCommon"></a> Incluir referencias a funciones de uso menos frecuente  
- Para incluir una referencia a otros menos utilizadas espacios de nombres CLR, debe usar una referencia completa, por ejemplo, <xref:System.Text.StringBuilder>. IntelliSense no se admite en el panel de código del cuadro de diálogo **Expresión** para estas funciones menos frecuentes.  
+ Para incluir una referencia a otros espacios de nombres de CLR de uso menos frecuente es necesario usar una referencia completa (por ejemplo, <xref:System.Text.StringBuilder>. IntelliSense no se admite en el panel de código del cuadro de diálogo **Expresión** para estas funciones menos frecuentes.  
   
  Para obtener más información, vea [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](http://go.microsoft.com/fwlink/?LinkId=198941) en MSDN.  
   
@@ -106,7 +106,7 @@ Public Dim MyDoubleVersion As Double = 123.456
   
  `=Code.FixSpelling(Fields!SubCategory.Value)`  
   
- Cuando el código siguiente se incrusta en un bloque de código de la definición de informe, muestra una implementación del método **FixSpelling** . En este ejemplo se muestra cómo usar una referencia completa a la clase [!INCLUDE[msCoName](../../includes/msconame-md.md)] **StringBuilder de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]**.  
+ Cuando el código siguiente se incrusta en un bloque de código de la definición de informe, muestra una implementación del método **FixSpelling** . Este ejemplo muestra cómo usar una referencia completa a la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **StringBuilder** clase.  
   
 ```vb  
 Public Function FixSpelling(ByVal s As String) As String  
@@ -196,11 +196,11 @@ End Function
  Como el contenido de las colecciones *Fields* y *ReportItems* puede cambiar dinámicamente en tiempo de ejecución, no las incluya en las llamadas al ensamblado personalizado (por ejemplo, en una variable miembro). La misma recomendación se aplica normalmente a todas las colecciones integradas.  
   
 ## <a name="see-also"></a>Vea también  
- [Agregar código a un informe &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
+ [Agregar código a un informe &#40; SSRS &#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
  [Usar ensamblados personalizados con informes](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Agregar una referencia de ensamblado a un informe &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
- [Tutoriales de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Agregar una referencia de ensamblado a un informe &#40; SSRS &#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
+ [Reporting Services Tutorials &#40; SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Ejemplos de expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Ejemplos de informes (Generador de informes y SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
   

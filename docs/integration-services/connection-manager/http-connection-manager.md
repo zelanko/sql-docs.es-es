@@ -9,6 +9,9 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.httpconnection.server.f1
+- sql13.dts.designer.httpconnection.proxy.f1
 helpviewer_keywords:
 - HTTP connection manager
 - Web site connections [Integration Services]
@@ -21,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4cf63461848933530a215a75b19d40128327f356
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 7dbd165b8d94247365697fe3b9e0cbb372becd8c
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="http-connection-manager"></a>HTTP, administrador de conexiones
@@ -50,13 +53,84 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-http-connection-manager"></a>Configuración del administrador de conexiones HTTP  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
-  
--   [Editor del administrador de conexiones HTTP &#40;página Servidor&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
-  
--   [Editor del administrador de conexiones HTTP &#40;página Proxy&#41;](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)  
-  
  Para más información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.  
+  
+## <a name="http-connection-manager-editor-server-page"></a>Editor del administrador de conexiones HTTP (página Servidor)
+  Utilice la pestaña **Servidor** del cuadro de diálogo **Editor del administrador de conexiones HTTP** para configurar el Administrador de conexiones HTTP especificando propiedades como la dirección URL y las credenciales de seguridad. Una conexión HTTP habilita a un paquete para obtener acceso a un servidor web mediante HTTP para enviar o recibir archivos. Después de configurar el Administrador de conexiones HTTP, también puede probar la conexión.  
+  
+> [!IMPORTANT]  
+>  El administrador de conexiones HTTP solo es compatible con la autenticación anónima y la autenticación básica. No es compatible con la autenticación de Windows.  
+  
+ Para obtener más información acerca del administrador de conexiones HTTP, vea [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md). Para obtener más información acerca de un escenario común de uso para el Administrador de conexiones HTTP, vea [Web Service Task](../../integration-services/control-flow/web-service-task.md).  
+  
+### <a name="options"></a>Opciones  
+ **Dirección URL del servidor**  
+ Escriba la dirección URL del servidor.  
+  
+ Si piensa utilizar el botón **Descargar WSDL** de la página **General** del **Editor de la tarea Servicio web** para descargar un archivo WSDL, escriba la dirección URL del archivo WSDL. Esta dirección URL finaliza con"?wsdl".  
+  
+ **Utilizar credenciales**  
+ Especifique si desea que el Administrador de conexiones HTTP utilice las credenciales de seguridad del usuario para la autenticación.  
+  
+ **Nombre de usuario.**  
+ Si el Administrador de conexiones HTTP utiliza credenciales, debe especificar un nombre de usuario, una contraseña y un dominio.  
+  
+ **Contraseña**  
+ Si el Administrador de conexiones HTTP utiliza credenciales, debe especificar un nombre de usuario, una contraseña y un dominio.  
+  
+ **Dominio**  
+ Si el Administrador de conexiones HTTP utiliza credenciales, debe especificar un nombre de usuario, una contraseña y un dominio.  
+  
+ **Utilizar certificado de cliente**  
+ Especifique si desea que el Administrador de conexiones HTTP utilice un certificado de cliente para la autenticación.  
+  
+ **Certificado**  
+ Seleccione un certificado de la lista mediante el cuadro de diálogo **Seleccionar certificado** . El cuadro de texto muestra el nombre asociado con este certificado.  
+  
+ **Tiempo de espera (en segundos)**  
+ Indique un tiempo de espera para conectar con el servidor web. El valor predeterminado de esta propiedad es 30 segundos.  
+  
+ **Tamaño del fragmento (en KB)**  
+ Indique un tamaño de fragmento para escribir datos.  
+  
+ **Probar conexión**  
+ Después de configurar el Administrador de conexiones HTTP, haga clic en **Probar conexión**para confirmar que la conexión es viable.  
+  
+## <a name="http-connection-manager-editor-proxy-page"></a>Editor del administrador de conexiones HTTP (página Proxy)
+  Utilice la pestaña **Proxy** del cuadro de diálogo **Editor del administrador de conexiones HTTP** para configurar el Administrador de conexiones HTTP para que utilice un servidor proxy. Una conexión HTTP habilita a un paquete para obtener acceso a un servidor web mediante HTTP para enviar o recibir archivos.  
+  
+ Para obtener más información acerca del administrador de conexiones HTTP, vea [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md). Para obtener más información acerca de un escenario común de uso para el Administrador de conexiones HTTP, vea [Web Service Task](../../integration-services/control-flow/web-service-task.md).  
+  
+### <a name="options"></a>Opciones  
+ **Utilizar proxy**  
+ Especifique si desea que el Administrador de conexiones HTTP se conecte a través de un servidor proxy.  
+  
+ **Dirección URL de proxy**  
+ Escriba la dirección URL para el servidor de proxy.  
+  
+ **No usar servidor proxy en el equipo local**  
+ Especifique si desea que el Administrador de conexiones HTTP no utilice el servidor proxy para direcciones locales.  
+  
+ **Utilizar credenciales**  
+ Especifique si desea que el Administrador de conexiones HTTP utilice credenciales de seguridad para el servidor proxy.  
+  
+ **Nombre de usuario.**  
+ Si el Administrador de conexiones HTTP utiliza credenciales, debe especificar un nombre de usuario, una contraseña y un dominio.  
+  
+ **Contraseña**  
+ Si el Administrador de conexiones HTTP utiliza credenciales, debe especificar un nombre de usuario, una contraseña y un dominio.  
+  
+ **Dominio**  
+ Si el Administrador de conexiones HTTP utiliza credenciales, debe especificar un nombre de usuario, una contraseña y un dominio.  
+  
+ **Lista de omisión de proxy**  
+ Lista de direcciones para la que desea omitir el servidor proxy.  
+  
+ **Agregar**  
+ Escriba una dirección para la que no desee utilizar el servidor proxy.  
+  
+ **Quitar**  
+ Seleccione una dirección y quítela haciendo clic en **Quitar**.  
   
 ## <a name="see-also"></a>Vea también  
  [Tarea Servicio web](../../integration-services/control-flow/web-service-task.md)   

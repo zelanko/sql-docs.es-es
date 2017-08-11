@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cbe2dd936369c89b52302b1d244829dcb12744bc
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Región de datos Tablix (Generador de informes y SSRS)
@@ -83,9 +83,9 @@ ms.lasthandoff: 06/22/2017
  La característica Agregar total crea automáticamente una fila fuera del grupo actual en la que mostrar valores cuyo ámbito es el grupo. También puede agregar filas estáticas y dinámicas manualmente. Los indicadores visuales le ayudan a entender qué filas son estáticas y qué filas son dinámicas. Para más información, vea [Celdas, filas y columnas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Vincular varias regiones de datos al mismo conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
- [Explorar la flexibilidad de una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
- [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Vincular varias regiones de datos al mismo conjunto de datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [Controlar la presentación de la región de datos Tablix en una página de informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
+ [Explorar la flexibilidad de una región de datos Tablix &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
+ [Tablas, Matrices y listas de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

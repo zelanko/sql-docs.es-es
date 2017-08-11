@@ -19,11 +19,11 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 653001080c8ede72abf608c7b8b982558d55c46b
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Causa y resolución de errores de Reporting Services
@@ -39,10 +39,10 @@ ms.lasthandoff: 06/22/2017
 |[rsProcessingError - Error de Reporting Services](../../reporting-services/troubleshooting/rsprocessingerror-reporting-services-error.md)|Error al procesar el informe.|  
 |[rsServerConfigurationError - Error de Reporting Services](../../reporting-services/troubleshooting/rsserverconfigurationerror-reporting-services-error.md)|El servidor de informes ha encontrado un error de configuración.|  
 |[rrRenderingError - Error de Reporting Services](../../reporting-services/troubleshooting/rrrenderingerror-reporting-services-error.md)|Error durante la representación del informe. (rrRenderingError) %1.|  
-|[Servicio Servidor de informes de Windows &#40;MSSQLServer&#41; 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|El servicio Servidor de informes de Windows (MSSQLSERVER) no se puede conectar a la base de datos del servidor de informes.|  
+|[Servicio de Windows del servidor de informes &#40; MSSQLServer &#41; 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|El servicio Servidor de informes de Windows (MSSQLSERVER) no se puede conectar a la base de datos del servidor de informes.|  
   
 ## <a name="see-also"></a>Vea también  
- [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Referencia de errores y eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [Los archivos de registro y orígenes de Reporting](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
+ [Errores y eventos referencia &#40; Reporting Services &#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

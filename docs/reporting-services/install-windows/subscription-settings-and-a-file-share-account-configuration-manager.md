@@ -16,11 +16,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 804f6b3bb0ee6b5d65c7990fb3eb92fc0b369446
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Configuración de la suscripción y una cuenta de recurso compartido de archivos (Administrador de configuración)
@@ -103,7 +103,7 @@ $subscriptions | extensionSettingFilter | select report, owner, status, lastexec
   
 ## <a name="see-also"></a>Vea también  
  [Entrega a recursos compartidos de archivos en Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
- [Crear y administrar suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
+ [Creación y administración de suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
   
   
 

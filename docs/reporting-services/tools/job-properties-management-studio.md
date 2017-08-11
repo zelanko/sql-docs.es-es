@@ -17,11 +17,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2f138c5caef261757a4bce22cb84ebeb7a2a68b8
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="job-properties-management-studio"></a>Propiedades del trabajo (Management Studio)
@@ -74,7 +74,7 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Vea también  
  [Servidor de informes en Management Studio ayuda F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Conectar con un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Conectarse a un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Administrar un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   

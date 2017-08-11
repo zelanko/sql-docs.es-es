@@ -26,11 +26,11 @@ caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8302c8f1713adc224c76b3f6dca11d984ff69c32
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-design-view-report-builder"></a>Vista de diseño de informe (Generador de informes)
@@ -73,10 +73,10 @@ ms.lasthandoff: 06/22/2017
   
 -   Las propiedades de los elementos de informe, haciendo clic con el botón derecho en ellos y, después, haciendo clic en **Propiedades**.  
   
- Para obtener información sobre cómo usar el teclado para manipular los elementos en la superficie de diseño, vea [Métodos abreviados de teclado &#40;Generador de informes&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md).  
+ Para obtener información sobre cómo usar el teclado para manipular los elementos en la superficie de diseño, vea [métodos abreviados de teclado &#40; El generador de informes &#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
   
 ### <a name="design-surface-size-and-print-area"></a>Tamaño de la superficie de diseño y del área de impresión  
- El tamaño de la superficie de diseño puede ser diferente del área de impresión del tamaño de página que especifique para imprimir el informe. El cambio del tamaño de la superficie de diseño no cambiará el área de impresión de su informe. Con independencia del tamaño que establezca para el área de impresión de su informe, el tamaño del área de diseño completa no cambia. Para obtener más información, vea [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
+ El tamaño de la superficie de diseño puede ser diferente del área de impresión del tamaño de página que especifique para imprimir el informe. El cambio del tamaño de la superficie de diseño no cambiará el área de impresión de su informe. Con independencia del tamaño que establezca para el área de impresión de su informe, el tamaño del área de diseño completa no cambia. Para más información, vea [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
 > [!TIP]  
 >  Para mostrar la regla, en la pestaña **Ver** active la casilla **Regla** .  

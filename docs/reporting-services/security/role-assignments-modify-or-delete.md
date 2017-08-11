@@ -21,11 +21,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1a0db8452d082dddf6f5ffc39c1a9bd5802bf114
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="role-assignments---modify-or-delete"></a>Las asignaciones de roles - modificar o eliminar
@@ -68,9 +68,9 @@ ms.lasthandoff: 06/22/2017
 6.  Para eliminar una asignación de rol, active la casilla situada junto al nombre de usuario o grupo y, a continuación, haga clic en **Eliminar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear y administrar asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [Crear y administrar las asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [Asignaciones de roles](../../reporting-services/security/role-assignments.md)   
- [Página Configuración del sitio &#40;Administrador de informes&#41;](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
- [Nueva asignación de roles del sistema y Editar asignaciones de roles del sistema &#40;páginas del Administrador de informes&#41;](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
+ [Página Configuración del sitio &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
+ [Nueva asignación de roles de sistema: Editar asignaciones de roles de sistema páginas &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
   
   

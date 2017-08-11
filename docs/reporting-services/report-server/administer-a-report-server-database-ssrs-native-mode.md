@@ -22,11 +22,11 @@ caps.latest.revision: 63
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 464f02ee6324db06587ee1c7233f8fcd12026722
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Administrar una base de datos del servidor de informes (Modo nativo de SSRS)
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/22/2017
   
  Para administrar las bases de datos del servidor de informes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una amplia variedad de herramientas.  
   
--   Para realizar una copia de seguridad, restaurar, mover o recuperar una base de datos del servidor de informes, se puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], los comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] o las utilidades de símbolo del sistema de la base de datos. Para obtener instrucciones, vea [Mover las bases de datos del servidor de informes a otro equipo &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) en los Libros en pantalla de SQL Server.  
+-   Para realizar una copia de seguridad, restaurar, mover o recuperar una base de datos del servidor de informes, se puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], los comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] o las utilidades de símbolo del sistema de la base de datos. Para obtener instrucciones, consulte [mover las bases de datos del servidor de informes a otro equipo &#40; Modo nativo de SSRS &#41; ](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) en libros en pantalla de SQL Server.  
   
 -   Para copiar el contenido de una base de datos existente en otra base de datos del servidor de informes, puede adjuntar una copia de una base de datos del servidor de informes y utilizarla con una instancia distinta del servidor de informes. También puede crear y ejecutar un script que utilice llamadas SOAP para volver a crear contenido del servidor de informes en una nueva base de datos. Puede usar la utilidad **rs** para ejecutar el script.  
   
@@ -85,14 +85,14 @@ SET READ_COMMITTED_SNAPSHOT OFF
   
 ## <a name="see-also"></a>Vea también  
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Crear una base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
- [Operaciones de copia de seguridad y restauración de Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)   
- [Base de datos del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
- [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Almacenar datos cifrados del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Crear una base de datos del servidor de informes de modo nativo &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [Configurar la cuenta de servicio del servidor de informes &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Configurar una conexión de base de datos del servidor de informes &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Crear una base de datos del servidor de informes &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+ [Copia de seguridad y las operaciones de restauración para Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)   
+ [Base de datos de servidor de informes &#40; Modo nativo de SSRS &#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+ [Informes de servidor de informes de servicios &#40; Modo nativo &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Cifrado de almacén de datos del servidor de informes &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Configurar y administrar las claves de cifrado &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

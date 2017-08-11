@@ -19,11 +19,11 @@ caps.latest.revision: 41
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9237063ad4f9c1731a0bc10f5f881ead3b55313f
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-execution-properties-for-a-report--report-manager"></a>Configurar las propiedades de ejecución de un informe (Administrador de informes)
@@ -52,10 +52,10 @@ ms.lasthandoff: 06/22/2017
 3.  Haga clic en **Aplicar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Establecer las propiedades del procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Abrir y cerrar un informe &#40;Administrador de informes&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [Contenido &#40;página del Administrador de informes&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Página de propiedades Opciones de procesamiento &#40;Administrador de informes&#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)  
+ [Establecer las propiedades de procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [Abrir y cerrar un informe &#40; El Administrador de informes &#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
+ [Página contenido &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Administración de contenido de servidor de informes &#40; Modo nativo de SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Página de propiedades de opciones de procesamiento &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)  
   
   

@@ -14,17 +14,17 @@ caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5d2d84a84ef5abf6f048fe5f0d73e5724ae32950
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="install-report-builder"></a>Instalar el Generador de informes
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] es una aplicación independiente que el usuario o un administrador pueden instalar en el equipo. Puede instalarlo desde el Centro de descarga de Microsoft, desde un servidor de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] o desde un sitio de SharePoint integrado con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Un administrador normalmente instala y configura [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], concede permiso para descargar [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde el portal web y administra carpetas y permisos a los informes, los elementos de informe y los conjuntos de datos compartidos guardados en el servidor de informes. Para obtener más información sobre la administración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
+ Un administrador normalmente instala y configura [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], concede permiso para descargar [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde el portal web y administra carpetas y permisos a los informes, los elementos de informe y los conjuntos de datos compartidos guardados en el servidor de informes. Para obtener más información acerca de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] administración, consulte [servidor de informes de Reporting Services &#40; Modo nativo &#41; ](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
 ## <a name="install-includessrbnoversionincludesssrbnoversion-mdmd-from--a--web-portal-or-sharepoint-library"></a>Instalar [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde un portal web o una biblioteca de SharePoint 
   

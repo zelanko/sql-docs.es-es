@@ -19,11 +19,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0498dfe642a927744c7a0b5c7cefb5803cb0d469
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Entrega por correo electrónico en Reporting Services
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Crear y administrar suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)  
   
--   [Crear y administrar suscripciones para servidores de informes en modo de SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
+-   [Creación y administración de suscripciones para servidores de informes en modo de SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
 ||  
 |-|  
@@ -96,7 +96,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Tareas y permisos](../../reporting-services/security/tasks-and-permissions.md)   
- [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Las suscripciones y entrega &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Suscripciones controladas por datos](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Asignaciones de roles](../../reporting-services/security/role-assignments.md)  
   

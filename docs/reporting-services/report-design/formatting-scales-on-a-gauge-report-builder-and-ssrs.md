@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4a25ea1cb8702758096118371c4261e8189c2e91
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Aplicar formato a las escalas de un medidor (Generador de informes y SSRS)
@@ -84,10 +84,10 @@ ms.lasthandoff: 06/22/2017
 -   1% del alto o del ancho del medidor, el que sea más pequeño, en un medidor lineal.  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicar formato a los rangos de un medidor &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
- [Aplicar formato a los punteros de un medidor &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
- [Aplicar formato de fecha o de moneda a las etiquetas de los ejes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [Intervalos de formato de un medidor &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [Aplicar formato a punteros de un medidor &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [Etiquetas del eje de formato como fechas o monedas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [Aplicar formato a las etiquetas del eje en un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Medidores &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   

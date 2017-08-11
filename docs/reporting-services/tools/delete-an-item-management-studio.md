@@ -19,11 +19,11 @@ caps.latest.revision: 30
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 67a2bf743e580ef73204c02b6e6531aa3c08868d
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="delete-an-item-management-studio"></a>Eliminar un elemento (Management Studio)
@@ -37,11 +37,11 @@ ms.lasthandoff: 06/22/2017
   
 3.  Haga clic con el botón derecho en el elemento y, después, haga clic en **Eliminar**.  
   
-4.  Cuando se le solicite, [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Cuando se le solicite,[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Conectar con un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Eliminar elementos del catálogo &#40;Management Studio&#41;](../../reporting-services/tools/delete-catalog-items-management-studio.md)   
- [Reporting Services en SQL Server Management Studio &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [Conectarse a un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Eliminar elementos de catálogo &#40; Management Studio &#41;](../../reporting-services/tools/delete-catalog-items-management-studio.md)   
+ [Reporting Services en SQL Server Management Studio &#40; SSRS &#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

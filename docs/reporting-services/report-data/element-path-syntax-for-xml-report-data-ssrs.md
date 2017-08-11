@@ -18,11 +18,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7c25d6665198e0392aa70d649ca658adec84d2de
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintaxis de ruta de acceso de elemento para datos de informe XML (SSRS)
@@ -39,7 +39,7 @@ ms.lasthandoff: 08/03/2017
 |&#124; (barra vertical)|Separa los elementos de sintaxis. Solo se puede elegir uno de los elementos.|  
 |`[ ]` (corchetes)|Elementos opcionales de sintaxis. No escriba los corchetes.|  
 |**{ }** (llaves)|Delimita los parámetros de los elementos de sintaxis.|  
-|[**,**…*n*]|Indica que el elemento anterior puede repetirse *n* veces. Cada repetición se separa de la siguiente con una coma.|  
+|[**,**...*n*]|Indica que el elemento anterior puede repetirse  *n*  número de veces. Cada repetición se separa de la siguiente con una coma.|  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -209,9 +209,9 @@ XMLLocalName :: =
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Tipo de conexión XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
- [Tutoriales de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [Agregar, editar y actualizar campos en el panel Datos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
+ [Tipo de conexión XML &#40; SSRS &#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
+ [Reporting Services Tutorials &#40; SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Agregar, editar y actualizar campos en el panel de datos de informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
   
 

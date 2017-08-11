@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5bd079fcfdd867bbcfb251c7e58fa485c9c56d17
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Elementos de informe y conjuntos de datos en el Generador de informes
@@ -59,10 +59,10 @@ ms.lasthandoff: 06/22/2017
 >  Para asegurarse de que usted y otros usuarios pueden seguir usando correctamente los datos de un conjunto de datos compartido, debe entender los principios básicos sobre la protección de los elementos de informe. Para más información, vea [Proteger los elementos de un conjunto de datos compartido](../../reporting-services/security/secure-shared-dataset-items.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Vista de diseño de informe &#40;Generador de informes&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Seguridad &#40;Generador de informes&#41;](../../reporting-services/report-builder/security-report-builder.md)   
- [Elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
- [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [La vista de diseño de informes &#40; El generador de informes &#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
+ [Seguridad &#40; El generador de informes &#41;](../../reporting-services/report-builder/security-report-builder.md)   
+ [Elementos de informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
+ [Informe incrusta los conjuntos de datos y conjuntos de datos compartidos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
 

@@ -24,11 +24,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 99b5b8ec78220064b79795e51b37b22f18a60886
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Colecciones integradas - informes y referencias de Variables de grupo (generador de informes)
@@ -77,8 +77,8 @@ ms.lasthandoff: 06/22/2017
  Para hacer referencia a la variable en una expresión, use la sintaxis de colección global, por ejemplo, `=Variables!GroupDescription.Value`. En la superficie de diseño, el valor aparece en un cuadro de texto como `<<Expr>>`.  
   
 ## <a name="see-also"></a>Vea también  
- [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Filtro, grupo y ordenar los datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Colecciones integradas en expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Ejemplos de expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

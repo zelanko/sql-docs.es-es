@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 26fe5c7d510e186258b006659d565935f4dd73d0
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>Imprimir un informe (Generador de informes y SSRS)
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  Los márgenes de impresión no se muestran en los modos de diseño o de ejecución. No hay ninguna relación entre el área expuesta de diseño y el área de impresión de su informe. Para ver los márgenes de impresión, en modo de ejecución haga clic en Diseño de impresión en la pestaña **Ejecutar** de la Cinta de opciones.  
   
- Para más información sobre la paginación de informes, vea [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ Para obtener más información acerca de la paginación de informes, consulte [paginación en Reporting Services &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -101,7 +101,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Vea también  
  [Imprimir informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Propiedades del informe &#40;cuadro de diálogo&#41;, Configurar página &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
+ [Cuadro de diálogo de propiedades de informe, el programa de instalación de la página &#40; El generador de informes &#41;](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
  [Vista de diseño de informe &#40;Generador de informes&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
   
   

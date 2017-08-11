@@ -15,17 +15,17 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2ae4ec5004c6299dc8201daa18ab89b432cab845
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Crear una matriz (Generador de informes y SSRS)
   Use una matriz para mostrar datos agrupados e información de resumen. Puede agrupar datos por varios campos o expresiones en grupos de filas y de columnas. Las matrices ofrecen funcionalidad similar a la de las tablas de referencias cruzadas (crosstab) y las tablas dinámicas. En tiempo de ejecución, a medida que se combinan los datos del informe y las regiones de datos, la matriz aumenta de tamaño horizontal y verticalmente en la página. Los valores de las celdas de la matriz muestran valores agregados cuyo ámbito es la intersección de los grupos de filas y de columnas a los que pertenece la celda. Puede dar formato a las filas y columnas para resaltar los datos a los que desea dar énfasis. También puede incluir controles de alternancia de obtención de detalles que ocultan inicialmente los datos detallados; de esta forma, el usuario podrá hacer clic en dichos controles para mostrar más o menos detalles, según sea necesario.  
   
- Después del diseño inicial, puede continuar desarrollando la matriz para mejorar la experiencia de visualización del usuario. Para obtener más información, vea [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
+ Después del diseño inicial, puede continuar desarrollando la matriz para mejorar la experiencia de visualización del usuario. Para más información, vea [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
  Para empezar a trabajar rápidamente con matrices, vea [Tutorial: Crear un informe de matriz &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md).  
   
@@ -48,11 +48,11 @@ ms.lasthandoff: 06/22/2017
   
  Agregue grupos arrastrando campos de conjunto de datos hasta las áreas Grupos de filas y Grupos de columnas del panel Agrupación. El primer campo que arrastre hasta el panel de grupos de filas o de columnas reemplazará al grupo vacío predeterminado inicial. A continuación, podrá aplicar formato a las celdas, en función de los datos que contengan.  
   
- ![Grupo de columnas Geography y fila categoría, matriz](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "matriz, grupo de columnas Geography y fila categoría")  
+ ![Grupo de columnas Geography y fila Categoría, Matriz](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "Grupo de columnas Geography y fila Categoría, Matriz")  
   
  En la vista previa, la matriz se expande para mostrar los valores del grupo de filas y de columnas. Las celdas muestran valores de resumen, como se muestra en la ilustración siguiente.  
   
- ![Vista previa de matriz representada con grupos expandidos](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "vista previa de matriz representada con grupos expandidos")  
+ ![Vista previa de matriz representada con grupos expandidos](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "Vista previa de matriz representada con grupos expandidos")  
   
  La matriz inicial es una plantilla basada en la región de datos Tablix. Puede continuar desarrollando el diseño de la matriz agregando grupos de filas o de columnas anidados o adyacentes, o incluso filas de detalles. Para obtener más información, vea [Explorar la flexibilidad de una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
@@ -82,11 +82,11 @@ ms.lasthandoff: 06/22/2017
   
  `=SUM(Fields!Linetotal.Value)/SUM(Fields! Linetotal.Value,"Category")`  
   
- Para obtener más información, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)subyacente.  
+ Para obtener más información, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
   
 ##  <a name="AddingAdjacentGroup"></a> Agregar un grupo adyacente a una matriz  
- Para agregar un grupo adyacente basado en un único campo de conjunto de datos, use el menú contextual del panel Agrupación. Para obtener más información, vea [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). En la siguiente ilustración se muestra un grupo basado en la geografía y un grupo adyacente basado en el año.  
+ Para agregar un grupo adyacente basado en un único campo de conjunto de datos, use el menú contextual del panel Agrupación. Para más información, vea [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). En la siguiente ilustración se muestra un grupo basado en la geografía y un grupo adyacente basado en el año.  
   
  ![Grupos de columnas anexas para Geography y Year](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupsdesign.gif "grupos de columnas anexas para Geography y Year")  
   
@@ -94,11 +94,11 @@ ms.lasthandoff: 06/22/2017
   
  ![Vista previa de los grupos de columnas anexas](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupspreview.gif "vista previa de los grupos de columnas adyacente")  
   
- Para agregar una columna de totales a un grupo de columnas adyacente, haga clic en la celda de definición de grupo de columnas y use el comando **Agregar total** . Se agrega una columna estática junto al grupo de columnas, con una suma agregada predeterminada para cada campo numérico de las filas existentes. Para cambiar la expresión, edite manualmente el agregado predeterminado; por ejemplo, `Avg([Sales])`. Para más información, vea [Agregar un total a un grupo o a una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).  
+ Para agregar una columna de totales a un grupo de columnas adyacente, haga clic en la celda de definición de grupo de columnas y use el comando **Agregar total** . Se agrega una columna estática junto al grupo de columnas, con una suma agregada predeterminada para cada campo numérico de las filas existentes. Para cambiar la expresión, edite manualmente el agregado predeterminado; por ejemplo, `Avg([Sales])`. Para obtener más información, vea [Agregar un total a un grupo o a una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).  
   
   
 ## <a name="see-also"></a>Vea también  
- [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Referencia de funciones de agregado &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Ejemplos de expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

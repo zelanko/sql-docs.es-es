@@ -24,11 +24,11 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 186bb0bab4abac91ea95d397f379986cac9d2f0f
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Aplicar formato a números y fechas (Generador de informes y SSRS)
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/22/2017
   
  Para especificar las cadenas de formato dentro de un elemento de informe de cuadro de texto, debe seleccionar el elemento al que quiere dar formato, hacer clic con el botón derecho, seleccionar **Propiedades de cuadro de texto**y, después, hacer clic en **Número**. Puede dar formato de la misma manera a las celdas individuales de una tabla o región de datos de la matriz, porque las celdas de una tabla o la matriz son cuadros de texto individuales.  
   
- Normalmente, una región de datos de gráfico muestra las fechas a lo largo del eje de categorías (x) y los valores a lo largo del eje de valores (y). Para especificar el formato en un gráfico, haga clic con el botón derecho en un eje y seleccione **Propiedades del eje**. En el eje de valores solo se pueden especificar formatos para los números. Para obtener más información, vea [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
+ Normalmente, una región de datos de gráfico muestra las fechas a lo largo del eje de categorías (x) y los valores a lo largo del eje de valores (y). Para especificar el formato en un gráfico, haga clic con el botón derecho en un eje y seleccione **Propiedades del eje**. En el eje de valores solo se pueden especificar formatos para los números. Para más información, vea [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
  Para especificar el formato en una región de datos Medidor, haga clic con el botón derecho en la escala del medidor y seleccione **Propiedades de escala radial** o **Propiedades de escala lineal**.  
   
@@ -63,9 +63,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Aplicar formato a líneas, colores e imágenes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
- [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Aplicar formato de fecha o de moneda a las etiquetas de los ejes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Aplicar formato a las escalas de un medidor &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [Aplicar formato a líneas, colores y las imágenes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
+ [Aplicar formato a un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Etiquetas del eje de formato como fechas o monedas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [Aplicar formato a las escalas en un medidor &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

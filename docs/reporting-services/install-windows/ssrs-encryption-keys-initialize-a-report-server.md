@@ -21,11 +21,11 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cca3d552a0e1ffb7fdfc09e98a334f8f4d196d84
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>Claves de cifrado de SSRS: inicializar un servidor de informes
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 5.  El servicio Servidor de informes se conecta de nuevo a la base de datos del servidor de informes y agrega la clave simétrica a los valores, que se almacenaron en el paso 3, correspondientes al identificador de instalación y de la clave pública. Antes de almacenarla, el servicio Servidor de informes utiliza su clave pública para cifrar la clave simétrica. Una vez almacenada la clave simétrica, se considera que el servidor de informes está inicializado y disponible para su uso.  
   
 ## <a name="initializing-a-report-server-for-scale-out-deployment"></a>Inicializar un servidor de informes para una implementación escalada  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite un modelo de implementación escalada que comparte una única base de datos del servidor de informes entre varias instancias del mismo. Para unir una implementación escalada, un servidor de informes debe crear y almacenar su copia de la clave simétrica en la base de datos compartida. Aunque los servidores que utilizan la base de datos emplean una única clave simétrica, cada servidor de informes tiene su copia de la clave. Cada copia es diferente puesto que se cifra de manera exclusiva con la clave pública que tiene.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]admite un modelo de implementación escalada que comparte una única base de datos entre varias instancias del servidor de informes. Para unir una implementación escalada, un servidor de informes debe crear y almacenar su copia de la clave simétrica en la base de datos compartida. Aunque los servidores que utilizan la base de datos emplean una única clave simétrica, cada servidor de informes tiene su copia de la clave. Cada copia es diferente puesto que se cifra de manera exclusiva con la clave pública que tiene.  
   
  Los primeros pasos para la inicialización de un servidor de informes en una implementación escalada son idénticos a los tres primeros pasos que describen la inicialización de una combinación única de servidor y base de datos.  
   

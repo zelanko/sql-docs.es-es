@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d688ed124a419017e97d405d7f5bd80e6e3bf530
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Representación y diseño de páginas (Generador de informes y SSRS)
@@ -92,7 +92,7 @@ Un informe también puede contener subinformes.
   
  Si se usa una extensión de representación de **páginas automáticas** como la extensión de representación de HTML, puede ser aconsejable saber cómo aparece impreso el informe y también si se representa bien con un procesador de páginas automático como PDF. Durante la creación o actualización de un informe, puede obtener una vista previa del mismo y exportarlo en el Generador de informes y el Diseñador de informes.  
   
- Los procesadores de saltos de **página manuales** son los que más afectan al diseño del informe y al tamaño físico de página. Para más información, vea [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ Los procesadores de saltos de**página manuales** son los que más afectan al diseño del informe y al tamaño físico de página. Para más información, vea [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
    
 ##  <a name="HowTo"></a> Temas de procedimientos  
  En esta sección se enumeran procedimientos que muestran, paso a paso, cómo trabajar con la paginación en los informes.  

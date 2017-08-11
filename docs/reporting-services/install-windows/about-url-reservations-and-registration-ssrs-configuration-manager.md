@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: eb1f09f1a23a6e24077357c36a0dbc136a86473f
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Acerca de las reservas y el registro de resrvas de URL (Administrador de configuración de SSRS)
@@ -97,7 +97,7 @@ ms.lasthandoff: 06/22/2017
 |SQL Server Express|Portal web|`http://<servername>/reports_SQLExpress`|`http://<servername>:80/reports_SQLExpress`|  
   
 ##  <a name="URLPermissionsAccounts"></a> Autenticación e identidad de servicio de las direcciones URL de Reporting Services  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Las reservas de direcciones URL especifican la cuenta de servicio del servicio Servidor de informes. La cuenta en la que el servicio se ejecuta se utiliza para todas las direcciones URL que se crean para las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se ejecutan en la misma instancia. La identidad del servicio de la instancia del servidor de informes está almacenada en el archivo RSReportServer.config.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Reservas de direcciones URL especifican la cuenta de servicio del servicio servidor de informes. La cuenta en la que el servicio se ejecuta se utiliza para todas las direcciones URL que se crean para las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se ejecutan en la misma instancia. La identidad del servicio de la instancia del servidor de informes está almacenada en el archivo RSReportServer.config.  
   
  La cuenta de servicio no tiene ningún valor predeterminado. Pero hay que especificar una cuenta de servicio durante la instalación. Se especifica en **URLReservation** en RSReportServer.config, aunque el servidor se instale en modo de solo archivos. Los valores válidos para la cuenta de servicio incluyen una cuenta de usuario de dominio, **LocalSystem**o **NetworkService**.  
   
@@ -111,8 +111,8 @@ ms.lasthandoff: 06/22/2017
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] y versiones posteriores incluyen nuevas características de seguridad para reducir el riesgo de ejecutar accidentalmente programas con privilegios elevados. Se necesitan pasos adicionales para habilitar la administración local en estos sistemas operativos. Para obtener más información, vea [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Sintaxis de reserva de direcciones URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+ [Configurar una dirección URL &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Sintaxis de reserva de direcciones URL &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
   
   
 

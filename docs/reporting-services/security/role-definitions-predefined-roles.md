@@ -19,11 +19,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 694b2d5d3aeb126ba0c61b42af2ffb5538b14269
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="role-definitions---predefined-roles"></a>Definiciones de roles: Roles predefinidos
@@ -215,10 +215,10 @@ ms.lasthandoff: 06/22/2017
  El rol **Usuario del sistema** se puede utilizar para complementar la seguridad predeterminada. Puede incluir el rol en nuevas asignaciones de roles que amplíen el acceso al servidor de informes para usuarios de informes. Para obtener más información, consulte [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modificar o eliminar una asignación de roles &#40;Administrador de informes&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
- [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Crear, eliminar o modificar un rol &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Conceder acceso de usuario a un servidor de informes &#40; El Administrador de informes &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Modificar o eliminar una asignación de roles &#40; El Administrador de informes &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Conceder permisos en un servidor de informes de modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Tareas y permisos](../../reporting-services/security/tasks-and-permissions.md)  
   
   

@@ -20,11 +20,11 @@ caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c2a8702fcee392936451e4a55a4b97327de2b97d
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-builder-in-sql-server-2016"></a>Generador de informes en SQL Server 2016
@@ -74,13 +74,13 @@ ms.lasthandoff: 06/22/2017
 >  El administrador del servidor de informes se encarga de administrar los informes publicados en un servidor de informes o un servidor de informes en el modo integrado de SharePoint. Los administradores del servidor de informes pueden definir la seguridad, establecer las propiedades y programar operaciones como el historial de informes y la entrega de informes por correo electrónico. Pueden crear programaciones compartidas y orígenes de datos compartidos, y ponerlos a disposición de todos los usuarios. Los administradores también controlan todas las carpetas del servidor de informes. La posibilidad de realizar tareas de administración depende de los permisos de usuario.  
   
 ## <a name="see-also"></a>Vea también  
-  [Iniciar el Generador de informes](../../reporting-services/report-builder/start-report-builder.md)  
+  [Inicio del Generador de informes](../../reporting-services/report-builder/start-report-builder.md)  
   
   [Instalar el Generador de informes](../../reporting-services/install-windows/install-report-builder.md)
 
   [Novedades en Reporting Services y el Generador de informes de SQL Server 2016](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   Se describen las nuevas características de esta versión de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] y [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].   
-  [Tutorial: Crear un informe de gráfico rápido sin conexión](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+  [Tutorial: crear un informe de gráfico rápido sin conexión](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Presenta el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] y los asistentes disponibles para ayudarlo a crear los informes. El tutorial proporciona un conjunto de datos para que los use de modo que no tenga que conectarse a un origen de datos para empezar.  
   
  [Planear un informe &#40;Generador de informes&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  

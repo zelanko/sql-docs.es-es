@@ -17,11 +17,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fe5be4e624ef5a5bc956731819f2b4636dc39799
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>Regiones de datos y mapas (Generador de informes y SSRS)
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/22/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="table"></a>Table  
- Una tabla es una región de datos que muestra los datos fila por fila. La columnas de tabla son estáticas: el número de columnas del informe se define al diseñarlo. Las filas de tabla son dinámicas: se expanden hacia abajo para incluir los datos. Se pueden agregar grupos a las tablas, que organizan los datos por campos o expresiones seleccionados. Para obtener información sobre cómo agregar una tabla a un informe, vea [Tablas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
+ Una tabla es una región de datos que muestra los datos fila por fila. La columnas de tabla son estáticas: el número de columnas del informe se define al diseñarlo. Las filas de tabla son dinámicas: se expanden hacia abajo para incluir los datos. Se pueden agregar grupos a las tablas, que organizan los datos por campos o expresiones seleccionados. Para obtener información acerca de cómo agregar una tabla a un informe, vea [tablas &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
 ## <a name="matrix"></a>Matriz  
  Las matrices también se denominan tablas de referencias cruzadas. Una región de datos de matriz contiene columnas y filas dinámicas: se expanden para dar cabida a los datos. Una matriz puede tener columnas y filas dinámicas y estáticas. Las columnas o las filas pueden contener otras columnas o filas, y se pueden usar para agrupar datos. Obtenga más información sobre [Agregar una matriz a un informe](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md).  
@@ -54,7 +54,7 @@ ms.lasthandoff: 06/22/2017
  Es posible agregar varias regiones de datos a un informe. Las regiones de datos crecen para alojar los datos del conjunto de datos de informe al que están vinculadas. Por ejemplo, una matriz que muestra las ventas anuales de cada producto tiene un grupo de filas basado en los nombres del producto y un grupo de columnas basado en los años. Al ejecutar el informe, la matriz se expande hacia abajo en la página para cada producto y hacia los lados para cada año. Un gráfico que se coloque junto a la matriz en la superficie de diseño del informe se mostrará junto a la matriz expandida en el informe representado. La manera de representar las regiones de datos en una página sigue un conjunto de reglas basadas en el formato de salida de un informe. Por ejemplo, para ayudar a controlar el modo en que un gráfico y una matriz se representan en una página, puede usar un rectángulo como contenedor o anidar ambas regiones de datos en una lista. Para obtener más información, vea [Representación y diseño de páginas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md).  
   
 ## <a name="nested-data-regions"></a>Regiones de datos anidadas  
- Se pueden anidar regiones de datos en otras regiones de datos. Por ejemplo, si desea crear un registro de ventas para cada vendedor de una base de datos, puede crear una lista con cuadros de texto y una imagen que muestre información acerca del empleado y, a continuación, agregar regiones de datos tabulares y gráficas a la lista para mostrar el registro de ventas del empleado. Para obtener más información, vea [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md).  
+ Se pueden anidar regiones de datos en otras regiones de datos. Por ejemplo, si desea crear un registro de ventas para cada vendedor de una base de datos, puede crear una lista con cuadros de texto y una imagen que muestre información acerca del empleado y, a continuación, agregar regiones de datos tabulares y gráficas a la lista para mostrar el registro de ventas del empleado. Para más información, vea [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md).  
   
 ## <a name="multiple-data-regions-linked-to-the-same-dataset"></a>Varias regiones de datos vinculadas al mismo conjunto de datos  
  Puede vincular más de una región de datos al mismo conjunto de datos para proporcionar vistas diferentes de los mismos datos. Por ejemplo, puede mostrar los mismos datos en una tabla y en un gráfico. Puede crear el informe para que proporcione botones de ordenación interactivos en la tabla. De ese modo, al ordenar la tabla, el gráfico también se ordenará automáticamente. Para obtener más información, vea [Vincular varias regiones de datos al mismo conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Vea también  
  [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Informes, elementos de informe y definiciones de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Representación y diseño de páginas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
+ [Diseño de página y representación &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [Tutoriales del Generador de informes](../../reporting-services/report-builder-tutorials.md)   
  [Tutoriales de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   

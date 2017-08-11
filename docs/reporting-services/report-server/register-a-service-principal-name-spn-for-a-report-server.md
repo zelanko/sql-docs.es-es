@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9518d1bd3ee166a0f21292ca08130214afc841be
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Registrar un nombre principal de servicio (SPN) para un servidor de informes
@@ -74,8 +74,8 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
 7.  Agregue `<RSWindowsNegotiate/>` como primera entrada en esta sección para habilitar NTLM.  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar una cuenta de servicio &#40;Administrador de configuración de SSRS&#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
- [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Administrar un servidor de informes en modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+ [Configurar una cuenta de servicio &#40; Administrador de configuración de SSRS &#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
+ [Configurar la cuenta de servicio del servidor de informes &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Administrar un servidor de informes de modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   

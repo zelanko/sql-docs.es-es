@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d21586d80d590da2fa227897d7b83215857140b0
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Gráficos de columnas (Generador de informes y SSRS)
@@ -55,11 +55,11 @@ ms.lasthandoff: 06/22/2017
 -   Una característica exclusiva de los gráficos de columnas es su capacidad para mostrarse como un histograma o gráfico de Pareto. Para hacerlo, establezca la propiedad ShowColumnAs en **Histogram** o **Pareto** en la ventana Propiedades como **true**.  
   
 ## <a name="see-also"></a>Vea también  
- [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [Gráficos de barras &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
- [Rangos de intervalos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
- [Tutorial: Agregar un gráfico de barras a un informe &#40;Generador de informes 40&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
+ [Gráficos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Tipos de gráfico &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [Gráficos de barras &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
+ [Los gráficos de intervalos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
+ [Tutorial: Agregar un gráfico de barras a un informe &#40; El generador de informes &#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
  [Puntos de datos vacíos y nulos en los gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

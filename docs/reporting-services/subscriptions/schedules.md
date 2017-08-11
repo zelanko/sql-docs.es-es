@@ -22,11 +22,11 @@ caps.latest.revision: 51
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a49274f347768a1a213c9a0010917e9e1d1376a5
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="schedules"></a>Programaciones
@@ -129,20 +129,20 @@ ms.lasthandoff: 06/22/2017
 >  Se puede utilizar la faceta **Configuración de área expuesta para Reporting Services** con el fin de detener las operaciones programadas de manera temporal o permanente. Aunque puede crear e implementar extensiones de entrega personalizadas, el Procesador de entrega y programación en sí mismo no es extensible. No se puede cambiar el modo en que administra eventos y notificaciones. Para obtener más información acerca de cómo desactivar características, vea la sección **Eventos programados y entrega programada** de [Turn Reporting Services Features On or Off](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md).  
   
 ###  <a name="bkmk_stoppingagent"></a> Efectos de detener el Agente SQL Server  
- Para procesar informes programados, se utiliza de forma predeterminada el Agente SQL Server. Si se detiene el servicio, las nuevas solicitudes de procesamiento solo se pueden agregar a la cola mediante programación con el método <xref:ReportService2010.ReportingService2010.FireEvent%2A>. Cuando se reinicia el servicio, se reanudan los trabajos que crean solicitudes de procesamiento de informes. El servidor de informes no trata de volver a crear trabajos de procesamiento de informes que pudieran haberse producido en el pasado, mientras el Agente SQL Server estaba sin conexión. Si se detiene el Agente SQL Server durante una semana, todas las operaciones programadas se pierden para esa semana.  
+ Para procesar informes programados, se utiliza de forma predeterminada el Agente SQL Server. Si se detiene el servicio, las nuevas solicitudes de procesamiento solo se pueden agregar a la cola mediante programación con el método <xref:ReportService2010.ReportingService2010.FireEvent%2A> . Cuando se reinicia el servicio, se reanudan los trabajos que crean solicitudes de procesamiento de informes. El servidor de informes no trata de volver a crear trabajos de procesamiento de informes que pudieran haberse producido en el pasado, mientras el Agente SQL Server estaba sin conexión. Si se detiene el Agente SQL Server durante una semana, todas las operaciones programadas se pierden para esa semana.  
   
 > [!NOTE]  
->  La funcionalidad que proporciona el Agente SQL Server a Reporting Services se puede reemplazar con código personalizado que utilice el método <xref:ReportService2010.ReportingService2010.FireEvent%2A> para agregar eventos de programación a la cola.  
+>  Las funciones que proporciona el Agente SQL Server a Reporting Services se pueden reemplazar con código personalizado que use el método <xref:ReportService2010.ReportingService2010.FireEvent%2A> para agregar eventos de programación a la cola.  
   
 ###  <a name="bkmk_stoppingservice"></a> Efectos de detener el servicio del servidor de informes  
  Si se detiene el servicio del servidor de informes, el Agente SQL Server sigue agregando solicitudes de procesamiento de informes a la cola. La información de estado del Agente SQL Server indica que el trabajo concluyó correctamente. No obstante, puesto que se ha detenido el servicio del servidor de informes, en realidad no se produce el procesamiento de informes. Las solicitudes se siguen acumulando en la cola hasta que se reinicia el servicio del servidor de informes. Una vez reiniciado este servicio, todas las solicitudes de procesamiento de informes existentes en la cola se procesan por orden.  
   
 ## <a name="see-also"></a>Vea también  
  [Crear, modificar y eliminar instantáneas del historial de informes](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
- [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Las suscripciones y entrega &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Suscripciones controladas por datos](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Informes almacenados en caché &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Almacenamiento en caché de informes &#40; SSRS &#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [Administración de contenido de servidor de informes &#40; Modo nativo de SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Almacenar en caché conjuntos de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
   
   

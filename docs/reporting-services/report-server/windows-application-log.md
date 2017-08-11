@@ -19,11 +19,11 @@ caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d8e1716d9e81043992e5c92f260835cda7742972
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="windows-application-log"></a>Registro de aplicación Windows
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
 |Auditoría de errores|Evento que se registra cuando se produce un error al intentar iniciar una sesión.|  
   
 ## <a name="see-also"></a>Vea también  
- [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Referencia de errores y eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [Los archivos de registro y orígenes de Reporting](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
+ [Errores y eventos referencia &#40; Reporting Services &#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

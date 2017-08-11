@@ -19,11 +19,11 @@ caps.latest.revision: 51
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 440fe0b9ff8468546cf7e8cfadf2533a3bdf82d7
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Abrir y cerrar un informe (Administrador de informes)
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Para ver un informe, haga clic en el nombre del informe o en un icono. El siguiente icono indica un informe:  
   
-     ![Icono de informe](../../reporting-services/report-server/media/hlp-16doc.gif "el icono de informe")  
+     ![Icono de informe](../../reporting-services/report-server/media/hlp-16doc.gif "Icono de informe")  
   
      Para algunos informes es necesario que proporcione un nombre de usuario y una contraseña o un valor de parámetro.  
   
@@ -46,9 +46,9 @@ ms.lasthandoff: 06/22/2017
      Aunque se cierre un informe, no se quita de la caché del explorador. Debe cerrar el explorador para desconectar el informe.  
   
 ## <a name="see-also"></a>Vea también  
- [Buscar informes y otros elementos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [Contenido &#40;página del Administrador de informes&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Buscar informes y otros elementos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
+ [Página contenido &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Buscar, ver y administrar informes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Administración de contenido de servidor de informes &#40; Modo nativo de SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

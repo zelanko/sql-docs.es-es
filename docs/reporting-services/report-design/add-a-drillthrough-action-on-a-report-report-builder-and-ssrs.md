@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f1e5c7c678cb3c38d9e0225ce47bc2dca91ab326
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>Agregar una acción de obtención de detalles en un informe (Generador de informes y SSRS)
@@ -65,8 +65,8 @@ ms.lasthandoff: 06/22/2017
 7.  Para probar el vínculo, ejecute el informe y haga clic en el elemento de informe en el que ha establecido este vínculo.  
   
 ## <a name="see-also"></a>Vea también  
- [Cuadro de diálogo Propiedades de acción &#40;Generador de informes y SSRS&#41;](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)   
- [Aplicar formato a los puntos de datos de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Mostrar la información sobre herramientas en una serie &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
+ [Cuadro de diálogo de propiedades de acción &#40; El generador de informes y SSRS &#41;](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)   
+ [Aplicar formato a los puntos de datos en un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Mostrar información sobre herramientas en una serie &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
   

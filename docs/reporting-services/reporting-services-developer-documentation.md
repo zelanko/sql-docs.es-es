@@ -21,11 +21,11 @@ caps.latest.revision: 21
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3704373a08b29a8f36ce843db5f67a860a04a47b
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-developer-documentation"></a>Guía del desarrollador de Reporting Services
@@ -37,13 +37,13 @@ ms.lasthandoff: 06/22/2017
 >  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye ejemplos de programación y tutoriales para ayudarle a empezar. Para obtener más información, consulte [ejemplos de Reporting Services](https://msdn.microsoft.com/library/ms160954\(v=sql.110\).aspx) y [Guía del programador: tutoriales (Reporting Services)](https://msdn.microsoft.com/library/aa337423\(v=sql.110\).aspx).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Integración de Reporting Services en aplicaciones](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)  
+ [Integración de Reporting Services en las aplicaciones](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)  
  Proporciona información general sobre cómo utilizar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para integrar los informes de errores en las aplicaciones personalizadas. Describe cuándo utilizar el acceso URL directo y el servicio web para tener acceso al servidor de informes.  
   
  [Servicio Web de servidor de informes](../reporting-services/report-server-web-service/report-server-web-service.md)  
  El servicio web del servidor de informes proporciona acceso a la funcionalidad completa del servidor de informes. El servicio web utiliza SOAP sobre HTTP y está diseñado para actuar como una interfaz de comunicaciones entre los programas clientes y el servidor de informes. El servicio web y sus métodos exponen la funcionalidad del servidor de informes y le permiten crear las herramientas personalizadas para cualquier parte del ciclo de vida del informe, desde la administración a la ejecución.  
   
- [Acceso URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)  
+ [Acceso URL &#40; SSRS &#41;](../reporting-services/url-access-ssrs.md)  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite un conjunto completo de solicitudes basadas en direcciones URL que se pueden usar como punto de acceso rápido y sencillo para la navegación y visualización de informes. Puede utilizar esta tecnología junto con el servicio web del servidor de informes para integrar una solución de informes completa en aplicaciones empresariales personalizadas. El acceso URL es particularmente útil al integrar informes como parte de un portal web o al ver los informes desde un explorador web.  
   
  [Extensiones de Reporting Services](../reporting-services/extensions/reporting-services-extensions.md)  
@@ -52,16 +52,16 @@ ms.lasthandoff: 06/22/2017
  [Elementos de informe personalizados](../reporting-services/custom-report-items/custom-report-items.md)  
  Describe cómo crear los elementos de informe personalizado para agregar la funcionalidad a RDL o extender la funcionalidad de los controles existentes.  
   
- [Usar ensamblados personalizados con informes](../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
+ [Uso de ensamblados personalizados con informes](../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
  Describe cómo utilizar los ensamblados personalizados con los informes incluyendo referencias al código dentro de la definición de informe.  
   
  [Acceso al proveedor WMI de Reporting Services](../reporting-services/tools/access-the-reporting-services-wmi-provider.md)  
  Describe cómo utilizar el proveedor WMI de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para administrar las implementaciones del servidor de informes.  
   
 ## <a name="see-also"></a>Vea también  
- [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Reporting Services &#40; SSRS &#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Lenguaje de definición de informe &#40; SSRS &#41;](../reporting-services/reports/report-definition-language-ssrs.md)   
- [Referencia técnica &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
+ [Referencia técnica de &#40; SSRS &#41;](../reporting-services/technical-reference-ssrs.md)   
  [Proteger desarrollo &#40; Reporting Services &#41;](../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
   
   

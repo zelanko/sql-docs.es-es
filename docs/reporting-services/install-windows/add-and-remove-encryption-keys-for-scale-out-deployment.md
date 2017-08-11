@@ -21,11 +21,11 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ffe0a7ea7f46ed7b1ae5d1e5070d58afa0540b12
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>Agregar y quitar claves de cifrado para implementaciones escaladas
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Ejecute **rskeymgmt.exe** localmente en el equipo que hospeda un servidor de informes que ya pertenece a la implementación escalada del servidor de informes.  
   
-2.  Use el argumento **-j** para unir un servidor de informes a la base de datos del servidor de informes. Use la **-m** y  **-n**  argumentos para especificar el servidor de informes remoto instancia que desea agregar a la implementación. Use los argumentos **-u** y **-v** para especificar una cuenta de administrador en el equipo remoto. Si va a crear una implementación escalada utilizando varias instancias de servidor de informes en el mismo equipo, la sintaxis cambiará ligeramente. Para obtener más información sobre la sintaxis que debe usar, vea [rskeymgmt (utilidad) &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md).  
+2.  Use el argumento **-j** para unir un servidor de informes a la base de datos del servidor de informes. Emplee la utilidad **-m** y **-n** para especificar la instancia de servidor de informes remota que quiere agregar a la implementación. Use los argumentos **-u** y **-v** para especificar una cuenta de administrador en el equipo remoto. Si va a crear una implementación escalada utilizando varias instancias de servidor de informes en el mismo equipo, la sintaxis cambiará ligeramente. Para obtener más información sobre la sintaxis que debe usar, vea [rskeymgmt (utilidad) &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md).  
   
      El siguiente ejemplo muestra los argumentos que debe especificar si va a incluir un servidor de informes remoto en una implementación escalada (si tiene permisos de administrador en el equipo remoto, puede omitir las credenciales):  
   
@@ -68,8 +68,8 @@ ms.lasthandoff: 06/22/2017
  En estos pasos se explica cómo quitar el servidor de informes de una implementación escalada, pero con ellos no se desinstala la instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] del servidor de informes. Después de quitar el servidor de informes de la implementación escalada, puede desinstalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] del servidor si ya no necesita [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en ese servidor. Para obtener información, vea [Desinstalar una instancia existente de SQL Server &#40;programa de instalación&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+ [Configurar y administrar las claves de cifrado &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Inicializar un servidor de informes &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   
 

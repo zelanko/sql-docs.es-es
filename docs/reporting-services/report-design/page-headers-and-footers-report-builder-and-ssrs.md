@@ -28,11 +28,11 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f89d2e283daf9b9ac107c098d38db4feab17a736
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Encabezados y pies de página (Generador de informes y SSRS)
@@ -132,7 +132,7 @@ ms.lasthandoff: 06/22/2017
  Para más información, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Incrustar una imagen en un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [Rectángulos y líneas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
+ [Incrustar una imagen en un informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [Rectángulos y líneas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

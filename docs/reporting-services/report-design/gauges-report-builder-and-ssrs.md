@@ -163,11 +163,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8e9aa0032e0610b73c28ff50c7c8f616cca6a2fd
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Medidores (Generador de informes y SSRS)
@@ -197,7 +197,7 @@ ms.lasthandoff: 06/22/2017
   
  Los medidores lineales son rectangulares, orientados horizontal o verticalmente, y se parecen a las reglas. Los punteros del medidor suelen ser termómetros, pero pueden ser marcadores o barras. Debido a su forma, este tipo de medidor resulta útil para su integración en las regiones de datos de la tabla o matriz para mostrar los datos de progreso.  
   
- Aparte de estas diferencias, los dos tipos de medidor son intercambiables. Sin embargo, si tiene que utilizar un medidor simple en su informe, podría interesarle utilizar un indicador en lugar de un medidor. Para obtener más información, vea [Indicadores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+ Aparte de estas diferencias, los dos tipos de medidor son intercambiables. Sin embargo, si tiene que utilizar un medidor simple en su informe, podría interesarle utilizar un indicador en lugar de un medidor. Para obtener más información, vea [indicadores &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
  En las siguientes ilustraciones se muestran los medidores radiales y lineales. El medidor radial es redondo y usa el puntero de aguja. El medidor lineal es horizontal y usa el puntero de termómetro.  
   
@@ -248,7 +248,7 @@ ms.lasthandoff: 06/22/2017
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
- Para obtener más información sobre las expresiones de agregado, vea [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
+ Para más información sobre las expresiones de agregado, vea [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
 ### <a name="defining-a-group-on-a-gauge"></a>Definir un grupo en un medidor  
  Después de haber agregado un campo al medidor, puede agregar un grupo de datos. El medidor difiere de todas las demás regiones de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], que pueden mostrar varios grupos en una región de datos. El hecho de agregar un grupo definiendo una expresión de grupo en el medidor, equivale a agregar un grupo de filas en la región de datos Tablix. Sin embargo, cuando se agrega el grupo, solo se muestra el valor del último grupo como valor del puntero en el medidor. Por ejemplo, si agrega una expresión de agrupación según el año, el puntero señalará al valor que representa el valor de ventas agregado para el último año del conjunto de datos. Para obtener más información sobre los grupos, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
@@ -305,9 +305,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Filtro, grupo y ordenar los datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Parámetros de informe &#40; El generador de informes y el Diseñador de informes &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Gráficos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Tablas, Matrices y listas de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

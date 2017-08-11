@@ -45,11 +45,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 10cbda042d03d5405c136894017418e341665c99
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>Acción de obtención de detalles (generador de informes y SSRS)
@@ -59,7 +59,7 @@ ms.lasthandoff: 06/22/2017
   
  En esta ilustración, el usuario hace clic en los signos más (+) del informe para mostrar datos detallados.  
   
- Por ejemplo, en una tabla con grupos de filas puede ocultar inicialmente todas las filas excepto la fila de resumen del grupo externo. Para cada grupo interno (incluido el grupo de detalles), agregue un icono de expansión/contracción a la celda de agrupamiento del grupo contenedor. Cuando se representa el informe, el usuario puede hacer clic en el cuadro de texto para expandir y contraer los datos detallados. Para obtener más información, vea [Tablas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
+ Por ejemplo, en una tabla con grupos de filas puede ocultar inicialmente todas las filas excepto la fila de resumen del grupo externo. Para cada grupo interno (incluido el grupo de detalles), agregue un icono de expansión/contracción a la celda de agrupamiento del grupo contenedor. Cuando se representa el informe, el usuario puede hacer clic en el cuadro de texto para expandir y contraer los datos detallados. Para más información, vea [Tablas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
  Para permitir a los usuarios expandir o contraer un elemento, debe establecer las propiedades de visibilidad del elemento.  
   
@@ -68,9 +68,9 @@ ms.lasthandoff: 06/22/2017
 >   
 >  Por ejemplo, para ocultar una fila asociada a un grupo anidado, el cuadro de texto debe estar en una fila asociada con el grupo primario o uno superior en la jerarquía de inclusión.  
 >   
->  Para obtener información sobre cómo configurar la información de visibilidad en el grupo, la columna o la fila, vea [Agregar una acción de expandir y contraer a un elemento &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md).  
+>  Para obtener información sobre la información de visibilidad de la configuración en el grupo, la columna o fila, vea [agregar una acción de contraer o expandir a un elemento &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)  
   
- Para obtener más información sobre cómo ocultar elementos de informes, vea [Ocultar un elemento &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md).  
+ Para obtener más información acerca de cómo ocultar elementos de informe, vea [ocultar un elemento &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -87,11 +87,11 @@ ms.lasthandoff: 06/22/2017
   
 -   La extensión de representación en Excel muestra y expande filas y columnas ocultas en una tabla, matriz o lista. Todas las filas y columnas están visibles.  
   
- Para obtener más información, vea [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
+ Para más información, vea [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)   
- [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Ordenación interactiva, mapas de documento y vínculos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [Ejemplos de expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

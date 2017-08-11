@@ -20,11 +20,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ee30a42b69f4bd3079fe6345df619abde413e588
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Cuadros de texto (Generador de informes y SSRS)
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
  Para mostrar el texto que se repite en un diseño de forma libre, cree una región de datos de lista y coloque el cuadro de texto en la región. Use una lista si desea repetir un formato para varios valores, por ejemplo, un formato de factura de cliente que se repite una vez para cada cliente. Obtenga más información sobre cómo [crear facturas y formularios con listas](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
- Use un contenedor de rectángulo si desea controlar el diseño del cuadro de texto y los espacios en blanco que aparecen debajo del último cuadro de texto. Para más información, vea [Rectángulos y líneas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md).  
+ Use un contenedor de rectángulo si desea controlar el diseño del cuadro de texto y los espacios en blanco que aparecen debajo del último cuadro de texto. Para obtener más información, vea [rectángulos y líneas &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md).  
   
  La expresión de un cuadro de texto puede incluir texto literal, apuntar a un campo de la base de datos o calcular datos. Todas las expresiones se muestran como texto de marcador de posición para que pueda dar formato a los números, colores y otras propiedades de aspecto. También puede combinar marcadores de posición con texto literal en el mismo cuadro de texto.  
   
@@ -71,6 +71,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [Aplicar formato a números y fechas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   
   

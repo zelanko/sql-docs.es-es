@@ -15,11 +15,11 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3674bb697d86ac79906aa4ee5172ad24030a22fc
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Imprimir informes desde un explorador usando el control de impresión (Generador de informes y SSRS)
@@ -42,10 +42,10 @@ ms.lasthandoff: 06/22/2017
  Para mostrar una vista previa de un informe, en el cuadro de diálogo **Imprimir** , haga clic en el botón **Vista previa** . Al hacer clic en la opción de vista previa se abre la primera página del informe en una ventana de vista previa independiente. A medida que el informe se representa en el servidor de informes, se proporcionan más páginas. Un informe en vista previa se representa en formato EMF. Puede navegar hasta la página anterior o siguiente hasta llegar a la última página y hasta que el botón **Siguiente** aparezca deshabilitado.  
   
 ### <a name="adjusting-print-margins"></a>Ajustar los márgenes de impresión  
- Puede modificar los márgenes de impresión en el informe EMF representado antes de imprimir el informe. Para ello, en el cuadro de diálogo **Imprimir** , haga clic en el botón **Vista previa** . En la parte superior de la página de vista previa, haga clic en el botón **Márgenes** . A continuación se muestra el cuadro de diálogo Márgenes. Configure los márgenes superior, inferior, izquierdo y derecho según sea necesario. [!INCLUDE[clickOK](../../includes/clickok-md.md)] El cuadro de diálogo se cierra y la configuración se almacena para representar la vista previa y la impresión.  
+ Puede modificar los márgenes de impresión en el informe EMF representado antes de imprimir el informe. Para ello, en el cuadro de diálogo **Imprimir** , haga clic en el botón **Vista previa** . En la parte superior de la página de vista previa, haga clic en el botón **Márgenes** . A continuación se muestra el cuadro de diálogo Márgenes. Configure los márgenes superior, inferior, izquierdo y derecho según sea necesario. [!INCLUDE[clickOK](../../includes/clickok-md.md)]El cuadro de diálogo se cierra y la configuración se almacena para representar la vista previa y la impresión.  
   
 ## <a name="see-also"></a>Vea también  
- [Imprimir informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
- [Imprimir un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
+ [Imprimir informes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
+ [Imprimir un informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
   
   

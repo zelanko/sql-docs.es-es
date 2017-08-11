@@ -15,11 +15,11 @@ caps.latest.revision: 5
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 53c07f85e9ec0bfca627b8ff941eddfde03336df
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Ejemplos de direcciones URL para los elementos de un servidor de informes - modo de SharePoint
@@ -142,7 +142,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Vea también  
  [Publicar un informe en una biblioteca de SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
  [Publicar un origen de datos compartido en una biblioteca de SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [Páginas de propiedades del proyecto (cuadro de diálogo)](../../reporting-services/tools/project-property-pages-dialog-box.md)  
+ [Cuadro de diálogo de páginas de propiedades de proyecto](../../reporting-services/tools/project-property-pages-dialog-box.md)  
   
   
 

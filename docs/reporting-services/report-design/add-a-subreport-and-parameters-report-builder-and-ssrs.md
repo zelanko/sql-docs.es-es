@@ -18,11 +18,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9e594025e0d4451d563f4d1b8b500d7f1ef1b576
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Agregar un subinforme y parámetros (Generador de informes y SSRS)
@@ -45,9 +45,9 @@ ms.lasthandoff: 06/22/2017
   
 4.  En el cuadro de diálogo **Propiedades del subinforme** , escriba un nombre en el cuadro de texto **Nombre** o acepte el valor predeterminado. El nombre debe ser único en el informe. De forma predeterminada, se asigna un nombre general como Subreport1 o Subreport2.  
   
-5.  En el cuadro **Usar este informe como un subinforme** , escriba el nombre del informe o haga clic en **Examinar**. Es preferible hacer clic en **Examinar** , porque la ruta de acceso al subinforme se especificará automáticamente. El informe se puede especificar de varias maneras. Para obtener más información, vea [Especificar las rutas de acceso a los elementos externos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
+5.  En el cuadro **Usar este informe como un subinforme** , escriba el nombre del informe o haga clic en **Examinar**. Es preferible hacer clic en **Examinar** , porque la ruta de acceso al subinforme se especificará automáticamente. El informe se puede especificar de varias maneras. Para más información, vea [Especificar las rutas de acceso a los elementos externos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
-6.  (Opcional) Haga clic en **Sí** para **Omitir borde en el salto de página**, para impedir que un borde se represente en mitad del subinforme si este abarca más de una página.  
+6.  (Opcional) Haga clic en **Sí** para **Omitir borde en el salto de página** , para impedir que un borde se represente en mitad del subinforme si este abarca más de una página.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -78,6 +78,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Subinformes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   
- [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
+ [Comportamientos de representación &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   

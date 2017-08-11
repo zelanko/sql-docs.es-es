@@ -22,11 +22,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a337202cea263001fe810c91a607fa1746219bd6
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Usar un origen de datos externo para obtener información de los suscriptores (suscripción controlada por datos)
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Modelos de informe  
   
- Si tiene una extensión de procesamiento de datos personalizadas que desea usar en las suscripciones controladas por datos, debe implementar la <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> y <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> interfaces. La extensión de procesamiento de datos debe admitir la ejecución de una consulta solo de esquema. Esta consulta se utiliza para recuperar metadatos de columna en tiempo de diseño, de manera que los usuarios puedan asignar columnas a opciones de entrega y parámetros de informe en la definición de la suscripción. La ejecución de la consulta solo de esquema se produce en una etapa inicial, cuando el usuario define la suscripción.  
+ Si tiene una extensión de procesamiento de datos personalizada que quiere usar en las suscripciones controladas por datos, es necesario que implemente las interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> y <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> . La extensión de procesamiento de datos debe admitir la ejecución de una consulta solo de esquema. Esta consulta se utiliza para recuperar metadatos de columna en tiempo de diseño, de manera que los usuarios puedan asignar columnas a opciones de entrega y parámetros de informe en la definición de la suscripción. La ejecución de la consulta solo de esquema se produce en una etapa inicial, cuando el usuario define la suscripción.  
   
 ## <a name="query-requirements"></a>Requisitos de consulta  
  Cuando se crea una consulta que recupera datos de suscripción, deben tenerse en cuenta los puntos siguientes:  
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>Pasar valores de parámetro desde la base de datos de suscriptores al informe  
  Si se va a crear una suscripción controlada por datos para un informe con parámetros, se pueden utilizar valores de parámetro variables para personalizar los resultados de cada informe. Por ejemplo, la base de datos de suscriptores puede contener información sobre los números de identificación de los empleados, las fechas de contratación, los puestos de trabajo y la ubicación en la oficina que puede utilizarse para filtrar datos del informe. Si el informe acepta parámetros basados en estos u otros datos de columnas disponibles, puede asignar el parámetro a la columna adecuada.  
   
- Cuando asigne campos de suscriptor a parámetros de informe, asegúrese de que los tipos de datos sean compatibles con la longitud de las columnas. Si hay discrepancias, se producirán errores al procesar las suscripciones. Para más información sobre cómo usar los datos de suscriptor en un informe con parámetros, vea [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ Cuando asigne campos de suscriptor a parámetros de informe, asegúrese de que los tipos de datos sean compatibles con la longitud de las columnas. Si hay discrepancias, se producirán errores al procesar las suscripciones. Para obtener información adicional acerca del uso de los datos del suscriptor en un informe con parámetros, vea [crear una suscripción controlada por datos &#40; Tutorial de SSRS &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
 ## <a name="modifying-the-subscriber-data-source"></a>Modificar el origen de datos de suscriptores  
  Las siguientes modificaciones en el origen de datos de suscriptores pueden impedir que se ejecute la suscripción:  
@@ -85,7 +85,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Cómo crear, modificar y eliminar suscripciones controladas por datos](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [Suscripciones controladas por datos](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Las suscripciones y entrega &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

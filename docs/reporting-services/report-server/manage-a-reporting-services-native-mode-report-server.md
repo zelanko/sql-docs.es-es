@@ -19,11 +19,11 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: aadfbe555fa1334f9101f799e60cccdcca7e68fd
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Administrar un servidor de informes en modo nativo de Reporting Services
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/22/2017
  [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
  Describe los pasos adicionales necesarios para conectar con el Administrador de informes o un servidor de informes mediante `http://localhost`.  
   
- [Configurar un servidor de informes para la administración remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)  
+ [Configuración de un servidor de informes para la administración remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)  
  Explica cómo configurar una instancia del servidor de informes remota para que pueda conectarse y configurarla desde un equipo diferente.  
   
  [Activar o desactivar las características de Reporting Services](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)  
@@ -72,6 +72,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Configurar y administrar un servidor de informes &#40;modo nativo de SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Configuración y administración de un servidor de informes &#40;modo de SharePoint de Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)  
+ [Configuración y administración de un servidor de informes &#40; Reporting Services SharePoint Mode &#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)  
   
   

@@ -22,11 +22,11 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 08ab050564e74a18d8231701f2355c042efc8685
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-model-query-designer-user-interface"></a>Interfaz de usuario del Diseñador de consultas de modelo de informe
@@ -60,10 +60,10 @@ ms.lasthandoff: 06/22/2017
 |Botón|Description|  
 |------------|-----------------|  
 |**Editar como texto**|Alterna entre el diseñador de consultas basado en texto y el diseñador gráfico de consultas. La consulta para un origen de datos del modelo del servidor de informes es una especificación del Lenguaje de consulta de modelos semánticos (SMQL) en XML.|  
-|**Importar**|Importa una consulta existente desde un archivo de definición de informe (.rdl) del sistema de archivos. Para obtener más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|**Importar**|Importa una consulta existente desde un archivo de definición de informe (.rdl) del sistema de archivos. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Deshacer la acción](../../reporting-services/report-data/media/rsqdicon-undo.gif "deshacer acción")|Deshace la última acción.|  
 |![Rehacer una acción](../../reporting-services/report-data/media/rsqdicon-redo.gif "rehacer una acción")|Rehace la última acción.|  
-|![Ejecute la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "ejecutar la consulta")|Ejecuta la consulta y muestra las filas resultantes en el panel Resultado.|  
+|![Ejecutar la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta la consulta y muestra las filas resultantes en el panel Resultado.|  
 |![Gráfico de filtro junto a columna de filtro seleccionada](../../reporting-services/report-data/media/rsqdicon-filter.gif "gráfico de filtro junto a columna de filtro seleccionada")|Abre el cuadro de diálogo **Filtrar datos** , que permite especificar los datos que desea filtrar. Puede especificar filtros independientemente de los datos actuales del Área de diseño.|  
   
 ## <a name="text-based-query-designer"></a>Diseñador de consultas basado en texto  
@@ -89,12 +89,12 @@ ms.lasthandoff: 06/22/2017
 |------------|-----------------|  
 |**Editar como texto**|Alterna entre el diseñador de consultas basado en texto y el diseñador gráfico de consultas.|  
 |**Importar**|Importa una consulta desde un informe existente.|  
-|![Ejecute la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "ejecutar la consulta")|Ejecuta el texto de consulta y muestra el conjunto de filas resultantes en el panel Resultado.|  
+|![Ejecutar la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta el texto de consulta y muestra el conjunto de filas resultantes en el panel Resultado.|  
   
 ## <a name="see-also"></a>Vea también  
  [Herramientas de diseño de consulta &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [Agregar datos de orígenes de datos externos &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [Conexión de modelo de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
+ [Conexión de modelo de informe &#40; SSRS &#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
  [Archivo de configuración RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   
   

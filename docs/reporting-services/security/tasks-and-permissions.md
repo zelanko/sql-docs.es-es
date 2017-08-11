@@ -23,11 +23,11 @@ caps.latest.revision: 40
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c1e2822182d644b90aa419986f75a6fdc6fd3296
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tasks-and-permissions"></a>Tareas y permisos
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
  Las tareas solo se pueden llevar a cabo si forman parte de un rol y dicho rol se incluye en una asignación de roles. Por lo tanto, si la tarea Ver modelos no está incluida en un rol, o ese rol no está incluido en una asignación de roles, los usuarios no podrán ver los modelos de informes. El siguiente diagrama muestra cómo los permisos se combinan para crear tareas y éstas se combinan para crear roles que se pueden utilizar para asignaciones de roles específicas.  
   
- ![Diagrama de tareas y permisos](../../reporting-services/security/media/report-securityobjects.gif "Permissions and task diagram")  
+ ![Diagrama de tareas y permisos](../../reporting-services/security/media/report-securityobjects.gif "diagrama de tareas y permisos")  
 Diagrama de tareas y permisos  
   
 ## <a name="system-and-item-level-tasks"></a>Tareas de nivel de sistema y de elemento  
@@ -51,6 +51,6 @@ Diagrama de tareas y permisos
 ## <a name="see-also"></a>Vea también  
  [Definiciones de roles](../../reporting-services/security/role-definitions.md)   
  [Roles predefinidos](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Conceder permisos en un servidor de informes de modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

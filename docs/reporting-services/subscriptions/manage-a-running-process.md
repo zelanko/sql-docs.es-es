@@ -32,11 +32,11 @@ caps.latest.revision: 53
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 103472f5003235e0e08c65c40999545ff4d864ee
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="manage-a-running-process"></a>Administrar un proceso en ejecución
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Suscripciones estándar propiedad de usuarios individuales.  
   
- Cuando se cancela un trabajo, únicamente se cancelan los procesos que están en ejecución en el servidor de informes. Dado que el servidor de informes no administra el procesamiento de datos que se produce en otros equipos, se deben cancelar manualmente los procesos de consulta que quedan huérfanos posteriormente en otros sistemas. Es aconsejable especificar valores de tiempo de espera para cancelar automáticamente las consultas que tardan demasiado en ejecutarse. Para más información, vea [Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Para más información sobre cómo pausar de forma temporal un informe, vea [Deshabilitar o pausar el procesamiento de informes y suscripciones](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
+ Cuando se cancela un trabajo, únicamente se cancelan los procesos que están en ejecución en el servidor de informes. Dado que el servidor de informes no administra el procesamiento de datos que se produce en otros equipos, se deben cancelar manualmente los procesos de consulta que quedan huérfanos posteriormente en otros sistemas. Es aconsejable especificar valores de tiempo de espera para cancelar automáticamente las consultas que tardan demasiado en ejecutarse. Para obtener más información, vea [especifique los valores de tiempo de espera de informes y procesamiento de conjunto de datos compartido &#40; SSRS &#41; ](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Para más información sobre cómo pausar de forma temporal un informe, vea [Deshabilitar o pausar el procesamiento de informes y suscripciones](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
   
 > [!NOTE]  
 >  En algunas circunstancias poco frecuentes, quizás resulte necesario reiniciar el servidor para cancelar un proceso. Para el modo de SharePoint, quizás necesite reiniciar el grupo de aplicaciones que hospeda la aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para más información, vea [Iniciar y detener el servicio del servidor de informes](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).  
@@ -121,14 +121,14 @@ ms.lasthandoff: 06/22/2017
 5.  O haga clic en el cuadro correspondiente a su trabajo y en **Eliminar** para cancelar el trabajo. La eliminación del trabajo no elimina la suscripción.  
   
 ##  <a name="bkmk_programmatically"></a> Administrar trabajos mediante programación  
- Es posible administrar los trabajos mediante programación o con un script. Para obtener más información, consulte <xref:ReportService2010.ReportingService2010.ListJobs%2A>, <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
+ Es posible administrar los trabajos mediante programación o con un script. Para más información, vea <xref:ReportService2010.ReportingService2010.ListJobs%2A>, <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
   
 ## <a name="see-also"></a>Vea también  
  [Cancelar trabajos del servidor de informes &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
- [Propiedades del trabajo &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
- [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Propiedades del trabajo &#40; Management Studio &#41;](../../reporting-services/tools/job-properties-management-studio.md)   
+ [Modificar un archivo de configuración de Reporting Services &#40; RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Supervisar el rendimiento del servidor de informes](../../reporting-services/report-server/monitoring-report-server-performance.md)  
+ [El Administrador de informes &#40; Modo nativo de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Supervisión del rendimiento del servidor de informes](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   

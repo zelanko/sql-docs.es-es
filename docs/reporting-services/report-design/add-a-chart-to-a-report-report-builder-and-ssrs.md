@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a2d2ad7ae37e0f787709fb79afbf80ef3e584b5e
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Agregar un gráfico a un informe (Generador de informes y SSRS)
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="to-add-a-chart-to-a-report"></a>Para agregar un gráfico a un informe  
   
-1.  Cree un informe y defina un conjunto de datos. Para más información, vea [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
+1.  Cree un informe y defina un conjunto de datos. Para obtener más información, vea [conjuntos de datos de informes &#40; SSRS &#41; ](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
 2.  En la pestaña **Insertar** , haga clic en **Gráfico**y, a continuación, haga clic en **Insertar gráfico**.  
   
@@ -69,15 +69,15 @@ ms.lasthandoff: 06/22/2017
   
 10. En la pestaña **Ejecutar** , haga clic en **Diseño** para seguir trabajando en el informe.  
   
- En los gráficos con ejes, como los gráficos de barras y de columnas, es posible que el eje de categorías no muestre todas las etiquetas de categoría. Para más información sobre cómo cambiar las etiquetas de los ejes, vea [Especificar un intervalo de eje &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md).  
+ En los gráficos con ejes, como los gráficos de barras y de columnas, es posible que el eje de categorías no muestre todas las etiquetas de categoría. Para obtener más información sobre cómo cambiar las etiquetas del eje, vea [especificar un intervalo de eje &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [Puntos de datos vacíos y nulos en los gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Tutorial: Agregar un gráfico de barras a un informe (Generador de informes)](http://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Gráficos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Tipos de gráfico &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [Puntos de datos en los gráficos de &#40; vacíos y nulos El generador de informes y SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Tutorial: Agregar un gráfico de barras a un informe (generador de informes)](http://go.microsoft.com/fwlink/?LinkId=198052)   
  [Tutorial: Agregar un gráfico de barras a un informe (Diseñador de informes)](http://go.microsoft.com/fwlink/?LinkId=198042)   
- [Tutorial: Agregar un gráfico circular a un informe (Generador de informes)](http://go.microsoft.com/fwlink/?LinkId=198051)   
+ [Tutorial: Agregar un gráfico circular al informe (generador de informes)](http://go.microsoft.com/fwlink/?LinkId=198051)   
  [Tutorial: Agregar un gráfico circular a un informe (Diseñador de informes)](http://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

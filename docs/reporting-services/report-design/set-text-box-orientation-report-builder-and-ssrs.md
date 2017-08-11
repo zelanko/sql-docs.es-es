@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4cc52b4687f9a2c944ea3a93c15b637d894c7a96
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>Establecer la orientación del cuadro de texto (Generador de informes y SSRS)
@@ -49,6 +49,6 @@ Dado que se gira el cuadro de texto y no el texto, la rotación se aplica a todo
   
 ## <a name="see-also"></a>Vea también  
  [Cuadros de texto &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../../reporting-services/tutorial-format-text-report-builder.md)  
+ [Tutorial: Dar formato al texto &#40; El generador de informes &#41;](../../reporting-services/tutorial-format-text-report-builder.md)  
   
   

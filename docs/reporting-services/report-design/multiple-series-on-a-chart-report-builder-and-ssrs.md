@@ -15,11 +15,11 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e3e3fa82b79529b1e128260f020b8e98225e26fe
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Mostrar varias series en un gráfico (Generador de informes y SSRS)
@@ -59,8 +59,8 @@ ms.lasthandoff: 06/22/2017
  Los gráficos de intervalos tienen dos valores por cada punto de datos. Si el gráfico contiene dos series que comparten el mismo eje de categorías (X), puede usar un gráfico de intervalos para mostrar la diferencia entre ambas. Los gráficos de intervalos son los más adecuados para mostrar información en formato máximo-mínimo o superior-inferior. Por ejemplo, si la primera serie contiene la venta de mayor importe para cada día durante el mes de enero, y la segunda serie contiene la venta de menor importe para cada día durante el mismo período, puede usar un gráfico de intervalos para mostrar la diferencia entre ambas ventas para cada día. Para más información, vea [Rangos de intervalos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Mostrar una serie con varios rangos de datos en un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
- [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  
+ [Gráficos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Mostrar una serie con varios intervalos de datos en un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
+ [Tipos de gráfico &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  
   
   

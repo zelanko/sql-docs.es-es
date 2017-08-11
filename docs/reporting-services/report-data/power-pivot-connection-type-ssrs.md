@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 11e5762b794060577704a31cf59836839b464d76
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Tipo de conexión de PowerPivot (SSRS)
@@ -44,7 +44,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="queries"></a>Consultas  
  Cuando esté conectado al origen de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , utilice el diseñador gráfico de consultas MDX para crear una consulta examinando las estructuras de datos subyacentes y seleccionando una de ellas. Después de generar una consulta, ejecútela para ver los datos de muestra en el panel de resultados.  
   
- El diseñador de consultas analiza la consulta para determinar los campos del conjunto de datos. También puede modificar manualmente la colección de campos del conjunto de datos en el panel **Datos de informe** . Para más información, vea [Agregar, editar y actualizar campos en el panel Datos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
+ El diseñador de consultas analiza la consulta para determinar los campos del conjunto de datos. También puede modificar manualmente la colección de campos del conjunto de datos en el panel **Datos de informe** . Para obtener más información, consulte [Agregar, editar y actualizar campos en el panel Datos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
 ## <a name="filters"></a>Filtros  
  En el recuadro Filtros, especifique dimensiones y miembros para excluirlos o incluirlos en los resultados de la consulta.  
@@ -69,6 +69,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Interfaz de usuario del Diseñador de consultas MDX de Analysis Services &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
- [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [Expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

@@ -18,11 +18,11 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7983325b1036809058e4866dd217c72c97c8238b
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Crear y administrar suscripciones para servidores de informes en modo nativo
@@ -186,10 +186,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Crear y administrar suscripciones para servidores de informes en modo de SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Use PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
+ [Use PowerShell para cambiar y enumerar propietarios de suscripciones de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
  [Suscripciones controladas por datos](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Usar Mis suscripciones &#40;servidor de informes en modo nativo&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [Las suscripciones y entrega &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [El Administrador de informes &#40; Modo nativo de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Usar Mis suscripciones &#40; Servidor de informes de modo nativo &#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
   
   

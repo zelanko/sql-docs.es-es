@@ -26,11 +26,11 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fc98f8394e637ea9a627cffd8e40887484462df5
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>Especificar conexiones para extensiones de procesamiento de datos personalizadas
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 >  Consulte a su proveedor cómo se implementa la extensión de procesamiento de datos personalizada.  
   
 ## <a name="impersonation-and-custom-data-processing-extensions"></a>Suplantación y extensiones de procesamiento de datos personalizadas  
- Si la extensión de procesamiento de datos personalizado se conecta a orígenes de datos con la suplantación, debe utilizar el método Open en cualquier el <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> o <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> interfaces para realizar la solicitud. Como alternativa, puede almacenar el objeto de identidad de usuario (System.Security.Principal.WindowsIdentity) y, después, reutilizarlo en el resto de las API de extensión de procesamiento de datos.  
+ Si una extensión de procesamiento de datos personalizada se conecta a orígenes de datos con suplantación, tendrá que usar el método Open en las interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> o <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> para realizar la solicitud. Como alternativa, puede almacenar el objeto de identidad de usuario (System.Security.Principal.WindowsIdentity) y, después, reutilizarlo en el resto de las API de extensión de procesamiento de datos.  
   
  En versiones anteriores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], se llamaba a todas las extensiones de procesamiento de datos personalizadas mediante la suplantación de usuarios. En esta versión, la suplantación de usuarios solo se usa para llamar al método Open. Si tiene una extensión de procesamiento de datos que necesite seguridad integrada, es necesario que modifique el código para que use el método Open o que almacene el objeto de identidad de usuario.  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/22/2017
 |Sin credenciales|Puede utilizar la opción Sin credenciales con proveedores de datos personalizados de .NET. Si especifica una cuenta de ejecución desatendida, la cadena de conexión determinará las credenciales que se utilizarán. El servidor de informes suplantará la cuenta de ejecución desatendida para realizar la conexión.<br /><br /> Si no se ha definido la cuenta de ejecución desatendida, el servidor de informes generará un error de conexión. Para más información sobre cómo definir la cuenta, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
   
 ## <a name="connections-for-idbconnection"></a>Conexiones para IDbConnection  
- Si está utilizando una extensión de procesamiento de datos personalizadas que sólo admite <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, debe especificar la conexión de la manera siguiente:  
+ Si usa una extensión de procesamiento de datos personalizada que solo admita <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, tiene que especificar la conexión del modo siguiente:  
   
 1.  Configurar la cuenta de ejecución desatendida La configuración de esta cuenta es necesaria para las conexiones realizadas mediante **IDbConnection**. El servidor de informes suplantará la cuenta al realizar la conexión.  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 06/22/2017
  Al usar **IDbConnection**, no se admiten los tipos de credencial siguientes: la seguridad integrada, las cuentas de usuario de Windows y las credenciales de la base de datos. Si alguna conexión del origen de datos utiliza estas opciones, generará error en el servidor de informes.  
   
 ## <a name="connections-for-idbconnectionextension"></a>Conexiones para IDbConnectionExtension  
- Si utilizas una admite, extensión de procesamiento de datos personalizada <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>, puede especificar la conexión de las maneras siguientes:  
+ Si usa una extensión de procesamiento de datos personalizada compatible con <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>, puede especificar la conexión de las formas siguientes:  
   
 |Credenciales|Conexiones|  
 |-----------------|-----------------|  
@@ -83,11 +83,11 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Especificar credenciales y la información de conexión para orígenes de datos de informe](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Implementar una extensión de procesamiento de datos](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Crear, eliminar o modificar un origen de datos compartido &#40;Administrador de informes&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Configurar propiedades de origen de datos para un informe &#40;Administrador de informes&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [El Administrador de informes &#40; Modo nativo de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Crear, eliminar o modificar un origen de datos compartido &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Configurar propiedades de origen de datos para un informe &#40; El Administrador de informes &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

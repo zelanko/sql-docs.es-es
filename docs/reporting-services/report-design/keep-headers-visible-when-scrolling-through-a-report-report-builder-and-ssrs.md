@@ -15,11 +15,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f2fac57fe0e898a1ccbfbe33fb271eae76da1389
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Mantener visibles los encabezados al desplazarse a través de un informe (Generador de informes y SSRS)
@@ -27,7 +27,7 @@ ms.lasthandoff: 06/22/2017
   
  La forma de controlar las filas y las columnas depende de si tiene una tabla o una matriz. Si tiene una tabla, configure los miembros estáticos (encabezados de fila y columna) para que sigan siendo visibles. Si tiene una matriz, configure los encabezados de grupos de filas y columnas para que sigan siendo visibles.  
   
- Si exporta el informe a Excel, el encabezado no se inmovilizará automáticamente. Puede inmovilizar el panel en Excel. Para obtener más información, vea la sección **Encabezados y pies de página** de [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
+ Si exporta el informe a Excel, el encabezado no se inmovilizará automáticamente. Puede inmovilizar el panel en Excel. Para obtener más información, consulte el **encabezados de página y pies de página** sección de [exportar a Microsoft Excel &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Aunque una tabla tenga grupos de filas y columnas, no puede mantener esos encabezados de grupo visible durante el desplazamiento  
@@ -75,10 +75,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Buscar, ver y administrar informes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Mostrar encabezados y pies de página con un grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
- [Mostrar encabezados de fila y de columna en varias páginas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
- [Panel de agrupación &#40;Generador de informes&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)  
+ [Mostrar encabezados y pies de página con un grupo de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
+ [Mostrar encabezados de fila y columna en varias páginas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
+ [Panel de agrupación &#40; El generador de informes &#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)  
   
   

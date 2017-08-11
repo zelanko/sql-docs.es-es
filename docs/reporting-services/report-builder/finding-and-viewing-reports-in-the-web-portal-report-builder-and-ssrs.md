@@ -15,15 +15,15 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 85eda9497d17c2e5e7bb7fecf15e1d214d24ca11
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Buscar y visualizar informes en el portal web (Generador de informes y SSRS)
-  El Administrador de informes es una herramienta basada en Web que incluye características para la visualización y administración de informes. Forma parte de la instalación del servidor de informes. Para abrir el Administrador de informes, escriba su dirección URL en una ventana del explorador. Para obtener información sobre los requisitos del explorador, vea [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md). Para obtener más información sobre cómo se podría configurar en su servidor de informes una dirección URL del Administrador de informes URL, póngase en contacto con el administrador del sistema. Para más información, vea [Configurar el Administrador de informes &#40;modo nativo&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md).  
+  El Administrador de informes es una herramienta basada en Web que incluye características para la visualización y administración de informes. Forma parte de la instalación del servidor de informes. Para abrir el Administrador de informes, escriba su dirección URL en una ventana del explorador. Para obtener información sobre los requisitos del explorador, vea [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md). Para obtener más información sobre cómo se podría configurar en su servidor de informes una dirección URL del Administrador de informes URL, póngase en contacto con el administrador del sistema. Para obtener más información, vea [Configurar el Administrador de informes &#40;modo nativo&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md).  
   
  Los permisos que establece el administrador del sistema en el servidor de informes determinan lo que puede ver al utilizar Administrador de informes. Los permisos se conceden a través de la asignación de roles. Para poder buscar y ver informes, su asignación de roles debe incluir la tarea Ver informes. Para hallar un informe en un servidor de informes, búsquelo por nombre o por descripción, o desplácese por las carpetas del servidor de informes. Solo puede buscar o desplazarse a los informes que se han publicado o se han cargado en el servidor de informes. Para más información sobre cómo buscar un informe, vea [Buscar informes y otros elementos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md).  
   
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="navigating-the-folder-hierarchy-in-report-manager"></a>Navegar por la jerarquía de carpetas del Administrador de informes  
  Para examinar los informes que desea ejecutar, puede usar la página Inicio, que aparece automáticamente cuando se inicia el Administrador de informes y cuando se abre cualquier carpeta de la jerarquía de carpetas. La página Inicio solo muestra los elementos que tiene permiso para ver. La ruta de acceso de la carpeta se muestra como una fila de vínculos en la parte superior de la página Inicio. Los nombres de carpetas se muestran de forma secuencial, empezando por la carpeta raíz (Inicio). Cada vez que se abre una carpeta, se agrega su nombre a la ruta de acceso de la carpeta en la parte superior de la página. **(1)** en la imagen siguiente. Cuando se abre un informe, también se agrega su nombre a la ruta de acceso de la carpeta.  
   
- ![Cinta de opciones de administrador de informes y la navegación](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "Report Manager Ribbon and Navigation")  
+ ![Cinta de opciones de administrador de informes y navegación](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "la cinta de opciones del Administrador de informes y la navegación")  
 Cinta de opciones del Administrador de informes  
   
  Utilice las siguientes técnicas para navegar por la jerarquía de carpetas:  
@@ -47,7 +47,7 @@ Cinta de opciones del Administrador de informes
 ## <a name="opening-a-report"></a>Abrir un informe  
  Cuando encuentre el informe que desea, haga clic en su nombre para abrirlo. El informe se representa en HTML y aparece en la página Contenido del Administrador de informes. La sesión de explorador se encarga de almacenar los informes en la memoria caché. De este modo, cuando abra un informe, podrá volver a él si hace clic en el botón **Atrás** . El método funciona incluso si el sistema le solicita un nombre de usuario y una contraseña para ejecutar el informe. Los informes representados no se cierran por completo hasta que se cierra el explorador.  
   
- No se tiene acceso inmediato a todos los informes visibles en la jerarquía de carpetas. Algunos pueden solicitarle un nombre de usuario y una contraseña para determinar si tiene derechos de acceso al origen de datos del informe. Para más información sobre cómo abrir informes en el Administrador de informes, vea [Abrir y cerrar un informe &#40;Administrador de informes&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
+ No se tiene acceso inmediato a todos los informes visibles en la jerarquía de carpetas. Algunos pueden solicitarle un nombre de usuario y una contraseña para determinar si tiene derechos de acceso al origen de datos del informe. Para obtener más información acerca de cómo abrir informes en el Administrador de informes, consulte [abrir y cerrar un informe &#40; El Administrador de informes &#41; ](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
  Puede ir a un informe y abrirlo directamente desde el servidor de informes en el Generador de informes. Para más información, vea [Buscar informes y otros elementos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md).  
   
@@ -61,6 +61,6 @@ Cinta de opciones del Administrador de informes
   
 ## <a name="see-also"></a>Vea también  
  [Buscar informes y otros elementos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Buscar, ver y administrar informes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

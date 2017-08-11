@@ -15,11 +15,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 271d1b4018890ab23db0254b24cbf7664491b848
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Colección Campos del conjunto de datos (Generador de informes y SSRS)
@@ -31,7 +31,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **Campos calculados de un conjunto de datos.** Campos adicionales que crea para el conjunto de datos. Cada campo calculado se crea evaluando una expresión que se define.  
   
--   **Campos integrados.** Metadatos que representan una colección de los campos que ofrece el Generador de informes y que proporcionan información como el nombre del informe o la hora en que se procesó. Para obtener más información, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
+-   **Campos integrados.** Metadatos que representan una colección de los campos que ofrece el Generador de informes y que proporcionan información como el nombre del informe o la hora en que se procesó. Para más información, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
  Los nombres del campo de conjunto de datos se guardan como parte de la definición del conjunto de datos de informe. Para obtener más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 06/22/2017
     |**DateTimeTZ**|**DateTimeOffset**|Fecha y hora con ajuste de zona horaria|  
     |**DateTime2**|**DateTime**|Fecha y hora con fracciones de milisegundos|  
   
- Para obtener más información sobre los tipos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Tipos de datos (motor de base de datos)](http://go.microsoft.com/fwlink/?linkid=98362) y [Tipos de datos y funciones de fecha y hora (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360).  
+ Para obtener más información sobre los tipos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Tipos de datos (motor de base de datos)](http://go.microsoft.com/fwlink/?linkid=98362) y [Tipos de datos y funciones de fecha y hora (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360).  
   
  Para obtener más información sobre cómo incluir referencias a un campo de conjunto de datos desde una expresión, vea [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades del conjunto de datos (cuadro de diálogo), Campos &#40;Generador de informes&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
- [Elementos de informe y conjuntos de datos en el Generador de informes](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Elementos de informe y conjuntos de datos en el generador de informes](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Informe incrusta los conjuntos de datos y conjuntos de datos compartidos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

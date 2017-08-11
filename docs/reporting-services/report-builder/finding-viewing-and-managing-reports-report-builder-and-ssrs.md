@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0185d35444cdac141cb5d9626d85618b7eaf3358
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Buscar, ver y administrar informes (Generador de informes y SSRS)
@@ -72,21 +72,21 @@ ms.lasthandoff: 06/22/2017
   
 -   Crear nuevas carpetas en el servidor para organizar los informes de la manera más adecuada.  
   
- El administrador del servidor de informes podría realizar algunas de estas tareas. Para más información sobre las tareas realizadas en un servidor de informes, vea [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
+ El administrador del servidor de informes podría realizar algunas de estas tareas. Para obtener más información acerca de las tareas realizadas en un servidor de informes, vea [servidor de informes de Reporting Services &#40; Modo nativo &#41; ](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
  Normalmente, el Administrador de informes contiene carpetas, informes, orígenes de datos y modelos de informe, además de la carpeta Mis informes. Mis informes es un área de trabajo personal que puede utilizar para trabajar con sus informes y almacenarlos. Otras carpetas del servidor de informes son públicas y suelen requerir que los usuarios dispongan de permisos avanzados para agregar o modificar su contenido. Puede crear carpetas dentro de MisiInformes para organizar mejor sus informes. Para más información, vea [Usar Mis informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md).  
   
  El Administrador de informes muestra los informes en el Visor HTML de Reporting Services. El Visor HTML proporciona un marco para ver los informes en HTML, e incluye una barra de herramientas de informe, una sección de parámetros, una sección de credenciales y un mapa del documento. La barra de herramientas de informe ofrece funciones de navegación por la página, zoom, actualización, búsqueda, exportación, impresión y fuente de distribución de datos. Esta barra de herramientas también aparece en las ventanas de explorador, en la parte superior del informe, cuando se obtiene acceso a los informes mediante una dirección URL. La funcionalidad de impresión es opcional y la debe activar el administrador. Si está disponible, en la barra de herramientas de informe se mostrará el icono de la impresora. Las ilustraciones siguientes muestran la barra de herramientas de informe en una ventana del Administrador de informes y las características de la barra de herramientas de informe en primer plano.  
   
- ![Barra de herramientas de informe en el Administrador de informes](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "Report toolbar in Report Manager")  
+ ![Barra de herramientas de informe en el Administrador de informes](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "barra de herramientas de informe en el Administrador de informes")  
 Ventana del Administrador de informes  
   
- ![Barra de herramientas de informe](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
+ ![Barra de herramientas informes](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "barra de herramientas de informe")  
 Barra de herramientas de informe  
   
- Después de ejecutar un informe, puede exportarlo a otro formato, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel o PDF. También puede exportar el informe mediante una extensión de representación de datos, como CSV (valores separados por comas), y utilizar después el archivo de datos CSV como entrada para otra aplicación. Para más información sobre cómo exportar informes, vea [Exportar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) y [Exportar un informe como otro tipo de archivo &#40;Generador de informes y SSRS&#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2).  
+ Después de ejecutar un informe, puede exportarlo a otro formato, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel o PDF. También puede exportar el informe mediante una extensión de representación de datos, como CSV (valores separados por comas), y utilizar después el archivo de datos CSV como entrada para otra aplicación. Para obtener más información sobre cómo exportar informes, vea [exportar informes &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) y [exportar un informe como otro tipo de archivo &#40; El generador de informes y SSRS &#41; ](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2).  
   
- La forma más sencilla de seleccionar y ejecutar un informe consiste en abrir el Administrador de informes y buscar el informe que se desea ver, o desplazarse hasta el mismo. Para obtener instrucciones paso a paso sobre cómo abrir informes, vea [Abrir y cerrar un informe &#40;Administrador de informes&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
+ La forma más sencilla de seleccionar y ejecutar un informe consiste en abrir el Administrador de informes y buscar el informe que se desea ver, o desplazarse hasta el mismo. Para obtener instrucciones paso a paso sobre cómo abrir informes, consulte [abrir y cerrar un informe &#40; El Administrador de informes &#41; ](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
  Después de ejecutar un informe, puede actualizarlo para ver los nuevos datos.  
   
@@ -107,7 +107,7 @@ Barra de herramientas de informe
   
  Para tener acceso a las páginas de aplicación, seleccione acciones específicas del elemento en un menú desplegable en un informe u otro elemento de servidor de informes que previamente haya agregado a una biblioteca de SharePoint. En función del elemento y de sus permisos, es probable que también pueda crear informes en el Generador de informes, generar modelos y establecer la seguridad de los elementos de modelo.  
   
- Para más información sobre Reporting Services y la tecnología de SharePoint, vea [Configuración y administración de un servidor de informes &#40;modo de SharePoint de Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md) de [Libros en pantalla](http://go.microsoft.com/fwlink/?LinkId=154888) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en msdn.microsoft.com.  
+ Para obtener más información acerca de la tecnología de SharePoint y Reporting Services, vea [configuración y administración de un servidor de informes &#40; Reporting Services SharePoint Mode &#41; ](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [libros en pantalla](http://go.microsoft.com/fwlink/?LinkId=154888) en msdn.microsoft.com.  
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>Buscar elementos del servidor de informes en un sitio de SharePoint  
  Para poder establecer propiedades, antes debe poder localizar el elemento. Los elementos del servidor de informes siempre están almacenados en bibliotecas o en una carpeta dentro de una biblioteca.  
@@ -161,6 +161,6 @@ Barra de herramientas de informe
 ## <a name="see-also"></a>Vea también  
  [Guardar informes &#40;Generador de informes&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [Generador de informes en SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Instalar, desinstalar y asistencia del Generador de informes 3.0](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
+ [Instalar y desinstalar el generador de informes](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
   
   

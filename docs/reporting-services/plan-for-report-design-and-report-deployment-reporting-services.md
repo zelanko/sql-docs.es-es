@@ -15,11 +15,11 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 69c0ea4110b678e9bffa959992d48f2c28df5897
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planeación del diseño y la implementación de informes | Reporting Services
@@ -117,7 +117,7 @@ En este tema se proporciona información general sobre la compatibilidad de defi
 ## <a name="see-also"></a>Vea también  
  [Informes, elementos de informe y definiciones de informe &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Herramientas de Reporting Services](../reporting-services/tools/reporting-services-tools.md)   
- [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [Lenguaje de definición de informe &#40; SSRS &#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   
 

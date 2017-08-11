@@ -15,17 +15,17 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2e6bf4a1dcb406f12eb212380fe09a546a982880
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Explorar la flexibilidad de una región de datos Tablix (Generador de informes y SSRS)
 En un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , cuando agrega una región de datos de lista, tabla o matriz desde la pestaña Insertar de la cinta de opciones, empieza por una plantilla inicial para una región de datos Tablix, pero no está limitado por esa plantilla. Puede seguir definiendo cómo se muestran los datos agregando o quitando características de la región de datos Tablix tales como grupos, filas y columnas.  
   
- Al eliminar una grupo de filas o de columnas, tiene la opción de eliminar las filas y columnas que se usan para mostrar los valores de grupo. También puede agregar o quitar filas y columnas de forma manual. Para entender cómo se usan las filas y las columnas al mostrar datos detallados y de grupo, vea [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md).  
+ Al eliminar una grupo de filas o de columnas, tiene la opción de eliminar las filas y columnas que se usan para mostrar los valores de grupo. También puede agregar o quitar filas y columnas de forma manual. Para entender cómo se usan las filas y las columnas al mostrar datos detallados y de grupo, vea [Tablix Data Region &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md).  
   
  Una vez modificada la estructura de la región de datos Tablix, puede establecer propiedades para ayudar a controlar la manera en la que el informe representa la región de datos; por ejemplo, puede repetir los encabezados de columna en la parte superior de cada página, o mantener un encabezado de grupo con el grupo. Para obtener más información, vea [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
@@ -50,10 +50,10 @@ En un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-
  De forma predeterminada, el grupo de detalles es el grupo secundario más interior de una jerarquía de grupos. No se puede anidar un grupo debajo del grupo de detalles. Puede crear grupos de detalles adyacentes adicionales; por ejemplo, para mostrar los 5 productos más vendidos y los 5 menos vendidos. Dado que puede agregar expresiones de filtro y de ordenación en cada grupo, puede mostrar dos vistas de datos detallados del mismo conjunto de datos en una región de datos Tablix. Para obtener más información, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md), [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) y [Agregar un filtro a un conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Tablas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Matrices &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Región de datos Tablix &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [Tablas, Matrices y listas de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Tablas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Matrices &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [Listas de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
   
   

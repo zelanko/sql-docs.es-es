@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 291a906484a6f7d812d091252802b706d207a69e
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>Agregar una imagen externa (Generador de informes y SSRS)
@@ -44,15 +44,15 @@ ms.lasthandoff: 06/22/2017
   
      Para una imagen en un servidor de informes en modo integrado de SharePoint, o cualquier otro sitio Web, escriba una dirección URL completa a la imagen en el **usar esta imagen** cuadro, por ejemplo, http://\<SharePointservername > /\<sitio > / Documents/images/image1.jpg.  
   
-     Para obtener más información, vea [Especificar las rutas de acceso a los elementos externos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
+     Para más información, vea [Especificar las rutas de acceso a los elementos externos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
 6.  (Opcional) Haga clic en **Tamaño**, **Visibilidad**, **Acción** o **Borde** si quiere establecer propiedades adicionales para el elemento de informe de imagen.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Incrustar una imagen en un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [Agregar una imagen de fondo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md)   
- [Cuadro de diálogo de Propiedades de la imagen, General &#40;Generador de informes y SSRS&#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
+ [Incrustar una imagen en un informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [Agregar una imagen de fondo &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md)   
+ [Cuadro de diálogo de propiedades de imagen, General &#40; El generador de informes y SSRS &#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   

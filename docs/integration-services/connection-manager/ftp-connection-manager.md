@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ftpconnectionmanager.f1
 helpviewer_keywords:
 - FTP connection manager
 - connections [Integration Services], FTP
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 04cc47e64fbbaec3f1e1df9216ead850efa75b90
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 051dc7db2ef8aa475fa8739b097edd93d8286524
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ftp-connection-manager"></a>FTP, administrador de conexiones
@@ -59,7 +61,43 @@ ms.lasthandoff: 08/03/2017
   
  Para obtener información sobre las propiedades que se pueden configurar en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Editor del administrador de conexiones FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md).  
   
- Para obtener información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
+ Para más información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
+  
+## <a name="ftp-connection-manager-editor"></a>Editor del administrador de conexiones FTP
+  Utilice el cuadro de diálogo **Editor del administrador de conexiones FTP** para especificar propiedades de conexión con un servidor FTP.  
+  
+> [!IMPORTANT]  
+>  El administrador de conexiones FTP solo admite la autenticación anónima y la autenticación básica. No es compatible con la autenticación de Windows.  
+  
+ Para obtener más información acerca del administrador de conexiones FTP, vea [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md).  
+  
+### <a name="options"></a>Opciones  
+ **Nombre del servidor**  
+ Proporcione el nombre del servidor FTP.  
+  
+ **Puerto del servidor**  
+ Especifique el número de puerto del servidor FTP que va a utilizar en la conexión. El valor predeterminado de esta propiedad es **21**.  
+  
+ **Nombre de usuario.**  
+ Indique un nombre de usuario para tener acceso al servidor FTP. El valor predeterminado de esta propiedad es **anonymous**.  
+  
+ **Contraseña**  
+ Indique la contraseña para tener acceso al servidor FTP.  
+  
+ **Tiempo de espera (en segundos)**  
+ Especifique el número de segundos que transcurrirán antes de que se exceda el tiempo de espera de la consulta. Si el valor es **0** , indica un período de tiempo infinito. El valor predeterminado de esta propiedad es **60**.  
+  
+ **Usar modo pasivo**  
+ Especifique si inicia la conexión el servidor o el cliente. El servidor inicia la conexión en modo activo y el cliente en modo pasivo. El valor predeterminado de esta propiedad es **active mode**.  
+  
+ **Reintentos**  
+ Especifique el número de veces que la tarea intenta establecer la conexión. Un valor de **0** indica que no existe límite en el número de intentos.  
+  
+ **Tamaño del fragmento (en KB)**  
+ Indique un tamaño de fragmento en kilobytes para transmitir datos.  
+  
+ **Probar conexión**  
+ Después de configurar el Administrador de conexiones FTP, haga clic en **Probar conexión**para confirmar que la conexión es viable.  
   
 ## <a name="see-also"></a>Vea también  
  [Tarea FTP](../../integration-services/control-flow/ftp-task.md)   

@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0d30cf6d4ad8e2a4903172230469f1ba41bab360
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Sugerencias para el diseño de informes (Generador de informes y SSRS)
@@ -160,11 +160,11 @@ ms.lasthandoff: 06/22/2017
   
     4.  En encabezados de columna, cambie la propiedad de cuadro de texto WritingMode de forma que se use texto vertical.  
   
- La combinación de este comportamiento, las propiedades de alto y ancho de los elementos de informe, el tamaño del cuerpo del informe, la definición del alto y el ancho de página, la configuración de los márgenes del informe primario, y la compatibilidad específica del representador con la paginación, en conjunto, determinan qué elementos de informe pueden estar juntos en una página representada. Para obtener más información, vea [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ La combinación de este comportamiento, las propiedades de alto y ancho de los elementos de informe, el tamaño del cuerpo del informe, la definición del alto y el ancho de página, la configuración de los márgenes del informe primario, y la compatibilidad específica del representador con la paginación, en conjunto, determinan qué elementos de informe pueden estar juntos en una página representada. Para más información, vea [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Generador de informes en SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Tutoriales de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Reporting Services Tutorials &#40; SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Tutoriales del Generador de informes](../../reporting-services/report-builder-tutorials.md)  
   
   

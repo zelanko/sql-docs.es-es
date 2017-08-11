@@ -21,11 +21,11 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e04d57e159b255567ebde31308db68bfed33946
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="enable-and-disable-my-reports"></a>Habilitar y deshabilitar Mis informes
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
  Tenga en cuenta que, si activa Mis informes, el servidor de informes creará una carpeta Mis informes para cada usuario que tenga una cuenta de dominio y que haga clic en el vínculo Mis informes, incluso si el usuario no desea, o no necesita, una carpeta Mis informes. No existe ningún modo sistemático de determinar las carpetas que se utilizan. Es preciso revisar manualmente las carpetas para comprobar las que contienen algo.  
   
 ## <a name="see-also"></a>Vea también  
- [Proteger Mis informes](../../reporting-services/security/secure-my-reports.md)   
- [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Proteger mis informes](../../reporting-services/security/secure-my-reports.md)   
+ [Administración de contenido de servidor de informes &#40; Modo nativo de SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

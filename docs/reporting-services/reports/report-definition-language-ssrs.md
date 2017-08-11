@@ -24,11 +24,11 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 003d81f131eeeadbf672e63f0c949e4a1a6df2ad
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-definition-language-ssrs"></a>Report Definition Language (SSRS)
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona varias herramientas para crear archivos RDL. Para más información, vea [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
   
- Una de las formas más sencillas de generar RDL a partir de una aplicación consiste en usar la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] clases de la <xref:System.Xml> espacio de nombres y <xref:System.Linq> espacio de nombres. Una clase en particular, la clase **XmlTextWriter** , se puede utilizar para escribir RDL. Con **XmlTextWriter**, puede generar una definición de informe completa en cualquier aplicación [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Los programadores también pueden ampliar RDL agregando elementos de informe personalizados con propiedades personalizadas. Para obtener más información sobre la **XmlTextWriter** clase y la <xref:System.Xml> espacio de nombres, vea la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Guía del desarrollador. Para obtener más información sobre Language-Integrated Query (LINQ), busque "LINQ to XML" en MSDN.  
+ Una de las maneras más fáciles de generar RDL desde una aplicación es usar las clases [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] del espacio de nombres <xref:System.Xml> y del espacio de nombres <xref:System.Linq> . Una clase en particular, la clase **XmlTextWriter** , se puede utilizar para escribir RDL. Con **XmlTextWriter**, puede generar una definición de informe completa en cualquier aplicación [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Los programadores también pueden ampliar RDL agregando elementos de informe personalizados con propiedades personalizadas. Para más información sobre la clase **XmlTextWriter** y el espacio de nombres <xref:System.Xml> , vea la Guía del programador de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Para obtener más información sobre Language-Integrated Query (LINQ), busque "LINQ to XML" en MSDN.  
   
  La extensión de archivo estándar para los archivos de definición de informe es .rdl. También puede desarrollar archivos de definición de informe de cliente, que tienen extensiones .rdlc. El tipo MIME para ambas extensiones es text/xml. Para más información sobre los informes, vea [Informes de Reporting Services &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md).  
   

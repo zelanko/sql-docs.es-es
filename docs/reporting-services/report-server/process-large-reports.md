@@ -21,11 +21,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 065902778339650fcd123556acdeabfe8504224f
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="process-large-reports"></a>Procesar informes grandes
@@ -75,9 +75,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Establecer las propiedades del procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Cargar previamente la memoria caché &#40;Administrador de informes&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
+ [Establecer las propiedades de procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [Especificar credenciales y la información de conexión para orígenes de datos de informe](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Administración de contenido de servidor de informes &#40; Modo nativo de SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Cargar previamente la memoria caché &#40; El Administrador de informes &#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   

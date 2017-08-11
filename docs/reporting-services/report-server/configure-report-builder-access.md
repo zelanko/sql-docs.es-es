@@ -19,11 +19,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1a85ea590db7794e4a8c09aac7d3f97df5b6d29b
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-report-builder-access"></a>Configurar el acceso al Generador de informes
@@ -53,14 +53,14 @@ ms.lasthandoff: 06/22/2017
   
  Para establecer las propiedades del sistema del servidor de informes, puede usar Management Studio o script:  
   
--   Para utilizar Management Studio, conéctese al servidor de informes y utilice la página Avanzadas de Propiedades del servidor con el fin de establecer **EnableReportDesignClientDownload** en **false**. Para más información sobre cómo abrir esta página, vea [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+-   Para utilizar Management Studio, conéctese al servidor de informes y utilice la página Avanzadas de Propiedades del servidor con el fin de establecer **EnableReportDesignClientDownload** en **false**. Para obtener más información acerca de cómo abrir esta página, vea [establecer propiedades de servidor de informes &#40; Management Studio &#41; ](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
 -   Para ver un script de ejemplo donde se configura una propiedad del servidor de informes, consulte [Script para tareas administrativas y de implementación](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).  
   
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>Asignaciones de roles que conceden acceso al Generador de informes en un servidor de informes en modo nativo  
  En un servidor de informes en modo nativo, cree asignaciones de roles de usuario que incluyan las tareas para utilizar el Generador de informes. Debe ser administrador de contenido y administrador del sistema para crear o modificar definiciones y asignaciones de roles en los elementos y en el nivel de sitio.  
   
- En las instrucciones siguientes se supone que se utilizan roles predefinidos. Si ha modificado las definiciones de roles o ha realizado la actualización a partir de SQL Server 2000, compruebe si los roles contienen las tareas necesarias. Para más información sobre cómo crear asignaciones de roles, vea [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
+ En las instrucciones siguientes se supone que se utilizan roles predefinidos. Si ha modificado las definiciones de roles o ha realizado la actualización a partir de SQL Server 2000, compruebe si los roles contienen las tareas necesarias. Para obtener más información acerca de cómo crear asignaciones de roles, consulte [conceder acceso de usuario a un servidor de informes &#40; El Administrador de informes &#41; ](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
   
  Después de crear las asignaciones de roles, los usuarios tendrán permiso para hacer lo siguiente:  
   
@@ -171,9 +171,9 @@ ms.lasthandoff: 06/22/2017
  [Autenticación con el servidor de informes](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Iniciar el Generador de informes](../../reporting-services/report-builder/start-report-builder.md)   
- [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Conectar con un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Propiedades del sistema del servidor de informes](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
+ [El Administrador de informes &#40; Modo nativo de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Conectarse a un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Propiedades de sistema del servidor de informes](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   
   
 

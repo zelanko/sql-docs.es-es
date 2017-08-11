@@ -15,15 +15,15 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dfa24b2135c34e95dae65e0a6fee4bf5da6b3d16
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>Gráficos circulares (Generador de informes y SSRS)
-  Los gráficos circulares y los gráficos de anillos muestran los datos como una proporción del total. Los gráficos circulares se usan normalmente para realizar comparaciones entre grupos. Los gráficos circulares y de anillos, junto con los gráficos piramidales y de embudo, forman parte de un grupo de gráficos conocidos como gráficos de formas. Los gráficos de formas no tienen ejes. Cuando se coloca un campo numérico en un gráfico de formas, el gráfico calcula el porcentaje de cada valor en relación con el total. Para más información sobre los gráficos de formas, vea [Gráficos de formas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md).  
+  Los gráficos circulares y los gráficos de anillos muestran los datos como una proporción del total. Los gráficos circulares se usan normalmente para realizar comparaciones entre grupos. Los gráficos circulares y de anillos, junto con los gráficos piramidales y de embudo, forman parte de un grupo de gráficos conocidos como gráficos de formas. Los gráficos de formas no tienen ejes. Cuando se coloca un campo numérico en un gráfico de formas, el gráfico calcula el porcentaje de cada valor en relación con el total. Para obtener más información sobre los gráficos de formas, consulte [gráficos de formas &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md).  
   
  En la ilustración siguiente se muestra un gráfico circular 3D con etiquetas de datos a las que se ha dado formato de porcentaje.  La leyenda está centrada en el lado derecho.  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 06/22/2017
   
  ![Tarta, estilos de dibujo](../../reporting-services/report-design/media/rs-piedrawingeffects-concave2.gif "circular estilos de dibujo")  
   
- Para más información, vea [Agregar estilos con bisel, relieve y textura a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
+ Para obtener más información, vea [Agregar estilos con bisel, relieve y textura a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
 ## <a name="displaying-percentage-values-on-a-pie-chart"></a>Mostrar valores de porcentaje en un gráfico circular  
  Al igual que los demás gráficos de formas, los gráficos circulares representan proporciones del total. Como consecuencia, es frecuente dar formato a las etiquetas del gráfico circular como porcentajes. Para ser coherente con otros tipos de gráficos, el gráfico no muestra las etiquetas de los porcentajes de forma predeterminada. Para más información sobre cómo mostrar valores como porcentajes en el gráfico, vea [Mostrar valores de porcentaje en un gráfico circular &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md). Para más información sobre cómo dar formato a números como porcentajes en el informe, vea [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
@@ -92,11 +92,11 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Mostrar las etiquetas de los puntos de datos fuera de un gráfico circular &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
- [Recopilar segmentos pequeños en un gráfico circular &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
- [Mostrar valores de porcentaje en un gráfico circular &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [Recopilar sectores pequeños en un gráfico circular &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [Mostrar valores de porcentaje en un gráfico circular &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Tutorial: Agregar un gráfico circular a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Aplicar formato a la leyenda de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
- [Puntos de datos vacíos y nulos en los gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Aplicar formato a la leyenda de un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [Puntos de datos en los gráficos de &#40; vacíos y nulos El generador de informes y SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  
   
   

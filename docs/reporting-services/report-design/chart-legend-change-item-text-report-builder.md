@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8c253794b7b884a3dd7835409e256245ae0dc5a2
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>La leyenda del gráfico: elemento cambiar texto (generador de informes)
@@ -59,8 +59,8 @@ ms.lasthandoff: 06/22/2017
 2.  Haga clic en **Leyenda** y, en el cuadro **Texto de leyenda personalizado** , escriba una etiqueta de leyenda. La serie se actualizada con el texto especificado.  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicar formato a la leyenda de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
- [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Ocultar elementos de leyenda en el gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)  
+ [Aplicar formato a la leyenda de un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [Aplicar formato a los colores de serie en un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Ocultar elementos de leyenda en el gráfico &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)  
   
   

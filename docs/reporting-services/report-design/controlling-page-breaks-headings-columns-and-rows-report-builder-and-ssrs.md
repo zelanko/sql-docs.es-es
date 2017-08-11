@@ -15,11 +15,11 @@ caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 67507b8373f0d7c08bdf9303593d30ef0cb7c027
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>Controlar saltos de página, encabezados, columnas y filas (Generador de informes y SSRS)
@@ -35,9 +35,9 @@ ms.lasthandoff: 06/22/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
- [Panel de agrupación &#40;Generador de informes&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)   
- [Mostrar encabezados y pies de página con un grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [Tablas, Matrices y listas de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Controlar la presentación de la región de datos Tablix en una página de informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
+ [Panel de agrupación &#40; El generador de informes &#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)   
+ [Mostrar encabezados y pies de página con un grupo de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
   

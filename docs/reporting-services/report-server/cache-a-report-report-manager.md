@@ -21,11 +21,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: af00978c2afb28937a008f22eebe76f1a3f78eb1
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="cache-a-report-report-manager"></a>Almacenar en caché un informe (Administrador de informes)
@@ -47,9 +47,9 @@ ms.lasthandoff: 06/22/2017
   
 6.  Seleccione una de las siguientes dos opciones de caché y configure la expiración como se indica a continuación:  
   
-    -   Para configurar que una copia en caché expire después de un período determinado, haga clic en **Almacenar en caché una copia temporal del informe. La copia expirará después de un número determinado de minutos**. Escriba el número de minutos para la expiración del informe.  
+    -   Para configurar que una copia en caché expire después de un período determinado, haga clic en **Almacenar en caché una copia temporal del informe. La copia expira transcurrido un número de minutos**. Escriba el número de minutos para la expiración del informe.  
   
-    -   Para configurar que una copia en caché expire de acuerdo con una programación, haga clic en **Guardar en caché una copia temporal del informe. La copia del informe debe expirar según la siguiente programación.** Haga clic en **Configurar**, o seleccione una programación compartida para controlar la expiración del informe.  
+    -   Para configurar una copia en caché expire siguiendo una programación, haga clic en **guardar en caché una copia temporal del informe. La copia del informe en la siguiente programación expira.** Haga clic en **Configurar**, o seleccione una programación compartida para controlar la expiración del informe.  
   
 7.  Haga clic en **Aplicar**.  
   

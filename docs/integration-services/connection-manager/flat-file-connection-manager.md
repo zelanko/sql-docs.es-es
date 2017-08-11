@@ -9,6 +9,11 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ffileconnection.general.f1
+- sql13.dts.designer.ffileconnection.columns.f1
+- sql13.dts.designer.ffileconnection.columnproperties.f1
+- sql13.dts.designer.ffileconnection.preview.f1
 helpviewer_keywords:
 - connection managers [Integration Services], Flat File
 - connections [Integration Services], flat files
@@ -22,10 +27,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5f3e174427f1aa92c14952571b0e81070ffe69d2
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 2b3f4c303b1d60cbbe23c639c36a6336ca07447f
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="flat-file-connection-manager"></a>Administrador de conexiones de archivos planos
@@ -73,16 +78,222 @@ ms.lasthandoff: 08/03/2017
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
-  
--   [Editor del administrador de conexiones de archivos planos &#40;página General&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)  
-  
--   [Editor del administrador de conexiones de archivos planos &#40;página Columnas&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)  
-  
--   [Editor del administrador de conexiones de archivos planos &#40;página Avanzadas&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)  
-  
--   [Editor del administrador de conexiones de archivos planos &#40;página Vista previa&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)  
-  
  Para más información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
+## <a name="flat-file-connection-manager-editor-general-page"></a>Editor del administrador de conexiones de archivos planos (página General)
+  Utilice la página **General** del cuadro de diálogo **Editor del administrador de conexiones de archivos planos** para seleccionar un archivo y un formato de datos. Las conexiones de archivos planos permiten que un paquete se conecte con un archivo de texto.  
   
+ Para obtener más información acerca del administrador de conexiones de archivos planos, vea [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
+  
+### <a name="options"></a>Opciones  
+ **Nombre del administrador de conexiones**  
+ Especifique un nombre único para la conexión de archivo plano en el flujo de trabajo. El nombre que indique se mostrará en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+  
+ **Description**  
+ Describe la conexión. Como método recomendado, describa la conexión desde el punto de vista de su propósito, para que los paquetes estén autodocumentados y sean más fáciles de mantener.  
+  
+ **Nombre de archivo**  
+ Escriba la ruta de acceso y el nombre de archivo que utilizará en la conexión de archivos planos.  
+  
+ **Examinar**  
+ Busque el nombre de archivo que utilizará en la conexión de archivos planos.  
+  
+ **Configuración regional**  
+ Especifique la configuración regional, que proporciona información específica del idioma para la ordenación y los formatos de fecha y hora.  
+  
+ **Unicode**  
+ Indique si se va a utilizar Unicode. Si utiliza Unicode, no puede especificar una página de códigos.  
+  
+ **Página de códigos**  
+ Especifique la página de códigos para el texto no Unicode.  
+  
+ **Formato**  
+ Indique si el archivo utiliza formato delimitado, de ancho fijo o derecho irregular.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Delimitado|Las columnas se separan mediante delimitadores, que se especifican en la página **Columnas** .|  
+|Ancho fijo|Las columnas tienen un ancho fijo.|  
+|Derecho irregular|Los archivos de derecho irregular son archivos en los que todas las columnas tienen un ancho fijo, a excepción de la última. Se delimita mediante el delimitador de fila.|  
+  
+ **Calificador de texto**  
+ Especifique el calificador de texto que se va a utilizar. Por ejemplo, puede indicar que los archivos de texto se delimitan con comillas.  
+  
+> [!NOTE]  
+>  Tras seleccionar un calificador de texto, no puede volver a elegir la opción **Ninguno** . Escriba **Ninguno** para anular la selección del calificador de texto.  
+  
+ **Delimitador de filas de encabezados**  
+ Seleccione uno de los delimitadores de filas de encabezados de la lista o escriba el texto delimitador.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**{CR}{LF}**|La fila de encabezado está delimitada por una combinación de retorno de carro y avance de línea.|  
+|**{CR}**|La fila de encabezado está delimitada por un retorno de carro.|  
+|**{LF}**|La fila de encabezado está delimitada por un avance de línea.|  
+|**Punto y coma {;}**|La fila de encabezado está delimitada por un punto y coma.|  
+|**Dos puntos {:}**|La fila de encabezado está delimitada por dos puntos.|  
+|**Coma {,}**|La fila de encabezado está delimitada por una coma.|  
+|**Tabulación {t}**|La fila de encabezado está delimitada por una tabulación.|  
+|**Barra vertical {&#124;}**|La fila de encabezado está delimitada por una barra vertical.|  
+  
+ **Filas de encabezados que se omitirán**  
+ Especifique el número de filas de encabezado o filas de datos iniciales que se deben omitir, si es necesario.  
+  
+ **Nombres de columna de la primera fila de datos**  
+ Indica si deben esperarse o deben especificarse nombres de columna en la primera fila de datos.  
+## <a name="flat-file-connection-manager-editor-columns-page"></a>Editor del administrador de conexiones de archivos planos (página Columnas)
+  Utilice la página **Columnas** del cuadro de diálogo **Editor del administrador de conexiones de archivos planos** para especificar la información de filas y columnas, y para obtener una vista previa del archivo.  
+  
+ Para obtener más información acerca del administrador de conexiones de archivos planos, vea [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
+  
+### <a name="static-options"></a>Opciones estáticas  
+ **Nombre del administrador de conexiones**  
+ Especifique un nombre único para la conexión de archivo plano en el flujo de trabajo. El nombre que indique se mostrará en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+  
+ **Description**  
+ Describe la conexión. Como método recomendado, describa la conexión desde el punto de vista de su propósito, para que los paquetes estén autodocumentados y sean más fáciles de mantener.  
+  
+### <a name="flat-file-format-dynamic-options"></a>Opciones dinámicas de formato para archivos planos  
+  
+#### <a name="format--delimited"></a>Formato = Delimitado  
+ **Delimitador de filas**  
+ Selecciónelo de la lista de delimitadores de filas disponibles o escriba el texto delimitador.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**{CR}{LF}**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
+|**{CR}**|Las filas se delimitan mediante un retorno de carro.|  
+|**{LF}**|Las filas se delimitan mediante un avance de línea.|  
+|**Punto y coma {;}**|Las filas se delimitan mediante un punto y coma.|  
+|**Dos puntos {:}**|Las filas se delimitan mediante dos puntos.|  
+|**Coma {,}**|Las filas se delimitan mediante una coma.|  
+|**Tabulación {t}**|Las filas se delimitan mediante un tabulador.|  
+|**Barra vertical {&#124;}**|Las filas se delimitan mediante una barra vertical.|  
+  
+ **Delimitador de columna**  
+ Selecciónelo de la lista de delimitadores de columna disponibles o escriba el texto delimitador.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**{CR}{LF}**|Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
+|**{CR}**|Las columnas se delimitan mediante un retorno de carro.|  
+|**{LF}**|Las columnas se delimitan mediante un avance de línea.|  
+|**Punto y coma {;}**|Las columnas se delimitan mediante un punto y coma.|  
+|**Dos puntos {:}**|Las columnas se delimitan mediante un punto y coma.|  
+|**Coma {,}**|Las columnas se delimitan mediante una coma.|  
+|**Tabulación {t}**|Las columnas se delimitan mediante un tabulador.|  
+|**Barra vertical {&#124;}**|Las columnas se delimitan mediante una barra vertical.|  
+  
+ **Actualizar**  
+ Al hacer clic en **Actualizar**, verá el efecto del cambio de delimitadores que se van a omitir. Este botón solo se hace visible después de cambiar otras opciones de conexión.  
+  
+ **Vista previa de filas**  
+ Presenta datos de ejemplo del archivo plano, divididos en columnas y filas mediante las opciones seleccionadas.  
+  
+ **Restablecer columnas**  
+ Al hacer clic en **Restablecer columnas**se eliminará todo, excepto las columnas originales.  
+  
+#### <a name="format--fixed-width"></a>Formato = Ancho fijo  
+ **Fuente**  
+ Seleccione la fuente en la que se presentará la vista previa de los datos.  
+  
+ **Columnas de datos de origen**  
+ Ajuste el ancho de la fila desplazando el marcador vertical de color rojo de la fila; ajuste el ancho de las columnas haciendo clic en la regla, en la parte superior de la ventana de vista previa.  
+  
+ **Ancho de fila**  
+ Especifique la longitud de la fila antes de agregar los delimitadores para las columnas individuales. O bien arrastre la línea roja vertical en la ventana de vista previa para marcar el final de la fila. El valor del ancho de la fila se actualizará automáticamente.  
+  
+ **Restablecer columnas**  
+ Al hacer clic en **Restablecer columnas**se eliminará todo, excepto las columnas originales.  
+  
+#### <a name="format--ragged-right"></a>Formato = Derecho irregular  
+  
+> [!NOTE]  
+>  Los archivos de derecho irregular son archivos en los que todas las columnas tienen un ancho fijo, a excepción de la última. Se delimita mediante el delimitador de fila.  
+  
+ **Fuente**  
+ Seleccione la fuente en la que se presentará la vista previa de los datos.  
+  
+ **Columnas de datos de origen**  
+ Ajuste el ancho de la fila desplazando el marcador vertical de color rojo de la fila; ajuste el ancho de las columnas haciendo clic en la regla, en la parte superior de la ventana de vista previa.  
+  
+ **Delimitador de filas**  
+ Selecciónelo de la lista de delimitadores de filas disponibles o escriba el texto delimitador.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**{CR}{LF}**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
+|**{CR}**|Las filas se delimitan mediante un retorno de carro.|  
+|**{LF}**|Las filas se delimitan mediante un avance de línea.|  
+|**Punto y coma {;}**|Las filas se delimitan mediante un punto y coma.|  
+|**Dos puntos {:}**|Las filas se delimitan mediante dos puntos.|  
+|**Coma {,}**|Las filas se delimitan mediante una coma.|  
+|**Tabulación {t}**|Las filas se delimitan mediante un tabulador.|  
+|**Barra vertical {&#124;}**|Las filas se delimitan mediante una barra vertical.|  
+  
+ **Restablecer columnas**  
+ Al hacer clic en **Restablecer columnas**se eliminará todo, excepto las columnas originales.  
+## <a name="flat-file-connection-manager-editor-advanced-page"></a>Editor del administrador de conexiones de archivos planos (página Avanzadas)
+  Utilice la página **Avanzadas** del cuadro de diálogo **Editor del administrador de conexiones de archivos planos** para establecer prioridades que especifiquen la forma en que Integration Services debe leer y escribir datos en archivos planos. Puede cambiar los nombres de columna del archivo plano y establecer propiedades que incluyan tipos de datos y delimitadores para cada columna del archivo.  
+  
+ De forma predeterminada, la longitud de las columnas de cadena es de 50 caracteres. Puede cambiar la longitud de estas columnas para evitar el truncamiento de los datos o el exceso del ancho de columna. También puede actualizar otros metadatos para habilitar la compatibilidad con las columnas de destino. Por ejemplo, puede cambiar el tipo de datos de una columna que solo contiene tipos de datos enteros a un tipo de datos numéricos, como DT_I2. Puede realizar estas modificaciones de forma manual o puede hacer clic en el botón **Sugerir tipos...** para usar el cuadro de diálogo **Sugerir tipos de columna** a fin de evaluar datos de ejemplo y que algunos de estos cambios se realicen automáticamente.  
+  
+ Para obtener más información acerca del administrador de conexiones de archivos planos, vea [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
+  
+### <a name="options"></a>Opciones  
+ **Nombre del administrador de conexiones**  
+ Especifique un nombre único para el administrador de conexiones de archivos planos en el flujo de trabajo. El nombre que indique se mostrará en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+  
+ **Description**  
+ Describa el administrador de conexiones. Como método recomendado, describa el administrador de conexiones desde el punto de vista de su propósito, para que los paquetes estén autodocumentados y sean más fáciles de mantener.  
+  
+ **Configure las propiedades de cada columna**  
+ Seleccione una columna del panel izquierdo para ver sus propiedades en el panel derecho. Consulte la siguiente tabla para obtener una descripción de las propiedades de los tipos de datos. Algunas de las propiedades que aparecen en la lista solo son configurables en algunos formatos de archivos planos.  
+  
+|Propiedad|Description|  
+|--------------|-----------------|  
+|**ColumnType**|Denota si la columna es delimitada, de ancho fijo o derecho irregular. Esta propiedad es de solo lectura. Los archivos de derecho irregular son archivos en los que todas las columnas tienen un ancho fijo, a excepción de la última. Se delimita mediante el delimitador de fila.|  
+|**OutputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, el valor corresponde a un recuento de caracteres. En la tarea Flujo de datos este valor se utiliza para establecer el ancho de la columna de salida para el origen del archivo plano. En el modelo de objetos, el nombre de esta propiedad es MaximumWidth.|  
+|**DataType**|Seleccione los tipos de datos disponibles en la lista. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
+|**TextQualified**|Indica si los datos de texto están entre caracteres calificadores de texto como caracteres de comillas.<br /><br /> True: se califican los datos de texto del archivo plano. False: no se califican los datos de texto del archivo plano.|  
+|**Nombre**|Proporcione un nombre de columna descriptivo. Si no se escribe un nombre, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea uno automáticamente con el formato Columna 0, Columna 1, etc.|  
+|**DataScale**|Especifique la escala de los datos numéricos. La escala hace referencia al número de posiciones decimales. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
+|**ColumnDelimiter**|Seleccione los delimitadores de columna disponibles en la lista. Elija delimitadores que no sea probable encontrar en el texto. Este valor se omite para las columnas de ancho fijo.<br /><br /> **{CR}{LF}**. Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.<br /><br /> **{CR}**. Las columnas se delimitan mediante un retorno de carro.<br /><br /> **{LF}**. Las columnas se delimitan mediante un avance de línea.<br /><br /> **Punto y coma {;}**. Las columnas se delimitan mediante un punto y coma.<br /><br /> **Dos puntos {:}**. Las columnas se delimitan mediante un punto y coma.<br /><br /> **Coma {,}**. Las columnas se delimitan mediante una coma.<br /><br /> **Tabulación {t}**. Las columnas se delimitan mediante un tabulador.<br /><br /> **Barra vertical {&#124;}**. Las columnas se delimitan mediante una barra vertical.|  
+|**DataPrecision**|Especifique la precisión de los datos numéricos. La precisión hace referencia al número de dígitos. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
+|**InputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, aparecerá como recuento de caracteres. Este valor se omite para las columnas delimitadas.<br /><br /> **Nota** En el modelo de objetos, el nombre de esta propiedad es ColumnWidth.|  
+  
+ **Nuevo**  
+ Para agregar una columna, haga clic en **Nuevo**. De manera predeterminada, el botón **Nueva** agrega una columna nueva al final de la lista. El botón siempre tiene las siguientes opciones, disponibles en la lista desplegable.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Agregar columna**|Agrega una nueva columna al final de la lista.|  
+|**Insertar delante**|Inserta una nueva columna antes de la columna seleccionada.|  
+|**Insertar detrás**|Inserta una nueva columna detrás de la columna seleccionada.|  
+  
+ **Delete**  
+ Seleccione una columna y, después, haga clic en **Eliminar**para quitarla.  
+  
+ **Sugerir tipos**  
+ Use el cuadro de diálogo **Sugerir tipos de columna** para evaluar los datos de ejemplo del archivo y obtener sugerencias para el tipo de datos y la longitud de cada columna. Para más información, vea [Referencia de la interfaz de usuario del cuadro de diálogo Sugerir tipos de columna](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md).  
+## <a name="flat-file-connection-manager-editor-preview-page"></a>Editor del administrador de conexiones de archivos planos (página Vista previa)
+  Utilice el nodo **Vista previa** del cuadro de diálogo **Editor del administrador de conexiones de archivos planos** para ver el contenido del archivo de origen en formato tabular.  
+  
+ Para obtener más información acerca del administrador de conexiones de archivos planos, vea [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
+  
+### <a name="options"></a>Opciones  
+ **Nombre del administrador de conexiones**  
+ Especifique un nombre único para la conexión de archivo plano en el flujo de trabajo. El nombre que indique se mostrará en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+  
+ **Description**  
+ Describe la conexión. Como método recomendado, describa la conexión desde el punto de vista de su propósito, para que los paquetes estén autodocumentados y sean más fáciles de mantener.  
+  
+ **Filas de datos que se omitirán**  
+ Especifique cuántas filas se omitirán al inicio del archivo plano.  
+  
+ **Actualizar**  
+ Al hacer clic en **Actualizar**, verá el efecto de cambiar el número de filas que se van a omitir. Este botón solo se hace visible después de cambiar otras opciones de conexión.  
+  
+ **Vista previa de filas**  
+ Presenta datos de ejemplo del archivo plano, divididos en columnas y filas según las opciones seleccionadas.  
+ 

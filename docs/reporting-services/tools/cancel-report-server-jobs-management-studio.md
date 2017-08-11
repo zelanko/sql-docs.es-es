@@ -17,11 +17,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5348146e3cce3c1f3f6288797f8a4e2bbd520cab
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>Cancelar trabajos del servidor de informes (Management Studio)
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/03/2017
   
  Para abrir esta página, inicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a un servidor de informes, haga clic con el botón derecho en **Trabajos**y, después, haga clic en **Cancelar todos los trabajos**. También puede abrir **Trabajos**, hacer clic con el botón derecho en un trabajo que se está ejecutando en el servidor de informes y seleccionar **Cancelar trabajos**.  
   
- Antes de cancelar un trabajo, puede ver sus propiedades para determinar cuándo se inició el trabajo. Para obtener más información, vea [Propiedades del trabajo &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md).  
+ Antes de cancelar un trabajo, puede ver sus propiedades para determinar cuándo se inició el trabajo. Para más información, vea [Propiedades del trabajo &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md).  
   
 > [!NOTE]  
 >  Esta característica no se admite en [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] con Advanced Services. La página no aparece cuando se ejecuta [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Vea también  
  [Servidor de informes en Management Studio ayuda F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Conectar con un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Conectarse a un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Administrar un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   

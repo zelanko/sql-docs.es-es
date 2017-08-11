@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 729aad553e15f0169f8144f21809c828a8058d56
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-report-server-properties-management-studio"></a>Establecer las propiedades del servidor de informes (Management Studio)
@@ -34,7 +34,7 @@ ms.lasthandoff: 06/22/2017
 2.  Haga clic con el botón derecho en el nodo de servidor de informes y seleccione **Propiedades**. Haga clic en **Avanzadas** para abrir la página de propiedades. Vea [Propiedades del servidor &#40;página Avanzadas&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md) para consultar una descripción de cada propiedad.  
   
 ## <a name="see-also"></a>Vea también  
- [Conectar con un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Propiedades del sistema del servidor de informes](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
+ [Conectarse a un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Propiedades de sistema del servidor de informes](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   
   

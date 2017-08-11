@@ -21,11 +21,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7f8838c9793cfc4a8e38bea3f0f27e702dd27e4d
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Interfaz de usuario del Diseñador de consultas MDX de Analysis Services
@@ -72,7 +72,7 @@ ms.lasthandoff: 06/22/2017
 |Botón|Description|  
 |------------|-----------------|  
 |**Editar como texto**|No está habilitado para este tipo de origen de datos.|  
-|**Importar**|Importa una consulta existente desde un archivo de definición de informe (.rdl) del sistema de archivos. Para obtener más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|**Importar**|Importa una consulta existente desde un archivo de definición de informe (.rdl) del sistema de archivos. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Cambiar a la vista de consulta MDX](../../reporting-services/report-data/media/rsqdicon-commandtypemdx.gif "cambiar a la vista de consulta MDX")|Cambia al tipo de comando MDX.|  
 |![Cambiar a la vista de lenguaje de consulta DMX](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "cambiar a la vista de lenguaje de consulta DMX")|Cambia al tipo de comando DMX.|  
 |![Actualizar datos de resultados](../../reporting-services/report-data/media/rsqdicon-refresh.gif "actualizar datos de resultados")|Actualiza los metadatos desde el origen de datos.|  
@@ -83,7 +83,7 @@ ms.lasthandoff: 06/22/2017
 |![Eliminar](../../reporting-services/report-data/media/rsqdicon-delete.gif "Eliminar")|Elimina la columna seleccionada en el panel Datos de la consulta.|  
 |![Icono para el cuadro de diálogo de parámetros de consulta](../../reporting-services/report-data/media/iconqueryparameter.gif "icono para el cuadro de diálogo de parámetros de consulta")|Muestra el cuadro de diálogo **Parámetros de consulta** . Al especificar valores para un parámetro de consulta, se crea automáticamente un parámetro de informe con el mismo nombre. El valor del parámetro de consulta se establece en una expresión que hace referencia al parámetro de informe.|  
 |![Botón de consulta de preparación](../../reporting-services/report-data/media/rsqdicon-preparequery.gif "botón Preparar consulta")|Prepara la consulta.|  
-|![Ejecute la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "ejecutar la consulta")|Ejecuta la consulta y muestra los resultados en el panel Datos.|  
+|![Ejecutar la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta la consulta y muestra los resultados en el panel Datos.|  
 |![Cancelar la consulta](../../reporting-services/report-data/media/rsqdicon-cancel.gif "cancelar la consulta")|Cancela la consulta.|  
 |![Cambiar al modo de diseño](../../reporting-services/media/rsqdicon-designmode.gif "cambiar al modo de diseño")|Alterna el modo de diseño y el modo de consulta.|  
   
@@ -123,10 +123,10 @@ ms.lasthandoff: 06/22/2017
 -   **Mostrar agregaciones** (![botón Mostrar agregaciones](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "botón Mostrar agregaciones"))  
   
 ## <a name="see-also"></a>Vea también  
- [Definir parámetros en el diseñador de consultas MDX para Analysis Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
- [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Tipo de conexión de Analysis Services para DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)   
+ [Definir parámetros en el Diseñador de consultas MDX de Analysis Services &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
+ [Crear un conjunto de datos compartido o conjunto de datos incrustado &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Tipo de conexión de Analysis Services para DMX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)   
  [Archivo de configuración RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [Tipo de conexión de Analysis Services para MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
+ [Tipo de conexión de Analysis Services para MDX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
   
   

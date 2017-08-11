@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: de434ef80732d2a845fb41c972f0118fee357d14
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>Agregar un medidor a un informe (Generador de informes y SSRS)
@@ -36,9 +36,9 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  A diferencia de los gráficos, los medidores tienen solo dos tipos: lineales y radiales. Los medidores disponibles en el cuadro de diálogo **Seleccionar tipo de medidor** son plantillas para estos dos tipos de medidores. Por esta razón, no puede cambiar el tipo de medidor después de agregar el medidor a su informe. Para cambiar el tipo de un medidor, debe eliminarlo y volver a agregarlo.  
   
-     Si el informe no tiene origen de datos y conjunto de datos, se abre el cuadro de diálogo **Propiedades del origen de datos** , que le guía en los pasos necesarios para crear ambos. Para obtener más información, vea [Agregar y comprobar una conexión de datos o un origen de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+     Si el informe no tiene origen de datos y conjunto de datos, se abre el cuadro de diálogo **Propiedades del origen de datos** , que le guía en los pasos necesarios para crear ambos. Para obtener más información, vea [agregar y comprobar una conexión de datos &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-     Si el informe tiene un origen de datos, pero no un conjunto de datos, se abre el cuadro de diálogo **Propiedades del conjunto de datos** , que le guía en los pasos necesarios para crear uno. Para obtener más información, vea [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
+     Si el informe tiene un origen de datos, pero no un conjunto de datos, se abre el cuadro de diálogo **Propiedades del conjunto de datos** , que le guía en los pasos necesarios para crear uno. Para obtener más información, vea [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
 4.  Haga clic en el medidor para mostrar el panel de datos. De forma predeterminada, un medidor tiene un puntero que corresponde a un valor. Puede agregar punteros adicionales.  
   
@@ -48,6 +48,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [Medidores &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   

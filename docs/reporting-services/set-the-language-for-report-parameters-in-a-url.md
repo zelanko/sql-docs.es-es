@@ -22,11 +22,11 @@ caps.latest.revision: 29
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 815af671e5bd26445153b96f68ebcbaf0e972cf7
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-the-language-for-report-parameters-in-a-url"></a>Establecer el idioma para los parámetros de informe en una dirección URL
@@ -47,7 +47,7 @@ http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render
  Además del valor **true** y **false** para el parámetro de acceso URL *rc:Parameters*, ahora puede pasar el valor **Collapsed**. Al usar *rc:Parameters*=**Collapsed** en una dirección URL, el área de mensajes de parámetros del Visor HTML se contrae fuera de la vista, pero el usuario todavía puede cambiarla. El valor **false** quita el área de mensajes de parámetros de la barra de herramientas del Visor HTML y hace que no esté disponible para el usuario final.  
   
 ## <a name="see-also"></a>Vea también  
- [Acceso URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
+ [Acceso URL &#40; SSRS &#41;](../reporting-services/url-access-ssrs.md)   
  [Referencia de parámetros de acceso URL](../reporting-services/url-access-parameter-reference.md)  
   
   

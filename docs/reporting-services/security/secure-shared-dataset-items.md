@@ -15,11 +15,11 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a8f5d95f21c220a5039945a06204fd2a0e9a3c66
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="secure-shared-dataset-items"></a>Proteger los elementos de un conjunto de datos compartido
@@ -55,9 +55,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Administrar conjuntos de datos compartidos](../../reporting-services/report-data/manage-shared-datasets.md)   
- [Proteger carpetas](../../reporting-services/security/secure-folders.md)   
- [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md)   
- [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Carpetas protegidas](../../reporting-services/security/secure-folders.md)   
+ [Proteger los informes y recursos](../../reporting-services/security/secure-reports-and-resources.md)   
+ [Conceder permisos en un servidor de informes de modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Conceder permisos en un servidor de informes de modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

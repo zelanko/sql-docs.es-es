@@ -23,11 +23,11 @@ caps.latest.revision: 53
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3d4025539369dcc955e8675a92def39e356cb86d
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Crear, modificar y eliminar orígenes de datos compartidos (SSRS)
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
  El siguiente icono indica que existe un origen de datos compartido en la jerarquía de carpetas del Administrador de informes:  
   
- ![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")  
+ ![Icono de origen de datos compartido](../../reporting-services/report-data/media/hlp-16datasource.png "Icono de origen de datos compartido")  
 Icono de origen de datos compartido  
   
  Los orígenes de datos compartidos son opcionales para los informes y para las suscripciones controladas por datos, pero obligatorios para los modelos de informe. Si tiene previsto usar modelos de informe para la notificación ad hoc, deberá crear y mantener un elemento de origen de datos compartido que proporcione información de conexión al modelo.  
@@ -46,7 +46,7 @@ Icono de origen de datos compartido
 |----------|-----------------|  
 |Nombre|Un nombre que identifica el origen dentro de la jerarquía de carpetas del servidor de informes.|  
 |Description|Una descripción que aparece con el elemento en el Administrador de informes cuando el usuario ve el contenido de la carpeta.|  
-|Tipo de conexión|La extensión de procesamiento de datos usada con el origen de datos. Solo puede usar extensiones de procesamiento de datos implementadas en el servidor de informes. Para más información sobre las extensiones de procesamiento de datos que se incluyen con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
+|Tipo de conexión|La extensión de procesamiento de datos usada con el origen de datos. Solo puede usar extensiones de procesamiento de datos implementadas en el servidor de informes. Para obtener más información acerca de las extensiones de procesamiento de datos incluido con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [orígenes de datos admitidos por Reporting Services &#40; SSRS &#41; ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
 |Cadena de conexión|La cadena de conexión para la base de datos. Para más información y para consultar los ejemplos más usados de cadenas de conexión a orígenes, vea [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
 |Tipo de credencial|Especifica cómo se obtienen las credenciales para la conexión y si se van a usar una vez establecida la conexión. Para más información, consulte [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  
   
@@ -112,7 +112,7 @@ Icono de origen de datos compartido
   
     -   Si el origen de datos no usa credenciales (por ejemplo, si el origen de datos es un archivo XML al que se tiene acceso desde el sistema de archivos), haga clic en **No se necesitan credenciales**. Solo debería especificar este tipo de credencial si es válido para el origen de datos. Si selecciona esta opción para un origen de datos que requiere autenticación, se producirá un error en la conexión. Si selecciona esta opción, asegúrese de que configura la cuenta de ejecución desatendida que permite al servidor de informes conectar a otros equipos para recuperar datos o archivos cuando las credenciales del usuario no están disponibles.  
   
-         Para más información sobre la configuración de credenciales, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Para más información sobre la cuenta de ejecución desatendida, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+         Para más información sobre la configuración de credenciales, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Para obtener más información sobre la cuenta de ejecución desatendida, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 9. Haga clic en el botón **Probar conexión** para validar la configuración del origen de datos.  
   
@@ -195,7 +195,7 @@ Icono de origen de datos compartido
   
     -   Seleccione **Pedir credenciales** si desea que el usuario especifique sus credenciales cada vez que ejecute el informe. No seleccione esta opción si desea programar el procesamiento de suscripciones o datos para este informe.  
   
-    -   Seleccione **Credenciales almacenadas** si desea obtener acceso a los datos mediante un único conjunto de credenciales. Las credenciales se cifran antes de guardarse. Puede seleccionar opciones que determinan el modo en que se autentican las credenciales almacenadas. Seleccione Usar como credenciales de Windows si las credenciales almacenadas pertenecen a una cuenta de usuario de Windows. Seleccione **Establecer contexto de ejecución en esta cuenta** si desea establecer el contexto de ejecución en el servidor de base de datos. En el caso de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esta opción establece la función SETUSER. Para más información, vea [SETUSER &#40;Transact-SQL&#41;](../../t-sql/statements/setuser-transact-sql.md).  
+    -   Seleccione **Credenciales almacenadas** si desea obtener acceso a los datos mediante un único conjunto de credenciales. Las credenciales se cifran antes de guardarse. Puede seleccionar opciones que determinan el modo en que se autentican las credenciales almacenadas. Seleccione Usar como credenciales de Windows si las credenciales almacenadas pertenecen a una cuenta de usuario de Windows. Seleccione **Establecer contexto de ejecución en esta cuenta** si desea establecer el contexto de ejecución en el servidor de base de datos. En el caso de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esta opción establece la función SETUSER. Para obtener más información, vea [SETUSER &#40; Transact-SQL &#41; ](../../t-sql/statements/setuser-transact-sql.md).  
   
     -   Seleccione **No se necesitan credenciales** si quiere especificar credenciales en la cadena de conexión o si quiere ejecutar el informe con una cuenta con privilegios mínimos configurada en el servidor de informes. Si esta cuenta no está configurada en el servidor de informes, se solicitarán las credenciales a los usuarios y no se ejecutará ninguna de las operaciones programadas que defina para el informe.  
   
@@ -236,12 +236,12 @@ Icono de origen de datos compartido
 ## <a name="see-also"></a>Vea también  
  [Crear y administrar orígenes de datos compartidos &#40;Reporting Services en el modo integrado de SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [Administrar orígenes de datos de informe](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Administrar los orígenes de datos de informe](../../reporting-services/report-data/manage-report-data-sources.md)   
+ [El Administrador de informes &#40; Modo nativo de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Conexiones de datos u orígenes de datos compartidos e incrustados &#40;Generador de informes y SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
- [Orígenes de datos &#40;página de propiedades del Administrador de informes&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [Crear, eliminar o modificar un origen de datos compartido &#40;Administrador de informes&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Configurar propiedades de origen de datos para un informe &#40;Administrador de informes&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Página de propiedades de orígenes de datos &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
+ [Crear, eliminar o modificar un origen de datos compartido &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Configurar propiedades de origen de datos para un informe &#40; El Administrador de informes &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   
 

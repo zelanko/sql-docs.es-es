@@ -22,11 +22,11 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 009b40c83d662b40b3215f701a2eb490ebc4fed1
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Personalizar los parámetros de extensión de representación en RSReportServer.Config
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
  La modificación de los parámetros de extensión de representación solo afecta a las operaciones de representación del servidor de informes. La configuración de la extensión de representación no se puede reemplazar en la vista previa del informe del Diseñador de informes.  
   
- Cuando se especifican parámetros de extensión de representación en los archivos de configuración, las extensiones de representación se ven afectadas globalmente. Los valores de los archivos de configuración se usarán en lugar de los valores predeterminados siempre que se utilice una extensión de representación determinada. Si se desea establecer parámetros de extensión de representación para un informe o una operación de representación específicos, debe especificarse la información de dispositivo mediante programación, utilizando el método <xref:ReportExecution2005.ReportExecutionService.Render%2A> o especificando la configuración de información de dispositivo en una dirección URL de informe. Para obtener más información sobre cómo especificar los valores de información de dispositivo para una operación de representación, y ver la lista completa de valores de información de dispositivo, vea [Pasar la configuración de información de dispositivo a las extensiones de representación](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
+ Cuando se especifican parámetros de extensión de representación en los archivos de configuración, las extensiones de representación se ven afectadas globalmente. Los valores de los archivos de configuración se usarán en lugar de los valores predeterminados siempre que se utilice una extensión de representación determinada. Si se quiere establecer parámetros de extensión de representación para un informe o una operación de representación específicos, debe especificarse la información de dispositivo mediante programación, usando el método <xref:ReportExecution2005.ReportExecutionService.Render%2A> o especificando la configuración de información de dispositivo en una dirección URL de informe. Para obtener más información sobre cómo especificar los valores de información de dispositivo para una operación de representación, y ver la lista completa de valores de información de dispositivo, vea [Pasar la configuración de información de dispositivo a las extensiones de representación](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
   
 ## <a name="finding-and-modifying-rsreportserverconfig"></a>Buscar y modificar RSReportServer.config  
  Los ajustes de configuración para los formatos de la salida de informes se especifican como parámetros de extensión de representación en el archivo RSReportServer.config. Para especificar parámetros de extensión de representación en los archivos de configuración, es necesario saber cómo se definen las estructuras XML que establecen los parámetros de representación. Hay dos estructuras XML que se pueden modificar:  
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
 -   La estructura XML **DeviceInfo** define la configuración de información de dispositivo que utiliza una extensión de representación. La mayoría de los parámetros de extensión de representación se especifican como valores de información de dispositivo.  
   
- Para modificarlo, se puede usar un editor de texto. El archivo RSReportServer.config se encuentra en la carpeta \Reporting Services\Report Server\Bin. Para obtener más información sobre cómo modificar archivos de configuración, vea [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+ Para modificarlo, se puede usar un editor de texto. El archivo RSReportServer.config se encuentra en la carpeta \Reporting Services\Report Server\Bin. Para obtener más información acerca de cómo modificar archivos de configuración, consulte [modificar un archivo de configuración de Reporting Services &#40; RSreportserver.config &#41; ](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## <a name="changing-the-display-name"></a>Cambiar el nombre para mostrar  
  El nombre para mostrar de una extensión de representación aparece en la lista Exportar de la barra de herramientas de informe. Algunos ejemplos de nombres para mostrar predeterminados son Archivo web, Archivo TIFF y Archivo PDF de Acrobat. El nombre para mostrar predeterminado se puede sustituir por un valor personalizado especificando el elemento **OverrideNames** en los archivos de configuración. Además, si se van a definir dos instancias de una extensión de representación, se puede utilizar el elemento **OverrideNames** para distinguirlas en la lista Exportar.  
@@ -136,12 +136,12 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>Vea también  
  [El archivo de configuración RSReportServer.config](../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Archivo de configuración RSReportDesigner](../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [Configuración de la información del dispositivo CSV](../reporting-services/csv-device-information-settings.md)   
- [Configuración de la información del dispositivo Excel](../reporting-services/excel-device-information-settings.md)   
- [Configuración de la información del dispositivo HTML](../reporting-services/html-device-information-settings.md)   
- [Configuración de la información del dispositivo de imagen](../reporting-services/image-device-information-settings.md)   
- [Configuración de la información del dispositivo MHTML](../reporting-services/mhtml-device-information-settings.md)   
- [Configuración de la información del dispositivo PDF](../reporting-services/pdf-device-information-settings.md)   
- [Configuración de la información del dispositivo XML](../reporting-services/xml-device-information-settings.md)  
+ [CSV Device Information Settings](../reporting-services/csv-device-information-settings.md)   
+ [Excel Device Information Settings](../reporting-services/excel-device-information-settings.md)   
+ [Configuración de la información de dispositivo HTML](../reporting-services/html-device-information-settings.md)   
+ [Configuración de información de dispositivo de imagen](../reporting-services/image-device-information-settings.md)   
+ [Configuración de información del dispositivo MHTML](../reporting-services/mhtml-device-information-settings.md)   
+ [PDF Device Information Settings](../reporting-services/pdf-device-information-settings.md)   
+ [Configuración de información del dispositivo XML](../reporting-services/xml-device-information-settings.md)  
   
   

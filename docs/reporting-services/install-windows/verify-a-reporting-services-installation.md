@@ -22,11 +22,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a5849b6240557cd1682d08210f256e0edabfa70b
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="verify-a-reporting-services-installation"></a>Comprobar una instalación de Reporting Services
@@ -76,7 +76,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="reporting-services-samples"></a>Ejemplos de Reporting Services  
   
-1.  Complete uno de los tutoriales de Reporting Services. Para obtener más información, vea [Tutoriales de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md).  
+1.  Complete uno de los tutoriales de Reporting Services. Para obtener más información, vea [tutoriales de Reporting Services &#40; SSRS &#41; ](../../reporting-services/reporting-services-tutorials-ssrs.md).  
   
 2.  Descargue la base de datos de ejemplo de Adventure Works y los informes de ejemplo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de CodePlex. Para obtener más información, vea [Ejemplos de informes de AdventureWorks](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home).  
   
@@ -89,9 +89,9 @@ ms.lasthandoff: 06/22/2017
   
 2.  Abra las aplicaciones de la consola Servicios y compruebe que se está ejecutando el servicio Servidor de informes. Para ver el estado del servicio del servidor de informes, haga clic en **Inicio**, seleccione **Panel de control**, haga doble clic en **Herramientas administrativas**y, después, en **Servicios**. Cuando aparezca la lista de servicios, desplácese a **Servidor de informes (MSSQLSERVER)**. El estado debe ser **Iniciado**.  
   
-3.  Abra un explorador y escriba la dirección URL del servidor de informes en la barra de direcciones. La dirección está formada por el nombre del servidor y el nombre del directorio virtual que haya especificado para el servidor de informes durante la instalación. De manera predeterminada, el directorio virtual del servidor de informes se denomina **ReportServer**. Puede usar la siguiente dirección URL para comprobar la instalación del servidor de informes: http://*\<nombre_equipo >*/ReportServer*\<_nombre >*. La dirección URL será distinta si el servidor de informes se instala como una instancia con nombre. Para obtener más información sobre el formato de las direcciones URL, vea [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Si es un administrador local en Windows Vista o Windows Server 2008, vea [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41; (Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+3.  Abra un explorador y escriba la dirección URL del servidor de informes en la barra de direcciones. La dirección está formada por el nombre del servidor y el nombre del directorio virtual que haya especificado para el servidor de informes durante la instalación. De manera predeterminada, el directorio virtual del servidor de informes se denomina **ReportServer**. Puede usar la siguiente dirección URL para comprobar la instalación del servidor de informes: http://*\<nombre_equipo >*/ReportServer*\<_nombre >*. La dirección URL será distinta si el servidor de informes se instala como una instancia con nombre. Para obtener más información sobre el formato de dirección URL, vea [configurar direcciones URL de servidor de informes &#40; Administrador de configuración de SSRS &#41; ](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Si eres un administrador local en Windows Vista o Windows Server 2008, consulte [configurar un servidor de informes de modo nativo para la administración Local &#40; SSRS &#41; ](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-4.  Ejecute informes para probar el funcionamiento del servidor de informes. Para este paso, puede crear un informe de muestra con el tutorial. Para obtener más información, vea [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
+4.  Ejecute informes para probar el funcionamiento del servidor de informes. Para este paso, puede crear un informe de muestra con el tutorial. Para obtener más información, vea [crear un informe de tabla básico &#40; Tutorial de SSRS &#41; ](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
 ### <a name="to-verify-that-the-includessrswebportalincludesssrswebportalmd-is-installed-and-running"></a>Para comprobar que el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] está instalado y funciona  
   
@@ -101,17 +101,17 @@ ms.lasthandoff: 06/22/2017
   
 2.  Use el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] para crear una carpeta nueva o cargar un archivo para probar si se pasan definiciones a la base de datos del servidor de informes. Si estas operaciones son correctas, la conexión funciona.  
   
-     Para obtener más información, vea [Web Portal &#40;SSRS Native Mode&#41; (Portal web &#40;modo nativo de SSRS&#41;)](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
+     Para obtener más información, vea [Portal Web &#40; Modo nativo de SSRS &#41; ](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>Para comprobar que el Diseñador de informes está instalado y funciona  
   
-1.  Abra [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y cree un proyecto nuevo basado en un tipo de proyecto de servidor de informes. Para obtener más información sobre cómo usar el Asistente de proyectos de servidor de informes, vea [Reporting Services en SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md) en los Libros en pantalla de SQL Server.  
+1.  Abra [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]y cree un proyecto nuevo basado en un tipo de proyecto de servidor de informes. Para obtener más información sobre cómo utilizar el Asistente para proyectos de servidor de informes, consulte [Reporting Services en SQL Server Data Tools &#40; SSDT &#41; ](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md) en libros en pantalla de SQL Server.  
   
 2.  Si ha instalado ejemplos de informe, abra los archivos de proyectos de informe de ejemplo y publique los informes en un servidor de informes.  
   
 ## <a name="see-also"></a>Vea también  
  [Solucionar problemas en una instalación de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
- [Causa y resolución de errores de Reporting Services](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
+ [Causa y resolución de errores de servicios](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
   
 

@@ -17,11 +17,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a8608faf31e4132570de4e57e748d02057c3722d
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>Acceso al proveedor WMI mediante programación
@@ -133,8 +133,8 @@ class Class1
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Obtener acceso al proveedor WMI de Reporting Services](../reporting-services/tools/access-the-reporting-services-wmi-provider.md)   
- [El archivo de configuración RSReportServer.config](../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
+ [Acceso al proveedor WMI de Reporting Services](../reporting-services/tools/access-the-reporting-services-wmi-provider.md)   
+ [Archivo de configuración RsReportServer.config](../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   
 

@@ -16,11 +16,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e046d1afc8cc2f774e56f70ac9448e9ba9660cbb
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>Reservas de direcciones URL para implementaciones del servidor de informes de varias instancias
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
  Las direcciones URL duplicadas se detectan durante el registro de direcciones URL, que tiene lugar cuando se inicia el servicio. Si crea reservas de direcciones URL que no son únicas, el conflicto entre nombres no se puede detectar hasta que inicie el servicio. Por esta razón, debe seguir las reglas o convenciones de nomenclatura para garantizar que todos los valores son únicos.  
   
 ## <a name="default-naming-conventions"></a>Convenciones de nomenclatura predeterminadas  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se puede instalar en una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Al instalar o configurar un servidor de informes en una instancia con nombre, el nombre de la instancia se incluye automáticamente en el directorio virtual en la reserva de direcciones URL predeterminada proporcionada por [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . La tabla siguiente muestra las reservas de direcciones URL para una instancia predeterminada y una instancia con nombre.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se puede instalar en una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al instalar o configurar un servidor de informes en una instancia con nombre, el nombre de la instancia se incluye automáticamente en el directorio virtual en la reserva de direcciones URL predeterminada proporcionada por [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . La tabla siguiente muestra las reservas de direcciones URL para una instancia predeterminada y una instancia con nombre.  
   
 |Instancia de SQL Server|Reserva de direcciones URL predeterminada|  
 |-------------------------|-----------------------------|  
@@ -52,8 +52,8 @@ ms.lasthandoff: 06/22/2017
  Las tecnologías subyacentes utilizadas por [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] imponen los requisitos relativos a nombres únicos. HTTP.SYS requiere que todas las direcciones URL de su repositorio sean únicas. Puede cambiar el puerto, el nombre de host o el nombre de directorio virtual para crear una dirección URL única. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] requiere que las identidades de aplicaciones sean únicas en el mismo proceso. Este requisito afecta a los nombres de directorio virtuales. Especifica que no se puede duplicar un nombre de directorio virtual en la misma instancia del servidor de informes.  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [Configurar direcciones URL del servidor de informes &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configurar una dirección URL &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
   
   
 

@@ -18,11 +18,11 @@ caps.latest.revision: 40
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: bc870d25cc341f84909e595cde4a411fecbf6603
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="use-my-subscriptions-native-mode-report-server"></a>Usar Mis suscripciones (servidor de informes en modo nativo)
@@ -60,8 +60,8 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
   
 ## <a name="see-also"></a>Vea también  
  [Suscripciones controladas por datos](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Crear y administrar suscripciones para servidores de informes en modo nativo](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)  
+ [Las suscripciones y entrega &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [crear y administrar suscripciones para servidores de informes de modo nativo](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)  
   
   
 

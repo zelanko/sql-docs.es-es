@@ -17,11 +17,11 @@ caps.latest.revision: 27
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 76bd80e1fc470d9cdb998d23834d0a3473d411fe
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="user-role-properties-management-studio"></a>Propiedades de rol de usuario (Management Studio)
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/03/2017
   
  Una definición de roles de nivel de elemento es una colección con nombre de las tareas que realizan los usuarios respecto a un elemento determinado, es decir, una carpeta, un informe, un recurso o un origen de datos compartido. Las definiciones de roles se asignan a un usuario o grupo para crear una asignación de roles en el Administrador de informes. Las tareas de la definición de roles describen lo que puede hacer el usuario o grupo.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye varias definiciones de roles de nivel de elemento predeterminadas con las que podrá trabajar. Puede modificar las definiciones de roles cambiando la lista de tareas de cada una. Al editar una definición de roles, todas las asignaciones de roles que la incluyan se verán afectadas.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]incluye una serie de definiciones de roles de nivel de elemento predefinidas que puede trabajar con. Puede modificar las definiciones de roles cambiando la lista de tareas de cada una. Al editar una definición de roles, todas las asignaciones de roles que la incluyan se verán afectadas.  
   
 > [!NOTE]  
 >  Las asignaciones de roles de usuario solo se usan en un servidor de informes que se ejecuta en modo nativo. Si el servidor de informes se configura para la integración con SharePoint, esta página muestra la información de solo lectura sobre los roles y los niveles de permisos que se definen en el sitio de SharePoint.  

@@ -18,11 +18,11 @@ caps.latest.revision: 40
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c3d0de81994b5a234ead420277718c760f9ddb3
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Crear, modificar y eliminar instantáneas del historial de informes
@@ -65,10 +65,10 @@ ms.lasthandoff: 06/22/2017
  El historial del informe también se elimina cuando se elimina un informe. Por ejemplo, si elimina un informe de ventas mensual porque lo va a sustituir por una versión más reciente, también se eliminará todo el historial del informe asociado al informe. Asimismo, si mueve un informe, se moverá también todo su historial con él.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear historial de informes &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Agregar una instantánea al historial de informes &#40;Administrador de informes&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Limitar el historial de informe &#40;Administrador de informes&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  
+ [Crear el historial de informes &#40; Reporting Services en SharePoint integrado modo &#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
+ [El Administrador de informes &#40; Modo nativo de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Administración de contenido de servidor de informes &#40; Modo nativo de SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Agregar una instantánea para informar del historial &#40; El Administrador de informes &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Limitar el historial de informes &#40; El Administrador de informes &#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  
   
   

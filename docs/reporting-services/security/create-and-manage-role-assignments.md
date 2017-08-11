@@ -21,11 +21,11 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8c07e836a48774cbf9c0c5441fde9d5df854fdcb
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-and-manage-role-assignments"></a>Crear y administrar asignaciones de roles
@@ -69,10 +69,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modificar o eliminar una asignación de roles &#40;Administrador de informes&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Modificar o eliminar una asignación de roles &#40; El Administrador de informes &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [Asignaciones de roles](../../reporting-services/security/role-assignments.md)   
  [Definiciones de roles](../../reporting-services/security/role-definitions.md)   
  [Roles predefinidos](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Conceder permisos en un servidor de informes de modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

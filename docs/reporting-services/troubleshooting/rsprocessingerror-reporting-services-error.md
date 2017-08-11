@@ -17,11 +17,11 @@ caps.latest.revision: 29
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7065e2f766ec3ce56bed2d9b3bc0e90c5290b6ea
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Error de Reporting Services
@@ -103,13 +103,13 @@ ms.lasthandoff: 06/22/2017
 ### <a name="cannot-compare-data-types-for-a-filter"></a>No se pueden comparar los tipos de datos para un filtro  
  En una ecuación de filtro, la expresión de filtro que define lo que se ha de filtrar y el valor de filtro deben ser del mismo tipo de datos para poder compararse. Si ve alguno de los errores siguientes, modifique la expresión de campo o el valor de filtro para que los tipos de datos coincidan:  
   
--   El procesamiento de  *\<tipo de elemento de informe >* para el * \<el nombre del elemento de informe >* no se puede realizar. No se pueden comparar datos de tipos  *\<tipo >* y * \<tipo >*. Compruebe el tipo de datos devuelto por la  *\<el nombre del elemento de informe >*.  
+-   El procesamiento de  *\<tipo de elemento de informe >* para el  *\<el nombre del elemento de informe >* no se puede realizar. No se pueden comparar datos de tipos  *\<tipo >* y  *\<tipo >*. Compruebe el tipo de datos devuelto por la  *\<el nombre del elemento de informe >*.  
   
 -   No se pudo evaluar la  *\<nombre de propiedad >*.  
   
 -   No se pudo evaluar la  *\<nombre de propiedad >*. Hace referencia a un campo de conjunto de datos que tiene un error:  *\<cadena de error >*.  
   
- Para obtener más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
+ Para más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
 ### <a name="invalid-or-conflicting-scope-specification-in-an-aggregate-function-call"></a>Especificación no válida o de ámbito en conflicto en la llamada a una función de agregado  
  Al incluir llamadas a funciones de agregado en una expresión de una celda Tablix, el procesador de informes evalúa la expresión en el ámbito de los grupos más internos a los que pertenece la celda.  
@@ -118,11 +118,11 @@ ms.lasthandoff: 06/22/2017
   
 -   El  *\<tipo de elemento de informe >* '*\<el nombre del elemento de informe >*' tiene un ámbito no válido "*\<nombre de ámbito >*". El ámbito debe ser el actual o estar dentro del actual.  
   
--   El  *\<nombre de propiedad >* expresión para la * \<tipo de elemento de informe >* '*\<el nombre del elemento de informe >*' tiene un parámetro de ámbito que no es válido para una función de agregado. El parámetro de ámbito debe establecerse en una constante de cadena que sea igual al nombre de un grupo contenedor, al nombre de una región de datos contenedora o al nombre de un conjunto de datos.  
+-   El  *\<nombre de propiedad >* expresión para la  *\<tipo de elemento de informe >* '*\<el nombre del elemento de informe >*' tiene un parámetro de ámbito que no es válido para una función de agregado. El parámetro de ámbito debe establecerse en una constante de cadena que sea igual al nombre de un grupo contenedor, al nombre de una región de datos contenedora o al nombre de un conjunto de datos.  
   
  Para las funciones de agregado que calculan totales acumulados (**Previous**, **RunningValue**o **RowNumber**), se puede especificar un parámetro de ámbito que sea un nombre de grupo de filas o de grupo de columnas, pero no ambos. Esto se aplica al mensaje de error siguiente:  
   
--   **Anterior**, **RunningValue** o **RowNumber** agregar funciones utilizadas en las celdas de datos de la  *\<tipo de elemento de informe >* '*\<el nombre del elemento de informe >*' hacen referencia a ámbitos de agrupación de las columnas y filas de la * \<tipo de elemento de informe >*. Los parámetros de ámbito de todos los **anterior**, **RunningValue** y **RowNumber** agregar funciones dentro de un  *\<tipo de elemento de informe >* pueden hacer referencia a las agrupaciones de filas o agrupaciones de columnas de datos, pero no ambos.  
+-   **Anterior**, **RunningValue** o **RowNumber** agregar funciones utilizadas en las celdas de datos de la  *\<tipo de elemento de informe >* '*\<el nombre del elemento de informe >*' hacen referencia a ámbitos de agrupación de las columnas y filas de la  *\<tipo de elemento de informe >*. Los parámetros de ámbito de todos los **anterior**, **RunningValue** y **RowNumber** agregar funciones dentro de un  *\<tipo de elemento de informe >* pueden hacer referencia a las agrupaciones de filas o agrupaciones de columnas de datos, pero no ambos.  
   
  Para más información, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) y [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -130,13 +130,13 @@ ms.lasthandoff: 06/22/2017
  No utilice un ámbito predeterminado para un cuadro de texto agregado a la superficie de diseño del informe cuando éste tenga más de un conjunto de datos. Utilice una expresión que incluya el nombre del conjunto de datos como ámbito, y una función de agregado. Por ejemplo, `=First(Fields!FieldName.Value, "DataSet2")`.  
   
 ## <a name="see-also"></a>Vea también  
- [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Referencia de funciones de agregado &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Ejemplos de expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Filtros de uso frecuente &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
- [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Usar referencias a la colección de parámetros &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Filtros de uso frecuente &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
+ [Colección de campos de conjunto de datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [Código personalizado y referencias de ensamblado de expresiones en el Diseñador de informes &#40; SSRS &#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+ [Referencias de la colección de parámetros &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

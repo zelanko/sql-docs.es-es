@@ -14,11 +14,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e1fde5db0ebdf332d82cdb7269342aea036ec61
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurar la cuenta de servicio del servidor de informes (Administrador de configuración de SSRS)
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Actualiza automáticamente los permisos de inicio de sesión en la instancia del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se utiliza para hospedar la base de datos del servidor de informes. La cuenta nueva se agregará a **RSExecRole**.  
   
-     El inicio de sesión de la base de datos de la cuenta anterior no se quitará automáticamente. Asegúrese de quitar las cuentas que ya no se usen. Para obtener más información, vea [Administrar una base de datos del servidor de informes &#40;SSRS modo nativo&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md) en los Libros en pantalla de SQL Server.  
+     El inicio de sesión de la base de datos de la cuenta anterior no se quitará automáticamente. Asegúrese de quitar las cuentas que ya no se usen. Para obtener más información, vea [administrar una base de datos del servidor de informes &#40; Modo nativo de SSRS &#41; ](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md) en libros en pantalla de SQL Server.  
   
      Solo se conceden permisos de base de datos a una cuenta de servicio nueva si la conexión de base de datos del servidor de informes se configuró para usar la cuenta de servicio en primer lugar. Si la conexión de base de datos del servidor de informes se configuró para utilizar una cuenta de usuario de dominio o un inicio de sesión de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la actualización de la cuenta de servicio no afecta a la información de conexión.  
   
@@ -113,5 +113,5 @@ Las siguientes directrices y los vínculos de esta sección pueden ayudarle a el
   
 ## <a name="see-also"></a>Vea también  
  [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+ [Reporting Services Configuration Manager &#40; Modo nativo &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
 

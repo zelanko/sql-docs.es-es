@@ -19,11 +19,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7a3129645fd110b2bddedae0022592a74fb97a9e
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="design-view"></a>Vista de diseño
@@ -61,8 +61,8 @@ Use el Cuadro de herramientas para seleccionar los elementos que desee colocar e
  Utilice el panel Propiedades para ver las propiedades del elemento de informe seleccionado en la superficie de diseño o el grupo seleccionado en el panel de agrupación. También puede hacer clic con el botón derecho en un elemento de informe o grupo seleccionado y hacer clic después en **Propiedades** para abrir el cuadro de diálogo **Propiedades** correspondiente del elemento de informe o grupo.  
   
 ## <a name="see-also"></a>Vea también  
- [Encabezados y pies de página &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Sugerencias para el diseño de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
+ [Encabezados de página y pies de página &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Sugerencias de diseño de informes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   
 

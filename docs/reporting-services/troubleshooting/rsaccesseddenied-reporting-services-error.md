@@ -17,11 +17,11 @@ caps.latest.revision: 21
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7ece42006b7022bd3fa031cd95ef97767055ad53
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsaccesseddenied---reporting-services-error"></a>rsAccessedDenied - Error de Reporting Services
@@ -54,7 +54,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Asignaciones de roles](../../reporting-services/security/role-assignments.md)   
- [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Roles y permisos &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
+ [Conceder permisos en un servidor de informes de modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Roles y permisos &#40; Reporting Services &#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
   

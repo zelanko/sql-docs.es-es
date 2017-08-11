@@ -21,14 +21,14 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6ca8d81025d48af07b5e2ce9336a8e031ea4fb1a
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="store-credentials-in-a-reporting-services-data-source"></a>Almacenamiento de las credenciales en un origen de datos de Reporting Services
+# <a name="store-credentials-in-a-reporting-services-data-source"></a>Almacenar credenciales en un origen de datos de Reporting Services
   Es posible configurar credenciales almacenadas que un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] use para obtener acceso a los datos externos de un informe. Las credenciales almacenadas se utilizan si un informe se ejecuta de forma desatendida, por ejemplo, una suscripción [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que publica un informe como correo electrónico. El servidor de informes recupera y usa las credenciales cuando se programa o desencadena el procesamiento de informes. En este tema se explica cómo configurar credenciales almacenadas para los servidores de informes en modo Nativo y en modo de SharePoint.  
   
 ||  
@@ -110,7 +110,7 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> Configurar credenciales almacenadas para un origen de datos compartido (modo Nativo)  
   
-1.  En el modo Nativo del Administrador de informes, vaya al elemento del origen de datos compartido. ![Icono de origen de datos compartido](../../reporting-services/report-data/media/hlp-16datasource.png "icono de origen de datos compartido")  
+1.  En el modo Nativo del Administrador de informes, vaya al elemento del origen de datos compartido. ![Icono de origen de datos compartido](../../reporting-services/report-data/media/hlp-16datasource.png "Icono de origen de datos compartido")  
   
 2.  Haga clic en el menú contextual ![menú contextual en el Administrador de informes para elementos de ssrs](../../reporting-services/report-data/media/ssrs-report-manager-item-context-menu.png "menú contextual en el Administrador de informes para elementos de ssrs") y, a continuación, haga clic en **administrar**.  
   
@@ -163,11 +163,11 @@ ms.lasthandoff: 06/22/2017
      ![Icono de flecha usado con Back vínculo al principio](../../analysis-services/instances/media/uparrow16x16.gif "icono de flecha usado con Back vínculo al principio") [requisitos de la directiva de seguridad para las credenciales almacenadas](#bkmk_top)  
   
 ## <a name="see-also"></a>Vea también  
- [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Configurar propiedades de origen de datos para un informe &#40;Administrador de informes&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [Crear, eliminar o modificar un origen de datos compartido &#40;Administrador de informes&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Orígenes de datos &#40;página de propiedades del Administrador de informes&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [Nuevo origen de datos &#40;página del Administrador de informes&#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)  
+ [Especificar credenciales y la información de conexión para orígenes de datos de informe](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Configurar propiedades de origen de datos para un informe &#40; El Administrador de informes &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)   
+ [Crear, eliminar o modificar un origen de datos compartido &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Página de propiedades de orígenes de datos &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
+ [Nueva página de origen de datos &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)  
   
   
 

@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0f2fc7a28d8c8b0a66e706a9518290d0ca56c876
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Mostrar números de página u otras propiedades del informe (Generador de informes y SSRS)
@@ -69,7 +69,7 @@ ms.lasthandoff: 06/22/2017
   
      El cuadro de texto **Establecer expresión para: Valor** contiene la expresión =Globals!PageNumber.  
   
-2.  Coloque el cursor después del signo = y escriba **"Página " &**.  
+2.  Coloque el cursor después del signo = y escriba **"Página" &**.  
   
      La expresión ahora es ="Página "&Globals!PageNumber  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 06/22/2017
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Encabezados y pies de página &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Dar formato al texto en un cuadro de texto &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [Encabezados de página y pies de página &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Dar formato al texto en un cuadro de texto &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
   

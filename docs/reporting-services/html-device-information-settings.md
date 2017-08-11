@@ -17,11 +17,11 @@ caps.latest.revision: 49
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 111e6d65b6c74156b39e81a1b7d9af0cb45501d3
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="html-device-information-settings"></a>Configuración de la información del dispositivo HTML
@@ -58,8 +58,8 @@ En la tabla siguiente se muestra la configuración de la información de los dis
 |**DataVisualizationFitSizing**|Indica el comportamiento de ajuste para la visualización de datos cuando se esté dentro de un Tablix. Esto incluye un gráfico, un medidor y un mapa.<br /><br /> Los valores posibles son **Aproximado** y **Exacto**.<br /><br /> El valor predeterminado es **Aproximado**. Si se quita el valor de configuración del archivo **rsreportserver.config** , el comportamiento predeterminado es **Exacto**.<br /><br /> Si se habilita **Exacto** , podría afectar al rendimiento porque el procesamiento necesario para determinar el tamaño exacto puede tardar más tiempo.|  
   
 ## <a name="see-also"></a>Vea también  
- [Pasar la configuración de información de dispositivo a las extensiones de representación](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Pasar la configuración de información de dispositivo para las extensiones de representación](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Personalizar los parámetros de extensión de representación en RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Referencia técnica &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+ [Referencia técnica de &#40; SSRS &#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

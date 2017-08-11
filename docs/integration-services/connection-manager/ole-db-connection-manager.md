@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.oledbconnection.f1
 helpviewer_keywords:
 - OLE DB connection manager
 - data sources [Integration Services], connections
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 94287024cf1a79384f888406a0c111644d6696fc
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 6a81892e0206775357c7fdf74ef81a7b8c3ae3c7
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB, administrador de conexiones
@@ -65,6 +67,29 @@ ms.lasthandoff: 08/03/2017
     
 -   Artículo técnico, sobre [cadenas de conexión para proveedores OLE DB](http://go.microsoft.com/fwlink/?LinkId=220744), en carlprothman.net.    
     
+## <a name="configure-ole-db-connection-manager"></a>Configurar el administrador de conexiones OLE DB
+  Utilice el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** para agregar una conexión a un origen de datos; puede ser una nueva conexión o una copia de una conexión existente.  
+  
+> [!NOTE]  
+>  Si el origen de datos es [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, el origen de datos requiere un administrador de conexiones distinto al de las versiones anteriores de Excel. Para más información, vea [Conectarse a un libro de Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md).  
+>   
+>  Si el origen de datos es [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 2007, el origen de datos requiere un proveedor OLE DB diferente que las versiones anteriores de Access. Para más información, vea [Conectarse a una base de datos de Access](../../integration-services/connection-manager/connect-to-an-access-database.md).  
+  
+ Para obtener más información acerca del administrador de conexiones OLE DB, vea [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+  
+### <a name="options"></a>Opciones  
+ **Conexiones de datos**  
+ Seleccione en la lista una conexión de datos OLE DB existente.  
+  
+ **Propiedades de conexión de datos**  
+ Vea las propiedades y los valores de la conexión de datos OLE DB seleccionada.  
+  
+ **Nuevo**  
+ Permite crear una conexión de datos OLE DB con el cuadro de diálogo **Administrador de conexiones** .  
+  
+ **Delete**  
+ Permite seleccionar una conexión de datos y, después, eliminarla con el botón **Eliminar** .  
+  
 ## <a name="see-also"></a>Vea también    
  [Origen de OLE DB](../../integration-services/data-flow/ole-db-source.md)     
  [Destino de OLE DB](../../integration-services/data-flow/ole-db-destination.md)     

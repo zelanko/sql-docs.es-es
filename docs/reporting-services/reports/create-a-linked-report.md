@@ -17,11 +17,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 232e24ef08c24d5c6a2c9799094fc492305eea46
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-a-linked-report"></a>Crear un informe vinculado
@@ -39,20 +39,20 @@ ms.lasthandoff: 06/22/2017
   
 2.  Escriba un nombre para el nuevo informe vinculado. Si lo desea, escriba una descripción.  
   
-3.  Para guardar el informe en una carpeta diferente, haga clic en **Cambiar ubicación**. Haga clic en la carpeta que desee utilizar o escriba el nombre de la carpeta en el cuadro **Ubicación** . [!INCLUDE[clickOK](../../includes/clickok-md.md)] Si no selecciona una carpeta distinta, el informe vinculado se creará en la carpeta actual (donde está almacenado el informe en que se basa).  
+3.  Para guardar el informe en una carpeta diferente, haga clic en **Cambiar ubicación**. Haga clic en la carpeta que desee utilizar o escriba el nombre de la carpeta en el cuadro **Ubicación** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]Si no selecciona una carpeta diferente, el informe vinculado se crea en la carpeta actual (donde se almacena el informe se basa en).  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Se abre el informe vinculado.  
+4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]Se abre el informe vinculado.  
   
      El icono de un informe vinculado es distinto de otros elementos administrados por un servidor de informes. El siguiente icono distingue los informes vinculados:  
   
-     ![Icono de informe vinculado](../../reporting-services/report-server/media/hlp-16linked.gif "icono de informe vinculado")  
+     ![Icono de informe vinculado](../../reporting-services/report-server/media/hlp-16linked.gif "Icono de informe vinculado")  
   
 ## <a name="see-also"></a>Vea también  
- [Abrir y cerrar un informe &#40;Administrador de informes&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [Nuevo informe vinculado &#40;página del Administrador de informes&#41;](http://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
- [Elegir página de ubicación del elemento &#40;Administrador de informes&#41;](http://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
- [Página de propiedades generales, informes &#40;Administrador de informes&#41;](http://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
- [Conceptos de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Abrir y cerrar un informe &#40; El Administrador de informes &#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
+ [Página nuevo informe vinculado &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
+ [Elegir página de ubicación del elemento &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
+ [Página de propiedades generales, informes &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
+ [Reporting Services conceptos &#40; SSRS &#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
+ [El Administrador de informes &#40; Modo nativo de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

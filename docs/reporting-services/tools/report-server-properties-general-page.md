@@ -17,11 +17,11 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: dbd2d63c8698cb9e33361c12980aa6abdeaaae7b
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-server-properties-general-page"></a>Propiedades de servidor de informes (página General)
@@ -58,11 +58,11 @@ ms.lasthandoff: 06/22/2017
 
   
 ## <a name="see-also"></a>Vea también  
- [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
- [Conectar con un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Establecer propiedades del servidor de informes &#40; Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+ [Conectarse a un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Habilitar y deshabilitar Mis informes](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
  [Servidor de informes en Management Studio ayuda F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Proteger Mis informes](../../reporting-services/security/secure-my-reports.md)  
+ [Protección de Mis informes](../../reporting-services/security/secure-my-reports.md)  
   
   
 

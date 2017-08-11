@@ -19,11 +19,11 @@ caps.latest.revision: 24
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 004db2495533a1155b58a49ac0af96943a997181
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Servidor de informes de Reporting Services (modo nativo)
@@ -64,7 +64,7 @@ ms.lasthandoff: 06/22/2017
  En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la administración del contenido hace referencia a la administración de informes, modelos, carpetas, recursos y orígenes de datos compartidos. Es posible administrar todos estos elementos de un modo independiente mediante la configuración de las propiedades y de la seguridad. Cualquier elemento puede moverse a una ubicación diferente en el espacio de nombres de carpetas del servidor de informes. Para administrar estos elementos de un modo eficaz, necesita saber las tareas que realiza un administrador de contenido.  
   
 > [!NOTE]  
->  La administración de contenido es diferente de la administración de servidores de informes. Para más información sobre cómo administrar el entorno donde se ejecuta un servidor de informes, vea [Configuración y administración de un servidor de informes &#40;modo de SharePoint de Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).  
+>  La administración de contenido es diferente de la administración de servidores de informes. Para obtener más información sobre cómo administrar el entorno en el que se ejecuta un servidor de informes, consulte [configuración y administración de un servidor de informes &#40; Reporting Services SharePoint Mode &#41; ](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).  
   
  La administración de contenido comprende las tareas que se describen a continuación:  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Equilibrar las peticiones de procesamiento de informes que se envían al servidor mediante la programación del procesamiento de informes y la especificación de los informes que pueden ejecutarse a petición y de los que se cargan desde la memoria caché.  
   
- El permiso para realizar tareas de administración se proporciona a través de dos roles predefinidos: **Administrador del sistema** y **Administrador de contenido**. La administración efectiva del contenido del servidor de informes requiere que esté asignado a ambos roles. Para más información sobre estos roles predefinidos, vea [Roles y permisos &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
+ El permiso para realizar tareas de administración se proporciona a través de dos roles predefinidos: **Administrador del sistema** y **Administrador de contenido**. La administración efectiva del contenido del servidor de informes requiere que esté asignado a ambos roles. Para obtener más información sobre estos roles predefinidos, vea [Roles y permisos &#40; Reporting Services &#41; ](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
  Las herramientas para administrar contenido del servidor de informes son [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o el Administrador de informes. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] permite establecer valores predeterminados y habilitar características. El Administrador de informes se usa para conceder acceso de usuario a las operaciones y elementos del servidor de informes, ver y usar informes y otros tipos de contenido, y ver y usar todos los elementos compartidos y características de distribución de informes.  
   

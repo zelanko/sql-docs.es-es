@@ -15,11 +15,11 @@ caps.latest.revision: 28
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4f612dc69be670d6a99418fbf8e17f34fb8e9d7c
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exportar a Microsoft Excel (Generador de informes y SSRS)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
   
  Puede cambiar parte de la configuración predeterminada de este representador cambiando los valores de configuración de la información del dispositivo. Para más información, vea [Excel Device Information Settings](../../reporting-services/excel-device-information-settings.md).  
   
- Vea [Exportar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) para obtener más información sobre cómo exportar a Excel.  
+ Vea [exportar informes &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) para obtener más información sobre cómo exportar a Excel.  
   
 > [!IMPORTANT]  
 >  Cuando se define un parámetro de tipo **String**, el usuario ve un cuadro de texto que admite cualquier valor. Si un parámetro de informe no está vinculado a un parámetro de consulta y los valores del parámetro se incluyen en el informe, un usuario del informe puede escribir sintaxis de expresión, un script o una dirección URL en el valor del parámetro y representar el informe en Excel. Si, posteriormente, otro usuario visualiza el informe y hace clic en el contenido del parámetro representado, el usuario podría ejecutar accidentalmente el script o el vínculo malintencionados.  
@@ -148,7 +148,7 @@ ms.lasthandoff: 06/22/2017
   
 -   El Generador de informes está en modo sin conexión y se obtiene la vista previa de un informe en el Generador de informes. El archivo de configuración RSReportServer reside en el servidor de informes, por lo que las herramientas o productos desde los que exporte informes se deben conectar con un servidor de informes para leer el archivo de configuración.  
   
--   El elemento web Visor de informes está en modo local y la granja de servidores de SharePoint no está integrada en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para más información, vea [Informes en modo local frente al modo local en el Visor de informes &#40;Reporting Services en modo de SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
+-   El elemento web Visor de informes está en modo local y la granja de servidores de SharePoint no está integrada en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información, vea [modo Local frente. modo conectado en el Visor de informes &#40;Reporting Services en modo de SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  Si el representador de la opción de menú **Excel 2003** se configura para que esté visible, las opciones de Excel y de Excel 2003 están disponibles en los escenarios siguientes:  
   
@@ -192,7 +192,7 @@ ms.lasthandoff: 06/22/2017
   
  Los gráficos, minigráficos, barras de datos, mapas, medidores e indicadores se exportan como imágenes. Los datos que describen, como el valor y las etiquetas miembros de un gráfico, no se exportan con ellos y no están disponibles en el libro de Excel a menos que se incluya en una columna o fila de una región de datos dentro de un informe.  
   
- Si desea trabajar con datos de gráficos, minigráficos, barras de datos, mapas, medidores e indicadores, exporte el informe a un archivo .csv o genere fuentes de distribución de datos conformes a Atom a partir del informe. Para obtener más información, vea [Exportar a un archivo CSV &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) y [Generar fuentes de distribución de datos a partir de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+ Si desea trabajar con datos de gráficos, minigráficos, barras de datos, mapas, medidores e indicadores, exporte el informe a un archivo .csv o genere fuentes de distribución de datos conformes a Atom a partir del informe. Para obtener más información, vea [exportar a un archivo CSV &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) y [generar fuentes de distribución de datos de informes &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 ## <a name="page-sizing"></a>Tamaño de página  
  La extensión de representación en Excel usa la configuración del ancho y del alto de la página para determinar la configuración del papel en la hoja de cálculo Excel. Excel intenta hacer coincidir los valores de las propiedades PageHeight y PageWidth con uno de los tamaños de papel más comunes.  
@@ -270,14 +270,14 @@ ms.lasthandoff: 06/22/2017
  Los vínculos de marcador que aparecen en cuadros de texto se representan como hipervínculos de Excel en la celda en la que se representa el texto. Los vínculos de marcador para imágenes y gráficos se representan como hipervínculos de Excel en la imagen cuando se representa ésta. Cuando se hace clic, el marcador va a la celda de Excel en la que se presenta el elemento de informe marcado.  
   
 ##  <a name="ConditionalFormat"></a> Cambiar informes en tiempo de ejecución  
- Si un informe se debe representar en varios formatos y no es posible crear un diseño del informe que se represente de la manera que desea en todos los formatos necesarios, podría considerar la utilización del valor del RenderFormat integrado global, para cambiar condicionalmente la apariencia del informe en tiempo de ejecución. De este modo puede ocultar o presentar los elementos de informe dependiendo del representador usado para obtener los mejores resultados en cada formato. Para obtener más información, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
+ Si un informe se debe representar en varios formatos y no es posible crear un diseño del informe que se represente de la manera que desea en todos los formatos necesarios, podría considerar la utilización del valor del RenderFormat integrado global, para cambiar condicionalmente la apariencia del informe en tiempo de ejecución. De este modo puede ocultar o presentar los elementos de informe dependiendo del representador usado para obtener los mejores resultados en cada formato. Para más información, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Paginación en Reporting Services &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Comportamientos de representación &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Funcionalidad interactiva para diferentes informes representar extensiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Representar elementos de informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Tablas, Matrices y listas de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
 

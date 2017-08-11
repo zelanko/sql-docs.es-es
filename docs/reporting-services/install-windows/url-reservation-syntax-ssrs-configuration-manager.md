@@ -16,11 +16,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d18adbfb6ce7a50b458ac1f8197c197281e9d81e
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Sintaxis de reserva de direcciones URL (Administrador de configuración de SSRS)
@@ -43,8 +43,8 @@ ms.lasthandoff: 06/22/2017
 |VirtualDirectory|ReportServer*[_InstanceName]*<br /><br /> Reports*[_InstanceName]*<br /><br /> \<personalizado >|Especifica el nombre de la aplicación. Este valor es una cadena. De forma predeterminada, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utiliza ReportServer e Informes como nombres de las aplicaciones del servicio web del servidor de informes y el Administrador de informes. Puede utilizar nombres diferentes, si lo prefiere.<br /><br /> Este valor es necesario. Identifica la aplicación.<br /><br /> Especifique solo un directorio virtual para cada instancia de la aplicación. Para crear varias direcciones URL para la misma aplicación en la misma instancia, cree varias versiones de **UrlString**. Para crear nombres de directorios virtuales únicos para varias instancias de aplicación, considere incluir el nombre de instancia en el nombre del directorio virtual, utilizando el carácter de subrayado (_) para anexar el nombre de instancia. *InstanceName* es opcional, pero se recomienda si tiene varias instancias en el mismo equipo. Para obtener más información sobre cómo establecer reservas de direcciones URL para las instancias con nombre, vea [Reservas de direcciones URL para implementaciones del servidor de informes de varias instancias &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md).<br /><br /> El valor para el directorio virtual no distingue entre mayúsculas y minúsculas. Puede utilizar cualquier cadena siempre que no incluya caracteres separadores de direcciones URL o codificación de URL.|  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [Configurar direcciones URL del servidor de informes &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configurar una dirección URL &#40; Administrador de configuración de SSRS &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
   
   
 

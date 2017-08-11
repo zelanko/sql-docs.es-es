@@ -18,11 +18,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ede41000be34b24f362518e8963cee97db3e4a66
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Mover o eliminar un elemento (Administrador de informes)
@@ -35,11 +35,11 @@ ms.lasthandoff: 06/22/2017
   
 |Icono|Elemento que puede moverse|  
 |----------|-------------------|  
-|![Icono de informe](../../reporting-services/report-server/media/hlp-16doc.gif "el icono de informe")|Informe|  
-|![Icono de informe vinculado](../../reporting-services/report-server/media/hlp-16linked.gif "icono de informe vinculado")|Informe vinculado|  
-|![Icono de carpeta](../../reporting-services/report-server/media/hlp-16folder.gif "icono de carpeta")|Carpeta|  
-|![icono de recurso genérico](../../reporting-services/report-server/media/hlp-16file.gif "icono de recurso genérico")|Recurso genérico|  
-|![Icono de origen de datos compartido](../../reporting-services/report-data/media/hlp-16datasource.png "icono de origen de datos compartido")|Origen de datos compartido|  
+|![Icono de informe](../../reporting-services/report-server/media/hlp-16doc.gif "Icono de informe")|Informe|  
+|![Icono de informe vinculado](../../reporting-services/report-server/media/hlp-16linked.gif "Icono de informe vinculado")|Informe vinculado|  
+|![Icono de carpeta](../../reporting-services/report-server/media/hlp-16folder.gif "Icono de carpeta")|Carpeta|  
+|![Icono de recurso genérico](../../reporting-services/report-server/media/hlp-16file.gif "Icono de recurso genérico")|Recurso genérico|  
+|![Icono de origen de datos compartido](../../reporting-services/report-data/media/hlp-16datasource.png "Icono de origen de datos compartido")|Origen de datos compartido|  
 ||Conjunto de datos compartidos|  
   
  No todos los elementos se pueden mover. Por ejemplo, los elementos asociados a un informe, tales como las suscripciones o el historial del informe, no pueden moverse. Estos elementos se mueven con los informes asociados. Asimismo, tampoco pueden moverse elementos como las programaciones compartidas que existen fuera de la jerarquía de carpetas. No pueden moverse elementos para los que no se tienen los permisos adecuados. Este permiso se concede mediante la selección de las siguientes tareas durante la asignación de roles del elemento en cuestión: "Administrar informes", "Administrar modelos", "Administrar carpetas" y "Administrar orígenes de datos".  
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido &#40;página del Administrador de informes&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Página contenido &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Buscar, ver y administrar informes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

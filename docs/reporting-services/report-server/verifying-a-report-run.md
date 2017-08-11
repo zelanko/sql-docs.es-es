@@ -23,11 +23,11 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 97015ca82fd8a58c3c5cd351b2f7379711d65aa1
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="verifying-a-report-run"></a>Comprobar la ejecución de un informe
@@ -45,13 +45,13 @@ ms.lasthandoff: 06/22/2017
   
 |Para este tipo de informe|La información de fecha y hora se halla en|Para ver la información, haga lo siguiente|  
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|  
-|Un informe que se ejecuta como una instantánea de informe.|En la página Contenido. Para más información, vea [Contenido &#40;página del Administrador de informes&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378).|1) Vaya a la carpeta que contiene el informe.<br /><br /> 2) Establezca la carpeta en la vista Detalles.<br /><br /> 3) Anote la fecha y hora indicadas en la columna **When Run** (Cuándo se ejecuta).|  
-|Una instantánea del historial del informe.|En la página de propiedades Historial. Para más información, vea [Página de propiedades de opciones de instantánea &#40;Administrador de informes&#41;](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).|1) Abra el informe.<br /><br /> 2) Haga clic en la página **Propiedades** .<br /><br /> 3) Haga clic en la pestaña **Historial** .<br /><br /> 4) Anote la fecha y hora indicadas en la columna **When Run** (Cuándo se ejecuta).|  
+|Un informe que se ejecuta como una instantánea de informe.|En la página Contenido. Para obtener más información, vea [página contenido &#40; El Administrador de informes &#41; ](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378).|1) Vaya a la carpeta que contiene el informe.<br /><br /> 2) Establezca la carpeta en la vista Detalles.<br /><br /> 3) Anote la fecha y hora indicadas en la columna **When Run** (Cuándo se ejecuta).|  
+|Una instantánea del historial del informe.|En la página de propiedades Historial. Para obtener más información, vea [página de propiedades de opciones de instantánea &#40; El Administrador de informes &#41; ](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).|1) Abra el informe.<br /><br /> 2) Haga clic en la página **Propiedades** .<br /><br /> 3) Haga clic en la pestaña **Historial** .<br /><br /> 4) Anote la fecha y hora indicadas en la columna **When Run** (Cuándo se ejecuta).|  
 |Un informe en la memoria caché.|En la programación utilizada para crear y actualizar el informe en la memoria caché.|1) Abra el informe.<br /><br /> 2) Haga clic en la página **Propiedades** .<br /><br /> 3) Haga clic en la pestaña **Ejecución** .<br /><br /> 4) Abra la programación.|  
   
 ## <a name="see-also"></a>Vea también  
  [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Establecer las propiedades del procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Establecer las propiedades de procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [El Administrador de informes &#40; Modo nativo de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

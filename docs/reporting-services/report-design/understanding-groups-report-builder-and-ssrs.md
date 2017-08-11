@@ -18,11 +18,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 553bcb01f914c7b63afe3b20f93b790749cc30cf
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Descripción de los grupos (Generador de informes y SSRS)
@@ -104,10 +104,10 @@ ms.lasthandoff: 06/22/2017
  Las celdas de una fila o columna de una región de datos de Tablix pueden pertenecer a varios grupos de filas y de columnas. Al definir una expresión en el cuadro de texto de una celda que usa una función de agregado (por ejemplo, `=Sum(Fields!FieldName.Value`), el ámbito de grupo predeterminado para una celda es el grupo secundario más interior al que pertenece. Cuando una celda pertenece a grupos de filas y de columnas, el ámbito lo forman los dos grupos más interiores. También puede escribir expresiones que calculen subtotales agregados en el ámbito de un grupo relativo a otro conjunto de datos. Por ejemplo, puede calcular el porcentaje de un grupo relativo al grupo de columnas o a todos los datos de la región de datos (como `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`). Para más información, vea [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md) y [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
- [Agregar un total a un grupo o a una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
- [Ordenar datos en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Acción de obtención de detalles &#40;generador de informes y SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Agregar o eliminar un grupo en una región de datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
+ [Agregar un Total a un grupo o región de datos Tablix &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
+ [Ordenar datos en una región de datos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [Acción de obtención de detalles &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [Tablas, Matrices y listas de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

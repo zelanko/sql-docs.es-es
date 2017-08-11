@@ -22,11 +22,11 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: fe39a19aafd5b11060ba717e338cc4ce818d0bd7
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Contadores de rendimiento de MSRS 2011 Web Service, objetos de rendimiento
@@ -131,7 +131,7 @@ get-counter -listset msr*
   
 ## <a name="see-also"></a>Vea también  
  [Supervisar el rendimiento del servidor de informes](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [Contadores de rendimiento para los objetos de rendimiento en modo SharePoint de MSRS 2011 Web Service y SharePoint de MSRS 2011 Windows Service &#40;modo SharePoint&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
+ [Contadores de rendimiento de MSRS 2011 Web Service SharePoint Mode y objetos de rendimiento del modo de SharePoint de MSRS 2011 Windows Service &#40; Modo de SharePoint &#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
  [Contadores de rendimiento de los objetos ReportServer:Service y ReportServerSharePoint:Service](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
   
   

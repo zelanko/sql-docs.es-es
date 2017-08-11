@@ -17,11 +17,11 @@ caps.latest.revision: 57
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b5c82bbd8c2ed4b53bba8afca05d0c439b3ff6be
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Reporting Services en SQL Server Management Studio (SSRS)
@@ -39,9 +39,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Conectar con un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
+-   [Conectarse a un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
   
--   [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)  
+-   [Establecer propiedades del servidor de informes &#40; Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)  
   
 -   [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)  
   

@@ -22,11 +22,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: abd69f541a322d5fd82ab2a7940732f820be2365
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Aplicar formato a texto y a marcadores de posición (Generador de informes y SSRS)
@@ -54,7 +54,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Escriba cualquier expresión simple o compleja en el cuadro de texto. Por ejemplo, si escribe **Name: [Name]** en el cuadro de texto, el texto **[Name]** se mostrará como un marcador de posición que representa la expresión `=Fields!Name.Value`.  
   
--   En un cuadro de texto vacío, escriba una expresión que comience por un signo igual (=). Si saca el foco del cuadro de texto, la expresión resultante se convertirá en un marcador de posición que podrá editar. Si el cuadro de texto no está vacío, o si el signo igual se ha insertado en cualquier lugar que no sea el primer carácter del cuadro de texto, el signo igual se considerará un literal de cadena y no se creará ningún marcador de posición. Para más información sobre cómo definir expresiones simples y complejas, vea [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
+-   En un cuadro de texto vacío, escriba una expresión que comience por un signo igual (=). Si saca el foco del cuadro de texto, la expresión resultante se convertirá en un marcador de posición que podrá editar. Si el cuadro de texto no está vacío, o si el signo igual se ha insertado en cualquier lugar que no sea el primer carácter del cuadro de texto, el signo igual se considerará un literal de cadena y no se creará ningún marcador de posición. Para obtener más información acerca de cómo definir expresiones simples y complejas, vea [expresión se utiliza en informes &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
   
 ## <a name="formatting-placeholders-and-static-text-in-a-text-box"></a>Dar formato a los marcadores de posición y al texto estático de un cuadro de texto  
  Puede dar formato a los marcadores de posición con el cuadro de diálogo **Propiedades del marcador de posición** . Solo puede dar formato al marcador de posición completo, no a sus secciones. Si desea ver la expresión subyacente, puede pausar el puntero en el marcador de posición. Para cambiar la expresión subyacente, puede hacer doble clic en el marcador de posición o puede hacer clic con el botón derecho en el marcador de posición y seleccionar **Propiedades del marcador de posición**. También puede especificar una etiqueta de interfaz de usuario con la propiedad **Label** de **General** en el cuadro de diálogo **Propiedades del marcador de posición** . Este será el texto que se mostrará para el marcador de posición en tiempo de diseño.  
@@ -70,18 +70,18 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  Las acciones definidas en el cuadro de texto tienen una prioridad más alta que las acciones definidas para una cadena de texto individual de un cuadro de texto.  
   
- Para más información sobre el formato mixto, vea [Dar formato al texto en un cuadro de texto &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
+ Para obtener más información acerca de los formatos mixtos, vea [dar formato al texto en un cuadro de texto &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
 ## <a name="aligning-horizontal-text-using-general"></a>Alinear texto horizontal con General  
  En **Alineación** , en el cuadro de diálogo **Propiedades de cuadro de texto** , puede especificar cómo se debe alinear el texto horizontalmente. Si no especifica un valor para la alineación, el valor predeterminado será **Predeterminado**. Esto significa que el texto se alinea en función del tipo de campo del valor del marcador de posición. Si especifica una expresión que se evalúa como un valor que no es de cadena, es decir, no es un número, el texto se alinea a la derecha. Si la expresión se evalúa como un valor de cadena, como por ejemplo un número, el texto se alinea a la izquierda.  
   
 ## <a name="see-also"></a>Vea también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Aplicar formato a las escalas de un medidor &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Cuadro de diálogo Propiedades del marcador de posición, General &#40;Generador de informes y SSRS&#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
- [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
- [Cuadros de texto &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
+ [Aplicar formato a las etiquetas del eje en un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Aplicar formato a las escalas en un medidor &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [Tablas, Matrices y listas de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Cuadro de diálogo de propiedades de marcador de posición, General &#40; El generador de informes y SSRS &#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
+ [Exportar a Microsoft Excel &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
+ [Cuadros de texto &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
   
   

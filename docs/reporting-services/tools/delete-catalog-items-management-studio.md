@@ -17,11 +17,11 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7cdd06f5488603b10e788d513c93269b250d8486
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="delete-catalog-items-management-studio"></a>Eliminar elementos del catálogo (Management Studio)
@@ -50,7 +50,7 @@ ms.lasthandoff: 06/22/2017
  Muestra un código de error si se produce un error al eliminar un elemento.  
   
 ## <a name="see-also"></a>Vea también  
- [Eliminar un elemento &#40;Management Studio&#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
+ [Eliminar un elemento &#40; Management Studio &#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
  [Servidor de informes en Management Studio ayuda F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Crear, modificar y eliminar programaciones](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
   

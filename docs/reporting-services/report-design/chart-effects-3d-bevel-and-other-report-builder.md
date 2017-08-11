@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f6d149a116c243fba0587afe1dcf969f9356c57f
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="chart-effects---3d-bevel-and-other-report-builder"></a>Efectos de gráfico - 3D, bisel y otros (generador de informes)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
   
  Los efectos tridimensionales se pueden aplicar a gráficos individuales; además, en el mismo informe se pueden mostrar gráficos bidimensionales y tridimensionales.  
   
- Si quiere agregar efectos tridimensionales a un área de gráfico de cualquier tipo de gráfico, solo tiene que seleccionar **Habilitar 3D** en el cuadro de diálogo **Propiedades del área de gráfico**. Para obtener más información, vea [Agregar efectos 3D a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md).  
+ Si quiere agregar efectos tridimensionales a un área de gráfico de cualquier tipo de gráfico, solo tiene que seleccionar **Habilitar 3D** en el cuadro de diálogo **Propiedades del área de gráfico**. Para obtener más información, vea [Add 3D Effects to a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md).  
   
  Otra manera de agregar impacto visual a los gráficos es mediante la incorporación de estilos de bisel, relieve y textura a los gráficos de barras, de columnas, circulares y de anillos. Para obtener más información, vea [Agregar estilos con bisel, relieve y textura a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
@@ -65,8 +65,8 @@ ms.lasthandoff: 06/22/2017
  Puede agregar estilos de resaltado a un gráfico 3D mediante la propiedad **Shading** , que aparece debajo de Area3DStyle en el panel Propiedades cuando se selecciona el área del gráfico. Un estilo de iluminación simple aplica el mismo matiz a los elementos del área del gráfico. Un estilo realista cambia los matices de los elementos del área del gráfico que dependen de un ángulo de iluminación especificado.  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Agregar efectos 3D a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
+ [Aplicar formato a las etiquetas del eje en un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Aplicar formato a un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Agregar efectos 3D a un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
   
   

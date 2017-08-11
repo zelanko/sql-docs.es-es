@@ -25,11 +25,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d7c46a132a6d559e6299910d6b2e4e117e650f45
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Gráficos (Generador de informes y SSRS)
@@ -96,7 +96,7 @@ Más tiempo que dedique cuidadosamente preparar y entender los datos antes de cr
   
  Existen varias formas de consolidar los datos en un gráfico:  
   
--   Al utilizar un gráfico circular, reúna los sectores pequeños en un sector denominado "Otros". Esto reducirá el número de sectores del gráfico circular. Para más información, vea [Recopilar segmentos pequeños en un gráfico circular &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md).  
+-   Al utilizar un gráfico circular, reúna los sectores pequeños en un sector denominado "Otros". Esto reducirá el número de sectores del gráfico circular. Para obtener más información, vea [Recopilar segmentos pequeños en un gráfico circular &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md).  
   
 -   Evite usar etiquetas de puntos de datos cuando haya numerosos puntos de datos. Las etiquetas de puntos de datos son más eficaces cuando solo hay unos cuantos puntos en el gráfico.  
   
@@ -109,7 +109,7 @@ Más tiempo que dedique cuidadosamente preparar y entender los datos antes de cr
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
- Para obtener más información sobre las expresiones de agregado, vea [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
+ Para más información sobre las expresiones de agregado, vea [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
    
 ##  <a name="InThisSection"></a> En esta sección  
  [Agregar un gráfico a un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
@@ -144,10 +144,10 @@ Más tiempo que dedique cuidadosamente preparar y entender los datos antes de cr
   
 ## <a name="see-also"></a>Vea también  
  [Imágenes, cuadros de texto, rectángulos y líneas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
- [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Tutorial: Agregar un gráfico de columnas a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [Ordenación interactiva, mapas de documento y vínculos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [Regiones de datos anidadas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [Tutorial: Agregar un gráfico de columnas para el informe &#40; El generador de informes &#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
  [Tutorial: Agregar un gráfico circular a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Tutorial: Agregar un gráfico de barras a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Tutorial: Agregar un gráfico de barras a un informe &#40; El generador de informes &#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c4b3521ce8485561df5fec6a9cd468732cfbc52b
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Gráficos de barras (Generador de informes y SSRS)
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Un gráfico de barras muestra los valores de izquierda a derecha, lo que puede ser más intuitivo a la hora de mostrar datos relacionados con duraciones.  
   
--   Si desea agregar barras a una tabla o a una matriz del informe, considere la posibilidad de usar un medidor lineal en lugar de un gráfico de barras. El medidor lineal está diseñado para mostrar un valor en lugar de varios grupos, por lo que su uso es más flexible dentro de una lista o una región de datos de la tabla. Para más información, vea [Medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
+-   Si desea agregar barras a una tabla o a una matriz del informe, considere la posibilidad de usar un medidor lineal en lugar de un gráfico de barras. El medidor lineal está diseñado para mostrar un valor en lugar de varios grupos, por lo que su uso es más flexible dentro de una lista o una región de datos de la tabla. Para obtener más información, vea [Medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
 -   Puede agregar estilos de dibujo especiales a las barras de un gráfico de barras para aumentar su impacto visual. En los estilos de dibujo se incluyen cuñas, relieves, cilindros y degradados. Estos efectos han sido diseñados para mejorar el aspecto de los gráficos 2D. Si su gráfico es un gráfico 3D, se aplicarán los estilos de dibujo, pero el efecto puede no ser el mismo. Para más información sobre cómo agregar un estilo de dibujo a un gráfico de barras, vea [Agregar estilos con bisel, relieve y textura a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
@@ -63,16 +63,16 @@ ms.lasthandoff: 06/22/2017
 -   Si hay muchos puntos de datos en el conjunto de datos en relación con el tamaño del gráfico, se reduce el tamaño de las columnas o de las barras, así como el espaciado entre ellas. Para establecer manualmente el ancho de las columnas en un gráfico, modifique su ancho, en píxeles, editando la propiedad **PointWidth** . El valor predeterminado de esta propiedad es 0,8. Al aumentar el ancho de las columnas o de las barras en un gráfico, disminuye el espacio entre columnas o barras.  
   
 ## <a name="see-also"></a>Vea también  
- [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [Puntos de datos vacíos y nulos en los gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Gráficos de columnas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
- [Rangos de intervalos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
- [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Aplicar formato a la leyenda de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [Gráficos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Tipos de gráfico &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [Puntos de datos en los gráficos de &#40; vacíos y nulos El generador de informes y SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Gráficos de columnas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
+ [Los gráficos de intervalos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
+ [Aplicar formato a los colores de serie en un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Aplicar formato a las etiquetas del eje en un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Aplicar formato a la leyenda de un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [Agregar estilos con bisel, relieve y textura a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Tutorial: Adding a Bar Chart to a Report (Report Builder) (Tutorial: Agregar un gráfico de barras a un informe [Generador de informes])](http://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Tutorial: Agregar un gráfico de barras a un informe (generador de informes)](http://go.microsoft.com/fwlink/?LinkId=198052)   
  [Tutorial: Agregar un gráfico de barras a un informe](http://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

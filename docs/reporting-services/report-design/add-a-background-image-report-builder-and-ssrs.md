@@ -15,11 +15,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 35b41f21f12487ef0ff32daa999ce4e4075c4180
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-background-image-report-builder-and-ssrs"></a>Agregar una imagen de fondo (Generador de informes y SSRS)
@@ -73,7 +73,7 @@ ms.lasthandoff: 06/22/2017
          Para las imágenes de fondo en los gráficos, **BackgroundRepeat** se puede establecer en **Default**, **Repeat**, **Fit**y **Clip**, pero no en **RepeatX** ni **RepeatY**.  
   
 ## <a name="see-also"></a>Vea también  
- [Imágenes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
- [Cuadro de diálogo de Propiedades de la imagen, General &#40;Generador de informes y SSRS&#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
+ [Imágenes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
+ [Cuadro de diálogo de propiedades de imagen, General &#40; El generador de informes y SSRS &#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   

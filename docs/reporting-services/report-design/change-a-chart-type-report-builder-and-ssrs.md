@@ -15,17 +15,17 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b4e963dc1fbee3ca6c7d035a748fe49708b36a78
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Cambiar un tipo de gráfico (Generador de informes y SSRS)
 Cuando se inserta un gráfico en un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] por primera vez, aparece el cuadro de diálogo **Seleccionar tipo de gráfico** . Si cancela este cuadro de diálogo, se agrega un gráfico de columnas de forma predeterminada.  
   
- En cualquier momento durante el diseño del informe, puede cambiar el tipo de gráfico por otro más adecuado para el informe. Es importante seleccionar el tipo de gráfico adecuado para los datos; de esta selección depende la correcta interpretación de los mismos. Conviene que comprenda las características de cada tipo de gráfico para que pueda determinar cuál de ellos es el más indicado para los datos. Para obtener más información, vea [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
+ En cualquier momento durante el diseño del informe, puede cambiar el tipo de gráfico por otro más adecuado para el informe. Es importante seleccionar el tipo de gráfico adecuado para los datos; de esta selección depende la correcta interpretación de los mismos. Conviene que comprenda las características de cada tipo de gráfico para que pueda determinar cuál de ellos es el más indicado para los datos. Para más información, vea [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
   
  Si en el gráfico se muestran varias series, es posible que le interese cambiar el tipo de gráfico de una serie individual. Solo puede cambiar el tipo de gráfico de una serie individual si se trata de un gráfico de áreas, de columnas, de líneas o de dispersión. Con todos los demás tipos de gráficos, todas las series del gráfico se cambiarán al tipo de gráfico seleccionado.  
   
@@ -43,7 +43,7 @@ Cuando se inserta un gráfico en un informe paginado de [!INCLUDE[ssRSnoversion]
   
 ## <a name="see-also"></a>Vea también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [Medidores &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [Agregar un gráfico a un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   

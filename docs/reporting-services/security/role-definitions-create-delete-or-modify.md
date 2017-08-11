@@ -23,11 +23,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 42f66d05b179ee5f00c3322a2eb2943439936bcb
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="role-definitions---create-delete-or-modify"></a>Las definiciones de roles - crear, eliminar o modificar
@@ -81,9 +81,9 @@ ms.lasthandoff: 06/22/2017
          Seleccione las tareas que pueden realizar los miembros de este rol y haga clic en **Aceptar** para aplicar los cambios.  
   
 ## <a name="see-also"></a>Vea también  
- [Conectar con un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Crear y administrar asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Reporting Services en SQL Server Management Studio &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [Conectarse a un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Crear y administrar las asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [Reporting Services en SQL Server Management Studio &#40; SSRS &#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   
 

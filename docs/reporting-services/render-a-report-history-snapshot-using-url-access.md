@@ -21,11 +21,11 @@ caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 38237ef30d403dab78f8fedd00caa97ebdaf0b29
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="render-a-report-history-snapshot-using-url-access"></a>Representar instantáneas del historial de informes mediante acceso URL
@@ -41,7 +41,7 @@ http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Acceso URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
+ [Acceso URL &#40; SSRS &#41;](../reporting-services/url-access-ssrs.md)   
  [Referencia de parámetros de acceso URL](../reporting-services/url-access-parameter-reference.md)  
   
   

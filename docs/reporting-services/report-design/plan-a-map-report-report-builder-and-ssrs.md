@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 78f69746e290ea004d28edf8a0a90aeabfb9151d
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planear un informe de mapa (Generador de informes y SSRS)
@@ -156,9 +156,9 @@ Los buenos informes presentan información que motiva acciones o conocimientos. 
  Para utilizar los datos espaciales dinámicos, el origen de datos espaciales debe estar en el servidor de informes. Cuando los informes se diseñan en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], los orígenes de datos espaciales se pueden agregar a un proyecto y publicar en el servidor de informes junto con la definición de informe. Si usa el Generador de informes para diseñar informes, debe cargar primero los datos espaciales en el servidor de informes y, a continuación, en las propiedades de las capas o el asistente, especificar ese origen de datos espaciales para la capa de mapa.  
   
 ## <a name="see-also"></a>Vea también  
- [Personalizar los datos y la presentación de un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Tutorial: informe de asignaciones &#40;Generador de informes&#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
- [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Solucionar problemas de los informes: informes de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Personalizar los datos y la presentación de un mapa o una capa de mapa &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [Tutorial: Asignar informes &#40; El generador de informes &#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
+ [Mapas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Solucionar problemas de informes: Asignar informes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

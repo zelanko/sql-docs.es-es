@@ -28,15 +28,15 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8ba2dbc33b0d61b35fc7bee87b6171016af73279
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Aplicar formato a líneas, colores e imágenes (Generador de informes y SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le permite dar formato a las líneas, los colores, las regiones de datos, las imágenes y otros elementos de informe.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ofrece la posibilidad de dar formato a líneas, colores, las regiones de datos, imágenes y otros elementos de informe.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -61,9 +61,9 @@ ms.lasthandoff: 06/22/2017
  También puede agregar imágenes, como los logotipos, al fondo de su informe o a un rectángulo, cuadro de texto, tabla, matriz o algunas partes de un gráfico o a las secciones de página y al cuerpo de un informe. Para obtener más información, vea [Imágenes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Dar formato al texto en un cuadro de texto &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
- [Cuadro de diálogo Relleno &#40;Generador de informes y SSRS&#41;](http://msdn.microsoft.com/library/93a91d02-d558-4a0e-8d17-3fdf21e208d3)  
+ [Aplicar formato a texto y marcadores de posición &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Aplicar formato a números y fechas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Dar formato al texto en un cuadro de texto &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
+ [Cuadro de diálogo Relleno &#40; El generador de informes y SSRS &#41;](http://msdn.microsoft.com/library/93a91d02-d558-4a0e-8d17-3fdf21e208d3)  
   
   

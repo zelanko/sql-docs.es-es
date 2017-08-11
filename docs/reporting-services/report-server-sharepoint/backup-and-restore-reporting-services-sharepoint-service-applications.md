@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a4f320a1e806dce3411137abc74f2fe07bab7217
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Copias de seguridad y restauración de aplicaciones de servicio de SharePoint para Reporting Services
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="bkmk_Restrictions"></a> Limitaciones y restricciones  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y restaurar dicha copia mediante la funcionalidad de copia de seguridad y restauración de SharePoint. **Se requieren pasos adicionales** y los pasos se documentan en este tema. Actualmente, el proceso de copia de seguridad **no** realiza una copia de seguridad de las claves de cifrado ni de las credenciales para las cuentas de ejecución desatendidas (UEA) o con autenticación de Windows en la base de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]parcialmente posible copia de seguridad y restaurar aplicaciones de servicio con SharePoint de copia de seguridad y restaurar la funcionalidad. **Se requieren pasos adicionales** y los pasos se documentan en este tema. Actualmente, el proceso de copia de seguridad **no** realiza una copia de seguridad de las claves de cifrado ni de las credenciales para las cuentas de ejecución desatendidas (UEA) o con autenticación de Windows en la base de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ###  <a name="bkmk_recommendations"></a> Recomendaciones  
   

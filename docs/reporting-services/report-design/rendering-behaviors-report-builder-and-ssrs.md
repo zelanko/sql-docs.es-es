@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 518b74abc3238fcebee1e8b5356315e49f35db01
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Comportamientos de la representación (Generador de informes y SSRS)
@@ -133,8 +133,8 @@ ms.lasthandoff: 06/22/2017
 -   No se mantienen los saltos de página lógicos definidos en elementos en celdas de tablas o matriz. Esto no se aplica a los elementos en listas.  
   
 ## <a name="see-also"></a>Vea también  
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Representar en HTML &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
- [Representación y diseño de páginas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [Funcionalidad interactiva para diferentes informes representar extensiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Representación en HTML &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
+ [Diseño de página y representación &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

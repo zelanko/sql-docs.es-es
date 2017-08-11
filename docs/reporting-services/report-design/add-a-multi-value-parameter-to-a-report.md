@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0411de7999d497b3198e6864d185cb54a4a5e1f5
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Agregar un parámetro de varios valores a un informe
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  Haga clic con el botón derecho en el conjunto de datos del informe y, después, haga clic en **Propiedades del conjunto de datos**.  
   
-3.  Agregue una variable a la consulta del conjunto de datos; para ello, edite el texto de la consulta en el cuadro **Consulta** o agregue un filtro mediante el diseñador de consultas. Para obtener más información, vea [Crear una consulta en el Diseñador de consultas relacionales &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
+3.  Agregue una variable a la consulta del conjunto de datos; para ello, edite el texto de la consulta en el cuadro **Consulta** o agregue un filtro mediante el diseñador de consultas. Para más información, vea [Crear una consulta en el Diseñador de consultas relacionales &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
     ```  
     WHERE  
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
      La existencia de una lista de valores disponibles limita las opciones del usuario a únicamente los valores válidos para el parámetro. Cuando hay varios valores, en la parte superior de la lista aparece la característica **Seleccionar todo** , que permite al usuario seleccionar o desactivar todos los valores con un solo clic. Si elige obtener los valores disponibles para el parámetro de informe de una consulta de conjunto de datos, no olvide seleccionar un conjunto de datos que no contenga la variable de consulta asociada al mismo parámetro de informe.  
   
-     Para obtener más información, vea [Agregar, cambiar o eliminar los valores disponibles para un parámetro de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
+     Para obtener más información, vea [agregar, cambiar o eliminar valores disponibles para un parámetro de informe &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
 ## <a name="to-add-a-multi-value-parameter"></a>Para agregar un parámetro de varios valores  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  Haga clic con el botón derecho en el conjunto de datos del informe y, después, haga clic en **Propiedades del conjunto de datos**.  
   
-3.  Agregue una variable a la consulta del conjunto de datos; para ello, edite el texto de la consulta en el cuadro **Consulta** o agregue un filtro mediante el diseñador de consultas. Para obtener más información, vea [Crear una consulta en el Diseñador de consultas relacionales &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
+3.  Agregue una variable a la consulta del conjunto de datos; para ello, edite el texto de la consulta en el cuadro **Consulta** o agregue un filtro mediante el diseñador de consultas. Para más información, vea [Crear una consulta en el Diseñador de consultas relacionales &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
      ```  
     WHERE  
@@ -87,7 +87,7 @@ ms.lasthandoff: 06/22/2017
   
      La existencia de una lista de valores disponibles limita las opciones del usuario a únicamente los valores válidos para el parámetro. Cuando hay varios valores, en la parte superior de la lista aparece la característica **Seleccionar todo** , que permite al usuario seleccionar o desactivar todos los valores con un solo clic. Si elige obtener los valores disponibles para el parámetro de informe de una consulta de conjunto de datos, no olvide seleccionar un conjunto de datos que no contenga la variable de consulta asociada al mismo parámetro de informe.  
   
-     Para obtener más información, vea [Agregar, cambiar o eliminar los valores disponibles para un parámetro de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
+     Para obtener más información, vea [agregar, cambiar o eliminar valores disponibles para un parámetro de informe &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Agregar parámetros en cascada a un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   

@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.odbcconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], ODBC
 - ODBC connection manager
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a136e71727d1a0b729f7014448dd97d81a7af89d
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: f3e331efe9c6a297ef8d9dc342fb07c83ddafc03
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="odbc-connection-manager"></a>ODBC, administrador de conexiones
@@ -48,8 +50,25 @@ ms.lasthandoff: 08/03/2017
   
 -   [Referencia de la interfaz de usuario del administrador de conexiones ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)  
   
- Para obtener más información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
+ Para más información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
+## <a name="odbc-connection-manager-ui-reference"></a>Referencia de la interfaz de usuario del administrador de conexiones ODBC
+  Utilice el cuadro de diálogo **Configurar el administrador de conexiones ODBC** para agregar una conexión a un origen de datos ODBC.  
+  
+ Para obtener más información acerca del administrador de conexiones ODBC, vea [ODBC Connection Manager](../../integration-services/connection-manager/odbc-connection-manager.md).  
+  
+### <a name="options"></a>Opciones  
+ **Conexiones de datos**  
+ Seleccione un administrador de conexiones ODBC existente en la lista.  
+  
+ **Propiedades de conexión de datos**  
+ Muestra las propiedades y valores del administrador de conexiones ODBC seleccionado.  
+  
+ **Nuevo**  
+ Crea un administrador de conexiones ODBC mediante el cuadro de diálogo **Administrador de conexiones** . Este cuadro de diálogo también permite crear un nuevo origen de datos ODBC si es necesario.  
+  
+ **Delete**  
+ Seleccione una conexión y elimínela con el botón **Eliminar** .  
 ## <a name="see-also"></a>Vea también  
  [Conexiones de Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

@@ -15,11 +15,11 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 29df783121de48e39d824b9b9e9666d764717ebc
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>Implementación y compatibilidad de versiones en las herramientas de datos de SQL Server (SSRS)
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 -   OutputPath es una propiedad de generación que identifica la ruta de acceso de las carpetas donde almacenar la definición de informe que se usa en la comprobación de la generación, la implementación y la vista previa de informes.  
   
--   ErrorLevel es una propiedad de generación que identifica la severidad de los problemas de la generación que se notifican como errores. Los problemas con un nivel de gravedad menor o igual que el valor de ErrorLevel se notifican como errores; de lo contrario, se notifican como advertencias. Para obtener más información, vea la sección "Validación de informes y niveles de Error" de [Diseñar informes con el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
+-   ErrorLevel es una propiedad de generación que identifica la severidad de los problemas de la generación que se notifican como errores. Los problemas con un nivel de gravedad menor o igual que el valor de ErrorLevel se notifican como errores; de lo contrario, se notifican como advertencias. Para obtener más información, vea la sección "Validación de informes y niveles de Error" en [diseñar informes con el Diseñador de informes &#40; SSRS &#41; ](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 -   TargetServerVersion es una propiedad de implementación que identifica la versión esperada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que está instalada en el servidor de informes de destino especificado en la propiedad TargetServerURL.  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="bkmk_SupportedVersions"></a> Versiones admitidas  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el entorno de desarrollo de 32 bits para proyectos de servidor de informes, no está diseñado para ejecutarse en equipos basados en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]y no se instala en servidores basados en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. En cambio, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] sí es compatible con los equipos basados en x64.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el entorno de desarrollo de 32 bits para proyectos de servidor de informes, no está diseñado para ejecutarse en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-equipos con y no está instalado en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-servidores basados en. En cambio, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] sí es compatible con los equipos basados en x64.  
   
  En la tabla siguiente se describen las versiones compatibles para crear y publicar los informes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   

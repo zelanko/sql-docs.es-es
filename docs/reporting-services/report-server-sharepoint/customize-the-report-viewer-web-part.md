@@ -19,11 +19,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e5941044afa950ba41e23ce1c3507a51e6121556
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizar el elemento web Visor de informes
@@ -97,7 +97,7 @@ ms.lasthandoff: 06/22/2017
  En el área de parámetros, se proporcionan campos para especificar valores antes de ejecutar el informe. Solo se usa cuando la definición de un informe incluye parámetros. Cuando aparecen el área de parámetros o la de credenciales, la vista del informe se ajusta para usar el ancho restante del elemento web. Puede establecer las propiedades del elemento web para personalizar el ancho de Parámetros. También puede definir las etiquetas que aparecen junto a cada parámetro de la página. Para más información sobre cómo modificar etiquetas de parámetros, vea [Establecer parámetros en un informe publicado &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Elemento web Visor de informes en un sitio de SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Agregar el elemento web Visor de informes a una página web &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
+ [Elemento de Web del Visor de informes en un sitio de SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Agregar el elemento Web de Visor de informes a una página Web &#40; Reporting Services en SharePoint integrado modo &#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   

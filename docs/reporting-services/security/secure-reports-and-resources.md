@@ -21,11 +21,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 66e32b412558ec3c06fcbfcb3b4dbd1b7b2e06e0
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="secure-reports-and-resources"></a>Proteger informes y recursos
@@ -79,10 +79,10 @@ ms.lasthandoff: 06/22/2017
  Los informes que contienen información confidencial deberían protegerse en el nivel de acceso a datos requiriendo que los usuarios proporcionen credenciales para tener acceso a datos confidenciales. Para más información, consulte [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). También puede proteger una carpeta para que no resulte accesible a usuarios no autorizados. Para obtener más información, vea [Proteger carpetas](../../reporting-services/security/secure-folders.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Crear y administrar asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Configurar el acceso al Generador de informes](../../reporting-services/report-server/configure-report-builder-access.md)   
- [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Proteger elementos de orígenes de datos compartidos](../../reporting-services/security/secure-shared-data-source-items.md)   
- [Almacenamiento de las credenciales en un origen de datos de Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Crear y administrar las asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [Configurar el acceso del generador de informes](../../reporting-services/report-server/configure-report-builder-access.md)   
+ [Conceder permisos en un servidor de informes de modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Proteger elementos de origen de datos compartidos](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [Almacenar credenciales en un origen de datos de Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

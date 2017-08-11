@@ -18,11 +18,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aa3e4553ddeb529ec8565a5599b2ce861f91bc38
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Ocultar un elemento (Generador de informes y SSRS)
@@ -54,7 +54,7 @@ ms.lasthandoff: 06/22/2017
   
         > [!NOTE]  
         >  Al especificar una expresión para la visibilidad, está estableciendo la propiedad Hidden del elemento de informe, tal como se muestra en la siguiente imagen. La expresión evaluada muestra el elemento de informe cuando el valor es False, y lo oculta cuando el valor es True.   
-        > ![Cuadro de diálogo Properties_Visibility y propiedad Hidden](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Properties_Visibility dialog and Hidden property")  
+        > ![Cuadro de diálogo Properties_Visibility y se oculta la propiedad](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "cuadro de diálogo Properties_Visibility y se oculta la propiedad")  
   
 4.  Haga clic en **Aceptar** dos veces.  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Acción de obtención de detalles &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Agregar una acción de expandir y contraer a un elemento &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Agregar acción de contraer o expandir a un elemento &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
+ [Ejemplos de expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

@@ -21,18 +21,18 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 162f43fc4f81c228d90839c75d1959d71eff9322
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="secure-my-reports"></a>Proteger Mis informes
   La característica Mis informes proporciona un área de trabajo administrada por el usuario para trabajar con informes. A fin de cumplir su propósito, la carpeta Mis informes precisa permisos menos restrictivos que otras carpetas disponibles para uso general. Los usuarios que solo tienen permisos para ver y ejecutar informes en otras carpetas pueden necesitar un conjunto expandido de permisos para administrar sus carpetas Mis informes y el contenido que poseen. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona una asignación de roles especializada y una definición de roles para este fin.  
   
 > [!NOTE]  
->  Mis informes solo está disponible en el Administrador de informes. No se encuentra disponible en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+>  Mis informes solo está disponible en el Administrador de informes. No está disponible en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="role-assignment-for-my-reports"></a>Asignación de roles para Mis informes  
  La asignación de roles para Mis informes tiene elementos predefinidos y se crea automáticamente para cada usuario que active una carpeta Mis informes. El hecho de que el servidor de informes asigne seguridad automáticamente resulta especialmente útil para las organizaciones que usen Mis informes ampliamente, ya que los administradores no tienen que habilitar el acceso para cada usuario de Mis informes.  
@@ -60,8 +60,8 @@ ms.lasthandoff: 06/22/2017
  Cuando deshabilite Mis informes, el vínculo a una carpeta Mis informes se quita del Administrador de informes. La estructura de carpetas subyacente que se utiliza para Mis informes (es decir, la carpeta Carpetas de usuarios y sus subcarpetas) todavía está disponible y accesible si el usuario conoce la ruta de la carpeta. La eliminación de tareas del rol **Mis informes** garantiza que se impida el acceso.  
   
 ## <a name="see-also"></a>Vea también  
- [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md)   
- [Proteger carpetas](../../reporting-services/security/secure-folders.md)   
- [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Proteger los informes y recursos](../../reporting-services/security/secure-reports-and-resources.md)   
+ [Carpetas protegidas](../../reporting-services/security/secure-folders.md)   
+ [Conceder permisos en un servidor de informes de modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

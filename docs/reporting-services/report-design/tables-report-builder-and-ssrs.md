@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 03787380e498b82c160583cf1e8391bf643edf7c
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tablas (Generador de informes y SSRS)
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
  ![Vista previa de tabla con encabezados de columna en negrita](../../reporting-services/media/rs-basictabledetailsformattedpreview.png "vista previa de tabla con encabezados de columna en negrita")  
   
- La tabla inicial es una plantilla basada en la región de datos Tablix. Puede mejorar el diseño de la tabla agregando características que son admitidas por la región de datos Tablix subyacente. Para más información, vea [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md). También puede seguir desarrollando la tabla agregando grupos de filas y grupos de columnas, así como agregando o quitando grupos de detalles. Para más información, vea [Explorar la flexibilidad de una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
+ La tabla inicial es una plantilla basada en la región de datos Tablix. Puede mejorar el diseño de la tabla agregando características que son admitidas por la región de datos Tablix subyacente. Para más información, vea [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md). También puede seguir desarrollando la tabla agregando grupos de filas y grupos de columnas, así como agregando o quitando grupos de detalles. Para obtener más información, vea [Explorar la flexibilidad de una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
 ### <a name="adding-totals-for-detail-data"></a>Agregar totales para datos detallados  
  Para agregar totales, seleccione celdas con datos numéricos y, a continuación, use el menú contextual para agregar automáticamente etiquetas y totales para los datos detallados de los campos numéricos. También puede especificar otras etiquetas y totales manualmente. En la ilustración siguiente se muestra una fila de totales típica que incluye totales especificados de forma automática y manual:  
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/22/2017
  Para obtener más información, vea [Agregar un total a un grupo o a una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).  
   
 ##  <a name="AddingRowGroups"></a> Agregar grupos de filas a una tabla  
- De la misma forma que puede arrastrar un campo desde el panel Datos de informe hasta una celda para mostrar los datos detallados, puede arrastrar un campo hasta el panel Agrupación para agregar un grupo. Para una tabla, arrastre el campo hasta el panel Grupos de filas. Después de agregar un grupo, la tabla agrega automáticamente celdas en nuevas columnas del área de grupo de filas en la que se van a mostrar los valores de grupo. Para más información, vea [Describir las áreas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ De la misma forma que puede arrastrar un campo desde el panel Datos de informe hasta una celda para mostrar los datos detallados, puede arrastrar un campo hasta el panel Agrupación para agregar un grupo. Para una tabla, arrastre el campo hasta el panel Grupos de filas. Después de agregar un grupo, la tabla agrega automáticamente celdas en nuevas columnas del área de grupo de filas en la que se van a mostrar los valores de grupo. Para obtener más información acerca de las áreas, consulte [áreas Tablix de la región de datos &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  En la ilustración siguiente se muestra una tabla con dos grupos de filas anidados en la vista Diseño. Los grupos de filas se crearon arrastrando el campo Order y el campo Date al panel Grupos de filas, e insertando cada grupo como un grupo primario de los grupos existentes. En la ilustración se muestra un grupo primario basado en la fecha y un grupo secundario basado en el número de pedido, así como el grupo de detalles que se definió de forma predeterminada.  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 06/22/2017
   
  ![Tabla agrupada por fecha y, a continuación, ordenar](../../reporting-services/media/rs-basictablegroupspreview.png "tabla agrupada por fecha y, a continuación, ordenar")  
   
- Una manera alternativa de mostrar los datos agrupados es aplicar sangría a la jerarquía de grupos para mostrar la relación anidada de los grupos en lugar de presentar cada valor en su propia columna. Este estilo de formato se denomina informe escalonado. Para más información sobre cómo dar formato a información del grupo como un informe escalonado, vea [Crear un informe escalonado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md).  
+ Una manera alternativa de mostrar los datos agrupados es aplicar sangría a la jerarquía de grupos para mostrar la relación anidada de los grupos en lugar de presentar cada valor en su propia columna. Este estilo de formato se denomina informe escalonado. Para obtener más información acerca de cómo dar formato a un informe escalonado información de grupo, consulte [crear un informe escalonadas &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md).  
   
 ### <a name="adding-totals-to-row-groups"></a>Agregar totales a grupos de filas  
  Para mostrar totales para un grupo, puede usar el comando **Agregar total** contextual. Para un grupo de filas, el comando Agregar total agrega una fila fuera del grupo para que solo se repita una vez respecto al grupo. Para los grupos anidados, la fila de totales para el grupo secundario está fuera de éste, pero dentro del grupo primario. En ese caso, resulta útil establecer el color de fondo de la fila de totales para el grupo secundario con objeto de distinguirla de las filas de detalles. También puede usar un color de fondo diferente para distinguir las filas de encabezado y pie de tabla. En la ilustración siguiente se muestra la tabla con una fila de totales agregada para el grupo basado en números de pedido.  
@@ -120,8 +120,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Ejemplos de expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Tablas, Matrices y listas de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

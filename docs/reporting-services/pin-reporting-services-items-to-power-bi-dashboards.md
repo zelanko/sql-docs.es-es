@@ -21,11 +21,11 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ce952f1d25529948bbcc3dbae5f1707af9683b11
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Anclado de elementos de Reporting Services en panales de Power BI

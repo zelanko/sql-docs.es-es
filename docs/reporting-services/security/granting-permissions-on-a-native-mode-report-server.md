@@ -27,18 +27,18 @@ caps.latest.revision: 60
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e587f50e041d42bb09d99fa03d4146216883fce6
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Conceder permisos en un servidor de informes en modo nativo
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa la autorización basada en roles y un subsistema de autenticación para determinar quién puede realizar operaciones y tener acceso a los elementos de un servidor de informes. La autorización basada en roles divide en roles el conjunto de acciones que puede realizar un usuario o un grupo. La autenticación se basa en la autenticación de Windows integrada o en un módulo de autenticación personalizado proporcionado por el usuario. Puede usar los roles predefinidos o los personalizados con cualquier tipo de autenticación.  
   
 ## <a name="using-roles-to-grant-report-server-access"></a>Usar roles para conceder acceso al servidor de informes  
- Todos los usuarios interactúan con un servidor de informes dentro del contexto de un rol que define un nivel de acceso concreto. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye roles predefinidos que se pueden asignar a usuarios y a grupos para proporcionar acceso inmediato a un servidor de informes. **Administrador de contenido**, **Publicador**y **Explorador** son ejemplos de roles predefinidos. Cada rol define una recopilación de tareas relacionadas. Por ejemplo, un **publicador** tiene permiso para agregar informes y crear carpetas para almacenar esos informes.  
+ Todos los usuarios interactúan con un servidor de informes dentro del contexto de un rol que define un nivel de acceso concreto. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]incluye roles predefinidos que pueden asignar a usuarios y grupos para proporcionar acceso inmediato a un servidor de informes. **Administrador de contenido**, **Publicador**y **Explorador** son ejemplos de roles predefinidos. Cada rol define una recopilación de tareas relacionadas. Por ejemplo, un **publicador** tiene permiso para agregar informes y crear carpetas para almacenar esos informes.  
   
  Las asignaciones de roles normalmente se heredan de un nodo primario, pero se puede anular la herencia de permisos creando una nueva asignación de roles para un elemento determinado. Un usuario que sea miembro del rol **Administrador de contenido** de un informe puede pertenecer al rol **Explorador** de otro informe.  
   
@@ -72,15 +72,15 @@ ms.lasthandoff: 06/22/2017
   
 |Herramienta|Tareas|  
 |----------|-----------|  
-|Management Studio: se usa para ver, modificar, crear y eliminar definiciones de roles.|[Crear, eliminar o modificar un rol &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
-|Administrador de informes: se usa para asignar usuarios y grupos a los roles.|[Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [Modificar o eliminar una asignación de roles &#40;Administrador de informes&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
+|Management Studio: se usa para ver, modificar, crear y eliminar definiciones de roles.|[Crear, eliminar o modificar un rol &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
+|Administrador de informes: se usa para asignar usuarios y grupos a los roles.|[Conceder acceso de usuario a un servidor de informes &#40; El Administrador de informes &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [Modificar o eliminar una asignación de roles &#40; El Administrador de informes &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Roles predefinidos](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Conceder permisos sobre elementos de servidor de informes en un sitio de SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Autenticación con el servidor de informes](../../reporting-services/security/authentication-with-the-report-server.md)   
- [Crear y administrar asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [Crear y administrar las asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [Seguridad y protección de Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)   
- [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Administración de contenido de servidor de informes &#40; Modo nativo de SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

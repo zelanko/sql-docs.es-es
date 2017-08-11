@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 84ee7a9030bb27725994a33860b26b8754034cd9
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Gráficos de formas (Generador de informes y SSRS)
@@ -46,9 +46,9 @@ ms.lasthandoff: 06/22/2017
   
 -   Los gráficos de formas son muy efectivos para mostrar porcentajes proporcionales ordenados. Sin embargo, para mantener la coherencia, el gráfico no ordena los valores del conjunto de datos de forma predeterminada. Piense en la posibilidad de ordenar los valores de mayor a menor para representar con mayor precisión los datos con forma de embudo o de pirámide. Para más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
--   Los valores Null, los valores vacíos y los valores negativos no tienen ningún efecto a la hora de calcular las proporciones. Por esta razón, estos valores no se muestran en un gráfico de formas. Si desea indicar visualmente estos tipos de valores en el gráfico, cambie el gráfico de formas por otro tipo de gráfico. Para más información sobre cómo agregar puntos vacíos a un gráfico que no sea una forma, vea [Agregar puntos vacíos al gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
+-   Los valores Null, los valores vacíos y los valores negativos no tienen ningún efecto a la hora de calcular las proporciones. Por esta razón, estos valores no se muestran en un gráfico de formas. Si desea indicar visualmente estos tipos de valores en el gráfico, cambie el gráfico de formas por otro tipo de gráfico. Para obtener más información acerca de cómo agregar puntos vacíos a un gráfico de forma distinta, vea [puntos vacíos de agregar a un gráfico de &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
--   Si va a definir sus propios colores en un gráfico de formas con una paleta personalizada, asegúrese de que dispone de colores suficientes para resaltar cada punto de datos con su propio color. Para más información, vea [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
+-   Si va a definir sus propios colores en un gráfico de formas con una paleta personalizada, asegúrese de que dispone de colores suficientes para resaltar cada punto de datos con su propio color. Para obtener más información, vea [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
 -   A diferencia de todos los demás tipos de gráficos, un gráfico de formas muestra los puntos de datos, y no las series individuales, en su leyenda.  
   
@@ -56,12 +56,12 @@ ms.lasthandoff: 06/22/2017
   
 -   Los tipos de gráficos de formas no se pueden combinar con ningún otro tipo de gráfico en la misma área de gráfico. Si tiene que mostrar comparaciones entre los datos mostrados en un gráfico de formas y los datos mostrados en otro tipo de gráfico, necesitará agregar una segunda área de gráfico.  
   
--   Puede aplicar estilos de dibujo adicionales a los gráficos circulares y de anillos para aumentar su impacto visual. Para más información, vea [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
+-   Puede aplicar estilos de dibujo adicionales a los gráficos circulares y de anillos para aumentar su impacto visual. Vea [formato colores de serie de un gráfico de &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md) para obtener más información.  
   
 ## <a name="see-also"></a>Vea también  
- [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Puntos de datos vacíos y nulos en los gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Gráficos circulares &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
+ [Gráficos &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Aplicar formato a un gráfico de &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Puntos de datos en los gráficos de &#40; vacíos y nulos El generador de informes y SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Los gráficos circulares &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
   
   

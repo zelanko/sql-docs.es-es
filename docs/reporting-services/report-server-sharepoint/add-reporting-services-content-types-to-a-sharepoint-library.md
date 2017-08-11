@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2ecb38b65092e15139b0a7c969903105c88a88aa
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Agregue los tipos de contenido de Reporting Services a la biblioteca de SharePoint.
@@ -171,6 +171,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
- [Iniciar el Generador de informes](../../reporting-services/report-builder/start-report-builder.md)  
+ [Inicio del Generador de informes](../../reporting-services/report-builder/start-report-builder.md)  
   
   

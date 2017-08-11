@@ -22,11 +22,11 @@ caps.latest.revision: 48
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8a101dd362ea9ec71a0d4e75347bea60171cd8d1
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-and-snapshot-size-limits"></a>Límites de tamaño de informes e instantáneas
@@ -86,7 +86,7 @@ EXEC sp_spaceused
   
 ## <a name="see-also"></a>Vea también  
  [Establecer las propiedades del procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Base de datos del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
- [Procesar informes grandes](../../reporting-services/report-server/process-large-reports.md)  
+ [Base de datos de servidor de informes &#40; Modo nativo de SSRS &#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+ [Procesamiento de informes grandes](../../reporting-services/report-server/process-large-reports.md)  
   
   

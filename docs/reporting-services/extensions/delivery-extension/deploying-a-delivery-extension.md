@@ -21,11 +21,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d072577828375a08c133bb1a68d93e652e5cf168
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="deploying-a-delivery-extension"></a>Implementar una extensión de entrega
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
  En la tabla siguiente se describe los atributos para el **extensión** (elemento) para las extensiones de entrega.  
   
-|Attribute|Description|  
+|Atributo|Description|  
 |---------------|-----------------|  
 |**Nombre**|Un nombre único para la extensión (por ejemplo, "Correo electrónico del servidor de informes", para la extensión de entrega por correo electrónico, o "Recurso compartido de archivos del servidor de informes", para la extensión de entrega en recursos compartidos de archivos). La longitud máxima para el atributo **Name** es de 255 caracteres. El nombre debe ser único entre todas las entradas en el elemento **Extension** del archivo de configuración. Si hay un nombre duplicado, el servidor de informes devuelve un error.|  
 |**Tipo**|Lista separada por comas que incluye el espacio de nombres completo junto con el nombre del ensamblado.|  

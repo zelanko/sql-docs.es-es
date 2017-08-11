@@ -21,11 +21,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a0738c8ac950a86ef877c26fd8b6a0f6a6b075f2
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Referencia de errores y eventos (Reporting Services)
@@ -53,14 +53,14 @@ ms.lasthandoff: 06/22/2017
 |117|Error|Inicio y cierre|Servidor de informes|La base de datos del servidor de informes tiene una versión no válida.|  
 |118|Advertencia|Registro|Servidor de informes<br /><br /> Administrador de informes|El registro de seguimiento no se encuentra en la ubicación esperada del directorio; se creará un nuevo registro de seguimiento en el directorio predeterminado. Para obtener más información, consulte [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |119|Error|Activación|Servidor de informes<br /><br /> Procesador de entrega y programación|*\<Origen >* no tiene acceso al contenido de la base de datos del servidor de informes.|  
-|120|Error|Activación|Servidor de informes|No se puede descifrar la clave simétrica. Probablemente se haya producido un cambio en la cuenta con la que se ejecuta el servicio. Para más información, vea [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|120|Error|Activación|Servidor de informes|No se puede descifrar la clave simétrica. Probablemente se haya producido un cambio en la cuenta con la que se ejecuta el servicio. Para obtener más información, vea [configurar y administrar claves de cifrado &#40; Administrador de configuración de SSRS &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |121|Error|Inicio y cierre|Servidor de informes|No se pudo iniciar el servicio de llamada a procedimiento remoto (RPC).|  
 |122|Advertencia|Entrega|Procesador de entrega y programación|El Procesador de entrega y programación no se puede conectar al servidor SMTP que se utiliza para la entrega por correo electrónico. Para más información sobre las conexiones del servidor SMTP, vea [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).|  
 |123|Advertencia|Registro|Servidor de informes<br /><br /> Administrador de informes|El servidor de informes no pudo escribir en el registro de seguimiento. Para más información sobre los registros de seguimiento, vea [Registro de seguimiento del servicio del servidor de informes](../../reporting-services/report-server/report-server-service-trace-log.md).|  
-|124|Información|Activación|Servidor de informes|Se ha inicializado el servicio Servidor de informes. Para más información, vea [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).|  
-|125|Información|Activación|Servidor de informes|Se extrajo correctamente la clave utilizada para cifrar datos. Para más información sobre las claves, vea [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
-|126|Información|Activación|Servidor de informes|Se aplicó correctamente la clave utilizada para cifrar datos. Para más información sobre las claves, vea [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
-|127|Información|Activación|Servidor de informes|Se quitó correctamente el contenido cifrado de la base de datos del servidor de informes. Para más información sobre cómo eliminar datos cifrados no recuperables, vea [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|124|Información|Activación|Servidor de informes|Se ha inicializado el servicio Servidor de informes. Para obtener más información, vea [inicializar un servidor de informes &#40; Administrador de configuración de SSRS &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).|  
+|125|Información|Activación|Servidor de informes|Se extrajo correctamente la clave utilizada para cifrar datos. Para obtener más información acerca de las claves, consulte [configurar y administrar claves de cifrado &#40; Administrador de configuración de SSRS &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|126|Información|Activación|Servidor de informes|Se aplicó correctamente la clave utilizada para cifrar datos. Para obtener más información acerca de las claves, consulte [configurar y administrar claves de cifrado &#40; Administrador de configuración de SSRS &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|127|Información|Activación|Servidor de informes|Se quitó correctamente el contenido cifrado de la base de datos del servidor de informes. Para obtener más información acerca de cómo eliminar los datos cifrados no recuperables, vea [configurar y administrar claves de cifrado &#40; Administrador de configuración de SSRS &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |128|Error|Activación|Servidor de informes|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de diferentes ediciones no se pueden usar en conjunto.|  
 |129|Error|Administración|Servidor de informes<br /><br /> Procesador de entrega y programación|Un valor de archivo de configuración cifrado no se puede descifrar.|  
 |130|Error|Administración|Servidor de informes<br /><br /> Procesador de entrega y programación|*\<Origen >* no se puede encontrar el archivo de configuración. El servidor de informes requiere archivos de configuración.|  

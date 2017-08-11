@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 821c2e768a14af3004971ca8f7b8d8ab76e2c762
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Colecciones integradas - funciones globales integradas y referencias a los usuarios (generador de informes)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>Usar la colección Globals  
- La colección **Globals** contiene las variables globales del informe. En la superficie de diseño, estas variables aparecen con el prefijo & (y comercial); por ejemplo, `[&ReportName]`. En la siguiente tabla, se describen los miembros de la colección **Globals** .  
+ La colección **Globals** contiene las variables globales del informe. En la superficie de diseño, estas variables aparecen con el prefijadas una & (y comercial), por ejemplo, `[&ReportName]`. En la siguiente tabla, se describen los miembros de la colección **Globals** .  
   
 |**Miembro**|**Tipo**|**Description**|  
 |----------------|--------------|---------------------|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 06/22/2017
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>Usar la colección User  
- La colección **User** contiene datos acerca del usuario que ejecuta el informe. Puede usar esta colección para filtrar los datos que aparecen en un informe; por ejemplo, para mostrar solo los datos del usuario actual o para mostrar el identificador de usuario (UserID) en el título de un informe. En la superficie de diseño, estas variables aparecen con el prefijo & (y comercial); por ejemplo, `[&UserID]`.  
+ La colección **User** contiene datos acerca del usuario que ejecuta el informe. Puede usar esta colección para filtrar los datos que aparecen en un informe; por ejemplo, para mostrar solo los datos del usuario actual o para mostrar el identificador de usuario (UserID) en el título de un informe. En la superficie de diseño, estas variables aparecen con el prefijadas una & (y comercial), por ejemplo, `[&UserID]`.  
   
  En la siguiente tabla, se describen los miembros de la colección **User** .  
   
@@ -95,9 +95,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Vea también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Expresión &#40;cuadro de diálogo del Generador de informes&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
- [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Cuadro de diálogo Expresión &#40; El generador de informes &#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
+ [Tipos de datos en expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [Aplicar formato a números y fechas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Ejemplos de expresiones &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

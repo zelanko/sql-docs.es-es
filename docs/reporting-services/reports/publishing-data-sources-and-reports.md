@@ -19,11 +19,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 593f339656de155d133534e6776283c8a2e1bd92
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="publishing-data-sources-and-reports"></a>Publicar orígenes de datos e informes
@@ -34,22 +34,22 @@ ms.lasthandoff: 06/22/2017
  Si usó un origen de datos compartido para crear el informe, debe publicarlo en la misma ubicación que el informe. Al igual que los informes, los orígenes de datos compartidos se pueden administrar de forma independiente en el servidor de informes.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Obtener la vista previa de informes](../../reporting-services/reports/previewing-reports.md)  
+ [Vistas previas de informes](../../reporting-services/reports/previewing-reports.md)  
  Describe cómo obtener una vista previa de un informe antes de publicarlo.  
   
  [Publicar informes en un servidor de informes](../../reporting-services/reports/publishing-reports-to-a-report-server.md)  
  Describe cómo publicar un informe en un servidor de informes.  
   
- [Ejemplos de dirección URL para los elementos de informe publicados en un servidor de informes en modo de SharePoint &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
+ [Ejemplos de direcciones URL para los elementos de informe publicado en un servidor de informes en modo de SharePoint &#40; SSRS &#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
  Describe cómo publicar un informe en un sitio de SharePoint.  
   
 ## <a name="see-also"></a>Vea también  
  [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Representación y diseño de páginas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
+ [Diseño de página y representación &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Exportar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Imprimir informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  
+ [Buscar, ver y administrar informes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Imprimir informes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  
   
   

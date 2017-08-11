@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a94db96fd785ebaa1ed511f5bf9c6e262d180104
 ms.contentlocale: es-es
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  Si no conoce la dirección web de un informe, puede abrir la dirección web del servidor de informes y, a continuación, examinar la jerarquía de carpetas del servidor de informes para seleccionar el informe desea ver. El siguiente diagrama muestra una jerarquía de carpetas tal como aparecería en una ventana de explorador.  
   
- ![Carpetas en un explorador](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Folders in a browser")  
+ ![Las carpetas en un explorador](../../reporting-services/report-builder/media/rs-browserfolder.GIF "carpetas en un explorador")  
 Carpetas en un explorador  
   
 > [!NOTE]  

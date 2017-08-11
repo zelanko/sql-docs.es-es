@@ -22,7 +22,7 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c41f22af9e492ed8bf1be8ba159ce84e8cfbc7db
 ms.contentlocale: es-es
@@ -36,8 +36,8 @@ ms.lasthandoff: 08/09/2017
   
 |||  
 |-|-|  
-|[Propiedad EditionID &#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|Devuelve la edición del servidor de informes.|  
-|[Propiedad EditionName &#40;MSReportServer_Instance de WMI&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|Devuelve el nombre legible de la edición del servidor de informes.|  
+|[Propiedad EditionID &#40; MSReportServer_Instance de WMI &#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|Devuelve la edición del servidor de informes.|  
+|[Propiedad EditionName &#40; MSReportServer_Instance de WMI &#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|Devuelve el nombre legible de la edición del servidor de informes.|  
 |[InstanceID](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instanceid.md)|Este objeto admite la infraestructura de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y no está diseñado para ser utilizado directamente desde el código.|  
 |[InstanceName](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instancename.md)|Devuelve el nombre de una instancia del servidor de informes en un equipo específico. Solo lectura.|  
 |[IsSharePointIntegrated](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-issharepointintegrated.md)|Indica si el servidor de informes se ha configurado para el modo integrado de SharePoint.|  

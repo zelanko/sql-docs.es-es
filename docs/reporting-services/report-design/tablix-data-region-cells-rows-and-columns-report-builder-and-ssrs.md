@@ -20,7 +20,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 79c838b6bc98b64ac57b83e193b25d861e905e38
 ms.contentlocale: es-es
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Celdas, filas y columnas de la región de datos Tablix (Generador de informes y SSRS)
-  Para controlar el modo en que las filas y columnas de una región de datos Tablix muestran los datos en un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , debe entender cómo especificar las filas y columnas para los datos de detalle, los datos de grupo, las etiquetas y los totales. En muchos casos, puede usar las estructuras predeterminadas de una tabla, matriz o lista para mostrar los datos. Para obtener más información, vea [Tablas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [Matrices](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) y [Listas](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+  Para controlar el modo en que las filas y columnas de una región de datos Tablix muestran los datos en un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , debe entender cómo especificar las filas y columnas para los datos de detalle, los datos de grupo, las etiquetas y los totales. En muchos casos, puede usar las estructuras predeterminadas de una tabla, matriz o lista para mostrar los datos. Para obtener más información, vea [tablas &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [Matrices](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md), o [muestra](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md) .  
   
  Una región de datos Tablix muestra los datos detallados en filas y columnas de detalles, y los datos agrupados en filas y columnas de grupo. Al agregar grupos de filas y de columnas a una región de datos Tablix, las filas y las columnas en las que van a mostrarse los datos se agregan automáticamente. Puede agregar y quitar manualmente filas y columnas para personalizar una región de datos Tablix y controlar cómo se muestran los datos en el informe.  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 08/09/2017
   
  En el caso de los grupos de detalles, cada fila de detalles está dentro del grupo de detalles. La fila se repite para cada valor del conjunto de resultados de la consulta del conjunto de datos.  
   
- Para obtener más información sobre las jerarquías de grupos, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
+ Para obtener más información acerca de las jerarquías de grupo, consulte [descripción de los grupos &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
  La ilustración siguiente muestra una región de datos Tablix con grupos de filas anidados y un grupo de detalles.  
   
@@ -99,10 +99,10 @@ ms.lasthandoff: 08/09/2017
   
  Para quitar filas y columnas asociadas a un grupo, puede eliminar éste. Al eliminar un grupo, puede elegir entre eliminar únicamente la definición de grupo o eliminar el grupo y todas sus filas y columnas asociadas. Si se elimina únicamente el grupo, se conservará el diseño de fila y de columna en la región de datos. Si se elimina el grupo y sus filas y columnas relacionadas, se eliminarán todas las filas y columnas estáticas (incluyendo los encabezados y pies de grupo), así como las filas y columnas dinámicas (incluyendo las instancias de grupo), que están asociadas a ese grupo.  
   
- Para obtener instrucciones paso a paso sobre la forma de agregar o eliminar filas y columnas, vea [Insertar o eliminar una fila &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md) e [Insertar o eliminar una columna &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
+ Para obtener instrucciones paso a paso sobre cómo agregar o eliminar filas y columnas, vea [insertar o eliminar una fila &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md) y [insertar o eliminar una columna de &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
 ## <a name="understanding-tablix-cells"></a>Descripción de las celdas de Tablix  
- Las celdas de Tablix pertenecen a una de las cuatro áreas del Tablix: el cuerpo del Tablix, las áreas de grupos de filas y grupos de columnas del Tablix, y la esquina del Tablix. Aunque cada celda puede mostrar cualquier valor del conjunto de datos, la función predeterminada para cada celda viene determinada por su ubicación. Para obtener información detallada sobre las áreas de Tablix, vea [Describir las áreas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ Las celdas de Tablix pertenecen a una de las cuatro áreas del Tablix: el cuerpo del Tablix, las áreas de grupos de filas y grupos de columnas del Tablix, y la esquina del Tablix. Aunque cada celda puede mostrar cualquier valor del conjunto de datos, la función predeterminada para cada celda viene determinada por su ubicación. Para obtener información detallada acerca de las áreas de tablix, vea [áreas Tablix de la región de datos &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  De forma predeterminada, las celdas de las áreas de grupos de filas y de columnas de Tablix representan miembros de grupo. Los miembros de grupo se organizan en varias estructuras de árbol en la definición de informe. La jerarquía de grupos de filas se expande horizontalmente. La jerarquía de grupos de columnas se expande verticalmente. Estas celdas se agregan automáticamente al crear un grupo y muestran los valores únicos para un grupo en tiempo de ejecución.  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 08/09/2017
  Las celdas del área del cuerpo del Tablix pueden mostrar datos detallados cuando la celda está en una fila o columna de detalles, y datos de grupo agregados cuando la celda está en una fila o columna de grupo. El ámbito para los datos de una celda es la intersección del grupo de filas y el grupo de columnas más interiores a los que pertenece la celda.  
   
 > [!NOTE]  
->  Los datos reales que se muestran para cada celda son la expresión evaluada para el elemento de informe incluido en la celda, que generalmente es un cuadro de texto. En una celda que pertenece a una fila o columna de detalles, la expresión tiene como valor predeterminado los datos detallados (por ejemplo, **[LineTotal]**). En una celda que no pertenece a una fila o columna de detalles, la expresión tiene como valor predeterminado una función de agregado (por ejemplo, **Sum[LineTotal]**). Si una expresión no especifica una función de agregado aunque la celda pertenezca a una fila o columna de grupo, se muestra el primer valor del grupo. Para obtener más información sobre los agregados, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+>  Los datos reales que se muestran para cada celda son la expresión evaluada para el elemento de informe incluido en la celda, que generalmente es un cuadro de texto. En una celda que pertenece a una fila o columna de detalles, la expresión tiene como valor predeterminado los datos detallados (por ejemplo, **[LineTotal]**). En una celda que no pertenece a una fila o columna de detalles, la expresión tiene como valor predeterminado una función de agregado (por ejemplo, **Sum[LineTotal]**). Si una expresión no especifica una función de agregado aunque la celda pertenezca a una fila o columna de grupo, se muestra el primer valor del grupo. Para obtener más información acerca de los agregados, vea [ámbito de expresión para totales, agregados y colecciones integradas &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="merging-and-splitting-cells"></a>Combinar y dividir celdas  
  Dentro de un área de Tablix, puede combinar juntas varias celdas adyacentes. Por ejemplo, puede crear celdas para etiquetas que abarcan varias columnas o filas.  
@@ -120,7 +120,7 @@ ms.lasthandoff: 08/09/2017
   
  En el área del cuerpo del Tablix, las celdas solo se pueden combinar horizontalmente. No se admite la combinación vertical de celdas.  
   
- Para obtener más información, vea [Combinar celdas en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md).  
+ Para más información, vea [Combinar celdas en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md).  
   
  Puede dividir una celda combinada con anterioridad. Las celdas se pueden dividir horizontalmente por columnas o verticalmente por filas. Para dividir una celda en un bloque de celdas, primero divida horizontalmente la celda y, a continuación, divídala verticalmente tantas veces como sea necesario.  
   

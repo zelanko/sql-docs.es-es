@@ -16,7 +16,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: af11d5fdee9122663431f4f00ef5e40fb765c7b4
 ms.contentlocale: es-es
@@ -38,7 +38,7 @@ La siguiente ilustración muestra el gráfico de barras que creará, con ventas 
   
  
 > [!NOTE]  
-> En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, crear un conjunto de datos y elegir un origen de datos, consulte el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones detalladas sobre cómo ir hasta un servidor de informes, crear un conjunto de datos y elegir un origen de datos, vea el primer tutorial de esta serie: [Tutorial: crear un informe de tabla básico &#40; El generador de informes &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tiempo estimado para completar este tutorial: 15 minutos.  
   
@@ -70,7 +70,7 @@ En el que puede crear un conjunto de datos incrustado, elegir un origen de datos
     > [!NOTE]  
     > El origen de datos que elija no importa, con tal de que tenga los permisos adecuados. No está recibiendo datos del origen de datos. Para obtener más información, consulte [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  En la página **Diseñar una consulta**, haga clic en **Editar como texto**.  
+6.  En la página **Diseñar una consulta** , haga clic en **Editar como texto**.  
   
 7.  Pegue la siguiente consulta en el panel de consulta:  
   
@@ -97,7 +97,7 @@ En el que puede crear un conjunto de datos incrustado, elegir un origen de datos
   
 ## <a name="ChartType"></a>2. Crear un gráfico de barras  
  
-1.  En la página **Elegir un tipo de gráfico**, el gráfico de columnas es el tipo de gráfico predeterminado.  
+1.  En la página **Elegir un tipo de gráfico** , el gráfico de columnas es el tipo de gráfico predeterminado.  
   
 2.  Haga clic en **Barras**y después en **Siguiente**.  
   
@@ -220,7 +220,7 @@ De forma predeterminada, el eje horizontal muestra los valores en un formato gen
   
 2.  Haga clic en el eje horizontal a lo largo de la parte inferior del gráfico para seleccionarlo.  
   
-3.  En la pestaña **Inicio** > grupo **Número** > **Moneda**. Las etiquetas del eje horizontal cambian al formato de moneda.  
+3.  En el **inicio** ficha > **número** grupo > **moneda**. Las etiquetas del eje horizontal cambian al formato de moneda.  
   
 3.  (Opcional) Quite los dígitos decimales. Cerca del botón **Moneda** , haga clic dos veces en el botón **Disminuir decimales** .  
   

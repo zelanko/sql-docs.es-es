@@ -15,7 +15,7 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f60696e601bc48d20384d9037f4e5f7a1b35d749
 ms.contentlocale: es-es
@@ -42,19 +42,19 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Ordenación interactiva &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
+ [Ordenación interactiva &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
  Describe cómo agregar botones de ordenación interactiva a los encabezados de columna.  
   
- [Crear un mapa del documento &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
+ [Crear un mapa del documento &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
  Describe cómo agregar una tabla de contenido para poder navegar en informes de gran tamaño.  
   
- [Agregar un marcador a un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
+ [Agregar un marcador a un informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
  Explica cómo agregar marcadores para crear vínculos dentro de un informe.  
   
- [Agregar un hipervínculo a una dirección URL &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
+ [Agregar un hipervínculo a una dirección URL &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  Explica cómo agregar un vínculo del informe a una dirección URL.  
   
 ## <a name="see-also"></a>Vea también  
- [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Obtención de detalles, obtención de detalles, subinformes y regiones de datos anidadas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

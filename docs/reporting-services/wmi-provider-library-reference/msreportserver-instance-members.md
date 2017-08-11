@@ -22,7 +22,7 @@ caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4858da330363297a88c6bcde441b26e5eb384a57
 ms.contentlocale: es-es
@@ -47,6 +47,6 @@ ms.lasthandoff: 08/09/2017
   
 |||  
 |-|-|  
-|[Método GetReportServerUrls &#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|Enumera las direcciones URL que los usuarios pueden utilizar para tener acceso al servidor de informes y al administrador de informes.|  
+|[Método GetReportServerUrls &#40; MSReportServer_Instance de WMI &#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|Enumera las direcciones URL que los usuarios pueden utilizar para tener acceso al servidor de informes y al administrador de informes.|  
   
   

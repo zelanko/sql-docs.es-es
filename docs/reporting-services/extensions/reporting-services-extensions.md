@@ -20,14 +20,14 @@ helpviewer_keywords:
 - extensions [Reporting Services]
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
 caps.latest.revision: 45
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cd4cd15bf03648329dab8bc7ef55314ece7cf9a2
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 37adf4c09f7f23294572a17631240ad88f51fc9e
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="reporting-services-extensions"></a>Extensiones de Reporting Services
@@ -43,16 +43,16 @@ ms.lasthandoff: 06/22/2017
  [Consideraciones de seguridad para las extensiones](../../reporting-services/extensions/security-considerations-for-extensions.md)  
  Describe problemas de seguridad relacionados con el desarrollo e implementación de extensiones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Implementar una extensión de procesamiento de datos](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)  
+ [Implementación de una extensión de procesamiento de datos](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)  
  Describe los requisitos y los pasos para implementar una extensión de procesamiento de datos para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Implementar una extensión de entrega](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)  
+ [Ejecución de una extensión de entrega](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)  
  Describe los requisitos y los pasos para implementar una extensión de entrega para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Implementar una extensión de representación](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)  
+ [Ejecución de una extensión de representación](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)  
  Contiene una introducción para desarrollar extensiones de representación.  
   
- [Implementar una extensión de seguridad](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
+ [Implementación de una extensión de seguridad](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
  Describe los requisitos y los pasos para implementar una extensión de seguridad de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  [Biblioteca de extensión de Reporting Services](../../reporting-services/extensions/reporting-services-extension-library.md)  

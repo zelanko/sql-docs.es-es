@@ -17,14 +17,14 @@ helpviewer_keywords:
 - delivery extensions [Reporting Services], about extensions
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 caps.latest.revision: 37
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3b201ef2225d7794b399c79a318627fc978b8b72
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 79894381bf493132c1f73d711ecd6d1ba282401e
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="delivery-extensions-overview"></a>Información general de las extensiones de entrega
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
 |Correo electrónico del servidor de informes|Utiliza un servidor SMTP para enviar informes a usuarios individuales o grupos por correo electrónico.|  
 |Recurso compartido del servidor de informes|Se utiliza para distribuir los informes dentro de una organización a los recursos compartidos de archivos de red. Permite copiar automáticamente un informe en un recurso compartido de archivos con una programación designada.|  
   
- ![Arquitectura de extensión de entrega de Reporting Services](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Reporting Services delivery extension architecture")  
+ ![Arquitectura de Reporting Services entrega extensión](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "arquitectura de extensión de entrega de Reporting Services")  
 Arquitectura de extensión de entrega de Reporting Services  
   
  Las extensiones de entrega se emparejan con las suscripciones. Al crear una suscripción, puede elegir una de las extensiones de entrega disponibles para determinar cómo se entrega el informe. En [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], las suscripciones se encuentran en la base de datos del servidor de informes. Cuando se produce un evento, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] hace corresponder el evento con las suscripciones contenidas en la base de datos del servidor de informes. El servidor de informes crea una notificación para cada suscripción enlazada al evento. En las suscripciones controladas por datos se crea una notificación para cada destinatario. Una vez creada una notificación, el servidor de informes invoca una extensión de entrega determinada y pasa los valores para la configuración de las extensiones especificada en la notificación. La extensión de entrega envía la notificación al usuario cuando lo especifica la extensión de entrega seleccionada.  

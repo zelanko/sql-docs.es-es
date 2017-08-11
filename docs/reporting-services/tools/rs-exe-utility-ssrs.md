@@ -23,14 +23,14 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 70f9afea9e9fe495c66ac98ea8ec4f3e9b1e3a6d
 ms.contentlocale: es-es
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="rsexe-utility-ssrs"></a>Utilidad RS.exe (SSRS)
+# <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   La utilidad rs.exe procesa el script que proporcione en un archivo de entrada. Use esta utilidad para automatizar las tareas de implementación y administración del servidor de informes.  
   
 > [!NOTE]  
@@ -62,13 +62,13 @@ rs {-?}
  **-i** *input_file*  
  (Obligatorio) Especifica el archivo .rss que debe ejecutarse. Este valor puede ser una ruta de acceso relativa o una ruta de acceso completa al archivo .rss.  
   
- **-s** *serverURL*  
+ **-s** *URLDelServidor*  
  (Obligatorio) Especifica el nombre del servidor web y el nombre del directorio virtual del servidor de informes donde debe ejecutarse el archivo. Un ejemplo de una dirección URL de un servidor de informes es `http://examplewebserver/reportserver`. El prefijo http:// o https:// al principio del nombre del servidor es opcional. Si se omite el prefijo, el host de script del servidor de informes intentará usar primero https y, después, http si https no funciona.  
   
  **-u** [*dominio*\\]*nombreDeUsuario*  
  (Opcional) Especifica una cuenta de usuario que se utiliza para conectarse al servidor de informes. Si se omiten **-u** y **-p** , se usará la cuenta de usuario de Windows actual.  
   
- **-p** *password*  
+ **-p** *contraseña*  
  (Obligatorio si se especifica **-u** ) Especifica la contraseña que se usará con el argumento **-u** . Este valor distingue mayúsculas de minúsculas.  
   
  **-e**  
@@ -90,7 +90,7 @@ rs {-?}
  **-b**  
  (Opcional) Especifica que los comandos del archivo de script se ejecutan en un lote. Si se produce un error en alguno de los comandos, se revierte el lote. Algunos comandos no se pueden ejecutar por lotes y se ejecutan de la manera habitual. Solo si se producen excepciones que no se controlan dentro del script tiene lugar una operación de reversión. Si el script controla una excepción y vuelve con normalidad desde **Main**, se confirma el lote. Si omite este parámetro, los comandos se ejecutan sin crear un lote. Para obtener más información, consulte [Batching Methods](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md).  
   
- **-v** *globalvar*  
+ **-v** *variableGlobal*  
  (Opcional) Especifica las variables globales que se usan en el script. Si el script utiliza variables globales, debe especificar este argumento. El valor que especifique debe ser válido para la variable global definida en el archivo .rss. Debe especificar una variable global para cada argumento **-v** .  
   
  El argumento **-v** se especifica en la línea de comandos y se usa para establecer el valor de una variable global que se define en el script en tiempo de ejecución. Por ejemplo, si el script contiene una variable con nombre *parentFolder*, puede especificar un nombre para dicha carpeta en la línea de comandos:  
@@ -127,9 +127,9 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 >  Para ver un ejemplo detallado, vea [Script rs.exe de ejemplo de Reporting Services para copiar contenido entre servidores de informes](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
 ## <a name="see-also"></a>Vea también  
-- [Ejecutar un archivo de Script de Reporting Services](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
-- [Implementación de secuencia de comandos y las tareas administrativas](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
-- [Secuencia de comandos con la utilidad rs.exe y el servicio Web](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
-- [Utilidades de símbolo del sistema del servidor de informes &#40; SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
+- [Ejecutar un archivo de script de Reporting Services](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
+- [Script para tareas administrativas y de implementación](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
+- [Script con la utilidad rs.exe y el servicio Web](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
+- [Utilidades del símbolo del sistema del servidor de informes &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
   
   

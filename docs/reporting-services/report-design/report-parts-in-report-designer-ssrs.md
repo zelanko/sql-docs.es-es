@@ -17,7 +17,7 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 66d5312047b516176e8aa1b331b36745bcdb20d9
 ms.contentlocale: es-es
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
 
   En el Diseñador de informes, después de crear tablas, gráficos y otros elementos de informe paginado en un proyecto, puede publicarlos como *elementos de informe* en un servidor de informes o en el sitio de SharePoint integrado con un servidor de informes para que su usuario y otros usuarios puedan reutilizarlos en otros informes.  
   
- En general, los elementos de informe funcionan de la misma manera en el Diseñador de informes y en el Generador de informes. Para más información sobre las funciones básicas, vea [Elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+ En general, los elementos de informe funcionan de la misma manera en el Diseñador de informes y en el Generador de informes. Para obtener información acerca de la funcionalidad básica, consulte [elementos de informe &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
  Hay diferencias fundamentales en el modo en que los elementos de informe se usan en el Diseñador de informes. Una diferencia principal es el flujo de trabajo. El Generador de informes habilita la creación colaborativa: creo un elemento de informe y lo publico. Puede reutilizarlo, modificarlo y volver a publicarlo. En el Diseñador de informes la publicación es unidireccional: se puede publicar un elemento de informe en el Diseñador de informes y reutilizarlo. Pero no se puede reutilizar un elemento de informe existente en un informe en el Diseñador de informes. En este tema se elaboran estas diferencias, después de una información general rápida de los elementos de informe.  
   
@@ -98,6 +98,6 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Administrar elementos de informe](../../reporting-services/report-design/managing-report-parts.md)  
+[Administración de elementos de informe](../../reporting-services/report-design/managing-report-parts.md)  
 
 ¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

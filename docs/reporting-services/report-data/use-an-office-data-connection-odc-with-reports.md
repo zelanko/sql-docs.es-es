@@ -19,7 +19,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7df29304e469a78f64a8b81198d7991f956953fe
 ms.contentlocale: es-es
@@ -51,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
  Si no está familiarizado con los archivos .odc, puede usar las siguientes instrucciones para crear y exportar uno. Una forma fácil de crear un archivo .odc para un origen de datos OLE DB es usar Excel 2007 y el Asistente para la conexión de datos. Tenga en cuenta que el asistente no crea un origen de datos; debe tener un origen de datos externo que ya esté definido.  
   
- Un archivo .odc existente solo debería utilizarse si es totalmente compatible con el informe y las consultas. Si se producen errores que exigen modificaciones importantes del informe o archivo .odc, debe crear un nuevo archivo .rsds para el informe. Para obtener más información sobre cómo crear un origen de datos compartido que use un archivo .rsds, vea [Crear y administrar orígenes de datos compartidos &#40;Reporting Services en el modo integrado de SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ Un archivo .odc existente solo debería utilizarse si es totalmente compatible con el informe y las consultas. Si se producen errores que exigen modificaciones importantes del informe o archivo .odc, debe crear un nuevo archivo .rsds para el informe. Para obtener más información acerca de cómo crear un origen de datos compartido que usa un archivo .rsds, vea [crear y administrar orígenes de datos compartidos &#40; Reporting Services en SharePoint integrado modo &#41; ](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
 ### <a name="to-create-and-export-an-odc-file"></a>Para crear y exportar un archivo .odc  
   

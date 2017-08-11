@@ -24,7 +24,7 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e3247864547983779f4037eb963ba6721a2b7654
 ms.contentlocale: es-es
@@ -46,9 +46,9 @@ ms.lasthandoff: 08/09/2017
   
     -   [Actualizar y migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
-    -   [Migrar una instalación de Reporting Services &#40;modo de SharePoint&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
+    -   [Migrar una instalación de Reporting Services &#40; Modo de SharePoint &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
   
-    -   [Migrar una instalación de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+    -   [Migrar una instalación de Reporting Services &#40; Modo nativo &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
   
 ## <a name="backing-up-the-report-server-databases"></a>Realizar copias de seguridad de bases de datos del servidor de informes  
  Puesto que un servidor de informes es un servidor sin estado, todos los datos de aplicación se almacenan en las bases de datos **reportserver** y **reportservertempdb** que se ejecutan en una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Para realizar una copia de seguridad de las bases de datos **reportserver** y **reportservertempdb** , use uno de los métodos admitidos para copias de seguridad de bases de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Éstas son algunas de las recomendaciones específicas de las bases de datos del servidor de informes:  
@@ -80,7 +80,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Web.config para aplicaciones [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] del Servidor de informes y del Administrador de informes.  
   
--   Machine.config de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]  
+-   Machine.config para[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]  
   
 ## <a name="backing-up-data-files"></a>Realizar una copia de seguridad de archivos de datos  
  Realice una copia de seguridad de los archivos que cree y mantenga en el Diseñador de informes y en el Diseñador de modelos. Estos archivos incluyen archivos de definición de informe (.rdl), de modelo de informe (.smdl), de orígenes de datos compartidos (.rds), de vista de datos (.dv), de origen de datos (.ds), de proyecto de servidor de informes (.rptproj) y de solución de informes (.sln).  
@@ -91,7 +91,7 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Base de datos de servidor de informes](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+[Base de datos del servidor de informes](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 [Archivos de configuración de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
 [RSKEYMGMT (utilidad)](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)   
 [Copiar bases de datos con Copias de seguridad y restauración](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   

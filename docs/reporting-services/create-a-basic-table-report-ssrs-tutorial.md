@@ -20,7 +20,7 @@ caps.latest.revision: 67
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7cd0ab1950eeaf54da67e7f8dd5bb2da89a26307
 ms.contentlocale: es-es
@@ -66,4 +66,4 @@ También debe disponer de permisos de solo lectura para recuperar datos de la ba
 
 [Tutoriales de Reporting Services](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+¿Tiene alguna pregunta más? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

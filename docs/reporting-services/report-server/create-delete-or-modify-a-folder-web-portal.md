@@ -14,7 +14,7 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6a9eef590a80442110d49359c789ff5317246791
 ms.contentlocale: es-es
@@ -26,9 +26,9 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-create-a-folder"></a>Para crear una carpeta  
   
-1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Iniciar el [el Administrador de informes &#40; Modo nativo de SSRS &#41; ](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
-2.  En el portal web, seleccione **Carpeta** en el menú desplegable **Nuevo**. O, si quiere crear una carpeta en una carpeta existente, vaya a la carpeta en cuestión y seleccione **Carpeta** en el menú desplegable **Nuevo** .  
+2.  En el portal web, seleccione **Carpeta** en el menú desplegable **Nuevo** . O, si quiere crear una carpeta en una carpeta existente, vaya a la carpeta en cuestión y seleccione **Carpeta** en el menú desplegable **Nuevo** .  
   
      Se abre el cuadro de diálogo **Crear una carpeta nueva** .  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/09/2017
 6.  Haga clic en **Aplicar** para guardar los cambios.  
   
 ## <a name="see-also"></a>Vea también  
- [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Buscar, ver y administrar informes &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
 

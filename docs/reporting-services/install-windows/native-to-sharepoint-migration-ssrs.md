@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c7fa3b57de4a8b5854951c266168e22ae57ab928
 ms.contentlocale: es-es
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/09/2017
 |Conjuntos de datos|Sí||  
 |Elementos de informe||Tras la migración, compruebe o actualice la ruta de acceso a los elementos de informe.|  
 |Programaciones|Sí|Vea el método ListSchedules en [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md).|  
-|Suscripciones|sí|Vea el método List Subscriptions [métodos de suscripción y entrega](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) y <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> método.|  
+|Suscripciones|Sí|Vea el método List Subscriptions en [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) y el método <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> .|  
 |Instantáneas|||
 
 ¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

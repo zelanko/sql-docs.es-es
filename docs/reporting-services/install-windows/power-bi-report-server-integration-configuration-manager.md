@@ -19,7 +19,7 @@ caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5ece1f5e492f4508d6c014709a953bfb4d29815a
 ms.contentlocale: es-es
@@ -164,7 +164,7 @@ La segunda vez que un usuario ancle un elemento, se omitirán los pasos de 1 a 4
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Mi configuración para la integración de Power BI](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
-[Anclado de elementos de Reporting Services en panales de Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
+[Pin Reporting Services items to Power BI Dashboards (Anclar elementos de Reporting Services en paneles de Power BI)](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
 [Paneles en Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
 ¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

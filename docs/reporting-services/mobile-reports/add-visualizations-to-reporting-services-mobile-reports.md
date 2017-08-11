@@ -14,7 +14,7 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7a6554de812f8f85c9adbd7a3338ab744555e9a0
 ms.contentlocale: es-es
@@ -36,7 +36,7 @@ Puede asignar diferentes formatos a números de un gráfico en [!INCLUDE[SS_Mobi
 * Para establecer el formato de número, seleccione la pestaña **Diseño** , seleccione un gráfico en la superficie de diseño y, en el panel **Propiedades de los elementos visuales** , seleccione un **Formato de número**. 
   
 ### <a name="legend"></a>Leyenda
-* Para mostrar la leyenda de un gráfico, seleccione la pestaña **Diseño** , seleccione un gráfico en la superficie de diseño y, en el panel **Propiedades de los elemenens visuales** , establezca **Mostrar leyenda** en **Activado**.
+* Para mostrar la leyenda de un gráfico, seleccione la pestaña **Diseño** , seleccione un gráfico en la superficie de diseño y, en el panel **Propiedades de los elemenens visuales** , establezca **Mostrar leyenda** en **Activado**
   
 ### <a name="series"></a>Serie
 Cada métrica individual o valor mostrados en un gráfico se conoce como una serie; varias series pueden compartir (y, de hecho, comparten) tanto un eje X común como un eje Y común. Las series se definen en el panel de propiedades de datos de la vista de datos seleccionando uno o varios campos y tablas de datos. Cada campo dará como resultado una serie individual de puntos de datos en la visualización del gráfico con su propio color.  
@@ -44,7 +44,7 @@ Cada métrica individual o valor mostrados en un gráfico se conoce como una ser
 ### <a name="change-aggregation"></a>Cambiar agregación 
 Para campos numéricos en gráficos, la agregación predeterminada es sumar. Puede cambiarla a media, recuento, mínimo, máximo, primero, último.
 
-* Seleccione la pestaña **Datos** y, en **Propiedades de los datos**, elija **Opciones** junto al campo numérico y, después, seleccione otra agregación.
+* Seleccione el **datos** ficha y en **propiedades datos**, seleccione **opciones** junto al campo numérico > Seleccionar una agregación diferente.
 
 ### <a name="set-or-clear-filters"></a>Establecer o borrar filtros
 
@@ -66,13 +66,13 @@ El gráfico de tiempo es el gráfico más básico en [!INCLUDE[SS_MobileReptPub_
 
 2. De forma predeterminada, es un gráfico de barras apiladas. Puede cambiar esto en **Visualización de serie**.
 
-3. Si el gráfico necesita datos que aún no están en el informe, seleccione la pestaña **Datos** > **Agregar datos** para [obtener datos de Excel o de un conjunto de datos compartido](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md).
+3. Si el gráfico necesita que los datos que ya no están en el informe, seleccione la **datos** ficha > **agregar datos** a [obtener datos de Excel o un conjunto de datos compartido](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md).
 
-3. En el panel **Propiedades de los datos**, **Serie principal** es **SimulatedTable**. Seleccione la flecha en el cuadro y seleccione la tabla.
+3. En el panel **Propiedades de los datos** , **Serie principal** es **SimulatedTable**. Seleccione la flecha en el cuadro y seleccione la tabla.
 
-5. Si establece **Estructura de datos** en **Por columnas** (en la pestaña **Diseño** > panel **Propiedades de los elementos visuales**), en el panel **Propiedades de los datos** de seleccionar varias columnas o valores numéricos.
+5. Si establece **estructura de datos** a **por columnas** (en el **diseño** ficha > **las propiedades de Visual** panel), aquí, en la **propiedades datos** panel puede seleccionar varias columnas de valores numéricos.
 
-   Si establece **Estructura de datos** en **Por filas** (en el panel **Propiedades de los datos**), puede seleccionar un **Campo de nombre de serie** y una columna de valores numéricos.
+   Si establece **Estructura de datos** en **Por filas**(en el panel **Propiedades de los datos** ), puede seleccionar un **Campo de nombre de serie** y una columna de valores numéricos.
    
 Para más información, vea [Agrupar datos por columnas o filas](../../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md).
   

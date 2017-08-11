@@ -14,7 +14,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d9ca14104f9dd60fda20d723290789733f0a9f4a
 ms.contentlocale: es-es
@@ -24,7 +24,7 @@ ms.lasthandoff: 08/09/2017
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
   Al crear informes paginados con parámetros en el Generador de informes, puede personalizar el panel de parámetros. En la vista de diseño de informe, puede arrastrar un parámetro a una columna y fila específicas del panel de parámetros. Puede agregar y quitar columnas para cambiar el diseño del panel.  
   
- Al arrastrar un parámetro a una columna y fila nuevas del panel, el orden de los parámetros cambiará en el panel **Datos de informe** . Al cambiar el orden de los parámetros en el panel **Datos de informe**, cambia la ubicación de los parámetros en el panel. Para más información sobre por qué es importante el orden de los parámetros, vea [Cambiar el orden de un parámetro de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
+ Al arrastrar un parámetro a una columna y fila nuevas del panel, el orden de los parámetros cambiará en el panel **Datos de informe** . Al cambiar el orden de los parámetros en el panel **Datos de informe** , cambia la ubicación de los parámetros en el panel. Para obtener más información acerca de por qué es importante el orden de los parámetros, vea [cambiar el orden de un parámetro de informe &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
   
 ## <a name="to-customize-the-parameters-pane"></a>Para personalizar el panel de parámetros  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  Para mover un parámetro a una ubicación nueva del panel de parámetros, arrastre el parámetro a una celda diferente del panel.  
   
-     Cuando cambia la ubicación del parámetro en el panel, el orden del parámetro en la lista **Parámetros** del panel **Datos de informe** se cambia automáticamente. Para más información sobre el impacto del orden de los parámetros, vea [Cambiar el orden de un parámetro de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
+     Cuando cambia la ubicación del parámetro en el panel, el orden del parámetro en la lista **Parámetros** del panel **Datos de informe** se cambia automáticamente. Para obtener más información sobre el impacto de la orden de los parámetros, vea [cambiar el orden de un parámetro de informe &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
 4.  Para acceder a las propiedades de un parámetro, siga unos de los siguientes procedimientos.  
   
@@ -70,6 +70,6 @@ ms.lasthandoff: 08/09/2017
     -   Haga clic con el botón derecho en el panel **Datos de informe** y después haga clic en **Eliminar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [Parámetros de informe &#40; El generador de informes y el Diseñador de informes &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

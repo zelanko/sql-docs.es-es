@@ -19,20 +19,20 @@ helpviewer_keywords:
 - Nofication class
 ms.assetid: 549c40c4-d33d-46c2-9d6a-7bbb671ac67a
 caps.latest.revision: 33
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 708144d726d97380f32d39ac88901e0f6d57ba0b
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 064d5556dca130324f69dd49d14f3caa76c8eec8
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>Usar una clase Notification para una extensión de entrega
   La clase <xref:Microsoft.ReportingServices.Interfaces.Notification> se encuentra en el espacio de nombres <xref:Microsoft.ReportingServices.Interfaces> y representa información de suscripción que las extensiones de entrega utilizan para entregar los informes. La clase <xref:Microsoft.ReportingServices.Interfaces.Notification> proporciona varias propiedades que se pueden utilizar para representar los informes para la entrega, determinar el estado de la notificación y establecer los datos de usuario.  
   
- ![Proceso de notificación de informes](../../../reporting-services/extensions/delivery-extension/media/bk-ext-03.gif "Report notification process")  
+ ![Proceso de notificación de informes](../../../reporting-services/extensions/delivery-extension/media/bk-ext-03.gif "proceso de notificación de informes")  
 La notificación es el objeto central de cualquier entrega  
   
  Cuando se desencadena un evento que está asociado a una suscripción que utiliza la extensión de entrega personalizada, se crea una notificación que contiene un objeto <xref:Microsoft.ReportingServices.Interfaces.Report>. El objeto <xref:Microsoft.ReportingServices.Interfaces.Report> encapsula la funcionalidad que se necesita para representar un informe determinado en un formato de representación admitido y contiene las propiedades específicas del informe, como la dirección URL del informe en el servidor y su nombre. Para obtener más información sobre la <xref:Microsoft.ReportingServices.Interfaces.Report> de clases, consulte [mediante la clase de informe para una extensión de entrega](../../../reporting-services/extensions/delivery-extension/using-the-report-class-for-a-delivery-extension.md).  

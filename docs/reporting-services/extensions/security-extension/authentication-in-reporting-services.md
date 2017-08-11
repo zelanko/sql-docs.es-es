@@ -19,14 +19,14 @@ helpviewer_keywords:
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 caps.latest.revision: 25
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 93a6e6b7bfbe9829fbb38f344f5de85908c9151e
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 6926d7787a715ab9183763939ca78ed192d0e251
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="authentication-in-reporting-services"></a>Autenticación de Windows en Reporting Services
@@ -154,6 +154,6 @@ internal static bool VerifyPassword(string suppliedUserName,
 -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] puede autenticar y autorizar a los usuarios con la autenticación de Windows o la autenticación personalizada, pero no con ambos. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no admite el uso simultáneo de varias extensiones de seguridad.  
   
 ## <a name="see-also"></a>Vea también  
- [Implementar una extensión de seguridad](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
+ [Implementación de una extensión de seguridad](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
   
   

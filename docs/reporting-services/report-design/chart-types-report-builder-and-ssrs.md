@@ -17,7 +17,7 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7b23da886ccf8fc76cbe8e86a722e4e9a8f3e656
 ms.contentlocale: es-es
@@ -35,9 +35,9 @@ Es importante elegir el tipo de gráfico adecuado para el tipo de datos que se v
 ## <a name="choosing-a-chart-type"></a>Elegir un tipo de gráfico  
  Cada tipo de gráfico tiene características únicas para ayudarle a visualizar el conjunto de datos. Puede usar cualquier tipo de gráfico para mostrar los datos, pero éstos serán más fáciles de leer si elige un tipo de gráfico adecuado y basa su elección en lo que intenta mostrar en el informe. En la tabla siguiente se resumen las características de los gráficos que afectan a la idoneidad de un gráfico para un determinado conjunto de datos.  
   
- Puede cambiar el tipo de gráfico después de haberlo creado. Para obtener más información, vea [Cambiar un tipo de gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md).  
+ Puede cambiar el tipo de gráfico después de haberlo creado. Para obtener más información, vea [cambiar un tipo de gráfico &#40; El generador de informes y SSRS &#41; ](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md).  
   
- Hay disponible ejemplos de muchos de estos tipos de gráficos como informes de ejemplo. Para obtener más información sobre cómo descargar los informes de ejemplo, vea [informes de ejemplo del generador de informes y el Diseñador de informes](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Hay disponible ejemplos de muchos de estos tipos de gráficos como informes de ejemplo. Para obtener más información sobre cómo descargar los informes de ejemplo, consulte [Informes de ejemplo del Generador de informes y el Diseñador de informes](http://go.microsoft.com/fwlink/?LinkId=198283).  
   
 |Tipo de gráfico|Muestra datos de proporción|Muestra datos de acciones|Muestra datos lineales|Muestra datos de varios valores|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
@@ -45,8 +45,8 @@ Es importante elegir el tipo de gráfico adecuado para el tipo de datos que se v
 |[Gráficos de barras &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)|||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||  
 |[Barras de datos](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)|||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||  
 |[Gráficos de columnas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)|||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||  
-|[Gráficos de líneas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)|||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||  
-|[Gráficos circulares &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)|![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||||  
+|[Gráficos de líneas &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)|||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||  
+|[Los gráficos circulares &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)|![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||||  
 |[Gráficos polares &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)|![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||||  
 |[Rangos de intervalos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)|||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")|![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")|  
 |[Gráficos de dispersión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/scatter-charts-report-builder-and-ssrs.md)|![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||  

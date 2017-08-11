@@ -20,7 +20,7 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 37ba742708ded98cd5728a3051a2e7a76b9fa99f
 ms.contentlocale: es-es
@@ -48,6 +48,6 @@ ms.lasthandoff: 08/09/2017
  Para identificar el formato de definición de informe actual de un informe, un servidor de informes o de un proyecto, o bien para el entorno de creación de informes, vea [Buscar la versión del esquema de definición de informe &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
+ [Ayuda del generador de informes para cuadros de diálogo, paneles y asistentes](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
   
   

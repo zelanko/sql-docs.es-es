@@ -16,7 +16,7 @@ caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4fe797ac21e1f659b1a2a196be3f860a65b36896
 ms.contentlocale: es-es
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/09/2017
 Obtenga información sobre los informes móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , que están optimizados para dispositivos móviles y conectados a datos locales y disponen de una gran variedad de visualizaciones de datos. 
 
 >[!NOTE]
->  ¿Necesita migrar el contenido del servidor de Datazen como paneles y KPI a un SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] server? Pruebe el [Asistente para migración de SQL Server para Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
+>  ¿Necesita migrar el contenido de un servidor Datazen, como paneles y KPI, a un servidor de SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] ? Pruebe el [Asistente para migración de SQL Server para Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 

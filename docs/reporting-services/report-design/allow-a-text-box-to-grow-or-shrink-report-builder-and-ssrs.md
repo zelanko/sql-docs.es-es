@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: abb928e42a7420b421c91f6b5f78256213cb5df9
 ms.contentlocale: es-es
@@ -36,6 +36,6 @@ ms.lasthandoff: 08/09/2017
     -   Para permitir que el cuadro de texto se reduzca en función del contenido, seleccione **Permitir reducir el alto**.  
   
 ## <a name="see-also"></a>Vea también  
- [Cuadros de texto &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
+ [Cuadros de texto &#40; El generador de informes y SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
   
   

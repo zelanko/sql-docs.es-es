@@ -19,7 +19,7 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 89bb5de5f669d033dd18bc63e11ef5bd29644542
 ms.contentlocale: es-es
@@ -39,7 +39,7 @@ La base de datos del servidor de informes proporciona almacenamiento para una o 
 
  En la lista siguiente se identifican las condiciones en las que se actualiza una base de datos del servidor de informes:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actualiza una única instancia de un servidor de informes. El esquema de la base de datos del servidor de informes se actualiza automáticamente después del inicio del servicio y el servidor de informes determina que la versión del esquema de la base de datos no coincide con la versión del servidor.  
+-   El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actualiza una única instancia de un servidor de informes. El esquema de la base de datos del servidor de informes se actualiza automáticamente después del inicio del servicio y el servidor de informes determina que la versión del esquema de la base de datos no coincide con la versión del servidor.  
   
      Durante el inicio del servicio, el servidor de informes examina la versión del esquema de la base de datos para comprobar si coincide con la del servidor. Si la versión del esquema de la base de datos es anterior, se actualiza automáticamente a la versión que requiere el servidor de informes. La actualización automática es especialmente útil si ha restaurado o adjuntado una base de datos del servidor de informes anterior. Se escribe un mensaje en el archivo de registro de seguimiento del servidor de informes para indicar que se ha actualizado la versión del esquema de la base de datos.  
   

@@ -18,7 +18,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 45aad2cc5dbdbc23fa28f1f70b138da4ec05f281
 ms.contentlocale: es-es
@@ -134,9 +134,9 @@ Para solucionar este problema, puede modificar la configuración para permitir a
 ## <a name="configuration-options-for-remote-smtp-service"></a>Opciones de configuración para un servicio SMTP remoto
 La conexión entre el servidor de informes y un servidor o reenviador SMTP viene determinada por las opciones de configuración siguientes:
 
-- `<SendUsing>` especifica un método para enviar mensajes. Se puede elegir entre un servicio SMTP de red o un directorio de recogida del servicio SMTP local. Para utilizar un servicio SMTP remoto, este valor debe establecerse en **2** en el archivo RSReportServer.config.
-- `<SMTPServer>` especifica el servidor o reenviador SMTP remoto. Se trata de un valor necesario si utiliza un servidor o reenviador SMTP remoto.
-- `<From>` establece el valor que se muestra en la línea **De:** del mensaje de correo electrónico. Se trata de un valor necesario si utiliza un servidor o reenviador SMTP remoto.
+- `<SendUsing>`Especifica un método para enviar mensajes. Se puede elegir entre un servicio SMTP de red o un directorio de recogida del servicio SMTP local. Para utilizar un servicio SMTP remoto, este valor debe establecerse en **2** en el archivo RSReportServer.config.
+- `<SMTPServer>`Especifica el servidor SMTP remoto o un reenviador. Se trata de un valor necesario si utiliza un servidor o reenviador SMTP remoto.
+- `<From>`establece el valor que aparece en el **desde:** línea de un mensaje de correo electrónico. Se trata de un valor necesario si utiliza un servidor o reenviador SMTP remoto.
 
 Entre los demás valores que se utilizan para un servicio SMTP remoto se incluyen los siguientes (tenga en cuenta que no es necesario especificarlos a menos que desee reemplazar los valores predeterminados).
 
@@ -228,7 +228,7 @@ La conexión entre el servidor de informes y un servidor o reenviador SMTP local
   
 ## <a name="see-also"></a>Vea también  
 [Administrador de configuración de Reporting Services (modo nativo)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
-[Modificar un archivo de configuración de Reporting Services (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
+[Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [El archivo de configuración RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   
   

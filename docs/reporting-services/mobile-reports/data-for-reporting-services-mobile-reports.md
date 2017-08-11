@@ -15,7 +15,7 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fe007313e57ec01c5c456b0623b642555a25bf35
 ms.contentlocale: es-es
@@ -29,7 +29,7 @@ Puede importar datos desde dos tipos de orígenes:
   
 * **Archivos de Excel locales**: seleccione un documento de Excel y seleccione las hojas de cálculo para importar. Después de la importación, los datos se almacenan en la definición de informe móvil. Para actualizar los datos del archivo original de Excel, use el comando **Actualizar datos** en la esquina superior derecha de la pestaña [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Data** tab. Obtenga más información sobre cómo [preparar datos de Excel para informes móviles de SSRS](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md).  
   
-* **Conjuntos de datos compartidos de [!INCLUDE[PRODUCT_NAME](../../includes/server-product-name.md)]**: examine la lista de conjuntos de datos publicados en el servidor y seleccione los que quiere agregar al informe móvil. Los informes móviles basados en datos de servidor están siempre conectados a los conjuntos de datos de servidor originales y reflejan el estado más reciente de los datos en el servidor. Vea una [lista de orígenes de datos admitidos](https://msdn.microsoft.com/library/ms159219.aspx).   
+* **[!INCLUDE[PRODUCT_NAME](../../includes/server-product-name.md)]conjuntos de datos compartidos**: examinar la lista de conjuntos de datos publicados en el servidor y seleccione los que quiere agregar al informe móvil. Los informes móviles basados en datos de servidor están siempre conectados a los conjuntos de datos de servidor originales y reflejan el estado más reciente de los datos en el servidor. Vea una [lista de orígenes de datos admitidos](https://msdn.microsoft.com/library/ms159219.aspx).   
   
   Obtenga más información sobre cómo [obtener datos de conjuntos de datos compartidos en el Publicador de informes móviles](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md).  
   

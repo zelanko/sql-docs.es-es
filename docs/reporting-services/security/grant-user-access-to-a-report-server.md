@@ -21,14 +21,14 @@ caps.latest.revision: 54
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a92c37165b8142b7e96a8bb99dee43ea5f12e247
 ms.contentlocale: es-es
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="grant-user-access-to-a-report-server"></a>Conceder acceso de usuario a un servidor de informes
+# <a name="grant-user-access-to-a-report-server"></a>Conceder a un usuario acceso a un servidor de informes
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/09/2017
 
 Revise la lista siguiente antes de agregar usuarios a un servidor de informes en modo nativo.
 
-- Debe ser miembro del grupo local de administradores en el equipo del servidor de informes. Si implementa [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] o Windows Server 2008, se requiere la configuración adicional antes de poder administrar localmente un servidor de informes. Para obtener más información, consulte [configurar un servidor de informes de modo nativo para la administración Local](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
+- Debe ser miembro del grupo local de administradores en el equipo del servidor de informes. Si implementa [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] o Windows Server 2008, se requiere la configuración adicional antes de poder administrar localmente un servidor de informes. Para obtener más información, vea [Configurar un servidor de informes en modo nativo para la administración local](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
 
 - Para delegar esta tarea en otros usuarios, cree asignaciones de roles que asignen cuentas de usuario a los roles de administrador de contenido y de sistema. Los usuarios con permisos de administrador de contenido y de sistema pueden agregar usuarios a un servidor de informes.
 
@@ -102,7 +102,7 @@ Revise la lista siguiente antes de agregar usuarios a un servidor de informes en
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Crear y administrar asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)   
+[Crear y administrar las asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)   
 [Nueva asignación de roles: Editar página de asignación de roles &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
 [Página de propiedades de seguridad, elementos &#40; El Administrador de informes &#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
 [Asignaciones de roles](../../reporting-services/security/role-assignments.md)   

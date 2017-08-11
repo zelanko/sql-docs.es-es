@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], about extensions
 ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 caps.latest.revision: 39
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c30ea734a30e00fdefeb9b30a1ced9c3f60d5fca
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 075724639c912f40c3ef7c49227ba653bd086fcd
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="data-processing-extensions-overview"></a>Introducción a las extensiones de procesamiento de datos
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
  Puede desarrollar extensiones de procesamiento de datos para sus propios orígenes de datos o puede utilizar las interfaces con el fin de agregar un nivel adicional de procesamiento de datos a las infraestructuras de base de datos comunes. Puede implementar extensiones de procesamiento de datos personalizadas para habilitar la integración sin problemas de los datos en los servidores de informes existentes en una organización. También puede utilizarlas como parte de un conjunto de informes de errores personalizado que se proporciona a los consumidores.  
   
- ![Arquitectura de extensión de procesamiento de datos](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "Data processing extension architecture")  
+ ![Arquitectura de extensión de procesamiento de datos](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "arquitectura de extensión de procesamiento de datos")  
 Arquitectura de extensión de procesamiento de datos de Reporting Services  
   
  Entre las ventajas de implementar una extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] personalizada se incluyen las siguientes:  
@@ -61,7 +61,7 @@ Arquitectura de extensión de procesamiento de datos de Reporting Services
 ## <a name="data-extension-process-flow"></a>Flujo del proceso de la extensión de datos  
  Antes de desarrollar la extensión de datos personalizada, debería entender cómo usa el servidor de informes las extensiones de datos para procesar los datos. También debería saber los constructores y los métodos a los que el servidor de informes llama.  
   
- ![Flujo del proceso de extensión de procesamiento de datos](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "Process flow for data processing extension")  
+ ![Flujo de extensión de procesamiento de datos del proceso de](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "flujo para la extensión de procesamiento de datos del proceso")  
 El flujo del proceso paso a paso de una extensión de datos a la que el servidor de informes llama  
   
  En esta ilustración se muestra el siguiente flujo de eventos:  

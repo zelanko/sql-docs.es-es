@@ -15,7 +15,7 @@ caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d68de45f8514de03e9804996da00d5f63d211311
 ms.contentlocale: es-es
@@ -33,7 +33,7 @@ Al instalar el modo de SharePoint de SQL Server 2016 Reporting Services, los cmd
 -   La administración de las características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , como las extensiones y las claves de cifrado.  
 
 ##  <a name="bkmk_cmdlet_sum"></a> Resumen de los cmdlets  
- Para ejecutar los cmdlets es necesario abrir el Shell de administración de SharePoint. También puede usar el editor de la interfaz gráfica de usuario incluido en Microsoft Windows, **Entorno de scripting integrado (ISE) de Windows PowerShell**. Para obtener más información, consulte [iniciar Windows PowerShell en Windows Server](http://technet.microsoft.com/library/hh847814.aspx). En los resúmenes siguientes de cmdlet, las referencias a la aplicación de servicio 'bases de datos' se aplican a todas las bases de datos creadas y usadas por una aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Esto incluye la configuración, la creación de alertas y las bases de datos temporales.  
+ Para ejecutar los cmdlets es necesario abrir el Shell de administración de SharePoint. También puede usar el editor de la interfaz gráfica de usuario incluido en Microsoft Windows, **Entorno de scripting integrado (ISE) de Windows PowerShell**. Para más información, vea [Starting Windows PowerShell on Windows Server](http://technet.microsoft.com/library/hh847814.aspx). En los resúmenes siguientes de cmdlet, las referencias a la aplicación de servicio 'bases de datos' se aplican a todas las bases de datos creadas y usadas por una aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Esto incluye la configuración, la creación de alertas y las bases de datos temporales.  
   
  Si ve un mensaje de error similar al siguiente al escribir los ejemplos de PowerShell:  
   
@@ -50,7 +50,7 @@ Al instalar el modo de SharePoint de SQL Server 2016 Reporting Services, los cmd
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- Para obtener más información, consulte [usar Windows PowerShell para administrar SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx).  
+ Para más información, vea [Usar Windows PowerShell para administrar SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx).  
   
 #### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>Para abrir el Shell de administración de SharePoint y ejecutar cmdlets  
   
@@ -279,9 +279,9 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
   
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Use PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
+[Uso de PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
 [Lista de comprobación: Usar PowerShell para comprobar PowerPivot para SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
 [Obtener ayuda de SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
-[Secuencias de comandos de PowerShell de administración de SharePoint de CodePlex](http://sharepointpsscripts.codeplex.com/)   
+[Scripts de PowerShell de Administración de SharePoint de CodePlex](http://sharepointpsscripts.codeplex.com/)   
 
 ¿Más preguntas? [Pruebe a formular el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

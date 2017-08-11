@@ -20,14 +20,14 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], implementing
 ms.assetid: 4a5c64f5-2391-4597-ba3f-81d265b23703
 caps.latest.revision: 34
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 68e74b4a67a1edc6517c9e6b2b0160ce2db258b9
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: c6be8db763c82a47d0635169f33a0f0543910abe
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="implementing-a-rendering-extension"></a>Implementar una extensión de representación
@@ -37,16 +37,16 @@ ms.lasthandoff: 06/22/2017
 >  Para determinar qué extensiones de representación están disponibles, puede ver la lista de extensiones instaladas en el archivo RSReportServer.config.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Introducción a las extensiones de representación](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)  
+ [Información general de las extensiones de representación](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)  
  Explica cómo escribir una extensión de representación personalizada para [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
- [Implementar la interfaz IRenderingExtension](../../../reporting-services/extensions/rendering-extension/implementing-the-irenderingextension-interface.md)  
+ [Ejecución de la interfaz IRenderingExtension](../../../reporting-services/extensions/rendering-extension/implementing-the-irenderingextension-interface.md)  
  Describe los atributos de una extensión de representación.  
   
- [Implementar una extensión de representación](../../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)  
+ [Implementación de una extensión de representación](../../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)  
  Describe cómo implementar una extensión de representación en un servidor de informes.  
   
- [Quitar una extensión de representación](../../../reporting-services/extensions/rendering-extension/removing-a-rendering-extension.md)  
+ [Eliminación de una extensión de representación](../../../reporting-services/extensions/rendering-extension/removing-a-rendering-extension.md)  
  Describe cómo quitar una extensión de representación de un servidor de informes.  
   
 ## <a name="see-also"></a>Vea también  

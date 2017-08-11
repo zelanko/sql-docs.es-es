@@ -21,14 +21,14 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], methods
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
 caps.latest.revision: 49
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ec79e5169ff32294cc68f5bee24c3df677d8b38b
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: f99a0c09bfbe96062b078c07f86295b34069d9cf
 ms.contentlocale: es-es
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="report-server-web-service-methods"></a>Métodos de servicio web del servidor de informes
@@ -39,13 +39,13 @@ ms.lasthandoff: 06/13/2017
   
 |Tema|Description|  
 |-----------|-----------------|  
-|[Extremos de servicio Web de servidor de informes](../../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)|Describe los puntos finales de ejecución y administración del servicio web del servidor de informes.|  
-|[Métodos de administración de Namespace de servidor de informes](../../../reporting-services/report-server-web-service/methods/report-server-namespace-management-methods.md)|Describe los métodos que puede utilizar para administrar la base de datos del servidor de informes. Específicamente, puede administrar carpetas y recursos y establecer propiedades de elementos.|  
+|[Puntos de conexión del servicio web del servidor de informes](../../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)|Describe los puntos finales de ejecución y administración del servicio web del servidor de informes.|  
+|[Métodos de administración de los espacios de nombres del servidor de informes](../../../reporting-services/report-server-web-service/methods/report-server-namespace-management-methods.md)|Describe los métodos que puede utilizar para administrar la base de datos del servidor de informes. Específicamente, puede administrar carpetas y recursos y establecer propiedades de elementos.|  
 |[Métodos de autorización](../../../reporting-services/report-server-web-service/methods/authorization-methods.md)|Describe métodos que puede utilizar para administrar tareas, roles y directivas.|  
 |[Orígenes de datos y métodos de conexión](../../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md)|Describe métodos que puede utilizar para establecer y administrar una conexión a un origen de datos y la información de credenciales para los informes.|  
-|[Métodos de parámetros de informe](../../../reporting-services/report-server-web-service/methods/report-parameters-methods.md)|Describe métodos que puede utilizar para establecer y recuperar los parámetros para los informes.|  
-|[Métodos del modelo - servicio de Web del servidor de informes](../../../reporting-services/report-server-web-service/methods/model-methods-report-server-web-service.md)|Describe métodos que puede utilizar para administrar los modelos.|  
-|[Representación y métodos de ejecución](../../../reporting-services/report-server-web-service/methods/rendering-and-execution-methods.md)|Describe métodos que puede utilizar para administrar la ejecución, representación y almacenamiento en memoria caché de los informes.|  
+|[Métodos de parámetros de informes](../../../reporting-services/report-server-web-service/methods/report-parameters-methods.md)|Describe métodos que puede utilizar para establecer y recuperar los parámetros para los informes.|  
+|[Métodos de modelo: servicio web del servidor de informes](../../../reporting-services/report-server-web-service/methods/model-methods-report-server-web-service.md)|Describe métodos que puede utilizar para administrar los modelos.|  
+|[Métodos de representación y ejecución](../../../reporting-services/report-server-web-service/methods/rendering-and-execution-methods.md)|Describe métodos que puede utilizar para administrar la ejecución, representación y almacenamiento en memoria caché de los informes.|  
 |[Métodos de historial de informes](../../../reporting-services/report-server-web-service/methods/report-history-methods.md)|Describe métodos que puede utilizar para crear y administrar las instantáneas del historial de informes.|  
 |[Métodos de programación](../../../reporting-services/report-server-web-service/methods/scheduling-methods.md)|Describe métodos que puede utilizar para crear y administrar programaciones compartidas y planes de actualización de caché que utiliza el servidor de informes.|  
 |[Métodos de suscripción y entrega](../../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|Describe métodos que puede utilizar para crear y administrar suscripciones y entrega de informes.|  

@@ -21,7 +21,7 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c38fc293a297544710b77b52d054fae58273340e
 ms.contentlocale: es-es
@@ -81,17 +81,17 @@ ms.lasthandoff: 08/09/2017
 |Configurar el tipo de autenticación integrada de Windows.|[Configurar la autenticación de Windows en el servidor de informes](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)|  
 |Configurar el tipo de autenticación básica.|[Configurar la autenticación básica en el servidor de informes](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)|  
 |Configurar la autenticación de formularios o, de lo contrario, un tipo de autenticación personalizada.|[Configurar la autenticación de formularios o personalizada en el servidor de informes](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)|  
-|Permitir al [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] controlar el escenario de autenticación personalizada.|[Configurar el portal web para pasar cookies de autenticación personalizada](http://msdn.microsoft.com/en-us/91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
+|Permitir al [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] controlar el escenario de autenticación personalizada.|[Configuración del portal web para pasar cookies de autenticación personalizada](http://msdn.microsoft.com/en-us/91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+[Conceder permisos en un servidor de informes de modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
 [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Crear y administrar asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
-[Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
+[Especificar credenciales y la información de conexión para orígenes de datos de informe](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+[Implementar una extensión de seguridad](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
 [Configurar conexiones SSL en un servidor de informes de modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
-[Configurar el acceso al Generador de informes](../../reporting-services/report-server/configure-report-builder-access.md)   
+[Configurar el acceso del generador de informes](../../reporting-services/report-server/configure-report-builder-access.md)   
 [Información general de las extensiones de seguridad](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
 [Autenticación en Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)   
 [Autorización en Reporting Services](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  

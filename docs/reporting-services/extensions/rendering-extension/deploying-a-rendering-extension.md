@@ -17,14 +17,14 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 caps.latest.revision: 44
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 260e104d2686ab9111c9b38c2ecf6c5da2fbdb91
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 3fbab7c48a0d522519a9e7ada9cf9c8cb1d40c7b
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="deploying-a-rendering-extension"></a>Implementar una extensión de representación
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
  En la tabla siguiente se describen los atributos para el elemento **Extension** correspondientes a las extensiones de representación:  
   
-|Attribute|Description|  
+|Atributo|Description|  
 |---------------|-----------------|  
 |**Nombre**|Nombre único de la extensión. La longitud máxima para el atributo **Name** es de 255 caracteres. El nombre debe ser único entre todas las entradas dentro del elemento **Extensions** del archivo de configuración. Si hay un nombre duplicado, el servidor de informes devuelve un error.|  
 |**Tipo**|Lista separada por comas que incluye el espacio de nombres completo junto con el nombre del ensamblado.|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 06/22/2017
   
      El valor de **Name** es el nombre único de la extensión de representación. El valor de **tipo** es una lista separada por comas que incluye una entrada para el espacio de nombres completo de su <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> implementación, seguido del nombre del ensamblado (sin incluir la extensión de archivo .dll). De forma predeterminada, las extensiones de representación están visibles. Para ocultar una extensión de las interfaces de usuario, por ejemplo del Administrador de informes, agregue un atributo **Visible** al elemento **Extension** y establézcalo en **false**.  
   
-## <a name="verifying-the-deployment"></a>Comprobar la implementación  
+## <a name="verifying-the-deployment"></a>Comprobación de la implementación  
  Puede abrir también el Administrador de informes y comprobar que la extensión está incluida en la lista de tipos de exportación disponibles para un informe.  
   
 ## <a name="see-also"></a>Vea también  

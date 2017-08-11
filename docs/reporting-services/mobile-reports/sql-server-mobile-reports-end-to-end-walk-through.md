@@ -15,7 +15,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: fc9ca2f7181dbda59726b9c38352c349bcf8a472
 ms.contentlocale: es-es
@@ -37,7 +37,7 @@ Este artículo le guiará para que pueda:
 ## <a name="before-we-start"></a>Antes de empezar  
 Para poder continuar, necesita estos productos:  
   
-* Para crear orígenes de datos y KPI, además de publicar informes móviles y conjuntos de datos, necesita tener acceso a un servidor de informes de [ de [!INCLUDE[ssRSCurrent_md](../../includes/ssrscurrent-md.md)] en modo nativo](https://msdn.microsoft.com/library/ms143711.aspx).  
+* Para crear orígenes de datos y los KPI y publicar informes móviles y los conjuntos de datos, necesita tener acceso a un [!INCLUDE[ssRSCurrent_md](../../includes/ssrscurrent-md.md)] [servidor de informes en modo nativo](https://msdn.microsoft.com/library/ms143711.aspx).  
 * Para [crear conjuntos de datos compartidos](#shared-dataset), necesita [instalar el Generador de informes](https://msdn.microsoft.com/library/ff519551.aspx).  
 * Para crear informes móviles, [instale Publicador de informes móviles de SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766).  
 * [Scripts y bases de datos de ejemplo de AdventureWorks](http://msftdbprodsamples.codeplex.com/).  
@@ -54,7 +54,7 @@ Puede crear un origen de datos compartido para los informes móviles desde cualq
 1. En el portal web de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , haga clic en **Nuevo** > **Origen de datos**.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
-3. Escriba la información del origen de datos > **Aceptar**.  
+3. Escriba la información de origen de datos > **Aceptar**.  
   
     De forma predeterminada, los orígenes de datos no se muestran en el portal.    
    
@@ -235,7 +235,7 @@ Las listas de selección funcionan como segmentaciones en Power BI y Excel. Es p
   
 Ahora que creó objetos visuales en el diseño maestro, puede crear un informe móvil con un diseño específicamente optimizado para los usuarios con teléfono.    
   
-1. En la esquina superior derecha, haga clic en el icono del lienzo > **Teléfono**.  
+1. En la esquina superior derecha, haga clic en el icono de lienzo > **teléfono**.  
   
 2. En la pestaña Diseño, en **Instancias de control**, verá los dos gráficos que creó.   
   

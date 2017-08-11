@@ -1,29 +1,34 @@
 ---
-title: "Index (DTA, elemento) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "Index, elemento (DTA)"
+title: "Índice de elemento (DTA) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- XML
+helpviewer_keywords:
+- Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5d5affde03096be39cb219ecb0bac2e402761622
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Index (DTA, elemento)
+# <a name="index-element-dta"></a>Index, elemento (DTA)
   Contiene información acerca de un índice de una configuración especificada por el usuario que se desea crear o quitar.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 18
     </Index>  
 ```  
   
-## Atributos del elemento  
+## <a name="element-attributes"></a>Atributos del elemento  
   
 |Atributo Index|Tipo de datos|Descripción|  
 |---------------------|---------------|-----------------|  
@@ -49,10 +54,10 @@ caps.handback.revision: 18
 |**CONCAT_NULL_YIELDS_**<br /><br /> **NULL**|**boolean**|Opcional. Determina si los resultados de la concatenación se tratan como valor NULL o como cadena vacía. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index CONCAT_NULL_YIELDS_NULL [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).|  
 |**ANSI_NULLS**|**boolean**|Opcional. Especifica el comportamiento conforme a ISO de los operadores de comparación Es igual a (=) y No es igual a (<>) cuando se utilizan con valores NULL. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index ANSI_NULLS [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).|  
 |**ANSI_PADDING**|**boolean**|Opcional. Controla el modo en que una columna almacena valores inferiores a su tamaño definido. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index ANSI_PADDING [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).|  
-|**ANSI_WARNINGS**|**boolean**|Opcional. Especifica el comportamiento estándar de ISO para diversas condiciones de error. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET ANSI_WARNINGS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md).|  
+|**ANSI_WARNINGS**|**boolean**|Opcional. Especifica el comportamiento estándar de ISO para diversas condiciones de error. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md).|  
 |**NUMERIC_ROUNDABORT**|**boolean**|Opcional. Especifica el nivel de informes de error generados cuando el redondeo en una expresión produce pérdida de precisión. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar desactivado.<br /><br /> La sintaxis siguiente activa este atributo:<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md).|  
   
-## Características de los elementos  
+## <a name="element-characteristics"></a>Características del elemento  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -60,17 +65,17 @@ caps.handback.revision: 18
 |**Valor predeterminado**|Ninguno.|  
 |**Repetición**|Una obligatoria por cada elemento **Create** o **Drop** si no se especifica otra estructura de diseño físico con el elemento **Statistics** o **Heap** .|  
   
-## Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elementos|  
 |------------------|--------------|  
 |**Elemento primario**|[Create &#40;DTA, elemento&#41;](../../tools/dta/create-element-dta.md)<br /><br /> Elemento**Drop** . Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.|  
-|**Elementos secundarios**|[Name &#40;DTA, elemento de Index&#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Column &#40;DTA, elemento de Index&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> Elemento**PartitionScheme** . Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> Elemento**PartitionColumn** . Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> [Filegroup &#40;DTA. elemento de Index&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> Elemento**NumberOfReferences** . Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> Elemento**PercentUsage** . Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.|  
+|**Elementos secundarios**|[Name, elemento de Index &#40; DTA &#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Column &#40;DTA, elemento de Index&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> Elemento**PartitionScheme** . Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> Elemento**PartitionColumn** . Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> [Filegroup &#40;DTA. elemento de Index&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> Elemento**NumberOfReferences** . Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> Elemento**PercentUsage** . Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.|  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de uso de este elemento, vea [Ejemplo de archivo de entrada XML con configuración especificada por el usuario &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

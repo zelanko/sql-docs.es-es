@@ -1,28 +1,33 @@
 ---
-title: "Administrador de conexiones de Hadoop | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.hadoopconn.f1"
+title: Administrador de conexiones de Hadoop | Documentos de Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.hadoopconn.f1
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 79b0782d0d01733f10310f1eaac611fc688dbf21
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Administrador de conexiones de Hadoop
+# <a name="hadoop-connection-manager"></a>Administrador de conexiones de Hadoop
   El Administrador de conexiones de Hadoop permite que un paquete SSIS se conecte a un clúster de Hadoop mediante el uso de los valores especificados para las propiedades.  
   
-## Configuración del Administrador de conexiones de Hadoop  
+## <a name="configure-the-hadoop-connection-manager"></a>Configuración del Administrador de conexiones de Hadoop  
   
 1.  En el cuadro de diálogo **Agregar administrador de conexiones SSIS** , seleccione **Hadoop**y haga clic en **Agregar**. Se abrirá el cuadro de diálogo **Hadoop Connection Manager Editor** (Editor del Administrador de conexiones de Hadoop).  
   
@@ -36,9 +41,9 @@ caps.handback.revision: 7
   
     3.  Seleccione el método **Authentication** (Autenticación) para acceder al servicio WebHCat. Los valores disponibles son **Basic** (Básico) y **Kerberos**.  
   
-         ![Hadoop connection manager editor with basic authentication](../../integration-services/connection-manager/media/hadoop-cm-basic.png "Hadoop connection manager editor with basic authentication")  
+         ![Editor del Administrador de conexiones de Hadoop con la autenticación básica](../../integration-services/connection-manager/media/hadoop-cm-basic.png "editor del Administrador de conexiones de Hadoop con la autenticación básica")  
   
-         ![Hadoop connection manager editor with Kerberos authentication](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Hadoop connection manager editor with Kerberos authentication")  
+         ![Editor del Administrador de conexiones de Hadoop con la autenticación Kerberos](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "editor del Administrador de conexiones de Hadoop con la autenticación Kerberos")  
   
     4.  Para **WebHCat User**(Usuario de WebHCat), escriba el **usuario** autorizado para acceder a WebHCat.  
   
@@ -60,9 +65,9 @@ caps.handback.revision: 7
   
 6.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tarea de Hive de Hadoop](../../integration-services/control-flow/hadoop-hive-task.md)   
  [Tarea de Pig con Hadoop](../../integration-services/control-flow/hadoop-pig-task.md)   
- [Tarea Sistema de archivos de Hadoop](../../integration-services/control-flow/hadoop-file-system-task.md)  
+ [Tarea sistema de archivos de Hadoop](../../integration-services/control-flow/hadoop-file-system-task.md)  
   
   

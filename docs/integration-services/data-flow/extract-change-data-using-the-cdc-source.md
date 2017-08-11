@@ -1,29 +1,34 @@
 ---
-title: "Extraer datos de modificaciones mediante el origen de CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Extraer los datos modificados mediante el origen de CDC | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 343efa882f37276c6921edc72d2bf1e615ff1a18
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Extraer datos de modificaciones mediante el origen de CDC
+# <a name="extract-change-data-using-the-cdc-source"></a>Extraer datos de modificaciones mediante el origen de CDC
   Para agregar y configurar un destino CDC, el paquete ya debe incluir por lo menos una tarea Flujo de datos y una tarea Control CDC.  
   
  Para obtener más información acerca del control CDC, vea [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).  
   
  Para obtener más información acerca del origen de CDC, vea [CDC Source](../../integration-services/data-flow/cdc-source.md).  
   
-### Para extraer los datos modificados mediante un origen de CDC  
+### <a name="to-extract-change-data-using-a-cdc-source"></a>Para extraer los datos modificados mediante un origen de CDC  
   
 1.  En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], abra el proyecto de [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] que contiene el paquete que desea.  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 8
   
 7.  Seleccione o escriba el nombre de la **instancia de captura CDC** con la tabla CDC que se va a leer.  
   
-     Una tabla de origen capturada puede tener una o dos instancias capturadas para controlar que la transición de una definición de tabla a través de los cambios en el esquema se realice sin problemas. Si se define más de una instancia de captura para la tabla de origen que se va a capturar, seleccione aquí la instancia de captura que desee usar. El nombre predeterminado de la instancia de captura para una tabla [esquema].[tabla] es \<esquema>_\<tabla>, pero los nombres de instancia de captura reales en uso podrían ser distintos. La tabla real de la que se lee es la tabla CDC **cdc .\<capture-instance>_CT**.  
+     Una tabla de origen capturada puede tener una o dos instancias capturadas para controlar que la transición de una definición de tabla a través de los cambios en el esquema se realice sin problemas. Si se define más de una instancia de captura para la tabla de origen que se va a capturar, seleccione aquí la instancia de captura que desee usar. El nombre de instancia de captura predeterminado para una tabla [esquema]. [tabla] es \<esquema > _\<tabla >, pero que pueden ser diferentes nombres de instancia de captura reales en uso. La tabla real que se lee desde es la tabla CDC **cdc.\< instancia de captura > _CT**.  
   
 8.  Seleccione el modo de procesamiento que mejor controle las necesidades de procesamiento. Las opciones posibles son:  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 8
   
     -   **Neto**: devuelve una sola fila de cambios por cada fila de origen modificada en el intervalo de procesamiento de CDC actual. Si una fila de origen se actualizó varias veces, se genera el cambio combinado (por ejemplo, se genera insertar+actualizar como una actualización única y se genera actualizar+eliminar como una eliminación única). Al trabajar en el modo de procesamiento de cambios Neto, es posible dividir los cambios en salidas de eliminar, insertar y actualizar y controlarlos todos en paralelo, ya que la fila de origen única aparece en más de un resultado.  
   
-    -   **Neto con máscara de actualización**: este modo es similar al modo Neto normal, pero también agrega columnas booleanas con el patrón de nombre **__$\<column-name>\__Changed** que indica las columnas modificadas en la fila de cambio actual.  
+    -   **Neto con máscara de actualización**: este modo es similar al modo neto normal pero también agrega columnas booleanas con el patrón de nombre **__ $\<nombre de columna >\__Changed** que indica la fila de cambio de las columnas cambiadas en la actual.  
   
     -   **Neto con combinación**: este modo es similar al modo Neto normal, pero con las operaciones de inserción y actualización combinadas en una sola operación de combinación (UPSERT).  
   
@@ -69,9 +74,9 @@ caps.handback.revision: 8
   
 15. Haga clic en **Aceptar**.  
   
-## Vea también  
- [Editor de origen de CDC &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
- [Editor de origen de CDC &#40;página Columnas&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)   
- [Editor de origen de CDC &#40;página Salida de error&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+## <a name="see-also"></a>Vea también  
+ [Editor de origen de CDC &#40; Página Administrador de conexiones &#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
+ [Editor de origen de CDC &#40; Página columnas &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)   
+ [Editor de origen de CDC &#40; Página de salida de error &#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
   

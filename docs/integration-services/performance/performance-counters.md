@@ -1,31 +1,36 @@
 ---
-title: "Performance Counters | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "registros [Integration Services], contadores de rendimiento"
-  - "contadores de rendimiento [Integration Services]"
-  - "flujo de datos [Integration Services], rendimiento"
-  - "contadores [Integration Services]"
-  - "motor de flujo de datos [Integration Services]"
+title: Contadores de rendimiento | Documentos de Microsoft
+ms.custom: 
+ms.date: 08/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [Integration Services], performance counters
+- performance counters [Integration Services]
+- data flow [Integration Services], performance
+- counters [Integration Services]
+- data flow engine [Integration Services]
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 caps.latest.revision: 63
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: ffbc5e8238857651cc35014ce3d4d71976e8f73a
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Performance Counters
+# <a name="performance-counters"></a>Contadores de rendimiento
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala un conjunto de contadores de rendimiento que pueden usarse para supervisar el rendimiento del motor de flujo de datos. Por ejemplo, puede observar el contador "Búferes puestos en cola" para determinar si se están escribiendo búferes de datos en el disco temporalmente mientras se ejecuta un paquete. Este intercambio reduce el rendimiento e indica que el equipo no tiene memoria suficiente.  
   
-> **NOTA:** Si instala [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en un equipo que está ejecutando [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] y, a continuación, actualiza el equipo a [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], el proceso de actualización quita del equipo los contadores de rendimiento de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para restaurar en el equipo los contadores de rendimiento de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ejecute el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de reparación.  
+> **NOTA:** Si instala [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en un equipo que está ejecutando [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]y, a continuación, actualiza el equipo a [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], el proceso de actualización quita del equipo los contadores de rendimiento de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para restaurar en el equipo los contadores de rendimiento de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ejecute el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de reparación.  
   
  En la tabla siguiente se describen los contadores de rendimiento.  
   
@@ -48,8 +53,8 @@ caps.handback.revision: 63
   
  Para obtener información sobre cómo mejorar el rendimiento, vea [Características de rendimiento del flujo de datos](../../integration-services/data-flow/data-flow-performance-features.md).  
   
-## Obtener estadísticas de contadores de rendimiento  
- Para proyectos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que se implementan en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], puede obtener estadísticas de contadores de rendimiento mediante la función [dm_execution_performance_counters &#40;base de datos de SSISDB&#41;](../Topic/dm_execution_performance_counters%20\(SSISDB%20Database\).md).  
+## <a name="obtain-performance-counter-statistics"></a>Obtener estadísticas de contadores de rendimiento  
+ Para proyectos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que se implementan en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], puede obtener estadísticas de contadores de rendimiento mediante la función [dm_execution_performance_counters &#40;base de datos de SSISDB&#41;](../../integration-services/functions-dm-execution-performance-counters.md).  
   
  En el ejemplo siguiente, la función devuelve estadísticas para la ejecución actual con el identificador 34.  
   
@@ -64,17 +69,57 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ```  
   
-> **IMPORTANTE:** Si es miembro del rol de base de datos **ssis_admin**, se devuelven las estadísticas de rendimiento de todas las ejecuciones actuales.  Si no es miembro del rol de base de datos **ssis_admin**, se devuelven las estadísticas de rendimiento de las ejecuciones actuales para las que tiene permisos de lectura.  
+> **IMPORTANTE:** Si es miembro del rol de base de datos **ssis_admin** , se devuelven las estadísticas de rendimiento de todas las ejecuciones actuales.  Si no es miembro del rol de base de datos **ssis_admin** , se devuelven las estadísticas de rendimiento de las ejecuciones actuales para las que tiene permisos de lectura.  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
   
--   Herramienta, [SSIS Performance Visualization for Business Intelligence Development Studio (CodePlex Project)](http://go.microsoft.com/fwlink/?LinkId=146626) (Visualización del rendimiento de SSIS para Business Intelligence Development Studio (proyecto CodePlex)), en codeplex.com.  
+-   Herramienta, [SSIS Performance Visualization for Business Intelligence Development Studio (CodePlex Project)](http://go.microsoft.com/fwlink/?LinkId=146626)(Visualización del rendimiento de SSIS para Business Intelligence Development Studio (proyecto CodePlex)), en codeplex.com.  
   
 -   Vídeo, [Medir y conocer el rendimiento de los paquetes SSIS en la empresa (vídeo de SQL Server)](http://go.microsoft.com/fwlink/?LinkId=150497), en msdn.microsoft.com.  
   
 -   Artículo de soporte técnico, [El contador de rendimiento de SSIS ya no está disponible en el monitor de rendimiento después de actualizar a Windows Server 2008](http://go.microsoft.com/fwlink/?LinkId=235319), en support.microsoft.com.  
+
+## <a name="add-a-log-for-data-flow-performance-counters"></a>Agregar un registro para los contadores de rendimiento del flujo de datos
+  Este procedimiento describe cómo agregar un registro para los contadores de rendimiento que proporciona el motor de flujo de datos.  
   
-## Vea también  
- [Ejecución de proyectos y paquetes](https://msdn.microsoft.com/library/ms141708.aspx)  
+> [!NOTE]  
+>  Si instala [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en un equipo que está ejecutando [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]y, a continuación, actualiza el equipo a [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], el proceso de actualización quita del equipo los contadores de rendimiento de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para restaurar en el equipo los contadores de rendimiento de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ejecute el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de reparación.  
   
+### <a name="to-add-logging-of-performance-counters"></a>Para agregar un registro de contadores de rendimiento  
   
+1.  En el **Panel de control**, si utiliza la Vista clásica, haga clic en **Herramientas administrativas**. Si utiliza la Vista por categorías, haga clic en **Rendimiento y mantenimiento** y, a continuación, en **Herramientas administrativas**.  
+  
+2.  Haga clic en **Rendimiento**.  
+  
+3.  En el cuadro de diálogo **Rendimiento** , expanda **Registros y alertas de rendimiento**, haga clic con el botón derecho en **Registros de contador**y, después, haga clic en **Nueva configuración de registro**. Escriba el nombre del registro. Por ejemplo, escriba **miRegistro**.  
+  
+4.  Haga clic en **Aceptar**.  
+  
+5.  En el cuadro de diálogo **miRegistro** , haga clic en **Agregar contadores**.  
+  
+6.  Haga clic en **Usar contadores del equipo local** para registrar los contadores de rendimiento en el equipo local o bien, haga clic en **Seleccionar contadores del equipo** y seleccione un equipo de la lista para registrar los contadores de rendimiento en el equipo especificado.  
+  
+7.  En el cuadro de diálogo **Agregar contadores** , seleccione **SQL Server:SSIS Pipeline** en la lista **Objeto de rendimiento** .  
+  
+8.  Para seleccionar los contadores de rendimiento, siga uno de estos procedimientos:  
+  
+    -   Seleccione **Todos los contadores** para registrar todos los contadores de rendimiento.  
+  
+    -   Elija **Seleccionar contadores de la lista** y seleccione los contadores de rendimiento que desee utilizar.  
+  
+9. Haga clic en **Agregar**.  
+  
+10. Haga clic en **Cerrar**.  
+  
+11. En el cuadro de diálogo **miRegistro** , revise la lista de contadores de rendimiento del registro en la lista **Contadores** .  
+  
+12. Para agregar más contadores, repita los pasos 5 a 10.  
+  
+13. Haga clic en **Aceptar**.  
+  
+    > [!NOTE]  
+    >  Debe iniciar el servicio Registros y alertas de rendimiento con una cuenta local o de dominio que sea miembro del grupo Administradores.  
+
+## <a name="see-also"></a>Vea también  
+ [Ejecución de proyectos y paquetes](https://msdn.microsoft.com/library/ms141708.aspx) [eventos registrados por un paquete de Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+

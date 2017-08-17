@@ -1,7 +1,7 @@
 ---
 title: Descargar SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: 
-ms.date: 05/18/2017
+ms.date: 08/07/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,74 +15,76 @@ ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 caps.latest.revision: 113
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
-ms.openlocfilehash: 7aaa4c48419bf24357b2bef95c40d721d1ab2f2a
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
+ms.openlocfilehash: 4bcceaeca15c3fa20cd797bda0182cf48f73a730
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>Descargar SQL Server Data Tools (SSDT)
 
-**[SQL Server Data Tools](https://msdn.microsoft.com/mt186501)** es una herramienta de desarrollo moderna que puede descargar de forma gratuita para crear bases de datos relacionales de SQL Server, bases de datos SQL de Azure, paquetes de Integration Services, modelos de datos de Analysis Services e informes de Reporting Services. Gracias a SSDT, puede diseñar e implementar cualquier tipo de contenido de SQL Server con la misma facilidad con la que desarrollaría una aplicación en Visual Studio. Esta versión es compatible con las versiones comprendidas entre SQL Server 2005 y SQL Server 2017, y ofrece el entorno de diseño necesario para agregar características nuevas de SQL Server 2016.  
+**[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** es una herramienta de desarrollo moderna que puede descargar de forma gratuita para crear bases de datos relacionales de SQL Server, bases de datos SQL de Azure, paquetes de Integration Services, modelos de datos de Analysis Services e informes de Reporting Services. Gracias a SSDT, puede diseñar e implementar cualquier tipo de contenido de SQL Server con la misma facilidad con la que desarrollaría una aplicación en Visual Studio. Esta versión es compatible con las versiones comprendidas entre SQL Server 2005 y SQL Server 2017, y ofrece el entorno de diseño necesario para agregar características nuevas de SQL Server.  
     
     
-![descarga](../ssdt/media/download.png) [Descargar SQL Server Data Tools 17.1 para Visual Studio 2015](https://go.microsoft.com/fwlink/?linkid=849393)
+![descarga](../ssdt/media/download.png) [Descargar SQL Server Data Tools 17.2 para Visual Studio 2015](https://go.microsoft.com/fwlink/?linkid=852922)
 
-![descarga](../ssdt/media/download.png) [Descargar Data-Tier Application Framework (DacFx) 17.1](https://www.microsoft.com/download/details.aspx?id=55255)
+![descarga](../ssdt/media/download.png) [Descargar Data-Tier Application Framework (DacFx) 17.2](https://www.microsoft.com/download/details.aspx?id=55713)
 
 ## <a name="sql-server-data-tools"></a>SQL Server Data Tools   
 **Información de versión**  
   
-Número de versión: 17.1  
-Número de compilación para esta versión: 14.0.61705.170
+Número de versión: 17.2  
+Número de compilación para esta versión: 14.0.61707.300
   
- **Novedades**
- - Compatibilidad sin conexión con IntelliSense de AS no relacionado con el modelo (por ejemplo, resaltado, finalización de instrucciones e información de parámetros)
- - Adición al Explorador de modelos tabulares para mostrar expresiones M
- - Selector de personas de Azure Active Directory para configurar miembros de rol en modelos tabulares
- - Compatibilidad con la codificación de sugerencias en la interfaz de usuario al definir modelos 1400
- - Varias correcciones de errores de proyectos de AS
- - Varias correcciones de errores de DacFx
+**Novedades**
 
- **Problemas conocidos**
- - Al crear un origen de datos en un modelo de AS del nivel de compatibilidad 1400, si selecciona un origen de datos basado en archivos y presiona Cancelar antes de crear el origen de datos, el editor tabular (Model.bim) pasará a ser de solo lectura. Para solucionar este problema, simplemente cierre el editor tabular y ábralo desde el Explorador de soluciones.
+**AS**
 
-Lista completa de cambios disponible en el [registro de cambios](changelog-for-sql-server-data-tools-ssdt.md)
+- Ahora puede configurarse la seguridad de nivel de objeto en el cuadro de diálogo Roles de seguridad avanzada en modelos tabulares de nivel de compatibilidad 1400.
+- Nueva selección de miembros del rol de AAD para usuarios sin direcciones de correo electrónico en modelos de Azure AS en proyectos de AS de SSDT para VS2017.
+- Nueva propiedad de proyecto "Preguntar siempre" en proyectos tabulares de AS de SSDT para personalizar el comportamiento del almacenamiento en caché de credenciales de ADAL.
 
- > Para usar SQL Server Data Tools en Visual Studio 2017, vea [esta sección](#use-ssdt-in-visual-studio-2017) más adelante.
+
+**Problemas conocidos**
+
+- Para ver la lista completa de cambios, consulte el [registro de cambios](changelog-for-sql-server-data-tools-ssdt.md).
+- Notifique problemas en el sitio de [comentarios de Connect sobre SSDT](https://connect.microsoft.com/SQLServer/Feedback).
+
+> [!NOTE]
+> Para usar SQL Server Data Tools en Visual Studio 2017, vea [esta sección](#use-ssdt-in-visual-studio-2017) más adelante.
 
   **Idiomas disponibles**  
   
  Esta versión de SSDT puede instalarse en los idiomas siguientes:  
-[Chino (República Popular China)]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x804) | 
-[Chino (Taiwán)]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x404) | 
-[Inglés (Estados Unidos)]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x409) | 
-[Francés]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x40c)  
-[Alemán]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x407) | 
-[Italiano]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x410) | 
-[Japonés]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x411) | 
-[Coreano]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x412) | 
-[Portugués (Brasil)]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x416) | 
-[Ruso]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x419) | 
-[Español]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x40a)  
+[Chino (República Popular China)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x804) | 
+[Chino (Taiwán)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x404) | 
+[Inglés (Estados Unidos)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x409) | 
+[Francés]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x40c)  
+[Alemán]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x407) | 
+[Italiano]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x410) | 
+[Japonés]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x411) | 
+[Coreano]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x412) | 
+[Portugués (Brasil)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x416) | 
+[Ruso]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x419) | 
+[Español]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x40a)  
 
 **Imágenes ISO**
 
 Una imagen ISO de SSDT puede usarse como forma alternativa de instalar SSDT o configurar un punto de instalación administrativa. ISO es un archivo autocontenido que contiene todos los componentes que necesita SSDT y puede descargarse con un administrador de descargas reiniciable, útil en situaciones con ancho de banda de red limitado o menos confiable. Una vez descargado, el ISO puede montarse como una unidad o copiarse en un DVD.
 
-[Chino (República Popular China)]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x804) |
-[Chino (Taiwán)]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x404) |
-[Inglés (Estados Unidos)]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x409) |
-[Francés]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x40c)  
-[Alemán]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x407) |
-[Italiano]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x410) |
-[Japonés]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x411) |
-[Coreano]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x412) |
-[Portugués (Brasil)]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x416) |
-[Ruso]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x419) |
-[Español]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x40a)
+[Chino (República Popular China)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x804) |
+[Chino (Taiwán)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x404) |
+[Inglés (Estados Unidos)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x409) |
+[Francés]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x40c)  
+[Alemán]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x407) |
+[Italiano]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x410) |
+[Japonés]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x411) |
+[Coreano]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x412) |
+[Portugués (Brasil)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x416) |
+[Ruso]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x419) |
+[Español]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x40a)
 
 ## <a name="download-visual-studio"></a>Descargar Visual Studio
 

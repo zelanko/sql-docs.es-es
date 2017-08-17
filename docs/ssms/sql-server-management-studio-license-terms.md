@@ -14,11 +14,11 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 51c7de44c90a78293fc3777a92261e30fbc5f28c
+ms.translationtype: HT
+ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
+ms.openlocfilehash: 0569452520fad4183c4de2f15c59c7ca3a37586b
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio: términos de licencia
@@ -110,11 +110,13 @@ de Microsoft para este software, a menos que haya otros términos que acompañen
   
 **11.   EFECTO LEGAL.** Este contrato describe determinados derechos legales. Usted puede tener otros derechos conforme a las leyes de su estado o país. También puede tener derechos respecto a la parte de la que adquirió el software. Este contrato no cambia sus derechos bajo las leyes de su país o estado si dichas leyes no permiten que así lo haga.  
   
-**12.   EXCLUSIÓN DE GARANTÍA. La licencia del software se otorga "tal cual". El usuario asume el riesgo de su uso. Microsoft no otorga ninguna garantía ni condición explícitas. Es posible que la legislación local le otorgue derechos de consumidor o garantías legales adicionales que el presente contrato no pueda modificar. En la medida en que así lo permita la legislación local, Microsoft excluye las garantías implícitas de comerciabilidad, idoneidad para un fin particular y ausencia de infracción de derechos.**  
+**12.   El software puede incluir versiones preliminares, beta u otras características de versiones preliminares, o software, ofrecidas por Microsoft, como se describe en la documentación. LAS VERSIONES PRELIMINARES SE PROPORCIONAN "TAL CUAL", "CON TODOS LOS DEFECTOS" Y "EN FUNCIÓN DE LA DISPONIBILIDAD" Y SE EXCLUYEN DE LOS CONTRATOS DE NIVEL DE SERVICIO Y LA GARANTÍA LIMITADA. Es posible que las versiones preliminares no estén incluidas en el soporte técnico al cliente. Las versiones preliminares pueden estar sujetas a compromisos de seguridad, cumplimiento y privacidad reducidos o diferentes. Podemos cambiar o interrumpir las versiones preliminares en cualquier momento sin previo aviso. También podemos optar por no publicar una versión preliminar en "Disponibilidad general".**
+
+**13.   EXCLUSIÓN DE GARANTÍA. La licencia del software se otorga "tal cual". El usuario asume el riesgo de su uso. Microsoft no otorga ninguna garantía ni condición explícitas. Es posible que la legislación local le otorgue derechos de consumidor o garantías legales adicionales que el presente contrato no pueda modificar. En la medida en que así lo permita la legislación local, Microsoft excluye las garantías implícitas de comerciabilidad, idoneidad para un fin particular y ausencia de infracción de derechos.**  
   
 **PARA AUSTRALIA: Usted cuenta con garantías legales conforme a la ley Australiana del consumidor y nada en estos términos pretende afectar dichos derechos.**  
   
-**13.   LIMITACIÓN Y EXCLUSIÓN DE RECURSOS E INDEMNIZACIONES. La cantidad máxima que se podrá obtener de Microsoft y de sus proveedores en concepto de indemnización por daños directos será de 5 dólares estadounidenses. No podrá obtener indemnización alguna por daños de otra índole, incluidos los daños consecuenciales, por lucro cesante, especiales, indirectos o incidentales.**  
+**14.   LIMITACIÓN Y EXCLUSIÓN DE RECURSOS E INDEMNIZACIONES. La cantidad máxima que se podrá obtener de Microsoft y de sus proveedores en concepto de indemnización por daños directos será de 5 dólares estadounidenses. No podrá obtener indemnización alguna por daños de otra índole, incluidos los daños consecuenciales, por lucro cesante, especiales, indirectos o incidentales.**  
 Esta limitación se aplica a  
 * cualquier tema relacionado con el software, servicios, contenido (incluido el código) en sitios de Internet de terceros, o programas de terceros, así como a  
 * reclamaciones por incumplimiento de contrato, incumplimiento de garantía, condición impuesta, responsabilidad estricta, negligencia u otro agravio hasta el límite permitido por la ley vigente.  

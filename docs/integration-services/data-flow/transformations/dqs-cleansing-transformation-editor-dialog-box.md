@@ -52,7 +52,7 @@ ms.lasthandoff: 08/03/2017
  Seleccione un administrador de conexiones DQS existente de la lista, o bien haga clic en **Nuevo**para crear una conexión.  
   
  **Nuevo**  
- Cree un administrador de conexiones con el cuadro de diálogo **Administrador de conexiones de limpieza de DQS** . Vea [Set the options in the DQS Cleansing Connection Manager dialog box](#manager).  
+ Cree un administrador de conexiones con el cuadro de diálogo **Administrador de conexiones de limpieza de DQS** . Vea [Establecer las opciones en el cuadro de diálogo Administrador de conexiones de limpieza de DQS](#manager)  
   
  **Base de conocimiento de calidad de datos**  
  Seleccione una base de conocimiento de DQS existente para el origen de datos conectado. Para obtener más información acerca de la base de conocimiento de DQS, vea [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md).  

@@ -31,7 +31,7 @@ ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="debugging-control-flow"></a>Depurar el flujo de control
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features y tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluyen características y herramientas que necesita para solucionar los problemas del flujo de control en un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite puntos de interrupción en contenedores y tareas.  
   

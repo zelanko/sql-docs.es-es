@@ -16,11 +16,11 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 16d16229a267564977addc768e04e804d0b163cf
+ms.translationtype: HT
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 376e591e28bbdddbd635392b24c3d6652f3bd94d
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introducción a los permisos de los motores de bases de datos
@@ -168,7 +168,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  Para ver un gráfico que muestra las relaciones entre las entidades de seguridad de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] y los objetos de servidor y base de datos, consulte [Permissions Hierarchy &#40;Database Engine&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md) (Jerarquía de permisos [motor de base de datos]).  
   
 ## <a name="permissions-vs-fixed-server-and-fixed-database-roles"></a>Permisos y roles fijos de servidor y de base de datos  
- Los permisos de los roles fijos de servidor y roles fijos de base de datos son similares a los permisos granulares, pero no son exactamente iguales. Por ejemplo, los miembros del rol fijo de servidor `sysadmin` tienen todos los permisos en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], igual que los inicios de sesión con el permiso `CONTROL SERVER` . Pero la concesión del permiso `CONTROL SERVER` no convierte un inicio de sesión en miembro del rol fijo de servidor sysadmin, y agregar un inicio de sesión al rol fijo de servidor de  `sysadmin` no concede explícitamente el permiso  `CONTROL SERVER` al inicio de sesión. A veces, un procedimiento almacenado comprobará los permisos comprobando el rol fijo sin comprobar el permiso granular. Por ejemplo, para desasociar una base de datos es necesaria la pertenencia al rol fijo de base de datos `db_owner` . El permiso equivalente `CONTROL DATABASE` no es suficiente. Estos dos sistemas operan en paralelo, pero rara vez interactúan entre sí. Microsoft recomienda utilizar el sistema de permisos granulares más reciente en lugar de los roles fijos siempre que sea posible.  
+ Los permisos de los roles fijos de servidor y roles fijos de base de datos son similares a los permisos granulares, pero no son exactamente iguales. Por ejemplo, los miembros del rol fijo de servidor `sysadmin` tienen todos los permisos en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], igual que los inicios de sesión con el permiso `CONTROL SERVER` . Pero la concesión del permiso `CONTROL SERVER` no convierte un inicio de sesión en miembro del rol fijo de servidor sysadmin, y agregar un inicio de sesión al rol fijo de servidor `sysadmin` no concede explícitamente el permiso `CONTROL SERVER` al inicio de sesión. A veces, un procedimiento almacenado comprobará los permisos comprobando el rol fijo sin comprobar el permiso granular. Por ejemplo, para desasociar una base de datos es necesaria la pertenencia al rol fijo de base de datos `db_owner` . El permiso equivalente `CONTROL DATABASE` no es suficiente. Estos dos sistemas operan en paralelo, pero rara vez interactúan entre sí. Microsoft recomienda utilizar el sistema de permisos granulares más reciente en lugar de los roles fijos siempre que sea posible.
   
 ## <a name="monitoring-permissions"></a>Supervisión de permisos  
  Las vistas siguientes devuelven información de seguridad.  

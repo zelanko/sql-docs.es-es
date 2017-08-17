@@ -15,11 +15,11 @@ caps.latest.revision: 23
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b16232d4a183a75dd9cf76e57ca0751df19e3a2f
+ms.translationtype: HT
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 16e5ac5c58c00568541aa10352b11017c1bd9d3e
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="columnstore-indexes---query-performance"></a>Rendimiento de las consultas de índices de almacén de columnas
@@ -116,13 +116,17 @@ ms.lasthandoff: 06/22/2017
  ¹Se aplica a SQL Server 2016, Base de datos SQL V12 Premium Edition y Almacenamiento de datos SQL    
     
 ### <a name="aggregate-pushdown"></a>Aplicación de agregados    
- Ruta de acceso de ejecución normal para el cálculo de agregados para capturar las filas calificadas desde el nodo SCAN y agregar los valores en el modo por lotes.  Aunque esto proporciona un buen rendimiento, con SQL Server 2016, la operación de agregación se puede insertar en el nodo SCAN para mejorar el rendimiento del cálculo de la agregación mediante órdenes de magnitud en la parte superior de la ejecución en el modo por lotes una vez que se cumplan las condiciones siguientes    
-    
--   Los operadores de agregación admitidos son MIN, MAX, SUM, COUNT y AVG    
-    
--   Cualquier tipo de datos < = 64 bits es compatible.  Por ejemplo, bigint es compatible ya que tiene un tamaño de 8 bytes, pero el decimal (38,6) no lo es porque su tamaño es de 17 bytes. Además, no se admite ningún tipo de cadena    
-    
--   El operador de agregación debe estar en la parte superior del nodo SCAN o el nodo SCAN con group by    
+ Ruta de acceso de ejecución normal para el cálculo de agregados para capturar las filas calificadas desde el nodo SCAN y agregar los valores en el modo por lotes.  Aunque esto proporciona un buen rendimiento, con SQL Server 2016, la operación de agregación se puede insertar en el nodo SCAN para mejorar el rendimiento del cálculo de la agregación mediante órdenes de magnitud en la parte superior de la ejecución en el modo por lotes una vez que se cumplan las condiciones siguientes 
+ 
+-    Los agregados son MIN, MAX, SUM, COUNT y COUNT(*). 
+-  El operador de agregación debe estar en la parte superior del nodo SCAN o el nodo SCAN con group by.
+-  Este agregado no es un agregado Distinct.
+-  La columna de agregado no es una columna de cadena.
+-  La columna de agregado no es una columna virtual. 
+-  El tipo de datos de entrada y salida debe ser uno de los siguientes y debe tener 64 bits o menos.
+    -  Tiny int, int, big int, small int, bit
+    -  Small money, money, decimal y numeric que tiene una precisión <= 18
+    -  Small date, date, datetime, datetime2, time
     
  La aplicación de la agregación se acelera aún más con la agregación eficaz en datos comprimidos/codificados en la ejecución compatible con la caché y el aprovechamiento de SIMD    
     

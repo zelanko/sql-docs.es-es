@@ -19,11 +19,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e64df57000934aca3d532b34a46c799e4a74e542
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="print-query-results-visual-database-tools"></a>Imprimir los resultados de una consulta (Visual Database Tools)
@@ -44,6 +44,6 @@ El Diseñador de consultas y vistas coloca los resultados de la consulta en el P
 5.  Dé formato a los resultados e imprímalos.  
   
 ## <a name="see-also"></a>Vea también  
-[Realizar operaciones básicas con consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Realizar operaciones básicas con consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
 

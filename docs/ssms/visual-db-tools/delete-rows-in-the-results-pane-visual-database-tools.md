@@ -22,15 +22,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: cef300f5851e64620787d1dec2ca0b2d6fe114f9
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>Eliminar filas en el panel Resultados (Visual Database Tools)
-Elimine las filas en el panel Resultados si desea quitar los registros en la base de datos. Si desea eliminar todas las filas, puede utilizar una consulta Delete. Para más información, consulte [Create Delete Queries &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md). Si desea eliminar las filas únicamente en el panel Resultados, cambie los criterios de la consulta. Para más información, consulte [Specify Search Criteria &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
+Elimine las filas en el panel Resultados si desea quitar los registros en la base de datos. Si desea eliminar todas las filas, puede utilizar una consulta Delete. Para más información, consulte [Crear consultas de eliminación &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md). Si desea eliminar las filas únicamente en el panel Resultados, cambie los criterios de la consulta. Para más información, consulte [Especificar criterios de búsqueda &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
   
 ### <a name="to-delete-a-row-or-rows"></a>Para eliminar una o varias filas  
   
@@ -47,7 +47,7 @@ Elimine las filas en el panel Resultados si desea quitar los registros en la bas
 > Si alguna de las filas seleccionadas no se pudiera eliminar de la base de datos, no se suprimirá ninguna y aparecerá un mensaje en el que se indicarán las filas que no se han podido eliminar.  
   
 ## <a name="see-also"></a>Vea también  
-[Crear consultas de eliminación &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md)  
-[Especificar criterios de búsqueda &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Crear consultas de eliminación &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md)  
+[Especificar criterios de búsqueda &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
 

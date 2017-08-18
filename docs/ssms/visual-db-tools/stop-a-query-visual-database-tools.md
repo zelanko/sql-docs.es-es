@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 77ca92438e8ccab3b0e367253ba8a193fc407d6c
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="stop-a-query-visual-database-tools"></a>Detener una consulta (Visual Database Tools)
@@ -33,8 +33,8 @@ Si ve que la consulta está tardando demasiado tiempo o que no devuelve los resu
 -   Haga clic con el botón derecho en cualquier parte del [panel Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md), seleccione **Panel**en el menú contextual y, luego, haga clic en **Borrar resultados**.  
   
 ## <a name="see-also"></a>Vea también  
-[Borrar los resultados de una consulta &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  
-[Ejecutar consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
-[Realizar operaciones básicas con consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Borrar los resultados de una consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  
+[Ejecutar consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
+[Realizar operaciones básicas con consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
 

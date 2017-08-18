@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1fd890f8a6c63bd6da3d92896c6e7d481d0a110d
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>Modificar operadores de combinación (Visual Database Tools)
@@ -37,8 +37,8 @@ De forma predeterminada, el [Diseñador de consultas y vistas](../../ssms/visual
 3.  En el cuadro de diálogo **Combinación** , seleccione un nuevo operador.  
   
 ## <a name="see-also"></a>Vea también  
-[Combinar tablas automáticamente &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)  
-[Combinar tablas manualmente &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/join-tables-manually-visual-database-tools.md)  
-[Realizar consultas con combinaciones &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
+[Combinar tablas automáticamente &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)  
+[Combinar tablas manualmente &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-manually-visual-database-tools.md)  
+[Realizar consultas con combinaciones &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   
 

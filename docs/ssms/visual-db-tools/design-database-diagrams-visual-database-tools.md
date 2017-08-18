@@ -22,11 +22,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 39d9220dc13546a5a1e9c95d034b5a5cf0ac43b5
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>Diseñar diagramas de base de datos (Visual Database Tools)
@@ -43,7 +43,7 @@ En un diagrama de base de datos, cada tabla puede aparecer con tres característ
   
 **Barra de título** La barra de título muestra el nombre de la tabla  
   
-Si ha modificado una tabla y no la ha guardado todavía, aparecerá un asterisco (*) al final del nombre de la tabla que indica que hay cambios no guardados. Para información sobre cómo guardar tablas y diagramas modificados, consulte [Work with Database Diagrams &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+Si ha modificado una tabla y no la ha guardado todavía, aparecerá un asterisco (*) al final del nombre de la tabla que indica que hay cambios no guardados. Para información sobre cómo guardar tablas y diagramas modificados, consulte [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 **Selector de fila** Puede hacer clic en el selector de fila para seleccionar una columna de base de datos de la tabla. El selector de fila muestra un símbolo de clave si la columna se encuentra en la clave principal de la tabla. Para información sobre las claves principales, consulte [Trabajar con claves (Visual Database Tools)](http://msdn.microsoft.com/en-us/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd).  
   
@@ -61,19 +61,19 @@ En un diagrama de base de datos, cada relación puede aparecer con tres caracter
 **Tablas relacionadas** Una relación de clave externa entre dos tablas se indica mediante una línea de relación entre ellas. En el caso de una relación de uno a varios, la tabla de clave externa es la tabla situada cerca del símbolo en forma de ocho de la línea. Si ambos extremos de la línea están conectados a la misma tabla, la relación es reflexiva. Para más información, consulte [Dibujar relaciones reflexivas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/draw-reflexive-relationships-visual-database-tools.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
-[Descripción de la propiedad de un diagrama de base de datos &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
+[Descripción de la propiedad de un diagrama de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
   
-[Desplazarse por el Diseñador de diagramas de base de datos &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/navigate-in-database-diagram-designer-visual-database-tools.md)  
+[Desplazarse por el Diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/navigate-in-database-diagram-designer-visual-database-tools.md)  
   
-[Configurar el Diseñador de diagramas de base de datos &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
+[Configurar el Diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
   
-[Actualizar diagramas de base de datos de ediciones anteriores &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)  
+[Actualizar diagramas de base de datos de ediciones anteriores &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)  
   
-[Abrir el Diseñador de diagramas de base de datos &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/open-database-diagram-designer-visual-database-tools.md)  
+[Abrir el Diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-database-diagram-designer-visual-database-tools.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Trabajar con diagramas de base de datos &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[Trabajar con tablas en diagramas de base de datos &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
-[Trabajar con el diseño de diagramas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
+[Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Trabajar con tablas en diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
+[Trabajar con el diseño de diagramas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
   
 

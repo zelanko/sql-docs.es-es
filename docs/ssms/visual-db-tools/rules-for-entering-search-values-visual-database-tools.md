@@ -24,11 +24,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 96cd179445fcab211321ccf4e89f6fbce5792230
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>Reglas para especificar valores de búsqueda (Visual Database Tools)
@@ -118,7 +118,7 @@ El Diseñador de consultas y vistas permite trabajar con los siguientes formatos
   
 En la tabla siguiente se resumen los formatos de fecha que se pueden utilizar en los distintos paneles del Diseñador de consultas y vistas.  
   
-|**Panell**|**Formato de fecha**|  
+|**Panel**|**Formato de fecha**|  
 |------------|-------------------|  
 |Criterios|Específico de la configuración regional Específico de la base de datos Estándar ANSI<br /><br />Las fechas escritas en el [panel Criterios](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) se convierten a un formato compatible con la base de datos en el panel SQL.|  
 |SQL|Específico de la base de datos Estándar ANSI|  
@@ -149,6 +149,6 @@ El formato de los datos lógicos varía de una base de datos a otra. Los valores
     ```  
   
 ## <a name="see-also"></a>Vea también  
-[Especificar criterios de búsqueda &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Especificar criterios de búsqueda &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
 

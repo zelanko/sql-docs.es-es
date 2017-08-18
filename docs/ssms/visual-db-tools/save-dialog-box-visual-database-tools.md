@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b9bb3d6b6f64dae6aa3fc79494fd85730b380daf
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>Guardar (cuadro de diálogo, Visual Database Tools)
@@ -38,6 +38,6 @@ Especifica si este cuadro de diálogo aparecerá la próxima vez que guarde las 
 Muestra el cuadro de diálogo **Guardar como** , que permite especificar una ubicación para guardar el archivo de texto que contiene la lista de tablas. Este archivo proporciona una lista de las tablas afectadas por los cambios realizados.  
   
 ## <a name="see-also"></a>Vea también  
-[Diseñar tablas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[Diseñar tablas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   
 

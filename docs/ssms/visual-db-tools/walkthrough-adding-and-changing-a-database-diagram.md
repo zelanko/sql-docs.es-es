@@ -18,11 +18,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f2c1a211f11917f54f0f2c69bd2d1b96034cba41
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Visita guiada: Agregar y modificar un diagrama de base de datos
@@ -211,12 +211,12 @@ Este diagrama es básico, únicamente con dos tablas existentes y otras dos nuev
 -   Copiar el diagrama en un mapa de bits  
   
 ## <a name="see-also"></a>Vea también  
-[Personalizar la cantidad de información mostrada en los diagramas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)  
-[Configurar el Diseñador de diagramas de base de datos &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
-[Agregar tablas a diagramas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
-[Crear relaciones entre tablas en un diagrama &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-relationships-between-tables-on-a-diagram-visual-database-tools.md)  
+[Personalizar la cantidad de información mostrada en los diagramas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)  
+[Configurar el Diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
+[Agregar tablas a diagramas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
+[Crear relaciones entre tablas en un diagrama &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-relationships-between-tables-on-a-diagram-visual-database-tools.md)  
 [Crear índices XML](http://msdn.microsoft.com/en-us/6ecac598-355d-4408-baf7-1b2e8d4cf7c1)  
-[Copiar una imagen del diagrama de base de datos en el Portapapeles &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)  
-[Trabajar con el diseño de diagramas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
+[Copiar una imagen del diagrama de base de datos en el Portapapeles &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)  
+[Trabajar con el diseño de diagramas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
   
 

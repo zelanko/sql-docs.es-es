@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fa969625800cb179e37b13046e3823bf55fa7ade
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools"></a>Copiar una imagen del diagrama de base de datos en el Portapapeles (Visual Database Tools)
@@ -39,6 +39,6 @@ Puede crear una imagen del diagrama de base de datos y copiarla en otra aplicaci
     La imagen del diagrama de base de datos completo se copia en el Portapapeles del sistema.  
   
 ## <a name="see-also"></a>Vea también  
-[Trabajar con diagramas de base de datos &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 

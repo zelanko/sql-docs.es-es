@@ -21,18 +21,18 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ef92982f0b86b25fad049f444416ed5afb43fd85
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>Quitar columnas de los resultados de una consulta (Visual Database Tools)
 Si utiliza una columna en una Consulta de selección pero no desea mostrarla en el conjunto de resultados (es decir, no desea mostrarla en la lista SELECT de la consulta), puede quitarla de los resultados. Después de quitar la columna de los resultados de la consulta, podrá seguir utilizándola en las condiciones de búsqueda o como un campo de ordenación.  
   
 > [!NOTE]  
-> Si desea quitar definitivamente una columna de la consulta, vea [Remove Columns from Queries &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-queries-visual-database-tools.md).  
+> Si desea quitar definitivamente una columna de la consulta, vea [Quitar columnas de las consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-queries-visual-database-tools.md).  
   
 ### <a name="to-remove-a-column-from-the-query-output"></a>Para quitar una columna del resultado de una consulta  
   
@@ -43,10 +43,10 @@ Si utiliza una columna en una Consulta de selección pero no desea mostrarla en 
 -   Quite la columna de la lista de resultados del [panel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
 ## <a name="see-also"></a>Vea también  
-[Agregar columnas a las consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)  
-[Quitar columnas de las consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/remove-columns-from-queries-visual-database-tools.md)  
-[Ordenar y agrupar los resultados de una consulta &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
-[Resumir los resultados de una consulta &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
-[Realizar operaciones básicas con consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Agregar columnas a las consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)  
+[Quitar columnas de las consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-queries-visual-database-tools.md)  
+[Ordenar y agrupar los resultados de una consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Resumir los resultados de una consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
+[Realizar operaciones básicas con consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
 

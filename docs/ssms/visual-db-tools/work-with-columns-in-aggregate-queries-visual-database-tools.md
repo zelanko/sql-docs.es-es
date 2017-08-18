@@ -19,11 +19,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 64aee66141249bc2a1848f6a65ec9683c73dc429
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Trabajar con columnas en consultas de funciones agregadas (Visual Database Tools)
@@ -71,7 +71,7 @@ Los principios siguientes describen cómo puede hacer referencia a columnas de u
 -   Si utiliza una función de agregado en una condición de búsqueda, la condición requiere un resumen y, por lo tanto, debe formar parte de la cláusula HAVING.  
   
 ## <a name="see-also"></a>Vea también  
-[Resumir los resultados de una consulta &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
-[Ordenar y agrupar los resultados de una consulta &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Resumir los resultados de una consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
+[Ordenar y agrupar los resultados de una consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   
 

@@ -23,11 +23,11 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 90cb8e5af3fa8e3e86639e7cffa3f9fb97368c45
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="monitor-replication-agents"></a>Supervisar agentes de replicación
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
      Obtenga acceso a la información y a las tareas asociadas a cada uno de estos agentes a través de las siguientes pestañas: **Lista de supervisión de suscripciones** (disponible para todos los publicadores) o **Todas las suscripciones** (disponible para todas las publicaciones). Para obtener más información, vea [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>Usar SQL Server Management Studio para supervisar agentes de replicación  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] provides the following dialog boxes for monitoring replication agents:  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] proporciona los siguientes cuadros de diálogo para supervisar agentes de replicación:  
   
 -   **Ver estado del Agente de instantáneas** (para todas las publicaciones)  
   

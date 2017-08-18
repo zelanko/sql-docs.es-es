@@ -16,17 +16,17 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0b2d75f1354337a4df50386d56311394c3f554b6
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-comment-dialog-box-visual-database-tools"></a>Comentario de SQL (cuadro de diálogo, Visual Database Tools)
 Este cuadro de diálogo proporciona un área modificable en la que se puede escribir una descripción detallada de la consulta. Para obtener acceso a este cuadro de diálogo, abra la consulta o la vista en el Diseñador de consultas y vistas y, en la ventana **Propiedades** , seleccione **Comentario SQL**y haga clic en los puntos suspensivos (**...**) que aparecen a la derecha del campo de propiedad.  
   
 ## <a name="see-also"></a>Vea también  
-[Mostrar propiedades de la consulta &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/show-query-properties-visual-database-tools.md)  
+[Mostrar propiedades de la consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/show-query-properties-visual-database-tools.md)  
   
 

@@ -26,11 +26,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 45b05e606f083b20fa7b1ba9e8a25b4defcf7c7c
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>Herramientas Diseñador de consultas y vistas (Visual Database Tools)
@@ -52,8 +52,8 @@ Puede crear una consulta o una vista en cualquiera de los paneles; para hacer ap
 Para ocultar un panel o mostrar un panel que no esté visible, haga clic con el botón derecho en la superficie de diseño, seleccione **Panel**y, a continuación, haga clic en el nombre del panel. Si el Diseñador de consultas y vistas se abre en el modo de Diseñador de consultas, el panel **Resultados** no estará disponible.  
   
 ## <a name="see-also"></a>Vea también  
-[Temas de procedimientos de diseño de consultas y vistas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Abrir el Diseñador de consultas y vistas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  
-[Editor SQL &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/sql-editor-visual-database-tools.md)  
+[Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Abrir el Diseñador de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  
+[Editor SQL &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sql-editor-visual-database-tools.md)  
   
 

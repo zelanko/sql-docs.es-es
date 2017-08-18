@@ -24,11 +24,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7a08a632df3d4f6b054f4b60cae2d4befc8c8745
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Utilizar cláusulas HAVING y WHERE en la misma consulta (Visual Database Tools)

@@ -21,11 +21,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ed3ab23388672cda824ad3ccce6e1275908c028d
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>Editar filas del panel Resultados (Visual Database Tools)
@@ -45,7 +45,7 @@ En muchos casos, se pueden editar los datos del [panel Resultados](../../ssms/vi
 4.  Salga de la fila para guardar los cambios.  
   
 ## <a name="see-also"></a>Vea también  
-[Trabajar con datos en el panel Resultados &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
-[Reglas para actualizar resultados &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md)  
+[Trabajar con datos en el panel Resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[Reglas para actualizar resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md)  
   
 

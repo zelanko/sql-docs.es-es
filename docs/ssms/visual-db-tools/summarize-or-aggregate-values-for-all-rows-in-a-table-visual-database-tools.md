@@ -17,11 +17,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 734063422cddceb9ac5fb3b1b44b0d64d07f7d6b
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Resumir o agregar los valores de todas las filas de una tabla (Visual Database Tools)
@@ -82,7 +82,7 @@ Cuando ejecute la consulta, en el panel Resultados se mostrarán las agregacione
 > El Diseñador de consultas y vistas mantiene las funciones de agregado como parte de la instrucción SQL en el panel SQL hasta que se desactiva explícitamente el modo Agrupar por. Por tanto, si se modifica una columna asignándole otro tipo distinto o cambiando las tablas o los objetos con valores de tablas que aparecen en el panel Diagrama, la consulta resultante podría incluir funciones de agregado no válidas.  
   
 ## <a name="see-also"></a>Vea también  
-[Ordenar y agrupar los resultados de una consulta &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
-[Resumir los resultados de una consulta &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
+[Ordenar y agrupar los resultados de una consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Resumir los resultados de una consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   
 

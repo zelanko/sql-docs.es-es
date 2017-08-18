@@ -26,11 +26,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d1adeb21a6fca540cd4359c57ac6756bffa8cd16
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>Ordenar y agrupar los resultados de una consulta (Visual Database Tools)
@@ -39,38 +39,38 @@ Puede crear un resultado de consulta en el que cada fila de resultados se corres
 Para obtener información detallada sobre la creación de este tipo de consultas, vea los temas incluidos en la tabla siguiente:  
   
 ## <a name="in-this-section"></a>En esta sección  
-[Ordenar filas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/sort-rows-visual-database-tools.md)  
+[Ordenar filas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-rows-visual-database-tools.md)  
 Describe las diferentes modos en que se pueden ordenar las filas y por qué deben utilizarse.  
   
-[Contraer grupos de filas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/collapse-groups-of-rows-visual-database-tools.md)  
+[Contraer grupos de filas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/collapse-groups-of-rows-visual-database-tools.md)  
 Describe los diferentes modos en que se pueden contraer las filas, como al calcular o eliminar duplicados.  
   
-[Ordenar con ORDER BY &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/sort-with-order-by-visual-database-tools.md)  
+[Ordenar con ORDER BY &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-with-order-by-visual-database-tools.md)  
 Proporciona los pasos necesarios para devolver los resultados en un orden especificado.  
   
-[Ordenar en orden ascendente o descendente &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/sort-in-ascending-or-descending-order-visual-database-tools.md)  
+[Ordenar en orden ascendente o descendente &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-in-ascending-or-descending-order-visual-database-tools.md)  
 Proporciona los pasos necesarios para cambiar o configurar el sentido de la ordenación.  
   
-[Ordenar varias columnas en las consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/sort-multiple-columns-in-queries-visual-database-tools.md)  
+[Ordenar varias columnas en las consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-multiple-columns-in-queries-visual-database-tools.md)  
 Proporciona los pasos necesarios para establecer el orden de los conjuntos de resultados de varias columnas.  
   
-[Agrupar filas en los resultados de la consulta &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md)  
+[Agrupar filas en los resultados de la consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md)  
 Proporciona los pasos necesarios para crear subconjuntos de información de resumen mediante la organización de los datos en grupos.  
   
-[Especificar condiciones para grupos &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/specify-conditions-for-groups-visual-database-tools.md)  
+[Especificar condiciones para grupos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-conditions-for-groups-visual-database-tools.md)  
 Proporciona los pasos necesarios para crear condiciones de búsqueda que se aplican a grupos de filas.  
   
-[Reordenar las columnas del resultado &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/reorder-output-columns-visual-database-tools.md)  
+[Reordenar las columnas del resultado &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/reorder-output-columns-visual-database-tools.md)  
 Proporciona los pasos necesarios para cargar la configuración de ordenación actual.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
-[Resumir los resultados de una consulta &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
+[Resumir los resultados de una consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 Proporciona vínculos a temas en los que se resumen los resultados de la consulta.  
   
-[Realizar operaciones básicas con consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Realizar operaciones básicas con consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 Proporciona vínculos a temas en los que se tratan las tareas de consulta más comunes.  
   
-[Temas de procedimientos de diseño de consultas y vistas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 Proporciona vínculos a temas en los que se explica cómo se utiliza el Diseñador de consultas y vistas.  
   
 

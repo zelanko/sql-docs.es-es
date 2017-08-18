@@ -21,11 +21,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0ba11f05536a52023c382e040738b8d9f9a4a215
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>Agregar nuevas filas en el panel Resultados (Visual Database Tools)
@@ -58,7 +58,7 @@ Si al guardar la fila se produce un error, el Diseñador de consultas y vistas m
 -   Cancelar la modificación presionando la tecla ESC. Si presiona ESC cuando está en una celda que ha cambiado, se cancelan los cambios de esa celda. Si presiona ESC cuando está en una celda que no ha cambiado, se cancelan los cambios de toda la celda.  
   
 ## <a name="see-also"></a>Vea también  
-[Trabajar con datos en el panel Resultados &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
-[Realizar operaciones básicas con consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Trabajar con datos en el panel Resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[Realizar operaciones básicas con consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
 

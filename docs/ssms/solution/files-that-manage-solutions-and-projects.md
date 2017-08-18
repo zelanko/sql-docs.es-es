@@ -22,11 +22,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ae75460f02779117b9c6061ab676795796215c09
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>Archivos que administran soluciones y proyectos
@@ -56,8 +56,8 @@ Si tiene una estructura de directorios similar a la estructura lógica que apare
 [Administrar archivos con codificación](../../ssms/solution/manage-files-with-encoding.md)  
 [Archivos varios](../../ssms/solution/miscellaneous-files.md)  
 [Explorador de soluciones](../../ssms/solution/solution-explorer.md)  
-[Soluciones &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
-[Proyectos &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
+[Soluciones &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
+[Proyectos &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
 [Control de código fuente del Explorador de soluciones](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
   
 

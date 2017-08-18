@@ -16,15 +16,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 43a63ea7380ce4586d8a411c085c094aa953b1b2
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="copy-query-results-visual-database-tools"></a>Copiar los resultados de una consulta (Visual Database Tools)
-El conjunto de resultados se puede copiar como texto separado por tabulaciones desde el panel **Resultados**. Puede copiar el conjunto de resultados completo, o las filas o celdas contiguas o no contiguas que desee.  
+El conjunto de resultados se puede copiar como texto separado por tabulaciones desde el panel **Resultados** . Puede copiar el conjunto de resultados completo, o las filas o celdas contiguas o no contiguas que desee.  
   
 ### <a name="to-copy-result-set-text-from-the-results-pane"></a>Para copiar texto del conjunto de resultados del panel Resultados  
   
@@ -55,6 +55,6 @@ El conjunto de resultados se puede copiar como texto separado por tabulaciones d
 5.  Haga clic con el botón derecho y elija **Copiar**.  
   
 ## <a name="see-also"></a>Vea también  
-[Trabajar con datos en el panel Resultados &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[Trabajar con datos en el panel Resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   
 

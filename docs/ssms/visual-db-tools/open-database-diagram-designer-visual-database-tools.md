@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 498879e88ad3e92323741ad035845843fd214bd7
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>Abrir el Diseñador de diagramas de base de datos (Visual Database Tools)
@@ -53,6 +53,6 @@ Para abrir el Diseñador de diagramas de base de datos, abra un diagrama nuevo o
 3.  El menú **Diagrama de base de datos** se agregará al menú principal y el diagrama se abrirá en el panel del diseñador.  
   
 ## <a name="see-also"></a>Vea también  
-[Diseñar diagramas de base de datos &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
+[Diseñar diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
   
 

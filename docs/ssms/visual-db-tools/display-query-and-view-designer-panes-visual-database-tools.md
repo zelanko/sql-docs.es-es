@@ -21,11 +21,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 23f1d17f062613ef9c75ee8d7748d3ed72d8d375
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Mostrar en pantalla los paneles del Diseñador de consultas y vistas (Visual Database Tools)
@@ -38,7 +38,7 @@ El Diseñador de consultas y vistas se compone de cuatro paneles diferentes: el 
 2.  En el menú **Diseñador de consultas** , seleccione **Panel** y haga clic en el panel que desee abrir.  
   
 ## <a name="see-also"></a>Vea también  
-[Crear consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
-[Abrir el Diseñador de consultas y vistas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  
+[Crear consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
+[Abrir el Diseñador de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  
   
 

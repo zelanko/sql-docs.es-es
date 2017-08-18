@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 55372985e2d5ae739e2e03fd07c3c02e5cbeb97f
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>Crear tabla (cuadro de diálogo, Visual Database Tools)
@@ -37,7 +37,7 @@ Para crear una tabla de destino en otra base de datos, especifique un nombre de 
 > Antes de ejecutar la consulta, puede cambiar las propiedades de la tabla que desea crear modificándolas en la ventana **Propiedades** . Para detalles, consulte [Propiedades de la consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-properties-visual-database-tools.md).  
   
 ## <a name="see-also"></a>Vea también  
-[Crear consultas de creación de tabla &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-make-table-queries-visual-database-tools.md)  
-[Tipos de consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[Crear consultas de creación de tabla &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-make-table-queries-visual-database-tools.md)  
+[Tipos de consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   
 

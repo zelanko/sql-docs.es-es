@@ -20,11 +20,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5bfe05dde95b8fdb47893ea17802b0798de9762a
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="view-information-about-an-alert"></a>Ver información acerca de una alerta
@@ -63,13 +63,13 @@ De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pued
   
     Para más información sobre las opciones disponibles presentes en el cuadro de diálogo *nombre_alerta***Propiedades de la alerta** , consulte:  
   
-    -   [Propiedades de alerta - Nueva alerta &amp;#40;Página General&amp;#41;](../../ssms/agent/alert-properties-new-alert-general-page.md)  
+    -   [Propiedades de alerta - Nueva alerta &#40;Página General&#41;](../../ssms/agent/alert-properties-new-alert-general-page.md)  
   
-    -   [Propiedades de alerta - Nueva alerta &amp;#40;Página Respuesta&amp;#41;](../../ssms/agent/alert-properties-new-alert-response-page.md)  
+    -   [Propiedades de alerta - Nueva alerta &#40;Página Respuesta&#41;](../../ssms/agent/alert-properties-new-alert-response-page.md)  
   
-    -   [Propiedades de alerta - Nueva alerta &amp;#40;Página Opciones&amp;#41;](../../ssms/agent/alert-properties-new-alert-options-page.md)  
+    -   [Propiedades de alerta - Nueva alerta &#40;Página Opciones&#41;](../../ssms/agent/alert-properties-new-alert-options-page.md)  
   
-    -   [Propiedades de alerta &amp;#40;Página Historial&amp;#41;](../../ssms/agent/alert-properties-history-page.md)  
+    -   [Propiedades de alerta &#40;Página Historial&#41;](../../ssms/agent/alert-properties-history-page.md)  
   
 5.  Cuando termine, haga clic en **Aceptar**.  
   

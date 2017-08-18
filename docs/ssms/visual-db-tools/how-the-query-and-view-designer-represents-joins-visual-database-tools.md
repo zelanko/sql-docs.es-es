@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1556e7c6469ff2ece09e3249c8396e6a0e96eb6c
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Cómo representa combinaciones el Diseñador de consultas y vistas (Visual Database Tools)
@@ -41,7 +41,7 @@ Si no se muestran las columnas de datos combinadas (por ejemplo, el rectángulo 
   
 La forma del icono situado en el centro de la línea de combinación indica cómo se combinan las tablas u objetos con estructura de tabla. Si la cláusula de combinación utiliza un operador que no sea igual (=), el operador se muestra en el icono de línea de combinación. La tabla siguiente muestra los iconos que aparecen en la línea de combinación.  
   
-|**Icono de línea de combinación**|**Description**|  
+|**Icono de línea de combinación**|**Descripción**|  
 |----------------------|-------------------|  
 |![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbih.gif "Icono de Visual Database Tools")|Combinación interna (creada mediante un signo igual).|  
 |![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbii.gif "Icono de Visual Database Tools")|Combinación interna basada en el operador "mayor que".|  
@@ -85,7 +85,7 @@ Las opciones de sintaxis para combinar tablas incluyen:
     ```  
   
 ## <a name="see-also"></a>Vea también  
-[Realizar consultas con combinaciones &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
-[Cuadro de diálogo Combinar &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md)  
+[Realizar consultas con combinaciones &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
+[Cuadro de diálogo Combinar &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md)  
   
 

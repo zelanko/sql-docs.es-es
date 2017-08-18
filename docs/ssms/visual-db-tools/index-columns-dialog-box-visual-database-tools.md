@@ -16,11 +16,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0f1b0c2c698e01aac8b8974591843d70488b2ce0
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Columnas de índice (Visual Database Tools, cuadro de diálogo)
@@ -36,6 +36,6 @@ Seleccione un criterio de ordenación para la columna especificada. Las opciones
 ## <a name="see-also"></a>Vea también  
 [Crear índices clúster](http://msdn.microsoft.com/en-us/47148383-c2c7-4f08-a9e4-7016bf2d1d13)  
 [Crear índices no clúster](http://msdn.microsoft.com/en-us/9402029a-1227-46c4-93aa-c2122eb1b943)  
-[Cuadro de diálogo Índices o claves &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
+[Cuadro de diálogo Índices o claves &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
   
 

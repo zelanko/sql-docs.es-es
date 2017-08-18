@@ -19,11 +19,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 85956b6ed09b3ba2e68880a8704dc3a545a3176e
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>Ajustar automáticamente el tamaño de las tablas seleccionadas en diagramas (Visual Database Tools)
@@ -36,6 +36,6 @@ Las tablas de su diagrama se pueden ajustar rápidamente para que adopten el tam
 2.  Haga clic con el botón derecho en una de las tablas seleccionadas y, en el menú contextual, elija **Ajustar automáticamente tablas seleccionadas**.  
   
 ## <a name="see-also"></a>Vea también  
-[Trabajar con diagramas de base de datos &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 

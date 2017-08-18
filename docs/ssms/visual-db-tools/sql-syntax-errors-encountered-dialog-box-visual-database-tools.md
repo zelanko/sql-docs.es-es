@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 13f60877428daa406f1bcd74d36a3ebfd21e7a28
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-syntax-errors-encountered-dialog-box-visual-database-tools"></a>Errores de sintaxis SQL (Visual Database Tools)
@@ -41,6 +41,6 @@ Este cuadro de diálogo aparece cuando especifica o modifica una instrucción SQ
 El cuadro de diálogo muestra un mensaje con el motivo por el que no se puede analizar la instrucción SQL. Haga clic en **Aceptar** para continuar.  
   
 ## <a name="see-also"></a>Vea también  
-[Temas de procedimientos de diseño de consultas y vistas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 

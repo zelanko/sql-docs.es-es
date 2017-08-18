@@ -22,11 +22,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5c104e70fc7b2e7065f9aa43a16aac88707391ea
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Crear y adjuntar programaciones a trabajos
@@ -92,7 +92,7 @@ Defina la condición de CPU inactiva como un porcentaje por debajo del cual el u
 |**Description**|**Tema**|  
 |Describe cómo crear una programación para un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .|[Create a Schedule](../../ssms/agent/create-a-schedule.md)|  
 |Describe cómo programar un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .|[Programar un trabajo](../../ssms/agent/schedule-a-job.md)|  
-|Explica cómo definir la condición de inactividad de la CPU para el servidor.|[Establecer la duración y el tiempo de inactividad de la CPU &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
+|Explica cómo definir la condición de inactividad de la CPU para el servidor.|[Establecer la duración y el tiempo de inactividad de la CPU &#40;SQL Server Management Studio&#41;](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>Vea también  
 [sp_help_jobschedule](http://msdn.microsoft.com/en-us/2cded902-9272-4667-ac4b-a4f95a9f008e)  

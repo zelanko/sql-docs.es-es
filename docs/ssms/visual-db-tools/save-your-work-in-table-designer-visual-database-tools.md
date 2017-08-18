@@ -18,11 +18,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5643c68421bd731f9615a7e54e3e24d9f5237b37
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>Guardar el trabajo en el Diseñador de tablas (Visual Database Tools)
@@ -46,6 +46,6 @@ Puede guardar los cambios en las tablas que están abiertas en el Diseñador de 
 > Para guardar los cambios realizados en todos los elementos abiertos, como las tablas, vistas y procedimientos almacenados, en el menú **Archivo** , elija **Guardar todos**.  
   
 ## <a name="see-also"></a>Vea también  
-[Propiedades de la tabla &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
+[Propiedades de la tabla &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
   
 

@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1d9dd0036b46e806ea6aaacf41d9bf9683ebc233
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="copy-queries-visual-database-tools"></a>Copiar consultas (Visual Database Tools)
@@ -42,9 +42,9 @@ Puede copiar el cuerpo de una consulta en otra nueva para utilizarlo como un pun
 6.  Haga clic con el botón derecho y, en el menú contextual, haga clic en **Pegar**.  
   
 ## <a name="see-also"></a>Vea también  
-[Cambiar el nombre de las consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/rename-queries-visual-database-tools.md)  
-[Borrar los resultados de una consulta &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  
-[Guardar consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
-[Realizar operaciones básicas con consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Cambiar el nombre de las consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rename-queries-visual-database-tools.md)  
+[Borrar los resultados de una consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  
+[Guardar consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
+[Realizar operaciones básicas con consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
 

@@ -18,18 +18,18 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 65aad0bfb2f6ce9e9ce5987ea47d4858d54c6e9e
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Reconciliar los cambios realizados por varios usuarios (Visual Database Tools)
 En un entorno multiusuario, varios usuarios pueden realizar cambios en el mismo objeto al mismo tiempo. Esto puede ocurrir cuando se trabaja en la estructura del objeto en los diseñadores de diagramas de base de datos o tablas, o con los valores de los resultados que devuelve el panel Resultados del Diseñador de consultas y vistas. Esto puede ocasionar conflictos que es necesario solucionar.  
   
 ## <a name="conflicts-in-the-table-or-database-diagram-designers"></a>Conflictos en los diseñadores de diagramas de base de datos o tablas  
-Por ejemplo, otro usuario podría eliminar o cambiar el nombre de una tabla mientras está trabajando con esa tabla o con una tabla relacionada en el Diseñador de tablas. Al intentar guardar la tabla, el [Database Changes Detected Dialog Box &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md) le informará que la base de datos se actualizó desde que se abrió la tabla.  
+Por ejemplo, otro usuario podría eliminar o cambiar el nombre de una tabla mientras está trabajando con esa tabla o con una tabla relacionada en el Diseñador de tablas. Al intentar guardar la tabla, el [Cuadro de diálogo Se han detectado cambios en la base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md) le informará que la base de datos se actualizó desde que se abrió la tabla.  
   
 Este cuadro de diálogo también muestra una lista de objetos de base de datos que se verán afectados como resultado de guardar la tabla. En este momento, puede realizar una de las siguientes acciones:  
   
@@ -63,6 +63,6 @@ Por ejemplo, supongamos que usted y un colega ejecutan una consulta cada uno par
     En este caso, no podrá confirmar sus cambios en la base de datos.  
   
 ## <a name="see-also"></a>Vea también  
-[Cuadro de diálogo Se han detectado cambios en la base de datos &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md)  
+[Cuadro de diálogo Se han detectado cambios en la base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md)  
   
 

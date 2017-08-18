@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3d2e7bb8486f588c055cc6eee890bf533e726fb4
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>Se han detectado cambios en la base de datos (cuadro de diálogo, Visual Database Tools)
@@ -48,7 +48,7 @@ Cancela la acción de guardar.
 Muestra el cuadro de diálogo **Guardar como** , que permite especificar una ubicación para el archivo de texto que contiene la lista de cambios efectuados en la base de datos.  
   
 ## <a name="see-also"></a>Vea también  
-[Reconciliar un diagrama de base de datos con una base de datos modificada &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/reconcile-a-database-diagram-with-a-modified-database-visual-database-tools.md)  
-[Entornos multiusuario &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
+[Reconciliar un diagrama de base de datos con una base de datos modificada &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/reconcile-a-database-diagram-with-a-modified-database-visual-database-tools.md)  
+[Entornos multiusuario &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
   
 

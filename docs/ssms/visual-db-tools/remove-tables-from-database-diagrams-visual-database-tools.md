@@ -18,11 +18,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f12c61a883c8a0c190a13e4b2ae35ff7188156ff
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>Quitar tablas de diagramas de base de datos (Visual Database Tools)
@@ -43,7 +43,7 @@ Puede quitar una tabla del diagrama de base de datos. Cuando se quita una tabla,
 La tabla se quita del diagrama pero continúa existiendo en la base de datos.  
   
 ## <a name="see-also"></a>Vea también  
-[Trabajar con diagramas de base de datos &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Cómo eliminar tablas de una base de datos (Visual Database Tools)](http://msdn.microsoft.com/en-us/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)  
   
 

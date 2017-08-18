@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 233790dcaeb47f6803e8eb7f586321c880f2a3e5
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="general-user-interface-elements"></a>Elementos generales de la interfaz de usuario
@@ -37,7 +37,7 @@ Describe cómo [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] ho
 [Cuadro de diálogo Herramientas externas](../ssms/external-tools-dialog-box.md)  
 Permite agregar herramientas que no son parte de **al menú** Herramientas [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)].  
   
-[Ventana Propiedades &amp;#40;Management Studio&amp;#41;](../ssms/properties-window-management-studio.md)  
+[Ventana Propiedades &#40;Management Studio&#41;](../ssms/properties-window-management-studio.md)  
 Permite ver las propiedades y los eventos de los objetos seleccionados que se encuentran en los editores y los diseñadores. También permite editar y ver las propiedades de los archivos, los proyectos y las soluciones. Algunas propiedades se pueden editar en la ventana Propiedades.  
   
 [Usar el cuadro de herramientas](../ssms/use-the-toolbox.md)  

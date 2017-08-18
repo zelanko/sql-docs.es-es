@@ -20,47 +20,47 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 14a314fc77534de5378a38de50e1768d25dc5bda
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="types-of-queries-visual-database-tools"></a>Tipos de consultas (Visual Database Tools)
 El Diseñador de consultas y vistas proporciona características integradas para algunos tipos de consulta (Select, Insert Results, Insert Values, Update, Delete y Make Table) y admite también las consultas UNION, las búsquedas de texto completo y las consultas de expresiones CASE.  
   
 ## <a name="in-this-section"></a>En esta sección  
-[Tipos de consultas compatibles &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
+[Tipos de consultas compatibles &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
 Describe los tipos de consulta que se pueden utilizar con el Diseñador de consultas y vistas.  
   
-[Crear consultas de búsqueda de texto completo &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)  
+[Crear consultas de búsqueda de texto completo &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)  
 Describe cómo crear una consulta que busque una columna indizada de texto completo.  
   
-[Crear consultas de inserción de resultados &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)  
+[Crear consultas de inserción de resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)  
 Describe cómo crear una consulta que inserte los resultados de una instrucción SELECT en una tabla.  
   
-[Crear consultas de inserción de valores &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-insert-values-queries-visual-database-tools.md)  
+[Crear consultas de inserción de valores &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-insert-values-queries-visual-database-tools.md)  
 Describe cómo crear una consulta que inserte los valores en una tabla.  
   
-[Crear consultas de creación de tabla &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-make-table-queries-visual-database-tools.md)  
+[Crear consultas de creación de tabla &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-make-table-queries-visual-database-tools.md)  
 Describe cómo crear una consulta que cree una nueva tabla.  
   
-[Crear consultas de eliminación &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md)  
+[Crear consultas de eliminación &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md)  
 Describe cómo crear una consulta que elimine los datos.  
   
-[Crear consultas de unión &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-union-queries-visual-database-tools.md)  
+[Crear consultas de unión &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-union-queries-visual-database-tools.md)  
 Describe cómo crear una consulta que mezcle los resultados de dos o más instrucciones SELECT en un conjunto de resultados.  
   
-[Crear consultas de actualización &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-update-queries-visual-database-tools.md)  
+[Crear consultas de actualización &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-update-queries-visual-database-tools.md)  
 Describe cómo crear una consulta que actualice una tabla.  
   
 ## <a name="reference"></a>Referencia  
-[Propiedades de la consulta &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-properties-visual-database-tools.md)  
+[Propiedades de la consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-properties-visual-database-tools.md)  
 Describe las propiedades disponibles cuando se diseñan consultas.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
-[Temas de procedimientos de diseño de consultas y vistas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 Describe cómo diseñar y manipular consultas y vistas.  
   
 

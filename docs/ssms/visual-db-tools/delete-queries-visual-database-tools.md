@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c801801c96b4abf82745278e1b28b9b88309a2d6
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="delete-queries-visual-database-tools"></a>Eliminar consultas (Visual Database Tools)
@@ -43,9 +43,9 @@ Puede eliminar una consulta quitándola del proyecto y eliminándola permanentem
 > Si desea quitar la consulta del proyecto sin eliminarla, haga clic en **Quitar**. A continuación, puede hacer clic en la carpeta de la consulta con el botón derecho y elegir **Agregar elemento** para buscar y volver a agregar la consulta más adelante.  
   
 ## <a name="see-also"></a>Vea también  
-[Borrar los resultados de una consulta &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  
-[Descartar los cambios realizados en consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md)  
-[Temas de procedimientos de diseño de consultas y vistas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Realizar operaciones básicas con consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Borrar los resultados de una consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  
+[Descartar los cambios realizados en consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md)  
+[Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Realizar operaciones básicas con consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
 

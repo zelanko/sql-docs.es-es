@@ -19,11 +19,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6ea72cab23f488c8330d78dc5c6a1275e043728a
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="miscellaneous-files"></a>archivos varios
@@ -37,7 +37,7 @@ Los archivos varios ofrecen flexibilidad. Por ejemplo, imagine que tiene un proy
   
 ## <a name="see-also"></a>Vea también  
 [Archivos que administran soluciones y proyectos](../../ssms/solution/files-that-manage-solutions-and-projects.md)  
-[Soluciones &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
-[Proyectos &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
+[Soluciones &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
+[Proyectos &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
   
 

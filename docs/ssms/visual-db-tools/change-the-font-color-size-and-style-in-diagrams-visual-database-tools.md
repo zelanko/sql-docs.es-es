@@ -18,11 +18,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bbfd8eb271ea0eb10ed0f8dac22833d8a4aa0f5c
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>Cambiar el color, el tamaño y el estilo de la fuente en los diagramas (Visual Database Tools)
@@ -39,6 +39,6 @@ Puede personalizar la forma en que aparece el texto en los diagramas de bases de
 4.  Cambie la fuente, el tamaño, el elemento de muestra y los colores de primer plano y de fondo.  
   
 ## <a name="see-also"></a>Vea también  
-[Trabajar con diagramas de base de datos &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 

@@ -18,11 +18,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fbf4122473bbe62865c57da73e661c74e8d9e035
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-pane-visual-database-tools"></a>Panel SQL (Visual Database Tools)
@@ -58,11 +58,11 @@ Puede continuar con la modificación de la instrucción y ejecutarla como lo har
 > Si especifica una instrucción SQL, pero, a continuación, realiza cambios adicionales en la consulta mediante la modificación de los paneles Diagrama y Criterios, el Diseñador de consultas y vistas vuelve a generar y a mostrar la instrucción SQL. En algunos casos, esta acción da como resultado una instrucción SQL construida de forma diferente a la que especificó originalmente (aunque siempre dará los mismos resultados). Es especialmente probable que se produzca esta diferencia cuando está trabajando con condiciones de búsqueda que incluyen varias cláusulas vinculadas con AND y OR.  
   
 ## <a name="see-also"></a>Vea también  
-[Crear consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
-[Ejecutar consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
-[Temas de procedimientos de diseño de consultas y vistas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Panel Diagrama &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)  
-[Panel Criterios &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)  
-[Panel Resultados &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)  
+[Crear consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
+[Ejecutar consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
+[Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Panel Diagrama &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)  
+[Panel Criterios &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)  
+[Panel Resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)  
   
 

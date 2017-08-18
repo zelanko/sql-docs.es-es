@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6d4b09ac45528392c55f47ab7b62ed7881a1ebc9
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>Abrir el Diseñador de consultas y vistas (Visual Database Tools)
@@ -56,7 +56,7 @@ El Diseñador de consultas y vistas se ejecuta cuando se abre la definición de 
 3.  Resalte las instrucciones de la consulta, haga clic con el botón derecho en el área resaltada y, a continuación, haga clic en **Diseñar consulta en el editor**.  
   
 ## <a name="see-also"></a>Vea también  
-[Temas de procedimientos de diseño de consultas y vistas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Herramientas Diseñador de consultas y vistas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)  
+[Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Herramientas Diseñador de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)  
   
 

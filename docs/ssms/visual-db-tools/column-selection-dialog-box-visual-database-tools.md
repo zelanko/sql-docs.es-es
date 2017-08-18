@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ec9eb8b6cee6f16dc54f6d16a43d1f94f16a8e11
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>Selección de columnas (cuadro de diálogo, Visual Database Tools)
@@ -49,11 +49,11 @@ Reemplaza la vista personalizada predeterminada por las columnas seleccionadas e
 **Aceptar**  
 Guarda la vista personalizada.  
   
-**Cancelarar**  
+**Cancelar**  
 Cancela la modificación de la vista personalizada.  
   
 ## <a name="see-also"></a>Vea también  
-[Trabajar con diagramas de base de datos &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[Personalizar la cantidad de información mostrada en los diagramas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)  
+[Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Personalizar la cantidad de información mostrada en los diagramas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)  
   
 

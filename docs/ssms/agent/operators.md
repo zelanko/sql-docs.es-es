@@ -27,11 +27,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3e03cd3190e9705650199c35c18afb8c201eb100
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="operators"></a>Operadores
@@ -123,7 +123,7 @@ Debe configurar al menos uno de los elementos siguientes para poder notificar a 
 |-|-|  
 |**Tareas**|**Tema**|  
 |Tareas relacionadas con la creación de un operador|[Crear un operador](../../ssms/agent/create-an-operator.md)<br /><br />[Designate a Fail-Safe Operator](../../ssms/agent/designate-a-fail-safe-operator.md)|  
-|Tareas relacionadas con la asignación de alertas|[Asignar alertas a un operador](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Definir la respuesta a una alerta &amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/en-us/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Asignar alertas a un operador](../../ssms/agent/assign-alerts-to-an-operator.md)|  
+|Tareas relacionadas con la asignación de alertas|[Asignar alertas a un operador](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Definir la respuesta a una alerta &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/en-us/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Asignar alertas a un operador](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>Vea también  
 [Correo electrónico de base de datos](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)  

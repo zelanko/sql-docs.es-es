@@ -16,11 +16,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 91683b0358d76a072517e1b5fd5507cf8c6cb57e
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>Permisos y Visual Database Tools (Visual Database Tools)
@@ -29,6 +29,6 @@ Los permisos, que permiten a los usuarios tener acceso a los objetos de origen d
 Si los permisos de la base de datos dejan ver pero no modificar su estructura, podrán utilizarse scripts de cambio para diseñar modificaciones sin transferirlas a la base de datos.  
   
 ## <a name="see-also"></a>Vea también  
-[Entornos multiusuario &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
+[Entornos multiusuario &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
   
 

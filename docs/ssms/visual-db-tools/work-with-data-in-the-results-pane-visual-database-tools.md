@@ -23,11 +23,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 43805e99f16d522e7b9a82e1af4514ad3c8fa043
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Trabajar con datos en el panel Resultados (Visual Database Tools)
@@ -124,7 +124,7 @@ Lo que se devuelve al panel Resultados desde la base de datos está controlado e
 -   La precisión y la escala no siempre pueden conservarse. Por ejemplo, el panel Resultados admite una precisión de 27. Si los datos son de un tipo con una precisión mayor, éstos se pueden truncar o representarse mediante *<Unable to read data>*.  
   
 ## <a name="see-also"></a>Vea también  
-[Realizar operaciones básicas con consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-[Especificar criterios de búsqueda &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Realizar operaciones básicas con consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Especificar criterios de búsqueda &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
 

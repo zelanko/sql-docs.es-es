@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 57821cd36a4684de594df52b0722b7e043097b46
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>Combinar tablas manualmente (Visual Database Tools)
@@ -47,6 +47,6 @@ Puede crear combinaciones basadas en comparaciones entre dos columnas cualesquie
 El Diseñador de consultas y vistas agrega una cláusula INNER JOIN a la instrucción SQL en el [panel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md). Puede cambiar el tipo a una combinación externa. Para detalles, consulte [Crear combinaciones externas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-outer-joins-visual-database-tools.md).  
   
 ## <a name="see-also"></a>Vea también  
-[Realizar consultas con combinaciones &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
+[Realizar consultas con combinaciones &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   
 

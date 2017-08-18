@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ca2182f7cf871a32891a186f13fb177b7f22be52
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>Eliminar un diagrama de base de datos (Visual Database Tools)
@@ -42,6 +42,6 @@ Cuando ya no necesite un diagrama de base de datos, puede eliminarlo.
 El diagrama de base de datos se elimina de la base de datos. Al eliminar un diagrama de base de datos, no se eliminan las tablas del diagrama.  
   
 ## <a name="see-also"></a>Vea también  
-[Trabajar con diagramas de base de datos &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 

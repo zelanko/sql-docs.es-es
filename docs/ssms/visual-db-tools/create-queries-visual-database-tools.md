@@ -16,11 +16,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d30a0729357abf0cfc18942d0da6db3f36f11686
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="create-queries-visual-database-tools"></a>Crear consultas (Visual Database Tools)
@@ -48,10 +48,10 @@ Las consultas le permiten recuperar datos de las tablas y las vistas de su base 
 Para restringir más la consulta, puede cambiar el código SQL en el **panel SQL** o elegir opciones como el criterio de ordenación y los alias de las columnas en el panel **Criterios**.  
   
 ## <a name="see-also"></a>Vea también  
-[Guardar consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
-[Tipos de consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
-[Especificar criterios de búsqueda &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
-[Resumir los resultados de una consulta &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
-[Realizar operaciones básicas con consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Guardar consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
+[Tipos de consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[Especificar criterios de búsqueda &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Resumir los resultados de una consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
+[Realizar operaciones básicas con consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
 

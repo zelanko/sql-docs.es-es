@@ -17,31 +17,31 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8af8c347e4225f1beb4cef6f4b515568115146f1
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Opciones (Ayuda F1 de cuadros de diálogos)
 Esta sección contiene la Ayuda F1 de los cuadros de diálogo disponibles cuando se hace clic en **Opciones** en el menú **Herramientas** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
-[Opciones &amp;#40;Diseñadores - Diseñadores de Analysis Services - General&amp;#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
+[Opciones &#40;Diseñadores - Diseñadores de Analysis Services - General&#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   
-[Opciones &amp;#40;Diseñadores - Página Planes de mantenimiento&amp;#41;](../../ssms/menu-help/options-designers-maintenance-plans-page.md)  
+[Opciones &#40;Diseñadores - Página Planes de mantenimiento&#41;](../../ssms/menu-help/options-designers-maintenance-plans-page.md)  
   
-[Opciones &amp;#40;Diseñadores - Página Diseñadores de tablas y bases de datos&amp;#41;](../../ssms/menu-help/options-designers-table-and-database-designers-page.md)  
+[Opciones &#40;Diseñadores - Página Diseñadores de tablas y bases de datos&#41;](../../ssms/menu-help/options-designers-table-and-database-designers-page.md)  
   
-[Opciones &amp;#40;Entorno - Página Fuentes y colores&amp;#41;](../../ssms/menu-help/options-environment-fonts-and-colors-page.md)  
+[Opciones &#40;Entorno - Página Fuentes y colores&#41;](../../ssms/menu-help/options-environment-fonts-and-colors-page.md)  
   
-[Opciones &amp;#40;Entorno - Página General&amp;#41;](../../ssms/menu-help/options-environment-general-page.md)  
+[Opciones &#40;Entorno - Página General&#41;](../../ssms/menu-help/options-environment-general-page.md)  
   
-[Opciones &amp;#40;Entorno - Ayuda - Página General&amp;#41;](../../ssms/menu-help/options-environment-help-general-page.md)  
+[Opciones &#40;Entorno - Ayuda - Página General&#41;](../../ssms/menu-help/options-environment-help-general-page.md)  
   
-[Opciones &amp;#40;Entorno - Ayuda - Página En línea&amp;#41;](../../ssms/menu-help/options-environment-help-online-page.md)  
+[Opciones &#40;Entorno - Ayuda - Página En línea&#41;](../../ssms/menu-help/options-environment-help-online-page.md)  
   
-[Opciones &amp;#40;Entorno - Página Teclado&amp;#41;](../../ssms/menu-help/options-environment-keyboard-page.md)  
+[Opciones &#40;Entorno - Página Teclado&#41;](../../ssms/menu-help/options-environment-keyboard-page.md)  
   
 [Opciones (Ejecución de consultas - Analysis Server - Página General)](http://msdn.microsoft.com/en-us/456867d0-724c-449c-abf9-013a694d7924)  
   

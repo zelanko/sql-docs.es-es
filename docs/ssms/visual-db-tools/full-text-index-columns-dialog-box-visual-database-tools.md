@@ -16,18 +16,18 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b88b6ec8c86c16709b9fd22f1ef93f0c32b4f10c
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>Columnas de índice de texto completo (cuadro de diálogo, Visual Database Tools)
 En este cuadro de diálogo se enumeran las columnas que participan en el índice de texto completo de la tabla abierta en el Diseñador tablas. Para tener acceso a este cuadro de diálogo, haga clic en la tabla con el botón derecho en el Diseñador de tablas, elija **Índice de texto completo**y, en el cuadro de diálogo **Índice de texto completo** , haga clic en el índice con columnas que desee ver o editar, haga clic en el campo **Columnas** de la cuadrícula situada a la derecha y haga clic en los puntos suspensivos (**...**).  
   
 ## <a name="options"></a>Opciones  
-**Columnaa**  
+**Columna**  
 Muestra los nombres de las columnas que participan en el índice de texto completo. Para agregar una columna, haga clic en la primera celda vacía y elija una columna en la lista desplegable. Solo serán accesibles las columnas con tipos de datos de imagen o basados en texto.  
   
 **Tipo de datos**  
@@ -47,6 +47,6 @@ Seleccione si desea habilitar la indización semántica para la columna seleccio
 Si selecciona **Idioma** antes de seleccionar **Semántica estadística**y el idioma seleccionado no tiene un modelo semántico asociado, la casilla **Semántica estadística** está deshabilitada. Si selecciona **Semántica estadística** antes de seleccionar **Idioma**, los idiomas disponibles en el cuadro combinado desplegable estarán limitados a aquellos para los que exista un modelo de idioma semántico.  
   
 ## <a name="see-also"></a>Vea también  
-[Cuadro de diálogo Índice de texto completo &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/full-text-index-dialog-box-visual-database-tools.md)  
+[Cuadro de diálogo Índice de texto completo &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/full-text-index-dialog-box-visual-database-tools.md)  
   
 

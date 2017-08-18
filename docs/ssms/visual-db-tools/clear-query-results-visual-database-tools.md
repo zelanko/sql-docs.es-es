@@ -20,11 +20,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3da9966a033a4cf1ad697c27de5a92a33c02206b
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Borrar los resultados de una consulta (Visual Database Tools)
@@ -40,8 +40,8 @@ Después de ejecutar una consulta en el **Diseñador de consultas y vistas**, pu
     Si está ejecutando una consulta cuando borra el panel Resultados, el Diseñador de consultas y vistas detendrá la consulta.  
   
 ## <a name="see-also"></a>Vea también  
-[Ejecutar consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
-[Detener una consulta &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/stop-a-query-visual-database-tools.md)  
+[Ejecutar consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
+[Detener una consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/stop-a-query-visual-database-tools.md)  
 [Trabajar con datos en el panel Resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   
 

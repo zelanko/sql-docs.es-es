@@ -21,11 +21,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a747402098366d0bbe387b76938fc5fbde8ed87a
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="view-information-about-an-operator"></a>Ver información acerca de un operador
@@ -72,11 +72,11 @@ Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base d
   
     Para más información sobre las opciones disponibles que se incluyen en el cuadro de diálogo *nombre_operador***Propiedades** , consulte:  
   
-    -   [Propiedades del operador - Nuevo operador &amp;#40;Página General&amp;#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
+    -   [Propiedades del operador - Nuevo operador &#40;Página General&#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   
-    -   [Propiedades del operador - Nuevo operador &amp;#40;Página Notificaciones&amp;#41;](../../ssms/agent/operator-properties-new-operator-notifications-page.md)  
+    -   [Propiedades del operador - Nuevo operador &#40;Página Notificaciones&#41;](../../ssms/agent/operator-properties-new-operator-notifications-page.md)  
   
-    -   [Propiedades del operador &amp;#40;Página Historial&amp;#41;](../../ssms/agent/operator-properties-history-page.md)  
+    -   [Propiedades del operador &#40;Página Historial&#41;](../../ssms/agent/operator-properties-history-page.md)  
   
 5.  Cuando termine, haga clic en **Aceptar**.  
   

@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a44398daffbf1ab25f52430d2b27a0e822427db1
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Crear autocombinaciones manualmente (Visual Database Tools)
@@ -122,14 +122,14 @@ Cheryl Carson       Abraham Bennet
   
 4.  En la ventana Propiedades, haga clic en **Condición y tipo de combinación** y después en los **puntos suspensivos (...)** que aparecen a la derecha de la propiedad.  
   
-5.  En el [cuadro de diálogo Combinar](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md), cambie el operador de comparación entre las claves principales según corresponda. Por ejemplo, puede cambiar el operador a menor que (<).  
+5.  En el [cuadro de diálogo Combinar](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md) , cambie el operador de comparación entre las claves principales según corresponda. Por ejemplo, puede cambiar el operador a menor que (<).  
   
 6.  Cree la otra condición de combinación (por ejemplo, authors.zip = authors1.zip) arrastrando el nombre de la columna de combinación principal de la primera aparición de la tabla u objeto con valores de tabla y colocándolo en la columna correspondiente de la segunda aparición.  
   
 7.  Especifique otras opciones para la consulta, como las columnas de resultados, las condiciones de búsqueda y el criterio de ordenación.  
   
 ## <a name="see-also"></a>Vea también  
-[Crear autocombinaciones de forma automática &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-self-joins-automatically-visual-database-tools.md)  
-[Realizar consultas con combinaciones &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
+[Crear autocombinaciones de forma automática &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-self-joins-automatically-visual-database-tools.md)  
+[Realizar consultas con combinaciones &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   
 

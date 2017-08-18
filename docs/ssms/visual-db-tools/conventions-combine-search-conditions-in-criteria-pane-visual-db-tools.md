@@ -23,11 +23,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c2115ca07d5e726a4bdb1fc3bba5ba8f0d202277
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Convenciones para combinar condiciones de búsqueda en el panel Criterios (Visual Database Tools)
@@ -170,6 +170,6 @@ El Diseñador de consultas y vistas representa esta cláusula WHERE en el panel 
 Si cambia la consulta (cambia, por ejemplo, uno de los valores en el panel Criterios), el Diseñador de consultas y vistas volverá a crear la instrucción SQL en el panel SQL. La nueva instrucción SQL reflejará lo que se muestra en el panel Criterios en lugar de lo que se indica en la instrucción original. Por ejemplo, si el panel Criterios contiene cláusulas AND distribuidas, se volverá a crear la instrucción resultante en el panel SQL con cláusulas AND explícitas. Para obtener información detallada, vea "Cómo funciona AND con varias cláusulas OR" anteriormente en este tema.  
   
 ## <a name="see-also"></a>Vea también  
-[Especificar criterios de búsqueda &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Especificar criterios de búsqueda &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
 

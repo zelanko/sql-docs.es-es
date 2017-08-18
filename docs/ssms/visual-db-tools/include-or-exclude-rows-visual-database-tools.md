@@ -25,11 +25,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: aa0017d2b84109c6a40276d2853e3f06e005b845
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>Incluir o excluir filas (Visual Database Tools)
@@ -64,15 +64,15 @@ region = 'UK' OR region = 'US'
   
 Para obtener más detalles sobre cómo combinar condiciones de búsqueda, vea los temas siguientes:  
   
--   [Convenciones para combinar condiciones de búsqueda en el panel Criterios &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
+-   [Convenciones para combinar condiciones de búsqueda en el panel Criterios &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
   
--   [Especificar varias condiciones de búsqueda para una columna &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-one-column-visual-database-tools.md)  
+-   [Especificar varias condiciones de búsqueda para una columna &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-one-column-visual-database-tools.md)  
   
--   [Especificar varias condiciones de búsqueda para varias columnas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md)  
+-   [Especificar varias condiciones de búsqueda para varias columnas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md)  
   
--   [Combinar condiciones cuando AND tiene prioridad &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools.md)  
+-   [Combinar condiciones cuando AND tiene prioridad &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools.md)  
   
--   [Combinar condiciones cuando OR tiene prioridad &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
+-   [Combinar condiciones cuando OR tiene prioridad &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
   
 ## <a name="examples"></a>Ejemplos  
 A continuación se muestran algunos ejemplos de consultas que utilizan varios operadores y criterios de fila:  
@@ -108,8 +108,8 @@ A continuación se muestran algunos ejemplos de consultas que utilizan varios op
     ```  
   
 ## <a name="see-also"></a>Vea también  
-[Temas de procedimientos de diseño de consultas y vistas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Especificar criterios de búsqueda &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
-[Realizar consultas con parámetros &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
+[Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Especificar criterios de búsqueda &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Realizar consultas con parámetros &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
   
 

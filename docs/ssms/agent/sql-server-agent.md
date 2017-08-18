@@ -17,11 +17,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0c9be76ca64a4df24cca399308244c5bc4c28e0d
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-server-agent"></a>Agente SQL Server
@@ -176,7 +176,7 @@ Use las siguientes tareas para comenzar a trabajar con el agente de [!INCLUDE[ss
 |Describe cómo usar el registro de errores del Agente SQL Server.|[Registro de errores del Agente SQL Server](../../ssms/agent/sql-server-agent-error-log.md)|  
 |Describe cómo usar los objetos de rendimiento.|[Usar objetos de rendimiento](../../ssms/agent/use-performance-objects.md)|  
 |Describe el Asistente para planes de mantenimiento, que es una utilidad que puede ayudarle a crear trabajos, alertas y operadores para automatizar la administración de una instancia de SQL Server.|[Usar el Asistente para planes de mantenimiento](http://msdn.microsoft.com/en-us/db65c726-9892-480c-873b-3af29afcee44)|  
-|Describe cómo automatizar tareas administrativas mediante el Agente SQL Server.|[Tareas administrativas automatizadas &amp;#40;Agente SQL Server&amp;#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
+|Describe cómo automatizar tareas administrativas mediante el Agente SQL Server.|[Tareas administrativas automatizadas &#40;Agente SQL Server&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
   
 ## <a name="see-also"></a>Vea también  
 [Configuración de Área expuesta](http://msdn.microsoft.com/en-us/f741169c-1453-4ad2-830b-bf2be27d712f)  

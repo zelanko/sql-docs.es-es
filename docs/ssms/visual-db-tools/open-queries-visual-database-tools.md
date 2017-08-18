@@ -17,15 +17,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f6955727dd2fa31e76ad6cf5e0195650abdc2ded
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="open-queries-visual-database-tools"></a>Abrir consultas (Visual Database Tools)
-Puede abrir una consulta existente en el Diseñador de consultas y vistas mediante el comando **Abrir**.  
+Puede abrir una consulta existente en el Diseñador de consultas y vistas mediante el comando **Abrir** .  
   
 ### <a name="to-open-a-query-in-all-panes"></a>Para abrir una consulta en todos los paneles  
   
@@ -39,8 +39,8 @@ Puede abrir una consulta existente en el Diseñador de consultas y vistas median
 > De manera predeterminada, el Diseñador de consultas y vistas abre todos sus paneles (SQL, Criterios, Diagrama y Resultados), pero este comportamiento predeterminado pueden cambiarse en el cuadro de diálogo **Opciones** . Para abrir estos paneles si están cerrados, en el menú **Diseñador de consultas** , elija **Panel**y, a continuación, haga clic en el panel que desea abrir.  
   
 ## <a name="see-also"></a>Vea también  
-[Realizar operaciones básicas con consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-[Guardar consultas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
-[Trabajar con datos en el panel Resultados &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[Realizar operaciones básicas con consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Guardar consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
+[Trabajar con datos en el panel Resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   
 

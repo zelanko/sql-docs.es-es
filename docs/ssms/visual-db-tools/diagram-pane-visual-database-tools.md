@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d77c2ce648939486be70ca9ab961bb9697b4d8db
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Panel Diagrama (Visual Database Tools)
@@ -69,8 +69,8 @@ La tabla siguiente muestra las casillas y los símbolos utilizados en el rectán
   
 |casilla o símbolo|Description|  
 |-----------------------|---------------|  
-|![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi7.gif "Visual Database Tools icon")<br /><br />![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi8.gif "Visual Database Tools icon")<br /><br />![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi9.gif "Visual Database Tools icon")<br /><br />![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbia.gif "Visual Database Tools icon")|Especifica si una columna de datos aparece en el conjunto de resultados de consulta (consulta Select) o si se utiliza en una consulta Update, Insert From, Make Table o Insert Into. Seleccione la columna para agregarla a los resultados. Si selecciona **(Todas las columnas)** , aparecerán todas las columnas de datos en los resultados.<br /><br />El icono utilizado con la casilla cambia según el tipo de consulta que esté creando. Al crear una consulta Eliminar, no puede seleccionar columnas individuales.|  
-|![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbib.gif "Visual Database Tools icon")<br /><br />![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbic.gif "Visual Database Tools icon")|Indica que la columna de datos se está utilizando para ordenar los resultados de una consulta (forma parte de una cláusula ORDER BY). El icono aparece como A-Z si el criterio de ordenación es ascendente o como Z-A si el criterio de ordenación es descendente.|  
+|![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi7.gif "Icono de Visual Database Tools")<br /><br />![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi8.gif "Icono de Visual Database Tools")<br /><br />![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi9.gif "Icono de Visual Database Tools")<br /><br />![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbia.gif "Icono de Visual Database Tools")|Especifica si una columna de datos aparece en el conjunto de resultados de consulta (consulta Select) o si se utiliza en una consulta Update, Insert From, Make Table o Insert Into. Seleccione la columna para agregarla a los resultados. Si selecciona **(Todas las columnas)** , aparecerán todas las columnas de datos en los resultados.<br /><br />El icono utilizado con la casilla cambia según el tipo de consulta que esté creando. Al crear una consulta Eliminar, no puede seleccionar columnas individuales.|  
+|![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbib.gif "Icono de Visual Database Tools")<br /><br />![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbic.gif "Icono de Visual Database Tools")|Indica que la columna de datos se está utilizando para ordenar los resultados de una consulta (forma parte de una cláusula ORDER BY). El icono aparece como A-Z si el criterio de ordenación es ascendente o como Z-A si el criterio de ordenación es descendente.|  
 |![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbid.gif "Icono de Visual Database Tools")|Indica que la columna de datos se está utilizando para crear un conjunto de resultados agrupado (forma parte de una cláusula GROUP BY) en una consulta de funciones agregadas.|  
 |![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbie.gif "Icono de Visual Database Tools")|Indica que la columna de datos está incluida en una condición de búsqueda de la consulta (forma parte de una cláusula WHERE o HAVING).|  
 |![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbif.gif "Icono de Visual Database Tools")|Indica que el contenido de la columna de datos se está resumiendo para obtener los resultados (está incluida en SUM, AVG u otra función de agregado).|  
@@ -100,8 +100,8 @@ Los iconos situados en los extremos de la línea de combinación indican el tipo
 |![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbio.gif "Icono de Visual Database Tools")|El Diseñador de consultas y vistas no puede determinar el tipo de combinación|  
   
 ## <a name="see-also"></a>Vea también  
-[Temas de procedimientos de diseño de consultas y vistas &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Panel Criterios &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)  
-[Ordenar y agrupar los resultados de una consulta &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Panel Criterios &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)  
+[Ordenar y agrupar los resultados de una consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   
 

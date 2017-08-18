@@ -1,37 +1,42 @@
 ---
-title: "Acerca del trasvase de registros (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "servidores secundarios [SQL Server]"
-  - "trasvase de registros [SQL Server], trabajos"
-  - "trabajos de copia [SQL Server]"
-  - "bases de datos principales [SQL Server]"
-  - "trasvase de registros [SQL Server], supervisar"
-  - "trasvase de registros [SQL Server], acerca del trasvase de registros"
-  - "trabajos de alerta [SQL Server]"
-  - "disponibilidad [SQL Server]"
-  - "trabajos [SQL Server], trasvase de registros"
-  - "servidores de supervisión [SQL Server]"
-  - "trabajos de restauración [SQL Server]"
-  - "trasvase de registros [SQL Server]"
-  - "trabajos de copia de seguridad [SQL Server]"
-  - "servidores principales [SQL Server]"
+title: Acerca del trasvase de registros (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- secondary servers [SQL Server]
+- log shipping [SQL Server], jobs
+- copy jobs [SQL Server]
+- primary databases [SQL Server]
+- log shipping [SQL Server], monitoring
+- log shipping [SQL Server], about log shipping
+- alert jobs [SQL Server]
+- availability [SQL Server]
+- jobs [SQL Server], log shipping
+- monitor servers [SQL Server]
+- restore jobs [SQL Server]
+- log shipping [SQL Server]
+- backup jobs [SQL Server]
+- primary servers [SQL Server]
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 caps.latest.revision: 65
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: dd5412ff60f00e648452796423fcf715d8e56168
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Acerca del trasvase de registros (SQL Server)
+# <a name="about-log-shipping-sql-server"></a>Acerca del trasvase de registros (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El trasvase de registros permite enviar automáticamente copias de seguridad del registro de transacciones desde una *base de datos principal* de una instancia del *servidor principal* a una o varias *bases de datos secundarias* en instancias independientes del *servidor secundario* . Las copias de seguridad del registro de transacciones se aplican a cada una de las bases de datos secundarias de forma individual. En una tercera instancia de servidor opcional, denominado *servidor de supervisión*, se registra el historial y el estado de las operaciones de copias de seguridad y restauración y, opcionalmente, se activan alertas si estas operaciones no se producen según lo programado.  
   
  **En este tema:**  
@@ -111,7 +116,7 @@ caps.handback.revision: 65
   
  Además, puede configurar alertas para la configuración de trasvase de registros.  
   
-### Una configuración de trasvase de registros típica  
+### <a name="a-typical-log-shipping-configuration"></a>Una configuración de trasvase de registros típica  
  La siguiente ilustración muestra una configuración de trasvase de registros con la instancia del servidor principal, tres instancias del servidor secundario y una instancia del servidor de supervisión. La ilustración presenta los pasos realizados por los trabajos de copia de seguridad, copia y restauración del siguiente modo:  
   
 1.  La instancia del servidor principal ejecuta el trabajo de copia de seguridad del registro de transacciones en la base de datos principal. A continuación, esta instancia de servidor coloca la copia de seguridad del registro en un archivo principal de copias de seguridad de registros que se envía a la carpeta de copia de seguridad.  En esta ilustración, la carpeta de copia de seguridad es un directorio compartido: el *recurso compartido de copia de seguridad*.  
@@ -127,7 +132,7 @@ caps.handback.revision: 65
 ##  <a name="Interoperability"></a> Interoperabilidad  
  El trasvase de registros se puede usar con las siguientes características o componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   [Requisitos previos para migrar desde grupos de trasvase de registros a grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs migrating log shipping to always on availability groups.md)  
+-   [Requisitos previos para migrar desde grupos de trasvase de registros a grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
 -   [Crear reflejo de la base de datos y trasvase de registros &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   
@@ -142,9 +147,9 @@ caps.handback.revision: 65
   
 -   [Configurar el trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)  
   
--   [Agregar una base de datos secundaria a la configuración del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
+-   [Agregar una base de datos secundaria a la configuración de trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
   
--   [Quitar una base de datos secundaria desde una configuración del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md)  
+-   [Quitar una base de datos secundaria desde una configuración de trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md)  
   
 -   [Quitar el trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/remove-log-shipping-sql-server.md)  
   
@@ -158,7 +163,8 @@ caps.handback.revision: 65
   
 -   [Administración de inicios de sesión y trabajos tras la conmutación de roles &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

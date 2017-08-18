@@ -1,45 +1,38 @@
 ---
-title: "Grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grupos de disponibilidad [SQL Server], acerca de"
-  - "réplicas secundarias, ver Grupos de disponibilidad [SQL Server]"
-  - "disponibilidad [SQL Server]"
-  - "AlwaysOn [SQL Server], ver Grupos de disponibilidad [SQL Server]"
-  - "Grupos de disponibilidad [SQL Server]"
+title: Grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], about
+- secondary replicas, see Availability Groups [SQL Server]
+- availability [SQL Server]
+- AlwaysOn [SQL Server], see Availability Groups [SQL Server]
+- Availability Groups [SQL Server]
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 caps.latest.revision: 35
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 519a66344458046238aa4c8ce1b901fe84bacc7f
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Grupos de disponibilidad AlwaysOn (SQL Server)
+# <a name="always-on-availability-groups-sql-server"></a>Grupos de disponibilidad AlwaysOn (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   La característica [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] es una solución de alta disponibilidad y de recuperación ante desastres que proporciona una alternativa empresarial a la creación de reflejo de la base de datos. Incorporada en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] maximiza la disponibilidad de un conjunto de bases de datos de usuario para una empresa. Un *grupo de disponibilidad* admite un entorno de conmutación por error para un conjunto discreto de bases de datos de usuario, conocido como *bases de datos de disponibilidad*, que realizan la conmutación por error conjuntamente. Un grupo de disponibilidad admite un conjunto de bases de datos principales de lectura y escritura y de uno a ocho conjuntos de bases de datos secundarias correspondientes. Opcionalmente, las bases de datos secundarias pueden estar disponibles para el acceso de solo lectura o para algunas operaciones de copia de seguridad.  
   
  Un grupo de disponibilidad realiza la conmutación por error en el nivel de réplica de disponibilidad. Las conmutaciones por error no se deben a problemas de bases de datos como que una base de datos pase a ser sospechosa debido a la pérdida de un archivo de datos, la eliminación de una base de datos o los daños de un registro de transacciones.  
-  
- **En este tema:**  
-  
--   [Ventajas](#Benefits)  
-  
--   [Términos y definiciones](#TermsAndDefinitions)  
-  
--   [Interoperabilidad y coexistencia con otras características del motor de base de datos](#Interoperability)  
-  
--   [Tareas relacionadas](#RelatedTasks)  
-  
--   [Contenido relacionado](#RelatedContent)  
   
 ##  <a name="Benefits"></a> Ventajas  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] proporciona un amplio conjunto de opciones que mejoran la disponibilidad de las bases de datos y que permiten el uso de recursos mejorado. Los componentes clave son los siguientes:  
@@ -47,7 +40,7 @@ caps.handback.revision: 34
 -   Admite hasta nueve réplicas de disponibilidad. Una *réplica de disponibilidad* es una instancia de un grupo de disponibilidad hospedado en una instancia específica de SQL Server y que mantiene una copia local de cada base de datos de disponibilidad perteneciente al grupo de disponibilidad. Cada grupo de disponibilidad admite una réplica principal y hasta ocho réplicas secundarias. Para obtener más información, vea [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
     > [!IMPORTANT]  
-    >  Cada réplica de disponibilidad debe residir en otro nodo de un único clúster de clústeres de conmutación por error de Windows Server (WSFC). Para obtener más información sobre los requisitos previos, las restricciones y las recomendaciones para los grupos de disponibilidad, vea [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+    >  Cada réplica de disponibilidad debe residir en otro nodo de un único clúster de clústeres de conmutación por error de Windows Server (WSFC). Para obtener más información sobre los requisitos previos, las restricciones y las recomendaciones para los grupos de disponibilidad, vea [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 -   Admite modos de disponibilidad alternativos como los siguientes:  
   
@@ -67,7 +60,7 @@ caps.handback.revision: 34
   
      Con capacidades secundarias activas se mejora la eficiencia de los procesos de TI y se reducen los costos mediante la mejor utilización de los recursos del hardware secundario. Además, las aplicaciones de lectura de descarga y los trabajos de copia de seguridad de las réplicas secundarias ayudan a mejorar el rendimiento de la réplica primaria.  
   
--   Admite un agente de escucha del grupo de disponibilidad para cada grupo de disponibilidad. Un *agente de escucha de grupo de disponibilidad* es un nombre de servidor al que los clientes pueden conectarse para tener acceso a una base de datos en una réplica principal o secundaria de un grupo de disponibilidad AlwaysOn. Los agentes de escucha del grupo de disponibilidad dirigen las conexiones entrantes a la réplica principal o una réplica secundaria de solo lectura. El agente de escucha proporciona conmutación por error rápida de aplicaciones después de que se produzca la conmutación por error del grupo de disponibilidad. Para obtener más información, vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md).  
+-   Admite un agente de escucha del grupo de disponibilidad para cada grupo de disponibilidad. Un *agente de escucha de grupo de disponibilidad* es un nombre de servidor al que los clientes pueden conectarse para tener acceso a una base de datos en una réplica principal o secundaria de un grupo de disponibilidad AlwaysOn. Los agentes de escucha del grupo de disponibilidad dirigen las conexiones entrantes a la réplica principal o una réplica secundaria de solo lectura. El agente de escucha proporciona conmutación por error rápida de aplicaciones después de que se produzca la conmutación por error del grupo de disponibilidad. Para obtener más información, vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
 -   Admite una directiva flexible de conmutación por error para un mayor control sobre una conmutación por error del grupo de disponibilidad. Para obtener más información, vea [Conmutación por error y modos de conmutación por error &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
@@ -83,7 +76,7 @@ caps.handback.revision: 34
   
         -   [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] crea y configura un grupo de disponibilidad. En algunos entornos, este asistente puede también preparar automáticamente las bases de datos secundarias e iniciar la sincronización de datos de cada una de ellas. Para obtener más información, vea [Usar el cuadro de diálogo Nuevo grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md).  
   
-        -   [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] agrega una o más bases de datos principales a un grupo de disponibilidad. En algunos entornos, este asistente puede también preparar automáticamente las bases de datos secundarias e iniciar la sincronización de datos de cada una de ellas. Para obtener más información, vea [Usar el Asistente para agregar una base de datos al grupo de disponibilidad (SQL Server)](../../../database-engine/availability-groups/windows/use-the-add-database-to-availability-group-wizard-sql-server-management-studio.md).  
+        -   [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] agrega una o más bases de datos principales a un grupo de disponibilidad. En algunos entornos, este asistente puede también preparar automáticamente las bases de datos secundarias e iniciar la sincronización de datos de cada una de ellas. Para obtener más información, vea [Usar el Asistente para agregar una base de datos al grupo de disponibilidad (SQL Server)](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md).  
   
         -   [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] agrega una o varias réplicas secundarias a un grupo de disponibilidad. En algunos entornos, este asistente puede también preparar automáticamente las bases de datos secundarias e iniciar la sincronización de datos de cada una de ellas. Para obtener más información, vea [Usar el Asistente para agregar una réplica al grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md).  
   
@@ -91,7 +84,7 @@ caps.handback.revision: 34
   
     -   El [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] supervisa los grupos de disponibilidad AlwaysOn, las réplicas de disponibilidad y las bases de datos de disponibilidad y evalúa los resultados de las directivas de AlwaysOn. Para obtener más información, vea [Usar el Panel AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md).  
   
-    -   El panel Detalles del Explorador de objetos muestra información básica acerca de los grupos de disponibilidad existentes. Para obtener más información, vea [Usar los detalles del Explorador de objetos para supervisar los grupos de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use object explorer details to monitor availability groups.md).  
+    -   El panel Detalles del Explorador de objetos muestra información básica acerca de los grupos de disponibilidad existentes. Para obtener más información, vea [Usar los detalles del Explorador de objetos para supervisar los grupos de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md).  
   
     -   Cmdlets de PowerShell. Para obtener más información, vea [Información general de los cmdlets de PowerShell para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md).  
   
@@ -148,7 +141,7 @@ caps.handback.revision: 34
   
 -   [Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  
   
--   [Agente SQL Server](../../../ssms/agent/sql-server-agent.md)  
+-   [Agente SQL Server](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)  
   
 -   [Reporting Services](../../../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md)  
   
@@ -163,7 +156,7 @@ caps.handback.revision: 34
   
 -   **Blogs:**  
   
-     [Blogs del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](http://blogs.msdn.com/b/sqlAlways%20On/)  
+     [Blogs del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [Blogs de los ingenieros de SQL Server de CSS](http://blogs.msdn.com/b/psssql/)  
   
@@ -181,9 +174,9 @@ caps.handback.revision: 34
   
      [Notas del producto del equipo de asesoramiento al cliente de SQL Server](http://sqlcat.com/)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)   
+ [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Configuración de una instancia del servidor para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)   
  [Creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Administración de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
@@ -192,3 +185,4 @@ caps.handback.revision: 34
  [Información general de los cmdlets de PowerShell para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   
+

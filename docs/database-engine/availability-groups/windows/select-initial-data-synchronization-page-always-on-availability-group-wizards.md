@@ -1,46 +1,37 @@
 ---
-title: "P&#225;gina Seleccionar sincronizaci&#243;n de datos iniciales (asistentes para grupos de disponibilidad Always On) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.adddatabasewizard.selectinitialdatasync.f1"
-  - "sql13.swb.newagwizard.selectinitialdatasync.f1"
-  - "sql13.swb.addreplicawizard.selectinitialdatasync.f1"
+title: "Página Seleccionar sincronización de datos iniciales (asistentes para grupos de disponibilidad Always On) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.adddatabasewizard.selectinitialdatasync.f1
+- sql13.swb.newagwizard.selectinitialdatasync.f1
+- sql13.swb.addreplicawizard.selectinitialdatasync.f1
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 caps.latest.revision: 39
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: bae5aa51a2a72e7f056bba56516ed357c61e4b8d
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# P&#225;gina Seleccionar sincronizaci&#243;n de datos iniciales (asistentes para grupos de disponibilidad Always On)
+# <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>Página Seleccionar sincronización de datos iniciales (asistentes para grupos de disponibilidad Always On)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Use la página de AlwaysOn **Seleccionar sincronización de datos iniciales** para indicar sus preferencias para la sincronización de datos inicial de las nuevas bases de datos secundarias. Esta página es compartida por tres asistentes: [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], el [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] y el [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)].  
+  Use la página de AlwaysOn **Seleccionar sincronización de datos iniciales** para indicar sus preferencias para la sincronización de datos inicial de las nuevas bases de datos secundarias. Esta página es compartida por tres asistentes: [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], el [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]y el [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)].  
   
- Las opciones posibles son **Completa**, **Solo unión**u **Omitir la sincronización de datos iniciales**. Antes de seleccionar **Completa** o **Solo unión** asegúrese de que el entorno cumpla los requisitos previos.  
-  
- **En este tema:**  
-  
--   [Recomendaciones](#Recommendations)  
-  
--   [Completa](#Full)  
-  
--   [Solo unión](#Joinonly)  
-  
--   [Omitir la sincronización de datos iniciales](#Skip)  
-  
--   [Para preparar una base de datos secundaria manualmente](#PrepareSecondaryDbs)  
-  
--   [Tareas relacionadas](#LaunchWiz)  
-  
+ Las opciones posibles son **Propagación automática**, **Copia de seguridad completa de registros y bases de datos**, **Solo unirse** u **Omitir la sincronización de datos iniciales**. Antes de seleccionar **Propagación automática**, **Copia de seguridad completa de registros y bases de datos** o **Solo unirse**, asegúrese de que el entorno cumple los requisitos previos.  
+    
 ##  <a name="Recommendations"></a> Recomendaciones  
   
 -   Suspenda las tareas de copia de seguridad de registros para las bases de datos principales durante la sincronización de datos inicial.  
@@ -51,12 +42,16 @@ caps.handback.revision: 39
   
      Si las operaciones de copia de seguridad y restauración deben estar muy protegidas, se recomienda seleccionar la opción **Solo unión** u **Omitir la sincronización de datos iniciales** .  
   
-##  <a name="Full"></a> Completa  
- Para cada base de datos principal, la opción **Completa** realiza varias operaciones en un flujo de trabajo: crear una copia de seguridad completa y de registros de la base de datos principal, crear las bases de datos secundarias correspondientes restaurando estas copias de seguridad en cada instancia de servidor que está hospedando una réplica secundaria y unir cada base de datos secundaria al grupo de disponibilidad.  
+## <a name="Auto"></a> Propagación automática
+ 
+ SQL Server crea automáticamente las réplicas secundarias de cada base de datos del grupo. La propagación automática requiere que la ruta de acceso del archivo de datos y de registro sea la misma en cada instancia de SQL Server que participe en el grupo. Disponible en [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] y en versiones posteriores. Vea [Inicializar automáticamente grupos de disponibilidad Always On](automatically-initialize-always-on-availability-group.md).
+
+##  <a name="Full"></a> Copia de seguridad completa de registros y bases de datos 
+ En cada base de datos principal, la opción **Copia de seguridad completa de registros y bases de datos** realiza varias operaciones en un flujo de trabajo: crear una copia de seguridad completa y de registros de la base de datos principal, crear las bases de datos secundarias correspondientes restaurando estas copias de seguridad en cada instancia de servidor que está hospedando una réplica secundaria y unir cada base de datos secundaria al grupo de disponibilidad.  
   
  Seleccione esta opción solo si su entorno cumple los requisitos previos para utilizar la sincronización de datos inicial completa y desea que el asistente inicie automáticamente la sincronización de datos.  
   
- **Requisitos previos para usar la sincronización de datos inicial completa**  
+ **Requisitos previos para usar una sincronización de datos inicial de copia de seguridad completa de registros y bases de datos**  
   
 -   Todas las rutas de acceso de archivos de base de datos deben ser idénticas en todas las instancias de servidor que hospedan una réplica para el grupo de disponibilidad.  
   
@@ -76,7 +71,7 @@ caps.handback.revision: 39
   
  **Si los requisitos previos se cumplen**  
   
- Si todos estos requisitos previos se cumplen y desea que el asistente realice la sincronización de datos inicial completa, seleccione la opción **Completo** y especifique un recurso compartido de red. Esto hará que el asistente cree la base de datos completa y de registros de cada base de datos seleccionada y coloque estas copias de seguridad en el recurso compartido de red que especifique. Después, en cada instancia de servidor que hospeda una de las nuevas réplicas secundarias, el asistente creará las bases de datos secundarias restaurando las copias de seguridad utilizando RESTORE WITH NORECOVERY. Después de crear cada una de las bases de datos secundarias, el asistente unirá la nueva base de datos secundaria al grupo de disponibilidad. En cuanto se une una base de datos secundaria, se inician las sincronizaciones de datos en ella.  
+ Si todos estos requisitos previos se cumplen y quiere que el asistente realice la sincronización de datos inicial completa, seleccione la opción **Copia de seguridad completa de registros y bases de datos** y especifique un recurso compartido de red. Esto hará que el asistente cree la base de datos completa y de registros de cada base de datos seleccionada y coloque estas copias de seguridad en el recurso compartido de red que especifique. Después, en cada instancia de servidor que hospeda una de las nuevas réplicas secundarias, el asistente creará las bases de datos secundarias restaurando las copias de seguridad utilizando RESTORE WITH NORECOVERY. Después de crear cada una de las bases de datos secundarias, el asistente unirá la nueva base de datos secundaria al grupo de disponibilidad. En cuanto se une una base de datos secundaria, se inician las sincronizaciones de datos en ella.  
   
  **Especifique una ubicación de red compartida accesible por todas las réplicas**  
  Para crear y restaurar copias de seguridad, el asistente requiere que se especifique un recurso compartido de red. La cuenta utilizada para iniciar [!INCLUDE[ssDE](../../../includes/ssde-md.md)] en cada instancia de servidor que hospedará una réplica de disponibilidad debe tener permisos de sistema de archivos de lectura/escritura en el recurso compartido de red.  
@@ -104,14 +99,14 @@ caps.handback.revision: 39
   
      [Preparar manualmente una base de datos secundaria para un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   Si va a agregar una o varias bases de datos principales de trasvase de registros en un grupo de disponibilidad, es posible que pueda migrar una o varias de sus bases de datos secundarias correspondientes de los grupos de trasvase de registros a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para obtener más información, vea [Requisitos previos para migrar desde grupos de trasvase de registros a grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs migrating log shipping to always on availability groups.md).  
+-   Si va a agregar una o varias bases de datos principales de trasvase de registros en un grupo de disponibilidad, es posible que pueda migrar una o varias de sus bases de datos secundarias correspondientes de los grupos de trasvase de registros a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para obtener más información, vea [Requisitos previos para migrar desde grupos de trasvase de registros a grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
   
     > [!NOTE]  
     >  Después de crear todas las bases de datos secundarias para el grupo de disponibilidad, si desea realizar copias de seguridad en las réplicas secundarias, deberá configurar de nuevo la preferencia de copia de seguridad automatizada del grupo de disponibilidad.  
   
      **Para obtener más información:**  
   
-     [Requisitos previos para migrar desde grupos de trasvase de registros a grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs migrating log shipping to always on availability groups.md)  
+     [Requisitos previos para migrar desde grupos de trasvase de registros a grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
      [Configurar la copia de seguridad en réplicas de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -125,7 +120,7 @@ caps.handback.revision: 39
   
 -   [Usar el Asistente para agregar una réplica al grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Usar el Asistente para agregar una base de datos al grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-database-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [Usar el Asistente para agregar una base de datos al grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
 -   [Usar el Asistente para grupo de disponibilidad de conmutación por error &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
@@ -135,7 +130,8 @@ caps.handback.revision: 39
   
 -   [Usar el cuadro de diálogo Nuevo grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

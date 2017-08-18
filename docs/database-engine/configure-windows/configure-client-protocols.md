@@ -1,40 +1,45 @@
 ---
-title: "Configurar protocolos de cliente | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "protocolos predeterminados"
-  - "protocolos de red [SQL Server], configuración del cliente"
-  - "TCP/IP [SQL Server], protocolos de cliente"
-  - "deshabilitar protocolos de cliente"
-  - "ordenar protocolos [SQL Server]"
-  - "protocolos [SQL Server], orden para los equipos cliente"
-  - "configurar protocolos de cliente"
-  - "protocolos de cliente [SQL Server]"
-  - "protocolos [SQL Server], configuración del cliente"
-  - "protocolos predeterminados, cliente"
+title: Configurar protocolos de cliente | Microsoft Docs
+ms.custom: 
+ms.date: 07/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- default protocols
+- network protocols [SQL Server], client configuration
+- TCP/IP [SQL Server], client protocols
+- disabling client protocols
+- ordering protocols [SQL Server]
+- protocols [SQL Server], order for client computers
+- configure client protocols
+- client protocols [SQL Server]
+- protocols [SQL Server], client configuration
+- default protocols, client
 ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57e27a735c982ab8ed561c7ae8a3d6c875d7e721
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurar protocolos de cliente
+# configurar protocolos de cliente
   En este tema se describe cómo configurar los protocolos de cliente utilizados por aplicaciones cliente de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite comunicaciones de cliente con el protocolo de red TCP/IP y el protocolo de canalizaciones con nombre. El protocolo de memoria compartida también está disponible si el cliente se está conectando a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] en el mismo equipo. Hay varios métodos habituales para seleccionar el protocolo.  
   
 -   Configure todas las aplicaciones cliente para que usen el mismo protocolo de red estableciendo el orden de protocolos en el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Configure una sola aplicación cliente para que use otro protocolo de red creando un alias. Para obtener más información, vea [Crear o eliminar un alias de servidor para que lo utilice un cliente &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/create or delete a server alias for use by a client.md).  
+-   Configure una sola aplicación cliente para que use otro protocolo de red creando un alias. Para obtener más información, vea [Crear o eliminar un alias de servidor para que lo utilice un cliente &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md).  
   
--   Algunas aplicaciones cliente, como sqlcmd.exe, pueden especificar el protocolo como parte de la cadena de conexión. Para obtener más información, vea [Conectarse al motor de base de datos con sqlcmd](../../relational-databases/scripting/connect-to-the-database-engine-with-sqlcmd.md).  
+-   Algunas aplicaciones cliente, como sqlcmd.exe, pueden especificar el protocolo como parte de la cadena de conexión. Para obtener más información, vea [Conectarse al motor de base de datos con sqlcmd](../../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md).  
   
 ##  <a name="SSMSProcedure"></a> Usar el Administrador de configuración de SQL Server  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 35
 2.  En el cuadro **Protocolos habilitados** , haga clic en **Subir** o **Bajar**para cambiar el orden en el que los protocolos se utilizan cuando se intenta la conexión a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El protocolo superior del cuadro **Protocolos habilitados** es el protocolo predeterminado.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea entradas del Registro para las configuraciones de alias del servidor y la biblioteca de red de cliente predeterminada. Sin embargo, la aplicación no instala ni las bibliotecas de red de cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ni los protocolos de red. Las bibliotecas de red de cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se instalan durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; los protocolos de red se instalan como parte del programa de instalación de Microsoft Windows (o desde **Redes** en el **Panel de control**). Es posible que un protocolo de red específico no esté disponible como parte del programa de instalación de Windows. Para obtener más información acerca de cómo instalar estos protocolos de red, consulte la documentación del fabricante.  
+    >  El Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea entradas del Registro para las configuraciones de alias del servidor y la biblioteca de red de cliente predeterminada. Sin embargo, la aplicación no instala ni las bibliotecas de red de cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ni los protocolos de red. Las bibliotecas de red de cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se instalan durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; los protocolos de red se instalan como parte del programa de instalación de Microsoft Windows (o desde **Redes** en el **Panel de control**). Es posible que un protocolo de red específico no esté disponible como parte del programa de instalación de Windows. Para obtener más información acerca de cómo instalar estos protocolos de red, consulte la documentación del fabricante.  
   
 ###  <a name="Configure"></a> Para configurar el uso de TCP/IP en un cliente  
   
@@ -67,3 +72,4 @@ caps.handback.revision: 35
  [Establecer la opción de configuración del servidor Tiempo de espera de inicio de sesión remoto](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md)  
   
   
+

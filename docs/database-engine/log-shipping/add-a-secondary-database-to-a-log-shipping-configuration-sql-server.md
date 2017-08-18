@@ -1,27 +1,32 @@
 ---
-title: "Agregar una base de datos secundaria a la configuraci&#243;n del trasvase de registros (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "agregar bases de datos secundarias"
-  - "bases de datos secundarias [SQL Server], en trasvase de registros"
-  - "archivos de datos secundarios [SQL Server], agregar"
-  - "trasvase de registros [SQL Server], bases de datos secundarias"
+title: "Agregar una base de datos secundaria a la configuración del trasvase de registros (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding secondary databases
+- secondary databases [SQL Server], in log shipping
+- secondary data files [SQL Server], adding
+- log shipping [SQL Server], secondary databases
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d1f64d49c5baf05dc1c7f18c4c0c568a94e424ae
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Agregar una base de datos secundaria a la configuraci&#243;n del trasvase de registros (SQL Server)
+# <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>Agregar una base de datos secundaria a la configuración del trasvase de registros (SQL Server)
   En este tema se describe cómo agregar una base de datos secundaria a una configuración de trasvase de registros de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] existente mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
@@ -43,11 +48,11 @@ caps.handback.revision: 20
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- Los procedimientos almacenados de trasvase de registros requieren que se pertenezca al rol fijo de servidor **sysadmin**.  
+ Los procedimientos almacenados de trasvase de registros requieren que se pertenezca al rol fijo de servidor **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para agregar una base de datos secundaria de trasvase de registros  
+#### <a name="to-add-a-log-shipping-secondary-database"></a>Para agregar una base de datos secundaria de trasvase de registros  
   
 1.  Haga clic con el botón derecho en la base de datos que quiera usar como base de datos principal en la configuración de trasvase de registros y, después, haga clic en **Propiedades**.  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 20
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para agregar una base de datos secundaria de trasvase de registros  
+#### <a name="to-add-a-log-shipping-secondary-database"></a>Para agregar una base de datos secundaria de trasvase de registros  
   
 1.  En el servidor secundario, ejecute [sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md) y proporcione los detalles del servidor y la base de datos principales. Este procedimiento almacenado devuelve el Id. secundario y los Id. de los trabajos de copia y restauración.  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 20
   
 4.  En el servidor principal, ejecute [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md) para agregar la información necesaria sobre la nueva base de datos secundaria al servidor principal.  
   
-5.  En el servidor secundario, habilite los trabajos de copia y restauración. Para obtener más información, consulte [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
+5.  En el servidor secundario, habilite los trabajos de copia y restauración. Para obtener más información, consulte [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   
@@ -109,7 +114,7 @@ caps.handback.revision: 20
   
 -   [Conmutar por error a una base de datos secundaria de trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Tablas y procedimientos almacenados de trasvase de registros](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

@@ -1,52 +1,57 @@
 ---
-title: "Opciones de configuraci&#243;n de servidor (SQL Server) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "configuración del servidor (SQL Server)"
-helpviewer_keywords: 
-  - "configuración del área expuesta [SQL Server], sp_configure"
-  - "opciones de configuración [SQL Server], cuándo surten efecto"
-  - "administración de servidores [SQL Server], opciones de configuración"
-  - "SQL Server Management Studio [SQL Server], servidores"
-  - "servidores [SQL Server], configurar"
-  - "opciones de configuración [SQL Server], configuración"
-  - "opciones [SQL Server], configuración"
-  - "Instrucción RECONFIGURE"
-  - "rendimiento [SQL Server], servidores"
-  - "opciones de configuración [SQL Server]"
-  - "RECONFIGURE WITH OVERRIDE, instrucción"
-  - "SQL Server, configurar"
-  - "sp_configure"
-  - "procedimientos almacenados [SQL Server], opciones de configuración"
-  - "configuración de servidor [SQL Server]"
-  - "administración de SQL Server, opciones de configuración"
+title: "Opciones de configuración de servidor (SQL Server) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 04/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- "configuración del servidor (SQL Server)"
+helpviewer_keywords:
+- surface area configuration [SQL Server], sp_configure
+- configuration options [SQL Server], when take effect
+- server management [SQL Server], configuration options
+- SQL Server Management Studio [SQL Server], servers
+- servers [SQL Server], configuring
+- configuration options [SQL Server], setting
+- options [SQL Server], configuration
+- RECONFIGURE statement
+- performance [SQL Server], servers
+- configuration options [SQL Server]
+- RECONFIGURE WITH OVERRIDE statement
+- SQL Server, configuring
+- sp_configure
+- stored procedures [SQL Server], configuration options
+- server configuration [SQL Server]
+- administering SQL Server, configuration options
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 caps.latest.revision: 128
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 128
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: e5fd7bae9ba05669af1b21a931b39aba3132e25e
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Opciones de configuraci&#243;n de servidor (SQL Server)
+# <a name="server-configuration-options-sql-server"></a>Opciones de configuración de servidor (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Puede administrar y optimizar los recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante opciones de configuración con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o el procedimiento almacenado del sistema sp_configure. Las opciones de configuración de servidores más utilizadas están disponibles mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]; es posible el acceso a todas las opciones de configuración mediante sp_configure. Antes de establecer estas opciones, debe considerar detenidamente los efectos en el sistema. Para obtener más información, vea [Ver o cambiar las propiedades del servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).  
   
 >**IMPORTANTE:** Solo un administrador de la base de datos con experiencia o un técnico de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la titulación apropiada debe cambiar las opciones avanzadas.  
   
-## Categorías de las opciones de configuración  
+## <a name="categories-of-configuration-options"></a>Categorías de las opciones de configuración  
  Las opciones de configuración tienen efecto en uno de estos dos momentos:  
   
--   Inmediatamente después de establecer la opción y ejecutar la instrucción **RECONFIGURE** (o, en algunos casos, **RECONFIGURE WITH OVERRIDE**). La reconfiguración de ciertas opciones invalidará planes en la caché de planes, provocando la compilación de nuevos planes. Para más información, vea [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md).
+-   Inmediatamente después de establecer la opción y ejecutar la instrucción **RECONFIGURE** (o, en algunos casos, **RECONFIGURE WITH OVERRIDE**). La reconfiguración de ciertas opciones invalidará planes en la caché de planes, provocando la compilación de nuevos planes. Para obtener más información, vea [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md).
   
      -O bien-  
   
@@ -54,11 +59,11 @@ caps.handback.revision: 128
   
 Las opciones que necesitan que se reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo mostrarán inicialmente el valor modificado en la columna value. Después de reiniciar, el nuevo valor aparecerá tanto en la columna value como en la columna value_in_use.  
   
-Para algunas opciones, es necesario reiniciar el servidor para que el valor de la nueva configuración surta efecto. Si establece el nuevo valor y ejecuta sp_configure antes de reiniciar el servidor, el nuevo valor aparecerá en la columna **value** de las opciones de configuración, pero no en la columna **value_in_use**. Después de reiniciar el servidor, el nuevo valor aparecerá en la columna **value_in_use**.  
+Para algunas opciones, es necesario reiniciar el servidor para que el valor de la nueva configuración surta efecto. Si establece el nuevo valor y ejecuta sp_configure antes de reiniciar el servidor, el nuevo valor aparecerá en la columna **value** de las opciones de configuración, pero no en la columna **value_in_use** . Después de reiniciar el servidor, el nuevo valor aparecerá en la columna **value_in_use** .  
   
-Las opciones de configuración automática son aquellas que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajusta según las necesidades del sistema. En la mayoría de los casos, esto elimina la necesidad de establecer los valores manualmente. Como ejemplo se pueden citar las opciones **min server memory** y **max server memory**, así como la opción user connections.  
+Las opciones de configuración automática son aquellas que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajusta según las necesidades del sistema. En la mayoría de los casos, esto elimina la necesidad de establecer los valores manualmente. Como ejemplo se pueden citar las opciones **min server memory** y **max server memory** , así como la opción user connections.  
   
-## Tabla de opciones de configuración  
+## <a name="configuration-options-table"></a>Tabla de opciones de configuración  
  La siguiente tabla contiene todas las opciones de configuración disponibles, la gama de valores posibles y los valores predeterminados. Las opciones de configuración están marcadas con códigos de letras de la forma siguiente:  
   
 -   A = Opciones avanzadas, que solo deben ser cambiadas por un administrador de base de datos con experiencia o un técnico de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la titulación apropiada, y que requieren el valor 1 para show advanced options.  
@@ -78,7 +83,7 @@ Las opciones de configuración automática son aquellas que [!INCLUDE[ssNoVersio
     |[affinity64 I/O mask](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md) (A, disponible solo en la versión de 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])|-2147483648|2147483647|0|  
     |[affinity mask](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md) (A)|-2147483648|2147483647|0|  
     |[affinity64 mask](../../database-engine/configure-windows/affinity64-mask-server-configuration-option.md) (A, RR), disponible solo en la versión de 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
-    |[Agent XPs](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) (A)|0|1|0<br /><br /> Cambia a 1 cuando se inicia el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El valor predeterminado es 0 si el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se establece para que se inicie automáticamente durante la instalación.|  
+    |[Agent XPs](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) (A)|0|1|0<br /><br /> Cambia a 1 cuando se inicia el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El valor predeterminado es 0 si el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se establece para que se inicie automáticamente durante la instalación.|  
     |[allow updates](../../database-engine/configure-windows/allow-updates-server-configuration-option.md) (obsoleto. No debe usarse. Generará un error durante la reconfiguración).|0|1|0|  
     |[automatic soft-NUMA disabled](http://msdn.microsoft.com/library/ms345357.aspx)|0|1|0|  
     |[Valor predeterminado de la suma de comprobación de copia de seguridad](../../database-engine/configure-windows/backup-checksum-default.md)|0|1|0|  
@@ -86,6 +91,7 @@ Las opciones de configuración automática son aquellas que [!INCLUDE[ssNoVersio
     |[blocked process threshold](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
     |[c2 audit mode](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md) (A, RR)|0|1|0|  
     |[clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)|0|1|0|  
+    |[clr strict security](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658). |0|1|0|  
     |[common criteria compliance enabled](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md) (A, RR)|0|1|0|  
     |[autenticación de la base de datos independiente (A)](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)|0|1|0|  
     |[cost threshold for parallelism](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A)|0|32767|5|  
@@ -97,7 +103,7 @@ Las opciones de configuración automática son aquellas que [!INCLUDE[ssNoVersio
     |[default trace enabled](../../database-engine/configure-windows/default-trace-enabled-server-configuration-option.md) (A)|0|1|1|  
     |[disallow results from triggers](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) (A)|0|1|0|  
     |[EKM provider enabled](../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)|0|1|0|  
-    |[external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md) (RR)<br /><br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658).|0|1|0|  
+    |[external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md) (RR)<br /><br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658).|0|1|0|  
     |[filestream_access_level](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)|0|2|0|  
     |[fill factor](../../database-engine/configure-windows/configure-the-fill-factor-server-configuration-option.md) (A, RR)|0|100|0|  
     |ft crawl bandwidth (max); vea [ft crawl bandwidth](../../database-engine/configure-windows/ft-crawl-bandwidth-server-configuration-option.md)(A)|0|32767|100|  
@@ -112,7 +118,7 @@ Las opciones de configuración automática son aquellas que [!INCLUDE[ssNoVersio
     |[max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
     |[max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (1024 es el valor máximo recomendado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 32 bits y 2048, para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 64 bits. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fue la última versión disponible en el sistema operativo de 32 bits).|0<br /><br /> Cero configura automáticamente el número máximo de subprocesos de trabajo dependientes del número de procesadores mediante la fórmula (256 + (*\<procesadores>* -4) * 8) para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 32 bits, y dos veces la misma fórmula para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 64 bits. ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fue la última versión disponible en el sistema operativo de 32 bits).|  
+    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (1024 es el valor máximo recomendado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de 32 bits y 2048, para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de 64 bits.[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fue la última versión disponible en el sistema operativo de 32 bits).|0<br /><br /> Cero configura automáticamente el número máximo de subprocesos de trabajo dependientes del número de procesadores mediante la fórmula (256 + (*\<procesadores>* -4) * 8) para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 32 bits, y dos veces la misma fórmula para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 64 bits. ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fue la última versión disponible en el sistema operativo de 32 bits).|  
     |[media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
     |[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  
@@ -122,7 +128,7 @@ Las opciones de configuración automática son aquellas que [!INCLUDE[ssNoVersio
     |[open objects](../../database-engine/configure-windows/open-objects-server-configuration-option.md) (A, RR, obsoleto)|0|2147483647|0|  
     |[optimize for ad hoc workloads](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
     |[PH_timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
-    |[PolyBase Hadoop y Azure Blob Storage](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658).|0|7|0|   
+    |[PolyBase Hadoop y Azure Blob Storage](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658).|0|7|0|   
     |[precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A)|0|1|0|  
     |[priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) (A, RR)|0|1|0|  
     |[query governor cost limit](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) (A)|0|2147483647|0|  
@@ -146,9 +152,10 @@ Las opciones de configuración automática son aquellas que [!INCLUDE[ssNoVersio
     |[user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)|0|32767|0|  
     |[xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md) (A)|0|1|0|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)  
  [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)
   
   
+

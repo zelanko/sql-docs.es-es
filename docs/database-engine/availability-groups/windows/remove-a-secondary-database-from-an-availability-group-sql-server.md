@@ -1,29 +1,34 @@
 ---
-title: "Quitar una base de datos secundaria de un grupo de disponibilidad (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.unjoindb.f1"
-helpviewer_keywords: 
-  - "bases de datos secundarias [SQL Server], en el grupo de disponibilidad"
-  - "Grupos de disponibilidad [SQL Server], eliminar"
-  - "Grupos de disponibilidad [SQL Server], bases de datos"
+title: Quitar una base de datos secundaria de un grupo de disponibilidad (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.unjoindb.f1
+helpviewer_keywords:
+- secondary databases [SQL Server], in availability group
+- Availability Groups [SQL Server], removing
+- Availability Groups [SQL Server], databases
 ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 9fedf070d4d37ce7f7780f099700757c552bd402
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Quitar una base de datos secundaria de un grupo de disponibilidad (SQL Server)
-  En este tema se describe cómo quitar una base de datos secundaria de un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+# <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>Quitar una base de datos secundaria de un grupo de disponibilidad (SQL Server)
+  En este tema se describe cómo quitar una base de datos secundaria de un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 -   **Antes de empezar:**  
   
@@ -58,13 +63,13 @@ caps.handback.revision: 23
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica secundaria de la que desea quitar una o varias bases de datos secundarias y expanda el árbol.  
   
-2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad**.  
+2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad** .  
   
 3.  Seleccione el grupo de disponibilidad y expanda el nodo **Bases de datos de disponibilidad** .  
   
 4.  Este paso depende de si desea quitar varios grupos de bases de datos o solo una base de datos, del siguiente modo:  
   
-    -   Para quitar varias bases de datos, use el panel **Detalles del Explorador de objetos** para ver y seleccionar todas las bases de datos que desea quitar. Para obtener más información, vea [Usar los detalles del Explorador de objetos para supervisar los grupos de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use object explorer details to monitor availability groups.md).  
+    -   Para quitar varias bases de datos, use el panel **Detalles del Explorador de objetos** para ver y seleccionar todas las bases de datos que desea quitar. Para obtener más información, vea [Usar los detalles del Explorador de objetos para supervisar los grupos de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md).  
   
     -   Para quitar una sola base de datos, selecciónela en el panel **Explorador de objetos** o el panel **Detalles del Explorador de objetos** .  
   
@@ -77,7 +82,7 @@ caps.handback.revision: 23
   
 1.  Conéctese a la instancia del servidor que hospeda la réplica secundaria.  
   
-2.  Utilice la cláusula [SET HADR de la instrucción ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md) del siguiente modo:  
+2.  Utilice la cláusula [SET HADR de la instrucción ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) del siguiente modo:  
   
      ALTER DATABASE *database_name* SET HADR OFF  
   
@@ -95,7 +100,7 @@ caps.handback.revision: 23
   
 1.  Cambie el directorio (**cd**) a la instancia del servidor que hospeda la réplica secundaria.  
   
-2.  Use el cmdlet **Remove-SqlAvailabilityDatabase**, y especifique el nombre de la base de datos de disponibilidad que se va a quitar del grupo de disponibilidad. Cuando esté conectado a una instancia de servidor que hospeda una réplica secundaria, solo la base de datos secundaria local se quita del grupo de disponibilidad.  
+2.  Use el cmdlet **Remove-SqlAvailabilityDatabase** , y especifique el nombre de la base de datos de disponibilidad que se va a quitar del grupo de disponibilidad. Cuando esté conectado a una instancia de servidor que hospeda una réplica secundaria, solo la base de datos secundaria local se quita del grupo de disponibilidad.  
   
      Por ejemplo, el comando siguiente quita la base de datos secundaria `MyDb8` de la réplica secundaria hospedada por la instancia de servidor denominada `SecondaryComputer\Instance`. La sincronización de datos cesa en las bases de datos secundarias quitadas. Este comando no afecta a la base de datos principal ni a ninguna otra base de datos secundaria.  
   
@@ -111,7 +116,7 @@ caps.handback.revision: 23
   
 -   [Proveedor de PowerShell de SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Seguimiento: después de quitar una base de datos secundaria de un grupo de disponibilidad  
+##  <a name="FollowUp"></a> Seguimiento: después de quitar una base de datos secundaria de un grupo de disponibilidad  
  Cuando se quita una base de datos secundaria, deja de estar unida al grupo de disponibilidad y este descartará toda la información acerca de la base de datos secundaria quitada. La base de datos secundaria quitada se pone en estado RESTORING.  
   
 > [!TIP]  
@@ -127,8 +132,9 @@ caps.handback.revision: 23
   
      Para obtener más información, vea [Recuperar una base de datos sin restaurar los datos &#40;Transact-SQL&#41;](../../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Quitar una base de datos principal de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)  
   
   
+

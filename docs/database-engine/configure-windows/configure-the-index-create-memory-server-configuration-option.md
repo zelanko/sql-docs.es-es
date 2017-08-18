@@ -1,24 +1,29 @@
 ---
-title: "Establecer la opci&#243;n de configuraci&#243;n del servidor Memoria para creaci&#243;n de &#237;ndices | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "memoria para creación de índices (opción)"
+title: "Establecer la opción de configuración del servidor Memoria para creación de índices | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index create memory option
 ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6140e8ea97b1854f18af5a3e9306b4bbe748efba
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Establecer la opci&#243;n de configuraci&#243;n del servidor Memoria para creaci&#243;n de &#237;ndices
+# <a name="configure-the-index-create-memory-server-configuration-option"></a>Establecer la opción de configuración del servidor Memoria para creación de índices
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   En este tema se describe cómo establecer la opción de configuración del servidor **memoria para creación de índices** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de **memoria para creación de índices** controla la cantidad máxima de memoria asignada inicialmente para la creación de índices. El valor predeterminado para esta opción es 0 (configuración automática). Si más adelante se necesita más memoria para la creación de índices y hay memoria disponible, el servidor la utilizará; por lo tanto, se excederá el valor de esta opción. Si no hay más memoria disponible, la creación de índices continuará utilizando la asignada.  
@@ -64,7 +69,7 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para configurar la opción index create memory  
+#### <a name="to-configure-the-index-create-memory-option"></a>Para configurar la opción index create memory  
   
 1.  En el Explorador de objetos, haga clic con el botón derecho en un servidor y seleccione **Propiedades**.  
   
@@ -76,7 +81,7 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para configurar la opción index create memory  
+#### <a name="to-configure-the-index-create-memory-option"></a>Para configurar la opción index create memory  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -101,7 +106,7 @@ GO
 ##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción de memoria para creación de índices  
  La configuración surte efecto inmediatamente, sin necesidad de reiniciar el servidor.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [sys.configurations&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opciones de configuración de memoria del servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
@@ -109,3 +114,4 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

@@ -1,25 +1,30 @@
 ---
-title: "Configurar la replicaci&#243;n para grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grupos de disponibilidad [SQL Server], interoperabilidad"
-  - "replicación [SQL Server], Grupos de disponibilidad AlwaysOn"
+title: "Configurar la replicación para grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], interoperability
+- replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 caps.latest.revision: 17
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b1c8cbe1c3b1682b6994859d134bd2a4de432fd6
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurar la replicaci&#243;n para grupos de disponibilidad AlwaysOn (SQL Server)
+# <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>Configurar la replicación para grupos de disponibilidad AlwaysOn (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   La configuración de la replicación y los grupos de disponibilidad AlwaysOn de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conlleva siete pasos. Cada paso se describe con más detalle en las secciones siguientes.  
@@ -65,7 +70,7 @@ caps.handback.revision: 17
         @security_mode = 1;  
     ```  
   
-3.  Configure el publicador remoto. Si se usan procedimientos almacenados para configurar el distribuidor, ejecute **sp_adddistpublisher**. El parámetro *@security_mode* se usa para determinar cómo se conecta a la réplica principal actual el procedimiento almacenado de validación del publicador que se ejecuta desde los agente de replicación. Si se establece en 1, la autenticación de Windows se usa para conectarse a la réplica principal actual. Si se establece en 0, se usa la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con los valores especificados *@login* y *@password*. El inicio de sesión y la contraseña especificados deben ser válidos en cada réplica secundaria para que el procedimiento almacenado de validación se conecte correctamente a esa réplica.  
+3.  Configure el publicador remoto. Si se usan procedimientos almacenados para configurar el distribuidor, ejecute **sp_adddistpublisher**. El parámetro *@security_mode* se usa para determinar cómo se conecta a la réplica principal actual el procedimiento almacenado de validación del publicador que se ejecuta desde los agente de replicación. Si se establece en 1, la autenticación de Windows se usa para conectarse a la réplica principal actual. Si se establece en 0, se usa la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con los valores especificados *@login* y *@password* . El inicio de sesión y la contraseña especificados deben ser válidos en cada réplica secundaria para que el procedimiento almacenado de validación se conecte correctamente a esa réplica.  
   
     > [!NOTE]  
     >  Si algunos agentes de replicación modificados se ejecutan en un equipo distinto del distribuidor, el uso de la autenticación de Windows para la conexión a la principal requerirá que la autenticación Kerberos se configure para la comunicación entre equipos host de réplica. El uso de un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para la conexión a la principal actual no necesita la autenticación Kerberos.  
@@ -134,10 +139,10 @@ EXEC @installed = sys.sp_MS_replication_installed;
 SELECT @installed;  
 ```  
   
- Si *@installed* es 0, se debe agregar la replicación a la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Si *@installed* es 0, se debe agregar la replicación a la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="step4"></a> 4. Configurar los hosts de la réplica secundaria como publicadores de replicación  
- Una réplica secundaria no puede actuar como un publicador o republicador de la replicación, pero la replicación debe configurarse de modo que la secundaria pueda asumir el control después de una conmutación por error. En el distribuidor, configure la distribución para cada host de réplica secundaria. Especifique la misma base de datos de distribución y directorio de trabajo que se especificó cuando se agregó el publicador original en el distribuidor. Si usa procedimientos almacenados para configurar la distribución, use **sp_adddistpublisher** a fin de asociar los publicadores remotos al distribuidor. Si el publicador original utilizó *@login* y *@password* , especifique los mismos valores al agregar los hosts de la réplica secundaria como publicadores.  
+ Una réplica secundaria no puede actuar como un publicador o republicador de la replicación, pero la replicación debe configurarse de modo que la secundaria pueda asumir el control después de una conmutación por error. En el distribuidor, configure la distribución para cada host de réplica secundaria. Especifique la misma base de datos de distribución y directorio de trabajo que se especificó cuando se agregó el publicador original en el distribuidor. Si usa procedimientos almacenados para configurar la distribución, use **sp_adddistpublisher** a fin de asociar los publicadores remotos al distribuidor. Si *@login* y *@password* , especifique los mismos valores al agregar los hosts de la réplica secundaria como publicadores.  
   
 ```  
 EXEC sys.sp_adddistpublisher  
@@ -209,7 +214,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Mantener una base de datos de publicación AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Replicación, seguimiento de cambios, captura de datos modificados y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate, track, change data capture - always on availability.md)  
+-   [Replicación, seguimiento de cambios, captura de datos modificados y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
 -   [Administración &#40;replicación&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
   
@@ -223,9 +228,9 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Crear un grupo de disponibilidad &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)  
   
--   [Especificar la dirección URL del punto de conexión al agregar o modificar una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md)  
+-   [Especificar la dirección URL del punto de conexión al agregar o modificar una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [Crear un punto de conexión de creación de reflejo de la base de datos para grupos de disponibilidad AlwaysOn &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database mirroring - always on availability groups- powershell.md)  
+-   [Crear un punto de conexión de creación de reflejo de la base de datos para grupos de disponibilidad AlwaysOn &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Combinar una réplica secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
@@ -235,10 +240,11 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
-## Vea también  
- [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)   
+## <a name="see-also"></a>Vea también  
+ [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Grupos de disponibilidad AlwaysOn: interoperabilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Replicación de SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
   
   
+

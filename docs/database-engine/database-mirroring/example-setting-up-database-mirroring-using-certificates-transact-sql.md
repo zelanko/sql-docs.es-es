@@ -1,27 +1,32 @@
 ---
-title: "Ejemplo: configurar la creaci&#243;n de reflejo de la base de datos mediante certificados (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "creación de reflejo de la base de datos [SQL Server], implementación"
-  - "certificados [SQL Server], creación de reflejo de base de datos"
-  - "autenticación [SQL Server], creación de reflejo de base de datos"
-  - "creación de reflejo de la base de datos (SQL Server), seguridad"
+title: "Ejemplo: configurar la creación de reflejo de la base de datos mediante certificados (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- certificates [SQL Server], database mirroring
+- authentication [SQL Server], database mirroring
+- database mirroring [SQL Server], security
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 caps.latest.revision: 50
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d6e25ad5bb119adb048ee80f89b1ff76baefb7bf
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Ejemplo: configurar la creaci&#243;n de reflejo de la base de datos mediante certificados (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Ejemplo: configurar la creación de reflejo de la base de datos mediante certificados (Transact-SQL)
   En este ejemplo se muestran todos los pasos necesarios para crear una sesión de creación de reflejo de la base de datos mediante la autenticación basada en certificados. En los ejemplos descritos en este tema se utiliza [!INCLUDE[tsql](../../includes/tsql-md.md)]. A menos que garantice que su red es segura, se recomienda utilizar el cifrado para las conexiones de creación de reflejo de la base de datos.  
   
  Cuando copie un certificado en otro sistema, utilice un método de copia seguro. Tenga mucho cuidado de mantener todos sus certificados protegidos.  
@@ -41,7 +46,7 @@ caps.handback.revision: 50
   
     2.  Configurar Host_B para conexiones salientes.  
   
-     Para obtener más información sobre esta fase de configuración de la creación de reflejo de la base de datos, vea [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones salientes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md).  
+     Para obtener más información sobre esta fase de configuración de la creación de reflejo de la base de datos, vea [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones salientes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
   
 2.  [Configurar conexiones entrantes](#ConfigureInboundConnections)  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 50
   
     2.  Configurar Host_B para conexiones entrantes.  
   
-     Para obtener más información sobre esta fase de configuración de la creación de reflejo de la base de datos, vea [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones entrantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md).  
+     Para obtener más información sobre esta fase de configuración de la creación de reflejo de la base de datos, vea [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones entrantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md).  
   
 3.  Crear la base de datos reflejada  
   
@@ -149,7 +154,7 @@ caps.handback.revision: 50
   
 5.  Utilizando cualquier método de copia seguro, copie C:\HOST_B_cert.cer en HOST_A.  
   
- Para obtener más información, vea [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones salientes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md).  
+ Para obtener más información, vea [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones salientes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
   
  [&#91;Inicio del ejemplo&#93;](#ExampleH2)  
   
@@ -223,11 +228,11 @@ caps.handback.revision: 50
 > [!IMPORTANT]  
 >  Si tiene planeado que la ejecución se realice en modo de alta seguridad con conmutación automática por error, debe repetir los mismos pasos de configuración para configurar el testigo de las conexiones entrantes y salientes. La configuración de conexiones de entrantes cuando un testigo está implicado requiere configurar inicios de sesión y usuarios para los testigos de los asociados y de los asociados del testigo.  
   
- Para obtener más información, vea [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones entrantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md).  
+ Para obtener más información, vea [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones entrantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md).  
   
  [&#91;Inicio del ejemplo&#93;](#ExampleH2)  
   
-### Crear la base de datos reflejada  
+### <a name="creating-the-mirror-database"></a>Crear la base de datos reflejada  
  Para obtener más información sobre cómo crear una base de datos reflejada, vea [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 ###  <a name="ConfigureMirroringPartners"></a> Configurar los asociados de creación de reflejo  
@@ -260,7 +265,7 @@ caps.handback.revision: 50
     ```  
   
     > [!NOTE]  
-    >  Si piensa realizar la ejecución en modo de alta seguridad con conmutación automática por error, deje la seguridad de la transacción en FULL (configuración predeterminada) y agregue el testigo en cuanto sea posible después de ejecutar la segunda instrucción **'***partner_server***'**. Tenga en cuenta que primero se debe configurar el testigo para conexiones salientes y entrantes.  
+    >  Si piensa realizar la ejecución en modo de alta seguridad con conmutación automática por error, deje la seguridad de la transacción en FULL (configuración predeterminada) y agregue el testigo en cuanto sea posible después de ejecutar la segunda instrucción **'***partner_server***'** . Tenga en cuenta que primero se debe configurar el testigo para conexiones salientes y entrantes.  
   
  [&#91;Inicio del ejemplo&#93;](#ExampleH2)  
   
@@ -268,18 +273,18 @@ caps.handback.revision: 50
   
 -   [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
--   [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones entrantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md)  
+-   [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones entrantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones salientes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md)  
+-   [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones salientes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
 -   [Administración de inicios de sesión y trabajos tras la conmutación de roles &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
--   [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md)  
+-   [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
 -   [Solucionar problemas de configuración de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
-## Vea también  
- [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
+## <a name="see-also"></a>Vea también  
+ [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
  [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Usar certificados para un punto de conexión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)   
@@ -287,3 +292,4 @@ caps.handback.revision: 50
  [Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
+

@@ -2,7 +2,7 @@
 title: Procesamiento de consultas adaptable en bases de datos de Microsoft SQL | Microsoft Docs | Microsoft Docs
 description: "Características de procesamiento de consultas adaptable para mejorar el rendimiento de las consultas en SQL Server (2017 y versiones posteriores) y Azure SQL Database."
 ms.custom: 
-ms.date: 07/19/2017
+ms.date: 08/02/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cf8509cab2424529ca0ed16c936fa63a139dfca4
-ms.openlocfilehash: eff546e84d3f872406136f68a7fdbbd8147175ca
+ms.sourcegitcommit: d6cf5e76f4edac2aed3842870fdb0362b9661802
+ms.openlocfilehash: b609b1895637dd90cc3fc94422012c5bf4b4bd81
 ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -101,10 +101,10 @@ La consulta devuelve 336 filas.  Al habilitar las estadísticas de consultas act
 ![La consulta da lugar a 336 filas](./media/4_AQPStats336Rows.png)
 
 En el plan se ve lo siguiente:
-- Hay una exploración de índice de almacén de columnas que se usa para proporcionar filas para la fase de compilación de combinación hash.
-- Hay un nuevo operador de combinación adaptable. Este operador define un umbral que se usa para decidir cuándo cambiar a un plan de bucle anidado.  En el ejemplo, el umbral es 78 filas.  Todo lo que tenga &gt; = 78 filas usará una combinación hash.  Si es inferior al umbral, se usará una combinación de bucle anidado.
-- Puesto que se devuelven 336 filas, se supera el umbral y la segunda rama representa la fase de sondeo de una operación de combinación hash estándar. Observe que las estadísticas de consultas activas muestran las filas que pasan por los operadores: en este caso "672 de 672".
-- La última rama es la búsqueda en índice clúster que usa la combinación de bucle anidado si no se ha superado el umbral. Observe que se ve "0 de 336" filas mostradas (la rama no se usa).
+1. Hay una exploración de índice de almacén de columnas que se usa para proporcionar filas para la fase de compilación de combinación hash.
+1. Hay un nuevo operador de combinación adaptable. Este operador define un umbral que se usa para decidir cuándo cambiar a un plan de bucle anidado.  En el ejemplo, el umbral es 78 filas.  Todo lo que tenga &gt; = 78 filas usará una combinación hash.  Si es inferior al umbral, se usará una combinación de bucle anidado.
+1. Puesto que se devuelven 336 filas, se supera el umbral y la segunda rama representa la fase de sondeo de una operación de combinación hash estándar. Observe que las estadísticas de consultas activas muestran las filas que pasan por los operadores: en este caso "672 de 672".
+1. La última rama es la búsqueda en índice clúster que usa la combinación de bucle anidado si no se ha superado el umbral. Observe que se ve "0 de 336" filas mostradas (la rama no se usa).
  Ahora vamos a comparar el plan con la misma consulta, pero esta vez para un valor de cantidad que solo tiene una fila en la tabla:
  
 ```sql
@@ -166,7 +166,7 @@ El gráfico siguiente muestra una intersección de ejemplo entre el costo de una
 La ejecución intercalada cambia el límite unidireccional entre las fases de optimización y ejecución de una ejecución de una sola consulta y permite que los planes se adapten en función de las estimaciones de cardinalidad revisadas. Durante la optimización, si se detecta un candidato para la ejecución intercalada, que son actualmente las **funciones con valores de tabla de múltiples instrucciones (MSTVF)**, se detiene la optimización, se ejecuta el subárbol aplicable, se capturan las estimaciones de cardinalidad precisas y luego se reanuda la optimización de las operaciones de nivel inferior.
 Las MSTVF tienen una estimación de cardinalidad fija de "100" en SQL Server 2014 y SQL Server 2016 y de "1" en versiones anteriores. La ejecución intercalada ayuda con los problemas de rendimiento de cargas de trabajo debidos a estas estimaciones de cardinalidad fijas asociadas a las funciones con valores de tabla de múltiples instrucciones.
 
-La siguiente imagen muestra los resultados estadísticos de una consulta activa, un subconjunto de un plan de ejecución global que muestra el impacto de las estimaciones de cardinalidad fijas de MSTVF. Puede ver el flujo de filas real frente a las filas estimadas. Hay tres áreas reseñables del plan (el flujo va de derecha a izquierda):
+En la siguiente imagen se muestran los resultados estadísticos de una consulta activa, un subconjunto de un plan de ejecución global que refleja el impacto de las estimaciones de cardinalidad fijas de MSTVF. Puede ver el flujo de filas real frente a las filas estimadas. Hay tres áreas reseñables del plan (el flujo va de derecha a izquierda):
 1. El recorrido de tabla de MSTVF tiene una estimación fija de 100 filas. Pero en este ejemplo hay *527.597* filas que pasan por este recorrido de tabla de MSTVF, como se muestra en las estadísticas de consultas activas a través de "527597 de 100" reales de estimados, por lo que la estimación fija está considerablemente desviada.
 1. En el caso de la operación de bucles anidados, se supone que el lado externo de la combinación solo devuelve 100 filas. Dado el gran número de filas que las MSTVF devuelven en realidad, es probable que lo mejor sea un algoritmo de combinación totalmente diferente.
 1. En el caso de la operación de coincidencia de hash, observe el pequeño símbolo de advertencia, que en este caso indica un desbordamiento en el disco.

@@ -1,26 +1,31 @@
 ---
-title: "Agregar una r&#233;plica secundaria a un grupo de disponibilidad (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grupos de disponibilidad [SQL Server], réplicas de disponibilidad"
-  - "Grupos de disponibilidad [SQL Server], configurar"
+title: "Agregar una réplica secundaria a un grupo de disponibilidad (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], configuring
 ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 caps.latest.revision: 38
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d9c742da9a223f3cf8d54911eb841c69ad2d200a
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Agregar una r&#233;plica secundaria a un grupo de disponibilidad (SQL Server)
-  En este tema se describe cómo agregar una réplica secundaria a un grupo de disponibilidad AlwaysOn existente usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+# <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>Agregar una réplica secundaria a un grupo de disponibilidad (SQL Server)
+  En este tema se describe cómo agregar una réplica secundaria a un grupo de disponibilidad AlwaysOn existente usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 -   **Antes de empezar:**  
   
@@ -38,14 +43,14 @@ caps.handback.revision: 38
   
 -   **Seguimiento:**  [después de agregar una réplica secundaria](#FollowUp)  
   
-## Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de comenzar  
  Se recomienda encarecidamente leer esta sección antes de intentar crear el primer grupo de disponibilidad.  
   
 ##  <a name="PrerequisitesRestrictions"></a> Requisitos previos y restricciones  
   
 -   Debe estar conectado a la instancia del servidor que hospeda la réplica principal.  
   
- Para obtener más información, vea [Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+ Para obtener más información, vea [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ##  <a name="Security"></a> Seguridad  
   
@@ -57,7 +62,7 @@ caps.handback.revision: 38
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal y expanda el árbol.  
   
-2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad**.  
+2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad** .  
   
 3.  Haga clic con el botón secundario en el grupo de disponibilidad y seleccione uno de los siguientes comandos:  
   
@@ -94,7 +99,7 @@ caps.handback.revision: 38
   
 1.  Cambie el directorio (**cd**) a la instancia del servidor que hospeda la réplica principal.  
   
-2.  Use el cmdlet **New-SqlAvailabilityReplica**.  
+2.  Use el cmdlet **New-SqlAvailabilityReplica** .  
   
      Por ejemplo, el comando siguiente agrega una réplica de disponibilidad a un grupo de disponibilidad existente denominado `MyAg`. Esta réplica admite la conmutación por error manual y el modo de disponibilidad de confirmación asincrónica. En el rol secundario, esta réplica admitirá conexiones de acceso de lectura, lo que permite descargar a esta réplica del procesamiento de solo lectura.  
   
@@ -120,7 +125,7 @@ caps.handback.revision: 38
   
 -   [Proveedor de PowerShell de SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Seguimiento: después de agregar una réplica secundaria  
+##  <a name="FollowUp"></a> Seguimiento: después de agregar una réplica secundaria  
  Para agregar una réplica para un grupo de disponibilidad existente, debe realizar los pasos siguientes:  
   
 1.  Conéctese a la instancia del servidor que va a hospedar la nueva réplica secundaria.  
@@ -148,7 +153,7 @@ caps.handback.revision: 38
   
 -   [Cambiar el tiempo de espera de la sesión en una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
@@ -156,3 +161,4 @@ caps.handback.revision: 38
  [Supervisar grupos de disponibilidad &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   
+

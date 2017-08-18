@@ -1,26 +1,31 @@
 ---
-title: "Quitar el testigo de una sesi&#243;n de creaci&#243;n de reflejo de la base de datos (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "testigo [SQL Server], desactivar"
-  - "testigo [SQL Server], quitar"
-  - "creación de reflejo de la base de datos (SQL Server), testigo"
+title: "Quitar el testigo de una sesión de creación de reflejo de la base de datos (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- witness [SQL Server], turning off
+- witness [SQL Server], removing
+- database mirroring [SQL Server], witness
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 caps.latest.revision: 39
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: f46a7668500b1a17b531c241e1e023cfb91d7f3f
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Quitar el testigo de una sesi&#243;n de creaci&#243;n de reflejo de la base de datos (SQL Server)
+# <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>Quitar el testigo de una sesión de creación de reflejo de la base de datos (SQL Server)
   En este tema se describe cómo quitar un testigo de una sesión de creación de reflejo de una base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. En cualquier momento durante una sesión de creación de reflejo de la base de datos, el propietario de la base de datos puede desactivar el testigo.  
   
  **En este tema**  
@@ -46,13 +51,13 @@ caps.handback.revision: 39
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para quitar el testigo  
+#### <a name="to-remove-the-witness"></a>Para quitar el testigo  
   
 1.  Conéctese a la instancia de servidor principal y, en el panel **Explorador de objetos** , haga clic en el nombre del servidor para expandir el árbol de servidores.  
   
 2.  Expanda **Bases de datos**y seleccione la base de datos cuyo testigo desee quitar.  
   
-3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y, luego, haga clic en**Reflejado**. Así se abre la página **Creación de reflejo** del cuadro de diálogo **Propiedades de la base de datos** .  
+3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y, luego, haga clic en **Reflejado**. Así se abre la página **Creación de reflejo** del cuadro de diálogo **Propiedades de la base de datos** .  
   
 4.  Para quitar el testigo, elimine su dirección de red del servidor del campo **Testigo** .  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 39
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para quitar el testigo  
+#### <a name="to-remove-the-witness"></a>Para quitar el testigo  
   
 1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)] en la instancia de servidor asociada.  
   
@@ -69,25 +74,25 @@ caps.handback.revision: 39
   
 3.  Emita la instrucción siguiente:  
   
-     [ALTER DATABASE](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md) *nombre_base_de_datos* SET WITNESS OFF  
+     [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) *nombre_base_de_datos* SET WITNESS OFF  
   
      Donde *nombre_base_de_datos* es el nombre de la base de datos reflejada.  
   
-     En el ejemplo siguiente se quita el testigo de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+     En el ejemplo siguiente se quita el testigo de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
     ```  
   
-##  <a name="FollowUp"></a> Seguimiento: después de quitar el testigo  
- Al desactivar el testigo cambia el [modo de funcionamiento](../../database-engine/database-mirroring/database-mirroring-operating-modes.md) de acuerdo con la configuración de la seguridad de las transacciones:  
+##  <a name="FollowUp"></a> Seguimiento: después de quitar el testigo  
+ Al desactivar el testigo cambia el [modo de funcionamiento](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)de acuerdo con la configuración de la seguridad de las transacciones:  
   
 -   Si la seguridad de las transacciones está configurada en FULL (el valor predeterminado), la sesión utiliza el modo sincrónico de alta seguridad sin conmutación automática por error.  
   
 -   Si la seguridad de las transacciones está configurada en OFF, el funcionamiento de la sesión es asincrónico (en modo de alto rendimiento) sin requerir quórum. Siempre que la seguridad de las transacciones se desactive, recomendamos desactivar también el testigo.  
   
 > [!TIP]  
->  La configuración de seguridad de las transacciones de la base de datos está registrada en cada asociado de la vista de catálogo [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) en las columnas **mirroring_safety_level** y **mirroring_safety_level_desc**.  
+>  La configuración de seguridad de las transacciones de la base de datos está registrada en cada asociado de la vista de catálogo [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) en las columnas **mirroring_safety_level** y **mirroring_safety_level_desc** .  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   
@@ -95,8 +100,8 @@ caps.handback.revision: 39
   
 -   [Agregar o reemplazar un testigo de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
-## Vea también  
- [Reflejo de la base de datos ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>Vea también  
+ [Reflejo de la base de datos ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
  [Cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)   
  [Agregar un testigo de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)   
  [Testigo de creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-witness.md)  

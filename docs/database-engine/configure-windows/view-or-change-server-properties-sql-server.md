@@ -1,27 +1,35 @@
 ---
-title: "Ver o cambiar las propiedades del servidor (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ver propiedades de servidor"
-  - "propiedades del servidor [SQL Server]"
-  - "mostrar propiedades de servidor"
-  - "servidores [SQL Server], ver"
+title: Ver o cambiar las propiedades del servidor (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.connectionproperties.f1
+helpviewer_keywords:
+- viewing server properties
+- server properties [SQL Server]
+- displaying server properties
+- servers [SQL Server], viewing
+- Connection Properties dialog box
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ad9ae740eaff2b6491038b4617659ef6fd32dcf8
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Ver o cambiar las propiedades del servidor (SQL Server)
+# <a name="view-or-change-server-properties-sql-server"></a>Ver o cambiar las propiedades del servidor (SQL Server)
   En este tema se describe cómo ver o cambiar las propiedades de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o el Administrador de configuración de SQL Server.  
   
  **En este tema**  
@@ -62,7 +70,7 @@ caps.handback.revision: 32
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para ver o cambiar las propiedades del servidor  
+#### <a name="to-view-or-change-server-properties"></a>Para ver o cambiar las propiedades del servidor  
   
 1.  En el Explorador de objetos, haga clic con el botón derecho en un servidor y luego haga clic en **Propiedades**.  
   
@@ -70,7 +78,7 @@ caps.handback.revision: 32
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para ver las propiedades del servidor mediante la función integrada SERVERPROPERTY  
+#### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>Para ver las propiedades del servidor mediante la función integrada SERVERPROPERTY  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -83,7 +91,7 @@ caps.handback.revision: 32
     GO  
     ```  
   
-#### Para ver las propiedades del servidor mediante la vista de catálogo sys.servers  
+#### <a name="to-view-server-properties-by-using-the-sysservers-catalog-view"></a>Para ver las propiedades del servidor mediante la vista de catálogo sys.servers  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -100,7 +108,7 @@ caps.handback.revision: 32
   
     ```  
   
-#### Para ver las propiedades del servidor mediante la vista de catálogo sys.configurations  
+#### <a name="to-view-server-properties-by-using-the-sysconfigurations-catalog-view"></a>Para ver las propiedades del servidor mediante la vista de catálogo sys.configurations  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -117,7 +125,7 @@ caps.handback.revision: 32
   
     ```  
   
-#### Para cambiar una propiedad del servidor mediante sp_configure  
+#### <a name="to-change-a-server-property-by-using-spconfigure"></a>Para cambiar una propiedad del servidor mediante sp_configure  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -143,27 +151,27 @@ GO
 ##  <a name="PowerShellProcedure"></a> Usar el Administrador de configuración de SQL Server  
  Algunas propiedades del servidor se pueden ver o cambiar mediante el Administrador de configuración de SQL Server. Por ejemplo, puede ver la versión y la edición de la instancia de SQL Server, o cambiar la ubicación donde se almacenan los archivos de registro de errores. Estas propiedades también se pueden ver si se consultan las [Funciones y vistas de administración dinámica relacionadas con servidores](../../relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md).  
   
-#### Para ver o cambiar las propiedades del servidor  
+#### <a name="to-view-or-change-server-properties"></a>Para ver o cambiar las propiedades del servidor  
   
 1.  En el menú **Inicio** , elija **Todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Herramientas de configuración**y, por último, **Administrador de configuración de SQL Server**.  
   
 2.  En **Administrador de configuración de SQL Server**, haga clic en **Servicios de SQL Server**.  
   
-3.  En el panel de detalles, haga clic con el botón derecho en **SQL Server (\<***nombreDeInstancia>***>)** y luego haga clic en **Propiedades**.  
+3.  En el panel de detalles, haga clic con el botón derecho en **SQL Server (\<***nombreDeInstancia***>)** y, luego, haga clic en **Propiedades**.  
   
 4.  En el cuadro de diálogo **Propiedades de (\<***nombreDeInstancia***>) de SQL Server**, cambie las propiedades del servidor en las pestañas **Servicio** o **Avanzadas** y, después, haga clic en **Aceptar**.  
   
-##  <a name="FollowUp"></a> Seguimiento: después de cambiar propiedades del servidor  
+##  <a name="FollowUp"></a> Seguimiento: después de cambiar propiedades del servidor  
  Para algunas propiedades, puede que sea necesario reiniciar el servidor para que el cambio surta efecto.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [Configurar WMI para mostrar el estado del servidor en Herramientas de SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)   
+ [Configurar WMI para mostrar el estado del servidor en Herramientas de SQL Server](http://msdn.microsoft.com/library/7e97197b-ed4d-40d1-9a52-9ab1d92401d7)   
  [Administrador de configuración de SQL Server](../../relational-databases/sql-server-configuration-manager.md)   
  [Funciones de configuración &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Funciones y vistas de administración dinámica relacionadas con servidores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md)  

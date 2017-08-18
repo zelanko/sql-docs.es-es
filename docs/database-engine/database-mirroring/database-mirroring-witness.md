@@ -1,26 +1,31 @@
 ---
-title: "Testigo de creaci&#243;n de reflejo de la base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "testigo [SQL Server], acerca de los testigos"
-  - "testigo [SQL Server]"
-  - "creación de reflejo de la base de datos (SQL Server), testigo"
+title: "Testigo de creación de reflejo de la base de datos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- witness [SQL Server], about witness
+- witness [SQL Server]
+- database mirroring [SQL Server], witness
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 caps.latest.revision: 72
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 72
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 2ee20ba03743ce6778e487fb14a6f03e793ae6ac
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Testigo de creaci&#243;n de reflejo de la base de datos
+# <a name="database-mirroring-witness"></a>Testigo de creación de reflejo de la base de datos
   Para admitir la conmutación automática por error, una sesión de creación de reflejo de la base de datos debe configurarse en modo de alta seguridad y tener una tercera instancia del servidor, denominada *testigo*. El testigo es una instancia opcional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que habilita al servidor reflejado en una sesión en modo de alta seguridad para que reconozca si se debe iniciar una conmutación automática por error. A diferencia de los dos asociados, el testigo no sirve a la base de datos. El único rol del testigo es hacer posible la conmutación automática por error.  
   
 > [!NOTE]  
@@ -50,7 +55,7 @@ caps.handback.revision: 72
 ##  <a name="SwHwRecommendations"></a> Recomendaciones de software y hardware  
  Es muy recomendable que el testigo se encuentre en un equipo diferente de los asociados. Los asociados de creación de reflejo de la base de datos solo se admiten en la edición [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. Por el contrario, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Workgroup y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express también admiten los testigos. Excepto durante una actualización de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], todas las instancias de servidor de una sesión de creación de reflejo deben ejecutar la misma versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por ejemplo, se admite un testigo de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] al actualizar desde una configuración de creación de reflejo de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] pero no se puede agregar a una configuración de creación de reflejo existente o nueva de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o posterior.  
   
- Un testigo puede ejecutarse en cualquier sistema informático confiable que admita cualquiera de estas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No obstante, se recomienda que cualquier instancia del servidor que se utilice como testigo cumpla con los requisitos mínimos de configuración necesarios para la versión Standard de la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que esté usando. Para obtener más información sobre estos requisitos, vea [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md).  
+ Un testigo puede ejecutarse en cualquier sistema informático confiable que admita cualquiera de estas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No obstante, se recomienda que cualquier instancia del servidor que se utilice como testigo cumpla con los requisitos mínimos de configuración necesarios para la versión Standard de la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que esté usando. Para obtener más información sobre estos requisitos, vea [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 ##  <a name="InAutoFo"></a> Rol del testigo en la conmutación automática por error  
  Durante la sesión de creación de reflejo de una base de datos, todas las instancias de servidor supervisan su estado de conexión. Si los asociados quedan desconectados entre sí, dependen del testigo para garantizar que únicamente uno de ellos sirve actualmente a la base de datos. Si un servidor reflejado sincronizado pierde su conexión con el servidor principal pero permanece conectado al testigo, se pondrá en contacto con el testigo para determinar si este último ha perdido la conexión con el servidor principal.  
@@ -74,7 +79,7 @@ caps.handback.revision: 72
   
 -   [Quitar el testigo de una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Modos de funcionamiento de la creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)   

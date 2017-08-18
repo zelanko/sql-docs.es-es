@@ -1,25 +1,30 @@
 ---
-title: "Trasvase de registros y replicaci&#243;n (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "replicación [SQL Server], trasvase de registros y"
-  - "trasvase de registros [SQL Server], replicación y"
+title: "Trasvase de registros y replicación (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- replication [SQL Server], log shipping and
+- log shipping [SQL Server], replication and
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 caps.latest.revision: 30
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ed95df5cd7c02d5c8c6789dbbcf416a40c279460
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Trasvase de registros y replicaci&#243;n (SQL Server)
+# <a name="log-shipping-and-replication-sql-server"></a>Trasvase de registros y replicación (SQL Server)
   El trasvase de registros incluye dos copias de una sola base de datos que suelen residir en diferentes equipos. En cada momento, solo una copia de la base de datos está disponible para los clientes. Esta copia se conoce como la base de datos principal. Las actualizaciones realizadas por los clientes en la base de datos principal se propagan mediante el trasvase de registros a la otra copia de la base de datos, conocida como la base de datos secundaria. El trasvase de registros incluye la aplicación a la base de datos secundaria del registro de transacciones con todas las inserciones, actualizaciones o eliminaciones efectuadas en la base de datos principal.  
   
  El trasvase de registros se puede usar conjuntamente con la replicación, con el siguiente comportamiento:  
@@ -33,7 +38,7 @@ caps.handback.revision: 30
 > [!NOTE]  
 >  Se recomienda utilizar la creación de reflejo de la base de datos, en lugar del trasvase de registros, para proporcionar disponibilidad a la base de datos de publicaciones. Para obtener más información, vea [Replicación y creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
-## Requisitos y procedimientos para replicar desde la base de datos secundaria si se pierde la base de datos principal  
+## <a name="requirements-and-procedures-for-replicating-from-the-secondary-if-the-primary-is-lost"></a>Requisitos y procedimientos para replicar desde la base de datos secundaria si se pierde la base de datos principal  
  Se deben tener en cuenta los siguientes requisitos y consideraciones:  
   
 -   Si la base de datos principal contiene más de una base de datos de publicaciones, trasvase los registros de todas las bases de datos de publicaciones a la misma base de datos secundaria.  
@@ -44,7 +49,7 @@ caps.handback.revision: 30
   
 -   El trasvase de registros no garantiza que no se produzca una pérdida de datos. Un error en la base de datos principal puede originar la pérdida de los datos que aún no tienen una copia de seguridad o la pérdida de copias de seguridad durante la ejecución del error.  
   
-### Trasvase de registros con la replicación transaccional  
+### <a name="log-shipping-with-transactional-replication"></a>Trasvase de registros con la replicación transaccional  
  En la replicación transaccional, el comportamiento del trasvase de registros depende de la opción **sync with backup** . Esta opción se puede establecer en la base de datos de publicaciones y en la base de datos de distribución. En lo que respecta al trasvase de registros para el publicador, solo tiene relevancia la configuración de la base de datos de publicaciones.  
   
  Establecer esta opción en la base de datos de publicaciones garantiza que las transacciones no se enviarán a la base de datos de distribución hasta que se hayan incluido en la copia de seguridad en la base de datos de publicaciones. La última copia de seguridad de la base de datos de publicaciones se puede restaurar posteriormente en el servidor secundario sin que exista ninguna posibilidad de que la base de datos de distribución contenga transacciones que no existan en la base de datos de publicaciones restaurada. Esta opción garantiza que si el publicador genera un error en el servidor secundario, se mantendrá la coherencia entre el publicador, el distribuidor y los suscriptores. La latencia y el rendimiento se verán afectados porque no será posible entregar transacciones a la base de datos de distribución hasta que se haya hecho una copia de seguridad de ellas en el publicador. Si la aplicación puede tolerar esta latencia, se recomienda establecer esta opción en la base de datos de publicaciones. Si no se establece la opción **sync with backup** , los suscriptores podrían recibir cambios que ya no están incluidos en la base de datos recuperada en el servidor secundario. Para más información, consulte [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
@@ -55,7 +60,7 @@ caps.handback.revision: 30
   
 2.  Configure el trasvase de registros para la base de datos de publicaciones. Para obtener más información, vea [Configurar el trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
   
-3.  Si se produce un error en el publicador, restaure el último registro de la base de datos en el servidor secundario mediante la opción KEEP_REPLICATION de RESTORE LOG. De esta manera se conservará toda la configuración de la replicación correspondiente a la base de datos. Para obtener más información, vea [Conmutar por error a una base de datos secundaria de trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) y [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+3.  Si se produce un error en el publicador, restaure el último registro de la base de datos en el servidor secundario mediante la opción KEEP_REPLICATION de RESTORE LOG. De esta manera se conservará toda la configuración de la replicación correspondiente a la base de datos. Para obtener más información, vea [Conmutar por error a una base de datos secundaria de trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) y [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 4.  Restaure la base de datos **msdb** y las bases de datos **maestras** del servidor principal al secundario. Para obtener más información, vea [Realizar copias de seguridad y restaurar bases de datos del sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md). Si la base de datos principal también era un distribuidor, restaure la base de datos de distribución del servidor principal al secundario.  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 30
   
 1.  Configure el trasvase de registros para la base de datos de publicaciones. Para obtener más información, vea [Configurar el trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
   
-2.  Si se produce un error en el publicador, restaure el último registro de la base de datos en el servidor secundario mediante la opción KEEP_REPLICATION de RESTORE LOG. De esta manera se conservará toda la configuración de la replicación correspondiente a la base de datos. Para obtener más información, vea [Conmutar por error a una base de datos secundaria de trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) y [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+2.  Si se produce un error en el publicador, restaure el último registro de la base de datos en el servidor secundario mediante la opción KEEP_REPLICATION de RESTORE LOG. De esta manera se conservará toda la configuración de la replicación correspondiente a la base de datos. Para obtener más información, vea [Conmutar por error a una base de datos secundaria de trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) y [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 3.  Restaure la base de datos **msdb** y las bases de datos **maestras** del servidor principal al secundario. Para obtener más información, vea [Realizar copias de seguridad y restaurar bases de datos del sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md). Si la base de datos principal también era un distribuidor, restaure la base de datos de distribución del servidor principal al secundario.  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 30
   
 8.  Las transacciones que ya se distribuyeron al suscriptor podrían aplicarse al publicador. Para asegurarse de que el Agente de distribución no genere un error cuando intente volver a aplicar estas transacciones en el suscriptor, especifique el perfil de agente llamado **Continuar después de errores de coherencia de datos**.  
   
-### Trasvase de registros con la replicación de mezcla  
+### <a name="log-shipping-with-merge-replication"></a>Trasvase de registros con la replicación de mezcla  
  Realice los pasos del siguiente procedimiento para configurar la replicación de mezcla y el trasvase de registros.  
   
  **Para configurar la replicación de mezcla y el trasvase de registros**  
@@ -96,7 +101,7 @@ caps.handback.revision: 30
   
 2.  En el publicador que da error, en el servidor secundario cambie el nombre del equipo y, a continuación, cambie el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de manera que coincida con el nombre del servidor principal. Para obtener información sobre cómo cambiar el nombre del equipo, vea la documentación de Windows. Para obtener más información sobre cómo cambiar el nombre de servidor, vea [Cambiar el nombre de un equipo que hospeda una instancia independiente de SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) y [Cambiar el nombre de una instancia de clúster de conmutación por error de SQL Server](../../sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md).  
   
-3.  Restaure el último registro de la base de datos en el servidor secundario mediante la opción KEEP_REPLICATION de RESTORE LOG. De esta manera se conservará toda la configuración de la replicación correspondiente a la base de datos. Para obtener más información, vea [Conmutar por error a una base de datos secundaria de trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) y [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md).  
+3.  Restaure el último registro de la base de datos en el servidor secundario mediante la opción KEEP_REPLICATION de RESTORE LOG. De esta manera se conservará toda la configuración de la replicación correspondiente a la base de datos. Para obtener más información, vea [Conmutar por error a una base de datos secundaria de trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) y [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 4.  Restaure la base de datos **msdb** y las bases de datos **maestras** del servidor principal al secundario. Para obtener más información, vea [Realizar copias de seguridad y restaurar bases de datos del sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md). Si la base de datos principal también era un distribuidor, restaure la base de datos de distribución del servidor principal al secundario.  
   
@@ -112,7 +117,7 @@ caps.handback.revision: 30
   
      Si se sincroniza con un suscriptor que ejecute una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], la suscripción no puede ser anónima, sino que debe ser una suscripción de cliente o de servidor (llamadas suscripciones locales y suscripciones globales en versiones anteriores). Para obtener más información, vea [Sincronizar datos](../../relational-databases/replication/synchronize-data.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Características y tareas de replicación](../../relational-databases/replication/replication-features-and-tasks.md)   
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Replicación y creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  

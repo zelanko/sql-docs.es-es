@@ -1,32 +1,37 @@
 ---
-title: "lightweight pooling (opci&#243;n de configuraci&#243;n del servidor) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "valor predeterminado de agrupación ligera"
-  - "reducir sobrecarga"
-  - "agrupación ligera, opción"
-  - "sobrecarga del sistema [SQL Server]"
-  - "rendimiento [SQL Server], agrupación ligera"
-  - "cambio de contexto [SQL Server], opción de agrupación ligera"
-  - "cambiar el contexto excesivo [SQL Server]"
-  - "reducir sobrecarga"
-  - "sobrecarga [SQL Server]"
+title: "lightweight pooling (opción de configuración del servidor) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- default lightweight pooling
+- decreasing overhead
+- lightweight pooling option
+- system overhead [SQL Server]
+- performance [SQL Server], lightweight pooling
+- context switching [SQL Server], lightweight pooling option
+- excessive context switching [SQL Server]
+- reducing overhead
+- overhead [SQL Server]
 ms.assetid: 2dc11b61-d065-4126-8e00-acf40390f9fb
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c82f1c64430cd45299b9378f86c6670841de2707
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# lightweight pooling (opci&#243;n de configuraci&#243;n del servidor)
+# <a name="lightweight-pooling-server-configuration-option"></a>lightweight pooling (opción de configuración del servidor)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Use la opción **agrupación ligera** para proporcionar un medio de reducir la sobrecarga del sistema asociada al cambio de contexto excesivo que se puede observar a veces en entornos con multiprocesadores simétricos (SMP). Cuando hay un cambio de contexto excesivo, la opción de agrupación ligera puede proporcionar un mayor rendimiento al realizar el cambio de contexto insertado, lo que ayuda a reducir las transiciones de llamadas entre el usuario y el kernel.  
@@ -43,10 +48,11 @@ caps.handback.revision: 31
 > [!NOTE]  
 >  No se admite la ejecución de Common Language Runtime (CLR) con "agrupación ligera". Deshabilite una de las dos opciones: "clr enabled" o "agrupación ligera". Entre las características que dependen de CLR y que no funcionan correctamente en modo de fibra se encuentran el tipo de datos de jerarquía, la replicación y la administración basada en directivas.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [clr enabled (opción de configuración del servidor)](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [clr enabled (opción de configuración del servidor)](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)  
   
   
+

@@ -1,27 +1,32 @@
 ---
-title: "Propiedades del servidor (p&#225;gina Configuraci&#243;n de base de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.databasesettings.f1"
+title: "Propiedades del servidor (página Configuración de base de datos) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.databasesettings.f1
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 17e75c3b87403fc9d27fccdc27464a1470d71743
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propiedades del servidor (p&#225;gina Configuraci&#243;n de base de datos)
+# <a name="server-properties---database-settings-page"></a>Propiedades del servidor (página Configuración de base de datos)
   Utilice esta página para ver o modificar la configuración de la base de datos.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Factor predeterminado de relleno de índices**  
  Especifica cuánto se debe llenar cada página de índice de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se crea un nuevo índice con los datos existentes. El factor de relleno influye en el rendimiento, ya que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe dedicar tiempo a dividir las páginas cuando se rellenan.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 32
  Proporciona un valor predeterminado para todo el sistema relativo a cuánto tiempo se conservará cada medio de copia de seguridad una vez que se haya utilizado para una copia de seguridad de base de datos o de registro de transacciones. Esta opción ayuda a proteger las copias de seguridad para que no puedan sobrescribirse hasta que haya transcurrido el número de días especificado.  
   
  **Comprimir copia de seguridad**  
- En [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (o versiones posteriores), indica el valor actual de la opción **compresión de copia de seguridad predeterminada**. Esta opción determina el valor predeterminado de nivel de servidor para comprimir copias de seguridad, como sigue:  
+ En [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (o versiones posteriores), indica el valor actual de la opción **compresión de copia de seguridad predeterminada** . Esta opción determina el valor predeterminado de nivel de servidor para comprimir copias de seguridad, como sigue:  
   
 -   Si la casilla **Comprimir copia de seguridad** se deja en blanco, las nuevas copias de seguridad no se comprimirán de forma predeterminada.  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 32
  Para obtener más información, vea [Ver o establecer la opción de configuración del servidor de compresión de copia de seguridad predeterminada](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) y [Compresión de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
  **Intervalo de recuperación (min.)**  
- Establece el número máximo de minutos por base de datos para recuperar bases de datos. El valor predeterminado es 0, que indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo configura automáticamente. En la práctica, esto significa un tiempo de recuperación inferior a un minuto y un punto de comprobación aproximadamente cada minuto para bases de datos activas. Para más información, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).  
+ Establece el número máximo de minutos por base de datos para recuperar bases de datos. El valor predeterminado es 0, que indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lo configura automáticamente. En la práctica, esto significa un tiempo de recuperación inferior a un minuto y un punto de comprobación aproximadamente cada minuto para bases de datos activas. Para más información, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).  
   
  **Datos**  
  Especifica la ubicación predeterminada de los archivos de datos. Haga clic en el botón de examinar para navegar a la nueva ubicación predeterminada. No surte efecto hasta que se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -65,12 +70,12 @@ caps.handback.revision: 32
  Especifica la ubicación predeterminada de los archivos de registro. Haga clic en el botón de examinar para navegar a la nueva ubicación predeterminada. No surte efecto hasta que se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Valores configurados**  
- Muestra los valores configurados para las opciones de este panel. Si cambia estos valores, haga clic en **Valores actuales** para comprobar si los cambios han surtido efecto. Si no han surtido efecto, deberá reiniciarse primero la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Muestra los valores configurados para las opciones de este panel. Si cambia estos valores, haga clic en **Valores actuales** para comprobar si los cambios han surtido efecto. Si no han surtido efecto, deberá reiniciarse primero la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Valores actuales**  
  Presenta los valores actuales de las opciones de este panel. Estos valores son de solo lectura.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Especificar el factor de relleno para un índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
   

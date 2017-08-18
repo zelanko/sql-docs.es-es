@@ -1,27 +1,32 @@
 ---
-title: "P&#225;gina Resumen (asistentes para grupos de disponibilidad AlwaysOn) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.newagwizard.summary.f1"
-  - "sql13.swb.adddatabasewizard.summary.f1"
-  - "sql13.swb.addreplicawizard.summary.f1"
-  - "sql13.swb.failoverwizard.summary.f1"
+title: "Página Resumen (asistentes para grupos de disponibilidad AlwaysOn) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.newagwizard.summary.f1
+- sql13.swb.adddatabasewizard.summary.f1
+- sql13.swb.addreplicawizard.summary.f1
+- sql13.swb.failoverwizard.summary.f1
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ce87daca535ad8090e5c436610195d50c5b80f65
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# P&#225;gina Resumen (asistentes para grupos de disponibilidad AlwaysOn)
+# <a name="summary-page-always-on-availability-group-wizards"></a>Página Resumen (asistentes para grupos de disponibilidad AlwaysOn)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 <a name="Top"></a>  
@@ -32,7 +37,7 @@ caps.handback.revision: 12
  **Script**  
  Haga clic para generar un script de [!INCLUDE[tsql](../../../includes/tsql-md.md)] para las acciones enumeradas en la cuadrícula de resumen. Se le pedirá que especifique un destino para el script.  
   
- **Previous**  
+ **Anterior**  
  Haga clic para volver a la página inmediatamente anterior a la página actual. Puede usar el botón **Anterior** para navegar hacia atrás a cualquiera de las páginas anteriores y, opcionalmente, cambiar cualquiera de los valores especificados.  
   
  **Finalizar**  
@@ -41,7 +46,7 @@ caps.handback.revision: 12
  **Cancelar**  
  Haga clic en esta opción para finalizar el asistente. En la página **Resumen** , la cancelación del asistente produce la salida sin realizar ninguna acción.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [&#91;Principio&#93;](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](../../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[&#91;Arriba&#93;](#Top)  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   
@@ -49,13 +54,14 @@ caps.handback.revision: 12
   
 -   [Usar el Asistente para agregar una réplica al grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Usar el Asistente para agregar una base de datos al grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-database-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [Usar el Asistente para agregar una base de datos al grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
 -   [Usar el Asistente para grupo de disponibilidad de conmutación por error &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [&#91;Principio&#93;](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](../../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[&#91;Arriba&#93;](#Top)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

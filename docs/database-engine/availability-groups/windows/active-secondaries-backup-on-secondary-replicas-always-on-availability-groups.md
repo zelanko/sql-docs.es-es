@@ -1,30 +1,35 @@
 ---
-title: "Secundarias activas: copia de seguridad en las r&#233;plicas secundarias (grupos de disponibilidad AlwaysOn) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "prioridad de copia de seguridad"
-  - "copia de seguridad en réplicas secundarias"
-  - "Grupos de disponibilidad [SQL Server], réplicas de disponibilidad"
-  - "Grupos de disponibilidad [SQL Server], hacer copia de seguridad en réplicas secundarias"
-  - "réplicas secundarias activas [SQL Server], copia de seguridad en"
-  - "preferencia de copia de seguridad automatizada"
-  - "Grupos de disponibilidad [SQL Server], réplicas secundarias activas"
+title: "Secundarias activas: copia de seguridad en las réplicas secundarias (grupos de disponibilidad AlwaysOn) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup priority
+- backup on secondary replicas
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], backup on secondary replicas
+- active secondary replicas [SQL Server], backup on
+- automated backup preference
+- Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c3645d6ab80136fc110c85315ba8dfc36e500eb3
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Secundarias activas: copia de seguridad en las r&#233;plicas secundarias (grupos de disponibilidad AlwaysOn)
+# <a name="active-secondaries-backup-on-secondary-replicas-always-on-availability-groups"></a>Secundarias activas: copia de seguridad en las réplicas secundarias (grupos de disponibilidad AlwaysOn)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Las funciones secundarias activas de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluyen compatibilidad para realizar operaciones de copia de seguridad en las réplicas secundarias. Las operaciones de copia de seguridad pueden provocar una demanda significativa de E/S y CPU (con la compresión de copia de seguridad). La descarga de las copias de seguridad en una réplica secundaria sincronizada o en proceso de sincronización permite utilizar los recursos de la instancia del servidor que hospeda la réplica principal para las cargas de trabajo de nivel 1.  
@@ -70,12 +75,13 @@ caps.handback.revision: 34
   
 -   [Usar el Asistente para planes de mantenimiento](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
--   [Implementar trabajos](../../../ssms/agent/implement-jobs.md)  
+-   [Implementar trabajos](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Copias de seguridad de solo copia &#40;SQL Server&#41;](../../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
+

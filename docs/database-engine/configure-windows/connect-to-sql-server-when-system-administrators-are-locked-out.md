@@ -1,26 +1,31 @@
 ---
-title: "Conectarse a SQL Server cuando los administradores del sistema no tienen acceso | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cuenta SA"
-  - "conectarse al bloquearse el acceso [SQL Server]"
-  - "bloqueado [SQL Server]"
+title: Conectarse a SQL Server cuando los administradores del sistema no tienen acceso | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sa account
+- connecting when locked out [SQL Server]
+- locked out [SQL Server]
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7f14625038501a21d4321f45471a4391d29efec9
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Conectarse a SQL Server cuando los administradores del sistema no tienen acceso
+# <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Conectarse a SQL Server cuando los administradores del sistema no tienen acceso
   En este tema se describe cómo puede recobrar el acceso a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] como administrador del sistema. Un administrador del sistema puede perder el acceso a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debido a una de las razones siguientes:  
   
 -   Por equivocación se han quitado todos los inicios de sesión que son miembros del rol fijo de servidor sysadmin.  
@@ -33,23 +38,23 @@ caps.handback.revision: 15
   
  Una manera de recobrar el acceso es reinstalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y adjuntar todas las bases de datos a la nueva instancia. Esta solución requiere mucho tiempo y, para recuperar los inicios de sesión, podría ser necesario restaurar la base de datos maestra a partir de una copia de seguridad. Si la copia de seguridad de la base de datos maestra es anterior, podría no tener toda la información. Si es más reciente, podría tener los mismos inicios de sesión que la instancia anterior; por consiguiente, los administradores aún no tendrán acceso.  
   
-## Solución  
- Inicie la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único usando las opciones **-m** o **-f**. A continuación, cualquier miembro del grupo local de administradores del equipo puede conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como miembro del rol fijo de servidor sysadmin.  
+## <a name="resolution"></a>Solución  
+ Inicie la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único usando las opciones **-m** o **-f** . A continuación, cualquier miembro del grupo local de administradores del equipo puede conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como miembro del rol fijo de servidor sysadmin.  
   
 > [!NOTE]  
->  Cuando inicie una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único, detenga primero el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: de lo contrario, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría conectarse primero e impedir que se conecte como un segundo usuario.  
+>  Cuando inicie una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único, detenga primero el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : de lo contrario, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría conectarse primero e impedir que se conecte como un segundo usuario.  
   
- Cuando use la opción **-m** con **sqlcmd** o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede limitar las conexiones a una aplicación cliente especificada. Por ejemplo, **-m"sqlcmd"** limita las conexiones a una conexión única y esa conexión se debe identificar como el programa cliente **sqlcmd**. Use esta opción cuando esté iniciando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único y una aplicación cliente desconocida esté usando la única conexión disponible. Para conectarse a través del Editor de consultas en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], use **-m"Microsoft SQL Server Management Studio - Query"**.  
+ Cuando use la opción **-m** con **sqlcmd** o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede limitar las conexiones a una aplicación cliente especificada. Por ejemplo, **-m"sqlcmd"** limita las conexiones a una conexión única y esa conexión se debe identificar como el programa cliente **sqlcmd** . Use esta opción cuando esté iniciando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único y una aplicación cliente desconocida esté usando la única conexión disponible. Para conectarse a través del Editor de consultas en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], use **-m"Microsoft SQL Server Management Studio - Query"**.  
   
 > [!IMPORTANT]  
 >  No use esta opción como una característica de seguridad. La aplicación cliente proporciona el nombre de la misma y puede proporcionar un nombre falso como parte de la cadena de conexión.  
   
- Para obtener instrucciones detalladas sobre cómo iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el modo de usuario único, vea [Configurar opciones de inicio del servidor &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/configure-server-startup-options-sql-server-configuration-manager.md).  
+ Para obtener instrucciones detalladas sobre cómo iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el modo de usuario único, vea [Configurar opciones de inicio del servidor &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
   
-## Instrucciones paso a paso  
+## <a name="step-by-step-instructions"></a>Instrucciones paso a paso  
  Las instrucciones siguientes describen el proceso para conectarse a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que se ejecuta en Windows 8 o posterior. Se proporcionan pequeñas modificaciones para las versiones anteriores de SQL Server o de Windows. Estas instrucciones deben realizarse mientras se tiene iniciada sesión en Windows como miembro del grupo local de administradores y en ellas se da por supuesto que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] está instalado en el equipo.  
   
-1.  Desde la página de inicio, inicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. En el menú **Ver** , seleccione **Servidores registrados**. (Si el servidor aún no está registrado, haga clic con el botón derecho en **Grupos de servidores locales**, seleccione **Tareas** y, después, haga clic en **Registrar servidores locales**).  
+1.  Desde la página de inicio, inicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. En el menú **Ver** , seleccione **Servidores registrados**. (Si el servidor aún no está registrado, haga clic con el botón derecho en **Grupos de servidores locales**, seleccione **Tareas**y, después, haga clic en **Registrar servidores locales**).  
   
 2.  En el área Servidores registrados, haga clic con el botón derecho en el servidor y, después, haga clic en **Administrador de configuración de SQL Server**. Se debe solicitar permiso para ejecutarse como administrador y, a continuación, abrir el programa Administrador de configuración.  
   
@@ -60,9 +65,9 @@ caps.handback.revision: 15
 5.  En la pestaña **Parámetros de inicio**, en el cuadro **Especifique un parámetro de inicio**, escriba `-m` y, después, haga clic en **Agregar**. (Es un guion y a continuación una letra m minúscula).  
   
     > [!NOTE]  
-    >  En algunas versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no hay ninguna pestaña **Parámetros de inicio** . En ese caso, en la pestaña **Opciones avanzadas**, haga doble clic en **Parámetros de inicio**. Los parámetros se abrirán en una ventana muy pequeña. Tenga cuidado de no cambiar ninguno de los parámetros existentes. Al final, agregue un nuevo parámetro `;-m` y, a continuación, haga clic en **Aceptar**. (Es un punto y coma, después un guion y a continuación una letra m minúscula).  
+    >  En algunas versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no hay ninguna pestaña **Parámetros de inicio** . En ese caso, en la pestaña **Opciones avanzadas** , haga doble clic en **Parámetros de inicio**. Los parámetros se abrirán en una ventana muy pequeña. Tenga cuidado de no cambiar ninguno de los parámetros existentes. Al final, agregue un nuevo parámetro `;-m` y, a continuación, haga clic en **Aceptar**. (Es un punto y coma, después un guion y a continuación una letra m minúscula).  
   
-6.  Haga clic en **Aceptar** y, después del mensaje para reiniciar, haga clic con el botón derecho en el nombre del servidor; luego, haga clic en **Reiniciar**.  
+6.  Haga clic en **Aceptar**y, después del mensaje para reiniciar, haga clic con el botón derecho en el nombre del servidor; luego, haga clic en **Reiniciar**.  
   
 7.  Después de que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se haya reiniciado, el servidor se encontrará en modo de usuario único. Asegúrese de que el Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se esté ejecutando. Si está iniciado, usará su única conexión.  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 15
   
      En algunas configuraciones, SSMS intentará realizar varias conexiones. Se producirá un error en varias conexiones porque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está en modo de usuario único. Puede seleccionar una de las siguientes acciones para realizar. Realice una de las acciones siguientes.  
   
-    1.  Conectar con el Explorador de objetos mediante la autenticación de Windows (que incluye sus credenciales de administrador). Expanda **Seguridad** e **Inicios de sesión** y haga doble clic en su propio inicio de sesión. En la página **Roles de servidor** , seleccione **sysadmin**y, a continuación, haga clic en **Aceptar**.  
+    1.  Conectar con el Explorador de objetos mediante la autenticación de Windows (que incluye sus credenciales de administrador). Expanda **Seguridad**e **Inicios de sesión**y haga doble clic en su propio inicio de sesión. En la página **Roles de servidor** , seleccione **sysadmin**y, a continuación, haga clic en **Aceptar**.  
   
     2.  En lugar de conectar con el Explorador de objetos, conectar con una ventana de consulta mediante la autenticación de Windows (que incluye sus credenciales de administrador). (Solo puede conectarse de esta forma si no se conectó con el Explorador de objetos). Ejecute código como el siguiente para agregar un nuevo inicio de sesión Autenticación de Windows que sea miembro del rol fijo de servidor **sysadmin** . El ejemplo siguiente agrega un usuario de dominio denominado `CONTOSO\PatK`.  
   
@@ -92,7 +97,7 @@ caps.handback.revision: 15
         > [!WARNING]  
         >  Reemplace ************ con una contraseña segura.  
   
-    4.  Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en modo de autenticación mixto y quiere restablecer la contraseña de la cuenta **sa**, conecte con una ventana de consulta por medio de la autenticación de Windows (que incluye sus credenciales de administrador). Cambie la contraseña de la cuenta **sa** con la siguiente sintaxis.  
+    4.  Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en modo de autenticación mixto y quiere restablecer la contraseña de la cuenta **sa** , conecte con una ventana de consulta por medio de la autenticación de Windows (que incluye sus credenciales de administrador). Cambie la contraseña de la cuenta **sa** con la siguiente sintaxis.  
   
         ```  
         ALTER LOGIN sa WITH PASSWORD = '************';  
@@ -103,18 +108,18 @@ caps.handback.revision: 15
   
 9. En los pasos siguientes se vuelve a cambiar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al modo multiusuario. Cierre SSMS.  
   
-10. En el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , en el panel izquierdo, seleccione **Servicios de SQL Server**. En el panel derecho, haga clic con el botón derecho en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y, después, haga clic en **Propiedades**.  
+10. En el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , en el panel izquierdo, seleccione **Servicios de SQL Server**. En el panel derecho, haga clic con el botón derecho en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y, después, haga clic en **Propiedades**.  
   
-11. En la pestaña **Parámetros de inicio**, en el cuadro **Parámetros existentes**, seleccione `-m` y, después, haga clic en **Quitar**.  
+11. En la pestaña **Parámetros de inicio** , en el cuadro **Parámetros existentes** , seleccione `-m` y, después, haga clic en **Quitar**.  
   
     > [!NOTE]  
-    >  En algunas versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no hay ninguna pestaña **Parámetros de inicio** . En ese caso, en la pestaña **Opciones avanzadas**, haga doble clic en **Parámetros de inicio**. Los parámetros se abrirán en una ventana muy pequeña. Quite el parámetro `;-m` que agregó anteriormente y, a continuación, haga clic en **Aceptar**.  
+    >  En algunas versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no hay ninguna pestaña **Parámetros de inicio** . En ese caso, en la pestaña **Opciones avanzadas** , haga doble clic en **Parámetros de inicio**. Los parámetros se abrirán en una ventana muy pequeña. Quite el parámetro `;-m` que agregó anteriormente y, a continuación, haga clic en **Aceptar**.  
   
 12. Haga clic con el botón derecho en el nombre del servidor y, después, haga clic en **Reiniciar**.  
   
  Ahora debe poder conectarse normalmente con una de las cuentas que es miembro del rol fijo de servidor **sysadmin** .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Iniciar SQL Server en modo de usuario único](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)   
  [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md)  
   

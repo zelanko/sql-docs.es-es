@@ -1,29 +1,34 @@
 ---
-title: "Configurar el trasvase de registros (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "trasvase de registros [SQL Server], habilitar"
-  - "trasvase de registros [SQL Server], configurar"
+title: Configurar el trasvase de registros (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], enabling
+- log shipping [SQL Server], configuring
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: a1703b56628ba9c509f66cb3d722e6636bd29486
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurar el trasvase de registros (SQL Server)
+# <a name="configure-log-shipping-sql-server"></a>Configurar el trasvase de registros (SQL Server)
   En este tema se describe cómo configurar el trasvase de registros en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] y versiones posteriores admiten la compresión de copia de seguridad. Al crear una configuración de trasvase de registros, puede controlar el comportamiento de la compresión de copia de seguridad de las copias de seguridad del registro. Para obtener más información, vea [Compresión de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
+>  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] y las versiones posteriores admiten la compresión de copia de seguridad. Al crear una configuración de trasvase de registros, puede controlar el comportamiento de la compresión de copia de seguridad de las copias de seguridad del registro. Para obtener más información, vea [Compresión de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
  **En este tema**  
   
@@ -52,11 +57,11 @@ caps.handback.revision: 42
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- Los procedimientos almacenados de trasvase de registros requieren que se pertenezca al rol fijo de servidor **sysadmin**.  
+ Los procedimientos almacenados de trasvase de registros requieren que se pertenezca al rol fijo de servidor **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para configurar el trasvase de registros  
+#### <a name="to-configure-log-shipping"></a>Para configurar el trasvase de registros  
   
 1.  Haga clic con el botón secundario en la base de datos que desea usar como base de datos principal en la configuración de trasvase de registros y, a continuación, haga clic en **Propiedades**.  
   
@@ -125,7 +130,7 @@ caps.handback.revision: 42
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para configurar el trasvase de registros  
+#### <a name="to-configure-log-shipping"></a>Para configurar el trasvase de registros  
   
 1.  Inicialice la base de datos secundaria restaurando una copia de seguridad completa de la base de datos principal en el servidor secundario.  
   
@@ -145,7 +150,7 @@ caps.handback.revision: 42
   
 9. En el servidor principal, ejecute [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md) para agregar la información necesaria sobre la nueva base de datos secundaria al servidor principal.  
   
-10. En el servidor secundario, habilite los trabajos de copia y restauración. Para obtener más información, consulte [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
+10. En el servidor secundario, habilite los trabajos de copia y restauración. Para obtener más información, consulte [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   
@@ -163,7 +168,7 @@ caps.handback.revision: 42
   
 -   [Conmutar por error a una base de datos secundaria de trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Tablas y procedimientos almacenados de trasvase de registros](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

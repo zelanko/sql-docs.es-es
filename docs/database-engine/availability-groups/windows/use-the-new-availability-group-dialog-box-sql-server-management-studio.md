@@ -1,24 +1,29 @@
 ---
-title: "Usar el cuadro de di&#225;logo Nuevo grupo de disponibilidad (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "grupos de disponibilidad [SQL Server], crear"
+title: "Usar el cuadro de diálogo Nuevo grupo de disponibilidad (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], creating
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 caps.latest.revision: 40
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 13efc945406628f1f0423f0cba4977aabfbb5ab8
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Usar el cuadro de di&#225;logo Nuevo grupo de disponibilidad (SQL Server Management Studio)
+# <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Usar el cuadro de diálogo Nuevo grupo de disponibilidad (SQL Server Management Studio)
   Este tema contiene información sobre cómo usar el cuadro de diálogo **Nuevo grupo de disponibilidad** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para crear un grupo de disponibilidad AlwaysOn en las instancias de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] habilitadas para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Un *grupo de disponibilidad* define un conjunto de bases de datos de usuario que realizarán la conmutación por error como una sola unidad y un conjunto de asociados de conmutación por error, conocido como *réplicas de disponibilidad*, que admiten la conmutación por error.  
   
 > [!NOTE]  
@@ -44,11 +49,11 @@ caps.handback.revision: 40
   
 ###  <a name="PrerequisitesRestrictions"></a> Requisitos previos  
   
--   Antes de crear un grupo de disponibilidad, compruebe que las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedan réplicas de disponibilidad residen en otro nodo (WSFC) de clúster de conmutación por error de Windows Server en el mismo clúster de conmutación por error de WSFC. Además, compruebe que cada una de las instancias de servidor está habilitada para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y cumple todos los requisitos previos de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para obtener más información, recomendamos encarecidamente que lea [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+-   Antes de crear un grupo de disponibilidad, compruebe que las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedan réplicas de disponibilidad residen en otro nodo (WSFC) de clúster de conmutación por error de Windows Server en el mismo clúster de conmutación por error de WSFC. Además, compruebe que cada una de las instancias de servidor está habilitada para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y cumple todos los requisitos previos de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Para obtener más información, recomendamos encarecidamente que lea [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 -   Antes de crear un grupo de disponibilidad, asegúrese de que cada instancia de servidor que hospedará una réplica de disponibilidad tenga un extremo de creación de reflejo de la base de datos que funcione. Para obtener más información, vea [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
   
--   Para usar el cuadro de diálogo **Nuevo grupo de disponibilidad** , debe conocer los nombres de las instancias de servidor que hospedarán las réplicas de disponibilidad. Además, debe conocer los nombres de las bases de datos que se proponga agregar al nuevo grupo de disponibilidad, y debe asegurarse de que estas bases de datos cumplen los requisitos previos y las restricciones de la base de datos de disponibilidad que se describen en [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md). Si escribe valores no válidos, el nuevo grupo de disponibilidad no funcionará.  
+-   Para usar el cuadro de diálogo **Nuevo grupo de disponibilidad** , debe conocer los nombres de las instancias de servidor que hospedarán las réplicas de disponibilidad. Además, debe conocer los nombres de las bases de datos que se proponga agregar al nuevo grupo de disponibilidad, y debe asegurarse de que estas bases de datos cumplen los requisitos previos y las restricciones de la base de datos de disponibilidad que se describen en [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). Si escribe valores no válidos, el nuevo grupo de disponibilidad no funcionará.  
   
 ###  <a name="Limitations"></a> Limitaciones  
  El cuadro de diálogo **Nuevo grupo de disponibilidad** no:  
@@ -71,15 +76,15 @@ caps.handback.revision: 40
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal y haga clic en el nombre del servidor.  
   
-2.  Expanda el nodo **Alta disponibilidad de AlwaysOn**.  
+2.  Expanda el nodo **Alta disponibilidad de AlwaysOn** .  
   
-3.  Haga clic con el botón derecho en el nodo **Grupos de disponibilidad** y seleccione el comando **Nuevo grupo de disponibilidad**.  
+3.  Haga clic con el botón derecho en el nodo **Grupos de disponibilidad** y seleccione el comando **Nuevo grupo de disponibilidad** .  
   
 4.  Este comando abre el cuadro de diálogo **Nuevo grupo de disponibilidad** .  
   
 5.  En la página **General** , use el campo **Nombre de grupo de disponibilidad** para escribir el nombre del nuevo grupo de disponibilidad. Este nombre debe ser un identificador de SQL Server válido y debe ser único en todos los grupos de disponibilidad del clúster de WSFC. La longitud máxima del nombre de un grupo de disponibilidad es 128 caracteres.  
   
-6.  En la cuadrícula **Bases de datos de disponibilidad** , haga clic en **Agregar** y especifique el nombre de una base de datos local que desee que pertenezca a este grupo de disponibilidad. Repita esto para cada base de datos que desee agregar. Al hacer clic en **Aceptar**, el diálogo comprobará si la base de datos especificada cumple los requisitos previos para pertenecer a un grupo de disponibilidad. Para obtener más información sobre estos requisitos previos, vea [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+6.  En la cuadrícula **Bases de datos de disponibilidad** , haga clic en **Agregar** y especifique el nombre de una base de datos local que desee que pertenezca a este grupo de disponibilidad. Repita esto para cada base de datos que desee agregar. Al hacer clic en **Aceptar**, el diálogo comprobará si la base de datos especificada cumple los requisitos previos para pertenecer a un grupo de disponibilidad. Para obtener más información sobre estos requisitos previos, vea [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 7.  En la cuadrícula **Bases de datos de disponibilidad** , haga clic en **Agregar** y especifique el nombre de una instancia de servidor para hospedar una réplica secundaria. El diálogo no intentará conectarse a estas instancias. Si especifica un nombre de servidor incorrecto, se agregará una réplica secundaria pero no podrá conectarse a ella.  
   
@@ -113,9 +118,9 @@ caps.handback.revision: 40
   
 -   [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [Configurar la directiva de conmutación por error flexible para controlar las condiciones de la conmutación automática por error &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/configure flexible automatic failover policy.md)  
+-   [Configurar la directiva de conmutación por error flexible para controlar las condiciones de la conmutación automática por error &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)  
   
--   [Especificar la dirección URL del punto de conexión al agregar o modificar una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md)  
+-   [Especificar la dirección URL del punto de conexión al agregar o modificar una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [Configurar la copia de seguridad en réplicas de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -149,13 +154,13 @@ caps.handback.revision: 40
   
  **Para configurar un extremo de creación del reflejo de la base de datos**  
   
--   [Crear un punto de conexión de creación de reflejo de la base de datos para grupos de disponibilidad AlwaysOn &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database mirroring - always on availability groups- powershell.md)  
+-   [Crear un punto de conexión de creación de reflejo de la base de datos para grupos de disponibilidad AlwaysOn &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 -   [Usar certificados para un punto de conexión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
--   [Especificar la dirección URL del punto de conexión al agregar o modificar una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md)  
+-   [Especificar la dirección URL del punto de conexión al agregar o modificar una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **Para solucionar problemas de configuración de grupos de disponibilidad AlwaysOn**  
   
@@ -167,10 +172,11 @@ caps.handback.revision: 40
   
 -   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
- [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)  
+ [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
+ [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   
+

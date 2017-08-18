@@ -1,34 +1,39 @@
 ---
-title: "Configurar una base de datos reflejada para usar la propiedad Trustworthy (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TRUSTWORTHY, opción de base de datos"
-  - "base de datos reflejada [SQL Server]"
-  - "creación de reflejo de la base de datos (SQL Server), seguridad"
+title: Configurar una base de datos reflejada para usar la propiedad Trustworthy (Transact-SQL) | Microsoft Docs
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TRUSTWORTHY database option
+- mirror database [SQL Server]
+- database mirroring [SQL Server], security
 ms.assetid: 6993b076-78ef-453e-b0ea-e341b8e5ee3e
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 7b99c620aeb148558c5db6cfb15fefd2878ca180
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurar una base de datos reflejada para usar la propiedad Trustworthy (Transact-SQL)
+# <a name="set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql"></a>Configurar una base de datos reflejada para usar la propiedad Trustworthy (Transact-SQL)
   Cuando se realiza una copia de seguridad de una base de datos, la propiedad TRUSTWORTHY de la base de datos se establece en OFF. Por lo tanto, TRUSTWORTHY siempre está en OFF en una nueva base de datos reflejada. Si la base de datos necesita marcarse como de confianza después de una conmutación por error, es necesario realizar pasos adicionales de configuración después de iniciar la creación de reflejo.  
   
 > [!NOTE]  
 >  Para obtener información sobre esta propiedad de base de datos, vea [Propiedad de base de datos TRUSTWORTHY](../../relational-databases/security/trustworthy-database-property.md).  
   
-## Procedimiento  
+## <a name="procedure"></a>Procedimiento  
   
-#### Para configurar una base de datos reflejada para usar la propiedad Trustworthy  
+#### <a name="to-setup-a-mirror-database-to-use-the-trustworthy-property"></a>Para configurar una base de datos reflejada para usar la propiedad Trustworthy  
   
 1.  En la instancia del servidor principal, compruebe que la base de datos principal tiene habilitada la propiedad Trustworthy.  
   
@@ -74,9 +79,9 @@ caps.handback.revision: 15
   
      En SQL Server Management Studio:  
   
-    -   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+    -   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Propiedad de base de datos TRUSTWORTHY](../../relational-databases/security/trustworthy-database-property.md)   
  [Establecer una base de datos reflejada cifrada](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
   

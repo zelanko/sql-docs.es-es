@@ -1,33 +1,42 @@
 ---
-title: "Configurar Firewall de Windows para el acceso al motor de base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "conexiones [SQL Server], sistemas de firewall"
-  - "sistemas de firewall [Motor de base de datos]"
-  - "seguridad [SQL Server], firewalls"
+title: Configurar Firewall de Windows para el acceso al motor de base de datos | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connections [SQL Server], firewall systems
+- firewall systems, [Database Engine]
+- security [SQL Server], firewalls
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 caps.latest.revision: 57
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 7d79f9d00344dceb2559d66f7f6f4450597c79f7
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurar Firewall de Windows para el acceso al motor de base de datos
+# <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurar Firewall de Windows para el acceso al motor de base de datos
+
+ > Para obtener contenido relacionado con las versiones anteriores de SQL Server, vea [Configurar Firewall de Windows para el acceso al motor de base de datos](https://msdn.microsoft.com/en-US/library/ms175043(SQL.120).aspx).
+
+
   En este tema se describe cómo configurar un firewall de Windows para el acceso al motor de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante el Administrador de configuración de SQL Server. Los sistemas de firewall ayudan a evitar el acceso no autorizado a los recursos de los equipos. Para obtener acceso a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] a través de un firewall, debe configurar el firewall en el equipo en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que permita el acceso.  
   
  Para obtener más información sobre la configuración predeterminada de Firewall de Windows y una descripción de los puertos TCP que afectan a [!INCLUDE[ssDE](../../includes/ssde-md.md)], Analysis Services, Reporting Services e Integration Services, vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). Existen varios sistemas de firewall. Para obtener información específica, vea la documentación del firewall.  
   
  Los pasos principales para permitir el acceso son:  
   
-1.  Configure el [!INCLUDE[ssDE](../../includes/ssde-md.md)] para que use un puerto TCP/IP específico. La instancia predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa el puerto 1433, pero se puede cambiar. El puerto que usa [!INCLUDE[ssDE](../../includes/ssde-md.md)] aparece en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Las instancias de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], [!INCLUDE[ssEW](../../includes/ssew-md.md)] y las instancias con nombre de [!INCLUDE[ssDE](../../includes/ssde-md.md)] usan puertos dinámicos. Para configurar estas instancias de modo que usen un puerto específico, vea [Configurar un servidor para que escuche en un puerto TCP específico &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/configure a server to listen on a specific tcp port.md).  
+1.  Configure el [!INCLUDE[ssDE](../../includes/ssde-md.md)] para que use un puerto TCP/IP específico. La instancia predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa el puerto 1433, pero se puede cambiar. El puerto que usa [!INCLUDE[ssDE](../../includes/ssde-md.md)] aparece en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Las instancias de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], [!INCLUDE[ssEW](../../includes/ssew-md.md)] y las instancias con nombre de [!INCLUDE[ssDE](../../includes/ssde-md.md)] usan puertos dinámicos. Para configurar estas instancias de modo que usen un puerto específico, vea [Configurar un servidor para que escuche en un puerto TCP específico &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 2.  Configure el firewall para que permita el acceso a ese puerto a los usuarios o equipos autorizados.  
   
@@ -49,7 +58,7 @@ caps.handback.revision: 57
   
      [Administrador de configuración de SQL Server](#SSMSProcedure)  
   
-## Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
  El hecho de abrir puertos en el firewall puede dejar el servidor expuesto a ataques malintencionados. Asegúrese de que conoce los sistemas de firewall antes de abrir puertos. Para obtener más información, consulte [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
@@ -59,15 +68,15 @@ caps.handback.revision: 57
   
  El siguiente procedimiento configura el Firewall de Windows mediante el complemento Microsoft Management Console (MMC) de Firewall de Windows con seguridad avanzada. El Firewall de Windows con seguridad avanzada solo configura el perfil actual. Para obtener más información sobre Firewall de Windows con seguridad avanzada, vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-#### Para abrir un puerto en el Firewall de Windows para el acceso TCP  
+#### <a name="to-open-a-port-in-the-windows-firewall-for-tcp-access"></a>Para abrir un puerto en el Firewall de Windows para el acceso TCP  
   
 1.  En el menú **Inicio** , haga clic en **Ejecutar**, escriba **WF.msc**y, a continuación, haga clic en **Aceptar**.  
   
-2.  En la opción **Firewall de Windows con seguridad avanzada** del panel izquierdo, haga clic con el botón derecho en **Reglas de entrada** y, luego, haga clic en **Nueva regla** en el panel de acciones.  
+2.  En la opción **Firewall de Windows con seguridad avanzada**del panel izquierdo, haga clic con el botón derecho en **Reglas de entrada**y, luego, haga clic en **Nueva regla** en el panel de acciones.  
   
 3.  En el cuadro de diálogo **Tipo de regla** , seleccione **Puerto**y, a continuación, haga clic en **Siguiente**.  
   
-4.  En el cuadro de diálogo **Protocolo y puertos** , seleccione **TCP**. Seleccione **Puertos locales específicos** y escriba el número de puerto de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)], por ejemplo, **1433** para la instancia predeterminada. Haga clic en **Siguiente**.  
+4.  En el cuadro de diálogo **Protocolo y puertos** , seleccione **TCP**. Seleccione **Puertos locales específicos**y escriba el número de puerto de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)], por ejemplo, **1433** para la instancia predeterminada. Haga clic en **Siguiente**.  
   
 5.  En el cuadro de diálogo **Acción** , seleccione **Permitir la conexión**y, a continuación, haga clic en **Siguiente**.  
   
@@ -75,11 +84,11 @@ caps.handback.revision: 57
   
 7.  En el cuadro de diálogo **Nombre** , escriba un nombre y una descripción para esta regla. Después, haga clic en **Finalizar**.  
   
-#### Para abrir el acceso a SQL Server cuando se usen puertos dinámicos  
+#### <a name="to-open-access-to-sql-server-when-using-dynamic-ports"></a>Para abrir el acceso a SQL Server cuando se usen puertos dinámicos  
   
 1.  En el menú **Inicio** , haga clic en **Ejecutar**, escriba **WF.msc**y, a continuación, haga clic en **Aceptar**.  
   
-2.  En la opción **Firewall de Windows con seguridad avanzada** del panel izquierdo, haga clic con el botón derecho en **Reglas de entrada** y, luego, haga clic en **Nueva regla** en el panel de acciones.  
+2.  En la opción **Firewall de Windows con seguridad avanzada**del panel izquierdo, haga clic con el botón derecho en **Reglas de entrada**y, luego, haga clic en **Nueva regla** en el panel de acciones.  
   
 3.  En el cuadro de diálogo **Tipo de regla** , seleccione **Programa**y, a continuación, haga clic en **Siguiente**.  
   
@@ -91,7 +100,7 @@ caps.handback.revision: 57
   
 7.  En el cuadro de diálogo **Nombre** , escriba un nombre y una descripción para esta regla. Después, haga clic en **Finalizar**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Configurar los valores de firewall (Base de datos SQL de Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   

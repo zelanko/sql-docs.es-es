@@ -1,29 +1,34 @@
 ---
-title: "Combinar una r&#233;plica secundaria con un grupo de disponibilidad (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.joinreplica.f1"
-helpviewer_keywords: 
-  - "Grupos de disponibilidad [SQL Server], réplicas de disponibilidad"
-  - "Grupos de disponibilidad [SQL Server], combinación"
-  - "Grupos de disponibilidad [SQL Server], configurar"
+title: "Combinar una réplica secundaria con un grupo de disponibilidad (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.joinreplica.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], joining
+- Availability Groups [SQL Server], configuring
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 3910ccc8cffbfb261846cf604617bc73f11040e8
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Combinar una r&#233;plica secundaria con un grupo de disponibilidad (SQL Server)
-  En este tema se describe cómo combinar una réplica secundaria con un grupo de disponibilidad de AlwaysOn por medio de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Después de agregar una réplica secundaria a un grupo de disponibilidad de AlwaysOn, la réplica secundaria se debe combinar con el grupo de disponibilidad. La operación de combinar una réplica se debe realizar en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica secundaria.  
+# <a name="join-a-secondary-replica-to-an-availability-group-sql-server"></a>Combinar una réplica secundaria con un grupo de disponibilidad (SQL Server)
+  En este tema se describe cómo combinar una réplica secundaria con un grupo de disponibilidad de AlwaysOn por medio de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Después de agregar una réplica secundaria a un grupo de disponibilidad de AlwaysOn, la réplica secundaria se debe combinar con el grupo de disponibilidad. La operación de combinar una réplica se debe realizar en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica secundaria.  
   
 -   **Antes de empezar:**  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 41
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica secundaria y haga clic en el nombre del servidor para expandir el árbol de servidores.  
   
-2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad**.  
+2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad** .  
   
 3.  Seleccione el grupo de disponibilidad de la réplica secundaria a la que está conectado.  
   
@@ -95,7 +100,7 @@ caps.handback.revision: 41
     >  Para ver esta instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)] usada en contexto, vea [Crear un grupo de disponibilidad &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md).  
   
 ##  <a name="PowerShellProcedure"></a> Usar PowerShell  
- **Para unir una réplica de disponibilidad a un grupo de disponibilidad**  
+ **Para combinar una réplica de disponibilidad con un grupo de disponibilidad**  
   
  En el proveedor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell:  
   
@@ -123,9 +128,10 @@ caps.handback.revision: 41
   
 2.  Una cada base de datos secundaria al grupo de disponibilidad. Para obtener más información, vea [Combinar una base de datos secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Solucionar problemas de configuración de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   
+

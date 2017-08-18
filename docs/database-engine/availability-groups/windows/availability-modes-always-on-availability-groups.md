@@ -1,32 +1,37 @@
 ---
-title: "Modos de disponibilidad (grupos de disponibilidad AlwaysOn) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grupos de disponibilidad [SQL Server], réplicas de disponibilidad"
-  - "Grupos de disponibilidad [SQL Server], confirmación asincrónica"
-  - "modo de disponibilidad de confirmación sincrónica"
-  - "Grupos de disponibilidad [SQL Server], confirmación sincrónica"
-  - "modo de disponibilidad de confirmación asincrónica"
-  - "Grupos de disponibilidad [SQL Server], modos de disponibilidad"
+title: Modos de disponibilidad (grupos de disponibilidad AlwaysOn) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], asynchronous commit
+- synchronous-commit availability mode
+- Availability Groups [SQL Server], synchronous commit
+- asynchronous-commit availability mode
+- Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: cec987001aa2242861da91b0815c8cc6455b9efd
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Modos de disponibilidad (grupos de disponibilidad AlwaysOn)
+# <a name="availability-modes-always-on-availability-groups"></a>Modos de disponibilidad (grupos de disponibilidad AlwaysOn)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  En [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], el *modo de disponibilidad* es una propiedad de réplica que determina si una réplica de disponibilidad determinada puede ejecutarse en modo de confirmación sincrónica. Para cada replicación de disponibilidad, el modo de disponibilidad debe estar configurado como modo de confirmación sincrónica o modo de confirmación asincrónica.  Si la réplica principal se configura para el *modo de confirmación asincrónica*, no espera a que ninguna réplica secundaria escriba las entradas del registro de transacciones entrantes en el disco (*se fortalece el registro*). Si una réplica secundaria dada se configura para el modo de confirmación asincrónica, la réplica principal no espera a que esa réplica secundaria proteja el registro. Si la réplica principal y una réplica secundaria determinada se configuran ambas para el *modo de confirmación sincrónica*, la réplica principal espera a que la réplica secundaria confirme que ha reforzado el registro (a menos que la réplica secundaria no pueda hacer ping a la réplica principal en el *período de tiempo de espera de sesión* de la principal).  
+  En [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], el *modo de disponibilidad* es una propiedad de réplica que determina si una réplica de disponibilidad determinada puede ejecutarse en modo de confirmación sincrónica. Para cada replicación de disponibilidad, el modo de disponibilidad debe estar configurado como modo de confirmación sincrónica o modo de confirmación asincrónica.  Si la réplica principal se configura para el *modo de confirmación asincrónica*, no espera a que ninguna réplica secundaria escriba las entradas del registro de transacciones entrantes en el disco ( *se fortalece el registro*). Si una réplica secundaria dada se configura para el modo de confirmación asincrónica, la réplica principal no espera a que esa réplica secundaria proteja el registro. Si la réplica principal y una réplica secundaria determinada se configuran ambas para el *modo de confirmación sincrónica*, la réplica principal espera a que la réplica secundaria confirme que ha reforzado el registro (a menos que la réplica secundaria no pueda hacer ping a la réplica principal en el *período de tiempo de espera de sesión*de la principal).  
   
 > [!NOTE]  
 >  Si el período de tiempo de espera de sesión de la réplica principal es superado por una réplica secundaria, la replicación principal pasa temporalmente al modo de confirmación asincrónicoa para esa replicación secundaria. Cuando la replicación secundaria vuelva a conectarse con la replicación primaria, se reanuda el modo de confirmación sincrónica.  
@@ -35,9 +40,9 @@ caps.handback.revision: 40
   
 -   [Modos de disponibilidad admitidos](#SupportedAvModes)  
   
--   [Modo de disponibilidad de confirmación asincrónica](#AsyncCommitAvMode)  
+-   [Asynchronous-Commit Availability Mode](#AsyncCommitAvMode)  
   
--   [Modo de disponibilidad de confirmación sincrónica](#SyncCommitAvMode)  
+-   [Synchronous-Commit Availability Mode](#SyncCommitAvMode)  
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 40
   
      Para obtener más información, vea [Modo de disponibilidad de confirmación asincrónica](#AsyncCommitAvMode), más adelante en este tema.  
   
--   El *modo de confirmación sincrónica* establece prioridades de alta disponibilidad sobre el rendimiento, pero a costa de aumentar la latencia de las transacciones. En modo de confirmación sincrónica, las transacciones esperan a enviar la confirmación de transacción al cliente hasta que la réplica secundaria ha protegido el registro en el disco. Cuando la sincronización de datos comienza en una base de datos secundaria, la réplica secundaria comienza a aplicar los registros entrantes desde la base de datos principal correspondiente. En cuanto se protege cada entrada del registro, la base de datos secundaria entra en el estado de SYNCHRONIZED. Después, la réplica secundaria protege cada nueva transacción antes de que se escriba la entrada de registro en el archivo de registro local. Cuando todas las bases de datos secundarias de una réplica secundaria se sincronizan, el modo de confirmación sincrónica admite la conmutación por error manual y, opcionalmente, la conmutación automática por error.  
+-   El*modo de confirmación sincrónica* establece prioridades de alta disponibilidad sobre el rendimiento, pero a costa de aumentar la latencia de las transacciones. En modo de confirmación sincrónica, las transacciones esperan a enviar la confirmación de transacción al cliente hasta que la réplica secundaria ha protegido el registro en el disco. Cuando la sincronización de datos comienza en una base de datos secundaria, la réplica secundaria comienza a aplicar los registros entrantes desde la base de datos principal correspondiente. En cuanto se protege cada entrada del registro, la base de datos secundaria entra en el estado de SYNCHRONIZED. Después, la réplica secundaria protege cada nueva transacción antes de que se escriba la entrada de registro en el archivo de registro local. Cuando todas las bases de datos secundarias de una réplica secundaria se sincronizan, el modo de confirmación sincrónica admite la conmutación por error manual y, opcionalmente, la conmutación automática por error.  
   
      Para obtener más información, vea [Modo de disponibilidad de confirmación sincrónica](#SyncCommitAvMode), más adelante en este tema.  
   
@@ -69,14 +74,14 @@ caps.handback.revision: 40
   
  Normalmente, el nodo 04 como réplica de confirmación asincrónica, se implementa en un sitio de recuperación ante desastres. El hecho de que los nodos 01, 02, 03 se mantengan en el modo de confirmación asincrónica después de conmutar por error al nodo 04 ayuda a evitar la degradación del rendimiento potencial en el grupo de disponibilidad debido a la alta latencia de red entre los dos sitios.  
   
-##  <a name="AsyncCommitAvMode"></a> Modo de disponibilidad de confirmación asincrónica  
+##  <a name="AsyncCommitAvMode"></a> Asynchronous-Commit Availability Mode  
  En el *modo de confirmación asincrónica*, la réplica secundaria nunca se sincroniza con la réplica principal. Aunque una base de datos secundaria puede tener acceso a la base de datos principal correspondiente, cualquier base de datos secundaria podría retrasarse en cualquier momento. El modo de confirmación asincrónica puede resultar útil en un escenario de recuperación de desastres en el que la réplica principal y la réplica secundaria están separadas por una distancia significativa, y donde no se desean errores pequeños que puedan afectar a la réplica principal, o en situaciones donde es más importante el rendimiento que la protección de los datos sincronizados. Además, puesto que la réplica principal no espera reconocimientos de la réplica secundaria, los problemas de la réplica secundaria nunca afectan a la réplica principal.  
   
  Una réplica secundaria de confirmación asincrónica intenta hacer frente a las entradas de registro recibidas de la réplica principal. Pero en modo de confirmación asincrónica, las bases de datos secundarias permanecen sin sincronizar y es más probable que se retrasen detrás las bases de datos principales. Normalmente, la diferencia entre una base de datos secundaria de confirmación asincrónica y la base de datos principal correspondiente es pequeña. Pero la diferencia puede ser considerable si el servidor que hospeda la replicación secundaria está sobrecargado o la red es lenta.  
   
  El único formato de conmutación por error que admite el modo de confirmación asincrónica es conmutación por error forzada (con posible pérdida de datos). Forzar la conmutación es un último recurso destinado únicamente para situaciones en las que la réplica principal actual permanece disponible durante un período prolongado y la disponibilidad inmediata de las bases de datos principales es más importante que el riesgo de posibles pérdidas de datos. El destino de la conmutación por error debe ser una réplica cuyo rol esté en el estado SECONDARY o RESOLVING. El destino de la conmutación por error asume el rol principal y sus copias de las bases de datos se convierten en la base de datos principal. Cualquier base de datos secundaria restante, junto con las bases de datos principales anteriores, una vez que estén disponibles, se suspende hasta que se reanuden de forma manual e individualmente. En el modo de confirmación asincrónica, se pierde cualquier registro de transacciones que la replicación principal original no hubiera enviado a la replicación secundaria anterior. Esto significa que algunas o todas las nuevas bases de datos principales podrían carecer de las transacciones confirmadas recientemente. Para obtener más información sobre el funcionamiento de la conmutación por error forzada y los procedimientos recomendados para usarla, vea [Conmutación por error y modos de conmutación por error &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
-##  <a name="SyncCommitAvMode"></a> Modo de disponibilidad de confirmación sincrónica  
+##  <a name="SyncCommitAvMode"></a> Synchronous-Commit Availability Mode  
  En modo de disponibilidad de confirmación sincrónica (*modo de confirmación sincrónica*), al unirse a un grupo de disponibilidad, una base de datos secundaria se pone al mismo nivel que la base de datos principal correspondiente y entra en el estado SYNCHRONIZED. Las bases de datos secundarias permanecen en ese estado mientras continúa la sincronización de datos. Esto garantiza que cada transacción confirmada en la base de datos principal dada también se ha confirmado en la nueva base de datos secundaria correspondiente. Cuando se sincroniza cada base de datos secundaria de una réplica secundaria determinada, el estado de sincronización de dicha réplica en su conjunto es HEALTHY.  
   
  **En esta sección:**  
@@ -106,7 +111,7 @@ caps.handback.revision: 40
 -   Cambia cualquier réplica secundaria al modo de disponibilidad de confirmación sincrónica. Esto hace que réplica secundaria se marque con un estado de sincronización PARTIALLY_HEALTHY. hasta que todas sus bases de datos tengan el estado de sincronización SYNCHRONIZED.  
   
 > [!TIP]  
->  Para ver el estado de sincronización de un grupo de disponibilidad, una réplica de disponibilidad o una base de datos de disponibilidad, consulte las columnas **synchronization_health** o **synchronization_health_desc** de [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md), [sys.dm_hadr_availability_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md) o [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md), respectivamente.  
+>  Para ver el estado de sincronización de un grupo de disponibilidad, una réplica de disponibilidad o una base de datos de disponibilidad, consulte las columnas **synchronization_health** o **synchronization_health_desc** de [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md), [sys.dm_hadr_availability_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)o [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md), respectivamente.  
   
 ###  <a name="HowSyncWorks"></a> Cómo funciona la sincronización en una réplica secundaria  
  En modo de confirmación sincrónica, después de que una réplica secundaria se una al grupo de disponibilidad y establezca una sesión con la réplica principal, la réplica secundaria escribe las entradas de registro entrantes en el disco (*protege el registro*) y envía un mensaje de confirmación a la réplica principal. Una vez que el registro protegido de la base de datos secundaria llega al final del registro de la base de datos principal, el estado de la base de datos secundaria se establece en SYNCHRONIZED. El tiempo necesario para la sincronización depende básicamente de la diferencia entre la base de datos secundaria y la base de datos principal en el momento de iniciar la sesión (diferencia calculada por el número de registros inicialmente recibidos de la réplica principal), la carga de trabajo en la base de datos principal y la velocidad del equipo de la instancia del servidor que hospeda la réplica secundaria.  
@@ -127,7 +132,7 @@ caps.handback.revision: 40
  El modo de confirmación sincrónica protege los datos exigiendo que estos estén sincronizados entre dos lugares, a costa de un ligero aumento de la latencia de las transacciones.  
   
 ### <a name="SyncCommitWithManual"></a> Modo de confirmación sincrónica con modo de conmutación por error manual  
- Cuando estas réplicas están conectadas y la base de datos está sincronizada, se admite la conmutación por error manual. Si la réplica secundaria baja un nivel, la réplica principal no se ve afectada. La réplica principal se ejecuta expuesta si no existen réplicas SYNCHRONIZED (es decir, sin enviar datos a ninguna réplica secundaria). Si se pierde la réplica principal, las réplicas secundarias entran en el estado RESOLVING, pero el propietario de la base de datos puede forzar una conmutación por error a la réplica secundaria (con posible pérdida de datos). Para obtener más información, vea [Conmutación por error y modos de conmutación por error &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
+ Cuando estas réplicas están conectadas y la base de datos está sincronizada, se admite la conmutación por error manual. Si la réplica secundaria baja un nivel, la réplica principal no se ve afectada. La réplica principal se ejecuta expuesta si no existen réplicas SYNCHRONIZED (es decir, sin enviar datos a ninguna réplica secundaria). Si se pierde la réplica principal, las réplicas secundarias entran en el estado RESOLVING, pero el propietario de la base de datos puede forzar una conmutación por error a la réplica secundaria (con posible pérdida de datos). Para obtener más información, vea [Conmutación por error y modos de conmutación por error &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
 ###  <a name="SyncCommitWithAuto"></a> Modo de confirmación sincrónica con conmutación automática por error  
  La conmutación automática por error proporciona alta disponibilidad al asegurar que la base de datos estará de nuevo disponible rápidamente después de la pérdida de la réplica principal. Para configurar un grupo de disponibilidad para la conmutación automática por error, debe establecer la réplica principal actual y al menos una réplica secundaria en el modo de confirmación sincrónica con conmutación automática por error. Puede tener hasta tres réplicas de conmutación por error automática.  
@@ -172,11 +177,12 @@ caps.handback.revision: 40
   
 -   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](http://blogs.msdn.com/b/sqlAlways%20On/)  
+-   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Conmutación por error y modos de conmutación por error &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
+ [Conmutación por error y modos de conmutación por error &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
  [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   
+

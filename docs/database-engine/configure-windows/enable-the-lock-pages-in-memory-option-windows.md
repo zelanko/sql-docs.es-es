@@ -1,24 +1,29 @@
 ---
-title: "Habilitar la opci&#243;n Bloquear p&#225;ginas en la memoria (Windows) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Bloquear páginas en la memoria, opción"
+title: "Habilitar la opción Bloquear páginas en la memoria (Windows) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Lock Pages in Memory option
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f62d2e7f2187433acdaf775d0835b1f5f7d6e5a3
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Habilitar la opci&#243;n Bloquear p&#225;ginas en la memoria (Windows)
+# <a name="enable-the-lock-pages-in-memory-option-windows"></a>Habilitar la opción Bloquear páginas en la memoria (Windows)
   Esta directiva de Windows determina qué cuentas pueden usar un proceso para mantener los datos en la memoria física, impidiendo que el sistema realice la paginación de los datos en la memoria virtual del disco.  
   
 > [!NOTE]  
@@ -26,7 +31,7 @@ caps.handback.revision: 35
   
  Use la herramienta Directiva de grupo de Windows (gpedit.msc) para habilitar esta directiva para la cuenta usada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Debe ser el administrador del sistema para cambiar esta directiva.  
   
-### Para habilitar la opción de bloqueo de páginas en memoria  
+### <a name="to-enable-the-lock-pages-in-memory-option"></a>Para habilitar la opción de bloqueo de páginas en memoria  
   
 1.  En el menú **Inicio** , haga clic en **Ejecutar**. En el cuadro **Abrir** , escriba **gpedit.msc**.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 35
   
 8.  Cierre sesión y vuelva a iniciarla para que este cambio surta efecto.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones de configuración de memoria del servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   
   

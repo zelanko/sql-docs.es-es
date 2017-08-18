@@ -1,48 +1,45 @@
 ---
-title: "Usar el Asistente para agregar una r&#233;plica al grupo de disponibilidad (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.addreplicawizard.f1"
-helpviewer_keywords: 
-  - "Grupos de disponibilidad [SQL Server], réplicas de disponibilidad"
-  - "Grupos de disponibilidad [SQL Server], asistentes"
+title: "Usar el Asistente para agregar una réplica al grupo de disponibilidad (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.addreplicawizard.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], wizards
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 caps.latest.revision: 24
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1dfe29d1a9284d0efe18aa58431cf3797d5b83fe
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Usar el Asistente para agregar una r&#233;plica al grupo de disponibilidad (SQL Server Management Studio)
-  Use el Asistente para agregar una réplica al grupo de disponibilidad como ayuda para agregar una nueva réplica secundaria a un grupo de disponibilidad AlwaysOn existente.  
+# <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>Usar el Asistente para agregar una réplica al grupo de disponibilidad (SQL Server Management Studio)
+  Use el **Asistente para agregar una réplica al grupo de disponibilidad** para agregar una nueva réplica secundaria a un grupo de disponibilidad AlwaysOn existente.  
   
 > [!NOTE]  
 >  Para obtener información sobre cómo usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell para agregar una réplica secundaria a un grupo de disponibilidad, vea [Agregar una réplica secundaria a un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
-  
--   **Antes de empezar:**  
-  
-     [Requisitos previos](#Prerequisites)  
-  
-     [Seguridad](#Security)  
-  
--   **Para agregar una réplica mediante** [Asistente para agregar una réplica al grupo de disponibilidad (SQL Server Management Studio)](#SSMSProcedure)  
-  
+    
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
- Si nunca ha agregado una réplica de disponibilidad a un grupo de disponibilidad, vea las secciones "Instancias del servidor" y "Grupos y réplicas de disponibilidad" en [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+ Si nunca ha agregado una réplica de disponibilidad a un grupo de disponibilidad, vea las secciones "Instancias del servidor" y "Grupos y réplicas de disponibilidad" en [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
   
 -   Debe estar conectado a la instancia del servidor que hospeda la réplica principal actual.  
   
--   Antes de agregar una réplica secundaria, compruebe que la instancia del host de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está en el mismo clúster de clústeres de conmutación por error de Windows Server (WSFC) que las réplicas existentes pero reside en otro nodo de clúster. Además, compruebe que esta instancia de servidor cumple los requisitos previos de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para obtener más información, vea [Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+-   Antes de agregar una réplica secundaria, compruebe que la instancia del host de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está en el mismo clúster de conmutación por error de Windows Server (WSFC) que las réplicas existentes, pero reside en otro nodo de clúster. Además, compruebe que esta instancia de servidor cumple los requisitos previos de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Para obtener más información, vea [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 -   Si una instancia de servidor seleccionada para hospedar una réplica de disponibilidad se ejecuta bajo una cuenta de usuario de dominio y no tiene todavía un extremo de creación de reflejo de la base de datos, el asistente puede crear el extremo y conceder el permiso CONNECT a la cuenta de servicio de la instancia de servidor. Sin embargo, si el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se ejecuta como una cuenta integrada (como sistema local, servicio local o servicio de red), o una cuenta que no es de dominio, debe usar certificados para la autenticación de extremos y el asistente no podrá crear un extremo de creación de reflejo de la base de datos en la instancia de servidor. En este caso, se recomienda crear los extremos de creación de reflejo de la base de datos manualmente antes de iniciar el asistente Agregar réplica al grupo de disponibilidad.  
   
@@ -74,11 +71,11 @@ caps.handback.revision: 24
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal del grupo de disponibilidad y expanda el árbol.  
   
-2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad**.  
+2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad** .  
   
-3.  Haga clic con el botón derecho en el grupo de disponibilidad al que va a agregar una réplica secundaria y seleccione el comando **Agregar réplica**. Esto inicia el Asistente para agregar una réplica al grupo de disponibilidad.  
+3.  Haga clic con el botón derecho en el grupo de disponibilidad al que va a agregar una réplica secundaria y seleccione el comando **Agregar réplica** . Esto inicia el Asistente para agregar una réplica al grupo de disponibilidad.  
   
-4.  En la página **Conectar con réplicas secundarias existentes** , conéctese a cada réplica secundaria del grupo de disponibilidad. Para obtener más información, vea [Conectarse a la página Réplicas secundarias existentes &#40;Asistente para agregar réplica/Asistente para agregar bases de datos&#41;](../../../database-engine/availability-groups/windows/connect to existing secondary replicas page.md).  
+4.  En la página **Conectar con réplicas secundarias existentes** , conéctese a cada réplica secundaria del grupo de disponibilidad. Para obtener más información, vea [Conectarse a la página Réplicas secundarias existentes &#40;Asistente para agregar réplica/Asistente para agregar bases de datos&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md).  
   
 5.  En la página **Especificar réplicas** , especifique y configure una o varias réplicas secundarias nuevas para el grupo de disponibilidad. Esta página contiene tres pestañas: En la siguiente tabla se presentan estas pestañas. Para obtener más información, vea [Especificar la página de réplicas &#40;Asistente para nuevo grupo de disponibilidad/Asistente para agregar réplica&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
   
@@ -88,7 +85,7 @@ caps.handback.revision: 24
     |**Extremos**|Utilice esta pestaña para comprobar el extremo de creación de reflejo de la base de datos existente, si existe, para cada nueva réplica secundaria. Si este extremo no está en una instancia de servidor cuyas cuentas de servicio utilizan la autenticación de Windows, el asistente intentará crear el extremo automáticamente.<br /><br /> <br /><br /> Nota: Si cualquier instancia de servidor se ejecuta bajo una cuenta de usuario que no es de dominio, se debe realizar un cambio manual en la instancia de servidor antes de continuar con el asistente. Para obtener más información, vea [Requisitos previos](#Prerequisites), anteriormente en este tema.|  
     |**Preferencias de copia de seguridad**|Utilice esta pestaña para especificar sus preferencias de copias de seguridad para el grupo de disponibilidad en conjunto, si desea modificar la configuración actual, y las prioridades de copias de seguridad para las réplicas de disponibilidad individuales.|  
   
-6.  Si las réplicas seleccionadas contienen bases de datos que tienen una clave maestra de base de datos, escriba las contraseñas para las claves maestras de base de datos en la página **Escribir contraseñas**. La columna **Estado** indica **Se requiere contraseña** para bases de datos que tienen una clave maestra de base de datos. Después de escribir las contraseñas, haga clic en **Actualizar**. Si ha especificado la contraseña correctamente, la columna Estado indica **Contraseña especificada**.  
+6.  Si las réplicas seleccionadas contienen bases de datos que tienen una clave maestra de base de datos, escriba las contraseñas para las claves maestras de base de datos en la página **Escribir contraseñas** . La columna **Estado** indica **Se requiere contraseña** para bases de datos que tienen una clave maestra de base de datos. Después de escribir las contraseñas, haga clic en **Actualizar**. Si ha especificado la contraseña correctamente, la columna Estado indica **Contraseña especificada**.  
   
 7.  En la página **Seleccionar sincronización de datos iniciales** , elija cómo desea que las nuevas bases de datos secundarias se creen y se unan al grupo de disponibilidad. Elija una de las opciones siguientes:  
   
@@ -98,7 +95,7 @@ caps.handback.revision: 24
   
          Si selecciona **Completa**, después de crear el grupo de disponibilidad, el asistente realizará una copia de seguridad de cada base de datos principal y su registro de transacciones a un recurso compartido de red y restaurará las copias de seguridad en cada instancia de servidor que hospeda una nueva réplica secundaria. El asistente unirá entonces cada base de datos secundaria nueva al grupo de disponibilidad.  
   
-         En el campo **Especificar una ubicación de red compartida accesible por todas las réplicas:**, especifique un recurso compartido de copia de seguridad al que todas las instancias del servidor que hospedan réplicas tengan acceso de lectura/escritura. Las copias de seguridad de registros serán parte de la cadena de copias de seguridad de registros. Almacene adecuadamente los archivos de copia de seguridad del registro.  
+         En el campo **Especificar una ubicación de red compartida accesible por todas las réplicas:** , especifique un recurso compartido de copia de seguridad al que todas las instancias del servidor que hospedan réplicas tengan acceso de lectura/escritura. Las copias de seguridad de registros serán parte de la cadena de copias de seguridad de registros. Almacene adecuadamente los archivos de copia de seguridad del registro.  
   
         > [!IMPORTANT]  
         >  Para obtener información sobre los permisos necesarios del sistema de archivos, vea [Requisitos previos](#Prerequisites), anteriormente en este tema.  
@@ -109,7 +106,7 @@ caps.handback.revision: 24
   
     -   **Omitir la sincronización de datos iniciales**  
   
-         Seleccione esta opción si desea usar sus propias bases de datos y copias de seguridad de registros de sus bases de datos principales. Para obtener más información, vea [Iniciar el movimiento de datos en una base de datos secundaria AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+         Seleccione esta opción si desea usar sus propias bases de datos y copias de seguridad de registros de sus bases de datos principales. Para obtener más información, vea [Start Data Movement on an Always On Secondary Database &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 8.  La página **Validación** comprueba si los valores especificados en el asistente cumplen los requisitos del Asistente para agregar una réplica al grupo de disponibilidad. Para realizar un cambio, haga clic en **Anterior** para volver a una página anterior del asistente con el fin de cambiar uno o varios valores. Haga clic en **Siguiente** para volver a la página **Validación** y haga clic en **Volver a ejecutar la validación**.  
   
@@ -130,9 +127,10 @@ caps.handback.revision: 24
   
 -   [Agregar una réplica secundaria a un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)   
+ [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Agregar una réplica secundaria a un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   
+

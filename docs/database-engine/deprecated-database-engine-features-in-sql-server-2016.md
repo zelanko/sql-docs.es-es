@@ -1,31 +1,38 @@
 ---
-title: "Caracter&#237;sticas desusadas del motor de base de datos de SQL Server 2016 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "características desusadas [SQL Server]"
-  - "Motor de base de datos [SQL Server], compatibilidad con versiones anteriores"
-  - "condición de obsoleto [SQL Server], lista de características"
+title: "Características desusadas del motor de base de datos de SQL Server 2016 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 06/12/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deprecated features [SQL Server]
+- Database Engine [SQL Server], backward compatibility
+- deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 caps.latest.revision: 215
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 215
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0dff466c24cebd9c4045b6cf99530cf5eec8d7d4
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Caracter&#237;sticas desusadas del motor de base de datos de SQL Server 2016
+# <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Características desusadas del motor de base de datos de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Este tema describe las características desusadas de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que siguen estando disponibles en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Está previsto quitar estas características en una futura versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
-  
+  Este tema describe las características desusadas de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que siguen estando disponibles en [!INCLUDE[sssql15-md](../includes/sssql15-md.md)]. Está previsto quitar estas características en una futura versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
+
+Para [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)], vea [Características desusadas del motor de base de datos de SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md).
+
  Puede supervisar el uso de características desusadas utilizando el contador de rendimiento del objeto de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Características desusadas y eventos de seguimiento. Para obtener más información, vea [Usar objetos de SQL Server](../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
  El valor de estos contadores también está disponible si se ejecuta la siguiente instrucción:  
@@ -41,7 +48,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Categoría|Característica desusada|Sustituta|Nombre de característica|Id. de la característica|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Copias de seguridad y restauración|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD sigue en desuso. BACKUP { DATABASE &#124; LOG } WITH PASSWORD y BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD han dejado de proporcionarse.|Ninguno.|BACKUP DATABASE o LOG WITH PASSWORD<br /><br /> BACKUP DATABASE or LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|Niveles de compatibilidad|Actualización desde la versión 110 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Los niveles de compatibilidad solo están disponibles para las últimas dos versiones. Para obtener más información sobre los niveles de compatibilidad, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).|Nivel de compatibilidad de la base de datos 100|108|  
+|Niveles de compatibilidad|Actualización desde la versión 110 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Los niveles de compatibilidad solo están disponibles para las últimas dos versiones. Para obtener más información sobre los niveles de compatibilidad, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Nivel de compatibilidad de la base de datos 100|108|  
 |Objetos de base de datos|Capacidad de devolver conjuntos de resultados de los desencadenadores|Ninguno|Devolver resultados del desencadenador|12|  
 |Cifrado|El cifrado mediante RC4 o RC4_128 está en desuso y se quitará en la próxima versión. El descifrado con RC4 y RC4_128 no está en desuso.|Utilice otro algoritmo de cifrado como AES.|Algoritmo de cifrado desusado|253|  
 |Servidores remotos|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Reemplace los servidores remotos con servidores vinculados. sp_addserver solo se puede usar con la opción local.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
@@ -56,7 +63,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 |Categoría|Característica desusada|Sustituta|Nombre de característica|Id. de la característica|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|Niveles de compatibilidad|sp_dbcmptlevel|ALTER DATABASE … SET COMPATIBILITY_LEVEL. Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).|sp_dbcmptlevel|80|  
+|Niveles de compatibilidad|sp_dbcmptlevel|ALTER DATABASE … SET COMPATIBILITY_LEVEL. Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
 |Niveles de compatibilidad|Nivel de compatibilidad de la base de datos 110 Y 120.|Planee actualizar la base de datos y la aplicación en una versión futura.|Nivel de compatibilidad de la base de datos 110<br /><br /> Nivel de compatibilidad de la base de datos 120||  
 |XML|Generación de esquemas XDR insertados|La directiva XMLDATA para la opción FOR XML ha quedado desusada. Utilice la XSD generación en los modos RAW y AUTO. No hay sustitución para la directiva XMLDATA en modo EXPLICIT.|XMLDATA|181|  
 |Copias de seguridad y restauración|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE or LOG TO TAPE|235|  
@@ -125,9 +132,9 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Opciones de configuración del servidor|Opción de auditoría c2<br /><br /> opción default trace enabled|[common criteria compliance enabled (opción de configuración del servidor)](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [Eventos extendidos](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
 |Clases SMO|**Microsoft.SQLServer. Clase Management.Smo.Information**<br /><br /> **Microsoft.SQLServer. Clase Management.Smo.Settings**<br /><br /> **Microsoft.SQLServer.Management. Clase Smo.DatabaseOptions**<br /><br /> **Microsoft.SqlServer.Management.Smo. Propiedad DatabaseDdlTrigger.NotForReplication**|**Microsoft.SqlServer.  Clase Management.Smo.Server**<br /><br /> **Microsoft.SqlServer.  Clase Management.Smo.Server**<br /><br /> **Microsoft.SqlServer. Clase Management.Smo.Database**<br /><br /> Ninguno|Ninguno|Ninguno|  
 |Agente SQL Server|Notificación mediante**NET SEND** <br /><br /> Notificación mediante buscapersonas|Notificación mediante correo electrónico<br /><br /> Notificación mediante correo electrónico |Ninguno|Ninguno|  
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|Integración del Explorador de soluciones en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||None|Ninguno|  
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|Integración del Explorador de soluciones en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||Ninguno|Ninguno|  
 |Procedimientos almacenados del sistema|sp_db_increased_partitions|Ninguno. La compatibilidad con más particiones está disponible de forma predeterminada en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|sp_db_increased_partitions|253|  
-|Tablas del sistema|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|Vistas de compatibilidad. Para obtener más información, vea [Vistas de compatibilidad &#40;Transact-SQL &#41;](../Topic/Compatibility%20Views%20\(Transact-SQL\).md).<br /><br /> **\*\* Importante \*\*** Las vistas de compatibilidad no exponen ninguno de los metadatos relacionados con las características incluidas en [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. Se recomienda actualizar las aplicaciones de forma que utilicen vistas de catálogo. Para obtener más información, vea [Vistas de catálogo &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/catalog-views-transact-sql.md).|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> Ninguno<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
+|Tablas del sistema|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|Vistas de compatibilidad. Para obtener más información, vea [Vistas de compatibilidad &#40;Transact-SQL &#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md).<br /><br /> **\*\* Importante \*\*** Las vistas de compatibilidad no exponen ninguno de los metadatos relacionados con las características incluidas en [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. Se recomienda actualizar las aplicaciones de forma que utilicen vistas de catálogo. Para obtener más información, vea [Vistas de catálogo &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/catalog-views-transact-sql.md).|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> Ninguno<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
 |Tablas del sistema|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|Ninguno|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  
 |Funciones del sistema|fn_virtualservernodes<br /><br /> fn_servershareddrives|sys.dm_os_cluster_nodes<br /><br /> sys.dm_io_cluster_shared_drives|fn_virtualservernodes<br /><br /> fn_servershareddrives|155<br /><br /> 156|  
 |Vistas del sistema|sys.sql_dependencies|sys.sql_expression_dependencies|sys.sql_dependencies|198|  
@@ -139,7 +146,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Sugerencias de tabla|INSERT_HINTS||INSERT_HINTS|34|  
 |Punteros de texto|WRITETEXT<br /><br /> UPDATETEXT<br /><br /> READTEXT|Ninguno|UPDATETEXT o WRITETEXT<br /><br /> READTEXT|115<br /><br /> 114|  
 |Punteros de texto|TEXTPTR()<br /><br /> TEXTVALID()|Ninguno|TEXTPTR<br /><br /> TEXTVALID|5<br /><br /> 6|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Secuencia de llamada a funciones ::|Reemplazado por SELECT *column_list* FROM sys.\<*function_name*>().<br /><br /> Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)` con `SELECT * FROM sys.fn_virtualfilestats(2,1)`.|'::' function calling syntax|166|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Secuencia de llamada a funciones ::|Reemplazado por SELECT *column_list* FROM sys.\<*nombre_función*>().<br /><br /> Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`.|'::' function calling syntax|166|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Referencias de columnas de tres y de cuatro partes en la lista SELECT.|Los nombres de dos partes constituyen el comportamiento compatible con el estándar.|Nombre de columna de varias partes|3|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Cadena entrecomillada utilizada como alias de columna para una expresión de una lista SELECT:<br /><br /> '*string_alias*' = *expression*|*expression* [AS] *column_alias*<br /><br /> *expression* [AS] [*column_alias*]<br /><br /> *expression* [AS] "*column_alias*"<br /><br /> *expression* [AS] '*column_alias*'<br /><br /> *column_alias* = *expression*|Literales de cadena como alias de columna|184|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Procedimientos numerados|Ninguno. No debe usarse.|ProcNums|160|  
@@ -149,7 +156,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL como nombre de columna en las instrucciones DML.|Use $rowguid.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|IDENTITYCOL como nombre de columna en las instrucciones DML.|Use $identity.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Uso de #, ## como nombres de procedimientos almacenados temporales y tablas temporales.|Utilice al menos un carácter adicional.|'#' y '##' como el nombre de tablas temporales y procedimientos almacenados|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Uso de @,, @@, o @@ como identificadores de [!INCLUDE[tsql](../includes/tsql-md.md)].|No use @, @@ ni nombres que comiencen por @@ como identificadores.|'@' y nombres que comiencen con '@@' como identificadores de [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Uso de @, @@ o @@ como identificadores de [!INCLUDE[tsql](../includes/tsql-md.md)] .|No utilice @ o @@, o nombres que comiencen por @@ como identificadores.|'@' y nombres que comiencen por '@@' como identificadores [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Use la palabra clave DEFAULT como valor predeterminado.|No utilice la palabra DEFAULT como un valor predeterminado.|Palabra clave DEFAULT como valor predeterminado|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Uso de un espacio como un separador entre las sugerencias de la tabla.|Use una coma para separar las sugerencias de tabla.|Varias sugerencias de tabla sin coma|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|La lista de selección de una vista indizada de agregado debe contener COUNT_BIG (*) en el modo de compatibilidad 90|Use COUNT_BIG (*).|Lista de selección de índice de la vista sin COUNT_BIG(*)|2|  
@@ -168,3 +175,5 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [Funcionalidad del motor de base de datos no incluida en SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
   
+
+

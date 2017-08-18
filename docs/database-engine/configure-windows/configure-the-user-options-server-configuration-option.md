@@ -1,26 +1,31 @@
 ---
-title: "Establecer la opci&#243;n de configuraci&#243;n del servidor Opciones de usuario | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "valor predeterminado global para todos los usuarios [SQL Server]"
-  - "usuarios [SQL Server], valores predeterminados globales"
-  - "user options, opción [SQL Server]"
+title: "Establecer la opción de configuración del servidor Opciones de usuario | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- global default for all users [SQL Server]
+- users [SQL Server], global defaults
+- user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a801f77059d2aa6bacd89901c63f80dcc91bf84a
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Establecer la opci&#243;n de configuraci&#243;n del servidor Opciones de usuario
+# <a name="configure-the-user-options-server-configuration-option"></a>Establecer la opción de configuración del servidor Opciones de usuario
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   En este tema se describe cómo establecer la opción de configuración de servidor para **opciones de usuario** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción para **opciones de usuario** especifica valores predeterminados globales para todos los usuarios. Hay establecida una lista de opciones de procesamiento de consultas predeterminadas para la duración de la sesión de trabajo de un usuario. La opción **opciones de usuario** permite cambiar los valores predeterminados de las opciones SET si no resultan adecuados los valores predeterminados del servidor.  
@@ -67,28 +72,28 @@ caps.handback.revision: 25
     |8192|NUMERIC_ROUNDABORT|Genera un error cuando se produce una pérdida de precisión en una expresión.|  
     |16384|XACT_ABORT|Revierte una transacción si una instrucción Transact- SQL produce un error en tiempo de ejecución.|  
   
--   Las posiciones de bits de **opciones de usuario** son las mismas que las de la función @@OPTIONS. Cada conexión tiene su propia función @@OPTIONS, que representa el entorno de configuración. Cuando se inicia una sesión en una instancia de \ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el usuario recibe un entorno de configuración predeterminado que asigna el valor actual para **opciones de usuario**a la función @@OPTIONS. La ejecución de instrucciones SET para **user options** afecta al valor correspondiente de la función @@OPTIONS de la sesión. Todas las conexiones que se crean después de modificar esta opción recibirán el nuevo valor.  
+-   Las posiciones de bits de **opciones de usuario** son las mismas que las de la función @@OPTIONS. Cada conexión tiene su propia función @@OPTIONS, que representa el entorno de configuración. Cuando se inicia una sesión en una instancia de \ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el usuario recibe un entorno de configuración predeterminado que asigna el valor actual para **opciones de usuario** a la función @@OPTIONS. La ejecución de instrucciones SET para **user options** afecta al valor correspondiente de la función @@OPTIONS de la sesión. Todas las conexiones que se crean después de modificar esta opción recibirán el nuevo valor.  
   
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el nivel de servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
+ De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para configurar la opción de configuración para opciones de usuario  
+#### <a name="to-configure-the-user-options-configuration-option"></a>Para configurar la opción de configuración para opciones de usuario  
   
 1.  En el Explorador de objetos, haga clic con el botón derecho en un servidor y seleccione **Propiedades**.  
   
 2.  Haga clic en el nodo **Conexiones** .  
   
-3.  En el cuadro **Opciones predeterminadas de conexión**, seleccione uno o más atributos para configurar las opciones predeterminadas del procesamiento de consultas para todos los usuarios conectados.  
+3.  En el cuadro **Opciones predeterminadas de conexión** , seleccione uno o más atributos para configurar las opciones predeterminadas del procesamiento de consultas para todos los usuarios conectados.  
   
      De manera predeterminada, no hay ninguna opción de usuario configurada.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para configurar la opción de configuración para opciones de usuario  
+#### <a name="to-configure-the-user-options-configuration-option"></a>Para configurar la opción de configuración para opciones de usuario  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -106,13 +111,14 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> Seguimiento: después de configurar la opción de configuración para opciones de usuario  
+##  <a name="FollowUp"></a> Seguimiento: después de configurar la opción de configuración para opciones de usuario  
  La configuración surte efecto inmediatamente, sin necesidad de reiniciar el servidor.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   
+

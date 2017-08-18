@@ -1,30 +1,35 @@
 ---
-title: "Actualizaci&#243;n de instancias de la r&#233;plica del grupo de disponibilidad AlwaysOn | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Actualización de instancias de la réplica del grupo de disponibilidad AlwaysOn | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1783e700e516978e4eded68fa675addd8d31a234
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Actualizaci&#243;n de instancias de la r&#233;plica del grupo de disponibilidad AlwaysOn
+# <a name="upgrading-always-on-availability-group-replica-instances"></a>Actualización de instancias de la réplica del grupo de disponibilidad AlwaysOn
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Al actualizar un grupo de disponibilidad AlwaysOn de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a una nueva versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], a un Service Pack o una actualización acumulativa de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o bien al instalarse en una nueva versión acumulativa o un nuevo Service Pack de Windows, puede reducir el tiempo de inactividad de la réplica principal a solo una conmutación por error manual realizando una actualización gradual (o dos conmutaciones por error manuales si conmuta por recuperación a la base de datos primaria original). Durante el proceso de actualización, una réplica secundaria no estará disponible para la conmutación por error u operaciones de solo lectura y, después de la actualización, puede pasar algún tiempo antes de que la réplica secundaria se ponga al día con el nodo de la réplica principal según el volumen de actividad del nodo de la réplica principal (así que debe esperar un tráfico de red elevado).  
+  Al actualizar un grupo de disponibilidad AlwaysOn de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a una nueva versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , a un Service Pack o una actualización acumulativa de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o bien al instalarse en una nueva versión acumulativa o un nuevo Service Pack de Windows, puede reducir el tiempo de inactividad de la réplica principal a solo una conmutación por error manual realizando una actualización gradual (o dos conmutaciones por error manuales si conmuta por recuperación a la base de datos primaria original). Durante el proceso de actualización, una réplica secundaria no estará disponible para la conmutación por error u operaciones de solo lectura y, después de la actualización, puede pasar algún tiempo antes de que la réplica secundaria se ponga al día con el nodo de la réplica principal según el volumen de actividad del nodo de la réplica principal (así que debe esperar un tráfico de red elevado).  
   
 > [!NOTE]  
->  En este tema nos limitamos a explicar el proceso de actualización de SQL Server. No trataremos la actualización del sistema operativo que contiene el clúster de conmutación por error de Windows Server (WSFC). No se puede actualizar el sistema operativo Windows que hospeda el clúster de conmutación por error en sistemas operativos anteriores a Windows Server 2012 R2. Para actualizar un nodo de clúster que se ejecute en Windows Server 2012 R2, vea [Cluster Operating System Rolling Upgrade](https://technet.microsoft.com/library/dn850430.aspx) (Actualización gradual del sistema operativo de clústeres).  
+>  En este tema nos limitamos a explicar el proceso de actualización de SQL Server. No trataremos la actualización del sistema operativo que contiene el clúster de conmutación por error de Windows Server (WSFC). No se puede actualizar el sistema operativo Windows que hospeda el clúster de conmutación por error en sistemas operativos anteriores a Windows Server 2012 R2. Para actualizar un nodo de clúster que se ejecute en Windows Server 2012 R2, vea [Cluster Operating System Rolling Upgrade](https://technet.microsoft.com/library/dn850430.aspx)(Actualización gradual del sistema operativo de clústeres).  
   
-## Requisitos previos  
+## <a name="prerequisites"></a>Requisitos previos  
  Antes de empezar, revise la siguiente información importante:  
   
 -   [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Compruebe que puede actualizar a SQL Server 2016 desde su versión del sistema operativo Windows y la versión de SQL Server. Por ejemplo, no puede actualizar directamente desde una instancia de SQL Server 2005 a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -33,9 +38,9 @@ caps.handback.revision: 14
   
 -   [Planeamiento y prueba del plan de actualización del motor de base de datos](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): revise las notas de la versión y los problemas conocidos de actualización, la lista de comprobación previa a la actualización y desarrolle y pruebe el plan de actualización.  
   
--   [Requisitos de hardware y software para instalar SQL Server 2016:](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md) revise los requisitos de software para instalar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si es necesario software adicional, puede instalarlo en cada nodo antes de comenzar el proceso de actualización para reducir los posibles tiempos de inactividad.  
+-   [Requisitos de hardware y software para instalar SQL Server 2016:](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)revise los requisitos de software para instalar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si es necesario software adicional, puede instalarlo en cada nodo antes de comenzar el proceso de actualización para reducir los posibles tiempos de inactividad.  
   
-## Prácticas recomendadas de las actualizaciones graduales en grupos de disponibilidad AlwaysOn  
+## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>Prácticas recomendadas de las actualizaciones graduales en grupos de disponibilidad AlwaysOn  
  Las siguientes prácticas recomendadas deberían tenerse en cuenta al realizar actualizaciones de servidor con el fin de reducir el tiempo de inactividad y la pérdida de datos en los grupos de disponibilidad:  
   
 -   Antes de comenzar la actualización gradual, siga estos pasos:  
@@ -62,7 +67,7 @@ caps.handback.revision: 14
   
 -   Ante de conmutar por error un grupo de disponibilidad, compruebe que el estado de sincronización del destino de la conmutaicón es SINCRONIZADO.  
   
-## Proceso de actualización gradual  
+## <a name="rolling-upgrade-process"></a>Proceso de actualización gradual  
  En la práctica, el proceso exacto dependerá de factores como la topología de implementación de los grupos de disponibilidad y del modo de confirmación de cada réplica. Pero, en un escenario más sencillo, una actualización gradual es un proceso de varias fases que en su forma más sencilla implica los pasos siguientes:  
   
  ![Actualización de un grupo de disponibilidad en un escenario de HADR](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "Actualización de un grupo de disponibilidad en un escenario de HADR")  
@@ -81,7 +86,7 @@ caps.handback.revision: 14
   
  Si es necesario, puede realizar una conmutación por error manual adicional para devolver al grupo de disponibilidad a su configuración original.  
   
-## Grupo de disponibilidad con una réplica secundaria remota  
+## <a name="availability-group-with-one-remote-secondary-replica"></a>Grupo de disponibilidad con una réplica secundaria remota  
  Si ha implementado un grupo de disponibilidad para la recuperación de desastres, puede que tenga que conmutar por error el grupo de disponibilidad a una réplica secundaria de confirmación asincrónica. Tal configuración se muestra en la ilustración siguiente:  
   
  ![Actualización de un grupo de disponibilidad en un escenario de DR](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "Actualización de un grupo de disponibilidad en un escenario de DR")  
@@ -108,7 +113,7 @@ caps.handback.revision: 14
   
 -   Mientras actualiza [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] en el sitio principal, cambiar el modo de disponibilidad de nuevo a la confirmación asincrónica y luego revertir al modo sincrónico cuando esté listo para conmutar por error al sitio principal de nuevo.  
   
-## Grupo de disponibilidad con nodos de instancia del clúster de conmutación por error  
+## <a name="availability-group-with-failover-cluster-instance-nodes"></a>Grupo de disponibilidad con nodos de instancia del clúster de conmutación por error  
  Si un grupo de disponibilidad contiene nodos de instancia de clúster de conmutación por error (FCI), debe actualizar los nodos inactivos antes de actualizar los nodos activos. La ilustración siguiente muestra un escenario de grupos de disponibilidad común con FCI para la confirmación asincrónica y una alta disponibilidad local entre los FCI pra la recuperación de desastres remota y la secuencia de actualización.  
   
  ![Actualización de un grupo de disponibilidad con FCI](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "Actualización de un grupo de disponibilidad con FCI")  
@@ -125,7 +130,7 @@ caps.handback.revision: 14
   
 6.  Actualizar PRIMARY1  
   
-## Actualizar las instancias de SQL Server con varios grupos de disponibilidad  
+## <a name="upgrade-update-sql-server-instances-with-multiple-availability-groups"></a>Actualizar las instancias de SQL Server con varios grupos de disponibilidad  
  Si ejecuta varios grupos de disponibilidad con réplicas principales en nodos de servidor independientes (una configuración activa/activa), la ruta de actualización implica más pasos de conmutación por error para presentar una alta disponibilidad en el proceso. Suponga que ejecuta tres grupos de disponibilidad en tres nodos de servidor según se muestra en la tabla siguiente y que todas las réplicas secundarias se ejecutan en el modo de confirmación sincrónica.  
   
 |Grupo de disponibilidad|Nodo1|Nodo2|Nodo3|  
@@ -163,8 +168,9 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  En muchos casos, una vez completada la actualización gradual, se conmutará por recuperación a la réplica principal original.  
   
-## Vea también  
- [Actualización a SQL Server 2016 mediante el Asistente para instalación &#40;programa de instalación&#41;](../../../database-engine/install-windows/upgrade-to-sql-server-2016-using-the-installation-wizard-setup.md)   
+## <a name="see-also"></a>Vea también  
+ [Actualización a SQL Server 2016 mediante el Asistente para instalación &#40;programa de instalación&#41;](../../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Instalar SQL Server 2016 desde el símbolo del sistema](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   
+

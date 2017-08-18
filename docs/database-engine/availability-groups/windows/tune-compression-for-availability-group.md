@@ -1,22 +1,27 @@
 ---
-title: "Tune compression for availability group (Optimizar la compresi&#243;n para los grupos de disponibilidad) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/22/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Optimizar la compresión en los grupos de disponibilidad | Microsoft Docs"
+ms.custom: 
+ms.date: 06/22/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "v-saume"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: v-saume
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1654499b131e9f13362e94f540b6ef8e521f2ad0
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Tune compression for availability group (Optimizar la compresi&#243;n para los grupos de disponibilidad)
+# <a name="tune-compression-for-availability-group"></a>Tune compression for availability group (Optimizar la compresión para los grupos de disponibilidad)
 
 De forma predeterminada, SQL Server comprime flujos de datos cuando sea apropiado para los grupos de disponibilidad. La compresión reduce el tráfico de red, aumenta la carga de CPU y puede inducir la latencia. Para habilitar la compresión, debe ser miembro del rol fijo de servidor sysadmin. En la siguiente tabla se muestra cuándo SQL Server usa la compresión para las secuencias de registro de los grupos de disponibilidad:
 
@@ -26,7 +31,7 @@ De forma predeterminada, SQL Server comprime flujos de datos cuando sea apropiad
 | Réplicas de confirmación asincrónica | Compressed
 | Durante la propagación automática | No comprimida
 
-## Marcas de seguimiento de la compresión de los grupos de disponibilidad 
+## <a name="trace-flags-for-availability-group-compression"></a>Marcas de seguimiento de la compresión de los grupos de disponibilidad 
 
 Para la mayoría de los escenarios, Microsoft no recomienda cambiar esta configuración. Puede usar marcas de seguimiento globales para probar a cambiar esta configuración. SQL Server aplica marcas de seguimiento globales a toda la instancia. Todos los grupos de disponibilidad de la instancia se verán afectados por esta configuración.  
 
@@ -39,7 +44,7 @@ marca de seguimiento | Description
 9592          | Habilita la compresión de secuencias de registro para los grupos de disponibilidad AlwaysOn con réplicas sincrónicas. Esta característica está deshabilitada de forma predeterminada en las réplicas sincrónicas porque la compresión agrega latencia. La compresión de secuencias de registro está habilitada de forma predeterminada para las réplicas asincrónicas.
 
 
-## Recursos
+## <a name="resources"></a>Recursos
 
 
 [Opciones de inicio del servicio de motor de base de datos](../../../database-engine/configure-windows/database-engine-service-startup-options.md)
@@ -47,3 +52,4 @@ marca de seguimiento | Description
 [Propagación automática](https://msdn.microsoft.com/library/mt735149(SQL.130).aspx)
 
 [Requisitos previos de AlwaysOn](https://msdn.microsoft.com/library/ff878487.aspx) 
+

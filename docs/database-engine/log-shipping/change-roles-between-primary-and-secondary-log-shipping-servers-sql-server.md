@@ -1,32 +1,37 @@
 ---
-title: "Cambiar los roles entre el servidor de trasvase de registros primario y secundario (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "trasvase de registros [SQL Server], cambios de rol"
-  - "archivos de datos secundarios [SQL Server], roles cambiados entre"
-  - "bases de datos principales [SQL Server]"
-  - "cambios de rol inicial [SQL Server]"
-  - "trasvase de registros [SQL Server], conmutación por error"
-  - "conmutación por error [SQL Server], trasvase de registros"
+title: Cambiar los roles entre el servidor de trasvase de registros primario y secundario (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], role changes
+- secondary data files [SQL Server], roles changed between
+- primary databases [SQL Server]
+- initial role changes [SQL Server]
+- log shipping [SQL Server], failover
+- failover [SQL Server], log shipping
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 47e98a220a3480a854be76dbae16e98c0c17d180
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Cambiar los roles entre el servidor de trasvase de registros primario y secundario (SQL Server)
+# <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Cambiar los roles entre el servidor de trasvase de registros primario y secundario (SQL Server)
   Después de haber realizado la conmutación por error de una configuración de trasvase de registros de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un servidor secundario, puede configurar la base de datos secundaria para que actúe como base de datos principal. De este modo, podrá intercambiar la base de datos primaria y la secundaria cuando sea necesario.  
   
-## Realizar el cambio de rol inicial  
+## <a name="performing-the-initial-role-change"></a>Realizar el cambio de rol inicial  
  La primera vez que desee conmutar por error a una base de datos secundaria para convertirla en su nueva base de datos principal, debe realizar una serie de pasos. Una vez realizados, podrá intercambiar fácilmente los roles entre la base de datos principal y la base de datos secundaria.  
   
 1.  Realice manualmente la conmutación por error de la base de datos principal a la secundaria. Asegúrese de realizar una copia de seguridad del registro de transacciones activo en su servidor principal mediante NORECOVERY. Para obtener más información, vea [Conmutar por error a una base de datos secundaria de trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md).  
@@ -67,7 +72,7 @@ caps.handback.revision: 20
         GO  
         ```  
   
-## Intercambiar roles  
+## <a name="swapping-roles"></a>Intercambiar roles  
  Una vez realizados los pasos anteriores para realizar el cambio inicial de roles, ya puede cambiar los roles entre la base de datos principal y la secundaria. A tal efecto, siga los pasos descritos a continuación. Para realizar el cambio de un rol, realice estos pasos generales:  
   
 1.  Conecte en línea la base de datos secundaria y realice una copia de seguridad del registro de transacciones en el servidor principal mediante NORECOVERY.  
@@ -77,7 +82,7 @@ caps.handback.revision: 20
 3.  Habilite el trabajo de copia de seguridad de trasvase de registros en el servidor secundario (el nuevo servidor principal), así como los trabajos de copia y restauración en el servidor primario (el nuevo servidor secundario).  
   
 > [!IMPORTANT]  
->  Al cambiar una base de datos secundaria a la base de datos principal, para proporcionar una experiencia coherente a los usuarios y las aplicaciones, puede que tenga que volver a crear algunos o todos los metadatos de la base de datos; por ejemplo los inicios de sesión y los trabajos, en la nueva instancia del servidor principal. Para obtener más información, vea [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md).  
+>  Al cambiar una base de datos secundaria a la base de datos principal, para proporcionar una experiencia coherente a los usuarios y las aplicaciones, puede que tenga que volver a crear algunos o todos los metadatos de la base de datos; por ejemplo los inicios de sesión y los trabajos, en la nueva instancia del servidor principal. Para obtener más información, vea [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   
@@ -85,7 +90,7 @@ caps.handback.revision: 20
   
 -   [Administración de inicios de sesión y trabajos tras la conmutación de roles &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tablas y procedimientos almacenados de trasvase de registros](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   

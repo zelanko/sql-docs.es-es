@@ -1,27 +1,32 @@
 ---
-title: "Propiedades del servidor (p&#225;gina Memoria) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.memory.f1"
+title: "Propiedades del servidor (página Memoria) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.memory.f1
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 81b299739f8986e819062756d9fbd8fffcbaca41
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propiedades del servidor (p&#225;gina Memoria)
+# <a name="server-properties---memory-page"></a>Propiedades del servidor (página Memoria)
   Utilice esta página para ver o modificar las opciones de memoria del servidor. Cuando **Cantidad mínima de memoria del servidor** está establecida en 0 y **Cantidad máxima de memoria del servidor** está establecida en 2147483647 MB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede aprovechar la cantidad óptima de memoria en un momento dado, dependiendo de la cantidad de memoria que utilicen en ese momento el sistema operativo y otras aplicaciones. Al cambiar la carga del equipo y de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , también cambia la memoria asignada. Puede limitar aún más esta asignación de memoria dinámica a los valores máximos y mínimos que se especifican a continuación.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Cantidad mínima de memoria del servidor (en MB)**  
  Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe empezar, al menos, con la cantidad mínima de memoria asignada y no debe liberar memoria por debajo de este valor. Establezca este valor basándose en el tamaño y la actividad de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Establezca siempre la opción en un valor razonable para asegurarse de que el sistema operativo no requiere demasiada memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no inhibe el rendimiento de Windows.  
   
@@ -35,16 +40,17 @@ caps.handback.revision: 45
 >  No se admiten los valores de 1 a 703. Si se escribe un valor en este intervalo, el campo reemplazará el valor especificado con 704.  
   
  **Cantidad mínima de memoria por consulta (en KB)**  
- Especifica la cantidad de memoria (en KB) que se va a asignar para la ejecución de una consulta. El usuario puede establecer el valor desde 512 hasta 2147483647 KB. El valor predeterminado es 1024 KB.  
+ Especifica la cantidad de memoria (en KB) que se va a asignar para la ejecución de una consulta. El usuario puede establecer el valor desde 512 hasta 2147483647 KB. El valor predeterminado es 1024 KB.  
   
  **Valores configurados**  
- Muestra los valores configurados para las opciones de este panel. Si cambia estos valores, haga clic en **Valores actuales** para comprobar si los cambios han surtido efecto. Si no tienen, deberá reiniciarse primero la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Muestra los valores configurados para las opciones de este panel. Si cambia estos valores, haga clic en **Valores actuales** para comprobar si los cambios han surtido efecto. Si no tienen, deberá reiniciarse primero la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Valores actuales**  
  Muestra los valores actuales de las opciones de este panel. Estos valores son de solo lectura.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Opciones de configuración de memoria del servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   
   
+

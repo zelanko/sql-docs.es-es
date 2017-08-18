@@ -1,32 +1,37 @@
 ---
-title: "affinity mask (opci&#243;n de configuraci&#243;n del servidor) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "default affinity mask, opción"
-  - "recargar la memoria caché del procesador"
-  - "caché del procesador [SQL Server]"
-  - "CPU [SQL Server], concesión de licencias"
-  - "llamada a proceso diferida"
-  - "opción affinity mask"
-  - "afinidad del procesador [SQL Server]"
-  - "SMP"
-  - "DPC"
+title: "affinity mask (opción de configuración del servidor) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- default affinity mask option
+- reloading processor cache
+- processor cache [SQL Server]
+- CPU [SQL Server], licensing
+- deferred process call
+- affinity mask option
+- processor affinity [SQL Server]
+- SMP
+- DPC
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 caps.latest.revision: 52
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0aa50b8c593ced9089a939eb5490380872d38472
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# affinity mask (opci&#243;n de configuraci&#243;n del servidor)
+# <a name="affinity-mask-server-configuration-option"></a>affinity mask (opción de configuración del servidor)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
@@ -90,7 +95,7 @@ caps.handback.revision: 52
 > [!CAUTION]  
 >  No configure la afinidad de CPU en el sistema operativo Windows y la máscara de afinidad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta configuración intenta lograr el mismo resultado y, si las configuraciones no son coherentes, puede obtener resultados impredecibles. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] La afinidad de CPU se configura mejor mediante la opción sp_configure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Como ejemplo de configuración de la opción affinity mask, si los procesadores 1, 2 y 5 están seleccionados como disponibles con el valor 1 para los bits 1, 2 y 5, y el valor 0 para los bits 0, 3, 4, 6 y 7, se especifica el valor hexadecimal 0x26 o el valor decimal equivalente `38` . Enumere los bits de derecha a izquierda. La opción affinity mask comienza a contar los procesadores de 0 a 31, de modo que en el ejemplo siguiente el contador `1` representa el segundo procesador del servidor.  
   
 ```  
@@ -117,21 +122,21 @@ GO
   
  La opción affinity mask es una opción avanzada. Si está usando el procedimiento almacenado del sistema sp_configure para cambiar la configuración, solo podrá cambiar el valor de **máscara de afinidad** si **Mostrar opciones avanzadas** está establecido en 1. Después de ejecutar el comando RECONFIGURE de [!INCLUDE[tsql](../../includes/tsql-md.md)] , la nueva configuración se aplica inmediatamente sin necesidad de reiniciar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Acceso no uniforme a memoria (NUMA)  
+## <a name="non-uniform-memory-access-numa"></a>Acceso no uniforme a memoria (NUMA)  
  Cuando se utiliza el acceso no uniforme a memoria (NUMA) basado en hardware y se ha establecido affinity mask, se establecerá la afinidad de cada programador de un nodo con su propia CPU. Cuando no se establece la opción affinity mask, se establece la afinidad de cada programador con el grupo de CPU en un nodo NUMA y un programador asignado al nodo NUMA N1 puede programar trabajos en cualquier CPU del nodo, pero no en las CPU asociadas a otro nodo.  
   
  Cualquier operación que se ejecute en un solo nodo NUMA únicamente puede utilizar las páginas de búfer de ese nodo. Cuando una operación se ejecuta en paralelo en las CPU de varios nodos, se puede utilizar la memoria de cualquiera de estos nodos.  
   
-## Consideraciones acerca de las licencias  
+## <a name="licensing-issues"></a>Consideraciones acerca de las licencias  
  La afinidad dinámica está estrictamente restringida por las licencias de CPU. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no permite la configuración de las opciones de máscara de afinidad que infrinjan las directivas de las licencias.  
   
-### Inicio  
+### <a name="startup"></a>Inicio  
  Si una máscara de afinidad especificada infringe las directivas de las licencias durante el inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o al adjuntar la base de datos, el nivel del motor completará el proceso de inicio o la operación para adjuntar o restaurar la base de datos; después, volverá a establecer en cero el valor de ejecución de sp_configure para la opción affinity mask y enviará un mensaje de error al registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### Reconfigurar  
+### <a name="reconfigure"></a>Reconfigurar  
  Si una máscara de afinidad determinada infringe las directivas de las licencias en la ejecución del comando RECONFIGURE de [!INCLUDE[tsql](../../includes/tsql-md.md)] , se envía un mensaje de error a la sesión de cliente y al registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicitando que el administrador de la base de datos vuelva a configurar la máscara de afinidad. En este caso no se acepta ningún comando RECONFIGURE WITH OVERRIDE.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
@@ -139,3 +144,4 @@ GO
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
+

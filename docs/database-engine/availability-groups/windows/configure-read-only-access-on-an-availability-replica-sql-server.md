@@ -1,29 +1,34 @@
 ---
-title: "Configurar el acceso de solo lectura en una r&#233;plica de disponibilidad (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "acceso de conexión a réplicas de disponibilidad"
-  - "Grupos de disponibilidad [SQL Server], réplicas secundarias legibles"
-  - "réplicas secundarias activas [SQL Server], acceso de solo lectura a"
-  - "Grupos de disponibilidad [SQL Server], enrutamiento de solo lectura"
-  - "Grupos de disponibilidad [SQL Server], conectividad de cliente"
+title: "Configurar el acceso de solo lectura en una réplica de disponibilidad (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connection access to availability replicas
+- Availability Groups [SQL Server], readable secondary replicas
+- active secondary replicas [SQL Server], read-only access to
+- Availability Groups [SQL Server], read-only routing
+- Availability Groups [SQL Server], client connectivity
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 caps.latest.revision: 35
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ad04708d680bc716c971fa5e24c304b5516d56a8
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configurar el acceso de solo lectura en una r&#233;plica de disponibilidad (SQL Server)
-  De forma predeterminada, tanto el acceso de lectura y escritura como de intento de lectura se permiten en la réplica principal. No se permiten conexiones en las réplicas secundarias de un grupo de disponibilidad AlwaysOn. En este tema se describe cómo se configura el acceso de conexión de una réplica de disponibilidad de un grupo de disponibilidad AlwaysOn en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell.  
+# <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>Configurar el acceso de solo lectura en una réplica de disponibilidad (SQL Server)
+  De forma predeterminada, tanto el acceso de lectura y escritura como de intento de lectura se permiten en la réplica principal. No se permiten conexiones en las réplicas secundarias de un grupo de disponibilidad AlwaysOn. En este tema se describe cómo se configura el acceso de conexión de una réplica de disponibilidad de un grupo de disponibilidad AlwaysOn en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell.  
   
  Para obtener más información sobre las implicaciones de habilitar el acceso de solo lectura en una réplica secundaria y una introducción al acceso de conexión, vea [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md) y [Secundarias activas: réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 35
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Seguimiento:** [Después de configurar el acceso de solo lectura para una réplica de disponibilidad](#FollowUp)  
+-   **Seguimiento:**  [Después de configurar el acceso de solo lectura para una réplica de disponibilidad](#FollowUp)  
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 35
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal y expanda el árbol.  
   
-2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad**.  
+2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad** .  
   
 3.  Haga clic en el grupo de disponibilidad cuya réplica desea cambiar.  
   
@@ -98,7 +103,7 @@ caps.handback.revision: 35
  **Para configurar el acceso en una réplica de disponibilidad**  
   
 > [!NOTE]  
->  Para ver un ejemplo de este procedimiento, vea [Ejemplo (Transact-SQL)](#TsqlExample) más adelante en esta sección.  
+>  Para ver un ejemplo de este procedimiento, vea [Ejemplo (Transact-SQL)](#TsqlExample)más adelante en esta sección.  
   
 1.  Conéctese a la instancia del servidor que hospeda la réplica principal.  
   
@@ -110,7 +115,7 @@ caps.handback.revision: 35
   
          donde,  
   
-         NO  
+         No  
          No se permiten conexiones directas a las bases de datos secundarias de esta réplica. No están disponibles para acceso de lectura. Esta es la configuración predeterminada.  
   
          READ_ONLY  
@@ -126,7 +131,7 @@ caps.handback.revision: 35
      donde,  
   
      READ_WRITE  
-     No se permiten las conexiones en las que la propiedad de conexión Application Intent esté establecida en **ReadOnly**.  Cuando la propiedad Application Intent está establecida en **ReadWrite** o no tiene ningún valor, se permite la conexión. Para obtener más información sobre propiedad de conexión Application Intent, vea [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+     No se permiten las conexiones en las que la propiedad de conexión Application Intent esté establecida en **ReadOnly** .  Cuando la propiedad Application Intent está establecida en **ReadWrite** o no tiene ningún valor, se permite la conexión. Para obtener más información sobre propiedad de conexión Application Intent, vea [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
      ALL  
      Se permiten todas las conexiones con las bases de datos de la réplica principal. Esta es la configuración predeterminada.  
@@ -154,9 +159,9 @@ GO
   
 1.  Cambie el directorio (**cd**) a la instancia del servidor que hospeda la réplica principal.  
   
-2.  Para agregar una réplica de disponibilidad a un grupo de disponibilidad, use el cmdlet **New-SqlAvailabilityReplica**. Para modificar una réplica de disponibilidad existente, use el cmdlet **Set-SqlAvailabilityReplica**. Los parámetros pertinentes son los siguientes:  
+2.  Para agregar una réplica de disponibilidad a un grupo de disponibilidad, use el cmdlet **New-SqlAvailabilityReplica** . Para modificar una réplica de disponibilidad existente, use el cmdlet **Set-SqlAvailabilityReplica** . Los parámetros pertinentes son los siguientes:  
   
-    -   Para configurar el acceso de conexión para el rol secundario, especifique el parámetro **ConnectionModeInSecondaryRole***palabra_clave_de_rol_secundario*, donde *palabra_clave_de_rol_secundario* es igual a uno de los siguientes valores:  
+    -   Para configurar el acceso de conexión para el rol secundario, especifique el parámetro **ConnectionModeInSecondaryRole***palabra_clave_de_rol_secundario* , donde *palabra_clave_de_rol_secundario* es igual a uno de los siguientes valores:  
   
          **AllowNoConnections**  
          No se permiten conexiones directas con las bases de datos de la réplica secundaria y las bases de datos no están disponibles para acceso de lectura. Esta es la configuración predeterminada.  
@@ -198,14 +203,14 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
 ##  <a name="FollowUp"></a> Seguimiento: Después de configurar el acceso de solo lectura para una réplica de disponibilidad  
  **Acceso de solo lectura a una réplica secundaria legible**  
   
--   Cuando se usa la [utilidad bcp](../../../tools/bcp-utility.md) o la [utilidad sqlcmd](../../../tools/sqlcmd-utility.md), se puede especificar el acceso de solo lectura a cualquier réplica secundaria que esté habilitada para el acceso de solo lectura mediante el modificador **-K ReadOnly**.  
+-   Cuando se usa la [utilidad bcp](../../../tools/bcp-utility.md) o la [utilidad sqlcmd](../../../tools/sqlcmd-utility.md), se puede especificar el acceso de solo lectura a cualquier réplica secundaria que esté habilitada para el acceso de solo lectura mediante el modificador **-K ReadOnly** .  
   
 -   Para habilitar las aplicaciones cliente para conectarse a réplicas secundarias legibles:  
   
     ||Requisito previo|Vínculo|  
     |-|------------------|----------|  
-    |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Asegúrese de que el grupo de disponibilidad tiene un agente de escucha.|[Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
-    |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Configure el enrutamiento de solo lectura en un grupo de disponibilidad.|[Configurar el enrutamiento de solo lectura para un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)|  
+    |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Asegúrese de que el grupo de disponibilidad tiene un agente de escucha.|[Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
+    |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Configure el enrutamiento de solo lectura en un grupo de disponibilidad.|[Configurar el enrutamiento de solo lectura para un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)|  
   
  **Factores que podrían afectar a los desencadenadores y trabajos tras la conmutación por error**  
   
@@ -245,9 +250,10 @@ DATABASEPROPERTYEX([db name],’Updatability’) = N’READ_ONLY’
   
 -   [AlwaysOn: secundaria legible y latencia de datos](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On.aspx)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Secundarias activas: réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
   
+

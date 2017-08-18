@@ -1,30 +1,35 @@
 ---
-title: "Ejemplo: Configurar la creaci&#243;n de reflejo de la base de datos mediante la autenticaci&#243;n de Windows (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "creación de reflejo de la base de datos [SQL Server], implementación"
-  - "Windows, autenticación [SQL Server]"
-  - "autenticación [SQL Server], creación de reflejo de base de datos"
-  - "creación de reflejo de la base de datos (SQL Server), seguridad"
+title: "Ejemplo: Configurar la creación de reflejo de la base de datos mediante la autenticación de Windows (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- Windows authentication [SQL Server]
+- authentication [SQL Server], database mirroring
+- database mirroring [SQL Server], security
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d5fafa948d63eae3402e6d5b14587170f3675a56
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Ejemplo: Configurar la creaci&#243;n de reflejo de la base de datos mediante la autenticaci&#243;n de Windows (Transact-SQL)
-  En este ejemplo se muestran todos los pasos necesarios para crear una sesión de creación de reflejo de la base de datos con un testigo mediante la autenticación de Windows. En los ejemplos descritos en este tema se utiliza [!INCLUDE[tsql](../../includes/tsql-md.md)]. Tenga en cuenta que como alternativa a los pasos que utilizan [!INCLUDE[tsql](../../includes/tsql-md.md)], puede utilizar el Asistente para la configuración de seguridad de la creación de reflejo de bases de datos para configurar la creación de reflejo de la base de datos. Para obtener más información, vea [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md).  
+# <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>Ejemplo: Configurar la creación de reflejo de la base de datos mediante la autenticación de Windows (Transact-SQL)
+  En este ejemplo se muestran todos los pasos necesarios para crear una sesión de creación de reflejo de la base de datos con un testigo mediante la autenticación de Windows. En los ejemplos descritos en este tema se utiliza [!INCLUDE[tsql](../../includes/tsql-md.md)]. Tenga en cuenta que como alternativa a los pasos que utilizan [!INCLUDE[tsql](../../includes/tsql-md.md)], puede utilizar el Asistente para la configuración de seguridad de la creación de reflejo de bases de datos para configurar la creación de reflejo de la base de datos. Para obtener más información, vea [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
-## Requisito previo  
+## <a name="prerequisite"></a>Requisito previo  
  Este ejemplo utiliza la base de datos de ejemplo **AdventureWorks** , que usa de forma predeterminada un modelo de recuperación simple. Para utilizar la creación de reflejo de la base de datos con esta base de datos, modifíquela para que utilice el modelo de recuperación completa. Para llevarlo a cabo en [!INCLUDE[tsql](../../includes/tsql-md.md)], use la instrucción ALTER DATABASE del siguiente modo:  
   
 ```  
@@ -37,10 +42,10 @@ GO
   
  Para obtener más información sobre el cambio del modelo de recuperación de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vea [Ver o cambiar el modelo de recuperación de una base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
-### Permisos  
+### <a name="permissions"></a>Permisos  
  Necesita el permiso ALTER en la base de datos y el permiso CREATE ENDPOINT, o la pertenencia al rol fijo de servidor **sysadmin** .  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En este ejemplo, dos asociados y el testigo son las instancias de servidor predeterminadas en tres equipos. Las tres instancias de servidor se ejecutan en el mismo dominio de Windows, pero la cuenta de usuario (usada como cuenta de servicio de inicio) es diferente para la instancia del servidor testigo del ejemplo.  
   
  En la siguiente tabla se muestran de forma resumida los valores utilizados en este ejemplo.  
@@ -146,21 +151,22 @@ GO
   
 -   [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
--   [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+-   [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
 -   [Configurar una base de datos reflejada para usar la propiedad Trustworthy &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
--   [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones salientes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md)  
+-   [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones salientes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
--   [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones entrantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md)  
+-   [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones entrantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
 -   [Ejemplo: configurar la creación de reflejo de la base de datos con certificados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
- [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage metadata when making a database available on another server.md)   
+ [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
+ [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
+

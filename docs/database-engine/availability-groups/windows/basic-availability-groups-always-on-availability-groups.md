@@ -1,30 +1,35 @@
 ---
-title: "Grupos de disponibilidad b&#225;sica (grupos de disponibilidad AlwaysOn) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Grupos de disponibilidad básica (grupos de disponibilidad AlwaysOn) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 caps.latest.revision: 9
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: fa15061db3da820bccfa15c6ad197611b8af0287
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Grupos de disponibilidad b&#225;sica (grupos de disponibilidad AlwaysOn)
+# <a name="basic-availability-groups-always-on-availability-groups"></a>Grupos de disponibilidad básica (grupos de disponibilidad AlwaysOn)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Los grupos de disponibilidad básica AlwaysOn proporcionan una solución de alta disponibilidad para SQL Server 2016 Standard Edition. Un grupo de disponibilidad básica admite un entorno de conmutación por error para una base de datos única. Se crea y administra prácticamente igual que [Grupos de disponibilidad Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) tradicional (avanzado) con Enterprise Edition. En este documento se resumen las diferencias y limitaciones de los grupos de disponibilidad básica.  
   
-## Características  
+## <a name="features"></a>Características  
  Grupos de disponibilidad básica AlwaysOn reemplaza la característica en desuso de creación de reflejo de la base de datos y proporciona un nivel similar de compatibilidad de características. Los grupos de disponibilidad básica permiten que una base de datos principal mantenga una réplica única. Esta réplica puede usar el modo de confirmación sincrónica o el modo de confirmación asincrónica. Para obtener más información sobre los modos de disponibilidad, vea [Modos de disponibilidad &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md). La réplica secundaria permanece inactiva a menos que exista una necesidad de conmutación por error. Esta conmutación por error invierte las asignaciones principales y secundarias de roles, lo que provoca que la réplica secundaria se convierta en la principal base de datos activa. Para obtener más información sobre la conmutación por error, vea [Conmutación por error y modos de conmutación por error &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md). Los grupos de disponibilidad básica pueden funcionar en un entorno híbrido que abarca el local y Microsoft Azure.  
   
-## Limitaciones  
+## <a name="limitations"></a>Limitaciones  
  Los grupos de disponibilidad básica usan un subconjunto de características en comparación con los grupos de disponibilidad avanzada en SQL Server 2016 Enterprise Edition. Los grupos de disponibilidad básica incluyen las siguientes limitaciones:  
   
 -   Límite de dos réplicas (principal y secundaria).  
@@ -41,9 +46,11 @@ caps.handback.revision: 9
   
 -   Los grupos de disponibilidad básica no pueden actualizarse a los grupos de disponibilidad avanzada. El grupo debe quitarse y agregarse de nuevo a un grupo que contenga servidores que solo ejecuten SQL Server 2016 Enterprise Edition.  
   
--   Los grupos de disponibilidad básica solo son compatibles con los servidores Standard Edition.  
+-   Los grupos de disponibilidad básica solo son compatibles con los servidores Standard Edition. 
+
+-   Los grupos de disponibilidad básica no pueden formar parte de un grupo de disponibilidad distribuido. 
   
-## Configuración  
+## <a name="configuration"></a>Configuración  
  Un grupo de disponibilidad básica AlwaysOn se puede crear en dos servidores SQL Server 2016 Standard Edition. Cuando crea un grupo de disponibilidad básica, debe especificar ambas réplicas durante la creación.  
   
  Para crear un grupo de disponibilidad básica, use el comando Transact-SQL **CREATE AVAILABILITY GROUP** y especifique la opción **WITH BASIC** (el valor predeterminado es **ADVANCED**). Para obtener más información, vea [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md). En este momento, no existe ninguna compatibilidad de interfaz de usuario para crear grupos de disponibilidad básica en SQL Server Management Studio.  
@@ -51,7 +58,8 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  Las limitaciones de los grupos de disponibilidad básica se aplican al comando **CREATE AVAILABILITY GROUP** cuando **WITH BASIC** está especificado. Por ejemplo, obtendrá un error si intenta crear un grupo de disponibilidad básica que permita el acceso de lectura. Otras limitaciones se aplican de la misma manera. Consulte la sección Limitaciones de este tema para obtener más información.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

@@ -1,35 +1,40 @@
 ---
-title: "Difundir un mensaje de cierre del sistema (s&#237;mbolo del sistema) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server, detener"
-  - "instancias con nombre [SQL Server], difundir mensajes de cierre"
-  - "difusión de mensaje de cierre de sistema"
-  - "difundir mensaje de cierre de sistema"
-  - "símbolo del sistema [SQL Server], difundir mensajes de cierre"
-  - "instancias predeterminadas [SQL Server], difundir mensajes de cierre"
-  - "detener SQL Server"
+title: "Difundir un mensaje de cierre del sistema (símbolo del sistema) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server, stopping
+- named instances [SQL Server], broadcasting shutdown messages
+- shutdown message broadcast
+- broadcasting shutdown message
+- command prompt [SQL Server], broadcasting shutdown messages
+- default instances [SQL Server], broadcasting shutdown messages
+- stopping SQL Server
 ms.assetid: 9f20ccd5-d952-431d-ba12-339911af9430
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 796fc61fe4080f5202fded550999951a27e43639
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Difundir un mensaje de cierre del sistema (s&#237;mbolo del sistema)
+# <a name="broadcast-a-shutdown-message-command-prompt"></a>Difundir un mensaje de cierre del sistema (símbolo del sistema)
   En este tema se describe cómo difundir un mensaje de cierre en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante el comando **net send** . En el mensaje, incluya la hora a la que se va a detener la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que los usuarios puedan finalizar sus tareas.  
   
 ##  <a name="SSMSProcedure"></a>  
   
-#### Para difundir un mensaje de cierre  
+#### <a name="to-broadcast-a-shutdown-message"></a>Para difundir un mensaje de cierre  
   
 1.  Desde el símbolo del sistema, escriba:  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 28
   
  Es posible que en su red sea más conveniente ponerse en contacto con los usuarios por correo electrónico o teléfono. Para determinar qué usuarios están conectados actualmente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilice el Monitor de actividad. Para obtener información sobre el Monitor de actividad, vea [Monitor de actividad](../../relational-databases/performance-monitor/activity-monitor.md) y [Abrir el Monitor de actividad &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md).  
   
-## Vea también  
- [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md)  
+## <a name="see-also"></a>Vea también  
+ [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
   

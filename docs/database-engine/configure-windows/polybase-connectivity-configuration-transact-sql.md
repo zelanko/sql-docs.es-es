@@ -1,29 +1,34 @@
 ---
-title: "PolyBase Connectivity Configuration (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PolyBase"
+title: "Configuración de conectividad de PolyBase (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 caps.latest.revision: 14
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b60b3ca22932fb4e48a4ae7d47240de073c5c930
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# PolyBase Connectivity Configuration (Transact-SQL)
+# <a name="polybase-connectivity-configuration-transact-sql"></a>Configuración de conectividad de PolyBase (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Muestra o cambia la configuración global de PolyBase Hadoop y la conectividad de almacenamiento de blobs de Azure.  
   
- ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.png "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,10 +48,10 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@configname=** ] **'***option_name***'**  
- Es el nombre de una opción de configuración. *option_name* es **varchar(35)** y su valor predeterminado es NULL. Si no se especifica, se devuelve la lista completa de opciones.  
+ [ **@configname=** ] **'***nombre_opción***'**  
+ Es el nombre de una opción de configuración. *option_name* es **varchar(35)**y su valor predeterminado es NULL. Si no se especifica, se devuelve la lista completa de opciones.  
   
- [ **@configvalue=** ] **'***value***'**  
+ [ **@configvalue=** ] **'***valor***'**  
  Es la nueva configuración. *value* es de tipo **int**y su valor predeterminado es NULL. El valor máximo depende de la opción individual.  
   
  **'conectividad de hadoop'**  
@@ -70,9 +75,9 @@ RECONFIGURE
   
 -   Opción 5: Hortonworks HDP 2.0 en Linux  
   
--   Opción 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5 y 5.9 en Linux  
+-   Opción 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10 y 5.11 en Linux  
   
--   Opción 7: Hortonworks 2.1, 2.2, 2.3, 2.4 y 2.5 en Linux  
+-   Opción 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5 y 2.6 en Linux  
   
 -   Opción 7: Hortonworks 2.1, 2.2 y 2.3 en Windows Server  
   
@@ -86,7 +91,7 @@ RECONFIGURE
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-##  <a name="a-nameresultsetsa-result-sets"></a><a name="ResultSets"></a> Conjuntos de resultados  
+##  <a name="ResultSets"></a> Conjuntos de resultados  
  Cuando se ejecuta sin parámetros, **sp_configure** devuelve un conjunto de resultados con cinco columnas.  
   
 |Nombre de columna|Tipo de datos|Description|  
@@ -105,7 +110,7 @@ En [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], después de volver a ejecutar 
  RECONFIGURE no se permite en una transacción implícita o explícita.  
   
 ## <a name="permissions"></a>Permissions  
- Todos los usuarios pueden ejecutar **sp_configure** sin parámetros o con el parámetro @configname.  
+ Todos los usuarios pueden ejecutar **sp_configure** sin parámetros o con el parámetro @configname .  
   
  Requiere permiso a nivel de servidor de **ALTER SETTINGS** o la pertenencia al rol fijo de servidor **sysadmin** para cambiar un valor de configuración o para ejecutar RECONFIGURE.  
   
@@ -146,3 +151,4 @@ GO
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
   
   
+

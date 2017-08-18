@@ -1,27 +1,32 @@
 ---
-title: "Poner sin conexi&#243;n un grupo de disponibilidad (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grupos de disponibilidad [SQL Server], dejar sin conexión"
+title: "Poner sin conexión un grupo de disponibilidad (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], take offline
 ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
 caps.latest.revision: 38
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1aa3279aaba12034c58c2b0afdfc4a1016c4fd0d
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Poner sin conexi&#243;n un grupo de disponibilidad (SQL Server)
+# <a name="take-an-availability-group-offline-sql-server"></a>Poner sin conexión un grupo de disponibilidad (SQL Server)
   En este tema se explica cómo pasar un grupo de disponibilidad AlwaysOn del estado ONLINE el estado OFFLINE mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)] en [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] y versiones posteriores. No se produce ninguna pérdida de datos en las bases de datos con confirmación sincrónica porque si alguna réplica con confirmación sincrónica no está sincronizada, la operación OFFLINE produce un error y deja el grupo de disponibilidad en el estado ONLINE. Mantener el grupo de disponibilidad en línea protege las bases de datos con confirmación sincrónica no sincronizadas frente a posibles pérdidas de datos. Cuando un grupo de disponibilidad pasa a estar sin conexión, sus bases de datos dejan de estar disponibles para los clientes y no puede volver a poner el grupo de disponibilidad en línea. Por tanto, ponga un grupo de disponibilidad sin conexión únicamente para migrar los recursos del grupo de disponibilidad de un clúster de WSFC a otro.  
   
- Si durante una migración entre clústeres de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] algunas aplicaciones se conectan directamente a la réplica principal de un grupo de disponibilidad, se debe poner sin conexión el grupo de disponibilidad. La migración entre clústeres de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] admite la actualización del sistema operativo con un tiempo de inactividad mínimo de los grupos de disponibilidad. El escenario habitual es usar la migración entre clústeres de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para actualizar el sistema operativo a [!INCLUDE[win8](../../../includes/win8-md.md)] o a [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. Para obtener más información, vea [Migración entre clústeres de grupos de disponibilidad AlwaysOn para la actualización del sistema operativo](http://msdn.microsoft.com/library/jj873730.aspx).  
+ Si durante una migración entre clústeres de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]algunas aplicaciones se conectan directamente a la réplica principal de un grupo de disponibilidad, se debe poner sin conexión el grupo de disponibilidad. La migración entre clústeres de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] admite la actualización del sistema operativo con un tiempo de inactividad mínimo de los grupos de disponibilidad. El escenario habitual es usar la migración entre clústeres de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para actualizar el sistema operativo a [!INCLUDE[win8](../../../includes/win8-md.md)] o a [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. Para obtener más información, vea [Migración entre clústeres de grupos de disponibilidad AlwaysOn para la actualización del sistema operativo](http://msdn.microsoft.com/library/jj873730.aspx).  
   
 -   **Antes de empezar:**  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 37
   
      [Seguridad](#Security)  
   
--   **Para poner un grupo de disponibilidad sin conexión, mediante: ** [Transact-SQL](#TsqlProcedure)  
+-   **Para poner un grupo de disponibilidad sin conexión, mediante:**  [Transact-SQL](#TsqlProcedure)  
   
 -   **Seguimiento:**  [Después de que el grupo de disponibilidad esté sin conexión](#FollowUp)  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 37
   
      donde *group_name* es el nombre del grupo de disponibilidad.  
   
-### Ejemplo  
+### <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se pone sin conexión el grupo de disponibilidad `AccountsAG` .  
   
 ```  
@@ -90,9 +95,10 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 -   [Artículos técnicos de SQL Server 2012](http://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](http://blogs.msdn.com/b/sqlAlways%20On/)  
+-   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   
+

@@ -1,22 +1,27 @@
 ---
-title: "Analysis Services con grupos de disponibilidad AlwaysOn | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Analysis Services con Grupos de disponibilidad AlwaysOn | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "erikre"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: erikre
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d4ba885d49b16d3ef6d4796ddcef420b0dc6c149
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Analysis Services con grupos de disponibilidad AlwaysOn
+# <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con grupos de disponibilidad AlwaysOn
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   El grupo de disponibilidad AlwaysOn es una colección predefinida de bases de datos relacionales de SQL Server que conmutan por error conjuntamente cuando las condiciones desencadenan una conmutación por error en una base de datos, redirigiendo las solicitudes a una base de datos reflejada en otra instancia del mismo grupo de disponibilidad. Si utiliza grupos de disponibilidad como solución de alta disponibilidad, puede usar una base de datos de ese grupo como origen de datos en una solución tabular o multidimensional de Analysis Services. Todas las operaciones de Analysis Services siguientes funcionan de la manera esperada cuando se utiliza una base de datos de disponibilidad: procesando o importando datos, consultando datos relacionales directamente (utilizando el modo DirectQuery o almacenamiento ROLAP) y con reescritura.  
@@ -50,7 +55,7 @@ caps.handback.revision: 12
 > [!NOTE]  
 >  En los pasos siguientes se supone que existen las bases de datos y el grupo de disponibilidad AlwaysOn. Si va a configurar un grupo, utilice el Asistente para nuevo grupo de disponibilidad a fin de crear el grupo y para combinar las bases de datos. El asistente comprueba los requisitos previos, proporciona orientación en cada paso y realiza la sincronización inicial. Para obtener más información, vea [Usar el Asistente para grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md).  
   
-#### Paso 1: configurar el acceso en una réplica de disponibilidad  
+#### <a name="step-1-configure-access-on-an-availability-replica"></a>Paso 1: configurar el acceso en una réplica de disponibilidad  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal y expanda el árbol.  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 12
   
 5.  En el cuadro de diálogo **Propiedades de réplica de disponibilidad** , cambie el acceso de conexión para el rol secundario, del siguiente modo:  
   
-    -   En la lista desplegable **Legible secundaria**, seleccione **Solo lectura**.  
+    -   En la lista desplegable **Legible secundaria** , seleccione **Solo lectura**.  
   
     -   En la lista desplegable **Conexiones en el rol principal** , seleccione **Permitir todas las conexiones**. Ésta es la opción predeterminada.  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 12
   
          Esta propiedad también es un requisito para la conmutación por error planeada. Si desea realizar una conmutación por error manual planeada para pruebas, establezca **Modo de disponibilidad** en **Confirmación sincrónica** tanto para la replicación primaria como para la secundaria.  
   
-#### Paso 2: configurar el enrutamiento de solo lectura  
+#### <a name="step-2-configure-read-only-routing"></a>Paso 2: configurar el enrutamiento de solo lectura  
   
 1.  Conéctese a la réplica principal.  
   
@@ -140,15 +145,13 @@ caps.handback.revision: 12
   
      El agente de escucha de grupo de disponibilidad redirige una conexión de cliente a una replicación principal para las solicitudes de lectura/escritura o a una replicación secundaria si especifica intento de lectura en la cadena de conexión. Dado que los roles de réplica cambiarán durante una conmutación por error (donde el servidor principal se convierte en el servidor secundario y un elemento secundario se convierte en uno principal), siempre debe especificarse la escucha para redirigir la conexión de cliente en consecuencia.  
   
-     Para determinar el nombre del agente de escucha de grupo de disponibilidad, puede solicitarlo a un administrador de base de datos o conectarse a una instancia del grupo de disponibilidad y ver su configuración de disponibilidad AlwaysOn. En la captura de pantalla siguiente, la escucha de grupo de disponibilidad es **AdventureWorks2**.  
-  
-     ![](../Image/SSAS_Always OnInfoInSSMS.png)  
+     Para determinar el nombre del agente de escucha de grupo de disponibilidad, puede solicitarlo a un administrador de base de datos o conectarse a una instancia del grupo de disponibilidad y ver su configuración de disponibilidad AlwaysOn.   
   
 4.  Aún en el Administrador de conexiones, haga clic en **todos** en el panel de navegación de la izquierda para ver la cuadrícula de propiedades del proveedor de datos.  
   
      Establezca **Intención de aplicaciones** en **READONLY** si va a configurar una conexión de cliente de solo lectura en una réplica secundaria. En otro caso mantenga el valor predeterminado **READWRITE** para redirigir la conexión a la réplica primaria.  
   
-5.  En Información de suplantación, seleccione **Utilizar un nombre de usuario y una contraseña de Windows específicos** y escriba una cuenta de usuario de dominio de Windows que tenga un mínimo de permisos de **db_datareader** en la base de datos.  
+5.  En Información de suplantación, seleccione **Utilizar un nombre de usuario y una contraseña de Windows específicos**y escriba una cuenta de usuario de dominio de Windows que tenga un mínimo de permisos de **db_datareader** en la base de datos.  
   
      No elija **Usar las credenciales del usuario actual** o **Heredar**. Puede elegir **Use la cuenta de servicio**, pero solo si esa cuenta tiene permisos de lectura en la base de datos.  
   
@@ -163,7 +166,7 @@ caps.handback.revision: 12
 ##  <a name="bkmk_test"></a> Probar la configuración  
  Después de configurar la replicación secundaria y crear una conexión a un origen de datos en Analysis Services, puede confirmar que los comandos de consulta y procesamiento se redirigen a la réplica secundaria. También puede realizar una conmutación por error manual planeada para comprobar el plan de recuperación para este escenario.  
   
-#### Paso 1: confirmar que la conexión a un origen de datos se redirige a la réplica secundaria  
+#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Paso 1: confirmar que la conexión a un origen de datos se redirige a la réplica secundaria  
   
 1.  Inicie SQL Server Profiler y conéctese a la instancia de SQL Server que hospeda la réplica secundaria.  
   
@@ -179,7 +182,7 @@ caps.handback.revision: 12
   
      En la ventana de seguimiento debería ver los eventos de la aplicación **Microsoft SQL Server Analysis Services**. Debe ver las instrucciones de **SELECT** que recuperan los datos de una base de datos en la instancia del servidor que hospeda la replicación secundaria, lo que prueba que la conexión se realiza a través del agente escucha a la réplica secundaria.  
   
-#### Paso 2: realizar una conmutación por error planeada para probar la configuración  
+#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>Paso 2: realizar una conmutación por error planeada para probar la configuración  
   
 1.  En [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] compruebe las réplicas primaria y secundaria para asegurarse de que ambas están configuradas para el modo de confirmación sincrónico y que están sincronizadas.  
   
@@ -196,9 +199,9 @@ caps.handback.revision: 12
   
 4.  En [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], conéctese a la réplica secundaria.  
   
-5.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad**.  
+5.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad** .  
   
-6.  Haga clic con el botón derecho en el grupo de disponibilidad que va a ser objeto de conmutación por error y seleccione el comando **Conmutación por error**. Esto inicia el Asistente para conmutación por error del grupo de disponibilidad. Use el asistente para elegir qué réplica convertir en la la nueva réplica primaria.  
+6.  Haga clic con el botón derecho en el grupo de disponibilidad que va a ser objeto de conmutación por error y seleccione el comando **Conmutación por error** . Esto inicia el Asistente para conmutación por error del grupo de disponibilidad. Use el asistente para elegir qué réplica convertir en la la nueva réplica primaria.  
   
 7.  Confirme que la conmutación por error se realizó correctamente:  
   
@@ -228,11 +231,12 @@ caps.handback.revision: 12
   
  Para ello, cree un origen de datos adicional en un modelo de Analysis Services para admitir la conexión de lectura/escritura. Al crear el origen de datos adicional, use la misma base de datos y nombre de agente de escucha especificados en la conexión de solo lectura pero, en lugar de modificar **Intención de aplicaciones**, mantenga el valor predeterminado que admite las conexiones READWRITE. Ahora puede agregar nuevas tablas de dimensiones o hechos a la vista del origen de datos que se basen en el origen de datos de lectura/escritura y luego habilitar la reescritura en las nuevas tablas.  
   
-## Vea también  
- [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
- [Secundarias activas: réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [Directivas de AlwaysOn para problemas operativos con grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)   
+## <a name="see-also"></a>Vea también  
+ [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
+ [Secundarias activas: réplicas secundarias legibles &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [Directivas de AlwaysOn para problemas operativos con Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [Crear un origen de datos &#40;SSAS multidimensional&#41;](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [Habilitar reescritura en la dimensión](../../../analysis-services/multidimensional-models/enable-dimension-writeback.md)  
+ [Habilitar reescritura en la dimensión](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
   
+

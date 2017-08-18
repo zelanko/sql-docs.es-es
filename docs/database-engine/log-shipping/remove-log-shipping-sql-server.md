@@ -1,26 +1,31 @@
 ---
-title: "Quitar el trasvase de registros de (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "trasvase de registros [SQL Server], quitar"
-  - "quitar trasvase de registros"
-  - "eliminar trasvase de registros"
+title: Quitar el trasvase de registros (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], removing
+- removing log shipping
+- deleting log shipping
 ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
 caps.latest.revision: 18
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: daec2b5c293d683423b85f59fc75b7b27f76f541
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Quitar el trasvase de registros de (SQL Server)
+# <a name="remove-log-shipping-sql-server"></a>Quitar el trasvase de registros de (SQL Server)
   En este tema se describe cómo quitar el trasvase de registros en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
@@ -42,11 +47,11 @@ caps.handback.revision: 18
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- Los procedimientos almacenados de trasvase de registros requieren que se pertenezca al rol fijo de servidor **sysadmin**.  
+ Los procedimientos almacenados de trasvase de registros requieren que se pertenezca al rol fijo de servidor **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para quitar el trasvase de registros  
+#### <a name="to-remove-log-shipping"></a>Para quitar el trasvase de registros  
   
 1.  Conéctese a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que sea actualmente el servidor principal de trasvase de registros y expándala.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para quitar el trasvase de registros  
+#### <a name="to-remove-log-shipping"></a>Para quitar el trasvase de registros  
   
 1.  En el servidor principal de trasvase de registros, ejecute [sp_delete_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md) para eliminar la información sobre la base de datos secundaria en el servidor principal.  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 18
   
 3.  En el servidor principal de trasvase de registros, ejecute **sp_delete_log_shipping_primary_database** para eliminar la información sobre la configuración de trasvase de registros en el servidor principal. Esto también se elimina el trabajo de copia de seguridad.  
   
-4.  En el servidor principal de trasvase de registros, deshabilite el trabajo de copia de seguridad. Para obtener más información, consulte [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
+4.  En el servidor principal de trasvase de registros, deshabilite el trabajo de copia de seguridad. Para obtener más información, consulte [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
   
 5.  En el servidor secundario de trasvase de registros, deshabilite los trabajos de copia y restauración.  
   
@@ -91,9 +96,9 @@ caps.handback.revision: 18
   
 -   [Conmutar por error a una base de datos secundaria de trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
--   [Deshabilitar o habilitar un trabajo](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Tablas y procedimientos almacenados de trasvase de registros](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

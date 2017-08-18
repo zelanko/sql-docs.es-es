@@ -1,31 +1,36 @@
 ---
-title: "Historial de creaci&#243;n de reflejo de la base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.databasemirroringhistory.f1"
+title: "Historial de creación de reflejo de la base de datos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbmmonitor.databasemirroringhistory.f1
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 caps.latest.revision: 25
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 24f7e8d76bc04e82c4403139c575c6c736648c48
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Historial de creaci&#243;n de reflejo de la base de datos
+# <a name="database-mirroring-history"></a>Historial de creación de reflejo de la base de datos
   Utilice este cuadro de diálogo para ver el historial del estado de creación de reflejo de una base de datos reflejada en una instancia del servidor especificada.  
   
  **Para utilizar SQL Server Management Studio a fin de supervisar la creación de reflejo de la base de datos**  
   
 -   [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Instancia del servidor**  
  Nombre de la instancia del servidor desde la que se obtiene el historial.  
   
@@ -71,8 +76,8 @@ caps.handback.revision: 25
 |**Estado de creación de reflejo**|Estado de la base de datos:<br /><br /> Desconectado<br /><br /> Conmutación por error pendiente<br /><br /> Suspendida<br /><br /> Sincronizado<br /><br /> Sincronizando<br /><br /> Desconocido|  
 |**Conexión del testigo**|Estado de la conexión del testigo en la sesión de creación de reflejo de la base de datos, ya sea Conectado o Desconectado. Si no hay testigo, el valor es NULL.|  
 |**Registro sin enviar**|Tamaño, en kilobytes (KB), del registro sin enviar en la cola de envío de la instancia del servidor principal.|  
-|**Hora de envío**|Cantidad aproximada de tiempo que la instancia del servidor principal necesitará para enviar el registro (actualmente en la cola de envío) a la instancia del servidor reflejado (*tasa de envío*). Puesto que la velocidad de las transacciones entrantes puede variar de forma significativa, el registro de la hora de envío es estimativo. Sin embargo, la tasa de envío puede resultar útil para estimar de forma aproximativa el tiempo requerido para una conmutación por error manual.|  
-|**Tasa de envío**|Velocidad con la que las transacciones se envían a la instancia del servidor reflejado, expresada en KB por segundo.|  
+|**Hora de envío**|Cantidad aproximada de tiempo que la instancia del servidor principal necesitará para enviar el registro (actualmente en la cola de envío) a la instancia del servidor reflejado ( *tasa de envío*). Puesto que la velocidad de las transacciones entrantes puede variar de forma significativa, el registro de la hora de envío es estimativo. Sin embargo, la tasa de envío puede resultar útil para estimar de forma aproximativa el tiempo requerido para una conmutación por error manual.|  
+|**Send Rate**|Velocidad con la que las transacciones se envían a la instancia del servidor reflejado, expresada en KB por segundo.|  
 |**Nueva tasa de transacción**|Velocidad con la que las transacciones entrantes se insertan en el registro del servidor principal, expresada en KB por segundo. Para determinar si la creación de reflejo se retrasa, se mantiene o se recupera, compare este valor con el valor **Hora de envío** .|  
 |**Transacción sin enviar más antigua**|Antigüedad de la transacción sin enviar más antigua de la cola de envío. La antigüedad de esta transacción indica la cantidad de minutos de transacciones que no se han enviado aún a la instancia del servidor reflejado. Este valor ayuda a medir la posibilidad de pérdida de datos con respecto a la hora.|  
 |**Registro sin restaurar**|Cantidad de registro a la espera en la cola rehecha, expresada en KB.|  
@@ -80,9 +85,9 @@ caps.handback.revision: 25
 |**Tasa de restauración**|Velocidad con la que las transacciones se restauran en la base de datos reflejada, expresada en KB por segundo.|  
 |**Sobrecarga de confirmación del servidor reflejado**|Retraso medio por transacción en milisegundos (solo en modos asincrónicos). Este retardo es la cantidad de sobrecarga en la que se incurre mientras la instancia del servidor principal espera a la instancia del servidor reflejado para escribir la entrada de registro de la transacción en la cola de puesta al día.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de bases de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+ [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

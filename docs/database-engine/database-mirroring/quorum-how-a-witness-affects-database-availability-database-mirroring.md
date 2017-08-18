@@ -1,33 +1,38 @@
 ---
-title: "Qu&#243;rum: c&#243;mo un testigo afecta a la disponibilidad de la base de datos (reflejo de base de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cuórum [SQL Server], creación de reflejo de base de datos"
-  - "ejecución expuesta en la creación de reflejo de la bases de datos [SQL Server]"
-  - "quórum entre testigo y asociado [SQL Server]"
-  - "asociados [SQL Server], cuórum entre asociados"
-  - "testigo [SQL Server], cuórum"
-  - "tener quórum [SQL Server]"
-  - "quórum [SQL Server]"
-  - "base de datos reflejada [SQL Server]"
-  - "quórum completo [SQL Server]"
-  - "modo de alta disponibilidad [SQL Server]"
+title: "Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos (reflejo de base de datos) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- quorum [SQL Server], database mirroring
+- running exposed in database mirroring [SQL Server]
+- witness-to-partner quorum [SQL Server]
+- partners [SQL Server], partner-to-partner quorum
+- witness [SQL Server], quorum
+- have quorum [SQL Server]
+- quorum [SQL Server]
+- mirror database [SQL Server]
+- full quorum [SQL Server]
+- high-availability mode [SQL Server]
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 423b441557ac6d255414889deaaf50e7a510707d
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Qu&#243;rum: c&#243;mo un testigo afecta a la disponibilidad de la base de datos (reflejo de base de datos)
+# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quórum: cómo un testigo afecta a la disponibilidad de la base de datos (reflejo de base de datos)
   Siempre que se establece un testigo para una sesión de creación de reflejo de la base de datos, es necesario disponer de *quórum* . Quórum es una relación que existe cuando dos o más instancias de servidor en una sesión de creación de reflejo de la base de datos están conectadas entre sí. Normalmente, el quórum implica a tres instancias de servidor interconectadas. Cuando se establece un testigo, se requiere quórum para que la base de datos esté disponible. El quórum se ha diseñado para sesiones en modo de alta seguridad con conmutación automática por error y garantiza que una base de datos pertenezca a un solo asociado cada vez.  
   
  Si una instancia concreta de servidor se desconecta de una sesión de creación de reflejo, esa instancia pierde el quórum. Si no hay instancias de servidor conectadas, la sesión pierde el quórum y la base de datos no está disponible. Hay tres tipos de quórum posibles:  
@@ -40,7 +45,7 @@ caps.handback.revision: 36
   
  En la siguiente ilustración se muestran estos tipos de quórum.  
   
- ![Cuórum: completo; testigo y asociado; los dos asociados](../../database-engine/database-mirroring/media/dbm-failovautoquorum.gif "Cuórum: completo; testigo y asociado; los dos asociados")  
+ ![Cuórums: completo; testigo y asociado; los dos asociados](../../database-engine/database-mirroring/media/dbm-failovautoquorum.gif "Cuórums: completo; testigo y asociado; los dos asociados")  
   
  Mientras el servidor principal actual tenga quórum, este servidor posee el rol de servidor principal y continúa dando servicio a la base de datos, salvo que el propietario de la base de datos realice una conmutación por error manual. Si el servidor principal pierde el quórum, deja de ofrecer la base de datos. La conmutación automática por error puede ocurrir solamente si la base de datos principal pierde el quórum, lo que garantiza que ya no da servicio a la base de datos.  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 36
 > [!IMPORTANT]  
 >  Solo debe configurar el testigo cuando vaya a utilizar el modo de alta seguridad con conmutación automática por error. En el modo de alto rendimiento, en el que nunca se requiere un testigo, es recomendable establecer la propiedad WITNESS en OFF. Para información sobre las repercusiones de un testigo en el modo de alto rendimiento, vea [Modos de funcionamiento de la creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
-## Quórum en sesiones en modo de alta seguridad  
+## <a name="quorum-in-high-safety-mode-sessions"></a>Quórum en sesiones en modo de alta seguridad  
  En el modo de alta seguridad, el quórum permite la conmutación automática por error proporcionando un contexto en el que las instancias de servidor con quórum arbitran qué asociado posee el rol de servidor principal. El servidor principal proporciona servicio a la base de datos si tiene el quórum. Si el servidor principal pierde el quórum cuando el servidor reflejado sincronizado y el testigo lo mantienen, se produce la conmutación automática por error.  
   
  Los escenarios de quórum para el modo de alta seguridad son los siguientes:  
@@ -91,16 +96,16 @@ caps.handback.revision: 36
 > [!IMPORTANT]  
 >  Cuando una sesión tiene un quórum entre asociados, si uno de ellos pierde el quórum, la sesión lo pierde. No obstante, si cree que el testigo va a permanecer desconectado durante bastante tiempo, se recomienda eliminar temporalmente el testigo de la sesión. La eliminación del testigo elimina el requisito del quórum. Así, si el servidor reflejado se desconecta, el servidor principal puede continuar sirviendo a la base de datos. Para obtener información sobre cómo agregar o quitar un testigo, vea [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md).  
   
-### Cómo afecta el quórum a la disponibilidad de la base de datos  
+### <a name="how-quorum-affects-database-availability"></a>Cómo afecta el quórum a la disponibilidad de la base de datos  
  En la siguiente ilustración se muestra cómo cooperan el testigo y los asociados para asegurarse de que, en un momento dado, un solo asociado es el propietario del rol de servidor principal y solo el servidor principal actual puede poner en línea su base de datos. Ambos escenarios empiezan con un cuórum completo, **Partner_A** en el rol principal y **Partner_B** en el rol reflejado.  
   
  ![Cómo cooperan el testigo y los asociados](../../database-engine/database-mirroring/media/dbm-quorum-scenarios.gif "Cómo cooperan el testigo y los asociados")  
   
- En el escenario 1 se muestra cómo, después de un error del servidor principal original (**Partner_A**), el servidor reflejado y el testigo se ponen de acuerdo en que el principal, **Partner_A**, ya no está disponible y forman un cuórum. Tras ello, el servidor reflejado, **Partner_B**, asume el rol principal. Se da la conmutación automática por error y **Partner_B** pone en línea su copia de la base de datos. Después, **Partner_B** se bloquea y la base de datos se queda sin conexión. Más adelante, el antiguo servidor principal, **Partner_A**, se vuelve a conectar al testigo recuperando el cuórum, pero al comunicarse con el testigo, **Partner_A** detecta que no puede poner en línea su copia de la base de datos, ya que ahora **Partner_B** posee el rol principal. Cuando **Partner_B** se vuelve a unir a la sesión, vuelve a poner en línea la base de datos.  
+ En el escenario 1 se muestra cómo, después de un error del servidor principal original (**Partner_A**), el servidor reflejado y el testigo se ponen de acuerdo en que el principal, **Partner_A**, ya no está disponible y forman un cuórum. Tras ello, el servidor reflejado, **Partner_B** , asume el rol principal. Se da la conmutación automática por error y **Partner_B**pone en línea su copia de la base de datos. Después, **Partner_B** se bloquea y la base de datos se queda sin conexión. Más adelante, el antiguo servidor principal, **Partner_A**, se vuelve a conectar al testigo recuperando el cuórum, pero al comunicarse con el testigo, **Partner_A** detecta que no puede poner en línea su copia de la base de datos, ya que ahora **Partner_B** posee el rol principal. Cuando **Partner_B** se vuelve a unir a la sesión, vuelve a poner en línea la base de datos.  
   
  En el escenario 2, el testigo pierde el cuórum, mientras que los asociados, **Partner_A** y **Partner_B**, conservan el cuórum entre sí y la base de datos permanece en línea. A continuación, los asociados pierden también su quórum y la base de datos se queda sin conexión. Más adelante, el servidor principal, **Partner_A**, se vuelve a conectar al testigo y recupera el cuórum. El testigo confirma que **Partner_A** sigue siendo el propietario del rol principal y **Partner_A** vuelve a poner la base de datos en línea.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Modos de funcionamiento de la creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Testigo de creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-witness.md)   

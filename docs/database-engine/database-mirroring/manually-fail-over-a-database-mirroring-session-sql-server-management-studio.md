@@ -1,26 +1,31 @@
 ---
-title: "Realizar manualmente la conmutaci&#243;n por error de una sesi&#243;n de creaci&#243;n de reflejo de la base de datos (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "conmutación por error [SQL Server], creación de reflejo de la base de datos"
-  - "conmutación por error manual [SQL Server]"
-  - "creación de reflejo de la base de datos [SQL Server], conmutación por error"
+title: "Realizar manualmente la conmutación por error de una sesión de creación de reflejo de la base de datos (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- failover [SQL Server], database mirroring
+- manual failover [SQL Server]
+- database mirroring [SQL Server], failover
 ms.assetid: 4ecf9c63-b3a4-4c54-b553-5bc37973232b
 caps.latest.revision: 32
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 435dc6a75dc991d618d6dcec6ea072f889d0a0ce
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Realizar manualmente la conmutaci&#243;n por error de una sesi&#243;n de creaci&#243;n de reflejo de la base de datos (SQL Server Management Studio)
+# <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>Realizar manualmente la conmutación por error de una sesión de creación de reflejo de la base de datos (SQL Server Management Studio)
   Cuando la base de datos reflejada se sincroniza (es decir, cuando el estado de la base de datos es SYNCHRONIZED), el propietario de la base de datos puede iniciar una conmutación por error manual en el servidor reflejado.  
   
  Durante una conmutación por error manual, los roles de servidor principal y reflejado se intercambian en la base de datos en la que se produce la conmutación por error. La base de datos reflejada se convierte en la base de datos principal, y la base de datos principal se convierte en la reflejada. Por ejemplo, en la siguiente tabla se muestra cómo una conmutación por error manual intercambia los roles de dos asociados de creación de reflejo: `SQLDBENGINE0_1` y `SQLDBENGINE0_2`.  
@@ -32,13 +37,13 @@ caps.handback.revision: 32
   
  Observe que los roles de servidor de las demás sesiones de creación de reflejo de la base de datos no se ven afectados. Para obtener más información, vea [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
-### Para realizar manualmente una conmutación por error de la creación de reflejo de la base de datos  
+### <a name="to-manually-fail-over-database-mirroring"></a>Para realizar manualmente una conmutación por error de la creación de reflejo de la base de datos  
   
 1.  Conéctese a la instancia de servidor principal y, en el panel **Explorador de objetos** , haga clic en el nombre del servidor para expandir el árbol de servidores.  
   
 2.  Expanda **Bases de datos**y seleccione la base de datos de la que se va a realizar la conmutación por error.  
   
-3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y, luego, haga clic en**Reflejado**. Así se abre la página **Creación de reflejo** del cuadro de diálogo **Propiedades de la base de datos** .  
+3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y, luego, haga clic en **Reflejado**. Así se abre la página **Creación de reflejo** del cuadro de diálogo **Propiedades de la base de datos** .  
   
 4.  Haga clic en **Conmutación por error**.  
   
@@ -49,11 +54,11 @@ caps.handback.revision: 32
      Si no se puede efectuar la conmutación por error, aparece un mensaje de error y el cuadro de diálogo permanece abierto.  
   
     > [!IMPORTANT]  
-    >  Si ha modificado alguna propiedad desde que se abrió la página **Creación de reflejos**, estos cambios no se guardarán.  
+    >  Si ha modificado alguna propiedad desde que se abrió la página **Creación de reflejos** , estos cambios no se guardarán.  
   
      El cuadro de diálogo se cierra automáticamente.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Propiedades de la base de datos &#40;página Creación de reflejo&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Realizar una conmutación por error manualmente de una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md)   

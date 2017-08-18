@@ -1,22 +1,27 @@
 ---
-title: "Consideraciones acerca de la instalaci&#243;n de SQL Server con SysPrep | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Consideraciones acerca de la instalación de SQL Server con SysPrep | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ebab112323b9c9ad8b5c8fdba8e3b7e10f69b808
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Consideraciones acerca de la instalaci&#243;n de SQL Server con SysPrep
+# <a name="considerations-for-installing-sql-server-using-sysprep"></a>Consideraciones acerca de la instalación de SQL Server con SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep permite preparar una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un equipo y completar la configuración en un momento posterior. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep emplea un proceso de dos pasos para obtener una instancia independiente configurada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los pasos son los siguientes:  
   
 -   [Preparar imagen](#BKMK_PrepareImage)  
@@ -27,9 +32,9 @@ caps.handback.revision: 22
   
      Este paso permite completar la configuración de una instancia preparada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Durante este paso, puede proporcionar el equipo, la red y la información específica de cuenta.  
   
- Para obtener más información sobre cómo instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con SysPrep, vea [Instalar SQL Server 2016 mediante SysPrep](../../database-engine/install-windows/install-sql-server-2016-using-sysprep.md).  
+ Para obtener más información sobre cómo instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con SysPrep, vea [Instalar SQL Server 2016 mediante SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md).  
   
-## Usos comunes de SysPrep de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="common-uses-for-includessnoversionincludesssnoversion-mdmd-sysprep"></a>Usos comunes de SysPrep de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Puede usar la funcionalidad de SysPrep de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de cualquiera de las maneras siguientes:  
   
 -   Si realiza el paso Preparar imagen, puede preparar una o varias instancias sin configurar de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el mismo equipo. Puede configurar estas instancias preparadas efectuando el paso Completar imagen en el mismo equipo.  
@@ -40,10 +45,10 @@ caps.handback.revision: 22
   
      La herramienta SysPrep de Windows se usa para preparar las imágenes del sistema operativo Windows. Se usa para capturar una imagen personalizada del sistema operativo para su implementación en toda la organización. Para obtener más información acerca de SysPrep y sus usos, vea [¿Qué es SysPrep?](http://go.microsoft.com/fwlink/?LinkId=143546)  
   
-## Consideraciones acerca de los medios de instalación  
+## <a name="installation-media-considerations"></a>Consideraciones acerca de los medios de instalación  
  Si usa una versión completa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], considere los siguientes aspectos:  
   
--   Ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no son Express:  
+-   Ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]que no son Express:  
   
     -   El proceso de preparación de imagen usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Evaluation Edition para instalar los archivos binarios del producto. Cuando la instancia está completada, la edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depende del identificador del producto proporcionado durante el paso de compleción de imagen.  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 22
   
     -   No puede especificar los identificadores de producto de una instancia preparada de las ediciones Express de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Instalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatibles  
+## <a name="supported-includessnoversionincludesssnoversion-mdmd-installations"></a>Instalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatibles  
  SysPrep de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite para todas las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluidas las herramientas.  
   
  Puede preparar varias instancias para instalaciones en paralelo de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o versiones anteriores. Las características de estas instancias deben admitir SysPrep.  
@@ -64,13 +69,13 @@ caps.handback.revision: 22
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer se preparan automáticamente al preparar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se completan al completar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el paso Completar imagen.  
   
- Para obtener más información sobre las ediciones admitidas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ Para obtener más información sobre las ediciones admitidas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Puede realizar una actualización de la edición si configura una instancia preparada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta opción no se admite para las ediciones Express de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SysPrep de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite instalaciones de clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde la línea de comandos.  
   
-## [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Limitaciones de SysPrep  
+## <a name="includessnoversionincludesssnoversion-mdmd-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Limitaciones de SysPrep  
  No se admite la reparación de una instancia preparada. Si se produce un error del programa de instalación durante el paso de preparación o de compleción de la imagen, debe ejecutar la desinstalación.  
   
 ##  <a name="BKMK_PrepareImage"></a> Preparar imagen  
@@ -91,7 +96,8 @@ caps.handback.revision: 22
   
 -   Obtener acceso al paso **Completar imagen de una instancia independiente preparada de SQL Server** de la página **Avanzadas** del **Centro de instalación**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)  
   
   
+

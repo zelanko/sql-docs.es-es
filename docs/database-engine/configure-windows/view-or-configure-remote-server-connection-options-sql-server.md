@@ -1,26 +1,31 @@
 ---
-title: "Ver o configurar las opciones de conexi&#243;n de servidor remoto (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "servidores remotos [SQL Server], opciones de conexión"
-  - "servidores [SQL Server], remotos"
-  - "conexiones [SQL Server], servidores remotos"
+title: "Ver o configurar las opciones de conexión de servidor remoto (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- remote servers [SQL Server], connection options
+- servers [SQL Server], remote
+- connections [SQL Server], remote servers
 ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 700524e1605ef7ff871d7308ea1b4caa359081c9
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Ver o configurar las opciones de conexi&#243;n de servidor remoto (SQL Server)
+# <a name="view-or-configure-remote-server-connection-options-sql-server"></a>Ver o configurar las opciones de conexión de servidor remoto (SQL Server)
   En este tema se describe cómo ver o configurar las opciones de conexión de servidor remoto en el nivel de servidor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
@@ -46,9 +51,9 @@ caps.handback.revision: 25
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para ver o configurar las opciones de conexión de servidor remoto  
+#### <a name="to-view-or-configure-remote-server-connection-options"></a>Para ver o configurar las opciones de conexión de servidor remoto  
   
-1.  En el Explorador de objetos, haga clic con el botón derecho en un servidor y, luego, haga clic en **Propiedades**.  
+1.  En el Explorador de objetos, haga clic con el botón derecho en un servidor y luego haga clic en **Propiedades**.  
   
 2.  En el cuadro de diálogo **Propiedades de SQL Server - \<***nombre_servidor***>**, haga clic en **Conexiones**.  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 25
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para ver las opciones de conexión de servidor remoto  
+#### <a name="to-view-remote-server-connection-options"></a>Para ver las opciones de conexión de servidor remoto  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -72,7 +77,7 @@ GO
 EXEC sp_helpserver ;  
 ```  
   
-#### Para configurar las opciones de conexión de servidor remoto  
+#### <a name="to-configure-remote-server-connection-options"></a>Para configurar las opciones de conexión de servidor remoto  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -85,10 +90,10 @@ USE master;
 EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';  
 ```  
   
-##  <a name="FollowUp"></a> Seguimiento: después de configurar las opciones de conexión de servidor remoto  
+##  <a name="FollowUp"></a> Seguimiento: después de configurar las opciones de conexión de servidor remoto  
  El servidor remoto debe detenerse e reiniciarse para que la opción de configuración valor surta efecto.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Servidores remotos](../../database-engine/configure-windows/remote-servers.md)   
  [Servidores vinculados &#40;motor de base de datos&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   

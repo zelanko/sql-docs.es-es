@@ -1,26 +1,31 @@
 ---
-title: "Agregar un testigo de creaci&#243;n de reflejo de la base de datos mediante la autenticaci&#243;n de Windows (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "testigo [SQL Server], establecer"
-  - "Windows, autenticación [SQL Server]"
-  - "creación de reflejo de la base de datos (SQL Server), testigo"
+title: "Agregar un testigo de creación de reflejo de la base de datos mediante la autenticación de Windows (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- witness [SQL Server], establishing
+- Windows authentication [SQL Server]
+- database mirroring [SQL Server], witness
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 caps.latest.revision: 51
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0e37425e42bbe7c320894de9368c0113373d2e4d
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Agregar un testigo de creaci&#243;n de reflejo de la base de datos mediante la autenticaci&#243;n de Windows (Transact-SQL)
+# <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Agregar un testigo de creación de reflejo de la base de datos mediante la autenticación de Windows (Transact-SQL)
   Para configurar un testigo para la base de datos, el propietario de ésta debe asignar una instancia del Motor de base de datos al rol de servidor testigo. La instancia de servidor testigo puede ejecutarse en el mismo equipo que la instancia de servidor principal o reflejado, aunque de este modo se reduce la solidez de la conmutación automática por error.  
   
  Se recomienda que el testigo se aloje en un equipo independiente. Un servidor determinado puede participar en varias sesiones simultáneas de creación de reflejo de la base de datos con el mismo asociado o con asociados distintos. Un servidor específico puede ser asociado en algunas sesiones y testigo en otras.  
@@ -30,7 +35,7 @@ caps.handback.revision: 51
 > [!IMPORTANT]  
 >  Se recomienda configurar la creación de reflejo de la base de datos durante los periodos de poca actividad, dado que este proceso puede afectar al rendimiento.  
   
-### Para establecer un testigo  
+### <a name="to-establish-a-witness"></a>Para establecer un testigo  
   
 1.  En la instancia de servidor testigo, asegúrese de que existe un extremo para la creación de reflejo de la base de datos. Independientemente del número de sesiones de creación de reflejo que deban admitirse, la instancia del servidor solo debe tener un extremo de creación de reflejo de la base de datos. Si tiene previsto usar esta instancia de servidor exclusivamente como testigo en las sesiones de creación de reflejo de la base de datos, asigne el rol de testigo al punto de conexión (ROLE**=**WITNESS). Si lo que quiere es utilizar la instancia de servidor como asociado en una o más sesiones de creación de reflejo de la base de datos, asigne el rol del extremo a ALL.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 51
   
      Si el asociado carece de un punto de conexión, vea [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
-2.  Si las instancias de asociados se ejecutan en cuentas de usuario de distintos dominios, cree un inicio de sesión para las diferentes cuentas de la base de datos maestra de cada instancia. Para obtener más información, vea [Permitir el acceso de red a un punto de conexión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md).  
+2.  Si las instancias de asociados se ejecutan en cuentas de usuario de distintos dominios, cree un inicio de sesión para las diferentes cuentas de la base de datos maestra de cada instancia. Para obtener más información, vea [Permitir el acceso de red a un punto de conexión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
   
 3.  Conéctese al servidor principal y emita la siguiente instrucción:  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 51
   
      TCP**://**\<*dirección del sistema>***:**\<*puerto>*  
   
-     donde \<*dirección del sistema>* es una cadena que identifica de forma inequívoca el sistema del equipo de destino y \<*puerto*> es el número de puerto que usa el punto de conexión de la creación de reflejo de la instancia de servidor asociado. Para obtener más información, vea [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
+     donde \<*dirección del sistema>* es una cadena que identifica de forma inequívoca el sistema del equipo de destino y \<*puerto>*, el número de puerto que usa el punto de conexión de la creación de reflejo de la instancia de servidor asociado. Para obtener más información, vea [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
      Por ejemplo, en la instancia del servidor principal, la siguiente instrucción ALTER DATABASE define el testigo. El nombre de la base de datos es **AdventureWorks**, la dirección del sistema es DBSERVER3 (el nombre del sistema testigo) y el puerto utilizado por el extremo de creación de reflejo de la base de datos del testigo es `7022`:  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 51
       SET WITNESS = 'TCP://DBSERVER3:7022'  
     ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se establece un testigo de creación de reflejo de datos. En la instancia del servidor testigo (instancia predeterminada en `WITNESSHOST4`):  
   
 1.  Cree un extremo para esta instancia de servidor solo para el rol WITNESS usando el puerto `7022`.  
@@ -125,11 +130,11 @@ caps.handback.revision: 51
   
  Para ver un ejemplo completo en el que se muestra la configuración de seguridad, se prepara la base de datos reflejada, se configuran los asociados y se agrega un testigo, vea [Configurar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Permitir el acceso de red a un punto de conexión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md)   
+ [Permitir el acceso de red a un punto de conexión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)   
  [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)   
+ [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)   
  [Quitar el testigo de una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)   
  [Testigo de creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   

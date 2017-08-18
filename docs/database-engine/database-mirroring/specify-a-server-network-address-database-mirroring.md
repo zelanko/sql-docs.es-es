@@ -1,49 +1,45 @@
 ---
-title: "Especificar una direcci&#243;n de red de servidor (creaci&#243;n de reflejo de la base de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "creación de reflejo de la base de datos [SQL Server], implementación"
-  - "creación de reflejo de la base de datos (SQL Server), punto de conexión"
-  - "extremos [SQL Server], creación de reflejo de base de datos"
-  - "direcciones de red de servidor [SQL Server]"
+title: "Especificar una dirección de red de servidor (creación de reflejo de la base de datos) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- database mirroring [SQL Server], endpoint
+- endpoints [SQL Server], database mirroring
+- server network addresses [SQL Server]
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 caps.latest.revision: 60
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 92b34f32f94e24e98c331f726cd15fe96361784c
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Especificar una direcci&#243;n de red de servidor (creaci&#243;n de reflejo de la base de datos)
+# <a name="specify-a-server-network-address-database-mirroring"></a>Especificar una dirección de red de servidor (creación de reflejo de la base de datos)
   La configuración de una sesión de creación de reflejo de la base de datos necesita una dirección de red de servidor para cada una de las instancias de servidor. La dirección de red de servidor de una instancia de servidor debe identificar sin ambigüedades la instancia proporcionando una dirección del sistema y el número del puerto en el que la instancia escucha.  
   
  Antes de que pueda especificar un puerto en una dirección de red de servidor, debe existir un extremo de creación de reflejo de la base de datos en la instancia de servidor. Para obtener más información, vea [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
- **En este tema:**  
-  
--   [Sintaxis para una dirección de red de servidor](#Syntax)  
-  
--   [Buscar el nombre de dominio completo](#FindFqDn)  
-  
--   [Ejemplos](#Examples)  
-  
--   [Tareas relacionadas](#RelatedTasks)  
   
 ##  <a name="Syntax"></a> Sintaxis para una dirección de red de servidor  
  La sintaxis para una dirección de red de servidor tiene el siguiente formato:  
   
- TCP**://***\<dirección-sistema>***:***\<puerto>*  
+ TCP**://***\<dirección del sistema>***:***\<puerto>*  
   
  donde  
   
--   *\<dirección-sistema>* es una cadena que identifica de forma inequívoca el sistema del equipo de destino. Generalmente, la dirección del servidor es un nombre del sistema (si los sistemas están en el mismo dominio), un nombre de dominio completo o una dirección IP:  
+-   *\<dirección del sistema>* es una cadena que identifica de forma inequívoca el equipo de destino. Generalmente, la dirección del servidor es un nombre del sistema (si los sistemas están en el mismo dominio), un nombre de dominio completo o una dirección IP:  
   
     -   Si los sistemas están en el mismo dominio, puede utilizar el nombre del equipo; por ejemplo, `SYSTEM46`.  
   
@@ -55,7 +51,7 @@ caps.handback.revision: 59
   
          *nombre_equipo* **.** *segmento_dominio*[...**.***segmento_dominio*]  
   
-         donde *nombre_equipo* es el nombre de red del equipo que ejecuta la instancia de servidor y *segmento_dominio*[...**.***segmento_dominio*] es la información restante de dominio del servidor; por ejemplo: `localinfo.corp.Adventure-Works.com`.  
+         donde *nombre_equipo*es el nombre de red del equipo que ejecuta la instancia de servidor y *segmento_dominio*[...**.***segmento_dominio*] es la información restante de dominio del servidor; por ejemplo: `localinfo.corp.Adventure-Works.com`.  
   
          El contenido y el número de segmentos de dominio se determinan en la empresa u organización. Si no conoce el nombre de dominio completo del servidor, consulte con el administrador del sistema.  
   
@@ -70,7 +66,7 @@ caps.handback.revision: 59
   
      ![Direcciones de red del servidor de una instancia predeterminada](../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "Direcciones de red del servidor de una instancia predeterminada")  
   
-     Para identificar el puerto asociado actualmente al extremo de creación de reflejo de la base de datos de una instancia de servidor, utilice la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
+     Para identificar el puerto asociado actualmente al extremo de creación de reflejo de la base de datos de una instancia de servidor, utilice la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
     ```  
     SELECT type_desc, port FROM sys.tcp_endpoints  
@@ -78,44 +74,44 @@ caps.handback.revision: 59
   
      Busque la fila cuyo valor **type_desc** sea "DATABASE_MIRRORING" y use el número de puerto correspondiente.  
   
-### Ejemplos  
+### <a name="examples"></a>Ejemplos  
   
-#### A. Usar un nombre de sistema  
+#### <a name="a-using-a-system-name"></a>A. Usar un nombre de sistema  
  La siguiente dirección de red de servidor especifica un nombre de sistema, `SYSTEM46`, y el puerto `7022`.  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://SYSTEM46:7022';  
 ```  
   
-#### B. Usar un nombre de dominio completo  
+#### <a name="b-using-a-fully-qualified-domain-name"></a>B. Usar un nombre de dominio completo  
  La siguiente dirección de red de servidor especifica un nombre de dominio completo, `DBSERVER8.manufacturing.Adventure-Works.com`, y el puerto `7024`.  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://DBSERVER8.manufacturing.Adventure-Works.com:7024';  
 ```  
   
-#### C. Usar IPv4  
+#### <a name="c-using-ipv4"></a>C. Usar IPv4  
  La siguiente dirección de red de servidor especifica una dirección IPv4 `10.193.9.134`, y el puerto `7023`.  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://10.193.9.134:7023';  
 ```  
   
-#### D. Usar IPv6  
+#### <a name="d-using-ipv6"></a>D. Usar IPv6  
  La siguiente dirección de red de servidor contiene una dirección IPv6, `2001:4898:23:1002:20f:1fff:feff:b3a3`, y el puerto `7022`.  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:feff:b3a3]:7022';  
 ```  
   
-## Buscar el nombre de dominio completo  
+## <a name="finding-the-fully-qualified-domain-name"></a>Buscar el nombre de dominio completo  
  Para buscar el nombre de dominio completo de un sistema, en el símbolo del sistema de Windows de ese sistema, escriba:  
   
  **IPCONFIG /ALL**  
   
- Para formar el nombre de dominio completo, concatene los valores de *<nombre_host>* y *<sufijo_DNS_primario>* de la siguiente manera:  
+ Para formar el nombre de dominio completo, concatene los valores de*<host_name>* y *<Primary_Dns_Suffix>* de la siguiente manera:  
   
- *<nombre_host>* **.** *<sufijo_DNS_primario>*  
+ *&lt;nombre_host&gt;* **.** *<sufijo_DNS_primario>*  
   
  Por ejemplo, la configuración IP  
   
@@ -140,7 +136,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
 -   [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   

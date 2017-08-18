@@ -1,28 +1,33 @@
 ---
-title: "Pausar y reanudar la creaci&#243;n de reflejo de la base de datos (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sesiones [SQL Server], creación de reflejo de la base de datos"
-  - "reanudar reflejo de base de datos"
-  - "creación de reflejo de la base de datos [SQL Server], pausar"
-  - "creación de reflejo de la base de datos (SQL Server), reanudar"
-  - "pausar reflejo de base de datos"
+title: "Pausar y reanudar la creación de reflejo de la base de datos (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sessions [SQL Server], database mirroring
+- resuming database mirroring
+- database mirroring [SQL Server], pausing
+- database mirroring [SQL Server], resuming
+- pausing database mirroring
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 caps.latest.revision: 32
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ce0495d6bc7b670cade489806e27aa651a89239e
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Pausar y reanudar la creaci&#243;n de reflejo de la base de datos (SQL Server)
+# <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Pausar y reanudar la creación de reflejo de la base de datos (SQL Server)
   El propietario de la base de datos puede pausar y reanudar posteriormente una sesión de creación de reflejo de la base de datos en cualquier momento. La pausa preserva el estado de la sesión mientras se suspende la creación de reflejo. Durante los cuellos de botella, las pausas pueden ser útiles para mejorar el rendimiento en el servidor principal.  
   
  Cuando se realiza una pausa en una sesión, la base de datos principal sigue estando disponible. La pausa establece el estado de la sesión de creación de reflejo de la base de datos en SUSPENDED y la base de datos reflejada ya no se mantiene al día con la base de datos principal, lo que ocasiona que la base de datos principal se ejecute de una manera expuesta.  
@@ -66,7 +71,7 @@ caps.handback.revision: 32
   
 -   [Quitar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Quitar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)  

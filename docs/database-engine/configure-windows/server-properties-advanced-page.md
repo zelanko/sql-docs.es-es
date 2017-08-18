@@ -1,35 +1,40 @@
 ---
-title: "Propiedades del servidor (p&#225;gina Avanzadas) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.advanced.f1"
+title: "Propiedades del servidor (página Opciones avanzadas) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 caps.latest.revision: 65
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38ea8eca9d8d71269f0e6095a949e1aa027ec484
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propiedades del servidor (p&#225;gina Avanzadas)
+# <a name="server-properties---advanced-page"></a>Propiedades del servidor (página Opciones avanzadas)
   Utilice esta página para ver o modificar la configuración avanzada del servidor.  
   
  **Para ver las páginas Propiedades del servidor**  
   
 -   [Ver o cambiar las propiedades del servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)  
   
-## Contenedores  
+## <a name="containment"></a>Contenedores  
  Habilitar bases de datos independientes  
  Indica si esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite bases de datos independientes. Cuando es **True**, una base de datos independiente puede crearse, restaurarse o conectarse. Cuando es **False**, una base de datos independiente no puede crearse, restaurarse ni conectarse a esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cambiar la propiedad de independencia puede afectar a la seguridad de la base de datos. Habilitar las bases de datos independientes permite a los propietarios de bases de datos conceder acceso a este [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si se deshabilitan las bases de datos independientes, se puede impedir que los usuarios se conecten. Para conocer el impacto en la propiedad de independencia, vea [Contained Databases](../../relational-databases/databases/contained-databases.md) y [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
-## FILESTREAM  
+## <a name="filestream"></a>FILESTREAM  
  **Nivel de acceso de FILESTREAM**  
  Muestra el nivel actual de compatibilidad con FILESTREAM en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para cambiar el nivel de acceso, seleccione uno de los valores siguientes:  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 65
  **Nombre del recurso compartido de FILESTREAM**  
  Muestra el nombre de solo lectura del recurso compartido FILESTREAM que se seleccionó durante la instalación. Para obtener más información, vea [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
-## Varios  
+## <a name="miscellaneous"></a>Varios  
  **Permitir que los desencadenadores activen otros**  
  Permite que los desencadenadores activen otros desencadenadores. Los desencadenadores pueden anidarse hasta un máximo de 32 niveles. Para obtener más información, vea la sección "Desencadenadores anidados" en [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 65
  **Importar**  
  Se importan los catálogos de texto completo. Esta operación es significativamente más rápida que **Volver a generar**. Sin embargo, un catálogo de texto completo importado no utiliza los divisores de palabras nuevos y mejorados que se incluyeron en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Por consiguiente, podría querer volver a generar los catálogos de texto completo finalmente.  
   
- Si un catálogo de texto completo no está disponible, se vuelven a generar los índices de texto completo asociados. Esta opción solo está disponible para bases de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+ Si un catálogo de texto completo no está disponible, se vuelven a generar los índices de texto completo asociados. Esta opción solo está disponible para bases de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
  **Volver a generar**  
  Los catálogos de texto completo se vuelven a generar con los separadores de palabras nuevos y mejorados. La regeneración de los índices puede llevar cierto tiempo y, después de la actualización, podría ser necesaria una cantidad significativa de CPU y de memoria.  
@@ -86,10 +91,10 @@ caps.handback.revision: 65
 > [!NOTE]  
 >  La opción de actualización de texto completo también se puede establecer con la acción [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)upgrade_option.  
   
- Después de adjuntar, restaurar o copiar una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], queda disponible inmediatamente y se actualiza a continuación de forma automática. Si la base de datos tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, en función del valor de la propiedad del servidor **Opción de actualización de texto completo**. Si la opción de actualización se establece en **Importar** o en **Volver a generar**, los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la importación puede requerir varias horas y volver a generar puede requerir hasta diez veces más. Tenga en cuenta también que si la opción de actualización se establece en **Importar** y no hay disponible ningún catálogo de texto completo, se vuelven a generar los índices de texto completo asociados. Para obtener más información sobre cómo ver o cambiar la configuración de la propiedad **Opción de actualización de texto completo**, vea [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+ Después de adjuntar, restaurar o copiar una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], queda disponible inmediatamente y se actualiza a continuación de forma automática. Si la base de datos tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, en función del valor de la propiedad del servidor **Opción de actualización de texto completo** . Si la opción de actualización se establece en **Importar** o en **Volver a generar**, los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la importación puede requerir varias horas y volver a generar puede requerir hasta diez veces más. Tenga en cuenta también que si la opción de actualización se establece en **Importar**y no hay disponible ningún catálogo de texto completo, se vuelven a generar los índices de texto completo asociados. Para obtener más información sobre cómo ver o cambiar la configuración de la propiedad **Opción de actualización de texto completo** , vea [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  **Tamaño de replicación de texto máximo**  
- Especifica el tamaño máximo (en bytes) de los datos de tipo **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **xml** e **image** que se pueden agregar a una columna replicada o capturada en una sola instrucción INSERT, UPDATE, WRITETEXT o UPDATETEXT. El cambio realizado en este valor surte efecto de forma inmediata. Para más información, consulte [Configure the max text repl size Server Configuration Option](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
+ Especifica el tamaño máximo (en bytes) de los datos de tipo **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **xml**e **image** que se pueden agregar a una columna replicada o capturada en una sola instrucción INSERT, UPDATE, WRITETEXT o UPDATETEXT. El cambio realizado en este valor surte efecto de forma inmediata. Para más información, consulte [Configure the max text repl size Server Configuration Option](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
   
  **Buscar procedimientos de inicio**  
  Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recorrerá al iniciarse la ejecución automática de los procedimientos almacenados. Si se establece en **True**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recorre y ejecuta todos los procedimientos almacenados que se ejecutan automáticamente definidos en el servidor. Si se establece en **False** (valor predeterminado), no se recorre ningún procedimiento. Para más información, consulte [Configure the scan for startup procs Server Configuration Option](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md).  
@@ -99,9 +104,9 @@ caps.handback.revision: 65
   
  Por ejemplo, el valor predeterminado 2049 indica que la fecha escrita como "14/3/49" se interpretará como 14 de marzo de 2049 y la fecha escrita como "14/3/50", como 14 de marzo de 1950. Para más información, consulte [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
-## Red  
+## <a name="network"></a>Red  
  **Tamaño de paquete de red**  
- Establece el tamaño de paquete (en bytes) que se utiliza en toda la red. El valor predeterminado es 4.096 bytes. Si una aplicación realiza operaciones de copia masiva, o bien envía o recibe una gran cantidad de datos de tipo **text** o **image**, el uso de paquetes de un tamaño superior al predeterminado puede mejorar la eficacia, ya que tiene como resultado un número menor de operaciones de lectura y escritura en la red. Si una aplicación envía y recibe pequeñas cantidades de información, puede establecer un tamaño de 512 bytes para cada paquete, lo que es suficiente para la mayor parte de las transferencias de datos. Para más información, consulte [Configure the network packet size Server Configuration Option](../../database-engine/configure-windows/configure-the-network-packet-size-server-configuration-option.md).  
+ Establece el tamaño de paquete (en bytes) que se utiliza en toda la red. El valor predeterminado es 4.096 bytes. Si una aplicación realiza operaciones de copia masiva, o bien envía o recibe una gran cantidad de datos de tipo **text** o **image** , el uso de paquetes de un tamaño superior al predeterminado puede mejorar la eficacia, ya que tiene como resultado un número menor de operaciones de lectura y escritura en la red. Si una aplicación envía y recibe pequeñas cantidades de información, puede establecer un tamaño de 512 bytes para cada paquete, lo que es suficiente para la mayor parte de las transferencias de datos. Para más información, consulte [Configure the network packet size Server Configuration Option](../../database-engine/configure-windows/configure-the-network-packet-size-server-configuration-option.md).  
   
 > [!NOTE]  
 >  No cambie el tamaño de los paquetes a menos que esté seguro de que mejorará el rendimiento. En la mayoría de las aplicaciones, el tamaño más conveniente de los paquetes es el tamaño predeterminado.  
@@ -111,7 +116,7 @@ caps.handback.revision: 65
   
  El cambio realizado en este valor surte efecto de forma inmediata.  
   
-## Paralelismo:  
+## <a name="parallelism"></a>Paralelismo:  
  **Umbral de costo para paralelismo**  
  Especifica el umbral por encima del que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea y ejecuta planes paralelos para consultas. Este costo hace referencia al tiempo transcurrido estimado en segundos que es necesario para ejecutar el plan serie en una configuración de hardware específica. Esta opción solo debe configurarse en multiprocesadores simétricos. Para más información, consulte [Configure the cost threshold for parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md).  
   
@@ -126,7 +131,7 @@ caps.handback.revision: 65
  **Espera de consulta**  
  Especifica el tiempo en segundos (de 0 a 2.147.483.647) que espera una consulta para utilizar los recursos antes de agotarse el tiempo de espera. Si se utiliza el valor predeterminado -1, el tiempo de espera calculado será 25 veces el costo estimado de la consulta. Para más información, consulte [Configure the query wait Server Configuration Option](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

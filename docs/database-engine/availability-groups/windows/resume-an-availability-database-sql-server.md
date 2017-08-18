@@ -1,29 +1,34 @@
 ---
-title: "Reanudar una base de datos de disponibilidad (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.resumedatamove.f1"
-helpviewer_keywords: 
-  - "Grupos de disponibilidad [SQL Server], reanudar una base de datos"
-  - "bases de datos secundarias [SQL Server], en el grupo de disponibilidad"
-  - "bases de datos principales [SQL Server], en el grupo de disponibilidad"
-  - "Grupos de disponibilidad [SQL Server], bases de datos"
+title: Reanudar una base de datos de disponibilidad (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.resumedatamove.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], resuming a database
+- secondary databases [SQL Server], in availability group
+- primary databases [SQL Server], in availability group
+- Availability Groups [SQL Server], databases
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 caps.latest.revision: 38
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 6fb24ab051691dc582c3b2e454fe60478d074b9d
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Reanudar una base de datos de disponibilidad (SQL Server)
+# <a name="resume-an-availability-database-sql-server"></a>Reanudar una base de datos de disponibilidad (SQL Server)
   Puede reanudar una base de datos de disponibilidad suspendida en [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. La reanudación de una base de datos suspendida coloca la base de datos en el estado SYNCHRONIZING. La reanudación de la base de datos principal también reanuda cualquiera de las bases de datos secundarias suspendidas como resultado de suspender la base de datos principal. Si una base de datos secundaria se suspende localmente en la instancia de servidor que hospeda la réplica secundaria, esa base de datos secundaria se debe reanudar localmente. Una vez que una base de datos secundaria y la base de datos principal correspondiente están en el estado SYNCHRONIZING, se reanuda la sincronización de datos en la base de datos secundaria.  
   
 > [!NOTE]  
@@ -47,7 +52,7 @@ caps.handback.revision: 38
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
-### Limitaciones y restricciones  
+### <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
  Un comando RESUME realiza la devolución en cuanto haya sido aceptado por la réplica que hospeda la base de datos de destino, pero la reanudación real de la base de datos se produce de forma asincrónica.  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
@@ -70,11 +75,11 @@ caps.handback.revision: 38
   
 1.  En el Explorador de objetos, conéctese a la instancia de servidor que hospeda la réplica de disponibilidad en la que desea reanudar una base de datos y expanda el árbol.  
   
-2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad**.  
+2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad** .  
   
 3.  Expanda el grupo de disponibilidad.  
   
-4.  Expanda el nodo **Bases de datos de disponibilidad**, haga clic con el botón derecho en la base de datos y haga clic en **Reanudar movimiento de datos**.  
+4.  Expanda el nodo **Bases de datos de disponibilidad** , haga clic con el botón derecho en la base de datos y haga clic en **Reanudar movimiento de datos**.  
   
 5.  En el cuadro de diálogo **Reanudar movimiento de datos** , haga clic en **Aceptar**.  
   
@@ -86,7 +91,7 @@ caps.handback.revision: 38
   
 1.  Conéctese a la instancia de servidor que hospeda la réplica secundaria cuya base de datos desea reanudar.  
   
-2.  Reanude la base de datos secundaria utilizando la siguiente instrucción [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md):  
+2.  Reanude la base de datos secundaria utilizando la siguiente instrucción [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md):  
   
      ALTER DATABASE *nombre_base_de_datos* SET HADR RESUME  
   
@@ -115,7 +120,8 @@ caps.handback.revision: 38
   
 -   [Suspender una base de datos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/suspend-an-availability-database-sql-server.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

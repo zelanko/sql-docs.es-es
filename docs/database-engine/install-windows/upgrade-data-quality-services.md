@@ -1,28 +1,35 @@
 ---
-title: "Actualizar Data Quality Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Actualizar Data Quality Services | Microsoft Docs
+ms.custom: 
+ms.date: 07/24/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 7761be949dc472e05d1f5c4cb7f7d9c2d16987e9
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Actualizar Data Quality Services
-  Este tema proporciona información sobre cómo actualizar la instalación existente de Data Quality Services (DQS) a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Como parte de la actualización de Data Quality Server de DQS a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], debe actualizar también el esquema de bases de datos de DQS.  
+# <a name="upgrade-data-quality-services"></a>Actualizar Data Quality Services
+En este tema encontrará información sobre cómo actualizar la instalación existente de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Services (DQS). Como parte de la actualización de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server, debe actualizar también el esquema de bases de datos de DQS.  
   
 > [!IMPORTANT]  
 >  -   Debe hacer una copia de seguridad de las bases de datos de DQS antes de actualizar DQS para impedir la pérdida accidental de datos durante la actualización del esquema. Para obtener información sobre la copia de seguridad de bases de datos de DQS, vea [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
-> -   Puede conectarse a la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de Data Quality Server a través de la versión actual o una versión anterior de Data Quality Client o la [transformación Limpieza de DQS](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) de Integration Services para realizar tareas de calidad de datos.  
-> -   Después de actualizar Quality Data Services y Master Data Services a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ya no funcionará ninguna versión anterior del complemento Master Data Services para Excel. Puede descargar la versión [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] del complemento Master Data Services para Excel [aquí](http://go.microsoft.com/fwlink/?LinkID=506665).  
+> -   Puede conectarse a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server a través de la versión actual o una versión anterior de Data Quality Client o la [transformación Limpieza de DQS](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) de Integration Services para realizar tareas de calidad de datos.  
+> -   Después de actualizar Data Quality Services y Master Data Services, ya no funcionará ninguna versión anterior del complemento Master Data Services para Excel. Puede descargar la versión [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] del complemento Master Data Services para Excel [aquí](http://go.microsoft.com/fwlink/?LinkID=506665).  
   
 ##  <a name="Prerequisites"></a> Requisitos previos  
   
@@ -35,27 +42,32 @@ caps.handback.revision: 12
   
 1.  Haga una copia de seguridad de las bases de datos de DQS antes de iniciar el proceso de actualización. Para obtener información sobre la copia de seguridad de bases de datos de DQS, vea [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
   
-2.  Actualice a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]la instancia de SQL Server donde está instalado DQS.  
+2.  Actualice la instancia de SQL Server donde DQS esté instalado.  
   
-    1.  Ejecute el Asistente para la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+    1.  Ejecute el Asistente para la instalación de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] .  
   
     2.  En el panel izquierdo, haga clic en **Instalación**.  
   
-    3.  En el panel derecho, haga clic en **Actualizar desde SQL Server 2008, SQL Server 2008 R2, SQL Server 2012 o SQL Server 2014**.  
+    3.  En el panel derecho, haga clic en **Actualizar desde...** una versión anterior de SQL Server.  
   
     4.  Complete el Asistente para la instalación.  
   
         > [!NOTE]  
-        >  Esto actualizará la instancia de SQL Server a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y también instalará la versión más reciente de Data Quality Client, si Data Quality Client estaba instalado previamente en este equipo. Si tiene Data Quality Client instalado en otros equipos, debe ejecutar los subpasos del paso 2 en dichos equipos para instalar la versión actual de Data Quality Client. El Asistente para la instalación instala la versión actual de Data Quality Client junto con la versión existente de Data Quality Client. Después de actualizar el esquema de bases de datos de DQS, puede conectarse a la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de Data Quality Server mediante la versión actual o una versión anterior de Data Quality Client.  
+        >  Esto actualizará la instancia de SQL Server a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] y también instalará la versión más reciente de Data Quality Client, si Data Quality Client estaba instalado previamente en este equipo. Si tiene Data Quality Client instalado en otros equipos, debe ejecutar los subpasos del paso 2 en dichos equipos para instalar la versión actual de Data Quality Client. El Asistente para la instalación instala la versión actual de Data Quality Client junto con la versión existente de Data Quality Client. Después de actualizar el esquema de bases de datos de DQS, puede conectarse a la versión de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] de Data Quality Server mediante la versión actual o una versión anterior de Data Quality Client.  
   
 3.  Actualice el esquema de bases de datos de DQS.  
   
     1.  Inicie Símbolo del sistema como administrador.  
   
-    2.  En el símbolo del sistema, cambie el directorio a la ubicación donde DQSInstaller.exe esté disponible. Para la instancia predeterminada de SQL Server, el archivo DQSInstaller.exe se encuentra en C:\Archivos de programa\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn:  
-  
+    2.  En el símbolo del sistema, cambie el directorio a la ubicación donde DQSInstaller.exe esté disponible. El archivo DQSInstaller.exe correspondiente a la instancia predeterminada de SQL Server se encuentra en C:\Archivos de programa\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn:  
+
+      >[!NOTE]
+      >En la ruta de acceso de carpeta, reemplace [nn] por el número de versión de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].
+      >- Si es SQL Server 2016: 13
+      >- Si es SQL Server 2017: 14
+
         ```  
-        cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn  
+        cd C:\Program Files\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn  
         ```  
   
     3.  En el símbolo del sistema, escriba el siguiente comando y presione ENTRAR:  
@@ -87,9 +99,9 @@ caps.handback.revision: 12
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMINIO\nombreDeUsuario>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMINIO\nombreDeUsuario>|2||  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Instalar Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Quitar objetos del servidor de calidad de datos](../../sql-server/install/remove-data-quality-server-objects.md)   
- [Actualizar a SQL Server 2016](../../database-engine/install-windows/upgrade-to-sql-server-2016.md)  
+ [Actualizar SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   

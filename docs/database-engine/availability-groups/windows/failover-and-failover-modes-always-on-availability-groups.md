@@ -1,44 +1,49 @@
 ---
-title: "Conmutaci&#243;n por error y modos de conmutaci&#243;n por error (grupos de disponibilidad AlwaysOn) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grupos de disponibilidad [SQL Server], réplicas de disponibilidad"
-  - "Grupos de disponibilidad [SQL Server], conmutación por error"
-  - "Grupos de disponibilidad [SQL Server], modos de conmutación por error"
-  - "conmutación por error [SQL Server], Grupos de disponibilidad AlwaysOn"
+title: "Conmutación por error y modos de conmutación por error (Grupos de disponibilidad AlwaysOn) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], failover
+- Availability Groups [SQL Server], failover modes
+- failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 caps.latest.revision: 75
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 74
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 54450a69119f344ba40787e7ce076ad84e0b211d
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Conmutaci&#243;n por error y modos de conmutaci&#243;n por error (grupos de disponibilidad AlwaysOn)
+# <a name="failover-and-failover-modes-always-on-availability-groups"></a>Conmutación por error y modos de conmutación por error (grupos de disponibilidad AlwaysOn)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Dentro del contexto de un grupo de disponibilidad, el rol principal y el rol secundario de las réplicas de disponibilidad suelen ser intercambiables en un proceso denominado *conmutación por error*. Hay tres formas de conmutación por error: conmutación por error automática (sin pérdida de datos), conmutación por error manual planeada (sin pérdida de datos) y conmutación por error manual forzada (con posible pérdida de datos), normalmente denominada *conmutación por error forzada*. Las conmutaciones por error automáticas o manuales planeadas mantienen todos los datos. Un grupo de disponibilidad realiza la conmutación por error en el nivel de la réplica de disponibilidad. Es decir, un grupo de disponibilidad conmuta por error a una de sus réplicas secundarias (el *destino de conmutación por error* actual).  
+  Dentro del contexto de un grupo de disponibilidad, el rol principal y el rol secundario de las réplicas de disponibilidad suelen ser intercambiables en un proceso denominado *conmutación por error*. Hay tres formas de conmutación por error: conmutación por error automática (sin pérdida de datos), conmutación por error manual planeada (sin pérdida de datos) y conmutación por error manual forzada (con posible pérdida de datos), normalmente denominada *conmutación por error forzada*. Las conmutaciones por error automáticas o manuales planeadas mantienen todos los datos. Un grupo de disponibilidad realiza la conmutación por error en el nivel de la réplica de disponibilidad. Es decir, un grupo de disponibilidad conmuta por error a una de sus réplicas secundarias (el *destino de conmutación por error*actual).  
   
 > [!NOTE]  
 >  Los problemas que se producen en el nivel de la base de datos, como, por ejemplo, en el caso de que una base de datos pase a ser sospechosa debido a la pérdida de un archivo de datos, la eliminación de una base de datos o los daños de un registro de transacciones, no producen la conmutación por error del grupo de disponibilidad.  
   
  Durante la conmutación por error, el destino de la conmutación por error asume el rol principal, recupera las bases de datos y las pone en línea como las nuevas bases de datos principales. La réplica principal anterior, cuando está disponible, cambia al rol secundario y sus bases de datos se convierten en bases de datos secundarias. Estos roles podrían conmutarse repetidamente (o usar un destino de conmutación por error distinto) como respuesta a varios errores o con fines administrativos.  
   
- Las formas de conmutación por error que admite una determinada réplica de disponibilidad se especifican mediante la propiedad *modo de conmutación por error*. En una determinada réplica de disponibilidad, los modos de conmutación por error posibles dependen del [modo de disponibilidad](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md) de la réplica, como sigue:  
+ Las formas de conmutación por error que admite una determinada réplica de disponibilidad se especifican mediante la propiedad *modo de conmutación por error* . En una determinada réplica de disponibilidad, los modos de conmutación por error posibles dependen del [modo de disponibilidad](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md) de la réplica, como sigue:  
   
--   Las **réplicas de confirmación sincrónica** admiten dos valores: automático o manual. El valor “automático” admite tanto la conmutación por error automática como la manual. Para evitar la pérdida de datos, la conmutación automática por error y la conmutación por error planeada requieren que el destino de conmutación por error sea una réplica secundaria de confirmación sincrónica con un estado de sincronización apropiado (esto indica que todas las bases de datos secundarias del destino de conmutación por error están sincronizadas con la base de datos principal correspondiente). Siempre que una réplica secundaria no cumple las dos condiciones, solo admite la conmutación por error manual forzada. Tenga en cuenta que la conmutación por error también admite una réplica cuyo rol esté en el estado RESOLVING.  
+-   Las**réplicas de confirmación sincrónica** admiten dos valores: automático o manual. El valor “automático” admite tanto la conmutación por error automática como la manual. Para evitar la pérdida de datos, la conmutación automática por error y la conmutación por error planeada requieren que el destino de conmutación por error sea una réplica secundaria de confirmación sincrónica con un estado de sincronización apropiado (esto indica que todas las bases de datos secundarias del destino de conmutación por error están sincronizadas con la base de datos principal correspondiente). Siempre que una réplica secundaria no cumple las dos condiciones, solo admite la conmutación por error manual forzada. Tenga en cuenta que la conmutación por error también admite una réplica cuyo rol esté en el estado RESOLVING.  
   
--   Las **réplicas de confirmación asincrónica** solo admiten el modo de conmutación por error manual. Además, debido a que nunca se sincronizan, solo admiten la conmutación por error forzada.  
+-   Las**réplicas de confirmación asincrónica** solo admiten el modo de conmutación por error manual. Además, debido a que nunca se sincronizan, solo admiten la conmutación por error forzada.  
   
 > [!NOTE]  
->  Después de una conmutación por error, las aplicaciones cliente que necesitan tener acceso a las bases de datos principales deben establecer conexión con la nueva réplica principal. Además, si la nueva réplica secundaria se configura para permitir el acceso de solo lectura, las aplicaciones cliente de solo lectura pueden conectarse a ella. Para obtener información sobre cómo se conectan los clientes a un grupo de disponibilidad, vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md).  
+>  Después de una conmutación por error, las aplicaciones cliente que necesitan tener acceso a las bases de datos principales deben establecer conexión con la nueva réplica principal. Además, si la nueva réplica secundaria se configura para permitir el acceso de solo lectura, las aplicaciones cliente de solo lectura pueden conectarse a ella. Para obtener información sobre cómo se conectan los clientes a un grupo de disponibilidad, vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
  **Secciones de este tema:**  
   
@@ -57,7 +62,7 @@ caps.handback.revision: 74
 -   [Contenido relacionado](#RelatedContent)  
   
 ##  <a name="TermsAndDefinitions"></a> Términos y definiciones  
- Conmutación por error automática  
+ Conmutación automática por error  
  Conmutación por error que se produce automáticamente en la pérdida de la réplica principal. La conmutación por error automática solo se admite cuando la réplica principal actual y una réplica secundaria están configuradas con el modo de conmutación por error establecido en AUTOMATIC y la réplica secundaria está sincronizada actualmente.  Si el modo de conmutación por error de la réplica principal o la réplica secundaria es MANUAL, no puede producirse la conmutación por error automática.  
   
  Conmutación por error manual planeada (sin pérdida de datos)  
@@ -80,23 +85,23 @@ caps.handback.revision: 74
   
 ||Modo de confirmación asincrónica|Modo de confirmación sincrónica con modo de conmutación por error manual|Modo de confirmación sincrónica con modo de conmutación por error automática|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|Conmutación por error automática|No|No|Sí|  
+|Conmutación automática por error|No|No|Sí|  
 |Conmutación por error manual planeada|No|Sí|Sí|  
-|Conmutación por error forzada|Sí|Sí|Sí**\***|  
+|conmutación por error forzada|Sí|Sí|Sí**\***|  
   
  **\***Si emite un comando de conmutación por error forzada en una réplica secundaria sincronizada, la réplica secundaria se comportará igual que en el caso de una conmutación por error manual.  
   
  El período de tiempo que la base de datos no está disponible durante una conmutación por error depende del tipo de conmutación por error y su causa.  
   
 > [!IMPORTANT]  
->  Para admitir las conexiones de cliente después de la conmutación por error, excepto en las bases de datos independientes, los inicios de sesión y los trabajos definidos en cualquiera de las bases de datos principales anteriores se deben volver a crear manualmente en la nueva base de datos principal. Para obtener más información, vea [Administración de inicios de sesión y de trabajos para las bases de datos de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins and jobs for availability group databases.md).  
+>  Para admitir las conexiones de cliente después de la conmutación por error, excepto en las bases de datos independientes, los inicios de sesión y los trabajos definidos en cualquiera de las bases de datos principales anteriores se deben volver a crear manualmente en la nueva base de datos principal. Para obtener más información, vea [Administración de inicios de sesión y de trabajos para las bases de datos de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md).  
   
-### Conjuntos de conmutación por error  
+### <a name="failover-sets"></a>Conjuntos de conmutación por error  
  Las formas de conmutación por error posibles para un grupo de disponibilidad determinado se pueden considerar como conjuntos de conmutación por error. Un conjunto de conmutación por error consta de una réplica principal y varias réplicas secundarias que admiten una determinada forma de conmutación, de la manera siguiente:  
   
--   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (opcional):** dentro de un grupo de disponibilidad concreto, un par de réplicas de disponibilidad (incluida la réplica principal actual) configuradas para el modo de confirmación sincrónica con conmutación por error automática, si lo hubiera. Un conjunto de conmutación automática por error solo tiene efecto si la réplica secundaria está actualmente en estado SYNCHRONIZED con la réplica principal.  
+-   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (opcional):**  dentro de un grupo de disponibilidad concreto, un par de réplicas de disponibilidad (incluida la réplica principal actual) configuradas para el modo de confirmación sincrónica con conmutación por error automática, si lo hubiera. Un conjunto de conmutación automática por error solo tiene efecto si la réplica secundaria está actualmente en estado SYNCHRONIZED con la réplica principal.  
   
--   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (opcional):** dentro de un grupo de disponibilidad concreto, un conjunto de dos o tres réplicas de disponibilidad (incluida la réplica principal actual) configuradas para el modo de confirmación sincrónica, si lo hubiera. Un conjunto de confirmación sincrónica de conmutación automática por error solo tiene efecto si las réplicas secundarias están configuradas para el modo de conmutación por error manual y al menos una réplica secundaria está actualmente en estado SYNCHRONIZED con la réplica principal.  
+-   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (opcional):**  dentro de un grupo de disponibilidad concreto, un conjunto de dos o tres réplicas de disponibilidad (incluida la réplica principal actual) configuradas para el modo de confirmación sincrónica, si lo hubiera. Un conjunto de confirmación sincrónica de conmutación automática por error solo tiene efecto si las réplicas secundarias están configuradas para el modo de conmutación por error manual y al menos una réplica secundaria está actualmente en estado SYNCHRONIZED con la réplica principal.  
   
 -   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  en un grupo de disponibilidad determinado, el conjunto de todas las réplicas de disponibilidad cuyo estado operativo es actualmente ONLINE, independientemente del modo de disponibilidad y el modo de conmutación por error. El conjunto completo de conmutación por error es importante cuando no hay actualmente ninguna réplica secundaria en estado SYNCHRONIZED con la réplica principal.  
   
@@ -106,7 +111,7 @@ caps.handback.revision: 74
   
 |Réplica|Configuración de disponibilidad y modo de conmutación por error|  
 |-------------|--------------------------------------------------|  
-|A|Confirmación sincrónica con conmutación por error automática|  
+|Un|Confirmación sincrónica con conmutación por error automática|  
 |B|Confirmación sincrónica con conmutación por error automática|  
 |C|Confirmación sincrónica con solo conmutación por error manual planeada|  
 |D|Confirmación asincrónica (con solo conmutación por error forzada)|  
@@ -115,7 +120,7 @@ caps.handback.revision: 74
   
  ![Cómo la configuración de la réplica principal afecta a la conmutación por error](../../../database-engine/availability-groups/windows/media/aoag-failoversetexample.gif "Cómo la configuración de la réplica principal afecta a la conmutación por error")  
   
-##  <a name="AutomaticFailover"></a> Conmutación automática por error  
+##  <a name="AutomaticFailover"></a> Automatic Failover  
  Una conmutación por error automática hace que una réplica secundaria calificada realice la transición automática al rol principal después de que la réplica principal deje de estar disponible. La conmutación por error automática es más apropiada cuando el nodo de WSFC que hospeda la réplica principal es local para el nodo que hospeda la réplica secundaria. Esto se debe a que la sincronización de datos funciona mejor con una latencia de mensajes baja entre equipos y a que las conexiones de cliente pueden seguir siendo locales.  
   
  **En esta sección:**  
@@ -131,7 +136,7 @@ caps.handback.revision: 74
   
 -   Ya existe un conjunto de conmutación por error automática. Este conjunto consta de una réplica principal y una secundaria (el *destino de conmutación automática por error*) que están configuradas para el modo de confirmación sincrónica y también para la conmutación AUTOMÁTICA por error. Si la réplica principal se establece en modo de conmutación por error MANUAL, no puede producirse la conmutación por error automática aunque se establezca una réplica secundaria en el modo de conmutación AUTOMÁTICA por error.  
   
-     Para obtener más información, vea [Modos de disponibilidad &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+     Para obtener más información, vea [Modos de disponibilidad &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
 -   El destino de la conmutación por error automática tiene un estado de sincronización correcto (esto indica que cada base de datos secundaria del destino de la conmutación por error se sincroniza con la base de datos principal correspondiente).  
   
@@ -142,7 +147,7 @@ caps.handback.revision: 74
   
 -   El clúster del servicio de clústeres de conmutación por error (WSFC) tiene quórum. Para obtener más información, vea [Configuración de los votos y modos de cuórum WSFC &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
--   La réplica principal ha dejado de estar disponible y se han cumplido los niveles de condición de conmutación por error de la directiva de conmutación por error flexible. Para obtener más información sobre los niveles de condición de conmutación por error, vea [Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible automatic failover policy - availability group.md).  
+-   La réplica principal ha dejado de estar disponible y se han cumplido los niveles de condición de conmutación por error de la directiva de conmutación por error flexible. Para obtener más información sobre los niveles de condición de conmutación por error, vea [Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
 ###  <a name="HowAutoFoWorks"></a> Cómo funciona la conmutación automática por error  
  Una conmutación automática por error inicia la siguiente secuencia de acciones:  
@@ -163,13 +168,13 @@ caps.handback.revision: 74
 ###  <a name="EnableAutoFo"></a> Para configurar la conmutación automática por error  
  Una réplica de disponibilidad se puede configurar para admitir la conmutación por error automática en cualquier momento.  
   
- **Para configurar la conmutación automática por error**  
+ **To configure automatic failover**  
   
 1.  Asegúrese de que la réplica secundaria esté configurada para utilizar el modo de disponibilidad de confirmación sincrónica. Para obtener más información, vea [Cambiar el modo de disponibilidad de una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md).  
   
 2.  Establezca el modo de conmutación por error a automático. Para obtener más información, vea [Cambiar el modo de conmutación por error de una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server.md).  
   
-3.  Si lo desea, también puede cambiar la directiva de conmutación por error flexible del grupo de disponibilidad para especificar los tipos de errores que pueden causar una conmutación automática por error. Para obtener más información, vea [Configurar la directiva de conmutación por error flexible para controlar las condiciones de la conmutación automática por error &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/configure flexible automatic failover policy.md) y [Directiva de conmutación por error para instancias de clústeres de conmutación por error](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md).  
+3.  Si lo desea, también puede cambiar la directiva de conmutación por error flexible del grupo de disponibilidad para especificar los tipos de errores que pueden causar una conmutación automática por error. Para obtener más información, vea [Configurar la directiva de conmutación por error flexible para controlar las condiciones de la conmutación automática por error &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md) y [Directiva de conmutación por error para instancias de clústeres de conmutación por error](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md).  
   
 ##  <a name="ManualFailover"></a> Conmutación por error manual planeada (sin pérdida de datos)  
  Una conmutación por error manual produce la transición de una réplica secundaria al rol principal después de que un administrador de bases de datos emita un comando de conmutación por error manual en la instancia del servidor que hospeda la réplica secundaria de destino. Para admitir la conmutación por error manual, la réplica secundaria y la réplica principal actual se deben configurar en modo de confirmación sincrónica, si lo hubiera. Cada base de datos secundaria de la réplica de disponibilidad debe unirse al grupo de disponibilidad y sincronizarse con la base de datos principal correspondiente (es decir, la réplica secundaria se debe sincronizar). Esto garantiza que cada transacción confirmada en una base de datos principal anterior también se ha confirmado en la nueva base de datos principal. Por tanto, las nuevas bases de datos principales son idénticas a las bases de datos principales antiguas.  
@@ -182,7 +187,7 @@ caps.handback.revision: 74
   
 3.  El destino de la conmutación por error (en `Node02`) se convierte en la nueva réplica principal. Como se trata de una conmutación por error planeada, la réplica principal anterior se cambia al rol secundario durante la conmutación por error y pone inmediatamente sus bases de datos en línea como bases de datos secundarias.  
   
- ![Ilustración de una conmutación por error manual planeada](../../../database-engine/availability-groups/windows/media/aoag-plannedmanualfailover.gif "Ilustración de una conmutación por error manual planeada")  
+ ![Imagen de una conmutación por error manual planeada](../../../database-engine/availability-groups/windows/media/aoag-plannedmanualfailover.gif "Imagen de una conmutación por error manual planeada")  
   
  **En esta sección:**  
   
@@ -220,7 +225,7 @@ caps.handback.revision: 74
     > [!NOTE]  
     >  Tan pronto como la nueva réplica secundaria haya vuelto a sincronizar las bases de datos, la conmutación por error vuelve a ser posible, pero en dirección inversa.  
   
- Tras la conmutación por error, los clientes deben volver a conectarse a la base de datos principal actual. Para obtener más información, vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md).  
+ Tras la conmutación por error, los clientes deben volver a conectarse a la base de datos principal actual. Para obtener más información, vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
 ###  <a name="ManualFailoverDuringUpgrades"></a> Mantener la disponibilidad durante las actualizaciones  
  El administrador de base de datos para sus grupos de disponibilidad puede utilizar conmutaciones por error manuales para mantener la disponibilidad de la base de datos al actualizar el hardware o el software. Para utilizar un grupo de disponibilidad para actualizaciones de software, la instancia del servidor y/o el nodo del equipo que hospeda la réplica secundaria de destino deben haber recibido ya las actualizaciones. Para obtener más información, vea [Actualización de instancias de la réplica del grupo de disponibilidad AlwaysOn](../../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).  
@@ -275,7 +280,7 @@ caps.handback.revision: 74
   
 1.  Conéctese a la réplica principal.  
   
-2.  Consulte las columnas **last_commit_lsn** (LSN de la última transacción confirmada) y **last_commit_time** (hora de la última confirmación) de la vista de administración dinámica [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).  
+2.  Consulte las columnas **last_commit_lsn** (LSN de la última transacción confirmada) y **last_commit_time** (hora de la última confirmación) de la vista de administración dinámica [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) .  
   
 3.  Compare los valores devueltos para cada base de datos principal y cada una de sus bases de datos secundarias. La diferencia entre sus últimos LSN de confirmación indican el tiempo de retardo.  
   
@@ -289,7 +294,7 @@ caps.handback.revision: 74
   
  Una vez que esté disponible la réplica principal anterior y en el supuesto de que sus bases de datos no estén dañadas, se puede intentar administrar la potencial pérdida de datos. El enfoque disponible para administrar la posible pérdida de datos depende de si la réplica principal original se ha conectado a la nueva réplica principal. Suponiendo que la réplica principal original pueda tener acceso a la nueva instancia principal, la reconexión se produce de forma automática y transparente.  
   
-#### La réplica principal original se ha vuelto a conectar  
+#### <a name="the-original-primary-replica-has-reconnected"></a>La réplica principal original se ha vuelto a conectar  
  Generalmente, después de un problema, cuando la réplica principal original se reinicia, se vuelve a conectar rápidamente a su asociado. Al volver a conectarse, la réplica principal original se convierte en la réplica secundaria. Las bases de datos se convierten en bases de datos secundarias y entran en estado SUSPENDED. Las nuevas bases de datos secundarias no se no se revertirán a menos que se reanuden.  
   
  Sin embargo, las bases de datos suspendidas son inaccesibles; por lo tanto, no se pueden inspeccionar para evaluar qué datos se perderían si se reanudara una base de datos dada. Por lo tanto, la decisión de si ha de reanudar o quitar una base de datos secundaria depende de si se está dispuesto a aceptar una pérdida de datos, del siguiente modo:  
@@ -302,7 +307,7 @@ caps.handback.revision: 74
   
      Al reanudar una nueva base de datos secundaria se produce su reversión como primer paso en su sincronización. Si alguna entrada del registro estuviera esperando en la cola de envío en el momento del problema, se perderían las transacciones correspondientes, incluso si se hubieran confirmado.  
   
-#### La réplica principal original no se ha vuelto a conectar  
+#### <a name="the-original-primary-replica-has-not-reconnected"></a>La réplica principal original no se ha vuelto a conectar  
  Si puede impedir temporalmente que la réplica principal original se vuelva a conectar a través de la red a la nueva réplica principal, puede inspeccionar las bases de datos principales originales para evaluar qué datos se perderían si se reanudaran.  
   
 -   Si la posible pérdida de datos es aceptable  
@@ -325,7 +330,7 @@ caps.handback.revision: 74
   
 -   [Cambiar el modo de conmutación por error de una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
--   [Configurar la directiva de conmutación por error flexible para controlar las condiciones de la conmutación automática por error &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/configure flexible automatic failover policy.md)  
+-   [Configurar la directiva de conmutación por error flexible para controlar las condiciones de la conmutación automática por error &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)  
   
  **Para realizar una conmutación por error manual**  
   
@@ -335,7 +340,7 @@ caps.handback.revision: 74
   
 -   [Usar el Asistente para grupo de disponibilidad de conmutación por error &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Administración de inicios de sesión y de trabajos para las bases de datos de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins and jobs for availability group databases.md)  
+-   [Administración de inicios de sesión y de trabajos para las bases de datos de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md)  
   
  **Para establecer la configuración de quórum de WSFC**  
   
@@ -349,14 +354,15 @@ caps.handback.revision: 74
   
 -   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](http://blogs.msdn.com/b/sqlAlways%20On/)  
+-   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Modos de disponibilidad &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [Transacciones entre bases de datos y transacciones distribuidas para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions - always on availability and database mirroring.md)   
+ [Transacciones entre bases de datos y transacciones distribuidas para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)   
  [Directiva de conmutación por error para instancias de clústeres de conmutación por error](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
- [Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible automatic failover policy - availability group.md)  
+ [Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)  
   
   
+

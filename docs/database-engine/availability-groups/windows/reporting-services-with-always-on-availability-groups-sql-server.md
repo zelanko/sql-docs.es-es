@@ -1,27 +1,32 @@
 ---
-title: "Reporting Services con Grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Reporting Services, grupos de disponibilidad AlwaysOn"
-  - "Grupos de disponibilidad [SQL Server], interoperabilidad"
+title: Reporting Services con Grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+- reporting-services-native
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services, AlwaysOn Availability Groups
+- Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "erikre"
-caps.handback.revision: 22
+author: MikeRayMSFT
+ms.author: mikeray
+manager: erikre
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 34063117645178c5e8326c3245d6368baa8480e5
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Reporting Services con Grupos de disponibilidad AlwaysOn (SQL Server)
+# <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services con Grupos de disponibilidad AlwaysOn (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Este tema contiene información acerca de la configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para que funcione con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG) en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Los tres escenarios para usar [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] son las bases de datos para orígenes de datos de informes, las bases de datos del servidor de informes y el diseñador de informes. La funcionalidad admitida y la configuración requerida son diferentes para los tres escenarios.  
@@ -59,10 +64,10 @@ caps.handback.revision: 22
   
  Para obtener más información sobre la revisión necesaria, vea el artículo de KB 2654347A sobre una [revisión que incorpora compatibilidad con las características de AlwaysOn de SQL Server 2012 en .NET Framework 3.5 SP1](http://go.microsoft.com/fwlink/?LinkId=242896).  
   
- Para obtener más información sobre otros requisitos de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+ Para obtener más información sobre otros requisitos de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] como **RSreportserver.config** no se admiten como parte de la funcionalidad [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Si tiene que realizar cambios manualmente en un archivo de configuración de uno de los servidores de informes, tendrá que actualizar manualmente las réplicas.  
+>  Los archivos de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] como **RSreportserver.config** no se admiten como parte de la funcionalidad de los [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Si tiene que realizar cambios manualmente en un archivo de configuración de uno de los servidores de informes, tendrá que actualizar manualmente las réplicas.  
   
 ##  <a name="bkmk_reportdatasources"></a> Orígenes de datos de informes y grupos de disponibilidad  
  El comportamiento de los orígenes de datos [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] basados en [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] puede variar en función del modo en que el administrador haya configurado el entorno AG.  
@@ -75,7 +80,7 @@ caps.handback.revision: 22
   
  La cadena de conexión también puede contener nuevas propiedades de conexión AlwaysOn que configuren las solicitudes de consulta de informes para usar la réplica secundaria para los informes de solo lectura. El uso de réplicas secundarias para las solicitudes de notificación reducirá la carga en una réplica principal de lectura-escritura. La ilustración siguiente es un ejemplo de una configuración AG de tres réplicas en la que las cadenas de conexión del origen de datos [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] se han configurado con ApplicationIntent=ReadOnly. En este ejemplo las solicitudes de consulta de informe se envían a una réplica secundaria y no a la réplica principal.  
   
- ![](../Image/rs_Always On_Basic.gif)  
+ 
   
  El siguiente es un ejemplo de cadena de conexión en el que [AvailabilityGroupListenerName] es el **nombre DNS del agente de escucha** que se configuró cuando las réplicas se crearon:  
   
@@ -107,7 +112,7 @@ caps.handback.revision: 22
   
 -   Configuración del modo de disponibilidad para cada réplica. El modo de disponibilidad determina si la réplica principal espera la confirmación de transacciones en una base de datos hasta que una réplica secundaria haya escrito las entradas del registro de transacciones en el disco. Para obtener más información, vea la sección “Modos de disponibilidad” de [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
- Cuando se usa una réplica secundaria de solo lectura como origen de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], es importante asegurarse de que la latencia de actualización de datos cumple las necesidades de los usuarios del informe.  
+ Cuando se usa una réplica secundaria de solo lectura como origen de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , es importante asegurarse de que la latencia de actualización de datos cumple las necesidades de los usuarios del informe.  
   
 ##  <a name="bkmk_reportdesign"></a> Diseñador de informes y grupos de disponibilidad  
  Al diseñar los informes en [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] o un proyecto de informe en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], un usuario puede configurar una cadena de conexión del origen de datos de informe para que contenga las nuevas propiedades de conexión proporcionadas por [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. La compatibilidad con las nuevas propiedades de conexión depende de si un usuario obtiene la vista previa del informe.  
@@ -121,7 +126,7 @@ caps.handback.revision: 22
 ##  <a name="bkmk_reportserverdatabases"></a> Bases de datos del servidor de informes y grupos de disponibilidad  
  Reporting Services ofrece compatibilidad limitada para usar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con bases de datos del servidor de informes. Las bases de datos del servidor de informes se pueden configurar en AG para ser parte de una réplica; sin embargo, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no usará automáticamente una réplica diferente para las bases de datos del servidor de informes cuando se produce una conmutación por error. No se admite el uso de MultiSubnetFailover con las bases de datos del servidor de informes.  
   
- Los scripts de automatización personalizada o acciones manuales tienen que usarse para realizar la conmutación por error y la recuperación. Hasta que estas acciones se completen, algunas características del servidor de informes pueden no funcionar de forma correcta tras la conmutación por error de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+ Los scripts de automatización personalizada o acciones manuales tienen que usarse para realizar la conmutación por error y la recuperación. Hasta que estas acciones se completen, algunas características del servidor de informes pueden no funcionar de forma correcta tras la conmutación por error de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
 > [!NOTE]  
 >  Al planear la recuperación de desastres y la conmutación por error para las bases de datos del servidor de informes, se aconseja que siempre haga una copia de seguridad de la clave de cifrado del servidor de informes.  
@@ -143,7 +148,7 @@ caps.handback.revision: 22
   
 -   ReportServerTempDB  
   
- El modo nativo no admite ni usa las bases de datos de alerta ni las características relacionadas. Los servidores de informes en modo nativo se configuran en el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . En el modo SharePoint, configure el nombre de base de datos de la aplicación de servicio para que sea el nombre del “punto de acceso de cliente” que creó como parte de la configuración de SharePoint. Para obtener más información sobre cómo configurar SharePoint con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea [Configure and manage SQL Server availability groups for SharePoint Server (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165) (Configurar y administrar grupos de disponibilidad de SQL Server para SharePoint Server).  
+ El modo nativo no admite ni usa las bases de datos de alerta ni las características relacionadas. Los servidores de informes en modo nativo se configuran en el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . En el modo SharePoint, configure el nombre de base de datos de la aplicación de servicio para que sea el nombre del “punto de acceso de cliente” que creó como parte de la configuración de SharePoint. Para obtener más información sobre cómo configurar SharePoint con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea [Configure and manage SQL Server availability groups for SharePoint Server (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165)(Configurar y administrar grupos de disponibilidad de SQL Server para SharePoint Server).  
   
 > [!NOTE]  
 >  Los servidores de informes de modo de SharePoint usan un proceso de sincronización entre las bases de datos de aplicación de servicio [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y las bases de datos de contenido de SharePoint. Es importante mantener juntas las bases de datos del servidor de informes y las bases de datos de contenido. Debe considerar configurarlas en los mismos grupos de disponibilidad para que conmuten por error y se recuperen como un conjunto. Considere el caso siguiente:  
@@ -163,7 +168,7 @@ caps.handback.revision: 22
   
 -   **Credenciales del servidor de informes:** tiene que crear las credenciales del servidor de informes apropiadas en las réplicas secundarias que creó en la principal. Los pasos exactos dependen del tipo de autenticación que usa en su entorno [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]; la cuenta de servicio de Windows [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], la cuenta de usuario de Windows o la autenticación de SQL Server. Para obtener más información, vea [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
--   Actualice la conexión a la base de datos para utilizar el nombre DNS del agente de escucha. Para los servidores de informes en modo nativo, cambie el **Nombre de base de datos del servidor de informes** en el administrador de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Para el modo de SharePoint, cambie el **nombre del servidor de base de datos** de las aplicaciones de servicio de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+-   Actualice la conexión a la base de datos para utilizar el nombre DNS del agente de escucha. Para los servidores de informes en modo nativo, cambie el **Nombre de base de datos del servidor de informes** en el administrador de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Para el modo de SharePoint, cambie el **nombre del servidor de base de datos** de las aplicaciones de servicio de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
   
 ###  <a name="bkmk_steps_to_complete_failover"></a> Pasos para completar la recuperación de desastres de bases de datos del servidor de informes  
  Es necesario completar los pasos siguientes tras una conmutación por error de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] a una réplica secundaria:  
@@ -189,14 +194,16 @@ caps.handback.revision: 22
   
 -   La ejecución del proceso en segundo plano que normalmente se habría desencadenado durante el período de la conmutación por error no se producirá porque el Agente SQL Server no podrá escribir los datos en la base de datos del servidor de informes y estos datos no se sincronizarán con la nueva réplica principal.  
   
--   Una vez completada la conmutación por error de la base de datos y tras reiniciarse el servicio del servidor de informes, los trabajos del Agente SQL Server se volverán a crear de forma automática. Hasta que los trabajos del agente SQL se vuelvan a crear, cualquier ejecución en segundo plano asociada a los trabajos del Agente SQL Server no se procesarán. Esta versión también incluye suscripciones de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], programaciones e instantáneas.  
+-   Una vez completada la conmutación por error de la base de datos y tras reiniciarse el servicio del servidor de informes, los trabajos del Agente SQL Server se volverán a crear de forma automática. Hasta que los trabajos del agente SQL se vuelvan a crear, cualquier ejecución en segundo plano asociada a los trabajos del Agente SQL Server no se procesarán. Esta versión también incluye suscripciones de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , programaciones e instantáneas.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
  [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Introducción a los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)   
- [Usar palabras clave de cadena de conexión con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)   
+ [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  (Usar palabras clave de cadena de conexión con SQL Server Native Client)  
  [Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
  [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
   
+
+

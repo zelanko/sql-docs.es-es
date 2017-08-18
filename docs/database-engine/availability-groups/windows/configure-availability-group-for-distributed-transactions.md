@@ -1,0 +1,201 @@
+---
+title: Configurar un grupo de disponibilidad para las transacciones distribuidas | Microsoft Docs
+ms.custom: 
+ms.date: 07/19/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], interoperability
+- cross-database transactions [SQL Server]
+- transactions [database mirroring]
+- Availability Groups [SQL Server], interoperability
+- troubleshooting [SQL Server], cross-database transactions
+ms.assetid: 
+caps.latest.revision: 33
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 523b46925b2ed32ab68840fcc76ddead5d613758
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
+---
+# <a name="configure-availability-group-for-distributed-transactions"></a>Configurar un grupo de disponibilidad para las transacciones distribuidas
+[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+
+[!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] admite todas las transacciones distribuidas, incluidas las bases de datos de un grupo de disponibilidad. En este artículo se explica cómo configurar un grupo de disponibilidad para las transacciones distribuidas.  
+
+A fin de garantizar que las transacciones distribuidas sucedan, el grupo de disponibilidad debe estar configurado para registrar las bases de datos como administradores de recursos de transacción distribuida.  
+
+>[!NOTE]
+>[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] admite también las transacciones distribuidas, si bien en [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] esto está limitado. [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] no admite transacciones distribuidas con una base de datos en un grupo de disponibilidad si hay más de una base de datos en el mismo servidor. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] no presenta esta limitación. 
+>
+>En [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)], los pasos de configuración son los mismos que en [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)].
+
+En una transacción distribuida, las aplicaciones cliente funcionan con Microsoft DTC (Coordinador de transacciones distribuidas) para mantener la coherencia de las transacciones en múltiples orígenes de datos. DTC es un servicio disponible en los sistemas operativos basados en Windows Server compatibles. En una transacción distribuida, DTC es el *coordinador de transacciones*. Una instancia de SQL Server suele ser el *administrador de recursos*. Cuando hay una base de datos en un grupo de disponibilidad, cada base de datos debe ser su propio administrador de recursos. 
+
+[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] no impide las transacciones distribuidas de bases de datos en un grupo de disponibilidad, aun cuando el grupo de disponibilidad no esté configurado para transacciones distribuidas. Pero cuando un grupo de disponibilidad no está configurado para transacciones distribuidas, hay ocasiones en las que la conmutación por error puede que no se efectúe correctamente. En concreto, es posible que la nueva instancia de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] de réplica principal no pueda obtener el resultado de la transacción de DTC. Para que la instancia de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] pueda obtener el resultado de las transacciones dudosas de DTC tras la conmutación por error, configure el grupo de disponibilidad para que admita transacciones distribuidas. 
+
+## <a name="prerequisites"></a>Requisitos previos
+
+Antes de configurar un grupo de disponibilidad que admita transacciones distribuidas, debe cumplir los siguientes requisitos previos:
+
+* Todas las instancias de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] que participan en la transacción distribuida deben pertenecer a la versión [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] o posterior.
+
+* Los grupos de disponibilidad deben ejecutarse en Windows Server 2016 o Windows Server 2012 R2. Para Windows Server 2012 R2, debe instalar la actualización de KB3090973 disponible en [https://support.microsoft.com/es-es/kb/3090973](https://support.microsoft.com/en-us/kb/3090973).  
+
+## <a name="create-an-availability-group-for-distributed-transactions"></a>Crear un grupo de disponibilidad que admita transacciones distribuidas
+
+Configure un grupo de disponibilidad que admita transacciones distribuidas. Establezca el grupo de disponibilidad para permitir que cada base de datos se registre como un administrador de recursos. En este artículo se explica cómo configurar un grupo de disponibilidad de manera que cada base de datos sea un administrador de recursos en DTC.
+
+Puede crear un grupo de disponibilidad que admita transacciones distribuidas en [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] o una versión posterior. Para crear un grupo de disponibilidad que admita transacciones distribuidas, incluya `DTC_SUPPORT = PER_DB` en la definición de dicho grupo de disponibilidad. Con el siguiente script se crea un grupo de disponibilidad que admite transacciones distribuidas. 
+
+```transact-sql
+CREATE AVAILABILITY GROUP MyAG
+   WITH (
+      DTC_SUPPORT = PER_DB  
+      )
+   FOR DATABASE DB1, DB2
+   REPLICA ON
+      Server1 WITH (
+         ENDPOINT_URL = 'TCP://SERVER1.corp.com:5022',  
+         AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
+         FAILOVER_MODE = AUTOMATIC  
+         )
+      Server2 WITH (
+         ENDPOINT_URL = 'TCP://SERVER2.corp.com:5022',  
+         AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
+         FAILOVER_MODE = AUTOMATIC  
+         )
+```
+
+>[!NOTE]
+>El script anterior es un ejemplo sencillo de un grupo de disponibilidad y no está pensado para ningún entorno de producción en concreto. 
+
+## <a name="alter-an-availability-group-for-distributed-transactions"></a>Modificar un grupo de disponibilidad para que admita transacciones distribuidas
+
+Puede modificar un grupo de disponibilidad para que admita transacciones distribuidas en [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] o una versión posterior. Para modificar un grupo de disponibilidad para que admita transacciones distribuidas, incluya `DTC_SUPPORT = PER_DB` en el script `ALTER AVAILABILITY GROUP`. Con este script de ejemplo se cambia el grupo de disponibilidad de forma que admita transacciones distribuidas. 
+
+```transact-sql
+ALTER AVAILABILITY GROUP MyaAG
+   WITH (
+      DTC_SUPPORT = PER_DB  
+      );
+```
+
+>[!NOTE]
+>En [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] no se puede modificar un grupo de disponibilidad para que admita transacciones distribuidas. Para cambiar la configuración, elimine el grupo de disponibilidad y vuelva a crearlo con la configuración `DTC_SUPPORT = PER_DB`. 
+
+## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>Transacciones distribuidas: conceptos técnicos
+
+Una transacción distribuida abarca dos o más bases de datos. Como administrador de transacciones, DTC coordina la transacción entre las instancias de SQL Server y otros orígenes de datos. Cada instancia del motor de base de datos de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] puede funcionar como un administrador de recursos. Cuando un grupo de disponibilidad se configura con `DTC_SUPPORT = PER_DB`, las bases de datos pueden actuar como administradores de recursos. Para obtener más información, consulte la documentación de MS DTC.
+
+Una transacción con dos o más bases de datos en una única instancia del motor de base de datos es una transacción distribuida de facto. La instancia administra la transacción distribuida internamente; para el usuario funciona como una transacción local. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] promueve todas las transacciones entre bases de datos a DTC cuando las bases de datos están en un grupo de disponibilidad configurado con `DTC_SUPPORT = PER_DB`, incluso en una sola instancia de SQL Server. 
+
+En la aplicación, una transacción distribuida se administra de forma muy parecida a una transacción local. Al final de la transacción, la aplicación solicita que se confirme o se revierta la transacción. El administrador de transacciones debe administrar una confirmación distribuida de forma diferente para reducir al mínimo el riesgo de que, si se produce un error en la red, algunos administradores de recursos realicen confirmaciones mientras los demás revierten la transacción. Esto se consigue administrando el proceso de confirmación en dos fases (la fase de preparación y la fase de confirmación), lo que se conoce como confirmación en dos fases.
+
+- **Fase de preparación**
+   
+   Cuando el administrador de transacciones recibe una solicitud de confirmación, envía un comando de preparación a todos los administradores de recursos implicados en la transacción. Cada administrador de recursos hace lo necesario para que la transacción sea duradera y todos los búferes que contienen imágenes del registro de la transacción se pasan a disco. A medida que cada administrador de recursos completa la fase de preparación, notifica si la preparación ha tenido éxito o no al administrador de transacciones.
+
+- **Fase de confirmación**
+   
+   Si el administrador de transacciones recibe la notificación de que todas las preparaciones son correctas por parte de todos los administradores de recursos, envía comandos de confirmación a cada administrador de recursos. A continuación, los administradores de recursos pueden completar la confirmación. Si todos los administradores de recursos indican que la confirmación ha sido correcta, el administrador de transacciones envía una notificación de éxito a la aplicación. Si algún administrador de recursos informó de un error al realizar la preparación, el administrador de transacciones envía un comando para revertir la transacción a cada administrador de recursos e indica a la aplicación que se ha producido un error de confirmación.
+
+### <a name="detailed-steps"></a>Pasos detallados
+
+Con los siguientes puntos se explica cómo funciona la aplicación con DTC para completar las transacciones distribuidas.
+
+1. La instancia de SQL Server se da de alta en la transacción de DTC. Esto puede ocurrir cuando hay más de un administrador de recursos en la transacción, o bien si el cliente solicita que una transacción se promueva al nivel de transacción de DTC.
+2. El cliente realiza algunas funciones en la instancia de SQL Server de la transacción de DTC.
+3. El cliente emite si la transacción de DTC se confirma o se anula.
+    - Si el cliente emite una anulación, la transacción se anula inmediatamente.
+    - Si el cliente emite una confirmación, DTC inicia el protocolo de confirmación en dos fases, para lo cual solicita a todos los administradores de recursos de la transacción que preparen la transacción.
+4. DTC indica a todos los administradores de recursos que confirmen la transacción después de que todos ellos hayan confirmado correctamente la fase de preparación. Si algo impide que puedan confirmar la transacción correctamente, DTC la anula. 
+
+### <a name="effects-of-configuring-an-availability-group-for-distributed-transactions"></a>Consecuencias de configurar un grupo de disponibilidad para que admita transacciones distribuidas
+
+Cada entidad que participa en una transacción distribuida se conoce como administrador de recursos. Ejemplos de administradores de recursos:
+
+* Una instancia de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]. 
+* Una base de datos en un grupo de disponibilidad que se ha configurado para admitir transacciones distribuidas.
+* Servicio DTC: también puede ser un administrador de transacciones.
+* Otros orígenes de datos. 
+
+Para poder participar en las transacciones distribuidas, una instancia de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] se da de alta en DTC. Normalmente, la instancia de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] se da de alta en DTC en el servidor local. Cada instancia de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] crea un administrador de recursos con un identificador de administrador de recursos (RMID) único y lo registra con DTC. En la configuración predeterminada, todas las bases de datos de una instancia de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] usan el mismo RMID. 
+
+Cuando una base de datos está en un grupo de disponibilidad, la copia de lectura y escritura de la base de datos (o réplica principal) se puede trasladar a otra instancia de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]. Para admitir transacciones distribuidas durante este traslado, cada base de datos debe actuar como un administrador de recursos independiente y tener un RMID único. Cuando un grupo de disponibilidad tiene `DTC_SUPPORT = PER_DB`, [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] crea un administrador de recursos para cada base de datos y se registra con DTC por medio de un RMID único. En esta configuración, la base de datos es un administrador de recursos en las transacciones de DTC.
+
+Para más información sobre las transacciones distribuidas en [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)], vea [Transacciones distribuidas](#distTran).
+
+## <a name="manage-unresolved-transactions"></a>Administrar las transacciones sin resolver
+
+Después de una conmutación por error no se puede recuperar el resultado de las transacciones activas que había durante el cambio de RMID. Esto se debe a que el RMID que SQL Server usó para dar de alta no es el mismo que el RMID que usó para recuperar el resultado. El cambio de RMID puede ocurrir en los siguientes casos:
+
+* Cuando se cambia `DTC_SUPPORT` en un grupo de disponibilidad. 
+* Cuando se agrega o quita una base de datos de un grupo de disponibilidad. 
+* Cuando se elimina un grupo de disponibilidad.
+
+En los casos anteriores, si la réplica principal se conmuta por error a una nueva instancia de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)], dicha instancia intenta ponerse en contacto con DTC para identificar el resultado de la transacción. DTC no puede devolver el resultado, porque el RMID que la base de datos está usando para obtener el resultado de las transacciones dudosas durante la recuperación no está dado de alta. Por lo tanto, la base de datos pasa a un estado SOSPECHOSO.
+
+El nuevo registro de errores de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] contiene una entrada similar al siguiente ejemplo:
+
+```
+Microsoft Distributed Transaction Coordinator (MS DTC) 
+failed to reenlist citing that the database RMID does 
+not match the RMID [xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx] 
+associated with the transaction.  Please manually resolve
+the transaction.
+    
+SQL Server detected a DTC/KTM in-doubt transaction with UOW 
+{yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy}.Please resolve it 
+following the guideline for Troubleshooting DTC Transactions.
+```
+
+El ejemplo anterior refleja que DTC no podría volver a dar de alta la base de datos de la nueva réplica principal en la transacción que se creó después de la conmutación por error. La instancia de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] no puede averiguar el resultado de la transacción distribuida, por lo que marca la base de datos como sospechosa. La transacción se marca como una unidad de trabajo (UOW) y se hace referencia a ella con un GUID. Para recuperar la base de datos, confirme o revierta la transacción manualmente. 
+
+>[!WARNING]
+>Cuando una transacción se confirma o revierte manualmente, ello puede repercutir en una aplicación. Confirme que la acción de confirmación o reversión es coherente con los requisitos de la aplicación. 
+
+Ejecute solo uno de los siguientes scripts:
+
+   * Para confirmar la transacción, actualice y ejecute el siguiente script (sustituya `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` por la UOW de la transacción dudosa reflejada en el mensaje de error anterior) y ejecute lo siguiente:
+
+      ```transact-sql
+      KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH COMMIT
+      ```
+
+   * Para revertir la transacción, actualice y ejecute el siguiente script (sustituya `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` por la UOW de la transacción dudosa reflejada en el mensaje de error anterior) y ejecute lo siguiente:
+
+      ```transact-sql
+      KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH ROLLBACK
+     ```
+
+Después de confirmar o revertir la transacción, puede usar `ALTER DATABASE` para establecer la base de datos en línea. Actualice y ejecute el siguiente script (indique el nombre de base de datos de la base de datos sospechosa):
+
+   ```transact-sql
+   ALTER DATABASE [DB1] SET ONLINE
+   ```
+
+Para más información sobre cómo resolver transacciones dudosas, vea [Resolve Transactions Manually](http://technet.microsoft.com/library/cc754134.aspx) (Resolver transacciones manualmente).
+
+## <a name="next-steps"></a>Pasos siguientes  
+
+[Transacciones distribuidas](http://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
+
+[Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+  
+[Transactions - Always On Availability Groups and Database Mirroring](transactions-always-on-availability-and-database-mirroring.md) (Transacciones: grupos de disponibilidad AlwaysOn y creación de reflejo de la base de datos)  
+
+[Supporting XA Transactions](http://technet.microsoft.com/library/cc753563(v=ws.10).aspx) (Compatibilidad con las transacciones XA)
+
+[How It Works: Session/SPID (–2) for DTC Transactions](http://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/) (Funcionamiento de Session/SPID [–2] en las transacciones de DTC)

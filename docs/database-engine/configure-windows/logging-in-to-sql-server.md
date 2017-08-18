@@ -1,42 +1,47 @@
 ---
-title: "Iniciar una sesi&#243;n en SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server, iniciar sesión"
-  - "servicios [SQL Server], iniciar sesión"
-  - "Cadena de conexión TCP"
-  - "conectarse al motor de base de datos"
-  - "inicios de sesión [SQL Server], acerca del inicio de sesión"
-  - "cadena de conexión de canalización con nombre"
-  - "sesión, inicio [SQL Server]"
-  - "cadena de conexión de memoria compartida"
-  - "iniciar una sesión [SQL Server]"
-  - "inicios de sesión [SQL Server]"
+title: "Iniciar una sesión en SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server, logging in
+- services [SQL Server], logging in
+- TCP connection string
+- connecting to the Database Engine
+- logins [SQL Server], about logging in
+- named pipe connection string
+- log ins [SQL Server]
+- shared memory connection string
+- logging in [SQL Server]
+- logins [SQL Server]
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b4ed2e0c35921a717fc9447e62d469fb0153a74c
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Iniciar una sesi&#243;n en SQL Server
+# <a name="logging-in-to-sql-server"></a>Iniciar una sesión en SQL Server
   Puede iniciar una sesión en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con cualquiera de las herramientas gráficas de administración o desde el símbolo del sistema.  
   
- Cuando se inicia una sesión en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante una herramienta gráfica de administración, como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], el sistema pedirá el nombre del servidor, un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y una contraseña, si es necesario. Si inicia una sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando la autenticación de Windows, no tendrá que proporcionar un inicio de sesión de SQL Server cada vez que tenga acceso a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En su lugar, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza su cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para iniciar la sesión automáticamente. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta con autenticación de modo mixto (modo de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows) y decide iniciar una sesión mediante la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe proporcionar un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y una contraseña. Siempre que sea posible, utilice la autenticación de Windows.  
+ Cuando se inicia una sesión en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante una herramienta gráfica de administración, como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], el sistema pedirá el nombre del servidor, un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y una contraseña, si es necesario. Si inicia una sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando la autenticación de Windows, no tendrá que proporcionar un inicio de sesión de SQL Server cada vez que tenga acceso a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En su lugar, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza su cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para iniciar la sesión automáticamente. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta con autenticación de modo mixto (modo de autenticación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows) y decide iniciar una sesión mediante la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe proporcionar un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y una contraseña. Siempre que sea posible, utilice la autenticación de Windows.  
   
 > [!NOTE]  
->  Si al instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seleccionó una intercalación que distingue entre mayúsculas y minúsculas, el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también distinguirá entre mayúsculas y minúsculas.  
+>  Si al instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]seleccionó una intercalación que distingue entre mayúsculas y minúsculas, el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también distinguirá entre mayúsculas y minúsculas.  
   
-## Formato para especificar el nombre de SQL Server  
- Al conectar a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] debe especificar el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es la instancia predeterminada (una instancia sin nombre), especifique el nombre del equipo donde está instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o la dirección IP del equipo. Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una instancia con nombre (como SQLEXPRESS), especifique el nombre del equipo donde está instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o la dirección IP del equipo, y agregue una barra diagonal y el nombre de instancia.  
+## <a name="format-for-specifying-the-name-of-sql-server"></a>Formato para especificar el nombre de SQL Server  
+ Al conectar a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] debe especificar el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es la instancia predeterminada (una instancia sin nombre), especifique el nombre del equipo donde está instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o la dirección IP del equipo. Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una instancia con nombre (como SQLEXPRESS), especifique el nombre del equipo donde está instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o la dirección IP del equipo, y agregue una barra diagonal y el nombre de instancia.  
   
  Los ejemplos siguientes se conectan a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecuta en un equipo denominado APPHOST. Al especificar una instancia con nombre, los ejemplos usan un nombre de instancia SQLEXPRESS.  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 34
 |Conexión a una instancia predeterminada por nombre, lo que fuerza una conexión de canalizaciones con nombre.|np:APPHOST|  
 |Conexión a una instancia con nombre por nombre, lo que fuerza una conexión de canalizaciones con nombre.|np:APPHOST\SQLEXPRESS|  
   
-## Comprobar el protocolo de conexión  
+## <a name="verifying-your-connection-protocol"></a>Comprobar el protocolo de conexión  
  Cuando se conecta a [!INCLUDE[ssDE](../../includes/ssde-md.md)], la siguiente consulta devolverá el protocolo usado para la conexión actual, junto con el método de autenticación (NTLM o Kerberos), e indicará si la conexión está cifrada.  
   
 ```tsql  
@@ -76,7 +81,7 @@ FROM sys.dm_exec_connections
 WHERE session_id = @@SPID;  
 ```  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
  [Iniciar una sesión en una instancia de SQL Server &#40;símbolo del sistema&#41;](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)  
   
  Los recursos siguientes pueden ayudarle a solucionar problemas de conexión.  
@@ -85,11 +90,11 @@ WHERE session_id = @@SPID;
   
 -   [Pasos para solucionar problemas de conectividad de SQL](http://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
  [Elegir un modo de autenticación](../../relational-databases/security/choose-an-authentication-mode.md)  
   
- [Usar la utilidad sqlcmd](../../relational-databases/scripting/use-the-sqlcmd-utility.md)  
+ [Usar la utilidad sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
- [Crear un inicio de sesión](../../t-sql/creating-a-login.md)  
+ [Crear un inicio de sesión](../../t-sql/lesson-2-1-creating-a-login.md)  
   
   

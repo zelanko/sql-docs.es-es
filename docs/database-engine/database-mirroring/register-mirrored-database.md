@@ -1,24 +1,29 @@
 ---
-title: "Registrar base de datos reflejada | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.registermirroreddb.f1"
+title: Registrar base de datos reflejada | Microsoft Docs
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbmmonitor.registermirroreddb.f1
 ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
 caps.latest.revision: 30
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: abfdb26bd9f05785b8ecffe110d0aba5188e1949
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Registrar base de datos reflejada
+# <a name="register-mirrored-database"></a>Registrar base de datos reflejada
   Utilice este cuadro de diálogo para registrar una o varias bases de datos reflejadas en una instancia del servidor determinada, mediante la adición de las bases de datos al Monitor de creación de reflejo de la base de datos. Cuando se agrega una base de datos, el Monitor de creación de reflejo de la base de datos almacena localmente en caché información acerca de la base de datos, sus asociados y el método de conexión a éstos.  
   
 > [!IMPORTANT]  
@@ -28,14 +33,14 @@ caps.handback.revision: 30
   
 -   [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Instancia del servidor**  
  Seleccione una instancia del servidor en la lista, que contiene instancias del servidor con las que el Monitor de creación de reflejo de la base de datos ya tiene una conexión almacenada, o bien haga clic en **Conectar**. Para especificar nuevas credenciales para una instancia del servidor de la lista, haga clic en **Conectar** y conéctese mediante las nuevas credenciales.  
   
 > [!NOTE]  
->  Para registrar bases de datos en varias instancias del servidor, una vez terminada la búsqueda de una instancia del servidor en las bases de datos deseadas, haga clic en **Aplicar** y, luego, seleccione otra instancia del servidor.  
+>  Para registrar bases de datos en varias instancias del servidor, una vez terminada la búsqueda de una instancia del servidor en las bases de datos deseadas, haga clic en **Aplicar**y, luego, seleccione otra instancia del servidor.  
   
- **Connect**  
+ **Conectar**  
  Para especificar nuevas credenciales para la instancia del servidor, haga clic en **Conectar** y conéctese mediante las nuevas credenciales. Al conectarse a una instancia del servidor, el Monitor de creación de reflejo de la base de datos muestra **Esperando datos**.  
   
  **Bases de datos reflejadas**  
@@ -60,9 +65,9 @@ caps.handback.revision: 30
  **Aplicar**  
  Haga clic en este botón para registrar las bases de datos seleccionadas (y guardar las credenciales para las instancias del servidor asociado) a la vez que se mantiene abierto el cuadro de diálogo.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+ [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

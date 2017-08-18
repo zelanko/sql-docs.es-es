@@ -1,24 +1,29 @@
 ---
-title: "Establecer la opci&#243;n de configuraci&#243;n del servidor Aumento de prioridad | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "aumento de prioridad (opción)"
+title: "Establecer la opción de configuración del servidor Aumento de prioridad | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- priority boost option
 ms.assetid: 765f1e83-dd52-44fb-b0c8-1078f213607b
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9546ac1cfb5d2ba83045b80a645677219bf84919
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Establecer la opci&#243;n de configuraci&#243;n del servidor Aumento de prioridad
+# <a name="configure-the-priority-boost-server-configuration-option"></a>Establecer la opción de configuración del servidor Aumento de prioridad
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   En este tema se describe cómo configurar la opción de configuración de **aumento de prioridad** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Use la opción de **aumento de prioridad** para especificar si [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ejecutarse con una prioridad de programación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2008 o Windows 2008 R2 superior a la de otros procesos del mismo equipo. Si establece esta opción en 1, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecutará con una prioridad base de 13 en el programador de Windows 2008 o Windows Server 2008 R2. El valor predeterminado es 0, que equivale a una prioridad base de 7.  
@@ -55,7 +60,7 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
-#### Para configurar la opción de aumento de prioridad  
+#### <a name="to-configure-the-priority-boost-option"></a>Para configurar la opción de aumento de prioridad  
   
 1.  En el Explorador de objetos, haga clic con el botón derecho en un servidor y seleccione **Propiedades**.  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para configurar la opción de aumento de prioridad  
+#### <a name="to-configure-the-priority-boost-option"></a>Para configurar la opción de aumento de prioridad  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -94,9 +99,10 @@ GO
 ##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción de aumento de prioridad  
  El servidor debe reiniciarse para que el valor surta efecto.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

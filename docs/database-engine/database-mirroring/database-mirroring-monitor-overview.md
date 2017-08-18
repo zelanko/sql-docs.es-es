@@ -1,26 +1,31 @@
 ---
-title: "Informaci&#243;n general del Monitor de creaci&#243;n de reflejo de la base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.main.f1"
-helpviewer_keywords: 
-  - "Monitor de creación de reflejo de la base de datos [SQL Server], interfaz"
+title: "Información general del Monitor de creación de reflejo de la base de datos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbmmonitor.main.f1
+helpviewer_keywords:
+- Database Mirroring Monitor [SQL Server], interface
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 caps.latest.revision: 40
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 129958519a6115df494479c6c2237d4a611cfed5
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Informaci&#243;n general del Monitor de creaci&#243;n de reflejo de la base de datos
+# <a name="database-mirroring-monitor-overview"></a>Información general del Monitor de creación de reflejo de la base de datos
   Si dispone de los permisos correctos, puede utilizar el Monitor de creación de reflejo de la base de datos para supervisar cualquier subconjunto de las bases de datos reflejadas de una instancia del servidor. La supervisión le permite comprobar si los datos fluyen en la sesión de creación de reflejo de la base de datos. Si hay flujo de datos, supervisa la calidad del mismo. Asimismo, el Monitor de creación de reflejo de la base de datos resulta útil para solucionar la causa de un flujo de datos reducido.  
   
  Puede registrar cualquiera de las bases de datos reflejadas para supervisar cada uno de los asociados de conmutación por error manualmente. Al registrar una base de datos, el Monitor de creación de reflejo de la base de datos almacena en caché la siguiente información acerca de dicha base de datos:  
@@ -31,15 +36,15 @@ caps.handback.revision: 40
   
 -   Últimos roles conocidos de cada asociado (entidad de seguridad o reflejado)  
   
-## Permisos  
+## <a name="permissions"></a>Permisos  
  Para supervisar la creación de reflejo de la base de datos, debe ser miembro del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **dbm_monitor** en la base de datos **msdb** de la instancia del servidor. Si solo es miembro de **sysadmin** o **dbm_monitor** en una de las instancias del servidor asociado, el monitor únicamente puede conectarse a dicho asociado; no puede recuperar información del otro asociado.  
   
- Si solo es miembro de **dbm_monitor** en una instancia del servidor, tendrá permisos limitados en esa instancia. Únicamente podrá ver la fila de estado más reciente. Si se conecta a una instancia del servidor mediante los permisos **dbm_monitor**, el Monitor de creación de reflejo de la base de datos le informa de que tiene permisos limitados.  
+ Si solo es miembro de **dbm_monitor** en una instancia del servidor, tendrá permisos limitados en esa instancia. Únicamente podrá ver la fila de estado más reciente. Si se conecta a una instancia del servidor mediante los permisos **dbm_monitor** , el Monitor de creación de reflejo de la base de datos le informa de que tiene permisos limitados.  
   
 > [!IMPORTANT]  
 >  El rol fijo de base de datos **dbm_monitor** se crea en la base de datos **msdb** cuando se registra la primera base de datos en el Monitor de creación de reflejo de la base de datos. El nuevo rol **dbm_monitor** no tiene miembros hasta que un administrador del sistema asigne usuarios al rol.  
   
-## Árbol de navegación  
+## <a name="navigation-tree"></a>Árbol de navegación  
  Si las bases de datos se han registrado para supervisión con el Monitor de creación de reflejo de la base de datos, se mostrará una lista de bases de datos registradas en el árbol de navegación. El árbol se actualiza automáticamente cada 30 segundos. Para ver el estado de una base de datos registrada, selecciónela. Para obtener más información, vea "Panel de detalles" más adelante en este tema.  
   
  En cada base de datos registrada, se muestra la siguiente información:  
@@ -56,7 +61,7 @@ caps.handback.revision: 40
 |----------|------------|-----------------|  
 |Icono de advertencia|**Unknown**|El monitor no está conectado a ningún asociado. La única información disponible es lo que el monitor almacena en caché.|  
 |Icono de advertencia|**Sincronizando**|El contenido de la base de datos reflejada va por detrás del contenido de la base de datos principal. La instancia de servidor principal envía las entradas de registro a la instancia del servidor reflejado, que aplica los cambios en la base de datos reflejada para confirmarla.<br /><br /> Al inicio de una sesión de creación de reflejo de la base de datos, las bases de datos principal y reflejada se encuentran en este estado.|  
-|Cilindro de base de datos estándar|**Sincronizado**|El estado de la base de datos cambia a **Sincronizado**cuando el servidor reflejado está suficientemente al día con respecto al servidor principal. La base de datos permanece en este estado mientras el servidor principal continúa con el envío de cambios al servidor reflejado, y el servidor reflejado continúa con la aplicación de los cambios en la base de datos reflejada.<br /><br /> En el modo de seguridad alta, son posibles las conmutaciones manual y automática por error sin pérdida de datos.<br /><br /> En el modo de rendimiento alto, siempre es posible que se pierdan datos, incluso en el estado **Sincronizado**.|  
+|Cilindro de base de datos estándar|**Sincronizado**|El estado de la base de datos cambia a **Sincronizado**cuando el servidor reflejado está suficientemente al día con respecto al servidor principal. La base de datos permanece en este estado mientras el servidor principal continúa con el envío de cambios al servidor reflejado, y el servidor reflejado continúa con la aplicación de los cambios en la base de datos reflejada.<br /><br /> En el modo de seguridad alta, son posibles las conmutaciones manual y automática por error sin pérdida de datos.<br /><br /> En el modo de rendimiento alto, siempre es posible que se pierdan datos, incluso en el estado **Sincronizado** .|  
 |Icono de advertencia|**Suspendida**|La base de datos principal está disponible, pero no envía ningún registro al servidor reflejado.|  
 |Icono de error|**Desconectado**|La instancia del servidor no se puede conectar a su asociado.|  
   
@@ -70,19 +75,19 @@ caps.handback.revision: 40
  *<MIRROR_SERVER>*  
  Nombre del asociado que es actualmente la instancia del servidor reflejado. El formato es el mismo que el del servidor principal.  
   
-## Panel de detalles  
+## <a name="detail-pane"></a>Panel de detalles  
  El aspecto del monitor depende de si está seleccionada una base de datos. Al abrir el monitor, el panel de detalles muestra un vínculo **Registrar base de datos reflejada** . Haga clic en el vínculo para registrar una base de datos. Las bases de datos registradas aparecen debajo del nodo **Monitor de creación de reflejo de la base de datos** del árbol de navegación. El Monitor de creación de reflejo de la base de datos intenta conectarse a todas las instancias de servidor para las que haya almacenado credenciales.  
   
  Cuando seleccione una base de datos, su estado se mostrará en la página con pestañas **Estado** del panel de detalles. El contenido de esta página procede de las instancias de servidor principal y reflejado. La página se actualiza de forma asincrónica, a medida que se recopila la información del estado a través de conexiones independientes en las instancias de servidor principal y reflejado. El estado se actualiza automáticamente a intervalos de 30 segundos.  
   
 > [!NOTE]  
->  No puede cambiar la frecuencia de actualización del monitor, pero sí puede actualizar la tabla de estado del cuadro de diálogo **Historial de creación de reflejo de la base de datos**.  
+>  No puede cambiar la frecuencia de actualización del monitor, pero sí puede actualizar la tabla de estado del cuadro de diálogo **Historial de creación de reflejo de la base de datos** .  
   
  Un administrador del sistema puede ver la configuración actual de las advertencias para la base de datos; para ello, debe seleccionar la página con pestañas **Advertencias** . Desde dicha página, el administrador puede iniciar el cuadro de diálogo **Establecer umbrales de advertencia** para habilitar y configurar uno o varios umbrales de advertencia.  
   
- En el titular situado encima de las pestañas, el panel de detalles muestra la última hora a la que el monitor actualizó la información de estado, como **Última actualización:***<fecha>\>**<hora>\>*. Normalmente, el Monitor de creación de reflejo de la base de datos recupera información de estado de las instancias del servidor principal y reflejado a horas diferentes. Se muestran las dos horas de actualización más antiguas.  
+ En el titular situado encima de las pestañas, el panel de detalles muestra la última hora a la que el monitor actualizó la información de estado, como **Última actualización:***\<fecha>**\<hora>*. Normalmente, el Monitor de creación de reflejo de la base de datos recupera información de estado de las instancias del servidor principal y reflejado a horas diferentes. Se muestran las dos horas de actualización más antiguas.  
   
-## Menú Acción  
+## <a name="action-menu"></a>Menú Acción  
  El menú **Acción** siempre contiene los siguientes comandos:  
   
 |Command|Descripción|  
@@ -101,8 +106,8 @@ caps.handback.revision: 40
   
 -   [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+ [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

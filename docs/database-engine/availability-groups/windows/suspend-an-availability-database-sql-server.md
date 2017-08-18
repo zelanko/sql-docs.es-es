@@ -1,29 +1,34 @@
 ---
-title: "Suspender una base de datos de disponibilidad (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.suspenddatamove.f1"
-helpviewer_keywords: 
-  - "bases de datos secundarias [SQL Server], en el grupo de disponibilidad"
-  - "bases de datos principales [SQL Server], en el grupo de disponibilidad"
-  - "Grupos de disponibilidad [SQL Server], suspender una base de datos"
-  - "Grupos de disponibilidad [SQL Server], bases de datos"
+title: Suspender una base de datos de disponibilidad (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.suspenddatamove.f1
+helpviewer_keywords:
+- secondary databases [SQL Server], in availability group
+- primary databases [SQL Server], in availability group
+- Availability Groups [SQL Server], suspending a database
+- Availability Groups [SQL Server], databases
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 caps.latest.revision: 51
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 23d68367d77f5346dfb2873203b6c96c912fd5c5
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Suspender una base de datos de disponibilidad (SQL Server)
+# <a name="suspend-an-availability-database-sql-server"></a>Suspender una base de datos de disponibilidad (SQL Server)
   Puede suspender una base de datos de disponibilidad en [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Observe que un comando de suspender tiene que emitirse en la instancia de servidor que hospeda la base de datos que se va a suspender o a reanudar.  
   
  El efecto de un comando de suspensión depende de si suspende una base de datos secundaria o una base de datos principal, según se indica a continuación:  
@@ -81,11 +86,11 @@ caps.handback.revision: 51
   
 1.  En el Explorador de objetos, conéctese a la instancia de servidor que hospeda la réplica de disponibilidad en la que desea suspender una base de datos y expanda el árbol. Para obtener más información, vea [Requisitos previos](#Prerequisites), anteriormente en este tema.  
   
-2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad**.  
+2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad** .  
   
 3.  Expanda el grupo de disponibilidad.  
   
-4.  Expanda el nodo **Bases de datos de disponibilidad**, haga clic con el botón derecho en la base de datos y haga clic en **Suspender movimiento de datos**.  
+4.  Expanda el nodo **Bases de datos de disponibilidad** , haga clic con el botón derecho en la base de datos y haga clic en **Suspender movimiento de datos**.  
   
 5.  En el cuadro de diálogo **Suspender movimiento de datos** , haga clic en **Aceptar**.  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 51
   
 1.  Conéctese a la instancia del servidor que hospeda la réplica cuya base de datos desea suspender. Para obtener más información, vea [Requisitos previos](#Prerequisites), anteriormente en este tema.  
   
-2.  Suspenda la base de datos mediante la siguiente instrucción [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md):  
+2.  Suspenda la base de datos mediante la siguiente instrucción [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md):  
   
      ALTER DATABASE *database_name* SET HADR SUSPEND  
   
@@ -124,7 +129,7 @@ caps.handback.revision: 51
   
 -   [Proveedor de PowerShell de SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Seguimiento: evitar un registro de transacciones lleno  
+##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
  Normalmente, cuando se lleva a cabo un punto de comprobación automático en una base de datos, su registro de transacciones se trunca en dicho punto de comprobación después de la siguiente copia de seguridad del registro. Sin embargo, mientras una base de datos secundaria está suspendida, todas las entradas de registro actuales permanecen activas en la base de datos principal. Si el registro de transacciones se llena (bien porque alcanza su tamaño máximo o porque la instancia del servidor se queda sin espacio), la base de datos no puede realizar más actualizaciones.  
   
  Para evitar este problema, debe realizar una de las siguientes acciones:  
@@ -143,8 +148,9 @@ caps.handback.revision: 51
   
 -   [Reanudar una base de datos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Reanudar una base de datos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)  
   
   
+

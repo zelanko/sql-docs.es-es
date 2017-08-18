@@ -1,26 +1,31 @@
 ---
-title: "Configuraci&#243;n predeterminada de protocolo de red de SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "protocolos [SQL Server], configuración predeterminada"
-  - "protocolos predeterminados, después de la instalación"
+title: "Configuración predeterminada del protocolo de red de SQL Server | Microsoft Docs"
+ms.custom: 
+ms.date: 07/11/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- protocols [SQL Server], default settings
+- default protocols, after install
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 caps.latest.revision: 4
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 4
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 95adc8c5246284a8f82131f853e6a28b91b8dc5f
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Configuraci&#243;n predeterminada de protocolo de red de SQL Server
-Para mejorar la seguridad, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] deshabilita la conectividad de red de algunas instalaciones nuevas. La conectividad de red mediante TCP/IP no se deshabilitará si se usa la edición Enterprise, Standard o Workgroup, o si hay una instalación anterior de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. El protocolo de memoria compartida se habilita para todas las instalaciones con el fin de permitir las conexiones locales con el servidor. Puede que el servicio Explorador de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] se detenga, según las condiciones y opciones de instalación.
+# Configuración predeterminada de protocolo de red de SQL Server
+Para mejorar la seguridad, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] deshabilita la conectividad de red de algunas instalaciones nuevas. La conectividad de red a través de TCP/IP no se deshabilitará si se usa la edición Enterprise, Standard, Evaluation o Workgroup, o si hay una instalación anterior de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. El protocolo de memoria compartida se habilita para todas las instalaciones con el fin de permitir las conexiones locales con el servidor. Puede que el servicio Explorador de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] se detenga, según las condiciones y opciones de instalación.
 
 Use el nodo Configuración de red de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] del Administrador de configuración de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] para configurar los protocolos de red tras la instalación. Use el nodo Servicios de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] del Administrador de configuración de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] para configurar el servicio Explorador de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] de modo que se inicie automáticamente. Para más información, consulte [Habilitar o deshabilitar un protocolo de red de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
@@ -35,24 +40,24 @@ Enterprise  | Nueva instalación  | Habilitado   | Habilitado   | Deshabilitadas
 Standard    | Nueva instalación  | Habilitado   | Habilitado   | Deshabilitadas para las conexiones de red.
 Web | Nueva instalación  | Habilitado   | Habilitado   | Deshabilitadas para las conexiones de red.
 Desarrollador   | Nueva instalación  | Habilitado   | Deshabilitado  | Deshabilitadas para las conexiones de red.
-Evaluation  | Nueva instalación  | Habilitado   | Deshabilitado  | Deshabilitadas para las conexiones de red.
+Evaluation  | Nueva instalación  | Habilitado   | Habilitado   | Deshabilitadas para las conexiones de red.
 SQL Server Express  | Nueva instalación  | Habilitado   | Deshabilitado  | Deshabilitadas para las conexiones de red.
 Todas las ediciones    | Hay una instalación anterior presente, pero no se actualiza.   | Igual que en una instalación nueva  | Igual que en una instalación nueva  | Igual que en una instalación nueva
 Todas las ediciones    | Actualización   | Habilitado   | Se conserva la configuración de la instalación anterior.    | Se conserva la configuración de la instalación anterior.
 
 
 >[!NOTE]
-> Si la instancia se ejecuta en un clúster de conmutación por error de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], escuchará en los puertos de cada dirección IP seleccionada para [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] durante la instalación de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
+> Si la instancia se ejecuta en un clúster de conmutación por error de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], escucha en los puertos de cada dirección IP seleccionada para [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] durante la instalación de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
  
 >[!NOTE]
-> Si está instalando [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] con argumentos del símbolo del sistema, puede especificar los protocolos que se habilitarán mediante el uso de los parámetros `TCPENABLED` y `NPENABLED`. Para más información, consulte [Instalar SQL Server 2016 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).
+> Si está instalando [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] con argumentos del símbolo del sistema, puede especificar los protocolos que se habilitarán mediante el uso de los parámetros `TCPENABLED` y `NPENABLED` . Para más información, consulte [Instalar SQL Server 2016 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).
 
 ## Creación de una cadena de conexión
 
 Consulte los temas siguientes para ver ejemplos de cadenas de conexión:
 * [Crear una cadena de conexión válida con el protocolo de memoria compartida](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)
 * [Crear una cadena de conexión válida con TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)
-* [Crear una cadena de conexión válida con canalizaciones con nombre](Creating%20a%20Valid%20Connection%20String%20Using%20Named%20Pipes.xml)
+
 
 
 ## [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Configuración del explorador
@@ -67,7 +72,10 @@ El servicio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser
 
 ## Vea también
 
-[Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)
+[Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 
 [Configuración de Área expuesta](../../relational-databases/security/surface-area-configuration.md)  
+
+
+
 

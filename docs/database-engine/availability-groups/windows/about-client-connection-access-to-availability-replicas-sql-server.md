@@ -1,29 +1,34 @@
 ---
-title: "Acerca del acceso de conexi&#243;n de cliente a r&#233;plicas de disponibilidad (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grupos de disponibilidad [SQL Server], réplicas de disponibilidad"
-  - "Grupos de disponibilidad [SQL Server], réplicas secundarias legibles"
-  - "réplicas secundarias activas [SQL Server], acceso de solo lectura a"
-  - "Grupos de disponibilidad [SQL Server], configurar"
-  - "Grupos de disponibilidad [SQL Server], conectividad de cliente"
-  - "Grupos de disponibilidad [SQL Server], réplicas secundarias activas"
+title: "Acerca del acceso de conexión de cliente a réplicas de disponibilidad (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], readable secondary replicas
+- active secondary replicas [SQL Server], read-only access to
+- Availability Groups [SQL Server], configuring
+- Availability Groups [SQL Server], client connectivity
+- Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 5fd4c6e3172fb2386e1b683153df98e526f304ef
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Acerca del acceso de conexi&#243;n de cliente a r&#233;plicas de disponibilidad (SQL Server)
+# <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Acerca del acceso de conexión de cliente a réplicas de disponibilidad (SQL Server)
   En un grupo de disponibilidad AlwaysOn, puede configurar una o varias réplicas de disponibilidad para permitir conexiones de solo lectura cuando se ejecutan en el rol secundario (es decir, cuando se ejecutan como réplica secundaria). También puede configurar cada réplica de disponibilidad para permitir o excluir conexiones de solo lectura cuando se ejecutan bajo el rol principal (es decir, cuando se ejecutan como réplica principal).  
   
  Para facilitar el acceso de cliente a las bases de datos principal o secundaria de un grupo de disponibilidad determinado, puede definir un agente de escucha del grupo de disponibilidad. De forma predeterminada, el agente de escucha del grupo de disponibilidad dirige las conexiones entrantes a la réplica principal. Sin embargo, puede configurar un grupo de disponibilidad de modo que se admita el enrutamiento de solo lectura, lo que permite a su agente de escucha del grupo de disponibilidad redirigir las solicitudes de conexión de las aplicaciones de intención de lectura a una réplica secundaria legible. Para obtener más información, vea [Configurar el enrutamiento de solo lectura para un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).  
@@ -31,7 +36,7 @@ caps.handback.revision: 15
  Durante una conmutación por error, una réplica secundaria realiza la transición al rol principal y la réplica principal anterior realiza la transición al rol secundario. Durante el proceso de conmutación por error, se terminan todas las conexiones de cliente a la réplica principal y a las réplicas secundarias. Después de la conmutación por error, cuando un cliente se vuelve a conectar al agente de escucha del grupo de disponibilidad, el agente de escucha vuelve a conectar el cliente a la nueva réplica principal, excepto en el caso de una solicitud de conexión de intención de lectura. Si se configura el enrutamiento de solo lectura en el cliente, en las instancias de servidor que hospedan la nueva réplica principal y en al menos una réplica secundaria legible, las solicitudes de conexión de intención de lectura se vuelven a enrutar a una réplica secundaria que admita el tipo de acceso de conexión que el cliente necesita. Para asegurar una experiencia de cliente correcta después de una conmutación por error, es importante configurar el acceso de conexión de los roles principal y secundario de cada réplica de disponibilidad.  
   
 > [!NOTE]  
->  Para obtener información sobre el agente de escucha de grupo de disponibilidad, que administra las solicitudes de conexión de cliente, vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md).  
+>  Para obtener información sobre el agente de escucha de grupo de disponibilidad, que administra las solicitudes de conexión de cliente, vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
  **En este tema:**  
   
@@ -87,9 +92,9 @@ caps.handback.revision: 15
 |Principal|Lectura-escritura|Solo intento de lectura|Failure|  
 |Principal|Lectura-escritura|Se ha especificado una intención de lectura/escritura o ninguna intención de conexión|Success|  
   
- Para obtener información sobre cómo configurar un grupo de disponibilidad para aceptar conexiones de cliente a sus réplicas, vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md).  
+ Para obtener información sobre cómo configurar un grupo de disponibilidad para aceptar conexiones de cliente a sus réplicas, vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
-### Ejemplo de configuración de acceso de conexión  
+### <a name="example-connection-access-configuration"></a>Ejemplo de configuración de acceso de conexión  
  Dependiendo de cómo estén configuradas diferentes réplicas de disponibilidad para acceso de conexión, la compatibilidad para las conexiones de cliente puede cambiar después de la conmutación por error de un grupo de disponibilidad. Por ejemplo, considere un grupo de disponibilidad para el que se realiza funcionalidad de informes en las réplicas secundarias de confirmación asincrónica remota. En todas las aplicaciones de solo lectura para las bases de datos de este grupo de disponibilidad se establece la propiedad de conexión **Application Intent** en **ReadOnly**, de modo que todas las conexiones de solo lectura son de intención de lectura.  
   
  Este grupo de disponibilidad de ejemplo posee dos réplicas de confirmación sincrónica en el centro de cálculo principal y dos réplicas de confirmación asincrónica en un sitio satélite. Para el rol principal, todas las réplicas se configuran para acceso de lectura/escritura, lo que evita las conexiones de intención de lectura a la réplica principal en todas las situaciones. El rol secundario de confirmación sincrónica utiliza la configuración de acceso de conexión predeterminada (“ninguna”), evitando las conexiones de cliente bajo el rol secundario.  En cambio, las réplicas de confirmación asincrónica se configuran para permitir conexiones de intención de lectura bajo el rol secundario. En la tabla siguiente se resume esta configuración de ejemplo:  
@@ -119,11 +124,12 @@ caps.handback.revision: 15
   
 -   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](http://blogs.msdn.com/b/sqlAlways%20On/)  
+-   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
+ [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Estadísticas](../../../relational-databases/statistics/statistics.md)  
   
   
+

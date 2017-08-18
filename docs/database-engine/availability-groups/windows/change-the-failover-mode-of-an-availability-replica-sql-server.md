@@ -1,28 +1,33 @@
 ---
-title: "Cambiar el modo de conmutaci&#243;n por error de una r&#233;plica de disponibilidad (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modos de conmutación por error [SQL Server]"
-  - "Grupos de disponibilidad [SQL Server], implementar"
-  - "Grupos de disponibilidad [SQL Server], conmutación por error"
-  - "Grupos de disponibilidad [SQL Server], configurar"
+title: "Cambiar el modo de conmutación por error de una réplica de disponibilidad (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- failover modes [SQL Server]
+- Availability Groups [SQL Server], deploying
+- Availability Groups [SQL Server], failover modes
+- Availability Groups [SQL Server], configuring
 ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
 caps.latest.revision: 27
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 6afdf6c384af21bd5b871dd79427c60c1ae980c8
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Cambiar el modo de conmutaci&#243;n por error de una r&#233;plica de disponibilidad (SQL Server)
-  En este tema se describe cómo cambiar el modo de conmutación por error de una réplica de disponibilidad de un grupo de disponibilidad AlwaysOn en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell. El modo de conmutación por error es una propiedad de réplica que determina el modo de conmutación por error para las réplicas que se ejecutan en modo de disponibilidad de confirmación sincrónica. Para obtener más información, vea [Conmutación por error y modos de conmutación por error &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) y [Modos de disponibilidad &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+# <a name="change-the-failover-mode-of-an-availability-replica-sql-server"></a>Cambiar el modo de conmutación por error de una réplica de disponibilidad (SQL Server)
+  En este tema se describe cómo cambiar el modo de conmutación por error de una réplica de disponibilidad de un grupo de disponibilidad AlwaysOn en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell. El modo de conmutación por error es una propiedad de réplica que determina el modo de conmutación por error para las réplicas que se ejecutan en modo de disponibilidad de confirmación sincrónica. Para obtener más información, vea [Conmutación por error y modos de conmutación por error &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) y [Modos de disponibilidad &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
 -   **Antes de empezar:**  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 27
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal y expanda el árbol.  
   
-2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad**.  
+2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad** .  
   
 3.  Haga clic en el grupo de disponibilidad cuya réplica desea cambiar.  
   
@@ -69,38 +74,25 @@ caps.handback.revision: 27
   
 1.  Conéctese a la instancia del servidor que hospeda la réplica principal.  
   
-2.  Use la instrucción [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) del siguiente modo:  
+2.  Use la instrucción [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) del siguiente modo:
+
+   ```Transact-SQL
+   ALTER AVAILABILITY GROUP *group_name* MODIFY REPLICA ON '*server_name*'  
+      WITH ( {  
+           AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }
+              | FAILOVER_MODE = { AUTOMATIC | MANUAL }
+            }  )
+   ```
+
+   En el script anterior:
+
+      - *nombre_grupo* es el nombre del grupo de disponibilidad.  
   
-     ALTER AVAILABILITY GROUP *nombre_grupo* MODIFY REPLICA ON '*nombre_servidor*'  
+      - *server_name* es el nombre de equipo o el nombre de red del clúster de conmutación por error. En el caso de las instancias con nombre, agregue "\instance_name". Use el nombre que hospede la réplica que quiera modificar.
   
-     WITH ( {  
+   Para obtener más información sobre estos parámetros, vea [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
-     AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
-  
-     | FAILOVER_MODE = { AUTOMATIC | MANUAL }  
-  
-     }  )  
-  
-     donde  
-  
-    -   *nombre_grupo* es el nombre del grupo de disponibilidad.  
-  
-    -   { '*nombre_sistema*[\\*nombre_instancia*]' | '*nombre_red_FCI*[\\*nombre_instancia*]' }  
-  
-         Especifica la dirección de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica de disponibilidad que se va a modificar. Los componentes de esta dirección son los siguientes:  
-  
-         *nombre_sistema*  
-         Es el nombre de NetBIOS del sistema informático en el que reside una instancia del servidor independiente.  
-  
-         *nombre_red_FCI*  
-         Es el nombre de red que se utiliza para tener acceso a un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el que una instancia del servidor de destino es un asociado de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (un FCI).  
-  
-         *instance_name*  
-         Es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica de disponibilidad de destino. En el caso de una instancia del servidor predeterminada, *nombre_instancia* es opcional.  
-  
-     Para obtener más información sobre estos parámetros, vea [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md).  
-  
-     En el ejemplo siguiente, escrito en la réplica principal del grupo de disponibilidad *MyAG* , se cambia el modo de conmutación por error a conmutación automática por error en la réplica de disponibilidad que se encuentra en la instancia del servidor predeterminada en un equipo denominado *COMPUTER01*.  
+   En el ejemplo siguiente, escrito en la réplica principal del grupo de disponibilidad *MyAG* , se cambia el modo de conmutación por error a conmutación automática por error en la réplica de disponibilidad que se encuentra en la instancia del servidor predeterminada en un equipo denominado *COMPUTER01*.  
   
     ```  
     ALTER AVAILABILITY GROUP MyAG MODIFY REPLICA ON 'COMPUTER01' WITH  
@@ -112,7 +104,7 @@ caps.handback.revision: 27
   
 1.  Cambie el directorio (**cd**) a la instancia del servidor que hospeda la réplica principal.  
   
-2.  Use el cmdlet **Set-SqlAvailabilityReplica** con el parámetro **FailoverMode**. Cuando se establece una réplica en conmutación automática por error, puede que sea necesario usar el parámetro **AvailabilityMode** para cambiar la réplica al modo de disponibilidad de confirmación sincrónica.  
+2.  Use el cmdlet **Set-SqlAvailabilityReplica** con el parámetro **FailoverMode** . Cuando se establece una réplica en conmutación automática por error, puede que sea necesario usar el parámetro **AvailabilityMode** para cambiar la réplica al modo de disponibilidad de confirmación sincrónica.  
   
      Por ejemplo, el comando siguiente modifica la réplica `MyReplica` en el grupo de disponibilidad `MyAg` para utilizar el modo de disponibilidad de confirmación sincrónica y admitir la conmutación automática por error.  
   
@@ -128,9 +120,10 @@ caps.handback.revision: 27
   
 -   [Proveedor de PowerShell de SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Modos de disponibilidad &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Conmutación por error y modos de conmutación por error &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)  
   
   
+

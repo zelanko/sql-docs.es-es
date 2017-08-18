@@ -1,24 +1,29 @@
 ---
-title: "Ver las propiedades de una r&#233;plica de disponibilidad (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - ", directivas"
+title: "Ver las propiedades de una réplica de disponibilidad (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ', policies'
 ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 3118b56aa9c7b88c3fe22e6a410a39c11986d073
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Ver las propiedades de una r&#233;plica de disponibilidad (SQL Server)
+# <a name="view-availability-replica-properties-sql-server"></a>Ver las propiedades de una réplica de disponibilidad (SQL Server)
   En este tema se describe cómo pueden verse las propiedades de una réplica de un grupo disponibilidad AlwaysOn con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)] en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 -   **Para ver las propiedades de una réplica de disponibilidad con:**  
@@ -32,13 +37,16 @@ caps.handback.revision: 12
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal y expanda el árbol.  
   
-2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad**.  
+2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad** .  
   
 3.  Expanda el grupo de disponibilidad al que la pertenece la réplica de disponibilidad y expanda el nodo **Réplicas de disponibilidad** .  
   
-4.  Haga clic con el botón derecho en la réplica de disponibilidad cuyas propiedades quiera ver y seleccione el comando **Propiedades**.  
+4.  Haga clic con el botón derecho en la réplica de disponibilidad cuyas propiedades quiera ver y seleccione el comando **Propiedades** .  
   
 5.  En el cuadro de diálogo **Propiedades de réplica de disponibilidad** , utilice la página **General** para ver las propiedades de esta réplica. Si está conectado a la réplica principal, puede cambiar las propiedades siguientes: modo de disponibilidad, modo de conmutación por error, acceso de conexión para el rol principal, acceso de lectura para el rol secundario (legible-secundario), y el valor de tiempo de espera de la sesión. Para obtener más información, vea [Propiedades de las réplicas de disponibilidad &#40;página General&#41;](../../../database-engine/availability-groups/windows/availability-replica-properties-general-page.md).  
+
+   [!NOTE]
+   >Si el tipo de clúster es none, no se puede cambiar el modo de conmutación por error.
   
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
@@ -75,7 +83,7 @@ caps.handback.revision: 12
  Determina si la réplica actual es la réplica de copia de seguridad preferida. Devuelve 1 si la base de datos de la instancia de servidor actual es la réplica preferida. De lo contrario, devuelve 0.  
   
 > [!NOTE]  
->  Para obtener más información sobre los contadores de rendimiento para réplicas de disponibilidad (el objeto de rendimiento **SQLServer:Availability Replica**), vea [SQL Server, réplica de disponibilidad](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
+>  Para obtener más información sobre los contadores de rendimiento para réplicas de disponibilidad (el objeto de rendimiento **SQLServer:Availability Replica**  ), vea [SQL Server, réplica de disponibilidad](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
@@ -85,7 +93,7 @@ caps.handback.revision: 12
   
 -   [Ver las propiedades del agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
   
--   [Directivas de AlwaysOn para problemas operativos con grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)  
+-   [Directivas de AlwaysOn para problemas operativos con grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)  
   
 -   [Usar el Panel AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
@@ -109,7 +117,7 @@ caps.handback.revision: 12
   
  **Para administrar una base de datos de disponibilidad**  
   
--   [Agregar una base de datos a un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-database-to-an-availability-group-sql-server.md)  
+-   [Agregar una base de datos a un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md)  
   
 -   [Combinar una base de datos secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
@@ -122,10 +130,11 @@ caps.handback.revision: 12
 -   [Quitar una base de datos principal de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)  
   
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Supervisar grupos de disponibilidad &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Directivas de AlwaysOn para problemas operativos con grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)   
+ [Directivas de AlwaysOn para problemas operativos con Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [Administración de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)  
   
   
+

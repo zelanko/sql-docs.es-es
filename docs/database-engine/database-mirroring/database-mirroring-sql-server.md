@@ -1,59 +1,49 @@
 ---
-title: "Creaci&#243;n de reflejo de la base de datos (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "asociados [SQL Server]"
-  - "servidores en espera [SQL Server]"
-  - "base de datos principal [SQL Server]"
-  - "servidor principal [SQL Server]"
-  - "asociados de creación de reflejo [SQL Server]"
-  - "bases de datos reflejadas [SQL Server]; vea creación de reflejos de la base de datos"
-  - "creación de reflejo de la base de datos [SQL Server], asociados"
-  - "disponibilidad [SQL Server]"
-  - "servidores en espera activos (vea supervisión de la base de datos [SQL Server])"
-  - "crear reflejo de la base de datos [SQL Server], acerca de crear reflejo de la base de datos"
-  - "base de datos reflejada [SQL Server]"
-  - "servidor reflejado [SQL Server]; vea creación de reflejo de la base de datos"
+title: "Creación de reflejo de la base de datos (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partners [SQL Server]
+- standby servers [SQL Server]
+- principal database [SQL Server]
+- principal server [SQL Server]
+- mirroring partners [SQL Server]
+- mirrored databases [SQL Server] See database mirroring
+- database mirroring [SQL Server], partners
+- availability [SQL Server]
+- hot standby servers (see database monitoring [SQL Server])
+- database mirroring [SQL Server], about database mirroring
+- mirror database [SQL Server]
+- mirror server [SQL Server] See database mirroring
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 caps.latest.revision: 125
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 123
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 40253151a07fe393046c7a1b0e20d4e5e7ce1212
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Creaci&#243;n de reflejo de la base de datos (SQL Server)
+# <a name="database-mirroring-sql-server"></a>Creación de reflejo de la base de datos (SQL Server)
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilice [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.  
   
  *Creación de reflejo de la base de datos* es una solución para aumentar la disponibilidad de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La creación de reflejo se implementa en cada una de las bases de datos y solo funciona con las que utilizan el modelo de recuperación completa.  
   
 > [!IMPORTANT]  
 >  Para obtener más información sobre la compatibilidad con la creación de reflejo de la base de datos, restricciones, requisitos previos, recomendaciones para configurar servidores asociados y recomendaciones para implementar la creación de reflejo de la base de datos de datos, vea [Requisitos previos, restricciones y recomendaciones para la creación de reflejo de la base de datos](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md).  
   
- **En este tema:**  
-  
--   [Ventajas de la creación de reflejo de la base de datos](#Benefits)  
-  
--   [Términos y definiciones](#TermsAndDefinitions)  
-  
--   [Información general de la creación de reflejos de la base de datos](#HowWorks)  
-  
--   [Configurar una sesión de creación de reflejo de la base de datos](#SettingUpDbmSession)  
-  
--   [Interoperabilidad y coexistencia con otras características del motor de base de datos](#InterOp)  
-  
--   [En esta sección](#InThisSection)  
-  
--   [Tareas relacionadas](#RelatedTasks)  
   
 ##  <a name="Benefits"></a> Ventajas de la creación de reflejo de la base de datos  
  La creación de reflejo de la base de datos es una estrategia sencilla que ofrece las siguientes ventajas:  
@@ -72,7 +62,6 @@ caps.handback.revision: 123
   
      Para minimizar el tiempo de inactividad para una base de datos reflejada, puede actualizar secuencialmente las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospedan los asociados de creación de reflejo de la base de datos. Esto incurrirá en el tiempo de inactividad de solo una conmutación por error única. Este formulario de actualización se conoce como *actualización gradual*. Para más información, consulte [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
- [&#91;Principio&#93;](#Top)  
   
 ##  <a name="TermsAndDefinitions"></a> Términos y definiciones de la creación de reflejo de la base de datos  
  conmutación automática por error  
@@ -114,7 +103,7 @@ caps.handback.revision: 123
  rol  
  El servidor principal y el servidor reflejado realizan roles de principal y reflejo complementarios. Opcionalmente, el rol de testigo la realiza una tercera instancia de servidor.  
   
- conmutación de roles  
+ Conmutación de roles  
  Asumir el rol principal por parte del reflejo.  
   
  cola de envío  
@@ -131,12 +120,11 @@ caps.handback.revision: 123
  Testigo  
  Para su uso únicamente con el modo de alta seguridad, instancia opcional de SQL Server que habilita al servidor reflejado para que reconozca cuándo se debe iniciar una conmutación automática por error. A diferencia de los dos asociados de conmutación por error, el testigo no sirve a la base de datos. El único rol del testigo es hacer posible la conmutación automática por error.  
   
- [&#91;Principio&#93;](#Top)  
   
 ##  <a name="HowWorks"></a> Información general de la creación de reflejos de la base de datos  
  La creación de reflejos de la base de datos mantiene dos copias de una sola base de datos que deben residir en diferentes instancias de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Generalmente, estas instancias de servidor residen en equipos de diferentes ubicaciones. A partir de una creación de reflejo de la base de datos en una base de datos, inicia una relación, denominada *sesión de creación de reflejo de la base de datos*, entre estas dos instancias de servidor.  
   
- Una instancia del servidor sirve la base de datos a los clientes (*servidor principal*). La otra instancia actúa como un servidor en estado de espera semiactiva (el *servidor reflejado*), dependiendo de la configuración y del estado de la sesión de creación de reflejo. Cuando una sesión de creación de reflejo de la base de datos está sincronizada, la creación de reflejo de la base de datos proporciona un servidor en espera activa que admite la conmutación por error rápida sin que se produzca ninguna pérdida de datos derivada de las transacciones confirmadas. Cuando la sesión no está sincronizada, el servidor reflejado suele estar disponible como servidor en espera activa (con posible pérdida de datos).  
+ Una instancia del servidor sirve la base de datos a los clientes ( *servidor principal*). La otra instancia actúa como un servidor en estado de espera semiactiva (el *servidor reflejado*), dependiendo de la configuración y del estado de la sesión de creación de reflejo. Cuando una sesión de creación de reflejo de la base de datos está sincronizada, la creación de reflejo de la base de datos proporciona un servidor en espera activa que admite la conmutación por error rápida sin que se produzca ninguna pérdida de datos derivada de las transacciones confirmadas. Cuando la sesión no está sincronizada, el servidor reflejado suele estar disponible como servidor en espera activa (con posible pérdida de datos).  
   
  Los dos servidores, principal y reflejado, se comunican y colaboran como *asociados* en una *sesión de creación de reflejo de la base de datos*. Los dos asociados tienen roles complementarios en la sesión: el *rol principal* y el *rol reflejado*. En cada momento, un asociado realiza el rol principal y el otro realiza el rol reflejado. Cada asociado se describe como *poseedor* de su rol actual. El asociado que posee el rol principal se denomina *servidor principal*y su copia de la base de datos es la base de datos principal actual. El asociado que posee el rol reflejado se denomina *servidor reflejado*y su copia de la base de datos es la base de datos reflejada actual. Cuando se implementa la creación de reflejo de la base de datos en un entorno de producción, la base de datos principal es la *base de datos de producción*.  
   
@@ -157,12 +145,11 @@ caps.handback.revision: 123
   
 -   [Impacto al pausar una sesión en el registro de transacciones del servidor principal](#ImpactOfPausing)  
   
- [&#91;Principio&#93;](#Top)  
   
 ###  <a name="OperatingModes"></a> Modos de funcionamiento  
  Una sesión de creación de reflejo de la base de datos se ejecuta en modo sincrónico o asincrónico. Con el funcionamiento asincrónico, las transacciones se confirman sin esperar a que el servidor reflejado escriba el registro en el disco, lo que maximiza el rendimiento. Con el funcionamiento sincrónico, una transacción se confirma en ambos asociados, pero a costa de aumentar la latencia de las transacciones.  
   
- Existen dos modos de funcionamiento de la creación de reflejo. Uno de ellos, el *modo de alta seguridad*, admite el funcionamiento sincrónico. En el modo de alta seguridad, cuando se inicia una sesión, el servidor reflejado sincroniza la base de datos reflejada con la base de datos principal lo más rápido posible. Una vez sincronizadas las bases de datos, una transacción se confirma en ambos asociados, pero a costa de aumentar la latencia de las transacciones.  
+ Existen dos modos de funcionamiento de la creación de reflejo. Uno de ellos, el *modo de alta seguridad* , admite el funcionamiento sincrónico. En el modo de alta seguridad, cuando se inicia una sesión, el servidor reflejado sincroniza la base de datos reflejada con la base de datos principal lo más rápido posible. Una vez sincronizadas las bases de datos, una transacción se confirma en ambos asociados, pero a costa de aumentar la latencia de las transacciones.  
   
  El segundo modo de funcionamiento, el *modo de alto rendimiento*, se ejecuta de manera asincrónica. El servidor reflejado intenta hacer frente a las entradas de registro enviadas por el servidor principal. La base de datos reflejada podría retrasarse ligeramente en relación con la base de datos principal. No obstante, lo habitual es que dicha diferencia sea pequeña. Sin embargo, la diferencia puede ser considerable si el servidor principal soporta una gran carga de trabajo o el sistema del servidor reflejado se encuentra sobrecargado.  
   
@@ -183,7 +170,6 @@ caps.handback.revision: 123
 > [!NOTE]  
 >  El establecimiento de una nueva sesión de creación de reflejo o la incorporación de un testigo a una configuración de creación de reflejo existente requiere que en todas las instancias de servidor involucradas se ejecute la misma versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sin embargo, al actualizar a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o a una versión posterior, pueden existir variaciones en las versiones de las instancias involucradas. Para más información, consulte [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
- [&#91;Principio&#93;](#Top)  
   
 ####  <a name="TxnSafety"></a> Seguridad de las transacciones y modos de funcionamiento  
  Que el modo operativo sea asincrónico o sincrónico depende de la configuración de seguridad de las transacciones. Si utiliza exclusivamente [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para configurar la creación de reflejo de la base de datos, la configuración de seguridad de las transacciones se realiza automáticamente cuando selecciona el modo operativo.  
@@ -196,20 +182,19 @@ caps.handback.revision: 123
   
  Para más información, consulte [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
- [&#91;Principio&#93;](#Top)  
   
 ###  <a name="RoleSwitching"></a> Conmutación de roles  
  En el contexto de una sesión de creación de reflejo de la base de datos, los roles principal y reflejado suelen ser intercambiables en un proceso conocido como *conmutación de roles*. La conmutación de roles implica la transferencia del rol principal al servidor reflejado. En la conmutación de roles, el servidor reflejado actúa como el *asociado de conmutación por error* del servidor principal. Cuando se produce una conmutación de roles, el servidor reflejado asume el rol de servidor principal y pone en línea su copia de la base de datos como la nueva base de datos principal. El servidor principal anterior, si está disponible, asume el rol reflejado y su base de datos se convierte en la nueva base de datos reflejada. Los roles pueden conmutarse repetidamente.  
   
  Hay tres formas de intercambiar roles.  
   
--   *Conmutación por error automática*  
+-   *Automatic failover*  
   
      Esta función requiere el modo de alta seguridad y la presencia del servidor reflejado y de un testigo. La base de datos ya debe estar sincronizada y el testigo debe estar conectado al servidor reflejado.  
   
      El rol del testigo es comprobar si un determinado servidor asociado está activo y en funcionamiento. Si el servidor reflejado pierde su conexión con el servidor principal, pero el testigo aún está conectado al servidor principal, el servidor reflejado no inicia una conmutación por error. Para obtener más información, vea [Testigo de creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-witness.md).  
   
--   *Conmutación por error manual*  
+-   *Manual failover*  
   
      Esta función requiere el modo de alta seguridad. Los asociados deben estar conectados entre sí y la base de datos ya debe estar sincronizada.  
   
@@ -222,10 +207,9 @@ caps.handback.revision: 123
   
  En cualquier escenario de conmutación de roles, una vez que la nueva base de datos principal se pone en línea, las aplicaciones cliente se pueden recuperar rápidamente si vuelven a conectarse a la base de datos.  
   
- [&#91;Principio&#93;](#Top)  
   
 ###  <a name="ConcurrentSessions"></a> Sesiones simultáneas  
- Una determinada instancia de servidor puede participar en varias sesiones simultáneas de creación de reflejo de la base de datos (una por cada base de datos reflejada) con la misma instancia o con instancias de servidor distintas. Con frecuencia, una instancia de servidor sirve exclusivamente como asociado o como token en todas las sesiones de creación de reflejo de la base de datos. Sin embargo, puesto que cada sesión depende de las demás, una instancia de servidor puede actuar como asociado en algunas sesiones y como token en otras. Por ejemplo, considere las siguientes cuatro sesiones entre tres instancias de servidor (`SSInstance_1`, `SSInstance_2` y `SSInstance_3`). Cada estancia de servidor sirve como asociado en algunas sesiones y como token en otras:  
+ Una determinada instancia de servidor puede participar en varias sesiones simultáneas de creación de reflejo de la base de datos (una por cada base de datos reflejada) con la misma instancia o con instancias de servidor distintas. Con frecuencia, una instancia de servidor sirve exclusivamente como asociado o como token en todas las sesiones de creación de reflejo de la base de datos. Sin embargo, puesto que cada sesión depende de las demás, una instancia de servidor puede actuar como asociado en algunas sesiones y como token en otras. Por ejemplo, considere las siguientes cuatro sesiones entre tres instancias de servidor (`SSInstance_1`, `SSInstance_2`y `SSInstance_3`). Cada estancia de servidor sirve como asociado en algunas sesiones y como token en otras:  
   
 |Instancia del servidor|Sesión para la base de datos A|Sesión para la base de datos B|Sesión para la base de datos C|Sesión para la base de datos D|  
 |---------------------|----------------------------|----------------------------|----------------------------|----------------------------|  
@@ -233,7 +217,7 @@ caps.handback.revision: 123
 |`SSInstance_2`|Asociado|Testigo|Asociado|Asociado|  
 |`SSInstance_3`|Asociado|Asociado|Testigo|Testigo|  
   
- En la siguiente ilustración se muestran dos instancias de servidor que participan como asociados en dos sesiones de creación de reflejo. Una sesión es para una base de datos llamada **Db_1** y la otra, para una base de datos llamada **Db_2**.  
+ En la siguiente ilustración se muestran dos instancias de servidor que participan como asociados en dos sesiones de creación de reflejo. Una sesión es para una base de datos llamada **Db_1**y la otra, para una base de datos llamada **Db_2**.  
   
  ![Dos instancias de servidor en dos sesiones simultáneas](../../database-engine/database-mirroring/media/dbm-concurrent-sessions.gif "Dos instancias de servidor en dos sesiones simultáneas")  
   
@@ -241,15 +225,14 @@ caps.handback.revision: 123
   
  Como ejemplo adicional, suponga una instancia de servidor que sea el servidor principal de dos o más bases de datos que se ejecutan en modo de alta seguridad con conmutación automática por error. Si se produce un error en la instancia de servidor, todas las bases de datos realizan automáticamente la conmutación por error a sus respectivas bases de datos reflejadas.  
   
- Al configurar una instancia de servidor para que actúe como asociado y token, asegúrese de que el punto de conexión de creación de reflejo de la base de datos admite ambos roles (para obtener más información, vea [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server &#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)). Asegúrese también de que el sistema dispone de suficientes recursos para reducir la contención de recursos.  
+ Al configurar una instancia de servidor para que actúe como asociado y token, asegúrese de que el punto de conexión de creación de reflejo de la base de datos admite ambos roles (para obtener más información, vea [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)). Asegúrese también de que el sistema dispone de suficientes recursos para reducir la contención de recursos.  
   
 > [!NOTE]  
 >  Dado que las bases de datos reflejadas son independientes entre sí, no pueden realizar la conmutación por error en grupo.  
   
 ###  <a name="ClientConnections"></a> Conexiones de cliente  
- El proveedor de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona compatibilidad con la conexión de cliente en sesiones de creación de reflejo de la base de datos. Para obtener más información, vea [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ El proveedor de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]proporciona compatibilidad con la conexión de cliente en sesiones de creación de reflejo de la base de datos. Para obtener más información, vea [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
- [&#91;Principio&#93;](#Top)  
   
 ###  <a name="ImpactOfPausing"></a> Impacto al pausar una sesión en el registro de transacciones del servidor principal  
  En cualquier momento, el propietario de la base de datos puede pausar una sesión. La pausa preserva el estado de la sesión mientras se quita la creación de reflejo. Cuando se pausa una sesión, el servidor principal no envía ninguna entrada del registro nueva al servidor reflejado. Todas estas entradas permanecen activas y se acumulan en el registro de transacciones de la base de datos principal. Mientras una sesión de creación de reflejo de la base de datos permanece pausada, el registro de transacciones no se puede truncar. Por tanto, si se realiza una pausa demasiado larga en la sesión de creación de reflejo de la base de datos, el registro puede llenarse.  
@@ -274,7 +257,7 @@ caps.handback.revision: 123
  [Requisitos previos, restricciones y recomendaciones para la creación de reflejo de la base de datos](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  Describe los requisitos previos y las recomendaciones para configurar la creación de reflejo de la base de datos.  
   
- [Modos de funcionamiento de la creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
+ [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
  Contiene información sobre los modos de funcionamiento sincrónicos y asincrónicos para las sesiones de creación de reflejo de la base de datos y sobre cómo intercambiar los roles de asociado durante una sesión de creación de reflejo de la base de datos.  
   
  [Testigo de creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-witness.md)  
@@ -284,7 +267,7 @@ caps.handback.revision: 123
  Contiene información sobre cómo intercambiar los roles de asociado durante una sesión de creación de reflejo de la base de datos, incluida la conmutación automática por error, la conmutación por error manual y el servicio forzado (con posible pérdida de datos). Además contiene información sobre cómo calcular la interrupción de servicio durante el cambio de rol.  
   
  [Posibles errores durante la creación de reflejo de la base de datos](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)  
- Explica los problemas físicos, de sistema operativo y de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluidos los errores de hardware y de software, que pueden provocar un error en la sesión de creación de reflejo de la base de datos. Explica cómo el mecanismo de tiempo de espera de creación de reflejo responde a los errores de software.  
+ Explica los problemas físicos, de sistema operativo y de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluidos los errores de hardware y de software, que pueden provocar un error en la sesión de creación de reflejo de la base de datos. Explica cómo el mecanismo de tiempo de espera de creación de reflejo responde a los errores de software.  
   
  [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
  Explica cómo funciona el extremo de creación de reflejo de la base de datos.  
@@ -304,28 +287,27 @@ caps.handback.revision: 123
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
  Contiene información sobre cómo usar el Monitor de creación de reflejo de la base de datos o de los procedimientos almacenados **dbmmonitor** para supervisar las sesiones o la creación de reflejo de la base de datos.  
   
- [&#91;Principio&#93;](#Top)  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   
-### Tareas de configuración  
+### <a name="configuration-tasks"></a>Tareas de configuración  
  **Usar SQL Server Management Studio**  
   
--   [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+-   [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
--   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
  **Usar Transact-SQL**  
   
--   [Permitir el acceso de red a un punto de conexión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md)  
+-   [Permitir el acceso de red a un punto de conexión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)  
   
--   [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones salientes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md)  
+-   [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones salientes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
--   [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones entrantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md)  
+-   [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones entrantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
 -   [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
+-   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
   
 -   [Agregar un testigo de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
@@ -333,13 +315,12 @@ caps.handback.revision: 123
   
  **Usar Transact-SQL o SQL Server Management Studio**  
   
--   [Actualización de instancias reflejadas](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)  
+-   [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)  
   
 -   [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
- [&#91;Principio&#93;](#Top)  
   
-### Tareas administrativas  
+### <a name="administrative-tasks"></a>Tareas administrativas  
  **Transact-SQL**  
   
 -   [Cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
@@ -366,9 +347,8 @@ caps.handback.revision: 123
   
 -   [Quitar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
- [&#91;Principio&#93;](#Top)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Reparación de página automática &#40;grupos de disponibilidad/creación de reflejo de la base de datos&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Solucionar problemas de configuración de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
@@ -378,3 +358,4 @@ caps.handback.revision: 123
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
   
+

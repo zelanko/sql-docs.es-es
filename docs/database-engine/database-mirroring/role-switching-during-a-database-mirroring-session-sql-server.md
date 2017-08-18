@@ -1,37 +1,42 @@
 ---
-title: "Conmutaci&#243;n de roles durante una sesi&#243;n de creaci&#243;n de reflejo de la base de datos (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "conmutación de roles [SQL Server]"
-  - "asociados de creación de reflejo [SQL Server]"
-  - "conmutación por error [SQL Server]"
-  - "asociados de conmutación por error [SQL Server]"
-  - "creación de reflejo de la base de datos [SQL Server], asociados"
-  - "asociados en sesiones de reflejo de base de datos [SQL Server]"
-  - "conmutación por error [SQL Server], creación de reflejo de la base de datos"
-  - "creación de reflejo de la base de datos (SQL Server), conmutación por error"
+title: "Conmutación de roles durante una sesión de creación de reflejo de la base de datos (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- role switching [SQL Server]
+- mirroring partners [SQL Server]
+- failover [SQL Server]
+- failover partners [SQL Server]
+- database mirroring [SQL Server], partners
+- partners in database mirroring sessions [SQL Server]
+- failover [SQL Server], database mirroring
+- database mirroring [SQL Server], failover
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 caps.latest.revision: 50
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: e49ab29353985dc5e3de035b7a67da9928412c23
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Conmutaci&#243;n de roles durante una sesi&#243;n de creaci&#243;n de reflejo de la base de datos (SQL Server)
+# <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Conmutación de roles durante una sesión de creación de reflejo de la base de datos (SQL Server)
   En el contexto de una sesión de creación de reflejo de la base de datos, los roles principal y reflejado suelen ser intercambiables en un proceso conocido como *conmutación de roles*. En la conmutación de roles, el servidor reflejado actúa como el *asociado de conmutación por error* para el servidor principal al asumir el rol principal, y al recuperar su copia de la base de datos y ponerla en línea como la nueva base de datos principal. El servidor principal anterior, cuando esté disponible, asumirá el rol reflejado y su base de datos se convertirá en la nueva base de datos reflejada. Potencialmente, los roles pueden conmutarse como respuesta a varios errores o con fines administrativos.  
   
 > [!NOTE]  
 >  En este tema se supone que está familiarizado con los modos operativos de creación de reflejo de la base de datos. Para más información, consulte [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
- En la siguiente ilustración se muestran los asociados de creación de reflejo **Partner_A** y **Partner_B** en el proceso de conmutación de los roles principal y reflejo durante una serie de conmutaciones por error automáticas o manuales.  
+ En la siguiente ilustración se muestran los asociados de creación de reflejo **Partner_A** y **Partner_B**en el proceso de conmutación de los roles principal y reflejo durante una serie de conmutaciones por error automáticas o manuales.  
   
  ![Dos intercambios de asociados entre roles](../../database-engine/database-mirroring/media/dbm-roleswitching.gif "Dos intercambios de asociados entre roles")  
   
@@ -72,9 +77,9 @@ caps.handback.revision: 50
   
  Tras una conmutación de roles, deben existir ciertos metadatos en ambos asociados para garantizar que todos los usuarios de bases de datos puedan tener acceso a la nueva base de datos principal. Además, se deben crear los trabajos de copia de seguridad en el nuevo servidor principal para garantizar que se siga realizando una copia de seguridad de la base de datos de acuerdo con su programación periódica. Para obtener más información, vea [Administración de inicios de sesión y trabajos tras la conmutación de roles &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
- Durante una conmutación de roles, la cantidad de tiempo que la creación de reflejo de la base de datos estará sin servicio depende del tipo de conmutación de roles y de la causa. Para obtener más información, vea [Calcular la interrupción del servicio durante la conmutación de roles &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
+ Durante una conmutación de roles, la cantidad de tiempo que la creación de reflejo de la base de datos estará sin servicio depende del tipo de conmutación de roles y de la causa. Para más información, consulte [Calcular la interrupción del servicio durante la conmutación de roles &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
   
-##  <a name="ManualFailover"></a> Conmutación por error manual  
+##  <a name="ManualFailover"></a> Manual Failover  
  La conmutación por error manual desconecta los clientes de la base de datos e invierte los roles de los asociados. El modo de alta seguridad es el único que admite la conmutación por error manual.  
   
  **En esta sección:**  
@@ -122,7 +127,7 @@ caps.handback.revision: 50
     > [!NOTE]  
     >  Tan pronto como el nuevo servidor reflejado haya resincronizado las bases de datos, la conmutación por error vuelve a ser posible, pero en la dirección inversa.  
   
- Tras la conmutación por error, los clientes deben volver a conectarse a la base de datos principal actual. Para obtener más información, vea [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ Tras la conmutación por error, los clientes deben volver a conectarse a la base de datos principal actual. Para más información, consulte [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
  **Para iniciar la conmutación por error manual**  
   
@@ -130,7 +135,7 @@ caps.handback.revision: 50
   
 -   [Realizar una conmutación por error manualmente de una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   
-##  <a name="AutomaticFailover"></a> Conmutación automática por error  
+##  <a name="AutomaticFailover"></a> Automatic Failover  
  La conmutación automática por error solo se admite en sesiones de creación de reflejo de la base de datos que se ejecutan con un testigo en modo de alta seguridad (*modo de alta seguridad con conmutación automática por error*). En modo de alta seguridad con conmutación automática por error, una vez que se ha sincronizado la base de datos, si la base de datos principal deja de estar disponible, se produce la conmutación automática por error. La conmutación automática por error hace que el servidor reflejado asuma el rol de servidor principal y ponga en línea su copia de la base de datos como base de datos principal. El hecho de que se requiera la sincronización de la base de datos evita que se pierdan datos durante la conmutación por error, dado que cada transacción confirmada en la base de datos principal también se confirma en la base de datos reflejada.  
   
 > [!IMPORTANT]  
@@ -182,12 +187,12 @@ caps.handback.revision: 50
   
  ![Conmutación por error automática](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "Conmutación por error automática")  
   
- Inicialmente, los tres servidores están conectados (es decir, la sesión tiene un quórum completo). **Partner_A** es el servidor principal y **Partner_B**, el servidor reflejado. **Partner_A** (o la base de datos principal en **Partner_A**) pasa a no estar disponible. El testigo y **Partner_B** reconocen que el servidor principal ya no está disponible y la sesión conserva el cuórum. **Partner_B** se convierte en el servidor principal y hace que su copia de la base de datos esté disponible como la nueva base de datos principal. Finalmente, **Partner_A** se vuelve a conectar a la sesión y descubre que **Partner_B** posee ahora el rol principal. Por tanto, **Partner_A** asume el rol reflejado.  
+ Inicialmente, los tres servidores están conectados (es decir, la sesión tiene un quórum completo). **Partner_A** es el servidor principal y **Partner_B** , el servidor reflejado. **Partner_A** (o la base de datos principal en **Partner_A**) pasa a no estar disponible. El testigo y **Partner_B** reconocen que el servidor principal ya no está disponible y la sesión conserva el cuórum. **Partner_B** se convierte en el servidor principal y hace que su copia de la base de datos esté disponible como la nueva base de datos principal. Finalmente, **Partner_A** se vuelve a conectar a la sesión y descubre que **Partner_B** posee ahora el rol principal. Por tanto,**Partner_A** asume el rol reflejado.  
   
- Tras la conmutación por error, los clientes deben volver a conectarse a la base de datos principal actual. Para obtener más información, vea [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ Tras la conmutación por error, los clientes deben volver a conectarse a la base de datos principal actual. Para más información, consulte [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 > [!NOTE]  
->  Las transacciones que se han preparado mediante el Coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../includes/msconame-md.md)], pero que aún no están confirmadas en el momento de la conmutación por error, se consideran anuladas tras la conmutación por error de la base de datos.  
+>  Las transacciones que se han preparado mediante el Coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , pero que aún no están confirmadas en el momento de la conmutación por error, se consideran anuladas tras la conmutación por error de la base de datos.  
   
 ###  <a name="DisableAutoSSMS"></a> Para deshabilitar la conmutación automática por error (SQL Server Management Studio)  
  Abra la página **Creación de reflejo** de Propiedades de la base de datos y cambie el modo de funcionamiento seleccionando una de las opciones siguientes:  
@@ -210,7 +215,7 @@ caps.handback.revision: 50
     > [!NOTE]  
     >  Desactivar el testigo mientras se mantiene la seguridad de las transacciones completa pone la sesión en modo de alta seguridad sin conmutación automática por error.  
   
-##  <a name="ForcedService"></a> Servicio forzado (con posible pérdida de datos)  
+##  <a name="ForcedService"></a> Forced Service (with Possible Data Loss)  
  La creación de reflejo de base de datos permite forzar el servicio (con posible pérdida de datos) como método de recuperación de desastres para permitir el uso de un servidor reflejado como servidor en espera activa. Solo se puede forzar el servicio si el servidor principal se desconecta del servidor reflejado en una sesión de creación de reflejo. Puesto que forzar el servicio puede suponer una posible pérdida de datos, se debe hacer con precaución y moderación.  
   
  La compatibilidad con el servicio forzado depende del modo de funcionamiento y del estado de la sesión, según se indica a continuación:  
@@ -264,7 +269,7 @@ caps.handback.revision: 50
 ###  <a name="ManageDataLoss"></a> Administrar la potencial pérdida de datos  
  Después de forzar el servicio, una vez que el servidor principal anterior está disponible, siempre que su base de datos no esté dañada, se puede intentar administrar la posible pérdida de datos. El enfoque disponible para administrar la posible pérdida de datos depende de si el servidor principal original se ha vuelto a conectar a su asociado o se ha vuelto a unir a la sesión de creación de reflejo. Suponiendo que el servidor principal original pueda tener acceso a la nueva instancia principal, la reconexión se produce de forma automática y transparente.  
   
-#### El servidor principal original se ha vuelto a conectar  
+#### <a name="the-original-principal-server-has-reconnected"></a>El servidor principal original se ha vuelto a conectar  
  Generalmente, después de un problema, cuando el servidor principal original se reinicia, se vuelve a conectar rápidamente a su asociado. Al reconectarse, el servidor principal original se convierte en el servidor reflejado. Su base de datos se convierte en la base de datos reflejada y entra en el estado de recuperación antes de suspenderse la sesión. La base de datos reflejada no se revertirá a menos que se reanude la creación de reflejo.  
   
  Sin embargo, la recuperación de la base de datos es inaccesible; por lo tanto, no se puede inspeccionar para evaluar qué datos se perderían si se reanudara la creación de reflejo. Por lo tanto, la decisión de si reanudar o quitar el reflejo depende de si se está dispuesto a aceptar de algún modo la pérdida de datos.  
@@ -277,7 +282,7 @@ caps.handback.revision: 50
   
      Al reanudar la creación de reflejo, la nueva base de datos reflejada se revierte como primer paso para sincronizarla. Si alguna entrada del registro estuviera esperando en la cola de envío en el momento del problema, se perderían las transacciones correspondientes, incluso si se hubieran confirmado.  
   
-#### El servidor principal original no se ha vuelto a conectar  
+#### <a name="the-original-principal-server-has-not-reconnected"></a>El servidor principal original no se ha vuelto a conectar  
  Si puede impedir temporalmente que el servidor principal original se vuelva a conectar a través de la red al nuevo servidor principal, puede inspeccionar la base de datos principal original para evaluar qué datos se perderían si se reanudara la creación de reflejo.  
   
 -   Si la posible pérdida de datos es aceptable  
@@ -307,9 +312,9 @@ caps.handback.revision: 50
   
 -   [Configurar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)  
   
--   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Calcular la interrupción del servicio durante la conmutación de roles &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
  [Posibles errores durante la creación de reflejo de la base de datos](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   

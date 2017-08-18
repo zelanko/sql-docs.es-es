@@ -1,31 +1,36 @@
 ---
-title: "Establecer la opci&#243;n de configuraci&#243;n del servidor Intervalo de recuperaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "restaurar intervalo de recuperación [SQL Server]"
-  - "puntos de comprobación [SQL Server]"
-  - "recovery interval, opción [SQL Server]"
-  - "recovery interval, opción predeterminada"
-  - "tiempo [SQL Server], intervalo de recuperación"
-  - "intervalo de recuperación [SQL Server]"
-  - "número máximo de minutos por recuperación de base de datos"
-  - "recuperación [SQL Server], recovery interval, opción"
+title: "Establecer la opción de configuración del servidor Intervalo de recuperación | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring recovery interval [SQL Server]
+- checkpoints [SQL Server]
+- recovery interval option [SQL Server]
+- default recovery interval option
+- time [SQL Server], recovery interval
+- interval for recovery [SQL Server]
+- maximum number of minutes per database recovery
+- recovery [SQL Server], recovery interval option
 ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9b07822ce0611d8fdd7de6f1dc4fd369d0128717
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Establecer la opci&#243;n de configuraci&#243;n del servidor Intervalo de recuperaci&#243;n
+# <a name="configure-the-recovery-interval-server-configuration-option"></a>Establecer la opción de configuración del servidor Intervalo de recuperación
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   En este tema se describe cómo establecer la opción de configuración del servidor **intervalo de recuperación** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de **intervalo de recuperación** define un límite superior para el tiempo que debe tardar la recuperación de cada base de datos. El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usa el valor especificado en esta opción para determinar aproximadamente la frecuencia con la que deben emitirse los [puntos de comprobación automáticos](../../relational-databases/logs/database-checkpoints-sql-server.md) en una base de datos determinada.  
@@ -67,7 +72,7 @@ caps.handback.revision: 39
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el nivel de servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
+ De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
  **Para establecer el intervalo de recuperación**  
@@ -76,11 +81,11 @@ caps.handback.revision: 39
   
 2.  Haga clic en el nodo **Configuración de base de datos** .  
   
-3.  En **Recuperación**, en el cuadro **Intervalo de recuperación (min)**, escriba o seleccione un valor entre 0 y 32767 para establecer el tiempo máximo, en minutos, que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe emplear en recuperar cada base de datos cuando se inicia. El valor predeterminado es 0, que indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo configura automáticamente. En la práctica, esto significa un tiempo de recuperación inferior a un minuto y un punto de comprobación aproximadamente cada minuto para bases de datos activas.  
+3.  En **Recuperación**, en el cuadro **Intervalo de recuperación (min)** , escriba o seleccione un valor entre 0 y 32767 para establecer el tiempo máximo, en minutos, que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe emplear en recuperar cada base de datos cuando se inicia. El valor predeterminado es 0, que indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lo configura automáticamente. En la práctica, esto significa un tiempo de recuperación inferior a un minuto y un punto de comprobación aproximadamente cada minuto para bases de datos activas.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para establecer el intervalo de recuperación  
+#### <a name="to-set-the-recovery-interval"></a>Para establecer el intervalo de recuperación  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -104,15 +109,16 @@ GO
   
  Para obtener más información, vea [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción de intervalo de recuperación  
+##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción de intervalo de recuperación  
  La configuración surte efecto inmediatamente, sin necesidad de reiniciar el servidor.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Cambiar el tiempo de recuperación de destino de una base de datos &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)   
  [Puntos de comprobación de base de datos &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [show advanced options (opción de configuración del servidor)](../../database-engine/configure-windows/show-advanced-options-server-configuration-option.md)   
+ [Opción de configuración del servidor Mostrar opciones avanzadas](../../database-engine/configure-windows/show-advanced-options-server-configuration-option.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)  
   
   
+

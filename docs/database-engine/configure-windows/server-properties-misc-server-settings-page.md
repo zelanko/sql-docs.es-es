@@ -1,27 +1,32 @@
 ---
-title: "Propiedades del servidor (p&#225;gina Configuraci&#243;n adicional del servidor) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.miscserversettings.f1"
+title: "Propiedades del servidor (página Configuración adicional del servidor) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.miscserversettings.f1
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 53069a083eff6c49fa5198743eb626ca429b96d1
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propiedades del servidor (p&#225;gina Configuraci&#243;n adicional del servidor)
+# <a name="server-properties---misc-server-settings-page"></a>Propiedades del servidor (página Configuración adicional del servidor)
   Utilice esta página para ver o modificar la configuración del servidor.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Idioma predeterminado para el usuario**  
  Especifica el idioma predeterminado de los nuevos inicios de sesión creados.  
   
@@ -37,12 +42,12 @@ caps.handback.revision: 22
  Establezca el año final en el cuadro de la derecha. Cuando se guarda el año final, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra automáticamente el año inicial en el cuadro izquierdo.  
   
  **Valores configurados**  
- Muestra los valores configurados para las opciones de este panel. Si cambia estos valores, haga clic en **Valores actuales** para comprobar si los cambios han surtido efecto. Si los cambios no han surtido efecto, debe reiniciarse la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Muestra los valores configurados para las opciones de este panel. Si cambia estos valores, haga clic en **Valores actuales** para comprobar si los cambios han surtido efecto. Si los cambios no han surtido efecto, debe reiniciarse la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Valores actuales**  
  Presenta los valores actuales de las opciones de este panel. Estos valores son de solo lectura.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

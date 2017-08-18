@@ -1,28 +1,33 @@
 ---
-title: "Quitar una r&#233;plica secundaria de un grupo de disponibilidad (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.removesecondaryar.f1"
-helpviewer_keywords: 
-  - "Grupos de disponibilidad [SQL Server], réplicas de disponibilidad"
-  - "Grupos de disponibilidad [SQL Server], configurar"
+title: "Quitar una réplica secundaria de un grupo de disponibilidad (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.removesecondaryar.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], configuring
 ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
 caps.latest.revision: 38
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c0faf42e9f7ad186523fc6f0b704b9a2e3c15e10
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Quitar una r&#233;plica secundaria de un grupo de disponibilidad (SQL Server)
-  En este tema se explica cómo quitar una réplica secundaria de un grupo de disponibilidad AlwaysOn con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+# <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>Quitar una réplica secundaria de un grupo de disponibilidad (SQL Server)
+  En este tema se explica cómo quitar una réplica secundaria de un grupo de disponibilidad AlwaysOn con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 -   **Antes de empezar:**  
   
@@ -64,13 +69,13 @@ caps.handback.revision: 38
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal y expanda el árbol.  
   
-2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad**.  
+2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad** .  
   
 3.  Seleccione el grupo de disponibilidad y expanda el nodo **Réplicas de disponibilidad** .  
   
 4.  Este paso depende de si desea quitar varias réplicas o solo una, del modo siguiente:  
   
-    -   Para quitar varias réplicas, use el panel **Detalles del Explorador de objetos** para ver y seleccionar todas las réplicas que desea quitar. Para obtener más información, vea [Usar los detalles del Explorador de objetos para supervisar los grupos de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use object explorer details to monitor availability groups.md).  
+    -   Para quitar varias réplicas, use el panel **Detalles del Explorador de objetos** para ver y seleccionar todas las réplicas que desea quitar. Para obtener más información, vea [Usar los detalles del Explorador de objetos para supervisar los grupos de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md).  
   
     -   Para quitar una sola réplica, selecciónela en el panel **Explorador de objetos** o el panel **Detalles del Explorador de objetos** .  
   
@@ -100,7 +105,7 @@ caps.handback.revision: 38
   
 1.  Cambie el directorio (**cd**) a la instancia del servidor que hospeda la réplica principal.  
   
-2.  Use el cmdlet **Remove-SqlAvailabilityReplica**.  
+2.  Use el cmdlet **Remove-SqlAvailabilityReplica** .  
   
      Por ejemplo, el comando siguiente quita la réplica de disponibilidad en el servidor `MyReplica` del grupo de disponibilidad denominado `MyAg`.  Este comando debe ejecutarse en la instancia del servidor que hospeda la réplica principal del grupo de disponibilidad.  
   
@@ -116,14 +121,15 @@ caps.handback.revision: 38
   
 -   [Proveedor de PowerShell de SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="PostBestPractices"></a> Seguimiento: después de quitar una réplica secundaria  
+##  <a name="PostBestPractices"></a> Seguimiento: después de quitar una réplica secundaria  
  Si especifica una réplica que no está actualmente disponible, cuando la réplica se ponga en línea, detectará que se ha quitado.  
   
  Quitar una réplica produce la detención de la recepción de datos Después de que una réplica secundaria confirma que se ha quitado del almacén global, la réplica quita la configuración del grupo disponibilidad de las bases de datos, que permanecen en la instancia del servidor local en estado RECOVERING.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Agregar una réplica secundaria a un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)   
  [Quitar un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
   
   
+

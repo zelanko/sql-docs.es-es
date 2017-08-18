@@ -1,24 +1,29 @@
 ---
-title: "Instancia del servidor reflejado (Asistente para la configuraci&#243;n de seguridad de la creaci&#243;n de reflejo de bases de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.configdbmsecurwiz.mirrorsrvr.f1"
+title: "Instancia del servidor reflejado (Asistente para la configuración de seguridad de la creación de reflejo de bases de datos) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.configdbmsecurwiz.mirrorsrvr.f1
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 78dc5246eb4665e0f66af57198d5634cac502506
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Instancia del servidor reflejado (Asistente para la configuraci&#243;n de seguridad de la creaci&#243;n de reflejo de bases de datos)
+# <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>Instancia del servidor reflejado (Asistente para la configuración de seguridad de la creación de reflejo de bases de datos)
   Utilice esta página para especificar la información acerca de la instancia de servidor con la base de datos reflejada.  
   
 > [!IMPORTANT]  
@@ -26,13 +31,13 @@ caps.handback.revision: 42
   
  **Para configurar la creación de reflejo de la base de datos mediante SQL Server Management Studio**  
   
--   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
--   [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+-   [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Instancia del servidor reflejado**  
- Si ya se ha especificado una instancia de servidor reflejado (en la página **Creación de reflejo** del cuadro de diálogo **Propiedades de la base de datos**), se muestra dicha instancia. Para obtener más información, vea [Propiedades de la base de datos &#40;página Creación de reflejo&#41;](../../relational-databases/databases/database-properties-mirroring-page.md).  
+ Si ya se ha especificado una instancia de servidor reflejado (en la página **Creación de reflejo** del cuadro de diálogo **Propiedades de la base de datos** ), se muestra dicha instancia. Para obtener más información, vea [Propiedades de la base de datos &#40;página Creación de reflejo&#41;](../../relational-databases/databases/database-properties-mirroring-page.md).  
   
  De lo contrario, escriba el nombre de la instancia del servidor reflejado. Observe que la instancia del servidor reflejado no puede ser la misma que la instancia del servidor principal.  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 42
   
  Para deshabilitar el cifrado, quite la marca de la casilla. Para volver a habilitar el cifrado, active la casilla.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Propiedades de la base de datos &#40;página Creación de reflejo&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   

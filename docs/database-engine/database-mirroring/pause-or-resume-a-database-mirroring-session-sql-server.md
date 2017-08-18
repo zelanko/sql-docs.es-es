@@ -1,28 +1,33 @@
 ---
-title: "Pausar o reanudar una sesi&#243;n de creaci&#243;n de reflejo de la base de datos (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "reanudar reflejo de base de datos"
-  - "creación de reflejo de la base de datos [SQL Server], sesiones"
-  - "creación de reflejo de la base de datos [SQL Server], poner en pausa"
-  - "creación de reflejo de la base de datos (SQL Server), reanudar"
-  - "pausar reflejo de base de datos"
+title: "Pausar o reanudar una sesión de creación de reflejo de la base de datos (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resuming database mirroring
+- database mirroring [SQL Server], sessions
+- database mirroring [SQL Server], pausing
+- database mirroring [SQL Server], resuming
+- pausing database mirroring
 ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c8cb7cac464772284682e74d2f8157df190adcef
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Pausar o reanudar una sesi&#243;n de creaci&#243;n de reflejo de la base de datos (SQL Server)
+# <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>Pausar o reanudar una sesión de creación de reflejo de la base de datos (SQL Server)
   En este tema se describe cómo pausar o reanudar la creación de reflejo de la base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
@@ -53,13 +58,13 @@ caps.handback.revision: 34
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
  Para pausar o reanudar una sesión de creación de reflejo de la base de datos, use la página **Creación de reflejo de Propiedades de la base de datos** .  
   
-#### Para pausar o reanudar la creación de reflejo de la base de datos  
+#### <a name="to-pause-or-resume-database-mirroring"></a>Para pausar o reanudar la creación de reflejo de la base de datos  
   
 1.  Durante una sesión de creación de reflejo de la base de datos, conéctese a la instancia de servidor principal y, en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol de servidores.  
   
 2.  Expanda **Bases de datos**y seleccione la base de datos.  
   
-3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas** y haga clic en **Reflejado**. Así se abre la página **Creación de reflejo** del cuadro de diálogo **Propiedades de la base de datos** .  
+3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y, luego, haga clic en **Reflejado**. Así se abre la página **Creación de reflejo** del cuadro de diálogo **Propiedades de la base de datos** .  
   
 4.  Para pausar la sesión, haga clic en **Pausar**.  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 34
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### Para pausar la creación de reflejo de la base de datos  
+#### <a name="to-pause-database-mirroring"></a>Para pausar la creación de reflejo de la base de datos  
   
 1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)] para cualquier asociado.  
   
@@ -83,13 +88,13 @@ caps.handback.revision: 34
   
      donde *nombre_de_base_de_datos* es la base de datos reflejada cuya sesión se quiere suspender.  
   
-     En el ejemplo siguiente se pausa la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+     En el ejemplo siguiente se pausa la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET PARTNER SUSPEND;  
     ```  
   
-##### Para reanudar la creación de reflejo de la base de datos  
+##### <a name="to-resume-database-mirroring"></a>Para reanudar la creación de reflejo de la base de datos  
   
 1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)] para cualquier asociado.  
   
@@ -101,7 +106,7 @@ caps.handback.revision: 34
   
      donde *nombre_de_base_de_datos* es la base de datos reflejada cuya sesión se quiere reanudar.  
   
-     En el ejemplo siguiente se pausa la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+     En el ejemplo siguiente se pausa la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
@@ -111,7 +116,7 @@ caps.handback.revision: 34
   
 -   **Después de pausar la creación de reflejo de la base de datos**  
   
-     En la base de datos principal, tome precauciones para evitar que se llene el registro de transacciones. Para obtener más información, vea [Registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+     En la base de datos principal, tome precauciones para evitar que se llene el registro de transacciones. Para más información, consulte [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 -   **Después de reanudar la creación de reflejo de la base de datos**  
   
@@ -121,7 +126,7 @@ caps.handback.revision: 34
   
 -   [Quitar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

@@ -1,40 +1,34 @@
 ---
-title: "Modos de funcionamiento de la creaci&#243;n de reflejo de la base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "creación de reflejo de la base de datos [SQL Server], modos de funcionamiento"
+title: "Modos de funcionamiento de la creación de reflejo de la base de datos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], operating modes
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 4427cd045642ed4f59e1c9fdb0ab1a5916841bf0
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Modos de funcionamiento de la creaci&#243;n de reflejo de la base de datos
+# <a name="database-mirroring-operating-modes"></a>Modos de funcionamiento de la creación de reflejo de la base de datos
   En este tema se describen los modos de funcionamiento sincrónico y asincrónico para las sesiones de creación de reflejo de la base de datos.  
   
 > [!NOTE]  
 >  Para obtener una introducción a la creación de reflejo de la base de datos, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
- **En este tema:**  
-  
--   [Términos y definiciones](#TermsAndDefinitions)  
-  
--   [Operación asincrónica de creación de reflejo de la base de datos (Modo de alto rendimiento)](#async)  
-  
--   [Creación de reflejo sincrónico de la base de datos (modo de alta seguridad)](#Sync)  
-  
--   [Configuración de Transact-SQL y modos de funcionamiento de la creación de reflejo de la base de datos](#TsqlSettingsAndOpModes)  
-  
--   [Tareas relacionadas](#RelatedTasks)  
   
 ##  <a name="TermsAndDefinitions"></a> Términos y definiciones  
  En esta sección se presenta una serie de términos que son esenciales para este tema.  
@@ -51,11 +45,11 @@ caps.handback.revision: 21
  Testigo  
  Para su uso únicamente con el modo de alta seguridad, instancia opcional de SQL Server que habilita al servidor reflejado para que reconozca si se debe iniciar una conmutación automática por error. A diferencia de los dos asociados de conmutación por error, el testigo no sirve a la base de datos. El único rol del testigo es hacer posible la conmutación automática por error.  
   
-## Operación asincrónica de creación de reflejo de la base de datos (Modo de alto rendimiento)  
+## <a name="asynchronous-database-mirroring-high-performance-mode"></a>Operación asincrónica de creación de reflejo de la base de datos (Modo de alto rendimiento)  
  En esta sección se describe cómo funciona la creación de reflejo de la base de datos asincrónica, cuándo es adecuado utilizar el modo de alto rendimiento y cómo responder si se produce un error en el servidor principal.  
   
 > [!NOTE]  
->  La mayoría de las ediciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] solo admiten la creación de reflejo de la base de datos sincrónica (“Solo seguridad completa”). Para obtener información sobre las ediciones que admiten totalmente la creación de reflejo de la base de datos, vea "Alta disponibilidad (AlwaysOn)" en [Características compatibles con las ediciones de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+>  La mayoría de las ediciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] solo admiten la creación de reflejo de la base de datos sincrónica (“Solo seguridad completa”). Para más información sobre las ediciones que permiten totalmente crear reflejos de la base de datos, vea "Alta disponibilidad (AlwaysOn)" en [Ediciones y características admitidas de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
   
  Si la seguridad de las transacciones está configurada en OFF, la sesión de creación de reflejo de la base de datos funciona de forma asincrónica. La operación asincrónica solo admite el modo operativo de alto rendimiento. Este modo mejora el rendimiento a costa de la alta disponibilidad. El modo de alto rendimiento utiliza solamente el servidor principal y el servidor reflejado. Los problemas del servidor reflejado nunca afectan al servidor principal. Al perderse el servidor principal, la base de datos reflejada se marca como DISCONNECTED, pero está disponible como base de datos en espera activa.  
   
@@ -190,7 +184,7 @@ caps.handback.revision: 21
  En esta sección se describe una sesión de creación de reflejo de la base de datos desde el punto de vista de la configuración de ALTER DATABASE y de los estados de la base de datos reflejada y del testigo, si existen. Esta sección está dirigida a los usuarios que administran la creación de reflejo de la base de datos principal o exclusivamente mediante [!INCLUDE[tsql](../../includes/tsql-md.md)], en vez de mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 > [!TIP]  
->  Como alternativa al uso de [!INCLUDE[tsql](../../includes/tsql-md.md)], puede controlar el modo de funcionamiento de una sesión en el Explorador de objetos mediante la página **Creación de reflejos** del cuadro de diálogo **Propiedades de la base de datos** . Para obtener más información, vea [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md).  
+>  Como alternativa al uso de [!INCLUDE[tsql](../../includes/tsql-md.md)], puede controlar el modo de funcionamiento de una sesión en el Explorador de objetos mediante la página **Creación de reflejos** del cuadro de diálogo **Propiedades de la base de datos** . Para obtener más información, vea [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
  **En esta sección:**  
   
@@ -205,11 +199,11 @@ caps.handback.revision: 21
   
  **En esta sección:**  
   
--   [Seguridad de las transacciones](#TxnSafety)  
+-   [Transaction Safety](#TxnSafety)  
   
 -   [Estado del testigo](#WitnessState)  
   
-####  <a name="TxnSafety"></a> Seguridad de las transacciones  
+####  <a name="TxnSafety"></a> Transaction Safety  
  La seguridad de las transacciones es una propiedad de base de datos específica de la creación de reflejo que determina si una sesión de creación de reflejo de la base de datos funciona de forma sincrónica o asincrónica. Hay dos niveles de seguridad: FULL y OFF.  
   
 -   SAFETY FULL  
@@ -222,7 +216,7 @@ caps.handback.revision: 21
   
 -   SAFETY OFF  
   
-     Desactivar la seguridad de las transacciones hace que la sesión funcione de forma asincrónica, en modo de alto rendimiento. Si la propiedad SAFETY está establecida en OFF, la propiedad WITNESS también debe estar establecida en OFF (el valor predeterminado). Para obtener información sobre el efecto del testigo en el modo de alto rendimiento, vea [Estado del testigo](#WitnessState) a continuación. Para obtener más información sobre la ejecución con la seguridad de transacción desactivada, vea [Operación asincrónica de creación de reflejo de la base de datos (Modo de alto rendimiento)](#async), anteriormente en este tema.  
+     Desactivar la seguridad de las transacciones hace que la sesión funcione de forma asincrónica, en modo de alto rendimiento. Si la propiedad SAFETY está establecida en OFF, la propiedad WITNESS también debe estar establecida en OFF (el valor predeterminado). Para obtener información sobre el efecto del testigo en el modo de alto rendimiento, vea [Estado del testigo](#WitnessState)a continuación. Para obtener más información sobre la ejecución con la seguridad de transacción desactivada, vea [Operación asincrónica de creación de reflejo de la base de datos (Modo de alto rendimiento)](#asynchronous-database-mirroring-high-performance-mode), anteriormente en este tema.  
   
  La configuración de seguridad de las transacciones de la base de datos está registrada en cada asociado de la vista de catálogo **sys.database_mirroring** en las columnas **mirroring_safety_level** y **mirroring_safety_level_desc**. Para obtener más información, vea [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
   
@@ -254,7 +248,7 @@ caps.handback.revision: 21
  **Si hay un testigo en modo de alto rendimiento, no participará en la sesión. Sin embargo, para que la base de datos esté disponible, al menos dos de las instancias de servidor deben permanecer conectadas. Por lo tanto, se recomienda mantener la propiedad WITNESS establecida en OFF en las sesiones en modo de alto rendimiento. Para obtener más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ###  <a name="ViewWitness"></a> Ver la configuración de seguridad y el estado del testigo  
- Para ver la configuración de seguridad y el estado del testigo de una base de datos, use la vista de catálogo **sys.database_mirroring**. Las columnas relevantes son:  
+ Para ver la configuración de seguridad y el estado del testigo de una base de datos, use la vista de catálogo **sys.database_mirroring** . Las columnas relevantes son:  
   
 |Factor|Columnas|Descripción|  
 |------------|-------------|-----------------|  
@@ -284,7 +278,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 -   [Agregar o reemplazar un testigo de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
--   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
 -   [Agregar un testigo de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
@@ -292,7 +286,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 -   [Cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Testigo de creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   

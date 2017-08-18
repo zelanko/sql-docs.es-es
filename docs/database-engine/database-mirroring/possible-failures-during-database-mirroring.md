@@ -1,30 +1,35 @@
 ---
-title: "Posibles errores durante la creaci&#243;n de reflejo de la base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "periodo de tiempo de espera [creación de reflejo de la base de datos SQL Server]"
-  - "errores de software [Agente SQL Server]"
-  - "crear reflejo de base de datos [SQL Server], solución de problemas"
-  - "errores de tiempo de espero [Agente SQL Server]"
-  - "solución de problemas [SQL Server], creación de reflejo de base de datos"
-  - "errores graves"
-  - "creación de reflejo de la base de datos, errores [SQL Server]"
+title: "Posibles errores durante la creación de reflejo de la base de datos | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- time-out period [SQL Server database mirroring]
+- soft errors [SQL Server]
+- database mirroring [SQL Server], troubleshooting
+- timeout errors [SQL Server]
+- troubleshooting [SQL Server], database mirroring
+- hard errors
+- failed database mirroring sessions [SQL Server]
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 caps.latest.revision: 59
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 8c97371185c1fe7bdd38c7ed172d5a49ae27b58c
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Posibles errores durante la creaci&#243;n de reflejo de la base de datos
+# <a name="possible-failures-during-database-mirroring"></a>Posibles errores durante la creación de reflejo de la base de datos
   Los problemas físicos, del sistema operativo o de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden provocar un error en una sesión de creación de reflejo de la base de datos. La creación de reflejo de la base de datos no comprueba regularmente los componentes de los que depende Sqlservr.exe para comprobar si están funcionando de forma correcta o si se ha producido un error. Sin embargo, en algunos tipos de errores, el componente afectado informa a Sqlservr.exe. Cuando otro componente informa del error, éste se denomina *error de hardware*. Para detectar otros errores que pudieran pasar desapercibidos, la creación de reflejo de la base de datos implementa su propio mecanismo de tiempo de espera. Si se agota el tiempo de espera de la creación de reflejo, la creación de reflejo de la base de datos supone que se ha producido un error y declara un *error de software*. Sin embargo, algunos errores que se producen en el nivel de instancia de SQL Server no ocasionan que se agote el tiempo de espera de la creación de reflejo y pueden no ser detectados.  
   
 > [!IMPORTANT]  
@@ -32,14 +37,14 @@ caps.handback.revision: 59
   
  La rapidez en la detección de errores y, por tanto, el tiempo de reacción ante un error de la sesión de creación de reflejo, depende de si el error es de hardware o software. En el caso de algunos errores de hardware, como los errores de red, se informa de inmediato. Sin embargo, en ciertos casos, es posible que períodos de tiempo de espera de componentes específicos retrasen el informe de algunos errores de hardware. En los errores de software, la longitud del período de tiempo de espera de la creación de reflejo determina la rapidez en la detección del error. De manera predeterminada, este valor es 10 segundos. Éste es el valor mínimo recomendado.  
   
-## Problemas debidos a errores de hardware  
+## <a name="failures-due-to-hard-errors"></a>Problemas debidos a errores de hardware  
  Las posibles causas de errores de hardware incluyen (sin limitarse a) las siguientes condiciones:  
   
 -   Una conexión interrumpida o un cable roto  
   
 -   Una tarjeta de red en mal estado  
   
--   Un cambio de enrutador   
+-   Un cambio de enrutador  
   
 -   Cambios en el firewall  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 59
 > [!NOTE]  
 >  La creación de reflejos no protege frente a problemas específicos de los clientes que intentan obtener acceso a los servidores. Por ejemplo, imagine un caso en el que un adaptador de red pública controla las conexiones de los clientes a la instancia de servidor principal, mientras una tarjeta de interfaz de red privada controla todo el tráfico de creación de reflejo entre las instancias de servidor. En este caso, un error en el adaptador de red pública impediría que los clientes tuvieran acceso a la base de datos; si bien, el reflejo de la base de datos se seguirá creando.  
   
-## Problemas debidos a errores de software  
+## <a name="failures-due-to-soft-errors"></a>Problemas debidos a errores de software  
  Las condiciones que pueden provocar el agotamiento del tiempo de espera en la creación de reflejo incluyen (sin limitarse a) lo siguiente:  
   
 -   Errores de red, como tiempos de espera de vínculos TCP, paquetes que se han dañado o se han quitado o paquetes que están en un orden incorrecto.  
@@ -84,7 +89,7 @@ caps.handback.revision: 59
   
 -   Insuficientes recursos, tales como una sobrecarga de disco o CPU, llenado completo del registro de transacciones, falta de memoria o subprocesos en el sistema. En estos casos, debe incrementar el período de tiempo de espera, reducir la carga de trabajo o cambiar el hardware para que pueda ocuparse de la carga de trabajo.  
   
-### El mecanismo de tiempo de espera de la creación de reflejo  
+### <a name="the-mirroring-time-out-mechanism"></a>El mecanismo de tiempo de espera de la creación de reflejo  
  Debido a que los errores de software no son detectables directamente por una instancia de servidor, un error de software podría provocar que una instancia de servidor esperara de manera indefinida. Para evitarlo, la creación de reflejo de la base de datos implementa su propio mecanismo de tiempo de espera basado en que cada instancia de servidor de una sesión de creación de reflejo hace ping en cada conexión abierta con un intervalo fijo.  
   
  Para mantener una conexión abierta, una instancia de servidor debe recibir un ping en dicha conexión dentro del período de tiempo de espera definido, además del tiempo de espera necesario para enviar otro ping. La recepción de un ping durante el período de tiempo de espera indica que la conexión todavía está abierta y que las instancias de servidor se comunican a través de ella. Al recibir un ping, una instancia de servidor restablece su contador de tiempo de espera en dicha conexión.  
@@ -103,10 +108,10 @@ caps.handback.revision: 59
   
 -   Consulte **mirroring_connection_timeout** en [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
   
-## Responder a un error  
+## <a name="responding-to-an-error"></a>Responder a un error  
  Independientemente del tipo de error, una instancia de servidor que detecta un error responde apropiadamente según el rol de la instancia, el modo de funcionamiento de la sesión y el estado de las demás conexiones de la sesión. Para obtener información acerca de lo que ocurre en caso de pérdida de un asociado, vea [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Calcular la interrupción del servicio durante la conmutación de roles &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
  [Modos de funcionamiento de la creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   

@@ -1,24 +1,29 @@
 ---
-title: "Propiedades de grupo de disponibilidad: Nuevo grupo de disponibilidad (p&#225;gina General) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroupproperties.general.f1"
+title: "Propiedades de grupo de disponibilidad: Nuevo grupo de disponibilidad (página General) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroupproperties.general.f1
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 751d94c5aa3e6c2f7d16b25e3e2fa3b2821cbccf
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propiedades de grupo de disponibilidad: Nuevo grupo de disponibilidad (p&#225;gina General)
+# <a name="availability-group-properties-new-availability-group-general-page"></a>Propiedades de grupo de disponibilidad: Nuevo grupo de disponibilidad (página General)
   Este tema se aplica a la pestaña **General** del cuadro de diálogo de **Nuevo grupo de disponibilidad** y el cuadro de diálogo de **Propiedades de grupo de disponibilidad** .  El cuadro de diálogo **Nuevo grupo de disponibilidad** permite crear un nuevo grupo de disponibilidad sin utilizar [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. El cuadro de diálogo **Propiedades de grupo de disponibilidad** permite ver y modificar la configuración de un grupo de disponibilidad existente.  
   
  **Para ver las propiedades del grupo de disponibilidad**  
@@ -27,11 +32,11 @@ caps.handback.revision: 15
   
 -   [Usar el Panel AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## Lista de UIElement  
+## <a name="uielement-list"></a>Lista de UIElement  
  **Nombre del grupo de disponibilidad**  
  Nombre del grupo de disponibilidad. Es un nombre definido por el usuario que debe ser único dentro del clúster de conmutación por error de Windows Server (WSFC).  
   
-## Bases de datos de disponibilidad  
+## <a name="availability-databases"></a>Bases de datos de disponibilidad  
  **Nombre de la base de datos**  
  Nombre de una base de datos que se ha agregado al grupo de disponibilidad.  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 15
  **Quitar**  
  Haga clic para quitar una base de datos seleccionada del grupo de disponibilidad.  
   
-## Réplicas de disponibilidad  
+## <a name="availability-replicas"></a>Réplicas de disponibilidad  
  **Instancia del servidor**  
  Nombre de servidor de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda esta réplica y, para una instancia no predeterminada, su nombre de instancia.  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 15
  **Confirmación sincrónica**  
  La réplica principal espera para confirmar una determinada transacción hasta que la réplica secundaria escribe la transacción en el disco.  
   
- Para obtener más información, vea [Modos de disponibilidad &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+ Para obtener más información, vea [Modos de disponibilidad &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
  **Modo de conmutación por error**  
  Modo de conmutación por error de la réplica, que puede ser uno de los siguientes:  
@@ -82,7 +87,7 @@ caps.handback.revision: 15
  Se permiten todas las conexiones con las bases de datos de la réplica principal. Esta es la configuración predeterminada.  
   
  **Permitir conexiones de lectura o escritura**  
- No se permiten las conexiones en las que la propiedad de conexión Application Intent esté establecida en **ReadOnly**. Cuando la propiedad Application Intent está establecida en **ReadWrite** o no tiene ningún valor, se permite la conexión. Para obtener más información sobre propiedad de conexión Application Intent, vea [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ No se permiten las conexiones en las que la propiedad de conexión Application Intent esté establecida en **ReadOnly** . Cuando la propiedad Application Intent está establecida en **ReadWrite** o no tiene ningún valor, se permite la conexión. Para obtener más información sobre propiedad de conexión Application Intent, vea [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  **Secundario legible**  
  Si una réplica de disponibilidad que está realizando el rol secundario (es decir, una réplica secundaria) puede aceptar conexiones de clientes; puede tener uno de los valores siguientes:  
@@ -100,7 +105,7 @@ caps.handback.revision: 15
  El número de segundos del período de tiempo de espera de la sesión en esta réplica.  
   
  **Dirección URL del extremo**  
- La dirección URL del extremo. Para obtener más información sobre el formato de estas direcciones URL, vea [Especificar la dirección URL del punto de conexión al agregar o modificar una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md).  
+ La dirección URL del extremo. Para obtener más información sobre el formato de estas direcciones URL, vea [Especificar la dirección URL del punto de conexión al agregar o modificar una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
  **Agregar**  
  Haga clic para agregar una réplica secundaria al grupo de disponibilidad.  
@@ -108,7 +113,8 @@ caps.handback.revision: 15
  **Quitar**  
  Haga clic para quitar una réplica secundaria del grupo de disponibilidad.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

@@ -1,28 +1,33 @@
 ---
-title: "El extremo de creaci&#243;n de reflejo de la base de datos (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "creación de reflejo de la base de datos [SQL Server], implementación"
-  - "creación de reflejo de la base de datos (SQL Server), punto de conexión"
-  - "puntos de conexión [SQL Server], Grupos de disponibilidad AlwaysOn"
-  - "extremos [SQL Server], creación de reflejo de base de datos"
-  - "Grupos de disponibilidad [SQL Server], punto de conexión"
+title: "El punto de conexión de creación de reflejo de la base de datos (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- database mirroring [SQL Server], endpoint
+- endpoints [SQL Server], AlwaysOn Availability Groups
+- endpoints [SQL Server], database mirroring
+- Availability Groups [SQL Server], endpoint
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 caps.latest.revision: 47
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ac4059e145e2421c76a3ba55629c40e1c8e74405
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# El extremo de creaci&#243;n de reflejo de la base de datos (SQL Server)
+# <a name="the-database-mirroring-endpoint-sql-server"></a>El extremo de creación de reflejo de la base de datos (SQL Server)
   Para participar en la creación de reflejo de la base de datos o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , una instancia de servidor requiere su propio *extremo de creación de reflejo de la base de datos*dedicado. Se trata de un extremo especial que se utiliza exclusivamente para recibir conexiones procedentes de otras instancias de servidor. En una instancia de servidor determinada, todas las conexiones de creación de reflejo de la base de datos o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] a cualquier otra instancia de servidor utilizan un único extremo de creación de reflejo de la base de datos.  
   
  Los extremos de creación de reflejo de la base de datos utilizan el Protocolo de control de transporte (TCP) para enviar y recibir mensajes entre las instancias del servidor que participan en sesiones de creación de reflejo de la base de datos u hospedan réplicas de disponibilidad. El extremo de creación de reflejo de la base de datos escucha en un número de puerto TCP exclusivo.  
@@ -46,7 +51,7 @@ caps.handback.revision: 47
 > [!IMPORTANT]  
 >  Si el equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone de firewall, la configuración de éste debe permitir conexiones entrantes y salientes en el puerto especificado en el extremo.  
   
- Para la creación de reflejo de la base de datos y [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], la autenticación y el cifrado se configuran en el extremo. Para obtener más información, vea [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn (SQL Server)](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md).  
+ Para la creación de reflejo de la base de datos y [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], la autenticación y el cifrado se configuran en el extremo. Para obtener más información, vea [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md).  
   
 > [!IMPORTANT]  
 >  No reconfigure un extremo de creación de reflejo de la base de datos en uso. Las instancias de servidor usan los extremos de todas las demás instancias para conocer el estado de los otros sistemas. Si reconfigura el extremo, podría reiniciarse, lo que podría parecer un error en las otras instancias de servidor. Esto es especialmente importante en el modo de conmutación automática por error, en el que volver a configurar el extremo en un asociado podría dar lugar a una conmutación por error.  
@@ -57,7 +62,7 @@ caps.handback.revision: 47
   
 -   Si cada instancia de servidor se ejecuta en una cuenta de servicio de dominio, puede utilizar la autenticación de Windows para los extremos de creación de reflejo de la base de datos. Si las instancias del servidor se ejecutan como la misma cuenta de usuario de dominio, automáticamente existen los inicios de sesión de usuario correctos en ambas bases de datos **maestras** . Esto simplifica la configuración de seguridad de las base de datos de disponibilidad y es recomendable su aplicación.  
   
-     Si las instancias de servidor que hospedan las réplicas de disponibilidad para un grupo de disponibilidad se ejecutan como cuentas diferentes, el inicio de sesión de cada cuenta debe crearse en **master** en la otra instancia de servidor. A continuación, deben concederse a ese inicio de sesión permisos CONNECT para conectarse al extremo de creación de reflejo de la base de datos de esa instancia de servidor. Para obtener más información, vea [Configurar cuentas de inicio de sesión para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn (SQL Server)](../../database-engine/database-mirroring/set up login accounts - database mirroring always on availability.md).  
+     Si las instancias de servidor que hospedan las réplicas de disponibilidad para un grupo de disponibilidad se ejecutan como cuentas diferentes, el inicio de sesión de cada cuenta debe crearse en **master** en la otra instancia de servidor. A continuación, deben concederse a ese inicio de sesión permisos CONNECT para conectarse al extremo de creación de reflejo de la base de datos de esa instancia de servidor. Para obtener más información, vea [Configurar cuentas de inicio de sesión para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md).  
   
      Si las instancias de servidor utilizan la autenticación de Windows, puede crear extremos de creación de reflejo de la base de datos utilizando [!INCLUDE[tsql](../../includes/tsql-md.md)], PowerShell o el Asistente para nuevo grupo de disponibilidad.  
   
@@ -66,7 +71,7 @@ caps.handback.revision: 47
   
 -   Si alguna instancia de servidor se ejecuta en una cuenta integrada (como sistema local, servicio local o servicio de red) o una cuenta que no es de dominio, debe utilizar certificados para la autenticación de extremos. Si utiliza certificados para los extremos de creación de reflejo de la base de datos, el administrador del sistema debe configurar cada instancia del servidor de modo que se utilicen certificados en las conexiones entrantes y salientes.  
   
-     No hay ningún método automatizado para configurar la seguridad de creación de reflejo de la base de datos mediante certificados. Tendrá que usar la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ENDPOINT o el cmdlet de PowerShell **New-SqlHadrEndpoint**. Para obtener más información, vea [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md). Para obtener información sobre cómo habilitar la autenticación de certificados en una instancia de servidor, vea [Usar certificados para un punto de conexión de creación de reflejo de la base de datos (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+     No hay ningún método automatizado para configurar la seguridad de creación de reflejo de la base de datos mediante certificados. Tendrá que usar la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ENDPOINT o el cmdlet de PowerShell **New-SqlHadrEndpoint** . Para obtener más información, vea [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md). Para obtener información sobre cómo habilitar la autenticación de certificados en una instancia de servidor, vea [Usar certificados para un punto de conexión de creación de reflejo de la base de datos (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
@@ -74,15 +79,15 @@ caps.handback.revision: 47
   
 -   [Crear un extremo de reflejo de la base de datos para la autenticación de Windows (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Usar certificados para un extremo de creación de reflejo de la base de datos (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [Usar certificados para un punto de conexión de creación de reflejo de la base de datos (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-    -   [Permitir que un extremo de creación de reflejo de la base de datos utilice certificados para las conexiones salientes (Transact-SQL)](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md)  
+    -   [Permitir que un extremo de creación de reflejo de la base de datos utilice certificados para las conexiones salientes (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-    -   [Permitir que un extremo de creación de reflejo de la base de datos utilice certificados para las conexiones entrantes (Transact-SQL)](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md)  
+    -   [Permitir que un extremo de creación de reflejo de la base de datos utilice certificados para las conexiones entrantes (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
 -   [Especificar una dirección de red de servidor (creación de reflejo de la base de datos)](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [Especificar la dirección URL del extremo al agregar o modificar una réplica de disponibilidad (SQL Server)](../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md)  
+-   [Especificar la dirección URL del extremo al agregar o modificar una réplica de disponibilidad (SQL Server)](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [Usar el Asistente para grupo de disponibilidad (SQL Server Management Studio)](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
@@ -91,10 +96,10 @@ caps.handback.revision: 47
 -   [sys.database_mirroring_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)  
   
   
-## Vea también  
- [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn (SQL Server)](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
+## <a name="see-also"></a>Vea también  
+ [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Solucionar problemas de configuración de creación de reflejo de la base de datos (SQL Server)](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
  [sys.dm_hadr_availability_replica_states (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)   
- [sys.dm_db_mirroring_connections (Transact-SQL)](../Topic/sys.dm_db_mirroring_connections%20\(Transact-SQL\).md)  
+ [sys.dm_db_mirroring_connections (Transact-SQL)](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)  
   
   

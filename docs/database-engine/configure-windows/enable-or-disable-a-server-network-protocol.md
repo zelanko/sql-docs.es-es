@@ -1,30 +1,35 @@
 ---
-title: "Habilitar o deshabilitar un protocolo de red de servidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "protocolos de red [SQL Server], deshabilitar"
-  - "conexiones remotas [SQL Server], habilitar con Administrador de configuración"
-  - "protocolos [SQL Server], habilitar con Administrador de configuración"
-  - "protocolos [SQL Server], deshabilitar con Administrador de configuración"
-  - "deshabilitar protocolos de red, Administrador de configuración"
-  - "protocolos de red [SQL Server], habilitar"
-  - "habilitar protocolos de red, Administrador de configuración"
-  - "configuración de área expuesta [SQL Server], protocolos de conexión"
-  - "conexiones [SQL Server], habilitar remotas con Administrar de configuración"
+title: Habilitar o deshabilitar un protocolo de red de servidor | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- network protocols [SQL Server], disabling
+- remote connections [SQL Server], enabling using Configuration Manager
+- protocols [SQL Server], enabling using Configuration Manager
+- protocols [SQL Server], disabling using Configuration Manager
+- disabling network protocols, Configuration Manager
+- network protocols [SQL Server], enabling
+- enabling network protocols, Configuration Manager
+- surface area configuration [SQL Server], connection protocols
+- connections [SQL Server], enabling remote using Configuration Manager
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7bb0a9abeba4730bd2d5d4e57cd7b02b2b93b55c
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
 # Habilitar o deshabilitar un protocolo de red de servidor
   Todos los protocolos de red se instalan con el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pero se pueden habilitar o deshabilitar. En este tema se describe cómo habilitar o deshabilitar un protocolo de red de servidor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante el administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o PowerShell. Es preciso detener y reiniciar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] para que el cambio surta efecto.  
@@ -33,7 +38,7 @@ caps.handback.revision: 29
 >  Durante la instalación de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] se agrega un inicio de sesión para el grupo BUILTIN\Users. Esto permite que todos los usuarios autenticados del equipo tengan acceso a la instancia de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] como un miembro del rol public. El inicio de sesión BUILTIN\Users se pueden quitar de manera segura para restringir el acceso al [!INCLUDE[ssDE](../../includes/ssde-md.md)] a los usuarios de equipos que tienen inicios de sesión individuales o son miembros de otros grupos de Windows con inicios de sesión.  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support TLS 1.0 y SSL 3.0. Si fuerza un protocolo diferente (como por ejemplo, TLS 1.1 o TLS 1.2) realizando cambios en la capa SChannel del sistema operativo, las conexiones a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podrían no funcionar como es debido.  
+>  Los proveedores de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admiten TLS 1.0 y SSL 3.0. Si fuerza un protocolo diferente (como por ejemplo, TLS 1.1 o TLS 1.2) realizando cambios en la capa SChannel del sistema operativo, las conexiones a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podrían no funcionar como es debido.  
   
  **En este tema**  
   

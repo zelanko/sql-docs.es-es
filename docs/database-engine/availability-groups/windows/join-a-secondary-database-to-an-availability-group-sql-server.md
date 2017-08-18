@@ -1,31 +1,36 @@
 ---
-title: "Combinar una base de datos secundaria con un grupo de disponibilidad (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.joindbs.f1"
-helpviewer_keywords: 
-  - "bases de datos secundarias [SQL Server], en el grupo de disponibilidad"
-  - "bases de datos secundarias [SQL Server]"
-  - "Grupos de disponibilidad [SQL Server], combinar"
-  - "Grupos de disponibilidad [SQL Server], configurar"
-  - "Grupos de disponibilidad [SQL Server], bases de datos"
+title: Combinar una base de datos secundaria con un grupo de disponibilidad (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.joindbs.f1
+helpviewer_keywords:
+- secondary databases [SQL Server], in availability group
+- secondary databases [SQL Server]
+- Availability Groups [SQL Server], joining
+- Availability Groups [SQL Server], configuring
+- Availability Groups [SQL Server], databases
 ms.assetid: fd7efe79-c1f9-497d-bfe7-b2a2b2321cf5
 caps.latest.revision: 39
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 8a5afad01e18568d315f1602ad8908786f130400
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Combinar una base de datos secundaria con un grupo de disponibilidad (SQL Server)
-  En este tema se explica cómo combinar una base de datos secundaria con un grupo de disponibilidad de AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Después de preparar una base de datos secundaria para una réplica de disponibilidad secundaria, debe combinar la base de datos con el grupo de disponibilidad lo antes posible. Se iniciará el movimiento de datos de la base de datos principal correspondiente a la base de datos secundaria.  
+# <a name="join-a-secondary-database-to-an-availability-group-sql-server"></a>Combinar una base de datos secundaria con un grupo de disponibilidad (SQL Server)
+  En este tema se explica cómo combinar una base de datos secundaria con un grupo de disponibilidad de AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Después de preparar una base de datos secundaria para una réplica de disponibilidad secundaria, debe combinar la base de datos con el grupo de disponibilidad lo antes posible. Se iniciará el movimiento de datos de la base de datos principal correspondiente a la base de datos secundaria.  
   
 -   **Antes de empezar:**  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 39
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica secundaria y expanda el árbol de servidores.  
   
-2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad**.  
+2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad** .  
   
 3.  Expanda el grupo de disponibilidad que desea cambiar y expanda el nodo **Bases de datos de disponibilidad** .  
   
@@ -77,7 +82,7 @@ caps.handback.revision: 39
   
 1.  Conéctese a la instancia del servidor que hospeda la réplica secundaria.  
   
-2.  Utilice la cláusula [SET HADR de la instrucción ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md) del siguiente modo:  
+2.  Utilice la cláusula [SET HADR de la instrucción ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) del siguiente modo:  
   
      ALTER DATABASE *nombre_baseDeDatos* SET HADR AVAILABILITY GROUP = *nombre_grupo*  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 39
   
 2.  Use el cmdlet **Add-SqlAvailabilityDatabase** para unir una o más bases de datos secundarias al grupo de disponibilidad.  
   
-     Por ejemplo, el comando siguiente une una base de datos secundaria `Db1` al grupo de disponibilidad `MyAG` en una de las instancias de servidor que hospeda una réplica secundaria.  
+     Por ejemplo, el comando siguiente une una base de datos secundaria `Db1`al grupo de disponibilidad `MyAG` en una de las instancias de servidor que hospeda una réplica secundaria.  
   
     ```  
     Add-SqlAvailabilityDatabase `   
@@ -120,9 +125,10 @@ caps.handback.revision: 39
   
 -   [Preparar manualmente una base de datos secundaria para un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Solucionar problemas de configuración de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   
+

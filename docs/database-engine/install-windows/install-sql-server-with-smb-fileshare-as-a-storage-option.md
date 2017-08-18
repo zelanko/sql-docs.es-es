@@ -1,30 +1,35 @@
 ---
-title: "Instalar SQL Server con el recurso compartido de archivos SMB como opci&#243;n de almacenamiento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Instalar SQL Server con el recurso compartido de archivos SMB como opción de almacenamiento | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1f56f9b3716e8950ceea9110f7ece301ac8c0c74
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Instalar SQL Server con el recurso compartido de archivos SMB como opci&#243;n de almacenamiento
-  A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], las bases de datos del sistema (Master, Model, MSDB y TempDB) y las bases de datos de usuario del [!INCLUDE[ssDE](../../includes/ssde-md.md)] se pueden instalar con el servidor de archivos del Bloque de mensajes del servidor (SMB) como opción de almacenamiento. Esto se aplica tanto a las instalaciones independientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como a las instalaciones de clústeres de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Instalar SQL Server con el recurso compartido de archivos SMB como opción de almacenamiento
+  A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], las bases de datos del sistema (Master, Model, MSDB y TempDB) y las bases de datos de usuario del [!INCLUDE[ssDE](../../includes/ssde-md.md)] se pueden instalar con el servidor de archivos del Bloque de mensajes del servidor (SMB) como opción de almacenamiento. Esto se aplica tanto a las instalaciones independientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como a las instalaciones de clústeres de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Secuencia de archivos no se admite actualmente en un recurso compartido de archivos SMB.  
   
-## Consideraciones acerca de la instalación  
+## <a name="installation-considerations"></a>Consideraciones acerca de la instalación  
   
-### Formatos del recurso compartido de archivos de SMB:  
+### <a name="smb-file-share-formats"></a>Formatos del recurso compartido de archivos de SMB:  
  Al especificar el recurso compartido de archivos SMB, se admiten los siguientes formatos de la Convención de nomenclatura universal (UNC) para las bases de datos independientes y FCI.  
   
 -   \\\NombreDeServidor\NombreDeRecursoCompartido\  
@@ -33,7 +38,7 @@ caps.handback.revision: 23
   
  Para obtener más información sobre la Convención de nomenclatura universal, vea [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534).  
   
- No se permite usar la ruta UNC de bucle invertido (una ruta UNC cuyo nombre de servidor es localhost, 127.0.0.1 o el nombre del equipo local). Como caso especial, tampoco se admite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa el clúster de servidor de archivos que se hospeda en el mismo nodo en que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para evitar esta situación, se recomienda que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el clúster del servidor de archivos se creen en clústeres de Windows independientes.  
+ No se permite usar la ruta UNC de bucle invertido (una ruta UNC cuyo nombre de servidor es localhost, 127.0.0.1 o el nombre del equipo local). Como caso especial, tampoco se admite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa el clúster de servidor de archivos que se hospeda en el mismo nodo en que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para evitar esta situación, se recomienda que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el clúster del servidor de archivos se creen en clústeres de Windows independientes.  
   
  Los formatos siguientes de ruta UNC no se admiten:  
   
@@ -45,14 +50,14 @@ caps.handback.revision: 23
   
 -   Unidades de red asignadas.  
   
-### Instrucciones admitidas del lenguaje de definición de datos (DDL)  
+### <a name="supported-data-definition-language-ddl-statements"></a>Instrucciones admitidas del lenguaje de definición de datos (DDL)  
  Las instrucciones DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] y los procedimientos almacenados del motor de base de datos siguientes admiten recursos compartidos de archivos de SMB:  
   
 1.  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
 2.  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   
-3.  [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+3.  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
 4.  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 23
   
 6.  [sp_attach_single_file_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md)  
   
-### Opciones de instalación  
+### <a name="installation-options"></a>Opciones de instalación  
   
 -   En la página "Configuración del Motor de base de datos" de la interfaz de usuario de la instalación, en la pestaña "Directorios de datos", establezca el parámetro "Directorio raíz de datos" como "\\\fileserver1\share1\".  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 23
   
      Para obtener más información sobre el uso de varias opciones de parámetros de línea de comandos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vea [Instalar SQL Server 2016 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
-## Consideraciones sobre el sistema operativo (protocolo SMB frente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>Consideraciones sobre el sistema operativo (protocolo SMB frente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  Los distintos sistemas operativos Windows tienen diferentes versiones del protocolo SMB y la versión del protocolo SMB es transparente para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación se muestran las ventajas de las distintas versiones del protocolo SMB con respecto a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 |Sistema operativo|Versión del protocolo SMB2|Ventajas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
@@ -90,7 +95,7 @@ caps.handback.revision: 23
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)], incluido Server Core|3.0|Admite conmutación por error transparente de los recursos compartidos de archivos que proporcionan cero tiempo de inactividad sin que sea necesaria la intervención del administrador DBA o del servidor de archivos de SQL en las configuraciones de clúster de servidores de archivos.<br /><br /> Compatibilidad con E/S usando varias interfaces de red simultáneamente, así como tolerancia a errores de interfaz de red.<br /><br /> Compatibilidad con interfaces de red con funciones de RDMA.<br /><br /> Para obtener más información sobre estas características y el bloque de mensajes de servidor, vea [Información general del bloque de mensajes de servidor](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Compatibilidad de la escala del servidor de archivos (SoFS) con disponibilidad continua.|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, incluido Server Core|3.2|Admite conmutación por error transparente de los recursos compartidos de archivos que proporcionan cero tiempo de inactividad sin que sea necesaria la intervención del administrador DBA o del servidor de archivos de SQL en las configuraciones de clúster de servidores de archivos.<br /><br /> Compatibilidad con E/S usando varias interfaces de red simultáneamente, así como tolerancia a errores de interfaz de red, con SMB multicanal.<br /><br /> Compatibilidad con interfaces de red con funciones de RDMA con SMB Direct.<br /><br /> Para obtener más información sobre estas características y el bloque de mensajes de servidor, vea [Información general del bloque de mensajes de servidor](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Compatibilidad de la escala del servidor de archivos (SoFS) con disponibilidad continua.<br /><br /> Optimizado para E/S pequeñas de lectura/escritura aleatoria comunes para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP.<br /><br /> Se activa la Unidad de transmisión máxima (MTU) de forma predeterminada, lo que mejora significativamente el rendimiento en las transferencias secuenciales grandes como el almacenamiento de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la copia de seguridad o restauración de la base de datos.|  
   
-## Consideraciones de seguridad  
+## <a name="security-considerations"></a>Consideraciones de seguridad  
   
 -   La cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la cuenta de servicio del agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben tener permisos de recurso compartido CONTROL TOTAL y permisos NTFS en las carpetas de recursos compartidos SMB. Si se usa un servidor de archivos SMB, la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ser una cuenta de dominio o una cuenta del sistema. Para obtener más información sobre los permisos NTFS y de uso compartido, vea [Permisos NTFS y de uso compartido en un servidor de archivos](http://go.microsoft.com/fwlink/?LinkId=245535) (http://go.microsoft.com/fwlink/?LinkId=245535).  
   
@@ -108,9 +113,9 @@ caps.handback.revision: 23
   
 -   Al a cuenta que se usa para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se le debe conceder los privilegios SeSecurityPrivilege en el servidor de archivos SMB. Para ello, use la consola Directiva de seguridad local del servidor de archivos para agregar la cuenta de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la directiva Administrar registro de seguridad y auditoría. Esta opción está disponible en la sección Asignaciones de derechos de usuario bajo Directivas locales en la consola Directiva de seguridad local.  
   
-## Problemas conocidos  
+## <a name="known-issues"></a>Problemas conocidos  
   
--   Después de separar una base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que reside en el almacenamiento conectado a la red, pueden surgir problemas con los permisos de base de datos al intentar volver a adjuntar la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El problema se define en [este artículo de KB](http://go.microsoft.com/fwlink/?LinkId=237321) (http://go.microsoft.com/fwlink/?LinkId=237321). Para conocer una solución alternativa a este problema, vea la sección **Más información** del artículo de KB.  
+-   Después de separar una base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que reside en el almacenamiento conectado a la red, pueden surgir problemas con los permisos de base de datos al intentar volver a adjuntar la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El problema se define en [este artículo de KB](http://go.microsoft.com/fwlink/?LinkId=237321) (http://go.microsoft.com/fwlink/?LinkId=237321). Para conocer una solución alternativa a este problema, vea la sección **Más información** del artículo de KB.  
   
 -   Si se usa un recurso compartido de archivo SMB como opción de almacenamiento para una instancia en clúster de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el registro de diagnóstico del clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede escribirse de forma predeterminada en el recurso compartido de archivo porque la biblioteca DLL de recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carece de permiso de lectura y escritura en el recurso compartido de archivo. Para resolver este problema, intente uno de los métodos siguientes:  
   
@@ -123,7 +128,7 @@ caps.handback.revision: 23
         SET DIAGNOSTICS LOG PATH = 'C:\logs';  
         ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: "Conectarse al servidor (página Propiedades de conexión del motor de base de datos) | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -17,26 +17,25 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 22cef3465036947ad6389b41c4c80bfc5ef965cb
+ms.translationtype: HT
+ms.sourcegitcommit: 5316f9d560f7e15bb0699780f67aff641067b203
+ms.openlocfilehash: 67f517ace6307fc4ad5afaf068c04ba6039d1c98
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Conectar al servidor (página Propiedades de conexión del motor de base de datos)
-Use esta pestaña para ver o especificar opciones cuando se conecte a una instancia de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] o cuando registre [!INCLUDE[ssDE](../../includes/ssde_md.md)] en **Servidores registrados**. **Conectar** y **Opciones** solo aparecen en este cuadro de diálogo al conectarse a una instancia del [!INCLUDE[ssDE](../../includes/ssde_md.md)]. **Probar** y **Guardar** solo aparecen en este cuadro de diálogo al registrar [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+Use esta pestaña para ver o especificar opciones cuando se conecte a una enstancia de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] o cuando registre [!INCLUDE[ssDE](../../includes/ssde_md.md)] en **Servidores registrados**. **Conectar** y **Opciones** solo aparecen en este cuadro de diálogo al conectarse a una instancia del [!INCLUDE[ssDE](../../includes/ssde_md.md)]. **Probar** y **Guardar** solo aparecen en este cuadro de diálogo al registrar [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
-## <a name="options"></a>Opciones  
 **Conectar con base de datos**  
 Seleccione en la lista una base de datos a la que conectarse. Si selecciona **<default>**, se conectará a la base de datos predeterminada del servidor. Si selecciona **<Browse server>**, podrá buscar el servidor de la base de datos a la que se conecta.  
   
 Al conectarse a una instancia del motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] a través de la base de datos de [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)], es preciso que use la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y especifique una base de datos en el cuadro de diálogo **Conectar al servidor** en la pestaña **Propiedades de conexión** . Asegúrese de que activa la casilla **Cifrar conexión** .  
   
-De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] se conecta a **master**. Si especifica una base de datos de usuario, verá solo esa base de datos y sus objetos en el Explorador de objetos. Si se conecta a **master**, podrá ver todas las bases de datos. Para más información, consulte la [Introducción a Microsoft Azure SQL Database](http://go.microsoft.com/fwlink/?LinkId=163948).  
+De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] se conecta a **master**. Al conectarse a [!INCLUDE[ssSDS](../../includes/sssds_md.md)], si especifica una base de datos de usuario, verá solo esa base de datos y sus objetos en el Explorador de objetos. Si se conecta a **master**, podrá ver todas las bases de datos. Para más información, consulte la [Introducción a Microsoft Azure SQL Database](http://go.microsoft.com/fwlink/?LinkId=163948).  
   
 **Protocolo de red**  
-Seleccione un protocolo de la lista. Los protocolos de cliente disponibles son los que se han configurado con la Configuración de red de cliente en Administración de equipos.  
+Seleccione un protocolo de la lista. Los protocolos de cliente disponibles se configuran con la Configuración de red de cliente en Administración de equipos.  
   
 **Tamaño del paquete de red**  
 Escriba el tamaño de los paquetes de red que desea enviar. El valor predeterminado es 4096 (bytes).  
@@ -59,6 +58,9 @@ Seleccione esta opción para especificar el color de fondo para la barra de esta
   
 -   En el menú **Archivo** , al hacer clic en **Nuevo** y después en **Consulta de motor de base de datos**, el color que especifique en el cuadro de diálogo **Conectar con el servidor** se aplicará a esa ventana del Editor de consultas.  
   
+**Nombre de dominio o ID de inquilino de AD**  
+Al conectar con la autenticación de **Active Directory - Universal compatible con MFA**, debe especificar el dominio de autenticación. Esta opción solo está disponible al usar la versión 17.2 o posterior de SSMS. 
+
 **Restablecer todo**  
 Reemplaza todos los valores de las propiedades de conexión especificadas manualmente por los valores predeterminados.  
   

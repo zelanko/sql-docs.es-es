@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 61366dbbcc5b4787783ea3e52112d827e2db026f
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: a768e5237b997e5f9b05e9476c907ea66f886c7b
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>Auditoría local para colección de comentarios sobre el uso de SQL Server
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/02/2017
 
 Microsoft SQL Server contiene características habilitadas para Internet que pueden recopilar y enviar información sobre el equipo o dispositivo ("información estándar sobre equipos") a Microsoft. El componente de Auditoría local de [colección de comentarios sobre el uso de SQL Server](http://support.microsoft.com/kb/3153756) escribe los datos que recopila el servicio en una carpeta designada y que representa los datos (registros) que se enviarán a Microsoft. El propósito de la Auditoría local es permitir que los clientes vean todos los datos que Microsoft recopila con esta característica, por motivos de cumplimiento, reglamentarios o por validación de privacidad.  
 
-Desde SQL Server 2016 CU2, Auditoría local se puede configurar a nivel de instancia para Motor de base de datos de SQL Server y Analysis Services (SSAS). Auditoría local para SQL Server Integration Services (SSIS) se puede configurar en el Motor de base de datos. Otros componentes de SQL Server que se instalan durante la configuración y herramientas de SQL Server que se descargan o instalan después de la configuración no cuentan con la funcionalidad de Auditoría local para la colección de comentarios sobre el uso. 
+Desde SQL Server 2016 CU2, Auditoría local se puede configurar a nivel de instancia para Motor de base de datos de SQL Server y Analysis Services (SSAS). En SQL Server 2016 CU4 y SQL Server 2016 SP1, la auditoría local también está habilitada para SQL Server Integration Services (SSIS). Otros componentes de SQL Server que se instalan durante la configuración y herramientas de SQL Server que se descargan o instalan después de la configuración no cuentan con la funcionalidad de Auditoría local para la colección de comentarios sobre el uso. 
 
 ## <a name="prerequisites"></a>Requisitos previos 
 
@@ -61,7 +61,7 @@ Complete los pasos siguientes para obtener la cuenta de inicio de sesión del se
  
 1. Inicie **Servicios** : haga clic en el botón **Windows**  y escriba *services.msc*. 
 
-2. Vaya al servicio correspondiente. Por ejemplo, para el motor de base de datos, ubique **Servicio CEIP de SQL Server *nombre de instancia***. En el caso de Analysis Services, busque **CEIP de SQL Server Analysis Services *nombre de instancia***. 
+2. Vaya al servicio correspondiente. Por ejemplo, para el motor de base de datos, ubique **Servicio CEIP de SQL Server \<nombre de instancia\>**. En el caso de Analysis Services, busque **CEIP de SQL Server Analysis Services \<nombre de instancia\>**. En el caso de Integration Services, busque el **servicio CEIP 13 de SQL Server Integration Services**.
 
 3. Haga clic con el botón derecho en el servicio y elija **Propiedades**. 
 

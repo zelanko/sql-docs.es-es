@@ -10,11 +10,10 @@
 ### [Cuadro de diálogo](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
 ### [Transact-SQL](create-an-availability-group-transact-sql.md)  
 ### [PowerShell](create-an-availability-group-sql-server-powershell.md)  
-### [Máquinas virtuales de Azure](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview)
-## [Agente de escucha](create-or-configure-an-availability-group-listener-sql-server.md)  
+### [Azure Virtual Machines](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview)
+## [Escucha](create-or-configure-an-availability-group-listener-sql-server.md)  
 
 # Conceptos
-## [Propagación automática](automatically-initialize-always-on-availability-group.md)  
 ## [Propagación automática de las réplicas secundarias](automatic-seeding-secondary-replicas.md)
 ## [Directivas de grupo de disponibilidad](always-on-policies-for-operational-issues-always-on-availability.md)  
 ## [Modos de disponibilidad](availability-modes-always-on-availability-groups.md)  
@@ -55,6 +54,7 @@
 ## Configurar el grupo de disponibilidad 
 ### [Cambiar la disponibilidad de la réplica](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
 ### [Cambiar el modo de conmutación por error de la réplica](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
+### [Configurar la propagación automática ](automatically-initialize-always-on-availability-group.md)  
 ### [Configurar la copia de seguridad en las réplicas](configure-backup-on-availability-replicas-sql-server.md)  
 ### [Configurar la directiva de conmutación por error flexible](configure-flexible-automatic-failover-policy.md)  
 ### [Configurar la copia de seguridad en las réplicas](configure-backup-on-availability-replicas-sql-server.md)  

@@ -1,7 +1,7 @@
 ---
 title: "Inicialización instantánea de archivos de la base de datos | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,11 +19,11 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 940f322fb3afe4b7bfff35f0b25b7b7605452a27
+ms.translationtype: HT
+ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
+ms.openlocfilehash: 8535e2dd63e3842d249c3cc4a90654a3648f51b3
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="database-instant-file-initialization"></a>Inicialización instantánea de archivos de la base de datos
@@ -31,7 +31,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Crear una base de datos.  
   
--   Añadir archivos, registros o datos a una base de datos existente.  
+-   Agregue archivos de registro o datos a una base de datos existente.  
   
 -   Aumentar el tamaño de un archivo existente (incluidas las operaciones de crecimiento automático).  
   
@@ -40,14 +40,14 @@ ms.lasthandoff: 06/22/2017
  Inicializar los archivos hace que estas operaciones tarden más. Sin embargo, cuando los datos se escriben en los archivos por primera vez, el sistema operativo no tiene que rellenar los archivos con ceros.  
   
 ## <a name="instant-file-initialization"></a>Inicialización instantánea de archivos  
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los archivos de datos se pueden inicializar de forma instantánea. Esto permite ejecutar rápidamente las operaciones con archivos anteriormente mencionadas. La inicialización instantánea de archivos recupera espacio en disco utilizado sin rellenarlo con ceros. En lugar de eso, el contenido del disco se sobrescribe al escribir nuevos datos en los archivos. Los archivos de registro no se pueden inicializar de forma instantánea.  
+ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los archivos de datos se pueden inicializar de forma instantánea. La inicialización instantánea de archivos le permite ejecutar rápidamente las operaciones con archivos mencionadas anteriormente. La inicialización instantánea de archivos recupera espacio en disco utilizado sin rellenarlo con ceros. En lugar de eso, el contenido del disco se sobrescribe al escribir nuevos datos en los archivos. Los archivos de registro no se pueden inicializar de forma instantánea.  
   
 > [!NOTE]  
 >  La inicialización instantánea de archivos solo está disponible en [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] , [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] o en versiones posteriores.  
   
  La inicialización instantánea de archivos solo está disponible si a la cuenta de servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) se le ha concedido SE_MANAGE_VOLUME_NAME. Los miembros del grupo de administradores de Windows tienen este derecho y pueden concederlo a otros usuarios añadiéndolos a la directiva de seguridad **Realizar tareas de mantenimiento del volumen** . Para obtener más información sobre la asignación de derechos de usuario, consulte la documentación de Windows.  
   
- La inicialización instantánea de archivos no está disponible cuando el TDE está habilitado.  
+Algunas condiciones, como TDE, pueden evitar la inicialización instantánea de archivos.  
   
  Para conceder a una cuenta el permiso `Perform volume maintenance tasks` :  
   
@@ -62,9 +62,9 @@ ms.lasthandoff: 06/22/2017
 5.  Haga clic en **Aplicar**y, a continuación, cierre todos los cuadros de diálogo de **Directiva de seguridad local** .  
   
 ### <a name="security-considerations"></a>Consideraciones de seguridad  
- Como el contenido del disco eliminado solo se sobrescribe cuando se escriben nuevos datos a los archivos, una entidad de seguridad no autorizada puede acceder al contenido eliminado. Mientras el archivo de la base de datos se adjunte a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta amenaza de divulgación de la información se reduce mediante la lista de control de acceso discrecional (DACL) del archivo. Esta DACL permite acceder al archivo solo a la cuenta de servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y al administrador local. Sin embargo, cuando el archivo está separado, un usuario o servicio que no tenga SE_MANAGE_VOLUME_NAME puede acceder a él. Existe una amenaza parecida al crear una copia de seguridad de la base de datos. El contenido eliminado puede estar disponible para un usuario servicio no autorizado si el archivo de copia de seguridad no está protegido con una DACL apropiada.  
+ Como el contenido del disco eliminado solo se sobrescribe cuando se escriben nuevos datos a los archivos, una entidad de seguridad no autorizada puede acceder al contenido eliminado. Mientras el archivo de la base de datos se adjunte a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta amenaza de divulgación de la información se reduce mediante la lista de control de acceso discrecional (DACL) del archivo. Esta DACL permite acceder al archivo solo a la cuenta de servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y al administrador local. Sin embargo, cuando el archivo está separado, un usuario o servicio que no tenga SE_MANAGE_VOLUME_NAME puede acceder a él. Existe una amenaza parecida al crear una copia de seguridad de la base de datos. Si el archivo de copia de seguridad no está protegido con una DACL adecuada, el contenido eliminado puede estar disponible para un usuario o servicio no autorizado.  
   
- Si le preocupa la posibilidad de que se divulgue contenido eliminado, debe realizar una o ambas de las acciones siguientes:  
+ Si le preocupa la posibilidad de que se divulgue contenido eliminado, realice una de las acciones siguientes o ambas:  
   
 -   Asegúrese siempre de que los archivos separados y los archivos de copia de seguridad tienen DACL restrictivas.  
   
@@ -77,3 +77,4 @@ ms.lasthandoff: 06/22/2017
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
   
+

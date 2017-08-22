@@ -1,7 +1,7 @@
 ---
 title: "Eliminación de archivos de blob de copia de seguridad con concesiones activas | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,38 +14,38 @@ caps.latest.revision: 16
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a8590c7e7adbf796d44347b66a790f98c13667bc
+ms.translationtype: HT
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: f2b63d34ff5c06d82b6514d7447762546fe2c9e1
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/17/2017
 
 ---
-# <a name="deleting-backup-blob-files-with-active-leases"></a>Eliminar archivos de blob de copia de seguridad con concesiones activas
-  Cuando se hace copia de seguridad en el almacenamiento de Windows Azure, o cuando se restaura del mismo, SQL Server adquiere una concesión infinita con el fin de bloquear el acceso exclusivo al blob. Cuando el proceso de copia de seguridad o de restauración se ha completado correctamente, se libera la concesión. Si una copia de seguridad o una restauración dan error, el proceso de copia de seguridad intenta limpiar los blobs no válidos. Sin embargo, si el error de la copia de seguridad se debe a un error de conectividad en la red mantenido o prolongado, es posible que el proceso de copia de seguridad no pueda obtener acceso al blob y este podría quedar huérfano. Esto significa que no se puede escribir en el blob o que el blob no se puede eliminar hasta que no se libera la concesión. En este tema se describe cómo liberar la concesión y eliminar el blob.  
+# <a name="delete-backup-blob-files-with-active-leases"></a>Eliminar archivos de blob de copia de seguridad con concesiones activas
+  Cuando se hace una copia de seguridad en Microsoft Azure Storage, o cuando se restaura del mismo, SQL Server adquiere una concesión infinita para bloquear el acceso exclusivo al blob. Cuando el proceso de copia de seguridad o de restauración se ha completado correctamente, se libera la concesión. Si una copia de seguridad o una restauración dan error, el proceso de copia de seguridad intenta limpiar los blobs no válidos. Sin embargo, si el error de la copia de seguridad se debe a un error de conectividad en la red mantenido o prolongado, es posible que el proceso de copia de seguridad no pueda obtener acceso al blob y este podría quedar huérfano. Esto significa que no se puede escribir en el blob o que el blob no se puede eliminar hasta que no se libera la concesión. En este tema, se describe cómo liberar (interrumpir) la concesión y eliminar el blob. 
   
  Para obtener más información sobre los tipos de concesiones, lea este [artículo](http://go.microsoft.com/fwlink/?LinkId=275664).  
   
- Si se produce un error en la operación de copia de seguridad, se puede obtener un archivo de copia de seguridad que no es válido.  El archivo blob de copia de seguridad también podría tener una concesión activa, impidiendo su eliminación o sobrescritura.  Con el fin de eliminar o sobrescribir estos blobs, primero se debe interrumpir la concesión. Si hay errores de copia de seguridad, se recomienda limpiar las concesiones y eliminar los blobs. También puede elegir periódicamente una limpieza como parte de las tareas de administración de almacenamiento.  
+ Si se produce un error en la operación de copia de seguridad, se puede obtener un archivo de copia de seguridad no válido. El archivo blob de copia de seguridad también podría tener una concesión activa, impidiendo su eliminación o sobrescritura. Para eliminar o sobrescribir estos blobs, primero se debe liberar (interrumpir) la concesión. Si hay errores de copia de seguridad, se recomienda que limpie las concesiones y elimine los blobs. Además, puede limpiar periódicamente las concesiones y eliminar los blobs como parte de las tareas de administración del almacenamiento.  
   
- Si se produce un error de restauración, las restauraciones posteriores no se bloquean y, por tanto, la concesión activa puede no suponer ningún problema. Solo es necesario interrumpir la concesión cuando se tiene que sobrescribir o eliminar el blob.  
+ Si se produce un error de restauración, las restauraciones posteriores no se bloquean, por lo que la concesión activa puede no suponer ningún problema. Solo es necesario interrumpir la concesión cuando se tiene que sobrescribir o eliminar el blob.  
   
-## <a name="managing-orphaned-blobs"></a>Administrar blobs huérfanos  
- En los pasos siguientes se describe cómo realizar la limpieza después de una actividad de copia de seguridad o restauración con errores. Todos los pasos se pueden realizar mediante scripts de PowerShell. En la sección siguiente se proporciona un ejemplo de código:  
+## <a name="manage-orphaned-blobs"></a>Administrar blobs huérfanos  
+ En los pasos siguientes se describe cómo realizar la limpieza después de una actividad de copia de seguridad o restauración con errores. Puede realizar todos los pasos mediante scripts de PowerShell. En la sección siguiente, se incluye un ejemplo de script de PowerShell:  
   
-1.  **Identificar blobs que tienen concesiones** : si tiene un script o un proceso que ejecuta los procesos de copia de seguridad, es posible que pueda capturar el error dentro del script o del proceso y usarlo para limpiar los blobs.   También puede usar las propiedades LeaseStats y LeastState para identificar los blobs que tienen concesiones. Una vez identificados los blobs, se recomienda que revise la lista y compruebe la validez del archivo de copia de seguridad antes de eliminar el blob.  
+1.  **Identificar blobs con concesiones**: si tiene un script o un proceso que ejecuta los procesos de copia de seguridad, es posible que pueda capturar el error dentro del script o del proceso y usarlo para limpiar los blobs.  También puede usar las propiedades LeaseStats y LeastState para identificar blobs con concesiones. Una vez identificados los blobs, revise la lista y compruebe la validez del archivo de copia de seguridad antes de eliminar el blob.  
   
-2.  **Interrumpir la concesión** : una solicitud autorizada puede interrumpir la concesión sin proporcionar un identificador de concesión. Vea [aquí](http://go.microsoft.com/fwlink/?LinkID=275664) para obtener más información.  
+2.  **Interrumpir la concesión**: una solicitud autorizada puede interrumpir la concesión sin proporcionar un identificador de concesión. Vea [aquí](http://go.microsoft.com/fwlink/?LinkID=275664) para obtener más información.  
   
     > [!TIP]  
     >  SQL Server emite un identificador de concesión para establecer acceso exclusivo durante la operación de restauración. El identificador de concesión de restauración es BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
-3.  **Eliminar el blob** : para eliminar un blob que tiene una concesión activa, debe interrumpir primero la concesión.  
+3.  **Eliminar el blob**: para eliminar un blob con una concesión activa, debe interrumpir primero la concesión.  
   
 ###  <a name="Code_Example"></a> Ejemplo de script de PowerShell  
   
 > [!IMPORTANT]  
->  Si está ejecutando PowerShell 2.0, quizás tenga problemas al cargar el ensamblado de Microsoft WindowsAzure.Storage.dll. Recomendamos que actualice Powershell para resolver el problema. También puede usar la siguiente solución alternativa para PowerShell 2.0:  
+>  Si está ejecutando PowerShell 2.0, quizás tenga problemas al cargar el ensamblado de Microsoft WindowsAzure.Storage.dll. Recomendamos que actualice [PowerShell](https://docs.microsoft.com/powershell/) para resolver el problema. También puede usar la siguiente solución alternativa para PowerShell 2.0:  
 >   
 >  -   Cree o modifique el archivo powershell.exe.config para cargar los ensamblados de .NET 2.0 y .NET 4.0 en tiempo de ejecución con lo siguiente:  
 >   
@@ -60,14 +60,14 @@ ms.lasthandoff: 06/22/2017
 >   
 >     ```  
   
- En el ejemplo siguiente se ilustra cómo identificar los blobs que tienen concesiones activas y cómo interrumpirlas. En el ejemplo también se muestra cómo filtrar los identificadores de concesión de versión.  
+ El siguiente script de ejemplo identifica blobs con concesiones activas y, después, las interrumpe. En el ejemplo también se muestra cómo filtrar los identificadores de concesión de versión.  
   
- Sugerencias para ejecutar este script  
+**Sugerencias para ejecutar este script**  
   
 > [!WARNING]  
->  Si una copia de seguridad del servicio de almacenamiento de blobs de Windows Azure se ejecuta a la vez que este script, la copia de seguridad puede dar error porque este script interrumpirá la concesión que la copia de seguridad está tratando de adquirir al mismo tiempo. Se recomienda ejecutar este script durante una ventana de mantenimiento o cuando no esté previsto que se ejecute ninguna copia de seguridad.  
+>  Si una copia de seguridad del servicio Microsoft Azure Blob Storage se ejecuta a la vez que este script, la copia de seguridad puede dar error porque este script interrumpirá la concesión que la copia de seguridad está tratando de adquirir al mismo tiempo. Ejecute este script durante un período de mantenimiento o cuando no se esté ejecutando ninguna copia de seguridad ni esté previsto que se vaya a ejecutar ninguna.  
   
-1.  Al ejecutar este script, se le pedirá que proporcione valores para la cuenta de almacenamiento, la clave de almacenamiento, el contenedor, y los parámetros de ruta de acceso y nombre de ensamblado del almacenamiento de Windows Azure. La ruta de acceso del almacenamiento en el ensamblado es el directorio de instalación de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El nombre de archivo del ensamblado de almacenamiento es Microsoft.WindowsAzure.Storage.dll. A continuación se muestra un ejemplo de los mensajes y los valores especificados:  
+1.  Al ejecutar este script, se le pedirá que proporcione valores para la cuenta de almacenamiento, la clave de almacenamiento, el contenedor, y los parámetros de ruta de acceso y nombre de ensamblado de Azure Storage. La ruta de acceso del almacenamiento en el ensamblado es el directorio de instalación de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El nombre de archivo del ensamblado de almacenamiento es Microsoft.WindowsAzure.Storage.dll. A continuación se muestra un ejemplo de los mensajes y los valores especificados:  
   
     ```  
     cmdlet  at command pipeline position 1  
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
     storageAssemblyPath: C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Microsoft.WindowsAzure.Storage.dll  
     ```  
   
-2.  Si no hay ningún blob que tenga concesiones bloqueadas debe aparecer un mensaje similar al siguiente:  
+2.  Si no hay blobs con concesiones bloqueadas, debería ver el mensaje siguiente:  
   
      **No hay ningún blob con el estado de concesión bloqueada**  
   
@@ -116,7 +116,7 @@ $client = New-Object 'Microsoft.WindowsAzure.Storage.Blob.CloudBlobClient' "http
 $container = $client.GetContainerReference($blobContainer)  
   
 #list all the blobs  
-$allBlobs = $container.ListBlobs()   
+$allBlobs = $container.ListBlobs($null,$true) 
   
 $lockedBlobs = @()  
 # filter blobs that are have Lease Status as "locked"  
@@ -163,3 +163,4 @@ if($lockedBlobs.Count -gt 0)
  [Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   
+

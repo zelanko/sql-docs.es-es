@@ -1,7 +1,7 @@
 ---
 title: Funciones deterministas y no deterministas | Microsoft Docs
 ms.custom: 
-ms.date: 09/28/2016
+ms.date: 08/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,11 +20,11 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd6393571f06ba7b73f0b52bcfe8bc218279c1af
+ms.translationtype: HT
+ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
+ms.openlocfilehash: fe23cb7ab3fbc0461f0c0853aedaa4444e4bb543
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Funciones deterministas y no deterministas
@@ -90,16 +90,16 @@ ms.lasthandoff: 06/22/2017
 |CURRENT_TIMESTAMP|RAND|  
 |DENSE_RANK|RANK|  
 |FIRST_VALUE|ROW_NUMBER|   
-||TEXTPTR|  
+|FORMAT|TEXTPTR|  
   
 ## <a name="calling-extended-stored-procedures-from-functions"></a>Llamar a procedimientos almacenados extendidos desde funciones  
- Las funciones que llaman a procedimientos almacenados extendidos no son deterministas porque los procedimientos almacenados extendidos pueden producir efectos secundarios en la base de datos. Los efectos secundarios son cambios de un estado global de la base de datos, como una actualización de una tabla, o de un recurso externo, como un archivo o la red (por ejemplo, la modificación de un archivo o el envío de un mensaje de correo electrónico). No debe confiar en la devolución de un conjunto de resultados coherente al ejecutar un procedimiento almacenado extendido desde una función definida por el usuario. No se recomienda el uso de funciones definidas por el usuario que producen efectos secundarios en la base de datos.  
+ Las funciones que llaman a procedimientos almacenados extendidos no son deterministas porque los procedimientos almacenados extendidos pueden producir efectos secundarios en la base de datos. Los efectos secundarios son cambios de un estado global de la base de datos, como una actualización de una tabla, o de un recurso externo, como un archivo o la red (por ejemplo, la modificación de un archivo o el envío de un mensaje de correo electrónico). No confíe en la devolución de un conjunto de resultados coherente al ejecutar un procedimiento almacenado extendido desde una función definida por el usuario. No se recomienda el uso de funciones definidas por el usuario que producen efectos secundarios en la base de datos.  
   
  Cuando se llama desde una función, el procedimiento almacenado extendido no puede devolver conjuntos de resultados al cliente. Las API de Servicios abiertos de datos que devuelven conjuntos de resultados al cliente tienen un código de retorno FAIL.  
   
  El procedimiento almacenado extendido puede volver a conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sin embargo, no puede combinar la misma transacción como la función original que invocó el procedimiento almacenado extendido.  
   
- De forma similar a las invocaciones desde un lote o un procedimiento almacenado, el procedimiento almacenado extendido se ejecuta en el contexto de la cuenta de seguridad de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con la que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El propietario del procedimiento almacenado extendido debe tener esto en cuenta al conceder permisos a otros usuarios para ejecutar el procedimiento.  
+ De forma similar a las invocaciones desde un lote o un procedimiento almacenado, el procedimiento almacenado extendido se ejecuta en el contexto de la cuenta de seguridad de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con la que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El propietario del procedimiento almacenado extendido debe tener en cuenta los permisos de este contexto de seguridad al conceder permisos a otros usuarios para ejecutar el procedimiento.  
   
   
 

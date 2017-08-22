@@ -1,7 +1,7 @@
 ---
 title: "cross db ownership chaining (opción de configuración del servidor) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,10 +19,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 457ca08fbfef2ab0fb96e4cd2ec4515e04b9dc6e
+ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
+ms.openlocfilehash: c42780edef8e57b9d8159d9dfe384554cade4fb2
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="cross-db-ownership-chaining-server-configuration-option"></a>cross db ownership chaining (opción de configuración del servidor)
@@ -39,7 +39,13 @@ ms.lasthandoff: 08/02/2017
 -   Puede establecer el encadenamiento de propiedad entre bases de datos para bases de datos específicas mediante la cláusula SET de la instrucción ALTER DATABASE. Si está creando una base de datos, puede establecer la opción de encadenamiento de propiedad entre bases de datos para la nueva base de datos mediante la instrucción CREATE DATABASE.  
   
      No se recomienda establecer la opción **Encadenamiento de propiedad entre bases de datos** en 1, a menos que todas las bases de datos hospedadas por la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] participen en el encadenamiento de propiedad entre bases de datos y sepa las implicaciones de seguridad de esta opción.  
-  
+
+Para determinar el estado actual del encadenamiento de propiedad entre bases de datos, ejecute la siguiente consulta:  
+```sql
+SELECT is_db_chaining_on, name FROM sys.databases;
+```  
+Un resultado de 1 indica que el encadenamiento de propiedad entre bases de datos está habilitado.
+
 ## <a name="controlling-cross-database-ownership-chaining"></a>Controlar el encadenamiento de propiedad entre bases de datos  
  Antes de activar o desactivar el encadenamiento de propiedad entre bases de datos, tenga en cuenta lo siguiente:  
   

@@ -1,24 +1,29 @@
 ---
-title: "Revisar y generar scripts de registro complementario | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "scripts"
+title: Revisar y generar Scripts de registro complementario | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- scripts
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b3213f6e757e9fc3bcff63d0833d7f0c7fdee201
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Revisar y generar scripts de registro complementario
+# <a name="review-and-generate-supplemental-logging-scripts"></a>Revisar y generar scripts de registro complementario
   Use la pestaña **Scripts** para ejecutar o volver a ejecutar un script en la base de datos de origen de Oracle que configura el registro complementario.  
   
  Antes de ejecutar los scripts, seleccione una de las opciones siguientes:  
@@ -34,7 +39,7 @@ caps.handback.revision: 6
   
  Después de seleccionar una de estas opciones, ejecute el script de registro complementario.  
   
-### Para ejecutar los scripts de registro complementario  
+### <a name="to-run-the-supplemental-logging-scripts"></a>Para ejecutar los scripts de registro complementario  
   
 1.  Haga clic en **Ejecutar script** para ejecutar el script de registro complementario en las tablas definidas para la instancia CDC. Este script indica a la base de datos de Oracle que escriba todas las columnas de interés en sus registros de transacciones al registrar operaciones UPDATE en tablas capturadas. Normalmente es un administrador del sistema de Oracle quien examina y ejecuta este script.  
   
@@ -42,18 +47,18 @@ caps.handback.revision: 6
   
  También puede ejecutar los scripts manualmente mediante SQL * Plus, si es necesario.  
   
-### Para ejecutar los scripts manualmente  
+### <a name="to-run-the-scripts-manually"></a>Para ejecutar los scripts manualmente  
   
 1.  Haga clic en **Copiar** para pegar el script en el Portapapeles. Abra SQL* Plus y vaya al directorio donde se encuentra la base de datos de origen de Oracle. Pegue el script en SQL\*Plus para ejecutarlo.  
   
-### Para guardar el script de registro complementario en un archivo de texto  
+### <a name="to-save-the-supplemental-logging-script-in-a-text-file"></a>Para guardar el script de registro complementario en un archivo de texto  
   
 1.  Haga clic en **Guardar como** y vaya hasta la ubicación donde desee guardar el archivo.  
   
 2.  Asigne un nombre al archivo y haga clic en **Guardar** para guardar el archivo.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Cómo editar las propiedades de la instancia CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [Credenciales de Oracle para ejecutar script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+ [Credenciales de Oracle para ejecutar Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
   

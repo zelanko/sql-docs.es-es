@@ -1,25 +1,30 @@
 ---
-title: "&#205;ndice personalizado (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Índice personalizado (Master Data Services) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccb20ed7018a941ccc5e928d7fc9488377e3a125
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# &#205;ndice personalizado (Master Data Services)
+# <a name="custom-index-master-data-services"></a>Índice personalizado (Master Data Services)
   Los índices personalizados crean un índice no agrupado en un atributo (índice único) o en una lista de atributos (índice compuesto) de una entidad. Normalmente los índices mejoran el rendimiento del proceso de consulta. Para obtener más información sobre los índices de SQL Server, consulte [Índices](../relational-databases/indexes/indexes.md).  
   
-## Tipo de índices  
+## <a name="type-of-indexes"></a>Tipo de índices  
  Puede crear los siguientes tipos de índices personalizados para cada entidad.  
   
 -   Índice único  
@@ -28,7 +33,7 @@ caps.handback.revision: 9
   
  Un índice único garantiza que la columna indizada no contenga valores duplicados. En los índices únicos compuestos, el índice garantiza que cada combinación de valores de la lista de atributos seleccionados sea única. No se puede crear un índice único si existen valores duplicados para los atributos seleccionados.  
   
-## Reglas  
+## <a name="rules"></a>Reglas  
  Las reglas siguientes se aplican a los índices personalizados, tanto únicos como no únicos.  
   
 -   Para crear un índice personalizado, asegúrese de seleccionar al menos un atributo.  
@@ -52,7 +57,7 @@ caps.handback.revision: 9
   
 -   No se puede cambiar el tipo de un atributo incluido en un índice personalizado.  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  

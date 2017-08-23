@@ -1,41 +1,46 @@
 ---
-title: "Caracter&#237;sticas de rendimiento del flujo de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "agregado, transformación [Integration Services]"
-  - "paquetes de Integration Services, rendimiento"
-  - "rendimiento [Integration Services]"
-  - "flujo de datos [Integration Services], solución de problemas"
-  - "Paquetes SQL Server Integration Services, rendimiento"
-  - "cargar datos"
-  - "flujo de control [Integration Services], solución de problemas"
-  - "paquetes SSIS, rendimiento"
-  - "paquetes [Integration Services], rendimiento"
-  - "consultas [Integration Services], solución de problemas"
-  - "ordenar datos [Integration Services]"
-  - "agregados [Integration Services]"
+title: "Características de rendimiento del flujo de datos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Aggregate transformation [Integration Services]
+- Integration Services packages, performance
+- performance [Integration Services]
+- data flow [Integration Services], troubleshooting
+- SQL Server Integration Services packages, performance
+- loading data
+- control flow [Integration Services], troubleshooting
+- SSIS packages, performance
+- packages [Integration Services], performance
+- queries [Integration Services], troubleshooting
+- sorting data [Integration Services]
+- aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 caps.latest.revision: 69
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 69
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c812dc44b0348d6f77e7f7e8efe23acab85a0d48
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Caracter&#237;sticas de rendimiento del flujo de datos
+# <a name="data-flow-performance-features"></a>Características de rendimiento del flujo de datos
   En este tema se proporcionan sugerencias sobre cómo diseñar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para evitar problemas de rendimiento comunes. También proporciona información sobre las características y las herramientas que puede utilizar para solucionar problemas relacionados con el rendimiento de los paquetes.  
   
-## Configurar el flujo de datos  
+## <a name="configuring-the-data-flow"></a>Configurar el flujo de datos  
  Para configurar la tarea Flujo de datos con objeto de mejorar su rendimiento, puede configurar las propiedades de la tarea, ajustar el tamaño de los búferes y configurar el paquete para la ejecución en paralelo.  
   
-### Configurar las propiedades de la tarea Flujo de datos  
+### <a name="configure-the-properties-of-the-data-flow-task"></a>Configurar las propiedades de la tarea Flujo de datos  
   
 > [!NOTE]  
 >  Las propiedades que se analizan en esta sección deben establecerse por separado para cada tarea Flujo de datos de cada paquete.  
@@ -53,7 +58,7 @@ caps.handback.revision: 69
     > [!NOTE]  
     >  Una propiedad con el mismo nombre, RunInOptimizedMode, se puede establecer en el nivel de proyecto en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para indicar que la tarea Flujo de datos se ejecuta en el modo optimizado durante la depuración. Esta propiedad del proyecto reemplaza la propiedad RunInOptimizedMode de las tareas Flujo de datos en tiempo de diseño.  
   
-### Ajustar el cálculo del tamaño de los búferes  
+### <a name="adjust-the-sizing-of-buffers"></a>Ajustar el cálculo del tamaño de los búferes  
  El motor de flujo de datos comienza la tarea de ajustar el tamaño de sus búferes calculando el tamaño estimado de una fila de datos. Luego multiplica el tamaño estimado de una fila por el valor de DefaultBufferMaxRows para obtener un valor de trabajo preliminar para el tamaño de los búferes.  
   
 -   Si AutoAdjustBufferSize se establece en true, el motor de flujo de datos usa el valor calculado como el tamaño del búfer y el valor de DefaultBufferSize se omite.  
@@ -74,15 +79,15 @@ caps.handback.revision: 69
   
  No aumente el tamaño de los búferes hasta un punto en el que se produzca la paginación del disco. La paginación del disco afecta al rendimiento más que al hecho de no optimizar el tamaño de los búferes. Para saber si se está produciendo la paginación, supervise el contador de rendimiento "Búferes puestos en cola" en el complemento Rendimiento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC).  
   
-### Configurar el paquete para la ejecución en paralelo  
+### <a name="configure-the-package-for-parallel-execution"></a>Configurar el paquete para la ejecución en paralelo  
  La ejecución en paralelo mejora el rendimiento en los equipos que tienen varios procesadores físicos o lógicos. Para admitir la ejecución en paralelo de tareas diferentes del paquete, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa dos propiedades: **MaxConcurrentExecutables** y **EngineThreads**.  
   
-#### La propiedad MaxConcurrentExcecutables  
+#### <a name="the-maxconcurrentexcecutables-property"></a>La propiedad MaxConcurrentExcecutables  
  La propiedad **MaxConcurrentExecutables** es una propiedad del propio paquete. Esta propiedad define cuántas tareas se pueden ejecutar simultáneamente. El valor predeterminado es -1, que significa el número de procesadores físicos o lógicos más 2.  
   
  Para entender cómo funciona esta propiedad, considere un paquete de ejemplo que tiene tres tareas Flujo de datos. Si establece **MaxConcurrentExecutables** en 3, las tres tareas Flujo de datos se pueden ejecutar simultáneamente. Sin embargo, suponga que cada tarea Flujo de datos tiene 10 árboles de ejecución de origen a destino. El hecho de establecer **MaxConcurrentExecutables** en 3 no garantiza que los árboles de ejecución de cada tarea Flujo de datos se ejecuten en paralelo.  
   
-#### La propiedad EngineThreads  
+#### <a name="the-enginethreads-property"></a>La propiedad EngineThreads  
  La propiedad **EngineThreads** es una propiedad de cada tarea Flujo de datos. Esta propiedad define cuántos subprocesos puede crear y ejecutar en paralelo el motor de flujo de datos. La propiedad **EngineThreads** se aplica por igual tanto a los subprocesos de origen que crea el motor de flujo de datos para los orígenes como a los subprocesos de trabajo que crea el motor para las transformaciones y los destinos. Por consiguiente, establecer **EngineThreads** en 10 significa que el motor puede crear hasta diez subprocesos de origen y hasta diez subprocesos de trabajo.  
   
  Para entender cómo funciona esta propiedad, considere el paquete de ejemplo, que tiene tres tareas Flujo de datos. Cada una de las tareas Flujo de datos contiene diez árboles de ejecución de origen a destino. Si establece EngineThreads en 10 en cada tarea Flujo de datos, es posible que los 30 árboles de ejecución se ejecuten simultáneamente.  
@@ -90,21 +95,21 @@ caps.handback.revision: 69
 > [!NOTE]  
 >  Una discusión sobre los subprocesos queda fuera del ámbito de este tema. Sin embargo, la regla general consiste en no ejecutar en paralelo un número de subprocesos superior al número de procesadores disponibles. Ejecutar en paralelo un número de subprocesos superior al número de procesadores disponibles puede afectar al rendimiento debido a los continuos cambios de contexto entre los subprocesos.  
   
-## Configurar cada uno de los componentes de flujo de datos  
+## <a name="configuring-individual-data-flow-components"></a>Configurar cada uno de los componentes de flujo de datos  
  Hay algunas directrices generales que permiten configurar cada uno de los componentes de flujo de datos con objeto de mejorar el rendimiento. También hay instrucciones específicas relativas a cada tipo de componente de flujo de datos: origen, transformación y destino.  
   
-### Directrices generales  
+### <a name="general-guidelines"></a>Directrices generales  
  Hay dos directrices generales que no dependen del componente de flujo de datos y que debería seguir para mejorar el rendimiento: optimizar las consultas y evitar las cadenas innecesarias.  
   
-#### Optimizar las consultas  
- Varios componentes de flujo de datos utilizan consultas, ya sea al extraer datos de los orígenes o en operaciones de búsqueda para crear tablas de referencia. La consulta predeterminada usa la sintaxis SELECT * FROM \<nombreDeTabla>. Este tipo de consulta devuelve todas las columnas de la tabla de origen. Disponer de todas las columnas en tiempo de diseño permite elegir cualquier columna como columna de búsqueda, de paso a través o de origen. Sin embargo, después de seleccionar las columnas que se deben utilizar, debe revisar la consulta para que incluya únicamente las columnas seleccionadas. El hecho de quitar las columnas superfluas aumenta la eficacia de flujo de datos de un paquete, ya que al haber menos columnas se crea una fila más pequeña. Una fila más pequeña significa que caben más filas en un búfer y que cuesta menos trabajo procesar todas las filas del conjunto de datos.  
+#### <a name="optimize-queries"></a>Optimizar las consultas  
+ Varios componentes de flujo de datos utilizan consultas, ya sea al extraer datos de los orígenes o en operaciones de búsqueda para crear tablas de referencia. La consulta predeterminada utiliza la instrucción SELECT * FROM \<tableName > sintaxis. Este tipo de consulta devuelve todas las columnas de la tabla de origen. Disponer de todas las columnas en tiempo de diseño permite elegir cualquier columna como columna de búsqueda, de paso a través o de origen. Sin embargo, después de seleccionar las columnas que se deben utilizar, debe revisar la consulta para que incluya únicamente las columnas seleccionadas. El hecho de quitar las columnas superfluas aumenta la eficacia de flujo de datos de un paquete, ya que al haber menos columnas se crea una fila más pequeña. Una fila más pequeña significa que caben más filas en un búfer y que cuesta menos trabajo procesar todas las filas del conjunto de datos.  
   
  Para crear una consulta, puede escribirla o utilizar el Generador de consultas.  
   
 > [!NOTE]  
 >  Al ejecutar un paquete en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la pestaña Progreso del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] muestra una lista de las advertencias. Entre estas advertencias se incluye la identificación de cualquier columna de datos que un origen pone a disposición de flujo de datos, pero que no utilizan posteriormente los componentes de flujo de datos de nivel inferior. Se puede utilizar la propiedad **RunInOptimizedMode** para eliminar esas columnas automáticamente.  
   
-#### Evitar ordenaciones innecesarias  
+#### <a name="avoid-unnecessary-sorting"></a>Evitar ordenaciones innecesarias  
  La ordenación es una operación inherentemente lenta, y evitar la ordenación innecesaria puede mejorar el rendimiento de flujo de datos del paquete.  
   
  A veces, los datos de origen se ordenan antes de que los utilice un componente de nivel inferior. Tal ordenación puede producirse cuando la consulta SELECT utiliza una cláusula ORDER BY o cuando los datos se insertan ordenados en el origen. Para tales datos de origen preordenados, puede proporcionar una sugerencia indicando que los datos están ordenados, con lo que evitará el uso de una transformación Ordenar para satisfacer los requisitos de ordenación de ciertas transformaciones de nivel inferior. Por ejemplo, las transformaciones Mezclar y Combinación de mezcla requieren entradas ordenadas. Para proporcionar una sugerencia indicando que los datos están ordenados, deberá realizar las tareas siguientes:  
@@ -119,54 +124,54 @@ caps.handback.revision: 69
   
  Para obtener más información, vea [Sort Transformation](../../integration-services/data-flow/transformations/sort-transformation.md), [Merge Transformation](../../integration-services/data-flow/transformations/merge-transformation.md), [Merge Join Transformation](../../integration-services/data-flow/transformations/merge-join-transformation.md)y [Multicast Transformation](../../integration-services/data-flow/transformations/multicast-transformation.md).  
   
-### Orígenes  
+### <a name="sources"></a>Orígenes  
   
-#### Origen de OLE DB  
+#### <a name="ole-db-source"></a>Origen de OLE DB  
  Cuando utilice un origen de OLE DB para recuperar datos de una vista, seleccione "comando SQL" como modo de acceso a los datos y escriba una instrucción SELECT. El hecho de tener acceso a los datos mediante una instrucción SELECT presenta un rendimiento mejor que seleccionar "Tabla o vista" como modo de acceso a los datos.  
   
-### Transformaciones  
+### <a name="transformations"></a>Transformaciones  
  Utilice las sugerencias de esta sección para mejorar el rendimiento de las transformaciones Agregado, Búsqueda aproximada, Agrupación aproximada, Búsqueda, Combinación de mezcla y Dimensión de variación lenta.  
   
-#### Transformación Agregado  
+#### <a name="aggregate-transformation"></a>Transformación Agregado  
  La transformación Agregado incluye las propiedades **Keys**, **KeysScale**, **CountDistinctKeys**y **CountDistinctScale** . Estas propiedades mejoran el rendimiento habilitando la transformación para asignar previamente la cantidad de memoria que necesita la transformación para los datos que almacena en caché. Si conoce el número exacto o aproximado de grupos que se esperan como resultado de una operación **Agrupar por** , debe establecer las propiedades **Keys** y **KeysScale** , respectivamente. Si conoce el número exacto o aproximado de valores distintos que se esperan como resultado de una operación **Recuento distinto** , debe establecer las propiedades **CountDistinctKeys** y **CountDistinctScale** , respectivamente.  
   
  Si tiene que crear varias agregaciones en un flujo de datos, considere la posibilidad de crear varias agregaciones que utilicen una sola transformación Agregado, en lugar de crear varias transformaciones. Esto mejora el rendimiento cuando una agregación es un subconjunto de otra agregación, ya que la transformación puede optimizar el almacenamiento interno y examinar los datos entrantes una sola vez. Por ejemplo, si una agregación utiliza una cláusula GROUP BY y una agregación AVG, puede mejorar el rendimiento combinándolas en una transformación. No obstante, al realizar varias agregaciones dentro de una transformación Agregado se serializan las operaciones de agregación y, por consiguiente, el rendimiento podría no mejorar cuando haya que calcular varias agregaciones por separado.  
   
-#### Transformaciones Búsqueda aproximada y Agrupación aproximada  
+#### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Transformaciones Búsqueda aproximada y Agrupación aproximada  
  Para obtener información sobre cómo optimizar el rendimiento de las transformaciones Agrupación aproximada y Búsqueda aproximada, vea las notas del producto [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604).  
   
-#### Transformación Búsqueda  
+#### <a name="lookup-transformation"></a>Transformación Búsqueda  
  Puede minimizar el tamaño de los datos de referencia en memoria si escribe una instrucción SELECT que busque solo las columnas necesarias. Esta opción presenta un rendimiento mejor que seleccionar una tabla o una vista completa, lo que devuelve una gran cantidad de datos innecesarios.  
   
-#### Transformación Combinación de mezcla  
+#### <a name="merge-join-transformation"></a>Merge Join Transformation  
  Ya no tiene que configurar el valor de la propiedad **MaxBuffersPerInput** porque Microsoft ha realizado modificaciones que reducen el riesgo de que la transformación Combinación de mezcla utilice demasiada memoria. Este problema se producía a veces cuando varias entradas de la Combinación de mezcla generaban datos a velocidades desiguales.  
   
-#### Transformación Dimensión de variación lenta  
+#### <a name="slowly-changing-dimension-transformation"></a>Transformación Dimensión de variación lenta  
  El Asistente para dimensiones variables y la transformación Dimensión de variación lenta son herramientas de uso general que satisfacen las necesidades de la mayoría de los usuarios. Sin embargo, el flujo de datos que genera el asistente no está optimizado en cuanto a rendimiento.  
   
  Normalmente, los componentes más lentos de la transformación Dimensión de variación lenta son las transformaciones Comando de OLE DB que ejecutan cláusulas UPDATE sobre las filas de una en una. Por consiguiente, la manera más efectiva de mejorar el rendimiento de la transformación Dimensión de variación lenta consiste en reemplazar las transformaciones Comando de OLE DB. Puede reemplazar estas transformaciones por componentes de destino que guarden todas las filas que hay que actualizar en una tabla de ensayo. A continuación, puede agregar una tarea Ejecutar SQL que ejecute una cláusula Transact-SQL UPDATE basada en un solo conjunto sobre todas las filas al mismo tiempo.  
   
  Los usuarios avanzados pueden diseñar un flujo de datos personalizado para el procesamiento de dimensiones de variación lenta que esté optimizado para las dimensiones de gran tamaño. Para obtener una descripción y un ejemplo de este método, consulte la sección "Unique dimension scenario" en las notas del producto [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602).  
   
-### Destinos  
+### <a name="destinations"></a>Destinos  
  Para lograr un mejor rendimiento con los destinos, considere la posibilidad de utilizar un destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de probar el rendimiento del destino.  
   
-#### Destino de SQL Server  
+#### <a name="sql-server-destination"></a>Destino de SQL Server  
  Cuando un paquete cargue datos en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el mismo equipo, utilice un destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este destino está optimizado para cargas masivas de alta velocidad.  
   
-#### Probar el rendimiento de los destinos  
+#### <a name="testing-the-performance-of-destinations"></a>Probar el rendimiento de los destinos  
  Es posible que guardar datos en los destinos lleve más tiempo del esperado. Para identificar si esto se debe a que el destino no es capaz de procesar los datos con suficiente rapidez, puede sustituir el destino por una transformación Recuento de filas temporalmente. Si el rendimiento mejora de forma significativa, es probable que el destino que carga los datos sea la causa de la tardanza.  
   
-### Revisar la información de la pestaña Progreso  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] proporciona información sobre el flujo de control y sobre el flujo de datos al ejecutar un paquete en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. En la pestaña **Progreso** se muestran las tareas y los contenedores en orden de ejecución; incluye las horas de inicio y finalización, las advertencias y los mensajes de error de cada tarea y contenedor, incluido el paquete en sí. También se muestran los componentes de flujo de datos en el orden de ejecución, y se incluye información sobre su progreso, mostrado como porcentaje finalizado, y el número de filas procesadas.  
+### <a name="review-the-information-on-the-progress-tab"></a>Revisar la información de la pestaña Progreso  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)]Proporciona información sobre el flujo de control y flujo de datos al ejecutar un paquete en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. En la pestaña **Progreso** se muestran las tareas y los contenedores en orden de ejecución; incluye las horas de inicio y finalización, las advertencias y los mensajes de error de cada tarea y contenedor, incluido el paquete en sí. También se muestran los componentes de flujo de datos en el orden de ejecución, y se incluye información sobre su progreso, mostrado como porcentaje finalizado, y el número de filas procesadas.  
   
  Para habilitar o deshabilitar la presentación de mensajes en la pestaña **Progreso** , active o desactive la opción **Informe de progreso de depuración** del menú **SSIS** . La deshabilitación de los informes de progreso puede ayudar a mejorar el rendimiento al ejecutar un paquete complejo en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
   
--   [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordenar datos para la combinación y transformaciones de combinación de mezcla](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
  **Artículos y publicaciones de blogs**  
   
 -   Artículo técnico con una [estrategia para el rendimiento en SQL Server 2005 Integration Services](http://go.microsoft.com/fwlink/?LinkId=98899), en technet.microsoft.com  
@@ -199,8 +204,8 @@ caps.handback.revision: 69
   
 -   Vídeo, [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), en technet.microsoft.com.  
   
-## Vea también  
- [Herramientas para solucionar problemas con el desarrollo de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Herramientas para solucionar problemas con la ejecución de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+## <a name="see-also"></a>Vea también  
+ [Solución de problemas de herramientas de desarrollo de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Herramientas para solucionar problemas de ejecución del paquete](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

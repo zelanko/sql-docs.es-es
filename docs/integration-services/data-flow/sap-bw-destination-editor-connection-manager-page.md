@@ -1,24 +1,29 @@
 ---
-title: "Editor de destino de SAP BW (p&#225;gina Administrador de conexiones) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwdestination.connection.f1"
+title: "Editor de destino de SAP BW (página Administrador de conexiones) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwdestination.connection.f1
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 17d5ce8dd762a61b6dcbf4f2363d78c090495690
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de destino de SAP BW (p&#225;gina Administrador de conexiones)
+# <a name="sap-bw-destination-editor-connection-manager-page"></a>Editor de destino de SAP BW (página Administrador de conexiones)
   Use la página **Administrador de conexiones** del cuadro de diálogo **Editor de destino de SAP BW** para seleccionar un administrador de conexiones de SAP BW que va a usar el destino SAP BW. En esta página, puede seleccionar los parámetros para cargar los datos en el sistema SAP Netweaver BW.  
   
  Para más información sobre el destino SAP BW de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, vea [Destino de SAP BW](../../integration-services/data-flow/sap-bw-destination.md).  
@@ -30,25 +35,25 @@ caps.handback.revision: 10
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contiene el destino SAP BW.  
   
-2.  En la pestaña **Flujo de datos**, haga doble clic en el destino de SAP BW.  
+2.  En la pestaña **Flujo de datos** , haga doble clic en el destino de SAP BW.  
   
 3.  En **Editor de destino SAP BW**, haga clic en **Administrador de conexiones** para abrir la página **Administrador de conexiones** del editor.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
   
 > [!NOTE]  
 >  Si no conoce todos los valores necesarios para configurar el destino, puede que tenga que ponerse en contacto con el administrador de SAP.  
   
  **Administrador de conexiones de SAP BW**  
- Seleccione un administrador de conexiones de la lista o cree una conexión haciendo clic en **Nuevo**.  
+ Seleccione un administrador de conexiones de la lista o haga clic en **Nuevo**para crear una conexión.  
   
  **Nuevo**  
- Cree un nuevo administrador de conexiones mediante el cuadro de diálogo **Administrador de conexiones de SAP BW**.  
+ Cree un nuevo administrador de conexiones mediante el cuadro de diálogo **Administrador de conexiones de SAP BW** .  
   
  **Probar carga**  
  Realice una prueba del proceso de carga que use los valores que haya seleccionado y cargue cero filas.  
   
-### Opciones InfoPackage/InfoSource  
+### <a name="infopackageinfosource-options"></a>Opciones InfoPackage/InfoSource  
  No es necesario que conozca y especifique estos valores previamente. Utilice el botón de **Buscar** para buscar y seleccionar el InfoPackage adecuado. Después de seleccionar un InfoPackage, el componente especifica los valores adecuados para estas opciones.  
   
  **InfoPackage**  
@@ -71,24 +76,24 @@ caps.handback.revision: 10
  Escriba el nombre del sistema lógico que esté asociado con el InfoPackage.  
   
  **Buscar**  
- Busque el InfoPackage con el cuadro de diálogo **Buscar InfoPackage**. Para obtener más información sobre este cuadro de diálogo, vea [Look Up InfoPackage](../../integration-services/data-flow/look-up-infopackage.md).  
+ Busque el InfoPackage con el cuadro de diálogo **Buscar InfoPackage** . Para obtener más información sobre este cuadro de diálogo, vea [Look Up InfoPackage](../../integration-services/data-flow/look-up-infopackage.md).  
   
-### Opciones de destino RFC  
+### <a name="rfc-destination-options"></a>Opciones de destino RFC  
  No es necesario que conozca y especifique estos valores previamente. Utilice el botón de **Buscar** para buscar y seleccionar el destino RFC adecuado. Después de seleccionar un destino RFC, el componente especifica los valores adecuados para estas opciones.  
   
  **Host de puerta de enlace**  
  Permite escribir el nombre del servidor o la dirección IP del host de puerta de enlace. Normalmente, el nombre o la dirección IP es el mismo que el del servidor de aplicaciones SAP.  
   
  **Servicio de puerta de enlace**  
- Permite escribir el nombre del servicio de puerta de enlace, en formato **sapgwNN**, donde **NN** es el número del sistema.  
+ Permite escribir el nombre del servicio de puerta de enlace, en formato **sapgwNN**, donde **NN** es el número de sistema.  
   
  **Id. de programa**  
  Permite escribir el identificador de programa asociado al destino RFC.  
   
  **Buscar**  
- Permite buscar el destino RFC con el cuadro de diálogo **Buscar destino RFC**. Para obtener más información sobre este cuadro de diálogo, vea [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md).  
+ Permite buscar el destino RFC con el cuadro de diálogo **Buscar destino RFC** . Para obtener más información sobre este cuadro de diálogo, vea [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md).  
   
-### Crear opciones de objetos de SAP BW  
+### <a name="create-sap-bw-objects-options"></a>Crear opciones de objetos de SAP BW  
  **Seleccionar tipo de objeto**  
  Seleccione el tipo de objeto SAP Netweaver BW que desea crear. Puede seleccionar uno de los siguientes tipos:  
   
@@ -110,10 +115,10 @@ caps.handback.revision: 10
 |**InfoSource**|Cree un InfoSource nuevo con el cuadro de diálogo **Crear InfoSource** y, a continuación, use **Crear InfoSource para datos de transacción** o el cuadro de diálogo **Crear InfoSource para datos maestros** . Para obtener más información sobre estos cuadros de diálogo, vea [Create InfoSource](../../integration-services/data-flow/create-infosource.md), [Create InfoSource for Transaction Data](../../integration-services/data-flow/create-infosource-for-transaction-data.md) y [Create InfoSource for Master Data](../../integration-services/data-flow/create-infosource-for-master-data.md).|  
 |**InfoPackage**|Cree un InfoPackage nuevo con el cuadro de diálogo **Crear InfoPackage** . Para obtener más información sobre este cuadro de diálogo, vea [Create InfoPackage](../../integration-services/data-flow/create-infopackage.md).|  
   
-## Vea también  
- [Editor de destino de SAP BW &#40;página Asignaciones&#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
- [Editor de destino de SAP BW &#40;página Salida de error&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
- [Editor de destino de SAP BW &#40;página Avanzadas&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
+## <a name="see-also"></a>Vea también  
+ [Editor de destino de SAP BW &#40; Página Asignaciones &#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
+ [Editor de destino de SAP BW &#40; Página de salida de error &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
+ [Editor de destino de SAP BW &#40; Página avanzadas &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
  [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

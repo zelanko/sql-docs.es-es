@@ -1,26 +1,31 @@
 ---
-title: "Editor de tareas de generaci&#243;n de perfiles de datos (p&#225;gina Solicitudes de perfil) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataprofilingtask.profilerequests.f1"
-helpviewer_keywords: 
-  - "Editor de tareas de generación de perfiles de datos"
+title: "Editor de la tarea (página de solicitudes de perfil) de generación de perfiles de datos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.profilerequests.f1
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ac9d7e62bfad28176582537c59e733f51223a4f0
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Editor de tareas de generaci&#243;n de perfiles de datos (p&#225;gina Solicitudes de perfil)
+# <a name="data-profiling-task-editor-profile-requests-page"></a>Editor de tareas de generación de perfiles de datos (página Solicitudes de perfil)
   Use la página **Solicitudes de perfil** del **Editor de tareas de generación de perfiles de datos** para seleccionar y configurar los perfiles que desee calcular. En una única tarea de generación de perfiles puede calcular varias filas para varias columnas o combinaciones de columnas en varias tablas o vistas.  
   
  Para obtener más información sobre cómo usar la tarea de generación de perfiles de datos, vea [Configuración de la Tarea de generación de perfiles de datos](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Para obtener más información sobre cómo usar el Visor de perfil de datos para analizar la salida de la tarea de generación de perfiles de datos, vea [Visor de perfil de datos](../../integration-services/control-flow/data-profile-viewer.md).  
@@ -29,14 +34,14 @@ caps.handback.revision: 26
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que tiene la tarea de generación de perfiles de datos.  
   
-2.  En la pestaña **Flujo de control**, haga doble clic en la tarea de generación de perfiles de datos.  
+2.  En la pestaña **Flujo de control** , haga doble clic en la tarea de generación de perfiles de datos.  
   
 3.  En el **Editor de tareas de generación de perfiles de datos**, haga clic en **Solicitudes de perfil**.  
   
-## Usar el panel de solicitudes  
+## <a name="using-the-requests-pane"></a>Usar el panel de solicitudes  
  El panel de solicitudes es el que aparece en la parte superior de la página. En este panel se enumeran todos los perfiles configurados para la tarea de generación de perfiles de datos actual. Si no se ha configurado ningún perfil, el panel de solicitudes está vacío. Para agregar un perfil nuevo, haga clic en un área vacía en la columna **Tipo de perfil** y seleccione un tipo de perfil en la lista. Para configurar un perfil, selecciónelo en el panel de solicitudes y, a continuación, establezca las propiedades del perfil en el panel **Propiedades de la solicitud** .  
   
-### Opciones del panel de solicitudes  
+### <a name="requests-pane-options"></a>Opciones del panel de solicitudes  
  El panel de solicitudes tiene las opciones siguientes:  
   
  **Ver**  
@@ -44,14 +49,14 @@ caps.handback.revision: 26
   
  Las columnas del panel de solicitudes cambia según la **Vista** que seleccione. Para obtener más información sobre cada una de esas columnas, consulte la sección siguiente, "Columnas del panel de solicitudes".  
   
-### Columnas del panel de solicitudes  
+### <a name="requests-pane-columns"></a>Columnas del panel de solicitudes  
  Las columnas que muestra el panel de solicitudes dependen de la **Vista** que haya seleccionado:  
   
 -   Si selecciona ver **Todas las solicitudes**, el panel de solicitudes tiene dos columnas: **Tipo de perfil** e **Id. de solicitud**.  
   
 -   Si selecciona ver uno de los cinco perfiles de columna, el panel de solicitud tiene cuatro columnas: **Tipo de perfil**, **Tabla o vista**, **Columna**e **Id. de solicitud**.  
   
--   Si selecciona ver un perfil de claves candidatas, el panel de solicitudes tiene cuatro columnas: **Tipo de perfil**, **Tabla o vista**, **Columnas de clave** e **Id. de solicitud**.  
+-   Si selecciona ver un perfil de claves candidatas, el panel de solicitudes tiene cuatro columnas: **Tipo de perfil**, **Tabla o vista**, **Columnas de clave**e **Id. de solicitud**.  
   
 -   Si selecciona ver un perfil de dependencia funcional, el panel de solicitudes tiene cinco columnas: **Tipo de perfil**, **Tabla o vista**, **Columnas determinantes**, **Columna dependiente**e **Id. de solicitud**.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 26
   
  En las secciones siguientes se describe cada una de esas columnas.  
   
-#### Columnas comunes a todas las vistas  
+#### <a name="columns-common-to-all-views"></a>Columnas comunes a todas las vistas  
  **Tipo de perfil**  
  Seleccione un perfil de datos en las opciones siguientes:  
   
@@ -77,42 +82,42 @@ caps.handback.revision: 26
  **IdSolicitud**  
  Muestra el identificador de la solicitud. Generalmente, no tiene que cambiar el valor generado automáticamente.  
   
-#### Columnas comunes a todos los perfiles individuales  
+#### <a name="columns-common-to-all-individual-profiles"></a>Columnas comunes a todos los perfiles individuales  
  **Connection Manager**  
  Muestra el administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] que conecta con la base de datos de origen.  
   
  **Id. de solicitud**  
  Muestra un identificador para la solicitud. Generalmente, no tiene que cambiar el valor generado automáticamente.  
   
-#### Columnas comunes a los cinco perfiles de columnas individuales  
+#### <a name="columns-common-to-the-five-individual-column-profiles"></a>Columnas comunes a los cinco perfiles de columnas individuales  
  **Tabla o vista**  
  Muestra la tabla o la vista que contiene la columna seleccionada.  
   
  **Columna**  
  Muestra la columna seleccionada para generar perfiles.  
   
-#### Columnas específicas del perfil de claves candidatas  
+#### <a name="columns-specific-to-the-candidate-key-profile"></a>Columnas específicas del perfil de claves candidatas  
  **Tabla o vista**  
  Muestra la tabla o la vista que contiene las columnas seleccionadas.  
   
  **Columnas de clave**  
  Muestra las columnas seleccionada para generar perfiles.  
   
-#### Columnas específicas del perfil de dependencia funcional  
+#### <a name="columns-specific-to-the-functional-dependency-profile"></a>Columnas específicas del perfil de dependencia funcional  
  **Tabla o vista**  
  Muestra la tabla o la vista que contiene las columnas seleccionadas.  
   
  **Columnas determinantes**  
  Muestra las columnas seleccionadas para generar el perfil como columna o columnas determinantes. En el ejemplo en el que el código postal de Estados Unidos determina el estado, la columna determinante es la columna de código postal.  
   
- **Columna dependiente**  
+ **Dependent column**  
  Muestra las columnas seleccionadas para generar el perfil como columna dependiente. En el ejemplo en el que el código postal de Estados Unidos determina el estado, la columna dependiente es la columna de estado.  
   
-#### Columnas específicas del perfil de inclusión de valores  
+#### <a name="columns-specific-to-the-value-inclusion-profile"></a>Columnas específicas del perfil de inclusión de valores  
  **Tabla o vista de subconjuntos**  
  Muestra la tabla o vista que contiene la columna o columnas seleccionadas como columnas de subconjunto.  
   
- **Tabla o vista de superconjunto**  
+ **Tabla o vista de superconjuntos**  
  Muestra la tabla o vista que contiene la columna o columnas seleccionadas como columnas de subconjunto.  
   
  **Columnas de subconjunto**  
@@ -121,32 +126,32 @@ caps.handback.revision: 26
  **Columnas de superconjunto**  
  Muestra la columna o columnas seleccionadas para generar el perfil como columnas de superconjunto. En el ejemplo en el que se comprueba que los valores de una columna de estados de Estados Unidos se encuentran en una tabla de referencia de códigos de estados de dos caracteres, la columna de superconjunto es la columna de códigos de estado de la tabla de referencia.  
   
-## Usar el panel Propiedades de la solicitud  
+## <a name="using-the-request-properties-pane"></a>Usar el panel Propiedades de la solicitud  
  El panel **Propiedades de la solicitud** aparece debajo del panel de solicitudes. Este panel muestra las opciones para el perfil que ha seleccionado en el panel de solicitudes.  
   
 > [!NOTE]  
->  Después de seleccionar un **Tipo de perfil**, debe seleccionar el campo **Id. de solicitud** para ver las propiedades de la solicitud del perfil en el panel **Propiedades de la solicitud**.  
+>  Después de seleccionar un **Tipo de perfil**, debe seleccionar el campo **Id. de solicitud** para ver las propiedades de la solicitud del perfil en el panel **Propiedades de la solicitud** .  
   
  Estas opciones varían según el perfil seleccionado. Para obtener información acerca de las opciones de tipos de perfiles individuales, vea los temas siguientes:  
   
--   [Opciones de Solicitud de perfil de claves candidatas &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Opciones de solicitud de perfil de claves candidatas &#40; los datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de Solicitud de perfil de proporción de columnas nulas &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Opciones de solicitud de perfil de proporción de columnas nulas de columna &#40; datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de Solicitud de perfil de estadísticas de columnas &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Opciones de solicitud de perfil de estadísticas de columna &#40; datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de Solicitud de perfil de distribución de valores de columna &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opciones de solicitud de perfil de distribución de los valores de columna &#40; datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de Solicitud de perfil de distribución de longitud de columna &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opciones de solicitud de perfil de distribución de longitud de columna &#40; datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de Solicitud de perfil de patrón de columnas &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Opciones de solicitud de perfil de patrón de columna &#40; datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de Solicitud de perfil de dependencia funcional &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Funcional opciones de solicitud de perfil de dependencia &#40; datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de Solicitud de perfil de inclusión de valores &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Opciones de solicitud de perfil de inclusión de valor &#40; datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## Vea también  
- [Editor de tareas de generación de perfiles de datos &#40;página General&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>Vea también  
+ [Editor de la tarea &#40; de la generación de perfiles de datos Página general &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Formulario de perfil rápido de tabla única &#40; datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

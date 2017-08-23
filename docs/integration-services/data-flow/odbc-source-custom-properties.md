@@ -1,22 +1,27 @@
 ---
-title: "Propiedades personalizadas del origen ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Propiedades personalizadas del origen ODBC | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 15c78bdb8f093b07ce62a7d710ba583aad96548d
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Propiedades personalizadas del origen ODBC
+# <a name="odbc-source-custom-properties"></a>Propiedades personalizadas del origen ODBC
   En la tabla siguiente se describen las propiedades personalizadas del origen ODBC. Todas las propiedades se pueden establecer a partir de expresiones SSIS.  
   
 |Nombre de la propiedad|Tipo de datos|Description|  
@@ -35,8 +40,8 @@ caps.handback.revision: 7
 |LobChunckSize|Integer|Asignación de tamaño del fragmento para las columnas LOB.|  
 ||||  
   
-## Vea también  
- [Origen ODBC](../../integration-services/data-flow/odbc-source.md)   
- [Editor de origen de ODBC &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
+## <a name="see-also"></a>Vea también  
+ [Origen de ODBC](../../integration-services/data-flow/odbc-source.md)   
+ [Editor de origen ODBC &#40; Página Administrador de conexiones &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   
   

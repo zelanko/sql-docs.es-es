@@ -1,34 +1,39 @@
 ---
-title: "Analizador (utilidad) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "utilidades del símbolo del sistema [SQL Server], utilidad profiler90"
-  - "profiler90, utilidad"
-  - "Profiler [SQL Server Profiler], inicio"
-  - "SQL Server Profiler, inicio"
-  - "iniciar SQL Server Profiler"
+title: Analizador (utilidad) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- command prompt utilities [SQL Server], profiler90 utility
+- profiler90 utility
+- Profiler [SQL Server Profiler], starting
+- SQL Server Profiler, starting
+- starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f7387a32510b879e995b998b1a3e9d56a7e691a3
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Analizador (utilidad)
+# <a name="profiler-utility"></a>Analizador (utilidad)
   La utilidad **profiler** inicia la herramienta [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] . Los argumentos opcionales que se enumeran más adelante en este tema permiten controlar cómo se inicia la aplicación.  
   
 > [!NOTE]  
 >  La utilidad **profiler** no está pensada para la creación de scripts en seguimientos. Para más información, consulte [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -51,27 +56,27 @@ profiler
 ]  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  **/?**  
  Muestra el resumen de sintaxis de los argumentos de **profiler** .  
   
  **/U** *login_id*  
- Es el Id. de inicio de sesión para la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Los Id. de inicio de sesión distinguen entre mayúsculas y minúsculas.  
+ Es el Id. de inicio de sesión para la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Los Id. de inicio de sesión distinguen entre mayúsculas y minúsculas.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].  
   
  **/P** *password*  
- Especifica una contraseña especificada por el usuario para la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Especifica una contraseña especificada por el usuario para la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **/E**  
  Especifica la conexión con la autenticación de Windows con las credenciales actuales del usuario.  
   
- **/S** *sql_server_name*  
- Especifica una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Profiler se conectará automáticamente con el servidor especificado usando la información de autenticación que se especifica en los modificadores **/U** y **/P** o en el modificador **/E**. Para conectar con una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use **/S** *sql_server_name*\\*instance_name*.  
+ **/S**  *sql_server_name*  
+ Especifica una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Profiler se conectará automáticamente con el servidor especificado usando la información de autenticación que se especifica en los modificadores **/U** y **/P** o en el modificador **/E** . Para conectar con una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use **/S** *sql_server_name*\\*instance_name*.  
   
  **/A**  *analysis_services_server_name*  
- Especifica una instancia de Analysis Services. Profiler se conectará automáticamente con el servidor especificado usando la información de autenticación que se especifica en los modificadores **/U** y **/P** o en el modificador **/E**. Para conectar con una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use **/A** *analysis_services_server_name\instance_name*.  
+ Especifica una instancia de Analysis Services. Profiler se conectará automáticamente con el servidor especificado usando la información de autenticación que se especifica en los modificadores **/U** y **/P** o en el modificador **/E** . Para conectar con una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , use **/A** *analysis_services_server_name\instance_name*.  
   
  **/D** *database*  
  Especifica el nombre de la base de datos que se utilizará con la conexión. Esta opción seleccionará la base de datos predeterminada para el usuario especificado si no se especifica ninguna base de datos.  
@@ -104,7 +109,7 @@ profiler
 |DD|Día de dos dígitos|  
 |YY|Año de dos dígitos|  
 |hh|Hora de dos dígitos en un reloj de 24 horas|  
-|mm|Minuto de dos dígitos|  
+|MM|Minuto de dos dígitos|  
 |ss|Segundo de dos dígitos|  
   
 > [!NOTE]  
@@ -116,14 +121,14 @@ profiler
  **/Z**  *file_size*  
  Especifica el tamaño del archivo de seguimiento en megabytes (MB). El tamaño predeterminado es 5 MB. Si está habilitada la sustitución incremental de archivos, todos los archivos de sustitución incremental estarán limitados al valor especificado en el argumento.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Para iniciar un seguimiento con una plantilla específica, use las opciones **/S** y **/T** juntas. Por ejemplo, para iniciar un seguimiento mediante la plantilla Standard en MyServer\MyInstance, escriba lo siguiente en el símbolo del sistema:  
   
 ```  
 profiler /S MyServer\MyInstance /T "Standard"  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la utilidad del símbolo del sistema &#40;motor de base de datos&#41;](../tools/command-prompt-utility-reference-database-engine.md)  
   
   

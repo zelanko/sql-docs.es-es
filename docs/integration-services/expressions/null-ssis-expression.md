@@ -1,42 +1,47 @@
 ---
-title: "NULL (expresi&#243;n de SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "NULL, función"
-  - "valores NULL [Integration Services]"
+title: "NULL (expresión de SSIS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- NULL function
+- null values [Integration Services]
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c3be5273bd31a2a812c96fac458b8b173e14b3b
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# NULL (expresi&#243;n de SSIS)
+# <a name="null-ssis-expression"></a>NULL (expresión de SSIS)
   Devuelve un valor NULL asociado al tipo de datos solicitado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
 NULL(typespec)  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *typespec*  
  Tipo de datos válido. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Tipos de resultado  
+## <a name="result-types"></a>Tipos de resultado  
  Cualquier tipo de datos válido con valor NULL.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  NULL devuelve un resultado NULL si el valor del argumento es NULL.  
   
  Para solicitar un valor NULL para algunos tipos de datos es necesario utilizar parámetros. En la tabla siguiente se muestran estos tipos de datos y sus parámetros.  
@@ -50,7 +55,7 @@ NULL(typespec)
 |DT_NUMERIC|*precisión*<br /><br /> *escala*|(DT_NUMERIC,10,3) convierte un valor numérico al tipo de datos DT_NUMERIC con una precisión de 10 decimales y una escala de 3.|  
 |DT_TEXT|*codepage*|(DT_TEXT,1252) convierte un valor al tipo de datos DT_TEXT con la página de códigos 1252.|  
   
-## Ejemplos de expresiones  
+## <a name="expression-examples"></a>Ejemplos de expresiones  
  Estos ejemplos devuelven el valor NULL asociado a los tipos de datos DT_STR, DT_DATE y DT_BOOL.  
   
 ```  
@@ -59,8 +64,8 @@ NULL(DT_DATE)
 NULL(DT_BOOL)  
 ```  
   
-## Vea también  
- [ISNULL &#40;expresión de SSIS&#41;](../../integration-services/expressions/isnull-ssis-expression.md)   
- [Funciones &#40;expresión de SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>Vea también  
+ [ISNULL &#40; Expresión de SSIS &#41;](../../integration-services/expressions/isnull-ssis-expression.md)   
+ [Funciones &#40; Expresión de SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

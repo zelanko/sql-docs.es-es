@@ -1,28 +1,33 @@
 ---
-title: "Origen de archivo sin formato | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rawfilesource.f1"
-helpviewer_keywords: 
-  - "orígenes [Integration Services], archivo sin formato"
-  - "datos sin procesar [Integration Services]"
-  - "archivo sin formato, origen"
+title: Origen de archivo sin formato | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rawfilesource.f1
+helpviewer_keywords:
+- sources [Integration Services], Raw File
+- raw data [Integration Services]
+- Raw File source
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9ea51c506ebda4ea06da6938f68ae91c655bb3ce
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Origen de archivo sin formato
+# <a name="raw-file-source"></a>archivo sin formato, origen
   El origen de archivo sin formato lee datos sin formato de un archivo. Como la representación de los datos es la nativa del origen, no es necesario traducir los datos y prácticamente no es necesario analizar el archivo. Esto significa que el origen de archivo sin formato puede leer datos más rápidamente que otros orígenes, como el origen de archivo plano o el origen de OLE DB.  
   
  El origen de archivo sin formato se usa para recuperar datos sin formato escritos previamente por el destino de archivo sin formato. También puede señalar el origen de archivo sin formato para un archivo sin formato vacío que contenga solo las columnas (archivo solo de metadatos). El destino de archivo sin formato se usa para generar el archivo de solo metadatos sin tener que ejecutar el paquete. Para más información, consulte [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md).  
@@ -36,24 +41,24 @@ caps.handback.revision: 43
   
  Este origen tiene una salida. No admite una salida de error.  
   
-## Configuración del origen de archivo sin formato  
+## <a name="configuration-of-the-raw-file-source"></a>Configuración del origen de archivo sin formato  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](../Topic/Common%20Properties.md)  
+-   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de archivo sin formato](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
  Para más información sobre cómo establecer las propiedades del componente, vea [Establecer las propiedades de un componente de flujo de datos](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
   
 -   Entrada del blog [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), en sqlservercentral.com  
   
-## Vea también  
- [Destino de archivo sin formato](../../integration-services/data-flow/raw-file-destination.md)   
+## <a name="see-also"></a>Vea también  
+ [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md)   
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  
   
   

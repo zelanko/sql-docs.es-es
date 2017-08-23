@@ -1,22 +1,27 @@
 ---
-title: "Propiedades personalizadas del destino DataReader | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Propiedades personalizadas del destino de DataReader | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 44a9f26f1125f2c6b319653528aaa7eea04aa84f
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Propiedades personalizadas del destino DataReader
+# <a name="datareader-destination-custom-properties"></a>Propiedades personalizadas del destino DataReader
   El destino DataReader tiene propiedades personalizadas y propiedades comunes a todos los componentes de flujo de datos.  
   
  En la tabla siguiente se describen las propiedades personalizadas del destino DataReader. Todas las propiedades excepto **DataReader** son de lectura y escritura.  
@@ -31,7 +36,7 @@ caps.handback.revision: 6
   
  Para más información, consulte [DataReader Destination](../../integration-services/data-flow/datareader-destination.md).  
   
-## Vea también  
- [Propiedades comunes](../Topic/Common%20Properties.md)  
+## <a name="see-also"></a>Vea también  
+ [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

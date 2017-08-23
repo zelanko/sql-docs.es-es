@@ -1,25 +1,30 @@
 ---
-title: "Propiedades de Servidor de informes (pesta&#241;a Servicio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Propiedades de servidor (pestaña servicio) del informe | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 37d55395dbd3692c4853f5620360a65bf987b69c
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propiedades de Servidor de informes (pesta&#241;a Servicio)
+# <a name="report-server-properties-service-tab"></a>Propiedades de Servidor de informes (pestaña Servicio)
   Éste es el servicio Servidor de informes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los valores de propiedades en color gris claro no se pueden modificar con esta aplicación.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  **Ruta de acceso binaria**  
  Muestra la ubicación de los archivos de programa utilizados por el servicio.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 22
  **State**  
  Indica si el servicio está en ejecución, detenido o deshabilitado.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Servicios de SQL Server](../../tools/configuration-manager/sql-server-services.md)  
   
   

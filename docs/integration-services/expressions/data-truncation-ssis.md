@@ -1,27 +1,32 @@
 ---
-title: "Truncamiento de datos (SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "truncar datos"
-  - "truncamiento de datos [Integration Services]"
-  - "expresiones [Integration Services], truncamiento de datos"
-  - "opciones de truncamiento [Integration Services]"
+title: Truncamiento de datos (SSIS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- truncating data
+- data truncation [Integration Services]
+- expressions [Integration Services], data truncation
+- truncate options [Integration Services]
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5bed8ab4de8d1fe868cf12ca9e90e1040857d858
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Truncamiento de datos (SSIS)
+# <a name="data-truncation-ssis"></a>Truncamiento de datos (SSIS)
   La conversión de valores de un tipo de datos a otro puede provocar que esos valores se trunquen.  
   
  Puede producirse un truncamiento en los siguientes casos:  

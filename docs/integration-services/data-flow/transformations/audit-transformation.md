@@ -1,30 +1,35 @@
 ---
-title: "Transformaci&#243;n Auditar | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.audittrans.f1"
-helpviewer_keywords: 
-  - "datos de entorno en paquetes [Integration Services]"
-  - "Auditar, transformación"
+title: "Transformación auditar | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.audittrans.f1
+helpviewer_keywords:
+- environment data in packages [Integration Services]
+- Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 caps.latest.revision: 46
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c495bd9c116e10877f79f165f0f582938b0347ad
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transformaci&#243;n Auditar
+# <a name="audit-transformation"></a>Auditar, transformación
   La transformación Auditar habilita el flujo de datos en un paquete para incluir datos sobre el entorno en el que se ejecuta el paquete. Por ejemplo, el nombre del paquete, el equipo y el operador se pueden agregar al flujo de datos. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye variables del sistema que proporcionan esta información.  
   
-## Variables del sistema  
+## <a name="system-variables"></a>Variables del sistema  
  En la tabla siguiente se describen las variables del sistema que la transformación Auditar puede usar.  
   
 |Variable del sistema|Índice|Description|  
@@ -39,7 +44,7 @@ caps.handback.revision: 46
 |**TaskName**|7|El nombre de la tarea Flujos de datos a la que está asociada la transformación Auditar.|  
 |**TaskId**|8|El identificador único de la tarea Flujo de datos.|  
   
-## Configuración de la transformación Auditar  
+## <a name="configuration-of-the-audit-transformation"></a>Configuración de la transformación Auditar  
  Para configurar la transformación Auditar debe proporcionar el nombre de una nueva columna de salida que se agregará a la salida de transformación y después asignar la variable del sistema a la columna de salida. Puede asignar una sola variable del sistema a varias columnas.  
   
  Esta transformación tiene una entrada y una salida. No admite una salida de error.  
@@ -50,10 +55,10 @@ caps.handback.revision: 46
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](../Topic/Common%20Properties.md)  
+-   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- Para obtener más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Para más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
   

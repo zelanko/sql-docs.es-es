@@ -1,29 +1,34 @@
 ---
-title: "(M&#243;dulo) (expresi&#243;n de SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "% (operador de módulo)"
-  - "resto de operación de división"
-  - "operador de módulo (%)"
+title: "(Módulo) (Expresión de SSIS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- '% (modulo operator)'
+- remainder of division operation
+- modulo operator (%)
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 135fbe7a231de0b77ba3637ef53a4fc785453c10
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# (M&#243;dulo) (expresi&#243;n de SSIS)
+# <a name="modulo-ssis-expression"></a>(Módulo) (expresión de SSIS)
   Proporciona el resto entero después de dividir la primera expresión numérica por la segunda.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -31,24 +36,24 @@ dividend % divisor
   
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *dividend*  
  Es la expresión numérica que se va a dividir. *dividend* puede ser cualquier expresión numérica. Para más información, vea [Tipos de datos de Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
  *divisor*  
  Es la expresión numérica entre la que se va a dividir el dividendo. *divisor* puede ser cualquier expresión numérica excepto cero.  
   
-## Tipos de resultado  
+## <a name="result-types"></a>Tipos de resultado  
  Determinados por los tipos de datos de los dos argumentos. Para más información, consulte [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  La evaluación de ambas expresiones debe devolver tipos de datos enteros, con o sin signo.  
   
  Si alguno de los operandos es NULL, el resultado será NULL.  
   
  No se puede usar 0 como divisor.  
   
-## Ejemplos de expresiones  
+## <a name="expression-examples"></a>Ejemplos de expresiones  
  Este ejemplo calcula el módulo a partir de dos literales numéricos. El resultado es 3.  
   
 ```  
@@ -73,8 +78,8 @@ SalesQuota % 12
 @Value % 2 == 0? "even":"odd"  
 ```  
   
-## Vea también  
- [Precedencia y capacidad de asociación de operadores](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Vea también  
+ [Prioridad y asociatividad](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operadores &#40; Expresión de SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

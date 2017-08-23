@@ -1,27 +1,32 @@
 ---
-title: "P&#225;gina Configuraci&#243;n de base de datos (Administrador de configuraci&#243;n de Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.mds.configmanager.dbpg.f1"
+title: "Página de configuración (Administrador de configuración de Master Data Services) de la base de datos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.mds.configmanager.dbpg.f1
 ms.assetid: dd72220e-a599-465d-8b84-9bb6a7433216
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 212031f92de47da41ad2716b81740c6a42487e59
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# P&#225;gina Configuraci&#243;n de base de datos (Administrador de configuraci&#243;n de Master Data Services)
+# <a name="database-configuration-page-master-data-services-configuration-manager"></a>Página Configuración de base de datos (Administrador de configuración de Master Data Services)
   Use la página **Configuración de base de datos** para modificar la configuración del sistema de una base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . La configuración del sistema afecta a todas las aplicaciones web y servicios web asociados a la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] seleccionada. Debe seleccionar o crear una base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] antes de que se habiliten los valores del sistema y estén disponibles para su configuración.  
   
-## Base de datos actual  
+## <a name="current-database"></a>Base de datos actual  
  Seleccione una base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] existente o cree una base de datos nueva para la que se va a modificar la configuración del sistema. La nueva base de datos estará seleccionada una vez se haya creado.  
   
 |Nombre del control|Description|  
@@ -34,13 +39,12 @@ caps.handback.revision: 7
 |**Actualizar base de datos**|Abre un asistente desde el que puede actualizar una base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] especificada. Este botón solo se habilita cuando la base de datos especificada tiene que actualizarse.|  
 |**Reparar la base de datos**|Haga clic en este botón para asegurarse de que la base de datos de MDS está instalada correctamente. Esto puede resultar útil si hace una copia de seguridad de una base de datos de MDS y la restaura en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que nunca ha hospedado una base de datos de MDS.|  
   
-## Configuración del sistema  
+## <a name="system-settings"></a>Configuración del sistema  
  Modifique la configuración del sistema para todas las aplicaciones web y servicios web asociados a la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] seleccionada.  
   
  Estas opciones están disponibles en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] y están almacenadas en la base de datos, en la tabla de configuración del sistema (mdm.tblSystemSetting). Para obtener más información, consulte [Configuración del sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## Vea también  
- [Introducción a Master Data Services &#40;SQL Server 2016&#41;](../Topic/Get%20Started%20with%20Master%20Data%20Services%20\(SQL%20Server%202016\).md)   
- [Requisitos de base de datos &#40;Master Data Services&#41;](../master-data-services/install-windows/database-requirements-master-data-services.md)  
+## <a name="see-also"></a>Vea también  
+[Instalación de Master Data Services y la configuración](../master-data-services/master-data-services-installation-and-configuration.md) [requisitos &#40; de la base de datos Master Data Services &#41;](../master-data-services/install-windows/database-requirements-master-data-services.md)  
   
   

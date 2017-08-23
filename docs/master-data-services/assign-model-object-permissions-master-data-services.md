@@ -1,38 +1,43 @@
 ---
-title: "Asignar permisos de objeto de modelo (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modelos [Master Data Services], asignar permisos de objeto"
-  - "permisos [Master Data Services], asignar permisos de objeto de modelo"
+title: Asignar permisos de objeto de modelo (Master Data Services) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- models [Master Data Services], assigning object permissions
+- permissions [Master Data Services], assigning model object permissions
 ms.assetid: 4b80148d-2318-415c-9479-28c240e48bcd
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 51029d64cf5196d2d6503940a57527cbf1769131
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Asignar permisos de objeto de modelo (Master Data Services)
+# <a name="assign-model-object-permissions-master-data-services"></a>Asignar permisos de objeto de modelo (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], asigne permisos a los objetos de modelo cuando necesite proporcionar a un usuario o grupo acceso a los datos en el área funcional del **Explorador** de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]o cuando necesite convertir en administrador a un usuario o grupo.  
   
 > [!NOTE]  
 >  Al asignar el permiso a un modelo, implícitamente se deniega el permiso a todos los otros modelos. Si no asigna permisos del objeto de modelo, el usuario o grupo no pueden tener acceso a ningún dato en el **Explorador**.  
   
-## Requisitos previos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional **Permisos de usuario y de grupo** .  
   
 -   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-### Asignar permisos de objeto de modelo  
+### <a name="to-assign-model-object-permissions"></a>Asignar permisos de objeto de modelo  
   
 1.  En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], haga clic en **Permisos de usuario y de grupo**.  
   
@@ -54,13 +59,13 @@ caps.handback.revision: 7
   
 10. Haga clic en **Guardar**.  
   
-## Pasos siguientes  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   (Opcional) [Asignar los permisos de los miembros de una jerarquía &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   
-## Vea también  
- [Eliminar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/delete-model-object-permissions-master-data-services.md)   
- [Permisos de objeto del modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [Crear un administrador de modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)  
+## <a name="see-also"></a>Vea también  
+ [Eliminar permisos de objeto de modelo &#40; Master Data Services &#41;](../master-data-services/delete-model-object-permissions-master-data-services.md)   
+ [Permisos de objeto de modelo &#40; Master Data Services &#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [Crear un administrador de modelo &#40; Master Data Services &#41;](../master-data-services/create-a-model-administrator-master-data-services.md)  
   
   

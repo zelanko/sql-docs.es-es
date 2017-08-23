@@ -1,24 +1,29 @@
 ---
-title: "Destino ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.odbcdest.f1"
+title: Destino de ODBC | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.odbcdest.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5947fa19295580396ce74f8dd93f75abed653797
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Destino ODBC
+# <a name="odbc-destination"></a>Destino ODBC
   El destino ODBC carga de forma masiva los datos en tablas de base de datos que admiten ODBC. El destino ODBC usa un administrador de conexiones ODBC para conectarse al origen de datos.  
   
  Un destino ODBC incluye asignaciones entre las columnas de entrada y las columnas en el origen de datos de destino. No es necesario asignar columnas de entrada a todas las columnas de destino pero, según las propiedades de las columnas de destino, pueden producirse errores si no se asignan columnas de entrada a las columnas de destino. Por ejemplo, si una columna de destino no permite valores NULL, se debe asignar una columna de entrada a esa columna. Además, se pueden asignar columnas de tipos diferentes, sin embargo, si los datos de entrada no son compatibles con el tipo de las columnas de destino, se produce un error en tiempo de ejecución. En función de la opción de comportamiento del error, se omitirá el error, se producirá un error o la fila se enviará a la salida de error.  
@@ -28,11 +33,11 @@ caps.handback.revision: 12
 ##  <a name="BKMK_odbcdestination_loadoptions"></a> Opciones de carga  
  El destino ODBC puede usar uno de dos módulos de de carga de acceso. Establezca el modo en el [Editor de orígenes ODBC &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md). Los dos modos son:  
   
--   **Lote**: en este modo, el destino ODBC intenta usar el método más eficaz de inserción en función de las capacidades del proveedor ODBC percibidas. Para la mayoría de los proveedores ODBC modernos, esto significaría preparar una instrucción INSERT con parámetros y usar después un enlace de parámetros de matriz en las filas (donde el tamaño de la matriz está controlado por la propiedad **BatchSize**). Si selecciona **Lote** y el proveedor no admite este método, el destino ODBC cambia automáticamente los modificadores al modo **Fila a fila**.  
+-   **Lote**: en este modo, el destino ODBC intenta usar el método más eficaz de inserción en función de las capacidades del proveedor ODBC percibidas. Para la mayoría de los proveedores ODBC modernos, esto significaría preparar una instrucción INSERT con parámetros y usar después un enlace de parámetros de matriz en las filas (donde el tamaño de la matriz está controlado por la propiedad **BatchSize** ). Si selecciona **Lote** y el proveedor no admite este método, el destino ODBC cambia automáticamente los modificadores al modo **Fila a fila** .  
   
 -   **Fila a fila**: en este modo, el destino ODBC prepara una instrucción INSERT con parámetros y usa **Execute de SQL** para insertar las filas de una en una.  
   
-## Tratamiento de errores  
+## <a name="error-handling"></a>Tratamiento de errores  
  El destino ODBC tiene una salida de error. La salida de error del componente incluye las columnas de salida siguientes:  
   
 -   **Código de error**: número que corresponde al error actual. Vea la documentación de la base de datos de origen para obtener una lista de errores. Para obtener una lista de códigos de errores de SSIS, vea la referencia Código de errores y mensajes de SSIS.  
@@ -43,26 +48,26 @@ caps.handback.revision: 12
   
  Según la configuración del comportamiento de los errores, el destino ODBC permite devolver los errores (conversión de datos, truncamiento) que aparecerán durante el proceso de extracción en la salida de error. Para obtener más información, vea [Editor de origen de ODBC &#40;página Salida de error&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md).  
   
-## Paralelismo  
+## <a name="parallelism"></a>Paralelismo  
  No hay límite en el número de componentes de destino ODBC que se pueden ejecutar en paralelo en la misma tabla o en tablas diferentes, en el mismo equipo o en equipos diferentes (que no sean los límites normales de la sesión global).  
   
  Sin embargo, las limitaciones del proveedor ODBC que se usa pueden restringir el número de conexiones simultáneas a través del proveedor. Estas limitaciones limitan el número de instancias en paralelo admitidas posibles para el destino ODBC. El desarrollador de SSIS debe tener en cuenta las limitaciones de cualquier proveedor ODBC que se vaya a usar y tomarlas en cuenta al generar paquetes SSIS.  
   
  También debe tener en cuenta que la carga simultánea en la misma tabla puede reducir el rendimiento debido al bloqueo de registros estándar. Esto depende de los datos que se cargan y de la organización de las tablas.  
   
-## Solucionar problemas del destino ODBC  
+## <a name="troubleshooting-the-odbc-destination"></a>Solucionar problemas del destino ODBC  
  Puede registrar las llamadas que el origen ODBC realiza a proveedores de datos externos. Puede usar esta nueva capacidad de registro para solucionar los problemas que tengan que ver con guardar datos en orígenes de datos externos que realiza el destino ADO NET. Para registrar las llamadas realizadas por el destino ODBC a proveedores de datos externos, habilite el seguimiento del administrador de controladores ODBC. Para obtener más información, vea la documentación de Microsoft sobre *cómo generar un seguimiento ODBC con el administrador de orígenes de datos*.  
   
-## Configuración del destino ODBC  
+## <a name="configuring-the-odbc-destination"></a>Configuración del destino ODBC  
  Puede configurar el destino ODBC mediante programación o mediante el Diseñador SSIS  
   
  Para obtener más información, vea uno de los siguientes temas:  
   
--   [Editor de destino de ODBC &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [Editor de destino de ODBC & #40; Página Administrador de conexiones & #41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
   
--   [Editor de destino de ODBC &#40;página Asignaciones&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [Editor de destino de ODBC & #40; Página Asignaciones & #41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
   
--   [Editor de destinos de ODBC &#40;página Salida de error&#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [Editor de destino de ODBC & #40; Página de salida de error & #41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
   
  El cuadro de diálogo **Editor avanzado** contiene las propiedades que se pueden establecer mediante programación.  
   
@@ -72,16 +77,16 @@ caps.handback.revision: 12
   
  Para obtener más información acerca de las propiedades que se pueden establecer en el cuadro de diálogo Editor avanzado, vea [ODBC Destination Custom Properties](../../integration-services/data-flow/odbc-destination-custom-properties.md).  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
   
--   [Editor de destinos de ODBC &#40;página Salida de error&#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [Editor de destino de ODBC & #40; Página de salida de error & #41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
   
--   [Editor de destino de ODBC &#40;página Asignaciones&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [Editor de destino de ODBC & #40; Página Asignaciones & #41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
   
--   [Editor de destino de ODBC &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [Editor de destino de ODBC & #40; Página Administrador de conexiones & #41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
   
 -   [Cargar datos mediante el destino de ODBC](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
   
--   [Propiedades personalizadas de los destinos ODBC](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
+-   [Propiedades personalizadas del destino de ODBC](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
   

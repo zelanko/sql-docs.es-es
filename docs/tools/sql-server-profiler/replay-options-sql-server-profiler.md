@@ -1,27 +1,32 @@
 ---
-title: "Opciones de reproducci&#243;n (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "seguimientos [SQL Server], reproducir"
-  - "reproducir seguimientos"
-  - "monitor de estado [SQL Server]"
-  - "Configuración de reproducción, cuadro de diálogo"
+title: "Opciones de reproducción (SQL Server Profiler) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], replaying
+- replaying traces
+- health monitor [SQL Server]
+- Replay Configuration dialog box
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e334fe938bd9cc93854fc25e0074292a653bc3d7
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Opciones de reproducci&#243;n (SQL Server Profiler)
+# <a name="replay-options-sql-server-profiler"></a>Opciones de reproducción (SQL Server Profiler)
   Antes de reproducir un seguimiento capturado con [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], puede reproducir las opciones en el cuadro de diálogo **Configuración de reproducción** . Para iniciar este cuadro de diálogo, abra el archivo o tabla de seguimiento en el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], y en el menú **Reproducir** , haga clic en **Inicio**. Para obtener información acerca de los permisos necesarios para reproducir un seguimiento, vea [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
   
  En este tema se describen las opciones especificadas con el cuadro de diálogo **Configuración de reproducción** .  
@@ -29,7 +34,7 @@ caps.handback.revision: 17
 > [!NOTE]  
 >  Recomendamos usar la Utilidad de reproducción distribuida para reproducir una aplicación de OLTP que se use mucho (con muchas conexiones simultáneas activas o un alto rendimiento). La utilidad puede reproducir datos de seguimiento desde varios equipos, simulando mejor una carga de trabajo esencial. Para obtener más información, vea [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
   
-## Opciones básicas de reproducción  
+## <a name="basic-replay-options"></a>Opciones básicas de reproducción  
  **Servidor de reproducción**  
  El servidor es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que desea reproducir el seguimiento. El servidor debe cumplir los requisitos de reproducción que se describen en [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md).  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 17
 > [!NOTE]  
 >  Para conseguir un rendimiento de reproducción óptimo, se recomienda seleccionar la opción de reproducir eventos con múltiples subprocesos y no seleccionar la opción de mostrar los resultados de la reproducción.  
   
-## Opciones avanzadas de reproducción  
+## <a name="advanced-replay-options"></a>Opciones avanzadas de reproducción  
  **Reproducir los SPID del sistema**  
  Reproduce los SPID del sistema Esta es la opción predeterminada.  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 17
  Reproduce el número de SPID que elija en la lista.  
   
  **Limitar reproducción por fecha y hora**  
- Reproduce el seguimiento para la **Hora de inicio** y la **Hora de finalización** especificadas.  
+ Reproduce el seguimiento para la **Hora de inicio** y la **Hora de finalización**especificadas.  
   
  **Intervalo de espera del monitor de estado**  
  Establece la cantidad de tiempo que se permite la ejecución de un proceso antes de que el monitor de estado lo finalice.  
@@ -73,12 +78,12 @@ caps.handback.revision: 17
  **Habilitar monitor de procesos bloqueados de SQL Server**  
  Establece la frecuencia con la que el monitor de procesos bloqueados busca procesos bloqueados o de bloqueo.  
   
-## Acerca del monitor de estado  
- El monitor de estado es un subproceso de aplicación que supervisa los procesos simulados que participan en la reproducción de un seguimiento y finaliza los procesos que están bloqueados en la reproducción. En la pestaña **Opciones avanzadas de reproducción** del cuadro de diálogo **Configuración de reproducción**, puede especificar cuánto tiempo en segundos debe esperar el monitor de mantenimiento antes de finalizar un proceso bloqueado (**Intervalo de espera del monitor de mantenimiento**). Si el intervalo se configura en 0, el monitor de estado nunca finaliza los procesos de bloqueo simulados en el seguimiento de reproducción.  
+## <a name="about-the-health-monitor"></a>Acerca del monitor de estado  
+ El monitor de estado es un subproceso de aplicación que supervisa los procesos simulados que participan en la reproducción de un seguimiento y finaliza los procesos que están bloqueados en la reproducción. En la pestaña **Opciones avanzadas de reproducción** del cuadro de diálogo **Configuración de reproducción** , puede especificar cuánto tiempo en segundos debe esperar el monitor de mantenimiento antes de finalizar un proceso bloqueado (**Intervalo de espera del monitor de mantenimiento**). Si el intervalo se configura en 0, el monitor de estado nunca finaliza los procesos de bloqueo simulados en el seguimiento de reproducción.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Reproducir seguimientos](../../tools/sql-server-profiler/replay-traces.md)   
  [Requisitos de reproducción](../../tools/sql-server-profiler/replay-requirements.md)   
- [Consideraciones para reproducir seguimientos &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  
+ [Consideraciones para reproducir seguimientos &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  
   
   

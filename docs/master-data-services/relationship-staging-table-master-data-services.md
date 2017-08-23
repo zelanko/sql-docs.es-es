@@ -1,25 +1,30 @@
 ---
-title: "Tabla de ensayo de relaciones (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tabla de ensayo de relaciones (Master Data Services)"
-  - "base de datos [Master Data Services], tabla de relaciones"
+title: Tabla de ensayo de relaciones (Master Data Services) | Documentos de Microsoft
+ms.custom: 
+ms.date: 04/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- relationships staging table [Master Data Services]
+- database [Master Data Services], relationships table
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9b2a6a4d1bd4e62c5c8edb3a5149dab402e0b897
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Tabla de ensayo de relaciones (Master Data Services)
+# <a name="relationship-staging-table-master-data-services"></a>Tabla de ensayo de relaciones (Master Data Services)
   Use la tabla de almacenamiento provisional de relaciones (stg.name_Relationship) en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para cambiar la ubicación de los miembros de una jerarquía explícita, en función de las relaciones que tienen los miembros entre sí.  
   
 ##  <a name="TableColumns"></a> Columnas de la tabla  
@@ -38,9 +43,10 @@ caps.handback.revision: 8
 |**Criterio de ordenación**|Opcional<br /><br /> Entero que indica el orden del miembro en relación con los demás miembros bajo el elemento primario. Cada miembro secundario debe tener un identificador único.||  
 |**ErrorCode**|Muestra un código de error. Para todos los registros con un **ImportStatus_ID** de **2**, consulte [Errores del proceso de almacenamiento provisional &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md).||  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [Ver los errores que se producen durante el almacenamiento provisional &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
- [Errores del proceso de almacenamiento provisional &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)  
+ [Errores de proceso de almacenamiento provisional &#40; Master Data Services &#41;](../master-data-services/staging-process-errors-master-data-services.md)  
   
   
+

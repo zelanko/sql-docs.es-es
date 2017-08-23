@@ -1,24 +1,29 @@
 ---
-title: "Administrar una instancia CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "manIns"
+title: Administrar una instancia CDC | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 308d7528e516baa755a893bb42c9864c7ef7e3b7
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Administrar una instancia CDC
+# <a name="manage-a-cdc-instance"></a>Administrar una instancia CDC
   Puede usar la Consola del diseñador CDC para ver información acerca de las instancias que crea y para administrar el funcionamiento de las instancias.  
   
  Haga clic en el nombre de una instancia en el panel izquierdo para ver información sobre dicha instancia.  
@@ -26,7 +31,7 @@ caps.handback.revision: 11
 > [!NOTE]  
 >  Si selecciona un servicio en el panel izquierdo, la lista de instancias disponibles se muestra también en el centro de la Consola del diseñador CDC. Si selecciona una de las instancias en esta sección, puede realizar las tareas del panel derecho; sin embargo, no podrá ver la información en las pestañas de propiedades.  
   
-## Qué puede hacer cuando se muestra información de la instancia CDC  
+## <a name="what-you-can-do-when-you-display-the-cdc-instance-information"></a>Qué puede hacer cuando se muestra información de la instancia CDC  
  Las acciones siguientes se realizan desde el panel derecho:  
   
  **Iniciar**  
@@ -69,9 +74,9 @@ caps.handback.revision: 11
     |||  
     |-|-|  
     |![Error](../../integration-services/change-data-capture/media/error.gif "Error")|**Error**. La instancia CDC de Oracle no se está ejecutando porque se produjo un error que no se puede reintentar. Están disponibles los subestados siguientes:<br /><br /> **Mal configurada**: se produjo un error de configuración que necesita intervención manual.<br /><br /> **Contraseña necesaria**: no se estableció ninguna contraseña para la instancia CDC de Oracle o la contraseña no es válida.<br /><br /> **Inesperado**. Todos los demás errores irrecuperables.|  
-    |![Okay](../../integration-services/change-data-capture/media/okay.gif "Okay")|**En ejecución**: la instancia CDC se está ejecutando y está procesando registros de cambios. Están disponibles los subestados siguientes:<br /><br /> **Inactivo**: todos los registros de cambios se han procesado y se han almacenado en las tablas de cambios de destino. No hay más transacciones activas.<br /><br /> **Procesando**: hay registros de cambios que se están procesando y que no se han escrito todavía en las tablas de cambios.|  
-    |![Stop](../../integration-services/change-data-capture/media/stop.gif "Stop")|**Detenido**: la instancia CDC no se está ejecutando. El estado de detenido indica que la instancia CDC se detuvo de forma normal.|  
-    |![Paused](../../integration-services/change-data-capture/media/paused.gif "Paused")|**Pausado**: la instancia CDC se está ejecutando pero el procesamiento está suspendido debido a un error que se puede reintentar. Están disponibles los subestados siguientes:<br /><br /> **Desconectado**: no se puede establecer la conexión con la base de datos de Oracle de origen. El procesamiento se reanudará cuando se restaure la conexión.<br /><br /> **Almacenamiento**: el almacenamiento está lleno. El procesamiento se reanudará cuando haya más almacenamiento disponible.<br /><br /> **Registrador**: el registrador está conectado a Oracle pero no puede leer los registros de transacciones de Oracle debido a un problema temporal, por ejemplo porque un registro de transacciones necesario no está disponible.|  
+    |![Bien](../../integration-services/change-data-capture/media/okay.gif "bien")|**En ejecución**: la instancia CDC se está ejecutando y está procesando registros de cambios. Están disponibles los subestados siguientes:<br /><br /> **Inactivo**: todos los registros de cambios se han procesado y se han almacenado en las tablas de cambios de destino. No hay más transacciones activas.<br /><br /> **Procesando**: hay registros de cambios que se están procesando y que no se han escrito todavía en las tablas de cambios.|  
+    |![Detener](../../integration-services/change-data-capture/media/stop.gif "Detener")|**Detenido**: la instancia CDC no se está ejecutando. El estado de detenido indica que la instancia CDC se detuvo de forma normal.|  
+    |![Pausado](../../integration-services/change-data-capture/media/paused.gif "Pausado")|**Pausado**: la instancia CDC se está ejecutando pero el procesamiento está suspendido debido a un error que se puede reintentar. Están disponibles los subestados siguientes:<br /><br /> **Desconectado**: no se puede establecer la conexión con la base de datos de Oracle de origen. El procesamiento se reanudará cuando se restaure la conexión.<br /><br /> **Almacenamiento**: el almacenamiento está lleno. El procesamiento se reanudará cuando haya más almacenamiento disponible.<br /><br /> **Registrador**: el registrador está conectado a Oracle pero no puede leer los registros de transacciones de Oracle debido a un problema temporal, por ejemplo porque un registro de transacciones necesario no está disponible.|  
   
 -   **Estado detallado**: subestado actual.  
   
@@ -93,7 +98,7 @@ caps.handback.revision: 11
   
     -   **Transacciones activas**: número actual de transacciones de Oracle de origen que está procesando la instancia CDC de Oracle y que aún no se han decidido (confirmación o reversión).  
   
-    -   **Transacciones almacenadas provisionalmente**: número actual de transacciones de Oracle de origen que se han almacenado provisionalmente en la tabla [cdc.xdbcdc_staged_transactions](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions).  
+    -   **Transacciones almacenadas provisionalmente**: número actual de transacciones de Oracle de origen que se han almacenado provisionalmente en la tabla [cdc.xdbcdc_staged_transactions](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions) .  
   
 -   **Contadores**: Supervise la siguiente información de esta sección.  
   
@@ -102,24 +107,24 @@ caps.handback.revision: 11
     -   **Cambios escritos**: número de cambios escritos en las tablas de cambios de SQL Server.  
   
  **Oracle**  
- Muestra información sobre la instancia CDC y su conexión con la base de datos de Oracle. Esta pestaña es de solo lectura. Para editar estas propiedades, haga clic con el botón derecho en la instancia en el panel izquierdo y seleccione **Propiedades** o haga clic en **Propiedades** en el panel derecho para abrir el cuadro de diálogo Propiedades de \<instancia>.  
+ Muestra información sobre la instancia CDC y su conexión con la base de datos de Oracle. Esta pestaña es de solo lectura. Para editar estas propiedades, haga clic en la instancia en el panel izquierdo y seleccione **propiedades** o haga clic en **propiedades** en el panel derecho para abrir el \<instancia > cuadro de diálogo de propiedades.  
   
  Para obtener información acerca de estas propiedades y cómo editarlas, vea [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md).  
   
  **Tablas**  
- Muestra información sobre las tablas incluidas en la instancia CDC. La información de columna también está disponible aquí. Esta pestaña es de solo lectura. Para editar estas propiedades, haga clic con el botón derecho en la instancia en el panel izquierdo y seleccione **Propiedades** o haga clic en **Propiedades** en el panel derecho para abrir el cuadro de diálogo Propiedades de \<instancia>.  
+ Muestra información sobre las tablas incluidas en la instancia CDC. La información de columna también está disponible aquí. Esta pestaña es de solo lectura. Para editar estas propiedades, haga clic en la instancia en el panel izquierdo y seleccione **propiedades** o haga clic en **propiedades** en el panel derecho para abrir el \<instancia > cuadro de diálogo de propiedades.  
   
  Para obtener información acerca de estas propiedades y cómo editarlas, vea [Edit Tables](../../integration-services/change-data-capture/edit-tables.md).  
   
  **Avanzadas**  
- Muestra las propiedades avanzadas para la instancia CDC y los valores de propiedad. Esta pestaña es de solo lectura. Para editar estas propiedades, haga clic con el botón derecho en la instancia en el panel izquierdo y seleccione **Propiedades** o haga clic en **Propiedades** en el panel derecho para abrir el cuadro de diálogo Propiedades de \<instancia>.  
+ Muestra las propiedades avanzadas para la instancia CDC y los valores de propiedad. Esta pestaña es de solo lectura. Para editar estas propiedades, haga clic en la instancia en el panel izquierdo y seleccione **propiedades** o haga clic en **propiedades** en el panel derecho para abrir el \<instancia > cuadro de diálogo de propiedades.  
   
  Para obtener información acerca de estas propiedades y cómo editarlas, vea [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md).  
   
-## Vea también  
- [Cómo crear la instancia de base de datos de cambios de SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
+## <a name="see-also"></a>Vea también  
+ [Cómo crear la instancia de base de datos de cambios SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Cómo ver las propiedades de la instancia CDC](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
  [Cómo editar las propiedades de la instancia CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [Usar el Asistente para nueva instancia](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
+ [Use el Asistente para nueva instancia](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   

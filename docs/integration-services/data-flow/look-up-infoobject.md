@@ -1,22 +1,27 @@
 ---
-title: "Buscar InfoObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Buscar InfoObject | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f25c00406ce375a2a7a380859ca0eaa5031b54d3
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Buscar InfoObject
+# <a name="look-up-infoobject"></a>Buscar InfoObject
   Use el cuadro de diálogo **Buscar InfoObject** para buscar un InfoObject que se haya definido en el sistema de SAP Netweaver BW. Cuando aparezca la lista de InfoObjects disponibles, seleccione el InfoObject que desee y el destino de SAP BW rellenará las opciones asociadas a los valores necesarios.  
   
  El destino de SAP BW de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW usa el cuadro de diálogo **Buscar InfoObject** . Para obtener más información acerca del destino de SAP BW, vea [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
@@ -28,7 +33,7 @@ caps.handback.revision: 10
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contiene el destino SAP BW.  
   
-2.  En la pestaña **Flujo de datos**, haga doble clic en el destino de SAP BW.  
+2.  En la pestaña **Flujo de datos** , haga doble clic en el destino de SAP BW.  
   
 3.  En **Editor de destino SAP BW**, haga clic en **Administrador de conexiones** para abrir la página **Administrador de conexiones** del editor.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 10
   
  También puede abrir el cuadro de diálogo **Buscar InfoObject** si hace clic en **Agregar** en la sección **Atributos** del cuadro de diálogo **Crear nuevo InfoObject** .  
   
-## Opciones de búsqueda  
+## <a name="lookup-options"></a>Opciones de búsqueda  
  En los cuadros de texto de los campos de búsqueda, puede filtrar los resultados mediante el carácter comodín de asterisco (*) o mediante una cadena parcial en combinación con el carácter comodín de asterisco. Sin embargo, si deja de un campo de búsqueda vacío, el proceso de búsqueda solamente se corresponderá con cadenas vacías en ese campo.  
   
  **Características**  
@@ -66,7 +71,7 @@ caps.handback.revision: 10
  **Buscar**  
  Busque InfoObjects coincidentes que se hayan definido en el sistema SAP Netweaver BW.  
   
-## Buscar resultados  
+## <a name="lookup-results"></a>Buscar resultados  
  Después de hacer clic en el botón Buscar, aparece una lista de InfoObjects del sistema SAP Netweaver BW en una tabla con los siguientes encabezados de columna.  
   
  **InfoObject**  
@@ -77,13 +82,13 @@ caps.handback.revision: 10
   
  Cuando aparezca la lista de InfoObjects disponibles, seleccione el InfoObject que desee y el destino rellenará las opciones asociadas a los valores necesarios.  
   
-## Vea también  
- [Crear InfoCube para los datos de transacción](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
+## <a name="see-also"></a>Vea también  
+ [Crear InfoCube para datos de transacción](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [Crear InfoSource](../../integration-services/data-flow/create-infosource.md)   
- [Crear Infosource para datos de transacción](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
+ [Crear InfoSource para datos de transacción](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [Crear InfoSource para datos maestros](../../integration-services/data-flow/create-infosource-for-master-data.md)   
  [Crear nuevo InfoObject](../../integration-services/data-flow/create-new-infoobject.md)   
- [Editor de destino de SAP BW &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [Editor de destino de SAP BW & #40; Página Administrador de conexiones & #41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

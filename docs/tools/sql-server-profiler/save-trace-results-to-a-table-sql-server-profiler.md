@@ -1,28 +1,33 @@
 ---
-title: "Guardar los resultados de un seguimiento en una tabla (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "guardar seguimientos"
-  - "seguimientos [SQL Server], guardar"
+title: Guardar los resultados de seguimiento en una tabla (SQL Server Profiler) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- saving traces
+- traces [SQL Server], saving
 ms.assetid: edbecf74-683b-4e43-a1ef-7a3d5f5e27f6
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41505214d2ae9e53cc9cd45433183d3250650313
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Guardar los resultados de un seguimiento en una tabla (SQL Server Profiler)
+# <a name="save-trace-results-to-a-table-sql-server-profiler"></a>Guardar los resultados de un seguimiento en una tabla (SQL Server Profiler)
   En este tema se describe cómo utilizar el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]para guardar los resultados de un seguimiento en una tabla de base de datos.  
   
-### Para guardar los resultados de un seguimiento en una tabla  
+### <a name="to-save-trace-results-to-a-table"></a>Para guardar los resultados de un seguimiento en una tabla  
   
 1.  En el menú **Archivo** , haga clic en **Nuevo seguimiento**y conéctese a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -41,9 +46,9 @@ caps.handback.revision: 24
   
 6.  En la lista **Tabla** , escriba o seleccione el nombre de tabla para los resultados de seguimiento. Haga clic en **Aceptar.**  
   
-7.  En el cuadro de diálogo **Propiedades de seguimiento**, active la casilla **Establecer número máximo de filas (en miles)** para especificar el número máximo de filas que se guardarán.  
+7.  En el cuadro de diálogo **Propiedades de seguimiento** , active la casilla **Establecer número máximo de filas (en miles)**para especificar el número máximo de filas que se guardarán.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

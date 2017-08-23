@@ -1,29 +1,34 @@
 ---
-title: "Opci&#243;n de preprocesamiento (herramienta de administraci&#243;n Distributed Replay) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Opción de preprocesamiento (herramienta de administración de reproducción distribuida) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 313a794c807faa3adaf95e902526a9ac9504be80
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Opci&#243;n de preprocesamiento (herramienta de administraci&#243;n Distributed Replay)
+# <a name="preprocess-option-distributed-replay-administration-tool"></a>Opción de preprocesamiento (herramienta de administración Distributed Replay)
   La herramienta de administración de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, **DReplay.exe**, es una herramienta de línea de comandos que puede usar para comunicarse con el controlador de reproducción distribuida. En este tema se describen la opción del símbolo del sistema **preprocess** y la sintaxis correspondiente.  
   
  La opción **preprocess** inicia la fase de preprocesamiento. Durante esta fase, el controlador prepara los datos de seguimiento de entrada para la reproducción en el servidor destino.  
   
- ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.png "Icono de vínculo a temas") Para obtener más información sobre las convenciones de sintaxis que se usan con la sintaxis de la herramienta de administración, vea [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "icono de vínculo de tema") para obtener más información sobre las convenciones de sintaxis que se usan con la sintaxis de la herramienta de administración, consulte [convenciones de sintaxis de Transact-SQL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -31,11 +36,11 @@ dreplay preprocess [-m controller] -i input_trace_file
     -d controller_working_dir [-c config_file] [-f status_interval]  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  **-m** *controller*  
  Especifica el nombre del equipo que se va a controlar. Puede utilizar "`localhost`" o "`.`" para hacer referencia al equipo local.  
   
- Si no se especifica el parámetro **-m**, se usará el equipo local.  
+ Si no se especifica el parámetro **-m** , se usará el equipo local.  
   
  **-i** *input_trace_file*  
  Especifica la ruta de acceso completa del archivo de seguimiento de entrada en el controlador, por ejemplo, `D:\Mytrace.trc`. El parámetro **-i** es obligatorio.  
@@ -63,15 +68,15 @@ dreplay preprocess [-m controller] -i input_trace_file
   
  El parámetro **-c** no es obligatorio si no se necesita ningún filtrado o si no se quiere modificar el tiempo de inactividad máximo.  
   
- Sin el parámetro **-c**, se usa el archivo de configuración de preprocesamiento predeterminado, `DReplay.exe.preprocess.config`.  
+ Sin el parámetro **-c** , se usa el archivo de configuración de preprocesamiento predeterminado, `DReplay.exe.preprocess.config`.  
   
  **-f** *status_interval*  
  Especifica la frecuencia (en segundos) con la que se muestran los mensajes de estado.  
   
- Si no se especifica **-f**, el intervalo predeterminado es de 30 segundos.  
+ Si no se especifica **-f** , el intervalo predeterminado es de 30 segundos.  
   
-## Ejemplos  
- En este ejemplo, la copia intermedia del preprocesamiento se inicia con toda la configuración predeterminada. El valor `localhost` indica que el servicio del controlador se está ejecutando en el mismo equipo que la herramienta de administración. El parámetro *input_trace_file* especifica la ubicación de los datos de seguimiento de entrada, `c:\mytrace.trc`. Dado que no se usa ningún filtrado de archivos de seguimiento, no es necesario especificar el parámetro **-c**.  
+## <a name="examples"></a>Ejemplos  
+ En este ejemplo, la copia intermedia del preprocesamiento se inicia con toda la configuración predeterminada. El valor `localhost` indica que el servicio del controlador se está ejecutando en el mismo equipo que la herramienta de administración. El parámetro *input_trace_file* especifica la ubicación de los datos de seguimiento de entrada, `c:\mytrace.trc`. Dado que no se usa ningún filtrado de archivos de seguimiento, no es necesario especificar el parámetro **-c** .  
   
 ```  
 dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir  
@@ -97,14 +102,14 @@ dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DRepl
 </Options>  
 ```  
   
-## Permisos  
+## <a name="permissions"></a>Permisos  
  Debe ejecutar la herramienta de administración como un usuario interactivo, como un usuario local o una cuenta de usuario de dominio. Para utilizar una cuenta de usuario local, la herramienta de administración y el controlador se deben estar ejecutando en el mismo equipo.  
   
  Para más información, consulte [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Preparar los datos de seguimiento de entrada](../../tools/distributed-replay/prepare-the-input-trace-data.md)   
- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Reproducción distribuida de SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

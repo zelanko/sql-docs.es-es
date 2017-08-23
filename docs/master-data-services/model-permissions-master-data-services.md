@@ -1,25 +1,30 @@
 ---
-title: "Permisos de modelo (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modelo [Master Data Services], permisos"
-  - "permisos [Master Data Services], modelos"
+title: Modelo de permisos (Master Data Services) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- models [Master Data Services], permissions
+- permissions [Master Data Services], models
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8e54b1bd5e60c600e2447f37bdcf77e6f811e869
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Permisos de modelo (Master Data Services)
+# <a name="model-permissions-master-data-services"></a>Permisos de modelo (Master Data Services)
   Los permisos de modelo se aplican a todas las entidades, jerarquías derivadas, jerarquías explícitas y colecciones dentro del modelo. Los permisos asignados al modelo se pueden invalidar con respecto a cualquier objeto individual.  
   
 > [!NOTE]  
@@ -36,10 +41,10 @@ caps.handback.revision: 6
   
  Los permisos de lectura, creación, actualización y eliminación se pueden combinar entre sí. Cuando se asignan permisos de Crear, Actualizar y Eliminar, el permiso de lectura se asigna automáticamente.  
   
-## Vea también  
- [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [Permisos de objeto del modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [Permisos de entidad &#40;Master Data Services&#41;](../master-data-services/entity-permissions-master-data-services.md)   
- [Permisos de colección &#40;Master Data Services&#41;](../master-data-services/collection-permissions-master-data-services.md)  
+## <a name="see-also"></a>Vea también  
+ [Asignar permisos de objeto de modelo &#40; Master Data Services &#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [Permisos de objeto de modelo &#40; Master Data Services &#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [Permisos de entidad &#40; Master Data Services &#41;](../master-data-services/entity-permissions-master-data-services.md)   
+ [Permisos de la colección &#40; Master Data Services &#41;](../master-data-services/collection-permissions-master-data-services.md)  
   
   

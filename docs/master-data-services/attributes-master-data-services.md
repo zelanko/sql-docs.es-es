@@ -1,42 +1,47 @@
 ---
-title: "Atributos (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "atributos de forma libre [Master Data Services]"
-  - "atributos [Master Data Services], acerca de atributos"
-  - "atributos [Master Data Services], atributos de archivo"
-  - "atributos de archivos [Master Data Services]"
-  - "atributos [Master Data Services], atributos de forma libre"
-  - "atributos [Master Data Services]"
+title: Atributos (Master Data Services) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- free-form attributes [Master Data Services]
+- attributes [Master Data Services], about attributes
+- attributes [Master Data Services], file attributes
+- file attributes [Master Data Services]
+- attributes [Master Data Services], free-form attributes
+- attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 55a658c7d4d0638c2dabf82ba910276f29178aa7
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Atributos (Master Data Services)
+# <a name="attributes-master-data-services"></a>Atributos (Master Data Services)
   Los atributos son objetos contenidos en entidades de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Los valores de atributo describen los miembros de la entidad. Un atributo se puede usar para describir un miembro hoja, un miembro consolidado o una colección.  
   
-## Cómo se relacionan los atributos con otros objetos del modelo  
+## <a name="how-attributes-relate-to-other-model-objects"></a>Cómo se relacionan los atributos con otros objetos del modelo  
  Puede considerar un atributo como una columna de una tabla de entidad. Un valor de atributo es el valor que se usa para describir un miembro concreto.  
   
- ![Entidad de Master Data Services representada como una tabla](../master-data-services/media/mds-conc-entity-table.gif "Entidad de Master Data Services representada como una tabla")  
+ ![Entidad de Master Data Services representada como tabla](../master-data-services/media/mds-conc-entity-table.gif "entidad de Master Data Services representada como tabla")  
   
  Cuando se crea una entidad que contiene muchos atributos, puede organizar los atributos en grupos de atributos. Para obtener más información, consulte [Grupos de atributos &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md).  
   
-## Atributos necesarios  
+## <a name="required-attributes"></a>Atributos necesarios  
  Al crear una entidad, se crean automáticamente los atributos Code y Name. Code requiere un valor y es preciso que sea único en la entidad. No puede quitar los atributos Code y Name.  
   
-## Tipos de atributo  
+## <a name="attribute-types"></a>Tipos de atributo  
  Hay tres tipos de atributo:  
   
 -   Atributos de forma libre, que permiten la entrada de forma libre de texto, números, fechas o vínculos.  
@@ -45,8 +50,8 @@ caps.handback.revision: 12
   
 -   Atributos de archivo, que se usan para almacenar archivos, documentos o imágenes. Los atributos de archivo pretenden servir de ayuda para mantener la coherencia de los datos al requerir que los archivos tengan una extensión concreta. No se puede garantizar que los atributos de archivo impidan que un usuario malintencionado cargue un archivo de un tipo diferente.  
   
-### Atributos numéricos de forma libre  
- Los atributos numéricos de forma libre necesitan un tratamiento especial, ya que están limitados al tipo de valor **SqlDouble**.  
+### <a name="numeric-free-form-attributes"></a>Atributos numéricos de forma libre  
+ Los atributos numéricos de forma libre necesitan un tratamiento especial, ya que están limitados al tipo de valor **SqlDouble** .  
   
  De forma predeterminada, un valor **SqlDouble** contiene 15 dígitos decimales de precisión, aunque internamente se conservan 17 dígitos como máximo. La precisión de un número de coma flotante tiene varias consecuencias:  
   
@@ -56,10 +61,10 @@ caps.handback.revision: 12
   
 -   Un valor podría no *hacer un ciclo de ida y vuelta* si contiene un número de punto flotante. Un valor coincide con el inicial si una operación convierte el número de coma flotante original en otro formato, una operación inversa transforma el formato convertido de nuevo a un número de coma flotante y el último número de coma flotante es igual que el original. Se podría producir un error en la ida y vuelta porque uno o más dígitos menos significativos se pierden o cambian en una conversión.  
   
-## Ejemplos de atributo  
+## <a name="attribute-examples"></a>Ejemplos de atributo  
  En el ejemplo siguiente, la entidad tiene los atributos Name, Code, Subcategory, StandardCost, ListPrice y FilePhoto. Estos atributos describen los miembros. Cada miembro está representado por una fila única de valores de atributo.  
   
- ![Tabla de entidades de producto de bicicleta](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabla de entidades de producto de bicicleta")  
+ ![Tabla de la entidad de producto de una bicicleta](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike de la tabla de la entidad de producto")  
   
  En el ejemplo siguiente, la entidad Product contiene:  
   
@@ -71,9 +76,9 @@ caps.handback.revision: 12
   
  Subcategory es una entidad que se usa como atributo basado en domino de Product. Category es una entidad que se usa como atributo basado en domino de Subcategory. Al igual que la entidad Product, las entidades Category y Subcategory contienen cada una los atributos predeterminados Name y Code.  
   
- ![Estructura de árbol de entidad de producto](../master-data-services/media/mds-conc-entity-ui.gif "Estructura de árbol de entidad de producto")  
+ ![Estructura de árbol de entidad de producto](../master-data-services/media/mds-conc-entity-ui.gif "estructura de árbol de entidad de producto")  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
@@ -88,7 +93,7 @@ caps.handback.revision: 12
 |Cambie el orden de los atributos.|[Cambiar el orden de los atributos](../master-data-services/change-the-order-of-attributes.md)|  
 |Crear un atributo de fecha|[Crear un atributo de fecha &#40;Master Data Services&#41;](../master-data-services/create-a-date-attribute-master-data-services.md)|  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
   
 -   [Atributos basados en dominios &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
@@ -96,8 +101,5 @@ caps.handback.revision: 12
   
 -   [Miembros &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
--   [Permisos de hoja &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)  
-  
--   [Permisos consolidados &#40;Master Data Services&#41;](../Topic/Consolidated%20Permissions%20\(Master%20Data%20Services\).md)  
-  
+-   [Permisos de hoja &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)
   

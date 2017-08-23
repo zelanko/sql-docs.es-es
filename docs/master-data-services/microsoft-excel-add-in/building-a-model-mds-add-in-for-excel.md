@@ -1,22 +1,27 @@
 ---
-title: "Generar un modelo (complemento MDS para Excel) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Generar un modelo (agregar de MDS para Excel) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 82a8380ac46097ac88942776b416593d0d3338c8
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Generar un modelo (complemento MDS para Excel)
+# <a name="building-a-model-mds-add-in-for-excel"></a>Generar un modelo (complemento MDS para Excel)
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], los administradores pueden realizar un subconjunto de las funciones administrativas disponibles en la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
   
  Las tareas de generación de modelos que los administradores pueden realizar en [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] son:  
@@ -27,7 +32,7 @@ caps.handback.revision: 5
   
  Como administrador, debe crear el modelo con el servicio Web o la aplicación Web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . Puede usar [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] para crear entidades y atributos dentro del modelo. Para obtener más información sobre los objetos de modelo, consulte [Modelos &#40;Master Data Services&#41;](../../master-data-services/models-master-data-services.md).  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
  La mayoría de las tareas administrativas se deben realizar en la aplicación Web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] o utilizando el servicio Web. En la siguiente tabla se muestran las herramientas que los administradores pueden usar para completar las tareas en MDS.  
   
 |Descripción de la tarea|Herramienta|Tema|  
@@ -43,15 +48,15 @@ caps.handback.revision: 5
 |Crear versiones de datos.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] o aplicación web|[Bloquear una versión &#40;Master Data Services&#41;](../../master-data-services/lock-a-version-master-data-services.md)|  
 |Implementar modelos.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , servicio web o herramienta MDSModelDeploy.|[Crear un paquete de implementación de modelo mediante MDSModelDeploy](../../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
   
 -   [Modelos &#40;Master Data Services&#41;](../../master-data-services/models-master-data-services.md)  
   
 -   [Entidades &#40;Master Data Services&#41;](../../master-data-services/entities-master-data-services.md)  
   
--   [Atributos &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md)  
+-   [Atributos &#40; Master Data Services &#41;](../../master-data-services/attributes-master-data-services.md)  
   
--   [Atributos basados en dominios &#40;Master Data Services&#41;](../../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [Atributos basados en dominio &#40; Master Data Services &#41;](../../master-data-services/domain-based-attributes-master-data-services.md)  
   
 -   [Grupos de atributos &#40;Master Data Services&#41;](../../master-data-services/attribute-groups-master-data-services.md)  
   

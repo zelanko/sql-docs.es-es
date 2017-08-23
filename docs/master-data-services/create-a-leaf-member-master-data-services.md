@@ -1,32 +1,37 @@
 ---
-title: "Crear un miembro hoja (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "miembros hoja [Master Data Services], creación"
-  - "crear miembros hoja [Master Data Services]"
-  - "miembros [Master Data Services], creación de miembros hoja"
+title: Crear un miembro de hoja (Master Data Services) | Documentos de Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- leaf members [Master Data Services], creating
+- creating leaf members [Master Data Services]
+- members [Master Data Services], creating leaf members
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 caps.latest.revision: 14
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3745604313dde3eda55c3d0f5d8f634bf7187440
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Crear un miembro hoja (Master Data Services)
+# <a name="create-a-leaf-member-master-data-services"></a>Crear un miembro hoja (Master Data Services)
   En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cree un miembro hoja si desea agregar datos maestros al sistema. Si desea agregar datos de forma masiva, use tablas de almacenamiento provisional. Para obtener más información, consulte [Importar datos de tablas &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
   
  También puede usar [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] para importar datos.  
   
-## Requisitos previos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional **Explorador** .  
@@ -35,7 +40,7 @@ caps.handback.revision: 14
   
      Para obtener más información, consulte [Seguridad &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md).  
   
-### Crear un miembro hoja  
+### <a name="to-create-a-leaf-member"></a>Crear un miembro hoja  
   
 1.  En la página principal de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , en la lista **Modelo** , seleccione un modelo.  
   
@@ -57,8 +62,8 @@ caps.handback.revision: 14
   
 8.  Haga clic en **Aceptar**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Crear un miembro consolidado &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)   
- [Miembros &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
+ [Los miembros &#40; Master Data Services &#41;](../master-data-services/members-master-data-services.md)  
   
   

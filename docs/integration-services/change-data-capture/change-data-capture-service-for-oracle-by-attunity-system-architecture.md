@@ -1,25 +1,30 @@
 ---
-title: "Servicio de captura de datos modificados para Oracle de Attunity (Arquitectura del sistema) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Captura de datos modificados Service para Oracle de la arquitectura del sistema de Attunity | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 69f36b9b3e01be90cc1f5a4cd19fb80543186620
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Servicio de captura de datos modificados para Oracle de Attunity (Arquitectura del sistema)
+# <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Servicio de captura de datos modificados para Oracle de Attunity (Arquitectura del sistema)
   El servicio CDC para Oracle captura los cambios realizados en las tablas seleccionadas de una o varias bases de datos de Oracle de origen en bases de datos CDC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ubicadas en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En el diagrama siguiente se muestran los componentes que constituyen el servicio CDC para Oracle.  
   
- ![Arquitectura de servicio](../../integration-services/change-data-capture/media/service-architecture.gif "Arquitectura de servicio")  
+ ![Arquitectura de servicio](../../integration-services/change-data-capture/media/service-architecture.gif "arquitectura de servicio")  
   
  Esta ilustración muestra cuatro plataformas que se emplean. En muchos casos, estas plataformas se pueden superponer; sin embargo, este diagrama representa un caso de uso estándar. Por ejemplo, conviene que las bases de datos de Oracle y de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuten en equipos diferentes y que no se compartan con la plataforma del servicio CDC de Oracle o con la plataforma desde la que se diseñe el servicio CDC. Las plataformas mostradas en esta ilustración son:  
   
@@ -27,7 +32,7 @@ caps.handback.revision: 9
   
 -   La base de datos de Oracle: puede ser cualquier equipo donde se ejecute una versión compatible de la base de datos de Oracle. Esto incluye cualquier equipo que ejecute Windows, Linux o cualquier otro sistema operativo compatible con la versión de la base de datos de Oracle instalada. Tenga en cuenta que el diagrama muestra esta plataforma en plural porque un único servicio CDC de Oracle puede capturar cambios de varias bases de datos de origen de Oracle.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: puede ser cualquier equipo donde se ejecute la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino (SKU compatible de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Un servicio CDC de Oracle admite un destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde almacena las tablas de cambios y la configuración del servicio. La plataforma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también puede representar una instancia en clúster de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o una instancia reflejada de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que use la característica **AlwaysOn**.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: puede ser cualquier equipo donde se ejecute la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino (SKU compatible de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Un servicio CDC de Oracle admite un destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde almacena las tablas de cambios y la configuración del servicio. La plataforma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también puede representar una instancia en clúster de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o una instancia reflejada de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que use la característica **AlwaysOn** .  
   
 -   El Diseñador CDC de Oracle: puede ser cualquier equipo compatible con Windows que pueda obtener acceso a la base de datos de origen de Oracle y a la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino.  
   

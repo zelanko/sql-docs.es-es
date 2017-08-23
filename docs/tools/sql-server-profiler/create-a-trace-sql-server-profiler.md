@@ -1,33 +1,38 @@
 ---
-title: "Crear un seguimiento (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "seguimientos [SQL Server], crear"
+title: Crear un seguimiento (SQL Server Profiler) | Documentos de Microsoft
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0008f30aa031c98e251fd1e4fc764b801a16858
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Crear un seguimiento (SQL Server Profiler)
+# <a name="create-a-trace-sql-server-profiler"></a>Crear un seguimiento (SQL Server Profiler)
   En este tema se describe cómo utilizar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para crear un seguimiento.  
   
-### Para crear un seguimiento  
+### <a name="to-create-a-trace"></a>Para crear un seguimiento  
   
 1.  En el menú **Archivo** , haga clic en **Nueva seguimiento**y conéctese a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      Aparecerá el cuadro de diálogo **Propiedades de seguimiento** .  
   
-    > **NOTA:** El cuadro de diálogo **Propiedades de seguimiento** no aparece y, en su lugar, se inicia el seguimiento, es porque seleccionó **Iniciar el seguimiento inmediatamente tras realizar la conexión**. Para desactivar esta configuración, en el menú **Herramientas**, haga clic en **Opciones** y desactive la casilla Iniciar el seguimiento inmediatamente tras realizar la conexión.  
+    > **NOTA:** El cuadro de diálogo **Propiedades de seguimiento** no aparece y, en su lugar, se inicia el seguimiento, es porque seleccionó **Iniciar el seguimiento inmediatamente tras realizar la conexión** . Para desactivar esta configuración, en el **herramientas* * menú, haga clic en **opciones**y desactive la iniciar la traza inmediatamente tras realizar la casilla de verificación de la conexión.  
   
 2.  En el cuadro **Nombre de seguimiento** , escriba un nombre para el seguimiento.  
   
@@ -51,10 +56,11 @@ caps.handback.revision: 28
   
 7.  Haga clic en **Ejecutar** para iniciar el seguimiento.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Permisos necesarios para ejecutar SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [Plantillas y permisos de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [Establecer correlaciones de un seguimiento con datos del registro de rendimiento de Windows &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   
+

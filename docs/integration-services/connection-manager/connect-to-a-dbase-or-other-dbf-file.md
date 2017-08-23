@@ -1,36 +1,41 @@
 ---
-title: "Conectarse a un archivo dBASE u otro archivo DBF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "conectarse a archivos DBF"
-  - "archivos dBase"
-  - "archivos DBF"
+title: Conectarse a un archivo dBASE u otro archivo DBF | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connecting to DBF files
+- dBase files
+- DBF files
 ms.assetid: b0e8c831-9f96-475c-82a4-4f5b02692752
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b1ae38e8b7ba0a9e584a80d1c6cacc76938576a
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Conectarse a un archivo dBASE u otro archivo DBF
+# <a name="connect-to-a-dbase-or-other-dbf-file"></a>Conectarse a un archivo dBASE u otro archivo DBF
   Es posible conectarse a un archivo de base de datos de dBASE u otro .DBF en un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con un administrador de conexiones OLE DB y seleccionando el proveedor OLE DB para Microsoft Jet 4.0.  
   
 > [!NOTE]  
 >  El asistente de importación y exportación del servidor SQL en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no es compatible con la ejecución de la importación desde o importación hacia, dBASE o otros archivos DBF. Se puede utilizar Microsoft Access o Microsoft Excel para importar los datos de archivos DBF en una base de datos de Access o en hojas de cálculo de Excel y, a continuación, usar el Asistente para importación y exportación de SQL Server.  
   
-### Para configurar un administrador de conexiones para conectarse a un archivo dBASE u otro archivo DBF  
+### <a name="to-configure-a-connection-manager-to-connect-to-a-dbase-or-other-dbf-file"></a>Para configurar un administrador de conexiones para conectarse a un archivo dBASE u otro archivo DBF  
   
-1.  Agregue un nuevo administrador de conexiones OLE DB al paquete Para más información, consulte [Add, Delete, or Share a Connection Manager in a Package](../Topic/Add,%20Delete,%20or%20Share%20a%20Connection%20Manager%20in%20a%20Package.md).  
+1.  Agregue un nuevo administrador de conexiones OLE DB al paquete Para más información, consulte [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
-2.  En la página **Conexión** del cuadro de diálogo **Administrador de conexiones**, seleccione OLE DB nativo\Proveedor OLE DB de Microsoft Jet 4.0 como el **Proveedor**.  
+2.  En la página **Conexión** del cuadro de diálogo **Administrador de conexiones** , seleccione OLE DB nativo\Proveedor OLE DB de Microsoft Jet 4.0 como el **Proveedor**.  
   
 3.  Cuando se trabaja con archivos DBF, la carpeta representa la base de datos, y los archivos DBF individuales representan tablas. Por lo tanto, el cuadro de texto **Nombre de archivo de base de datos** debe contener la ruta de acceso de la carpeta donde reside el archivo DBF, y no el nombre de archivo. Puede escribir o pegar una ruta de acceso a la carpeta, o bien puede utilizar el botón **Examinar** para seleccionar el archivo DBF y, a continuación, quitar el nombre de archivo del final de la ruta de acceso a la carpeta.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 16
   
 7.  Para utilizar el administrador de conexiones en el flujo de datos del paquete, seleccione un origen o un destino de OLE DB y configúrelo para usar el administrador de conexiones que creó en los pasos anteriores.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Administrador de conexiones OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
   

@@ -1,34 +1,39 @@
 ---
-title: "Reglas de negocios (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/18/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "reglas de negocio [Master Data Services], sobre las reglas de negocio"
-  - "reglas de negocios [Master Data Services]"
+title: Reglas de negocios (Master Data Services) | Documentos de Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/18/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business rules [Master Data Services], about business rules
+- business rules [Master Data Services]
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 caps.latest.revision: 16
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c8929bcaf6bc937ae6c8bf4bdb0e1b0d2e02f64
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Reglas de negocios (Master Data Services)
+# <a name="business-rules-master-data-services"></a>Reglas de negocios (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], una regla de negocios es aquella que se usa para asegurarse de la calidad y la exactitud de los datos maestros. Puede usar una regla de negocios para actualizar datos automáticamente, enviar mensajes de correo electrónico, o iniciar un proceso de negocio o un flujo de trabajo.  
   
- Para ver ejemplos de reglas de negocios, vea [ejemplos de reglas de negocios & #40; Master Data Services & #41;](../master-data-services/business-rule-examples-master-data-services.md).  
+ Para ver ejemplos de reglas de negocios, vea [ejemplos de reglas de negocios &#40; Master Data Services &#41; ](../master-data-services/business-rule-examples-master-data-services.md).  
   
-## Crear y publicar reglas de negocios  
- Reglas de negocios son **If/Then o Else** las instrucciones que se crean en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. Si un valor de atributo cumple una condición especificada, la acción se realiza; de lo contrario, se realiza una acción Else. Entre las posibles acciones se incluyen establecer un valor predeterminado o cambiar un valor. Estas acciones se pueden combinar con el envío de una notificación de correo electrónico.  
+## <a name="create-and-publish-business-rules"></a>Crear y publicar reglas de negocios  
+ Las reglas de negocios son instrucciones **If/Then/Else** que se crean en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. Si un valor de atributo cumple una condición especificada, la acción se realiza; de lo contrario, se realiza una acción Else. Entre las posibles acciones se incluyen establecer un valor predeterminado o cambiar un valor. Estas acciones se pueden combinar con el envío de una notificación de correo electrónico.  
   
- Las reglas de negocios se pueden basar en valores de atributo concretos (por ejemplo, realizar una acción si Color=Azul) o cuando los valores de atributo cambian (por ejemplo, realizar una acción si el valor del atributo Color cambia). Para obtener más información sobre el seguimiento de cambios no específicos, consulte [Change Tracking & #40; Master Data Services & #41;](../master-data-services/change-tracking-master-data-services.md).  
+ Las reglas de negocios se pueden basar en valores de atributo concretos (por ejemplo, realizar una acción si Color=Azul) o cuando los valores de atributo cambian (por ejemplo, realizar una acción si el valor del atributo Color cambia). Para obtener más información sobre el seguimiento de cambios no específicos, consulte [seguimiento de cambios &#40; Master Data Services &#41; ](../master-data-services/change-tracking-master-data-services.md).  
   
  Para utilizar reglas de negocios, primero debe crear y publicar las reglas, y a continuación aplicar las reglas publicadas a los datos. Puede aplicar reglas a los subconjuntos de datos o a todos los datos de una versión validando la versión. No se puede confirmar una versión hasta que todos los atributos pasen la validación de la regla de negocios.  
   
@@ -38,7 +43,7 @@ caps.handback.revision: 16
   
  Si crea una regla de negocios que use el operador **OR** , debe crear una regla distinta para cada instrucción condicional que se pueda evaluar independientemente. A continuación, puede excluir las reglas según sea necesario, proporcionando más flexibilidad y facilitando la solución de problemas.  
   
-## Cómo se aplican reglas de negocios  
+## <a name="how-business-rules-are-applied"></a>Cómo se aplican reglas de negocios  
  Puede establecer el orden de prioridad de ejecución de las reglas de negocio desplazándolas hacia arriba y hacia abajo. Sin embargo, antes de tener en cuenta la prioridad, las reglas de negocios se aplican en función del tipo de acción que emprende la regla. El orden es el siguiente:  
   
 1.  **Valor predeterminado**  
@@ -65,33 +70,33 @@ caps.handback.revision: 16
   
 -   Una regla de negocios no puede contener más de una acción **iniciar flujo de trabajo** .  
   
-## Configuración del sistema  
- Hay dos valores de [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] que afectan a las reglas de negocios. Puede ajustar estos valores en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] o directamente en la tabla Configuración del sistema. Para obtener más información, consulte [Configuración del sistema & #40; Master Data Services & #41;](../master-data-services/system-settings-master-data-services.md).  
+## <a name="system-settings"></a>Configuración del sistema  
+ Hay dos valores de [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] que afectan a las reglas de negocios. Puede ajustar estos valores en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] o directamente en la tabla Configuración del sistema. Para obtener más información, vea [Configuración del sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Crear y publicar una nueva regla de negocios.|[Crear y publicar una regla de negocios & #40; Master Data Services & #41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
-|Agregar varias condiciones a una regla de negocios.|[Agregar varias condiciones a una regla de negocios & #40; Master Data Services & #41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
-|Crear una regla de negocios para exigir que los atributos tengan valores.|[Requerir valores de atributo & #40; Master Data Services & #41;](../master-data-services/require-attribute-values-master-data-services.md)|  
-|Crear una regla de negocios para realizar una acción según los cambios de los valores de atributos.|[Iniciar acciones según los cambios de valor de atributo & #40; Master Data Services & #41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
-|Crear una regla de negocio para establecer el script definido por el usuario como una condición|[Extensión de las reglas de negocio & #40; Master Data Services & #41;](../master-data-services/business-rules-extension-master-data-services.md)|  
-|Crear una regla de negocio para establecer un script definido por el usuario como una acción|[Extensión de las reglas de negocio & #40; Master Data Services & #41;](../master-data-services/business-rules-extension-master-data-services.md)|  
-|Cambiar el nombre de una regla de negocios existente.|[Cambiar el nombre de una regla de negocio & #40; Master Data Services & #41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
-|Configurar [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para enviar notificaciones cuando se aplican las reglas de negocios.|[Configurar reglas de negocios para enviar notificaciones de & #40; Master Data Services & #41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
-|Aplicar reglas de negocios a determinados miembros.|[Validar a miembros específicos con reglas de negocios & #40; Master Data Services & #41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
-|Excluir una regla de negocios para que no se utilice.|[Excluir una regla de negocios & #40; Master Data Services & #41;](../master-data-services/exclude-a-business-rule-master-data-services.md)|  
-|Eliminar una regla de negocios existente.|[Eliminar una regla de negocios & #40; Master Data Services & #41;](../master-data-services/delete-a-business-rule-master-data-services.md)|  
+|Crear y publicar una nueva regla de negocios.|[Crear y publicar una regla de negocios &#40; Master Data Services &#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
+|Agregar varias condiciones a una regla de negocios.|[Agregar varias condiciones a una regla de negocios &#40; Master Data Services &#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
+|Crear una regla de negocios para exigir que los atributos tengan valores.|[Requerir valores de atributo &#40; Master Data Services &#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
+|Crear una regla de negocios para realizar una acción según los cambios de los valores de atributos.|[Iniciar acciones según los cambios de valor de atributo &#40; Master Data Services &#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|Crear una regla de negocio para establecer el script definido por el usuario como una condición|[Extensión de reglas de negocios &#40; Master Data Services &#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
+|Crear una regla de negocio para establecer un script definido por el usuario como una acción|[Extensión de reglas de negocios &#40; Master Data Services &#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
+|Cambiar el nombre de una regla de negocios existente.|[Cambiar un nombre de regla de negocios &#40; Master Data Services &#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
+|Configurar [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para enviar notificaciones cuando se aplican las reglas de negocios.|[Configurar reglas de negocios para enviar notificaciones de &#40; Master Data Services &#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
+|Aplicar reglas de negocios a determinados miembros.|[Validar a miembros específicos con las reglas de negocios &#40; Master Data Services &#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
+|Excluir una regla de negocios para que no se utilice.|[Excluir una regla de negocios &#40; Master Data Services &#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)|  
+|Eliminar una regla de negocios existente.|[Eliminar una regla de negocios &#40; Master Data Services &#41;](../master-data-services/delete-a-business-rule-master-data-services.md)|  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
   
--   [Información general de Master Data Services & #40; MDS & #41;](../master-data-services/master-data-services-overview-mds.md)  
+-   [Introducción a Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
--   [Versiones de & #40; Master Data Services & #41;](../master-data-services/versions-master-data-services.md)  
+-   [Versiones de &#40; Master Data Services &#41;](../master-data-services/versions-master-data-services.md)  
   
--   [Validación de & #40; Master Data Services & #41;](../master-data-services/validation-master-data-services.md)  
+-   [Validación &#40; Master Data Services &#41;](../master-data-services/validation-master-data-services.md)  
   
--   [Seguimiento de cambios & #40; Master Data Services & #41;](../master-data-services/change-tracking-master-data-services.md)  
+-   [Seguimiento de cambios &#40; Master Data Services &#41;](../master-data-services/change-tracking-master-data-services.md)  
   
   

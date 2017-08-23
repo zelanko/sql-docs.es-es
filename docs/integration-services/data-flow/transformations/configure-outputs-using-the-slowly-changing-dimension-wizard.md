@@ -1,37 +1,42 @@
 ---
-title: "Configurar salidas mediante el Asistente para dimensi&#243;n de variaci&#243;n lenta | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Dimensión de variación lenta, transformación"
-  - "dimensiones de variación lenta"
-  - "Asistente para dimensiones variables"
+title: Configurar salidas mediante el Asistente para dimensiones variables | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Slowly Changing Dimension transformation
+- slowly changing dimensions
+- Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cc89e598abbf0b224325d74501b47e3999bf472b
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Configurar salidas mediante el Asistente para dimensi&#243;n de variaci&#243;n lenta
+# <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Configurar salidas mediante el Asistente para dimensión de variación lenta
   El Asistente para dimensiones variables funciona como editor para la transformación Dimensión de variación lenta. Generar y configurar el flujo de datos para datos de dimensiones de variación lenta puede ser una tarea compleja. El Asistente para dimensiones variables ofrece el método más simple para generar el flujo de datos para las salidas de la transformación Dimensión de variación lenta, ya que ofrece una guía paso a paso de la asignación de columnas, la selección de columnas de clave empresarial, el establecimiento de atributos de cambio de las columnas y la configuración de la admisión de miembros de dimensión deducidos.  
   
  Debe elegir por lo menos una columna de clave empresarial en la tabla de dimensiones y asignarla a una columna de entrada. El valor de clave empresarial vincula un registro del origen con un registro de la tabla de dimensión. La transformación utiliza esta asignación para ubicar el registro de la tabla de dimensión y determinar si un registro es nuevo o cambia. La clave empresarial suele ser la clave principal del origen, pero puede ser una clave alternativa siempre que identifique un registro de forma exclusiva y su valor no cambie. La clave empresarial puede ser también una clave compuesta, que se compone de varias columnas. La clave principal de la tabla de dimensión suele ser una clave suplente, lo que se traduce en que una columna de identidad o una solución personalizada, como un script, genera automáticamente un valor numérico.  
   
  Antes de poder ejecutar el Asistente para dimensiones variables lentas, debe agregar un origen y una transformación Dimensión de variación lenta al flujo de datos, y luego conectar la salida desde el origen a la entrada de la transformación Dimensión de variación lenta. Opcionalmente, el flujo de datos puede incluir otras transformaciones entre el origen de datos y la transformación Dimensión de variación lenta.  
   
- Para abrir el Asistente para dimensiones de variación lenta en el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)], haga doble clic en la transformación Dimensión de variación lenta.  
+ Para abrir el Asistente para dimensiones de variación lenta en el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , haga doble clic en la transformación Dimensión de variación lenta.  
   
-## Crear salidas de dimensión de variación lenta  
+## <a name="creating-slowly-changing-dimension-outputs"></a>Crear salidas de dimensión de variación lenta  
   
-#### Para crear salidas de la transformación Dimensión de variación lenta  
+#### <a name="to-create-slowly-changing-dimension-transformation-outputs"></a>Para crear salidas de la transformación Dimensión de variación lenta  
   
 1.  Elija el administrador de conexiones para obtener acceso al origen de datos que contiene la tabla de dimensiones que desee actualizar.  
   
@@ -73,12 +78,12 @@ caps.handback.revision: 43
   
      El siguiente diagrama muestra un ejemplo de flujo de datos que admite cambios de atributo fijo, atributo variable y atributo histórico, miembros deducidos y cambios en los registros coincidentes.  
   
-     ![Flujo de datos del Asistente para dimensiones de variación lenta](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "Flujo de datos del Asistente para dimensiones de variación lenta")  
+     ![Flujo de datos de lenta Asistente para dimensiones variables](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "de flujo de datos de lenta Asistente para dimensiones variables")  
   
-## Actualizar salidas de dimensión de variación lenta  
+## <a name="updating-slowly-changing-dimension-outputs"></a>Actualizar salidas de dimensión de variación lenta  
  La manera más simple de actualizar la configuración de la transformación Dimensión de variación lenta es volver a ejecutar el Asistente para dimensiones variablesy modificar las propiedades en las páginas del asistente. También puede actualizar la transformación Dimensión de variación lenta mediante el cuadro de diálogo **Editor avanzado** o mediante programación.  
   
-## Vea también  
- [Transformación Dimensión de variación lenta](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
+## <a name="see-also"></a>Vea también  
+ [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   

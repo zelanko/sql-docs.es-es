@@ -1,23 +1,28 @@
 ---
-title: "Crear un paquete de implementaci&#243;n de modelo mediante MDSModelDeploy | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Crear un paquete de implementación de modelo mediante MDSModelDeploy | Documentos de Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 59f983bc7fb8b25956a6edd61a6a9226384ffb8a
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Crear un paquete de implementaci&#243;n de modelo mediante MDSModelDeploy
+# <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Crear un paquete de implementación de modelo mediante MDSModelDeploy
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], utilice la herramienta MDSModelDeploy para crear un paquete. Dependiendo de los comandos que especifique, el paquete puede contener:  
   
 -   Solo objetos de modelo.  
@@ -26,7 +31,7 @@ caps.handback.revision: 13
   
  Si desea implementar un paquete que solo contiene objetos de modelo, puede usar en su lugar el Asistente para la implementación de modelos en la aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Para obtener más información, consulte [Crear un paquete de implementación de modelo mediante el asistente](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
   
-## Requisitos previos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 1.  Los permisos básicos necesarios para ejecutar la herramienta de MDSModelDeploy son los siguientes:  
@@ -57,7 +62,7 @@ caps.handback.revision: 13
   
  Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-### Para crear un paquete de implementación de modelo mediante MDSModelDeploy  
+### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Para crear un paquete de implementación de modelo mediante MDSModelDeploy  
   
 1.  Abra un símbolo del sistema de administrador.  
   
@@ -91,12 +96,12 @@ caps.handback.revision: 13
   
 6.  Presione ENTRAR. Cuando el paquete se crea correctamente, se muestra un mensaje que indica que “la operación de MDSModelDeploy se completó correctamente”.  
   
-## Pasos siguientes  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   [Implementar un paquete de implementación de modelo mediante MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
-## Vea también  
- [Opciones de la implementación de modelos &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)   
- [Implementar modelos &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
+## <a name="see-also"></a>Vea también  
+ [Opciones de implementación de modelo &#40; Master Data Services &#41;](../master-data-services/model-deployment-options-master-data-services.md)   
+ [Implementar modelos &#40; Master Data Services &#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

@@ -1,26 +1,31 @@
 ---
-title: "Analizar consultas con resultados de SHOWPLAN en SQL Server Profiler | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "eventos [SQL Server], plan de presentación"
-  - "Profiler [SQL Server Profiler], resultados de plan de presentación"
-  - "SQL Server Profiler, resultados de plan de presentación"
+title: Analizar consultas con resultados de SHOWPLAN en SQL Server Profiler | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- events [SQL Server], Showplan
+- Profiler [SQL Server Profiler], Showplan results
+- SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 03913120309e861eab5bb89523467e8736e5b50b
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Analizar consultas con resultados de SHOWPLAN en SQL Server Profiler
+# <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analizar consultas con resultados de SHOWPLAN en SQL Server Profiler
   Puede agregar clases de eventos Showplan a una definición de seguimiento que permitan que el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] recopile y muestre información del plan de consulta en el seguimiento. También es posible extraer los eventos Showplan de los otros eventos recopilados en el seguimiento y guardarlos en un archivo XML independiente.  
   
  La extracción de eventos Showplan del seguimiento puede hacerse de dos formas:  
@@ -31,7 +36,7 @@ caps.handback.revision: 30
   
 -   Mediante la extracción y almacenamiento de eventos individuales al hacer clic con el botón derecho en un evento concreto y seleccionar **Extraer datos de evento**.  
   
-## Showplan (eventos)  
+## <a name="showplan-events"></a>Showplan (eventos)  
  Los eventos de seguimiento Showplan se enumeran y describen en la siguiente tabla:  
   
 |Nombre del evento|Descripción|  
@@ -46,7 +51,7 @@ caps.handback.revision: 30
 |**Showplan XML For Query Compile**|Muestra el plan de consulta al compilar la consulta. Para más información, consulte [Showplan XML for Query Compile Event Class](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md).|  
 |**Showplan XML Statistics Profile**|Muestra el plan de consulta con detalles completos acerca del tiempo de ejecución en formato XML. Por ejemplo, esta clase de evento captura el número de filas que pasan por cada operador de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que se está ejecutando. Para más información, consulte [Showplan XML Statistics Profile Event Class](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md).|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Rendimiento (categoría de eventos)](../../relational-databases/event-classes/performance-event-category.md)  
   
   

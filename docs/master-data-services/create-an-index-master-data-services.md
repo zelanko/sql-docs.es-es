@@ -1,26 +1,31 @@
 ---
-title: "Creaci&#243;n de un &#237;ndice personalizado (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Crear un índice (Master Data Services) | Documentos de Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a4d03606ab8a45d6c7b326fd64b6900ac7e67356
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Creaci&#243;n de un &#237;ndice personalizado (Master Data Services)
+# <a name="create-an-index-master-data-services"></a>Creación de un índice personalizado (Master Data Services)
   Cree un índice personalizado en una lista de atributos que se consulta con frecuencia para mejorar el rendimiento de las consultas.  
   
-## Requisitos previos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de Administración del sistema. Para obtener más información, consulte [Permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -49,7 +54,7 @@ caps.handback.revision: 6
   
 |Nombre de la columna|Description|  
 |-----------------|-----------------|  
-|Estado|El estado del índice.<br /><br /> Al hacer clic en **Guardar**, se muestra la imagen ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status"), lo que indica que el índice se está actualizando.<br /><br /> Si aparecen errores al crear o editar un índice, se muestra la imagen ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status").<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status").|  
+|Estado|El estado del índice.<br /><br /> Al hacer clic en **guardar**, ![icono para actualizar el estado](../master-data-services/media/mds-statusicon-updating.png "icono para actualizar el estado") imagen muestra lo que indica que se está actualizando el índice.<br /><br /> Si hay errores al crear o editar un índice, el ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "icono de estado de error") muestra la imagen.<br /><br /> En caso contrario, el estado es correcto y el ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "icono de estado correcto") muestra la imagen.|  
 |Nombre|Nombre de índice.|  
 |Is Unique|Especifica si el índice es único.|  
 |En atributos|Muestra los nombres para mostrar de los atributos en los que está definido el índice.|  
@@ -64,10 +69,10 @@ caps.handback.revision: 6
   
 -   **El:**Fecha y hora en que se el índice se actualizó por última vez.  
   
-## Pasos siguientes  
+## <a name="next-steps"></a>Pasos siguientes  
  [Editar y eliminar un índice &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Índice personalizado &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)  
   
   

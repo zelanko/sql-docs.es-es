@@ -1,28 +1,33 @@
 ---
-title: "Acciones de reglas de negocios (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Acciones de regla de negocios (Master Data Services) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8a4d478795952951063dab5ef6979f517997ff3f
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Acciones de reglas de negocios (Master Data Services)
+# <a name="business-rule-actions-master-data-services"></a>Acciones de reglas de negocios (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], las acciones de regla de negocios son el resultado de las evaluaciones de condiciones de reglas de negocios. Si una condición es TRUE, se inicia la acción.  
   
 > [!NOTE]  
 >  Para las acciones de valor predeterminado y de cambiar valor, si el valor generado supera la longitud máxima del atributo, el valor generado se trunca.  
   
-## Acciones de valor predeterminado  
+## <a name="default-value-actions"></a>Acciones de valor predeterminado  
  Las acciones de**valor predeterminado** establecen el valor predeterminado de un atributo especificado. Los usuarios con permiso pueden cambiar estos valores predeterminados.  
   
 |Nombre del valor|Description|  
@@ -31,7 +36,7 @@ caps.handback.revision: 10
 |**tiene como valor predeterminado un valor generado**|El atributo seleccionado **tiene como valor predeterminado un valor generado** que se determina especificando un valor de inicio y un valor incremental.<br /><br /> Esta acción es válida para los valores de texto y de número.|  
 |**tiene como valor predeterminado un valor concatenado**|El atributo seleccionado **tiene como valor predeterminado un valor concatenado** que se determina especificando varios atributos.<br /><br /> Esta acción es válida para los valores de texto y vínculo.|  
   
-## Acciones de cambiar valor  
+## <a name="change-value-actions"></a>Acciones de cambiar valor  
  Las acciones de**cambiar valor** actualizan el valor de un atributo o valor especificado. Los usuarios solo pueden cambiar estos valores si el valor nuevo hace que la acción se establezca en TRUE.  
   
 |Nombre del valor|Description|  
@@ -39,7 +44,7 @@ caps.handback.revision: 10
 |**Es igual a**|El atributo seleccionado se cambia a un valor de atributo definido, a otro atributo o el valor se queda vacío.<br /><br /> Esta acción es válida para los valores de texto, número, fecha y vínculo.|  
 |**es igual a un valor concatenado**|El atributo seleccionado se cambia a un valor concatenado, que se determina especificando varios atributos.<br /><br /> Esta acción es válida para los valores de texto y vínculo.|  
   
-## Acciones de validación  
+## <a name="validation-actions"></a>Acciones de validación  
  Cuando las acciones de**validación** no se evalúan como TRUE, se envía un correo electrónico a un usuario o un grupo especificados. Para confirmar una versión, todas las acciones de validación deben evaluarse como TRUE.  
   
  Las únicas excepciones son las acciones **es obligatorio** y **no es válido** . Estas acciones se deben combinar con una acción para cambiar valores, de forma que los datos se puedan validar correctamente y se pueda confirmar la versión.  
@@ -60,16 +65,16 @@ caps.handback.revision: 10
 |**debe tener una longitud mínima de**|El atributo seleccionado **debe tener una longitud mínima** del valor especificado.<br /><br /> Esta acción es válida para los valores de texto y vínculo.|  
 |**debe tener una longitud máxima de**|El atributo seleccionado **debe tener una longitud máxima** del valor especificado.<br /><br /> Esta acción es válida para los valores de texto y vínculo.|  
   
-## Acción externa  
+## <a name="external-action"></a>Acción externa  
  Las acciones de tipo**Externa** interactúan con aplicaciones fuera de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
 |Nombre de la acción|Description|  
 |-----------------|-----------------|  
 |**iniciar flujo de trabajo**|Inicia un flujo de trabajo externo. Los datos que provocaron esta acción se pasan al flujo de trabajo. Para obtener más información, vea el artículo sobre [Integración del flujo de trabajo de SharePoint Master Data Services](http://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> Esta acción es válida para los valores de texto, número, fecha y vínculo.|  
   
-## Vea también  
- [Condiciones de reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
- [Reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Crear y publicar una regla de negocios &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
+## <a name="see-also"></a>Vea también  
+ [Condiciones de reglas de negocios &#40; Master Data Services &#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
+ [Las reglas de negocios &#40; Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)   
+ [Crear y publicar una regla de negocios &#40; Master Data Services &#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   

@@ -1,32 +1,37 @@
 ---
-title: "Crear un atributo de v&#237;nculo (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "atributos [Master Data Services], crear atributos de vínculos"
-  - "crear atributos de vínculo [Master Data Services]"
+title: "Crear un atributo de vínculo (Master Data Services) | Documentos de Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attributes [Master Data Services], creating link attributes
+- creating link attributes [Master Data Services]
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1b5c1a0c51283b981daf0df5e65740892fb830c2
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Crear un atributo de v&#237;nculo (Master Data Services)
+# <a name="create-a-link-attribute-master-data-services"></a>Crear un atributo de vínculo (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree un atributo de vínculo cuando desee que los usuarios escriban un hipervínculo como valor de atributo, como http://www.contoso.com.  
   
 > [!NOTE]  
 >  Cuando los usuarios escriban un valor para un atributo de vínculo, la cadena debe comenzar por **http://** o se mostrará un error.  
   
-## Requisitos previos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -35,12 +40,12 @@ caps.handback.revision: 9
   
 -   Debe existir una entidad para la que crear el atributo. Para obtener más información, consulte [Crear una entidad &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
   
-## Información de atributo  
+## <a name="attribute-information"></a>Información de atributo  
  Por cada atributo creado, se agrega una fila con siete columnas a la cuadrícula. En la siguiente tabla se describen las columnas.  
   
 |Columna|Description|  
 |------------|-----------------|  
-|Estado|Estado del atributo.<br /><br /> Al hacer clic en Guardar, se muestra la imagen ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status"), lo que indica que el atributo se está actualizando.<br /><br /> Si aparecen errores al crear o editar un atributo, se muestra la imagen ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status").<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status").|  
+|Estado|Estado del atributo.<br /><br /> Al hacer clic en Guardar, el ![icono para actualizar el estado](../master-data-services/media/mds-statusicon-updating.png "icono para actualizar el estado") muestra, que indica que se está actualizando el atributo de la imagen.<br /><br /> Si hay errores al crear o editar un atributo, el ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "icono de estado de error") muestra la imagen.<br /><br /> En caso contrario, el estado es correcto y la ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "icono de estado correcto") muestra la imagen.|  
 |Nombre|El nombre del atributo.|  
 |Nombre para mostrar|Nombre para mostrar del atributo.|  
 |Description|Descripción del atributo.|  
@@ -58,7 +63,7 @@ caps.handback.revision: 9
   
 -   **El**: fecha y hora en que se actualizó el atributo por última vez.  
   
-### Crear un atributo de vínculo  
+### <a name="to-create-a-link-attribute"></a>Crear un atributo de vínculo  
   
 1.  En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], haga clic en **Administración del sistema**.  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 9
   
 8.  En el cuadro **Ancho de píxel de la pantalla** , escriba el ancho de la columna de atributo que se va a mostrar en la cuadrícula del **Explorador** .  
   
-9. En la lista **Tipo de atributo**, seleccione **Forma libre**.  
+9. En la lista **Tipo de atributo** , seleccione **Forma libre**.  
   
 10. En la lista **Tipo de datos** , seleccione **Vínculo**.  
   
@@ -92,10 +97,10 @@ caps.handback.revision: 9
   
 13. Haga clic en **Guardar**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
- [Cambiar el nombre y el tipo de datos de un atributo &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [Crear un atributo basado en dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [Cambiar un nombre de atributo y tipo de datos &#40; Master Data Services &#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [Crear un atributo basado en dominio &#40; Master Data Services &#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [Crear un atributo de archivo &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

@@ -1,26 +1,31 @@
 ---
-title: "Cuadro de di&#225;logo Configurar | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.configure.f1"
-  - "sql13.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1"
-  - "sql13.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1"
+title: "Cuadro de diálogo Configurar | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.configure.f1
+- sql13.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1
+- sql13.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f9587abfb97ec048985ac28de0e7dc585e2bea61
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Cuadro de di&#225;logo Configurar
+# <a name="configure-dialog-box"></a>Cuadro de diálogo Configurar
   Utilice el cuadro de diálogo **Configurar** para configurar parámetros, administradores de conexión y referencias a los entornos, para los paquetes y los proyectos.  
   
  **¿Qué desea hacer?**  
@@ -48,7 +53,7 @@ caps.handback.revision: 11
 ##  <a name="parameter"></a> Establecer las opciones de la página Parámetros  
  Use la página **Parámetros** para ver los nombres de los parámetros y valores, así como para modificar los valores.  
   
- Seleccione el ámbito de los parámetros que aparecen en las pestañas **Parámetros** y **Administradores de conexiones**, en la lista desplegable **Ámbito**.  
+ Seleccione el ámbito de los parámetros que aparecen en las pestañas **Parámetros** y **Administradores de conexiones** , en la lista desplegable **Ámbito** .  
   
  La siguiente es una lista de las opciones de la pestaña **Parámetros** .  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 11
  Muestra la carpeta que contiene el entorno.  
   
  **Abrir**  
- Haga clic para abrir el cuadro de diálogo de **Propiedades del entorno**.  
+ Haga clic para abrir el cuadro de diálogo de **Propiedades del entorno** .  
   
  **Agregar**  
  Haga clic para agregar una referencia a un entorno. En el cuadro de diálogo **Examinar entornos** , haga clic en un entorno y después en **Aceptar**.  

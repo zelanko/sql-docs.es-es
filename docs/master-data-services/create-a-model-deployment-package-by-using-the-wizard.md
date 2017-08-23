@@ -1,29 +1,34 @@
 ---
-title: "Crear un paquete de implementaci&#243;n de modelo mediante el asistente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "paquetes de implementación [Master Data Services], crear"
-  - "modelos [Master Data Services], crear paquete de implementación"
-  - "crear paquetes [Master Data Services]"
+title: "Crear un paquete de implementación de modelo mediante el Asistente para | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deployment packages [Master Data Services], creating
+- models [Master Data Services], creating a deployment package
+- creating packages [Master Data Services]
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 050a64ae675c953ea54e33bd813f93732804fe1b
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Crear un paquete de implementaci&#243;n de modelo mediante el asistente
+# <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Crear un paquete de implementación de modelo mediante el asistente
   Use el Asistente para la implementación de modelos de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para crear un paquete de los objetos del modelo solamente. Si necesita incluir datos en un paquete, consulte [Implementar un paquete de implementación de modelo mediante MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
-## Requisitos previos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   En la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , debe tener permiso de acceso al área funcional **Administración del sistema** .  
@@ -32,7 +37,7 @@ caps.handback.revision: 8
   
 -   Debe existir un modelo para que se pueda crear un paquete del mismo. Para obtener más información, consulte [Crear un modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md).  
   
-### Crear un paquete de implementación de modelo  
+### <a name="to-create-a-model-deployment-package"></a>Crear un paquete de implementación de modelo  
   
 1.  En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], haga clic en **Administración del sistema**.  
   
@@ -50,11 +55,11 @@ caps.handback.revision: 8
   
 8.  Haga clic en **Cerrar** para cerrar el asistente.  
   
-## Pasos siguientes  
+## <a name="next-steps"></a>Pasos siguientes  
   
--   [Implementar un paquete de implementación de modelo mediante el asistente](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
+-   [Implementar un paquete de implementación de modelo mediante el Asistente](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
-## Vea también  
- [Implementar modelos &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
+## <a name="see-also"></a>Vea también  
+ [Implementar modelos &#40; Master Data Services &#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

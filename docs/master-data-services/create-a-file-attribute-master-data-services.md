@@ -1,29 +1,34 @@
 ---
-title: "Crear un atributo de archivo (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "crear atributos de archivo [Master Data Services]"
-  - "atributos [Master Data Services], crear atributos de archivo"
+title: Crear un atributo de archivo (Master Data Services) | Documentos de Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating file attributes [Master Data Services]
+- attributes [Master Data Services], creating file attributes
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: edacb4f71f1cb154ebdf2c01fb614e69f0a64713
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Crear un atributo de archivo (Master Data Services)
+# <a name="create-a-file-attribute-master-data-services"></a>Crear un atributo de archivo (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree un atributo de archivo para rellenar los valores de atributo con archivos.  
   
-## Requisitos previos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -32,12 +37,12 @@ caps.handback.revision: 8
   
 -   Debe existir una entidad para la que crear el atributo. Para obtener más información, consulte [Crear una entidad &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
   
-## Información de atributo  
+## <a name="attribute-information"></a>Información de atributo  
  Por cada atributo creado, se agrega una fila con siete columnas a la cuadrícula. En la siguiente tabla se describen las columnas.  
   
 |Columna|Description|  
 |------------|-----------------|  
-|Estado|Estado del atributo.<br /><br /> Al hacer clic en Guardar, se muestra la imagen ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status"), lo que indica que el atributo se está actualizando.<br /><br /> Si aparecen errores al crear o editar un atributo, se muestra la imagen ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status").<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status").|  
+|Estado|Estado del atributo.<br /><br /> Al hacer clic en Guardar, el ![icono para actualizar el estado](../master-data-services/media/mds-statusicon-updating.png "icono para actualizar el estado") muestra, que indica que se está actualizando el atributo de la imagen.<br /><br /> Si hay errores al crear o editar un atributo, el ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "icono de estado de error") muestra la imagen.<br /><br /> En caso contrario, el estado es correcto y la ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "icono de estado correcto") muestra la imagen.|  
 |Nombre|El nombre del atributo.|  
 |Nombre para mostrar|Nombre para mostrar del atributo.|  
 |Description|Descripción del atributo.|  
@@ -55,7 +60,7 @@ caps.handback.revision: 8
   
 -   **El**: fecha y hora en que se actualizó el atributo por última vez.  
   
-### Crear un atributo de archivo  
+### <a name="to-create-a-file-attribute"></a>Crear un atributo de archivo  
   
 1.  En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], haga clic en **Administración del sistema**.  
   
@@ -81,16 +86,16 @@ caps.handback.revision: 8
   
 9. En la lista **Tipo de atributo** , seleccione **Archivo**.  
   
-10. En la lista **Extensión de archivo**, seleccione un tipo de archivo que pueda cargar un usuario o acepte el valor predeterminado (*.\*) para permitir todos los tipos de archivo.  
+10. En la lista **Extensión de archivo** , seleccione un tipo de archivo que pueda cargar un usuario o acepte el valor predeterminado (*.\*) para permitir todos los tipos de archivo.  
   
 11. Si lo desea, seleccione **Habilitar seguimiento de cambios** para realizar el seguimiento de los cambios en los grupos de atributos. Para obtener más información, consulte [Agregar atributos a un grupo de seguimiento de cambios &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
   
 12. Haga clic en **Guardar**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
- [Cambiar el nombre y el tipo de datos de un atributo &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [Crear un atributo basado en dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [Crear un atributo de texto &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
+ [Cambiar un nombre de atributo y tipo de datos &#40; Master Data Services &#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [Crear un atributo basado en dominio &#40; Master Data Services &#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [Crear un atributo de texto &#40; Master Data Services &#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
   

@@ -1,32 +1,37 @@
 ---
-title: "Crear un atributo de fecha (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "crear atributos de fecha [Master Data Services]"
-  - "atributos [Master Data Services], crear atributos de fecha"
+title: Crear un atributo de fecha (Master Data Services) | Documentos de Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating date attributes [Master Data Services]
+- attributes [Master Data Services], creating date attributes
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f44b3b8c577dcb684a386e74df07095c17bc204a
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Crear un atributo de fecha (Master Data Services)
+# <a name="create-a-date-attribute-master-data-services"></a>Crear un atributo de fecha (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree un atributo de fecha cuando desee que los usuarios escriban una fecha como un valor de atributo.  
   
 > [!NOTE]  
 >  El atributo se denomina DateTime, pero los valores de hora no se admiten.  
   
-## Requisitos previos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -35,7 +40,7 @@ caps.handback.revision: 13
   
 -   Debe tener una entidad para la que crear el atributo. Para obtener más información, consulte [Crear una entidad &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
   
-### Crear un atributo de fecha  
+### <a name="to-create-a-date-attribute"></a>Crear un atributo de fecha  
   
 1.  En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], haga clic en **Administración del sistema**.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 13
   
 8.  En el cuadro **Ancho de píxel de la pantalla** , escriba el ancho de la columna de atributo que se va a mostrar en la cuadrícula del **Explorador** .  
   
-9. En la lista **Tipo de atributo**, seleccione **Forma libre**.  
+9. En la lista **Tipo de atributo** , seleccione **Forma libre**.  
   
 10. En la lista **Tipo de datos** , seleccione **DateTime**.  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 13
   
 13. Haga clic en **Guardar**.  
   
-## Para mostrar la parte de hora de un valor datetime  
+## <a name="to-display-the-time-portion-of-a-datetime-value"></a>Para mostrar la parte de hora de un valor datetime  
  Para hacer que la interfaz de usuario muestre la parte de hora de un valor datetime, debe seleccionar una máscara de entrada apropiada para el atributo. Ninguna de las máscaras integradas para los atributos Datetime hacen esto, pero puede agregar una nueva máscara que permitirá mostrar la hora. Para ello, agregue una fila a la tabla mdm.tblList de la base de datos MDS, donde se almacenan las máscaras integradas. La fila debe tener los valores siguientes:  
   
 |||  
@@ -86,10 +91,10 @@ caps.handback.revision: 13
   
  La Máscara de entrada es una cadena con formato de fecha y hora de .NET personalizado. Para más información, consulte [Cadenas con formato de fecha y hora personalizado](https://msdn.microsoft.com/en-us/library/8kb3ddd4\(v=vs.110\).aspx)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
- [Cambiar el nombre y el tipo de datos de un atributo &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [Crear un atributo basado en dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [Cambiar un nombre de atributo y tipo de datos &#40; Master Data Services &#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [Crear un atributo basado en dominio &#40; Master Data Services &#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [Crear un atributo de archivo &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

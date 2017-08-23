@@ -1,29 +1,34 @@
 ---
-title: "Servicio de captura de datos modificados para Oracle de Attunity (Gu&#237;a de procedimientos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Captura de datos modificados Service para Oracle de Attunity guía | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f50178e7-6d9a-45f9-bfce-61260aa882c1
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d6bd845f244c0ed7484d91961502bfa63879544b
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Servicio de captura de datos modificados para Oracle de Attunity (Gu&#237;a de procedimientos)
+# <a name="change-data-capture-service-for-oracle-by-attunity-how-to-guide"></a>Servicio de captura de datos modificados para Oracle de Attunity (Guía de procedimientos)
   En esta sección se describe cómo realizar tareas en la Consola de configuración del servicio CDC.  
   
-## Aprender a usar la interfaz de usuario de configuración del servicio CDC para Oracle  
+## <a name="learn-how-to-use-the-cdc-service-for-oracle-service-configuration-ui"></a>Aprender a usar la interfaz de usuario de configuración del servicio CDC para Oracle  
   
 -   [Cómo crear y editar un servicio CDC](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
--   [Cómo administrar un servicio CDC local](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
+-   [Cómo administrar un servicio CDC Local](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
   
 -   [Cómo preparar SQL Server para CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   

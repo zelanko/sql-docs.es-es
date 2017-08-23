@@ -1,31 +1,36 @@
 ---
-title: "&amp; (AND bit a bit) (expresi&#243;n de SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "AND, AND bit a bit"
-  - "& (AND bit a bit)"
-  - "AND bit a bit (&)"
+title: "&amp;(AND bit a bit) (Expresión de SSIS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- AND, bitwise AND
+- '& (bitwise AND)'
+- bitwise AND (&)
 ms.assetid: 06d2958e-66a5-44d8-8bc4-56209ebe1ff2
 caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d5dad9457bbafe0218c1e71358d2c9c445f79a8
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# &amp; (AND bit a bit) (expresi&#243;n de SSIS)
+# <a name="amp-bitwise-and-ssis-expression"></a>&amp;(AND bit a bit) (Expresión de SSIS)
   Lleva a cabo una operación AND bit a bit entre dos valores enteros. Compara cada bit del primer operando con el bit correspondiente del segundo operando. Si ambos bits son 1, el bit de resultado correspondiente se establece en 1. De lo contrario, se establece en 0.  
   
  Ambas condiciones deben ser de tipo entero con signo o de tipo entero sin signo.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -33,17 +38,17 @@ integer_expression1 & integer_expression2
   
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *integer_expression1, integer_expression2*  
  Cualquier expresión válida de tipo entero con o sin signo. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Tipos de resultado  
+## <a name="result-types"></a>Tipos de resultado  
  Determinados por los tipos de datos de los dos argumentos. Para más información, consulte [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Si alguna de las condiciones es NULL, el resultado de la expresión será NULL.  
   
-## Ejemplos de expresiones  
+## <a name="expression-examples"></a>Ejemplos de expresiones  
  Este ejemplo realiza una operación AND bit a bit entre las columnas **NumberA** y **NumberB**. **NumberA** contiene 3 (0000011) y la columna **NumberB** contiene 7 (00000111).  
   
 ```  
@@ -92,9 +97,9 @@ ReorderPoint & SafetyStockLevel
   
  00000001  
   
-## Vea también  
- [&& &#40;AND lógico&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/logical-and-ssis-expression.md)   
- [Precedencia y capacidad de asociación de operadores](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Vea también  
+ [& & &#40; Operador lógico AND &#41; &#40; Expresión de SSIS &#41;](../../integration-services/expressions/logical-and-ssis-expression.md)   
+ [Prioridad y asociatividad](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operadores &#40; Expresión de SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

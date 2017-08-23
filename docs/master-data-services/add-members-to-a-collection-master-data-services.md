@@ -1,27 +1,32 @@
 ---
-title: "Agregar miembros a una colecci&#243;n (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "colecciones [Master Data Services], agregar miembros"
+title: "Agregar miembros a una colección (Master Data Services) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collections [Master Data Services], adding members
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56799f639b1ea5833926ee8965c60ba936c90f98
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Agregar miembros a una colecci&#243;n (Master Data Services)
+# <a name="add-members-to-a-collection-master-data-services"></a>Agregar miembros a una colección (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede agregar miembros hoja y consolidados a una colección.  
   
-## Requisitos previos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional **Explorador** .  
@@ -30,7 +35,7 @@ caps.handback.revision: 7
   
 -   Una colección debe existir. Para obtener más información, consulte [Crear una colección &#40;Master Data Services&#41;](../master-data-services/create-a-collection-master-data-services.md).  
   
-### Para agregar miembros a una colección  
+### <a name="to-add-members-to-a-collection"></a>Para agregar miembros a una colección  
   
 1.  En la página principal de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , en la lista **Modelo** , seleccione un modelo.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 7
   
 11. Además, puede establecer los valores de ponderación haciendo clic en el valor de la columna **Ponderación** .  
   
-## Vea también  
- [Colecciones &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
+## <a name="see-also"></a>Vea también  
+ [Colecciones de &#40; Master Data Services &#41;](../master-data-services/collections-master-data-services.md)  
   
   

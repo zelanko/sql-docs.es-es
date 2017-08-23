@@ -1,36 +1,41 @@
 ---
-title: "Crear un modelo (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modelos [Master Data Services], crear modelos"
-  - "crear modelos [Master Data Services]"
+title: Crear un modelo (Master Data Services) | Documentos de Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- models [Master Data Services], creating models
+- creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1791558cec3999d3a038bc3b651cd3c8edbd307d
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Crear un modelo (Master Data Services)
+# <a name="create-a-model-master-data-services"></a>Crear un modelo (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree un modelo para contener los objetos de modelo.  
   
-## Requisitos previos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
 -   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-### Para crear un modelo  
+### <a name="to-create-a-model"></a>Para crear un modelo  
   
 1.  En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], haga clic en **Administración del sistema**.  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 13
   
 4.  En el cuadro **Nombre** , escriba el nombre del modelo.  
   
-5.  Opcionalmente, en el campo **Descripción**, escriba la descripción del modelo.  
+5.  Opcionalmente, en el campo **Descripción** , escriba la descripción del modelo.  
   
 6.  En el campo **Log Retention Days** (Días de retención del registro), seleccione una de las opciones de retención de datos de registro. El valor predeterminado es **Configuración del sistema**, lo que indica que el valor se hereda de la configuración del sistema del [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Para obtener más información, vea [Configuración del sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 13
   
  Por cada modelo creado, se agrega una fila con ocho columnas a la cuadrícula. Las ocho columnas son:  
   
--   **Estado**: el estado del modelo. Al hacer clic en el botón **Guardar modelo**, se muestra la imagen ![Updating](../master-data-services/media/mds-model-status-updating.png "Updating"), lo que indica que se está actualizando el modelo. Si hay errores al crear o editar un modelo, se muestra la imagen ![Error](../master-data-services/media/mds-model-status-error.png "Error"). De lo contrario, el estado es correcto y se muestra la imagen ![OK](../master-data-services/media/mds-model-status-ok.png "OK").  
+-   **Estado**: el estado del modelo. Al hacer clic en el **Guardar modelo** botón, el ![actualizar](../master-data-services/media/mds-model-status-updating.png "actualizar") imagen se muestra, lo que indica que se está actualizando el modelo. Si hay errores al crear o editar un modelo, el ![Error](../master-data-services/media/mds-model-status-error.png "Error") se muestra la imagen. De lo contrario, el estado es correcto y se muestra la imagen ![Aceptar](../master-data-services/media/mds-model-status-ok.png "Aceptar") .  
   
 -   **Nombre**: el nombre del modelo.  
   
@@ -68,15 +73,15 @@ caps.handback.revision: 13
   
 -   **Fecha y hora de actualización**: la fecha y hora de la última actualización del modelo.  
   
-## Pasos siguientes  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   [Crear una entidad &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Modelos &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
- [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
- [Eliminar un modelo &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   
- [Editar modelo &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)   
+ [Las entidades &#40; Master Data Services &#41;](../master-data-services/entities-master-data-services.md)   
+ [Eliminar un modelo de &#40; Master Data Services &#41;](../master-data-services/delete-a-model-master-data-services.md)   
+ [Editar modelo &#40; Master Data Services &#41;](../master-data-services/edit-model-master-data-services.md)   
  [Transacciones &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
   

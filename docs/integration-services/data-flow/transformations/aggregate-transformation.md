@@ -1,37 +1,42 @@
 ---
-title: "Transformaci&#243;n Agregado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.aggregatetrans.f1"
-helpviewer_keywords: 
-  - "IsBig, propiedad"
-  - "funciones de agregado [Integration Services]"
-  - "agregado, transformación [Integration Services]"
-  - "datos grandes, transformaciones SSIS"
+title: "Agregar transformación | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.aggregatetrans.f1
+helpviewer_keywords:
+- IsBig property
+- aggregate functions [Integration Services]
+- Aggregate transformation [Integration Services]
+- large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9e6bdc92869d16ac47745b04c0a94d9f9c993449
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transformaci&#243;n Agregado
+# <a name="aggregate-transformation"></a>Transformación Agregado
   La transformación Agregado aplica funciones de agregado, como Average, a los valores de columnas y copia los resultados en la salida de transformación. Además de las funciones de agregado, la transformación proporciona la cláusula GROUP BY, que se puede usar para especificar los grupos en los que se debe realizar el agregado.  
   
-## Operaciones  
+## <a name="operations"></a>Operaciones  
  La transformación Agregado admite las siguientes operaciones.  
   
 |Operación|Description|  
 |---------------|-----------------|  
-|GROUP BY|Divide los conjuntos de datos en grupos. Se pueden usar columnas de cualquier tipo de datos para la agrupación. Para más información, vea [GROUP BY &#40;Transact-SQL&#41;](../Topic/GROUP%20BY%20\(Transact-SQL\).md).|  
+|GROUP BY|Divide los conjuntos de datos en grupos. Se pueden usar columnas de cualquier tipo de datos para la agrupación. Para más información, vea [GROUP BY &#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md).|  
 |Sum|Suma los valores de una columna. Solo podrán sumarse las columnas con tipos de datos numéricos. Para más información, vea [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md).|  
 |Promedio|Devuelve la media de los valores de columna de una columna. Solo podrá calcularse la media de las columnas con tipos de datos numéricos. Para más información, vea [AVG &#40;Transact-SQL&#41;](../../../t-sql/functions/avg-transact-sql.md).|  
 |Count|Devuelve el número de elementos de un grupo. Para más información, vea [COUNT &#40;Transact-SQL&#41;](../../../t-sql/functions/count-transact-sql.md).|  
@@ -47,7 +52,7 @@ caps.handback.revision: 59
   
 -   En la función COUNT (*), se cuentan todas las filas, incluso las filas con valores NULL.  
   
-## Números grandes en agregados  
+## <a name="big-numbers-in-aggregates"></a>Números grandes en agregados  
  Una columna puede contener valores numéricos que requieren una consideración especial debido a su elevado valor o requisitos de precisión. La transformación Agregado incluye la propiedad IsBig, que se puede establecer en columnas de salida para invocar un control especial de números grandes o de alta precisión. Si el valor de la columna puede superar los 4 mil millones o se requiere una precisión más allá del tipo de datos float, IsBig se debe establecer en 1.  
   
  Si se establece la propiedad IsBig en 1, esto afecta la salida de la transformación Agregado de las siguientes maneras:  
@@ -61,14 +66,14 @@ caps.handback.revision: 59
 > [!NOTE]  
 >  No se puede establecer IsBig en 1 en columnas que se usan en las operaciones GROUP BY, MAX y MIN.  
   
-## Consideraciones de rendimiento  
+## <a name="performance-considerations"></a>Consideraciones de rendimiento  
  La transformación Agregado incluye un conjunto de propiedades que se pueden establecer para mejorar el rendimiento de la transformación.  
   
--   Cuando realice una operación **Group by**, defina las propiedades Keys o KeysScale del componente y las salidas de componente. Si usa Keys, puede especificar el número exacto de claves que se espera que la transformación administre. (En este contexto, Keys hace referencia al número de grupos que se espera como resultado de una operación **Group by**). Con KeysScale, puede especificar un número aproximado de claves. Si especifica un valor correcto para Keys o KeyScale, mejorará el rendimiento porque la transformación podrá asignar la memoria adecuada a los datos que almacena en memoria caché.  
+-   Cuando realice una operación **Group by** , defina las propiedades Keys o KeysScale del componente y las salidas de componente. Si usa Keys, puede especificar el número exacto de claves que se espera que la transformación administre. (En este contexto, Keys hace referencia al número de grupos que se espera como resultado de una operación **Group by**). Con KeysScale, puede especificar un número aproximado de claves. Si especifica un valor correcto para Keys o KeyScale, mejorará el rendimiento porque la transformación podrá asignar la memoria adecuada a los datos que almacena en memoria caché.  
   
--   Cuando realice una operación **Distinct count**, defina las propiedades CountDistinctKeys o CountDistinctScale del componente. Con CountDistinctKeys, puede especificar el número exacto de claves que se espera que la transformación controle en una operación count distinct. (En este contexto, CountDistinctKeys hace referencia al número de valores distintos que se esperan como resultado de una operación **Distinct count**). Mediante CountDistinctScale, puede especificar una cantidad aproximada de claves para una operación count distinct. Si especifica un valor correcto para CountDistinctKeys o CountDistinctScale, mejorará el rendimiento porque la transformación podrá asignar la memoria adecuada a los datos que almacena en memoria caché.  
+-   Cuando realice una operación **Distinct count** , defina las propiedades CountDistinctKeys o CountDistinctScale del componente. Con CountDistinctKeys, puede especificar el número exacto de claves que se espera que la transformación controle en una operación count distinct. (En este contexto, CountDistinctKeys hace referencia al número de valores distintos que se esperan como resultado de una operación **Distinct count**). Mediante CountDistinctScale, puede especificar una cantidad aproximada de claves para una operación count distinct. Si especifica un valor correcto para CountDistinctKeys o CountDistinctScale, mejorará el rendimiento porque la transformación podrá asignar la memoria adecuada a los datos que almacena en memoria caché.  
   
-## Configuración de la transformación Agregado  
+## <a name="aggregate-transformation-configuration"></a>Configuración de la transformación Agregado  
  La transformación Agregado se configura en los niveles de transformación, salida y columna.  
   
 -   En el nivel de la transformación, se configura la transformación Agregado a efectos de rendimiento especificando los valores siguientes:  
@@ -99,11 +104,11 @@ caps.handback.revision: 59
   
  La transformación Agregado es asincrónica, lo que significa que no utiliza ni publica datos fila por fila. En lugar de ello, utiliza todo el conjunto de filas, realiza sus agrupaciones y agregaciones, y, seguidamente, publica los resultados.  
   
- Esta transformación no pasa por ninguna columna, sino que crea nuevas columnas en el flujo de datos para los datos que publica. Solo las columnas de entrada a las que se aplican las funciones de agregado o las columnas de entrada que usa la transformación para agrupar se copian en la salida de transformación. Por ejemplo, una entrada de la transformación Agregado puede tener tres columnas: **CountryRegion**, **City**y **Population**. La transformación agrupa de acuerdo con la columna **CountryRegion** y aplica la función Sum a la columna **Population**. Por tanto, la salida no incluye la columna **City** .  
+ Esta transformación no pasa por ninguna columna, sino que crea nuevas columnas en el flujo de datos para los datos que publica. Solo las columnas de entrada a las que se aplican las funciones de agregado o las columnas de entrada que usa la transformación para agrupar se copian en la salida de transformación. Por ejemplo, una entrada de la transformación Agregado puede tener tres columnas: **CountryRegion**, **City**y **Population**. La transformación agrupa de acuerdo con la columna **CountryRegion** y aplica la función Sum a la columna **Population** . Por tanto, la salida no incluye la columna **City** .  
   
  Puede también agregar varias salidas a la transformación Agregado y dirigir cada agregación a una salida diferente. Por ejemplo, si la transformación Agregado aplica las funciones Sum y Average, cada agregación se puede dirigir a una salida diferente.  
   
- Puede aplicar varias agregaciones a una sola columna de entrada. Por ejemplo, si quiere los valores de suma y promedio de una columna de entrada denominada **Sales**, puede configurar la transformación para aplicar las funciones Sum y Average a la columna **Sales**.  
+ Puede aplicar varias agregaciones a una sola columna de entrada. Por ejemplo, si quiere los valores de suma y promedio de una columna de entrada denominada **Sales**, puede configurar la transformación para aplicar las funciones Sum y Average a la columna **Sales** .  
   
  La transformación Agregado tiene una entrada y una o varias salidas. No admite una salida de error.  
   
@@ -117,7 +122,7 @@ caps.handback.revision: 59
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](../Topic/Common%20Properties.md)  
+-   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -129,10 +134,10 @@ caps.handback.revision: 59
   
 -   [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
  [Agregar valores en un conjunto de datos mediante la transformación Agregado](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

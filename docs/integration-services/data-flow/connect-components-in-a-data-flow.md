@@ -1,28 +1,42 @@
 ---
-title: "Conectar componentes de un flujo de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "componentes [Integration Services], conexiones"
-  - "conexiones [Integration Services], componentes de flujo de datos"
+title: Conectar los componentes de un flujo de datos | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- components [Integration Services], connections
+- connections [Integration Services], data flow components
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 73a379b190f05f4eedc361b4557afefd700a9664
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Conectar componentes de un flujo de datos
+# <a name="connect-components-in-a-data-flow"></a>Conectar componentes de un flujo de datos
   Este procedimiento describe cómo conectar la salida de los componentes de un flujo de datos con otros componentes dentro del mismo flujo de datos.  
+El flujo de datos de un paquete se genera en la superficie de diseño de la pestaña **Flujo de datos** en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Si un flujo de datos contiene dos componentes de flujo de datos, puede conectar ambos conectando la salida de un origen o transformación con la entrada de una transformación o destino. El conector entre dos componentes de flujo de datos se denomina ruta.  
   
-### Para conectar los componentes de un flujo de datos  
+ El siguiente diagrama muestra un flujo de datos simple con un componente de origen, dos transformaciones, un componente de destino y las rutas que los conectan.  
+  
+ ![Data flow](../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
+  
+ Una vez conectados dos componentes, puede ver los metadatos de los datos que se mueven por la ruta y las propiedades de la ruta en el **Editor de rutas de flujo de datos**. Para más información, consulte [Integration Services Paths](../../integration-services/data-flow/integration-services-paths.md).  
+  
+ También puede agregar visores de datos a las rutas. Un visor de datos permite ver los datos que se mueven entre los componentes de flujo de datos cuando se ejecuta el paquete.  
+  
+### <a name="connect-components-in-a-data-flow"></a>Conectar componentes de un flujo de datos  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contiene el paquete que desea.  
   
@@ -39,9 +53,8 @@ caps.handback.revision: 40
   
 6.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Agregar o eliminar un componente en un flujo de datos](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)   
- [Configurar una salida de error en un componente de flujo de datos](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)   
- [Flujo de datos](../../integration-services/data-flow/data-flow.md)  
+ [Depurar el flujo de datos](../../integration-services/troubleshooting/debugging-data-flow.md) [flujo de datos](../../integration-services/data-flow/data-flow.md)  
   
   

@@ -1,31 +1,36 @@
 ---
-title: "Agregar varias condiciones a una regla de negocios (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "reglas de negocios [Master Data Services], varias condiciones"
+title: Agregar varias condiciones a una regla de negocios (Master Data Services) | Documentos de Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business rules [Master Data Services], multiple conditions
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f32a774b32d76a829e44ef699223c7a7f425dae8
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Agregar varias condiciones a una regla de negocios (Master Data Services)
+# <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Agregar varias condiciones a una regla de negocios (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], agregue varias condiciones **AND** u **OR** a una regla de negocio cuando quiera una regla más compleja.  
   
 > [!NOTE]  
->  Si crea una regla de negocio que usa el operador **OR**, considere crear una regla distinta para cada instrucción condicional que se pueda evaluar de forma independiente. A continuación, puede excluir las reglas según sea necesario, proporcionando más flexibilidad y facilitando la solución de problemas.  
+>  Si crea una regla de negocio que usa el operador **OR** , considere crear una regla distinta para cada instrucción condicional que se pueda evaluar de forma independiente. A continuación, puede excluir las reglas según sea necesario, proporcionando más flexibilidad y facilitando la solución de problemas.  
   
-## Requisitos previos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -34,15 +39,15 @@ caps.handback.revision: 9
   
 -   Una regla de negocios debe existir. Para obtener más información, consulte [Crear y publicar una regla de negocios &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md).  
   
-### Para agregar varias condiciones a una regla de negocios  
+### <a name="to-add-multiple-conditions-to-a-business-rule"></a>Para agregar varias condiciones a una regla de negocios  
   
 1.  En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], haga clic en **Administración del sistema**.  
   
 2.  En la barra de menús, seleccione **Administrar** y haga clic en **Reglas de negocios**.  
   
-3.  En la página **Reglas de negocios/**, en la lista desplegable **Modelo**, seleccione un modelo.  
+3.  En la página **Reglas de negocios/** , en la lista desplegable **Modelo** , seleccione un modelo.  
   
-4.  En la lista desplegable **Entidad**, seleccione una entidad.  
+4.  En la lista desplegable **Entidad** , seleccione una entidad.  
   
 5.  En la lista desplegable **Member Types** (Tipos de miembros), seleccione un tipo de miembro.  
   
@@ -50,13 +55,13 @@ caps.handback.revision: 9
   
 7.  Haga clic en **Editar**.  
   
-8.  En el bloque **If**, en el lado izquierdo de la lista desplegable de operadores lógicos, seleccione **AND/OR/ NOT**.  
+8.  En el bloque **If** , en el lado izquierdo de la lista desplegable de operadores lógicos, seleccione **AND/OR/ NOT**.  
   
 9. Haga clic en **Agregar**. Se mostrará un panel.  
   
-10. En la lista desplegable **Atributo**, seleccione un atributo.  
+10. En la lista desplegable **Atributo** , seleccione un atributo.  
   
-11. En la lista desplegable **Operador**, seleccione una condición.  
+11. En la lista desplegable **Operador** , seleccione una condición.  
   
 12. Complete todos los campos obligatorios.  
   
@@ -70,9 +75,9 @@ caps.handback.revision: 9
     > [!TIP]  
     >  Puede seleccionar varias condiciones y haga clic con el botón derecho para agruparlas en un operador lógico o para desagrupar las condiciones dentro de un operador lógico específico.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Cambiar el nombre de una regla de negocios &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
- [Configurar reglas de negocios para enviar notificaciones &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
+ [Cambiar un nombre de regla de negocios &#40; Master Data Services &#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
+ [Configurar reglas de negocios para enviar notificaciones de &#40; Master Data Services &#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

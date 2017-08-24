@@ -19,6 +19,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>Migrar bases de datos y los datos estructurados a SQL Server en Linux 
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 Puede migrar los datos y las bases de datos a SQL Server de 2017 RC2 que se ejecutan en Linux. El método que elija para utilizar depende de los datos de origen y su escenario concreto. Las secciones siguientes proporcionan recomendaciones para diversos escenarios de migración.
 
 ## <a name="migrate-from-sql-server-on-windows"></a>Migrar de SQL Server en Windows

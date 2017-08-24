@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extraer, transformar y cargar datos en Linux con SSIS
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 En este tema se describe cómo ejecutar paquetes de SQL Server Integration Services (SSIS) en Linux. SSIS resuelve los problemas de integración de datos complejos, cargar datos desde varios orígenes y formatos, transformar y limpiar los datos y actualizar varios destinos. 
 
 Paquetes SSIS que se ejecutan en Linux pueden conectarse a Microsoft SQL Server que se ejecutan en Windows local o en la nube, en Linux o en Docker. También pueden conectarse a la base de datos de SQL Azure, almacenamiento de datos de SQL Azure y orígenes de datos ODBC.

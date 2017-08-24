@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Instalar las herramientas de línea de comandos de SQL Server de sqlcmd y bcp en Linux
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 Los siguientes pasos instalación las herramientas de línea de comandos, controladores ODBC de Microsoft y sus dependencias. El **mssql herramientas** paquete contiene:
 
 - **Sqlcmd**: utilidad de línea de comandos de consulta.

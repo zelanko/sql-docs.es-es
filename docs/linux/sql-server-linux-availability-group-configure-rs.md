@@ -16,8 +16,9 @@ ms.contentlocale: es-es
 ms.lasthandoff: 08/02/2017
 
 ---
-
 # <a name="configure-read-scale-out-availability-group-for-sql-server-on-linux"></a>Configurar grupo de disponibilidad de escalado horizontal de lectura para SQL Server en Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 Puede configurar un grupo de disponibilidad de escalabilidad horizontal de lectura de SQL Server en Linux. Hay dos arquitecturas para grupos de disponibilidad. A *alta disponibilidad* arquitectura utiliza un administrador de clústeres para proporcionar mejor continuidad del negocio. Esta arquitectura también puede incluir lecturas réplicas de escalabilidad horizontal. Para crear la arquitectura de alta disponibilidad, consulte [Configurar grupo de disponibilidad AlwaysOn para SQL Server en Linux](sql-server-linux-availability-group-configure-ha.md).
 

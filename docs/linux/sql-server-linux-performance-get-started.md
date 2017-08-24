@@ -18,6 +18,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Tutorial para las características de rendimiento de SQL Server en Linux
+
 Si es un usuario de Linux que es una novedad de SQL Server, las tareas siguientes le guiarán por algunas de las características de rendimiento. Estos no son únicas o específicas de Linux, pero es conveniente tener una idea de las áreas para investigar en profundidad. En cada ejemplo se proporciona un vínculo a la documentación de profundidad para dicha área.
 
 > [!NOTE]

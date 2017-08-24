@@ -17,6 +17,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Comentarios de los clientes de SQL Server en Linux
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 De forma predeterminada, Microsoft SQL Server recopila información sobre cómo sus clientes usan la aplicación. En concreto, SQL Server recopila información sobre la experiencia de instalación, el uso y el rendimiento. Esta información ayuda a Microsoft a mejorar el producto para satisfacer mejor las necesidades del cliente. Por ejemplo, Microsoft recopila información sobre los tipos de códigos de error que encuentran los clientes para que podamos corregir errores relacionados, mejorar nuestra documentación sobre cómo usar SQL Server y determinar si deben agregarse características al producto para ofrecer un mejor servicio a los clientes.
 
 Este documento proporciona información detallada sobre qué tipos de información se recopilan y sobre cómo configurar Microsoft SQL Server en Linux para enviar que recopilan información a Microsoft. SQL Server 2017 incluye una declaración de privacidad que explica qué información y no se recopilan de los usuarios. Lea la declaración de privacidad.

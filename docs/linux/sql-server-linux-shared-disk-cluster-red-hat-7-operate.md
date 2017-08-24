@@ -16,8 +16,9 @@ ms.contentlocale: es-es
 ms.lasthandoff: 08/02/2017
 
 ---
-
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Funcionar el clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 Este documento describe cómo realizar las tareas siguientes para SQL Server en un clúster de conmutación por error de disco compartido con Red Hat Enterprise Linux.
 

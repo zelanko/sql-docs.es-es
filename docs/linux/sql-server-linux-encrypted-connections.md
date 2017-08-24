@@ -20,7 +20,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Cifrado de las conexiones a SQL Server en Linux
 
-[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]en Linux puede usar seguridad de capa de transporte (TLS) para cifrar los datos transmitidos a través de una red entre una aplicación cliente y una instancia de [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]es compatible con los mismos protocolos TLS en Windows y Linux: TLS 1.0, 1.1 y 1.2. Sin embargo, son específicos del sistema operativo en el que los pasos para configurar TLS [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] está ejecutando.  
  

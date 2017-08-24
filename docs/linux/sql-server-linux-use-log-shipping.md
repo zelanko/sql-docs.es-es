@@ -16,9 +16,9 @@ ms.contentlocale: es-es
 ms.lasthandoff: 08/02/2017
 
 ---
-
-
 # <a name="get-started-with-log-shipping-on-linux"></a>Empezar a trabajar con el trasvase de registros en Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 Trasvase de registros de SQL Server es una configuración de alta disponibilidad en una base de datos desde un servidor principal se replica en uno o más servidores secundarios. En pocas palabras, se restaura una copia de seguridad de la base de datos de origen en el servidor secundario. A continuación, el servidor principal crea copias de seguridad de registro de transacciones periódicamente, y los servidores secundarios restauración al completo, actualizar la copia secundaria de la base de datos. 
 

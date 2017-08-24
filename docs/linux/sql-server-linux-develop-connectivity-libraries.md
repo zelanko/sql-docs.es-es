@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Las bibliotecas de conectividad y marcos de trabajo para Microsoft SQL Server
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 Visite nuestro [tutoriales de introducción](http://aka.ms/sqldev) para empezar a trabajar con lenguajes como C#, Java, Node.js, PHP y Python de programación y compilar una aplicación mediante SQL Server en Linux o Windows o Docker en macOS rápidamente.
 
 La tabla siguiente enumera las bibliotecas de conectividad o *controladores* que las aplicaciones cliente pueden utilizar desde una variedad de lenguajes para conectarse a y usar Microsoft SQL Server que se ejecutan de forma local o en la nube, en Linux, Windows o Docker y también para base de datos de SQL Azure y almacenamiento de datos de SQL Azure. 

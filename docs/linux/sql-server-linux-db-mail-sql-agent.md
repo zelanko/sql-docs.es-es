@@ -17,7 +17,8 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Correo electrónico de base de datos y las alertas de correo electrónico con el Agente SQL en Linux
-[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 Los pasos siguientes muestran cómo configurar el correo electrónico de base de datos y usar con el agente de SQL Server (**agente de server mssql**) en Linux. 
 

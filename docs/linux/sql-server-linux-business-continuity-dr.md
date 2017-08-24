@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="business-continuity-and-database-recovery-sql-server-on-linux"></a>Continuidad empresarial y base de datos de recuperación SQL Server en Linux
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 SQL Server en Linux permite a las organizaciones lograr una amplia gama de objetivos de acuerdo de nivel de servicio para dar cabida a distintos requisitos de negocios.
 
 Las soluciones más sencillas aprovechan las tecnologías de virtualización para lograr un alto grado de resistencia frente a errores de nivel de host, la tolerancia a errores frente a errores de hardware, así como la elasticidad y la maximización de recursos. Estos sistemas pueden ejecutarse de forma local, en una nube privada o pública o entornos híbridos. La forma más sencilla de protección y recuperación ante desastres es la copia de seguridad de base de datos. Las soluciones simples disponibles en SQL Server de 2017 RC2 incluyen:

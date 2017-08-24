@@ -45,7 +45,7 @@
 # [Propiedades personalizadas de archivo plano](flat-file-custom-properties.md)  
 # [Origen OData](odata-source.md)  
 ## [Tutorial: Usar el origen OData](tutorial-using-the-odata-source.md)  
-## [Modificar una consulta de origen OData en tiempo de ejecución](modify-odata-source-query-at-runtime.md)  
+## [Proporcionar una consulta de origen OData en tiempo de ejecución](modify-odata-source-query-at-runtime.md)  
 ## [Propiedades del origen OData](odata-source-properties.md)  
 # [Componentes del flujo de ODBC](odbc-flow-components.md)  
 ## [Destino ODBC](odbc-destination.md)  

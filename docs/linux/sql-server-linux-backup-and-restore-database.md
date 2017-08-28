@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Copia de seguridad y restauración de bases de datos SQL en Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Puede realizar copias de seguridad de bases de datos de SQL Server de 2017 RC2 en Linux con las mismas herramientas como otras plataformas. En un servidor Linux, puede usar `sqlcmd` para conectarse a SQL Server y realizar copias de seguridad. En Windows, puede conectarse a SQL Server en Linux y realizar copias de seguridad con la interfaz de usuario. La funcionalidad de copia de seguridad es el mismo en las distintas plataformas. Por ejemplo, puede hacer una copia las bases de datos localmente, en unidades remotas o a [servicio de almacenamiento de blobs de Microsoft Azure](http://msdn.microsoft.com/library/dn435916.aspx). 
 

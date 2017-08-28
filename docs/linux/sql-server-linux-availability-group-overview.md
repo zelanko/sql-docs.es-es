@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="availability-groups-for-sql-server-on-linux"></a>Grupos de disponibilidad para SQL Server en Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Un grupo de disponibilidad AlwaysOn de SQL Server es una alta disponibilidad (HA), recuperación ante desastres (DR) y solución de escalado horizontal. Proporciona alta disponibilidad para los grupos de bases de datos de almacenamiento de conexión directa. Admite varias secundarias para alta disponibilidad integrada y recuperación ante desastres, la detección de errores automática, conmutación por error rápida transparente y equilibrio de carga de lectura. Este amplio conjunto de capacidades permite lograr una disponibilidad óptima SLA para las cargas de trabajo.
 

@@ -1,0 +1,1 @@
+<Token>**En este tema se aplica a:** ![no](media/no.png)SQL Server en Windows![Sí](media/yes.png)SQL Server en Linux![no](media/no.png)base de datos de SQL Azure![no](media/no.png)almacenamiento de datos de SQL Azure![sin](media/no.png)almacenamiento de datos paralelos</Token>

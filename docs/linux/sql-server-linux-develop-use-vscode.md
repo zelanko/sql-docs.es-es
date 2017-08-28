@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a4b2f82ac904d58604b0c27d46624995878e8a35
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 2d8ba0dcd52de143cd935eab6e8bba95e924409d
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Usar código de Visual Studio para crear y ejecutar secuencias de comandos de Transact-SQL para SQL Server
@@ -23,7 +23,7 @@ ms.lasthandoff: 08/02/2017
 
 Este tema muestra cómo utilizar el **mssql** extensión para Visual Studio Code (código de VS) para desarrollar bases de datos de SQL Server.
 
-Código de Visual Studio es un editor de código gráfica para Linux, Mac OS y Windows que admita extensiones. El [**mssql** extensión de VS Code] le permite conectarse a SQL Server, consulta con Transact-SQL (T-SQL) y ver los resultados.
+Código de Visual Studio es un editor de código gráfica para Linux, Mac OS y Windows que admita extensiones. El [ **mssql** extensión de VS Code] le permite conectarse a SQL Server, consulta con Transact-SQL (T-SQL) y ver los resultados.
 
 ## <a name="install-vs-code"></a>Instalar el código de VS
 1. Si todavía no ha instalado VS Code, [descargar e instalar VS Code] en su equipo.

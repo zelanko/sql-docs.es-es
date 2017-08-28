@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingquerytrans.f1
+- sql13.dts.designer.dmquerytransformation.miningmodel.f1
+- sql13.dts.designer.dmquerytransformation.query.f1
 helpviewer_keywords:
 - Data Mining Query transformation
 - prediction queries [Integration Services]
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 544f0aaf11e83b9ba2fc0ae5150b85e537998c25
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 7ec5d0d1168e49fb38ce8b58eaa75d6c0d6c51b5
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="data-mining-query-transformation"></a>Consulta de minería de datos, transformación
@@ -38,18 +40,38 @@ ms.lasthandoff: 08/03/2017
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información acerca de las propiedades que puede establecer en el cuadro de diálogo **Editor de transformación Consulta de minería de datos** , haga clic en uno de los temas siguientes:  
-  
--   [Editor de transformación Consulta de minería de datos &#40;pestaña Modelo de minería de datos&#41;](../../../integration-services/data-flow/transformations/data-mining-query-transformation-editor-mining-model-tab.md)  
-  
--   [Editor de transformación Consulta de minería de datos &#40;pestaña Modelo de minería de datos&#41;](../../../integration-services/data-flow/transformations/data-mining-query-transformation-editor-mining-model-tab.md)  
-  
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
 -   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- Para más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Para obtener más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
+## <a name="data-mining-query-transformation-editor-mining-model-tab"></a>Editor de transformación Consulta de minería de datos (pestaña Modelo de minería de datos)
+  Use la pestaña **Modelo de minería de datos** del cuadro de diálogo **Editor de transformación Consulta de minería de datos** para seleccionar la estructura y los modelos de minería de datos.  
   
+### <a name="options"></a>Opciones  
+ **Conexión**  
+ Seleccione una conexión de Analysis Services existente mediante el cuadro de lista o cree una nueva conexión con el botón **Nuevo** que se describe a continuación.  
+  
+ **Nuevo**  
+ Cree una nueva conexión mediante el cuadro de diálogo **Agregar administrador de conexiones con Analysis Services** .  
+  
+ **Estructura de minería de datos**  
+ Seleccione una opción de la lista de estructuras del modelo de minería de datos.  
+  
+ **Modelos de minería de datos**  
+ Muestra la lista de modelos de minería de datos asociados con la estructura de minería de datos seleccionada.  
+  
+## <a name="data-mining-query-transformation-editor-query-tab"></a>Editor de transformación Consulta de minería de datos (pestaña Consulta)
+  Utilice la pestaña **Consulta** del cuadro de diálogo **Editor de transformación Consulta de minería de datos** para crear una consulta de predicción.  
+  
+### <a name="options"></a>Opciones  
+ **Consulta de minería de datos**  
+ Escriba una consulta DMS (Extensiones de minería de datos) directamente en el cuadro de texto.  
+  
+ **Generar nueva consulta**  
+ Haga clic en **Generar nueva consulta** para crear una consulta DMS (Extensiones de minería de datos) mediante el generador de consultas gráfico.  
+  
+

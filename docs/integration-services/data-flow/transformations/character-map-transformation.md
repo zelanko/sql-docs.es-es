@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.charactertrans.f1
+- sql13.dts.designer.charactermaptransformation.f1
 helpviewer_keywords:
 - mutually exclusive mapping [Integration Services]
 - mapping data [Integration Services]
@@ -22,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80818df1eb99cfe68012a119d4482698b17d0044
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 3ea6f6f0526a0ad1a2f98c97aed2a7aebbffb65a
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="character-map-transformation"></a>Transformación Mapa de caracteres
@@ -74,8 +75,6 @@ ms.lasthandoff: 08/03/2017
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información acerca de las propiedades que puede establecer en el cuadro de diálogo **Editor de transformación Mapa de caracteres** , vea [Character Map Transformation Editor](../../../integration-services/data-flow/transformations/character-map-transformation-editor.md).  
-  
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
 -   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -86,6 +85,46 @@ ms.lasthandoff: 08/03/2017
   
 -   [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordenar datos para la combinación y transformaciones de combinación de mezcla](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+  
+## <a name="character-map-transformation-editor"></a>Editor de transformación Mapa de caracteres
+  Use el cuadro de diálogo **Editor de transformación Mapa de caracteres** para seleccionar las funciones de cadena que se van a aplicar a datos de columna y para especificar si la asignación es una modificación en contexto o se agrega como una columna nueva.  
+  
+### <a name="options"></a>Opciones  
+ **Columnas de entrada disponibles**  
+ Use las casillas para seleccionar las columnas que se van a transformar con las funciones de cadena. Las selecciones aparecen en la siguiente tabla.  
+  
+ **Columna de entrada**  
+ Muestra las columnas de entrada seleccionadas de la tabla anterior. También puede cambiar o quitar una selección utilizando la lista de columnas de entrada disponibles.  
+  
+ **Destino**  
+ Especifique si se guardan los resultados de las operaciones de cadena en contexto, utilizando la columna existente, o se guardan los datos modificados como una columna nueva.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Nueva columna|Guardar los datos en una columna nueva. Asigne el nombre de columna en **Alias de salida**.|  
+|Modificación en contexto|Guardar los datos modificados en la columna existente.|  
+  
+ **Operación**  
+ Seleccione de la lista las funciones de cadena que se aplicarán a los datos de la columna.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Minúsculas|Convertir en minúsculas.|  
+|Mayúsculas|Convertir en mayúsculas.|  
+|Inversión de byte|Convertir invirtiendo el orden de los bytes.|  
+|Hiragana|Convertir caracteres japoneses katakana en caracteres hiragana.|  
+|Katakana|Convertir caracteres japoneses hiragana en caracteres katakana.|  
+|Formato medio|Convertir caracteres de formato completo en formato medio.|  
+|Formato completo|Convertir caracteres de formato medio en formato completo.|  
+|Utilización lingüística de mayúsculas y minúsculas|Aplicar reglas lingüísticas de mayúsculas y minúsculas (asignación de caracteres Unicode simples del turco y otras configuraciones regionales) en vez de otras reglas del sistema.|  
+|Chino simplificado|Convertir caracteres de chino tradicional en chino simplificado.|  
+|Chino tradicional|Convertir caracteres de chino simplificado en chino tradicional.|  
+  
+ **Alias de salida**  
+ Escriba un alias para cada columna de salida. El valor predeterminado es **Copy of** seguido del nombre de la columna de entrada; no obstante, puede elegir un nombre descriptivo exclusivo.  
+  
+ **Configurar la salida de errores**  
+ Use el cuadro de diálogo [Configurar la salida de errores](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar las opciones de control de errores de esta transformación.  
   
   

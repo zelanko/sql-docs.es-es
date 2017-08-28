@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.termlookuptrans.f1
+- sql13.dts.designer.termlookup.termlookup.f1
+- sql13.dts.designer.termlookup.referencetable.f1
+- sql13.dts.designer.termlookup.advanced.f1
 helpviewer_keywords:
 - extracting data [Integration Services]
 - match extracted terms [Integration Services]
@@ -25,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3eefbab1c6f9b3cd5e51faa9e875a44218c33b3f
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ee1fa267107940169c05942e8614a7bf7148566a
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="term-lookup-transformation"></a>Búsqueda de términos, transformación
@@ -96,20 +99,61 @@ ms.lasthandoff: 08/03/2017
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información sobre las propiedades que se pueden establecer en el cuadro de diálogo **Editor de transformación Búsqueda de términos** , haga clic en uno de los siguientes temas:  
-  
--   [Editor de transformación Búsqueda de términos &#40;pestaña Tabla de referencia&#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-reference-table-tab.md)  
-  
--   [Editor de transformación Búsqueda de términos &#40;pestaña Búsqueda de términos&#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md)  
-  
--   [Editor de transformación Búsqueda de términos &#40;pestaña Avanzadas&#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-advanced-tab.md)  
-  
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
 -   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- Para más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Para obtener más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
+## <a name="term-lookup-transformation-editor-term-lookup-tab"></a>Editor de transformación Búsqueda de términos (pestaña Búsqueda de términos)
+  Use la pestaña **Búsqueda de términos** del cuadro de diálogo **Editor de transformación Búsqueda de términos** para asignar una columna de entrada a una columna de búsqueda en una tabla de referencia y para proporcionar un alias a cada columna de salida.  
   
+### <a name="options"></a>Opciones  
+ **Columnas de entrada disponibles**  
+ Con las casillas, seleccione las columnas de entrada que se van a pasar directamente a la salida sin cambios. Arrastre una columna de entrada a la lista **Columnas de referencia disponibles** para asignarla a una columna de búsqueda en la tabla de referencia. Las columnas de entrada y búsqueda deben coincidir en los tipos de datos admitidos, DT_NTEXT o DT_WSTR. Seleccione una línea de asignación y haga clic con el botón derecho para editar las asignaciones en el cuadro de diálogo [Crear relaciones](../../../integration-services/data-flow/transformations/create-relationships.md) .  
+  
+ **Columnas de referencia disponibles**  
+ Vea las columnas disponibles en la tabla de referencia. Elija la columna que contiene la lista de términos que coincidirán.  
+  
+ **Columna de paso a través**  
+ Seleccione las columnas de entrada disponibles de la lista. Las selecciones se reflejan en las casillas activadas en la tabla **Columnas de entrada disponibles** .  
+  
+ **Alias de columna de salida**  
+ Escriba un alias para cada columna de salida. El valor predeterminado es el nombre de la columna; no obstante, puede elegir un nombre descriptivo exclusivo.  
+  
+ **Configurar la salida de errores**  
+ Use el cuadro de diálogo [Configurar la salida de errores](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar las opciones de control de errores de las filas que provocan errores.  
+  
+## <a name="term-lookup-transformation-editor-reference-table-tab"></a>Editor de transformación Búsqueda de términos (pestaña Tabla de referencia)
+  Use la pestaña **Tabla de referencia** del cuadro de diálogo **Editor de transformación Búsqueda de términos** para especificar la conexión con la tabla de referencia (búsqueda).  
+  
+### <a name="options"></a>Opciones  
+ **OLE DB, administrador de conexiones**  
+ Seleccione un administrador de conexiones de la lista o haga clic en **Nuevo**para crear una conexión.  
+  
+ **Nuevo**  
+ Cree una conexión con el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** .  
+  
+ **Nombre de la tabla de referencia**  
+ Seleccione una tabla de búsqueda o una vista de la base de datos; para ello, seleccione un elemento de la lista. La tabla o vista debe contener una columna con una lista de términos con los que se pueda comparar el texto de la columna de origen.  
+  
+ **Configurar la salida de errores**  
+ Use el cuadro de diálogo [Configurar la salida de errores](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar las opciones de control de errores de las filas que provocan errores.  
+  
+## <a name="term-lookup-transformation-editor-advanced-tab"></a>Editor de transformación Búsqueda de términos (pestaña Avanzadas)
+  Use la pestaña **Avanzadas** del cuadro de diálogo **Editor de transformación Búsqueda de términos** para especificar si en la búsqueda es necesario distinguir mayúsculas de minúsculas.  
+  
+### <a name="options"></a>Opciones  
+ **Utilizar búsqueda de términos con distinción de mayúsculas y minúsculas**  
+ Indique si desea que en la búsqueda se distingan las mayúsculas de las minúsculas. El valor predeterminado es **False**.  
+  
+ **Configurar la salida de errores**  
+ Use el cuadro de diálogo [Configurar la salida de errores](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar las opciones de control de errores de las filas que provocan errores.  
+  
+## <a name="see-also"></a>Vea también  
+ [Referencia de mensajes y Error de Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [Transformación extracción de términos](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
+  
+

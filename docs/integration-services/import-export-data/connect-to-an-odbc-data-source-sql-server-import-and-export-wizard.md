@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4d1a2374d480f2d6b886425a02cb590b00b3564a
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0e3ffe2ff1695de69be7149f4be7b42f57b0e991
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos ODBC (importación de SQL Server y Asistente para exportación)
@@ -39,6 +39,8 @@ También tendrá que buscar la información de conexión requiere que se deben p
 
 > [!TIP]
 > Si sabe que el controlador instalado y no lo ve en el applet de 64 bits, busque en el applet de 32 bits en su lugar. Esto también indica si tiene que ejecutar el Asistente para exportar y SQL Server Import 64 bits o de 32 bits.
+>
+> Para usar la versión de 64 bits de la importación de SQL Server y el Asistente para exportación, tendrá que instalar a SQL Server. SQL Server Data Tools (SSDT) y SQL Server Management Studio (SSMS) son aplicaciones de 32 bits y solo instalan archivos de 32 bits, incluida la versión de 32 bits del asistente.
     
 ## <a name="step-1---select-the-data-source"></a>Paso 1: seleccione el origen de datos
 Los controladores ODBC instalados en el equipo no aparezcan en la lista desplegable de orígenes de datos. Para conectar con un controlador ODBC, empiece seleccionando la **proveedor de datos de .NET Framework para ODBC** como el origen de datos en el **elegir un origen de datos** o **elegir un destino** página del asistente. Este proveedor actúa como un contenedor para el controlador ODBC.

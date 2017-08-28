@@ -18,10 +18,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 5baf0e5c9dcc3b9c70fce06024e5bba957c48f65
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0626dc829e6ae2cd4212dc05deb406740592dc40
 ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 
@@ -124,6 +124,19 @@ Debe habilitar PowerBI ReportServer la exportación de datos desde los objetos v
 
 **EnableTestConnectionDetailedErrors**  
 Indica si se han enviado al equipo cliente los mensajes de error detallados cuando los usuarios prueban las conexiones a orígenes de datos mediante el servidor de informes. El valor predeterminado es **true**. Si la opción se establece en **false**, solo se enviarán mensajes de error genéricos.
+
+**AccessControlAllowCredentials**  
+Indica si la respuesta a la solicitud de cliente puede estar expuesta cuando la marca 'credenciales' está establecida en true. El valor predeterminado es **false**.
+
+**AccessControlAllowHeaders** una lista de separados por comas de encabezados que el servidor permitirá cuando un cliente realiza una solicitud. Esta propiedad puede ser una cadena vacía, especificar * permitirá todos los encabezados.
+
+**AccessControlAllowMethods** una lista de separados por comas de los métodos HTTP que el servidor permitirá cuando un cliente realiza una solicitud. Los valores predeterminados son (GET, PUT, POST, PATCH, DELETE), especificar * permitirá todos los métodos.
+
+**AccessControlAllowOrigin** una lista de separados por comas de orígenes que el servidor permitirá cuando un cliente realiza una solicitud. El valor predeterminado es en blanco, lo que impide que todas las solicitudes, especificar * permitirá todos los orígenes cuando no se establecen las credenciales; Si se especifican las credenciales, se debe especificar una lista explícita de orígenes.
+
+**AccessControlExposeHeaders** una lista de separados por comas de encabezados que el servidor va a exponer a los clientes. Está en blanco de forma predeterminada.
+
+**AccessControlMaxAge** especifica el número de segundos que pueden almacenarse en caché los resultados de la solicitud preparatoria. El valor predeterminado es 600 (10 minutos).
 
 ## <a name="see-also"></a>Vea también
 

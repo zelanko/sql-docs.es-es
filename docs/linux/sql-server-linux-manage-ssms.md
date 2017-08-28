@@ -4,26 +4,29 @@ description:
 author: sanagama
 ms.author: sanagama
 manager: jhubbard
-ms.date: 07/19/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 1b16a5e8168f18a3e687fdf0249f93cd3549f27d
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 1f8fe782aa69f462366130418fce84a2654de3cf
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Usar SQL Server Management Studio en Windows para administrar SQL Server en Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Este tema se presentan [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx) y le guía a través de un par de tareas comunes. SSMS es una aplicación de Windows, así que usa SSMS cuando tiene una máquina de Windows que se puede conectar a una instancia remota de SQL Server en Linux.
 
 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx) forma parte de un conjunto de herramientas SQL que Microsoft ofrece gratuitamente para sus necesidades de desarrollo y administración. SSMS es un entorno integrado para tener acceso, configurar, administrar, administrar y desarrollar todos los componentes de SQL Server que se ejecutan de forma local o en la nube, en Linux, Windows o Docker en macOS y base de datos de SQL Azure y almacenamiento de datos de SQL Azure. SSMS combina un amplio grupo de herramientas gráficas con una serie de editores de script enriquecidos para proporcionar acceso a SQL Server a desarrolladores y administradores de todos los niveles.
 
 SSMS ofrece un amplio conjunto de capacidades de administración y desarrollo para SQL Server, incluidas herramientas para:
+
 - configurar, supervisar y administrar una o varias instancias de SQL Server
 - implementar, supervisar y actualizar los componentes de capa de datos como bases de datos y almacenamientos de datos
 - bases de datos de copia de seguridad y restauración

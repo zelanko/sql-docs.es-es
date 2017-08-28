@@ -1,33 +1,52 @@
 ---
-title: "Utilidades de símbolo del sistema de SQL (motor de base de datos) | Documentos de Microsoft"
+title: Herramientas SQL y las utilidades de SQL Server, base de datos SQL Azure y almacenamiento de datos SQL | Documentos de Microsoft
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 08/25/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- command prompt utilities [SQL Server]
-- command prompt utilities [SQL Server], about command prompt utilities
-- command prompt [SQL Server]
-- utilities [SQL Server], command prompt
-- command prompt [SQL Server], utilities
-ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
-caps.latest.revision: 90
+ms.assetid: 
+caps.latest.revision: 0
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: MT
 ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 4ef7f8faaebd237d498744554b44283142e2b01e
+ms.openlocfilehash: eccbe54c561e009858f6192126abc57e3399082c
 ms.contentlocale: es-es
 ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="sql-command-prompt-utilities-database-engine"></a>Utilidades de símbolo del sistema de SQL (motor de base de datos)
+# <a name="tools-and-utilities-for-azure-sql-database-sql-server-and-sql-data-warehouse"></a>Herramientas y utilidades de base de datos de SQL Azure, SQL Server y almacenamiento de datos de SQL
+
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
+
+![](../includes/media/sql-database-tools.png)Este artículo proporciona una lista de herramientas disponibles para trabajar con SQL Server, base de datos de SQL Azure, almacenamiento de datos SQL y las aplicaciones basadas en SQL Server. 
+
+Si desea saltar directamente en y empezar a crear tablas, ejecutar consultas, básicamente diseñar y administrar la base de datos, a continuación, [ **SQL Server Management Studio (SSMS)** ](../ssms/download-sql-server-management-studio-ssms.md) es muy probable que la herramienta preferida. SSMS es gratuita y se ejecuta en Windows.
+
+Si estás ejecutando Linux o Mac OS, intente [código de Visual Studio](https://code.visualstudio.com/) con el [ **mssql para el código de Visual Studio** ](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) extensión. Estas herramientas son para el desarrollo de Microsoft SQL Server, base de datos de SQL Azure y almacenamiento de datos de SQL con un amplio conjunto de funcionalidades y también son gratuitas. Vea [usar código de Visual Studio para crear y ejecutar secuencias de comandos de Transact-SQL para SQL Server](../linux/sql-server-linux-develop-use-vscode.md).
+
+
+## <a name="sql-tools"></a>Herramientas SQL 
+ 
+| Herramienta | Description |
+|:--|:--|
+| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Usar SQL Server Management Studio (SSMS) para consultar, diseñar y administrar el almacenamiento de datos de SQL Azure, SQL Server y base de datos de SQL Azure. |
+| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Convertir Visual Studio en un entorno de desarrollo eficaz para SQL Server, base de datos de SQL Azure y almacenamiento de datos de SQL Azure. |
+| [Código de Visual Studio](https://code.visualstudio.com/)| Código de Visual Studio funciona en Linux, Mac OS y Windows. Después de instalar Visual Studio Code, instalar el [mssql extensión](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) para el desarrollo de Microsoft SQL Server, base de datos de SQL Azure y almacenamiento de datos de SQL. |
+| [Administrador de configuración](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Utilice el Administrador de configuración de SQL Server para configurar servicios de SQL Server y configurar la conectividad de red.|
+| [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md) | Usar SQL Server Migration Assistant para automatizar la migración de base de datos a SQL Server desde Microsoft Access, DB2, MySQL, Oracle y Sybase.|
+| [Reproducción distribuida](../tools/distributed-replay/install-distributed-replay-overview.md) | Utilice la característica Distributed Replay para ayudarle a evaluar el impacto de las actualizaciones futuras de SQL Server. Usar Distributed Replay para ayudar a evaluar el impacto de hardware y actualizaciones del sistema operativo y SQL Server para la optimización. |
+| [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | La utilidad ssbdiagnose informa de problemas en las conversaciones de Service Broker o la configuración de servicios de Service Broker. |
+
+
+## <a name="sql-command-prompt-utilities"></a>Utilidades del símbolo del sistema de SQL
+
   Las utilidades de símbolo del sistema permiten incluir en scripts las operaciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . La siguiente tabla contiene una lista de utilidades de símbolo del sistema que se suministran junto con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 |**Utilidad**|**Descripción**|**Instalada en**|  
@@ -54,7 +73,7 @@ ms.lasthandoff: 08/28/2017
 |[Ssms (Utilidad)](../tools/sql-server-management-studio/ssms-utility.md)|Se utiliza para iniciar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] desde un símbolo del sistema.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VSShell\Common7\IDE|  
 |[tablediff (utilidad)](../tools/tablediff-utility.md)|Se utiliza para comparar los datos de dos tablas y ver si no convergen, lo que es útil para solucionar problemas de una topología de replicación.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]COM|  
 
-## <a name="command-prompt-utilities-syntax-conventions"></a>Convenciones de la sintaxis de las herramientas del símbolo del sistema  
+## <a name="sql-command-prompt-utilities-syntax-conventions"></a>Convenciones de sintaxis de utilidades de símbolo del sistema de SQL  
   
 |**Convención**|**Se usa para**|  
 |--------------------|------------------|  
@@ -62,13 +81,6 @@ ms.lasthandoff: 08/28/2017
 |`monospace`|Comandos y código de programación de ejemplo.|  
 |*cursiva*|Parámetros proporcionados por el usuario.|  
 |**Negrita**|Comandos, parámetros y otros elementos de sintaxis que deben escribirse exactamente como se muestran.|  
-  
-## <a name="see-also"></a>Vea también  
- [Agente de distribución de replicación](../relational-databases/replication/agents/replication-distribution-agent.md)   
- [Agente de registro del LOG de replicación](../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [Agente de mezcla de replicación](../relational-databases/replication/agents/replication-merge-agent.md)   
- [Agente de lectura de cola de replicación](../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](../relational-databases/replication/agents/replication-snapshot-agent.md)  
-  
-  
+
+
 

@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.unpivottrans.f1
+- sql13.dts.designer.unpivottransformation.f1
 helpviewer_keywords:
 - Unpivot transformation
 - more normalized data set [Integration Services]
@@ -22,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d491bb19b4eb86bd0fe75a7b8ca8e7b6e5d226b5
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 62a84ccfd5fdf3e6b439388e6175804b567f4be3
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="unpivot-transformation"></a>Anulación de dinamización, transformación
@@ -48,10 +49,6 @@ ms.lasthandoff: 08/03/2017
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información sobre las propiedades que se pueden configurar en el cuadro de diálogo **Editor de transformación Anulación de dinamización** , haga clic en uno de los siguientes temas:  
-  
--   [Editor de transformación Anulación de dinamización](../../../integration-services/data-flow/transformations/unpivot-transformation-editor.md)  
-  
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
 -   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -59,5 +56,47 @@ ms.lasthandoff: 08/03/2017
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  Para más información sobre cómo establecer las propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="unpivot-transformation-editor"></a>Editor de transformación Anulación de dinamización
+  Use el cuadro de diálogo **Editor de transformación Anulación de dinamización** para seleccionar las columnas que se van a dinamizar en filas y especificar la columna de datos y la nueva columna de salida del valor dinámico.  
+  
+> [!NOTE]  
+>  Este tema usa el escenario Anulación de dinamización descrito en [Transformación Anulación de dinamización](../../../integration-services/data-flow/transformations/unpivot-transformation.md) para mostrar el uso de las opciones.  
+  
+### <a name="options"></a>Opciones  
+ **Columnas de entrada disponibles**  
+ Especifique las columnas que deben pasar a ser filas mediante las casillas.  
+  
+ **Nombre**  
+ Muestra el nombre de la columna de entrada disponible.  
+  
+ **Paso a través**  
+ Indique si desea incluir la columna en la salida de anulación de dinamización.  
+  
+ **Columna de entrada**  
+ Seleccione de la lista de entradas disponibles las columnas para cada fila. Las selecciones se reflejan en las casillas activadas en la tabla **Columnas de entrada disponibles** .  
+  
+ En el escenario Anulación de dinamización descrito en [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), las columnas de entrada son las columnas **Ham**, **Soda**, **Milk**, **Beer**y **Chips** .  
+  
+ **Columna de destino**  
+ Escriba un nombre para la columna de datos.  
+  
+ En el escenario Anulación de dinamización descrito en [Transformación Anulación de dinamización](../../../integration-services/data-flow/transformations/unpivot-transformation.md), la columna de destino es la columna de cantidad (**Qty**).  
+  
+ **Valor de clave dinámica**  
+ Escriba el nombre del valor de dinamización. El nombre predeterminado es el de la columna de entrada, pero puede elegir cualquier nombre descriptivo único.  
+  
+ Puede especificar el valor de esta propiedad con una expresión de propiedad.  
+  
+ En el escenario Anulación de dinamización descrito en [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), los valores de dinamización se mostrarán como valores de texto en la nueva columna Product, designada en la opción **Nombre de la columna del valor de clave dinámica** , como los valores de texto **Ham**, **Soda**, **Milk**, **Beer**y **Chips**.  
+  
+ **Nombre de la columna del valor de clave dinámica**  
+ Escriba un nombre para la columna del valor de dinamización. El valor predeterminado es "Valor de clave dinámica", pero podrá elegir cualquier nombre descriptivo único.  
+  
+ En el escenario Anulación de dinamización descrito en [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), el Nombre de la columna del valor de clave dinámica es **Product** y designa la nueva columna **Product** en la que se anula la dinamización de las columnas **Ham**, **Soda**, **Milk**, **Beer**y **Chips** .  
+  
+## <a name="see-also"></a>Vea también  
+ [Referencia de mensajes y Error de Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [Transformación dinámica](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
   
   

@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.conditionalsplittrans.f1
+- sql13.dts.designer.conditionalsplittransformation.f1
 helpviewer_keywords:
 - Conditional Split transformation
 - route rows to different outputs [Integration Services]
@@ -20,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d5c9ba281713154357344891987131480331f9f0
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 02909ff454816119e2dfbdfeb1090d0f7e9587be
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="conditional-split-transformation"></a>División condicional, transformación
@@ -56,8 +57,6 @@ ms.lasthandoff: 08/03/2017
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información acerca de las propiedades que puede establecer en el cuadro de diálogo **Editor de transformación División condicional** , vea [Conditional Split Transformation Editor](../../../integration-services/data-flow/transformations/conditional-split-transformation-editor.md).  
-  
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
 -   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -71,7 +70,33 @@ ms.lasthandoff: 08/03/2017
 -   [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-tasks"></a>Tareas relacionadas  
- [Dividir un conjunto de datos usando la transformación División condicional](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+ [Dividir un conjunto de datos mediante la transformación División condicional](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+  
+## <a name="conditional-split-transformation-editor"></a>División condicional, editor de transformación
+  Use el cuadro de diálogo **Editor de transformación División condicional** para crear expresiones, establecer el orden de evaluación de expresiones y asignar un nombre a los resultados de una división condicional. Este cuadro de diálogo incluye operadores y funciones matemáticas, de cadenas y de fecha y hora que puede utilizar para generar expresiones. La primera condición evaluada como True determinará la salida a la que se dirigirá una fila.  
+  
+> [!NOTE]  
+>  La transformación División condicional dirige cada fila de entrada a una sola salida. Si escribe diversas condiciones, la transformación enviará cada fila a la primera salida para la que la condición es True y descartará las siguientes condiciones para dicha fila. Si necesita evaluar varias condiciones sucesivamente, podría necesitar concatenar diversas transformaciones de División condicional en el flujo de datos.  
+  
+### <a name="options"></a>Opciones  
+ **Pedido de**  
+ Seleccione una fila y utilice las teclas de dirección de la derecha para cambiar el orden de evaluación de las expresiones.  
+  
+ **Nombre de salida**  
+ Escriba un nombre de salida. El valor predeterminado es una lista numerada de casos, pero puede elegir cualquier nombre descriptivo único.  
+  
+ **Condición**  
+ Escriba una expresión o genere una arrastrándola de la lista de columnas, variables, funciones y operadores disponibles.  
+  
+ Puede especificar el valor de esta propiedad con una expresión de propiedad.  
+  
+ **Temas relacionados**: [Expresiones de Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Operadores &#40;expresión de SSIS&#41;](../../../integration-services/expressions/operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41](../../../integration-services/expressions/functions-ssis-expression.md)  
+  
+ **Nombre de salida predeterminado**  
+ Escriba un nombre para la salida predeterminada o utilice el nombre predeterminado.  
+  
+ **Configurar la salida de errores**  
+ Especifique cómo quiere controlar los errores mediante el cuadro de diálogo [Configurar la salida de errores](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) .  
   
 ## <a name="see-also"></a>Vea también  
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)   

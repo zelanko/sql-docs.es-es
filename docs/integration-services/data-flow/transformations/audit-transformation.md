@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.audittrans.f1
+- sql13.dts.designer.audittransformation.f1
 helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
@@ -20,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c495bd9c116e10877f79f165f0f582938b0347ad
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 253c8abb921dbd60e571a892f108d283b111e70c
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="audit-transformation"></a>Auditar, transformación
@@ -51,14 +52,34 @@ ms.lasthandoff: 08/03/2017
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información acerca de las propiedades que puede establecer en el cuadro de diálogo **Editor de transformación Auditar** , vea [Audit Transformation Editor](../../../integration-services/data-flow/transformations/audit-transformation-editor.md).  
-  
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
 -   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- Para más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Para obtener más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="audit-transformation-editor"></a>Editor de transformación Auditar
+  La transformación Auditar habilita el flujo de datos en un paquete para incluir datos sobre el entorno en el que se ejecuta el paquete. Por ejemplo, el nombre del paquete, el equipo y el operador se pueden agregar al flujo de datos. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye variables del sistema que proporcionan esta información.  
+  
+### <a name="options"></a>Opciones  
+ **Nombre de la columna de salida**  
+ Proporciona el nombre de una nueva columna de salida que contendrá la información de auditoría.  
+  
+ **Tipo de auditoría**  
+ Seleccione una variable del sistema disponible para suministrar la información de auditoría.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**GUID de instancia de ejecución**|Inserte el GUID que identifica exclusivamente la instancia de ejecución del paquete.|  
+|**Id. de paquete**|Inserte el GUID que identifica exclusivamente el paquete.|  
+|**Nombre del paquete**|Inserte el nombre del paquete.|  
+|**Id. de versión**|Inserte el GUID que identifica exclusivamente la versión del paquete.|  
+|**Hora de inicio de ejecución**|Inserte la hora en la que se iniciará la ejecución del paquete.|  
+|**Nombre de equipo**|Inserte el nombre del equipo en el que se inició el paquete.|  
+|**Nombre de usuario.**|Inserte el nombre de inicio de sesión del usuario que inició el paquete.|  
+|**Nombre de tarea**|Inserte el nombre de la tarea Flujo de datos con la que está asociada la transformación Auditar.|  
+|**Id. de tarea**|Inserte el GUID que identifica exclusivamente la tarea Flujo de datos con la que está asociada la transformación Auditar.|  
   
   

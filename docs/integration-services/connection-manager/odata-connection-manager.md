@@ -17,26 +17,26 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: b23a158bff546fd6ffb4208638c039d690379ce1
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: f54562b59e8c61f723c17e2812ca39cb2e95f273
 ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="odata-connection-manager"></a>Administrador de conexiones OData
-  Use un administrador de conexiones OData permite para conectarse a un origen OData. Un componente de origen OData se conecta a un origen OData mediante un administrador de conexiones OData y usa datos del servicio. Para obtener más información, vea [OData Source](../../integration-services/data-flow/odata-source.md).  
+ Conectarse a un origen de datos de OData con un administrador de conexiones OData. Un componente de origen OData usa un administrador de conexiones OData para conectarse a un origen de datos de OData y consumir datos desde el servicio. Para obtener más información, vea [OData Source](../../integration-services/data-flow/odata-source.md).  
   
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>Agregar un administrador de conexiones ODATA a un paquete SSIS  
- Hay tres formas de agregar un nuevo administrador de conexiones OData a un paquete SSIS:  
+ Puede agregar un nuevo administrador de conexiones OData a un paquete SSIS de tres maneras:  
   
 -   Haga clic en el botón **Nuevo...** en el **Editor de origen OData**  
   
 -   Haga clic con el botón derecho en la carpeta **Administradores de conexiones** en el **Explorador de soluciones**y, después, haga clic en **Nuevo administrador de conexiones**. Seleccione **ODATA** en **Tipo de administrador de conexión**.  
   
--   Haga clic con el botón derecho en el panel **Administradores de conexiones** en la parte inferior del diseñador de paquetes y seleccione **Nueva conexión...**. Seleccione **ODATA** en **Tipo de administrador de conexión**.  
+-   Pulse el botón derecho en el **administradores de conexión** panel en la parte inferior del paquete y, a continuación, seleccione **nueva conexión**. Seleccione **ODATA** en **Tipo de administrador de conexión**.  
   
 ## <a name="connection-manager-authentication"></a>Autenticación del administrador de conexiones  
- El administrador de conexiones OData admite cinco modos de autenticación.  
+ El Administrador de conexiones OData admite cinco modos de autenticación.  
   
 -   Autenticación de Windows  
   
@@ -48,26 +48,28 @@ ms.lasthandoff: 08/09/2017
   
 -   Microsoft Online Services (con nombre de usuario y contraseña)  
   
- Para el acceso anónimo, seleccione la opción Autenticación de Windows.  
+Para el acceso anónimo, seleccione la opción Autenticación de Windows.  
+
+Para conectar a Microsoft Dynamics AX Online o Microsoft Dynamics CRM online, no se puede utilizar el **Microsoft Online Services** opción de autenticación. No se puede utilizar cualquier opción que está configurada para la autenticación multifactor.
   
 ### <a name="specifying-and-securing-credentials"></a>Especificar y proteger las credenciales  
  Si el servicio OData requiere autenticación básica, puede especificar un nombre de usuario y una contraseña en el [Editor del administrador de conexiones OData](../../integration-services/connection-manager/odata-connection-manager-editor.md). Los valores que especifica en el editor se conservan en el paquete. El valor de contraseña se cifra según el nivel de protección del paquete.  
   
- Hay varias maneras de parametrizar los valores de nombre de usuario y contraseña o almacenarlos fuera del paquete. Por ejemplo, puede hacerlo mediante parámetros o estableciendo las propiedades del administrador de conexiones directamente al ejecutar el paquete con SQL Server Management Studio.  
+ Hay varias maneras de parametrizar los valores de nombre de usuario y contraseña o almacenarlos fuera del paquete. Por ejemplo, puede utilizar parámetros, o establecer propiedades del Administrador de la conexión directamente al ejecutar el paquete de SQL Server Management Studio.  
   
 ## <a name="odata-connection-manager-properties"></a>Propiedades del administrador de conexiones OData  
- En la lista siguiente se describen algunas de las propiedades del administrador de conexiones OData.  
+ En la lista siguiente se describe las propiedades del Administrador de conexiones OData.  
   
 |||  
 |-|-|  
 |Propiedad|Description|  
 |Url|Dirección URL al documento de servicio.|  
-|UserName|Nombre de usuario que se va a usar para la autenticación básica.|  
-|Contraseña|Contraseña que se va a usar para la autenticación básica.|  
-|ConnectionString|Refleja otras propiedades del administrador de conexiones.|  
+|UserName|Nombre de usuario que se utilizará para la autenticación, si es necesario.|  
+|Contraseña|Contraseña que se utilizará para la autenticación, si es necesario.|  
+|ConnectionString|Incluye otras propiedades del Administrador de conexiones.|  
   
 ## <a name="odata-connection-manager-editor"></a>Editor del administrador de conexiones OData
-  Use el cuadro de diálogo **Editor del administrador de conexiones OData** para agregar una conexión o editar una conexión existente con un origen OData.  
+  Use la **OData Connection Manager Editor** cuadro de diálogo para agregar una conexión o editar una conexión existente a un origen de datos de OData.  
   
 ### <a name="options"></a>Opciones  
  **Nombre del administrador de conexiones**  
@@ -77,14 +79,17 @@ ms.lasthandoff: 08/09/2017
  Dirección URL del servicio OData. Por ejemplo: http://services.odata.org/V3/Northwind/Northwind.svc/.  
   
  **Autenticación**  
- Seleccione **Autenticación de Windows** o use **este nombre de usuario y contraseña** para **Autenticación básica**. Si selecciona la segunda opción, escriba el **nombre de usuario** y la **contraseña**. 
- 
- Ahora hay tres opciones más. Seleccione **Microsoft Dynamics AX Online** para Dynamics AX Online, seleccione **Microsoft Dynamics CRM Online** para Dynamics CRM Online y seleccione **Microsoft Online Services** para Microsoft Online Services. Si selecciona una de estas tres opciones, escriba el **nombre de usuario** y la **contraseña**.
-  
+Seleccione una de las siguientes opciones:
+-   **Autenticación de Windows**. Para el acceso anónimo, seleccione esta opción.
+-   **Autenticación básica** 
+-   **En línea de Microsoft Dynamics AX** de Dynamics AX en línea
+-   **Microsoft Dynamics CRM Online** de Dynamics CRM Online
+-   **Servicios en línea de Microsoft** de Microsoft Online Services
+
+Si selecciona una opción distinta de la autenticación de Windows, escriba la **nombre de usuario** y **contraseña**. 
+
+Para conectar a Microsoft Dynamics AX Online o Microsoft Dynamics CRM online, no se puede utilizar el **Microsoft Online Services** opción de autenticación. No se puede utilizar cualquier opción que está configurada para la autenticación multifactor.
+
  **Probar conexión**  
  Haga clic en este botón para probar la conexión con el origen OData.  
-  
-## <a name="see-also"></a>Vea también  
- [Editor del administrador de conexiones OData](../../integration-services/connection-manager/odata-connection-manager-editor.md)  
-  
-  
+

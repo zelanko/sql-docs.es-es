@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.aggregatetrans.f1
+- sql13.dts.designer.aggregationtransformation.aggregations.f1
+- sql13.dts.designer.aggregationtransformation.advanced.f1
 helpviewer_keywords:
 - IsBig property
 - aggregate functions [Integration Services]
@@ -22,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9e6bdc92869d16ac47745b04c0a94d9f9c993449
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 7db09ca84b86d93790ce4b1bf6300526df188dea
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="aggregate-transformation"></a>Transformación Agregado
@@ -114,12 +116,6 @@ ms.lasthandoff: 08/03/2017
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información sobre las propiedades que se pueden configurar en el cuadro de diálogo **Editor de transformación Agregado** , haga clic en uno de los siguientes temas:  
-  
--   [Editor de transformación Agregado &#40;pestaña Agregaciones&#41;](../../../integration-services/data-flow/transformations/aggregate-transformation-editor-aggregations-tab.md)  
-  
--   [Editor de transformación Agregado &#40;pestaña Avanzadas&#41;](../../../integration-services/data-flow/transformations/aggregate-transformation-editor-advanced-tab.md)  
-  
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
 -   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -135,7 +131,114 @@ ms.lasthandoff: 08/03/2017
 -   [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-tasks"></a>Tareas relacionadas  
- [Agregar valores en un conjunto de datos mediante la transformación Agregado](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+ [Agregar valores en un conjunto de datos mediante la transformación agregada](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+  
+## <a name="aggregate-transformation-editor-aggregations-tab"></a>Editor de transformación Agregado (pestaña Agregaciones)
+  Use la pestaña **Agregaciones** del cuadro de diálogo **Editor de transformación Agregado** para especificar las columnas que desea agregar y las propiedades de agregación. Puede aplicar diversas agregaciones. Esta transformación no genera una salida de errores.  
+  
+> [!NOTE]  
+>  Las opciones para el recuento de claves, la escala de claves, la clave Count Distinct y la escala de claves distintas estarán disponibles en el componente si se especifican en la pestaña **Avanzadas** , en la salida si se especifican en la pantalla avanzada de la pestaña **Agregaciones** y en la columna si se especifican en la lista de columnas en la parte inferior de la pestaña **Agregaciones** .  
+>   
+>  En la transformación Agregado, **Claves** y **Escala de claves** hacen referencia al número de grupos que se esperan como resultado de una operación **Agrupar por** . **Claves Count Distinct** y **Escala Count Distinct** hacen referencia al número de valores distintos que se esperan como resultado de una operación **Recuento distinto** .  
+  
+### <a name="options"></a>Opciones  
+ **Avanzadas/Básicas**  
+ Muestra u oculta opciones para configurar diversas agregaciones para varias salidas. De forma predeterminada, las opciones Avanzadas aparecen ocultas.  
+  
+ **Nombre de agregación**  
+ En la pantalla Avanzadas, escriba un nombre descriptivo para la agregación.  
+  
+ **Agrupar por columnas**  
+ En la pantalla Avanzadas, seleccione las columnas que quiere agrupar en la lista **Columnas de entrada disponibles** como se explica a continuación.  
+  
+ **Escala de claves**  
+ En la pantalla Avanzadas, especifique opcionalmente el número aproximado de claves que podrá escribir la agregación. De forma predeterminada, el valor de esta opción es **No especificado**. Si se seleccionan las propiedades **Escala de claves** y **Claves** , tendrá prioridad el valor de **Claves** .  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|No especificado|No se utiliza la propiedad Escala de claves.|  
+|Baja|La agregación podrá escribir aproximadamente 500 000 claves.|  
+|Media|La agregación podrá escribir aproximadamente 5.000.000 claves.|  
+|Alta|La agregación podrá escribir más de 25.000.000 claves.|  
+  
+ **Claves**  
+ En la pantalla Avanzadas, especifique opcionalmente el número exacto de claves que podrá escribir la agregación. Si se especifican **Escala de claves** y **Claves** , tendrá prioridad **Claves** .  
+  
+ **Columnas de entrada disponibles**  
+ Seleccione una columna en la lista de columnas de entrada disponibles con las casillas de la tabla.  
+  
+ **Columna de entrada**  
+ Seleccione las columnas de entrada disponibles de la lista.  
+  
+ **Alias de salida**  
+ Escriba un alias para cada columna. El nombre predeterminado es el de la columna de entrada, pero puede elegir cualquier nombre descriptivo único.  
+  
+ **Operación**  
+ Elija una operación de la lista de operaciones disponibles con la siguiente tabla como guía.  
+  
+|Operación|Description|  
+|---------------|-----------------|  
+|**GROUP BY**|Divide los conjuntos de datos en grupos. Podrán agruparse columnas con cualquier tipo de datos. Para obtener más información, vea GROUP BY.|  
+|**Sum**|Suma los valores de una columna. Solo podrán sumarse las columnas con tipos de datos numéricos. Para obtener más información, vea SUM.|  
+|**Promedio**|Devuelve la media de los valores de columna de una columna. Solo podrá calcularse la media de las columnas con tipos de datos numéricos. Para obtener más información, vea AVG.|  
+|**Count**|Devuelve el número de elementos de un grupo. Para obtener más información, vea COUNT.|  
+|**CountDistinct**|Devuelve el número de valores únicos distintos de NULL de un grupo. Para obtener más información, vea COUNT y Distinct.|  
+|**Mínima**|Devuelve el valor mínimo en un grupo. Está restringido a los tipos de datos numéricos.|  
+|**Máximo**|Devuelve el valor máximo en un grupo. Está restringido a los tipos de datos numéricos.|  
+  
+ **Marcas de comparación**  
+ Si selecciona **Agrupar por**, use las casillas para controlar cómo realiza la transformación la comparación. Para obtener más información acerca de las opciones de comparación de cadenas, vea [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).  
+  
+ **Count Distinct Scale**  
+ Opcionalmente, puede especificar el número aproximado de valores DISTINCT que podrá escribir la agregación. De forma predeterminada, el valor de esta opción es **No especificado**. Si se especifican **CountDistinctScale** y **CountDistinctKeys** , tendrá prioridad **CountDistinctKeys** .  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|No especificado|No se utiliza la propiedad **CountDistinctScale** .|  
+|Baja|La agregación podrá escribir aproximadamente 500.000 valores DISTINCT.|  
+|Media|La agregación podrá escribir aproximadamente 5 000 000 valores DISTINCT.|  
+|Alta|La agregación podrá escribir más de 25.000.000 valores DISTINCT.|  
+  
+ **Count Distinct Keys**  
+ Opcionalmente, puede especificar el número exacto de valores DISTINCT que podrá escribir la agregación. Si se especifican **CountDistinctScale** y **CountDistinctKeys** , tendrá prioridad **CountDistinctKeys** .  
+  
+## <a name="aggregate-transformation-editor-advanced-tab"></a>Editor de transformación Agregado (pestaña Avanzadas)
+  Utilice la pestaña **Avanzadas** del cuadro de diálogo **Editor de transformación Agregado** para establecer las propiedades del componente, especificar agregaciones y establecer las propiedades de las columnas de entrada y salida.  
+  
+> [!NOTE]  
+>  Las opciones para el recuento de claves, la escala de claves, la clave Count Distinct y la escala de claves distintas estarán disponibles en el componente si se especifican en la pestaña **Avanzadas** , en la salida si se especifican en la pantalla avanzada de la pestaña **Agregaciones** y en la columna si se especifican en la lista de columnas en la parte inferior de la pestaña **Agregaciones** .  
+>   
+>  En la transformación Agregado, **Claves** y **Escala de claves** hacen referencia al número de grupos que se esperan como resultado de una operación **Agrupar por** . **Claves Count Distinct** y **Escala Count Distinct** hacen referencia al número de valores distintos que se esperan como resultado de una operación **Recuento distinto** .  
+  
+### <a name="options"></a>Opciones  
+ **Escala de claves**  
+ Si lo desea, especifique el número aproximado de claves que espera la agregación. La transformación utiliza esta información para optimizar el tamaño de caché inicial. De forma predeterminada, el valor de esta opción es **No especificado**. Si se especifica tanto **Escala de claves** como **Número de claves** , prevalece la opción **Número de claves** .  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|No especificado|No se utiliza la propiedad **Escala de claves** .|  
+|Baja|La agregación podrá escribir aproximadamente 500 000 claves.|  
+|Media|La agregación podrá escribir aproximadamente 5.000.000 claves.|  
+|Alta|La agregación podrá escribir más de 25.000.000 claves.|  
+  
+ **Número de claves**  
+ Si lo desea, especifique el número exacto de claves que espera la agregación. La transformación utiliza esta información para optimizar el tamaño de caché inicial. Si se especifica tanto **Escala de claves** como **Número de claves** , prevalece la opción **Número de claves** .  
+  
+ **Escala Count Distinct**  
+ Opcionalmente, puede especificar el número aproximado de valores DISTINCT que podrá escribir la agregación. De forma predeterminada, el valor de esta opción es **No especificado**. Si se especifica tanto **Escala Count Distinct** como **Claves Count Distinct** , prevalece la opción **Claves Count Distinct** .  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|No especificado|No se utiliza la propiedad CountDistinctScale.|  
+|Baja|La agregación podrá escribir aproximadamente 500.000 valores DISTINCT.|  
+|Media|La agregación podrá escribir aproximadamente 5 000 000 valores DISTINCT.|  
+|Alta|La agregación podrá escribir más de 25.000.000 valores DISTINCT.|  
+  
+ **Claves Count Distinct**  
+ Opcionalmente, puede especificar el número exacto de valores DISTINCT que podrá escribir la agregación. Si se especifica tanto **Escala Count Distinct** como **Claves Count Distinct** , prevalece la opción **Claves Count Distinct** .  
+  
+ **Factor de ampliación automática**  
+ Utilice un valor comprendido entre 1 y 100 para especificar el porcentaje en el que se puede ampliar la memoria durante la agregación. De forma predeterminada, el valor de esta opción es **25%**.  
   
 ## <a name="see-also"></a>Vea también  
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)   

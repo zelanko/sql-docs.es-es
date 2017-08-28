@@ -14,14 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8e2d26fd9ce79fc8c47c7499313648d565ae1b97
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 353e7cf5cef8430303e3ee6fbefc92db08f5f733
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Este artículo presenta las configuraciones de implementación admitido para grupos de disponibilidad AlwaysOn de SQL Server en servidores Linux. Un grupo de disponibilidad admite alta disponibilidad y protección de datos. Detección de errores automática, conmutación por error automática y transparente reconexión después de la conmutación por error proporcionan alta disponibilidad. Las réplicas sincronizadas proporcionan protección de datos. 
 
@@ -114,7 +115,7 @@ Por ejemplo, un grupo de disponibilidad con tres réplicas sincrónicas - una r�
 En este escenario, dos réplicas tengan que responder para que la conmutación por error para que se desencadene. Para correcta conmutación automática por error tras una interrupción de la réplica principal, ambas réplicas secundarias deben actualizarse y responder a las previamente promover notificación. Si están en línea y sincrónico, tienen el mismo número de secuencia. El grupo de disponibilidad promociona uno de ellos. Si solo una de las réplicas secundarias responde a las previamente promover acción, el agente de recursos no puede garantizar que la base de datos secundaria que respondió tiene el sequence_number más alto y no se desencadena una conmutación por error.
 
 >[!IMPORTANT]
->Cuando `required_synchronized_secondaries_to_commit` es ahí 0 es el riesgo de pérdida de datos. Durante una interrupción de la réplica principal, el agente de recursos desencadenará automáticamente una conmutación por error. Puede esperar para que el elemento primario recuperar o conmutar de forma manual usando `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
+>Cuando `required_synchronized_secondaries_to_commit` es 0, existe riesgo de pérdida de datos. Durante una interrupción de la réplica principal, el agente de recursos desencadenará automáticamente una conmutación por error. Puede esperar para que el elemento primario recuperar o conmutar de forma manual usando `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
 
 Puede invalidar el comportamiento predeterminado y evitar que el recurso de grupo de disponibilidad configuración `required_synchronized_secondaries_to_commit` automáticamente.
 

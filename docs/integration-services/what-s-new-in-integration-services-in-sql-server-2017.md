@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 56d4ea145a34048c8619ff88112021f163e26900
+ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
+ms.openlocfilehash: 2d47d1bb82b586890e3bfc250cf09e929a64fb25
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>¿Qué &#39; s de Integration Services en SQL Server de 2017
@@ -26,6 +26,24 @@ En este tema, se describen las características que se han agregado o actualizad
 
 >   [!NOTE]
 > SQL Server 2017 también incluye las características de SQL Server 2016 y las características agregadas en las actualizaciones de SQL Server 2016. Para obtener información sobre las nuevas características de SSIS en SQL Server 2016, consulte [Novedades de Integration Services en SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md).
+
+## <a name="highlights-of-this-release"></a>Aspectos destacados de esta versión
+
+Estos son las características nuevas más importantes de Integration Services para SQL Server 2017.
+
+-   **Escalar horizontalmente**. Distribuir la ejecución de paquetes SSIS más fácilmente en varios equipos de trabajo y administrar ejecuciones y los trabajadores de un único equipo maestro. Para obtener más información, consulte [horizontalmente Integration Services](../integration-services/scale-out/integration-services-ssis-scale-out.md).
+
+-   **Servicios de integración en Linux**. Ejecutar paquetes SSIS en equipos Linux. Para obtener más información, consulte [de extracción, transformación y carga datos en Linux con SSIS](../linux/sql-server-linux-migrate-ssis.md).
+
+-   **Mejoras de la conectividad**. Conectarse a las fuentes de OData de Microsoft Dynamics AX Online y Microsoft Dynamics CRM Online con los componentes actualizados de OData. 
+
+## <a name="new-in-the-azure-feature-pack"></a>Nuevo en el Feature Pack de Azure
+
+Además de las mejoras de conectividad en SQL Server Integration Services Feature Pack para Azure ha agregado compatibilidad para almacén de Azure Data Lake. Para obtener más información, consulte [Azure Feature Pack para Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md).
+
+## <a name="new-in-sql-server-data-tools-ssdt"></a>Nuevo en SQL Server Data Tools (SSDT)
+
+Ahora puede desarrollar proyectos de SSIS y paquetes destinados a versiones de SQL Server 2012 a través de 2017 en 2017 de Visual Studio o en Visual Studio 2015. Para obtener más información, vea [Descargar SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## <a name="new-in-ssis-in-sql-server-2017-rc1"></a>Nuevo en SSIS en SQL Server de 2017 RC1
 
@@ -35,7 +53,7 @@ En este tema, se describen las características que se han agregado o actualizad
 -   Se mejoró el control de conmutación por error de los registros de ejecución de Trabajadores de escalabilidad horizontal. Los registros de ejecución se guardan en disco local en caso de que el trabajador de salida de escala se detiene inesperadamente. Posteriormente, cuando se reinicia el trabajo, vuelve a cargar los registros persistentes y continúa guardarlas en SSISDB.
 -   Se cambió el nombre del parámetro *runincluster* del procedimiento almacenado **[catálogo].[create_execution]** a *runinscaleout* para mejorar la coherencia y la legibilidad. Este cambio de nombre del parámetro tiene las siguientes consecuencias:
     -   Si tiene secuencias de comandos existentes para ejecutar paquetes en horizontalmente, tendrá que cambiar el nombre del parámetro de *runincluster* a *runinscaleout* para que las secuencias de comandos funcione en RC1.
-    -   SQL Server Management Studio (SSMS) 17.1 y versiones anteriores no se pueden activar la ejecución del paquete en horizontalmente en RC1. El mensaje de error: "*@runincluster* no es parámetro para el procedimiento **create_execution**". Este problema se corrige en la versión siguiente de SSMS, la versión 17.2. 17.2 y versiones posteriores de SSMS admite la nueva ejecución de paquete y el nombre de parámetro en horizontalmente. Hasta que SSMS versión 17,2 está disponible para solucionar este problema, puede usar la versión existente de SSMS para generar el script de ejecución de paquetes y después cambiar el nombre de la *runincluster* parámetro *runinscaleout* en la secuencia de comandos y ejecute el script.
+    -   SQL Server Management Studio (SSMS) 17.1 y versiones anteriores no se pueden activar la ejecución del paquete en horizontalmente en RC1. El mensaje de error es este: "*@runincluster* no es un parámetro para el procedimiento **create_execution**". Este problema se corrige en la versión siguiente de SSMS, la versión 17.2. 17.2 y versiones posteriores de SSMS admite la nueva ejecución de paquete y el nombre de parámetro en horizontalmente. Hasta que SSMS versión 17,2 está disponible para solucionar este problema, puede usar la versión existente de SSMS para generar el script de ejecución de paquetes y después cambiar el nombre de la *runincluster* parámetro *runinscaleout* en la secuencia de comandos y ejecute el script.
 -   El catálogo de SSIS tiene una nueva propiedad global para especificar el modo predeterminado de ejecución de los paquetes de SSIS. Esta nueva propiedad se aplica cuando se llama a la **[catalog]. [ create_execution]** procedimiento almacenado con el *runinscaleout* parámetro establecido en null. Este modo también se aplica a trabajos del Agente SQL de SSIS. Puede establecer la propiedad global nuevo en el cuadro de diálogo de propiedades para el nodo SSISDB en SSMS, o con el siguiente comando:
     ```sql
     EXEC [catalog].[configure_catalog] @property_name=N'DEFAULT_EXECUTION_MODE', @property_value=1

@@ -1,32 +1,38 @@
 ---
-title: "Transformaci&#243;n Muestreo de porcentaje | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.percentagesamplingtrans.f1"
-helpviewer_keywords: 
-  - "probar modelos de minería de datos"
-  - "muestrear valores de inicialización [Integration Services]"
-  - "minería de datos [Analysis Services], conjuntos de datos de ejemplo"
-  - "Muestreo de porcentaje, transformación"
-  - "conjuntos de datos de ejemplo [Integration Services]"
-  - "conjuntos de datos [Integration Services], muestra"
-  - "entrenar modelos de minería de datos"
+title: "Transformación muestreo de porcentaje | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.percentagesamplingtrans.f1
+- sql13.dts.designer.percentagesamplingtransformation.f1
+helpviewer_keywords:
+- testing mining models
+- sampling seeds [Integration Services]
+- data mining [Analysis Services], sample data sets
+- Percentage Sampling transformation
+- sample data sets [Integration Services]
+- datasets [Integration Services], sample
+- training mining models
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 caps.latest.revision: 46
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 0afd2ce4dc8fc999661455a1655d43d21b37f3f4
+ms.contentlocale: es-es
+ms.lasthandoff: 08/19/2017
+
 ---
-# Transformaci&#243;n Muestreo de porcentaje
+# <a name="percentage-sampling-transformation"></a>Muestreo de porcentaje, transformación
   La transformación Muestreo de porcentaje crea un conjunto de datos de muestra seleccionando un porcentaje de las filas de entrada de transformación. El conjunto de datos de muestra es una selección aleatoria de filas de la entrada de transformación, de forma que la muestra resultante sea representativa de la entrada.  
   
 > [!NOTE]  
@@ -36,7 +42,7 @@ caps.handback.revision: 46
   
  La transformación Muestreo de porcentaje también es útil para crear conjuntos de datos de ejemplo de desarrollo de paquetes. Si aplica la transformación Muestreo de porcentaje a un flujo de datos, puede reducir uniformemente el tamaño de los conjuntos de datos conservando sus características. El paquete de prueba podrá ejecutarse más rápido porque utilizará un conjunto de datos pequeño, pero representativo.  
   
-## Configuración de la transformación Muestreo de porcentaje  
+## <a name="configuration-the-percentage-sampling-transformation"></a>Configuración de la transformación Muestreo de porcentaje  
  Puede especificar un valor de inicialización de muestreo para modificar el comportamiento del generador de números aleatorios utilizado por la transformación para seleccionar filas. Si se usa el mismo valor de inicialización de muestreo, la transformación siempre creará la misma salida de ejemplo. Si no se especifica un valor de inicialización, la transformación utilizará el contador del sistema operativo para crear el número aleatorio. Por tanto, puede elegir usar un valor de inicialización estándar cuando desee comprobar los resultados de la transformación durante el desarrollo y las pruebas de un paquete, y después usar un valor de inicialización aleatorio cuando el paquete pase a producción.  
   
  Esta transformación es similar a la transformación Muestreo de fila, que crea a conjunto de datos de ejemplo seleccionando un número especificado de filas de entrada. Para más información, consulte [Row Sampling Transformation](../../../integration-services/data-flow/transformations/row-sampling-transformation.md).  
@@ -47,14 +53,30 @@ caps.handback.revision: 46
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información acerca de las propiedades que puede establecer en el cuadro de diálogo **Editor de transformación Muestreo de porcentaje** , vea [Percentage Sampling Transformation Editor](../../../integration-services/data-flow/transformations/percentage-sampling-transformation-editor.md).  
-  
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](../Topic/Common%20Properties.md)  
+-   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  Para obtener más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="percentage-sampling-transformation-editor"></a>Editor de transformación Muestreo de porcentaje
+  Use el cuadro de diálogo **Editor de transformación Muestreo de porcentaje** para dividir parte de una entrada en un ejemplo utilizando un porcentaje de filas especificado. La transformación divide la entrada en dos salidas independientes.  
+  
+### <a name="options"></a>Opciones  
+ **Porcentaje de filas**  
+ Especifique el porcentaje de filas de la entrada que se utilizarán como ejemplo.  
+  
+ Puede especificar el valor de esta propiedad con una expresión de propiedad.  
+  
+ **Nombre de salida de ejemplo**  
+ Proporcione un nombre único para la salida que incluirá las filas de ejemplo. El nombre proporcionado se mostrará en el Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] .  
+  
+ **Nombre de salida no seleccionado**  
+ Proporcione un nombre único para la salida que contendrá las filas excluidas de ejemplo. El nombre proporcionado se mostrará en el Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] .  
+  
+ **Utilizar el valor de inicialización aleatorio siguiente**  
+ Especifique el valor de inicialización del ejemplo para el generador de números aleatorios que utiliza la transformación para crear un ejemplo. Esto solamente se recomienda para desarrollo y pruebas. La transformación utiliza el contador de Microsoft Windows si no se especifica el valor de inicialización.  
   
   

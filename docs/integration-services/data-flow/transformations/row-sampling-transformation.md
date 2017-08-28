@@ -1,32 +1,39 @@
 ---
-title: "Transformaci&#243;n Muestreo de fila | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rowsamplingtrans.f1"
-helpviewer_keywords: 
-  - "muestrear valores de inicialización [Integration Services]"
-  - "valores de inicialización aleatorios"
-  - "muestreo aleatorio"
-  - "conjuntos de datos de ejemplo [Integration Services]"
-  - "Muestreo de fila, transformación"
-  - "paquetes [Integration Services], muestras"
-  - "conjuntos de datos [Integration Services], muestra"
+title: "Transformación muestreo de fila | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rowsamplingtrans.f1
+- sql13.DTS.DESIGNER.ROWSAMPLINGTRANSFORMATION.COLUMNS.F1
+- sql13.dts.designer.rowsamplingtransformation.f1
+helpviewer_keywords:
+- sampling seeds [Integration Services]
+- random seeds
+- random sampling
+- sample data sets [Integration Services]
+- Row Sampling transformation
+- packages [Integration Services], samples
+- datasets [Integration Services], sample
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 74bc28f5ce476bf86ad91258877fe3c45e44c8df
+ms.contentlocale: es-es
+ms.lasthandoff: 08/19/2017
+
 ---
-# Transformaci&#243;n Muestreo de fila
+# <a name="row-sampling-transformation"></a>Muestreo de fila, transformación
   La transformación Muestreo de fila se usa para obtener un subconjunto seleccionado aleatoriamente de un conjunto de datos de entrada. Puede especificar el tamaño exacto del ejemplo de salida y especificar un valor de inicialización para el generador de números aleatorios.  
   
  Hay muchas aplicaciones para el muestreo aleatorio. Por ejemplo, una compañía que desea seleccionar aleatoriamente 50 empleados que recibirán los premios de una lotería podría aplicar la transformación Muestreo de fila a la base de datos de empleados para generar el número exacto de ganadores.  
@@ -35,7 +42,7 @@ caps.handback.revision: 43
   
  Esta transformación es similar a la transformación Muestreo de porcentaje, que crea un conjunto de datos de ejemplo seleccionando un porcentaje de las filas de entrada. Consulte [Percentage Sampling Transformation](../../../integration-services/data-flow/transformations/percentage-sampling-transformation.md).  
   
-## Configurar la transformación Muestreo de fila  
+## <a name="configuring-the-row-sampling-transformation"></a>Configurar la transformación Muestreo de fila  
  La transformación Muestreo de fila crea un conjunto de datos de ejemplo seleccionando un número especificado de las filas de entrada de la transformación. Como la selección de filas de la entrada de transformación es aleatoria, la muestra resultante es representativa de la entrada. También puede especificar el valor de inicialización que usará el generador de números aleatorios; dicho valor afectará al modo en que la transformación seleccionará filas.  
   
  Si se utiliza el mismo valor de inicialización aleatorio en la misma entrada de la transformación, siempre se creará la misma salida de ejemplo. Si no se especifica un valor de inicialización, la transformación utilizará el contador del sistema operativo para crear el número aleatorio. Por tanto, puede usar el mismo valor de inicialización durante las pruebas, para comprobar los resultados de la transformación durante el desarrollo y las pruebas del paquete, y después cambiarlo por un valor de inicialización aleatorio cuando el paquete pase a producción.  
@@ -46,17 +53,33 @@ caps.handback.revision: 43
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información sobre las propiedades que puede establecer en el cuadro de diálogo **Editor de transformación Muestreo de fila**, vea [Editor de transformación Muestreo de fila &#40;página Muestreo&#41;](../../../integration-services/data-flow/transformations/row-sampling-transformation-editor-sampling-page.md).  
-  
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](../Topic/Common%20Properties.md)  
+-   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  Para obtener más información sobre cómo establecer propiedades, vea.  
   
-## Tareas relacionadas  
+## <a name="row-sampling-transformation-editor-sampling-page"></a>Editor de transformación Muestreo de fila (página Muestreo)
+  Use el cuadro de diálogo **Editor de transformación Muestreo de fila** para dividir una parte de una entrada en un ejemplo que utilice un número especificado de filas. La transformación divide la entrada en dos salidas independientes.  
+  
+### <a name="options"></a>Opciones  
+ **Número de filas**  
+ Especifique el número de filas de la entrada que se utilizarán como ejemplo.  
+  
+ Puede especificar el valor de esta propiedad con una expresión de propiedad.  
+  
+ **Nombre de salida de ejemplo**  
+ Proporcione un nombre único para la salida que incluirá las filas de ejemplo. El nombre que indique se mostrará en el Diseñador SSIS.  
+  
+ **Nombre de salida no seleccionado**  
+ Proporcione un nombre único para la salida que contendrá las filas excluidas de ejemplo. El nombre que indique se mostrará en el Diseñador SSIS.  
+  
+ **Utilizar el valor de inicialización aleatorio siguiente**  
+ Especifique el valor de inicialización del ejemplo para el generador de números aleatorios que utiliza la transformación para crear un ejemplo. Esto solamente se recomienda para desarrollo y pruebas. La transformación utiliza el contador de Microsoft Windows como valor de inicialización si no se especifica un valor de inicialización aleatorio.  
+  
+## <a name="related-tasks"></a>Tareas relacionadas  
  [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
   

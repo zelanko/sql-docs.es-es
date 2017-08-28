@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 88683c4fbf4426ffac83ef2091f81087101463e9
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 9eee58be471d8b39b051c1343f9eb26a2960b6d6
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Empezar a trabajar con este ejemplo sencillo de la importación y el Asistente para exportación
@@ -44,6 +44,8 @@ Inicie al asistente desde el grupo de Microsoft SQL Server 2016 en el menú Inic
 
 > [!NOTE]
 > En este ejemplo, se puede seleccionar al Asistente de 32 bits porque tiene la versión de 32 bits de Microsoft Office instalada. Como resultado, tendrá que usar el proveedor de datos de 32 bits para conectarse a Excel. Para muchos otros orígenes de datos, normalmente puede elegir al Asistente de 64 bits.
+>
+> Para usar la versión de 64 bits de la importación de SQL Server y el Asistente para exportación, tendrá que instalar a SQL Server. SQL Server Data Tools (SSDT) y SQL Server Management Studio (SSMS) son aplicaciones de 32 bits y solo instalan archivos de 32 bits, incluida la versión de 32 bits del asistente.
 
 Para obtener más información, vea [Start the SQL Server Import and Export Wizard](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)(Iniciar el Asistente para importación y exportación de SQL Server).
 
@@ -58,9 +60,6 @@ Probablemente no desea ver esta página de nuevo, por lo que continúe y haga cl
 En la página siguiente, **elegir un origen de datos**, Microsoft Excel se puede seleccionar como origen de datos. A continuación, examina para seleccionar el archivo de Excel. Por último, especifique la versión de Excel que usó para crear el archivo.
 
 ![Elija el origen de datos de Excel](../../integration-services/import-export-data/media/choose-the-excel-data-source.jpg)
-
-> [!NOTE]
-> Normalmente especifica Microsoft Excel 2016 como la versión y descargar los archivos para conectarse a Excel 2016 y acceso 2016. Sin embargo, si tiene una suscripción de Microsoft Office 365, no puede instalar el runtime de Office 2016. Solo se pueden instalar a los proveedores de datos para Excel 2016 y 2016 de acceso con una versión de escritorio de Microsoft Office. Por lo que simplemente especifica la versión anterior de Excel, Excel 2013. Si es necesario, descargue los archivos para conectarse a Excel 2013 y 2013 de acceso. Esta limitación del runtime de Office 2016 se menciona en [esta entrada de blog](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/).
 
 Para obtener más información sobre cómo conectarse a Excel, vea [conectar a un origen de datos de Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md). Para obtener más información acerca de esta página del asistente, consulte [elegir un origen de datos](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
 

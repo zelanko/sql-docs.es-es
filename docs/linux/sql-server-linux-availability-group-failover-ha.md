@@ -10,14 +10,15 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 6f060f110121bc744687b09a15e142112f48c86c
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 07a50a59c320d7abb58c725c717393f8751b337d
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-
 # <a name="operate-ha-availability-group-for-sql-server-on-linux"></a>Funcionar el grupo de disponibilidad de alta disponibilidad para SQL Server en Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 ## <a name="failover"></a>Conmutación por error el grupo de disponibilidad
 
@@ -175,9 +176,6 @@ Antes de actualizar un grupo de disponibilidad, revise las prácticas recomendad
 
 Las siguientes secciones explican cómo realizar una actualización gradual con instancias de SQL Server en Linux con grupos de disponibilidad. 
 
->[!WARNING]
->En Linux, no se admite la actualización gradual a SQL Server de 2017 RC2. Después de actualizar la réplica secundaria, se desconectará de la réplica principal hasta que se actualiza la réplica principal. Microsoft está planeando resolver este problema en una versión futura. 
-
 ### <a name="upgrade-steps-on-linux"></a>Pasos de actualización en Linux
 
 Una vez réplicas del grupo de disponibilidad en las instancias de SQL Server en Linux, el tipo de clúster del grupo de disponibilidad es `EXTERNAL` o `NONE`. Un grupo de disponibilidad que está administrado por un administrador de clústeres, además de clúster de conmutación por error de Windows Server (WSFC) es `EXTERNAL`. Marcapasos con Corosync es un ejemplo de un administrador de clústeres externa. Un grupo de disponibilidad con el Administrador de clúster no tiene el tipo de clúster `NONE` los pasos de actualización que se describen aquí son específicos para los grupos de disponibilidad del tipo de clúster `EXTERNAL` o `NONE`.
@@ -185,12 +183,21 @@ Una vez réplicas del grupo de disponibilidad en las instancias de SQL Server en
 1. Antes de comenzar, cada base de datos de copia de seguridad.
 2. Actualizar las instancias de SQL Server que hospeden las réplicas secundarias.
 
-    A. Actualice primero las réplicas secundarias asincrónicas.
+    a. Actualice primero las réplicas secundarias asincrónicas.
 
-    B. Actualizar las réplicas secundarias sincrónicas.
+    b. Actualizar las réplicas secundarias sincrónicas.
 
    >[!NOTE]
    >Si un grupo de disponibilidad solo tiene asincrónica réplicas - para evitar la pérdida de datos cambiar una réplica al sincrónica y esperan hasta que se sincronicen. A continuación, actualice esta réplica.
+   
+   b.1. Detener el recurso en el nodo que hospeda la réplica secundaria de destino para la actualización
+   
+   Antes de ejecutar el comando de actualización, detenga el recurso para que el clúster no se supervisará y producirá un error innecesariamente. En el ejemplo siguiente se agrega una restricción de ubicación en el nodo que se producirá en el recurso que se va a detener. Actualización `ag_cluster-master` con el nombre del recurso y `nodeName1` con el nodo que hospeda la réplica de destino para la actualización.
+
+   ```bash
+   pcs constraint location ag_cluster-master avoids nodeName1
+   ```
+   b.2. Actualizar SQL Server en la réplica secundaria
 
    Las siguientes actualizaciones de ejemplo `mssql-server` y `mssql-server-ha` paquetes.
 
@@ -198,11 +205,18 @@ Una vez réplicas del grupo de disponibilidad en las instancias de SQL Server en
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
    ```
+   b.3. Quitar la restricción de ubicación
+
+   Antes de ejecutar el comando de actualización, detenga el recurso para que el clúster no se supervisará y producirá un error innecesariamente. En el ejemplo siguiente se agrega una restricción de ubicación en el nodo que se producirá en el recurso que se va a detener. Actualización `ag_cluster-master` con el nombre del recurso y `nodeName1` con el nodo que hospeda la réplica de destino para la actualización.
+
+   ```bash
+   pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
+   ```
+   Como práctica recomendada, asegúrese de que se inició el recurso (mediante `pcs status` comando) y la réplica secundaria está conectada y sincronizada estado después de la actualización.
 
 1. Después de que se actualicen todas las réplicas secundarias, conmutación por error manual a una de las réplicas secundarias sincrónicas.
 
    Para los grupos de disponibilidad con `EXTERNAL` tipo de clúster, use las herramientas de administración de clúster no over; grupos de disponibilidad con `NONE` tipo de clúster debe usar Transact-SQL para una conmutación por error. 
-
    En el ejemplo siguiente, se produce un error en un grupo de disponibilidad con las herramientas de administración de clúster. Reemplace `<targetReplicaName>` con el nombre de la réplica secundaria sincrónica que se convertirá en principal:
 
    ```bash
@@ -211,28 +225,41 @@ Una vez réplicas del grupo de disponibilidad en las instancias de SQL Server en
    
    >[!IMPORTANT]
    >Los pasos siguientes solo se aplican a grupos de disponibilidad que no tienen un administrador de clústeres.  
-
    Si el tipo de clúster del grupo de disponibilidad es `NONE`, manualmente una conmutación por error. Realice los pasos siguientes en el orden indicado:
 
-      A. El siguiente comando establece la réplica principal al secundario. Reemplace `AG1` con el nombre del grupo de disponibilidad. Ejecute el comando de Transact-SQL en la instancia de SQL Server que hospeda la réplica principal.
+      a. El siguiente comando establece la réplica principal al secundario. Reemplace `AG1` con el nombre del grupo de disponibilidad. Ejecute el comando de Transact-SQL en la instancia de SQL Server que hospeda la réplica principal.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      B. El comando siguiente establece una réplica secundaria sincrónica a principal. Ejecute el siguiente comando de Transact-SQL en la instancia de destino de SQL Server: la instancia que hospeda la réplica secundaria sincrónica.
+      b. El comando siguiente establece una réplica secundaria sincrónica a principal. Ejecute el siguiente comando de Transact-SQL en la instancia de destino de SQL Server: la instancia que hospeda la réplica secundaria sincrónica.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
       ```
 
-1. Después de la conmutación por error, actualice SQL Server en la réplica principal anterior. 
+1. Después de la conmutación por error, actualice SQL Server en la réplica principal anterior repitiendo el mismo procedimiento descrito en los pasos anteriores de b.3 b.1.
 
    Las siguientes actualizaciones de ejemplo `mssql-server` y `mssql-server-ha` paquetes.
 
    ```bash
+   # add constraint for the resource to stop on the upgraded node
+   # replace 'nodename2' with the name of the cluster node targeted for upgrade
+   pcs constraint location ag_cluster-master avoids nodeName2
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
+   ```
+   
+   ```bash
+   # upgrade mssql-server and mssql-server-ha packages
+   sudo yum update mssql-server
+   sudo yum update mssql-server-ha
+   ```
+
+   ```bash
+   # remove the constraint; make sure the resource is started and replica is connected and synchronized
+   pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
 
 1. Para un grupos de disponibilidad con un clúster externo manager - donde escribir el clúster es externo, Liberador de espacio en la restricción de ubicación que es atribuible a la conmutación por error manual. 

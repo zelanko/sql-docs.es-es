@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.fuzzygroupingtrans.f1
+- sql13.dts.designer.fuzzygroupingtransformation.connection.f1
+- sql13.dts.designer.fuzzygroupingtransformation.columns.f1
+- sql13.dts.designer.fuzzygroupingtransformation.advanced.f1
 helpviewer_keywords:
 - cleaning data
 - comparing data
@@ -30,10 +33,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 009cdda72a100f887adb81e6f526b9a3ebe7651f
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 6fceec90818b05ae23c04f90cff8f68c8c7c3c42
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="fuzzy-grouping-transformation"></a>Agrupación aproximada, transformación
@@ -85,14 +88,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-fuzzy-grouping-transformation"></a>Configuración de la transformación Agrupación aproximada  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información acerca de las propiedades que puede establecer en el cuadro de diálogo **Editor de transformación Agrupación aproximada** , haga clic en uno de los temas siguientes:  
-  
--   [Editor de transformación Agrupación aproximada &#40;pestaña Administrador de conexiones&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
-  
--   [Editor de transformación Agrupación aproximada &#40;pestaña Columnas&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-columns-tab.md)  
-  
--   [Editor de transformación Agrupación aproximada &#40;pestaña Avanzadas&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-advanced-tab.md)  
-  
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
 -   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -105,6 +100,85 @@ ms.lasthandoff: 08/03/2017
 -   [Identificar filas de datos similares mediante la transformación Agrupación aproximada](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
 -   [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>Editor de transformación Agrupación aproximada (pestaña Administrador de conexiones)
+  Use la pestaña **Administrador de conexiones** del cuadro de diálogo **Editor de transformación Agrupación aproximada** para seleccionar una conexión existente o crear una nueva.  
+  
+> [!NOTE]  
+>  El servidor especificado por la conexión debe ejecutar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La transformación Agrupación aproximada crea objetos de datos temporales en tempdb que pueden ser tan grandes como toda la entrada de la transformación. Mientras se ejecuta la transformación, se emiten consultas de servidor a esos objetos temporales. Esto puede afectar al rendimiento general del servidor.  
+  
+### <a name="options"></a>Opciones  
+ **OLE DB, administrador de conexiones**  
+ Seleccione un administrador de conexiones OLE DB existente con el cuadro de lista, o bien cree una conexión con el botón **Nuevo** .  
+  
+ **Nuevo**  
+ Permite crear una conexión con el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** .  
+  
+## <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Editor de transformación Agrupación aproximada (pestaña Columnas)
+  Use la pestaña **Columnas** del cuadro de diálogo **Editor de transformación Agrupación aproximada** para especificar las columnas utilizadas para agrupar filas con valores duplicados.  
+  
+### <a name="options"></a>Opciones  
+ **Columnas de entrada disponibles**  
+ Seleccione en esta lista las columnas de entrada utilizadas para agrupar filas con valores duplicados.  
+  
+ **Nombre**  
+ Muestra los nombres de las columnas de entrada disponibles.  
+  
+ **Paso a través**  
+ Seleccione si la columna de entrada debe incluirse en la salida de transformación. Todas las columnas utilizadas para la agrupación se copian automáticamente en la salida. Si activa esta columna, puede incluir columnas adicionales.  
+  
+ **Columna de entrada**  
+ Seleccione una de las columnas de entrada seleccionadas anteriormente en la lista **Columnas de entrada disponibles** .  
+  
+ **Alias de salida**  
+ Escriba un nombre descriptivo para la columna de salida correspondiente. De forma predeterminada, el nombre de la columna de salida es el mismo que el nombre de la columna de entrada.  
+  
+ **Alias de salida de grupo**  
+ Escriba un nombre descriptivo para la columna que contendrá el valor canónico de los valores duplicados agrupados. El nombre predeterminado de esta columna de salida es el nombre de la columna de entrada con _clean anexado.  
+  
+ **Tipo de coincidencia**  
+ Seleccione coincidencia exacta o aproximada. Las filas se consideran duplicadas si existe un parecido suficiente entre todas las columnas con un tipo de coincidencia aproximada. Si también especifica coincidencia exacta en determinadas columnas, solamente se consideran como posibles duplicados las filas que contienen valores idénticos en las columnas de coincidencia exacta. Por tanto, si sabe que una determinada columna no tiene errores o incoherencias, puede especificar coincidencia exacta en esa columna para aumentar la exactitud de la coincidencia aproximada en otras columnas.  
+  
+ **Similitud mínima**  
+ Establezca el umbral de similitud del nivel de combinación con el control deslizante. Cuanto más se acerque el valor a 1, más deberá parecerse el valor de búsqueda al valor de origen para que pueda calificarse como coincidencia. Al aumentar el umbral se puede mejorar la velocidad de la coincidencia ya que se tendrán en cuanta menos registros candidatos.  
+  
+ **Alias de salida de similitud**  
+ Especifique el nombre de una nueva columna de salida que contendrá los resultados de similitud de la combinación seleccionada. Si este valor se deja vacío, la columna de salida no se crea.  
+  
+ **Números**  
+ Especifique la importancia de los números iniciales y finales en la comparación de los datos de la columna. Por ejemplo, si los números iniciales son significativos, "123 Main Street" no se agrupará con "456 Main Street."  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Neither**|Los números iniciales y finales no son significativos.|  
+|**Leading**|Solo son significativos los números iniciales.|  
+|**Trailing**|Solo son significativos los números finales.|  
+|**LeadingAndTrailing**|Tanto los números iniciales como los finales son significativos.|  
+  
+ **Marcas de comparación**  
+ Para obtener más información sobre las opciones de comparación de cadenas, vea [Comparar datos de cadena](../../../integration-services/data-flow/comparing-string-data.md).  
+  
+## <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>Editor de transformación Agrupación aproximada (pestaña Avanzadas)
+  Use la pestaña **Avanzadas** del cuadro de diálogo **Editor de transformación Agrupación aproximada** para especificar las columnas de entrada y salida, configurar umbrales de similitud y definir delimitadores.  
+  
+> [!NOTE]  
+>  Las propiedades **Exhaustive** y **MaxMemoryUsage** de la transformación Agrupación aproximada no están disponibles en el **Editor de transformación Agrupación aproximada**, pero se pueden establecer con el **Editor avanzado**. Para obtener más información acerca de estas propiedades, vea la sección sobre la transformación Agrupación aproximada en [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+  
+### <a name="options"></a>Opciones  
+ **Nombre de la columna de clave de entrada**  
+ Especifique el nombre de una columna de salida que contenga el identificador único para cada fila de entrada. La columna **_key_in** tiene un valor que identifica de forma exclusiva cada fila.  
+  
+ **Nombre de la columna de clave de salida**  
+ Especifique el nombre de una columna de salida que contenga el identificador único para la fila canónica de un grupo de filas duplicadas. La columna **_key_out** se corresponde con el valor **_key_in** de la fila de datos canónica.  
+  
+ **Nombre de la columna de resultados de similitud**  
+ Especifique un nombre para la columna que contiene los resultados de similitud. Los resultados de similitud tienen un valor entre 0 y 1 que indica la similitud de la fila de entrada con la fila canónica. Cuanto más se acerque el resultado a 1, mayor será la coincidencia entre la fila y la fila canónica.  
+  
+ **Umbral de similitud**  
+ Defina el umbral de similitud utilizando el control deslizante. Cuanto más se acerque el umbral a 1, más deberán parecerse las filas entre sí para ser consideradas duplicados. Aumentar el umbral puede mejorar la velocidad de coincidencia, ya que tendrán que tenerse en cuenta menos registros candidatos.  
+  
+ **Delimitadores de token**  
+ La transformación proporciona un conjunto predeterminado de delimitadores para dividir los datos en tokens, pero se pueden agregar o quitar los delimitadores que sea necesario editando la lista.  
   
 ## <a name="see-also"></a>Vea también  
  [Transformación Búsqueda aproximada](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

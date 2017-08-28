@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.derivedcolumntrans.f1
+- sql13.dts.designer.derivedcolumntransformation.f1
 helpviewer_keywords:
 - multiple derived columns
 - expressions [Integration Services], derived columns
@@ -23,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 51522b2df0c47048cbc62a6fb6997e40a484d7d6
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 40d4bf147d712fac833ba9aa7542529cf0e26253
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="derived-column-transformation"></a>Transformación Columna derivada
@@ -62,8 +63,6 @@ ms.lasthandoff: 08/03/2017
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información acerca de las propiedades que puede establecer en el cuadro de diálogo **Editor de transformación Columna derivada** , vea [Derived Column Transformation Editor](../../../integration-services/data-flow/transformations/derived-column-transformation-editor.md).  
-  
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
 -   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -77,6 +76,47 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-tasks"></a>Tareas relacionadas  
   
 -   [Derivar valores de columna mediante la transformación Columna derivada](../../../integration-services/data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
+  
+## <a name="derived-column-transformation-editor"></a>Columna derivada, editor de transformación
+  Utilice el cuadro de diálogo **Editor de transformación Columna derivada** para crear expresiones que rellenan columnas nuevas o de reemplazo.  
+  
+### <a name="options"></a>Opciones  
+ **Variables y columnas**  
+ Genere una expresión que utiliza una variable o una columna de entrada arrastrándolas de la lista de variables y columnas disponibles a una fila de tabla existente en el siguiente panel, o bien a una nueva fila al final de la lista.  
+  
+ **Funciones y operadores**  
+ Genere una expresión que utiliza una función o un operador para evaluar los datos de entrada y los datos de salida directa arrastrando las funciones y operadores de la lista al siguiente panel.  
+  
+ **Nombre de columna derivada**  
+ Especifique un nombre de columna derivada. De forma predeterminada, se muestra una lista numerada de columnas derivadas; no obstante, puede elegir un nombre único descriptivo.  
+  
+ **Columna derivada**  
+ Seleccione una columna derivada de la lista. Elija si desea agregar la columna derivada como columna de salida nueva o reemplazar los datos de una columna existente.  
+  
+ **Expresión**  
+ Escriba una expresión o genere una arrastrando elementos de la lista anterior de columnas, variables, funciones y operadores disponibles.  
+  
+ Puede especificar el valor de esta propiedad con una expresión de propiedad.  
+  
+ **Temas relacionados**: [Expresiones de Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Operadores &#40;expresión de SSIS&#41;](../../../integration-services/expressions/operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41](../../../integration-services/expressions/functions-ssis-expression.md).  
+  
+ **Tipo de datos**  
+ Si agrega datos a una nueva columna, el cuadro de diálogo **Editor de transformación Columna derivada** evalúa automáticamente la expresión y establece el tipo de datos según corresponda. El valor de esta columna es de solo lectura. Para más información, consulte [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+  
+ **Longitud**  
+ Si agrega datos a una nueva columna, el cuadro de diálogo **Editor de transformación Columna derivada** evalúa automáticamente la expresión y establece la longitud de columna para los datos de cadena. El valor de esta columna es de solo lectura.  
+  
+ **Precisión**  
+ Si agrega datos a una nueva columna, el cuadro de diálogo **Editor de transformación Columna derivada** establece automáticamente la precisión de los datos numéricos según el tipo de datos. El valor de esta columna es de solo lectura.  
+  
+ **Escala**  
+ Si agrega datos a una nueva columna, el cuadro de diálogo **Editor de transformación Columna derivada** establece automáticamente la escala de los datos numéricos según el tipo de datos. El valor de esta columna es de solo lectura.  
+  
+ **Página de códigos**  
+ Si agrega datos a una nueva columna, el cuadro de diálogo **Editor de transformación Columna derivada** establece automáticamente la página de códigos para el tipo de datos DT_STR. Puede actualizar la **Página de códigos**.  
+  
+ **Configurar la salida de errores**  
+ Especifique cómo quiere controlar los errores mediante el cuadro de diálogo [Configurar la salida de errores](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) .  
   
 ## <a name="related-content"></a>Contenido relacionado  
  Artículo técnico, sobre [ejemplos de expresiones SSIS](http://go.microsoft.com/fwlink/?LinkId=220761), en social.technet.microsoft.com  

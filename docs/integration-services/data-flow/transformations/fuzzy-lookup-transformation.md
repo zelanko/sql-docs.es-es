@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.fuzzylookuptrans.f1
+- sql13.dts.designer.fuzzylookuptransformation.referencetable.f1
+- sql13.dts.designer.fuzzylookuptransformation.columns.f1
+- sql13.dts.designer.fuzzylookuptransformation.advanced.f1
 helpviewer_keywords:
 - cleaning data
 - comparing data
@@ -35,10 +38,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2c05d44e6a91c79e5a5ce71b1e26ac2f4a319a88
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ff5f003749572b16e750b5940cd0f05b0b879fda
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="fuzzy-lookup-transformation"></a>Búsqueda aproximada, transformación
@@ -128,14 +131,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>Configurar la transformación Búsqueda aproximada  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información acerca de las propiedades que puede establecer en el cuadro de diálogo **Editor de transformación Búsqueda aproximada** , haga clic en uno de los temas siguientes:  
-  
--   [Editor de transformación Búsqueda aproximada &#40;pestaña Tabla de referencia&#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-reference-table-tab.md)  
-  
--   [Editor de transformación Búsqueda aproximada &#40;pestaña Columnas&#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)  
-  
--   [Editor de transformación Búsqueda aproximada &#40;pestaña Avanzadas&#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-advanced-tab.md)  
-  
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
 -   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -144,6 +139,83 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-tasks"></a>Tareas relacionadas  
  Para obtener más detalles sobre cómo establecer las propiedades de un componente de flujo de datos, vea [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Editor de transformación Búsqueda aproximada (pestaña Tabla de referencia)
+  Use la pestaña **Tabla de referencia** del cuadro de diálogo **Editor de transformación Búsqueda aproximada** para especificar la tabla de origen y el índice que se van a usar para la búsqueda. El origen de los datos de referencia debe ser una tabla de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+  
+> [!NOTE]  
+>  La transformación Búsqueda aproximada crea una copia de trabajo de la tabla de referencia. Los índices descritos a continuación se crean en esta tabla de trabajo mediante una tabla especial, no un índice normal de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La transformación no modifica las tablas de origen existentes a menos que se seleccione **Mantener el índice almacenado**. En este caso, se crea un desencadenador en la tabla de referencia que actualiza la tabla de trabajo y la tabla del índice de búsqueda basándose en los cambios en la tabla de referencia.  
+  
+> [!NOTE]  
+>  Las propiedades **Exhaustive** y **MaxMemoryUsage** de la transformación Búsqueda aproximada no están disponibles en el **Editor de transformación Búsqueda aproximada**, pero se pueden establecer mediante el **Editor avanzado**. Además, los valores mayores que 100 para **MaxOutputMatchesPerInput** solo se pueden especificar en el **Editor avanzado**. Para obtener más información acerca de estas propiedades, vea la sección sobre la transformación Búsqueda aproximada en [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+  
+### <a name="options"></a>Opciones  
+ **OLE DB, administrador de conexiones**  
+ Seleccione un administrador de conexiones OLE DB de la lista o cree una conexión haciendo clic en **Nueva**.  
+  
+ **Nueva**  
+ Cree una nueva conexión mediante el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** .  
+  
+ **Generar índice nuevo**  
+ Especifique que la transformación debe crear un nuevo índice que se utilizará en la búsqueda.  
+  
+ **Nombre de la tabla de referencia**  
+ Seleccione la tabla existente que se utilizará como tabla de referencia (búsqueda).  
+  
+ **Almacenar el nuevo índice**  
+ Seleccione esta opción si desea guardar el nuevo índice de búsqueda.  
+  
+ **Nombre del índice nuevo**  
+ Si ha elegido guardar el índice de búsqueda nuevo, escriba un nombre descriptivo para el índice.  
+  
+ **Mantener el índice almacenado**  
+ Si ha elegido guardar el índice de búsqueda nuevo, especifique si también desea que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mantenga el índice.  
+  
+> [!NOTE]  
+>  Al seleccionar **Mantener el índice almacenado** en la pestaña **Tabla de referencia** del **Editor de transformación Búsqueda aproximada**, la transformación utiliza los procedimientos almacenados administrados para mantener el índice. Estos procedimientos almacenados administrados usan la característica de integración de Common Language Runtime (CLR) en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. De forma predeterminada, la integración de CLR en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no está habilitada. Para utilizar la funcionalidad **Mantener el índice almacenado** , debe habilitar la integración de CLR. Para más información, consulte [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md).  
+>   
+>  Dado que la opción **Mantener el índice almacenado** requiere la integración con CLR, esta característica solo funciona al seleccionar una tabla de referencia en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] donde se habilite la integración con CLR.  
+  
+ **Usar índice existente**  
+ Especifique que la transformación debe utilizar un índice existente para la búsqueda.  
+  
+ **Nombre de un índice existente**  
+ Seleccione de la lista un índice de búsqueda creado previamente.  
+  
+## <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>Editor de transformación Búsqueda aproximada (pestaña Columnas)
+  Use la pestaña **Columnas** del cuadro de diálogo **Editor de transformación Búsqueda aproximada** para especificar las propiedades de las columnas de entrada y salida.  
+  
+### <a name="options"></a>Opciones  
+ **Columnas de entrada disponibles**  
+ Arrastre las columnas de entrada para conectarlas a las columnas de búsqueda disponibles. Las columnas deben poseer tipos de datos coincidentes y compatibles. Seleccione una línea de asignación y haga clic con el botón derecho para editar las asignaciones en el cuadro de diálogo [Crear relaciones](../../../integration-services/data-flow/transformations/create-relationships.md) .  
+  
+ **Nombre**  
+ Muestra los nombres de las columnas de entrada disponibles.  
+  
+ **Paso a través**  
+ Especifique si desea incluir las columnas de entrada en la salida de transformación.  
+  
+ **Columnas de búsqueda disponibles**  
+ Use las casillas para seleccionar las columnas en las que se realizarán operaciones de búsqueda aproximada.  
+  
+ **columna de búsqueda**  
+ Seleccione las columnas de búsqueda en la lista de columnas de tabla de referencia disponibles. Sus selecciones se reflejan en las casillas en la tabla **Columnas de búsqueda disponibles** . Seleccione una columna en la tabla **Columnas de búsqueda disponibles** para crear una columna de salida que contenga el valor de la columna de la tabla de referencia para cada fila coincidente devuelta.  
+  
+ **Alias de salida**  
+ Escriba un alias para la salida de cada columna de búsqueda. El nombre predeterminado es el de la columna de búsqueda con un valor de índice numérico anexado, pero puede elegir cualquier nombre descriptivo único.  
+  
+## <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>Editor de transformación Búsqueda aproximada (pestaña Avanzadas)
+  Utilice la pestaña **Avanzadas** del cuadro de diálogo **Editor de transformación Búsqueda aproximada** para establecer los parámetros de la búsqueda aproximada.  
+  
+### <a name="options"></a>Opciones  
+ **Número máximo de coincidencias por búsqueda para la salida**  
+ Especifique el número máximo de coincidencias que la transformación puede devolver para cada fila de entrada. El valor predeterminado es **1**.  
+  
+ **Umbral de similitud**  
+ Establezca el umbral de similitud en el nivel de componente con el control deslizante. Cuanto más se acerque el valor a 1, más deberá parecerse el valor de búsqueda al valor de origen para que pueda calificarse como coincidencia. Al aumentar el umbral se puede mejorar la velocidad de la coincidencia ya que se tendrán en cuanta menos registros candidatos.  
+  
+ **Delimitadores de token**  
+ Especifique los delimitadores que la transformación utilizará para dividir en tokens los valores de las columnas.  
   
 ## <a name="see-also"></a>Vea también  
  [Transformación Búsqueda](../../../integration-services/data-flow/transformations/lookup-transformation.md)   

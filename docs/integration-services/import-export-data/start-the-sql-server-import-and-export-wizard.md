@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0a4240a8ae3f62ac986a871b198ffb2aefe78862
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 22d5628b55be9b20ea86f0625be287568fd4ee8f
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>Iniciar SQL Server de importación y exportación de Asistente
@@ -43,6 +43,9 @@ Puede iniciar al asistente:
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>¿Requisito previo: es el Asistente para instalar en el equipo?
 Si desea ejecutar el asistente, pero no tiene [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalado en el equipo, puede instalar el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la instalación de SQL Server Data Tools (SSDT). Para obtener más información, vea [Descargar SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+
+> [!NOTE]
+> Para usar la versión de 64 bits de la importación de SQL Server y el Asistente para exportación, tendrá que instalar a SQL Server. SQL Server Data Tools (SSDT) y SQL Server Management Studio (SSMS) son aplicaciones de 32 bits y solo instalan archivos de 32 bits, incluida la versión de 32 bits del asistente.
 
 ## <a name="startStart"></a> menú Inicio  
 ### <a name="start-the-sql-server-import-and-export-wizard-from-the-start-menu"></a>Iniciar la importación de SQL Server y el Asistente para exportación desde el menú Inicio

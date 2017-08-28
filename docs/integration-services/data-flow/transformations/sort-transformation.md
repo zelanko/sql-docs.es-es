@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sorttrans.f1
+- sql13.dts.designer.sorttransformation.f1
 helpviewer_keywords:
 - Sort transformation
 - descending sorts
@@ -24,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bb0f93339416c071177fd532847b584ab2043e84
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: bcffbef3e370183c6e37726e23d058d342d252e2
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="sort-transformation"></a>Ordenar, transformación
@@ -47,8 +48,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-sort-transformation"></a>Configuración de la transformación Ordenar  
  Puede establecer propiedades a través del Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener información acerca de las propiedades que puede establecer en el cuadro de diálogo **Editor de transformación Ordenar** , vea [Sort Transformation Editor](../../../integration-services/data-flow/transformations/sort-transformation-editor.md).  
-  
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
 -   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -60,6 +59,37 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-content"></a>Contenido relacionado  
  Ejemplo, [SortDeDuplicateDelimitedString Custom SSIS Component](http://go.microsoft.com/fwlink/?LinkId=220821), en codeplex.com.  
+  
+## <a name="sort-transformation-editor"></a>Editor de transformación Ordenar
+  Use el cuadro de diálogo **Editor de transformación Ordenar** para seleccionar las columnas que desea ordenar, establecer el orden y especificar si deben quitarse los duplicados.  
+  
+### <a name="options"></a>Opciones  
+ **Columnas de entrada disponibles**  
+ Active las casillas de las columnas que desea ordenar.  
+  
+ **Nombre**  
+ Muestra el nombre de todas las columnas de entrada disponibles.  
+  
+ **Paso a través**  
+ Permite indicar si la columna debe incluirse en la salida ordenada.  
+  
+ **Columna de entrada**  
+ Seleccione de la lista de entradas disponibles las columnas para cada fila. Las selecciones se reflejan en las casillas activadas en la tabla **Columnas de entrada disponibles** .  
+  
+ **Alias de salida**  
+ Escriba un alias para cada columna de salida. El nombre predeterminado es el de la columna de entrada, pero puede elegir cualquier nombre descriptivo único.  
+  
+ **Tipo de orden**  
+ Permite indicar si la ordenación seguirá un orden ascendente o descendente.  
+  
+ **Criterio de ordenación**  
+ Permite indicar el orden en que deben ordenarse las columnas. Esta característica debe establecerse manualmente para cada columna.  
+  
+ **Marcas de comparación**  
+ Para obtener más información sobre las opciones de comparación de cadenas, vea [Comparar datos de cadena](../../../integration-services/data-flow/comparing-string-data.md).  
+  
+ **Quitar filas con valores de ordenación duplicados**  
+ Permite indicar si la transformación copia filas duplicadas en la salida o crea una única entrada para todos los duplicados utilizando las opciones de comparación de cadenas especificadas.  
   
 ## <a name="see-also"></a>Vea también  
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)   

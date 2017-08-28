@@ -4,19 +4,21 @@ description: "En este tema se describe cómo usar la herramienta mssql-conf para
 author: luisbosquez
 ms.author: lbosq
 manager: jhubbard
-ms.date: 06/16/2017
+ms.date: 08/24/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: a79e5c43dd8921ba2f30ca022d071648b26cdfb0
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 894a3756d9bffcaaf3347e0bfae92abb0f846a97
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurar SQL Server en Linux con la herramienta mssql-conf
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 **MSSQL-conf** es un script de configuración que se instala con SQL Server de 2017 RC2 para Red Hat Enterprise Linux, SUSE Linux Enterprise Server y Ubuntu. Puede usar esta utilidad para establecer los parámetros siguientes:
 
@@ -37,13 +39,16 @@ ms.lasthandoff: 08/02/2017
 | [TLS](#tls) | Configurar la seguridad de nivel de transporte. |
 | [TraceFlags](#traceflags) | Establecer el seguimiento que el servicio se va a usar. |
 
-Las secciones siguientes muestran ejemplos de cómo usar mssql-conf para cada uno de estos escenarios.
-
 > [!TIP]
-> Estos ejemplos ejecutar mssql-conf por especifican la ruta de acceso completa: **/opt/mssql/bin/mssql-conf**. Si elige navegar a esa ruta de acceso en su lugar, ejecute mssql-conf en el contexto del directorio actual: **. / conf mssql**.
-
-> [!NOTE]
 > Algunas de estas opciones también pueden configurarse con las variables de entorno. Para obtener más información, consulte [configuración configurar SQL Server con las variables de entorno](sql-server-linux-configure-environment-variables.md).
+
+## <a name="usage-tips"></a>Sugerencias de uso
+
+* Para grupos de disponibilidad AlwaysOn y clústeres de discos compartidos, asegúrese siempre de los mismos cambios de configuración en cada nodo.
+
+* Para el escenario de clúster de disco compartido, no intente reiniciar el **mssql server** servicio para aplicar los cambios. SQL Server se ejecuta como una aplicación. En su lugar, ponga el recurso sin conexión y, a continuación, vuelva a conectarse.
+
+* Estos ejemplos ejecutar mssql-conf por especifican la ruta de acceso completa: **/opt/mssql/bin/mssql-conf**. Si elige navegar a esa ruta de acceso en su lugar, ejecute mssql-conf en el contexto del directorio actual: **. / conf mssql**.
 
 ## <a id="collation"></a>Cambiar la intercalación de SQL Server
 
@@ -190,7 +195,7 @@ La primera captura fase se controla mediante la **coredump.coredumptype** config
     sudo /opt/mssql/bin/mssql-conf set coredump.captureminiandfull <true or false>
     ```
 
-    Valor predeterminado: **true**
+    Valor predeterminado: **false**
 
 1. Especificar el tipo de archivo de volcado de memoria con el **coredump.coredumptype** configuración.
 
@@ -314,11 +319,11 @@ Las siguientes opciones configura TLS para una instancia de SQL Server que se ej
 
 |Opción |Description |
 |--- |--- |
-|**Network.forceencryption** |Si es 1, a continuación, [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] obliga a todas las conexiones que se cifren. De forma predeterminada, esta opción es 0. |
-|**Network.tlscert** |Archivo de la ruta de acceso absoluta para el certificado que [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] utiliza para TLS. Ejemplo: `/etc/ssl/certs/mssql.pem` el archivo de certificado debe ser accesible para la cuenta de mssql. Microsoft recomienda restringir el acceso al archivo mediante `chown mssql:mssql <file>; chmod 400 <file>`. |
-|**Network.tlskey** |Archivo de la ruta de acceso absoluta a la clave privada que [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] utiliza para TLS. Ejemplo: `/etc/ssl/private/mssql.key` el archivo de certificado debe ser accesible para la cuenta de mssql. Microsoft recomienda restringir el acceso al archivo mediante `chown mssql:mssql <file>; chmod 400 <file>`. |
-|**Network.tlsprotocols** |Una lista separada por comas de las TLS protocolos se admiten en SQL Server. [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]siempre intenta negociar el protocolo permitido más fuerte. Si un cliente no es compatible con cualquier protocolo permitido, [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] rechazará el intento de conexión.  Para la compatibilidad, se permiten todos los protocolos admitidos de forma predeterminada (1.2, 1.1, 1.0).  Si los clientes admiten TLS 1.2, Microsoft recomienda que permite solo TLS 1.2. |
-|**Network.tlsciphers** |Especifica los cifrados permitidos por [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] para TLS. Esta cadena debe tener el formato por [formato de lista de cifrado de OpenSSL](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). En general, no es necesario cambiar esta opción. <br /> De forma predeterminada, se permiten los cifrados siguientes: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
+|**Network.forceencryption** |Si es 1, a continuación, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] obliga a todas las conexiones que se cifren. De forma predeterminada, esta opción es 0. |
+|**Network.tlscert** |Archivo de la ruta de acceso absoluta para el certificado que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza para TLS. Ejemplo: `/etc/ssl/certs/mssql.pem` el archivo de certificado debe ser accesible para la cuenta de mssql. Microsoft recomienda restringir el acceso al archivo mediante `chown mssql:mssql <file>; chmod 400 <file>`. |
+|**Network.tlskey** |Archivo de la ruta de acceso absoluta a la clave privada que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza para TLS. Ejemplo: `/etc/ssl/private/mssql.key` el archivo de certificado debe ser accesible para la cuenta de mssql. Microsoft recomienda restringir el acceso al archivo mediante `chown mssql:mssql <file>; chmod 400 <file>`. |
+|**Network.tlsprotocols** |Una lista separada por comas de las TLS protocolos se admiten en SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]siempre intenta negociar el protocolo permitido más fuerte. Si un cliente no es compatible con cualquier protocolo permitido, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rechazará el intento de conexión.  Para la compatibilidad, se permiten todos los protocolos admitidos de forma predeterminada (1.2, 1.1, 1.0).  Si los clientes admiten TLS 1.2, Microsoft recomienda que permite solo TLS 1.2. |
+|**Network.tlsciphers** |Especifica los cifrados permitidos por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para TLS. Esta cadena debe tener el formato por [formato de lista de cifrado de OpenSSL](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). En general, no es necesario cambiar esta opción. <br /> De forma predeterminada, se permiten los cifrados siguientes: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **Network.kerberoskeytabfile** |Ruta de acceso al archivo de tabla de claves de Kerberos |
 
 Para obtener un ejemplo del uso de la configuración de TLS, consulte [cifrar conexiones a SQL Server en Linux](sql-server-linux-encrypted-connections.md).
@@ -351,15 +356,83 @@ Esto **marca de seguimiento** opción habilita o deshabilita el seguimiento para
    sudo systemctl restart mssql-server
    ```
 
+## <a name="remove-a-setting"></a>Quitar una configuración
+
+Para anular cualquier configuración realizada con `mssql-conf set`, llame a **mssql-conf** con el `unset` opción y el nombre de la configuración. Esto borra la configuración, de forma eficaz devolverlo a su valor predeterminado.
+
+1. En el ejemplo siguiente se borran los **network.tcpport** opción.
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf unset network.tcpport
+   ```
+
+1. Reinicie el servicio de SQL Server.
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
 ## <a name="view-current-settings"></a>Ver la configuración actual
 
-Para ver cualquier configuración que ha configurado explícitamente con **mssql-conf**, ejecute el siguiente comando:
+Para ver cualquier configuración, ejecute el siguiente comando para generar el contenido de la **mssql.conf** archivo:
 
 ```bash
 sudo cat /var/opt/mssql/mssql.conf
 ```
 
-Tenga en cuenta que cualquier configuración que no se muestra en este archivo se utiliza sus valores predeterminados.
+Tenga en cuenta que cualquier configuración que no se muestra en este archivo se utiliza sus valores predeterminados. La siguiente sección proporciona un ejemplo de **mssql.conf** archivo.
+
+## <a name="mssqlconf-format"></a>formato de MSSQL.conf
+
+El siguiente **/var/opt/mssql/mssql.conf** archivo proporciona un ejemplo para cada configuración. Puede usar este formato para realizar cambios manualmente para la **mssql.conf** archivo según sea necesario. Si cambia manualmente el archivo, debe reiniciar SQL Server antes de aplicarán los cambios. Para usar el **mssql.conf** archivo con Docker, debe tener Docker [conservar los datos](sql-server-linux-configure-docker.md). En primer lugar, agregue una completa **mssql.conf** de archivos en el directorio de host y, a continuación, ejecutar el contenedor. Hay un ejemplo de esto en [comentarios de los clientes](sql-server-linux-customer-feedback.md).
+
+```ini
+[EULA]
+accepteula = Y
+
+[coredump]
+captureminiandfull = true
+coredumptype = full
+
+[filelocation]
+defaultbackupdir = /var/opt/mssql/data/
+defaultdatadir = /var/opt/mssql/data/
+defaultdumpdir = /var/opt/mssql/data/
+defaultlogdir = /var/opt/mssql/data/
+
+[hadr]
+hadrenabled = 0
+
+[language]
+lcid = 1033
+
+[memory]
+memorylimitmb = 4096
+
+[network]
+forceencryption = 0
+ipaddress = 10.192.0.0
+kerberoskeytabfile = /var/opt/mssql/secrets/mssql.keytab
+tcpport = 1401
+tlscert = /etc/ssl/certs/mssql.pem
+tlsciphers = ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA
+tlskey = /etc/ssl/private/mssql.key
+tlsprotocols = 1.2,1.1,1.0
+
+[sqlagent]
+databasemailprofile = default
+errorlogfile = /var/opt/mssql/log/sqlagentlog.log
+errorlogginglevel = 7
+
+[telemetry]
+customerfeedback = true
+userrequestedlocalauditdirectory = /tmp/audit
+
+[traceflag]
+traceflag0 = 1204
+traceflag1 = 2345
+traceflag = 3456
+```
 
 ## <a name="next-steps"></a>Pasos siguientes
 

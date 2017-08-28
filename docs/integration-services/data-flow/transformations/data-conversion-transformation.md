@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataconversiontrans.f1
+- sql13.dts.designer.dataconversiontransformation.f1
 helpviewer_keywords:
 - converting data types [Integration Services]
 - Data Conversion transformation
@@ -21,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 897651a9257aadeac68a392eeae8b51d0c87de8d
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ad8bb1bcb5ad02be3604ff0899074c4ced10cc96
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="data-conversion-transformation"></a>Conversión de datos, transformación
@@ -49,10 +50,44 @@ ms.lasthandoff: 08/03/2017
  Esta transformación tiene una entrada, una salida y una salida de error.  
   
 ## <a name="related-tasks"></a>Tareas relacionadas  
- Puede establecer propiedades a través del Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación. Para más información sobre cómo usar la transformación Conversión de datos en el Diseñador SSIS, vea [Convertir datos en un tipo de datos diferente mediante la transformación Conversión de datos](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md) y [Editor de transformación Conversión de datos](../../../integration-services/data-flow/transformations/data-conversion-transformation-editor.md). Para más información sobre cómo establecer las propiedades de esta transformación mediante programación, vea [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) y [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+ Puede establecer propiedades a través del Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación. Para obtener información sobre el uso de la transformación de conversión de datos en el Diseñador SSIS, vea [convertir datos a un tipo de datos diferente mediante la transformación de conversión de datos](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md). Para más información sobre cómo establecer las propiedades de esta transformación mediante programación, vea [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) y [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
 ## <a name="related-content"></a>Contenido relacionado  
  Entrada de blog, sobre la [comparación de rendimiento entre las técnicas de conversión de tipos de datos en SSIS 2008](http://go.microsoft.com/fwlink/?LinkId=220823), en blogs.msdn.com.  
+  
+## <a name="data-conversion-transformation-editor"></a>Editor de transformación Conversión de datos
+  Use el cuadro de diálogo **Editor de transformación Conversión de datos** para seleccionar las columnas que desea convertir, seleccione el tipo de datos al que desea convertir la columna y establezca los atributos de conversión.  
+  
+> [!NOTE]  
+>  La propiedad **FastParse** de las columnas de salida de transformación Conversión de datos no está disponible en el **Editor de transformación Conversión de datos**, pero puede establecerse mediante el **Editor avanzado**. Para obtener más información acerca de esta propiedad, vea la sección sobre la transformación Conversión de datos en [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+  
+### <a name="options"></a>Opciones  
+ **Columnas de entrada disponibles**  
+ Seleccione, mediante las casillas, las columnas que desea convertir. Las selecciones agregan columnas de entrada a la tabla que aparece debajo.  
+  
+ **Columna de entrada**  
+ Seleccione las columnas que desea convertir en la lista de columnas de entrada disponibles. Su selección se refleja en las selecciones de las anteriores casillas.  
+  
+ **Alias de salida**  
+ Escriba un alias para cada columna nueva. El valor predeterminado es **Copy of** seguido del nombre de la columna de entrada; no obstante, puede elegir un nombre descriptivo exclusivo.  
+  
+ **Tipo de datos**  
+ Seleccione en la lista un tipo de datos disponible. Para obtener más información, vea [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+  
+ **Longitud**  
+ Establezca la longitud de la columna para los datos de cadena.  
+  
+ **Precisión**  
+ Establezca la precisión para los datos numéricos.  
+  
+ **Escala**  
+ Establezca la escala para los datos numéricos.  
+  
+ **Página de códigos**  
+ Seleccione la página de códigos adecuada para las columnas de tipo DT_STR.  
+  
+ **Configurar la salida de errores**  
+ Especifique cómo controlar los errores de nivel de fila con el cuadro de diálogo [Configurar la salida de errores](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) .  
   
 ## <a name="see-also"></a>Vea también  
  [Análisis rápido](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   

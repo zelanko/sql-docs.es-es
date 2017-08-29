@@ -1,8 +1,10 @@
 ---
 title: Versiones en idioma local en SQL Server | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 08/23/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -14,11 +16,11 @@ caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 067307bd3c91b8ac52c7e30f37aa816ca5ca06d9
+ms.translationtype: HT
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 59bccb3bef14b779a017567211148096d2cb6c35
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="local-language-versions-in-sql-server"></a>Versiones en idioma local en SQL Server
@@ -87,7 +89,7 @@ ms.lasthandoff: 06/22/2017
 4.  Haga clic en **Aplicar** para confirmar el cambio y en **Aceptar** para cerrar la ventana.  
   
 ## <a name="see-also"></a>Vea también  
- [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
- [Instalar SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
+ [Requisitos de hardware y software para instalar SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
+ [Instalar SQL Server](../../database-engine/install-windows/install-sql-server.md)  
   
   

@@ -1,2 +1,2 @@
-  \<*unidad*>:\Archivos de programa\Microsoft SQL Server\130\
+  \<*unidad*>:\Archivos de programa\Microsoft SQL Server\\*nnn*\\
    

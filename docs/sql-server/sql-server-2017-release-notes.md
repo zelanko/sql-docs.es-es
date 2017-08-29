@@ -1,7 +1,7 @@
 ---
 title: "Notas de la versión de SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/16/2017
+ms.date: 08/25/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,18 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 04245fd42b770129ce4074f8a4ae8377b10cf384
-ms.openlocfilehash: 6494051851601ead6fb3d51e1688b8f1320ed5d4
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0288cee4b9dee5fba6b67b21e81193bdbe374a94
 ms.contentlocale: es-es
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>Notas de la versión de SQL Server 2017
 En este tema se describen las limitaciones y los problemas de [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]. Para obtener información relacionada, consulte estos artículos:
 - [Novedades de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 - [Notas de la versión de SQL Server 2017 en Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
-  
-[![Descargar del Centro de evaluación](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  Descargar [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] del **[Centro de evaluación](http://go.microsoft.com/fwlink/?LinkID=829477)**
+
+[![Descargar desde el Centro de evaluación](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Pruébelo:** [descargue la versión más reciente de SQL Server 2017: RC2, agosto de 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
 
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 Release Candidate (RC2: agosto de 2017)
 Para esta versión no hay notas de la versión de SQL Server en Windows. Consulte [Notas de la versión de SQL Server 2017 en Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
@@ -109,11 +109,12 @@ Para esta versión no hay notas de la versión de SQL Server en Windows. Consult
 
    La instancia de SQL Server que hospedaba la réplica secundaria se recupera.
 
-##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) Comunicación con el equipo de ingeniería de SQL Server 
-- [Stack Overflow en español (etiqueta sql server): preguntas técnicas](http://stackoverflow.com/questions/tagged/sql-server)
+##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) Obtener ayuda 
+- [Stack Overflow (etiqueta sql server): preguntas sobre el desarrollo de SQL](http://stackoverflow.com/questions/tagged/sql-server)
 - [Foros de MSDN: preguntas técnicas](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect: informar sobre errores y solicitar características](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit: debate general sobre SQL Server](https://www.reddit.com/r/SQLServer/)
+- [Información y términos de licencia de Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
 
 ## <a name="more-information"></a>Más información
 - [notas de la versión de SQL Server Reporting Services](../reporting-services/reporting-services-release-notes.md).

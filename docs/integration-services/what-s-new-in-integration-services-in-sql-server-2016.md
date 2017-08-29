@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bdb767ed145a95868bb11e5a9fa4facc837d0c07
+ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
+ms.openlocfilehash: 5e1127580ff900077fa3d36abcb339cce57857d2
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>¿Qué &#39; s de Integration Services en SQL Server 2016
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
- En este tema, se describen las características que se han agregado o actualizado en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+ En este tema se describe las características que se han agregado o actualizado en SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
 ## <a name="improvements-grouped-by-category"></a>Mejoras agrupadas por categoría  
   
@@ -156,7 +156,7 @@ ms.lasthandoff: 08/03/2017
 ####  <a name="AlwaysOn"></a> Compatibilidad con Always On en el catálogo de SSIS  
  La característica Grupos de disponibilidad AlwaysOn es una solución de alta disponibilidad y de recuperación ante desastres que proporciona una alternativa empresarial a la creación de reflejo de la base de datos. Un grupo de disponibilidad admite un entorno de conmutación por error para un conjunto discreto de bases de datos de usuario, conocido como bases de datos de disponibilidad, que realizan la conmutación por error conjuntamente. Para obtener más información, vea [Grupos de disponibilidad Always On](https://msdn.microsoft.com/library/hh510230.aspx).  
   
- En [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], SSIS introduce nuevas funcionalidades que le permiten implementar fácilmente en un catálogo de SSIS centralizado (es decir, la base de datos de usuario de SSISDB). Para proporcionar alta disponibilidad de la base de datos SSISDB y su contenido, proyectos, paquetes, registros de ejecución, etc., puede agregar la base de datos SSISDB a un grupo de disponibilidad Always On, como en cualquier otra base de datos de usuario. Cuando se produce una conmutación por error, uno de los nodos secundarios se convierte automáticamente en el nuevo nodo principal.  
+ En SQL Server 2016, SSIS introduce nuevas capacidades que le permiten implementar fácilmente en un catálogo de SSIS centralizado (es decir, la base de datos SSISDB usuario). Para proporcionar alta disponibilidad de la base de datos SSISDB y su contenido, proyectos, paquetes, registros de ejecución, etc., puede agregar la base de datos SSISDB a un grupo de disponibilidad Always On, como en cualquier otra base de datos de usuario. Cuando se produce una conmutación por error, uno de los nodos secundarios se convierte automáticamente en el nuevo nodo principal.  
   
  Para obtener una descripción detallada e instrucciones paso a paso para habilitar Always On para SSISDB, vea [catálogo de SSIS](../integration-services/service/ssis-catalog.md).  
 
@@ -173,7 +173,7 @@ La característica Implementación incremental de paquetes le permite implementa
   
 -   API del modelo de objetos de administración (MOM)  
   
- Para obtener más información, consulte [Integration Services (SSIS) implementar proyectos y paquetes] (../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
+ Para obtener más información, consulte [Integration Services (SSIS) implementar proyectos y paquetes] (.. / integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
 
 ####  <a name="encrypted"></a> Compatibilidad con Always Encrypted en el catálogo de SSIS  
  SSIS ya es compatible con la característica Always Encrypted en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, vea las entradas de blog siguientes.  
@@ -193,7 +193,7 @@ La característica Implementación incremental de paquetes le permite implementa
  El nuevo nivel de registro **RuntimeLineage** del catálogo de SSIS recopila los datos necesarios para realizar un seguimiento de la información de linaje en el flujo de datos. Puede analizar esta información de linaje para asignar la relación de linaje entre las tareas. Los ISV y los desarrolladores pueden generar herramientas de asignación de linaje personalizadas con esta información. 
 
 ####  <a name="CustomLogging"></a> Nuevo nivel de registro personalizado en el catálogo de SSIS  
- Las versiones anteriores del catálogo de SSIS le permiten elegir entre cuatro niveles de registro integrados al ejecutar un paquete: **ninguno, básico, rendimiento o detallado**. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] agrega el nivel de registro **RuntimeLineage** . Además, ahora puede crear varios niveles de registro personalizado y guardarlos en el catálogo de SSIS, y elegir el nivel de registro que va a usar cada vez que ejecute un paquete. Para cada nivel de registro personalizado, seleccione solo las estadísticas y los eventos que quiera capturar. También puede incluir el contexto del evento para ver los valores de las variables, las cadenas de conexión y las propiedades de la tarea. Para obtener más información, vea [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
+ Las versiones anteriores del catálogo de SSIS le permiten elegir entre cuatro niveles de registro integrados al ejecutar un paquete: **ninguno, básico, rendimiento o detallado**. SQL Server 2016 agrega la **RuntimeLineage** nivel de registro. Además, ahora puede crear varios niveles de registro personalizado y guardarlos en el catálogo de SSIS, y elegir el nivel de registro que va a usar cada vez que ejecute un paquete. Para cada nivel de registro personalizado, seleccione solo las estadísticas y los eventos que quiera capturar. También puede incluir el contexto del evento para ver los valores de las variables, las cadenas de conexión y las propiedades de la tarea. Para obtener más información, vea [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
 
 ####  <a name="ErrorColumn"></a> Nombres de columna para errores del flujo de datos  
  Al redirigir las filas en el flujo de datos que contienen errores a una salida de error, el resultado contiene un identificador numérico para la columna en la que se produjo el error, pero no muestra el nombre de la columna. Ahora existen varias formas de buscar o mostrar el nombre de la columna en la que se produjo el error.  
@@ -289,7 +289,7 @@ Se han publicado los adaptadores de destino para cargar datos en PDW con AU5. Pa
 ### <a name="expanded-connectivity-to-the-cloud"></a>Conectividad ampliada en la nube
 
 ####  <a name="AFP2016"></a> Feature Pack de Azure para SSIS publicado para SQL Server 2016  
- Se ha publicado el Feature Pack de Azure para Integration Services para [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. El Feature Pack contiene administradores de conexiones para conectarse a orígenes de datos de Azure y tareas para realizar operaciones comunes de Azure. Para obtener más información, vea [Azure Feature Pack para Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
+ Se ha liberado el Feature Pack de Azure para Integration Services para SQL Server 2016. El Feature Pack contiene administradores de conexiones para conectarse a orígenes de datos de Azure y tareas para realizar operaciones comunes de Azure. Para obtener más información, vea [Azure Feature Pack para Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
 
 #### <a name="dynamics"></a> Compatibilidad con recursos de Microsoft Dynamics Online publicados en el Service Pack 1
 

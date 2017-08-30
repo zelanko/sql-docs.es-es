@@ -23,7 +23,7 @@ ms.lasthandoff: 08/28/2017
 
 Este tema muestra cómo utilizar el **mssql** extensión para Visual Studio Code (código de VS) para desarrollar bases de datos de SQL Server.
 
-Código de Visual Studio es un editor de código gráfica para Linux, Mac OS y Windows que admita extensiones. El [ **mssql** extensión de VS Code] le permite conectarse a SQL Server, consulta con Transact-SQL (T-SQL) y ver los resultados.
+Código de Visual Studio es un editor de código gráfica para Linux, Mac OS y Windows que admita extensiones. El [**mssql** extensión de VS Code] le permite conectarse a SQL Server, consulta con Transact-SQL (T-SQL) y ver los resultados.
 
 ## <a name="install-vs-code"></a>Instalar el código de VS
 1. Si todavía no ha instalado VS Code, [descargar e instalar VS Code] en su equipo.

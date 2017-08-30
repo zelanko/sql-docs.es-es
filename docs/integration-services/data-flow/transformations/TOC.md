@@ -40,7 +40,6 @@
 # [Transformación Recuento de filas](row-count-transformation.md)  
 # [Transformación Muestreo de fila](row-sampling-transformation.md)  
 # [Componente de script](script-component.md)  
-## [Selección del tipo de componente de script](select-script-component-type.md)  
 # [Transformación Dimensión de variación lenta](slowly-changing-dimension-transformation.md)  
 ## [Configuración de salidas con el Asistente para dimensiones de variación lenta](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
 ## [Asistente para dimensiones de variación lenta (Ayuda F1)](slowly-changing-dimension-wizard-f1-help.md)  

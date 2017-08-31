@@ -1,7 +1,7 @@
 ---
 title: Habilitar y configurar FILESTREAM | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/23/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7bee35abc8b2c450a9bd1badb89b18eb31128be8
+ms.translationtype: HT
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 19f5d560766c4bc70bd16fcff4f9f12f23b80146
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="enable-and-configure-filestream"></a>Habilitar y configurar FILESTREAM
@@ -73,7 +73,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Use clústeres NTFS de 64 kB. Los volúmenes comprimidos deben establecerse en clústeres NTFS de 4 kB.  
   
--   Deshabilite la indexación en volúmenes FILESTREAM y establezca **disablelastaccess** . Para establecer **disablelastaccess**, use la utilidad **fsutil** de Windows.  
+-   Deshabilite la indexación en volúmenes FILESTREAM y establezca **disablelastaccess**. Para establecer **disablelastaccess**, use la utilidad **fsutil** de Windows.  
   
 -   Deshabilite el examen del antivirus de volúmenes FILESTREAM cuando no sea necesario. Cuando el análisis del antivirus sea necesario, evite el establecimiento de directivas que eliminen automáticamente los archivos causantes del problema.  
   
@@ -97,3 +97,4 @@ ms.lasthandoff: 06/22/2017
 -   FILESTREAM no admite directamente la aplicación de directivas ni la administración del espacio. Sin embargo, es posible administrar el espacio y aplicar directivas indirectamente mediante la asignación de cada grupo de archivos FILESTREAM a un volumen independiente y usando las características de administración del volumen.  
   
   
+

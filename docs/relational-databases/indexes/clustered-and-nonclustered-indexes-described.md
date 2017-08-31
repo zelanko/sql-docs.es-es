@@ -1,7 +1,7 @@
 ---
 title: "Índices agrupados y no agrupados descritos | Microsoft Docs"
 ms.custom: 
-ms.date: 11/01/2016
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: 860844c00da732d2a40b4572aff98ec06f5d4ddf
+ms.translationtype: HT
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 3ddf0231bfbea2137834ffbf7113654af9d9af6a
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Índices agrupados y no agrupados descritos
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
     -   El puntero de una fila de índice no clúster hacia una fila de datos se denomina localizador de fila. La estructura del localizador de filas depende de si las páginas de datos están almacenadas en un montón o en una tabla agrupada. Si están en un montón, el localizador de filas es un puntero hacia la fila. Si están en una tabla agrupada, el localizador de fila es la clave de índice clúster.  
   
-    -   Puede agregar columnas sin clave al nivel hoja de un índice no clúster con el fin de eludir los límites existentes para las claves de índice, 900 bytes y 16 columnas de clave, así como para ejecutar consultas indizadas y totalmente cubiertas. Para más información, consulte [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
+    -   Puede agregar columnas sin clave al nivel hoja de un índice no agrupado con el fin de eludir los límites existentes para las claves de índice, así como para ejecutar consultas indexadas y totalmente cubiertas. Para más información, consulte [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md). Para obtener más información sobre los límites para las claves de índice, consulte [Especificaciones de capacidad máxima para SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md). 
   
  Tanto los índices clúster como los no clúster pueden ser únicos. Esto significa que dos filas no pueden tener el mismo valor para la clave de índice. De lo contrario, el índice no es único y varias filas pueden compartir el mismo valor de clave. Para obtener más información, vea [Crear vistas indexadas](../../relational-databases/indexes/create-unique-indexes.md).  
   

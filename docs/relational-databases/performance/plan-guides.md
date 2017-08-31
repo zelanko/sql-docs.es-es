@@ -24,11 +24,11 @@ caps.latest.revision: 52
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e3c1733219769d0a2d08996db9a25e3dd08a1e86
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 2e8ae8b72d588904cc7b3d4aaeaba1e783a21b48
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="plan-guides"></a>Guías de plan
@@ -42,12 +42,12 @@ ms.lasthandoff: 06/22/2017
 ## <a name="types-of-plan-guides"></a>Tipos de guías de plan  
  Se pueden crear los siguientes tipos de guías de plan.  
   
- OBJECT [guía de plan]  
+ ### <a name="object-plan-guide"></a>OBJECT [guía de plan]  
  Una guía de plan OBJECT compara las consultas que se ejecutan en el contexto de procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)] , funciones escalares definidas por el usuario, funciones definidas por el usuario con valores de tabla de múltiples instrucciones y desencadenadores DML.  
   
- Suponga que el siguiente procedimiento almacenado, que usa el parámetro `@Country`_`region` , está en una aplicación de base de datos que se implementa con la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
+ Suponga que el siguiente procedimiento almacenado, que usa el parámetro `@Country_region`, está en una aplicación de base de datos que se implementa con la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]:  
   
-```  
+```t-sql  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
 AS  
 BEGIN  
@@ -60,11 +60,11 @@ BEGIN
 END;  
 ```  
   
- Asuma que este procedimiento almacenado ha sido compilado y optimizado para `@Country`_`region = N'AU'` (Australia). Sin embargo, dado hay relativamente pocos pedidos de ventas que se originen en Australia, el rendimiento se reduce cuando la consulta ejecuta usando valores para los parámetros que se corresponden con países con más pedidos de ventas. Dado que el mayor número de pedidos de ventas se origina en Estados Unidos, el rendimiento de un plan de consulta generado para `@Country`\_`region = N'US'` será probablemente mejor para todos los valores posibles del parámetro `@Country`\_`region` .  
+ Asuma que este procedimiento almacenado se ha compilado y optimizado para `@Country_region = N'AU'` (Australia). Sin embargo, dado hay relativamente pocos pedidos de ventas que se originen en Australia, el rendimiento se reduce cuando la consulta ejecuta usando valores para los parámetros que se corresponden con países con más pedidos de ventas. Dado que el mayor número de pedidos de ventas se origina en Estados Unidos, el rendimiento de un plan de consulta generado para `@Country_region = N'US'` será probablemente mejor para todos los valores posibles del parámetro `@Country_region`.  
   
  Puede solucionar este problema modificando el procedimiento almacenado y agregando la sugerencia de consulta `OPTIMIZE FOR` a la consulta. No obstante, puesto que el procedimiento almacenado se encuentra en una aplicación implementada, no puede modificar directamente el código de la aplicación. En su lugar, puede crear la guía de plan siguiente en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-```  
+```t-sql  
 sp_create_plan_guide   
 @name = N'Guide1',  
 @stmt = N'SELECT *FROM Sales.SalesOrderHeader AS h,  
@@ -81,16 +81,16 @@ sp_create_plan_guide
   
  Cuando se ejecute la consulta especificada en la instrucción `sp_create_plan_guide` , se modificará la consulta antes de la optimización para incluir la cláusula `OPTIMIZE FOR (@Country = N''US'')` .  
   
- Guía de plan SQL  
+ ### <a name="sql-plan-guide"></a>Guía de plan SQL  
  Una guía de plan de SQL compara las consultas que se ejecutan en el contexto de instrucciones independientes de [!INCLUDE[tsql](../../includes/tsql-md.md)] y lotes que no forman parte de un objeto de base de datos. Las guías de plan basadas en SQL también se pueden usar para comparar consultas que se parametrizan en un formulario especificado. Las guías de plan de SQL se aplican a las instrucciones y lotes independientes de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Con frecuencia, las aplicaciones envían esas instrucciones usando el procedimiento almacenado del sistema [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) . Considere, por ejemplo, el siguiente lote independiente:  
   
-```  
+```t-sql  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
  Para evitar que se genere un plan de ejecución paralelo en esta consulta, cree la siguiente guía de plan y establezca la sugerencia de consulta `MAXDOP` en `1` en el parámetro `@hints` .  
   
-```  
+```t-sql  
 sp_create_plan_guide   
 @name = N'Guide2',   
 @stmt = N'SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC',  
@@ -105,25 +105,28 @@ sp_create_plan_guide
   
  También se pueden crear guías de plan SQL en consultas que se parametrizan en el mismo formulario cuando se establece el valor de la opción SET de base de datos PARAMETERIZATION en FORCED, o cuando se crea una guía de plan TEMPLATE en la que se especifica que debe parametrizarse una clase de consultas.  
   
- TEMPLATE, guía de plan  
+ ### <a name="template-plan-guide"></a>TEMPLATE, guía de plan  
  Una guía de plan TEMPLATE compara consultas independientes que se parametrizan en un formulario especificado. Estas guías de plan se usan para reemplazar la opción PARAMETERIZATION actual de una base de datos para una clase de consultas por medio de SET.  
   
  Puede crear una guía de plan TEMPLATE en cualquiera de las situaciones siguientes:  
   
--   Se ha establecido el valor de la opción PARAMETRIZATION de la base de datos en FORCED mediante el mandato SET, pero hay consultas que desea compilar según las reglas parametrización simple.  
+-   Se ha establecido el valor de la opción PARAMETERIZATION de la base de datos en FORCED mediante el comando SET, pero hay consultas que quiere compilar según las reglas de la [parametrización SIMPLE](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
   
--   Se ha establecido el valor de la opción PARAMETERIZATION de la base de datos en SIMPLE (el valor predeterminado), pero desea que intente la parametrización forzada en una clase de consultas.  
+-   Se ha establecido el valor de la opción PARAMETERIZATION de la base de datos en SIMPLE (el valor predeterminado), pero quiere probar la [parametrización FORCED](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) en una clase de consultas.  
   
 ## <a name="plan-guide-matching-requirements"></a>Requisitos de coincidencia de la guía de plan  
  Las guías de plan tienen como ámbito la base de datos en la que se crean. Por tanto, solo se pueden buscar las coincidencias con la consulta de las guías de plan que existen en la base de datos actual cuando se ejecuta una consulta. Por ejemplo, si [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] es la base de datos actual y se ejecuta la consulta siguiente:  
   
- `SELECT FirstName, LastName FROM Person.Person;`  
+ ```t-sql
+ SELECT FirstName, LastName FROM Person.Person;
+ ```  
   
  Solo las guías de plan de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] serán aptas para buscar las coincidencias con esta consulta. No obstante, si la base de datos actual es [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] y se ejecutan las instrucciones siguientes:  
   
- `USE DB1;`  
-  
- `SELECT FirstName, LastName FROM Person.Person;`  
+ ```t-sql
+ USE DB1; 
+ SELECT FirstName, LastName FROM Person.Person;
+ ```  
   
  Solo las guías de plan de `DB1` serán aptas para buscar las coincidencias con la consulta, puesto que la consulta se ejecuta en el contexto de `DB1`.  
   

@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: 0052444959911431f68bb40fd5059fb45b0d3412
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 24f0d590630fb04ff45557dfb72616a8e1795f7e
 ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
@@ -37,7 +37,7 @@ El procesamiento de una única instrucción SQL es el método más básico de ej
 
 Una instrucción `SELECT` no es de procedimiento, ya que no expone los pasos exactos que el servidor de la base de datos debe usar para recuperar los datos solicitados. Esto significa que el servidor de la base de datos debe analizar la instrucción para determinar la manera más eficaz de extraer los datos solicitados. Este proceso se denomina optimizar la instrucción `SELECT` . El componente que lo lleva a cabo se denomina Optimizador de consultas. La entrada al Optimizador de consultas consta de la consulta, el esquema de la base de datos (definiciones de tabla e índice) y las estadísticas de base de datos. La salida del Optimizador de consultas es un plan de ejecución de consultas, en ocasiones denominado plan de consulta o simplemente plan. El contenido de un plan de consulta se describe con más detalle posteriormente en este tema.
 
-The inputs and outputs of the Query Optimizer during optimization of a single `SELECT` : ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+En el siguiente diagrama se ilustran las entradas y salidas del Optimizador de consultas durante la optimización de una única instrucción `SELECT`: ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 Una instrucción `SELECT` define únicamente los siguientes elementos:  
 * El formato del conjunto de resultados. Este elemento se especifica principalmente en la lista de selección. Sin embargo, también afectan a la forma final del conjunto de resultados otras cláusulas como `ORDER BY` y `GROUP BY` .
@@ -210,9 +210,9 @@ El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md
 > [!NOTE] 
 > Las sugerencias `READCOMMITTED` y `READCOMMITTEDLOCK` siempre se consideran distintas en este contexto, independientemente del nivel de aislamiento de transacción actual.
  
-Además de los requisitos de las sugerencias de tabla y opciones `SET` options and table hints, these are the same rules that the Query Optimizer uses to determine whether a table index covers a query. No ha de especificarse ningún otro elemento para que la consulta utilice una vista indizada.
+Además de los requisitos de las sugerencias de tabla y opciones `SET`, estas reglas son las mismas que usa el Optimizador de consultas para determinar si un índice de la tabla satisface una consulta. No ha de especificarse ningún otro elemento para que la consulta utilice una vista indizada.
 
-Una consulta no tiene que hacer referencia explícita a una vista indexada en la cláusula `FROM` clause for the Query Optimizer to use the indexed view. Si la consulta contiene referencias a columnas de las tablas base que también se encuentran en la vista indizada y el optimizador de consultas considera que la vista indizada constituye el mecanismo de acceso de menor costo, el optimizador elige la vista indizada, de forma similar a como elige los índices de la tabla base cuando no se hace referencia directa a los mismos en una consulta. El optimizador de consultas puede elegir la vista en caso de contener columnas a las que no se hace referencia en la consulta, siempre y cuando la vista ofrezca la opción de costo más bajo para incluir una o varias de las columnas especificadas en la consulta.
+Una consulta no tiene que hacer referencia explícita a una vista indexada en la cláusula `FROM` del Optimizador de consultas para usar dicha vista. Si la consulta contiene referencias a columnas de las tablas base que también se encuentran en la vista indizada y el optimizador de consultas considera que la vista indizada constituye el mecanismo de acceso de menor costo, el optimizador elige la vista indizada, de forma similar a como elige los índices de la tabla base cuando no se hace referencia directa a los mismos en una consulta. El optimizador de consultas puede elegir la vista en caso de contener columnas a las que no se hace referencia en la consulta, siempre y cuando la vista ofrezca la opción de costo más bajo para incluir una o varias de las columnas especificadas en la consulta.
 
 El optimizador de consultas trata `FROM` como vista estándar cualquier vista indexada a la que se haga referencia en la cláusula. Expande la definición de la vista en la consulta al inicio del proceso de optimización. A continuación se realiza la coincidencia de vista indizada. Puede que se use la vista indexada en el plan de ejecución final seleccionado por el Optimizador de consultas o que, en su lugar, el plan materialice los datos necesarios de la vista mediante el acceso a las tablas base a las que hace referencia la vista. El Optimizador de consultas elige la alternativa de menor costo.
 
@@ -220,9 +220,9 @@ El optimizador de consultas trata `FROM` como vista estándar cualquier vista in
 
 Puede evitar que los índices de la vista se utilicen en una consulta mediante el uso de la sugerencia de consulta `EXPAND VIEWS` o utilizar la sugerencia de tabla `NOEXPAND` para exigir el uso de un índice de una vista indexada especificada en la cláusula `FROM` de una consulta. Sin embargo, debe dejar que sea el optimizador de consultas el que determine dinámicamente los mejores métodos de acceso para cada consulta. Limite la utilización de `EXPAND` y `NOEXPAND` a casos específicos en los que se haya comprobado que el rendimiento mejora significativamente.
 
-La opción `EXPAND VIEWS` option specifies that the Query Optimizer not use any view indexes for the whole query. 
+La opción `EXPAND VIEWS` determina que el Optimizador de consultas no use ninguno de los índices de la vista en toda la consulta. 
 
-Cuando se especifica `NOEXPAND` is specified for a view, the Query Optimizer considers using any indexes defined on the view. Cuando se especifica`NOEXPAND` con la cláusula `INDEX()` clause forces the Query Optimizer to use the specified indexes. `NOEXPAND` solo se puede especificar en una vista indexada, nunca en una vista no indexada.
+Cuando se especifica `NOEXPAND` en una vista, el Optimizador de consultas considera la posibilidad de usar cualquiera de los índices definidos en la vista. Cuando se especifica `NOEXPAND` con la cláusula `INDEX()` opcional, el Optimizador de consultas está obligado a usar los índices especificados. `NOEXPAND` solo se puede especificar en una vista indexada, nunca en una vista no indexada.
 
 Cuando no se especifica `NOEXPAND` ni `EXPAND VIEWS` en una consulta que contiene una vista, ésta se expande para tener acceso a las tablas subyacentes. Si la consulta que compone la vista contiene sugerencias de tabla, éstas se propagan a las tablas subyacentes. (Este proceso se explica con más detalle en Resolución de vistas). Siempre que los conjuntos de sugerencias que existen en las tablas subyacentes sean idénticos entre sí, se puede seleccionar la consulta para que coincida con una vista indizada. La mayoría de las veces, estas sugerencias coinciden entre sí, porque se han heredado directamente de la vista. Sin embargo, si la consulta hace referencia a tablas en lugar de vistas y las sugerencias aplicadas directamente en estas tablas no son idénticas, no se puede seleccionar dicha consulta para que coincida con una vista indizada. Si las sugerencias `INDEX`, `PAGLOCK`, `ROWLOCK`, `TABLOCKX`, `UPDLOCK`o `XLOCK` se aplican a las tablas a las que hace referencia la consulta después de la expansión de la vista, se puede seleccionar la consulta para la coincidencia de vistas indexadas.
 
@@ -468,7 +468,7 @@ WHERE ProductSubcategoryID = 4;
 Cuando se procesan instrucciones SQL complejas, el motor relacional puede tener dificultades para determinar qué expresiones pueden parametrizarse. Para aumentar las posibilidades de que el motor relacional encuentre planes de ejecución existentes no utilizados que coincidan con instrucciones SQL complejas, especifique explícitamente los parámetros con sp_executesql o con marcadores de parámetros. 
 
 > [!NOTE]
-> Cuando los operadores aritméticos +, -, *, / o % se usan para realizar la conversión implícita o explícita de los valores de constante int, smallint, tinyint o bigint en los tipos de datos flotantes, reales, decimales o numéricos, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aplica reglas específicas para calcular el tipo y la precisión de los resultados de expresión. Sin embargo, estas reglas varían en función de si la consulta se parametriza o no. Por lo tanto, expresiones similares utilizadas en consultas pueden, en ciertos casos, producir resultados diferentes.
+> Cuando los operadores aritméticos +, -, \*, / o % se usan para realizar la conversión implícita o explícita de los valores de constante int, smallint, tinyint o bigint en los tipos de datos flotantes, reales, decimales o numéricos, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aplica reglas específicas para calcular el tipo y la precisión de los resultados de expresión. Sin embargo, estas reglas varían en función de si la consulta se parametriza o no. Por lo tanto, expresiones similares utilizadas en consultas pueden, en ciertos casos, producir resultados diferentes.
 
 En el comportamiento predeterminado de parametrización simple, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] parametriza una clase relativamente pequeña de consultas. No obstante, se puede especificar que, con algunas limitaciones, todas las consultas de una base de datos se parametricen al establecer la opción `PARAMETERIZATION` del comando `ALTER DATABASE` en `FORCED`. De este modo, puede que mejore el rendimiento de bases de datos que reciben grandes volúmenes de consultas simultáneas si se reduce la frecuencia de las compilaciones de consultas.
 
@@ -503,7 +503,7 @@ Las siguientes cláusulas de consulta no incluyen parámetros. Tenga en cuenta q
 * El argumento de estilo de una cláusula `CONVERT` .
 * Constantes de tipo entero dentro de una cláusula `IDENTITY` .
 * Constantes especificadas mediante la sintaxis de extensiones ODBC.
-* Expresiones que admiten el doblado de constantes y son argumentos de los operadores +, -, *, / y %. Al considerar la posibilidad de que se pueda elegir la parametrización forzada, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene en cuenta que una expresión admite el doblado de constantes cuando se cumple alguna de las siguientes condiciones:  
+* Expresiones que admiten el doblado de constantes y son argumentos de los operadores +, -, \*, / y % Al considerar la posibilidad de que se pueda elegir la parametrización forzada, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene en cuenta que una expresión admite el doblado de constantes cuando se cumple alguna de las siguientes condiciones:  
   * No aparecen columnas, variables ni subconsultas en la expresión.  
   * La expresión contiene una cláusula `CASE` .  
 * Argumentos para cláusulas de sugerencias de consulta. Estos incluyen el argumento `number_of_rows` de la sugerencia de consulta `FAST` , el argumento `number_of_processors` de la sugerencia de consulta `MAXDOP` y el argumento de número de la sugerencia de consulta `MAXRECURSION` .
@@ -511,7 +511,7 @@ Las siguientes cláusulas de consulta no incluyen parámetros. Tenga en cuenta q
 La parametrización se produce a nivel de instrucciones Transact-SQL individuales. En otras palabras, las instrucciones individuales de un lote incluyen parámetros. Tras la compilación, una consulta con parámetros se ejecuta en el contexto del lote en el que se envió originalmente. Si un plan de ejecución de una consulta se almacena en caché, puede determinar si la consulta incluía parámetros haciendo referencia a la columna sql de la vista de administración dinámica sys.syscacheobjects. Si una consulta incluye parámetros, los nombres y tipos de datos de los parámetros se anteponen al texto del lote enviado en esta columna, como (@1 tinyint).
 
 > [!NOTE]
-> Los nombres de parámetros son arbitrarios. Los usuarios o las aplicaciones no deben basarse en un determinado orden de nombres. Además, los siguientes elementos pueden cambiar de una versión a otra de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y de una actualización de Service Pack a otra: los nombres de parámetros, la selección de literales que incluyen parámetros y el espaciado en el texto con parámetros.
+> Los nombres de parámetros son arbitrarios. Los usuarios o las aplicaciones no deben basarse en un determinado orden de nombres. Además, los elementos siguientes pueden cambiar de una versión a otra de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y de una actualización de Service Pack a otra: los nombres de parámetros, la selección de literales que incluyen parámetros y el espaciado en el texto con parámetros.
 
 #### <a name="data-types-of-parameters"></a>Tipos de datos de parámetros
 

@@ -1,7 +1,7 @@
 ---
 title: "Guardar un plan de ejecución en formato XML | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,11 +20,11 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5e60ae53c74f8f6df450ac6abc5a421f773ce434
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 6fe7ad1d3aedc20aac792831c0d469816979ae7e
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Guardar un plan de ejecución en formato XML
@@ -36,25 +36,26 @@ ms.lasthandoff: 06/22/2017
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , abra un editor de consultas y conéctese a [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  Active SHOWPLAN_XML con la siguiente instrucción:  
+2.  Active [SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md) con la instrucción siguiente:  
   
-    ```  
+    ```t-sql  
     SET SHOWPLAN_XML ON;  
     GO  
     ```  
   
-     Para activar STATISTICS XML, utilice la siguiente instrucción:  
+     Para activar [STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md), use la instrucción siguiente:  
   
-    ```  
+    ```t-sql  
     SET STATISTICS XML ON;  
     GO  
     ```  
   
-     SHOWPLAN_XML genera información del plan de ejecución de la consulta de tiempo de compilación de una consulta, pero no ejecuta la consulta. STATISTICS XML genera información del plan de ejecución de la consulta de tiempo de compilación de una consulta y ejecuta la consulta.  
+     > [!NOTE] 
+     > SHOWPLAN_XML genera información del plan de ejecución de la consulta de tiempo de compilación de una consulta, pero no ejecuta la consulta. Esto también se conoce como el plan de ejecución **estimado**. STATISTICS XML genera información sobre el plan de ejecución de la consulta en tiempo de ejecución de una consulta y la ejecuta. Esto también se conoce como el plan de ejecución **real**.  
   
 3.  Ejecutar una consulta. Ejemplo:  
   
-    ```  
+    ```t-sql  
     USE AdventureWorks2012;  
     GO  
     SET SHOWPLAN_XML ON;  
@@ -75,7 +76,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>Para guardar un plan de ejecución mediante las opciones de SQL Server Management Studio  
   
-1.  Genere un plan de ejecución estimado o uno real mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para obtener más información, vea [Mostrar el plan de ejecución estimado](../../relational-databases/performance/display-the-estimated-execution-plan.md) o [Mostrar un plan de ejecución real](../../relational-databases/performance/display-an-actual-execution-plan.md).  
+1.  Genere un plan de ejecución estimado o uno real mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para obtener más información, consulte [Mostrar el plan de ejecución estimado](../../relational-databases/performance/display-the-estimated-execution-plan.md) y [Mostrar el plan de ejecución real](../../relational-databases/performance/display-an-actual-execution-plan.md).  
   
 2.  En la pestaña **Plan de ejecución** del panel de resultados, haga clic con el botón derecho en el plan de ejecución gráfico y elija **Guardar plan de ejecución como**.  
   
@@ -100,3 +101,4 @@ ms.lasthandoff: 06/22/2017
  [SET STATISTICS XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-xml-transact-sql.md)  
   
   
+

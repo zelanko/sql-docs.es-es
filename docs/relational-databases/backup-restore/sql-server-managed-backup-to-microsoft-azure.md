@@ -13,12 +13,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 529ae718a28d99104d8835ecaf2cdc4eb5fcc63f
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 9061cf182fd1bc245de22ea2bade18b93e231042
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Copia de seguridad administrada de SQL Server en Microsoft Azure
@@ -111,6 +111,10 @@ ms.lasthandoff: 06/22/2017
  Para las bases de datos, si hay un trabajo de copia de seguridad completa de la base de datos en ejecución, [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] espera a que el trabajo actual se complete antes de hacer otra copia de seguridad completa de la misma base de datos. Asimismo, solo una copia de seguridad del registro de transacciones se puede ejecutar en un momento dado. Sin embargo, una copia de seguridad completa y una copia de seguridad del registro de transacciones pueden ejecutarse simultáneamente. Los errores se registran como Eventos extendidos.  
   
  Si se programan más de 10 copias de seguridad completas simultáneas de la base de datos, se emitirá una advertencia a través del canal de depuración de Eventos extendidos. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] mantiene entonces una cola de prioridad para las bases de datos restantes que requieren una copia de seguridad hasta que se programen y completen todas.  
+
+> [!NOTE]
+> Los servidores proxy no admiten copias de seguridad administradas en SQL Server.
+>
   
 ##  <a name="support_limits"></a> Compatibilidad  
  Las siguientes consideraciones y limitaciones de compatibilidad son específicas de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  

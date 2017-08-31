@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cf69aa2c57e86aab11974b5874039ae7f72b9917
-ms.openlocfilehash: 3384d962c3765bf4feb00f957ad56a668f8d92e4
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: dcfa27ad11e3027519398b9424056b52afb1617b
 ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>Resumen de características de PolyBase con versiones
@@ -35,6 +35,7 @@ Resumen de las características de PolyBase disponibles para los servicios y pro
 |Consultar datos de Hadoop con [!INCLUDE[tsql](../../includes/tsql-md.md)]|sí|no|no|sí|
 |Importar datos desde Hadoop|sí|no|no|sí|
 |Exportar datos a Hadoop  |sí|no|no| sí|
+|Consultas, importación y exportación en HDInsight |no|no|no|no
 |Aplicar cálculos de consulta a Hadoop|sí|no|no|sí|  
 |Importar datos desde el almacenamiento de blobs de Azure|sí|no|sí|sí| 
 |Exportar datos al almacenamiento de blobs de Azure|sí|no|sí|sí|  

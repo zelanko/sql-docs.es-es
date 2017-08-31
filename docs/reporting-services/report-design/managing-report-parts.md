@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 310cad57050dba44c5303b78ea33e5b3f42d309c
 ms.contentlocale: es-es
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/09/2017
  Cuando los elementos de informe se publican en una aplicación de creación de informes como el Generador de informes en un servidor de informes en modo integrado de SharePoint, el catálogo del servidor de informes se actualiza también y las búsquedas en la galería reflejan con precisión el elemento de informe, tanto si es nuevo como si se ha actualizado.  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>Elementos de informe que se cargan directamente en una carpeta de SharePoint  
- Si un elemento de informe se carga directamente en una carpeta de documentos de SharePoint (en lugar de publicarse desde una aplicación de creación de informes), el catálogo del servidor de informes no se actualiza. Las búsquedas de la Galería de elementos de informe no encontrarán el elemento de informe que se cargó. Para ayudar a mantener sincronizadas las carpetas de SharePoint y el catálogo del servidor de informes, puede activar la característica de sincronización de archivos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el servidor de SharePoint. Para más información, consulte [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
+ Si un elemento de informe se carga directamente en una carpeta de documentos de SharePoint (en lugar de publicarse desde una aplicación de creación de informes), el catálogo del servidor de informes no se actualiza. Las búsquedas de la Galería de elementos de informe no encontrarán el elemento de informe que se cargó. Para ayudar a mantener sincronizadas las carpetas de SharePoint y el catálogo del servidor de informes, puede activar la característica de sincronización de archivos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el servidor de SharePoint. Para más información, consulte [Activar la característica de sincronización de archivos del servidor de informes en Administración central de SharePoint](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
   
  Los archivos se pueden sincronizar también utilizando las llamadas de algunas de las API de administración de servicios de informe de errores como GetProperties y SetProperties.  
   

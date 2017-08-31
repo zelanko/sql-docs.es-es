@@ -70,4 +70,3 @@ Para empezar este tutorial, veamos [!INCLUDE[ssManStudioFull](../../includes/ssm
 [Conectar con el Explorador de objetos y Servidores registrados](../../tools/sql-server-management-studio/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
 
   
-

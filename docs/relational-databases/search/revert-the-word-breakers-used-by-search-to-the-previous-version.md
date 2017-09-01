@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2549481c3e09e4b052e0eea40c993ccf191f38ba
 ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Revertir los separadores de palabras usados por las búsquedas a la versión anterior
@@ -26,7 +26,7 @@ ms.lasthandoff: 07/31/2017
   
  En este tema no se explican los siguientes idiomas:  
   
--   **Inglés**. Para revertir o restaurar los componentes en inglés, vea [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+-   **Inglés**. Para revertir o restaurar los componentes en inglés, vea [Cambiar el separador de palabras usado para el inglés de Estados Unidos y el del Reino Unido](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 -   **Danés, polaco y turco**. Se han reemplazado los separadores de palabras de terceros para danés, polaco y turco que se incluían en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con componentes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -381,7 +381,7 @@ ms.lasthandoff: 07/31/2017
 |Nombre de archivo actual|MsWb70804.dll|  
   
 ## <a name="see-also"></a>Vea también  
- [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+ [Cambiar el separador de palabras usado para el inglés de Estados Unidos y el del Reino Unido](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [Cambios de comportamiento en la búsqueda de texto completo](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
   

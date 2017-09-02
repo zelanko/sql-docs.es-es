@@ -4,6 +4,7 @@
 # [Tutorial: configuración del escalado horizontal de Integration Services](walkthrough-set-up-integration-services-scale-out.md)
 # [Patrón de escalado horizontal](integration-services-ssis-scale-out-master.md)
 # [Trabajador de escalado horizontal](integration-services-ssis-scale-out-worker.md)
+# [Administrador de escalado horizontal](integration-services-ssis-scale-out-manager.md)
 # [Ejecutar paquetes en el escalado horizontal](run-packages-in-integration-services-ssis-scale-out.md)
 # [Cambiar la cuenta para el registro del escalado horizontal](change-logdb-account.md)
 # [Tratar con certificados en el escalado horizontal](deal-with-certificates-in-ssis-scale-out.md)

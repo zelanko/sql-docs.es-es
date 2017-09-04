@@ -4,19 +4,21 @@ description: "Instalar, actualizar y desinstalar SQL Server en Linux. En este te
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: c5bd1be5cbe08e9454b1640d9dd58584aa54955f
+ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
+ms.openlocfilehash: f746037f695301881ce9a993f3d556db44f44292
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guía de instalación para SQL Server en Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 En este tema se explica cómo instalar, actualizar y desinstalar SQL Server 2017 en Linux. SQL Server de 2017 RC2 es compatible con Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) y Ubuntu. También está disponible como una imagen de Docker, que se puede ejecutar en el motor de Docker en Linux o Docker para Windows y Mac.
 
@@ -57,11 +59,11 @@ Puede instalar a SQL Server en Linux desde la línea de comandos. Para obtener i
 - [Instalar en Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Instalar en SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Instalar en Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Ejecutar en Docker](quickstart-install-connect-ubuntu.md)
+- [Ejecutar en Docker](quickstart-install-connect-docker.md)
 
 ## <a id="upgrade"></a>Actualizar SQL Server
 
-Para actualizar la **mssql server** el paquete en Linux, utilice uno de los siguientes comandos en función de la plataforma:
+Para actualizar la **mssql server** el paquete a la versión más reciente, use uno de los siguientes comandos en función de la plataforma:
 
 | Plataforma | Comandos de actualización de paquete |
 |-----|-----|
@@ -70,6 +72,26 @@ Para actualizar la **mssql server** el paquete en Linux, utilice uno de los sigu
 | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server` |
 
 Descargar el paquete más reciente de estos comandos y reemplace los binarios que se encuentran en `/opt/mssql/`. Las bases de datos generado por el usuario y las bases de datos del sistema no se ven afectados por esta operación.
+
+## <a id="rollback"></a>Revertir SQL Server
+
+Para revertir o degradación de SQL Server a una versión anterior, siga estos pasos:
+
+1. Identifique el número de versión para el paquete de SQL Server que desea cambiar a. Para obtener una lista de números de paquete, consulte el [notas de la versión](sql-server-linux-release-notes.md).
+
+1. Degradar a una versión anterior de SQL Server. En los siguientes comandos, reemplace `<version_number>` con el número de versión de SQL Server ha identificado en el paso uno.
+
+   | Plataforma | Comandos de actualización de paquete |
+   |-----|-----|
+   | RHEL | `sudo yum downgrade mssql-server-<version_number>.x86_64` |
+   | SLES GRANDE | `sudo zypper install --oldpackage mssql-server=<version_number>` |
+   | Ubuntu | `sudo apt-get install mssql-server=<version_number>`<br/>`sudo systemctl start mssql-server` |
+
+> [!NOTE]
+> Solo se admite para degradar a una versión dentro de la misma versión principal, como SQL Server 2017.
+
+> [!IMPORTANT]
+> Degradación solo se admite entre RC2 y RC1 en este momento.
 
 ## <a id="uninstall"></a>Desinstalar SQL Server
 

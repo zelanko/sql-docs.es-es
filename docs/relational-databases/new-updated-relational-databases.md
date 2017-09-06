@@ -1,6 +1,6 @@
 ---
 title: 'Actualizados: documentos de bases de datos relacionales | Microsoft Docs'
-description: "Muestra fragmentos de contenido actualizado de documentación modificada recientemente de bases de datos relacionales."
+description: "Muestra fragmentos del contenido actualizado en la documentación de bases de datos relacionales que ha cambiado recientemente."
 services: na
 documentationcenter: 
 author: MightyPen
@@ -73,9 +73,9 @@ En esta lista compacta se proporcionan vínculos a todos los artículos actualiz
 
 ## <a name="updated-articles-with-excerpts"></a>Artículos actualizados con extractos
 
-En esta sección se muestran los extractos de las actualizaciones que se recopilan de los artículos que han presentado recientemente una gran actualización.
+En esta sección se muestran extractos de actualizaciones recopiladas de artículos que han sufrido una actualización importante recientemente.
 
-Los extractos que se muestran aquí aparecen separados de su contexto semántico correcto. Además, en ocasiones, un extracto se separa de sintaxis de Markdown importante que rodea el artículo real. Por tanto, estos extractos son solo para obtener instrucciones generales. Los extractos solo le permiten saber si le interesa dedicar tiempo a hacer clic en el artículo real para visitarlo.
+Los extractos que se muestran aquí aparecen separados de su contexto semántico correcto. Además, en ocasiones, un extracto se separa de sintaxis de Markdown importante que lo rodea en el artículo real. Por tanto, estos extractos solo sirven de guía general. Los extractos solo le permiten saber si le interesa dedicar tiempo a hacer clic en el artículo real para visitarlo.
 
 Por estas y otras razones, no copie código de estos fragmentos y no tome como verdad exacta ningún extracto de texto. En su lugar, visite el artículo real.
 
@@ -188,7 +188,7 @@ En este caso, la operación de un solo subproceso registraría todo el contenido
 
 
 
-A continuación se muestran algunos de los escenarios comunes de rendimiento detectados después de migrar a la plataforma [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] y cómo resolverlos. Se incluyen escenarios específicos de la migración de [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] (versiones más antiguas a más recientes), así como de plataformas ajenas (como Oracle, DB2, MySQL y Sybase) a [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)].
+A continuación se muestran algunos de los escenarios comunes de rendimiento detectados después de migrar a la plataforma [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] y cómo resolverlos. Se incluyen escenarios específicos de la migración de [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)]\(versiones más antiguas a más recientes), así como de plataformas ajenas (como Oracle, DB2, MySQL y Sybase) a [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)].
 
 **<a name="CEUpgrade"></a> Consultar las regresiones debidas a un cambio en la versión CE**
 

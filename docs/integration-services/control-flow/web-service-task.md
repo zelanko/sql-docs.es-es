@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.webservicetask.f1
+- sql13.dts.designer.webservicestask.general.f1
+- sql13.dts.designer.webservicestask.input.f1
+- sql13.dts.designer.webservicestask.output.f1
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
@@ -19,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: f91aa6e47ee1255c97e8ffd2f91a5fb559a942ca
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: d8ebe6e3486cb13440a66383c518c9d306f2984f
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="web-service-task"></a>Tarea Servicio web
@@ -66,13 +69,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-web-service-task"></a>Configuración de la tarea Servicio web  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
-  
--   [Editor de la tarea Servicio web &#40;página General&#41;](../../integration-services/control-flow/web-service-task-editor-general-page.md)  
-  
--   [Editor de la tarea Servicio web &#40;página Entrada&#41;](../../integration-services/control-flow/web-service-task-editor-input-page.md)  
-  
--   [Editor de la tarea Servicio web &#40;página Salida&#41;](../../integration-services/control-flow/web-service-task-editor-output-page.md)  
+ Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el tema siguiente:  
   
 -   [Página Expresiones](../../integration-services/expressions/expressions-page.md)  
   
@@ -84,6 +81,107 @@ ms.lasthandoff: 08/03/2017
  Para obtener más información sobre cómo establecer estas propiedades mediante programación, haga clic en uno de los temas siguientes:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
+  
+## <a name="web-service-task-editor-general-page"></a>Editor de la tarea Servicio web (página General)
+  Use la página **General** del cuadro de diálogo **Editor de la tarea Servicio web** para especificar un administrador de conexiones de HTTP, especificar la ubicación del archivo de Lenguaje de descripción de servicios web (WSDL) que usa la tarea Servicio web, describir la tarea Servicios web y descargar el archivo WSDL.  
+  
+### <a name="options"></a>Opciones  
+ **HTTPConnection**  
+ Seleccione un administrador de conexiones en la lista o haga clic en \< **nueva conexión...** > para crear una nueva conexión de administrador.  
+  
+> [!IMPORTANT]  
+>  El administrador de conexiones HTTP solo es compatible con la autenticación anónima y la autenticación básica. No es compatible con la autenticación de Windows.  
+  
+ **Temas relacionados**: [Administrador de conexiones HTTP](../../integration-services/connection-manager/http-connection-manager.md), [Editor del administrador de conexiones HTTP &#40;página Servidor&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md).  
+  
+ **WSDLFile**  
+ Escriba la ruta de acceso completa de un archivo WSDL que sea local en el equipo o haga clic en el botón de exploración **(…)** y busque este archivo.  
+  
+ Si ya ha descargado manualmente el archivo WSDL en el equipo, seleccione este archivo. Sin embargo, si el archivo WSDL todavía no se ha descargado, siga estos pasos:  
+  
+-   Cree un archivo vacío que tenga la extensión ".wsdl".  
+  
+-   Seleccione este archivo vacío para la opción **WSDLFile** .  
+  
+-   Establezca el valor de **OverwriteWSDLFile** en **True** para permitir que el archivo vacío se sobrescriba con el archivo WSDL real.  
+  
+-   Haga clic en **Descargar WSDL** para descargar el archivo WSDL real y sobrescribir el archivo vacío.  
+  
+    > [!NOTE]  
+    >  La opción **Descargar WSDL** no se habilita hasta que se proporciona el nombre de un archivo local existente en el cuadro **WSDLFile** .  
+  
+ **OverwriteWSDLFile**  
+ Indica si el archivo WSDL de la tarea Servicio web se puede sobrescribir.  
+  
+ Si piensa descargar el archivo WSDL utilizando el botón **Descargar WSDL** , establezca este valor en **True**.  
+  
+ **Nombre**  
+ Proporcione un nombre único para la tarea Servicio web. Este nombre se utiliza como etiqueta en el icono de tarea.  
+  
+> [!NOTE]  
+>  Los nombres de tarea deben ser únicos en un paquete.  
+  
+ **Description**  
+ Escriba una descripción de la tarea Servicio web.  
+  
+ **Descargar WSDL**  
+ Descarga el archivo WSDL.  
+  
+ Este botón no se habilita hasta que se proporciona el nombre de un archivo local existente en el cuadro **WSDLFile** .  
+  
+## <a name="web-service-task-editor-input-page"></a>Editor de la tarea Servicio web (página Entrada)
+  Use la página **Entrada** del cuadro de diálogo **Editor de la tarea Servicio web** para especificar el servicio web, el método web y los valores que se deben proporcionar como entrada para el método web. Los valores se pueden proporcionar mediante la especificación directa de cadenas o la selección de variables en la columna Valor.  
+  
+### <a name="options"></a>Opciones  
+ **ssNoVersion**  
+ Seleccione en la lista un servicio web para ejecutar el método web.  
+  
+ **Método**  
+ Seleccione en la lista un método web para la tarea que se va a ejecutar.  
+  
+ **Documentación del método web**  
+ Escriba una descripción del método web o haga clic en el botón Examinar **(…)** y escriba una descripción en el cuadro de diálogo **Documentación del método web** .  
+  
+ **Nombre**  
+ Muestra los nombres de las entradas del método web.  
+  
+ **Tipo**  
+ Muestra los tipos de datos de las entradas.  
+  
+> [!NOTE]  
+>  La tarea Servicio web solo admite parámetros de los tipos de datos siguientes: tipos primitivos tales como enteros y cadenas; matrices y secuencias de tipos primitivos, y enumeraciones.  
+  
+ **Variable**  
+ Active las casillas para utilizar variables que proporcionen entradas.  
+  
+ **Value**  
+ Si las casillas de Variable están activadas, seleccione las variables de la lista para proporcionar entradas; en caso contrario, escriba los valores que se usarán en las entradas.  
+  
+## <a name="web-service-task-editor-output-page"></a>Editor de la tarea Servicio web (página Salida)
+  Use la página **Salida** del cuadro de diálogo **Editor de la tarea Servicio web** para indicar dónde desea almacenar el resultado devuelto por el método web.  
+  
+### <a name="static-options"></a>Opciones estáticas  
+ **OutputType**  
+ Seleccione el tipo de almacenamiento que desea usar para almacenar los resultados. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Conexión de archivos**|Almacene los resultados en un archivo. Si selecciona este valor, se mostrará la opción dinámica **Archivo**.|  
+|**Variable**|Almacene los resultados en una variable. Si selecciona este valor, se mostrará la opción dinámica **Variable**.|  
+  
+### <a name="outputtype-dynamic-options"></a>Opciones dinámicas de OutputType  
+  
+#### <a name="outputtype--file-connection"></a>OutputType = Conexión de archivos  
+ **Archivo**  
+ Seleccione un administrador de conexión de archivos en la lista o haga clic en \< **nueva conexión...** > para crear una nueva conexión de administrador.  
+  
+ **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="outputtype--variable"></a>OutputType = Variable  
+ **Variable**  
+ Seleccione una variable en la lista o haga clic en \< **nueva Variable...** > para crear una nueva variable.  
+  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 ## <a name="related-content"></a>Contenido relacionado  
  Vídeo [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=259642)(Cómo llamar a un servicio web usando la tarea Servicio web (vídeo de SQL Server)), en technet.microsoft.com.  

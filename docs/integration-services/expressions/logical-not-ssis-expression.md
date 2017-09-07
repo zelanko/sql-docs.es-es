@@ -1,31 +1,36 @@
 ---
-title: "! (Not l&#243;gico) (expresi&#243;n de SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Not lógico (!)"
-  - "! (Not lógico)"
+title: "! (Not lógico) (Expresión de SSIS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logical Not (!)
+- '! (logical Not)'
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
 caps.latest.revision: 35
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 003e0fcc98a267342aaf7c77bf344cdfdc71880b
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# ! (Not l&#243;gico) (expresi&#243;n de SSIS)
+# <a name="-logical-not-ssis-expression"></a>! (Not lógico) (expresión de SSIS)
   Niega un operando booleano.  
   
 > [!NOTE]  
 >  El operador ! no se puede utilizar con otros operadores. Por ejemplo, los operadores ! y > no se pueden combinar para crear el operador !> .  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -33,14 +38,14 @@ caps.handback.revision: 35
   
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *boolean_expression*  
  Cualquier expresión válida que devuelva un valor booleano. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Tipos de resultado  
+## <a name="result-types"></a>Tipos de resultado  
  DT_BOOL  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  La siguiente tabla muestra el resultado de la operación de publicación.  
   
 |Expresión booleana original|Después de aplicar ! como operador|  
@@ -49,7 +54,7 @@ caps.handback.revision: 35
 |NULL|NULL|  
 |FALSE|TRUE|  
   
-## Ejemplos de expresiones  
+## <a name="expression-examples"></a>Ejemplos de expresiones  
  En este ejemplo se devuelve FALSE si el valor de la columna **Color** es "red".  
   
 ```  
@@ -62,8 +67,8 @@ caps.handback.revision: 35
 !(@MonthNumber != MONTH(GETDATE())  
 ```  
   
-## Vea también  
- [Precedencia y capacidad de asociación de operadores](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>Vea también  
+ [Prioridad y asociatividad](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operadores &#40; Expresión de SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

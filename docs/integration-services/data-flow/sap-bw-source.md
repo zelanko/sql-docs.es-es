@@ -1,22 +1,27 @@
 ---
-title: "Origen de SAP BW | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Origen de SAP BW | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fe41cbbd7a58fe50e6dbfaa2c85b9f5f22cea0b5
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Origen de SAP BW
+# <a name="sap-bw-source"></a>Origen de SAP BW
   El origen de SAP BW es el componente de origen de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Así, el origen de SAP BW extrae datos de un sistema SAP Netweaver BW de la versión 7 y hace que estos datos estén disponibles para el flujo de datos en un paquete de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Este origen tiene una salida y una salida de error.  
@@ -47,15 +52,15 @@ caps.handback.revision: 10
   
     2.  Para **Tipo de activación**, seleccione **Programa de servidor registrado**.  
   
-    3.  Para **Communication Type with Target System** (Tipo de comunicación con sistema de destino), seleccione **Non-Unicode (Inactive MDMP Settings)** (No Unicode (valores inactivos de MDMP)).  
+    3.  Para **Communication Type with Target System**(Tipo de comunicación con sistema de destino), seleccione **Non-Unicode (Inactive MDMP Settings)**(No Unicode (valores inactivos de MDMP)).  
   
     4.  Asignar un identificador de programa adecuado  
   
 2.  Crear un destino de concentrador abierto:  
   
-    1.  Vaya al área de trabajo del administrador (código de transacción RSA1) y, en el panel izquierdo, seleccione **Open Hub Destination** (Destino de concentrador abierto).  
+    1.  Vaya al área de trabajo del administrador (código de transacción RSA1) y, en el panel izquierdo, seleccione **Open Hub Destination**(Destino de concentrador abierto).  
   
-    2.  En el panel central, haga clic con el botón derecho en un elemento InfoArea y, después, seleccione **Create Open Hub Destination** (Crear destino de concentrador abierto).  
+    2.  En el panel central, haga clic con el botón derecho en un elemento InfoArea y, después, seleccione **Create Open Hub Destination**(Crear destino de concentrador abierto).  
   
     3.  Para **Tipo de destino**, seleccione **“Herramienta de terceros”**y, a continuación, especifique el destino RFC que había creado anteriormente.  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 10
   
 3.  Cree un proceso de transferencia de datos (DTP):  
   
-    1.  En el panel central del elemento InfoArea, haga clic con el botón derecho en el destino que creó anteriormente y, después, seleccione **Create data transfer process** (Crear proceso de transferencia de datos).  
+    1.  En el panel central del elemento InfoArea, haga clic con el botón derecho en el destino que creó anteriormente y, después, seleccione **Create data transfer process**(Crear proceso de transferencia de datos).  
   
     2.  Configure, guarde y active el DTP.  
   
@@ -99,11 +104,11 @@ caps.handback.revision: 10
   
 -   En función del método seleccionado para extraer datos, proporcione la información adicional siguiente:  
   
-    -   Para la opción **P - Desencadenar cadena de procesos**, proporcione el nombre de host de puerta de enlace, el nombre del servicio de la puerta de enlace, el identificador de programa para el destino RFC y el nombre de la cadena de procesos.  
+    -   Para la opción **P - Desencadenar cadena de procesos** , proporcione el nombre de host de puerta de enlace, el nombre del servicio de la puerta de enlace, el identificador de programa para el destino RFC y el nombre de la cadena de procesos.  
   
-    -   Para la opción **W - Esperar notificación**, proporcione el nombre de host de puerta de enlace, el nombre del servidor de la puerta de enlace y el identificador de programa para el destino de RFC. Asimismo, puede especificar el tiempo de espera (en segundos). El tiempo de espera es el periodo de tiempo máximo que esperará el origen para recibir la notificación.  
+    -   Para la opción **W - Esperar notificación** , proporcione el nombre de host de puerta de enlace, el nombre del servidor de la puerta de enlace y el identificador de programa para el destino de RFC. Asimismo, puede especificar el tiempo de espera (en segundos). El tiempo de espera es el periodo de tiempo máximo que esperará el origen para recibir la notificación.  
   
-    -   Para la opción **E - Extraer únicamente**, proporcione el identificador de solicitud.  
+    -   Para la opción **E - Extraer únicamente** , proporcione el identificador de solicitud.  
   
 -   Especifique las reglas de conversión de cadenas. (Por ejemplo, convierta todas las cadenas en función de si el sistema SAP Netweaver BW es Unicode o no, o convierta todas las cadenas a **varchar** o **nvarchar**).  
   
@@ -115,16 +120,16 @@ caps.handback.revision: 10
   
  Para obtener instrucciones sobre cómo configurar y utilizar el administrador de conexiones, el origen y el destino de SAP BW, vea las notas del producto, [Usar SQL Server 2008 Integration Services con SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkID=137090). Estas notas del producto también muestran cómo configurar los objetos necesarios en SAP BW.  
   
-### Usar el Diseñador SSIS para configurar el origen  
+### <a name="using-the-ssis-designer-to-configure-the-source"></a>Usar el Diseñador SSIS para configurar el origen  
  Para obtener más información sobre las propiedades del origen de SAP BW que puede establecer en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de origen de SAP BW &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
+-   [Editor de origen de SAP BW &#40; Página Administrador de conexiones &#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
--   [Editor de origen de SAP BW &#40;página Columnas&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
+-   [Editor de origen de SAP BW &#40; Página columnas &#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
   
--   [Editor de origen de SAP BW &#40;página Salida de error&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
+-   [Editor de origen de SAP BW &#40; Página de salida de error &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
   
--   [Editor de origen de SAP BW &#40;página Avanzadas&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
+-   [Editor de origen de SAP BW &#40; Página avanzadas &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
   
  Mientras configura el origen de SAP BW, también puede usar varios cuadros de diálogo para buscar los objetos de SAP Netweaver BW o para obtener una vista previa de los datos de origen. Para obtener más información sobre estos cuadros de diálogo, haga clic en uno de los temas siguientes:  
   
@@ -136,7 +141,7 @@ caps.handback.revision: 10
   
 -   [Vista previa](../../integration-services/data-flow/preview.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Componentes de Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

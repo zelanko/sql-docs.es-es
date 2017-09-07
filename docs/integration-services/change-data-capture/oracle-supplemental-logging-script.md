@@ -1,29 +1,34 @@
 ---
-title: "Script de registro complementario de Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Script de registro complementario de Oracle | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16e3c1b59550236eaa1716d7251e55c0cee6b919
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Script de registro complementario de Oracle
+# <a name="oracle-supplemental-logging-script"></a>Script de registro complementario de Oracle
   Este cuadro de diálogo muestra el script de registro complementario de Oracle.  
   
  Al preparar una instancia CDC para su uso, el diseñador CDC crea un script SQL de Oracle que configura el registro complementario para las tablas que se van a capturar. El script de registro complementario indica a Oracle que cuando se actualiza una tabla determinada, los registros de cambios que escribe en el registro de transacciones deben contener los datos de todas las columnas de interés, no solo de las columnas que han cambiado.  
   
  Dependiendo de las directivas DBA de Oracle de la organización, la ejecución del script de registro complementario puede necesitar su revisión y aprobación por parte de un administrador de bases de datos de Oracle.  
   
-## Opciones  
+## <a name="options"></a>Opciones  
  A continuación se indican las opciones disponibles sobre cómo ejecutar el script.  
   
  **Ejecutar script**  
@@ -35,7 +40,7 @@ caps.handback.revision: 6
  **Copiar**  
  Copia el script en el Portapapeles. Cuando esté listo, puede pegar el script en cualquier ubicación que desee por si un administrador de bases de datos (DBA) de Oracle necesita examinar y ejecutar el script de registro complementario.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Cómo administrar una instancia CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [Administrar una instancia CDC](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
   

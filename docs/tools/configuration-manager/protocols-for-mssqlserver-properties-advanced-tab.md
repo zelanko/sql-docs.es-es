@@ -1,22 +1,27 @@
 ---
-title: "Propiedades de Protocolos de MSSQLSERVER (pesta&#241;a Opciones avanzadas) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Protocolos de propiedades MSSQLSERVER (pestaña avanzada) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0cde3e326704f5c2818952817f480d1164c2ff25
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Propiedades de Protocolos de MSSQLSERVER (pesta&#241;a Opciones avanzadas)
+# Propiedades de Protocolos de MSSQLSERVER (pestaña Opciones avanzadas)
   Utilice la pestaña **Opciones avanzadas** del cuadro de diálogo **Protocolos de las propiedades de MSSQLSERVER** para configurar la **Protección ampliada para la autenticación** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. **Protección ampliada** es una característica de los componentes de red implementada por el sistema operativo. **Protección ampliada** está disponible en Windows 7 y Windows Server 2008 R2, y se incluye en los Service Pack para los sistemas operativos anteriores. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es más seguro cuando las conexiones se realizan con **Protección ampliada**. Algunas ventajas de **Protección ampliada** requieren que se seleccione **Forzar cifrado** en la pestaña **Marcadores** .  
   
 > [!IMPORTANT]  
@@ -37,7 +42,7 @@ caps.handback.revision: 7
 -   Cuando se establece en **Requerido**, solo se aceptan las conexiones de las aplicaciones protegidas en sistemas operativos protegidos. Esta configuración es la más segura de las tres opciones, pero los sistemas operativos que no admitan **Protección ampliada** no podrán conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Se aceptan SPN NTLM**  
- Cuando la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se identifica mediante más de un nombre principal de servicio NTLM (SPN), enumere los SPN aquí como una serie de cadenas separadas por puntos y coma. Por ejemplo, el valor **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** indica que se permiten los clientes que intentan conectarse a los SPN denominados **MSSQLSvc/HOST1.Contoso.com** y **MSSQLSvc/HOST2.Contoso.com**. La variable tiene una longitud máxima de 2048 caracteres.  
+ Cuando la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se identifica mediante más de un nombre principal de servicio NTLM (SPN), enumere los SPN aquí como una serie de cadenas separadas por puntos y coma. Por ejemplo, el valor **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com**indica que se permiten los clientes que intentan conectarse a los SPN denominados **MSSQLSvc/HOST1.Contoso.com** y **MSSQLSvc/HOST2.Contoso.com** . La variable tiene una longitud máxima de 2048 caracteres.  
   
 ## Vea también  
  [Protección ampliada para la autenticación con Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  

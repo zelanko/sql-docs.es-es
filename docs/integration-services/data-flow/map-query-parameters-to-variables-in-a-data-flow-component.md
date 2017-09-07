@@ -1,32 +1,37 @@
 ---
-title: "Asignar par&#225;metros de consulta a variables en un componente de flujo de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "consultas [Integration Services], asignación de parámetros"
-  - "parámetros [Integration Services]"
-  - "asignar parámetros de consulta a variables [Integration Services]"
-  - "variables [Integration Services], asignar parámetros a"
+title: "Asignar parámetros de consulta a Variables en un componente de flujo de datos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [Integration Services], parameter mapping
+- parameters [Integration Services]
+- mapping query parameters to variables [Integration Services]
+- variables [Integration Services], mapping parameters to
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: da9367a56cefbb37244d4a47543b93586e7e8870
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Asignar par&#225;metros de consulta a variables en un componente de flujo de datos
+# <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>Asignar parámetros de consulta a variables en un componente de flujo de datos
   Al configurar el origen de OLE DB para utilizar las consultas parametrizadas, puede asignar los parámetros a las variables.  
   
  El origen de OLE DB utiliza las consultas parametrizadas para filtrar los datos cuando el origen conecta con un origen de datos.  
   
-### Para asignar un parámetro de consulta a una variable  
+### <a name="to-map-a-query-parameter-to-a-variable"></a>Para asignar un parámetro de consulta a una variable  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contiene el paquete que desea.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 34
   
 7.  Haga clic en **Parámetros**.  
   
-8.  En el cuadro de diálogo **Establecer parámetros de consulta**, asigne cada parámetro de la lista **Parámetros** a una variable de la lista **Variables** o cree una variable haciendo clic en **\<Nueva variable>**. Haga clic en **Aceptar**.  
+8.  En el **establecer parámetros de consulta** diálogo cuadro, asigne cada parámetro de la **parámetros** lista a una variable en el **Variables** lista o cree una nueva variable haciendo clic en  **\<nueva variable >**. Haga clic en **Aceptar**.  
   
     > [!NOTE]  
     >  Solo están disponibles para su asignación las variables del sistema y las variables definidas por el usuario que están en el ámbito del paquete, un contenedor principal como un bucle Foreach, o la tarea Flujo de datos que contiene el componente de flujo de datos. La variable debe tener un tipo de datos compatible con la columna en la cláusula WHERE a la que se asigna el parámetro.  
@@ -51,8 +56,8 @@ caps.handback.revision: 34
   
 10. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Origen de OLE DB](../../integration-services/data-flow/ole-db-source.md)   
- [Transformación Búsqueda](../../integration-services/data-flow/transformations/lookup-transformation.md)  
+ [Transformación de búsqueda](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   

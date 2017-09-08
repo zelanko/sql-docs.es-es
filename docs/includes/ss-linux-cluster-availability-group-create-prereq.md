@@ -6,7 +6,7 @@ Antes de crear el grupo de disponibilidad, debe:
 - Instalar SQL Server
 
 >[!NOTE]
->En Linux, debe crear un grupo de disponibilidad antes de agregarlo como un recurso de clúster para que lo administre el clúster. En este documento, se proporciona un ejemplo que crea el grupo de disponibilidad. Para la distribución de instrucciones específicas para crear el clúster y agregar el grupo de disponibilidad como un recurso de clúster, consulte los vínculos en [Pasos siguientes](#next-steps).
+>En Linux, debe crear un grupo de disponibilidad antes de agregarlo como un recurso de clúster para que lo administre el clúster. En este documento, se proporciona un ejemplo que crea el grupo de disponibilidad. Para obtener instrucciones específicas de la distribución para crear el clúster y agregar el grupo de disponibilidad como un recurso de clúster, consulte los vínculos en [Pasos siguientes](#next-steps).
 
 1. **Actualizar el nombre de equipo de cada host**
 

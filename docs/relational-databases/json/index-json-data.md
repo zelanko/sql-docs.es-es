@@ -78,7 +78,7 @@ Este es el plan de ejecución de la consulta de este ejemplo.
   
 En lugar examinar toda la tabla, SQL Server busca un índice en el índice no agrupado e identifica las filas que satisfacen las condiciones especificadas. Después, realiza una búsqueda de claves en la tabla `SalesOrderHeader` para capturar las otras columnas a las que se hace referencia en la consulta (en este ejemplo, `SalesOrderNumber` y `OrderDate`).  
  
-### <a name="optimize-the-index-further-with-included-columns"></a>Optimizar aún más el índice con columnas incluidas
+### <a name="optimize-the-index-further-with-included-columns"></a>Mayor optimización del índice con la inclusión de columnas
 Puede evitar esta búsqueda adicional en la tabla si agrega las columnas necesarias en el índice. Puede agregar estas columnas como columnas incluidas estándar, tal y como se muestra en el ejemplo siguiente, que amplía el ejemplo `CREATE INDEX` anterior.  
   
 ```sql  

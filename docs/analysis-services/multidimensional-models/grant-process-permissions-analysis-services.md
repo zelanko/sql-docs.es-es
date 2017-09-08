@@ -1,27 +1,32 @@
 ---
-title: "Otorgar permisos de procesamiento (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "permisos [Analysis Services], procesar"
-  - "permisos de procesamiento [Analysis Services]"
+title: Conceder permisos de procesamiento (Analysis Services) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Analysis Services], process
+- process permissions [Analysis Services]
 ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7f1542d477a10e6a77e67e24d607b7086da1bb55
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Otorgar permisos de procesamiento (Analysis Services)
+# <a name="grant-process-permissions-analysis-services"></a>Otorgar permisos de procesamiento (Analysis Services)
   Como administrador, puede crear un rol dedicado para las operaciones de procesamiento de Analysis Services, lo cual le permitirá delegar esa tarea en particular a otros usuarios o a aplicaciones destinadas al procesamiento programado desatendido. Los permisos de procesamiento pueden concederse en los niveles de base de datos, cubo, dimensión y estructura de minería de datos. Salvo que esté trabajando en una base de datos tabular o un cubo muy extenso, le recomendamos que otorgue derechos de procesamiento en el nivel de la base de datos, donde se engloben todos los objetos, incluso aquellos que tengan dependencias entre sí.  
   
  Los permisos se otorgan mediante roles que asocian objetos con permisos y cuentas de usuario o grupo de Windows. Recuerde que los permisos son acumulativos. Si un rol otorga permisos para procesar un cubo, y un segundo rol otorga al mismo usuario permiso para procesar una dimensión, los permisos de los dos roles diferentes se combinan para proporcionar al usuario permiso para procesar el cubo y para procesar la dimensión específica en la base de datos.  
@@ -29,9 +34,9 @@ caps.handback.revision: 35
 > [!IMPORTANT]  
 >  Los usuarios cuyo rol solamente disponga de permisos Procesar podrán usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para conectarse a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y procesar objetos. Estas herramientas necesitan el permiso **Read Definition** para tener acceso a los metadatos del objeto. Si no se pueden usar estas herramientas, será preciso usar un script XMLA para ejecutar las operaciones de procesamiento.  
 >   
->  También le recomendamos que otorgue permisos de **Read Definition** con fines de prueba. Los usuarios que dispongan de permisos de **Leer definición** y de **Procesar base de datos** podrán procesar objetos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de forma interactiva. Para obtener más información, vea [Otorgar permisos Leer definición en metadatos de objetos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md).  
+>  También le recomendamos que otorgue permisos de **Read Definition** con fines de prueba. Los usuarios que dispongan de permisos de **Leer definición** y de **Procesar base de datos** podrán procesar objetos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de forma interactiva. Para obtener más información, vea [Otorgar permisos Leer definición en metadatos de objetos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md) .  
   
-## Establecer permisos de procesamiento al nivel de la base de datos  
+## <a name="set-processing-permissions-at-the-database-level"></a>Establecer permisos de procesamiento al nivel de la base de datos  
  En esta sección, se describe cómo habilitar el procesamiento por parte de usuarios que no sean administradores para todos los cubos, las dimensiones, las estructuras de minería de datos y los modelos de minería de datos en la base de datos.  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], abra la carpeta Base de datos y seleccione una base de datos.  
@@ -44,7 +49,7 @@ caps.handback.revision: 35
   
 5.  Haga clic en **Aceptar** para completar la definición del rol.  
   
-## Establecer permisos de procesamiento en objetos individuales  
+## <a name="set-processing-permissions-on-individual-objects"></a>Establecer permisos de procesamiento en objetos individuales  
  Puede establecer permisos de procesamiento en cubos, dimensiones, estructuras o modelos de minería de datos individuales.  
   
  Es posible que el procesamiento no se realice correctamente si excluye objetos que deben procesarse juntos (por ejemplo, si habilita el procesamiento en un cubo, pero no lo hace en sus dimensiones relacionadas). Dado que puede resultar sencillo pasar por alto algunas dependencias de objetos, es esencial que se realicen pruebas meticulosas cuando se establecen permisos de procesamiento en objetos individuales.  
@@ -67,7 +72,7 @@ caps.handback.revision: 35
   
 6.  Haga clic en **Aceptar** para completar la definición del rol.  
   
-## Probar el procesamiento  
+## <a name="test-processing"></a>Probar el procesamiento  
   
 1.  Mantenga pulsada la tecla MAYÚS y haga clic con el botón derecho en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], seleccione **Ejecutar como otro usuario** y conéctese a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con una cuenta de Windows que esté asignada al rol que va a probar.  
   
@@ -75,10 +80,10 @@ caps.handback.revision: 35
   
 3.  Haga clic con el botón derecho en un cubo o una dimensión y seleccione **Procesar**. Elija una opción de procesamiento. Pruebe todas las opciones para todas las combinaciones de objetos. Si se producen errores porque faltan objetos, agregue los objetos al rol.  
   
-## Establecer permisos de procesamiento en una estructura de minería de datos  
+## <a name="set-processing-permissions-on-a-data-mining-structure"></a>Establecer permisos de procesamiento en una estructura de minería de datos  
  Puede crear un rol que otorgue permisos para procesar estructuras de minería de datos. Esto incluye el procesamiento de todos los modelos de minería.  
   
- Los permisos**Obtener detalles** y **Leer definición** que se usan para examinar modelos y estructuras de minería de datos son atómicos y se pueden agregar al mismo rol o separarse en un rol diferente.  
+ Los permisos**Obtener detalles** y **Leer definición** permissions used for browsing a mining model y structure are atomic y can be added to the same role, or separated out into a different role.  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], abra la carpeta Base de datos y seleccione una base de datos.  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 35
   
 5.  Haga clic en **Aceptar** para completar la definición del rol.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Procesar base de datos, tabla o partición &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Procesar un modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Otorgar permisos de base de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   

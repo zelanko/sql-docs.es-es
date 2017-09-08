@@ -1,0 +1,195 @@
+---
+title: Permisos de servidor GRANT (Transact-SQL) | Documentos de Microsoft
+ms.custom: 
+ms.date: 08/10/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- GRANT statement, servers
+- permissions [SQL Server], servers
+- servers [SQL Server], permissions
+- granting permissions [SQL Server], servers
+ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
+caps.latest.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 19c46828634ccd9a2ebced169b32381402c4f224
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="grant-server-permissions-transact-sql"></a>GRANT (permisos de servidor de Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  Concede permisos en un servidor. 
+  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Sintaxis  
+  
+```  
+  
+GRANT permission [ ,...n ]   
+    TO <grantee_principal> [ ,...n ] [ WITH GRANT OPTION ]  
+    [ AS <grantor_principal> ]  
+  
+<grantee_principal> ::= SQL_Server_login   
+    | SQL_Server_login_mapped_to_Windows_login  
+    | SQL_Server_login_mapped_to_Windows_group  
+    | SQL_Server_login_mapped_to_certificate  
+    | SQL_Server_login_mapped_to_asymmetric_key  
+    | server_role  
+  
+<grantor_principal> ::= SQL_Server_login   
+    | SQL_Server_login_mapped_to_Windows_login  
+    | SQL_Server_login_mapped_to_Windows_group  
+    | SQL_Server_login_mapped_to_certificate  
+    | SQL_Server_login_mapped_to_asymmetric_key  
+    | server_role  
+```  
+  
+## <a name="arguments"></a>Argumentos  
+ *permiso*  
+ Especifica un permiso que se puede conceder para un servidor. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
+  
+ PARA \<grantee_principal > especifica la entidad a la que se va a conceder el permiso.  
+  
+ AS \<grantor_principal > especifica la entidad de seguridad de la que la entidad de seguridad para ejecutar esta consulta deriva su derecho a conceder el permiso.  
+  
+ WITH GRANT OPTION  
+ Indica que la entidad de seguridad también podrá conceder el permiso especificado a otras entidades de seguridad.  
+  
+ *SQL_Server_login*  
+ Especifica un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+ *SQL_Server_login_mapped_to_Windows_login*  
+ Especifica un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asignado a un inicio de sesión de Windows.  
+  
+ *SQL_Server_login_mapped_to_Windows_group*  
+ Especifica un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asignado a un grupo de Windows.  
+  
+ *SQL_Server_login_mapped_to_certificate*  
+ Especifica un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asignado a un certificado.  
+  
+ *SQL_Server_login_mapped_to_asymmetric_key*  
+ Especifica un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asignado a una clave asimétrica.  
+  
+ *server_role*  
+ Especifica un rol de servidor definido por el usuario.  
+  
+## <a name="remarks"></a>Comentarios  
+ Los permisos del ámbito del servidor solamente pueden concederse si la base de datos actual es maestra.  
+  
+ Obtener información acerca de los permisos de servidor puede verse en la [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) vista de catálogo e información sobre las entidades de seguridad de servidor pueden verse en la [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) vista de catálogo. Información acerca de la pertenencia de roles de servidor puede ser viewd en el [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) vista de catálogo.  
+  
+ Un servidor ocupa el nivel más alto en la jerarquía de permisos. En la siguiente tabla se muestran los permisos más específicos y limitados que pueden concederse para un servidor.  
+  
+|Permiso de servidor|Implícito en el permiso de servidor|  
+|-----------------------|----------------------------------|  
+|ADMINISTER BULK OPERATIONS|CONTROL SERVER|  
+|ALTER ANY AVAILABILITY GROUP<br /><br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|CONTROL SERVER|  
+|ALTER ANY CONNECTION|CONTROL SERVER|  
+|ALTER ANY CREDENTIAL|CONTROL SERVER|  
+|ALTER ANY DATABASE|CONTROL SERVER|  
+|ALTER ANY ENDPOINT|CONTROL SERVER|  
+|ALTER ANY EVENT NOTIFICATION|CONTROL SERVER|  
+|ALTER ANY EVENT SESSION|CONTROL SERVER|  
+|ALTER ANY LINKED SERVER|CONTROL SERVER|  
+|ALTER ANY LOGIN|CONTROL SERVER|  
+|ALTER ANY SERVER AUDIT|CONTROL SERVER|  
+|ALTER ANY SERVER ROLE<br /><br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|CONTROL SERVER|  
+|ALTER RESOURCES|CONTROL SERVER|  
+|ALTER SERVER STATE|CONTROL SERVER|  
+|ALTER SETTINGS|CONTROL SERVER|  
+|ALTER TRACE|CONTROL SERVER|  
+|AUTHENTICATE SERVER|CONTROL SERVER|  
+|CONNECT ANY DATABASE<br /><br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|CONTROL SERVER|  
+|CONNECT SQL|CONTROL SERVER|  
+|CONTROL SERVER|CONTROL SERVER|  
+|CREATE ANY DATABASE|ALTER ANY DATABASE|  
+|CREATE AVAILABILITY GROUP<br /><br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|ALTER ANY AVAILABILITY GROUP|  
+|CREATE DDL EVENT NOTIFICATION|ALTER ANY EVENT NOTIFICATION|  
+|CREATE ENDPOINT|ALTER ANY ENDPOINT|  
+|CREATE SERVER ROLE<br /><br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|ALTER ANY SERVER ROLE|  
+|CREATE TRACE EVENT NOTIFICATION|ALTER ANY EVENT NOTIFICATION|  
+|EXTERNAL ACCESS ASSEMBLY|CONTROL SERVER|  
+|IMPERSONATE ANY LOGIN<br /><br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|CONTROL SERVER|  
+|SELECT ALL USER SECURABLES<br /><br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|CONTROL SERVER|  
+|SHUTDOWN|CONTROL SERVER|  
+|UNSAFE ASSEMBLY|CONTROL SERVER|  
+|VIEW ANY DATABASE|VIEW ANY DEFINITION|  
+|VIEW ANY DEFINITION|CONTROL SERVER|  
+|VIEW SERVER STATE|ALTER SERVER STATE|  
+  
+## <a name="remarks"></a>Comentarios  
+ Los tres permisos de servidor siguientes se agregaron en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+  
+ **CONECTARSE a cualquier base de datos** permiso  
+ Conceda **CONNECT ANY DATABASE** a un inicio de sesión que debe conectarse a todas las bases de datos que existen actualmente y a todas las bases de datos que puedan crearse en futuro. No concede ningún permiso en ninguna base de datos más allá de conexión. Combinar con **SELECT ALL USER SECURABLES** o **VIEW SERVER STATE** para permitir que un proceso de auditoría ver todos los datos o todos los Estados de base de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+ **SUPLANTAR cualquier inicio de sesión** permiso  
+ Cuando se concede, permite que un proceso de nivel intermedio suplante la cuenta de los clientes que se conecten a él, a medida que se conecta a las bases de datos. Cuando se deniega, se puede impedir que un inicio de sesión con un alto nivel de privilegios suplante a otros inicios de sesión. Por ejemplo, es posible bloquear un inicio de sesión con el permiso **CONTROL SERVER** para impedir que suplante a otros inicios de sesión.  
+  
+ **Seleccione todos los elementos PROTEGIBLES de usuario** permiso  
+ Cuando se concede, un inicio de sesión como un auditor puede ver los datos de todas las bases de datos a las que el usuario puede conectarse. Cuando se deniega, impide el acceso a objetos a menos que estén en el **sys** esquema.  
+  
+## <a name="permissions"></a>Permissions  
+ El otorgante de permisos (o la entidad de seguridad especificada con la opción AS) debe tener asignado el mismo permiso con GRANT OPTION o un permiso superior que implique el permiso que se va a conceder. Los miembros del rol fijo de servidor sysadmin pueden conceder cualquier permiso.  
+  
+## <a name="examples"></a>Ejemplos  
+  
+### <a name="a-granting-a-permission-to-a-login"></a>A. Conceder un permiso a un inicio de sesión  
+ En el siguiente ejemplo se concede el permiso `CONTROL SERVER` al inicio de sesión `TerryEminhizer` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+```  
+USE master;  
+GRANT CONTROL SERVER TO TerryEminhizer;  
+GO  
+```  
+  
+### <a name="b-granting-a-permission-that-has-grant-permission"></a>B. Conceder un permiso que dispone del permiso GRANT  
+ En el siguiente ejemplo se concede `ALTER ANY EVENT NOTIFICATION` al inicio de sesión `JanethEsteves` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el derecho para conceder este permiso a otro inicio de sesión.  
+  
+```  
+USE master;  
+GRANT ALTER ANY EVENT NOTIFICATION TO JanethEsteves WITH GRANT OPTION;  
+GO  
+```  
+  
+### <a name="c-granting-a-permission-to-a-server-role"></a>C. Conceder un permiso a un rol de servidor  
+ En el ejemplo siguiente se crean dos roles de servidor denominados `ITDevAdmin` e `ITDevelopers`. Concede el permiso `ALTER ANY DATABASE` al rol de servidor definido por el usuario `ITDevAdmin` incluida la opción `WITH GRANT` de manera que el rol de servidor `ITDevAdmin` pueda reasignar el permiso `ALTER ANY DATABASE`. A continuación, el ejemplo concede a `ITDevelopers` el permiso para utilizar el permiso `ALTER ANY DATABASE` del rol de servidor `ITDevAdmin`.  
+  
+```  
+USE master;  
+CREATE SERVER ROLE ITDevAdmin ;  
+CREATE SERVER ROLE ITDevelopers ;  
+GRANT ALTER ANY DATABASE TO ITDevAdmin WITH GRANT OPTION ;  
+GRANT ALTER ANY DATABASE TO ITDevelopers AS ITDevAdmin ;  
+GO  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
+ [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
+ [DENEGAR permisos de servidor &#40; Transact-SQL &#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
+ [REVOCAR permisos de servidor &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
+ [Jerarquía de permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+ [Sys.fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
+  
+  
+
+

@@ -1,24 +1,29 @@
 ---
-title: "Columnas de datos de eventos de detecci&#243;n de estado del servidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "detección de estado del servidor, categoría de eventos"
+title: "Columnas de datos de eventos de estado del servidor de detección | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Discover Server State event category
 ms.assetid: fbacb187-a4d1-4aa4-be3b-3ddd175f9e19
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c71c32614ee4be7fdbe198530d5ce228452d2276
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Columnas de datos de eventos de detecci&#243;n de estado del servidor
+# <a name="discover-server-state-events-data-columns"></a>Columnas de datos de eventos de detección de estado del servidor
   La categoría de eventos Detección de estado del servidor tiene las clases de eventos siguientes:  
   
 |**Identificador del evento**|**Nombre del evento**|**Descripción del evento**|  
@@ -29,7 +34,7 @@ caps.handback.revision: 32
   
  En las siguientes tablas se muestran las columnas de datos de cada una de estas clases de eventos.  
   
-## Columnas de datos de la clase Server State Discover Begin  
+## <a name="server-state-discover-begin-classdata-columns"></a>Columnas de datos de la clase Server State Discover Begin  
   
 |||||  
 |-|-|-|-|  
@@ -50,7 +55,7 @@ caps.handback.revision: 32
 |ServerName|43|8|Contiene el nombre de la instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la que se ha producido el evento de detección de estado del servidor.|  
 |RequestProperties|45|9|Contiene las propiedades de la solicitud de XMLA actual.|  
   
-## Columnas de datos de la clase Server State Discover Data  
+## <a name="server-state-discover-data-classdata-columns"></a>Columnas de datos de la clase Server State Discover Data  
   
 |||||  
 |-|-|-|-|  
@@ -65,7 +70,7 @@ caps.handback.revision: 32
 |TextData|42|9|Contiene los datos de texto asociados a la respuesta del servidor con respecto a la solicitud de detección.|  
 |ServerName|43|8|Contiene el nombre de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la que se ha producido el evento de detección de estado del servidor.|  
   
-## Columnas de datos de la clase Server State Discover End  
+## <a name="server-state-discover-end-classdata-columns"></a>Columnas de datos de la clase Server State Discover End  
   
 |||||  
 |-|-|-|-|  
@@ -88,7 +93,7 @@ caps.handback.revision: 32
 |TextData|42|9|Contiene los datos de texto asociados a la respuesta del servidor con respecto a la solicitud de detección.|  
 |ServerName|43|8|Contiene el nombre de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la que se ha producido el evento de detección de estado del servidor.|  
   
-## Vea también  
- [Detección de estado del servidor (categoría de eventos)](../../analysis-services/trace-events/discover-server-state-event-category.md)  
+## <a name="see-also"></a>Vea también  
+ [Discover Server State Event Category](../../analysis-services/trace-events/discover-server-state-event-category.md)  
   
   

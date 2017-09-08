@@ -1,55 +1,60 @@
 ---
-title: "Propiedades generales | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "IdleConnectionTimeout, propiedad"
-  - "InstanceVisible, propiedad"
-  - "TempDir, propiedad"
-  - "AdminTimeout, propiedad"
-  - "MinIdleSessionTimeout, propiedad"
-  - "MaxIdleSessionTimeout, propiedad"
-  - "IdleOrphanSessionTimeout, propiedad"
-  - "BackupDir, propiedad"
-  - "CommitTimeout, propiedad"
-  - "ExternalCommandTimeout, propiedad"
-  - "Enabled, propiedad"
-  - "ForceCommitTimeout, propiedad"
-  - "Port, propiedad"
-  - "CoordinatorShutdownMode, propiedad"
-  - "ServerTimeout, propiedad"
-  - "AllowedBrowsingFolders, propiedad"
-  - "CoordinatorCancelCount, propiedad"
-  - "DataDir, propiedad"
-  - "CoordinatorQueryMaxThreads, propiedad"
-  - "CoordinatorExecutionMode, propiedad"
-  - "ExternalConnectionTimeout, propiedad"
-  - "CollationName, propiedad"
-  - "EnableFast1033Locale, propiedad"
-  - "CoordinatorBuildMaxThreads, propiedad"
-  - "Language, propiedad"
-  - "StatisticsStoreSize, propiedad"
-  - "RepositoryConnectionString, propiedad"
+title: Propiedades generales | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- IdleConnectionTimeout property
+- InstanceVisible property
+- TempDir property
+- AdminTimeout property
+- MinIdleSessionTimeout property
+- MaxIdleSessionTimeout property
+- IdleOrphanSessionTimeout property
+- BackupDir property
+- CommitTimeout property
+- ExternalCommandTimeout property
+- Enabled property
+- ForceCommitTimeout property
+- Port property
+- CoordinatorShutdownMode property
+- ServerTimeout property
+- AllowedBrowsingFolders property
+- CoordinatorCancelCount property
+- DataDir property
+- CoordinatorQueryMaxThreads property
+- CoordinatorExecutionMode property
+- ExternalConnectionTimeout property
+- CollationName property
+- EnableFast1033Locale property
+- CoordinatorBuildMaxThreads property
+- Language property
+- StatisticsStoreSize property
+- RepositoryConnectionString property
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 007ace0dcec576b4a15909d470a701f442221788
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Propiedades generales
+# <a name="general-properties"></a>Propiedades generales
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor descritas en las siguientes tablas. En este tema se documentan las propiedades de servidor en el archivo msmdsrv.ini que no se incluyen de otro modo en una sección concreta, como Seguridad, Red o ThreadPool. Para más información sobre otras propiedades de servidor y cómo establecerlas, vea [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Se aplica a:** modo de servidor multidimensional y tabular, a menos que se especifique lo contrario  
   
-## Categoría no específica  
+## <a name="non-specific-category"></a>Categoría no específica  
  **AdminTimeout**  
  Propiedad de entero de 32 bits con signo que define el tiempo de espera del administrador, en segundos. Se trata de una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -73,15 +78,11 @@ caps.handback.revision: 29
  Propiedad de entero de 32 bits con signo que define el máximo de subprocesos asignados para generar índices de partición. Aumente este valor para acelerar la indización de particiones, a costa de usar memoria. Para obtener más información acerca de esta propiedad, vea la [Guía de operaciones de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
  **CoordinatorCancelCount**  
- Una propiedad de entero de 32 bits con signo que define la frecuencia con la que el servidor debería comprobar si se ha producido un evento Cancel (según el recuento interno de iteraciones). Disminuya este número para comprobar Cancel más frecuentemente, a expensas del rendimiento general.  
-  
- **CoordinatorCancelCount** se omite en modo de servidor tabular.  
+ Una propiedad de entero de 32 bits con signo que define la frecuencia con la que el servidor debería comprobar si se ha producido un evento Cancel (según el recuento interno de iteraciones). Disminuya este número para comprobar Cancel más frecuentemente, a expensas del rendimiento general. Esta propiedad se omite en modo de servidor tabular.  
   
  **CoordinatorExecutionMode**  
  Una propiedad de entero de 32 bits con signo que define el máximo de operaciones paralelas que intentará realizar el servidor, incluidas las operaciones de consulta y procesamiento. Cero (0) indica que el servidor decidirá, según un algoritmo interno. Un número positivo indica el máximo de operaciones en total. Un número negativo, con el signo invertido, indica el máximo de operaciones por procesador.  
-  
- **CoordinatorExecutionMode** se omite en modo de servidor tabular.  
-  
+
  El valor predeterminado para esta propiedad es -4, que indica que el servidor está limitado a 4 operaciones paralelas por procesador. Para obtener más información acerca de esta propiedad, vea la [Guía de operaciones de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
  **CoordinatorQueryMaxThreads**  
@@ -168,14 +169,14 @@ caps.handback.revision: 29
  **TempDir**  
  Propiedad de cadena que especifica la ubicación de almacenamiento de los archivos temporales utilizados durante las operaciones de procesamiento y restauración, entre otras. El valor predeterminado de esta propiedad viene determinado por la configuración. Si no se especifica, el valor predeterminado es el directorio Data.  
   
-## Categoría RequestPrioritization  
+## <a name="requestprioritization-category"></a>Categoría RequestPrioritization  
  **Habilitado**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **StatisticsStoreSize**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

@@ -1,26 +1,31 @@
 ---
-title: "Editar una conexi&#243;n de origen de datos existente (SSAS tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.selexistconn.f1"
+title: "Editar una conexión de origen de datos existente (SSAS Tabular) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.selexistconn.f1
 ms.assetid: 97e63f18-a01d-4c91-a411-e7e6d40a0647
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 67cac388bba3160fe5714a2c21f5741eafd6b32c
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Editar una conexi&#243;n de origen de datos existente (SSAS tabular)
+# <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>Editar una conexión de origen de datos existente (SSAS tabular)
   Este tema describe cómo editar las propiedades de una conexión de origen de datos existente en un modelo tabular.  
   
  Después de crear una conexión a un origen de datos externo, puede modificar esa conexión posteriormente de estas maneras:  
@@ -31,10 +36,10 @@ caps.handback.revision: 13
   
 -   Puede cambiar las tablas, vistas o columnas que obtiene del origen de datos externo.  
   
-## Modificar una conexión  
+## <a name="modify-a-connection"></a>Modificar una conexión  
  Este procedimiento describe cómo modificar una conexión de origen de datos de base de datos. Algunas opciones para trabajar con orígenes de datos difieren según el tipo de origen de datos; sin embargo, debería ser posible identificar fácilmente las diferencias.  
   
-#### Para cambiar el origen de datos externo utilizado por una conexión actual  
+#### <a name="to-change-the-external-data-source-used-by-a-current-connection"></a>Para cambiar el origen de datos externo utilizado por una conexión actual  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga clic en el menú **Modelo** y, a continuación, en **Conexiones existentes**.  
   
@@ -53,10 +58,10 @@ caps.handback.revision: 13
     > [!NOTE]  
     >  Si el nuevo origen de datos contiene alguna tabla adicional que no se encontraba en el origen de datos original, debe volver a abrir la conexión cambiada y agregar las tablas.  
   
-## Editar las asignaciones de columna y de tabla (enlaces)  
+## <a name="edit-table-and-column-mappings-bindings"></a>Editar las asignaciones de columna y de tabla (enlaces)  
  Este procedimiento describe cómo editar las asignaciones una vez ha cambiado un origen de datos.  
   
-#### Para editar la asignación de columnas cuando se cambia un origen de datos  
+#### <a name="to-edit-column-mappings-when-a-data-source-changes"></a>Para editar la asignación de columnas cuando se cambia un origen de datos  
   
 1.  Seleccione una tabla en el diseñador de modelos.  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 13
   
      Cuando guarde el conjunto actual de propiedades de la tabla, es posible que aparezca un mensaje indicando que debe procesar las tablas. Haga clic en **Procesar** para cargar los datos actualizados en el modelo.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Procesar datos &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)   
  [Orígenes de datos compatibles &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   

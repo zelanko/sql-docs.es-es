@@ -14,14 +14,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.sourcegitcommit: ef40e08f051397ed158d06cb4cc8de71d95f6fa2
 ms.openlocfilehash: dfe0d48b613c7c4d589fb8bc5f9a5a45be6ba019
 ms.contentlocale: es-es
 ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-2012-sp3-release-notes"></a>Notas de la versión de SQL Server 2012 SP3
-En las notas de la versión, se describen los problemas que debe conocer antes de instalar SQL Server 2012 Service Pack 3 o para solucionar los problemas que le surjan. Las notas de la versión solo están disponibles en Internet, no se incluyen en el disco de instalación. Se actualizan periódicamente, conforme se van detectando nuevos problemas. Para obtener una lista de mejoras y correcciones, consulte [Información de la versión de SQL Server 2012 Service Pack 3](http://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information) para obtener más información.  
+En las notas de la versión, se describen los problemas que debe conocer antes de instalar SQL Server 2012 Service Pack 3 o para solucionar los problemas que le surjan. Las notas de la versión solo están disponibles en Internet, no se incluyen en el disco de instalación. Se actualizan periódicamente, conforme se van detectando nuevos problemas. Consulte la lista de mejoras y correcciones en [Información de la versión de SQL Server 2012 Service Pack 3](http://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information) para más detalles.  
   
 ## <a name="choose-the-correct-file-to-download-and-install"></a>Elegir el archivo correcto para su descarga e instalación  
 Use la tabla siguiente para determinar la ubicación y el nombre del archivo que debe descargar en función de la versión que tenga instalada actualmente. Las páginas de descarga contienen los requisitos del sistema e instrucciones básicas para la instalación.  

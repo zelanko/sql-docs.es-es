@@ -66,9 +66,9 @@ En esta lista compacta se proporcionan vínculos a todos los artículos actualiz
 
 ## <a name="updated-articles-with-excerpts"></a>Artículos actualizados con extractos
 
-En esta sección se muestran los extractos de las actualizaciones que se recopilan de los artículos que han presentado recientemente una gran actualización.
+En esta sección se muestran extractos de actualizaciones recopiladas de artículos que han sufrido una actualización importante recientemente.
 
-Los extractos que se muestran aquí aparecen separados de su contexto semántico correcto. Además, en ocasiones, un extracto se separa de sintaxis de Markdown importante que rodea el artículo real. Por tanto, estos extractos son solo para obtener instrucciones generales. Los extractos solo le permiten saber si le interesa dedicar tiempo a hacer clic en el artículo real para visitarlo.
+Los extractos que se muestran aquí aparecen separados de su contexto semántico correcto. Además, en ocasiones, un extracto se separa de sintaxis de Markdown importante que lo rodea en el artículo real. Por tanto, estos extractos solo sirven de guía general. Los extractos solo le permiten saber si le interesa dedicar tiempo a hacer clic en el artículo real para visitarlo.
 
 Por estas y otras razones, no copie código de estos fragmentos y no tome como verdad exacta ningún extracto de texto. En su lugar, visite el artículo real.
 

@@ -27,7 +27,7 @@ El 25 de mayo de 2018 entrará en vigor una ley de privacidad europea que establ
 
 Los clientes de Microsoft SQL que están sujetos al RGPD (ya sea al administrar bases de datos basadas en la nube, locales o ambas) deben asegurarse de que los datos obtenidos en sus sistemas de bases de datos se traten y protejan adecuadamente de acuerdo con los principios del RGPD. Esto significa que muchos clientes tendrán que revisar o modificar sus procedimientos de control de datos y administración de bases de datos. Sobre todo, tendrán que centrarse en la seguridad del procesamiento de datos tal y como se estipula en el RGPD.
 
-Las tecnologías basadas en Microsoft SQL ofrecen muchas capacidades de seguridad integradas que pueden ayudar a reducir los riesgos en los datos y mejorar la protección y la capacidad de administración de los datos en el nivel de base de datos y más allá. En este documento se examinan estas capacidades y se comparten algunos de los enfoques de Microsoft en los que se usa Microsoft SQL para lograr los objetivos de privacidad de datos del RGPD.
+Las tecnologías basadas en Microsoft SQL ofrecen muchas funcionalidades de seguridad integradas que pueden ayudar a reducir los riesgos en los datos y mejorar la protección y la funcionalidades de administración de los datos en el nivel de base de datos y más allá. En este documento se examinan estas funcionalidades y se comparten algunos de los enfoques de Microsoft en los que se usa Microsoft SQL para lograr los objetivos de privacidad de datos del RGPD.
    
   
 **Autor:** Ronit Reger

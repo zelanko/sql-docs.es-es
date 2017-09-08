@@ -1,47 +1,52 @@
 ---
-title: "Otorgar permisos para un objeto de origen de datos (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.roledesignerdialog.datasources.f1"
-helpviewer_keywords: 
-  - "permisos de lectura/escritura"
-  - "derechos de acceso de usuario [Analysis Services], orígenes de datos"
-  - "seguridad [Analysis Services], orígenes de datos"
-  - "cadenas de conexión [Analysis Services]"
-  - "orígenes de datos [Analysis Services], seguridad"
+title: Conceder permisos en un objeto de origen de datos (Analysis Services) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.roledesignerdialog.datasources.f1
+helpviewer_keywords:
+- read/write permissions
+- user access rights [Analysis Services], data sources
+- security [Analysis Services], data sources
+- connection strings [Analysis Services]
+- data sources [Analysis Services], security
 ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 38
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3e64c0b5496352e1336046c4066de1f0cf625462
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Otorgar permisos para un objeto de origen de datos (Analysis Services)
-  Normalmente, la mayoría de los usuarios de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no necesitan acceso a los orígenes de datos subyacentes de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Los usuarios normalmente solo consultan los datos en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . No obstante, en el contexto de minería de datos, como en el de realizar predicciones basadas en un modelo de minería de datos, un usuario tiene que combinar los datos obtenidos de un modelo de minería de datos con los datos proporcionados por el usuario. Para conectar con el origen de datos que contiene los datos proporcionados por el usuario, el usuario emplea una consulta de Extensiones de minería de datos (DMX) que contiene la cláusula [OPENQUERY &#40;DMX&#41;](../Topic/OPENQUERY%20\(DMX\).md) y [OPENROWSET &#40;DMX&#41;](../Topic/OPENROWSET%20\(DMX\).md).  
+# <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>Otorgar permisos para un objeto de origen de datos (Analysis Services)
+  Normalmente, la mayoría de los usuarios de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no necesitan acceso a los orígenes de datos subyacentes de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Los usuarios normalmente solo consultan los datos en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . No obstante, en el contexto de minería de datos, como en el de realizar predicciones basadas en un modelo de minería de datos, un usuario tiene que combinar los datos obtenidos de un modelo de minería de datos con los datos proporcionados por el usuario. Para conectar con el origen de datos que contiene los datos proporcionados por el usuario, el usuario emplea una consulta de Extensiones de minería de datos (DMX) que contiene la cláusula [OPENQUERY &#40;DMX&#41;](../../dmx/source-data-query-openquery.md) y [OPENROWSET &#40;DMX&#41;](../../dmx/source-data-query-openrowset.md).  
   
  Para ejecutar una consulta DMX que conecte con un origen de datos, el usuario debe tener acceso al objeto de origen de datos en la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . De forma predeterminada, solamente los administradores de servidor y de base de datos tienen acceso a los objetos de origen de datos. Es decir, un usuario no puede tener acceso a un objeto de origen de datos salvo que un administrador le conceda permisos.  
   
 > [!IMPORTANT]  
 >  Por razones de seguridad, está deshabilitado el envío de consultas DMX mediante una cadena de conexión abierta en la cláusula OPENROWSET.  
   
-## Establecer permisos de Lectura a un origen de datos  
+## <a name="set-read-permissions-to-a-data-source"></a>Establecer permisos de Lectura a un origen de datos  
  A un rol de base de datos se le pueden conceder permisos de lectura o ningún permiso de acceso a un objeto de origen de datos.  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expanda **Roles** para la base de datos correspondiente en el Explorador de objetos y, después, haga clic en un rol de base de datos (o cree un rol de base de datos).  
   
 2.  En el panel **Acceso del origen de datos** , busque el objeto de origen de datos en la lista **Origen de datos** y, después, seleccione **Lectura** en la lista **Acceso** para el origen de datos. Si esta opción no está disponible, compruebe el panel **General** para ver si se ha seleccionado Control total. Si Control total ya está proporcionando el permiso, no podrá invalidar los permisos en el origen de datos.  
   
-## Trabajar con la cadena de conexión utilizada por un objeto de origen de datos  
+## <a name="working-with-the-connection-string-used-by-a-data-source-object"></a>Trabajar con la cadena de conexión utilizada por un objeto de origen de datos  
  El objeto de origen de datos contiene la cadena de conexión que se utiliza para conectar con el origen de datos subyacente. Esta cadena de conexión puede especificar uno de los siguientes:  
   
 -   **Un nombre de usuario y una contraseña**  
@@ -54,11 +59,11 @@ caps.handback.revision: 38
   
      Si el cliente no permite suplantar (mediante la propiedad Impersonation Level en OLE DB y otros componentes cliente), [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] intentará establecer una conexión anónima con el origen de datos subyacente. Las conexiones anónimas a orígenes de datos remotos no suelen establecerse correctamente, ya que la mayoría de los orígenes de datos no aceptan conexiones anónimas.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Orígenes de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
- [Propiedades de cadena de conexión &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)   
+ [Propiedades de la cadena de conexión &#40; Analysis Services &#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)   
  [Metodologías de autenticación admitidas por Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Conceder acceso personalizado a datos de dimensión &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Conceder acceso personalizado a la dimensión de datos &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
  [Otorgar permisos para cubos o modelos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
  [Otorgar acceso personalizado a los datos de las celdas &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   

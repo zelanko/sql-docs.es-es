@@ -99,7 +99,7 @@ Para más información, consulte [Disk Space Requirements for Index DDL Operatio
 >
 
 Al realizar la recompilación de índices en línea reanudables, se aplican las siguientes directrices:
--   Administración, planificación y ampliación de las ventanas de mantenimiento de índice. Puede pausar y reiniciar una operación de recompilación de índice varias veces para que se ajuste a los períodos de mantenimiento.
+-   Administración, planeamiento y ampliación de los períodos de mantenimiento del índice. Puede pausar y reiniciar una operación de recompilación de índice varias veces para que se ajuste a los períodos de mantenimiento.
 - Recuperación de errores de recompilación de índice (por ejemplo, las conmutaciones por error de base de datos o quedarse sin espacio en disco).
 - Cuando una operación de índice está en pausa, tanto el índice original como uno recién creado requieren espacio en disco y deben actualizarse durante las operaciones de DML.
 
@@ -112,7 +112,7 @@ Al realizar la recompilación de índices en línea reanudables, se aplican las 
 
 Por lo general, no hay ninguna diferencia de rendimiento entre la recompilación de índices en línea reanudables y no reanudables. Al actualizar un índice reanudable mientras una operación de regeneración de índice está en pausa:
 - Para las cargas de trabajo principalmente de solo lectura, el impacto de rendimiento es insignificante. 
-- Para las cargas de trabajo con muchas actualizaciones, puede experimentar una reducción del rendimiento (nuestras pruebas muestran una menor al 10 %).
+- Para las cargas de trabajo con muchas actualizaciones, puede experimentar una reducción del rendimiento (nuestras pruebas muestran una inferior al 10 %).
 
 Por lo general, no hay ninguna diferencia en la calidad de desfragmentación entre la recompilación de índices en línea reanudables y no reanudables.
  

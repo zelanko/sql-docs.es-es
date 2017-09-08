@@ -1,27 +1,32 @@
 ---
-title: "Proyectos de modelos tabulares (SSAS tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Proyectos de modelos tabulares (SSAS Tabular) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 15358811-22a6-43b1-b1a7-9c974e8367b9
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c351e2be7d1faf77542b68079b4f413e554e54f1
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Proyectos de modelos tabulares (SSAS tabular)
+# <a name="tabular-model-projects-ssas-tabular"></a>Proyectos de modelos tabulares (SSAS tabular)
   Para crear un modelo tabular, primero debe crear un proyecto de modelos tabulares en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]proporciona tres nuevas plantillas de proyectos de Business Intelligence para crear proyectos de modelos tabulares. Cada plantilla de proyectos proporciona un marco en el que se puede empezar a crear el modelo. En los temas de esta sección se describe cómo crear un proyecto de modelos tabulares mediante plantillas de proyectos.  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
   
 |Tema|Description|  
 |-----------|-----------------|  

@@ -1,30 +1,35 @@
 ---
-title: "Tareas y procedimientos de prueba y validaci&#243;n (miner&#237;a de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gráfico de precisión de minería de datos [Analysis Services]"
-  - "modelado de predicción [Analysis Services]"
-  - "estructuras de minería de datos [Analysis Services], modelado de predicción"
-  - "gráfico de precisión de minería de datos [Analysis Services], temas de procedimientos"
-  - "modelos de minería de datos [Analysis Services], modelado de predicción"
-  - "precisión de predicción [minería de datos]"
+title: "Pruebas y las tareas de validación y procedimientos (minería de datos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Mining Accuracy Chart [Analysis Services]
+- predictive modeling [Analysis Services]
+- mining structures [Analysis Services], predictive modeling
+- Mining Accuracy Chart [Analysis Services], how-to topics
+- mining models [Analysis Services], predictive modeling
+- predictive accuracy [data mining]
 ms.assetid: 3a0b4dc9-5b64-4be1-aa5f-6ff26f43dbf8
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8e74a79b18f526878981d21e36134ff82d5c862b
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Tareas y procedimientos de prueba y validaci&#243;n (miner&#237;a de datos)
+# <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Tareas y procedimientos de prueba y validación (minería de datos)
   Puede utilizar la pestaña **Gráfico de precisión de minería de datos** del Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para comparar la precisión predictiva de los modelos de minería de datos de su estructura de minería de datos.  
   
  Puede crear cuatro tipos de gráficos:  
@@ -39,11 +44,11 @@ caps.handback.revision: 41
   
  Los primeros tres gráficos utilizan la pestaña **Selección de entrada** para definir los datos que se utilizan para generar el gráfico.  
   
- El gráfico de validación cruzada se crea usando las entradas adicionales, disponibles en la pestaña **Validación cruzada**. Para obtener más información, vea [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
+ El gráfico de validación cruzada se crea usando las entradas adicionales, disponibles en la pestaña **Validación cruzada** . Para obtener más información, vea [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
   
  Para obtener más información sobre cómo usar el gráfico de precisión de minería de datos, vea [Prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
   
 -   [Crear un gráfico de mejora respecto al modelo predictivo, un gráfico de beneficios o una matriz de clasificación](../../analysis-services/data-mining/create-a-lift-chart-profit-chart-or-classification-matrix.md)  
   

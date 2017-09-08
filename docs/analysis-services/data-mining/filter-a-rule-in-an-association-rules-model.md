@@ -1,27 +1,32 @@
 ---
-title: "Filtrar una regla en un modelo de reglas de asociaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "filtrar reglas [Analysis Services]"
-  - "Visor de modelos de minería de datos [Analysis Services], reglas"
-  - "Visor de reglas"
+title: "Filtro de modelo de reglas de una regla en una asociación | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filtering rules [Analysis Services]
+- Mining Model Viewer [Analysis Services], rules
+- Rules Viewer
 ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 88eb75188ed36a8a79178f6b893c5301ffd2d47e
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Filtrar una regla en un modelo de reglas de asociaci&#243;n
+# <a name="filter-a-rule-in-an-association-rules-model"></a>Filtrar una regla en un modelo de reglas de asociación
   Puede usar filtros con los modelos de asociación para restringir los resultados a las asociaciones que le interesan. Por ejemplo, puede filtrar las reglas para mostrar solo las que incluyan un producto concreto.  
   
  En el Diseñador de minería de datos, use los controles de la pestaña **Reglas** del Visor de reglas de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para filtrar las reglas que se muestran.  También puede crear una consulta en el modelo para ver solo el conjunto de elementos que contiene un valor determinado.  
@@ -29,7 +34,7 @@ caps.handback.revision: 28
 > [!NOTE]  
 >  Esta opción solo está disponible para los modelos de minería de datos creados usando el algoritmo de asociación de Microsoft.  
   
-### Filtrar una regla en un modelo de asociación  
+### <a name="filter-a-rule-in-an-association-model"></a>Filtrar una regla en un modelo de asociación  
   
 1.  Abra el modelo de minería de datos usando el **Visor de reglas de asociación**. Para hacer esto en SQL Server Management Studio, haga clic con el botón secundario en el nombre del modelo y seleccione **Examinar**. Para hacerlo en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga doble clic en la estructura de minería de datos que contiene el modelo y, después, haga clic en la pestaña **Visor de modelos de minería de datos** del **Diseñador de minería de datos**.  
   
@@ -54,13 +59,13 @@ caps.handback.revision: 28
     > [!NOTE]  
     >  El visor almacena en memoria caché la lista inicial de reglas, según una consulta del modelo de minería de datos, y no actualiza la lista de reglas a menos que cambie las condiciones de la consulta estableciendo las filas máximas, la probabilidad, la importancia o la presentación de nombres largos. Por consiguiente, si escribe una condición y la presentación no se actualiza inmediatamente, puede obligar al visor a que actualice los datos seleccionando y anulando la selección de la casilla **Mostrar nombres largos** .  
   
-### Crear una consulta en los conjuntos de elementos en un modelo de asociación  
+### <a name="create-a-query-on-the-itemsets-in-an-association-model"></a>Crear una consulta en los conjuntos de elementos en un modelo de asociación  
   
 -   [Ejemplos de consultas del modelo de asociación](../../analysis-services/data-mining/association-model-query-examples.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tareas y procedimientos del Visor de modelos de minería de datos](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Examinar un modelo usando el Visor de reglas de asociación de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Lección 3: Generar un escenario de cesta de la compra &#40;Tutorial intermedio de minería de datos&#41;](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md)  
+ [Lección 3: Generar un escenario de cesta &#40; Tutorial de minería de datos intermedios &#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)  
   
   

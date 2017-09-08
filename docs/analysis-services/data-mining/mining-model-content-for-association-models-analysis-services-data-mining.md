@@ -1,32 +1,37 @@
 ---
-title: "Contenido del modelo de miner&#237;a de datos para los modelos de asociaci&#243;n (Analysis Services - Miner&#237;a de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "conjuntos de elementos [Analysis Services]"
-  - "algoritmos de asociación [Analysis Services]"
-  - "contenido del modelo de minería de datos, modelos de asociación"
-  - "reglas [minería de datos]"
-  - "asociaciones [Analysis Services]"
+title: "Contenido del modelo para los modelos de asociación de minería de datos (Analysis Services: minería de datos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- itemsets [Analysis Services]
+- association algorithms [Analysis Services]
+- mining model content, association models
+- rules [Data Mining]
+- associations [Analysis Services]
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 259335815674dfd8c9d59b1fe6bde7c170d096b6
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Contenido del modelo de miner&#237;a de datos para los modelos de asociaci&#243;n (Analysis Services - Miner&#237;a de datos)
+# <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de asociación (Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo Reglas de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener una explicación de terminología general y de estadística relacionada con el contenido del modelo de minería de datos válida para todos los tipos de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
-## Descripción de la estructura de un modelo de asociación  
+## <a name="understanding-the-structure-of-an-association-model"></a>Descripción de la estructura de un modelo de asociación  
  Un modelo de asociación tiene una estructura simple. Cada modelo tiene un único nodo primario que representa el modelo y sus metadatos, y cada nodo primario tiene una lista plana de conjuntos de elementos y reglas. Estos conjuntos de elementos y reglas no se organizan como árboles, sino que se ordenan con los conjuntos de elementos en primer lugar y las reglas en segundo, como se muestra en el siguiente diagrama.  
   
  ![estructura del contenido del modelo para los modelos de asociación](../../analysis-services/data-mining/media/modelcontentstructure-assoc.gif "estructura del contenido del modelo para los modelos de asociación")  
@@ -37,7 +42,7 @@ caps.handback.revision: 17
   
  **Nota** : si desea extraer las reglas o los conjuntos de datos, puede usar una consulta que devuelva únicamente los tipos de nodos deseados. Para más información, vea [Ejemplos de consultas del modelo de asociación](../../analysis-services/data-mining/association-model-query-examples.md).  
   
-## Contenido del modelo para un modelo de asociación  
+## <a name="model-content-for-an-association-model"></a>Contenido del modelo para un modelo de asociación  
  Esta sección solo proporciona detalles y ejemplos para las columnas del contenido del modelo de minería de datos que son relevantes para los modelos de asociación.  
   
  Para obtener información sobre las columnas de uso general en el conjunto de filas de esquema, como MODEL_CATALOG y MODEL_NAME, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -99,8 +104,8 @@ caps.handback.revision: 17
 |----------|-----------------|  
 |ITEMSET_COUNT|Recuento de todos los conjuntos de elementos del modelo.|  
 |RULE_COUNT|Recuento de todas las reglas del modelo.|  
-|MIN_SUPPORT|Soporte mínimo para cualquier conjunto de elementos único.<br /><br /> **Nota** Este valor puede ser diferente del valor establecido para el parámetro *MINIMUM _SUPPORT*.|  
-|MAX_SUPPORT|Soporte máximo para cualquier conjunto de elementos único.<br /><br /> **Nota** Este valor puede ser diferente del valor establecido para el parámetro *MAXIMUM_SUPPORT*.|  
+|MIN_SUPPORT|Soporte mínimo para cualquier conjunto de elementos único.<br /><br /> **Nota** Este valor puede ser diferente del valor establecido para el parámetro *MINIMUM _SUPPORT* .|  
+|MAX_SUPPORT|Soporte máximo para cualquier conjunto de elementos único.<br /><br /> **Nota** Este valor puede ser diferente del valor establecido para el parámetro *MAXIMUM_SUPPORT* .|  
 |MIN_ITEMSET_SIZE|Tamaño del conjunto de elementos más pequeño, representado como recuento de elementos.<br /><br /> Un valor de 0 indica que el estado **Missing** se trató como un elemento independiente.<br /><br /> **Nota** El valor predeterminado del parámetro *MINIMUM_ITEMSET_SIZE* es 1.|  
 |MAX_ITEMSET_SIZE|Indica el tamaño del conjunto de elementos más grande que se encontró.<br /><br /> **Nota** Este valor está restringido por el valor establecido para el parámetro *MAX_ITEMSET_SIZE* al crear el modelo. Este tamaño nunca puede superar dicho valor; sin embargo, puede ser menor. El valor predeterminado es 3.|  
 |MIN_PROBABILITY|Probabilidad mínima detectada para cualquier conjunto de elementos o regla únicos del modelo.<br /><br /> Ejemplo: 0,400390625<br /><br /> **Nota** En los conjuntos de elementos, este valor es siempre mayor que el establecido para el parámetro *MINIMUM_PROBABILITY* al crear el modelo.|  
@@ -132,7 +137,7 @@ caps.handback.revision: 17
  **Nodo de regla** El fragmento XML incluye información útil adicional sobre la regla, como el soporte, la confianza y el número de elementos, así como el identificador del nodo que representa el lado izquierdo de la regla.  
   
  MARGINAL_RULE  
- En blanco.  
+ : en blanco.  
   
  NODE_PROBABILITY  
  Puntuación de confianza o probabilidad asociada al conjunto de elementos o a la regla.  
@@ -180,7 +185,7 @@ caps.handback.revision: 17
  **Nodo de regla** El identificador del conjunto de elementos que contiene los elementos del lado izquierdo de la regla. Por ejemplo, si la regla es `If {A,B} Then {C}`, esta columna incluye el identificador del conjunto de elementos que contiene únicamente `{A,B}`.  
   
  MSOLAP_NODE_SCORE  
- **Nodo primario** En blanco.  
+ **Nodo primario** : en blanco.  
   
  **Nodo de conjunto de elementos** : puntuación de importancia para el conjunto de elementos.  
   
@@ -190,9 +195,9 @@ caps.handback.revision: 17
 >  La importancia se calcula de forma diferente para los conjuntos de elementos y para las reglas. Para más información, vea [Referencia técnica del algoritmo de asociación de Microsoft](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md).  
   
  MSOLAP_NODE_SHORT_CAPTION  
- En blanco.  
+ : en blanco.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo de asociación de Microsoft](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Ejemplos de consultas del modelo de asociación](../../analysis-services/data-mining/association-model-query-examples.md)  

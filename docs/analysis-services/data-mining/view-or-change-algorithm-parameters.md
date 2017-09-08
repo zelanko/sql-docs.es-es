@@ -1,26 +1,31 @@
 ---
-title: "Ver o cambiar par&#225;metros del algoritmo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "algoritmos [minería de datos]"
-  - "modelos de minería de datos [Analysis Services], consultar"
+title: "Ver o cambiar parámetros del algoritmo | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- algorithms [data mining]
+- mining models [Analysis Services], algorithms
 ms.assetid: 151b899b-c27a-4a09-bcf5-5c9f0ec24168
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6144f270df1d20543b45c419df494a023a0f3bfb
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Ver o cambiar par&#225;metros del algoritmo
+# <a name="view-or-change-algorithm-parameters"></a>Ver o cambiar parámetros del algoritmo
   Puede cambiar los parámetros proporcionados con los algoritmos que se utilizan para crear modelos de minería de datos para personalizar los resultados del modelo.  
   
  Los parámetros de los algoritmos que se proporcionan en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cambian mucho más que las propiedades del modelo: se pueden utilizar para modificar de manera fundamental la manera en que los datos se procesan, se agrupan y se muestran. Por ejemplo, puede usar parámetros de algoritmo para hacer lo siguiente:  
@@ -37,7 +42,7 @@ caps.handback.revision: 15
   
  Los parámetros proporcionados para cada algoritmo varían en gran medida. Para obtener una lista de los parámetros que se pueden establecer para cada algoritmo, vea los temas de referencia técnica de esta sección: [Algoritmos de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
-### Cambiar un parámetro de algoritmo  
+### <a name="change-an-algorithm-parameter"></a>Cambiar un parámetro de algoritmo  
   
 1.  En la pestaña **Modelos de minería de datos** del Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga clic con el botón derecho en el tipo de algoritmo del modelo de minería de datos para el que quiera ajustar el algoritmo y, después, seleccione **Establecer parámetros de algoritmo**.  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 15
   
      El parámetro de algoritmo se establece con el nuevo valor. El cambio de parámetro no se reflejará en el modelo de minería de datos hasta que vuelva a procesar el modelo.  
   
-### Vea los parámetros utilizados en un modelo existente  
+### <a name="view-the-parameters-used-in-an-existing-model"></a>Vea los parámetros utilizados en un modelo existente  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra una ventana Consulta DMX.  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 15
   
     ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tareas y procedimientos de los modelos de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

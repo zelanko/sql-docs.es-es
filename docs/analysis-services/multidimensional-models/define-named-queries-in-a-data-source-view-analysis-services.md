@@ -1,33 +1,38 @@
 ---
-title: "Definir consultas con nombre en una vista del origen de datos (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "consultas con nombre [Analysis Services], crear"
-  - "modificar consultas con nombre"
-  - "vistas del origen de datos [Analysis Services], consultas con nombre"
+title: Definir consultas con nombre en una vista del origen de datos (Analysis Services) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- named queries [Analysis Services], creating
+- modifying named queries
+- data source views [Analysis Services], named queries
 ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 31
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 19b3f52626202c555cb51173508f2a1954318b83
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Definir consultas con nombre en una vista del origen de datos (Analysis Services)
+# <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Definir consultas con nombre en una vista del origen de datos (Analysis Services)
   Una consulta con nombre es una expresión SQL representada como una tabla. En una consulta con nombre, puede especificar una expresión SQL para seleccionar las filas y columnas que devuelven una o más tablas de uno o más orígenes de datos. Una consulta con nombre es similar a cualquier otra tabla de una vista del origen de datos (DSV), con filas y relaciones, con la excepción de que la consulta con nombre se basa en una expresión.  
   
  Una consulta con nombre permite ampliar el esquema relacional de las tablas existentes en una DSV sin modificar el origen de datos subyacente. Por ejemplo, se puede usar una serie de consultas con nombre para dividir una compleja tabla de dimensiones en tablas de menores dimensiones y más sencillas, a fin de usarlas en dimensiones de base de datos. Una consulta con nombre también se puede usar para combinar varias tablas de base de datos de uno o varios orígenes de datos y formar una sola tabla de vista del origen de datos.  
   
-## Crear una consulta con nombre  
+## <a name="creating-a-named-query"></a>Crear una consulta con nombre  
   
 > [!NOTE]  
 >  No se puede agregar un cálculo con nombre a una consulta con nombre, ni se puede basar una consulta con nombre en una tabla que contenga un cálculo con nombre.  
@@ -38,13 +43,13 @@ caps.handback.revision: 31
   
  **Nota** Cuando defina una consulta con nombre que realiza consultas en un origen de datos [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, se producirá un error en una consulta con nombre que contiene una subconsulta correlacionada y una cláusula GROUP BY. Para obtener más información, vea el artículo sobre el [error interno con una instrucción SELECT que contiene una subconsulta correlacionada y GROUP BY](http://support.microsoft.com/kb/274729) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
-## Agregar o editar una consulta con nombre  
+## <a name="add-or-edit-a-named-query"></a>Agregar o editar una consulta con nombre  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el proyecto o conéctese a la base de datos que contiene la vista del origen de datos en que desea agregar una consulta con nombre.  
   
 2.  En el Explorador de soluciones, expanda la carpeta **Vistas del origen de datos** y luego haga doble clic en la vista del origen de datos.  
   
-3.  En el panel **Tablas** o **Diagrama**, haga clic con el botón derecho en un área abierta y, después, haga clic en **Nueva consulta con nombre**.  
+3.  En el panel **Tablas** o **Diagrama** , haga clic con el botón derecho en un área abierta y, después, haga clic en **Nueva consulta con nombre**.  
   
 4.  En el cuadro de diálogo **Crear consulta con nombre** , realice las siguientes operaciones:  
   
@@ -57,11 +62,11 @@ caps.handback.revision: 31
     4.  Escriba la consulta en el panel inferior o use las herramientas gráficas de creación de consultas para crear una consulta.  
   
     > [!NOTE]  
-    >  La interfaz de usuario (UI) de generación de consultas depende del origen de datos. En lugar de ver una UI gráfica, puede obtener una UI genérica, basada en texto. Puede realizar las mismas tareas con estas interfaces diferentes, pero debe hacerlo de diferente forma. Para más información, vea [Cuadro de diálogo Crear o Editar consulta con nombre &#40;Analysis Services - Datos multidimensionales&#41;](../Topic/Create%20or%20Edit%20Named%20Query%20Dialog%20Box%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md).  
+    >  La interfaz de usuario (UI) de generación de consultas depende del origen de datos. En lugar de ver una UI gráfica, puede obtener una UI genérica, basada en texto. Puede realizar las mismas tareas con estas interfaces diferentes, pero debe hacerlo de diferente forma. Para más información, vea [Cuadro de diálogo Crear o Editar consulta con nombre &#40;Analysis Services - Datos multidimensionales&#41;](http://msdn.microsoft.com/library/8e192ad6-a0b1-4e21-bb3f-087c93e62941).  
   
 5.  Haga clic en **Aceptar**. En el encabezado de tabla aparecerá un icono que muestra dos tablas superpuestas para indicar que la tabla ha sido reemplazada por una consulta con nombre.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Vistas del origen de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Definir cálculos con nombre en una vista del origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   

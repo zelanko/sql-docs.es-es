@@ -1,26 +1,31 @@
 ---
-title: "Definir dimensiones de base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dimensiones [Analysis Services], definir"
+title: Definir dimensiones de base de datos | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], defining
 ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d57a877e5d332dfffc24ed6d3df14143ecae3442
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Definir dimensiones de base de datos
+# <a name="define-database-dimensions"></a>Definir dimensiones de base de datos
   Utilice el Diseñador de dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para configurar una dimensión de base de datos existente en un proyecto o base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Puede usar el Diseñador de dimensiones para realizar lo siguiente:  
   
 -   Configurar las propiedades de dimensión-nivel.  
@@ -37,7 +42,7 @@ caps.handback.revision: 27
   
  Después de modificar una dimensión, un atributo o una jerarquía, debe procesar la dimensión para ver los cambios. Al trabajar en modo de proyecto, el usuario implementa los cambios en la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] antes del procesamiento.  
   
- Para más información sobre cómo abrir una dimensión en el Diseñador de dimensiones, vea [Modificar o eliminar una dimensión de base de datos en el Explorador de soluciones](../../analysis-services/multidimensional-models/modify-or-delete-a-database-dimension-in-solution-explorer.md).  
+ Para más información sobre cómo abrir una dimensión en el Diseñador de dimensiones, vea [Modificar o eliminar una dimensión de base de datos en el Explorador de soluciones](../../analysis-services/multidimensional-models/database-dimensions-modify-or-delete-a-database-dimension-in-solution-explorer.md).  
   
  El Diseñador de dimensiones tiene tres pestañas, que se describen en la siguiente tabla.  
   
@@ -53,13 +58,13 @@ caps.handback.revision: 27
  [Referencia de las propiedades de los atributos de dimensión](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
  Describe cómo definir y configurar un atributo de dimensión.  
   
- [Crear jerarquías definidas por el usuario](../../analysis-services/multidimensional-models/create-user-defined-hierarchies.md)  
+ [Crear jerarquías definidas por el usuario](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
  Describe cómo definir y configurar una jerarquía definida por el usuario.  
   
- [Definir relaciones de atributo](../../analysis-services/multidimensional-models/define-attribute-relationships.md)  
+ [Definir relaciones de atributo](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
  Describe cómo definir y configurar una relación de atributo.  
   
- [Usar el Asistente de Business Intelligence para mejorar dimensiones](../Topic/Use%20the%20Business%20Intelligence%20Wizard%20to%20Enhance%20Dimensions.md)  
+ [Usar el Asistente de Business Intelligence para mejorar dimensiones](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
  Describe cómo mejorar una dimensión con el Asistente de Business Intelligence.  
   
   

@@ -1,29 +1,34 @@
 ---
-title: "Implementaci&#243;n de soluciones de miner&#237;a de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modelos de minería de datos [Analysis Services], implementar"
-  - "implementación [Analysis Services], entornos de producción"
-  - "implementar [Analysis Services: minería de datos]"
-  - "soluciones [Analysis Services], implementar"
-  - "modelos [Analysis Services], minería de datos"
+title: "Implementación de soluciones de minería de datos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining models [Analysis Services], deploying
+- deploying [Analysis Services], production environments
+- deploying [Analysis Services - data mining]
+- solutions [Analysis Services], deploying
+- models [Analysis Services], data mining
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aa037f7ff155df158ba2967c5e7c31989ace887d
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Implementaci&#243;n de soluciones de miner&#237;a de datos
+# <a name="deployment-of-data-mining-solutions"></a>Implementación de soluciones de minería de datos
   El último paso del proceso de minería de datos consiste en implementar los modelos en un entorno de producción. La implementación es importante porque hace que los modelos estén a disposición de los usuarios para que pueda realizar cualquiera de las siguientes tareas:  
   
 -   Utilice los modelos para crear predicciones y tomar decisiones empresariales. Para más información sobre las herramientas que puede usar para crear consultas, vea [Herramientas de consulta de minería de datos](../../analysis-services/data-mining/data-mining-query-tools.md).  
@@ -42,7 +47,7 @@ caps.handback.revision: 16
   
  [Recursos relacionados](#bkmk_Resources)  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Implementar soluciones de minería de datos para versiones anteriores de SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
   
  [Exportar e importar objetos de minería de datos](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
@@ -81,7 +86,7 @@ caps.handback.revision: 16
   
  Proporciona información general sobre la implementación de los proyectos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y describe las propiedades que puede establecer como parte de la configuración del proyecto.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Procesar un modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Herramientas de consulta de minería de datos](../../analysis-services/data-mining/data-mining-query-tools.md)   
  [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  

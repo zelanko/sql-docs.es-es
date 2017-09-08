@@ -1,0 +1,104 @@
+---
+title: OPEN MASTER KEY (Transact-SQL) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- OPEN MASTER KEY DECRYPTION BY PASSWORD
+- OPEN_MASTER_KEY_DECRYPTION_BY_PASSWORD_TSQL
+- MASTER_KEY_TSQL
+- MASTER KEY
+- OPEN_MASTER_KEY_TSQL
+- MASTER KEY DECRYPTION
+- OPEN MASTER KEY
+- MASTER_KEY_DECRYPTION_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- opening Database Master Keys
+- encryption [SQL Server], Database Master Key
+- cryptography [SQL Server], Database Master Key
+- master key decryption
+- OPEN MASTER KEY statement
+- database master key [SQL Server], opening
+ms.assetid: 1674753e-ca1e-4913-9ba4-b442e7106121
+caps.latest.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 3ef9e8331c891a6087e55b4eb70b19dda4057bf2
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="open-master-key-transact-sql"></a>OPEN MASTER KEY (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  Abre la clave maestra de la base de datos actual.  
+  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Sintaxis  
+  
+```  
+-- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+  
+OPEN MASTER KEY DECRYPTION BY PASSWORD = 'password'   
+```  
+  
+## <a name="arguments"></a>Argumentos  
+ '*contraseña*'  
+ Contraseña con la que se cifró la clave maestra de la base de datos.  
+  
+## <a name="remarks"></a>Comentarios  
+ Si la clave maestra de la base de datos se ha cifrado con la clave maestra de servicio, se abre automáticamente cuando sea necesario para el cifrado y el descifrado. En este caso, no es necesario utilizar la **OPEN MASTER KEY** instrucción.  
+  
+ La primera vez que se adjunta una base de datos o se restaura en una instancia nueva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aún no se ha almacenado una copia de la clave maestra de la base de datos (cifrada por la clave maestra de servicio) en el servidor. Debe usar la instrucción **OPEN MASTER KEY** para descifrar la clave maestra de la base de datos (DMK). Una vez que se ha descifrado la clave maestra de la base de datos, tiene la posibilidad de habilitar el descifrado automático en el futuro usando la instrucción **ALTER MASTER KEY REGENERATE** para proporcionar al servidor una copia de la clave maestra de la base de datos cifrada con la clave maestra de servicio (SMK). Cuando una base de datos se haya actualizado desde una versión anterior, se debe volver a generar la DMK para usar el algoritmo AES más reciente. Para obtener más información sobre cómo volver a generar la DMK, vea [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md). El tiempo necesario para volver a generar la DMK con el fin de actualizarse a AES depende del número de objetos protegidos por la DMK. Solo es necesario volver a generar la DMK una vez y no tiene ningún efecto sobre las nuevas generaciones futuras como parte de una estrategia de rotación de claves.  
+  
+ Puede excluir la clave maestra de una base de datos específica de la administración automática de claves mediante la instrucción ALTER MASTER KEY con la opción DROP ENCRYPTION BY SERVICE MASTER KEY. A continuación, debe abrir de forma explícita la clave maestra de la base de datos con una contraseña.  
+  
+ Si se revierte una transacción en que la clave maestra de la base de datos se ha abierto de forma explícita, la clave permanece abierta.  
+  
+## <a name="permissions"></a>Permissions  
+ Necesita el permiso CONTROL en la base de datos.  
+  
+## <a name="examples"></a>Ejemplos  
+ En el siguiente ejemplo se abre la clave maestra de la base de datos `AdventureWorks2012`, cifrada con una contraseña.  
+  
+```  
+USE AdventureWorks2012;  
+OPEN MASTER KEY DECRYPTION BY PASSWORD = '43987hkhj4325tsku7';  
+GO  
+```  
+  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ En el ejemplo siguiente se abre a la base de datos maestra, se han cifrado con una contraseña.  
+  
+```  
+USE master;  
+OPEN MASTER KEY DECRYPTION BY PASSWORD = '43987hkhj4325tsku7';  
+GO  
+CLOSE MASTER KEY;  
+GO  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
+ [CLOSE MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/close-master-key-transact-sql.md)   
+ [CLAVE maestra de la copia de seguridad &#40; Transact-SQL &#41;](../../t-sql/statements/backup-master-key-transact-sql.md)   
+ [RESTORE MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/restore-master-key-transact-sql.md)   
+ [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)   
+ [DROP MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-master-key-transact-sql.md)   
+ [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)  
+  
+  
+
+

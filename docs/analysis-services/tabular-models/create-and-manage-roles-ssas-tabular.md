@@ -1,32 +1,37 @@
 ---
-title: "Crear y administrar roles (SSAS tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.rolemanager.f1"
-  - "sql13.asvs.bidtoolset.roledb.f1"
+title: Crear y administrar Roles (SSAS Tabular) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.rolemanager.f1
+- sql13.asvs.bidtoolset.roledb.f1
 ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c625fce817af3072e059d5d2b1172383fcdafea
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Crear y administrar roles (SSAS tabular)
+# <a name="create-and-manage-roles-ssas-tabular"></a>Crear y administrar roles (SSAS tabular)
   Los roles, en los modelos tabulares, definen los permisos de los miembros para un modelo. Los roles se definen para un proyecto de modelos mediante el cuadro de diálogo Administrador de roles de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Al implementar un modelo, los administradores de bases de datos pueden administrar los roles mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Las tareas de este tema explican cómo crear y administrar roles durante la creación de modelos mediante el cuadro de diálogo Administrador de roles en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para obtener información sobre cómo administrar roles en una base de datos modelo implementada, vea [Roles de modelos tabulares &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
-## Tareas  
+## <a name="tasks"></a>Tareas  
  Para crear, modificar, copiar y eliminar roles, utilice el cuadro de diálogo **Administrador de roles** . Para ver el cuadro de diálogo **Administrador de roles** , en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], haga clic en el menú **Modelo** y en **Administrador de roles**.  
   
 ###  <a name="bkmk_new_role"></a> Para crear un rol  
@@ -64,11 +69,11 @@ caps.handback.revision: 17
   
 9. Haga clic en **Aceptar**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Roles &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [Perspectivas &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [Analizar en Excel &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
- [Función USERNAME (DAX)](http://msdn.microsoft.com/es-es/22dddc4b-1648-4c89-8c93-f1151162b93f)   
- [Función CUSTOMDATA (DAX)](http://msdn.microsoft.com/es-es/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+ [Analizar en Excel &#40; SSAS Tabular &#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
+ [Función USERNAME (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)   
+ [Función CUSTOMDATA (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
   
   

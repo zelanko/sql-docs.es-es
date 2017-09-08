@@ -1,28 +1,33 @@
 ---
-title: "Implementaci&#243;n de soluciones de modelos multidimensionales | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "implementaciones de Analysis Services, planear"
-  - "implementar [Analysis Services]"
-  - "implementar [Analysis Services], planear"
+title: "Implementación de la solución de modelo multidimensional | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Analysis Services deployments, planning
+- deploying [Analysis Services]
+- deploying [Analysis Services], planning
 ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d09db4ead5f0b05d82c40a16aed31a070b16250c
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Implementaci&#243;n de soluciones de modelos multidimensionales
+# <a name="multidimensional-model-solution-deployment"></a>Implementación de soluciones de modelos multidimensionales
   Una vez completado el desarrollo de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puede implementar la base de datos en un servidor de Analysis Services. Analysis Services proporciona seis métodos de implementación posibles que se pueden usar para mover la base de datos a un servidor de prueba o de producción. Estos son los métodos de implementación, por orden de ventaja: automatización AMO, XMLA, Asistente para la implementación, Utilidad de implementación, Asistente para sincronizar y Copia de seguridad y restauración.  
   
  En este tema se incluyen las secciones siguientes:  
@@ -52,7 +57,7 @@ caps.handback.revision: 39
 |¿Qué recursos de hardware y software se requieren para esta solución?|[Requisitos y consideraciones para la implementación de Analysis Services](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)|  
 |¿Cómo implementará los objetos relacionados que se encuentran fuera del ámbito del proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , como paquetes, informes o esquemas de las bases de datos relacionales de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ?||  
 |¿Cómo cargará y actualizará los datos de la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implementada?<br /><br /> ¿Cómo actualizará los metadatos (por ejemplo, cálculos) de la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implementada?|[Métodos de implementación](#bkmk_meth) en este tema.|  
-|¿Desea ofrecer a los usuarios acceso a los datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a través de Internet?|[Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md)|  
+|¿Desea ofrecer a los usuarios acceso a los datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a través de Internet?|[Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
 |¿Desea proporcionar acceso continuo de consulta a los datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ?|[Requisitos y consideraciones para la implementación de Analysis Services](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)|  
 |¿Desea implementar objetos en un entorno distribuido mediante el uso de objetos vinculados o particiones remotas?|[Crear y administrar una partición local &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md), [Crear y administrar una partición remota &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md) y [Grupos de medida vinculados](../../analysis-services/multidimensional-models/linked-measure-groups.md).|  
 |¿Cómo protegerá los datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ?|[Cómo autorizar el acceso a objetos y operaciones &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)|  

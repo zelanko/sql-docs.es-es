@@ -1,28 +1,33 @@
 ---
-title: "Mover una base de datos de Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mover bases de datos [Analysis Services]"
-  - "mover bases de datos"
-  - "operaciones [Analysis Services - datos multidimensionales]"
+title: "Mover la base de datos de un análisis Services | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- moving databases [Anlysis Services]
+- moving databases
+- operations [Analysis Services - multidimensional data]
 ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 73d410fdb16765b5ae1022362f11be8e918140fa
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Mover una base de datos de Analysis Services
+# <a name="move-an-analysis-services-database"></a>Mover una base de datos de Analysis Services
   Con frecuencia, se producen situaciones en las que un administrador de base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quiere mover una base de datos modelo multidimensional o tabular a otra ubicación. Estas situaciones suelen responder a necesidades empresariales, como mover la base de datos a otro disco para mejorar el rendimiento, disponer de más espacio para que la base de datos pueda crecer o actualizar un producto.  
   
  Una base de datos se puede mover de muchas maneras. En este documento se describen los siguientes escenarios comunes:  
@@ -38,9 +43,9 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  Si se separa una base de datos sin asignarla antes una contraseña, quedará desprotegida. Se recomienda asignar una contraseña a la base de datos para proteger la información confidencial. Además, se deberá aplicar la seguridad de acceso correspondiente a la carpeta, las subcarpetas y los archivos de la base de datos para impedir el acceso no autorizado.  
   
-## Procedimientos  
+## <a name="procedures"></a>Procedimientos  
   
-#### Mover una base de datos interactivamente mediante SSMS  
+#### <a name="moving-a-database-interactively-using-ssms"></a>Mover una base de datos interactivamente mediante SSMS  
   
 1.  Localice la base de datos que desea mover en el panel izquierdo o derecho de SSMS.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 14
   
 9. Escriba la contraseña que se usó en el paso 3 y haga clic en **Aceptar** para ejecutar el comando Attach.  
   
-#### Mover una base de datos mediante programación a través de AMO  
+#### <a name="moving-a-database-programmatically-using-amo"></a>Mover una base de datos mediante programación a través de AMO  
   
 1.  En la aplicación C#, adapte el código de ejemplo siguiente y complete las tareas indicadas.  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 14
   
 2.  Compile y ejecute el código para mover la base de datos.  
   
-#### Mover una base de datos mediante script XMLA  
+#### <a name="moving-a-database-by-script-using-xmla"></a>Mover una base de datos mediante script XMLA  
   
 1.  Abra una nueva pestaña XMLA en SSMS.  
   
@@ -136,16 +141,16 @@ caps.handback.revision: 14
   
  `</Attach>`  
   
-1.  Reemplace `%dbFolder%` por la ruta de acceso UNC completa de la carpeta de la base de datos, `%ReadOnlyMode%` por el valor **ReadOnly** o **ReadWrite** correspondiente, y `%password%` por la contraseña. Los caracteres % forman parte de la plantilla y se deben quitar.  
+1.  Reemplace `%dbFolder%` por la ruta de acceso UNC completa de la carpeta de la base de datos, `%ReadOnlyMode%` por el valor **ReadOnly** o **ReadWrite**correspondiente, y `%password%` por la contraseña. Los caracteres % forman parte de la plantilla y se deben quitar.  
   
 2.  Ejecute el comando XMLA.  
   
-## Vea también  
- <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
+## <a name="see-also"></a>Vea también  
+ <xref:Microsoft.AnalysisServices.Core.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Adjuntar y separar bases de datos de Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
- [Ubicación de almacenamiento de las bases de datos](../../analysis-services/multidimensional-models/database-storage-location.md)   
- [Modos de la propiedad de base de datos ReadWriteMode](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
+ [Ubicación de almacenamiento de base de datos](../../analysis-services/multidimensional-models/database-storage-location.md)   
+ [ReadWriteModes de base de datos](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
  [Elemento Attach](../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
  [Elemento Detach](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
  [Elemento ReadWriteMode](../../analysis-services/xmla/xml-elements-properties/readwritemode-element.md)   

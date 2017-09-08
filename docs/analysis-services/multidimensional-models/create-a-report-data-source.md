@@ -1,29 +1,34 @@
 ---
-title: "Crear un origen de datos de informe | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Crear un origen de datos de informe | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b941dc8eb4fb1f0fc14d2565c8f1f65dd3ba4d15
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Crear un origen de datos de informe
+# <a name="create-a-report-data-source"></a>Crear un origen de datos de informe
   Para que Power View se conecte con un modelo multidimensional, es necesario crear una definición de origen de datos de informe compartido, también conocida como un archivo .rsds, en una biblioteca de SharePoint. El archivo .rsds especifica el nombre de una instancia de servidor de Analysis Services, el tipo de conexión, la cadena de conexión y las credenciales utilizadas para conectarse con el modelo multidimensional. Cuando un usuario hace clic en el archivo .rsds, se abre un nuevo informe de Power View vacío (un archivo .rdlx) en el explorador.  
   
  Para crear una conexión .rsds, es necesario tener instalado SQL Server 2012 (o posterior) Reporting Services y el complemento Reporting Services para SharePoint 2010 o SharePoint 2013.  
   
-## Crear una conexión de origen de datos de informe (.rsds) con un modelo multidimensional  
+## <a name="create-a-report-data-source-rsds-connection-to-a-multidimensional-model"></a>Crear una conexión de origen de datos de informe (.rsds) con un modelo multidimensional  
  Antes de empezar, debe conocer:  
   
 -   El nombre de la instancia de servidor de Analysis Services que se está ejecutando en modo multidimensional.  
@@ -36,7 +41,7 @@ caps.handback.revision: 8
   
 -   (Opcional) Identificador de configuración regional.  
   
-#### Para crear un archivo de origen de datos compartido (.rsds) (SharePoint 2010)  
+#### <a name="to-create-a-shared-report-data-source-rsds-file-sharepoint-2010"></a>Para crear un archivo de origen de datos compartido (.rsds) (SharePoint 2010)  
   
 1.  Haga clic en la pestaña **Documentos** de la cinta de bibliotecas.  
   

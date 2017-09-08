@@ -1,31 +1,36 @@
 ---
-title: "Crear un proyecto de Analysis Services (SSDT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "plantillas [Analysis Services]"
-  - "plantillas [Analysis Services], proyectos"
-  - "proyectos [Analysis Services], crear"
-  - "proyectos [Analysis Services], Business Intelligence Development Studio"
-  - "Business Intelligence Development Studio [Analysis Services], definir proyectos"
-  - "elementos [Analysis Services]"
+title: Crear un proyecto de Analysis Services (SSDT) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- templates [Analysis Services]
+- templates [Analysis Services], projects
+- projects [Analysis Services], creating
+- projects [Analysis Services], Business Intelligence Development Studio
+- Business Intelligence Development Studio, defining projects [Analysis Services]
+- items [Analysis Services]
 ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 25b3c2bf3c86f69e9333b5e62541bbcfbbc877ea
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Crear un proyecto de Analysis Services (SSDT)
+# <a name="create-an-analysis-services-project-ssdt"></a>Crear un proyecto de Analysis Services (SSDT)
   Puede definir un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando la plantilla de proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o el Asistente para importar bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a fin de leer el contenido de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si no hay ninguna solución cargada en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la creación de un nuevo proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea automáticamente una nueva solución. De lo contrario, el nuevo proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se agregará a la solución existente. Las prácticas recomendadas para el desarrollo de soluciones pasan por crear proyectos distintos para diferentes tipos de datos de aplicación, usando una única solución si los proyectos están relacionados. Por ejemplo, puede tener una solución que contiene proyectos distintos para los paquetes de Integration Services, las bases de datos de Analysis Services y los informes de Reporting Services que usa la misma aplicación empresarial.  
   
  Un proyecto de Analysis Services contiene objetos que se usan en una única base de datos de Analysis Services. Las propiedades de implementación del proyecto especifican el nombre del servidor y de la base de datos mediante los que se implementarán los metadatos del proyecto como objetos con instancias.  
@@ -55,13 +60,13 @@ caps.handback.revision: 37
   
 3.  En el cuadro de texto **Nombre** , escriba el nombre del proyecto. El nombre que especifique se usará como el nombre predeterminado de la base de datos.  
   
-4.  En la lista desplegable **Ubicación**, escriba o seleccione la carpeta en la que almacenar los archivos del proyecto o haga clic en **Examinar** para seleccionar una carpeta.  
+4.  En la lista desplegable **Ubicación** , escriba o seleccione la carpeta en la que almacenar los archivos del proyecto o haga clic en **Examinar** para seleccionar una carpeta.  
   
-5.  Para agregar el proyecto nuevo a la solución existente, en la lista desplegable **Solución**, seleccione **Agregar a solución**.  
+5.  Para agregar el proyecto nuevo a la solución existente, en la lista desplegable **Solución** , seleccione **Agregar a solución**.  
   
      O bien  
   
-     Para crear una nueva solución, en la lista desplegable **Solución**, seleccione **Crear nueva solución**. Para crear una nueva carpeta para la nueva solución, seleccione **Crear directorio para la solución**. En **Nombre de la solución**, escriba el nombre de la nueva solución.  
+     Para crear una nueva solución, en la lista desplegable **Solución** , seleccione **Crear nueva solución**. Para crear una nueva carpeta para la nueva solución, seleccione **Crear directorio para la solución**. En **Nombre de la solución**, escriba el nombre de la nueva solución.  
   
 6.  Haga clic en **Aceptar**.  
   
@@ -95,7 +100,7 @@ caps.handback.revision: 37
   
  La adición de un proyecto existente a una solución asocia el proyecto a la solución, pero no lo copia en esta. Si el proyecto de Analysis Services se creó en otra solución, los archivos de proyecto permanecen con la solución original en la que se crearon. Esto significa que los cambios realizados en el proyecto mediante cualquiera de las soluciones se aplicarán al mismo conjunto de archivos de origen. Si este comportamiento no es el deseado, en primer lugar deberá copiar o mover los archivos de proyecto a la carpeta de la nueva solución y, a continuación, agregar el proyecto a la solución.  
   
-1.  Abra la solución en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. En el Explorador de soluciones, haga clic con el botón derecho en la solución, seleccione **Agregar** y, luego, haga clic en **Proyecto existente** para seleccionar el proyecto que quiere agregar.  
+1.  Abra la solución en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. En el Explorador de soluciones, haga clic con el botón derecho en la solución, seleccione **Agregar**y, luego, haga clic en **Proyecto existente** para seleccionar el proyecto que quiere agregar.  
   
 2.  Seleccione el archivo .dwproj que desea agregar a la solución.  
   
@@ -137,7 +142,7 @@ caps.handback.revision: 37
 |---------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] archivo de definición de proyecto (.dwproj)|Contiene metadatos sobre los elementos, las configuraciones y las referencias de ensamblado definidos e incluidos en el proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configuración de usuario de proyecto (.dwproj.user)|Contiene información de configuración del proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para un usuario específico.|  
-|Archivo de origen de datos (.ds)|Contiene elementos ASSL (Lenguaje de scripting de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]) que definen los metadatos de un origen de datos.|  
+|Archivo de origen de datos (.ds)|Contiene elementos ASSL (Lenguaje de scripting de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) que definen los metadatos de un origen de datos.|  
 |Archivo de vista del origen de datos (.dsv)|Contiene elementos ASSL que definen los metadatos de una vista del origen de datos.|  
 |Archivo de cubo (.cube)|Contiene elementos ASSL que definen los metadatos de un cubo, incluyendo grupos de medida, medidas y dimensiones de cubo.|  
 |Archivo de partición (.partitions)|Contiene elementos ASSL que definen los metadatos de las particiones de un cubo especificado.|  
@@ -160,7 +165,7 @@ caps.handback.revision: 37
 ||Dimensión|Inicia el Asistente para dimensiones para agregar una nueva dimensión de base de datos al proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Estructura de minería de datos|Inicia el Asistente para minería de datos para agregar una nueva estructura de minería de datos y el modelo de minería de datos asociado al proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Configurar las propiedades de un proyecto de Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
  [Generar proyectos de Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
  [Implementar proyectos de Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  

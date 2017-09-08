@@ -1,25 +1,30 @@
 ---
-title: "No se pudo cargar el archivo o ensamblado &#39;Microsoft.AnalysisServices.SharePoint.Integration&#39; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: No se pudo cargar 'Microsoft.AnalysisServices.SharePoint.Integration' | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 6e350b67-5e18-4b90-8fb7-a0109cbb27b7
 caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 7
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: a69a219376c2a67b003eaa6769843dc23791d829
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# No se pudo cargar el archivo o ensamblado &#39;Microsoft.AnalysisServices.SharePoint.Integration&#39;
+# <a name="could-not-load-microsoftanalysisservicessharepointintegration"></a>No se pudo cargar Microsoft.AnalysisServices.SharePoint.Integration
   En entornos de SharePoint 2010 que tienen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, este error se producirá si la solución del nivel de aplicación para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no se implementó correctamente.  
   
-## Detalles  
+## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
@@ -28,10 +33,10 @@ caps.handback.revision: 7
 |Causa|La solución Powerpivotwebapp no está implementada o no se implementó correctamente.|  
 |Texto del mensaje|No se pudo cargar el archivo o ensamblado 'Microsoft.AnalysisServices.SharePoint.Integration'|  
   
-## Explicación  
+## <a name="explanation"></a>Explicación  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint utiliza paquetes de soluciones para implementar sus características en un servidor de SharePoint. Una de las soluciones no se implementó correctamente. Como resultado, este error aparece siempre que se intenta abrir la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] u otras páginas de aplicaciones de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en un sitio de SharePoint.  
   
-## Acción del usuario  
+## <a name="user-action"></a>Acción del usuario  
  Implementar el paquete de soluciones.  
   
 1.  En Administración central, en Configuración del sistema, haga clic en **Administrar soluciones del conjunto de servidores**.  
@@ -44,7 +49,7 @@ caps.handback.revision: 7
   
 5.  Haga clic en **Aceptar**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Implementar las soluciones de Power Pivot en SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)  
   
   

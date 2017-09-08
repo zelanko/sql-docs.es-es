@@ -1,36 +1,41 @@
 ---
-title: "Contenido del modelo de miner&#237;a de datos para los modelos de red neuronal (Analysis Services - Miner&#237;a de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "neuronas de salida [Analysis Services]"
-  - "algoritmos de red neuronal [Analysis Services]"
-  - "nivel de salida [Minería de datos]"
-  - "nivel oculto"
-  - "neuronas ocultas"
-  - "nivel de entrada [Minería de datos]"
-  - "neuronas de entrada [Analysis Services]"
-  - "contenido del modelo de minería de datos, modelos de red neuronal"
-  - "neural network model [Analysis Services]"
+title: "Contenido del modelo para los modelos de red neuronal de minería de datos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- output neurons [Analysis Services]
+- neural network algorithms [Analysis Services]
+- output layer [Data Mining]
+- hidden layer
+- hidden neurons
+- input layer [Data Mining]
+- input neurons [Analysis Services]
+- mining model content, neural network models
+- neural network model [Analysis Services]
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 4ba3de4a84dfd666e23d9877241f8c444891a0be
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Contenido del modelo de miner&#237;a de datos para los modelos de red neuronal (Analysis Services - Miner&#237;a de datos)
+# <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de red neuronal (Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de red neuronal de Microsoft. Para obtener una explicación de cómo interpretar las estadísticas y la estructura compartidas por todos los tipos de modelos, así como las definiciones generales de términos relacionados con el contenido del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
-## Descripción de la estructura de un modelo de red neuronal  
+## <a name="understanding-the-structure-of-a-neural-network-model"></a>Descripción de la estructura de un modelo de red neuronal  
  Cada modelo de red neuronal tiene un nodo primario único que representa el modelo y sus metadatos, y un nodo de estadísticas marginal (NODE_TYPE = 24) que proporciona estadísticas descriptivas sobre los atributos de entrada. El nodo de estadísticas marginal es útil porque resume información sobre las entradas, de modo que no necesite consultar los datos de los nodos individuales.  
   
  Debajo de estos dos nodos hay al menos dos nodos más y podría haber muchos más, en función de cuántos atributos de predicción tenga el modelo.  
@@ -39,7 +44,7 @@ caps.handback.revision: 19
   
 -   Cada nodo sucesivo contiene una *subred* diferente (NODE_TYPE = 17). Cada subred siempre contiene un nivel oculto (NODE_TYPE = 19) y un nivel de salida (NODE_TYPE = 20) para esa subred.  
   
- ![estructura del contenido del modelo para redes neuronales](../../analysis-services/data-mining/media/modelcontentstructure-nn.gif "estructura del contenido del modelo para redes neuronales")  
+ ![estructura del contenido del modelo para redes neurales](../../analysis-services/data-mining/media/modelcontentstructure-nn.gif "estructura del contenido del modelo para las redes neuronales")  
   
  La información del nivel de entrada es simple: el nodo superior de cada nivel de entrada (NODE_TYPE = 18) actúa como un organizador para una colección de nodos de entrada (NODE_TYPE = 21). El contenido de los nodos de entrada se describe en la tabla siguiente.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 19
   
  Para trabajar con los datos y ver cómo pone en correlación el modelo las entradas y las salidas, puede usar el **Visor de redes neuronales de Microsoft**. Con este visor personalizado, puede filtrar los atributos de entrada y sus valores, y ver gráficamente cómo afectan a las salidas. La información sobre herramientas del visor muestra la probabilidad y la mejora respecto al modelo de predicción asociados a cada par de valores de entrada y de salida. Para más información, vea [Examinar un modelo usando el Visor de redes neuronales de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
-## Contenido de un modelo de red neuronal  
+## <a name="model-content-for-a-neural-network-model"></a>Contenido de un modelo de red neuronal  
  En esta sección solo se proporcionan detalles y ejemplos de las columnas del contenido del modelo de minería de datos que tienen una relevancia especial para las redes neuronales. Para más información sobre las columnas de uso general en el conjunto de filas de esquema, como MODEL_CATALOG y MODEL_NAME (que no se describen aquí), o para obtener una explicación de la terminología del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
@@ -72,7 +77,7 @@ caps.handback.revision: 19
 |Estadísticas marginales|En blanco|  
 |Nivel de entrada|En blanco|  
 |Nodo de entrada|Nombre del atributo de entrada|  
-|Nivel oculto|En blanco|  
+|nivel oculto|En blanco|  
 |Nodo oculto|En blanco|  
 |Nivel de salida|En blanco|  
 |Nodo de salida|Nombre del atributo de salida|  
@@ -112,7 +117,7 @@ caps.handback.revision: 19
 |Estadísticas marginales|Siempre es 0.|  
 |Nivel de entrada|Indica el número de pares de valores y atributos de entrada que usó el modelo.|  
 |Nodo de entrada|Siempre es 0.|  
-|Nivel oculto|Indica el número de nodos ocultos que fueron creados por el modelo.|  
+|nivel oculto|Indica el número de nodos ocultos que fueron creados por el modelo.|  
 |Nodo oculto|Siempre es 0.|  
 |Nivel de salida|Indica el número de valores de salida.|  
 |Nodo de salida|Siempre es 0.|  
@@ -131,7 +136,7 @@ caps.handback.revision: 19
 |Estadísticas marginales|En blanco|  
 |Nivel de entrada|En blanco|  
 |Nodo de entrada|Nombre del atributo de entrada|  
-|Nivel oculto|En blanco|  
+|nivel oculto|En blanco|  
 |Nodo oculto|Entero que indica la secuencia del nodo oculto en la lista de nodos ocultos.|  
 |Nivel de salida|En blanco|  
 |Nodo de salida|Si el atributo de salida es continuo, contiene su nombre.<br /><br /> Si el atributo de salida es discreto o discretizado, contiene el nombre del atributo y el valor.|  
@@ -145,7 +150,7 @@ caps.handback.revision: 19
 |Estadísticas marginales|En blanco|  
 |Nivel de entrada|En blanco|  
 |Nodo de entrada|Fragmento XML que contiene la misma información que la columna NODE_DESCRIPTION.|  
-|Nivel oculto|En blanco|  
+|nivel oculto|En blanco|  
 |Nodo oculto|Entero que indica la secuencia del nodo oculto en la lista de nodos ocultos.|  
 |Nivel de salida|En blanco|  
 |Nodo de salida|Fragmento XML que contiene la misma información que la columna NODE_DESCRIPTION.|  
@@ -177,7 +182,7 @@ caps.handback.revision: 19
 |Estadísticas marginales|En blanco|  
 |Nivel de entrada|En blanco|  
 |Nodo de entrada|Nombre del atributo de entrada.|  
-|Nivel oculto|En blanco|  
+|nivel oculto|En blanco|  
 |Nodo oculto|En blanco|  
 |Nivel de salida|En blanco|  
 |Nodo de salida|Nombre del atributo de entrada.|  
@@ -188,7 +193,7 @@ caps.handback.revision: 19
  MSOLAP_NODE_SHORT_CAPTION  
  En los modelos de red neuronal, siempre está en blanco.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  El propósito de entrenar un modelo de red neuronal es determinar los pesos que están asociados a cada transición de una entrada a un punto medio y de un punto medio a un extremo. Por consiguiente, el nivel de entrada del modelo existe principalmente para almacenar los valores reales que se usaron para generarlo. El nivel oculto almacena los pesos que se calcularon y proporciona punteros a los atributos de entrada. El nivel de salida almacena los valores de predicción y también proporciona punteros a los puntos medios en el nivel oculto.  
   
 ##  <a name="bkmk_NodeIDs"></a> Usar nombres de nodo e identificadores  
@@ -213,7 +218,7 @@ caps.handback.revision: 19
 ##  <a name="bkmk_NodeDistTable"></a> Interpretar la información de la tabla NODE_DISTRIBUTION  
  La tabla NODE_DISTRIBUTION puede estar vacía en algunos nodos. Sin embargo, para los nodos de entrada, los nodos del nivel oculto y los nodos de salida, la tabla NODE_DISTRIBUTION almacena información importante e interesante sobre el modelo. Como ayuda para interpretar esta información, la tabla NODE_DISTRIBUTION contiene una columna VALUETYPE para cada fila que indica si el valor de la columna ATTRIBUTE_VALUE es Discreto (4), Discretizado (5) o Continuo (3).  
   
-### Nodos de entrada  
+### <a name="input-nodes"></a>Nodos de entrada  
  El nivel de entrada contiene un nodo para cada valor del atributo que se utilizó en el modelo.  
   
  **Atributo discreto:** el nodo de entrada solo almacena el nombre del atributo y su valor en las columnas ATTRIBUTE_NAME y ATTRIBUTE_VALUE. Por ejemplo, si [Work Shift] es la columna, se crea un nodo independiente para cada valor de esa columna que se utilizó en el modelo, como AM y PM. La tabla NODE_DISTRIBUTION para cada nodo muestra solo el valor actual del atributo.  
@@ -222,10 +227,10 @@ caps.handback.revision: 19
   
  **Atributo continuo:** el nodo de entrada almacena el valor medio del atributo. La tabla NODE_DISTRIBUTION para cada nodo muestra solo el valor actual del atributo.  
   
-### Nodos del nivel oculto  
+### <a name="hidden-layer-nodes"></a>Nodos del nivel oculto  
  El nivel oculto contiene un número variable de nodos. En cada uno, la tabla NODE_DISTRIBUTION contiene las asignaciones del nivel oculto a los nodos del nivel de entrada. La columna ATTRIBUTE_NAME contiene un identificador de nodo que corresponde a un nodo del nivel de entrada. La columna ATTRIBUTE_VALUE contiene el peso asociado a esa combinación de nodo de entrada y nodo de nivel oculto. La última fila de la tabla contiene un coeficiente que representa el peso de ese nodo oculto en el nivel oculto.  
   
-### Nodos de salida  
+### <a name="output-nodes"></a>Nodos de salida  
  El nivel de salida contiene un nodo de salida para cada valor de salida que se utilizó en el modelo. En cada nodo, la tabla NODE_DISTRIBUTION contiene las asignaciones del nivel de salida a los nodos del nivel oculto. La columna ATTRIBUTE_NAME contiene un identificador de nodo que corresponde a un nodo del nivel oculto. La columna ATTRIBUTE_VALUE contiene el peso asociado a esa combinación de nodo de salida y nodo de nivel oculto.  
   
  La tabla NODE_DISTRIBUTION tiene la información adicional siguiente, en función de si el tipo del atributo es:  
@@ -236,7 +241,7 @@ caps.handback.revision: 19
   
  **Atributo continuo:** las dos filas finales de la tabla NODE_DISTRIBUTION contienen la media del atributo, el coeficiente para el nodo en conjunto y la varianza del coeficiente.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Algoritmo de red neuronal de Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Referencia técnica del algoritmo de red neuronal de Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [Ejemplos de consultas de modelos de red neuronal](../../analysis-services/data-mining/neural-network-model-query-examples.md)  

@@ -1,58 +1,63 @@
 ---
-title: "Referencia t&#233;cnica del algoritmo de serie temporal de Microsoft | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ARTXP"
-  - "HISTORICAL_MODEL_GAP, parámetro"
-  - "AUTO_DETECT_PERIODICITY, parámetro"
-  - "algoritmos de serie temporal [Analysis Services]"
-  - "ARIMA"
-  - "INSTABILITY_SENSITIVITY, parámetro"
-  - "PERIODICITY_HINT, parámetro"
-  - "MAXIMUM_SERIES_VALUE, parámetro"
-  - "serie temporal [Analysis Services]"
-  - "MINIMUM_SUPPORT, parámetro"
-  - "HISTORIC_MODEL_COUNT, parámetro"
-  - "FORECAST_METHOD, parámetro"
-  - "MISSING_VALUE_SUBSTITUTION, parámetro"
-  - "MINIMUM_SERIES_VALUE, parámetro"
-  - "COMPLEXITY_PENALTY, parámetro"
-  - "PREDICTION_SMOOTHING, parámetro"
+title: "Referencia técnica del algoritmo de serie temporal de Microsoft | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ARTXP
+- HISTORICAL_MODEL_GAP parameter
+- AUTO_DETECT_PERIODICITY parameter
+- time series algorithms [Analysis Services]
+- ARIMA
+- INSTABILITY_SENSITIVITY parameter
+- PERIODICITY_HINT parameter
+- MAXIMUM_SERIES_VALUE parameter
+- time series [Analysis Services]
+- MINIMUM_SUPPORT parameter
+- HISTORIC_MODEL_COUNT parameter
+- FORECAST_METHOD parameter
+- MISSING_VALUE_SUBSTITUTION parameter
+- MINIMUM_SERIES_VALUE parameter
+- COMPLEXITY_PENALTY parameter
+- PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 6d4e3cded028a4674ddb432c322b8fc18106db30
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Referencia t&#233;cnica del algoritmo de serie temporal de Microsoft
+# <a name="microsoft-time-series-algorithm-technical-reference"></a>Referencia técnica del algoritmo de serie temporal de Microsoft
   El algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] incluye dos algoritmos independientes para analizar series de tiempo:  
   
 -   El algoritmo ARTXP, que se introdujo en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], se ha optimizado para predecir el siguiente valor probable de una serie.  
   
 -   El algoritmo ARIMA se ha agregado en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para mejorar la exactitud de la predicción a largo plazo.  
   
- De forma predeterminada, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utiliza cada algoritmo por separado para entrenar el modelo y, a continuación, combina los resultados para obtener la mejor predicción de un número variable de predicciones. También puede decidir utilizar solo uno de los algoritmos, dependiendo de los datos y los requisitos de la predicción. En [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], también puede personalizar el punto límite que controla la combinación de algoritmos durante la predicción.  
+ De forma predeterminada, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utiliza cada algoritmo por separado para entrenar el modelo y, a continuación, combina los resultados para obtener la mejor predicción de un número variable de predicciones. También puede decidir utilizar solo uno de los algoritmos, dependiendo de los datos y los requisitos de la predicción. En [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], también puede personalizar el punto límite que controla la combinación de algoritmos durante la predicción.  
   
  En este tema se proporciona información adicional sobre cómo se implementa cada algoritmo y cómo se puede personalizar el algoritmo estableciendo los parámetros para ajustar el análisis y los resultados de la predicción.  
   
-## Implementación del algoritmo de serie temporal de Microsoft  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research desarrolló el algoritmo ARTXP original que se usaba en SQL Server 2005 y basó la implementación en el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Por consiguiente, el algoritmo ARTXP se puede describir como un modelo de árbol con regresión automática que permite representar datos de series temporales periódicas. Este algoritmo relaciona un número variable de elementos pasados con cada elemento actual que se predice. El nombre, ARTXP, deriva del hecho de que el método de árbol de regresión automática (un algoritmo ART) se aplica a varios estados anteriores desconocidos. Para obtener una explicación detallada del algoritmo ARTXP, vea [Autoregressive Tree Models for Time-Series Analysis](http://go.microsoft.com/fwlink/?LinkId=45966) (Modelos de árbol de regresión automática para el análisis de series temporales).  
+## <a name="implementation-of-the-microsoft-time-series-algorithm"></a>Implementación del algoritmo de serie temporal de Microsoft  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research desarrolló el algoritmo ARTXP original que se usaba en SQL Server 2005 y basó la implementación en el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Por consiguiente, el algoritmo ARTXP se puede describir como un modelo de árbol con regresión automática que permite representar datos de series temporales periódicas. Este algoritmo relaciona un número variable de elementos pasados con cada elemento actual que se predice. El nombre, ARTXP, deriva del hecho de que el método de árbol de regresión automática (un algoritmo ART) se aplica a varios estados anteriores desconocidos. Para obtener una explicación detallada del algoritmo ARTXP, vea [Autoregressive Tree Models for Time-Series Analysis](http://go.microsoft.com/fwlink/?LinkId=45966)(Modelos de árbol de regresión automática para el análisis de series temporales).  
   
  El algoritmo ARIMA se ha agregado al algoritmo de serie temporal de Microsoft en SQL Server 2008 para mejorar la exactitud de la predicción a largo plazo. Se trata de una implementación del proceso para calcular medias móviles integradas autorregresivas descrito por Box y Jenkins. La metodología ARIMA permite determinar las dependencias en las observaciones tomadas secuencialmente en el tiempo y puede incorporar impactos aleatorios como parte del modelo. El método ARIMA también admite la estacionalidad multiplicativa. Se aconseja a los lectores que deseen aprender más acerca del algoritmo ARIMA que lean el trabajo fundamental de Box y Jenkins; esta sección pretende proporcionar detalles específicos sobre cómo se ha implementado la metodología ARIMA en el algoritmo de serie temporal de Microsoft.  
   
  De forma predeterminada, el algoritmo de serie temporal de Microsoft usa ambos métodos, ARTXP y ARIMA, y mezcla los resultados para mejorar la precisión de la predicción. Si desea usar solo un método concreto, puede especificar los parámetros del algoritmo para usar únicamente ARTXP o únicamente ARIMA, o para controlar el modo en que se combinan los resultados de los algoritmos. Observe que el algoritmo ARTXP admite la predicción cruzada, mientras que el algoritmo ARIMA no la admite. Por consiguiente, la predicción cruzada solo está disponible cuando se usa una combinación de algoritmos o cuando se configura el modelo para usar solo ARTXP.  
   
-## Descripción del orden de diferencia de ARIMA  
+## <a name="understanding-arima-difference-order"></a>Descripción del orden de diferencia de ARIMA  
  En esta sección se explica la terminología necesaria para entender el modelo ARIMA y la implementación concreta de las *diferencias* en el algoritmo de serie temporal de Microsoft. Para obtener una explicación completa de estos términos y conceptos, se recomienda revisar el trabajo de Box y Jenkins.  
   
 -   Un término es un componente de una ecuación matemática. Por ejemplo, un término de una ecuación polinómica podría incluir una combinación de variables y constantes.  
@@ -81,13 +86,13 @@ caps.handback.revision: 36
   
  Finalmente, observe que la fórmula descrita anteriormente es el caso simplificado y no tiene sugerencias de estacionalidad. Si se proporcionan sugerencias de estacionalidad, se agrega un término polinómico de AR diferente a la izquierda de la ecuación para cada sugerencia de estacionalidad y se aplica la misma estrategia para eliminar los términos que podrían desestabilizar las series diferenciadas.  
   
-## Personalizar el algoritmo de serie temporal de Microsoft  
+## <a name="customizing-the-microsoft-time-series-algorithm"></a>Personalizar el algoritmo de serie temporal de Microsoft  
  El algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite los parámetros siguientes que afectan al comportamiento, rendimiento y precisión del modelo de minería de datos resultante.  
   
 > [!NOTE]  
->  El algoritmo de serie temporal de Microsoft está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; sin embargo, algunas características avanzadas, como los parámetros para personalizar el análisis de series temporales, solo se admiten en ediciones concretas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server](Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+>  El algoritmo de serie temporal de Microsoft está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; sin embargo, algunas características avanzadas, como los parámetros para personalizar el análisis de series temporales, solo se admiten en ediciones concretas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).  
   
-### Detección de la estacionalidad  
+### <a name="detection-of-seasonality"></a>Detección de la estacionalidad  
  Los algoritmos ARTXP y ARIMA admiten la detección de la estacionalidad o periodicidad. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa la transformación rápida de Fourier para detectar la estacionalidad antes de realizar el entrenamiento. Sin embargo, es posible afectar a la detección de la estacionalidad y a los resultados del análisis de la serie temporal estableciendo los parámetros del algoritmo.  
   
 -   Al cambiar el valor de *AUTODETECT_SEASONALITY*, puede influir en el número de posibles segmentos de tiempo que se generan.  
@@ -97,10 +102,10 @@ caps.handback.revision: 36
 > [!NOTE]  
 >  Los algoritmos ARTXP y ARIMA son muy sensibles a las sugerencias de estacionalidad. Por consiguiente, si se proporciona una sugerencia equivocada, los resultados pueden verse afectados de forma adversa.  
   
-### Elegir un algoritmo y especificar la combinación de algoritmos  
+### <a name="choosing-an-algorithm-and-specifying-the-blend-of-algorithms"></a>Elegir un algoritmo y especificar la combinación de algoritmos  
  De forma predeterminada, o al seleccionar la opción MIXED, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] combina los algoritmos y les asigna el mismo peso. Sin embargo, en Enterprise Edition, puede especificar un algoritmo determinado, o puede personalizar la proporción de cada algoritmo en los resultados estableciendo un parámetro que pondere los resultados hacia la predicción a corto o a largo plazo. De forma predeterminada, el parámetro *FORECAST_METHOD* se establece en MIXED y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa ambos algoritmos para, luego, ponderar sus valores con el fin de obtener el máximo partido de cada algoritmo.  
   
--   Para controlar la elección de algoritmo, establezca el parámetro *FORECAST_METHOD*.  
+-   Para controlar la elección de algoritmo, establezca el parámetro *FORECAST_METHOD* .  
   
 -   Si desea utilizar la predicción cruzada, debe utilizar la opción ARTXP o MIXED, porque ARIMA no la admite.  
   
@@ -108,7 +113,7 @@ caps.handback.revision: 36
   
 -   Establezca *FORECAST_METHOD* en ARIMA si quiere mejorar la predicción a largo plazo.  
   
- En Enterprise Edition, también puede personalizar el modo en que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] realiza la combinación de los algoritmos ARIMA y ARTXP. Puede controlar tanto el punto inicial para la combinación como la tasa de cambio estableciendo el parámetro *PREDICTION_SMOOTHING*:  
+ En Enterprise Edition, también puede personalizar el modo en que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] realiza la combinación de los algoritmos ARIMA y ARTXP. Puede controlar tanto el punto inicial para la combinación como la tasa de cambio estableciendo el parámetro *PREDICTION_SMOOTHING* :  
   
 -   Si establece *PREDICTION_SMOOTHING* en 0, el modelo solo usa ARTXP.  
   
@@ -120,13 +125,13 @@ caps.handback.revision: 36
   
  En el diagrama siguiente se muestra cómo el modelo combina los algoritmos cuando *PREDICTION_SMOOTHING* se establece en el valor predeterminado, 0,5. ARIMA y ARTXP se ponderan equitativamente al principio, pero a medida que el número de pasos de predicción aumenta, la ponderación de ARIMA es mayor.  
   
- ![curva predeterminada de la mezcla de los algoritmos de serie temporal](../../analysis-services/data-mining/media/time-series-mixing-default.gif "curva predeterminada de la mezcla de los algoritmos de serie temporal")  
+ ![curva predeterminada de la combinación de algoritmos de serie temporal](../../analysis-services/data-mining/media/time-series-mixing-default.gif "curva predeterminada de la combinación de algoritmos de serie temporal")  
   
  Por el contrario, el diagrama siguiente ilustra la combinación de los algoritmos cuando *PREDICTION_SMOOTHING* se establece en 0,2. En el paso [!INCLUDE[tabValue](../../includes/tabvalue-md.md)], el modelo pondera ARIMA como 0,2 y ARTXP como 0,8. Posteriormente, el peso de ARIMA aumenta exponencialmente y el de ARTXP disminuye exponencialmente.  
   
- ![curva de caída de la mezcla del modelo de serie temporal](../../analysis-services/data-mining/media/time-series-blending-curve.gif "curva de caída de la mezcla del modelo de serie temporal")  
+ ![curva de mezcla del modelo de serie tiempo caída](../../analysis-services/data-mining/media/time-series-blending-curve.gif "curva de mezcla del modelo de serie tiempo caída")  
   
-### Establecer parámetros del algoritmo  
+### <a name="setting-algorithm-parameters"></a>Establecer parámetros del algoritmo  
  En la tabla siguiente se describen los parámetros que se pueden utilizar con el algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 |Parámetro|Description|  
@@ -144,18 +149,18 @@ caps.handback.revision: 36
 |*PERIODICITY_HINT*|Proporciona una sugerencia al algoritmo en cuanto a la periodicidad de los datos. Por ejemplo, si las ventas varían por año y la unidad de medida en la serie son los meses, la periodicidad es 12. Este parámetro toma el formato de {n [, n]}, donde n es un número positivo.<br /><br /> La n de los corchetes [] es opcional y puede repetirse con la frecuencia que sea necesaria. Por ejemplo, para proporcionar varias sugerencias de periodicidad para los datos suministrados mensualmente, se puede escribir {12, 3, 1} para detectar patrones durante un año, trimestre o mes. Sin embargo, la periodicidad influye significativamente en la calidad del modelo. Si la sugerencia que se proporciona difiere de la periodicidad real, los resultados pueden verse afectados negativamente.<br /><br /> El valor predeterminado es \{1\}.<br /><br /> Tenga en cuenta que las llaves son obligatorias. Además, este parámetro tiene un tipo de datos de cadena. Por consiguiente, si se escribe este parámetro como parte de una instrucción de Extensiones de minería de datos (DMX), el número y las llaves se deben poner entre comillas.|  
 |*PREDICTION_SMOOTHING*|Especifica cómo se debe combinar el modelo para optimizar el pronóstico. Se puede escribir cualquier valor entre [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] y 1, o utilizar uno de los valores siguientes:<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]:<br />                          Especifica que la predicción solo utiliza ARTXP. El pronóstico se optimiza para un menor número de predicciones.<br /><br /> 1: especifica que la predicción solo utiliza ARIMA. El pronóstico se optimiza para un gran número de predicciones.<br /><br /> 0.5: valor predeterminado. Especifica que se deben utilizar ambos algoritmos y combinar los resultados para la predicción.<br /><br /> <br /><br /> Al realizar el suavizado de predicción, use el parámetro *FORECAST_METHOD* para controlar el entrenamiento.   Tenga en cuenta que este parámetro solo está disponible en algunas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-### Marcas de modelado  
- El algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las marcas de modelado siguientes. Al crear la estructura o el modelo de minería de datos, se definen las marcas de modelado que especifican cómo se tratan los valores de cada columna durante el análisis. Para más información, vea [Marcas de modelado &#40;Minería de datos&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md).  
+### <a name="modeling-flags"></a>Marcas de modelado  
+ El algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las marcas de modelado siguientes. Al crear la estructura o el modelo de minería de datos, se definen las marcas de modelado que especifican cómo se tratan los valores de cada columna durante el análisis. Para obtener más información, vea [Marcas de modelado &#40;Minería de datos&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md).  
   
 |Marca de modelado|Description|  
 |-------------------|-----------------|  
 |NOT NULL|Indica que la columna no puede contener un valor NULL. Se producirá un error si Analysis Services encuentra un valor NULL durante el entrenamiento del modelo.<br /><br /> Se aplica a las columnas de la estructura de minería de datos.|  
 |MODEL_EXISTENCE_ONLY|Significa que la columna se tratará como si tuviera dos estados posibles: ausente y existente. Un valor NULL es un valor ausente.<br /><br /> Se aplica a las columnas del modelo de minería de datos.|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Un modelo de serie temporal debe contener una columna de clave temporal que contenga valores únicos, columnas de entrada y al menos una columna de predicción.  
   
-### Columnas de entrada y de predicción  
+### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
  El algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite los tipos de contenido de columna de entrada, tipos de contenido de columna de predicción y marcas de modelado específicas que se indican en esta tabla.  
   
 |Columna|Tipos de contenido|  
@@ -166,9 +171,9 @@ caps.handback.revision: 36
 > [!NOTE]  
 >  Se admiten los tipos de contenido Cyclical y Ordered, pero el algoritmo los trata como valores discretos y no realiza un procesamiento especial.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Algoritmo de serie temporal de Microsoft](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Ejemplos de consultas de modelos de serie temporal](../../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Ejemplos de consultas de modelo de serie temporal](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Contenido del modelo de minería de datos para los modelos de serie temporal &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

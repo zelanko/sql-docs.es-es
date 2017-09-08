@@ -1,27 +1,32 @@
 ---
-title: "Definir dimensiones vinculadas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dimensiones [Analysis Services], vinculadas"
-  - "dimensiones vinculadas [Analysis Services]"
+title: Definir dimensiones vinculadas | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], linked
+- linked dimensions [Analysis Services]
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d7830d5075da8ab4b741ecb31bbdefb3acdf6cb9
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Definir dimensiones vinculadas
+# <a name="define-linked-dimensions"></a>Definir dimensiones vinculadas
   Una dimensión vinculada se basa en una dimensión creada y almacenada en otra base de datos de Analysis Services de la misma versión y con el mismo nivel de compatibilidad. Con una dimensión vinculada, puede crear, almacenar y mantener una dimensión en una base de datos y permitir que esa dimensión esté disponible para los usuarios de varias bases de datos. Para los usuarios, una dimensión vinculada es como cualquier otra dimensión.  
   
  Las dimensiones vinculadas son de solo lectura. Si desea modificar la dimensión o crear relaciones nuevas, debe cambiar la dimensión de origen, y después eliminar y volver a crear la dimensión vinculada y sus relaciones. No puede actualizar una dimensión vinculada para elegir cambios del objeto de origen.  
@@ -31,14 +36,14 @@ caps.handback.revision: 37
 > [!NOTE]  
 >  Como la actualización no está disponible, la mayoría de los desarrolladores de Analysis Services copian dimensiones en lugar de vincularlas. Puede copiar dimensiones entre proyectos dentro de la misma solución. Para obtener más información, vea [Actualizar una dimensión vinculada en SSAS](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx).  
   
-## Requisitos previos  
- La base de datos de origen que proporciona la dimensión y la base de datos actual que la usa deben tener la misma versión y el mismo nivel de compatibilidad. Para más información, vea [Nivel de compatibilidad de una base de datos multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
+## <a name="prerequisites"></a>Requisitos previos  
+ La base de datos de origen que proporciona la dimensión y la base de datos actual que la usa deben tener la misma versión y el mismo nivel de compatibilidad. Para obtener más información, vea [Nivel de compatibilidad de una base de datos multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
  La base de datos de origen debe estar implementada y en línea. Los servidores que publican o usan objetos vinculados deben configurarse para permitir la operación (vea la información que se incluye a continuación).  
   
  La dimensión que pretende usar no puede ser una dimensión vinculada.  
   
-## Configurar el servidor para permitir objetos vinculados  
+## <a name="configure-server-to-allow-linked-objects"></a>Configurar el servidor para permitir objetos vinculados  
   
 1.  En SQL Server Management Studio, conéctese a un servidor de Analysis Services. En el Explorador de objetos, haga clic con el botón derecho en el nombre del servidor y, después, seleccione **Facetas**.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 37
   
 3.  Establezca **LinkedObjectsLinksToOtherInstances** en **True** para que el servidor solicite datos de objetos vinculados de las bases de datos que se ejecutan en otras instancias.  
   
-## Cree una dimensión vinculada en Herramientas de datos de SQL Server  
+## <a name="create-a-linked-dimension-in-sql-server-data-tools"></a>Cree una dimensión vinculada en Herramientas de datos de SQL Server  
   
 1.  Inicie el asistente. En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga clic con el botón derecho en la carpeta **Dimensiones** de una base de datos o proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y, después, haga clic en **Nueva dimensión vinculada**.  
   
@@ -73,10 +78,10 @@ caps.handback.revision: 37
   
 7.  En la página Información de suplantación, haga clic en **Utilizar la cuenta de servicio**. Haga clic en **Siguiente**y, a continuación, finalice el Asistente. La conexión que acaba de definir se seleccionará en el Asistente para objetos vinculados.  
   
-## Pasos siguientes  
+## <a name="next-steps"></a>Pasos siguientes  
  No puede cambiar la estructura de una dimensión vinculada, de manera que no se la puede ver en la pestaña **Estructura de dimensión** del Diseñador de dimensiones. Después de procesar la dimensión vinculada, puede verla en la pestaña **Explorador** . También puede cambiar su nombre y crear una traducción del nombre.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Nivel de compatibilidad de una base de datos multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [Grupos de medida vinculados](../../analysis-services/multidimensional-models/linked-measure-groups.md)   
  [Relaciones de dimensión](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  

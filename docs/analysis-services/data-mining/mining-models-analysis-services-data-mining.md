@@ -1,30 +1,35 @@
 ---
-title: "Modelos de miner&#237;a de datos (Analysis Services - Miner&#237;a de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "algoritmos [minería de datos]"
-  - "modelos de minería de datos [Analysis Services]"
-  - "arquitectura lógica [Analysis Services - Datos multidimensionales]"
-  - "propiedades [Analysis Services]"
-  - "modelos de minería de datos [Analysis Services], acerca de la minería de datos"
-  - "arquitectura [Analysis Services]"
+title: "Modelos de minería de datos (Analysis Services: minería de datos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- algorithms [data mining]
+- mining models [Analysis Services]
+- logical architecture [Analysis Services Multidimensional Data]
+- properties [Analysis Services]
+- mining models [Analysis Services], about data mining models
+- architecture [Analysis Services]
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3425210ee85136d7b85c48c16562d85534a115f8
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Modelos de miner&#237;a de datos (Analysis Services - Miner&#237;a de datos)
+# <a name="mining-models-analysis-services---data-mining"></a>Modelos de minería de datos (Analysis Services - Minería de datos)
   Un *modelo de minería de datos* se crea mediante la aplicación de un algoritmo a los datos, pero es algo más que un algoritmo o un contenedor de metadatos: es un conjunto de datos, estadísticas y patrones que se pueden aplicar a los nuevos datos para generar predicciones y deducir relaciones.  
   
  En esta sección se explica qué es un modelo de minería de datos y cuál puede ser su uso: la arquitectura básica de modelos y estructuras, las propiedades de los modelos de minería de datos y las maneras de crear modelos de minería de datos y trabajar con ellos.  
@@ -46,7 +51,7 @@ caps.handback.revision: 37
   
  Un modelo de minería de datos está vacío hasta que los datos que proporciona la estructura de minería de datos se procesan y analizan. Una vez procesado el modelo, contiene los metadatos, resultados y enlaces de la estructura de minería de datos.  
   
- ![el elemento contiene los metadatos, patrones y enlaces](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "el elemento contiene los metadatos, patrones y enlaces")  
+ ![modelo contiene metadatos, patrones y enlaces](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "modelo contiene metadatos, patrones y enlaces")  
   
  Los metadatos especifican el nombre del modelo y el servidor donde está almacenado, así como una definición del mismo, incluidas las columnas de la estructura de minería de datos que se usaron para generarlo, las definiciones de los filtros que se aplicaron al procesarlo y el algoritmo empleado para analizar los datos. Todas estas opciones, las columnas de datos y sus tipos de datos, filtros y algoritmo, influyen en gran medida en los resultados del análisis.  
   
@@ -121,7 +126,7 @@ caps.handback.revision: 37
   
  También puede crear consultas en el modelo de minería de datos para realizar predicciones o recuperar los metadatos del modelo o los patrones que este crea. Las consultas se crean con Extensiones de minería de datos (DMX).  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
   
 |Temas|Vínculos|  
 |------------|-----------|  
@@ -132,7 +137,7 @@ caps.handback.revision: 37
 |Cómo usar los visores personalizados de minería de datos en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Visores de modelos de minería de datos](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |Ver ejemplos de los diferentes tipos de consultas que se pueden usar con los modelos de minería de datos.|[Consultas de minería de datos](../../analysis-services/data-mining/data-mining-queries.md)|  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
  Use los vínculos siguientes para obtener información más específica sobre cómo trabajar con modelos de minería de datos  
   
 |Tarea|Vínculo|  
@@ -144,7 +149,7 @@ caps.handback.revision: 37
 |Rellenar los modelos con datos, o actualizar los datos de un modelo|[Procesar un modelo de minería de datos](../../analysis-services/data-mining/process-a-mining-model.md)|  
 |Trabajar con modelos OLAP|[Crear una dimensión de minería de datos](../../analysis-services/data-mining/create-a-data-mining-dimension.md)|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Objetos de base de datos &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

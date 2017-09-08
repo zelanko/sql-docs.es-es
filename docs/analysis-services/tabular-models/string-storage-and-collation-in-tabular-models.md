@@ -1,29 +1,34 @@
 ---
-title: "Almacenamiento e intercalaci&#243;n de cadenas en modelos tabulares | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Almacenamiento e intercalación en los modelos tabulares de cadenas | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9009024f08b7c4a4bce3d6b57bd3231025b38a59
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Almacenamiento e intercalaci&#243;n de cadenas en modelos tabulares
+# <a name="string-storage-and-collation-in-tabular-models"></a>Almacenamiento e intercalación de cadenas en modelos tabulares
   Las cadenas (valores de texto) se almacenan en los modelos tabulares utilizando un formato muy comprimido; debido a esta compresión, puede obtener resultados inesperados al recuperar cadenas completas o parciales. Además, dado que la configuración regional y las intercalaciones de las cadenas se heredan jerárquicamente del objeto primario más próximo, si no se define explícitamente el idioma de las cadenas, la configuración regional y la intercalación del elemento primario pueden afectar a la forma de almacenamiento de cada una de las cadenas y determinar si la cadena es única o se combina con cadenas similares tal como se define en la intercalación primaria.  
   
  En este tema se describe el mecanismo mediante el cual se comprimen y almacenan las cadenas, y se proporcionan ejemplos de cómo afectan la intercalación y el idioma a los resultados de las fórmulas de texto en los modelos tabulares.  
   
-## Almacenamiento  
+## <a name="storage"></a>Almacenamiento  
  En los modelos tabulares, todos los datos están muy comprimidos para que puedan almacenarse sin problemas en la memoria. En consecuencia, todas las cadenas consideradas léxicamente equivalentes se almacenan solo una vez. La primera instancia de la cadena se utiliza como la representación canónica y a partir de este momento cada cadena equivalente se indiza al mismo valor comprimido que la primera repetición.  
   
  La pregunta clave es: ¿qué constituye una cadena léxicamente equivalente? Dos cadenas se consideran léxicamente equivalentes si se pueden considerar como la misma palabra. Por ejemplo, cuando busca la palabra **violin** en inglés en un diccionario, puede encontrar la entrada **Violin** o **violin**, dependiendo de la directiva editorial del diccionario, pero generalmente considerará ambas palabras equivalentes, y no tendrá en cuenta la diferencia en el uso de mayúsculas. En un modelo tabular, el factor que determina si dos cadenas son léxicamente equivalentes no es la directiva editorial ni las preferencias del usuario, sino la configuración regional y la intercalación asignadas a la columna.  
@@ -60,7 +65,7 @@ caps.handback.revision: 10
 > [!WARNING]  
 >  Quizá decida que desea definir la cadena que se almacenará en primer lugar, de acuerdo con lo que considera correcto, pero esto puede resultar muy difícil. No es fácil determinar con antelación qué fila debe procesar el motor en primer lugar, dado que todos los valores se consideran iguales. En lugar de ello, si necesita establecer el valor estándar, deberá limpiar todas las cadenas antes de cargar el modelo.  
   
-## Orden de la intercalación y de la configuración regional  
+## <a name="locale-and-collation-order"></a>Orden de la intercalación y de la configuración regional  
  Cuando se comparan cadenas (valores de texto), lo que define la equivalencia es normalmente el aspecto cultural de cómo se interpretan dichas cadenas. En algunas referencias culturales, el acento o el uso de mayúsculas en un carácter puede cambiar completamente el significado de la cadena; por lo tanto, normalmente están diferencias se tienen en consideración a la hora de determinar la equivalencia para un idioma o una región concretos.  
   
  Generalmente, cuando utiliza su equipo, este ya está configurado para que reconozca sus propias expectativas culturales y comportamientos lingüísticos, y las operaciones de cadena como la ordenación y la comparación de valores de texto se comportan de la forma esperada. La configuración que controla el comportamiento específico del idioma se define con los valores de **Configuración regional** de Windows. Las aplicaciones leen estos valores y cambian su comportamiento en consecuencia. En algunos casos, una aplicación puede incluir una característica que le permita cambiar su comportamiento cultural o la manera en que se comparan las cadenas.  
@@ -71,7 +76,7 @@ caps.handback.revision: 10
   
 -   La intercalación define el orden de los caracteres y su equivalencia.  
   
- Es importante resaltar que un identificador de idioma no solo identifica un idioma, sino también el país o la región donde se utiliza dicho idioma. Cada identificador de idioma también tiene una especificación de intercalación predeterminada. Para obtener más información acerca de los identificadores de idioma, vea [Id. de configuración regional asignados por Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx). Puede utilizar la columna LCID Dec para obtener el identificador correcto al insertar manualmente un valor. Para más información sobre el concepto de intercalaciones en SQL, vea [COLLATE &#40;Transact-SQL&#41;](../Topic/COLLATE%20\(Transact-SQL\).md). Para obtener información sobre los designadores de colación y los estilos de comparación para los nombres de intercalación de Windows, vea [Nombre de intercalación de Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). En el tema [Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md) se asignan los nombres de intercalación de Windows a los nombres usados para SQL.  
+ Es importante resaltar que un identificador de idioma no solo identifica un idioma, sino también el país o la región donde se utiliza dicho idioma. Cada identificador de idioma también tiene una especificación de intercalación predeterminada. Para obtener más información acerca de los identificadores de idioma, vea [Id. de configuración regional asignados por Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx). Puede utilizar la columna LCID Dec para obtener el identificador correcto al insertar manualmente un valor. Para más información sobre el concepto de intercalaciones en SQL, vea [COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md). Para obtener información sobre los designadores de colación y los estilos de comparación para los nombres de intercalación de Windows, vea [Nombre de intercalación de Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). En el tema [Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md) se asignan los nombres de intercalación de Windows a los nombres usados para SQL.  
   
  Una vez creada la base de datos de modelos tabulares, todos los objetos nuevos del modelo heredarán los atributos de idioma y de intercalación de los atributos de base de datos. Esto es válido para todos los objetos. La ruta de herencia comienza en el objeto, examina el elemento primario para comprobar si se debe heredar algún atributo de idioma y de intercalación y, si no encuentra ninguno, continúa hacia la parte superior y busca los atributos de idioma e intercalación en el nivel de base de datos. En otras palabras, si no se especifican los atributos de idioma y de intercalación para un objeto, este hereda de forma predeterminada los atributos de su elemento primario más próximo.  
   

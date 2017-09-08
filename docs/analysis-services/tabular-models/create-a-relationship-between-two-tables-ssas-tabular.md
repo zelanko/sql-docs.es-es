@@ -1,37 +1,42 @@
 ---
-title: "Crear una relaci&#243;n entre dos tablas (SSAS tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.createrelatdb.f1"
-  - "sql13.asvs.bidtoolset.managereldb.f1"
+title: "Crear una relación entre dos tablas (SSAS Tabular) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.createrelatdb.f1
+- sql13.asvs.bidtoolset.managereldb.f1
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9bc0373c1b0e018430106530da93107c600bbdee
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Crear una relaci&#243;n entre dos tablas (SSAS tabular)
+# <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>Crear una relación entre dos tablas (SSAS tabular)
   Si entre las tablas del origen de datos no hay relaciones existentes, o si agrega nuevas tablas, puede usar las herramientas del diseñador de modelos para crear relaciones. Para más información sobre cómo se usan las relaciones en los modelos tabulares, vea [Relaciones &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
   
-## Crear una relación entre dos tablas  
+## <a name="create-a-relationship-between-two-tables"></a>Crear una relación entre dos tablas  
   
-#### Para crear una relación entre dos tablas en la Vista de diagrama (hacer clic y arrastrar)  
+#### <a name="to-create-a-relationship-between-two-tables-in-diagram-view-click-and-drag"></a>Para crear una relación entre dos tablas en la Vista de diagrama (hacer clic y arrastrar)  
   
 1.  En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], haga clic en el menú **Modelo** , a continuación, en **Vista de modelo**y, por último, en **Vista de diagrama**.  
   
 2.  Haga clic (y mantenga presionado el botón) en una columna de una tabla, a continuación arrastre el cursor a una columna de búsqueda relacionada en una tabla de búsqueda relacionada y suelte el botón. La relación se creará automáticamente en el orden correcto.  
   
-#### Para crear una relación entre dos tablas en la Vista de diagrama (hacer clic con el botón secundario)  
+#### <a name="to-create-a-relationship-between-two-tables-in-diagram-view-right-click"></a>Para crear una relación entre dos tablas en la Vista de diagrama (hacer clic con el botón secundario)  
   
 1.  En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], haga clic en el menú **Modelo** , a continuación, en **Vista de modelo**y, por último, en **Vista de diagrama**.  
   
@@ -45,13 +50,13 @@ caps.handback.revision: 16
   
 5.  En **Columna de búsqueda relacionada**, seleccione una tabla que tenga al menos una columna de datos relacionada con la tabla que acaba de seleccionar en **Tabla**.  
   
-     En una relación "uno a varios", esta tabla debería estar en el extremo "uno", lo que quiere decir que los valores de la columna seleccionada no contienen duplicados. Si intenta crear la relación en el orden equivocado (uno a varios en lugar de varios a uno), se mostrará un icono al lado del campo **Columna de búsqueda relacionada**. Invierta el orden para crear una relación válida.  
+     En una relación "uno a varios", esta tabla debería estar en el extremo "uno", lo que quiere decir que los valores de la columna seleccionada no contienen duplicados. Si intenta crear la relación en el orden equivocado (uno a varios en lugar de varios a uno), se mostrará un icono al lado del campo **Columna de búsqueda relacionada** . Invierta el orden para crear una relación válida.  
   
 6.  En **Columna de búsqueda relacionada**, seleccione una columna que tenga valores únicos que coincidan con los valores seleccionados para **Columna**.  
   
 7.  Haga clic en **Crear**.  
   
-#### Para crear una relación entre dos tablas en la vista de datos  
+#### <a name="to-create-a-relationship-between-two-tables-in-data-view"></a>Para crear una relación entre dos tablas en la vista de datos  
   
 1.  En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], haga clic en el menú **Tabla** y, a continuación, en **Crear relaciones**.  
   
@@ -63,13 +68,13 @@ caps.handback.revision: 16
   
 4.  En **Columna de búsqueda relacionada**, seleccione una tabla que tenga al menos una columna de datos relacionada con la tabla que acaba de seleccionar en **Tabla**.  
   
-     En una relación "uno a varios", esta tabla debería estar en el extremo "uno", lo que quiere decir que los valores de la columna seleccionada no contienen duplicados. Si intenta crear la relación en el orden equivocado (uno a varios en lugar de varios a uno), se mostrará un icono al lado del campo **Columna de búsqueda relacionada**. Invierta el orden para crear una relación válida.  
+     En una relación "uno a varios", esta tabla debería estar en el extremo "uno", lo que quiere decir que los valores de la columna seleccionada no contienen duplicados. Si intenta crear la relación en el orden equivocado (uno a varios en lugar de varios a uno), se mostrará un icono al lado del campo **Columna de búsqueda relacionada** . Invierta el orden para crear una relación válida.  
   
 5.  En **Columna de búsqueda relacionada**, seleccione una columna que tenga valores únicos que coincidan con los valores seleccionados para **Columna**.  
   
 6.  Haga clic en **Crear**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eliminar relaciones &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
  [Relaciones &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
   

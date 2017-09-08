@@ -1,29 +1,34 @@
 ---
-title: "Medidas en el informe de validaci&#243;n cruzada | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "error cuadrático medio [minería de datos]"
-  - "validación cruzada [minería de datos]"
-  - "error absoluto medio [minería de datos]"
-  - "puntuación de registro [minería de datos]"
-  - "probabilidad [minería de datos]"
+title: "Medidas en el informe de validación cruzada | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- root mean square error [data mining]
+- cross-validation [data mining]
+- mean absolute error [data mining]
+- log score [data mining]
+- likelihood [data mining]
 ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f046ddaa3152318bfb3fe01d055bf213fdfdec41
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Medidas en el informe de validaci&#243;n cruzada
+# <a name="measures-in-the-cross-validation-report"></a>Medidas en el informe de validación cruzada
   Durante la validación cruzada, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] divide los datos de una estructura de minería de datos en varias secciones transversales y, a continuación, va probando de forma iterativa la estructura y los modelos de minería de datos asociados. En función de este análisis, genera un conjunto de medidas estándar de precisión para la estructura y para cada modelo.  
   
  El informe contiene cierta información básica acerca del número de subconjuntos de los datos y de la cantidad de datos en cada subconjunto, además de un conjunto de métricas generales que describen la distribución de los datos. Si compara las métricas generales para cada sección transversal, puede evaluar la confiabilidad de la estructura o el modelo.  
@@ -32,10 +37,10 @@ caps.handback.revision: 28
   
  En esta sección se proporciona una lista de las medidas contenidas en el informe de **Validación cruzada** y su significado. Para más información sobre cómo se calcula cada medida, vea [Fórmulas de validación cruzada](../../analysis-services/data-mining/cross-validation-formulas.md).  
   
-## Lista de medidas del informe de validación cruzada  
+## <a name="list-of-measures-in-the-cross-validation-report"></a>Lista de medidas del informe de validación cruzada  
  En la tabla siguiente se enumeran las medidas que aparecen en el informe de validación cruzada. Las medidas se agrupan según el *tipo de prueba*, que se indica en la columna izquierda de la tabla siguiente. La columna de la derecha contiene el nombre de la medida tal como aparece en el informe, junto con una breve explicación de lo que significa.  
   
-|Tipo de prueba|Medidas y descripciones|  
+|tipo de prueba|Medidas y descripciones|  
 |---------------|-------------------------------|  
 |Agrupación en clústeres|Medidas relacionadas con los modelos de agrupación en clústeres|  
 ||**Probabilidad de casos**:<br />                      Esta medida suele indicar la probabilidad de que un caso pertenezca a un clúster determinado. Para la validación cruzada, las puntuaciones se suman y luego se dividen entre el número de casos, de modo que aquí la puntuación es una media de la probabilidad de los casos.|  
@@ -54,7 +59,7 @@ caps.handback.revision: 28
 ||**Promedio**:<br />                      La media de los valores de la partición para una medida determinada.|  
 ||**Desviación estándar**:<br />                      La media de la desviación desde el promedio para una medida concreta, para todas las particiones de un modelo.<br /><br /> Para la validación cruzada, un valor mayor para esta puntuación implica una variación sustancial entre los subconjuntos.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

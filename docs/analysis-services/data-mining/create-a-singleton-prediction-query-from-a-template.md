@@ -1,25 +1,30 @@
 ---
-title: "Crear una consulta de predicci&#243;n singleton desde una plantilla | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "singleton, predicciones de consultas [DMX]"
+title: "Crear una consulta de predicción Singleton desde una plantilla | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- singleton query predictions [DMX]
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c54b65567095408f66c01d22b7f39d839ae939b2
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Crear una consulta de predicci&#243;n singleton desde una plantilla
+# <a name="create-a-singleton-prediction-query-from-a-template"></a>Crear una consulta de predicción singleton desde una plantilla
   Una consulta singleton es útil cuando tiene un modelo que desea utilizar para la predicción, pero no desea asignarlo a un conjunto de datos de entrada externos o realizar predicciones masivas. Una consulta singleton le permite proporcionar un valor o varios valores al modelo y ver al momento el valor predicho.  
   
  Por ejemplo, la consulta DMX siguiente representa una consulta singleton frente al modelo de correo directo, TM_Decision_Tree.  
@@ -33,15 +38,15 @@ AS [t]
   
  El procedimiento siguiente describe cómo utilizar el Explorador de plantillas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para crear rápidamente esta consulta.  
   
-### Abrir las plantillas de Analysis Services en SQL Server Management Studio  
+### <a name="to-open-the-analysis-services-templates-in-sql-server-management-studio"></a>Abrir las plantillas de Analysis Services en SQL Server Management Studio  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en el menú **Ver** , haga clic en el **Explorador de plantillas**.  
   
 2.  Haga clic en el icono de cubo para abrir las plantillas de **Analysis Server**.  
   
-### Abrir una plantilla de consulta de predicción  
+### <a name="to-open-a-prediction-query-template"></a>Abrir una plantilla de consulta de predicción  
   
-1.  En el **Explorador de plantillas**, en la lista de plantillas de Analysis Server, expanda **DMX** y, luego, expanda **Consultas de predicción**.  
+1.  En el **Explorador de plantillas**, en la lista de plantillas de Analysis Server, expanda **DMX**y, luego, expanda **Consultas de predicción**.  
   
 2.  Haga doble clic en **Predicción de singleton**.  
   
@@ -51,7 +56,7 @@ AS [t]
   
 5.  La plantilla se abre en la base de datos especificada junto con un Explorador de objetos del modelo de minería de datos que contiene las funciones de minería de datos y una lista de estructuras de minería de datos y los modelos relacionados.  
   
-### Personalizar la plantilla de consulta singleton  
+### <a name="to-customize-the-singleton-query-template"></a>Personalizar la plantilla de consulta singleton  
   
 1.  En la plantilla, haga clic en la lista desplegable **Bases de datos disponibles** y, después, seleccione una instancia de Analysis Services en la lista.  
   
@@ -61,7 +66,7 @@ AS [t]
   
 3.  En el menú **Consulta** , seleccione **Especificar valores para parámetros de plantilla**.  
   
-4.  En la fila **seleccionar lista**, escriba * para devolver todas las columnas o escriba una lista delimitada por comas de columnas y expresiones para devolver columnas concretas.  
+4.  En la fila **seleccionar lista** , escriba * para devolver todas las columnas o escriba una lista delimitada por comas de columnas y expresiones para devolver columnas concretas.  
   
      Si escribe *, se devuelve la columna de predicción, junto con cualquier columna para la que proporciona nuevos valores en el paso 6.  
   
@@ -92,7 +97,7 @@ AS [t]
   
 11. Haga clic en **Ejecutar**.  
   
-## Vea también  
- [Crear predicciones &#40;Tutorial básico de minería de datos&#41;](../Topic/Creating%20Predictions%20\(Basic%20Data%20Mining%20Tutorial\).md)  
+## <a name="see-also"></a>Vea también  
+ [Crear predicciones &#40;Tutorial básico de minería de datos&#41;](http://msdn.microsoft.com/library/a8410ed2-bb98-4d51-a9eb-b239be1201c2)  
   
   

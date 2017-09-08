@@ -1,35 +1,33 @@
 ---
-title: "Crear una ubicaci&#243;n de confianza para los sitios PowerPivot en Administraci&#243;n central | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Crear una ubicación de confianza para sitios de Power Pivot en Administración Central | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 7
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9f2913ee3aa26a01a704fbdd94a4d01b7044f73a
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Crear una ubicaci&#243;n de confianza para los sitios PowerPivot en Administraci&#243;n central
+# <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Crear una ubicación de confianza para los sitios PowerPivot en Administración central
   Servicios de Excel permite especificar qué ubicaciones son repositorios válidos para los libros que se abren en un servidor de SharePoint. Estas ubicaciones se denominan 'ubicaciones de confianza' y puede utilizar opciones de configuración diferentes para cada ubicación de confianza que cree. En una implementación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, podría considerar crear una ubicación de confianza para los sitios que contienen libros [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , de modo que pueda aplicar la configuración que funcione mejor para acceder a datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , al tiempo que conserva la configuración predeterminada para el resto de la granja.  
   
- Este tema contiene las siguientes secciones:  
   
- [Requisitos previos](#prereq)  
-  
- [Información general](#overview)  
-  
- [Crear una ubicación de confianza para acceso a datos PowerPivot](#create)  
-  
-## Requisitos previos  
+## <a name="prerequisites"></a>Requisitos previos  
  Debe ser administrador de servicios o de una granja para designar una dirección URL como una ubicación de confianza.  
   
  Debe conocer la dirección URL del sitio de SharePoint que contiene la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] u otra biblioteca que almacene los libros. Para obtener la dirección, abra el sitio que contenga la biblioteca, haga clic con el botón derecho en **Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, seleccione **Propiedades** y, después, copie la primera parte de la dirección (URL) que contiene el nombre del servidor y la ruta de acceso al sitio.  
@@ -56,7 +54,7 @@ caps.handback.revision: 7
 6.  En Tipo de ubicación, seleccione **Microsoft SharePoint Foundation**.  
   
     > [!IMPORTANT]  
-    >  Los tipos de ubicación HTTP y UNC no se admiten para el acceso a datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+    >  Los tipos de ubicación HTTP y UNC no se admiten para el acceso a datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 7.  Acepte toda la configuración predeterminada para las propiedades de Administración de sesiones, Propiedades del libro y Comportamiento del cálculo.  
   
@@ -68,9 +66,9 @@ caps.handback.revision: 7
   
 11. Haga clic en **Aceptar**.  
   
-## Vea también  
- [Galería de PowerPivot](../Topic/Power%20Pivot%20Gallery.md)   
- [Creación y personalización de la Galería de PowerPivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
- [Uso de la Galería de Power Pivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  
+## <a name="see-also"></a>Vea también  
+ [Galería de PowerPivot](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)   
+ [Crear y personalizar la Galería de PowerPivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
+ [Use la Galería de PowerPivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  
   
   

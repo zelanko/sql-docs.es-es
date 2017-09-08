@@ -1,34 +1,42 @@
 ---
-title: "Cmdlet Invoke-ASCmd | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Cmdlet Invoke-ASCmd | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 2896b74a-3911-4b3f-89ab-bb375bdb34d8
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 366263980ae7ad9d5a792e6525888080a38ebbf6
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cmdlet Invoke-ASCmd
+# <a name="invoke-ascmd-cmdlet"></a>Cmdlet Invoke-ASCmd
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Permite a un administrador de bases de datos ejecutar instrucciones de script XMLA, expresiones multidimensionales (MDX), instrucciones de extensiones de minería de datos (DMX) o scripts de lenguaje de script de modelo tabular (TMSL).  
   
  TMSL solo se admite en modo de servidor tabular en una instancia de Analysis Services de SQL Server 2016.  
   
  Si desea crear bases de datos u otros objetos, este es el cmdlet que usaría, con un archivo de entrada de script.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
  `Invoke-ASCmd –Query <string> [-Server <string>] [-Database <string>] [-Credential <PSCredential>] [-ConnectionTimeout <int>] [-QueryTimeout <int>] [-Variable <string[]>] [-TraceFile <string>] [-TraceFileFormat <TraceFileFormatOption>] [-TraceFileDelimiter <string>] [-TraceTimeout <int>] [-TraceLevel <TraceLevelOption>] [<CommonParameters>]`  
   
  `Invoke-ASCmd –InputFile <string> [-Server <string>] [-Database <string>] [-Credential <PSCredential>] [-ConnectionTimeout <int>] [-QueryTimeout <int>] [-Variable <string[]>] [-TraceFile <string>] [-TraceFileFormat <TraceFileFormatOption>] [-TraceFileDelimiter <string>] [-TraceTimeout <int>] [-TraceLevel <TraceLevelOption>] [<CommonParameters>]`  
   
-## Description  
+## <a name="description"></a>Description  
  El cmdlet Invoke-ASCmd puede ejecutar las consultas o los scripts contenidos en los archivos de entrada.  
   
  Para XMLA, se admiten los siguientes comandos: Alter, Backup, Batch, BeginTransaction, Cancel, ClearCache, CommitTransaction, Create, Delete, DesignAggregations, Drop, Insert, Lock, MergePartitions, NotifyTableChange, Process, Restore, RollbackTransaction, Statement (que se usan para ejecutar consultas MDX e instrucciones DMX), Subscribe, Synchronize, Unlock, Update, UpdateCells.  
@@ -37,9 +45,9 @@ caps.handback.revision: 15
   
  Este cmdlet admite el parámetro –Credential, que se puede usar si configuró la instancia de Analysis Services para el acceso HTTP. El parámetro –Credential toma un objeto PSCredential que proporciona una identidad de usuario de Windows. A continuación, IIS suplantará a este usuario al conectarse a Analysis Services. La identidad debe tener permisos de administrador del sistema en la instancia de Analysis Services para ejecutar el script.  
   
-## Parámetros  
+## <a name="parameters"></a>Parámetros  
   
-### -Query \<cadena>  
+### <a name="-query-string"></a>: Realiza una consulta \<cadena >  
  Especifica el script, la consulta o la instrucción reales directamente en la línea de comandos en lugar de hacerlo en un archivo. También puede especificar una consulta como entrada de la canalización. Es necesario especificar un valor para los parámetros **–InputFile** o **–Query** al usar **Invoke-AsCmd**.  
   
 |||  
@@ -50,7 +58,7 @@ caps.handback.revision: 15
 |¿Aceptar la entrada de la canalización?|True (ByValue)|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -InputFile \<cadena>  
+### <a name="-inputfile-string"></a>-InputFile \<cadena >  
  Identifica el archivo que contiene el script XMLA, la consulta MDX, la instrucción DMX o el script TMSL (en JSON). Es necesario especificar un valor para los parámetros **–InputFile** o **–Query** al usar **Invoke-AsCmd**.  
   
 |||  
@@ -61,7 +69,7 @@ caps.handback.revision: 15
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -Server \<cadena>  
+### <a name="-server-string"></a>-Server \<cadena >  
  Especifica la instancia de Analysis Services a la que el cmdlet se conectará y ejecutará. Si no se proporciona un nombre de servidor, se establecerá una conexión al host local. Para las instancias predeterminadas, especifique solo el nombre del servidor. Para las instancias con nombre, utilice el formato nombreDeServidor\nombreDeInstancia. En las conexiones HTTP, utilice el formato http[s]://server[:port]/virtualdirectory/msmdpump.dll.  
   
 |||  
@@ -72,7 +80,7 @@ caps.handback.revision: 15
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -Database \<string>  
+### <a name="-database-string"></a>-Base de datos \<cadena >  
  Especifica la base de datos en la que se ejecutará una consulta MDX o una instrucción DMX. El parámetro database se omite cuando el cmdlet ejecuta un script XMLA, ya que el script XMLA incluye el nombre de la base de datos.  
   
 |||  
@@ -83,14 +91,14 @@ caps.handback.revision: 15
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -Credential \<PSCredential>  
+### <a name="-credential-pscredential"></a>-Credential \<PSCredential >  
  Especifica un objeto PSCredential que proporciona el nombre de usuario y contraseña de Windows. Especifique este parámetro solo si la instancia de Analysis Services está configurada para el acceso HTTP con autenticación básica. Para las conexiones nativas que usan seguridad integrada, este parámetro se omite.  
   
  Si este parámetro está presente, las credenciales que proporcione se anexan a la cadena de conexión. IIS suplantará esta identidad de usuario al conectarse a Analysis Services. Si no se especifica ninguna credencial, se usará la cuenta predeterminada de Windows del usuario que ejecuta la herramienta.  
   
  Para usar este parámetro, cree primero un objeto PSCredential con Get-Credential para especificar el nombre de usuario y la contraseña (por ejemplo, `$Cred=Get-Credential “adventure-works\admin”`. Después, puede canalizar este objeto al parámetro -Credential `(-Credential:$Cred`).  
   
- Para más información sobre el uso de la autenticación y credenciales, vea [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md) (Scripting de PowerShell en Analysis Services). Para más información sobre el acceso HTTP, vea [Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md).  
+   Para más información, vea [Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
 |||  
 |-|-|  
@@ -100,7 +108,7 @@ caps.handback.revision: 15
 |¿Aceptar la entrada de la canalización?|True (ByValue)|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -ConnectionTimeout \<int>  
+### <a name="-connectiontimeout-int"></a>-ConnectionTimeout \<int >  
  Especifica el número de segundos antes de que se agote el tiempo de espera de la conexión a la instancia de Analysis Services. El tiempo de espera debe ser un entero comprendido entre 0 y 65534. Si se especifica 0, los intentos de conexión no tienen tiempo de espera.  
   
 |||  
@@ -111,7 +119,7 @@ caps.handback.revision: 15
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -QueryTimeout \<int>  
+### <a name="-querytimeout-int"></a>-QueryTimeout \<int >  
  Especifica el número de segundos que tienen que transcurrir antes de que las consultas agoten el tiempo de espera. Si no se especifica ningún valor de tiempo de espera, las consultas no agotan el tiempo de espera. El tiempo de espera debe ser un entero comprendido entre 1 y 65535.  
   
 |||  
@@ -122,7 +130,7 @@ caps.handback.revision: 15
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -Variable \<string[]>  
+### <a name="-variable-string"></a>-Variable \<string [] >  
  Especifica variables de scripting adicionales. Cada variable es un par de nombre y valor. Si el valor contiene caracteres de control o espacios incrustados, debe ponerse entre comillas dobles. Use una matriz de PowerShell para especificar varias variables y sus valores.  
   
 |||  
@@ -133,7 +141,7 @@ caps.handback.revision: 15
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -TraceFile \<cadena>  
+### <a name="-tracefile-string"></a>-TraceFile \<cadena >  
  Identifica un archivo que recibe eventos de seguimiento de Analysis Services al ejecutar el script XMLA, la consulta MDX o la instrucción DMX. Si ya existe el archivo, se sobrescribe automáticamente (a excepción de los archivos de seguimiento que se crean con configuración de los parámetros the -TraceLevel:Duration y –TraceLevel:DurationResult). Los nombres de archivo que contienen espacios deben ir entre comillas (" "). Si el nombre de archivo no es válido, se genera un mensaje de error.  
   
 |||  
@@ -144,7 +152,7 @@ caps.handback.revision: 15
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -TraceFileFormat \<cadena>  
+### <a name="-tracefileformat-string"></a>-TraceFileFormat \<cadena >  
  Especifica el formato de archivo del parámetro –TraceFile (si se ha especificado dicho parámetro). Las opciones disponibles son texto o csv. El valor predeterminado es “csv".  
   
 |||  
@@ -155,7 +163,7 @@ caps.handback.revision: 15
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -TraceFileDelimiter \<cadena>  
+### <a name="-tracefiledelimiter-string"></a>-TraceFileDelimiter \<cadena >  
  Especifica qué carácter usar como delimitador del archivo de seguimiento al especificar csv como formato del archivo de seguimiento. El valor predeterminado es | (barra vertical).  
   
 |||  
@@ -166,7 +174,7 @@ caps.handback.revision: 15
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -TraceTimeout \<int>  
+### <a name="-tracetimeout-int"></a>-TraceTimeout \<int >  
  Especifica el número de segundos que el motor de Analysis Services espera antes de finalizar el seguimiento (si especifica el parámetro –TraceFile). Se considera que el seguimiento ha terminado si no se han registrado mensajes relacionados con él durante el período de tiempo especificado. El valor predeterminado del tiempo de espera de seguimiento es de 5 segundos.  
   
 |||  
@@ -177,7 +185,7 @@ caps.handback.revision: 15
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -TraceLevel \<OpciónDeNivelDeSeguimiento>  
+### <a name="-tracelevel-traceleveloption"></a>-TraceLevel \<TraceLevelOption >  
  Especifica qué datos se recopilan y registran en el archivo de seguimiento. Los valores posibles son High, Medium, Low, Duration y DurationResult.  
   
 |||  
@@ -188,10 +196,10 @@ caps.handback.revision: 15
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### \<ParámetrosComunes>  
+### <a name="commonparameters"></a>\<CommonParameters >  
  Este cmdlet admite los parámetros comunes: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer y -OutVariable. Para más información, vea [about_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
-## Entradas y salidas  
+## <a name="inputs-and-outputs"></a>Entradas y salidas  
  El tipo de entrada es el tipo de objetos que se pueden canalizar al cmdlet. El tipo de valor devuelto es el tipo de objeto que el cmdlet devuelve.  
   
 |||  
@@ -199,7 +207,7 @@ caps.handback.revision: 15
 |Entradas|PSObject|  
 |Resultados|String|  
   
-## Ejemplo 1 (archivo de entrada de XMLA)  
+## <a name="example-1-xmla-input-file"></a>Ejemplo 1 (archivo de entrada de XMLA)  
   
 ```  
 Invoke-ASCmd –InputFile:"C:\MyFolder\DiscoverConnections.xmla"  
@@ -219,7 +227,7 @@ Invoke-ASCmd –InputFile:"C:\MyFolder\DiscoverConnections.xmla"
 </Discover>  
 ```  
   
-## Ejemplo 2 (archivo de entrada de TMSL)  
+## <a name="example-2-tmsl-input-file"></a>Ejemplo 2 (archivo de entrada de TMSL)  
  Este ejemplo es idéntico al primero, excepto por el script que es TMSL (JSON) y requiere una instancia tabular de SQL Server 2016. Puede generar un script TMSL en SQL Server Management Studio.  
   
  Si tiene varias instancias y la instancia tabular es una instancia con nombre, recuerde establecer el nombre del servidor:  
@@ -228,7 +236,7 @@ Invoke-ASCmd –InputFile:"C:\MyFolder\DiscoverConnections.xmla"
 Invoke-ASCmd –InputFile "C:\folder-name\T1200-NewDB.json" -Server "server-name\instance-name"  
 ```  
   
-## Ejemplo 3 (consulta)  
+## <a name="example-3-query"></a>Ejemplo 3 (consulta)  
   
 ```  
 Invoke-ASCmd -Database:"Adventure Works DW" -Query:"<Discover xmlns='urn:schemas-microsoft-com:xml analysis'><RequestType>DISCOVER_DATASOURCES</RequestType><Restrictions></Restrictions><Properties></Properties></Discover>"  
@@ -236,8 +244,5 @@ Invoke-ASCmd -Database:"Adventure Works DW" -Query:"<Discover xmlns='urn:schemas
   
  La consulta de detección XMLA devuelve los orígenes de datos disponibles de Analysis Services y la información necesaria para conectarse a ellos. Los resultados están en XML. Para mejorar la legibilidad, puede canalizar la salida a un archivo XML (por ejemplo, anexe `| Out-file C:\Results\XMLAQueryOutput.xml` al comando) y ver los resultados en el explorador u otra aplicación compatible con XML estructurado.  
   
-## Vea también  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Administrar modelos tabulares con PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
   
   

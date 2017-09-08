@@ -1,30 +1,35 @@
 ---
-title: "Crear una estructura de miner&#237;a de datos OLAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "estructuras de minería de datos [Analysis Services], OLAP"
-  - "estructuras de minería de datos [Analysis Services], crear"
-  - "OLAP [Analysis Services], modelos de minería de datos"
+title: "Crear una nueva estructura de minería de datos OLAP | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], OLAP
+- mining structures [Analysis Services], creating
+- OLAP [Analysis Services], mining models
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41047907b0e53f6d17fc49a9734ed4b9a52817f1
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Crear una estructura de miner&#237;a de datos OLAP
+# <a name="create-a-new-olap-mining-structure"></a>Crear una estructura de minería de datos OLAP
   Puede usar el Asistente para minería de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para crear una estructura de minería de datos que utilice datos de un modelo multidimensional. Los modelos de minería de datos basados en los cubos OLAP pueden utilizar las columnas y los valores de las tablas de hechos, las dimensiones y los grupos de medida como atributos para el análisis.  
   
-### Para crear una estructura de minería de datos OLAP  
+### <a name="to-create-a-new-olap-mining-structure"></a>Para crear una estructura de minería de datos OLAP  
   
 1.  En el Explorador de soluciones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga clic con el botón derecho en la carpeta **Estructuras de minería de datos** de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y luego haga clic en **Nueva estructura de minería de datos** para abrir el Asistente para minería de datos.  
   
@@ -117,7 +122,7 @@ caps.handback.revision: 32
   
 14. Haga clic en **Finalizar**.  
   
-15. En la página **Finalización del asistente**, también tiene la opción de crear una dimensión de modelo de minería de datos o un cubo mediante la dimensión de modelo de minería de datos. Estas opciones solo se admiten en los modelos generados mediante los algoritmos siguientes:  
+15. En la página **Finalización del asistente** , también tiene la opción de crear una dimensión de modelo de minería de datos o un cubo mediante la dimensión de modelo de minería de datos. Estas opciones solo se admiten en los modelos generados mediante los algoritmos siguientes:  
   
     -   Algoritmo de clústeres de Microsoft  
   
@@ -129,7 +134,7 @@ caps.handback.revision: 32
   
      **Crear el cubo con la dimensión del modelo de minería de datos**: seleccione esta casilla y especifique un nombre para el nuevo cubo. Al utilizar esta opción, se creará un nuevo cubo que contiene tanto las dimensiones existentes que se usaron para generar la estructura como la nueva dimensión de minería de datos que contiene los resultados del modelo.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tareas y procedimientos de las estructuras de minería de datos](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

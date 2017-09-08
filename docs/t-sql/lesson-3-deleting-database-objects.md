@@ -1,34 +1,40 @@
 ---
-title: "Lecci&#243;n 3: Eliminar objetos de base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "eliminar objetos de base de datos"
+title: "Lección 3: Eliminar objetos de base de datos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- deleting database objects
 ms.assetid: ecf26dd5-4535-4ed6-86fc-c73f9d9dedec
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8fa50579f347147568a7537474ff79e1aadcad9a
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Lecci&#243;n 3: Eliminar objetos de base de datos
+# <a name="lesson-3-deleting-database-objects"></a>Lección 3: Eliminar objetos de base de datos
 Esta breve lección quita los objetos que ha creado en las lecciones 1 y 2 y, a continuación, quita la base de datos.  
   
 Esta lección incluye un tema:  
   
--   [Eliminar objetos de base de datos](../t-sql/deleting-database-objects.md)  
+-   [Deleting Database Objects](../t-sql/lesson-3-1-deleting-database-objects.md)  
   
-## Siguiente tarea de la lección  
-[Eliminar objetos de base de datos](../t-sql/deleting-database-objects.md)  
+## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
+[Deleting Database Objects](../t-sql/lesson-3-1-deleting-database-objects.md)  
   
   
   
+

@@ -1,29 +1,34 @@
 ---
-title: "Alta disponibilidad y escalabilidad en Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Alta disponibilidad y escalabilidad en Analysis Services | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5417a642fd9522ffb3453caff198480e1d930a0a
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Alta disponibilidad y escalabilidad en Analysis Services
+# <a name="high-availability-and-scalability-in-analysis-services"></a>Alta disponibilidad y escalabilidad en Analysis Services
   En este artículo se describen las técnicas empleadas con más frecuencia para lograr una alta disponibilidad y escalabilidad de las bases de datos de Analysis Services. Aunque ambos aspectos podrían abordarse por separado, la realidad es que van frecuentemente de la mano. Así, una implementación escalable para grandes cargas de trabajo de procesamiento o de consulta normalmente conlleva una disponibilidad elevada.  
   
  Pero esto no sucede a la inversa. Una alta disponibilidad, sin escala, puede ser perfectamente el único objetivo cuando existen contratos de nivel de servicio muy estrictos para cargas de trabajo de consulta de tamaño moderado, pero críticos.  
   
  Las técnicas para conseguir una alta disponibilidad y escalabilidad de Analysis Services suelen ser las mismas en todos los modos de servidor (multidimensional, tabular y modo integrado de SharePoint). A menos que se indique expresamente lo contrario, considere la información recogida en este artículo como válida para todos los modos.  
   
-## Puntos clave  
+## <a name="key-points"></a>Puntos clave  
  Dado que las técnicas de disponibilidad y escalado difieren de las del motor de base de datos relacional, conviene hacer un breve resumen de los puntos clave a modo de introducción de las técnicas empleadas con Analysis Services:  
   
 -   Analysis Services usa los mecanismos de alta disponibilidad y escalabilidad integrados en la plataforma Windows Server, a saber, el equilibrio de carga de red (NLB), los clústeres de conmutación por error de Windows Server (WSFC) o ambos.  
@@ -60,7 +65,7 @@ caps.handback.revision: 14
   
  Otra estrategia para satisfacer un requisito de alta disponibilidad puede conllevar el uso de máquinas virtuales. Si la disponibilidad se puede lograr teniendo preparado un servidor de reemplazo en horas en lugar de minutos, se podrían usar máquinas virtuales que pudieran iniciarse bajo demanda y cargadas con bases de datos actualizadas recuperadas de una ubicación central.  
   
-## Escalabilidad mediante bases de datos de solo lectura y de lectura y escritura  
+## <a name="scalability-using-read-only-and-read-write-databases"></a>Escalabilidad mediante bases de datos de solo lectura y de lectura y escritura  
  Se recomienda usar el equilibrio de carga de red en cargas de trabajo de procesamiento y consulta elevadas o que escalan. Las bases de datos de Analysis Services de una solución de NLB se definen como bases de datos de solo lectura para mantener la coherencia entre las consultas.  
   
  Aunque las instrucciones del artículo del 2008 [Scale-out querying for Analysis Services using read-only databases](https://technet.microsoft.com/library/ff795582\(v=sql.100\).aspx) (Escalar horizontalmente consultas de Analysis Services con bases de datos de solo lectura) están desfasadas, siguen siendo válidas todavía. Si bien el hardware de equipo y los sistemas operativos de servidor han evolucionado y las referencias a plataformas específicas y límites de CPU están obsoletas, la técnica básica consistente en usar bases de datos de solo lectura y de lectura y escritura en grandes volúmenes de consultas permanece inalterada.  
@@ -73,7 +78,7 @@ caps.handback.revision: 14
   
 -   Use Robocopy para copiar un directorio de datos entero desde el servidor de procesamiento en cada servidor de consultas y adjuntar la misma base de datos en modo de solo lectura a todos los servidores de consultas. También puede usar instantáneas de SAN, llevar a cabo una sincronización o recurrir a cualquier otro método o herramienta que use para mover bases de datos de producción.  
   
-## Demandas de recursos en cargas de trabajo tabulares y multidimensionales  
+## <a name="resource-demands-for-tabular-and-multidimensional-workloads"></a>Demandas de recursos en cargas de trabajo tabulares y multidimensionales  
  La siguiente tabla es un resumen de alto nivel de cómo Analysis Services usa los recursos del sistema en las consultas y el procesamiento, distinguiendo entre almacenamiento y modo de servidor. Gracias a este resumen, sabrá en qué centrarse en una implementación multiservidor responsable de una carga de trabajo distribuida.  
   
 |||  
@@ -84,7 +89,7 @@ caps.handback.revision: 14
 |Modelos multidimensionales que usan almacenamiento MOLAP|Elija una configuración equilibrada que dé cabida a E/S de disco para cargar datos rápidamente y a suficiente RAM para almacenar datos en caché.|  
 |Modelos multidimensionales que usan almacenamiento ROLAP|Maximice la E/S de disco y minimice la latencia de red.|  
   
-## Alta disponibilidad y redundancia a través de WSFC  
+## <a name="highly-availability-and-redundancy-through-wsfc"></a>Alta disponibilidad y redundancia a través de WSFC  
  Analysis Services se puede instalar en un clúster de conmutación por error de Windows (WSFC) existente para lograr una disponibilidad elevada que permita restaurar el servicio en el menor tiempo posible.  
   
  Los clústeres de conmutación por error proporcionan pleno acceso (de lectura y de escritura diferida) a la base de datos, pero solo de nodo a nodo. Las bases de datos secundarias se ejecutan en otros nodos del clúster a modo de servidores de reemplazo si el primer nodo deja de funcionar.  
@@ -97,11 +102,11 @@ caps.handback.revision: 14
 - Al implementar Analysis Services en un clúster, asegúrese de que los nodos que participan en el clúster se ejecuten en hardware idéntico o muy similar y que el contexto operativo de cada nodo sea el mismo en lo que respecta a la versión del sistema operativo y los Service Pack, la versión de Analysis Services y los Service Pack (o actualizaciones acumulativas) y el modo de servidor.
 - Evite reasignar un nodo pasivo como nodo activo de otra carga de trabajo. Si el nodo no puede controlar las cargas de trabajo, se perderán las ganancias a corto plazo en el uso del equipo en caso de una situación real de conmutación por error.
  
- En estas notas del producto encontrará instrucciones detalladas e información general sobre la implementación de Analysis Services en un clúster de conmutación por error: [How to Cluster SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx) (Cómo implementar SQL Server Analysis Services en un clúster). Aunque redactado para SQL Server 2012, este documento sigue siendo válido para las versiones más recientes de Analysis Services.  
+ En estas notas del producto encontrará instrucciones detalladas e información general sobre la implementación de Analysis Services en un clúster de conmutación por error: [How to Cluster SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx)(Cómo implementar SQL Server Analysis Services en un clúster). Aunque redactado para SQL Server 2012, este documento sigue siendo válido para las versiones más recientes de Analysis Services.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Sincronizar bases de datos de Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Forcing NUMA affinity for Analysis Services Tabular Databases (Forzar la afinidad de NUMA para bases de datos tabulares de Analysis Services)](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
- [An Analysis Services Case Study: Using Tabular Models in a Large-scale Commercial Solution (Caso práctico de Analysis Services: Uso de modelos tabulares en una solución comercial a gran escala)](https://msdn.microsoft.com/library/dn751533.aspx)  
+ [Forzar la afinidad NUMA para bases de datos tabulares de Analysis Services](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
+ [Un caso práctico de Analysis Services: Uso de modelos tabulares en una solución comercial a gran escala](https://msdn.microsoft.com/library/dn751533.aspx)  
   
   

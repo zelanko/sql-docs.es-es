@@ -1,33 +1,38 @@
 ---
-title: "Indicadores clave de rendimiento (KPI) en modelos multidimensionales | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "indicadores clave de rendimiento, ver"
-  - "indicadores clave de rendimiento [Analysis Services]"
-  - "KPI [Analysis Services]"
-  - "objetos OLAP [Analysis Services], indicadores de rendimiento"
-  - "pesos [Analysis Services]"
-  - "indicadores clave de rendimiento, mostrar"
-  - "KPI primarios [Analysis Services]"
-  - "KPI secundarios"
+title: Indicadores de rendimiento (KPI) en modelos multidimensionales clave | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- viewing Key Performance Indicators
+- Key Performance Indicators [Analysis Services]
+- KPIs [Analysis Services]
+- OLAP objects [Analysis Services], performance indicators
+- weights [Analysis Services]
+- displaying Key Performance Indicators
+- parent KPIs [Analysis Services]
+- child KPIs
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 43
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2fb3d1fa6ae92ba6dd23f9295428d696834ee8d4
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Indicadores clave de rendimiento (KPI) en modelos multidimensionales
+# <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Indicadores clave de rendimiento (KPI) en modelos multidimensionales
   En la terminología empresarial, un indicador clave de rendimiento (KPI) es una medida cuantificable para identificar los éxitos empresariales.  
   
  En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], un KPI es un conjunto de cálculos asociados a un grupo de medida de un cubo, que se usa para evaluar el éxito empresarial. Normalmente, estos cálculos son una combinación de expresiones MDX (Expresiones multidimensionales) o miembros calculados. Los KPI también tienen metadatos adicionales que proporcionan información acerca de cómo deberían las aplicaciones cliente mostrar los resultados de los cálculos de KPI.  
@@ -42,7 +47,7 @@ caps.handback.revision: 43
   
  Una ventaja fundamental de los KPI de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es que son KPI basados en el servidor que pueden ser usados por diferentes aplicaciones cliente. Un KPI basado en el servidor presenta una única versión de veracidad, en comparación con versiones independientes de la veracidad de aplicaciones cliente independientes. Además, al realizar esos cálculos que en ocasiones pueden ser complejos en el servidor, en lugar de en cada equipo cliente se pueden obtener tener algunas ventajas de rendimiento.  
   
-## Términos comunes utilizados en KPI  
+## <a name="common-kpi-terms"></a>Términos comunes utilizados en KPI  
  En la tabla siguiente se proporcionan definiciones de términos comunes utilizados en KPI en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 |Término|Definición|  
@@ -58,15 +63,15 @@ caps.handback.revision: 43
 |Miembro de hora actual|Expresión MDX que devuelve el miembro que identifica el contexto temporal del KPI.|  
 |Weight|Expresión numérica MDX que asigna una importancia relativa a un KPI. Si el KPI se asigna a un KPI primario, el peso se utiliza para ajustar proporcionalmente los resultados del valor del KPI secundario al calcular el valor del KPI primario.|  
   
-## KPI primarios  
+## <a name="parent-kpis"></a>KPI primarios  
  Una organización puede realizar el seguimiento de distintas métricas empresariales a varios niveles. Por ejemplo, solo pueden utilizarse dos o tres KPI para medir el éxito empresarial de toda una compañía, pero estos KPI de toda la compañía pueden basarse en otros tres o cuatro KPI de los que las unidades empresariales de la compañía han realizado un seguimiento. Asimismo, las unidades empresariales de una compañía pueden utilizar estadísticas diferentes para calcular el mismo KPI, cuyos resultados se acumulan en el KPI de toda la compañía.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite definir una relación de elementos primarios y secundarios entre los KPI. Esta relación de elementos primarios y secundarios permite utilizar los resultados del KPI secundario para calcular los resultados del KPI primario. Las aplicaciones cliente también pueden usar esta relación para mostrar correctamente los KPI primarios y secundarios.  
   
-## Pesos  
+## <a name="weights"></a>Pesos  
  También se pueden asignar pesos a los KPI secundarios. Los pesos permiten a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ajustar proporcionalmente los resultados del KPI primario cuando se calcula el valor del KPI primario.  
   
-## Recuperar y mostrar los KPI  
+## <a name="retrieving-and-displaying-kpis"></a>Recuperar y mostrar los KPI  
  La visualización de los KPI depende de la implementación de la aplicación cliente. Por ejemplo, al seleccionar **Vista de explorador** en la barra de herramientas en la pestaña **KPIs** del Diseñador de cubos, se demuestra una posible implementación cliente, en la que los gráficos se utilizan para mostrar los indicadores de estado y tendencia, las carpetas de visualización se utilizan para agrupar los KPI y los KPI secundarios se muestran debajo de los KPI primarios.  
   
  Puede utilizar las funciones de MDX para recuperar secciones individuales del KPI, como el valor o el objetivo, para utilizar en expresiones MDX, instrucciones y scripts.  

@@ -1,31 +1,36 @@
 ---
-title: "Implementar soluciones de miner&#237;a de datos para versiones anteriores de SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "compatibilidad con versiones anteriores [Analysis Services]"
-  - "datos de exclusión [minería de datos]"
-  - "implementar [Analysis Services]"
-  - "series temporales [Analysis Services]"
-  - "implementar [Analysis Services: minería de datos]"
-  - "sincronización [Analysis Services]"
-  - "implementación [Analysis Services]"
+title: "Implementar una solución de minería de datos en versiones anteriores de SQL Server | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backward compatibility [Analysis Services]
+- holdout [data mining]
+- deploy [Analysis Services]
+- time series [Analysis Services]
+- deploying [Analysis Services - data mining]
+- synchronization [Analysis Services]
+- deployment [Analysis Services]
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d56f2cdd207e7d50584b08b5ebcae77bd9057b36
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Implementar soluciones de miner&#237;a de datos para versiones anteriores de SQL Server
+# <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Implementar soluciones de minería de datos para versiones anteriores de SQL Server
   En esta sección se describen problemas conocidos de compatibilidad que pueden surgir al intentar implementar un modelo o estructura de minería de datos que se creó en una instancia de [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] en una base de datos que utiliza SQL Server 2005 Analysis Services, o al implementar modelos creados en SQL Server 2005 en una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  No se admite la implementación en una instancia de SQL Server 2000 Analysis Services.  
@@ -56,14 +61,14 @@ caps.handback.revision: 16
  Si el proveedor que se utiliza para el origen de datos del modelo es SQL Client Data Provider 10, también debe modificar la definición del origen de datos para especificar la versión anterior de SQL Server Native Client. De lo contrario, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] genera un error que indica que el proveedor no está registrado.  
   
 ##  <a name="bkmk_Holdout"></a> Implementar modelos con exclusión  
- Si utiliza [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] para crear una estructura de minería de datos que contenga una partición de exclusión que se use para probar modelos de minería de datos, la estructura de minería de datos se puede implementar en una instancia de SQL Server 2005, pero la información de la partición se perderá.  
+ Si crea una estructura de minería de datos que contiene una partición de exclusión que se usa para probar los modelos de minería de datos, la estructura de minería de datos se puede implementar en una instancia de SQL Server 2005, pero la información de partición se perderá.  
   
  Al abrir la estructura de minería de datos en SQL Server 2005 Analysis Services, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] produce un error y, a continuación, vuelve a generar la estructura para quitar la partición de datos de exclusión.  
   
- Una vez regenerada la estructura, el tamaño de la partición de exclusión deja de estar disponible en la ventana Propiedades; sin embargo, el valor \<ddl100_100:HoldoutMaxPercent>30\</ddl100_100:HoldoutMaxPercent>) puede estar aún presente en el archivo de script ASSL.  
+ Después de que se ha vuelto a generar la estructura, el tamaño de la partición de exclusión ya no está disponible en la ventana Propiedades; Sin embargo, el valor \<ddl100_100: holdoutmaxpercent > 30\</ddl100_100:HoldoutMaxPercent >) pueden estar aún presentes en el archivo de script ASSL.  
   
 ##  <a name="bkmk_Filter"></a> Implementar modelos con filtros  
- Si utiliza [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] para aplicar un filtro a un modelo de minería de datos, este se puede implementar en una instancia de SQL Server 2005, pero el filtro no se aplicará.  
+ Si aplica un filtro a un modelo de minería de datos, se puede implementar el modelo a una instancia de SQL Server 2005, pero no se aplicará el filtro.  
   
  Al abrir el modelo de minería de datos, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] produce un error y, a continuación, vuelve a generar el modelo para quitar el filtro.  
   
@@ -77,7 +82,7 @@ caps.handback.revision: 16
   
  Si intenta sincronizar una base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , el servidor devuelve un error de sincronización de base de datos.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad con versiones anteriores de Analysis Services](../../analysis-services/analysis-services-backward-compatibility.md)  
   
   

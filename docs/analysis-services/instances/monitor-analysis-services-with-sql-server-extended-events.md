@@ -1,34 +1,39 @@
 ---
-title: "Supervisar Analysis Services con SQL Server Extended Events | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "XEvents"
-  - "Sql13.ssms.XeASNewEventSession.General.f1"
-  - "Sql13.ssms.XeASNewEventSession.Events.f1"
-  - "Sql13.ssms.XeASNewEventSession.Targets.f1"
-  - "Sql13.ssms.XeASNewEventSession.Advanced.f1"
+title: Supervisar Analysis Services con SQL Server extendida Events | Documentos de Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- XEvents
+- Sql13.ssms.XeASNewEventSession.General.f1
+- Sql13.ssms.XeASNewEventSession.Events.f1
+- Sql13.ssms.XeASNewEventSession.Targets.f1
+- Sql13.ssms.XeASNewEventSession.Advanced.f1
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cec6da660c202dfde5a1169dd34397fca5c51207
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Supervisar Analysis Services con SQL Server Extended Events
+# <a name="monitor-analysis-services-with-sql-server-extended-events"></a>Supervisar Analysis Services con SQL Server Extended Events
   Eventos extendidos (*xEvents*) es un sistema ligero de supervisión de seguimiento y rendimiento que usa muy pocos recursos del sistema, lo que lo convierte en una herramienta ideal para diagnosticar problemas tanto en los servidores de producción como en los de prueba. También es altamente escalable, configurable y, en SQL Server 2016, más fácil de usar gracias a la nueva compatibilidad de herramienta integrada. En SQL Server Management Studio, en las conexiones con instancias de Analysis Services, puede configurar, ejecutar y supervisar un seguimiento activo, algo parecido al uso de SQL Server Profiler. La adición de mejores herramientas debería convertir a xEvents en un reemplazo más razonable para SQL Server Profiler y crea más simetría en la forma de diagnosticar problemas en el motor de base de datos y las cargas de trabajo de Analysis Services.  
   
- Además de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], también puede configurar sesiones de Eventos extendidos para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de la manera antigua, por medio de scripting XMLA, como se hacía en las versiones anteriores.  
+ Además de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], también puede configurar sesiones de Eventos extendidos para  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de la manera antigua, por medio de scripting XMLA, como se hacía en las versiones anteriores.  
   
  Todos los eventos de Analysis Services se pueden capturar y destinar a usuarios específicos, según se define en [Eventos extendidos](../../relational-databases/extended-events/extended-events.md).  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 11
   
 -   **CommandBegin** y **CommandEnd**.  
   
--   **QueryBegin**, **QueryEnd** y **QuerySubcubeVerbose** (muestra la consulta MDX o DAX completa enviada al servidor), además de **ResourceUsage** para estadísticas sobre recursos usados por la consulta y el número de filas devueltas.  
+-   **QueryBegin**, **QueryEnd**y **QuerySubcubeVerbose** (muestra la consulta MDX o DAX completa enviada al servidor), además de **ResourceUsage** para estadísticas sobre recursos usados por la consulta y el número de filas devueltas.  
   
 -   **ProgressReportBegin** y **ProgressReportEnd** (para operaciones de procesamiento).  
   
@@ -74,11 +79,11 @@ caps.handback.revision: 11
   
  **Configurar** es una opción del extremo del cuadro de diálogo.  
   
- ![ssas-xevents-configure](../../analysis-services/instances/media/ssas-xevents-configure.PNG "ssas-xevents-configure")  
+ ![configurar SSAS-xevents](../../analysis-services/instances/media/ssas-xevents-configure.PNG "ssas-xevents-configurar")  
   
  En Configuración, en la pestaña Campos de evento, seleccione **TextData** para que este campo aparezca junto al evento y muestre los valores devueltos, incluidas las consultas que se están ejecutando en el servidor.  
   
- Después de configurar una sesión para los eventos deseados y el almacenamiento de datos, puede hacer clic en el botón Script para enviar la configuración a uno de los destinos admitidos, que incluye un archivo, una nueva consulta en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y el Portapapeles.  
+ Después de configurar una sesión para los eventos deseados y el almacenamiento de datos, puede hacer clic en el botón Script para enviar la configuración a uno de los destinos admitidos, que incluye un archivo, una nueva consulta en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y el Portapapeles.  
   
  **Actualizar sesiones**  
   
@@ -136,7 +141,7 @@ caps.handback.revision: 11
   
 ||  
 |-|  
-|![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [En este tema](#bkmk_top)|  
+|![Icono de flecha usado con Back vínculo al principio](../../analysis-services/instances/media/uparrow16x16.gif "icono de flecha usado con Back vínculo al principio") [en este tema](#bkmk_top)|  
   
 ##  <a name="bkmk_script_stop"></a> Script XMLA para detener Extended Events en Analysis Services  
  Para detener el objeto de seguimiento de Eventos extendidos, debe eliminar el objeto utilizando un comando de script de objeto de eliminación XMLA como se muestra a continuación:  
@@ -164,9 +169,9 @@ caps.handback.revision: 11
   
 ||  
 |-|  
-|![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.png "Icono de flecha usado con el vínculo Volver al principio") [En este tema](#bkmk_top)|  
+|![Icono de flecha usado con Back vínculo al principio](../../analysis-services/instances/media/uparrow16x16.gif "icono de flecha usado con Back vínculo al principio") [en este tema](#bkmk_top)|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)  
   
   

@@ -1,38 +1,43 @@
 ---
-title: "Referencia t&#233;cnica del algoritmo de asociaci&#243;n de Microsoft | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MINIMUM_ITEMSET_SIZE, parámetro"
-  - "MAXIMUM_SUPPORT, parámetro"
-  - "algoritmos de asociación [Analysis Services]"
-  - "MINIMUM_SUPPORT, parámetro"
-  - "OPTIMIZED_PREDICTION_COUNT, parámetro"
-  - "asociaciones [Analysis Services]"
-  - "MAXIMUM_ITEMSET_COUNT, parámetro"
-  - "MAXIMUM_ITEMSET_SIZE, parámetro"
-  - "MINIMUM_PROBABILITY, parámetro"
+title: "Referencia técnica del algoritmo de asociación de Microsoft | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MINIMUM_ITEMSET_SIZE parameter
+- MAXIMUM_SUPPORT parameter
+- association algorithms [Analysis Services]
+- MINIMUM_SUPPORT parameter
+- OPTIMIZED_PREDICTION_COUNT parameter
+- associations [Analysis Services]
+- MAXIMUM_ITEMSET_COUNT parameter
+- MAXIMUM_ITEMSET_SIZE parameter
+- MINIMUM_PROBABILITY parameter
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a029a6efad9ebdbc15e42d593db28f9530b1b8e
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Referencia t&#233;cnica del algoritmo de asociaci&#243;n de Microsoft
+# <a name="microsoft-association-algorithm-technical-reference"></a>Referencia técnica del algoritmo de asociación de Microsoft
   El algoritmo Reglas de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es una implementación sencilla del conocido algoritmo Apriori.  
   
  Tanto el algoritmo Árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] como el algoritmo Reglas de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] se pueden usar para analizar asociaciones, pero las reglas encontradas por cada uno de ellos pueden diferir. En un modelo de árboles de decisión, las divisiones que conducen a reglas específicas están basadas en la obtención de información, mientras que en un modelo de asociación, las reglas están basadas totalmente en la confianza. Por tanto, en un modelo de asociación, una regla segura, o una que tenga una confianza alta, puede que no tenga ningún interés, dado que no proporciona nueva información.  
   
-## Implementación del algoritmo de asociación de Microsoft  
+## <a name="implementation-of-the-microsoft-association-algorithm"></a>Implementación del algoritmo de asociación de Microsoft  
  El algoritmo Apriori no analiza patrones, sino que genera y después cuenta *conjuntos de elementos candidatos*. Un elemento puede representar un evento, un producto o el valor de un atributo, dependiendo del tipo de datos que se analice.  
   
  En el tipo más común de modelo de asociación, las variables booleanas, que representan un valor Sí/No o Falta/Existe, se asignan a cada atributo, como un nombre de producto o evento. Un análisis de cesta de la compra es un ejemplo de un modelo de reglas de asociación que utiliza variables booleanas para representar la presencia o ausencia de determinados productos en la cesta de la compra de un cliente.  
@@ -41,7 +46,7 @@ caps.handback.revision: 24
   
  Los modelos de asociación se pueden crear también para atributos numéricos. Si los atributos son continuos, los números se pueden *discretizar* o agruparse en depósitos. A continuación, los valores de datos discretos se pueden tratar como booleanos o como pares atributo-valor.  
   
-### Soporte, probabilidad e importancia  
+### <a name="support-probability-and-importance"></a>Soporte, probabilidad e importancia  
  *Soporte*, también denominado *frecuencia*, es el número de casos que contiene el elemento o la combinación de elementos de destino. Solo se pueden incluir en el modelo los elementos que tienen al menos el soporte especificado.  
   
  Se denomina *conjunto de elementos frecuente* a una colección de elementos cuya combinación de elementos también admite cantidades superiores al umbral definido por el parámetro MINIMUM_SUPPORT. Por ejemplo, si el conjunto de elementos es {A,B,C} y el valor de MINIMUM_SUPPORT es 10, cada uno de los elementos individuales A, B y C debe hallarse en al menos 10 casos para ser incluido en el modelo, y la combinación de elementos {A,B,C} debe hallarse también en al menos 10 casos.  
@@ -60,7 +65,7 @@ caps.handback.revision: 24
   
  La importancia de una regla se calcula mediante la probabilidad de registro del lado derecho de la regla, dado el lado izquierdo de la regla. Por ejemplo, en la regla `If {A} Then {B}`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] calcula la proporción entre los casos con A y B y los casos con B pero sin A y, a continuación, normaliza dicha proporción mediante una escala logarítmica.  
   
-### Selección de características  
+### <a name="feature-selection"></a>Selección de características  
  El algoritmo Reglas de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] no realiza ningún tipo de selección automática de características. En su lugar, proporciona parámetros que controlan los datos utilizados por el algoritmo. Esto puede incluir límites en cuanto al tamaño de cada conjunto de elementos, o el establecimiento del soporte máximo y mínimo necesarios para agregar un conjunto de elementos al modelo.  
   
 -   Para filtrar elementos y eventos muy comunes y, por lo tanto, poco interesantes, reduzca el valor de MAXIMUM_SUPPORT para quitar los conjuntos de elementos muy frecuentes del modelo.  
@@ -69,11 +74,11 @@ caps.handback.revision: 24
   
 -   Para filtrar reglas, aumente el valor de MINIMUM_PROBABILITY.  
   
-## Personalizar el algoritmo Reglas de asociación de Microsoft  
+## <a name="customizing-the-microsoft-association-rules-algorithm"></a>Personalizar el algoritmo Reglas de asociación de Microsoft  
  El algoritmo Reglas de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite varios parámetros que influyen en el comportamiento, el rendimiento y la precisión del modelo de minería de datos resultante.  
   
-### Establecer parámetros del algoritmo  
- Puede cambiar los parámetros para un modelo de minería de datos en cualquier momento mediante el Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. También puede cambiar los parámetros mediante programación si usa la colección <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> en AMO, o bien si usa el [Elemento MiningModels &#40;ASSL&#41;](../../analysis-services/scripting/collections/miningmodels-element-assl.md) en XMLA. Estos parámetros se describen en la tabla siguiente.  
+### <a name="setting-algorithm-parameters"></a>Establecer parámetros del algoritmo  
+ Puede cambiar los parámetros para un modelo de minería de datos en cualquier momento mediante el Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. También puede cambiarlos mediante programación utilizando la <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> colección en AMO, o mediante el [miningmodels, elemento &#40; ASSL &#41; ](../../analysis-services/scripting/collections/miningmodels-element-assl.md) en XMLA. Estos parámetros se describen en la tabla siguiente.  
   
 > [!NOTE]  
 >  No se pueden cambiar los parámetros en un modelo existente usando una instrucción de DMX; se deben especificar los parámetros en las instrucciones DMX CREATE MODEL o ALTER STRUCTURE… ADD MODEL cuando se crea el modelo.  
@@ -130,11 +135,11 @@ caps.handback.revision: 24
   
  El valor predeterminado es 0. Cuando se utiliza el valor predeterminado, el algoritmo produce tantas predicciones como se soliciten en la consulta.  
   
- Si especifica un valor distinto de cero para *OPTIMIZED_PREDICTION_COUNT*, las consultas de predicción pueden devolver como máximo el número especificado de elementos, aunque se soliciten predicciones adicionales. Sin embargo, el rendimiento de la predicción se puede mejorar estableciendo un valor.  
+ Si especifica un valor distinto de cero para *OPTIMIZED_PREDICTION_COUNT* , las consultas de predicción pueden devolver como máximo el número especificado de elementos, aunque se soliciten predicciones adicionales. Sin embargo, el rendimiento de la predicción se puede mejorar estableciendo un valor.  
   
  Por ejemplo, si el valor se establece en 3, el algoritmo almacena en caché únicamente tres elementos para la predicción. No podrá ver predicciones adicionales que serán igualmente probables para los tres elementos devueltos.  
   
-### Marcas de modelado  
+### <a name="modeling-flags"></a>Marcas de modelado  
  El algoritmo Reglas de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las siguientes marcas de modelado.  
   
  NOT NULL  
@@ -147,10 +152,10 @@ caps.handback.revision: 24
   
  Se aplica a la columna de modelo de minería de datos.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Un modelo de asociación debe contener una columna de clave, columnas de entrada y una sola columna de predicción.  
   
-### Columnas de entrada y de predicción  
+### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
  El algoritmo Reglas de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se incluyen en la tabla siguiente. Para más información sobre el significado de los tipos de contenido en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
 |Columna|Tipos de contenido|  
@@ -161,9 +166,9 @@ caps.handback.revision: 24
 > [!NOTE]  
 >  Se admiten los tipos de contenido Cyclical y Ordered, pero el algoritmo los trata como valores discretos y no realiza un procesamiento especial.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Algoritmo de asociación de Microsoft](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Ejemplos de consultas del modelo de asociación](../../analysis-services/data-mining/association-model-query-examples.md)   
+ [Ejemplos de consultas de modelo de asociación](../../analysis-services/data-mining/association-model-query-examples.md)   
  [Contenido del modelo de minería de datos para los modelos de asociación &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

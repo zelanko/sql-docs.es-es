@@ -1,23 +1,28 @@
 ---
-title: "Instalar proveedores de datos de Analysis Services (AMO, ADOMD.NET, MSOLAP) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Instalar proveedores de datos de Analysis Services (AMO, ADOMD.NET, MSOLAP) | Documentos de Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a7aedabc-6af9-4698-a7a4-98f894001476
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd6aa812228cce132b4180a8537ba853f3ea92a2
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Instalar proveedores de datos de Analysis Services (AMO, ADOMD.NET, MSOLAP)
+# <a name="install-analysis-services-data-providers-amo-adomdnet-msolap"></a>Instalar proveedores de datos de Analysis Services (AMO, ADOMD.NET, MSOLAP)
   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] es una actualización de versión de los proveedores de datos de Analysis Services, que consta de ADOMD.Net, AMO y MSOLAP.  
   
  Para la mayoría de escenarios de acceso a datos basados en consultas, puede usar las versiones anteriores existentes de los proveedores de datos que ya están instaladas en los sistemas cliente para obtener acceso a los modelos tabulares y multidimensionales en una instancia de Analysis Services de SQL Server 2016, incluidos los modelos tabulares que usen características exclusivas de SQL Server 2016. Como norma general, las aplicaciones cliente que generan consultas, como Excel, Reporting Services o Tableau, no requieren los proveedores de datos más recientes al obtener acceso a un modelo de Analysis Services.  
@@ -26,7 +31,7 @@ caps.handback.revision: 12
   
  Un escenario que requiere una instalación manual de un proveedor de datos es el de aplicaciones personalizadas o scripts que usan objetos de administración de Analysis Services (AMO). Esta versión introduce un espacio de nombres refactorizado que mueve los objetos principales, como Server y Database, a un nuevo espacio de nombres (Microsoft.AnalysisServices.Core) que forma parte del ensamblado Microsoft.AnalysisServices.dll. Si tiene código o scripts personalizados que usan AMO, debe volver a compilar el código y actualizar manualmente los AMO en cada servidor y estación de trabajo cliente que realiza una conexión directa a través de AMO a una instancia de SQL Server 2016 de Analysis Services.  
   
-## Lista de proveedores  
+## <a name="provider-list"></a>Lista de proveedores  
  Estos proveedores se describen en la tabla siguiente.  
   
 ||||  
@@ -37,7 +42,7 @@ caps.handback.revision: 12
 |Analysis Services (ADOMD.NET)|Microsoft.AnalysisServices.AdomdClient.dll|13.0.0.0|  
 |Proveedor OLE DB para Analysis Services (MSOLAP)|MSOLAP130.dll|13.0.0.0|  
   
-## Descargar e instalar el proveedor de datos  
+## <a name="download-and-install-data-provider"></a>Descargar e instalar el proveedor de datos  
   
 1.  Vaya a la [página de descarga de Feature Pack de SQL Server 2016](http://go.microsoft.com/fwlink/?LinkID=398150).  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 12
   
 5.  Ejecute cada programa para instalar el proveedor. Los ensamblados ADO.MD y AMO se instalan en C:\Windows\assembly\GAC_MSIL. El proveedor OLE DB de Analysis Services se instala en C:\Archivos de programa\Microsoft Analysis Services\AS OLEDB\130.  
   
-## Comprobar la instalación  
+## <a name="verify-installation"></a>Comprobar la instalación  
   
 1.  En el explorador de archivos, vaya a C:\Windows\Assembly.  
   

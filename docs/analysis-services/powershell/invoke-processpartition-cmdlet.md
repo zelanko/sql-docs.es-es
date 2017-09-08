@@ -1,35 +1,46 @@
 ---
-title: "Cmdlet Invoke-ProcessPartition | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Cmdlet Invoke-ProcessPartition | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 516fab44-734e-425b-9bd0-b4aee1fd338f
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: b29970facb251e859e1e845c00d4c12587ca33c4
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cmdlet Invoke-ProcessPartition
+# <a name="invoke-processpartition-cmdlet"></a>Cmdlet Invoke-ProcessPartition
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Procesar una partición utilizando una variable concreta del tipo de procesamiento.  
+
+>[!NOTE] 
+>En este artículo puede contener información no actualizada y ejemplos. Use el cmdlet Get-Help para la versión más reciente.
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
  `Invoke-ProcessPartition [-Name] <System.String> [-Database] <System.String> [-ProcessType] <Microsoft.AnalysisServices.ProcessType> [-CubeName] <System.String> [-MeasureGroupName] <System.String> [<CommonParameters>]`  
   
  `Invoke-ProcessPartition –DatabasePartition <Microsoft.AnalysisServices.Partition> [-ProcessType] <Microsoft.AnalysisServices.ProcessType> [<CommonParameters>]`  
   
-## Description  
+## <a name="description"></a>Description  
  El cmdlet Invoke-ProcessPartition procesa una partición específica de una base de datos de Analysis Services, un cubo y un grupo de medida proporcionados. El valor de ProcessType determina el ámbito de la operación. Al procesar una partición, debe especificar el tipo de procesamiento. Para obtener más información, vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
-## Parámetros  
+## <a name="parameters"></a>Parámetros  
   
-### -Name \<cadena>  
+### <a name="-name-string"></a>-Nombre \<cadena >  
  Especifica la partición que se va a procesar.  
   
 |||  
@@ -40,7 +51,7 @@ caps.handback.revision: 9
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -Database \<string>  
+### <a name="-database-string"></a>-Base de datos \<cadena >  
  Especifica la base de datos a la que el cubo pertenece.  
   
 |||  
@@ -51,7 +62,7 @@ caps.handback.revision: 9
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -CubeName \<cadena>  
+### <a name="-cubename-string"></a>-CubeName \<cadena >  
  Especifica el cubo al que pertenece el grupo de medida.  
   
 |||  
@@ -62,7 +73,7 @@ caps.handback.revision: 9
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -MeasureGroupName \<cadena>  
+### <a name="-measuregroupname-string"></a>-MeasureGroupName \<cadena >  
  Especifica el grupo de medida al que la partición pertenece.  
   
 |||  
@@ -73,7 +84,7 @@ caps.handback.revision: 9
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -DatabasePartition \<Microsoft.AnalysisServices.Partition>  
+### <a name="-databasepartition-microsoftanalysisservicespartition"></a>-DatabasePartition \<Microsoft.AnalysisServices.Partition >  
  Especifica la partición que se va a procesar.  
   
 |||  
@@ -84,7 +95,7 @@ caps.handback.revision: 9
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -ProcessType \<Microsoft.AnalysisServices.ProcessType>  
+### <a name="-processtype-microsoftanalysisservicesprocesstype"></a>-ProcessType \<Microsoft.AnalysisServices.ProcessType >  
  Especifica el tipo de proceso: ProcessFull, ProcessAdd, ProcessUpdate, ProcessIndexes, ProcessData, ProcessDefault, ProcessClear, ProcessStructure, ProcessCelarStructureOnly, ProcessScriptCache o ProcessRecalc.  
   
 |||  
@@ -95,10 +106,10 @@ caps.handback.revision: 9
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### \<CommonParameters>  
- Este cmdlet admite los parámetros comunes: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer y -OutVariable. Para obtener más información, vea [about_Commonparameters](http://go.microsoft.com/fwlink/?linkID=227825).  
+### <a name="commonparameters"></a>\<CommonParameters >  
+ Este cmdlet admite los parámetros comunes: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer y -OutVariable. Para más información, vea [about_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
-## Entradas y salidas  
+## <a name="inputs-and-outputs"></a>Entradas y salidas  
  El tipo de entrada es el tipo de objetos que se pueden canalizar al cmdlet. El tipo de valor devuelto es el tipo de objeto que el cmdlet devuelve.  
   
 |||  
@@ -106,18 +117,15 @@ caps.handback.revision: 9
 |Entradas|None|  
 |Salidas|None|  
   
-## Ejemplo 1  
+## <a name="example-1"></a>Ejemplo 1  
  `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Cubes\Adventure Works\MeasureGroups\Sales Orders\Partitions\Total_Orders_2004 > Get-Item .| Invoke-ProcessPartition –ProcessType:ProcessDefault`  
   
  Este comando canaliza la identidad de la partición que se va a procesar.  
   
-## Ejemplo 2  
+## <a name="example-2"></a>Ejemplo 2  
  `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Cubes\Adventure Works\MeasureGroups> Invoke-ProcessPartition –Name “Total_Orders_2003” –MeasureGroupname “Sales Order” –CubeName “Adventure Works” –database “AWTEST” –ProcessType “ProcessFull”`  
   
  Este comando procesa la partición Total_Orders_2003 en el grupo de medidas Sales Orders de la base de datos AWTEST.  
   
-## Vea también  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Administrar modelos tabulares con PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
   
   

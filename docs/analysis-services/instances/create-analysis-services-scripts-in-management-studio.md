@@ -1,36 +1,41 @@
 ---
-title: "Crear scripts de Analysis Services en Management Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "objetos de Analysis Services, scripts"
-  - "obejtos [Analysis Services], scripts"
-  - "scripts [Analysis Services], objetos"
+title: Crear Scripts de Analysis Services en Management Studio | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Analysis Services objects, scripts
+- objects [Analysis Services], scripts
+- scripts [Analysis Services], objects
 ms.assetid: 4f1b965c-9ca6-427b-8f4d-0ce1eea7c0fe
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 24fffa56991e411dfae93321bbe238c1bbcb4db3
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Crear scripts de Analysis Services en Management Studio
+# <a name="create-analysis-services-scripts-in-management-studio"></a>Crear scripts de Analysis Services en Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] incluye características, plantillas y editores de generación de script que se pueden usar para incluir objetos y tareas de Analysis Services en un script.  
   
-## Incluir tareas de Analysis Services en un script en Management Studio  
+## <a name="script-analysis-services-tasks-in-management-studio"></a>Incluir tareas de Analysis Services en un script en Management Studio  
  La inclusión de tareas en un script en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se logra haciendo clic en una de las opciones de script de un cuadro de diálogo orientado a tareas. Todos los cuadros de diálogo que se usan para realizar tareas tales como copia de seguridad o restauración de base de datos, procesar un objeto o diseñar una agregación, incluyen una opción de script en la parte superior del cuadro de diálogo. La selección de una de estas opciones genera un script XMLA basado en la información y los valores del cuadro de diálogo.  
   
  De forma predeterminada, el script se genera y se coloca en un editor de consultas XMLA, pero también se puede expandir la lista de opciones de script para dirigir el script al Portapapeles de Windows o a un archivo.  
   
-#### Para incluir en script una tarea de Analysis Services  
+#### <a name="to-script-an-analysis-services-task"></a>Para incluir en script una tarea de Analysis Services  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -44,8 +49,8 @@ caps.handback.revision: 36
   
      A continuación puede cerrar el cuadro de diálogo Copia de seguridad de la base de datos y editar o ejecutar el script XMLA directamente.  
   
-## Incluir objetos de Analysis Services en un script en Management Studio  
- La inclusión de objetos en un script en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se realiza haciendo clic con el botón derecho en un objeto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y seleccionando **Create to**, **Alter to** o **Delete to**. Cada una de estas opciones se puede dirigir a una ventana o a un archivo, pero independientemente de ello, aparecerá en forma de script DDL en un contenedor XMLA. Una enorme ventaja de estos scripts es que se pueden ejecutar en cualquier servidor. Igualmente, los nombres de los scripts pueden cambiarse y ejecutarse de manera reiterativa para la construcción, modificación o eliminación masiva de objetos.  
+## <a name="script-analysis-services-objects-in-management-studio"></a>Incluir objetos de Analysis Services en un script en Management Studio  
+ La inclusión de objetos en un script en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se realiza haciendo clic con el botón derecho en un objeto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y seleccionando **Create to**, **Alter to**o **Delete to**. Cada una de estas opciones se puede dirigir a una ventana o a un archivo, pero independientemente de ello, aparecerá en forma de script DDL en un contenedor XMLA. Una enorme ventaja de estos scripts es que se pueden ejecutar en cualquier servidor. Igualmente, los nombres de los scripts pueden cambiarse y ejecutarse de manera reiterativa para la construcción, modificación o eliminación masiva de objetos.  
   
  Entre los objetos que se pueden incluir en un script se hallan los elementos de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , incluidos orígenes de datos, vistas de origen de datos, cubos, dimensiones, estructuras de minería de datos y roles.  
   
@@ -54,19 +59,18 @@ caps.handback.revision: 36
 > [!IMPORTANT]  
 >  Al incluir el objeto Role en un script, debe tener presente que los permisos de seguridad están incluidos en los objetos que protegen y no en el rol de seguridad al que están asociados.  
   
-#### Para incluir objetos de Analysis Services en script  
+#### <a name="to-script-analysis-services-objects"></a>Para incluir objetos de Analysis Services en script  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 2.  Busque el objeto para el que desee crear un script que cree, altere o elimine objetos.  
   
-3.  Haga clic con el botón derecho en el objeto, seleccione **Generar script del cubo como**, elija **CREATE To**, **ALTER To** o **Delete To** y, después, haga clic en una de las siguientes opciones: **Nueva ventana del Editor de consultas** para abrir la ventana del editor de consultas, **Archivo** para guardar el script XMLA en un archivo o **Portapapeles** para guardarlo en el Portapapeles.  
+3.  Haga clic con el botón derecho en el objeto, seleccione **Generar script del cubo como**, elija **CREATE To**, **ALTER To**o **Delete To**y, después, haga clic en una de las siguientes opciones: **Nueva ventana del Editor de consultas** para abrir la ventana del editor de consultas, **Archivo** para guardar el script XMLA en un archivo o **Portapapeles** para guardarlo en el Portapapeles.  
   
     > [!NOTE]  
     >  Normalmente se selecciona **Archivo** para crear versiones diferentes del archivo.  
   
-## Vea también  
- [Crear scripts para tareas administrativas en Analysis Services](../../analysis-services/instances/script-administrative-tasks-in-analysis-services.md)   
- [Editor de consultas XMLA &#40;Analysis Services: datos multidimensionales&#41;](../Topic/XMLA%20Query%20Editor%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)  
+## <a name="see-also"></a>Vea también  
+ [Editor de consultas XMLA &#40; Analysis Services - datos multidimensionales &#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
   
   

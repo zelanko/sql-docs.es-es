@@ -1,31 +1,36 @@
 ---
-title: "Crear un cubo con el Asistente para cubos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cubos [Analysis Services], crear"
+title: Crear un cubo con el Asistente para cubos | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cubes [Analysis Services], creating
 ms.assetid: d46d659c-3a4e-4364-94ac-f5eb6ba0ec25
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66e614476f4a609017a023d39c5d58670ad2f5db
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Crear un cubo con el Asistente para cubos
+# <a name="create-a-cube-using-the-cube-wizard"></a>Crear un cubo con el Asistente para cubos
   Puede crear un nuevo cubo usando el Asistente para cubos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-### Para crear un nuevo cubo  
+### <a name="to-create-a-new-cube"></a>Para crear un nuevo cubo  
   
-1.  En el **Explorador de soluciones**, haga clic con el botón derecho en **Cubos** y, después, haga clic en **Nuevo cubo**.  
+1.  En el **Explorador de soluciones**, haga clic con el botón derecho en **Cubos**y, después, haga clic en **Nuevo cubo**.  
   
 2.  En la página **Seleccionar método de creación** del Asistente para cubos, active la opción **Usar tablas existentes**y, a continuación, haga clic en **Siguiente**.  
   

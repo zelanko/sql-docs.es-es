@@ -1,27 +1,32 @@
 ---
-title: "Definir relaciones referenciadas y propiedades de las relaciones referenciadas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "relación de dimensión de referencia"
-  - "relaciones [Analysis Services], dimensiones de referencia"
+title: Definir relaciones referenciadas y propiedades de las relaciones referenciadas | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- referenced dimension relationship
+- relationships [Analysis Services], referenced dimensions
 ms.assetid: 5bb44b41-635b-4398-8fe9-0bfbb142553e
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3213d88fd8f1119ffbb4bb71ab8658e0750f98c6
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Definir relaciones referenciadas y propiedades de las relaciones referenciadas
+# <a name="define-a-referenced-relationship-and-referenced-relationship-properties"></a>Definir relaciones referenciadas y propiedades de las relaciones referenciadas
   Una relación de dimensión de referencia se define en la pestaña **Uso de dimensiones** del Diseñador de cubos. La relación de dimensión de referencia se define al especificar lo siguiente:  
   
 -   La dimensión intermedia con la que se va a combinar. Puede ser una dimensión normal u otra dimensión de referencia.  

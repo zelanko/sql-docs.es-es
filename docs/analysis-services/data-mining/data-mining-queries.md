@@ -1,29 +1,34 @@
 ---
-title: "Consultas de miner&#237;a de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "consultas de predicción [Analysis Services]"
-  - "consultas [DMX], crear"
-  - "consultas de predicción [DMX]"
-  - "Generador de consultas de predicción"
-  - "modelos de minería de datos [Analysis Services], consultar"
+title: "Las consultas de minería de datos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- prediction queries [Analysis Services]
+- queries [DMX], creating
+- prediction queries [DMX]
+- Prediction Query Builder
+- mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1994ebc359ca23eee9ae76112d9ceebd1970debb
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Consultas de miner&#237;a de datos
+# <a name="data-mining-queries"></a>Consultas de minería de datos
   Las consultas de minería de datos son útiles para muchos propósitos. Puede hacer lo siguiente:  
   
 -   Aplicar el modelo a nuevos datos, para realizar una o varias predicciones. Proporcionar valores de entrada como parámetros o en un lote.  
@@ -76,11 +81,11 @@ caps.handback.revision: 44
 -   Revise el contenido del modelo para cada tipo modelo, utilizando el **Visor de árbol de contenido genérico de Microsoft**. Para interpretar esta información, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ##  <a name="bkmk_Interfaces"></a> Herramientas e interfaces de consulta  
- Puede compilar consultas de minería de datos de forma interactiva mediante una de las herramientas de consulta proporcionadas por SQL Server. El Generador de consultas de predicción gráfico está disponible en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Si no ha utilizado el Generador de consultas de predicción antes, recomendamos seguir los pasos de [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md) para familiarizarse con la interfaz. Para una introducción rápida a los pasos, vea [Crear una consulta de predicción con el Generador de consultas de predicción](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md).  
+ Puede compilar consultas de minería de datos de forma interactiva mediante una de las herramientas de consulta proporcionadas por SQL Server. El Generador de consultas de predicción gráfico está disponible en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Si no ha utilizado el Generador de consultas de predicción antes, recomendamos seguir los pasos de [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c) para familiarizarse con la interfaz. Para una introducción rápida a los pasos, vea [Crear una consulta de predicción con el Generador de consultas de predicción](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md).  
   
  El Generador de consultas de predicción es útil para iniciar consultas que personalizará después. Puede agregar orígenes de datos con facilidad y asignarlos a columnas y, a continuación, pasar a la vista DMX y personalizar la consulta agregando una cláusula WHERE u otras funciones.  
   
- Una vez familiarizado con los modelos de minería de datos y con el modo de compilar consultas, también puede escribir consultas directamente utilizando Extensiones de minería de datos (DMX). DMX es un lenguaje de consultas que es similar a Transact-SQL y que puede utilizar en muchos clientes diferentes. DMX es la herramienta adecuada para crear predicciones personalizadas y consultas complejas. Para una introducción a DMX, vea [Crear y consultar modelos de minería de datos con DMX: tutoriales &#40;Analysis Services - minería de datos&#41;](../Topic/Creating%20and%20Querying%20Data%20Mining%20Models%20with%20DMX:%20Tutorials%20\(Analysis%20Services%20-%20Data%20Mining\).md).  
+ Una vez familiarizado con los modelos de minería de datos y con el modo de compilar consultas, también puede escribir consultas directamente utilizando Extensiones de minería de datos (DMX). DMX es un lenguaje de consultas que es similar a Transact-SQL y que puede utilizar en muchos clientes diferentes. DMX es la herramienta adecuada para crear predicciones personalizadas y consultas complejas. Para una introducción a DMX, vea [Crear y consultar modelos de minería de datos con DMX: tutoriales &#40;Analysis Services - minería de datos&#41;](http://msdn.microsoft.com/library/145b81a7-c0c3-4ca3-bb32-0b482423b9a0).  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]disponen de editores DMX. También puede utilizar el Generador de consultas de predicción para iniciar sus consultas y, a continuación, cambiar la vista al editor de texto y copiar la instrucción DMX en otro cliente. Para más información, vea [Herramientas de consulta de minería de datos](../../analysis-services/data-mining/data-mining-query-tools.md).  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 44
   
  Para más información sobre los contextos de seguridad necesarios para ejecutar consultas de minería de datos, vea [Información general de Seguridad &#40;minería de datos&#41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  Los temas de esta sección presentan cada tipo de consulta de minería de datos con más detalle, y proporcionan vínculos a ejemplos detallados de cómo crear consultas en los modelos de minería de datos.  
   
  [Consultas de predicción &#40;minería de datos&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
@@ -152,21 +157,21 @@ caps.handback.revision: 44
   
  [Herramientas de consulta de minería de datos](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
  Use estos vínculos para aprender a crear y a trabajar con consultas de minería de datos.  
   
 |Tareas|Vínculos|  
 |-----------|-----------|  
-|Ver tutoriales y visitas guiadas sobre las consultas de minería de datos|[Lección 6: Crear y trabajar con predicciones &#40;Tutorial básico de minería de datos&#41;](../Topic/Lesson%206:%20Creating%20and%20Working%20with%20Predictions%20\(Basic%20Data%20Mining%20Tutorial\).md)<br /><br /> [Tutorial DMX de predicción de series temporales](../Topic/Time%20Series%20Prediction%20DMX%20Tutorial.md)|  
+|Ver tutoriales y visitas guiadas sobre las consultas de minería de datos|[Lección 6: Crear y trabajar con predicciones &#40;Tutorial básico de minería de datos&#41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)<br /><br /> [Tutorial DMX de predicción de series temporales](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)|  
 |Usar las herramientas de consulta de minería de datos en SQL Server Management Studio y en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[Crear una consulta DMX en SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Crear una consulta de predicción con el Generador de consultas de predicción](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [Aplicar funciones de predicción a un modelo](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [Modificar manualmente una consulta de predicción](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
 |Trabajar con los datos externos usados en consultas de predicción|[Elegir y asignar datos de entrada para una consulta de predicción](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [Elegir y asignar datos de entrada para una consulta de predicción](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)|  
 |Trabajar con los resultados de las consultas|[Ver y guardar los resultados de una consulta de predicción](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)|  
 |Usar las plantillas de consultas DMX y XMLA proporcionadas en Management Studio|[Crear una consulta de predicción singleton desde una plantilla](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [Crear una consulta de minería de datos utilizando XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [Usar las plantillas de Analysis Services en SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |Obtener más información acerca de las consultas de contenido y ver ejemplos|[Crear una consulta de contenido en un modelo de minería de datos](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)<br /><br /> [Consultar los parámetros usados para crear un modelo de minería de datos](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [Consultas de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)|  
 |Establecer opciones de consulta y solucionar problemas relacionados con los permisos y otros problemas de las consultas|[Cambiar el valor del tiempo de espera para las consultas de minería de datos](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)|  
-|Usar los componentes de minería de datos en Integration Services|[Tarea Consulta de minería de datos](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Transformación Consulta de minería de datos](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
+|Usar los componentes de minería de datos en Integration Services|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
   

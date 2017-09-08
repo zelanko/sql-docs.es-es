@@ -1,0 +1,285 @@
+---
+title: NTILE (Transact-SQL) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- NTILE_TSQL
+- NTILE
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- distributing rows
+- groups [SQL Server], row distribution
+- row distribution [SQL Server]
+- NTILE function
+ms.assetid: 1c364511-d72a-4789-8efa-3cf2a1f6b791
+caps.latest.revision: 63
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 7cb3ab21f1707c1af1c689e438e9d6ead291dcc4
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  Distribuye las filas de una partición ordenada en un número especificado de grupos. Los grupos se numeran a partir del uno. Para cada fila, NTILE devuelve el número del grupo al que pertenece la fila.  
+  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Sintaxis  
+  
+```  
+-- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+  
+NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > )  
+```  
+  
+## <a name="arguments"></a>Argumentos  
+ *integer_expression*  
+ Es una expresión constante de tipo entero positivo que especifica el número de grupos en que se debe dividir cada partición. *integer_expression* puede ser de tipo **int**, o **bigint**.  
+  
+ \<partition_by_clause >  
+ Divide el conjunto de resultados generado por la [FROM](../../t-sql/queries/from-transact-sql.md) cláusula en particiones a las que se aplica la función. Para obtener la sintaxis PARTITION BY, vea [la cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+  
+ \<order_by_clause >  
+ Determina el orden en que los valores NTILE se asignan a las filas de una partición. Un entero no puede representar una columna cuando la \<order_by_clause > se utiliza en una función de categoría.  
+  
+## <a name="return-types"></a>Tipos devueltos  
+ **bigint**  
+  
+## <a name="remarks"></a>Comentarios  
+ Si el número de filas en una partición no es divisible por *integer_expression*, esto hará que los grupos de dos tamaños que difieren en un miembro. Los grupos de mayor tamaño preceden a los grupos de menor tamaño en el orden especificado por la cláusula OVER. Por ejemplo, si el número total de filas es 53 y el número de grupos es cinco, los tres primeros grupos tienen 11 filas y los otros dos grupos tienen 10 filas cada uno. Por otra parte, si el número total de filas es divisible por el número de grupos, las filas se distribuyen por igual entre los grupos. Por ejemplo, si el número total de filas es 50 y hay cinco grupos, cada grupo contiene 10 filas.  
+  
+ NTILE es no determinista. Para obtener más información, consulte [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+  
+## <a name="examples"></a>Ejemplos  
+  
+### <a name="a-dividing-rows-into-groups"></a>A. Dividir filas en grupos  
+ En el ejemplo siguiente se dividen las filas en cuatro grupos de empleados según sus ventas anuales hasta la fecha. Puesto que el número total de filas no es divisible por el número de grupos, los dos primeros grupos tienen cuatro filas y los grupos restantes tienen tres filas cada uno.  
+  
+```  
+USE AdventureWorks2012;   
+GO  
+SELECT p.FirstName, p.LastName  
+    ,NTILE(4) OVER(ORDER BY SalesYTD DESC) AS Quartile  
+    ,CONVERT(nvarchar(20),s.SalesYTD,1) AS SalesYTD  
+    , a.PostalCode  
+FROM Sales.SalesPerson AS s   
+INNER JOIN Person.Person AS p   
+    ON s.BusinessEntityID = p.BusinessEntityID  
+INNER JOIN Person.Address AS a   
+    ON a.AddressID = p.BusinessEntityID  
+WHERE TerritoryID IS NOT NULL   
+    AND SalesYTD <> 0;  
+GO  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+```  
+  
+FirstName      LastName              Quartile  SalesYTD       PostalCode  
+-------------  --------------------- --------- -------------- ----------  
+Linda          Mitchell              1         4,251,368.55   98027  
+Jae            Pak                   1         4,116,871.23   98055  
+Michael        Blythe                1         3,763,178.18   98027  
+Jillian        Carson                1         3,189,418.37   98027  
+Ranjit         Varkey Chudukatil     2         3,121,616.32   98055  
+José           Saraiva               2         2,604,540.72   98055  
+Shu            Ito                   2         2,458,535.62   98055  
+Tsvi           Reiter                2         2,315,185.61   98027  
+Rachel         Valdez                3         1,827,066.71   98055  
+Tete           Mensa-Annan           3         1,576,562.20   98055  
+David          Campbell              3         1,573,012.94   98055  
+Garrett        Vargas                4         1,453,719.47   98027  
+Lynn           Tsoflias              4         1,421,810.92   98055  
+Pamela         Ansman-Wolfe          4         1,352,577.13   98027  
+ (14 row(s) affected)  
+```  
+  
+### <a name="b-dividing-the-result-set-by-using-partition-by"></a>B. Dividir el conjunto de resultados mediante PARTITION BY  
+ En el ejemplo siguiente se agrega el argumento `PARTITION BY` al código del ejemplo A. Primero se dividen por `PostalCode` y, a continuación, en cuatro grupos dentro de cada `PostalCode`. El ejemplo también declara una variable `@NTILE_Var` y utiliza esa variable para especificar el valor de la *integer_expression* parámetro.  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+DECLARE @NTILE_Var int = 4;  
+  
+SELECT p.FirstName, p.LastName  
+    ,NTILE(@NTILE_Var) OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS Quartile  
+    ,CONVERT(nvarchar(20),s.SalesYTD,1) AS SalesYTD  
+    ,a.PostalCode  
+FROM Sales.SalesPerson AS s   
+INNER JOIN Person.Person AS p   
+    ON s.BusinessEntityID = p.BusinessEntityID  
+INNER JOIN Person.Address AS a   
+    ON a.AddressID = p.BusinessEntityID  
+WHERE TerritoryID IS NOT NULL   
+    AND SalesYTD <> 0;  
+GO  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+```  
+FirstName    LastName             Quartile SalesYTD      PostalCode  
+------------ -------------------- -------- ------------  ----------  
+Linda        Mitchell             1        4,251,368.55  98027  
+Michael      Blythe               1        3,763,178.18  98027  
+Jillian      Carson               2        3,189,418.37  98027  
+Tsvi         Reiter               2        2,315,185.61  98027  
+Garrett      Vargas               3        1,453,719.47  98027  
+Pamela       Ansman-Wolfe         4        1,352,577.13  98027  
+Jae          Pak                  1        4,116,871.23  98055  
+Ranjit       Varkey Chudukatil    1        3,121,616.32  98055  
+José         Saraiva              2        2,604,540.72  98055  
+Shu          Ito                  2        2,458,535.62  98055  
+Rachel       Valdez               3        1,827,066.71  98055  
+Tete         Mensa-Annan          3        1,576,562.20  98055  
+David        Campbell             4        1,573,012.94  98055  
+Lynn         Tsoflias             4        1,421,810.92  98055  
+  
+(14 row(s) affected)  
+```  
+  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+  
+### <a name="c-dividing-rows-into-groups"></a>C. Dividir filas en grupos  
+ En el ejemplo siguiente se utiliza la función NTILE para dividir un conjunto de vendedores en cuatro grupos según sus cuotas de ventas asignado para el año 2003. Dado que el número total de filas no es divisible por el número de grupos, el primer grupo tiene cinco filas y los grupos restantes tienen cuatro filas.  
+  
+```  
+-- Uses AdventureWorks  
+  
+SELECT e.LastName, NTILE(4) OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  
+       CONVERT (varchar(13), SUM(SalesAmountQuota), 1) AS SalesQuota  
+FROM dbo.DimEmployee AS e   
+INNER JOIN dbo.FactSalesQuota AS sq   
+    ON e.EmployeeKey = sq.EmployeeKey  
+WHERE sq.CalendarYear = 2003  
+    AND SalesTerritoryKey IS NOT NULL AND SalesAmountQuota <> 0  
+GROUP BY e.LastName  
+ORDER BY Quartile, e.LastName;  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+ `LastName          Quartile SalesYTD`  
+  
+ `----------------- -------- ------------`  
+  
+ `Blythe            1        4,716,000.00`  
+  
+ `Carson            1        4,350,000.00`  
+  
+ `Mitchell          1        4,682,000.00`  
+  
+ `Pak               1        5,142,000.00`  
+  
+ `Varkey Chudukatil 1        2,940,000.00`  
+  
+ `Ito               2        2,644,000.00`  
+  
+ `Reiter            2        2,768,000.00`  
+  
+ `Saraiva           2        2,293,000.00`  
+  
+ `Vargas            2        1,617,000.00`  
+  
+ `Ansman-Wolfe      3        1,183,000.00`  
+  
+ `Campbell          3        1,438,000.00`  
+  
+ `Mensa-Annan       3        1,481,000.00`  
+  
+ `Valdez            3        1,294,000.00`  
+  
+ `Abbas             4          172,000.00`  
+  
+ `Albert            4          651,000.00`  
+  
+ `Jiang             4          544,000.00`  
+  
+ `Tsoflias          4          867,000.00`  
+  
+### <a name="d-dividing-the-result-set-by-using-partition-by"></a>D. Dividir el conjunto de resultados mediante PARTITION BY  
+ En el ejemplo siguiente se agrega el argumento PARTITION BY para el código de ejemplo A. Las filas se dividen en primer lugar por `SalesTerritoryCountry` y, a continuación, se dividen en dos grupos dentro de cada `SalesTerritoryCountry`. Observe que la cláusula ORDER BY en la cláusula OVER ordena la NTILE y la cláusula ORDER BY de la instrucción SELECT ordena el conjunto de resultados.  
+  
+```  
+-- Uses AdventureWorks  
+  
+SELECT e.LastName, NTILE(2) OVER(PARTITION BY e.SalesTerritoryKey ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  
+       CONVERT (varchar(13), SUM(SalesAmountQuota), 1) AS SalesQuota  
+   ,st.SalesTerritoryCountry  
+FROM dbo.DimEmployee AS e   
+INNER JOIN dbo.FactSalesQuota AS sq   
+    ON e.EmployeeKey = sq.EmployeeKey  
+INNER JOIN dbo.DimSalesTerritory AS st  
+    ON e.SalesTerritoryKey = st.SalesTerritoryKey  
+WHERE sq.CalendarYear = 2003  
+GROUP BY e.LastName,e.SalesTerritoryKey,st.SalesTerritoryCountry  
+ORDER BY st.SalesTerritoryCountry, Quartile;  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+ `LastName          Quartile SalesYTD       SalesTerritoryCountry`  
+  
+ `----------------- -------- -------------- ------------------`  
+  
+ `Tsoflias          1         867,000.00     Australia`  
+  
+ `Saraiva           1        2,293,000.00    Canada`  
+  
+ `Varkey Chudukatil 1        2,940,000.00    France`  
+  
+ `Valdez            1        1,294,000.00    Germany`  
+  
+ `Alberts           1          651,000.00    NA`  
+  
+ `Jiang             1          544,000.00    NA`  
+  
+ `Pak               1        5,142,000.00    United Kingdom`  
+  
+ `Mensa-Annan       1        1,481,000.00    United States`  
+  
+ `Campbell          1        1,438,000.00    United States`  
+  
+ `Reiter            1        2,768,000.00    United States`  
+  
+ `Blythe            1        4,716,000.00    United States`  
+  
+ `Carson            1        4,350,000.00     United States`  
+  
+ `Mitchell          1        4,682,000.00     United States`  
+  
+ `Vargas            2        1,617,000.00     Canada`  
+  
+ `Abbas             2          172,000.00     NA`  
+  
+ `Ito               2        2,644,000.00     United States`  
+  
+ `Ansman-Wolfe      2        1,183,000.00     United States`  
+  
+## <a name="see-also"></a>Vea también  
+ [RANGO &#40; Transact-SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   
+ [DENSE_RANK &#40; Transact-SQL &#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [ROW_NUMBER &#40; Transact-SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
+ [Funciones de categoría &#40; Transact-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
+  
+  
+
+
+

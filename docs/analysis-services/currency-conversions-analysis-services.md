@@ -1,35 +1,40 @@
 ---
-title: "Conversiones de moneda (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "conversiones de moneda, varias"
-  - "datos monetarios [SQL Server]"
-  - "moneda [Analysis Services]"
-  - "convertir moneda"
-  - "conversiones de una moneda a varias"
-  - "conversiones de moneda de varias a varias [Analysis Services]"
-  - "conversiones de una moneda a varias [Analysis Services]"
+title: Conversiones de moneda (Analysis Services) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- multiple currency conversions
+- monetary data [SQL Server]
+- currency [Analysis Services]
+- converting currency
+- one-to-many currency conversions
+- many-to-many currency conversions [Analysis Services]
+- many-to-one currency conversions [Analysis Services]
 ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f54b50833ce40a8222925ac2b43591fa89617631
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Conversiones de moneda (Analysis Services)
+# <a name="currency-conversions-analysis-services"></a>Conversiones de moneda (Analysis Services)
   [!INCLUDE[applies](../includes/applies-md.md)] Solo multidimensional  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa una combinación de características, guiadas por scripts MDX (Expresiones multidimensionales), para proporcionar compatibilidad con la conversión de divisa en cubos que admiten varias divisas.  
   
-## Terminología de conversión de monedas  
+## <a name="currency-conversion-terminology"></a>Terminología de conversión de monedas  
  La siguiente terminología se utiliza en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para describir la funcionalidad de conversión de moneda.  
   
  Moneda dinámica  
@@ -80,13 +85,13 @@ caps.handback.revision: 18
   
 -   La propiedad **Type** de un atributo dentro de la dimensión se establece en CurrencyDestination, y la columna enlazada con el atributo contiene los identificadores de moneda que representan las monedas del informe para esa conversión.  
   
-## Definir las conversiones de moneda  
+## <a name="defining-currency-conversions"></a>Definir las conversiones de moneda  
  Puede utilizar el Asistente de Business Intelligence para definir la funcionalidad de conversión de moneda en un cubo o puede definir manualmente las conversiones de moneda mediante scripts MDX.  
   
-### Requisitos previos  
+### <a name="prerequisites"></a>Requisitos previos  
  Antes de que pueda definir una conversión de moneda en un cubo mediante el Asistente de Business Intelligence, debe definir, al menos, una dimensión de moneda, una dimensión temporal y un grupo de medida de tarifas. Desde estos objetos, el Asistente de Business Intelligence puede recuperar los datos y metadatos que se usan para construir la dimensión de moneda del informe y el script MDX necesarios para proporcionar la funcionalidad de conversión de moneda.  
   
-### Decisiones  
+### <a name="decisions"></a>Decisiones  
  Necesita tomar las siguientes decisiones antes de que el Asistente de Business Intelligence pueda construir la dimensión de moneda del informe y el script MDX necesarios para proporcionar la funcionalidad de conversión de moneda:  
   
 -   Dirección de la tasa de cambio  
@@ -99,7 +104,7 @@ caps.handback.revision: 18
   
 -   Monedas del informe  
   
-### Direcciones de la tasa de cambio  
+### <a name="exchange-rate-directions"></a>Direcciones de la tasa de cambio  
  El grupo de medida de tarifas contiene medidas que representan las tasas de cambio entre las monedas locales y la moneda dinámica (a la que se hace referencia normalmente como moneda corporativa). La combinación de la dirección de la tasa de cambio y el tipo de conversión determina la operación que se realiza en las medidas que se van a convertir mediante el script MDX generado con el Asistente de Business Intelligence. La tabla siguiente describe las operaciones realizadas en función de la dirección de la tasa de cambio y el tipo de conversión, basándose en las opciones de dirección de la tasa de cambio y las direcciones de conversión disponibles en el Asistente de Business Intelligence.  
   
 |||||  
@@ -108,9 +113,9 @@ caps.handback.revision: 18
 |**n moneda dinámica a 1 moneda de ejemplo**|Multiplica la medida que se va a convertir por la medida de la tasa de cambio de la moneda local, a fin de convertir la medida a la moneda dinámica.|Divide la medida que se va a convertir por la medida de la tasa de cambio de la moneda del informe, a fin de convertir la medida a la moneda del informe.|Multiplica la medida que se va a convertir por la medida de la tasa de cambio de la moneda local, a fin de convertir la medida a la moneda dinámica, y después divide la medida convertida por la medida de la tasa de cambio de la moneda del informe, a fin de convertir la medida en la moneda del informe.|  
 |**n moneda de ejemplo a 1 moneda dinámica**|Divide la medida que se va a convertir por la medida de la tasa de cambio de la moneda local, a fin de convertir la medida a la moneda dinámica.|Multiplica la medida que se va a convertir por la medida de la tasa de cambio de la moneda del informe, a fin de convertir la medida a la moneda del informe.|Divide la medida que se va a convertir por la medida de la tasa de cambio de la moneda local, a fin de convertir la medida a la moneda dinámica, y después multiplica la medida convertida por la medida de la tasa de cambio de la moneda del informe, a fin de convertir la medida en la moneda del informe.|  
   
- Elija la dirección de la tasa de cambio en la página **Establecer las opciones de conversión de moneda** del Asistente de Business Intelligence. Para más información sobre cómo configurar la dirección de la conversión, vea [Establecer las opciones de conversión de moneda &#40;Asistente de Business Intelligence&#41;](../Topic/Set%20Currency%20Conversion%20Options%20\(Business%20Intelligence%20Wizard\).md).  
+ Elija la dirección de la tasa de cambio en la página **Establecer las opciones de conversión de moneda** del Asistente de Business Intelligence. Para más información sobre cómo configurar la dirección de la conversión, vea [Establecer las opciones de conversión de moneda &#40;Asistente de Business Intelligence&#41;](http://msdn.microsoft.com/library/a49d4e1f-bdda-4a83-ab4f-ce8c500e1d6d).  
   
-### Miembros convertidos  
+### <a name="converted-members"></a>Miembros convertidos  
  Puede usar el Asistente de Business Intelligence para especificar qué medidas del grupo de medida de tarifas se van a utilizar para convertir los valores de:  
   
 -   Medidas en otros grupos de medida  
@@ -119,9 +124,9 @@ caps.handback.revision: 18
   
 -   Tipos de cuenta que usan los miembros de una jerarquía de atributos de un atributo de cuenta en una dimensión de base de datos.  
   
- El Asistente de Business Intelligence utiliza esta información dentro del script MDX generado por el asistente para determinar el ámbito de cálculo de la conversión de moneda. Para más información sobre cómo especificar miembros para la conversión de divisa, vea [Seleccionar miembros &#40;Asistente de Business Intelligence&#41;](../Topic/Select%20Members%20\(Business%20Intelligence%20Wizard\).md).  
+ El Asistente de Business Intelligence utiliza esta información dentro del script MDX generado por el asistente para determinar el ámbito de cálculo de la conversión de moneda. Para más información sobre cómo especificar miembros para la conversión de divisa, vea [Seleccionar miembros &#40;Asistente de Business Intelligence&#41;](http://msdn.microsoft.com/library/1a147461-d594-41e7-a41d-09d2d003e1e0).  
   
-### Tipos de conversión  
+### <a name="conversion-types"></a>Tipos de conversión  
  El Asistente de Business Intelligence admite tres tipos diferentes de conversión de moneda:  
   
 -   **Uno a varios**  
@@ -144,14 +149,14 @@ caps.handback.revision: 18
   
  La especificación del tipo de conversión permite al Asistente de Business Intelligence definir la consulta con nombre y la estructura de la dimensión de la moneda del informe, así como la estructura del script MDX que se ha definido para la conversión de moneda.  
   
-### Monedas locales  
+### <a name="local-currencies"></a>Monedas locales  
  Si elige un tipo de conversión varios a varios o varios a uno para su conversión de moneda, deberá especificar cómo se identifican las monedas locales para las que el script MDX generado por el Asistente de Business Intelligence realiza los cálculos de conversión de moneda. La moneda local de una transacción en una tabla de hechos puede identificarse de una de estas dos formas:  
   
 -   El grupo de media contiene una relación de dimensión normal con la dimensión de moneda. Por ejemplo, en la base de datos de ejemplo [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , el grupo de medida Internet Sales tiene una relación de dimensión normal con la dimensión Currency. La tabla de hechos de ese grupo de medida contiene una columna de clave externa que hace referencia a los identificadores de moneda de la tabla de dimensiones de esa dimensión. En este caso, puede seleccionar el atributo de la dimensión de moneda a la que hace referencia el grupo de medida para identificar la moneda local de las transacciones en la tabla de hechos de ese grupo de medida. Esta situación se produce, generalmente, en las aplicaciones bancarias, donde la propia transacción determina la moneda utilizada en la transacción.  
   
 -   El grupo de medida contiene una relación de dimensión referenciada con la dimensión de moneda a través de otra dimensión que hace referencia directamente a la dimensión de moneda. Por ejemplo, en la base de datos de ejemplo [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , el grupo de medida Financial Reporting tiene una relación de dimensión de referencia con la dimensión Currency a través de la dimensión Organization. La tabla de hechos de ese grupo de medida contiene una columna de clave externa que hace referencia a los miembros de la tabla de dimensiones de la dimensión Organization. A su vez, la tabla de dimensiones de la dimensión Organization contiene una columna de clave externa que hace referencia a los identificadores de moneda de la tabla de dimensiones de la dimensión Currency. Esta situación se produce, generalmente, en las aplicaciones de informes financieros, donde la ubicación o delegación de una transacción determina la moneda de esa transacción. En este caso, puede seleccionar el atributo que hace referencia a la dimensión de la moneda desde la dimensión de la entidad de empresa.  
   
-### Monedas del informe  
+### <a name="reporting-currencies"></a>Monedas del informe  
  Si elige un tipo de conversión varios a varios o uno a varios para su conversión de moneda, deberá especificar las monedas del informe en las que el script MDX generado por el Asistente de Business Intelligence realiza los cálculos de conversión de moneda. Puede especificar todos los miembros de la dimensión de moneda relacionados con el grupo de medida de tarifas o seleccionar miembros individuales de la dimensión.  
   
  El Asistente de Business Intelligence crea una dimensión de moneda del informe, basándose en una consulta con nombre generada a partir de la tabla de dimensiones de la dimensión de moneda, que usa las monedas del informe seleccionadas.  
@@ -161,10 +166,10 @@ caps.handback.revision: 18
   
  Se define una dimensión de moneda del informe independiente por cada conversión de moneda definida en el cubo. Puede cambiar el nombre de las dimensiones de moneda del informe después de la creación, pero si lo hace también deberá actualizar el script MDX generado para esa conversión de moneda, para garantizar que el comando de script utiliza el nombre correcto cuando hace referencia a la dimensión de moneda del informe.  
   
-## Definir varias conversiones de moneda  
+## <a name="defining-multiple-currency-conversions"></a>Definir varias conversiones de moneda  
  Mediante el Asistente de Business Intelligence puede definir tantas conversiones de moneda como necesite para su solución de Business Intelligence. Puede sobrescribir una conversión de moneda existente o anexar una nueva conversión de moneda al script MDX de un cubo. Varias conversiones de moneda definidas en un solo cubo proporcionan flexibilidad en las aplicaciones de Business Intelligence que tienen complejos requisitos de informes, como aplicaciones de informes financieros con varios requisitos independientes de conversión para el contexto internacional.  
   
-### Identificar las conversiones de moneda  
+### <a name="identifying-currency-conversions"></a>Identificar las conversiones de moneda  
  El Asistente de Business Intelligence identifica cada conversión de moneda mediante la demarcación de los comandos de script para la conversión de moneda con los siguientes comentarios:  
   
  `//<Currency conversion>`  
@@ -183,7 +188,7 @@ caps.handback.revision: 18
   
  Siempre que sea necesario, puede cambiar los comandos de script de una conversión de moneda. Sin embargo, si sobrescribe la conversión de moneda, estos cambios se perderán.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Escenarios de globalización para Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)  
   
   

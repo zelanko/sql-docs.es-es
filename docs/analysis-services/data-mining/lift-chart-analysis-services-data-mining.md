@@ -1,33 +1,38 @@
 ---
-title: "Gr&#225;fico de mejora respecto al modelo predictivo (Analysis Services - Miner&#237;a de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "probar modelos de minería de datos"
-  - "precisión, gráficos"
-  - "precisión de minería de datos, ver"
-  - "gráficos de mejora respecto al modelo predictivo [Analysis Services]"
-  - "gráficos de beneficios [Analysis Services]"
-  - "prueba de precisión [minería de datos]"
+title: "Gráfico de elevación (Analysis Services: minería de datos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- testing data mining models
+- accuracy, charting
+- viewing mining accuracy
+- lift charts [Analysis Services]
+- profit charts [Analysis Services]
+- accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 caps.latest.revision: 55
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b939d468a964160cd84dbdb60fcae97d4f2ee6a
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Gr&#225;fico de mejora respecto al modelo predictivo (Analysis Services - Miner&#237;a de datos)
+# <a name="lift-chart-analysis-services---data-mining"></a>Gráfico de mejora respecto al modelo predictivo (Analysis Services - Minería de datos)
   A *mejora respecto al modelo predictivo chart* representa gráficamente la mejora que proporciona un modelo de minería de datos en comparación con una estimación aleatoria, y mide el cambio en términos de puntuación de la *mejora respecto al modelo predictivo* . Si compara las puntuaciones de mejora de los distintos modelos, puede determinar qué modelo es mejor. También puede determinar el punto en el que las predicciones del modelo pasan a ser menos útiles. Por ejemplo, revisando el gráfico de elevación, podría observar que es probable que una campaña de promoción solo sea eficaz para un 30 % de los clientes y usar esa cifra para limitar el ámbito de la campaña.  
   
- En la minería de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el gráfico de elevación puede comparar la precisión de varios modelos que tienen el mismo atributo de predicción. También puede evaluar la exactitud de la predicción para un único resultado (un único valor del atributo de predicción) o para todos los resultados (todos los valores del atributo especificado).  
+ En la minería de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el gráfico de elevación puede comparar la precisión de varios modelos que tienen el mismo atributo de predicción. También puede evaluar la exactitud de la predicción para un único resultado (un único valor del atributo de predicción) o para todos los resultados (todos los valores del atributo especificado).  
   
  Un gráfico de beneficios es un tipo de gráfico relacionado que contiene la misma información que un gráfico de mejora respecto al modelo predictivo, pero que también muestra el aumento proyectado en los beneficios asociado al uso de cada modelo.  
   
@@ -48,12 +53,12 @@ caps.handback.revision: 55
   
  [Volver al principio](#bkmk_Top)  
   
-### Gráfico de mejora respecto al modelo predictivo con un valor de destino  
- El gráfico siguiente muestra un gráfico de mejora respecto al modelo predictivo para el modelo **Targeted Mailing** que se crea en el [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md). En este gráfico, el atributo de destino es [Bike Buyer] y el valor de destino es 1, lo que significa que se prevé que el cliente compre una bicicleta. El gráfico de mejora respecto al modelo predictivo muestra así la mejora proporcionada por el modelo al identificar a estos posibles clientes.  
+### <a name="lift-chart-with-target-value"></a>Gráfico de mejora respecto al modelo predictivo con un valor de destino  
+ El gráfico siguiente muestra un gráfico de mejora respecto al modelo predictivo para el modelo **Targeted Mailing** que se crea en el [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). En este gráfico, el atributo de destino es [Bike Buyer] y el valor de destino es 1, lo que significa que se prevé que el cliente compre una bicicleta. El gráfico de mejora respecto al modelo predictivo muestra así la mejora proporcionada por el modelo al identificar a estos posibles clientes.  
   
  Este gráfico contiene varios modelos basados en los mismos datos. Uno de ellos se ha personalizado para dirigirse a clientes concretos. Puede personalizar un modelo agregando filtros para los datos usados para entrenarlo. Este filtro restringe los casos que se usan tanto en el entrenamiento como en la evaluación a los clientes menores de 30 años. Observe que un efecto del filtrado es que el modelo básico y el modelo filtrado usan conjuntos de datos distintos, por lo que el número de casos usados para la evaluación en el gráfico de mejora respecto al modelo predictivo también es diferente. Es importante recordar este punto al interpretar los resultados de predicción y otras estadísticas.  
   
- ![gráfico de elevación en el que se muestran dos modelos](../../analysis-services/data-mining/media/newliftchart-tm30-30.gif "gráfico de elevación en el que se muestran dos modelos")  
+ ![gráfico de elevación que muestra dos modelos](../../analysis-services/data-mining/media/newliftchart-tm30-30.gif "que muestra dos modelos de gráfico de elevación")  
   
  El eje X del gráfico representa el porcentaje del conjunto de datos de prueba que se usa para comparar las predicciones. El eje Y del gráfico representa el porcentaje de valores de predicción.  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 55
   
  [Volver al principio](#bkmk_Top)  
   
-#### Interpretación de los resultados  
+#### <a name="interpreting-the-results"></a>Interpretación de los resultados  
  En estos resultados puede ver que, cuando se mide en el 30 por ciento de todos los casos, el modelo general, [Correo destinado a todos], puede predecir el comportamiento de compra de bicicletas en el 47,40% de la población de destino. En otras palabras, si enviara correo directo solo al 30 por ciento de los clientes de la base de datos, podría llegar a algo menos de la mitad de los destinatarios pretendidos. Si usara el modelo filtrado, podría obtener resultados ligeramente mejores y llegar aproximadamente al 51 por ciento de los clientes de destino.  
   
  El valor de **Probabilidad de predicción** representa el umbral necesario para incluir un cliente entre los casos "con probabilidad de comprar". Para cada caso, el modelo calcula la exactitud de cada predicción y almacena ese valor, que puede utilizar para filtrar o elegir clientes. Por ejemplo, para identificar los clientes del modelo básico que son compradores probables, utilizaría una consulta para recuperar los casos con una probabilidad de predicción de al menos el 61 por ciento. Para obtener los clientes de destino del modelo filtrado, crearía una consulta que recuperara los casos que cumplieran todos los criterios: la edad y un valor de **PredictProbability** de al menos el 46 por ciento.  
@@ -84,19 +89,19 @@ caps.handback.revision: 55
   
  El valor de **Puntuación** ayuda a comparar los modelos calculando la efectividad del modelo a través de una población normalizada. Una mayor puntuación es mejor, de modo que en este caso podría decidir que seleccionar a los clientes menores de 30 años es la estrategia más eficiente, a pesar de la menor probabilidad de predicción.  
   
-#### ¿Cómo se calcula la puntuación?  
+#### <a name="how-is-the-score-calculated"></a>¿Cómo se calcula la puntuación?  
  La puntuación se calcula como la puntuación de la media geométrica de todos los puntos que constituyen un gráfico de dispersión en el que el eje X contiene los valores reales, el eje Y contiene el valor de predicción y cada punto tiene una probabilidad asociada.  
   
  El significado estadístico de la puntuación de cualquier punto individual es la elevación de predicción para el modelo que se mide en ese punto. El promedio de todos los puntos constituye la puntuación del modelo.  
   
  [Volver al principio](#bkmk_Top)  
   
-### Gráfico de mejora respecto al modelo predictivo para un modelo sin valor de destino  
+### <a name="lift-chart-for-model-with-no-target-value"></a>Gráfico de mejora respecto al modelo predictivo para un modelo sin valor de destino  
  Si no especifica el estado de la columna de predicción, puede crear el tipo de gráfico que se muestra en el diagrama siguiente. Este gráfico muestra el modo en que el modelo se comporta para todos los estados del atributo de predicción. Por ejemplo, este gráfico le indicaría hasta qué punto el modelo predice bien tanto los clientes que es probable que compren una bicicleta como los que no es probable que la compren.  
   
  El eje X es el mismo que en el gráfico con la columna de predicción especificada, pero ahora el eje Y representa el porcentaje de predicciones correctas. Por consiguiente, la línea ideal es la línea diagonal, que muestra que en el 50 por ciento de los datos, el modelo predice correctamente el 50 por ciento de los casos, el máximo que se puede esperar.  
   
- ![Gráfico de elevación en el que se muestran predicciones correctas](../../analysis-services/data-mining/media/lift1.gif "Gráfico de elevación en el que se muestran predicciones correctas")  
+ ![Elevación predicciones correctas de gráfico que muestra](../../analysis-services/data-mining/media/lift1.gif "gráfico de elevación con predicciones correctas")  
   
  Puede hacer clic en el gráfico para mover la barra gris vertical y la **Leyenda de minería de datos** muestra el porcentaje de casos total y el porcentaje de casos que se predijeron correctamente. Por ejemplo, si coloca la barra deslizante gris en la marca del 50 por ciento, la **Leyenda de minería de datos** muestra las puntuaciones de precisión siguientes. Estas cifras se basan en el modelo TM_Decision Tree creado en el Tutorial básico de minería de datos.  
   
@@ -109,7 +114,7 @@ caps.handback.revision: 55
   
  [Volver al principio](#bkmk_Top)  
   
-### Restricciones de los gráficos de mejora respecto al modelo predictivo  
+### <a name="restrictions-on-lift-charts"></a>Restricciones de los gráficos de mejora respecto al modelo predictivo  
  Los gráficos de mejora respecto al modelo predictivo requieren que el atributo de predicción sea un valor discreto. Es decir, no puede usar gráficos de mejora respecto al modelo predictivo para medir la exactitud de los modelos que predicen valores numéricos continuos.  
   
  La exactitud de la predicción para todos los valores discretos del atributo de predicción se muestra en una única línea. Si desea ver las líneas de exactitud de la predicción para cualquier valor individual del atributo de predicción, debe crear un gráfico de mejora respecto al modelo predictivo independiente para cada valor de destino.  
@@ -118,10 +123,11 @@ caps.handback.revision: 55
   
  No puede mostrar modelos de serie temporal en un gráfico de mejora respecto al modelo predictivo ni en un gráfico de beneficios. Una práctica común para medir la precisión de las predicciones de series temporales consiste en reservar una parte de los datos históricos y comparar estos datos con las predicciones. Para más información, consulte [Microsoft Time Series Algorithm](../../analysis-services/data-mining/microsoft-time-series-algorithm.md).  
   
-### Contenido relacionado  
+### <a name="related-content"></a>Contenido relacionado  
  [Volver al principio](#bkmk_Top)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
+

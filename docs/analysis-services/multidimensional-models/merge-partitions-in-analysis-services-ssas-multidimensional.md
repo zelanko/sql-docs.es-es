@@ -1,27 +1,32 @@
 ---
-title: "Mezclar particiones en Analysis Services (SSAS - Multidimensional) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "particiones [Analysis Services], mezclar"
-  - "mezclar particiones [Analysis Services]"
+title: Mezclar particiones en Analysis Services (SSAS - Multidimensional) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partitions [Analysis Services], merging
+- merging partitions [Analysis Services]
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a973f81fbb9eef7294b9beec9251569bcce0bf4f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Mezclar particiones en Analysis Services (SSAS - Multidimensional)
+# <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Mezclar particiones en Analysis Services (SSAS - Multidimensional)
   Puede mezclar particiones de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existente para consolidar datos de hechos de varias particiones del mismo grupo de medida.  
   
  [Escenarios frecuentes](#bkmk_Scenario)  
@@ -95,13 +100,13 @@ caps.handback.revision: 34
   
  Por ese mismo motivo, también es necesario actualizar las particiones que obtienen datos segmentados de consultas con nombre. La partición combinada debe tener ahora una consulta con nombre que devuelva el conjunto de resultados combinado que se ha obtenido anteriormente de las distintas consultas con nombre.  
   
-## Consideraciones sobre el almacenamiento de particiones: MOLAP  
+## <a name="partition-storage-considerations-molap"></a>Consideraciones sobre el almacenamiento de particiones: MOLAP  
  Cuando se mezclan particiones MOLAP, también se mezclan los hechos almacenados en las estructuras multidimensionales de las particiones. Como resultado, se obtiene un partición internamente completa y coherente. Sin embargo, los hechos almacenados en particiones MOLAP son copias de los hechos contenidos en la tabla de hechos. Cuando se procesa posteriormente la partición, se eliminan los hechos almacenados en la estructura multidimensional (solo en procesamientos completos y actualizaciones) y se copian los datos contenidos en la tabla de hechos tal como se especifica en el origen de datos y en el filtro de la partición. Si la partición de origen utiliza una tabla de hechos distinta de la partición de destino, se debe mezclar manualmente la tabla de hechos de la partición de origen con la tabla de hechos de la partición de destino, para asegurar que se podrá disponer de un conjunto de datos completo cuando se procese la partición resultante. Esto se aplica también si las dos particiones se basan en consultas con nombre diferentes.  
   
 > [!IMPORTANT]  
 >  Una partición MOLAP mezclada con una tabla de hechos incompleta contiene una copia combinada internamente de los datos de la tabla de hechos, y funciona correctamente hasta que se procesa.  
   
-## Consideraciones sobre el almacenamiento de particiones: particiones HOLAP y ROLAP  
+## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>Consideraciones sobre el almacenamiento de particiones: particiones HOLAP y ROLAP  
  Cuando se mezclan particiones HOLAP o ROLAP que tienen tablas de hechos diferentes, las tablas de hechos no se mezclan automáticamente. A menos que se mezclen manualmente las tablas de hechos, la partición resultante solo podrá disponer de la tabla de hechos asociada con la partición de destino. Los hechos asociados con la partición de origen no estarán disponibles para obtener detalles en la partición resultante y, cuando se procese la partición, las agregaciones no resumirán los datos procedentes de la tabla no disponible.  
   
 > [!IMPORTANT]  
@@ -116,9 +121,9 @@ caps.handback.revision: 34
 > [!IMPORTANT]  
 >  Antes de mezclar particiones, copie primero la información de filtro de datos (a menudo, la cláusula WHERE para los filtros basados en consultas SQL). Posteriormente, una vez completada la mezcla, debe actualizar la propiedad Origen de la partición que contiene los datos de hechos acumulados.  
   
-1.  En el Explorador de objetos, expanda el nodo **Grupos de medida** del cubo que contiene las particiones que quiere mezclar, expanda **Particiones** y haga clic con el botón derecho en la partición de destino o en el destino de la operación de mezcla. Por ejemplo, si va a mover datos de hechos trimestrales a una partición que almacena datos de hechos anuales, seleccione la partición que contiene los datos de hechos anuales.  
+1.  En el Explorador de objetos, expanda el nodo **Grupos de medida** del cubo que contiene las particiones que quiere mezclar, expanda **Particiones**y haga clic con el botón derecho en la partición de destino o en el destino de la operación de mezcla. Por ejemplo, si va a mover datos de hechos trimestrales a una partición que almacena datos de hechos anuales, seleccione la partición que contiene los datos de hechos anuales.  
   
-2.  Haga clic en **Particiones de mezcla** para abrir el cuadro de diálogo **Partición de mezcla \<nombre de partición>**.  
+2.  Haga clic en **particiones de mezcla** para abrir el **partición de mezcla \<nombre de partición >** cuadro de diálogo.  
   
 3.  En **Particiones de origen**, active la casilla situada junto a cada partición de origen que desee mezclar con la partición de destino y haga clic en **Aceptar**.  
   
@@ -132,13 +137,13 @@ caps.handback.revision: 34
 ##  <a name="bkmk_partitionsXMLA"></a> Cómo mezclar particiones mediante XMLA  
  Para más información, vea el tema [Mezclar particiones &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Procesar objetos de Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
  [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Crear y administrar una partición local &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [Crear y administrar una partición remota &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+ [Crear y administrar una partición remota &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [Establecer la reescritura de particiones](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
- [Particiones habilitadas para escritura](../Topic/Write-Enabled%20Partitions.md)   
+ [Particiones habilitadas para escritura](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [Configurar el almacenamiento de cadenas para dimensiones y particiones](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
   
   

@@ -1,35 +1,40 @@
 ---
-title: "Supervisar una instancia de Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "supervisar [Analysis Services - datos multidimensionales]"
-  - "datos multidimensionales [Analysis Services], supervisar"
-  - "supervisar rendimiento [SQL Server], SQL Server Profiler"
-  - "rendimiento [SQL Server], herramientas de supervisión"
+title: Supervisar una instancia de Analysis Services | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring [Analysis Services - multidimensional data]
+- multidimensional data [Analysis Services], monitoring
+- monitoring performance [SQL Server], SQL Server Profiler
+- performance [SQL Server], monitoring tools
 ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5974fc48206fdac56cd5d6145755a611e4f5a543
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Supervisar una instancia de Analysis Services
+# <a name="monitor-an-analysis-services-instance"></a>Supervisar una instancia de Analysis Services
   Puede supervisar el rendimiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o mediante el Monitor de Rendimiento, una aplicación que se denomina a veces **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite crear y administrar seguimientos y analizar y reproducir resultados de seguimiento. El Monitor de rendimiento notifica el estado del producto tal como se indiza a través de ciertos contadores, que se analizan en la siguiente sección.  
   
 > [!NOTE]  
->  Para obtener más información sobre la supervisión, vea [SQL Server 2008 R2 Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539) (Guía de operaciones de SQL Server 2008 R2).  
+>  Para obtener más información sobre la supervisión, vea [SQL Server 2008 R2 Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539)(Guía de operaciones de SQL Server 2008 R2).  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  Siga estos vínculos para obtener más información sobre la supervisión.  
   
  [Eventos de seguimiento de Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  

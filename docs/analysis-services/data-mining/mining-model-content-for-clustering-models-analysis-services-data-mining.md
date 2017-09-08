@@ -1,41 +1,46 @@
 ---
-title: "Contenido del modelo de miner&#237;a de datos para los modelos de agrupaci&#243;n en cl&#250;steres (Analysis Services - Miner&#237;a de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "vecino más cercano [Minería de datos]"
-  - "clústeres [Minería de datos]"
-  - "contenido del modelo de minería de datos, modelos de agrupación en clústeres"
-  - "algoritmos de clústeres [Analysis Services]"
+title: "Contenido del modelo de minería de datos para los modelos de clústeres (Analysis Services: minería de datos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- nearest neighbor [Data Mining]
+- clustering [Data Mining]
+- mining model content, clustering models
+- clustering algorithms [Analysis Services]
 ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 98ce20c3306de8d62a552df44684dd0c6cfebabc
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Contenido del modelo de miner&#237;a de datos para los modelos de agrupaci&#243;n en cl&#250;steres (Analysis Services - Miner&#237;a de datos)
+# <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de agrupación en clústeres (Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de clústeres de Microsoft. Para obtener una explicación general sobre el contenido del modelo de minería de datos para todos los tipos de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
-## Descripción de la estructura de un modelo de agrupación en clústeres  
+## <a name="understanding-the-structure-of-a-clustering-model"></a>Descripción de la estructura de un modelo de agrupación en clústeres  
  Un modelo de agrupación en clústeres tiene una estructura simple. Cada modelo tiene un único nodo primario que representa el modelo y sus metadatos, y cada nodo primario tiene una lista plana de clústeres (NODE_TYPE = 5). Esta organización se muestra en la imagen siguiente.  
   
- ![estructura del contenido del modelo para la agrupación en clústeres](../../analysis-services/data-mining/media/modelcontentstructure-clust.gif "estructura del contenido del modelo para la agrupación en clústeres")  
+ ![estructura del contenido del modelo de agrupación en clústeres](../../analysis-services/data-mining/media/modelcontentstructure-clust.gif "estructura del contenido del modelo de agrupación en clústeres")  
   
  Cada nodo secundario representa un único clúster y contiene estadísticas detalladas sobre los atributos de los casos de ese clúster. Esto incluye un recuento del número de casos del clúster y la distribución de los valores que diferencian ese clúster de los demás.  
   
 > [!NOTE]  
 >  No es necesario realizar iteraciones en los nodos para obtener un recuento o una descripción de los clústeres; el nodo primario del modelo también cuenta y enumera los clústeres.  
   
- El nodo primario contiene estadísticas útiles que describen la distribución real de todos los casos de entrenamiento. Estas estadísticas se encuentran en la columna de la tabla anidada NODE_DISTRIBUTION. Por ejemplo, en la tabla siguiente se muestran varias filas de la tabla NODE_DISTRIBUTION que describen la distribución de los datos demográficos de los clientes para el modelo de agrupación en clústeres, `TM_Clustering`, que se crea en [Tutorial básico de minería de datos](../Topic/Basic%20Data%20Mining%20Tutorial.md):  
+ El nodo primario contiene estadísticas útiles que describen la distribución real de todos los casos de entrenamiento. Estas estadísticas se encuentran en la columna de la tabla anidada NODE_DISTRIBUTION. Por ejemplo, en la tabla siguiente se muestran varias filas de la tabla NODE_DISTRIBUTION que describen la distribución de los datos demográficos de los clientes para el modelo de agrupación en clústeres, `TM_Clustering`, que se crea en [Tutorial básico de minería de datos](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c):  
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Support|PROBABILITY|VARIANCE|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
@@ -52,7 +57,7 @@ caps.handback.revision: 15
   
  Observe que para cada atributo hay un tipo de valor **Missing** que indica cuántos casos carecían de datos para ese atributo. Los datos ausentes pueden ser relevantes y afectar a los cálculos de varias maneras, dependiendo del tipo de datos. Para más información, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
-## Contenido del modelo para un modelo de agrupación en clústeres  
+## <a name="model-content-for-a-clustering-model"></a>Contenido del modelo para un modelo de agrupación en clústeres  
  Esta sección solo proporciona detalles y ejemplos para las columnas del contenido del modelo de minería de datos que son relevantes para los modelos de agrupación en clústeres.  
   
  Para obtener información sobre las columnas de uso general en el conjunto de filas de esquema, como MODEL_CATALOG y MODEL_NAME, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -152,13 +157,13 @@ caps.handback.revision: 15
   
  **Nodos de clúster** : el nombre del clúster. Por ejemplo, Clúster 1.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona varios métodos para crear un modelo de agrupación en clústeres. Si desconoce el método utilizado para crear el modelo con el que está trabajando, puede recuperar los metadatos del modelo mediante programación, utilizando un cliente ADOMD o AMO, o consultando el conjunto de filas de esquema de minería de datos. Para más información, vea [Consultar los parámetros usados para crear un modelo de minería de datos](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   
 > [!NOTE]  
 >  La estructura y el contenido del modelo permanecen invariables, independientemente del método de agrupación en clústeres o de los parámetros utilizados.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [Algoritmo de clústeres de Microsoft](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   

@@ -1,27 +1,32 @@
 ---
-title: "Ejemplos de consultas de modelos de red neuronal | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "algoritmos de red neuronal [Analysis Services]"
-  - "consultas de contenido [DMX]"
-  - "neural network model [Analysis Services]"
+title: Ejemplos de consultas de modelo de red neuronal | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- neural network algorithms [Analysis Services]
+- content queries [DMX]
+- neural network model [Analysis Services]
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16343214615687c3a2ac39c9083c867c6d1e91c1
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Ejemplos de consultas de modelos de red neuronal
+# <a name="neural-network-model-query-examples"></a>Ejemplos de consultas de modelos de red neuronal
   Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles de los patrones detectados durante el análisis, o de una consulta de predicción, que utiliza los patrones del modelo para realizar predicciones de los nuevos datos. Por ejemplo, una consulta de contenido para un modelo de red neuronal podría recuperar metadatos del modelo, por ejemplo, el número de niveles ocultos. O bien, una consulta de predicción podría sugerir las clasificaciones según una entrada y proporcionar, si se desea, las probabilidades para cada clasificación.  
   
  En esta sección se explica cómo crear consultas para los modelos que se basan en el algoritmo de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -40,13 +45,13 @@ caps.handback.revision: 29
   
  [Crear una predicción singleton](#bkmk_Query5)  
   
-## Buscar información sobre un modelo de red neuronal  
+## <a name="finding-information-about-a-neural-network-model"></a>Buscar información sobre un modelo de red neuronal  
  Todos los modelos de minería de datos exponen el contenido aprendido por el algoritmo de acuerdo con un esquema normalizado, el conjunto de filas de esquema del modelo de minería de datos. Esta información proporciona detalles sobre el modelo e incluye los metadatos básicos, las estructuras detectadas en el análisis y los parámetros que se utilizan en el proceso. Puede crear consultas en el contenido del modelo usando instrucciones de Extensiones de minería de datos (DMX).  
   
 ###  <a name="bkmk_Query1"></a> Consulta de ejemplo 1: obtener metadatos del modelo usando DMX  
  La consulta siguiente devuelve algunos metadatos básicos sobre un modelo que se generó con el algoritmo de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . En un modelo de red neuronal, el nodo primario del modelo únicamente contiene el nombre del modelo, el nombre de la base de datos en la que se encuentra almacenado el modelo y el número de nodos secundarios. Sin embargo, el nodo de estadísticas marginal (NODE_TYPE = 24) proporciona tanto los metadatos básicos como algunas estadísticas derivadas acerca de las columnas de entrada que se usan en el modelo.  
   
- La siguiente consulta de ejemplo se basa en el modelo de minería creado en el [Tutorial intermedio de minería de datos](../Topic/Lesson%205:%20Building%20Neural%20Network%20and%20Logistic%20Regression%20Models%20\(Intermediate%20Data%20Mining%20Tutorial\).md), denominado `Call Center Default NN`. El modelo utiliza datos de un centro de atención telefónica para explorar las correlaciones posibles entre el personal y el número de llamadas, pedidos e incidencias. La instrucción DMX recupera los datos del nodo de estadísticas marginales del modelo de red neuronal. La consulta incluye la palabra clave FLATTENED, porque las estadísticas de los atributos de entrada de interés están almacenadas en una tabla anidada, NODE_DISTRIBUTION. Sin embargo, si el proveedor de consultas admite conjuntos de filas jerárquicos, no necesita utilizar la palabra clave FLATTENED.  
+ La siguiente consulta de ejemplo se basa en el modelo de minería creado en el [Tutorial intermedio de minería de datos](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b), denominado `Call Center Default NN`. El modelo utiliza datos de un centro de atención telefónica para explorar las correlaciones posibles entre el personal y el número de llamadas, pedidos e incidencias. La instrucción DMX recupera los datos del nodo de estadísticas marginales del modelo de red neuronal. La consulta incluye la palabra clave FLATTENED, porque las estadísticas de los atributos de entrada de interés están almacenadas en una tabla anidada, NODE_DISTRIBUTION. Sin embargo, si el proveedor de consultas admite conjuntos de filas jerárquicos, no necesita utilizar la palabra clave FLATTENED.  
   
 ```  
 SELECT FLATTENED MODEL_CATALOG, MODEL_NAME,   
@@ -124,7 +129,7 @@ WHERE NODE_TYPE = 21
   
  Resultados del ejemplo:  
   
-|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
+|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |-----------------------|------------------------|  
 |Average Time Per Issue|64.7094100096 - 77.4002099712|  
 |Day Of Week|Fri.|  
@@ -171,17 +176,17 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
   
 -   Los nombres únicos de los nodos en el nivel de entrada siempre empiezan por 60000000.  
   
- Por tanto, estos resultados indican que al nodo denotado por el identificador 70000000200000000 se le habían pasado seis coeficientes diferentes (VALUETYPE = 7). Los valores de los coeficientes están en la columna ATTRIBUTE_VALUE. Puede determinar exactamente para qué atributo de entrada es el coeficiente utilizando el identificador de nodo en la columna ATTRIBUTE_NAME. Por ejemplo, el identificador de nodo 6000000000000000a hace referencia el atributo de entrada y al valor, `Day of Week = 'Tue.'` Puede utilizar el identificador de nodo para crear una consulta o puede ir al nodo utilizando el [Visor de árbol de contenido genérico de Microsoft](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md).  
+ Por tanto, estos resultados indican que al nodo denotado por el identificador 70000000200000000 se le habían pasado seis coeficientes diferentes (VALUETYPE = 7). Los valores de los coeficientes están en la columna ATTRIBUTE_VALUE. Puede determinar exactamente para qué atributo de entrada es el coeficiente utilizando el identificador de nodo en la columna ATTRIBUTE_NAME. Por ejemplo, el identificador de nodo 6000000000000000a hace referencia el atributo de entrada y al valor, `Day of Week = 'Tue.'` Puede utilizar el identificador de nodo para crear una consulta o puede ir al nodo utilizando el [Visor de árbol de contenido genérico de Microsoft](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
   
  De igual forma, si consulta la tabla NODE_DISTRIBUTION de los nodos del nivel de salida (NODE_TYPE = 23), puede ver los coeficientes de cada valor de salida. Sin embargo, en el nivel de salida, los punteros hacen referencia a los nodos del nivel oculto. Para más información, vea [Contenido del modelo de minería de datos para los modelos de red neuronal &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
-## Utilizar un modelo de red neuronal para realizar predicciones  
+## <a name="using-a-neural-network-model-to-make-predictions"></a>Utilizar un modelo de red neuronal para realizar predicciones  
  El algoritmo de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite tanto la clasificación como la regresión. Puede utilizar funciones de predicción con estos modelos para proporcionar datos nuevos y crear predicciones singleton o por lotes.  
   
 ###  <a name="bkmk_Query5"></a> Consulta de ejemplo 5: crear una predicción singleton  
  La manera más fácil de generar una consulta de predicción en un modelo de red neuronal es utilizar el Generador de consultas de predicción, disponible en la pestaña **Predicción de minería de datos** del Diseñador de minería de datos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Puede examinar el modelo en el Visor de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para filtrar los atributos de interés y las tendencias de vista, y a continuación cambiar a la pestaña **Predicción de minería de datos** para crear una consulta y predecir los valores nuevos para esas tendencias.  
   
- Por ejemplo, puede examinar el modelo de centro de atención telefónica para ver las correlaciones entre los volúmenes de pedidos y otros atributos. Para ello, abra el modelo en el visor y, como **Entrada**, seleccione **\<Todos>**.  Después, como **Salida**, seleccione **Number of Orders**. Como **Valor 1**, seleccione el intervalo que representa la mayoría de los pedidos y como **Valor 2**, seleccione el intervalo que representa los pedidos menores. A continuación, puede ver de un vistazo todos los atributos que el modelo pone en correlación con el volumen de pedidos.  
+ Por ejemplo, puede examinar el modelo de centro de atención telefónica para ver las correlaciones entre los volúmenes de pedidos y otros atributos. Para ello, abra el modelo en el Visor y para **entrada**, seleccione  **\<todos >**.  Después, como **Salida**, seleccione **Number of Orders**. Como **Valor 1**, seleccione el intervalo que representa la mayoría de los pedidos y como **Valor 2**, seleccione el intervalo que representa los pedidos menores. A continuación, puede ver de un vistazo todos los atributos que el modelo pone en correlación con el volumen de pedidos.  
   
  Al examinar los resultados en el visor, puede ver que ciertos días de la semana tienen los menores volúmenes de pedidos y que un aumento en el número de operadores parece estar correlacionado con ventas mayores. Después, podría utilizar una consulta de predicción en el modelo para probar una hipótesis "qué sucedería si" y preguntar si al aumentar el número de operadores de nivel 2 en un día de volumen bajo, aumentarían los pedidos. Para ello, cree una consulta como la siguiente:  
   
@@ -205,7 +210,7 @@ NATURAL PREDICTION JOIN
 > [!NOTE]  
 >  Los Complementos de minería de datos para Excel 2007 ofrecen asistentes de regresión logística que facilitan el poder responder a cuestiones complejas, como cuántos operadores de nivel dos se necesitarían para mejorar el grado de servicio a un nivel determinado para un turno concreto. Los complementos de minería de datos se pueden descargar de forma gratuita e incluyen asistentes que se basan en los algoritmos de red neuronal y/o de regresión logística. Para más información, vea el sitio web [Data Mining Add-ins for Office 2007](http://go.microsoft.com/fwlink/?LinkID=117790) (Complementos de minería de datos para Office 2007).  
   
-## Lista de funciones de predicción  
+## <a name="list-of-prediction-functions"></a>Lista de funciones de predicción  
  Todos los algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] son compatibles con un conjunto común de funciones. No hay ninguna función de predicción que sea específica del algoritmo de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] ; sin embargo, el algoritmo admite las funciones que se mencionan en la tabla siguiente.  
   
 |||  
@@ -221,10 +226,10 @@ NATURAL PREDICTION JOIN
   
  Para obtener una lista de las funciones que son comunes a todos los algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)], vea [Referencia de algoritmo (Analysis Services - Minería de datos)](https://technet.microsoft.com/library/bb895228\(v=sql.105\).aspx). Para obtener la sintaxis de funciones concretas, vea [Referencia de funciones de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Algoritmo de red neuronal de Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Referencia técnica del algoritmo de red neuronal de Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [Contenido del modelo de minería de datos para los modelos de red neuronal &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Lección 5: Generar modelos de red neuronal y de regresión logística &#40;Tutorial intermedio de minería de datos&#41;](../Topic/Lesson%205:%20Building%20Neural%20Network%20and%20Logistic%20Regression%20Models%20\(Intermediate%20Data%20Mining%20Tutorial\).md)  
+ [Contenido del modelo de minería de datos para los modelos de red neuronal &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Lección 5: Generar neuronal red y los modelos de regresión logística &#40; Tutorial de minería de datos intermedios &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   

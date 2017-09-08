@@ -1,33 +1,38 @@
 ---
-title: "Crear un origen de datos (SSAS multidimensional) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.sqlserverstudio.impersonationinfo.f1"
-  - "sql13.asvs.connectionmanager.f1"
-  - "sql13.asvs.datasourcedesigner.f1"
-helpviewer_keywords: 
-  - "suplantación [Analysis Services]"
-  - "orígenes de datos [Analysis Services], crear"
-  - "seguridad [Analysis Services], conexiones de orígenes de datos"
+title: Crear un origen de datos (SSAS Multidimensional) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.sqlserverstudio.impersonationinfo.f1
+- sql13.asvs.connectionmanager.f1
+- sql13.asvs.datasourcedesigner.f1
+helpviewer_keywords:
+- impersonation [Analysis Services]
+- data sources [Analysis Services], creating
+- security [Analysis Services], data source connections
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 caps.latest.revision: 61
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 61
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 715f23cb80c0de16697b3aa66a4fb07669ad169e
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Crear un origen de datos (SSAS multidimensional)
-  En un modelo multidimensional de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], un objeto de origen de datos representa una conexión al origen de datos del que va a procesar o importar los datos. Un modelo multidimensional debe contener al menos un objeto de origen de datos, pero puede agregar más para combinar datos de varios almacenamientos de datos. Siga las instrucciones de este tema para crear un objeto de origen de datos para el modelo. Para obtener más información sobre cómo establecer propiedades en este objeto, vea [Establecer propiedades de origen de datos &#40;SSAS multidimensional&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md).  
+# <a name="create-a-data-source-ssas-multidimensional"></a>Crear un origen de datos (SSAS multidimensional)
+  En un modelo multidimensional de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , un objeto de origen de datos representa una conexión al origen de datos del que va a procesar o importar los datos. Un modelo multidimensional debe contener al menos un objeto de origen de datos, pero puede agregar más para combinar datos de varios almacenamientos de datos. Siga las instrucciones de este tema para crear un objeto de origen de datos para el modelo. Para obtener más información sobre cómo establecer propiedades en este objeto, vea [Establecer propiedades de origen de datos &#40;SSAS multidimensional&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md).  
   
  En este tema se incluyen las secciones siguientes:  
   
@@ -51,10 +56,10 @@ caps.handback.revision: 61
 ##  <a name="bkmk_impersonation"></a> Establecer las opciones de suplantación y las credenciales  
  Una conexión a un origen de datos puede utilizar a veces la autenticación de Windows o un servicio de autenticación proporcionado por el Sistema de administración de bases de datos, como la autenticación de SQL Server al conectarse a bases de datos de SQL Azure. La cuenta que especifique debe tener un inicio de sesión en el servidor de base de datos remota y permisos de lectura en la base de datos externa.  
   
-### Autenticación de Windows  
+### <a name="windows-authentication"></a>Autenticación de Windows  
  Las conexiones que utilizan la autenticación de Windows se especifican en la pestaña **Información de suplantación** del Diseñador de origen de datos. Utilice esta pestaña para elegir la opción de suplantación que especifica la cuenta en la que se ejecuta [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] al conectarse al origen de datos externo. No todas las opciones se pueden usar en todos los escenarios. Para obtener más información sobre estas opciones y cuándo usarlas, vea [Establezca las opciones de suplantación &#40;SSAS - multidimensional&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md).  
   
-### Autenticación de base de datos  
+### <a name="database-authentication"></a>Autenticación de base de datos  
  Como alternativa a la autenticación de Windows, puede especificar una conexión que use un servicio de autenticación proporcionado por el sistema de administración de bases de datos. En algunos casos, se requiere usar la autenticación de base de datos. Algunos escenarios que requieren el uso de la autenticación de base de datos incluyen el uso de la autenticación de SQL Server para conectarse a una base de datos de Windows Azure SQL o el acceso a un origen de datos relacional que se ejecuta en otro sistema operativo o en un dominio que no sea de confianza.  
   
  En el caso de un origen de datos que use la autenticación de base de datos, el nombre de usuario y la contraseña de un inicio de sesión de base de datos se especifica en la cadena de conexión. Las credenciales se agregan a la cadena de conexión cuando se especifica un nombre de usuario y una contraseña en el Administrador de conexión la conexión a un origen de datos se configura en el modelo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . No olvide especificar una identidad que tenga permisos de lectura para los datos.  
@@ -66,7 +71,7 @@ caps.handback.revision: 61
 > [!NOTE]  
 >  De manera predeterminada, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] no guarda contraseñas con la cadena de conexión. Si no se guarda la contraseña, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] le solicita que la escriba cuando es necesario. Si decide guardar la contraseña, esta se guarda en formato cifrado en la cadena de conexión de datos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cifra la información de contraseña para los orígenes de datos mediante la clave de cifrado de la base de datos que contiene el origen de datos. Con la información de conexión cifrada, debe usar el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para cambiar la cuenta de servicio de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o la contraseña, ya que de lo contrario no se puede recuperar la información cifrada. Para más información, consulte [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).  
   
-### Definir la información de suplantación para los objetos de minería de datos  
+### <a name="defining-impersonation-information-for-data-mining-objects"></a>Definir la información de suplantación para los objetos de minería de datos  
  Las consultas de minería de datos se pueden ejecutar en el contexto de la cuenta de servicio de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , pero también se pueden ejecutar en el contexto del usuario que envía la consulta o en el de un usuario especificado. El contexto en que se ejecute una consulta podría afectar a sus resultados. En las operaciones del tipo **OPENQUERY** de minería de datos, podría interesarle que la consulta de minería de datos se ejecutara en el contexto del usuario actual o de un usuario especificado (independientemente del usuario que ejecute la consulta) y no en el contexto de la cuenta de servicio. Así, la consulta se puede ejecutar con credenciales de seguridad limitadas. Si desea que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] suplante al usuario actual o a un usuario especificado, seleccione las opciones **Utilizar un nombre de usuario y una contraseña específicos** o **Utilizar las credenciales del usuario actual** .  
   
 ##  <a name="bkmk_steps"></a> Crear un origen de datos con el Asistente para orígenes de datos  
@@ -85,9 +90,9 @@ caps.handback.revision: 61
   
      También puede elegir un proveedor diferente para acceder a otros orígenes de datos. Para obtener una lista de los proveedores y bases de datos relacionales compatibles con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Orígenes de datos admitidos &#40;SSAS - Multidimensionales&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
   
-5.  Especifique la información solicitada por el proveedor seleccionado para conectar con el origen de datos subyacente. Si selecciona el proveedor **OLE DB nativo\SQL Server Native Client**, especifique la siguiente información:  
+5.  Especifique la información solicitada por el proveedor seleccionado para conectar con el origen de datos subyacente. Si selecciona el proveedor **OLE DB nativo\SQL Server Native Client** , especifique la siguiente información:  
   
-    1.  **Nombre del servidor** es el nombre de red de la instancia del motor de base de datos. Se puede especificar como la dirección IP, el nombre NETBIOS del equipo o un nombre de dominio completo. Si se ha instalado el servidor como una instancia con nombre, se debe incluir el nombre de la instancia (por ejemplo, \<nombreDeEquipo>\\<nombreDeInstancia\>).  
+    1.  **Nombre del servidor** es el nombre de red de la instancia del motor de base de datos. Se puede especificar como la dirección IP, el nombre NETBIOS del equipo o un nombre de dominio completo. Si el servidor se instala como una instancia con nombre, debe incluir el nombre de instancia (por ejemplo, \<nombreDeEquipo >\\< instancename\>).  
   
     2.  **Iniciar sesión en el servidor** especifica cómo se autenticará la conexión. **Usar la autenticación de Windows** usa la autenticación de Windows. **Usar autenticación de SQL Server** especifica un inicio de sesión de usuario de base de datos para una instancia de SQL Server o bases de datos de Windows Azure SQL que admiten la autenticación de modo mixto.  
   
@@ -172,7 +177,7 @@ caps.handback.revision: 61
   
 5.  Busque la tabla que agregó y selecciónela. Haga clic con el botón derecho en la tabla y seleccione **Nueva relación**. Elija las columnas de origen y de destino que contienen los datos coincidentes.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Orígenes de datos admitidos &#40;SSAS - Multidimensionales&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [Vistas del origen de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   

@@ -1,29 +1,34 @@
 ---
-title: "Arquitectura l&#243;gica (Analysis Services - Miner&#237;a de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "estructuras de minería de datos [Analysis Services], acerca de las estructuras de minería de datos"
-  - "arquitectura lógica [minería de datos]"
-  - "arquitectura [Analysis Services], modelos de minería de datos"
-  - "modelos de minería de datos [Analysis Services], acerca de la minería de datos"
-  - "arquitectura [Analysis Services]"
+title: "Arquitectura lógica (Analysis Services: minería de datos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], about mining structures
+- logical architecture [Data Mining]
+- architecture [Analysis Services], mining models
+- mining models [Analysis Services], about data mining models
+- architecture [Analysis Services]
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 75c725b0461cbafc018cb3b42869414b6929a191
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Arquitectura l&#243;gica (Analysis Services - Miner&#237;a de datos)
+# <a name="logical-architecture-analysis-services---data-mining"></a>Arquitectura lógica (Analysis Services - Minería de datos)
   La minería de datos es un proceso que implica la interacción de varios componentes.  
   
 -   Puede tener acceso a orígenes de datos en una base de datos de SQL Server o cualquier otro origen de datos y usarlos para el entrenamiento, las pruebas o la predicción.  
@@ -53,22 +58,20 @@ caps.handback.revision: 24
   
  También puede definir y modificar orígenes de datos y vistas del origen de datos utilizando AMO o XMLA. Para obtener más información sobre cómo trabajar con estos objetos mediante programación, vea [Información general de arquitectura lógica &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md).  
   
- [Volver al principio](#bkmk_Top)  
   
-##  <a name="bkmk_Structures"></a> Estructuras de minería de datos  
+##  <a name="bkmk_Structures"></a> Mining Structures  
  Una estructura de minería de datos es un contenedor de datos lógico que define el dominio de datos a partir del cual se generan los modelos de minería de datos. Una sola estructura de minería de datos puede admitir varios modelos de minería de datos.  
   
  Cuando tenga que usar los datos en la solución de minería de datos, Analysis Services leerá los datos del origen y genera una memoria caché de agregados y otra información. De forma predeterminada, esta memoria caché se mantiene para poder reutilizar datos de entrenamiento y admitir modelos adicionales. Si necesita eliminar la memoria caché, cambie la propiedad **CacheMode** en el objeto de estructura de minería de datos por el valor **ClearAfterProcessing**. Para obtener más información, vea [Clases de minería de datos de AMO](../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
   
- [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] también proporciona la capacidad de separar los datos en conjuntos de datos de prueba y de entrenamiento, para que pueda probar sus modelos de minería de datos en un conjunto de datos representativo y seleccionado de forma aleatoria. Los datos no se almacenan en realidad por separado; en su lugar, los datos de caso de la memoria caché de la estructura se marcan con una propiedad que indica si ese caso se utiliza para el entrenamiento o para las pruebas. Si la memoria caché se elimina, esta información no se puede recuperar.  
+ Analysis Services también proporciona la capacidad de separar los datos en conjuntos de datos, aprendizaje y prueba para que pueda probar sus modelos de minería de datos en un conjunto de datos representativo y seleccionado de forma aleatoria. Los datos no se almacenan en realidad por separado; en su lugar, los datos de caso de la memoria caché de la estructura se marcan con una propiedad que indica si ese caso se utiliza para el entrenamiento o para las pruebas. Si la memoria caché se elimina, esta información no se puede recuperar.  
   
  Para obtener más información, vea [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
- Una estructura de minería de datos puede contener tablas anidadas. Una tabla anidada proporciona detalles adicionales sobre el caso que se modela en la tabla de datos principal. Para obtener más información, vea [Tablas anidadas &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md).  
+ Una estructura de minería de datos puede contener tablas anidadas. Una tabla anidada proporciona detalles adicionales sobre el caso que se modela en la tabla de datos principal. Para más información, vea [Tablas anidadas &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md).  
   
- [Volver al principio](#bkmk_Top)  
   
-##  <a name="bkmk_Models"></a> Modelos de minería de datos  
+##  <a name="bkmk_Models"></a> Mining Models  
  Antes del procesamiento un modelo de minería de datos solo es una combinación de propiedades de metadatos. Estas propiedades especifican una estructura de minería de datos, especifican un algoritmo de minería de datos y definen una colección de parámetros y configuraciones de filtro que afectan al modo en que se procesan los datos. Para obtener más información, vea [Modelos de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md).  
   
  Al procesar el modelo, los datos de entrenamiento que se almacenan en la memoria caché de la estructura de minería de datos se utilizan para generar los patrones, según las propiedades estadísticas de los datos y la heurística definida por el algoritmo y sus parámetros. Esto se conoce como *entrenar* el modelo.  
@@ -77,7 +80,6 @@ caps.handback.revision: 24
   
  En escenarios limitados, la estructura lógica del modelo también se puede exportar a un archivo que representa las fórmulas y los enlaces de datos según un formato estándar, el lenguaje de marcado de modelado de predicción (PMML). Esta estructura lógica se puede importar en otros sistemas que utilizan PMML y el modelo así descrito puede utilizarse entonces para la predicción. Para obtener más información, vea [Descripción de la instrucción Select de DMX](../../dmx/understanding-the-dmx-select-statement.md).  
   
- [Volver al principio](#bkmk_Top)  
   
 ##  <a name="bkmk_CustomObjects"></a> Objetos de minería de datos personalizados  
  Otros objetos que se usan en el contexto de un proyecto de minería de datos, como los gráficos de precisión o las consultas de predicción, no se conservan en la solución, pero se pueden incluir en un script mediante ASSL o se pueden generar con AMO.  
@@ -90,7 +92,7 @@ caps.handback.revision: 24
  Para obtener más información, vea [Administración de ensamblados de modelos multidimensionales](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md).  
   
  **Procedimientos almacenados personalizados**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] La minería de datos admite el uso de procedimientos almacenados para trabajar con objetos de minería de datos. Puede crear sus propios procedimientos almacenados para ampliar la funcionalidad y trabajar más fácilmente con los datos devueltos por las consultas de predicción y las consultas de contenido.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]minería de datos admite el uso de procedimientos almacenados para trabajar con objetos de minería de datos. Puede crear sus propios procedimientos almacenados para ampliar la funcionalidad y trabajar más fácilmente con los datos devueltos por las consultas de predicción y las consultas de contenido.  
   
  [Definir procedimientos almacenados](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
@@ -101,15 +103,14 @@ caps.handback.revision: 24
  Además, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contiene muchos procedimientos almacenados del sistema que se usan internamente para la minería de datos. Aunque los procedimientos almacenados del sistema son para uso interno, es posible le resulten útiles. Microsoft se reserva el derecho de cambiar estos procedimientos almacenados según sea necesario; por consiguiente, para utilizarlos en producción, se recomienda crear consultas con DMX, AMO o XMLA.  
   
  **Crear algoritmos de complemento**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona un mecanismo para crear sus propios algoritmos y, después, agregar los algoritmos como un nuevo servicio de minería de datos en la instancia de servidor.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Proporciona un mecanismo para crear sus propios algoritmos y, a continuación, agregar los algoritmos como un nuevo servicio de minería de datos a la instancia del servidor.  
   
  Analysis Services utiliza las interfaces COM para comunicarse con los algoritmos de complemento. Para obtener más información sobre cómo implementar nuevos algoritmos, vea [Plugin Algorithms](../../analysis-services/data-mining/plugin-algorithms.md).  
   
  Debe registrar cada nuevo algoritmo para poder usarlo. Para registrar un algoritmo, agregue los metadatos requeridos para los algoritmos en el archivo .ini de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Debe agregar la información a cada instancia donde piense utilizar el nuevo algoritmo. Después de agregar el algoritmo, puede reiniciar la instancia y utilizar el conjunto de filas de esquema MINING_SERVICES para ver el nuevo algoritmo, incluidas las opciones y los proveedores que el algoritmo admite.  
   
- [Volver al principio](#bkmk_Top)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Procesar un modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Referencia de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)  
   

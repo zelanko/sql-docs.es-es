@@ -1,39 +1,44 @@
 ---
-title: "Contenido del modelo de miner&#237;a de datos para los modelos de regresi&#243;n lineal (Analysis Services - Miner&#237;a de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "algoritmos de regresión lineal [Analysis Services]"
-  - "contenido del modelo de minería, modelos de regresión lineal"
-  - "algoritmos de regresión [Analysis Services]"
+title: "Contenido del modelo para los modelos de regresión lineal de minería de datos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- linear regression algorithms [Analysis Services]
+- mining model content, linear regression models
+- regression algorithms [Analysis Services]
 ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d51c18399f6762976630b4498908e903a18847cf
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Contenido del modelo de miner&#237;a de datos para los modelos de regresi&#243;n lineal (Analysis Services - Miner&#237;a de datos)
+# <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de regresión lineal (Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener una explicación general sobre el contenido del modelo de minería de datos para todos los tipos de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
-## Descripción de la estructura de un modelo de regresión lineal  
+## <a name="understanding-the-structure-of-a-linear-regression-model"></a>Descripción de la estructura de un modelo de regresión lineal  
  Un modelo de regresión lineal tiene una estructura sumamente simple. Cada modelo tiene un único nodo primario que representa el modelo y sus metadatos, y un nodo de árbol de regresión (NODE_TYPE = 25) que contiene la fórmula de regresión para cada atributo de predicción.  
   
- ![Estructura del modelo para la regresión lineal](../../analysis-services/data-mining/media/modelcontentstructure-linreg.gif "Estructura del modelo para la regresión lineal")  
+ ![Estructura del modelo de regresión lineal de](../../analysis-services/data-mining/media/modelcontentstructure-linreg.gif "estructura del modelo de regresión lineal")  
   
  Los modelos de regresión lineal usan el mismo algoritmo que los árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , pero se utilizan parámetros diferentes para restringir el árbol y solo se aceptan como entradas los atributos continuos. Sin embargo, dado que los modelos de regresión lineal se basan en el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , los modelos de regresión lineal se muestran utilizando el Visor de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para más información, vea [Examinar un modelo usando el Visor de árboles de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md).  
   
  En la sección siguiente se explica cómo interpretar la información del nodo de la fórmula de regresión. Esta información se aplica no solo a los modelos de regresión lineal, sino también a los modelos de árboles de decisión que contienen regresiones en una parte del árbol.  
   
-## Contenido de un modelo de regresión lineal  
+## <a name="model-content-for-a-linear-regression-model"></a>Contenido de un modelo de regresión lineal  
  En esta sección solo se proporcionan detalles y ejemplos de las columnas del contenido del modelo de minería de datos que tienen una relevancia especial para la regresión lineal.  
   
  Para más información sobre las columnas de uso general en el conjunto de filas de esquema, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -138,7 +143,7 @@ caps.handback.revision: 18
  MSOLAP_NODE_SHORT_CAPTION  
  Etiqueta que se utiliza para la visualización.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Al crear un modelo utilizando el algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , el motor de minería de datos crea una instancia especial de un modelo de árboles de decisión y proporciona los parámetros que restringen el árbol para contener todos los datos de entrenamiento en un único nodo. Todas las entradas continuas se marcan y evalúan como regresores potenciales, pero únicamente los que se ajusten a los datos se conservan como regresores en el modelo final. El análisis genera una única fórmula de regresión o ninguna fórmula para cada regresor.  
   
  Para ver la fórmula de regresión completa en la **Leyenda de minería de datos**, haga clic en el nodo **(Todos)** del [Visor de árboles de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md).  
@@ -159,7 +164,7 @@ caps.handback.revision: 18
   
  La tabla NODE_DISTRIBUTION contiene varias filas, cada una agrupada por una variable. Las primeras dos filas siempre son de los tipos de valores 1 y 3, y describen el atributo de destino. Las filas siguientes proporcionan los detalles sobre la fórmula para un *regresor*determinado. Un regresor es una variable de entrada que tiene una relación lineal con la variable de salida. Puede haber varios regresores y cada uno tendrá una fila independiente para el coeficiente (VALUETYPE = 7), la ganancia de puntuación (VALUETYPE = 8) y las estadísticas (VALUETYPE = 9). Finalmente, la tabla incluye una fila que contiene la intersección de la ecuación (VALUETYPE = 11).  
   
-### Elementos de la fórmula de regresión  
+### <a name="elements-of-the-regression-formula"></a>Elementos de la fórmula de regresión  
  La tabla NODE_DISTRIBUTION anidada contiene cada elemento de la fórmula de regresión en una fila independiente. Las dos primeras filas de datos en los resultados del ejemplo contienen información sobre el atributo de predicción, **Yearly Income**, que modela la variable dependiente. La columna SUPPORT muestra el recuento de casos de compatibilidad de los dos estados de este atributo: o bien hay disponible un valor **Yearly Income** o el valor **Yearly Income** no está.  
   
  La columna VARIANCE indica la varianza calculada del atributo de predicción. La*varianza* es una medida de la dispersión de los valores de un ejemplo, dada una distribución esperada. La varianza aquí se calcula tomando el promedio de la desviación cuadrada de la media. La raíz cuadrada de la varianza también se conoce como desviación estándar. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no proporciona la desviación estándar pero se puede calcular fácilmente.  
@@ -168,16 +173,16 @@ caps.handback.revision: 18
   
  Finalmente, la tabla contiene una fila que proporciona la intersección de la ecuación.  
   
-#### Coeficiente  
+#### <a name="coefficient"></a>Coeficiente  
  Para cada regresor se calcula un coeficiente (VALUETYPE = 7). El propio coeficiente aparece en la columna ATTRIBUTE_VALUE, mientras que la columna VARIANCE indica la varianza para el coeficiente. Los coeficientes se calculan con una linealidad máxima.  
   
-#### Ganancia de puntuación  
+#### <a name="score-gain"></a>Ganancia de puntuación  
  La ganancia de puntuación (VALUETYPE = 8) de cada regresor representa la puntuación de grado de interés del atributo. Puede utilizar este valor para calcular la utilidad de varios regresores.  
   
-#### Estadísticas  
+#### <a name="statistics"></a>Estadísticas  
  La estadística de regresores (VALUETYPE = 9) es la media del atributo para los casos que tienen un valor. La columna ATTRIBUTE_VALUE contiene la propia media, mientras que la columna VARIANCE contiene la suma de desviaciones de la media.  
   
-#### Interceptar  
+#### <a name="intercept"></a>Interceptar  
  Normalmente, la *intersección* (VALUETYPE = 11) o *valor residual* en una ecuación de regresión indica el valor del atributo de predicción en el punto donde el atributo de entrada es igual a 0. En muchos casos, esto podría no suceder y se podrían producir resultados poco intuitivos.  
   
  Por ejemplo, en un modelo que prediga los ingresos según la edad, es inútil obtener información sobre los ingresos a los 0 años. En la vida real, suele ser más útil saber el comportamiento en el margen con respecto a los valores medios. Por consiguiente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modifica la intersección para expresar cada regresor en una relación con la media.  
@@ -186,7 +191,7 @@ caps.handback.revision: 18
   
  Por consiguiente, suponiendo que la edad media está alrededor de 45 años, la intersección (VALUETYPE = 11) para la fórmula de regresión indica los ingresos medios.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo de regresión lineal de Microsoft](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Referencia técnica del algoritmo de regresión lineal de Microsoft](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   

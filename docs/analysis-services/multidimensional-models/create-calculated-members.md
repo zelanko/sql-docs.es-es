@@ -1,29 +1,34 @@
 ---
-title: "Crear miembros calculados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "miembros calculados [Analysis Services]"
-  - "medidas personalizadas [Analysis Services]"
-  - "miembros [Analysis Services], calculados"
-  - "cálculos [Analysis Services], miembros calculados"
+title: Crear miembros calculados | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- calculated members [Analysis Services]
+- custom measures [Analysis Services]
+- members [Analysis Services], calculated
+- calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73feb8d67594c4967fa0ecb0050783b970e58726
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Crear miembros calculados
+# <a name="create-calculated-members"></a>Crear miembros calculados
   Puede crear medidas o miembros de una dimensión personalizados, denominados miembros calculados, combinando datos del cubo, operadores aritméticos, números y funciones. Por ejemplo, puede crear un miembro calculado denominado Euros que convierta dólares en euros multiplicando una medida de dólar existente por una tasa de cambio. De esta manera, se puede mostrar a los usuarios finales el valor en euros en una fila o una columna independiente.  
   
  Las definiciones de los miembros calculados se almacenan, pero sus valores solo existen en la memoria. En el ejemplo anterior, los usuarios finales ven los valores en euros, pero éstos no se almacenan como datos del cubo.  
@@ -76,12 +81,12 @@ caps.handback.revision: 26
   
  Puede arrastrar o copiar los componentes del cubo desde la pestaña **Metadatos** del panel **Herramientas de cálculo** al cuadro **Expresión** del panel de las expresiones de cálculo. Puede arrastrar o copiar funciones desde la pestaña **Funciones** del panel **Herramientas de cálculo** al cuadro **Expresión** del panel de las expresiones de cálculo.  
   
-## Direcciones en miembros calculados  
+## <a name="addressing-calculated-members"></a>Direcciones en miembros calculados  
  Al crear un miembro calculado en la pestaña **Cálculos** del **Diseñador de cubos**, se especifica la jerarquía primaria en la que se almacena el miembro calculado. La jerarquía primaria determina cómo se pueden asignar direcciones a un miembro calculado, según las siguientes reglas:  
   
 -   Si un miembro calculado se crea en la dimensión de medidas, el miembro calculado puede tener direcciones en esa dimensión.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Cálculos en modelos multidimensionales](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   

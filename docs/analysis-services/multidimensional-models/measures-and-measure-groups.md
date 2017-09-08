@@ -1,34 +1,39 @@
 ---
-title: "Medidas y grupos de medida | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "grupos de medida [Analysis Services]"
-  - "medidas [Analysis Services], acerca de las medidas"
-  - "Objetos OLAP [Analysis Services], medidas"
-  - "agregado, funciones [Analysis Services]"
-  - "granularidad"
-  - "grupos de medida [Analysis Services], acerca de los grupos de medida"
-  - "medidas [Analysis Services]"
-  - "agregaciones [Analysis Services], medidas"
-  - "tablas de hechos [Analysis Services]"
+title: Las medidas y grupos de medida | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- measure groups [Analysis Services]
+- measures [Analysis Services], about measures
+- OLAP objects [Analysis Services], measures
+- aggregate functions [Analysis Services]
+- granularity
+- measure groups [Analysis Services], about measure groups
+- measures [Analysis Services]
+- aggregations [Analysis Services], measures
+- fact tables [Analysis Services]
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
 caps.latest.revision: 42
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 42
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd15969978480e68505747609332f6224355a22f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Medidas y grupos de medida
+# <a name="measures-and-measure-groups"></a>Medidas y grupos de medida
   Un cubo incluye *medidas* en *grupos de medida*, lógica de negocios y una colección de dimensiones que proporcionan contexto para evaluar los datos numéricos que proporciona una medida. Las medidas y los grupos de medida son componentes esenciales de un cubo. Un cubo no puede existir sin, al menos, uno de cada uno de estos componentes.  
   
  En este tema se describen [Measures](#bkmk_measure) y [Measure Groups](#bkmk_mg). También contiene la siguiente tabla, con vínculos a procedimientos para crear y configurar grupos de medida y medidas.  
@@ -42,7 +47,7 @@ caps.handback.revision: 42
 |[Definir el comportamiento de suma parcial](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|El comportamiento de suma parcial corresponde a las agregaciones que son válidas para algunas dimensiones, pero no para otras. Un ejemplo común es un saldo de cuenta bancaria. Quizás quiera agregar saldos por cliente y región, pero no por tiempo. Por ejemplo, es poco probable que quiera agregar saldos de la misma cuenta en días consecutivos. Para definir el comportamiento de suma parcial, use el Asistente para agregar inteligencia empresarial.|  
 |[Grupos de medida vinculados](../../analysis-services/multidimensional-models/linked-measure-groups.md)|Reasigne un grupo de medida existente de otros cubos a la misma base de datos o a diferentes bases de datos de Analysis Services.|  
   
-##  <a name="bkmk_measure"></a> medidas  
+##  <a name="bkmk_measure"></a> Measures  
  Una medida representa una columna que contiene datos cuantificables, normalmente numéricos, que se pueden agregar. Las medidas representan algunos aspectos de la actividad de la organización, expresada en términos económicos (como ingresos, márgenes o costos), como cuentas (niveles de inventario, cantidad de empleados, clientes o pedidos) o como un cálculo más complejo que incorpora la lógica de negocios.  
   
  Cada cubo debe tener al menos una medida, pero la mayoría tienen muchas, a veces, cientos. Estructuralmente, una medida se asigna, por lo general, a una columna de origen de una tabla de hechos. Dicha columna proporciona los valores usados para cargar la medida. De forma alternativa, también puede definir una medida mediante MDX.  
@@ -51,22 +56,22 @@ caps.handback.revision: 42
   
  En este ejemplo, **Reseller Sales** se agrega a varios niveles de la jerarquía **Sales Territory** (zona de ventas).  
   
- ![PivotTable con medidas y dimensiones indicadas](../../analysis-services/multidimensional-models/media/ssas-keyconcepts-pivot1-measures-dimensions.png "PivotTable con medidas y dimensiones indicadas")  
+ ![Tabla dinámica con medidas y dimensiones mencionadas](../../analysis-services/multidimensional-models/media/ssas-keyconcepts-pivot1-measures-dimensions.png "tabla dinámica con medidas y dimensiones que se menciona dónde se encuentra")  
   
  Las medidas generan resultados válidos cuando la tabla de hechos que contiene los datos de origen numéricos también contiene punteros a las tablas de dimensiones que se usan en la consulta. En el ejemplo de Reseller Sales, si cada fila que contiene un importe de ventas también incluye un puntero a una tabla de productos, una tabla de fechas o una tabla de zona de ventas, las consultas que incluyan miembros de esas dimensiones se resolverán correctamente.  
   
  ¿Qué ocurre si la medida está relacionada con las dimensiones que se usan en la consulta? Normalmente, Analysis Services muestra la medida predeterminada, y el valor es el mismo para todos los miembros. En este ejemplo, **Internet Sales**(ventas por Internet), que mide las ventas directas a los clientes que usan el catálogo en línea, no tiene relación con la organización de ventas.  
   
- ![Pivottable showing repeated measure values](../../analysis-services/multidimensional-models/media/ssas-unrelatedmeasure.PNG "Pivottable showing repeated measure values")  
+ ![Valores de la medida de tabla dinámica que muestra repetidas](../../analysis-services/multidimensional-models/media/ssas-unrelatedmeasure.PNG "valores de medida de la tabla dinámica que muestra repetidos")  
   
  Para reducir las posibilidades de que se produzcan estos comportamientos en una aplicación cliente, puede crear varios cubos o perspectivas en la misma base de datos y asegurarse de que cada cubo o perspectiva contenga solo los objetos relacionados. Las relaciones que debe comprobar son las del grupo de medida (asignado a la tabla de hechos) con las dimensiones.  
   
-##  <a name="bkmk_mg"></a> Grupos de medida  
+##  <a name="bkmk_mg"></a> Measure Groups  
  En un cubo, las tablas de hechos subyacentes agrupan las medidas en grupos de medida. Los grupos de medida se utilizan para asociar dimensiones a medidas. Los grupos de medida también se utilizan para las medidas que tienen recuento distintivo como comportamiento de agregación. Si se coloca cada medida de recuento distintiva en su propio grupo de medida se optimiza el procesamiento de la agregación.  
   
  Un objeto <xref:Microsoft.AnalysisServices.MeasureGroup> simple se compone de información básica, como el nombre de grupo, el modo de almacenamiento y el modo de procesamiento. También contiene sus partes constitutivas: las medidas, las dimensiones y las particiones que componen el grupo de medida.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Cubos en modelos multidimensionales](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
  [Crear medidas y grupos de medida en modelos multidimensionales](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)  
   

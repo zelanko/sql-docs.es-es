@@ -1,28 +1,33 @@
 ---
-title: "Tareas y procedimientos de las estructuras de miner&#237;a de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "estructuras de minería [Analysis Services], temas de procedimientos"
+title: "Estructura tareas y procedimientos de minería de datos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], how-to topics
 ms.assetid: 085962c2-b50b-4a3b-8176-a0b920e2593a
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 37193320cddce5b0ecccaf9d0040992118bc0e44
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Tareas y procedimientos de las estructuras de miner&#237;a de datos
+# <a name="mining-structure-tasks-and-how-tos"></a>Tareas y procedimientos de las estructuras de minería de datos
   La pestaña **Estructura de minería de datos** del Diseñador de minería de datos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contiene herramientas que se pueden utilizar para crear, editar y procesar una estructura de minería de datos.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
   
 -   [Crear una estructura de minería de datos relacional](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)  
   
@@ -40,9 +45,8 @@ caps.handback.revision: 27
   
 -   [Procesar una estructura de minería de datos](../../analysis-services/data-mining/process-a-mining-structure.md)  
   
--   [Filtrar el cubo de origen para una estructura de minería de datos](../Topic/Filter%20the%20Source%20Cube%20for%20a%20Mining%20Structure.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Temas de diseño e implementación (Analysis Services - Minería de datos)](https://msdn.microsoft.com/library/bb522452.aspx)  
   
   

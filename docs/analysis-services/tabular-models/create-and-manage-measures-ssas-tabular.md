@@ -1,24 +1,29 @@
 ---
-title: "Crear y administrar medidas (SSAS tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Crear y administrar medidas (SSAS Tabular) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 19c19be451a22fef66b98ac71355b4963240767a
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Crear y administrar medidas (SSAS tabular)
+# <a name="create-and-manage-measures-ssas-tabular"></a>Crear y administrar medidas (SSAS tabular)
   Una medida es una fórmula que se crea específicamente para su uso en un informe o una tabla dinámica de Excel (o gráfico dinámico). Las medidas pueden estar basadas en funciones de agregación estándar, como COUNT o SUM, o puede definir su propia fórmula utilizando DAX. Las tareas de este tema explican cómo crear y administrar medidas mediante la cuadrícula de medidas de una tabla.  
   
  En este tema se incluyen las tareas siguientes:  
@@ -33,7 +38,7 @@ caps.handback.revision: 18
   
 -   [Para eliminar una medida](#bkmk_delete)  
   
-## Tareas  
+## <a name="tasks"></a>Tareas  
  Para crear y administrar medidas, usará la cuadrícula de medidas de una tabla. Solo puede ver la cuadrícula de medidas de una tabla en el diseñador de modelos en la Vista de datos. No puede crear medidas ni ver la cuadrícula de medidas en la Vista Diagrama; sin embargo, podrá ver las medidas existentes en dicha vista. Para mostrar la cuadrícula de medidas de una tabla, haga clic en el menú **Tabla** y en **Mostrar cuadrícula de medidas**.  
   
 ###  <a name="bkmk_create_stand"></a> Para crear una medida usando una fórmula de agregación estándar  
@@ -60,9 +65,9 @@ caps.handback.revision: 18
   
 -   En la cuadrícula de medidas, haga clic con el botón derecho en una medida y, después, haga clic en **Eliminar**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Medidas &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [KPI &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [Columnas calculadas &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md)  
+ [Columnas calculadas &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

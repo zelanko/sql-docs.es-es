@@ -1,24 +1,29 @@
 ---
-title: "Creaci&#243;n y configuraci&#243;n de una aplicaci&#243;n de servicio PowerPivot en Administraci&#243;n central | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Crear y configurar la aplicación de servicio PowerPivot en la entidad emisora de certificados | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 343e3ed597e892e7b9e332d35acb6719e5b27aee
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Creaci&#243;n y configuraci&#243;n de una aplicaci&#243;n de servicio PowerPivot en Administraci&#243;n central
+# <a name="create-and-configure-power-pivot-service-application-in-ca"></a>Crear y configurar la aplicación de servicio PowerPivot en la entidad emisora de certificados
   Una aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] es una instancia de servicio compartida del servicio de sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Cada aplicación de servicio tiene su propia identidad de aplicación, configuración, propiedades y almacenamiento de datos interno.  
   
  Este tema contiene las siguientes secciones:  
@@ -58,13 +63,13 @@ caps.handback.revision: 19
   
 3.  Seleccione **Aplicación de servicio de SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**. Si no aparece en la lista, significa que [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint no se instaló o configuró correctamente.  
   
-4.  En la página **Crear nueva aplicación de servicio de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, escriba un nombre para la aplicación. El valor predeterminado es PowerPivotServiceApplication\<número>. Si va a crear varias aplicaciones de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , un nombre descriptivo ayudará a otros administradores a saber cómo se utiliza la aplicación.  
+4.  En la página **Crear nueva aplicación de servicio de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, escriba un nombre para la aplicación. El valor predeterminado es PowerPivotServiceApplication\<número >. Si va a crear varias aplicaciones de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , un nombre descriptivo ayudará a otros administradores a saber cómo se utiliza la aplicación.  
   
 5.  En Grupo de aplicaciones, cree un nuevo grupo de aplicaciones para la aplicación (recomendado). Seleccione o cree una cuenta administrada para el grupo de aplicaciones. No olvide especificar una cuenta de usuario de dominio. Una cuenta de usuario de dominio habilita el uso de la característica de cuentas administradas de SharePoint, que permite actualizar la información de cuentas y contraseñas en un solo lugar. Las cuentas de dominio también se necesitan si planea escalar la horizontalmente la implementación para incluir instancias de servicio adicionales que se ejecutarán bajo la misma identidad.  
   
 6.  En **Servidor de bases de datos**, el valor predeterminado es la instancia del motor de base de datos de SQL Server que hospeda las bases de datos de configuración de la granja. Puede utilizar este servidor o elegir un servidor SQL Server diferente.  
   
-7.  En **Nombre de la base de datos**, el valor predeterminado es PowerPivotServiceApplication1_\<guid>. Debe crear una base de datos única para cada aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . El nombre predeterminado de la base de datos corresponde al de la aplicación de servicio. Si escribió un nombre de aplicación del servicio único, siga una convención de nomenclatura similar para el nombre de la base de datos, de modo que pueda administrarlos juntos.  
+7.  En **nombre de base de datos**, el valor predeterminado es PowerPivotServiceApplication1_\<guid >. Debe crear una base de datos única para cada aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . El nombre predeterminado de la base de datos corresponde al de la aplicación de servicio. Si escribió un nombre de aplicación del servicio único, siga una convención de nomenclatura similar para el nombre de la base de datos, de modo que pueda administrarlos juntos.  
   
 8.  En **Autenticación de bases de datos**, el valor predeterminado es Autenticación de Windows. Si elige **Autenticación de SQL**, consulte la guía del administrador de SharePoint para obtener información sobre cómo usar este tipo de autenticación en una implementación de SharePoint.  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 19
   
      No agregue la aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] al grupo de conexiones predeterminado si ya hay una. Agregar varias entradas del mismo tipo de aplicación de servicio no se admite y podría producir errores. Si está creando aplicaciones de servicio adicionales, déjelas fuera del grupo de conexiones predeterminado y agréguelas a listas personalizadas.  
   
-     Para más información sobre las asociaciones del servicio, vea [Conectar una aplicación de servicio PowerPivot a una aplicación web de SharePoint en Administración central](../../analysis-services/power-pivot-sharepoint/connect power pivot service app to sharepoint web app in ca.md).  
+     Para más información sobre las asociaciones del servicio, vea [Conectar una aplicación de servicio PowerPivot a una aplicación web de SharePoint en Administración central](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md).  
   
 10. Haga clic en **Aceptar.** La aplicación de servicio aparecerá junto a otros servicios administrados en la lista de aplicaciones de servicio de la granja.  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 19
   
 4.  En **Tiempo de espera de carga de base de datos**, aumente o disminuya el valor para cambiar durante cuánto tiempo el servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] espera una respuesta de la instancia de SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) a la que se ha enviado una solicitud de datos de carga. Dado que los conjuntos de datos muy grandes tardan tiempo en atravesar la conexión, debe permitir el tiempo suficiente para que la instancia de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] recupere el libro de Excel y mueva los datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a una instancia de Analysis Services para que se procesen las consultas. Como los datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pueden ser extraordinariamente grandes, el valor predeterminado es de 30 minutos.  
   
-5.  En **Tiempo de espera del grupo de conexiones**, aumente o disminuya el valor para cambiar el número de minutos que una conexión de datos inactiva permanecerá abierta. El valor predeterminado es de 30 minutos. Durante este período, la aplicación del servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] reutilizará una conexión de datos inactiva para las solicitudes de solo lectura del mismo usuario de SharePoint para los mismos datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Si no se reciben más solicitudes para esos datos durante el período especificado, la conexión se quita del conjunto. Los valores válidos van de 1 a 3600 segundos. Para más información sobre cómo conectar grupos, vea [Referencia de las opciones de configuración &#40;PowerPivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md).  
+5.  En **Tiempo de espera del grupo de conexiones**, aumente o disminuya el valor para cambiar el número de minutos que una conexión de datos inactiva permanecerá abierta. El valor predeterminado es de 30 minutos. Durante este período, la aplicación del servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] reutilizará una conexión de datos inactiva para las solicitudes de solo lectura del mismo usuario de SharePoint para los mismos datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si no se reciben más solicitudes para esos datos durante el período especificado, la conexión se quita del conjunto. Los valores válidos van de 1 a 3600 segundos. Para más información sobre cómo conectar grupos, vea [Referencia de las opciones de configuración &#40;PowerPivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md).  
   
 6.  En **Tamaño máximo de grupo de conexiones de usuario**, aumente o disminuya el valor para cambiar el número máximo de conexiones inactivas que el servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] creará en grupos de conexiones individuales para cada usuario de SharePoint, conjunto de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y combinaciones de versión.  
   
@@ -107,9 +112,9 @@ caps.handback.revision: 19
   
 9. En Actualización de datos, en **Horario comercial**, puede especificar un intervalo de horas que defina un día laboral. Las programaciones de actualización de datos pueden ejecutarse al terminar un día laborable a fin de reunir los datos de las transacciones que se generaron durante las horas de trabajo normales.  
   
-10. En **Cuenta de actualización de datos desatendida de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, puede especificar una aplicación de destino de Servicio de almacenamiento seguro predefinida que almacene una cuenta predefinida para ejecutar trabajos de actualización de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Asegúrese de especificar el nombre de la aplicación de destino y no el identificador. La aplicación de destino para la actualización de datos desatendida se crea automáticamente si utilizó la opción Nuevo servidor del programa de instalación de SQL Server con el objetivo de instalar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. De lo contrario, debe crear la aplicación de destino de forma manual. Para obtener instrucciones sobre cómo configurar la cuenta, vea [Configurar la cuenta de actualización de datos desatendida de PowerPivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/es-es/81401eac-c619-4fad-ad3e-599e7a6f8493).  
+10. En **Cuenta de actualización de datos desatendida de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, puede especificar una aplicación de destino de Servicio de almacenamiento seguro predefinida que almacene una cuenta predefinida para ejecutar trabajos de actualización de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Asegúrese de especificar el nombre de la aplicación de destino y no el identificador. La aplicación de destino para la actualización de datos desatendida se crea automáticamente si utilizó la opción Nuevo servidor del programa de instalación de SQL Server con el objetivo de instalar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. De lo contrario, debe crear la aplicación de destino de forma manual. Para obtener instrucciones sobre cómo configurar la cuenta, vea [Configurar la cuenta de actualización de datos desatendida de PowerPivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493).  
   
-11. En **Permitir a los usuarios especificar credenciales de Windows personalizadas**, puede activar o desactivar la casilla para especificar si los propietarios de programaciones pueden escribir credenciales de Windows arbitrarias para ejecutar una programación de la actualización de datos. Si activa esta casilla, la aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] creará y administrará una aplicación de destino para cada conjunto de credenciales almacenadas. Para más información, vea [Configurar las credenciales almacenadas para la actualización de datos de PowerPivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/es-es/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).  
+11. En **Permitir a los usuarios especificar credenciales de Windows personalizadas**, puede activar o desactivar la casilla para especificar si los propietarios de programaciones pueden escribir credenciales de Windows arbitrarias para ejecutar una programación de la actualización de datos. Si activa esta casilla, la aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] creará y administrará una aplicación de destino para cada conjunto de credenciales almacenadas. Para más información, vea [Configurar las credenciales almacenadas para la actualización de datos de PowerPivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).  
   
 12. En **Longitud máxima de historial de procesamiento**, puede especificar cuánto tiempo conservar un registro histórico del procesamiento de la actualización de datos. Esta información aparece en las páginas del historial de actualización de datos que se mantienen para cada libro que usa la actualización de datos. También aparece en el Panel de administración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
@@ -153,7 +158,7 @@ caps.handback.revision: 19
   
 3.  Haga clic en **Propiedades** en la cinta de opciones.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Administración y configuración del servidor de Power Pivot en Administración central](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

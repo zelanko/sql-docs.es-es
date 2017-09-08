@@ -1,39 +1,44 @@
 ---
-title: "Tipos de contenido (miner&#237;a de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "columnas [minería de datos], tipos de contenido"
-  - "KEY SEQUENCE, columna"
-  - "tipos de contenido [minería de datos]"
-  - "atributos [minería de datos]"
-  - "DISCRETIZED, columna"
-  - "CONTINUOUS, columna"
-  - "CYCLICAL, columna"
-  - "ORDERED, columna"
-  - "columnas de datos discretos [minería de datos]"
-  - "discretas, columnas [Analysis Services]"
-  - "DISCRETE, columna"
-  - "Columna KEY"
-  - "KEY TIME, columna"
-  - "continuas, columnas"
-  - "codificar [minería de datos]"
+title: "Tipos (minería de datos) de contenido | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [data mining], content types
+- KEY SEQUENCE column
+- content types [data mining]
+- attributes [data mining]
+- DISCRETIZED column
+- CONTINUOUS column
+- CYCLICAL column
+- ORDERED column
+- discretized columns [data mining]
+- discrete columns [Analysis Services]
+- DISCRETE column
+- KEY column
+- KEY TIME column
+- continuous columns
+- coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
 caps.latest.revision: 42
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bdf7e955c5c4dd36d604bffa5dce1602f93788d2
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Tipos de contenido (miner&#237;a de datos)
+# <a name="content-types-data-mining"></a>Tipos de contenido (minería de datos)
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede definir tanto el tipo de datos físico de una columna en una estructura de minería como un tipo de datos lógico de la columna cuando se utilice en un modelo.  
   
  El *tipo de datos* determina el modo en que los algoritmos procesan los datos de esas columnas cuando se crean modelos de minería. La definición del tipo de datos de una columna proporciona al algoritmo información sobre el tipo de datos de las columnas y el modo de procesar los datos. Cada tipo de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite uno o varios tipos de contenido para la minería de datos.  
@@ -44,21 +49,21 @@ caps.handback.revision: 42
   
  En la lista siguiente se describen los tipos de contenido que se usan en la minería de datos y se identifican los tipos de datos que admiten cada tipo.  
   
-## Discrete  
+## <a name="discrete"></a>Discrete  
  El tipo de contenido*discreto* indica que la columna contiene un número finito de valores no continuos. Por ejemplo, una columna de género es una columna de atributos discreta muy habitual, en la que los datos representan un número específico de categorías.  
   
  Los valores de una columna de atributos discreta no pueden implicar la ordenación, aun cuando los valores sean numéricos. Además, aunque los valores utilizados para la columna discreta sean numéricos, no se pueden calcular valores fraccionarios. Los códigos telefónicos de cada zona son un buen ejemplo de datos numéricos discretos.  
   
  El tipo de contenido **Discrete** es compatible con todos los tipos de datos de minería de datos.  
   
-## Continuous  
+## <a name="continuous"></a>Continuous  
  *Continuo* indica que la columna contiene valores que representan datos numéricos en una escala que permite valores intermedios. A diferencia de una columna discreta, que representa datos numerables y finitos, una columna continua representa medidas escalables; además, es posible que los datos contengan un número infinito de valores fraccionarios. Una columna de temperaturas es un ejemplo de una columna de atributos continua.  
   
  Cuando una columna contiene datos numéricos y se sabe cómo deben distribuirse los datos, se podrían obtener análisis más exactos especificando la distribución prevista de los valores. La distribución de columnas se especifica en el nivel de la estructura de minería. Por lo tanto, la configuración se aplica a todos los modelos basados en la estructura. Para más información, vea [Distribuciones de columnas &#40;Minería de datos&#41;](../../analysis-services/data-mining/column-distributions-data-mining.md).  
   
  El tipo de contenido **Continuous** es compatible con los siguientes tipos de datos: **Date**, **Double**y **Long**.  
   
-## Discretized  
+## <a name="discretized"></a>Discretized  
  La*discretización* es el proceso mediante el cual los valores de un conjunto de datos continuo se incluyen en depósitos para que haya un número limitado de valores posibles. Solo se pueden discretizar los datos numéricos.  
   
  Por tanto, el tipo de contenido *discretized* indica que la columna contiene valores que representan grupos o depósitos de valores que se derivan de una columna continua. Los depósitos se tratan como si fueran valores ordenados y discretos.  
@@ -67,7 +72,7 @@ caps.handback.revision: 42
   
  El tipo de contenido **Discretized** es compatible con los siguientes tipos de datos: **Date**, **Double**, **Long**y **Text**.  
   
-## Key  
+## <a name="key"></a>Key  
  El tipo de contenido *clave* indica que la columna identifica una fila de forma inequívoca. Normalmente, en una tabla de casos, la columna de clave es un identificador numérico o de texto. Establezca el tipo de contenido en **key** para indicar que la columna no debe utilizarse para el análisis, sino para realizar el seguimiento de los registros.  
   
  Las tablas anidadas también tienen claves, pero el uso de la clave de tabla anidada es ligeramente diferente. En una tabla anidada debe establecer el tipo de contenido en **key** si la columna es el atributo que desea analizar. Los valores de la clave de tabla anidada deben ser únicos para cada caso, pero puede haber duplicados en todo el conjunto de casos.  
@@ -79,42 +84,42 @@ caps.handback.revision: 42
   
  Este tipo de contenido es compatible con los siguientes tipos de datos: **Date**, **Double**, **Long**y **Text**.  
   
-## Key Sequence  
+## <a name="key-sequence"></a>Key Sequence  
  El tipo de contenido *secuencia de claves* solamente se puede utiliza en modelos de agrupación en clústeres de secuencia. Cuando se establece el tipo de contenido en **key sequence**, se indica que la columna contiene valores que representan una secuencia de eventos. Los valores están ordenados y no tienen que estar separados por una distancia equivalente.  
   
  Este tipo de contenido es compatible con los siguientes tipos de datos: **Double**, **Long**, **Text**y **Date**.  
   
-## Key Time  
+## <a name="key-time"></a>Key Time  
  El tipo de contenido *clave temporal* solamente se puede utilizar en modelos de serie temporal. Cuando se establece el tipo de contenido en **key time**, se indica que los valores están ordenados y que representan una escala de tiempo.  
   
  Este tipo de contenido es compatible con los siguientes tipos de datos: **Double**, **Long**y **Date**.  
   
-## Table  
+## <a name="table"></a>Table  
  El tipo de contenido *tabla* indica que la columna contiene otra tabla de datos, con una o más columnas y una o más filas. Para cualquier fila concreta de la tabla de casos, esta columna puede contener varios valores, todos ellos relacionados con el registro del caso primario. Por ejemplo, si la tabla de casos principal contiene una lista de clientes, podría tener varias columnas con tablas anidadas, como una columna **ProductosComprados** , donde la tabla anidada muestre una lista de los productos que este cliente ha comprado en el pasado, y una columna **Aficiones** que muestre las aficiones del cliente.  
   
  El tipo de datos de esta columna siempre es **Table**.  
   
-## Cíclico  
+## <a name="cyclical"></a>Cíclico  
  El tipo de contenido *cíclico* indica que la columna contiene valores que representan un conjunto ordenado cíclico. Por ejemplo, los días numerados de la semana es un conjunto ordenado cíclico, ya que el día número uno sigue al día número siete.  
   
  Las columnas cíclicas se consideran ordenadas y discretas en términos de tipo de contenido.  
   
  Este tipo de contenido es compatible con todos los tipos de datos de minería de datos en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Sin embargo, la mayoría de los algoritmos tratan los valores cíclicos como valores discretos y no realizan ningún procesamiento especial.  
   
-## Ordenado  
+## <a name="ordered"></a>Ordenado  
  El tipo de contenido *ordenado* indica también que la columna contiene valores que definen una secuencia u orden. Sin embargo, en este tipo de contenido los valores utilizados para la ordenación no implican ninguna relación de distancia o magnitud entre los valores del conjunto. Por ejemplo, si una columna de atributos ordenados contiene información acerca de una lista de niveles de especialización que vayan del uno al cinco, no existe información implícita entre los niveles de especialización; un nivel cinco de especialización no es necesariamente cinco veces mejor que un nivel uno de especialización.  
   
  Las columnas de atributos ordenados se consideran discretas en términos de tipo de contenido.  
   
  Este tipo de contenido es compatible con todos los tipos de datos de minería de datos en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Sin embargo, la mayoría de los algoritmos tratan los valores ordenados como valores discretos y no realizan ningún procesamiento especial.  
   
-## Classified  
+## <a name="classified"></a>Classified  
  Además de los tipos de contenido anteriores cuyo uso es común en todos los modelos, para algunos tipos de datos puede utilizar columnas clasificadas para definir tipos de contenido. Para más información sobre las columnas clasificadas, vea [Columnas clasificadas &#40;Minería de datos&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tipos de contenido &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
- [Tipos de datos &#40;minería de datos&#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
- [Tipos de datos &#40;DMX&#41;](../../dmx/data-types-dmx.md)   
+ [Tipos de datos &#40; minería de datos &#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
+ [Tipos de datos &#40; DMX &#41;](../../dmx/data-types-dmx.md)   
  [Cambiar las propiedades de una estructura de minería de datos](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)   
  [Columnas de la estructura de minería de datos](../../analysis-services/data-mining/mining-structure-columns.md)  
   

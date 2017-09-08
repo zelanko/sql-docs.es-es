@@ -1,28 +1,33 @@
 ---
-title: "Crear un informe de validaci&#243;n cruzada | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "validar modelos de minería de datos"
-  - "estructuras de minería [Analysis Services], temas de procedimientos"
-  - "validación cruzada [minería de datos]"
-  - "desviación estándar estadística"
+title: "Crear un informe de validación cruzada | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- validating data mining models
+- mining structures [Analysis Services], how-to topics
+- cross-validation [data mining]
+- statistical standard deviation
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 87f3809146240a6e807cad3a5e1e22981f8bbf4d
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Crear un informe de validaci&#243;n cruzada
+# <a name="create-a-cross-validation-report"></a>Crear un informe de validación cruzada
   Este tema le guía a través del proceso de creación de un informe de validación cruzada utilizando la pestaña Gráfico de precisión del Diseñador de minería de datos. Para obtener información general sobre el aspecto de un informe de validación cruzada y sobre las medidas estadísticas que se incluyen en este, vea [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
   
  Un informe de validación cruzada es totalmente diferente de un gráfico de precisión, como un gráfico de mejora respecto al modelo predictivo o una matriz de clasificación.  
@@ -37,7 +42,7 @@ caps.handback.revision: 17
   
 -   Solo podrá crear un informe de validación cruzada en un modelo de agrupación en clústeres que no tenga un atributo de predicción si la estructura de minería de datos no admite ningún otro atributo de predicción.  
   
-### Seleccionar una estructura de minería de datos  
+### <a name="select-a-mining-structure"></a>Seleccionar una estructura de minería de datos  
   
 1.  Abra el Diseñador de minería de datos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -49,13 +54,13 @@ caps.handback.revision: 17
   
 5.  Haga clic en la pestaña **Validación cruzada** .  
   
-### Establecer opciones de validación cruzada  
+### <a name="set-cross-validation-options"></a>Establecer opciones de validación cruzada  
   
 1.  En la pestaña **Validación cruzada** , en **Recuento de plegamientos**, haga clic en la flecha abajo para seleccionar un número entre 1 y 10. El valor predeterminado es 10.  
   
      El **Recuento de plegamientos** representa el número de particiones que se creará dentro del conjunto de datos original. Si establece Recuento de plegamientos en 1, el conjunto de entrenamiento se utilizará sin particiones.  
   
-2.  En **Atributo de destino**, haga clic en la flecha abajo y seleccione una columna en la lista. Si el modelo es un modelo de agrupación en clústeres, seleccione **#Cluster** para indicar que el modelo no tiene un atributo de predicción. Tenga en cuenta que el valor **#Cluster** solo estará disponible si la estructura de minería de datos no admite otros tipos de atributos de predicción.  
+2.  En **Atributo de destino**, haga clic en la flecha abajo y seleccione una columna en la lista. Si el modelo es un modelo de agrupación en clústeres, seleccione **#Cluster** para indicar que el modelo no tiene un atributo de predicción. Tenga en cuenta que el valor **#Cluster**solo estará disponible si la estructura de minería de datos no admite otros tipos de atributos de predicción.  
   
      Puede seleccionar solo un atributo de predicción para cada informe. De forma predeterminada, todos los modelos relacionados que tienen el mismo atributo de predicción se incluyen en el informe.  
   
@@ -74,13 +79,13 @@ caps.handback.revision: 17
   
 6.  Haga clic en **Obtener resultados**.  
   
-### Imprimir el informe de validación cruzada  
+### <a name="print-the-cross-validation-report"></a>Imprimir el informe de validación cruzada  
   
 1.  Haga clic con el botón derecho en la pestaña **Validación cruzada** del informe completado.  
   
 2.  En el menú contextual, seleccione **Imprimir** o **Vista previa de impresión** para revisar el informe primero.  
   
-### Crear una copia del informe en Microsoft Excel  
+### <a name="create-a-copy-of-the-report-in-microsoft-excel"></a>Crear una copia del informe en Microsoft Excel  
   
 1.  Haga clic con el botón derecho en la pestaña **Validación cruzada** del informe completado.  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 17
   
 4.  Pegue la selección en un libro de Excel abierto. Si utiliza la opción **Pegar** , el informe se pega en Excel como HTML, con lo que se conserva el formato de filas y columnas. Si pega el informe con las opciones de **Pegado especial** para texto o texto Unicode, el informe se pegará con un formato delimitado por filas.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Medidas en el informe de validación cruzada](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
   
   

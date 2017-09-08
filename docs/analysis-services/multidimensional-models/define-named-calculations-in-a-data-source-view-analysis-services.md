@@ -1,28 +1,33 @@
 ---
-title: "Definir c&#225;lculos con nombre en una vista del origen de datos (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cálculos con nombre, modificar"
-  - "vistas del origen de datos [Analysis Services], cálculos con nombre"
-  - "cálculos con nombre [Analysis Services]"
+title: "Definir cálculos con nombre en una vista del origen de datos (Analysis Services) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying named calculations
+- data source views [Analysis Services], named calculations
+- named calculations [Analysis Services]
 ms.assetid: 729e7b12-6185-4b73-8bcb-cfe459b15355
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d74a249e280b0c6b31c970638e3c47b3e6327c5f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Definir c&#225;lculos con nombre en una vista del origen de datos (Analysis Services)
+# <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>Definir cálculos con nombre en una vista del origen de datos (Analysis Services)
   Un cálculo con nombre es una expresión SQL representada como una columna calculada. Esta expresión aparece y se comporta como una columna en la tabla. Un cálculo con nombre permite ampliar el esquema relacional de las tablas o vistas existentes en una vista del origen de datos sin modificar las tablas o vistas en el origen de datos subyacente. Considere los ejemplos siguientes:  
   
 -   Cree un cálculo con nombre derivado de varias columnas en una tabla de hechos (por ejemplo, cree Tax Amount multiplicando un tipo impositivo por un precio de venta).  
@@ -31,7 +36,7 @@ caps.handback.revision: 34
   
 -   Para mejorar el rendimiento de las consultas, cree un cálculo con nombre en la DSV en lugar de crear un miembro calculado en un cubo. Los cálculos con nombre se calculan durante el procesamiento, mientras que los miembros calculados se calculan en el tiempo de la consulta.  
   
-## Crear cálculos con nombre  
+## <a name="creating-named-calculations"></a>Crear cálculos con nombre  
   
 > [!NOTE]  
 >  No se puede agregar un cálculo con nombre a una consulta con nombre, ni se puede basar una consulta con nombre en una tabla que contenga un cálculo con nombre.  
@@ -56,7 +61,7 @@ FROM
 (SELECT Description FROM Categories WHERE Categories.CategoryID = CategoryID)  
 ```  
   
-## Agregar o editar un cálculo con nombre  
+## <a name="add-or-edit-a-named-calculation"></a>Agregar o editar un cálculo con nombre  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el proyecto o conéctese a la base de datos que contiene la vista del origen de datos en que desea definir un cálculo con nombre.  
   
@@ -64,10 +69,10 @@ FROM
   
 3.  Haga clic con el botón derecho en la tabla en la que quiere definir el cálculo con nombre en el panel **Tablas** o **Diagrama** y luego haga clic en **Nuevo cálculo con nombre**. Asegúrese de hacer clic con el botón secundario en el nombre de tabla, y no en un atributo. El menú debe ser similar al siguiente:  
   
-     ![Captura de pantalla del espacio de trabajo de diagrama, menú contextual](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "Captura de pantalla del espacio de trabajo de diagrama, menú contextual")  
+     ![Captura de pantalla del área de trabajo de diagrama, haga clic en el menú](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "captura de pantalla del área de trabajo de diagrama, el menú contextual")  
   
     > [!NOTE]  
-    >  Para buscar una tabla o vista, puede usar la opción **Buscar tabla** si hace clic en el menú **Vista del origen de datos** o si hace clic con el botón derecho en una zona abierta de los paneles **Tablas** o **Diagrama**.  
+    >  Para buscar una tabla o vista, puede usar la opción **Buscar tabla** si hace clic en el menú **Vista del origen de datos** o si hace clic con el botón derecho en una zona abierta de los paneles **Tablas** o **Diagrama** .  
   
 4.  En el cuadro de diálogo **Crear cálculo con nombre** , realice las siguientes operaciones:  
   
@@ -81,10 +86,10 @@ FROM
   
      La columna de cálculo con nombre aparecerá como la última columna de la tabla de la vista del origen de datos. El símbolo de una calculadora indica que la columna contiene un cálculo con nombre.  
   
-## Eliminar un cálculo con nombre  
+## <a name="delete-a-named-calculation"></a>Eliminar un cálculo con nombre  
  Si trata de eliminar un cálculo con nombre, se le presenta una lista de los objetos definidos en el proyecto o la base de datos que no serán válidos tras la eliminación. Revise la lista cuidadosamente antes de eliminar el cálculo.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Definir consultas con nombre en una vista del origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

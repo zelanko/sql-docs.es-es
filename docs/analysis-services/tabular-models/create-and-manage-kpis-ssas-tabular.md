@@ -1,26 +1,31 @@
 ---
-title: "Crear y administrar KPI (SSAS tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.kpi.f1"
+title: Crear y administrar KPI (SSAS Tabular) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.kpi.f1
 ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb8ed295a1070bd8bb80820f43c4f4e5f7b364a5
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Crear y administrar KPI (SSAS tabular)
+# <a name="create-and-manage-kpis-ssas-tabular"></a>Crear y administrar KPI (SSAS tabular)
   En este tema se describe cómo crear, editar o eliminar un KPI (indicador clave de rendimiento) en un modelo tabular. Para crear un KPI, seleccione una medida que se evalúe como el valor base del KPI. A continuación, use el cuadro de diálogo Indicador clave de rendimiento para seleccionar una segunda medida o un valor absoluto que se evalúe como un valor de destino. Después puede definir umbrales de estado que miden el rendimiento entre las medidas Base y Destino.  
   
  En este tema se incluyen las tareas siguientes:  
@@ -33,7 +38,7 @@ caps.handback.revision: 15
   
 -   [Para eliminar un KPI, pero mantener la medida base](#bkmk_delete_KPI)  
   
-## Tareas  
+## <a name="tasks"></a>Tareas  
   
 > [!IMPORTANT]  
 >  Antes de crear un KPI, debe crear primero una medida base que se evalúe como un valor. Después, extienda la medida base a un KPI. La forma de crear medidas se describe en el tema [Crear y administrar medidas &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md). Un KPI también necesita un valor de destino. Este valor puede ser de otra medida predefinida o puede ser un valor absoluto. Una vez extendida una medida base a un KPI, puede seleccionar el valor de destino y definir umbrales de estado en el cuadro de diálogo Indicador clave de rendimiento.  
@@ -69,21 +74,21 @@ caps.handback.revision: 15
   
 -   En la cuadrícula de medidas, haga clic con el botón derecho en la medida que actúa como medida base (valor) del KPI y, después, haga clic en **Eliminar KPI**.  
   
-## Accesos directos con ALT  
+## <a name="alt-shortcuts"></a>Accesos directos con ALT  
   
 |Sección IU|Comando de teclas|  
 |----------------|-----------------|  
 |Medida de base de KPI|ALT+B|  
 |Estado de KPI|ALT+S|  
-|Measure|ALT+M|  
+|Medida|ALT+M|  
 |Valor absoluto|ALT+A|  
 |Definir umbrales de estado|ALT+U|  
-|Seleccionar el estilo del icono|Alt+I|  
+|Seleccionar estilo de icono|Alt+I|  
 |Tendencia|ALT+T|  
 |Descripciones|ALT+D|  
 |Tendencia|ALT+T|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [KPI &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [Medidas &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Crear y administrar medidas &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)  

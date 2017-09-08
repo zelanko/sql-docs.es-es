@@ -1,41 +1,46 @@
 ---
-title: "Propiedades de Filestore | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Income, propiedad"
-  - "InitialBonus, propiedad"
-  - "PercentScanPerPrice, propiedad"
-  - "Filestore, propiedades"
-  - "BackgroundTrimCost, propiedad"
-  - "Tax, propiedad"
-  - "PerformanceTrace, propiedad"
-  - "MinimumBalance, propiedad"
-  - "UnbufferedThreshold, propiedad"
-  - "BackgroundTrimAmount, propiedad"
-  - "MaximumBalance, propiedad"
-  - "MemoryLimitMin, propiedad"
-  - "MemoryLimit, propiedad"
+title: Propiedades de FILESTORE | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Income property
+- InitialBonus property
+- PercentScanPerPrice property
+- FileStore properties
+- BackgroundTrimCost property
+- Tax property
+- PerformanceTrace property
+- MinimumBalance property
+- UnbufferedThreshold property
+- BackgroundTrimAmount property
+- MaximumBalance property
+- MemoryLimitMin property
+- MemoryLimit property
 ms.assetid: 580cf0aa-7425-4d48-aa8d-128f5b488fcd
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 68845b8dc5ff1b025134b227605363607db4b7cf
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Propiedades de Filestore
+# <a name="filestore-properties"></a>Filestore, propiedades
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades del servidor de almacén de archivos que aparecen en las tablas siguientes. Todas son propiedades avanzadas que no se deben cambiar, salvo bajo la orientación de soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener más información sobre otras propiedades de servidor y cómo establecerlas, vea [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Se aplica a:** modo de servidor multidimensional y tabular  
   
-## Propiedades  
+## <a name="properties"></a>Propiedades  
  **MemoryLimit**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 19
  **UnbufferedThreshold**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Categoría de modelo de memoria  
+## <a name="memory-model-category"></a>Categoría de modelo de memoria  
  **MemoryModel\Tax**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -76,7 +81,7 @@ caps.handback.revision: 19
  **MemoryModel\InitialBonus**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

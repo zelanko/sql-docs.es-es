@@ -1,24 +1,29 @@
 ---
-title: "Operaciones de registro en Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Las operaciones de registro en Analysis Services | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e23d96e675fba4ed740b8adbb8402d3ae7fd06e2
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Operaciones de registro en Analysis Services
+# <a name="log-operations-in-analysis-services"></a>Operaciones de registro en Analysis Services
   Una instancia de Analysis Services registrará las advertencias, los errores y las notificaciones del servidor en el archivo msmdsrv.log: uno para cada instancia que instale. Los administradores consultan este registro para obtener información sobre eventos, tanto rutinarios como extraordinarios. En las versiones recientes, los registros se han mejorado para incluir más información. Las entradas de registro ahora incluyen información de la versión y la edición, así como del procesador, la memoria, la conectividad y los eventos de bloqueo. Puede revisar la lista completa de cambios en [Mejoras de los registros](http://support.microsoft.com/kb/2965035).  
   
  Además de la característica de registro integrada, muchos administradores y desarrolladores también usan herramientas proporcionadas por la comunidad de Analysis Services para recopilar datos sobre las operaciones de servidor, como **ASTrace**. Vea [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) (Ejemplos de la comunidad de Microsoft SQL Server: Analysis Services) para acceder a los vínculos de descarga.  
@@ -47,7 +52,7 @@ caps.handback.revision: 12
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Registro de errores|Supervisión rutinaria y solución de problemas básicos|Sí|  
 |Tabla OlapQueryLog en una base de datos relacional|Registro de consultas|Recopilación de entradas para el Asistente de optimización de uso|No|  
-|Archivos SQLDmp\<guid>.mdmp|Errores y excepciones|Solución de problemas a fondo|No|  
+|Archivos SQLDmp\<guid > .mdmp archivos|Errores y excepciones|Solución de problemas a fondo|No|  
   
  Se recomienda encarecidamente consultar el siguiente vínculo para obtener recursos de información adicionales que no se tratan en este tema: [Initial data collection tips from Microsoft Support](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)(Consejos para la recolección de datos inicial de Soporte técnico de Microsoft).  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 12
   
  Recomendados que, siempre que sea posible, establezca las propiedades de registros en la página de propiedades de servidor de Management Studio. No obstante, en algunos casos debe editar el archivo msmdsrv.ini directamente para configurar los valores que no están visibles en las herramientas administrativas.  
   
- ![Sección del archivo de configuración que muestra la configuración del registro](../../analysis-services/instances/media/ssas-logfilesettings.png "Sección del archivo de configuración que muestra la configuración del registro")  
+ ![Sección del archivo de configuración que muestra la configuración del registro](../../analysis-services/instances/media/ssas-logfilesettings.png "sección del archivo de configuración que muestra la configuración del registro")  
   
 ##  <a name="bkmk_msmdsrv"></a> Archivo de registro del servicio MSMDSRV  
  Analysis Services registra las operaciones del servidor en el archivo msmdsrv.log, uno por instancia, ubicado en \Archivos de programa\Microsoft SQL Server\\<instancia\>\Olap\Log.  
@@ -110,7 +115,7 @@ caps.handback.revision: 12
   
 2.  Conceda los permisos necesarios de la cuenta de servicio de Analysis Services en la base de datos. La cuenta necesita permisos para crear una tabla, escribir en ella y leer sus datos.  
   
-3.  En SQL Server Management Studio, haga clic con el botón derecho en **Analysis Services** | **Propiedades** | **General** y establezca **CreateQueryLogTable** en true.  
+3.  En SQL Server Management Studio, haga clic con el botón derecho en **Analysis Services** | **Propiedades** | **General**y establezca **CreateQueryLogTable** en true.  
   
 4.  De manera opcional, cambie **QueryLogSampling** o **QueryLogTableName** si quiere tomar muestras de consultas a una tasa diferente o usar un nombre diferente para la tabla.  
   
@@ -118,7 +123,7 @@ caps.handback.revision: 12
   
  La configuración del registro de consultas se aplica a todo el servidor. La configuración que especifique se usará en todas las bases de datos que se ejecuten en este servidor.  
   
- ![Configuración del registro de consultas en Management Studio](../../analysis-services/instances/media/ssas-querylogsettings.png "Configuración del registro de consultas en Management Studio")  
+ ![Consultar la configuración del registro en Management Studio](../../analysis-services/instances/media/ssas-querylogsettings.png "configuración de registro de consultas en Management Studio")  
   
  Una vez especificados los ajustes de configuración, ejecute una consulta MDX varias veces. Si el muestreo está establecido en 10, ejecute la consulta 11 veces. Compruebe que se crea la tabla. En Management Studio, conecte el motor de base de datos relacional, abra la carpeta de la base de datos, abra la carpeta **Tablas** y compruebe que hay un archivo **OlapQueryLog** . Si no ve la tabla inmediatamente, actualice la carpeta para recoger cualquier cambio que haya en su contenido.  
   
@@ -180,9 +185,9 @@ caps.handback.revision: 12
   
 -   Utilice ASTrace2012 en lugar de un registro de consultas para averiguar quién está consultando los cubos. El registro de consultas se usa normalmente para proporcionar datos al Asistente para la optimización basada en el uso. Los datos que captura no se leen o interpretan fácilmente. ASTrace2012 es una herramienta de la comunidad ampliamente utilizada que captura las operaciones de consulta. Vea [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)(Ejemplos de la comunidad de Microsoft SQL Server: Analysis Services).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Administración de una instancia de Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
- [Introducción a Supervisar Analysis Services con SQL Server Profiler](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
- [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
+ [Introducción a la supervisión de Analysis Services con SQL Server Profiler](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
+ [Propiedades del servidor de Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   
   

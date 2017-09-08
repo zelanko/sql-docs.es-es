@@ -1,35 +1,40 @@
 ---
-title: "Administraci&#243;n de ensamblados de modelos multidimensionales | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "permisos [Analysis Services], ensamblados"
-  - "funciones definidas por el usuario, llamar"
-  - "suplantación de usuario [Analysis Services]"
-  - "suplantación [Analysis Services]"
-  - "Extensiones de minería de datos [Analysis Services], ensamblados"
-  - "MDX [Analysis Services], ensamblados"
-  - "funciones definidas por el usuario [Analysis Services]"
-  - "objetos de Analysis Services, ensamblados"
-  - "ensamblados [Analysis Services]"
-  - "dominios de aplicación [Analysis Services]"
+title: "Administración de ensamblados de modelos multidimensionales | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Analysis Services], assemblies
+- calling user-defined functions
+- user impersonation [Analysis Services]
+- impersonation [Analysis Services]
+- Data Mining Extensions [Analysis Services], assemblies
+- MDX [Analysis Services], assemblies
+- user-defined functions [Analysis Services]
+- Analysis Services objects, assemblies
+- assemblies [Analysis Services]
+- application domains [Analysis Services]
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38bbf72a7fd58be5db3d8672de1ad4269c763020
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Administraci&#243;n de ensamblados de modelos multidimensionales
+# <a name="multidimensional-model-assemblies-management"></a>Administración de ensamblados de modelos multidimensionales
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona gran cantidad de funciones intrínsecas que se pueden usar con los lenguajes MDX (Expresiones multidimensionales) y DMX (Extensiones de minería de datos), y que están diseñadas para realizar multitud de tareas, desde cálculos estadísticos estándar hasta recorridos por los miembros de una jerarquía. No obstante, al igual que con cualquier otro producto complejo, existe siempre la necesidad de ampliar la funcionalidad.  
   
  Por lo tanto, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite agregar ensamblados a una instancia o base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Los ensamblados permiten crear funciones externas definidas por el usuario mediante cualquier lenguaje CLR (Common Language Runtime), como por ejemplo Microsoft Visual Basic .NET o Microsoft Visual C#. También puede utilizar lenguajes de automatización COM (Modelo de objetos componentes), como Microsoft Visual Basic o Microsoft Visual C++.  
@@ -37,13 +42,13 @@ caps.handback.revision: 35
 > [!IMPORTANT]  
 >  Los ensamblados COM pueden suponer un riesgo para la seguridad. Debido a esto y a otras consideraciones, los ensamblados COM están en desuso en [!INCLUDE[ssASversion10](../../includes/ssasversion10-md.md)]. Es posible que este tipo de ensamblados no esté disponible en versiones futuras.  
   
- Los ensamblados le permiten ampliar la funcionalidad empresarial de MDX y DMX. Cree la funcionalidad que desee en una biblioteca, como por ejemplo una biblioteca de vínculos dinámicos (DLL), y agregue la biblioteca como ensamblado a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Los métodos públicos de la biblioteca se ofrecerán como funciones definidas por el usuario a procedimientos, cálculos, acciones, aplicaciones cliente y expresiones de MDX y DMX.  
+ Los ensamblados le permiten ampliar la funcionalidad empresarial de MDX y DMX. Cree la funcionalidad que desee en una biblioteca, como por ejemplo una biblioteca de vínculos dinámicos (DLL), y agregue la biblioteca como ensamblado a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Los métodos públicos de la biblioteca se ofrecerán como funciones definidas por el usuario a procedimientos, cálculos, acciones, aplicaciones cliente y expresiones de MDX y DMX.  
   
  En el servidor se puede agregar un ensamblado con nuevos procedimientos y funciones. Puede usar los ensamblados para mejorar o agregar funcionalidad personalizada que no proporciona el servidor. Si usa ensamblados, puede agregar las nuevas funciones a las Expresiones multidimensionales (MDX), las Extensiones de minería de datos (DMX) o los procedimientos almacenados. Los ensamblados se cargan desde la ubicación donde se ejecuta la aplicación personalizada; en el servidor se guarda una copia del archivo binario del ensamblado junto con los datos de la base de datos. Cuando se quita un ensamblado, el ensamblado copiado también se quita del servidor.  
   
  Los ensamblados pueden ser de dos tipos diferentes: COM y CLR. Los ensamblados CLR son ensamblados desarrollados en los lenguajes de programación de .NET Framework como C#, Visual Basic .NET, C++ administrado. Los ensamblados COM son bibliotecas COM que se deben registrar en el servidor.  
   
- Los ensamblados se pueden agregar a los objetos <xref:Microsoft.AnalysisServices.Server> o <xref:Microsoft.AnalysisServices.Database>. Cualquier usuario conectado al servidor o a cualquier objeto del servidor puede llamar a los ensamblados de servidor. Solo los objetos o los usuarios conectados a la <xref:Microsoft.AnalysisServices.Database> pueden llamar a los ensamblados de base de datos.  
+ Los ensamblados se pueden agregar a los objetos <xref:Microsoft.AnalysisServices.Server> o <xref:Microsoft.AnalysisServices.Database> . Cualquier usuario conectado al servidor o a cualquier objeto del servidor puede llamar a los ensamblados de servidor. Solo los objetos o los usuarios conectados a la <xref:Microsoft.AnalysisServices.Database> pueden llamar a los ensamblados de base de datos.  
   
  Un objeto de <xref:Microsoft.AnalysisServices.Assembly> simple se compone de información básica (nombre e id.), una colección de archivos y especificaciones de seguridad.  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 35
   
  Las especificaciones de seguridad incluyen el conjunto de permisos y la suplantación que se usa para ejecutar el ensamblado.  
   
-## Llamar a funciones definidas por el usuario  
+## <a name="calling-user-defined-functions"></a>funciones definidas por el usuario, llamar  
  La llamada a una función definida por el usuario en un ensamblado se realiza de la misma forma que la llamada a una función intrínseca, salvo que se deba utilizar un nombre completo. Por ejemplo, una función definida por el usuario que devuelva un tipo esperado por MDX se incluye en una consulta MDX, como se muestra en el siguiente ejemplo:  
   
 ```  
@@ -80,10 +85,10 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  *nombreDeEnsamblado*!*idDeInterfaz*!*nombreDeProcedimiento*(*Argumento1*, *Argumento2*…)  
   
-## Seguridad  
+## <a name="security"></a>Seguridad  
  La seguridad de los ensamblados depende del modelo de seguridad de .NET Framework, que es un modelo de seguridad de acceso del código. .NET Framework admite un mecanismo de seguridad de acceso del código que presupone que el tiempo de ejecución puede hospedar código de plena confianza y código parcialmente de confianza. Los recursos protegidos por la seguridad de acceso del código de .NET Framework se suelen empaquetar mediante código administrado que solicita el permiso correspondiente antes de permitir el acceso al recurso. La solicitud de permiso solo se satisface si todos los que llaman (en el nivel de ensamblado) de la pila de llamadas tienen el permiso correspondiente para el recurso.  
   
- En el caso de los ensamblados, el permiso de ejecución se pasa con la propiedad **PermissionSet** del objeto **Assembly** . Los permisos que recibe el código administrado vienen determinados por la directiva de seguridad activa. Existen tres niveles de directiva activos en un entorno que no esté hospedado en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]: organización, equipo y usuario. La lista real de permisos que el código recibe queda determinada por la intersección de los permisos obtenidos por estos tres niveles.  
+ En el caso de los ensamblados, el permiso de ejecución se pasa con la propiedad **PermissionSet** del objeto **Assembly** . Los permisos que recibe el código administrado vienen determinados por la directiva de seguridad activa. Existen tres niveles de directiva activos en un entorno que no esté hospedado en[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : organización, equipo y usuario. La lista real de permisos que el código recibe queda determinada por la intersección de los permisos obtenidos por estos tres niveles.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona un nivel de directiva de seguridad de nivel de host a la biblioteca CLR mientras lo hospeda; esta directiva es un nivel de directiva adicional por debajo de los tres niveles de directiva que siempre están activos. Esta directiva se establece para cada dominio de aplicación creado por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -99,21 +104,21 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  Las rutinas de ensamblado COM (o no administradas) no admiten el modelo de seguridad de CLR.  
   
-### Suplantación  
- Siempre que exista código administrado que tenga acceso a cualquier recurso externo a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sigue las reglas asociadas a la configuración de la propiedad **ImpersonationMode** del ensamblado para asegurarse de que el acceso se produce en un contexto de seguridad de Windows adecuado. Como los ensamblados que usan la configuración de permisos **Safe** no tienen acceso a los recursos externos a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], estas reglas solo se aplican a ensamblados que usen la configuración de permisos **ExternalAccess** y **Unsafe**.  
+### <a name="impersonation"></a>Suplantación  
+ Siempre que exista código administrado que tenga acceso a cualquier recurso externo a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sigue las reglas asociadas a la configuración de la propiedad **ImpersonationMode** del ensamblado para asegurarse de que el acceso se produce en un contexto de seguridad de Windows adecuado. Como los ensamblados que usan la configuración de permisos **Safe** no tienen acceso a los recursos externos a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], estas reglas solo se aplican a ensamblados que usen la configuración de permisos **ExternalAccess** y **Unsafe** .  
   
 -   Si el contexto de ejecución actual corresponde al inicio de sesión autenticado de Windows y es el mismo contexto del autor de la llamada original (es decir, EXECUTE AS no se encuentra en el medio), [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] suplantará el inicio de sesión autenticado de Windows para tener acceso al recurso.  
   
 -   Si hay un EXECUTE AS intermedio que ha cambiado el contexto del llamador original, se producirá un error al intentar obtener acceso al recurso externo.  
   
- La propiedad **ImpersonationMode** se puede establecer en **ImpersonateCurrentUser** o **ImpersonateAnonymous**. La configuración predeterminada, **ImpersonateCurrentUser**, ejecuta un ensamblado en la cuenta de inicio de sesión en red del usuario actual. Si se usa la configuración **ImpersonateAnonymous**, el contexto de ejecución se corresponderá con la cuenta de usuario de inicio de sesión de Windows IUSER_*nombreDeServidor* en el servidor. Se trata de la cuenta de invitado para Internet, que tiene privilegios limitados en el servidor. Un ensamblado que se ejecute en este contexto solamente podrá tener acceso a recursos limitados del servidor local.  
+ La propiedad **ImpersonationMode** se puede establecer en **ImpersonateCurrentUser** o **ImpersonateAnonymous**. La configuración predeterminada, **ImpersonateCurrentUser**, ejecuta un ensamblado en la cuenta de inicio de sesión en red del usuario actual. Si se usa la configuración **ImpersonateAnonymous** , el contexto de ejecución se corresponderá con la cuenta de usuario de inicio de sesión de Windows IUSER_*nombreDeServidor* en el servidor. Se trata de la cuenta de invitado para Internet, que tiene privilegios limitados en el servidor. Un ensamblado que se ejecute en este contexto solamente podrá tener acceso a recursos limitados del servidor local.  
   
-### Dominios de aplicación  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no ofrece dominios de aplicación directamente. Como un conjunto de ensamblados se ejecuta en el mismo dominio de aplicación, los dominios de aplicación podrán descubrirse entre ellos en el tiempo de ejecución con el espacio de nombres **System.Reflection** de .NET Framework o de alguna otra forma, y podrán realizar en ellos llamadas enlazadas en tiempo de ejecución. Tales llamadas estarán sujetas a las comprobaciones de permiso utilizadas por la seguridad basada en autorizaciones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+### <a name="application-domains"></a>Dominios de aplicación  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no ofrece dominios de aplicación directamente. Como un conjunto de ensamblados se ejecuta en el mismo dominio de aplicación, los dominios de aplicación podrán descubrirse entre ellos en el tiempo de ejecución con el espacio de nombres **System.Reflection** de .NET Framework o de alguna otra forma, y podrán realizar en ellos llamadas enlazadas en tiempo de ejecución. Tales llamadas estarán sujetas a las comprobaciones de permiso utilizadas por la seguridad basada en autorizaciones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  No debe confiarse en la búsqueda de ensamblados en el mismo dominio de aplicación, porque la implementación define el límite del dominio de aplicación y los ensamblados que van en cada dominio.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Configurar la seguridad para procedimientos almacenados](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
  [Definir procedimientos almacenados](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   

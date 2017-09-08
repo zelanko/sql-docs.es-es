@@ -1,27 +1,32 @@
 ---
-title: "Referencia de las propiedades de los atributos de dimensi&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "propiedades [Analysis Services], atributos"
-  - "atributos [Analysis Services], propiedades"
+title: "Referencia de propiedades de atributo de dimensión | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- properties [Analysis Services], attributes
+- attributes [Analysis Services], properties
 ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 589e282fbe84a37fd9b966a14441fe7885c71285
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Referencia de las propiedades de los atributos de dimensi&#243;n
+# <a name="dimension-attribute-properties-reference"></a>Referencia de las propiedades de los atributos de dimensión
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], existen numerosas propiedades que determinan el funcionamiento de las dimensiones y sus atributos. En la siguiente tabla se enumeran y describen cada una de estas propiedades de los atributos.  
   
 |Propiedad|Description|  
@@ -40,7 +45,7 @@ caps.handback.revision: 34
 |**EstimatedCount**|Especifica el número estimado de miembros del atributo. El valor predeterminado es cero hasta que se ejecuta el Asistente para diseñar agregaciones. Puede dejar que el asistente cuente el número de registros o bien especificar un valor estimado. Especifique un valor manualmente si conoce el número de miembros y desea ahorrarse el tiempo necesario para realizar la consulta del recuento en la base de datos. Si trabaja con un subconjunto de prueba de los datos de producción, puede utilizar los recuentos de los datos de producción de forma que el diseño de agregaciones se optimice para los datos de producción en lugar de hacerlo para los datos de prueba.|  
 |**GroupingBehavior**|Un valor definido por el usuario que proporciona una sugerencia a las aplicaciones cliente sobre cómo agrupar atributos.|  
 |**ID**|Contiene el identificador (Id.) único de la dimensión.|  
-|**InstanceSelection**|Proporciona una sugerencia a las aplicaciones cliente sobre cómo se debe mostrar una lista de elementos, según el número estimado de elementos de la lista. Las opciones disponibles son las siguientes:<br /><br /> **None** No se proporciona ninguna sugerencia a la aplicación cliente. Es el valor predeterminado.<br /><br /> **DropDown** El número de elementos es lo suficientemente pequeño como para mostrarlos en una lista desplegable.<br /><br /> **List** El número de elementos es demasiado grande para una **lista** desplegable, pero no necesita filtrado.<br /><br /> **FilteredList** El número de elementos es lo suficientemente grande como para requerir que los usuarios filtren los elementos que se van a mostrar.<br /><br /> **MandatoryFilter** El número de elementos es tan grande que siempre se debe filtrar.|  
+|**InstanceSelection**|Proporciona una sugerencia a las aplicaciones cliente sobre cómo se debe mostrar una lista de elementos, según el número estimado de elementos de la lista. Las opciones disponibles son las siguientes:<br /><br /> **None** No se proporciona ninguna sugerencia a la aplicación cliente. Es el valor predeterminado.<br /><br /> **DropDown** El número de elementos es lo suficientemente pequeño como para mostrarlos en una lista desplegable.<br /><br /> **List** El número de elementos es demasiado grande para una **lista**desplegable, pero no necesita filtrado.<br /><br /> **FilteredList** El número de elementos es lo suficientemente grande como para requerir que los usuarios filtren los elementos que se van a mostrar.<br /><br /> **MandatoryFilter** El número de elementos es tan grande que siempre se debe filtrar.|  
 |**IsAggregatable**|Especifica si se pueden agregar los valores de los miembros del atributo. El valor predeterminado es **True**, lo que significa que la jerarquía de atributo contiene un nivel (All). Si el valor de esta propiedad es **False**, la jerarquía de atributo no contiene ningún nivel (All).|  
 |**KeyColumns**|Contiene la columna o columnas que representan la clave del atributo, que es la columna de la tabla relacional subyacente de la vista del origen de datos a la que está enlazada el atributo. El valor de esta columna para cada miembro se muestra a los usuarios a menos que se especifique un valor para la propiedad **NameColumn** .|  
 |**MemberNamesUnique**|Determina si los nombres de miembros de la jerarquía de atributos deben ser únicos.|  
@@ -52,18 +57,18 @@ caps.handback.revision: 34
 |**OrderBy**|Describe cómo ordenar los miembros incluidos en la jerarquía de atributos. El valor predeterminado es Nombre, que especifica que la clasificación de los miembros de atributo está basada en el valor de la propiedad **NameColumn** , si existe. En caso contrario, los miembros se ordenan por el valor de la columna de clave. Las opciones disponibles son las siguientes:<br /><br /> **NameColumn** Se ordena por el valor de la propiedad **NameColumn** .<br /><br /> **Key** Se ordena por el valor de la columna de clave del miembro del atributo.<br /><br /> **AttributeKey** Se ordena por el valor de la clave de miembro de un atributo especificado, que debe tener una relación de atributo con el atributo.<br /><br /> **AttributeName** Se ordena por el valor del nombre de miembro de un atributo especificado, que debe tener una relación de atributo con el atributo.|  
 |**OrderByAttribute**|Identifica el atributo por el que se van a ordenar los miembros de la jerarquía de atributos.|  
 |**RootMemberIf**|Determina cómo se identifican los miembros raíz o superiores de una jerarquía de elementos primarios y secundarios. Este valor de propiedad se utiliza únicamente cuando el valor de la propiedad **Usage** se ha establecido en Parent. Esto significa que se ha definido una jerarquía de atributos primarios y secundarios. El valor predeterminado es **ParentIsBlankSelfOrMissing**, lo que significa que solo se tratan como miembros raíz los miembros que cumplen una o más de las condiciones descritas para **ParentIsBlank**, **ParentIsSelf**o **ParentIsMissing** . También están disponibles los siguientes valores:<br /><br /> **ParentIsBlank** Únicamente los miembros con un valor NULL, cero o una cadena vacía en la columna de clave se tratan como miembros raíz.<br /><br /> **ParentIsSelf** Únicamente los miembros que son elementos primarios se tratan como miembros raíz.<br /><br /> **ParentIsMissing** Únicamente los miembros cuyos elementos primarios no se pueden encontrar se tratan como miembros raíz.|  
-|**Tipo**|Contiene el tipo del atributo. Para más información, vea [Configurar tipos de atributos](../../analysis-services/multidimensional-models/configure-attribute-types.md).|  
+|**Tipo**|Contiene el tipo del atributo. Para más información, vea [Configurar tipos de atributos](../../analysis-services/multidimensional-models/attribute-properties-configure-attribute-types.md).|  
 |**UnaryOperatorColumn**|Especifica la columna que proporciona operadores unarios. Es un enlace del tipo DataItem que define los detalles de una columna que proporciona un operador unario.|  
-|**Uso**|Describe cómo se utiliza un atributo.<br /><br /> Las opciones disponibles son las siguientes:<br /><br /> **Regular** El atributo es un atributo regular. Es el valor predeterminado.<br /><br /> **Key** El atributo es un atributo clave.<br /><br /> **Parent** El atributo es un atributo primario.|  
+|**Usage**|Describe cómo se utiliza un atributo.<br /><br /> Las opciones disponibles son las siguientes:<br /><br /> **Regular** El atributo es un atributo regular. Es el valor predeterminado.<br /><br /> **Key** El atributo es un atributo clave.<br /><br /> **Parent** El atributo es un atributo primario.|  
 |**ValueColumn**|Identifica la columna que proporciona el valor del atributo. Si se especifica el elemento **NameColumn** del atributo, se utilizan los mismos valores **DataItem** como valores predeterminados para el elemento **ValueColumn** . Si no se especifica el elemento **NameColumn** del atributo y la colección **KeyColumns** del mismo contiene un único elemento **KeyColumn** que representa una columna de clave con un tipo de datos de cadena, se utilizan los mismos valores de **DataItem** como valores predeterminados para el elemento **ValueColumn** .|  
   
 > [!NOTE]  
->  Para más información sobre cómo establecer los valores de la propiedad **KeyColumn** cuando se trabaja con valores NULL y otros problemas de integridad de datos, vea [Handling Data Integrity Issues in Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891) (Control de problemas de integridad de datos en Analysis Services 2005).  
+>  Para más información sobre cómo establecer los valores de la propiedad **KeyColumn** cuando se trabaja con valores NULL y otros problemas de integridad de datos, vea [Handling Data Integrity Issues in Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891)(Control de problemas de integridad de datos en Analysis Services 2005).  
   
 > [!NOTE]  
->  El miembro predeterminado en un jerarquía de atributo se usa para evaluar expresiones cuando un miembro de una jerarquía de atributo no se incluye explícitamente en una consulta. El miembro predeterminado de un atributo se especifica mediante la propiedad **DefaultMember** del atributo. Siempre que se incluya una jerarquía de una dimensión en una consulta, se omiten todos los miembros predeterminados de los atributos correspondientes a los niveles de la jerarquía. Si no se incluye ninguna jerarquía de una dimensión en una consulta, se usan los miembros predeterminados para todos los atributos de la dimensión. Para más información sobre los miembros predeterminados, vea [Definir un miembro predeterminado](../../analysis-services/multidimensional-models/define-a-default-member.md).  
+>  El miembro predeterminado en un jerarquía de atributo se usa para evaluar expresiones cuando un miembro de una jerarquía de atributo no se incluye explícitamente en una consulta. El miembro predeterminado de un atributo se especifica mediante la propiedad **DefaultMember** del atributo. Siempre que se incluya una jerarquía de una dimensión en una consulta, se omiten todos los miembros predeterminados de los atributos correspondientes a los niveles de la jerarquía. Si no se incluye ninguna jerarquía de una dimensión en una consulta, se usan los miembros predeterminados para todos los atributos de la dimensión. Para más información sobre los miembros predeterminados, vea [Definir un miembro predeterminado](../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Atributos y jerarquías de atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

@@ -1,29 +1,34 @@
 ---
-title: "Tareas y procedimientos de los modelos de miner&#237;a de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "minería de datos [Analysis Services], modelos"
-  - "modelos de minería de datos [Analysis Services], temas de procedimientos"
+title: "Tareas y procedimientos modelos de minería de datos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], models
+- mining models [Analysis Services], how-to topics
 ms.assetid: 7c2073e5-b40f-4bf8-aa51-021adb08e072
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0ad2ff2582e2b781debd14372614bd0e8c6d2323
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Tareas y procedimientos de los modelos de miner&#237;a de datos
+# <a name="mining-model-tasks-and-how-tos"></a>Tareas y procedimientos de los modelos de minería de datos
   Utilice la pestaña **Modelos de minería de datos** del Diseñador de minería de datos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para administrar y procesar los modelos en una estructura de minería de datos.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
   
 -   [Agregar un modelo de minería de datos a una estructura de minería de datos existente](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)  
   
@@ -55,9 +60,9 @@ caps.handback.revision: 34
   
 -   [Crear una dimensión de minería de datos](../../analysis-services/data-mining/create-a-data-mining-dimension.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tareas y procedimientos de las estructuras de minería de datos](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)   
- [Modelos de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
+ [Modelos de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
  [Conceptos de minería de datos](../../analysis-services/data-mining/data-mining-concepts.md)  
   
   

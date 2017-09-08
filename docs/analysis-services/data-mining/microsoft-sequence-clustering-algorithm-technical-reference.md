@@ -1,34 +1,39 @@
 ---
-title: "Referencia t&#233;cnica del algoritmo de cl&#250;steres de secuencia de Microsoft | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MAXIMUM_SEQUENCE_STATES, parámetro"
-  - "MINIMUM_SUPPORT, parámetro"
-  - "MAXIMUM_STATES, parámetro"
-  - "algoritmos de clústeres de secuencia [Analysis Services]"
-  - "CLUSTER_COUNT, parámetro"
+title: "Referencia técnica del algoritmo de agrupación en clústeres de secuencia de Microsoft | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MAXIMUM_SEQUENCE_STATES parameter
+- MINIMUM_SUPPORT parameter
+- MAXIMUM_STATES parameter
+- sequence clustering algorithms [Analysis Services]
+- CLUSTER_COUNT parameter
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e26ac40b7cb47370107f348548cf2cc7489efa1
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Referencia t&#233;cnica del algoritmo de cl&#250;steres de secuencia de Microsoft
+# <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Referencia técnica del algoritmo de clústeres de secuencia de Microsoft
   El algoritmo de clústeres de secuencia de Microsoft es un algoritmo híbrido que usa el análisis de cadenas de Markov para identificar secuencias ordenadas, y combina los resultados de este análisis con técnicas de agrupación en clústeres para generar clústeres basados en las secuencias y otros atributos del modelo. En este tema se describe la implementación del algoritmo y cómo personalizarlo, y se detallan los requisitos especiales para los modelos de agrupación en clústeres de secuencia.  
   
  Para obtener más información general sobre el algoritmo, incluyendo cómo examinar y consultar los modelos de agrupación en clústeres de secuencia, vea [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md).  
   
-## Implementación del algoritmo de clústeres de secuencia de Microsoft  
+## <a name="implementation-of-the-microsoft-sequence-clustering-algorithm"></a>Implementación del algoritmo de clústeres de secuencia de Microsoft  
  El modelo de agrupación en clústeres de secuencia de Microsoft usa modelos de Markov para identificar las secuencias y determinar su probabilidad. Un modelo de Markov es un gráfico dirigido que almacena las transiciones entre los diferentes estados. El algoritmo de clústeres de secuencia de Microsoft usa cadenas de Markov de orden n, no un modelo de Markov oculto.  
   
  El número de órdenes en una cadena de Markov indica cuántos estados se usan para determinar la probabilidad de los estados actuales. En un modelo de Markov de primer orden, la probabilidad del estado actual depende solo del estado anterior. En una cadena de Markov de segundo orden, la probabilidad de un estado depende de los dos estados previos, etc. En cada cadena de Markov, una matriz de transición almacena las transiciones para cada combinación de estados. A medida que aumenta la longitud de la cadena de Markov, el tamaño de la matriz aumenta también de forma exponencial y la matriz se vuelve sumamente dispersa. El tiempo de procesamiento también aumenta proporcionalmente.  
@@ -43,7 +48,7 @@ caps.handback.revision: 20
   
  Un modelo de agrupación en clústeres de secuencia tiende a crear muchos más clústeres que un modelo de agrupación en clústeres típico. Por lo tanto, el algoritmo de clústeres de secuencia de Microsoft realiza la *descomposición en clústeres*para separar clústeres en función de las secuencias y otros atributos.  
   
-### Selección de características en un modelo de agrupación en clústeres de secuencia  
+### <a name="feature-selection-in-a-sequence-clustering-model"></a>Selección de características en un modelo de agrupación en clústeres de secuencia  
  La selección de características no se invoca al generar secuencias; sin embargo, la selección de características se aplica en la fase de agrupación en clústeres.  
   
 |Tipo de modelo|Método de selección de características|Comentarios|  
@@ -51,9 +56,9 @@ caps.handback.revision: 20
 |Agrupación en clústeres de secuencia|No se utiliza|No se invoca la selección de características; sin embargo, se puede controlar el comportamiento del algoritmo estableciendo el valor de los parámetros MINIMUM_SUPPORT y MINIMUM_PROBABILITY.|  
 |Agrupación en clústeres|Puntuación interestingness|Aunque el algoritmo de clústeres puede utilizar algoritmos discretos o de datos discretos, la puntuación de cada atributo se calcula como una distancia y es continua; por consiguiente, se utiliza la puntuación de grado de interés.|  
   
- Para más información, consulte [Feature Selection](../Topic/Feature%20Selection.md).  
+ Para más información, consulte [Feature Selection](http://msdn.microsoft.com/library/73182088-153b-4634-a060-d14d1fd23b70).  
   
-### Optimizar el rendimiento  
+### <a name="optimizing-performance"></a>Optimizar el rendimiento  
  El algoritmo de clústeres de secuencia de Microsoft admite varias maneras de optimizar el procesamiento:  
   
 -   Controlando el número de clústeres generados estableciendo un valor para el parámetro CLUSTER_COUNT.  
@@ -72,10 +77,10 @@ caps.handback.revision: 20
   
  Una discusión completa de estos métodos queda fuera del ámbito de este tema.  
   
-## Personalizar el algoritmo de clústeres de secuencia de Microsoft  
+## <a name="customizing-the-sequence-clustering-algorithm"></a>Personalizar el algoritmo de clústeres de secuencia de Microsoft  
  El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite parámetros que afectan al comportamiento, el rendimiento y la precisión del modelo de minería de datos resultante. También puede modificar el comportamiento del modelo completado estableciendo marcas de modelado que controlan la manera en que el algoritmo procesa los datos de entrenamiento.  
   
-### Establecer parámetros del algoritmo  
+### <a name="setting-algorithm-parameters"></a>Establecer parámetros del algoritmo  
  En la tabla siguiente se describen los parámetros que se pueden utilizar con el algoritmo de clústeres de secuencia de Microsoft.  
   
  CLUSTER_COUNT  
@@ -103,7 +108,7 @@ caps.handback.revision: 20
   
  El valor predeterminado es 100.  
   
-### Marcas de modelado  
+### <a name="modeling-flags"></a>Marcas de modelado  
  El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las siguientes marcas de modelado.  
   
  NOT NULL  
@@ -118,7 +123,7 @@ caps.handback.revision: 20
   
  Para obtener más información sobre el uso de valores ausentes en modelos de minería de datos y cómo afectan dichos valores a las puntuaciones de probabilidad, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  La tabla de casos debe tener una columna de identificador de caso. Opcionalmente, dicha tabla puede contener otras columnas que almacenen atributos sobre el caso.  
   
  El algoritmo de clústeres de secuencia de Microsoft requiere información de secuencia, almacenada como una tabla anidada. La tabla anidada debe tener una única columna Key Sequence. Una columna **Key Sequence** puede contener cualquier tipo de datos que se puedan ordenar, incluyendo tipos de datos de cadena, pero la columna debe contener valores únicos para cada caso. Es más, antes de procesar el modelo, debe asegurarse de que la tabla de casos y la tabla anidada están ordenadas de manera ascendente por la clave que relaciona las tablas.  
@@ -126,7 +131,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  Si crea un modelo que usa el algoritmo de clústeres de secuencia de Microsoft pero no emplea una columna de secuencia, el modelo resultante no contendrá ninguna secuencia, sino que simplemente creará clústeres de casos en función de otros atributos incluidos en el modelo.  
   
-### Columnas de entrada y de predicción  
+### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
  El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se enumeran en la tabla siguiente. Para obtener más información sobre lo que significan los tipos de contenido cuando se usan en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
 |Columna|Tipos de contenido|  
@@ -134,7 +139,7 @@ caps.handback.revision: 20
 |Atributo de entrada|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Table y Ordered|  
 |Atributo de predicción|Continuous, Cyclical, Discrete, Discretized, Table y Ordered|  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
   
 -   Use la función [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) para la predicción de secuencias. Para obtener más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admiten la predicción de secuencias, vea [Características compatibles con las ediciones de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
@@ -142,9 +147,9 @@ caps.handback.revision: 20
   
 -   El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite la obtención de detalles y el uso de modelos de minería de datos OLAP y de dimensiones de minería de datos.  
   
-## Vea también  
- [Algoritmo de clústeres de secuencia de Microsoft](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Ejemplos de consultas de modelos de clústeres de secuencia](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining model content for sequence clustering models.md)  
+## <a name="see-also"></a>Vea también  
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Ejemplos de consultas de modelo de clústeres de secuencia](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
+ [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

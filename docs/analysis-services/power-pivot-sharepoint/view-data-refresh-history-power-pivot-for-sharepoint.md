@@ -1,32 +1,37 @@
 ---
-title: "Ver el Historial de actualizaci&#243;n de datos (Power Pivot para SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "actualización de datos desatendida [Analysis Services con SharePoint]"
-  - "historial de actualización de datos [Analysis Services con SharePoint]"
-  - "actualización de datos programada [Analysis Services con SharePoint]"
-  - "actualizar datos [Analysis Services con SharePoint]"
+title: "Ver historial (PowerPivot para SharePoint) de actualización de datos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unattended data refresh [Analysis Services with SharePoint]
+- data refresh history [Analysis Services with SharePoint]
+- scheduled data refresh [Analysis Services with SharePoint]
+- data refresh [Analysis Services with SharePoint]
 ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bad4593c84946a2957b6b433de359d4857f116ad
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Ver el Historial de actualizaci&#243;n de datos (Power Pivot para SharePoint)
+# <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Ver el Historial de actualización de datos (Power Pivot para SharePoint)
   El historial de actualización de datos es un registro de toda la actividad de actualización de datos para los datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en un libro de Excel. Las operaciones de actualización de datos se realizan en una instancia del servidor de Analysis Services en una granja de servidores de SharePoint según la programación que se proporcione. De forma predeterminada, el historial de la actualización de datos se retiene durante un año. Sin embargo, el administrador de una granja de servidores puede especificar una directiva de retención diferente para el historial de uso y eventos que determine durante cuánto tiempo se mantienen los registros de actualización de datos.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 | SharePoint 2010  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
   
  **En este tema:**  
   
@@ -72,9 +77,9 @@ caps.handback.revision: 16
 |Time|Proporciona el tiempo acumulado desde el momento en que se inició la actualización de datos hasta que se completó.|  
 |Estado|Proporciona un registro histórico de si una operación de actualización se realizó correctamente o no.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Configurar la recolección de datos de uso para Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
- [Programar una actualización de datos (Power Pivot para SharePoint)](http://msdn.microsoft.com/es-es/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
+ [Programar una actualización de datos (PowerPivot para SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
  [Actualización de datos PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)  
   
   

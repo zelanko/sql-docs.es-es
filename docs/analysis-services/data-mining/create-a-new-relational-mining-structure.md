@@ -1,30 +1,35 @@
 ---
-title: "Crear una estructura de miner&#237;a de datos relacional | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "estructuras de minería de datos [Analysis Services], relacionales"
-  - "estructuras de minería de datos [Analysis Services], crear"
-  - "modelos de minería de datos relacionales [Analysis Services]"
+title: "Crear una nueva estructura de minería de datos relacional | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], relational
+- mining structures [Analysis Services], creating
+- relational mining models [Analysis Services]
 ms.assetid: 55bac3bd-700e-4f91-bcc6-f3cd8c026da1
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6784d7ab5e13d5e842794041589db515a6fd2a30
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Crear una estructura de miner&#237;a de datos relacional
+# <a name="create-a-new-relational-mining-structure"></a>Crear una estructura de minería de datos relacional
   Use el Asistente para minería de datos para crear una nueva estructura de minería de datos, utilizando los datos de la base de datos relacional o de otro origen, y guarde la estructura y un modelo relacionado en una base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-## Para crear una estructura de minería de datos relacional  
+## <a name="to-create-a-relational-mining-structure"></a>Para crear una estructura de minería de datos relacional  
   
 1.  En el Explorador de soluciones, haga clic con el botón derecho en la carpeta **Estructuras de minería de datos** en un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y, después, haga clic en **Nueva estructura de minería de datos**.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 29
   
 11. En la página **Finalización del asistente** , asigne un nombre a la estructura de minería de datos y al modelo de minería de datos inicial relacionado que se creará y, a continuación, haga clic en **Finalizar**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tareas y procedimientos de las estructuras de minería de datos](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

@@ -1,28 +1,33 @@
 ---
-title: "Definir relaciones l&#243;gicas en una vista del origen de datos (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "agregar relaciones"
-  - "relaciones [Analysis Services], vistas del origen de datos"
-  - "vistas del origen de datos [Analysis Services], relaciones"
+title: "Definir relaciones lógicas en una vista del origen de datos (Analysis Services) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding relationships
+- relationships [Analysis Services], data source views
+- data source views [Analysis Services], relationships
 ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08ca218747186a14224809c574a6dc524296cb1a
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Definir relaciones l&#243;gicas en una vista del origen de datos (Analysis Services)
+# <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Definir relaciones lógicas en una vista del origen de datos (Analysis Services)
   El Asistente para vistas del origen de datos y el Diseñador de vistas del origen de datos definen automáticamente las relaciones entre las tablas agregadas a una vista del origen de datos (DSV), en función de las relaciones de la base de datos subyacente o de los criterios de coincidencia de nombres que se especifiquen.  
   
  En caso de que esté trabajando con datos de varios orígenes de datos, puede que necesite definir manualmente relaciones lógicas en la DSV para complementar las relaciones definidas automáticamente. Las relaciones son necesarias en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para identificar las tablas de hechos y dimensiones, para construir consultas para la recuperación de datos y metadatos de orígenes de datos subyacentes, y para usar las características avanzadas de Business Intelligence.  
@@ -57,13 +62,13 @@ caps.handback.revision: 37
 3.  Haga clic con el botón derecho en la tabla, vista o consulta con nombre a la que quiere agregar la relación en el panel **Tablas** y, después, haga clic en **Nueva relación**.  
   
     > [!NOTE]  
-    >  Para buscar una tabla, vista o consulta con nombre, puede usar la opción **Buscar tabla** haciendo clic en el menú **Vista del origen de datos** o haciendo clic con el botón derecho en un área abierta de los paneles **Tablas** o **Diagrama**.  
+    >  Para buscar una tabla, vista o consulta con nombre, puede usar la opción **Buscar tabla** haciendo clic en el menú **Vista del origen de datos** o haciendo clic con el botón derecho en un área abierta de los paneles **Tablas** o **Diagrama** .  
   
 4.  En el cuadro de diálogo **Especificar relación** , haga lo siguiente:  
   
-    1.  Seleccione la tabla, vista o consulta con nombre adecuada en la lista **Tabla de origen (de clave externa)**.  
+    1.  Seleccione la tabla, vista o consulta con nombre adecuada en la lista **Tabla de origen (de clave externa)** .  
   
-    2.  Seleccione la tabla, vista o consulta con nombre adecuada en la lista **Tabla de destino (de clave principal)**.  
+    2.  Seleccione la tabla, vista o consulta con nombre adecuada en la lista **Tabla de destino (de clave principal)** .  
   
     3.  Seleccione columnas en las listas **Columnas de origen** y **Columnas de destino** para crear una relación entre las dos tablas.  
   
@@ -85,7 +90,7 @@ caps.handback.revision: 37
   
 3.  Haga clic con el botón derecho en la relación que quiere modificar y, después, haga clic en **Editar relación**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Vistas del origen de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

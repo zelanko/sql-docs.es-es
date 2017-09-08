@@ -1,25 +1,30 @@
 ---
-title: "Obtener detalles de datos de caso a partir de un modelo de miner&#237;a de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "obtención de detalles [Analysis Services]"
+title: "Profundizar en los datos de los casos de un modelo de minería de datos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- drillthrough [Analysis Services]
 ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 849c244bdfb40770d8038a78a430faa7ff26b6b8
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Obtener detalles de datos de caso a partir de un modelo de miner&#237;a de datos
+# <a name="drill-through-to-case-data-from-a-mining-model"></a>Obtener detalles de datos de caso a partir de un modelo de minería de datos
   Si un modelo de minería de datos se ha configurado para obtener detalles de los casos de modelos, al examinar el modelo, puede recuperar información detallada sobre los casos que se usaron para crear el modelo. Además, si la estructura de minería de datos subyacente se ha configurado para permitir la obtención de detalles de la estructura de casos, y tiene los permisos adecuados, puede devolver información de la estructura de minería de datos. Puede incluir columnas que no se incluían en el modelo de minería de datos.  
   
  Si la estructura de minería de datos no permite la obtención de detalles de los datos subyacentes, pero sí lo hace el modelo de minería de datos, puede ver la información de los casos de modelo pero no de la estructura de minería de datos.  
@@ -42,13 +47,13 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  Algunos modelos no pueden usar la obtención de detalles. La capacidad de usar la obtención de detalles depende del algoritmo usado para crear el modelo. Para obtener una lista de los tipos de modelo de minería de datos que admiten la obtención de detalles, vea [Consultas de obtención de detalles &#40;minería de datos&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
-### Para ver los datos de obtención de detalles de un modelo de minería de datos  
+### <a name="to-view-drillthrough-data-from-a-mining-model"></a>Para ver los datos de obtención de detalles de un modelo de minería de datos  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra la estructura de minería de datos que contiene el modelo de minería de datos que desea.  
   
 2.  En el Diseñador de minería de datos, haga clic en la pestaña **Visor de modelo de minería de datos** .  
   
-3.  Seleccione el modelo en la lista desplegable **Modelo de minería de datos**.  
+3.  Seleccione el modelo en la lista desplegable **Modelo de minería de datos** .  
   
 4.  Seleccione un visor en la lista desplegable **Visor** y haga clic con el botón derecho en el nodo específico.  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 21
   
 6.  Para copiar los datos en el Portapapeles, haga clic con el botón derecho en cualquier fila de la tabla y seleccione **Copiar todo**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Consultas de obtención de detalles &#40;minería de datos&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
   

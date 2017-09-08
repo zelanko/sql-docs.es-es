@@ -1,34 +1,39 @@
 ---
-title: "Filtrar los datos de una tabla (SSAS tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.notallitemsshowing.f1"
-  - "sql13.asvs.bidtoolset.autofiltermenu.f1"
-  - "sql13.asvs.bidtoolset.customfilterdb.f1"
+title: Filtrar datos en una tabla (SSAS Tabular) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.notallitemsshowing.f1
+- sql13.asvs.bidtoolset.autofiltermenu.f1
+- sql13.asvs.bidtoolset.customfilterdb.f1
 ms.assetid: 3223059d-f525-4835-bf88-ebc195d9dbdc
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 310909a6e5f607a9473fca8720d718351ef00476
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Filtrar los datos de una tabla (SSAS tabular)
+# <a name="filter-data-in-a-table-ssas-tabular"></a>Filtrar los datos de una tabla (SSAS tabular)
   Puede aplicar filtros al importar datos para controlar las filas que se cargan en una tabla. Después de haber importado los datos, no podrá eliminar filas individuales. Sin embargo, puede aplicar filtros personalizados para controlar la manera en que se muestran las filas. Las filas que no cumplen los criterios de filtrado se ocultan. Puede filtrar por una o más columnas. Los filtros son aditivos, lo que significa que cada filtro adicional se basa en el actual y reduce aún más el subconjunto de datos.  
   
 > [!NOTE]  
 >  La ventana de vista previa del filtro limita el número de valores diferentes que se muestran. Si se supera el límite, aparece un mensaje.  
   
-### Para filtrar datos según los valores de las columnas  
+### <a name="to-filter-data-based-on-column-values"></a>Para filtrar datos según los valores de las columnas  
   
 1.  En el diseñador de modelos, seleccione una tabla y, a continuación, haga clic en la flecha del encabezado de la columna por la que desea filtrar.  
   
@@ -40,21 +45,21 @@ caps.handback.revision: 13
   
     -   Haga clic en **Filtros de números** o **Filtros de texto** (en función del tipo de columna) y, después, haga clic en uno de los comandos de operador de comparación (como **Es igual a**) o haga clic en **Filtro personalizado**. En el cuadro de diálogo **Filtro personalizado** , cree el filtro y, a continuación, haga clic en **Aceptar**.  
   
-### Para borrar un filtro para una columna  
+### <a name="to-clear-a-filter-for-a-column"></a>Para borrar un filtro para una columna  
   
 1.  Haga clic en la flecha del encabezado de la columna en la que desea borrar un filtro.  
   
-2.  Haga clic en **Borrar filtro de \<nombre de columna>**.  
+2.  Haga clic en **Borrar filtro de \<nombre de columna >**.  
   
-### Para borrar todos los filtros de una tabla  
+### <a name="to-clear-all-filters-for-a-table"></a>Para borrar todos los filtros de una tabla  
   
 1.  En el diseñador de modelos, seleccione la tabla en la que desea borrar los filtros.  
   
 2.  Haga clic en el menú **Columna** y, a continuación, haga clic en **Borrar todos los filtros**.  
   
-## Vea también  
- [Filtrar y ordenar datos &#40;SSAS tabular&#41;](../Topic/Filter%20and%20Sort%20Data%20\(SSAS%20Tabular\).md)   
+## <a name="see-also"></a>Vea también  
+ [Filtrar y ordenar datos &#40;SSAS tabular&#41;](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)   
  [Perspectivas &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [Funciones &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
+ [Roles &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
   

@@ -1,23 +1,28 @@
 ---
-title: "Consultas de contenido (miner&#237;a de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Consultas (minería de datos) de contenido | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2d45986f9907903c6ccdf4d7b1c6bfe5d22eee78
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Consultas de contenido (miner&#237;a de datos)
+# <a name="content-queries-data-mining"></a>Consultas de contenido (minería de datos)
   Una consulta de contenido es una manera de extraer información sobre las estadísticas internas y la estructura del modelo de minería de datos. A veces, una consulta de contenido puede proporcionar detalles que no están disponibles con facilidad en el visor. También puede usar los resultados de una consulta de contenido para extraer información mediante programación para otros usos.  
   
  En esta sección se proporciona información general sobre los tipos de información que se pueden recuperar usando una consulta de contenido, así como la sintaxis DMX general para este tipo de consultas.  
@@ -195,7 +200,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
   
  Para obtener más información sobre cómo trabajar con conjuntos de filas jerárquicos, vea la especificación OLEDB en MSDN.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Descripción de la instrucción Select de DMX](../../dmx/understanding-the-dmx-select-statement.md)   
  [Consultas de minería de datos](../../analysis-services/data-mining/data-mining-queries.md)  
   

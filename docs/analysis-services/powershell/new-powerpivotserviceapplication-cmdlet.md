@@ -1,40 +1,51 @@
 ---
-title: "Cmdlet New-PowerPivotServiceApplication | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Cmdlet New-PowerPivotServiceApplication | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 7bb2a2d2-04c8-43d4-a0fc-e8339ea22138
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 0a574a1159d984e59a7a8ee5ff58ae63f16199b0
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cmdlet New-PowerPivotServiceApplication
+# <a name="new-powerpivotserviceapplication-cmdlet"></a>Cmdlet New-PowerPivotServiceApplication
+
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
+
   Crea una nueva aplicación de servicio de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+
+>[!NOTE] 
+>En este artículo puede contener información no actualizada y ejemplos. Use el cmdlet Get-Help para la versión más reciente.
   
  **Se aplica a:** SharePoint 2010 y SharePoint 2013.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseServerName] <string> [-DatabaseName] <string> [-AddToDefaultProxyGroup <switch>] [<CommonParameters>]  
 ```  
   
-## Description  
+## <a name="description"></a>Description  
  El cmdlet New-PowerPivotServiceApplication crea una nueva aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en la granja. Debe definir por lo menos una aplicación de servicio y debe ser un miembro del grupo de servicios de proxy predeterminado. Opcionalmente, puede crear aplicaciones de servicios adicionales si necesita modificar propiedades o la configuración. Debe asignarse la pertenencia de las aplicaciones de servicio adicionales a los grupos de conexiones de servicios personalizados. Solo una aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] puede ser miembro del grupo de proxy predeterminado.  
   
  Una aplicación de servicio PowerPivot nueva se crea usando una configuración predeterminada. Para personalizar las propiedades de configuración, use el cmdlet Set-PowerPivotServiceApplication.  
   
-## Parámetros  
+## <a name="parameters"></a>Parámetros  
   
-### -ServiceApplicationName \<cadena>  
+### <a name="-serviceapplicationname-string"></a>-Nombredeaplicacióndeservicio \<cadena >  
  Establece el nombre para mostrar de la aplicación de servicio.  
   
 |||  
@@ -45,7 +56,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -DatabaseServerName \<cadena>  
+### <a name="-databaseservername-string"></a>-DatabaseServerName \<cadena >  
  Especifica una instancia del motor de base de datos relacional de SQL Server que hospeda la base de datos de aplicación. De forma predeterminada, puede usar el servidor de bases de datos de la granja o elegir otro servidor de bases de datos para el que tenga que crear derechos de base de datos.  
   
 |||  
@@ -56,7 +67,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -DatabaseName \<cadena>  
+### <a name="-databasename-string"></a>-DatabaseName \<cadena >  
  Especifica el nombre de una base de datos relacional de SQL Server que almacena los datos de aplicación. Asegúrese de especificar un nombre que corresponda a la aplicación para que pueda identificar más fácilmente su propósito. Puede crear una base de datos o especificar una base de datos de aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para la aplicación que va a crear.  
   
 |||  
@@ -67,7 +78,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -AddToDefaultProxyGroup \<modificador>  
+### <a name="-addtodefaultproxygroup-switch"></a>-AddToDefaultProxyGroup \<cambiar >  
  Crea una conexión de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en el grupo de conexiones de servicio predeterminado. La pertenencia a este grupo determina las asociaciones entre las aplicaciones Web y las aplicaciones de servicio. Todas las aplicaciones web que se suscriban al grupo de conexiones de servicio predeterminado pueden usar la aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que agregue al grupo. Aunque puede tener varias aplicaciones de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en una granja, solo una puede ser miembro del grupo de conexiones de servicio predeterminado.  
   
  Si ya tiene una aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que sea miembro del grupo de proxy predeterminado, debe establecer AddToDefautlProxyGroup: $false para la nueva aplicación que va a crear. Tendrá que agregar la aplicación de servicio nueva a un grupo de conexiones de servicio personalizado.  Puede usar los cmdlets integrados de SharePoint con este fin.  Get-SPServiceApplicationProxyGroup devuelve la lista de grupos de conexiones de servicio que están definidas en la granja.  
@@ -80,10 +91,10 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### \<CommonParameters>  
+### <a name="commonparameters"></a>\<CommonParameters >  
  Este cmdlet admite parámetros comunes: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable,OutBuffer y OutVariable. Para obtener más información, vea [about_Commonparameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
-## Entradas y salidas  
+## <a name="inputs-and-outputs"></a>Entradas y salidas  
  El tipo de entrada es el tipo de objetos que se pueden canalizar al cmdlet. El tipo de valor devuelto es el tipo de objeto que el cmdlet devuelve.  
   
 |||  
@@ -91,12 +102,12 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |Entradas|Ninguno.|  
 |Salidas|Ninguno.|  
   
-## Ejemplo 1  
+## <a name="example-1"></a>Ejemplo 1  
   
 ```  
 C:\PS>New-PowerPivotServiceApplication -ServiceApplicationName "PowerPivot Service Application" -DatabaseServerName "AdvWorks-SRV01\PowerPivot" -DatabaseName "PowerPivotServiceApp1" -AddtoDefaultProxyGroup:$true  
 ```  
   
- Este ejemplo crea una nueva aplicación de servicio. La base de datos de aplicación de servicio se crea en un servidor de bases de datos denominado AdvWorks-SRV01 que se instaló como una instancia con nombre de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], una configuración común para muchas instalaciones de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Para crear la base de datos, debe tener permisos dbcreator en la instancia de SQL Server. Debe ser db_owner en la base de datos de configuración de SharePoint. Dado que se trata de la primera aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en la granja, debe ser un miembro del grupo predeterminado de servidores proxy.  
+ Este ejemplo crea una nueva aplicación de servicio. La base de datos de aplicación de servicio se crea en un servidor de bases de datos denominado AdvWorks-SRV01 que se instaló como una instancia con nombre de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , una configuración común para muchas instalaciones de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Para crear la base de datos, debe tener permisos dbcreator en la instancia de SQL Server. Debe ser db_owner en la base de datos de configuración de SharePoint. Dado que se trata de la primera aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en la granja, debe ser un miembro del grupo predeterminado de servidores proxy.  
   
   

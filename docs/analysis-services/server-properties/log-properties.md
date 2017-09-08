@@ -1,68 +1,73 @@
 ---
-title: "Propiedades de registro | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "QueryLogFileSize, propiedad"
-  - "QueryLogTableName, propiedad"
-  - "TraceBackgroundDistributionPeriod, propiedad"
-  - "TraceMaxRowsetSize, propiedad"
-  - "NullKeyConvertedToUnknown, propiedad"
-  - "CrashReportsFolder, propiedad"
-  - "TraceDefinitionFile, propiedad"
-  - "SQLDumperFlagsOn, propiedad"
-  - "KeyErrorLimit, propiedad"
-  - "SnapshotDefinitionFile, propiedad"
-  - "MinidumpErrorList, propiedad"
-  - "ErrorLogFileName, propiedad"
-  - "KeyDuplicate, propiedad"
-  - "IgnoreDataTruncation, propiedad"
-  - "registros [Analysis Services]"
-  - "Enabled, propiedad"
-  - "FileSizeMB, propiedad"
-  - "TraceFileWriteTrailerPeriod, propiedad"
-  - "TraceQueryResponseTextChunkSize, propiedad"
-  - "File, propiedad"
-  - "FileBufferSize, propiedad"
-  - "TraceRowsetBackgroundFlushPeriod, propiedad"
-  - "ErrorLogFileSize, propiedad"
-  - "TraceRequestParameters, propiedad"
-  - "KeyErrorLimitAction, propiedad"
-  - "CreateQueryLogTable, propiedad"
-  - "LogDir, propiedad"
-  - "TraceBackgroundFlushPeriod, propiedad"
-  - "TraceFileBufferSize, propiedad"
-  - "SQLDumperFlagsOff, propiedad"
-  - "QueryLogConnectionString, propiedad"
-  - "KeyNotFound, propiedad"
-  - "KeyErrorLogFile, propiedad"
-  - "TraceReportFQDN, propiedad"
-  - "KeyErrorAction, propiedad"
-  - "QueryLogFileName, propiedad"
-  - "MessageLogs, propiedad"
-  - "MiniDumpFlagsOn, propiedad"
-  - "SnapshotFrequencySec, propiedad"
-  - "QueryLogSampling, propiedad"
-  - "CreateAndSendCrashReports, propiedad"
-  - "LogDurationSec, propiedad"
+title: Propiedades de registro | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- QueryLogFileSize property
+- QueryLogTableName property
+- TraceBackgroundDistributionPeriod property
+- TraceMaxRowsetSize property
+- NullKeyConvertedToUnknown property
+- CrashReportsFolder property
+- TraceDefinitionFile property
+- SQLDumperFlagsOn property
+- KeyErrorLimit property
+- SnapshotDefinitionFile property
+- MinidumpErrorList property
+- ErrorLogFileName property
+- KeyDuplicate property
+- IgnoreDataTruncation property
+- logs [Analysis Services]
+- Enabled property
+- FileSizeMB property
+- TraceFileWriteTrailerPeriod property
+- TraceQueryResponseTextChunkSize property
+- File property
+- FileBufferSize property
+- TraceRowsetBackgroundFlushPeriod property
+- ErrorLogFileSize property
+- TraceRequestParameters property
+- KeyErrorLimitAction property
+- CreateQueryLogTable property
+- LogDir property
+- TraceBackgroundFlushPeriod property
+- TraceFileBufferSize property
+- SQLDumperFlagsOff property
+- QueryLogConnectionString property
+- KeyNotFound property
+- KeyErrorLogFile property
+- TraceReportFQDN property
+- KeyErrorAction property
+- QueryLogFileName property
+- MessageLogs property
+- MiniDumpFlagsOn property
+- SnapshotFrequencySec property
+- QueryLogSampling property
+- CreateAndSendCrashReports property
+- LogDurationSec property
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72e9b5094c12d014c361875016b8208264ad2860
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Propiedades de registro
+# <a name="log-properties"></a>Propiedades de registro
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor de registro descritas en las siguientes tablas. Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
-## General  
+## <a name="general"></a>General  
  **Archivo**  
  Una propiedad de cadena que identifica el nombre del archivo de registro del servidor. Esta propiedad solo se aplica cuando se utiliza un archivo de disco para realizar el registro, a diferencia de cuando se utiliza una tabla de base de datos (comportamiento predeterminado).  
   
@@ -74,8 +79,8 @@ caps.handback.revision: 23
  **MessageLogs**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Registro de errores  
- Puede establecer estas propiedades en la instancia de servidor level para modificar los valores predeterminados de Configuración de errores que aparecen en otras herramientas y diseñadores. Vea [Configuración de errores para el procesamiento de cubos, particiones y dimensiones &#40;SSAS - multidimensional&#41;](../../analysis-services/multidimensional-models/error configuration for cube, partition, and dimension processing.md) y <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> para obtener más información.  
+## <a name="error-log"></a>Registro de errores  
+ Puede establecer estas propiedades en la instancia de servidor level para modificar los valores predeterminados de Configuración de errores que aparecen en otras herramientas y diseñadores. Vea [configuración de errores de cubo, partición y procesamiento de dimensiones &#40; SSAS - Multidimensional &#41; ](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) y <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> para obtener más información.  
   
  **ErrorLog\ErrorLogFileName**  
  Una propiedad utilizada como valor predeterminado durante la operación de procesamiento realizada por el servidor.  
@@ -127,7 +132,7 @@ caps.handback.revision: 23
  **ErrorLog\IgnoreDataTruncation**  
  Una propiedad utilizada como valor predeterminado durante la operación de procesamiento realizada por el servidor.  
   
-## Excepción  
+## <a name="exception"></a>Excepción  
  **Exception\CreateAndSendCrashReports**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -146,7 +151,7 @@ caps.handback.revision: 23
  **Exception\MinidumpErrorList**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Caja negra SQL  
+## <a name="flight-recorder"></a>Caja negra SQL  
  **FlightRecorder\Enabled**  
  Una propiedad booleana que indica si la característica Caja negra SQL está habilitada.  
   
@@ -169,7 +174,7 @@ caps.handback.revision: 23
   
  El valor predeterminado para esta propiedad está en blanco, que a su vez establece el valor predeterminado en FlightRecorderTraceDef.xml.  
   
-## Registro de consultas  
+## <a name="query-log"></a>Registro de consultas  
  **Se aplica a:** modo de servidor multidimensional únicamente  
   
  **QueryLog\QueryLogFileName**  
@@ -199,7 +204,7 @@ caps.handback.revision: 23
 > [!NOTE]  
 >  Para obtener más información sobre cómo configurar el registro de consultas, vea el tema sobre la [configuración del registro de consultas de Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81890).  
   
-## Seguimiento  
+## <a name="trace"></a>Seguimiento  
  **Trace\TraceBackgroundDistributionPeriod**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -230,7 +235,7 @@ caps.handback.revision: 23
  **Trace\TraceRowsetBackgroundFlushPeriod**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

@@ -1,35 +1,40 @@
 ---
-title: "Propiedades de memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "LowMemoryLimit, propiedad"
-  - "MinimumAllocatedMemory, propiedad"
-  - "MidMemoryPrice, propiedad"
-  - "MemoryHeapType, propiedad"
-  - "memoria [Analysis Services]"
-  - "DefaultPagesCountToReuse, propiedad"
-  - "TotalMemoryLimit, propiedad"
-  - "SessionMemoryLimit, propiedad"
-  - "VirtualMemoryLimit, propiedad"
-  - "WaitCountIfHighMemory, propiedad"
-  - "HighMemoryPrice, propiedad"
-  - "HeapTypeForObjects, propiedad"
+title: Propiedades de memoria | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- LowMemoryLimit property
+- MinimumAllocatedMemory property
+- MidMemoryPrice property
+- MemoryHeapType property
+- memory [Analysis Services]
+- DefaultPagesCountToReuse property
+- TotalMemoryLimit property
+- SessionMemoryLimit property
+- VirtualMemoryLimit property
+- WaitCountIfHighMemory property
+- HighMemoryPrice property
+- HeapTypeForObjects property
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a26f0b5272c12e45ed1bf99c0d297fa7f89773ae
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Propiedades de memoria
+# <a name="memory-properties"></a>Propiedades de memoria
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] asigna previamente una pequeña cantidad de memoria al inicio para que las peticiones se puedan administrar inmediatamente. Se asigna memoria adicional a medida que aumentan las cargas de trabajo de procesamiento y consultas. 
   
   Al especificar valores de configuración, puede controlar los umbrales en los que se liberará la memoria. Por ejemplo, el valor **HardMemoryLimit** especifica una condición de memoria insuficiente autoimpuesta (de forma predeterminada, este umbral no está habilitado), donde las nuevas peticiones se rechazan de forma absoluta hasta que haya disponibles más recursos.
@@ -101,7 +106,7 @@ Cuando se establece en 1, es menos probable que se produzcan errores de procesam
 **-1** | (Valor predeterminado) automático. El motor decidirá cuál valor usar.
 **1** | Montón de Analysis Services.
 **2** | LFH de Windows.
-**5** | Asignador híbrido. Este asignador usará LFH de Windows para las asignaciones \<= 16 KB y Montón de AS para las asignaciones >16 KB. 
+**5** | Asignador híbrido. Este asignador usará Windows LFH para \<= las asignaciones de 16 KB y el montón de AS para > asignaciones de 16 KB. 
 **6** | Asignador de Intel TBB. Disponible en SQL Server 2016 SP1 y versiones posteriores de Analysis Services.
   
   
@@ -137,7 +142,8 @@ Cuando se establece en 1, es menos probable que se produzcan errores de procesam
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="see-also"></a>Vea también  
- [Propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
+ [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   [Guía de operaciones de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)
   
+

@@ -1,29 +1,34 @@
 ---
-title: "Crear una estructura de miner&#237;a de datos relacional | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dimensiones [Analysis Services], minería de datos"
-  - "minería de datos [Analysis Services], estructura"
-  - "estructuras de minería de datos [Analysis Services], crear"
-  - "modelos de minería de datos relacionales [Analysis Services]"
-  - "OLAP, modelos de minería de datos [Analysis Services]"
+title: "Crear una estructura de minería de datos relacional | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], data mining
+- data mining [Analysis Services], structure
+- mining structures [Analysis Services], creating
+- relational mining models [Analysis Services]
+- OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 82fa652f76c1818ef6538b379723e7f91c8482ab
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Crear una estructura de miner&#237;a de datos relacional
+# <a name="create-a-relational-mining-structure"></a>Crear una estructura de minería de datos relacional
   La mayoría de los modelos de minería de datos se basan en orígenes de datos relacionales. Las ventajas de crear un modelo de minería de datos relacional son que puede reunir datos ad hoc y entrenar y actualizar un modelo sin la complejidad que supone crear un cubo.  
   
  Una estructura de minería de datos relacional puede extraer datos de orígenes dispares. Los datos sin procesar se pueden almacenar en tablas, archivos o sistemas de bases de datos relacionales, siempre y cuando los datos puedan definirse como parte de la vista del origen de datos. Por ejemplo, debe utilizar una estructura de minería de datos relacional si los datos están en Excel, en un almacén de datos de SQL Server, en la base de datos de informes de SQL Server o en los orígenes externos a los que se tiene acceso a través de los proveedores OLE DB u ODBC.  
@@ -42,7 +47,7 @@ caps.handback.revision: 35
   
  [Por qué y cómo habilitar la obtención de detalles](#BKMK_DrillThru)  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Primero, debe tener un origen de datos existente. Puede utilizar el Diseñador de origen de datos para configurar un origen de datos, si no existe ninguno. Para más información, vea [Crear un origen de datos &#40;SSAS multidimensional&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
   
  A continuación, use el Asistente para vistas del origen de datos para ensamblar los datos requeridos en una única vista del origen de datos. Para más información sobre cómo seleccionar, transformar, filtrar o administrar datos con vistas del origen de datos, vea [Vistas del origen de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
@@ -78,7 +83,7 @@ caps.handback.revision: 35
   
 7.  **Crear conjunto de pruebas**: en esta página, puede indicar al asistente cuántos datos deben guardarse para usarse en la prueba del modelo. Si los datos admiten varios modelos, es aconsejable crear un conjunto de exclusión, para poder probar todos los modelos en los mismos datos.  
   
-     Para más información, vea [Prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
+     Para obtener más información, vea [Prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   
 8.  **Finalización del asistente**: en esta página, proporcione un nombre a la estructura de minería de datos y al modelo de minería de datos asociado, y guarde la estructura y el modelo.  
   
@@ -124,11 +129,11 @@ caps.handback.revision: 35
 > [!WARNING]  
 >  Para utilizar la obtención de detalles, debe habilitarla al crear la estructura de minería de datos. Puede habilitar la obtención de detalles en los modelos después, estableciendo una propiedad en el modelo, pero las estructuras de minería de datos requieren que esta opción se establezca al principio. Para más información, vea [Consultas de obtención de detalles &#40;minería de datos&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Diseñador de minería de datos](../../analysis-services/data-mining/data-mining-designer.md)   
- [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [Asistente para minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [Propiedades del modelo de minería de datos](../../analysis-services/data-mining/mining-model-properties.md)   
- [Propiedades de estructuras de minería de datos y columnas de estructuras](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
+ [Propiedades de la estructura de minería de datos y columnas de estructura](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
  [Tareas y procedimientos de las estructuras de minería de datos](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

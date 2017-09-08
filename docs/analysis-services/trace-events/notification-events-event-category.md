@@ -1,26 +1,31 @@
 ---
-title: "Eventos de notificaci&#243;n (categor&#237;a de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "clases de eventos [Analysis Services], eventos de notificación"
-  - "eventos de notificación, categoría de eventos"
-  - "eventos de notificación [Analysis Services]"
+title: "Categoría de eventos de eventos de notificación | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- event classes [Analysis Services], notification events
+- Notification Events event category
+- notification events [Analysis Services]
 ms.assetid: 5f215a7a-dab8-458c-b846-2d261e957849
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3b92be65e6439b038dc41d7c7ba49b4265645b6a
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Eventos de notificaci&#243;n (categor&#237;a de eventos)
+# <a name="notification-events-event-category"></a>eventos de notificación, categoría de eventos
   La categoría de eventos Eventos de notificación tiene las clases de eventos que se describen en la siguiente tabla.  
   
 |Clase de eventos|Identificador del evento|Description|  
@@ -30,7 +35,7 @@ caps.handback.revision: 21
   
  Para obtener información acerca de las columnas asociadas a cada una de las clases de eventos de Eventos de notificación, vea [Notification Events Data Columns](../../analysis-services/trace-events/notification-events-data-columns.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos de seguimiento de Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

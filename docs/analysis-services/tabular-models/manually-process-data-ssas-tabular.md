@@ -1,26 +1,31 @@
 ---
-title: "Procesar manualmente los datos (SSAS tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.datarefreshprogressdb.f1"
+title: Procesar manualmente los datos (SSAS Tabular) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.datarefreshprogressdb.f1
 ms.assetid: 0918c04c-c1e6-45b4-acfa-96fa578e684b
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d421c1f625ee182497be3fbbff0c19f727f1a2b
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Procesar manualmente los datos (SSAS tabular)
+# <a name="manually-process-data-ssas-tabular"></a>Procesar manualmente los datos (SSAS tabular)
   En este tema se describe cómo procesar manualmente los datos del área de trabajo en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Si crea un modelo tabular que use datos externos, podrá actualizar manualmente los datos mediante el comando Procesar. Puede procesar una única tabla, todas las tablas del modelo o una o más particiones. Siempre que procese datos, puede que también tenga que volver a calcularlos.  Procesar los datos significa obtener los datos más recientes de los orígenes externos. Recalcular significa actualizar el resultado de cualquier fórmula que use los datos.  
@@ -33,19 +38,19 @@ caps.handback.revision: 18
   
 ##  <a name="bkmk_mahually_process"></a> Procesar manualmente los datos  
   
-#### Para procesar los datos de una sola tabla o todas las tablas de un modelo  
+#### <a name="to-process-data-for-a-single-table-or-all-tables-in-a-model"></a>Para procesar los datos de una sola tabla o todas las tablas de un modelo  
   
 1.  En el diseñador de modelos, haga clic en la tabla que desea procesar.  
   
 2.  En el menú **Modelo** , haga clic en **Procesar**y, a continuación, haga clic en **Procesar** o en **Procesar todo**.  
   
-#### Para procesar los datos de todas las tablas utilizando la misma conexión  
+#### <a name="to-process-data-for-all-tables-using-the-same-connection"></a>Para procesar los datos de todas las tablas utilizando la misma conexión  
   
 1.  En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], haga clic en el menú **Modelo** y, a continuación, en **Conexiones existentes**.  
   
 2.  En el cuadro de diálogo **Conexiones existentes** , seleccione una conexión y, a continuación, haga clic en **Procesar**.  
   
-#### Para procesar los datos de una o más particiones  
+#### <a name="to-process-data-for-one-or-more-partitions"></a>Para procesar los datos de una o más particiones  
   
 1.  En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], haga clic en el menú **Modelo** , seleccione **Procesar**y, a continuación, haga clic en **Procesar particiones**.  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 18
  **Detener actualización**  
  Haga clic aquí para detener la operación de procesamiento. Esta opción resulta útil si la operación tarda demasiado o hay demasiados errores.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Procesar datos &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)   
  [Solucionar problemas del procesamiento de datos &#40;SSAS tabular&#41;](../../analysis-services/troubleshoot-process-data-ssas-tabular.md)  
   

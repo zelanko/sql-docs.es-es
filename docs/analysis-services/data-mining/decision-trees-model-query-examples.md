@@ -1,27 +1,32 @@
 ---
-title: "Ejemplos de consultas de modelos de &#225;rboles de decisi&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "algoritmos de árbol de decisión [Analysis Services]"
-  - "consultas de contenido [DMX]"
-  - "árboles de decisión [Analysis Services]"
+title: "Ejemplos de consultas de modelo de árboles de decisión | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- decision tree algorithms [Analysis Services]
+- content queries [DMX]
+- decision trees [Analysis Services]
 ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2822b60d236ab7d961ce02bf76cbc7ac996aefb0
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Ejemplos de consultas de modelos de &#225;rboles de decisi&#243;n
+# <a name="decision-trees-model-query-examples"></a>Ejemplos de consultas de modelos de árboles de decisión
   Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles de los patrones detectados durante el análisis, o de una consulta de predicción, que utiliza los patrones del modelo para realizar predicciones de los nuevos datos. Por ejemplo, una consulta de contenido para un modelo de árboles de decisión puede proporcionar estadísticas sobre el número de casos en cada nivel del árbol, o de las reglas que diferencian los casos. O bien, una consulta de predicción asigna el modelo a los datos nuevos para generar recomendaciones, clasificaciones, etc. También se pueden recuperar metadatos sobre el modelo mediante una consulta.  
   
  En esta sección se explica cómo crear consultas para modelos basados en el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -61,7 +66,7 @@ WHERE MODEL_NAME = 'TM_Decision Tree'
  COMPLEXITY_PENALTY=0.5, MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_OUTPUT_ATTRIBUTES=255,MINIMUM_SUPPORT=10,SCORE_METHOD=4,SPLIT_METHOD=3,FORCE_REGRESSOR=  
   
 ###  <a name="bkmk_Query2"></a> Consulta de ejemplo 2: Devolver detalles sobre el contenido del modelo utilizando DMX  
- La consulta siguiente devuelve información básica sobre los árboles de decisión creados cuando compiló el modelo en el [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md). Todas las estructuras de árboles se almacenan en su propio nodo. Dado que este modelo contiene un único atributo de predicción, solamente hay un nodo de árbol. Sin embargo, si se crea un modelo de asociación mediante el algoritmo de árboles de decisión, puede que haya centenares de árboles, uno para cada producto.  
+ La consulta siguiente devuelve información básica sobre los árboles de decisión creados cuando compiló el modelo en el [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Todas las estructuras de árboles se almacenan en su propio nodo. Dado que este modelo contiene un único atributo de predicción, solamente hay un nodo de árbol. Sin embargo, si se crea un modelo de asociación mediante el algoritmo de árboles de decisión, puede que haya centenares de árboles, uno para cada producto.  
   
  Esta consulta devuelve todos los nodos de tipo 2, que son los nodos de nivel superior de un árbol que representa un atributo de predicción determinado.  
   
@@ -130,7 +135,7 @@ AND NODE_TYPE = 4
 |00000000100010100|Total Children = 3|75|  
 |0000000010001010100|Number Children At Home = 1|75|  
   
-## Realizar predicciones mediante un modelo de árbol de decisión  
+## <a name="making-predictions-using-a-decision-trees-model"></a>Realizar predicciones mediante un modelo de árbol de decisión  
  Dado que los árboles de decisión se pueden utilizar para diversas tareas, como son la clasificación, la regresión e incluso la asociación, al crear una consulta de predicción en un modelo de árbol de decisión se tienen muchas opciones disponibles. Se debe conocer el propósito para el que se creó el modelo si desea entender los resultados de la predicción. Los ejemplos de consulta siguientes ilustran tres escenarios diferentes:  
   
 -   Devolver una predicción para un modelo de clasificación, junto con la probabilidad de que la predicción sea correcta, y después filtrar los resultados por probabilidad;  
@@ -140,7 +145,7 @@ AND NODE_TYPE = 4
 -   Recuperar la fórmula de regresión para una parte de un árbol de decisión en el que la relación entre la entrada y la salida es lineal.  
   
 ###  <a name="bkmk_Query4"></a> Consulta de ejemplo 4: Devolver predicciones con probabilidades  
- La consulta de ejemplo siguiente utiliza el modelo de árbol de decisión que se creó en [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md). La consulta pasa un nuevo conjunto de datos de ejemplo, a partir de la tabla dbo.ProspectiveBuyers de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] DW, para predecir cuál de los clientes del nuevo conjunto de datos comprará una bicicleta.  
+ La consulta de ejemplo siguiente utiliza el modelo de árbol de decisión que se creó en [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La consulta pasa un nuevo conjunto de datos de ejemplo, a partir de la tabla dbo.ProspectiveBuyers de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] DW, para predecir cuál de los clientes del nuevo conjunto de datos comprará una bicicleta.  
   
  La consulta usa la función de predicción [PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md), que devuelve una tabla anidada que contiene información útil sobre las probabilidades detectadas por el modelo. La cláusula WHERE final de la consulta filtra los resultados para devolver solo los clientes de los que se ha predicho que son posibles compradores de bicicletas con una probabilidad mayor del 0%.  
   
@@ -192,7 +197,7 @@ AND PredictProbability([Bike Buyer]) >'.05'
  Si el proveedor no admite conjuntos de filas jerárquicos, como los mostrados aquí, puede usar la palabra clave FLATTENED en la consulta para devolver los resultados como una tabla que contenga valores NULL en lugar de valores de columna repetidos. Para obtener más información, vea [Tablas anidadas &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md) y [Descripción de la instrucción Select de DMX](../../dmx/understanding-the-dmx-select-statement.md).  
   
 ###  <a name="bkmk_Query5"></a> Consulta de ejemplo 5: Predecir asociaciones a partir de un modelo de árbol de decisión  
- La siguiente consulta de ejemplo se basa en la estructura de minería de datos Association. Para proseguir con este ejemplo, puede agregar un nuevo modelo a esta estructura de minería de datos y seleccionar árboles de decisión de Microsoft como algoritmo. Para obtener más información sobre cómo crear la estructura de minería de datos Association, vea [Lección 3: Generar un escenario de cesta de la compra &#40;Tutorial intermedio de minería de datos&#41;](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md).  
+ La siguiente consulta de ejemplo se basa en la estructura de minería de datos Association. Para proseguir con este ejemplo, puede agregar un nuevo modelo a esta estructura de minería de datos y seleccionar árboles de decisión de Microsoft como algoritmo. Para obtener más información sobre cómo crear la estructura de minería de datos Association, vea [Lección 3: Generar un escenario de cesta de la compra &#40;Tutorial intermedio de minería de datos&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a).  
   
  La consulta de ejemplo siguiente es una consulta singleton, que se puede crear con facilidad en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] eligiendo los campos y seleccionando a continuación los valores para esos campos en una lista desplegable.  
   
@@ -244,7 +249,7 @@ WHERE NODE_TYPE = 25
   
  Resultados del ejemplo:  
   
-|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
+|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
 |Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
@@ -252,7 +257,7 @@ WHERE NODE_TYPE = 25
   
  Para obtener más información sobre los tipos de valor y las estadísticas usadas en modelos de regresión, vea [Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
-## Lista de funciones de predicción  
+## <a name="list-of-prediction-functions"></a>Lista de funciones de predicción  
  Todos los algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] son compatibles con un conjunto común de funciones. Sin embargo, el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las funciones adicionales que se enumeran en la tabla siguiente.  
   
 |||  
@@ -269,9 +274,9 @@ WHERE NODE_TYPE = 25
 |[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|Devuelve el valor de soporte de un estado especificado.|  
 |[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Devuelve la varianza de una columna especificada.|  
   
- Para consultar una lista de las funciones comunes a todos los algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)], vea [Funciones de predicción generales &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Para obtener más información sobre la sintaxis de funciones específicas, vea [Referencia de funciones de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
+ Para consultar una lista de las funciones comunes a todos los algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)], vea [Funciones de predicción generales &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Para más información sobre la sintaxis de funciones específicas, vea [Referencia de funciones de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Consultas de minería de datos](../../analysis-services/data-mining/data-mining-queries.md)   
  [Algoritmo de árboles de decisión de Microsoft](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [Referencia técnica del algoritmo de árboles de decisión de Microsoft](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   

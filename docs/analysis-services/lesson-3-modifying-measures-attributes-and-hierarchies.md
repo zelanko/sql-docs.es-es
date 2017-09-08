@@ -1,24 +1,29 @@
 ---
-title: "Lecci&#243;n 3: Modificar medidas, atributos y jerarqu&#237;as | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lección 3: Modificar medidas, atributos y jerarquías | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 17d243cb-9bfb-43d7-8e6f-4d601fd62150
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 776acb877537233ffc25378d53160eb19a19038f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Lecci&#243;n 3: Modificar medidas, atributos y jerarqu&#237;as
+# <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lección 3: Modificar medidas, atributos y jerarquías
 Una vez definido el cubo inicial, estará listo para mejorar la utilidad y la facilidad de uso del cubo. Puede hacerlo agregando jerarquías que admitan navegación y agregación en varios niveles, aplicando formatos a la medida específica, y definiendo cálculos y relaciones.  
   
 > [!NOTE]  
@@ -26,24 +31,25 @@ Una vez definido el cubo inicial, estará listo para mejorar la utilidad y la fa
   
 Esta lección contiene las siguientes tareas:  
   
-[Modificar medidas](../analysis-services/modifying-measures.md)  
+[Modificar medidas](../analysis-services/lesson-3-1-modifying-measures.md)  
 En esta tarea, debe especificar las propiedades de formato para las medidas de moneda y porcentaje del cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-[Modificar la dimensión Customer](../analysis-services/modifying-the-customer-dimension.md)  
+[Modificar la dimensión Customer](../analysis-services/lesson-3-2-modifying-the-customer-dimension.md)  
 En esta tarea, debe crear una jerarquía de usuario, crear cálculos con nombre, modificar atributos para utilizarlos en cálculos con nombre, y agrupar atributos de grupo y jerarquías de usuario en carpetas para mostrar.  
   
-[Modificar la dimensión Product](../analysis-services/modifying-the-product-dimension.md)  
+[Modificar la dimensión Product](../analysis-services/lesson-3-3-modifying-the-product-dimension.md)  
 En esta tarea, debe definir una jerarquía de usuarios, crear cálculos con nombre, definir el nombre de miembro Todos y definir carpetas para mostrar.  
   
-[Modificar la dimensión Date](../analysis-services/modifying-the-date-dimension.md)  
+[Modificar la dimensión Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
 En esta tarea, debe definir una jerarquía de usuario, modificar nombres de miembros de atributo y utilizar claves compuestas para especificar miembros de atributo únicos.  
   
-[Examinar el cubo implementado](../analysis-services/browsing-the-deployed-cube.md)  
+[Examinar el cubo implementado](../analysis-services/lesson-3-5-browsing-the-deployed-cube.md)  
 En esta tarea, debe explorar los datos del cubo usando el explorador del Diseñador de cubos.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
 [Escenario de Tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
 [Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   
   
+

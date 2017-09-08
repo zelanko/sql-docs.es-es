@@ -1,24 +1,29 @@
 ---
-title: "Lecci&#243;n 9: Definir perspectivas y traducciones | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lección 9: Definir perspectivas y traducciones | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47562691980f0679f7c03525b41db4ac8aa901d6
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Lecci&#243;n 9: Definir perspectivas y traducciones
+# <a name="lesson-9-defining-perspectives-and-translations"></a>Lección 9: Definir perspectivas y traducciones
 En esta lección, aprenderá a definir perspectivas y traducciones. Puede definir perspectivas para reducir la complejidad aparente de un cubo y definir traducciones que permitan a los usuarios ver los metadatos del cubo en el idioma que desee.  
   
 > [!NOTE]  
@@ -26,16 +31,16 @@ En esta lección, aprenderá a definir perspectivas y traducciones. Puede defini
   
 Esta lección contiene las siguientes tareas:  
   
-[Definir y examinar perspectivas](../analysis-services/defining-and-browsing-perspectives.md)  
+[Definir y examinar perspectivas](../analysis-services/lesson-9-1-defining-and-browsing-perspectives.md)  
 En esta tarea, se definen y examinan perspectivas para simplificar la vista del cubo para usuarios o usos específicos.  
   
-[Definir y examinar traducciones](../analysis-services/defining-and-browsing-translations.md)  
+[Definir y examinar traducciones](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
 En esta tarea, se definen y examinan traducciones de metadatos específicos en determinados idiomas.  
   
-## Lección siguiente  
+## <a name="next-lesson"></a>Lección siguiente  
 [Lección 10: definir roles administrativos](../analysis-services/lesson-10-defining-administrative-roles.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
 [Escenario de Tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
 [Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Perspectivas](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)  
@@ -46,3 +51,4 @@ En esta tarea, se definen y examinan traducciones de metadatos específicos en d
   
   
   
+

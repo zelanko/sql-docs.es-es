@@ -1,35 +1,40 @@
 ---
-title: "Marcas de modelado (Miner&#237;a de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "atributos [minería de datos]"
-  - "tipos de datos [minería de datos]"
-  - "REGRESSOR, marca"
-  - "MODEL_EXISTENCE_ONLY, marca"
-  - "REGRESSOR, columna"
-  - "columnas [minería de datos], marcas de modelado"
-  - "NOT NULL, marca de modelado"
-  - "marcas de modelado [minería de datos]"
-  - "valores NULL [Analysis Services]"
-  - "MODEL_EXISTENCE_ONLY, columna"
-  - "codificar [minería de datos]"
+title: "Marcas de modelado (minería de datos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attributes [data mining]
+- data types [data mining]
+- REGRESSOR flag
+- MODEL_EXISTENCE_ONLY flag
+- REGRESSOR column
+- columns [data mining], modeling flags
+- NOT NULL modeling flag
+- modeling flags [data mining]
+- null values [Analysis Services]
+- MODEL_EXISTENCE_ONLY column
+- coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
 caps.latest.revision: 48
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ec1ae22619f8988c6d334dfd501faa221e34d1f7
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Marcas de modelado (Miner&#237;a de datos)
+# <a name="modeling-flags-data-mining"></a>Marcas de modelado (Minería de datos)
   Puede utilizar marcas de modelado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para proporcionar información adicional a un algoritmo de minería de datos acerca de los datos que se definen en una tabla de casos. El algoritmo puede usar esta información para crear un modelo de minería de datos más preciso.  
   
  Algunas marcas de modelado se definen en la estructura de minería de datos, mientras que otras se definen en la columna del modelo de minería de datos. Por ejemplo, la marca de modelado **NOT NULL** se utiliza con las columnas de la estructura de minería de datos. Puede definir marcas de modelado adicionales en las columnas del modelo de minería de datos, dependiendo del algoritmo que se utilice para crear el modelo.  
@@ -37,7 +42,7 @@ caps.handback.revision: 48
 > [!NOTE]  
 >  Los complementos de otros proveedores podrían tener otras marcas de modelado, además de las predefinidas por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-## Lista de marcas de modelado  
+## <a name="list-of-modeling-flags"></a>Lista de marcas de modelado  
  En la lista siguiente se describen las marcas de modelado compatibles con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obtener información acerca de las marcas de modelado admitidas por determinados algoritmos, vea el tema de referencia técnica correspondiente al algoritmo que se usó para crear el modelo.  
   
  **NOT NULL**  
@@ -46,7 +51,7 @@ caps.handback.revision: 48
  **MODEL_EXISTENCE_ONLY**  
  Indica que la columna se tratará como si tuviera dos estados posibles: **Missing** y **Existing**. Si el valor es **NULL**, se trata como Ausente. La marca MODEL_EXISTENCE_ONLY se aplica al atributo de predicción y es compatible con la mayoría de los algoritmos.  
   
- De hecho, al establecer la marca MODEL_EXISTENCE_ONLY en **True**, se cambia la representación de los valores para que solo haya dos estados: **Missing** y **Existing**. Todos los estados no ausentes se combinan en un único valor **Existing**.  
+ De hecho, al establecer la marca MODEL_EXISTENCE_ONLY en **True** , se cambia la representación de los valores para que solo haya dos estados: **Missing** y **Existing**. Todos los estados no ausentes se combinan en un único valor **Existing** .  
   
  Un uso típico de esta marca de modelado se daría en los atributos para los que el estado **NULL** tiene un significado implícito; el valor explícito del estado **NOT NULL** podría no ser tan importante como el hecho de que la columna tenga cualquier valor. Por ejemplo, una columna [DateContractSigned] podría ser **NULL** si nunca se ha firmado un contrato y **NOT NULL** si se ha firmado. Por lo tanto, si la finalidad del modelo es predecir si se firmará un contrato, puede usar la marca MODEL_EXISTENCE_ONLY para omitir el valor de fecha exacta en los casos de **NOT NULL** y solo hacer distinciones en los casos donde un contrato es **Missing** o **Existing**.  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 48
  **REGRESSOR**  
  Indica que la columna es candidata para utilizarse como regresor durante el procesamiento. Esta marca se define en una columna de modelo de minería de datos y solo se puede aplicar a las columnas que tienen un tipo de datos numéricos continuo. Para más información sobre el uso de esta marca, vea en este tema la sección [Usos de la marca de modelado REGRESSOR](#bkmk_UseRegressors).  
   
-## Ver y cambiar marcas de modelado  
+## <a name="viewing-and-changing-modeling-flags"></a>Ver y cambiar marcas de modelado  
  Puede ver y modificar las marcas de modelado asociadas a una columna de un modelo o de una estructura de minería de datos en el Diseñador de minería de datos examinando las propiedades de la estructura o del modelo.  
   
  Para determinar qué marcas de modelado se han aplicado a la estructura de minería de datos actual, puede crear una consulta en el conjunto de filas de esquema de minería de datos que devuelve las marcas de modelado solo para las columnas de estructura, mediante una consulta como la siguiente:  
@@ -86,7 +91,7 @@ WHERE MODEL_NAME = '<model name>'
   
  **Nota** Si modifica un modelo de minería de datos y cambia el tipo de contenido de una columna de continuo a discreto, deberá cambiar manualmente la marca en la columna de minería de datos y, a continuación, volver a procesar el modelo.  
   
-### Regresores en modelos de regresión lineal  
+### <a name="regressors-in-linear-regression-models"></a>Regresores en modelos de regresión lineal  
  Los modelos de regresión lineal se basan en el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Aun cuando no utilice el algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , cualquier modelo de árbol de decisión puede contener un árbol o nodos que representen una regresión en un atributo continuo.  
   
  Por lo tanto, en estos modelos no es necesario especificar que una columna continua representa un regresor. El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] dividirá el conjunto de datos en regiones con patrones significativos aunque no establezca la marca REGRESSOR en la columna. La diferencia estriba en que, al establecer la marca de modelado, el algoritmo intentará buscar ecuaciones de regresión con el formato siguiente para ajustarlos a los patrones de los nodos del árbol.  
@@ -99,7 +104,7 @@ WHERE MODEL_NAME = '<model name>'
   
  Puede utilizar el parámetro FORCE_REGRESSOR para garantizar que el algoritmo utilizará un regresor determinado. Este parámetro se puede utilizar con el algoritmo de árboles de decisión y el algoritmo de regresión lineal.  
   
-## Tareas relacionadas  
+## <a name="related-tasks"></a>Tareas relacionadas  
  Utilice los vínculos siguientes para obtener más información acerca de cómo utilizar marcas de modelado.  
   
 |Tarea|Tema|  

@@ -1,27 +1,32 @@
 ---
-title: "Ejemplos de consultas del modelo Bayes naive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "bayes naive, modelo [Analysis Services]"
-  - "bayes naive, algoritmos [Analysis Services]"
-  - "consultas de contenido [DMX]"
+title: Ejemplos de consultas de modelo Bayes naive | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- naive bayes model [Analysis Services]
+- naive bayes algorithms [Analysis Services]
+- content queries [DMX]
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6935ffd8851a9454a1a2e53655be814a4eda3af1
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Ejemplos de consultas del modelo Bayes naive
+# <a name="naive-bayes-model-query-examples"></a>Ejemplos de consultas del modelo Bayes naive
   Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles sobre las reglas y los conjuntos de elementos detectados durante el análisis, o una consulta de predicción, que usa las asociaciones detectadas en los datos para realizar predicciones. También puede recuperar los metadatos sobre el modelo utilizando una consulta del conjunto de filas de esquema de minería de datos. En esta sección se explica cómo crear estas consultas para los modelos que se basan en el algoritmo Bayes naive de Microsoft.  
   
  **Consultas de contenido**  
@@ -42,7 +47,7 @@ caps.handback.revision: 13
   
  [Predecir asociaciones](#bkmk_Query7)  
   
-## Buscar información sobre un modelo Bayes naive  
+## <a name="finding-information-about-a-naive-bayes-model"></a>Buscar información sobre un modelo Bayes naive  
  El contenido de un modelo Bayes naive proporciona información agregada sobre la distribución de los valores en los datos de entrenamiento. También puede recuperar la información sobre los metadatos del modelo creando consultas con los conjuntos de filas de esquema de minería de datos.  
   
 ###  <a name="bkmk_Query1"></a> Consulta de ejemplo 1: obtener metadatos del modelo usando DMX  
@@ -67,7 +72,7 @@ WHERE MODEL_NAME = 'TM_NaiveBayes_Filtered'
 |PREDICTION_ENTITY|Bike Buyer,Yearly Income|  
 |FILTER|[Region] = 'Europe' OR [Region] = 'North America'|  
   
- El modelo que se usa para este ejemplo está basado en el modelo Bayes naive que se crea en [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md), pero se modificó agregando un segundo atributo de predicción y aplicando un filtro a los datos de entrenamiento.  
+ El modelo que se usa para este ejemplo está basado en el modelo Bayes naive que se crea en [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c), pero se modificó agregando un segundo atributo de predicción y aplicando un filtro a los datos de entrenamiento.  
   
 ###  <a name="bkmk_Query2"></a> Consulta de ejemplo 2: recuperar un resumen de los datos de entrenamiento  
  En un modelo Bayes naive, el nodo de estadísticas marginal almacena información agregada sobre la distribución de los valores de los datos de entrenamiento. Este resumen es cómodo y le evita tener que crear consultas SQL con los datos de entrenamiento para encontrar la misma información.  
@@ -164,7 +169,7 @@ CALL GetPredictableAttributes ('TM_NaiveBayes')
   
  Para más información sobre los procedimientos almacenados del sistema de Analysis Services, vea [Procedimientos almacenados de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md).  
   
-## Usar un modelo Bayes naive para realizar predicciones  
+## <a name="using-a-naive-bayes-model-to-make-predictions"></a>Usar un modelo Bayes naive para realizar predicciones  
  El algoritmo Bayes naive de Microsoft se suele utilizar menos para la predicción que para la exploración de relaciones entre los atributos de predicción y la entrada. Sin embargo, el modelo admite el uso de funciones de predicción tanto para predicción como para asociación.  
   
 ###  <a name="bkmk_Query5"></a> Consulta de ejemplo 5: predecir los resultados utilizando una consulta singleton  
@@ -213,7 +218,7 @@ NATURAL PREDICTION JOIN
  La fila final en la tabla muestra los ajustes para la compatibilidad y la probabilidad del valor que falta. Los valores de la desviación estándar y la varianza siempre son 0, porque los modelos Bayes naive no pueden modelar los valores continuos.  
   
 ###  <a name="bkmk_Query7"></a> Consulta de ejemplo 7: predecir las asociaciones  
- El algoritmo Bayes naive de Microsoft se puede utilizar para el análisis de la asociación, si la estructura de minería de datos contiene una tabla anidada con el atributo de predicción como clave. Por ejemplo, podría crear un modelo Bayes naive al usar la estructura de minería de datos creada en [Lección 3: Generar un escenario de cesta de la compra &#40;Tutorial intermedio de minería de datos&#41;](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md) del tutorial de minería de datos. El modelo utilizado en este ejemplo se modificó para agregar información sobre los ingresos y la región del cliente en la tabla de casos.  
+ El algoritmo Bayes naive de Microsoft se puede utilizar para el análisis de la asociación, si la estructura de minería de datos contiene una tabla anidada con el atributo de predicción como clave. Por ejemplo, podría crear un modelo Bayes naive al usar la estructura de minería de datos creada en [Lección 3: Generar un escenario de cesta de la compra &#40;Tutorial intermedio de minería de datos&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a) del tutorial de minería de datos. El modelo utilizado en este ejemplo se modificó para agregar información sobre los ingresos y la región del cliente en la tabla de casos.  
   
  En el ejemplo de consulta siguiente se muestra una consulta singleton que predice los productos que están relacionados con las compras del producto, `'Road Tire Tube'`. Podría utilizar esta información para recomendar productos a un tipo específico de cliente.  
   
@@ -238,7 +243,7 @@ AS t
 |Touring-2000|  
 |Touring-1000|  
   
-## Lista de funciones  
+## <a name="function-list"></a>Lista de funciones  
  Todos los algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] son compatibles con un conjunto común de funciones. No obstante, el algoritmo Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las funciones adicionales que se enumeran en la siguiente tabla.  
   
 |||  
@@ -254,9 +259,9 @@ AS t
   
  Para ver la sintaxis de funciones específicas, vea [Referencia de funciones de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia técnica del algoritmo Bayes naive de Microsoft](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)   
- [Algoritmo Bayes naive de Microsoft](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
+ [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
  [Contenido del modelo de minería de datos para los modelos Bayes naive &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

@@ -1,31 +1,36 @@
 ---
-title: "Contenido del modelo de miner&#237;a de datos para los modelos Bayes naive (Analysis Services - Miner&#237;a de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "bayes naive, modelo [Analysis Services]"
-  - "clasificadores bayesianos"
-  - "bayes naive, algoritmos [Analysis Services]"
-  - "contenido del modelo de minería de datos para los modelos bayes naive"
+title: "Contenido del modelo para los modelos Bayes Naive de minería de datos (Analysis Services: minería de datos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- naive bayes model [Analysis Services]
+- Bayesian classifiers
+- naive bayes algorithms [Analysis Services]
+- mining model content, naive bayes models
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f7786d6273c7941863b413f384ea8eb86bbbe84e
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Contenido del modelo de miner&#237;a de datos para los modelos Bayes naive (Analysis Services - Miner&#237;a de datos)
+# <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos Bayes naive (Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener una explicación de cómo interpretar las estadísticas y la estructura compartidas por todos los tipos de modelos, así como las definiciones generales de los términos relacionados con el contenido del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
-## Descripción de la estructura de un modelo Bayes naive  
+## <a name="understanding-the-structure-of-a-naive-bayes-model"></a>Descripción de la estructura de un modelo Bayes naive  
  Un modelo Bayes naive tiene un nodo primario único que representa el modelo y sus metadatos, y debajo de dicho nodo, varios árboles independientes que representan los atributos de predicción seleccionados. Además de los árboles para los atributos, cada modelo contiene un nodo de estadísticas marginales (NODE_TYPE = 26) que proporciona estadísticas descriptivas sobre el conjunto de casos de entrenamiento. Para obtener más información, vea [Información en el nodo de estadísticas marginales](#bkmk_margstats).  
   
  Para cada atributo de predicción y valor, el modelo genera un árbol que contiene información que describe cómo afectaron las columnas de entrada al resultado de ese atributo de predicción concreto. Cada árbol contiene el atributo de predicción y su valor (NODE_TYPE = 9) y, a continuación, una serie de nodos que representan los atributos de entrada (NODE_TYPE = 10). Dado que los atributos de entrada normalmente tienen varios valores, cada uno de dichos atributos (NODE_TYPE = 10) puede tener varios nodos secundarios (NODE_TYPE = 11), uno para cada estado específico del atributo.  
@@ -33,9 +38,9 @@ caps.handback.revision: 16
 > [!NOTE]  
 >  Dado que un modelo Bayes naive no admite tipos de datos continuos, todos los valores de las columnas de entrada se tratan como discretos o discretizados. Si lo desea, puede especificar cómo se discretiza un valor. Para obtener más información, vea [Cambiar la discretización de una columna en un modelo de minería de datos](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md).  
   
- ![estructura del contenido del modelo para naive bayes](../../analysis-services/data-mining/media/modelcontentstructure-nb.gif "estructura del contenido del modelo para naive bayes")  
+ ![estructura del contenido del modelo de bayes naive](../../analysis-services/data-mining/media/modelcontentstructure-nb.gif "estructura del contenido del modelo de bayes naive")  
   
-## Contenido del modelo para un modelo Bayes naive  
+## <a name="model-content-for-a-naive-bayes-model"></a>Contenido del modelo para un modelo Bayes naive  
  En esta sección solo se proporcionan detalles y ejemplos de las columnas del contenido del modelo de minería de datos que tienen una relevancia especial para los modelos Bayes naive.  
   
  Para obtener información sobre las columnas de uso general en el conjunto de filas de esquema, como MODEL_CATALOG y MODEL_NAME (que no se describen aquí), o para obtener una explicación de la terminología del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -187,7 +192,7 @@ caps.handback.revision: 16
   
 |Tipo de nodo|Convención para el identificador de nodo|  
 |---------------|----------------------------|  
-|Raíz del modelo (1)|Siempre es 0.|  
+|Raíz del modelo (1)|: siempre es 0.|  
 |Nodo de estadísticas marginales (26)|Un valor de identificador arbitrario.|  
 |Atributo de predicción (9)|Número hexadecimal a partir de 10000000.<br /><br /> Ejemplo: 100000001, 10000000b|  
 |Atributo de entrada (10)|Un número hexadecimal de dos partes en el que la primera siempre es 20000000, y la segunda comienza con el identificador hexadecimal del atributo de predicción relacionado.<br /><br /> Ejemplo: 20000000b00000000<br /><br /> En este caso, el atributo de predicción relacionado es 10000000b.|  
@@ -287,7 +292,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  Se agrega un valor **Missing** (VALUE_TYPE = 1) a cada atributo de entrada y de salida para representar valores potenciales que no estaban presentes en los datos de entrenamiento. Debe tener cuidado de distinguir entre "missing" como cadena y el valor **Missing** predeterminado. Para obtener más información, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [Consultas de minería de datos](../../analysis-services/data-mining/data-mining-queries.md)   

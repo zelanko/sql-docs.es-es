@@ -1,24 +1,29 @@
 ---
-title: "Lecci&#243;n 1: Crear objetos de base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Lección 1: Crear objetos de base de datos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 651150bcd3619f668af1bfad62338f652fac9aa5
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Lecci&#243;n 1: Crear objetos de base de datos
+# <a name="lesson-1-creating-database-objects"></a>Lección 1: Crear objetos de base de datos
 En esta lección se muestra cómo crear una base de datos, crear una tabla en la base de datos y, a continuación, tener acceso a los datos de la tabla y cambiarlos. Puesto que esta lección es una introducción al uso de [!INCLUDE[tsql](../includes/tsql-md.md)], no usa ni describe las múltiples opciones disponibles para estas instrucciones.  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] se pueden escribir y enviar a [!INCLUDE[ssDE](../includes/ssde-md.md)] de las siguientes maneras:  
@@ -35,18 +40,19 @@ Para ejecutar instrucciones de [!INCLUDE[tsql](../includes/tsql-md.md)] en [!INC
   
 En esta lección se incluyen los temas siguientes:  
   
--   [Crear una base de datos &#40;Tutorial&#41;](../t-sql/creating-a-database-tutorial.md)  
+-   [Crear una base de datos &#40;Tutorial&#41;](../t-sql/lesson-1-1-creating-a-database.md)  
   
--   [Crear una tabla &#40;Tutorial&#41;](../t-sql/creating-a-table-tutorial.md)  
+-   [Crear una tabla &#40;Tutorial&#41;](../t-sql/lesson-1-2-creating-a-table.md)  
   
--   [Insertar y actualizar datos en una tabla &#40;Tutorial&#41;](../t-sql/inserting-and-updating-data-in-a-table-tutorial.md)  
+-   [Insertar y actualizar datos en una tabla &#40;Tutorial&#41;](../t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
--   [Leer datos de una tabla &#40;Tutorial&#41;](../t-sql/reading-the-data-in-a-table-tutorial.md)  
+-   [Leer datos de una tabla &#40;Tutorial&#41;](../t-sql/lesson-1-4-reading-the-data-in-a-table.md)  
   
--   [Resumen: Crear objetos de base de datos](../t-sql/summary-creating-database-objects.md)  
+-   [Resumen: Crear objetos de base de datos](../t-sql/lesson-1-5-summary-creating-database-objects.md)  
   
-## Siguiente tarea de la lección  
-[Crear una base de datos &#40;Tutorial&#41;](../t-sql/creating-a-database-tutorial.md)  
+## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
+[Crear una base de datos &#40;Tutorial&#41;](../t-sql/lesson-1-1-creating-a-database.md)  
   
   
   
+

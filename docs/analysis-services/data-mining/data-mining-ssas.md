@@ -1,33 +1,38 @@
 ---
-title: "Miner&#237;a de datos (SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "minería de datos [Analysis Services], sobre la minería de datos"
+title: "Minería de datos (SSAS) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], about data mining
 ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 23048ed60a625a573d4820435f4ba87c0375e013
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Miner&#237;a de datos (SSAS)
+# <a name="data-mining-ssas"></a>Minería de datos (SSAS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha sido un líder en el análisis predictivo desde la versión en el año 2000 al proporcionar la minería de datos en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La combinación de la minería de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una plataforma integrada para el análisis predictivo en la que se incluye la limpieza de los datos, la preparación, el aprendizaje automático y la generación de informes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] En la minería de datos se incluyen varios algoritmos estándar, como los modelos de clústeres EM y mediana-K, redes neuronales, regresión logística y regresión lineal, árboles de decisión y clasificadores de Bayes naive. Todos los modelos tienen visualizaciones integradas para ayudarle a desarrollar, restringir y evaluar los modelos.  Integrar la minería de datos en una solución de inteligencia empresarial le ayudará a tomar decisiones inteligentes sobre problemas complejos.  
   
-## Ventajas de la minería de datos  
+## <a name="benefits-of-data-mining"></a>Ventajas de la minería de datos  
  La minería de datos (también denominado análisis predictivo y aprendizaje automático) usa principios estadísticos documentados para detectar patrones en los datos. La aplicación de los algoritmos de minería de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a los datos le permitirá predecir tendencias, identificar patrones, crear reglas y recomendaciones, analizar la secuencia de eventos en conjuntos de datos complejos y obtener nuevos puntos de vista.  
   
  En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la minería de datos es eficaz y accesible, y está integrada con las herramientas preferidas de los usuarios para el análisis y la creación de informes.  
   
-## Características clave de la minería de datos  
+## <a name="key-data-mining-features"></a>Características clave de la minería de datos  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Minería de datos proporciona las siguientes características para las soluciones integradas de minería de datos:  
   
 -   Varios orígenes de datos: puede usar cualquier origen de datos tabulares para la minería de datos, incluidas hojas de cálculo y archivos de texto. También puede minar con facilidad cubos OLAP creados en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Sin embargo, no se pueden usar datos de una base de datos en memoria.  
@@ -46,7 +51,7 @@ caps.handback.revision: 31
   
 -   Seguridad e implementación: proporciona seguridad basada en roles a través de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], incluidos permisos distintos para la obtención de detalles del modelo y los datos de la estructura. Fácil implementación de modelos en otros servidores, de forma que los usuarios puedan tener acceso a los patrones o realizar predicciones.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  Los temas de esta sección presentan las características principales de la minería de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y las tareas relacionadas.  
   
 -   [Conceptos de minería de datos](../../analysis-services/data-mining/data-mining-concepts.md)  
@@ -69,7 +74,8 @@ caps.handback.revision: 31
   
 -   [Información general de Seguridad &#40;minería de datos&#41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [SQL Server R Services](../../advanced-analytics/r-services/sql-server-r-services.md)  
   
   
+

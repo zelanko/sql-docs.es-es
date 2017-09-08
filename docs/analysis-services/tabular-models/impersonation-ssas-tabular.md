@@ -1,24 +1,29 @@
 ---
-title: "Suplantaci&#243;n (SSAS tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Suplantación (SSAS Tabular) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1bb694fef39accedea28b1c53576a7ebb161cc51
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Suplantaci&#243;n (SSAS tabular)
+# <a name="impersonation-ssas-tabular"></a>Suplantación (SSAS tabular)
   Este tema proporciona a los autores de modelos tabulares una descripción de cómo usa Analysis Services las credenciales de inicio de sesión al conectarse a un origen de datos para importar y procesar (actualizar) datos.  
   
  Este artículo contiene las secciones siguientes:  
@@ -52,7 +57,7 @@ caps.handback.revision: 20
   
  **Descripción de las credenciales del lado cliente**  
   
- Al crear un nuevo modelo o al agregar un origen de datos a un modelo existente, se usa el Asistente para la importación de tablas para conectarse a un origen de datos y seleccionar las tablas y vistas que se van a importar en el modelo. En el Asistente para la importación de tablas, en la página **Seleccionar tablas y vistas**, puede usar la característica **Vista previa y aplicar filtro** para ver una muestra (limitada a 50 filas) de los datos que se van a importar. También puede especificar filtros para excluir los datos que no es necesario incluir en el modelo.  
+ Al crear un nuevo modelo o al agregar un origen de datos a un modelo existente, se usa el Asistente para la importación de tablas para conectarse a un origen de datos y seleccionar las tablas y vistas que se van a importar en el modelo. En el Asistente para la importación de tablas, en la página **Seleccionar tablas y vistas** , puede usar la característica **Vista previa y aplicar filtro** para ver una muestra (limitada a 50 filas) de los datos que se van a importar. También puede especificar filtros para excluir los datos que no es necesario incluir en el modelo.  
   
  De forma similar, para los modelos que ya se han creado, puede usar el cuadro de diálogo **Editar propiedades de tabla** para obtener una vista previa y filtrar los datos importados en una tabla. Estas funciones de vista previa y filtrado emplean la misma funcionalidad que la característica **Vista previa y filtrar** de la página **Seleccionar tablas y vistas** del Asistente para la importación de tablas.  
   
@@ -68,12 +73,12 @@ caps.handback.revision: 20
   
 |Opción|ImpersonationMode*|Description|  
 |------------|-------------------------|-----------------|  
-|**Nombre de usuario y contraseña específicos de Windows***\*|ImpersonateWindowsUserAccount|Esta opción especifica que el modelo usa una cuenta de usuario de Windows para importar o procesar datos del origen de datos. El dominio y el nombre de la cuenta de usuario tienen el formato siguiente: **\<nombre de dominio>\\<nombre de cuenta de usuario\>**. Esta es la opción predeterminada al crear un modelo nuevo mediante el Asistente para la importación de tablas.|  
+|**Nombre de usuario y contraseña específicos de Windows***\*|ImpersonateWindowsUserAccount|Esta opción especifica que el modelo usa una cuenta de usuario de Windows para importar o procesar datos del origen de datos. El dominio y el nombre de la cuenta de usuario tienen el siguiente formato:**\<nombre de dominio >\\< nombre de la cuenta de usuario\>**. Esta es la opción predeterminada al crear un modelo nuevo mediante el Asistente para la importación de tablas.|  
 |**Cuenta de servicio**|ImpersonateServiceAccount|Esta opción especifica que el modelo usa las credenciales de seguridad asociadas a la instancia de servicio de Analysis Services que administra el modelo.|  
   
  * ImpersonationMode especifica el valor de la propiedad del [Elemento DataSourceImpersonationInfo &#40;ASSL&#41;](../../analysis-services/scripting/properties/datasourceimpersonationinfo-element-assl.md) en el origen de datos.  
   
- \*\*Cuando se usa esta opción, si la base de datos del área de trabajo se quita de la memoria (debido a un reinicio o a que la propiedad **Retención de área de trabajo** está establecida en **Descargar de la memoria** o en **Eliminar del área de trabajo** y el proyecto de modelos se cierra), si intenta procesar los datos de la tabla en la siguiente sesión, se le pedirá que especifique las credenciales para cada origen de datos. De forma similar, si una base de datos de modelo implementada se quita de la memoria, se le pedirán las credenciales para cada origen de datos.  
+ \*\*Cuando se usa esta opción, si la base de datos del área de trabajo se quita de la memoria (debido a un reinicio o a que la propiedad **Retención de área de trabajo** está establecida en **Descargar de la memoria** o en **Eliminar del área de trabajo**y el proyecto de modelos se cierra), si intenta procesar los datos de la tabla en la siguiente sesión, se le pedirá que especifique las credenciales para cada origen de datos. De forma similar, si una base de datos de modelo implementada se quita de la memoria, se le pedirán las credenciales para cada origen de datos.  
   
 ##  <a name="bkmk_impers_sec"></a> Seguridad  
  Las credenciales utilizadas con la suplantación las almacena en memoria el motor analítico en memoria xVelocity (VertiPaq)™ asociado al servidor de Analysis Services que administra la base de datos del área de trabajo o un modelo implementado.  Las credenciales no se almacenan en el disco en ningún momento. Si la base de datos del área de trabajo no está en la memoria cuando se implementa el modelo, se pedirá al usuario que escriba las credenciales necesarias para conectarse al origen de datos y capturar los datos.  
@@ -93,7 +98,7 @@ caps.handback.revision: 20
   
  Para los modelos que se implementan en un servidor de Analysis Services, la información de suplantación se puede configurar en SSMS, en **Propiedades de conexión** > **Información de suplantación**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Modo DirectQuery &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [Orígenes de datos &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
  [Implementación de soluciones de modelos tabulares &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  

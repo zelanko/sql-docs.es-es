@@ -1,30 +1,35 @@
 ---
-title: "F&#243;rmulas de validaci&#243;n cruzada | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Las fórmulas de validación cruzada | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9ae8b6960e04fbbe04a7a536cc75c361d36c907f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# F&#243;rmulas de validaci&#243;n cruzada
+# <a name="cross-validation-formulas"></a>Fórmulas de validación cruzada
   Cuando se genera un informe de validación cruzada, contiene medidas de precisión para cada modelo según el tipo de modelo de minería de datos (es decir, el algoritmo utilizado para crear el modelo), el tipo de datos del atributo de predicción y el valor de atributo de predicción, si existe.  
   
  En esta sección se enumeran las medidas que se usan en el informe de validación cruzada y se describe el método de cálculo.  
   
  Para ver un desglose de las medidas de precisión por tipo de modelo, vea [Medidas en el informe de validación cruzada](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).  
   
-## Fórmulas utilizadas para las medidas de validación cruzada  
+## <a name="formulas-used-for-cross-validation-measures"></a>Fórmulas utilizadas para las medidas de validación cruzada  
   
 > [!NOTE]  
 >  **Importante:** estas medidas de precisión se calculan para cada atributo de destino. Para cada atributo, puede especificar u omitir un valor de destino. Si un caso del conjunto de datos no tiene ningún valor para el atributo de destino, el caso se trata como si tuviera un valor especial denominado *valor ausente*. Las filas que tienen valores ausentes no se cuentan al calcular la medida de precisión para un atributo de destino concreto. Observe que, dado que las puntuaciones se calculan para cada atributo individualmente, si los valores están presentes para el atributo de destino pero faltan para otros atributos, no afectan a la puntuación para el atributo de destino.  
@@ -44,7 +49,7 @@ caps.handback.revision: 9
 |**Error cuadrático medio**|Atributo discreto. Se puede especificar el valor de destino pero no es necesario.|Raíz cuadrada de la media de los cuadrados del complemento de la puntuación de probabilidad, dividida entre el número de casos de la partición, excluidas las filas sin valores para el atributo de destino.|  
 |**Error cuadrático medio**|Atributo discreto, sin destino especificado.|Raíz cuadrada de la media de los cuadrados del complemento de la puntuación de probabilidad, dividida entre el número de casos de la partición, excluidos los casos sin valores para el atributo de destino.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
  [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
   

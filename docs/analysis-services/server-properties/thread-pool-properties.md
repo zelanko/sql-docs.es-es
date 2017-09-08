@@ -1,32 +1,37 @@
 ---
-title: "Propiedades de grupos de subprocesos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "PriorityRatio, propiedad"
-  - "subprocesos [Analysis Services]"
-  - "MinThreads, propiedad"
-  - "NumThreads, propiedad"
-  - "MaxThreads, propiedad"
-  - "Concurrency, propiedad"
+title: Propiedades de grupo de subprocesos | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- PriorityRatio property
+- threads [Analysis Services]
+- MinThreads property
+- NumThreads property
+- MaxThreads property
+- Concurrency property
 ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b85d1c7727b699037711eb49f1be360c755f8dc3
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Propiedades de grupos de subprocesos
+# <a name="thread-pool-properties"></a>Propiedades de grupos de subprocesos
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa el subprocesamiento múltiple para realizar muchas operaciones, mejorando el rendimiento global del servidor al ejecutar varios trabajos en paralelo. Para administrar los subprocesos de manera más eficaz, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utiliza grupos de subprocesos para preasignar subprocesos y facilitar la disponibilidad de subprocesos para el trabajo siguiente.  
   
- Cada instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantiene su propio conjunto de grupos de subprocesos. Hay diferencias en la forma en que las instancias tabulares y multidimensionales usan los grupos de subprocesos. Por ejemplo, solo las instancias multidimensionales usan el grupo de subprocesos **IOProcess**. Por tanto, la propiedad **PerNumaNode** , que se describe en este tema, no es significativa para las instancias tabulares. En la sección [Referencia de propiedad](#bkmk_propref) siguiente, se llama a los requisitos de modo de cada propiedad.
+ Cada instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantiene su propio conjunto de grupos de subprocesos. Hay diferencias en la forma en que las instancias tabulares y multidimensionales usan los grupos de subprocesos. Por ejemplo, solo las instancias multidimensionales usan el grupo de subprocesos **IOProcess** . Por tanto, la propiedad **PerNumaNode** , que se describe en este tema, no es significativa para las instancias tabulares. En la sección [Referencia de propiedad](#bkmk_propref) siguiente, se llama a los requisitos de modo de cada propiedad.
   
  Este tema contiene las siguientes secciones:  
   
@@ -58,11 +63,11 @@ caps.handback.revision: 30
  
 Se recomienda la actualización acumulativa 1 (CU1) para SQL Server 2016 o posterior para la configuración de **GroupAffinity** en las instancias tabulares. 
   
- **GroupAffinity** es una propiedad que se puede establecer en cualquiera de los grupos de subprocesos usados para varias cargas de trabajo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
+ **GroupAffinity** es una propiedad que se puede establecer en cualquiera de los grupos de subprocesos usados para varias cargas de trabajo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
   
--   **ThreadPool \ Parsing \ Short** es un grupo de análisis para solicitudes cortas. Las solicitudes que caben dentro de un único mensaje de red se consideran cortas. 
+-   **ThreadPool \ Parsing \ Short**  es un grupo de análisis para solicitudes cortas. Las solicitudes que caben dentro de un único mensaje de red se consideran cortas. 
   
--   **ThreadPool \ Parsing \ Long** es un grupo de análisis para todas las demás solicitudes que no caben dentro de un único mensaje de red. 
+-   **ThreadPool \ Parsing \ Long**  es un grupo de análisis para todas las demás solicitudes que no caben dentro de un único mensaje de red. 
   
     > [!NOTE]  
     >  Se puede utilizar un subproceso de un grupo de análisis para ejecutar una consulta. Las consultas que se ejecutan con rapidez, como una solicitud rápida Discover o Cancel, a veces se ejecutan inmediatamente en lugar de ponerse en cola en el grupo de subprocesos Query. 
@@ -99,12 +104,12 @@ Se recomienda la actualización acumulativa 1 (CU1) para SQL Server 2016 o poste
 |**Parsing**  \ **Long** \ **Concurrency**|double|Valor de punto flotante de doble precisión que determina el algoritmo para establecer un destino en el número de subprocesos que se pueden poner en cola al mismo tiempo.|2.0|Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .<br /><br /> Se utiliza simultaneidad para inicializar grupos de subprocesos, que se implementan utilizando puertos de terminación de E/S en Windows. Vea [I/O Completion Ports (Puertos de terminación de E/S)](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) para obtener más detalles.|  
 |**Parsing**  \ **Long** \ **GroupAffinity**|string|Una matriz de valores hexadecimales correspondientes a los grupos de procesadores del sistema, que se usa para establecer la afinidad de los subprocesos de análisis y los procesadores lógicos en cada grupo de procesadores.|none|Puede utilizar esta propiedad para crear afinidades personalizadas. La propiedad está vacía de forma predeterminada.<br /><br /> Vea [Configurar GroupAffinity para establecer afinidad entre subprocesos y procesadores en un grupo de procesadores](#bkmk_groupaffinity) para obtener más detalles.|  
 |**Parsing**  \ **Long** \ **NumThreads**|int|Propiedad de entero de 32 bits con signo que define el número de subprocesos que se pueden crear para los comandos largos.|0|0 indica que el servidor determina los valores predeterminados. El comportamiento predeterminado es establecer **NumThreads** en un valor absoluto de 4, o 2 veces el número de procesadores lógicos, lo que sea mayor.<br /><br /> Si establece este valor en un valor negativo, el servidor multiplica ese valor por el número de procesadores lógicos. Por ejemplo, cuando se establece en -10 en un servidor que tiene 32 procesadores lógicos, el valor máximo es 320 subprocesos.<br /><br /> El valor máximo está sujeto a los procesadores disponibles para cualquier máscara de afinidad personalizada que definiera previamente. Por ejemplo, si ya ha establecido la afinidad del grupo de subprocesos para que utilice 8 procesadores de 32 y ahora establece NumThreads en -10, el límite superior del grupo de subprocesos sería 10 por 8, u 80 subprocesos.<br /><br /> Los valores reales utilizados para esta propiedad del grupo de subprocesos se escriben en el archivo de registro de msmdsrv al iniciarse el servicio.|  
-|**Parsing**  \ **Long** \ **PriorityRatio**|int|Entero de 32 bits con signo que se puede utilizar para asegurarse de que los subprocesos con menor prioridad se ejecutan en ocasiones incluso aunque una cola con mayor prioridad no esté vacía.|0|Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
+|**Parsing**  \ **Long** \ **PriorityRatio**|int|Entero de 32 bits con signo que se puede utilizar para asegurarse que los subprocesos con menor prioridad se ejecutan en ocasiones incluso aunque una cola con mayor prioridad no esté vacía.|0|Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
 |**Parsing**  \ **Long** \ **StackSizeKB**|int|Entero de 32 bits con signo que se puede usar para ajustar la asignación de memoria durante la ejecución de subprocesos.|0|Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
 |**Parsing**  \ **Short** \ **Concurrency**|double|Valor de punto flotante de doble precisión que determina el algoritmo para establecer un destino en el número de subprocesos que se pueden poner en cola al mismo tiempo.|2.0|Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .<br /><br /> Se utiliza simultaneidad para inicializar grupos de subprocesos, que se implementan utilizando puertos de terminación de E/S en Windows. Vea [I/O Completion Ports (Puertos de terminación de E/S)](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) para obtener más detalles.|  
 |**Parsing**  \ **Short** \ **GroupAffinity**|string|Una matriz de valores hexadecimales correspondientes a los grupos de procesadores del sistema, que se usa para establecer la afinidad de los subprocesos de análisis y los procesadores lógicos en cada grupo de procesadores.|none|Puede utilizar esta propiedad para crear afinidades personalizadas. La propiedad está vacía de forma predeterminada.<br /><br /> Vea [Configurar GroupAffinity para establecer afinidad entre subprocesos y procesadores en un grupo de procesadores](#bkmk_groupaffinity) para obtener más detalles.|  
 |**Parsing**  \ **Short** \ **NumThreads**|int|Propiedad de entero de 32 bits con signo que define el número de subprocesos que se pueden crear para los comandos cortos.|0|0 indica que el servidor determina los valores predeterminados. El comportamiento predeterminado es establecer **NumThreads** en un valor absoluto de 4, o 2 veces el número de procesadores lógicos, lo que sea mayor.<br /><br /> Si establece este valor en un valor negativo, el servidor multiplica ese valor por el número de procesadores lógicos. Por ejemplo, cuando se establece en -10 en un servidor que tiene 32 procesadores lógicos, el valor máximo es 320 subprocesos.<br /><br /> El valor máximo está sujeto a los procesadores disponibles para cualquier máscara de afinidad personalizada que definiera previamente. Por ejemplo, si ya ha establecido la afinidad del grupo de subprocesos para que utilice 8 procesadores de 32 y ahora establece NumThreads en -10, el límite superior del grupo de subprocesos sería 10 por 8, u 80 subprocesos.<br /><br /> Los valores reales utilizados para esta propiedad del grupo de subprocesos se escriben en el archivo de registro de msmdsrv al iniciarse el servicio.|  
-|**Parsing**  \ **Short** \ **PriorityRatio**|int|Entero de 32 bits con signo que se puede utilizar para asegurarse de que los subprocesos con menor prioridad se ejecutan en ocasiones incluso aunque una cola con mayor prioridad no esté vacía.|0|Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
+|**Parsing**  \ **Short** \ **PriorityRatio**|int|Entero de 32 bits con signo que se puede utilizar para asegurarse que los subprocesos con menor prioridad se ejecutan en ocasiones incluso aunque una cola con mayor prioridad no esté vacía.|0|Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
 |**Parsing**  \ **Short** \ **StackSizeKB**|int|Entero de 32 bits con signo que se puede usar para ajustar la asignación de memoria durante la ejecución de subprocesos.|64 * procesadores lógicos|Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
 |**Process** \ **Concurrency**|double|Valor de punto flotante de doble precisión que determina el algoritmo para establecer un destino en el número de subprocesos que se pueden poner en cola al mismo tiempo.|2.0|Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .<br /><br /> Se utiliza simultaneidad para inicializar grupos de subprocesos, que se implementan utilizando puertos de terminación de E/S en Windows. Vea [I/O Completion Ports (Puertos de terminación de E/S)](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) para obtener más detalles.|  
 |**Process** \ **GroupAffinity**|string|Matriz de valores hexadecimales correspondientes a los grupos de procesadores en el sistema, que se usa para establecer la afinidad de los subprocesos de procesamiento y los procesadores lógicos en cada grupo de procesadores.|none|Puede utilizar esta propiedad para crear afinidades personalizadas. La propiedad está vacía de forma predeterminada.<br /><br /> Vea [Configurar GroupAffinity para establecer afinidad entre subprocesos y procesadores en un grupo de procesadores](#bkmk_groupaffinity) para obtener más detalles.|  
@@ -131,7 +136,7 @@ Se recomienda la actualización acumulativa 1 (CU1) para SQL Server 2016 o poste
 > [!NOTE]  
 >  **GroupAffinity** está restringido por las ediciones que limitan el número de núcleos usados por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Al iniciarse, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa la información de la edición y las propiedades **GroupAffinity** para calcular máscaras de afinidad para cada grupo de subprocesos administrados por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La edición estándar puede usar un máximo de 24 núcleos. Si instala la edición estándar de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en un sistema grande de varios núcleos que tiene más de 24 núcleos, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solo usará 24 de ellos. Para más información sobre los valores máximos del procesador, vea los límites de escala entre cuadros en [Características compatibles con las ediciones de SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).  
   
-### Sintaxis  
+### <a name="syntax"></a>Sintaxis  
  El valor es hexadecimal para cada grupo de procesadores, donde el valor hexadecimal representa los procesadores lógicos que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] intenta usar primero al asignar subprocesos para un grupo de subprocesos determinado.  
   
  **Máscara de bits para procesadores lógicos**  
@@ -144,7 +149,7 @@ Se recomienda la actualización acumulativa 1 (CU1) para SQL Server 2016 o poste
   
  `<GroupAffinity>0x0, 0xFF, 0x0, 0xFF</GroupAffinity>`  
   
-### Pasos para calcular la máscara de afinidad del procesador  
+### <a name="steps-for-computing-the-processor-affinity-mask"></a>Pasos para calcular la máscara de afinidad del procesador  
  Puede establecer **GroupAffinity** en msmdsrv.ini o en las páginas de propiedades del servidor en SQL Server Management Studio.  
   
 1.  **Determinar el número de procesadores y grupos de procesadores**  
@@ -184,31 +189,31 @@ Se recomienda la actualización acumulativa 1 (CU1) para SQL Server 2016 o poste
   
  Los valores válidos para **PerNumaNode** son -1, 0, 1 y 2, como se describe en la sección [Referencia de propiedades de grupos de subprocesos](#bkmk_propref) de este tema.  
   
-### Valor predeterminado (recomendado)  
+### <a name="default-recommended"></a>Valor predeterminado (recomendado)  
  En los sistemas que tienen nodos NUMA, se recomienda usar la configuración predeterminada de PerNumaNode=-1, lo que permite a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ajustar el número de grupos de subprocesos y su afinidad de subprocesos según el número de nodos. Si el sistema tiene menos de 4 nodos, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implementa los comportamientos descritos por **PerNumaNode**=0, mientras que **PerNumaNode**=1 se usa en los sistemas que tienen 4 o más nodos.  
   
-### Elegir un valor  
+### <a name="choosing-a-value"></a>Elegir un valor  
  También puede invalidar el valor predeterminado para usar otro valor válido.  
   
  **PerNumaNode=0**  
   
  Los nodos NUMA se pasan por alto. Solo habrá un grupo de subprocesos IOProcess y todos los subprocesos de ese grupo de subprocesos tendrán afinidad con todos los procesadores lógicos. De forma predeterminada (donde PerNumaNode=-1), este es el valor operativo si el equipo tiene menos de 4 nodos NUMA.  
   
- ![Correspondencia de Numa, procesador y grupos de subprocesos](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Correspondencia de Numa, procesador y grupos de subprocesos")  
+ ![Correspondencia de grupo de NUMA, procesador y subproceso](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa, procesador y subproceso correspondencia de grupo")  
   
  **PerNumaNode=1**  
   
  Se crean grupos de subprocesos IOProcess para cada nodo NUMA. El hecho de tener grupos de subprocesos independiente mejora el acceso coordinado a los recursos locales, como la memoria caché local en un nodo NUMA.  
   
- ![Correspondencia de Numa, procesador y grupos de subprocesos](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Correspondencia de Numa, procesador y grupos de subprocesos")  
+ ![Correspondencia de grupo de NUMA, procesador y subproceso](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa, procesador y subproceso correspondencia de grupo")  
   
  **PerNumaNode=2**  
   
- Este valor es para sistemas muy avanzados que ejecutan muchas cargas de trabajo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Esta propiedad establece la afinidad de grupos de subprocesos de IOProcess en su nivel más específico, creando y estableciendo afinidad de grupos de subprocesos diferentes en el nivel de procesador lógico.  
+ Este valor es para sistemas muy avanzados que ejecutan muchas cargas de trabajo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Esta propiedad establece la afinidad de grupos de subprocesos de IOProcess en su nivel más específico, creando y estableciendo afinidad de grupos de subprocesos diferentes en el nivel de procesador lógico.  
   
  En el ejemplo siguiente, en un sistema que tiene 4 nodos NUMA y 32 procesadores lógicos, al establecer **PerNumaNode** en 2 se tendrían 32 grupos de subprocesos IOProcess. Los subprocesos de los 8 primeros grupos de subprocesos tendrían afinidad con todos los procesadores lógicos del nodo NUMA 0, pero con el procesador ideal establecido en 0, 1, 2 hasta 7. Los 8 grupos de subprocesos siguientes tendrían afinidad con todos los procesadores lógicos del nodo NUMA 1, con el procesador ideal establecido en 8, 9, 10 hasta 15, y así sucesivamente.  
   
- ![Correspondencia de Numa, procesador y grupos de subprocesos](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Correspondencia de Numa, procesador y grupos de subprocesos")  
+ ![Correspondencia de grupo de NUMA, procesador y subproceso](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa, procesador y subproceso correspondencia de grupo")  
   
  En este nivel de afinidad, el programador siempre intenta utilizar el procesador lógico ideal primero, dentro del nodo NUMA preferido. Si el procesador lógico no está disponible, el programador elige otro procesador del mismo nodo, o del mismo grupo de procesadores si no hay otros subprocesos disponibles. Para más información y ejemplos, vea [Valores de configuración de Analysis Services 2012 (blog de Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387).  
   
@@ -276,13 +281,13 @@ Se recomienda la actualización acumulativa 1 (CU1) para SQL Server 2016 o poste
 > [!NOTE]  
 >  Para obtener instrucciones sobre cómo establecer las propiedades, vea [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Acerca de los procesos y subprocesos](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
  [Varios procesadores](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
  [Grupos de procesadores](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
- [Cambios en el grupo de subprocesos de Analysis Services en SQL Server 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
- [Valores de configuración de Analysis Services 2012 (Blog de Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387)   
- [Sistemas compatibles que tienen más de 64 procesadores](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
+ [Cambios en SQL Server 2012 en el grupo de subprocesos de Analysis Services](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
+ [Analysis Services 2012 configuración (Blog de Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387)   
+ [Sistemas que tienen más de 64 procesadores compatibles](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
  [Guía de operaciones de SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)  
   
   

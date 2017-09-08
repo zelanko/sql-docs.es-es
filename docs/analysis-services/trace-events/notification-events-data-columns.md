@@ -1,24 +1,29 @@
 ---
-title: "Columnas de datos de eventos de notificaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "eventos de notificación, categoría de eventos"
+title: "Columnas de datos de eventos de notificación | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Notification Events event category
 ms.assetid: 0ecf06da-1586-415a-9da8-60d4c634f030
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f671eb89295049c09da1f037fdb4544db84b7280
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Columnas de datos de eventos de notificaci&#243;n
+# <a name="notification-events-data-columns"></a>Columnas de datos de eventos de notificación
   Los eventos de notificación son aquéllos no provocados directamente por los usuarios de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por ejemplo, las notificaciones tienen lugar porque los usuarios actualizan tablas subyacentes para el almacenamiento automático en la caché.  
   
  La categoría de eventos Eventos de notificación tiene la siguiente clase de eventos:  
@@ -30,7 +35,7 @@ caps.handback.revision: 30
   
  En la siguiente tabla se enumeran las columnas de datos de la clase de eventos.  
   
-## Notification  
+## <a name="notification"></a>Notification  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -57,7 +62,7 @@ caps.handback.revision: 30
 |ServerName|43|8|Contiene el nombre de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la que se ha producido el evento de notificación.|  
 |RequestProperties|45|9|Contiene las propiedades de las solicitudes de XMLA.|  
   
-## User Defined  
+## <a name="user-defined"></a>User Defined  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -75,7 +80,7 @@ caps.handback.revision: 30
 |TextData|42|9|Contiene los datos de texto asociados al evento de notificación.|  
 |ServerName|43|8|Contiene el nombre de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la que se ha producido el evento de notificación.|  
   
-## Vea también  
- [Eventos de notificación (categoría de eventos)](../../analysis-services/trace-events/notification-events-event-category.md)  
+## <a name="see-also"></a>Vea también  
+ [Notification Events Event Category](../../analysis-services/trace-events/notification-events-event-category.md)  
   
   

@@ -1,23 +1,28 @@
 ---
-title: "Crear una estructura de miner&#237;a de datos OLAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Crear una estructura de minería de datos OLAP | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: b4c361d8a255b4ef5dc348692bb688a0421b0abd
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Crear una estructura de miner&#237;a de datos OLAP
+# <a name="create-an-olap-mining-structure"></a>Crear una estructura de minería de datos OLAP
   La creación de un modelo de minería de datos basado en un cubo OLAP o en otro almacén de datos multidimensionales presenta numerosas ventajas. Una solución OLAP ya contiene enormes cantidades de datos que han sido bien organizados, limpiados y con un formato correcto; sin embargo, su complejidad es tal que es poco probable que los usuarios encuentren patrones significativos para la exploración ad hoc. La minería de datos permite detectar nuevas correlaciones y proporcionar una visión general práctica.  
   
  En este tema se describe cómo crear una estructura de minería de datos OLAP, en función de una dimensión y de las medidas relacionadas en una solución MDX existente.  
@@ -37,12 +42,12 @@ caps.handback.revision: 12
 ##  <a name="bkmk_Reqs"></a> Requisitos para los modelos y la estructura de minería de datos OLAP  
  Si va a diseñar un modelo de minería de datos OLAP, el origen de datos ya existe en la base de datos que se usó para generar el cubo. No puede conectarse a un cubo remoto y generar objetos de minería de datos; los objetos del cubo deben estar disponibles dentro de la misma solución que la base de datos con la estructura de minería de datos que se creará.  
   
- Si no tiene los archivos de proyecto originales o no quiere modificarlos, puede usar la opción de Visual Studio **Importar del servidor (multidimensional y minería de datos)** para obtener una copia de los metadatos y los objetos de la solución. Puede modificar el destino de la implementación, modificar los orígenes de datos y trabajar con los objetos de cubo sin afectar a los objetos existentes.  
+ Si no tiene los archivos de proyecto originales o no quiere modificarlos, puede usar la opción de Visual Studio **Importar del servidor (multidimensional y minería de datos)**para obtener una copia de los metadatos y los objetos de la solución. Puede modificar el destino de la implementación, modificar los orígenes de datos y trabajar con los objetos de cubo sin afectar a los objetos existentes.  
   
  Para obtener más información, vea [Importar un proyecto de minería de datos mediante el Asistente para la importación de Analysis Services](../../analysis-services/data-mining/import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   
 ##  <a name="bkmk_Overview"></a> Información general sobre el proceso de minería de datos OLAP  
- Inicie el Asistente para minería de datos haciendo clic con el botón derecho en el nodo **Estructuras de minería de datos** del Explorador de soluciones y seleccionando **Nueva estructura de minería de datos**. El asistente le guiará por los siguientes pasos para crear la estructura de una nueva estructura y modelo:  
+ Inicie el Asistente para minería de datos haciendo clic con el botón derecho en el nodo **Estructuras de minería de datos** del Explorador de soluciones y seleccionando  **Nueva estructura de minería de datos**. El asistente le guiará por los siguientes pasos para crear la estructura de una nueva estructura y modelo:  
   
 1.  **Seleccionar el método de definición**: aquí se selecciona un tipo de origen de datos. Elija **A partir de un cubo existente**.  
   
@@ -113,7 +118,7 @@ caps.handback.revision: 12
 |Buscar celdas interesantes o anómalas|Identificar ventas en tiendas que no siguen las tendencias habituales en un período de tiempo.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Algoritmo de serie temporal|  
 |Buscar correlaciones|Identifique los factores que están relacionados con el tiempo de inactividad del servidor, como la región, el tipo de equipo, el sistema operativo o la fecha de compra.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Algoritmo Bayes Naïve|  
   
-##  <a name="bkmk_Filters"></a> Crear segmentos de un cubo frente a Modelos de filtrado  
+##  <a name="bkmk_Filters"></a>Segmentar un cubo frente a. Modelos de filtrado  
  Segmentar el cubo mientras crea un modelo es igual que crear un filtro en un modelo de minería de datos relacional. En un modelo relacional, el filtro en el origen de datos se define como una cláusula WHERE en una instrucción SQL; en un cubo, se usa el editor para crear instrucciones de filtro mediante MDX.  
   
  Por ejemplo, un cubo podría contener información sobre la compra de productos en todo el mundo pero, para su campaña de marketing, desea crear un modelo basado en el análisis de clientes femeninos de 30 años que viven en el Reino Unido.  
@@ -124,7 +129,7 @@ caps.handback.revision: 12
   
 -   Para el segundo filtro, elegiría la dimensión Customer, seleccionaría el atributo Gender y seleccionaría "Female" en la lista de valores de atributo.  
   
- Después de crear la estructura de minería de datos, puede modificar la definición del cubo y los criterios de filtro. Para obtener más información, consulte [Filter the Source Cube for a Mining Structure](../Topic/Filter%20the%20Source%20Cube%20for%20a%20Mining%20Structure.md).  
+ Después de crear la estructura de minería de datos, puede modificar la definición del cubo y los criterios de filtro. Para obtener más información, consulte [filtros para los modelos de minería de datos](~/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
  Tanto la pestaña **Estructura de minería de datos** como la pestaña **Modelo de minería de datos** proporcionan una opción para agregar un filtro a una estructura de minería de datos existente; basta con hacer clic en **Definir un segmento de cubo**. El cuadro de diálogo **Crear segmento de cubo** le ayuda a generar una expresión de filtro MDX válida eligiendo el valor de las listas desplegables.  
   
@@ -158,11 +163,12 @@ caps.handback.revision: 12
 > [!WARNING]  
 >  Solo estos tipos de modelo admiten la creación de dimensiones de minería de datos: los modelos basados en el algoritmo de clústeres de Microsoft, el algoritmo de árboles de decisión de Microsoft o el algoritmo de asociación de Microsoft.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Columnas de la estructura de minería de datos](../../analysis-services/data-mining/mining-structure-columns.md)   
+ [Columnas de estructura de minería de datos](../../analysis-services/data-mining/mining-structure-columns.md)   
  [Columnas del modelo de minería de datos](../../analysis-services/data-mining/mining-model-columns.md)   
  [Propiedades del modelo de minería de datos](../../analysis-services/data-mining/mining-model-properties.md)   
- [Propiedades de estructuras de minería de datos y columnas de estructuras](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
+ [Propiedades de la estructura de minería de datos y columnas de estructura](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
   
   
+

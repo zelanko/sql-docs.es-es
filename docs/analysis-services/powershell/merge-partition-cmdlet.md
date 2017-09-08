@@ -1,30 +1,41 @@
 ---
-title: "Cmdlet Merge-Partition | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Cmdlet Merge-Partition | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 15c7b069-897d-4bc8-a808-59cbeeabe4d8
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 4103154c133a430d3725aa30c073ab5e386f5c3f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cmdlet Merge-Partition
+# <a name="merge-partition-cmdlet"></a>Cmdlet Merge-Partition
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Combina los datos de una o varias particiones de origen en una partición de destino y, a continuación, elimina las particiones de origen.  
+
+>[!NOTE] 
+>En este artículo puede contener información no actualizada y ejemplos. Use el cmdlet Get-Help para la versión más reciente.
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
  `Merge-ASDatabase [-Name] <string> [-SourcePartitions] <System.String[]> -Database <string> -Cube <string> -MeasureGroup <string> [-Server <string>] [-Credentials <PSCredential>] [<CommonParameters>]`  
   
  `Merge-ASDatabase -TargetPartition <Microsoft.AnalysisServices.Partition> [-SourcePartitions] <System.String[]> -Database <string> -Cube <string> -MeasureGroup <string> [-Server <string>] [-Credentials <PSCredential>] [<CommonParameters>]`  
   
-## Description  
+## <a name="description"></a>Description  
  El cmdlet Merge-Partition combina los datos de una o varias particiones de origen en una partición de destino y, a continuación, elimina las particiones de origen. Solamente puede mezclar particiones si todas ellas cumplen los siguientes criterios:  
   
 -   Las particiones están en el mismo grupo de medida.  
@@ -33,9 +44,9 @@ caps.handback.revision: 9
   
 -   Las particiones comparten el mismo modo de almacenamiento (MOLAP, HOLAP y ROLAP en las bases de datos multidimensionales).  
   
-## Parámetros  
+## <a name="parameters"></a>Parámetros  
   
-### -Name \<cadena>  
+### <a name="-name-string"></a>-Nombre \<cadena >  
  Especifica la partición de destino en la que los datos de la partición de origen se combinarán. Esta partición debe existir.  
   
 |||  
@@ -46,7 +57,7 @@ caps.handback.revision: 9
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -SourcePartition \<cadena>  
+### <a name="-sourcepartition-string"></a>-SourcePartition \<cadena >  
  Especifica la partición de origen que se combinará en la partición de destino. Puede crear una lista delimitada por comas de las particiones que desea combinar. Use una variable para almacenar la lista. Por ejemplo, $Sources="Sales_2008", "Sales_2009", "Sales_2010".  
   
 |||  
@@ -57,7 +68,7 @@ caps.handback.revision: 9
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -Database \<string>  
+### <a name="-database-string"></a>-Base de datos \<cadena >  
  Especifica la base de datos a la que las particiones pertenecen.  
   
 |||  
@@ -68,7 +79,7 @@ caps.handback.revision: 9
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -Cube \<cadena>  
+### <a name="-cube-string"></a>-Cubo \<cadena >  
  Especifica el cubo el que las particiones pertenecen.  
   
 |||  
@@ -79,7 +90,7 @@ caps.handback.revision: 9
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -MeasureGroup \<cadena>  
+### <a name="-measuregroup-string"></a>-MeasureGroup \<cadena >  
  Especifica el grupo de medida al que la partición pertenece.  
   
 |||  
@@ -90,7 +101,7 @@ caps.handback.revision: 9
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -Server \<cadena>  
+### <a name="-server-string"></a>-Server \<cadena >  
  Especifica la instancia de Analysis Services a la que el cmdlet se conectará y ejecutará. Si no se proporciona un nombre de servidor, se establece una conexión al host local. Para las instancias predeterminadas, especifique solo el nombre del servidor. Para las instancias con nombre, utilice el formato nombreDeServidor\nombreDeInstancia. En las conexiones HTTP, utilice el formato http[s]://server[:port]/virtualdirectory/msmdpump.dll.  
   
 |||  
@@ -101,8 +112,8 @@ caps.handback.revision: 9
 |¿Aceptar la entrada de la canalización?|false|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -Credential \<PSCredential>  
- Este parámetro se utiliza para pasar un nombre de usuario y una contraseña cuando se utiliza una conexión HTTP a una instancia de Analysis Services, para una instancia que ha configurado para el acceso HTTP. Para más información, vea [Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md) y [Scripting de PowerShell en Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md) para conexiones HTTP.  
+### <a name="-credential-pscredential"></a>-Credential \<PSCredential >  
+ Este parámetro se utiliza para pasar un nombre de usuario y una contraseña cuando se utiliza una conexión HTTP a una instancia de Analysis Services, para una instancia que ha configurado para el acceso HTTP. Para obtener más información, consulte [configuración del acceso HTTP a Analysis Services en Internet Information Services &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md) para las conexiones HTTP.  
   
  Si se especifica este parámetro, el nombre de usuario y la contraseña se utilizarán para conectarse a la instancia de Analysis Server especificada. Si no se especifica ninguna credencial, se utilizará la cuenta predeterminada de Windows del usuario que ejecuta la herramienta.  
   
@@ -116,7 +127,7 @@ caps.handback.revision: 9
 |¿Aceptar la entrada de la canalización?|True (ByValue)|  
 |¿Aceptar caracteres comodín?|false|  
   
-### -TargetPartition \<Microsoft.AnalysisServices.Partition>  
+### <a name="-targetpartition-microsoftanalysisservicespartition"></a>-TargetPartition \<Microsoft.AnalysisServices.Partition >  
  Especifica la partición de destino con la que las particiones de origen se combinarán.  
   
 |||  
@@ -127,10 +138,10 @@ caps.handback.revision: 9
 |¿Aceptar la entrada de la canalización?|true|  
 |¿Aceptar caracteres comodín?|false|  
   
-### \<ParámetrosComunes>  
+### <a name="commonparameters"></a>\<CommonParameters >  
  Este cmdlet admite los parámetros comunes: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer y -OutVariable. Para más información, vea [about_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
-## Entradas y salidas  
+## <a name="inputs-and-outputs"></a>Entradas y salidas  
  El tipo de entrada es el tipo de objetos que se pueden canalizar al cmdlet. El tipo de valor devuelto es el tipo de objeto que el cmdlet devuelve.  
   
 |||  
@@ -138,13 +149,10 @@ caps.handback.revision: 9
 |Entradas|System.string|  
 |Salidas|None|  
   
-## Ejemplo 1  
+## <a name="example-1"></a>Ejemplo 1  
  `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Cubes\Adventure Works\MeasureGroups\sales orders\partitions> $Source=”Total_Orders_2001”, “Total_Orders_2002”, “Total_Orders_2003”` `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Cubes\Adventure Works\MeasureGroups\sales orders\partitions> Merge-Partition –Name “Total_Orders_2004” –SourcePartitions:$Source –database “AWTEST” –cube “Adventure Works” –MeasureGroup “Sales Orders”`  
   
  Este comando combina las particiones de 2001, 2002 y 2003 en la partición para 2004, y luego elimina las particiones de años anteriores.  
   
-## Vea también  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Administrar modelos tabulares con PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
-  
+
   

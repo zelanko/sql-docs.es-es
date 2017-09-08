@@ -1,24 +1,29 @@
 ---
-title: "Administrar roles utilizando SSMS (SSAS tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Administrar Roles utilizando SSMS (SSAS Tabular) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c7458aa948c023e073f3080116fed980e8571c78
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Administrar roles utilizando SSMS (SSAS tabular)
+# <a name="manage-roles-by-using-ssms-ssas-tabular"></a>Administrar roles utilizando SSMS (SSAS tabular)
   Puede crear, modificar, y administrar roles para un modelo tabular implementado mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Tareas en este tema:  
@@ -59,12 +64,12 @@ caps.handback.revision: 10
   
 6.  En la ventana de configuración de la pertenencia, haga clic en **Agregar**y en el cuadro de diálogo **Seleccionar usuarios o grupos** , agregue los usuarios o grupos de Windows que desee añadir como miembros.  
   
-7.  Si el rol que va a crear tiene permisos de lectura, puede agregar filtros de fila para las tablas utilizando una fórmula DAX. Para agregar filtros de fila, en el cuadro de diálogo **Propiedades de rol: \<nombre de rol>**, en **Seleccionar una página**, haga clic en **Filtros de fila**.  
+7.  Si el rol que va a crear tiene permisos de lectura, puede agregar filtros de fila para las tablas utilizando una fórmula DAX. Para agregar filtros de fila en la **propiedades de función: \<rolename >** cuadro de diálogo **seleccionar una página**, haga clic en **filtros de fila**.  
   
-8.  En la ventana de filtros de fila, seleccione una tabla, haga clic en el campo **Filtro DAX** y, después, escriba una fórmula DAX en el campo **Filtro DAX - \<nombre de tabla>**.  
+8.  En la ventana de filtros de fila, seleccione una tabla y, a continuación, haga clic en el **filtro DAX** campo y, a continuación, en la **filtro DAX - \<tablename >** , escriba una fórmula DAX.  
   
     > [!NOTE]  
-    >  El campo Filtro DAX - \<nombre de tabla> no contiene un editor de consultas de Autocompletar ni la característica de insertar función. Para usar Autocompletar al escribir una fórmula DAX, debe utilizar un editor de fórmulas DAX de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+    >  El filtro DAX - \<tablename > campo no contiene un editor de consultas de Autocompletar o característica de Insertar función. Para usar Autocompletar al escribir una fórmula DAX, debe utilizar un editor de fórmulas DAX de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 9. Haga clic en **Aceptar** para guardar el rol.  
   
@@ -76,13 +81,13 @@ caps.handback.revision: 10
   
 -   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda la base de datos de modelos tabulares que contiene el rol que desea modificar, expanda **Roles**, haga clic con el botón secundario en el rol y después haga clic en **Propiedades**.  
   
-     En el cuadro de diálogo **Propiedades de rol** \<nombre de rol>, puede cambiar permisos, agregar o quitar miembros y agregar o modificar filtros de fila.  
+     En el **propiedades de la función** \<rolename > cuadro de diálogo, puede cambiar los permisos, agregar o quitar miembros, y agregar o modificar filtros de fila.  
   
 ###  <a name="bkmk_deletet_role"></a> Para eliminar un rol  
   
 -   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda la base de datos de modelos tabulares que contiene el rol que desea quitar, expanda **Roles**, haga clic con el botón secundario en el rol y después haga clic en **Eliminar**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Roles &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
   

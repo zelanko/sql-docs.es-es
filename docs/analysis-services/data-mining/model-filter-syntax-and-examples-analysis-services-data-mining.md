@@ -1,31 +1,36 @@
 ---
-title: "Sintaxis y ejemplos del filtro de modelos (Analysis Services: Miner&#237;a de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "filtro de modelos [minería de datos]"
-  - "sintaxis de filtros [minería de datos]"
-  - "filtros [minería de datos]"
-  - "filtros [Analysis Services]"
+title: "La sintaxis de filtros y ejemplos de modelos (Analysis Services: minería de datos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- model filter [data mining]
+- filter syntax [data mining]
+- filters [data mining]
+- filters [Analysis Services]
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: c24c6ad5bbfba2f93039bd53609ddd86010e10ee
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Sintaxis y ejemplos del filtro de modelos (Analysis Services: Miner&#237;a de datos)
+# <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Sintaxis y ejemplos del filtro de modelos (Analysis Services: Minería de datos)
   En esta sección se proporciona información detallada sobre la sintaxis para los filtros de modelo, junto con expresiones de ejemplo.  
   
- [Sintaxis de filtro](#bkmk_syntax)  
+ [Sintaxis de filtro](#bkmk_Syntax)  
   
  [Filtros en atributos de casos](#bkmk_Ex1)  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 17
   
  [Filtros en fechas](#bkmk_Ex8)  
   
-##  <a name="bkmk_Syntax"></a> Sintaxis de filtro  
+##  <a name="bkmk_Syntax"></a> Filter Syntax  
  Las expresiones de filtro generalmente equivalen al contenido de una cláusula WHERE. Puede conectar varias condiciones usando los operadores lógicos **AND**, **OR**y **NOT**.  
   
  En tablas anidadas, también puede usar los operadores **EXISTS** y **NOT EXISTS** . Una condición **EXISTS** se evalúa como **true** si la subconsulta devuelve al menos una fila. Esto es útil en casos en los que desea restringir el modelo a los casos que contienen un valor determinado en la tabla anidada: por ejemplo, los clientes que han comprado un artículo al menos una vez.  
@@ -89,7 +94,7 @@ caps.handback.revision: 17
 -   **\<=** (menor o igual que)  
   
 > [!NOTE]  
->  Independientemente del tipo de datos, estos operadores no se pueden aplicar a una columna que tenga el tipo **Discrete**, **Discretized** o **Key**.  
+>  Independientemente del tipo de datos, estos operadores no se pueden aplicar a una columna que tenga el tipo **Discrete**, **Discretized**o **Key**.  
   
  Una expresión que usa cualquiera de los operadores siguientes se puede aplicar a una columna de clave continua, discreta o de datos discretos:  
   
@@ -103,19 +108,19 @@ caps.handback.revision: 17
   
  Es decir, no define la condición como `AgeDisc = ’25-35’`, pero en su lugar calcula y, a continuación, usa un valor de ese intervalo.  
   
- Ejemplo: `AgeDisc = 27` indica cualquier valor del mismo intervalo que 27, que en este caso es 25-35.  
+ Ejemplo:  `AgeDisc = 27`  indica cualquier valor del mismo intervalo que 27, que en este caso es 25-35.  
   
  *nestedTablePredicate*  
  Expresión de filtro que se aplica a una tabla anidada. Solo se puede usar en filtros de modelos.  
   
- El argumento de subconsulta de *nestedTablePredicate* solamente se puede aplicar a una columna de estructura de minería de datos de tabla.  
+ El argumento de subconsulta de *nestedTablePredicate*solamente se puede aplicar a una columna de estructura de minería de datos de tabla.  
   
  subconsulta  
  Instrucción SELECT seguida de un predicado válido o una lista de predicados.  
   
  Todos los predicados deben ser del tipo que se describe en *avPredicates*. Además, los predicados solo pueden hacer referencia a las columnas incluidas en la tabla anidada actual, identificadas por el argumento *columnName*.  
   
-### Limitaciones en la sintaxis de filtro  
+### <a name="limitations-on-filter-syntax"></a>Limitaciones en la sintaxis de filtro  
  A los filtros se les aplican las restricciones siguientes:  
   
 -   Un filtro solamente puede contener predicados simples. Entre estos se incluyen operadores matemáticos, escalares y nombres de columna.  
@@ -124,7 +129,7 @@ caps.handback.revision: 17
   
 -   No se admiten los operadores no booleanos, como los signos más o menos, en la sintaxis del filtro.  
   
-## Ejemplos de filtros  
+## <a name="examples-of-filters"></a>Ejemplos de filtros  
  Los ejemplos siguientes muestran el uso de filtros aplicados a un modelo de minería de datos. Si crea la expresión de filtro usando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], en la ventana **Propiedad** y el panel **Expresión** del cuadro de diálogo de filtros, vería solamente la cadena que aparece después de las palabras clave WITH FILTER. Aquí, la definición de la estructura de minería de datos está incluida para facilitar la comprensión del uso y del tipo de columna.  
   
 ###  <a name="bkmk_Ex1"></a> Ejemplo 1: Filtrado de nivel de caso típico  
@@ -141,7 +146,6 @@ MaritalStatus PREDICT
 WITH FILTER (Age > 30 AND Occupation=’Architect’)  
 ```  
   
- [Volver al principio](#bkmk_Syntax)  
   
 ###  <a name="bkmk_Ex2"></a> Ejemplo 2: filtrado de nivel de caso usando atributos de tabla anidada  
  Si su estructura de minería de datos contiene tablas anidadas, puede filtrar por la existencia de un valor en una tabla anidada o filtrar en filas de tabla anidada que contienen un valor concreto. Este ejemplo restringe los casos usados para el modelo a los clientes mayores de 30 años que realizaron al menos una compra que incluía la leche.  
@@ -161,7 +165,6 @@ FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’
 )  
 ```  
   
- [Volver al principio](#bkmk_Syntax)  
   
 ###  <a name="bkmk_Ex3"></a> Ejemplo 3: filtrado del nivel de caso en varios atributos de tabla anidada  
  En este ejemplo se muestra un filtro de tres partes: se aplica una condición a la tabla de casos, otra condición a un atributo de la tabla anidada y otra, en un valor concreto de una de las columnas de tabla anidada.  
@@ -187,7 +190,6 @@ FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’
 )  
 ```  
   
- [Volver al principio](#bkmk_Syntax)  
   
 ###  <a name="bkmk_Ex4"></a> Ejemplo 4: filtrado del nivel de caso en ausencia de atributos de tabla anidada  
  En este ejemplo se muestra cómo limitar los casos al cliente que no compró un artículo específico, filtrando por la ausencia de un atributo en la tabla anidada. En este ejemplo, el modelo se entrena usando clientes mayores de 30 años que nunca han comprado leche.  
@@ -207,7 +209,6 @@ ProductName
 FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’) )  
 ```  
   
- [Volver al principio](#bkmk_Syntax)  
   
 ###  <a name="bkmk_Ex5"></a> Ejemplo 5: filtrado por varios valores de tabla anidada  
  El propósito del ejemplo es mostrar el filtrado de tabla anidada. El filtro de tabla anidada se aplica después del filtro de casos y solamente restringe las filas de tabla anidada.  
@@ -230,7 +231,6 @@ Quantity
 WITH DRILLTHROUGH  
 ```  
   
- [Volver al principio](#bkmk_Syntax)  
   
 ###  <a name="bkmk_Ex6"></a> Ejemplo 6: filtrar por los atributos de tabla anidada y EXISTS  
  En este ejemplo, el filtro en la tabla anidada restringe las filas a aquéllas que contienen leche o agua embotellada. A continuación, los casos del modelo se restringen usando una instrucción **EXISTS** . Esto asegura que la tabla anidada no está vacía.  
@@ -251,7 +251,6 @@ Quantity
 FILTER (EXISTS (Products))  
 ```  
   
- [Volver al principio](#bkmk_Syntax)  
   
 ###  <a name="bkmk_Ex7"></a> Ejemplo 7: combinaciones de filtros complejas  
  El escenario para este modelo se parece al del ejemplo 4 pero es mucho más complejo. La tabla anidada, **ProductsOnSale**, tiene la condición de filtro `(OnSale)` que significa que el valor de **OnSale** debe ser **true** para el producto enumerado en **ProductName**. Aquí, **OnSale** es una columna de estructura.  
@@ -294,7 +293,6 @@ FILTER (EXISTS (Products))
   
  `FILTER (EXISTS (ProductsOnSale) AND EXISTS(ProductsNotOnSale) AND Age > 25)`  
   
- [Volver al principio](#bkmk_Syntax)  
   
 ###  <a name="bkmk_Ex8"></a> Ejemplo 8: filtrar según las fechas  
  Puede filtrar las columnas de entrada según fechas, como con cualquier otro dato. Las fechas contenidas en una columna del tipo de fecha y hora son valores continuos; por consiguiente, puede especificar un intervalo de fechas utilizando a operadores como mayor que (>) o menor que (<). Si el origen de datos no representa las fechas por un tipo de datos continuo, sino como valores discretos o de texto, no puede filtrar en un intervalo de fechas, sino que debe especificar valores discretos e individuales.  
@@ -317,9 +315,8 @@ FILTER (EXISTS (Products))
   
  Por ejemplo, si desea filtrar los resultados del centro de llamada para mostrar solo los fines de semana, puede crear una expresión en la vista del origen de datos que extraiga el nombre del día de la semana para cada fecha y, a continuación, utilizar ese el valor de nombre de día de la semana para la entrada o como un valor discreto en el filtro. Recuerde solo que los valores repetidos pueden afectar al modelo, de modo que debiera utilizar únicamente una de las columnas y no la columna de fecha más el valor derivado.  
   
- [Volver al principio](#bkmk_Syntax)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Filtros para modelos de minería &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [Prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   

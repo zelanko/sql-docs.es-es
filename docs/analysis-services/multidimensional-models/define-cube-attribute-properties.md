@@ -1,26 +1,31 @@
 ---
-title: "Definir propiedades de los atributos de los cubos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cubos [Analysis Services], definir"
+title: Definir las propiedades de atributo de cubo | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cubes [Analysis Services], defining
 ms.assetid: 579ca818-f33d-4060-906d-c8bfee93bf99
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fe36e6ba9ff002706260e2e195adb292ba19b085
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Definir propiedades de los atributos de los cubos
+# <a name="define-cube-attribute-properties"></a>Definir propiedades de los atributos de los cubos
   Las propiedades de atributo de los cubos le permiten especificar valores únicos para atributos de dimensión en dimensiones de cubo basadas en la misma dimensión de base de datos. En la siguiente tabla se describen las propiedades de un atributo de cubo.  
   
 |Propiedad|Description|  
@@ -31,8 +36,8 @@ caps.handback.revision: 13
 |**AttributeHierarchyVisible**|Indica si la jerarquía de atributo está visible en esta dimensión de cubo. Permite hacer que las jerarquías de atributo estén visibles en cubos específicos o en roles de dimensión. Esta opción no surte efecto si la jerarquía de atributo subyacente no está visible. El valor predeterminado es **True**.|  
 |**AttributeID**|Contiene el identificador único (Id.) del atributo.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Definir las propiedades de una dimensión de cubo](../../analysis-services/multidimensional-models/define-cube-dimension-properties.md)   
- [Definir propiedades de las jerarquías de cubos](../../analysis-services/multidimensional-models/define-cube-hierarchy-properties.md)  
+ [Definir propiedades de la jerarquía de cubo](../../analysis-services/multidimensional-models/define-cube-hierarchy-properties.md)  
   
   

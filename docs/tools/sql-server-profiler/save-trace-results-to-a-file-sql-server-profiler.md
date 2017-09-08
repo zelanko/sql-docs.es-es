@@ -1,28 +1,33 @@
 ---
-title: "Guardar los resultados de un seguimiento en un archivo (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "guardar seguimientos"
-  - "seguimientos [SQL Server], guardar"
+title: Guardar los resultados de seguimiento en un archivo (SQL Server Profiler) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- saving traces
+- traces [SQL Server], saving
 ms.assetid: ac528747-0c19-4f3d-96f5-44c762a4abed
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d246e703f40e1e617118c35a655c0b999e4ff1d
+ms.contentlocale: es-es
+ms.lasthandoff: 08/02/2017
+
 ---
-# Guardar los resultados de un seguimiento en un archivo (SQL Server Profiler)
+# <a name="save-trace-results-to-a-file-sql-server-profiler"></a>Guardar los resultados de un seguimiento en un archivo (SQL Server Profiler)
   En este tema se describe cómo utilizar el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]para guardar los resultados de un seguimiento en un archivo.  
   
-### Para guardar los resultados de un seguimiento en un archivo  
+### <a name="to-save-trace-results-to-a-file"></a>Para guardar los resultados de un seguimiento en un archivo  
   
 1.  En el menú **Archivo** , haga clic en **Nuevo seguimiento**y conéctese a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 23
     > [!NOTE]  
     >  Asegúrese de que el servicio SQL Server tiene los permisos necesarios para escribir en un archivo en el directorio especificado.  
   
-5.  En el cuadro de diálogo **Propiedades de seguimiento**, en el cuadro de texto **Establecer el tamaño máximo de archivo (MB)**, especifique el tamaño máximo del archivo. El valor predeterminado es 5 megabytes (MB).  
+5.  En el cuadro de diálogo **Propiedades de seguimiento** , en el cuadro de texto **Establecer el tamaño máximo de archivo (MB)** , especifique el tamaño máximo del archivo. El valor predeterminado es 5 megabytes (MB).  
   
 6.  Opcionalmente, especifique las siguientes opciones:  
   
@@ -51,9 +56,9 @@ caps.handback.revision: 23
     -   Active la casilla **El servidor procesa los datos de seguimiento** para asegurarse de que el servidor registra todos los eventos del seguimiento.  
   
         > [!NOTE]  
-        >  Cuando la casilla **El servidor procesa los datos de seguimiento** está desactivada, el servidor no registra los eventos si con ello el rendimiento disminuye considerablemente.  
+        >  Cuando la casilla **El servidor procesa los datos de seguimiento**está desactivada, el servidor no registra los eventos si con ello el rendimiento disminuye considerablemente.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

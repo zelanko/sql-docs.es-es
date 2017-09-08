@@ -1,29 +1,34 @@
 ---
-title: "Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "conexiones [Integration Services], Excel"
-  - "Excel [Integration Services]"
-  - "administradores de conexiones [Integration Services], Excel"
+title: Recorrer los archivos de Excel y las tablas mediante el uso de un contenedor de bucles Foreach | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connections [Integration Services], Excel
+- Excel [Integration Services]
+- connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 caps.latest.revision: 35
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0b4b4a69b1712a5b84b49c63aee4242cb6355bc5
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach
+# <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach
   Los procedimientos de este tema explican cómo crear bucles entre libros de Excel en una carpeta o entre tablas en un libro de Excel, mediante el contenedor de bucles Foreach con el enumerador correspondiente.  
   
-### Para crear un bucle entre libros de Excel con el enumerador de archivos para Foreach  
+### <a name="to-loop-through-excel-files-by-using-the-foreach-file-enumerator"></a>Para crear un bucle entre libros de Excel con el enumerador de archivos para Foreach  
   
 1.  Cree una variable de cadena que recibirá la ruta de acceso y nombre de archivo de Excel actuales en cada iteración del bucle. Para evitar problemas de validación, asigne una ruta de acceso y un nombre de archivo de Excel válidos como valor inicial de la variable (la expresión de ejemplo que se muestra más adelante en este procedimiento utiliza el nombre de variable `ExcelFile`).  
   
@@ -31,15 +36,15 @@ caps.handback.revision: 35
   
      Si no usa una variable para el argumento Propiedades extendidas, debe agregarlo manualmente a la expresión que contiene la cadena de conexión.  
   
-3.  Agregue un contenedor de bucles Foreach a la pestaña **Flujo de control** . Para obtener más información sobre cómo configurar el contenedor de bucles Foreach, vea [Configurar un contenedor de bucles Foreach](../Topic/Configure%20a%20Foreach%20Loop%20Container.md).  
+3.  Agregue un contenedor de bucles Foreach a la pestaña **Flujo de control** . Para obtener más información sobre cómo configurar el contenedor de bucles Foreach, vea [Configurar un contenedor de bucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
 4.  En la página **Colección** del **Editor de bucles Foreach**, seleccione el enumerador de archivos para Foreach, especifique la carpeta en la que se encuentran los libros de Excel e indique el filtro de archivos (generalmente *.xls).  
   
-5.  En la página **Asignaciones de variables**, asigne Índice 0 a una variable de cadena definida por el usuario que recibirá la ruta de acceso y el nombre de archivo de Excel actuales en cada iteración del bucle. (La expresión de ejemplo que se muestra más adelante en este procedimiento utiliza el nombre de variable `ExcelFile`.)  
+5.  En la página **Asignaciones de variables** , asigne Índice 0 a una variable de cadena definida por el usuario que recibirá la ruta de acceso y el nombre de archivo de Excel actuales en cada iteración del bucle. (La expresión de ejemplo que se muestra más adelante en este procedimiento utiliza el nombre de variable `ExcelFile`.)  
   
 6.  Cierre el **Editor de bucles Foreach**.  
   
-7.  Agregue un administrador de conexiones con Excel al paquete como se describe en [Agregar, eliminar o compartir un administrador de conexiones en un paquete](../Topic/Add,%20Delete,%20or%20Share%20a%20Connection%20Manager%20in%20a%20Package.md). Seleccione un libro de Excel existente para la conexión a fin de evitar que se produzcan errores de validación.  
+7.  Agregue un administrador de conexiones con Excel al paquete como se describe en [Agregar, eliminar o compartir un administrador de conexiones en un paquete](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655). Seleccione un libro de Excel existente para la conexión a fin de evitar que se produzcan errores de validación.  
   
     > [!IMPORTANT]  
     >  Para evitar que se produzcan errores de validación al configurar tareas y componentes de flujo de datos que utilizan este administrador de conexiones con Excel, seleccione un libro de Excel existente en el **Editor del Administrador de conexiones con Excel**. El administrador de conexiones no utilizará ese libro en tiempo de ejecución después de configurar una expresión para la propiedad **ConnectionString** como se describe en los pasos siguientes. Tras crear y configurar el paquete, puede borrar el valor de la propiedad **ConnectionString** en la ventana Propiedades. Sin embargo, si borra este valor, la propiedad de cadena de conexión del administrador de conexiones de Excel deja de ser válido hasta que se ejecuta el bucle Foreach. Por lo tanto, debe establecer la propiedad **DelayValidation** en **True** en las tareas en las que se utiliza el administrador de conexiones, o bien en el paquete, para evitar errores de validación.  
@@ -66,13 +71,13 @@ caps.handback.revision: 35
   
 11. Cree tareas en el contenedor de bucles Foreach que utilicen el administrador de conexiones con Excel para realizar las mismas operaciones en cada libro de Excel que coincida con la ubicación y el patrón del archivo especificados.  
   
-### Para crear un bucle entre tablas de Excel con el enumerador de conjunto de filas del esquema para Foreach de ADO.NET  
+### <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Para crear un bucle entre tablas de Excel con el enumerador de conjunto de filas del esquema para Foreach de ADO.NET  
   
-1.  Cree un administrador de conexiones de ADO.NET que utilice el proveedor OLE DB para Microsoft Jet para conectarse al libro de Excel. En la página Todas del cuadro de diálogo **Administrador de conexiones** , asegúrese de especificar Excel 8.0 como valor para la propiedad Propiedades extendidas. Para más información, consulte [Add, Delete, or Share a Connection Manager in a Package](../Topic/Add,%20Delete,%20or%20Share%20a%20Connection%20Manager%20in%20a%20Package.md).  
+1.  Cree un administrador de conexiones de ADO.NET que utilice el proveedor OLE DB para Microsoft Jet para conectarse al libro de Excel. En la página Todas del cuadro de diálogo **Administrador de conexiones** , asegúrese de especificar Excel 8.0 como valor para la propiedad Propiedades extendidas. Para más información, consulte [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
 2.  Cree una variable de cadena que recibirá el nombre de la tabla actual en cada iteración del bucle.  
   
-3.  Agregue un contenedor de bucles Foreach a la pestaña **Flujo de control** . Para obtener más información sobre cómo configurar el contenedor de bucles Foreach, vea [Configurar un contenedor de bucles Foreach](../Topic/Configure%20a%20Foreach%20Loop%20Container.md).  
+3.  Agregue un contenedor de bucles Foreach a la pestaña **Flujo de control** . Para obtener más información sobre cómo configurar el contenedor de bucles Foreach, vea [Configurar un contenedor de bucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
 4.  En la página **Colección** del **Editor de bucles Foreach**, seleccione el enumerador de conjunto de filas del esquema para Foreach de ADO.NET.  
   
@@ -89,12 +94,12 @@ caps.handback.revision: 35
   
 9. Cree tareas en el contenedor de bucles Foreach que utilicen el administrador de conexiones con Excel para realizar las mismas operaciones en cada tabla de Excel en el libro especificado. Si usa una tarea Script para examinar el nombre de la tabla enumerada o para trabajar con cada tabla, recuerde agregar la variable de cadena a la propiedad ReadOnlyVariables de la tarea Script.  
   
-## Vea también  
- [configurar un contenedor de bucles Foreach](../Topic/Configure%20a%20Foreach%20Loop%20Container.md)   
+## <a name="see-also"></a>Vea también  
+ [Configurar un contenedor de bucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
  [Agregar o cambiar una expresión de propiedad](../../integration-services/expressions/add-or-change-a-property-expression.md)   
- [Administrador de conexiones con Excel](../../integration-services/connection-manager/excel-connection-manager.md)   
+ [Administrador de conexiones de Excel](../../integration-services/connection-manager/excel-connection-manager.md)   
  [Origen de Excel](../../integration-services/data-flow/excel-source.md)   
  [Destino de Excel](../../integration-services/data-flow/excel-destination.md)   
- [Trabajar con archivos de Excel con la tarea Script](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
+ [Trabajar con archivos de Excel con la tarea de secuencia de comandos](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   

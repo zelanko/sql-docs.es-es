@@ -1,30 +1,35 @@
 ---
-title: "Tarea Flujo de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataflowtask.f1"
-helpviewer_keywords: 
-  - "tarea de flujo de datos [Integration Services]"
-  - "rendimiento [Integration Services]"
-  - "flujo de datos [Integration Services], rendimiento"
-  - "flujo de datos [Integration Services], tarea Flujo de datos"
-  - "Integration Services, rendimiento"
+title: Tarea flujo de datos | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataflowtask.f1
+helpviewer_keywords:
+- data flow task [Integration Services]
+- performance [Integration Services]
+- data flow [Integration Services], performance
+- data flow [Integration Services], Data Flow task
+- Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 caps.latest.revision: 75
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 75
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 8823647eeb74020da575143375d416a03e62d424
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Tarea Flujo de datos
+# <a name="data-flow-task"></a>Tarea Flujo de datos
   La tarea Flujo de datos encapsula el motor de flujo de datos que mueve datos entre orígenes y destinos, y permite al usuario transformar, limpiar y modificar datos a medida que se mueven. Agregar una tarea Flujo de datos a un flujo de control de paquetes permite que el paquete extraiga, transforme y cargue datos.  
   
  Un flujo de datos se compone de por lo menos un componente de flujo de datos, pero normalmente es un conjunto de componentes de flujo de datos conectados: orígenes que extraen datos, transformaciones que modifican, enrutan o resumen datos, y destinos que cargan datos.  
@@ -33,24 +38,24 @@ caps.handback.revision: 75
   
  Para realizar una inserción masiva de datos de archivos de texto en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede usar la tarea Inserción masiva en lugar de la tarea Flujo de datos y un flujo de datos. Sin embargo, la tarea Inserción masiva no transforma datos. Para más información, consulte [Bulk Insert Task](../../integration-services/control-flow/bulk-insert-task.md).  
   
-## Varios flujos  
+## <a name="multiple-flows"></a>Varios flujos  
  Una tarea Flujo de datos puede incluir varios flujos de datos. Si una tarea copia varios conjuntos de datos, y si el orden en que los datos se copian no es significativo, puede ser más conveniente incluir varios flujos de datos en la tarea Flujo de datos. Por ejemplo, puede crear cinco flujos de datos, y cada uno de ellos copiaría datos de un archivo plano en una tabla de dimensiones diferente en un esquema de estrella de almacenamiento de datos.  
   
  Sin embargo, el motor de flujo de datos determina el orden de ejecución cuando existen varios flujos de datos dentro de una tarea de flujo de datos. Por tanto, cuando el orden es importante, el paquete debe usar varias tareas Flujo de datos, cada una de las cuales contiene un flujo de datos. En ese caso, puede aplicar restricciones de precedencia para controlar el orden de ejecución de las tareas.  
   
  El siguiente diagrama muestra una tarea Flujo de datos con varios flujos de datos.  
   
- ![Flujos de datos](../../integration-services/control-flow/media/mw-dts-09.gif "Flujos de datos")  
+ ![Flujos de datos](../../integration-services/control-flow/media/mw-dts-09.gif "flujos de datos")  
   
-## Entradas del registro  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona un conjunto de eventos de registro que están disponibles para todas las tareas. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] también proporciona entradas del registro personalizadas para numerosas tareas. Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../../integration-services/performance/custom-messages-for-logging.md). La tarea Flujo de datos incluye las siguientes entradas de registro personalizadas:  
+## <a name="log-entries"></a>Entradas del registro  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona un conjunto de eventos de registro que están disponibles para todas las tareas. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] también proporciona entradas del registro personalizadas para numerosas tareas. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md). La tarea Flujo de datos incluye las siguientes entradas de registro personalizadas:  
   
 |Entrada del registro|Description|  
 |---------------|-----------------|  
 |**BufferSizeTuning**|Indica que la tarea Flujo de datos cambió el tamaño del búfer. En la entrada del registro se describen las razones del cambio de tamaño y se indica el nuevo tamaño temporal del búfer.|  
-|**OnPipelinePostEndOfRowset**|Indica que se ha dado la señal de fin del conjunto de filas a un componente, la cual se establece a través de la última llamada del método **ProcessInput**. Se escribe una entrada por cada componente del flujo de datos que procesa la entrada de datos. La entrada incluye el nombre del componente.|  
+|**OnPipelinePostEndOfRowset**|Indica que se ha dado la señal de fin del conjunto de filas a un componente, la cual se establece a través de la última llamada del método **ProcessInput** . Se escribe una entrada por cada componente del flujo de datos que procesa la entrada de datos. La entrada incluye el nombre del componente.|  
 |**OnPipelinePostPrimeOutput**|Indica que el componente ha completado su última llamada al método **PrimeOutput** . En función del flujo de datos, es posible que se escriban varias entradas. Si el componente es un origen, esta entrada del registro significa que el componente ha terminado de procesar filas.|  
-|**OnPipelinePreEndOfRowset**|Indica que un componente está a punto de recibir la señal de fin del conjunto de filas, la cual se establece a través de la última llamada del método **ProcessInput**. Se escribe una entrada por cada componente del flujo de datos que procesa la entrada de datos. La entrada incluye el nombre del componente.|  
+|**OnPipelinePreEndOfRowset**|Indica que un componente está a punto de recibir la señal de fin del conjunto de filas, la cual se establece a través de la última llamada del método **ProcessInput** . Se escribe una entrada por cada componente del flujo de datos que procesa la entrada de datos. La entrada incluye el nombre del componente.|  
 |**OnPipelinePrePrimeOutput**|Indica que el componente está a punto de recibir su última llamada del método **PrimeOutput** . En función del flujo de datos, es posible que se escriban varias entradas.|  
 |**OnPipelineRowsSent**|Informa del número de filas que se proporciona a una entrada de componentes a través de una llamada al método **ProcessInput** . La entrada del registro incluye el nombre del componente.|  
 |**PipelineBufferLeak**|Proporciona información sobre cualquier componente que mantuvo la conexión de los búferes después de que desapareciera el administrador de búferes. Si se mantiene la conexión de un búfer, no se liberan los recursos de los búferes y podrían ocasionarse pérdidas de memoria. La entrada del registro proporciona el nombre del componente y el Id. del búfer.|  
@@ -67,7 +72,7 @@ caps.handback.revision: 75
   
 -   [Características de rendimiento del flujo de datos](../../integration-services/data-flow/data-flow-performance-features.md)  
   
-### Mensajes de ejemplo de una tarea Flujo de trabajo  
+### <a name="sample-messages-from-a-data-flow-task"></a>Mensajes de ejemplo de una tarea Flujo de trabajo  
  En la tabla siguiente se muestran mensajes de ejemplo de entradas de registro de un paquete muy sencillo. El paquete utiliza un origen OLE DB para extraer datos de una tabla, una transformación Ordenar para ordenar los datos y un destino OLE DB para escribir los datos en una tabla diferente.  
   
 |Entrada del registro|Mensajes|  
@@ -97,22 +102,22 @@ caps.handback.revision: 75
 |**InputName**|Valor de la propiedad **Name** de la entrada de la transformación Ordenar.|Entrada de ordenación|  
 |**RowsSent**|Número de filas enviadas a la entrada de la transformación Ordenar.|76|  
   
-## Configuración de la tarea Flujo de datos  
+## <a name="configuration-of-the-data-flow-task"></a>Configuración de la tarea Flujo de datos  
  Puede establecer propiedades en la ventana **Propiedades** o mediante programación.  
   
  Para obtener más información sobre cómo establecer estas propiedades en la ventana **Propiedades** , haga clic en el tema siguiente:  
   
--   [Establecer las propiedades de tareas o contenedores](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Configuración mediante programación de la tarea Flujo de datos  
+## <a name="programmatic-configuration-of-the-data-flow-task"></a>Configuración mediante programación de la tarea Flujo de datos  
  Para obtener más información sobre cómo agregar una tarea Flujo de datos a un paquete y establecer las propiedades del flujo de datos mediante programación, haga clic en el tema siguiente:  
   
 -   [Agregar la tarea de flujo de datos mediante programación](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
-## Tareas relacionadas  
- [Establecer las propiedades de tareas o contenedores](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+## <a name="related-tasks"></a>Tareas relacionadas  
+ [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
  Vídeo, [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), en technet.microsoft.com  
   
   

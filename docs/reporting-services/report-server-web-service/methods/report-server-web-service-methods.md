@@ -24,18 +24,18 @@ caps.latest.revision: 49
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: f99a0c09bfbe96062b078c07f86295b34069d9cf
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="report-server-web-service-methods"></a>Métodos de servicio web del servidor de informes
   Los servicios web del servidor de informes incluyen varias categorías de métodos que están basados en las características de componente. Estos métodos se proporcionan a través de varios extremos de servicios web (tres para la administración de informes y uno para la ejecución de informes) que se exponen como miembros de las clases <xref:ReportService2010.ReportingService2010> y <xref:ReportExecution2005.ReportExecutionService>. Estas clases se pueden generar mediante una herramienta de la clase de proxy como wsdl.exe, que se incluye con la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK. Para obtener más información acerca de los servicios Web del servidor de informes y el [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], consulte [creación de aplicaciones con el servicio Web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
   
 ## <a name="endpoints-and-methods"></a>Puntos finales y métodos  
- En la tabla siguiente se muestra una lista de extremos del servicio web del servidor de informes, así como las categorías de los métodos proporcionadas por el extremo <xref:ReportService2010.ReportingService2010>. Para obtener información sobre los métodos disponibles en los demás extremos, vea [referencia técnica &#40; SSRS &#41; ](../../../reporting-services/technical-reference-ssrs.md).  
+ En la tabla siguiente se muestra una lista de extremos del servicio web del servidor de informes, así como las categorías de los métodos proporcionadas por el extremo <xref:ReportService2010.ReportingService2010>. Para obtener información sobre los métodos disponibles en los demás extremos, vea [referencia técnica & #40; SSRS & #41; ](../../../reporting-services/technical-reference-ssrs.md).  
   
 |Tema|Description|  
 |-----------|-----------------|  
@@ -55,6 +55,6 @@ ms.lasthandoff: 08/03/2017
  [Obtener acceso a la API SOAP](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
  [Creación de aplicaciones con el servicio Web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servicio Web de servidor de informes](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Referencia técnica de &#40; SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [Referencia técnica de & #40; SSRS & #41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   

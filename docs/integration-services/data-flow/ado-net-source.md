@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.adonetsource.f1
+- sql13.dts.designer.adonetsource.connection.f1
+- sql13.dts.designer.adonetsource.columns.f1
+- sql13.dts.designer.adonetsource.erroroutput.f1
 helpviewer_keywords:
 - ADO.NET source
 - sources [Integration Services], ADO.NET
@@ -23,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 78aaa7fb855184f1a13e79cf19a2466c83eeee8e
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 9e7aade0a21f0a77d05c0550aac8aed5b1ace4d8
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="ado-net-source"></a>Origen de ADO NET
@@ -88,6 +91,116 @@ ms.lasthandoff: 08/03/2017
 -   [Propiedades personalizadas de ADO NET](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
  Para más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="ado-net-source-editor-connection-manager-page"></a>Editor de orígenes de ADO NET (página Administrador de conexiones)
+  Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de orígenes de ADO NET** para seleccionar el administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] para el origen. Esta página también permite seleccionar una tabla o vista de la base de datos.  
+  
+ Para obtener más información acerca del origen de ADO NET, vea [ADO NET Source](../../integration-services/data-flow/ado-net-source.md).  
+  
+ **Para abrir la página Administrador de conexiones**  
+  
+1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que tiene el origen de ADO NET.  
+  
+2.  En la pestaña **Flujo de datos** , haga doble clic en el origen de ADO NET.  
+  
+3.  En el **Editor de orígenes de ADO NET**, haga clic en **Administrador de conexiones**.  
+  
+### <a name="static-options"></a>Opciones estáticas  
+ **Administrador de conexiones de ADO.NET**  
+ Seleccione un administrador de conexiones de la lista o cree una conexión haciendo clic en **Nuevo**.  
+  
+ **Nuevo**  
+ Cree un nuevo administrador de conexiones mediante el cuadro de diálogo **Configurar el administrador de conexiones de ADO.NET** .  
+  
+ **Modo de acceso a datos**  
+ Especifique el método para seleccionar datos del origen.  
+  
+|Opción|Description|  
+|------------|-----------------|  
+|Tabla o vista|Recupera datos de una tabla o vista del origen de datos [!INCLUDE[vstecado](../../includes/vstecado-md.md)] .|  
+|Comando SQL|Recupera datos del origen de datos [!INCLUDE[vstecado](../../includes/vstecado-md.md)] mediante una consulta SQL.|  
+  
+ **Vista previa**  
+ Muestra una vista previa de los resultados mediante el cuadro de diálogo **Vista de datos** . **Vista previa** puede mostrar hasta 200 filas.  
+  
+> [!NOTE]  
+>  Cuando genera una vista previa de datos, las columnas con un tipo definido por el usuario CLR no contienen datos. En su lugar, los valores \<valor demasiado grande para mostrarlo > o System.Byte [] Mostrar. El primero se muestra cuando se tiene acceso al origen de datos mediante el proveedor [!INCLUDE[vstecado](../../includes/vstecado-md.md)] y el último, cuando se utiliza el proveedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+  
+### <a name="data-access-mode-dynamic-options"></a>Opciones dinámicas del modo de acceso a datos  
+  
+#### <a name="data-access-mode--table-or-view"></a>Modo de acceso a datos = Tabla o vista  
+ **Nombre de la tabla o la vista**  
+ Seleccione el nombre de la tabla o vista de los disponibles en una lista del origen de datos.  
+  
+#### <a name="data-access-mode--sql-command"></a>Modo de acceso a datos = Comando SQL  
+ **Texto de comando SQL**  
+ Escriba el texto de una consulta SQL, genere la consulta haciendo clic en **Generar consulta**, o bien busque el archivo que contiene el texto de la consulta haciendo clic en **Examinar**.  
+  
+ **Build query**  
+ Use el cuadro de diálogo **Generador de consultas** para crear visualmente la consulta SQL.  
+  
+ **Examinar**  
+ Use el cuadro de diálogo **Abrir** para buscar el archivo que contiene el texto de la consulta SQL.  
+  
+## <a name="ado-net-source-editor-columns-page"></a>Editor de orígenes de ADO NET (página Columnas)
+  Use la página **Columnas** del cuadro de diálogo **Editor de orígenes de ADO NET** para asignar una columna de salida a cada columna externa (origen).  
+  
+ Para obtener más información acerca del origen de ADO NET, vea [ADO NET Source](../../integration-services/data-flow/ado-net-source.md).  
+  
+ **Para abrir la página Columnas**  
+  
+1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que tiene el origen de ADO NET.  
+  
+2.  En la pestaña **Flujo de datos** , haga doble clic en el origen de ADO NET.  
+  
+3.  En el **Editor de orígenes de ADO NET**, haga clic en **Columnas**.  
+  
+### <a name="options"></a>Opciones  
+ **Columnas externas disponibles**  
+ Muestra la lista de columnas externas disponibles en el origen de datos. Esta tabla no se puede usar para agregar o quitar columnas.  
+  
+ **Columna externa**  
+ Muestra las columnas externas (origen) en el orden en que se verán cuando configure componentes que utilizan datos de este origen.  
+  
+ **Columna de salida**  
+ Permite proporcionar un nombre único para cada columna de salida. El nombre predeterminado es el nombre de la columna externa (origen) seleccionada; sin embargo, puede elegir un nombre único y descriptivo. El nombre proporcionado se mostrará en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+  
+## <a name="ado-net-source-editor-error-output-page"></a>Editor de orígenes de ADO NET (página Salida de error)
+  Utilice la página **Salida de error** del cuadro de diálogo **Editor de orígenes de ADO NET** para seleccionar las opciones de control de errores y para establecer las propiedades en las columnas de salida de errores.  
+  
+ Para obtener más información acerca del origen de ADO NET, vea [ADO NET Source](../../integration-services/data-flow/ado-net-source.md).  
+  
+ **Para abrir la página Salida de error**  
+  
+1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que tiene el origen de ADO NET.  
+  
+2.  En la pestaña **Flujo de datos** , haga doble clic en el origen de ADO NET.  
+  
+3.  En el **Editor de orígenes de ADO NET**, haga clic en **Salida de error**.  
+  
+### <a name="options"></a>Opciones  
+ **Entrada/salida**  
+ Muestra el nombre del origen de datos.  
+  
+ **Columna**  
+ Muestra las columnas externas (origen) que se han seleccionado en la página **Administrador de conexiones** del cuadro de diálogo **Editor de orígenes de ADO NET** .  
+  
+ **Error**  
+ Permite especificar qué debe ocurrir cuando se produce un error: omitir el error, redirigir la fila o hacer que el componente no funcione.  
+  
+ **Temas relacionados:** [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **Truncamiento**  
+ Permite especificar qué debe ocurrir cuando se produce un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  
+  
+ **Description**  
+ Muestra la descripción del error.  
+  
+ **Establecer este valor en las celdas seleccionadas**  
+ Permite especificar qué debe ocurrir en todas las celdas seleccionadas cuando se produce un error o un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  
+  
+ **Aplicar**  
+ Aplica la opción de control de errores a las celdas seleccionadas.  
   
 ## <a name="see-also"></a>Vea también  
  [Destino de DataReader](../../integration-services/data-flow/datareader-destination.md)   

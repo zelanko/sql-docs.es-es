@@ -21,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 15de3ffdf6b4580918edf3a29d40e856614367fb
+ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
+ms.openlocfilehash: a5ce75f3c1715870113626642150028e31a0d58b
 ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="excel-connection-manager"></a>Administrador de conexiones con Excel
@@ -82,17 +82,17 @@ ms.lasthandoff: 08/09/2017
  **La primera fila tiene nombres de columna**  
  Especifique si la primera fila de datos de la hoja seleccionada contiene nombres de columna. El valor predeterminado de esta opción es **True**.  
   
-### <a name="providers-and-drivers-for-microsoft-excel-and-access-file"></a>Proveedores y controladores de archivo de Microsoft Excel y Access  
- Tendrá que descargar los proveedores y controladores OLE DB para los archivos de Microsoft Office si no están instalados. Las versiones posteriores del proveedor pueden abrir archivos creados con versiones anteriores de Excel.  
+## <a name="connectivity-components-for-microsoft-excel-and-access-files"></a>Componentes de conectividad para archivos de Microsoft Excel y Access
   
- Si el equipo tiene una versión de Office de 32 bits, tendrá que instalar la versión de 32 bits de los controladores, y también debe asegurarse de que ejecuta el asistente o el paquete de Integration Services que se crea en el modo de 32 bits.  
+Tendrá que descargar los componentes de conectividad para archivos de Microsoft Office si no están instaladas. Descargar la versión más reciente de los componentes de conectividad para los archivos de Excel y Access aquí: [redistribuible de 2016 de motor de base de datos Microsoft acceso](https://www.microsoft.com/download/details.aspx?id=54920).
   
-|Versión de Microsoft Office|Descargar|  
-|------------------------------|--------------|  
-|2007|[Controlador de 2007 Office System: componentes de conectividad de datos](https://www.microsoft.com/download/details.aspx?id=23734)|  
-|2010|[Microsoft Access 2010 Runtime](https://www.microsoft.com/download/details.aspx?id=10910)|  
-|2013|[Microsoft Access 2013 Runtime](http://www.microsoft.com/download/details.aspx?id=39358)|  
-|2016|[Microsoft Access 2016 Runtime](https://www.microsoft.com/download/details.aspx?id=50040)|
+La versión más reciente de los componentes puede abrir archivos creados con versiones anteriores de Excel.
+
+Si el equipo tiene una versión de 32 bits de Office, tendrá que instalar la versión de 32 bits de los componentes, y también tiene que asegurarse de que se ejecuta el paquete en modo de 32 bits.
+
+Si tiene una suscripción de Office 365, asegúrese de que descargue el redistribuible de 2016 de motor de base de datos de acceso y no el Runtime de 2016 de Microsoft Access. Al ejecutar el programa de instalación, verá un mensaje de error que no se puede instalar la descarga en paralelo con componentes de hacer clic para ejecutar Office. Para pasar por alto este mensaje de error, ejecute la instalación en modo silencioso, abra una ventana del símbolo del sistema y ejecuta el. Un archivo ejecutable que se descargó con el `/quiet` cambiar. Por ejemplo:
+
+`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
   
 ## <a name="related-tasks"></a>Tareas relacionadas  
   

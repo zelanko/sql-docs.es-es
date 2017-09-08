@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingmodeltrainingdest.f1
+- sql13.dts.designer.dmmtrainingtransformation.connection.f1
+- sql13.dts.designer.dmmtrainingtransformation.columns.f1
 helpviewer_keywords:
 - destinations [Integration Services], Data Mining Model Training
 - Data Mining Model Training destination
@@ -22,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cdb0903098dee37d88e89519cf6bc375b0fb90f0
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 570a7e8c6b20ea528f5980fb3ae53a60037d0243
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="data-mining-model-training-destination"></a>entrenamiento del modelo de minería de datos, destino
@@ -43,18 +45,47 @@ ms.lasthandoff: 08/03/2017
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información sobre las propiedades que se pueden establecer en el cuadro de diálogo **Editor de entrenamiento de modelos de minería de datos** , haga clic en uno de los siguientes temas:  
-  
--   [Editor de entrenamiento de modelos de minería de datos &#40;pestaña Conexión&#41;](../../integration-services/data-flow/data-mining-model-training-editor-connection-tab.md)  
-  
--   [Editor de entrenamiento de modelos de minería de datos &#40;pestaña Columnas&#41;](../../integration-services/data-flow/data-mining-model-training-editor-columns-tab.md)  
-  
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
 -   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas del destino de entrenamiento del modelo de minería de datos](../../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md)  
   
- Para obtener más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Para más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
+## <a name="data-mining-model-training-editor-connection-tab"></a>Editor de entrenamiento de modelos de minería de datos (pestaña Conexión)
+  Utilice la página **Conexión** del cuadro de diálogo **Editor de entrenamiento de modelos de minería de datos** para seleccionar un modelo de minería de datos para entrenar.  
   
+### <a name="options"></a>Opciones  
+ **Administrador de conexiones**  
+ Seleccione una conexión de la lista de conexiones existentes de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , o bien cree una conexión de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con el botón **Nueva** que se describe más adelante.  
+  
+ **Nueva**  
+ Cree una nueva conexión mediante el cuadro de diálogo **Agregar administrador de conexiones con Analysis Services** .  
+  
+ **Estructura de minería de datos**  
+ Seleccione una estructura de la lista de estructuras de minería de datos disponibles, o bien haga clic en **Nuevo**para crear una estructura.  
+  
+ **Nueva**  
+ Permite crear una estructura de minería de datos y un modelo de minería de datos con el **Asistente para minería de datos**.  
+  
+ **Modelos de minería de datos**  
+ Vea la lista de modelos de minería de datos asociados a la estructura de minería de datos seleccionada.  
+  
+## <a name="data-mining-model-training-editor-columns-tab"></a>Editor de entrenamiento de modelos de minería de datos (pestaña Columnas)
+  Utilice la página **Columnas** del cuadro de diálogo **Editor de entrenamiento de modelos de minería de datos** para asignar columnas de entrada a las columnas de la estructura de minería de datos.  
+  
+## <a name="options"></a>Opciones  
+ **Columnas de entrada disponibles**  
+ Muestra la lista de columnas de entrada disponibles. Arrastre las columnas de entrada para asignarlas a las columnas de la estructura de minería de datos.  
+  
+ **Columnas de la estructura de minería de datos**  
+ Muestra la lista de columnas de la estructura de minería de datos. Arrastre las columnas de la estructura de minería de datos para asignarlas a las columnas de entrada disponibles.  
+  
+ **Columna de entrada**  
+ Muestra las columnas de entrada seleccionadas de la tabla anterior. Para cambiar o quitar una selección de asignación, utilice la lista de **Columnas de entrada disponibles**.  
+  
+ **Columnas de la estructura de minería de datos**  
+ Muestra las columnas de destino disponibles, independientemente de si están asignadas o no.  
+  
+

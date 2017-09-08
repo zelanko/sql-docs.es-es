@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.flatfilesource.f1
+- sql13.dts.designer.flatfilesourceadapter.connection.f1
+- sql13.dts.designer.flatfilesourceadapter.columns.f1
+- sql13.dts.designer.flatfilesourceadapter.errorhandling.f1
 helpviewer_keywords:
 - sources [Integration Services], Flat File
 - text file reading [Integration Services]
@@ -22,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79a0d3dd55338815b6b99ce0a1002a174af11984
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 3460c0a209af8b587617e81c28fdccc2d5ff0eed
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="flat-file-source"></a>origen de archivo plano
@@ -57,14 +60,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-flat-file-source"></a>Configuración del origen de archivo plano  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información acerca de las propiedades que puede establecer en el cuadro de diálogo **Editor de origen de archivos planos** , haga clic en uno de los temas siguientes:  
-  
--   [Editor de origen de archivos planos &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/flat-file-source-editor-connection-manager-page.md)  
-  
--   [Editor de origen de archivos planos &#40;página Columnas&#41;](../../integration-services/data-flow/flat-file-source-editor-columns-page.md)  
-  
--   [Editor de origen de archivos planos &#40;página Salida de error&#41;](../../integration-services/data-flow/flat-file-source-editor-error-output-page.md)  
-  
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
 -   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -73,6 +68,71 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-tasks"></a>Tareas relacionadas  
  Para obtener más detalles sobre cómo establecer las propiedades de un componente de flujo de datos, vea [Establecer las propiedades de un componente de flujo de datos](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="flat-file-source-editor-connection-manager-page"></a>Editor de origen de archivos planos (página Administrador de conexiones)
+  Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de origen de archivos planos** para seleccionar el administrador de conexiones que utilizará el origen de archivos planos. El origen de archivos planos lee los datos de un archivo de texto, que pueden estar en formato delimitado, tener un ancho fijo o ser mixtos.  
+  
+ Un origen de archivos planos puede utilizar uno de los siguientes tipos de administradores de conexiones:  
+  
+-   Un administrador de conexiones de archivos planos, si el origen es un único archivo plano. Para más información, consulte [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
+  
+-   Un administrador de conexiones de varios archivos planos, si el origen son varios archivos planos y la tarea Flujo de datos se encuentra en un contenedor de bucles, como el contenedor de bucles For. En cada bucle del contenedor, el origen de archivos planos carga los datos del siguiente nombre de archivo que proporciona el administrador de conexiones de varios archivos planos. Para más información, consulte [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).  
+  
+### <a name="options"></a>Opciones  
+ **Flat file connection manager**  
+ Seleccione un administrador de conexiones de la lista o cree un nuevo administrador de conexiones haciendo clic en **Nuevo**.  
+  
+ **Nuevo**  
+ Crea un nuevo administrador de conexiones mediante el cuadro de diálogo **Editor del administrador de conexiones de archivos planos** .  
+  
+ **Conservar los valores null del origen como valores null en el flujo de datos**  
+ Especifica si deben mantenerse los valores NULL cuando se extraen los datos. El valor predeterminado de esta propiedad es **false**. Cuando este valor es f**alse**, el origen de archivos planos reemplaza los valores NULL del origen de datos por los valores predeterminados correspondientes para cada columna, como cadenas vacías para las columnas de cadenas o cero para las columnas numéricas.  
+  
+ **Vista previa**  
+ Muestra una vista previa de los resultados mediante el cuadro de diálogo **Vista de datos** . La vista previa puede mostrar hasta 200 filas.  
+  
+## <a name="flat-file-source-editor-columns-page"></a>Editor de origen de archivos planos (página Columnas)
+  Use el nodo **Columnas** del cuadro de diálogo **Editor de origen de archivos planos** para asignar una columna de salida a cada columna externa (origen).  
+  
+> [!NOTE]  
+>  La propiedad **FileNameColumnName** del origen de archivo plano y la propiedad **FastParse** de sus columnas de salida no están disponibles en el **Editor de origen de archivos planos**, pero se puede establecer con el **Editor avanzado**. Para obtener más información acerca de estas propiedades, vea la sección sobre el origen de archivos planos en [Flat File Custom Properties](../../integration-services/data-flow/flat-file-custom-properties.md).  
+  
+### <a name="options"></a>Opciones  
+ **Columnas externas disponibles**  
+ Muestra la lista de columnas externas disponibles en el origen de datos. Esta tabla no se puede usar para agregar o quitar columnas.  
+  
+ **Columna externa**  
+ Vea las columnas externas (origen) en el orden en que la tarea las leerá. Puede cambiar este orden si elimina primero las columnas seleccionadas en la tabla y luego selecciona las columnas externas de la lista en un orden diferente.  
+  
+ **Columna de salida**  
+ Permite proporcionar un nombre único para cada columna de salida. El nombre predeterminado es el nombre de la columna externa (origen) seleccionada; sin embargo, puede elegir un nombre único y descriptivo. El nombre que indique se mostrará en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+  
+## <a name="flat-file-source-editor-error-output-page"></a>Editor de origen de archivos planos (página Salida de error)
+  Use la página **Salida de error** del cuadro de diálogo **Editor de origen de archivos planos** para seleccionar opciones de control de errores y establecer las propiedades en las columnas de salida de error.  
+  
+### <a name="options"></a>Opciones  
+ **Entrada/salida**  
+ Muestra el nombre del origen de datos.  
+  
+ **Columna**  
+ Permite ver las columnas externas (origen) seleccionadas en la página **Administrador de conexiones** del cuadro de diálogo **Editor de origen de archivos planos**.  
+  
+ **Error**  
+ Permite especificar qué debe ocurrir cuando se produce un error: omitir el error, redirigir la fila o hacer que el componente no funcione.  
+  
+ **Temas relacionados:** [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **Truncamiento**  
+ Permite especificar qué debe ocurrir cuando se produce un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  
+  
+ **Description**  
+ Muestra la descripción del error.  
+  
+ **Establecer este valor en las celdas seleccionadas**  
+ Permite especificar qué debe ocurrir en todas las celdas seleccionadas cuando se produce un error o un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  
+  
+ **Aplicar**  
+ Aplica la opción de control de errores a las celdas seleccionadas.  
   
 ## <a name="see-also"></a>Vea también  
  [Destino de archivo plano](../../integration-services/data-flow/flat-file-destination.md)   

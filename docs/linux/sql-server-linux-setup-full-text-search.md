@@ -10,13 +10,15 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 8dd5d857efc47a0dc181a0fc9bf1537cb8b08441
+ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
+ms.openlocfilehash: a542817a861f968cebf3a66f91cfb016d2a685b8
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Instalar la búsqueda de texto completo SQL Server en Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Instalación los siguientes pasos [búsqueda de texto completo de SQL Server](https://msdn.microsoft.com/library/ms142571.aspx) (**mssql-server-FT**) en Linux. Búsqueda de texto completo permite ejecutar consultas de texto completo en datos formados por caracteres en tablas de SQL Server. Para problemas conocidos de esta versión, consulte el [notas de la versión](sql-server-linux-release-notes.md).
 
@@ -270,7 +272,7 @@ Para poder usar la búsqueda semántica, primero debe descargar y adjuntar la [b
 3. Mueva los archivos de base de datos y de registro en el equipo Linux SQL Server.
 
     > [!TIP]
-    > Para obtener instrucciones sobre cómo mover archivos de Windows para Linux, consulte [transferir un archivo a Linux](sql-server-linux-migrate-restore-database.md#transfer-the-backup-file-to-linux).
+    > Para obtener instrucciones sobre cómo mover archivos de Windows para Linux, consulte [transferir un archivo a Linux](sql-server-linux-migrate-restore-database.md#scp).
 
 4. Ejecute el siguiente comando de Transact-SQL en la instancia de SQL Server de Linux para adjuntar la base de datos de estadísticas de lenguaje.
 

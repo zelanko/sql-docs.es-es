@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sendmailtask.f1
+- sql13.dts.designer.sendmailtask.general.f1
+- sql13.dts.designer.sendmailtask.mail.f1
 helpviewer_keywords:
 - mail [Integration Services]
 - Send Mail task
@@ -23,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: fd6f7a19c1b553ee06013a4a24fbbf26a759a6cd
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: cf06b8fdc020b9c2012d5d710427b64043898e84
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="send-mail-task"></a>Enviar correo, tarea
@@ -71,11 +73,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuring-the-send-mail-task"></a>Configurar la tarea Enviar correo  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
-  
--   [Editor de la tarea Enviar correo &#40;página General&#41;](../../integration-services/control-flow/send-mail-task-editor-general-page.md)  
-  
--   [Editor de la tarea Enviar correo &#40;página Correo&#41;](../../integration-services/control-flow/send-mail-task-editor-mail-page.md)  
+ Para obtener información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el tema siguiente:  
   
 -   [Página Expresiones](../../integration-services/expressions/expressions-page.md)  
   
@@ -89,6 +87,81 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-content"></a>Contenido relacionado  
   
 -   Artículo técnico [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625)(Enviar un mensaje de correo electrónico con una notificación de entrega en C#) en shareourideas.com  
+  
+## <a name="send-mail-task-editor-general-page"></a>Editor de la tarea Enviar correo (página General)
+  Use la página **General** del cuadro de diálogo **Editor de la tarea Enviar correo** para asignar un nombre a la tarea Enviar correo y describirla.  
+  
+### <a name="options"></a>Opciones  
+ **Nombre**  
+ Proporcione un nombre único para la tarea Enviar correo. Este nombre se utiliza como etiqueta en el icono de tarea.  
+  
+ **Nota** : los nombres de tarea deben ser únicos en un paquete.  
+  
+ **Description**  
+ Escriba una descripción de la tarea Enviar correo.  
+  
+## <a name="send-mail-task-editor-mail-page"></a>Editor de la tarea Enviar correo (página Correo)
+  Use la página **Correo** del cuadro de diálogo **Editor de la tarea Enviar correo** para especificar los destinatarios, el tipo de mensaje y la prioridad de un mensaje. También puede adjuntar archivos al mensaje. El texto del mensaje puede consistir en una cadena que proporcione, una conexión de archivo a un archivo con el texto o el nombre de una variable con el texto.  
+  
+### <a name="options"></a>Opciones  
+ **SMTPConnection**  
+ Seleccione un administrador de conexión de SMTP en la lista o haga clic en  **\<nueva conexión... >** para crear una nueva conexión de administrador.  
+  
+> [!IMPORTANT]  
+>  El administrador de conexiones SMTP solo es compatible con la autenticación anónima y la autenticación de Windows. No admite la autenticación básica.  
+  
+ **Temas relacionados:** [Administrador de conexiones SMTP](../../integration-services/connection-manager/smtp-connection-manager.md)  
+  
+ **De**  
+ Especifique la dirección de correo electrónico del remitente.  
+  
+ **Para**  
+ Escriba las direcciones de correo electrónico de los destinatarios, separadas con punto y coma.  
+  
+ **CC**  
+ Escriba las direcciones de correo electrónico de las personas que recibirán una copia del mensaje, separadas con punto y coma.  
+  
+ **CCO**  
+ Escriba las direcciones de correo electrónico de los destinatarios ocultos de copia del mensaje, separadas con punto y coma.  
+  
+ **Asunto**  
+ Escriba el asunto del mensaje de correo electrónico.  
+  
+ **MessageSourceType**  
+ Permite seleccionar el tipo de origen del mensaje. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Entrada directa**|Establezca el origen para el texto del mensaje. Si selecciona este valor, se mostrará la opción dinámica **MessageSource**.|  
+|**Conexión de archivos**|Establezca el origen al archivo que incluye el texto del mensaje. Si selecciona este valor, se mostrará la opción dinámica **MessageSource**.|  
+|**Variable**|Establezca el origen para la variable que incluye el texto del mensaje. Si selecciona este valor, se mostrará la opción dinámica **MessageSource**.|  
+  
+ **Prioridad**  
+ Establezca la prioridad del mensaje.  
+  
+ **Datos adjuntos**  
+ Escriba los nombres de los archivos de datos adjuntos que desea adjuntar al mensaje de correo electrónico, separados por una barra vertical (|).  
+  
+> [!NOTE]  
+>  Las líneas Para, CC y CCO están limitadas a 256 caracteres según las normas de Internet.  
+  
+### <a name="messagesourcetype-dynamic-options"></a>Opciones dinámicas de MessageSourceType  
+  
+#### <a name="messagesourcetype--direct-input"></a>MessageSourceType = Entrada directa  
+ **MessageSource**  
+ Escriba el texto del mensaje, o bien haga clic en el botón Examinar (…) y escriba el mensaje en el cuadro de diálogo **Origen del mensaje** .  
+  
+#### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Conexión de archivos  
+ **MessageSource**  
+ Seleccione un administrador de conexión de archivos en la lista o haga clic en \< **nueva conexión...** > para crear una nueva conexión de administrador.  
+  
+ **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="messagesourcetype--variable"></a>MessageSourceType = Variable  
+ **MessageSource**  
+ Seleccione una variable en la lista o haga clic en \< **nueva variable...** > para crear una nueva variable.  
+  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 ## <a name="see-also"></a>Vea también  
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

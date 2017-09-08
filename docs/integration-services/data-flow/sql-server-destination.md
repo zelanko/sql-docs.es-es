@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sqlserverdest.f1
+- sql13.dts.designer.sqlserverdestadapter.connection.f1
+- sql13.dts.designer.sqlserverdestadapter.mappings.f1
+- sql13.dts.designer.sqlserverdestadapter.advanced.f1
 helpviewer_keywords:
 - SQL Server destination
 - loading data
@@ -23,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1224814d165d5763d832b18f6523c6c47f6f59c
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: e85093b58f8fcad60231c0f1a5c24387be686be3
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="sql-server-destination"></a>Destino de SQL Server
@@ -93,14 +96,6 @@ ms.lasthandoff: 08/03/2017
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información sobre las propiedades que se pueden configurar en el cuadro de diálogo **Editor de destino de SQL Server** , haga clic en uno de los siguientes temas:  
-  
--   [Editor de destino de SQL &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/sql-destination-editor-connection-manager-page.md)  
-  
--   [Editor de destino de SQL &#40;página Asignaciones&#41;](../../integration-services/data-flow/sql-destination-editor-mappings-page.md)  
-  
--   [Editor de destino de SQL &#40;página Avanzadas&#41;](../../integration-services/data-flow/sql-destination-editor-advanced-page.md)  
-  
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
 -   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -125,7 +120,88 @@ ms.lasthandoff: 08/03/2017
   
 -   Artículo técnico, [The Data Loading Performance Guide](http://go.microsoft.com/fwlink/?LinkId=233700), en msdn.microsoft.com.  
   
--   Artículo técnico [Usar SQL Server Integration Services para cargar datos de forma masiva](http://go.microsoft.com/fwlink/?LinkId=233701), en simple-talk.com.  
+-   Artículo técnico sobre cómo [usar SQL Server Integration Services para la carga masiva de datos](http://go.microsoft.com/fwlink/?LinkId=233701), en simple-talk.com.  
+  
+## <a name="sql-destination-editor-connection-manager-page"></a>Editor de destino de SQL (página Administrador de conexiones)
+  Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de destino de SQL** para especificar la información de orígenes de datos y para obtener una vista previa de los resultados. El destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carga los datos en tablas o vistas en una base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  
+### <a name="options"></a>Opciones  
+ **OLE DB, administrador de conexiones**  
+ Seleccione una conexión existente de la lista o cree una nueva conexión haciendo clic en **Nueva**.  
+  
+ **Nueva**  
+ Cree una conexión mediante el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** .  
+  
+ **Usar una tabla o una vista**  
+ Seleccione una tabla o vista existente de la lista, o cree una nueva conexión haciendo clic en **Nueva**.  
+  
+ **Nueva**  
+ Permite crear una tabla con el cuadro de diálogo **Crear tabla** .  
+  
+> [!NOTE]  
+>  Al hacer clic en **Nueva**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] genera una instrucción predeterminada CREATE TABLE basada en el origen de datos conectado. La instrucción predeterminada CREATE TABLE no incluirá el atributo FILESTREAM, aunque la tabla de origen tenga una columna con el atributo FILESTREAM declarado. Para ejecutar un componente [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con el atributo FILESTREAM, implemente en primer lugar el almacenamiento de FILESTREAM en la base de datos de destino. A continuación, agregue el atributo FILESTREAM a la instrucción CREATE TABLE en el cuadro de diálogo **Crear tabla** . Para más información, vea [Datos de objeto binario grande &#40;Blob&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  
+ **Vista previa**  
+ Obtenga una vista previa de los resultados mediante el cuadro de diálogo **Vista previa de los resultados de la consulta** . La vista previa puede mostrar hasta 200 filas.  
+  
+## <a name="sql-destination-editor-mappings-page"></a>Editor de destino de SQL (página Asignaciones)
+  Utilice la página **Asignaciones** del cuadro de diálogo **Editor de destino de SQL** para asignar columnas de entrada a columnas de destino.  
+  
+### <a name="options"></a>Opciones  
+ **Columnas de entrada disponibles**  
+ Muestra la lista de columnas de entrada disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de entrada disponibles de la tabla a columnas de destino.  
+  
+ **Columnas de destino disponibles**  
+ Muestra la lista de columnas de destino disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de destino disponibles de la tabla a columnas de entrada.  
+  
+ **Columna de entrada**  
+ Muestra las columnas de entrada seleccionadas de la tabla anterior. Puede cambiar las asignaciones utilizando la lista de **Columnas de entrada disponibles**.  
+  
+ **Columna de destino**  
+ Muestra las columnas de destino disponibles, independientemente de si están asignadas o no.  
+  
+## <a name="sql-destination-editor-advanced-page"></a>Editor de destino de SQL (página Avanzadas)
+  Utilice la página **Avanzadas** del cuadro de diálogo **Editor de destino de SQL** para especificar opciones avanzadas de inserción masiva.  
+  
+### <a name="options"></a>Opciones  
+ **Mantener valores de identidad**  
+ Especifique si la tarea debe insertar valores en columnas de identidad. El valor predeterminado de esta propiedad es **False**.  
+  
+ **Mantener valores NULL**  
+ Especifique si la tarea debe mantener valores NULL. El valor predeterminado de esta propiedad es **False**.  
+  
+ **Bloqueo de tabla**  
+ Especifique si la tabla está bloqueada cuando se cargan los datos. El valor predeterminado de esta propiedad es **True**.  
+  
+ **Restricciones CHECK**  
+ Especifique si la tarea debe comprobar restricciones. El valor predeterminado de esta propiedad es **True**.  
+  
+ **Activar desencadenadores**  
+ Especifique si la inserción masiva debe activar desencadenadores en tablas. El valor predeterminado de esta propiedad es **False**.  
+  
+ **Primera fila**  
+ Especifique la primera fila donde se va a insertar. El valor predeterminado de esta propiedad es **-1**, que indica que no se ha asignado ningún valor.  
+  
+> [!NOTE]  
+>  Borre el cuadro de texto del **Editor de destino de SQL** para indicar que no desea asignar un valor a esta propiedad. Use -1 en la ventana **Propiedades** , el **Editor avanzado**y el modelo de objetos.  
+  
+ **Última fila**  
+ Especifique la última fila donde se va a insertar. El valor predeterminado de esta propiedad es **-1**, que indica que no se ha asignado ningún valor.  
+  
+> [!NOTE]  
+>  Borre el cuadro de texto del **Editor de destino de SQL** para indicar que no desea asignar un valor a esta propiedad. Use -1 en la ventana **Propiedades** , el **Editor avanzado**y el modelo de objetos.  
+  
+ **Número máximo de errores**  
+ Especifique el número de errores que se pueden producir antes de que se detenga la inserción masiva. El valor predeterminado de esta propiedad es **-1**, que indica que no se ha asignado ningún valor.  
+  
+> [!NOTE]  
+>  Borre el cuadro de texto del **Editor de destino de SQL** para indicar que no desea asignar un valor a esta propiedad. Use -1 en la ventana **Propiedades** , el **Editor avanzado**y el modelo de objetos.  
+  
+ **Timeout**  
+ Especifique el número de segundos que se debe esperar antes de que la inserción masiva se detenga debido a un tiempo de espera.  
+  
+ **Columnas de orden**  
+ Escriba los nombres de las columnas de orden. Las columnas se pueden ordenar en sentido ascendente o descendente. Si utiliza varias columnas de orden, delimite la lista con comas.  
   
 ## <a name="see-also"></a>Vea también  
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  

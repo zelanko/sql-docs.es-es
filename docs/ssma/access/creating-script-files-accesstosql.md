@@ -2,7 +2,7 @@
 title: Crear archivos de Script (AccessToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -14,17 +14,17 @@ applies_to:
 - SQL Server
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 caps.latest.revision: 21
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: murato
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0798e4aa2ed032b1ab3b015199c17518c533e3fa
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: cec4cf64fcca4a185d8733121305fe186a0f58a8
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/17/2017
 
 ---
-# <a name="creating-script-files-accesstosql"></a>Crear archivos de Script (AccessToSQL)
+# <a name="creating-script-files-accesstosql"></a>Crear archivos de script (AccessToSQL)
 El primer paso antes de iniciar la aplicación de consola SSMA consiste en crear el archivo de script y si es necesario crear el archivo de valor de la variable y el archivo de conexión de servidor.  
   
 El archivo de script puede dividirse en tres secciones, especialmente..,:  
@@ -353,7 +353,7 @@ El archivo de script contiene una secuencia de comandos de flujo de trabajo de m
   
 Por ejemplo, una migración típica de datos de una tabla específica en una base de datos de Access sigue la jerarquía de: base de datos -&gt; tabla.  
   
-Cuando todos los comandos en el archivo de script se ejecuta correctamente, la aplicación de consola SSMA sale y devuelve el control al usuario. El contenido de un archivo de script es más o menos estático con información sobre las variable contenidas en una [archivos de valores de Variable](http://msdn.microsoft.com/en-us/808595c3-8ef1-40bd-a93e-5cf237950e08) o, en una sección independiente dentro del archivo de script para los valores de las variables.  
+Cuando todos los comandos en el archivo de script se ejecuta correctamente, la aplicación de consola SSMA sale y devuelve el control al usuario. El contenido de un archivo de script es más o menos estático con información sobre las variable contenidas en una [archivos de valores de Variable](http://msdn.microsoft.com/808595c3-8ef1-40bd-a93e-5cf237950e08) o, en una sección independiente dentro del archivo de script para los valores de las variables.  
   
 **Ejemplo:**  
   
@@ -397,7 +397,7 @@ Lista completa de los comandos de script puede encontrarse en [ejecutando la con
 ## <a name="script-file-validation"></a>Validación del archivo de script  
 El usuario puede validar fácilmente su archivo de script en el archivo de definición de esquema **'A2SSConsoleScriptSchema.xsd'** disponible en la carpeta 'Esquemas'.  
   
-## <a name="next-step"></a>Paso siguiente  
+## <a name="next-step"></a>Paso siguiente
 El siguiente paso en la utilización de la consola es [crear archivos de valores Variable &#40; AccessToSQL &#41; ](../../ssma/access/creating-variable-value-files-accesstosql.md).  
   
 ## <a name="see-also"></a>Vea también  

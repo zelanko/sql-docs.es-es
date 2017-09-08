@@ -11,16 +11,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.cdcsource.f1
+- sql13.ssis.designer.cdcsource.connection.f1
+- sql13.ssis.designer.cdcsource.columns.f1
+- sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 031c5321bc17307a12403d974380eb710c841653
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 1fa9085d2b60f5416fe11359f1c2965ac38f9ee7
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="cdc-source"></a>origen de CDC
@@ -55,7 +58,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **Columnas de fila de error**: datos de registro que ocasionan el error.  
   
- Según la configuración del comportamiento de los errores, el origen CDC permite devolver los errores (conversión de datos, truncamiento) que aparecerán durante el proceso de extracción en la salida de error. Para más información, vea [Editor de origen de CDC &#40;página Salida de error&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md).  
+ Según la configuración del comportamiento de los errores, el origen CDC permite devolver los errores (conversión de datos, truncamiento) que aparecerán durante el proceso de extracción en la salida de error.  
   
 ## <a name="data-type-support"></a>Compatibilidad con tipos de datos  
  El componente de origen CDC para Microsoft admite todos los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que se asignan a los tipos de datos de SSIS correctos.  
@@ -117,15 +120,132 @@ use <cdc-enabled-database-name>
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Editor de origen de CDC &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
-  
--   [Editor de origen de CDC &#40; Página columnas &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
-  
--   [Editor de origen de CDC &#40;página Salida de error&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
-  
--   [CDC Source Custom Properties](../../integration-services/data-flow/cdc-source-custom-properties.md)  
+-   [Propiedades personalizadas del origen de CDC](../../integration-services/data-flow/cdc-source-custom-properties.md)  
   
 -   [Extraer datos de modificaciones mediante el origen de CDC](../../integration-services/data-flow/extract-change-data-using-the-cdc-source.md)  
+  
+## <a name="cdc-source-editor-connection-manager-page"></a>Editor de origen de CDC (página Administrador de conexiones)
+  Use la página **Administrador de conexiones** del cuadro de diálogo del **Editor de origen de CDC** con el fin de seleccionar el administrador de conexiones de ADO.NET para la base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] donde el origen de CDC lee las filas de cambios (la base de datos CDC). Una vez que se haya seleccionado la base de datos CDC, debe seleccionar una tabla capturada en la base de datos.  
+  
+ Para obtener más información acerca del origen de CDC, vea [CDC Source](../../integration-services/data-flow/cdc-source.md).  
+  
+### <a name="task-list"></a>Lista de tareas  
+ **Para abrir la página Administrador de conexiones del Editor de origen de CDC**  
+  
+1.  En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], abra el paquete [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] que tiene el origen de CDC.  
+  
+2.  En la pestaña **Flujo de datos** , haga doble clic en el origen de CDC.  
+  
+3.  En el **Editor de origen de CDC**, haga clic en **Administrador de conexiones**.  
+  
+### <a name="options"></a>Opciones  
+ **Administrador de conexiones de ADO.NET**  
+ Seleccione un administrador de conexiones existente de la lista o haga clic en **Nueva** para crear una nueva conexión. Es preciso realizar la conexión a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] habilitada para CDC y donde se encuentre la tabla de cambios seleccionada.  
+  
+ **Nueva**  
+ Haga clic en **Nueva**. Se abrirá el cuadro de diálogo **Configurar el administrador de conexiones ADO.NET** , donde puede crear un administrador de conexiones nuevo.  
+  
+ **Tabla CDC**  
+ Seleccione la tabla de origen de CDC que contenga los cambios capturados que desee leer y distribuir para el procesamiento de los componentes SSIS de nivel inferior.  
+  
+ **Instancia de captura**  
+ Seleccione o escriba el nombre de la instancia de captura CDC con la tabla CDC que se va a leer.  
+  
+ Una tabla de origen capturada puede tener una o dos instancias capturadas para controlar que la transición de una definición de tabla a través de los cambios en el esquema se realice sin problemas. Si se define más de una instancia de captura para la tabla de origen que se va a capturar, seleccione aquí la instancia de captura que desee usar. El nombre de instancia de captura predeterminado para una tabla [esquema]. [tabla] es \<esquema > _\<tabla >, pero que pueden ser diferentes nombres de instancia de captura reales en uso. La tabla real que se lee desde es la tabla CDC **cdc.\< instancia de captura > _CT**.  
+  
+ **Modo de procesamiento CDC**  
+ Seleccione el modo de procesamiento que mejor controle las necesidades de procesamiento. Las opciones posibles son:  
+  
+-   **Todos**: devuelve los cambios en el intervalo CDC actual sin los valores de **Antes de actualización** .  
+  
+-   **Todos con valores antiguos**: devuelve los cambios en el intervalo de procesamiento CDC actual, incluidos los valores antiguos (**Antes de actualización**). Para cada operación de actualización habrá dos filas: una con los valores anteriores a la actualización y otra con los valores posteriores a la actualización.  
+  
+-   **Neto**: devuelve una sola fila de cambios por cada fila de origen modificada en el intervalo de procesamiento de CDC actual. Si una fila de origen se actualizó varias veces, se genera el cambio combinado (por ejemplo, se genera insertar+actualizar como una actualización única y se genera actualizar+eliminar como una eliminación única). Al trabajar en el modo de procesamiento de cambios Neto, es posible dividir los cambios en salidas de eliminar, insertar y actualizar y controlarlos todos en paralelo, ya que la fila de origen única aparece en más de un resultado.  
+  
+-   **Neto con máscara de actualización**: este modo es similar al modo neto normal pero también agrega columnas booleanas con el patrón de nombre **__ $\<nombre de columna >\__Changed** que indica la fila de cambio de las columnas cambiadas en la actual.  
+  
+-   **Neto con combinación**: este modo es similar al modo Neto normal, pero con las operaciones de inserción y actualización combinadas en una sola operación de combinación (UPSERT).  
+  
+> [!NOTE]  
+>  Para todas las opciones de cambio Neto, la tabla de origen debe tener una clave principal o un índice único. Para las tablas sin una clave principal o índices únicos, debe usar la opción **Todos** .  
+  
+ **Variable que contiene el estado CDC**  
+ Seleccione la variable de paquete de la cadena de SSIS que mantenga el estado CDC para el contexto CDC actual. Para obtener más información sobre la variable de estado CDC, vea [Definir una variable de estado](../../integration-services/data-flow/define-a-state-variable.md).  
+  
+ **Incluir una columna de indicador de reprocesamiento**  
+ Active esta casilla para crear una columna especial de salida denominada **__$reprocessing**.  
+  
+ Esta columna tiene un valor **TRUE** cuando el intervalo de procesamiento CDC se superpone con el intervalo de procesamiento inicial (el intervalo de LSN correspondiente al período de carga inicial) o cuando un intervalo de procesamiento CDC se vuelve a procesar tras un error en una ejecución anterior. Con esta columna de indicador, el desarrollador de SSIS puede controlar los errores de manera diferente a cuando se vuelven a procesar los cambios (por ejemplo, se pueden omitir acciones como la eliminación de una fila que no existe o una inserción que causó un error en una clave duplicada).  
+  
+ Para más información, consulte [CDC Source Custom Properties](../../integration-services/data-flow/cdc-source-custom-properties.md).  
+  
+## <a name="cdc-source-editor-columns-page"></a>Editor de origen de CDC (página Columnas)
+  Use la página **Columnas** del cuadro de diálogo **Editor de origen de CDC** para asignar una columna de salida a cada columna externa (origen).  
+  
+### <a name="task-list"></a>Lista de tareas  
+ **Para abrir la página Columnas del Editor de origen de CDC**  
+  
+1.  En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], abra el paquete [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] que tiene el origen de CDC.  
+  
+2.  En la pestaña **Flujo de datos** , haga doble clic en el origen de CDC.  
+  
+3.  En el **Editor de origen de CDC**, haga clic en **Columnas**.  
+  
+### <a name="options"></a>Opciones  
+ **Columnas externas disponibles**  
+ Lista de las columnas externas disponibles en el origen de datos. Esta tabla no se puede usar para agregar o quitar columnas. Seleccione las columnas que se van a usar en el origen. Las columnas seleccionadas se agregan a la lista **Columna externa** en el orden en que se seleccionan.  
+  
+ **Columna externa**  
+ Vista de las columnas externas (origen) en el orden en que se verán cuando configure componentes que usen datos del origen de CDC. Para cambiar este orden, en primer lugar borre las columnas seleccionadas en la lista **Columnas externas disponibles** y, a continuación, seleccione las columnas externas en la lista en un orden diferente. Las columnas seleccionadas se agregan a la lista **Columna externa** en el orden en que las haya seleccionado.  
+  
+ **Columna de salida**  
+ Especifique un nombre único para cada columna de salida. El nombre predeterminado es el nombre de la columna externa (origen) seleccionada; sin embargo, puede elegir cualquier nombre único y descriptivo. El nombre especificado se muestra en el Diseñador de SSIS.  
+  
+## <a name="cdc-source-editor-error-output-page"></a>Editor de origen de CDC (página Salida de error)
+  Use la página **Salida de error** del cuadro de diálogo **Editor de origen de CDC** para seleccionar las opciones de control de errores.  
+  
+### <a name="task-list"></a>Lista de tareas  
+ **Para abrir la página Salida de error del Editor de origen de CDC**  
+  
+1.  En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], abra el paquete [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] que tiene el origen de CDC.  
+  
+2.  En la pestaña **Flujo de datos** , haga doble clic en el origen de CDC.  
+  
+3.  En el **Editor de origen de CDC**, haga clic en **Salida de error**.  
+  
+### <a name="options"></a>Opciones  
+ **Entrada/salida**  
+ Muestra el nombre del origen de datos.  
+  
+ **Columna**  
+ Muestra las columnas externas (origen) que se han seleccionado en la página **Administrador de conexiones** del cuadro de diálogo **Editor de origen de CDC** .  
+  
+ **Error**  
+ Seleccione la forma en la que el origen de CDC debe controlar errores en un flujo: omitir el error, redirigir la fila o hacer que el componente no funcione.  
+  
+ **Truncamiento**  
+ Seleccione la forma en la que el origen de CDC debe controlar el truncamiento en un flujo: omitir el error, redirigir la fila o hacer que el componente no funcione.  
+  
+ **Description**  
+ No se usa.  
+  
+ **Establecer este valor en las celdas seleccionadas**  
+ Seleccione la forma en la que el origen de CDC controla todas las celdas seleccionadas cuando se produce un error o un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  
+  
+ **Aplicar**  
+ Aplica las opciones de control de errores a las celdas seleccionadas.  
+  
+### <a name="error-handling-options"></a>Opciones de control de errores  
+ Use las opciones siguientes para configurar la forma en la que el origen de CDC controla errores y truncamientos.  
+  
+ **Error de componente**  
+ La tarea Flujo de datos genera un error cuando se produce un error o truncamiento. Éste es el comportamiento predeterminado.  
+  
+ **Omitir error**  
+ El error o el truncamiento se omite y la fila de datos se dirige a la salida de origen de CDC.  
+  
+ **Redirigir fila**  
+ La fila de datos de error o truncamiento se dirige a la salida de error del origen de CDC. En este caso, se usa el control de errores de origen de CDC. Para más información, consulte [CDC Source](../../integration-services/data-flow/cdc-source.md).  
   
 ## <a name="related-content"></a>Contenido relacionado  
   

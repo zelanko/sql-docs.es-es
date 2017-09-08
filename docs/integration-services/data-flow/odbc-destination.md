@@ -11,16 +11,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.odbcdest.f1
+- sql13.ssis.designer.odbcdest.connection.f1
+- sql13.ssis.designer.odbcdest.columns.f1
+- sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5947fa19295580396ce74f8dd93f75abed653797
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: b17bf59986633097e381e968222c5da670eefd7b
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="odbc-destination"></a>Destino ODBC
@@ -63,11 +66,11 @@ ms.lasthandoff: 08/03/2017
   
  Para obtener más información, vea uno de los siguientes temas:  
   
--   [Editor de destino de ODBC & #40; Página Administrador de conexiones & #41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [Editor de destino de ODBC &#40; Página Administrador de conexiones &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
   
--   [Editor de destino de ODBC & #40; Página Asignaciones & #41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [Editor de destino de ODBC &#40; Página Asignaciones &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
   
--   [Editor de destino de ODBC & #40; Página de salida de error & #41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [Editor de destino de ODBC &#40; Página de salida de error &#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
   
  El cuadro de diálogo **Editor avanzado** contiene las propiedades que se pueden establecer mediante programación.  
   
@@ -79,14 +82,107 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Editor de destino de ODBC & #40; Página de salida de error & #41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
-  
--   [Editor de destino de ODBC & #40; Página Asignaciones & #41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
-  
--   [Editor de destino de ODBC & #40; Página Administrador de conexiones & #41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
-  
 -   [Cargar datos mediante el destino de ODBC](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
   
 -   [Propiedades personalizadas del destino de ODBC](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
+## <a name="odbc-destination-editor-connection-manager-page"></a>Editor de destino de ODBC (página Administrador de conexiones)
+  Use la página **Administrador de conexiones** del cuadro de diálogo **Editor de destino de ODBC** para seleccionar el administrador de conexiones de ODBC para el destino. Esta página también permite seleccionar una tabla o vista de la base de datos.  
   
+ **Para abrir la página Administrador de conexiones del Editor de destino de ODBC**  
+  
+### <a name="task-list"></a>Lista de tareas  
+  
+-   En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], abra el paquete [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] que tiene el destino de ODBC.  
+  
+-   En la pestaña **Flujo de datos** , haga doble clic en el destino de ODBC.  
+  
+-   En el **Editor de destino de ODBC**, haga clic en **Administrador de conexiones**.  
+  
+### <a name="options"></a>Opciones  
+  
+#### <a name="connection-manager"></a>Administrador de conexiones  
+ Seleccione un administrador de conexiones de ODBC existente en la lista o haga clic en Nueva para crear una nueva conexión. La conexión puede ser a cualquier base de datos compatible con ODBC.  
+  
+#### <a name="new"></a>Nuevo  
+ Haga clic en **Nueva**. Se abrirá el cuadro de diálogo **Configurar el administrador de conexiones ODBC** , donde puede crear un administrador de conexiones nuevo.  
+  
+#### <a name="data-access-mode"></a>Modo de acceso a datos  
+ Seleccione el método para cargar datos en el destino. Las opciones se muestran en la tabla siguiente:  
+  
+|Opción|Description|  
+|------------|-----------------|  
+|Nombre de la tabla - Lote|Seleccione esta opción para configurar el destino de ODBC de manera que funcione en modo por lotes. Cuando seleccione esta opción, aparecerán las opciones siguientes:|  
+||**Nombre de la tabla o la vista**: seleccione una tabla o vista disponible en la lista.<br /><br /> Esta lista contiene solo las 1000 primeras tablas. Si la base de datos contiene más de 1000 tablas, puede escribir el principio de un nombre de tabla o usar el carácter comodín (\*) para escribir cualquier parte del nombre con el fin de mostrar las tablas que quiere usar.<br /><br /> **Tamaño del lote**: escriba el tamaño del lote para la carga masiva. Es el número de filas cargadas como un lote.|  
+|Nombre de la tabla - Fila a fila|Seleccione esta opción para configurar el destino de ODBC de manera que se inserte cada una de las filas en la tabla de destino de una en una. Cuando seleccione esta opción, aparecerá la opción siguiente:|  
+||**Nombre de la tabla o la vista**: seleccione en la lista una tabla o vista disponible en la base de datos.<br /><br /> Esta lista contiene solo las 1000 primeras tablas. Si la base de datos contiene más de 1000 tablas, puede escribir el principio de un nombre de tabla o usar el comodín (*) para escribir cualquier parte del nombre con el fin de mostrar la tabla o las tablas que desea usar.|  
+  
+#### <a name="preview"></a>Vista previa  
+ Haga clic en **Vista previa** para ver hasta 200 filas de datos para la tabla que ha seleccionado.  
+  
+## <a name="odbc-destination-editor-mappings-page"></a>Editor de destino de ODBC (página Asignaciones)
+  Use la página **Asignaciones** del cuadro de diálogo **Editor de destino de ODBC** para asignar columnas de entrada a columnas de destino.  
+  
+### <a name="options"></a>Opciones  
+  
+#### <a name="available-input-columns"></a>Columnas de entrada disponibles  
+ Lista de columnas de entrada disponibles. Arrastre y coloque una columna de entrada en una columna de destino disponible para asignar las columnas.  
+  
+#### <a name="available-destination-columns"></a>Columnas de destino disponibles  
+ Lista de columnas de destino disponibles. Arrastre y coloque una columna de destino en una columna de entrada disponible para asignar las columnas.  
+  
+#### <a name="input-column"></a>Columna de entrada  
+ Permite ver las columnas de entrada seleccionadas. Para quitar asignaciones seleccionando  **\<omitir >** para excluir columnas de los resultados.  
+  
+#### <a name="destination-column"></a>Columna de destino  
+ Muestra todas las columnas de destino disponibles, tanto las asignadas como las no asignadas.  
+  
+## <a name="odbc-destination-editor-error-output-page"></a>Editor de destinos de ODBC (página Salida de error)
+  Use la página **Salida de error** del cuadro de diálogo **Editor de destinos de ODBC** para seleccionar las opciones de control de errores.  
+  
+ **Para abrir la página Salida de error del Editor de destinos de ODBC**  
+  
+### <a name="task-list"></a>Lista de tareas  
+  
+-   En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], abra el paquete [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] que tiene el destino de ODBC.  
+  
+-   En la pestaña **Flujo de datos** , haga doble clic en el destino de ODBC.  
+  
+-   En el **Editor de destinos de ODBC**, haga clic en **Salida de error**.  
+  
+### <a name="options"></a>Opciones  
+  
+#### <a name="inputoutput"></a>Entrada/salida  
+ Muestra el nombre del origen de datos.  
+  
+#### <a name="column"></a>Columna  
+ No se usa.  
+  
+#### <a name="error"></a>Error  
+ Seleccione la forma en la que el destino de ODBC debe controlar errores en un flujo: omitir el error, redirigir la fila o hacer que el componente no funcione.  
+  
+#### <a name="truncation"></a>Truncamiento  
+ Seleccione la forma en la que el destino de ODBC debe controlar los truncamientos en un flujo: omitir el error, redirigir la fila o hacer que el componente no funcione.  
+  
+#### <a name="description"></a>Description  
+ Muestra una descripción del error.  
+  
+#### <a name="set-this-value-to-selected-cells"></a>Establecer este valor en las celdas seleccionadas  
+ Seleccione la forma en la que el destino de ODBC controla todas las celdas seleccionadas cuando se produce un error o un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  
+  
+#### <a name="apply"></a>Aplicar  
+ Aplica las opciones de control de errores a las celdas seleccionadas.  
+  
+### <a name="error-handling-options"></a>Opciones de control de errores  
+ Use las opciones siguientes para configurar la forma en la que el destino de ODBC controla errores y truncamientos.  
+  
+#### <a name="fail-component"></a>Error de componente  
+ La tarea Flujo de datos genera un error cuando se produce un error o truncamiento. Éste es el comportamiento predeterminado.  
+  
+#### <a name="ignore-failure"></a>Omitir error  
+ Se omite el error o el truncamiento.  
+  
+#### <a name="redirect-flow"></a>Redirigir fila  
+ La fila que está produciendo el error o el truncamiento se dirige a la salida de error del destino de ODBC. Para obtener más información, vea Destino de ODBC.  
+  
+

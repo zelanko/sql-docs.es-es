@@ -20,11 +20,11 @@ caps.latest.revision: 55
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: d91c1bb43978ab08857c09ffc235da78f5f0ffea
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Propiedades de Reporting Services - propiedades de sistema del servidor de informes
@@ -53,6 +53,6 @@ ms.lasthandoff: 08/03/2017
  <xref:ReportService2010.ReportingService2010.SetSystemProperties%2A>   
  [Creación de aplicaciones con el servicio Web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servicio Web de servidor de informes](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Referencia técnica de &#40; SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [Referencia técnica de & #40; SSRS & #41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   

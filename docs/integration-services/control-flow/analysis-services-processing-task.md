@@ -1,27 +1,34 @@
 ---
-title: "Tarea Procesamiento de Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.asprocessingtask.f1"
-helpviewer_keywords: 
-  - "Procesamiento de Analysis Services, tarea"
-  - "procesar objetos [Integration Services]"
+title: Tarea de procesamiento de Analysis Services | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.asprocessingtask.f1
+- sql13.dts.designer.asprocessingtask.general.f1
+- sql13.dts.designer.asprocessingtask.as.f1
+helpviewer_keywords:
+- Analysis Services Processing task
+- processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 caps.latest.revision: 52
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 1a5107d988014807892ec405dadf61656c7606a5
+ms.contentlocale: es-es
+ms.lasthandoff: 08/11/2017
+
 ---
-# Tarea Procesamiento de Analysis Services
+# <a name="analysis-services-processing-task"></a>Procesamiento de Analysis Services, tarea
   La tarea Procesamiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] procesa objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como modelos tabulares, cubos, dimensiones y modelos de minería de datos.  
   
  Al procesar modelos tabulares, tenga en cuenta lo siguiente:  
@@ -40,7 +47,7 @@ caps.handback.revision: 52
   
 -   [Tarea Consulta de minería de datos](../../integration-services/control-flow/data-mining-query-task.md)  
   
-## Procesamiento de objetos  
+## <a name="object-processing"></a>Procesamiento de objetos  
  Pueden procesarse varios objetos a la vez. Cuando se procesan varios objetos, se definen valores de configuración que se aplicarán al procesamiento de todos los objetos del lote.  
   
  Los objetos de un lote pueden procesarse de manera secuencial o en paralelo. Si el lote no contiene objetos para los que el procesamiento secuencial sea importante, debe considerarse el procesamiento paralelo, ya que puede aumentar la velocidad de procesamiento. Si los objetos del lote se procesan en paralelo, se puede configurar la tarea de forma que determine automáticamente el número de objetos que se procesarán simultáneamente, aunque también se puede especificar manualmente este número. Si los objetos se procesan de forma secuencial, se puede establecer un atributo de transacción en el lote especificando todos los objetos de una transacción o utilizando una transacción independiente para cada objeto del lote.  
@@ -52,32 +59,96 @@ caps.handback.revision: 52
  Esta tarea también permite configurar el control de errores en las claves de dimensión. Por ejemplo, la tarea puede omitir los errores o bien detenerse cuando se alcance un número especificado de errores. La tarea puede usar la configuración de errores predeterminada; también se puede definir una configuración de errores personalizada. En la configuración de errores personalizada, debe especificar el modo en que la tarea controla los errores, así como las condiciones de error. Por ejemplo, puede especificar que la tarea debe detenerse cuando se produzca el cuarto error o indicar cómo deben controlarse los valores **Null** en las claves. La configuración de errores personalizada puede incluir también la ruta de un archivo de registro de errores.  
   
 > [!NOTE]  
->  La tarea Procesamiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solo puede procesar objetos de análisis creados mediante las herramientas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  La tarea Procesamiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solo puede procesar objetos de análisis creados mediante las herramientas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Esta tarea se suele usar en combinación con una tarea de inserción masiva, que carga datos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o con una tarea Flujo de datos que implementa un flujo de datos que carga datos en una tabla. Por ejemplo, la tarea Flujo de datos puede tener un flujo de datos que extraiga los datos de una base de datos transaccional en línea (OLTP) y los cargue en una tabla de hechos de un almacenamiento de datos, tras lo cual se realiza la llamada a la tarea Procesamiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para que procese el cubo generado en el almacenamiento de datos.  
   
  La tarea Procesamiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa un administrador de conexiones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para conectarse a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para más información, consulte [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
   
-## Tratamiento de errores  
+## <a name="error-handling"></a>Tratamiento de errores  
   
-## Configuración de la tarea Procesamiento de Analysis Services  
+## <a name="configuration-of-the-analysis-services-processing-task"></a>Configuración de la tarea Procesamiento de Analysis Services  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
-  
--   [Editor de la tarea de procesamiento de Analysis Services &#40;página General&#41;](../../integration-services/control-flow/analysis-services-processing-task-editor-general-page.md)  
-  
--   [Editor de la tarea de procesamiento de Analysis Services &#40;página Analysis Services&#41;](../../integration-services/control-flow/analysis-services-processing-task-editor-analysis-services-page.md)  
+ Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el tema siguiente:  
   
 -   [Página Expresiones](../../integration-services/expressions/expressions-page.md)  
   
  Para obtener más información sobre cómo configurar estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el siguiente tema:  
   
--   [Establecer las propiedades de tareas o contenedores](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Configuración mediante programación de la tarea Procesamiento de Analysis Services  
- Para obtener más información sobre cómo establecer estas propiedades mediante programación, haga clic en uno de los temas siguientes:  
+## <a name="programmatic-configuration-of-the-analysis-services-processing-task"></a>Configuración mediante programación de la tarea Procesamiento de Analysis Services  
+ Para obtener más información sobre cómo establecer estas propiedades mediante programación, haga clic en el tema siguiente:  
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask>  
   
+## <a name="analysis-services-processing-task-editor-general-page"></a>Editor de la tarea de procesamiento de Analysis Services (página General)
+  Use la página **General** del cuadro de diálogo **Editor de la tarea de procesamiento de Analysis Services** para describir y asignar un nombre a la tarea de procesamiento de Analysis Services.  
   
+### <a name="options"></a>Opciones  
+ **Nombre**  
+ Escriba un nombre único para la tarea de procesamiento de Analysis Services. Este nombre se utiliza como etiqueta en el icono de tarea.  
+  
+> [!NOTE]  
+>  Los nombres de tarea deben ser únicos en un paquete.  
+  
+ **Description**  
+ Escriba una descripción de la tarea de procesamiento de Analysis Services.  
+  
+## <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Editor de la tarea de procesamiento de Analysis Services (página Analysis Services)
+  Utilice la página **Analysis Services** del cuadro de diálogo **Editor de la tarea de procesamiento de Analysis Services** para especificar un administrador de conexiones de Analysis Services, seleccionar los objetos analíticos que se deben procesar y establecer opciones de procesamiento y control de errores.  
+  
+ Al procesar modelos tabulares, tenga en cuenta lo siguiente:  
+  
+1.  No puede realizar análisis de impacto en modelos tabulares.  
+  
+2.  Algunas opciones de procesamiento para el modo tabular no están expuestas como, por ejemplo, el proceso de desfragmentación y el proceso de recálculo. Puede llevar a cabo estas funciones mediante la tarea Ejecutar DDL.  
+  
+3.  Algunas opciones de procesamiento proporcionadas, como índices de proceso, no son adecuadas para los modelos tabulares y no deben utilizarse.  
+  
+4.  Los valores de las operaciones por lotes se omiten para los modelos tabulares.  
+  
+### <a name="options"></a>Opciones  
+ **administrador de conexiones de Analysis Services**  
+ Seleccione un administrador de conexiones de Analysis Services de la lista o haga clic en **Nuevo** para crear uno.  
+  
+ **Nuevo**  
+ Cree un administrador de conexiones de Analysis Services nuevo.  
+  
+ **Temas relacionados:** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones con Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+  
+ **Lista de objetos**  
+ |Propiedad|Description|  
+|--------------|-----------------|  
+|**Nombre de objeto**|Enumera los nombres de los objetos especificados.|  
+|**Tipo**|Enumera los tipos de los objetos especificados.|  
+|**Opciones de proceso**|Seleccione una opción de procesamiento de la lista.<br /><br /> **Temas relacionados**: [Procesar un modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**Configuración**|Enumera los valores de configuración de procesamiento para los objetos especificados.|  
+  
+ **Agregar**  
+ Agregue un objeto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a la lista.  
+  
+ **Quitar**  
+ Seleccione un objeto y haga clic en **Eliminar**.  
+  
+ **Análisis de impacto**  
+ Lleve a cabo el análisis de impacto en el objeto seleccionado.  
+  
+ **Temas relacionados:** [Cuadro de diálogo Análisis de impacto &#40;Analysis Services - Datos multidimensionales&#41;](http://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
+  
+ **Resumen de configuración de lotes**  
+ |Propiedad|Description|  
+|--------------|-----------------|  
+|**Orden de procesamiento**|Especifica si los objetos se procesan de manera secuencial o en un lote; si se utiliza el procesamiento paralelo, especifica el número de objetos que se deben procesar simultáneamente.|  
+|**Modo de transacción**|Especifica el modo de transacción para el procesamiento secuencial.|  
+|**Errores de dimensión**|Especifica el comportamiento de la tarea cuando se produce un error.|  
+|**Ruta del registro de errores de claves de dimensiones**|Especifica la ruta de acceso del archivo en el que se registran los errores.|  
+|**Procesar objetos afectados**|Indica si los objetos afectados o dependientes también se deben procesar.|  
+  
+ **Cambiar configuración**  
+ Cambie las opciones de procesamiento y el control de errores en las claves de dimensiones.  
+  
+ **Temas relacionados:** [Cuadro de diálogo Cambiar configuración &#40;Analysis Services - Datos multidimensionales&#41;](http://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
+  
+

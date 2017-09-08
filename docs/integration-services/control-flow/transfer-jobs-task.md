@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transferjobstask.f1
+- sql13.dts.designer.transferjobstask.general.f1
+- sql13.dts.designer.transferjobstask.jobs.f1
 helpviewer_keywords:
 - Transfer Jobs task [Integration Services]
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 61839f15a36ff679f4edfc4585192100c370bb43
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: a4264d737901fbb7c023e216d3d8faf5309469f9
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="transfer-jobs-task"></a>Tarea Transferir trabajos
@@ -64,11 +66,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-transfer-jobs-task"></a>Configuración de la tarea Transferir trabajos  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
-  
--   [Editor de la tarea Transferir trabajos &#40;página General&#41;](../../integration-services/control-flow/transfer-jobs-task-editor-general-page.md)  
-  
--   [Editor de la tarea Transferir trabajos &#40;página Trabajos&#41;](../../integration-services/control-flow/transfer-jobs-task-editor-jobs-page.md)  
+ Para obtener información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el tema siguiente:  
   
 -   [Página Expresiones](../../integration-services/expressions/expressions-page.md)  
   
@@ -80,6 +78,74 @@ ms.lasthandoff: 08/03/2017
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el siguiente tema:  
   
 -   [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+  
+## <a name="transfer-jobs-task-editor-general-page"></a>Editor de la tarea Transferir trabajos (página General)
+  Utilice la página **General** del cuadro de diálogo **Editor de la tarea Transferir trabajos** para asignar un nombre y describir la tarea Transferir trabajos.  
+  
+> [!NOTE]  
+>  Solo los miembros del rol fijo de servidor **sysadmin** o uno de los roles fijos de base de datos del Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el servidor de destino pueden crear trabajos correctamente en este servidor. Para tener acceso a los trabajos del servidor de origen, los usuarios deben ser miembros de al menos el rol fijo de base de datos **SQLAgentUserRole** en este servidor. Para obtener más información sobre los roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus permisos, vea [Roles fijos de base de datos del Agente SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+  
+### <a name="options"></a>Opciones  
+ **Nombre**  
+ Escriba un nombre único para la tarea Transferir trabajos. Este nombre se utiliza como etiqueta en el icono de tarea.  
+  
+> [!NOTE]  
+>  Los nombres de tarea deben ser únicos en un paquete.  
+  
+ **Description**  
+ Escriba una descripción de la tarea Transferir trabajos.  
+  
+## <a name="transfer-jobs-task-editor-jobs-page"></a>Editor de la tarea Transferir trabajos (página Trabajos)
+  Utilice la página **Trabajos** del cuadro de diálogo **Editor de la tarea Transferir trabajos** para especificar las propiedades de copia de una o más tareas del Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a otra.  
+  
+> [!NOTE]  
+>  Para tener acceso a trabajos del servidor de origen, los usuarios deben ser miembros de al menos el rol fijo de base de datos **SQLAgentUserRole** en el servidor. Para crear trabajos correctamente en el servidor de destino, el usuario debe ser miembro del rol fijo de servidor **sysadmin** o una de los roles fijos de base de datos del Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre los roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus permisos, vea [Roles fijos de base de datos del Agente SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+  
+### <a name="options"></a>Opciones  
+ **SourceConnection**  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en  **\<nueva conexión... >** para crear una nueva conexión con el servidor de origen.  
+  
+ **DestinationConnection**  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en  **\<nueva conexión... >** para crear una nueva conexión con el servidor de destino.  
+  
+ **TransferAllJobs**  
+ Seleccione si la tarea debe copiar todos los trabajos del Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o solo los trabajos especificados del origen al servidor de destino.  
+  
+ Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**True**|Copia todos los trabajos.|  
+|**False**|Copia solo los trabajos especificados.|  
+  
+ **JobsList**  
+ Haga clic en el botón para examinar **(…)** para seleccionar los trabajos que quiere copiar. Se debe seleccionar al menos un trabajo.  
+  
+> [!NOTE]  
+>  Especifique **SourceConnection** antes de seleccionar los trabajos que quiere copiar.  
+  
+ La opción **JobsList** no está disponible cuando **TransferAllJobs** se establece como **True**.  
+  
+ **IfObjectExists**  
+ Seleccione cómo debería controlar la tarea los trabajos con el mismo nombre que ya existen en el servidor de destino.  
+  
+ Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**FailTask**|La tarea falla si ya existen trabajos con el mismo nombre en el servidor de destino.|  
+|**Sobrescribir**|La tarea sobrescribe los trabajos con el mismo nombre en el servidor de destino.|  
+|**Omitir**|La tarea omite los trabajos con el mismo nombre que existen en el servidor de destino.|  
+  
+ **EnableJobsAtDestination**  
+ Seleccione si se deben habilitar los trabajos copiados en el servidor de destino.  
+  
+ Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**True**|Habilita los trabajos en el servidor de destino.|  
+|**False**|Deshabilita los trabajos en el servidor de destino.|  
   
 ## <a name="see-also"></a>Vea también  
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

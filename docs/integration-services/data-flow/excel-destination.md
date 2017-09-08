@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.exceldest.f1
+- sql13.dts.designer.exceldestadapter.connection.f1
+- sql13.dts.designer.exceldestadapter.mappings.f1
+- sql13.dts.designer.exceldestadapter.erroroutput.f1
 helpviewer_keywords:
 - destinations [Integration Services], Excel
 - Excel [Integration Services]
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 62feb48c0b05d6f7c8d6b3342b49d9b050113ac3
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 69a0a8b907fcb45cf6ecd0576fb6fba04775d237
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="excel-destination"></a>Destino de Excel
@@ -83,14 +86,6 @@ ms.lasthandoff: 08/03/2017
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información sobre las propiedades que se pueden configurar en el cuadro de diálogo **Editor de destino de Excel** , haga clic en uno de los siguientes temas:  
-  
--   [Editor de destino de Excel &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/excel-destination-editor-connection-manager-page.md)  
-  
--   [Editor de destino de Excel &#40;página Asignaciones&#41;](../../integration-services/data-flow/excel-destination-editor-mappings-page.md)  
-  
--   [Editor de destino de Excel &#40;página Salida de error&#41;](../../integration-services/data-flow/excel-destination-editor-error-output-page.md)  
-  
  El cuadro de diálogo **Editor avanzado** indica todas las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
 -   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -114,6 +109,106 @@ ms.lasthandoff: 08/03/2017
 -   Entrada de blog, [Excel en Integration Services, parte 2 de 3: tablas y tipos de datos](http://go.microsoft.com/fwlink/?LinkId=217675), en dougbert.com.  
   
 -   Entrada de blog, [Excel en Integration Services, parte 3 de 3: problemas y alternativas](http://go.microsoft.com/fwlink/?LinkId=217676), en dougbert.com.  
+  
+## <a name="excel-destination-editor-connection-manager-page"></a>Editor de destino de Excel (página Administrador de conexiones)
+  Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de destino de Excel** para especificar la información de orígenes de datos y para obtener una vista previa de los resultados. El destino de Excel carga los datos en una hoja de cálculo o en un rango con nombre de un libro de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] .  
+  
+> [!NOTE]  
+>  La propiedad **CommandTimeout** del destino de Excel no está disponible en el **Editor de destino de Excel**, pero se puede establecer mediante el **Editor avanzado**. Además, ciertas opciones de carga rápida solo están disponibles en el **Editor avanzado**. Para obtener más información acerca de estas propiedades, vea la sección sobre el destino de Excel en [Excel Custom Properties](../../integration-services/data-flow/excel-custom-properties.md).  
+  
+### <a name="static-options"></a>Opciones estáticas  
+ **Administrador de conexiones con Excel**  
+ Seleccione un Administrador de conexiones con Excel en la lista o cree una conexión haciendo clic en **Nueva**.  
+  
+ **Nueva**  
+ Cree un administrador de conexiones mediante el cuadro de diálogo **Administrador de conexiones con Excel** .  
+  
+ **Modo de acceso a datos**  
+ Especifique el método para seleccionar datos del origen.  
+  
+|Opción|Description|  
+|------------|-----------------|  
+|Tabla o vista|Carga datos en una hoja de cálculo o en un rango con nombre del origen de datos de Excel.|  
+|Variable de nombre de tabla o nombre de vista|Especifique la hoja de calculo o el rango con nombre de una variable.<br /><br /> **Información relacionada**: [Usar variables en paquetes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Comando SQL|Cargue datos en el destino de Excel utilizando una consulta SQL.|  
+  
+ **Nombre de la hoja de Excel**  
+ Seleccione el destino de Excel de la lista desplegable. Si la lista está vacía, haga clic en **Nuevo**.  
+  
+ **Nueva**  
+ Haga clic en **Nuevo** para iniciar el cuadro de diálogo **Crear tabla** . Al hacer clic en **Aceptar**, el cuadro de diálogo crea el archivo de Excel al que señala el **Administrador de conexiones con Excel** .  
+  
+ **Datos existentes de la vista**  
+ Obtenga una vista previa de los resultados mediante el cuadro de diálogo **Vista previa de los resultados de la consulta** . La vista previa puede mostrar hasta 200 filas.  
+  
+> [!WARNING]  
+>  Si el **Administrador de conexiones con Excel** que ha seleccionado apunta a un archivo de Excel que no existe, verá un mensaje de error al hacer clic en este botón.  
+  
+### <a name="data-access-mode-dynamic-options"></a>Opciones dinámicas del modo de acceso a datos  
+  
+#### <a name="data-access-mode--table-or-view"></a>Modo de acceso a datos = Tabla o vista  
+ **Nombre de la hoja de Excel**  
+ Seleccione el nombre de la hoja de cálculo o el rango con nombre de los disponibles en el origen de datos.  
+  
+#### <a name="data-access-mode--table-name-or-view-name-variable"></a>Modo de acceso a datos = Variable de nombre de tabla o nombre de vista  
+ **Nombre de variable**  
+ Seleccione la variable que contiene el nombre de la hoja de cálculo o el rango con nombre.  
+  
+#### <a name="data-access-mode--sql-command"></a>Modo de acceso a datos = Comando SQL  
+ **Texto de comando SQL**  
+ Escriba el texto de una consulta SQL, genere la consulta haciendo clic en **Generar consulta**, o bien busque el archivo que contiene el texto de la consulta haciendo clic en **Examinar**.  
+  
+ **Generar consulta**  
+ Use el cuadro de diálogo **Generador de consultas** para crear visualmente la consulta SQL.  
+  
+ **Examinar**  
+ Use el cuadro de diálogo **Abrir** para encontrar el archivo que contiene el texto de la consulta SQL.  
+  
+ **Analizar consulta**  
+ Comprueba la sintaxis del texto de la consulta.  
+  
+## <a name="excel-destination-editor-mappings-page"></a>Editor de destino de Excel (página Asignaciones)
+  Utilice la página **Asignaciones** del cuadro de diálogo **Editor de destino de Excel** para asignar columnas de entrada a columnas de destino.  
+  
+### <a name="options"></a>Opciones  
+ **Columnas de entrada disponibles**  
+ Muestra la lista de columnas de entrada disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de entrada disponibles de la tabla a columnas de destino.  
+  
+ **Columnas de destino disponibles**  
+ Muestra la lista de columnas de destino disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de destino disponibles de la tabla a columnas de entrada.  
+  
+ **Columna de entrada**  
+ Muestra las columnas de entrada seleccionadas de la tabla anterior. Puede cambiar las asignaciones utilizando la lista de **Columnas de entrada disponibles**.  
+  
+ **Columna de destino**  
+ Muestra las columnas de destino disponibles, independientemente de si están asignadas o no.  
+  
+## <a name="excel-destination-editor-error-output-page"></a>Editor de destino de Excel (página Salida de error)
+  Utilice la página **Avanzadas** del cuadro de diálogo **Editor de destino de Excel** para especificar opciones para el control de errores.  
+  
+### <a name="options"></a>Opciones  
+ **Entrada o salida**  
+ Muestra el nombre del origen de datos.  
+  
+ **Columna**  
+ Muestra las columnas externas (de origen) seleccionadas en el nodo **Administrador de conexiones** del cuadro de diálogo **Editor de origen de Excel**.  
+  
+ **Error**  
+ Permite especificar qué debe ocurrir cuando se produce un error: omitir el error, redirigir la fila o hacer que el componente no funcione.  
+  
+ **Temas relacionados:** [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **Truncamiento**  
+ Permite especificar qué debe ocurrir cuando se produce un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  
+  
+ **Description**  
+ Muestra la descripción del error.  
+  
+ **Establecer este valor en las celdas seleccionadas**  
+ Permite especificar qué debe ocurrir en todas las celdas seleccionadas cuando se produce un error o un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  
+  
+ **Aplicar**  
+ Aplica la opción de control de errores a las celdas seleccionadas.  
   
 ## <a name="see-also"></a>Vea también  
  [Origen de Excel](../../integration-services/data-flow/excel-source.md)   

@@ -11,6 +11,10 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.messagequeuetask.f1
+- sql13.dts.designer.msgqueuetask.general.f1
+- sql13.dts.designer.msgqueuetask.send.f1
+- sql13.dts.designer.msgqueuetask.receive.f1
+- sql13.dts.designer.selectvariables.f1
 helpviewer_keywords:
 - Message Queue task [Integration Services]
 - receiving messages
@@ -22,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: bd765f2943b5bb1eb07a10664b1e9ce56bf01e29
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: eddacf0c8454160e6078ff59d150bab5218b6523
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="message-queue-task"></a>Tarea Cola de mensajes
@@ -90,13 +94,7 @@ ms.lasthandoff: 08/03/2017
 |**MSMQTaskTimeOut**|Indica que se superó el tiempo de espera de la tarea.|  
   
 ## <a name="configuration-of-the-message-queue-task"></a>Configuración de la tarea Cola de mensajes  
- Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación. Para obtener información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
-  
--   [Editor de la tarea Cola de mensajes &#40;página General&#41;](../../integration-services/control-flow/message-queue-task-editor-general-page.md)  
-  
--   [Editor de la tarea Cola de mensajes &#40;página Recibir&#41;](../../integration-services/control-flow/message-queue-task-editor-receive-page.md)  
-  
--   [Editor de la tarea Cola de mensajes &#40;página Enviar&#41;](../../integration-services/control-flow/message-queue-task-editor-send-page.md)  
+ Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación. Para obtener información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el tema siguiente:  
   
 -   [Página Expresiones](../../integration-services/expressions/expressions-page.md)  
   
@@ -105,6 +103,202 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-tasks"></a>Tareas relacionadas  
  Para más información sobre cómo establecer estas propiedades en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
+## <a name="message-queue-task-editor-general-page"></a>Editor de la tarea Cola de mensajes (página General)
+  Utilice la página **General** del cuadro de diálogo **Editor de la tarea Cola de mensajes** para asignar un nombre y describir la tarea Cola de mensajes, especificar el formato del mensaje e indicar si la tarea envía o recibe o mensajes.  
+  
+### <a name="options"></a>Opciones  
+ **Nombre**  
+ Proporcione un nombre único para la tarea Cola de mensajes. Este nombre se utiliza como etiqueta en el icono de tarea.  
+  
+> [!NOTE]  
+>  Los nombres de tarea deben ser únicos en un paquete.  
+  
+ **Description**  
+ Escriba una descripción de la tarea Cola de mensajes.  
+  
+ **Use2000Format**  
+ Indica si se va a utilizar el formato 2000 de Message Queue Server (que también recibe el nombre de MSMQ). El valor predeterminado es **False**.  
+  
+ **MSMQConnection**  
+ Seleccione un administrador de conexiones MSMQ existente o haga clic en \< **nueva conexión...** > para crear una nueva conexión de administrador.  
+  
+ **Temas relacionados**: [Administrador de conexiones MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md), [Editor del administrador de conexiones MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
+  
+ **de mensaje**  
+ Especifique si la tarea Cola de mensajes envía o recibe mensajes. Si selecciona **Enviar mensaje**, la página Enviar se agrega a la lista del panel izquierdo del cuadro de diálogo. Si selecciona **Recibir mensaje**, se agrega la página Recibir. De forma predeterminada, este valor está establecido en **Enviar mensaje**.  
+  
+## <a name="message-queue-task-editor-send-page"></a>Editor de la tarea Cola de mensajes (página Enviar)
+  Utilice la página **Enviar** del cuadro de diálogo **Editor de la tarea Cola de mensajes** para configurar una tarea Cola de mensajes para enviar mensajes desde un paquete de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  
+### <a name="options"></a>Opciones  
+ **UseEncryption**  
+ Indica si se debe cifrar el mensaje. El valor predeterminado es **False**.  
+  
+ **EncryptionAlgorithm**  
+ Si opta por usar cifrado, especifique el nombre del algoritmo de cifrado que debe utilizarse. La tarea Cola de mensajes puede utilizar los algoritmos RC2 y RC4. El valor predeterminado es **RC2**.  
+  
+> [!NOTE]  
+>  El algoritmo RC4 se admite únicamente por razones de compatibilidad con versiones anteriores. El material nuevo solo se puede cifrar con RC4 o RC4_128 cuando la base de datos tenga el nivel de compatibilidad 90 o 100. (No se recomienda). Use un algoritmo más reciente como uno de los algoritmos AES en su lugar. En la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el material cifrado con RC4 o RC4_128 se puede descifrar en cualquier nivel de compatibilidad.  
+  
+> [!IMPORTANT]  
+>  Éstos son los algoritmos de cifrado que admite la tecnología de Message Queue Server (que también recibe el nombre de MSMQ). Ambos algoritmos de cifrado se consideran en estos momentos criptográficamente menos seguros que otros algoritmos más recientes con los que Message Queue Server aún no es compatible. Por tanto, debe considerar con detenimiento sus necesidades criptográficas a la hora de enviar mensajes con la tarea Cola de mensajes.  
+  
+ **MessageType**  
+ Seleccione el tipo de mensaje. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Mensaje de archivo de datos**|El mensaje se almacena en un archivo. Al seleccionar este valor se muestra la opción dinámica **DataFileMessage**.|  
+|**Mensaje de variable**|El mensaje se almacena en una variable. Al seleccionar este valor se muestra la opción dinámica **VariableMessage**.|  
+|**Mensaje de cadena**|El mensaje se almacena en la tarea Cola de mensajes. Al seleccionar este valor se muestra la opción dinámica **StringMessage**.|  
+  
+### <a name="messagetype-dynamic-options"></a>Opciones dinámicas de MessageType  
+  
+#### <a name="messagetype--data-file-message"></a>MessageType = Mensaje de archivo de datos  
+ **DataFileMessage**  
+ Escriba la ruta de acceso del archivo de datos o haga clic en el botón de puntos suspensivos **(…)** para ubicar el archivo.  
+  
+#### <a name="messagetype--variable-message"></a>MessageType = Mensaje de variable  
+ **VariableMessage**  
+ Escriba los nombres de las variables o haga clic en el botón de puntos suspensivos **(…)** para seleccionar las variables. Las variables se separan con comas.  
+  
+ **Temas relacionados:** Seleccionar variables  
+  
+#### <a name="messagetype--string-message"></a>MessageType = Mensaje de cadena  
+ **StringMessage**  
+ Escriba el mensaje de cadena o haga clic en el botón de puntos suspensivos **(…)** y escriba el mensaje en el cuadro de diálogo **Escribir mensaje de cadena** .  
+  
+## <a name="message-queue-task-editor-receive-page"></a>Editor de la tarea Cola de mensajes (página Recibir)
+  Use la página **Recibir** del cuadro de diálogo **Editor de la tarea Cola de mensajes** para configurar una tarea de la cola de mensajes para recibir mensajes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ).  
+  
+### <a name="options"></a>Opciones  
+ **RemoveFromMessageQueue**  
+ Indique si desea eliminar el mensaje de la cola una vez recibido. De manera predeterminada, este valor se establece en **False**.  
+  
+ **ErrorIfMessageTimeOut**  
+ Indique si desea mostrar un mensaje de error si se produce un error en la tarea al exceder el tiempo de espera. El valor predeterminado es **False**.  
+  
+ **TimeoutAfter**  
+ Si elige mostrar un mensaje de error al producirse errores en la tarea, indique el número de segundos que deben transcurrir antes de mostrar el mensaje de tiempo de espera.  
+  
+ **MessageType**  
+ Seleccione el tipo de mensaje. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Mensaje de archivo de datos**|El mensaje se almacena en un archivo. Al seleccionar este valor se muestra la opción dinámica **DataFileMessage**.|  
+|**Mensaje de variable**|El mensaje se almacena en una variable. Al seleccionar este valor se muestra la opción dinámica **VariableMessage**.|  
+|**Mensaje de cadena**|El mensaje se almacena en la tarea Cola de mensajes. Al seleccionar este valor se muestra la opción dinámica **StringMessage**.|  
+|**Mensaje de cadena para variable**|El mensaje.<br /><br /> Al seleccionar este valor se muestra la opción dinámica **StringMessage**.|  
+  
+### <a name="messagetype-dynamic-options"></a>Opciones dinámicas de MessageType  
+  
+#### <a name="messagetype--data-file-message"></a>MessageType = Mensaje de archivo de datos  
+ **SaveFileAs**  
+ Escriba la ruta del archivo que quiere usar o haga clic en el botón de puntos suspensivos **(…)** para buscar el archivo.  
+  
+ **Sobrescribir**  
+ Indique si desea sobrescribir los datos de un archivo existente al guardar el contenido del mensaje de archivo de datos. El valor predeterminado es **False**.  
+  
+ **Filtro**  
+ Indique si desea aplicar un filtro al mensaje. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Sin filtro**|La tarea no filtra mensajes. Al seleccionar este valor se muestra la opción dinámica **IdentifierReadOnly**.|  
+|**De paquete**|El mensaje solo recibe mensajes del paquete seleccionado. Al seleccionar este valor se muestra la opción dinámica **Identifier**.|  
+  
+#### <a name="filter-dynamic-options"></a>Opciones dinámicas de Filtro  
+  
+##### <a name="filter--no-filter"></a>Filtro = Sin filtro  
+ **IdentifierReadOnly**  
+ Esta opción es de solo lectura. Podría estar en blanco o contener el GUID de un paquete si se ha establecido anteriormente la propiedad Filtro.  
+  
+##### <a name="filter--from-package"></a>Filtro = De paquete  
+ **Identifier**  
+ Si elige aplicar un filtro, escriba el identificador único del paquete del que se recibirán los mensajes o haga clic en el botón de puntos suspensivos **(…)** y seleccione el paquete.  
+  
+ **Temas relacionados:** [Seleccionar un paquete](../../integration-services/control-flow/select-a-package.md)  
+  
+#### <a name="messagetype--variable-message"></a>MessageType = Mensaje de variable  
+ **Filtro**  
+ Especifica si se desea aplicar un filtro a los mensajes. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Sin filtro**|La tarea no filtra mensajes. Al seleccionar este valor se muestra la opción dinámica **IdentifierReadOnly**.|  
+|**De paquete**|El mensaje solo recibe mensajes del paquete seleccionado. Al seleccionar este valor se muestra la opción dinámica **Identifier**.|  
+  
+ **Variable**  
+ Escriba el nombre de variable o haga clic en \< **nueva variable...** > y, a continuación, configure una nueva variable.  
+  
+ **Temas relacionados:** [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+#### <a name="filter-dynamic-options"></a>Opciones dinámicas de Filtro  
+  
+##### <a name="filter--no-filter"></a>Filtro = Sin filtro  
+ **IdentifierReadOnly**  
+ Esta opción está en blanco.  
+  
+##### <a name="filter--from-package"></a>Filtro = De paquete  
+ **Identifier**  
+ Si elige aplicar un filtro, escriba el identificador único del paquete del que se recibirán los mensajes o haga clic en el botón de puntos suspensivos **(…)** y seleccione el paquete.  
+  
+ **Temas relacionados:** [Seleccionar un paquete](../../integration-services/control-flow/select-a-package.md)  
+  
+#### <a name="messagetype--string-message"></a>MessageType = Mensaje de cadena  
+ **Comparar**  
+ Especifica si se desea aplicar un filtro a los mensajes. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**None**|Los mensajes no se comparan.|  
+|**Coincidencia exacta**|Los mensajes deben coincidir exactamente con la cadena de la opción **CompareString** .|  
+|**Omitir mayúsculas y minúsculas**|El mensaje debe coincidir con la cadena de la opción **CompareString** , pero la comparación no distingue mayúsculas de minúsculas.|  
+|**Que contenga**|El mensaje debe contener la cadena de la opción **CompareString** .|  
+  
+ **CompareString**  
+ A menos que la opción **Comparar** se haya establecido en **Ninguno**, deberá indicar la cadena con la que se comparará el mensaje.  
+  
+#### <a name="messagetype--string-message-to-variable"></a>MessageType = Mensaje de cadena para variable  
+ **Comparar**  
+ Especifica si se desea aplicar un filtro a los mensajes. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**None**|Los mensajes no se comparan.|  
+|**Coincidencia exacta**|Los mensajes deben coincidir exactamente con la cadena de la opción **CompareString** .|  
+|**Omitir mayúsculas y minúsculas**|El mensaje debe coincidir con la cadena de la opción **CompareString** , pero la comparación no distingue mayúsculas de minúsculas.|  
+|**Que contenga**|El mensaje debe contener la cadena de la opción **CompareString** .|  
+  
+ **CompareString**  
+ A menos que la opción **Comparar** se haya establecido en **Ninguno**, deberá indicar la cadena con la que se comparará el mensaje.  
+  
+ **Variable**  
+ Escriba el nombre de la variable para conservar el mensaje recibido o haga clic en \< **nueva variable...** > y, a continuación, configure una nueva variable.  
+  
+ **Temas relacionados:** [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+## <a name="select-variables"></a>Seleccionar variables
+  Utilice el cuadro de diálogo **Seleccionar variables** para especificar las variables que se van a utilizar en una operación de envío de mensaje en la tarea Cola de mensajes. La lista **Variables disponibles** incluye las variables definidas por el usuario y de sistema que se encuentran en el ámbito de la tarea Cola de mensaje o en su contenedor principal. La tarea utiliza las variables de la lista **Variables seleccionadas** .  
+  
+### <a name="options"></a>Opciones  
+ **Variables disponibles**  
+ Seleccione una o más variables.  
+  
+ **Variables seleccionadas**  
+ Seleccione una o más variables.  
+  
+ **Flechas derechas**  
+ Mueva las variables seleccionadas a la lista **Variables seleccionadas** .  
+  
+ **Flechas izquierdas**  
+ Mueva las variables seleccionadas nuevamente a la lista **Variables disponibles** .  
+  
+ **Nueva variable**  
+ Cree una nueva variable.  
+  
+ **Temas relacionados:** [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
 ## <a name="see-also"></a>Vea también  
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  

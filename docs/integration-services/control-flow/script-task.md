@@ -1,29 +1,36 @@
 ---
-title: "Tarea Script | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.scripttask.f1"
-helpviewer_keywords: 
-  - "scripts [Integration Services], tareas"
-  - "tarea Script [Integration Services], acerca de la tarea Script"
-  - "Script, tarea [Integration Services]"
+title: Tarea de script | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.scripttask.f1
+- sql13.dts.designer.scripttask.general.f1
+- sql13.dts.designer.scripttask.script.f1
+helpviewer_keywords:
+- scripts [Integration Services], tasks
+- Script task [Integration Services], about Script task
+- Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 caps.latest.revision: 67
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: b1a74f830a25717aa3e0e36910842582be4be1c5
+ms.contentlocale: es-es
+ms.lasthandoff: 08/11/2017
+
 ---
-# Tarea Script
-  La tarea Script proporciona código para realizar funciones que no están disponibles en las tareas integradas ni en las transformaciones proporcionadas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La tarea Script también puede combinar funciones en un script, en lugar de usar múltiples tareas y transformaciones. La tarea Script sirve para trabajos que se deben realizar una sola vez en un paquete (o una vez por objeto enumerado), en lugar de una vez por fila de datos.  
+# <a name="script-task"></a>Tarea Script
+  La tarea Script proporciona código para realizar funciones que no están disponibles en las tareas integradas ni en las transformaciones proporcionadas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La tarea Script también puede combinar funciones en un script, en lugar de usar múltiples tareas y transformaciones. La tarea Script sirve para trabajos que se deben realizar una sola vez en un paquete (o una vez por objeto enumerado), en lugar de una vez por fila de datos.  
   
  Puede usar la tarea Script para los siguientes fines:  
   
@@ -39,17 +46,17 @@ caps.handback.revision: 67
   
  Una vez que haya decidido que la tarea Script es la opción adecuada para el paquete, tiene que desarrollar el script que la tarea utiliza y configurar la propia tarea.  
   
-## Escribir y ejecutar el script que la tarea utiliza  
+## <a name="writing-and-running-the-script-that-the-task-uses"></a>Escribir y ejecutar el script que la tarea utiliza  
  La tarea Script usa [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools para Aplicaciones (VSTA) como entorno de escritura de los scripts y como motor que los ejecuta.  
   
- VSTA proporciona todas las características estándar del entorno [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], como el editor de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] con códigos de color, IntelliSense y el **Explorador de objetos**. VSTA también utiliza el mismo depurador que usan otras herramientas de desarrollo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Los puntos de interrupción del script funcionan a la perfección con los puntos de interrupción de las tareas y los contenedores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . VSTA es compatible con los lenguajes de programación [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic y [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
+ VSTA proporciona todas las características estándar del entorno [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , como el editor de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] con códigos de color, IntelliSense y el **Explorador de objetos**. VSTA también utiliza el mismo depurador que usan otras herramientas de desarrollo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Los puntos de interrupción del script funcionan a la perfección con los puntos de interrupción de las tareas y los contenedores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . VSTA es compatible con los lenguajes de programación [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic y [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
   
  Para ejecutar un script, debe tener VSTA instalado en el equipo en que se ejecute el paquete. Al ejecutar el paquete, la tarea carga el motor de script y ejecuta el script. Puede tener acceso a ensamblados .NET externos en scripts; para ello, debe agregar referencias a dichos ensamblados en el proyecto.  
   
 > [!NOTE]  
 >  A diferencia de las versiones anteriores en las que podía indicar si se precompilaban los scripts, todos los scripts se precompilan en [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] y versiones posteriores. Al precompilar el script, no se carga el motor del lenguaje en tiempo de ejecución, por lo que el paquete se ejecuta con mayor rapidez. Sin embargo, los archivos binarios precompilados utilizan una cantidad considerable de espacio en disco.  
   
-## Configurar la tarea Script  
+## <a name="configuring-the-script-task"></a>Configurar la tarea Script  
  Puede configurar la tarea Script de las maneras siguientes:  
   
 -   Proporcionar el script personalizado que ejecuta la tarea.  
@@ -62,8 +69,8 @@ caps.handback.revision: 67
   
  Puede establecer estas propiedades a través del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
-### Configurar la tarea Script en el Diseñador  
- En la tabla siguiente se describe el evento **ScriptTaskLogEntry** que se puede registrar para la tarea Script. El evento **ScriptTaskLogEntry** se selecciona para su registro en la pestaña **Detalles** del cuadro de diálogo **Configurar registros de SSIS** . Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../../integration-services/performance/custom-messages-for-logging.md).  
+### <a name="configuring-the-script-task-in-the-designer"></a>Configurar la tarea Script en el Diseñador  
+ En la tabla siguiente se describe el evento **ScriptTaskLogEntry** que se puede registrar para la tarea Script. El evento **ScriptTaskLogEntry** se selecciona para su registro en la pestaña **Detalles** del cuadro de diálogo **Configurar registros de SSIS** . Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Entrada del registro|Description|  
 |---------------|-----------------|  
@@ -79,14 +86,65 @@ caps.handback.revision: 67
   
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea el siguiente tema:  
   
--   [Establecer las propiedades de tareas o contenedores](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Establecer las propiedades de tareas o contenedores](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-### Configurar la tarea Script mediante programación  
+### <a name="configuring-the-script-task-programmatically"></a>Configurar la tarea Script mediante programación  
  Para obtener más información sobre cómo establecer estas propiedades mediante programación, vea el tema siguiente:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask>  
   
-## Contenido relacionado  
+## <a name="script-task-editor-general-page"></a>Editor de la tarea Script (página General)
+  Utilice la página **General** del cuadro de diálogo **Editor de la tarea Script** para asignar un nombre a la tarea Script y describirla.  
+  
+ Para obtener más información acerca de la tarea Script, vea [tarea Script](../../integration-services/control-flow/script-task.md) y [configurar la tarea Script en el Editor de la tarea Script](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Para obtener información sobre cómo programar la tarea Script, vea [extender el paquete con la tarea de secuencia de comandos](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
+  
+### <a name="options"></a>Opciones  
+ **Nombre**  
+ Proporcione un nombre único para la tarea Script. Este nombre se utiliza como etiqueta en el icono de tarea.  
+  
+> [!NOTE]  
+>  Los nombres de tarea deben ser únicos en un paquete.  
+  
+ **Description**  
+ Escriba una descripción de la tarea Script.  
+  
+## <a name="script-task-editor-script-page"></a>Editor de la tarea Script (página Script)
+  Use la página **Script** del cuadro de diálogo **Editor de la tarea Script** para establecer las propiedades del script y para especificar las variables a las que se puede tener acceso desde el mismo.  
+  
+> [!NOTE]  
+>  En [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] y versiones posteriores, se recompilan todos los scripts. En versiones anteriores, se establece una propiedad **PrecompileScriptIntoBinaryCode** para especificar que se precompiló el script.  
+  
+ Para obtener más información acerca de la tarea Script, vea [Script Task](../../integration-services/control-flow/script-task.md) y [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Para obtener información sobre cómo programar la tarea Script, vea [extender el paquete con la tarea de secuencia de comandos](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
+  
+### <a name="options"></a>Opciones  
+ **Lenguaje de script**  
+ Seleccione el lenguaje de scripting para la tarea, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
+  
+ Una vez haya creado un script para la tarea, no podrá cambiar el valor de la propiedad **ScriptLanguage** .  
+  
+ Para establecer el lenguaje de scripting predeterminado para la tarea Script, utilice la opción **Lenguaje de scripting** en la página **General** del cuadro de diálogo **Opciones** . Para obtener más información, vea [General Page](../../integration-services/control-flow/script-task-editor-general-page.md).  
+  
+ **EntryPoint**  
+ Especifique el método que el tiempo de ejecución de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] llama como punto de entrada en el código de la tarea Script. El método especificado debe estar en la clase ScriptMain del proyecto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). La clase ScriptMain es la clase predeterminada que las plantillas del script generan.  
+  
+ Si cambia el nombre del método en el proyecto VSTA, deberá cambiar el valor de la propiedad **EntryPoint** .  
+  
+ **Variables de solo lectura**  
+ Escriba una lista separada por comas de variables de solo lectura que estén disponibles para el script, o bien haga clic en el botón de puntos suspensivos (**…**) y seleccione las variables en el cuadro de diálogo **Seleccionar variables** .  
+  
+> [!NOTE]  
+>  Los nombres de variables distinguen entre mayúsculas y minúsculas.  
+  
+ **Variables de lectura/escritura**  
+ Escriba una lista separada por comas de variables de lectura y escritura que estén disponibles para el script, o bien haga clic en el botón de puntos suspensivos (**…**) y seleccione las variables en el cuadro de diálogo **Seleccionar variables** .  
+  
+> [!NOTE]  
+>  Los nombres de variables distinguen entre mayúsculas y minúsculas.  
+  
+ **Editar script**  
+ Abre la VSTA IDE donde puede crear o modificar el script.  
+  
+## <a name="related-content"></a>Contenido relacionado  
   
 -   Artículo técnico, [How to send email with delivery notification in C# (Enviar correo con notificación de entrega en C#)](http://go.microsoft.com/fwlink/?LinkId=237625), en shareourideas.com  
   

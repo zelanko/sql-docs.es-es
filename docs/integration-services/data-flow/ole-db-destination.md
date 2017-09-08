@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.oledbdest.f1
+- sql13.dts.designer.oledbdestadapter.connection.f1
+- sql13.dts.designer.oledbdestadapter.mappings.f1
+- sql13.dts.designer.oledbdestadapter.errorhandling.f1
 helpviewer_keywords:
 - fast-load data access mode [Integration Services]
 - OLE DB destination [Integration Services]
@@ -25,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5a16dc276a0ed875c2343bf0b5de7739e3c2955a
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 4b765081a3897553bef2791bf72631908b5adc2c
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="ole-db-destination"></a>Destino de OLE DB
@@ -106,14 +109,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuring-the-ole-db-destination"></a>Configurar el destino de OLE DB  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información sobre las propiedades que se pueden establecer en el cuadro de diálogo **Editor de destino de OLE DB** , haga clic en uno de los siguientes temas:  
-  
--   [Editor de destino de OLE DB &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/ole-db-destination-editor-connection-manager-page.md)  
-  
--   [Editor de destino de OLE DB &#40;página Asignaciones&#41;](../../integration-services/data-flow/ole-db-destination-editor-mappings-page.md)  
-  
--   [Editor de destino de OLE DB &#40;página Salida de error&#41;](../../integration-services/data-flow/ole-db-destination-editor-error-output-page.md)  
-  
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
 -   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -125,6 +120,185 @@ ms.lasthandoff: 08/03/2017
 -   [Cargar datos mediante el destino de OLE DB](../../integration-services/data-flow/load-data-by-using-the-ole-db-destination.md)  
   
 -   [Establecer las propiedades de un componente de flujo de datos](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="ole-db-destination-editor-connection-manager-page"></a>Editor de destino de OLE DB (página Administrador de conexiones)
+  Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de destino de OLE DB** para seleccionar la conexión OLE DB del destino. Esta página también permite seleccionar una tabla o vista de la base de datos.  
+  
+> [!NOTE]  
+>  Si el origen de datos es [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, el origen de datos requiere un administrador de conexiones distinto al de las versiones anteriores de Excel. Para más información, vea [Conectarse a un libro de Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md).  
+  
+> [!NOTE]  
+>  La propiedad **CommandTimeout** del destino de OLE DB no está disponible en el **Editor de destino de OLE DB**, pero se puede establecer mediante el **Editor avanzado**. Además, ciertas opciones de carga rápida solo están disponibles en el **Editor avanzado**. Para obtener más información acerca de estas propiedades, vea la sección sobre el destino de OLE DB en [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
+  
+### <a name="static-options"></a>Opciones estáticas  
+ **OLE DB, administrador de conexiones**  
+ Seleccione un administrador de conexiones de la lista o haga clic en **Nuevo**para crear una conexión.  
+  
+ **Nuevo**  
+ Cree un administrador de conexiones con el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** .  
+  
+ **Modo de acceso a datos**  
+ Especifique el método para cargar los datos en el destino. Para cargar datos del juego de caracteres de doble byte (DBCS), es necesario que utilice una de las opciones de carga rápida. Para obtener más información acerca de los modos de acceso a datos de carga rápida, optimizados para inserciones masivas, vea [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
+  
+|Opción|Description|  
+|------------|-----------------|  
+|Tabla o vista|Carga los datos en una tabla o vista del destino OLE DB.|  
+|Carga rápida de tabla o vista|Carga los datos en una tabla o vista del destino OLE DB y utiliza la opción de carga rápida. Para obtener más información acerca de los modos de acceso a datos de carga rápida, optimizados para inserciones masivas, vea [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
+|Variable de nombre de tabla o nombre de vista|Especifique el nombre de la tabla o vista de una variable.<br /><br /> **Información relacionada**: [Usar variables en paquetes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Carga rápida de variable de nombre de tabla o nombre de vista|Especifica el nombre de la tabla o la vista en una variable y utiliza la opción de carga rápida para cargar los datos. Para obtener más información acerca de los modos de acceso a datos de carga rápida, optimizados para inserciones masivas, vea [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
+|Comando SQL|Carga los datos en el destino OLE DB mediante una consulta SQL.|  
+  
+ **Vista previa**  
+ Obtenga una vista previa de los resultados mediante el cuadro de diálogo **Vista previa de los resultados de la consulta** . La vista previa puede mostrar hasta 200 filas.  
+  
+### <a name="data-access-mode-dynamic-options"></a>Opciones dinámicas del modo de acceso a datos  
+ Cada uno de los valores de **Modo de acceso a datos** muestra un conjunto dinámico de opciones específico de ese valor. En las secciones siguientes se describe cada una de las opciones dinámicas disponibles para cada valor de **Modo de acceso a datos** .  
+  
+#### <a name="data-access-mode--table-or-view"></a>Modo de acceso a datos = Tabla o vista  
+ **Nombre de la tabla o la vista**  
+ Seleccione el nombre de la tabla o vista de los disponibles en una lista del origen de datos.  
+  
+ **Nuevo**  
+ Permite crear una tabla con el cuadro de diálogo **Crear tabla** .  
+  
+> [!NOTE]  
+>  Al hacer clic en **Nueva**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] genera una instrucción predeterminada CREATE TABLE basada en el origen de datos conectado. La instrucción predeterminada CREATE TABLE no incluirá el atributo FILESTREAM, aunque la tabla de origen tenga una columna con el atributo FILESTREAM declarado. Para ejecutar un componente [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con el atributo FILESTREAM, implemente en primer lugar el almacenamiento de FILESTREAM en la base de datos de destino. A continuación, agregue el atributo FILESTREAM a la instrucción CREATE TABLE en el cuadro de diálogo **Crear tabla** . Para más información, vea [Datos de objeto binario grande &#40;Blob&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  
+#### <a name="data-access-mode--table-or-view--fast-load"></a>Modo de acceso a datos = Carga rápida de tabla o vista  
+ **Nombre de la tabla o la vista**  
+ Seleccione una tabla o una vista de la base de datos con esta lista, o bien haga clic en **Nuevo**para crear una tabla.  
+  
+ **Nuevo**  
+ Permite crear una tabla con el cuadro de diálogo **Crear tabla** .  
+  
+> [!NOTE]  
+>  Al hacer clic en **Nueva**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] genera una instrucción predeterminada CREATE TABLE basada en el origen de datos conectado. La instrucción predeterminada CREATE TABLE no incluirá el atributo FILESTREAM, aunque la tabla de origen tenga una columna con el atributo FILESTREAM declarado. Para ejecutar un componente [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con el atributo FILESTREAM, implemente en primer lugar el almacenamiento de FILESTREAM en la base de datos de destino. A continuación, agregue el atributo FILESTREAM a la instrucción CREATE TABLE en el cuadro de diálogo **Crear tabla** . Para más información, vea [Datos de objeto binario grande &#40;Blob&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  
+ **Mantener valores de identidad**  
+ Especifique si se copian los valores de identidad cuando se cargan los datos. Esta propiedad solo está disponible con la opción de carga rápida. El valor predeterminado de esta propiedad es **false**.  
+  
+ **Mantener valores NULL**  
+ Especifique si se copian los valores NULL cuando se cargan los datos. Esta propiedad solo está disponible con la opción de carga rápida. El valor predeterminado de esta propiedad es **false**.  
+  
+ **Bloqueo de tabla**  
+ Especifique si la tabla se bloquea durante la carga. El valor predeterminado de esta propiedad es **true**.  
+  
+ **Restricciones CHECK**  
+ Especifique si el destino comprueba restricciones cuando carga datos. El valor predeterminado de esta propiedad es **true**.  
+  
+ **Filas por lote**  
+ Especifique el número de filas de un lote. El valor predeterminado de esta propiedad es **-1**, lo que indica que no se ha asignado ningún valor.  
+  
+> [!NOTE]  
+>  Borre el cuadro de texto del **Editor de destino de OLE DB** para indicar que no quiere asignar un valor personalizado a esta propiedad.  
+  
+ **Tamaño máximo de confirmación de inserción**  
+ Especifique el tamaño de lote que el destino OLE DB intenta confirmar en operaciones de carga rápida. El valor de **0** indica que todos los datos se han confirmado en un solo lote después de procesar todas las filas.  
+  
+> [!NOTE]  
+>  El valor **0** podría hacer que el paquete en ejecución deje de responder si el destino de OLE DB y otro componente de flujo de datos están actualizando la misma tabla de origen. Para evitar que el paquete se detenga, establezca la opción **Tamaño máximo de confirmación de inserción** en **2147483647**.  
+  
+ Si proporciona un valor en esta propiedad, el destino confirma las filas en lotes con el tamaño menor de (a) el **Tamaño máximo de confirmación de inserción**o (b) las filas restantes del búfer que se está procesando.  
+  
+> [!NOTE]  
+>  Los errores de restricciones en el destino provocan el error del lote completo de las filas definidas por **Tamaño máximo de confirmación de inserción** .  
+  
+#### <a name="data-access-mode--table-name-or-view-name-variable"></a>Modo de acceso a datos = Variable de nombre de tabla o nombre de vista  
+ **Nombre de variable**  
+ Seleccione la variable que contiene el nombre de la tabla o vista.  
+  
+#### <a name="data-access-mode--table-name-or-view-name-variable--fast-load"></a>Modo de acceso a datos = Carga rápida de variable de nombre de tabla o nombre de vista  
+ **Nombre de variable**  
+ Seleccione la variable que contiene el nombre de la tabla o vista.  
+  
+ **Nuevo**  
+ Permite crear una tabla con el cuadro de diálogo **Crear tabla** .  
+  
+> [!NOTE]  
+>  Al hacer clic en **Nueva**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] genera una instrucción predeterminada CREATE TABLE basada en el origen de datos conectado. La instrucción predeterminada CREATE TABLE no incluirá el atributo FILESTREAM, aunque la tabla de origen tenga una columna con el atributo FILESTREAM declarado. Para ejecutar un componente [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con el atributo FILESTREAM, implemente en primer lugar el almacenamiento de FILESTREAM en la base de datos de destino. A continuación, agregue el atributo FILESTREAM a la instrucción CREATE TABLE en el cuadro de diálogo **Crear tabla** . Para más información, vea [Datos de objeto binario grande &#40;Blob&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  
+ **Mantener valores de identidad**  
+ Especifique si se copian los valores de identidad cuando se cargan los datos. Esta propiedad solo está disponible con la opción de carga rápida. El valor predeterminado de esta propiedad es **false**.  
+  
+ **Mantener valores NULL**  
+ Especifique si se copian los valores NULL cuando se cargan los datos. Esta propiedad solo está disponible con la opción de carga rápida. El valor predeterminado de esta propiedad es **false**.  
+  
+ **Bloqueo de tabla**  
+ Especifique si la tabla se bloquea durante la carga. El valor predeterminado de esta propiedad es **false**.  
+  
+ **Restricciones CHECK**  
+ Especifique si la tarea comprueba restricciones. El valor predeterminado de esta propiedad es **false**.  
+  
+ **Filas por lote**  
+ Especifique el número de filas de un lote. El valor predeterminado de esta propiedad es **-1**, lo que indica que no se ha asignado ningún valor.  
+  
+> [!NOTE]  
+>  Borre el cuadro de texto del **Editor de destino de OLE DB** para indicar que no quiere asignar un valor personalizado a esta propiedad.  
+  
+ **Tamaño máximo de confirmación de inserción**  
+ Especifique el tamaño de lote que el destino OLE DB intenta confirmar en operaciones de carga rápida. El valor predeterminado **2147483647** indica que todos los datos se confirman en un solo lote, tras el procesamiento de todas las filas.  
+  
+> [!NOTE]  
+>  El valor **0** podría hacer que el paquete en ejecución deje de responder si el destino de OLE DB y otro componente de flujo de datos están actualizando la misma tabla de origen. Para evitar que el paquete se detenga, establezca la opción **Tamaño máximo de confirmación de inserción** en **2147483647**.  
+  
+#### <a name="data-access-mode--sql-command"></a>Modo de acceso a datos = Comando SQL  
+ **Texto de comando SQL**  
+ Escriba el texto de una consulta SQL, haga clic en **Generar consulta**para generar la consulta, o bien haga clic en **Examinar**para buscar el archivo que contiene el texto de la consulta.  
+  
+> [!NOTE]  
+>  El destino de OLE DB no admite parámetros. Si tiene que ejecutar una instrucción INSERT con parámetros, puede usar la transformación Comando de OLE DB. Para más información, consulte [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md).  
+  
+ **Build query**  
+ Use el cuadro de diálogo **Generador de consultas** para crear visualmente la consulta SQL.  
+  
+ **Examinar**  
+ Use el cuadro de diálogo **Abrir** para buscar el archivo que contiene el texto de la consulta SQL.  
+  
+ **Analizar consulta**  
+ Comprueba la sintaxis del texto de la consulta.  
+  
+## <a name="ole-db-destination-editor-mappings-page"></a>Editor de destino de OLE DB (página Asignaciones)
+  Utilice la página **Asignaciones** del cuadro de diálogo **Editor de destino de OLE DB** para asignar columnas de entrada a columnas de destino.  
+  
+### <a name="options"></a>Opciones  
+ **Columnas de entrada disponibles**  
+ Muestra la lista de columnas de entrada disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de entrada disponibles de la tabla a columnas de destino.  
+  
+ **Columnas de destino disponibles**  
+ Muestra la lista de columnas de destino disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de destino disponibles de la tabla a columnas de entrada.  
+  
+ **Columna de entrada**  
+ Permite ver las columnas de entrada seleccionadas. Para quitar asignaciones seleccionando  **\<omitir >** para excluir columnas de los resultados.  
+  
+ **Columna de destino**  
+ Muestra todas las columnas de destino disponibles, tanto si están asignadas como si no lo están.  
+  
+## <a name="ole-db-destination-editor-error-output-page"></a>Editor de destino de OLE DB (página Salida de error)
+  Utilice la página **Salida de error** del cuadro de diálogo **Editor de destino de OLE DB** para especificar las opciones de control de errores.  
+  
+### <a name="options"></a>Opciones  
+ **Entrada/salida**  
+ Muestra el nombre de la entrada.  
+  
+ **Columna**  
+ No se usa.  
+  
+ **Error**  
+ Permite especificar qué debe ocurrir cuando se produce un error: omitir el error, redirigir la fila o hacer que el componente no funcione.  
+  
+ **Temas relacionados:** [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **Truncamiento**  
+ No se usa.  
+  
+ **Description**  
+ Muestra la descripción de la operación.  
+  
+ **Establecer este valor en las celdas seleccionadas**  
+ Permite especificar qué debe ocurrir en todas las celdas seleccionadas cuando se produce un error o un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  
+  
+ **Aplicar**  
+ Aplica la opción de control de errores a las celdas seleccionadas.  
   
 ## <a name="related-content"></a>Contenido relacionado  
  [Origen de OLE DB](../../integration-services/data-flow/ole-db-source.md)  

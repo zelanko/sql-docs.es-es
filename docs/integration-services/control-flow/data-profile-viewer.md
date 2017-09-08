@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.dataprofileviewer.f1
 helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], output viewer
@@ -18,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 8f02bbe73421c1fbb1f929cef397cfebf749c0d8
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 78476021d8f54edb0f26748e6d610f9590bee037
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="data-profile-viewer"></a>Visor de perfil de datos
@@ -68,4 +70,180 @@ ms.lasthandoff: 08/03/2017
   
  Para obtener más información sobre la interfaz de usuario del Visor de perfil de datos, vea [Data Profile Viewer F1 Help](../../integration-services/control-flow/data-profile-viewer-f1-help.md).  
   
+## <a name="data-profile-viewer-f1-help"></a>Visor de perfiles de datos (Ayuda F1)
+  Utilice el Visor de perfil de datos para ver la salida de la Tarea de generación de perfiles de datos.  
   
+ Para más información sobre cómo usar el Visor de perfil de datos, vea [Visor de perfil de datos](../../integration-services/control-flow/data-profile-viewer.md). Para más información sobre cómo usar la Tarea de generación de perfiles de datos, que crea la salida del perfil que se analiza en el Visor de perfil de datos, vea [Configuración de la Tarea de generación de perfiles de datos](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
+  
+### <a name="static-options"></a>Opciones estáticas  
+ **Abrir**  
+ Haga clic para buscar el archivo guardado que contiene la salida de la Tarea de generación de perfiles de datos.  
+  
+ Panel**Perfiles**   
+ Expanda el árbol del panel **Perfiles** para ver los perfiles que están incluidos en la salida. Seleccione un perfil para ver los resultados de ese perfil.  
+  
+ Panel**Mensaje**   
+ Muestra mensajes de estado.  
+  
+ Panel**Obtención de detalles**   
+ Muestra las filas de datos que coinciden con un valor en la salida, si el origen de datos que usa la Tarea de generación de perfiles de datos está disponible.  
+  
+ Por ejemplo, si está viendo la salida de un perfil Distribución de valores de columna de una columna de estados americanos, el panel **Distribución de valor detallado** podría contener una fila para "WA". Haga doble clic en la fila en el panel **Distribución de valores detallados** para ver las filas de datos en las que el valor de la columna de estado sea "WA" en el panel de obtención de detalles.  
+  
+### <a name="dynamic-options"></a>Opciones dinámicas  
+  
+#### <a name="profile-type--column-length-distribution-profile"></a>Tipo de perfil = Perfil de distribución de longitud de columnas  
+  
+##### <a name="column-length-distribution-profile---column-pane"></a>Perfil de distribución de longitud de columnas - \<columna > panel  
+ **Longitud mínima**  
+ Muestra la longitud mínima de los valores de esta columna.  
+  
+ **Longitud máxima**  
+ Muestra la longitud máxima de los valores de esta columna.  
+  
+ **Omitir espacios iniciales**  
+ Muestra si este perfil se calculó con un valor de **IgnoreLeadingSpaces** True o False. Esta propiedad se estableció en la página **Solicitudes de perfil** del Editor de tareas de generación de perfiles de datos.  
+  
+ **Omitir espacios finales**  
+ Muestra si este perfil se calculó con un valor de **IgnoreTrailingSpaces** True o False. Esta propiedad se estableció en la página **Solicitudes de perfil** del Editor de tareas de generación de perfiles de datos.  
+  
+ **Recuento de filas**  
+ Muestra el número de filas de la tabla o vista.  
+  
+##### <a name="detailed-length-distribution-pane"></a>Panel Distribución de longitud detallado  
+ **Longitud**  
+ Muestra las longitudes de columna encontradas en la columna de perfiles.  
+  
+ **Count**  
+ Muestra el número de filas en las que el valor de la columna de perfiles tiene la longitud que se muestra en la columna **Longitud** .  
+  
+ **Porcentaje**  
+ Muestra el porcentaje de filas en las que el valor de la columna de perfiles tiene la longitud que se muestra en la columna **Longitud** .  
+  
+#### <a name="profile-type--column-null-ratio-profile"></a>Tipo de perfil = Perfil de proporción de columnas nulas  
+  
+##### <a name="column-null-ratio-profile---column-pane"></a>Perfil de proporción de columnas Null - \<columna > panel  
+ **Recuento nulo**  
+ Muestra el número de filas en las que la columna de perfiles tiene el valor null.  
+  
+ **Porcentaje nulo**  
+ Muestra el porcentaje de filas en las que la columna de perfiles tiene el valor null.  
+  
+ **Recuento de filas**  
+ Muestra el número de filas de la tabla o vista.  
+  
+#### <a name="profile-type--column-pattern-profile"></a>Tipo de perfil = Perfil de patrón de columnas  
+  
+##### <a name="column-pattern-profile---column-pane"></a>Perfil de patrón de columna - \<columna > panel  
+ **Recuento de filas**  
+ Muestra el número de filas de la tabla o vista.  
+  
+##### <a name="pattern-distribution-pane"></a>Panel Distribución del patrón  
+ **Patrón**  
+ Muestra los patrones calculados para la columna de perfiles.  
+  
+ **Porcentaje**  
+ Muestra el porcentaje de filas cuyos valores coinciden con el patrón que se muestra en la columna **Patrón** .  
+  
+#### <a name="profile-type--column-statistics-profile"></a>Tipo de perfil = Perfil de estadísticas de columnas  
+  
+##### <a name="column-statistics-profile---column-pane"></a>Perfil de estadísticas de columnas - \<columna > panel  
+ **Mínima**  
+ Muestra el valor mínimo situado en la columna de perfiles.  
+  
+ **Máximo**  
+ Muestra el valor máximo situado en la columna de perfiles.  
+  
+ **Promedio**  
+ Muestra el promedio de los valores que se encuentran en la columna de perfiles.  
+  
+ **Desviación estándar**  
+ Muestra la desviación estándar de los valores que se encuentran en la columna de perfiles.  
+  
+#### <a name="profile-type--column-value-distribution-profile"></a>Tipo de perfil = Perfil de distribución de valores de columna  
+  
+##### <a name="column-value-distribution-profile---column-pane"></a>Perfil de distribución de valores de columna - \<columna > panel  
+ **Número de valores distintos**  
+ Muestra el recuento de valores distintos que se encuentran en la columna de perfiles.  
+  
+ **Recuento de filas**  
+ Muestra el número de filas de la tabla o vista.  
+  
+##### <a name="detailed-value-distribution-pane"></a>Panel Distribución de valores detallado  
+ **Value**  
+ Muestra los distintos valores que se encuentran en la columna de perfiles.  
+  
+ **Count**  
+ Muestra el número de filas en las que la columna de perfiles tiene el valor que se muestra en la columna **Valor** .  
+  
+ **Porcentaje**  
+ Muestra el porcentaje de filas en las que la columna de perfiles tiene el valor que se muestra en la columna **Valor** .  
+  
+#### <a name="profile-type--candidate-key-profile"></a>Tipo de perfil = Perfil de claves candidatas  
+  
+##### <a name="candidate-key-profile---table-pane"></a>Perfil de claves candidatas - \<tabla > panel  
+ **Columnas de clave**  
+ Muestra las columnas que se seleccionaron para los perfiles como clave candidata.  
+  
+ **Nivel de clave**  
+ Muestra el nivel (como porcentaje) de la columna de clave candidata o de una combinación de columnas. Un nivel de clave menor del 100% indica que hay valores duplicados.  
+  
+##### <a name="key-violations-pane"></a>Panel Infracciones de clave  
+ **\<Column1 >, \<Columna2 >, etcetera.**  
+ Muestra los valores duplicados que se encontraron en la columna de perfiles.  
+  
+ **Count**  
+ Muestra el número de filas en las que la columna especificada tiene el valor que se muestra en la primera columna.  
+  
+#### <a name="profile-type--functional-dependency-profile"></a>Tipo de perfil = Perfil de dependencia funcional  
+  
+##### <a name="functional-dependency-profile-pane"></a>Panel Perfil de dependencia funcional  
+ **Columnas determinantes**  
+ Muestra la columna o columnas seleccionadas como columna determinante. En el ejemplo en el que el mismo código postal de Estados Unidos siempre debería tener el mismo estado, el código postal es la columna determinante.  
+  
+ **Columnas dependientes**  
+ Muestra la columna o columnas seleccionadas como columna dependiente. En el ejemplo en el que el mismo código postal de Estados Unidos siempre debería tener el mismo estado, el estado es la columna dependiente.  
+  
+ **Nivel de dependencia funcional**  
+ Muestra el nivel (como porcentaje) de la dependencia funcional entre las columnas. Un nivel de clave menor del 100% indica que hay casos en los que el valor determinante no determina el valor dependiente. En el ejemplo en el que el mismo código postal de Estados Unidos siempre debería tener el mismo estado, esto probablemente indica que algunos valores de estado no son válidos.  
+  
+##### <a name="functional-dependency-violations-pane"></a>Panel Infracciones de dependencia funcional  
+  
+> [!NOTE]  
+>  Un porcentaje alto de valores erróneos en los datos podría provocar resultados inesperados en un perfil Dependencia funcional. Por ejemplo, el 90% de las filas tienen el valor "WI" como estado para el valor "98052" de código postal. El perfil notifica filas que contienen valor de estado correcto de "WA" como infracciones.  
+  
+ **\<nombre de columna determinante >**  
+ Muestra el valor de la columna determinante o la combinación de columnas en esta infracción de la dependencia funcional.  
+  
+ **\<nombre de columna dependiente >**  
+ Muestra el valor de la columna dependiente en esta infracción de la dependencia funcional.  
+  
+ **Recuento de soporte**  
+ Muestra el número de filas en las que el valor de columna determinante determina la columna dependiente.  
+  
+ **Recuento de infracciones**  
+ Muestra el número de filas en las que el valor de columna determinante no determina la columna dependiente. (Éstas son las filas donde el valor dependiente es el valor mostrado en el  **\<nombre de columna dependiente >** columna.)  
+  
+ **Porcentaje admitido**  
+ Muestra el porcentaje de filas en las que el valor de columna determinante determina la columna dependiente.  
+  
+#### <a name="profile-type--value-inclusion-profile"></a>Tipo de perfil = Perfil de inclusión de valores  
+  
+##### <a name="value-inclusion-profile-pane"></a>Panel Perfil de inclusión de valores  
+ **Columnas de subconjunto**  
+ Muestra la columna o combinación de columnas que se incluyeron en el perfil para determinar si están en las columnas de superconjunto.  
+  
+ **Columnas de superconjunto**  
+ Muestra la columna o combinación de columnas que se incluyeron en el perfil para determinar si incluyen los valores en las columnas de subconjunto.  
+  
+ **Nivel de inclusión**  
+ Muestra el nivel (como porcentaje) de la superposición entre las columnas. Un nivel de clave menor que 100% indica que hay casos en los que el valor de subconjunto no se encuentra entre los valores del superconjunto.  
+  
+##### <a name="inclusion-violations-pane"></a>Panel Infracciones de inclusión  
+ **\<Column1 >, \<Columna2 >, etcetera.**  
+ Muestra los valores en la columna o columnas del subconjunto que no se encontraban en la columna o columnas del superconjunto.  
+  
+ **Count**  
+ Muestra el número de filas en las que la columna especificada tiene el valor que se muestra en la primera columna.  
+  
+

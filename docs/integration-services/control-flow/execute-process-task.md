@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.executeprocesstask.f1
+- sql13.dts.designer.executeprocesstask.general.f1
+- sql13.dts.designer.executeprocesstask.process.f1
 helpviewer_keywords:
 - Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 86c260189b858f01ef37d736f02e636bd2a9873c
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: e9b4a89e32139f359e049f1f9d3e46d5b27696b1
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="execute-process-task"></a>Tarea Ejecutar proceso
@@ -40,12 +42,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="configuration-of-the-execute-process-task"></a>Configuración de la tarea Ejecutar proceso  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
-  
- Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
-  
--   [Editor de la tarea Ejecutar proceso &#40;página General&#41;](../../integration-services/control-flow/execute-process-task-editor-general-page.md)  
-  
--   [Editor de la tarea Ejecutar proceso &#40;página Procesar&#41;](../../integration-services/control-flow/execute-process-task-editor-process-page.md)  
   
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el siguiente tema:  
   
@@ -89,6 +85,61 @@ ms.lasthandoff: 08/03/2017
  Para obtener más información sobre cómo establecer estas propiedades mediante programación, haga clic en el tema siguiente:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ExecuteProcess.ExecuteProcess>  
+  
+## <a name="execute-process-task-editor-general-page"></a>Editor de la tarea Ejecutar proceso (página General)
+  Use la página **General** del cuadro de diálogo **Editor de la tarea Ejecutar proceso** para asignar un nombre a la tarea Ejecutar proceso y describirla.  
+  
+### <a name="options"></a>Opciones  
+ **Nombre**  
+ Proporcione un nombre único para la tarea Ejecutar proceso. Este nombre se utiliza como etiqueta en el icono de tarea.  
+  
+> [!NOTE]  
+>  Los nombres de tarea deben ser únicos en un paquete.  
+  
+ **Description**  
+ Escriba una descripción de la tarea Ejecutar proceso.  
+  
+## <a name="execute-process-task-editor-process-page"></a>Editor de la tarea Ejecutar proceso (página Procesar)
+  Utilice la página **Proceso** del cuadro de diálogo **Editor de la tarea Ejecutar proceso** para configurar las opciones que permitirán ejecutar el proceso. Estas opciones incluyen el ejecutable que se debe instalar, su ubicación, los argumentos de línea de comandos y las variables que proporcionan información de entrada y capturan información de salida.  
+  
+### <a name="options"></a>Opciones  
+ **RequireFullFileName**  
+ Indica si la tarea debe generar un error en caso de que no se encuentre el ejecutable en la ubicación específica.  
+  
+ **Executable**  
+ Escriba el nombre del ejecutable que desea instalar.  
+  
+ **Argumentos**  
+ Proporcione los argumentos de línea de comandos.  
+  
+ **WorkingDirectory**  
+ Escriba la ruta de acceso de la carpeta que contiene el ejecutable, o bien haga clic en el botón para examinar **(…)** y busque la carpeta.  
+  
+ **StandardInputVariable**  
+ Seleccione una variable para proporcionar la entrada para el proceso o haga clic en \< **nueva variable...** > para crear una nueva variable:  
+  
+ **Temas relacionados:** [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+ **StandardOutputVariable**  
+ Seleccione una variable para capturar la salida del proceso o haga clic en \< **nueva variable...** > para crear una nueva variable.  
+  
+ **StandardErrorVariable**  
+ Seleccione una variable para capturar la salida de error del procesador o haga clic en \< **nueva variable...** > para crear una nueva variable.  
+  
+ **FailTaskIfReturnCodeIsNotSuccessValue**  
+ Esta opción indica si la tarea genera un error porque el código de salida del proceso es diferente del valor especificado en **SuccessValue**.  
+  
+ **SuccessValue**  
+ Especifique el valor que devuelve el ejecutable para indicar su instalación correcta. De forma predeterminada, este valor está establecido en **0**.  
+  
+ **TimeOut**  
+ Especifique el número de segundos que el proceso puede ejecutarse. El valor **0** indica que no se usará ningún valor de tiempo de espera y que el proceso se ejecutará hasta su conclusión o hasta que se produzca un error.  
+  
+ **TerminateProcessAfterTimeOut**  
+ Esta opción indica si el proceso está obligado a finalizar después del período de tiempo de espera especificado con la opción **TimeOut** . Esta opción solo está disponible si el valor de **TimeOut** es distinto de **0**.  
+  
+ **WindowStyle**  
+ Especifique el estilo de ventana en el que ejecutará el proceso.  
   
 ## <a name="see-also"></a>Vea también  
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

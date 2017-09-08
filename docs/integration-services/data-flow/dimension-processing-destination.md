@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dimensionprocessingdest.f1
+- sql13.dts.designer.dimprocessingtransformation.connection.f1
+- sql13.dts.designer.dimprocessingtransformation.mappings.f1
+- sql13.dts.designer.dimprocessingtransformation.advanced.f1
 helpviewer_keywords:
 - Dimension Processing destination
 - loading dimensions
@@ -22,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b32a1d596ff1395a693f8316d7a6ee1f0d8aa918
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: ff1dbbe04c9ef1b23662bfaa420b939fff21980d
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="dimension-processing-destination"></a>procesamiento de dimensiones, destino
@@ -48,19 +51,123 @@ ms.lasthandoff: 08/03/2017
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información sobre las propiedades que se pueden establecer en el cuadro de diálogo **Editor de destino de procesamiento de dimensiones** , haga clic en uno de los siguientes temas:  
-  
--   [Editor de destino de procesamiento de dimensiones &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/dimension-processing-destination-editor-connection-manager-page.md)  
-  
--   [Editor de destino de procesamiento de dimensiones &#40;página Asignaciones&#41;](../../integration-services/data-flow/dimension-processing-destination-editor-mappings-page.md)  
-  
--   [Editor de destino de procesamiento de dimensiones &#40;página Avanzadas&#41;](../../integration-services/data-flow/dimension-processing-destination-editor-advanced-page.md)  
-  
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
 -   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
  Para más información sobre cómo establecer las propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="dimension-processing-destination-editor-connection-manager-page"></a>Editor de destino de procesamiento de dimensiones (página Administrador de conexiones)
+  Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de destino de procesamiento de dimensiones** para especificar una conexión a un proyecto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  
+### <a name="options"></a>Opciones  
+ **Connection manager**  
+ Seleccione un administrador de conexiones existente de la lista, o haga clic en **Nuevo** para crear un nuevo administrador de conexiones.  
+  
+ **Nuevo**  
+ Cree una nueva conexión mediante el cuadro de diálogo **Agregar administrador de conexiones con Analysis Services** .  
+  
+ **Lista de dimensiones disponibles**  
+ Seleccione la dimensión para procesar.  
+  
+ **Método de procesamiento**  
+ En la lista, seleccione el método de procesamiento a aplicar a la dimensión seleccionada. El valor predeterminado de esta opción es **Completa**.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Agregar (incremental)**|Realiza un procesamiento incremental de la dimensión.|  
+|**Completa**|Realiza un procesamiento completo de la dimensión.|  
+|**Update**|Realiza un procesamiento actualizado de la dimensión.|  
+  
+## <a name="dimension-processing-destination-editor-mappings-page"></a>Editor de destino de procesamiento de dimensiones (página Asignaciones)
+  Utilice la página **Asignaciones** del cuadro de diálogo **Editor de destino de procesamiento de dimensiones** para asignar columnas de entrada a columnas de dimensión.  
+  
+### <a name="options"></a>Opciones  
+ **Columnas de entrada disponibles**  
+ Muestra la lista de columnas de entrada disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de entrada disponibles de la tabla a columnas de destino.  
+  
+ **Columnas de destino disponibles**  
+ Muestra la lista de columnas de destino disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de destino disponibles de la tabla a columnas de entrada.  
+  
+ **Columna de entrada**  
+ Muestra las columnas de entrada seleccionadas de la tabla anterior. Puede cambiar las asignaciones utilizando la lista de **Columnas de entrada disponibles**.  
+  
+ **Columna de destino**  
+ Muestra las columnas de destino disponibles e indica si están asignadas.  
+  
+## <a name="dimension-processing-destination-editor-advanced-page"></a>Editor de destino de procesamiento de dimensiones (página Avanzadas)
+  Utilice la página **Avanzadas** del cuadro de diálogo **Editor de destino de procesamiento de dimensiones** para configurar el control de errores.  
+  
+### <a name="options"></a>Opciones  
+ **Utilizar la configuración de error predeterminada**  
+ Especifica si debe utilizarse el control de errores predeterminado de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Este valor es **True**de forma predeterminada.  
+  
+ **Acción del error de clave**  
+ Permite especificar la forma de controlar registros que tienen valores de clave no aceptables.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**ConvertToUnknown**|Convierte el valor de clave no aceptable en el valor **UnknownMember** .|  
+|**DiscardRecord**|Descarta el registro.|  
+  
+ **Omitir errores**  
+ Especifica que deben omitirse los errores.  
+  
+ **Detenerse ante errores**  
+ Especifica que el procesamiento debe detenerse cuando se produce un error.  
+  
+ **Número de errores**  
+ Especifica el umbral de error donde tiene que detenerse el procesamiento (si ha seleccionado **Detenerse ante errores**).  
+  
+ **Acción ante el error**  
+ Especifica la acción que se realizará cuando se alcance el umbral de error (si ha seleccionado **Detenerse ante errores**).  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**StopProcessing**|Detiene el procesamiento.|  
+|**StopLogging**|Detiene el registro de errores.|  
+  
+ **Clave no encontrada**  
+ Especifica la acción que debe llevarse a cabo en caso de que se produzca un error de clave no encontrada. Este valor es **ReportAndContinue**de forma predeterminada.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Omite el error y reanuda el procesamiento.|  
+|**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  
+|**ReportAndStop**|Informa del error y detiene el procesamiento.|  
+  
+ **Clave duplicada**  
+ Especifica la acción que debe llevarse a cabo en caso de que se produzca un error de clave duplicada. Este valor es **IgnoreError**de forma predeterminada.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Omite el error y reanuda el procesamiento.|  
+|**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  
+|**ReportAndStop**|Informa del error y detiene el procesamiento.|  
+  
+ **Clave NULL convertida en desconocida**  
+ Especifica la acción que se realizará cuando una clave NULL se convierta al valor **UnknownMember** . Este valor es **IgnoreError**de forma predeterminada.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Omite el error y reanuda el procesamiento.|  
+|**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  
+|**ReportAndStop**|Informa del error y detiene el procesamiento.|  
+  
+ **Clave NULL no permitida**  
+ Especifica la acción que debe llevarse a cabo cuando no se permiten claves NULL y se encuentra una clave NULL. Este valor es **ReportAndContinue**de forma predeterminada.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|Omite el error y reanuda el procesamiento.|  
+|**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  
+|**ReportAndStop**|Informa del error y detiene el procesamiento.|  
+  
+ **Ruta de acceso del registro de errores**  
+ Escriba la ruta de acceso al registro de errores, o bien haga clic en el botón **Examinar (…)** para seleccionar un destino.  
+  
+ **Examinar (...)**  
+ Seleccione una ruta de acceso para el registro de errores.  
   
 ## <a name="see-also"></a>Vea también  
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)   

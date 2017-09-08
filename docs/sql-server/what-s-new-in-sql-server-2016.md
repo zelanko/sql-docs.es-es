@@ -111,4 +111,4 @@ Vea [Reporting Services (SSRS)](https://msdn.microsoft.com/library/ms170438.aspx
 - [Instalación inicial y de servicio](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)    
 - [Nuevo módulo de SQL PowerShell](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
-
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

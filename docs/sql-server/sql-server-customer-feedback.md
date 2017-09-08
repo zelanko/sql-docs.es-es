@@ -164,4 +164,4 @@ Durante la instalación, SQL Server 2016 Analysis Services agrega una cuenta esp
 
 Puede configurar su servicio para que no se envíen datos de uso, tal como se describe en la sección "Establecer subclaves del Registro en el servidor". Sin embargo, al hacer esto no se quita la cuenta de servicio. 
  
-
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

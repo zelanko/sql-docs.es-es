@@ -1,26 +1,31 @@
 ---
-title: "Propiedades del proyecto (cuadro de di&#225;logo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.ssms.isprojectprop.general.f1"
-  - "sql13.ssis.ssms.isprojectprop.permissions.f1"
+title: "Cuadro de diálogo Propiedades del proyecto | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.ssms.isprojectprop.general.f1
+- sql13.ssis.ssms.isprojectprop.permissions.f1
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 106987c75957ab90773e49e22b65fd89d3e417e4
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Propiedades del proyecto (cuadro de di&#225;logo)
-  Un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] es una unidad de implementación. Cada proyecto puede contener paquetes, parámetros y referencias de entorno. Un proyecto es un objeto protegible y puede definir permisos en las entidades de seguridad de base de datos. Cuando se vuelve a implementar un proyecto, la versión anterior del mismo puede almacenarse en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+# <a name="project-properties-dialog-box"></a>Propiedades del proyecto (cuadro de diálogo)
+  Un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] es una unidad de implementación. Cada proyecto puede contener paquetes, parámetros y referencias de entorno. Un proyecto es un objeto protegible y puede definir permisos en las entidades de seguridad de base de datos. Cuando se vuelve a implementar un proyecto, la versión anterior del mismo puede almacenarse en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Los parámetros del proyecto y los parámetros del paquete se pueden utilizar para asignar valores a las propiedades de los paquetes en el momento de la ejecución. Algunos parámetros requieren valores para que el paquete se pueda ejecutar. Los valores de parámetros que hacen referencia a las variables de entorno requieren que el proyecto tenga la referencia de entorno correspondiente antes de la ejecución.  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 9
  Use la página **Permisos** para ver y establecer permisos explícitos para el proyecto.  
   
  Examinar  
- Haga clic en **Examinar** para seleccionar los usuarios y los roles para los que quiere establecer permisos con el cuadro de diálogo **Examinar todas las entidades**.  
+ Haga clic en **Examinar** para seleccionar los usuarios y los roles para los que quiere establecer permisos con el cuadro de diálogo **Examinar todas las entidades** .  
   
  **Nombre**  
  Muestra el nombre del usuario o del rol.  
@@ -83,9 +88,9 @@ caps.handback.revision: 9
  Muestra el usuario o el rol que concede el permiso.  
   
  **Conceder**  
- Al seleccionar **Conceder**, se concede el permiso al usuario o al rol seleccionado.  
+ Al seleccionar **Conceder** , se concede el permiso al usuario o al rol seleccionado.  
   
  **Denegar**  
- Al seleccionar **Denegar**, se deniega el permiso al usuario o al rol seleccionado.  
+ Al seleccionar **Denegar** , se deniega el permiso al usuario o al rol seleccionado.  
   
   

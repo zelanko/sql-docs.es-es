@@ -1,24 +1,29 @@
 ---
-title: "Realizar una carga incremental de varias tablas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "carga incremental [Integration Services], varias tablas"
+title: Realizar una carga Incremental de varias tablas | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],multiple tables
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 293e4a68eba8fa8cbc5a01773c948d5b56de1a91
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Realizar una carga incremental de varias tablas
+# <a name="perform-an-incremental-load-of-multiple-tables"></a>Realizar una carga incremental de varias tablas
   En el tema [Mejorar las cargas incrementales con la captura de datos modificados](../../integration-services/change-data-capture/change-data-capture-ssis.md), el diagrama muestra un paquete básico que realiza una carga incremental en una sola tabla. Sin embargo, cargar una tabla no es una acción tan común como realizar una carga incremental de varias tablas.  
   
  Cuando se realiza una carga incremental de varias tablas, algunos pasos se tienen que realizar una vez para todas las tablas y otros se tienen que repetir para cada tabla de origen. Tiene varias opciones para implementar estos pasos en [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:  
@@ -27,10 +32,10 @@ caps.handback.revision: 26
   
 -   Utilizar varias tareas Flujo de datos en un único paquete.  
   
-## Cargar varias tablas mediante un paquete primario y varios paquetes secundarios  
+## <a name="loading-multiple-tables-by-using-a-parent-package-and-multiple-child-packages"></a>Cargar varias tablas mediante un paquete primario y varios paquetes secundarios  
  Puede usar un paquete primario para realizar aquellos pasos que solo deben seguirse una vez. Los paquetes secundarios realizarán los pasos que se deben efectuar para cada tabla de origen.  
   
-#### Para crear un paquete primario que realice los pasos que solo se deben efectuar una vez  
+#### <a name="to-create-a-parent-package-that-performs-those-steps-that-only-have-to-be-done-once"></a>Para crear un paquete primario que realice los pasos que solo se deben efectuar una vez  
   
 1.  Cree un paquete primario.  
   
@@ -44,9 +49,9 @@ caps.handback.revision: 26
   
 4.  Utilice varias tareas Ejecutar paquete para ejecutar los paquetes secundarios para cada tabla que se va a cargar. Pase los extremos calculados en el paquete primario a cada paquete secundario mediante configuraciones de variable de paquete primario.  
   
-     Para obtener más información, vea [Tarea Ejecutar paquete](../../integration-services/control-flow/execute-package-task.md) y [Usar los valores de variables y parámetros en un paquete secundario](../../integration-services/packages/use-the-values-of-variables-and-parameters-in-a-child-package.md).  
+     Para obtener más información, vea [Tarea Ejecutar paquete](../../integration-services/control-flow/execute-package-task.md) y [Usar los valores de variables y parámetros en un paquete secundario](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
-#### Para crear paquetes secundarios que realicen los pasos que se deben efectuar para cada tabla de origen  
+#### <a name="to-create-child-packages-to-perform-those-steps-that-have-to-be-done-for-each-source-table"></a>Para crear paquetes secundarios que realicen los pasos que se deben efectuar para cada tabla de origen  
   
 1.  Cree un paquete secundario para cada tabla de origen.  
   
@@ -68,10 +73,10 @@ caps.handback.revision: 26
   
          Para obtener un ejemplo de cómo usar esta transformación para aplicar las actualizaciones y eliminaciones, vea [Aplicar los cambios al destino](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md).  
   
-## Cargar varias tablas mediante varias tareas Flujo de datos en un único paquete  
+## <a name="loading-multiple-tables-by-using-multiple-data-flow-tasks-in-a-single-package"></a>Cargar varias tablas mediante varias tareas Flujo de datos en un único paquete  
  También puede utilizar un único paquete que contenga una tarea Flujo de datos independiente para cada tabla de origen que se va a cargar.  
   
-#### Para cargar varias tablas mediante varias tareas Flujo de datos en un único paquete  
+#### <a name="to-load-multiple-tables-by-using-multiple-data-flow-tasks-in-a-single-package"></a>Para cargar varias tablas mediante varias tareas Flujo de datos en un único paquete  
   
 1.  Cree un único paquete.  
   

@@ -1,30 +1,35 @@
 ---
-title: "Transformaci&#243;n din&#225;mica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.pivottrans.f1"
-helpviewer_keywords: 
-  - "Dinámica, transformación"
-  - "datos normalizados [Integration Services]"
-  - "PivotUsage, propiedad"
-  - "conjuntos de datos [Integration Services], datos normalizados"
-  - "conjuntos de datos menos normalizados [Integration Services]"
+title: "Dinamizar transformación | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.pivottrans.f1
+helpviewer_keywords:
+- Pivot transformation
+- normalized data [Integration Services]
+- PivotUsage property
+- datasets [Integration Services], normalized data
+- less normalized data set [Integration Services]
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 caps.latest.revision: 55
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 79a12bf64f2ec27306a5ca8776b33acdb79ca82d
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Transformaci&#243;n din&#225;mica
+# <a name="pivot-transformation"></a>Dinámica, transformación
   La transformación dinámica transforma un conjunto de datos normalizado en una versión menos normalizada pero más compacta dinamizando los datos de entrada en un valor de columna. Por ejemplo, un conjunto de datos **Orders** normalizado que enumera el nombre del cliente, el producto y la cantidad comprada normalmente tiene varias filas para cualquier cliente que compró varios productos, donde cada fila para ese cliente muestra los detalles de pedido de un producto diferente. Al dinamizar el conjunto de datos en la columna de producto, la transformación dinámica puede obtener un conjunto de datos con una sola fila por cliente. Esa única fila enumera todas las compras realizadas por el cliente, con los nombres de los productos representados como nombres de columnas, y la cantidad indicada como un valor en la columna de producto. Dado que no todos los clientes compran todos los productos, muchas columnas pueden contener valores NULL.  
   
  Cuando se dinamiza un conjunto de datos, las columnas de entrada ejecutan diferentes roles en el proceso de dinamización. Una columna puede participar de las siguientes maneras:  
@@ -39,13 +44,13 @@ caps.handback.revision: 55
   
  Esta transformación tiene una entrada, una salida normal y una salida de error.  
   
-## Ordenar y duplicar filas  
+## <a name="sort-and-duplicate-rows"></a>Ordenar y duplicar filas  
  Para dinamizar los datos de un modo eficaz, lo que significa crear la menor cantidad posible de registros en el conjunto de datos de salida, los datos de entrada se deben ordenar en la columna de dinamización. Si los datos no se ordenan, la transformación dinámica puede generar varios registros para cada valor en la clave fija, que es la columna que define la pertenencia a un conjunto. Por ejemplo, si un conjunto de datos se dinamiza en una columna **Name** pero los nombres no se ordenan, el conjunto de datos de salida puede tener más de una fila para cada cliente, porque se produce una dinamización cada vez que cambia el valor de **Name** .  
   
  Los datos de entrada pueden contener filas duplicadas, que darán lugar a que no funcione la transformación Dinamización. "Filas duplicadas" significa filas que tienen los mismos valores en las columnas de clave fija y las columnas dinámicas. Para evitar este error, puede configurar la transformación para que redirija las filas que causan el error hacia una salida de error, o bien agregar previamente valores para garantizar que no haya filas duplicadas.  
   
 ##  <a name="options"></a> Opciones del cuadro de diálogo Dinamización  
- Configure la operación de dinamizar, para lo cual se configuran las opciones en el cuadro de diálogo **Dinamización** . Para abrir el cuadro de diálogo **Dinamización**, agregue la transformación dinámica al paquete en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], haga clic con el botón derecho en el componente y, después, haga clic en **Editar**.  
+ Configure la operación de dinamizar, para lo cual se configuran las opciones en el cuadro de diálogo **Dinamización** . Para abrir el cuadro de diálogo **Dinamización** , agregue la transformación dinámica al paquete en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], haga clic con el botón derecho en el componente y, después, haga clic en **Editar**.  
   
  En la lista siguiente, se describen las opciones en el cuadro de diálogo **Dinamización** .  
   
@@ -83,7 +88,7 @@ caps.handback.revision: 55
      [valor1],[valor2],[valor3]  
   
  **Generar columnas ahora**  
- Haga clic para crear una columna de salida por cada valor de clave dinámica que aparece en el cuadro **Generar columnas de salida dinámicas a partir de valores**.  
+ Haga clic para crear una columna de salida por cada valor de clave dinámica que aparece en el cuadro **Generar columnas de salida dinámicas a partir de valores** .  
   
  Las columnas de salida aparecen en el cuadro **Columnas de salida dinámicas existentes** .  
   
@@ -120,19 +125,19 @@ caps.handback.revision: 55
   
      [2002],[2003],[2004]  
   
-## Configuración de la transformación Dinámica  
+## <a name="configuration-of-the-pivot-transformation"></a>Configuración de la transformación Dinámica  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
  Para obtener más información sobre las propiedades que se pueden configurar en el cuadro de diálogo **Editor avanzado** , haga clic en uno de los siguientes temas:  
   
--   [Propiedades comunes](../Topic/Common%20Properties.md)  
+-   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## Contenido relacionado  
+## <a name="related-content"></a>Contenido relacionado  
  Para más información sobre cómo establecer las propiedades de este componente, vea [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Transformación Anulación de dinamización](../../../integration-services/data-flow/transformations/unpivot-transformation.md)   
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

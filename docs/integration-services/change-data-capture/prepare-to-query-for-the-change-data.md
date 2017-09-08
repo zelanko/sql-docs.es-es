@@ -1,30 +1,35 @@
 ---
-title: "Preparar para consultar datos modificados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "carga incremental [Integration Services], preparar consulta"
+title: Preparar para consultar los datos modificados | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b15733feeca10976315834b2dfc897cc8a9d1216
+ms.contentlocale: es-es
+ms.lasthandoff: 08/03/2017
+
 ---
-# Preparar para consultar datos modificados
+# <a name="prepare-to-query-for-the-change-data"></a>Preparar para consultar datos modificados
   En el flujo de control de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza una carga incremental de datos modificados, la tercera y última tarea consiste en preparar la consulta de los datos modificados y agregar una tarea Flujo de datos.  
   
 > [!NOTE]  
 >  La segunda tarea para el flujo de control consiste en asegurarse de que están listos los datos modificados para el intervalo seleccionado. Para obtener más información sobre esta tarea, vea [Determinar si los datos modificados están preparados](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md). Para obtener una descripción del proceso general de diseño del flujo de control, vea [Captura de datos modificados &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
   
-## Consideraciones de diseño  
+## <a name="design-considerations"></a>Consideraciones de diseño  
  Para recuperar los datos modificados, se llama a una función con valores de tabla de Transact-SQL que acepta los extremos del intervalo como parámetros de entrada y devuelve los datos modificados para el intervalo especificado. Un componente de origen del flujo de datos llama a esta función. Para obtener información sobre este componente de origen, vea [Recuperar y describir datos modificados](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md).  
   
  Los componentes de origen de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que se han usado con más frecuencia, como son el origen de OLE DB, el origen de ADO y el origen de ADO NET, no pueden derivar información de parámetros para una función con valores de tabla. Por consiguiente, la mayoría de los orígenes no pueden llamar directamente a una función con parámetros.  
@@ -40,10 +45,10 @@ caps.handback.revision: 26
   
  En este tema se utiliza la primera opción de diseño y se ensambla una consulta con parámetros como una cadena.  
   
-## Preparar la consulta  
+## <a name="preparing-the-query"></a>Preparar la consulta  
  Antes de poder concatenar los valores de los parámetros de entrada en una sola cadena de consulta, se deben establecer las variables de paquete necesarias para la consulta.  
   
-#### Para establecer las variables de paquetes  
+#### <a name="to-set-up-package-variables"></a>Para establecer las variables de paquetes  
   
 -   En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], en la ventana **Variables** , cree una variable con un tipo de datos de cadena para guardar la cadena de consulta devuelta por la tarea Ejecutar SQL.  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 26
   
  Una vez creada la variable de paquete, puede utilizar una tarea Script o una tarea Ejecutar SQL para concatenar los valores de los parámetros de entrada. En los dos procedimientos siguientes se describe cómo configurar estos componentes.  
   
-#### Para utilizar una tarea Script para concatenar la cadena de consulta  
+#### <a name="to-use-a-script-task-to-concatenate-the-query-string"></a>Para utilizar una tarea Script para concatenar la cadena de consulta  
   
 1.  En la pestaña **Flujo de control** , agregue una tarea Script al paquete después del contenedor de bucles For y conecte dicho contenedor a la tarea.  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 26
   
 4.  En el procedimiento Main, escriba uno de los segmentos de código siguientes:  
   
-    -   Si está programando en C#, escriba las líneas de código siguientes:   
+    -   Si está programando en C#, escriba las líneas de código siguientes:  
   
         ```  
         int dataReady;  
@@ -127,7 +132,7 @@ caps.handback.revision: 26
   
 6.  Cierre el entorno de desarrollo de script y el **Editor de la tarea Script**.  
   
-#### Para utilizar una tarea Ejecutar SQL para concatenar la cadena de consulta  
+#### <a name="to-use-an-execute-sql-task-to-concatenate-the-query-string"></a>Para utilizar una tarea Ejecutar SQL para concatenar la cadena de consulta  
   
 1.  En la pestaña **Flujo de control** , agregue una tarea Ejecutar SQL al paquete después del contenedor de bucles For y conecte dicho contenedor a esta tarea.  
   
@@ -187,14 +192,14 @@ caps.handback.revision: 26
   
  `select * from CDCSample. uf_Customer('2007-06-11 14:21:58', '2007-06-12 14:21:58')`  
   
-## Agregar una tarea Flujo de datos  
+## <a name="adding-a-data-flow-task"></a>Agregar una tarea Flujo de datos  
  El último paso para diseñar el flujo de control para el paquete consiste en agregar una tarea Flujo de datos.  
   
-#### Para agregar una tarea Flujo de datos y completar el flujo de control  
+#### <a name="to-add-a-data-flow-task-and-complete-the-control-flow"></a>Para agregar una tarea Flujo de datos y completar el flujo de control  
   
 -   En la pestaña **Flujo de control** , agregue una tarea Flujo de Datos y conecte la tarea que concatenó la cadena de consulta.  
   
-## Paso siguiente  
+## <a name="next-step"></a>Paso siguiente  
  Después de preparar la cadena de consulta y configurar la tarea Flujo de Datos, el paso siguiente consiste en crear la función con valores de tabla que recuperará los datos modificados de la base de datos.  
   
  **Próximo tema:** [Crear la función para recuperar los datos modificados](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  

@@ -25,7 +25,7 @@ ms.lasthandoff: 07/31/2017
 # <a name="temporal-tables"></a>Tablas temporales
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  SQL Server 2016 incorpora una característica de base de datos que admite tablas temporales con versión del sistema, lo que permite proporcionar información sobre los datos almacenados en la tabla en cualquier momento en el tiempo, en vez de únicamente los datos que son correctos en el momento actual determinado. La característica temporal de las bases de datos surgió con ANSI SQL 2011 y ahora es compatible con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  SQL Server 2016 incorpora una característica de base de datos que admite tablas temporales con versión del sistema, lo que permite proporcionar información sobre los datos almacenados en la tabla en cualquier momento, en vez de únicamente los datos que son correctos en la actualidad. La característica temporal de las bases de datos surgió con ANSI SQL 2011 y ahora es compatible con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **Inicio rápido**  
   

@@ -101,7 +101,7 @@ FOR JSON PATH
 ## <a name="openjson-and-json-input"></a>Entrada de OPENJSON y JSON
 
 ### <a name="return-a-nested-json-sub-object-from-json-text-with-openjson"></a>Devolución de un subobjeto JSON anidado a partir de texto JSON con OPENJSON  
- **Pregunta.** No puedo abrir una matriz de objetos complejos JSON que contiene matrices, objetos y valores escalares empleando OPENJSON con un esquema explícito. Cuando hago referencia a una clave en la cláusula WITH, se devuelven solo los valores escalares. Los objetos y las matrices se devuelven como valores NULL. ¿Cómo puedo extraer objetos o matrices como objetos JSON?  
+ **Pregunta.** No puedo abrir una matriz de objetos JSON complejos que contiene matrices, objetos y valores escalares empleando OPENJSON con un esquema explícito. Cuando hago referencia a una clave en la cláusula WITH, se devuelven solo los valores escalares. Los objetos y las matrices se devuelven como valores NULL. ¿Cómo puedo extraer objetos o matrices como objetos JSON?  
   
  **Respuesta.** Si quiere devolver un objeto o matriz como una columna, use la opción AS JSON en la definición de columna, tal y como se muestra en el ejemplo siguiente.  
   

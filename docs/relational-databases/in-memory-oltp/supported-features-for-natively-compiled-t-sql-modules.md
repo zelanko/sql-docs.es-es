@@ -53,7 +53,7 @@ Se admiten las siguientes construcciones de consulta:
 
 Expresión CASE: se puede usar CASE en cualquier instrucción o cláusula que permita una expresión válida.
    - **Se aplica a:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
-    A partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], ahora se admiten las instrucciones CASE para módulos T-SQL compilados de forma nativa.
+    A partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] se admiten las instrucciones CASE para módulos T-SQL compilados de forma nativa.
 
 Cláusula SELECT:  
 
@@ -61,7 +61,7 @@ Cláusula SELECT:
 
 -   Subconsultas escalares
     - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten las subconsultas escalares en módulos compilados de forma nativa.
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] se admiten las subconsultas escalares en módulos compilados de forma nativa.
 
 -   TOP*  
 
@@ -85,11 +85,11 @@ Cláusula FROM:
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN y INNER JOIN.
     - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten las operaciones JOIN en módulos compilados de forma nativa.
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] se admiten las operaciones JOIN en módulos compilados de forma nativa.
 
 -   Subconsultas `[AS] table_alias`. Para obtener más información, vea [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md). 
     - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten las subconsultas en módulos compilados de forma nativa.
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] se admiten las subconsultas en módulos compilados de forma nativa.
 
 Cláusula WHERE:  
 
@@ -98,7 +98,7 @@ Cláusula WHERE:
 -   AND, BETWEEN  
 -   OR, NOT, IN, EXISTS
     - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten los operadores ON, NOT, IN y EXISTS en módulos compilados de forma nativa.
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] se admiten los operadores ON, NOT, IN y EXISTS en módulos compilados de forma nativa.
 
 
 Cláusula[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) :

@@ -4,10 +4,10 @@ hide_bc: true
 title: "Documentación de Microsoft SQL | Microsoft Docs"
 description: "Información sobre SQL"
 ms.translationtype: HT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: b280992dadacae7b54d94ba90caadff878f1cd4c
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: b744860d1899695d83b44860f18755ba97bf6f21
 ms.contentlocale: es-es
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 
@@ -209,6 +209,7 @@ ms.lasthandoff: 08/19/2017
                                                 <ul>
                                                     <li><a href="/sql/t-sql/language-reference">T-SQL</a></li>
                                                     <li><a href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views">DMVs</a></li>
+                                                    <li><a href="https://docs.microsoft.com/powershell/sql-server/overview?view=sqlserver-ps">PowerShell</a></li>
                                                     <li><a href="/sql/xquery/xquery-language-reference-sql-server">XQuery</a></li>
                                                 </ul>
                                             </div>
@@ -246,7 +247,7 @@ ms.lasthandoff: 08/19/2017
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Servicios y herramientas de migración</h4>
                                                 <ul>
                                                     <li><a href="http://sqldatabase-migrationpreview.azurewebsites.net">Servicio de migración de bases de datos de Azure (versión preliminar privada)</a></li>
-                                                    <li><a href="https://www.microsoft.com/download/details.aspx?id=53595">Data Migration Assistant</a></li>
+                                                    <li><a href="/sql/dma/dma-overview">Data Migration Assistant</a></li>
                                                     <li><a href="/sql/ssma/sql-server-migration-assistant">SQL Server Migration Assistant</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Migración de base de datos a Azure</h4>

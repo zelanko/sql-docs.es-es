@@ -14,17 +14,15 @@
 
 # Notas de la versión
 
-## [Microsoft SQL Server](../release-notes/microsoft-sql-server.md)
-## [Notas de la versión de SQL Server](../release-notes/sql-server-release-notes.md)
+## [Notas de la versión de SQL Server](sql-server-release-notes.md)
 ## [Notas de la versión de SQL Server 2016](sql-server-2016-release-notes.md)
 ## [Notas de la versión de SQL Server 2017](sql-server-2017-release-notes.md)
-
-## [SQL Server 2014 Release Notes](../release-notes/sql-server-2014-release-notes.md)
-## [Notas de la versión de SQL Server 2012](../release-notes/sql-server-2012-release-notes.md)
-## [SQL Server 2012 SP1 Release Notes](../release-notes/sql-server-2012-sp1-release-notes.md)
-## [SQL Server 2012 SP2 Release Notes](../release-notes/sql-server-2012-sp2-release-notes.md)
-## [Notas de la versión de SQL Server 2012 SP3](../release-notes/sql-server-2012-sp3-release-notes.md)
-## [SQL Server 2008 R2 SP2 Release Notes](../release-notes/sql-server-2008-r2-sp2-release-notes.md)
+## [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
+## [Notas de la versión de SQL Server 2012 SP3](sql-server-2012-sp3-release-notes.md)
+## [SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)
+## [SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)
+## [Notas de la versión de SQL Server 2012](sql-server-2012-release-notes.md)
+## [SQL Server 2008 R2 SP2 Release Notes](sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services](../analysis-services/analysis-services.md)
 # [Motor de base de datos](../database-engine/sql-server-database-engine-overview.md)
@@ -35,6 +33,7 @@
 # [Master Data Services](../master-data-services/master-data-services-overview-mds.md)
 # [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
 # [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)
+# [Data Migration Assistant](../dma/dma-overview.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [Tutoriales de SQL Server](tutorials-for-sql-server-2016.md)
-# [Contenido local con Visor de ayuda](../release-notes/sql-server-help-installation.md)
+# [Contenido local con Visor de ayuda](sql-server-help-installation.md)

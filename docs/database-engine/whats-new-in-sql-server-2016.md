@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: bc39be67f0d2fba9195fe2f8e372f05994f0d49d
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 0d4b7b0b668c6ac8ff2808f2d02576c9285e682a
 ms.contentlocale: es-es
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novedades de Motor de base de datos de Microsoft SQL Server 2016
@@ -42,7 +42,8 @@ Si quiere revisar las novedades de los otros componentes de SQL Server, vea [Nov
 
 - ¿Tiene una cuenta de Azure?  Si es así, haga clic **[aquí](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** para poner en marcha una máquina virtual con [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ya instalado.
 
-![nota](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota") Para ver las notas de la versión actuales, vea [Notas de la versión de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md).
+> [!NOTE]
+> Para obtener las notas de la versión actuales, vea [Notas de la versión de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md).
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 Service Pack 1 (SP1)  
 -  Ahora, la sintaxis `CREATE OR ALTER <object>` está disponible para los [procedimientos](../t-sql/statements/create-procedure-transact-sql.md), [vistas](../t-sql/statements/create-view-transact-sql.md), [ funciones](../t-sql/statements/create-function-transact-sql.md) y [desencadenadores](../t-sql/statements/create-trigger-transact-sql.md).
@@ -250,7 +251,7 @@ Para obtener información general, vea:
 
 - Las conexiones de [Usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) ahora pueden tener acceso a tablas con optimización para memoria y a procedimientos almacenados compilados de manera nativa.
 
-- Compatibilidad del [Cifrado de datos transparente (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md). Si una base de datos está configurada para ENCRYPTION, los archivos del [grupo de archivos con optimización para memoria](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) ahora también se cifran.
+- Compatibilidad del [Cifrado de datos transparente (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md). Si una base de datos está configurada para ENCRYPTION, los archivos del [grupo de archivos con optimización para memoria](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) ahora también se cifran.
 
 Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).
 

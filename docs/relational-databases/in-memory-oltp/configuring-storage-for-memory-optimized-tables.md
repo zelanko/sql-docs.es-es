@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0250c8370960dc17adf13c020c51bfc603b111c8
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 2d0a6459bc0c46e3f19de59875f73e1ebedd14d4
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Configurar el almacenamiento para las tablas con optimización para memoria
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 -   Si tiene un número par de ejes, a diferencia de SQL Server 2014, los archivos de punto de control se distribuirán uniformemente a través de todos los ejes.  
   
 ## <a name="encryption"></a>Cifrado  
- En [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], se cifrará el almacenamiento de tablas con optimización para memoria como parte de la habilitación de TDE en la base de datos. Para obtener más información, vea [Cifrado de datos transparente &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
+ En [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], se cifrará el almacenamiento de tablas con optimización para memoria como parte de la habilitación de TDE en la base de datos. Para obtener más información, vea [Cifrado de datos transparente &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Crear y administrar el almacenamiento de objetos con optimización para memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  

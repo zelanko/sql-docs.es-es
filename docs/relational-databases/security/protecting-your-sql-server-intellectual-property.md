@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 64297656b09d9f0843127887b490cef98d07b835
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 36377fe5db9440651b4e63a2c848efc290470d3e
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>Proteger su propiedad intelectual de SQL Server
@@ -34,7 +34,7 @@ El propietario o administrador de un equipo puede acceder en todo momento a la i
 
 Los procedimientos y datos almacenados pueden estar cifrados, pero la estructura de datos no puede estar oculta y los usuarios que puedan adjuntar un depurador al proceso del servidor pueden recuperar procedimientos y datos descifrados de la memoria en tiempo de ejecución.
 
-Si los clientes no son administradores de los equipos, puede impedirles el acceso. Puede usar un [cifrado de datos transparente](../../relational-databases/security/encryption/transparent-data-encryption-tde.md) para cifrar los archivos de datos, puede cifrar las copias de seguridad y puede auditar las acciones de todos los usuarios. Sin embargo, los administradores de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] y los administradores del equipo de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] pueden revertir estas acciones.
+Si los clientes no son administradores de los equipos, puede impedirles el acceso. Puede usar un [cifrado de datos transparente](../../relational-databases/security/encryption/transparent-data-encryption.md) para cifrar los archivos de datos, puede cifrar las copias de seguridad y puede auditar las acciones de todos los usuarios. Sin embargo, los administradores de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] y los administradores del equipo de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] pueden revertir estas acciones.
 
 ## <a name="solution"></a>Solución
 Hay varias maneras de configurar el acceso a los datos de los clientes sin necesidad de instalar [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] en el equipo del cliente. Es probable que la más sencilla sea usar [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] para que los clientes no sean administradores, tal vez conjuntamente con [Siempre cifrados](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Para obtener más información para empezar a trabajar con [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], vea [¿Qué es SQL Database? Introducción a SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview).  

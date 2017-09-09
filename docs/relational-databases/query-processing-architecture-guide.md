@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
-ms.openlocfilehash: 24f0d590630fb04ff45557dfb72616a8e1795f7e
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 70401c6607263bb593d11f0551214d227be1a96a
 ms.contentlocale: es-es
-ms.lasthandoff: 08/22/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
@@ -1035,5 +1035,6 @@ GO
 ##  <a name="Additional_Reading"></a> Lecturas adicionales  
  [Referencia de operadores lógicos y físicos del plan de presentación](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
  [Eventos extendidos](../relational-databases/extended-events/extended-events.md)  
- [Procedimiento recomendado con el Almacén de consultas](../relational-databases/performance/best-practice-with-the-query-store.md)
+ [Procedimiento recomendado con el Almacén de consultas](../relational-databases/performance/best-practice-with-the-query-store.md)  
+ [Estimación de cardinalidad](../relational-databases/performance/cardinality-estimation-sql-server.md)  
 

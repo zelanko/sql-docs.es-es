@@ -20,11 +20,11 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93c2bdc00890de016ad26a45786e2d3a9fef9c33
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: ed2f64e9596dd905c0e8b24f6616520942ccc3ce
 ms.contentlocale: es-es
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="encryption-hierarchy"></a>Jerarquía de cifrado
@@ -106,7 +106,7 @@ ms.lasthandoff: 06/22/2017
  Una clave simétrica es una clave que se utiliza para el cifrado y el descifrado. El cifrado y el descifrado con una clave simétrica son más rápidos y adecuados para usarlos de forma rutinaria con datos confidenciales de una base de datos.  
   
 ### <a name="transparent-data-encryption"></a>Cifrado de datos transparente  
- El Cifrado de datos transparente (TDE) es un caso especial de cifrado que usa una clave simétrica. TDE cifra una base de datos completa utilizando la clave simétrica denominada clave de cifrado de base de datos. Otras claves o certificados que se protegen bien mediante la clave maestra de base de datos o bien mediante una clave asimétrica almacenadas en un módulo EKM protegen la clave de cifrado de base de datos. Para obtener más información, vea [Cifrado de datos transparente &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
+ El Cifrado de datos transparente (TDE) es un caso especial de cifrado que usa una clave simétrica. TDE cifra una base de datos completa utilizando la clave simétrica denominada clave de cifrado de base de datos. Otras claves o certificados que se protegen bien mediante la clave maestra de base de datos o bien mediante una clave asimétrica almacenadas en un módulo EKM protegen la clave de cifrado de base de datos. Para obtener más información, vea [Cifrado de datos transparente &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ## <a name="related-content"></a>Contenido relacionado  
  [Proteger SQL Server](../../../relational-databases/security/securing-sql-server.md)  

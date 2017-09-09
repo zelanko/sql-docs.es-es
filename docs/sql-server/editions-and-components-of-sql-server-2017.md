@@ -40,10 +40,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
-ms.openlocfilehash: 6c17972f863043a53bf60b6c814aaac0c3c38d51
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 22507f627c33c9424d725ca5d249bd04628b3ea6
 ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Ediciones y características admitidas de SQL Server 2017
@@ -199,7 +199,8 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Perdurabilidad diferida|Sí|Sí|Sí|Sí|Sí|
 |Ajuste automático|Sí|No|No|No|No|
 |Combinaciones adaptables de modo de proceso por lotes|Sí|No|No|No|No|
-|Comentarios de concesión de memoria por lote|Sí|No|No|No|No|
+|Comentarios de concesión de memoria de modo de proceso por lotes|Sí|No|No|No|No|
+|Ejecución intercalada de funciones con valores de tabla de múltiples instrucciones|Sí|Sí|Sí|Sí|Sí|
 |Mejoras de inserción masiva|Sí|Sí|Sí|Sí|Sí|
 
 

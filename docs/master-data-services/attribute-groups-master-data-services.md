@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: b5c90f2a2df358af81f563f5740450ba130d24e5
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="attribute-groups-master-data-services"></a>Grupos de atributos (Master Data Services)

@@ -1,29 +1,34 @@
 ---
-title: "Miembros calculados en subselecciones y subcubos | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Miembros calculados en subselecciones y los subcubos | Documentos de Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a06ba2933b415a28d53266e4c02f3768e5044866
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Miembros calculados en subselecciones y subcubos
+# <a name="calculated-members-in-subselects-and-subcubes"></a>Miembros calculados en subselecciones y subcubos
   Un miembro calculado es un miembro de dimensión cuyo valor se calcula a partir de una expresión en tiempo de ejecución, y se puede usar en las subselecciones y los subcubos para definir con mayor precisión el espacio del cubo de una consulta.  
   
-## Habilitación de los miembros calculados en el subespacio  
- La propiedad de cadena de conexión **SubQueries** en <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o la propiedad **DBPROPMSMDSUBQUERIES** en [Propiedades XMLA compatibles &#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md) definen el comportamiento o concesión de miembros calculados o conjuntos calculados en subselecciones o subcubos. En el contexto de este documento, subselección hace referencia a subselecciones y subcubos, a menos que se indique lo contrario.  
+## <a name="enabling-calculated-members-in-the-subspace"></a>Habilitación de los miembros calculados en el subespacio  
+ La propiedad de cadena de conexión **SubQueries** en <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o la propiedad **DBPROPMSMDSUBQUERIES** en [Propiedades XMLA compatibles &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) definen el comportamiento o concesión de miembros calculados o conjuntos calculados en subselecciones o subcubos. En el contexto de este documento, subselección hace referencia a subselecciones y subcubos, a menos que se indique lo contrario.  
   
  La propiedad SubQueries permite los siguientes valores.  
   
@@ -121,12 +126,12 @@ Where [Measures].[Reseller Sales Amount]
   
  En los resultados anteriores, los valores agregados para [All Geographies], [United States], [Oregon] y [Washington] proceden de agregar los descendientes de &[Portland]&[OR] y &[Spokane]&[WA]. Nada procede del miembro calculado.  
   
-### Comentarios  
+### <a name="remarks"></a>Comentarios  
  Solo se permiten miembros calculados globales o de sesión en las expresiones de subselección o subcubo. Si existen miembros calculados de consulta en la expresión MDX, se producirá un error cuando se evalúe la expresión de subselección o subcubo.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Subselecciones en las consultas](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
- [Propiedades XMLA compatibles &#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md)  
+ [Propiedades XMLA compatibles &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
   
   

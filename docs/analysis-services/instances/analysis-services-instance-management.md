@@ -1,25 +1,30 @@
 ---
-title: "Administraci&#243;n de una instancia de Analysis Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Administración de la instancia de Analysis Services | Documentos de Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 15aeda3b7b6ecb758aa2a0c0f3b8b2b85368dbf0
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Administraci&#243;n de una instancia de Analysis Services
+# <a name="analysis-services-instance-management"></a>Administración de una instancia de Analysis Services
   Una instancia de Analysis Services es una copia del ejecutable **msmdsrv.exe** que se ejecuta como un servicio de sistema operativo. Cada instancia es totalmente independiente de otras instancias en el mismo servidor y tiene su propia configuración, permisos, puertos, cuentas de inicio, almacenamiento de archivos, y propiedades del modo de servidor.  
   
  Cada instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ejecuta un servicio de Windows, Msmdsrv.exe, en el contexto de seguridad de una cuenta de inicio de sesión definida.  
@@ -42,22 +47,21 @@ caps.handback.revision: 25
  Por lo general, la mayoría de las tareas administrativas que debe realizar no variarán según el modo. Como administrador del sistema de Analysis Services, puede usar los mismos procedimientos y scripts para administrar cualquier instancia de Analysis Services en su red, independientemente de cómo se haya instalado.  
   
 > [!NOTE]  
->  La excepción es [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. La administración de servidores de una implementación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] siempre está en el contexto de una granja de SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se diferencia de otros modos de servidor en que es siempre de instancia única y se administra siempre a través de Administración central de SharePoint o la Herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Aunque es posible conectarse a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint de SQL Server Management Studio o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], no es deseable. Una granja de servidores de SharePoint incluye la infraestructura que sincroniza el estado del servidor y supervisa la disponibilidad del servidor. El uso de otras herramientas puede interferir con estas operaciones. Para más información sobre la administración de servidores de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], vea [Power Pivot para SharePoint &#40;SSAS&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
+>  La excepción es [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. La administración de servidores de una implementación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] siempre está en el contexto de una granja de SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se diferencia de otros modos de servidor en que es siempre de instancia única y se administra siempre a través de Administración central de SharePoint o la Herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Aunque es posible conectarse a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint de SQL Server Management Studio o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], no es deseable. Una granja de servidores de SharePoint incluye la infraestructura que sincroniza el estado del servidor y supervisa la disponibilidad del servidor. El uso de otras herramientas puede interferir con estas operaciones. Para más información sobre la administración de servidores de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], vea [Power Pivot para SharePoint &#40;SSAS&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
   
 |Vínculo|Descripción de la tarea|  
 |----------|----------------------|  
 |[Configuración posterior a la instalación &#40;Analysis Services&#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)|Describe las tareas necesarias y opcionales que completan o modifican una instalación de Analysis.|  
 |[Conectar a Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)|Describe las propiedades de cadena de conexión, las bibliotecas de cliente, las metodologías de autenticación y los pasos para establecer o borrar conexiones.|  
 |[Supervisar una instancia de Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)|Describe las herramientas y técnicas de supervisión de instancias de servidor, incluida una explicación sobre el uso del monitor de rendimiento y SQL Server Profiler.|  
-|[Crear scripts para tareas administrativas en Analysis Services](../../analysis-services/instances/script-administrative-tasks-in-analysis-services.md)|Explica cómo automatizar muchas tareas administrativas, incluido el procesamiento.|  
 |[Alta disponibilidad y escalabilidad](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)|Describe las técnicas empleadas con más frecuencia para lograr una alta disponibilidad y escalabilidad de las bases de datos de Analysis Services. |  
 |[Escenarios de globalización para Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md)|Explica la compatibilidad de intercalación e idioma, los pasos que se deben seguir para cambiar ambas propiedades y sugerencias para configurar y probar el comportamiento de estas.|  
 |[Operaciones de registro en Analysis Services](../../analysis-services/instances/log-operations-in-analysis-services.md)|Describe los registros y explica cómo configurarlos.|  
   
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Comparar soluciones tabulares y multidimensionales &#40;SSAS&#41;](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [Herramientas de configuración de Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)   
  [Administración y configuración del servidor de Power Pivot en Administración central](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   

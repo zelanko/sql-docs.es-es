@@ -1,32 +1,37 @@
 ---
-title: "Escenario de Tutorial de Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: Escenario del Tutorial de Analysis Services | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 933a07504d0237d67becb2d98e1f5271548cb14a
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Escenario de Tutorial de Analysis Services
+# <a name="analysis-services-tutorial-scenario"></a>Escenario de Tutorial de Analysis Services
 Este tutorial se basa en [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], una compañía ficticia. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] es una multinacional dedicada a la fabricación y distribución de bicicletas de metal y de metal compuesto en mercados de Norteamérica, Europa y Asia. Las oficinas centrales de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] se encuentran en Bothell, Washington, donde la compañía tiene 500 trabajadores. Además, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] tiene contratados a varios equipos de ventas regionales en toda su base de mercado.  
   
 En los últimos años, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] compró una pequeña planta de fabricación, Importadores Neptuno, situada en México. Importadores Neptuno fabrica varios subcomponentes muy importantes para la línea de productos de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] . Estos subcomponentes se envían a la sede de Bothell para el ensamblado final del producto. En el año 2005, Importadores Neptuno pasó a ser el único fabricante y distribuidor del grupo de productos de bicicletas de paseo.  
   
 Tras un año fiscal con muy buenos resultados, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] desea ampliar su cuota de mercado dirigiendo sus ventas a sus mejores clientes, ampliando la disponibilidad de sus productos en un sitio web externo y reduciendo los costos de venta a través de costos de producción más bajos.  
   
-## Entorno de análisis actual  
-Para dar respuesta a las necesidades de análisis de datos de los equipos de ventas y de marketing, la compañía obtiene actualmente los datos transaccionales de la base de datos [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] y la información que no corresponde a las transacciones, como las cuotas de venta, la obtiene de hojas de cálculo y consolida toda esta información en el almacenamiento de datos relacionales **AdventureWorksDW2012**. No obstante, el almacenamiento de datos relacional presenta los siguientes problemas:  
+## <a name="current-analysis-environment"></a>Entorno de análisis actual  
+Para dar respuesta a las necesidades de análisis de datos de los equipos de ventas y de marketing, la compañía obtiene actualmente los datos transaccionales de la base de datos [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] y la información que no corresponde a las transacciones, como las cuotas de venta, la obtiene de hojas de cálculo y consolida toda esta información en el almacenamiento de datos relacionales **AdventureWorksDW2012** . No obstante, el almacenamiento de datos relacional presenta los siguientes problemas:  
   
 -   Los informes son estáticos. Los usuarios no pueden explorar de forma interactiva los datos de los informes para obtener información más detallada, como podían hacer con una tabla dinámica de [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel. Aunque el conjunto existente de informes predefinidos es suficiente para muchos usuarios, los usuarios más avanzados necesitan un acceso de consulta directo a la base de datos para realizar consultas interactivas y obtener informes especializados. No obstante, debido a la complejidad de la base de datos **AdventureWorksDW2012** , se necesita demasiado tiempo para que estos usuarios puedan aprender a crear consultas eficaces.  
   
@@ -46,7 +51,7 @@ Para dar respuesta a las necesidades de análisis de datos de los equipos de ven
   
 -   Es difícil auditar la información. Actualmente, el departamento de finanzas usa la base de datos **AdventureWorksDW2012** solo como origen de datos en la que pueden realizarse consultas masivas. Luego descargan los datos en hojas de cálculo individuales e invierten mucho tiempo en preparar los datos y manipular dichas hojas de cálculo. Por consiguiente, el proceso de preparación, auditoría y administración de los informes financieros de la compañía es complejo.  
   
-## Solución  
+## <a name="the-solution"></a>Solución  
 Recientemente, el equipo del almacenamiento de datos ha realizado una revisión del diseño del sistema de análisis actual. La revisión ha incluido un análisis de las lagunas que presentan los problemas actuales y las demandas futuras. Este equipo ha determinado que la base de datos **AdventureWorksDW2012** es una base de datos dimensional bien diseñada con dimensiones compatibles y claves suplentes. Las dimensiones compatibles permiten utilizar una dimensión en varios puestos de datos, como una dimensión de tiempo o una dimensión de producto. Las claves suplentes son claves artificiales que vinculan tablas de dimensiones y de hechos y se utilizan para garantizar la unicidad y mejorar el rendimiento. Además, el equipo de almacenamiento de datos ha determinado que actualmente no existen problemas significativos con la carga y la administración de las tablas base de la base de datos **AdventureWorksDW2012** . Por tanto, el equipo ha decidido usar [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para poder hacer lo siguiente:  
   
 -   Proporcionar el acceso a datos unificados a través de una capa de metadatos común para la creación de informes y el análisis analítico.  
@@ -63,8 +68,9 @@ Recientemente, el equipo del almacenamiento de datos ha realizado una revisión 
   
 Las lecciones del tutorial de Analysis Services proporcionan instrucciones para crear una base de datos de cubo que satisfaga todos estos objetivos. Para empezar, vaya a la primera lección: [Lesson 1: Create a New Tabular Model Project](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
 [Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   
   
+

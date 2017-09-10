@@ -1,37 +1,42 @@
 ---
-title: "Examinar un modelo usando el Visor de cl&#250;steres de secuencia de Microsoft | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "visor de clústeres de secuencia"
-  - "clústeres [Analysis Services]"
-  - "minería de datos [Analysis Services], secuencias"
-  - "distinción [Analysis Services]"
-  - "contenido del modelo de minería de datos, ver"
-  - "modelos de minería de datos [Analysis Services], secuencias"
-  - "Visor de clústeres de secuencia de Microsoft"
-  - "secuencia [Analysis Services]"
-  - "transiciones [Analysis Services]"
+title: "Examinar un modelo usando el Visor de clústeres de secuencia de Microsoft | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Sequence Cluster Viewer
+- clusters [Analysis Services]
+- data mining [Analysis Services], sequences
+- discrimination [Analysis Services]
+- mining model content, viewing
+- mining models [Analysis Services], sequences
+- Microsoft Sequence Cluster Viewer
+- sequence [Analysis Services]
+- transitions [Analysis Services]
 ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 87f8b6d83647639e8c2a807add3df680ff47b6b9
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Examinar un modelo usando el Visor de cl&#250;steres de secuencia de Microsoft
+# <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Examinar un modelo usando el Visor de clústeres de secuencia de Microsoft
   El Visor de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestra los modelos de minería de datos que se generan con el algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo de clústeres de secuencia que se utiliza para explorar datos que contienen eventos que se pueden vincular siguiendo rutas o *secuencias*. Para más información sobre este algoritmo, vea [Algoritmo de clústeres de secuencia de Microsoft](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md).  
   
 > [!NOTE]  
->  Para ver información detallada sobre las ecuaciones utilizadas en el modelo y los modelos que se detectaron, utilice el Visor de árbol de contenido genérico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para más información, vea [Examinar un modelo usando el Visor de árbol de contenido genérico de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Visor de árbol de contenido genérico de Microsoft &#40;Minería de datos&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md).  
+>  Para ver información detallada sobre las ecuaciones utilizadas en el modelo y los modelos que se detectaron, utilice el Visor de árbol de contenido genérico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para más información, vea [Examinar un modelo usando el Visor de árbol de contenido genérico de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Visor de árbol de contenido genérico de Microsoft &#40;Minería de datos&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
   
 > [!NOTE]  
 >  El visor de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] proporciona funcionalidad y opciones similares a las del visor de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para más información, vea [Examinar un modelo usando el Visor de clústeres de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md).  
@@ -52,16 +57,16 @@ caps.handback.revision: 38
 ###  <a name="BKMK_Diagram"></a> Diagrama del clúster  
  La pestaña **Diagrama del clúster** del Visor de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] muestra todos los clústeres de un modelo de minería de datos. El sombreado de la línea que conecta un clúster con otro representa la importancia de la similitud de los clústeres. Si el sombreado es claro o inexistente, los clústeres no son muy similares. A medida que la línea se va oscureciendo, va aumentando la similitud de los vínculos. Puede ajustar el número de líneas que muestra el visor ajustando el control deslizante situado a la derecha de los clústeres. Si desplaza el control deslizante hacia abajo, sólo se verán los vínculos más similares.  
   
- De forma predeterminada, el sombreado representa el llenado del clúster. Mediante las opciones **Variable de sombreado** y **Estado**, puede seleccionar el par de atributo y estado que representa el sombreado. Cuanto más oscuro sea el sombreado, mayor será la distribución del atributo para un estado concreto. La distribución disminuye a medida que se aclara el sombreado.  
+ De forma predeterminada, el sombreado representa el llenado del clúster. Mediante las opciones **Variable de sombreado** y **Estado** , puede seleccionar el par de atributo y estado que representa el sombreado. Cuanto más oscuro sea el sombreado, mayor será la distribución del atributo para un estado concreto. La distribución disminuye a medida que se aclara el sombreado.  
   
- Para cambiar el nombre de un clúster, haga clic en su nodo con el botón derecho y seleccione **Cambiar nombre de clúster**. El nuevo nombre se mantiene en el servidor.  
+ Para cambiar el nombre de un clúster, haga clic con el botón derecho en su nodo y seleccione **Cambiar nombre de clúster**. El nuevo nombre se mantiene en el servidor.  
   
  Para copiar la sección visible del diagrama al Portapapeles, haga clic en **Copiar vista del gráfico**. Para copiar el diagrama completo, haga clic en **Copiar todo el gráfico**. También puede acercar o alejar el diagrama con las opciones **Acercar** y **Alejar**o ajustar el diagrama a la pantalla con **Ajustar diagrama a la ventana**.  
   
  [Volver al principio](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Profile"></a> Perfiles del clúster  
- La pestaña **Perfiles del clúster** proporciona una vista general de los clústeres que crea el algoritmo del modelo. Cada columna que sigue a la columna **Llenado** en la cuadrícula representa un clúster que el modelo ha descubierto. La fila \<attribute>.samples muestra diferentes secuencias de datos que existen en el clúster y la fila \<attribute> describe todos los elementos que el clúster contiene y su distribución general.  
+ La pestaña **Perfiles del clúster** proporciona una vista general de los clústeres que crea el algoritmo del modelo. Cada columna que sigue a la columna **Llenado** en la cuadrícula representa un clúster que el modelo ha descubierto. El \<atributo > fila de ejemplos representa diferentes secuencias de datos que existen en el clúster, y el \<atributo > fila describe todos los elementos que contiene el clúster y su distribución global.  
   
  La opción **Barras de histograma** controla el número de barras que están visibles en el histograma. Si hay más barras de las que elige que se muestren, se retienen las de mayor importancia y las restantes se agrupan en un depósito gris.  
   
@@ -90,10 +95,10 @@ caps.handback.revision: 38
   
  [Volver al principio](#BKMK_ViewerTabs)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tareas y procedimientos del Visor de modelos de minería de datos](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Tareas y procedimientos del Visor de modelos de minería de datos](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Algoritmo de clústeres de secuencia de Microsoft](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [Herramientas de minería de datos](../../analysis-services/data-mining/data-mining-tools.md)   
  [Visores de modelos de minería de datos](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [Examinar un modelo usando el Visor de clústeres de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  

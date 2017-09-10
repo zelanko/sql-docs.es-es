@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c7ece8c33a4c110898134da60aea6595b936e1e9
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: e718e67c8756d691338a614c775c2ff71df4b06c
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de patrón de columnas (tarea de generación de perfiles de datos)
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **Delimiters** De forma predeterminada, la lista de delimitadores contiene los caracteres siguientes: espacio, tabulador horizontal (\t), nueva línea (\n) y retorno de carro (\r). Puede especificar delimitadores adicionales, pero no puede quitar los predeterminados.  
   
--   **Symbols** De forma predeterminada, la lista de **símbolos** contiene los siguientes caracteres: `,.;:-"'`~=&/@!?()<>[]{}|#*^%`. For example, if the symbols are "`()-`", el valor "(425) 123-4567" se ha tokenizado como ["(", "425", ")", "123", "-", "4567", ")"].  
+-   **Símbolos** de forma predeterminada, la lista de **símbolos** contiene los siguientes caracteres: `,.;:-"'~=&/@!?()<>[]{}|#*^%`. Por ejemplo, si los símbolos son "`()-`", el valor"(425) 123-4567" se convierte en ["(", "425", ")", "123", "-", "4567", ")"].  
   
  Un carácter no puede ser delimitador y símbolo a la vez.  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="data-options"></a>Opciones de Data  
  **ConnectionManager**  
- Seleccione el administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existente que usa el Proveedor de datos .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) con el fin de conectarse a la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contiene la tabla o la vista con la que se va a generar el perfil.  
+ Seleccione el administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existente que usa el proveedor de datos .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) para conectarse a la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contiene la tabla o la vista con la que se generará el perfil.  
   
  **TableOrView**  
  Seleccione la tabla o vista existente que contenga la columna de la que se va a generar un perfil.  
@@ -147,7 +147,8 @@ ms.lasthandoff: 08/03/2017
  Para obtener más información al respecto, vea "Uso de la tabla de etiquetas" anteriormente en este tema.  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de la tarea &#40; de la generación de perfiles de datos Página general &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Editor de tareas de generación de perfiles de datos &#40;página General&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Formulario de perfil rápido de tabla única &#40; datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
+

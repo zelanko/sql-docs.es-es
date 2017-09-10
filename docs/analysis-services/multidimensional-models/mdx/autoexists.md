@@ -1,37 +1,42 @@
 ---
-title: "Autoexists | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Autoexist | Documentos de Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 934307b7230a950bc41b5de117cc6f2326b90561
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Autoexists
+# <a name="autoexists"></a>Autoexists
   El concepto de *autoexists* limita el espacio del cubo a esas celdas que realmente existen en el cubo en contraposición a aquellas que podrían existir como resultado de la creación de todas las posibles combinaciones de miembros de jerarquía de atributo a partir de la misma jerarquía. Esto es así porque los miembros de una jerarquía de atributo no pueden existir con los miembros de otra jerarquía de atributo de la misma dimensión. Cuando dos o más jerarquías de atributos de la dimensión se usan en una instrucción SELECT, Analysis Services evalúa las expresiones de los atributos para asegurarse de que los miembros de dichos atributos están correctamente delimitados, a fin de cumplir los criterios de todos los demás atributos.  
   
  Por ejemplo, supongamos que está trabajando con atributos de la dimensión Geography. Si tiene una expresión que devuelve todos los miembros del atributo City, y otra expresión que delimita los miembros del atributo Country a todos los países de Europa, los miembros de City quedarán delimitados a aquellas ciudades que pertenezcan únicamente a países de Europa. Esto es debido a la característica de autoexists de Analysis Services. Autoexists solamente se aplica a atributos de una misma dimensión porque intenta impedir que los registros de la dimensión excluidos de una expresión de atributos se incluyan en las demás expresiones de atributos. Autoexists también puede entenderse como la intersección resultante de las distintas expresiones de atributos de las filas de la dimensión.  
   
-## Existencia de celdas  
+## <a name="cell-existence"></a>Existencia de celdas  
  Las siguientes celdas siempre existen:  
   
 -   El miembro (All), de cada jerarquía, cuando se cruza con miembros de otras jerarquías de la misma dimensión.  
   
 -   Los miembros calculados cuando se cruzan con los elementos del mismo nivel no calculados o con los miembros primarios o descendientes de los elementos del mismo nivel no calculados.  
   
-## Proporcionar celdas no existentes  
+## <a name="providing-non-existing-cells"></a>Proporcionar celdas no existentes  
  Una celda no existente es una celda proporcionada por el sistema como respuesta a una consulta o cálculo que solicita una celda que no existe en el cubo. Por ejemplo, si tiene un cubo con una jerarquía de atributo City y una jerarquía de atributo Country que pertenece a la dimensión Geography, y la medida Internet Sales Amount, el espacio de este cubo solamente incluye a los miembros que existen entre sí. Por ejemplo, si la jerarquía de atributo City incluye las ciudades de Nueva York, Londres, París, Tokio y Melbourne; y la jerarquía de atributo Country incluye los países Estados Unidos, Reino Unido, Francia, Japón y Australia; entonces el espacio del cubo no incluye el espacio (celda) en la intersección de París y Estados Unidos.  
   
  Al consultar las celdas que no existen, las celdas no existentes devuelven valores nulos; es decir, no pueden contener cálculos y no se puede definir un cálculo que escriba en este espacio. Por ejemplo, la siguiente instrucción incluye celdas que no existen.  
@@ -64,7 +69,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Observe que 0 se utiliza para designar al eje de columna, que es una abreviatura para el eje(0), que es el eje de columna.  
   
- La consulta anterior solo devuelve celdas para los miembros de cada jerarquía de atributo de la consulta que existen entre sí. La consulta anterior también puede escribirse con la nueva variante * de la función [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx.md).  
+ La consulta anterior solo devuelve celdas para los miembros de cada jerarquía de atributo de la consulta que existen entre sí. La consulta anterior también puede escribirse con la nueva variante * de la función [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx-operator-reference.md) .  
   
 ```  
 SELECT   
@@ -89,7 +94,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  Cada una de estas tres consultas anteriores muestra el efecto del comportamiento de auto-exists en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
-## Deep y Shallow Autoexists  
+## <a name="deep-and-shallow-autoexists"></a>Deep y Shallow Autoexists  
  Autoexists se puede aplicar a las expresiones como Deep y Shallow. **Deep Autoexists** quiere decir que todas las expresiones se evaluarán para cumplir el espacio más profundo posible después de aplicar las expresiones de eje segmentador, expresiones de subselección en el eje, etc. **Shallow Autoexists** quiere decir que las expresiones externas se evalúan antes que la expresión actual y los resultados se pasan a la expresión actual. El valor predeterminado es deep autoexists.  
   
  El siguiente escenario y ejemplos ayudarán a mostrar los tipos diferentes de autoexists. En los ejemplos siguientes, se crearán dos conjuntos: uno de ellos como una expresión calculada, y el otro como una expresión constante.  
@@ -138,13 +143,13 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
 |**Road-250**|**$9,377,457.68**|**$4,032.47**|**0.04%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
-|**Road-650**|**$7,442,141.81**|**$39,698.30**|**0,53 %**|  
-|**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47 %**|  
-|**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0,05 %**|  
+|**Road-650**|**$7,442,141.81**|**$39,698.30**|**0,53 %**|  
+|**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47 %**|  
+|**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0,05 %**|  
 |**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0,57 %**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01 %**|  
 |**Road-150**|**$2,363,805.16**|**$0.00**|**0.00%**|  
-|**Touring-3000**|**$2,046,508.26**|**$79,582.15**|**3,89 %**|  
+|**Touring-3000**|**$2,046,508.26**|**$79,582.15**|**3,89 %**|  
   
  El conjunto de productos obtenido parece el mismo que el de Preferred10Products; de modo que, comprobando el conjunto de Preferred10Products:  
   
@@ -190,9 +195,9 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
 |**Road-250**|**$9,377,457.68**|**$4,032.47**|**0.04%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
-|**Road-650**|**$7,442,141.81**|**$39,698.30**|**0,53 %**|  
-|**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47 %**|  
-|**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0,05 %**|  
+|**Road-650**|**$7,442,141.81**|**$39,698.30**|**0,53 %**|  
+|**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47 %**|  
+|**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0,05 %**|  
 |**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0,57 %**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01 %**|  
 |**Road-150**|**$2,363,805.16**|**$0.00**|**0.00%**|  
@@ -219,16 +224,16 @@ WHERE (Measures.[Internet Sales Amount],
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01 %**|  
 |**Mountain-300**|**$1,907,249.38**|**$876.95**|**0,05 %**|  
-|**Mountain-500**|**$1,067,327.31**|**$17,266.09**|**1,62 %**|  
+|**Mountain-500**|**$1,067,327.31**|**$17,266.09**|**1,62 %**|  
 |**Mountain-400-W**|**$592,450.05**|**$303.49**|**0,05 %**|  
 |**LL Mountain Frame**|**$521,864.42**|**$252.41**|**0,05 %**|  
 |**ML Mountain Frame-W**|**$482,953.16**|**$206.95**|**0.04%**|  
 |**ML Mountain Frame**|**$343,785.29**|**$161.82**|**0,05 %**|  
-|**Women's Mountain Shorts**|**$260,304.09**|**$6,675.56**|**2,56 %**|  
+|**Women's Mountain Shorts**|**$260,304.09**|**$6,675.56**|**2,56 %**|  
   
  En el conjunto de resultados anterior se muestran siete nuevas entradas en la lista Top10SellingProducts y, además, vemos que Mountain-200, Mountain-100 y HL Mountain Frame se han movido a la parte superior de la lista. En el conjunto de resultados anterior, esos tres valores se intercalaban.  
   
@@ -277,8 +282,8 @@ WHERE (Measures.[Internet Sales Amount],
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01 %**|  
   
  En los resultados anteriores, la segmentación arroja un resultado que solamente incluye los productos Preferred10Products que forman parte del grupo [Mountain] de [Product].[Product Line]; es el resultado esperado, porque Preferred10Products es una expresión constante.  
@@ -306,18 +311,18 @@ WHERE (Measures.[Internet Sales Amount],
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01 %**|  
   
- El comportamiento de Autoexists se puede modificar si se usa el parámetro AUTOEXISTS=[1|2|3] en la cadena de conexión; vea el uso del parámetro en [Propiedades XMLA compatibles &#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md) y <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> (Propiedad AdomdConnection.ConnectionString).  
+ Comportamiento de Autoexists puede modificarse mediante el AUTOEXISTS = [1 | 2 | 3] parámetro en la cadena de conexión; vea [admite propiedades XMLA &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) y <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para el uso de parámetros.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conceptos clave de MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Espacio de cubo](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
+ [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Tuplas](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
  [Trabajar con miembros, tuplas y conjuntos &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
- [Totales visuales y totales no visuales](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
+ [Los totales visuales y totales no visuales](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
  [Referencia del lenguaje MDX &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
  [Referencia de expresiones multidimensionales &#40;MDX&#41;](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   

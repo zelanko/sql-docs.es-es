@@ -1,27 +1,32 @@
 ---
-title: "Procesar objetos de Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "objetos OLAP [Analysis Services], procesar"
-  - "OLAP, objetos [Analysis Services]"
+title: Objetos de procesamiento de Analysis Services | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLAP objects [Analysis Services], processing
+- OLAP objects [Analysis Services]
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58e0a8da7c8bfeae9d661dc78d264218c7c19b81
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Procesar objetos de Analysis Services
+# <a name="processing-analysis-services-objects"></a>Procesar objetos de Analysis Services
   El procesamiento afecta a los siguientes tipos de objetos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : cubos, dimensiones, grupos de medida, particiones, modelos y estructuras de minería de datos y bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Puede especificar el nivel de procesamiento de cada objeto, o bien puede especificar la opción Procesar predeterminado para permitir que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] seleccione automáticamente el nivel óptimo de procesamiento. Para más información sobre los distintos niveles de procesamiento de cada objeto, vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
  Debe tener en cuenta las consecuencias del comportamiento del procesamiento a fin de reducir las repercusiones negativas. Por ejemplo, el procesamiento completo de una dimensión establece automáticamente todas las particiones como dependientes de esa dimensión en un estado sin procesar. Esto hace que los cubos afectados no estén disponibles para consulta hasta que se procesen las particiones dependientes.  
@@ -93,9 +98,9 @@ caps.handback.revision: 44
   
  Para más información sobre el procesamiento de estructuras y modelos de minería de datos, vea [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Herramientas y enfoques de procesamiento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [Procesamiento por lotes &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [Procesamiento por lotes &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Procesar un modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

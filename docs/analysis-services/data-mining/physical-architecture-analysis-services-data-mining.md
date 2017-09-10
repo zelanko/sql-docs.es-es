@@ -1,35 +1,40 @@
 ---
-title: "Arquitectura f&#237;sica (Analysis Services - Miner&#237;a de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "arquitectura de servidor [Analysis Services]"
-  - "arquitectura [Analysis Services]"
+title: "Arquitectura física (Analysis Services: minería de datos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- server architecture [Analysis Services]
+- architecture [Analysis Services]
 ms.assetid: 25eeecf0-6e85-4527-b94d-5503d27edaed
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b1e79889b8023a94d6f7bbc8d3e9f4ca75c5273
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Arquitectura f&#237;sica (Analysis Services - Miner&#237;a de datos)
+# <a name="physical-architecture-analysis-services---data-mining"></a>Arquitectura física (Analysis Services - Minería de datos)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa tanto componentes de servidor como de cliente para proporcionar la funcionalidad de minería de datos en las aplicaciones Business Intelligence:  
   
 -   El componente de servidor se implementa como servicio de Microsoft Windows. Puede tener varias instancias en el mismo equipo, con cada instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implementada como instancia independiente del servicio de Windows.  
   
 -   Los clientes se comunican con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante el estándar público XML for Analysis (XMLA), protocolo basado en SOAP para emitir comandos y recibir respuestas, que se expone como servicio web. Además, se proporcionan modelos de objetos de cliente en XMLA, a los que se puede obtener acceso mediante un proveedor administrado, como ADOMD.NET, o un proveedor OLE DB nativo.  
   
--   Los comandos de consulta se pueden emitir mediante Extensiones de minería de datos (DMX), un lenguaje de consulta estándar del sector orientado hacia la minería de datos. También se puede usar el lenguaje de script de Analysis Services (ASSL) para administrar objetos de base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   Los comandos de consulta se pueden emitir mediante Extensiones de minería de datos (DMX), un lenguaje de consulta estándar del sector orientado hacia la minería de datos. También se puede usar el lenguaje de script de Analysis Services (ASSL) para administrar objetos de base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-## Diagrama de la arquitectura  
+## <a name="architectural-diagram"></a>Diagrama de la arquitectura  
  Las instancias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se ejecutan como un servicio independiente y la comunicación con el servicio se produce a través de XML for Analysis (XMLA), mediante HTTP o TCP.  
   
  AMO es un nivel entre la aplicación de usuario y la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que proporciona acceso a los objetos administrativos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . AMO es una biblioteca de clases que toma los comandos de una aplicación cliente y los convierte en mensajes XMLA para la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . AMO muestra los objetos de instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a la aplicación de usuario final como clases, con miembros de método que ejecutan comandos y miembros de propiedad que contienen los datos de los objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -41,16 +46,16 @@ caps.handback.revision: 22
 > [!WARNING]  
 >  DSO está en desuso. No debe utilizar DSO para desarrollar soluciones.  
   
- ![Diagrama de la arquitectura del sistema Analysis Services](../../analysis-services/data-mining/media/analysisservicessystemarchitecture.gif "Diagrama de la arquitectura del sistema Analysis Services")  
+ ![Diagrama de arquitectura de sistema de Analysis Services](../../analysis-services/data-mining/media/analysisservicessystemarchitecture.gif "diagrama de arquitectura de sistema de Analysis Services")  
   
-## Configuración del servidor  
+## <a name="server-configuration"></a>Configuración del servidor  
  Una instancia del servidor puede admitir varias bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , cada una con su propia instancia del servicio de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que responde a las solicitudes de cliente y procesa los objetos.  
   
  Las instancias independientes deben estar instaladas si desea trabajar tanto con modelos de minería de datos tabulares (TDS) como con modelos multidimensionales. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite la instalación en paralelo de las instancias que se ejecutan en el modo tabular, que usa el motor de almacenamiento analítico en memoria xVelocity (VertiPaq), y de las instancias que se ejecutan en una de las configuraciones convencionales OLAP, MOLAP o ROLAP. Para obtener más información, vea [Determinar el modo de servidor de una instancia de Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
  Todas las comunicaciones entre un cliente y el servidor de Analysis Services usan XMLA, que es un protocolo independiente de la plataforma y del lenguaje. Cuando se recibe una solicitud de un cliente, Analysis Services determina si está relacionada con OLAP o con la minería de datos, y la enruta apropiadamente. Para obtener más información, vea [Componentes de servidor del motor OLAP](../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Arquitectura lógica &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
   

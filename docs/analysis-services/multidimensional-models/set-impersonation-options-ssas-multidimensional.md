@@ -1,35 +1,40 @@
 ---
-title: "Establezca las opciones de suplantaci&#243;n (SSAS - multidimensional) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.sqlserverstudio.impersonationinfo.f1"
-helpviewer_keywords: 
-  - "Información de suplantación, cuadro de diálogo"
+title: "Establezca las opciones de suplantación (SSAS - multidimensionales) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.sqlserverstudio.impersonationinfo.f1
+helpviewer_keywords:
+- Impersonation Information dialog box
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9dfd1dbf5f4f514136695dc2bb0d776afda99562
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Establezca las opciones de suplantaci&#243;n (SSAS - multidimensional)
+# <a name="set-impersonation-options-ssas---multidimensional"></a>Establezca las opciones de suplantación (SSAS - multidimensional)
   Al crear un objeto de **data source** en un modelo de Analysis Services, uno de los valores que debe configurar es una opción de suplantación. Esta opción determina si Analysis Services asume la identidad de una cuenta de usuario de Windows concreta al realizar las operaciones locales relacionadas con la conexión, como cargar un proveedor de datos OLE DB o resolver la información de perfil de usuario en entornos que admiten perfiles de itinerancia.  
   
  Para las conexiones que utilizan la autenticación de Windows, la opción de suplantación también determina la identidad en la que las consultas se ejecuten en el origen de datos externo. Por ejemplo, si establece la opción de suplantación en **contoso\dbuser**, las consultas usadas para recuperar datos durante el procesamiento se ejecutan como **contoso\dbuser** en el servidor de bases de datos.  
   
  Este tema explica cómo establecer las opciones de suplantación en el cuadro de diálogo **Información de suplantación** al configurar un objeto de origen de datos.  
   
-## Establezca las opciones de suplantación en Herramientas de datos de SQL Server  
+## <a name="set-impersonation-options-in-sql-server-data-tools"></a>Establezca las opciones de suplantación en Herramientas de datos de SQL Server  
   
 1.  Haga doble clic en un origen de datos en el explorador de soluciones para abrir el Diseñador de origen de datos.  
   
@@ -37,8 +42,8 @@ caps.handback.revision: 27
   
 3.  Elija una opción descrita en [Opciones de suplantación](#bkmk_options) en este tema.  
   
-## Establezca las opciones de suplantación en Management Studio  
- En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], abra el cuadro de diálogo **Información de suplantación**, haga clic en el botón de puntos suspensivos (**…**) para las propiedades siguientes de estos cuadros de diálogo:  
+## <a name="set-impersonation-options-in-management-studio"></a>Establezca las opciones de suplantación en Management Studio  
+ En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], abra el cuadro de diálogo **Información de suplantación** , haga clic en el botón de puntos suspensivos (**…**) para las propiedades siguientes de estos cuadros de diálogo:  
   
 -   El cuadro de diálogo**Propiedades de la base de datos** , mediante la propiedad Información de suplantación de origen de datos.  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 27
  Todas las opciones están disponibles en el cuadro de diálogo, pero no todas las opciones son adecuadas para cada escenario. Utilice la siguiente información para determinar la mejor opción para el escenario.  
   
  **Utilizar un nombre de usuario y una contraseña específicos**  
- Seleccione esta opción para que el objeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] use las credenciales de seguridad de una cuenta de usuario de Windows especificada en este formato: *\<nombre de dominio>***\\***\<nombre de cuenta de usuario>*.  
+ Seleccione esta opción para que la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto utilice las credenciales de seguridad de una cuenta de usuario de Windows especificada en este formato:  *\<nombre de dominio >*  **\\**   *\<Nombre de la cuenta de usuario >*.  
   
  Elija esta opción para usar una identidad de usuario de Windows dedicada con los privilegios mínimos que ha creado específicamente para el acceso a los datos. Por ejemplo, si suele crear una cuenta de uso general para leer los datos que se recuperan en los informes, puede especificar esa cuenta aquí.  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 27
  **Utilizar cuenta de servicio**  
  Seleccione esta opción para que el objeto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] use las credenciales de seguridad asociadas al servicio de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que administra el objeto. Esta es la opción predeterminada. En las versiones anteriores, esta era la única opción que podía usar. Podría ser preferible esta opción para supervisar el acceso a los datos en el servicio en lugar de en cuentas de usuario individuales.  
   
- En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], en función del sistema operativo que use, la cuenta de servicio puede ser NetworkService o una cuenta integrada virtual creada para una instancia específica de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Si elige la cuenta de servicio para una conexión que utiliza la autenticación de Windows, recuerde crear un inicio de sesión de base de datos para esta cuenta y conceder permisos de lectura, ya que se utilizará para recuperar datos durante el procesamiento. Para obtener más información acerca de la cuenta de servicio, vea [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], en función del sistema operativo que use, la cuenta de servicio puede ser NetworkService o una cuenta integrada virtual creada para una instancia específica de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si elige la cuenta de servicio para una conexión que utiliza la autenticación de Windows, recuerde crear un inicio de sesión de base de datos para esta cuenta y conceder permisos de lectura, ya que se utilizará para recuperar datos durante el procesamiento. Para obtener más información acerca de la cuenta de servicio, vea [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 > [!NOTE]  
 >  Al utilizar la autenticación de base de datos, debe elegir la opción de suplantación **Usar la cuenta de servicio** si el servicio se ejecuta bajo la cuenta virtual dedicada para Analysis Services. Esta cuenta tendrá permisos para acceder a los archivos locales. Si el servicio se ejecuta como NetworkService, una alternativa mejor es utilizar una cuenta de usuario de Windows con los privilegios mínimos que tenga los permisos **Permitir el inicio de sesión local** . Según la cuenta que proporcione, también puede que tenga que conceder permisos de acceso al archivo en la carpeta de programas de Analysis Services.  
@@ -99,7 +104,7 @@ caps.handback.revision: 27
 
  En las bases de datos multidimensionales, **Predeterminado** especifica que se debe utilizar la cuenta de servicio y el usuario actual para las operaciones de minería de datos.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Crear un origen de datos &#40;SSAS multidimensional&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [Establecer propiedades de origen de datos &#40;SSAS multidimensional&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
 

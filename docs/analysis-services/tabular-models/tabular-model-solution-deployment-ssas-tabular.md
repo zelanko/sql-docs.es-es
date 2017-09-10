@@ -1,24 +1,29 @@
 ---
-title: "Implementaci&#243;n de soluciones de modelos tabulares (SSAS tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Implementación de soluciones de modelo tabular (SSAS Tabular) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad8d85e820ae8940a1b80dd130c57d5d06f140e6
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Implementaci&#243;n de soluciones de modelos tabulares (SSAS tabular)
+# <a name="tabular-model-solution-deployment-ssas-tabular"></a>Implementación de soluciones de modelos tabulares (SSAS tabular)
   Después de crear un proyecto de modelo tabular, deberá implementarlo para que los usuarios examinen el modelo usando una aplicación cliente de informes. Este tema describe las diferentes propiedades y métodos que puede utilizar al implementar soluciones de modelo tabular en el entorno.  
   
  Secciones de este tema:  
@@ -36,41 +41,41 @@ caps.handback.revision: 22
 -   [Tareas relacionadas](#bkmk_rt)  
   
 ##  <a name="bkmk_benefits"></a> Ventajas  
- Al implementar un modelo tabular se crea una base de datos del modelo en un entorno de pruebas, ensayo o producción. Los usuarios pueden conectarse al modelo implementado mediante un archivo de conexión .bism en Sharepoint o mediante una conexión de datos directamente desde las aplicaciones cliente de informes, como Microsoft Excel, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], o una aplicación personalizada. La base de datos del área de trabajo del modelo, que se genera al crear un proyecto de modelo tabular en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y se usa para crear el modelo, permanecerá en la instancia del servidor del área de trabajo, lo que permite realizar cambios en el proyecto de modelo y volver a implementarlo después en el entorno de pruebas, ensayo o producción cuando sea necesario.  
+ Al implementar un modelo tabular se crea una base de datos del modelo en un entorno de pruebas, ensayo o producción. Los usuarios pueden conectarse al modelo implementado mediante un archivo de conexión .bism en Sharepoint o mediante una conexión de datos directamente desde las aplicaciones cliente de informes, como Microsoft Excel, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], o una aplicación personalizada. La base de datos del área de trabajo del modelo, que se genera al crear un proyecto de modelo tabular en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]y se usa para crear el modelo, permanecerá en la instancia del servidor del área de trabajo, lo que permite realizar cambios en el proyecto de modelo y volver a implementarlo después en el entorno de pruebas, ensayo o producción cuando sea necesario.  
   
 ##  <a name="bkmk_deploying_bism"></a> Implementar un modelo tabular a partir de SQL Server Data Tools (SSDT)  
  La implementación es un proceso sencillo; sin embargo, se deben realizar algunos pasos para asegurarse de que el modelo se implementa en la instancia adecuada de Analysis Services y con las opciones de configuración correctas.  
   
- Los modelos tabulares se definen con varias propiedades de implementación específicas. Durante la implementación, se establece una conexión con la instancia de Analysis Services especificada en la propiedad **Servidor** . A continuación, se crea en esa instancia una nueva base de datos modelo con el nombre especificado en la propiedad **Database** , si no existe ninguna. Los metadatos del archivo Model.bim del proyecto de modelo se usan para configurar los objetos de la base de datos del modelo en el servidor de implementación. La **Opción de procesamiento** le permite especificar si solo se implementan los metadatos del modelo, si se crea la base de datos del modelo o, si se especifica **Predeterminado** o **Completo**, las credenciales de suplantación usadas para conectarse con orígenes de datos se pasan "en memoria" de la base de datos del área de trabajo del modelo a la base de datos implementada del modelo. A continuación, Analysis Services ejecuta el procesamiento para rellenar los datos en el modelo implementado. Una vez completado el proceso de implementación, las aplicaciones cliente pueden conectarse con el modelo mediante una conexión de datos o mediante un archivo de conexión .bism en SharePoint.  
+ Los modelos tabulares se definen con varias propiedades de implementación específicas. Durante la implementación, se establece una conexión con la instancia de Analysis Services especificada en la propiedad **Servidor** . A continuación, se crea en esa instancia una nueva base de datos modelo con el nombre especificado en la propiedad **Database** , si no existe ninguna. Los metadatos del archivo Model.bim del proyecto de modelo se usan para configurar los objetos de la base de datos del modelo en el servidor de implementación. La **Opción de procesamiento**le permite especificar si solo se implementan los metadatos del modelo, si se crea la base de datos del modelo o, si se especifica **Predeterminado** o **Completo** , las credenciales de suplantación usadas para conectarse con orígenes de datos se pasan "en memoria" de la base de datos del área de trabajo del modelo a la base de datos implementada del modelo. A continuación, Analysis Services ejecuta el procesamiento para rellenar los datos en el modelo implementado. Una vez completado el proceso de implementación, las aplicaciones cliente pueden conectarse con el modelo mediante una conexión de datos o mediante un archivo de conexión .bism en SharePoint.  
   
 ##  <a name="bkmk_deploy_props"></a> Propiedades de implementación  
  Las propiedades Opciones de implementación y Servidor de implementación del proyecto especifican el modo y el lugar en el que se implementa un modelo en un entorno de Analysis Services de ensayo o de producción. Aunque la configuración de las propiedades predeterminadas se define para todos los proyectos de modelo, puede cambiar estas opciones de las propiedades para cada proyecto en función de los requisitos de implementación específicos. Para más información sobre cómo configurar las propiedades de implementación predeterminadas, vea [Configurar las propiedades predeterminadas de modelado de datos y de implementación &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
   
-### Propiedades de las opciones de implementación  
+### <a name="deployment-options-properties"></a>Propiedades de las opciones de implementación  
  Entre las propiedades de las opciones de implementación se incluyen:  
   
 |Propiedad|Valor predeterminado|Description|  
 |--------------|---------------------|-----------------|  
-|**Opción de procesamiento**|**Valor de DB-Library**|Esta propiedad especifica el tipo de procesamiento necesario cuando se implementan cambios en los objetos. Esta propiedad tiene las opciones siguientes:<br /><br /> **Valor predeterminado** : este valor especifica que Analysis Services determinará el tipo de procesamiento necesario. Los objetos sin procesar se procesarán y, si fuera necesario, se volverán a calcular las relaciones de atributo, las jerarquías de atributo, las jerarquías de usuario y las columnas calculadas. Esta configuración produce como resultado un menor tiempo de implementación que la opción de procesamiento completo.<br /><br /> **No Procesar** : este valor especifica que solamente se implementarán los metadatos. Después de la implementación, puede que sea necesario ejecutar una operación de procesamiento en el modelo implementado para actualizar y recalcular los datos.<br /><br /> **Completo** : este valor especifica que los metadatos están implementados y que se realiza una operación Proceso completo. Esto garantiza que el modelo implementado tiene las actualizaciones más recientes de los metadatos y los datos.|  
+|**Opción de procesamiento**|**Predeterminado**|Esta propiedad especifica el tipo de procesamiento necesario cuando se implementan cambios en los objetos. Esta propiedad tiene las opciones siguientes:<br /><br /> **Valor predeterminado** : este valor especifica que Analysis Services determinará el tipo de procesamiento necesario. Los objetos sin procesar se procesarán y, si fuera necesario, se volverán a calcular las relaciones de atributo, las jerarquías de atributo, las jerarquías de usuario y las columnas calculadas. Esta configuración produce como resultado un menor tiempo de implementación que la opción de procesamiento completo.<br /><br /> **No Procesar** : este valor especifica que solamente se implementarán los metadatos. Después de la implementación, puede que sea necesario ejecutar una operación de procesamiento en el modelo implementado para actualizar y recalcular los datos.<br /><br /> **Completo** : este valor especifica que los metadatos están implementados y que se realiza una operación Proceso completo. Esto garantiza que el modelo implementado tiene las actualizaciones más recientes de los metadatos y los datos.|  
 |**Implementación transaccional**|**False**|Esta propiedad especifica si la implementación es o no transaccional. De manera predeterminada, la implementación de todos los objetos modificados no es transaccional con el procesamiento de dichos objetos implementados. La implementación puede ser correcta y persistir aunque se produzca un error de procesamiento. Puede cambiar este comportamiento para incluir la implementación y el procesamiento en una sola transacción.|  
-|**Modo de consulta**|**In-Memory**|Esta propiedad especifica el modo en que se ejecuta el origen cuyos resultados de la consulta se devuelven: modo In-Memory (almacenamiento en caché) o modo de DirectQuery. Esta propiedad tiene las opciones siguientes:<br /><br /> **DirectQuery** : este valor especifica que todas las consultas del modelo deben utilizar solo el origen de datos relacional.<br /><br /> **DirectQuery con In-Memory**: este valor especifica que, de forma predeterminada, las consultas se deben responder con el origen relacional, a menos que se especifique lo contrario en la cadena de conexión desde el cliente.<br /><br /> **In-Memory**: este valor especifica que las consultas tienen que responderse únicamente con la caché.<br /><br /> **In-Memory con DirectQuery**: este valor especifica, de forma predeterminada, que las consultas se deben responder mediante caché, a menos que se especifique lo contrario en la cadena de conexión de cliente.<br /><br /> <br /><br /> Para más información, vea [Modo DirectQuery &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).|  
+|**Modo de consulta**|**In-Memory**|Esta propiedad especifica el modo en que se ejecuta el origen cuyos resultados de la consulta se devuelven: modo In-Memory (almacenamiento en caché) o modo de DirectQuery. Esta propiedad tiene las opciones siguientes:<br /><br /> **DirectQuery** : este valor especifica que todas las consultas del modelo deben utilizar solo el origen de datos relacional.<br /><br /> **DirectQuery con In-Memory** : este valor especifica que, de forma predeterminada, las consultas se deben responder con el origen relacional, a menos que se especifique lo contrario en la cadena de conexión desde el cliente.<br /><br /> **In-Memory** : este valor especifica que las consultas tienen que responderse únicamente con la caché.<br /><br /> **In-Memory con DirectQuery** : este valor especifica, de forma predeterminada, que las consultas se deben responder mediante caché, a menos que se especifique lo contrario en la cadena de conexión de cliente.<br /><br /> <br /><br /> Para más información, vea [Modo DirectQuery &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).|  
   
-### Propiedades del servidor de implementación  
+### <a name="deployment-server-properties"></a>Propiedades del servidor de implementación  
  Entre las propiedades del servidor de implementación se incluyen:  
   
 |Propiedad|Valor predeterminado|Description|  
 |--------------|---------------------|-----------------|  
 |**Servidor**<br /><br /> Establézcalo cuando se cree el proyecto.|**localhost**|Esta propiedad, establecida cuando se crea el proyecto, especifica el nombre de la instancia de Analysis Services en la que se implementará el modelo. De forma predeterminada, el modelo se implementará en la instancia predeterminada de Analysis Services del equipo local. Sin embargo, puede cambiar este valor para especificar una instancia con nombre en el equipo local o cualquier instancia en cualquier equipo remoto en el que tenga permiso para crear objetos de Analysis Services.|  
 |**Edición**|La misma edición que la instancia en la que se encuentra el servidor del área de trabajo.|Esta propiedad especifica la edición del servidor de Analysis Services en la que se implementará el modelo. La edición del servidor define varias características que se pueden incorporar al proyecto. De forma predeterminada, la edición será la del servidor de Analysis Services local. Si especifica otro servidor de Analysis Services, por ejemplo, uno de producción, asegúrese de especificar la edición de ese servidor de Analysis Services.|  
-|**Base de datos**|**\<nombreDeProyecto>**|Esta propiedad especifica el nombre de la base de datos de Analysis Services en la que se crearán instancias de los objetos de modelo durante la implementación. Este nombre también se especificará en una conexión de datos del cliente de informes o en un archivo de conexión de datos .bism.<br /><br /> Puede cambiar este nombre en cualquier momento durante la creación del modelo. Si cambia el nombre después de haber implementado el modelo, los cambios realizados no afectarán al modelo implementado previamente. Por ejemplo, si abre una solución denominada **TestDB** e implementa la solución con el nombre predeterminado de la base de datos del modelo (Modelo) y, a continuación, modifica la solución y cambia el nombre de la base de datos del modelo a **Sales**, la instancia de Analysis Services en la que se implementaron las soluciones mostrará bases de datos independientes, una denominada Modelo y otra Ventas.|  
+|**Base de datos**|**\<NombreDeProyecto >**|Esta propiedad especifica el nombre de la base de datos de Analysis Services en la que se crearán instancias de los objetos de modelo durante la implementación. Este nombre también se especificará en una conexión de datos del cliente de informes o en un archivo de conexión de datos .bism.<br /><br /> Puede cambiar este nombre en cualquier momento durante la creación del modelo. Si cambia el nombre después de haber implementado el modelo, los cambios realizados no afectarán al modelo implementado previamente. Por ejemplo, si abre una solución denominada **TestDB** e implementa la solución con el nombre predeterminado de la base de datos del modelo (Modelo) y, a continuación, modifica la solución y cambia el nombre de la base de datos del modelo a **Sales**, la instancia de Analysis Services en la que se implementaron las soluciones mostrará bases de datos independientes, una denominada Modelo y otra Ventas.|  
 |**Nombre del cubo**|**Modelo**|Esta propiedad especifica el nombre del cubo como se muestra en las herramientas cliente (por ejemplo, Excel) y en AMO (Objetos de administración de análisis).|  
   
-### Propiedades de las opciones de DirectQuery  
+### <a name="directquery-options-properties"></a>Propiedades de las opciones de DirectQuery  
  Entre las propiedades de las opciones de implementación se incluyen:  
   
 |Propiedad|Valor predeterminado|Description|  
 |--------------|---------------------|-----------------|  
-|**Configuración de suplantación**|**Valor de DB-Library**|Esta propiedad especifica la configuración de suplantación que se usa cuando un modelo que se ejecuta en el modo DirectQuery se conecta con los orígenes de datos. Las credenciales de suplantación no se usan al consultar la memoria caché en memoria. El valor de esta propiedad tiene las opciones siguientes:<br /><br /> **Predeterminado** : este valor especifica que Analysis Services usará la opción que se especificó en la página Información de suplantación cuando se creó la conexión con el origen de datos mediante el Asistente para la importación de tablas.<br /><br /> **ImpersonateCurrentUser** : este valor especifica que la cuenta del usuario que ha iniciado sesión actualmente se usará para conectarse con todos los orígenes de datos.|  
+|**Configuración de suplantación**|**Predeterminado**|Esta propiedad especifica la configuración de suplantación que se usa cuando un modelo que se ejecuta en el modo DirectQuery se conecta con los orígenes de datos. Las credenciales de suplantación no se usan al consultar la memoria caché en memoria. El valor de esta propiedad tiene las opciones siguientes:<br /><br /> **Predeterminado** : este valor especifica que Analysis Services usará la opción que se especificó en la página Información de suplantación cuando se creó la conexión con el origen de datos mediante el Asistente para la importación de tablas.<br /><br /> **ImpersonateCurrentUser** : este valor especifica que la cuenta del usuario que ha iniciado sesión actualmente se usará para conectarse con todos los orígenes de datos.|  
   
 ##  <a name="bkmk_meth"></a> Métodos de implementación  
  Puede utilizar varios métodos para implementar un proyecto de modelos tabulares. La mayoría de los métodos de implementación que se pueden utilizar para otros proyectos de Analysis Services, como multidimensional, también se pueden utilizar para implementar proyectos de modelos tabulares.  
@@ -100,7 +105,7 @@ caps.handback.revision: 22
 |[Implementar soluciones de modelo mediante XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|Describe cómo usar XMLA para implementar las soluciones tabulares y multidimensionales de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |[Sincronizar bases de datos de Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)|Describe cómo usar el Asistente para sincronizar bases de datos con el fin de sincronizar los metadatos y los datos entre dos bases de datos tabulares o multidimensionales de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conectar a una base de datos de modelo tabular &#40;SSAS&#41;](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
   

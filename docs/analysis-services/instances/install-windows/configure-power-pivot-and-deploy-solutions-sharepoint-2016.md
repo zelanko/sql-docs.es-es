@@ -1,31 +1,36 @@
 ---
-title: "Configuraci&#243;n de Power Pivot e implementaci&#243;n de soluciones (SharePoint 2016) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Configuración de PowerPivot e implementar soluciones (SharePoint 2016) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 01d737c9c1ac225ca00f4b824567d013673a8f57
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Configuraci&#243;n de Power Pivot e implementaci&#243;n de soluciones (SharePoint 2016)
-  En estos temas se explica cómo configurar e implementar mejoras de nivel intermedio realizadas en las características de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] en [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)], incluidas la galería [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)], la programación de actualización de datos, el panel de administración y los proveedores de datos. Ejecute la herramienta **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2016** para hacer lo siguiente:  
+# <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Configuración de Power Pivot e implementación de soluciones (SharePoint 2016)
+  En estos temas se explica cómo configurar e implementar mejoras de nivel intermedio realizadas en las características de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] en [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] , incluidas la galería [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , la programación de actualización de datos, el panel de administración y los proveedores de datos. Ejecute la herramienta **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2016** para hacer lo siguiente:  
   
 -   Implementar archivos de solución de SharePoint.  
   
 -   Crear una aplicación de servicio [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] .  
   
--   Para obtener información sobre los servicios back-end y la instalación de un servidor de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)], vea [Instalación de Analysis Services en el modo PowerPivot](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+-   Para obtener información sobre los servicios back-end y la instalación de un servidor de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , vea [Instalación de Analysis Services en el modo PowerPivot](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
- Para obtener información sobre cómo instalar la herramienta de configuración de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2016, vea [Instalar o desinstalar el complemento Power Pivot para SharePoint &#40;SharePoint 2016&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
+ Para obtener información acerca de cómo instalar la [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para la herramienta de configuración de SharePoint 2016, consulte [instalar o desinstalar Power Pivot para SharePoint Add-in (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
   
  Este tema contiene las siguientes secciones:  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 8
   
 1.  En el menú **Inicio** , seleccione sucesivamente **Todos los programas**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Herramientas de configuración**y **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2016**. Las herramientas solo se muestran si [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint está instalado en el servidor local.  
   
-2.  Seleccione **Configurar o reparar [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint** y, después, **Aceptar**.  
+2.  Seleccione **configurar o reparar [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint** y, a continuación, seleccione **Aceptar**.  
   
 3.  La herramienta ejecuta una validación para comprobar el estado actual de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] y los pasos necesarios para completar la configuración. Expanda la ventana al tamaño máximo. Aparecerá una barra de botones en la parte inferior de la ventana con los comandos **Validar** **Ejecutar**y **Salir** .  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 8
   
     4.  Haga clic en **Crear colección de sitios** en la ventana izquierda. Anote la **Dirección URL del sitio** para pueda consultarla en pasos posteriores. Si el servidor de SharePoint no está configurado todavía, el asistente para la configuración usa como valor predeterminado la aplicación web y las direcciones URL de las colecciones de sitios hasta la raíz de `http://[ServerName]`. Para modificar los valores predeterminados, examine las páginas siguientes en la ventana izquierda: **Crear aplicación web predeterminada** e **Implementar solución de aplicación web**  
   
-5.  Opcionalmente, revise los valores restantes de entrada utilizados para completar cada acción. Haga clic en cada acción de la ventana izquierda para ver y examinar los detalles de la acción. Para obtener más información sobre cada una, vea la sección "Valores de entrada utilizados para configurar el servidor" en [Configurar o reparar PowerPivot para SharePoint 2010 (Herramienta de configuración de PowerPivot)](http://msdn.microsoft.com/es-es/d61f49c5-efaa-4455-98f2-8c293fa50046) en este tema.  
+5.  Opcionalmente, revise los valores restantes de entrada utilizados para completar cada acción. Haga clic en cada acción de la ventana izquierda para ver y examinar los detalles de la acción. Para obtener más información sobre cada una, vea la sección "Valores de entrada utilizados para configurar el servidor" en [Configurar o reparar PowerPivot para SharePoint 2010 (Herramienta de configuración de PowerPivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046) en este tema.  
   
 6.  Si lo desea, quite cualquier acción que no desee procesar en este momento. Por ejemplo, si quiere configurar el Servicio de almacenamiento seguro más adelante, haga clic en **Configurar el servicio de almacenamiento seguro**y después desactive la casilla **Incluir esta acción en la lista de tareas**.  
   
@@ -70,14 +75,14 @@ caps.handback.revision: 8
   
 8.  Seleccione **Ejecutar** para procesar todas las acciones de la lista de tareas. Tenga en cuenta que **Ejecutar** estará disponible cuando valide las acciones. Si **Ejecutar** no está habilitado, seleccione **Validar** primero.  
   
- Para obtener más información, vea [Configurar o reparar PowerPivot para SharePoint 2010 (Herramienta de configuración de PowerPivot)](http://msdn.microsoft.com/es-es/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ Para obtener más información, vea [Configurar o reparar PowerPivot para SharePoint 2010 (Herramienta de configuración de PowerPivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
 ##  <a name="bkmk_verify_powerpivot"></a> Comprobación de la configuración de Power Pivot  
  **Servicios:**  
   
 1.  En Administración central, en Configuración del sistema, seleccione **Administrar servicios en el servidor**.  
   
-2.  Confirme que el **Servicio de sistema de SQL Server [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** está iniciado.  
+2.  Compruebe que **SQL Server [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] System Service** se inicia.  
   
  **Característica de granja:**  
   
@@ -89,7 +94,7 @@ caps.handback.revision: 8
   
 1.  Vaya a la dirección URL del sitio creada por la herramienta de configuración.  
   
-     Seleccione **Configuración** ![Configuración de SharePoint](../../../analysis-services/media/as-sharepoint2013-settings-gear.png "Configuración de SharePoint") y, después, haga clic en **Configuración del sitio**.  
+     Seleccione **configuración**![configuración de SharePoint](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "configuración de SharePoint")y, a continuación, haga clic en **configuración del sitio**.  
   
      Seleccione **Características de la colección de sitios**.  
   

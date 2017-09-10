@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: 8a0c0a07c6874c6015ec3c4b1f561e0a1076482f
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 693b994cd7e00e9db439a445fe0b692bc2d379d5
 ms.contentlocale: es-es
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Configurar SQL Server 2017 imágenes del contenedor en Docker
@@ -139,7 +139,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap
 Esta técnica también le permite compartir y ver los archivos en el host fuera de Docker.
 
 > [!IMPORTANT]
-> Asignación de volúmenes de host de Docker en Mac con SQL Server en la imagen de Linux no se admite en este momento. Utilice contenedores de volúmenes de datos en su lugar. Esta restricción es específica de la `/var/opt/msql` directory. Leer un funciona directorio montado correctamente. Por ejemplo, puede montar un directorio de host mediante – v Mac y restaurar una copia de seguridad de un archivo .bak que reside en el host.
+> Asignación de volúmenes de host de Docker en Mac con SQL Server en la imagen de Linux no se admite en este momento. Utilice contenedores de volúmenes de datos en su lugar. Esta restricción es específica de la `/var/opt/mssql` directory. Leer un funciona directorio montado correctamente. Por ejemplo, puede montar un directorio de host mediante – v Mac y restaurar una copia de seguridad de un archivo .bak que reside en el host.
 
 ### <a name="use-data-volume-containers"></a>Utilizar contenedores de volúmenes de datos
 

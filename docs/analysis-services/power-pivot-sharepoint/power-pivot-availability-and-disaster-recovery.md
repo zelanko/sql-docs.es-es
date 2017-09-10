@@ -1,24 +1,29 @@
 ---
-title: "Alta disponibilidad y recuperaci&#243;n ante desastres en Power Pivot | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot disponibilidad y recuperación ante desastres | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 7c2534d88a10602dcabb594e5a18925ce2547194
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Alta disponibilidad y recuperaci&#243;n ante desastres en Power Pivot
+# <a name="power-pivot-availability-and-disaster-recovery"></a>Alta disponibilidad y recuperación ante desastres en Power Pivot
   Los planes de disponibilidad y de recuperación ante desastres de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dependen principalmente del diseño de la granja de servidores de SharePoint, el tiempo de inactividad aceptable para los diferentes componentes, y las herramientas y las prácticas recomendadas que se implementan para la disponibilidad de SharePoint. En este tema se resumen las tecnologías y se incluyen diagramas de topología de ejemplo que hay que tener en cuenta al planear la disponibilidad y la recuperación ante desastres para una implementación de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
   
 ||  
@@ -40,7 +45,7 @@ caps.handback.revision: 15
   
  En el diagrama siguiente se muestra una implementación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 de ejemplo. Este ejemplo admite una buena disponibilidad de los servicios de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] y da por supuesto que se hace copia de seguridad de las bases de datos periódicamente.  
   
- ![disponibilidad de powerpivot en 2013](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2013.png "disponibilidad de powerpivot en 2013")  
+ ![disponibilidad de PowerPivot en 2013](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2013.png "disponibilidad de powerpivot en 2013")  
   
 -   **(1)** Los servidores front-end web. Use el complemento [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 para instalar los proveedores de datos en cada servidor. Para obtener más información, vea [Instalar o desinstalar el complemento Power Pivot para SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 15
   
 -   **(4)** y **(6)** Las instancias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo de SharePoint se ejecutan en servidores ajenos a la granja de SharePoint; esto incluye el servicio de Windows **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])**. Cada una de estas instancias se registra con Excel Services **(3)**. Excel Services administra el equilibrio de carga de las solicitudes a los servidores de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . La arquitectura de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 permite tener varios servidores para [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] de forma que pueda agregar fácilmente más instancias según sea necesario. Para obtener más información, vea [Administrar la configuración del modelo de datos de Servicios de Excel (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx).  
   
--   **(5)** Las bases de datos de SQL Server usadas para el contenido, la configuración y las aplicaciones. Esto incluye la base de datos de la aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . El plan de recuperación ante desastres debe incluir la capa de base de datos. En este diseño, las bases de datos se ejecutan en el mismo servidor que **(4)** una de las instancias de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. **(4)** y **(5)** también pueden estar en servidores diferentes.  
+-   **(5)** Las bases de datos de SQL Server usadas para el contenido, la configuración y las aplicaciones. Esto incluye la base de datos de la aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . El plan de recuperación ante desastres debe incluir la capa de base de datos. En este diseño, las bases de datos se ejecutan en el mismo servidor que **(4)** una de las instancias de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . **(4)** y **(5)** también pueden estar en servidores diferentes.  
   
 -   **(7)** Alguna forma de copia de seguridad o de redundancia de las bases de datos de SQL Server.  
   
@@ -59,9 +64,9 @@ caps.handback.revision: 15
   
  En el diagrama siguiente se muestra una implementación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010 de ejemplo. Este ejemplo admite una buena disponibilidad de los servicios de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] y da por supuesto que se hace copia de seguridad de las bases de datos periódicamente.  
   
- ![disponibilidad de powerpivot en sharepoint 2010](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2010.png "disponibilidad de powerpivot en sharepoint 2010")  
+ ![disponibilidad de PowerPivot en sharepoint 2010](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2010.png "disponibilidad de powerpivot en sharepoint 2010")  
   
--   **(1)** Los servidores front-end web. Instale los proveedores de datos en cada servidor. Para más información, consulte [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](http://msdn.microsoft.com/es-es/2c62daf9-1f2d-4508-a497-af62360ee859).  
+-   **(1)** Los servidores front-end web. Instale los proveedores de datos en cada servidor. Para más información, consulte [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
 -   **(2)** Los dos servicios compartidos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y **(4)** el servicio de Windows **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** se instalan en los servidores de aplicaciones de SharePoint.  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 15
   
  Para obtener más información sobre cómo planear un escenario de espera pasiva con [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], vea [Recuperación ante desastres de PowerPivot](http://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx).  
   
-## Comprobación  
+## <a name="verification"></a>Comprobación  
  Para obtener instrucciones y scripts que le ayuden a comprobar una implementación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] antes y después de un ciclo de recuperación ante desastres, vea [Lista de comprobación: Usar PowerShell para comprobar PowerPivot para SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md).  
   
 ##  <a name="bkmk_more_resources"></a> Vínculos a más información  
@@ -108,6 +113,4 @@ caps.handback.revision: 15
   
 -   [Administrar instancias de servicio en SharePoint 2013](http://www.petri.co.il/manage-service-instances-sharepoint-2013.htm)  
   
--   [Script de SQL Server de copia de seguridad de bases de datos](http://megaupl0ad.net/free/backup%20database%20sql%20server%20script)  
-  
-  
+

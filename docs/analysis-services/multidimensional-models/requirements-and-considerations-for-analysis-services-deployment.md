@@ -1,38 +1,43 @@
 ---
-title: "Requisitos y consideraciones para la implementaci&#243;n de Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "memoria [Analysis Services]"
-  - "escalabilidad [Analysis Services]"
-  - "espacio [Analysis Services]"
-  - "Implementaciones de Analysis Services, requisitos"
-  - "implementación [Analysis Services], requisitos"
-  - "espacio de disco [Analysis Services]"
-  - "requisitos [Analysis Services]"
-  - "procesadores [Analysis Services]"
-  - "requisitos de sistema [Analysis Services]"
-  - "disponibilidad [Analysis Services]"
+title: "Requisitos y consideraciones para el análisis de servicios de implementación | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- memory [Analysis Services]
+- scalability [Analysis Services]
+- space [Analysis Services]
+- Analysis Services deployments, requirements
+- deploying [Analysis Services], requirements
+- disk space [Analysis Services]
+- requirements [Analysis Services]
+- processors [Analysis Services]
+- system requirements [Analysis Services]
+- availability [Analysis Services]
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: c698473d796548f3ed9d7d17dfb19206804f634f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Requisitos y consideraciones para la implementaci&#243;n de Analysis Services
+# <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Requisitos y consideraciones para la implementación de Analysis Services
   El rendimiento y la disponibilidad de una solución dependen de muchos factores, como son las capacidades del hardware subyacente, la topología de la implementación del servidor, las características de la solución (por ejemplo, si tiene particiones distribuidas en varios servidores o usa el almacenamiento ROLAP que requiere acceso directo al motor relacional), los contratos de nivel de servicio y la complejidad del modelo de datos.  
   
-## Requisitos de memoria y procesador  
+## <a name="memory-and-processor-requirements"></a>Requisitos de memoria y procesador  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] necesitará más recursos de memoria y procesador en los siguientes casos:  
   
 -   Cuando se procesen cubos complejos o de gran tamaño. Serán necesarios más recursos de memoria y procesador que en el caso de cubos simples o de pequeño tamaño.  
@@ -47,15 +52,15 @@ caps.handback.revision: 26
   
  La cantidad de memoria y recursos de procesador disponibles para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] depende de la edición de SQL Server, sistema operativo, capacidad de hardware y de si usa procesadores virtuales o físicos. Para obtener más información, vea estos vínculos:  
   
- [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)  
+ [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
  [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
- [Características compatibles con las ediciones de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)  
+ [Características compatibles con las ediciones de SQL Server 2016](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)  
   
  [Especificaciones de capacidad máxima &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md)  
   
-## Requisitos de espacio en disco  
+## <a name="disk-space-requirements"></a>Requisitos de espacio en disco  
  Los distintos aspectos de la instalación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y las tareas relacionadas con el procesamiento de objetos exigen distintas cantidades de espacio en disco. Estos requisitos se describen en la siguiente lista.  
   
  Cubos  
@@ -73,24 +78,24 @@ caps.handback.revision: 26
 ##  <a name="BKMK_Availability"></a> Consideraciones sobre disponibilidad  
  En un entorno de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , es posible que un cubo o un modelo de minería de datos no esté disponible para su consulta debido a un error de hardware o software. También puede ser que un cubo no esté disponible porque necesite procesarse.  
   
-### Proporcionar disponibilidad en caso de errores de hardware o software  
+### <a name="providing-availability-in-the-event-of-hardware-or-software-failures"></a>Proporcionar disponibilidad en caso de errores de hardware o software  
  Pueden producirse errores de hardware o software por distintas razones. Sin embargo, mantener la disponibilidad de la instalación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no solo es cuestión de solucionar los problemas que originan dichos errores, sino también de proporcionar recursos alternativos que permitan al usuario seguir utilizando el sistema si se produce un error. Normalmente, se utilizan servidores de equilibrio de carga y agrupación en clústeres para proporcionar los recursos alternativos necesarios para mantener la disponibilidad cuando se producen errores de hardware o software.  
   
  Para proporcionar disponibilidad en caso de que se produzca un error de hardware o software, considere la posibilidad de implementar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en un clúster de conmutación por error. En un clúster de conmutación por error, si se produce un error en el nodo principal por cualquier motivo o si éste tiene que reiniciarse, la agrupación en clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows realiza una conmutación por error al nodo secundario. Tras la conmutación por error, que se produce con gran rapidez, cuando los usuarios ejecuten consultas estarán obteniendo acceso a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se esté ejecutando en el nodo secundario. Para obtener más información sobre los clústeres de conmutación por error, vea [Tecnologías de Windows Server: clústeres de conmutación por error](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx).  
   
  Otra solución a los problemas de accesibilidad es implementar el proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en dos o varios servidores de producción. Después se puede utilizar la característica de equilibrio de la carga en la red (NLB) de los servidores Windows para combinar los servidores de producción en un único clúster. En un clúster NLB, si alguno de los servidores del clúster no está disponible debido a problemas de hardware o software, el servicio NLB dirige las consultas del usuario a los servidores que siguen estando disponibles.  
   
-### Proporcionar disponibilidad durante el procesamiento de cambios estructurales  
+### <a name="providing-availability-while-processing-structural-changes"></a>Proporcionar disponibilidad durante el procesamiento de cambios estructurales  
  Algunos de los cambios que se realizan en un cubo pueden hacer que el cubo deje de estar disponible hasta que finalice su procesamiento. Por ejemplo, si se realizan cambios estructurales en una de las dimensiones de un cubo, aunque vuelva a procesarse la dimensión, los cubos que utilicen la dimensión modificada también tendrán que procesarse. Hasta que no se hayan procesado dichos cubos, los usuarios no podrán consultarlos ni podrán consultar ningún modelo de minería de datos que se base en un cubo con la dimensión modificada.  
   
  Para proporcionar disponibilidad durante el procesamiento de cambios estructurales que afecten a uno o a varios cubos de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , considere la posibilidad de incorporar un servidor de ensayo y de utilizar el Asistente para sincronizar bases de datos. Esta característica le permitirá actualizar datos y metadatos en un servidor de ensayo y, después, realizar una sincronización en línea del servidor de producción y el servidor de ensayo. Para más información, consulte [Synchronize Analysis Services Databases](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md).  
   
- Para procesar actualizaciones incrementales de datos de origen de un modo transparente, habilite el almacenamiento en caché automático. El almacenamiento en caché automático actualiza los cubos con nuevos datos de origen sin necesidad de un procesamiento manual y sin que esto afecte a la disponibilidad de los cubos. Para más información, vea [Almacenamiento en caché automático &#40;Particiones&#41;](../Topic/Proactive%20Caching%20\(Partitions\).md).  
+ Para procesar actualizaciones incrementales de datos de origen de un modo transparente, habilite el almacenamiento en caché automático. El almacenamiento en caché automático actualiza los cubos con nuevos datos de origen sin necesidad de un procesamiento manual y sin que esto afecte a la disponibilidad de los cubos. Para más información, vea [Almacenamiento en caché automático &#40;Particiones&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
 ##  <a name="BKMK_Scalability"></a> Consideraciones sobre escalabilidad  
  Si hay varias instancias de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en un mismo equipo, pueden producirse problemas de rendimiento. Una opción para resolver estos problemas es aumentar los recursos de procesador, memoria y disco del servidor. No obstante, es posible que también necesite escalar las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] entre varios equipos.  
   
-### Escalar Analysis Services entre varios equipos  
+### <a name="scaling-analysis-services-across-multiple-computers"></a>Escalar Analysis Services entre varios equipos  
  Existen varias formas de escalar una instalación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] entre varios equipos. Estas opciones se describen en la siguiente lista.  
   
 -   Si hay varias instancias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en un único equipo, puede mover una o varias instancias a otro equipo.  

@@ -1,22 +1,27 @@
 ---
-title: "Actualizar libros y actualizaci&#243;n de datos programada (SharePoint 2013) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Actualizar libros y actualización de datos programada (SharePoint 2013) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 09907013b8a83b70fae3f0bf91f68f49a08290df
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Actualizar libros y actualizaci&#243;n de datos programada (SharePoint 2013)
+# <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Actualizar libros y actualización de datos programada (SharePoint 2013)
   En este tema se explica la experiencia de usuario de libros creados en entornos anteriores de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] y cómo actualizar los libros de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para poder aprovechar las nuevas características presentadas en esta versión. Para obtener más información sobre las nuevas características, vea [Novedades de Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
   
 > [!WARNING]  
@@ -42,11 +47,11 @@ caps.handback.revision: 20
 -   Habilita la actualización de datos programada para los libros que se ejecutan con servidor de [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] Analysis Services en modo de SharePoint.  
   
 > [!IMPORTANT]  
->  No puede revertir un libro actualizado, por lo que debe asegurarse de realizar una copia del archivo si desea usarlo en la versión anterior de [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] o en una versión anterior de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)].  
+>  No puede revertir un libro actualizado, por lo que debe asegurarse de realizar una copia del archivo si desea usarlo en la versión anterior de [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)]o en una versión anterior de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)].  
   
  En la tabla siguiente se muestran la compatibilidad y el comportamiento de los libros de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] según el entorno en el que se creó el libro. El comportamiento descrito incluye la experiencia general del usuario, las opciones de actualización admitidas para actualizar el libro al entorno concreto y el comportamiento de la actualización de datos programada de un libro que aún no se ha actualizado.  
   
-### Comportamiento y opciones de actualización del libro  
+### <a name="workbook-behavior-and-upgrade-options"></a>Comportamiento y opciones de actualización del libro  
   
 |Creado en|\<|Compatibilidad y comportamiento|>|  
 |----------------|--------|--------------------------|--------|  
@@ -149,7 +154,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
  Tenga en cuenta que no se admite la publicación de libros de una versión más reciente en instancias anteriores de SQL Server de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] . Una instancia de [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] no cargará un libro creado en la versión de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] de [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)]y una instancia de SQL Server 2012 no cargará libros de Office 2013 con modelos de datos avanzados que se hayan creado con la versión de [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] en Excel.  
   
 ###  <a name="bkmk_msolapxslx"></a> Comprobar la información de proveedor de datos de MSOLAP en un libro de Power Pivot  
- Siga estas indicaciones para comprobar qué proveedor OLE DB se usa en un libro de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . La comprobación de la información de conexión de datos no requiere que se instale el complemento de [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)].  
+ Siga estas indicaciones para comprobar qué proveedor OLE DB se usa en un libro de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . La comprobación de la información de conexión de datos no requiere que se instale el complemento de [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] .  
   
 1.  En Excel, en la pestaña Datos, haga clic en **Conexiones**. Haga clic en **Propiedades**.  
   
@@ -159,7 +164,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
   
      **Provider=MSOLAP.4** indica [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].  
   
-     **Data Source=$Embedded$** indica que es un libro de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)], con una base de datos incrustada.  
+     **Data Source=$Embedded$** indica que es un libro de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , con una base de datos incrustada.  
   
 ###  <a name="bkmk_msolappc"></a> Comprobar la versión actual del proveedor de datos MSOLAP en un equipo local  
  Use las siguientes instrucciones para comprobar qué proveedor OLE DB es la versión actual en el servidor o la estación de trabajo que ejecuta los libros de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Conocer la versión actual puede ayudarle a solucionar errores de conexión de los datos después de actualizar.  
@@ -168,10 +173,10 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
   
 2.  Desplácese hasta MSOLAP. Compruebe que MSOLAP.5 aparece entre los proveedores OLAP instalados en el sistema. Compruebe que MSOLAP | CurVer está establecido en MSOLAP.5  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Migrar Power Pivot a SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [Actualización de PowerPivot para SharePoint](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [Novedades de Analysis Services](../../../analysis-services/what-s-new-in-analysis-services.md)   
- [Ver el Historial de actualización de datos &#40;Power Pivot para SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
+ [La actualización de datos de la vista Historial &#40; PowerPivot para SharePoint &#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
   
   

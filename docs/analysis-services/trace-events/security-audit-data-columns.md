@@ -1,24 +1,29 @@
 ---
-title: "Columnas de datos de Auditor&#237;a de seguridad | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "auditoría de seguridad, categoría de eventos [SQL Server]"
+title: "Columnas de datos de auditoría de seguridad | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Security Audit event category [SQL Server]
 ms.assetid: fac1a7f9-5961-4f4b-bb04-847616b505d7
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77d887822dd132c6e4d3e356e49279fa92d32541
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Columnas de datos de Auditor&#237;a de seguridad
+# <a name="security-audit-data-columns"></a>Columnas de datos de Auditoría de seguridad
   La categoría de eventos Auditoría de seguridad tiene las siguientes clases de eventos:  
   
 ||||  
@@ -32,7 +37,7 @@ caps.handback.revision: 36
   
  En las siguientes tablas se muestran las columnas de datos de cada una de estas clases de eventos.  
   
-## Audit Login  
+## <a name="audit-login"></a>Audit Login  
   
 |||||  
 |-|-|-|-|  
@@ -52,7 +57,7 @@ caps.handback.revision: 36
 |NTCanonicalUserName|40|8|Nombre del usuario en formato canónico. Por ejemplo, engineering.microsoft.com/software/someone.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Audit Logout  
+## <a name="audit-logout"></a>Audit Logout  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -71,7 +76,7 @@ caps.handback.revision: 36
 |NTCanonicalUserName|40|8|Nombre del usuario en formato canónico. Por ejemplo, engineering.microsoft.com/software/someone.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Audit Server Starts And Stops  
+## <a name="audit-server-starts-and-stops"></a>Audit Server Starts And Stops  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -84,7 +89,7 @@ caps.handback.revision: 36
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Audit Object Permission Event  
+## <a name="audit-object-permission-event"></a>Audit Object Permission Event  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -109,7 +114,7 @@ caps.handback.revision: 36
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Audit Admin Operations Event  
+## <a name="audit-admin-operations-event"></a>Audit Admin Operations Event  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -130,7 +135,7 @@ caps.handback.revision: 36
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Auditoría de seguridad (categoría de eventos)](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

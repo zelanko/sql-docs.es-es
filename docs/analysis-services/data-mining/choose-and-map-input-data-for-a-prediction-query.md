@@ -1,26 +1,31 @@
 ---
-title: "Elegir y asignar datos de entrada para una consulta de predicci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tablas [Analysis Services], consultas de predicción"
-  - "Predicción de modelo de minería de datos [Analysis Services], tablas de entrada"
+title: "Elegir y asignar datos de entrada para una consulta de predicción | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tables [Analysis Services], prediction queries
+- Mining Model Prediction [Analysis Services], input tables
 ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b95fd2fc60fa252e8ad9de34768c12846a45e322
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Elegir y asignar datos de entrada para una consulta de predicci&#243;n
+# <a name="choose-and-map-input-data-for-a-prediction-query"></a>Elegir y asignar datos de entrada para una consulta de predicción
   Generalmente, la creación de predicciones a partir de un modelo de minería de datos se realiza proporcionando datos nuevos al modelo. (La excepción son los modelos de serie temporal, que pueden realizar predicciones basadas únicamente en datos históricos). Para proporcionar nuevos datos al modelo, debe asegurarse de que los datos están disponibles como parte de una vista del origen de datos. Si conoce de antemano los datos que va a usar para la predicción, puede incluirlos en la vista del origen de datos usada para crear el modelo. De lo contrario, es posible que tenga que crear una nueva vista del origen de datos. Para más información, vea [Vistas del origen de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
  Algunas veces, los datos que necesita se encuentran en varias tablas en una combinación de uno a varios. Es el caso de los datos usados para los modelos de asociación o los modelos de clústeres de secuencia, que usan una tabla de casos vinculada a una tabla anidada que contiene detalles sobre productos o transacciones. Si el modelo usa una estructura de tabla de casos anidados, los datos usados para la predicción también deben tener dicha estructura.  
@@ -32,13 +37,13 @@ caps.handback.revision: 16
   
  Al elegir los datos que se van a usar para la predicción, es posible que algunas de las columnas del origen de datos seleccionado se asignen automáticamente a las columnas del modelo de minería de datos, basándose en la similitud de los nombres y el tipo de datos coincidentes. Puede usar el cuadro de diálogo **Modificar asignación** de la pestaña **Predicción de modelo de minería de datos** para cambiar las columnas que se han asignado, eliminar las asignaciones inapropiadas o crear nuevas asignaciones para las columnas existentes. La superficie de diseño **Predicción de modelo de minería de datos** también admite la edición de tipo arrastrar y colocar para las conexiones.  
   
--   Para crear una conexión, seleccione una columna de la tabla **Modelo de minería de datos** y arrástrela hasta la columna correspondiente en la tabla **Seleccionar tabla(s) de entrada**.  
+-   Para crear una conexión, seleccione una columna de la tabla **Modelo de minería de datos** y arrástrela hasta la columna correspondiente en la tabla **Seleccionar tabla(s) de entrada** .  
   
 -   Para quitar una conexión, seleccione la línea de conexión y presione la tecla Supr.  
   
  En el procedimiento siguiente se describe cómo modificar las combinaciones que se han creado entre la tabla de casos y una tabla anidada que se usan como entradas de una consulta de predicción mediante el cuadro de diálogo **Especificar combinación anidada** .  
   
-### Seleccionar una tabla de entrada  
+### <a name="select-an-input-table"></a>Seleccionar una tabla de entrada  
   
 1.  En la tabla **Seleccionar tabla(s) de entrada** de la pestaña **Gráfico de precisión de minería de datos** del Diseñador de minería de datos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga clic en **Seleccionar tabla de casos**.  
   
@@ -52,13 +57,13 @@ caps.handback.revision: 16
   
      Las columnas de la estructura de minería de datos se asignarán automáticamente a las columnas que tengan el mismo nombre en la tabla de entrada.  
   
-### Cambiar la forma en la que los datos de entrada se asignan al modelo  
+### <a name="change-the-way-that-input-data-is-mapped-to-the-model"></a>Cambiar la forma en la que los datos de entrada se asignan al modelo  
   
 1.  En el Diseñador de minería de datos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], seleccione la pestaña **Predicción de modelo de minería de datos** .  
   
 2.  En el menú **Modelo de minería de datos** , seleccione **Modificar conexiones**.  
   
-     Se abre el cuadro de diálogo **Modificar asignación** . En este cuadro de diálogo, la **Columna del modelo de minería de datos** muestra las columnas de la estructura de minería de datos seleccionada. En la columna **Columna de la tabla** se muestran las columnas del origen de datos externo que ha elegido en el cuadro de diálogo **Seleccionar tabla(s) de entrada**. Las columnas del origen de datos externo se asignan a las columnas del modelo de minería de datos.  
+     Se abre el cuadro de diálogo **Modificar asignación** . En este cuadro de diálogo, la **Columna del modelo de minería de datos** muestra las columnas de la estructura de minería de datos seleccionada. En la columna **Columna de la tabla** se muestran las columnas del origen de datos externo que ha elegido en el cuadro de diálogo **Seleccionar tabla(s) de entrada** . Las columnas del origen de datos externo se asignan a las columnas del modelo de minería de datos.  
   
 3.  En **Columna de la tabla**, seleccione la fila que corresponda a la columna del modelo de minería de datos a la que desee asignarla.  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 16
   
      Las nuevas asignaciones de columnas se muestran en el diseñador.  
   
-### Quitar una relación entre tablas de entrada  
+### <a name="remove-a-relationship-between-input-tables"></a>Quitar una relación entre tablas de entrada  
   
 1.  En la tabla **Seleccionar tabla(s) de entrada** de la pestaña **Predicción de modelo de minería** de datos del Diseñador de minería de datos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga clic en **Modificar combinación**.  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 16
   
      La relación entre la tabla de casos y la tabla anidada se ha eliminado.  
   
-### Crear una nueva relación entre tablas de entrada  
+### <a name="create-a-new-relationship-between-input-tables"></a>Crear una nueva relación entre tablas de entrada  
   
 1.  En la tabla **Seleccionar tabla(s) de entrada** de la pestaña **Predicción de modelo de minería de datos** del Diseñador de minería de datos, haga clic en **Modificar combinación**.  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 16
   
      Se crea una nueva relación entre la tabla de casos y la tabla anidada.  
   
-### Agregar una tabla anidada a las tablas de entrada de una consulta de predicción  
+### <a name="add-a-nested-table-to-the-input-tables-of-a-prediction-query"></a>Agregar una tabla anidada a las tablas de entrada de una consulta de predicción  
   
 1.  En la pestaña **Predicción de modelo de minería de datos** del Diseñador de minería de datos, haga clic en **Seleccionar tabla de casos** para abrir el cuadro de diálogo **Seleccionar tabla** .  
   
@@ -117,7 +122,7 @@ caps.handback.revision: 16
   
      Si ya existe una relación, las columnas del modelo de minería de datos se asignan automáticamente a las columnas que tienen el mismo nombre en la tabla de entrada. Puede modificar la relación entre la tabla anidada y la tabla de casos haciendo clic en **Modificar combinación**, que abre el cuadro de diálogo **Crear relación** .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Consultas de predicción &#40;minería de datos&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

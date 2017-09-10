@@ -1,24 +1,29 @@
 ---
-title: "Usar vistas de administraci&#243;n din&#225;mica (DMV) para supervisar Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Usar vistas de administración dinámica (DMV) para supervisar Analysis Services | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c9faafd33f7abaee582821336dcd471d637a1c1
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Usar vistas de administraci&#243;n din&#225;mica (DMV) para supervisar Analysis Services
+# <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Usar vistas de administración dinámica (DMV) para supervisar Analysis Services
   Las vistas de administración dinámica (DMV) de Analysis Services son estructuras de consulta que exponen información sobre las operaciones del servidor local y el estado del servidor. La estructura de consulta es una interfaz para los conjuntos de filas de esquema que devuelven metadatos y la información de supervisión acerca de una instancia de Analysis Services.  
   
  En la mayoría de las consultas DMV, se usa una instrucción **SELECT** y el esquema **$System** con un conjunto de filas de esquema XML/A.  
@@ -49,7 +54,7 @@ SELECT * FROM $System.<schemaRowset>
 ##  <a name="bkmk_ex"></a> Ejemplos y escenarios  
  Una consulta DMV puede ayudarle a responder preguntas sobre las sesiones activas y las conexiones, y qué objetos están utilizando la mayoría de la CPU o de la memoria en un momento concreto. En esta sección se proporcionan ejemplos de escenarios en los que las consultas DMV se usan con más frecuencia. También puede revisar la [Guía de operaciones de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) para consultar las características adicionales sobre cómo usar las consultas DMV para supervisar una instancia de servidor.  
   
- `Select * from $System.discover_object_activity` /** Esta consulta informa de la actividad de los objetos desde que el servicio se ha iniciado por última vez. Para ver consultas de ejemplo basadas en esta DMV, vea [Nuevo System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322) (Nuevo System.Discover_Object_Activity).  
+ `Select * from $System.discover_object_activity` /** Esta consulta informa de la actividad de los objetos desde que el servicio se ha iniciado por última vez. Para ver consultas de ejemplo basadas en esta DMV, vea [Nuevo System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)(Nuevo System.Discover_Object_Activity).  
   
  `Select * from $System.discover_object_memory_usage` /** Esta consulta informa del consumo de memoria de cada objeto.  
   
@@ -99,7 +104,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  Si no hay disponible una DMV para un conjunto de filas determinado, el servidor devuelve el error siguiente: “El servidor no reconoció el tipo de solicitud \<conjuntoDeFilasDeEsquema>”. El resto de los errores indica problemas con la sintaxis.  
+>  Si no hay una DMV para un conjunto de filas determinado, el servidor devuelve el siguiente error: "el \<schemarowset > el servidor no reconoció el tipo de solicitud". El resto de los errores indica problemas con la sintaxis.  
   
 |Conjunto de filas|Description|  
 |------------|-----------------|  
@@ -138,7 +143,7 @@ ORDER BY TABLE_NAME ASC
 |[Conjunto de filas DISCOVER_TRACE_EVENT_CATEGORIES](../../analysis-services/schema-rowsets/xml/discover-trace-event-categories-rowset.md)|Devuelve una lista de las categorías disponibles.|  
 |[Conjunto de filas DISCOVER_TRACES](../../analysis-services/schema-rowsets/xml/discover-traces-rowset.md)|Devuelve una lista de los seguimientos que se ejecutan activamente en la conexión actual.|  
 |[Conjunto de filas DISCOVER_TRANSACTIONS](../../analysis-services/schema-rowsets/xml/discover-transactions-rowset.md)|Devuelve una lista de las transacciones que se ejecutan activamente en la conexión actual.|  
-|[Conjunto de filas DISCOVER_XEVENT_TRACE_DEFINITION](../Topic/DISCOVER_XEVENT_TRACE_DEFINITION%20Rowset.md)|Devuelve una lista de los seguimientos xevent que se ejecutan activamente en la conexión actual.|  
+|[Conjunto de filas DISCOVER_XEVENT_TRACE_DEFINITION](http://msdn.microsoft.com/library/e1ce2d2d-f994-4318-801a-ee0385aecd84)|Devuelve una lista de los seguimientos xevent que se ejecutan activamente en la conexión actual.|  
 |[Conjunto de filas DMSCHEMA_MINING_COLUMNS](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-columns-rowset.md)|Muestra las columnas individuales de todos los modelos de minería de datos disponibles en la conexión actual.|  
 |[Conjunto de filas DMSCHEMA_MINING_FUNCTIONS](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-functions-rowset.md)|Devuelve una lista de las funciones admitidas por los algoritmos de minería de datos del servidor.|  
 |[Conjunto de filas DMSCHEMA_MINING_MODEL_CONTENT](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)|Devuelve un conjunto de filas que consta de las columnas que describen el modelo actual.|  
@@ -163,7 +168,7 @@ ORDER BY TABLE_NAME ASC
 |[Conjunto de filas MDSCHEMA_PROPERTIES](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|Devuelve el nombre completo de cada propiedad, junto con el tipo de propiedad, el tipo de datos y otros metadatos.|  
 |[Conjunto de filas MDSCHEMA_SETS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|Devuelve una lista de los conjuntos definidos en la conexión actual.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Guía de operaciones de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
  [Nuevo System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
  [Nueva función SYSTEMRESTRICTEDSCHEMA para conjuntos de filas restringidas y DMV](http://go.microsoft.com/fwlink/?LinkId=231885)  

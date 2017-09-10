@@ -1,23 +1,28 @@
 ---
-title: "Proyectos relacionados en las soluciones de miner&#237;a de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Proyectos relacionados para soluciones de minería de datos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 290142e362b4e41148ab2042c8c76738f3e7b54c
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Proyectos relacionados en las soluciones de miner&#237;a de datos
+# <a name="related-projects-for-data-mining-solutions"></a>Proyectos relacionados en las soluciones de minería de datos
   Lo mínimo que se requiere para una solución de minería de datos es el proyecto de minería de datos, que define los orígenes de datos, las vistas del origen de datos, las estructuras y los modelos de minería de datos. Sin embargo, cuando los modelos de minería de datos se utilizan en la toma de decisiones diaria, es importante que la minería de datos se integre con otra parte de una solución de predicción de análisis, que puede incluir estos procesos y componentes:  
   
 -   Preparación y selección de datos y variables. Incluye la limpieza de datos, la administración metadatos y la integración de orígenes de datos, y la conversión, combinación y carga de datos en un almacenamiento de datos.  
@@ -200,7 +205,7 @@ caps.handback.revision: 12
   
 -   No todos los idiomas de texto completo admiten la indización semántica. Para consultar la lista de idiomas compatibles, vea [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Soluciones de modelos multidimensionales &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Soluciones de modelos tabulares &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   

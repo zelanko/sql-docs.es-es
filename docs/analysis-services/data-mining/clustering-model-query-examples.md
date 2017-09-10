@@ -1,27 +1,32 @@
 ---
-title: "Ejemplos de consultas de modelos de agrupaci&#243;n en cl&#250;steres | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clústeres [Minería de datos]"
-  - "consultas de contenido [DMX]"
-  - "algoritmos de clústeres [Analysis Services]"
+title: "Ejemplos de consultas de modelo de agrupación en clústeres | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clustering [Data Mining]
+- content queries [DMX]
+- clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0b72ea275e4d396531feabd86780f0dabc736e85
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Ejemplos de consultas de modelos de agrupaci&#243;n en cl&#250;steres
+# <a name="clustering-model-query-examples"></a>Ejemplos de consultas de modelos de agrupación en clústeres
   Al crear una consulta en un modelo de minería de datos, puede recuperar metadatos sobre el modelo o crear una consulta de contenido que proporcione detalles sobre los patrones detectados en el análisis. También puede crear una consulta de predicción, que usa los patrones del modelo para realizar predicciones para los nuevos datos. Cada tipo de consulta proporcionará información diferente. Por ejemplo, una consulta de contenido puede proporcionar detalles adicionales sobre los clústeres encontrados, mientras que una consulta de predicción puede indicar a qué clúster pertenece con mayor probabilidad un nuevo punto de datos.  
   
  En esta sección se explica cómo crear consultas en modelos basados en el algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -106,7 +111,7 @@ WHERE MODEL_NAME = 'TM_Clustering'
   
  [Volver al principio](#bkmk_top2)  
   
-## Buscar información sobre clústeres  
+## <a name="finding-information-about-clusters"></a>Buscar información sobre clústeres  
  Las consultas de contenido más útiles que se realizan en los modelos de agrupación en clústeres generalmente devuelven el mismo tipo de información que se puede examinar usando el **Visor de clústeres**. Esto incluye perfiles del clúster, características del clúster y distinción del clúster. En esta sección se proporcionan ejemplos de consultas que recuperan esta información.  
   
 ###  <a name="bkmk_Query3"></a> Consulta de ejemplo 3: devolver un clúster o una lista de clústeres  
@@ -131,7 +136,7 @@ WHERE NODE_TYPE = 5 AND NODE_SUPPORT > 1000
   
 -   La columna NODE_DESCRIPTION contiene una lista de atributos separados por comas. Observe que la lista de atributos se puede abreviar con fines de visualización.  
   
--   La tabla anidada de la columna NODE_DISTRIBUTION contiene la lista completa de atributos para el clúster. Si el cliente no admite conjuntos de filas jerárquicos, se puede devolver la tabla anidada anteponiendo la palabra clave FLATTENED a la lista de columnas de la instrucción SELECT. Para más información sobre el uso de la palabra clave FLATTENED, vea [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](../Topic/SELECT%20FROM%20%3Cmodel%3E.CONTENT%20\(DMX\).md).  
+-   La tabla anidada de la columna NODE_DISTRIBUTION contiene la lista completa de atributos para el clúster. Si el cliente no admite conjuntos de filas jerárquicos, se puede devolver la tabla anidada anteponiendo la palabra clave FLATTENED a la lista de columnas de la instrucción SELECT. Para más información sobre el uso de la palabra clave FLATTENED, vea [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](../../dmx/select-from-model-content-dmx.md).  
   
  [Volver al principio](#bkmk_top2)  
   
@@ -249,7 +254,7 @@ WHERE IsInNode('001')
   
  [Volver al principio](#bkmk_top2)  
   
-## Realizar predicciones utilizando el modelo  
+## <a name="making-predictions-using-the-model"></a>Realizar predicciones utilizando el modelo  
  Aunque la agrupación en clústeres se utiliza normalmente para describir y entender los datos, la implementación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] también permite realizar una predicción sobre la pertenencia al clúster y devolver probabilidades asociadas a dicha predicción. En esta sección se proporcionan ejemplos de cómo crear consultas de predicción en modelos de agrupación en clústeres. Puede realizar predicciones para varios casos, especificando un origen de datos tabular, o puede proporcionar nuevos valores de uno en uno creando una consulta singleton. Para mayor claridad, todos los ejemplos de esta sección son consultas singleton.  
   
  Para más información sobre la forma de crear consultas de predicción con DMX, vea [Herramientas de consulta de minería de datos](../../analysis-services/data-mining/data-mining-query-tools.md).  
@@ -283,7 +288,7 @@ NATURAL PREDICTION JOIN
 |----------------|----------------|  
 |1|0.55843544003102|  
   
- En este ejemplo, la diferencia en el modelo no es significativa. Sin embargo, a veces puede ser importante para detectar las diferencias entre la distribución real de valores y lo que predice el modelo. La función [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) es útil en este escenario, ya que indica la probabilidad de un caso según un modelo específico.  
+ En este ejemplo, la diferencia en el modelo no es significativa. Sin embargo, a veces puede ser importante para detectar las diferencias entre la distribución real de valores y lo que predice el modelo. La pestaña [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) es útil en este escenario, ya que indica la probabilidad de un caso según un modelo específico.  
   
  El número devuelto por la función PredictCaseLikelihood es una probabilidad y, por lo tanto, siempre está comprendido entre 0 y 1, y el valor 0,5 representa un resultado aleatorio. Por consiguiente, una puntuación menor que 0.5 significa que el caso predicho es improbable, dado el modelo, mientras que una puntuación mayor que 0.5 indica que el caso predicho es más probable que se ajuste al modelo.  
   
@@ -360,11 +365,11 @@ NATURAL PREDICTION JOIN
   
  De forma predeterminada, los resultados se clasifican por probabilidad. Los resultados indican que, aunque la probabilidad para el clúster 2 es bastante baja, este clúster sigue siendo el que mejor se ajusta al nuevo punto de datos.  
   
- **Nota** : la columna adicional, `$DISTANCE`, representa la distancia desde el punto de datos hasta el clúster. De forma predeterminada, el algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] utiliza el método de agrupación en clústeres EM escalable, que asigna varios clústeres a cada punto de datos y clasifica los posibles clústeres.  Sin embargo, si crea el modelo de agrupación en clústeres utilizando el algoritmo mediana-K, solamente se podrá asignar un clúster a cada punto de datos y esta consulta devolverá una sola fila. Es necesario comprender estas diferencias para interpretar los resultados de la función [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md). Para más información sobre las diferencias entre la agrupación en clústeres de EM y de mediana-K, vea [Referencia técnica del algoritmo de clústeres de Microsoft](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md).  
+ **Nota** : la columna adicional, `$DISTANCE`, representa la distancia desde el punto de datos hasta el clúster. De forma predeterminada, el algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] utiliza el método de agrupación en clústeres EM escalable, que asigna varios clústeres a cada punto de datos y clasifica los posibles clústeres.  Sin embargo, si crea el modelo de agrupación en clústeres utilizando el algoritmo mediana-K, solamente se podrá asignar un clúster a cada punto de datos y esta consulta devolverá una sola fila. Es necesario comprender estas diferencias para interpretar los resultados de la función [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) . Para más información sobre las diferencias entre la agrupación en clústeres de EM y de mediana-K, vea [Referencia técnica del algoritmo de clústeres de Microsoft](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md).  
   
  [Volver al principio](#bkmk_top2)  
   
-## Lista de funciones  
+## <a name="function-list"></a>Lista de funciones  
  Todos los algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] son compatibles con un conjunto común de funciones. Sin embargo, los modelos que se generan usando el algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admiten las funciones adicionales incluidas en la tabla siguiente.  
   
 |||  
@@ -387,9 +392,9 @@ NATURAL PREDICTION JOIN
   
  Para más información sobre la sintaxis de funciones específicas, vea [Referencia de funciones de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Consultas de minería de datos](../../analysis-services/data-mining/data-mining-queries.md)   
- [Referencia técnica del algoritmo de clústeres de Microsoft](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
+ [Microsoft Clustering Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
  [Algoritmo de clústeres de Microsoft](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)  
   
   

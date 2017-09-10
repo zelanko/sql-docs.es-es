@@ -1,36 +1,41 @@
 ---
-title: "Agregar modelos de miner&#237;a de datos a una estructura (Analysis Services - Miner&#237;a de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "estructuras de minería de datos [Analysis Services], crear"
-  - "modelos de minería de datos [Analysis Services], crear"
-  - "modelos de minería de datos [Analysis Services], modificar"
+title: "Agregar modelos de minería de datos a una estructura (Analysis Services: minería de datos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], creating
+- mining models [Analysis Services], creating
+- mining models [Analysis Services], modifying
 ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 30fab0ce534bc76456f6876c1432feeb3de2de03
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Agregar modelos de miner&#237;a de datos a una estructura (Analysis Services - Miner&#237;a de datos)
+# <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Agregar modelos de minería de datos a una estructura (Analysis Services - Minería de datos)
   Una estructura de minería de datos se ha diseñado para admitir varios modelos de minería de datos. Por tanto, cuando el asistente finalice, puede abrir la estructura y agregar nuevos modelos de minería de datos. Cada vez que cree un modelo, puede utilizar un algoritmo diferente, cambiar los parámetros o aplicar filtros para utilizar un subconjunto distinto de datos.  
   
-## Agregar nuevos modelos de minería de datos  
+## <a name="adding-new-mining-models"></a>Agregar nuevos modelos de minería de datos  
  Si utiliza el Asistente para minería de datos para crear un nuevo modelo de minería de datos, de forma predeterminada, primero siempre debe crear una estructura de minería de datos. El asistente le ofrece la posibilidad de agregar un modelo de minería de datos inicial a la estructura. Sin embargo, no es necesario crear un modelo de manera inmediata. Si solo crea la estructura, no necesita tomar una decisión sobre qué columna debe utilizar como atributo de predicción, o sobre cómo utilizar los datos en un modelo determinado. En su lugar, solo tiene que establecer la estructura de datos general que desea utilizar en el futuro; más adelante puede utilizar [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md) para agregar nuevos modelos de minería de datos basados en dicha estructura.  
   
 > [!NOTE]  
 >  En DMX, la instrucción CREATE MINING MODEL comienza con el modelo de minería de datos. Es decir, debe definir la opción de modelo de minería de datos que desee y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] generará automáticamente la estructura subyacente. Después, puede continuar agregando nuevos modelos de minería de datos a esa estructura con la instrucción ALTER STRUCTURE… ADD MODEL.  
   
-## Elegir un algoritmo  
+## <a name="choosing-an-algorithm"></a>Elegir un algoritmo  
  Si agrega un modelo nuevo a una estructura existente, en primer lugar debe seleccionar un algoritmo de minería de datos para utilizarlo en el modelo. Elegir el algoritmo es importante porque cada algoritmo realiza un tipo diferente de análisis y tiene requisitos diferentes.  
   
  Si selecciona un algoritmo que sea incompatible con los datos, recibirá una advertencia. En algunos casos, puede que tenga que omitir las columnas que el algoritmo no pueda procesar. En otros casos, el algoritmo realizará automáticamente los ajustes necesarios. Por ejemplo, si la estructura contiene datos numéricos y el algoritmo solo puede trabajar con valores discretos, agrupará los valores numéricos en intervalos discretos automáticamente. En algunos casos, puede que tenga que corregir de forma manual los datos primero eligiendo una clave o un atributo de predicción.  
@@ -39,7 +44,7 @@ caps.handback.revision: 16
   
  Tenga en cuenta que todos los modelos nuevos deben procesarse para poder usarse.  
   
-## Especificar el uso de columnas en un modelo de minería de datos  
+## <a name="specifying-the-usage-of-columns-in-a-new-mining-model"></a>Especificar el uso de columnas en un modelo de minería de datos  
  Al agregar nuevos modelos de minería de datos a una estructura de minería de datos existente, debe especificar cada columna de datos que debe utilizar el modelo. Según el tipo de algoritmo que se elija para el modelo, algunas de estas opciones se pueden efectuar de forma predeterminada. Si no define un tipo de uso para una columna, esta no se incluirá en la estructura de minería de datos. Sin embargo, los datos de la columna pueden seguir disponibles para la obtención de detalles, si el modelo lo admite.  
   
  Las columnas de la estructura de minería de datos que utiliza el modelo (si no está establecido en Omitir) deben ser una clave, una columna de entrada, una columna de predicción o una columna de predicción cuyos valores también se usen como entradas en el modelo.  
@@ -54,10 +59,10 @@ caps.handback.revision: 16
   
      Según el tipo de modelo, podría ser necesario que la columna de predicción fuera un tipo de datos específico: por ejemplo, un modelo de regresión lineal requiere una columna numérica como valor de predicción; el algoritmo Bayes Naïve requiere un valor discreto (y todas las entradas también deben ser discretas).  
   
-## Especificar el contenido de las columnas  
+## <a name="specifying-column-content"></a>Especificar el contenido de las columnas  
  Para algunas columnas, también puede ser necesario especificar el *contenido de la columna*. En la minería de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la propiedad Tipo de contenido de cada columna de datos indica al algoritmo cómo debe procesar los datos de esa columna. Por ejemplo, si los datos tienen una columna Ingresos , debe especificar que la columna contiene números continuos estableciendo el tipo de contenido en Continuous. Sin embargo, también puede especificar que los números de la columna Ingresos se agrupen en cubos estableciendo el tipo de contenido en Discretized y, opcionalmente, especificando el número exacto de cubos. Puede crear distintos modelos que procesen las columnas de manera diferente: por ejemplo, puede probar un modelo que agrupe clientes en tres cubos en función de la edad, y otro modelo que los agrupe en 10 cubos en función de la edad.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Crear una estructura de minería de datos relacional](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
  [Propiedades del modelo de minería de datos](../../analysis-services/data-mining/mining-model-properties.md)   

@@ -1,28 +1,33 @@
 ---
-title: "Elegir y asignar datos de prueba para el modelo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "columnas [minería de datos], gráficos de precisión de minería de datos"
-  - "gráfico de precisión de minería de datos [Analysis Services], asignaciones de columnas"
-  - "asignación de columnas de entrada [Analysis Services]"
-  - "asignación de columnas de entrada [Analysis Services]"
+title: Elegir y asignar datos de prueba de modelo | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [data mining], mining accuracy charts
+- Mining Accuracy Chart [Analysis Services], column mappings
+- input column mapping [Analysis Services]
+- mapping input columns [Analysis Services]
 ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5374180481138f62346ec1ff3aa83eff82403c05
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Elegir y asignar datos de prueba para el modelo
+# <a name="choose-and-map-model-testing-data"></a>Elegir y asignar datos de prueba para el modelo
   Para crear un gráfico de precisión en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], debe elegir los datos que se utilizarán para probar el modelo y asignar dichos datos al modelo.  
   
  De forma predeterminada, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizará los datos de prueba del modelo de minería de datos, siempre que se haya creado un conjunto de datos de exclusión al generar la estructura. La manera más fácil de probar los modelos basados en la misma estructura de minería de datos consiste en crear un conjunto de pruebas de exclusión, ya que los nombres de las columnas y los tipos de datos siempre coincidirán con el modelo y podrá estar casi seguro de que la distribución de los datos es similar. Además, el diseñador creará automáticamente las relaciones entre la columnas de entrada y las del modelo.  
@@ -79,13 +84,13 @@ caps.handback.revision: 44
   
 5.  En el cuadro de diálogo **Seleccionar estructura de minería de datos** , seleccione la estructura que contenga los modelos con los que desea trabajar y, después, haga clic en **Aceptar**.  
   
-6.  En la tabla **Seleccionar tabla(s) de entrada** de la pestaña **Gráfico de precisión de minería de datos**, haga clic en **Seleccionar tabla de casos** para abrir el cuadro de diálogo **Seleccionar tabla**.  
+6.  En la tabla **Seleccionar tabla(s) de entrada** de la pestaña **Gráfico de precisión de minería de datos** , haga clic en **Seleccionar tabla de casos** para abrir el cuadro de diálogo **Seleccionar tabla** .  
   
 7.  En el cuadro de diálogo **Seleccionar tablas** , seleccione un origen de datos de la lista **Origen de datos** . Elija una tabla con los datos que desee usar en las consultas de predicción para determinar la precisión de los modelos.  
   
-8.  En el cuadro **Nombre de tabla o vista**, seleccione la tabla que contiene los datos que quiere usar para probar los modelos.  
+8.  En el cuadro **Nombre de tabla o vista** , seleccione la tabla que contiene los datos que quiere usar para probar los modelos.  
   
-9. Modifique las asignaciones, si es necesario. Las columnas de la estructura de minería de datos se asignan automáticamente a las columnas que tengan el mismo nombre en la tabla de entrada. Para crear asignaciones manualmente, haga clic en una columna en la tabla **Seleccionar tabla(s) de entrada** y arrástrela a la columna correspondiente en la tabla **Estructura de minería de datos**. Para eliminar una asignación, haga clic en la línea que vincula la columna de la tabla **Estructura de minería de datos** con la columna asignada de la tabla **Seleccionar tabla(s) de entrada** y, después, presione Suprimir.  
+9. Modifique las asignaciones, si es necesario. Las columnas de la estructura de minería de datos se asignan automáticamente a las columnas que tengan el mismo nombre en la tabla de entrada. Para crear asignaciones manualmente, haga clic en una columna en la tabla **Seleccionar tabla(s) de entrada** y arrástrela a la columna correspondiente en la tabla **Estructura de minería de datos** . Para eliminar una asignación, haga clic en la línea que vincula la columna de la tabla **Estructura de minería de datos** con la columna asignada de la tabla **Seleccionar tabla(s) de entrada** y, después, presione Suprimir.  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -117,9 +122,9 @@ caps.handback.revision: 44
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-     Las nuevas asignaciones de columna se muestran en el cuadro de diálogo **Especificar asignación de columnas** . Puede quitar una asignación seleccionando la línea entre las columnas y presionando la tecla Supr. Para crear una conexión, seleccione una columna de la tabla **Estructura de minería de datos** y arrástrela hasta la columna correspondiente de la tabla **Seleccionar tabla(s) de entrada**.  
+     Las nuevas asignaciones de columna se muestran en el cuadro de diálogo **Especificar asignación de columnas** . Puede quitar una asignación seleccionando la línea entre las columnas y presionando la tecla Supr. Para crear una conexión, seleccione una columna de la tabla **Estructura de minería de datos** y arrástrela hasta la columna correspondiente de la tabla **Seleccionar tabla(s) de entrada** .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tareas y procedimientos de prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

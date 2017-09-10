@@ -1,29 +1,34 @@
 ---
-title: "Acciones en modelos multidimensionales | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "acciones [Analysis Services], crear"
-  - "acciones de informe [Analysis Services]"
-  - "acciones de obtención de detalles [Analysis Services]"
-  - "cubos [Analysis Services], acciones"
+title: Acciones en modelos multidimensionales | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- actions [Analysis Services], creating
+- report actions [Analysis Services]
+- drillthrough actions [Analysis Services]
+- cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a4b7d3b0523fb19b9b0d7e0542cc587fb1585992
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Acciones en modelos multidimensionales
+# <a name="actions-in-multidimensional-models"></a>Acciones en modelos multidimensionales
   Una acción es una operación iniciada por el usuario final en un cubo seleccionado o en una parte de un cubo. La operación puede iniciar una aplicación con el elemento seleccionado como parámetro o recuperar información acerca del elemento seleccionado. Para más información sobre las acciones, vea [Acciones &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md).  
   
  Use la pestaña **Acciones** del Diseñador de cubos para generar acciones para un cubo. Especifique lo siguiente:  
@@ -82,7 +87,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  Debe usar Lenguaje de scripting de Analysis Services (ASSL) u Objetos de administración de análisis (AMO) para definir tipos de acciones de la línea de comandos y HTML. Para más información, vea [Elemento Action &#40;ASSL&#41;](../../analysis-services/scripting/objects/action-element-assl.md), [Elemento Type &#40;Action&#41; &#40;ASSL&#41;](../../analysis-services/scripting/properties/type-element-action-assl.md) y [Programar objetos avanzados OLAP en AMO](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md).  
   
-## Crear una acción de informe  
+## <a name="creating-a-reporting-action"></a>Crear una acción de informe  
  El servidor de informes responde a las solicitudes basadas en URL para los informes. Para crear una acción de informe, en el menú **Cubo** , haga clic en **Nueva acción de informe**. Las siguientes opciones son específicas de una acción de informe.  
   
  **Servidor de informes**  
@@ -121,13 +126,13 @@ parametervalue1
 http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Region=West  
 ```  
   
-## Crear una acción de obtención de detalles  
+## <a name="creating-a-drillthrough-action"></a>Crear una acción de obtención de detalles  
  Una acción de obtención de detalles se define mediante una acción de conjunto de filas, que se devuelve a la aplicación cliente como una instrucción de obtención de detalles. El destino de la acción es un miembro de un grupo de medida. Para crear una acción de obtención de detalles, en el menú **Cubo** , haga clic en **Nueva acción de obtención de detalles**. Las siguientes opciones son específicas de una acción de obtención de detalles.  
   
  **Columnas de obtención de detalles**  
  Seleccione una o más dimensiones y, para cada dimensión, las columnas de obtención de detalles devueltas a la aplicación cliente por la acción.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Cubos en modelos multidimensionales](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

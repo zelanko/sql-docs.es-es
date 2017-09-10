@@ -1,23 +1,28 @@
 ---
-title: "Complementos de miner&#237;a de datos de SQL Server para Office | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Complementos de minería de datos para Office de datos de SQL Server | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d637a50ca56acfcc80da1a09542e88e476351634
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Complementos de miner&#237;a de datos de SQL Server para Office
+# <a name="sql-server-data-mining-add-ins-for-office"></a>Complementos de minería de datos de SQL Server para Office
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Complementos de minería de datos para Office es un conjunto ligero de herramientas para análisis predictivos que permite utilizar datos de Excel para generar modelos analíticos para la predicción, recomendación o exploración.  
   
  Los asistentes y las herramientas de administración de datos de los complementos proporcionan instrucciones paso a paso para estas tareas comunes de minería de datos:  
@@ -40,7 +45,7 @@ caps.handback.revision: 10
   
      Si no está familiarizado con la minería de datos, puede obtener ayuda sobre la generación de consultas de predicción en el asistente **Consulta** .  
   
-     Los usuarios avanzados pueden crear consultas DMX personalizadas con el **Editor de consultas avanzadas** que permite arrastrar y colocar, o automatizar las predicciones con VBA de Excel.  
+     Los usuarios avanzados pueden crear consultas DMX personalizadas con el **Editor de consultas avanzadas**que permite arrastrar y colocar, o automatizar las predicciones con VBA de Excel.  
   
 -   **Documentar y administrar.** Después de crear un conjunto de datos y generar algunos modelos, documente el trabajo y las diferentes perspectivas generando un resumen estadístico de los datos y de los parámetros del modelo.  
   
@@ -52,10 +57,10 @@ caps.handback.revision: 10
   
      Los usuarios avanzados apreciarán la funcionalidad **Seguimiento** , que permite ver las instrucciones DMX y XMLA enviadas al servidor.  
   
-## Introducción  
+## <a name="getting-started"></a>Introducción  
  Para más información, vea [Qué se incluye en los Complementos de minería de datos para Office](http://go.microsoft.com/fwlink/p/?LinkId=616849)  
   
-## Compatibilidad y requisitos  
+## <a name="support-and-requirements"></a>Compatibilidad y requisitos  
  Los Complementos de minería de datos de SQL Server para Office se descargan gratuitamente. Para usar estas herramientas, debe tener instalada una de las siguientes versiones de Office:  
   
 -   Office 2010, versiones de 32 bits o de 64 bits  
@@ -73,7 +78,7 @@ caps.handback.revision: 10
   
 -   Standard  
   
- Dependiendo de la edición de SQL Server Analysis Services a la que se conecte, es posible que algunos algoritmos avanzados no estén disponibles. Para más información, vea [Características compatibles con las ediciones de SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ Dependiendo de la edición de SQL Server Analysis Services a la que se conecte, es posible que algunos algoritmos avanzados no estén disponibles. Para más información, vea [Características compatibles con las ediciones de SQL Server 2016](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).  
   
  Para obtener ayuda adicional con la instalación, vea esta página en el Centro de descarga: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   

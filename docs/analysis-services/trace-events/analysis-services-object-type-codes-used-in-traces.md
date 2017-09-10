@@ -1,28 +1,33 @@
 ---
-title: "C&#243;digos de tipo de objeto de Analysis Services usados en seguimientos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Códigos de tipo que se utilizan en los seguimientos de objeto de Analysis Services | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7bd50f15603440953dc2f9c52ae669e5fcbd3108
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# C&#243;digos de tipo de objeto de Analysis Services usados en seguimientos
-  En esta página se indica el tipo de objeto (un número de seis dígitos) de cada objeto en un modelo de datos de Analysis Services.  Estos códigos aparecen en registros de seguimiento y se usan para identificar el tipo de objeto asociado con un bloqueo concreto. Por ejemplo, un tiempo de espera de bloqueo en una base de datos indicará el tipo de objeto 100002, que es el tipo de objeto Database.  
+# <a name="analysis-services-object-type-codes-used-in-traces"></a>Códigos de tipo de objeto de Analysis Services usados en seguimientos
+  En esta página se indica el tipo de objeto (un número de seis dígitos) de cada objeto en un modelo de datos de Analysis Services. Estos códigos aparecen en registros de seguimiento y se usan para identificar el tipo de objeto asociado con un bloqueo concreto. Por ejemplo, un tiempo de espera de bloqueo en una base de datos indicará el tipo de objeto 100002, que es el tipo de objeto Database.  
   
 > [!NOTE]  
 >  Aquí se enumeran más códigos de los que realmente aparecerán en un registro de seguimiento. La lista que aparece a continuación es una lista exhaustiva de los códigos de tipo para cada objeto, pero solo los objetos que llevan bloqueo presentarán un código de tipo de objeto en un registro de seguimiento.  
   
-## Referencia de tipo de objeto  
+## <a name="object-type-reference"></a>Referencia de tipo de objeto  
   
 |Tipo de objeto|Nombre del objeto|  
 |-----------------|-----------------|  

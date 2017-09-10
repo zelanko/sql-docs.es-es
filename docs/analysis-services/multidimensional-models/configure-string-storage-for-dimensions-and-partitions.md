@@ -1,24 +1,29 @@
 ---
-title: "Configurar el almacenamiento de cadenas para dimensiones y particiones | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Configurar el almacenamiento de cadenas para dimensiones y particiones | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cd8d940628f843407c7c841b73b1322096fda615
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Configurar el almacenamiento de cadenas para dimensiones y particiones
+# <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurar el almacenamiento de cadenas para dimensiones y particiones
   Puede volver a configurar el almacenamiento de cadenas para dar cabida a cadenas muy grandes en los atributos de dimensión o en las particiones que superan el límite de tamaño de archivo de 4 GB para los almacenes de cadenas. Si las dimensiones o las particiones incluyen almacenes de cadenas de este tamaño, puede evitar la restricción del tamaño del archivo si cambia la propiedad **StringStoresCompatibilityLevel** en el nivel de la dimensión o de la partición, tanto en objetos locales como vinculados (locales o remotos).  
   
  Tenga en cuenta que puede aumentar el almacenamiento de cadenas de aquellos objetos que requieren una capacidad adicional. En la mayoría de los modelos multidimensionales, los datos de cadena se asocian con dimensiones. Sin embargo, las particiones que contengan medidas de recuento distintivas encima de las cadenas también pueden beneficiarse de esta configuración. Dado que la configuración es para las cadenas, los datos numéricos no se ven afectados.  
@@ -60,7 +65,7 @@ caps.handback.revision: 21
   
  Las dimensiones y particiones deben usar el almacenamiento MOLAP.  
   
- El nivel de compatibilidad de la base de datos debe estar establecido en 1100. Si creó o implementó una base de datos mediante [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] y la versión [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o una versión superior de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], el nivel de compatibilidad de la base de datos ya está establecido en 1100. Si ha movido una base de datos creada en una versión anterior de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a ssSQL11, debe actualizar el nivel de compatibilidad. Para las bases de datos que desee mover, pero no implementar de nuevo, puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para establecer el nivel de compatibilidad. Para más información, vea [Nivel de compatibilidad de una base de datos multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
+ El nivel de compatibilidad de la base de datos debe estar establecido en 1100. Si creó o implementó una base de datos mediante [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] y la versión [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o una versión superior de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], el nivel de compatibilidad de la base de datos ya está establecido en 1100. Si ha movido una base de datos creada en una versión anterior de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a ssSQL11, debe actualizar el nivel de compatibilidad. Para las bases de datos que desee mover, pero no implementar de nuevo, puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para establecer el nivel de compatibilidad. Para obtener más información, vea [Nivel de compatibilidad de una base de datos multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
 ##  <a name="bkmk_step1"></a> Paso 1: establezca la propiedad StringStoreCompatiblityLevel en las Herramientas de datos de SQL Server  
   
@@ -87,10 +92,10 @@ caps.handback.revision: 21
   
  Debe utilizar la opción Proceso completo con cada objeto que utiliza la nueva arquitectura de almacenamiento de cadenas. Antes de procesar el objeto, asegúrese de ejecutar un análisis de impacto en la dimensión para comprobar si también es necesario reprocesar los objetos dependientes.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Herramientas y enfoques de procesamiento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
  [Opciones y valores de procesamiento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [Procesamiento y modos de almacenamiento de particiones](../Topic/Partition%20Storage%20Modes%20and%20Processing.md)   
- [Almacenamiento de dimensiones](../Topic/Dimension%20Storage.md)  
+ [Procesamiento y modos de almacenamiento de particiones](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
+ [Almacenamiento de dimensiones](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   

@@ -1,22 +1,27 @@
 ---
-title: "Columnas de datos de los eventos de procesamiento de consultas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Columnas de datos de eventos de procesamiento de consultas | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 81a522bd-440d-406c-a524-3af44a3af101
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fafade22e12b14c1e11aab4a44ce65433d2a158
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Columnas de datos de los eventos de procesamiento de consultas
+# <a name="query-processing-events-data-columns"></a>Columnas de datos de los eventos de procesamiento de consultas
   La categoría de eventos Eventos de procesamiento de consultas tiene las siguientes clases de eventos:  
   
 |**Identificador del evento**|**Nombre del evento**|**Descripción del evento**|  
@@ -46,7 +51,7 @@ caps.handback.revision: 6
   
  En las siguientes tablas se muestran las columnas de datos de cada una de estas clases de eventos.  
   
-## Query Cube Begin  
+## <a name="query-cube-begin"></a>Query Cube Begin  
   
 |||||  
 |-|-|-|-|  
@@ -68,7 +73,7 @@ caps.handback.revision: 6
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Query Cube End  
+## <a name="query-cube-end"></a>Query Cube End  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -89,7 +94,7 @@ caps.handback.revision: 6
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Calculate Non Empty Begin  
+## <a name="calculate-non-empty-begin"></a>Calculate Non Empty Begin  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -110,7 +115,7 @@ caps.handback.revision: 6
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Calculate Non Empty Current  
+## <a name="calculate-non-empty-current"></a>Calculate Non Empty Current  
   
 |||||  
 |-|-|-|-|  
@@ -133,7 +138,7 @@ caps.handback.revision: 6
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Calculate Non Empty End  
+## <a name="calculate-non-empty-end"></a>Calculate Non Empty End  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -154,7 +159,7 @@ caps.handback.revision: 6
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Serialize Results Begin  
+## <a name="serialize-results-begin"></a>Serialize Results Begin  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -175,7 +180,7 @@ caps.handback.revision: 6
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Serialize Results Current  
+## <a name="serialize-results-current"></a>Serialize Results Current  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -197,7 +202,7 @@ caps.handback.revision: 6
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Serialize Results End  
+## <a name="serialize-results-end"></a>Serialize Results End  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -218,12 +223,12 @@ caps.handback.revision: 6
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Execute MDX Script Begin  
+## <a name="execute-mdx-script-begin"></a>Execute MDX Script Begin  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|EventClass se usa para clasificar los eventos.|  
-|EventSubclass|1|1|EventSubclass proporciona información adicional sobre cada clase de eventos.<br /><br /> 1: MDX Script<br /><br /> 2: MDX Script Command|  
+|EventSubclass|1|1|Event Subclass proporciona información adicional sobre cada clase de evento:<br /><br /> 1: MDX Script<br /><br /> 2: MDX Script Command|  
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
@@ -240,7 +245,7 @@ caps.handback.revision: 6
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Execute MDX Script Current  
+## <a name="execute-mdx-script-current"></a>Execute MDX Script Current  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -261,12 +266,12 @@ caps.handback.revision: 6
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Execute MDX Script End  
+## <a name="execute-mdx-script-end"></a>Execute MDX Script End  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|EventClass se usa para clasificar los eventos.|  
-|EventSubclass|1|1|EventSubclass proporciona información adicional sobre cada clase de eventos.<br /><br /> 1: MDX Script<br /><br /> 2: MDX Script Command|  
+|EventSubclass|1|1|Event Subclass proporciona información adicional sobre cada clase de evento:<br /><br /> 1: MDX Script<br /><br /> 2: MDX Script Command|  
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
@@ -283,7 +288,7 @@ caps.handback.revision: 6
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Query Dimension  
+## <a name="query-dimension"></a>Query Dimension  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -305,7 +310,7 @@ caps.handback.revision: 6
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Query Subcube  
+## <a name="query-subcube"></a>Query Subcube  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -325,12 +330,12 @@ caps.handback.revision: 6
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Query Subcube Verbose  
+## <a name="query-subcube-verbose"></a>Query Subcube Verbose  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|EventClass se usa para clasificar los eventos.|  
-|EventSubclass|1|1|EventSubclass proporciona información adicional sobre cada clase de eventos.<br /><br /> 21: Cache data<br /><br /> 22: Non-cache data<br /><br /> 23: Internal data<br /><br /> 24: SQL data|  
+|EventSubclass|1|1|Event Subclass proporciona información adicional sobre cada clase de evento:<br /><br /> 21: Cache data<br /><br /> 22: Non-cache data<br /><br /> 23: Internal data<br /><br /> 24: SQL data|  
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
@@ -345,7 +350,7 @@ caps.handback.revision: 6
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Get Data From Aggregation  
+## <a name="get-data-from-aggregation"></a>Get Data From Aggregation  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -364,7 +369,7 @@ caps.handback.revision: 6
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Get Data From Cache  
+## <a name="get-data-from-cache"></a>Get Data From Cache  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -384,12 +389,12 @@ caps.handback.revision: 6
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## VertiPaq SE Query Begin  
+## <a name="vertipaq-se-query-begin"></a>VertiPaq SE Query Begin  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|EventClass se usa para clasificar los eventos.|  
-|EventSubclass|1|1|EventSubclass proporciona información adicional sobre cada clase de eventos.<br /><br /> 0: VertiPaq Scan<br /><br /> 1: Tabular Query<br /><br /> 2: User Hierarchy Processing Query<br /><br /> 10: VertiPaq Scan internal<br /><br /> 11: Tabular Query internal<br /><br /> 12: User Hierarchy Processing Query internal|  
+|EventSubclass|1|1|Event Subclass proporciona información adicional sobre cada clase de evento:<br /><br /> 0: VertiPaq Scan<br /><br /> 1: Tabular Query<br /><br /> 2: User Hierarchy Processing Query<br /><br /> 10: VertiPaq Scan internal<br /><br /> 11: Tabular Query internal<br /><br /> 12: User Hierarchy Processing Query internal|  
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |JobID|7|1|Identificador del trabajo para el progreso.|  
@@ -409,7 +414,7 @@ caps.handback.revision: 6
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## VertiPaq SE Query End  
+## <a name="vertipaq-se-query-end"></a>VertiPaq SE Query End  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -442,7 +447,7 @@ caps.handback.revision: 6
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Resource Usage  
+## <a name="resource-usage"></a>Resource Usage  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -460,12 +465,12 @@ caps.handback.revision: 6
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## VertiPaq SE Query Cache Match  
+## <a name="vertipaq-se-query-cache-match"></a>VertiPaq SE Query Cache Match  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|EventClass se usa para clasificar los eventos.|  
-|EventSubclass|1|1|EventSubclass proporciona información adicional sobre cada clase de eventos.<br /><br /> 0: VertiPaq Cache exact match|  
+|EventSubclass|1|1|Event Subclass proporciona información adicional sobre cada clase de evento:<br /><br /> 0: VertiPaq Cache exact match|  
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |JobID|7|1|Identificador del trabajo para el progreso.|  
 |SessionType|8|8|Tipo de la sesión (qué entidad desencadenó la operación).|  
@@ -484,7 +489,7 @@ caps.handback.revision: 6
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Direct Query Begin  
+## <a name="direct-query-begin"></a>Direct Query Begin  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -512,7 +517,7 @@ caps.handback.revision: 6
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Direct Query End  
+## <a name="direct-query-end"></a>Direct Query End  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -540,7 +545,7 @@ caps.handback.revision: 6
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Procesamiento de consultas (categoría de eventos)](../../analysis-services/trace-events/query-processing-events-category.md)  
   
   

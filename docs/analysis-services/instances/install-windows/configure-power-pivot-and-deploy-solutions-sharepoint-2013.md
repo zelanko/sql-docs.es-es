@@ -1,23 +1,28 @@
 ---
-title: "Configuraci&#243;n de PowerPivot e implementaci&#243;n de soluciones (SharePoint 2013) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "power-view"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Configuración de PowerPivot e implementar soluciones (SharePoint 2013) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- power-view
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 901098e2a656d178932b9b706b70d559bef4f215
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Configuraci&#243;n de PowerPivot e implementaci&#243;n de soluciones (SharePoint 2013)
-  En estos temas se explica cómo configurar e implementar mejoras de nivel intermedio efectuadas en las características de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] en [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)], incluidas la galería [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)], la programación de actualización de datos, el panel de administración y los proveedores de datos. Ejecute la herramienta **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2013** para hacer lo siguiente:  
+# <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Configuración de PowerPivot e implementación de soluciones (SharePoint 2013)
+  En estos temas se explica cómo configurar e implementar mejoras de nivel intermedio efectuadas en las características de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] en [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] , incluidas la galería [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , la programación de actualización de datos, el panel de administración y los proveedores de datos. Ejecute la herramienta **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2013** para hacer lo siguiente:  
   
 -   Implementar archivos de solución de SharePoint.  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 14
   
     5.  Haga clic en **Crear colección de sitios** en la ventana izquierda. Anote la **Dirección URL del sitio** para pueda consultarla en pasos posteriores. Si el servidor de SharePoint no está configurado todavía, el asistente para la configuración usa como valor predeterminado la aplicación web y las direcciones URL de las colecciones de sitios hasta la raíz de `http://[ServerName]`. Para modificar los valores predeterminados, examine las páginas siguientes en la ventana izquierda: **Crear aplicación web predeterminada** e **Implementar solución de aplicación web**  
   
-5.  Opcionalmente, revise los valores restantes de entrada utilizados para completar cada acción. Haga clic en cada acción de la ventana izquierda para ver y examinar los detalles de la acción. Para obtener más información sobre cada uno, vea la sección "Valores de entrada utilizados para configurar el servidor" en [Configurar o reparar PowerPivot para SharePoint 2010 (Herramienta de configuración de PowerPivot)](http://msdn.microsoft.com/es-es/d61f49c5-efaa-4455-98f2-8c293fa50046) en este tema.  
+5.  Opcionalmente, revise los valores restantes de entrada utilizados para completar cada acción. Haga clic en cada acción de la ventana izquierda para ver y examinar los detalles de la acción. Para obtener más información sobre cada una, vea la sección "Valores de entrada utilizados para configurar el servidor" en [Configurar o reparar PowerPivot para SharePoint 2010 (Herramienta de configuración de PowerPivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046) en este tema.  
   
 6.  Si lo desea, quite cualquier acción que no desee procesar en este momento. Por ejemplo, si desea configurar el Servicio de almacenamiento seguro más adelante, haga clic en **Configurar el servicio de almacenamiento seguro**y, a continuación, desactive la casilla **Incluir esta acción en la lista de tareas**.  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 14
   
 8.  Haga clic en **Ejecutar** para procesar todas las acciones de la lista de tareas. Tenga en cuenta que **Ejecutar** estará disponible cuando valide las acciones. Si **Ejecutar** no está habilitado, haga clic en **Validar** primero.  
   
- Para obtener más información, vea [Configurar o reparar Power Pivot para SharePoint 2010 (Herramienta de configuración de Power Pivot)](http://msdn.microsoft.com/es-es/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ Para obtener más información, vea [Configurar o reparar Power Pivot para SharePoint 2010 (Herramienta de configuración de Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
 ##  <a name="bkmk_verify_powerpivot"></a> Comprobación de la configuración de Power Pivot  
  **Servicios:**  
@@ -92,13 +97,13 @@ caps.handback.revision: 14
   
 1.  En Administración central, en Configuración del sistema, haga clic en **Administrar características de la granja**.  
   
-2.  Compruebe que la **Característica de integración de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** esté **Activa**.  
+2.  Compruebe que la **Característica de integración de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** está **Activa**.  
   
  **Característica de colección de sitios:**  
   
 1.  Vaya a la dirección URL del sitio creada por la herramienta de configuración.  
   
-     Haga clic en **Configuración**![Configuración de SharePoint](../../../analysis-services/media/as-sharepoint2013-settings-gear.png "Configuración de SharePoint") y después en **Configuración del sitio**.  
+     Haga clic en **configuración**![configuración de SharePoint](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "configuración de SharePoint")y, a continuación, haga clic en **configuración del sitio**.  
   
      Haga clic en **Características de la colección de sitios**.  
   
@@ -129,9 +134,9 @@ caps.handback.revision: 14
   
     -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Uso de datos de carga de  
   
-    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Uso de consultas de  
+    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Uso de consultas  
   
-    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Uso de datos de descarga de  
+    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Uso de datos de descarga  
   
 4.  Compruebe que **Habilitar la recolección de datos de mantenimiento** esté activada.  
   

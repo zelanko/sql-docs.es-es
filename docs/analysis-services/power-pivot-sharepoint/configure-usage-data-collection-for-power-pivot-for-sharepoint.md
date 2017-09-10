@@ -1,27 +1,32 @@
 ---
-title: "Configurar la recolecci&#243;n de datos de uso para Power Pivot para SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Configurar la recopilación de datos de uso para (PowerPivot para SharePoint | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 98ec79c14a0ac082c75967a9c81fa7b2027f5511
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Configurar la recolecci&#243;n de datos de uso para Power Pivot para SharePoint
+# <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Configurar la recolección de datos de uso para Power Pivot para SharePoint
   La recopilación de datos de uso es una característica propia de SharePoint para las granjas. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint usa y extiende este sistema para proporcionar informes en el panel de administración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que muestran cómo se usan los datos y servicios de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Según cómo haya instalado SharePoint, la recopilación de datos de uso podría estar desactivada para la granja. El administrador de una granja debe habilitar el registro de uso para crear los datos de uso que aparecen en el panel de administración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
- Para obtener información sobre los datos de uso en el Panel de administración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], vea [Panel de administración de Power Pivot y datos de uso](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
+ Para obtener información sobre los datos de uso en el Panel de administración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , vea [Panel de administración de Power Pivot y datos de uso](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
  **En este tema:**  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 9
   
 6.  Haga clic en **Aceptar** para guardar los cambios.  
   
-7.  Opcionalmente, puede especificar si se registran todos los mensajes o solo los errores. Para obtener más información sobre cómo limitar los mensajes de eventos, vea [Configurar y ver archivos de registro de SharePoint y el registro de diagnósticos &#40;Power Pivot para SharePoint&#41;](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md).  
+7.  Opcionalmente, puede especificar si se registran todos los mensajes o solo los errores. Para obtener más información sobre cómo limitar los mensajes de eventos, vea [Configurar y ver archivos de registro de SharePoint y el registro de diagnósticos &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
 ##  <a name="configdb"></a> Establecer la ubicación de los archivos de registro  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se almacenan inicialmente en archivos de registro de uso en el servidor local y, después, se mueven periódicamente a las bases de datos de aplicación de servicio de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . La ubicación de los archivos de registro se establece en Administración central. La ubicación predeterminada es:  
@@ -89,7 +94,7 @@ caps.handback.revision: 9
   
 -   El trabajo de temporizador "Importación de datos de uso de Microsoft SharePoint Foundation" mueve los datos de uso de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a la base de datos de aplicación de servicio de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
--   El "Trabajo de temporizador de procesamiento del panel de administración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]" mueve los datos a un libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que es el origen de datos para los informes administrativos integrados.  
+-   El "Trabajo de temporizador de procesamiento del panel de administración de[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] " mueve los datos a un libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que es el origen de datos para los informes administrativos integrados.  
   
  Si necesita actualizar los informes administrativos que aparecen con más frecuencia en el panel de administración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , siga estos pasos.  
   
@@ -137,7 +142,7 @@ caps.handback.revision: 9
   
 1.  [Abra la página Aplicación de servicio Power Pivot](#openconfig).  
   
-2.  En la sección **Recolección de datos de uso**, en **Límite superior de respuesta trivial**, especifique un valor (en milisegundos) que establezca el límite superior para completar una respuesta trivial. Algunas solicitudes que no entran en esta categoría normalmente son, entre otras, los pings de servidor, la iniciación de las sesiones y las consulta de metadatos. El valor predeterminado es 500 milisegundos (o medio segundo).  
+2.  En la sección **Recolección de datos de uso** , en **Límite superior de respuesta trivial** , especifique un valor (en milisegundos) que establezca el límite superior para completar una respuesta trivial. Algunas solicitudes que no entran en esta categoría normalmente son, entre otras, los pings de servidor, la iniciación de las sesiones y las consulta de metadatos. El valor predeterminado es 500 milisegundos (o medio segundo).  
   
 3.  Como límite superior de las solicitudes rápidas, especifique un valor (en milisegundos) que establezca el límite superior para completar una respuesta rápida. Las solicitudes que entran en esta categoría son, entre otras, las consultas de conjuntos de datos muy pequeños o servidores de metadatos de conjuntos de datos grandes. El valor predeterminado es 1000 milisegundos (o un segundo).  
   
@@ -154,7 +159,7 @@ caps.handback.revision: 9
   
 1.  [Abra la página Aplicación de servicio Power Pivot](#openconfig).  
   
-2.  En la sección **Recolección de datos de uso**, en **Intervalo de informes de consulta**, escriba el número de segundos que hay que esperar antes de que el servidor notifique las estadísticas de consulta para todas las categorías (trivial, rápida, esperada, de ejecución prolongada y superada) como un único evento al sistema de recopilación de datos de uso.  
+2.  En la sección **Recolección de datos de uso** , en **Intervalo de informes de consulta**, escriba el número de segundos que hay que esperar antes de que el servidor notifique las estadísticas de consulta para todas las categorías (trivial, rápida, esperada, de ejecución prolongada y superada) como un único evento al sistema de recopilación de datos de uso.  
   
     -   El intervalo abarca de 1 a cualquier número entero positivo.  
   
@@ -182,15 +187,15 @@ caps.handback.revision: 9
   
 |Configuración|Valor predeterminado|Tipo|Intervalo válido|  
 |-------------|-------------------|----------|-----------------|  
-|**Eventos de uso de Analysis Services** (Conexión, Carga, Descarga, Solicitudes)|\<habilitado>|Boolean|Estos valores están habilitados o deshabilitados.|  
-|**Intervalo de informes de consulta**|300 (en segundos)|Integer|De 1 a cualquier entero positivo. El valor predeterminado es 5 minutos.|  
-|**Historial de datos de uso**|365 (en días)|Integer|0 especifica ilimitado, pero también puede establecer un límite superior para que los datos históricos expiren y que se eliminen automáticamente. Los valores válidos para un período de retención limitado abarcan de 1 a 5000 (en días).|  
+|**Eventos de uso de Analysis Services** (Conexión, Carga, Descarga, Solicitudes)|\<habilitado >|Boolean|Estos valores están habilitados o deshabilitados.|  
+|**Query Reporting interval**|300 (en segundos)|Integer|De 1 a cualquier entero positivo. El valor predeterminado es 5 minutos.|  
+|**Usage data history**|365 (en días)|Integer|0 especifica ilimitado, pero también puede establecer un límite superior para que los datos históricos expiren y que se eliminen automáticamente. Los valores válidos para un período de retención limitado abarcan de 1 a 5000 (en días).|  
 |Límite superior de respuesta trivial|500 (en milisegundos)|Integer|Establece un límite superior que define un intercambio de solicitudes y respuestas trivial. Cualquier solicitud que se complete entre 0 y 500 milisegundos es una solicitud trivial y se omite a los efectos del informe de errores.|  
 |Límite superior de respuesta rápida|1000 (en milisegundos)|Integer|Establece un límite superior que define un intercambio de solicitudes y respuestas rápido.|  
 |Límite superior de respuesta esperada|3000 (en milisegundos)|Integer|Establece un límite superior que define un intercambio de solicitudes y respuestas esperado.|  
 |Límite superior de respuesta larga|10000 (en milisegundos)|Integer|Establece un límite superior que define un intercambio de solicitudes y respuestas de ejecución prolongada. Cualquier solicitud que supere este límite entra dentro de la categoría Superada, que no tiene ningún umbral superior.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia de las opciones de configuración &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Recopilación de datos de uso de Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   

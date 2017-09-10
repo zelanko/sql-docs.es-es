@@ -1,27 +1,32 @@
 ---
-title: "Agregar una acci&#243;n est&#225;ndar | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Agregar una acción estándar | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 7
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8f084616a0dd548fe9ee939f5e770b1f69f125f1
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Agregar una acci&#243;n est&#225;ndar
+# <a name="add-a-standard-action"></a>Agregar una acción estándar
   Para agregar una acción a una base de datos, use la vista de acciones del Diseñador de cubos. Se puede tener acceso a esta vista desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Una vez creada la acción, estará disponible para los usuarios después de volver a procesar el cubo correspondiente. Para más información, consulte [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   
-### Para crear una acción  
+### <a name="to-create-an-action"></a>Para crear una acción  
   
 1.  Abra el cubo para el que desea crear una acción y, a continuación, haga clic en la pestaña **Acciones** .  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 7
   
     -   En **Nombre**, escriba un nombre para la acción.  
   
-    -   En la lista desplegable **Tipo de destino**, seleccione el tipo de objeto al que quiere adjuntar la acción. El objeto seleccionado en **Tipo de destino** determina los objetos disponibles y el tipo de selección que puede hacer en **Objeto de destino**. En la tabla siguiente se enumeran las selecciones válidas de **Objeto de destino** para cada tipo de destino.  
+    -   En la lista desplegable **Tipo de destino** , seleccione el tipo de objeto al que quiere adjuntar la acción. El objeto seleccionado en **Tipo de destino** determina los objetos disponibles y el tipo de selección que puede hacer en **Objeto de destino**. En la tabla siguiente se enumeran las selecciones válidas de **Objeto de destino** para cada tipo de destino.  
   
         |Si selecciona el tipo de destino siguiente|Realice la selección siguiente en Objeto de destino|  
         |---------------------------------------------|---------------------------------------------------|  
@@ -46,7 +51,7 @@ caps.handback.revision: 7
   
     -   (Opcional) En **Condición**, cree una expresión MDX para limitar el destino de la acción. Puede escribir la expresión manualmente, o puede arrastrar elementos desde las pestañas **Metadatos** y **Funciones** .  
   
-    -   En la lista desplegable **Tipo**, seleccione el tipo de acción que quiere crear. En la tabla siguiente se enumeran los tipos de acciones disponibles.  
+    -   En la lista desplegable **Tipo** , seleccione el tipo de acción que quiere crear. En la tabla siguiente se enumeran los tipos de acciones disponibles.  
   
         |Tipo|Description|  
         |----------|-----------------|  
@@ -79,6 +84,6 @@ caps.handback.revision: 7
   
     -   En **Título**, escriba un título o una expresión MDX que se evalúe como un título. Este título se muestra a los usuarios finales una vez iniciada la acción. Si no especifica un título, se usará el nombre de la acción en su lugar.  
   
-    -   En la lista desplegable **El título es MDX**, especifique si el título es MDX. Este campo indica al servidor si debe evaluar el contenido de **Título** como una expresión MDX.  
+    -   En la lista desplegable **El título es MDX** , especifique si el título es MDX. Este campo indica al servidor si debe evaluar el contenido de **Título** como una expresión MDX.  
   
   

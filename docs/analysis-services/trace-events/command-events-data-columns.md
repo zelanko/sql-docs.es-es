@@ -1,24 +1,29 @@
 ---
-title: "Columnas de datos de eventos de comandos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "eventos de comandos (categoría de eventos)"
+title: Columnas de datos de eventos de comandos | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Command Events event category
 ms.assetid: 7169f1e2-c6be-4d8c-b147-25719b84bc2c
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 39022629aeda9951a01e79ebf45ec099bd5d7205
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Columnas de datos de eventos de comandos
+# <a name="command-events-data-columns"></a>Columnas de datos de eventos de comandos
   En la tabla siguiente se enumeran las columnas de datos para cada clase de eventos de la categoría de eventos **Eventos de comandos** .  
   
  La categoría de eventos **Eventos de comandos** tiene las siguientes clase de eventos:  
@@ -71,7 +76,7 @@ caps.handback.revision: 36
 |NTDomainName|Contiene la cuenta de dominio de Windows asociada al evento de comando.|  
 |ClientProcessID|Contiene el Id. de proceso cliente único asociado al evento de comando.|  
   
-## Vea también  
- [Eventos de comandos (categoría de eventos)](../../analysis-services/trace-events/command-events-event-category.md)  
+## <a name="see-also"></a>Vea también  
+ [Command Events Event Category](../../analysis-services/trace-events/command-events-event-category.md)  
   
   

@@ -19,7 +19,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 7947edbc9068cad20b534afdfe154da8d54898d2
 ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="new-and-recently-updated-master-data-services-for-sql-server"></a>Nuevos y actualizados recientemente: Master Data Services para SQL Server

@@ -1,27 +1,32 @@
 ---
-title: "Herramientas y enfoques de procesamiento (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "proceso [Analysis Services]"
-  - "procesar [Analysis Services]"
+title: Herramientas y enfoques de procesamiento (Analysis Services) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- process [Analysis Services]
+- processing [Analysis Services]
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5eecf424cf155c53a2f636590ba002028f24db84
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Herramientas y enfoques de procesamiento (Analysis Services)
+# <a name="tools-and-approaches-for-processing-analysis-services"></a>Herramientas y enfoques de procesamiento (Analysis Services)
   El procesamiento es una operación en la que Analysis Services consulta un origen de datos relacional y rellena objetos de Analysis Services utilizando esos datos.  
   
  Como administrador del sistema de Analysis Services, puede ejecutar y supervisar el procesamiento de objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizando estos enfoques:  
@@ -49,7 +54,7 @@ caps.handback.revision: 34
 > [!NOTE]  
 >  En este tema se describen las herramientas y los enfoques para procesar modelos multidimensionales. Para más información sobre el procesamiento de modelos tabulares, vea [Procesar base de datos, tabla o partición &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) y [Procesar datos &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
-### Procesar objetos en SQL Server Management Studio  
+### <a name="processing-objects-in-sql-server-management-studio"></a>Procesar objetos en SQL Server Management Studio  
   
 1.  Inicie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y conéctese a Analysis Services.  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 34
   
      El cuadro de diálogo Progreso del proceso proporciona el estado actual de cada comando. Si un mensaje de estado aparece truncado, puede hacer clic en **Ver detalles** para leer la totalidad del mismo.  
   
-### Procesar objetos en Herramientas de datos de SQL Server  
+### <a name="processing-objects-in-sql-server-data-tools"></a>Procesar objetos en Herramientas de datos de SQL Server  
   
 1.  Inicie [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y abra un proyecto que se haya implementado.  
   
@@ -97,11 +102,11 @@ caps.handback.revision: 34
   
 1.  Antes de procesar un objeto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], puede analizar el efecto sobre los objetos relacionados haciendo clic en **Análisis de impacto** en uno de los cuadros de diálogo **Procesar objetos** .  
   
-2.  Haga clic con el botón derecho en una dimensión, cubo, grupo de medida o partición para abrir un cuadro de diálogo **Procesar objetos**.  
+2.  Haga clic con el botón derecho en una dimensión, cubo, grupo de medida o partición para abrir un cuadro de diálogo **Procesar objetos** .  
   
 3.  Haga clic en **Análisis de impacto** [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] examina el modelo e informa de los requisitos de nuevo procesamiento de los objetos relacionados con el objeto seleccionado para procesar.  
   
-### Procesar objetos utilizando XMLA  
+### <a name="processing-objects-using-xmla"></a>Procesar objetos utilizando XMLA  
   
 1.  Inicie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y conéctese a Analysis Services.  
   
@@ -119,7 +124,7 @@ caps.handback.revision: 34
   
 7.  En la barra de menús, haga clic en **Consulta**y, a continuación, en **Ejecutar**.  
   
-### Procesar objetos utilizando PowerShell  
+### <a name="processing-objects-using-powershell"></a>Procesar objetos utilizando PowerShell  
   
 1.  A partir de esta versión de SQL Server, puede utilizar los cmdlets de Analysis Services PowerShell para procesar objetos. Los cmdlets siguientes pueden ejecutarse de forma interactiva o en un script:  
   
@@ -129,9 +134,9 @@ caps.handback.revision: 34
   
     -   [Cmdlet Invoke-ProcessPartition](../../analysis-services/powershell/invoke-processpartition-cmdlet.md)  
   
-    -   El [cmdlet Invoke-ASCmd](../../analysis-services/powershell/invoke-ascmd-cmdlet.md), que se puede usar para ejecutar un script XMLA, MDX o DMX que incluya comandos de procesamiento.  
+    -   El[cmdlet Invoke-ASCmd](../../analysis-services/powershell/invoke-ascmd-cmdlet.md), que se puede usar para ejecutar un script XMLA, MDX o DMX que incluya comandos de procesamiento.  
   
-### Supervisar el procesamiento de objetos mediante SQL Server Profiler  
+### <a name="monitoring-object-processing-using-sql-server-profiler"></a>Supervisar el procesamiento de objetos mediante SQL Server Profiler  
   
 1.  Conéctese a una instancia de Analysis Services en SQL Server Profiler.  
   
@@ -149,7 +154,7 @@ caps.handback.revision: 34
   
     -   Opcionalmente, agregue eventos de bloqueo si está diagnosticando problemas de rendimiento relacionados con el procesamiento  
   
-### Procesar objetos de Analysis Services mediante Integration Services  
+### <a name="process-analysis-services-objects-using-integration-services"></a>Procesar objetos de Analysis Services mediante Integration Services  
   
 1.  En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], cree un paquete que use la tarea Procesamiento de Analysis Services para rellenar automáticamente objetos con datos nuevos cuando realice actualizaciones periódicas de la base de datos relacional de origen.  
   
@@ -157,7 +162,7 @@ caps.handback.revision: 34
   
 3.  Edite la tarea para especificar una conexión con la base de datos, qué objetos se van a procesar y la opción de proceso. Para obtener más información acerca de cómo implementar esta tarea, vea [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Procesar un modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

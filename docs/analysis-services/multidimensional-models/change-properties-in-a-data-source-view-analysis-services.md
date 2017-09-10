@@ -1,31 +1,36 @@
 ---
-title: "Cambiar las propiedades de una vista del origen de datos (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "nombres descriptivos [Analysis Services]"
-  - "nombres [Analysis Services], vistas del origen de datos"
-  - "ver tablas"
-  - "tablas, mostrar"
-  - "vistas del origen de datos [Analysis Services], tablas"
-  - "tablas [Analysis Services], vistas del origen de datos"
+title: Cambiar las propiedades de una vista del origen de datos (Analysis Services) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- friendly names [Analysis Services]
+- names [Analysis Services], data source views
+- viewing tables
+- displaying tables
+- data source views [Analysis Services], tables
+- tables [Analysis Services], data source views
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d2d7af5e8fa2adb597380aded86778e57135ae0
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cambiar las propiedades de una vista del origen de datos (Analysis Services)
+# <a name="change-properties-in-a-data-source-view-analysis-services"></a>Cambiar las propiedades de una vista del origen de datos (Analysis Services)
   Una vez que haya definido una vista del origen de datos mediante el Asistente para vistas del origen de datos y le haya agregado tablas, vistas, cálculos con nombre y consultas con nombre, podría interesarle cambiar las propiedades relativas a:  
   
 -   Criterios de coincidencia de vistas del origen de datos  
@@ -38,7 +43,7 @@ caps.handback.revision: 34
   
  También puede ver los metadatos de objetos recuperados del origen de datos y que no se pueden modificar.  
   
-## Ver o cambiar las propiedades de las vistas del origen de datos  
+## <a name="viewing-or-changing-data-source-view-properties"></a>Ver o cambiar las propiedades de las vistas del origen de datos  
  Las propiedades de las vistas del origen de datos, excepto una descripción de la vista del origen de datos, son establecidas por el Asistente para vistas del origen de datos la primera vez que se define la vista del origen de datos. En la siguiente tabla se muestran y describen las propiedades de una vista del origen de datos.  
   
 > [!NOTE]  
@@ -53,7 +58,7 @@ caps.handback.revision: 34
 |RetrieveRelationships|Especifica si se recuperan relaciones de la base de datos. El valor predeterminado es True.|  
 |SchemaRestriction|Especifica las restricciones, si las hay, de los esquemas recuperados de un origen de datos. De manera predeterminada, no hay restricciones de esquema.|  
   
-## Ver o cambiar las propiedades DataTable  
+## <a name="viewing-or-changing-datatable-properties"></a>Ver o cambiar las propiedades DataTable  
  Las propiedades**DataTable** son las propiedades de tablas, vistas y consultas con nombre de una vista del origen de datos. Estas propiedades se establecen cuando se agrega cualquiera de estos objetos a la vista del origen de datos. En la siguiente tabla se muestran y describen las propiedades de los objetos **DataTable** de una vista del origen de datos.  
   
 |Propiedad|Description|  
@@ -67,7 +72,7 @@ caps.handback.revision: 34
 |Esquema|Especifica el esquema de la base de datos aplicable a la tabla, vista o consulta con nombre. Esta propiedad no se puede editar.|  
 |TableType|Especifica el tipo de tabla de la tabla, vista o consulta con nombre. Esta propiedad no se puede editar.|  
   
-## Ver o cambiar las propiedades DataColumn  
+## <a name="viewing-or-changing-datacolumn-properties"></a>Ver o cambiar las propiedades DataColumn  
  Las propiedades**DataColumn** son las propiedades de las columnas de las tablas, vistas y consultas con nombre de una vista del origen de datos. Estas propiedades se establecen cuando se agrega cualquiera de estos objetos a la vista del origen de datos, ya sea desde la tabla o vista subyacente, desde una consulta con nombre o tal como las define un cálculo con nombre. En la siguiente tabla se muestran y describen las propiedades de los objetos **DataColumn** de una vista del origen de datos.  
   
 |Propiedad|Description|  
@@ -80,7 +85,7 @@ caps.handback.revision: 34
 |Longitud|Especifica la longitud máxima de la columna, en función de los datos de la columna de la tabla o vista subyacente.|  
 |Nombre|Especifica el nombre de la columna subyacente, o el nombre del cálculo con nombre. La propiedad **Name** la usan los objetos de minería de datos y OLAP al definir atributos basados en cálculos con nombre. Esta propiedad solo se puede editar para los cálculos con nombre.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Vistas del origen de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Trabajar con diagramas en el Diseñador de vistas del origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   

@@ -1,27 +1,32 @@
 ---
-title: "Contexto de c&#225;lculo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Contexto de cálculo | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aec8aa98-b77d-4f8f-9684-2618b1d8e970
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6101305123e48bf5194313c852f2a24e45e5847a
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Contexto de c&#225;lculo
+# <a name="calculation-context"></a>Contexto de cálculo
   El contexto de cálculo es el subespacio conocido del cubo donde se evalúa una expresión y todas las coordenadas se conocen explícitamente o se pueden derivar de la expresión.  
   
-## Determinar el contexto del cálculo  
+## <a name="determining-the-calculation-context"></a>Determinar el contexto del cálculo  
  Cada conjunto, miembro, tupla o función numérica se ejecuta en el contexto de toda la expresión o instrucción MDX. Cuando se pasa un argumento, como una tupla, a una función, solo se proporcionan explícitamente algunas coordenadas del espacio de cubo. Las otras coordenadas se obtienen según el contexto de cálculo actual.  
   
  El contexto de cálculo de las coordenadas de celda y los miembros de atributo que no se han especificado se determina en el siguiente orden:  
@@ -70,9 +75,9 @@ WHERE (Customer.Country.France,
 > [!IMPORTANT]  
 >  Para aumentar el rendimiento de la consulta, debe eliminar los miembros y las tuplas lo más pronto posible en el proceso de resolución. De esta manera, los cálculos de tiempo de consulta complejos en el conjunto final de miembros operan en la menor cantidad de celdas posible.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Establecer el contexto de cubo en una consulta &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
- [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [Aspectos básicos de consulta MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [Conceptos clave de MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
   

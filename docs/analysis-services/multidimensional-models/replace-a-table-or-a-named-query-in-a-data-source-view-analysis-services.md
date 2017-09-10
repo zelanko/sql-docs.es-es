@@ -1,30 +1,35 @@
 ---
-title: "Reemplazar una tabla o una consulta con nombre en una vista del origen de datos (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "reemplazar tablas"
-  - "vistas del origen de datos [Analysis Services], tablas"
-  - "consultas con nombre [Analysis Services], reemplazar tablas"
-  - "tablas [Analysis Services], vistas del origen de datos"
-  - "particiones [Analysis Services], consultas con nombre"
+title: Reemplazar una tabla o una consulta con nombre en una vista del origen de datos (Analysis Services) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- replacing tables
+- data source views [Analysis Services], tables
+- named queries [Analysis Services], replacing tables
+- tables [Analysis Services], data source views
+- partitions [Analysis Services], named queries
 ms.assetid: 60c2a018-1299-4915-b60e-e73316524def
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 33
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6913e8639e482442c1af4da942ddae8a4089c877
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Reemplazar una tabla o una consulta con nombre en una vista del origen de datos (Analysis Services)
+# <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>Reemplazar una tabla o una consulta con nombre en una vista del origen de datos (Analysis Services)
   En el Diseñador de vistas del origen de datos, puede reemplazar una tabla, una vista o una consulta con nombre de una vista del origen de datos (DSV) por una vista o tabla diferente del mismo origen de datos o de otro, o por una consulta con nombre definida en la DSV. Cuando se reemplaza una tabla, los demás objetos de la base de datos o proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contienen referencias a dicha tabla continúan haciendo referencia a ella, ya que el identificador de objeto de la tabla no cambia en la DSV. Se conservan todas las relaciones que siguen siendo pertinentes (basadas en la coincidencia de nombre y tipo de columna). Por el contrario, si elimina y luego agrega una tabla, las referencias y relaciones se pierden y se tienen que volver a crear.  
   
  Para reemplazar una tabla por otra tabla, debe tener una conexión activa a los datos de origen en el Diseñador de vistas del origen de datos en el modo de proyecto.  
@@ -40,23 +45,23 @@ caps.handback.revision: 33
   
 2.  En el Explorador de soluciones, expanda la carpeta **Vistas del origen de datos** y, después, haga doble clic en la vista del origen de datos.  
   
-3.  Abra el cuadro de diálogo **Crear consulta con nombre** . En el panel **Tablas** o **Diagrama**, haga clic con el botón derecho en la tabla que quiere reemplazar, seleccione **Reemplazar tabla** y, después, haga clic en **Con nueva consulta con nombre**.  
+3.  Abra el cuadro de diálogo **Crear consulta con nombre** . En el panel **Tablas** o **Diagrama** , haga clic con el botón derecho en la tabla que quiere reemplazar, seleccione **Reemplazar tabla** y, después, haga clic en **Con nueva consulta con nombre**.  
   
 4.  En el cuadro de diálogo **Crear consulta con nombre** , defina la consulta con nombre y, a continuación, haga clic en **Aceptar**.  
   
 5.  Guarde la vista del origen de datos modificada.  
   
-## Reemplazar una tabla o una consulta con nombre por una tabla  
+## <a name="replace-a-table-or-named-query-with-a-table"></a>Reemplazar una tabla o una consulta con nombre por una tabla  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el proyecto o conéctese a la base de datos que contiene la vista del origen de datos en la que desea reemplazar una tabla o una consulta con nombre.  
   
 2.  En el Explorador de soluciones, expanda la carpeta **Vistas del origen de datos** y, después, haga doble clic en la vista del origen de datos.  
   
-3.  Abra el cuadro de diálogo **Reemplazar tabla por otra tabla** . En el panel **Tablas** o **Diagrama**, haga clic con el botón derecho en la tabla o la consulta con nombre que quiere reemplazar, seleccione **Reemplazar tabla** y, después, haga clic en **Con otra tabla**.  
+3.  Abra el cuadro de diálogo **Reemplazar tabla por otra tabla** . En el panel **Tablas** o **Diagrama** , haga clic con el botón derecho en la tabla o la consulta con nombre que quiere reemplazar, seleccione **Reemplazar tabla** y, después, haga clic en **Con otra tabla**.  
   
 4.  En el cuadro de diálogo **Reemplazar tabla por otra tabla** :  
   
-    1.  En la lista desplegable **Origen de datos**, seleccione el origen de datos que quiera.  
+    1.  En la lista desplegable **Origen de datos** , seleccione el origen de datos que quiera.  
   
     2.  Seleccione la tabla por la que desea reemplazar la tabla o consulta con nombre.  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 33
   
 6.  Guarde la vista del origen de datos modificada.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Vistas del origen de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

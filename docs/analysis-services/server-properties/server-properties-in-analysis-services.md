@@ -1,31 +1,36 @@
 ---
-title: "Configurar las propiedades de servidor en Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SSAS, propiedades de configuración"
-  - "Analysis Services, propiedades de configuración"
-  - "SQL Server Analysis Services, propiedades de configuración"
-  - "configuración, opciones [Analysis Services]"
-  - "servidor, propiedades [Analysis Services]"
-  - "propiedades [Analysis Services], configuración"
-  - "propiedades [Analysis Services]"
+title: Propiedades del servidor de Analysis Services | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SSAS, configuration properties
+- Analysis Services, configuration properties
+- SQL Server Analysis Services, configuration properties
+- configuration options [Analysis Services]
+- server properties [Analysis Services]
+- properties [Analysis Services], configuration
+- properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4157f63f72acd5da6dd369034d1633e7461c9b87
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Configurar las propiedades de servidor en Analysis Services
-  Un administrador de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] puede modificar las propiedades de configuración predeterminadas del servidor de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Cada instancia tiene sus propias propiedades de configuración, que se establecen independientemente de las demás instancias en el mismo servidor.  
+# <a name="server-properties-in-analysis-services"></a>Configurar las propiedades de servidor en Analysis Services
+  Un administrador de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] puede modificar las propiedades de configuración predeterminadas del servidor de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Cada instancia tiene sus propias propiedades de configuración, que se establecen independientemente de las demás instancias en el mismo servidor.  
   
  Para configurar el servidor, use SQL Server Management Studio o modifique el archivo msmdsrv.ini de una instancia específica.  
  
@@ -34,7 +39,7 @@ Las páginas de propiedades de SQL Server Management Studio muestran un subconju
 > [!NOTE]  
 >  En una instalación predeterminada, msmdsrv.ini se encuentra en la carpeta \Archivos de programa\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP \Config.
 > 
-> Otras propiedades que afectan a la configuración del servidor incluyen las propiedades de configuración de implementación de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para más información sobre estas propiedades, vea [Especificar la configuración para la implementación de soluciones](../../analysis-services/multidimensional-models/specifying-configuration-settings-for-solution-deployment.md).
+> Otras propiedades que afectan a la configuración del servidor incluyen las propiedades de configuración de implementación de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para más información sobre estas propiedades, vea [Especificar la configuración para la implementación de soluciones](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).
  
 ##  <a name="bkmk_config"></a> Configurar propiedades en Management Studio 
   
@@ -67,7 +72,7 @@ Las páginas de propiedades de SQL Server Management Studio muestran un subconju
   
 ##  <a name="bkmk_ref"></a> Referencia de las propiedades de servidor  
   
- En los siguientes temas se explican las diversas propiedades de configuración de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
+ En los siguientes temas se explican las diversas propiedades de configuración de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
   
 |Tema|Description|  
 |-----------|-----------------|  
@@ -85,8 +90,8 @@ Las páginas de propiedades de SQL Server Management Studio muestran un subconju
 |[Propiedades de seguridad](../../analysis-services/server-properties/security-properties.md)|La sección de seguridad contiene propiedades básicas y avanzadas que definen permisos de acceso. Esto incluye valores de configuración relacionados con administradores y usuarios.|  
 |[Propiedades de grupos de subprocesos](../../analysis-services/server-properties/thread-pool-properties.md)|Las propiedades de grupo de subprocesos controlan cuántos subprocesos crea el servidor. Se trata fundamentalmente de propiedades avanzadas.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Administración de una instancia de Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
- [Especificar la configuración para la implementación de soluciones](../../analysis-services/multidimensional-models/specifying-configuration-settings-for-solution-deployment.md)  
+ [Especificar la configuración para la implementación de soluciones](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

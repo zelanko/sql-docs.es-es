@@ -1,26 +1,31 @@
 ---
-title: "Traducciones en modelos tabulares (Analysis Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Traducciones en modelos tabulares (Analysis Services) | Documentos de Microsoft
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e67f88f5-9f0c-4f19-ab09-558c56ca9335
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 28ff4ea7472597ae86b426ec0a15de399f56d14f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Traducciones en modelos tabulares (Analysis Services)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] agrega compatibilidad de cadenas de traducción en los modelos tabulares creados en el nivel de compatibilidad 1200. Un único objeto del modelo puede tener varias traducciones de un nombre o una descripción, lo que hace posible admitir varios idiomas dentro de la definición del modelo.  
+# <a name="translations-in-tabular-models-analysis-services"></a>Traducciones en modelos tabulares (Analysis Services)
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Agrega compatibilidad con la cadena de traducción para los modelos tabulares. Un único objeto del modelo puede tener varias traducciones de un nombre o una descripción, lo que hace posible admitir varios idiomas dentro de la definición del modelo.  
   
- Las cadenas traducidas solo son para los metadatos de objeto (nombres y descripciones de tablas y columnas) que aparecen en una herramienta de cliente, como una lista de tabla dinámica de Excel.  Para utilizar cadenas traducidas, la conexión de cliente especifica la referencia cultural. En la característica **Análisis en Excel**, puede seleccionar el idioma de una lista desplegable. En otras herramientas, es posible que tenga que especificar la referencia cultural en la cadena de conexión.  
+ Las cadenas traducidas solo son para los metadatos de objeto (nombres y descripciones de tablas y columnas) que aparecen en una herramienta de cliente, como una lista de tabla dinámica de Excel.  Para utilizar cadenas traducidas, la conexión de cliente especifica la referencia cultural. En la característica **Análisis en Excel** , puede seleccionar el idioma de una lista desplegable. En otras herramientas, es posible que tenga que especificar la referencia cultural en la cadena de conexión.  
   
  Esta característica no se ha diseñado para cargar datos traducidos en un modelo. Si desea cargar valores de datos traducidos, debe desarrollar una estrategia de procesamiento que incluya la extracción de cadenas traducidas a partir de un origen de datos que las proporcione.  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 13
   
 -   Conexión al modelo mediante una aplicación cliente que permita un LCID en la cadena de conexión  
   
-## Creación de un archivo de traducción vacío  
+## <a name="create-an-empty-translation-file"></a>Creación de un archivo de traducción vacío  
  Use [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para agregar traducciones.  
   
 1.  Haga clic en **Modelo** > **Traducciones** > **Administrar traducciones**.  
@@ -49,9 +54,9 @@ caps.handback.revision: 13
   
 4.  Haga clic en **Export Language File**(Exportar archivo de idioma).  Proporcione el nombre y la ubicación del archivo.  
   
- ![ssas-tabular-translate-export](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas-tabular-translate-export")  
+ ![SSAS-tabular-traducir-export](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas-tabular-traducir-export")  
   
-## Adición de traducciones  
+## <a name="add-translations"></a>Adición de traducciones  
  Un archivo de traducción JSON vacío incluye los metadatos de las traducciones de un idioma específico. Marcadores de posición de traducción para nombres de objeto y descripciones se especifican en la sección **Culture** , que se encuentra al final de la definición del modelo. Se pueden agregar traducciones para los siguientes elementos:  
   
 |||  
@@ -65,12 +70,12 @@ caps.handback.revision: 13
   
  En el ejemplo siguiente se muestran los títulos y la descripción traducidos de las tablas **DimProduct** y **DimCustomer** .  
   
- ![ssas-tabular-translate-json](../../analysis-services/tabular-models/media/ssas-tabular-translate-json.png "ssas-tabular-translate-json")  
+ ![SSAS-tabular-traducir-json](../../analysis-services/tabular-models/media/ssas-tabular-translate-json.png "ssas-tabular-traducir-json")  
   
 > [!TIP]  
 >  Puede usar cualquier editor JSON para abrir el archivo, pero se recomienda usar el editor de JSON en Visual Studio para que también puede utilizar el comando Ver código del Explorador de soluciones con el fin de ver la definición de modelo tabular en SSDT. Para obtener el editor de JSON, necesita una [instalación de versión instalación completa de Visual Studio 2015](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx). La edición gratuita Community incluye el editor de JSON.  
   
-## Importación de un archivo de traducción  
+## <a name="import-a-translation-file"></a>Importación de un archivo de traducción  
  Las cadenas de traducción importadas pasarán a formar parte para siempre de la definición del modelo. Una vez que se importen las cadenas, ya no se volverá a hacer referencia el archivo de traducción.  
   
 1.  Haga clic en **Modelo** > **Traducciones** > **Importar traducciones**.  
@@ -83,7 +88,7 @@ caps.handback.revision: 13
     |-|-|  
     |Sobrescribir traducciones existentes|Reemplaza todos los títulos y descripciones existentes del mismo idioma que el archivo que se va a importar.|  
     |Ignore invalid objects (Omitir objetos no válidos)|Especifica si las discrepancias en los metadatos deben omitirse o marcarse como error.|  
-    |Write import results to a log file (Escribir los resultados de importación en un archivo de registro)|Los archivos de registro se guardan en la carpeta del proyecto de forma predeterminada. Cuando finaliza la importación, se proporciona la ruta de acceso exacta al archivo. El nombre del archivo de registro es SSDT_Translations_Log_\<marcaDeTiempo>.|  
+    |Write import results to a log file (Escribir los resultados de importación en un archivo de registro)|Los archivos de registro se guardan en la carpeta del proyecto de forma predeterminada. Cuando finaliza la importación, se proporciona la ruta de acceso exacta al archivo. El nombre de archivo de registro es SSDT_Translations_Log_\<timestamp >.|  
     |Back up translations to a JSON file before importing (Realizar copia de seguridad de las traducciones en un archivo JSON antes de importar)|Realiza una copia de seguridad de una traducción existente que coincida con la referencia cultural de las cadenas que se van a importar.  Si la referencia cultural que se va a importar no se encuentra en el modelo, la copia de seguridad estará vacía.<br /><br /> Si necesita restaurar este archivo más adelante, puede reemplazar el contenido de model.bim por este archivo JSON.|  
   
 4.  Haga clic en **Importar**.  
@@ -96,7 +101,7 @@ caps.handback.revision: 13
   
     -   Busque **Referencia cultural** o una cadena traducida específica para comprobar que las cadenas que espera ver están presentes en realidad.  
   
-## Conexión con un identificador de configuración regional  
+## <a name="connect-using-a-locale-identifier"></a>Conexión con un identificador de configuración regional  
  En esta sección se describe un método para validar que el modelo devuelva las cadenas correctas.  
   
 1.  En Excel, conéctese al modelo tabular. En este paso se da por hecho que se ha implementado el modelo. Si el modelo solo se encuentra en el área de trabajo, impleméntelo en una instancia de Analysis Services para completar la comprobación de validación.  
@@ -105,11 +110,11 @@ caps.handback.revision: 13
   
 2.  En el cuadro de diálogo de conexión de Excel, elija la referencia cultural de las traducciones de cadenas que hay en el modelo. Excel detecta las referencias culturales definidas en el modelo y rellena la lista desplegable según corresponda.  
   
-     ![ssas-tabular-translations-excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas-tabular-translations-excel")  
+     ![SSAS-tabular-traducciones-excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas-tabular-traducciones-excel")  
   
      Cuando se crea una tabla dinámica, debería ver los nombres de columna y tabla traducidos.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Nivel de compatibilidad para modelos tabulares de Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Escenarios de globalización para Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [Analizar en Excel &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  

@@ -1,25 +1,30 @@
 ---
-title: "Cambiar las propiedades de una estructura de miner&#237;a de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "estructuras de minería de datos [Analysis Services], propiedades"
+title: "Cambiar las propiedades de una estructura de minería de datos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], properties
 ms.assetid: 03b16897-2e36-42b8-9f7d-db1b9b898401
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 908bf89105dbcfc4c61a4018c92a8cee71237fb9
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Cambiar las propiedades de una estructura de miner&#237;a de datos
+# <a name="change-the-properties-of-a-mining-structure"></a>Cambiar las propiedades de una estructura de minería de datos
   Hay dos tipos de propiedades en una estructura de minería de datos que pueden modificarse:  
   
 -   Propiedades de la estructura de minería de datos que afectan a la estructura entera  
@@ -30,7 +35,7 @@ caps.handback.revision: 28
   
  Para más información sobre las propiedades de la estructura de minería, vea [Columnas de la estructura de minería de datos](../../analysis-services/data-mining/mining-structure-columns.md).  
   
-### Para cambiar las propiedades de una estructura de minería de datos  
+### <a name="to-change-the-properties-of-a-mining-structure"></a>Para cambiar las propiedades de una estructura de minería de datos  
   
 1.  En la pestaña **Estructura de minería de datos** del Diseñador de minería de datos, haga clic con el botón derecho en la estructura de minería de datos o en una columna de la estructura de minería de datos y, después, seleccione **Propiedades**.  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 28
   
      El nuevo valor tendrá efecto cuando se seleccione otro elemento diferente en el diseñador.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tareas y procedimientos de las estructuras de minería de datos](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

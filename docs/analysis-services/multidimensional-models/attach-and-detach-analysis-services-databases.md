@@ -1,38 +1,43 @@
 ---
-title: "Adjuntar y separar bases de datos de Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.ssmsimbi.AttachDatabase.f1"
-  - "sql13.asvs.ssms.attachdatabase.f1"
-  - "sql13.asvs.ssmsimbi.DetachDatabase.f1"
-  - "sql13.asvs.ssms.detachdatabase.f1"
-helpviewer_keywords: 
-  - "bases de datos [Analysis Services], conectar"
-  - "bases de datos [Analysis Services], desconectar"
+title: Adjuntar y separar bases de datos de Analysis Services | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.ssmsimbi.AttachDatabase.f1
+- sql13.asvs.ssms.attachdatabase.f1
+- sql13.asvs.ssmsimbi.DetachDatabase.f1
+- sql13.asvs.ssms.detachdatabase.f1
+helpviewer_keywords:
+- databases [Analysis Services], attach
+- databases [Analysis Services], detach
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f4c193def48b92245c1e2f2955262d3fb0850957
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Adjuntar y separar bases de datos de Analysis Services
+# <a name="attach-and-detach-analysis-services-databases"></a>Adjuntar y separar bases de datos de Analysis Services
   Con frecuencia se producen situaciones en las que un administrador de bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quiere dejar sin conexión una base de datos durante un tiempo para después volver a ponerla en línea en la misma instancia de servidor o en otra distinta. Estas situaciones suelen responder a necesidades empresariales, como mover la base de datos a otro disco para mejorar el rendimiento, disponer de más espacio para que la base de datos pueda crecer o actualizar un producto. Para estos y otros casos, los comandos **Attach** y **Detach** permiten al administrador de bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dejar sin conexión la base de datos y volver a ponerla en línea con el mínimo esfuerzo.  
   
-## Los comandos Attach y Detach  
+## <a name="attach-and-detach-commands"></a>Los comandos Attach y Detach  
  El comando **Attach** le permite poner en línea una base de datos que se dejó sin conexión. Puede adjuntar la base de datos a la instancia del servidor original o a otra instancia. Al adjuntar una base de datos, es posible especificar el valor de la propiedad **ReadWriteMode** de la base de datos. El comando **Detach** le permite dejar sin conexión una base de datos del servidor.  
   
-## Uso de Attach y Detach  
+## <a name="attach-and-detach-usage"></a>Uso de Attach y Detach  
  El comando **Attach** se utiliza para poner en línea una estructura de base de datos existente. Si la base de datos se adjunta en el modo **ReadWrite** , solo puede adjuntarse una vez a una instancia de servidor. Sin embargo, si la base de datos se adjunta en el modo **ReadOnly** , puede adjuntarse varias veces a distintas instancias de servidor. No obstante, la misma base de datos no puede adjuntarse más de una vez a la misma instancia de servidor. Se produce un error cuando se intenta adjuntar la misma base de datos más de una vez, incluso si los datos se han copiado en carpetas distintas.  
   
 > [!IMPORTANT]  
@@ -52,16 +57,16 @@ caps.handback.revision: 24
  Los comandos **Attach** y **Detach** se deben ejecutar como operaciones únicas. No se pueden combinar con otras operaciones en la misma transacción. Por otra parte, los comandos **Attach** y **Detach** son comandos transaccionales atómicos. Esto significa que la operación se realizará correctamente o producirá un error. No se dejará ninguna base de datos en un estado incompleto.  
   
 > [!IMPORTANT]  
->  Se necesitan privilegios de administrador de bases de datos o de servidores para ejecutar el comando **Detach**.  
+>  Se necesitan privilegios de administrador de bases de datos o de servidores para ejecutar el comando **Detach** .  
   
 > [!IMPORTANT]  
->  Se necesitan privilegios de administrador de servidores para ejecutar el comando **Attach**.  
+>  Se necesitan privilegios de administrador de servidores para ejecutar el comando **Attach** .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Mover una base de datos de Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
- [Modos de la propiedad de base de datos ReadWriteMode](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
- [Cambiar entre los modos ReadOnly y ReadWrite en una base de datos de Analysis Services](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
+ [ReadWriteModes de base de datos](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
+ [Cambiar una base de datos de Analysis Services entre los modos ReadOnly y ReadWrite](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
  [Elemento Detach](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
  [Elemento Attach](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
   

@@ -1,24 +1,29 @@
 ---
-title: "Columnas de datos de Informes de progreso | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "informes de progreso, categoría de eventos"
+title: Columnas de datos de informes de progreso | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Progress Reports event category
 ms.assetid: d34a6322-e26b-4454-b98f-32307d6956b5
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 18f95a363c72cde1e067bb930d44c65254631ce2
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Columnas de datos de Informes de progreso
+# <a name="progress-reports-data-columns"></a>Columnas de datos de Informes de progreso
   La categoría de eventos Informes de progreso tiene las siguientes clases de eventos:  
   
 |**Identificador del evento**|**Nombre del evento**|**Descripción del evento**|  
@@ -30,7 +35,7 @@ caps.handback.revision: 34
   
  En las siguientes tablas se muestran las columnas de datos de cada una de estas clases de eventos.  
   
-## Columnas de datos de Progress Report Begin  
+## <a name="progress-report-begindata-columns"></a>Columnas de datos de Progress Report Begin  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -55,7 +60,7 @@ caps.handback.revision: 34
 |TextData|42|9|Contiene los datos de texto asociados al evento incluido en el informe.|  
 |ServerName|43|8|Contiene el nombre de la instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la que ha tenido lugar el evento incluido en el informe.|  
   
-## Columnas de datos de Progress Report End  
+## <a name="progress-report-enddata-columns"></a>Columnas de datos de Progress Report End  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -88,7 +93,7 @@ caps.handback.revision: 34
 |TextData|42|9|Contiene los datos de texto asociados al evento incluido en el informe.|  
 |ServerName|43|8|Contiene el nombre de la instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la que ha tenido lugar el evento incluido en el informe.|  
   
-## Columnas de datos de Progress Report Current  
+## <a name="progress-report-currentdata-columns"></a>Columnas de datos de Progress Report Current  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -112,7 +117,7 @@ caps.handback.revision: 34
 |TextData|42|9|Contiene los datos de texto asociados al evento incluido en el informe.|  
 |ServerName|43|8|Contiene el nombre de la instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la que ha tenido lugar el evento incluido en el informe.|  
   
-## Columnas de datos de Progress Report Error  
+## <a name="progress-report-errordata-columns"></a>Columnas de datos de Progress Report Error  
   
 |**Nombre de la columna**|**Identificador de la columna**|**Tipo de columna**|**Descripción de la columna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -140,7 +145,7 @@ caps.handback.revision: 34
 |TextData|42|9|Contiene los datos de texto asociados al evento incluido en el informe.|  
 |ServerName|43|8|Contiene el nombre de la instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la que ha tenido lugar el evento incluido en el informe.|  
   
-## Vea también  
- [Informes de progreso (categoría de eventos)](../../analysis-services/trace-events/progress-reports-event-category.md)  
+## <a name="see-also"></a>Vea también  
+ [Progress Reports Event Category](../../analysis-services/trace-events/progress-reports-event-category.md)  
   
   

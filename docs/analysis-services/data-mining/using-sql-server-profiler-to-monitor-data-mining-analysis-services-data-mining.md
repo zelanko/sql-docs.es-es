@@ -1,32 +1,37 @@
 ---
-title: "Usar SQL Server Profiler para supervisar la miner&#237;a de datos (Analysis Services - Miner&#237;a de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Profiler [SQL Server Profiler], Analysis Services"
+title: "Usar SQL Server Profiler para supervisar la minería de datos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 655ac93c-5c5c-4565-914b-915327f7d349
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 96b5485ebddba8823f262ba6a2229018d82a72fd
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Usar SQL Server Profiler para supervisar la miner&#237;a de datos (Analysis Services - Miner&#237;a de datos)
+# <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>Usar SQL Server Profiler para supervisar la minería de datos (Analysis Services - Minería de datos)
   Si dispone de los permisos necesarios, puede utilizar SQL Server Profiler para supervisar las actividades de minería de datos que se emiten como solicitudes que se envían a una instancia de SQL Server Analysis Services. La actividad de minería de datos puede incluir el procesamiento de modelos o estructuras, consultas de predicción o consultas de contenido, o la creación de nuevos modelos o estructuras.  
   
  SQL Server Profiler usa un **seguimiento** para supervisar las solicitudes enviadas desde varios clientes, como [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], SQL Server Management Studio, servicios web o los Complementos de minería de datos para Excel, siempre que todas las actividades usen la misma instancia de SQL Server Analysis Services. Debe crear un seguimiento independiente para cada instancia de SQL Server Analysis Services que desee supervisar. Para obtener información general sobre los seguimientos y cómo usar SQL Server Profiler, vea [Usar SQL Server Profiler para supervisar Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
   
  Para obtener instrucciones específicas sobre los tipos de eventos que se capturan, vea [Crear seguimientos del generador de perfiles para su reproducción &#40;Analysis Services&#41;](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md).  
   
-## Usar seguimientos para supervisar la minería de datos  
+## <a name="using-traces-to-monitor-data-mining"></a>Usar seguimientos para supervisar la minería de datos  
  Al capturar información en un seguimiento, puede especificar si se guarda en un archivo o en una tabla en una instancia de SQL Server. Independientemente del método que use para almacenar los datos, puede utilizar SQL Server Profiler para ver el seguimiento y filtrar por eventos. En la tabla siguiente se muestran algunos eventos y subclases del seguimiento predeterminado de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que tienen interés para la minería de datos.  
   
 |EventClass|EventSubclass|Description|  
@@ -41,7 +46,7 @@ caps.handback.revision: 15
   
  Al ver las instrucciones de comandos en el registro de seguimiento, también puede ver la sintaxis de las instrucciones complejas que el cliente envía al servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , incluidas las llamadas a los procedimientos almacenados del sistema. Esta información puede ser útil para depurar o puede utilizar las instrucciones válidas como plantilla para crear consultas de predicción o modelos nuevos. Para consultar algunos ejemplos sobre las llamadas a procedimientos almacenados que se pueden capturar con un seguimiento, vea [Ejemplos de consultas de modelos de agrupación en clústeres](../../analysis-services/data-mining/clustering-model-query-examples.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Supervisar una instancia de Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
  [Supervisar Analysis Services con SQL Server Extended Events](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   

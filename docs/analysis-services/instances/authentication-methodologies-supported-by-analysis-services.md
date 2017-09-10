@@ -1,24 +1,29 @@
 ---
-title: "Metodolog&#237;as de autenticaci&#243;n admitidas por Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Metodologías de autenticación admitidas por Analysis Services | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3d7e13fb81b3c59d348f9ccb8e4933683cf96f0b
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Metodolog&#237;as de autenticaci&#243;n admitidas por Analysis Services
+# <a name="authentication-methodologies-supported-by-analysis-services"></a>Metodologías de autenticación admitidas por Analysis Services
   Las conexiones desde una aplicación cliente a una instancia de Analysis Services requieren la autenticación de Windows (integrada). Puede proporcionar una identidad de usuario de Windows mediante cualquiera de los métodos siguientes:  
   
 -   NTLM  
@@ -71,17 +76,17 @@ caps.handback.revision: 8
   
  Para la autenticación Anónima, puede establecer la identidad de usuario anónima en una cuenta de usuario de Windows concreta (IUSR_GUEST de forma predeterminada) o en una identidad de grupo de aplicaciones. La cuenta de usuario anónima se usará en la conexión de Analysis Services y debe tener permisos de acceso a datos en la instancia de Analysis Services. Si utiliza este método, en la conexión solo se utiliza la identidad de usuario asociada a la cuenta anónima. Si su aplicación precisa de una administración de identidades adicional, deberá elegir uno de los otros métodos, o bien complementar la aplicación con una solución de administración de identidades propia.  
   
- Básica y Anónima solo están disponibles al configurar Analysis Services para acceso HTTP con el uso de IIS y msmdpump.dll para establecer la conexión. Para obtener más información, vea [Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md).  
+ Básica y Anónima solo están disponibles al configurar Analysis Services para acceso HTTP con el uso de IIS y msmdpump.dll para establecer la conexión. Para obtener más información, vea [Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
- **Credenciales almacenadas**  
+ **Stored Credentials**  
   
  La mayoría de servicios de aplicación de nivel intermedio incluyen la funcionalidad para almacenar un nombre de usuario y una contraseña que posteriormente se usarán para recuperar datos de un almacén de datos de nivel inferior, como Analysis Services o el motor relacional de SQL Server. En sí, las credenciales almacenadas ofrecen una quinta alternativa para recuperar datos. Entre las limitaciones inherentes a este método se incluye la sobrecarga de mantenimiento asociada con la actualización de los nombres de usuario y las contraseñas, y el uso de una sola identidad en la conexión. Si su solución precisa de la identidad del autor de la llamada original, las credenciales almacenadas no serían una alternativa viable.  
   
  Para obtener más información sobre las credenciales almacenadas, vea [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) y [Usar Servicios de Excel con el Servicio de almacenamiento seguro en SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkID=309869).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Usar la suplantación con seguridad de transporte](http://go.microsoft.com/fwlink/?LinkId=311727)   
- [Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md)   
+ [Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Configurar Analysis Services para la delegación restringida de Kerberos](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   
  [Registro de SPN para una instancia de Analysis Services](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
  [Conectar a Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  

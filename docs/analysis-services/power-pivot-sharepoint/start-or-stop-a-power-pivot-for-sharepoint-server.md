@@ -1,24 +1,29 @@
 ---
-title: "Iniciar o detener un servidor de Power Pivot para SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Iniciar o detener un PowerPivot para SharePoint Server | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f512a256765bbba4b1f641fb9752bd09fae4696
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Iniciar o detener un servidor de Power Pivot para SharePoint
+# <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>Iniciar o detener un servidor de Power Pivot para SharePoint
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y una instancia de [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] operan conjuntamente en el mismo servidor de aplicaciones local para admitir el procesamiento de solicitudes y datos coordinado en una granja de servidores de SharePoint.  
   
  Este tema contiene las siguientes secciones:  
@@ -41,7 +46,7 @@ caps.handback.revision: 8
   
  No puede iniciar o detener simultáneamente todos los servicios físicos en la granja. Debe seleccionar cada servidor y, a continuación, iniciar o detener un servicio determinado.  
   
- No puede iniciar, pausar ni detener un Servicio de sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para una aplicación web específica, pero puede quitar un servicio de la lista de conexiones predeterminada para conseguir que no esté disponible. Para más información, vea [Conectar una aplicación de servicio PowerPivot a una aplicación web de SharePoint en Administración central de ](../../analysis-services/power-pivot-sharepoint/connect power pivot service app to sharepoint web app in ca.md).  
+ No puede iniciar, pausar ni detener un Servicio de sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para una aplicación web específica, pero puede quitar un servicio de la lista de conexiones predeterminada para conseguir que no esté disponible. Para más información, vea [Conectar una aplicación de servicio PowerPivot a una aplicación web de SharePoint en Administración central de](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md).  
   
 1.  En Administración central, en **Configuración del sistema**, haga clic en **Administrar los servicios del servidor**.  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 8
 |Nuevas solicitudes de consultas o actualización de datos|Si va a detener el único servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint de la granja, las nuevas solicitudes de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no se controlarán y, en caso de que se produzca una solicitud de datos, se generará un error que indica que estos no se encuentran.<br /><br /> Si tiene más servidores de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, la solicitud irá a uno de los servidores disponibles.|  
 |Datos de uso|No se recopilarán datos de uso mientras se detienen los servicios.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Configurar las cuentas de servicio Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)  
   
   

@@ -1,22 +1,27 @@
 ---
-title: "Procesamiento de consultas (categor&#237;a de eventos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Categoría de eventos de procesamiento de consultas | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: a94b3198-be85-4935-845d-1cd4e121fc94
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3e583b0b0a6985ec4c91090b9009df6924c25c75
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Procesamiento de consultas (categor&#237;a de eventos)
+# <a name="query-processing-events-category"></a>Procesamiento de consultas (categoría de eventos)
   La categoría de eventos Procesamiento de consultas contiene las clases de eventos que se describen en la siguiente tabla.  
   
 |**Clase de eventos**|**Identificador del evento**|**Description**|  
@@ -42,7 +47,7 @@ caps.handback.revision: 6
   
  Para obtener más información acerca de las columnas asociadas a cada una de las clases de evento de Procesamiento de consultas, vea [Query Processing Events Data Columns](../../analysis-services/trace-events/query-processing-events-data-columns.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Eventos de seguimiento de Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

@@ -1,35 +1,40 @@
 ---
-title: "Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.ssmsimbi.Restore.f1"
-  - "sql13.asvs.ssmsimbi.Backup.f1"
-helpviewer_keywords: 
-  - "copia de seguridad de bases de datos [Analysis Services]"
-  - "cifrado [Analysis Services]"
-  - "bases de datos [Analysis Services], restaurar"
-  - "criptografía [Analysis Services]"
-  - "bases de datos [Analysis Services], copia de seguridad"
-  - "restaurar bases de datos [Analysis Services]"
-  - "recuperación [Analysis Services]"
+title: "Copia de seguridad y restauración de bases de datos de Analysis Services | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.ssmsimbi.Restore.f1
+- sql13.asvs.ssmsimbi.Backup.f1
+helpviewer_keywords:
+- backing up databases [Analysis Services]
+- encryption [Analysis Services]
+- databases [Analysis Services], restoring
+- cryptography [Analysis Services]
+- databases [Analysis Services], backing up
+- restoring databases [Analysis Services]
+- recovery [Analysis Services]
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 caps.latest.revision: 54
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 54
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 917761cf40eca3847cd304ec4e2aafb46fc06c5d
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services
+# <a name="backup-and-restore-of-analysis-services-databases"></a>Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluye copias de seguridad y restauración para poder recuperar una base de datos y sus objetos de un momento determinado. Copias de seguridad y restauración también es una técnica válida para migrar bases de datos a servidores actualizados, mover bases de datos entre servidores o implementar una base de datos en un servidor de producción. Para la recuperación de datos, si aún no tiene un plan de copias de seguridad y los datos son importantes, debe diseñar e implementar un plan lo antes posible.  
   
  Los comandos de copias de seguridad y restauración se realizan en una base de datos de Analysis Services implementada. Para los proyectos y soluciones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], debe usar el control de código fuente para asegurarse de que puede recuperar las versiones específicas de los archivos de origen y crear un plan de recuperación de datos del repositorio del sistema de control de código fuente utilizado.  
@@ -65,10 +70,10 @@ caps.handback.revision: 54
 -   Compruebe si hay archivos existentes que tengan el mismo nombre. Si ya existe un archivo con el mismo nombre, se producirá un error en la copia de seguridad a menos que especifique opciones para sobrescribir el archivo.  
   
 ##  <a name="bkmk_cube"></a> Copia de seguridad de una base de datos multidimensional o tabular  
- Los administradores pueden hacer copias de seguridad de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en un único archivo de copia de seguridad de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (.abf), independientemente del tamaño de la base de datos. Para obtener instrucciones paso a paso, vea en TechMantra [How to Backup an Analysis Services Database](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) (Cómo hacer una copia de seguridad de una base de datos de Analysis Services) y [Automate Backup an Analysis Services Database](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html) (Automatizar la copia de seguridad de una base de datos de Analysis Services).  
+ Los administradores pueden hacer copias de seguridad de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en un único archivo de copia de seguridad de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (.abf), independientemente del tamaño de la base de datos. Para obtener instrucciones paso a paso, vea en TechMantra [How to Backup an Analysis Services Database](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) (Cómo hacer una copia de seguridad de una base de datos de Analysis Services) y [Automate Backup an Analysis Services Database](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)(Automatizar la copia de seguridad de una base de datos de Analysis Services).  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], que se usa para cargar y consultar modelos de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en un entorno de SharePoint, carga sus modelos desde bases de datos de contenido de SharePoint. Estas bases de datos de contenido son relacionales y se ejecutan en el motor de base de datos relacional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por tanto, no hay ninguna estrategia de copia de seguridad y restauración de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para los modelos de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si dispone de un plan de recuperación ante desastres para contenido de SharePoint, ese plan abarca los modelos de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] almacenados en las bases de datos de contenido.  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], utilizado para cargar y consultar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modelos de datos en un entorno de SharePoint, carga sus modelos desde bases de datos de contenido de SharePoint. Estas bases de datos de contenido son relacionales y se ejecutan en el motor de base de datos relacional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por tanto, no hay ninguna estrategia de copia de seguridad y restauración de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para los modelos de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si dispone de un plan de recuperación ante desastres para contenido de SharePoint, ese plan abarca los modelos de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] almacenados en las bases de datos de contenido.  
   
  **Particiones remotas**  
   
@@ -76,7 +81,7 @@ caps.handback.revision: 54
   
  **Contenido de un archivo de copia de seguridad**  
   
- La copia de seguridad de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genera un archivo de copia de seguridad cuyo contenido varía según el modo de almacenamiento usado por los objetos de la base de datos. Esta diferencia en el contenido de la copia de seguridad se debe al hecho de que cada modo de almacenamiento guarda, en realidad, un conjunto diferente de información de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Por ejemplo, las particiones y dimensiones OLAP híbridas (HOLAP) multidimensionales almacenan agregaciones y metadatos de la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], en tanto que las particiones y dimensiones OLAP relacionales (ROLAP) solo almacenan metadatos de la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Debido a que el contenido real de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] varía de acuerdo al modo de almacenamiento de cada partición, también varían los contenidos del archivo de copia de seguridad. La siguiente tabla asocia los contenido del archivo de copia de seguridad con el modo de almacenamiento que utilizan los objetos.  
+ La copia de seguridad de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genera un archivo de copia de seguridad cuyo contenido varía según el modo de almacenamiento usado por los objetos de la base de datos. Esta diferencia en el contenido de la copia de seguridad se debe al hecho de que cada modo de almacenamiento guarda, en realidad, un conjunto diferente de información de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Por ejemplo, las particiones y dimensiones OLAP híbridas (HOLAP) multidimensionales almacenan agregaciones y metadatos de la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , en tanto que las particiones y dimensiones OLAP relacionales (ROLAP) solo almacenan metadatos de la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Debido a que el contenido real de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] varía de acuerdo al modo de almacenamiento de cada partición, también varían los contenidos del archivo de copia de seguridad. La siguiente tabla asocia los contenido del archivo de copia de seguridad con el modo de almacenamiento que utilizan los objetos.  
   
 |Modo de almacenamiento|Contenidos del archivo de copia de seguridad|  
 |------------------|-----------------------------|  
@@ -98,13 +103,13 @@ caps.handback.revision: 54
     > [!IMPORTANT]  
     >  Para cada archivo de copia de seguridad, el usuario que ejecuta el comando de copia de seguridad debe tener permiso para escribir en la ubicación de copia de seguridad especificada. Además, el usuario debe tener uno de los roles siguientes: miembro de un rol de servidor para la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o miembro de un rol de base de datos con permisos de Control total (Administrador) en la base de datos de la que se va a hacer una copia de seguridad.  
   
- Para obtener más información sobre la copia de seguridad de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Opciones de copia de seguridad](../../analysis-services/multidimensional-models/backup-options.md).  
+ Para obtener más información sobre la copia de seguridad de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vea [Opciones de copia de seguridad](../../analysis-services/multidimensional-models/backup-options.md).  
   
 ##  <a name="bkmk_restore"></a> Restaurar una base de datos de Analysis Services  
  Los administradores pueden restaurar una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a partir de uno o más archivos de copia de seguridad.  
   
 > [!NOTE]  
->  Si un archivo de copia de seguridad está cifrado, debe proporcionar la contraseña especificada durante la copia de seguridad antes de que pueda usar ese archivo para restaurar una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+>  Si un archivo de copia de seguridad está cifrado, debe proporcionar la contraseña especificada durante la copia de seguridad antes de que pueda usar ese archivo para restaurar una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  Durante la restauración, tiene las siguientes opciones:  
   
@@ -117,15 +122,15 @@ caps.handback.revision: 54
 -   Puede elegir si el comando de restauración cambia la carpeta de restauración de cada partición que se restaura. Las particiones locales se pueden restaurar en cualquier ubicación de carpeta que sea local para la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] donde se restaura la base de datos. Las particiones remotas se pueden restaurar en cualquier carpeta de cualquier servidor que no sea el servidor local; las particiones remotas no pueden convertirse en locales.  
   
     > [!IMPORTANT]  
-    >  Para cada archivo de copia de seguridad, el usuario que ejecuta el comando de restauración debe tener permiso para leer desde la ubicación de la copia de seguridad especificada. Para restaurar una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que no está instalada en el servidor, el usuario también debe ser miembro del rol de servidor para dicha instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para sobrescribir una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], el usuario debe tener uno de los roles siguientes: miembro del rol de servidor para la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o miembro de un rol de base de datos con permisos de Control total (Administrador) en la base de datos que se va a restaurar.  
+    >  Para cada archivo de copia de seguridad, el usuario que ejecuta el comando de restauración debe tener permiso para leer desde la ubicación de la copia de seguridad especificada. Para restaurar una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que no está instalada en el servidor, el usuario también debe ser miembro del rol de servidor para dicha instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para sobrescribir una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , el usuario debe tener uno de los roles siguientes: miembro del rol de servidor para la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o miembro de un rol de base de datos con permisos de Control total (Administrador) en la base de datos que se va a restaurar.  
   
     > [!NOTE]  
     >  Después de restaurar una base de datos existente, el usuario que restauró la base de datos podría perder el acceso a la base de datos restaurada. Esta pérdida de acceso puede producirse si, en el momento en que se realizó la copia de seguridad, el usuario no era miembro del rol de servidor o no era miembro de rol de base de datos con permisos de Control total (Administrador).  
   
- Para obtener más información sobre la restauración de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Opciones de restauración](../../analysis-services/multidimensional-models/restore-options.md).  
+ Para obtener más información sobre la restauración de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vea [Opciones de restauración](../../analysis-services/multidimensional-models/restore-options.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Restaurar, sincronizar y realizar copias de seguridad de bases de datos &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)  
+
   
   

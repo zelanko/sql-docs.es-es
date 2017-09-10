@@ -1,0 +1,170 @@
+---
+title: "Cláusula SELECT (Transact-SQL) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 08/09/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- SELECT Clause
+- SELECT_Clause_TSQL
+- DISTINCT_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- parentheses [SQL Server]
+- identity columns [SQL Server], SELECT clause
+- SELECT clause
+- $IDENTITY keyword
+- user-defined types [SQL Server], invoking methods and properties
+- SELECT statement [SQL Server], processing orders
+- clauses [SQL Server], SELECT
+- $ROWGUID keyword
+- queries [SQL Server], results
+ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
+caps.latest.revision: 54
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: e8b6972868c221ec0368b689164eff740ae6f1a7
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="select-clause-transact-sql"></a>SELECT (cláusula de Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+  Especifica las columnas que va a devolver la consulta.  
+  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Sintaxis  
+  
+```  
+  
+SELECT [ ALL | DISTINCT ]  
+[ TOP ( expression ) [ PERCENT ] [ WITH TIES ] ]   
+<select_list>   
+<select_list> ::=   
+    {   
+      *   
+      | { table_name | view_name | table_alias }.*   
+      | {  
+          [ { table_name | view_name | table_alias }. ]  
+               { column_name | $IDENTITY | $ROWGUID }   
+          | udt_column_name [ { . | :: } { { property_name | field_name }   
+            | method_name ( argument [ ,...n] ) } ]  
+          | expression  
+          [ [ AS ] column_alias ]   
+         }  
+      | column_alias = expression   
+    } [ ,...n ]   
+```  
+  
+## <a name="arguments"></a>Argumentos  
+ **ALL**  
+ Especifica que el conjunto de resultados puede incluir filas duplicadas. ALL es el valor predeterminado.  
+  
+ DISTINCT  
+ Especifica que el conjunto de resultados solo puede incluir filas únicas. Los valores NULL se consideran iguales desde el punto de vista de la palabra clave DISTINCT.  
+  
+ Parte superior (*expresión* ) [%] [WITH TIES]  
+ Indica que el conjunto de resultados de la consulta solamente devolverá un primer conjunto o porcentaje de filas especificado. *expression* puede ser un número o un porcentaje de las filas.  
+  
+ Por compatibilidad con versiones anteriores, utilizando la parte superior *expresión* sin paréntesis en, seleccione las instrucciones se admiten, pero no se recomienda. Para obtener más información, vea [TOP &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
+  
+\<select_list > las columnas que deben seleccionarse para el conjunto de resultados. La lista de selección es una serie de expresiones separadas por comas. El número máximo de expresiones que se puede especificar en la lista de selección es 4.096.  
+  
+ \*  
+ Especifica que se deben devolver todas las columnas de todas las tablas y vistas de la cláusula FROM. Las columnas se devuelven por tabla o vista, tal como se especifique en la cláusula FROM, en el orden en que se encuentran en la tabla o vista.  
+  
+ *table_name* | *view_name* | *tabla*_*alias*. *  
+ Limita el ámbito de la \* a la tabla o vista especificada.  
+  
+ *column_name*  
+ Es el nombre de una columna que se va a devolver. Calificar *column_name* para evitar que una referencia ambigua, como ocurre cuando dos tablas en la cláusula FROM tienen columnas con nombres duplicados. Por ejemplo, las tablas SalesOrderHeader y SalesOrderDetail en la [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de datos tanto tiene una columna denominada ModifiedDate. Si se combinan ambas tablas en una consulta, se puede especificar la fecha de modificación de las entradas SalesOrderDetail en la lista de selección como SalesOrderDetail.ModifiedDate.  
+  
+ *expression*  
+ Es una constante, una función o una combinación de nombres de columna, constantes y funciones conectados mediante un operador, varios operadores o una subconsulta.  
+  
+ $IDENTITY  
+ Devuelve la columna de identidad. Para obtener más información, vea [identidad &#40; Propiedad &#41; &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql-identity-property.md), [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md), y [crear una tabla &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md).  
+  
+ Si más de una tabla de la cláusula FROM contiene una columna con la propiedad IDENTITY, se debe calificar $IDENTITY con el nombre de tabla específico; por ejemplo, T1.$IDENTITY.  
+  
+ $ROWGUID  
+ Devuelve la columna GUID de fila.  
+  
+ Si más de una tabla de la cláusula FROM tiene la propiedad ROWGUIDCOL, se debe calificar $ROWGUID con el nombre de tabla específico; por ejemplo, T1.$ROWGUID.  
+  
+ *udt_column_name*  
+ Es el nombre de la columna que tiene un tipo CLR (Common Language Runtime) definido por el usuario que se va a devolver.  
+  
+> [!NOTE]  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] devuelve los valores de los tipos definidos por el usuario en representación binaria. Para devolver valores de tipo definido por el usuario en formato XML o de cadena, utilice [conversión](../../t-sql/functions/cast-and-convert-transact-sql.md) o [convertir](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+  
+ { . | :: }  
+ Especifica un método, una propiedad o un campo de un tipo definido por el usuario CLR. Use. para métodos, propiedades o campos de instancia (no estáticos). Use :: para métodos, propiedades o campos estáticos. Para invocar un método, propiedad o campo de un tipo definido por el usuario CLR, debe tener el permiso EXECUTE para el tipo.  
+  
+ *property_name*  
+ Es una propiedad pública de *udt_column_name*.  
+  
+ *Nombre_de_campo*  
+ Es un miembro de datos públicos de *udt_column_name*.  
+  
+ *NombreMétodo*  
+ Es un método público de *udt_column_name* que toma uno o más argumentos. *NombreMétodo* no puede ser un método mutador.  
+  
+ En el ejemplo siguiente se seleccionan los valores de la columna `Location`, definida como de tipo `point`, de la tabla `Cities`, mediante la invocación de un método del tipo denominado `Distance`:  
+  
+```  
+CREATE TABLE dbo.Cities (  
+     Name varchar(20),  
+     State varchar(20),  
+     Location point );  
+GO  
+DECLARE @p point (32, 23), @distance float;  
+GO  
+SELECT Location.Distance (@p)  
+FROM Cities;  
+```  
+  
+ *alias de column_*  
+ Es un nombre alternativo que se utiliza para reemplazar el nombre de la columna en el conjunto de resultados de la consulta. Por ejemplo, se puede especificar un alias como Quantity, Quantity to Date o Qty para una columna denominada quantity.  
+  
+ Los alias se emplean también para especificar nombres para los resultados de expresiones; por ejemplo:  
+  
+ `USE AdventureWorks2012`;  
+  
+ `GO`  
+  
+ `SELECT AVG(UnitPrice) AS [Average Price]`  
+  
+ `FROM Sales.SalesOrderDetail;`  
+  
+ *usar column_alias* puede utilizarse en una cláusula ORDER BY. Sin embargo, no puede utilizarse en una cláusula WHERE, GROUP BY o HAVING. Si la expresión de consulta forma parte de una instrucción DECLARE CURSOR, *column_alias* no se puede usar en la cláusula FOR UPDATE.  
+  
+## <a name="remarks"></a>Comentarios  
+ La longitud de los datos devueltos para **texto** o **ntext** las columnas que se incluyen en la lista de selección se establece en el valor menor de los siguientes valores: el tamaño real de la **texto** columna, la configuración de sesión predeterminada TEXTSIZE o el límite de la aplicación codificado de forma rígida. Para cambiar la longitud del texto devuelto de la sesión, utilice la instrucción SET. De forma predeterminada, la longitud máxima de los datos de texto que se devuelven con una instrucción SELECT es de 4.000 bytes.  
+  
+ El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] provoca la excepción 511 y revierte la instrucción que se está ejecutando en ese momento si se produce alguno de estos comportamientos:  
+  
+-   La instrucción SELECT produce una fila de resultados o una fila de la tabla de trabajo intermedia que supera los 8.060 bytes.  
+  
+-   La instrucción DELETE, INSERT o UPDATE intenta realizar una acción en una fila que supera los 8.060 bytes.  
+  
+ Se produce un error si no se proporciona un nombre a una columna creada con una instrucción SELECT INTO o CREATE VIEW.  
+  
+## <a name="see-also"></a>Vea también  
+ [Ejemplos SELECT &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
+ [Expresiones &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
+  
+  
+

@@ -1,30 +1,35 @@
 ---
-title: "Acciones (Analysis Services - Datos multidimensionales) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "acciones [Analysis Services]"
-  - "acciones [Analysis Services], acerca de las acciones"
-  - "MDX [Analysis Services], acciones"
-  - "cubos [Analysis Services], acciones"
-  - "Objetos OLAP [Analysis Services], acciones"
+title: Acciones (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- actions [Analysis Services]
+- actions [Analysis Services], about actions
+- MDX [Analysis Services], actions
+- cubes [Analysis Services], actions
+- OLAP objects [Analysis Services], actions
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a61563367d64f9122441991d125cf987f6ddc4d6
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Acciones (Analysis Services - Datos multidimensionales)
+# <a name="actions-analysis-services---multidimensional-data"></a>Acciones (Analysis Services - Datos multidimensionales)
   Las acciones pueden ser de tipos diferentes y se deben crear como corresponda. Las acciones pueden ser:  
   
 -   Acciones de obtención de detalles, que devuelven el conjunto de filas que representa los datos subyacentes de las celdas seleccionadas del cubo donde se produce la acción.  
@@ -41,7 +46,7 @@ caps.handback.revision: 34
   
  La condición es una expresión MDX de tipo **Boolean** que se evalúa en el evento de la acción. La acción se ejecuta si la condición se evalúa como **true**. En caso contrario, no se ejecuta la acción.  
   
- El tipo es el tipo de acción que se va a ejecutar. <xref:Microsoft.AnalysisServices.Action> es una clase abstracta y, por lo tanto, para usarla es necesario usar una de las clases derivadas. Existen dos tipos de acciones predefinidas: obtención de detalles y elaboración de informes. Estos tienen clases derivadas correspondientes: <xref:Microsoft.AnalysisServices.DrillThroughAction> y <xref:Microsoft.AnalysisServices.ReportAction>. Otras acciones se realizan con la clase <xref:Microsoft.AnalysisServices.StandardAction>.  
+ El tipo es el tipo de acción que se va a ejecutar. <xref:Microsoft.AnalysisServices.Action> es una clase abstracta y, por lo tanto, para usarla es necesario usar una de las clases derivadas. Existen dos tipos de acciones predefinidas: obtención de detalles y elaboración de informes. Estos tienen clases derivadas correspondientes: <xref:Microsoft.AnalysisServices.DrillThroughAction> y <xref:Microsoft.AnalysisServices.ReportAction>. Otras acciones se realizan con la clase <xref:Microsoft.AnalysisServices.StandardAction> .  
   
  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], una acción es una instrucción MDX almacenada que se puede presentar y emplear en aplicaciones cliente. En otras palabras, una acción es un comando cliente que se define y se almacena en el servidor. Una acción también contiene información que especifica cuándo y cómo debe la aplicación cliente mostrar y controlar la instrucción MDX. La operación que se especifica con la acción puede iniciar una aplicación, utilizando la información de la acción como parámetro, o bien recuperar información en función de criterios que proporciona la acción.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 34
 > [!IMPORTANT]  
 >  Para que un usuario corporativo utilice acciones, la aplicación cliente empleada por dicho usuario debe admitir acciones.  
   
-## Tipos de acciones  
+## <a name="types-of-actions"></a>Tipos de acciones  
  En la tabla siguiente se enumeran los tipos de acciones que se incluyen en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   
 |Tipo de acción|Description|  
@@ -69,10 +74,10 @@ caps.handback.revision: 34
 |.|Ejecuta un comando OLE DB.|  
 |Dirección URL|Muestra una página web dinámica en un explorador de Internet.|  
   
-## Resolver y ejecutar acciones  
+## <a name="resolving-and-executing-actions"></a>Resolver y ejecutar acciones  
  Cuando un usuario corporativo obtiene acceso al objeto para el que se define el objeto de comando, la instrucción asociada a la acción se resuelve automáticamente, lo que la pone a disposición de la aplicación cliente, pero la acción no se ejecuta automáticamente. La acción se ejecuta solo cuando el usuario corporativo realiza la operación específica del cliente que inicia la acción. Por ejemplo, las aplicaciones cliente pueden presentar una lista de acciones como menú emergente cuando el usuario corporativo hace clic con el botón secundario en un miembro o una celda concretos.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Acciones en modelos multidimensionales](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   

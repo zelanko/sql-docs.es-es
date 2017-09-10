@@ -1,36 +1,41 @@
 ---
-title: "Propiedades de seguridad | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "seguridad [Analysis Services], propiedades"
-  - "SecurityPackageList, propiedad"
-  - "BuiltinAdminsAreServerAdmins, propiedad"
-  - "DisableClientImpersonation, propiedad"
-  - "ErrorMessageMode, propiedad"
-  - "RequiredProtectionLevel, propiedad"
-  - "ServiceAccountIsServerAdmin, propiedad"
-  - "RequireClientAuthentication, propiedad"
+title: Propiedades de seguridad | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- security [Analysis Services], properties
+- SecurityPackageList property
+- BuiltinAdminsAreServerAdmins property
+- DisableClientImpersonation property
+- ErrorMessageMode property
+- RequiredProtectionLevel property
+- ServiceAccountIsServerAdmin property
+- RequireClientAuthentication property
 ms.assetid: 2fc7fe10-0cbb-49ac-aa8c-8ec3f7a7705f
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0233cd9c2e9eff5cc776b921e092206524546a52
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Propiedades de seguridad
+# <a name="security-properties"></a>Propiedades de seguridad
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor de seguridad que aparecen en la tabla siguiente. Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Se aplica a:** modo de servidor multidimensional y tabular  
   
-## Propiedades  
+## <a name="properties"></a>Propiedades  
  **RequireClientAuthentication**  
  Propiedad booleana que indica si se necesita la autenticación del cliente.  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 15
  El valor predeterminado de esta propiedad es False, lo que indica que la suplantación del cliente está habilitada.  
   
  **BuiltinAdminsAreServerAdmins**  
- Propiedad booleana que indica si los miembros del grupo de administradores del equipo local son administradores de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Propiedad booleana que indica si los miembros del grupo de administradores del equipo local son administradores de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  **ServiceAccountIsServerAdmin**  
  Propiedad booleana que indica si la cuenta de servicio es un administrador de servidor.  
@@ -67,7 +72,7 @@ caps.handback.revision: 15
  **AdministrativeDataProtection\ RequiredProtectionLevel**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

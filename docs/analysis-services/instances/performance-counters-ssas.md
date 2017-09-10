@@ -1,27 +1,32 @@
 ---
-title: "Contadores de rendimiento (SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Contadores de rendimiento (SSAS) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e2d625f6c9060f32fb2a2dc676c84c673f55c8f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Contadores de rendimiento (SSAS)
+# <a name="performance-counters-ssas"></a>Contadores de rendimiento (SSAS)
   Mediante el Monitor de rendimiento, puede supervisar el rendimiento de una instancia de Microsoft SQL Server Analysis Services (SSAS) mediante contadores de rendimiento.  
   
- El Monitor de rendimiento es un complemento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control (MMC) que hace un seguimiento del uso de los recursos. Para iniciar este complemento MMC, escriba **PerfMon** en el símbolo del sistema, o bien, en el Panel de control, haga clic en **Herramientas administrativas** y, después, en **Monitor de rendimiento**. El Monitor de rendimiento permite seguir la actividad y el rendimiento de los servidores y los procesos mediante objetos y contadores predefinidos, y supervisar los eventos mediante contadores definidos por el usuario. El Monitor de rendimiento recopila recuentos en lugar de datos sobre los eventos, como, por ejemplo, uso de la memoria, cantidad de transacciones activas o actividad de la CPU. También puede establecer umbrales en contadores específicos para generar alertas que notifiquen a los operadores.  
+ El Monitor de rendimiento es un complemento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control (MMC) que hace un seguimiento del uso de los recursos. Para iniciar este complemento MMC, escriba **PerfMon** en el símbolo del sistema, o bien, en el Panel de control, haga clic en **Herramientas administrativas**y, después, en **Monitor de rendimiento**. El Monitor de rendimiento permite seguir la actividad y el rendimiento de los servidores y los procesos mediante objetos y contadores predefinidos, y supervisar los eventos mediante contadores definidos por el usuario. El Monitor de rendimiento recopila recuentos en lugar de datos sobre los eventos, como, por ejemplo, uso de la memoria, cantidad de transacciones activas o actividad de la CPU. También puede establecer umbrales en contadores específicos para generar alertas que notifiquen a los operadores.  
   
  El Monitor de rendimiento permite supervisar el servidor remoto y las instancias locales de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Usar el Monitor de rendimiento](http://technet.microsoft.com/library/cc749115.aspx).  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 14
   
  Los contadores están agrupados para que pueda encontrar más fácilmente los contadores relacionados.  
   
-## Contadores por grupos  
+## <a name="counters-by-groups"></a>Contadores por grupos  
   
 |Grupo|Description|  
 |-----------|-----------------|  
@@ -180,8 +185,8 @@ caps.handback.revision: 14
 |Errores de página de almacén de archivos/s|Velocidad de errores de página de almacén de archivos.|  
 |Lecturas de almacén de archivos/s|Páginas de almacén de archivos leídas/s|  
 |Lecturas de KB de almacén de archivos/s|KB de almacén de archivos leídos/s|  
-|Escrituras de almacén de archivos/s|Páginas de almacén de archivos escritas/s.  Las escrituras son asincrónicas.|  
-|Escritura de KB de almacén de archivos/s|KB de almacén de archivos escritos/s.  Las escrituras son asincrónicas.|  
+|Escrituras de almacén de archivos/s|Páginas de almacén de archivos escritas/seg. Las escrituras son asincrónicas.|  
+|Escritura de KB de almacén de archivos/s|KB de almacén de archivos escritos/seg. Las escrituras son asincrónicas.|  
 |Errores de E/S de almacén de archivos/s|Velocidad de errores de E/S de almacén de archivos.|  
 |Errores de E/S de almacén de archivos|Total de errores de E/S de almacén de archivos.|  
 |Páginas de reloj de almacén de archivos examinadas/s|Velocidad del limpiador en segundo plano al examinar páginas para posibles expulsiones.|  

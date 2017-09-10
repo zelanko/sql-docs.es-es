@@ -1,32 +1,37 @@
 ---
-title: "SystemGetCrossValidationResults (Analysis Services - Miner&#237;a de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SystemGetCrossValidationResults"
-  - "procedimientos almacenados [Analysis Services], minería de datos"
-  - "validación cruzada [minería de datos]"
+title: "SystemGetCrossValidationResults (Analysis Services: minería de datos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SystemGetCrossValidationResults
+- stored procedures [Analysis Services], data mining
+- cross-validation [data mining]
 ms.assetid: f70c3337-c930-434a-b278-caf1ef0c3b3b
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8558bacfce7bd6a70b769b42c60d568e76b433e0
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# SystemGetCrossValidationResults (Analysis Services - Miner&#237;a de datos)
+# <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (Analysis Services - Minería de datos)
   Particiona la estructura de minería de datos en el número especificado de secciones transversales, entrena un modelo para cada partición y, a continuación, devuelve métricas de precisión para cada partición.  
   
 > [!NOTE]  
->  Este procedimiento almacenado no puede usarse para realizar una validación cruzada de los modelos de agrupación en clústeres ni de los modelos generados con el algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] o el algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Para realizar una validación cruzada de modelos de agrupación en clústeres, puede usar un procedimiento almacenado aparte, [SystemGetCrossValidationResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  
+>  Este procedimiento almacenado no puede usarse para realizar una validación cruzada de los modelos de agrupación en clústeres ni de los modelos generados con el algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] o el algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para realizar una validación cruzada de modelos de agrupación en clústeres, puede usar un procedimiento almacenado aparte, [SystemGetClusterCrossValidationResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -41,7 +46,7 @@ SystemGetCrossValidationResults(
 [,<test list>])  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  *estructura de minería de datos*  
  Nombre de una estructura de minería de datos en la base de datos actual.  
   
@@ -55,7 +60,7 @@ SystemGetCrossValidationResults(
  Si no se especifica una lista de modelos de minería de datos, la validación cruzada se realiza en todos los modelos que están asociados a la estructura especificada y que contienen un atributo de predicción.  
   
 > [!NOTE]  
->  Para realizar una validación cruzada de modelos de agrupación en clústeres, debe usar un procedimiento almacenado aparte, [SystemGetCrossValidationResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  
+>  Para realizar una validación cruzada de modelos de agrupación en clústeres, debe usar un procedimiento almacenado aparte, [SystemGetClusterCrossValidationResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  
   
  (opcional)  
   
@@ -101,7 +106,7 @@ SystemGetCrossValidationResults(
   
  (opcional)  
   
- *umbral* *de destino*  
+ *umbral*  *de destino*  
  **Doble** mayor que 0 y menor que 1. Indica la puntuación de probabilidad mínima que debe obtenerse para que la predicción de estado del destino especificado se considere correcta.  
   
  Una predicción con una probabilidad menor o igual que este valor se considera incorrecta.  
@@ -111,7 +116,7 @@ SystemGetCrossValidationResults(
  El valor predeterminado es **null**.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no producirá ningún error si el *umbral de estado* se establece en 0,0; aunque no le recomendamos que use este valor. De hecho, un umbral de 0,0 significa que las predicciones con una probabilidad del cero por ciento se consideran correctas.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]no se producirá un error si se establece *umbral de estado* en 0,0, pero nunca se debe utilizar este valor. De hecho, un umbral de 0,0 significa que las predicciones con una probabilidad del cero por ciento se consideran correctas.  
   
  (opcional)  
   
@@ -122,7 +127,7 @@ SystemGetCrossValidationResults(
   
  (opcional)  
   
-## Tipo devuelto  
+## <a name="return-type"></a>Tipo devuelto  
  El conjunto de filas que se devuelve incluye puntuaciones para cada una de las particiones de cada modelo.  
   
  En la tabla siguiente se describen las columnas del conjunto de filas.  
@@ -138,12 +143,12 @@ SystemGetCrossValidationResults(
 |Measure|Nombre de la medida que devuelve la prueba. Las medidas de cada modelo dependen del tipo del valor de predicción. Para obtener una definición de cada medida, vea [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).<br /><br /> Para obtener una lista de las medidas que se devuelven para cada tipo de predicción, vea [Medidas en el informe de validación cruzada](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
 |Value|Valor de la medida de prueba especificada.|  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Para devolver métricas de precisión del conjunto de datos completo, use [SystemGetAccuracyResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
   
  Si el modelo de minería de datos ya se ha particionado en subconjuntos, puede omitir el procesamiento y devolver solamente los resultados de la validación cruzada por medio de [SystemGetAccuracyResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se muestra cómo particionar una estructura de minería de datos en dos subconjuntos de cara a la validación cruzada y cómo probar a continuación dos modelos de minería de datos asociados a la estructura de minería de datos `[v Target Mail]`.  
   
  La línea tres del código muestra los modelos de minería de datos que desea probar. Si no especifica la lista, se usan todos los modelos asociados a la estructura que no son de agrupación en clústeres. La línea cuatro del código especifica el número de particiones. Dado que no se especifica ningún valor para *max cases*, se usan todos los casos de la estructura de minería de datos y se distribuyen uniformemente en las particiones.  
@@ -165,7 +170,7 @@ NULL
   
  Resultados del ejemplo:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Prueba|Medida|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Prueba|Measure|Value|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |Target Mail DT|Bike Buyer|1|1|500|Clasificación|Verdadero positivo|144|  
 |Target Mail DT|Bike Buyer|1|1|500|Clasificación|Falso positivo|105|  
@@ -182,13 +187,13 @@ NULL
 |Target Mail DT|Bike Buyer|1|2|500|Probabilidad|Mejora respecto al modelo predictivo|0.038997399132084|  
 |Target Mail DT|Bike Buyer|1|2|500|Probabilidad|Error cuadrático medio|0.342721344892651|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  La validación cruzada solo está disponible en [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] a partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetAccuracyResults &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetClusterAccuracyResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

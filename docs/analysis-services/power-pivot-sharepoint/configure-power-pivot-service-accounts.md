@@ -1,24 +1,29 @@
 ---
-title: "Configurar las cuentas de servicio Power Pivot | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Configurar las cuentas de servicio de Power Pivot | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7bdd53a084d7438152d4ae83eeeb884984d48e51
+ms.contentlocale: es-es
+ms.lasthandoff: 09/01/2017
+
 ---
-# Configurar las cuentas de servicio Power Pivot
+# <a name="configure-power-pivot-service-accounts"></a>Configurar las cuentas de servicio Power Pivot
   Una instalación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]incluye dos servicios compatibles con operaciones de servidor. El servicio **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** es un servicio de Windows que proporciona compatibilidad con las consultas y el procesamiento de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en un servidor de aplicaciones. La cuenta de inicio de sesión para este servicio siempre se especifica durante la ejecución del programa de instalación de SQL Server al instalar Analysis Services en modo integrado de SharePoint.  
   
  Es necesario especificar una segunda cuenta para la aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , un servicio web compartido que se ejecuta bajo una identidad del grupo de aplicaciones en una granja de SharePoint. Se especifica esta cuenta al configurar una instalación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]mediante la herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o PowerShell.  
@@ -98,16 +103,16 @@ caps.handback.revision: 15
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Una aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se asocia al Servicio de sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que proporciona la integración y la infraestructura de SharePoint para el procesamiento de las consultas de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en una granja. El grupo de aplicaciones que especifique para una aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] es la identidad del Servicio de sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Puede tener varias aplicaciones de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en una granja. Cada una que cree se debería ejecutar en su propio grupo de aplicaciones.  
   
-#### Cuenta de servicio de Analysis Services  
+#### <a name="analysis-services-service-account"></a>Cuenta de servicio de Analysis Services  
   
 |Requisito|Description|  
 |-----------------|-----------------|  
 |Requisito del aprovisionamiento|Esta cuenta debe especificarse durante la instalación de SQL Server en la **página de configuración de Analysis Services** del Asistente para la instalación (o el parámetro de instalación **ASSVCACCOUNT** en una instalación mediante la línea de comandos).<br /><br /> Puede modificar el nombre de usuario o la contraseña usando Administración central, PowerShell o la herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . No se admite el uso de otras herramientas para cambiar las cuentas y las contraseñas.|  
 |Requisito de la cuenta de usuario de dominio|Esta cuenta debe ser una cuenta de usuario de dominio de Windows. Las cuentas de equipo integradas (como Servicio de red o Servicio local) están prohibidas. El programa de instalación de SQL Server aplica el requisito de las cuentas de usuario de dominio bloqueando la instalación cada vez que se especifica una cuenta de equipo.|  
-|Requisitos de permisos|Esta cuenta debe ser miembro del grupo de seguridad SQLServerMSASUser$\<servidor>$PowerPivot y de los grupos de seguridad WSS_WPG en el equipo local. Estos permisos se deben conceder automáticamente. Para obtener más información sobre cómo comprobar o conceder los permisos, vea [Conceder los permisos administrativos manualmente](#updatemanually) en este tema y [Configuración inicial (PowerPivot para SharePoint)](http://msdn.microsoft.com/es-es/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).|  
+|Requisitos de permisos|Esta cuenta debe ser miembro de SQLServerMSASUser$\<servidor > $PowerPivot grupo de seguridad y los grupos de seguridad WSS_WPG en el equipo local. Estos permisos se deben conceder automáticamente. Para obtener más información sobre cómo comprobar o conceder los permisos, vea [Conceder los permisos administrativos manualmente](#updatemanually) en este tema y [Configuración inicial (PowerPivot para SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).|  
 |Requisitos de escalamiento|Si instala varias instancias de servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint en una granja, todas las instancias de servidor de Analysis Services se deben ejecutar bajo la misma cuenta de usuario de dominio. Por ejemplo, si configura la primera instancia de [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] para ejecutarse como Contoso\ssas-srv01, todas las instancias de [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] adicionales que implemente después en la misma granja también se deben ejecutar como Contoso\ssas-srv01 (o la cuenta que sea).<br /><br /> Al configurar todas las instancias de los servicios para ejecutarse en la misma cuenta, se permite al servicio de sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] asignar los trabajos de actualización de datos o de procesamiento de consultas a cualquier instancia de servicio de Analysis Services de la granja. Además, habilita el uso de la característica de administración de cuentas de Administración central para las instancias de servidor de Analysis Services. Al usar la misma cuenta para todas las instancias de [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] , puede cambiar la cuenta o la contraseña una vez, y todas las instancias de servicio que utilicen esas credenciales se actualizarán automáticamente.<br /><br /> El programa de instalación de SQL Server aplica el mismo requisito para la cuenta. En una implementación escalada en la que una granja de servidores de SharePoint ya tenga instalada una instancia de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, el programa de instalación bloqueará la nueva instalación si la cuenta de [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] que haya especificado ya es diferente de la que se usa en la granja.|  
   
-#### Grupo de aplicaciones de servicio Power Pivot  
+#### <a name="power-pivot-service-application-pool"></a>Grupo de aplicaciones de servicio Power Pivot  
   
 |Requisito|Description|  
 |-----------------|-----------------|  
@@ -125,11 +130,11 @@ caps.handback.revision: 15
   
 3.  Haga clic en **Ejecutar ahora**.  
   
- Como último recurso, puede asegurarse de que los permisos son correctos concediendo permisos de administración del sistema de Analysis Services a la aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y agregando después específicamente la identidad de aplicación de servicio al grupo de seguridad SQLServerMSASUser $\<nombreDeServidor>$PowerPivot Windows. Debe repetir estos pasos para cada instancia de Analysis Services que esté integrada con la granja de servidores de SharePoint.  
+ Como último recurso, puede garantizar los permisos correctos concediendo permisos de administración del sistema de Analysis Services a la [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aplicación de servicio y, a continuación, agregando específicamente la identidad de aplicación de servicio al SQLServerMSASUser$\<servername > grupo de seguridad $PowerPivot Windows. Debe repetir estos pasos para cada instancia de Analysis Services que esté integrada con la granja de servidores de SharePoint.  
   
  Debe ser administrador local para actualizar los grupos de seguridad de Windows.  
   
-1.  En SQL Server Management Studio, conéctese a la instancia de Analysis Services como \<nombreDeServidor>\POWERPIVOT.  
+1.  En SQL Server Management Studio, conéctese a la instancia de Analysis Services como \<nombre del servidor > \POWERPIVOT.  
   
 2.  Haga clic con el botón derecho en el nombre del servidor y seleccione **Propiedades**.  
   
@@ -145,7 +150,7 @@ caps.handback.revision: 15
   
 8.  Abra **Grupos**.  
   
-9. Haga doble clic en SQLServerMSASUser$\<nombreDeServidor>$PowerPivot.  
+9. Haga doble clic en SQLServerMSASUser$\<nombreDeServidor > $PowerPivot.  
   
 10. Haga clic en **Agregar**.  
   
@@ -178,10 +183,10 @@ caps.handback.revision: 15
   
 8.  Escriba la contraseña y, a continuación, haga clic en **Aceptar**.  
   
- Si Reporting Services está instalado, utilice el Administrador de configuración de Reporting Services para actualizar las contraseñas para el servidor de informes y la conexión a la base de datos del servidor de informes. Para obtener más información, vea [Configuración y administración de un servidor de informes &#40;modo de SharePoint de Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration and administration of a report server.md).  
+ Si Reporting Services está instalado, utilice el Administrador de configuración de Reporting Services para actualizar las contraseñas para el servidor de informes y la conexión a la base de datos del servidor de informes. Para obtener más información, vea [Configuración y administración de un servidor de informes &#40;modo de SharePoint de Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Iniciar o detener un servidor de Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)   
- [Configurar la cuenta de actualización de datos desatendida de PowerPivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/es-es/81401eac-c619-4fad-ad3e-599e7a6f8493)  
+ [Configurar la cuenta de actualización de datos desatendida de PowerPivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)  
   
   

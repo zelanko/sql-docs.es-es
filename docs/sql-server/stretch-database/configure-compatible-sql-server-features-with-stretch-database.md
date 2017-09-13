@@ -14,11 +14,11 @@ caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 84464c4553eab6d8e65c0bf6b476ae728e2a8463
+ms.translationtype: HT
+ms.sourcegitcommit: 4941d8eb846e9d47b008447fe0e346d43de5d87f
+ms.openlocfilehash: 8b3ee682de6e27014f403be32849478f9d076c84
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 08/30/2017
 
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>Configurar características compatibles de SQL Server con Stretch Database
@@ -51,3 +51,5 @@ Si TDE está habilitado en la base de datos local, no se habilitará automática
 Si usa tablas temporales, puede habilitar Stretch Database en la tabla de historial, pero no en la tabla actual.
 -   Para instrucciones sobre cómo usar tablas temporales con Stretch Database, consulte [Administración de la retención de datos históricos en las tablas temporales con versiones del sistema](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).
 -   Para filtrar las filas que se van a migrar desde la tabla de historial con una ventana deslizante, consulte [Seleccionar las filas que se van a migrar mediante una función de filtro](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).
+-   No se puede habilitar Stretch Database en la tabla temporal de historial si la tabla está optimizada para memoria. No se admiten las tablas optimizadas para memoria.
+

@@ -1,7 +1,7 @@
 ---
 title: Variables (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -24,7 +24,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="variables-transact-sql"></a>Variables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Una variable local de Transact-SQL es un objeto que puede contener un solo valor de datos de un tipo específico. Normalmente, las variables se utilizan en lotes y scripts: 
 
@@ -39,8 +39,9 @@ Este script crea una pequeña tabla de prueba y la rellena con 26 filas. El scri
 
 * Controlar cuántas filas se insertan al comprobar cuántas veces se ejecuta el bucle.
 * Suministrar el valor insertado en la columna de enteros.
-* Funcionar como parte de la expresión que genera cartas que se van a insertar en la columna de caracteres.
-```
+* Funcionar como parte de la expresión que genera cartas que se van a insertar en la columna de caracteres.  
+
+```sql
 -- Create the table.
 CREATE TABLE TestTable (cola int, colb char(3));
 GO
@@ -87,19 +88,19 @@ La instrucción DECLARE inicializa una variable de Transact-SQL mediante:
 * Asignar un tipo de datos suministrado por el sistema o definido por el usuario y una longitud. Para las variables numéricas, se asignan también una precisión y una escala. Para las variables del tipo XML, puede asignarse una colección de esquemas opcional.
 * Establecer el valor a NULL.
 
-Por ejemplo, la siguiente **DECLARE** instrucción crea una variable local denominada  **@mycounter**  con un tipo de datos int.
-```
+Por ejemplo, la siguiente **DECLARE** instrucción crea una variable local denominada  **@mycounter**  con un tipo de datos int.  
+```sql
 DECLARE @MyCounter int;
 ```
 Para declarar más de una variable local, use una coma después de la primera variable local definida y, a continuación, especifique el nombre y tipo de datos de la siguiente variable local.
 
-Por ejemplo, la siguiente **DECLARE** instrucción crea tres variables locales llamadas  **@LastName** ,  **@FirstName**  y  **@StateProvince** e inicializa cada una en NULL:
-```
+Por ejemplo, la siguiente **DECLARE** instrucción crea tres variables locales llamadas  **@LastName** ,  **@FirstName**  y  **@StateProvince** e inicializa cada una en NULL:  
+```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
 
-El ámbito de una variable es las instrucciones de intervalo de Transact-SQL que pueden hacer referencia a la variable. El ámbito de una variable se extiende desde el punto en el que se declara hasta el final del lote o procedimiento almacenado en el que se ha declarado. Por ejemplo, el siguiente script genera un error de sintaxis porque la variable se declara en un lote y se hace referencia a la misma en otro:
-```
+El ámbito de una variable es las instrucciones de intervalo de Transact-SQL que pueden hacer referencia a la variable. El ámbito de una variable se extiende desde el punto en el que se declara hasta el final del lote o procedimiento almacenado en el que se ha declarado. Por ejemplo, el siguiente script genera un error de sintaxis porque la variable se declara en un lote y se hace referencia a la misma en otro:  
+```sql
 USE AdventureWorks2014;
 GO
 DECLARE @MyVariable int;
@@ -115,9 +116,9 @@ FROM HumanResources.Employee
 WHERE BusinessEntityID = @MyVariable;
 ```
 
-Las variables tienen un ámbito local y solamente están visibles dentro del lote o procedimiento en las que están definidas. En el siguiente ejemplo, el ámbito anidado creado para la ejecución de sp_executesql no tiene acceso a la variable declarada en un ámbito superior devuelve un error.
+Las variables tienen un ámbito local y solamente están visibles dentro del lote o procedimiento en las que están definidas. En el siguiente ejemplo, el ámbito anidado creado para la ejecución de sp_executesql no tiene acceso a la variable declarada en un ámbito superior devuelve un error.  
 
-```
+```sql
 DECLARE @MyVariable int;
 SET @MyVariable = 1;
 EXECUTE sp_executesql N'SELECT @MyVariable'; -- this produces an error
@@ -127,9 +128,9 @@ EXECUTE sp_executesql N'SELECT @MyVariable'; -- this produces an error
 
 Cuando una variable se declara por primera vez, su valor se establece en NULL. Para asignar un valor a una variable, use la instrucción SET. Éste es el método preferido para asignar un valor a una variable. También se puede asignar un valor a una variable si se hace referencia a ella en la lista de selección de una instrucción SELECT.
 
-Para asignar un valor a una variable mediante la instrucción SET, incluya el nombre de la variable y el valor que desea asignar a la misma. Éste es el método preferido para asignar un valor a una variable. Por ejemplo, en el lote siguiente se declaran dos variables, se les asigna un valor y, a continuación, se utilizan en la cláusula `WHERE` de una instrucción `SELECT`:
+Para asignar un valor a una variable mediante la instrucción SET, incluya el nombre de la variable y el valor que desea asignar a la misma. Éste es el método preferido para asignar un valor a una variable. Por ejemplo, en el lote siguiente se declaran dos variables, se les asigna un valor y, a continuación, se utilizan en la cláusula `WHERE` de una instrucción `SELECT`:  
 
-```
+```sql
 USE AdventureWorks2014;
 GO
 -- Declare two variables.
@@ -148,9 +149,9 @@ WHERE FirstName = @FirstNameVariable
 GO
 ```
 
-También se puede asignar un valor a una variable si se hace referencia a la misma en una lista de selección. Cuando se hace referencia a una variable en una lista de selección, se le debe asignar un valor escalar o la instrucción SELECT solo debe devolver una fila. Por ejemplo:
+También se puede asignar un valor a una variable si se hace referencia a la misma en una lista de selección. Cuando se hace referencia a una variable en una lista de selección, se le debe asignar un valor escalar o la instrucción SELECT solo debe devolver una fila. Por ejemplo:  
 
-```
+```sql
 USE AdventureWorks2014;
 GO
 DECLARE @EmpIDVariable int;
@@ -163,9 +164,9 @@ GO
 > [!WARNING]
 > Si hay varias cláusulas de asignación en una sola instrucción SELECT, SQL Server no garantiza el orden de evaluación de las expresiones. Tenga en cuenta que los efectos solo están visibles si existen referencias entre las asignaciones.
 
-Si una instrucción SELECT devuelve más de una fila y la variable hace referencia a una expresión no escalar, la variable se establece en el valor devuelto de la expresión en la última fila del conjunto de resultados. Por ejemplo, en el siguiente lote  **@EmpIDVariable**  está establecido en el **BusinessEntityID** valor de la última fila devuelta, que es 1:
+Si una instrucción SELECT devuelve más de una fila y la variable hace referencia a una expresión no escalar, la variable se establece en el valor devuelto de la expresión en la última fila del conjunto de resultados. Por ejemplo, en el siguiente lote  **@EmpIDVariable**  está establecido en el **BusinessEntityID** valor de la última fila devuelta, que es 1:  
 
-```
+```sql
 USE AdventureWorks2014;
 GO
 DECLARE @EmpIDVariable int;
@@ -186,3 +187,4 @@ GO
  [SELECCIONE@local_variable](../../t-sql/language-elements/select-local-variable-transact-sql.md)  
   
   
+

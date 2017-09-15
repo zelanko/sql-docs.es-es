@@ -1,0 +1,135 @@
+---
+title: "Función SQLGetDescField | Documentos de Microsoft"
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- SQLGetDescField
+apilocation:
+- sqlsrv32.dll
+apitype: dllExport
+f1_keywords:
+- SQLGetDescField
+helpviewer_keywords:
+- SQLGetDescField function [ODBC]
+ms.assetid: f09ff660-1e4a-4370-be85-90d4da0487d3
+caps.latest.revision: 21
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: 1cbf48f5346d507505573391598cbd98017ccd8d
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
+
+---
+# <a name="sqlgetdescfield-function"></a>Función SQLGetDescField
+**Conformidad**  
+ Versión introdujo: ODBC 3.0 normativas: ISO 92  
+  
+ **Resumen**  
+ **SQLGetDescField** devuelve el valor actual o el valor de un único campo de un registro del descriptor.  
+  
+## <a name="syntax"></a>Sintaxis  
+  
+```  
+  
+SQLRETURN SQLGetDescField(  
+     SQLHDESC        DescriptorHandle,  
+     SQLSMALLINT     RecNumber,  
+     SQLSMALLINT     FieldIdentifier,  
+     SQLPOINTER      ValuePtr,  
+     SQLINTEGER      BufferLength,  
+     SQLINTEGER *    StringLengthPtr);  
+```  
+  
+## <a name="arguments"></a>Argumentos  
+ *DescriptorHandle*  
+ [Entrada] Identificador de descriptor.  
+  
+ *RecNumber*  
+ [Entrada] Indica que el registro de descriptor de la que la aplicación busca información. Registros del descriptor se numeran de 0, con el número de registro 0 es el registro de marcador. Si el *FieldIdentifier* argumento indica un campo de encabezado, *RecNumber* se omite. Si *RecNumber* es menor o igual que SQL_DESC_COUNT, pero la fila no contiene datos de una columna o parámetro, una llamada a **SQLGetDescField** devolverá los valores predeterminados de los campos. (Para obtener más información, vea "Inicialización de campos de Descriptor" en [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
+  
+ *FieldIdentifier*  
+ [Entrada] Indica el campo del descriptor cuyo valor es va a devolver. Para obtener más información, consulte la "*FieldIdentifier* argumento" sección [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).  
+  
+ *ValuePtr*  
+ [Salida] Puntero a un búfer en el que se va a devolver la información del descriptor. El tipo de datos depende del valor de *FieldIdentifier*.  
+  
+ Si *ValuePtr* es de tipo entero, las aplicaciones deben utilizar un búfer de SQLULEN e inicializar el valor en 0 antes de llamar a esta función como algunos controladores sólo puede escribir el menor de 32 bits o de 16 bits de un búfer y dejar el bit de orden superior sin cambios.  
+  
+ Si *ValuePtr* es NULL, *StringLengthPtr* devolverá el número total de bytes (sin incluir el carácter de terminación null para los datos de carácter) disponible para devolver en el búfer señalado por * ValuePtr*.  
+  
+ *BufferLength*  
+ [Entrada] Si *FieldIdentifier* es un campo definido en ODBC y *ValuePtr* apunta a una cadena de caracteres o un búfer binario, este argumento debe ser la longitud de \* *ValuePtr*. Si *FieldIdentifier* es un campo definido en ODBC y \* *ValuePtr* es un entero, *BufferLength* se omite. Si el valor de * \*ValuePtr* es de un tipo de datos Unicode (cuando se llama a **SQLGetDescFieldW**), el *BufferLength* el argumento debe ser un número par.  
+  
+ Si *FieldIdentifier* es un campo definido por el controlador, la aplicación indica la naturaleza del campo para el Administrador de controladores al establecer el *BufferLength* argumento. *BufferLength* puede tener los valores siguientes:  
+  
+-   Si * \*ValuePtr* es un puntero a una cadena de caracteres, a continuación, *BufferLength* es la longitud de la cadena o SQL_NTS.  
+  
+-   Si * \*ValuePtr* es un puntero a un búfer binario, a continuación, la aplicación coloca el resultado de la SQL_LEN_BINARY_ATTR (*longitud*) macro en *BufferLength*. Esto coloca un valor negativo en *BufferLength*.  
+  
+-   Si * \*ValuePtr* es un puntero a un valor distinto de una cadena de carácter o cadena binaria, a continuación, *BufferLength* debería tener el valor SQL_IS_POINTER.  
+  
+-   Si * \*ValuePtr* es contiene un tipo de datos de longitud fija, a continuación, *BufferLength* es SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT o SQL_IS_USMALLINT, según corresponda.  
+  
+ *StringLengthPtr*  
+ [Salida] Puntero al búfer en el que se va a devolver el número total de bytes (sin incluir el número de bytes necesarios para el carácter de terminación null) disponible para devolver en **ValuePtr*.  
+  
+## <a name="returns"></a>Devuelve  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_NO_DATA o SQL_INVALID_HANDLE.  
+  
+ Si se devuelve SQL_NO_DATA *RecNumber* es mayor que el número actual de registros de descriptor.  
+  
+ Si se devuelve SQL_NO_DATA *DescriptorHandle* es un identificador IRD y la instrucción está en el estado preparado o ejecutado pero no se produjo ningún cursor abierto asociado con él.  
+  
+## <a name="diagnostics"></a>Diagnósticos  
+ Cuando **SQLGetDescField** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valor SQLSTATE asociado se puede obtener mediante una llamada a **SQLGetDiagRec** con un *HandleType* de SQL_HANDLE_STMT y un *controlar* de *StatementHandle*. En la tabla siguiente se enumera los valores SQLSTATE devueltos normalmente por **SQLGetDescField** y se explica cada uno de ellos en el contexto de esta función; la notación "(DM)" precede a las descripciones de SQLSTATE devuelto por el Administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  
+  
+|SQLSTATE|Error|Description|  
+|--------------|-----------|-----------------|  
+|01000|Advertencia general|Mensaje informativo de específicas del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|01004|Datos de cadena, delimitado truncados|El búfer \* *ValuePtr* no era lo suficientemente grande como para devolver el campo descriptor completo, por lo que el campo se ha truncado. Se devuelve la longitud del campo descriptor untruncated en **StringLengthPtr*. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|07009|Índice de descriptor no válido|(DM) la *RecNumber* argumento era igual a 0, el atributo de instrucción de SQL_ATTR_USE_BOOKMARK era SQL_UB_OFF y el *DescriptorHandle* argumento era un identificador IRD. (Este error se pueden devolver para un descriptor asignado explícitamente solo si el descriptor está asociado con un identificador de instrucción.)<br /><br /> El *FieldIdentifier* argumento era un campo de registro, el *RecNumber* argumento era 0 y el *DescriptorHandle* argumento era un identificador IPD.<br /><br /> El *RecNumber* argumento era menor que 0.|  
+|08S01|Error de vínculo de comunicación|El vínculo de comunicación entre el controlador y el origen de datos al que se conectó el controlador no pudo antes del procesamiento de la función se ha completado.|  
+|HY000|Error general|Se produjo un error para que no hubo ninguna SQLSTATE específico y para el que se ha definido ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*MessageText* búfer describe el error y su causa.|  
+|HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
+|HY007|La instrucción asociada no está preparada|*DescriptorHandle* se asoció una *StatementHandle* como un IRD y la instrucción asociada identificador tenía no ha la preparación o ejecución.|  
+|HY010|Error de secuencia de función|(DM) *DescriptorHandle* se asoció una *StatementHandle* para que se llamó a una función que se ejecuta asincrónicamente (no esta uno) y aún se estaba ejecutando cuando se llamó a esta función.<br /><br /> (DM) *DescriptorHandle* se asoció una *StatementHandle* que **SQLExecute**, **SQLExecDirect**, ** SQLBulkOperations**, o **SQLSetPos** se llama y se devuelve SQL_NEED_DATA. Esta función se invoca antes de que se enviaron los datos para todas las columnas o parámetros de datos en ejecución.<br /><br /> (DM) se llamó a una función ejecuta de forma asincrónica para el identificador de conexión que está asociado el *DescriptorHandle*. Esta función asincrónica aún estaba ejecutando cuando el **SQLGetDescField** se llamó la función.|  
+|HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque los objetos subyacentes de la memoria no se pudieron tener acceso, posiblemente debido a condiciones de memoria insuficiente.|  
+|HY021|Información de descriptor incoherente|Los campos SQL_DESC_TYPE y SQL_DESC_DATETIME_INTERVAL_CODE no forman un tipo válido de SQL de ODBC, un tipo válido de SQL específicas del controlador (para IPD) o un tipo válido de C de ODBC (para APD o en adelante).|  
+|HY090|Longitud de búfer o cadena no válida|(DM) * \*ValuePtr* era una cadena de caracteres y *BufferLength* era menor que cero.|  
+|HY091|Identificador de campo descriptor no válido|*FieldIdentifier* no era un campo definido por el ODBC y no era un valor definido por la implementación.<br /><br /> *FieldIdentifier* no se ha definido para el *DescriptorHandle*.|  
+|HY117|Se suspende la conexión debido al estado de transacción desconocido. Solo se desconecte y se permiten las funciones de solo lectura.|(DM) para obtener más información sobre el estado suspendido, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Tiempo de espera de conexión expirado|El período de tiempo de espera de conexión finalizó antes de que el origen de datos se respondió a la solicitud. El período de tiempo de espera de conexión se establece a través de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|Controlador no admite esta función|(DM) el controlador asociado a la *DescriptorHandle* no admite la función.|  
+  
+## <a name="comments"></a>Comentarios  
+ Una aplicación puede llamar a **SQLGetDescField** para devolver el valor de un único campo de un registro del descriptor. Una llamada a **SQLGetDescField** puede devolver el valor de cualquier campo en cualquier tipo de descriptor, incluidos los campos de encabezado, los campos de registros y campos de marcador. Una aplicación puede obtener la configuración de varios campos en los descriptores de igual o diferentes, en orden aleatorio, mediante la realización de llamadas repetidas a **SQLGetDescField**. **SQLGetDescField** también se puede llamar para devolver los campos de descriptor definidos por el controlador.  
+  
+ Por motivos de rendimiento, una aplicación no debe llamar a **SQLGetDescField** para un IRD antes de ejecutar una instrucción.  
+  
+ También se pueden recuperar los valores de varios campos que describen el nombre, el tipo de datos y el almacenamiento de datos de columna o parámetro en una sola llamada a **SQLGetDescRec**. **SQLGetStmtAttr** puede llamarse para devolver el valor de un único campo en el encabezado de descriptor que también es un atributo de instrucción. **SQLColAttribute**, **SQLDescribeCol**, y **SQLDescribeParam** devolver los campos de registro o marcador.  
+  
+ Cuando una aplicación llama **SQLGetDescField** para recuperar el valor de un campo que no está definido para un tipo de descriptor determinado, la función devuelve SQL_SUCCESS, pero el valor devuelto para el campo es indefinido. Por ejemplo, al llamar a **SQLGetDescField** para el campo SQL_DESC_NAME o SQL_DESC_NULLABLE de un APD o descartar devolverá SQL_SUCCESS, pero un valor no definido para el campo.  
+  
+ Cuando una aplicación llama **SQLGetDescField** para recuperar el valor de un campo que se define para un tipo de descriptor particular pero que no tiene ningún valor predeterminado y no se ha establecido aún, la función devuelve SQL_SUCCESS, pero el valor devuelto en el campo no está definido. Para obtener más información sobre la inicialización de campos de descriptor y descripciones de los campos, vea "Inicialización de campos de Descriptor" en [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Para obtener más información sobre descriptores, consulte [descriptores](../../../odbc/reference/develop-app/descriptors.md).  
+  
+## <a name="related-functions"></a>Funciones relacionadas  
+  
+|Para obtener información acerca de|Vea|  
+|---------------------------|---------|  
+|Obtener varios campos de descriptor|[Sqlgetdescrec, función](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
+|Establecer un campo único descriptor|[Sqlsetdescfield, función](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
+|Configuración de varios campos de descriptor|[Sqlsetdescrec, función](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
+  
+## <a name="see-also"></a>Vea también  
+ [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

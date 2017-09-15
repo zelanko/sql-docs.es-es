@@ -1,7 +1,7 @@
 ---
 title: SET LOCK_TIMEOUT (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/11/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -29,10 +29,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ff2f355774338fc94a37411a74706c9b46b7c256
+ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
+ms.openlocfilehash: 3de86c7f33afd6e708ad8e773470ec650e092d2c
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="set-locktimeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
@@ -45,8 +45,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SET LOCK_TIMEOUT timeout_period  
 ```  
   
@@ -70,10 +68,10 @@ SET LOCK_TIMEOUT timeout_period
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-set-the-lock-timeout-to-1800-seconds"></a>R: establecer el tiempo de espera de bloqueo en 1.800 segundos  
+### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>R: establecer el tiempo de espera de bloqueo 1.800 milisegundos  
  En el ejemplo siguiente se establece el período de tiempo de espera de bloqueo en `1800` milisegundos.  
   
-```  
+```sql  
 SET LOCK_TIMEOUT 1800;  
 GO  
 ```  
@@ -83,13 +81,13 @@ GO
 ### <a name="b-set-the-lock-timeout-to-wait-forever-for-a-lock-to-be-released"></a>B. Establecer el tiempo de espera de bloqueo para esperar indefinidamente se libere un bloqueo.  
  En el ejemplo siguiente se establece el tiempo de espera de bloqueo para esperar indefinidamente y no expire nunca. Este es el comportamiento predeterminado que ya está establecido al principio de cada conexión.  
   
-```  
+```sql  
 SET LOCK_TIMEOUT -1;  
 ```  
   
  En el ejemplo siguiente se establece el período de tiempo de espera de bloqueo en `1800` milisegundos. En esta versión, [!INCLUDE[ssDW](../../includes/ssdw-md.md)] analizar la instrucción correctamente, pero se omitirá el valor 1800 y seguir usando el comportamiento predeterminado.  
   
-```  
+```sql  
 SET LOCK_TIMEOUT 1800;  
 ```  
   

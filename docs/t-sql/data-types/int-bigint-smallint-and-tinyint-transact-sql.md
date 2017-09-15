@@ -1,7 +1,7 @@
 ---
 title: int, bigint, smallint y tinyint (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
-ms.date: 07/22/2017
+ms.date: 09/08/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -32,16 +32,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 07f5adc3d8ea7bb963b399cce22caa701021d6e9
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: 46ac51971b07b38b73ef18d8a953674fc77b4b17
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint y tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Tipos de datos numéricos exactos que utilizan datos enteros.
+Tipos de datos numéricos exactos que utilizan datos enteros. Para ahorrar espacio en la base de datos, utilice el tipo de datos más pequeño que puede contener de forma confiable todos los valores posibles. Por ejemplo, tinyint sería suficiente para una antigüedad de las personas, ya que nadie vive a tener más de 255 años. Pero tinyint no sería suficiente para una antigüedad de edificios, dado que un edificio puede ser más de 255 años de antigüedad.
   
 |Tipo de datos|Intervalo|Almacenamiento|  
 |---|---|---|
@@ -58,11 +58,11 @@ El **int** tipo de datos es el tipo de datos entero principal en [!INCLUDE[ssNoV
 Las funciones devuelven **bigint** sólo si la expresión de parámetro es un **bigint** tipo de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no promueve automáticamente otros tipos de datos enteros (**tinyint**, **smallint**, y **int**) a **bigint**.
   
 > [!CAUTION]  
->  Cuando se usa el +, -, \*, /, o % operadores aritméticos para realizar la conversión implícita o explícita de **int**, **smallint**, **tinyint**, o  **bigint** valores constantes para el **float**, **real**, **decimal** o **numérico** tipos de datos, las reglas que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se aplica al calcular el tipo de datos y la precisión de los resultados de la expresión difieren en función de si la consulta tiene parámetros automáticos o no.  
+>  Cuando se usa el +, -, \*, /, o % operadores aritméticos para realizar la conversión implícita o explícita de **int**, **smallint**, **tinyint**, o ** bigint** valores constantes para el **float**, **real**, **decimal** o **numérico** tipos de datos, las reglas que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se aplica al calcular el tipo de datos y la precisión de los resultados de la expresión difieren en función de si la consulta tiene parámetros automáticos o no.  
 >   
 >  Por lo tanto, expresiones similares en las consultas pueden generar resultados diferentes. Cuando una consulta no tiene parámetros automáticos, el valor constante primero se convierte en **numérico**, cuya precisión es suficientemente grande como para contener el valor de la constante, antes de convertir al tipo de datos especificado. Por ejemplo, el valor constante 1 se convierte en **numeric (1, 0)**, y el valor constante 250 se convierte en **numeric (3, 0)**.  
 >   
->  Cuando una consulta tiene parámetros automáticos, el valor constante siempre se convierte en **numeric (10, 0)** antes de convertir al tipo de datos final. Cuando se utiliza el operador /, no solo puede diferir la precisión del tipo de los resultados entre consultas similares, sino que también puede variar el valor de los resultados. Por ejemplo, el valor de resultado de una consulta con parámetros automáticos que incluye la expresión `SELECT CAST (1.0 / 7 AS float)` tendrán resultados distintos del valor de resultado de la misma consulta que no tenga parámetros automáticos, porque los resultados de la consulta con parámetros automáticos se truncará para ajustarse en el **numeric (10, 0)** tipo de datos.  
+>  Cuando una consulta tiene parámetros automáticos, el valor constante siempre se convierte en **numeric (10, 0)** antes de convertir al tipo de datos final. Cuando se utiliza el operador /, no solo puede diferir la precisión del tipo de los resultados entre consultas similares, sino que también puede variar el valor de los resultados. Por ejemplo, el valor de resultado de una consulta con parámetros automáticos que incluye la expresión `SELECT CAST (1.0 / 7 AS float)`, difiere del valor de resultado de la misma consulta que no tenga parámetros automáticos, porque los resultados de la consulta con parámetros automáticos, se trunca para ajustarse al el **numeric (10, 0)** tipo de datos.  
   
 ## <a name="converting-integer-data"></a>Convertir datos enteros
 Cuando se convierten implícitamente enteros en un tipo de datos de caracteres, si el entero es demasiado grande para ajustarse al campo de carácter, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escribe el carácter ASCII 42, el asterisco (*).

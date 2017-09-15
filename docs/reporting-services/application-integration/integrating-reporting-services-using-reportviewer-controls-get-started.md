@@ -16,16 +16,16 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 6e1d0305fff039aad4d387cbc63026f40db9f97e
-ms.openlocfilehash: 9d229fd4764da21612d1b1cf532f1beaf8116769
+ms.translationtype: MT
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: 51c6e0a0baa59e49ae482db01253c1998894b5f8
 ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>Integración de Reporting Services utilizando controles ReportViewer: empezar a trabajar
 
-Obtenga información acerca de cómo los desarrolladores pueden incrustar informes paginados en sitios web de ASP.Net y aplicaciones de formularios de Windows, a través del Control de ReportViewer Reporting Services 2016. Puede agregar el control a un nuevo proyecto, o actualizar un proyecto existente.
+Obtenga información acerca de cómo los desarrolladores pueden incrustar informes paginados en sitios web de ASP.NET y aplicaciones de Windows Forms, a través del Control de ReportViewer Reporting Services 2016. Puede agregar el control a un nuevo proyecto, o actualizar un proyecto existente.
 
 ## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>Agregar el control ReportViewer a un nuevo proyecto web
 
@@ -142,7 +142,7 @@ Para hacer usar del control ReportViewer 2016 en un proyecto existente, agregue 
 <!DOCTYPE html>
 ```
 
-## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>Agregar el control ReportViewer a un nuevo proyecto de Windows forms
+## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>Agregar el control ReportViewer a un nuevo proyecto de formularios Windows Forms
 
 1. Crear un nuevo **aplicación de Windows Forms** o abrir un proyecto existente.
 
@@ -242,7 +242,7 @@ El Control de Visor de informes ahora se incluye como un paquete de NuGet. Por e
 
     ![ssRS-remove-antiguo-rvcontrol-cuadro de herramientas](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. Haga clic en cualquier lugar en el cuadro de herramientas y, a continuación, seleccione **elegir elementos...** .
+3. Haga clic en cualquier lugar en el cuadro de herramientas y, a continuación, seleccione **elegir elementos... **.
 
     ![ssRS-cuadro de herramientas-elija-item](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     
@@ -281,6 +281,6 @@ Informar al equipo acerca de los problemas que pueda surgir con el control en el
 ## <a name="see-also"></a>Vea también
 
 [Recopilación de datos en el control de ReportingViewer de 2016](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-¿Más preguntas? [Pruebe el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
 
 

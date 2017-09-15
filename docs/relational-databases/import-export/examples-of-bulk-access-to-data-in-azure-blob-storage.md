@@ -19,11 +19,11 @@ caps.latest.revision: 2
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f1e6d604647070e6789fd9a49a7825a3ae3c7e1b
+ms.translationtype: HT
+ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
+ms.openlocfilehash: ece80f578fc797dcd721dfb3f831e9bf3937abd1
 ms.contentlocale: es-es
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Ejemplos de acceso masivo a datos en Azure Blob Storage
@@ -97,7 +97,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_CLOB) AS DataFile;
 ```   
 
-Con `BULKINSERT`, no use el nombre del contenedor en la descripción del archivo: 
+Con `BULK INSERT`, no use el nombre del contenedor en la descripción del archivo: 
 
 ```tsql
 BULK INSERT Colors2

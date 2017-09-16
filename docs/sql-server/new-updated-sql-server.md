@@ -16,10 +16,10 @@ ms.devlang: na
 ms.date: 07/17/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
-ms.openlocfilehash: 748f2ec122ea9a889b33cbcf15a188acd5da8459
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: d61aed44a16e78107c36ed4f7b1be387043b6746
 ms.contentlocale: es-es
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>Nuevos y actualizados recientemente: documentos de SQL Server
@@ -59,7 +59,7 @@ Los siguientes vínculos llevan a nuevos artículos que se han agregado reciente
 
 ## <a name="compact-list-of-articles-updated-recently"></a>Lista compacta de artículos que se han actualizado recientemente
 
-En esta lista compacta se proporcionan vínculos a todos los artículos actualizados que aparecen en la sección de extractos.
+Esta lista compacta proporciona vínculos a todos los artículos actualizados que aparecen en la sección de extractos.
 
 
 
@@ -169,7 +169,7 @@ La edición Developer sigue siendo compatible con solo un cliente para [SQL Serv
 
 ## <a name="similar-articles"></a>Artículos similares
 
-En esta sección se enumeran artículos muy similares a los artículos actualizados recientemente en otras áreas temáticas, dentro del mismo repositorio de GitHub.com: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+En esta sección se enumeran artículos muy similares a los artículos actualizados recientemente en otras áreas temáticas, dentro del mismo repositorio de GitHub.com: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs/).
 
 <!--  20170717-1101  -->
 

@@ -88,7 +88,7 @@ ms.lasthandoff: 08/03/2017
  [Crear InfoSource para datos de transacción](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [Crear InfoSource para datos maestros](../../integration-services/data-flow/create-infosource-for-master-data.md)   
  [Crear nuevo InfoObject](../../integration-services/data-flow/create-new-infoobject.md)   
- [Editor de destino de SAP BW & #40; Página Administrador de conexiones & #41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [Editor de destino de SAP BW &#40;Página Administrador de conexiones&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

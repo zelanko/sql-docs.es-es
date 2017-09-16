@@ -16,6 +16,7 @@
 ## [Tarea de creación de clúster de HDInsight de Azure](azure-hdinsight-create-cluster-task.md)  
 ## [Tarea de eliminación de clúster de HDInsight de Azure](azure-hdinsight-delete-cluster-task.md)  
 ## [Tarea de carga de Azure SQL DW](azure-sql-dw-upload-task.md)  
+## [Tarea Sistema de archivos de Azure Data Lake Store](azure-data-lake-store-file-system-task.md) 
 ## [Tarea Copia de seguridad de la base de datos](back-up-database-task.md)  
 ## [Tarea Inserción masiva](bulk-insert-task.md)  
 ## [Tarea Control CDC](cdc-control-task.md)  

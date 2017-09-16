@@ -1,0 +1,7 @@
+# [Acceso al contexto de la consulta en los procedimientos almacenados](accessing-query-context-in-stored-procedures.md)
+# [Llamada a procedimientos almacenados](calling-stored-procedures.md)
+# [Creación de procedimientos almacenados](creating-stored-procedures.md)
+# [Depuración de procedimientos almacenados](debugging-stored-procedures.md)
+# [Definición de procedimientos almacenados](defining-stored-procedures.md)
+# [Diseño de procedimientos almacenados](designing-stored-procedures.md)
+# [Configuración de la seguridad para procedimientos almacenados](setting-security-for-stored-procedures.md)

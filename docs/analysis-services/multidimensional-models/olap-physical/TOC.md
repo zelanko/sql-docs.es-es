@@ -1,0 +1,8 @@
+# [Requisitos de la arquitectura de cliente para el desarrollo de Analysis Services](client-architecture-requirements-for-analysis-services-development.md)
+# [Tipos de datos en Analysis Services](data-types-in-analysis-services.md)
+# [Cubos locales (Analysis Services - Datos multidimensionales)](local-cubes-analysis-services-multidimensional-data.md)
+# [Especificaciones de capacidad máxima (Analysis Services)](maximum-capacity-specifications-analysis-services.md)
+# [Normas de nomenclatura de objetos (Analysis Services)](object-naming-rules-analysis-services.md)
+# [Componentes de servidor del motor OLAP](olap-engine-server-components.md)
+# [Descripción de la arquitectura OLAP de Microsoft](understanding-microsoft-olap-architecture.md)
+# [Descripción de la arquitectura física OLAP de Microsoft](understanding-microsoft-olap-physical-architecture.md)

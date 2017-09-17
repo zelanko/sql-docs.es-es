@@ -1,7 +1,7 @@
 ---
 title: index_option (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 09/08/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -19,10 +19,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 64f1d5cec0e74509e59491f50feec3be705badf2
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: e7563f9fe992dcf4f9308cccbf11f6310b7925a7
 ms.contentlocale: es-es
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="alter-table-indexoption-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
@@ -70,7 +70,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- PAD_INDEX  **=**  {ON | **OFF** }  
+ PAD_INDEX ** = ** {ON | **OFF** }  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica el relleno del índice. El valor predeterminado es OFF.  
@@ -81,7 +81,7 @@ ms.lasthandoff: 09/01/2017
  DESACTIVAR o *fillfactor* no se ha especificado  
  Las páginas de nivel intermedio se llenan casi al máximo de su capacidad, dejando espacio suficiente para al menos una fila del tamaño máximo que admite el índice, en función del conjunto de claves de las páginas intermedias.  
   
- Valor de FILLFACTOR  **=**  *fillfactor*  
+ Valor de FILLFACTOR ** = ** *fillfactor*  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica un porcentaje que indica cuánto debe llenar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] el nivel hoja de cada página de índice durante la creación o modificación de los índices. El valor especificado debe ser un entero de 1 a 100. El valor predeterminado es 0.  
@@ -89,14 +89,14 @@ ms.lasthandoff: 09/01/2017
 > [!NOTE]  
 >  Los valores de factor de relleno 0 y 100 son idénticos en todos los sentidos.  
   
- IGNORE_DUP_KEY  **=**  {ON | **OFF** }  
+ IGNORE_DUP_KEY ** = ** {ON | **OFF** }  
  Especifica la respuesta de error cuando una operación de inserción intenta insertar valores de clave duplicados en un índice único. La opción IGNORE_DUP_KEY se aplica solamente a operaciones de inserción realizadas tras crear o volver a generar el índice. La opción no tiene ningún efecto cuando se ejecuta [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md), o [actualización](../../t-sql/queries/update-transact-sql.md). El valor predeterminado es OFF.  
   
  ON  
- Se producirá un mensaje de advertencia cuando se inserten valores de clave duplicados en un índice único. Solo las filas que infrinjan la restricción de unicidad darán error.  
+ Un mensaje de advertencia se produce cuando se insertan valores de clave duplicados en un índice único. Solo las filas que infrinjan la restricción de unicidad se producirá un error.  
   
  OFF  
- Se producirá un mensaje de error cuando se inserten valores de clave duplicados en un índice único. Toda la operación INSERT se revertirá.  
+ Un mensaje de error se produce cuando se insertan valores de clave duplicados en un índice único. Se revierte toda la operación de INSERCIÓN.  
   
  No se puede establecer IGNORE_DUP_KEY en ON para los índices creados en una vista, índices no únicos, los índices XML, índices espaciales y los índices filtrados.  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 09/01/2017
   
  En la sintaxis compatible con versiones anteriores, WITH IGNORE_DUP_KEY es equivalente a WITH IGNORE_DUP_KEY = ON.  
   
- STATISTICS_NORECOMPUTE  **=**  {ON | **OFF** }  
+ STATISTICS_NORECOMPUTE ** = ** {ON | **OFF** }  
  Especifica si se vuelven a calcular las estadísticas. El valor predeterminado es OFF.  
   
  ON  
@@ -113,7 +113,7 @@ ms.lasthandoff: 09/01/2017
  OFF  
  Se habilita la actualización automática de las estadísticas.  
   
- ALLOW_ROW_LOCKS  **=**  { **ON** | {OFF}  
+ ALLOW_ROW_LOCKS ** = ** { **ON** | {OFF}  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica si se permiten los bloqueos de fila. El valor predeterminado es ON.  
@@ -124,7 +124,7 @@ ms.lasthandoff: 09/01/2017
  OFF  
  No se usan los bloqueos de fila.  
   
- ALLOW_PAGE_LOCKS  **=**  { **ON** | {OFF}  
+ ALLOW_PAGE_LOCKS ** = ** { **ON** | {OFF}  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica si se permiten bloqueos de página. El valor predeterminado es ON.  
@@ -135,7 +135,7 @@ ms.lasthandoff: 09/01/2017
  OFF  
  No se utilizan bloqueos de página.  
   
- SORT_IN_TEMPDB  **=**  {ON | **OFF** }  
+ SORT_IN_TEMPDB ** = ** {ON | **OFF** }  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica si se deben almacenar los resultados de ordenación en **tempdb**. El valor predeterminado es OFF.  
@@ -146,7 +146,7 @@ ms.lasthandoff: 09/01/2017
  OFF  
  Los resultados de orden intermedios se almacenan en la misma base de datos que el índice.  
   
- EN LÍNEA  **=**  {ON | **OFF** }  
+ EN LÍNEA ** = ** {ON | **OFF** }  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica si las tablas subyacentes y los índices asociados están disponibles para realizar consultas y modificar datos durante la operación de índice. El valor predeterminado es OFF. REBUILD se puede realizar como una operación ONLINE.  
@@ -168,21 +168,16 @@ ms.lasthandoff: 09/01/2017
 > [!NOTE]  
 >  Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- MAXDOP  **=**  *max_degree_of_parallelism*  
+ MAXDOP ** = ** *max_degree_of_parallelism*  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Invalida el **grado máximo de paralelismo** opción de configuración para la duración de la operación de índice. Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
   
  *max_degree_of_parallelism* puede ser:  
   
- 1  
- Suprime la generación de planes paralelos.  
-  
- \>1  
- Restringe el número máximo de procesadores utilizados en una operación de índice paralelo para el número especificado.  
-  
- 0 (predeterminado)  
- Usa el número real de procesadores o menos, según la carga de trabajo actual del sistema.  
+ - 1 - Suprime la generación de planes paralelos.  
+ - \>1 - restringe el número máximo de procesadores utilizados en una operación de índice en paralelo al número especificado.  
+ - 0 (valor predeterminado): se utiliza el número real de procesadores o menos, según la carga de trabajo del sistema actual.  
   
  Para obtener más información, vea [Configurar operaciones de índice en paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
@@ -192,7 +187,7 @@ ms.lasthandoff: 09/01/2017
  DATA_COMPRESSION  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Especifica la opción de compresión de datos para la tabla, el número de partición o el intervalo de particiones especificado. Las opciones son las siguientes:  
+ Especifica la opción de compresión de datos para la tabla, el número de partición o el intervalo de particiones especificados. Las opciones son las siguientes:  
   
  NONE  
  No se comprimen la tabla ni las particiones especificadas. Solo se aplica a tablas de almacén de filas; no se aplica a tablas de almacén de columnas.  
@@ -206,32 +201,30 @@ ms.lasthandoff: 09/01/2017
  COLUMNSTORE  
  **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Solo se aplica a tablas de almacén de columnas. COLUMNSTORE especifica que se descomprima una partición que se comprimió con la opción COLUMNSTORE_ARCHIVE. Cuando se restauran los datos, seguirán estando comprimidos con la compresión de almacén de columnas que se usa para todas las tablas de almacén de columnas.  
+ Solo se aplica a tablas de almacén de columnas. COLUMNSTORE especifica que se descomprima una partición que se comprimió con la opción COLUMNSTORE_ARCHIVE. Cuando se restauran los datos, el índice de almacén sigue estando comprimidos con la compresión de almacén de columnas que se usa para todas las tablas de almacén de columnas.  
   
  COLUMNSTORE_ARCHIVE  
  **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Solo se aplica a las tablas de almacén de columnas almacenadas con un índice clúster de almacén de columnas. COLUMNSTORE_ARCHIVE comprimirá aún más la partición especificada a un tamaño mínimo. Esto se puede usar para el archivado o para otras situaciones que requieran menos almacenamiento y en las que pueda permitirse más tiempo para el almacenamiento y recuperación.  
+ Solo se aplica a las tablas de almacén de columnas almacenadas con un índice clúster de almacén de columnas. COLUMNSTORE_ARCHIVE más comprime la partición especificada a un tamaño menor. Esto se puede usar para el archivado o para otras situaciones que requieran menos almacenamiento y en las que pueda permitirse más tiempo para el almacenamiento y recuperación.  
   
  Para obtener más información acerca de la compresión, vea [compresión de datos](../../relational-databases/data-compression/data-compression.md).  
   
-EN las particiones **(** { \<partition_number_expression > | \<intervalo >} [ **,**...  *n*  ] **)** **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+EN las particiones **(** { \<partition_number_expression > | \<intervalo >} [ **,**... * n * ] **)** **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Especifica las particiones a las que se aplica el valor DATA_COMPRESSION. Si la tabla no tiene particiones, el argumento ON PARTITIONS generará un error. Si no se proporciona la cláusula ON PARTITIONS, la opción DATA_COMPRESSION se aplicará a todas las particiones de una tabla con particiones.  
+ Especifica las particiones a las que se aplica el valor DATA_COMPRESSION. Si la tabla no tiene particiones, el argumento ON PARTITIONS generará un error. Si no se proporciona la cláusula ON PARTITIONS, la opción DATA_COMPRESSION se aplica a todas las particiones de una tabla con particiones.  
   
 \<partition_number_expression > se puede especificar de las maneras siguientes:  
   
 -   Proporcionando el número de una partición, por ejemplo: ON PARTITIONS (2).  
-  
 -   Proporcionar los números de partición de varias particiones separados por comas, por ejemplo: ON PARTITIONS (1, 5).  
-  
 -   Proporcionar intervalos y particiones individuales: ON PARTITIONS (2, 4, 6 TO 8).  
   
- \<intervalo > se puede especificar como números de partición separados por la palabra TO, por ejemplo: ON PARTITIONS (6 a 8).  
+\<intervalo > se puede especificar como números de partición separados por la palabra TO, por ejemplo: ON PARTITIONS (6 a 8).  
   
  Para establecer diferentes tipos de compresión de datos para distintas particiones, especifique la opción DATA_COMPRESSION más de una vez, por ejemplo:  
   
-```  
+```sql  
 --For rowstore tables  
 REBUILD WITH   
 (  
@@ -252,20 +245,18 @@ DATA_COMPRESSION = COLUMNSTORE_ARCHIVE ON PARTITIONS (2, 4, 6 TO 8)
  En la mayoría de los casos, la regeneración de un índice hace que se vuelvan a generar todas las particiones de un índice con particiones. Cuando las opciones siguientes se aplican a una partición única, no vuelven a generar todas las particiones.  
   
 -   SORT_IN_TEMPDB  
-  
 -   MAXDOP  
-  
 -   DATA_COMPRESSION  
   
 **low_priority_lock_wait**  
  **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- A **conmutador** o regeneración de índice en línea completa tan pronto como hay ninguna operación bloqueo para esta tabla. *WAIT_AT_LOW_PRIORITY* indica que si el **conmutador** o no se puede completar la operación de regeneración de índice en línea inmediatamente, esperará. La operación contendrá los bloqueos de prioridad baja y permitirá que continúen otras operaciones que mantengan bloqueos en conflicto con la instrucción DDL. Si se omite la **WAIT AT LOW PRIORITY** opción es equivalente a `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.  
+ A **conmutador** o regeneración de índice en línea completa tan pronto como hay ninguna operación bloqueo para esta tabla. *WAIT_AT_LOW_PRIORITY* indica que si el **conmutador** o la operación de regeneración de índice en línea no se puede completar inmediatamente, esperará. La operación contiene los bloqueos de prioridad baja, lo que permite a otras operaciones que mantengan bloqueos en conflicto con la instrucción DDL para continuar. Si se omite la **WAIT AT LOW PRIORITY** opción es equivalente a `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.  
   
 MAX_DURATION = *tiempo* [**minutos** ]  
- El tiempo de espera (valor entero especificado en minutos) que el **conmutador** o bloqueo de regeneración de índice en línea que debe adquirirse esperarán al ejecutar el comando DDL. SWITCH o la operación de regeneración de índices en línea intenta completarse inmediatamente. Si la operación se bloquea durante la **MAX_DURATION** tiempo, uno de los **ABORT_AFTER_WAIT** acciones se ejecutarán. **MAX_DURATION** hora es siempre en minutos y la palabra **minutos** puede omitirse.  
+ El tiempo de espera (valor entero especificado en minutos) que el **conmutador** o esperas de bloqueo de regeneración de índice en línea que debe adquirirse, al ejecutar el comando DDL. SWITCH o la operación de regeneración de índices en línea intenta completarse inmediatamente. Si la operación se bloquea durante la **MAX_DURATION** tiempo, uno de los **ABORT_AFTER_WAIT** las acciones se ejecutan. **MAX_DURATION** hora es siempre en minutos y la palabra **minutos** puede omitirse.  
   
-ABOUT_AFTER_WAIT = [**NONE** | **SELF** | **BLOQUEADORES** }]  
+ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOQUEADORES** }]  
  Ninguno  
  Continúa la **conmutador** o la operación de regeneración sin cambiar la prioridad de bloqueos (con prioridad normal) de índice en línea.  
   

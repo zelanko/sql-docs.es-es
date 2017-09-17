@@ -40,7 +40,7 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  Si bien puede realizar registros directamente desde la tarea Script, puede que le interese implementar los eventos en lugar de registrarlos. Al utilizar eventos, no solo puede habilitar el registro de mensajes de eventos, pero también puede responder al evento con el valor predeterminado o controladores de eventos definidos por el usuario.  
   
- Para obtener más información acerca del registro, consulte [Integration Services & #40; SSIS & #41; Registro](../../../integration-services/performance/integration-services-ssis-logging.md).  
+ Para obtener más información acerca del registro, consulte [Integration Services &#40; SSIS &#41; Registro](../../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="logging-example"></a>Ejemplo de registro  
  En el ejemplo siguiente se muestra el registro de la tarea Script mediante el registro de un valor que representa el número de filas procesadas.  
@@ -103,6 +103,6 @@ public class ScriptMain
 -   Entrada de blog, [registro de eventos personalizados para tareas de Integration Services](http://go.microsoft.com/fwlink/?LinkId=165644), en dougbert.com  
   
 ## <a name="see-also"></a>Vea también  
- [Integration Services & #40; SSIS & #41; Registro](../../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Integration Services &#40; SSIS &#41; Registro](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
